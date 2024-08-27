@@ -272,7 +272,7 @@ function draw() {
 
 ### 貝茲曲線與二次曲線
 
-二次與三次[貝茲曲線(Bézier curves)](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)是另一種可用來構成複雜有機圖形的路徑。
+二次與三次[貝茲曲線](https://zh.wikipedia.org/wiki/貝茲曲線)是另一種可用來構成複雜有機圖形的路徑。
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : 從目前起始點畫一條二次貝茲曲線到 x, y 指定的終點，控制點由 cp1x, cp1y 指定。

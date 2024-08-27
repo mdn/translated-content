@@ -11802,10 +11802,6 @@
     "modified": "2020-11-12T06:22:45.529Z",
     "contributors": ["xgqfrms", "Carllllo", "marsoln"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T23:20:07.432Z",
-    "contributors": ["chrisdavidmills", "ObooChin", "jtyjty99999"]
-  },
   "Web/API/Navigator/sendBeacon": {
     "modified": "2020-10-15T21:45:06.383Z",
     "contributors": [
@@ -22391,30 +22387,6 @@
       "cissoid"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2019-03-23T22:18:43.282Z",
-    "contributors": [
-      "zqyue",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "chaos_zhang"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2020-10-15T21:06:54.948Z",
-    "contributors": [
-      "leegent",
-      "2585479524",
-      "BobGreen",
-      "bramblex",
-      "tlos142857",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "little-tomorrow",
-      "ziyunfei"
-    ]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2020-02-20T03:41:08.272Z",
     "contributors": [
@@ -22430,18 +22402,6 @@
       "keifergu",
       "JsonLi",
       "WeijieZhu"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-05-06T05:35:10.899Z",
-    "contributors": [
-      "wolfzZ",
-      "heyv5",
-      "springapple",
-      "Wendy_Love",
-      "yuankunzhang",
-      "little-tomorrow",
-      "DreamerKing"
     ]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
@@ -23416,10 +23376,6 @@
       "zhi.lin",
       "ZhongyiChen"
     ]
-  },
-  "Web/HTTP/Resources_and_URIs": {
-    "modified": "2019-09-05T00:27:21.660Z",
-    "contributors": ["ran"]
   },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2019-03-23T22:14:32.179Z",
@@ -32361,6 +32317,30 @@
       "SamuraiMe",
       "cehnjing",
       "shengyouxiao",
+      "ziyunfei"
+    ]
+  },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2019-03-23T22:18:43.282Z",
+    "contributors": [
+      "zqyue",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "chaos_zhang"
+    ]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2020-10-15T21:06:54.948Z",
+    "contributors": [
+      "leegent",
+      "2585479524",
+      "BobGreen",
+      "bramblex",
+      "tlos142857",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "little-tomorrow",
       "ziyunfei"
     ]
   },

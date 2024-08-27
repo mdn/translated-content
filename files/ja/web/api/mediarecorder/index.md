@@ -14,12 +14,12 @@ l10n:
 ## コンストラクター
 
 - {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}}
-  - : 収録する {{domxref("MediaStream")}} を指定して、新しい `MediaRecorder` オブジェクトを作成します。 コンテナの MIME タイプ（`"video/webm"` や `"video/mp4"` など）、音声トラックと動画トラックのビットレート、または単一の全体的なビットレートの設定などを行うためのオプションがあります。
+  - : 収録する {{domxref("MediaStream")}} を指定して、新しい `MediaRecorder` オブジェクトを作成します。 コンテナーの MIME タイプ（`"video/webm"` や `"video/mp4"` など）、音声トラックと動画トラックのビットレート、または単一の全体的なビットレートの設定などを行うためのオプションがあります。
 
 ## インスタンスプロパティ
 
 - {{domxref("MediaRecorder.mimeType")}} {{ReadOnlyInline}}
-  - : `MediaRecorder` オブジェクトの作成時にその収録コンテナとして選択した MIME タイプを返します。
+  - : `MediaRecorder` オブジェクトの作成時にその収録コンテナーとして選択した MIME タイプを返します。
 - {{domxref("MediaRecorder.state")}} {{ReadOnlyInline}}
   - : `MediaRecorder` オブジェクトの現在の状態（非活動 (`inactive`)、収録中 (`recording`)、一時停止中 (`paused`)）を返します。
 - {{domxref("MediaRecorder.stream")}} {{ReadOnlyInline}}

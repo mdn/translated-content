@@ -1,6 +1,9 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled プロパティ"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -34,7 +37,7 @@ slug: Web/API/MediaStreamTrack/enabled
 この例では、一時停止ボタンの {{domxref("Element/click_event", "click")}} イベントハンドラーの使用例を示しています。
 
 ```js
-pauseButton.onclick = function (evt) {
+pauseButton.onclick = (evt) => {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
@@ -56,7 +59,7 @@ pauseButton.onclick = function (evt) {
 
 ## 関連情報
 
-- [MediaStream API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)

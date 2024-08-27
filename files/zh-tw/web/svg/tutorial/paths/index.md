@@ -23,13 +23,13 @@ Coordinates in the `"d"` attribute are **always unitless** and hence in the user
 
 There are five line commands for `<path>` nodes. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate ' x ' and coordinate ' y ' to move to. If your cursor already was somewhere on the page, no line is drawn to connect the two places. The "Move To" command appears at the beginning of paths to specify where the drawing should start. e.g. :
 
-```
+```plain
 M x y
 ```
 
 or
 
-```
+```plain
 m dx dy
 ```
 
@@ -50,13 +50,13 @@ In the following example we only have a point at (10,10). Note, though, that it 
 
 There are three commands that draw lines. The most generic is the "Line To" command, `called with L`. `L` takes two parameters—x and y coordinates—and draws a line from the current position to a new position.
 
-```
+```plain
 L x y (or l dx dy)
 ```
 
 There are two abbreviated forms for drawing horizontal and vertical lines. `H` draws a horizontal line, and `V` draws a vertical line. Both commands only take one argument since they only move in one direction.
 
-```
+```plain
 H x (or h dx)
 V y (or v dy)
 ```
@@ -81,7 +81,7 @@ An easy place to start is by drawing a shape. We will start with a rectangle (th
 
 We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
 
-```
+```plain
 Z (or z)
 ```
 
@@ -109,7 +109,7 @@ There are three different commands that you can use to create smooth curves. Two
 
 The cubic curve, C, is the slightly more complex curve. Cubic Beziers take in two control points for each point. Therefore, to create a cubic Bezier, you need to specify three sets of coordinates.
 
-```
+```plain
 C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
 ```
 
@@ -137,7 +137,7 @@ The example above creates nine Cubic Bezier curves. As the curves move toward th
 
 You can string together several Bezier curves to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, you can use a shortcut version of the cubic Bezier, designated by the command `S` (or `s`).
 
-```
+```plain
 S x2 y2, x y (or s dx2 dy2, dx dy)
 ```
 
@@ -153,7 +153,7 @@ S x2 y2, x y (or s dx2 dy2, dx dy)
 
 The other type of Bezier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two arguments: the control point and the end point of the curve. Note that the co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
 
-```
+```plain
 Q x1 y1, x y (or q dx1 dy1, dx dy)
 ```
 
@@ -167,7 +167,7 @@ Q x1 y1, x y (or q dx1 dy1, dx dy)
 
 As with the cubic Bezier curve, there is a shortcut for stringing together multiple quadratic Beziers, called with T.
 
-```
+```plain
 T x y (or t dx dy)
 ```
 
@@ -190,7 +190,7 @@ Both curves produce similar results, although the cubic allows you greater freed
 
 The other type of curved line you can create using SVG is the arc, called with A. Arcs are sections of circles or ellipses. For a given x-radius and y-radius, there are two ellipses that can connect any two points (as long as they're within the radius of the circle). Along either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available. Because of that, arcs have to take in quite a few arguments:
 
-```
+```plain
 A rx ry x-axis-rotation large-arc-flag sweep-flag x y
 a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```

@@ -23,7 +23,7 @@ addSourceBuffer(mimeType)
 
 ### 返値
 
-作成され、メディアソースに追加された新しいソースバッファを表す {{domxref("SourceBuffer")}} オブジェクト。
+作成され、メディアソースに追加された新しいソースバッファーを表す {{domxref("SourceBuffer")}} オブジェクト。
 
 ### 例外
 

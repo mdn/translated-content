@@ -52,18 +52,18 @@ l10n:
 
 #### WebDriver BiDi
 
-- グローバルまたは一連のトップレベルブラウジングコンテキストでネットワークキャッシュを使用しないようにブラウザーを設定できる `network.setCacheBehavior` コマンドをサポートしました ([Firefox bug 1901032](https://bugzil.la/1901032)、[Firefox bug 1906100](https://bugzil.la/1906100))。
+- グローバルまたは一連のトップレベル閲覧コンテキストでネットワークキャッシュを使用しないようにブラウザーを設定できる `network.setCacheBehavior` コマンドをサポートしました ([Firefox bug 1901032](https://bugzil.la/1901032)、[Firefox bug 1906100](https://bugzil.la/1906100))。
 - ほかのユーザープロンプトと同じ方法で制御できる、`beforeUnload` タイプのプロンプトをサポートしました ([Firefox bug 1824220](https://bugzil.la/1824220))。
 - モック応答を返すことを可能にする引数 `body` など、`beforeRequestSent` 段階で使用する `network.provideResponse` コマンドのすべての引数をサポートしました ([Firefox bug 1853882](https://bugzil.la/1853882))。
 - `browsingContext.userPromptOpened` が、イベントを発生させたプロンプト向けに設定したユーザープロンプトハンドラーの情報を持つ `handler` フィールドを含むようになりました ([Firefox bug 1904822](https://bugzil.la/1904822))。
-- `BrowsingContextInfo` 型が、"オープナー" ブラウジングコンテキストのコンテキスト ID を表す `originalOpener` フィールドを提供するようになりました。これはリンク (`rel=noopener` である場合も含む) や `window.open` などを使用して作成された新しいコンテキストのインスタンスに設定されます。新しいブラウジングコンテキストに関係するオープナーがない場合は null が設定されます ([Firefox bug 1898004](https://bugzil.la/1898004))。
+- `BrowsingContextInfo` 型が、"オープナー" 閲覧コンテキストのコンテキスト ID を表す `originalOpener` フィールドを提供するようになりました。これはリンク (`rel=noopener` である場合も含む) や `window.open` などを使用して作成された新しいコンテキストのインスタンスに設定されます。新しい閲覧コンテキストに関係するオープナーがない場合は null が設定されます ([Firefox bug 1898004](https://bugzil.la/1898004))。
 - data URL の要求でネットワークイベント (`beforeRequestSent`、`responseStarted`、`responseCompleted`) が生成されるようになりました。Firefox 129 では、ナビゲーション要求に限り列挙されます ([Firefox bug 1805176](https://bugzil.la/1805176))。
 - `browsingContext.close` で、コマンドでコンテキストを閉じるときに "beforeunload" プロンプトを避けることができる引数 `promptUnload` をサポートしました ([Firefox bug 1862380](https://bugzil.la/1862380))。
 - `network.continueRequest` で、同一のハンドラーに複数の値を設定できない不具合を修正しました ([Firefox bug 1904379](https://bugzil.la/1904379))
 - `unhandledPromptBehavior` 機能を BiDi だけのセッションで使用できない不具合を修正しました ([Firefox bug 1907935](https://bugzil.la/1907935))。
 - `session.end` および `browser.close` が、Marionette クライアントが接続されていないときに突然失敗することがある不具合を修正しました ([Firefox bug 1890091](https://bugzil.la/1890091))。
 - `browsingContext.navigate` が、"beforeunload" で同一ドキュメントのナビゲーションを開始した場合に解決できないことがある不具合を修正しました ([Firefox bug 1879163](https://bugzil.la/1879163))。
-- トップレベルのブラウジングコンテキストを閉じるときにすべての "beforeunload" プロンプトを破棄するように、`browser.close` コマンドを改良しました ([Firefox bug 1873196](https://bugzil.la/1873196))。
+- トップレベルの閲覧コンテキストを閉じるときにすべての "beforeunload" プロンプトを破棄するように、`browser.close` コマンドを改良しました ([Firefox bug 1873196](https://bugzil.la/1873196))。
 - `browsingContext.userPromptOpened` イベントで、突然 `defaultValue` フィールドが失われる不具合を修正しました ([Firefox bug 1859814](https://bugzil.la/1859814))。
 - 認証フローの間に `network.responseCompleted` イベントが仕様書と比べて過剰に発生する問題を修正しました。HTTP 認証フロー全体に対して `responseCompleted` (または `fetchError`) イベントが 1 回だけ発生することが想定されています ([Firefox bug 1906106](https://bugzil.la/1906106))
 - すべての "beforeunload" プロンプトをスキップするように `browser.removeUserContext` コマンドを改良しました ([Firefox bug 1876062](https://bugzil.la/1876062))。

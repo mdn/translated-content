@@ -1,5 +1,5 @@
 ---
-title: XSLTProcessor：XSLTProcessor() 构建函数
+title: XSLTProcessor：XSLTProcessor() 构造函数
 slug: Web/API/XSLTProcessor/XSLTProcessor
 l10n:
   sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
