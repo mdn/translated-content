@@ -13,7 +13,7 @@ La propiedad de acceso **`size`** de las instancias {{jsxref("Map")}} regresa el
 
 ## Descripción
 
-El valor de `size` es un entero que representa, el número de entradas que el objeto `Mqp` tiene. La función de acceso para `size` es `undefined`; no puedes modificar esta propiedad.
+El valor de `size` es un entero que representa, el número de entradas que el objeto `Map` tiene. La función de acceso para `size` es `undefined`; no puedes modificar esta propiedad.
 
 ## Ejemplos
 
