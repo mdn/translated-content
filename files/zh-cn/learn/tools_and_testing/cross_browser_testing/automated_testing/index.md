@@ -425,7 +425,7 @@ Sauce Labs 有一个 [restful API](https://docs.saucelabs.com/dev/api/)，允许
 1. 首先，按照[设置 Node 和 npm 环境](#设置_node_和_npm_环境)中的详细说明，设置一个新的 npm 项目来进行测试。使用一个与之前不同的目录名称，例如 `sauce-test`。
 2. 使用以下命令安装 Node Sauce Labs 包装器：
 
-   ```
+   ```bash
    npm install saucelabs
    ```
 
@@ -732,7 +732,7 @@ TestingBot 有几个 API 客户端，你可以用来与 API 互动，包括 Node
 1. 首先，按照[设置 Node 和 npm 环境](#设置_node_和_npm_环境)中的详细说明，设置一个新的 npm 项目来进行测试。使用一个与之前不同的目录名称，例如 `tb-test`。
 2. 使用以下命令安装 Node TestingBot 包装器：
 
-   ```
+   ```bash
    npm install testingbot-api
    ```
 
