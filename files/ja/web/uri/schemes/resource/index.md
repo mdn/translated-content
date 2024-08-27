@@ -1,6 +1,7 @@
 ---
 title: リソース URL
-slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+slug: Web/URI/Schemes/resource
+original_slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
 ---
 
 {{HTTPSidebar}}{{non-standard_header}}

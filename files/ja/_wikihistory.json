@@ -21372,27 +21372,9 @@
     "modified": "2019-11-23T23:17:48.338Z",
     "contributors": ["mfuji09", "silverskyvicto", "cissoid"]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2020-12-06T15:11:17.468Z",
-    "contributors": ["mfuji09", "pcw", "silverskyvicto", "yyss"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2020-12-04T15:28:57.902Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "yyss",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2020-09-25T15:03:35.377Z",
     "contributors": ["mfuji09", "silverskyvicto", "yyss"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2020-08-21T11:37:40.436Z",
-    "contributors": ["mfuji09", "yuta0801", "yyss"]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2020-07-24T02:39:26.659Z",
@@ -21401,10 +21383,6 @@
   "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
     "modified": "2020-05-15T22:15:38.965Z",
     "contributors": ["mfuji09", "chrisdavidmills", "silverskyvicto", "yyss"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Resource_URLs": {
-    "modified": "2019-03-18T21:26:41.834Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-11-12T13:14:23.994Z",
@@ -22149,10 +22127,6 @@
   "Web/HTTP/Redirections": {
     "modified": "2020-09-22T04:26:24.005Z",
     "contributors": ["mfuji09", "pcw", "yyss"]
-  },
-  "Web/HTTP/Resources_and_URIs": {
-    "modified": "2019-03-18T21:33:17.331Z",
-    "contributors": ["mfuji09"]
   },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2020-08-18T01:47:17.883Z",
@@ -29510,6 +29484,24 @@
       "Mohawk"
     ]
   },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2020-12-06T15:11:17.468Z",
+    "contributors": ["mfuji09", "pcw", "silverskyvicto", "yyss"]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2020-12-04T15:28:57.902Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "yyss",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
+  "Web/URI/Schemes/resource": {
+    "modified": "2019-03-18T21:26:41.834Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
+  },
   "Web/WebDriver": {
     "modified": "2020-10-15T22:28:29.913Z",
     "contributors": ["mfuji09"]
@@ -30304,6 +30296,10 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
+  "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
+    "modified": "2019-03-18T21:33:17.331Z",
+    "contributors": ["mfuji09"]
+  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
@@ -30524,6 +30520,10 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2020-08-21T11:37:40.436Z",
+    "contributors": ["mfuji09", "yuta0801", "yyss"]
   },
   "orphaned/Web/JavaScript/Guide/Objects_and_Properties": {
     "modified": "2019-03-24T00:01:07.858Z",

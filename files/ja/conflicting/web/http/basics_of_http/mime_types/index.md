@@ -1,6 +1,7 @@
 ---
 title: リソースと URI
-slug: Web/HTTP/Resources_and_URIs
+slug: conflicting/Web/HTTP/Basics_of_HTTP/MIME_types
+original_slug: Web/HTTP/Resources_and_URIs
 ---
 
 {{HTTPSidebar}}
