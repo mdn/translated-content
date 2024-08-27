@@ -45,7 +45,7 @@ La función `callback` es invocada con **tres argumentos**:
 - el `key` del elemento
 - el **objeto `Map`** que se esta iterando
 
-Si el parámetro `thisArg` se provee a la función `forEach`, este se pasará a la función `callback` cuando sea invocada, para usarse como el valor `this`. De lo contrario, el valor `undefined` será pasado para usarse como el valor `this`. El valor `this` que finalmente es visible para lafunción `callback`, es determinado de acuerdo a [las reglas para determinar el valor `this` visible para una función](/es/docs/Web/JavaScript/Reference/Operators/this).
+Si el parámetro `thisArg` se provee a la función `forEach`, este se pasará a la función `callback` cuando sea invocada, para usarse como el valor `this`. De lo contrario, el valor `undefined` será pasado para usarse como el valor `this`. El valor `this` que finalmente es visible para la función `callback`, es determinado de acuerdo a [las reglas para determinar el valor `this` visible para una función](/es/docs/Web/JavaScript/Reference/Operators/this).
 
 Cada valor es visitado una vez, excepto en el caso en que el valor es borrado y agregado antes de que `forEach` haya terminado. La función `callback` no es invocada para valores que se borraron antes de ser visitados. Los valores agregados antes de que `forEach` termine, serán visitados.
 
