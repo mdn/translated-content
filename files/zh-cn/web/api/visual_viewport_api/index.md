@@ -25,7 +25,7 @@ l10n:
 ### 对其他接口的扩展
 
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
-  - : 窗口 {{domxref("VisualViewport")}} 对象的只读引用。 如果该属性不存在，则不支持 API。
+  - : 窗口 {{domxref("VisualViewport")}} 对象的只读引用。如果该属性不存在，则不支持 API。
 
 ## 示例
 
