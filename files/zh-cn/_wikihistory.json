@@ -22387,30 +22387,6 @@
       "cissoid"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2019-03-23T22:18:43.282Z",
-    "contributors": [
-      "zqyue",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "chaos_zhang"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2020-10-15T21:06:54.948Z",
-    "contributors": [
-      "leegent",
-      "2585479524",
-      "BobGreen",
-      "bramblex",
-      "tlos142857",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "little-tomorrow",
-      "ziyunfei"
-    ]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2020-02-20T03:41:08.272Z",
     "contributors": [
@@ -22426,18 +22402,6 @@
       "keifergu",
       "JsonLi",
       "WeijieZhu"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-05-06T05:35:10.899Z",
-    "contributors": [
-      "wolfzZ",
-      "heyv5",
-      "springapple",
-      "Wendy_Love",
-      "yuankunzhang",
-      "little-tomorrow",
-      "DreamerKing"
     ]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
@@ -23412,10 +23376,6 @@
       "zhi.lin",
       "ZhongyiChen"
     ]
-  },
-  "Web/HTTP/Resources_and_URIs": {
-    "modified": "2019-09-05T00:27:21.660Z",
-    "contributors": ["ran"]
   },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2019-03-23T22:14:32.179Z",
@@ -32360,6 +32320,30 @@
       "ziyunfei"
     ]
   },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2019-03-23T22:18:43.282Z",
+    "contributors": [
+      "zqyue",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "chaos_zhang"
+    ]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2020-10-15T21:06:54.948Z",
+    "contributors": [
+      "leegent",
+      "2585479524",
+      "BobGreen",
+      "bramblex",
+      "tlos142857",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "little-tomorrow",
+      "ziyunfei"
+    ]
+  },
   "Web/WebDriver": {
     "modified": "2020-10-15T22:20:19.059Z",
     "contributors": ["lvbaiying", "ZQ-jhon"]
@@ -32561,6 +32545,22 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
+    "modified": "2019-09-05T00:27:21.660Z",
+    "contributors": ["ran"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2019-05-06T05:35:10.899Z",
+    "contributors": [
+      "wolfzZ",
+      "heyv5",
+      "springapple",
+      "Wendy_Love",
+      "yuankunzhang",
+      "little-tomorrow",
+      "DreamerKing"
     ]
   }
 }
