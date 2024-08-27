@@ -23,9 +23,9 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
       - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
-      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
-    - `filename`：定義值可建議作為文件名。 `/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
+    - `filename`：定義值可建議作為文件名。`/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
     > [!NOTE]
     >

@@ -492,9 +492,7 @@
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Schemes/data
-/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/zh-TW/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
-/zh-TW/docs/Web/HTTP/Resources_and_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418

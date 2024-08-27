@@ -1,12 +1,11 @@
 ---
 title: Data URL
 slug: Web/URI/Schemes/data
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/URI")}}
 
 **Data URL** 是以 `data:` 開頭的 URL，允許內容創作者將小型檔案嵌入文件中。以前它們被稱為「data URI」，直到 WHATWG 將這個名稱廢除。
 
