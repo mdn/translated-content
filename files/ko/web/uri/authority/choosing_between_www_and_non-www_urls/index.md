@@ -1,6 +1,7 @@
 ---
 title: www와 비-www URL 중에서 선택하기
-slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+original_slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 l10n:
   sourceCommit: b17bbdb47dba248d0539fc56fd1aeb664db38c29
 ---
