@@ -10553,14 +10553,6 @@
     "modified": "2020-07-14T17:05:38.093Z",
     "contributors": ["vladimir.i.kuropatka", "enonotugh", "cissoid"]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2020-10-15T22:23:29.676Z",
-    "contributors": ["alex3d", "ismorozs"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2020-01-09T21:04:16.499Z",
-    "contributors": ["rshmelev"]
-  },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-10-21T06:21:06.123Z",
     "contributors": [
@@ -15867,6 +15859,10 @@
       "aleks_root"
     ]
   },
+  "Web/URI/Schemes/data": {
+    "modified": "2020-10-15T22:23:29.676Z",
+    "contributors": ["alex3d", "ismorozs"]
+  },
   "Web/XML": {
     "modified": "2019-03-24T13:24:33.354Z"
   },
@@ -15945,5 +15941,9 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2020-01-09T21:04:16.499Z",
+    "contributors": ["rshmelev"]
   }
 }
