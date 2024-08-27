@@ -1,6 +1,7 @@
 ---
 title: 資源和 URI
-slug: Web/HTTP/Resources_and_URIs
+slug: Web/HTTP/Basics_of_HTTP/MIME_types
+original_slug: Web/HTTP/Resources_and_URIs
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

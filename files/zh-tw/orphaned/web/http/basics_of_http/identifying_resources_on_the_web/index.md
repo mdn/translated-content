@@ -1,6 +1,7 @@
 ---
 title: 識別 Web 上的資源
-slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

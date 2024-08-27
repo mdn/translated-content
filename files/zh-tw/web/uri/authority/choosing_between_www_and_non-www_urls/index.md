@@ -1,6 +1,7 @@
 ---
 title: 選擇 www 和非 www 網址
-slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+original_slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
