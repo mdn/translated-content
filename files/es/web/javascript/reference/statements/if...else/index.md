@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-La sentencia **`if...else`** ejecuta una sentencia, si una condición específicada es evaluada como {{Glossary("truthy", "verdadera")}}. Si la condición es evaluada como {{Glossary("falsy", "falsa")}}, otra condición en la clausula opcional `else` será ejecutada.
+La sentencia **`if...else`** ejecuta una sentencia, si una condición específicada es evaluada como {{Glossary("truthy", "verdadera")}}. Si la condición es evaluada como {{Glossary("falsy", "falsa")}}, otra sentencia en la clausula opcional `else` será ejecutada.
 
 {{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
