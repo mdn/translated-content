@@ -14,7 +14,7 @@ slug: Web/API/FileSystem
 1. 你可以呼叫 `window.requestFileSystem()`，為你的網頁應用程式建立一個檔案系統的沙盒。如果呼叫成功，將會執行回呼函式，該回呼函式會有個 `FileSystem` 參數來描述檔案系統。
 2. 從檔案系統項目物件的 {{domxref("FileSystemEntry.filesystem", "filesystem")}} 屬性中取得。
 
-## 屬性
+## 實例屬性
 
 - {{domxref("FileSystem.name")}} {{ReadOnlyInline}}
   - : 代表檔案系統名稱的字串。此名稱在整個檔案的清單中是唯一的。
