@@ -13,7 +13,7 @@ W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加
 
 为了阻止同步使用 `XMLHttpRequest`，HTML 支持在同步模式下是不可用的。另外，只有当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性被设置为 `"document"` 时，才会有 HTML 支持。这一限制避免了当遗留代码在默认模式下使用 `XMLHttpRequest` 来检索 {{domxref("XMLHttpRequest.responseText", "responseText")}}，对 `text/html` 资源进行无用的解析而浪费时间。同时，这个限制也避免了遗留代码的问题，这些代码假定 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 对于 HTTP 错误页面（通常有一个 `text/html` 响应体）是 `null`。
 
-## 使用说明
+## 用法
 
 使用 {{domxref("XMLHttpRequest")}} 检索作为 DOM 的 HTML 资源，就像使用 `XMLHttpRequest` 检索作为 DOM 的 XML 资源一样，只是你不能使用同步模式，你必须在调用 {{domxref("XMLHttpRequest.open", "open()")}} 之后，{{domxref("XMLHttpRequest.send", "send()")}} 之前，将字符串 `"document"` 分配给 {{domxref("XMLHttpRequest", "responseType")}} 对象的属性，来明确请求一个文档。
 
