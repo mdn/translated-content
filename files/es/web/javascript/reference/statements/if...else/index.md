@@ -116,7 +116,8 @@ No confundir los valores booleanos primitivos `true` y `false` con los valores v
 
 ```js
 const b = new Boolean(false);
-if (b) {// Esta condición se evalúa como verdadera
+// Esta condición se evalúa como verdadera
+if (b) {
   console.log("b is truthy"); // "b is truthy"
 }
 ```
