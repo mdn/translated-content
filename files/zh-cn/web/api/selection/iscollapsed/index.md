@@ -1,7 +1,8 @@
 ---
-title: "Selection: isCollapsed property"
-short-title: isCollapsed
+title: Selection：isCollapsed 属性
 slug: Web/API/Selection/isCollapsed
+l10n:
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
 {{ ApiRef("DOM") }}
