@@ -2,8 +2,6 @@
 title: "Selection: isCollapsed property"
 short-title: isCollapsed
 slug: Web/API/Selection/isCollapsed
-page-type: web-api-instance-property
-browser-compat: api.Selection.isCollapsed
 ---
 
 {{ ApiRef("DOM") }}
