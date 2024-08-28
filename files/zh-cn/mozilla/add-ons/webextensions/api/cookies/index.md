@@ -53,7 +53,8 @@ l10n:
 
 Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟踪器无法关联所访问的网站。因此，在上述示例中，当访问 `a-shopping-site.com` 时，`ad-tracker.com` 无法看到在 `a-news-site.com` 上创建的 cookie。这种保护的首次实现是第一方隔离，现在正在被[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)取代。
 
-> **备注：** 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
+> [!NOTE]
+> 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
 
 ### 存储分区
 
@@ -114,7 +115,8 @@ Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟�
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/)。此文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/)。此文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

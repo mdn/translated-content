@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Operators/function
 
 Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une expression.
 
-> **Note :** Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Instructions/function).
+> [!NOTE]
+> Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Instructions/function).
 
 {{EmbedInteractiveExample("pages/js/expressions-functionexpression.html")}}
 
@@ -28,7 +29,8 @@ function [nom]([param1[, param2[, …, paramN]]]) {
 - `instructions`
   - : Les instructions constituant le corps de la fonction.
 
-> **Note :** À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées).
+> [!NOTE]
+> À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées).
 
 ## Description
 

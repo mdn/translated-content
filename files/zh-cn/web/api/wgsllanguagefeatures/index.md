@@ -11,7 +11,8 @@ l10n:
 
 `WGSLLanguageFeatures` 对象可通过 {{domxref("GPU.wgslLanguageFeatures")}} 属性访问。
 
-> **备注：** 并非所有 WGSL 语言扩展在支持 WebGPU API 的所有浏览器中都可用。我们建议你对选择使用的任何扩展程序进行彻底测试。
+> [!NOTE]
+> 并非所有 WGSL 语言扩展在支持 WebGPU API 的所有浏览器中都可用。我们建议你对选择使用的任何扩展程序进行彻底测试。
 
 {{InheritanceDiagram}}
 

@@ -19,7 +19,8 @@ widows: initial;
 widows: unset;
 ```
 
-> **Note :** En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
+> [!NOTE]
+> En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
 
 ## Syntaxe
 

@@ -84,7 +84,8 @@ importScripts("foo.js");
 console.log(navigator);
 ```
 
-> **Note :** Étant donné que la portée globale du script de worker est effectivement la portée globale du worker que vous exécutez ({{domxref ("DedicatedWorkerGlobalScope")}} ou autre) et que toutes les portées globales de worker héritent des méthodes, des propriétés, etc. À partir de `WorkerGlobalScope`, vous pouvez exécuter des lignes telles que celles ci-dessus sans spécifier d'objet parent.
+> [!NOTE]
+> Étant donné que la portée globale du script de worker est effectivement la portée globale du worker que vous exécutez ({{domxref ("DedicatedWorkerGlobalScope")}} ou autre) et que toutes les portées globales de worker héritent des méthodes, des propriétés, etc. À partir de `WorkerGlobalScope`, vous pouvez exécuter des lignes telles que celles ci-dessus sans spécifier d'objet parent.
 
 ## Spécifications
 

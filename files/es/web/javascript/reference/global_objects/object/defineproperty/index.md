@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 El método estático **`Object.defineProperty()`** define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.
 
-> **Nota:** Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo `Object`.
+> [!NOTE]
+> Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo `Object`.
 
 ## Sintaxis
 

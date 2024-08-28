@@ -27,7 +27,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 - {{domxref("ImageBitmap")}}
   - : 可以被快速渲染的點陣圖(bitmap)，點陣圖能由上述所有來源產生.
 
-這些來源統一參照 [CanvasImageSource](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)型態.
+這些來源統一參照 [CanvasImageSource](https://html.spec.whatwg.org/multipage/canvas.html#image-sources-for-2d-rendering-contexts) 型態。
 
 有好幾種方法能夠取得影像用於畫布.
 
@@ -74,7 +74,7 @@ img.addEventListener(
 img.src = "myImage.png"; // Set source path
 ```
 
-若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](http://www.webreference.com/programming/javascript/gr/column3/)這份文件.
+若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](https://webreference.com/javascript/)這份文件。
 
 ### 以 data:URL 嵌入影像
 
@@ -162,7 +162,8 @@ drawImage()的第二個型態增加了兩個新參數，讓我們在畫布上放
 
 本例我們會取一張影像作為桌布，然後透過簡單的迴圈來重複縮放、貼上影像於畫布上。在程式碼中，第一個迴圈走一遍每一列，第二個迴圈走一遍每一行，影像則縮小成原始影像的三分之一，50 x 38 像素.
 
-> **備註：** 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
+> [!NOTE]
+> 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
 
 ```html hidden
 <html lang="zh">

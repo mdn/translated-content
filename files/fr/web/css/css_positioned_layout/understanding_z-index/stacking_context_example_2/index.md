@@ -24,7 +24,8 @@ Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilemen
 
     - DIV #4 (z-index 10)
 
-> **Note :** Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.
+> [!NOTE]
+> Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.
 
 ## Exemple
 

@@ -18,7 +18,8 @@ slug: Learn/CSS/Building_blocks
 3. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과목에서 설명한 HTML 에 대한 기본적인 친숙성.
 4. [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 과목에서 논의된 CSS 의 기본 사항에 대한 이해.
 
-> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
+> [!NOTE]
+> 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내
 

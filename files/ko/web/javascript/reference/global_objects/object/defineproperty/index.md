@@ -36,7 +36,8 @@ Object.defineProperty(obj, prop, descriptor);
 
 데이터 서술자와 접근자 서술자는 모두 객체로, 다음의 선택적 키를 서로 공유합니다.
 
-> **참고:** 아래에서 설명하는 **기본 값**은 `Object.defineProperty()`로 정의한 속성의 기본 동작을 의미합니다.
+> [!NOTE]
+> 아래에서 설명하는 **기본 값**은 `Object.defineProperty()`로 정의한 속성의 기본 동작을 의미합니다.
 
 - `configurable`
   - : 속성의 값을 변경할 수 있고, 객체에서 삭제할 수도 있으면 `true`입니다. **기본 값은 `false`입니다.**

@@ -1,19 +1,18 @@
 ---
-title: IDBKeyRange.upperOpen
+title: "IDBKeyRange: upperOpen プロパティ"
+short-title: upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: f2088b8912ef205a737551441d54b73507bd3ac6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBKeyRange")}} インターフェイスの読み取り専用プロパティ **`upperOpen`** は、上限の値がキーの範囲に含まれるかを表す {{jsxref("boolean")}} 値を返します。
-
-{{AvailableInWorkers}}
+**`upperOpen`** は {{domxref("IDBKeyRange")}} インターフェイスの読み取り専用プロパティで、上限の値がキーの範囲に含まれるかを表す論理値を返します。
 
 ## 値
 
-{{jsxref("boolean")}} 値です。
+論理値です。
 
 | 値      | 意味                                 |
 | ------- | ------------------------------------ |
@@ -26,7 +25,8 @@ l10n:
 
 キーの範囲を宣言した後、その `upperOpen` プロパティの値をコンソールに記録します。これは `"true"` になるはずです。上限は開なので、範囲には含まれないでしょう。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {
@@ -43,7 +43,7 @@ function displayData() {
       list.appendChild(listItem);
       cursor.continue();
     } else {
-      console.log("全エントリーを表示しました。");
+      console.log("全項目を表示しました。");
     }
   };
 }

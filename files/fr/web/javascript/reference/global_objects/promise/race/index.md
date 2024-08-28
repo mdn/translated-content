@@ -154,7 +154,8 @@ Promise.race([p5, p6]).then(
 );
 ```
 
-> **Note :** voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/WindowTimers/setTimeout)
+> [!NOTE]
+> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/WindowTimers/setTimeout)
 
 ## Spécifications
 

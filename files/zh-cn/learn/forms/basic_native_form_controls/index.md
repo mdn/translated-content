@@ -253,7 +253,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 
 例如，当你点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
-```
+```url
 http://foo.com?pos.x=123&pos.y=456
 ```
 

@@ -15,7 +15,8 @@ l10n:
 このタイムラインは {{domxref("Performance.timeOrigin")}} からの時刻をミリ秒単位で表します。
 基準時刻以前はタイムラインはアクティブではなく、 {{domxref("AnimationTimeline.currentTime", "currentTime")}} は `null` になります。
 
-> **メモ:** アクティブでない文書（{{domxref("Window")}}、{{htmlelement("iframe")}}、{{htmlelement("frame")}} に関連付けられていない {{domxref("Document")}}）に関連付けられている文書タイムラインもアクティブではないと見なされます。
+> [!NOTE]
+> アクティブでない文書（{{domxref("Window")}}、{{htmlelement("iframe")}}、{{htmlelement("frame")}} に関連付けられていない {{domxref("Document")}}）に関連付けられている文書タイムラインもアクティブではないと見なされます。
 
 ## 値
 

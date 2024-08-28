@@ -7,7 +7,8 @@ slug: Web/API/ServiceWorkerRegistration/installing
 
 {{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`installing`** 속성은 {{domxref("ServiceWorker.state")}} 가 `installing` 인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.
 
-> **참고:** 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
+> [!NOTE]
+> 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
 
 ## Syntax
 

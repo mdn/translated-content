@@ -9,7 +9,8 @@ La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Anim
 
 El evento `finish` ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.
 
-> **Nota:** El estado de reproducción `"paused"` reemplaza al estado `"finished"`. Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
+> [!NOTE]
+> El estado de reproducción `"paused"` reemplaza al estado `"finished"`. Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
 
 ## Sintaxis
 

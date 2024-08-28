@@ -48,7 +48,7 @@ CSS 中，有一些符号是可以出现的，比如斜杠 ('`/`') 或者逗号 
 
 *方括号*将数个基本元素组成一个整体，用来**强调组合的优先级**。例如：
 
-```
+```css
 bold [ thin && <length> ]
 ```
 
@@ -66,7 +66,7 @@ bold [ thin && <length> ]
 
 *并置*是指将数个关键字、符号或类型，用空格分开写在一起。并置中所有的元素都**必须出现并且按所规定的顺序出现**。例如：
 
-```
+```css
 bold <length> , thin
 ```
 
@@ -87,7 +87,7 @@ bold <length> , thin
 
 *“与”组合符*连接的各个部分都**必须出现，但是顺序任意**。例如：
 
-```
+```css
 bold && <length>
 ```
 
@@ -103,13 +103,14 @@ bold && <length>
 - `bold`因为长度值没有出现。
 - `bold 1em bold`因为各部分必须恰好出现一次。
 
-> **备注：** 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
+> [!NOTE]
+> 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
 
 ### “或”组合符：||
 
 *“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/CSS/Shorthand_properties)中的各部分。
 
-```
+```css
 <'border-width'> || <'border-style'> || <'border-color'>
 ```
 
@@ -124,13 +125,14 @@ bold && <length>
 - `blue yellow`因为一个组成部分最多出现一次。
 - `bold`因为它不允许出现。
 
-> **备注：** “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
+> [!NOTE]
+> “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
 
 ### “互斥”组合符：|
 
 *“互斥”组合符*表示各组成部分中只能**恰好出现一个**，通常用来分隔一个属性的所有可选值。例如：
 
-```
+```css
 <percentage> | <length> | left | center | right | top | bottom
 ```
 
@@ -150,7 +152,8 @@ bold && <length>
 - `center 3%` 因为最多只能出现一个组成部分
 - `3em 4.5em` 因为每个组成部分最多只能出现一次
 
-> **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
+> [!NOTE]
+> “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
 
 ## 数量符号
 
@@ -162,7 +165,7 @@ bold && <length>
 
 *星号*表示可以出现**零次（即不出现），一次，或任意多次**。例如：
 
-```
+```css
 bold smaller*
 ```
 
@@ -181,7 +184,7 @@ bold smaller*
 
 *加号*表示可以出现**一次或多次**。例如：
 
-```
+```css
 bold smaller+
 ```
 
@@ -200,7 +203,7 @@ bold smaller+
 
 *问号*表示可选，即出现**零次或一次**。例如：
 
-```
+```css
 bold smaller?
 ```
 
@@ -218,7 +221,7 @@ bold smaller?
 
 *大括号*包含两个以逗号分隔的整数 A 与 B，表示**最少出现 A 次，且最多出现 B 次**。例如：
 
-```
+```css
 bold smaller{1,3}
 ```
 
@@ -238,7 +241,7 @@ bold smaller{1,3}
 
 *井号*表示**可以出现一次或多次**，与*加号*相似。但是其多次出现必须**以逗号分隔**。例如：
 
-```
+```css
 bold smaller#
 ```
 
@@ -258,7 +261,7 @@ bold smaller#
 
 组后面的叹号表示该组是必需的，并且至少产生一个值；即使组内项目的语法允许省略全部的值，也至少要保留一个值。
 
-```
+```css
 [ bold? smaller? ]!
 ```
 

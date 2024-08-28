@@ -9,7 +9,8 @@ slug: Web/CSS/percentage
 
 许多长度属性使用百分比，如 {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}。百分比也可以在 {{Cssxref("font-size")}} 看到，其中的文字大小是其父级元素的大小直接相关。
 
-> **备注：** 只有计算值是可以继承的。所以，即使一个百分比值用于父属性，一个真正的值，比如具体像素宽度 {{cssxref("&lt;length&gt;")}} 的值，将访问继承的属性，而不是百分比的值。
+> [!NOTE]
+> 只有计算值是可以继承的。所以，即使一个百分比值用于父属性，一个真正的值，比如具体像素宽度 {{cssxref("&lt;length&gt;")}} 的值，将访问继承的属性，而不是百分比的值。
 
 ## 语法
 

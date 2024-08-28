@@ -7,7 +7,7 @@ slug: Learn/JavaScript/Objects
 
 Em JavaScript, a maioria das coisas são objetos, desde os principais recursos do JavaScript, como arrays, até o navegador {{Glossary("API", "APIs")}} construído sobre o JavaScript. Você pode até mesmo criar seus próprios objetos para encapsular funções e variáveis relacionadas em pacotes eficientes e atuar como contêineres de dados úteis. É importante entender a natureza baseada em objetos do JavaScript se você quiser aprofundar seu conhecimento da linguagem, portanto, fornecemos este módulo para ajudá-lo. Aqui ensinamos a teoria e a sintaxe de objetos em detalhes, depois veremos como criar seus próprios objetos.
 
-> **Observação:**
+> [!CALLOUT]
 >
 > #### Quer se tornar um desenvolvedor web front-end?
 >
@@ -22,7 +22,8 @@ Antes de iniciar este módulo, você deve ter alguma familiaridade com {{Glossar
 
 Você também deve ter alguma familiaridade com os fundamentos do JavaScript antes de examinar os objetos JavaScript em detalhes. Antes de tentar este módulo, trabalhe nas [primeiras etapas do JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e nos [blocos de construção do JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks).
 
-> **Nota:** Se você estiver trabalhando em um computador/tablet/outros dispositivos nos quais não é possível criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Se você estiver trabalhando em um computador/tablet/outros dispositivos nos quais não é possível criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

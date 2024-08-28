@@ -28,7 +28,8 @@ mode = document.compatMode;
 
 <!---->
 
-> **Note :** tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.
+> [!NOTE]
+> Tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.
 
 ## Exemple
 

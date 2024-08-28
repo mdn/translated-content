@@ -78,7 +78,8 @@ En el ejemplo siguiente, el primer selector relaciona valores que empiezan con `
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **Nota:** Recientemente se ha creado un valor `s`, que obliga a establecer la distinción de mayúsculas y minúsculas en contextos en que no se suele establecer esta distinción. Sin embargo, pocos navegadores lo utilizan y no resulta demasiado útil en un contexto HTML.
+> [!NOTE]
+> Recientemente se ha creado un valor `s`, que obliga a establecer la distinción de mayúsculas y minúsculas en contextos en que no se suele establecer esta distinción. Sin embargo, pocos navegadores lo utilizan y no resulta demasiado útil en un contexto HTML.
 
 ## Próximos pasos
 

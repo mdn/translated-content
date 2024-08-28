@@ -9,7 +9,8 @@ l10n:
 
 **`canPresent`** は {{domxref("VRDisplayCapabilities")}} インターフェイスの読み取り専用プロパティで、VR ディスプレイが（HMD を通じて）コンテンツを表示可能かどうかの状態を論理値で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 これは、 6 自由度追跡が可能であるものの、 {{domxref("VRDisplay.requestPresent()")}} が意味を持たない「マジックウィンドウ」機器を識別するのに有益な機能です。`canPresent` が `false` の場合、 {{domxref("VRDisplay.requestPresent()")}} の呼び出しは失敗し、 {{domxref("VRDisplay.getEyeParameters()")}} は `null` を返します。
 

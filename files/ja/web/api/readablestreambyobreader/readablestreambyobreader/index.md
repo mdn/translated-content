@@ -10,7 +10,8 @@ l10n:
 
 **`ReadableStreamBYOBReader()`** コンストラクターは、`ReadableStreamBYOBReader` オブジェクトのインスタンスを作成して返します。
 
-> **メモ:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドに `"byob"` を引数につけて使用してください。
+> [!NOTE]
+> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドに `"byob"` を引数につけて使用してください。
 
 ## 構文
 

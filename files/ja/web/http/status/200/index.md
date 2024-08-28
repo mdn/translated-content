@@ -1,37 +1,33 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
+l10n:
+  sourceCommit: b085d5418eb8ef812682e647045746221bad0e7e
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`200 OK`** はリクエストが成功した場合に返すレスポンスコード。200 のレスポンスはデフォルトでキャッシュしてよい。
+HTTP の **`200 OK`** は成功ステータスレスポンスコードで、リクエストが成功したことを示します。200 レスポンスは既定でキャッシュ可能です。
 
-成功したという意味はリクエストのメソッドによって異なる:
+成功の意味合いは意味は HTTP リクエストメソッドによって異なります。
 
-- {{HTTPMethod("GET")}}: リソースがフェッチされメッセージのボディ部で返送された。
-- {{HTTPMethod("HEAD")}}: エンティティヘッダがボディ部で返送された。
-- {{HTTPMethod("POST")}}: 実行された結果が記載されたリソースがボディ部で返送された。
-- {{HTTPMethod("TRACE")}}: メッセージのボディ部にサーバーで受信したリクエストメッセージを含んでいる。
+- {{HTTPMethod("GET")}}: リソースの取得が行われ、メッセージ本体が返送される。
+- {{HTTPMethod("HEAD")}}: 表現ヘッダーがメッセージ本体なしでレスポンスに含まれる。
+- {{HTTPMethod("POST")}}: アクションの結果を示すリソースが、メッセージ本体で返送される。
+- {{HTTPMethod("TRACE")}}: メッセージ本体に、サーバーが受信したリクエストメッセージが格納されます。
 
-{{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} の成功結果は `200` `OK` ではなく、 {{HTTPStatus("204")}} `No Content` (や、リソースの初回アップロードによる作成の場合は {{HTTPStatus("201")}} `Created` )である場合もある。
+{{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} の成功結果は `200 OK` になるとは限らず、 {{HTTPStatus("204")}} `No Content` （またはリソースの初回アップロードによる作成の場合は {{HTTPStatus("201")}} `Created`）である場合もある。
 
 ## ステータス
 
-```
+```http
 200 OK
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                | タイトル                                                      |
-| ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## ブラウザー互換性
+## 関連情報
 
-{{Compat}}
-
-## 参照
-
-- [HTTP request methods](/ja/docs/Web/HTTP/Methods)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)

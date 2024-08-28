@@ -88,7 +88,8 @@ function startup() {
 
 当用户点击 "Connect" 按钮， `connectPeers()` 方法被调用。下面将逐一分析该方法中的细节。
 
-> **备注：** 尽管参与连接的两端都在同一页面，我们将启动连接的一端称为 "local" 端，另一端称为 "remote" 端。
+> [!NOTE]
+> 尽管参与连接的两端都在同一页面，我们将启动连接的一端称为 "local" 端，另一端称为 "remote" 端。
 
 #### 建立本地节点
 
@@ -117,7 +118,8 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 下一步为每个连接建立 ICE 候选侦听处理，当连接的一方出现新的 ICE 候选时该侦听逻辑将被调用以告知连接的另一方此消息。
 
-> **备注：** 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议 (例如：UDP,、中继 UDP、TCP 之类的) ，双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。
+> [!NOTE]
+> 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议 (例如：UDP,、中继 UDP、TCP 之类的) ，双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -160,7 +162,8 @@ localConnection
 6. 最终，通过调用 localConnection 的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向 remote 节点。
 7. `catch()` 调用一个用于处理任何异常的逻辑。
 
-> **备注：** 再次申明，上述处理过程并非针对现实世界的实现，在正常环境下，建立连接的两端的机器，运行两块不同的代码，用于交互和协商连接过程。
+> [!NOTE]
+> 再次申明，上述处理过程并非针对现实世界的实现，在正常环境下，建立连接的两端的机器，运行两块不同的代码，用于交互和协商连接过程。
 
 #### 对成功的对等连接的处理
 

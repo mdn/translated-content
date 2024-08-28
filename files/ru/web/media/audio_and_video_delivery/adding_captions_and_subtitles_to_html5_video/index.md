@@ -13,7 +13,8 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **Примечание:** вы можете найти [source on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а так же [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
+> [!NOTE]
+> Вы можете найти [исходный код на Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а также [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
 
 ## HTML5 и Video Captions
 
@@ -298,7 +299,8 @@ Then this specific 'voice' will be stylable like so:
 }
 ```
 
-> **Примечание:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
+> [!NOTE]
+> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
 ## Совместимость с браузерами
 

@@ -31,7 +31,8 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 
 {{EmbedLiveSample("Exemples","100%","100%")}}
 
-> **Note :** Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
+> [!NOTE]
+> Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
 
 ## Résumé technique
 

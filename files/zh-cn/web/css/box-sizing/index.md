@@ -18,7 +18,8 @@ box-sizing 属性可以被用来调整这些表现：
 
 **译者注：** `border-box`不包含`margin`
 
-> **备注：** 对于新的 web 站点，你可能希望首先将 box-sizing 设置为 border-box，如下所示：
+> [!NOTE]
+> 对于新的 web 站点，你可能希望首先将 box-sizing 设置为 border-box，如下所示：
 >
 > ```css
 > * {

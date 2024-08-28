@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 
 {{AddonSidebar}}
 
-> **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.
+> [!WARNING]
+> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.
 
 Renvoie un tableau des objets de la [Window](/fr/docs/Web/API/Window) JavaScriptpour chacun des onglets qui s'exécutent dans l'extension actuelle. Si `windowId` est spécifié, renvoie uniquement les objets Window des onglets attachés à la fenêtre spécifiée.
 
@@ -34,7 +35,7 @@ Cette API est également disponible en tant que `browser.extension.getExtensionT
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >

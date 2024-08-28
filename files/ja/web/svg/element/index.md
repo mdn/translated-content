@@ -1,9 +1,12 @@
 ---
 title: SVG 要素リファレンス
+short-title: 要素
 slug: Web/SVG/Element
+l10n:
+  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
-« [SVG](/ja/docs/SVG) / [SVG 属性リファレンス](/ja/docs/SVG/Attribute) »
+{{SVGRef}}
 
 SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。
 
@@ -20,13 +23,11 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
 
 ### D
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -66,11 +67,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("g")}}
 
-### H
-
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
-
 ### I
 
 - {{SVGElement("image")}}
@@ -84,10 +80,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("marker")}}
 - {{SVGElement("mask")}}
-- {{SVGElement("mesh")}}
-- {{SVGElement("meshgradient")}}
-- {{SVGElement("meshpatch")}}
-- {{SVGElement("meshrow")}}
 - {{SVGElement("metadata")}}
 - {{SVGElement("mpath")}}
 
@@ -107,7 +99,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
-- {{SVGElement("solidcolor")}}
 - {{SVGElement("stop")}}
 - {{SVGElement("style")}}
 - {{SVGElement("svg")}}
@@ -123,18 +114,19 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### U
 
-- {{SVGElement("unknown")}}
 - {{SVGElement("use")}}
 
 ### V
 
 - {{SVGElement("view")}}
 
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+
 ## SVG 要素一覧 (カテゴリー別)
 
 ### アニメーション要素
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
 ### 基本シェイプ
 
@@ -142,7 +134,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### コンテナー要素
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
 
 ### 説明的要素
 
@@ -150,7 +142,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### フィルター構成要素
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
 
 ### フォント要素
 
@@ -158,15 +150,15 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### グラデーション要素
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
 
 ### グラフィック要素
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
 
 ### グラフィック参照要素
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+{{SVGElement("use")}}
 
 ### 光源要素
 
@@ -174,19 +166,21 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### 描画されない要素
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
 ### ペイントサーバー要素
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}
 
 ### 描画可能要素
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
+{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
+
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
 
 ### 図形要素
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
 ### 構造的要素
 
@@ -194,23 +188,20 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### テキストコンテンツ要素
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### テキストコンテンツの子要素
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### 未分類の要素
 
-{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## 廃止および非推奨の要素
 
-> **警告:** 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
-
-### A
-
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}
+> [!WARNING]
+> 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
 
 ### C
 
@@ -244,6 +235,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - [SVG 属性リファレンス](/ja/docs/Web/SVG/Attribute)
 - [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_dom)
 
 {{SVGRef}}

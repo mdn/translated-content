@@ -24,7 +24,8 @@ Se você tiver dúvidas sobre os tópicos que gostaria de ver cobertos ou que es
 - Além do básico: Se você já possui um pouco de conhecimento, o próximo passo é aprender {{glossary ("HTML")}} e {{glossary ("CSS")}} em detalhes: comece com o módulo [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML) e vá para nosso módulo [Primeiros passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
 - Passando para o script: Se você já está familiarizado com HTML e CSS ou se interessa principalmente por codificação, deve passar para o {{glossary ("JavaScript")}} ou para o desenvolvimento no servidor. Comece com nossos módulo [Primeiros passos com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Primeiros passos programando o site no servidor](/pt-BR/docs/Learn/Server-side/First_steps).
 
-> **Nota:** Nosso [glossário](/pt-BR/docs/Glossario) fornece definições de terminologia.
+> [!NOTE]
+> Nosso [glossário](/pt-BR/docs/Glossario) fornece definições de terminologia.
 
 ## Assuntos abordados
 

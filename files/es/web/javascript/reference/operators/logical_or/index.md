@@ -85,7 +85,8 @@ false || ""; // f || f retorna ""
 false || varObject; // f || objeto retorna varObject
 ```
 
-> **Nota:** Si se usa este operador para proveer un valor por defecto a alguna variable, se debe ser consciente que cualquier valor _falsy_ no será usado. Si solo se necesita filtrar [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) o {{jsxref("undefined")}}, considere usar [el operador de coalescencia nula (??)](/es/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
+> [!NOTE]
+> Si se usa este operador para proveer un valor por defecto a alguna variable, se debe ser consciente que cualquier valor _falsy_ no será usado. Si solo se necesita filtrar [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) o {{jsxref("undefined")}}, considere usar [el operador de coalescencia nula (??)](/es/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Reglas de conversión para booleanos
 

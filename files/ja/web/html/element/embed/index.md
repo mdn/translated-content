@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **メモ:** 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
+> [!NOTE]
+> 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
 
 最近のほとんどのブラウザーは、ブラウザーのプラグインの対応を非推奨にして削除しているため、サイトを平均的なユーザーのブラウザーで操作できるようにしたいのであれば、 `<embed>` に頼ることは賢明ではないということを意識しておいてください。
 

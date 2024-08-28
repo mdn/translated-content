@@ -344,9 +344,11 @@ container.addEventListener("click", (event) => {
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **メモ:** この例では、`event.target` を使用して、イベントの対象となった要素（つまり、最も内側の要素）を取得しています。もし、このイベントを処理した要素（この用途ではコンテナー）にアクセスしたい場合は、`event.currentTarget` を使用することができます。
+> [!NOTE]
+> この例では、`event.target` を使用して、イベントの対象となった要素（つまり、最も内側の要素）を取得しています。もし、このイベントを処理した要素（この用途ではコンテナー）にアクセスしたい場合は、`event.currentTarget` を使用することができます。
 
-> **メモ:** 完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) を参照してください。こちらの[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)も参照してください。
+> [!NOTE]
+> 完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) を参照してください。こちらの[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)も参照してください。
 
 ## `target` および `currentTarget`
 
@@ -403,7 +405,8 @@ button.addEventListener("click", handleClick);
 また、JavaScript が使用されるさまざまなコンテキストには、異なるイベントモデルがあることを理解することが重要です。Web API から、ブラウザーの WebExtensions や Node.js (サーバーサイド JavaScript) などの他の領域までです。
 これでこれらの領域をすべて理解できるとは思っていませんが、ウェブ開発を学習していく上で、イベントの基本を理解しておくことはとても役に立ちます。
 
-> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 関連情報
 

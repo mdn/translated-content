@@ -9,7 +9,8 @@ slug: Web/API/Window/blur_event
 
 Событие `blur` возникает когда элемент теряет фокус.
 
-> **Примечание:** Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
+> [!NOTE]
+> Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
 
 ## Syntax
 

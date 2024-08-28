@@ -67,7 +67,8 @@ Il s'agit de la valeur par défaut pour un fichier binaire. Etant donné qu'il s
 
 Il s'agit de la valeur par défaut pour les fichiers texte. Bien qu'il signifie fichier texte de format inconnu, les navigateurs prendront pour hypothèse qu'ils peuvent l'afficher.
 
-> **Note :** Il est important de noter que `text/plain` ne signifie pas _tous les formats de fichiers textuels_. Si le client s'attend à recevoir un format particulier de données textuelles, il est vraisemblable que le type `text/plain` ne soit pas considéré comme valide à la réception. Par exemple, si le client télécharge un fichier `text/plain` à partir d'un {{HTMLElement("link")}} déclarant des fichiers CSS, ce dernier ne sera pas considéré comme un CSS, le type MIME à utiliser étant `text/css`.
+> [!NOTE]
+> Il est important de noter que `text/plain` ne signifie pas _tous les formats de fichiers textuels_. Si le client s'attend à recevoir un format particulier de données textuelles, il est vraisemblable que le type `text/plain` ne soit pas considéré comme valide à la réception. Par exemple, si le client télécharge un fichier `text/plain` à partir d'un {{HTMLElement("link")}} déclarant des fichiers CSS, ce dernier ne sera pas considéré comme un CSS, le type MIME à utiliser étant `text/css`.
 
 ### `text/css`
 

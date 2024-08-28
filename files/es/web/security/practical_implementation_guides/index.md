@@ -10,7 +10,8 @@ l10n:
 
 Hay una serie de cosas que puede hacer para ayudar a proteger su sitio. Este artículo ofrece una variedad de sugerencias, así como enlaces a otros artículos que brindan información más útil.
 
-> **Nota:** Este artículo es un trabajo en progreso, y ni está completo ni seguir sus sugerencias garantiza que su sitio sea completamente seguro.
+> [!NOTE]
+> Este artículo es un trabajo en progreso, y ni está completo ni seguir sus sugerencias garantiza que su sitio sea completamente seguro.
 
 ## Seguridad de la información del usuario
 

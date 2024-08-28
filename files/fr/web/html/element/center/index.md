@@ -5,7 +5,8 @@ slug: Web/HTML/Element/center
 
 {{HTMLSidebar}}
 
-> **Attention :** Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
+> [!WARNING]
+> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
 
 L'élément **`<center>`** est un [élément de bloc](/fr/docs/Web/HTML/Block-level_elements) qui contient des paragraphes et d'autres éléments de type bloc ou en ligne. Le contenu entier de cet élément est centré horizontalement au sein de son conteneur parent (généralement l'élément [`<body>`](/fr/docs/Web/HTML/Element/body)).
 
@@ -15,7 +16,8 @@ Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la proprié
 
 Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
 
 ## Exemple 1
 

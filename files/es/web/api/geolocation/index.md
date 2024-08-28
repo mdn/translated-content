@@ -9,7 +9,8 @@ La interfaz **Geolocalización** representa un objeto capaz de obtener mediante 
 
 Se obtiene un objeto con esta interfaz mediante la propiedad {{domxref("NavigatorGeolocation.geolocation")}} implementado por el objeto {{domxref("Navigator")}}.
 
-> **Nota:** Por razones de seguridad, cuando una página web intenta obtener acceso a la información de ubicación, se notifica al usuario y le pide conceder el permiso. Tenga en cuenta que cada navegador tiene sus propias políticas y métodos para solicitar este permiso.
+> [!NOTE]
+> Por razones de seguridad, cuando una página web intenta obtener acceso a la información de ubicación, se notifica al usuario y le pide conceder el permiso. Tenga en cuenta que cada navegador tiene sus propias políticas y métodos para solicitar este permiso.
 
 ## Propiedades
 

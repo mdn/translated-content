@@ -94,7 +94,8 @@ export default function Todo() {
 }
 ```
 
-> **Nota:** Los componentes siempre deben devolver algo. Si en cualquier punto en el futuro intentas renderizar un componente que no devuelve nada, React mostrará un error en el navegador.
+> [!NOTE]
+> Los componentes siempre deben devolver algo. Si en cualquier punto en el futuro intentas renderizar un componente que no devuelve nada, React mostrará un error en el navegador.
 
 Nuestro componente `Todo` esta completo, por ahora; ahora podemos usarlo. En `App.js`, agrega la siguiente linea hasta arriba del archivo para importar `Todo`;
 
@@ -385,7 +386,8 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Nota:** Podrias notar que estamos cometiendo el mismo error que cometimos por primera vez con el componente `<Todo />`, en que cada botón será lo mismo. ¡Esta bien! Vamos arreglarlo mas adelante en [Volver a los botones de filtro](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> [!NOTE]
+> Podrias notar que estamos cometiendo el mismo error que cometimos por primera vez con el componente `<Todo />`, en que cada botón será lo mismo. ¡Esta bien! Vamos arreglarlo mas adelante en [Volver a los botones de filtro](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importando todos nuestros componentes
 

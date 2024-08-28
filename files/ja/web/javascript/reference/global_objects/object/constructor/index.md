@@ -9,7 +9,8 @@ l10n:
 
 **`constructor`** は {{jsxref("Object")}} インスタンスのデータプロパティで、インスタンスオブジェクトを生成したコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
 
-> **メモ:** これは JavaScript オブジェクトのプロパティです。クラスの `constructor` メソッドについては、[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Classes/constructor)を参照してください。
+> [!NOTE]
+> これは JavaScript オブジェクトのプロパティです。クラスの `constructor` メソッドについては、[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Classes/constructor)を参照してください。
 
 ## 値
 
@@ -17,7 +18,8 @@ l10n:
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **メモ:** このプロパティは、既定ではすべてのコンストラクター関数の [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティに作成され、そのコンストラクターで作成されたすべてのオブジェクトに継承されます。
+> [!NOTE]
+> このプロパティは、既定ではすべてのコンストラクター関数の [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティに作成され、そのコンストラクターで作成されたすべてのオブジェクトに継承されます。
 
 ## 解説
 
@@ -297,7 +299,8 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 繰り返しますが、 `Object.setPrototypeOf()`を使用するとパフォーマンスに悪影響を持つことがあるので、コンストラクター宣言の直後でインスタンスが作成される前に使用するようにしてください。
 
-> **メモ:** コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
+> [!NOTE]
+> コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
 
 ## 仕様書
 

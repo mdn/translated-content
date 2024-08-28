@@ -13,7 +13,8 @@ l10n:
 
 ユーザーのフォーカスが複数行 {{HTMLElement('textarea')}} にあるとき、キー入力は改行を挿入します。 [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role) ロールが設定された要素にのみ受け入れられ、 `aria-multiline` 属性は、テキストボックスが複数行の入力を受け入れるか、単一の行のみを受け入れるかを支援技術に示し、入力するデータの型やキーストロークが何をするかを設定します。
 
-> **メモ:** 可能な場合は、 HTML の {{HTMLElement('input')}} または {{HTMLElement('textarea')}} を使用してください。これらは意味づけと動作が組み込まれており、 ARIA 属性やスクリプトを必要とせず、キーボード対応が組み込まれているからです。
+> [!NOTE]
+> 可能な場合は、 HTML の {{HTMLElement('input')}} または {{HTMLElement('textarea')}} を使用してください。これらは意味づけと動作が組み込まれており、 ARIA 属性やスクリプトを必要とせず、キーボード対応が組み込まれているからです。
 
 `aria-multiline="true"` が設定されている場合、テキストボックスウィジェットは HTML の {{HTMLElement('textarea')}} のように入力内の改行を受け入れることを意味しています。この属性を持たない、または値が `false` に設定されている `textbox` のロールを持つ要素は単純なテキストボックスです。
 

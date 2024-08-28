@@ -9,7 +9,8 @@ l10n:
 
 これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する [MathML 要素ページ](/ja/docs/Web/MathML/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Global_attributes)にあります。[値](/ja/docs/Web/MathML/Values)ページでは、 MathML 属性で使用される共通の値についての注意を説明しています。
 
-> **メモ:** 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) をリファレンス仕様書として使用しています。しかし、いくつかのブラウザーでまだ実装されている古い機能も文書化されています。これらの機能やその他の機能についての詳細は [MathML 4](https://w3c.github.io/mathml/) で見ることができます。
+> [!NOTE]
+> 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) をリファレンス仕様書として使用しています。しかし、いくつかのブラウザーでまだ実装されている古い機能も文書化されています。これらの機能やその他の機能についての詳細は [MathML 4](https://w3c.github.io/mathml/) で見ることができます。
 
 <table class="standard-table">
   <thead>

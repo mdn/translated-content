@@ -53,7 +53,8 @@ user-select: unset;
 
   - : 要素の内部から選択を始めることができます。しかし、選択範囲は要素の境界内のみに限定されます。
 
-> **メモ:** CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
+> [!NOTE]
+> CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
 
 ## 公式定義
 

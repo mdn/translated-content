@@ -55,7 +55,7 @@ l10n:
 
 #### ネイティブでないコントロール
 
-{{ HTMLElement("a") }}、{{ HTMLElement("input") }}、{{ HTMLElement("select") }} のような操作可能ななネイティブ HTML 要素はすでにキーボードによりアクセス可能であるため、これらのいずれかを使用することが、コンポーネントをキーボードで使えるようにするための最速の方法です。
+{{ HTMLElement("a") }}、{{ HTMLElement("input") }}、{{ HTMLElement("select") }} のような操作可能なネイティブ HTML 要素はすでにキーボードによりアクセス可能であるため、これらのいずれかを使用することが、コンポーネントをキーボードで使えるようにするための最速の方法です。
 
 {{ HTMLElement("div") }} や {{ HTMLElement("span") }} をキーボードでアクセス可能にするには、 `tabindex` を `0` で追加することによって実現できます。これは、 HTML には存在しない操作可能な要素を使用するコンポーネントに特に役立ちます。
 
@@ -133,9 +133,9 @@ l10n:
 
 ### テクニック 2: `aria-activedescendant`
 
-このテクニックでは、単一のイベントハンドラーをコンテナウィジェットにバインドし、`aria-activedescendant` を使用して「仮想」フォーカスを追跡します。 （ARIA に関する詳細は、[アクセス可能なウェブアプリケーションとウィジェットの概要](/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)を参照してください。）
+このテクニックでは、単一のイベントハンドラーをコンテナーウィジェットにバインドし、`aria-activedescendant` を使用して「仮想」フォーカスを追跡します。 （ARIA に関する詳細は、[アクセス可能なウェブアプリケーションとウィジェットの概要](/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)を参照してください。）
 
-`aria-activedescendant` プロパティは、現在仮想フォーカスを持っている子孫要素の ID を識別します。 コンテナのイベントハンドラーは、`aria-activedescendant` の値を更新し、（例えば、境界線や背景色で）現在の項目が適切にスタイル設定されていることを確実にすることで、キーイベントおよびマウスイベントに応答する必要があります。
+`aria-activedescendant` プロパティは、現在仮想フォーカスを持っている子孫要素の ID を識別します。 コンテナーのイベントハンドラーは、`aria-activedescendant` の値を更新し、（例えば、境界線や背景色で）現在の項目が適切にスタイル設定されていることを確実にすることで、キーイベントおよびマウスイベントに応答する必要があります。
 
 ### 一般的なガイドライン
 

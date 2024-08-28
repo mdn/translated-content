@@ -34,7 +34,7 @@ JavaScript または WebAssembly コードから生成されたメモリーは J
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
-次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリにインポートします。それから、メモリにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
+次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
@@ -49,7 +49,7 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 });
 ```
 
-WebAssembly.Memory オブジェクトを取得する 2 つ目の方法は、 WebAssembly モジュールによってエクスポートされることです。このメモリは WebAssembly インスタンスの `exports` プロパティで (メモリーが WebAssembly モジュール内でエクスポートされた後に) アクセスできます。次のスニペットは、 WebAssembly からエクスポートされたメモリを `memory`という名前でインポートし、メモリーの最初の要素を Uint32Array として解釈して表示しています。
+WebAssembly.Memory オブジェクトを取得する 2 つ目の方法は、 WebAssembly モジュールによってエクスポートされることです。このメモリーは WebAssembly インスタンスの `exports` プロパティで (メモリーが WebAssembly モジュール内でエクスポートされた後に) アクセスできます。次のスニペットは、 WebAssembly からエクスポートされたメモリーを `memory`という名前でインポートし、メモリーの最初の要素を Uint32Array として解釈して表示しています。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm")).then((obj) => {

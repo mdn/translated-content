@@ -54,7 +54,8 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : Plusieurs tags de langue sont séparés par paragraphe. Chaque tag de langue est une séquence d'un ou plusieurs sous-tags insensibles à la casse, chacun séparé par un tiret ("`-`", `%x2D`). Dans la plupart des cas, un tag de langue se compose d'un sous-tag de langue principal qui identifie une large famille de langues connexes (par exemple, «en» = anglais), suivi éventuellement d'une série de sous-tags qui affinent ou réduisent la variété de langue. (par exemple, "en-CA" = la variété d'anglais telle que communiquée au Canada).
 
-> **Note :** Les tags de langues sont formellement définis dans la RFC 5646, qui repose sur la norme ISO 639 (très souvent la liste de codes ISO 639-1) pour les codes de langue à utiliser.
+> [!NOTE]
+> Les tags de langues sont formellement définis dans la RFC 5646, qui repose sur la norme ISO 639 (très souvent la liste de codes ISO 639-1) pour les codes de langue à utiliser.
 
 ## Exemples
 

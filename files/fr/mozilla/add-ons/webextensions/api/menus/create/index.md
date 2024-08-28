@@ -68,7 +68,8 @@ browser.menus.create(
             }
         ```
 
-        > **Note :** L'élément de menu de niveau supérieur utilise les [icônes](/fr/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
+        > [!NOTE]
+        > L'élément de menu de niveau supérieur utilise les [icônes](/fr/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
 
     - `id` {{optional_inline}}
       - : `string`. Identifiant unique à attribuer à cet élément Obligatoire pour les pages d'événement. Ne peut pas être identique à un autre ID pour cette extension.
@@ -179,7 +180,7 @@ browser.menus.onClicked.addListener(function (info, tab) {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 

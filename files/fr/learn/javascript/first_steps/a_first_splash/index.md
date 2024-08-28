@@ -25,7 +25,8 @@ Maintenant que vous avez appris quelques éléments théoriques sur le JavaScrip
 
 Ne vous attendez pas à comprendre tout le code en détail immédiatement — nous voulons simplement vous présenter les grands concepts pour le moment, et vous donner une idée de la façon dont JavaScript (et d'autres langages de programmation) fonctionne. Dans les articles suivants, vous reviendrez plus en détails sur toutes ces fonctionnalités&nbsp;!
 
-> **Note :** De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.
+> [!NOTE]
+> De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.
 
 ## Penser comme un programmeur
 
@@ -244,7 +245,8 @@ Dans notre exemple&nbsp;:
 
 - Nos deux dernières variables stockent un nombre de suppositions qui vaut initialement 1 (utilisées pour garder une trace du nombre de suppositions que le joueur a faite) et une référence à un bouton de réinitialisation qui n'existe pas encore.
 
-> **Note :** Vous en apprendrez beaucoup plus sur les variables plus tard dans le cours, en commençant par le [prochain article](/fr/docs/Learn/JavaScript/First_steps/Variables).
+> [!NOTE]
+> Vous en apprendrez beaucoup plus sur les variables plus tard dans le cours, en commençant par le [prochain article](/fr/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Fonctions
 
@@ -268,7 +270,8 @@ checkGuess();
 
 Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte «&nbsp;Je suis un espace réservé&nbsp;»&nbsp;; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
 
-> **Note :** Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.
+> [!NOTE]
+> Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.
 
 ### Opérateurs
 

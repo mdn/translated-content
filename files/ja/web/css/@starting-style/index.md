@@ -291,7 +291,8 @@ html {
 - `display` をトランジション後の要素のリストに追加することで、アニメーションする要素が出現・消滅の両方のアニメーション中に確実に表示される（`display: block` などの `display` の可視値に設定する）ようにします。これがなければ、消滅アニメーションは表示されません。その結果、ポップオーバーはただ消えてしまいます。アニメーションを有効にするために、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) 値も一括指定で設定されていることに注意してください。
 - [`overlay`](/ja/docs/Web/CSS/overlay) をトランジション後の要素のリストに追加して、要素を最上位レイヤーから除去するのをアニメーションが終わるまで確実に延期するようにします。これは、このような単純なアニメーションでは大差ありませんが、より複雑なケースでは、これを行わないと、要素がオーバーレイからすばやく除去され、アニメーションが滑らかでなくなったり、効果的でなくなったりすることがあります。この場合も、アニメーションを行うには `transition-behavior: allow-discrete` が必要です。
 
-> **メモ:** また、開いたときにポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) のトランジションも記載し、暗転するアニメーションも提供しています。 `[popover]:popover-open::backdrop` はポップオーバーが開くための背景を選択するために使用します。
+> [!NOTE]
+> また、開いたときにポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) のトランジションも記載し、暗転するアニメーションも提供しています。 `[popover]:popover-open::backdrop` はポップオーバーが開くための背景を選択するために使用します。
 
 #### 結果
 
@@ -299,7 +300,8 @@ html {
 
 {{ EmbedLiveSample("Animating a popover", "100%", "200") }}
 
-> **メモ:** ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
+> [!NOTE]
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 
 > **メモ:** {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Element/dialog#transitioning_dialog_elements)で探すことができます。
 

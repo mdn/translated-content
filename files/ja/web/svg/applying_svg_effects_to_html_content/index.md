@@ -1,6 +1,8 @@
 ---
 title: SVG 効果の HTML コンテンツへの適用
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
+l10n:
+  sourceCommit: 1952d89acf75a2a9448cab9d323aa320281cd746
 ---
 
 {{SVGRef}}
@@ -9,7 +11,8 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 
 SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。
 
-> **メモ:** 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
+> [!NOTE]
+> 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
 
 ## 埋め込み SVG の使用
 
@@ -121,7 +124,7 @@ SVG にリアルタイムで変更を加えることができ、その変更は 
 
 ```js
 function toggleRadius() {
-  var circle = document.getElementById("circle");
+  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
 ```
@@ -148,7 +151,7 @@ function toggleRadius() {
 </p>
 ```
 
-同じようにしてあらゆる SVG フィルタが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
+同じようにしてあらゆる SVG フィルターが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
 
 ```html
 <svg height="0">
@@ -172,7 +175,7 @@ function toggleRadius() {
 </svg>
 ```
 
-さらに、いくつかのフィルタを示します。
+さらに、いくつかのフィルターを示します。
 
 ```html
 <svg height="0">
@@ -196,9 +199,9 @@ function toggleRadius() {
   <filter id="f5">
     <feColorMatrix
       values="1 0 0 0 0
-              0 1 0 0 0
-              0 0 1 0 0
-              0 1 0 0 0"
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0"
       style="color-interpolation-filters:sRGB" />
   </filter>
 </svg>
@@ -231,7 +234,7 @@ pre.target:hover {
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、 Webkit ベースのブラウザーでは（接頭辞付きの）blur という CSS フィルターが使えます。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、[`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
 
 ```html
 <p class="blur">Time to clean my glasses</p>
@@ -244,7 +247,7 @@ pre.target:hover {
 </svg>
 ```
 
-SVG と CSS のフィルタは、同じクラス内で適用できます。
+SVG と CSS のフィルターは、同じクラス内で適用できます。
 
 ```css
 .blur {
@@ -272,7 +275,7 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 
 ## 外部参照の使用
 
-クリッピング、マスキング、フィルタリングに使用できるSVGは、そのソースが適用されるHTMLの文書と同じオリジンである限り、外部ソースから読み込むことができます。
+クリッピング、マスキング、フィルタリングに使用できる SVG は、そのソースが適用される HTML の文書と同じオリジンである限り、外部ソースから読み込むことができます。
 
 例えば、CSS が `default.css` という名前のファイルであれば、次のようになります。
 
@@ -287,4 +290,6 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 ## 関連情報
 
 - [SVG](/ja/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (ブログ記事)
+- {{CSSXref('clip-path')}} プロパティ
+- {{CSSXref('mask')}} プロパティ
+- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

@@ -13,9 +13,10 @@ l10n:
 
 `FormData` を実装したオブジェクトは、{{domxref('FormData.entries()', 'entries()')}} の代わりに {{jsxref("Statements/for...of", "for...of")}} 構造の内部で直接使用できます。`for (const p of myFormData)` は `for (const p of myFormData.entries())` と等価です。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("FormData.FormData","FormData()")}}
   - : 新しい `FormData` オブジェクトを作成します。

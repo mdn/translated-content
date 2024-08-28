@@ -108,7 +108,8 @@ URL 的第一部分是*方案*（scheme），它表示浏览器必须使用的�
 - 显示多媒体如图片（用 {{HTMLElement("img")}} 元素）、视频（用 {{HTMLElement("video")}} 元素）、声音和音乐（用 {{HTMLElement("audio")}} 元素）等；
 - 显示其他 HTML 文档，用 {{HTMLElement("iframe")}} 元素。
 
-> **备注：** 当在页面中加载资源时指定 URL（例如使用 `<script>`、`<audio>`、`<img>`、`<video>` 等），通常应只使用 HTTP 和 HTTPS URL，除了一些例外情况（一个显著的例外是 `data:`；参见[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)）。例如，使用 FTP 是不安全的，并且不再受现代浏览器的支持。
+> [!NOTE]
+> 当在页面中加载资源时指定 URL（例如使用 `<script>`、`<audio>`、`<img>`、`<video>` 等），通常应只使用 HTTP 和 HTTPS URL，除了一些例外情况（一个显著的例外是 `data:`；参见[数据 URL](/zh-CN/docs/Web/URI/Schemes/data)）。例如，使用 FTP 是不安全的，并且不再受现代浏览器的支持。
 
 其他大量使用 URL 的技术（如 {{Glossary("CSS")}} 或 {{Glossary("JavaScript")}}）才是 Web 的中心。
 
@@ -146,4 +147,4 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ## 参见
 
-[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)：以 `data:` 方案为前缀的 URL，允许内容创建者在文档中嵌入小文件。
+[数据 URL](/zh-CN/docs/Web/URI/Schemes/data)：以 `data:` 方案为前缀的 URL，允许内容创建者在文档中嵌入小文件。

@@ -57,7 +57,8 @@ l10n:
 2. 表に適切なキャプションを追加します。
 3. コードを保存してブラウザーで開くと、コードがどのように見えるかがわかります。
 
-> **メモ:** GitHub で私たちのバージョンを見ることができます。 [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) を見てください（[ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)）。
+> [!NOTE]
+> GitHub で私たちのバージョンを見ることができます。 [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) を見てください（[ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)）。
 
 ## \<thead>、\<tbody>、\<tfoot> を用いて構造を追加
 
@@ -97,13 +98,15 @@ l10n:
 
 7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクター/規則を記述する必要があります。
 
-> **メモ:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう（[CSS 入門](/ja/docs/Learn/CSS/First_steps)は始めるのに良い場所です。 [スタイル設定された表](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)に関する具体的な記事もあります）。
+> [!NOTE]
+> 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう（[CSS 入門](/ja/docs/Learn/CSS/First_steps)は始めるのに良い場所です。 [スタイル設定された表](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)に関する具体的な記事もあります）。
 
-最終的な票は、次のようになるでしょう。
+最終的な表は、次のようになるでしょう。
 
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-> **メモ:** GitHub で [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) として見ることもできます。
+> [!NOTE]
+> GitHub で [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) として見ることもできます。
 
 ## ネストした表
 
@@ -331,7 +334,8 @@ th {
 </tbody>
 ```
 
-> **メモ:** この方法では、ヘッダーとデータセルの間に非常に正確な関連付けが作成されますが、マークアップがはるかに多くなり、エラーの余地がありません。 `scope` アプローチは通常ほとんどの表に十分です。
+> [!NOTE]
+> この方法では、ヘッダーとデータセルの間に非常に正確な関連付けが作成されますが、マークアップがはるかに多くなり、エラーの余地がありません。 `scope` アプローチは通常ほとんどの表に十分です。
 
 ### アクティブラーニング: scope と headers で遊ぶ
 
@@ -339,7 +343,8 @@ th {
 2. この表をより適切にするために適切な `scope` 属性を追加してみてください。
 3. 最後に、最初のファイルの別のコピーを作成して、今度は、`id` 属性と `headers` 属性を使用して表にアクセスしやすくします。
 
-> **メモ:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
+> [!NOTE]
+> 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
 
 ## まとめ
 

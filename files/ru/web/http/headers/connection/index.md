@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Connection
 
 Заголовок **`Connection`** определяет, остаётся ли сетевое соединение активным после завершения текущей транзакции (запроса). Если в запросе отправлено значение `keep-alive`, то соединение остаётся и не завершается, позволяя выполнять последующие запросы на тот же сервер.
 
-> **Предупреждение:** Заголовки, связанные с соединением, такие как {{HTTPHeader("Connection")}} и {{HTTPHeader("Keep-Alive")}}, [запрещены в HTTP/2](https://tools.ietf.org/html/rfc7540#section-8.1.2.2). Chrome и Firefox просто игнорируют эти заголовки в HTTP/2 ответах, однако Safari, следуя требованиям HTTP/2, вообще не будет загружать какие-либо ответы, которые содержат данные заголовки.
+> [!WARNING]
+> Заголовки, связанные с соединением, такие как {{HTTPHeader("Connection")}} и {{HTTPHeader("Keep-Alive")}}, [запрещены в HTTP/2](https://tools.ietf.org/html/rfc7540#section-8.1.2.2). Chrome и Firefox просто игнорируют эти заголовки в HTTP/2 ответах, однако Safari, следуя требованиям HTTP/2, вообще не будет загружать какие-либо ответы, которые содержат данные заголовки.
 
 За исключением стандартных заголовков [«hop-by-hop»](https://en.wikipedia.org/wiki/Hop-by-hop_transport) ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} и {{HTTPHeader("Proxy-Authenticate")}}), любые «hop-by-hop» заголовки, используемые в сообщении, должны быть перечислены в заголовке `Connection` так, чтобы первый прокси знал, как их использовать, и не передавал дальше. Также могут быть перечислены стандартные «hop-by-hop» заголовки (часто это относится к {{HTTPHeader("Keep-Alive")}}, но это необязательно).
 

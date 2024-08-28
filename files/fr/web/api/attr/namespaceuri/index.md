@@ -7,7 +7,8 @@ slug: Web/API/Attr/namespaceURI
 
 La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.
 
-> **Note :** Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
+> [!NOTE]
+> Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
 
 ## Syntaxe
 

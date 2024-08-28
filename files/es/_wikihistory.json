@@ -4744,10 +4744,6 @@
     "modified": "2019-03-23T23:53:04.318Z",
     "contributors": ["fscholz", "khalid32", "Nukeador", "HenryGR", "Mgjbot"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T22:06:43.969Z",
-    "contributors": ["chrisdavidmills", "AngelFQC"]
-  },
   "Web/API/Navigator/vibrate": {
     "modified": "2019-03-23T23:32:23.651Z",
     "contributors": ["fscholz", "jsx", "mmednik"]
@@ -5340,6 +5336,10 @@
     "modified": "2020-10-12T08:06:57.683Z",
     "contributors": ["SphinxKnight", "MarioA19", "geryescalier", "karlalhdz"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-08-16T13:05:40.057Z",
+    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
+  },
   "Web/API/Web_Audio_API": {
     "modified": "2019-03-23T23:31:19.634Z",
     "contributors": ["estebanborai", "AngelFQC", "Pau_Ilargia", "maedca"]
@@ -5751,13 +5751,13 @@
     "modified": "2019-03-23T22:20:30.589Z",
     "contributors": ["AlePerez92"]
   },
+  "Web/API/console/timeEnd_static": {
+    "modified": "2020-10-15T22:13:11.825Z",
+    "contributors": ["xlhector10"]
+  },
   "Web/API/console/time_static": {
     "modified": "2019-03-18T21:42:22.745Z",
     "contributors": ["jotaoncode"]
-  },
-  "Web/API/console/timeend_static": {
-    "modified": "2020-10-15T22:13:11.825Z",
-    "contributors": ["xlhector10"]
   },
   "Web/API/console/trace_static": {
     "modified": "2019-03-23T22:22:51.545Z",
@@ -6534,10 +6534,6 @@
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:35:39.343Z",
     "contributors": ["lajaso"]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-08-16T13:05:40.057Z",
-    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-07-06T16:16:21.887Z",
@@ -9428,21 +9424,9 @@
       "cissoid"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2019-03-18T21:22:07.450Z",
-    "contributors": ["Adorta4", "carlosgocereceda"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2019-03-23T22:24:54.977Z",
-    "contributors": ["Sergio_Gonzalez_Collado", "AzazelN28", "uclides"]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2019-03-23T22:10:11.567Z",
     "contributors": ["Sergio_Gonzalez_Collado", "ChrisMHM"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-03-23T22:24:51.387Z",
-    "contributors": ["DaniNz", "Sergio_Gonzalez_Collado", "ChrisMHM", "uclides"]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-11-18T08:03:54.325Z",
@@ -13453,6 +13437,14 @@
       "diegogaysaez"
     ]
   },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2019-03-18T21:22:07.450Z",
+    "contributors": ["Adorta4", "carlosgocereceda"]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2019-03-23T22:24:54.977Z",
+    "contributors": ["Sergio_Gonzalez_Collado", "AzazelN28", "uclides"]
+  },
   "Web/XML/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:10:22.365Z",
     "contributors": ["FenixAlive"]
@@ -14045,6 +14037,10 @@
   "conflicting/Web/API/IndexedDB_API": {
     "modified": "2019-03-18T21:11:08.379Z",
     "contributors": ["duduindo", "teoli", "semptrion", "CHORVAT", "inma_610"]
+  },
+  "conflicting/Web/API/Navigator/registerProtocolHandler": {
+    "modified": "2019-03-23T22:06:43.969Z",
+    "contributors": ["chrisdavidmills", "AngelFQC"]
   },
   "conflicting/Web/API/Node": {
     "modified": "2019-03-23T22:08:57.260Z",
@@ -15329,6 +15325,10 @@
   "orphaned/Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
     "contributors": ["juanbrujo", "raecillacastellana", "vltamara"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2019-03-23T22:24:51.387Z",
+    "contributors": ["DaniNz", "Sergio_Gonzalez_Collado", "ChrisMHM", "uclides"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
     "modified": "2020-03-12T19:47:46.684Z",

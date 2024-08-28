@@ -159,7 +159,8 @@ const myRequest = new Request("flowers.jpg", myOptions);
 const copy = new Request(myRequest);
 ```
 
-> **メモ:** 最後の使い方は[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内でのみ使用できます。
+> [!NOTE]
+> 最後の使い方は[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内でのみ使用できます。
 
 ## 仕様書
 

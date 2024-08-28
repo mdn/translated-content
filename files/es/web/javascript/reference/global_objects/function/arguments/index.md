@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **Nota:** La propiedad `arguments` de los objetos {{jsxref("Function")}} está en desuso. La forma recomendada de acceder al objeto `arguments` es hacer referencia a la variable {{jsxref("Functions/arguments", "arguments") }} disponible dentro de las funciones.
+> [!NOTE]
+> La propiedad `arguments` de los objetos {{jsxref("Function")}} está en desuso. La forma recomendada de acceder al objeto `arguments` es hacer referencia a la variable {{jsxref("Functions/arguments", "arguments") }} disponible dentro de las funciones.
 
 La propiedad de acceso **`arguments`** de instancias de {{jsxref("Function")}} devuelve los argumentos pasados ​​a esta función. Para las funciones [strict](/es/docs/Web/JavaScript/Reference/Strict_mode), flecha , asíncronas y generadoras, acceder a la propiedad `arguments` arroja un {{jsxref("TypeError")}}.
 

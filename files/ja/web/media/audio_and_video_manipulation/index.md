@@ -113,7 +113,8 @@ processor.doLoad();
 
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
-> **メモ:** 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
+> [!NOTE]
+> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
@@ -306,7 +307,8 @@ window.addEventListener("load", setFilter);
 - ノッチ: 指定された周波数帯を除き、全ての音を通過させます
 - オールパス: 周波数に関わらず全ての音を通過させますが、幾つかの周波数間の相関係を変更します
 
-> **メモ:** 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
+> [!NOTE]
+> 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
 
 ### たたみ込みとインパルス
 
@@ -359,7 +361,8 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **メモ:** AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
+> [!NOTE]
+> AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
 
 ## 例
 

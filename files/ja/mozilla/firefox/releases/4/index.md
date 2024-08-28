@@ -9,7 +9,8 @@ Firefox 4 （6 月後半にベータ版リリースが予定されています�
 
 これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](http://nightly.mozilla.org/) で試すことできます。
 
-> **メモ:** この記事は作成中であり、このページからリンクされている記事もまた同様です。多くの記事名が仮名であり、いくつかのトピックは複数の記事に分割されるかもしれません。
+> [!NOTE]
+> この記事は作成中であり、このページからリンクされている記事もまた同様です。多くの記事名が仮名であり、いくつかのトピックは複数の記事に分割されるかもしれません。
 
 ## ウェブ開発者向け機能
 
@@ -216,7 +217,8 @@ JavaScript 1.8.5 で実装される変更の概要については、[JavaScript 
 - [ウェブコンソールの利用](/ja/docs/Using_the_Web_Console)
   - : ウェブコンソールツールはウェブ開発者および拡張開発者のデバッグ作業の補助に役立ちます。
 
-> **メモ:** Gecko 2.0 のメモ(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)エラーコンソールは Firefox 4 からデフォルトで無効化されます。`devtools.errorconsole.enabled 設定を` `true` に変更し、ブラウザーを再起動することで再び有効にすることができます。
+> [!NOTE]
+> Gecko 2.0 のメモ(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)エラーコンソールは Firefox 4 からデフォルトで無効化されます。`devtools.errorconsole.enabled 設定を` `true` に変更し、ブラウザーを再起動することで再び有効にすることができます。
 
 ## Mozilla およびアドオン開発者向けの変更
 

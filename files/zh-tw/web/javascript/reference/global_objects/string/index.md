@@ -54,7 +54,8 @@ String(thing)
 | `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
 | `\xXX`                   | Latin-1 字元                         |
 
-> **備註：** 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
+> [!NOTE]
+> 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
 ### 長字面值字串
 
@@ -161,7 +162,8 @@ console.log(eval(s2.valueOf())); // 回傳數字 4
 
 ## `String` 通用方法
 
-> **警告：** 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
+> [!WARNING]
+> 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
 
 The `String` instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:
 

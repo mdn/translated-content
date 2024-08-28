@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 
 La constante **`Number.MIN_SAFE_INTEGER`** représente le plus petit entier représentable correctement en JavaScript (-(2^53 -1)).
 
-> **Note :** Pour représenter des entiers inférieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
+> [!NOTE]
+> Pour représenter des entiers inférieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
 
 {{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}{{js_property_attributes(0,0,0)}}
 

@@ -198,7 +198,8 @@ Al elegir un esquema de color para tu sitio web, asegúrate de que el color del 
 
 Existe una manera fácil de verificar si el contraste es lo suficientemente grande como para no causar problemas. Hay una serie de herramientas de verificación de contraste en línea en las que puede introduci los colores de primer plano y de fondo para verificarlos. Por ejemplo, el [Comprobador de contraste de color](http://webaim.org/resources/contrastchecker/) de WebAIM es fácil de usar y proporciona una explicación de lo que necesitas para cumplir con los criterios WCAG sobre el contraste de color.
 
-> **Nota:** una relación de contraste alta también permitirá que cualquier persona que utilice un teléfono inteligente o una tableta con una pantalla brillante lea mejor las páginas cuando se encuentre en un entorno brillante, como a la luz del sol.
+> [!NOTE]
+> Una relación de contraste alta también permitirá que cualquier persona que utilice un teléfono inteligente o una tableta con una pantalla brillante lea mejor las páginas cuando se encuentre en un entorno brillante, como a la luz del sol.
 
 Otro consejo es no confiar solo en el color para las señales / información, ya que esto no será bueno para aquellos que no pueden ver el color. En lugar de marcar los campos de formulario obligatorios en rojo, por ejemplo, márcalos con un asterisco y en rojo.
 
@@ -257,7 +258,8 @@ Como ejemplo, hemos escrito un ejemplo rápido y sucio de validación de formula
 
 Este tipo de validación de formulario es no intrusiva: se puede usar el formulario perfectamente aunque JavaScript no esté disponible, y cualquier implementación de formulario razonable también tendrá activa la validación del lado del servidor, porque es demasiado fácil para los usuarios malintencionados eludir la validación del lado del cliente (por ejemplo, desactivando JavaScript en el navegador). La validación del lado del cliente sigue siendo realmente útil para informar de errores: los usuarios pueden saber los errores que cometen al instante, en lugar de tener que esperar un viaje de ida y vuelta al servidor y la recarga de la página. Esta es una clara ventaja de usabilidad.
 
-> **Nota:** la validación del lado del servidor no se ha implementado en esta simple demostración.
+> [!NOTE]
+> La validación del lado del servidor no se ha implementado en esta simple demostración.
 
 También hemos hecho que esta validación de formulario sea bastante accesible. Hemos utilizado elementos {{htmlelement ("label")}} para asegurarnos de que las etiquetas del formulario estén vinculadas de forma inequívoca a sus entradas, de modo que los lectores de pantalla puedan leerlas junto con ellas:
 
@@ -287,7 +289,8 @@ function validate(e) {
 }
 ```
 
-> **Nota:** En este ejemplo estamos ocultando y mostrando el cuadro de mensaje de error utilizando posicionamiento absoluto en lugar de otro método como la visibilidad o la visualización, porque no interfiere con que el lector de pantalla pueda leer su contenido.
+> [!NOTE]
+> En este ejemplo estamos ocultando y mostrando el cuadro de mensaje de error utilizando posicionamiento absoluto en lugar de otro método como la visibilidad o la visualización, porque no interfiere con que el lector de pantalla pueda leer su contenido.
 
 La validación real del formulario sería mucho más compleja que esto: querría verificar que el nombre entrado realmente parezca un nombre, la edad entrada sea realmente un número y sea realista (por ejemplo, no negativa y menor de 4 dígitos). Aquí acabamos de implementar una verificación simple de que se haya completado un valor en cada campo de entrada (`if(testItem.input.value === '')`).
 
@@ -317,7 +320,8 @@ function createLink(testItem) {
 
 Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
 
-> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
+> [!NOTE]
+> La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
 
 Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
 
@@ -331,7 +335,8 @@ Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostrac
 
 Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
 
-> **Nota:** Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
+> [!NOTE]
+> Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
 
 > **Nota:** [Usable and Accessible Form Validation and Error Recovery](http://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
 

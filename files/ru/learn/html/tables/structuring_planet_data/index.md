@@ -15,7 +15,8 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 Для того, чтобы начать аттестацию, скопируйте [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), и [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) в новую директорию на вашем компьютере.
 
-> **Примечание:** В качестве альтернативы, вы можете использовать такие сайты, как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/), чтобы пройти аттестацию. Вы можете вставлять HTML, CSS и JavaScript в один из этих онлайн редакторов. Если используемый вами онлайн редактор не имеет отдельных JavaScript/CSS панелей, не стесняйтесь вставлять `<script>`/`<style>` элементы в HTML страницу.
+> [!NOTE]
+> В качестве альтернативы, вы можете использовать такие сайты, как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/), чтобы пройти аттестацию. Вы можете вставлять HTML, CSS и JavaScript в один из этих онлайн редакторов. Если используемый вами онлайн редактор не имеет отдельных JavaScript/CSS панелей, не стесняйтесь вставлять `<script>`/`<style>` элементы в HTML страницу.
 
 ## Краткое описание проекта
 

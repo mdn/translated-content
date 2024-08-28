@@ -36,7 +36,8 @@ canvas.addEventListener("click", async () => {
 });
 ```
 
-> **Nota:** Si un usuario ha salido del bloqueo de puntero mediante el [default unlock gesture](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture), o el bloqueo de puntero no ha sido introducido previamente para este documento, un evento generado como resultado de un [gesto de compromiso](https://w3c.github.io/pointerlock/#dfn-engagement-gesture) debe ser recibido por el documento antes de que [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) tenga éxito. (de <https://w3c.github.io/pointerlock/#extensions-to-the-element-interface>)
+> [!NOTE]
+> Si un usuario ha salido del bloqueo de puntero mediante el [default unlock gesture](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture), o el bloqueo de puntero no ha sido introducido previamente para este documento, un evento generado como resultado de un [gesto de compromiso](https://w3c.github.io/pointerlock/#dfn-engagement-gesture) debe ser recibido por el documento antes de que [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) tenga éxito. (de <https://w3c.github.io/pointerlock/#extensions-to-the-element-interface>)
 
 Los sistemas operativos activan la aceleración del ratón por defecto, lo que resulta útil cuando a veces se desea un movimiento lento y preciso (piensa en que podrías utilizar un paquete de gráficos), pero también quieres mover grandes distancias con un movimiento más rápido del ratón (piensa en el desplazamiento y la selección de varios archivos). Sin embargo, para algunos juegos de perspectiva en primera persona, se prefieren los datos de entrada brutos del ratón para controlar la rotación de la cámara, donde el mismo movimiento de distancia, rápido o lento, da como resultado la misma rotación. Según los jugadores profesionales, esto mejora la experiencia de juego y aumenta la precisión.
 
@@ -171,7 +172,8 @@ canvas.addEventListener("click", async () => {
 });
 ```
 
-> **Nota:** El fragmento anterior funciona en navegadores que no soportan la versión promise de `requestPointerLock()`. Ver [Manejo de versiones promise y no-promise de requestPointerLock()](#handling_promise_and_non-promise_versions_of_requestpointerlock) para una explicación.
+> [!NOTE]
+> El fragmento anterior funciona en navegadores que no soportan la versión promise de `requestPointerLock()`. Ver [Manejo de versiones promise y no-promise de requestPointerLock()](#handling_promise_and_non-promise_versions_of_requestpointerlock) para una explicación.
 
 Ahora vamos a detectar el evento de bloqueo de puntero: `pointerlockchange`. Cuando esto ocurre, ejecutamos una función llamada `lockChangeAlert()` para manejar el cambio.
 

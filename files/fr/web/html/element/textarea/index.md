@@ -156,7 +156,8 @@ Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indica
 
 {{EmbedLiveSample('','600','80')}}
 
-> **Note :** Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
+> [!NOTE]
+> Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
 
 ### Lecture seule et contrôle désactivé
 

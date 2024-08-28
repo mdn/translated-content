@@ -28,7 +28,8 @@ html::view-transition-group(*) {
 
 오래된 뷰 상태와 새로운 뷰 상태가 동시에 존재한다면, 뷰 전환 스타일 시트의 스타일은 이 의사 요소의 {{cssxref("width", "너비")}} 와 {{cssxref("height", "높이")}}를 오래된 뷰 상태의 테두리 박스로부터 새로운 뷰 상태의 테두리 박스로의 애니메이션을 진행합니다.
 
-> **참고:** 뷰 전환 스타일은 뷰 전환이 이루어지는 동안 동적으로 생성됩니다. 더 많은 정보는 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 와 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 섹션 명세서를 참고하여 확인할 수 있습니다.
+> [!NOTE]
+> 뷰 전환 스타일은 뷰 전환이 이루어지는 동안 동적으로 생성됩니다. 더 많은 정보는 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 와 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 섹션 명세서를 참고하여 확인할 수 있습니다.
 
 더불어, 요소의 변형은 오래된 뷰 상태의 화면 공간 변형에서 새로운 뷰 상태의 화면 공간으로 애니메이션이 진행됩니다. 이러한 스타일은 애니메이션이 진행된 속성 값이 전환을 시작할 때 결정되므로 동적으로 생성됩니다.
 

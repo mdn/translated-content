@@ -34,7 +34,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 #### 绝对值语法
 
-```text
+```plain
 rgb(R G B[ / A])
 ```
 
@@ -45,11 +45,12 @@ rgb(R G B[ / A])
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} 表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%`（完全透明），`1` 对应 `100%`（完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为 100%。若包含此值，需在值的前面添加斜杠（`/`）。
 
-> **备注：** 参见[缺失颜色分量](/zh-CN/docs/Web/CSS/color_value#缺失颜色分量)以了解 `none` 的效果。
+> [!NOTE]
+> 参见[缺失颜色分量](/zh-CN/docs/Web/CSS/color_value#缺失颜色分量)以了解 `none` 的效果。
 
 #### 相对值语法
 
-```text
+```plain
 rgb(from <color> R G B[ / A])
 ```
 
@@ -62,9 +63,11 @@ rgb(from <color> R G B[ / A])
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} 表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%`（完全透明），`1` 对应 `100%`（完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为原始颜色的 alpha 通道值。若包含此值，需在值的前面添加斜杠（`/`）。
 
-> **备注：** 别名 `rgba()` 也可用于输出指定原始颜色的相对颜色，当使用 `rgba()` 输出相对颜色时，必须使用无逗号的现代语法。
+> [!NOTE]
+> 别名 `rgba()` 也可用于输出指定原始颜色的相对颜色，当使用 `rgba()` 输出相对颜色时，必须使用无逗号的现代语法。
 
-> **备注：** 要完全启用可见颜色的全光谱表示，相对 `rgb()` 颜色函数的输出会被序列化为 `color(srgb)`。这意味着通过 {{DOMxRef("HTMLElement.style")}} 属性或 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} 方法查询输出颜色值时，会以 [`color(srgb ...)`](/zh-CN/docs/Web/CSS/color_value/color) 值返回输出颜色。
+> [!NOTE]
+> 要完全启用可见颜色的全光谱表示，相对 `rgb()` 颜色函数的输出会被序列化为 `color(srgb)`。这意味着通过 {{DOMxRef("HTMLElement.style")}} 属性或 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} 方法查询输出颜色值时，会以 [`color(srgb ...)`](/zh-CN/docs/Web/CSS/color_value/color) 值返回输出颜色。
 
 #### 定义相对颜色输出通道分量
 
@@ -107,7 +110,8 @@ rgb(from hsl(0 100% 50%) r 80 80)
 
 最终输出颜色为 `rgb(255 80 80)` 在 sRGB 颜色空间中的等价——`color(srgb 1 0.313726 0.313726)`。
 
-> **备注：** 如上所述，如果输出颜色使用了与原始颜色不同的颜色模型，则原始颜色会在后台转换为与输出颜色相同的模型或空间，从而可以以兼容的方式表示（即使用相同的通道）。
+> [!NOTE]
+> 如上所述，如果输出颜色使用了与原始颜色不同的颜色模型，则原始颜色会在后台转换为与输出颜色相同的模型或空间，从而可以以兼容的方式表示（即使用相同的通道）。
 
 在本节之前我们看到的示例中，均未明确指定 alpha 通道值用于原始颜色或输出颜色。如果未指定输出颜色的 alpha 通道值，默认为与原始颜色的 alpha 通道值相同。如果未指定原始颜色的 alpha 通道（并且它不是相对颜色），则默认为 `1`。因此，对于上述示例，原始颜色和输出颜色的 alpha 通道值都为 `1`
 
@@ -125,7 +129,8 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
 ```
 
-> **备注：** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们也必须使用 `<number>` 进行运算。例如在 `<number>` 中添加 `<percenter>` 是不起作用的。
+> [!NOTE]
+> 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们也必须使用 `<number>` 进行运算。例如在 `<number>` 中添加 `<percenter>` 是不起作用的。
 
 ### 形式语法
 

@@ -24,7 +24,8 @@ addEventListener("contentvisibilityautostatechange", (event) => {});
 oncontentvisibilityautostatechange = (event) => {};
 ```
 
-> **メモ:** イベントオブジェクトの型は {{domxref("ContentVisibilityAutoStateChangeEvent")}} です。
+> [!NOTE]
+> イベントオブジェクトの型は {{domxref("ContentVisibilityAutoStateChangeEvent")}} です。
 
 ## 例
 

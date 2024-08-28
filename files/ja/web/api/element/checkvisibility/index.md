@@ -42,7 +42,8 @@ checkVisibility(options)
       - : `true` を指定すると、{{cssxref("visibility")}} プロパティの値によって要素が不可視になっているかどうかを調べます。
         既定では `false` です。
 
-        > **メモ:** 不可視の要素には、[`visibility: hidden`](/ja/docs/Web/CSS/visibility#hidden) が設定された要素や、[`visibility: collapse`](/ja/docs/Web/CSS/visibility#collapse) が設定された要素が含まれます。
+        > [!NOTE]
+        > 不可視の要素には、[`visibility: hidden`](/ja/docs/Web/CSS/visibility#hidden) が設定された要素や、[`visibility: collapse`](/ja/docs/Web/CSS/visibility#collapse) が設定された要素が含まれます。
 
     - `checkOpacity`
       - : [`opacityProperty`](#opacityproperty) の過去の別名です。

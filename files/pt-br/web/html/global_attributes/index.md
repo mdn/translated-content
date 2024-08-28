@@ -61,7 +61,8 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
 - [`id`](/pt-BR/docs/Web/HTML/Global_attributes/id)
   - : Define um identificador exclusivo (ID) que deve ser único em todo o documento. Seu objetivo é identificar o elemento ao vincular (usando um identificador de fragmento), um script ou estilo (com CSS).
 
-> **Nota:** Os 5 atributos seguintes são partes do [Recursos de Microdados WHATWG HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata).
+> [!NOTE]
+> Os 5 atributos seguintes são partes do [Recursos de Microdados WHATWG HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata).
 
 - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes/itemid) {{experimental_inline}}
   - : O identificador único e global de um item.

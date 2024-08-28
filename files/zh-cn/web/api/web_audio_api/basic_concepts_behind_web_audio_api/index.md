@@ -55,7 +55,8 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 当一个音频片段开始播放时，你将会听到最左侧的样本帧，之后是他右侧相邻的一帧，以此类推。在立体声中，你将会同时听到两个声道。样本帧的概念在此时非常有用，因为每个样本帧代表特定的播放时间，而和声道个数无关，这种方式很有利于精确的多声道同步处理。
 
-> **备注：** 只需用帧的数目除以采样率即可得到播放时间（单位为秒）。用样本点数目除以声道个数即可得到帧的数目。
+> [!NOTE]
+> 只需用帧的数目除以采样率即可得到播放时间（单位为秒）。用样本点数目除以声道个数即可得到帧的数目。
 
 下面我们将展示几个浅显易懂的示例：
 
@@ -66,7 +67,8 @@ var buffer = context.createBuffer(2, 22050, 44100);
 
 如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。
 
-> **备注：** 在[数字音频](https://zh.wikipedia.org/wiki/數位音訊)中，**44,100 [赫兹](https://zh.wikipedia.org/wiki/赫兹)**（有时也写作 **44.1 kHz**）是一个常见的[采样频率](https://zh.wikipedia.org/wiki/取樣)。为什么选取 44.1kHz 呢？首先，因为[人耳的接收频率](https://zh.wikipedia.org/wiki/聽力範圍)大约在 20 Hz 到 20,000 Hz 之间，根据[采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过[低通滤波器](https://zh.wikipedia.org/wiki/低通滤波器)，否则 会发生[混叠](https://zh.wikipedia.org/wiki/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上[过度频带](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个[抗混叠滤波器](https://zh.wikipedia.org/wiki/抗混疊濾波器)才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
+> [!NOTE]
+> 在[数字音频](https://zh.wikipedia.org/wiki/數位音訊)中，**44,100 [赫兹](https://zh.wikipedia.org/wiki/赫兹)**（有时也写作 **44.1 kHz**）是一个常见的[采样频率](https://zh.wikipedia.org/wiki/取樣)。为什么选取 44.1kHz 呢？首先，因为[人耳的接收频率](https://zh.wikipedia.org/wiki/聽力範圍)大约在 20 Hz 到 20,000 Hz 之间，根据[采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过[低通滤波器](https://zh.wikipedia.org/wiki/低通滤波器)，否则 会发生[混叠](https://zh.wikipedia.org/wiki/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上[过度频带](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个[抗混叠滤波器](https://zh.wikipedia.org/wiki/抗混疊濾波器)才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
 
 ```js
 var context = new AudioContext();
@@ -75,13 +77,14 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 如果你这样调用，你将会得到一个单声道的音频片段 (Buffer)，当它在一个频率为 44100 赫兹的音频环境中播放的时候，将会被自动按照 44100 赫兹*重采样*（因此也会转化为 44100 赫兹的片段），并持续 1 秒：44100 帧 / 44100 赫兹 = 1 秒。
 
-> **备注：** 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。
+> [!NOTE]
+> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。
 
 ### 分离式与交错式音频片段
 
 网页音频接口使用了分离式的片段储存方式：左 (L) 右 (R) 声道像这样存储：
 
-```
+```plain
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 ```
 
@@ -89,7 +92,7 @@ LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 
 另一种储存方式是使用交错式的片段储存方式：
 
-```
+```plain
 LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 ```
 
@@ -107,7 +110,8 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 | _四声道_ | `0: L: 左 1: R: 右 2: SL: 环绕左 3: SR: 环绕右`                           | _Quad_   | `0: L: left 1: R: right 2: SL: surround left 3: SR: surround right`                                |
 | _5.1_    | `0: L: 左 1: R: 右 2: C: 中央 3: LFE: 低音炮 4: SL: 环绕左 5: SR: 环绕右` | _5.1_    | `0: L: left 1: R: right 2: C: center 3: LFE: subwoofer 4: SL: surround left 5: SR: surround right` |
 
-> **备注：** 由于缩写来自英文，因此保留英文作对照。
+> [!NOTE]
+> 由于缩写来自英文，因此保留英文作对照。
 
 ### 向上和向下混频
 
@@ -335,7 +339,8 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。
 
-> **备注：** 更多信息可以参考我们的这篇文章：[基于 Web Audio API 实现音频可视化效果](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)。
+> [!NOTE]
+> 更多信息可以参考我们的这篇文章：[基于 Web Audio API 实现音频可视化效果](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)。
 
 ## 空间位置化
 
@@ -349,7 +354,8 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 
 ![我们可以看到 AudioListener 的位置、向上和向前的向量（两者彼此成 90° 角）。](webaudiolistenerreduced.png)
 
-> **备注：** 更多信息可以参考我们的这篇文章：[网络音频位置空间化入门](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。
+> [!NOTE]
+> 更多信息可以参考我们的这篇文章：[网络音频位置空间化入门](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。
 
 ## 扇入与扇出
 

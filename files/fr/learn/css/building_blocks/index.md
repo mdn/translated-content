@@ -18,13 +18,15 @@ Avant de commencer ce cours, nous vous recommandons :
 3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)).
 4. D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/Learn/CSS/First_steps)
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
 Les articles qui composent ce module traitent la majeure partie du langage CSS. En les parcourant, vous découvrirez de nombreux exercices qui vous permettront d'évaluer votre bonne compréhension.
 
-> **Note :** Les articles dont le titre apparaît en anglais ne sont pas encore traduits au moment de la traduction de la page que vous lisez.
+> [!NOTE]
+> Les articles dont le titre apparaît en anglais ne sont pas encore traduits au moment de la traduction de la page que vous lisez.
 
 - [Cascade and inheritance (Cascade et héritage)](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
   - : Le but de cette leçon est de vous permettre d'acquérir des concepts fondamentaux du CSS : la cascade, la spécificité et l'héritage... et ainsi d'apprendre comment le CSS s'applique au HTML, et comment les conflits se résolvent.

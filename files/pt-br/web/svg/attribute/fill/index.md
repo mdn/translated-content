@@ -52,7 +52,8 @@ svg {
 
 ## altGlyph
 
-> **Aviso:** a partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.
+> [!WARNING]
+> A partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.
 
 Para {{SVGElement('altGlyph')}}, `fill` é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).
 
@@ -61,7 +62,8 @@ Para {{SVGElement('altGlyph')}}, `fill` é a apresentação do atributo que defi
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## animate
 
@@ -110,7 +112,8 @@ Para {{SVGElement('circle')}}, `fill` é o atributo de apresentação utilizado 
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## ellipse
 
@@ -121,7 +124,8 @@ Para {{SVGElement('ellipse')}}, `fill` é o atributo de apresentação utilizado
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## path
 
@@ -132,7 +136,8 @@ Para {{SVGElement('path')}}, `fill` é um atributo de apresentação que define 
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## polygon
 
@@ -143,7 +148,8 @@ Para {{SVGElement('polygon')}}, `fill` é um atributo de apresentação que defi
 | Valor padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## polyline
 
@@ -154,7 +160,8 @@ For {{SVGElement('polyline')}}, `fill` é um atributo de apresentação que defi
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## rect
 
@@ -165,7 +172,8 @@ Para {{SVGElement('rect')}}, `fill` é o atributo de apresentação utilizado pa
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## set
 
@@ -185,7 +193,8 @@ Para {{SVGElement('text')}}, `fill` é o atributo de apresentação utilizado pa
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## textPath
 
@@ -196,11 +205,13 @@ For {{SVGElement('textPath')}}, `fill` é o atributo de apresentação utilizado
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## tref
 
-> **Aviso:** a partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.
+> [!WARNING]
+> A partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.
 
 Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
 
@@ -209,7 +220,8 @@ Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado pa
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## tspan
 
@@ -220,7 +232,8 @@ Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado p
 | Valor Padrão | `black`                                          |
 | Animável     | Sim                                              |
 
-> **Nota:** Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
+> [!NOTE]
+> Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
 
 ## Especificações
 
@@ -230,4 +243,5 @@ Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado p
 
 {{Compat}}
 
-> **Nota:** Nota: Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .
+> [!NOTE]
+> Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .

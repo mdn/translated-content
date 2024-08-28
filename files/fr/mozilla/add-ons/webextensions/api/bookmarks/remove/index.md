@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
 
-> **Attention :** Si votre extension tente de supprimer un signet du nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
+> [!WARNING]
+> Si votre extension tente de supprimer un signet du nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -51,7 +52,7 @@ removingBookmark.then(onRemoved, onRejected);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >

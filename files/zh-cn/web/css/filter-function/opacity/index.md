@@ -9,7 +9,8 @@ The **`opacity()`** [CSS](/zh-CN/docs/Web/CSS) 函数在输入的图片实例上
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **备注：** 这个函数与其他既有的{{Cssxref("opacity")}}属性类似，区别在于有了 filters，有些浏览器会提供硬件加速以获取更好的性能表现。
+> [!NOTE]
+> 这个函数与其他既有的{{Cssxref("opacity")}}属性类似，区别在于有了 filters，有些浏览器会提供硬件加速以获取更好的性能表现。
 
 ## 语法
 

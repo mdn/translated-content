@@ -29,7 +29,8 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 }
 ```
 
-> **Nota:** Para fins de ilustração, o que precede é uma versão um tanto simplificada do código necessário para criar uma instância XMLHTTP. Para um exemplo mais real, consulte o passo 3 deste artigo.
+> [!NOTE]
+> Para fins de ilustração, o que precede é uma versão um tanto simplificada do código necessário para criar uma instância XMLHTTP. Para um exemplo mais real, consulte o passo 3 deste artigo.
 
 Em seguida, você precisa decidir o que quer fazer depois de receber a resposta do servidor ao seu pedido. Nesta etapa, você somente precisa dizer ao objeto requisição HTTP qual função JavaScript irá manipular o processamento da resposta. Isto é feito definindo a propriedade `onreadystatechange` do objeto para o nome da função JavaScript que deve ser chamada quando o estado da requisição muda, desse jeito:
 
@@ -176,7 +177,8 @@ Neste exemplo:
 - A requisição é realizada e então (`onreadystatechange`) a execução é passada para `alertContents()`;
 - `alertContents()` checa se a resposta foi recebida e se está OK, então `alert()` mostra o conteúdo do arquivo `test.html.`
 
-> **Nota:** Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho `Content-Type: application/xml`, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..
+> [!NOTE]
+> Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho `Content-Type: application/xml`, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..
 
 > **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)).
 

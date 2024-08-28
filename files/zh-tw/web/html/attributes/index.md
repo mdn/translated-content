@@ -135,7 +135,7 @@ IDL 屬性也被稱為 JavaScript 特性。你可以使用 JavaScript 特性的 
 
 IDL 屬性並非永遠的字串 ; 舉例來說，input.maxlength 便是一個數字(型態為 signed long)。當使用 IDL 屬性，你會閱讀或是設定所需的型態，而當你設定 input.maxlength 時，它總是回傳一個數字，因為它正需要一個數字。如果你傳入別的型態，它會依照標準 JavaScript 型態轉換規則，將傳入值轉成一個數字。
 
-IDL 屬性可以 [反應其他型態](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes)，例如 unsigned long、URLs、booleans，等等。不幸的是，並沒有明確的規則來規範，而且與 IDL 屬性行為相對應的內容屬性連結中，也沒有取決於該屬性的方式。在大部分的時間裡，它會遵守 [規範中所制定的規則](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes)，但有時候它並不會。HTML 規範嘗試讓它變得容易使用，但由於各種原因 (大多是因為歷史)，有些屬性表現得很奇怪 (舉例來說，select.size)，而你應該詳細閱讀規範以了解各個屬性的行為。
+IDL 屬性可以 [反應其他型態](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#reflecting-content-attributes-in-idl-attributes)，例如 unsigned long、URLs、booleans，等等。不幸的是，並沒有明確的規則來規範，而且與 IDL 屬性行為相對應的內容屬性連結中，也沒有取決於該屬性的方式。在大部分的時間裡，它會遵守 [規範中所制定的規則](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#reflecting-content-attributes-in-idl-attributes)，但有時候它並不會。HTML 規範嘗試讓它變得容易使用，但由於各種原因 (大多是因為歷史)，有些屬性表現得很奇怪 (舉例來說，select.size)，而你應該詳細閱讀規範以了解各個屬性的行為。
 
 ## 另請參見
 

@@ -169,15 +169,18 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 使用「**格式化樣式**」的下拉清單來對選取內容套用預定義的樣式。
 
-> **備註：** 「**備註區塊**」樣式是用於標示重要的備註，就好比這樣。
+> [!NOTE]
+> 「**備註區塊**」樣式是用於標示重要的備註，就好比這樣。
 
-> **警告：** 類似地，「**警告區塊**」樣式用於建立警告區塊，就好比這樣。
+> [!WARNING]
+> 類似地，「**警告區塊**」樣式用於建立警告區塊，就好比這樣。
 
 除非有特別地指示，否則*不要*使用 HTML `style` 屬性來手動套用樣式。如果碰到無法使用預定義地 class ，請在 [MDN 討論論壇](https://discourse.mozilla.org/c/mdn)尋求協助。
 
 ### 程式碼範例的樣式與格式
 
-> **備註：** 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Guidelines/Code_guidelines)
+> [!NOTE]
+> 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Guidelines/Code_guidelines)
 
 #### Tabs 以及換行
 
@@ -259,7 +262,8 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 | N.B.   | _nota bene_      | note well               | 注意、留心（用於提醒讀者留意重要資訊） |
 | P.S.   | _post scriptum_  | postscript              | 附言、補充說明                         |
 
-> **備註：** 總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。
+> [!NOTE]
+> 總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。
 >
 > 若你選擇使用這些縮寫，請確保*你*能夠正確地使用它們。例如，常見的錯誤是把「 e.g. 」和「 i.e. 」搞混。
 
@@ -300,7 +304,8 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 
 在主體文字中使用標準的英文大寫規則以及大寫化「 World Wide Web 」。用小寫的「 web 」（單獨使用或作為修飾）以及「 internet 」是可以接受的。
 
-> **備註：** 這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。
+> [!NOTE]
+> 這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。
 >
 > 當你在編輯其他變更的時候你可以順手把它也改了，但不需要特別為了改變這些大寫而編輯文章。
 
@@ -344,7 +349,8 @@ _A confirmation dialog appears, asking the user if she allows the Web page to ma
 
 _A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam._
 
-> **備註：** MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。
+> [!NOTE]
+> MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。
 >
 > 使用複數第三人稱做為性別中立的代名詞是被接受的慣例，常被當作「[單數的『他們』](https://en.wikipedia.org/wiki/Singular_they)」。
 

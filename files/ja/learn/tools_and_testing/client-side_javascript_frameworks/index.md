@@ -37,7 +37,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## React のチュートリアル
 
-> **メモ:** この React のチュートリアルは 2023 年 1 月に、React/ReactDOM 18.2.0 と create-react-app 5.0.1 で動作確認を行いました。
+> [!NOTE]
+> この React のチュートリアルは 2023 年 1 月に、React/ReactDOM 18.2.0 と create-react-app 5.0.1 で動作確認を行いました。
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-react リポジトリー](https://github.com/mdn/todo-react)で最新版を見ることができます。実行中のライブバージョンについては、 <https://mdn.github.io/todo-react/> から確認ができます。
 
@@ -58,7 +59,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Ember のチュートリアル
 
-> **メモ:** この Ember チュートリアルは 2020 年 5 月に Ember/Ember CLI version 3.18.0 で動作確認を行いました。
+> [!NOTE]
+> この Ember チュートリアルは 2020 年 5 月に Ember/Ember CLI version 3.18.0 で動作確認を行いました。
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial リポジトリー](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> から確認ができます（ただしチュートリアルで取り扱っていない機能も含まれています）。
 
@@ -77,7 +79,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Vue のチュートリアル
 
-> **メモ:** この Vue チュートリアルは 2023 年 1 月に、Vue 3.2.45 で動作確認を行いました。
+> [!NOTE]
+> この Vue チュートリアルは 2023 年 1 月に、Vue 3.2.45 で動作確認を行いました。
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-vue リポジトリー](https://github.com/mdn/todo-vue)で最新版を見ることができます。実行中のライブバージョンについては <https://mdn.github.io/todo-vue/> から確認ができます。
 
@@ -102,7 +105,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Svelte のチュートリアル
 
-> **メモ:** Svelte のチュートリアルは 2020 年 8 月に、 Svelte 3.24.1 でテストしました。
+> [!NOTE]
+> Svelte のチュートリアルは 2020 年 8 月に、 Svelte 3.24.1 でテストしました。
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) リポジトリーで最新版を見ることができます。実行中のライブバージョンについては <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> から確認ができます。
 
@@ -125,7 +129,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Angular のチュートリアル
 
-> **メモ:** この Angular のチュートリアルは 2022 年 5 月に、 Angular CLI (NG) 13.3.4 で動作確認を行いました。
+> [!NOTE]
+> この Angular のチュートリアルは 2022 年 5 月に、 Angular CLI (NG) 13.3.4 で動作確認を行いました。
 
 - [1. Angular を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : この記事では、Angular が提供するものを確認し、前提条件をインストールしてサンプルアプリを設定し、Angular の基本的なアーキテクチャを確認します。

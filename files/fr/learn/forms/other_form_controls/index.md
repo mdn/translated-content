@@ -48,7 +48,8 @@ Les captures suivantes montrent l'aspect par défaut, avec le focus, ou désacti
 
 ![Aspect par défaut, avec le focus et désactivé pour les éléments 'textarea' sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox et Chrome sur Windows 10.](textarea_basic.png)
 
-> **Note :** Un autre exemple, peut-être plus intéressant, est [celui construit dans le premier article de cette série](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) ([voir également le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> Un autre exemple, peut-être plus intéressant, est [celui construit dans le premier article de cette série](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) ([voir également le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ### Contrôler l'affichage d'un champ multi-ligne
 
@@ -88,7 +89,8 @@ Vous pouvez manipuler l'exemple interactif situé en haut de la page de référe
 
 Les contrôles de listes déroulantes sont un outil pratique pour permettre de sélectionner une valeur parmi différentes options, sans occuper trop d'espace sur l'interface utilisateur. HTML dispose de deux formes de listes déroulantes&nbsp;: **la boîte de sélection avec `<select>`**, et **la boîte d'autocomplétion avec `<datalist>`**. Dans les deux cas, l'interaction est la même, une fois que le contrôle est activé, le navigateur affiche une liste de valeurs parmi lesquelles la personne peut choisir.
 
-> **Note :** Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> [!NOTE]
+> Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Boîte de sélection
 
@@ -168,9 +170,11 @@ Par défaut, une boîte de sélection permet de choisir une seule valeur. En ajo
 
 {{EmbedLiveSample("", 120, 120)}}
 
-> **Note :** Dans le cas d'une sélection multiple, on peut voir que la boîte de sélection n'affiche plus les valeurs comme une liste déroulante. À la place, l'ensemble des valeurs est affiché dans la liste et c'est l'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) qui détermine la hauteur du contrôle.
+> [!NOTE]
+> Dans le cas d'une sélection multiple, on peut voir que la boîte de sélection n'affiche plus les valeurs comme une liste déroulante. À la place, l'ensemble des valeurs est affiché dans la liste et c'est l'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) qui détermine la hauteur du contrôle.
 
-> **Note :** Tous les navigateurs qui prennent en charge l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) prennent également en charge l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple).
+> [!NOTE]
+> Tous les navigateurs qui prennent en charge l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) prennent également en charge l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple).
 
 ### Boîte d'autocomplétion
 
@@ -248,7 +252,8 @@ Pour ces cas, les différents navigateurs se comportent de façon hétérogène 
 
 Il existe d'autres fonctionnalités relatives aux formulaires qui ne sont pas aussi évidentes que celles déjà abordées, mais qui s'avèrent utiles dans certaines situations. Voyons donc ces fonctionnalités rapidement.
 
-> **Note :** Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> [!NOTE]
+> Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Jauges et barres de progression
 

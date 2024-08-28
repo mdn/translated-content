@@ -7,7 +7,7 @@ slug: Web/API/Element/innerHTML
 
 {{domxref("Element")}} 속성(property) **`innerHTML`** 은 요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정합니다.
 
-> **참고:** **주의:** {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
+> **경고:** {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
 
 요소(element)의 내용을 변경하는 대신 HTML을 문서(document)에 삽입하려면, {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 메서드를 사용하십시오.
 
@@ -44,7 +44,8 @@ let contents = myElement.innerHTML;
 
 이를 통해 요소의 컨텐트 노드에 대한 HTML 마크업을 볼 수 있습니다.
 
-> **참고:** **주의:** 반환 된 HTML, XML 파편은 요소의 현재 내용일 기반으로 생성됩니다. 따라서 반환 된 마크업과 양식이 본래의 페이지 마크업과 일치하지 않을 수 있습니다.
+> [!NOTE]
+> 반환 된 HTML, XML 파편은 요소의 현재 내용일 기반으로 생성됩니다. 따라서 반환 된 마크업과 양식이 본래의 페이지 마크업과 일치하지 않을 수 있습니다.
 
 ### Replacing the contents of an element
 
@@ -97,7 +98,8 @@ el.innerHTML = name; // shows the alert
 
 따라서 일반 텍스트를 삽입 할 때는 `innerHTML` 을 사용하지 않는 것이 좋습니다. 대신 {{domxref("Node.textContent")}}를 사용하십시오. 이것은 전달 된 내용을 HTML로 파싱하지 않고 원시 텍스트(raw text)로 삽입합니다.
 
-> **경고:** 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
+> [!WARNING]
+> 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
 
 ## Example
 

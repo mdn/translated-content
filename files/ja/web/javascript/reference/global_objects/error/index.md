@@ -151,7 +151,8 @@ try {
 }
 ```
 
-> **メモ:** もしあなたがライブラリを制作しているなら、利用者にエラーメッセージをパースするようお願いするよりも発生したエラーを区別するために Error の cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
+> [!NOTE]
+> もしあなたがライブラリを制作しているなら、利用者にエラーメッセージをパースするようお願いするよりも発生したエラーを区別するために Error の cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
 
 サブクラスのコンストラクターが `super()` を呼び出すときに `options` パラメーターを渡せば、[独自のエラー型](#独自のエラー型)も `cause` プロパティを利用できます。基底クラスのコンストラクター `Error()` は `options.cause` を読み取って、新しいエラーのインスタンスに `cause` プロパティを定義します。
 
@@ -175,7 +176,8 @@ StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in
 
 > **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら、 {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を手動で呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
 
-> **メモ:** ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
+> [!NOTE]
+> ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
 
 ```js
 class CustomError extends Error {

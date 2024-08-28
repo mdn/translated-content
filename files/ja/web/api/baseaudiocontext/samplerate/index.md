@@ -17,7 +17,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 完全なウェブオーディオの実装の例は、[GitHub の MDN リポジトリー](https://github.com/mdn/webaudio-examples) にあるいずれかのウェブオーディオのデモを参照してください。
+> [!NOTE]
+> 完全なウェブオーディオの実装の例は、[GitHub の MDN リポジトリー](https://github.com/mdn/webaudio-examples) にあるいずれかのウェブオーディオのデモを参照してください。
 > ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
 
 ```js

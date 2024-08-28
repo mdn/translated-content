@@ -38,7 +38,8 @@ La syntaxe utilisée pour **les commentaires** est la même que celle utilisée 
 /* Par contre on ne peut pas /* imbriquer des commentaires */ SyntaxError */
 ```
 
-> **Note :** Vous pourrez également rencontrer une troisième forme de commentaires au début de certains fichiers JavaScript comme `#!/usr/bin/env node`. Ce type de commentaire indique le chemin d'un interpréteur JavaScript spécifique pour exécuter le script. Pour plus de détails, voir la page sur [les commentaires d'environnement](</fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaire_d'environnement_(hashbang)>).
+> [!NOTE]
+> Vous pourrez également rencontrer une troisième forme de commentaires au début de certains fichiers JavaScript comme `#!/usr/bin/env node`. Ce type de commentaire indique le chemin d'un interpréteur JavaScript spécifique pour exécuter le script. Pour plus de détails, voir la page sur [les commentaires d'environnement](</fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaire_d'environnement_(hashbang)>).
 
 ## Déclarations
 
@@ -363,7 +364,8 @@ L'exemple suivant crée ainsi le tableau `cafés` avec trois éléments et une t
 var cafés = ["Brésilien", "Colombien", "Kona"];
 ```
 
-> **Note :** Un littéral de tableau est du type d'un initialisateur d'objets. Voir [l'utilisation d'initialisateurs d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet).
+> [!NOTE]
+> Un littéral de tableau est du type d'un initialisateur d'objets. Voir [l'utilisation d'initialisateurs d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet).
 
 Si un tableau est créé en utilisant un littéral dans un script du plus haut niveau, JavaScript interprète le tableau chaque fois qu'il évalue l'expression contenant le littéral. De plus, un littéral utilisé dans une fonction est créé chaque fois que la fonction est appelée.
 
@@ -381,7 +383,8 @@ Ce tableau possède deux éléments ayant une valeur et un élément vide (`pois
 
 Si une virgule est ajoutée à la fin de la liste des éléments, elle est ignorée. Dans le prochain exemple, la longueur du tableau est égale à 3. Il n'y a pas d'élément `maListe[3]`. Les autres virgules indiquent un nouvel élément.
 
-> **Note :** Avec d'anciennes versions de navigateurs, les virgules de fin peuvent causer des erreurs, il est fortement conseillé de les retirer.
+> [!NOTE]
+> Avec d'anciennes versions de navigateurs, les virgules de fin peuvent causer des erreurs, il est fortement conseillé de les retirer.
 
 ```js
 var maListe = ["maison", , "école"];

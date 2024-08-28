@@ -22,7 +22,8 @@ while (condition)
   - : Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est [évaluée à vrai](/fr/docs/Glossary/Truthy), `instruction` est exécutée. Lorsque la condition [n'est pas vérifiée](/fr/docs/Glossary/Falsy), l'exécution se poursuit avec l'instruction qui suit la boucle `while`.
 - `instruction`
   - : Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un [bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block#instruction_de_bloc) pour les regrouper.
-    > **Note :** On pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
+    > [!NOTE]
+    > On pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
 
 ## Exemples
 

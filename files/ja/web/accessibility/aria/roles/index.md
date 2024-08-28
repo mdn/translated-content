@@ -135,9 +135,11 @@ ARIA のロールには 6 つのカテゴリーがあります。
 
 [command](/ja/docs/Web/Accessibility/ARIA/Roles/command_role), [composite](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role), [input](/ja/docs/Web/Accessibility/ARIA/Roles/input_role), [landmark](/ja/docs/Web/Accessibility/ARIA/Roles/landmark_role), [range](/ja/docs/Web/Accessibility/ARIA/Roles/range_role), [roletype](/ja/docs/Web/Accessibility/ARIA/Roles/roletype_role), [section](/ja/docs/Web/Accessibility/ARIA/Roles/section_role), [sectionhead](/ja/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), [select](/ja/docs/Web/Accessibility/ARIA/Roles/select_role), [structure](/ja/docs/Web/Accessibility/ARIA/Roles/structure_role), [widget](/ja/docs/Web/Accessibility/ARIA/Roles/widget_role), [window](/ja/docs/Web/Accessibility/ARIA/Roles/window_role) は使用しないでください。
 
-> **メモ:** サイトやアプリケーションで 抽象ロールを使用しないでください。これらはブラウザーが使用するものです。これらは参照用にのみ含まれています。
+> [!NOTE]
+> サイトやアプリケーションで 抽象ロールを使用しないでください。これらはブラウザーが使用するものです。これらは参照用にのみ含まれています。
 
-> **警告:** "抽象ロールはオントロジーに使用されます。作者はコンテンツで抽象ロールを使用しては**なりません**。" - <abbr>WAI-ARIA</abbr> 仕様書
+> [!WARNING]
+> "抽象ロールはオントロジーに使用されます。作者はコンテンツで抽象ロールを使用しては**なりません**。" - <abbr>WAI-ARIA</abbr> 仕様書
 
 ## MDN で定義されているロール
 

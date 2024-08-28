@@ -11,7 +11,8 @@ slug: Web/CSS/list-style-image
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **メモ:** このプロパティはリスト項目、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
+> [!NOTE]
+> このプロパティはリスト項目、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
 
 ## 構文
 

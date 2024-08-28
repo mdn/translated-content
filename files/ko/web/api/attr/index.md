@@ -19,7 +19,8 @@ slug: Web/API/Attr
 | `myAttr` | `mynamespace`     | _none_              | `myAttr`       | `myAttr`         |
 | `myAttr` | `mynamespace`     | `myns`              | `myAttr`       | `myns:myAttr`    |
 
-> **참고:** 이 인터페이스는 SVG, HTML 그리고 MathML 요소의 트리 표현에 존재하는 속성만 나타냅니다.
+> [!NOTE]
+> 이 인터페이스는 SVG, HTML 그리고 MathML 요소의 트리 표현에 존재하는 속성만 나타냅니다.
 >
 > {{HTMLElement("table")}} 요소에 대한 {{domxref("HTMLTableElement")}} 인터페이스의 속성을 나타내지 않습니다. (속성에 대한 자세한 내용은 {{Glossary("Attribute", "이 문서")}}를 참고하세요.)
 

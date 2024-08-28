@@ -9,7 +9,8 @@ l10n:
 
 **`frequency`** は {{ domxref("OscillatorNode") }} インターフェイスのプロパティで、 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、これは発振器の周波数をヘルツ単位で表します。
 
-> **メモ:** 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
+> [!NOTE]
+> 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
 
 ## 値
 

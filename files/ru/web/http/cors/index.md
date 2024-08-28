@@ -76,9 +76,11 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 - Не должны быть зарегистрированы обработчики событий на любой объект {{domxref("XMLHttpRequestUpload")}} используемый в запросе; это достигается использованием свойства {{domxref("XMLHttpRequest.upload")}}.
 - В запросе не должен использоваться объект типа {{domxref("ReadableStream")}}.
 
-> **Примечание:** These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.
+> [!NOTE]
+> These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.
 
-> **Примечание:** WebKit Nightly и Safari Technology Preview устанавливают дополнительные ограничения на значения, допустимые в заголовках {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, и {{HTTPHeader("Content-Language")}}. Если любой из этих заголовков имеет "нестандартное" значение, WebKit/Safari используют предварительный запрос. Значения, которые WebKit/Safari считают "нестандартными" для этих заголовков, перечислены только в следующих проблемах WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566), и [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Во всех других браузерах подобных дополнительных ограничений нет, потому что они не являются частью спецификации.
+> [!NOTE]
+> WebKit Nightly и Safari Technology Preview устанавливают дополнительные ограничения на значения, допустимые в заголовках {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, и {{HTTPHeader("Content-Language")}}. Если любой из этих заголовков имеет "нестандартное" значение, WebKit/Safari используют предварительный запрос. Значения, которые WebKit/Safari считают "нестандартными" для этих заголовков, перечислены только в следующих проблемах WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566), и [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Во всех других браузерах подобных дополнительных ограничений нет, потому что они не являются частью спецификации.
 
 Например, представьте, что содержимое домена `http://foo.example` хочет обратиться к содержимому `http://bar.other`. На домене `http://foo.example` может использоваться следующий Javascript код:
 
@@ -191,7 +193,8 @@ function callOtherDomain(){
 
 ![](preflight_correct.png)
 
-> **Примечание:** как описано ниже, фактический `POST` запрос не включает `Access-Control-Request-*` заголовки; они нужны только для `OPTIONS` запроса.
+> [!NOTE]
+> Как описано ниже, фактический `POST` запрос не включает `Access-Control-Request-*` заголовки; они нужны только для `OPTIONS` запроса.
 
 Давайте посмотрим на полный обмен между клиентом и сервером. Первый обмен - это _предварительный_ _запрос/ответ_:
 
@@ -460,7 +463,8 @@ Origin: <origin>
 
 The origin is a URI indicating the server from which the request initiated. It does not include any path information, but only the server name.
 
-> **Примечание:** The `origin` can be the empty string; this is useful, for example, if the source is a `data` URL.
+> [!NOTE]
+> The `origin` can be the empty string; this is useful, for example, if the source is a `data` URL.
 
 Note that in any access control request, the {{HTTPHeader("Origin")}} header is **always** sent.
 

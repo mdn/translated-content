@@ -281,20 +281,21 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 [`switch` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 在这里是你的朋友——它们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。这里有一些伪代码，可以给你一点灵感：
 
-```
-switch (表达式) {
-  case 选择1:
-    运行这段代码
+```js
+switch (expression) {
+  case choice1:
+    // 运行这段代码
     break;
 
-  case 选择2:
-    否则，运行这段代码
+  case choice2:
+    // 否则，运行这段代码
     break;
 
   // 包含尽可能多的情况
 
   default:
-    实际上，仅仅运行这段代码
+    // 此外，仅运行这段代码
+    break;
 }
 ```
 
@@ -366,7 +367,7 @@ function setWeather() {
 
 在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else` 块占用的代码要少很多。伪代码看起来像这样：
 
-```
+```js-nolint
 condition ? 运行这段代码 : 否则，运行这段代码
 ```
 

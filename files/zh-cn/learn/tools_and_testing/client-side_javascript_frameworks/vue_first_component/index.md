@@ -191,7 +191,7 @@ export default {
 
 回到网页浏览器中，你将会看到 todo item 与之前相同，但是没有 label。转到浏览器的开发者工具，你会在控制台中看到这样的警告：
 
-```
+```plain
 [Vue warn]: Missing required prop: "label"
 
 found in
@@ -258,7 +258,7 @@ Vue 在这里做了一点魔术 — 它把你所有的 props 直接绑定到组�
 
 因此，现在我们需要将 `isDone` 属性附加到我们的组件。与 Vue 使用 `\{{}}` 表达式在模板中显示 JavaScript 表达式的方式类似，Vue 有一种特殊的语法将 JavaScript 表达式绑定到 HTML 元素和组件：**`v-bind`**。`v-bind` 表达式如下所示：
 
-```
+```plain
 v-bind:attribute="expression"
 ```
 

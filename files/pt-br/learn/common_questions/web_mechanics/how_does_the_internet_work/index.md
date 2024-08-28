@@ -44,7 +44,8 @@ A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a W
 
 Quando dois computadores precisam se comunicar, você precisa conectá-los, seja fisicamente (normalmente com um [Cabo de rede](https://pt.wikipedia.org/wiki/Cabo_de_par_tran%C3%A7ado)) ou de uma forma sem fio (por exemplo com sistemas [WiFi](https://pt.wikipedia.org/wiki/Wi-Fi) ou [Bluetooth](https://pt.wikipedia.org/wiki/Bluetooth)). Todos os computadores modernos suportam alguma(s) dessas conexões.
 
-> **Nota:** Até o final deste artigo nós estaremos falando apenas a respeito de cabos físicos, mas redes sem fio funcionam da mesma forma
+> [!NOTE]
+> Até o final deste artigo nós estaremos falando apenas a respeito de cabos físicos, mas redes sem fio funcionam da mesma forma
 
 ![Dois computadores conectados](internet-schema-1.png)
 

@@ -7,10 +7,12 @@ slug: Web/API/Response/error_static
 
 **`error()`** は {{domxref("Response")}} インターフェイスのメソッドで、ネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。
 
-> **メモ:** これは主に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。
+> [!NOTE]
+> これは主に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。
 > エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
 
-> **メモ:** "エラー" の `Response` は実際にスクリプトに公開されません。 {{domxref("fetch()")}} に対するそのようなレスポンスは、プロミスを拒否します。
+> [!NOTE]
+> "エラー" の `Response` は実際にスクリプトに公開されません。 {{domxref("fetch()")}} に対するそのようなレスポンスは、プロミスを拒否します。
 
 ## 構文
 

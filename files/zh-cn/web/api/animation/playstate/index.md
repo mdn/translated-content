@@ -10,15 +10,7 @@ slug: Web/API/Animation/playState
 > [!NOTE]
 > 这个属性只对 CSS Animations 和 Transitions 可读。
 
-## 语法
-
-```
-var currentPlayState = Animation.playState;
-
-Animation.playState = newState;
-```
-
-### 可能的值
+## 值
 
 - `idle`
   - : 动画当前的时间是无法解析的，并且队列里没有处于等待执行的任务。

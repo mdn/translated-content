@@ -26,7 +26,8 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
 当只指定一个值的时候，这个值将会被首先渲染，然后剩下的两个值将会以默认顺序渲染，当只指定两个值的时候，这两个值会以指定的顺序渲染，接着渲染剩下的未指定的那个。
 
-> **备注：** 在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 `marker-*`属性（例如 [`marker-start`](/zh-CN/docs/Web/SVG/Attribute/marker-start)）和 [`<marker>`](/zh-CN/docs/Web/SVG/Element/marker) 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定 `stroke` 和 `fill` 的顺序。
+> [!NOTE]
+> 在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 `marker-*`属性（例如 [`marker-start`](/zh-CN/docs/Web/SVG/Attribute/marker-start)）和 [`<marker>`](/zh-CN/docs/Web/SVG/Element/marker) 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定 `stroke` 和 `fill` 的顺序。
 
 ### 属性值
 

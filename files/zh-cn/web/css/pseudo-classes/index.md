@@ -18,7 +18,8 @@ button:hover {
 
 伪类让你可以将样式应用于元素，不仅与文档树内容有关，也与外部因素有关——如与导航历史有关的（例如，{{CSSxRef(":visited")}}）、与其内容的状态有关的（如某些表单元素上的 {{CSSxRef(":checked")}}）或者与鼠标位置有关的（如 {{CSSxRef(":hover")}}，它可以让你知道鼠标是否在一个元素上）。
 
-> **备注：** 相较于伪类，[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)可用于设置元素*特定部分*的样式。
+> [!NOTE]
+> 相较于伪类，[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)可用于设置元素*特定部分*的样式。
 
 ## 元素显示状态伪类
 

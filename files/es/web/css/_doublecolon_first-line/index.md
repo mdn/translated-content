@@ -14,7 +14,8 @@ p::first-line {
 }
 ```
 
-> **Nota:** CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
 
 ## Propiedades permitidas
 

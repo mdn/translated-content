@@ -89,7 +89,8 @@ person.greeting();
 
 現在你的物件裡面已經有了某些資料與功能，而且能透過某些簡易語法存取之。
 
-> **備註：** 如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (或觀看 [實際執行](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。
+> [!NOTE]
+> 如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (或觀看 [實際執行](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。
 
 目前為止發生了什麼事呢？現在這個物件是由多個成員所構成，各個成員均有 1 個名稱 (如上述的 `name` 與 `age`) 以及 1 組數值 (如 `['Bob', 'Smith']` 與 `32`)。由名稱與數值構成的組合均以逗號區隔，而名稱與數值之間則以冒號隔開。語法應如下所示：
 
@@ -299,7 +300,8 @@ var myNotification = new Notification("Hello!");
 
 我們會在後續文章中說明建構子 (Constructor)。
 
-> **備註：** 可思考一下物件「訊息傳遞」的溝通方式。當某個物件需要其他物件執行其他作業時，往往會透過其函式之一傳送訊息給其他物件並等待回應。這也是我們所謂的回傳值。
+> [!NOTE]
+> 可思考一下物件「訊息傳遞」的溝通方式。當某個物件需要其他物件執行其他作業時，往往會透過其函式之一傳送訊息給其他物件並等待回應。這也是我們所謂的回傳值。
 
 ## 摘要
 

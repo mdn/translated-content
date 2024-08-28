@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propiedades como {{domxref ("Node.childNodes")}} y el método {{domxref ("document.querySelectorAll ()")}}..
 
-> **Nota:** Aunque `NodeList` no es un `Array`, es posible iterar sobre él utilizando `forEach()`. También puede convertirse a un `Array` usando `Array.from`.
+> [!NOTE]
+> Aunque `NodeList` no es un `Array`, es posible iterar sobre él utilizando `forEach()`. También puede convertirse a un `Array` usando `Array.from`.
 >
 > Sin embargo, algunos navegadores antiguos no han implementado `NodeList.forEach()` ni `Array.from()`. Pero esas limitaciones pueden eludirse utilizando {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (más en este documento).
 
