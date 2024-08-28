@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTimeElement`** 接口提供特定的属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作 {{HTMLElement("time")}} 元素。
+**`HTMLTimeElement`** 接口提供用于操作 {{HTMLElement("time")}} 元素的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
 {{InheritanceDiagram}}
 
