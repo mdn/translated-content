@@ -22,7 +22,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLProgressElement.value")}}
   - : 一个反映当前值的 `double` 值；如果进度条是不确定的进度条，它返回 `0`。
 - {{domxref("HTMLProgressElement.labels")}} {{ReadOnlyInline}}
-  - : 返回包含此元素的标签 {{HTMLElement("label")}} 元素列表的 {{domxref("NodeList")}} 。
+  - : 返回包含此元素的 {{HTMLElement("label")}} 元素列表的 {{domxref("NodeList")}} 。
 
 ## 实例方法
 

@@ -27,7 +27,7 @@ l10n:
 const pBar = document.getElementById("pBar");
 const span = document.getElementsByTagName("span")[0];
 
-console.log(`最大的默认值：${pBar.max}`);
+console.log(`max 的默认值：${pBar.max}`);
 
 pBar.max = 100;
 pBar.value = 0;
