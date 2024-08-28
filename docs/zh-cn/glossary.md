@@ -77,8 +77,8 @@
 | Specifications         | 规范         |                    |                                                                              |
 | Technical summary      | 技术概要     |                    | https://github.com/mdn/translated-content/issues/11456                       |
 | Test your skills       | 技能测试     |                    |                                                                              |
-| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585  |
 | Usage context          | 使用上下文   |                    | https://github.com/mdn/translated-content/pull/23257#issuecomment-2309852450 |
+| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585  |
 
 ## 通用术语
 
