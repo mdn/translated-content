@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D：filter 属性
 slug: Web/API/CanvasRenderingContext2D/filter
 l10n:
-  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
+  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
 ---
 
 {{APIRef}}
@@ -84,7 +84,9 @@ ctx.fillText("Hello world", 50, 100);
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source" src="rhino.jpg" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg" />
 </div>
 ```
 

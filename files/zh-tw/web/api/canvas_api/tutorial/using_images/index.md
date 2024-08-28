@@ -184,11 +184,9 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
-```
 
-```js hidden
 draw();
 ```
 
@@ -212,23 +210,31 @@ drawImage()第三個型態接受 9 個參數，其中 8 個讓我們從原始影
 本例用和前一個範例一樣的犀牛圖，然後切出犀牛頭部影像部分再放入一個影像畫框，這個影像畫框是一個有陰影的 24 位元 PNG 圖檔，因為 24 位元 PNG 影像具備完整的 8 位元不透明色版(alpha channel)，所以不像 GIF 影像和 8 位元 PNG 影像，它能夠放任何背景之上而無須擔心產生消光色(matte color).
 
 ```html
-<html lang="zh">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
+async function draw() {
+  // 等待所有圖片載入完畢。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
-  // 繪製切割影像
+  // 繪製切片
   ctx.drawImage(
     document.getElementById("source"),
     33,
@@ -244,6 +250,7 @@ function draw() {
   // 畫一個畫框
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
 draw();
 ```
 
