@@ -17,7 +17,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 _data-test-value_ 可以通过 `HTMLElement.dataset.testValue` ( 或者是 `HTMLElement.dataset["testValue"]`) 来访问，任何破折号 (`U+002D`) 都会被下个字母的大写替代 (驼峰拼写)。
 
-### 使用说明
+### 用法
 
 通过添加 **data-\*** 属性，即使是普通的 HTML 元素也能变成相当复杂且强大的编程对象。例如，在游戏里的太空船 "[sprite](https://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29)" 可以是一个带有一个 [class](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性和几个 data-\* 属性的简单 {{HTMLElement("img")}} 元素：
 
