@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLProgressElement`** 接口提供特定的属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作 {{HTMLElement("progress")}} 元素的布局和呈现。
+**`HTMLProgressElement`** 接口提供用于操作 {{HTMLElement("progress")}} 元素布局和呈现的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
 {{InheritanceDiagram}}
 

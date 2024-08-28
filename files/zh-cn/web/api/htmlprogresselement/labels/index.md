@@ -7,23 +7,20 @@ l10n:
 
 {{APIRef("DOM")}}
 
-The **`HTMLProgressElement.labels`** read-only property returns
-a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-{{HTMLElement("progress")}} element.
+**`HTMLProgressElement.labels`** 只读属性返回一个与 {{HTMLElement("progress")}} 元素有关联的 {{HTMLElement("label")}} 元素的 {{domxref("NodeList")}}。
 
 ## 值
 
-A {{domxref("NodeList")}} containing the `<label>` elements associated
-with the `<progress>` element.
+一个与 `<progress>` 元素有关联的 `<label>` 元素的 {{domxref("NodeList")}}。
 
 ## 示例
 
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
+<label id="label1" for="test">标签 1</label>
 <progress id="test" value="70" max="100">70%</progress>
-<label id="label2" for="test">Label 2</label>
+<label id="label2" for="test">标签 2</label>
 ```
 
 ### JavaScript
@@ -32,12 +29,12 @@ with the `<progress>` element.
 window.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("test");
   for (const label of progress.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+    console.log(label.textContent); // “标签 1”和“标签 2”
   }
 });
 ```
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{EmbedLiveSample("示例", "100%", 30)}}
 
 ## 规范
 
