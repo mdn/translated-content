@@ -9,10 +9,9 @@ slug: Web/API/Selection/isCollapsed
 
 返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置（即是否框选了，译者注）。
 
-### 使用说明
+## 值
 
-```plain
-sel.isCollapsed
+一个布尔值。
 ```
 
 ### 注意
