@@ -1,6 +1,6 @@
 ---
 title: Data URL
-slug: Web/HTTP/Basics_of_HTTP/Data_URLs
+slug: Web/URI/Schemes/data
 ---
 
 {{HTTPSidebar}}

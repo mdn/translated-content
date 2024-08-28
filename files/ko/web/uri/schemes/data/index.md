@@ -1,6 +1,7 @@
 ---
 title: 데이터 URI
-slug: Web/HTTP/Basics_of_HTTP/Data_URLs
+slug: Web/URI/Schemes/data
+original_slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---

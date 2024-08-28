@@ -1,6 +1,7 @@
 ---
 title: Resource URLs
-slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+slug: Web/URI/Schemes/resource
+original_slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
