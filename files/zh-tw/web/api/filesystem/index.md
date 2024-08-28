@@ -5,7 +5,7 @@ slug: Web/API/FileSystem
 
 {{APIRef("File System API")}}
 
-檔案與目錄 API 的 `FileSystem` 介面是用來處理檔案系統。這些物件可從任何檔案系統項目上的 `filesystem` 屬性取得。某些網頁瀏覽器提供額外的 API 去建立和管理檔案系統，例如 Google Chrome 的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。
+檔案與目錄 API 的 **`FileSystem`** 介面用來表示檔案系統。這些物件可從任何檔案系統項目上的 `filesystem` 屬性取得。某些網頁瀏覽器提供額外的 API 去建立和管理檔案系統，例如 Google Chrome 的 {{domxref("Window.requestFileSystem", "requestFileSystem()")}} 方法。
 
 ## 基礎概念
 
