@@ -112,7 +112,6 @@ function checkValue(a, b) {
 }
 ```
 
-
 No confundir los valores booleanos primitivos `true` y `false` con los valores verdadero y falso del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de `undefined`, `null`, `0`, `-0`, `NaN`, o la cadena vacía (`""`), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como {{Glossary("truthy", "verdadero")}} en una sentencia condicional. Por ejemplo:
 
 ```js
