@@ -25,7 +25,7 @@ data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作�
 例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
 ```js
-blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
+const blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 根据行、列读取某像素点的 R/G/B/A 值的公式：

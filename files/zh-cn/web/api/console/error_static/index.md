@@ -11,7 +11,7 @@ slug: Web/API/console/error_static
 
 ## 语法
 
-```js-noline
+```js-nolint
 error(val1)
 error(val1, /* …, */ valN)
 error(msg)
