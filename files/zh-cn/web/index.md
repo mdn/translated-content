@@ -54,7 +54,7 @@ l10n:
   - : 通过 Web 应用清单（Web App Manifests）能让用户将 Web 应用安装到他们的设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用（Progressive Web Apps）能提供类似原生移动应用一样的用户体验。
-- [词汇表](/en-US/docs/Glossary)
+- [词汇表](/zh-CN/docs/Glossary)
   - : 网络相关术语的定义。
 
 ## 开发者工具文档
