@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "autocorrect-node": "2.11.1",
-    "cld": "^2.9.1",
+    "cld": "^2.10.0",
     "fdir": "^6.3.0",
     "front-matter": "^4.0.2",
     "husky": "9.1.5",
