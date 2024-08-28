@@ -9,8 +9,9 @@ slug: Web/API/NodeList/forEach
 
 ## 语法
 
-```
-someNodeList.forEach(callback[, thisArg]);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### 参数
@@ -54,7 +55,7 @@ list.forEach(function (currentValue, currentIndex, listObj) {
 
 上述代码会产生以下结果：
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg

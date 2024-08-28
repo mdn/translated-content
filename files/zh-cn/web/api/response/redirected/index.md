@@ -10,13 +10,7 @@ slug: Web/API/Response/redirected
 > [!NOTE]
 > 依赖 **`redirected`** 过滤重定向很容易导致虚假的重定向阻止你的内容像预期一样生效。因此，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时你应该进行过滤操作。详见下面 [禁用重定向](#禁用重定向) 的例子。
 
-## 语法
-
-```
-var isRedirected = Response.redirected;
-```
-
-### 返回值
+## 值
 
 一个布尔值 ({{domxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
 

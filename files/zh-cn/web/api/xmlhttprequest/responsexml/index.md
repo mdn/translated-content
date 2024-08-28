@@ -11,13 +11,7 @@ slug: Web/API/XMLHttpRequest/responseXML
 
 如果服务器没有明确指出 {{HTTPHeader("Content-Type")}} 头是 `"text/xml"` 还是 `"application/xml"`, 你可以使用{{domxref("XMLHttpRequest.overrideMimeType()")}} 强制 `XMLHttpRequest` 解析为 XML。
 
-## 语法
-
-```
-var data = XMLHttpRequest.responseXML;
-```
-
-### 值
+## 值
 
 {{domxref("Document")}} 中包含从 {{domxref("XMLHttpRequest")}} 中收到的 HTML 节点或解析后的 XML 节点，也可能是在没有收到任何数据或数据类型错误的情况下返回的 null。
 

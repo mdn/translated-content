@@ -14,8 +14,9 @@ slug: Web/API/XMLHttpRequest/send
 
 ## 语法
 
-```
-XMLHttpRequest.send(body)
+```js-nolint
+send()
+send(body)
 ```
 
 ### 参数
@@ -59,12 +60,12 @@ XMLHttpRequest.send(FormData data);
 
 ## 案例：GET
 
-```
+```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = function () {
-   // 请求结束后，在此处写处理代码
+  // 请求结束后，在此处写处理代码
 };
 
 xhr.send(null);
@@ -76,15 +77,15 @@ xhr.send(null);
 
 ## 案例：POST
 
-```
+```js
 var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 //发送合适的请求头信息
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhr.onload = function () {
-    // 请求结束后，在此处写处理代码
+  // 请求结束后，在此处写处理代码
 };
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send('string');

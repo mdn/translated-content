@@ -11,12 +11,6 @@ slug: Web/API/Window/mozInnerScreenY
 
 > **备注：**该坐标是以 CSS 像素报告显示的，而不是以硬件像素。这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用[`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) 属性
 
-## 语法
-
-```
-screenY = window.mozInnerScreenY;
-```
-
 ## 值
 
 - _screenY_ 存储的是 `window.mozInnerScreenY` 的属性值。
