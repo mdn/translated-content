@@ -234,7 +234,7 @@ async function draw() {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
-  // 繪製切片
+  // 繪製切割影像
   ctx.drawImage(
     document.getElementById("source"),
     33,
