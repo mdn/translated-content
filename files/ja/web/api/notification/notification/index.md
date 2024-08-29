@@ -10,7 +10,7 @@ l10n:
 
 **`Notification()`** コンストラクターは、ユーザー通知を表す新しい {{domxref("Notification")}} オブジェクトのインスタンスを生成します。
 
-> [!NOTE]
+> **メモ:**
 > {{domxref("ServiceWorkerGlobalScope")}} 内で `Notification()` コンストラクターを使用して通知を作成しようとすると、`TypeError` が発生します。代わりに {{domxref("ServiceWorkerRegistration.showNotification()")}} を使用してください。
 
 ## 構文
