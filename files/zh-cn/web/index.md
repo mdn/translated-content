@@ -43,7 +43,7 @@ l10n:
 - [媒体技术](/zh-CN/docs/Web/Media)
   - : 格式、编解码器、协议、API 和用于在 Web 文档和 Web 应用中嵌入和流式传输视频、音频和图像内容的技术。
 - [SVG](/zh-CN/docs/Web/SVG)
-  - : 通过可缩放矢量图形（Scalable Vector Graphics）能创建出平滑地缩放至任意尺寸的图像。
+  - :可缩放矢量图形用于创建可平滑地缩放至任意尺寸的图像。
 - [MathML](/zh-CN/docs/Web/MathML)
   - : 通过 MathML 能在 Web 上显示复杂的数学符号。
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
