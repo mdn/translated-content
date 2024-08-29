@@ -9,8 +9,10 @@ slug: Web/API/HTMLImageElement/Image
 
 ## 语法
 
-```
-Image(width, height)
+```js-nolint
+new Image()
+new Image(width)
+new Image(width, height)
 ```
 
 ### 参数

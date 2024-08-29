@@ -9,8 +9,8 @@ slug: Web/API/HTMLSelectElement/remove
 
 ## 语法
 
-```
-collection.remove(index);
+```js-nolint
+remove(index)
 ```
 
 ### 参数

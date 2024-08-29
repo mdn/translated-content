@@ -12,8 +12,9 @@ slug: Web/API/CSSStyleSheet/insertRule
 
 ## 语法
 
-```
-stylesheet.insertRule(rule [, index])
+```js-nolint
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### 参数
@@ -105,52 +106,6 @@ function addStylesheetRules(decls) {
 }
 ```
 
-## 兼容补丁
-
-以下补丁将会在 IE 5-8 中纠正提供给 `insertRule()` 的参数，使其标准化。to standardize them in Internet Explorer 5–8. 它通过一个函数对 `insertRule()` 进行补充，使得在参数传递给原生的 `insertRule()` 函数之前将其中的选择器从规则中分离出来。
-
-```
-(function(Sheet_proto){
-  var originalInsertRule = Sheet_proto.insertRule;
-
-  if (originalInsertRule.length === 2){ // 2 个托管参数: (selector, rules)
-    Sheet_proto.insertRule = function(selectorAndRule){
-      // 首先，从规则中分离选择器
-      a: for (var i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
-        newCharCode = selectorAndRule.charCodeAt(i);
-        if (!isEscaped && (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
-          // 其次，找到花括号
-          var openBracketPos = i, closeBracketPos = -1;
-
-          for (; i !== Len; ++i) {
-            newCharCode = selectorAndRule.charCodeAt(i);
-            if (!isEscaped && (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
-              closeBracketPos = i;
-            }
-            isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
-          }
-
-          if (closeBracketPos === -1) break a; // No closing bracket was found!
-            /*else*/ return originalInsertRule.call(
-            this, // 想要改变的样式表
-            selectorAndRule.substring(0, openBracketPos), // 选择器
-            selectorAndRule.substring(closeBracketPos), // 规则
-            arguments[3] // 插入的索引
-          );
-        }
-
-        // Works by if the char code is a backslash, then isEscaped
-        // gets flipped (XOR-ed by 1), and if it is not a backslash
-        // then isEscaped gets XORed by itself, zeroing it
-        isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
-      }
-      // Else, there is no unescaped bracket
-      return originalInsertRule.call(this, selectorAndRule, "", arguments[2]);
-    };
-  }
-})(CSSStyleSheet.prototype);
-```
-
 ## 规范
 
 {{Specifications}}
@@ -158,12 +113,6 @@ function addStylesheetRules(decls) {
 ## 浏览器兼容性
 
 {{Compat}}
-
-### 传统浏览器支持
-
-为了支持 Internet Explorer 8 和更早版本，请使用：`addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
-
-另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 
 ## 参见
 

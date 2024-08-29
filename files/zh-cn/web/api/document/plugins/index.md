@@ -8,13 +8,7 @@ slug: Web/API/Document/plugins
 > [!NOTE]
 > 对于已安装的插件列表，请使用 [NavigatorPlugins.plugins](/zh-CN/docs/Web/API/NavigatorPlugins/plugins) 插件。
 
-## 语法
-
-```
-embedArrayObj = document.plugins
-```
-
-### 值
+## 值
 
 一个 {{domxref("HTMLCollection")}}, 如果文档中没有嵌入则为 null。
 
@@ -26,6 +20,6 @@ embedArrayObj = document.plugins
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - [MSDN documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
