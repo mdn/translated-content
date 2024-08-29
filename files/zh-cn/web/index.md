@@ -51,7 +51,7 @@ l10n:
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
   - : 在浏览器中，通过 Web 扩展为用户提供增强功能——诸如拦截广告及其他内容、定制页面的外观以及更多功能。
 - [Web 应用清单](/zh-CN/docs/Web/Manifest)
-  - : 通过 Web 应用清单（Web App Manifests）能让用户将 Web 应用安装到他们的设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
+  - : Web 应用清单能让用户将 Web 应用安装到其设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用能提供类似原生移动应用的用户体验。
 - [词汇表](/zh-CN/docs/Glossary)
