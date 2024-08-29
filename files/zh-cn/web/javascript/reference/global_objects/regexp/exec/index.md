@@ -94,7 +94,7 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 脚本运行结果如下：
 
-```
+```plain
 Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```

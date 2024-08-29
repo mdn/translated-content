@@ -26,8 +26,10 @@ slug: Web/CSS/::cue
 
 ## 语法
 
-```
-::cue | ::cue( <selector> )
+```css
+::cue|::cue(<selector >) {
+  /* ... */
+}
 ```
 
 ## 示例
