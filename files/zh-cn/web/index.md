@@ -31,7 +31,7 @@ l10n:
 - [HTML](/zh-CN/docs/Web/HTML)
   - : 用 HTML 的基本构建块结构化 Web 文档和 Web 应用。
 - [CSS](/zh-CN/docs/Web/CSS)
-  - : 用层叠样式表（Cascading Style Sheets）描述 Web 文档和 Web 应用的外观。
+  - : 用层叠样式表描述 Web 文档和应用的外观。
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
   - : JavaScript 是 Web 的原生编程语言。
 - [WebAssembly](/zh-CN/docs/WebAssembly)
