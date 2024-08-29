@@ -29,7 +29,7 @@ l10n:
 - [Web API](/zh-CN/docs/Web/API)
   - : 用 JavaScript 编程 API 构建 Web 应用。
 - [HTML](/zh-CN/docs/Web/HTML)
-  - : 用 HTML 的基本构建块结构化 Web 文档和 Web 应用。
+  - : 用 HTML 的基本构建块创建 Web 文档和应用。
 - [CSS](/zh-CN/docs/Web/CSS)
   - : 用层叠样式表描述 Web 文档和应用的外观。
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
