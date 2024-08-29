@@ -2,7 +2,6 @@
 title: "Navigator: canShare() メソッド"
 short-title: canShare()
 slug: Web/API/Navigator/canShare
-slug: Web/API/Navigator/canShare
 l10n:
   sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
