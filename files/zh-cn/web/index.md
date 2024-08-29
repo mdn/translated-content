@@ -27,7 +27,7 @@ l10n:
 ## Web 技术参考
 
 - [Web API](/zh-CN/docs/Web/API)
-  - : 用 JavaScript 编程接口构建 Web 应用。
+  - : 用 JavaScript 编程 API 构建 Web 应用。
 - [HTML](/zh-CN/docs/Web/HTML)
   - : 用 HTML 的基本构建块结构化 Web 文档和 Web 应用。
 - [CSS](/zh-CN/docs/Web/CSS)
