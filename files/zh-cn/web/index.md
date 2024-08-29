@@ -55,7 +55,7 @@ l10n:
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用（Progressive Web Apps）能提供类似原生移动应用一样的用户体验。
 - [词汇表](/zh-CN/docs/Glossary)
-  - : 网络相关术语的定义。
+  - : Web 相关术语的定义。
 
 ## 开发者工具文档
 
