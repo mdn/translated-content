@@ -49,7 +49,7 @@ l10n:
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
   - : WebDriver 是一种浏览器自动化机制，可通过模拟真人使用浏览器的操作远程控制浏览器。被广泛应用于 Web 应用的跨浏览器测试。
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
-  - : 在浏览器中，通过 Web 扩展为用户提供增强功能——诸如拦截广告及其他内容、定制页面的外观以及更多功能。
+  - : Web 扩展是一种在浏览器中为用户提供增强功能的方式——用于阻止广告和其他内容、定制页面的外观以及更多行为。
 - [Web 应用清单](/zh-CN/docs/Web/Manifest)
   - : Web 应用清单能让用户将 Web 应用安装到其设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
