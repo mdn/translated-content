@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feTurbulence
 
 该滤镜利用 Perlin 噪声函数创建了一个图像。它实现了人造纹理比如说云纹、大理石纹的合成。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

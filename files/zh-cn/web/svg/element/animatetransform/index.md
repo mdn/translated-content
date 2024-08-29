@@ -7,7 +7,7 @@ slug: Web/SVG/Element/animateTransform
 
 `animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

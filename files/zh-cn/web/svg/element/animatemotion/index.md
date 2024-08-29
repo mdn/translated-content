@@ -37,7 +37,7 @@ svg {
 
 {{EmbedLiveSample('示例', 150, '100%')}}
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

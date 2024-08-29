@@ -10,7 +10,7 @@ slug: Web/SVG/Element/path
 
 path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
