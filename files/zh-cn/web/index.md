@@ -14,7 +14,7 @@ l10n:
 ## 面向 Web 开发者的文档
 
 - [Web 开发者指南](/zh-CN/docs/Web/Guide)
-  - : 通过 Web 开发者指南（Web Developer Guide）提供的实用入门内容，让你能切实地使用 Web 技术做你想做的或需要做的。
+  - : 通过 Web 开发者指南提供的实用入门内容，让你能切实地使用 Web 技术做你想做的或需要做的。
 - [面向 Web 开发者的教程](/zh-CN/docs/Web/Tutorials)
   - : 这些教程会带着你一步一步地学习 HTML、CSS、JavaScript 和 API。
 - [无障碍](/zh-CN/docs/Web/Accessibility)
