@@ -46,7 +46,7 @@ svg {
 
 {{EmbedLiveSample("示例", '100%', 150)}}
 
-## 用法
+## 使用说明
 
 <table class="properties">
   <tbody>

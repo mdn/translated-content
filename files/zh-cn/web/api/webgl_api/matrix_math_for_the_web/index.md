@@ -125,8 +125,6 @@ function multiplyMatrices(matrixA, matrixB) {
 }
 ```
 
-### 用法
-
 让我们看一看实际使用：
 
 ```js

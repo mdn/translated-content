@@ -166,7 +166,7 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("Element.keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件且已过时，不应该使用它。
 
-## 用法说明
+## 使用说明
 
 键盘事件有三种类型：{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和 {{domxref("Element/keyup_event", "keyup")}}。对于大多数按键，Gecko 会像这样派发一系列按键事件：
 

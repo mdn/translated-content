@@ -7,14 +7,7 @@ slug: Web/API/Event/cancelBubble
 
 **`Event.cancelBubble`** 属性是 {{domxref("Event.stopPropagation()")}}的一个曾用名。在从事件处理程序返回之前将其值设置为 true 可阻止事件的传播。
 
-## 语法
-
-```
-event.cancelBubble = bool;
-let bool = event.cancelBubble;
-```
-
-## 用例
+## 示例
 
 ```js
 ele.onclick = function (e) {
