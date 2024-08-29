@@ -41,7 +41,7 @@ l10n:
 - [HTTP](/zh-CN/docs/Web/HTTP)
   - : HTTP 是通过 Web 来获取文档、样式表、脚本、图像、视频、字体和其他资源，并向 Web 服务器发送数据的基础互联网协议。
 - [媒体](/zh-CN/docs/Web/Media)
-  - : 格式、编解码器、协议、API 和用于在 Web 文档和 Web 应用中嵌入和流式传输视频、音频和图像内容的技术。
+  - : 格式、编解码器、协议、API 和用于在 Web 文档和应用中嵌入和流式传输视频、音频和图像内容的技术。
 - [SVG](/zh-CN/docs/Web/SVG)
   - :可缩放矢量图形用于创建可平滑地缩放至任意尺寸的图像。
 - [MathML](/zh-CN/docs/Web/MathML)
