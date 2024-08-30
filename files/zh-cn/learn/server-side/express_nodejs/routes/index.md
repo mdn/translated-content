@@ -2,12 +2,12 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 l10n:
-  sourceCommit: e39ad1510b9794cd393dfc6a48e3a3d3d7a4c732
+  sourceCommit: 3dd00b3b77e2e79c7d92f0b6c4f4665d54500a0e
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
-在本教程中，我们将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站最终需要的所有资源端点设置具有 "虚拟 "处理函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
+在本教程中，我们将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站最终需要的所有资源端点设置具有"虚拟"处理函数的路由（URL 处理器）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -17,9 +17,9 @@ l10n:
         回顾
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
-        >。完成本教程之前小节（<a
+        >。完成本教程之前小节（包括 <a
           href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
-          >Express 教程 3：使用数据库 (Mongoose)</a
+          >Express 教程 3：使用数据库（Mongoose）</a
         >）。
       </td>
     </tr>
@@ -32,31 +32,32 @@ l10n:
 
 ## 概览
 
-[上节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose) 定义了与数据库交互的 _Mongoose_ 模型，使用一个（独立）脚本创建了一些初始记录。现在可以编写代码来向用户展示这些信息。首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后应创建路由（URL 处理器）和视图（模板）来显示这些页面。
+[上节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose) 我们定义了与数据库交互的 _Mongoose_ 模型，并使用一个（独立）脚本创建了一些初始记录。现在可以编写代码来向用户展示这些信息。我们首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后要创建路由（URL 处理器）和视图（模板）来显示这些页面。
 
-下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），它们是实际的请求处理函数，与路由请求代码是分开的。
+下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），即与路由请求代码是分开的实际的请求处理函数。
 
 因为我们已经创建好了模型，我们接下来需要创建的是：
 
-- 路由：把需要支持的请求（以及请求 URL 中包含的任何信息）转发到适当的控制器函数。
+- “路由”：把需要支持的请求（以及请求 URL 中包含的任何信息）转发到适当的控制器函数。
 - 控制器：从模型中获取请求的数据，创建一个 HTML 页面显示出数据，并将页面返回给用户，以便在浏览器中查看。
 - 视图（模板）：供控制器用来渲染数据。
 
 ![MVC Express 服务器的主要数据流图：“路由”接收发送到 Express 服务器的 HTTP 请求，并将其转发给相应的“控制器”功能。控制器从模型中读取和写入数据。模型连接到数据库，为服务器提供数据访问。控制器使用“视图”（也称为模板）来呈现数据。控制器将 HTML HTTP 响应作为 HTTP 响应发送回客户端。](mvc_express.png)
 
-因此我们需要页面来显示藏书、藏书种类、作者、藏书副本的列表和详细信息，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，后续章节再扩展控制器方法，以使用模型数据。
+因此我们最终需要显示图书、图书种类、作者、图书副本的列表和详细信息的页面，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，而会后续章节再扩展控制器方法以使用模型数据。
 
-第一段提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的“入门”知识。后续设置 LocalLibrary 路由时将用到这些知识。
+第一小节提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的“入门”知识。后续设置 LocalLibrary 路由时我们将用到这些知识。
 
 ## 路由入门
 
 路由是一段 Express 代码，它将 HTTP 动词（`GET`、`POST`、`PUT`、`DELETE` 等）、URL 路径/模式和处理函数三者关联起来。
 
-创建路由有几种方法。本教程将使 [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router) 中间件，因为使用它可以将站点特定部分的路由处理程序打包，并使用通用路由前缀访问它们。我们会将所有与图书馆有关的路由保存在 `catalog` 模块中，在添加处理帐户或其他功能的路由时，可以分开保存。
+创建路由有多种方法。在本教程中，我们将使用 [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) 中间件，因为它允许我们将网站特定部分的路由处理程序分组在一起并使用共同的路由前缀访问它们。我们将把所有与图书馆相关的路由保存在一个“目录”模块中，如果我们添加了用于处理用户账户或其他功能的路由，可以将它们单独分组。
 
-> **备注：** [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）) 简要讨论了 Express 应用的路由机制。使用 `Router` 可以保证更好的模块化（下文所述），且用法与直接在 Express 应用对象定义路由非常类似。
+> [!NOTE]
+> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 _Express 应用对象_定义路由非常类似。
 
-本段以下内容介绍使用 `Router` 定义路由的方法。
+本小节的剩余部分内容将介绍使用 `Router` 定义路由的方法。
 
 ### 定义和使用单独的路由模块
 
@@ -109,9 +110,9 @@ router.get("/about", (req, res) => {
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
 > [!NOTE]
-> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
+> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#使用中间件)，这意味着它们要么（通过响应）结束请求，要么调用链中的 `next` 函数。在上述示例中，我们使用 `send()` 完成了请求，因而没有再用上 `next` 参数（参数表中将其省略）。
 >
-> 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
+> 上述路由函数只需要一个回调。我们可以根据需要指定任意数量的回调参数或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
 此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串“关于此维基”。还有许多其他可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [render()](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。我们将在后续章节进一步讨论。
 
@@ -119,7 +120,7 @@ router.get("/about", (req, res) => {
 
 上面的示例使用 `Router.get()` 方法来响应特定路径的 HTTP GET 请求。
 
-`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
+`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`、`put()`、`delete()`、`options()`、`trace()`、`copy()`、`lock()`、`mkcol()`、`move()`、`purge()`、`propfind()`、`proppatch()`、`unlock()`、`report()`、`mkactivity()`、`checkout()`、`merge()`、`m-search()`、`notify()`、`subscribe()`、`unsubscribe()`、`patch()`、`search()` 和 `connect()`。
 
 比如下方代码与上方 `/about` 路由行为一致，但只响应 HTTP POST 请求。
 
@@ -131,7 +132,7 @@ router.post("/about", (req, res) => {
 
 ### 路由路径
 
-路由路径用于定义可请求的端点。之前示例中路径都是字符串，并且必须精确写为“/”、“/about”、“/book”，等等。
+路由路径用于定义可请求的端点。之前示例中路径都是字符串，并且必须精确写作：“/”、“/about”、“/book”诸如此类。
 
 路由路径也可以是字符串模式（String Pattern）。可用部分*正则表达式语法*来定义端点的模式。以下是所涉及的正则表达式（注意，连字符（`-`）和点（`.`）在字符串路径中解释为字面量，不能做为正则表达式）：
 
@@ -153,9 +154,9 @@ app.get(/.*fish$/, (req, res) => {
 
 ### 路由参数
 
-路径参数是*命名的 URL 段*，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀，然后是名称（例如 `/:your_parameter_name/`。捕获的值保存在 `req.params` 对象中，键即参数名（例如 `req.params.your_parameter_name`）。
+路径参数是*命名的 URL 片段*，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀并紧接着名称（如 `/:your_parameter_name/`）。捕获的值保存在 `req.params` 对象中，其中参数名对应对象的键（例如 `req.params.your_parameter_name`）。
 
-举例说，一个包含用户和藏书信息的 URL：`http://localhost:3000/users/34/books/8989`。我们可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
+比如，我们考虑一个包含用户和图书信息的 URL `http://localhost:3000/users/34/books/8989`。我们可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
 
 ```js
 app.get("/users/:userId/books/:bookId", (req, res) => {
@@ -170,7 +171,7 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 > [!NOTE]
 > URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
 
-以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html) 和 [路由指南](http://expressjs.com/en/guide/routing.html)。以下是 LocalLibrary 路由和控制器的设置过程。
+以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html)和[路由指南](http://expressjs.com/en/guide/routing.html)。以下是 LocalLibrary 路由和控制器的设置过程。
 
 ### 处理路由函数中的错误
 
@@ -196,7 +197,8 @@ router.get("/about", (req, res, next) => {
 
 为了使框架正确处理异常，这些异常必须被捕获，然后将其作为错误转发，如上一节所示。
 
-> **备注：** 目前处于测试阶段的 Express 5 有望处理 JavaScript 异常。
+> [!NOTE]
+> 目前处于测试阶段的 Express 5 有望能处理 JavaScript 异常。
 
 在上一节中的简单示例中，`About.find().exec()` 是返回 Promise 的数据库查询，我们可以在 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块内编写路由函数，如下所示：
 
@@ -211,7 +213,7 @@ exports.get("/about", async function (req, res, next) {
 });
 ```
 
-每个函数都需要添加大量的样板代码。在本教程中，我们将使用 [express-async-handler](https://www.npmjs.com/package/express-async-handler) 模块。它定义了一个包装器函数，隐藏了 `try...catch` 块和用于转发错误的代码。现在，相同的示例非常简单，因为我们只需要为假设成功的情况编写代码：
+每个函数都需要添加大量的样板代码。在本教程中，我们将使用 [express-async-handler](https://www.npmjs.com/package/express-async-handler) 模块。它定义了一个包装器函数，隐藏了 `try...catch` 块和用于转发错误的代码。现在，相同的示例将变得非常简单，因为我们只需要为假设成功的情况编写代码：
 
 ```js
 // 导入模块
@@ -231,7 +233,7 @@ exports.get(
 以下是站点页面的完整 URL 列表，其中 _object_ 是模型名称（`book`、`bookinstance`、`genre`、`author`），_objects_ 是一组模型，_id_ 是每个 Mongoose 模型实例默认的标识字段（`_id`）。
 
 - `catalog/`：主页。
-- `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 `/catalog/books/`、`/catalog/genres/` 等）
+- `catalog/<objects>/`：模型（图书、图书副本、图书种类、作者）的完整列表（例如 `/catalog/books/`、`/catalog/genres/` 等）
 - `catalog/<object>/<id>`_：具有_ `_id` 字段值的特定模型的详细信息页面（例如 `/catalog/book/584493c1f4887f06c0e67d37`）。
 - `catalog/<object>/create`：添加新模型的表单（例如 `/catalog/book/create`）。
 - `catalog/<object>/<id>/update`：更新具有 `_id` 字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/update`）。
@@ -239,7 +241,7 @@ exports.get(
 
 首页和列表页面没有包含任何额外信息。因此它们返回的结果只取决于模型类型和数据库内容，获取信息的查询操作是恒定不变的（类似地，创建对象的代码也没有较大改动）。
 
-与之相反，其他 URL 是用于处理特定文档/模型实例的，它们会将项目的标识嵌入 URL（上文的 `<id>`）。可以用路径参数来提取嵌入的信息，并传递给路由处理器（后续章节中用于动态获取数据库中的信息）。通过在 URL 中嵌入信息，使得每种类型的所有资源只需要一个路由（例如，所有藏书副本的显示操作只需要一个路由）。
+与之相反，其他 URL 是用于处理特定文档/模型实例的，它们会将项目的标识嵌入 URL（上文的 `<id>`）。可以用路径参数来提取嵌入的信息，并传递给路由处理器（后续章节中用于动态获取数据库中的信息）。通过在 URL 中嵌入信息，使得每种类型的所有资源只需要一个路由（例如，所有图书副本的显示操作只需要一个路由）。
 
 > [!NOTE]
 > Express 可以通过任何方式构造 URL，可以在 URL 正文中嵌入信息（如上文），或使用 URL `GET` 参数（例如 `/book/?id=6`）。无论哪种方法，URL 都应保持整洁、合理且易读（另请参阅 [W3C 相关建议](https://www.w3.org/Provider/Style/URI)）。
@@ -248,7 +250,7 @@ exports.get(
 
 ## 创建路由处理器回调函数
 
-在定义路由之前，我们首先要创建它们将调用的所有虚拟/骨架回调函数。这些回调函数将分别存储在“Book”、“BookInstance”、“Genre”和“Author”的“控制器”模块中（你可以使用任何文件/模块结构，但这似乎是本项目的适当粒度）。
+在定义路由之前，我们首先要创建它们将调用的所有虚拟/骨架回调函数。这些回调函数将分别存储在 `Book`、`BookInstance`、`Genre` 和 `Author` 的“控制器”模块中（你可以使用任何文件/模块结构，但我们这样做会更好贴切项目本身）。
 
 首先在项目根目录下为控制器创建一个文件夹（**/controllers**），然后为处理每个模型创建单独的控制器文件/模块：
 
@@ -287,7 +289,7 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
 
 // 由 GET 显示创建作者的表单
 exports.author_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：作者创建表单的 GET");
+  res.send("未实现：创建作者的 GET");
 };
 
 // 由 POST 处理作者创建操作
@@ -297,7 +299,7 @@ exports.author_create_post = asyncHandler(async (req, res, next) => {
 
 // 由 GET 显示删除作者的表单
 exports.author_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：作者删除表单的 GET");
+  res.send("未实现：删除作者的 GET");
 };
 
 // 由 POST 处理作者删除操作
@@ -307,7 +309,7 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
 
 // 由 GET 显示更新作者的表单
 exports.author_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：作者更新表单的 GET");
+  res.send("未实现：更新作者的 GET");
 };
 
 // 由 POST 处理作者更新操作
@@ -323,11 +325,11 @@ exports.author_update_post = asyncHandler(async (req, res, next) => {
 如果控制器函数预计会接收路径参数，则会在消息字符串中输出这些参数（参见上文的 `req.params.id`）。
 
 请注意，某些路由函数在实现后可能不包含任何可抛出异常的代码。
-我们可以在使用时将它们改回 "正常 "的路由处理函数。
+我们可以在使用时将它们改回“正常”的路由处理函数。
 
 ### BookInstance 控制器
 
-打开 **/controllers/bookinstanceController.js** 文件，复制以下代码（与“Author”控制器模块的模式相同）：
+打开 **/controllers/bookinstanceController.js** 文件，复制以下代码（与 `Author` 控制器模块的模式相同）：
 
 ```js
 const BookInstance = require("../models/bookinstance");
@@ -374,52 +376,52 @@ exports.bookinstance_update_post = asyncHandler(async (req, res, next) => {
 });
 ```
 
-#### Genre 控制器
+####流派控制器
 
 打开 **/controllers/genreController.js** 文件，复制以下文本（与 `Author` 和 `BookInstance` 文件的模式相同）：
 
 ```js
-const Genre = require("../models/genre");
+const流派= require("../models/genre");
 const asyncHandler = require("express-async-handler");
 
-// 显示所有的 Genre.
+// 显示所有的流派.
 exports.genre_list = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 列表");
+  res.send("未实现：流派列表");
 });
 
-// 显示特定 Genre 的详情页。
+// 显示特定流派的详情页。
 exports.genre_detail = asyncHandler(async (req, res, next) => {
-  res.send(`未实现：Genre 详情页：${req.params.id}`);
+  res.send(`未实现：流派详情页：${req.params.id}`);
 });
 
-// 通过 GET 显示创建流派表单。
+// 通过 GET 显示创建流派。
 exports.genre_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 创建 GET");
+  res.send("未实现：流派创建 GET");
 });
 
 // 以 POST 方式处理创建流派。
 exports.genre_create_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 创建 POST");
+  res.send("未实现：流派创建 POST");
 });
 
-// 通过 GET 显示 Genre 删除表单。
+// 通过 GET 显示流派删除表单。
 exports.genre_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 删除 GET");
+  res.send("未实现：流派删除 GET");
 });
 
-// 处理 POST 时的 Genre 删除。
+// 处理 POST 时的流派删除。
 exports.genre_delete_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 删除 POST");
+  res.send("未实现：流派删除 POST");
 });
 
-// 通过 GET 显示 Genre 更新表单。
+// 通过 GET 显示流派更新表单。
 exports.genre_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 更新 GET");
+  res.send("未实现：流派更新 GET");
 });
 
 // 处理 POST 上的流派更新。
 exports.genre_update_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre 更新 POST");
+  res.send("未实现：流派更新 POST");
 });
 ```
 
@@ -437,48 +439,48 @@ exports.index = asyncHandler(async (req, res, next) => {
 
 // 显示所有的图书
 exports.book_list = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 列表");
+  res.send("未实现：图书列表");
 });
 
-// 显示特定 Book 的详情页面。
+// 显示特定图书的详情页面。
 exports.book_detail = asyncHandler(async (req, res, next) => {
-  res.send(`未实现：Book 详情页面：${req.params.id}`);
+  res.send(`未实现：图书详情页面：${req.params.id}`);
 });
 
-// 通过 GET 显示 Book 创建表单。
+// 通过 GET 显示创建图书。
 exports.book_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 创建 GET");
+  res.send("未实现：创建图书 GET");
 });
 
-// 以 POST 方式处理 Book 创建。
+// 以 POST 方式处理创建图书。
 exports.book_create_post = asyncHandler(async (req, res, next) => {
   res.send("未实现：Book 创建 POST");
 });
 
-// 通过 GET 显示 Book 删除表单。
+// 通过 GET 显示删除图书。
 exports.book_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 删除 GET");
+  res.send("未实现：删除 GET");
 });
 
-// 以 POST 方式处理 Book 删除。
+// 以 POST 方式处理删除图书。
 exports.book_delete_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 删除 POST");
+  res.send("未实现：删除 POST");
 });
 
-// 通过 GET 显示 Book 更新表单。
+// 通过 GET 显示更新图书。
 exports.book_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 更新 GET");
+  res.send("未实现：更新图书 GET");
 });
 
-// 处理 POST 时的 Book 更新。
+// 处理 POST 时的更新图书。
 exports.book_update_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book 更新 POST");
+  res.send("未实现：更新图书 POST");
 });
 ```
 
-## 创建藏书编目 `catalog` 路由模组
+## 创建图书编目 `catalog` 路由模组
 
-定义好控制器后，我们来为 [LocalLibrary 网站](#routes_needed_for_the_locallibrary)创建完整的 URL 路由。
+定义好控制器后，我们来为 [LocalLibrary 网站](#LocalLibrary_所需路由)创建完整的 URL 路由。
 
 站点骨架中有一个 **./routes** 文件夹，其中包含两个路由文件：_index_ 和 _user_，在这里新建一个 **catalog.js** 路由文件，如下所示：
 
@@ -490,7 +492,7 @@ exports.book_update_post = asyncHandler(async (req, res, next) => {
     catalog.js
 ```
 
-**/routes/catalog.js** 中有以下代码：
+打开 **/routes/catalog.js** 并拷贝如下代码到其中：
 
 ```js
 const express = require("express");
@@ -502,33 +504,33 @@ const author_controller = require("../controllers/authorController");
 const genre_controller = require("../controllers/genreController");
 const book_instance_controller = require("../controllers/bookinstanceController");
 
-/// 藏书路由 ///
+/// 图书路由 ///
 
-// GET 获取藏书编目主页
+// GET 获取图书编目主页
 router.get("/", book_controller.index);
 
-// GET 请求添加新的藏书。注意此项必须位于显示藏书的路由（使用了 id）之前。
+// GET 请求添加新的图书。注意此项必须位于显示图书的路由（使用了 id）之前。
 router.get("/book/create", book_controller.book_create_get);
 
-// POST 请求添加新的藏书
+// POST 请求添加新的图书
 router.post("/book/create", book_controller.book_create_post);
 
-// GET 请求删除藏书
+// GET 请求删除图书
 router.get("/book/:id/delete", book_controller.book_delete_get);
 
-// POST 请求删除藏书
+// POST 请求删除图书
 router.post("/book/:id/delete", book_controller.book_delete_post);
 
-// GET 请求更新藏书
+// GET 请求更新图书
 router.get("/book/:id/update", book_controller.book_update_get);
 
-// POST 请求更新藏书
+// POST 请求更新图书
 router.post("/book/:id/update", book_controller.book_update_post);
 
-// GET 请求藏书
+// GET 请求图书
 router.get("/book/:id", book_controller.book_detail);
 
-// GET 请求完整藏书列表
+// GET 请求完整图书列表
 router.get("/books", book_controller.book_list);
 
 
@@ -558,33 +560,33 @@ router.get("/author/:id", author_controller.author_detail);
 // 获取所有作者列表的 GET 请求。
 router.get("/authors", author_controller.author_list);
 
-/// 类型路由 ///
+/// 流派路由 ///
 
-// 用于创建 Genre 的 GET 请求。注意：这必须在显示 Genre 的路由之前（使用 id 的路由）。
+// 用于创建流派的 GET 请求。注意：这必须在显示流派的路由之前（使用 id 的路由）。
 router.get("/genre/create", genre_controller.genre_create_get);
 
-//POST 请求创建 Genre。
+// POST 请求创建 Genre。
 router.post("/genre/create", genre_controller.genre_create_post);
 
-// 删除 Genre 的 GET 请求。
+// 删除流派的 GET 请求。
 router.get("/genre/:id/delete", genre_controller.genre_delete_get);
 
 // POST 请求删除 Genre。
 router.post("/genre/:id/delete", genre_controller.genre_delete_post);
 
-// 更新 Genre 的 GET 请求。
+// 更新流派的 GET 请求。
 router.get("/genre/:id/update", genre_controller.genre_update_get);
 
-// 更新 Genre 的 POST 请求。
+// 更新流派的 POST 请求。
 router.post("/genre/:id/update", genre_controller.genre_update_post);
 
-// 获取一个 Genre 的 GET 请求。
+// 获取一个流派的 GET 请求。
 router.get("/genre/:id", genre_controller.genre_detail);
 
-// 获取所有 Genre 列表的 GET 请求
+// 获取所有流派列表的 GET 请求
 router.get("/genres", genre_controller.genre_list);
 
-/// BOOKINSTANCE ROUTES ///
+/// BOOKINSTANCE 路由 ///
 
 // 用于创建 BookInstance 的 GET 请求。注意：这必须在显示 BookInstance 的路由之前（使用 id 的路由）。
 router.get(
@@ -633,11 +635,11 @@ module.exports = router;
 
 该模块导入了 `express` 并创建了一个 `Router` 对象 `router`。所有路由都设置在 `router` 上，最后将其导出。
 
-对 `router` 对象调用 `.get()` 或`.post()` 函数即可定义路由。这里所有路径都使用字符串定义（而不用字符串模式或正则表达式）。某些特定资源（如藏书）的路由使用路径参数从 URL 中获取对象标识。
+对 `router` 对象调用 `.get()` 或`.post()` 函数即可定义路由。这里所有路径都使用字符串定义（而不用字符串模式或正则表达式）。某些特定资源（如图书）的路由使用路径参数从 URL 中获取对象标识。
 
 处理函数均导入自上文的控制器模块。
 
-### 更新 index 路由模块
+### 更新主要路由模块
 
 我们已经设置了所有新路径，但仍有一条路径指向原始页面。让我们把它重定向到我们在“/catalog”路径下创建的新索引页面。
 
@@ -674,7 +676,7 @@ app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
 ```
 
 > [!NOTE]
-> 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的 URL 为：`/catalog/books/`。
+> 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问图书列表 的 URL 为：`/catalog/books/`。
 
 大功告成。LocalLibrary 网站所需的所有 URL 的路由和框架函数都已准备完毕。
 
