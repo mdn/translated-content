@@ -19,7 +19,6 @@ slug: Web/API/Window/mozInnerScreenY
 
 不属于任何 W3C 规范或标准
 
-
 ## 参见
 
 - {{domxref("window.mozInnerScreenX")}}
