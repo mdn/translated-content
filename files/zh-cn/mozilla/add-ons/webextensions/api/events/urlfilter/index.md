@@ -40,31 +40,31 @@ l10n:
     - 例如：`".example.com"` 匹配 `http://www.example.com/`，但不匹配 `http://example.com/`。
     - 例如：`"example.com"` 匹配 `http://www.example.com/`，以及 `http://fakeexample.com/`。
 
-  - `pathContains` {{optional_inline}}
-    - ：`string`，匹配 URL 的路径段是否包含指定的字符串。
-  - `pathEquals` {{optional_inline}}
-    - ：`string`，匹配 URL 的路径是否等于指定的字符串。
-  - `pathPrefix` {{optional_inline}}
-    - ：`string`，匹配 URL 的路径段是否以指定的字符串开头。
-  - `pathSuffix` {{optional_inline}}
-    - ：`string`，匹配 URL 的路径段是否以指定的字符串结束。
-  - `queryContains` {{optional_inline}}
-    - ：`string`，匹配 URL 的查询段是否包含指定的字符串。
-  - `queryEquals` {{optional_inline}}
-    - ：`string`，匹配 URL 的查询段是否等于指定的字符串。
-  - `queryPrefix` {{optional_inline}}
-    - ：`string`，匹配 URL 的查询段是否以指定的字符串开头。
-  - `querySuffix` {{optional_inline}}
-    - ：`string`，匹配 URL 的查询段是否以指定的字符串结束。
-  - `urlContains` {{optional_inline}}
-    - ：`string`，匹配 URL（不含片段标识符）是否包含指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
-  - `urlEquals` {{optional_inline}}
-    - ：`string`，匹配 URL（不含片段标识符）是否等于指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
-  - `urlMatches` {{optional_inline}}
+- `pathContains` {{optional_inline}}
+  - ：`string`，匹配 URL 的路径段是否包含指定的字符串。
+- `pathEquals` {{optional_inline}}
+  - ：`string`，匹配 URL 的路径是否等于指定的字符串。
+- `pathPrefix` {{optional_inline}}
+  - ：`string`，匹配 URL 的路径段是否以指定的字符串开头。
+- `pathSuffix` {{optional_inline}}
+  - ：`string`，匹配 URL 的路径段是否以指定的字符串结束。
+- `queryContains` {{optional_inline}}
+  - ：`string`，匹配 URL 的查询段是否包含指定的字符串。
+- `queryEquals` {{optional_inline}}
+  - ：`string`，匹配 URL 的查询段是否等于指定的字符串。
+- `queryPrefix` {{optional_inline}}
+  - ：`string`，匹配 URL 的查询段是否以指定的字符串开头。
+- `querySuffix` {{optional_inline}}
+  - ：`string`，匹配 URL 的查询段是否以指定的字符串结束。
+- `urlContains` {{optional_inline}}
+  - ：`string`，匹配 URL（不含片段标识符）是否包含指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
+- `urlEquals` {{optional_inline}}
+  - ：`string`，匹配 URL（不含片段标识符）是否等于指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
+- `urlMatches` {{optional_inline}}
 
-    - : `string`，检查 URL（不含片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
+  - : `string`，检查 URL（不含片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 
-      - 例如：`urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` 匹配 `https://mozilla.org/`，`https://developer.mozilla.org/`，但不匹配 `https://developer.fakemozilla.org/`。
+    - 例如：`urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` 匹配 `https://mozilla.org/`、`https://developer.mozilla.org/`，但不匹配 `https://developer.fakemozilla.org/`。
 
 - `originAndPathMatches` {{optional_inline}}
   - : `string`，检查 URL（不含查询段和片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
