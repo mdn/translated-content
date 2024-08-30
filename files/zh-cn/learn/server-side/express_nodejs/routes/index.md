@@ -2,7 +2,7 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 l10n:
-  sourceCommit: 3dd00b3b77e2e79c7d92f0b6c4f4665d54500a0e
+  sourceCommit: e39ad1510b9794cd393dfc6a48e3a3d3d7a4c732
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
@@ -55,7 +55,7 @@ l10n:
 创建路由有多种方法。在本教程中，我们将使用 [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) 中间件，因为它允许我们将网站特定部分的路由处理程序分组在一起并使用共同的路由前缀访问它们。我们将把所有与图书馆相关的路由保存在一个“目录”模块中，如果我们添加了用于处理用户账户或其他功能的路由，可以将它们单独分组。
 
 > [!NOTE]
-> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 _Express 应用对象_定义路由非常类似。
+> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 *Express 应用对象*定义路由非常类似。
 
 本小节的剩余部分内容将介绍使用 `Router` 定义路由的方法。
 
@@ -376,15 +376,15 @@ exports.bookinstance_update_post = asyncHandler(async (req, res, next) => {
 });
 ```
 
-####流派控制器
+#### 流派控制器
 
 打开 **/controllers/genreController.js** 文件，复制以下文本（与 `Author` 和 `BookInstance` 文件的模式相同）：
 
 ```js
-const流派= require("../models/genre");
+const genre = require("../models/genre");
 const asyncHandler = require("express-async-handler");
 
-// 显示所有的流派.
+// 显示所有的流派。
 exports.genre_list = asyncHandler(async (req, res, next) => {
   res.send("未实现：流派列表");
 });
@@ -540,7 +540,7 @@ router.get("/books", book_controller.book_list);
 router.get("/author/create", author_controller.author_create_get);
 
 // 创建作者的 POST 请求。
-router.post("/author/create",author_controller.author_create_post);
+router.post("/author/create", author_controller.author_create_post);
 
 // 删除作者的 GET 请求。
 router.get("/author/:id/delete", author_controller.author_delete_get);
@@ -596,7 +596,7 @@ router.get(
 
 // 创建 BookInstance 的 POST 请求。
 router.post(
-        "/bookinstance/create",
+  "/bookinstance/create",
   book_instance_controller.bookinstance_create_post,
 );
 
@@ -608,7 +608,7 @@ router.post(
 
 // POST 请求删除 BookInstance。
 router.post(
-        "/bookinstance/:id/delete",
+  "/bookinstance/:id/delete",
   book_instance_controller.bookinstance_delete_post,
 );
 
@@ -621,7 +621,7 @@ router.get(
 // 更新 BookInstance 的 POST 请求。
 router.post(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_post
+  book_instance_controller.bookinstance_update_post,
 );
 
 // 一个 BookInstance 的 GET 请求。
