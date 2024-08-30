@@ -533,7 +533,6 @@ router.get("/book/:id", book_controller.book_detail);
 // GET 请求完整图书列表
 router.get("/books", book_controller.book_list);
 
-
 /// 作者路由 ///
 
 // 用于创建作者的 GET 请求。注意这必须在 id 的路由之前（比如说显示作者）
