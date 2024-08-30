@@ -58,7 +58,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Attention :** Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
+> [!WARNING]
+> Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
 
 ### Obtenir un entier aléatoire dans un intervalle fermé
 

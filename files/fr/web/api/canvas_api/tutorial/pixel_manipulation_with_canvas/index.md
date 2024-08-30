@@ -60,7 +60,8 @@ var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);
 
 Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points (`left`, `top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
 
-> **Note :** Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
+> [!NOTE]
+> Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
 
 Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilisant canvas](/fr/docs/HTML/Manipulating_video_using_canvas).
 

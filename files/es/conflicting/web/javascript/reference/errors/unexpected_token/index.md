@@ -40,7 +40,8 @@ var foo = "El bar de Tom's";
 var foo = 'El bar de Tom\'s';
 ```
 
-> **Nota:** Este error suele pasar frecuentemene con cadenas del idioma Inglés
+> [!NOTE]
+> Este error suele pasar frecuentemene con cadenas del idioma Inglés
 
 ### Declarar propiedades con var
 

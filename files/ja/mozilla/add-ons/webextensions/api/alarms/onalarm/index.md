@@ -43,4 +43,5 @@ browser.alarms.onAlarm.hasListener(listener)
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

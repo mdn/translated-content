@@ -115,7 +115,8 @@ processor.doLoad();
 
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
-> **Примечание:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/CORS) on your video server.
+> [!NOTE]
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/CORS) on your video server.
 
 ### Видео и WebGL
 
@@ -123,7 +124,8 @@ This is a pretty simple example showing how to manipulate video frames using a c
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Примечание:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> [!NOTE]
+> You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Скорость воспроизведения
 
@@ -191,7 +193,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **Примечание:** Попробуйте запустить [этот пример](https://jsbin.com/qomuvefu/2/edit).
+> [!NOTE]
+> Попробуйте запустить [этот пример](https://jsbin.com/qomuvefu/2/edit).
 
 ## Обработка аудио
 
@@ -293,7 +296,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **Примечание:** unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> [!NOTE]
+> Unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Типичные для аудио фильтры
 
@@ -308,7 +312,8 @@ These are some of the common types of audio filter you can apply:
 - Notch: Allows all frequencies through, except for a set of frequencies.
 - Allpass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
 
-> **Примечание:** Более подробно смотрите здесь: {{domxref("BiquadFilterNode")}}
+> [!NOTE]
+> Более подробно смотрите здесь: {{domxref("BiquadFilterNode")}}
 
 ### Convolutions and impulses
 
@@ -346,7 +351,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Примечание:** You can find an [example on our GitHub repo](https://github.com/mdn/webaudio-examples/tree/master/panner-node)sitory ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+> [!NOTE]
+> You can find an [example on our GitHub repo](https://github.com/mdn/webaudio-examples/tree/master/panner-node)sitory ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
 ## Кодеки JavaScript
 
@@ -361,7 +367,8 @@ Libraries currently exist for the following formats :
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Примечание:** At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
+> [!NOTE]
+> At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
 
 ## Примеры
 

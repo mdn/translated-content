@@ -239,8 +239,6 @@ window.setInterval = function (
 };
 ```
 
-> **Примечание:** These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the [Callback arguments](#Аргументы_колбэк-функции) paragraph.
-
 Новая тестируемая особенность:
 
 ```js
@@ -255,8 +253,6 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 ```
 
 Это не нативные решения _ad hoc_ для этой проблемы.
-
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
 
 ## Замечания
 

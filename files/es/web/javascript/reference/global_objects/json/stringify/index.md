@@ -141,7 +141,8 @@ Devuelve el valor que se va a agregar a la cadena JSON, de la siguiente manera:
 - Si se devuelve algún otro objeto, este es recursivamente procesado en una cadena JSON llamando a la función de reemplazo para cada propiedad, amenos que el objeto sea una función, en tal caso nada se agrega a la cadena JSON.
 - Si se devuelve undefined, la propiedad no se incluye en la salida de la cadena JSON.
 
-> **Nota:** No se puede usar la función de reemplazo para borrar los valores de un array. Si se devuelve undefined o una función, entonces se usara null en su lugar.
+> [!NOTE]
+> No se puede usar la función de reemplazo para borrar los valores de un array. Si se devuelve undefined o una función, entonces se usara null en su lugar.
 
 #### Ejemplo con una función
 
@@ -217,7 +218,8 @@ var json = JSON.stringify({ x: obj }); // '{"x":"bar"}'.
 
 En dado caso en el cual se requiera que un objeto creado por el usuario y al cual se le permita ser restaurado incluso cuando el navegador ha sido cerrado, el siguiente ejemplo es un modelo de la aplicabilidad del metodo JSON. stringify().
 
-> **Advertencia:** Las funciones no son un tipo de dato valido por lo cual estas no funcionaran. Algunos objetos como tipo DATE, se convertiran a cadenas de texto despues de ejecutar JSON.parse().
+> [!WARNING]
+> Las funciones no son un tipo de dato valido por lo cual estas no funcionaran. Algunos objetos como tipo DATE, se convertiran a cadenas de texto despues de ejecutar JSON.parse().
 
 ```js
 // Creando un ejemplo de JSON

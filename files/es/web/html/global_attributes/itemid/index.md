@@ -11,7 +11,8 @@ Un atributo `itemid` solo se puede especificar para un elemento que tiene atribu
 
 El significado exacto de un identificador global de `itemtype` lo proporciona la definición de ese identificador dentro del vocabulario especificado. El vocabulario define si pueden coexistir varios elementos con el mismo identificador global y, de ser así, cómo se manejan los elementos con el mismo identificador.
 
-> **Nota:** La definición {{glossary("WHATWG")}} especifica que un `itemid` debe ser una {{glossary("URL")}}. Sin embargo, el siguiente ejemplo ilustra correctamente que también se puede usar un {{glossary("URN")}}. Esta inconsistencia puede reflejar la naturaleza incompleta de la especificación de Microdata.
+> [!NOTE]
+> La definición {{glossary("WHATWG")}} especifica que un `itemid` debe ser una {{glossary("URL")}}. Sin embargo, el siguiente ejemplo ilustra correctamente que también se puede usar un {{glossary("URN")}}. Esta inconsistencia puede reflejar la naturaleza incompleta de la especificación de Microdata.
 
 ## Ejemplo
 

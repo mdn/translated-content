@@ -9,7 +9,8 @@ slug: Web/HTML/Element/embed
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **備註：** 本主題僅記錄了作為 [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element) 一部分所定義的元素。它不涉及元素的早期、非標準化實現。
+> [!NOTE]
+> 本主題僅記錄了作為 [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element) 一部分所定義的元素。它不涉及元素的早期、非標準化實現。
 
 請注意，大多數現代瀏覽器已經停用並移除了對瀏覽器插件的支援，因此如果你希望你的網站在普通用戶的瀏覽器上能夠正常運作，依賴 `<embed>` 是不明智的。
 

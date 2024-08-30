@@ -9,9 +9,11 @@ slug: Web/API/Clipboard/write
 
 当页面位于活动选项卡中时，[权限 API](/zh-CN/docs/Web/API/Permissions_API) 中的 `"clipboard-write"` 权限会自动授予该页面。
 
-> **备注：** 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查[浏览器兼容性](#浏览器兼容性)和[剪贴板可用性](/zh-CN/docs/Web/API/Clipboard#剪贴板可用性)以获得更多的兼容性信息。
+> [!NOTE]
+> 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查[浏览器兼容性](#浏览器兼容性)和[剪贴板可用性](/zh-CN/docs/Web/API/Clipboard#剪贴板可用性)以获得更多的兼容性信息。
 
-> **备注：** 为了与 Google Chrome 浏览器保持一致，Firefox 只允许此函数处理文本、HTML 和 PNG 数据。
+> [!NOTE]
+> 为了与 Google Chrome 浏览器保持一致，Firefox 只允许此函数处理文本、HTML 和 PNG 数据。
 
 ## 语法
 
@@ -72,7 +74,8 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
 }
 ```
 
-> **备注：** 一次只能传入一个剪贴板项目。
+> [!NOTE]
+> 一次只能传入一个剪贴板项目。
 
 ## 规范
 

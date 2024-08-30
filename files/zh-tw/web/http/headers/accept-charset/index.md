@@ -7,7 +7,8 @@ l10n:
 
 {{HTTPSidebar}}
 
-> **警告：** 不要使用此標頭。瀏覽器會省略此標頭，而伺服器應該忽略它。
+> [!WARNING]
+> 不要使用此標頭。瀏覽器會省略此標頭，而伺服器應該忽略它。
 
 **`Accept-Charset`** 請求 HTTP 標頭是用來宣告用戶端支援的{{glossary("character encoding", "字元編碼")}}的標頭。它已不再廣泛使用。
 

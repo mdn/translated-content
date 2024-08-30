@@ -112,7 +112,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告：** 你应该基本不会将 `String` 作为构造函数使用。
+> [!WARNING]
+> 你应该基本不会将 `String` 作为构造函数使用。
 
 使用 {{jsxref("Global_Objects/eval", "eval()")}} 时，字符串原始值和 `String` 对象也会给出不同的结果。传递给 `eval` 的原始值被当作源代码处理；而 `String` 对象则被当作对象处理，返回对象。例如：
 
@@ -297,7 +298,8 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 ## HTML 包装器方法
 
-> **警告：** 已弃用。请避免使用这些方法。
+> [!WARNING]
+> 已弃用。请避免使用这些方法。
 >
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 

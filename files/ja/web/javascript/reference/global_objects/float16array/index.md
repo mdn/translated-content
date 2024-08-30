@@ -11,7 +11,8 @@ l10n:
 
 `Float16Array` は隠された {{jsxref("TypedArray")}} クラスのサブクラスです。
 
-> **メモ:** Float16 のサポートは、JavaScript API と CPU アーキテクチャの両方において万能ではありません。これを使用すると、プラットフォームによってはパフォーマンスが低下する可能性があります。これは、[float-backed canvases](https://github.com/w3c/ColorWeb-CG/blob/main/canvas_float.md)、WebGPU、WebGL、[stable diffusion](https://github.com/huggingface/blog/blob/main/stable_diffusion.md) を含む深層学習モデルなど、高度に最適化されパフォーマンスに敏感なシステムとのやり取りを想定しています。
+> [!NOTE]
+> Float16 のサポートは、JavaScript API と CPU アーキテクチャの両方において万能ではありません。これを使用すると、プラットフォームによってはパフォーマンスが低下する可能性があります。これは、[float-backed canvases](https://github.com/w3c/ColorWeb-CG/blob/main/canvas_float.md)、WebGPU、WebGL、[stable diffusion](https://github.com/huggingface/blog/blob/main/stable_diffusion.md) を含む深層学習モデルなど、高度に最適化されパフォーマンスに敏感なシステムとのやり取りを想定しています。
 
 ## コンストラクター
 

@@ -101,7 +101,8 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
   - : 返回一个字符串，其中包含事件所代表的物理按键的代码值。
 
-    > **警告：** 这个属性会忽略用户的键盘布局，所以如果用户在 QWERTY 布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用 QWERTZ 布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或 Dvorak 键盘（此时用户输入的就是“F”）也是如此。如果要向用户显示正确的按键，可以使用 {{domxref("Keyboard.getLayoutMap()")}}。
+    > [!WARNING]
+    > 这个属性会忽略用户的键盘布局，所以如果用户在 QWERTY 布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用 QWERTZ 布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或 Dvorak 键盘（此时用户输入的就是“F”）也是如此。如果要向用户显示正确的按键，可以使用 {{domxref("Keyboard.getLayoutMap()")}}。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
@@ -165,7 +166,7 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("Element.keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件且已过时，不应该使用它。
 
-## 用法说明
+## 使用说明
 
 键盘事件有三种类型：{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和 {{domxref("Element/keyup_event", "keyup")}}。对于大多数按键，Gecko 会像这样派发一系列按键事件：
 
@@ -177,7 +178,8 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
 有些按键可以切换指示灯的状态；其中包括大写锁定（Caps Lock）、数字锁定（Num Lock）和滚动锁定（Scroll Lock）等按键。在 Windows 和 Linux 中，这些按键只派发 `keydown` 和 `keyup` 事件。
 
-> **备注：** 在 Linux 上，Firefox 12 和更早版本也会为这些按键发送 `keypress` 事件。
+> [!NOTE]
+> 在 Linux 上，Firefox 12 和更早版本也会为这些按键发送 `keypress` 事件。
 
 不过，由于 macOS 事件模型的限制，大写锁定只能派发 `keydown` 事件。一些较旧的笔记本电脑型号（2007 年及以前的型号）支持数字锁定，但从那时起，即使在外置键盘上，macOS 也不支持数字锁定。在带有数字锁定键的旧款 MacBook 上，该键不会生成任何按键事件。如果连接了带有 F14 键的外置键盘，Gecko 确实支持滚动锁定键。在某些旧版本的 Firefox 中，该键会生成 `keypress` 事件；这种不一致的行为是 [Firefox bug 602812](https://bugzil.la/602812)。
 

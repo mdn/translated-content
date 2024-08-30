@@ -115,7 +115,8 @@ canvas.toBlob(
 
 ### OS.File（chrome/add-on コンテキストのみ）で toBlob をディスクに保存する
 
-> **メモ:** このテクニックは画像をデスクトップに保存しますので、Firefox の chrome コンテキストか add-on コードでのみ利用できます。OS API はウェブサイトには存在しないからです。
+> [!NOTE]
+> このテクニックは画像をデスクトップに保存しますので、Firefox の chrome コンテキストか add-on コードでのみ利用できます。OS API はウェブサイトには存在しないからです。
 
 ```js
 const canvas = document.getElementById("canvas");

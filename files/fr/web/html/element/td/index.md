@@ -71,7 +71,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
 
 - `align` {{deprecated_inline}}
 
@@ -90,7 +91,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :** Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!NOTE]
+    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).

@@ -109,7 +109,8 @@ Valable pour les types de saisie numérique, y compris les types [`date`](/fr/do
   </tbody>
 </table>
 
-> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!NOTE]
+> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
 Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeUnderflow`](/fr/docs/Web/API/ValidityState/rangeUnderflow) pour plus d'informations.
 

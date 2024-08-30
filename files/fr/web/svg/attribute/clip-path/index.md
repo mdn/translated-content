@@ -94,7 +94,8 @@ svg {
 - \<geometry-box>
   - : une information supplémentaire pour dire comment une {{cssxref('basic-shape', 'forme CSS')}} est appliquée à un élément: `fill-box` indique d'utiliser la zone de sélection de l'objet ; `stroke-box` d'utiliser la zone de sélection de l'objet en prenant en plus le contour de l'élément; `view-box` d'utiliser le document SVG parent.
 
-> **Note :** Pour plus d'informations sur la syntaxe de clip-path, voir la propriété CSS {{cssxref('clip-path')}}.
+> [!NOTE]
+> Pour plus d'informations sur la syntaxe de clip-path, voir la propriété CSS {{cssxref('clip-path')}}.
 
 ## Spécifications
 

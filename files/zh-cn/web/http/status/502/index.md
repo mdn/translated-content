@@ -11,7 +11,7 @@ slug: Web/HTTP/Status/502
 
 ## 状态
 
-```
+```http
 502 Bad Gateway
 ```
 

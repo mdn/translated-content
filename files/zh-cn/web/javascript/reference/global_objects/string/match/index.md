@@ -79,7 +79,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **备注：** 参见 {{jsxref("String.prototype.matchAll()")}} 和[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
+> [!NOTE]
+> 参见 {{jsxref("String.prototype.matchAll()")}} 和[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
 
 ### 使用命名捕获组
 

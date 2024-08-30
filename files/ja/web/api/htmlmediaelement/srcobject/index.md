@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.srcObject
+title: "HTMLMediaElement: srcObject プロパティ"
+short-title: srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 l10n:
-  sourceCommit: 0503358029568bdaef5202b4b88274b6a0a31577
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,15 +12,16 @@ l10n:
 
 このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
-> **メモ:** 2020 年 3 月現在、 Safari のみが `srcObject` に対して完全に、すなわち `MediaSource`、`MediaStream`、`Blob`、`File` のオブジェクトを値にすることに対応しています。他のブラウザーは `MediaStream` に対応しています。他のブラウザーが追いつくまで、代替として {{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に代入するようにしてください（以下の例を参照してください）。さらに、バージョン 108 の Chromium は、専用ワーカーの `MediaSource` オブジェクトを、そのオブジェクトの（ワーカーから転送された） {{domxref("MediaSourceHandle")}} インスタンスを `srcObject` に割り当てることで装着することに対応しています。
+> [!NOTE]
+> 2020 年 3 月現在、 Safari のみが `srcObject` に対して完全に、すなわち `MediaSource`、`MediaStream`、`Blob`、`File` のオブジェクトを値にすることに対応しています。他のブラウザーは `MediaStream` に対応しています。他のブラウザーが追いつくまで、代替として {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に代入するようにしてください（以下の例を参照してください）。さらに、バージョン 108 の Chromium は、専用ワーカーの `MediaSource` オブジェクトを、そのオブジェクトの（ワーカーから転送された） {{domxref("MediaSourceHandle")}} インスタンスを `srcObject` に割り当てることで装着することに対応しています。
 
 ## 値
 
-{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。（実際に何が対応されているのかは互換性一覧表を確認してください。)
+{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。（実際に何が対応されているのかは互換性一覧表を確認してください。）
 
 ## 使用上の注意
 
-メディアソース仕様書の古いバージョンでは、オブジェクト URL を作成するために {{domxref("URL.createObjectURL", "createObjectURL()")}} を使用してから、その URL を {{domxref("HTMLMediaElement.src", "src")}} に設定する必要がありました。 現在は、{{domxref("MediaStream")}} を `srcObject` に直接設定できます。
+メディアソース仕様書の古いバージョンでは、オブジェクト URL を作成するために {{domxref("URL/createObjectURL_static", "createObjectURL()")}} を使用してから、その URL を {{domxref("HTMLMediaElement.src", "src")}} に設定する必要がありました。 現在は、{{domxref("MediaStream")}} を `srcObject` に直接設定できます。
 
 ## 例
 
@@ -91,10 +93,10 @@ let handle = mediaSource.handle;
 postMessage({ arg: handle }, [handle]);
 
 mediaSource.addEventListener("sourceopen", () => {
-  //  MediaSource で sourceopen を待ってから、  SourceBuffer を
-  // 作成し、フェッチしたメディアを投入します。 MediaSource は、
-  // HTMLMediaElement に接続され、その readyState が
-  //  "open" になるまで SourceBuffer の作成を受け入れません。
+  // MediaSource で sourceopen を待ってから、SourceBuffer を作成し、
+  // 取得したメディアを投入してください。MediaSource は、
+  // HTMLMediaElement に接続され、その readyState が "open" になるまで
+  // SourceBuffer の作成を受け入れません。
 });
 ```
 
@@ -108,7 +110,7 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **メモ:** {{domxref("MediaSourceHandle")}}s は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
+> **メモ:** {{domxref("MediaSourceHandle")}} は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
 
 ## 仕様書
 

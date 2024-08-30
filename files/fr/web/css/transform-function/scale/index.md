@@ -13,7 +13,8 @@ Cette transformation est définie par un vecteur dont les coordonnées définiss
 
 Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.
 
-> **Note :** La fonction `scale()` applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction `scale3D()`.
+> [!NOTE]
+> La fonction `scale()` applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction `scale3D()`.
 
 ## Syntaxe
 

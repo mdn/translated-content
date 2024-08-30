@@ -58,7 +58,8 @@ Une valeur `<grid-line>` peut être définie avec :
 
   - : S'il existe une ligne nommée avec '\<custom-ident>-start'/'\<custom-ident>-end', la première colonne correspondante contribue au placement de l'élément sur la grille.
 
-    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne `foo-start`/`foo-end` a été explicitement déclarée).
+    > [!NOTE]
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne `foo-start`/`foo-end` a été explicitement déclarée).
 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 

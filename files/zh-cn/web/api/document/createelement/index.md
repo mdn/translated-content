@@ -9,8 +9,9 @@ slug: Web/API/Document/createElement
 
 ## 语法
 
-```
-var element = document.createElement(tagName[, options]);
+```js-nolint
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### 参数
@@ -93,7 +94,8 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 
 新元素将被赋予`is`属性，其值为自定义元素的标签名称。
 
-> **备注：** 为了兼容之前版本的 [Custom Elements specification](https://www.w3.org/TR/custom-elements/) 规范，某些浏览器将允许你在此处传递字符串而不是对象，其中字符串的值是自定义元素的标记名。
+> [!NOTE]
+> 为了兼容之前版本的 [Custom Elements specification](https://www.w3.org/TR/custom-elements/) 规范，某些浏览器将允许你在此处传递字符串而不是对象，其中字符串的值是自定义元素的标记名。
 
 ## 注意
 

@@ -49,7 +49,8 @@ L'exemple suivant, plus complexe, jouera, après une seconde de pause, un tronç
 source.start(contexteAudio.currentTime + 1, 3, 10);
 ```
 
-> **Note :** Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple [`AudioContext.decodeAudioData`](/fr/docs/Web/API/BaseAudioContext/decodeAudioData). Voir aussi l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> [!NOTE]
+> Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple [`AudioContext.decodeAudioData`](/fr/docs/Web/API/BaseAudioContext/decodeAudioData). Voir aussi l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ## Spécifications
 

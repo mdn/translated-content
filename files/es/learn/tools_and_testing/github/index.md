@@ -18,7 +18,8 @@ Los VCS son esenciales para el desarrollo de software:
 
 Los VCS proporcionan herramientas para satisfacer las necesidades anteriores. [Git](https://git-scm.com/) es un ejemplo de VCS, y [GitHub](https://github.com/) es un sitio web + infraestructura que proporciona un servidor Git más una serie de herramientas realmente útiles para trabajar con repositorios git individuales o en equipo, como informar problemas con el código, herramientas de revisión, características de administración de proyectos tal como asignación de tareas, estados de tareas, y más.
 
-> **Nota:** Git en realidad es un sistema de control de versiones _distribuido_, lo cual significa que se realiza una copia completa del repositorio que contiene la base de código en tu computadora (y en la de todos los demás). Realizas cambios en tu propia copia, y luego empujas esos cambios nuevamente al servidor, donde un administrador decidirá si fusiona tus cambios con la copia maestra.
+> [!NOTE]
+> Git en realidad es un sistema de control de versiones _distribuido_, lo cual significa que se realiza una copia completa del repositorio que contiene la base de código en tu computadora (y en la de todos los demás). Realizas cambios en tu propia copia, y luego empujas esos cambios nuevamente al servidor, donde un administrador decidirá si fusiona tus cambios con la copia maestra.
 
 ### ¿Quieres convertirte en un desarrollador web front-end?
 
@@ -38,7 +39,8 @@ En términos de conocimiento previo, no necesitas saber nada sobre desarrollo we
 
 También es preferible que tengas algunos conocimientos básicos de la terminal, por ejemplo, moverte entre directorios, crear archivos y modificar la variable del sistema `PATH`.
 
-> **Nota:** Github no es el único sitio/conjunto de herramientas que puedes usar con Git. Hay otras alternativas, como [GitLab,](https://about.gitlab.com/) que podrías probar, y también podrías intentar configurar tu propio servidor Git y usarlo en lugar de GitHub. Solo nos hemos quedado con GitHub en este curso para proporcionar una forma única que funciona.
+> [!NOTE]
+> Github no es el único sitio/conjunto de herramientas que puedes usar con Git. Hay otras alternativas, como [GitLab,](https://about.gitlab.com/) que podrías probar, y también podrías intentar configurar tu propio servidor Git y usarlo en lugar de GitHub. Solo nos hemos quedado con GitHub en este curso para proporcionar una forma única que funciona.
 
 ## Guías
 
@@ -55,7 +57,8 @@ Ten en cuenta que los enlaces a continuación te llevan a recursos en sitios ext
 - [Dominando las incidencias (de GitHub)](https://guides.github.com/features/issues/)
   - : Las incidencias son como un foro para tu proyecto GitHub, donde las personas pueden hacer preguntas e informar problemas, y tú puede administrar las actualizaciones (por ejemplo, asignar personas para solucionar problemas, aclarar el problema, informar a las personas que las cosas están solucionadas). Este artículo te brinda lo que necesitas saber sobre las incidencias.
 
-> **Nota:** Hay **mucho más** que puedes hacer con Git y GitHub, pero creemos que lo anterior representa lo mínimo que necesitas saber para comenzar a usar Git de manera efectiva. A medida que profundices en Git, comenzarás a darte cuenta de que es fácil equivocarse cuando comienzas a usar comandos más complicados. No te preocupes, incluso los desarrolladores web profesionales encuentran a Git confuso a veces, y a menudo resuelven problemas buscando soluciones en la web, o consultando sitios como [Reglas de vuelo para Git](https://github.com/k88hudson/git-flight-rules/blob/master/README_es.md) y [Dangit, ¡git!](https://dangitgit.com/es)
+> [!NOTE]
+> Hay **mucho más** que puedes hacer con Git y GitHub, pero creemos que lo anterior representa lo mínimo que necesitas saber para comenzar a usar Git de manera efectiva. A medida que profundices en Git, comenzarás a darte cuenta de que es fácil equivocarse cuando comienzas a usar comandos más complicados. No te preocupes, incluso los desarrolladores web profesionales encuentran a Git confuso a veces, y a menudo resuelven problemas buscando soluciones en la web, o consultando sitios como [Reglas de vuelo para Git](https://github.com/k88hudson/git-flight-rules/blob/master/README_es.md) y [Dangit, ¡git!](https://dangitgit.com/es)
 
 ## Ve también
 

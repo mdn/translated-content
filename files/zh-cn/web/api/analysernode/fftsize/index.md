@@ -9,7 +9,8 @@ slug: Web/API/AnalyserNode/fftSize
 
 fftSize 属性的值必须是从 32 到 32768 范围内的 2 的非零幂; 其默认值为 2048.
 
-> **备注：** 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.
+> [!NOTE]
+> 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.
 
 ## 语法
 

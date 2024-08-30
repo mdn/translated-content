@@ -20,7 +20,8 @@ input:read-write {
 }
 ```
 
-> **Nota:** Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
+> [!NOTE]
+> Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
 
 ## Sintaxis
 

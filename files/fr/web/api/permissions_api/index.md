@@ -7,7 +7,8 @@ slug: Web/API/Permissions_API
 
 L'API Permissions fournit une manière cohérente pour connaître, dans un programme, le statut des permissions dans le contexte courant. On pourra par exemple utiliser cette API afin de déterminer si la permission d'accéder à une API donnée a été accordée ou refusée.
 
-> **Note :** Cette fonctionnalité est disponible via [les Web Workers](/fr/docs/Web/API/Web_Workers_API) bien que les versions actuelles de Firefox n'implémentent pas [WorkerNavigator.permissions](/fr/docs/Web/API/WorkerNavigator/permissions).
+> [!NOTE]
+> Cette fonctionnalité est disponible via [les Web Workers](/fr/docs/Web/API/Web_Workers_API) bien que les versions actuelles de Firefox n'implémentent pas [WorkerNavigator.permissions](/fr/docs/Web/API/WorkerNavigator/permissions).
 
 ## Concepts et usages
 

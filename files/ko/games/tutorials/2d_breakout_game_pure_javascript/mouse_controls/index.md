@@ -44,7 +44,8 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-> **참고:** 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
+> [!NOTE]
+> 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
 
 ## 다음 단계
 

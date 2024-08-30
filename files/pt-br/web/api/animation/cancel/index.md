@@ -7,7 +7,8 @@ slug: Web/API/Animation/cancel
 
 O método **`Animation.cancel()`** da interface {{domxref("Animation")}} , limpa todas as {{domxref("KeyframeEffect", "keyframeEffects")}} geradas pela animação e aborta esta execução.
 
-> **Nota:** Quando uma animação é cancelada, os valores de {{domxref("Animation.startTime", "startTime")}} e {{domxref("Animation.currentTime", "currentTime")}} são definidos como `null`.
+> [!NOTE]
+> Quando uma animação é cancelada, os valores de {{domxref("Animation.startTime", "startTime")}} e {{domxref("Animation.currentTime", "currentTime")}} são definidos como `null`.
 
 ## Sintaxe
 

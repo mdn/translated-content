@@ -42,7 +42,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 我們會在下一篇文章，專注於如何設定基於 Selenium 的個人測試系統。這篇文章則會專注於如何設定任務執行器，並簡單與系統化地，使用前述的商業系統。
 
-> **備註：** 這兩件事情並不互斥。我們可以用任務執行器來訪問服務。例如，你可以用 Sauce Labs 的 API 來跑跨瀏覽器測試，並顯示結果。我們會在下面解釋這件事。
+> [!NOTE]
+> 這兩件事情並不互斥。我們可以用任務執行器來訪問服務。例如，你可以用 Sauce Labs 的 API 來跑跨瀏覽器測試，並顯示結果。我們會在下面解釋這件事。
 
 ## 使用任務執行器以自動化測試工具
 
@@ -67,7 +68,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
    npm install npm@latest -g
    ```
 
-> **備註：** 如果因為權限問題而失敗，[Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) 應該對你有所幫助。
+> [!NOTE]
+> 如果因為權限問題而失敗，[Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) 應該對你有所幫助。
 
 要在專案裡面使用 node/npm 套件，你需要把專案所在目錄設為 npm 專案。它很簡單。
 
@@ -297,7 +299,8 @@ gulp.task("watch", function () {
 
 > **備註：** `*` 是通配字符（wildcard character）－－這裡的意思是「當任何檔案被儲存的時候，執行這些任務」。你也可以在主要任務內使用通配，例如 `gulp.src('src/*.css')` 會抓取所有的 CSS 檔案並執行 piped task。
 
-> **備註：** 在我們的 watch 指令有個問題，那就是我們的 CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.
+> [!NOTE]
+> 在我們的 watch 指令有個問題，那就是我們的 CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.
 
 你還可以用 Gulp 做很多事情。[Gulp plugin directory](http://gulpjs.com/plugins/) 收錄了近千個可搜尋的套件。
 
@@ -341,7 +344,8 @@ You can then step up a gear, using an API to access functionality programmatical
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can for example download any screenshots you took, watch a video of the session, and view data logs for the session.
 
-> **備註：** This is already very useful, and way more convenient than having to set all these emulators and virtual machines by yourself.
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set all these emulators and virtual machines by yourself.
 
 ### 進階：The Sauce Labs API
 

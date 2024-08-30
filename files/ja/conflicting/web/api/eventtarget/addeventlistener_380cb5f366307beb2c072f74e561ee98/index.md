@@ -8,7 +8,8 @@ original_slug: Web/API/EventListener
 
 **`EventListener`** インターフェイスは、{{domxref("EventTarget")}} オブジェクトによってディスパッチされたイベントを処理できるオブジェクトを表します。
 
-> **メモ:** レガシーコンテンツとの互換性が必要なため、`EventListener` は、関数、`handleEvent()` メソッドをもつオブジェクト両方を受け入れます。
+> [!NOTE]
+> レガシーコンテンツとの互換性が必要なため、`EventListener` は、関数、`handleEvent()` メソッドをもつオブジェクト両方を受け入れます。
 > これを以下の [例](#例) に示します。
 
 ## プロパティ

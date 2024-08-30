@@ -71,7 +71,8 @@ instance.#privateField; // Syntax error
 
 JavaScript は動的言語ですが、ハッシュ識別子の構文が特殊であり、構文レベルで通常のプロパティとは異なるため、このコンパイル時チェックを行うことができます。
 
-> **メモ:** Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
+> [!NOTE]
+> Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
 
 プロパティを持っていないオブジェクトからプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxref("TypeError")}} が発生します。
 
@@ -150,7 +151,8 @@ class Subclass extends ClassWithPrivateField {
 new Subclass(); // 開発者ツールでは Subclass {#privateField: 42, #subPrivateField: 23} と表示
 ```
 
-> **メモ:** 基底クラス `ClassWithPrivateField` の `#privateField` は `ClassWithPrivateField` のプライベートメンバーであり、派生クラス `Subclass` からはアクセスできません。
+> [!NOTE]
+> 基底クラス `ClassWithPrivateField` の `#privateField` は `ClassWithPrivateField` のプライベートメンバーであり、派生クラス `Subclass` からはアクセスできません。
 
 #### オーバーライドしたオブジェクトの返却
 
@@ -184,7 +186,8 @@ console.log(obj instanceof Stamper); // false
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
-> **警告:** これはとても混乱を招きかねないことです。一般的に、コンストラクターから任意のものを返すのは避けるようにしましょう。特に `this` に関係のないものを返すのは避けるようにしましょう。
+> [!WARNING]
+> これはとても混乱を招きかねないことです。一般的に、コンストラクターから任意のものを返すのは避けるようにしましょう。特に `this` に関係のないものを返すのは避けるようにしましょう。
 
 ### プライベート静的フィールド
 

@@ -40,7 +40,8 @@ fetch("simple.wasm")
   .then((mod) => worker.postMessage(mod));
 ```
 
-> **참고:** 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
+> [!NOTE]
+> 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
 
 ## 명세서
 

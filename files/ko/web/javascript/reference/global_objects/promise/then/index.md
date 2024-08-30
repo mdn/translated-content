@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 {{EmbedInteractiveExample("pages/js/promise-then.html")}}
 
-> **참고:** 매개변수 중 하나 이상을 생략했거나 함수가 아닌 값을 전달한 경우, `then`은 핸들러가 없는 것이 되지만 오류를 발생하지는 않습니다. `then` 바로 이전의 `Promise`가 `then`에 핸들러가 없는 상태로 완료(이행이나 거부)했을 경우, 추가 핸들러가 없는 `Promise`가 생성되며, 원래 `Promise`의 마지막 상태를 그대로 물려받습니다.
+> [!NOTE]
+> 매개변수 중 하나 이상을 생략했거나 함수가 아닌 값을 전달한 경우, `then`은 핸들러가 없는 것이 되지만 오류를 발생하지는 않습니다. `then` 바로 이전의 `Promise`가 `then`에 핸들러가 없는 상태로 완료(이행이나 거부)했을 경우, 추가 핸들러가 없는 `Promise`가 생성되며, 원래 `Promise`의 마지막 상태를 그대로 물려받습니다.
 
 ## 구문
 

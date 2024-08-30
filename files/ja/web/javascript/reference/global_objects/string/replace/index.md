@@ -76,7 +76,8 @@ replace(pattern, replacement)
 
 第 2 引数として関数を指定することができます。この場合、関数は照合が行われた後に実行されます。関数呼び出しの結果（返値）が、置換文字列として使われます
 
-> **メモ:** 上記の特殊な置き換えパターンは、置き換え関数から返される文字列には適用されません。
+> [!NOTE]
+> 上記の特殊な置き換えパターンは、置き換え関数から返される文字列には適用されません。
 
 関数の形式は次の通りです。
 
@@ -128,7 +129,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 これは `'Twas the night before Christmas...'` と出力します。
 
-> **メモ:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を参照してください。
+> [!NOTE]
+> 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を参照してください。
 
 ### 大文字小文字を区別しないフラグとグローバルフラグの使用
 

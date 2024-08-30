@@ -21,7 +21,8 @@ slug: Web/HTML/Element/audio
 
   - : 布尔值属性；声明该属性，音频会尽快自动播放，不会等待整个音频文件下载完成。
 
-    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+    > [!NOTE]
+    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
 
 - `controls`
   - : 如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。
@@ -37,7 +38,8 @@ slug: Web/HTML/Element/audio
 
   - : 这是一个布尔值，用来禁用在远程设备上进行进度控制的能力。这些设备通过有线（比如 HDMI, DVI）或无线技术（比如 Miracast, Chromecast, DLNA, AirPlay,）来与 web 连接。请参考 [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) 来获取更多信息。
 
-    > **备注：** 在 Safari 中，你能使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
+    > [!NOTE]
+    > 在 Safari 中，你能使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
 
 - `duration` {{ReadOnlyInline}}
   - : 这是一个双精度浮点数，指明了音频在时间轴中的持续时间（总长度），以秒为单位。如果元素上没有媒体，或者媒体是不可用的，那么会返回 `NaN`。如果媒体找不到确切的结尾（比如不确定长度的直播流，网络电台，或者是通过 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 连接的流），那么这个值将返回 `+Infinity`。
@@ -135,7 +137,8 @@ slug: Web/HTML/Element/audio
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : 在该 {{domxref("TextTrackList")}} 对象上添加监听，以在文字轨道被添加进元素时获得通知。（也许用于字幕，译者猜测）
 
-> **备注：** 尽管是 `<audio>` 元素，但它依然有视频以及文字的轨道列表，并且实际上能够用来展示视频，尽管应用接口的使用可能显得很古怪。
+> [!NOTE]
+> 尽管是 `<audio>` 元素，但它依然有视频以及文字的轨道列表，并且实际上能够用来展示视频，尽管应用接口的使用可能显得很古怪。
 
 举个例子，为了侦测何时音轨从一个 `<audio>` 元素中添加或者移除，你可以使用如下代码：
 

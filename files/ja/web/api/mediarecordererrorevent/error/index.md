@@ -31,7 +31,7 @@ l10n:
 
 ### 基本的なエラー処理の例
 
-この関数は、与えられた {{domxref("MediaStream")}} の `MediaRecorder` を作成して、データを配列にバッファし、エラーを監視するように構成して、返します。
+この関数は、与えられた {{domxref("MediaStream")}} の `MediaRecorder` を作成して、データを配列にバッファーし、エラーを監視するように構成して、返します。
 
 ```js
 function recordStream(stream) {
@@ -52,12 +52,12 @@ function recordStream(stream) {
     console.error(`Error: ${event.error}`);
   };
 
-  recorder.start(100); /* バッファあたり 100ms のタイムスライス */
+  recorder.start(100); /* バッファーあたり 100ms のタイムスライス */
   return recorder;
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

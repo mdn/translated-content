@@ -1,19 +1,20 @@
 ---
-title: IDBKeyRange.upperBound()
+title: "IDBKeyRange: upperBound() 静的メソッド"
+short-title: upperBound()
 slug: Web/API/IDBKeyRange/upperBound_static
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBKeyRange")}} インターフェイスの **`upperBound()`** メソッドは、上限のみを持つ新しいキーの範囲を生成します。デフォルトでは、端点を含む「閉」です。
-
-{{AvailableInWorkers}}
+**`upperBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドはで、上限のみを持つ新しいキーの範囲を生成します。既定では、端点を含む「閉」です。
 
 ## 構文
 
 ```js-nolint
-upperBound(upper)
-upperBound(upper, open)
+IDBKeyRange.upperBound(upper)
+IDBKeyRange.upperBound(upper, open)
 ```
 
 ### 引数
@@ -21,7 +22,7 @@ upperBound(upper, open)
 - `upper`
   - : 新しいキーの範囲の上限を指定します。
 - `open` {{optional_inline}}
-  - : 上限が端点を除くかどうかを表します。デフォルトは `false` です。
+  - : 上限が端点を除くかどうかを表します。既定値は `false` です。
 
 ### 返値
 
@@ -38,7 +39,8 @@ upperBound(upper, open)
 
 `IDBKeyRange.upperBound("F", true);` を使用すると、値 `"F"` は範囲に含まれず、それより前の値のみが範囲に含まれます。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {
@@ -56,7 +58,7 @@ function displayData() {
 
       cursor.continue();
     } else {
-      console.log("全エントリーを表示しました。");
+      console.log("全項目を表示しました。");
     }
   };
 }

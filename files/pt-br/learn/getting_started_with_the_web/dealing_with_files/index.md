@@ -32,7 +32,8 @@ A seguir, vamos ver qual estrutura seu site teste deve ter. As coisas mais comun
 3. **pasta `estilos`**: Essa pasta vai conter os códigos CSS usados para dar estilo ao seu conteúdo (por exemplo, configurando a cor do texto e do fundo da página). Crie uma pasta chamada `estilos`, dentro da pasta `site-teste`.
 4. **pasta `scripts`**: Essa pasta vai conter todos os códigos JavaScript usados para adicionar funcionalidades interativas para seu site (ex.: botões que carregam dados quando clicados). Crie uma pasta chamada `scripts`, dentro da sua pasta `site-teste`.
 
-> **Nota:** Em computadores com Windows, você deve ter problemas para ver os nomes dos arquivos, porque o Windows tem uma opção chamada **Ocultar as extensões dos tipos de arquivo conhecidos** ativada por padrão. Geralmente você pode desativar essa opção indo no Windows Explorer, selecionando a opção **Opções de pasta...**, desmarque a caixa de seleção **Ocultar as extensões dos tipos de arquivo conhecidos**, e clique em **OK**. Para mais informação sobre sua versão de Windows, procure na web.
+> [!NOTE]
+> Em computadores com Windows, você deve ter problemas para ver os nomes dos arquivos, porque o Windows tem uma opção chamada **Ocultar as extensões dos tipos de arquivo conhecidos** ativada por padrão. Geralmente você pode desativar essa opção indo no Windows Explorer, selecionando a opção **Opções de pasta...**, desmarque a caixa de seleção **Ocultar as extensões dos tipos de arquivo conhecidos**, e clique em **OK**. Para mais informação sobre sua versão de Windows, procure na web.
 
 ## Caminhos de arquivo
 
@@ -69,7 +70,8 @@ Algumas regras gerais para caminhos de arquivo:
 
 Por agora, isso é tudo o que precisamos saber.
 
-> **Nota:** O sistema de arquivos do Windows tende a usar barras invertidas, não barras normais , ex.: `C:\windows`. Isso não importa — mesmo se você estiver desenvolvendo seu site no Windows, você ainda deve usar barras normais no seu código.
+> [!NOTE]
+> O sistema de arquivos do Windows tende a usar barras invertidas, não barras normais , ex.: `C:\windows`. Isso não importa — mesmo se você estiver desenvolvendo seu site no Windows, você ainda deve usar barras normais no seu código.
 
 ## O que mais deve ser feito?
 

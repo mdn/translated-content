@@ -34,7 +34,8 @@ La seguridad de sitios web eficaz requiere de esfuerzos de diseño a lo largo de
 
 El resto de este artículo proporciona más detalle sobre unas pocas amenazas comunes y algunos de los pasos simples que puedes dar para proterger tu sitio.
 
-> **Nota:** Este es un tema de introducción, diseñado para ayudarte a pensar sobre la seguridad de sitios web. No pretende ser exhaustivo.
+> [!NOTE]
+> Este es un tema de introducción, diseñado para ayudarte a pensar sobre la seguridad de sitios web. No pretende ser exhaustivo.
 
 ## Amenazas contra la seguridad de sitios web
 
@@ -44,7 +45,8 @@ Esta sección lista sólo algunas pocas de las amenazas más comunes para los si
 
 XSS es un término que se usa para describir una clase de ataques que permiten al atacante inyectar scripts de lado cliente, _a través_ del sitio web, hasta los exploradores de otros usuarios. Como el código inyectado va del servidor del sitio al explorador, se supone de confianza, y de aquí que pueda hacer cosas como enviar al atacante la cookie de autorización al sitio del usuario. Una vez que el atacante tiene la cookie pueden iniciar sesión en el sitio como si fuera el verdadero usuario y hacer cualquier cosa que pueda hacer éste. Dependiendo de que sitio sea, esto podría incluir acceso a los detalles de su tarjeta de crédito, ver detalles de contactos o cambiar contraseñas, etc.
 
-> **Nota:** Las vulnerabilidades XSS han sido históricamente más comunes que las de cualquier otro tipo.
+> [!NOTE]
+> Las vulnerabilidades XSS han sido históricamente más comunes que las de cualquier otro tipo.
 
 Hay dos aproximaciones principales para conseguir que el sitio devuelva scripts inyectados al explorador — se conocen como vulnerabilidades XSS _reflejadas_ y _persistentes_.
 
@@ -76,7 +78,8 @@ SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WH
 
 La manera de evitar esta clase de ataque es asegurar que cualquier dato de usuario que se pasa a un query SQL no puede cambiar la naturaleza del mismo. Una forma de hacer ésto es [eludir ('escape')](https://en.wikipedia.org/wiki/Escape_character) todos los caracteres en la entrada de usuario que tengan un significado especial en SQL.
 
-> **Nota:** La sentencia SQL trata el caracer ' como el principio y el final de una cadena de texto. Colocando el caracter barra invertida \ delante, "eludimos" el símbolo (\\'), y le decimos a SQL que lo trate como un caracter de texto (como parte de la misma cadena).
+> [!NOTE]
+> La sentencia SQL trata el caracer ' como el principio y el final de una cadena de texto. Colocando el caracter barra invertida \ delante, "eludimos" el símbolo (\\'), y le decimos a SQL que lo trate como un caracter de texto (como parte de la misma cadena).
 
 En la sentencia de abajo eludimos el carácter '. SQL interpretará ahora como "nombre" la cadena de texto completa mostrada en negrilla (!un nombre muy raro desde luego, pero no dañino¡)
 
@@ -86,7 +89,8 @@ SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo W
 
 Los frameworks web con frecuencia tienen cuidado de hacer por tí la elusión de caracteres. Django, por ejemplo se asegura que cualquier dato de usuario que se pasa a los conjuntos de queries (modelo de queries) está corregido.
 
-> **Nota:** Esta sección se sustenta aquí en la información de [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> Esta sección se sustenta aquí en la información de [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Cross Site Request Forgery (CSRF)
 
@@ -98,7 +102,8 @@ Si el usuario pincha el botón de enviar, se envía al servidor una petición HT
 
 El resultado es que cualquier usuario que pinche en el botón _Enviar_ mientras tiene la sesión iniciada en el sitio comercial hará la transacción. ¡John se hará rico!
 
-> **Nota:** El truco aquí es que John no necesita tener acceso a los cookies del usuario (o acceso a sus credenciales) — El explorador del usuario almacena esta información, y la incluye automáticamente en todas las peticiones al servidor asociado.
+> [!NOTE]
+> El truco aquí es que John no necesita tener acceso a los cookies del usuario (o acceso a sus credenciales) — El explorador del usuario almacena esta información, y la incluye automáticamente en todas las peticiones al servidor asociado.
 
 Una manera de prevenir este tipo de ataque por parte del servidor es requerir que la petción `POST` incluya una palabra secreta específica del usuario generada por el sitio (la palabra secreta podría proporcionarla el servidor cuando envía el formulario web que se usa para hacer transferencias). Esta aproximación evita que John pueda crear su propio formulario, porque necesitaría conocer la palabra secreta que el servidor ha proporcionado para el usuario. Incluso si conociera esta palabra y creara un formulario para un usuario en particular, no podría usar el mismo formulario para atacar a todos los usuarios.
 
@@ -120,7 +125,8 @@ Hay muchas más. Para un lisado completo ver [Category:Web security exploits](ht
 
 Casi todos los exploits de las secciones anteriores tienen éxito cuando la aplicación web confía en los datos que vienen del explorador. Sea lo que sea que hagas para mejorar la seguridad de tu sitio web, deberías desinfectar todos los datos originados por el usuario antes de ser mostrados en el explorador, usados en queries SQL o pasados en una llamada al sistema operativo o fichero de sistema.
 
-> **Advertencia:** La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones `GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
+> [!WARNING]
+> La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones `GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
 
 Otras cuantas medidas concretas que puedes tomar son:
 

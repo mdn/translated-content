@@ -11,11 +11,13 @@ slug: Web/API/Element/auxclick_event
 
 ## 语法
 
-```
-element.onauxclick = functionRef(e);
-```
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
-事件处理函数是一个 {{domxref("MouseEvent")}} 对象。只有事件被触发的按钮不同，该事件和普通点击事件的行为是完全相同的。
+```js
+addEventListener("auxclick", (event) => {});
+
+onauxclick = (event) => {};
+```
 
 ## 示例
 
@@ -42,7 +44,8 @@ button.onauxclick = function () {
 };
 ```
 
-> **备注：** 如果你使用的是三键鼠标，你会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。
+> [!NOTE]
+> 如果你使用的是三键鼠标，你会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。
 
 ## Notes
 

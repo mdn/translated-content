@@ -17,7 +17,8 @@ l10n:
 
 这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
+> [!NOTE]
+> 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
 
 ## 使用说明
 

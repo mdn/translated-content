@@ -35,7 +35,8 @@ startRendering()
 
 この時点で、別の音声コンテキストを作成し、その中に {{domxref("AudioBufferSourceNode")}} を作成し、そのバッファーをプロミス `AudioBuffer` と等しくなるように設定します。これは単純な標準音声グラフの一部として再生されます。
 
-> **メモ:** 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) を GitHub リポジトリーで参照してください（[ソースコード](https://github.com/mdn/webaudio-examples)も参照）。
+> [!NOTE]
+> 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) を GitHub リポジトリーで参照してください（[ソースコード](https://github.com/mdn/webaudio-examples)も参照）。
 
 ```js
 // define online and offline audio context

@@ -69,7 +69,8 @@ function foo() {
 foo().a = 1;
 ```
 
-> **备注：** 在 Firefox 和 Safari 中，第一个示例在非严格模式下会产生 `ReferenceError` 错误，而在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下则会产生 `SyntaxError` 错误。Chrome 在严格模式和非严格模式下都会抛出运行时的 `ReferenceError` 错误。
+> [!NOTE]
+> 在 Firefox 和 Safari 中，第一个示例在非严格模式下会产生 `ReferenceError` 错误，而在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下则会产生 `SyntaxError` 错误。Chrome 在严格模式和非严格模式下都会抛出运行时的 `ReferenceError` 错误。
 
 ### 使用可选链运算符作为赋值目标
 

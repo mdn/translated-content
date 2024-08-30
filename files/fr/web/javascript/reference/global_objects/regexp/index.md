@@ -205,7 +205,8 @@ let url = "http://xxx.domaine.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // affiche 'xxx'
 ```
 
-> **Note :** Cet exemple est uniquement illustratif. Pour analyser une URL, mieux vaudra utiliser les outils adaptés et notamment [l'API URL](/fr/docs/Web/API/URL_API).
+> [!NOTE]
+> Cet exemple est uniquement illustratif. Pour analyser une URL, mieux vaudra utiliser les outils adaptés et notamment [l'API URL](/fr/docs/Web/API/URL_API).
 
 ## Spécifications
 

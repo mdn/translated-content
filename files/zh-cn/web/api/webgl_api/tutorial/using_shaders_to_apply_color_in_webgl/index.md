@@ -13,7 +13,8 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
 现在我们假设正方形的每个顶点使用不同的颜色：红，黄，绿，白，以此渲染一个渐变的色彩。第一步，要给这些顶点建立相应的颜色。首先我们要创建一个顶点颜色数组，然后将它们存在 WebGL 的缓冲区中。为实现这一功能，我们在 initBuffers() 函数中加入如下代码：
 
-> **备注：** 在 `init-buffers.js` 文件中添加如下函数：
+> [!NOTE]
+> 在 `init-buffers.js` 文件中添加如下函数：
 
 ```js
 function initColorBuffer(gl) {
@@ -48,7 +49,8 @@ function initColorBuffer(gl) {
 
 当然，我们也需要从 `initBuffers()` 中调用这个新函数，并返回它创建的新缓冲区。
 
-> **备注：** 在 `initBuffers()` 函数中用下面代码替换旧的 `return` 语句：
+> [!NOTE]
+> 在 `initBuffers()` 函数中用下面代码替换旧的 `return` 语句：
 
 ```js
 const colorBuffer = initColorBuffer(gl);
@@ -61,7 +63,8 @@ return {
 
 为了实际使用这些颜色，我们继续修改顶点着色器，使得着色器可以从颜色缓冲区中正确取出颜色：
 
-> **备注：** 在 `main()` 函数中更新 `vsSource` 的定义，如下：
+> [!NOTE]
+> 在 `main()` 函数中更新 `vsSource` 的定义，如下：
 
 ```js
 // Vertex shader program
@@ -88,7 +91,8 @@ const vsSource = `
 
 为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor` 变量中获取这个颜色的值：
 
-> **备注：** 在 `main()` 函数中更新 `fsSource` 的定义，如下：
+> [!NOTE]
+> 在 `main()` 函数中更新 `fsSource` 的定义，如下：
 
 ```js
 // Fragment shader program
@@ -108,7 +112,8 @@ const fsSource = `
 
 接下来，我们要初始化颜色属性，以便着色器程序使用
 
-> **备注：** 在 `main()`函数中更新 `programInfo` 的定义，如下：
+> [!NOTE]
+> 在 `main()`函数中更新 `programInfo` 的定义，如下：
 
 ```js
 // Collect all the info needed to use the shader program.
@@ -130,7 +135,8 @@ const programInfo = {
 
 然后，我们便可以修改 `drawScene()` 使之在绘制正方形时使用这些颜色：
 
-> **备注：** 在 `draw-scene.js` 文件中添加下面函数：
+> [!NOTE]
+> 在 `draw-scene.js` 文件中添加下面函数：
 
 ```js
 // Tell WebGL how to pull out the colors from the color buffer

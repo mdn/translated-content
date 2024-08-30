@@ -5,7 +5,8 @@ slug: Web/API/Element/beforescriptexecute_event
 
 {{APIRef}}{{Non-standard_header}}
 
-> **警告：** 此事件是早期版本的规范中的一个提案。不要依赖它。
+> [!WARNING]
+> 此事件是早期版本的规范中的一个提案。不要依赖它。
 
 **`beforescriptexecute`** 事件在一个脚本被执行前触发，取消此事件可以阻止该脚本的执行。
 

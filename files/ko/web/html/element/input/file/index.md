@@ -156,7 +156,8 @@ div {
 
 {{EmbedLiveSample('기본_예제', 650, 60)}}
 
-> **참고:** 이 예제는 GitHub에서도 볼 수 있습니다. [소스 코드](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)와 [라이브 예제](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)를 확인하세요.
+> [!NOTE]
+> 이 예제는 GitHub에서도 볼 수 있습니다. [소스 코드](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)와 [라이브 예제](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)를 확인하세요.
 
 사용자의 장치와 운영체제에 상관없이, 파일 입력 칸은 사용자가 파일을 선택할 수 있도록 파일 선택 대화창을 여는 하나의 버튼을 제공합니다.
 
@@ -222,7 +223,8 @@ div {
 
 {{EmbedLiveSample('가능한_파일_유형_제한하기', 650, 60)}}
 
-> **참고:** GitHub에서도 볼 수 있습니다. [소스 코드](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), [라이브 실행 결과](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!NOTE]
+> GitHub에서도 볼 수 있습니다. [소스 코드](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), [라이브 실행 결과](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 외형은 유사해 보일지라도, 이번 예제에서 파일을 선택하려고 한다면 `accept`에 지정한 파일 유형만 선택 가능함을 확인할 수 있습니다. (정확한 동작은 브라우저와 운영체제에 따라 다를 수 있습니다)
 
@@ -247,7 +249,8 @@ div {
 
 이번 예제에서는 좀 더 발전된 파일 선책 창을 만들어 보겠습니다. `HTMLInputElement.files` 속성에서 알 수 있는 정보도 활용하면서, 몇 가지 재밌는 활용법도 보여드리겠습니다.
 
-> **참고:** 전체 소스 코드는 GitHub에 있습니다. [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([라이브 실행 결과](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). 주 목적이 JavaScript이므로 CSS는 따로 설명하지 않겠습니다.
+> [!NOTE]
+> 전체 소스 코드는 GitHub에 있습니다. [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([라이브 실행 결과](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). 주 목적이 JavaScript이므로 CSS는 따로 설명하지 않겠습니다.
 
 우선 HTML을 살펴보겠습니다.
 

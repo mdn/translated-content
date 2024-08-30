@@ -23,7 +23,8 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
     - _maximum {{optional_inline}}_
       - : WebAssembly 메모리의 최대 크기는 WebAssembly 페이지 단위로 증가 할 수 있습니다. 이 매개 변수가 있으면 `maximum` 매개 변수는 엔진에 대해 메모리를 전면에 예약하도록 합니다. 그러나 엔진은 이 예약 요청을 무시하거나 클램핑 할 수 있습니다. 일반적으로 대부분의 WebAssembly 모듈은 `maximum` 값을 설정할 필요가 없습니다.
 
-> **참고:** WebAssembly 페이지의 크기는 65,536 바이트로 64KiB로 고정되어 있습니다.
+> [!NOTE]
+> WebAssembly 페이지의 크기는 65,536 바이트로 64KiB로 고정되어 있습니다.
 
 ### Exceptions
 

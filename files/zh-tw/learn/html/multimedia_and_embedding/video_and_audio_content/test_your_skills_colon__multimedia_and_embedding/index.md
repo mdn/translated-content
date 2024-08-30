@@ -5,7 +5,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skil
 
 {{learnsidebar}}這項技能測試的目的是評估你是否了解我們的[視訊和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)以及[從物件到 iframe 的其他嵌入技術](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)文章。
 
-> **備註：** 你可以在下面的交互式編輯器中嘗試解決方案，但是下載代碼並使用在線工具如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) 去完成測試。
+> [!NOTE]
+> 你可以在下面的交互式編輯器中嘗試解決方案，但是下載代碼並使用在線工具如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) 去完成測試。
 >
 > 如果你遇到困難，請向我們尋求幫助-請參閱 [評估或進一步幫助](#評估或進一步幫助) 此頁面底部的部分。
 

@@ -9,8 +9,8 @@ slug: Web/API/Element/insertAdjacentHTML
 
 ## 语法
 
-```
-element.insertAdjacentHTML(position, text);
+```js-nolint
+insertAdjacentHTML(position, text)
 ```
 
 - `position`
@@ -37,7 +37,8 @@ element.insertAdjacentHTML(position, text);
 <!-- afterend -->
 ```
 
-> **备注：** beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
+> [!NOTE]
+> beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
 
 ## 示例
 

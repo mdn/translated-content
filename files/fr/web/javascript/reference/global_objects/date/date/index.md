@@ -24,7 +24,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds);
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
-> **Note :** La seule façon correcte d'instancier un nouvel objet `Date` est d'utiliser l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Si vous invoquez ce constructeur directement (`now = Date()` par exemple), la valeur renvoyée sera une chaîne de caractères plutôt qu'un objet `Date`.
+> [!NOTE]
+> La seule façon correcte d'instancier un nouvel objet `Date` est d'utiliser l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Si vous invoquez ce constructeur directement (`now = Date()` par exemple), la valeur renvoyée sera une chaîne de caractères plutôt qu'un objet `Date`.
 
 ### Paramètres
 
@@ -43,7 +44,8 @@ Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé repré
 
 - `dateString`
   - : Une chaîne de caractères qui représente une date, selon le format reconnu par la méthode [`Date.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) qui sont [conformes à la RFC 2822 IETF sur les horodatages](https://datatracker.ietf.org/doc/html/rfc2822#page-14) ou selon [le format ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
-    > **Note :** Analyser des chaînes de caractères représentant des dates en utilisant le constructeur `Date` (ou `Date.parse()`, qui fonctionne de la même façon) est _fortement déconseillé_ en raison des différences et incohérences entre les différents navigateurs.
+    > [!NOTE]
+    > Analyser des chaînes de caractères représentant des dates en utilisant le constructeur `Date` (ou `Date.parse()`, qui fonctionne de la même façon) est _fortement déconseillé_ en raison des différences et incohérences entre les différents navigateurs.
     >
     > - La prise en charge des chaînes de caractères de format [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) repose uniquement sur une convention.
     > - La prise en charge des formats ISO 8601 diffère en ce que les chaînes décrivant uniquement des dates (ex. `"1970-01-01"`) sont considérées comme UTC et pas comme locales.
@@ -83,7 +85,8 @@ Invoquer la fonction `Date()` (sans le mot-clé `new`) renvoie une représentati
 
 Les exemples qui suivent illustrent différentes façons de créer des dates JavaScript :
 
-> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent à cet égard) est fortement déconseillée en raison des différences et incohérences entre les navigateurs.
+> [!NOTE]
+> L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent à cet égard) est fortement déconseillée en raison des différences et incohérences entre les navigateurs.
 
 ```js
 let today = new Date();

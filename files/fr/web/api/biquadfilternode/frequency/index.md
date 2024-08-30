@@ -17,7 +17,8 @@ var filtreBiquad = contexteAudio.createBiquadFilter();
 filtreBiquad.frequency.value = 3000;
 ```
 
-> **Note :** Bien que le `AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
+> [!NOTE]
+> Bien que le `AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
 
 ### Valeur
 

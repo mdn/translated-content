@@ -36,7 +36,8 @@ meter::-webkit-meter-inner-element {
 
 {{EmbedLiveSample('Exemples', '100%', 50)}}
 
-> **Note :** Cela ne fonctionne que pour les navigateurs Webkit/Blink.
+> [!NOTE]
+> Cela ne fonctionne que pour les navigateurs Webkit/Blink.
 
 ## Spécifications
 

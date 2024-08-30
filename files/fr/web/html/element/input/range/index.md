@@ -96,7 +96,8 @@ L'attribut `step` est un nombre qui définit la granularité à laquelle la vale
 
 Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)).
 
-> **Note :** Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> [!NOTE]
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 Par défaut, l'incrément utilisé pour les champs de type `range` vaut 1 et on ne peut alors saisir que des entiers à moins que la valeur de base ne soit pas entière. Ainsi, si on définit `min` avec -10 et `value` avec 1.5, un attribut `step` qui vaut 1 permettra de saisir les valeurs positives 1.5, 2.5, 3.5, etc. et les valeurs négatives -0.5, -1.5, -2.5, etc.
 
@@ -108,7 +109,8 @@ Voir [l'attribut HTML `step`](/fr/docs/Web/HTML/Attributes/step).
 
 Semblable à la propriété CSS non-standard `moz-orient` qui agit sur les éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress) et [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `orient` définit l'orientation de la piste pour le contrôle d'intervalle. Les valeurs possibles incluent `horizontal` pour un affichage horizontal et `vertical` pour un affichage vertical.
 
-> **Note :** Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
+> [!NOTE]
+> Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
 
 ## Exemples
 
@@ -307,7 +309,8 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
   </tbody>
 </table>
 
-> **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
+> [!NOTE]
+> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
 
 ### Créer des contrôles d'intervalle verticaux
 

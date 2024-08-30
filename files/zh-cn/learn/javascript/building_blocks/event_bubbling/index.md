@@ -36,7 +36,7 @@ container.addEventListener("click", handleClick);
 
 你会发现在用户单击按钮时，父元素上触发了单击事件：
 
-```
+```plain
 你在 DIV 元素上进行了点击
 ```
 
@@ -75,7 +75,7 @@ button.addEventListener("click", handleClick);
 
 你会发现在用户单击按钮时，所有三个元素都触发了单击事件：
 
-```
+```plain
 你在 BUTTON 元素上进行了点击
 你在 DIV 元素上进行了点击
 你在 BODY 元素上进行了点击
@@ -267,7 +267,7 @@ button.addEventListener("click", handleClick);
 
 在这种情况下，消息出现的顺序发生了颠倒：`<body>` 事件处理器首先触发，然后是 `<div>` 的，最后是 `<button>` 的：
 
-```
+```plain
 你在 BODY 元素上进行了点击
 你在 DIV 元素上进行了点击
 你在 BUTTON 元素上进行了点击
@@ -339,9 +339,11 @@ container.addEventListener("click", (event) => {
 
 {{ EmbedLiveSample('事件委托', '100%', 430, "", "") }}
 
-> **备注：** 在这个例子中，我们使用 `event.target` 来获取事件的目标元素（也就是最里面的元素）。如果我们想访问处理这个事件的元素（在这个例子中是容器），我们可以使用 `event.currentTarget`。
+> [!NOTE]
+> 在这个例子中，我们使用 `event.target` 来获取事件的目标元素（也就是最里面的元素）。如果我们想访问处理这个事件的元素（在这个例子中是容器），我们可以使用 `event.currentTarget`。
 
-> **备注：** 完整的源代码见 [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html)；也可以在这里[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)。
+> [!NOTE]
+> 完整的源代码见 [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html)；也可以在这里[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)。
 
 ## 技能测试！
 
@@ -353,7 +355,8 @@ container.addEventListener("click", (event) => {
 
 另外，理解 JavaScript 在不同环境下使用不同的事件模型很重要——从 Web API 到其他领域，如浏览器 WebExtensions 和 Node.js（服务器端 JavaScript）。我们并不期望现在了解所有这些领域，但是当你在学习 web 开发的过程中，理解这些事件的基础是很有帮助的。
 
-> **备注：** 如果你遇到了问题，可以向我们其中的一个[交流渠道](/zh-CN/docs/MDN/Community/Communication_channels)寻求帮助。
+> [!NOTE]
+> 如果你遇到了问题，可以向我们其中的一个[交流渠道](/zh-CN/docs/MDN/Community/Communication_channels)寻求帮助。
 
 ## 参见
 

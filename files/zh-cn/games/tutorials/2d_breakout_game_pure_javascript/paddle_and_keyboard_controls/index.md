@@ -118,7 +118,8 @@ drawPaddle();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","320")}}
 
-> **备注：** 让球拍变快变慢，或者改变它的大小。
+> [!NOTE]
+> 让球拍变快变慢，或者改变它的大小。
 
 ## 下一步
 

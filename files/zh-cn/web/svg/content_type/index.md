@@ -37,7 +37,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
   - : 时钟值的句法与 [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) 规范中写的句法相同。在这里重放一下时钟值的语法：
 
-    ```
+    ```plain
     Clock-val         ::= Full-clock-val | Partial-clock-val | Timecount-val
     Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
     Partial-clock-val ::= Minutes ":" Seconds ("." Fraction)?
@@ -149,13 +149,13 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
   - : 一个国际化资源标识符。在因特网上，资源是用 _IRI_（一个国际化资源标识符）标识的。举个例子，一个 SVG 文档调用了位于 `http://example.com` 上的 `someDrawing.svg`，可以使用下面的 _IRI_：
 
-    ```
+    ```plain
     http://example.com/someDrawing.svg
     ```
 
     一个 _IRI_ 中包含一个 _IRI_ 片段标识符，就可以定位一个 XML 文档内部的特定的元素。一个包含有 _IRI_ 片段标识符的 _IRI_，由一个可选的基础 _IRI_ 后面跟着一个“#”号，再跟着一个 _IRI_ 片段标识符组成。举个例子，下面的 IRI 可以用来指定文件 someDrawing.svg 中的 ID 为“Lamppost”的元素：
 
-    ```
+    ```plain
     http://example.com/someDrawing.svg#Lamppost
     ```
 
@@ -186,7 +186,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
   - : 一个长度是一个可度量的距离，给定一个数字以及一个单位。长度可以用两种方法指定。如果在样式表中使用它，可以如下定义\<length>：
 
-    ```
+    ```plain
     length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
     ```
 
@@ -196,7 +196,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
     如果是在 SVG 属性中使用长度，\<length>需定义如下：
 
-    ```
+    ```plain
     length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?
     ```
 

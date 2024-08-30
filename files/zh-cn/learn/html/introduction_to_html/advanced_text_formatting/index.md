@@ -34,7 +34,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
-```
+```plain
 内心独白
 戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
 语言独白
@@ -487,7 +487,8 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
-> **备注：** 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
+> [!NOTE]
+> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
 
 ### 主动学习：标记一个缩略语
 

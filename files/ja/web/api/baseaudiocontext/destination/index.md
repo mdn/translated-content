@@ -16,7 +16,8 @@ l10n:
 
 ## 例
 
-> **メモ:** より完全な応用例や情報については、[Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモをご覧ください（関連するコードは [app.js の 108 - 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
+> [!NOTE]
+> より完全な応用例や情報については、[Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモをご覧ください（関連するコードは [app.js の 108 - 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
 
 ```js
 const audioCtx = new AudioContext();

@@ -116,11 +116,13 @@ Et voici le résultat:
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 180, 350) }} | {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 350, 180) }} |
 
-> **Note :** La media query orientation s'applique en vérité selon l'orientation de la fenêtre du navigateur (ou iframe) et non l'orientation de l'appareil.
+> [!NOTE]
+> La media query orientation s'applique en vérité selon l'orientation de la fenêtre du navigateur (ou iframe) et non l'orientation de l'appareil.
 
 ## Verrouiller l'orientation de l'écran
 
-> **Attention :** Cette API est expérimentale et est actuellement disponible sur [Firefox OS](/fr/docs/Mozilla/Firefox_OS) et [Firefox pour Android](/fr/docs/Mozilla/Firefox_for_Android) avec le préfixe `moz`, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe `ms`.
+> [!WARNING]
+> Cette API est expérimentale et est actuellement disponible sur [Firefox OS](/fr/docs/Mozilla/Firefox_OS) et [Firefox pour Android](/fr/docs/Mozilla/Firefox_for_Android) avec le préfixe `moz`, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe `ms`.
 
 Certains appareils (principalement les appareils mobiles) peuvent changer dynamiquement d'orientation d'écran selon leur propre orientation, garantissant que l'utilisateur sera toujours capable de lire ce qu'il y a sur l'écran. Bien que ce comportement soit parfaitement adapté au contenu texte, certains contenus peuvent être affectés négativement par ce changement. Par exemple, les jeux basés sur l'orientation de l'appareil être gachés par un tel changement.
 
@@ -146,7 +148,8 @@ Toute application web peut verrouiller l'écran dans une orientation pour répon
 screen.lockOrientation("landscape");
 ```
 
-> **Note :** Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) parce que les deux applications gardent l'orientation qu'elles avaient.
+> [!NOTE]
+> Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) parce que les deux applications gardent l'orientation qu'elles avaient.
 >
 > En revanche, verrouiller l'orientation peut décléncher l'événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) si l'orientation a dû être changée pour satisfaire aux critères du verrouillage.
 

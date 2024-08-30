@@ -75,7 +75,8 @@ instance.#champPrive; // Erreur de syntaxe
 
 JavaScript est un langage dynamique et peut faire cette vérification à la compilation grâce à la syntaxe particulière des propriétés privées.
 
-> **Note :** Le code exécuté dans la console Google Chrome permet d'accéder aux propriétés privées en dehors de la classe. Il s'agit d'une dérogation propre aux outils de développement.
+> [!NOTE]
+> Le code exécuté dans la console Google Chrome permet d'accéder aux propriétés privées en dehors de la classe. Il s'agit d'une dérogation propre aux outils de développement.
 
 Si vous tentez d'accéder à une propriété privée sur un objet qui ne dispose pas de la propriété, vous obtiendrez une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) et non `undefined`, comme c'est le cas pour les propriétés normales (publiques).
 
@@ -154,7 +155,8 @@ class SousClasse extends ClasseAvecChampPrive {
 new SousClasse(); // Dans certains outils de développement, cela affichera SousClasse {#champPrive: 42, #champPriveSousClasse: 23}
 ```
 
-> **Note :** La propriété `#champPrive`, provenant de la classe de base `ClasseAvecChampPrive` est privée et est donc uniquement accessible à l'intérieur de `ClasseAvecChampPrive` et est inaccessible depuis `SousClasse`.
+> [!NOTE]
+> La propriété `#champPrive`, provenant de la classe de base `ClasseAvecChampPrive` est privée et est donc uniquement accessible à l'intérieur de `ClasseAvecChampPrive` et est inaccessible depuis `SousClasse`.
 
 #### Renvoyer un objet différent
 
@@ -191,7 +193,8 @@ console.log(obj instanceof Stamper); // false
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
-> **Attention :** Implémenter un tel fonctionnement sera source de confusion. Il est généralement recommandé de ne rien renvoyer à partir du constructeur, a fortiori, quelque chose qui n'a pas de lien avec `this`.
+> [!WARNING]
+> Implémenter un tel fonctionnement sera source de confusion. Il est généralement recommandé de ne rien renvoyer à partir du constructeur, a fortiori, quelque chose qui n'a pas de lien avec `this`.
 
 #### Champs statiques privés
 

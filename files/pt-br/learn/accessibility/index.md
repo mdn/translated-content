@@ -25,7 +25,8 @@ O recurso **Inspecionar propriedades de acessibilidade** é uma ótima ferrament
 
 Para ter o máximo proveito deste módulo, recomendamos que esteja familiarizados com pelos os dois primeiros módulos de [HTML](/pt-BR/docs/Learn/HTML), [CSS](/pt-BR/docs/Learn/CSS), e [JavaScript](/pt-BR/docs/Learn/JavaScript), ou melhor ainda, com as partes principais do módulo de acessibilidade de cada capítulo, à medida em que vai estudando.
 
-> **Nota:** Se você está estudando em um dispositivo que não pode criar novos arquivos, voce pode testar os exemplos em alguma aplicação de codificação online, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Se você está estudando em um dispositivo que não pode criar novos arquivos, voce pode testar os exemplos em alguma aplicação de codificação online, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

@@ -9,7 +9,8 @@ l10n:
 
 **`<radialGradient>`** 用来定义径向渐变，以对图形元素进行填充或描边。
 
-> **备注：** 不要与 CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} 混淆，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
+> [!NOTE]
+> 不要与 CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} 混淆，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
 
 ## 示例
 

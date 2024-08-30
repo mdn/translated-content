@@ -30,7 +30,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 第一種作法是利用 {{domxref("window.setInterval()")}} 與 {{domxref("window.setTimeout()")}} 方法。
 
-> **備註：** 針對新版瀏覽器建議採用 {{domxref("window.requestAnimationFrame()")}} 方法。
+> [!NOTE]
+> 針對新版瀏覽器建議採用 {{domxref("window.requestAnimationFrame()")}} 方法。
 
 - `setInterval(function, delay)`
   - : 每隔 delay 毫秒，執行輸入 function(函數)
@@ -41,7 +42,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 如果希望不要有任何的使用者互動影響，請使用 setInterval()，因為它會確實地每隔一段時間就執行程式碼。如果你想製作遊戲，我們能夠使用 keyboard 或是 mouse event 來控制動畫，並使用 setTimeout() 函數一起。藉由設定 EventListeners，我們能夠捕捉任何使用者的動作，並執行我們的動畫函數。
 
-> **備註：** 在下面的範例,我們將使用 **`window.requestAnimationFrame()`** 方法來控制動畫，**`window.requestAnimationFrame()`** 方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時，藉由呼叫動畫 andmation frame() 的 callback 函數。callback 通常每秒鐘執行 60 次，當執行 background tab 時，執行次數會更低，想知道更多關於動畫迴圈(animation loop)的資訊，尤其是遊戲的應用，請查看我們在 [Game development zone](/zh-TW/docs/Games) 的主題 [Anatomy of a video game](/zh-TW/docs/Games/Anatomy)。
+> [!NOTE]
+> 在下面的範例,我們將使用 **`window.requestAnimationFrame()`** 方法來控制動畫，**`window.requestAnimationFrame()`** 方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時，藉由呼叫動畫 andmation frame() 的 callback 函數。callback 通常每秒鐘執行 60 次，當執行 background tab 時，執行次數會更低，想知道更多關於動畫迴圈(animation loop)的資訊，尤其是遊戲的應用，請查看我們在 [Game development zone](/zh-TW/docs/Games) 的主題 [Anatomy of a video game](/zh-TW/docs/Games/Anatomy)。
 
 ### 從使用者輸入操作控制動畫
 

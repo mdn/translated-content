@@ -12,7 +12,8 @@ l10n:
 
 このメソッドは扇形の {{domxref("CanvasGradient")}} を返します。図形に適用するには、グラデーションをまず {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティに割り当てる必要があります。
 
-> **メモ:** グラデーション座標はグローバル、つまり現在の座標空間からの相対座標です。図形に適用される場合、座標は図形の座標に対する相対的なものではありません。
+> [!NOTE]
+> グラデーション座標はグローバル、つまり現在の座標空間からの相対座標です。図形に適用される場合、座標は図形の座標に対する相対的なものではありません。
 
 ## 構文
 

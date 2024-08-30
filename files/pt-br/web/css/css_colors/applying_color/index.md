@@ -208,7 +208,8 @@ th {
 
 {{EmbedLiveSample("HSL_functional_notation", 300, 260)}}
 
-> **Nota:** Quando você omite a unidade do matiz, assume-se que está em graus (`deg`).
+> [!NOTE]
+> Quando você omite a unidade do matiz, assume-se que está em graus (`deg`).
 
 ### Notação funcional HWB
 
@@ -324,7 +325,8 @@ A classe `.boxLeft` — que, inteligentemente, é usada para estilizar a caixa �
 }
 ```
 
-> **Nota:** ao tentar mostrá-lo no Safari, ele não será exibido corretamente. Porque o Safari não suporta `text-decoration: underline wavy #88ff88`.
+> [!NOTE]
+> ao tentar mostrá-lo no Safari, ele não será exibido corretamente. Porque o Safari não suporta `text-decoration: underline wavy #88ff88`.
 
 Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que é desenhada à direita. Ele está configurado para flutuar a caixa para a direita para que ela apareça ao lado da caixa anterior. Em seguida, as seguintes cores são estabelecidas:
 
@@ -346,7 +348,8 @@ Vejamos um exemplo simples, no qual o usuário pode escolher uma cor. Conforme o
 
 {{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
 
-> **Nota:** no macOS, você indica que finalizou a seleção da cor fechando a janela do seletor de cores.
+> [!NOTE]
+> no macOS, você indica que finalizou a seleção da cor fechando a janela do seletor de cores.
 
 #### HTML
 
@@ -428,7 +431,8 @@ O primeiro passo é escolher sua **cor base**. Esta é a cor que de alguma forma
 
 Ao tentar decidir sobre uma cor base, você pode descobrir que as extensões do navegador que permitem selecionar cores do conteúdo da Web podem ser particularmente úteis. Alguns deles são projetados especificamente para ajudar nesse tipo de trabalho. Por exemplo, o site [ColorZilla](https://www.colorzilla.com/) oferece uma extensão ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https:// www.colorzilla.com/firefox/)) que oferece uma ferramenta conta-gotas para escolher cores da web. Também pode obter médias das cores dos pixels em áreas de vários tamanhos ou até mesmo em uma área selecionada da página.
 
-> **Nota:** A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
+> [!NOTE]
+> A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
 
 #### Confeccionando a paleta
 
@@ -442,7 +446,8 @@ Alguns exemplos (todos gratuitos para uso a partir do momento em que esta lista 
 
 Ao projetar sua paleta, lembre-se de que, além das cores que essas ferramentas normalmente geram, você provavelmente também precisará adicionar algumas cores neutras centrais, como branco (ou quase branco), preto (ou quase preto), e algum número de tons de cinza.
 
-> **Nota:** Normalmente, é muito melhor usar o menor número de cores possível. Ao usar cores para acentuar em vez de adicionar cores a tudo na página, você mantém seu conteúdo fácil de ler e as cores que você usa têm muito mais impacto.
+> [!NOTE]
+> Normalmente, é muito melhor usar o menor número de cores possível. Ao usar cores para acentuar em vez de adicionar cores a tudo na página, você mantém seu conteúdo fácil de ler e as cores que você usa têm muito mais impacto.
 
 ### Recursos da teoria das cores
 
@@ -459,7 +464,8 @@ Existem várias maneiras pelas quais a cor pode ser um problema {{Glossary("acce
 
 Você deve fazer pelo menos uma pesquisa básica sobre [daltonismo](https://en.wikipedia.org/wiki/Color_blindness). Existem vários tipos; o mais comum é o daltonismo vermelho-verde, que faz com que as pessoas não consigam diferenciar entre as cores vermelho e verde. Existem outras, também, que vão desde a incapacidade de distinguir certas cores até a total incapacidade de ver as cores.
 
-> **Nota:** A regra mais importante: nunca use a cor como a única maneira de saber algo. Se, por exemplo, você indicar sucesso ou falha de uma operação alterando a cor de uma forma de branco para verde para sucesso e vermelho para falha, os usuários com daltonismo vermelho-verde não poderão usar seu site corretamente. Em vez disso, talvez use texto e cor juntos, para que todos possam entender o que está acontecendo.
+> [!NOTE]
+> A regra mais importante: nunca use a cor como a única maneira de saber algo. Se, por exemplo, você indicar sucesso ou falha de uma operação alterando a cor de uma forma de branco para verde para sucesso e vermelho para falha, os usuários com daltonismo vermelho-verde não poderão usar seu site corretamente. Em vez disso, talvez use texto e cor juntos, para que todos possam entender o que está acontecendo.
 
 Para obter mais informações sobre daltonismo, consulte os seguintes artigos:
 
@@ -510,7 +516,8 @@ O valor padrão de `print-color-adjust`, `economy`, indica que o navegador tem p
 Você pode definir `print-color-adjust` como `exact` para informar ao navegador que o elemento ou elementos nos quais você o usa foram projetados especificamente para funcionar melhor com as cores e imagens deixadas como estão.
 Com este conjunto, o navegador não alterará a aparência do elemento e o desenhará conforme indicado pelo seu CSS.
 
-> **Nota:** Não há garantia, porém, de que `print-color-adjust: exact` resultará em seu CSS sendo usado exatamente como fornecido.
+> [!NOTE]
+> Não há garantia, porém, de que `print-color-adjust: exact` resultará em seu CSS sendo usado exatamente como fornecido.
 > Se o navegador fornecer as preferências do usuário para alterar a saída (como uma caixa de seleção "não imprimir fundos" em uma caixa de diálogo de impressão), isso substituirá o valor de `print-color-adjust`.
 
 ## Veja também

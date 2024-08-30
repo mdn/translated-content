@@ -7,7 +7,8 @@ slug: Web/API/Animation/cancel
 
 El método `cancel()` de la Web Animations API de la interfaz {{domxref("Animation")}} borra todos los {{domxref("KeyframeEffect")}} causados por esta animación y aborta su reproducción.
 
-> **Nota:** Cuando se cancela una animación, su {{domxref("Animation.startTime", "startTime")}} y su {{domxref("Animation.currentTime", "currentTime")}} se establecen en `null`.
+> [!NOTE]
+> Cuando se cancela una animación, su {{domxref("Animation.startTime", "startTime")}} y su {{domxref("Animation.currentTime", "currentTime")}} se establecen en `null`.
 
 ## Sintaxis
 

@@ -343,7 +343,8 @@ created public/build/bundle.js in 220ms
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **참고:** VSCode를 사용하면 _Quick fix…_ 링크를 클릭하거나 <kbd>Ctrl</kbd> + <kbd>.</kbd>를 눌러 무시 주석을 자동으로 추가할 수 있습니다.
+> [!NOTE]
+> VSCode를 사용하면 _Quick fix…_ 링크를 클릭하거나 <kbd>Ctrl</kbd> + <kbd>.</kbd>를 눌러 무시 주석을 자동으로 추가할 수 있습니다.
 
 이 경고를 전체적으로 비활성화하려면 다음과 같이 `Svelte` 플러그인 구성 내부의 `rollup.config.js` 파일에 `onwarn` 핸들러를 추가할 수 있습니다.
 
@@ -373,7 +374,8 @@ plugins: [
 
 의도적으로 이러한 경고는 컴파일러 자체에서 구현되며 프로젝트에 추가하도록 선택할 수 있는 플러그인으로 구현되지 않습니다. 아이디어는 기본적으로 마크업에서 a11y 문제를 확인하고 특정 경고를 선택적으로 제외할 수 있도록 하는 것입니다.
 
-> **참고:** 예를 들어 빠른 프로토타입을 제작하는 동안과 같이 그럴 만한 이유가 있는 경우에만 이러한 경고를 비활성화해야 합니다. 훌륭한 웹 시민이 되어 최대한 광범위한 사용자 기반이 페이지에 액세스할 수 있도록 하는 것이 중요합니다.
+> [!NOTE]
+> 예를 들어 빠른 프로토타입을 제작하는 동안과 같이 그럴 만한 이유가 있는 경우에만 이러한 경고를 비활성화해야 합니다. 훌륭한 웹 시민이 되어 최대한 광범위한 사용자 기반이 페이지에 액세스할 수 있도록 하는 것이 중요합니다.
 
 Svelte가 확인하는 접근성 규칙은 JSX 요소에 대한 많은 접근성 규칙에 대한 정적 검사를 제공하는 ESLint용 플러그인[eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules)에서 가져옵니다. Svelte는 컴파일러에서 모두 구현하는 것을 목표로 하며 대부분은 이미 Svelte로 포팅되었습니다. GitHub에서 [여전히 누락된 접근성 검사](https://github.com/sveltejs/svelte/issues/820)를 확인할 수 있습니다. 해당 링크를 클릭하여 각 규칙의 의미를 확인할 수 있습니다.
 

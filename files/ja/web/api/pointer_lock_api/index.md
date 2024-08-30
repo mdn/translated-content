@@ -37,7 +37,8 @@ canvas.requestPointerLock =
 canvas.requestPointerLock();
 ```
 
-> **メモ:** ユーザーが[既定のロック解除ジェスチャ](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture)でポインターロックを解除した場合、またはこの文書に対して以前にポインターロックが入力されていない場合、[エンゲージメントジェスチャ](https://w3c.github.io/pointerlock/#dfn-engagement-gesture)の結果として生成されるイベントを [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) が成功する前に、文書内で受信する必要があります。（<https://w3c.github.io/pointerlock/#extensions-to-the-element-interface> より）
+> [!NOTE]
+> ユーザーが[既定のロック解除ジェスチャ](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture)でポインターロックを解除した場合、またはこの文書に対して以前にポインターロックが入力されていない場合、[エンゲージメントジェスチャ](https://w3c.github.io/pointerlock/#dfn-engagement-gesture)の結果として生成されるイベントを [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) が成功する前に、文書内で受信する必要があります。（<https://w3c.github.io/pointerlock/#extensions-to-the-element-interface> より）
 
 ### pointerLockElement と exitPointerLock()
 
@@ -106,7 +107,8 @@ function lockError(e) {
 }
 ```
 
-> **メモ:** Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
+> [!NOTE]
+> Firefox 50 まで、上記のイベントは `moz` 接頭辞を付加していました。
 
 ## Mouse イベントの拡張
 

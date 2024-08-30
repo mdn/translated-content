@@ -37,7 +37,8 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 表示将上标基线向上移动的最小量的 {{cssxref("length-percentage")}}。
 
-> **备注：** 对于 `subscriptshift` 和 `superscriptshift` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `subscriptshift` 和 `superscriptshift` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

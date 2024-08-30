@@ -31,7 +31,8 @@ La propriété `width` contrôle la taille de la zone d'affichage. Elle peut êt
 
 La propriété `initial-scale` contrôle le niveau de zoom lors du premier chargement de la page. Les propriétés `maximum-scale`, `minimum-scale` et `user-scalable` contrôlent la manière dont les utilisateurs et utilisatrices sont autorisé·e·s à zoomer ou dézoomer la page.
 
-> **Attention :** L'utilisation du `user-scalable=no` peut causer des problèmes d'accessibilité aux utilisateurs et utilisatrices ayant des déficiences visuelles telles qu'une vision faible.
+> [!WARNING]
+> L'utilisation du `user-scalable=no` peut causer des problèmes d'accessibilité aux utilisateurs et utilisatrices ayant des déficiences visuelles telles qu'une vision faible.
 
 ## Un pixel n'est pas un pixel
 

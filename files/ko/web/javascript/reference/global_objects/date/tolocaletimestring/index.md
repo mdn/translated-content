@@ -47,7 +47,8 @@ toLocaleTimeString(locales, options)
 
 `Intl.DateTimeFormat`를 구현한 구현체에서는 `new Intl.DateTimeFormat(locales, options).format(date)`과 동일하며, 여기서 `options`은 위에서 설명한 대로 정규화됩니다.
 
-> **참고:** 대부분의 경우 `toLocaleTimeString()`에서 반환되는 형식은 일관적입니다. 그러나 결과는 시간, 언어 및 구현체에 따라 달라질 수 있습니다. 또한 설계에 따라 다양한 결과가 있으며 명세에서 허용됩니다. `toLocaleTimeString()`의 결과를 정적 값과 비교해서는 안 됩니다.
+> [!NOTE]
+> 대부분의 경우 `toLocaleTimeString()`에서 반환되는 형식은 일관적입니다. 그러나 결과는 시간, 언어 및 구현체에 따라 달라질 수 있습니다. 또한 설계에 따라 다양한 결과가 있으며 명세에서 허용됩니다. `toLocaleTimeString()`의 결과를 정적 값과 비교해서는 안 됩니다.
 
 ## 예제
 

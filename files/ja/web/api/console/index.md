@@ -214,9 +214,11 @@ console.log(
 - {{cssxref("word-spacing")}} および {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **メモ:** 既定では、各コンソールメッセージはインライン要素のように動作します。`padding` や `margin` などのプロパティに何らかの効果を持たせたい場合は、`display` プロパティを `display: inline-block` に設定します。
+> [!NOTE]
+> 既定では、各コンソールメッセージはインライン要素のように動作します。`padding` や `margin` などのプロパティに何らかの効果を持たせたい場合は、`display` プロパティを `display: inline-block` に設定します。
 
-> **メモ:** 明るい配色と暗い配色の両方に対応するために、色を指定するときに {{cssxref("color_value/light-dark")}} を使用することができます。例えば `color: light-dark(#D00000, #FF4040);` とします。
+> [!NOTE]
+> 明るい配色と暗い配色の両方に対応するために、色を指定するときに {{cssxref("color_value/light-dark")}} を使用することができます。例えば `color: light-dark(#D00000, #FF4040);` とします。
 
 ### コンソールでのグループの使用
 

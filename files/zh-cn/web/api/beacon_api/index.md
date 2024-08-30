@@ -11,7 +11,8 @@ Beacon API 主要的使用场景是将分析数据发送给服务器，如：客
 
 如需了解 Beacon API 更多的细节和用例，请参考 {{domxref("navigator.sendBeacon()")}} 方法。
 
-> **备注：** Beacon API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是不可用的（没有通过 {{domxref("WorkerNavigator")}} 暴露出来）。
+> [!NOTE]
+> Beacon API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是不可用的（没有通过 {{domxref("WorkerNavigator")}} 暴露出来）。
 
 ## 接口
 

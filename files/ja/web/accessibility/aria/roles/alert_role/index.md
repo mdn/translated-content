@@ -23,7 +23,8 @@ l10n:
 
 `alert` ロールはアラートメッセージを格納するノードに追加されるものであり、アラートを発生させる要素には追加され**ません**。アラートは [assertive ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) です。 `role="alert"` を設定することは、[`aria-live="assertive"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) と [`aria-atomic="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) を設定することと同じです。これらはフォーカスを受け取らないので、フォーカスを管理する必要はなく、ユーザーとの対話も必要ありません。
 
-> **警告:** その押しつけがましい性質から、`alert` ロールは控えめに、ユーザーの緊急な注意が要求される状況でだけ使用してください。
+> [!WARNING]
+> その押しつけがましい性質から、`alert` ロールは控えめに、ユーザーの緊急な注意が要求される状況でだけ使用してください。
 
 [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) ロールは 5 つの[ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)のロールのうちの 1 つです。緊急性の低い動的な変更には、`aria-live="polite"` を含めたり、[`status`](/ja/docs/Web/Accessibility/ARIA/Roles/status_role) のような他のライブリージョンのロールを使用するなど、より控えめな方法を使用してください。ユーザーがアラートを閉じることが期待される場合は、代わりに [`alertdialog`](/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) ロールを使用してください。
 

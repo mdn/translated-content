@@ -58,7 +58,8 @@ l10n:
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
 
-> **メモ:** ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
+> [!NOTE]
+> ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
 
 ## 入力が必須か否かによるスタイル設定
 
@@ -113,9 +114,11 @@ input:optional {
 
 次の節では、 `:required` を使用して必須項目を示すより良い例を見ていきます。これは、生成コンテンツを使用することについても掘り下げます。
 
-> **メモ:** おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
+> [!NOTE]
+> おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
 
-> **メモ:** 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性が設定されている場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
+> [!NOTE]
+> 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性が設定されている場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
 
 ## 擬似クラスでコンテンツを生成する
 
@@ -262,7 +265,8 @@ input:valid + span::before {
 
 先ほどと同様に、`<span>` を `position: relative` に設定し、生成されるコンテンツを相対的に配置できるようにします。そして、フォームのデータが有効か無効かによって、それぞれ緑色のチェックと赤色のクロスで、異なる生成コンテンツを絶対に配置するようにします。無効なデータに少し緊急性を追加するために、無効なときに入力フィールドに太い赤のボーダーを指定しました。
 
-> **メモ:** ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
+> [!NOTE]
+> ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
 
 次のもので試してみてください。
 
@@ -274,7 +278,8 @@ input:valid + span::before {
 
 上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力フィールドに対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
-> **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
+> [!NOTE]
+> 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 
 注目すべきは、データが範囲内にある入力フィールドは `:valid` 擬似クラスに一致し、データが範囲外である入力フィールドは `:invalid` 擬似クラスに一致することです。では、なぜこの 2 つが存在するのでしょうか？実に意味論上の問題です。範囲外であるということは無効であることを伝えるためのより具体的なものなので、入力が範囲外であるというと、単に「無効」と言うよりユーザーに役立つ可能性があります。両方を提供することもできます。
 
@@ -328,7 +333,8 @@ input:out-of-range + span::after {
 
 これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力フィールドは有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
 
-> **メモ:** 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
+> [!NOTE]
+> 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
 
 ## 有効/無効や読み取り専用/読み書き可能の入力フィールドをスタイル設定する
 
@@ -477,7 +483,8 @@ textarea:read-write {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **メモ:** また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
+> [!NOTE]
+> また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
 
 ## ラジオボタンとチェックボックスの状態 — チェック済み、既定、不定
 
@@ -567,7 +574,8 @@ input:default ~ span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **メモ:** この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
+> [!NOTE]
+> この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
 
 `:indeterminate` の例では、既定値で選択されたラジオボタンがありません。これは重要なことで、もしあれば、スタイル設定する不定値の状態は存在しません。不確定なラジオボタンには以下の CSS でスタイルを設定しています。
 
@@ -594,7 +602,8 @@ input[type="radio"]:indeterminate {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **メモ:** この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
+> [!NOTE]
+> この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
 > **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 

@@ -22,7 +22,8 @@ a::after {
 
 {{CSSSyntax}}
 
-> **メモ:** CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
+> [!NOTE]
+> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
 
 ## 例
 

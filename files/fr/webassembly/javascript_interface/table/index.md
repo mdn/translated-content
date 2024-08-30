@@ -9,7 +9,8 @@ Le constructeur **`WebAssembly.Table()`** permet de créer un nouvel objet `Tabl
 
 Cet objet est une enveloppe JavaScript qui représente un tableau WebAssembly et qui contient des références à des fonctions. Un tableau créé en JavaScript ou dans du code WebAssembly sera accessible et modifiable depuis du code JavaScript et depuis du code WebAssembly.
 
-> **Note :** Actuellement, les tableaux WebAssembly peuvent uniquement stocker des références à des fonctions. Cette fonctionnalité sera vraisemblablement étendue par la suite.
+> [!NOTE]
+> Actuellement, les tableaux WebAssembly peuvent uniquement stocker des références à des fonctions. Cette fonctionnalité sera vraisemblablement étendue par la suite.
 
 ## Syntaxe
 

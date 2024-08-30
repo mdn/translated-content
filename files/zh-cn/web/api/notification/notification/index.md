@@ -9,7 +9,8 @@ l10n:
 
 **`Notification()`** 构造函数创建一个新的代表用户通知的 {{domxref("Notification")}} 对象实例。
 
-> **备注：** 尝试在 {{domxref("ServiceWorkerGlobalScope")}} 中使用 `Notification()` 构造函数创建通知将抛出 `TypeError`，应该使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}。
+> [!NOTE]
+> 尝试在 {{domxref("ServiceWorkerGlobalScope")}} 中使用 `Notification()` 构造函数创建通知将抛出 `TypeError`，应该使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}。
 
 ## 语法
 

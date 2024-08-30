@@ -158,7 +158,8 @@ public class Engineer extends WorkerBee {
 
 Usando estas definições, você pode criar instâncias desses objetos que obterão valores padrão para suas propriedades. A próxima imagem mostra o uso destas definições JavaScript para criar novos objetos e mostrar os valores das propriedades dos novos objetos.
 
-> **Nota:** O termo _instancia_ tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que `jane` é uma instância de `Engineer`. Similarmente, embora os termos **parent*, \_child*, \_ancestor**, e **descendant** não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.
+> [!NOTE]
+> O termo _instancia_ tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que `jane` é uma instância de `Engineer`. Similarmente, embora os termos **parent*, \_child*, \_ancestor**, e **descendant** não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.
 
 ### Criando objetos com definições simples
 
@@ -338,7 +339,8 @@ this.name = name || "";
 
 The JavaScript logical OR operator (`||`) evaluates its first argument. If that argument converts to true, the operator returns it. Otherwise, the operator returns the value of the second argument. Therefore, this line of code tests to see if `name` has a useful value for the `name` property. If it does, it sets `this.name` to that value. Otherwise, it sets `this.name` to the empty string. This chapter uses this idiom for brevity; however, it can be puzzling at first glance.
 
-> **Nota:** This may not work as expected if the constructor function is called with arguments which convert to `false` (like `0` (zero) and empty string (`""`). In this case the default value will be chosen.
+> [!NOTE]
+> This may not work as expected if the constructor function is called with arguments which convert to `false` (like `0` (zero) and empty string (`""`). In this case the default value will be chosen.
 
 With these definitions, when you create an instance of an object, you can specify values for the locally defined properties. You can use the following statement to create a new `Engineer`:
 
@@ -553,9 +555,11 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
+> [!NOTE]
+> The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
 
-> **Nota:** Using the `instanceOf` function defined above, these expressions are true:
+> [!NOTE]
+> Using the `instanceOf` function defined above, these expressions are true:
 
 ```js
 instanceOf (chris, Engineer)

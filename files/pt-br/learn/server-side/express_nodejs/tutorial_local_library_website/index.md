@@ -67,7 +67,8 @@ Dica: Em vez de simplesmente copiar e colar todos os códigos, a sugestão é di
 
 Se ficar perdido no meio do caminho, fique calmo. Você pode acessar o código inteiro pelo [Github](https://github.com/mdn/express-locallibrary-tutorial).
 
-> **Nota:** As versões específicas do Node, Express e outros módulos que adotados no tutorial estão listados no arquivo [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
+> [!NOTE]
+> As versões específicas do Node, Express e outros módulos que adotados no tutorial estão listados no arquivo [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
 
 ## Sumário
 

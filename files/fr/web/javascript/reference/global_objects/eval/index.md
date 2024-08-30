@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.
 
-> **Attention :** L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez `eval()`. Voir la section [N'utilisez eval() qu'en dernier recours !](#Nutiliser_eval_quen_dernier_recours_!) ci-dessous.
+> [!WARNING]
+> L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez `eval()`. Voir la section [N'utilisez eval() qu'en dernier recours !](#Nutiliser_eval_quen_dernier_recours_!) ci-dessous.
 
 {{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
 

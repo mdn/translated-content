@@ -84,7 +84,8 @@ Otras tareas comunes de desarrollo web no están directamente soportadas por el 
 
 A pesar de que _Express_ es en sí mismo bastante minimalista, los desarrolladores han creado paquetes de middleware compatibles para abordar casi cualquier problema de desarrollo web. Hay librerías para trabajar con cookies, sesiones, inicios de sesión de usuario, parámetros URL, datos `POST`, cabeceras de seguridad y _muchos_ más. Puedes encontrar una lista de paquetes middleware mantenida por el equipo de Express en [Express Middleware](https://expressjs.com/es/resources/middleware.html) (junto con una lista de algunos de los paquetes más populares de terceros).
 
-> **Nota:** esta flexibilidad es una espada de doble filo. Hay paquetes de middleware para abordar casi cualquier problema o requerimiento, pero deducir cuáles son los paquetes adecuados a usar algunas veces puede ser un auténtico reto. Tampoco hay una "forma correcta" de estructurar una aplicación, y muchos ejemplos que puedes encontrar en la Internet no son óptimos, o sólo muestran una pequeña parte de lo que necesitas hacer para desarrollar una aplicación web.
+> [!NOTE]
+> Esta flexibilidad es una espada de doble filo. Hay paquetes de middleware para abordar casi cualquier problema o requerimiento, pero deducir cuáles son los paquetes adecuados a usar algunas veces puede ser un auténtico reto. Tampoco hay una "forma correcta" de estructurar una aplicación, y muchos ejemplos que puedes encontrar en la Internet no son óptimos, o sólo muestran una pequeña parte de lo que necesitas hacer para desarrollar una aplicación web.
 
 ## ¿Dónde comenzó?
 
@@ -122,7 +123,8 @@ En las siguientes secciones, se explican algunos puntos comunes que se pueden en
 
 Primero consideremos el tradicional ejemplo de [Hola Mundo!](https://expressjs.com/en/starter/hello-world.html) (se comentará cada parte a continuación).
 
-> **Nota:** Si tiene _Node_ y _Express_ instalado (o piensa instalarlos posteriormente) puede guardar este código en un archivo llamado **app.js** y ejecutarlo posteriormente en la linea de comandos invocándolo mediante: `node app.js`.
+> [!NOTE]
+> Si tiene _Node_ y _Express_ instalado (o piensa instalarlos posteriormente) puede guardar este código en un archivo llamado **app.js** y ejecutarlo posteriormente en la linea de comandos invocándolo mediante: `node app.js`.
 
 ```js
 var express = require("express");
@@ -158,7 +160,8 @@ var app = express();
 
 También podemos crear nuestros propios módulos que puedan posteriormente ser importados de la misma manera.
 
-> **Nota:** Usted puede desear crear sus propios módulos, esto le permitirá organizar su código en partes más administrables; una aplicación que reside en un solo archivo es difícil de entender y manejar.El utilizar módulos independientes también le permite administrar el espacio de nombres, de esta manera unicamente las variables que exporte explícitamente son importadas cuando utilice un módulo.
+> [!NOTE]
+> Usted puede desear crear sus propios módulos, esto le permitirá organizar su código en partes más administrables; una aplicación que reside en un solo archivo es difícil de entender y manejar.El utilizar módulos independientes también le permite administrar el espacio de nombres, de esta manera unicamente las variables que exporte explícitamente son importadas cuando utilice un módulo.
 
 Para hacer que los objetos esten disponibles fuera de un modulo, solamente es necesario asignarlos al objeto `exports`. Por ejemplo, el modulo mostrado a continuación **square.js** es un archivo que exporta los métodos `area()` y `perimeter()` :
 
@@ -180,7 +183,8 @@ var square = require("./square");
 console.log("El área de un cuadrado con lado de 4 es " + square.area(4));
 ```
 
-> **Nota:** Usted también puede especificar una ruta absoluta a la ubicación del módulo (o un nombre como se realizó inicialmente).
+> [!NOTE]
+> Usted también puede especificar una ruta absoluta a la ubicación del módulo (o un nombre como se realizó inicialmente).
 
 Si usted desea exportar completamente un objeto en una asignación en lugar de construir cada propiedad por separado, debe asignarlo al módulo `module.exports` como se muestra a continuación (también puede hacer esto al inicio de un constructor o de otra función.)
 
@@ -220,9 +224,11 @@ Usar APIs asíncronas sin bloques es aun mas importante en _Node_ que en el nave
 
 Hay muchas maneras para una API asincrónica de notificar a su aplicación que se ha completado. La manera mas común es registrar una función callback cuando usted invoca a una API asincrónica, la misma será llamada de vuelta cuando la operación se complete. Éste es el enfoque utilizado anteriormente.
 
-> **Nota:** Usar "callbacks" puede ser un poco enmarañado si usted tiene una secuencia de operaciones asíncronas dependientes que deben ser llevadas a cabo en orden, porque esto resulta en múltiples niveles de "callbacks" anidadas. Este problema es comúnmente conocido como "callback hell" (callback del infierno). Este problema puede ser reducido con buenas practicas de código (vea <http://callbackhell.com/>), usando un modulo como [async](https://www.npmjs.com/package/async), o incluso avanzando a características de ES6 como las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> [!NOTE]
+> Usar "callbacks" puede ser un poco enmarañado si usted tiene una secuencia de operaciones asíncronas dependientes que deben ser llevadas a cabo en orden, porque esto resulta en múltiples niveles de "callbacks" anidadas. Este problema es comúnmente conocido como "callback hell" (callback del infierno). Este problema puede ser reducido con buenas practicas de código (vea <http://callbackhell.com/>), usando un modulo como [async](https://www.npmjs.com/package/async), o incluso avanzando a características de ES6 como las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Nota:** Una convención común para _Node_ y _Express_ es usar callbacks de error primero. En esta convención el primer valor en su función callback es un error, mientras que los argumentos subsecuentes contienen datos correctos. Hay una buena explicación de porque este enfoque es útil en este blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
+> [!NOTE]
+> Una convención común para _Node_ y _Express_ es usar callbacks de error primero. En esta convención el primer valor en su función callback es un error, mientras que los argumentos subsecuentes contienen datos correctos. Hay una buena explicación de porque este enfoque es útil en este blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
 
 ### Creando manejadores de rutas
 
@@ -236,7 +242,8 @@ app.get("/", function (req, res) {
 
 La función callback toma una petición y una respuesta como argumentos. En este caso el método simplemente llama a [`send()`](https://expressjs.com/en/4x/api.html#res.send) en la respuesta para retornar la cadena "Hello World!". Hay un [número de otros métodos de respuesta](https://expressjs.com/en/guide/routing.html#response-methods) para finalizar el ciclo de solicitud/respuesta, por ejemplo podrá llamar a [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) para enviar una respuesta JSON o [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) para enviar un archivo.
 
-> **Nota:** Usted puede utilizar cualquier nombre que quiera para los argumentos en las funciones callback; cuando la callback es invocada el primer argumento siempre sera la petición y el segundo siempre sera la respuesta. Tiene sentido nombrarlos de manera que pueda identificar el objeto con el que esta trabajando en el cuerpo de la callback.
+> [!NOTE]
+> Usted puede utilizar cualquier nombre que quiera para los argumentos en las funciones callback; cuando la callback es invocada el primer argumento siempre sera la petición y el segundo siempre sera la respuesta. Tiene sentido nombrarlos de manera que pueda identificar el objeto con el que esta trabajando en el cuerpo de la callback.
 
 El objeto que representa una aplicación de _Express_, también posee métodos para definir los manejadores de rutas para el resto de los verbos HTTP: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, y `connect()`.
 
@@ -272,7 +279,8 @@ router.get("/about", function (req, res) {
 module.exports = router;
 ```
 
-> **Nota:** Agregar rutas al objeto `Router` es como agregar rutas al objeto `app` (como se vio anteriormente).
+> [!NOTE]
+> Agregar rutas al objeto `Router` es como agregar rutas al objeto `app` (como se vio anteriormente).
 
 Para usar el router en nuestro archivo app principal, necesitamos `require()` el módulo de rutas (**wiki.js**), entonces llame `use()` en la aplicación _Express_ para agregar el Router al software intermediario que maneja las rutas. Las dos rutas serán accesibles entonces desde `/wiki/` y `/wiki/about/`.
 
@@ -288,7 +296,8 @@ Le mostraremos mucho más sobre como trabajar con rutas, y en particular, acerca
 
 El "middleware" es ampliamente utilizado en las aplicaciones de _Express:_ desde tareas para servir archivos estáticos, a la gestión de errores o la compresión de las respuestas HTTP. Mientras las funciones de enrutamiento, con el objeto [express.Router](http://expressjs.com/en/guide/routing.html#express-router), se encargan del ciclo petición-respuesta, al gestionar la respuesta adecuada al cliente, las funciones de middleware normalmente realizan alguna operación al gestionar una petición o respuesta y a continuación llaman a la siguiente función en la "pila", que puede ser otra función de middleware u otra función de enrutamiento. El orden en el que las funciones de middleware son llamadas depende del desarrollador de la aplicación.
 
-> **Nota:** El middleware puede realizar cualquier operación: hacer cambios a una petición, ejecutar código, realizar cambios a la petición o al objeto pedido, puede también finalizar el ciclo de petición-respuesta. Si no finaliza el ciclo debe llamar a la función `next()` para pasar el control de la ejecución a la siguiente función del middleware ( o a la petición quedaría esperando una respuesta ... ).
+> [!NOTE]
+> El middleware puede realizar cualquier operación: hacer cambios a una petición, ejecutar código, realizar cambios a la petición o al objeto pedido, puede también finalizar el ciclo de petición-respuesta. Si no finaliza el ciclo debe llamar a la función `next()` para pasar el control de la ejecución a la siguiente función del middleware ( o a la petición quedaría esperando una respuesta ... ).
 
 La mayoría de las aplicaciones usan middleware desarrollado por terceras partes, para simplificar funciones habituales en el desarrollo web, como puede ser: gestión de cookies, sesiones, autentificado de usuarios, peticiones `POST` y datos en JSON, registros de eventos, etc. Puede encontrar en el siguiente enlace una [lista de middleware mantenido por el equipo de _Express_](http://expressjs.com/en/resources/middleware.html) (que también incluye otros paquetes populares de terceras partes). Las librerías de _Express_ están disponibles con la aplicación NPM (Node Package Manager).
 
@@ -308,7 +317,8 @@ app.use(logger('dev'));
 ...
 ```
 
-> **Nota:** Las funciones Middleware y routing son llamadas en el orden que son declaradas. Para algunos middleware el orden es importante (por ejemplo si el middleware de sesion depende del middleware de cookie, entonces el manejador de cookie tiene que ser llamado antes). Casi siempre es el caso que el middleware es llamado antes de configurar las rutas, o tu manejador de rutas no tendra acceso a la funcionalidad agregada por tu middleware.
+> [!NOTE]
+> Las funciones Middleware y routing son llamadas en el orden que son declaradas. Para algunos middleware el orden es importante (por ejemplo si el middleware de sesion depende del middleware de cookie, entonces el manejador de cookie tiene que ser llamado antes). Casi siempre es el caso que el middleware es llamado antes de configurar las rutas, o tu manejador de rutas no tendra acceso a la funcionalidad agregada por tu middleware.
 
 Tu puedes escribir tu propia funcion middleware, y si quieres hacerlo así (solo para crear código de manejo de error). La única diferencia entre una función middleware y un callback manejador de rutas es que las funciones middleware tienen un tercer argumento `next`, cuyas funciones middleware son esperadas para llamarlas si ellas no completan el ciclo request (cuando la función midleware es llamada, esta contiene la próxima función que debe ser llamada).
 
@@ -338,7 +348,8 @@ app.get("/", a_middleware_function);
 app.listen(3000);
 ```
 
-> **Nota:** Arriba declaramos la función middleware separadamente y la configuramos como el callback. En nuestra función previous manejadora de ruta declaramos la función callback cuando esta fué usada. En JavaScript, cualquier aproximación es válida.
+> [!NOTE]
+> Arriba declaramos la función middleware separadamente y la configuramos como el callback. En nuestra función previous manejadora de ruta declaramos la función callback cuando esta fué usada. En JavaScript, cualquier aproximación es válida.
 
 La documentación Express tiene mucha mas documentación excelente acerca del uso y escritura de middleware Express.
 
@@ -397,9 +408,11 @@ Estas pueden devolver cualquier contenido, pero deben ser llamadas despues de to
 
 Express viene con un manejador de error integrado, el que se ocupa de error remanente que pudiera ser encontrado en la app. Esta función middleware manejador de error esta agregada al final del stack de funciones middleware. Si pasa un error a `next()` y no lo maneja en un manejador de error, este sera manejado por el manejador de error integrado; el error sera escrito en el cliente con el rastreo de pila.
 
-> **Nota:** El rastreo de pila no esta incluido en el ambiente de producción. Para ejecutarlo en modo de producción necesita configurar la variable de ambiente `NODE_ENV` to '`production'`.
+> [!NOTE]
+> El rastreo de pila no esta incluido en el ambiente de producción. Para ejecutarlo en modo de producción necesita configurar la variable de ambiente `NODE_ENV` to '`production'`.
 
-> **Nota:** HTTP404 y otros codigos de estatus de "error" no son tratados como errores. Si quiere manejar estos, puede agregar una función middleware para hacerlo. Para mas información vea las [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
+> [!NOTE]
+> HTTP404 y otros codigos de estatus de "error" no son tratados como errores. Si quiere manejar estos, puede agregar una función middleware para hacerlo. Para mas información vea las [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
 
 Para mayor información vea Manejo de error (Docs. Express).
 

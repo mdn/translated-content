@@ -53,7 +53,8 @@ L'attribut `alt` fournit une chaîne de caractères alternative à utiliser si l
 
 Ainsi, si un bouton graphique affiche une image avec une icône ou une image avec un texte "Se connecter", l'attribut `alt` devrait être renseigné avec une valeur comme `Se connecter`.
 
-> **Note :** Bien que l'attribut `alt` soit optionnel sur le plan technique, il devrait en pratique toujours être inclus afin de maximiser l'utilisabilité du contenu.
+> [!NOTE]
+> Bien que l'attribut `alt` soit optionnel sur le plan technique, il devrait en pratique toujours être inclus afin de maximiser l'utilisabilité du contenu.
 
 D'un point de vue fonctionnel, l'attribut `alt` de `<input type="image">` `alt` se comporte de façon analogue à l'attribut [`alt`](/fr/docs/Web/HTML/Element/Img#attr-alt) des éléments [`<img>`](/fr/docs/Web/HTML/Element/Img).
 

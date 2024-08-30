@@ -11,7 +11,8 @@ slug: Web/API/Cache/addAll
 
 > **备注：** `addAll()` will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting `put()` operation would overwrite a previous cache entry created by the same `addAll()` method.
 
-> **备注：** Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
+> [!NOTE]
+> Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
 
 ## 语法
 

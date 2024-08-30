@@ -2,14 +2,14 @@
 title: 能力と制約と設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 l10n:
-  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
 この記事では、**制約** (constraints) と**能力** (capabilities) という 2 つの概念と、メディア設定について説明し、[制約エクササイザー](#例_制約エクササイザー)と呼ばれる例を挙げています。制約エクササイザーでは、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）から入力される音声と映像のトラックに、異なる形の制約設定を 適用した場合の結果を使い勝手よく試すことができます。
 
-歴史的に、 Web API と密接に連携するウェブ用のスクリプトを作成することには、よく知られた課題がありました。 多くの場合、コードは、API が存在するかどうか、存在する場合は、それを実行している{{Glossary("user agent","ユーザーエージェント")}}の制限を知る必要があります。 これを理解するのは難しい場合が多く、通常、実行している{{Glossary("user agent","ユーザーエージェント")}}（またはブラウザー）とそのバージョンの組み合わせを調べ、特定のオブジェクトが存在するかどうかを確認したり、さまざまなものが機能するかどうかを確認したり、どのエラーが発生したかを判断したりする必要がありました。 その結果、非常に脆弱なコードが大量に発生するか、このような問題を解決するライブラリに依存したり、{{Glossary("polyfill", "ポリフィル")}}を実装して実装の穴にパッチを当てたりしました。
+歴史的に、 Web API と密接に連携するウェブ用のスクリプトを作成することには、よく知られた課題がありました。 多くの場合、コードは、API が存在するかどうか、存在する場合は、それを実行している{{Glossary("user agent","ユーザーエージェント")}}の制限を知る必要があります。 これを理解するのは難しい場合が多く、通常、実行している{{Glossary("user agent","ユーザーエージェント")}}（またはブラウザー）とそのバージョンの組み合わせを調べ、特定のオブジェクトが存在するかどうかを確認したり、さまざまなものが機能するかどうかを確認したり、どのエラーが発生したかを判断したりする必要がありました。 その結果、非常に脆弱なコードが大量に発生するか、このような問題を解決するライブラリーに依存したり、{{Glossary("polyfill", "ポリフィル")}}を実装して実装の穴にパッチを当てたりしました。
 
 能力と制約により、ブラウザーとウェブサイトまたはアプリケーションは、ブラウザーの実装が対応している **制約可能なプロパティ** と、それぞれについて対応している値についての情報を交換することができます。
 
@@ -56,7 +56,7 @@ const constraints = {
 myTrack.applyConstraints(constraints);
 ```
 
-この場合、制約は、ほぼすべてのプロパティで任意の値が適切であることを示しますが、標準の 16:9 アスペクト比で標準の高解像度 (HD) 動画サイズが望ましいことを示します。 結果のトラックがこれらのいずれかに一致するという保証はありませんが、ユーザーエージェントは可能な限り一致するように最善を尽くす必要があります。
+この場合、制約は、ほぼすべてのプロパティで任意の値が適切であることを示しますが、標準の 16:9 の{{glossary("aspect ratio", "アスペクト比")}}で標準の高解像度 (HD) 動画サイズが望ましいことを示します。 結果のトラックがこれらのいずれかに一致するという保証はありませんが、ユーザーエージェントは可能な限り一致するように最善を尽くす必要があります。
 
 プロパティの優先順位付けは簡単です。 2 つのプロパティの要求値が相互に排他的である場合、制約セットの最初にリストされている値を使用します。 例として、上記のコードを実行しているブラウザーは 1920x1080 のトラックを提供できないが、1920x900 を提供できる場合、それを提供します。
 
@@ -106,7 +106,7 @@ if (
 
 ## 能力の確認
 
-{{domxref("MediaStreamTrack.getCapabilities()")}} を呼び出して、対応しているすべての能力と、そのそれぞれが現在のプラットフォームとユーザーエージェントで受け入れられる値または値の範囲のリストを取得できます。 この関数は、ブラウザーが対応している各制約可能なプロパティと、それらのプロパティのそれぞれが対応している値または値の範囲をリストする {{domxref("MediaTrackCapabilities")}} オブジェクトを返します。
+{{domxref("MediaStreamTrack.getCapabilities()")}} を呼び出して、対応しているすべての能力と、そのそれぞれが現在のプラットフォームとユーザーエージェントで受け入れられる値または値の範囲のリストを取得できます。 この関数は、ブラウザーが対応している各制約可能なプロパティと、それらのプロパティのそれぞれが対応している値または値の範囲を列挙するオブジェクトを返します。
 
 > **メモ:** `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、 [Firefox バグ 1179084](https://bugzil.la/1179084) を参照してください。
 
@@ -135,7 +135,8 @@ navigator.mediaDevices
 
 この例では、`getUserMedia()` の時点で制約が適用され、動画のためのフォールバックを備えた理想的なオプションのセットが要求されます。
 
-> **メモ:** 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
+> [!NOTE]
+> 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
 
 次のようにトラックの {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} メソッドを呼び出し、トラックに適用する制約を表すオブジェクトを渡すことで、既存の {{domxref("MediaStreamTrack")}} の制約を臨機応変に変更することもできます。
 
@@ -350,7 +351,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### 設定の表示の更新
 
-各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、 [`value`](/ja/docs/Web/HTML/Element/textarea#value) を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
+各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、[`value`](/ja/docs/Web/API/HTMLTextAreaElement/value) を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
 
 ```js
 function getCurrentSettings() {
@@ -535,7 +536,8 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 
 パズルの最後の重要な部分、ユーザーの参照用に、ブラウザーがサポートする制約可能なプロパティのリストを表示するコードです。 各プロパティは、ユーザーの利便性のために MDN のドキュメントへのリンクです。 このコードの動作の詳細については、[`MediaDevices.getSupportedConstraints()` の例](/ja/docs/Web/API/MediaDevices/getSupportedConstraints#例)を参照してください。
 
-> **メモ:** もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、ドキュメントのリンクはあまり役に立たないでしょう。
+> [!NOTE]
+> もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、このドキュメントのリンクはあまり役に立たないでしょう。
 
 ```js
 const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
@@ -582,7 +584,6 @@ function handleError(reason) {
 ## 関連情報
 
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}

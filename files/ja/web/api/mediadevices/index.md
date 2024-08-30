@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-**`MediaDevices`** は{{domxref("Media Capture and Streams API", "メディアキャプチャとストリーム API", "", "nocode")}} のインターフェイスは、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
+**`MediaDevices`** は{{domxref("Media Capture and Streams API", "メディアキャプチャとストリーム API", "", "nocode")}} のインターフェイスで、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
 
 {{InheritanceDiagram}}
 

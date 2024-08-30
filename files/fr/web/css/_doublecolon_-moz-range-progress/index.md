@@ -7,7 +7,8 @@ slug: Web/CSS/::-moz-range-progress
 
 Le pseudo-élément **`::-moz-range-progress`** représente la portion de la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range`, qui correspond aux valeurs inférieures à la valeur sélectionnée par le curseur.
 
-> **Note :** Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.
+> [!NOTE]
+> Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.
 
 ## Syntaxe
 

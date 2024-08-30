@@ -26,7 +26,8 @@ console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 // ログ: "DOM HTML 2.0 supported?: true" （hasFeature は常に true を返す）
 ```
 
-> **警告:** これを昨日検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
+> [!WARNING]
+> これを昨日検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
 
 ## メモ
 

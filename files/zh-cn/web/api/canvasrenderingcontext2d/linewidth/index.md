@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.lineWidth`** 属性用于设置线宽。
 
-> **备注：** 线可以通过 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} 和 {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} 方法绘制。
+> [!NOTE]
+> 线可以通过 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} 和 {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} 方法绘制。
 
 ## 值
 

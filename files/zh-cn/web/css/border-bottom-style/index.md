@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
-> **备注：** 规范中没有定义不同样式的边框在边角处是如何连接的。
+> [!NOTE]
+> 规范中没有定义不同样式的边框在边角处是如何连接的。
 
 ## 语法
 

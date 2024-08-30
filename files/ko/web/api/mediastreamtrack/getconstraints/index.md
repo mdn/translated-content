@@ -19,7 +19,8 @@ const constraints = track.getConstraints();
 
 가장 최근에 웹 사이트 또는 애플리케이션에서 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 호출로 지정한 제약 속성을 나타내는 {{domxref("MediaTrackConstraints")}} 객체. 지정할 때 사용한 속성 순서를 동일하게 반환하며, 웹 사이트 또는 애플리케이션에서 지정하지 않은 속성은 포함하지 않습니다.
 
-> **참고:** 반환한 제약 집합이 반드시 미디어의 실제 상태를 나타내는 것은 아닙니다. 사이트 코드에서 지정한 어떤 제약 조건을 만족할 수 없는 상황에서도, 해당 속성을 반환 값에 포함합니다. 따라서 반환 값이 반드시 미디어의 실제 상태를 나타내는 것은 아닙니다. 모든 제약 속성에 현재 활성화된 값이 필요한 경우 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} 메서드를 사용하세요.
+> [!NOTE]
+> 반환한 제약 집합이 반드시 미디어의 실제 상태를 나타내는 것은 아닙니다. 사이트 코드에서 지정한 어떤 제약 조건을 만족할 수 없는 상황에서도, 해당 속성을 반환 값에 포함합니다. 따라서 반환 값이 반드시 미디어의 실제 상태를 나타내는 것은 아닙니다. 모든 제약 속성에 현재 활성화된 값이 필요한 경우 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} 메서드를 사용하세요.
 
 ## 예제
 

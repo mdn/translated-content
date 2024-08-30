@@ -9,7 +9,8 @@ l10n:
 
 Une scène 3D dans un jeu, même la plus simple qui soit, contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour améliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three.js, notamment la configuration d'un environnement de développement, la structure du code HTML nécessaire, les objets fondamentaux de ThreeJS et la manière de créer une démonstration de base.
 
-> **Note :** Nous avons choisi ThreeJS, car il s'agit de l'une des bibliothèques [WebGL](/fr/docs/Web/API/WebGL_API) les plus populaires, avec laquelle il est facile de commencer. Nous ne disons pas qu'il s'agit de la meilleure bibliothèque WebGL disponible, n'hésitez pas à expérimenter avec d'autres bibliothèques, comme [CopperLicht](https://www.ambiera.com/copperlicht/index.html), ou [PlayCanvas](https://playcanvas.com/).
+> [!NOTE]
+> Nous avons choisi ThreeJS, car il s'agit de l'une des bibliothèques [WebGL](/fr/docs/Web/API/WebGL_API) les plus populaires, avec laquelle il est facile de commencer. Nous ne disons pas qu'il s'agit de la meilleure bibliothèque WebGL disponible, n'hésitez pas à expérimenter avec d'autres bibliothèques, comme [CopperLicht](https://www.ambiera.com/copperlicht/index.html), ou [PlayCanvas](https://playcanvas.com/).
 
 ## Configuration de l'environnement de développement
 
@@ -105,7 +106,8 @@ Il existe d'autres types de caméra (cube, orthographique), mais la plus simple 
 
 N'hésitez pas à modifier ces valeurs et observer les effets de ces changements sur la scène.
 
-> **Note :** Les valeurs de distance (par exemple pour la position z de la caméra) sont sans unité et peuvent correspondre à toute unité que vous utiliserez pour l'ensemble des objets de la scène (millimètres, mètres, etc.).
+> [!NOTE]
+> Les valeurs de distance (par exemple pour la position z de la caméra) sont sans unité et peuvent correspondre à toute unité que vous utiliserez pour l'ensemble des objets de la scène (millimètres, mètres, etc.).
 
 ## Rendu de la scène
 

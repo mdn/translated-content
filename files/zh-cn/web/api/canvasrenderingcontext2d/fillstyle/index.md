@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.fillStyle`** 属性指定用于形状内部的颜色、渐变或图案。默认样式为 `#000`（黑色）。
 
-> **备注：** 想要了解更多填充和描边样式的示例，请参阅 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
+> [!NOTE]
+> 想要了解更多填充和描边样式的示例，请参阅 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
 
 ## 值
 

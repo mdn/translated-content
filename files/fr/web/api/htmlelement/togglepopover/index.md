@@ -38,7 +38,8 @@ togglePopover(force)
 
 ## Exemples
 
-> **Note :** Voir [la page d'exemples de l'API Popover](https://mdn.github.io/dom-examples/popover-api/) pour accéder à la collection complète des exemples de MDN relatifs aux <i lang="en">popovers</i>.
+> [!NOTE]
+> Voir [la page d'exemples de l'API Popover](https://mdn.github.io/dom-examples/popover-api/) pour accéder à la collection complète des exemples de MDN relatifs aux <i lang="en">popovers</i>.
 
 L'exemple qui suit est une version légèrement modifiée de [l'exemple d'interface d'aide](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/). L'exemple affiche/masque un <i lang="en">popover</i> en appuyant sur une touche particulière du clavier (lorsque la fenêtre de l'exemple a le focus).
 

@@ -21,7 +21,8 @@ Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 
 例えば Apache では、サーバー構成（の中の `<Directory>`, `<Location>`, `<Files>`, `<VirtualHost>` のうち適切な節）に次のような行を追加してください。構成はふつう、 `.conf` ファイルまたは（一般的な名前は `httpd.conf` や `apache.conf`）または `.htaccess` ファイルにあります。
 
-> **警告:** オリジンの一部として HTTPS または HTTP プロトコルを記載する必要があります。
+> [!WARNING]
+> オリジンの一部として HTTPS または HTTP プロトコルを記載する必要があります。
 
 ```
 Header set Access-Control-Allow-Origin 'origin'

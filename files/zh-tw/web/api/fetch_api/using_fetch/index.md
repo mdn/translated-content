@@ -35,7 +35,8 @@ fetch("http://example.com/movies.json")
 
 回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)
 
-> **備註：** 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
+> [!NOTE]
+> 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
 
 Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_policy_directives)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
 
@@ -198,7 +199,8 @@ var anotherRequest = new Request(myRequest, myInit);
 
 This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the `init` options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
 
-> **備註：** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
+> [!NOTE]
+> There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
 ## Headers
 
@@ -281,7 +283,8 @@ Possible guard values are:
 - `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
 - `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-> **備註：** You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
+> [!NOTE]
+> You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
 ## Response objects
 
@@ -310,7 +313,8 @@ addEventListener("fetch", function (event) {
 
 The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)
 
-> **備註：** The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
+> [!NOTE]
+> The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
 
 ## Body
 
@@ -362,5 +366,5 @@ if (self.fetch) {
 - [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

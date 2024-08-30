@@ -488,7 +488,7 @@ def book_detail_view(request,pk):
 >
 > 还要注意，如果你没有定义顺序（在基于类的视图或模型上），你还会看到开发服务器中的错误，如下所示：
 >
-> ```
+> ```plain
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
@@ -609,7 +609,7 @@ class BookListView(generic.ListView):
 
 URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表和详细视图几乎完全相同。模板将有所不同，但会分享类似的行为。
 
-> **备注：**
+> [!NOTE]
 >
 > - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新“所有图书”**All books** 链接时，所做的相同过程。
 > - 为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（**/locallibrary/catalog/templates/catalog/book_detail.html**），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。

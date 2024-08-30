@@ -62,7 +62,8 @@ console.log(Rectangle.name);
 // 출력: "Rectangle2"
 ```
 
-> **참고:** 클래스 **표현식**에는 [Class 선언](#class_선언) 섹션에 설명된 것과 동일한 호이스팅 제한이 적용됩니다.
+> [!NOTE]
+> 클래스 **표현식**에는 [Class 선언](#class_선언) 섹션에 설명된 것과 동일한 호이스팅 제한이 적용됩니다.
 
 ## Class body 와 메서드 정의
 
@@ -201,7 +202,8 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### Field 선언
 
-> **Warning:** public과 private 필드 선언은 JavaScript 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
+> [!WARNING]
+> public과 private 필드 선언은 JavaScript 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
 
 #### Public 필드 선언
 
@@ -241,7 +243,8 @@ class Rectangle {
 
 클래스의 바깥에서 private 필드를 접근하려고 하면 에러가 발생합니다. private필드는 클래스 내부에서만 읽고 쓰기가 가능합니다. 클래스 외부에서 보이지 않도록 정의하였으므로 클래스가 버젼업 되면서 내부 구현이 바뀌더라도 클래스 사용자 입장에서는 이에 아무런 영항을 받지 않도록 할 수 있습니다.
 
-> **Note:** Private 필드는 사용전에 선언되어야 합니다.
+> [!NOTE]
+> Private 필드는 사용전에 선언되어야 합니다.
 
 일반적인 프로퍼티와는 다르게 private 필드는 값을 할당하면서 만들어질 수 없습니다.
 

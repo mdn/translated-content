@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingQuality`** 属性，用于设置图像平滑度。
 
-> **备注：** 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性必须为 `true`。
+> [!NOTE]
+> 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性必须为 `true`。
 
 ## 值
 

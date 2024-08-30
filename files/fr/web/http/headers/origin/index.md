@@ -62,7 +62,8 @@ L'en-tête `Origin` peut valoir `null` dans certains cas (la liste qui suit n'es
 - Pour les éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) dont l'attribut `sandox` ne contient pas la valeur `allow-same-origin`.
 - Pour les réponses qui sont des erreurs réseau.
 
-> **Note :** Une liste plus détaillée de ces cas avec `null` est présentée sur Stack Overflow&nbsp;: [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
+> [!NOTE]
+> Une liste plus détaillée de ces cas avec `null` est présentée sur Stack Overflow&nbsp;: [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
 
 ## Exemples
 

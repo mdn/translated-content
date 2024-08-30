@@ -48,7 +48,8 @@ Svelte 更贴近传统的 Web 开发模型（HTML、CSS、JS），它只是对 H
 
 现阶段的缺点是它目前仍在发展中——和其它成熟框架相比，它的生态环境较受到了工具、支持、插件、使用模式等等限制，工作机会也比较少。但它的优点应该足够让你感兴趣并去探索它。
 
-> **备注：** Svelte 具有[官方的 TypeScript 支持](https://svelte.dev/docs/typescript)。我们将在之后的教学系列中讲到它。
+> [!NOTE]
+> Svelte 具有[官方的 TypeScript 支持](https://svelte.dev/docs/typescript)。我们将在之后的教学系列中讲到它。
 
 我们鼓励你完成 [Svelte 教程](https://learn.svelte.dev/)来快速了解基本的概念，然后再回到此教学系列来学习如何建构一些更深入的东西。
 
@@ -64,7 +65,8 @@ Svelte 可以被用来开发一小块界面或整个应用程序。你也可以�
 
 Svelte 团队推出了 [SvelteKit](https://kit.svelte.dev)，这是一个使用 Svelte 构建 Web 应用程序的框架。它包含了现代 Web 框架的特性，如基于文件系统的路由、服务器端渲染（SSR）、页面特定的渲染模式、离线支持等。关于 SvelteKit 的更多信息，可以参考[官方教程](https://learn.svelte.dev)和[文档](https://kit.svelte.dev/docs)。
 
-> **备注：** 作为构建 Web 应用的推荐 Svelte 框架，SvelteKit 旨在取代 [Sapper](https://sapper.svelte.dev/)。
+> [!NOTE]
+> 作为构建 Web 应用的推荐 Svelte 框架，SvelteKit 旨在取代 [Sapper](https://sapper.svelte.dev/)。
 
 Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于移动开发。
 
@@ -106,7 +108,8 @@ npm install
 npm run dev
 ```
 
-> **备注：** 不用太惊讶 degit 做了这么多事情——它其实就只是让你可以从 git 仓库下载和解压缩最新版本的内容。使用它比起使用 `git clone` 要快得多，因为它并不会下载整个仓库的历史记录，也不会创建完整的本地克隆。
+> [!NOTE]
+> 不用太惊讶 degit 做了这么多事情——它其实就只是让你可以从 git 仓库下载和解压缩最新版本的内容。使用它比起使用 `git clone` 要快得多，因为它并不会下载整个仓库的历史记录，也不会创建完整的本地克隆。
 
 执行 `npm run dev` 之后，Svelte 将会编译和建构你的应用程序。它会在 `localhost:8080` 上运行本地服务器。当你对源代码文件做了变动，Svelte 将会侦测到文件更新并自动地重新编译和刷新应用程序。你的浏览器将显示如下内容：
 
@@ -182,7 +185,8 @@ moz-todo-svelte
 <!-- 标记（零或多个 HTML 元素）放这 -->
 ```
 
-> **备注：** 有关组件格式的更多信息，请查看 [Svelte 组件文档](https://svelte.dev/docs/svelte-components)。
+> [!NOTE]
+> 有关组件格式的更多信息，请查看 [Svelte 组件文档](https://svelte.dev/docs/svelte-components)。
 
 接着我们来看入门模板中的 `src/App.svelte` 文件，你应该会看到以下内容：
 
@@ -288,7 +292,8 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
 
 编译应用程序时，Svelte 会将 `h1` 的样式定义改变为 `h1.svelte-1tky8bj` 并更改每一个在此组件中的 `<h1>` 元素为 `<h1 class="svelte-1tky8bj">`，如此就能让该组件取得所需的样式。
 
-> **备注：** 你也可以使用 `:global()` 修饰符覆盖此行为并且应用全局选择器的样式（请参见 [Svelte `<style>` 文档](https://svelte.dev/docs/svelte-components#style)以了解更多信息）。
+> [!NOTE]
+> 你也可以使用 `:global()` 修饰符覆盖此行为并且应用全局选择器的样式（请参见 [Svelte `<style>` 文档](https://svelte.dev/docs/svelte-components#style)以了解更多信息）。
 
 ## 做一些小改变
 
@@ -423,7 +428,8 @@ npm run dev
 
 假如你想要学习有关 git 和 GitHub 的更多信息，我们已经整理了一些有帮助的指南的链接列表——请参阅 [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)。
 
-> **备注：** 假如你只是想要下载文件而不是克隆 git 仓库，你可以使用 degit 工具，像这样——`npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 来下载特定文件夹。Degit 不会创建本地 git 仓库，它只下载特定文件夹下的文件。
+> [!NOTE]
+> 假如你只是想要下载文件而不是克隆 git 仓库，你可以使用 degit 工具，像这样——`npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 来下载特定文件夹。Degit 不会创建本地 git 仓库，它只下载特定文件夹下的文件。
 
 ### 使用 Svelte REPL
 
@@ -452,11 +458,13 @@ Svelte 的 REPL 功能却不只如此。它是一个在线工具，允许你建�
 
 每当你在 REPL 中改变任何文件，Svelte 将会重新编译应用程序并更新结果（Result）标签。要分享你的应用程序，请直接分享其网址。例如，这是运行我们完整应用程序的 REPL 链接：<https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>。
 
-> **备注：** 请注意在链接上标注 Svelte 版本的方式。当你在报告 Svelte 特定版本的问题时，这会非常有用。
+> [!NOTE]
+> 请注意在链接上标注 Svelte 版本的方式。当你在报告 Svelte 特定版本的问题时，这会非常有用。
 
 我们将会在每一篇文章的开头与结尾提供 REPL，所以你就能立刻和我们一起编写代码。
 
-> **备注：** 目前 REPL 无法正确处理文件夹名称。如果你按照 REPL 上的教程进行操作，只需在根文件夹中创建所有组件即可。然后在你看到代码中的路径时，例如 `import Todos from './components/Todos.svelte'`，只需要将它替换成类似 `import Todos from './Todos.svelte'` 这样的即可。
+> [!NOTE]
+> 目前 REPL 无法正确处理文件夹名称。如果你按照 REPL 上的教程进行操作，只需在根文件夹中创建所有组件即可。然后在你看到代码中的路径时，例如 `import Todos from './components/Todos.svelte'`，只需要将它替换成类似 `import Todos from './Todos.svelte'` 这样的即可。
 
 ## 到目前为止的代码
 

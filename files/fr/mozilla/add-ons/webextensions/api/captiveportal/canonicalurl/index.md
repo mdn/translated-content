@@ -13,7 +13,7 @@ Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#property-TAB_ID_NONE) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
 >

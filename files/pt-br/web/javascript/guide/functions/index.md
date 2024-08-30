@@ -132,7 +132,8 @@ function square(n){return n*n}
 
 O escopo de uma função é a função na qual ela é declarada, ou todo o programa se ela é declarada no nível superior.
 
-> **Nota:** Nota: Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., `function funcNome(){ })`. O código a seguir não vai funcionar.
+> [!NOTE]
+> Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., `function funcNome(){ })`. O código a seguir não vai funcionar.
 
 ```js
 console.log(square(5));
@@ -504,7 +505,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **Nota:** Nota: A variável `arguments` é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade `length`. No entanto, não possui todos os métodos de manipulação de array.
+> [!NOTE]
+> A variável `arguments` é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade `length`. No entanto, não possui todos os métodos de manipulação de array.
 
 Veja objeto {{jsxref("Function")}} na referência do JavaScript para maiores informações.
 

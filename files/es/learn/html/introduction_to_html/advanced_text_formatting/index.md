@@ -491,7 +491,8 @@ Estos saldrán con un aspecto similar a este (la expansión aparecerá en una de
 
 {{EmbedLiveSample('ejemplo-de-abreviaturas-en-vivo', '100%', '94px', '', '', 'hide-codepen-jsfiddle')}}
 
-> **Nota:** Hay otro elemento, {{HTMLElement("acronym")}}, que básicamente hace lo mismo que `<abbr>`, y se diseñó específicamente para acrónimos en lugar de las abreviaturas. Sin embargo, este ha caído en desuso — no era compatible con los navegadores ni con `<abbr>`, y `<abbr>` tiene una función tan similar que se consideró inútil conservar ambos. Solo utiliza `<abbr>`.
+> [!NOTE]
+> Hay otro elemento, {{HTMLElement("acronym")}}, que básicamente hace lo mismo que `<abbr>`, y se diseñó específicamente para acrónimos en lugar de las abreviaturas. Sin embargo, este ha caído en desuso — no era compatible con los navegadores ni con `<abbr>`, y `<abbr>` tiene una función tan similar que se consideró inútil conservar ambos. Solo utiliza `<abbr>`.
 
 ### Aprendizaje activo: Marcar una abreviatura
 

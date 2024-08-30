@@ -1,20 +1,20 @@
 ---
-title: fetch() グローバル関数
+title: "Window: fetch() メソッド"
+short-title: fetch()
 slug: Web/API/Window/fetch
-original_slug: Web/API/fetch
 l10n:
-  sourceCommit: bb75692ff9b82320169ed3f27fcc5136c86b8d21
+  sourceCommit: 80d3325431bf238f06c986c2dc78944ac5227372
 ---
 
 {{APIRef("Fetch API")}}
 
-**`fetch()`** はグローバルのメソッドで、ネットワークからリソースを取得するプロセスを開始し、レスポンスが利用できるようになったら履行されるプロミスを返します。
+**`fetch()`** は {{domxref("Window")}} インターフェイスのメソッドで、ネットワークからリソースを取得するプロセスを開始し、レスポンスが利用できるようになったら履行されるプロミスを返します。
 
-このプロミスはそのリクエストに対するレスポンスを表す {{domxref("Response")}} で解決します。
+このプロミスは、そのリクエストに対するレスポンスを表す {{domxref("Response")}} で解決します。
 
-{{domxref("fetch()")}} のプロミスはネットワークエラーが発生した場合（普通は権限の問題があったときなど）のみ拒否されます。 {{domxref("fetch()")}} のプロミスは HTTP エラー（`404` など）では拒否*されません*。代わりに、 `then()` ハンドラーで {{domxref("Response.ok")}} や {{domxref("Response.status")}} プロパティをチェックする必要があります。
-
-`WindowOrWorkerGlobalScope` は {{domxref("Window")}} と {{domxref("WorkerGlobalScope")}} の両方で実装されています。これはつまり `fetch()` メソッドは、リソースを取得したいと思うような大部分コンテキストで使用可能ということです。
+`fetch()` のプロミスは、ネットワークエラーが発生した場合（普通は権限の問題がaったときなど）のみ拒否されます。
+`fetch()` のプロミスは、サーバーがエラーを示す HTTP ステータスコード（`404`、`504` など）を返しても拒否されません。
+代わりに、 `then()` ハンドラーで {{domxref("Response.ok")}} や {{domxref("Response.status")}} プロパティをチェックする必要があります。
 
 `fetch()` メソッドは取得するリソースのディレクティブではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
 
@@ -33,76 +33,12 @@ fetch(resource, options)
 
   - : 取得したいリソースを定義します。以下のどちらかが使用できます。
 
-    - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。
+    - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。この URL は、文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} となります。
     - {{domxref("Request")}} オブジェクト。
 
 - `options` {{optional_inline}}
 
-  - : リクエストに適用したいカスタム設定を含むオブジェクト。可能なオプションは以下の通りです。
-
-    - `method`
-      - : リクエストするメソッド、`"GET"`、`"POST"` など。既定値は `"GET"` です。
-        なお、 {{httpheader("Origin")}} ヘッダーは {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの読み取りリクエストでは設定されません。
-        (この動作は Firefox 65 で修正されました。 [Firefox バグ 1508661](https://bugzil.la/1508661) を参照)
-        [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) のメソッドのいずれかと大文字小文字を区別せずに照合する文字列は、自動的に大文字になります。
-        （`PATCH` のような）カスタムメソッドを使用したい場合は、自分で大文字にする必要があります。
-    - `headers`
-
-      - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクトまたは {{jsxref("String")}} 値を持つオブジェクトリテラルで指定してください。
-        なお、[一部の名前は禁止されています](/ja/docs/Glossary/Forbidden_header_name)。
-
-        > **メモ:** HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーがリクエストに追加される場合がありますが、そのリクエストがオリジン間でリダイレクトされた場合は削除されます。
-
-    - `body`
-      - : リクエストに追加したい本体です。これには {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 文字列オブジェクトまたはリテラル、 {{domxref("ReadableStream")}} オブジェクトなどが使用できます。これは最新の利用可能状況で、まだ実験的なものです。[互換性情報](/ja/docs/Web/API/Request#ブラウザーの互換性)を調べて、あなたがこれを使用できるかどうかを確認してください。メソッドが `GET` や `HEAD` の場合は使用できないので注意してください。
-    - `mode`
-      - : リクエストで使用する[モード](/ja/docs/Web/API/Request/mode)です。例えば `cors`、`no-cors`、`same-origin` などです。
-    - `credentials`
-
-      - : ブラウザーが資格情報を使用して何を行うか（[クッキー](/ja/docs/Web/HTTP/Cookies)、 [HTTP 認証](/ja/docs/Web/HTTP/Authentication)項目、 TLS クライアント証明書）を制御します。以下の文字列のうちの何れかでなければなりません。
-
-        - `omit`
-          - : リクエストから資格情報を除外し、レスポンスで返される資格情報（{{HTTPHeader("Set-Cookie")}} ヘッダーなど）を無視するようブラウザーに指示します。
-        - `same-origin`
-          - : 同一オリジンの URL へのリクエストに資格情報を記載し、同一オリジンの URL からのレスポンスで送り返されるすべての資格情報を使用するようブラウザーに指示します。**これが既定値です。**
-        - `include`
-
-          - : ブラウザーに、同一オリジンおよびオリジン間リクエストの両方に資格情報を記載し、レスポンスで送り返された資格情報を常に使用するように指示します。
-
-            > **メモ:** 資格情報は単純な、そして「最終的な」オリジン間リクエストに記載することができますが、 [CORS プリフライトリクエスト](/ja/docs/Web/HTTP/CORS#preflight_requests_and_credentials)には記載されるべきではありません。
-
-    - `cache`
-      - : 文字列で、このリクエストがブラウザーの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)にどう作用するかを示します。利用可能な値は `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` で、 {{domxref("Request")}} オブジェクトの {{domxref("Request/cache", "cache")}} プロパティの記事に記述されています。
-    - `redirect`
-
-      - : リダイレクトレスポンスを取り扱う方法を示します。
-
-        - `follow`
-          - : 自動的にリダイレクトを行います。他の方法が指定されていない限り、リダイレクトモードは `follow` に設定されます。
-        - `error`
-          - : リダイレクトが発生した場合は、エラーで中止します。
-        - `manual`
-          - : 呼び出し側は、レスポンスを別のコンテキストで処理する予定です。
-            詳しくは [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) を参照してください。
-
-    - `referrer`
-      - : 文字列で、リクエストのリファラーを指定します。これは同じオリジンの URL、 `about:client`、空文字列のいずれかを取ることができます。
-    - `referrerPolicy`
-      - : リクエストで使用する[リファラーポリシー](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)を指定します。使用可能な値は、 `no-referrer`, `no-referrer-when-downgrade`, `same-origin`, `origin`, `strict-origin`, `origin-when-cross-origin`, `strict-origin-when-cross-origin`, `unsafe-url` のいずれかです。
-    - `integrity`
-      - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
-    - `keepalive`
-      - : `keepalive` オプションは、ページの終了後のリクエストを許可するのに使用されます。 `keepalive` フラグつきのフェッチは {{domxref("Navigator.sendBeacon()")}} API の置き換えです。
-    - `signal`
-      - : {{domxref("AbortSignal")}} オブジェクトのインスタンスです。つまり {{domxref("AbortController")}} 経由でフェッチリクエストと通信したり望む場合には中止したりできます。
-    - `priority`
-      - : 同じ種類の他のリクエストに対する、この読み込みリクエストの優先度を指定します。以下の文字列のいずれかでなければなりません。
-        - `high`
-          - : 同じ種類の他のリクエストに対する優先度の高いフェッチリクエスト。
-        - `low`
-          - : 同じ種類の他のリクエストと相対した、優先度の低いフェッチリクエスト。
-        - `auto`
-          - : 同じ種類の他のリクエストに対するフェッチリクエストの優先度を自動的に決定します（既定値）。
+  - : リクエストに適用する独自の設定を含む {{domxref("RequestInit")}} オブジェクトです。
 
 ### 返値
 
@@ -112,8 +48,10 @@ fetch(resource, options)
 
 - `AbortError` {{domxref("DOMException")}}
   - : {{domxref("AbortController")}} の {{domxref("AbortController.abort", "abort()")}} メソッドの呼び出しによりリクエストが中止された。
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `browsingTopics: true` で行われたときに発生します。
 - {{jsxref("TypeError")}}
-  - : 以下の理由で発生します。
+  - : 以下の理由で発生する可能性があります。
 
 <table>
   <thead>
@@ -123,6 +61,10 @@ fetch(resource, options)
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>権限ポリシーによるブロック</td>
+      <td><a href="/ja/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> の使用は、<a href="/ja/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} で、<code>fetch()</code> リクエストが <code>attributionReporting</code> を指定して行われました。</td>
+    </tr>
     <tr>
       <td>ヘッダー名が無効である。</td>
       <td>
@@ -138,7 +80,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        ヘッダーの値が無効である。ヘッダーオブジェクトは正確に 2 つの要素を含まなければなならない。
+        ヘッダーの値が無効である。ヘッダーオブジェクトは正確に 2 つの要素を含まなければならない。
       </td>
       <td>
         <pre>
@@ -152,7 +94,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        URLまたはスキームが無効であるか、フェッチが対応していないスキームを使用しているか、または特定のリクエストモードに対応していないスキームを使用している。
+        URL またはスキームが無効であるか、フェッチが対応していないスキームを使用しているか、または特定のリクエストモードに対応していないスキームを使用している。
       </td>
       <td>
         <pre>
@@ -207,7 +149,7 @@ fetch('https://example.com/', { method: 'CONNECT' });
     </tr>
     <tr>
       <td>
-        リクエストモードが "no-cors" であり、リクエストメソッドが CORS-safe に掲載されているメソッド（<code>'GET'</code>, <code>'HEAD'</code>, <code>'POST'</code>）でない場合。
+        リクエストモードが "no-cors" であり、リクエストメソッドが CORS セーフリストに掲載されているメソッド（<code>'GET'</code>, <code>'HEAD'</code>, <code>'POST'</code>）でない場合。
       </td>
       <td>
         <pre>
@@ -247,7 +189,8 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest)
+window
+  .fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -260,47 +203,44 @@ fetch(myRequest)
   });
 ```
 
-[Fetch with init then Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request/index.html)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
+[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)）では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
+この場合、{{HTTPHeader("Cache-Control")}} 値を設定することで、どのようなキャッシュレスポンスであれば問題ないかを示すことができます。
 
 ```js
 const myImage = document.querySelector("img");
+const reqHeaders = new Headers();
 
-const myHeaders = new Headers();
-myHeaders.append("Accept", "image/jpeg");
+// キャッシュされたレスポンスは、それが 1 週間以上前のものでなければ問題ない
+reqHeaders.set("Cache-Control", "max-age=604800");
 
-const myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+const options = {
+  headers: reqHeaders,
 };
 
-const myRequest = new Request("flowers.jpg");
+// init をヘッダーと一緒に "options" オブジェクトとして渡す
+const req = new Request("flowers.jpg", options);
 
-fetch(myRequest, myInit).then((response) => {
-  // …
+fetch(req).then((response) => {
+  // ...
 });
 ```
 
 同様に `init` オブジェクトを `Request` コンストラクターに渡しても、同じ効果が得られます。
 
 ```js
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
 `init` の `headers` でオブジェクトリテラルを使用することもできます。
 
 ```js
-const myInit = {
-  method: "GET",
+const options = {
   headers: {
-    Accept: "image/jpeg",
+    "Cache-Control": "max-age=60480",
   },
-  mode: "cors",
-  cache: "default",
 };
 
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
 ## 仕様書
@@ -313,6 +253,7 @@ const myRequest = new Request("flowers.jpg", myInit);
 
 ## 関連情報
 
+- {{domxref("WorkerGlobalScope.fetch()")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)

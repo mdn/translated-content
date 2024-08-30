@@ -87,7 +87,8 @@ Avec un mode d'écriture horizontal, cette déclaration CSS appliquerait une mar
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `margin-inline` et `margin-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `margin-inline` et `margin-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ## Exemples pour le remplissage
 
@@ -113,7 +114,8 @@ Avec un mode d'écriture horizontal, cette déclaration CSS appliquera un rempli
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `padding-inline` et `padding-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `padding-inline` et `padding-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ## Exemples pour les bordures
 
@@ -136,7 +138,8 @@ Il y a des propriétés raccourcies avec deux valeurs pour paramétrer la largeu
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `border-inline` et `border-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `border-inline` et `border-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ### Propriétés pour les courbures des bordures relatives au flux
 

@@ -9,14 +9,14 @@ slug: Web/API/Animation/cancel_event
 
 当动作从其他状态进入 `"idle"` 播放状态，例如当动画在结束播放后从元素中移除时，`cancel` 事件可以 {{domxref("Animation.cancel()")}} 被手动触发。
 
-> **备注：** 在新的动画中，创建一个新的初始的空闲动画不会触发 `cancel` 事件。
+> [!NOTE]
+> 在新的动画中，创建一个新的初始的空闲动画不会触发 `cancel` 事件。
 
 ## 语法
 
-```
-var cancelHandler = Animation.oncancel;
-
-Animation.oncancel = cancelHandler;
+```js-nolint
+addEventListener("cancel", (event) => { })
+oncancel = (event) => { }
 ```
 
 ### 值

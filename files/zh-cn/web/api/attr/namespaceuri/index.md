@@ -7,15 +7,10 @@ slug: Web/API/Attr/namespaceURI
 
 **`Attr.namespaceURI`** 只读属性返回属性的命名空间 URI，如果该元素不在命名空间中，则返回 null。
 
-> **备注：** 在 DOM4 之前，该 API 是在 {{domxref("Node")}} 中定义的。
+> [!NOTE]
+> 在 DOM4 之前，该 API 是在 {{domxref("Node")}} 中定义的。
 
-## 语法
-
-```
-namespace = attribute.namespaceURI
-```
-
-## 例子
+## 示例
 
 在这个片段中，正在检查一个属性的 {{domxref("localName")}} 和 `namespaceURI`。如果 `namespaceURI` 返回 XUL 命名空间，并且 localName 返回 "browser"，则该节点被理解为 XUL `<browser/>`。
 

@@ -45,7 +45,8 @@ l10n:
 
   - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes#id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
-    > **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
+    > [!NOTE]
+    > プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
     文書内で `for` 属性の値に一致する `id` 属性を持つ最初の要素が、この `label` 要素の _ラベル対象コントロール_ になります（その `id` を持つ要素が実際に [ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label) である場合）。このラベル付け可能な要素でない場合は、 `for` 属性は何も効果がありません。もし、文書の後半に `id` の値に一致する他の要素があったとしても、それらは考慮されません。
 
@@ -169,7 +170,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

@@ -61,7 +61,8 @@ async (param1, param2, ...paramN) => {
 
 让我们逐步将传统的匿名函数分解为最简单的箭头函数。每一步都是一个有效的箭头函数。
 
-> **备注：** 传统函数表达式和箭头函数除了语法上的区别外，还有更多的不同。我们将在接下来的几个小节中详细介绍它们的行为差异。
+> [!NOTE]
+> 传统函数表达式和箭头函数除了语法上的区别外，还有更多的不同。我们将在接下来的几个小节中详细介绍它们的行为差异。
 
 ```js-nolint
 // 传统匿名函数
@@ -238,7 +239,8 @@ class C {
 }
 ```
 
-> **备注：** 类字段是在*实例*（instance）上定义的，而不是在*原型*（prototype）上定义的，因此每次创建实例都会创建一个新的函数引用并分配一个新的闭包，这可能会导致比普通非绑定方法更多的内存使用。
+> [!NOTE]
+> 类字段是在*实例*（instance）上定义的，而不是在*原型*（prototype）上定义的，因此每次创建实例都会创建一个新的函数引用并分配一个新的闭包，这可能会导致比普通非绑定方法更多的内存使用。
 
 出于类似原因，[`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 和 [`bind()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法在箭头函数上调用时不起作用，因为箭头函数是根据箭头函数定义的作用域来建立 `this` 的，而 `this` 值不会根据函数的调用方式而改变。
 
@@ -255,7 +257,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> **备注：** 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#让_eval_和_arguments_变的简单)下不能声明名为 `arguments` 的变量，因此上面的代码会出现语法错误。这使得 `arguments` 的范围效应更容易理解。
+> [!NOTE]
+> 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#让_eval_和_arguments_变的简单)下不能声明名为 `arguments` 的变量，因此上面的代码会出现语法错误。这使得 `arguments` 的范围效应更容易理解。
 
 在大多数情况下，使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)是比使用 `arguments` 对象更好的选择。
 

@@ -52,7 +52,8 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
     - `size(chunk)`
       - : 引数 `chunk` を取るメソッド。これは各チャンクに使用するサイズをバイト単位で示します。
 
-> **メモ:** 自分自身で独自の `readableStrategy` や `writableStrategy` を定義したり、オブジェクト値に対して {{domxref("ByteLengthQueuingStrategy")}} や {{domxref("CountQueuingStrategy")}} のインスタンスを使用したりすることができます。
+> [!NOTE]
+> 自分自身で独自の `readableStrategy` や `writableStrategy` を定義したり、オブジェクト値に対して {{domxref("ByteLengthQueuingStrategy")}} や {{domxref("CountQueuingStrategy")}} のインスタンスを使用したりすることができます。
 
 ## 例
 

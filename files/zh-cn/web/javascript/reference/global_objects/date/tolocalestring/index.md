@@ -43,7 +43,8 @@ toLocaleString(locales, options)
 
 在支持 `Intl.DateTimeFormat` 的实现中，此方法等价于 `new Intl.DateTimeFormat(locales, options).format(date)`。
 
-> **备注：** 大多数时候，`toLocaleString()` 返回的格式是一致的。但是，这可能在未来发生变化，且不能保证所有语言都能得到一致的格式。输出的变化因实现而异，而且这种变化是规范所允许的。你不应该将 `toLocaleString()` 的结果与静态值作比较。
+> [!NOTE]
+> 大多数时候，`toLocaleString()` 返回的格式是一致的。但是，这可能在未来发生变化，且不能保证所有语言都能得到一致的格式。输出的变化因实现而异，而且这种变化是规范所允许的。你不应该将 `toLocaleString()` 的结果与静态值作比较。
 
 ## 示例
 

@@ -42,7 +42,8 @@ Les propriétés personnalisées ont actuellement deux formes :
 - les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
 - les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
-> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ([bug Firefox 985838](https://bugzil.la/985838))
+> [!NOTE]
+> Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ([bug Firefox 985838](https://bugzil.la/985838))
 
 Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
 
@@ -196,7 +197,8 @@ Avec [`var()`](</fr/docs/Web/CSS/var()>) on peut définir plusieurs valeurs par 
 
 Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) en question est invalide.
 
-> **Note :** Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.
+> [!NOTE]
+> Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.
 
 ```css
 .deux {
@@ -215,11 +217,13 @@ Le premier argument passé à la fonction est le nom de la [propriété personna
 }
 ```
 
-> **Note :** La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
+> [!NOTE]
+> La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
 >
 > La syntaxe de la deuxième règle (sur `.trois`) permet d'utiliser une autre variable comme variable de secours et une autre valeur (`pink`) dans le cas où cette deuxième variable ne fonctionne pas.
 
-> **Note :** Des problèmes de performances ont pu être observés causant un rendu plus lent des pages car le navigateur doit analyser l'ensemble des variables pour voir si elles sont disponibles.
+> [!NOTE]
+> Des problèmes de performances ont pu être observés causant un rendu plus lent des pages car le navigateur doit analyser l'ensemble des variables pour voir si elles sont disponibles.
 
 ## Validité et valeurs
 
@@ -260,7 +264,8 @@ Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-
 
 {{EmbedLiveSample('Gestion_des_variables_invalides')}}
 
-> **Note :** La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.
+> [!NOTE]
+> La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.
 >
 > Si on avait directement écrit `color: 16px` (sans substitution), c'est alors la déclaration précédente qui aurait été utilisée.
 
@@ -283,7 +288,8 @@ element.style.setProperty("--ma-variable", varJS + 4);
 
 {{Compat}}
 
-> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. [bug Firefox 985838](https://bugzil.la/985838))
+> [!NOTE]
+> Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. [bug Firefox 985838](https://bugzil.la/985838))
 
 ## Voir aussi
 

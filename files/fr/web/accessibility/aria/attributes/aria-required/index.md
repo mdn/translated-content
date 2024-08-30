@@ -13,13 +13,15 @@ Lorsque des contrôles de formulaire sont créés avec des éléments non-séman
 
 À l'instar de l'attribut HTML `required` pour les contrôles de formulaire en HTML sémantique, l'attribut `aria-required` exprime explicitement aux outils d'assistance que l'élément doit être rempli avant que le formulaire puisse être envoyé. L'attribut `required` d'un contrôle de formulaire en HTML sémantique empêchera l'envoi du formulaire si aucune valeur n'est présente, fournissant un message d'erreur natif pour certains navigateurs si une valeur requise est invalide lors de la tentative d'envoi du formulaire. L'attribut `aria-required`, comme tous les états et propriétés ARIA, n'a aucun impact sur les fonctionnalités de l'élément. Toute fonctionnalité et comportement doit être implémenté à l'aide de JavaScript.
 
-> **Note :** ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
+> [!NOTE]
+> ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
 
 Les pseudo-classes CSS [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) ciblent les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), et [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) selon qu'ils sont obligatoires ou optionnels. Lorsqu'on utilise un élément non-sémantique pour un contrôle de formulaire, ces pseudo-classes ne le ciblent pas. En revanche, il est possible d'utiliser des sélecteurs d'attribut pour déterminer si l'attribut est présent&nbsp;: `[aria-required="true"]` ou `[aria-required="false"]`.
 
 Si un formulaire contient à la fois des éléments de formulaire obligatoires et optionnels, les éléments obligatoires devraient être indiqués visuellement d'une façon qui ne repose pas uniquement sur une couleur. Généralement, on utilise un texte descriptif et/ou une icône.
 
-> **Note :** Les éléments obligatoires devraient être distinguables pour toutes les personnes. Assurez-vous que la présentation visuelle indique que le contrôle est obligatoire d'une façon claire, cohérente et visible et rappelez-vous que la couleur ne suffit pas à communiquer cette information.
+> [!NOTE]
+> Les éléments obligatoires devraient être distinguables pour toutes les personnes. Assurez-vous que la présentation visuelle indique que le contrôle est obligatoire d'une façon claire, cohérente et visible et rappelez-vous que la couleur ne suffit pas à communiquer cette information.
 
 ## Exemples
 

@@ -11,7 +11,8 @@ Ceci est tout spécialement utile lors de l'ouverture de liens non vérifiés/fi
 
 Veuillez noter que lorsque `noopener` est utilisé, les noms de cibles non vides et différents de `_top`, `_self` et `_parent` sont tous traités en tant que `_blank` pour déterminer si le lien doit s'ouvrir ou non dans un nouvel onglet/fenêtre.
 
-> **Note :** l'utilisation de `target="_blank"` sur des éléments `<a>` fournit désormais implicitement le même comportement pour l'attribut `rel` que si l'on avait utilisé `rel="noopener"`, c'est à dire l'absence de mise en place de `window.opener`. Voir la [compatibilité navigateur](/fr/docs/Web/HTML/Element/a#browser_compatibility) pour plus d'informations sur l'implémentation actuelle dans les navigateurs.
+> [!NOTE]
+> L'utilisation de `target="_blank"` sur des éléments `<a>` fournit désormais implicitement le même comportement pour l'attribut `rel` que si l'on avait utilisé `rel="noopener"`, c'est à dire l'absence de mise en place de `window.opener`. Voir la [compatibilité navigateur](/fr/docs/Web/HTML/Element/a#browser_compatibility) pour plus d'informations sur l'implémentation actuelle dans les navigateurs.
 
 ## Spécifications
 

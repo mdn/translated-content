@@ -63,7 +63,8 @@ Link: <https://fonts.googleapis.com/>; rel=preconnect
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
 ```
 
-> **メモ:** ページが多数の第三者ドメインに接続する必要がある場合、すべてに事前接続するのは逆効果です。 `preconnect` ヒントは最も重要な接続にのみ使用するのが最適です。他にも `<link rel="dns-prefetch">` を使用して、最初の段階である DNS 検索の時間を節約しましょう。
+> [!NOTE]
+> ページが多数の第三者ドメインに接続する必要がある場合、すべてに事前接続するのは逆効果です。 `preconnect` ヒントは最も重要な接続にのみ使用するのが最適です。他にも `<link rel="dns-prefetch">` を使用して、最初の段階である DNS 検索の時間を節約しましょう。
 
 これらのヒントをペアにしている理由は、 dns-prefetch の対応が preconnect の対応よりも優れているからです。 preconnect に対応していないブラウザーでも、 dns-prefetch に代替されることで、ある程度の好ましいことを取得することができます。これは HTML の機能なので、とても耐障害性に優れています。非対応のブラウザーが dns-prefetch のヒントや他のリソースのヒントに遭遇しても、サイトが壊れることはありません。ただ、指定されたことが提供されないだけです。
 

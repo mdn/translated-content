@@ -101,7 +101,8 @@ superHeroes["members"][1]["powers"][2];
 4. 在此物件中，我們要存取 `powers` 屬性，所以用 `["powers"]`。
 5. 在 `powers` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
 
-> **備註：** 我們在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
+> [!NOTE]
+> 我們在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
 
 ### 陣列作為 JSON
 
@@ -282,9 +283,11 @@ function showHeroes(jsonObj) {
 5. 再用另一個 `for` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<li>` 元素，把超能力放進該元素之中，再透過 `appendChild()` 把 `listItem` 放入 `<ul>` 元素之內 (`myList`)。
 6. 最後就是在 `<article>` (`myArticle`) 之內附加 `<h2>`、`<p>`、`<ul>`；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
 
-> **備註：** 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
+> [!NOTE]
+> 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 
-> **備註：** 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
+> [!NOTE]
+> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
 
 ## 物件與文字交互轉換
 

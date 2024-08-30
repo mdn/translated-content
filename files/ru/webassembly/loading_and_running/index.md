@@ -53,9 +53,11 @@ fetch("module.wasm")
 }
 ```
 
-> **Примечание:** Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
+> [!NOTE]
+> Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
 
-> **Примечание:** Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> [!NOTE]
+> Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
 
 ### Выполнение вашего кода WebAssembly
 
@@ -77,7 +79,8 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 );
 ```
 
-> **Примечание:** Для получения дополнительной информации о том, как работает экспорт из модуля WebAssembly, ознакомьтесь с разделами [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API), и [Понимание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format).
+> [!NOTE]
+> Для получения дополнительной информации о том, как работает экспорт из модуля WebAssembly, ознакомьтесь с разделами [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API), и [Понимание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format).
 
 ## Используя XMLHttpRequest
 
@@ -104,4 +107,5 @@ request.onload = function () {
 };
 ```
 
-> **Примечание:** вы можете увидеть пример этого в действии в [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
+> [!NOTE]
+> Можно увидеть пример этого в действии в [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).

@@ -32,7 +32,8 @@ Una nueva cadena en la que ciertos caracteres no han sido reemplazados.
 
 La función `unescape()` reemplaza cualquier secuencia de escape con el carácter que representa. Específicamente, reemplaza cualquier secuencia de escape de la forma `%XX` o `%uXXXX` (donde `X` representa un dígito hexadecimal) con el carácter que tiene el valor hexadecimal `XX`/`XXXX`. Si la secuencia de escape no es una secuencia de escape válida (por ejemplo, si "%" va seguido de uno o ningún dígito hexadecimal), se deja como está.
 
-> **Nota:** Esta función se usó principalmente para la codificación de URL y se basa en parte en el formato de escape en {{rfc(1738)}}. La función `unescape()` _no_ evalúa [secuencias de escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) en cadenas literales. Puede reemplazar `\xXX` con `%XX` y `\uXXXX` con `%uXXXX` para obtener una cadena que `unescape()` pueda manejar.
+> [!NOTE]
+> Esta función se usó principalmente para la codificación de URL y se basa en parte en el formato de escape en {{rfc(1738)}}. La función `unescape()` _no_ evalúa [secuencias de escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) en cadenas literales. Puede reemplazar `\xXX` con `%XX` y `\uXXXX` con `%uXXXX` para obtener una cadena que `unescape()` pueda manejar.
 
 ## Ejemplos
 

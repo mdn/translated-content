@@ -15,7 +15,8 @@ Cette section présente les types de contenu que nous fournissons et les droits 
 
 ### Documentation
 
-> **Note :** Le contenu de MDN Web Docs a été préparé avec la contribution d'auteurs internes et externes à Mozilla. Sauf indication contraire, le contenu est disponible selon les termes de la [licence Creative Commons Attribution-ShareAlike (en anglais)](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou toute version ultérieure.
+> [!NOTE]
+> Le contenu de MDN Web Docs a été préparé avec la contribution d'auteurs internes et externes à Mozilla. Sauf indication contraire, le contenu est disponible selon les termes de la [licence Creative Commons Attribution-ShareAlike (en anglais)](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou toute version ultérieure.
 
 Votre réutilisation du contenu ici est publiée sous la même licence que le contenu original — CC-BY-SA v2.5 ou toute version ultérieure. Lorsque vous réutilisez le contenu de MDN Web Docs, vous devez vous assurer que le contenu original ainsi que les «&nbsp;Contributrices et contributeurs de Mozilla&nbsp;» sont cités. Incluez un lien hypertexte (en ligne) ou une URL (sur papier) vers la page spécifique du contenu cité. Par exemple, pour attribuer la paternité de _cet_ article, vous pouvez écrire&nbsp;:
 
@@ -35,7 +36,8 @@ Depuis le lancement de la nouvelle plateforme MDN Yari le 14 décembre 2020, il 
 
 Si vous souhaitez contribuer à MDN Web Docs, vous acceptez que votre documentation soit disponible sous la licence <i lang="en">Attribution-ShareAlike</i> (ou occasionnellement une licence alternative déjà spécifiée par la page que vous éditez) et que vos échantillons de code soient disponibles sous [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (dédié au domaine public).
 
-> **Attention :** Aucune nouvelle page ne peut être créée en utilisant des licences alternatives.
+> [!WARNING]
+> Aucune nouvelle page ne peut être créée en utilisant des licences alternatives.
 
 **Les droits d'auteur des contributions restent la propriété de l'auteur, à moins qu'il ne les cède à quelqu'un d'autre.**
 
@@ -53,7 +55,8 @@ Si nous recevons une demande de modification et découvrons qu'elle contient du 
 
 ### Si vous souhaitez réutiliser ou republier du contenu
 
-> **Note :** À moins qu'il n'y ait une bonne raison de republier le contenu, nous dirons probablement «&nbsp;non&nbsp;».
+> [!NOTE]
+> À moins qu'il n'y ait une bonne raison de republier le contenu, nous dirons probablement «&nbsp;non&nbsp;».
 > La décision de l'équipe de rédaction de MDN est définitive.
 
 Si quelqu'un souhaite faire don à MDN d'un article qu'il a précédemment publié sur son blog ou s'il est logique de copier une fiche de référence complexe sur le MDN, il peut être justifié de la republier. Dans ces cas, discutez de votre projet avec l'équipe MDN au préalable&nbsp;:

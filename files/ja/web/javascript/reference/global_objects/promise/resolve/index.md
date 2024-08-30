@@ -162,7 +162,8 @@ Promise.resolve(thenable).then((v) => {
 });
 ```
 
-> **警告:** 自分自身に解決する thenable に対して `Promise.resolve()` を呼び出さないでください。これは無限にネストしたプロミスを平坦化しようとするため、無限の再帰を引き起こします。
+> [!WARNING]
+> 自分自身に解決する thenable に対して `Promise.resolve()` を呼び出さないでください。これは無限にネストしたプロミスを平坦化しようとするため、無限の再帰を引き起こします。
 
 ```js example-bad
 const thenable = {
@@ -171,7 +172,7 @@ const thenable = {
   },
 };
 
-Promise.resolve(thenable); // 無z限の再帰を引き起こす
+Promise.resolve(thenable); // 無限の再帰を引き起こす
 ```
 
 ### Promise 以外のコンストラクターに対する resolve() の呼び出し

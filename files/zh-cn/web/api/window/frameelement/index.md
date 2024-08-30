@@ -9,7 +9,8 @@ l10n:
 
 **`Window.frameElement`** 属性返回嵌入窗口的元素（例如 {{HTMLElement("iframe")}} 或 {{HTMLElement("object")}}）。
 
-> **备注：** 尽管该属性的名称如此，但它适用于任何嵌入点内嵌入的文档，包括 {{HTMLElement("object")}}、{{HTMLElement("iframe")}} 或 {{HTMLElement("embed")}}。
+> [!NOTE]
+> 尽管该属性的名称如此，但它适用于任何嵌入点内嵌入的文档，包括 {{HTMLElement("object")}}、{{HTMLElement("iframe")}} 或 {{HTMLElement("embed")}}。
 
 ## 值
 

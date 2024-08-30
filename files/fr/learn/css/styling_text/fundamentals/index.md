@@ -34,14 +34,16 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> [!NOTE]
+> Si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
 - **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
 - **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte dans la boîte de contenu.
 
-> **Note :** Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
+> [!NOTE]
+> Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
 
 ## Fontes
 
@@ -62,7 +64,8 @@ Passons directement aux propriétés pour le style des polices. Dans cet exemple
 </p>
 ```
 
-> **Note :** (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
+> [!NOTE]
+> (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
 
 Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) sur Github (voir aussi [le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
 
@@ -128,9 +131,11 @@ La liste des polices web vraiment sûres changera à mesure que les systèmes d'
 | Trebuchet MS    | sans-serif     | Vous devriez être prudent avec l'utilisation de cette police - elle n'est pas aussi largement disponible sur les systèmes d'exploitation des mobiles.                                                                                         |
 | Verdana         | sans-serif     |                                                                                                                                                                                                                                               |
 
-> **Note :** Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
+> [!NOTE]
+> Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
 
-> **Note :** Il y a moyen de télécharger une police personnalisée avec une page Web ; cela permet une utilisation personnalisée de la police comme vous le souhaitez : **les polices web**. C'est un peu plus complexe, et nous en discuterons dans un article séparé plus loin dans le module.
+> [!NOTE]
+> Il y a moyen de télécharger une police personnalisée avec une page Web ; cela permet une utilisation personnalisée de la police comme vous le souhaitez : **les polices web**. C'est un peu plus complexe, et nous en discuterons dans un article séparé plus loin dans le module.
 
 #### Polices par défaut
 
@@ -160,7 +165,8 @@ Dans ce cas, le navigateur débute la lecture de la liste et cherche à voir si 
 
 Indiquer un nom de police générique approprié en fin de liste est une bonne idée : si aucune des polices listées n'est disponible, le navigateur peut au‑moins fournir quelque chose de convenable. Soulignons ce point : les paragraphes seront rendus avec la police serif par défaut du navigateur si aucune autre option n'est disponible — généralement Time New Roman — mais ce ne sera pas un bon substitut à une police sans-serif !
 
-> **Note :** Les noms de police comportant plus d'un mot — comme `Trebuchet MS` — doivent être entourés de guillemets, par exemple `"Trebuchet MS"`.
+> [!NOTE]
+> Les noms de police comportant plus d'un mot — comme `Trebuchet MS` — doivent être entourés de guillemets, par exemple `"Trebuchet MS"`.
 
 #### Un exemple de font-family
 
@@ -348,7 +354,8 @@ Les 4 propriétés sont les suivantes :
 3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
 4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
 
-> **Note :** Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
+> [!NOTE]
+> Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
 
 #### Ombres multiples
 
@@ -409,7 +416,8 @@ p {
 
 {{ EmbedLiveSample('', '100%', 250) }}
 
-> **Note :** Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
+> [!NOTE]
+> Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
 
 ## Mise en page du texte
 

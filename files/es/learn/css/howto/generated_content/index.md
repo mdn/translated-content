@@ -9,7 +9,8 @@ Este artículo describe algunas formas en las que puedes usar CSS para agregar c
 
 Una de las ventajas importantes de CSS es que te ayuda a separar el estilo de un documento de su contenido. Sin embargo, hay situaciones en las que tiene sentido especificar cierto contenido como parte de la hoja de estilo, no como parte del documento. Puede especificar contenido de texto o imagen dentro de una hoja de estilo cuando ese contenido está estrechamente vinculado a la estructura del documento.
 
-> **Nota:** El contenido especificado en una hoja de estilo no se convierte en parte del {{Glossary("DOM")}}.
+> [!NOTE]
+> El contenido especificado en una hoja de estilo no se convierte en parte del {{Glossary("DOM")}}.
 
 Especificar contenido en una hoja de estilo puede causar complicaciones. Por ejemplo, puede tener diferentes versiones de idioma de su documento que comparte una hoja de estilo. Si especifica contenido en su hoja de estilo que requiere traducción, debe colocar esas partes de su hoja de estilo en diferentes archivos y hacer arreglos para que se vinculen con las versiones de idioma apropiadas de su documento.
 

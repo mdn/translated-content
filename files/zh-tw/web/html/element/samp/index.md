@@ -25,7 +25,8 @@ samp {
 }
 ```
 
-> **備註：** 如果你需要一個元素來作為你的網站或應用程式 JavaScript 代碼生成的輸出的容器，則應該使用 {{HTMLElement("output")}} 元素。
+> [!NOTE]
+> 如果你需要一個元素來作為你的網站或應用程式 JavaScript 代碼生成的輸出的容器，則應該使用 {{HTMLElement("output")}} 元素。
 
 ## 範例
 

@@ -18,7 +18,8 @@ widows: initial;
 widows: unset;
 ```
 
-> **Nota:** En la tipografia, un _widow_ is la ultima linea de un paragrafo que aparece solo en la parte superior de la pagina.
+> [!NOTE]
+> En la tipografia, un _widow_ is la ultima linea de un paragrafo que aparece solo en la parte superior de la pagina.
 
 {{cssinfo}}
 

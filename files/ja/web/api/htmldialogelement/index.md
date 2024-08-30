@@ -2,12 +2,12 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+  sourceCommit: 9d5c9fbe387ba7c143fdd7c73a265b209b7f6ec4
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLDialogElement`** インターフェイスは {{HTMLElement("dialog")}} 要素を操作するメソッドを提供します。 {{domxref("HTMLElement")}} インターフェースからプロパティとメソッドを継承しています。
+**`HTMLDialogElement`** インターフェイスは {{HTMLElement("dialog")}} 要素を操作するメソッドを提供します。 {{domxref("HTMLElement")}} インターフェイスからプロパティとメソッドを継承しています。
 
 {{InheritanceDiagram}}
 
@@ -33,8 +33,10 @@ _親である {{domxref("HTMLElement")}} から継承したメソッドがあり
 
 ## イベント
 
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : ユーザーがエスケープキーで現在開いているダイアログを解除したときに発行されます。
+_親インターフェイスである {{DOMxRef("HTMLElement")}} から継承したイベントがあります。_
+
+これらのイベントを {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用して、またはこのインターフェイスの `onイベント名` プロパティにイベントリスナーを代入することによって待ち受けます。
+
 - {{domxref("HTMLDialogElement/close_event", "close")}}
   - : エスケープキー、`HTMLDialogElement.close()` メソッド、または [`method="dialog"`](/ja/docs/Web/HTML/Element/form#メソッド) でダイアログ内のフォームを送信することによって、このダイアログが閉じられたときに発行されます。
 
@@ -42,30 +44,32 @@ _親である {{domxref("HTMLElement")}} から継承したメソッドがあり
 
 ### モーダルダイアログを開く
 
-以下の例はボタンを表示し、クリックすると、フォームの入ったモーダルダイアログ ({{htmlelement("dialog")}}) を {{domxref("HTMLDialogElement.showModal()")}} 関数によって開きます。そこから _Cancel_ ボタンを押して ({{domxref("HTMLDialogElement.close()")}} 関数で) ダイアログを閉じるか、送信ボタンでフォームを送信するかします。Cancel ボタンを選択すると、{{domxref("HTMLDialogElement/close_event", "close")}} イベントを生成します。{{domxref("HTMLDialogElement/cancel_event", "cancel")}} イベントではありません。
+以下の例はボタンを表示し、クリックすると、フォームの入ったモーダルダイアログ ({{htmlelement("dialog")}}) を {{domxref("HTMLDialogElement.showModal()")}} 関数によって開きます。そこから _Cancel_ ボタンを押して ({{domxref("HTMLDialogElement.close()")}} 関数で) ダイアログを閉じるか、送信ボタンでフォームを送信するかします。Cancel ボタンを選択すると、{{domxref("HTMLDialogElement/close_event", "close")}} イベントを生成します。{{domxref("HTMLElement/cancel_event", "cancel")}} イベントではありません。
+
+#### HTML
 
 ```html
-<!-- pop-up dialog box, containing a form -->
+<!-- フォームが入ったポップアップダイアログボックス -->
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label for="favAnimal">Favorite animal:</label>
+      <label for="favAnimal">好きな動物:</label>
       <select id="favAnimal" name="favAnimal">
         <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
+        <option>アルテミア</option>
+        <option>レッサーパンダ</option>
+        <option>クモザル</option>
       </select>
     </p>
     <div>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancel" type="reset">キャンセル</button>
+      <button type="submit">確認</button>
     </div>
   </form>
 </dialog>
 
 <div>
-  <button id="updateDetails">Update details</button>
+  <button id="updateDetails">詳細を更新</button>
 </div>
 ```
 
@@ -85,13 +89,13 @@ function openCheck(dialog) {
   }
 }
 
-// Update button opens a modal dialog
+// 更新ボタンを押すとモーダルダイアログが開く
 updateButton.addEventListener("click", () => {
   dialog.showModal();
   openCheck(dialog);
 });
 
-// Form cancel button closes the dialog box
+// ダイアログボックスを閉じるフォームキャンセルボタン
 cancelButton.addEventListener("click", () => {
   dialog.close("animalNotChosen");
   openCheck(dialog);

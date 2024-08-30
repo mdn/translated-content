@@ -11,7 +11,8 @@ l10n:
 
 `WGSLLanguageFeatures` オブジェクトは {{domxref("GPU.wgslLanguageFeatures")}} プロパティ経由で参照します。
 
-> **メモ:** API をサポートしているすべてのブラウザーの WebGPU ですべての WGSL 言語の拡張が使えるわけではありません。使うことにした拡張をすべて徹底的にテストすることを推奨します。
+> [!NOTE]
+> API をサポートしているすべてのブラウザーの WebGPU ですべての WGSL 言語の拡張が使えるわけではありません。使うことにした拡張をすべて徹底的にテストすることを推奨します。
 
 {{InheritanceDiagram}}
 

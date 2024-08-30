@@ -9,7 +9,8 @@ La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur 
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-> **Note :** La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
+> [!NOTE]
+> La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
 
 ## Syntaxe
 

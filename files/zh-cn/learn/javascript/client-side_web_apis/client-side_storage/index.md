@@ -43,7 +43,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 通常客户端和服务端存储是结合在一起使用的。例如，你可以从数据库中下载一个由网络游戏或音乐播放器应用程序使用的音乐文件，将它们存储在客户端数据库中，并按需要播放它们。用户只需下载音乐文件一次——在随后的访问中，它们将从数据库中检索。
 
-> **备注：** 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)。
+> [!NOTE]
+> 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)。
 
 ### 传统方法：cookies
 
@@ -55,7 +56,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种[安全问题](/zh-CN/docs/Web/HTTP/Cookies#安全)，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。
 cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果你的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，你不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
 
-> **备注：** 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
+> [!NOTE]
+> 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
 
 ### 新流派：Web Storage 和 IndexedDB
 
@@ -237,9 +239,11 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 你的例子完成了 - 做得好！现在剩下的就是保存你的代码并在浏览器中测试你的 HTML 页面。你可以在这里看到我们的[完成版本并在线运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)。
 
-> **备注：** 在 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
+> [!NOTE]
+> 在 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
 
-> **备注：** 在完成版本的源代码中， `<script src="index.js" defer></script>` 一行里， `defer` 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。
+> [!NOTE]
+> 在完成版本的源代码中， `<script src="index.js" defer></script>` 一行里， `defer` 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。
 
 ## 存储复杂数据 — IndexedDB
 
@@ -249,19 +253,19 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 ### 通过一个笔记存储示例演示
 
-在这里，我们将向你介绍一个示例，该示例允许你在浏览器中存储笔记并随时查看和删除它们，在我们进行时，我们将解释 IDB 的最基本部分并让你自己构建注释。
+在这里，我们将向你介绍一个示例，该示例允许你在浏览器中存储笔记并随时查看和删除它们，在我们进行时，我们将解释 IDB 的最基本部分并让你自己构建笔记。
 
 这个应用看起来像这样：
 
 ![](idb-demo.png)
 
-每个笔记都有一个标题和一些正文，每个都可以单独编辑。我们将在下面通过的 JavaScript 代码提供详细的注释，以帮助你了解正在发生的事情。
+每个笔记都有一个标题和一些正文，每个都可以单独编辑。我们将在下面通过的 JavaScript 代码提供详细的笔记，以帮助你了解正在发生的事情。
 
 ### 开始
 
 1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
 
-2、浏览这些文件。你将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
+2、浏览这些文件。你将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示笔记的位置的主内容区域，以及用于在数据库中输入新笔记的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示笔记的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}} 本身，以及{{htmlelement("button")}}。
 
 3、将你的 JavaScript 文件重命名为 `index.js` 。你现在可以开始向其添加代码了。
 
@@ -298,7 +302,8 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
    要在 IndexedDB 中处理此问题，你需要创建一个请求对象（可以随意命名 - 命名为`request`，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，你将在下面看到这些代码。
 
-   > **备注：** 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
+   > [!NOTE]
+   > 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
 
    1. 在之前添加的事件处理程序下方添加以下代码 - 在`window.onload`处理程序内：
 
@@ -349,7 +354,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
    这是我们定义数据库的模式（结构）的地方; 也就是说，它包含的列（或字段）集。这里我们首先从`e.target.result`（事件目标的`result`属性）中获取对现有数据库的引用，该引用是`request`对象。这相当于处理程序`db = request.result;`内部的行`onsuccess`，但我们需要在此单独执行此操作，因为`onupgradeneeded`处理程序（如果需要）将在`onsuccess`处理程序之前运行，这意味着`db`如果我们不这样做，该值将不可用。
 
-   然后[`IDBDatabase.createObjectStore()`](/zh-CN/docs/Web/API/IDBDatabase/createObjectStore)，我们使用在打开的数据库中创建一个新的对象库。这相当于传统数据库系统中的单个表。我们给它起了名称注释，并且还指定了一个`autoIncrement`名为的关键字段`id`- 在每个新记录中，这将自动赋予增量值 - 开发人员不需要明确地设置它。作为密钥，该`id`字段将用于唯一标识记录，例如删除或显示记录时。
+   然后，我们使用 [`IDBDatabase.createObjectStore()`](/zh-CN/docs/Web/API/IDBDatabase/createObjectStore) 在打开的数据库中创建一个新的对象库。这相当于传统数据库系统中的单个表。我们将其命名为 notes，并且还指定了一个名为 `id` 的 `autoIncrement` 关键字段——在每个新记录中，这将自动赋予增量值——开发人员不需要明确地设置它。作为密钥，`id` 字段将用于唯一标识记录，例如删除或显示记录时。
 
    我们还使用以下[`IDBObjectStore.createIndex()`](/zh-CN/docs/Web/API/IDBObjectStore/createIndex)方法创建另外两个索引（字段）:( `title`每个音符将包含一个标题），以及`body`（包含音符的正文）。
 
@@ -420,7 +425,7 @@ function addData(e) {
 - 使用 {{domxref("IDBDatabase.transaction()")}} 方法打开 `notes` 对象存储的 `readwrite` 事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。
 - 使用 {{domxref("IDBTransaction.objectStore()")}} 方法访问对象库，将结果保存在 `objectStore` 变量中。
 - 使用 {{domxref("IDBObjectStore.add()")}} 添加新记录到数据库。这创建了一个请求对象，与我们之前看到的方式相同。
-- 在生命周期的关键点为 `request` 以及 `transaction` 对象添加事件处理程序以运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们 `displayData()` 再次运行该功能以更新页面上的注释显示。
+- 在生命周期的关键点为 `request` 以及 `transaction` 对象添加事件处理程序以运行代码。请求成功后，我们会清除表单输入，以便输入下一个笔记。交易完成后，我们再次运行 `displayData()` 函数以更新页面上的笔记显示。
 
 ### 显示数据
 
@@ -493,9 +498,9 @@ function displayData() {
 - 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
 - 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor)方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
 - 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor)使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
-- 接下来，我们检查光标是否包含来自数据存储区（`if(cursor){ ... }`）的记录 - 如果是这样，我们创建一个 DOM 片段，用记录中的数据填充它，然后将其插入页面（`<ul>`元素内部）。我们还包括一个删除按钮，当单击该按钮时，将通过运行该`deleteItem()`功能删除该注释，我们将在下一节中查看。
+- 接下来，我们检查光标是否包含来自数据存储区（`if(cursor){ ... }`）的记录——如果包含，我们创建一个 DOM 片段，用记录中的数据填充它，然后将其插入页面（`<ul>`元素内部）。我们还包括一个删除按钮，当单击该按钮时，将通过运行 `deleteItem()` 函数删除该笔记（我们将在下一节中查看）。
 - 在`if`块结束时，我们使用该[`IDBCursor.continue()`](/zh-CN/docs/Web/API/IDBCursor/continue)方法将光标前进到数据存储区中的下一条记录，然后`if`再次运行块的内容。如果有另一个要迭代的记录，这会导致它被插入到页面中，然后`continue()`再次运行，依此类推。
-- 当没有更多记录要迭代时，`cursor`将返回`undefined`，因此`else`块将运行而不是`if`块。此块检查是否有任何注释被插入`<ul>`- 如果没有，它会插入一条消息，说没有存储注释。
+- 当没有更多记录要迭代时，`cursor` 将返回 `undefined`，因此 `else` 块将运行（而不是 `if` 块）。此块检查是否有任何笔记被插入`<ul>`——如果没有，它会插入一条消息，说没有存储的笔记。
 
 ### 删除一条笔记
 
@@ -533,7 +538,7 @@ function deleteItem(e) {
 
 - 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的[Number（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
 - 然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该[`IDBObjectStore.delete()`](/zh-CN/docs/Web/API/IDBObjectStore/delete)方法从数据库中删除记录，并将 ID 传递给它。
-- 当数据库事务完成后，我们`<li>`从 DOM 中删除注释，然后再次检查以查看它是否`<ul>`为空，并根据需要插入注释。
+- 当数据库事务完成后，我们从 DOM 中删除笔记的 `<li>`，然后再次检查以查看 `<ul>` 是否为空，并根据需要插入笔记。
 
 就是这样了！你的例子现在应该有效。
 
@@ -671,7 +676,8 @@ function deleteItem(e) {
 
 Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTTP 响应，因此与服务工作者一起工作得非常好。
 
-> **备注：** 现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。
+> [!NOTE]
+> 现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。
 
 ### 一个 service worker 例子
 

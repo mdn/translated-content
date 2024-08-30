@@ -158,7 +158,8 @@ l10n:
 
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効にしたり無効にしたりすることができます。JavaScript では、 `btn.disabled = true` または `btn.disabled = false` のようになります。
 
-> **メモ:** ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) ページを参照してください。
+> [!NOTE]
+> ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) ページを参照してください。
 
 ## 検証
 

@@ -93,7 +93,8 @@ console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Nota:** Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> [!NOTE]
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 

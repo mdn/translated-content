@@ -3080,7 +3080,8 @@ The values below are derived in part form a number of consumer electronics techn
 - [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **备注：** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
+> [!NOTE]
+> Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="no-markdown">
   <thead>
@@ -4574,7 +4575,8 @@ Some keyboards include special keys for controlling Web browsers. Those keys fol
 
 These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as `"0"` through `"9"`), some multimedia keyboards include additional number keys for higher numbers.
 
-> **备注：** The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
+> [!NOTE]
+> The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
 
 <table class="no-markdown">
   <thead>

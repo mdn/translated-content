@@ -105,7 +105,8 @@ slug: Learn/HTML/Tables/Basics
 
 虽然在这个模块中我们不会专注于 CSS，但是我们提供了一个较小的 CSS 样式表让你使用，和默认的没有采用任何 CSS 样式的表相比，表格会更加可读。你可以在[这里](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css)获取样式表，以及在 [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) 获取 HTML 文件来应用样式表，这些会让你在“测试 HTML 表格”中有一个好的起点。
 
-> **备注：** 也可以看下 [personal_pronouns table with this styling applied](http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html) 这个版本，这个是应用了 CSS 以后表格看上去的样子。
+> [!NOTE]
+> 也可以看下 [personal_pronouns table with this styling applied](http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html) 这个版本，这个是应用了 CSS 以后表格看上去的样子。
 
 ### 什么时候你不应该使用 HTML 表格？
 
@@ -190,7 +191,8 @@ th {
 
 {{EmbedLiveSample("结果")}}
 
-> **备注：** 你也可以在 GitHub 中查看 [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> 你也可以在 GitHub 中查看 [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## 使用 \<th> 元素添加标题
 
@@ -250,13 +252,15 @@ th {
 2. 为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 **[`<th>`](/zh-CN/docs/Web/HTML/Element/th)** 元素（其中 'th' 代表 'table header'），用法和 `<td>`是一样的，除了它表示为标题，不是普通的单元格以外。进入你的 HTML 文件，将表格中应该是标题的 `<td>` 元素标记的内容，都改为用 `<th>` 元素标记。
 3. 保存你的 HTML 文件，然后在浏览器中加载，然后你应该会看到，现在的标题更像标题了。
 
-> **备注：** 你可以在 GitHub 中找到完成的版本 [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
+> [!NOTE]
+> 你可以在 GitHub 中找到完成的版本 [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) ([也可以查看在线示例](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
 
 ### 为什么标题是有用的？
 
 我们已经给出了部分答案，当标题明显突出的时候，你可以更加简单地找到你想找的数据，设计上也会看起来更好。
 
-> **备注：** 即使你不给表格添加你自己的样式，表格标题也会带有一些默认样式：加粗和居中，让标题可以突出显示。
+> [!NOTE]
+> 即使你不给表格添加你自己的样式，表格标题也会带有一些默认样式：加粗和居中，让标题可以突出显示。
 
 表格标题也有额外的好处，随着 `scope` 属性 (我们将在下一篇文章中了解到)，这个属性允许你让表格变得更加无障碍，每个标题与相同行或列中的所有数据相关联。屏幕阅读设备能一次读出一列或一行的数据，这是非常有帮助的。
 
@@ -318,7 +322,8 @@ th {
 3. 最后，使用 `rowspan` 让 "Horse" 和 "Chicken" 占 2 个单元格的高度。
 4. 保存后，用浏览器打开你写的 HTML 文件，看看改进的地方。
 
-> **备注：** 你也可以在 GitHub 上找到完成的版本 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> 你也可以在 GitHub 上找到完成的版本 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## 为表格中的列提供共同的样式
 
