@@ -3,16 +3,16 @@ title: 书本实例列表页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
 
-接下来，我们将实现图书馆中所有书本实例 (`BookInstance`) 的列表页面。这个页面需要包含与每个 `BookInstance` (链接到其详细信息页面) 关联的书本 `Book` 标题，以及 `BookInstance` 模型中的其他信息，包含每个副本的状态、印记和唯一 ID。唯一 ID 的文本，应该链接到 `BookInstance` 详细信息页面。
+接下来，我们将实现图书馆中所有书本实例（`BookInstance`）的列表页面。这个页面需要包含与每个 `BookInstance`（链接到其详细信息页面）关联的书本 `Book` 标题，以及 `BookInstance` 模型中的其他信息，包含每个副本的状态、下属品牌和唯一 ID。唯一 ID 的文本应该链接到 `BookInstance` 详细信息页面。
 
 ## 控制器
 
-`BookInstance` 列表控制器函数，需要获取所有书本实例的列表，填充关联的书本信息，然后将列表传递给模板进行呈现。
+`BookInstance` 列表控制器函数需要获取所有书本实例的列表，填充关联的书本信息，然后将列表传递给模板进行渲染。
 
-打开 **/controllers/bookinstanceController.js**。找到导出的 `bookinstance_list()` 控制器方法，并用以下代码替换它（更改后的代码以粗体显示）。
+打开 `/controllers/bookinstanceController.js`，找到导出的 `bookinstance_list()` 控制器方法，并用以下代码替换它。
 
 ```js
-// 呈现所有书本实例 (BookInstance) 的列表
+// 呈现所有书本实例（BookInstance）的列表
 exports.bookinstance_list = asyncHandler(async (req, res, next) => {
   const allBookInstances = await BookInstance.find().populate("book").exec();
 
@@ -23,11 +23,11 @@ exports.bookinstance_list = asyncHandler(async (req, res, next) => {
 });
 ```
 
-路由处理器调用 `BookInstance` 模型的 `find()` 函数，然后链式调用 `populate()` 函数，并将 `book` 字段作为参数传递——这将用完整的 `Book` 文档替换每个 `BookInstance` 对象中的**书本 ID（ObjectId）**。最后，在链式调用的末尾调用 `exec()` 函数来执行查询操作并返回一个 **Promise**。
+路由处理器调用 `BookInstance` 模型的 `find()` 函数，然后链式调用 `populate()` 函数，并将 `book` 字段作为参数传递——这将用完整的 `Book` 文档替换每个 `BookInstance` 对象中的书本 id。最后，在链式调用的末尾调用 `exec()` 函数来执行查询操作并返回一个 **Promise**。
 
 路由处理器使用 `await` 关键字来等待 **Promise** 对象，直至 **Promise** 对象被解决才会执行后续代码。如果 **Promise** 对象被兑现，查询结果将被保存到 `allBookInstances` 变量中，然后路由处理器继续执行。
 
-代码最后的部分调用 `render()` 函数，指定 **bookinstance_list** (.pug) 模板，并将 `title` 和 `bookinstance_list` 的值传递到模板中。
+代码最后的部分调用 `render()` 函数，指定 **bookinstance_list**（.pug）模板，并将 `title` 和 `bookinstance_list` 的值传递到模板中。
 
 ## 视图
 
@@ -57,7 +57,7 @@ block content
     p There are no book copies in this library.
 ```
 
-这个视图与其他视图非常相似。它扩展了布局，替换了内容 _content_ 区块，显示了从控制器传入的标题 `title`，并遍历了 `bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本（book）不可用，则显示其预期返回日期。这里引入了一个新功能——我们可以在标签之后使用点符号表示法来指定一个类别。因此，`span.text-success` 将被编译为 `<span class="text-success">`（也可以用 Pug 编写为 `span(class="text-success")`）。
+这个视图与其他视图非常相似。它扩展了布局，替换了内容 _content_ 区块，显示了从控制器传入的标题 `title`，并遍历了 `bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本（book）不可用，则显示其预期返还日期。这里引入了一个新特性——我们可以在标签之后使用点符号表示法来指定一个类别。因此，`span.text-success` 将被编译为 `<span class="text-success">`（也可以用 Pug 编写为 `span(class="text-success")`）。
 
 ## 它看起来像是？
 
