@@ -15,7 +15,7 @@ _sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再�
 
 ## 命名的颜色空间
 
-预定义的 [RGB 颜色空间](#rgb_color_spaces)包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb` 和 `rec2020`。预定义的 [CIELAB 颜色空间](#cielab_color_spaces)包括 `lab-d50` 和 `lab-d65`。预定义的 [XYZ 颜色空间](#xyz_color_spaces)包括 `xyz-d50` 和 `xyz-d65`（以及 `xyz`，作为 `xyz-d65` 的别名）。
+预定义的 [RGB 颜色空间](#rgb_颜色空间)包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb` 和 `rec2020`。预定义的 [CIELAB 颜色空间](#cielab_color_spaces)包括 `lab-d50` 和 `lab-d65`。预定义的 [XYZ 颜色空间](#xyz_color_spaces)包括 `xyz-d50` 和 `xyz-d65`（以及 `xyz`，作为 `xyz-d65` 的别名）。
 
 颜色空间可以是[矩形或极坐标的](https://ericportis.com/posts/2024/okay-color-spaces/)。矩形颜色空间包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz-d50` 和 `xyz-d65`（或 `xyz`）。极坐标颜色空间包括 `hsl`、`hwb`、`lch` 和 `oklch`。
 
