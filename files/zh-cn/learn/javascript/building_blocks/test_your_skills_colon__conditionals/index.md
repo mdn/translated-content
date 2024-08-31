@@ -2,7 +2,7 @@
 title: 技能测试：条件语句
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 l10n:
-  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
+  sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
 {{learnsidebar}}
@@ -21,9 +21,9 @@ l10n:
 - `season`——包含一个字符串，表示当前的季节。
 - `response`——开始时未初始化，但之后用于存储响应并显示在输出面板中。
 
-我们希望你能创建一个条件语句来检查 `season` 是否包含（等于）字符串 "summer"。如果是的话，用字符串为 `response` 赋值，来告诉用户当前的季节；如果不是的话，用通用字符串为 `response` 赋值，来告诉用户我们不知道当前的季节是什么。
+我们希望你能创建一个条件语句来检查 `season` 是否包含字符串“summer”。如果是的话，用字符串为 `response` 赋值，来告诉用户当前的季节；如果不是的话，用通用字符串为 `response` 赋值，来告诉用户我们不知道当前的季节是什么。
 
-最后，你需要增加另一个条件语句来检查 `season` 是否包含（等于）字符串 "winter"，并再次用适当的字符串为 `response` 赋值。
+最后，你需要增加另一个条件语句来检查 `season` 是否包含字符串“winter”，并再次用适当的字符串为 `response` 赋值。
 
 试着更新下面的实时代码来重现已完成的示例：
 
@@ -37,7 +37,7 @@ l10n:
 
 在这项任务中，你有三个变量：
 
-- `machineActive`——包含一个指示器（布尔值），指示回答机器是否启动（`true`/`false`）。
+- `machineActive`——包含一个指示器，指示回答机器是否启动（`true`/`false`）。
 - `score`——包含你在假想游戏中的得分。这个分数会送入回答机器，回答机器会告诉你你做得怎么样。
 - `response`——开始时未初始化，但之后用于存储响应并显示在输出面板中。
 
@@ -45,12 +45,12 @@ l10n:
 
 在第一个 `if...else` 中，你需要嵌套另一个 `if...else`，根据 score 的值将适当的消息放入 `response` 变量中——前提是机器已经启动。测试条件（和响应结果）如下：
 
-- 得分小于 0 或大于 100——"This is not possible, an error has occurred."
-- 得分 0&ndash;19——"That was a terrible score — total fail!"
-- 得分 20&ndash;39——"You know some things, but it\\'s a pretty bad score. Needs improvement."
-- 得分 40&ndash;69——"You did a passable job, not bad!"
-- 得分 70&ndash;89——"That\\'s a great score, you really know your stuff."
-- 得分 90&ndash;100——"What an amazing score! Did you cheat? Are you for real?"
+- 得分小于 0 或大于 100——“This is not possible, an error has occurred.”
+- 得分 0—19——“That was a terrible score — total fail!”
+- 得分 20—39——“You know some things, but it\\'s a pretty bad score. Needs improvement.”
+- 得分 40—69——“You did a passable job, not bad!”
+- 得分 70—89——“That\\'s a great score, you really know your stuff.”
+- 得分 90—100——“What an amazing score! Did you cheat? Are you for real?”
 
 试着更新下面的实时代码来重现已完成的示例。完成代码后，试着将 `machineActive` 改为 `true`，看看是否工作。
 
@@ -64,7 +64,7 @@ l10n:
 
 在最后一项任务中，你有四个变量：
 
-- `machineActive`——包含一个指示器（布尔值），指示登录机器是否启动（`true`/`false`）。
+- `machineActive`——包含一个指示器，指示登录机器是否启动（`true`/`false`）。
 - `pwd`——包含用户的登录密码。
 - `machineResult`——开始时未初始化，但之后用于存储响应并显示在输出面板中，让用户知道机器是否启动。
 - `pwdResult`——开始时未初始化，但之后用于存储响应并显示在输出面板中，让用户知道登录是否成功。
