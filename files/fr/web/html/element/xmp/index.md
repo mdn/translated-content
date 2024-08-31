@@ -7,7 +7,8 @@ slug: Web/HTML/Element/xmp
 
 L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises d'ouverture et de fermeture sans interpréter le HTML qu'il contient et en utilisant une police à chasse fixe. La spécification HTML 2 recommande un affichage suffisamment large pour contenir 80 caractères par ligne.
 
-> **Note :** Ne pas utiliser cet élément.
+> [!NOTE]
+> Ne pas utiliser cet élément.
 >
 > - Il a été déprécié depuis HTML3.2 et n'a pas été implémenté d'une manière cohérente. Il a été complètement retiré du langage dans HTML5.
 > - Utilisez l'élément {{HTMLElement("pre")}} ou, si sémantiquement approprié, l'élément {{HTMLElement("code")}}. Notez qu'il vous faudra échapper les caractères '`<`' et '`>`' pour qu'ils ne soient pas interprétés.
@@ -21,7 +22,8 @@ Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/
 
 Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
 
 ## Compatibilité des navigateurs
 

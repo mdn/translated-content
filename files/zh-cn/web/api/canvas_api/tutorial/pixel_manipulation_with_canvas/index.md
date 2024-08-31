@@ -24,14 +24,14 @@ data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作�
 
 例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
-```
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```js
+const blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 根据行、列读取某像素点的 R/G/B/A 值的公式：
 
-```
-imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
+```js
+imageData.data[50 * (imageData.width * 4) + 200 * 4 + 0 / 1 / 2 / 3];
 ```
 
 你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以字节为单位）：

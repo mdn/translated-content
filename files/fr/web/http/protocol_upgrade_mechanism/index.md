@@ -42,7 +42,8 @@ webSocket = new WebSocket("wss://destination.server.ext", "optionalProtocol");
 
 Le constructeur [`WebSocket()`](/fr/docs/Web/API/WebSocket/WebSocket) s'occupe de la création de la connexion HTTP/1.1 initiale, puis de la bascule et de la poignée de main avec le serveur.
 
-> **Note :** Le schéma d'URL `"wss://"` permet d'ouvrir une connexion WebSocket sécurisée (contrairement à `"ws://"`).
+> [!NOTE]
+> Le schéma d'URL `"wss://"` permet d'ouvrir une connexion WebSocket sécurisée (contrairement à `"ws://"`).
 
 Si vous devez créer une connexion WebSocket de zéro, vous devrez gérer la poignée de main avec le serveur. Après avoir créé la session HTTP/1.1 initiale, demandez la mise à niveau de la connexion en ajoutant les en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) comme suit&nbsp;:
 

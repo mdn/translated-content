@@ -31,7 +31,7 @@ JavaScript では、文字列や配列などの JavaScript のコア機能から
 - [オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)
   - : JavaScript オブジェクトについて記載している最初の記事では、基本的な JavaScript オブジェクト構文を見てみます。コースの初期段階で既に見た JavaScript の機能を再び見てみたり、すでに扱っている機能の多くは実際にオブジェクトであるという事実を繰り返し述べています。
 - [オブジェクトプロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-  - : プロトタイプは、JavaScript オブジェクトが互いに機能を継承するメカニズムであり、古典的なオブジェクト指向プログラミング言語の継承メカニズムとは異なる働きをします。この記事では、その違いを探り、プロトタイプチェーンの仕組みを説明し、prototype プロパティを使用して既存のコンストラクタにメソッドを追加する方法を見ていきます。
+  - : プロトタイプは、JavaScript オブジェクトが互いに機能を継承するメカニズムであり、古典的なオブジェクト指向プログラミング言語の継承メカニズムとは異なる働きをします。この記事では、その違いを探り、プロトタイプチェーンの仕組みを説明し、prototype プロパティを使用して既存のコンストラクターにメソッドを追加する方法を見ていきます。
 - [オブジェクト指向プログラミング](/ja/docs/Learn/JavaScript/Objects/Object-oriented_programming)
   - : この記事では、「古典的」オブジェクト指向プログラミングの基本的な原則をいくつか説明し、JavaScript でのプロトタイプモデルとは異なるところを見ていきます。
 - [JavaScript でのクラス](/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)

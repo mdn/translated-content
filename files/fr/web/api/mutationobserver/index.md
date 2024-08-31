@@ -49,7 +49,8 @@ new MutationObserver( function callback );
   </tbody>
 </table>
 
-> **Note :** La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
+> [!NOTE]
+> La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
 
 ### `observe()`
 
@@ -66,7 +67,8 @@ void observe( {{domxref("Node")}} target, MutationObserverInit options );
 - `options`
   - : Un objet du type [`MutationObserverInit`](#MutationObserverInit). Il spécifie quelles mutations DOM sont à rapporter.
 
-> **Note :** ajouter un observateur sur un élément revient à utiliser `addEventListener`. Si vous observez un élément plusieurs fois, cela n'a pas d'impact, dans le sens où, si vous observez un élément deux fois, la callback ne sera pas appelée deux fois, et vous n'aurez pas besoin d'appeler `disconnect()` deux fois. En d'autres termes, une fois qu'un élément est observé, l'observer à nouveau avec la même instance n'a pas d'effet. Cependant, si la callback est différente, un nouvel observateur sera ajouté.
+> [!NOTE]
+> Ajouter un observateur sur un élément revient à utiliser `addEventListener`. Si vous observez un élément plusieurs fois, cela n'a pas d'impact, dans le sens où, si vous observez un élément deux fois, la callback ne sera pas appelée deux fois, et vous n'aurez pas besoin d'appeler `disconnect()` deux fois. En d'autres termes, une fois qu'un élément est observé, l'observer à nouveau avec la même instance n'a pas d'effet. Cependant, si la callback est différente, un nouvel observateur sera ajouté.
 
 ### `disconnect()`
 
@@ -76,7 +78,8 @@ L'instance `MutationObserver` cesse de recevoir les notifications de mutations D
 void disconnect();
 ```
 
-> **Note :** Selon la [spécification](https://dom.spec.whatwg.org/#garbage-collection), un `MutationObserver` est supprimé par le garbage collector si l'élément cible est supprimé.
+> [!NOTE]
+> Selon la [spécification](https://dom.spec.whatwg.org/#garbage-collection), un `MutationObserver` est supprimé par le garbage collector si l'élément cible est supprimé.
 
 ### `takeRecords()`
 
@@ -93,7 +96,8 @@ Array takeRecords();
 
 `MutationObserverInit` est un objet pouvant avoir les propriétés suivantes&nbsp;:
 
-> **Note :** Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l'erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
+> [!NOTE]
+> Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l'erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
 
 <table class="standard-table">
   <tbody>

@@ -23,7 +23,8 @@ Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
 
   - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
 
-    > **Note :** Cet argument est optionnel depuis ECMAScript 2017.
+    > [!NOTE]
+    > Cet argument est optionnel depuis ECMAScript 2017.
 
 - `jour`{{optional_inline}}
   - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.

@@ -58,7 +58,7 @@ svg {
 - {{SVGAttr("stdDeviation")}}
   - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

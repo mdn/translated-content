@@ -14,10 +14,9 @@ slug: Web/API/Animation/cancel_event
 
 ## 语法
 
-```
-var cancelHandler = Animation.oncancel;
-
-Animation.oncancel = cancelHandler;
+```js-nolint
+addEventListener("cancel", (event) => { })
+oncancel = (event) => { }
 ```
 
 ### 值

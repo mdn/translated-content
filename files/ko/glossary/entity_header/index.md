@@ -7,7 +7,8 @@ l10n:
 
 {{GlossarySidebar}}
 
-> **경고:** HTTP/1.1 명세는 더 이상 엔티티, 엔티티 헤더 또는 엔티티 본문을 참조하지 않습니다. 일부 필드는 이제 {{glossary("Representation header")}} 필드라고 합니다.
+> [!WARNING]
+> HTTP/1.1 명세는 더 이상 엔티티, 엔티티 헤더 또는 엔티티 본문을 참조하지 않습니다. 일부 필드는 이제 {{glossary("Representation header")}} 필드라고 합니다.
 
 엔티티 헤더는 HTTP 메시지의 페이로드(예: 메시지 본문에 대한 메타데이터)를 나타내는 {{glossary("HTTP_header", "HTTP 헤더")}}입니다. {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}} 등과 같은 헤더는 엔티티 헤더에 포함됩니다. 엔티티 헤더는 HTTP 요청 및 응답 모두에 존재할 수 있습니다.
 

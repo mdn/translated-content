@@ -212,7 +212,7 @@ Cookie 與特定域和方案（如 `http` 或 `https`）相關，如果 {{HTTPHe
 第三方 Cookie 的典型用例包括共享用戶檔案訊息或在不同相關域上收集分析數據。它們也經常用於廣告和跟蹤用戶在網路上的活動。
 
 > [!NOTE]
-> 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_Cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/types)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
+> 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_Cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/cookies#types-of-cookies)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
 
 第三方伺服器可以根據同一瀏覽器在訪問多個站點時發送給它的 Cookie，創建用戶的瀏覽歷史和習慣檔案。默認情況下，Firefox 阻止已知包含跟蹤器的第三方 Cookie。第三方 Cookie（或僅為跟蹤而設置的 Cookie）也可能被其他瀏覽器設置或擴展阻止。Cookie 阻止可能導致一些第三方組件（例如社交媒體軟體部件）無法正常工作。
 

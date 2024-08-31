@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 La méthode **`animate()`** de l'interface [`Element`](/fr/docs/Web/API/Element) est un raccourci permettant de créer un nouvel objet [`Animation`](/fr/docs/Web/API/Animation), de l'appliquer à un élément puis de la jouer. Elle retourne l'instance [`Animation`](/fr/docs/Web/API/Animation) alors créée.
 
-> **Note :** Les éléments peuvent avoir plusieurs animations qui leur sont appliquées. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations).
+> [!NOTE]
+> Les éléments peuvent avoir plusieurs animations qui leur sont appliquées. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations).
 
 ## Syntaxe
 

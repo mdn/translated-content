@@ -5,16 +5,11 @@ slug: Web/API/Element/namespaceURI
 
 {{APIRef("DOM")}}
 
-**`Element.namespaceURI`** 是一个只读属性，它返回元素的命名空间，若该元素不在命名空间中则返回`null` .
+**`Element.namespaceURI`** 只读属性返回元素的命名空间 URI，若该元素不在命名空间中则返回 `null`。
 
-> [!NOTE]
-> 在 DOM4 之前，这个 API 在接口 {{domxref("Node")}} 中定义 .
+## 值
 
-## 语法
-
-```
-namespace = element.namespaceURI
-```
+字符串，或 `null`。
 
 ## 例子
 

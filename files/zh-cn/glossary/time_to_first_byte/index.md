@@ -11,7 +11,7 @@ l10n:
 
 TTFB 是从请求开始到响应开始之间所用的时间，以毫秒为单位：
 
-```
+```plain
 TTFB = responseStart - requestStart
 ```
 

@@ -11,8 +11,8 @@ slug: Web/API/Document/execCommand
 
 ## 语法
 
-```
-bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```js-nolint
+execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### 返回值

@@ -47,7 +47,7 @@ slug: Learn/JavaScript/Objects/Object-oriented_programming
 
 `Professor` 类用伪代码描述如下：
 
-```
+```plain
 class Professor
     properties
         name
@@ -66,7 +66,7 @@ class Professor
 
 通常来说，需要将构造函数作为类定义的一部分明确声明，并且构造函数通常具有和类名相同的函数名。
 
-```
+```plain
 class Professor
     properties
         name
@@ -101,7 +101,7 @@ lillian.introduceSelf(); // '我是丽莲，我是你们的诗歌老师'
 
 然而，学生同样具有一个名字，并且他们可能也想介绍他们自己，因此，我们可能会将学生类的定义写成：
 
-```
+```plain
 class Student
     properties
         name
@@ -116,7 +116,7 @@ class Student
 
 很容易注意到教授和学生都是人，而人是具有姓名，并且可以介绍自己的。我们可以将人定义为一个新类，即 `Person` 类，在 `Person` 类中，我们可以定义所有作为人的通用属性。接下来，我们可以定义 `Professor` 类和 `Student` 类由 `Person` 类**派生**（derive）而来，在伪代码中定义如下：
 
-```
+```plain
 class Person
     properties
         name
@@ -180,7 +180,7 @@ if (student.year > 1) {
 
 问题在于，如果我们决定修改选修弓箭课的标准（例如需要家长的同意），我们需要在选课系统的代码中修改每一个相关的部分，这是相当麻烦的，并且这一过程中程序员很可能出错。现在，如果我们向 `Student` 类中添加一个 `canStudyArchery()` 方法（用于检查学生是否能够选修弓箭课），那么相应代码的实现逻辑就会集中在一个地方：
 
-```
+```plain
 class Student : extends Person
     properties
        year
@@ -201,7 +201,7 @@ if (student.canStudyArchery()) {
 
 在许多面向对象编程语言中，我们可以使用 `private` 关键字标记对象的私有部分，也就是外部代码无法直接访问的部分。如果一个属性在被标记为 `private` 的情况下，外部代码依旧尝试访问该属性，那么通常来说，计算机会抛出一个错误。
 
-```
+```plain
 class Student : extends Person
     properties
        private year

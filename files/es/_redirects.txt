@@ -1686,6 +1686,7 @@
 /es/docs/Web/API/Media_Streams_API	/es/docs/Web/API/Media_Capture_and_Streams_API
 /es/docs/Web/API/Media_Streams_API/Taking_still_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
+/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/es/docs/conflicting/Web/API/Navigator/registerProtocolHandler
 /es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/Web/API/Navigator
 /es/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/Web/API/Navigator/hardwareConcurrency
 /es/docs/Web/API/NavigatorGeolocation/geolocation	/es/docs/Web/API/Navigator/geolocation
@@ -1763,7 +1764,7 @@
 /es/docs/Web/API/console/log	/es/docs/Web/API/console/log_static
 /es/docs/Web/API/console/table	/es/docs/Web/API/console/table_static
 /es/docs/Web/API/console/time	/es/docs/Web/API/console/time_static
-/es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeend_static
+/es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeEnd_static
 /es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
 /es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
 /es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto
@@ -1882,6 +1883,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 /es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
+/es/docs/Web/CSS/CSS_animations/Tips	/es/docs/Web/API/Web_Animations_API/Tips
 /es/docs/Web/CSS/CSS_container_queries	/es/docs/Web/CSS/CSS_containment/Container_queries
 /es/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/es/docs/conflicting/Glossary/Flexbox
 /es/docs/Web/CSS/Child_selectors	/es/docs/Web/CSS/Child_combinator
@@ -2196,9 +2198,12 @@
 /es/docs/Web/HTML/microformatos	/es/docs/Web/HTML/microformats
 /es/docs/Web/HTML/Índice	/es/docs/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
-/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
-/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
-/es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+/es/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/URI/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/es/docs/Web/URI/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/URI/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /es/docs/Web/HTTP/Peticiones_condicionales	/es/docs/Web/HTTP/Conditional_requests
@@ -2996,7 +3001,7 @@
 /es/docs/conflicting/web/api/file/name	/es/docs/web/api/file/name
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
-/es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+/es/docs/controladores_protocolos_web	/es/docs/conflicting/Web/API/Navigator/registerProtocolHandler
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
 /es/docs/orphaned/MDN/Tools	https://github.com/mdn/yari/tree/main/docs

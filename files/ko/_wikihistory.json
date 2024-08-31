@@ -5078,10 +5078,6 @@
     "modified": "2019-04-29T00:53:50.949Z",
     "contributors": ["qwqw312x"]
   },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2019-03-23T22:32:29.213Z",
-    "contributors": ["Netaras"]
-  },
   "Web/CSS/CSS_multicol_layout": {
     "modified": "2019-04-11T11:34:08.500Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -6825,14 +6821,6 @@
     "modified": "2019-03-23T22:27:07.176Z",
     "contributors": ["peacekimjapan", "gaucho1218", "frankradio", "teoli"]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2020-11-23T08:52:22.702Z",
-    "contributors": ["nesez", "devcken"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2019-03-23T22:27:00.710Z",
-    "contributors": ["devcken"]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2019-12-02T03:03:46.499Z",
     "contributors": [
@@ -6842,10 +6830,6 @@
       "knight2995",
       "devcken"
     ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-09-22T04:32:42.283Z",
-    "contributors": ["devcken"]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-03-23T22:27:10.370Z",
@@ -7252,10 +7236,6 @@
   "Web/HTTP/Redirections": {
     "modified": "2020-11-16T03:23:48.575Z",
     "contributors": ["galcyurio", "mingrammer", "devcken"]
-  },
-  "Web/HTTP/Resources_and_URIs": {
-    "modified": "2019-03-18T21:43:18.320Z",
-    "contributors": ["jkpark"]
   },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2019-03-23T22:26:24.310Z",
@@ -10295,6 +10275,14 @@
     "modified": "2019-03-23T23:28:14.827Z",
     "contributors": ["featherlikeg", "nacyot", "pjc0247", "tamnajio", "KyunH"]
   },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2020-11-23T08:52:22.702Z",
+    "contributors": ["nesez", "devcken"]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2019-03-23T22:27:00.710Z",
+    "contributors": ["devcken"]
+  },
   "Web/XML": {
     "modified": "2019-08-24T00:48:34.627Z",
     "contributors": ["oinochoe", "ExE-Boss"]
@@ -10762,6 +10750,10 @@
     "modified": "2019-03-23T23:42:13.310Z",
     "contributors": ["chrisdavidmills", "teoli", "Sebuls"]
   },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:32:29.213Z",
+    "contributors": ["Netaras"]
+  },
   "conflicting/Web/CSS/CSS_paged_media": {
     "modified": "2019-03-23T22:33:25.305Z",
     "contributors": ["Netaras"]
@@ -10791,6 +10783,10 @@
     "modified": "2020-10-15T22:06:25.915Z",
     "contributors": ["alattalatta", "SphinxKnight", "dolmoon"]
   },
+  "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
+    "modified": "2019-03-18T21:43:18.320Z",
+    "contributors": ["jkpark"]
+  },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
@@ -10818,6 +10814,10 @@
   "orphaned/Web/HTML/Element/applet": {
     "modified": "2019-03-23T22:50:49.180Z",
     "contributors": ["Basix"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2019-09-22T04:32:42.283Z",
+    "contributors": ["devcken"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
     "modified": "2020-03-12T19:44:33.728Z",

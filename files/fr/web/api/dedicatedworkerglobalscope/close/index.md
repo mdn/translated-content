@@ -23,7 +23,8 @@ close();
 
 `close()` et `self.close()` sont effectivement équivalents — les deux représentent une instruction `close()` qui est appelée de l'intérieur de la portée interne du worker.
 
-> **Note :** Il y a une autre façon d'arrêter le worker depuis le fil principal : la méthode {{domxref("Worker.terminate")}}.
+> [!NOTE]
+> Il y a une autre façon d'arrêter le worker depuis le fil principal : la méthode {{domxref("Worker.terminate")}}.
 
 ## Spécifications
 

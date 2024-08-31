@@ -341,7 +341,7 @@ function draw() {
 
 下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的 width 和 height 必须与 JavaScript 代码中的变量值`CanvasXZSize`和`CanvasYSize`保持一致。
 
-```
+```html
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 

@@ -9,17 +9,11 @@ slug: Web/API/IDBObjectStore/indexNames
 
 {{AvailableInWorkers}}
 
-## Syntax
+## 值
 
-```
-var myindexNames = objectStore.indexNames;
-```
+一个 {{domxref("DOMStringList")}}。
 
-### Value
-
-一个 {{domxref("DOMStringList")}}.
-
-## Example
+## 示例
 
 在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用程序 ( [实时查看示例](https://mdn.github.io/dom-examples/to-do-notifications/) )
 

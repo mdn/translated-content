@@ -13,7 +13,8 @@ slug: Web/HTML/Global_attributes/autofocus
 
 L'attribut `autofocus` ne devrait pas être placé sur plus d'un élément au sein du document. S'il est placé sur plusieurs éléments, c'est le premier qui recevra le focus.
 
-> **Note :** L'attribut `autofocus` s'applique à tous les éléments, et pas seulement aux contrôles de formulaires. Par exemple, il peut être utilisé sur une zone [contenteditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+> [!NOTE]
+> L'attribut `autofocus` s'applique à tous les éléments, et pas seulement aux contrôles de formulaires. Par exemple, il peut être utilisé sur une zone [contenteditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Remarques sur l'accessibilité de la fonctionnalité
 

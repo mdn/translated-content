@@ -184,7 +184,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 1. 首先，下载示例文件 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)。放在一个方便的文件夹里。
 2. 分别在浏览器和文本编辑器中打开这个文件。你会看到这个 HTML 文件创建了一个简单的网页，其中有一个可点击按钮。
-3. 然后转到文本编辑器，在 `</head>` 标签结束前插入以下代码：
+3. 然后转到文本编辑器，在 `</body>` 标签结束前插入以下代码：
 
    ```html
    <script>

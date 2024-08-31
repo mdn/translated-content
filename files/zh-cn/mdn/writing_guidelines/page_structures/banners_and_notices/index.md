@@ -13,7 +13,7 @@ slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 
 横幅通过使用宏来添加，它们应当与页面的侧边栏宏一起插入到页面元数据的下方。例如，[Ink API](/zh-CN/docs/Web/API/Ink_API) 页面中插入了 `\{{SeeCompatTable}}` 宏，代表它是[实验性的](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)功能。
 
-```
+```md
 ---
 title: Ink API
 slug: Web/API/Ink_API

@@ -9,7 +9,7 @@ slug: Web/API/Performance/clearMeasures
 
 {{AvailableInWorkers}}
 
-## 用法
+## 语法
 
 ```
 performance.clearMeasures();

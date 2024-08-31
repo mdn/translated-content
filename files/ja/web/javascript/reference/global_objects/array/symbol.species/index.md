@@ -1,16 +1,15 @@
 ---
-title: Array[@@species]
+title: Array[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`Array[@@species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
+**`Array[Symbol.species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
 
-> **警告:** `@@species` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `@@species` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
+> **警告:** `[Symbol.species]` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `[Symbol.species]` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
 
 ## 構文
 
@@ -20,11 +19,11 @@ Array[Symbol.species]
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
+`get Symbol.species` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
 
 ## 解説
 
-`@@species` アクセサープロパティは、 `Array` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。既定の実装は基本的に次の通りです。
+`[Symbol.species]` アクセサープロパティは、 `Array` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。既定の実装は基本的に次の通りです。
 
 ```js
 // 説明のための仮説的な実装
@@ -35,14 +34,14 @@ class Array {
 }
 ```
 
-この多相的な実装のために、派生したサブクラスの `@@species` も既定値でコンストラクター自身を返すことになります。
+この多相的な実装のために、派生したサブクラスの `[Symbol.species]` も既定値でコンストラクター自身を返すことになります。
 
 ```js
 class SubArray extends Array {}
 SubArray[Symbol.species] === SubArray; // true
 ```
 
-既存の配列を変更せずに新しい配列インスタンスを返す配列メソッド（例えば `filter` や `map` ）を呼び出す場合、配列の `constructor[@@species]` にアクセスすることになります。返されたコンストラクターは、配列メソッドの返値を作成するために使用されます。これにより、配列メソッドが配列とは無関係のオブジェクトを返すようにすることが技術的に可能になります。
+既存の配列を変更せずに新しい配列インスタンスを返す配列メソッド（例えば[`filter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) や [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)）を呼び出す場合、配列の `constructor[Symbol.species]` にアクセスすることになります。返されたコンストラクターは、配列メソッドの返値を作成するために使用されます。これにより、配列メソッドが配列とは無関係のオブジェクトを返すようにすることが技術的に可能になります。
 
 ```js
 class NotAnArray {
@@ -62,7 +61,7 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ### 通常のオブジェクトの species
 
-`@@species` プロパティは、`Array` オブジェクトの既定のコンストラクター関数である `Array` コンストラクターを返します。
+`[Symbol.species]` プロパティは、`Array` オブジェクトの既定のコンストラクター関数である `Array` コンストラクターを返します。
 
 ```js
 Array[Symbol.species]; // [Function: Array]
@@ -74,7 +73,7 @@ Array[Symbol.species]; // [Function: Array]
 
 ```js
 class MyArray extends Array {
-  // MyArray species を親である ArrayBuffer コンストラクタにオーバーライド。
+  // MyArray species を親である Array コンストラクターにオーバーライド。
   static get [Symbol.species]() {
     return Array;
   }
@@ -91,7 +90,7 @@ class MyArray extends Array {
 
 ## 関連情報
 
-- [`Array[@@species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `@@species` の対応 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array[Symbol.species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `[Symbol.species]` の対応 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

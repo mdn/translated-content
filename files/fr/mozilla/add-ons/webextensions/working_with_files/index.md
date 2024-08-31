@@ -25,7 +25,8 @@ browser.downloads.download({ url : ‘https://example.org/image.png’ })
 
 Vous pouvez laisser l'utilisateur télécharger à un endroit de son choix en précisant le paramètre`saveAs`.
 
-> **Note :** En utilisant [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL), vous pouvez également télécharger des fichiers et des blobs définis dans votre JavaScript, y compris le contenu local extrait de IndexedDB.
+> [!NOTE]
+> En utilisant [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL), vous pouvez également télécharger des fichiers et des blobs définis dans votre JavaScript, y compris le contenu local extrait de IndexedDB.
 
 L'API de téléchargement fournit également des fonctionnalités pour annuler, mettre en pause, reprendre, effacer et supprimer les téléchargements, rechercher les fichiers téléchargés dans le gestionnaire de téléchargement, afficher les fichiers téléchargés dans le gestionnaire de fichiers de l'ordinateur, et ouvrir un fichier dans une application associée.
 
@@ -42,7 +43,8 @@ Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/im
 Guide : [Using files from web applications](/fr/docs/Using_files_from_web_applications)
 API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | [DOM File API](/fr/docs/Web/API/File)
 
-> **Note :** Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant `<input type="file" webkitdirectory="true"/>` pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.
+> [!NOTE]
+> Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant `<input type="file" webkitdirectory="true"/>` pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.
 
 ## Ouverture de fichiers dans une extension avec glisser-déposer
 
@@ -129,7 +131,8 @@ Une fois que l'URL du blob a été révoquée, toute tentative de la charger ent
 Exemple : [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
 API Référence : [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
-> **Note :** Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/Add-ons/WebExtensions/API/Storage).
+> [!NOTE]
+> Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/Add-ons/WebExtensions/API/Storage).
 
 ## Traitement de fichiers dans une application locale
 

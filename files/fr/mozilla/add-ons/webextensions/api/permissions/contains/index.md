@@ -76,7 +76,7 @@ browser.permissions.contains(testPermissions4).then((result) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
 >

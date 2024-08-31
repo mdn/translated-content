@@ -26,7 +26,7 @@ slug: Web/HTTP/Headers/Content-Encoding
 
 ## 语法
 
-```
+```http
 Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
@@ -53,13 +53,13 @@ Content-Encoding: deflate, gzip
 
 客户端可以事先声明一系列可以支持的压缩模式，与请求一齐发送。{{HTTPHeader("Accept-Encoding")}} 这个首部就是用来进行这种内容编码形式协商的：
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
 服务器在 `Content-Encoding` 响应首部提供了实际采用的压缩模式：
 
-```
+```http
 Content-Encoding: gzip
 ```
 

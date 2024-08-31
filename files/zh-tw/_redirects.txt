@@ -409,6 +409,7 @@
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/Web/API/Media_Streams_API	/zh-TW/docs/Web/API/Media_Capture_and_Streams_API
+/zh-TW/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/zh-TW/docs/Web/API/Navigator/registerProtocolHandler
 /zh-TW/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
@@ -489,6 +490,8 @@
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Schemes/data
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS

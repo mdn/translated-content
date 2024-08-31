@@ -60,7 +60,8 @@ API методы реализованы в интерфейсе {{domxref("Docum
 - {{domxref("Document.requestStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
 
-> **Примечание:** User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
+> [!NOTE]
+> User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
 
 ## Расширение \<iframe> sandbox
 

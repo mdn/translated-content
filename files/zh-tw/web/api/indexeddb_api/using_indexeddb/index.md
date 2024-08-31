@@ -238,7 +238,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-關於資料鍵產生器細節，請參考["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept)。
+關於資料鍵產生器細節，請參考["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept)。
 
 ## 新增和刪除資料
 
@@ -1096,7 +1096,7 @@ input {
     if (typeof store == "undefined")
       store = getObjectStore(DB_STORE_NAME, "readwrite");
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1231,21 +1231,21 @@ input {
 參照
 
 - [IndexedDB API Reference](/zh-TW/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
 相關教學
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
 
   > [!NOTE]
   > 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 相關文章
 
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 Firefox
 

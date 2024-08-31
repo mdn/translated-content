@@ -31,7 +31,7 @@ var getting = browser.windows.get(
     - `windowTypes`{{optional_inline}}
       - : `Ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
-> **Note :**
+> [!NOTE]
 >
 > Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
@@ -43,7 +43,8 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URL des onglets.
 
-> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement {{WebExtAPIRef("windows.getCurrent()")}}.
+> [!NOTE]
+> Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement {{WebExtAPIRef("windows.getCurrent()")}}.
 
 ```js
 function logTabs(windowInfo) {
@@ -68,7 +69,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
