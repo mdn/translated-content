@@ -75,7 +75,7 @@ console.log(Object.keys(myObj)); // ['foo']
 ### 원시형에서 Object.keys() 사용하기
 
 객체가 아닌 인수는 [강제로 객체로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)됩니다.
-{{jsxref("undefined")}}와 {{jsxref("null")}}은 객체로 강제 변환될 수 없으며 즉시 {{jsxref("TypeError")}}를 발생시킵니다.
+[`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)와 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)은 객체로 강제 변환될 수 없으며 즉시 {{jsxref("TypeError")}}를 발생시킵니다.
 문자열만 자체 열거 가능한 속성을 가질 수 있으며, 다른 모든 원시형은 빈 배열을 반환합니다.
 
 ```js
