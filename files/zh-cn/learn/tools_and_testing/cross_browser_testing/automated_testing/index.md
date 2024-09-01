@@ -544,7 +544,7 @@ BrowserStack 也有一个 [restful API](https://www.browserstack.com/docs/automa
    getPlanDetails();
    ```
 
-3. 你需要在指定位置填写 BrowserStack 用户名和 API 密钥。 这些信息可从你的 [BrowserStack 帐户和配置文件详细信息](https://www.browserstack.com/accounts/profile/details)中的身份验证和安全部分获取。现在填写。
+3. 你需要在指定位置填写 BrowserStack 用户名和 API 密钥。这些信息可从你的 [BrowserStack 帐户和配置文件详细信息](https://www.browserstack.com/accounts/profile/details)中的身份验证和安全部分获取。现在填写。
 4. 确定所有文件保存成功，然后运行你的文件：
 
    ```bash
