@@ -1,109 +1,71 @@
 ---
-title: Formularios en HTML5
+title: Pilares de los Formularios HTML
 slug: Learn/Forms
+l10n:
+  sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
 
 {{LearnSidebar}}
 
-Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
+Este módulo provee una serie de articulos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios HTML son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones historicas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los articulos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios Web incluyendo el marcado de su estructura HTML, esilizar los controles del formulario, validar los datos del formulario, y enviar los datos al servidor.
 
-Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.
+## Prerrequisitos
 
-### El elemento `<input>`
+Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls).
 
-El elemento `{{ HTMLElement("input") }}` tiene nuevos valores para el atributo [`type`](/es/docs/Web/HTML/Element/input#type).
+Sin embargo para dominar los formularios, se require mas que conocimiento en HTML — también necesitas aprender algunas técnicas específicas para estlizar los controles del formulario, y es necesario un poco de conocimiento de scripting para manejar cosas como, validaciǫn y creación de controles personalizados. Por lo tanto, antes de que revises las secciones listadas a continuación, te recomendamos que primero vayas y aprendas un poco acerca de [CSS](/es/docs/Learn/CSS) y [JavaScript](/es/docs/Learn/JavaScript).
 
-- `search`: El elemento representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.
-- `tel`: El elemento representa un control para editar un número de teléfono, porque los números teléfonicos varían ampliamente en el mundo. Puedes usar atributos como [`pattern`](/es/docs/Web/HTML/Element/input#pattern) y [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) para restringir los valores ingresados en la caja.
-- `url`: El elemento representa un control para editar una [URL](http://es.wikipedia.org/URL). Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.
-- `email`: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF `1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )` donde `atext` está definida en RFC 5322, sección 3.2.3 y `ldh-str` está definida en RFC 1034, sección 3.5.
+Lo antes mencionado es un buen indicador de porque pusimos los formularios web en su propio módulo independiente, en lugar de intentar mezclar pedazos de información dentro de areas como HTML, CSS y JavaScript — los elementos de formulario son más complejos que la mayoría de los elemento de HTML, y también requieren de una cercana relación con técnicas de CSS y JavaScript para obtener los mejor de ellos.
 
-  > [!NOTE]
-  > Si el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.
+> [!NOTE]
+> Si estas trabajando en una computadora/tableta/otro dispósitivo, donde no tienes la habilidad de crear tus propios archivos, podrías probar (la mayoría) del código de ejemplo en un sitio de programación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
-El elemento {{ HTMLElement("input") }} también tiene nuevos atributos:
+## Guías Introductorias
 
-- [`list`](/es/docs/Web/HTML/Element/input#list): El ID de un elemento {{ HTMLElement("datalist") }} cuyo contenido, los elementos {{ HTMLElement("option") }}, van a ser usados como ayudas y serán mostrados como propuestas en el área de sugerencias del campo input.
-- [`pattern`](/es/docs/Web/HTML/Element/input#pattern): Una expresión regular contra la que es verificado el valor del control, que puede ser usada con valores de [`type`](/es/docs/Web/HTML/Element/input#type) de `text`, `tel`, `search`, `url` y `email`.
-- [`formmethod`](/es/docs/Web/HTML/Element/input#formmethod): Una cadena que indica qué método HTTP (GET, POST, PUT o DELETE) debe ser usado cuando se envía; sobrescribe el [`method`](/es/docs/Web/HTML/Element/form#method) del elemento {{ HTMLElement("form") }}, si se define. El [`formmethod`](/es/docs/Web/HTML/Element/input#formmethod) sólo se aplica cuando el [`type`](/es/docs/Web/HTML/Element/input#type) es image o submit, y, para los métodos PUT y DELETE, sólo funcionará con un destino que esté en el mismo dominio (política del mismo origen).
+- [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form)
+  - : The first article in our series provides your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML elements, adding some very simple styling via CSS, and how data is sent to a server.
+- [Como estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form)
+  - : With the basics out of the way, we now look in more detail at the elements used to provide structure and meaning to the different parts of a form.
 
-### El elemento `<form>`
+## The different form controls
 
-El elemento {{ HTMLElement("form") }} tiene un nuevo atributo:
+- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+  - : We start off this section by looking at the functionality of the original HTML {{htmlelement("input")}} types in detail, looking at what options are available to collect different types of data.
+- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
+  - : Here we continue our deep dive into the `<input>` element, looking at the additional input types provided when HTML5 was released, and the various UI controls and data collection enhancements they provide. Additionally, we look at the {{htmlelement('output')}} element.
+- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
+  - : Next we take a look at all the non-`<input>` form controls and associated tools, such as {{htmlelement('select')}}, {{htmlelement('textarea')}}, {{htmlelement('meter')}}, and {{htmlelement('progress')}}.
 
-- [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate): Este atributo previene que el formulario sea validado antes del envío.
+## Form styling guides
 
-### El elemento `<datalist>`
+- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+  - : This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.
+- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
+  - : Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
+- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+  - : An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
 
-El elemento {{ HTMLElement("datalist") }} representa la lista de elementos {{ HTMLElement("option") }} como sugerencias cuando se llena un campo {{ HTMLElement("input") }}.
+## Validating and submitting form data
 
-Puedes usar el atributo [`list`](/es/docs/Web/HTML/Element/input#list) en un elemento {{ HTMLElement("input") }} para enlazar a un campo de ingreso específico con un elemento {{ HTMLElement("datalist") }} determinado.
+- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+  - : Sending data is not enough — we also need to make sure that the data users enter into forms is in the correct format to process it successfully, and that it won't break our applications. We also want to help our users to fill out our forms correctly and not get frustrated when trying to use our apps. Form validation helps us achieve these goals — this article tells you what you need to know.
+- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+  - : This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
 
-```html
-<label>Superhéroe favorito</label>
-<input list="superheroes" name="list" />
-<datalist id="superheroes">
-  <option label="Iron Man" value="Iron Man"></option>
-  <option label="The Hulk" value="The Hulk"></option>
-</datalist>
-```
+## Advanced articles
 
-### El elemento `<output>`
+The following articles aren't essential to the learning pathway, but they'll prove interesting and useful when you've mastered the above techniques and want to know more.
 
-El elemento `{{ HTMLElement("output") }}` representa el resultado de un cálculo.
+- [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
+  - : You'll come across some cases where the native form widgets just don't provide what you need, e.g. because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
+- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
+  - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
+- [CSS property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+  - : This last article provides a handy reference allowing you to look up what CSS properties are compatible with what form elements.
 
-Puedes usar el atributo [`for`](/es/docs/Web/HTML/Element/output#for) para especificar una relación entre el elemento output y otros elementos en el documento que afectan el cálculo (por ejemplo, ingreso de datos o parámetros). El valor del atributo [`for`](/es/docs/Web/HTML/Element/output#for) es una lista separada por espacios de IDs de otros elementos.
+## Véase también
 
-### El atributo placeholder
-
-El atributo [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) en elementos `{{ HTMLElement("input") }}` y `{{ HTMLElement("textarea") }}` provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.
-
-```html
-<input
-  type="email"
-  id="user-email"
-  placeholder="e.g. john.doe@mozilla.com"
-  required />
-```
-
-### El atributo autofocus
-
-El atributo **autofocus** te permite especificar que una parte del formulario debe tener foco para ingresar información cuando se carga la página, a menos que el usuario lo cambie, por ejemplo al escribir en otro lugar. Sólo un elemento del formulario en un documento puede tener el atributo **autofocus**, que es de tipo boolean. Este atributo puede ser aplicado a los elementos `{{ HTMLElement("input") }}`, `{{ HTMLElement("button") }}`, `{{ HTMLElement("select") }}` y `{{ HTMLElement("textarea") }}`. La excepción es que **autofocus** no puede ser aplicado a un elemento `<input>` si el atributo [`type`](/es/docs/Web/HTML/Element/input#type) `hidden` está seleccionado (esto quiere decir, no se puede enfocar automáticamente un elemento escondido).
-
-```html
-<input type="text" id="user" autofocus />
-```
-
-### La propiedad label.control del DOM
-
-La interface [HTMLLabelElement](/en/DOM/HTMLLabelElement) DOM brinda una propiedad extra, sumadas a las propiedades que corresponden a los atributos del elemento `{{ HTMLElement("label") }}` de HTML. La propiedad **control** devuelve el controlador etiquetado, es decir el controlador para quien está hecha la etiqueta, que está determinado por el atributo [`for`](/es/docs/Web/HTML/Element/label#for) (si está definido) o por el primer elemento controlador descendiente.
-
-### Validación restringida
-
-El HTML5 brinda sintaxis y elementos de API para posibilitar la validación de formularios del lado del cliente. Aunque esta funcionalidad no reemplaza la validación del lado del servidor, que todavía es necesaria por seguridad e integridad de la información, la validación del lado del cliente puede brindar una experiencia de usuario mejor al darle al usuario una respuesta inmediata acerca de la información ingresada.
-
-#### Sintaxis de HTML para la validación restringida
-
-Los siguientes elementos de sintaxis de HTML5 pueden ser usados para restringir datos en el formulario.
-
-- El atributo [`required`](/es/docs/Web/HTML/Element/input#required) en los elementos {{ HTMLElement("input") }}, {{ HTMLElement("select") }} y {{ HTMLElement("textarea") }} indica que se debe ingresar algún dato. (En el elemento {{ HTMLElement("input") }}, [`required`](/es/docs/Web/HTML/Element/input#required) sólo se aplica con ciertos valores del atributo [`type`](/es/docs/Web/HTML/Element/input#type).)
-- El atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) en el elemento {{ HTMLElement("input") }} restringe el valor para que concuerde con una expresión regular específica.
-- Los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) del elemento {{ HTMLElement("input") }} restringen los valores máximos y mínimos que pueden ser ingresados.
-- El atributo [`step`](/es/docs/Web/HTML/Element/input#step) del elemento {{ HTMLElement("input") }} (cuando se usa en combinación con los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max)) restringe la granularidad de los valores ingresados. Un valor que no se corresponda con un valor permitido no será validado.
-- El atributo [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) de los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} restringe el máximo número de caracteres (en puntos de código unicode) que el usuario puede ingresar.
-- Los valores `url` y `email` para [`type`](/es/docs/Web/HTML/Element/input#type) restringen el valor para una URL o dirección de correo válida respectivamente.
-
-Además, puedes prevenir la validación restringida especificando el atributo [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) en el elemento {{ HTMLElement("form") }}, o el atributo [`formnovalidate`](/es/docs/Web/HTML/Element/button#formnovalidate) en el elemento {{ HTMLElement("button") }} y en el elemento {{ HTMLElement("input") }} (cuando [`type`](/es/docs/Web/HTML/Element/input#type) es `submit` o `image`). Estos atributos indican que el formulario no será validado cuando se envie.
-
-#### API de validación restringida
-
-Las siguientes propiedades y métodos del DOM relacionadas con la validación restringida están disponibles para scripts del lado del cliente:
-
-- En objetos [HTMLFormElement](/en/DOM/HTMLFormElement), el método `checkValidity()`, que devuelve verdadero si todos los elementos asociados del formulario que necesitan validación satisfacen las restricciones y falso si no lo hacen.
-- En [elementos asociados al formulario](/en/HTML/Content_categories#form-associated):
-
-  - la propiedad `willValidate`, que es falso si el elemento no satisface las restricciones.
-  - la propiedad `validity`, que es un objeto [ValidityState](/en/DOM/ValidityState_Interface) que representa los estados de validación en que está el elemento (p.e., condiciones de restricción que han fallado o exitosas).
-  - la propiedad `validationMessage`, que es un mensaje que contiene todas las fallas en las restricciones que pertenecen a ese elemento.
-  - el método `checkValidity()`, que devuelve falso si el elemento falla en satisfacer alguna de las restricciones o verdadero si pasa lo contrario.
-  - el método `setCustomValidity()`, que establece un mensaje de validación personalizado, permitiendo imponer y validad restricciones más allá de las que están predefinidas.
+- [HTML forms element reference](/es/docs/Web/HTML/Element#forms)
+- [HTML \<input> types reference](/es/docs/Web/HTML/Element/input)
+- [HTML attribute reference](/es/docs/Web/HTML/Attributes)
+- [User input methods and controls](/es/docs/Learn/Forms/User_input_methods)
