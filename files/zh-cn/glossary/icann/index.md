@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**ICANN**（互联网名称与数字地址分配机构）是一个国际非营利组织，负责维护{{glossary("DNS", "域名系统")}}和 {{glossary("IP address", "IP 地址")}}的记录。
+**ICANN**（互联网名称与数字地址分配机构）是负责维护{{glossary("DNS", "域名系统")}}和 {{glossary("IP address", "IP 地址")}}的记录的国际非营利组织。
 
 ## 参见
 
-- [Official website](https://www.icann.org/)
+- [官网](https://www.icann.org/)
 - 维基百科上的 [ICANN](https://zh.wikipedia.org/wiki/互联网名称与数字地址分配机构)
