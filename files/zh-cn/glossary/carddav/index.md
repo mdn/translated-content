@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**CardDAV**（{{Glossary("WebDAV")}} 的 vCard 拓展）是由 {{Glossary("IETF")}} 标准化的一种 {{glossary("protocol", "协议)}}，用于远程访问或共享{{glossary("server", "服务器")}}上的联系人信息。
+**CardDAV**（{{Glossary("WebDAV")}} 的 vCard 拓展）是由 {{Glossary("IETF")}} 标准化，用于远程访问或共享{{glossary("server", "服务器")}}上的联系人信息的{{glossary("protocol", "协议")}}。
 
 ## 参见
 
