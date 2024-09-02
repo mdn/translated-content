@@ -114,7 +114,7 @@ l10n:
 - [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
   - : 为网站或应用编写客户端 JavaScript 代码时，如果不使用 API——操纵浏览器和站点的运行环境所处的操作系统的各个方面的接口或甚至是来自其它网站或服务的数据，你将寸步难行。在本模块中，你会学习 API 是什么、如何使用一些在开发工作中最常见的 API。
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
-  - : 中高级 JavaScript 方法论完整指南。
+  - : 中高级 JavaScript 方法论的综合指南。
 - [大话 JavaScript](https://exploringjs.com/es5/)
   - : 面向想又快又好地学习 JavaScript 的程序员，也面向想提升技能或寻找特定主题的 JavaScript 程序员。
 - [基本的 JavaScript 设计模式](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
