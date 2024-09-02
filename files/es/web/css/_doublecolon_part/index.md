@@ -2,7 +2,7 @@
 title: "::part()"
 slug: Web/CSS/::part
 l10n:
-  sourceCommit: e31cb5978e9f3c731c49db9ed0a15795b870e141
+  sourceCommit: 5863b9e6635b304b96ef5f70937329e854957f73
 ---
 
 {{CSSRef}}
