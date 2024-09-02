@@ -66,6 +66,6 @@ The following articles aren't essential to the learning pathway, but they'll pro
 ## Véase también
 
 - [Referencia de formularios HTML](/es/docs/Web/HTML/Element#formularios)
-- [Referencia de tipos <input>](/es/docs/Web/HTML/Element/input)
+- [Referencia de tipos \<input>](/es/docs/Web/HTML/Element/input)
 - [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
 - [Controles y entradas de usuario](/es/docs/Learn/Forms/User_input_methods)
