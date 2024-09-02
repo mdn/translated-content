@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-Este módulo provee una serie de articulos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios HTML son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones historicas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los articulos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios Web incluyendo el marcado de su estructura HTML, esilizar los controles del formulario, validar los datos del formulario, y enviar los datos al servidor.
+Este módulo provee una serie de articulos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios HTML son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones historicas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los articulos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios Web incluyendo el marcado de su estructura HTML, esilizado de los controles, validación de los datos, y entrega de los datos al servidor.
 
 ## Prerrequisitos
 
@@ -23,49 +23,49 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 ## Guías Introductorias
 
 - [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form)
-  - : The first article in our series provides your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML elements, adding some very simple styling via CSS, and how data is sent to a server.
+  - : El primer articulo de nuestra serie, te provee la experiencia de crear por primera vez un formulario HTML, incluyendo diseñar un formulario sencillo, hacer una implementación usando los elementos HTML adecuados, agregar un estilizado simple a través de CSS, y como se envian los datos al servidor.
 - [Como estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-  - : With the basics out of the way, we now look in more detail at the elements used to provide structure and meaning to the different parts of a form.
+  - : Con los conceptos básicos fuera de nuestro camino, podemos ver más a detalle los elementos usados para proveer estructura y significado a diferentes partes del formulario.
 
-## The different form controls
+## Diferentes tipos de controles de formulario
 
-- [Basic native form controls](/es/docs/Learn/Forms/Basic_native_form_controls)
-  - : We start off this section by looking at the functionality of the original HTML {{htmlelement("input")}} types in detail, looking at what options are available to collect different types of data.
-- [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types)
-  - : Here we continue our deep dive into the `<input>` element, looking at the additional input types provided when HTML5 was released, and the various UI controls and data collection enhancements they provide. Additionally, we look at the {{htmlelement('output')}} element.
-- [Other form controls](/es/docs/Learn/Forms/Other_form_controls)
-  - : Next we take a look at all the non-`<input>` form controls and associated tools, such as {{htmlelement('select')}}, {{htmlelement('textarea')}}, {{htmlelement('meter')}}, and {{htmlelement('progress')}}.
+- [Controles de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls)
+  - : Iniciamos esta seccion, viendo a detalle los tipos {{htmlelement("input")}} originales de HTML, revisando que opciones hay disponibles para recabar los diferentes tipos de datos.
+- [Tipos de _input_ de HTML5](/es/docs/Learn/Forms/HTML5_input_types)
+  - : Aquí continuamos adentrandonos en el elemento `<input>`, revisando los tipos adicionales de _input_ proporcionados cuando HTML5 fué publicado, junto a los múltiples controles de interfaz de usuario y mejoras en la colección de datos. Adicionalmente, revisaremos el elemento {{htmlelement('output')}}.
+- [Otros controles de formulario HTML](/es/docs/Learn/Forms/Other_form_controls)
+  - : En seguida revisamos, todos los controles de formulario no-`<input>` y las herramientas asociadas, tales como {{htmlelement('select')}}, {{htmlelement('textarea')}}, {{htmlelement('meter')}}, y {{htmlelement('progress')}}.
 
-## Form styling guides
+## Guías de estilizado de formularios
 
-- [Styling web forms](/es/docs/Learn/Forms/Styling_web_forms)
+- [Estilizando formularios HTML](/es/docs/Learn/Forms/Styling_web_forms)
   - : This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.
-- [Advanced form styling](/es/docs/Learn/Forms/Advanced_form_styling)
+- [Estilizado avanzado de formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
   - : Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
 - [UI pseudo-classes](/es/docs/Learn/Forms/UI_pseudo-classes)
   - : An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
 
-## Validating and submitting form data
+## Validando y entregando los datos del formulario
 
-- [Client-side form validation](/es/docs/Learn/Forms/Form_validation)
+- [Validación del lado del cliente](/es/docs/Learn/Forms/Form_validation)
   - : Sending data is not enough — we also need to make sure that the data users enter into forms is in the correct format to process it successfully, and that it won't break our applications. We also want to help our users to fill out our forms correctly and not get frustrated when trying to use our apps. Form validation helps us achieve these goals — this article tells you what you need to know.
-- [Sending form data](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Enviando los datos del formulario HTML](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
   - : This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
 
-## Advanced articles
+## Articulos avanzados
 
 The following articles aren't essential to the learning pathway, but they'll prove interesting and useful when you've mastered the above techniques and want to know more.
 
-- [How to build custom form controls](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Como crear controles de formulario HTML personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : You'll come across some cases where the native form widgets just don't provide what you need, e.g. because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
-- [Sending forms through JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
-- [CSS property compatibility table for form controls](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Enviando formularios HTML a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
+  - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (Véase también [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
+- [Tabla de compatibilidad de propiedades de CSS para controles de formularios HTML](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : This last article provides a handy reference allowing you to look up what CSS properties are compatible with what form elements.
 
 ## Véase también
 
-- [HTML forms element reference](/es/docs/Web/HTML/Element#forms)
-- [HTML \<input> types reference](/es/docs/Web/HTML/Element/input)
-- [HTML attribute reference](/es/docs/Web/HTML/Attributes)
-- [User input methods and controls](/es/docs/Learn/Forms/User_input_methods)
+- [Referencia de formularios HTML](/es/docs/Web/HTML/Element#formularios)
+- [Referencia de tipos <input>](/es/docs/Web/HTML/Element/input)
+- [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
+- [Controles y entradas de usuario](/es/docs/Learn/Forms/User_input_methods)
