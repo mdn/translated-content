@@ -32,7 +32,7 @@ slug: Web/HTML/Element/slot
     </tr>
     <tr>
       <th scope="row">이벤트</th>
-      <td>{{event("slotchange")}}</td>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
