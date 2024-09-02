@@ -63,7 +63,7 @@ l10n:
 
   - : 当一个元素有多个 CSS 声明时，应该应用哪个声明呢？通过[确定性测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)让你理解浏览器应用 CSS 声明的算法。
 
-- [级联与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
   - : 级联、确定性和继承的作用是：在 HTML 中如何应用 CSS、如何解决样式声明冲突。
 
