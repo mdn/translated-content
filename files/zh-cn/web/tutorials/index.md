@@ -119,7 +119,7 @@ l10n:
   - : 面向想又快又好地学习 JavaScript 的程序员，也面向想提升技能或寻找特定主题的 JavaScript 程序员。
 - [基本的 JavaScript 设计模式](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : 介绍基本的 JavaScript 设计模式。
-- [JavaScript.info —— 现代 JavaScript 教程](https://javascript.info/)
+- [JavaScript.info——现代 JavaScript 教程](https://zh.javascript.info/)
   - : 卷一：语言。卷二：与浏览器共事。
 
 ### 高级
