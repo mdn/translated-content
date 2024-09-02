@@ -59,7 +59,7 @@ l10n:
 
   - : 用 CSS 定位 HTML 元素，其中包含带状态的元素。
 
-- [确定性](/zh-CN/docs/Web/CSS/Specificity)
+- [优先级](/zh-CN/docs/Web/CSS/Specificity)
 
   - : 当一个元素有多个 CSS 声明时，应该应用哪个声明呢？通过[确定性测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)让你理解浏览器应用 CSS 声明的算法。
 
