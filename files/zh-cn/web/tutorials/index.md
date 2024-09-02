@@ -7,7 +7,7 @@ l10n:
 
 本页面涵盖着各式各样的教程和练习资料的链接。不管你是才入门，还是了解基础，抑或是 Web 开发老手，在这都能找到实用的最佳练习资源。
 
-这些资源由卓有远见的公司和 Web 开发者创建（一群采用开放标准和最佳实践来开发 Web 的人），且这些资源可通过知识共享（Creative Commons）等开放内容许可进行翻译。
+这些资源由卓有远见的公司和 Web 开发者创建（他们采用开放标准和最佳实践来开发 Web），并且这些资源通过知识共享（Creative Commons）等开放内容许可，提供译文或允许翻译。
 
 ## 面向学习 Web 的纯新手
 
@@ -120,7 +120,7 @@ l10n:
 - [基本的 JavaScript 设计模式](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : 介绍基本的 JavaScript 设计模式。
 - [JavaScript.info——现代 JavaScript 教程](https://zh.javascript.info/)
-  - : 卷一：语言。卷二：与浏览器共事。
+  - : 卷一：语言。卷二：在浏览器中如何使用 JavaScript。
 
 ### 高级
 
