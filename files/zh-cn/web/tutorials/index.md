@@ -61,7 +61,7 @@ l10n:
 
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
 
-  - : 当一个元素有多个 CSS 声明时，应该应用哪个声明呢？通过[确定性测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)让你理解浏览器应用 CSS 声明的算法。
+  - : 通过[优先级测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)了解浏览器算法在遇到存在冲突的 CSS 声明时会决定将哪个声明应用到元素上。
 
 - [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
