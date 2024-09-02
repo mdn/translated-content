@@ -137,7 +137,7 @@ l10n:
 - [浏览器的工作方式](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : 一篇详细的研究文章：内容涵盖不同的现代浏览器、引擎、页面渲染等等。
 - [JavaScript 视频](https://github.com/bolshchikov/js-must-watch)
-  - : 必须要看的 JavaScript 视频合集。
+  - : 必看的 JavaScript 视频合集。
 
 ### 扩展开发
 
