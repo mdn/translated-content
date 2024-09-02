@@ -27,7 +27,7 @@ slug: Web/API/Worker
 - {{domxref("Worker.onmessage")}}
   - : `message` 유형의 {{domxref("MessageEvent")}}가 워커로 확산되면, 즉 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}를 통해 워커에서 부모 문서로 메시지를 전송하면 호출할 {{domxref("EventListener")}}입니다. 메시지는 {{domxref("MessageEvent.data", "data")}} 속성에 들어있습니다.
 - {{domxref("Worker.onmessageerror")}}
-  - : [`messageerror`](/en-US/docs/Web/API/Worker/messageerror_event) 이벤트가 발생하면 호출할 이벤트 처리기입니다.
+  - : [`messageerror`](/ko/docs/Web/API/Worker/messageerror_event) 이벤트가 발생하면 호출할 이벤트 처리기입니다.
 
 ## 메서드
 

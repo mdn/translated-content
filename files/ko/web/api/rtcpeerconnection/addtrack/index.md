@@ -111,7 +111,7 @@ async openCall(pc) {
 }
 ```
 
-아래와 같이, 원격 유저는  {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러를 사용 할 수 있습니다:
+아래와 같이, 원격 유저는 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러를 사용 할 수 있습니다:
 
 ```js
 pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
