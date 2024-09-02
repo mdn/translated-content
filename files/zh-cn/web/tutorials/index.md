@@ -125,7 +125,7 @@ l10n:
 ### 高级
 
 - [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
-  - : 一部完整的、经常更新的 JavaScript 指南，面向从初级到高级的学习者。
+  - : 一份全面且经常更新的 JavaScript 指南，面向从初级到高级的学习者。
 - [你不了解 JS](https://github.com/getify/You-Dont-Know-JS)
   - : 深入 JavaScript 语言核心机制的系列书籍。
 - [JavaScript 花园](https://github.com/BonsaiDen/JavaScript-Garden)
