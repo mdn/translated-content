@@ -133,7 +133,7 @@ l10n:
 - [探索 ES6](https://exploringjs.com/es6/)
   - : 和 ECMAScript 2015 相关的靠谱且有深度的信息。
 - [JavaScript 模式](https://github.com/chuanxshi/javascript-patterns)
-  - : JavaScript 模式和反模式合集：涵盖函数模式、jQuery 模式、jQuery 插件模式、设计模式、通用模式、字面量和构造器模式、对象创建模式、代码复用模式、DOM。
+  - : JavaScript 模式和反模式合集：涵盖函数模式、jQuery 模式、jQuery 插件模式、设计模式、通用模式、字面量和构造函数模式、对象创建模式、代码复用模式、DOM。
 - [浏览器的工作方式](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : 一篇详细的研究文章：内容涵盖不同的现代浏览器、引擎、页面渲染等等。
 - [JavaScript 视频](https://github.com/bolshchikov/js-must-watch)
