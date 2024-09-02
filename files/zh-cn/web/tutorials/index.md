@@ -23,7 +23,7 @@ l10n:
 - [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
   - : 完整的 HTML 元素参考以及不同浏览器的兼容性信息。
 - [用 HTML 创建简单的网页](https://www.theblogstarter.com/html-for-beginners/)
-  - : 一篇面向初学者的 HTML 指南——解释常见的标签，其中包含 HTML 标签。同时包含一篇带代码示例的手把手指南——创建基础的网页。
+  - : 一篇面向初学者的 HTML 指南——解释常见的标签，其中包含 HTML 标签。同时包含一篇带代码示例的分步指南——创建基础的网页。
 - [HTML 挑战](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : 这些挑战会打磨你的 HTML 技巧（例如，应该使用 \<h2> 元素还是 \<strong> 元素？）——专注有意义的标记。
 
