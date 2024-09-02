@@ -11,8 +11,8 @@ l10n:
 
 ## 面向学习 Web 的纯新手
 
-- [开始学习 Web](/zh-CN/docs/Learn/Getting_started_with_the_web)
-  - : _开始学习 Web_ 是一个简明系列，你会实践 Web 开发。你会安装构建简单网页和发布简单代码所需的工具。
+- [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
+  - : *Web 入门*是一套简明的，介绍 Web 开发实践的系列文章。你会安装构建简单网页和发布简单代码所需的工具。
 
 ## HTML 教程
 
