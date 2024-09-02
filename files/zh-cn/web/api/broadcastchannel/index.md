@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Broadcast Channel API")}} {{AvailableInWorkers}}
 
-**`BroadcastChannel`** 接口表示给定{{glossary("origin", "源")}}的任何{{glossary("browsing context", "浏览上下文")}}都可以订阅的命名频道。它允许同源的不同浏览器窗口、标签页、frame 或者 iframe 下的不同文档之间相互通信。消息通过一个 {{domxref("BroadcastChannel/message_event", "message")}} 事件进行广播，该事件在侦听该频道的所有 'BroadcastChannel' 对象上触发，发送消息的对象除外。
+**`BroadcastChannel`** 接口表示给定{{glossary("origin", "源")}}的任何{{glossary("browsing context", "浏览上下文")}}都可以订阅的命名频道。它允许同源的不同浏览器窗口、标签页、frame 或者 iframe 下的不同文档之间相互通信。消息通过一个 {{domxref("BroadcastChannel/message_event", "message")}} 事件进行广播，该事件在侦听该频道的所有 `BroadcastChannel` 对象上触发，发送消息的对象除外。
 
 {{InheritanceDiagram}}
 
