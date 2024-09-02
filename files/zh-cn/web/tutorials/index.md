@@ -88,7 +88,7 @@ l10n:
 - [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : 用 CSS 实现旋转、拉伸、缩放和平移。
 - [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : CSS 过渡提供一种让 CSS 属性改变动起来的方式，而非让改变立即生效。
+  - : CSS 过渡提供一种以动画的形式来改变 CSS 属性的方式，而非让改变立即生效。
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
   - : 学习如何使用画布元素和脚本绘制图形。
 
