@@ -209,6 +209,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 <link rel="icon" href="/favicon-48x48.[some hex hash].png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
 ```
+
 这是一种使网站在保存到苹果设备主屏幕时显示图标的方法。你甚至可以为不同的设备提供不同的图标，以确保图标在所有设备上都看起来美观。例如：
 
 ```html
