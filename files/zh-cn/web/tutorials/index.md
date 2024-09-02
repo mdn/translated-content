@@ -79,7 +79,7 @@ l10n:
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)
   - : 完整的 CSS 参考，以及火狐和其它浏览器的兼容性信息。
 - [流式网格](https://alistapart.com/article/fluidgrids/)
-  - : 设计一种能随着浏览器窗口大小变化而流动的布局，且仍使用排版网格。
+  - : 设计一种能随着浏览器窗口大小变化而流畅地调整大小的布局，且仍使用排版网格。
 - [CSS 挑战](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges)
   - : 展示你的 CSS 技巧，看看哪些地方还需要加强练习。
 
