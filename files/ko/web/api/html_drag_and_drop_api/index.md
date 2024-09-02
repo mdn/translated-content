@@ -177,7 +177,7 @@ function dragstart_handler(ev) {
 
 ### 드롭 효과 다루기
 
-{{domxref('HTMLElement/drop_event', 'drop')}}  이벤트 핸들러는 자유롭게 드래그 데이터를 가공할 수 있습니다. 보통, 드래그 아이템과 각 아이템을 가공하기 위해 {{domxref("DataTransfer.getData","getData()")}}를 사용합니다. 추가로, {{domxref("DataTransfer.dropEffect","dropEffect")}} 값이나 보조키 상태에 따라 어플리케이션이 어떻게 동작할지를 결정할 수 있습니다.
+{{domxref('HTMLElement/drop_event', 'drop')}} 이벤트 핸들러는 자유롭게 드래그 데이터를 가공할 수 있습니다. 보통, 드래그 아이템과 각 아이템을 가공하기 위해 {{domxref("DataTransfer.getData","getData()")}}를 사용합니다. 추가로, {{domxref("DataTransfer.dropEffect","dropEffect")}} 값이나 보조키 상태에 따라 어플리케이션이 어떻게 동작할지를 결정할 수 있습니다.
 
 아래 예제는 드롭 핸들러가 드래그 데이터로부터 드래그하는 요소의 id를 가져와 드래그하는 요소를 드롭하는 요소로 옮기기위해 사용합니다.
 
