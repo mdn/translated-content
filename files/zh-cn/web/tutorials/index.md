@@ -69,7 +69,7 @@ l10n:
 
 - [为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)
   - : 本文介绍了为文本添加样式的基础知识，包括：设置字体、加粗、斜体、行间距、字间距、阴影和其它文本特性。在本模块中，还会学习的内容有：在页面中应用自定义字体、为列表和链接添加样式。
-- [CSS 通用问题](/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ)
+- [CSS 常见问题](/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ)
   - : 面向初学者的常见问题和回答。
 
 ### 中级
