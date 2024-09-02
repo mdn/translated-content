@@ -53,7 +53,7 @@ l10n:
 
   - : 本模块承接 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)——这时你已经熟悉 CSS 语言及其语法、有了基本的使用经验，是时候再深入一些。在本模块中，你会学习层叠和继承、可用的选择器类型、单位、大小、为背景和边框添加样式、调试，以及其它内容。
 
-    本文的目标是，在了解特定领域的知识诸如[为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)之前，提供一个能让你书写合格 CSS 的工具集并帮助你理解基本的理论。
+    本文的目的是，在了解诸如[为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)等特定领域的知识之前，提供一个能让你编写合格 CSS 的工具集并帮助你理解基本的理论。
 
 - [选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
 
