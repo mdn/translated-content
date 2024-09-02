@@ -47,7 +47,7 @@ l10n:
 
 - [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
   - : CSS（层叠样式表）用于为网页添加样式。*CSS 基础*将带你了解入门所需的内容。本文回答了如下问题：如何把文本变成黑色或者红色？怎么将内容显示到屏幕上的特定位置？怎么用背景图像或者颜色装饰网页？
-- [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)
+- [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
   - : CSS（层叠样式表）用于为网页添加样式，对网页进行布局——例如，修改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其它装饰特性。在前往掌握 CSS 基础知识（CSS 的运作方式，CSS 语法是什么样子，在 HTML 中如何使用 CSS 添加样式）的道路上，本模块是一个很好的开始。
 - [CSS 构建块](/zh-CN/docs/Learn/CSS/Building_blocks)
 
