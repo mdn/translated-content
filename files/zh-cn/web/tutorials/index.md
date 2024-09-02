@@ -98,7 +98,7 @@ l10n:
 
 - [JavaScript 初识](/zh-CN/docs/Learn/JavaScript/First_steps)
   - : 在第一个 JavaScript 模块中，你会了解一些基础知识，例如，JavaScript 是什么、JavaScript 是什么样、JavaScript 能做什么。然后你会体验初次编写 JavaScript。紧接着，你会学习一些关键的 JavaScript 特性的细节，例如，变量、字符串、数字和数组。
-- [JavaScript 构建块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
+- [创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 在本模块中，你会继续学习关键的 JavaScript 基础特性，注意力会转向常见的代码块类型，例如，条件语句、循环、函数和事件。这些概念在课程中早已见过，但只是一扫而过——这里会明确地讨论这些概念。
 - [开始学习 JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : JavaScript 是什么、JavaScript 如何帮助你？
