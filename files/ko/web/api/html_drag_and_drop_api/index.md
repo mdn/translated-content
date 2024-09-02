@@ -17,15 +17,15 @@ HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxr
 
 모든 [드래그 이벤트](/ko/docs/Web/API/DragEvent#Event_types)는 [글로벌 이벤트 핸들러](/ko/docs/Web/API/DragEvent#GlobalEventHandlers)와 연결되어 있습니다. 각 드래그 이벤트와 드래그 전역 속성은 참조 문서를 가지고 있습니다. 아래 표는 각 이벤트에 대한 간략한 설명과 참조 문서로의 링크를 담고 있습니다.
 
-| 이벤트                                      | 이벤트 핸들러                                                | 설명                                                                                                                                                     |
-| ------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref('Document/drag_이벤트', 'drag')}} | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 요소나 텍스트 블록을 드래그 할 때 발생한다.                                                                                                              |
-| {{domxref('HTMLElement/dragend_event', 'dragend')}}                        | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 드래그를 끝냈을 때 발생한다. (마우스 버튼을 떼거나 ESC 키를 누를 때) ([드래그 끝내기](/ko/docs/DragDrop/Drag_Operations#dragend)를 보시오)               |
-| {{domxref('HTMLElement/dragenter_event', 'dragenter')}}                      | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 드래그한 요소나 텍스트 블록을 적합한 드롭 대상위에 올라갔을 때 발생한다. ([드롭 대상 지정하기](/ko/docs/DragDrop/Drag_Operations#droptargets)를 보시오.) |
-| {{domxref('HTMLElement/dragleave_event', 'dragleave')}}                      | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 드래그하는 요소나 텍스트 블록이 적합한 드롭 대상에서 벗어났을 때 발생한다.                                                                               |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}                       | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 요소나 텍스트 블록을 적합한 드롭 대상 위로 지나갈 때 발생한다. (매 수백 밀리초마다 발생한다.)                                                            |
-| {{domxref('HTMLElement/dragstart_event', 'dragstart')}}                      | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 사용자가 요소나 텍스트 블록을 드래그하기 시작했을 때 발생한다. ([드래그 시작하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                |
-| {{domxref('HTMLElement/drop_event', 'drop')}}                           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 요소나 텍스트 블록을 적합한 드롭 대상에 드롭했을 때 발생한다. ([드롭하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                        |
+| 이벤트                                                  | 이벤트 핸들러                                                | 설명                                                                                                                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('Document/drag_이벤트', 'drag')}}             | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 요소나 텍스트 블록을 드래그 할 때 발생한다.                                                                                                              |
+| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 드래그를 끝냈을 때 발생한다. (마우스 버튼을 떼거나 ESC 키를 누를 때) ([드래그 끝내기](/ko/docs/DragDrop/Drag_Operations#dragend)를 보시오)               |
+| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 드래그한 요소나 텍스트 블록을 적합한 드롭 대상위에 올라갔을 때 발생한다. ([드롭 대상 지정하기](/ko/docs/DragDrop/Drag_Operations#droptargets)를 보시오.) |
+| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 드래그하는 요소나 텍스트 블록이 적합한 드롭 대상에서 벗어났을 때 발생한다.                                                                               |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 요소나 텍스트 블록을 적합한 드롭 대상 위로 지나갈 때 발생한다. (매 수백 밀리초마다 발생한다.)                                                            |
+| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 사용자가 요소나 텍스트 블록을 드래그하기 시작했을 때 발생한다. ([드래그 시작하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                |
+| {{domxref('HTMLElement/drop_event', 'drop')}}           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 요소나 텍스트 블록을 적합한 드롭 대상에 드롭했을 때 발생한다. ([드롭하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                        |
 
 > **참고:** `참고: dragstart`와 `dragend` 이벤트는 파일을 브라우저로 드래그할 때는 발생하지 않습니다.
 
