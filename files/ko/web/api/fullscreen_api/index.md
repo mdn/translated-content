@@ -39,7 +39,7 @@ _{{DOMxRef("Document")}} 인터페이스는 full-screen mode가 지원되고 사
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : `fullscreenEnabled` 속성(property)은 full-screen mode를 사용할 수 있는지 여부를 알려줍니다. 이유가 어떻든(예를들어, `"fullscreen"` 기능이 허락되지 않거나, full-screen mode가 지원되지 않는 경우) full-screen mode를 사용할 수 없으면 `false` 입니다.
 
-### Events handlers
+### Event handlers
 
 _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode와 window mode간에 변경하는 과정에서 오류가 발생하는 것을 감지하는데 사용할 수 있는 두 가지 이벤트를 정의합니다. 이러한 이벤트에 대한 이벤트 핸들러는 {{DOMxRef("Document")}} 와{{DOMxRef("Element")}} 인터페이스 에서 사용할 수 있습니다._
 
