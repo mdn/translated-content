@@ -2,7 +2,7 @@
 title: 教程
 slug: Web/Tutorials
 l10n:
-  sourceCommit: 5f4dc8ee228442ddf6831f5f4b8ffe37e5f2beb3
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 本页面涵盖着各式各样的教程和练习资料的链接。不管你是才入门，还是了解基础，抑或是 Web 开发老手，在这都能找到实用的最佳练习资源。
@@ -134,7 +134,7 @@ l10n:
   - : 和 ECMAScript 2015 相关的靠谱且有深度的信息。
 - [JavaScript 模式](https://github.com/chuanxshi/javascript-patterns)
   - : JavaScript 模式和反模式合集：涵盖函数模式、jQuery 模式、jQuery 插件模式、设计模式、通用模式、字面量和构造函数模式、对象创建模式、代码复用模式、DOM。
-- [浏览器的工作方式](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+- [浏览器的工作方式](https://web.dev/articles/howbrowserswork)
   - : 一篇详细的研究文章：内容涵盖不同的现代浏览器、引擎、页面渲染等等。
 - [JavaScript 视频](https://github.com/bolshchikov/js-must-watch)
   - : 必看的 JavaScript 视频合集。
