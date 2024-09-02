@@ -111,7 +111,7 @@ l10n:
 
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
   - : 在 JavaScript 中，对象普遍存在，从核心 JavaScript 特性诸如字符串和数组到构建于 JavaScript 之上的浏览器 API。你可以创建对象，将相关的函数和变量有效的封装起来。如果你想深入了解 JavaScript 语言的知识和编写效率更高的代码，理解 JavaScript 的面向对象的特性很重要。本模块会讲解这方面的知识。你会学习对象理论和语法的细节，学习如何创建对象，学习 JSON 数据是什么以及如何使用 JSON。
-- [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
+- [客户端 Web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
   - : 为网站或应用编写客户端 JavaScript 代码时，如果不使用 API——操纵浏览器和站点的运行环境所处的操作系统的各个方面的接口或甚至是来自其它网站或服务的数据，你将寸步难行。在本模块中，你会学习 API 是什么、如何使用一些在开发工作中最常见的 API。
 - [JavaScript 编程精解](https://eloquentjavascript.net/)
   - : 中高级 JavaScript 方法论的综合指南。
