@@ -105,7 +105,7 @@ l10n:
 - [Codecademy](https://www.codecademy.com/)
   - : 在 Codecademy 学习如何编写 JavaScript 很容易。Codecademy 提供了交互界面，你可以和你的朋友一起学。
 - [freeCodeCamp](https://www.freecodecamp.org/learn)
-  - : freeCodeCamp 教授大量的语言和 Web 开发框架。还有一个[论坛](https://forum.freecodecamp.org/)，一个[互联网广播站](https://coderadio.freecodecamp.org)，和一个[博客](https://www.freecodecamp.org/news)。
+  - : freeCodeCamp 教授大量的语言和 Web 开发框架。还有对应的[论坛](https://forum.freecodecamp.org/)、[互联网电台](https://coderadio.freecodecamp.org)和[博客](https://www.freecodecamp.org/news)。
 
 ### 中级
 
