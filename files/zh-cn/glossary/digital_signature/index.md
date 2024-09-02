@@ -26,5 +26,5 @@ l10n:
 
 - 相关术语：
   - {{glossary("Digital certificate", "数字证书")}}
-  - {{glossary("Hash", "哈希")}}
+  - {{glossary("Hash", "散列")}}
   - {{glossary("Public-key cryptography", "非对称密钥密码")}}
