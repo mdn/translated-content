@@ -2,12 +2,12 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 l10n:
-  sourceCommit: e39ad1510b9794cd393dfc6a48e3a3d3d7a4c732
+  sourceCommit: 1467f47e1944c151b368e047fe4f9cf7f1f0e0e2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
-在本教程中，我们将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站最终需要的所有资源端点设置具有"虚拟"处理函数的路由（URL 处理器）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
+在本教程中，我们将为[本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)网站最终需要的所有资源端点设置具有“虚拟”处理器函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -32,30 +32,30 @@ l10n:
 
 ## 概览
 
-[上节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose) 我们定义了与数据库交互的 _Mongoose_ 模型，并使用一个（独立）脚本创建了一些初始记录。现在可以编写代码来向用户展示这些信息。我们首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后要创建路由（URL 处理器）和视图（模板）来显示这些页面。
+[上节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)定义了与数据库交互的 _Mongoose_ 模型，并使用一个（独立）脚本创建了一些初始的图书馆记录。现在可以编写代码来向用户展示这些信息。我们首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后要创建路由（URL 处理器）和视图（模板）来显示这些页面。
 
-下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），即与路由请求代码是分开的实际的请求处理函数。
+下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），即将路由请求的代码与实际处理请求的代码分离的函数。
 
 因为我们已经创建好了模型，我们接下来需要创建的是：
 
-- “路由”：把需要支持的请求（以及请求 URL 中包含的任何信息）转发到适当的控制器函数。
-- 控制器：从模型中获取请求的数据，创建一个 HTML 页面显示出数据，并将页面返回给用户，以便在浏览器中查看。
+- “路由”：把需要支持的请求（以及请求 URL 中编码的任何信息）转发到适当的控制器函数。
+- 控制器函数：从模型中获取请求的数据，创建一个显示数据的 HTML 页面，并将页面返回给用户，以便在浏览器中查看。
 - 视图（模板）：供控制器用来渲染数据。
 
-![MVC Express 服务器的主要数据流图：“路由”接收发送到 Express 服务器的 HTTP 请求，并将其转发给相应的“控制器”功能。控制器从模型中读取和写入数据。模型连接到数据库，为服务器提供数据访问。控制器使用“视图”（也称为模板）来呈现数据。控制器将 HTML HTTP 响应作为 HTTP 响应发送回客户端。](mvc_express.png)
+![MVC Express 服务器的主要数据流图：“路由”接收发送到 Express 服务器的 HTTP 请求，并将其转发给相应的“控制器”函数。控制器从模型中读取和写入数据。模型连接到数据库，为服务器提供数据访问。控制器使用“视图”（也称为模板）来呈现数据。控制器将 HTML HTTP 响应作为 HTTP 响应发送回客户端。](mvc_express.png)
 
 因此我们最终需要显示图书、图书种类、作者、图书副本的列表和详细信息的页面，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，而会后续章节再扩展控制器方法以使用模型数据。
 
-第一小节提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的“入门”知识。后续设置 LocalLibrary 路由时我们将用到这些知识。
+第一小节提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的“入门”知识。后续设置本地图书馆的路由时我们将用到这些知识。
 
 ## 路由入门
 
 路由是一段 Express 代码，它将 HTTP 动词（`GET`、`POST`、`PUT`、`DELETE` 等）、URL 路径/模式和处理函数三者关联起来。
 
-创建路由有多种方法。在本教程中，我们将使用 [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) 中间件，因为它允许我们将网站特定部分的路由处理程序分组在一起并使用共同的路由前缀访问它们。我们将把所有与图书馆相关的路由保存在一个“目录”模块中，如果我们添加了用于处理用户账户或其他功能的路由，可以将它们单独分组。
+创建路由有多种方法。在本教程中，我们将使用 [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) 中间件，因为它允许我们将网站特定部分的路由处理器分组在一起并使用共同的路由前缀访问它们。我们将把所有与图书馆相关的路由保存在“catalog”（目录）模块中，如果我们添加了用于处理用户账户或其他功能的路由，可以将它们单独分组。
 
 > [!NOTE]
-> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 *Express 应用对象*定义路由非常类似。
+> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 *Express 应用对象*上定义路由非常类似。
 
 本小节的剩余部分内容将介绍使用 `Router` 定义路由的方法。
 
@@ -85,9 +85,9 @@ module.exports = router;
 ```
 
 > [!NOTE]
-> 上面的路由处理回调直接定义在了路由函数中。LocalLibrary 的回调将定义在单独的控制器模块中。
+> 上面的路由处理回调直接定义在了路由函数中。本地图书馆的回调将定义在单独的控制器模块中。
 
-要在主应用中使用该路由模块，首先应 `require` 它（**wiki.js**），然后对 Express 应用对象调用 `use()`（指定路径“/wiki”），即可将其添加到中间件处理路径。
+要在主应用中使用该路由模块，首先应 `require()` 它（**wiki.js**），然后在 Express 应用对象上调用 `use()`（指定 URL 路径“wiki”），即可将其添加到中间件处理路径。
 
 ```js
 const wiki = require("./wiki.js");
@@ -110,11 +110,11 @@ router.get("/about", (req, res) => {
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
 > [!NOTE]
-> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#使用中间件)，这意味着它们要么（通过响应）结束请求，要么调用链中的 `next` 函数。在上述示例中，我们使用 `send()` 完成了请求，因而没有再用上 `next` 参数（参数表中将其省略）。
+> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#使用中间件（middleware）)，这意味着它们要么（通过响应）结束请求，要么调用链中的 `next` 函数。在上述示例中，我们使用 `send()` 完成了请求，因而没有用上 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调。我们可以根据需要指定任意数量的回调参数或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
-此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串“关于此维基”。还有许多其他可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [render()](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。我们将在后续章节进一步讨论。
+此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（`/about`）的 GET 请求时将返回字符串“关于此维基”。还有许多其他可以结束请求/响应周期[响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建本地图书馆最常使用的响应方法是 [`render()`](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。我们将在后续章节进一步讨论。
 
 ### HTTP 动词
 
@@ -134,7 +134,7 @@ router.post("/about", (req, res) => {
 
 路由路径用于定义可请求的端点。之前示例中路径都是字符串，并且必须精确写作：“/”、“/about”、“/book”诸如此类。
 
-路由路径也可以是字符串模式（String Pattern）。可用部分*正则表达式语法*来定义端点的模式。以下是所涉及的正则表达式（注意，连字符（`-`）和点（`.`）在字符串路径中解释为字面量，不能做为正则表达式）：
+路由路径也可以是字符串模式（string pattern）。字符串模式使用*正则表达式语法*来定义将匹配的端点模式。语法如下所示（注意，连字符（`-`）和点（`.`）在基于字符串的路径中被解释为字面量）：
 
 - `?`：问号之前的一个字符只能出现零次或一次。例如，路由路径 `'/ab?cd'` 路径匹配端点 `acd` 或 `abcd`。
 - `+`：加号之前的一个字符至少出现一次。例如，路径路径 `'/ab+cd'` 匹配端点 `abcd`、`abbcd`、`abbbcd`，等。
@@ -154,7 +154,7 @@ app.get(/.*fish$/, (req, res) => {
 
 ### 路由参数
 
-路径参数是*命名的 URL 片段*，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀并紧接着名称（如 `/:your_parameter_name/`）。捕获的值保存在 `req.params` 对象中，其中参数名对应对象的键（例如 `req.params.your_parameter_name`）。
+路径参数是*具名 URL 片段*，用于捕获在 URL 中的位置指定的值。具名段以冒号为前缀并紧接着名称（如 `/:your_parameter_name/`）。捕获的值保存在 `req.params` 对象中，其中参数名对应对象的键（例如 `req.params.your_parameter_name`）。
 
 比如，我们考虑一个包含用户和图书信息的 URL `http://localhost:3000/users/34/books/8989`。我们可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
 
@@ -169,9 +169,9 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 路由参数名必须由“单词字符”（A-Z、a-z、0-9 以及 \_）组成。
 
 > [!NOTE]
-> URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
+> URL _/book/create_ 会匹配 `/book/:bookId` 这样的路由（因为 `:bookId` 是*任意*字符串的占位符，会匹配 `create`）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能专门处理这个路由。
 
-以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html)和[路由指南](http://expressjs.com/en/guide/routing.html)。以下是 LocalLibrary 路由和控制器的设置过程。
+以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html)和[路由指南](http://expressjs.com/en/guide/routing.html)。以下是本地图书馆路由和控制器的设置过程。
 
 ### 处理路由函数中的错误
 
@@ -228,7 +228,7 @@ exports.get(
 );
 ```
 
-## LocalLibrary 所需路由
+## 本地图书馆所需的路由
 
 以下是站点页面的完整 URL 列表，其中 _object_ 是模型名称（`book`、`bookinstance`、`genre`、`author`），_objects_ 是一组模型，_id_ 是每个 Mongoose 模型实例默认的标识字段（`_id`）。
 
@@ -318,14 +318,11 @@ exports.author_update_post = asyncHandler(async (req, res, next) => {
 };
 ```
 
-该模块首先需要 `Author` 模型（我们稍后将使用该模型访问和更新数据）和 `asyncHandler` 封装器（我们将使用该封装器捕获路由处理函数中抛出的任何异常）。然后，它为我们希望处理的每个 URL 输出函数。请注意，创建、更新和删除操作使用的是表单，因此还需要额外的方法来处理表单发布请求。我们将在后面的“表单”一文中讨论这些方法。
+该模块首先需要 `Author` 模型（我们稍后将使用该模型访问和更新数据）和 `asyncHandler` 包装器（我们将使用该封装器捕获路由处理函数中抛出的任何异常）。然后，它为我们希望处理的每个 URL 输出函数。请注意，创建、更新和删除操作使用的是表单，因此还需要额外的方法来处理表单发布请求。我们将在后面的“表单”一文中讨论这些方法。
 
-这些函数都使用了上文[处理路由函数中的异常](#处理路由函数中的异常)中描述的封装函数，其参数包括请求、响应和下一步。
-函数会响应一个字符串，表示相关页面尚未创建。
-如果控制器函数预计会接收路径参数，则会在消息字符串中输出这些参数（参见上文的 `req.params.id`）。
+这些函数都使用了上文[处理路由函数中的异常](#处理路由函数中的异常)中描述的封装函数，其参数包括请求、响应和下一步。函数会响应一个字符串，表示相关页面尚未创建。如果控制器函数预计会接收路径参数，则会在消息字符串中输出这些参数（参见上文的 `req.params.id`）。
 
-请注意，某些路由函数在实现后可能不包含任何可抛出异常的代码。
-我们可以在使用时将它们改回“正常”的路由处理函数。
+请注意，某些路由函数在实现后可能不包含任何可抛出异常的代码。我们可以在使用时将它们改回“正常”的路由处理器函数。
 
 ### BookInstance 控制器
 
@@ -376,7 +373,7 @@ exports.bookinstance_update_post = asyncHandler(async (req, res, next) => {
 });
 ```
 
-#### 流派控制器
+#### Genre 控制器
 
 打开 **/controllers/genreController.js** 文件，复制以下文本（与 `Author` 和 `BookInstance` 文件的模式相同）：
 
@@ -478,11 +475,11 @@ exports.book_update_post = asyncHandler(async (req, res, next) => {
 });
 ```
 
-## 创建图书编目 `catalog` 路由模组
+## 创建 catalog 路由模块
 
-定义好控制器后，我们来为 [LocalLibrary 网站](#LocalLibrary_所需路由)创建完整的 URL 路由。
+定义好控制器后，我们来为[本地图书馆网站](#本地图书馆所需的路由)创建完整的 URL 路由。
 
-站点骨架中有一个 **./routes** 文件夹，其中包含两个路由文件：_index_ 和 _user_，在这里新建一个 **catalog.js** 路由文件，如下所示：
+站点骨架中有一个 **./routes** 文件夹，其中包含两个路由文件：_index_ 和 _users_，在这里新建一个 **catalog.js** 路由文件，如下所示：
 
 ```plain
 /express-locallibrary-tutorial   // 项目根目录
@@ -638,7 +635,7 @@ module.exports = router;
 
 处理函数均导入自上文的控制器模块。
 
-### 更新主要路由模块
+### 更新索引路由模块
 
 我们已经设置了所有新路径，但仍有一条路径指向原始页面。让我们把它重定向到我们在“/catalog”路径下创建的新索引页面。
 
@@ -677,7 +674,7 @@ app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
 > [!NOTE]
 > 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问图书列表 的 URL 为：`/catalog/books/`。
 
-大功告成。LocalLibrary 网站所需的所有 URL 的路由和框架函数都已准备完毕。
+大功告成。本地图书馆网站所需的所有 URL 的路由和框架函数都已准备完毕。
 
 ### 测试路由
 
