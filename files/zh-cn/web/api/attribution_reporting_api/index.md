@@ -48,7 +48,7 @@ slug: Web/API/Attribution_Reporting_API
 4. 当触发器归因完成后，浏览器会尝试将 [归因报告注册触发器](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) 头中的数据与私有本地缓存中保存的来源数据条目进行匹配（见第 2 步）。有关匹配方法和要求，请参阅 [注册归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers)。
 5. 如果找到匹配，浏览器将把报告数据发送到通常由广告技术提供商拥有的报告服务器上的端点，在那里可以安全地进行分析。与 cookies 不同，这些数据仅对你发送数据的特定网站可用——不会在其他地方共享数据。这些报告可以是：
    - **事件级报告**：基于归因来源事件的报告，其中详细的来源数据与粗略的触发器数据相关联。例如，报告可能看起来像“`ad.shop.example` 上的点击 ID 200498 导致了 `shop.example` 的购买”，其中“点击 ID 200498”是详细的来源数据，“购买”是粗略的触发器数据。详细的来源数据可能包含来源页面的第一方或上下文数据，而触发器数据可能编码来自触发器页面的事件。
-   - **汇总报告**：更详细的报告，结合来自来源和触发器侧的多个转化数据。例如“`news.example` 上的广告活动 ID 774653 导致了 `shop.example` 上来自意大利用户的 654 笔销售，总收入为 $9540。”  汇总报告的编制需要使用聚合服务（例如 [Google 聚合服务](https://github.com/privacysandbox/aggregation-service)）。
+   - **汇总报告**：更详细的报告，结合来自来源和触发器侧的多个转化数据。例如“`news.example` 上的广告活动 ID 774653 导致了 `shop.example` 上来自意大利用户的 654 笔销售，总收入为 $9540。” 汇总报告的编制需要使用聚合服务（例如 [Google 聚合服务](https://github.com/privacysandbox/aggregation-service)）。
 
 有关实现上述步骤所需功能的更多信息，请参阅：
 

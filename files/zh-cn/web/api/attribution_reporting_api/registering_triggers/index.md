@@ -125,7 +125,7 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
 
 你也可以通过 {{domxref("HTMLImageElement.attributionSrc")}}
 
- 属性实现此目的：
+属性实现此目的：
 
 ```js
 const imgElem = document.querySelector("img");

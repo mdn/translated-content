@@ -128,21 +128,21 @@ elem.addEventListener("click", () => {
 });
 ```
 
-> [!注意]
+> [! 注意]
 > 在设置像上面示例中的[`click`](/zh-CN/docs/Web/API/Element/click_event)事件时，建议将其设置在预期会点击的控件上，例如{{htmlelement("button")}}或{{htmlelement("a")}}元素上。这在语义上更合理，并且对屏幕阅读器和键盘用户更友好。
 
-> [!注意]
+> [! 注意]
 > 要通过`open()`注册归因源，必须在[瞬态激活](/zh-CN/docs/Glossary/Transient_activation)（即用户交互事件处理程序内部，如`click`）中调用，并且必须在用户交互后的五秒内完成。
 
 ## 基于事件的归因源
 
-基于事件的归因源会在某些事件触发时让浏览器存储源数据，例如在`<img>`或`<script>`元素中使用`attributionsrc`属性时（如上文中`<a>`元素的示例），或在你的JavaScript中设置的自定义事件。
+基于事件的归因源会在某些事件触发时让浏览器存储源数据，例如在`<img>`或`<script>`元素中使用`attributionsrc`属性时（如上文中`<a>`元素的示例），或在你的 JavaScript 中设置的自定义事件。
 
-### 基于HTML的事件源
+### 基于 HTML 的事件源
 
-基于HTML的事件源可以用于在页面首次加载时测量与发布者页面的交互——更准确地说，是在`<img>`或`<script>`加载时。要通过HTML注册基于事件的归因源，你可以将`attributionsrc`属性添加到合适的元素中——例如{{htmlelement("img")}}或{{htmlelement("script")}}。
+基于 HTML 的事件源可以用于在页面首次加载时测量与发布者页面的交互——更准确地说，是在`<img>`或`<script>`加载时。要通过 HTML 注册基于事件的归因源，你可以将`attributionsrc`属性添加到合适的元素中——例如{{htmlelement("img")}}或{{htmlelement("script")}}。
 
-如果你将属性值留空，注册请求将发送到托管请求资源的服务器。也可以在值中指定一个或多个额外的URL，以便将注册请求发送到其他服务器；详情请参见[在attributionsrc中指定URL](#specifying_urls_inside_attributionsrc)。
+如果你将属性值留空，注册请求将发送到托管请求资源的服务器。也可以在值中指定一个或多个额外的 URL，以便将注册请求发送到其他服务器；详情请参见[在attributionsrc中指定 URL](#specifying_urls_inside_attributionsrc)。
 
 让我们看看一个`<img>`元素的示例：
 
@@ -157,7 +157,7 @@ const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-当浏览器接收到包含图像文件的响应时（即发生`load`事件时），浏览器会存储归因源数据。请记住，用户可能根本无法感知到图像——这可能是一个1x1的透明跟踪像素，仅用于归因报告。
+当浏览器接收到包含图像文件的响应时（即发生`load`事件时），浏览器会存储归因源数据。请记住，用户可能根本无法感知到图像——这可能是一个 1x1 的透明跟踪像素，仅用于归因报告。
 
 一个{{htmlelement("script")}}示例可能如下所示：
 
@@ -174,9 +174,9 @@ scriptElem.attributionSrc = "";
 
 在这种情况下，当浏览器接收到包含脚本的响应时，交互发生，浏览器存储源数据。
 
-### 基于JavaScript的事件源
+### 基于 JavaScript 的事件源
 
-基于脚本的归因源比基于HTML的归因源更灵活。你可以设置脚本来根据适合你的应用的请求发起注册归因源的请求。这是一种灵活的方法，适合在响应自定义交互（例如点击自定义元素或提交表单）时存储源数据。
+基于脚本的归因源比基于 HTML 的归因源更灵活。你可以设置脚本来根据适合你的应用的请求发起注册归因源的请求。这是一种灵活的方法，适合在响应自定义交互（例如点击自定义元素或提交表单）时存储源数据。
 
 要设置基于脚本的归因源，你可以：
 
@@ -188,7 +188,7 @@ scriptElem.attributionSrc = "";
     triggerEligible: false,
   };
 
-  // 可选地设置keepalive以确保请求超出页面生命周期
+  // 可选地设置 keepalive 以确保请求超出页面生命周期
   function triggerSourceInteraction() {
     fetch("https://shop.example/endpoint", {
       keepalive: true,
@@ -197,7 +197,7 @@ scriptElem.attributionSrc = "";
   }
 
   // 将交互触发器与适合你的代码的事件关联
-  // （不必是DOM事件/用户交互）
+  // （不必是 DOM 事件/用户交互）
   elem.addEventListener("click", triggerSourceInteraction);
   ```
 
@@ -212,7 +212,7 @@ scriptElem.attributionSrc = "";
   function triggerSourceInteraction() {
     const req = new XMLHttpRequest();
     req.open("GET", "https://shop.example/endpoint");
-    // 在调用前检查setAttributionReporting的可用性
+    // 在调用前检查 setAttributionReporting 的可用性
     if (typeof req.setAttributionReporting === "function") {
       req.setAttributionReporting(attributionReporting);
       req.send();
@@ -223,22 +223,22 @@ scriptElem.attributionSrc = "";
   }
 
   // 将交互触发器与适合你的代码的事件关联
-  // （不必是DOM事件/用户交互）
+  // （不必是 DOM 事件/用户交互）
   elem.addEventListener("click", triggerSourceInteraction);
   ```
 
-在这种情况下，当浏览器接收到fetch请求的响应时，交互发生，浏览器存储源数据。
+在这种情况下，当浏览器接收到 fetch 请求的响应时，交互发生，浏览器存储源数据。
 
-> [!注意]
-> 请求可以是任何资源请求。它不需要直接与归因报告API相关，可以是JSON、纯文本、图像blob或其他适合你的应用的请求。
+> [! 注意]
+> 请求可以是任何资源请求。它不需要直接与归因报告 API 相关，可以是 JSON、纯文本、图像 blob 或其他适合你的应用的请求。
 
-## 在attributionsrc中指定URL
+## 在 attributionsrc 中指定 URL
 
 到目前为止，在我们看到的所有示例中，`attributionsrc`属性/功能或`attributionSrc`属性都被留空，值为空字符串。如果托管请求资源的服务器也是你希望处理注册的服务器（即接收{{httpheader("Attribution-Reporting-Eligible")}}头并响应{{httpheader("Attribution-Reporting-Register-Source")}}头的服务器），这是可以的。
 
-然而，可能请求的资源不在你控制的服务器上，或者你只是希望在不同的服务器上处理注册。在这种情况下，你可以在`attributionsrc`的值中指定一个或多个URL。当资源请求发生时，{{httpheader("Attribution-Reporting-Eligible")}}头将发送到`attributionsrc`中指定的URL以及资源的来源；这些URL可以响应{{httpheader("Attribution-Reporting-Register-Source")}}以注册源。
+然而，可能请求的资源不在你控制的服务器上，或者你只是希望在不同的服务器上处理注册。在这种情况下，你可以在`attributionsrc`的值中指定一个或多个 URL。当资源请求发生时，{{httpheader("Attribution-Reporting-Eligible")}}头将发送到`attributionsrc`中指定的 URL 以及资源的来源；这些 URL 可以响应{{httpheader("Attribution-Reporting-Register-Source")}}以注册源。
 
-例如，对于一个`<a>`元素，你可以在`attributionsrc`属性中声明URL：
+例如，对于一个`<a>`元素，你可以在`attributionsrc`属性中声明 URL：
 
 ```html
 <a
@@ -248,10 +248,10 @@ scriptElem.attributionSrc = "";
 </a>
 ```
 
-或者通过JavaScript使用`attributionSrc`属性：
+或者通过 JavaScript 使用`attributionSrc`属性：
 
 ```js
-// 编码URL以防它们包含特殊字符
+// 编码 URL 以防它们包含特殊字符
 // 如'='，否则会被错误解析。
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
@@ -260,10 +260,10 @@ const aElem = document.querySelector("a");
 aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 ```
 
-在调用{{domxref("Window.open()")}}时，不同的URL必须在[`windowFeatures`](/zh-CN/docs/Web/API/Window/open#windowfeatures)参数中列为多个独立的`attributionsrc`特性，用逗号或空格分隔：
+在调用{{domxref("Window.open()")}}时，不同的 URL 必须在[`windowFeatures`](/zh-CN/docs/Web/API/Window/open#windowfeatures)参数中列为多个独立的`attributionsrc`特性，用逗号或空格分隔：
 
 ```js
-// 编码URL以防它们包含特殊字符
+// 编码 URL 以防它们包含特殊字符
 // 如'='，否则会被错误解析。
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
@@ -277,8 +277,8 @@ elem.addEventListener("click", () => {
 });
 ```
 
-> [!注意]
-> 指定多个URL意味着可以在同一特性上注册多个归因源。例如，你可能有不同的活动需要测量其成功率，这些活动涉及在不同数据上生成不同的报告。
+> [! 注意]
+> 指定多个 URL 意味着可以在同一特性上注册多个归因源。例如，你可能有不同的活动需要测量其成功率，这些活动涉及在不同数据上生成不同的报告。
 
 ## 另见
 

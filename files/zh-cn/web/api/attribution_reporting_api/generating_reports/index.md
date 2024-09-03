@@ -164,7 +164,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 }
 ```
 
-源 `"trigger_data"`最多可以有32个值。增加值的数量和`"event_report_windows"`会增加整体报告集中的元素数量。
+源 `"trigger_data"`最多可以有 32 个值。增加值的数量和`"event_report_windows"`会增加整体报告集中的元素数量。
 
 匹配的{{httpheader("Attribution-Reporting-Register-Trigger")}}可能包含以下内容：
 
@@ -310,7 +310,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
    Set-Cookie: ar_debug=1; SameSite=None; Secure; Path=/; HttpOnly
    ```
 
-2. 在与你希望为其公开调试信息的归因报告相关的所有 {{httpheader("Attribution-Reporting-Register-Source")}} 和 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头中设置 `debug_key` 字段。每个 `debug_key` 值必须是格式为十进制字符串的64位无符号整数。使每个调试键成为唯一的 ID——例如，可以将每个键设置为 Cookie ID + 来源/触发时间戳（如果希望将其与旧的基于 Cookie 的系统进行比较，则可以在旧系统中捕获相同的时间戳）。
+2. 在与你希望为其公开调试信息的归因报告相关的所有 {{httpheader("Attribution-Reporting-Register-Source")}} 和 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头中设置 `debug_key` 字段。每个 `debug_key` 值必须是格式为十进制字符串的 64 位无符号整数。使每个调试键成为唯一的 ID——例如，可以将每个键设置为 Cookie ID + 来源/触发时间戳（如果希望将其与旧的基于 Cookie 的系统进行比较，则可以在旧系统中捕获相同的时间戳）。
 
    ```json
    {
