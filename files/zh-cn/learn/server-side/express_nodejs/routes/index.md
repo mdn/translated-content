@@ -156,7 +156,7 @@ app.get(/.*fish$/, (req, res) => {
 
 路径参数是*具名 URL 片段*，用于捕获在 URL 中的位置指定的值。具名段以冒号为前缀并紧接着名称（如 `/:your_parameter_name/`）。捕获的值保存在 `req.params` 对象中，其中参数名对应对象的键（例如 `req.params.your_parameter_name`）。
 
-比如，我们考虑一个包含用户和图书信息的 URL `http://localhost:3000/users/34/books/8989`。我们可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
+比如，我们考虑一个包含用户和图书信息的 URL：`http://localhost:3000/users/34/books/8989`。我们可以这样提取信息（使用 `userId` 和 `bookId` 路径参数）：
 
 ```js
 app.get("/users/:userId/books/:bookId", (req, res) => {
@@ -198,7 +198,7 @@ router.get("/about", (req, res, next) => {
 为了使框架正确处理异常，这些异常必须被捕获，然后将其作为错误转发，如上一节所示。
 
 > [!NOTE]
-> 目前处于测试阶段的 Express 5 有望能处理 JavaScript 异常。
+> 目前处于测试阶段的 Express 5 有望能原生处理 JavaScript 异常。
 
 在上一节中的简单示例中，`About.find().exec()` 是返回 Promise 的数据库查询，我们可以在 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块内编写路由函数，如下所示：
 
