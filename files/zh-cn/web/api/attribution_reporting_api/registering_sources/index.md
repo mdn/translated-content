@@ -142,7 +142,7 @@ elem.addEventListener("click", () => {
 
 基于 HTML 的事件源可以用于在页面首次加载时测量与发布者页面的交互——更准确地说，是在`<img>`或`<script>`加载时。要通过 HTML 注册基于事件的归因源，你可以将`attributionsrc`属性添加到合适的元素中——例如{{htmlelement("img")}}或{{htmlelement("script")}}。
 
-如果你将属性值留空，注册请求将发送到托管请求资源的服务器。也可以在值中指定一个或多个额外的 URL，以便将注册请求发送到其他服务器；详情请参见[在attributionsrc中指定 URL](#specifying_urls_inside_attributionsrc)。
+如果你将属性值留空，注册请求将发送到托管请求资源的服务器。也可以在值中指定一个或多个额外的 URL，以便将注册请求发送到其他服务器；详情请参见[在 attributionsrc 中指定 URL](#specifying_urls_inside_attributionsrc)。
 
 让我们看看一个`<img>`元素的示例：
 

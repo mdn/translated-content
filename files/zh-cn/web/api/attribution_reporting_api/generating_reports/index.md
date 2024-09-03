@@ -164,7 +164,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 }
 ```
 
-源 `"trigger_data"`最多可以有 32 个值。增加值的数量和`"event_report_windows"`会增加整体报告集中的元素数量。
+源 `"trigger_data"` 最多可以有 32 个值。增加值的数量和`"event_report_windows"`会增加整体报告集中的元素数量。
 
 匹配的{{httpheader("Attribution-Reporting-Register-Trigger")}}可能包含以下内容：
 
