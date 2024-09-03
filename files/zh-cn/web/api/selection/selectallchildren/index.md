@@ -23,7 +23,7 @@ selectAllChildren(parentNode)
 ```js
 footer = document.getElementById("footer");
 window.getSelection().selectAllChildren(footer);
-/* Everything inside the footer is now selected *
+/* Everything inside the footer is now selected */
 ```
 
 ## 规范
