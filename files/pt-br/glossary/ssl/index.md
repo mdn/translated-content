@@ -10,7 +10,7 @@ Secure Sockets Layer, ou SSL, era a antiga tecnologia padrão de segurança para
 ## Veja também
 
 - [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) (Wikipedia)
-- [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
+- [Transport Layer Security (TLS)](/pt-BR/docs/Web/Security/Transport_Layer_Security)
 - Termos relacionados do glossário:
   - {{Glossary("HTTPS")}}
   - {{Glossary("TLS")}}
