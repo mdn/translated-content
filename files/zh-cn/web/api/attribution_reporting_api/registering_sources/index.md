@@ -128,10 +128,10 @@ elem.addEventListener("click", () => {
 });
 ```
 
-> [! 注意]
+> [!Notice]
 > 在设置像上面示例中的[`click`](/zh-CN/docs/Web/API/Element/click_event)事件时，建议将其设置在预期会点击的控件上，例如{{htmlelement("button")}}或{{htmlelement("a")}}元素上。这在语义上更合理，并且对屏幕阅读器和键盘用户更友好。
 
-> [! 注意]
+> [!Notice]
 > 要通过`open()`注册归因源，必须在[瞬态激活](/zh-CN/docs/Glossary/Transient_activation)（即用户交互事件处理程序内部，如`click`）中调用，并且必须在用户交互后的五秒内完成。
 
 ## 基于事件的归因源
@@ -229,7 +229,7 @@ scriptElem.attributionSrc = "";
 
 在这种情况下，当浏览器接收到 fetch 请求的响应时，交互发生，浏览器存储源数据。
 
-> [! 注意]
+> [!Notice]
 > 请求可以是任何资源请求。它不需要直接与归因报告 API 相关，可以是 JSON、纯文本、图像 blob 或其他适合你的应用的请求。
 
 ## 在 attributionsrc 中指定 URL
@@ -277,7 +277,7 @@ elem.addEventListener("click", () => {
 });
 ```
 
-> [! 注意]
+> [!Notice]
 > 指定多个 URL 意味着可以在同一特性上注册多个归因源。例如，你可能有不同的活动需要测量其成功率，这些活动涉及在不同数据上生成不同的报告。
 
 ## 另见

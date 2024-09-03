@@ -164,7 +164,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 }
 ```
 
-源 `"trigger_data"` 最多可以有 32 个值。增加值的数量和`"event_report_windows"`会增加整体报告集中的元素数量。
+源 `"trigger_data"` 最多可以有 32 个值。增加值的数量和 `"event_report_windows"` 会增加整体报告集中的元素数量。
 
 匹配的{{httpheader("Attribution-Reporting-Register-Trigger")}}可能包含以下内容：
 
@@ -203,7 +203,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 - [基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)默认有三个报告限制。例如，如果用户点击了一个广告并进行了四次转化：他们访问了广告商网站主页，然后访问了产品页面，注册了新闻通讯，最后进行了购买。由于这是第四次转化，购买报告将被丢弃。
 - [基于事件的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources)默认只有一个报告限制。
 
-> **注意**
+> [!NOTE]
 > 可以通过在关联的 `Attribution-Reporting-Register-Source` 标头的 `"event_report_windows"` 字段中设置不同的 `"end_times"` 来调整报告限制。
 
 当为给定的来源事件触发归因时，如果该来源已达到最大归因次数（点击为 3 次，图像/脚本为 1 次），浏览器将：
@@ -260,9 +260,9 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 }
 ```
 
-> **注意：** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
+> **Note:** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
 
-> **注意：** `not_filters`，即否定过滤器，也受支持。
+> **Note:** `not_filters`，即否定过滤器，也受支持。
 
 在此上下文中，`filters` 可以是对象或对象数组。当指定列表时，只需一个字典匹配即可将触发器视为匹配。
 
@@ -297,7 +297,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 - **成功调试报告** 跟踪特定归因报告的成功生成。成功调试报告在注册相应触发器后立即生成并发送。
 - **详细调试报告** 为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
 
-> **注意：**
+> [!NOTE]
 > 要使用调试报告，报告来源需要设置 Cookie。如果配置为接收报告的来源是第三方，则该 Cookie 将是[第三方 Cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 Cookie 的浏览器中将无法使用调试报告。
 
 ### 使用调试报告
@@ -318,7 +318,8 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
    }
    ```
 
-   > **注意：** 使来源端的调试键与 `source_event_id` 不同，以便区分具有相同来源事件 ID 的单个报告。
+   > [!NOTE]
+   > 使来源端的调试键与 `source_event_id` 不同，以便区分具有相同来源事件 ID 的单个报告。
 
 3. 可选地，在 `Attribution-Reporting-Register-Source` 和 `Attribution-Reporting-Register-Trigger` 标头中将 `debug_reporting` 字段设置为 `true`。如果执行此操作，将生成详细的调试报告。如果不执行此操作，将生成反映你正在生成的归因报告类型（事件级或汇总）的成功调试报告。
 
