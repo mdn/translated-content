@@ -123,9 +123,7 @@ aElem.attributionSrc = "";
 你还可以将 `attributionsrc` 特性关键字添加到 {{domxref("Window.open()")}} 调用的特性属性中。在此示例中，我们在响应 `click` 事件时运行它：
 
 ```js
-elem.addEventListener
-
-("click", () => {
+elem.addEventListener("click", () => {
   window.open("https://shop.example", "targetWindow", "attributionsrc");
 });
 ```

@@ -9,7 +9,7 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
 
 ## 基本方法
 
-在 [注册归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources) 之后，您需要注册归因触发器。这些是网站上的交互事件，用于测量转换（例如，点击广告商网站上的“购买”按钮可以表示可能发生了转换）。浏览器会尝试将归因触发器与存储在私有本地存储分区中的归因来源条目进行匹配，并在找到匹配项时 [生成报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports)。
+在 [注册归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources) 之后，你需要注册归因触发器。这些是网站上的交互事件，用于测量转换（例如，点击广告商网站上的“购买”按钮可以表示可能发生了转换）。浏览器会尝试将归因触发器与存储在私有本地存储分区中的归因来源条目进行匹配，并在找到匹配项时 [生成报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports)。
 
 不同的归因触发器类型以不同的方式注册，详见以下部分 — 请参阅 [基于 HTML 的归因触发器](#html-based_attribution_triggers) 和 [基于 JavaScript 的归因触发器](#javascript-based_attribution_triggers)。
 
@@ -46,10 +46,10 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
    - `"event_trigger_data"`: 一个表示触发器数据的对象。包括：
      - `"trigger_data"`: 与触发器相关的数据，通常用于指示事件，如“用户将物品添加到购物车”或“用户注册到邮件列表”。此值将包含在生成的报告中（如果有），尽管它将根据归因来源的 [`"trigger_data_matching"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) 字段进行修改。
        > [!NOTE]
-       > 用于表示每个事件的值以及数组中的元素数量完全是任意的，由您作为开发人员定义。数组可以包含未使用的值，但在触发器注册时，必须在数组中存在值，以便浏览器将其归因于来源。
+       > 用于表示每个事件的值以及数组中的元素数量完全是任意的，由你作为开发人员定义。数组可以包含未使用的值，但在触发器注册时，必须在数组中存在值，以便浏览器将其归因于来源。
      - `"priority"`: 表示归因触发器优先级的字符串值。有关更多信息，请参见 [报告优先级和限制](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits)。
      - `"deduplication_key"`: 表示唯一键的字符串，用于防止归因重复 — 例如，如果用户多次将同一项添加到购物车。有关更多信息，请参见 [防止报告重复](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication)。
-   - `"debug_key"`: 表示调试键的数字。如果您希望生成 [调试报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) ，请设置此项。
+   - `"debug_key"`: 表示调试键的数字。如果你希望生成 [调试报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) ，请设置此项。
 
    请参见 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以获取所有可用字段的详细描述。
 
@@ -107,9 +107,9 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
 
 ## 基于 HTML 的归因触发器
 
-基于 HTML 的归因触发器可用于在页面首次加载时检测转换 — 更准确地说，是在 `<img>` 或 `<script>` 加载时。例如，如果用户点击了发布者页面上的归因来源链接并导航到广告商页面，您可以在广告商页面加载时注册归因触发器，并让浏览器尝试与存储的来源条目进行匹配。
+基于 HTML 的归因触发器可用于在页面首次加载时检测转换 — 更准确地说，是在 `<img>` 或 `<script>` 加载时。例如，如果用户点击了发布者页面上的归因来源链接并导航到广告商页面，你可以在广告商页面加载时注册归因触发器，并让浏览器尝试与存储的来源条目进行匹配。
 
-您可以通过将 `attributionsrc` 属性添加到适当的元素来注册归因触发器。可以在 {{htmlelement("img")}} 和 {{htmlelement("script")}} 元素上执行此操作。
+你可以通过将 `attributionsrc` 属性添加到适当的元素来注册归因触发器。可以在 {{htmlelement("img")}} 和 {{htmlelement("script")}} 元素上执行此操作。
 
 如果将属性值留空，注册请求将发送到托管请求资源的服务器。还可以在值中指定附加的 URL 以发送注册请求；有关更多详细信息，请参阅 [在 attributionsrc 中指定 URL](#specifying_a_url_inside_attributionsrc)。
 
@@ -123,7 +123,7 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
   attributionsrc />
 ```
 
-您也可以通过 {{domxref("HTMLImageElement.attributionSrc")}}
+你也可以通过 {{domxref("HTMLImageElement.attributionSrc")}}
 
  属性实现此目的：
 
@@ -149,9 +149,9 @@ scriptElem.attributionSrc = "";
 
 ## 基于 JavaScript 的归因触发器
 
-基于 JavaScript 的归因触发器比基于 HTML 的触发器更具灵活性。您可以根据自定义交互（例如，点击自定义元素或提交表单）触发浏览器尝试与存储的来源进行匹配。
+基于 JavaScript 的归因触发器比基于 HTML 的触发器更具灵活性。你可以根据自定义交互（例如，点击自定义元素或提交表单）触发浏览器尝试与存储的来源进行匹配。
 
-要注册基于脚本的归因触发器，您可以：
+要注册基于脚本的归因触发器，你可以：
 
 - 发送包含 `attributionReporting` 选项的 {{domxref("Window/fetch", "fetch()")}} 请求：
 
@@ -169,7 +169,7 @@ scriptElem.attributionSrc = "";
     });
   }
 
-  // 将交互触发器与您的代码中适当的元素和事件关联
+  // 将交互触发器与你的代码中适当的元素和事件关联
   elem.addEventListener("click", triggerMatching);
   ```
 
@@ -194,22 +194,22 @@ scriptElem.attributionSrc = "";
     }
   }
 
-  // 将交互触发器与您的代码中适当的元素和事件关联
+  // 将交互触发器与你的代码中适当的元素和事件关联
   elem.addEventListener("click", triggerMatching);
   ```
 
 在这种情况下，当浏览器接收到来自 fetch 请求的响应时，浏览器将尝试将触发器与存储的归因来源进行匹配。
 
 > [!NOTE]
-> 请求可以是任何资源。不需要直接与归因报告 API 相关，可以是 JSON 请求、纯文本、图像 blob 或其他适合您应用的内容。
+> 请求可以是任何资源。不需要直接与归因报告 API 相关，可以是 JSON 请求、纯文本、图像 blob 或其他适合你应用的内容。
 
 ## 在 attributionsrc 中指定 URL
 
-在上述示例中，`attributionsrc` 属性被留空，取值为空字符串。如果请求的资源所在的服务器是您也想处理注册的服务器，即接收 {{httpheader("Attribution-Reporting-Eligible")}} 头部并响应 {{httpheader("Attribution-Reporting-Register-Trigger")}} 头部，这样的做法是合适的。
+在上述示例中，`attributionsrc` 属性被留空，取值为空字符串。如果请求的资源所在的服务器是你也想处理注册的服务器，即接收 {{httpheader("Attribution-Reporting-Eligible")}} 头部并响应 {{httpheader("Attribution-Reporting-Register-Trigger")}} 头部，这样的做法是合适的。
 
-然而，可能请求的资源不在您控制的服务器上，或者您只希望在不同的服务器上处理注册归因触发器。在这种情况下，您可以将一个或多个 URL 指定为 `attributionsrc` 的值。当资源请求发生时，`attributionsrc` 中指定的 URL 将接收到 {{httpheader("Attribution-Reporting-Eligible")}} 头部，除此之外还会发送到资源原点；这些 URL 可以响应 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以完成注册。
+然而，可能请求的资源不在你控制的服务器上，或者你只希望在不同的服务器上处理注册归因触发器。在这种情况下，你可以将一个或多个 URL 指定为 `attributionsrc` 的值。当资源请求发生时，`attributionsrc` 中指定的 URL 将接收到 {{httpheader("Attribution-Reporting-Eligible")}} 头部，除此之外还会发送到资源原点；这些 URL 可以响应 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以完成注册。
 
-例如，在 `<img>` 元素的情况下，您可以在 `attributionsrc` 属性中声明 URL：
+例如，在 `<img>` 元素的情况下，你可以在 `attributionsrc` 属性中声明 URL：
 
 ```html
 <img

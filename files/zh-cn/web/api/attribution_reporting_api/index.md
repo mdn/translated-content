@@ -5,19 +5,17 @@ slug: Web/API/Attribution_Reporting_API
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}
 
-
 归因报告 API 使开发者能够衡量转化事件 —— 比如当用户点击嵌入在某个网站上的广告，然后在供应商的网站上购买商品 —— 并随后访问这些转化事件的报告。它在不依赖第三方跟踪 cookies 的情况下完成这一过程。
 
 ## 概念和用法
 
-广告主通常希望衡量有多少用户看到了广告后，接着查看并购买了产品（转化）。这使他们能够了解哪些广告投放带来了最大的投资回报率（ROI），从而可以相应地调整他们的广告策略。衡量转化的过程通常包括捕捉以下数据:
+广告主通常希望衡量有多少用户看到了广告后，接着查看并购买了产品（转化）。这使他们能够了解哪些广告投放带来了最大的投资回报率（ROI），从而可以相应地调整他们的广告策略。衡量转化的过程通常包括捕捉以下数据：
 
 - 哪些用户进行了转化（例如购买了商品或注册了服务），以及转化的数量。
 - 他们所在的地理区域。
 - 广告投放的位置。
 - 销售了多少产品、注册了多少服务等。
 - 产生了多少收入。
-
 
 传统上，网络上的转化测量依赖于第三方跟踪 cookies。广告通常嵌入在网页的一个 {{htmlelement("iframe")}} 中，这样可以设置一个包含用户及其与广告互动信息的 cookie。
 
@@ -42,15 +40,15 @@ slug: Web/API/Attribution_Reporting_API
 1. 当用户访问 `news.example` 网站时，可以为与嵌入广告的特定用户交互注册一个**归因来源**。用户可以通过多种方式与页面上的广告互动。为了使广告交互注册归因来源，广告必须发送一个带有 {{httpheader("Attribution-Reporting-Eligible")}} 头的请求，以表明响应有资格注册归因来源。如果响应中包含适当的 {{httpheader("Attribution-Reporting-Register-Source")}} 头，则完成归因来源的注册。归因来源可以是，例如：
    - 一个链接。在这种情况下，交互是用户点击链接（直接通过 {{htmlelement("a")}} 元素，或通过 {{domxref("Window.open()")}} 调用）。通过对导航请求的响应来注册来源。
    - 一张图片，例如广告横幅或 1x1 透明跟踪像素。在这种情况下，交互是用户访问页面。图片加载时，即服务器响应图片请求时，注册来源。
-   - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据您的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。来源在响应返回时注册。
+   - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据你的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。来源在响应返回时注册。
 2. 当归因来源交互发生时，{{httpheader("Attribution-Reporting-Register-Source")}} 头中返回的来源数据会存储在仅浏览器可访问的私有本地缓存中。此数据包括页面和广告主可用的上下文和第一方数据、收集转化数据的广告技术公司的来源以及一个或多个期望从该广告发生转化的目标 ([eTLD+1](/zh-CN/docs/Glossary/eTLD)s)（即广告主的网站，例如 shop.example）。
 3. 当用户稍后访问 `shop.example` 时，当交互指示转化发生时，该网站可以注册一个**归因触发器**（例如，用户点击 `shop.example` 上的“添加到购物车”按钮）。浏览器将发送一个带有 {{httpheader("Attribution-Reporting-Eligible")}} 头的请求，以表明响应有资格注册归因触发器，如果响应中包含适当的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 头，则完成注册。归因触发器可以是，例如：
    - 一张图片，例如购物车图标或 1x1 透明跟踪像素。在这种情况下，交互是用户访问页面。触发器在图片加载时注册，即当服务器响应图片请求时。
-   - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据您的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。触发器在响应返回时注册。
-4. 当触发器归因完成后，浏览器会尝试将 [归因报告注册触发器](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) 头中的数据与私有本地缓存中保存的来源数据条目进行匹配（见第2步）。有关匹配方法和要求，请参阅 [注册归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers)。
-5. 如果找到匹配，浏览器将把报告数据发送到通常由广告技术提供商拥有的报告服务器上的端点，在那里可以安全地进行分析。与 cookies 不同，这些数据仅对您发送数据的特定网站可用——不会在其他地方共享数据。这些报告可以是：
+   - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据你的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。触发器在响应返回时注册。
+4. 当触发器归因完成后，浏览器会尝试将 [归因报告注册触发器](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) 头中的数据与私有本地缓存中保存的来源数据条目进行匹配（见第 2 步）。有关匹配方法和要求，请参阅 [注册归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers)。
+5. 如果找到匹配，浏览器将把报告数据发送到通常由广告技术提供商拥有的报告服务器上的端点，在那里可以安全地进行分析。与 cookies 不同，这些数据仅对你发送数据的特定网站可用——不会在其他地方共享数据。这些报告可以是：
    - **事件级报告**：基于归因来源事件的报告，其中详细的来源数据与粗略的触发器数据相关联。例如，报告可能看起来像“`ad.shop.example` 上的点击 ID 200498 导致了 `shop.example` 的购买”，其中“点击 ID 200498”是详细的来源数据，“购买”是粗略的触发器数据。详细的来源数据可能包含来源页面的第一方或上下文数据，而触发器数据可能编码来自触发器页面的事件。
-   - **汇总报告**：更详细的报告，结合来自来源和触发器侧的多个转化数据。例如“`news.example` 上的广告活动 ID 774653 导致了 `shop.example` 上来自意大利用户的 654 笔销售，总收入为 $9540。” 汇总报告的编制需要使用聚合服务（例如 [Google 聚合服务](https://github.com/privacysandbox/aggregation-service)）。
+   - **汇总报告**：更详细的报告，结合来自来源和触发器侧的多个转化数据。例如“`news.example` 上的广告活动 ID 774653 导致了 `shop.example` 上来自意大利用户的 654 笔销售，总收入为 $9540。”  汇总报告的编制需要使用聚合服务（例如 [Google 聚合服务](https://github.com/privacysandbox/aggregation-service)）。
 
 有关实现上述步骤所需功能的更多信息，请参阅：
 
@@ -65,18 +63,18 @@ slug: Web/API/Attribution_Reporting_API
 ### 扩展到其他接口
 
 - {{domxref("HTMLAnchorElement.attributionSrc")}}, {{domxref("HTMLImageElement.attributionSrc")}}, {{domxref("HTMLScriptElement.attributionSrc")}}
-  - : `attributionSrc` 属性允许您以编程方式获取和设置 {{htmlelement("a")}}, {{htmlelement("img")}}, 和 {{htmlelement("script")}} 元素上的 `attributionsrc` 属性。它反映了该属性的值。
+  - : `attributionSrc` 属性允许你以编程方式获取和设置 {{htmlelement("a")}}, {{htmlelement("img")}}, 和 {{htmlelement("script")}} 元素上的 `attributionsrc` 属性。它反映了该属性的值。
 - {{domxref("Window/fetch", "fetch()")}} 和 {{domxref("Request.Request", "Request()")}} 构造函数中的 `attributionReporting` 选项
-  - : 当通过 {{domxref("Window/fetch", "fetch()")}} 生成请求时，这表示您希望响应能够注册归因来源或触发器。
+  - : 当通过 {{domxref("Window/fetch", "fetch()")}} 生成请求时，这表示你希望响应能够注册归因来源或触发器。
 - {{domxref("XMLHttpRequest.setAttributionReporting()")}}
-  - : 当通过 {{domxref("XMLHttpRequest")}} 生成请求时，这表示您希望响应能够注册归因来源或触发器。
+  - : 当通过 {{domxref("XMLHttpRequest")}} 生成请求时，这表示你希望响应能够注册归因来源或触发器。
 - {{domxref("Window.open()")}} 中的 `attributionsrc` 功能关键字
   - : 当 `open()` 方法完成时，完成归因来源的注册 _并_ 触发浏览器存储相关的来源数据（如 {{httpheader("Attribution-Reporting-Register-Source")}} 响应头中提供）。请注意，`Window.open()` 调用不能用于注册归因触发器。
 
 ## HTML 元素
 
 - {{htmlelement("a")}}, {{htmlelement("img")}}, 和 {{htmlelement("script")}} — `attributionsrc` 属性
-  - : 指定您希望浏览器在相关资源请求中发送 {{httpheader("Attribution-Reporting-Eligible")}} 头。在服务器端，此头用于触发发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应头。当注册归因来源时，这是必需的；当注册归因触发器时，只有在您希望指定与 `src` 属性指向的资源不同的注册服务器时才需要。请注意，`<a>` 元素不能用于注册归因触发器。
+  - : 指定你希望浏览器在相关资源请求中发送 {{httpheader("Attribution-Reporting-Eligible")}} 头。在服务器端，此头用于触发发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应头。当注册归因来源时，这是必需的；当注册归因触发器时，只有在你希望指定与 `src` 属性指向的资源不同的注册服务器时才需要。请注意，`<a>` 元素不能用于注册归因触发器。
 
 ## HTTP 头
 
@@ -91,9 +89,9 @@ slug: Web/API/Attribution_Reporting_API
 
 ## 注册和本地测试
 
-要在您的网站上使用归因报告 API，您必须在 [隐私沙盒注册过程](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) 中指定它。如果不这样做，API 流程将在响应时被阻止，即响应头将被忽略，来源和触发器将不会被注册。
+要在你的网站上使用归因报告 API，你必须在 [隐私沙盒注册过程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment) 中指定它。如果不这样做，API 流程将在响应时被阻止，即响应头将被忽略，来源和触发器将不会被注册。
 
-您仍然可以在没有注册的情况下本地测试您的归因报告 API 代码。要允许本地测试，请启用以下 Chrome 开发者标志：
+你仍然可以在没有注册的情况下本地测试你的归因报告 API 代码。要允许本地测试，请启用以下 Chrome 开发者标志：
 
 `chrome://flags/#privacy-sandbox-enrollment-overrides`
 
