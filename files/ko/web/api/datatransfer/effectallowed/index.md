@@ -21,7 +21,7 @@ Assigning a value to `effectAllowed` in events other than
 
 ## 값
 
-허용되는 드래그 작업을 나타내는 문자열. 가능한 값들은 다음과 같습니다. 
+허용되는 드래그 작업을 나타내는 문자열. 가능한 값들은 다음과 같습니다.
 
 - `none`
   - : 아이템이 드랍되지 않을 수 있습니다.
