@@ -27,7 +27,7 @@ l10n:
 - {{domxref("IDBObjectStore.add()")}}
   - : 返回一个 {{domxref("IDBRequest")}} 对象，并且在单独的线程中创建该值（`value`）的[结构化克隆](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone)，并将克隆后的值存储到对象存储中。其用于将新记录添加到对象存储中。
 - {{domxref("IDBObjectStore.clear()")}}
-  - : 创建并立即返回一个 {{domxref("IDBRequest")}} 对象，并在单独的线程中清除当前对象存储。其用于杀拿出对象存储中当前的所有记录。
+  - : 创建并立即返回一个 {{domxref("IDBRequest")}} 对象，并在单独的线程中清除当前对象存储。其用于删除对象存储中当前的所有记录。
 - {{domxref("IDBObjectStore.count()")}}
   - : 返回一个 {{domxref("IDBRequest")}} 对象，并在单独的线程中返回匹配提供的键或 {{domxref("IDBKeyRange")}} 的记录的数量。如果未提供参数，它会返回当前存储的记录总数。
 - {{domxref("IDBObjectStore.createIndex()")}}
