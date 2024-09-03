@@ -102,7 +102,6 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 ![Graphical Representation of how Extranet and Intranet work](internet-schema-8.png)
 
-
 ## 다음 단계
 
 - [How the Web works(웹이 작동하는 방법)](/ko/docs/Learn/Getting_started_with_the_web/%EC%9B%B9%EC%9D%98_%EB%8F%99%EC%9E%91_%EB%B0%A9%EC%8B%9D)
