@@ -21,8 +21,8 @@ slug: Web/CSS/:host_function
 
 ## 语法
 
-```css
-:host(<compound-selector >) {
+```css-nolint
+:host(<compound-selector>) {
   /* ... */
 }
 ```

@@ -3,7 +3,9 @@ title: Performance.toJSON()
 slug: Web/API/Performance/toJSON
 ---
 
-{{APIRef("High Resolution Timing")}}{{domxref("Performance")}} 的 **`toJSON() 方法是一个标准的串行器：它返回一个由 performance 对象各个属性组成的 JSON`**
+{{APIRef("Performance API")}}
+
+{{domxref("Performance")}} 接口的 **`toJSON()`** 方法是一个标准的 {{Glossary("Serialization","序列化器")}}，它返回 {{domxref("Performance")}} 对象的 JSON 表示。
 
 ## 语法
 

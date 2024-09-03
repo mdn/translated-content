@@ -20,8 +20,8 @@ h1:has(+ p) {
 
 ## 语法
 
-```css
-:has(<relative-selector-list >) {
+```css-nolint
+:has(<relative-selector-list>) {
   /* ... */
 }
 ```
