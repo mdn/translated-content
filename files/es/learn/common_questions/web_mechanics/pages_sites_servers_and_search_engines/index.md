@@ -1,6 +1,8 @@
 ---
 title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el motor de búsqueda?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+l10n:
+  sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -56,7 +58,9 @@ Vamos a comparar la biblioteca con un servidor web:
 - Los libros en cada sección son como páginas web. Un sitio web puede tener varias páginas web, por ejemplo, la sección de Ciencias (el sitio web) tendrá libros sobre calor, sonido, termodinámica, estadísticas, etc. (las páginas web). Cada una de las páginas web puede ser encontrada en una ubicación única (URL).
 - El índice de búsqueda es como el motor de búsqueda. Cada libro tiene su propia ubicación única en la biblioteca (dos libros no se pueden mantener en el mismo lugar) que se especifica mediante el número de catálogo.
 
-_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
+## Aprendizaje activo
+
+_No está disponible aprendizaje activo aún. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
 
 ## Profundizando
 
@@ -64,26 +68,28 @@ Entonces, vamos a profundizar en cómo estos cuatro términos serán relacionado
 
 ### Página web
 
-Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/es/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
+Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser", "navegador")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/es/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
 
 - _información de estilos_ — para controlar la apariencia de una página
 - _scripts_ — que agrega interactividad a la página
 - _medios_ — imágenes, sonidos, y vídeos.
 
 > [!NOTE]
-> Los buscadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el termino **document**(documento).
+> Los navegadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el término **document**(documento).
 
-Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
+Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su dirección en la barra de búsqueda de tu navegador:
 
 ![Ejemplo de dirección de una página web en la barra de direcciones del navegador](web-page.jpg)
 
-Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones del texto en que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
+### Sitio web
 
-Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu buscador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el home"):
+Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones de texto sobre los que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
+
+Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu navegador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el _home_"):
 
 ![Ejemplo de nombre de dominio de un sitio web en la barra de direcciones del navegador](web-site.jpg)
 
-_Página web_ y _sitio web_ son especialmente fáciles de confundir cuando un _sitio_ contiene una única _página web_ Tales sitios son denominados _sitios de una sola página._
+Note que también es posible tener _sitios web de una sola página_: un sitio que consta de una sola página web, la cual es actualizada dinamicamente con nuevo contenido cuando es necesario.
 
 ### Servidor web
 
@@ -95,7 +101,7 @@ No confundir _sito web_ y _servidor web_. Por ejemplo, la expresión "Mi sitio w
 
 Los buscadores son una fuente común de confusión en la web. Un buscador es un tipo especial de sitio web que ayuda a los usuarios a encontrar páginas web de otros sitios web.
 
-Hay muchos por ahí: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/),y muchos mas. Algunos son genéricos, otros están especializados en ciertos temas. Utilice los que prefiera.
+Hay muchos por ahí: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/),y muchos más. Algunos son genéricos, otros están especializados en ciertos temas. Utilice los que prefiera.
 
 Muchos principiantes en la web confunden motores de búsqueda con navegadores. Aclaremos esto: Un _**navegador**_ es una pieza de software que obtiene y muestra páginas web; un **_buscador_** es un sitio web que ayuda a las personas a encontrar páginas web alojadas en otros sitios web. La confusión surge porque la primera vez que alguien inicia un navegador, el navegador muestra la página principal de un motor de búsqueda. Esto tiene sentido, porque, obviamente, lo primero que quieres hacer con un navegador es encontrar una página web para mostrar. No confundas la infraestructura (el navegador) con el servicio (el buscador). La distinción te ayudará un poco, pero incluso algunos profesionales hablan imprecisamente, así que no te sientas angustiado por eso.
 
