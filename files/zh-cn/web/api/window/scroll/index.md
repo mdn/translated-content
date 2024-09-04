@@ -5,15 +5,13 @@ slug: Web/API/Window/scroll
 
 {{APIRef}}
 
-## 概述
-
 滚动窗口至文档中的特定位置。
 
 ## 语法
 
-```
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+```js-nolint
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### 参数

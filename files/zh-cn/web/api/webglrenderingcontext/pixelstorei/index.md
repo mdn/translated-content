@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/pixelStorei
 
 ## 语法
 
-```
-void gl.pixelStorei(pname, param);
+```js-nolint
+pixelStorei(pname, param)
 ```
 
 ### 参数
