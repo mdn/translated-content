@@ -59,7 +59,7 @@ div {
 
 ## 그리드 사용
 
-박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container)로 만들고 {{cssxref("place-items")}} 속성을 `center`로 지정해서 내부 아이템들을 블록과 인라인 축에서 중앙 정렬을 하는 것입니다.
+박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container)로 만들고 {{cssxref("place-items")}} 속성을 `center`로 지정해서 내부의 아이템들을 블록과 인라인 축에서 중앙 정렬 하는 것입니다.
 
 ### HTML
 
