@@ -62,8 +62,8 @@ l10n:
 
 在 MDN 的学习 Web 开发章节中，为你准备了许多自包含的任务和评估。有以下两个主要类型：
 
-- “技能测试”任务，例如[在代码中做决策——条件](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
-- 在某些模块的最后包含深入一些的**评估**，例如[图像画廊](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery).
+- “技能测试”任务，例如[在代码中做决策——条件](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
+- 在某些模块的最后包含深入一些的**评估**，例如[图像画廊](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery).
 
 每个都有响应的评分指南和推荐的解决方案，帮助你评估你的工作。
 容易一些地找到这些资源是有迹可循的，例如：
