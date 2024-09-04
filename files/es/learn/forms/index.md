@@ -22,7 +22,7 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 
 ## Guías Introductorias
 
-- [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form)
+- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
   - : El primer artículo de nuestra serie, te provee la experiencia de crear por primera vez un formulario HTML, incluyendo diseñar un formulario sencillo, hacer una implementación usando los elementos HTML adecuados, agregar un estilizado simple a través de CSS, y como se envian los datos al servidor.
 - [Como estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form)
   - : Con los conceptos básicos fuera de nuestro camino, podemos ver más a detalle los elementos usados para proveer estructura y significado a diferentes partes del formulario.
