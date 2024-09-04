@@ -16,7 +16,7 @@ l10n:
 如果你不是想要深入学习 Web 开发，而是想从尝试环节开始，建议你从[ Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始。除此之外，你应该先学习下面的主题。
 
 - HTML 和 CSS
-  - : HTML 为 Web 内容提供结构，而 CSS 为内容的样式和布局提供指导。参见 [介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 和[ CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)获取基本的入门信息。
+  - : HTML 为 Web 内容提供结构，而 CSS 为内容的样式和布局提供指导。参见 [介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 和[CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)获取基本的入门信息。
 - JavaScript
   - : JavaScript 能让你编写网站上的交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)开始。
 - 框架和工具
