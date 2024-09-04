@@ -11,7 +11,7 @@ Este módulo provee una serie de artículos que te ayudarán a dominar los conoc
 
 ## Prerrequisitos
 
-Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls).
+Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario nativos básicos](/es/docs/Learn/Forms/Basic_native_form_controls).
 
 Sin embargo para dominar los formularios, se require mas que conocimiento en HTML — también necesitas aprender algunas técnicas específicas para estlizar los controles del formulario, y es necesario un poco de conocimiento de scripting para manejar cosas como, validación y creación de controles personalizados. Por lo tanto, antes de que revises las secciones listadas a continuación, te recomendamos que primero vayas y aprendas un poco acerca de [CSS](/es/docs/Learn/CSS) y [JavaScript](/es/docs/Learn/JavaScript).
 
