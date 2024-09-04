@@ -70,7 +70,7 @@ image-set(
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> [!주의]
+> [!NOTE]
 > 위 예제에서처럼, `-webkit` 접미사는 크롬과 사파리에서도 사용할 수 있습니다. 파이어폭스 90에서는 (개발자가 표준 속성을 추가하지 않은 경우 호환성을 제공하기 위해) `-webkit-image-set()` 가 `image-set()` 의 별칭으로 사용됩니다.
 
 ### 이미지 확장자의 대안으로 image-set()를 사용하기
