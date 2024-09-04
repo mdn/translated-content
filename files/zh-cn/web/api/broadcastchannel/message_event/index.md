@@ -1,6 +1,8 @@
 ---
 title: BroadcastChannel：message 事件
 slug: Web/API/BroadcastChannel/message_event
+l10n:
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
 {{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}

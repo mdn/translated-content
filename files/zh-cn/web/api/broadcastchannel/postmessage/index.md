@@ -1,6 +1,8 @@
 ---
 title: BroadcastChannel：postMessage() 方法
 slug: Web/API/BroadcastChannel/postMessage
+l10n:
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
 {{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
