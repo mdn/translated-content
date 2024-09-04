@@ -9,8 +9,9 @@ slug: Web/API/MediaRecorder/MediaRecorder
 
 ## 语法
 
-```
-var mediaRecorder = new MediaRecorder(stream[, options]);
+```js-nolint
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### 参数

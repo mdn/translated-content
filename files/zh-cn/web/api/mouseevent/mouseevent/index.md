@@ -9,11 +9,12 @@ slug: Web/API/MouseEvent/MouseEvent
 
 ## 语法
 
-```
- event = new MouseEvent(typeArg, mouseEventInit);
+```js-nolint
+new MouseEvent(type)
+new MouseEvent(type, options)
 ```
 
-### 形参
+### 参数
 
 - _typeArg_
   - : {{domxref("DOMString")}} 格式的事件名称。

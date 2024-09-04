@@ -9,8 +9,10 @@ slug: Web/API/WebSocket/close
 
 ## 语法
 
-```
-WebSocket.close();
+```js-nolint
+close()
+close(code)
+close(code, reason)
 ```
 
 ### 参数

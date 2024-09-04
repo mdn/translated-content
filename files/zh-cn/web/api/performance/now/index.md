@@ -21,8 +21,8 @@ slug: Web/API/Performance/now
 
 ## 语法
 
-```
-const t = window.performance.now();
+```js-nolint
+now()
 ```
 
 ## 示例
@@ -43,14 +43,13 @@ console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。");
 为了提供对定时攻击和指纹的保护，performance.now() 的精度可能会根据浏览器的设置而被舍弃。
 在 Firefox 中，privacy.reduceTimerPrecision 偏好是默认启用的，默认值为 1ms。
 
-```
+```js
 // 降低时间精度 (1ms) 在 Firefox 60
 performance.now();
 // 8781416
 // 8781815
 // 8782206
 // ...
-
 
 // 降低时间精度 当 `privacy.resistFingerprinting` 启用
 performance.now();
@@ -64,7 +63,7 @@ performance.now();
 
 从 Firefox 79 开始，如果你使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离你的文档，就可以使用高分辨率定时器。
 
-```
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -79,6 +78,6 @@ Cross-Origin-Embedder-Policy: require-corp
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks
