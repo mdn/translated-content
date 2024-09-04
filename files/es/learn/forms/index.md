@@ -38,7 +38,7 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 
 ## Guías de estilizado de formularios
 
-- [Estilizando formularios HTML](/es/docs/Learn/Forms/Styling_web_forms)
+- [Estilizando formularios web](/es/docs/Learn/Forms/Styling_web_forms)
   - : Este artículo proporciona una introducción a como estilizar formularios con CSS, incluyendo todos los fundamentos que puede que necesites saber para tareas básicas de estilizado.
 - [Estilizado avanzado de formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
   - : Aquí revisamos algunas técnicas más avanzadas que necesitan usarse cuando se trata de trabajar con algunos de los elementos de los formularios más difíciles de estilizar.
