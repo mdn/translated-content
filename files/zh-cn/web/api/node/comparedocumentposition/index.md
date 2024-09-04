@@ -20,8 +20,8 @@ slug: Web/API/Node/compareDocumentPosition
 
 ## 语法
 
-```
-compareMask = node.compareDocumentPosition( otherNode )
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### 参数

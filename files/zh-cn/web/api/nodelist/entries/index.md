@@ -9,15 +9,15 @@ slug: Web/API/NodeList/entries
 
 ## 语法
 
-```
-list.entries();
+```js-nolint
+entries()
 ```
 
 ### 返回值
 
 返回一个 {{jsxref("Iteration_protocols","iterator")}}.
 
-## 例子
+## 示例
 
 ```js
 var node = document.createElement("div");
@@ -38,7 +38,7 @@ for (var entry of list.entries()) {
 
 结果如下：
 
-```
+```plain
 Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
@@ -48,7 +48,7 @@ Array [ 2, <span> ]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}
