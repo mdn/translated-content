@@ -68,4 +68,4 @@ Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden r
 - [Referencia de formularios HTML](/es/docs/Web/HTML/Element#formularios)
 - [Referencia de tipos \<input>](/es/docs/Web/HTML/Element/input)
 - [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
-- [Controles y entradas de usuario](/es/docs/Learn/Forms/User_input_methods)
+- [Controles y métodos de entradas de usuario](/es/docs/Learn/Forms/User_input_methods)
