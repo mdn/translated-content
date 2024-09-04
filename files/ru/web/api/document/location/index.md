@@ -25,7 +25,7 @@ document.location.href = 'http://www.mozilla.org'
 
 ```js
 console.log(document.location);
-// Выведет в консоли объект location 
+// Выведет в консоли объект location
 ```
 
 ## Спецификации
