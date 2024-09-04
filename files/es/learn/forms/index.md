@@ -1,5 +1,5 @@
 ---
-title: Pilares de los Formularios HTML
+title: Pilares de los formularios web
 slug: Learn/Forms
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
