@@ -192,7 +192,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    </script>
    ```
 
-请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把JavaScript放在底部，来确保所有的HTML元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
+请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
 
 4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“// 在此编写 JavaScript 代码”一行下方添加以下代码：
 
@@ -247,10 +247,10 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    }
    ```
 
-4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与HTML同源的地方加载，并且 `file://` URLs 不符合条件。有两个解决方案可以解决这个问题：
+4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URLs 不符合条件。有两个解决方案可以解决这个问题：
 
-- 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在8000端口提供文件  `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
-- 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地HTTP服务器。
+  - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 8000 端口提供文件  `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
+  - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地 HTTP 服务器。
 
 5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
@@ -300,7 +300,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 ### 脚本加载策略
 
-页面上的所有 HTML 代码都按其出现的顺序加载。如果使用 JavaScript 去操作页面上的元素(更准确的说，是[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型))，那么如果 JavaScript 在 HTML 之前就被加载和解析了，代码将无法运行。
+页面上的所有 HTML 代码都按其出现的顺序加载。如果使用 JavaScript 去操作页面上的元素（更准确的说，是[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型)），那么如果 JavaScript 在 HTML 之前就被加载和解析了，代码将无法运行。
 
 有几种不同的策略来确保 JavaScript 只在 HTML 解析之后运行：
 
