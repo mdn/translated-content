@@ -61,7 +61,7 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
@@ -76,7 +76,7 @@ jobs:
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
