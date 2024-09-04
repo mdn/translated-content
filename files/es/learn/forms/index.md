@@ -61,7 +61,7 @@ Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden r
 - [Enviando formularios HTML a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
   - : Este artículo revisa las maneras de usar un formulario para formar una solocitud HTTP y enviarla a través de JavaScript personalizado, en vez de hacerlo a través de envio de formulaio estándar. También revisa el porque querrías hacer esto, y las implacaciones de hacerlo. (Véase también [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
 - [Tabla de compatibilidad de propiedades de CSS para controles de formularios HTML](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-  - : Por último, este artículo provee una referencia práctica revisar que  propiedades CSS son compatibles con que elements de formulario.
+  - : Por último, este artículo provee una referencia práctica revisar que propiedades CSS son compatibles con que elements de formulario.
 
 ## Véase también
 
