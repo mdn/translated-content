@@ -16,7 +16,7 @@ postMessage(message)
 ### 参数
 
 - `message`
-  - : 要发送到其他窗口的数据。数据使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)进行序列化。这意味着您可以将各种数据对象安全地传递到目标窗口，而无需自己对其进行序列化。
+  - : 要发送到其他窗口的数据。数据使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)进行序列化。这意味着你可以将各种数据对象安全地传递到目标窗口，而无需自己对其进行序列化。
 
 ### 返回值
 

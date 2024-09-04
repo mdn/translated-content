@@ -5,7 +5,7 @@ slug: Web/API/BroadcastChannel/messageerror_event
 
 {{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-{{domxref("BroadcastChannel")}} 接口的 **`messageerror`** 事件在无法反序列化的消息到达通道时触发 。
+{{domxref("BroadcastChannel")}} 接口的 **`messageerror`** 事件在无法反序列化的消息到达通道时触发。
 
 ## 语法
 
