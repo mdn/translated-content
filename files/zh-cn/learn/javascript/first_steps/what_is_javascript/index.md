@@ -191,7 +191,8 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
      // 在此编写 JavaScript 代码
    </script>
    ```
-  请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把JavaScript放在底部，来确保所有的HTML元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
+
+请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把JavaScript放在底部，来确保所有的HTML元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
 
 4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“// 在此编写 JavaScript 代码”一行下方添加以下代码：
 
@@ -247,10 +248,11 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    ```
 
 4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与HTML同源的地方加载，并且 `file://` URLs 不符合条件。有两个解决方案可以解决这个问题：
+
 - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在8000端口提供文件  `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
 - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地HTTP服务器。
 
-5. 现在网站和之前一样了，但是我们的JavaScript放在了一个外部文件。一般来说，这对组织代码并在多个HTML文件中复用来说是一件好事。此外，没有大段脚本的HTML更容易阅读。
+5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
 > [!NOTE]
 > 你可以在 GitHub 上查看 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 以及 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
@@ -298,16 +300,16 @@ for (let i = 0; i < buttons.length; i++) {
 
 ### 脚本加载策略
 
-页面上的所有HTML代码都按其出现的顺序加载。如果使用JS去操作页面上的元素(更准确的说，是[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型))，那么如果 JavaScript 在 HTML 之前就被加载和解析了，代码将无法运行。
+页面上的所有 HTML 代码都按其出现的顺序加载。如果使用 JavaScript 去操作页面上的元素(更准确的说，是[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型))，那么如果 JavaScript 在 HTML 之前就被加载和解析了，代码将无法运行。
 
-有几种不同的策略来确保 JavaScript 只在HTML解析之后运行：
+有几种不同的策略来确保 JavaScript 只在 HTML 解析之后运行：
 
 - 在上面的内部 JavaScript 示例中，脚本元素放在文档正文的底部，因此只能在 HTML 正文的其他部分被解析以后运行。
-- 在上面的外部 JavaScript 实例中，脚本元素放在文档的头部，在解析HTML正文之前解析。但是由于我们使用了 `<script type="module">`,代码被视为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且浏览器在执行 JavaScript 模块之前会等待所有的HTML代码都处理完毕（也可以把外部脚本放在正文的底部，但是如果HTML内容较多且网络较慢，在浏览器开始获取并加载脚本之前可能需要大量的时间，因此将外部脚本放在头部通常会更好一些）。
+- 在上面的外部 JavaScript 实例中，脚本元素放在文档的头部，在解析 HTML 正文之前解析。但是由于我们使用了 `<script type="module">`,代码被视为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且浏览器在执行 JavaScript 模块之前会等待所有的 HTML 代码都处理完毕（也可以把外部脚本放在正文的底部，但是如果 HTML 内容较多且网络较慢，在浏览器开始获取并加载脚本之前可能需要大量的时间，因此将外部脚本放在头部通常会更好一些）。
 - 如果仍然想在文档头部使用非模块脚本，可能阻塞整个页面的显示，并且可能出现错误，因为脚本在文档解析之前执行：
 
-  - 对于外部脚本，应该在 {{htmlelement("script")}} 元素上添加 `defer`（或者如果不需要HTML解析完成，则可以使用 `async`）属性。
-  - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded`事件监听器](/en-US/docs/Web/API/Document/DOMContentLoaded_event)。
+  - 对于外部脚本，应该在 {{htmlelement("script")}} 元素上添加 `defer`（或者如果不需要 HTML 解析完成，则可以使用 `async`）属性。
+  - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded`事件监听器](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)。
 
   这超出了本教程的范围，除非你需要支持非常老的浏览器，否则不要这样做，使用 `<script type="module">` 代替即可。
 
