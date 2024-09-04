@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-Este módulo provee una serie de artículos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios HTML son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones históricas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los artículos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios HTML incluyendo el marcado de su estructura HTML, esilizado de los controles, validación de los datos, y entrega de los datos al servidor.
+Este módulo provee una serie de artículos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios web son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones históricas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los artículos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios web incluyendo el marcado de su estructura HTML, esilizado de los controles, validación de los datos, y entrega de los datos al servidor.
 
 ## Prerrequisitos
 
