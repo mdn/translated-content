@@ -67,6 +67,7 @@
 ```
 
 - [[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925)
+- [Incorrect formatting for highlighted notes in GitHub flavoured Markdown](https://github.com/prettier/prettier/issues/16454)
 
 ## 역주/역자주
 
