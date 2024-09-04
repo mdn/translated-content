@@ -538,7 +538,7 @@
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/dischargingtimechange_event
 /pt-BR/docs/Web/API/BatteryManager/onlevelchange	/pt-BR/docs/Web/API/BatteryManager/levelchange_event
 /pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
-/pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/console/timeend_static
+/pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/console/timeEnd_static
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
 /pt-BR/docs/Web/API/DOMString	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
@@ -657,8 +657,8 @@
 /pt-BR/docs/Web/API/console/log	/pt-BR/docs/Web/API/console/log_static
 /pt-BR/docs/Web/API/console/table	/pt-BR/docs/Web/API/console/table_static
 /pt-BR/docs/Web/API/console/time	/pt-BR/docs/Web/API/console/time_static
-/pt-BR/docs/Web/API/console/timeEnd	/pt-BR/docs/Web/API/console/timeend_static
-/pt-BR/docs/Web/API/console/timeStamp	/pt-BR/docs/Web/API/console/timestamp_static
+/pt-BR/docs/Web/API/console/timeEnd	/pt-BR/docs/Web/API/console/timeEnd_static
+/pt-BR/docs/Web/API/console/timeStamp	/pt-BR/docs/Web/API/console/timeStamp_static
 /pt-BR/docs/Web/API/console/warn	/pt-BR/docs/Web/API/console/warn_static
 /pt-BR/docs/Web/API/crypto_property	/pt-BR/docs/Web/API/Window/crypto
 /pt-BR/docs/Web/API/document.getElementById	/pt-BR/docs/Web/API/Document/getElementById
@@ -815,9 +815,10 @@
 /pt-BR/docs/Web/HTML/formatos_midia_suportados	/pt-BR/docs/Web/Media/Formats
 /pt-BR/docs/Web/HTML/microformatos	/pt-BR/docs/Web/HTML/microformats
 /pt-BR/docs/Web/HTTP/Basico_sobre_HTTP	/pt-BR/docs/Web/HTTP/Basics_of_HTTP
-/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web	/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web	/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types	/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types/Complete_list_of_MIME_types	/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /pt-BR/docs/Web/HTTP/Cabecalhos_HTTP	/pt-BR/docs/Web/HTTP/Headers
 /pt-BR/docs/Web/HTTP/Compressão	/pt-BR/docs/Web/HTTP/Compression
 /pt-BR/docs/Web/HTTP/Controle_Acesso_CORS	/pt-BR/docs/Web/HTTP/CORS
