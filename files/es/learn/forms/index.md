@@ -49,7 +49,7 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 
 - [Validación del lado del cliente](/es/docs/Learn/Forms/Form_validation)
   - : Enviar información no es suficiente — también necesitamos asegurarnos que la información que los usuarios registran en los formularios está en el formato correcto para ser procesada exitosamente, y que no romperá nuestras aplicaciones. También queremos ayudar a nuestros usuarios a llenar correctamente nuestos formularios y no frustrarse intentando usar nuestras aplicaciones. La validación de formularios nos ayuda a alcanzar estas metas — este artículo te muestra los que necesitas saber al respecto.
-- [Enviando los datos del formulario HTML](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Enviando los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
   - : Este artículo revisa que es lo que sucede cuando un usuario envia un formulario — ¿a dónde va la información?, y ¿cómo la manejamos una vez que llega ahí? También revisamos algunas de las preocupaciones de seguridad asociadas a enviar información de formularios.
 
 ## Artículos avanzados
