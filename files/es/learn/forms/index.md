@@ -29,7 +29,7 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 
 ## Diferentes tipos de controles de formulario
 
-- [Controles de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls)
+- [Controles de formulario nativos básicos](/es/docs/Learn/Forms/Basic_native_form_controls)
   - : Iniciamos esta sección, viendo a detalle los tipos {{htmlelement("input")}} originales de HTML, revisando que opciones hay disponibles para recabar los diferentes tipos de datos.
 - [Tipos de _input_ de HTML5](/es/docs/Learn/Forms/HTML5_input_types)
   - : Aquí continuamos adentrandonos en el elemento `<input>`, revisando los tipos adicionales de _input_ proporcionados cuando HTML5 fué publicado, junto a los múltiples controles de interfaz de usuario y mejoras en la colección de datos. Adicionalmente, revisaremos el elemento {{htmlelement('output')}}.
