@@ -56,7 +56,7 @@ Lo antes mencionado es un buen indicador de porque pusimos los formularios web e
 
 Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden resultar interesantes y útiles cuando has dominado las técnicas antes presentadas y deseas saber más.
 
-- [Como crear controles de formulario HTML personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Como crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : Te encontras con algunos casos donde los _widgets_ nativos de los formularios, simplemente no proveen lo que necesitas p.ej debido a estilos o funcionalidad. En esos casos, quizás necesitarás construir tu propio _widget_ con HTML puro. Este artículo explica como podrías hacerlo, y las concideraciones de las que debes estar conciente al hacerlo, con un caso de estudio práctico.
 - [Enviando formularios HTML a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
   - : Este artículo revisa las maneras de usar un formulario para formar una solocitud HTTP y enviarla a través de JavaScript personalizado, en vez de hacerlo a través de envio de formulaio estándar. También revisa el porque querrías hacer esto, y las implacaciones de hacerlo. (Véase también [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
