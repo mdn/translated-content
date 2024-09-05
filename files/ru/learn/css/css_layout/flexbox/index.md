@@ -89,7 +89,7 @@ flex-direction: column;
 flex-wrap: wrap;
 ```
 
-Также добавьте следующее свойство в CSS-правило для {{htmlelement("arcticle")}}:
+Также добавьте следующее свойство в CSS-правило для {{htmlelement("article")}}:
 
 ```css
 flex: 200px;
