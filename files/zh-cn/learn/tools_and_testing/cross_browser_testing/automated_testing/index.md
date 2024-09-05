@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-每天手动在多个浏览器和设备上多次运行测试可能有点乏味且耗时。为了高效处理，你应该熟悉自动化工具。本文将介绍现有的工具、如何使用任务运行器，以及如何使用商业浏览器测试自动化应用程序的基础知识，例如 LambdaTest、Sauce Labs、BrowserStack 和 TestingBot。
+每天手动在多个浏览器和设备上多次运行测试可能有点乏味且耗时。为了高效处理，你应该熟悉自动化工具。本文将介绍现有的工具、如何使用任务运行器，以及如何使用 LambdaTest、Sauce Labs、BrowserStack 和 TestingBot 等商业浏览器测试自动化应用程序的基础知识。
 
 <table>
   <tbody>
@@ -35,7 +35,7 @@ l10n:
 
 我们也是这么认为的。手动测试我们在以前的文章中所提到的所有内容可能会非常繁琐。幸运的是，有一些工具可以帮助我们从这种繁琐的工作中解放出来。在本模块中，我们讨论了两种主要的测试自动化方法：
 
-1. 使用像 [Grunt](https://gruntjs.com/)、[Gulp](https://gulpjs.com/) 或 [npm script](https://docs.npmjs.com/misc/scripts/) 这样的任务运行器，在构建过程中运行测试和清理代码。这样的话可以很方便地对代码进行 linting 和压缩、添加 CSS 前缀或转译新 JavaScript 功能以实现最大跨浏览器兼容性。
+1. 使用像 [Grunt](https://gruntjs.com/)、[Gulp](https://gulpjs.com/) 或 [npm script](https://docs.npmjs.com/misc/scripts/) 这样的任务运行器，在构建过程中运行测试和清理代码。这样的话可以很方便地对代码进行 lint 和极简化、添加 CSS 前缀或转译 JavaScript 新特性以实现最大的跨浏览器兼容性。
 2. 使用像 [Selenium](https://www.selenium.dev/) 这样的浏览器自动化系统，在已安装的浏览器上运行特定的测试并返回结果，并在浏览器出现故障时提醒你。商业跨浏览器测试应用程序，如 [Sauce Labs](https://saucelabs.com/)、[BrowserStack](https://www.browserstack.com/) 和 [TestingBot](https://testingbot.com) 都基于 Selenium，但它们允许你通过一个简单的界面远程访问它们的设置，省去了你自己设置测试系统的麻烦。
 
 我们将在下一篇文章中研究如何建立你自己的基于 Selenium 的测试系统。在这篇文章中，我们将看看如何配置任务运行器，并使用上述商业系统的基本功能。
@@ -45,7 +45,7 @@ l10n:
 
 ## 使用任务运行器作为自动化测试工具
 
-正如我们之前提到的，你可以通过使用任务运行器，在构建过程中的某个点上自动运行所有需要的任务（比如 linting 和压缩代码），从而大大加快常见任务的速度。例如，这可以在每次保存文件时，或在其他一些时间点自动运行。在这一节中，我们将了解如何使用 Node 和 Gulp 自动运行任务，这是一个适合初学者的选择。
+正如我们之前提到的，你可以通过使用任务运行器，在构建过程中的某个点上自动运行所有需要的任务（比如 lint 和极简化代码），从而大大加快常见任务的速度。例如，这可以在每次保存文件时，或在其他一些时间点自动运行。在这一节中，我们将了解如何使用 Node 和 Gulp 自动运行任务，这是一个适合初学者的选择。
 
 ### 配置 Node 和 npm 环境
 
@@ -166,7 +166,7 @@ l10n:
 
 - 使用 html-tidy、css-lint 和 js-hint 来提示和报告/修复常见的 HTML/CSS/JS 错误（参见 [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy)、[gulp-csslint](https://www.npmjs.com/package/gulp-csslint)、[gulp-jshint](https://www.npmjs.com/package/gulp-jshint)）。
 - 使用 Autoprefixer 扫描我们的 CSS，只在需要的地方添加供应商前缀（参见 [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)）。
-- 使用 babel 将任何新的 JavaScript 语法特性转译为传统语法，使其在旧的浏览器中也能使用（参见 [gulp-babel](https://www.npmjs.com/package/gulp-babel)）。
+- 使用 babel 将任何 JavaScript 语法的新特性转译为传统语法，使其在旧的浏览器中也能使用（参见 [gulp-babel](https://www.npmjs.com/package/gulp-babel)）。
 
 关于我们所使用的不同 gulp 包的完整说明，请参见上述链接。
 
@@ -319,6 +319,7 @@ export function watch() {
   gulp.watch("src/*.html", html);
   gulp.watch("src/*.css", css);
   gulp.watch("src/*.js", js);
+}
 ```
 
 现在试着在你的终端输入 `gulp watch` 命令。现在，Gulp 会监视你的目录，并在你保存对 HTML、CSS 或 JavaScript 文件的改动时运行相应的任务。
@@ -338,7 +339,7 @@ export function watch() {
 
 现在让我们来看看商业第三方浏览器测试服务以及它们能为我们做些什么。
 
-这类应用程序的基本前提是，每家提供该服务的公司都有一个巨大的服务器群，可以运行许多不同的测试。当你使用这项服务时，你提供一个你想测试的页面的 URL，以及一些信息，如你想在哪些浏览器上测试。然后该应用程序用你指定的操作系统和浏览器配置一个新的虚拟机，并以屏幕截图、视频、日志文件、文本等形式返回测试结果。
+这类应用程序的基本前提是，每家提供该服务的公司都有一个巨大的服务器集群，可以运行许多不同的测试。当你使用这项服务时，你提供一个你想测试的页面的 URL，以及一些信息，如你想在哪些浏览器上测试。然后该应用程序用你指定的操作系统和浏览器配置一个新的虚拟机，并以屏幕截图、视频、日志文件、文本等形式返回测试结果。
 
 然后，你可以进一步，使用 API 以编程方式访问功能，这意味着这种应用程序可以与任务运行器（如你自己的本地 Selenium 环境等）相结合，以创建自动化测试。
 
@@ -359,11 +360,11 @@ export function watch() {
 
 登录到 LambdaTest 后，你将被导航到 LambdaTest 仪表板。仪表板将向你提供详细信息，包括你已消耗了多少分钟，有多少并发会话正在运行，你迄今为止的总测试数量等。
 
-1. 要开始手动测试，你需要从左侧导航菜单中选择 **Real Time Testing** 选项卡。
+1. 要开始手动测试，你需要从左侧导航菜单中选择“**Real Time Testing**”标签。
    ![LambdaTest 仪表板](lambdatest-dashboard.png)
-2. 点击 **Real Time Testing** 后，你将被引导到一个屏幕，在该屏幕上，你可以选择用来测试你的网站的浏览器配置，浏览器版本，操作系统和屏幕分辨率。
+2. 点击 **Real Time Testing** 后，你将被引导到一个屏幕，在该屏幕上，你可以选择用来测试你的网站的浏览器配置、浏览器版本、操作系统和屏幕分辨率。
    ![实时测试](mark-as-bug-1.png)
-3. 点击 Start 按钮后，将出现一个加载屏幕，根据你的配置提供一个基于虚拟机的 VM（虚拟机）。加载完成后，你可以在网站上进行实时，互动的跨浏览器测试。
+3. 点击 Start 按钮后，将出现一个加载屏幕，根据你的配置提供一个基于虚拟机的 VM（虚拟机）。加载完成后，你可以在网站上进行实时，可交互的跨浏览器测试。
    [![标记为 bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
    如果你注意到 UI 的问题，则可以通过使用屏幕截图按钮捕获你的 VM 的屏幕截图与同事共享。你还可以通过在测试会话中点击记录器按钮来录制测试会话的视频。
 4. 使用内置的图像编辑器，在将截图推送给同事之前标注你的截图。![标注错误](mark-as-bug-3.png)
@@ -381,13 +382,13 @@ export function watch() {
 1. 创建一个 Sauce Labs 试用账号。
 2. 登录账号。在验证邮箱后，这应该会自动完成。
 
-#### 基础知识：手动测试
+#### 基础：手动测试
 
 [Sauce Labs 仪表板](https://app.saucelabs.com/dashboard/manual)上有很多选项。现在，请确保你在 _Manual Tests_ 标签下。
 
 1. 点击 _Start a new manual session_。
 2. 在下一个屏幕中，输入你想测试的页面的 URL（例如，可以使用 <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>），然后通过使用不同的按钮和列表选择你想测试的浏览器/操作系统组合。正如你所看到的，有很多选择！![选择 Sauce 手动会话](sauce-manual-session.png)
-3. 当你点击开始会话时，会出现一个加载屏幕，这会启动一个运行你选择组合的虚拟机。
+3. 当你点击“Start session”（开始会话）时，会出现一个加载屏幕，这会启动一个用于运行你选择的组合的虚拟机。
 4. 加载完成后，你可以开始在所选浏览器中远程测试该网站。![Sauce 测试运行](sauce-test-running.png)
 5. 从这里你可以看到在你测试的浏览器中的布局，移动鼠标并尝试点击按钮等。顶部菜单允许你：
 
@@ -397,7 +398,7 @@ export function watch() {
    - 截取屏幕截图。
    - 以全屏模式测试。
 
-一旦你停止了会话，你将返回到手动测试标签页，在这里你会看到你之前启动的每个手动会话的条目。点击这些条目之一可以查看会话的更多数据。在这里你可以下载你截取的屏幕截图，观看会话的视频，查看数据日志等。
+一旦你停止了会话，你将返回到手动测试标签页，在这里你会看到你之前启动的每个手动会话的条目。点击这些条目之一可以查看会话的更多数据。在这里你可以下载你截取的屏幕截图、观看会话的视频、查看数据日志等。
 
 > [!NOTE]
 > 这已经非常有用，起码比起自己配置所有这些模拟器和虚拟机要方便得多。
@@ -461,7 +462,7 @@ Sauce Labs 有一个 [restful API](https://docs.saucelabs.com/dev/api/)，允许
 1. 创建一个 [BrowserStack 试用账号](https://www.browserstack.com/users/sign_up)。
 2. 登录账号。在验证邮箱后，这应该会自动完成。
 3. 当你第一次登录时，你应该在实时测试页面；如果不是，请点击顶部导航菜单中的 _Live_ 链接。
-4. 如果你使用的是 Firefox 或 Chrome，你会被提示在一个名为“启用本地测试”的对话框中安装一个浏览器扩展，点击*安装*按钮继续。在其他浏览器上，你仍然能够使用一些功能（一般通过 Flash），但你可能无法获得完整的体验。
+4. 如果你使用的是 Firefox 或 Chrome，你会被提示在一个名为“Enable Local Testing”（启用本地测试）的对话框中安装一个浏览器扩展，点击*安装*按钮继续。在其他浏览器上，你仍然能够使用一些功能（一般通过 Flash），但你可能无法获得完整的体验。
 
 #### 基础：手动测试
 
@@ -488,7 +489,7 @@ BrowserStack Live 仪表板允许你选择你想测试的设备和浏览器，�
 - 屏幕方向（看起来像一个重新加载图标）——在纵向和横向之间切换方向。
 - 适应屏幕（看起来像一个全屏图标）——尽可能多地用设备填满测试区域。
 - 捕捉 bug（看起来像一个相机）——截图，允许你注释并保存它。
-- Issue 跟踪器（看起来像一副牌）——查看以前捕获的 bug/屏幕截图。
+- 议题跟踪器（看起来像一副牌）——查看以前捕获的错误/屏幕截图。
 - 设置（齿轮图标）——允许你改变会话的一般设置。
 - 帮助（问号）——访问帮助/支持功能。
 - _Devtools_——允许你使用你的浏览器的 devtools 直接调试或操作测试浏览器中显示的页面。目前这只在测试 iOS 设备上的 Safari 浏览器时有效。
