@@ -52,7 +52,7 @@ clip-path: unset;
 ### 取值
 
 - `<clip-source>`
-  - : 用 {{cssxref("url", "url()")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
+  - : 用 {{cssxref("url_value", "&lt;url&gt;")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : 一种形状，其大小和位置由 `<geometry-box>` 的值定义。如果没有指定 `<geometry-box>`，则将使用 `border-box` 用为参考框。取值可为以下值中的任意一个：
