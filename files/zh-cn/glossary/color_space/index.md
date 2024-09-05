@@ -7,21 +7,21 @@ l10n:
 
 {{GlossarySidebar}}
 
-**色彩空间**是对色彩的命名组织方式，用于对基于坐标的色彩排列的基本色彩模型。色彩模型定义了色彩的组成部分（例如 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 色彩的 `h`、`w` 和 `b` 通道）与色彩空间之间的关系。多数色彩空间是表示色彩的三维或四维网格，其中各维度（轴）对应色彩空间中的一个通道。一个色彩可以在保持看起来仍然一样的情况下在多个色彩空间中表达，或者从一个色彩空间转换到另一个色彩空间。
+**色彩空间**是对色彩的命名组织方式，用于基于坐标的色彩排列的基本色彩模型。色彩模型定义了色彩的组成部分（例如 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 色彩的 `h`、`w` 和 `b` 通道）与色彩空间之间的关系。多数色彩空间是表示色彩的三维或四维网格，其中各维度（轴）对应色彩空间中的一个通道。一个色彩可以在保持看起来仍然一样的情况下在多个色彩空间中表达，或者从一个色彩空间转换到另一个色彩空间。
 
-色彩空间对色彩进行分类和定义。每个色彩空间由数学模型和相关的规则集定义。每个色彩空间都有一个定义好的{{glossary("gamut", "色域")}}（它指的是它能表示的特定范围的色彩）。这些规则使得跨不同设备和软件实现一致且可重现的色彩表示成为可能。
+色彩空间对特定范围的色彩进行分类和定义。每个色彩空间由数学模型和相关的规则集定义。每个色彩空间都有一个定义好的{{glossary("gamut", "色域")}}（它指的是它能表示的特定范围的色彩）。这些规则使得跨不同设备和软件的色彩表现一致且可重现。
 
 _sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再局限于这个色彩空间。[CSS 色彩模块 4 级](https://drafts.csswg.org/css-color)指定了几种预定义的色彩空间，而 [CSS 色彩模块 5 级](https://drafts.csswg.org/css-color-5/)则进一步规定了用于定义自定义色彩空间的特性。
 
 ## 命名的色彩空间
 
-预定义的 [RGB 色彩空间](#rgb_color_spaces)包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb` 和 `rec2020`。预定义的 [CIELAB 色彩空间](#cielab_color_spaces)包括 `lab-d50` 和 `lab-d65`。预定义的 [XYZ 色彩空间](#xyz_color_spaces)包括 `xyz-d50` 和 `xyz-d65`（以及作为其别名的 `xyz`）。
+预定义的 [RGB 色彩空间](#rgb_色彩空间)包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb` 和 `rec2020`。预定义的 [CIELAB 色彩空间](#cielab_色彩空间)包括 `lab-d50` 和 `lab-d65`。预定义的 [XYZ 色彩空间](#xyz_色彩空间)包括 `xyz-d50` 和 `xyz-d65`（以及作为其别名的 `xyz`）。
 
 色彩空间可以是[矩形或极坐标的](https://ericportis.com/posts/2024/okay-color-spaces/)。矩形色彩空间包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz-d50` 和 `xyz-d65`（或 `xyz`）。极坐标色彩空间包括 `hsl`、`hwb`、`lch` 和 `oklch`。
 
 ### RGB 色彩空间
 
-RGB 是一种色彩模型，将色彩表示为三个基本成分（红色、绿色和蓝色色彩通道）的混合，产生各种色调。sRGB（标准 RGB），是 {{Glossary("RGB")}} 色彩的底层色彩空间。sRGB 旨在成为在互联网和万维网（WWW）上查看图像的通用色彩空间。sRGB 现在通常是那些没有标记或没有嵌入色彩档案的默认色彩空间。
+RGB 是一种色彩模型，将色彩表示为三个基本成分（红色、绿色和蓝色色彩通道）的混合，产生各种色调。sRGB（标准 RGB）是 {{Glossary("RGB")}} 色彩的底层色彩空间。sRGB 旨在编纂个人电脑及{{glossary("world wide web", "万维网")}}成像系统的显示规范。目前，sRGB 通常是那些没有标记或没有嵌入色彩配置文件的默认色彩空间。
 
 RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{glossary("gamut", "色域")}}的 _Adobe RGB_ 色彩空间。_sRGB_ 和 _Adobe RGB_（`a98-rgb`）中的坐标是不同的。有很多种方式来描述色彩的 RGB 成分：在 {{Glossary("CSS")}} 中，色彩可以表示为十六进制表示法的单个 24 位整数（如淡蓝色 `#add8e6`），或者在 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 函数表示法中表示为 0 到 255 之间的三个独立数字（如，`rgb(46 139.5 87)`）。
 
@@ -29,7 +29,7 @@ RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{
 
 HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
 
-`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调饱和度亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调白度黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
+`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调-饱和度-亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调-白度-黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
 
 - `sRGB` 色彩空间
   - : sRGB 色彩空间（“标准 RGB”），是标准的 RGB（红、绿、蓝）色彩空间，用于显示器、打印机和 Web 中。它是使用最广泛的色彩空间，受到大多数操作系统、软件程序、显示器和打印机的支持。sRGB 以 `r`、`g` 和 `b` 为基础，色域范围为 `0` 至 `1`。它的白点为 D65。
@@ -53,16 +53,16 @@ CIELAB（或 CIELab）色彩空间，也称为 L\*a\*b*（简称 Lab*），表�
 
 Lab 是一个矩形坐标系统，有一个中央的亮度 `L` 轴。`a` 轴上的正值是紫红色，而负值是其补色绿色。`b` 轴上的正值是黄色，负值是蓝色/紫罗兰色。不饱和的色彩具有小的 `a` 和 `b` 值，而绝对值更大的更饱和。
 
-CIELAB 色彩函数包括 {{CSSXref("color_value/lab", "lab()")}}（亮度、a 轴、b 轴）和 {{CSSXref("color_value/lch", "lch()")}}（亮度、色度、色调），以及 {{CSSXref("color_value/oklab", "oklab()")}}和{{CSSXref("color_value/oklch", "oklch()")}}。三个函数的亮度值是相同的，但是 `lch()` 是一个 `C`（色度）和 `H`（色调）使用极坐标而不是轴的极坐标柱面坐标系统。
+CIELAB 色彩函数包括 {{CSSXref("color_value/lab", "lab()")}}（亮度、a 轴、b 轴）和 {{CSSXref("color_value/lch", "lch()")}}（亮度、色度、色调），以及 {{CSSXref("color_value/oklab", "oklab()")}} 和 {{CSSXref("color_value/oklch", "oklch()")}}。它们的亮度值是相同的，但是 `lch()` 和 `oklch` 是一个 `C`（色度）和 `H`（色调）使用极坐标而不是轴的极坐标柱面坐标系统。
 
 > [!NOTE]
-> 函数 `lch()` 中的色调和亮度与 {{cssxref("color_value/hsl", "hsl()")}} 或其他 sRGB 色彩空间中同名值不同。
+> 函数 `lch()` 和 `oklch` 中的色调和亮度与 {{cssxref("color_value/hsl", "hsl()")}} 或其他 sRGB 色彩空间中同名值不同。
 
-CIELAB 色彩空间，包括 LCH、Oklab 和 Oklch，是设备独立的色彩空间。
+CIELab 色彩空间包括 Lab、Lch、Oklab 和 Oklch，是设备无关的色彩空间。
 
 - `lab-d50` 色彩空间
 
-  - : 将色彩表示为 L 在 0 到 100 范围内，并且 a 和 b 范围在 -125 到 125 之间的色彩空间。a 和 b 轴不受这些范围值的限制，这些值是在与 Display P3 色彩空间相关的百分比输入和输出中使用的参考点。它的白点是 D50。
+  - : 将色彩表示为 `L` 在 `0` 到 `100` 范围内，并且 `a` 和 `b` 范围在 `-125` 到 `125` 之间的色彩空间。`a` 和 `b` 轴不受这些范围值的限制，这些值是在与 `Display P3` 色彩空间相关的百分比输入和输出中使用的参考点。它的白点是 D50。
 
 - `lab-d65` 色彩空间
 
@@ -87,7 +87,7 @@ CIELAB 色彩空间，包括 LCH、Oklab 和 Oklch，是设备独立的色彩空
 
 ## 参见
 
-- {{cssxref("@media/color-gamut", "color-gamut")}} `@media` 功能
+- {{cssxref("@media/color-gamut", "color-gamut")}} `@media` 特性
 - [CSS 数据类型：`<color>`](/zh-CN/docs/Web/CSS/color_value)
 - [sRGB 色彩空间](https://webstore.iec.ch/en/publication/6168)
 - 维基百科上的 [CIELAB 色彩空间](https://zh.wikipedia.org/wiki/CIELAB色彩空间)
