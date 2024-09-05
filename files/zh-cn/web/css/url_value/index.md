@@ -1,6 +1,7 @@
 ---
 title: url()
-slug: Web/CSS/url
+slug: Web/CSS/url_value
+original_slug: Web/CSS/url
 l10n:
   sourceCommit: 875d97804293021faaf66c16a76e2f31a6df56e1
 ---
