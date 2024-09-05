@@ -500,7 +500,7 @@
 /ja/docs/CSS/transition-property	/ja/docs/Web/CSS/transition-property
 /ja/docs/CSS/transition-timing-function	/ja/docs/Web/CSS/transition-timing-function
 /ja/docs/CSS/unicode-bidi	/ja/docs/Web/CSS/unicode-bidi
-/ja/docs/CSS/uri	/ja/docs/Web/CSS/url
+/ja/docs/CSS/uri	/ja/docs/Web/CSS/url_value
 /ja/docs/CSS/used_value	/ja/docs/Web/CSS/used_value
 /ja/docs/CSS/user-ident	/ja/docs/Web/CSS/custom-ident
 /ja/docs/CSS/vertical-align	/ja/docs/Web/CSS/vertical-align
@@ -3825,8 +3825,9 @@
 /ja/docs/Web/CSS/transform-function/translateX()	/ja/docs/Web/CSS/transform-function/translateX
 /ja/docs/Web/CSS/transform-function/translateY()	/ja/docs/Web/CSS/transform-function/translateY
 /ja/docs/Web/CSS/transform-function/translateZ()	/ja/docs/Web/CSS/transform-function/translateZ
-/ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url
-/ja/docs/Web/CSS/url()	/ja/docs/Web/CSS/url
+/ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url_value
+/ja/docs/Web/CSS/url	/ja/docs/Web/CSS/url_value
+/ja/docs/Web/CSS/url()	/ja/docs/Web/CSS/url_value
 /ja/docs/Web/CSS/user-ident	/ja/docs/Web/CSS/custom-ident
 /ja/docs/Web/CSS/var()	/ja/docs/Web/CSS/var
 /ja/docs/Web/CSS/visible	/ja/docs/Web/CSS/visibility
