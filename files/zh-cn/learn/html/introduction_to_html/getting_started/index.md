@@ -32,7 +32,7 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
 
 {{glossary("HTML")}}（HyperText Markup Language，超文本标记语言）是一种用来告知浏览器如何组织页面的*标记语言*。HTML 可复杂、可简单，一切取决于 web 开发者。HTML 由一系列的{{Glossary("Element", "元素")}}组成，这些元素可以用来包围或*标记*不同部分的内容，使其以某种方式呈现或者工作。两端的{{glossary("Tag", "标签")}}可以使内容变成超链接，以连接到另一个页面；使字体表现为斜体等。例如，考虑如下内容：
 
-```
+```plain
 My cat is very grumpy
 ```
 

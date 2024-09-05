@@ -169,7 +169,7 @@ Vue CLI 带有内置的开发服务器。这样一来，你就可以在本地运
 
 在你的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。你的终端应输出类似以下内容：
 
-```
+```plain
 INFO  Starting development server...
 98% after emitting CopyPlugin
 

@@ -51,7 +51,8 @@ var downloading = browser.downloads.download(
 
         Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou `browser.download.useDownloadDir` dans about:config).
 
-        > **Note :** Firefox pour Android provoque une erreur si `saveAs` est à `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
+        > [!NOTE]
+        > Firefox pour Android provoque une erreur si `saveAs` est à `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
 
     - `url`
       - : Un `string` représentant l'URL à télécharger.
@@ -92,7 +93,7 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 

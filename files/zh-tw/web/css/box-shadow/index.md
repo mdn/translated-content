@@ -54,8 +54,8 @@ box-shadow:
 ## 範例
 
 - [CSS box-shadow examples](https://techmoon.xyz/css-box-shadow-examples-by-css-scan/)
-- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
-- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
+- [box-shadow test](http://elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 
 ```plain
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

@@ -116,7 +116,8 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 
 Lorsque `Number` est appelé comme constructeur (avec le mot-clé `new`), il crée un objet `Number` qui **n'est pas** une valeur primitive. Par exemple, on aura `typeof new Number(42) === "object"`, et `new Number(42) !== 42` (même si `new Number(42) == 42`).
 
-> **Attention :** Il est plutôt rare de devoir utiliser `Number` comme constructeur.
+> [!WARNING]
+> Il est plutôt rare de devoir utiliser `Number` comme constructeur.
 
 ## Propriétés statiques
 

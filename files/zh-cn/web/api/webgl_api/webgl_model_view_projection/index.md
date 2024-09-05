@@ -489,14 +489,26 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 
 但是，在最后一个示例中，我们执行了 `(z + 1) * scaleFactor`:
 
-```
+```js
 var scaleFactor = 0.5;
 
 var simpleProjection = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, scaleFactor,
-  0, 0, 0, scaleFactor,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  scaleFactor,
+  0,
+  0,
+  0,
+  scaleFactor,
 ];
 
 MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);

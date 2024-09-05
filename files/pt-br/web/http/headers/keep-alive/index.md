@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 O cabeçalho **`Keep-Alive`** permite que o remetente indique como a conexão deve ser usada, para definir um tempo limite e um máximo de requisições.
 
-> **Nota:** O {{HTTPHeader("Connection")}} cabeçalho precisa ser definido como "keep-alive" para isso funcionar , {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}} são ignorados em conexões HTTP/2; Gerenciamento de conexões são feitos por outros mecanismos.
+> [!NOTE]
+> O {{HTTPHeader("Connection")}} cabeçalho precisa ser definido como "keep-alive" para isso funcionar , {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}} são ignorados em conexões HTTP/2; Gerenciamento de conexões são feitos por outros mecanismos.
 
 <table class="properties">
   <tbody>

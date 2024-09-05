@@ -103,11 +103,10 @@ void send(
 > [!NOTE]
 > Gecko `send()` 方法的實作與 Gecko 6.0 的規範有差別。Gecko 回傳一個 `boolean` 以表示連線是否仍處於開啟狀態（且資料成功隊列／傳輸）。另外，此時此刻，Gecko 不支援 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) 或 {{ domxref("Blob") }} 作為資料形態。
 
-## 參見
-
-- [製作 WebSocket 客戶端應用程式](/zh_tw/WebSockets/Writing_WebSocket_client_applications)
-- [HTML5: WebSockets](http://dev.w3.org/html5/websockets/)
-
-## 瀏覽器兼容
+## 瀏覽器相容性
 
 {{Compat}}
+
+## 參見
+
+- [製作 WebSocket 客戶端應用程式](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

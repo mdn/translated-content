@@ -3,11 +3,9 @@ title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active service worker.
-
-> **Примечание:** This feature is available in [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 

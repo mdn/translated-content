@@ -9,7 +9,8 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemref`** per
 
 L'attribut `itemref` peut uniquement être défini sur des éléments pour lesquels un attribut `itemscope` a été défini.
 
-> **Note :** L'attribut `itemref` ne fait pas partie du modèle de données des micro-données. Il s'agit purement d'une construction syntaxique pour aider les auteurs à annoter une page où les données ne suivent pas une structure arborescente claire.
+> [!NOTE]
+> L'attribut `itemref` ne fait pas partie du modèle de données des micro-données. Il s'agit purement d'une construction syntaxique pour aider les auteurs à annoter une page où les données ne suivent pas une structure arborescente claire.
 
 ## Syntaxe
 

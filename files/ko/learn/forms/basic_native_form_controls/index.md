@@ -34,13 +34,15 @@ l10n:
 - 일반 입력 유형 {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, 그리고 {{HTMLelement('input/text', 'text')}}.
 - 몇 가지 속성들은 모든 양식 컨트롤에 공통적으로 적용됩니다.
 
-> **참고:** 다음 두 글에서 더욱 강력한 양식 컨트롤에 대해 다룹니다. 좀 더 고급 참조를 원하시면, [HTML 양식 요소 참조](/ko/docs/Web/HTML/Element#forms)와 특히 [\<input\> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
+> [!NOTE]
+> 다음 두 글에서 더욱 강력한 양식 컨트롤에 대해 다룹니다. 좀 더 고급 참조를 원하시면, [HTML 양식 요소 참조](/ko/docs/Web/HTML/Element#forms)와 특히 [\<input\> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
 
 ## 텍스트 입력 필드
 
 텍스트 {{htmlelement("input")}} 필드는 가장 기본적인 양식 위젯입니다. 이것은 사용자가 어떠한 종류의 데이터라도 입력하는 데 매우 편리한 방법이며, 이미 몇 가지 간단한 예제를 보셨을 것입니다.
 
-> **참고:** HTML 양식 텍스트 필드는 간단한 일반 텍스트 입력 컨트롤입니다. 이는 풍부한 텍스트 편집(볼드체, 이탤릭체 등)을 수행할 수 없다는 것을 의미합니다. 당신이 마주칠 모든 리치 텍스트 편집기는 HTML, CSS, 그리고 JavaScript로 만들어진 사용자 정의 위젯입니다.
+> [!NOTE]
+> HTML 양식 텍스트 필드는 간단한 일반 텍스트 입력 컨트롤입니다. 이는 풍부한 텍스트 편집(볼드체, 이탤릭체 등)을 수행할 수 없다는 것을 의미합니다. 당신이 마주칠 모든 리치 텍스트 편집기는 HTML, CSS, 그리고 JavaScript로 만들어진 사용자 정의 위젯입니다.
 
 모든 기본 텍스트 컨트롤은 몇 가지 공통 행동을 공유합니다.
 
@@ -55,7 +57,8 @@ l10n:
 
 단일 줄 텍스트 필드는 `type` 속성 값이 `text`로 설정된 {{HTMLElement("input")}} 요소를 사용하여 만들어집니다. 또는 `type` 속성을 전체적으로 생략하여 (`text`는 기본값입니다) 생성할 수 있습니다. `type` 속성에 지정한 값이 브라우저에서 알 수 없는 경우 (`type="color"`를 지정하고 브라우저가 기본 색상 선택기를 지원하지 않는 경우) 이 속성의 값 `text`는 대체 값이 됩니다.
 
-> **참고:** 모든 단일 줄 텍스트 필드 유형의 예제는 GitHub에서 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html)에서 확인할 수 있습니다. ([라이브 데모도 확인하세요](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> [!NOTE]
+> 모든 단일 줄 텍스트 필드 유형의 예제는 GitHub에서 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html)에서 확인할 수 있습니다. ([라이브 데모도 확인하세요](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 다음은 기본 단일 줄 텍스트 필드 예제입니다.
 

@@ -45,7 +45,8 @@ Si vous voulez faire un jeu, et utiliser les événements du clavier et de la so
 
 Dans les exemples suivants, nous utiliserons {{domxref("window.requestAnimationFrame()")}} pour contrôler les animations. Cette technique est plus fluide et plus efficace, elle appelle les opérations de rendu quand le système est prêt à dessiner l'image. Dans des conditions idéales, la fonction est alors lancée 60 fois par seconde, mais la fréquence sera réduite si l'animation se passe dans un onglet non visible.
 
-> **Note :** Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article [L'anatomie d'un jeu vidéo](/fr/docs/Jeux/Anatomie) dans notre section [Développement de jeux vidéo](/fr/docs/Jeux).
+> [!NOTE]
+> Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article [L'anatomie d'un jeu vidéo](/fr/docs/Jeux/Anatomie) dans notre section [Développement de jeux vidéo](/fr/docs/Jeux).
 
 ## Un système terrestre animé
 

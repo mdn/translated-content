@@ -64,11 +64,13 @@ Et réinstallez ensuite votre extension.
 
 Notez que Firefox 3 n'a plus besoin d'un «&nbsp;.0&nbsp;» supplémentaire dans son numéro de version, donc au lieu d'utiliser «&nbsp;3.0.0.\*&nbsp;», il ne faut plus indiquer que «&nbsp;3.0.\*&nbsp;».
 
-> **Note :** Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur `3.0.0.*` pour `maxVersion` avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser `3.0b5` comme valeur de `maxVersion`.
+> [!NOTE]
+> Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur `3.0.0.*` pour `maxVersion` avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser `3.0b5` comme valeur de `maxVersion`.
 
 Il y a eu (et il y aura encore) un certain nombre de changements dans les API qui poseront probablement des problèmes à certaines. Nous sommes encore en train d'établir une liste complète de ces changements.
 
-> **Note :** Si votre extension utilise toujours un script [`Install.js`](/fr/docs/Install.js) plutôt qu'un [manifeste d'installation](/fr/docs/Install_Manifests), il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts `install.js` dans les fichiers XPI.
+> [!NOTE]
+> Si votre extension utilise toujours un script [`Install.js`](/fr/docs/Install.js) plutôt qu'un [manifeste d'installation](/fr/docs/Install_Manifests), il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts `install.js` dans les fichiers XPI.
 
 #### Ajout de localisations au manifeste d'installation
 
@@ -169,7 +171,8 @@ Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Fi
 </window>
 ```
 
-> **Note :** Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
+> [!NOTE]
+> Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
 
 ### Autres changements
 

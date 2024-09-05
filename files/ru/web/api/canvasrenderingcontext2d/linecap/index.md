@@ -7,7 +7,8 @@ slug: Web/API/CanvasRenderingContext2D/lineCap
 
 Свойство **`CanvasRenderingContext2D.lineCap`** предоставляемое Canvas 2D API определяет, как будут выглядеть концы нарисованных линий.
 
-> **Примечание:** Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
+> [!NOTE]
+> Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Синтаксис
 

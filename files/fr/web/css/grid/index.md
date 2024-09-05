@@ -9,7 +9,8 @@ La propriété **`grid`** est une propriété raccourcie qui permet de définir 
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **Note :** Une seule déclaration `grid` permettra uniquement de définir les propriétés explicites ou implicites. Les propriétés qui ne sont pas définies via la propriété raccourcie prendront leurs valeurs initiales. Les propriétés d'espacement ne sont pas surchargées par cette propriété raccourcie.
+> [!NOTE]
+> Une seule déclaration `grid` permettra uniquement de définir les propriétés explicites ou implicites. Les propriétés qui ne sont pas définies via la propriété raccourcie prendront leurs valeurs initiales. Les propriétés d'espacement ne sont pas surchargées par cette propriété raccourcie.
 
 ## Syntaxe
 

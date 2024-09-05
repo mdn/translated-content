@@ -14,8 +14,9 @@ slug: Web/API/AudioScheduledSourceNode/stop
 
 ## 语法
 
-```
-AudioScheduledSourceNode.stop([when]);
+```js-nolint
+stop()
+stop(when)
 ```
 
 ### 参数

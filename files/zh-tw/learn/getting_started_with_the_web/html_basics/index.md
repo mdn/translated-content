@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/HTML_basics
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標示語言」，是一種用來組織架構並呈現網頁內容的程式語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
+HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標記語言」，是一種用來組織架構並呈現網頁內容的標記語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
 
 ## HTML 到底是什麼？
 

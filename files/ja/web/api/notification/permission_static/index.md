@@ -1,9 +1,12 @@
 ---
-title: Notification.permission
+title: "Notification: permission 静的プロパティ"
+short-title: permission
 slug: Web/API/Notification/permission_static
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 `permission` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、ユーザーが現在のオリジンに対してウェブ通知を表示することを許可したかどうか、現在の許可状態を表します。
 
@@ -60,5 +63,5 @@ function notifyMe() {
 
 - [通知 API](/ja/docs/Web/API/Notifications_API)
 - [通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [許可 API](/ja/docs/Web/API/Permissions_API)
-- [許可 API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [権限 API](/ja/docs/Web/API/Permissions_API)
+- [権限 API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)

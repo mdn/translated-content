@@ -135,7 +135,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('範例', '100%', 30)}}
 
-在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
+在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](https://chrisdavidmills.github.io/emogotchi/) ([see source code](https://github.com/chrisdavidmills/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
 
 ```js
 Notification.requestPermission();

@@ -17,7 +17,7 @@ Projetado no início da década de 1990, o protocolo HTTP é extensível e evolu
 
 ## Componentes de sistemas baseados em HTTP
 
-O HTTP é um protocolo cliente-servidor: as requisições são enviados por uma entidade, o agente-usuário (ou um _proxy_ em nome dele). A maior parte do tempo, o agente-usuário é um navegador da Web, mas pode ser qualquer coisa, como por exemplo um robô que varre a Web para preencher e manter um índice de mecanismo de pesquisa e coletar informações.
+O HTTP é um protocolo cliente-servidor: as requisições são enviadas por uma entidade, o agente-usuário (ou um _proxy_ em nome dele). A maior parte do tempo, o agente-usuário é um navegador da Web, mas pode ser qualquer coisa, como por exemplo um robô que varre a Web para preencher e manter um índice de mecanismo de pesquisa e coletar informações.
 
 Cada requisição individual é enviada para um servidor, que irá lidar com isso e fornecer um resultado, chamado de _resposta_. Entre a solicitação e a resposta existem várias entidades, designadas coletivamente como {{glossary("Proxy_server", "proxies")}}, que executam operações diferentes e atuam como _gateways_ (intermediários) ou {{glossary("Cache", "caches")}}, por exemplo.
 
@@ -43,7 +43,7 @@ Um servidor não é necessáriamente apenas uma máquina, mas vários servidores
 
 ### Proxies (ou representantes)
 
-Entre o navegador Web e o servidor, vários computadores e máquinas transmitem as mensagens HTTP. Devido a estrutura em camadas da pilha Web, a maioria dessas máquinas operam em alguma das camadas: de transporte, de rede ou física, sendo transparente na camada da aplicação HTTP, e potencialmente exercendo um grande impacto na performance. Essas máquinas que operam na camada de aplicação são normalmente conhecidas como **_proxies_ **(ou representantes, ou procuradores, etc). Eles podem ser transparentes ou não (alterações nas requisições não passam por eles), e podem desempenhar várias funções:
+Entre o navegador Web e o servidor, vários computadores e máquinas transmitem as mensagens HTTP. Devido a estrutura em camadas da pilha Web, a maioria dessas máquinas operam em alguma das camadas: de transporte, de rede ou física, sendo transparente na camada da aplicação HTTP, e potencialmente exercendo um grande impacto na performance. Essas máquinas que operam na camada de aplicação são normalmente conhecidas como **_proxies_** (ou representantes, ou procuradores, etc). Eles podem ser transparentes ou não (alterações nas requisições não passam por eles), e podem desempenhar várias funções:
 
 - cacheamento (o _cache_ pode ser público ou privado, como o _cache_ dos navegadores)
 - filtragem (como um _scanner_ de antivírus, controle de acesso, etc)
@@ -65,11 +65,6 @@ Introduzidos no HTTP/1.0, os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) fa
 ### HTTP não tem estado, mas tem sessões
 
 HTTP é sem estado: não existe uma relação entre duas requisições sendo feitas através da mesma conexão. Isso traz um problema imediato para usuários que interagem com algumas páginas de forma coerente, por exemplo, usando um carrinho de compras de _e-commerces_\*. Mas como o fundamento básico do HTTP é não manter estados, _cookies_ HTTP permitem que as sessões tenham estados. Usando a extensibilidade dos cabeçalhos, os _cookies_ são adicionados ao fluxo do HTTP, permitindo que a criação de sessão em cada requisição HTTP compartilhem o mesmo contexto, ou o mesmo estado.
-
-> **Nota:** \* O problema do carrinho de compras de _e-commerces_ e o protocolo HTTP: como o protocolo HTTP não guarda o estado das requisições e respostas, é **impossível** fazer com que um site guarde as informações de um carrinho de compras **somente através do HTTP**. Por exemplo, imagine que você irá comprar um computador novo e um jogo de xícaras de chá. Para que esses dados possam ser mantidos enquanto você navega no site do _e-commerce_ olhando mais produtos (cada página visitada gera um novo par de requisição/resposta), duas estratégias podem ser usadas, já que o HTTP por si só, não permitiria isso:
->
-> 1. Você possui um cadastro no _e-commerce_ e um programa escrito no servidor é responsável por armazenar suas informações do carrinho; ou
-> 2. Um programa escrito em linguagem cliente (como JavaScript), gerencia essas informações através dos _cookies_ e de bancos de dados que os próprios navegadores disponibilizam para as aplicações, para armazenamento **temporário** dessas informações de carrinho.
 
 ### HTTP e conexões
 

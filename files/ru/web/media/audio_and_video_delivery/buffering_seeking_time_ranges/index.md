@@ -102,7 +102,8 @@ window.onload = function () {
 
 ![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
-> **Примечание:** You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
+> [!NOTE]
+> You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
 
 ## Seekable
 
@@ -212,7 +213,8 @@ This should give you results similar to the following, where the light grey bar 
 
 ![A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered.](bufferedprogress.png)
 
-> **Примечание:** You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
+> [!NOTE]
+> You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
 
 ## Пару слов о Played
 

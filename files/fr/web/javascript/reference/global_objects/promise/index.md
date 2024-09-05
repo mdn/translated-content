@@ -27,9 +27,11 @@ Les méthodes [`Promise.prototype.then()`](/fr/docs/Web/JavaScript/Reference/Glo
 
 ![Schéma illustrant l'enchaînement des différents états possibles d'une promesse et les méthodes associées](promises.png)
 
-> **Note :** D'autres langages utilisent des mécanismes d'évaluation à la volée (<i lang="en">lazy evaluation</i>) et de déport des calculs (<i lang="en">deferring computations</i>). Ces mécanismes sont également intitulés promesses (<i lang="en">promises</i>). En JavaScript, les promesses correspondent à des processus déjà lancés et qui peuvent être chaînés avec des fonctions de retour. Si vous cherchez à retarder l'évaluation, vous pouvez utiliser les fonctions fléchées sans arguments (ex. `f = () => expression`) afin de créer une expression à évaluer plus tard et utiliser `f()` pour l'évaluer au moment voulu.
+> [!NOTE]
+> D'autres langages utilisent des mécanismes d'évaluation à la volée (<i lang="en">lazy evaluation</i>) et de déport des calculs (<i lang="en">deferring computations</i>). Ces mécanismes sont également intitulés promesses (<i lang="en">promises</i>). En JavaScript, les promesses correspondent à des processus déjà lancés et qui peuvent être chaînés avec des fonctions de retour. Si vous cherchez à retarder l'évaluation, vous pouvez utiliser les fonctions fléchées sans arguments (ex. `f = () => expression`) afin de créer une expression à évaluer plus tard et utiliser `f()` pour l'évaluer au moment voulu.
 
-> **Note :** On dit qu'une promesse est dans l'état <i lang="en">settled</i> (acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <i lang="en">resolved</i> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, [<i lang="en">States and fates</i> (en anglais)](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md), contient de plus amples détails sur la terminologie utilisée.
+> [!NOTE]
+> On dit qu'une promesse est dans l'état <i lang="en">settled</i> (acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <i lang="en">resolved</i> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, [<i lang="en">States and fates</i> (en anglais)](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md), contient de plus amples détails sur la terminologie utilisée.
 
 ### Enchaînement de promesses
 
@@ -154,7 +156,8 @@ console.log("journalisation immédiate");
 - [`Promise.prototype.finally()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally)
   - : Ajoute un gestionnaire à la promesse et renvoie une nouvelle promesse qui est résolue lors de la résolution de la première promesse. Le gestionnaire est appelé quand la première promesse est acquittée, qu'elle ait réussi ou non.
 
-> **Note :** Voir [le guide sur les micro-tâches](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour en savoir plus sur la façon dont ces méthodes utilisent la queue et les services de micro-tâches.
+> [!NOTE]
+> Voir [le guide sur les micro-tâches](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour en savoir plus sur la façon dont ces méthodes utilisent la queue et les services de micro-tâches.
 
 ## Exemples
 

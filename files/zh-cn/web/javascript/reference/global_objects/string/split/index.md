@@ -100,7 +100,7 @@ splitString(monthString, comma);
 
 上述示例会产生如下输出：
 
-```
+```plain
 原始字符串为："Oh brave new world that has such people in it."
 分隔符为：" "
 分隔后的数组有 10 个元素：Oh / brave / new / world / that / has / such / people / in / it. /
@@ -131,7 +131,7 @@ console.log(nameList);
 
 上例输出两行，第一行输出原始字符串，第二行输出结果数组。
 
-```
+```plain
 Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 ```

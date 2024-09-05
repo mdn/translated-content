@@ -13,8 +13,9 @@ Although this interface has a constructor, it is not possible to create a useful
 
 ## 语法
 
-```
- event = new DragEvent(type, DragEventInit);
+```js-nolint
+new DragEvent(type)
+new DragEvent(type, dragEventInit)
 ```
 
 ### 参数
@@ -29,7 +30,7 @@ Although this interface has a constructor, it is not possible to create a useful
 
 The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
 
-## 标准
+## 规范
 
 {{Specifications}}
 

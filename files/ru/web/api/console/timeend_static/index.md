@@ -1,6 +1,6 @@
 ---
-title: Console.timeEnd
-slug: Web/API/console/timeend_static
+title: "console: статический метод timeEnd()"
+slug: Web/API/console/timeEnd_static
 ---
 
 {{APIRef("Console API")}}

@@ -25,7 +25,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Это достигается с помощью таких API, как {{domxref("XMLHttpRequest")}} или - более новой - [Fetch API](/ru/docs/Web/API/Fetch_API). Эти технологии позволяют веб-страницам напрямую обрабатывать запросы [HTTP](/ru/docs/Web/HTTP) для определённых ресурсов, доступных на сервере, и форматировать результирующие данные по мере необходимости перед их отображением.
 
-> **Примечание:** Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
+> [!NOTE]
+> Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
 
 ![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
@@ -339,7 +340,8 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
   - О наилучшем эквиваленте Fetch's `response.ok` в XHR следует проверить, является ли {{domxref("XMLHttpRequest.status","request.status")}} равным 200 или если {{domxref("XMLHttpRequest.readyState","request.readyState")}} равно 4.
   - Свойства для получения статуса и сообщения состояния одинаковы, но они находятся на объекте `request` (XHR), а не в объекте `response`.
 
-> **Примечание:** Если у вас есть проблемы с этим, не стесняйтесь сравнить свой код с готовой версией на GitHub ([см. исходник здесь](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), а также [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
+> [!NOTE]
+> Если у вас есть проблемы с этим, не стесняйтесь сравнить свой код с готовой версией на GitHub ([см. исходник здесь](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), а также [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
 
 ## Резюме
 

@@ -20,7 +20,7 @@ slug: Web/HTTP/CORS/Errors
 
 错误消息的文本将类似于以下内容：
 
-```
+```plain
 Cross-Origin Request Blocked: The Same Origin Policy disallows
 reading the remote resource at https://some-url-here. (Reason:
 additional information here).

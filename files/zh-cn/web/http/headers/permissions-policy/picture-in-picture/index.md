@@ -9,7 +9,7 @@ HTTP 标头 {{HTTPHeader("Permissions-Policy")}} 的 `picture-in-picture` 指令
 
 ## 语法
 
-```
+```http
 Permissions-Policy: picture-in-picture <allowlist>;
 ```
 

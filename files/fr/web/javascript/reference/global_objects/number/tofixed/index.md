@@ -35,7 +35,8 @@ Une chaîne de caractères qui représente le nombre indiqué avec une notation 
 
 `toFixed()` renvoie une chaîne de caractères représentant `objetNumber` sans notation exponentielle et qui possède exactement `nbChiffres` pour la partie fractionnaire. Le nombre est arrondi si nécessaire et la partie fractionnaire est complétée par des zéros si nécessaire pour obtenir la longueur souhaitée. Si le `objetNumber` est supérieur ou égal à `1e+21`, la méthode utilise simplement {{jsxref("Number.prototype.toString()")}} et renvoie une chaîne en notation exponentielle.
 
-> **Attention :** En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
+> [!WARNING]
+> En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
 
 ## Exemples
 

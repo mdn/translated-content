@@ -7,7 +7,7 @@ slug: Web/HTTP/CORS/Errors/CORSDisabled
 
 ## 原因
 
-```
+```plain
 原因：CORS disabled
 ```
 

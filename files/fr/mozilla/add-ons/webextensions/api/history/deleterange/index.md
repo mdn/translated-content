@@ -55,7 +55,7 @@ browser.history.deleteRange({
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >

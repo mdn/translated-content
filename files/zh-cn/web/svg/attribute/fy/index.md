@@ -115,7 +115,7 @@ svg {
 
 {{EmbedLiveSample("示例 2", "200", "250")}}
 
-## 用法
+## 使用说明
 
 <table class="properties">
   <tbody>

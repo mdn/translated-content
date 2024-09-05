@@ -9,8 +9,8 @@ slug: Web/API/Selection/setBaseAndExtent
 
 ## 语法
 
-```
-sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```js-nolint
+setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 ```
 
 ### 参数

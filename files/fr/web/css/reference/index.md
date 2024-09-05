@@ -51,7 +51,8 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 ## Index des mots-clés
 
-> **Note :** Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
+> [!NOTE]
+> Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
 
 {{CSS_Ref}}
 

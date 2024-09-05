@@ -2,7 +2,7 @@
 title: 교차 출처 리소스 공유 (CORS)
 slug: Web/HTTP/CORS
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 84ae777ed4409ab3b3992382c445fb0add55a934
 ---
 
 {{HTTPSidebar}}
@@ -13,7 +13,7 @@ l10n:
 
 보안 상의 이유로 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()` 와 {{domxref("XMLHttpRequest")}} 는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
 
-![Diagrammatic representation of CORS mechanism](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
 CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 브라우저는 교차 출처 HTTP 요청의 위험을 완화하기 위해 `fetch()` 나 `XMLHttpRequest` 같은 API에서 CORS를 사용합니다.
 
@@ -167,7 +167,8 @@ fetchPromise.then((response) => {
 
 ![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
-> **참고:** 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
+> [!NOTE]
+> 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
 
 클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 사전 요청과 그에 대한 응답입니다.
 
@@ -276,7 +277,8 @@ CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만
 
 ### 자격 증명을 포함한 요청
 
-> **참고:** 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
+> [!NOTE]
+> 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
 
 {{domxref("Window/fetch", "fetch()")}} 혹은 {{domxref("XMLHttpRequest")}} 와 CORS 을 통해 제공된 가장 흥미로운 기능은 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)와 HTTP 인증 정보를 인식하는 "자격 증명이 포함된" 요청을 할 수 있다는 것입니다. 기본적으로 교차 출처 `fetch()` 또는 `XMLHttpRequest` 호출에서는 브라우저가 자격 증명을 전송하지 **않습니다.**
 
@@ -344,59 +346,74 @@ CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합�
 
 #### 자격 증명이 포함된 요청과 와일드카드
 
-자격 증명 요청에 응답할 때 서버는 **반드시** "`*`" 와일드카드를 지정하는 대신 `Access-Control-Allow-Origin` 헤더 값에 출처를 지정해야 합니다.
+자격 증명이 포함된 요청에 응답하는 경우
 
-위 예제의 요청 헤더에 `Cookie` 헤더가 포함되어 있기 때문에 `Access-Control-Allow-Origin` 헤더의 값이 "\*"인 경우 요청이 실패합니다. 위 요청은 `Access-Control-Allow-Origin` 헤더가 "`*`" 와일드 카드가 아니라 "`http://foo.example`" 본래 주소이기 때문에 자격증명 인식 컨텐츠는 웹 호출 컨텐츠로 리턴됩니다.
+- 서버는 `Access-Control-Allow-Origin` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 출처를 지정해야 합니다. 예를 들어 `Access-Control-Allow-Origin: https://example.com`.
 
-위 예제의 `Set-Cookie` 응답 헤더는 추가 쿠키를 설정합니다. 실패한 경우 사용한 API에 따라 예외가 발생합니다.
+- 서버는 `Access-Control-Allow-Headers` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 헤더 이름 목록을 지정해야 합니다. 예를 들어 `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`.
 
-#### Third-party cookies
+- 서버는 `Access-Control-Allow-Methods` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 메서드 이름 목록을 지정해야 합니다. 예를 들어 `Access-Control-Allow-Methods: POST, GET`.
 
-CORS 응답에 설정된 쿠키에는 일반적인 third-party cookie 정책이 적용됩니다. 위의 예제는 `foo.example`에서 페이지를 불러지만 20행의 쿠키는 `bar.other` 가 전송합니다. 때문에 사용자의 브라우저 설정이 모든 third-party cookies를 거부하도록 되어 있다면, 이 쿠키는 저장되지 않습니다.
+- 서버는 `Access-Control-Expose-Headers` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 헤더 이름 목록을 지정해야 합니다. 예를 들어 `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`.
+
+요청에 자격 증명(가장 일반적으로는 `Cookie` 헤더)이 포함되고 응답에 `Access-Control-Allow-Origin: *` 헤더(즉, 와일드카드)가 포함되어 있으면, 브라우저는 응답에 대한 접근을 차단하고 개발자 도구 콘솔에 CORS 오류를 보고합니다.
+
+그러나 요청에 자격 증명(예를 들어 `Cookie` 헤더)이 포함되고 응답에 와일드카드 대신 실제 출처(예를 들어 `Access-Control-Allow-Origin: https://example.com`)가 포함되어 있으면, 브라우저는 지정된 출처에서 응답에 접근할 수 있도록 허용합니다.
+
+또한 응답의 `Access-Control-Allow-Origin` 헤더 값에 실제 출처가 아닌 "`*`" 와일드카드인 경우 응답의 `Set-Cookie` 헤더는 쿠키를 설정하지 않습니다.
+
+#### 서드 파티 쿠키
+
+CORS 응답에 설정된 쿠키는 일반적인 서드 파티(third-party) 쿠키 정책의 적용을 받습니다. 위의 예에서, 페이지는 `foo.example` 에서 로드되지만, 응답의 `Cookie` 헤더는 `bar.other` 에서 전송되므로 사용자의 브라우저가 모든 서드-파티 쿠키를 거부하도록 설정된 경우 해당 쿠키는 저장되지 않습니다.
+
+요청의 쿠키도 일반적인 서드-파티 쿠키 정책에 따라 억제될 수 있습니다. 따라서 강제된 쿠키 정책은 이 장에서 설명된 기능을 무효화 할 수 있으며, 자격 증명이 포함된 요청을 전혀 수행할 수 없게 만들 수 있습니다.
+
+[SameSite](/ko/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 속성에 대한 쿠키 정책이 적용됩니다.
 
 ## HTTP 응답 헤더
 
-이 섹션에서는 Cross-Origin 리소스 공유 명세에 정의된 대로 서버가 접근 제어 요청을 위해 보내는 HTTP 응답 헤더가 나열되어 있습니다. The previous section gives an overview of these in action.
+이 섹션에서는 교차 출처 리소스 공유 명세에 정의된 대로 서버가 접근 제어 요청을 위해 보내는 HTTP 응답 헤더가 나열되어 있습니다. 이전 섹션에서는 이러한 내용이 실제로 어떻게 작동하는지에 대한 개요를 제공합니다.
 
 ### Access-Control-Allow-Origin
 
-리턴된 리소스에는 다음 구문과 함께 하나의 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더가 있을 수 있습니다.
+반환된 리소스에는 다음 구문과 함께 하나의 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더가 있을 수 있습니다.
 
-```
+```http
 Access-Control-Allow-Origin: <origin> | *
 ```
 
 `Access-Control-Allow-Origin` 은 단일 출처를 지정하여 브라우저가 해당 출처가 리소스에 접근하도록 허용합니다. 또는 자격 증명이 **없는** 요청의 경우 "`*`" 와일드 카드는 브라우저의 origin에 상관없이 모든 리소스에 접근하도록 허용합니다.
 
-예를들어 `https://mozilla.org` 의 코드가 리소스에 접근 할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
+예를 들어 `https://mozilla.org` 의 코드가 리소스에 접근 할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
 
-```
+```http
 Access-Control-Allow-Origin: https://mozilla.org
+Vary: Origin
 ```
 
-서버가 "`*`" 와일드카드 대신에 하나의 origin을 지정하는 경우, 서버는 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다. 이 origin은 화이트 리스트의 일부로 요청 origin에 따라 동적으로 변경될 수 있습니다. 서버 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는것을 클라이언트에 알려줍니다.
+서버가 "`*`" 와일드카드 대신에 하나의 출처를 지정하는 경우(이 출처는 허가된 출처 리스트의 일부로 요청 출처에 따라 동적으로 변경할 수 있습니다.), 서버는 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는 것을 클라이언트에 알려주기 위해 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다.
 
 ### Access-Control-Expose-Headers
 
-{{HTTPHeader("Access-Control-Expose-Headers")}} 헤더를 사용하면 브라우저가 접근할 수 있는 헤더를 서버의 화이트리스트에 추가할 수 있습니다.
+{{HTTPHeader("Access-Control-Expose-Headers")}} 헤더는 JavaScript(예를 들어 {{domxref("Response.headers")}})가 브라우저에서 접근할 수 있는 허용된 헤더 목록에 지정된 헤더를 추가합니다.
 
-```
+```http
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-예를들면 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
-```
+```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
-`X-My-Custom-Header` 와 `X-Another-Custom-Header` 헤더가 브라우저에 드러납니다.
+위 응답에 의해 `X-My-Custom-Header` 와 `X-Another-Custom-Header` 헤더가 브라우저에 노출됩니다.
 
 ### Access-Control-Max-Age
 
-{{HTTPHeader("Access-Control-Max-Age")}} 헤더는 preflight request 요청 결과를 캐시할 수 있는 시간을 나타냅니다. preflight request 예제는 위를 참조하세요.
+{{HTTPHeader("Access-Control-Max-Age")}} 헤더는 사전 요청 결과를 캐시할 수 있는 시간을 나타냅니다. 사전 요청 예제는 위를 참조하세요.
 
-```
+```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
@@ -404,45 +421,45 @@ Access-Control-Max-Age: <delta-seconds>
 
 ### Access-Control-Allow-Credentials
 
-{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `credentials` 플래그가 true일 때 요청에 대한 응답을 표시할 수 있는지를 나타냅니다. preflight request에 대한 응답의 일부로 사용하는 경우, credentials을 사용하여 실제 요청을 수행할 수 있는지를 나타냅니다. simple `GET` requests는 preflighted되지 않으므로 credentials이 있는 리소스를 요청하면, 이 헤더가 리소스와 함께 반환되지 않습니다. 이 헤더가 없으면 브라우저에서 응답을 무시하고 웹 컨텐츠로 반환되지 않는다는 점을 주의하세요.
+{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `credentials`가 참일 때 요청에 대한 응답을 표시할 수 있는지 여부를 나타냅니다. 사전 요청에 대한 응답의 일부로 사용될 때, 이 헤더는 실제 요청이 자격 증명과 함께 수행될 수 있는지 여부를 나타냅니다. 단, `GET` 메서드 단순 요청은 사전 요청이 수행되지 않으므로, 자격 증명과 함께 리소스에 대한 요청이 이루어진 경우 이 헤더가 리소스와 함께 반환되지 않으면 브라우저는 응답을 무시하고 웹 콘텐츠에 반환하지 않습니다.
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
-[Credentialed requests](#requests_with_credentials) 은 위에 설명되어 있습니다.
+[자격 증명이 포함된 요청](#자격_증명을_포함한_요청)은 위에서 논의하였습니다.
 
 ### Access-Control-Allow-Methods
 
-{{HTTPHeader("Access-Control-Allow-Methods")}} 헤더는 리소스에 접근할 때 허용되는 메서드를 지정합니다. 이 헤더는 preflight request에 대한 응답으로 사용됩니다. 요청이 preflighted 되는 조건은 위에 설명되어 있습니다.
+{{HTTPHeader("Access-Control-Allow-Methods")}} 헤더는 리소스에 접근할 때 허용되는 메서드를 지정합니다. 이 헤더는 사전 요청에 대한 응답으로 사용됩니다. 사전 요청이 발생하는 조건은 위에서 논의하였습니다.
 
-```
+```http
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-이 헤더를 브라우저로 전송하는 예제를 포함하여 [preflight request 의 예제는](#preflighted_requests), 위에 나와 있습니다.
+위에 [사전 요청](/ko/docs/Glossary/Preflight_request)의 예가 제공되어 있으며, 이 예시에는 이 헤더를 브라우저에 전송하는 예가 포함되어 있습니다.
 
 ### Access-Control-Allow-Headers
 
-[preflight request](#preflighted_requests) 에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더가 사용됩니다. 실제 요청시 사용할 수 있는 HTTP 헤더를 나타냅니다.
+{{HTTPHeader("Access-Control-Allow-Headers")}} 헤더는 [사전 요청](/ko/docs/Glossary/Preflight_request)에 대한 응답으로 사용되며, 실제 요청을 할 때 사용할 수 있는 HTTP 헤더를 나타냅니다. 이 헤더는 브라우저의 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더에 대한 서버 측의 응답입니다.
 
-```
+```http
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 ```
 
 ## HTTP 요청 헤더
 
-이 섹션에는 cross-origin 공유 기능을 사용하기 위해 클라이언트가 HTTP 요청을 발행할 때 사용할 수 있는 헤더가 나열되어 있습니다. 이 헤더는 서버를 호출할 때 설정됩니다. cross-site {{domxref("XMLHttpRequest")}} 기능을 사용하는 개발자는 프로그래밍 방식으로 cross-origin 공유 요청 헤더를 설정할 필요가 없습니다.
+이 섹션에서는 클라이언트가 교차 출처 공유 기능을 사용하기 위해 HTTP 요청을 발행할 때 사용할 수 있는 헤더들을 나열합니다. 이러한 헤더는 서버를 호출할 때 개발자를 위해 설정됩니다. 교차 출처 요청을 만드는 개발자는 이러한 교차 출처 공유 요청 헤더를 프로그래밍적으로 설정할 필요가 없습니다.
 
 ### Origin
 
-{{HTTPHeader("Origin")}} 헤더는 cross-site 접근 요청 또는 preflight request의 출처를 나타냅니다.
+{{HTTPHeader("Origin")}} 헤더는 교차 출처 접근 요청 또는 사전 요청 출처를 나타냅니다.
 
-```
+```http
 Origin: <origin>
 ```
 
-origin 은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정보는 포함하지 않고, 오직 서버 이름만 포함합니다.
+origin 값은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정보는 포함하지 않고, 오직 서버 이름만 포함합니다.
 
 > **참고:** `origin` 값은 `null` 또는 URI 가 올 수 있습니다.
 
@@ -450,25 +467,25 @@ origin 은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정�
 
 ### Access-Control-Request-Method
 
-{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 실제 요청에서 어떤 HTTP 메서드를 사용할지 서버에게 알려주기 위해, preflight request 할 때에 사용됩니다.
+{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 실제 요청에서 어떤 HTTP 메서드를 사용할지 서버에게 알려주기 위해 사전 요청할 때 사용됩니다.
 
-```
+```http
 Access-Control-Request-Method: <method>
 ```
 
-이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#사전_요청preflighted_requests) 찾을 수 있습니다.
 
 ### Access-Control-Request-Headers
 
-{{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청에서 어떤 HTTP 헤더를 사용할지 서버에게 알려주기 위해, preflight request 할 때에 사용됩니다.
+{{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 사전 요청을 발행할 때 사용되며, 실제 요청에서 사용할 HTTP 헤더를 서버에 알리기 위해 사용됩니다(예를 들어 [`headers`](/ko/docs/Web/API/RequestInit#headers) 옵션을 통해 전달). 이 브라우저 측 헤더는 {{HTTPHeader("Access-Control-Allow-Headers")}} 라는 서버 측 헤더로 응답 받게 됩니다.
 
+```http
+Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ```
-Access-Control-Request-Headers: <field-name>[, <field-name>]*
-```
 
-이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#사전_요청preflighted_requests) 찾을 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -479,13 +496,13 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ## 같이 보기
 
 - [CORS errors](/ko/docs/Web/HTTP/CORS/Errors)
-- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
+- [CORS 활성화: 내 서버에 CORS 지원을 추가하고 싶다](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
-- [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
-- [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
-- [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
-- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [CORS 일까요?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
+- [모든(현대) 브라우저에서 CORS 사용하기](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
+- [CORS 없이 Chrome 브라우저를 실행하는 방법](https://alfilatov.com/posts/run-chrome-without-cors/)
+- [일반적인 문제를 다루기 위한 방법에 대한 스택 오버플로우 답변](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_

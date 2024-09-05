@@ -9,8 +9,9 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 
 ## 语法
 
-```
- event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```js-nolint
+new KeyboardEvent(type)
+new KeyboardEvent(type, options)
 ```
 
 ### 值

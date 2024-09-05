@@ -7,15 +7,9 @@ slug: Web/API/KeyboardEvent/shiftKey
 
 **`KeyboardEvent.shiftKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>shift</kbd> 键是 (`true`) 否 (`false`) 按下。
 
-## 语法
+## 值
 
-```
-var shiftKeyPressed = instanceOfKeyboardEvent.shiftKey
-```
-
-### 返回值
-
-布尔值
+一个布尔值。
 
 ## 示例
 

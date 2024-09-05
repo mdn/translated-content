@@ -17,7 +17,8 @@ L'origine par défaut, dans les contextes relatifs au Web, est située dans le c
 
 Lorsqu'on dessine des graphiques en trois dimensions ou lorsqu'on utilise une troisième dimension pour empiler des objets de l'avant vers l'arrière, on utilise la coordonnée en Z. Celle-ci correspond à la distance entre le spectateur et l'objet. Elle est positive si l'objet est plus éloigné du spectateur que l'origine et négative s'il est plus proche.
 
-> **Note :** Il est en fait possible de modifier les définitions et les orientations de ces systèmes de coordonnées grâce à des propriétés CSS telles que {{cssxref("transform")}}. Toutefois, nous évoquerons uniquement le système de coordonnées standard.
+> [!NOTE]
+> Il est en fait possible de modifier les définitions et les orientations de ces systèmes de coordonnées grâce à des propriétés CSS telles que {{cssxref("transform")}}. Toutefois, nous évoquerons uniquement le système de coordonnées standard.
 
 ## Les systèmes de coordonnées CSSOM standard
 

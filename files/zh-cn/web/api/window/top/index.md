@@ -1,23 +1,23 @@
 ---
-title: Window.top
+title: Window：top 属性
 slug: Web/API/Window/top
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-返回窗口层级最顶层窗口的引用。
+返回对窗口层次结构中最顶层窗口的引用。
 
-## 语法
+## 值
 
-```plain
-var topWindow = window.top;
-```
+对最顶层窗口的引用。
 
 ## 备注
 
-[`window.parent`](/zh-CN/DOM/window.parent) 返回当前窗口的直接父对象，而 {{domxref("window.top")}} 返回最顶层的窗口对象。
+{{domxref("window.parent")}} 属性返回当前窗口的直接父窗口，而 `window.top` 返回窗口对象层次结构中的最顶层窗口。
 
-当你在处理父窗口的子框架（subframe），而你想获取顶层框架时，这个属性相当有用。
+此属性在处理位于父窗口或多个父窗口的子框架中的窗口时特别有用，可以用来获取顶级框架集。
 
 ## 规范
 

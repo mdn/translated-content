@@ -57,7 +57,7 @@ slug: Web/Accessibility/ARIA/Roles/document_role
 
 文書ロールは、ユーザーがスクリーンリーダーの標準コマンドで読むべき内容であることを明確に示すことによって、支援技術の振る舞いを間接的に制御する簡単な方法です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

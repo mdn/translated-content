@@ -1,6 +1,6 @@
 ---
 title: "console: статический метод timeStamp()"
-slug: Web/API/console/timestamp_static
+slug: Web/API/console/timeStamp_static
 l10n:
   sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---

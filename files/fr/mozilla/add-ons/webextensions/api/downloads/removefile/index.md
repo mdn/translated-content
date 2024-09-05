@@ -13,7 +13,8 @@ Pour supprimer un fichier de l'historique des téléchargements, vous devez util
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-> **Note :** Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler `removeFile()` avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de `removeFile()`, car le navigateur n'aura plus d'enregistrement du téléchargement.
+> [!NOTE]
+> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler `removeFile()` avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de `removeFile()`, car le navigateur n'aura plus d'enregistrement du téléchargement.
 
 ## Syntaxe
 
@@ -66,7 +67,7 @@ searching.then(remove, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 >

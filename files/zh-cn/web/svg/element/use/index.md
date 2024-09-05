@@ -9,7 +9,7 @@ slug: Web/SVG/Element/use
 
 出于安全原因，一些浏览器可能在 use 元素上应用同源策略，还有可能拒绝载入 xlink:href 属性内的跨源 URI。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
