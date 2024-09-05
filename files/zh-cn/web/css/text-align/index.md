@@ -221,7 +221,7 @@ caption {
 }
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample('表格对齐', "100%", "200")}}
 
