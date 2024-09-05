@@ -1,8 +1,8 @@
 ---
 title: url()
-slug: Web/CSS/url
+slug: Web/CSS/url_function
 l10n:
-  sourceCommit: 875d97804293021faaf66c16a76e2f31a6df56e1
+  sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
 {{CSSRef}}
@@ -15,9 +15,11 @@ l10n:
 
 ```css
 /* 简单用法 */
+url("https://example.com/images/myImg.jpg");
+url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
-url(data:image/png;base64,iRxVB0…);
-url(myFont.woff);
+url("data:image/jpg;base64,iRxVB0…");
+url(myImg.jpg);
 url(#IDofSVGpath);
 
 /* 相关属性 */
@@ -52,7 +54,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 如果使用相对 URL，它是相对于样式表的 URL（而不是相对于网页的 URL）。
 
-**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [@font-face](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/symbol](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
+**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
 
 ## 语法
 
@@ -62,7 +64,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
   - : 可以指定一个 URL 或 SVG 形状的 ID 的字符串。
 
-    - \<url>
+    - url
 
       - : 为相对地址、绝对地址的 URL，或指向所包含的 web 资源的指针，或数据 URL，可选择使用单引号或双引号。如果 URL 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
 
@@ -75,10 +77,10 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
         如果选择不使用引号编写 URL，请在 URL 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
 
     - path
-      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)（`circle`、`ellipse`、`line`、`path`、`polygon`、`polyline` 或 `rect`）的 ID ——使用形状的几何体作为路径。
+      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Element/filter)的 ID。
 
 - `<url-modifier>`
-  - 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
+  - : 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
 
 ### 形式语法
 
@@ -88,21 +90,42 @@ url( <string> <url-modifier>* )
 
 ## 示例
 
-### 在 background 属性中使用的 url
+### 作为 background 属性的值
 
 ```css
-.topbanner {
-  background: url("topbanner.png") #00d no-repeat fixed;
+body {
+  background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
+    #00d no-repeat fixed;
 }
 ```
 
-### 作为列表项目符号加载图像的 url
+{{EmbedLiveSample("作为 background 属性的值", "100%", "200")}}
+
+### 将图像设置为列表项目符号
+
+```html hidden
+<ul>
+  <li>一</li>
+  <li>二</li>
+  <li>三</li>
+</ul>
+```
+
+```css hidden
+ul {
+  font-size: 3rem;
+  margin: 0;
+}
+```
 
 ```css
 ul {
-  list-style: square url(http://www.example.com/redball.png);
+  list-style: outside
+    url("https://mdn.github.io/shared-assets/images/examples/firefox-logo.svg");
 }
 ```
+
+{{EmbedLiveSample("将图像设置为列表符号", "100%", "200")}}
 
 ### 内容属性中的用法
 
@@ -110,9 +133,9 @@ ul {
 
 ```html
 <ul>
-  <li>第 1 项</li>
-  <li>第 2 项</li>
-  <li>第 3 项</li>
+  <li>一</li>
+  <li>二</li>
+  <li>三</li>
 </ul>
 ```
 
@@ -120,7 +143,8 @@ ul {
 
 ```css
 li::after {
-  content: " - " url(star.gif);
+  content: "——"
+    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png");
 }
 ```
 
@@ -130,30 +154,17 @@ li::after {
 
 ### 使用数据 URL
 
-#### HTML
-
-```html
-<div class="background"></div>
-```
-
 #### CSS
 
-```css hidden
-.background {
-  height: 100vh;
-}
-```
-
 ```css
-.background {
-  background: yellow;
+body {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
 }
 ```
 
-{{EmbedLiveSample("使用数据 URL", "100%", 50)}}
+{{EmbedLiveSample("使用数据 URL", "100%", 100)}}
 
-### 在滤镜中的使用
+### 在滤镜中的用法
 
 当 URL 被用作滤镜路径时，URL 必须是以下其中之一：
 
