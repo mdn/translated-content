@@ -100,7 +100,7 @@ API 通常分为两类。
 - {{domxref("Document_Object_Model","文档对象模型 API","","nocode")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小演示中看到那样），这就是 DOM 在运行。
 - {{domxref("Geolocation","地理位置 API","","nocode")}} 获取地理信息。这就是为什么[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
 - {{domxref("Canvas_API","画布（Canvas）","","nocode")}} 和 {{domxref("WebGL_API","WebGL","","nocode")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 以及 [webglsamples](https://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Guide/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
+- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Media/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
 
 > [!NOTE]
 > 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
@@ -192,7 +192,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    </script>
    ```
 
-请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
+    请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
 
 4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“// 在此编写 JavaScript 代码”一行下方添加以下代码：
 
@@ -248,10 +248,8 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    ```
 
 4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URLs 不符合条件。有两个解决方案可以解决这个问题：
-
-   - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 8000 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
-   - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地 HTTP 服务器。
-
+    - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 8000 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
+    - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>` 代替 `<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地 HTTP 服务器。
 5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
 > [!NOTE]
