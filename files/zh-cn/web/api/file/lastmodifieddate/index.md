@@ -26,7 +26,7 @@ for (const file of fileInput.files) {
 
 ## 时间精度降低
 
-为了防止计时攻击和[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)，`someFile.lastModifiedDate` 的精度可能会根据浏览器设置进行舍入。在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认启用，默认为 2ms。您还可以启用 `privacy.resistFingerprinting`，在这种情况下精度将为 100ms 或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
+为了防止计时攻击和[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)，`someFile.lastModifiedDate` 的精度可能会根据浏览器设置进行舍入。在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认启用，默认为 2ms。你还可以启用 `privacy.resistFingerprinting`，在这种情况下精度将为 100ms 或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
 
 例如，在降低时间精度的情况下，`someFile.lastModifiedDate.getTime()` 的结果将始终是 2 的倍数，或者在启用 `privacy.resistFingerprinting` 的情况下为 100 的倍数（或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）。
 
