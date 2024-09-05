@@ -27,7 +27,7 @@ RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{
 
 在 sRGB 色彩空间中，CSS `<color>` 值包括 {{cssxref("hex-color", "十六进制色彩")}}、{{cssxref("named-color", "命名色彩")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/color_value/color) 函数还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
 
-HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
+HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_关键字")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
 
 `rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调-饱和度-亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调-白度-黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
 
