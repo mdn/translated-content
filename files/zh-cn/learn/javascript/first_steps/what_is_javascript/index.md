@@ -249,8 +249,8 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URLs 不符合条件。有两个解决方案可以解决这个问题：
 
-- 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 8000 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
-- 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地 HTTP 服务器。
+   - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 8000 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
+   - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>`代替`<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#script_loading_strategies)。但是注意，本教程其他部分使用的功能可能需要本地 HTTP 服务器。
 
 5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
