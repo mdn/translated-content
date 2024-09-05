@@ -11,7 +11,7 @@ l10n:
 
 色彩空间对特定范围的色彩进行分类和定义。每个色彩空间由数学模型和相关的规则集定义。每个色彩空间都有一个定义好的{{glossary("gamut", "色域")}}（它指的是它能表示的特定范围的色彩）。这些规则使得跨不同设备和软件的色彩表现一致且可重现。
 
-_sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再局限于这个色彩空间。[CSS 色彩模块 4 级](https://drafts.csswg.org/css-color)指定了几种预定义的色彩空间，而 [CSS 色彩模块 5 级](https://drafts.csswg.org/css-color-5/)则进一步规定了用于定义自定义色彩空间的特性。
+_sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再局限于这个色彩空间。[CSS 色彩模块第 4 版](https://drafts.csswg.org/css-color-4)指定了几种预定义的色彩空间，而 [CSS 色彩模块第 5 版](https://drafts.csswg.org/css-color-5/)则进一步规定了用于定义自定义色彩空间的特性。
 
 ## 命名的色彩空间
 
@@ -76,7 +76,7 @@ CIELab 色彩空间包括 Lab、Lch、Oklab 和 Oklch，是设备无关的色彩
 
 尽管红、绿和蓝的组合在屏幕上表示色彩效果很好，但 sRGB 并不直接对应于人类感知的色彩。CIEXYZ（或 XYZ）色彩空间是由国际照明委员会（CIE）在 1931 年定义的。它是电磁可见光谱中波长分布与人类视觉中感知色彩之间的第一个定义的定量联系。
 
-正常视力的人有三种感光锥细胞，它们对不同波长的光的刺激具有峰值的感知。CIE X、Y 和 Z 参数对应于三种感光锥细胞的刺激水平，这原则上描述了每一种色彩。CIEXYZ 色彩空间，具有其三刺激值，包含了所有可见的色彩。
+视力正常的人有三种对不同波长的光谱具有峰值敏感度的感光锥细胞。CIE X、Y 和 Z 参数对应于三种视锥细胞的刺激水平，原则上可以描述每一种可见光颜色。`Y` 通道代表一种颜色的亮度。`Z` 通道反映颜色中蓝色的含量（但与 RGB 中的 B 不同）。`X` 轴与 XYZ 色彩三维坐标系的 Y 轴和 Z 轴正交。
 
 - `xyz` 和 `xyz-d65` 色彩空间
 
@@ -91,4 +91,5 @@ CIELab 色彩空间包括 Lab、Lch、Oklab 和 Oklch，是设备无关的色彩
 - [CSS 数据类型：`<color>`](/zh-CN/docs/Web/CSS/color_value)
 - [sRGB 色彩空间](https://webstore.iec.ch/en/publication/6168)
 - 维基百科上的 [CIELAB 色彩空间](https://zh.wikipedia.org/wiki/CIELAB色彩空间)
+- 维基百科上的 [CIE 1931 色彩空间](https://en.wikipedia.org/wiki/CIE_1931色彩空间)
 - [Oklab](https://bottosson.github.io/posts/oklab/) 色彩空间
