@@ -192,7 +192,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    </script>
    ```
 
-    请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
+   请注意，网页文档中代码，通常是按其在页面上出现的顺序加载和执行。通过放把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#script_loading_strategies)）。
 
 4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“// 在此编写 JavaScript 代码”一行下方添加以下代码：
 
