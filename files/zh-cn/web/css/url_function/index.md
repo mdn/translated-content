@@ -2,7 +2,7 @@
 title: url()
 slug: Web/CSS/url_function
 l10n:
-  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
+  sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
 {{CSSRef}}
