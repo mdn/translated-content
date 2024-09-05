@@ -25,7 +25,7 @@ RGB 是一种色彩模型，将色彩表示为三个基本成分（红色、绿�
 
 RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{glossary("gamut", "色域")}}的 _Adobe RGB_ 色彩空间。_sRGB_ 和 _Adobe RGB_（`a98-rgb`）中的坐标是不同的。有很多种方式来描述色彩的 RGB 成分：在 {{Glossary("CSS")}} 中，色彩可以表示为十六进制表示法的单个 24 位整数（如淡蓝色 `#add8e6`），或者在 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 函数表示法中表示为 0 到 255 之间的三个独立数字（如，`rgb(46 139.5 87)`）。
 
-在 sRGB 色彩空间中，CSS `<color>` 值包括 {{cssxref("hex-color", "十六进制色彩")}}、{{cssxref("named-color", "命名色彩")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/color_value/color) 函数还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
+在 sRGB 色彩空间中，CSS `<color>` 值包括{{cssxref("hex-color", "十六进制色彩")}}、{{cssxref("named-color", "具名色彩")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/color_value/color) 函数还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
 
 HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_关键字")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
 
