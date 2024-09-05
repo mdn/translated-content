@@ -9,7 +9,7 @@ l10n:
 
 CSS **逻辑属性**提供了一种基于文档的书写模式和方向而不是视口的物理尺寸来布局内容的方法。这使得设计更加灵活和易于维护，尤其是对那些支持多语言的网站。
 
-{{glossary("physical properties", "物理属性")}}（如 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("padding-bottom")}} 和 {{cssxref("border-bottom-left-radius")}}）定义基于物理方向的位置和特性、引用元素的特定边，逻辑属性（如{{cssxref("inset-block-start")}}、{{cssxref("inset-inline-end")}}、{{cssxref("padding-block-end")}} 和 {{cssxref("border-end-end-radius")}}）则使用相对于块向和行向轴的内容流的逻辑方向关键字。
+{{glossary("physical properties", "物理属性")}}（如 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("padding-bottom")}} 和 {{cssxref("border-bottom-left-radius")}}）定义基于物理方向的位置和特性、引用元素的特定边，逻辑属性（如 {{cssxref("inset-block-start")}}、{{cssxref("inset-inline-end")}}、{{cssxref("padding-block-end")}} 和 {{cssxref("border-end-end-radius")}}）则使用相对于块向和行向轴的内容流的逻辑方向关键字。
 
 ## 块向
 
