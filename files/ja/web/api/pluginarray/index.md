@@ -34,7 +34,7 @@ l10n:
 const pluginsLength = navigator.plugins.length;
 
 document.body.innerHTML =
-  `${pluginsLength} Plugin(s)<br>` +しｍ
+  `${pluginsLength} Plugin(s)<br>` +
   `<table id="pluginTable"><thead>` +
   `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
   `</thead><tbody></tbody></table>`;
