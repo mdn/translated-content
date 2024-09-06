@@ -2,7 +2,7 @@
 title: accumulate
 slug: Web/SVG/Attribute/accumulate
 l10n:
-  sourceCommit: 6108db121731f7210c63dbc2871b7acc239f1173
+  sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
 {{SVGRef}}
