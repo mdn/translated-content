@@ -260,7 +260,7 @@ textarea.onkeyup = function () {
 
 现在让我们把注意力转向列表。在生活中，列表无处不在——从你的购物清单到你每天下意识地遵循的方向列表，再到你在这些教程中遵循的指令列表！在 Web 上，有三种类型的列表：无序列表、有序列表和描述列表。
 
-无序列表和有序列表非常常见，将在本节介绍。描述列表不太常见，将在[高级文本格式化](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)中介绍。
+无序列表和有序列表非常常见，将在本节介绍。描述列表不太常见，将在[文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)中介绍。
 
 ### 无序列表
 
