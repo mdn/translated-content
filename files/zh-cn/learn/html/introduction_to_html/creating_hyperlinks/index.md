@@ -48,7 +48,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ### 块级链接
 
-就像之前提到的那样，任何内容，甚至 {{Glossary("Block/CSS", "block-level elements")}} 都可以作为链接出现。如果想让标题元素变为链接，就把它包裹在锚点元素（`<a>`）内，像这个代码段一样：
+就像之前提到的那样，任何内容，甚至{{Glossary("Block/CSS", "块级元素")}}都可以作为链接出现。如果想让标题元素变为链接，就把它包裹在锚点元素（`<a>`）内，像这个代码段一样：
 
 ```html
 <a href="https://developer.mozilla.org/zh-CN/">
