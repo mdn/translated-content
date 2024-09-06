@@ -22,17 +22,16 @@ createSyncAccessHandle(options)
 
 - `options` {{optional_inline}}
 
-  - : An object with the following properties:
+  - : 一个具有以下属性的对象：
 
     - `mode` {{optional_inline}} {{non-standard_inline}}
-      - : A string specifying the locking mode for the access handle. The default value is `"readwrite"`.
-        Possible values are:
+      - : 指定访问句柄的锁定模式的字符串。默认值为 `"readwrite"`。可能的值包括：
         - `"read-only"`
-          - : Multiple `FileSystemSyncAccessHandle` objects can be opened simultaneously on a file (for example when using the same app in multiple tabs), provided they are all opened in `"read-only"` mode. Once opened, read-like methods can be called on the handles — {{domxref("FileSystemSyncAccessHandle.read", "read()")}}, {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.close", "close()")}}.
+          - : 可以同时在一个文件上打开多个 `FileSystemSyncAccessHandle` 对象（例如，在多个选项卡中使用同一个应用时），前提是它们都以 `"read-only"` 模式打开。打开后，可以在句柄上调用类似读取的方法——{{domxref("FileSystemSyncAccessHandle.read", "read()")}}、{{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.close", "close()")}}。
         - `"readwrite"`
-          - : Only one `FileSystemSyncAccessHandle` object can be opened on a file. Attempting to open subsequent handles before the first handle is closed results in a `NoModificationAllowedError` exception being thrown. Once opened, any available method can be called on the handle.
+          - : 每个文件只能打开一个 `FileSystemSyncAccessHandle` 对象。如果在第一个句柄关闭之前尝试打开后续句柄，则会导致抛出 `NoModificationAllowedError` 异常。打开后，可以调用句柄上的任何可用方法。
         - `"readwrite-unsafe"`
-          - : Multiple `FileSystemSyncAccessHandle` objects can be opened simultaneously on a file, provided they are all opened in `"readwrite-unsafe"` mode. Once opened, any available method can be called on the handles.
+          - : 可以同时在一个文件上打开多个 `FileSystemSyncAccessHandle` 对象，前提是它们都以 `"readwrite-unsafe"` 模式打开。打开后，可以在句柄上调用任何可用的方法。
 
 ### 返回值
 
@@ -47,11 +46,11 @@ createSyncAccessHandle(options)
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果未找到当前条目，则抛出该异常。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : 如果浏览器无法获得文件句柄所关联的文件的锁定，抛出此异常。This could be because `mode` is set to `readwrite` and an attempt is made to open multiple handles simultaneously.
+  - : 如果浏览器无法获得文件句柄所关联的文件的锁定，抛出此异常。这可能是因为 `mode` 被设置为 `readwrite`，并尝试同时打开多个句柄。
 
 ## 示例
 
-### Basic usage
+### 基本用法
 
 以下异步事件处理函数处于 Web Worker 上下文。其中的代码片段创建了一个同步文件访问句柄。
 
@@ -73,40 +72,40 @@ onmessage = async (e) => {
 };
 ```
 
-### Complete example with `mode` option
+### 带有 `mode` 选项的完整示例
 
-Our [`createSyncAccessHandle()` mode test](https://createsyncaccesshandle-mode-test.glitch.me/) example provides an {{htmlelement("input")}} field to enter text into, and two buttons — one to write entered text to the end of a file in the origin private file system, and one to empty the file when it becomes too full.
+我们的 [`createSyncAccessHandle()` 模式测试](https://createsyncaccesshandle-mode-test.glitch.me/) 示例提供了一个 {{htmlelement("input")}} 字段来输入文本，以及两个按钮——一个用于将输入的文本写入原始私有文件系统中的文件末尾，另一个用于在文件太满时清空文件。
 
-Try exploring the demo above, with the browser developer console open so you can see what is happening. If you try opening the demo in multiple browser tabs, you will find that multiple handles can be opened at once to write to the file at the same time. This is because `mode: "readwrite-unsafe"` is set on the `createSyncAccessHandle()` calls.
+尝试探索上面的演示，打开浏览器开发者控制台，以便你可以看到正在发生的事情。如果你尝试在多个浏览器选项卡中打开演示，你会发现可以同时打开多个句柄以同时写入文件。这是因为在 `createSyncAccessHandle()` 调用上设置了 `mode: "readwrite-unsafe"`。
 
-Below we'll explore the code.
+下面我们将探索代码。
 
 #### HTML
 
-The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} field look like this:
+两个 {{htmlelement("button")}} 元素和文本 {{htmlelement("input")}} 字段如下所示：
 
 ```html
 <ol>
   <li>
-    <label for="filetext">Enter text to write to the file:</label>
+    <label for="filetext">输入要写入文件的文本：</label>
     <input type="text" id="filetext" name="filetext" />
   </li>
   <li>
-    Write your text to the file: <button class="write">Write text</button>
+    将你的文本写入文件：<button class="write">撰写文本</button>
   </li>
   <li>
-    Empty the file if it gets too full:
-    <button class="empty">Empty file</button>
+    如果文件太满，则清空该文件：
+    <button class="empty">空文件</button>
   </li>
 </ol>
 ```
 
-#### Main JavaScript
+#### 主线程 JavaScript
 
-The main thread JavaScript inside the HTML file is shown below. We grab references to the write text button, empty file button, and text input field, then we create a new web worker using the {{domxref("Worker.Worker", "Worker()")}} constructor. We then define two functions and set them as event handlers on the buttons:
+HTML 文件中的主线程 JavaScript 如下所示。我们获取对写入文本按钮、清空文件按钮和文本输入字段的引用，然后使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个新的 Web Worker。然后我们定义两个函数并将它们设置为按钮上的事件处理器：
 
-- `writeToOPFS()` is run when the write text button is clicked. This function posts the entered value of the text field to the worker inside an object using the {{domxref("Worker.postMessage()")}} method, then empties the text field, ready for the next addition. Note how the passed object also includes a `command: "write"` property to specify that we want to trigger a write action with this message.
-- `emptyOPFS()` is run when the empty file button is clicked. This posts an object containing a `command: "empty"` property to the worker specifying that the file is to be emptied.
+- 单击写入文本按钮时运行 `writeToOPFS()`。此函数使用 {{domxref("Worker.postMessage()")}} 方法将文本字段的输入值发布到对象内的 Worker，然后清空文本字段，为下一次添加做好准备。请注意传递的对象还包含 `command: "write"` 属性，以指定我们想要使用此消息触发写入操作。
+- 单击清空文件按钮时运行 `emptyOPFS()`。这会将包含 `command: "empty"` 属性的对象发布到 Worker，指定要清空文件。
 
 ```js
 const writeBtn = document.querySelector(".write");
@@ -120,7 +119,7 @@ function writeToOPFS() {
     command: "write",
     content: fileText.value,
   });
-  console.log("Main script: Text posted to worker");
+  console.log("主线程脚本：发送给 worker 的文本");
   fileText.value = "";
 }
 
@@ -134,11 +133,11 @@ writeBtn.addEventListener("click", writeToOPFS);
 emptyBtn.addEventListener("click", emptyOPFS);
 ```
 
-#### Worker JavaScript
+#### Worker 线程 JavaScript
 
-The worker JavaScript is shown below.
+worker JavaScript 如下所示。
 
-First, we run a function called `initOPFS()` that gets a reference to the OPFS root using {{domxref("StorageManager.getDirectory()")}}, creates a file and returns its handle using {{domxref("FileSystemDirectoryHandle.getFileHandle()")}}, and then returns a {{domxref("FileSystemSyncAccessHandle")}} using `createSyncAccessHandle()`. This call includes the `mode: "readwrite-unsafe"` property, allowing multiple handles to access the same file simultaneously.
+首先，我们运行一个名为 `initOPFS()` 的函数，该函数使用 {{domxref("StorageManager.getDirectory()")}} 获取对 OPFS 根的引用，使用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 创建文件并返回其句柄，然后使用 `createSyncAccessHandle()` 返回 {{domxref("FileSystemSyncAccessHandle")}}。此调用包括 `mode: "readwrite-unsafe"` 属性，允许多个句柄同时访问同一文件。
 
 ```js
 let accessHandle;
@@ -154,55 +153,55 @@ async function initOPFS() {
 initOPFS();
 ```
 
-Inside the worker's [message event](/en-US/docs/Web/API/Worker/message_event) handler function, we first get the size of the file using {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}. We then check to see whether the data sent in the message includes a `command` property value of `"empty"`. If so, we empty the file using {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}} with a value of `0`, and update the file size contained in the `size` variable.
+在 worker 的 [message 事件](/zh-CN/docs/Web/API/Worker/message_event)处理器中，我们首先使用 {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}} 获取文件的大小。然后，我们检查消息中发送的数据是否包含 `command` 属性值 `"empty"`。如果是，我们使用 {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}} 清空文件，值为 `0`，并更新 `size` 变量中包含的文件大小。
 
-If the message data is something else, we:
+如果消息数据是其他内容，我们：
 
-- Create a new {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}} to handle encoding and decoding the text content later on.
-- Encode the message data and write the result to the end of the file using {{domxref("FileSystemSyncAccessHandle.write", "write()")}}, then update the file size contained in the `size` variable.
-- Create a {{jsxref("DataView")}} to contain the file contents, and read the content into it using {{domxref("FileSystemSyncAccessHandle.read", "read()")}}.
-- Decode the `DataView` contents and log it to the console.
+- 创建新的 {{domxref("TextEncoder")}} 和 {{domxref("TextDecoder")}} 来处理稍后对文本内容的编码和解码。
+- 使用 {{domxref("FileSystemSyncAccessHandle.write", "write()")}} 对消息数据进行编码并将结果写入文件末尾，然后更新 `size` 变量中包含的文件大小。
+- 创建一个 {{jsxref("DataView")}} 来包含文件内容，并使用 {{domxref("FileSystemSyncAccessHandle.read", "read()")}} 将内容读入其中。
+- 解码 `DataView` 内容并将其记录到控制台。
 
 ```js
 onmessage = function (e) {
-  console.log("Worker: Message received from main script");
+  console.log("Worker：从主线程收到消息");
 
-  // Get the current size of the file
+  // 获取文件当前大小
   let size = accessHandle.getSize();
 
   if (e.data.command === "empty") {
-    // Truncate the file to 0 bytes
+    // 将文件截断为 0 字节
     accessHandle.truncate(0);
 
-    // Get the current size of the file
+    // 获取文件当前大小
     size = accessHandle.getSize();
   } else {
     const textEncoder = new TextEncoder();
     const textDecoder = new TextDecoder();
 
-    // Encode content to write to the file
+    // 对要写入文件的内容进行编码
     const content = textEncoder.encode(e.data.content);
-    // Write the content at the end of the file
+    // 在文件末尾写入内容
     accessHandle.write(content, { at: size });
 
-    // Get the current size of the file
+    // 获取文件当前大小
     size = accessHandle.getSize();
 
-    // Prepare a data view of the length of the file
+    // 准备文件长度的数据视图
     const dataView = new DataView(new ArrayBuffer(size));
 
-    // Read the entire file into the data view
+    // 将整个文件读入数据视图
     accessHandle.read(dataView, { at: 0 });
 
-    // Log the current file contents to the console
+    // 将当前文件内容记录到控制台
     console.log("File contents: " + textDecoder.decode(dataView));
 
-    // Flush the changes
+    // 刷新更改
     accessHandle.flush();
   }
 
-  // Log the size of the file to the console
-  console.log("Size: " + size);
+  // 将文件的大小记录到控制台
+  console.log("大小：" + size);
 };
 ```
 
