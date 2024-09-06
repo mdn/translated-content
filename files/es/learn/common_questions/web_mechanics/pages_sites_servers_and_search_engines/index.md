@@ -85,7 +85,7 @@ Todas las páginas web disponibles en la red son accesibles mediante una direcci
 
 Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones de texto sobre los que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
 
-Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu navegador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el _home_"):
+Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de su navegador, y el navegador mostrará la página principal del sitio web, o _página de inicio_ (conocida casualmente como "inicio"):
 
 ![Ejemplo de nombre de dominio de un sitio web en la barra de direcciones del navegador](web-site.jpg)
 
