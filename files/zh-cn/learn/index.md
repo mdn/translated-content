@@ -51,8 +51,8 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
   - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该专题包含一切所需了解的信息。
 - [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
-- [MathML](/en-US/docs/Learn/MathML)
-  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。 该专题讲解 MathML。
+- [MathML](/zh-CN/docs/Learn/MathML)
+  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该专题讲解 MathML。
 - [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
   - : 该专题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
 - [服务端网站编程](/zh-CN/docs/Learn/Server-side)
