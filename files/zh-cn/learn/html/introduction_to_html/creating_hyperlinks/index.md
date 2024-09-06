@@ -54,9 +54,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 <a href="https://developer.mozilla.org/zh-CN/">
   <h1>MDN Web 文档</h1>
 </a>
-<p>
-  自从 2005 年起，就开始记载包括 CSS、HTML、JavaScript 等网络技术。
-</p>
+<p>自从 2005 年起，就开始记载包括 CSS、HTML、JavaScript 等网络技术。</p>
 ```
 
 它将标题转化为了链接：
