@@ -145,4 +145,4 @@ SVG 2 对此属性的定义进行了一些更改。特别是：`auto`、`before-
 
 ## 参见
 
-- [CSS baseline alignment](/en-US/docs/Web/CSS/CSS_box_alignment#baseline_alignment)
+- [CSS baseline alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment#baseline_alignment)
