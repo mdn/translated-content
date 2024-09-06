@@ -174,9 +174,7 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 
 ```html
 <script async src="js/vendor/jquery.js"></script>
-
 <script async src="js/script2.js"></script>
-
 <script async src="js/script3.js"></script>
 ```
 
