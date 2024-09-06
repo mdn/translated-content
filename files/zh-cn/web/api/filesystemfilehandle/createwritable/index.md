@@ -83,9 +83,7 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 
 ```html
 <ol>
-  <li>
-    选择要写入的文件：<button class="select">选择文件</button>
-  </li>
+  <li>选择要写入的文件：<button class="select">选择文件</button></li>
   <li>
     <label for="filetext">输入要写入文件的文本：</label>
     <input type="text" id="filetext" name="filetext" disabled />
@@ -140,9 +138,7 @@ async function selectFile() {
     });
   } catch (e) {
     if (e.name === "NoModificationAllowedError") {
-      console.log(
-        `你现在无法访问该文件；其他人正在尝试修改它。请稍后重试。`,
-      );
+      console.log(`你现在无法访问该文件；其他人正在尝试修改它。请稍后重试。`);
     } else {
       console.log(e.message);
     }
