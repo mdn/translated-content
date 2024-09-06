@@ -96,8 +96,8 @@ img {
   <a
     href="https://www.mozilla.org/zh-CN/"
     title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">
-    Mozilla 主页</a>
-  的超链接。
+    Mozilla 主页</a
+  >的超链接。
 </p>
 ```
 
