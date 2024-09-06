@@ -20,7 +20,7 @@ Para iniciar esta evaluación, debes:
 - Ir y [tomar el archivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para el ejemplo y guarda una copia local de este, como `index.html` en un directorio nuevo en algún lugar de tú computadora. Esto también tiene el CSS para estilizar el ejemplo que contiene.
 - Ve a la [página que contiene el texto sin procesar](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) y mantenlo abierto en una pestaña separada del navegador en algún lugar. Lo necesitarás más tarde.
 
- Alternativamente, puede usar un sitio como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Puedes pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que estas utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
+Alternativamente, puede usar un sitio como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Puedes pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que estas utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
 
 > [!NOTE]
 > Si tienes algún problema, puedes contactarnos a través de nuestros [canales de comunicación](/es/docs/MDN/Community/Communication_channels).
