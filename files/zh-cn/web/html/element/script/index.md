@@ -182,7 +182,7 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 
 `async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
 
-解决这一问题可使用 `defer` 属性，脚本将按照在页面中出现的顺序加载和运行：
+解决这一问题可使用 `defer` 属性，在脚本和内容下载后，脚本将按照在页面中出现的顺序加载和运行：
 
 ```html
 <script defer src="js/vendor/jquery.js"></script>
