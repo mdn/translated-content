@@ -2,7 +2,7 @@
 title: Blob：bytes() 方法
 short-title: bytes()
 l10n:
-  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
+  sourceCommit: 5ee9d033cacad3a031562be16be43c55a838cc4f
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
