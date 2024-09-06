@@ -91,4 +91,4 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 - {{domxref("MediaDevices.getUserMedia")}}
 - [WebRTC](/ja/docs/Web/API/WebRTC_API) - API の入門ページ
 - [MediaStream API](/ja/docs/Web/API/Media_Capture_and_Streams_API) - メディアストリームオブジェクトの API
-- [ウェブか無での写真撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) は、動画ではなく写真を撮るために `getUserMedia()` を使用するチュートリアルです。
+- [ウェブカメラでの写真撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) は、動画ではなく写真を撮るために `getUserMedia()` を使用するチュートリアルです。
