@@ -214,7 +214,9 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 **不好的**链接文本：[点击这里](https://www.mozilla.org/zh-CN/firefox/)下载 Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/zh-CN/firefox/"> 点击这里 </a>下载 Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/zh-CN/firefox/"> 点击这里 </a>下载 Firefox
+</p>
 ```
 
 其他提示：
