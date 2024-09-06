@@ -47,7 +47,7 @@ En las siguientes secciones se describe lo que hay que hacer.
 Configuración básica:
 
 1. Crear un nuevo archivo llamado `main.js`, en el mismo directorio que tu archivo `index.html`.
-2. Aplicar el archivo JavaScript externo a tu HTML insertando un elemento {{htmlelement("script")}} en tu HTML haciendo referencia a `main.js`. Pónlo justo antes de la etiquette de cierre `</body>`.
+2. Aplicar el archivo JavaScript externo a tu HTML insertando un elemento {{htmlelement("script")}} en tu HTML haciendo referencia a `main.js`. Pónlo justo antes de la etiqueta de cierre `</body>`.
 
 Variables y funciones iniciales:
 
