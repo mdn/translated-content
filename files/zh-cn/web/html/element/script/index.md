@@ -186,9 +186,7 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 
 ```html
 <script defer src="js/vendor/jquery.js"></script>
-
 <script defer src="js/script2.js"></script>
-
 <script defer src="js/script3.js"></script>
 ```
 
