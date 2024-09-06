@@ -141,7 +141,7 @@ button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("输入一个新的名字：");
-  para.textContent = `玩家 1：${name}`;
+  button.textContent = `玩家 1：${name}`;
 }
 ```
 
