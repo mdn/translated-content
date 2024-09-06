@@ -215,7 +215,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/zh-CN/firefox/"> 点击这里 </a>下载 Firefox
+  <a href="https://www.mozilla.org/zh-CN/firefox/">点击这里 </a>下载 Firefox
 </p>
 ```
 
