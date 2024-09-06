@@ -55,8 +55,8 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
   - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该专题讲解 MathML。
 - [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
   - : 该专题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
-- [服务端网站编程](/zh-CN/docs/Learn/Server-side)
-  - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该专题对服务端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
+- [服务器端网站编程](/zh-CN/docs/Learn/Server-side)
+  - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该专题对服务器端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
 
 ## 任务和评估
 
@@ -76,25 +76,25 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 
 ## 获取代码示例
 
-学习区的所有代码示例都[位于 Github](https://github.com/roy-tian/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是 [下载包含最新 master 分支内容的压缩文件](https://github.com/roy-tian/learning-area/archive/master.zip)。
+学习区的所有代码示例都[位于 Github](https://github.com/roy-tian/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 master 分支内容的压缩文件](https://github.com/roy-tian/learning-area/archive/master.zip)。
 
 如果你更喜欢以一种更灵活的方式（允许自动更新）复制仓库，你可以参考下面复杂一点的指导：
 
 1. 在电脑上安装 [Git](https://git-scm.com/downloads)。它是 Github 底层使用的版本控制系统。
 
-2. 打开电脑的 [命令提示符](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)，[macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）。
+2. 打开电脑的[命令提示符](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)，[macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）。
 
-3. 要将学习区仓库复制到名为 learning-area 的目录（learning-area 目录将位于命令提示符 / 终端指向的当前目录中），使用下面的命令：
+3. 要将学习区仓库复制到名为 learning-area 的目录（learning-area 目录将位于命令提示符/终端指向的当前目录中），使用下面的命令：
 
    ```bash
    git clone https://github.com/roy-tian/learning-area
    ```
 
-4. 现在，你能进入目录并寻找你想要的文件（要么使用访达 / 文件资源管理器，要么使用 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)）。
+4. 现在，你能进入目录并寻找你想要的文件（要么使用访达/文件资源管理器，要么使用 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)）。
 
 你可以更新 `learning-area` 仓库与 GitHub 上的主版本的任意改动保持同步，步骤如下：
 
-1. 在命令提示符 / 终端中使用 `cd` 命令进入 `learning-area` 目录。假设你在 `learning-area` 目录的父目录中，例如：
+1. 在命令提示符/终端中使用 `cd` 命令进入 `learning-area` 目录。假设你在 `learning-area` 目录的父目录中，例如：
 
    ```bash
    cd learning-area
@@ -123,8 +123,8 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : 通过教程和项目学习 Web 开发的交互式网站。
 - [The Odin Project](https://www.theodinproject.com/)
-  - : 特点是拥有免费和开源的全栈教学课程，课程涵盖从初级到高级。
+  - : 特点是拥有免费和开源的全栈教学课程，课程涵盖初级到高级。
 - [MDN 博客](/en-US/blog/)
-  - : MDN 团队和访客作家为 MDN 博客编写与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
+  - : MDN 团队和访客作家为 MDN 博客编写的与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
 - [Mozilla 开发者新闻通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
   - : 为 Web 开发者编写的新闻报，对各水平开发者而言都是优秀的资源。
