@@ -178,7 +178,7 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 <script async src="js/script3.js"></script>
 ```
 
-三者的调用顺序是不确定的。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
+你不能依赖脚本的加载顺序。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
 
 `async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
 
