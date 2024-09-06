@@ -190,7 +190,7 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 <script defer src="js/script3.js"></script>
 ```
 
-添加 `defer` 属性的脚本将按照在页面中出现的顺序加载，因此第二个示例可确保 `jquery.js` 必定加载于 `script2.js` 和 `script3.js` 之前，同时 `script2.js` 必定加载于 `script3.js` 之前。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM 的存在（例如，它们修改了页面上的一个或多个元素），这将非常有用。
+在第二个示例中，我们可以确保 `jquery.js` 必定在 `script2.js` 和 `script3.js` 之前加载，同时 `script2.js` 必定在 `script3.js` 之前加载。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM（例如，它们修改了页面上的一个或多个元素），这将非常有用。
 
 小结：
 
