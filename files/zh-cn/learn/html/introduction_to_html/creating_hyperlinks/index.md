@@ -315,10 +315,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 ```
 
 > [!NOTE]
-> 每个字段的值必须使用 URL 编码，即使用 {{Glossary("Percent-encoding", "percent-escaped")}} 非打印字符（不可见字符如制表符、换行符、分页符）和空格。
-> 同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。
-> 这是标准的 URL 查询标记方法。
-> 阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
+> 每个字段的值必须使用 URL 编码，即使用{{Glossary("Percent-encoding", "百分号转义")}}的非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
 
 这里有一些其他的示例 `mailto` 链接：
 
