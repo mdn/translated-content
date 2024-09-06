@@ -11,13 +11,13 @@ l10n:
 
 ## 概述
 
-当有人将一个网站描述为“无障碍”时，意味着不论用户访问 Web 的方式如何，任何一个用户都能使用网站全部的特点和内容——甚至是有身体或精神障碍的用户。
+当有人将一个网站描述为“无障碍”时，意味着不论用户访问 Web 的方式如何，任何一个用户都能使用网站全部的特性和内容——甚至是有身体或精神障碍的用户。
 
 - 使用键盘、鼠标和触摸屏的用户，以及使用任意其他方式（包括屏幕阅读器和诸如 Alexa 和 Google Home 等的语音助手）访问 Web 的用户都应该能访问网站。
 - 无论人们的听觉、视觉、身体或认知能力如何，都应该能理解和使用应用程序。
 - 网站也不应该造成伤害：像动画（motion）这样的 web 特性会导致偏头痛或癫痫发作。
 
-**默认情况下，HTML 是无障碍的，如果使用得当的话。**Web 无障碍涉及确保 内容是无障碍的，不论访问 Web 的人是谁或访问方式是什么。
+**默认情况下，HTML 是无障碍的，如果使用得当的话。**Web 无障碍涉及确保内容是无障碍的，不论访问 Web 的人是谁或访问方式是什么。
 
 要检查 Web 页面上的无障碍问题时，火狐无障碍检查器是一个非常实用的工具。下面的视频对它进行了很好的介绍：
 
@@ -35,13 +35,13 @@ l10n:
 - [无障碍是什么？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
   - : 本模块的第一篇文章深入介绍无障碍是什么——包括：我们需要考虑哪一群人，为什么要考虑这些人，不同的人使用什么工具与 Web 交互，以及我们如何构建 web 开发工作流的无障碍部分。
 - [HTML: 良好的无障碍基础](/zh-CN/docs/Learn/Accessibility/HTML)
-  - : 只要确保正确的 HTML 元素被用于正确的目的，大量的 Web 内容就是无障碍。这篇文章详细讲述 HTML 是如何确保最大程度的无障碍。
+  - : 只要确保正确的 HTML 元素被用于正确的目的，大量的 Web 内容就是无障碍的。这篇文章详细讲述 HTML 是如何确保最大程度的无障碍。
 - [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : 当正确使用 CSS 和 JavaScript 时，也能提供无障碍 Web 体验，但错用的话，会极大地破坏无障碍。这篇文章概括了大量的 CSS 和 JavaScript 最佳实践，这些实践能确保甚至是复杂内容也尽可能是无障碍的。
+  - : 当正确使用 CSS 和 JavaScript 时，也能提供无障碍的 Web 体验，但错用的话，会极大地破坏无障碍。这篇文章概括了大量的 CSS 和 JavaScript 最佳实践，这些实践能确保甚至是复杂内容也尽可能是无障碍的。
 - [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : 接着上一篇文章，有时执行复杂的 UI 控制（涉及非语义化的 HTML 和动态 JavaScript 内容更新）很难。WAI-ARIA 是通过添加额外的语义（浏览器和辅助技术能识别和使用这些语义让用户知道正在发生什么）来解决这类问题的技术。这篇文章以基础级别的视角讲解如何使用它来改善无障碍。
 - [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-  - : 会出现无障碍问题的另一类内容就是多媒体——视频、音和图像内容需要提供合适的文本替代，这样辅助技术和相应的用户就能理解这些内容。这篇文章讲了如何做。
+  - : 会出现无障碍问题的另一类内容就是多媒体——视频、音频和图像内容需要提供合适的文本替代，这样辅助技术和相应的用户就能理解这些内容。这篇文章讲了如何做。
 - [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
   - : 随着用移动设备访问 Web 变得流行，以及主流平台（例如，iOS 和安卓）拥有完备的无障碍工具，为这些平台上的 Web 内容考虑无障碍是重要的。这篇文章讲解移动设备相关的无障碍注意事项。
 
@@ -53,9 +53,9 @@ l10n:
 ## 参见
 
 - [学习无障碍 Web 设计](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>**MDN 课程伙伴**</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) **学习无障碍 Web 设计**课程通过解决交互式编码挑战和修复真实网站的方式教授如何编写无障碍地 HTML。
+  - : [Scrimba's](https://scrimba.com?via=mdn) **学习无障碍 Web 设计**课程通过解决交互式编码挑战和修复真实网站的方式教授如何编写无障碍的 HTML。
 - [现在开始构建无障碍的 web 应用](https://egghead.io/courses/start-building-accessible-web-applications-today)
-  - : 来自 Marcy Sutton 的优秀的视频教程系列。
+  - : 来自 Marcy Sutton 的优秀视频教程系列。
 - [Deque University 资源](https://dequeuniversity.com/resources/)
   - : 包含代码示例，屏幕阅读器参考和其他实用的资源。
 - [WebAIM 资源](https://webaim.org/resources/)
