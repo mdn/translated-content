@@ -2,7 +2,7 @@
 title: FileSystemHandle：queryPermission() 方法
 slug: Web/API/FileSystemHandle/queryPermission
 l10n:
-  sourceCommit: a83790f596feb4abac01cbffbf45fc8c1e117d97
+  sourceCommit: 4e8bc4593e38b3902430fa701a6256c95d7bbbdc
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
