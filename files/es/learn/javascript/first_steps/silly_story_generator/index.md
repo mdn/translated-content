@@ -1,6 +1,8 @@
 ---
 title: Generador de historias absurdas
 slug: Learn/JavaScript/First_steps/Silly_story_generator
+l10n:
+  sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -13,13 +15,15 @@ En esta evaluación, deberás tomar parte del conocimiento que has aprendido en 
 
 ## Punto de partida
 
-Para iniciar esta evaluación, debe:
+Para iniciar esta evaluación, debes:
 
-- Vaya y [tome el archivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para el ejemplo y guarde una copia local de este como `index.html` en un directorio nuevo en algún lugar de su computadora. Esto también tiene el CSS para estilizar el ejemplo que contiene.
-- Vaya a la [página que contiene el texto sin procesar](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) y manténgalo abierto en una pestaña separada del navegador en algún lugar. Lo necesitarás más tarde.
+- Ir y [tomar el archivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para el ejemplo y guarda una copia local de este, como `index.html` en un directorio nuevo en algún lugar de tú computadora. Esto también tiene el CSS para estilizar el ejemplo que contiene.
+- Ve a la [página que contiene el texto sin procesar](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) y mantenlo abierto en una pestaña separada del navegador en algún lugar. Lo necesitarás más tarde.
+
+ Alternativamente, puede usar un sitio como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Puedes pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que estas utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
 
 > [!NOTE]
-> Alternativamente, puede usar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
+> Si te atoras, puedes contactarnos a través de nuestos [canales de comunicación](/es/docs/MDN/Community/Communication_channels).
 
 ## Resumen del proyecto
 
