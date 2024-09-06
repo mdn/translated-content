@@ -5,11 +5,11 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
 
-本文介绍了[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)如何生成报告——包括归因报告和调试报告——以及如何控制生成的报告。内容包括处理噪声、优先处理报告、过滤报告和生成调试报告。
+本文介绍了[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API) 如何生成报告——包括归因报告和调试报告——以及如何控制生成的报告。内容包括处理噪声、优先处理报告、过滤报告和生成调试报告。
 
 ## 基本流程
 
-当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的[`POST`](/zh-CN/docs/Web/HTTP/Methods/POST)请求将报告发送到报告源的特定端点：
+当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的 [`POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 请求将报告发送到报告源的特定端点：
 
 - 对于事件级报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`。
 - 对于汇总报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`。
@@ -24,8 +24,8 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 如果未指定这些字段，报告窗口将回退到以下默认值：
 
-- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources)，默认报告窗口在来源的`"expiry"`到期时结束，该值在 `Attribution-Reporting-Register-Source`的[`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry)字段中设置。如果未显式设置，则默认为注册后 30 天。
-- 对于[基于导航的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)，默认报告窗口分别为 2 天、7 天和来源的 `"expiry"`。
+- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)，默认报告窗口在来源的`"expiry"`到期时结束，该值在 `Attribution-Reporting-Register-Source`的[`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry)字段中设置。如果未显式设置，则默认为注册后 30 天。
+- 对于[基于导航的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)，默认报告窗口分别为 2 天、7 天和来源的 `"expiry"`。
 
 有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
 
@@ -56,7 +56,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 - `"report_id"`
   - ：一个表示此报告的[通用唯一标识符 (UUID)](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计算。
 - `"source_type"`
-  - ：一个字符串，值为 `"navigation"` 或 `"event"`，分别表示相关的归因源是[基于导航的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)，还是[基于事件的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources)。
+  - ：一个字符串，值为 `"navigation"` 或 `"event"`，分别表示相关的归因源是[基于导航的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)，还是[基于事件的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)。
 - `"randomized_trigger_rate"`
   - ：一个介于 0 和 1 之间的随机数，表示此特定来源配置应用噪声的频率。[噪声](#adding_noise_to_reports)处理见下文。
 - `"scheduled_report_time"`
@@ -145,45 +145,6 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 ## 为报告添加噪声
 
-<!--
-此信息不完整；我们暂时搁置它，以便发布这份文档，将来如果有需求，我们会进一步完善 ARA 噪声的部分。
-
-在事件级别报告的情况下，噪声是通过随机响应算法添加的，工作方式如下：
-
-1. 当存储归因源时，浏览器会生成可能来自源配置的所有可能报告集（包括不生成报告的情况）的列表。
-2. 在一小部分情况下，浏览器会阻止归因源的归因，而是从列表中随机选择一个成员作为源报告的使用对象。发生这种情况的概率取决于列表的大小、浏览器的实现特定隐私参数以及源选择的 [`"event_level_epsilon"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon)。
-
-{{httpheader("Attribution-Reporting-Register-Source")}}头中的典型设置可能如下所示：
-
-```json
-{
-  ...,
-  "trigger_data": [0, 1, 2, 3, 4],
-  "trigger_data_matching": "exact",
-  ...,
-}
-```
-
-源 `"trigger_data"` 最多可以有 32 个值。增加值的数量和 `"event_report_windows"` 会增加整体报告集中的元素数量。
-
-匹配的{{httpheader("Attribution-Reporting-Register-Trigger")}}可能包含以下内容：
-
-```json
-{
-  ...,
-  "event_trigger_data": [
-    {
-      // 值 4 包含在源数据中，因此匹配是可能的
-      "trigger_data": "4"
-    },
-  ],
-  ...,
-}
-```
-
-然而，根据上面描述的随机响应算法，匹配仍然可能不会发生。
--->
-
 噪声被添加到报告中，以模糊与特定源相关的输出，从而保护用户隐私。确切的源数据无法被识别并归因到个别用户，但从数据中提取的总体模式仍然可以提供相同的意义。
 
 关于归因报告中噪声的工作原理，请参见：
@@ -200,8 +161,8 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 不同的来源类型有不同的默认限制：
 
-- [基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)默认有三个报告限制。例如，如果用户点击了一个广告并进行了四次转化：他们访问了广告商网站主页，然后访问了产品页面，注册了新闻通讯，最后进行了购买。由于这是第四次转化，购买报告将被丢弃。
-- [基于事件的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources)默认只有一个报告限制。
+- [基于导航的归因源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)默认有三个报告限制。例如，如果用户点击了一个广告并进行了四次转化：他们访问了广告商网站主页，然后访问了产品页面，注册了新闻通讯，最后进行了购买。由于这是第四次转化，购买报告将被丢弃。
+- [基于事件的归因源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)默认只有一个报告限制。
 
 > [!NOTE]
 > 可以通过在关联的 `Attribution-Reporting-Register-Source` 标头的 `"event_report_windows"` 字段中设置不同的 `"end_times"` 来调整报告限制。
@@ -260,9 +221,9 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 }
 ```
 
-> **Note:** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
+> **备注：** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
 
-> **Note:** `not_filters`，即否定过滤器，也受支持。
+> **备注：** `not_filters`，即否定过滤器，也受支持。
 
 在此上下文中，`filters` 可以是对象或对象数组。当指定列表时，只需一个字典匹配即可将触发器视为匹配。
 
@@ -294,8 +255,8 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 有两种不同类型的调试报告：
 
-- **成功调试报告** 跟踪特定归因报告的成功生成。成功调试报告在注册相应触发器后立即生成并发送。
-- **详细调试报告** 为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
+- **成功调试报告**跟踪特定归因报告的成功生成。成功调试报告在注册相应触发器后立即生成并发送。
+- **详细调试报告**为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
 
 > [!NOTE]
 > 要使用调试报告，报告来源需要设置 Cookie。如果配置为接收报告的来源是第三方，则该 Cookie 将是[第三方 Cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 Cookie 的浏览器中将无法使用调试报告。

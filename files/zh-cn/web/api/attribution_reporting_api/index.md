@@ -76,7 +76,7 @@ slug: Web/API/Attribution_Reporting_API
 - {{htmlelement("a")}}, {{htmlelement("img")}}, 和 {{htmlelement("script")}} — `attributionsrc` 属性
   - : 指定你希望浏览器在相关资源请求中发送 {{httpheader("Attribution-Reporting-Eligible")}} 头。在服务器端，此头用于触发发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应头。当注册归因来源时，这是必需的；当注册归因触发器时，只有在你希望指定与 `src` 属性指向的资源不同的注册服务器时才需要。请注意，`<a>` 元素不能用于注册归因触发器。
 
-## HTTP 头
+## HTTP 标头
 
 - {{httpheader("Attribution-Reporting-Eligible")}}
   - : 表示相应响应有资格注册归因来源或触发器的 HTTP 请求。
@@ -107,7 +107,7 @@ slug: Web/API/Attribution_Reporting_API
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [归因报告头验证工具](https://wicg.github.io/attribution-reporting-api/validate-headers)
 - [开发者.google.com 上的归因报告](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/)（2023）

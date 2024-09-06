@@ -280,6 +280,6 @@ elem.addEventListener("click", () => {
 > [!Notice]
 > 指定多个 URL 意味着可以在同一特性上注册多个归因源。例如，你可能有不同的活动需要测量其成功率，这些活动涉及在不同数据上生成不同的报告。
 
-## 另见
+## 参见
 
 - [归因报告头验证工具](https://wicg.github.io/attribution-reporting-api/validate-headers)

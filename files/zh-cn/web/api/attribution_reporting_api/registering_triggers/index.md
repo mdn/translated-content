@@ -226,6 +226,6 @@ const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "https://my-separate-tracking-site.example.com";
 ```
 
-## 另见
+## 参见
 
 - [归因报告头部验证工具](https://wicg.github.io/attribution-reporting-api/validate-headers)
