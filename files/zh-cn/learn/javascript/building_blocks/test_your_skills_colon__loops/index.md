@@ -14,7 +14,7 @@ l10n:
 >
 > 如果你遇到了困难，你可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
-## DOM manipulation: considered useful
+## 实用的 DOM 操作
 
 为了完成下面的某些问题，你需要编写一些 [DOM](/zh-CN/docs/Glossary/DOM) 操作代码——例如创建新的 HTML 元素，将它们的文本内容设为特定的字符串值，以及将它们嵌套到页面中已有的元素中——这些都要通过 JavaScript 来完成。
 
@@ -32,7 +32,7 @@ l10n:
 
 在这个任务中，我们希望你编写一个简单的程序，在给定名字的情况下，搜索一个包含名字和电话号码的[对象](/zh-CN/docs/Glossary/Object)数组（`phonebook`）；如果找到了名字，将名字和电话号码输出到段落（`para`）中，然后退出循环，让它不要继续进行。
 
-如果你还没有读过和对象有关的知识，不要担心！现在你只需要知道如何访问成员–值对就可以了。你可以在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)教程中深入了解对象。
+如果你还没有知悉和对象有关的知识，不要担心！现在你只需要知道如何访问成员–值对就可以了。你可以在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)教程中阅读有关对象的内容。
 
 开始时，你有三个变量：
 
