@@ -50,9 +50,9 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 - [无障碍——让每个人都能使用网络](/zh-CN/docs/Learn/Accessibility)
   - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该专题包含一切所需了解的信息。
 - [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
-  - : Web 性能是确保网络应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
+  - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
 - [MathML](/en-US/docs/Learn/MathML)
-  - : MathML 是用于在网页中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。 该专题讲解 MathML。
+  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。 该专题讲解 MathML。
 - [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
   - : 该专题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
 - [服务端网站编程](/zh-CN/docs/Learn/Server-side)
@@ -66,7 +66,7 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 - 在某些模块的结尾处，包含更深入的**评估**，例如，[图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)。
 
 每个类型都有相应的评分指南和推荐解决方案可用，帮助你评估你的工作。
-有些方式能让你更容易地找到这些资源，例如：
+某些模式能让你更容易地找到这些资源，例如：
 
 - 上面的**技能测试**任务示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>。
 - 上面的**评估**示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/gallery>。
@@ -125,6 +125,6 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 - [The Odin Project](https://www.theodinproject.com/)
   - : 特点是拥有免费和开源的全栈教学课程，课程涵盖从初级到高级。
 - [MDN 博客](/en-US/blog/)
-  - : MDN 团队和访客作家为 MDN 博客编写与新的站点开发、HTML、CSS、JavaScript以及其它 Web 开发新闻相关的文章。
+  - : MDN 团队和访客作家为 MDN 博客编写与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
 - [Mozilla 开发者新闻通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
   - : 为 Web 开发者编写的新闻报，对各水平开发者而言都是优秀的资源。
