@@ -60,7 +60,7 @@ Vamos a comparar la biblioteca con un servidor web:
 
 ## Aprendizaje activo
 
-_No está disponible aprendizaje activo aún. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
+_Todavía no hay ningún aprendizaje activo disponible. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
 
 ## Profundizando
 
