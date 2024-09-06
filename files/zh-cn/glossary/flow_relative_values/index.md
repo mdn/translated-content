@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-CSS 中**流相对值**是相对于一个元素的块轴、行轴而言的方向性关键词取值，包括 `block-start`、`block-end`、`inline-start`、`inline-end`、`start` 和 `end`。
+CSS 中**流相对值**是相对于一个元素的块轴、行轴而言的方向性关键字值，包括 `block-start`、`block-end`、`inline-start`、`inline-end`、`start` 和 `end`。
 
 CSS 的{{glossary("physical properties", "物理属性")}}基于物理方向与参考元素的特定边定义了位置。
 
@@ -21,7 +21,7 @@ CSS 的{{glossary("logical properties", "逻辑属性")}}则基于文档的书�
 
 ## 行向
 
-**行轴**与块轴垂直，表示块内的行级内容（如文本）的流动方向（**行级方向**）。在英语等从左到右的书写模式中，行向是水平的从左到右。在阿拉伯语和希伯来语等从右到左的语言中，行向则是水平的从右到左。
+**行轴**与块轴垂直，表示块内的行级内容（如文本）的流动方向（**行向**）。在英语等从左到右的书写模式中，行向是水平的从左到右。在阿拉伯语和希伯来语等从右到左的语言中，行向则是水平的从右到左。
 
 **inline-start** 和 **inline-end** 分别表示沿行轴的内容的*起始侧*和*结束侧*，其中 `inline-start` 和 `inline-end` 的值和属性等同于水平书写模式中的 `left` 和 `right` 属性和值（具体对应关系视书写方向而定）。例如，在从左到右的语言中，`inline-start` 是 `left`，在从右到左的语言中是 `right`。
 
