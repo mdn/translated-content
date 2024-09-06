@@ -51,4 +51,4 @@ l10n:
 
 ## 参见
 
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SMIL 动画规范](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
