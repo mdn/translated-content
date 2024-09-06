@@ -208,7 +208,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 **好的**链接文本：[下载 Firefox](https://www.mozilla.org/zh-CN/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/zh-CN/firefox/"> 下载 Firefox </a></p>
+<p><a href="https://www.mozilla.org/zh-CN/firefox/">下载 Firefox </a></p>
 ```
 
 **不好的**链接文本：[点击这里](https://www.mozilla.org/zh-CN/firefox/)下载 Firefox
