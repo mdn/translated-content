@@ -305,7 +305,7 @@ for (let i = 0; i < buttons.length; i++) {
 - 如果仍然想在文档头部使用非模块脚本，可能阻塞整个页面的显示，并且可能出现错误，因为脚本在文档解析之前执行：
 
   - 对于外部脚本，应该在 {{htmlelement("script")}} 元素上添加 `defer`（或者如果不需要 HTML 解析完成，则可以使用 `async`）属性。
-  - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded`事件监听器](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)。
+  - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded` 事件监听器](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)中。
 
   这超出了本教程的范围，除非你需要支持非常老的浏览器，否则不要这样做，使用 `<script type="module">` 代替即可。
 
