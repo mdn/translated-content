@@ -41,18 +41,16 @@ JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功
 然后我们可以为它加一点 CSS 让它更好看：
 
 ```css
-p {
+button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgb(0 0 200 / 0.6);
-  background: rgb(0 0 200 / 0.6);
-  color: rgb(255 255 255 / 1);
-  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
   border-radius: 10px;
   padding: 3px 10px;
-  display: inline-block;
   cursor: pointer;
 }
 ```
@@ -67,8 +65,8 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  const name = prompt("请输入新的名字");
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
