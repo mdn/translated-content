@@ -127,4 +127,4 @@ Web 开发对纯新手是个挑战——我们将抓住你的手并为你提供�
 - [MDN 博客](/en-US/blog/)
   - : MDN 团队和访客作家为 MDN 博客编写的与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
 - [Mozilla 开发者新闻通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
-  - : 为 Web 开发者编写的新闻报，对各水平开发者而言都是优秀的资源。
+  - : 面向 Web 开发者的时事通讯，对各水平开发者而言都是优秀的资源。
