@@ -64,7 +64,7 @@ Colocar el controlador de evento y la función incompleta:
 1. Ahora regresa al archivo de texto sin procesar.
 2. Copia el código encontrado bajo el encabezado "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" y pégalo al fondo de tu archivo `main.js` . Esto:
 
-   - Añade un detector de eventos a la variable `randomize`, de manera que cuando al botón que esta representa se le haya dado un click, la función `result()` se ejecute.
+   - Añade un detector de eventos a la variable `randomize`, de manera que cuando al botón que esta representa se le haya dado un clic, la función `result()` se ejecute.
    - Añade una definición de la función parcialmente completada `result()` a tu código. Por el resto de la evaluación, vas a escribir tú código dentro de esta función para completarla y hacer que funcione adecuadamente.
 
 Completando la función `result()`:
