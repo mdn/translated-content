@@ -27,7 +27,7 @@ requestPermission(descriptor)
 
 ### 返回值
 
-一个兑现为 {{domxref('PermissionStatus.state')}} 的 {{jsxref("Promise")}}，其值为 `'granted'`、`'denied'` 或 `'prompt'`。它也可能因出现以下例外情况之一而被拒绝。
+一个兑现为 {{domxref('PermissionStatus.state')}} 的 {{jsxref("Promise")}}，其值为 `'granted'`、`'denied'` 或 `'prompt'`。它也可能因出现以下异常而被拒绝。
 
 ### 异常
 
@@ -35,10 +35,10 @@ requestPermission(descriptor)
   - : 如果没有指定参数或者 `mode` 的值不是 `'read'` 或 `'readwrite'`，则抛出此异常。
 - `SecurityError` {{domxref("DOMException")}}
   - : 在下列情况之一发生时抛出：
-    - 该方法是在与顶级上下文不[同源](/zh-CN/docs/Web/Security/Same-origin_policy)的上下文中调用的（例如跨源 iframe）.
-    - 没有瞬态用户激活，例如按下按钮。这包括当句柄处于无法使用用户激活的非 Window 上下文中时，例如 Worker.
+    - 该方法是在与顶级上下文不[同源](/zh-CN/docs/Web/Security/Same-origin_policy)的上下文（例如跨源 iframe）中调用的。
+    - 没有瞬态用户激活，例如按下按钮。这包括当句柄处于无法使用用户激活的非 Window 上下文（例如 Worker）中时。
 
-## 安全性
+## 安全
 
 [瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 

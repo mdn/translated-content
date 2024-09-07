@@ -27,7 +27,7 @@ createSyncAccessHandle(options)
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : 指定访问句柄的锁定模式的字符串。默认值为 `"readwrite"`。可能的值包括：
         - `"read-only"`
-          - : 可以同时在一个文件上打开多个 `FileSystemSyncAccessHandle` 对象（例如，在多个选项卡中使用同一个应用时），前提是它们都以 `"read-only"` 模式打开。打开后，可以在句柄上调用类似读取的方法——{{domxref("FileSystemSyncAccessHandle.read", "read()")}}、{{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.close", "close()")}}。
+          - : 可以同时在一个文件上打开多个 `FileSystemSyncAccessHandle` 对象（例如，在多个标签页中使用同一个应用时），前提是它们都以 `"read-only"` 模式打开。打开后，可以在句柄上调用类似读取的方法——{{domxref("FileSystemSyncAccessHandle.read", "read()")}}、{{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.close", "close()")}}。
         - `"readwrite"`
           - : 每个文件只能打开一个 `FileSystemSyncAccessHandle` 对象。如果在第一个句柄关闭之前尝试打开后续句柄，则会导致抛出 `NoModificationAllowedError` 异常。打开后，可以调用句柄上的任何可用方法。
         - `"readwrite-unsafe"`
@@ -74,9 +74,9 @@ onmessage = async (e) => {
 
 ### 带有 `mode` 选项的完整示例
 
-我们的 [`createSyncAccessHandle()` 模式测试](https://createsyncaccesshandle-mode-test.glitch.me/) 示例提供了一个 {{htmlelement("input")}} 字段来输入文本，以及两个按钮——一个用于将输入的文本写入原始私有文件系统中的文件末尾，另一个用于在文件太满时清空文件。
+我们的 [`createSyncAccessHandle()` 模式测试](https://createsyncaccesshandle-mode-test.glitch.me/)示例提供了一个 {{htmlelement("input")}} 字段来输入文本，以及两个按钮——一个用于将输入的文本写入原始私有文件系统中的文件末尾，另一个用于在文件太满时清空文件。
 
-尝试探索上面的演示，打开浏览器开发者控制台，以便你可以看到正在发生的事情。如果你尝试在多个浏览器选项卡中打开演示，你会发现可以同时打开多个句柄以同时写入文件。这是因为在 `createSyncAccessHandle()` 调用上设置了 `mode: "readwrite-unsafe"`。
+尝试探索上面的演示，打开浏览器开发者控制台，以便你可以看到正在发生的事情。如果你尝试在多个浏览器标签页中打开演示，你会发现可以同时打开多个句柄以同时写入文件。这是因为在 `createSyncAccessHandle()` 调用上设置了 `mode: "readwrite-unsafe"`。
 
 下面我们将探索代码。
 
@@ -90,10 +90,9 @@ onmessage = async (e) => {
     <label for="filetext">输入要写入文件的文本：</label>
     <input type="text" id="filetext" name="filetext" />
   </li>
-  <li>将你的文本写入文件：<button class="write">撰写文本</button></li>
+  <li>将你的文本写入文件：<button class="write">写入文本</button></li>
   <li>
-    如果文件太满，则清空该文件：
-    <button class="empty">空文件</button>
+    如果文件太满，则清空该文件：<button class="empty">清空文件</button>
   </li>
 </ol>
 ```
@@ -192,7 +191,7 @@ onmessage = function (e) {
     accessHandle.read(dataView, { at: 0 });
 
     // 将当前文件内容记录到控制台
-    console.log("File contents: " + textDecoder.decode(dataView));
+    console.log("文件内容：" + textDecoder.decode(dataView));
 
     // 刷新更改
     accessHandle.flush();

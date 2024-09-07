@@ -31,7 +31,7 @@ createWritable(options)
         - `"exclusive"`
           - : 只能打开一个 `FileSystemWritableFileStream` 写入器。在第一个写入器关闭之前尝试打开后续写入器会导致抛出 `NoModificationAllowedError` 异常。
         - `"siloed"`
-          - : 可以同时打开多个 `FileSystemWritableFileStream` 写入器，每个写入器都有自己的交换文件，例如在多个选项卡中使用同一个应用时。最后打开的写入器会写入其数据，因为每个写入器关闭时都会刷新数据。
+          - : 可以同时打开多个 `FileSystemWritableFileStream` 写入器，每个写入器都有自己的交换文件，例如在多个标签页中使用同一个应用时。最后打开的写入器会写入其数据，因为每个写入器关闭时都会刷新数据。
 
 ### 返回值
 
@@ -73,13 +73,13 @@ async function writeFile(fileHandle, contents) {
 
 在上面的演示中，尝试选择文件系统上的文本文件（或输入新文件名），在输入字段中输入一些文本，然后将文本写入文件。打开文件系统上的文件以检查写入是否成功。
 
-此外，尝试同时在两个浏览器选项卡中打开页面。在第一个标签页中选择要写入的文件，然后立即尝试在第二个标签页中选择要写入的同一文件。你应该会收到一条错误消息，因为我们在 `createWritable()` 调用中设置了 `mode: "exclusive"`。
+此外，尝试同时在两个浏览器标签页中打开页面。在第一个标签页中选择要写入的文件，然后立即尝试在第二个标签页中选择要写入的同一文件。你应该会收到一条错误消息，因为我们在 `createWritable()` 调用中设置了 `mode: "exclusive"`。
 
 下面我们将探索代码。
 
 #### HTML
 
-The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} field look like this:
+两个 {{htmlelement("button")}} 元素和文本 {{htmlelement("input")}} 字段如下所示：
 
 ```html
 <ol>
@@ -89,8 +89,7 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
     <input type="text" id="filetext" name="filetext" disabled />
   </li>
   <li>
-    将你的文本写入文件：
-    <button class="write" disabled>撰写文本</button>
+    将你的文本写入文件：<button class="write" disabled>写入文本</button>
   </li>
 </ol>
 ```

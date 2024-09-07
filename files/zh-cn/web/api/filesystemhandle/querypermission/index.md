@@ -27,9 +27,9 @@ queryPermission(descriptor)
 
 ### 返回值
 
-一个兑现为 {{domxref('PermissionStatus.state')}} 的 {{jsxref("Promise")}}，其值为 `'granted'`、`'denied'` 或 `'prompt'`。它也可能因出现以下例外情况之一而被拒绝。
+一个兑现为 {{domxref('PermissionStatus.state')}} 的 {{jsxref("Promise")}}，其值为 `'granted'`、`'denied'` 或 `'prompt'`。它也可能因出现以下异常而被拒绝。
 
-如果其兑现为“prompt”，则网站必须先调用 `requestPermission()`，然后才能对句柄执行任何操作。如果其兑现为“denied”，则任何操作都将被拒绝。通常，本地文件系统句柄工厂返回的句柄最初将解析为“granted”作为其读取权限状态。但是，除了通过用户撤销权限之外，从 IndexedDB 检索到的句柄也可能解析为“prompt”。
+如果其兑现为“prompt”，则网站必须先调用 `requestPermission()`，然后才能对句柄执行任何操作。如果其兑现为“denied”，则任何操作都将被拒绝。通常，本地文件系统句柄工厂返回的句柄最初将兑现“granted”作为其读取权限状态。但是，除了通过用户撤销权限之外，从 IndexedDB 检索到的句柄也可能兑现为“prompt”。
 
 ### 异常
 

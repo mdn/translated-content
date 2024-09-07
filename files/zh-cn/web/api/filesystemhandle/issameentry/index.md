@@ -26,7 +26,7 @@ isSameEntry(fileSystemHandle)
 
 ## 示例
 
-以下函数将单个条目与条目数组进行比对，返回兑现包含不相符条目的新数组的 {{jsxref("Promise")}}。
+以下函数将单个条目与条目数组进行比对，并返回一个 {{jsxref("Promise")}}，其会兑现包含不相符条目的新数组。
 
 ```js
 async function removeMatches(fileEntry, entriesArr) {
