@@ -89,7 +89,7 @@ l10n:
    git clone https://github.com/mdn/learning-area
    ```
 
-4. 现在，你能进入目录并寻找你想要的文件（要么使用访达/文件资源管理器，要么使用 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)）。
+4. 现在，你能通过访达/文件资源管理器或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)进入目录并寻找你想要的文件。
 
 你可以更新 `learning-area` 仓库与 GitHub 上的主版本的任意改动保持同步，步骤如下：
 
