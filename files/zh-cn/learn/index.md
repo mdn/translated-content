@@ -91,7 +91,7 @@ l10n:
 
 4. 现在，你能通过访达/文件资源管理器或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)进入目录并寻找你想要的文件。
 
-你可以更新 `learning-area` 仓库与 GitHub 上的主版本的任意改动保持同步，步骤如下：
+你可以将 GitHub 上的主版本的任意改动更新到本地 `learning-area` 仓库，步骤如下：
 
 1. 在命令提示符/终端中使用 `cd` 命令进入 `learning-area` 目录。例如，假设你在 `learning-area` 目录的父目录中：
 
