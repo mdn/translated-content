@@ -40,7 +40,7 @@ l10n:
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
   - : 为纯新手提供实用的 Web 开发介绍。
 - [HTML——为 Web 提供结构](/zh-CN/docs/Learn/HTML)
-  - : HTML 是用于为 Web 内容的不同部分提供结构并定义结构的含义的语言。该专题详细地讲解 HTML。
+  - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该专题将详细讲解 HTML。
 - [CSS——为 Web 提供样式](/zh-CN/docs/Learn/CSS)
   - : CSS 是用于为 Web 内容添加样式、为 Web 内容进行布局、添加诸如动画的行为的语言。该专题对 CSS 做了全面的覆盖。
 - [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
