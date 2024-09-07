@@ -75,7 +75,7 @@ l10n:
 
 ## 获取代码示例
 
-学习区的所有代码示例都[位于 Github](https://github.com/roy-tian/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 master 分支内容的压缩文件](https://github.com/roy-tian/learning-area/archive/master.zip)。
+学习区的所有代码示例都[可以在 Github 上找到](https://github.com/roy-tian/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 main 分支内容的压缩文件](https://codeload.github.com/mdn/learning-area/zip/main)。
 
 如果你更喜欢以一种更灵活的方式（允许自动更新）复制仓库，你可以参考下面复杂一点的指导：
 
