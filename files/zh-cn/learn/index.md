@@ -114,7 +114,7 @@ l10n:
 
 ## 参见
 
-- [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>**MDN 课程伙伴**</sup>
+- [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 课程合作伙伴_</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业道路*教授成为合格的前端 Web 开发者所需的知识，这里有有趣的交互式课程和挑战、有学识的老师以及提供帮助的社区。让你从零到获得第一份前端工作！许多课程有单独的免费版本。
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中学习 JavaScript，包含简短的课程和自动评估的交互式测试。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
