@@ -5,11 +5,11 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
 
-本文介绍了[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API) 如何生成报告——包括归因报告和调试报告——以及如何控制生成的报告。内容包括处理噪声、优先处理报告、过滤报告和生成调试报告。
+本文介绍了[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API) 如何生成报告——包括归因报告和调试报告——以及如何控制生成的报告。内容包括处理噪声、报告优先级、过滤报告和生成调试报告。
 
 ## 基本流程
 
-当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的 [`POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 请求将报告发送到报告源的特定端点：
+当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的 [`POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 请求将报告发送到报告来源的特定端点：
 
 - 对于事件级报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`。
 - 对于汇总报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`。
@@ -20,11 +20,11 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 ## 事件级报告
 
-事件级报告会在其包含的**报告窗口**结束时生成并计划发送。报告窗口的长度由来源的{{httpheader("Attribution-Reporting-Register-Source")}}标头中的[`"event_report_window"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window)或[`"event_report_windows"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows)字段决定。
+事件级报告会在其包含的**报告窗口**结束时生成并计划发送。报告窗口的长度由来源的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"event_report_window"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window) 或 [`"event_report_windows"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) 字段决定。
 
 如果未指定这些字段，报告窗口将回退到以下默认值：
 
-- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)，默认报告窗口在来源的`"expiry"`到期时结束，该值在 `Attribution-Reporting-Register-Source`的[`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry)字段中设置。如果未显式设置，则默认为注册后 30 天。
+- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)，默认报告窗口在来源的 `"expiry"` 到期时结束，该值在 `Attribution-Reporting-Register-Source` 的 [`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) 字段中设置。如果未显式设置，则默认为注册后 30 天。
 - 对于[基于导航的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)，默认报告窗口分别为 2 天、7 天和来源的 `"expiry"`。
 
 有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
@@ -48,23 +48,23 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 属性如下：
 
 - `"attribution_destination"`
-  - ：一个字符串，或者是一个包含 2-3 个字符串的数组，取决于来源是否注册了多个目标。这些字符串代表在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的归因[`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination)站点。
+  - : 一个字符串，或者是一个包含 2-3 个字符串的数组，取决于来源是否注册了多个目标。这些字符串代表在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) 站点。
 - `"source_event_id"`
-  - ：一个表示归因源 ID 的字符串。这等同于在来源注册时通过关联的{{httpheader("Attribution-Reporting-Register-Source")}}响应标头中设置的[`"source_event_id"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id)。
+  - : 一个表示归因源 ID 的字符串。这等同于在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的 [`"source_event_id"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id)。
 - `"trigger_data"`
-  - ：一个表示归因触发器来源数据的字符串，在触发器注册时设置（通过关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头设置的[`"trigger_data"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data)）。
+  - : 一个表示归因触发器来源数据的字符串，在触发器注册时设置（通过关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头设置的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data)）。
 - `"report_id"`
-  - ：一个表示此报告的[通用唯一标识符 (UUID)](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计算。
+  - : 一个表示此报告的[通用唯一标识符（UUID）](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计算。
 - `"source_type"`
-  - ：一个字符串，值为 `"navigation"` 或 `"event"`，分别表示相关的归因源是[基于导航的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)，还是[基于事件的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)。
+  - : 一个字符串，值为 `"navigation"` 或 `"event"`，分别表示相关的归因源是[基于导航的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因源)，还是[基于事件的](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因源)。
 - `"randomized_trigger_rate"`
-  - ：一个介于 0 和 1 之间的随机数，表示此特定来源配置应用噪声的频率。[噪声](#adding_noise_to_reports)处理见下文。
+  - : 一个介于 0 和 1 之间的随机数，表示此特定来源配置应用噪声的频率。[噪声](#为报告添加噪声)处理见下文。
 - `"scheduled_report_time"`
-  - ：一个字符串，表示从 Unix 纪元开始到浏览器最初计划发送报告的秒数（以避免因设备离线导致报告延迟而产生的不准确性）。
+  - : 一个字符串，表示从 Unix 纪元开始到浏览器最初计划发送报告的秒数（以避免因设备离线导致报告延迟而产生的不准确性）。
 - `"source_debug_key"` {{optional_inline}}
-  - ：一个 64 位无符号整数，表示归因源的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中设置的值相同。有关更多信息，请参阅[调试报告](#debug_reports)。
+  - : 一个 64 位无符号整数，表示归因源的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中设置的值相同。有关更多信息，请参阅[调试报告](#调试报告)。
 - `"trigger_debug_key"` {{optional_inline}}
-  - ：一个 64 位无符号整数，表示归因触发器的调试密钥。此值与关联的{{httpheader("Attribution-Reporting-Register-Trigger")}}标头中的 `"debug_key"` 字段中设置的值相同。有关更多信息，请参阅[调试报告](#debug_reports)。
+  - : 一个 64 位无符号整数，表示归因触发器的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头中的 `"debug_key"` 字段中设置的值相同。有关更多信息，请参阅[调试报告](#调试报告)。
 
 ## 汇总报告
 
@@ -98,13 +98,13 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 属性如下：
 
 - `"shared_info"`
-  - : 这是一个序列化的 JSON 对象，提供汇总报告服务使用的信息。这些数据使用[AEAD](https://en.wikipedia.org/wiki/Authenticated_encryption)进行加密，以防篡改。序列化字符串中包含以下属性：
+  - : 这是一个序列化的 JSON 对象，提供汇总报告服务使用的信息。这些数据使用 [AEAD](https://zh.wikipedia.org/wiki/认证加密) 进行加密，以防篡改。序列化字符串中包含以下属性：
     - `"api"`
       - : 表示触发报告生成的 API 的枚举值。目前，这个值将始终等于 `"attribution-reporting"`，但将来可能会扩展以支持其他 API。
     - `"attribution_destination"`
-      - : 一个表示归因[`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL 的字符串，该 URL 在源注册时通过相关的{{httpheader("Attribution-Reporting-Register-Source")}}响应头设置。
+      - : 一个表示归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL 的字符串，该 URL 在源注册时通过相关的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头设置。
     - `"report_id"`
-      - : 一个表示此报告的[全局唯一标识符 (UUID)](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计数。
+      - : 一个表示此报告的[全局唯一标识符（UUID）](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计数。
     - `"reporting_origin"`
       - : 触发报告生成的源。
     - `"scheduled_report_time"`
@@ -119,14 +119,14 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
     - `"payload"`
 
-      - : 一个通过[HPKE](https://datatracker.ietf.org/doc/rfc9180/)加密并经过[base64](/zh-CN/docs/Glossary/Base64)编码的[CBOR](https://cbor.io/)映射，结构如下：
+      - : 一个通过 [HPKE](https://datatracker.ietf.org/doc/rfc9180/) 加密并经过 [base64](/zh-CN/docs/Glossary/Base64) 编码的 [CBOR](https://cbor.io/) 映射，结构如下：
 
         ```js
         {
           "operation": "histogram",  // 允许服务支持将来其他操作
           "data": [{
-            "bucket": <bucket, 编码为 16 字节（即 128 位）的大端字节串>,
-            "value": <value, 编码为 4 字节（即 32 位）的大端字节串>
+            "bucket": <bucket，编码为 16 字节（即 128 位）的大端字节串>,
+            "value": <value，编码为 4 字节（即 32 位）的大端字节串>
           }, ...]
         }
         ```
@@ -139,9 +139,9 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 - `"aggregation_coordinator_origin"`
   - : 汇总服务的部署选项。
 - `"source_debug_key"` {{optional_inline}}
-  - : 一个 64 位无符号整数，表示归因源的调试密钥。此值与相关{{httpheader("Attribution-Reporting-Register-Source")}}头的[`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key)字段中的值一致。更多信息请参见[调试报告](#debug_reports)。
+  - : 一个 64 位无符号整数，表示归因源的调试密钥。此值与相关 {{httpheader("Attribution-Reporting-Register-Source")}} 标头的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中的值一致。更多信息请参见[调试报告](#调试报告)。
 - `"trigger_debug_key"` {{optional_inline}}
-  - : 一个 64 位无符号整数，表示归因触发器的调试密钥。此值与相关{{httpheader("Attribution-Reporting-Register-Trigger")}}头的`"debug_key"`字段中的值一致。更多信息请参见[调试报告](#debug_reports)。
+  - : 一个 64 位无符号整数，表示归因触发器的调试密钥。此值与相关 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头的 `"debug_key"` 字段中的值一致。更多信息请参见[调试报告](#调试报告)。
 
 ## 为报告添加噪声
 
@@ -155,9 +155,9 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 ## 报告优先级和限制
 
-默认情况下，所有归因源的优先级相同，并且归因模型是最后接触（last-touch）模型，这意味着转换被归因于最新的匹配源事件。对于事件级和可汇总的报告，你可以通过在相关{{httpheader("Attribution-Reporting-Register-Source")}}头中设置`"priority"`字段的新值来更改源优先级。默认值为`0`；如果你为特定源设置了`"priority"`值为`1`，则该源将首先匹配，优先于任何优先级为`0`的源。优先级为`2`的源将在优先级为`1`的源之前匹配，依此类推。
+默认情况下，所有归因源的优先级相同，并且归因模型是最后接触（last-touch）模型，这意味着转换被归因于最新的匹配源事件。对于事件级和可汇总的报告，你可以通过在相关 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中设置 `"priority"` 字段的新值来更改源优先级。默认值为`0`；如果你为特定源设置了`"priority"`值为`1`，则该源将首先匹配，优先于任何优先级为 `0` 的源。优先级为 `2` 的源将在优先级为 `1` 的源之前匹配，依此类推。
 
-归因触发器优先级的工作方式相同；你也可以通过在相关{{httpheader("Attribution-Reporting-Register-Trigger")}}头中添加`"priority"`字段来设置触发器优先级，但仅适用于事件级报告。
+归因触发器优先级的工作方式相同；你也可以通过在相关 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头中添加 `"priority"` 字段来设置触发器优先级，但仅适用于事件级报告。
 
 不同的来源类型有不同的默认限制：
 
@@ -251,7 +251,7 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 
 ## 调试报告
 
-你可以启用调试报告，以返回有关归因报告的故障排除信息。这些报告可用于检查你的设置是否正常工作，并了解基于 Cookie 的旧实现和新归因报告实现之间的测量结果差距。调试报告会立即发送；它们不受事件级和汇总报告相同的调度约束。
+你可以启用调试报告，以返回有关归因报告的故障排除信息。这些报告可用于检查你的设置是否正常工作，并了解基于 cookie 的旧实现和新归因报告实现之间的测量结果差距。调试报告会立即发送；它们不受事件级和汇总报告相同的调度约束。
 
 有两种不同类型的调试报告：
 
@@ -259,19 +259,19 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 - **详细调试报告**为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
 
 > [!NOTE]
-> 要使用调试报告，报告来源需要设置 Cookie。如果配置为接收报告的来源是第三方，则该 Cookie 将是[第三方 Cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 Cookie 的浏览器中将无法使用调试报告。
+> 要使用调试报告，报告来源需要设置 cookie。如果配置为接收报告的来源是第三方，则该 cookie 将是[第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 cookie 的浏览器中将无法使用调试报告。
 
 ### 使用调试报告
 
 要使用调试报告，你需要：
 
-1. 在报告来源上设置 `ar_debug` Cookie。在来源和触发注册期间，该 Cookie 需要存在：
+1. 在报告来源上设置 `ar_debug` cookie。在来源和触发注册期间，该 cookie 需要存在：
 
    ```http
    Set-Cookie: ar_debug=1; SameSite=None; Secure; Path=/; HttpOnly
    ```
 
-2. 在与你希望为其公开调试信息的归因报告相关的所有 {{httpheader("Attribution-Reporting-Register-Source")}} 和 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头中设置 `debug_key` 字段。每个 `debug_key` 值必须是格式为十进制字符串的 64 位无符号整数。使每个调试键成为唯一的 ID——例如，可以将每个键设置为 Cookie ID + 来源/触发时间戳（如果希望将其与旧的基于 Cookie 的系统进行比较，则可以在旧系统中捕获相同的时间戳）。
+2. 在与你希望为其公开调试信息的归因报告相关的所有 {{httpheader("Attribution-Reporting-Register-Source")}} 和 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头中设置 `debug_key` 字段。每个 `debug_key` 值必须是格式为十进制字符串的 64 位无符号整数。使每个调试键成为唯一的 ID——例如，可以将每个键设置为 cookie ID + 来源/触发时间戳（如果希望将其与旧的基于 cookie 的系统进行比较，则可以在旧系统中捕获相同的时间戳）。
 
    ```json
    {
