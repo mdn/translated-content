@@ -93,7 +93,7 @@ l10n:
 
 你可以更新 `learning-area` 仓库与 GitHub 上的主版本的任意改动保持同步，步骤如下：
 
-1. 在命令提示符/终端中使用 `cd` 命令进入 `learning-area` 目录。假设你在 `learning-area` 目录的父目录中，例如：
+1. 在命令提示符/终端中使用 `cd` 命令进入 `learning-area` 目录。例如，假设你在 `learning-area` 目录的父目录中：
 
    ```bash
    cd learning-area
