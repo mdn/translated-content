@@ -29,7 +29,7 @@ l10n:
 >
 > #### 想成为一名前端 Web 开发者吗？
 >
-> 你要是想成为一名前端 Web 开发者，但不确定该从哪开始学习，我们会建议使用 [MDN 课程](/en-US/curriculum/)作为你的学习计划。它提供一个结构化的学习路径，包含：成为一名成功的前端开发者所需的基本技巧和练习，以及推荐学习资源。
+> 你要是想成为一名前端 Web 开发者，但不确定该从哪开始学习，我们会建议使用 [MDN 合作课程](/en-US/curriculum/)作为你的学习计划。它提供一个结构化的学习路径，包含：成为一名成功的前端开发者所需的基本技巧和练习，以及推荐学习资源。
 >
 > [**现在开始**](/en-US/curriculum/)
 
@@ -75,7 +75,7 @@ l10n:
 
 ## 获取代码示例
 
-学习区的所有代码示例都[可以在 Github 上找到](https://github.com/roy-tian/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 main 分支内容的压缩文件](https://codeload.github.com/mdn/learning-area/zip/main)。
+学习区的所有代码示例都[可以在 Github 上找到](https://github.com/mdn/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 main 分支内容的压缩文件](https://codeload.github.com/mdn/learning-area/zip/main)。
 
 如果你更喜欢以一种更灵活的方式（允许自动更新）复制仓库，你可以参考下面复杂一点的指导：
 
