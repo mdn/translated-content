@@ -2,7 +2,7 @@
 title: 可视视口 API
 slug: Web/API/Visual_Viewport_API
 l10n:
-  sourceCommit: 04b91d4a12bec8c3adad0de48a030f6b6c4e4d1e
+  sourceCommit: 4b5b3e16c8260a429db07dd54420ae40794b96c2
 ---
 
 {{DefaultAPISidebar("Visual Viewport")}}
@@ -15,7 +15,9 @@ l10n:
 
 如果网页元素需要在屏幕上可见，而与网页的可见部分无关，该怎么办？例如，如果你需要一组图像控件无论设备的捏合缩放级别如何都能保持在屏幕上，该怎么办？目前各浏览器在处理这个问题上存在差异。可视视口可让网页开发人员根据屏幕上显示的内容对元素进行相对定位，从而解决这个问题。
 
-要访问窗口的可视化视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它还包含两个事件：`onresize` 和 `onscroll`，这两个事件就会在可视视口发生变化时触发。通过这些事件，你可以相对于可视化视口定位元素，而这些元素通常会锚定在布局视口上。
+要访问窗口的可视化视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它包含三个事件：{{domxref("VisualViewport/resize_event", "resize")}}，{{domxref("VisualViewport/scroll_event", "scroll")}} 和 {{domxref("VisualViewport/scrollend_event", "scrollend")}}，分别在视口调整大小、滚动和完成滚动操作时触发。
+
+通过前两个事件，可以在滚动或缩放时相对于可视视口定位元素，这些元素通常会锚定在布局视口上。 通过 `scrollend` 事件，可以在滚动操作完成时更新元素。 例如，你可以使用这些事件在缩放和滚动时将元素固定在可视视窗上，并在滚动结束时对其进行更新。
 
 ## 接口
 
@@ -29,39 +31,85 @@ l10n:
 
 ## 示例
 
-下面的代码以[规范中的示例](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html)为基础，但增加了一些内容，使其功能更加完善。它显示了一个名为 `viewportHandler()` 的函数。调用时，它会查询 `offsetLeft` 和 `height` 属性，然后用于 CSS `translate()`。你可以通过将该函数传递给两个事件调用来调用它。
+[可视化视口 API 示例](https://mdn.github.io/dom-examples/visual-viewport-api/)基本演示了不同可视化视口功能的工作原理，包括三种事件类型。在支持的台式机和手机浏览器中加载页面，并尝试滚动页面和缩放。当调整大小和滚动时，信息框会重新定位，以保持相对于可视视口的位置不变，同时更新其显示的视口和滚动信息。此外，在调整大小和滚动时，我们会改变方框的颜色，以显示正在发生的事情，而在滚动结束时又会变回原来的颜色。
 
-在本示例中，有一点可能不太清楚，那就是 `pendingUpdate` 标志的使用和对 `requestAnimationFrame()` 的调用。`pendingUpdate` 标志的作用是防止在 `onresize` 和 `onscroll` 同时启动时发生多次调用变换的情况。使用 `requestAnimationFrame()` 可以确保在下一次呈现之前进行变换。
+你会发现，在桌面浏览器上，{{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值会随着窗口的滚动而更新，视觉视口位置不会改变。不过，在移动浏览器上，{{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值通常会被更新--通常是可视视口发生变化，而不是窗口位置发生变化。
+
+HTML 示例如下。信息框由 `id` 为 `output` 的 {{htmlelement("div")}} 表示。
+
+```html
+<p id="instructions">
+  尝试滚动和缩放，看看报告的数值有什么变化。
+</p>
+<div id="output">
+  <p id="visual-info"></p>
+  <hr />
+  <p id="window-info"></p>
+</div>
+```
+
+为了简洁起见，我们将不解释示例的 CSS，因为这对理解演示并不重要。 你可以通过上面的示例链接查看。
+
+在 JavaScript 中，我们首先要获取信息框的引用，以便在页面缩放和滚动时更新信息框，以及信息框中的两个段落。第一个将包含报告的 {{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值，第二个将包含报告的 {{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值。
 
 ```js
-let pendingUpdate = false;
+const output = document.getElementById("output");
+const visualInfo = document.getElementById("visual-info");
+const windowInfo = document.getElementById("window-info");
+```
 
-function viewportHandler(event) {
-  if (pendingUpdate) return;
-  pendingUpdate = true;
+接下来，我们定义事件触发时要运行的两个关键函数：
 
-  requestAnimationFrame(() => {
-    pendingUpdate = false;
-    const layoutViewport = document.getElementById("layoutViewport");
+- `scrollUpdater()` 将在 `resize` 和 `scroll` 事件触发时调用: 此函数通过查询 {{domxref("VisualViewport.offsetTop")}} 和 {{domxref("VisualViewport.offsetLeft")}} 属性更新信息框相对于可视视图的位置，并使用它们的值更新相关 {{glossary("inset properties")}} 的值。我们还更改了信息框的背景颜色，以显示正在发生的事情，并运行 `updateText()` 函数更新框中显示的值。
+- `scrollEndUpdater()` 函数将在滚动结束时触发：它会将信息框恢复为原来的颜色，并运行 `updateText()` 函数以确保在滚动结束时显示最新值。
 
-    // 由于 bar 的位置是固定的，因此我们需要根据视觉视口与布局视口原点的偏移量来进行偏移。
-    const viewport = event.target;
-    const offsetLeft = viewport.offsetLeft;
-    const offsetTop =
-      viewport.height -
-      layoutViewport.getBoundingClientRect().height +
-      viewport.offsetTop;
+```js
+const scrollUpdater = () => {
+  output.style.top = `${visualViewport.offsetTop + 10}px`;
+  output.style.left = `${visualViewport.offsetLeft + 10}px`;
+  output.style.background = "yellow";
+  updateText();
+};
 
-    // 你也可以通过设置 style.left 和 style.top，如果使用了 width: 100% 代替
-    bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${
-      1 / viewport.scale
-    })`;
-  });
+const scrollendUpdater = () => {
+  output.style.background = "lime";
+  updateText();
+};
+```
+
+`updateText()` 函数如下所示。它将第一段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 {{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值，并将第二段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 W{{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值。定义 `updateText()` 后，我们立即调用它，以便在页面加载时正确显示信息框。
+
+The `updateText()` function looks like so — it sets the {{domxref("HTMLElement.innerText")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
+
+```js
+function updateText() {
+  visualInfo.innerText = `Visual viewport left: ${visualViewport.offsetLeft.toFixed(2)}
+    top: ${visualViewport.offsetTop.toFixed(2)}`;
+  windowInfo.innerText = `Window scrollX: ${window.scrollX.toFixed(2)}
+    scrollY: ${window.scrollY.toFixed(2)}`;
 }
 
-window.visualViewport.addEventListener("scroll", viewportHandler);
-window.visualViewport.addEventListener("resize", viewportHandler);
+updateText();
 ```
+
+> [!NOTE]
+> 我们使用 {{jsxref("Number.toFixed()")}} 方法将所有数值截断到小数点后两位，因为有些浏览器会将它们显示为亚像素数值，可能会有大量小数位。
+
+现在，我们在可视化视口和 {{domxref("Window")}} 对象上都设置了事件处理器属性，以便在移动设备和桌面设备上的适当时间运行关键功能：
+
+- 我们在 `window` 上设置了处理器，这样信息框的位置和内容就能在常规的窗口滚动操作中更新，例如在桌面浏览器上滚动页面时。
+- 我们在 `visualViewport` 上设置了处理器，这样信息框的位置和内容就会在视觉视口滚动或缩放操作时更新，例如在移动浏览器上滚动和缩放页面时。
+
+```js
+visualViewport.onresize = scrollUpdater;
+visualViewport.onscroll = scrollUpdater;
+visualViewport.onscrollend = scrollendUpdater;
+window.onresize = scrollUpdater;
+window.onscroll = scrollUpdater;
+window.onscrollend = scrollendUpdater;
+```
+
+`scrollUpdater()` 会在 `resize` 和 `scroll` 事件触发时执行，而 `scrollEndUpdater()` 会在滚动结束时触发。
 
 ## 规范
 
