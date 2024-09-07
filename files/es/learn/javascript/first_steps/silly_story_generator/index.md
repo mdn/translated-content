@@ -92,6 +92,6 @@ Completando la función `result()`:
   ```
 
 - [Math.round()](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/round) es un método JavaScript integrado que simplemente redondea el resultado de un cálculo al número entero más cercano.
-- Hay tres instancias de cadenas que deben reemplazarse. Puede repetir el método `replace()` varias veces o puedes utilizar `replaceAll(). Recuerda, las cuerdas son inmutables.
+- Hay tres instancias de cadenas que deben reemplazarse. Puede repetir el método `replace()` varias veces o puedes utilizar `replaceAll(). Recuerda, los Strings son inmutables.
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
