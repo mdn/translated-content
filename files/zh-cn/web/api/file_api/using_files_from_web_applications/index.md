@@ -545,7 +545,7 @@ if (isset($_FILES['myFile'])) {
 
 对象 URL 可以用于图像之外的其他东西！它可以用于显示嵌入的 PDF 文件或任何其他浏览器能显示的资源。
 
-在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false`.
+在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false`。
 
 ```html
 <iframe id="viewer"></iframe>
