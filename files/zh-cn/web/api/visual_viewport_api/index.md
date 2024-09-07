@@ -17,7 +17,7 @@ l10n:
 
 要访问窗口的可视化视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它包含三个事件：{{domxref("VisualViewport/resize_event", "resize")}}，{{domxref("VisualViewport/scroll_event", "scroll")}} 和 {{domxref("VisualViewport/scrollend_event", "scrollend")}}，分别在视口调整大小、滚动和完成滚动操作时触发。
 
-通过前两个事件，可以在滚动或缩放时相对于可视视口定位元素，这些元素通常会锚定在布局视口上。 通过 `scrollend` 事件，可以在滚动操作完成时更新元素。 例如，你可以使用这些事件在缩放和滚动时将元素固定在可视视窗上，并在滚动结束时对其进行更新。
+通过前两个事件，可以在滚动或缩放时相对于可视视口定位元素，这些元素通常会锚定在布局视口上。通过 `scrollend` 事件，可以在滚动操作完成时更新元素。例如，你可以使用这些事件在缩放和滚动时将元素固定在可视视窗上，并在滚动结束时对其进行更新。
 
 ## 接口
 
@@ -38,9 +38,7 @@ l10n:
 HTML 示例如下。信息框由 `id` 为 `output` 的 {{htmlelement("div")}} 表示。
 
 ```html
-<p id="instructions">
-  尝试滚动和缩放，看看报告的数值有什么变化。
-</p>
+<p id="instructions">尝试滚动和缩放，看看报告的数值有什么变化。</p>
 <div id="output">
   <p id="visual-info"></p>
   <hr />
@@ -48,7 +46,7 @@ HTML 示例如下。信息框由 `id` 为 `output` 的 {{htmlelement("div")}} �
 </div>
 ```
 
-为了简洁起见，我们将不解释示例的 CSS，因为这对理解演示并不重要。 你可以通过上面的示例链接查看。
+为了简洁起见，我们将不解释示例的 CSS，因为这对理解演示并不重要。你可以通过上面的示例链接查看。
 
 在 JavaScript 中，我们首先要获取信息框的引用，以便在页面缩放和滚动时更新信息框，以及信息框中的两个段落。第一个将包含报告的 {{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值，第二个将包含报告的 {{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值。
 
@@ -60,7 +58,7 @@ const windowInfo = document.getElementById("window-info");
 
 接下来，我们定义事件触发时要运行的两个关键函数：
 
-- `scrollUpdater()` 将在 `resize` 和 `scroll` 事件触发时调用: 此函数通过查询 {{domxref("VisualViewport.offsetTop")}} 和 {{domxref("VisualViewport.offsetLeft")}} 属性更新信息框相对于可视视图的位置，并使用它们的值更新相关 {{glossary("inset properties")}} 的值。我们还更改了信息框的背景颜色，以显示正在发生的事情，并运行 `updateText()` 函数更新框中显示的值。
+- `scrollUpdater()` 将在 `resize` 和 `scroll` 事件触发时调用：此函数通过查询 {{domxref("VisualViewport.offsetTop")}} 和 {{domxref("VisualViewport.offsetLeft")}} 属性更新信息框相对于可视视图的位置，并使用它们的值更新相关 {{glossary("inset properties")}} 的值。我们还更改了信息框的背景颜色，以显示正在发生的事情，并运行 `updateText()` 函数更新框中显示的值。
 - `scrollEndUpdater()` 函数将在滚动结束时触发：它会将信息框恢复为原来的颜色，并运行 `updateText()` 函数以确保在滚动结束时显示最新值。
 
 ```js
