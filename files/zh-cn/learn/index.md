@@ -18,7 +18,7 @@ l10n:
 - HTML 和 CSS
   - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在[介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
 - JavaScript
-  - : JavaScript 为网站提供交互功能。在 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)中开始学习。
+  - : JavaScript 为网站提供交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)开始学习。
 - 框架和工具
   - : 掌握原生 HTML、CSS 和 JavaScript 的基本知识之后，你应该学习[客户端 Web 开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)，接着考虑钻研[客户端 JavaScript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)。你也应该考虑学习[服务器端网站编程](/zh-CN/docs/Learn/Server-side)的基础知识。
 
