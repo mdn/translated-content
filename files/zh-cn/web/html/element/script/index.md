@@ -158,6 +158,48 @@ slug: Web/HTML/Element/script
 </script>
 ```
 
+#### async 和 defer
+
+使用了 `async` 属性加载的脚本不会在下载时阻塞页面。这意味着在脚本执行完成之前，将无法为用户处理和渲染网页上的其余内容。无法保证脚本的运行次序。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
+
+使用 `defer` 属性加载的脚本将按照它们在页面上出现的顺序加载。在页面内容全部加载完毕之前，脚本不会运行，如果脚本依赖于 DOM 的存在（例如，脚本修改了页面上的一个或多个元素），这一点非常有用。
+
+以下是不同脚本加载方法的可视化表示，以及这对页面意味着什么：
+
+![三种脚本加载方法的工作原理：默认情况下，在获取和执行 JavaScript 时，解析过程被阻塞。使用 async 时，解析暂停，仅执行。使用 defer 时，解析不会暂停，但在解析完所有其他内容后才开始执行](async-defer.jpg)
+
+_该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 获得授权。_
+
+比如，如果你的页面要加载以下三个脚本：
+
+```html
+<script async src="js/vendor/jquery.js"></script>
+<script async src="js/script2.js"></script>
+<script async src="js/script3.js"></script>
+```
+
+你不能依赖脚本的加载顺序。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
+
+`async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
+
+解决这一问题可使用 `defer` 属性，在脚本和内容下载后，脚本将按照在页面中出现的顺序加载和运行：
+
+```html
+<script defer src="js/vendor/jquery.js"></script>
+<script defer src="js/script2.js"></script>
+<script defer src="js/script3.js"></script>
+```
+
+在第二个示例中，我们可以确保 `jquery.js` 必定在 `script2.js` 和 `script3.js` 之前加载，同时 `script2.js` 必定在 `script3.js` 之前加载。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM（例如，它们修改了页面上的一个或多个元素），这将非常有用。
+
+小结：
+
+- `async` 和 `defer` 都指示浏览器在页面的其他部分（DOM 等）正在下载时，在一个单独的线程中下载脚本，因此在获取过程中页面加载不会被阻塞。
+- 带有 `async` 属性的脚本将在下载完成后立即执行。这将阻塞页面，并不保证任何特定的执行顺序。
+- 带有 `defer` 属性的脚本将按照它们的顺序加载，并且只有在所有脚本加载完毕后才会执行。
+- 如果脚本应该立刻运行且没有任何依赖，那么应使用 `async`。
+- 如果脚本需要等待页面解析，且依赖于其他脚本或 DOM，请使用 `defer` 加载脚本，并将关联的脚本按你想要浏览器加载它们的顺序置于相应 `<script>` 元素中。
+
 ### 模块回落
 
 支持 `module` 作为 [`type`](#type) 属性的浏览器忽略任何具有 `nomodule` 属性的脚本。这种机制可以允许你在使用模块脚本时为不支持的浏览器提供 `nomodule` 标记的回落脚本。

@@ -34,7 +34,7 @@
     "husky": "9.1.5",
     "lint-staged": "15.2.10",
     "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.13.0",
+    "markdownlint-cli2": "0.14.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.1",
     "ora": "^8.1.0",
