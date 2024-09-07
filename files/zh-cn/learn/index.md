@@ -67,8 +67,8 @@ l10n:
 
 每个类型都有相应的评分指南和推荐解决方案，可用于帮助你评估你的工作。某些模式能让你更容易地找到这些资源，例如：
 
-- 上面的**技能测试**任务示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>。
-- 上面的**评估**示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/gallery>。
+- 上面的**技能测试**任务示例的评分指南和资源位于 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>。
+- 上面的**评估**示例的评分指南和资源位于 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>。
 
 > [!NOTE]
 > 任务和评估中的评分指南及其它资源大多数位于 [MDN 学习区示例中文版](https://github.com/roy-tian/learning-area/)，还有一些位于 [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)。
