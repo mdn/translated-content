@@ -37,7 +37,7 @@ l10n:
 </table>
 
 - sum
-  - : 指定动画将添加到属性和其他较低优先级动画的基础值。
+  - : 指定动画将添加到属性和其他较低优先级动画的基础值之上。
 - replace
   - : 指定动画将覆盖属性的基础值和其他优先级较低的动画。这是默认设置，但其作用也会受到动画值属性 {{SVGAttr("by")}} 和 {{SVGAttr("to")}} 的影响，如下文所述： [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive)。
 
