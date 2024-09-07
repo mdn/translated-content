@@ -51,7 +51,7 @@ Configuración básica:
 
 Variables y funciones iniciales:
 
-1. en el archivo de texto sin procesar, copia todo el código bajo el encabezado "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" y pégalo en la parte superior del archivo main.js. Esto te dará tres variables que almacenan las referencias al campo de texto "Enter custom name" (`customName`), el botón "Generate random story" (`randomize`), y el elemento {{htmlelement("p")}} al fondo del cuerpo HTML en el que la historia será copiada en (`story`), respectivamente. Además, obtendrás una funcion llamada `randomValueFromArray()` que toma un _array_, y devuelve uno de los items guardados dentro del _array_ al azar.
+1. En el archivo de texto sin procesar, copia todo el código bajo el encabezado "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" y pégalo en la parte superior del archivo main.js. Esto te dará tres variables que almacenan las referencias al campo de texto "Enter custom name" (`customName`), el botón "Generate random story" (`randomize`), y el elemento {{htmlelement("p")}} al fondo del cuerpo HTML en el que la historia será copiada en (`story`), respectivamente. Además, obtendrás una funcion llamada `randomValueFromArray()` que toma un arreglo, y devuelve uno de los elementos guardados dentro del arreglo al azar.
 2. Ahora observa la segunda sección del archivo de texto sin procesar — "2. RAW TEXT STRINGS". Esta contiene cadenas de texto que actuarán como entrada en nuestro programa. Nos gustaría que mantengas estas variables internas dentro del archivo `main.js`:
 
    1. Almacena la primera, la más larga, cadena de texto dentro de una variable llamada `storyText`.
