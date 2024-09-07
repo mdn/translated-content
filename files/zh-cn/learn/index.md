@@ -42,7 +42,7 @@ l10n:
 - [HTML——为 Web 提供结构](/zh-CN/docs/Learn/HTML)
   - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该专题将详细讲解 HTML。
 - [CSS——为 Web 提供样式](/zh-CN/docs/Learn/CSS)
-  - : CSS 是用于为 Web 内容添加样式、为 Web 内容进行布局、添加诸如动画的行为的语言。该专题对 CSS 做了全面的覆盖。
+  - : CSS 是用于为 Web 内容添加样式、对 Web 内容进行布局、添加诸如动画的行为的语言。该专题对 CSS 做了全面的覆盖。
 - [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
   - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
 - [Web 表单——操作用户数据](/zh-CN/docs/Learn/Forms)
