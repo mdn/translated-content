@@ -125,6 +125,6 @@ l10n:
 - [The Odin Project](https://www.theodinproject.com/)
   - : 特点是拥有免费和开源的全栈教学课程，课程涵盖初级到高级。
 - [MDN 博客](/en-US/blog/)
-  - : MDN 团队和访客作家为 MDN 博客编写的与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
+  - : MDN 团队和客座作者为 MDN 博客编写的与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
 - [Mozilla 开发者新闻通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
   - : 面向 Web 开发者的时事通讯，对各水平开发者而言都是优秀的资源。
