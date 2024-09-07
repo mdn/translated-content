@@ -11,21 +11,21 @@ l10n:
 
 ## 概念和用法
 
-移动 WEB 包含两个视口，即布局视口和可视视口。布局视口涵盖页面上的所有元素，而可视视口则是屏幕上实际可见的内容。当用户缩放页面时，可视视口会缩小，但布局视口保持不变。屏幕键盘（OSK）等用户界面功能可以缩小可视视口，而不影响布局视口。
+移动 web 包含两个视口，即布局视口和可视视口。布局视口涵盖页面上的所有元素，而可视视口则是屏幕上实际可见的内容。当用户缩放页面时，可视视口会缩小，但布局视口保持不变。屏幕键盘（OSK）等用户界面功能可以缩小可视视口，而不影响布局视口。
 
-如果网页元素需要在屏幕上可见，而与网页的可见部分无关，该怎么办？例如，如果你需要一组图像控件无论设备的捏合缩放级别如何都能保持在屏幕上，该怎么办？目前各浏览器在处理这个问题上存在差异。可视化视口可让网页开发人员根据屏幕上显示的内容对元素进行相对定位，从而解决这个问题。
+如果网页元素需要在屏幕上可见，而与网页的可见部分无关，该怎么办？例如，如果你需要一组图像控件无论设备的捏合缩放级别如何都能保持在屏幕上，该怎么办？目前各浏览器在处理这个问题上存在差异。可视视口可让网页开发人员根据屏幕上显示的内容对元素进行相对定位，从而解决这个问题。
 
 要访问窗口的可视化视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它还包含两个事件：`onresize` 和 `onscroll`，这两个事件就会在可视视口发生变化时触发。通过这些事件，你可以相对于可视化视口定位元素，而这些元素通常会锚定在布局视口上。
 
 ## 接口
 
 - {{DOMxRef("VisualViewport")}}
-  - : 指示给定窗口的可视视口。窗口的 `VisualViewport` 对象提供有关视口位置和大小的信息，并接收 {{domxref("VisualViewport.resize_event", "resize")}} 和 {{domxref("VisualViewport.scroll_event", "scroll")}} 事件，你可以通过监控这些事件来了解窗口视口何时发生变化。
+  - : 表示给定窗口的可视视口。窗口的 `VisualViewport` 对象提供有关视口位置和大小的信息，并接收 {{domxref("VisualViewport.resize_event", "resize")}}、{{domxref("VisualViewport.scroll_event", "scroll")}} 和 {{domxref("VisualViewport.scrollend_event", "scrollend")}} 事件。
 
 ### 对其他接口的扩展
 
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
-  - : 窗口 {{domxref("VisualViewport")}} 对象的只读引用。如果该属性不存在，则不支持 API。
+  - : 窗口 {{domxref("VisualViewport")}} 对象的只读引用。如果该属性不存在，则不支持此 API。
 
 ## 示例
 
