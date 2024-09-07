@@ -26,6 +26,7 @@ l10n:
 - [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
   - : CSS（层叠样式表）用于为网页添加样式，对网页进行布局——例如，修改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其它装饰特性。在前往掌握 CSS 基础知识（CSS 的运作方式，CSS 语法是什么样子，在 HTML 中如何使用 CSS 添加样式）的道路上，本模块是一个很好的开始。
 - [CSS 构建块](/zh-CN/docs/Learn/CSS/Building_Blocks)
+
   - : 本模块承接 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)——这时你已经熟悉 CSS 语言及其语法、有了基本的使用经验，是时候再深入一些。在本模块中，你会学习层叠和继承、可用的选择器类型、单位、大小、为背景和边框添加样式、调试，以及其它内容。
 
     本文的目的是，在了解诸如[为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)等特定领域的知识之前，提供一个能让你编写合格 CSS 的工具集并帮助你理解基本的理论。
