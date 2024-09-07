@@ -65,8 +65,7 @@ l10n:
 - “技能测试”任务，例如，在[代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#技能测试！)。
 - 在某些模块的结尾处，包含更深入的**评估**，例如，[图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)。
 
-每个类型都有相应的评分指南和推荐解决方案可用，帮助你评估你的工作。
-某些模式能让你更容易地找到这些资源，例如：
+每个类型都有相应的评分指南和推荐解决方案，可用于帮助你评估你的工作。某些模式能让你更容易地找到这些资源，例如：
 
 - 上面的**技能测试**任务示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>。
 - 上面的**评估**示例的评分指南和资源位于 <https://github.com/roy-tian/learning-area/tree/main/javascript/building-blocks/gallery>。
