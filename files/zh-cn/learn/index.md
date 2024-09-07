@@ -86,7 +86,7 @@ l10n:
 3. 要将学习区仓库复制到名为 learning-area 的目录（learning-area 目录将位于命令提示符/终端指向的当前目录中），使用下面的命令：
 
    ```bash
-   git clone https://github.com/roy-tian/learning-area
+   git clone https://github.com/mdn/learning-area
    ```
 
 4. 现在，你能进入目录并寻找你想要的文件（要么使用访达/文件资源管理器，要么使用 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)）。
