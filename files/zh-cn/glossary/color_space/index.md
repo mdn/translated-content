@@ -29,7 +29,7 @@ RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{
 
 HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_关键字")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
 
-`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调-饱和度-亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调-白度-黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
+`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调—饱和度—亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调—白度—黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
 
 - `sRGB` 色彩空间
   - : sRGB 色彩空间（“标准 RGB”），是标准的 RGB（红、绿、蓝）色彩空间，用于显示器、打印机和 Web 中。它是使用最广泛的色彩空间，受到大多数操作系统、软件程序、显示器和打印机的支持。sRGB 以 `r`、`g` 和 `b` 为基础，色域范围为 `0` 至 `1`。它的白点为 D65。
