@@ -71,7 +71,7 @@ l10n:
 - 上面的**评估**示例的评分指南和资源位于 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>。
 
 > [!NOTE]
-> 任务和评估中的评分指南及其它资源大多数位于 [MDN 学习区示例中文版](https://github.com/roy-tian/learning-area/)，还有一些位于 [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)。
+> 任务和评估中的评分指南及其它资源大多数位于 [`mdn/learning-area`](https://github.com/mdn/learning-area/)，还有一些位于 [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)。
 
 ## 获取代码示例
 
