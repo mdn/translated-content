@@ -30,7 +30,7 @@ l10n:
 ## 不同的表单控件
 
 - [基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-  - :  从详细学习原始 HTML {{htmlelement("input")}} 类型的功能开始，同时学习在收集不同类型的数据时，还有哪些可用的选择。
+  - : 从详细学习原始 HTML {{htmlelement("input")}} 类型的功能开始，同时学习在收集不同类型的数据时，还有哪些可用的选择。
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
   - : 继续深入学习 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及这些类型提供的各种 UI 控件和数据收集增强功能。此外，还会学习 {{htmlelement('output')}} 元素。
 - [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
