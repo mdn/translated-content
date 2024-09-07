@@ -29,9 +29,9 @@ Alternativamente, puede usar un sitio como [CodePen](https://codepen.io/), [JSFi
 
 Se te han proporcionado algunos HTML / CSS en bruto y algunas cadenas de texto y funciones de JavaScript; necesitas escribir el JavaScript necesario para convertir esto en un programa funcional, que hace lo siguiente:
 
-- Genera una historia tonta cuando se presiona el botón "Generar historia aleatoria"(Generate random story).
-- Reemplaza el nombre predeterminado "Bob" en la historia con un nombre personalizado, solo si se ingresa un nombre personalizado en el campo de texto "Ingresar nombre personalizado"(Enter custom name) antes de presionar el botón Generar.
-- Convierte las cantidades y unidades de peso y temperatura predeterminadas de los EE. UU.(US) en la historia en equivalentes del Reino Unido(UK), si el botón de selección del Reino Unido es seleccionado, antes de presionar el botón de generar.
+- Genera una historia tonta cuando se presiona el botón "Generate random story".
+- Reemplaza el nombre predeterminado "Bob" en la historia con un nombre personalizado, solo si se ingresa un nombre personalizado en el campo de texto "Enter custom name" antes de presionar el botón de generar.
+- Convierte las cantidades y unidades de peso y temperatura predeterminadas de los EE. UU. (US) en la historia en equivalentes del Reino Unido (UK), si el botón de selección del Reino Unido es seleccionado, antes de presionar el botón de generar.
 - Generará otra historia tonta al azar si presionas el botón otra vez (y otra vez ...)
 
 La siguiente captura de pantalla muestra un ejemplo de lo que debería producir el programa terminado:
