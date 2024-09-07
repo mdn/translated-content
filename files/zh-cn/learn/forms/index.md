@@ -1,5 +1,5 @@
 ---
-title: Web 表单指南
+title: Web 表单构建块
 slug: Learn/Forms
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
@@ -11,57 +11,57 @@ l10n:
 
 ## 前提
 
-在开始这个模块之前，你至少应该熟悉[介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，你应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
+在开始本模块之前，你应该至少学习过[介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。此时此刻，你应该会发现[入门指南](#入门指南)很容易理解，并且也能够使用[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 
-然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在你查看下面列出的其他部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
+然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些为表单控件添加样式的特定技术，一些用于处理诸如验证和创建自定义表单控件的脚本知识。因此，在学习下列其他文章之前，我们会建议你先离开去学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
-以上内容明确地说明了为什么我们将 web 表单独立放在一个模块中，而不是将其与 HTML、CSS 和 JavaScript 这些模块放在一起——表单元素比绝大多数其他的 HTML 元素都要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密集合才能充分利用它们。
+以上内容很好地表明了我们为什么将 web 表单放在单独模块中，而不是将其混入 HTML、CSS 和 JavaScript 专题区域中——表单元素比大多数其他的 HTML 元素要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密配合才能充分利用。
 
 > [!NOTE]
-> 如果你正在使用一个无法创建自己的文件的计算机、平板电脑或其他设备，那么你可以尝试（大多数）在线编码程序中的代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
+> 如果你工作的计算机/掌上电脑/其他设备无法创建文件，可以使用在线编码程序（例如，[JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/)）实验（大多数）代码示例。
 
-## 基本指南
+## 入门指南
 
 - [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-  - : 本系列的第一篇文章提供了第一次创建 HTML 表单的经验，包括设计一个简单表单、使用正确的 HTML 元素实现它、通过 CSS 添加一些非常简单的样式，以及如何将数据发送到服务器。
+  - : 本系列的第一篇文章让你拥有第一次创建 Web 表单的体验，包括，设计一个简单表单、使用正确的 HTML 元素实现表单、通过 CSS 添加一些非常简单的样式，以及向服务器发送数据。
 - [如何构造 Web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-  - : 有了基础知识，我们现在更详细地了解了用于为表单的不同部分提供结构和意义的元素。
+  - : 已经有了基础知识，现在深入学习为表单的不同部分提供结构和含义的元素。
 
 ## 不同的表单控件
 
 - [基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-  - : 我们从详细了解原始 HTML {{htmlelement("input")}} 元素的类型开始，同时学习在收集不同类型数据时可用的选择。
+  - :  从详细学习原始 HTML {{htmlelement("input")}} 类型的功能开始，同时学习在收集不同类型的数据时，还有哪些可用的选择。
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-  - : 在这里，我们深入挖掘 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及它们提供的各种 UI 控件和数据收集增强功能。此外，我们可以了解 {{htmlelement('output')}} 元素。
+  - : 继续深入学习 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及这些类型提供的各种 UI 控件和数据收集增强功能。此外，还会学习 {{htmlelement('output')}} 元素。
 - [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-  - : 接下来，我们学习所有非 `<input>` 表单控件，以及相关的工具，如：{{htmlelement('select')}}、{{htmlelement('textarea')}}、{{htmlelement('meter')}} 和 {{htmlelement('progress')}}。
+  - : 接下来学习所有非 `<input>` 表单控件，以及相关的工具，例如：{{htmlelement('select')}}、{{htmlelement('textarea')}}、{{htmlelement('meter')}} 和 {{htmlelement('progress')}}。
 
 ## 表单样式指南
 
 - [为 Web 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-  - : 本文介绍了如何使用 CSS 为表单赋予样式，包括可能需要了解的基本样式任务的所有基础知识。
+  - : 本文介绍如何使用 CSS 为表单添加样式，包括完成基本样式任务所需了解的全部基础知识。
 - [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-  - : 在这里，我们将看到一些更高级的表单样式技术，这些技术需要在处理一些更难以设置样式的元素时使用。
+  - : 在这里学习一些更高级的表单样式技术，用于处理一些很难设置样式的表单元素。
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-  - : 这是一篇对 UI 伪类的介绍，使 HTML 表单控件能够根据当前状态进行定位。
+  - : 一篇 UI 伪类的介绍——根据表单的当前状态定位到 HTML 表单控件。
 
 ## 验证和提交表单数据
 
 - [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-  - : 仅仅发送数据还不够——我们还需要确保用户填写表单的数据格式是正确的，以在后续流程中正确处理它，而且它不会破坏我们的应用程序。我们还希望帮助用户正确填写表单，让他们在使用应用程序时不会感到困扰。表单验证可以帮助我们实现这些目标，本文将告诉你需要了解的内容。
+  - : 仅仅发送数据还不够——还需要确保用户填写的表单数据的格式是正确的，以便后续能正确处理，也要确保数据不会破坏应用程序。我们也想帮助用户正确填写表单，让他们在使用应用程序时不会感到困扰。表单验证帮助我们实现这些目标——本文讲解你需要了解的内容。
 - [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
-  - : 本文讨论当用户提交一个表单时，会发生什么情况——表单数据的去向，以及当表单数据到达指定位置时我们如何处理？我们还研究了与发送表单数据相关的一些安全问题。
+  - : 本文讨论的是当用户提交表单时，会发生什么——表单数据的去向，以及当表单数据到达之后我们如何处理？我们还研究一些与发送表单数据有关联的安全问题。
 
 ## 高级文章
 
-以下文章对于学习路径来说没那么重要，但是当你掌握了上述技术并向了解更多内容时，它们会变得有趣且实用。
+以下文章对于学习路径来说没那么重要，但是当你掌握了上述技术并想了解更多内容时，它们会变得有趣且实用。
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-  - : 在某些情况下，可能出于样式或功能的原因，原生表单部件无法提供你所需要的东西。在这种情况下，你可能需要使用原生 HTML 构建自己的表单小部件。本文将讲述一个实例，说明你将如何做到这一点，以及在实际操作时需要注意的事项。
+  - : 在某些情况下，出于样式或功能的原因，原生表单部件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单部件。本文通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
+  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过自定义的 JavaScript 而不是标准的表单提交发送请求。本文还说明为什么要这么做，以及这样做的意图。（参见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-  - : 最后一篇文章提供了一个方便的参考，以确定 CSS 属性与表单元素的兼容性关系。
+  - : 最后一篇文章提供的参考意在方便查找 CSS 属性与表单元素的兼容性关系。
 
 ## 参见
 
