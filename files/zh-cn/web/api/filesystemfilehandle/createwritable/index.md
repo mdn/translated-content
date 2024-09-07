@@ -88,9 +88,7 @@ async function writeFile(fileHandle, contents) {
     <label for="filetext">输入要写入文件的文本：</label>
     <input type="text" id="filetext" name="filetext" disabled />
   </li>
-  <li>
-    将你的文本写入文件：<button class="write" disabled>写入文本</button>
-  </li>
+  <li>将你的文本写入文件：<button class="write" disabled>写入文本</button></li>
 </ol>
 ```
 

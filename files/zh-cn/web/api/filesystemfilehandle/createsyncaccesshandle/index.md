@@ -91,9 +91,7 @@ onmessage = async (e) => {
     <input type="text" id="filetext" name="filetext" />
   </li>
   <li>将你的文本写入文件：<button class="write">写入文本</button></li>
-  <li>
-    如果文件太满，则清空该文件：<button class="empty">清空文件</button>
-  </li>
+  <li>如果文件太满，则清空该文件：<button class="empty">清空文件</button></li>
 </ol>
 ```
 
