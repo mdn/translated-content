@@ -47,7 +47,7 @@ l10n:
   - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
 - [Web 表单——操作用户数据](/zh-CN/docs/Learn/Forms)
   - : Web 表单是用于和用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题涵盖 Web 表单的结构、样式和交互相关的全部要点。
-- [无障碍——让每个人都能使用网络](/zh-CN/docs/Learn/Accessibility)
+- [无障碍——让每个人都能使用 Web](/zh-CN/docs/Learn/Accessibility)
   - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该专题包含一切所需了解的信息。
 - [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
