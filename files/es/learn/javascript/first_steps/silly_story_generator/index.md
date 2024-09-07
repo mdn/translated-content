@@ -75,8 +75,8 @@ Completando la función `result()`:
 4. Dentro del primer bloque `if`, agregue otra llamada al método de reemplazo de cadena para reemplazar el nombre 'Bob' que se encuentra en la cadena `newStory` con la variable de `name`. En este bloque estamos diciendo "Si se ingresó un valor en la entrada de texto `customName` reemplace a Bob en la historia con ese nombre personalizado."
 5. Dentro del segundo bloque `if`, verificamos si se ha seleccionado el botón de opción `uk`. Si es así, queremos convertir los valores de peso y temperatura en la historia de libras y Fahrenheit a piedras y grados centígrados. Lo que debe hacer es lo siguiente:
 
-   1. Busque las fórmulas para convertir libras a stone, y Fahrenheit en grados centígrados.
-   2. Dentro de la línea que define la variable `weight`, reemplace 300 con un cálculo que convierta 300 libras en stones. Concatenar `'stone'` al final del resultado de la llamada `Math.round()`.
+   1. Busque las fórmulas para convertir libras a piedras, y Fahrenheit en grados centígrados.
+   2. Dentro de la línea que define la variable `weight`, reemplace 300 con un cálculo que convierta 300 libras en piedras. Concatenar `'stone'` al final del resultado de la llamada `Math.round()`.
    3. Al lado de la línea que define la variable `temperature`, reemplace 94 con un cálculo que convierta 94 Fahrenheit en centígrados. Concatenar `'centigrade'` al final del resultado de la llamada `Math.round()`.
    4. Justo debajo de las dos definiciones de variables, agregue dos líneas de reemplazo de cadena más, que reemplacen '94 fahrenheit' con el contenido de la variable `temperature`, y '300 libras' con el contenido de la variable `weight`.
 
