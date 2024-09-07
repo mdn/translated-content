@@ -1,9 +1,13 @@
 ---
 title: 使用 luxon 做日期格式化
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+l10n:
+  sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
-我们模型的默认日期呈现很难看：_Wed Sep 04 2024 11:01:54 GMT+0800 (中国标准时间)_。在本节中，我们将展示如何更新上一节中的 _书本实例列表 BookInstance List_ 页面，以更友好的格式显示 `due_date` 字段：2024 年 8 月 9 日。
+{{LearnSidebar}}
+
+我们模型的默认日期呈现很难看：_Fri Apr 10 2020 12:49:58 GMT+0800 (中国标准时间)_。在本节中，我们将展示如何更新上一节中的*书本实例列表*页面，以更友好的格式显示 `due_date` 字段：2023 年 4 月 10 日。
 
 我们使用的方法是在 `BookInstance` 模型中创建一个返回格式化日期的虚拟屬性。我们将使用 [luxon](https://www.npmjs.com/package/luxon) 来做格式化，这是一个功能强大、现代化并且非常友好的 JavaScript 日期库，用于解析、验证、操作、格式化和本地化日期。
 
@@ -20,8 +24,8 @@ npm install luxon
 
 ## 创建虚拟属性
 
-1. 打开 **./models/bookinstance.js**.
-2. 在此页面最上方，引用 _luxon_
+1. 打开 **./models/bookinstance.js**。
+2. 在此页面最上方，引用 _luxon_。
 
    ```js
    const { DateTime } = require("luxon");
@@ -42,7 +46,7 @@ BookInstanceSchema.virtual("due_back_formatted").get(function () {
 
 打开 **/views/bookinstance_list.pug**，然后用 `due_back_formatted` 取代 `due_back`。
 
-```PUG
+```pug
 if val.status != 'Available'
   //span  (Due: #{val.due_back} )
   span  (Due: #{val.due_back_formatted} )
