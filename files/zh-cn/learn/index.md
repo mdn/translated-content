@@ -81,7 +81,7 @@ l10n:
 
 1. 在电脑上安装 [Git](https://git-scm.com/downloads)。它是 Github 底层使用的版本控制系统。
 
-2. 打开电脑的[命令提示符](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)，[macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）。
+2. 打开电脑的[命令提示符](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)、[macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）。
 
 3. 要将学习区仓库复制到名为 learning-area 的目录（learning-area 目录将位于命令提示符/终端指向的当前目录中），使用下面的命令：
 
