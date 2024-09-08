@@ -2,7 +2,7 @@
 title: 学习 Web 开发
 slug: Learn
 l10n:
-  sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
+  sourceCommit: 3ab7947b53ae1a8ba41111b29c34585a188718ae
 ---
 
 {{LearnSidebar}}
