@@ -57,7 +57,7 @@ l10n:
 - [现在开始构建无障碍的 web 应用](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : 来自 Marcy Sutton 的优秀视频教程系列。
 - [Deque University 资源](https://dequeuniversity.com/resources/)
-  - : 包含代码示例，屏幕阅读器参考和其他实用的资源。
+  - : 包含代码示例、屏幕阅读器参考和其他实用的资源。
 - [WebAIM 资源](https://webaim.org/resources/)
   - : 包含指南、清单、工具和其他资源。
 - [Web 无障碍评估工具列表](https://www.w3.org/WAI/ER/tools/)
