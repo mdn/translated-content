@@ -1,6 +1,8 @@
 ---
 title: web 入门
 slug: Learn/Getting_started_with_the_web
+l10n:
+  sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
 
 {{LearnSidebar}}
