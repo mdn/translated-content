@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-学习大量的 HTML、CSS 和 JavaScript 对成为一名 Web 开发者是有帮助的。再远一些，重要的是学习如何**负责任**地使用这些技术，让所有用户能在 Web 使用你的作品。为了帮你实现这个目标，本模块涉及常见的最佳实践（在 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 专题中有所体现），以及大量和严格执行无障碍有关的技巧。接下来会详细介绍无障碍。
+如果你想成为一名 Web 开发者，学习一些 HTML、CSS、JavaScript 是有用的。除了机械地使用之外，重要的是学习如何**负责任**地使用这些技术，让所有用户能在 Web 使用你的作品。为了帮你实现这个目标，本模块涉及常见的最佳实践（在 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 专题中有所体现），以及大量和严格执行无障碍有关的技巧。接下来会详细介绍无障碍。
 
 ## 概述
 
