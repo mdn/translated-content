@@ -40,7 +40,7 @@ slug: Web/HTML/Element/abbr
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>없음, 두 태그 모두 시작 태그와 종료 태그가 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
