@@ -7,7 +7,7 @@ slug: Web/API/History/state
 
 **`History.state`** 속성은 현 history에 해당하는 state값을 나타냅니다.
 
-{{event("popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
+{{domxref("Window/popstate_event", "popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
 
 ## 구문
 

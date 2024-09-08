@@ -442,7 +442,7 @@ setup();
 ```
 
 1. 음의 이름과 옥타브를 주파수에 대응(map)시키는 표는 `createNoteTable()`를 호출함으로써 생성됩니다.
-2. 메인 gain 제어에서 {{event("change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
+2. 메인 gain 제어에서 {{domxref("HTMLElement/change_event", "change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
 3. 다음으로, 음 주파수 표에 있는 각 옥타브에 대해 순회합니다. 각 옥타브에 대해, 우리는 그 옥타브에 있는 음들의 목록을 얻기 위해 {{jsxref("Object.entries()")}}를 사용합니다.
 4. 그 옥타브의 음들을 포함하는 {{HTMLElement("div")}}를 생성하고 (이렇게 함으로써 우리는 옥타브들 사이에 약간의 공간을 가질 수 있습니다), 이것의 클래스명을 "octave"로 설정합니다.
 5. 옥타브에 있는 각 건반에 대해, 우리는 음의 이름이 한 문자보다 많은지 검사합니다. 우리는 이것을 생략하는데, 왜냐하면 우리는 이 예제에서 샤프(#) 음들을 무시하기 때문입니다. 만약 음의 이름이 단지 한 문자라면, 우리는 `createKey()`를 호출하는데, 이는 음의 문자열, 옥타브, 그리고 주파수를 명시합니다. 이 반환된 요소는 단계 4에서 생성된 옥타브 요소에 추가됩니다.
@@ -513,7 +513,7 @@ oscillator의 주파수는 {{domxref("Oscillator.frequency")}} {{domxref("AudioP
 
 #### 음 재생하기
 
-{{event("mousedown")}} 이나 {{domxref("mouseover")}} 이벤트가 건반에서 발생했을 때, 우리는 대응하는 음을 재생하기를 원합니다. `notePressed()` 함수는 이 이벤트들에 대한 이벤트 핸들러로 사용됩니다.
+{{domxref("Element/mousedown_event", "mousedown")}} 이나 {{domxref("Element/mouseover_event", "mouseover")}} 이벤트가 건반에서 발생했을 때, 우리는 대응하는 음을 재생하기를 원합니다. `notePressed()` 함수는 이 이벤트들에 대한 이벤트 핸들러로 사용됩니다.
 
 ```js
 function notePressed(event) {
@@ -529,7 +529,7 @@ function notePressed(event) {
 }
 ```
 
-두 가지 이유로, 우리는 주요 마우스 버튼이 눌러졌는지를 확인함으로써 시작합니다. 첫째로, 우리는 오직 주요 마우스 버튼이 노트 재생을 할 수 있게 허용하기를 원합니다. 둘째로, 그리고 더욱 중요하게, 우리는 유저가 음에서 음으로 드래그하는 경우에 대해 {{event("mouseover")}}를 다루기 위해 이것을 사용하고, 우리는 오직 마우스가 요소에 들어왔을 때 눌러졌다면 노트를 재생하기를 원합니다.
+두 가지 이유로, 우리는 주요 마우스 버튼이 눌러졌는지를 확인함으로써 시작합니다. 첫째로, 우리는 오직 주요 마우스 버튼이 노트 재생을 할 수 있게 허용하기를 원합니다. 둘째로, 그리고 더욱 중요하게, 우리는 유저가 음에서 음으로 드래그하는 경우에 대해 {{domxref("Element/mouseover_event", "mouseover")}}를 다루기 위해 이것을 사용하고, 우리는 오직 마우스가 요소에 들어왔을 때 눌러졌다면 노트를 재생하기를 원합니다.
 
 만약 마우스 버튼이 실제로 눌러졌다면, 우리는 눌러진 건반의 [`dataset`](/ko/docs/Web/HTML/Global_attributes#dataset) 특성을 얻습니다; 이는 요소의 사용자 정의 데이터 특성에 접근하는 것을 쉽게 해 줍니다. 우리는 `data-pressed` 특성을 찾습니다; 만약 (음이 이미 재생되고 있지 않다는 것을 나타내는) 그것이 없다면, 요소의 `data-frequency` 특성 값을 전달하며, 우리는 음을 재생하기 위해 `playTone()`을 호출합니다. 반환된 oscillator는 `oscList`에 미래의 참조를 위해 저장되고, `data-pressed`는 음이 재생되고 있다는 것을 나타내기 위해 `yes`로 설정되어 다음 번에 이것이 호출되었을 때 이것을 다시 시작하지 않습니다.
 
@@ -554,7 +554,7 @@ function noteReleased(event) {
 
 #### 메인 볼륨 변경하기
 
-세팅 바의 볼륨 슬라이더는 메인 gain 노드의 gain 값을 변경하기 위한 간단한 인터페이스를 제공하는데, 이로써 재생되는 모든 음의 세기를 변경합니다. `changeVolume()` 메서드는 슬라이더의 {{event("change")}} 이벤트에 대한 핸들러입니다.
+세팅 바의 볼륨 슬라이더는 메인 gain 노드의 gain 값을 변경하기 위한 간단한 인터페이스를 제공하는데, 이로써 재생되는 모든 음의 세기를 변경합니다. `changeVolume()` 메서드는 슬라이더의 {{domxref("HTMLElement/change_event", "change")}} 이벤트에 대한 핸들러입니다.
 
 ```js
 function changeVolume(event) {
