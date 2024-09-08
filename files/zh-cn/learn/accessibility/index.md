@@ -52,8 +52,8 @@ l10n:
 
 ## 参见
 
-- [学习无障碍 Web 设计](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>**MDN 课程伙伴**</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) **学习无障碍 Web 设计**课程通过解决交互式编码挑战和修复真实网站的方式教授如何编写无障碍的 HTML。
+- [学习无障碍 Web 设计](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>**MDN 课程合作伙伴**</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) 的*学习无障碍 Web 设计*课程通过解决交互式编码挑战和修复真实网站的方式教授如何编写无障碍的 HTML。
 - [现在开始构建无障碍的 Web 应用](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : 来自 Marcy Sutton 的优秀视频教程系列。
 - [Deque University 资源](https://dequeuniversity.com/resources/)
