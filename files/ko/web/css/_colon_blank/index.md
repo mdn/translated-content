@@ -7,7 +7,8 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> [!참고] > `:blank` 선택자는 CSSWG가 지속적으로 변경하고 있음에 따라 위험 요소로 간주됩니다.
+> [!NOTE] 
+> `:blank` 선택자는 CSSWG가 지속적으로 변경하고 있음에 따라 위험 요소로 간주됩니다.
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) 를 확인해 보세요.
 
