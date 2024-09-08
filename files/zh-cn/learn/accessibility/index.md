@@ -61,4 +61,4 @@ l10n:
 - [WebAIM 资源](https://webaim.org/resources/)
   - : 包含指南、清单、工具和其他资源。
 - [Web 无障碍评估工具列表](https://www.w3.org/WAI/ER/tools/)
-  - : 包含一系列 web 无障碍评估工具。
+  - : 包含一系列 Web 无障碍评估工具。
