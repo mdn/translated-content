@@ -39,7 +39,7 @@ l10n:
 - [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : 当正确使用 CSS 和 JavaScript 时，也能提供无障碍的 Web 体验，但错用的话，会极大地破坏无障碍。这篇文章概括了大量的 CSS 和 JavaScript 最佳实践，这些实践能确保甚至是复杂内容也尽可能是无障碍的。
 - [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-  - : 接着上一篇文章，有时执行复杂的 UI 控制（涉及非语义化的 HTML 和动态 JavaScript 内容更新）很难。WAI-ARIA 是通过添加额外的语义（浏览器和辅助技术能识别和使用这些语义让用户知道正在发生什么）来解决这类问题的技术。这篇文章以基础级别的视角讲解如何使用它来改善无障碍。
+  - : 接着上一篇文章，有时制作复杂的 UI 控件（涉及非语义化的 HTML 和动态 JavaScript 内容更新）很难。WAI-ARIA 是通过添加额外的语义（浏览器和辅助技术能识别和使用这些语义让用户知道正在发生什么）来解决这类问题的技术。这篇文章以基础级别的视角讲解如何使用它来改善无障碍。
 - [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
   - : 会出现无障碍问题的另一类内容就是多媒体——视频、音频和图像内容需要提供合适的文本替代，这样辅助技术和相应的用户就能理解这些内容。本文将介绍如何做到这一点。
 - [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
