@@ -726,8 +726,18 @@ div {
       rgba(75, 0, 130, 0.5) 180px,
       rgba(238, 130, 238, 0.5) 210px,
       rgba(255, 0, 0, 0.5) 230px
-    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
-        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
 }
 ```
 
@@ -764,7 +774,8 @@ div {
       transparent 116px,
       rgba(255, 206, 0, 0.25) 116px,
       rgba(255, 206, 0, 0.25) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
@@ -778,18 +789,21 @@ div {
       transparent 116px,
       rgba(255, 206, 0, 0.25) 116px,
       rgba(255, 206, 0, 0.25) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
       rgba(143, 77, 63, 0.25) 5px,
       rgba(143, 77, 63, 0.25) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px, rgba(143, 77, 63, 0.25) 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px
+    );
 
   background: repeating-linear-gradient(
       90deg,
@@ -799,7 +813,8 @@ div {
       rgba(255, 127, 0, 0.25) 63px 69px,
       transparent 69px 116px,
       rgba(255, 206, 0, 0.25) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
@@ -807,7 +822,8 @@ div {
       rgba(255, 127, 0, 0.25) 63px 69px,
       transparent 69px 116px,
       rgba(255, 206, 0, 0.25) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
       rgba(143, 77, 63, 0.25) 5px 10px
