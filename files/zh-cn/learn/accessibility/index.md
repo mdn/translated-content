@@ -34,7 +34,7 @@ l10n:
 
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
   - : 本模块的第一篇文章深入介绍无障碍是什么——包括：我们需要考虑哪一群人，为什么要考虑这些人，不同的人使用什么工具与 Web 交互，以及我们如何构建 Web 开发工作流的无障碍部分。
-- [HTML: 良好的无障碍基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
   - : 只要确保正确的 HTML 元素被用于正确的目的，大量的 Web 内容就是无障碍的。这篇文章详细讲述 HTML 是如何确保最大程度的无障碍。
 - [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : 当正确使用 CSS 和 JavaScript 时，也能提供无障碍的 Web 体验，但错用的话，会极大地破坏无障碍。这篇文章概括了大量的 CSS 和 JavaScript 最佳实践，这些实践能确保甚至是复杂内容也尽可能是无障碍的。
