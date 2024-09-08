@@ -32,7 +32,7 @@ l10n:
 
 ## 指南
 
-- [无障碍是什么？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
   - : 本模块的第一篇文章深入介绍无障碍是什么——包括：我们需要考虑哪一群人，为什么要考虑这些人，不同的人使用什么工具与 Web 交互，以及我们如何构建 web 开发工作流的无障碍部分。
 - [HTML: 良好的无障碍基础](/zh-CN/docs/Learn/Accessibility/HTML)
   - : 只要确保正确的 HTML 元素被用于正确的目的，大量的 Web 内容就是无障碍的。这篇文章详细讲述 HTML 是如何确保最大程度的无障碍。
