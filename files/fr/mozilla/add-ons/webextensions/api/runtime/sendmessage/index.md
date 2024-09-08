@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.
 
-Si vous envoyez à votre extension, omettez l'argument `extensionId`. L'événement {{WebExtAPIRef('runtime.onMessage')}} sera déclenché dans chaque page de votre extension, à l'exception du cadre appelé `runtime.sendMessage`.
+Si vous envoyez à votre extension, omettez l'argument `extensionId`. L'événement {{WebExtAPIRef('runtime.onMessage')}} sera déclenché dans chaque page de votre extension, à l'exception du cadre ayant appelé `runtime.sendMessage`.
 
 Si vous envoyez une extension différente, ajouter l'argument `extensionId` à l'ID de l'autre extension. {{WebExtAPIRef('runtime.onMessageExternal')}} sera déclenché dans l'autre extension.
 
