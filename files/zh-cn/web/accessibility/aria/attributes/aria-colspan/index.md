@@ -16,7 +16,7 @@ l10n:
 在 HTML 中，{{HTMLElement('th')}} 和 {{HTMLElement('td')}} 元素具有 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#attributes) 属性。当使用语义化的 {{HTMLElement('table')}} 时，按设计使用原生的 `colspan` 属性即可。此 ARIA 属性用于不包含在原生表格中的单元格和网格单元格，如果用于 {{HTMLElement('table')}} 中的单元格，将被忽略。
 
 > [!NOTE]
-> 使用 ARIA 的首要规则是，如果可以使用具有所需语义和行为的原生功能，而不是重新定义元素并 **添加** ARIA 角色、状态或属性使其可访问，那么就这样做。尽可能使用 HTML {{HTMLelement('table')}} 元素，包括 {{HTMLelement('td')}} 和 {{HTMLelement('th')}} 以及 `colspan` 属性，而不是带有 ARIA 角色和属性的非语义元素。
+> 使用 ARIA 的首要规则是，如果可以使用具有所需语义和行为的原生功能，而不是重新定义元素并**添加** ARIA 角色、状态或属性使其可访问，那么就这样做。尽可能使用 HTML {{HTMLelement('table')}} 元素，包括 {{HTMLelement('td')}} 和 {{HTMLelement('th')}} 以及 `colspan` 属性，而不是带有 ARIA 角色和属性的非语义元素。
 
 `aria-colspan` 的值应为正整数。单元格跨越的默认或假定值为 1。确保所包含的值不会导致单元格或网格单元格与同一行中的下一个单元格重叠，也不会导致单元格跨越超出包含的表格、网格或树网格。
 
