@@ -880,7 +880,8 @@ div {
         rgba(0, 0, 0, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 20px
-      ) top left no-repeat yellow;
+      )
+      top left no-repeat yellow;
   background-size:
     200px 200px,
     150px 150px;
