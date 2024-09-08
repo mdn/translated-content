@@ -558,7 +558,8 @@ div {
         circle at 93.3% 75%,
         rgba(0, 255, 0, 0.5),
         rgba(0, 255, 0, 0) 70.71%
-      ) beige;
+      )
+      beige;
   border-radius: 50%;
 }
 ```
