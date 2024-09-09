@@ -31,7 +31,7 @@ l10n:
 
 - [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-  - : 超文本标记语言（HTML）是用于构建 Web 内容并赋予内容含义和目的的代码。例如，这个内容是段落还是列表？页面中是否插入图像？是否要有数据表格？在你的接受能力之内，这篇文章提供足够的信息让你熟悉 HTML。
+  - : 超文本标记语言（HTML）是用于构建 Web 内容并赋予内容含义和目的的代码。例如，这个内容是段落还是列表？页面中是否插入图像？是否要有数据表格？在你的接受能力之内，这篇文章将提供足够的信息让你熟悉 HTML。
 
 - [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
 
