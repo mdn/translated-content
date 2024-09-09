@@ -613,7 +613,6 @@
 /ru/docs/Web/Events/focusin	/ru/docs/Web/API/Element/focusin_event
 /ru/docs/Web/Events/focusout	/ru/docs/Web/API/Element/focusout_event
 /ru/docs/Web/Events/gamepadconnected	/ru/docs/Web/API/Window/gamepadconnected_event
-/ru/docs/Web/Events/gamepaddisconnected	/ru/docs/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/Events/hashchange	/ru/docs/Web/API/Window/hashchange_event
 /ru/docs/Web/Events/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/Events/keypress	/ru/docs/Web/API/Element/keypress_event
