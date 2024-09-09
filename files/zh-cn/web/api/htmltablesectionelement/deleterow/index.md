@@ -75,7 +75,7 @@ button {
 ```js
 // 获取相关接口元素
 const bodySection = document.querySelectorAll("tbody")[0];
-const rows = bodySection.rows; // 集合是实时的，因此其总是最新的
+const rows = bodySection.rows; // 集合是动态的，因此其总是最新的
 const rowNumberDisplay = document.querySelectorAll("output")[0];
 
 const addButton = document.getElementById("add");

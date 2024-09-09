@@ -11,11 +11,11 @@ l10n:
 
 ## 值
 
-一个实时 {{domxref("HTMLTableRowElement")}} 的 {{domxref("HTMLCollection")}} 对象。
+一个动态 {{domxref("HTMLTableRowElement")}} 的 {{domxref("HTMLCollection")}} 对象。
 
 ## 示例
 
-在这个示例中，有两个按钮允许你从表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
+在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
 
 ### HTML
 
@@ -59,7 +59,7 @@ button {
 ```js
 // 获取相关接口元素
 const bodySection = document.querySelectorAll("tbody")[0];
-const rows = bodySection.rows; // 集合是实时的，因此其总是最新的
+const rows = bodySection.rows; // 集合是动态的，因此其总是最新的
 const rowNumberDisplay = document.querySelectorAll("output")[0];
 
 const addButton = document.getElementById("add");
@@ -91,7 +91,7 @@ removeButton.addEventListener("click", () => {
 });
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", "100%", 175)}}
 
