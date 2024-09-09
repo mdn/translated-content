@@ -17,7 +17,7 @@ l10n:
 
 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在 [Worker](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions) 中也是如此（但有一个明显的例外）。
 
-许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多权限启用的 API 列表，您可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
+许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多权限启用的 API 列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
 
 {{domxref("Permissions")}} 还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准及不被广泛支持）。
 
