@@ -16,7 +16,7 @@ l10n:
 你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始学习。除此之外，你应该从下面的专题开始学习。
 
 - HTML 和 CSS
-  - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在[介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
+  - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
 - JavaScript
   - : JavaScript 为网站提供交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)开始学习。
 - 框架和工具
@@ -29,7 +29,7 @@ l10n:
 >
 > #### 想成为一名前端 Web 开发者吗？
 >
-> 你要是想成为一名前端 Web 开发者，但不确定该从哪开始学习，我们会建议使用 [MDN 合作课程](/en-US/curriculum/)作为你的学习计划。它提供一个结构化的学习路径，包含：成为一名成功的前端开发者所需的基本技巧和练习，以及推荐学习资源。
+> 你要是想成为一名前端 Web 开发者，但不确定该从哪开始学习，我们会建议使用 [MDN 课程](/en-US/curriculum/)作为你的学习计划。它提供一个结构化的学习路径，包含：成为一名成功的前端开发者所需的基本技巧和练习，以及推荐学习资源。
 >
 > [**现在开始**](/en-US/curriculum/)
 
