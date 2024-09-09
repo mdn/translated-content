@@ -20,9 +20,9 @@ CSS **规范顺序**是指需要指定（或{{Glossary("parse", "解析")}}）�
 7. {{cssxref("background-clip")}}
 8. {{cssxref("background-color")}}
 
-另外，它的语法规定如果给出了 {{cssxref("background-size")}} 的值，则这个值**必须**在 {{cssxref("background-position")}} 的值之后指定，并用斜杠分隔。其他值则可以以任何顺序出现。
+另外，它的语法规定如果给出了 {{cssxref("background-size")}} 的值，则这个值**必须**在 {{cssxref("background-position")}} 的值**之后**指定，并用斜杠分隔。其他值则可以以任何顺序出现。
 
 ## 参见
 
 - [CSS 值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-- StackOverflow 上的[“规范顺序”对 CSS 属性的意义有什么？](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties)给出了进一步有意义的讨论
+- StackOverflow 上的[“规范顺序”对 CSS 属性的意义有什么？](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties)给出了进一步有意义的讨论。
