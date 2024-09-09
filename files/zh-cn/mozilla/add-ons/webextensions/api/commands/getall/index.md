@@ -43,6 +43,6 @@ getCommands.then(logCommands);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API。
+> 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API。
 
 {{Compat}}

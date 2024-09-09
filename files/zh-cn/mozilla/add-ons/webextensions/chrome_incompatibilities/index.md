@@ -21,7 +21,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 - 异步 API：
 
   - **在 Firefox 和 Safari 中**：异步 API 使用 Promise 实现。
-  - **在 Chrome 浏览器中**：在 Manifest V2 中，异步 API 使用回调实现。在 Manifest V3 中，大多数适当的方法都支持 [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises)。（参见 [Chrome bug 328932](https://crbug.com/328932)）Manifest V3 支持回调，以实现向后兼容。
+  - **在 Chrome 浏览器中**：在 Manifest V2 中，异步 API 使用回调实现。在 Manifest V3 中，大多数适当的方法都支持 [promise](https://developer.chrome.com/docs/extensions/develop/migrate#promises)。（参见 [Chrome bug 328932](https://crbug.com/328932)）Manifest V3 支持回调，以实现向后兼容。
 
 本页其余部分将详细介绍这些不兼容性和其他不兼容性。
 
@@ -60,7 +60,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
   setCookie.then(logCookie, logError);
   ```
 
-- **在 Chrome 中**：在 Manifest V2 中，异步 API 使用回调来返回值，并使用 {{WebExtAPIRef("runtime.lastError")}} 来返回错误。在 Manifest V3 中，为实现向后兼容，支持回调，并在大多数适当的方法中支持 [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises)。
+- **在 Chrome 中**：在 Manifest V2 中，异步 API 使用回调来返回值，并使用 {{WebExtAPIRef("runtime.lastError")}} 来返回错误。在 Manifest V3 中，为实现向后兼容，支持回调，并在大多数适当的方法中支持 [promise](https://developer.chrome.com/docs/extensions/develop/migrate#promises)。
 
   ```js
   function logCookie(c) {
@@ -112,8 +112,8 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 - **在 Firefox 中**：使用 [proxy.settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) 属性或 [proxy.onRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) 属性设置代理，以动态提供 [ProxyInfo](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo)。
   有关 API 的更多信息，请参阅 [proxy](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy)。
-- **在 Chrome 中**：代理设置在 [`proxy.ProxyConfig`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-ProxyConfig) 对象中定义。根据 Chrome 浏览器的代理设置，该设置可能包含 [`proxy.ProxyRules`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-ProxyRules) 或 [`proxy.PacScript`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-PacScript)。代理设置使用 [proxy.settings](https://developer.chrome.com/docs/extensions/reference/proxy/#property-settings) 属性。
-  有关 API 的更多信息，请参阅 [chrome.proxy](https://developer.chrome.com/docs/extensions/reference/proxy/)。
+- **在 Chrome 中**：代理设置在 [`proxy.ProxyConfig`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-ProxyConfig) 对象中定义。根据 Chrome 浏览器的代理设置，该设置可能包含 [`proxy.ProxyRules`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-ProxyRules) 或 [`proxy.PacScript`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-PacScript)。代理设置使用 [proxy.settings](https://developer.chrome.com/docs/extensions/reference/api/proxy#property-settings) 属性。
+  有关 API 的更多信息，请参阅 [chrome.proxy](https://developer.chrome.com/docs/extensions/reference/api/proxy)。
 
 #### Tabs API
 
