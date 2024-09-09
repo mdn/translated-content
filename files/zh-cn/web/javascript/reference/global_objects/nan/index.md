@@ -96,13 +96,22 @@ const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // 获取 NaN 的字节表示
 const n = f2b(NaN);
-// 更改第一个比特位，即符号位，对于 NaN 而言，这个比特位不重要。
-n[0] = 1;
+// 更改符号位，对于 NaN 而言，这个比特位不重要。
+n[7] += 2 ** 7;
+// n[0] += 2**7; 对于大端处理器
 const nan2 = b2f(n);
 console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
-console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 255]
+// 更改第一个比特位，即符号位，对于 NaN 而言，这个比特位不重要。
+m[0] = 1;
+// m[7] = 1; 对于大端处理器
+const nan3 = b2f(m);
+console.log(nan3); // NaN
+console.log(Object.is(nan3, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ### 静默逃逸的 NaN 值
