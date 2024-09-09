@@ -30,7 +30,7 @@ l10n:
 
 ### API
 
-- [Permission API](/ja/docs/Web/API/Permissions_API) の `midi` パーミッションをサポートしました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) の `midi` パーミッションをサポートしました。
   これにより、[`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) を使用して [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) の使用許可の状態を問い合わせできます ([Firefox バグ 1772166](https://bugzil.la/1772166))。
 
 - {{domxref("ReadableStream")}} で、`for await...of` 構文を使用する [ストリーム内のチャンクの非同期反復処理](/ja/docs/Web/API/ReadableStream#async_iteration) をサポートしました ([Firefox バグ 1734244](https://bugzil.la/1734244))。

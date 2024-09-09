@@ -101,7 +101,7 @@ _変更なし。_
 
   - {{domxref("AnimationEffectTimingReadOnly")}} および {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} を実装しました ([Firefox バグ 1214536](https://bugzil.la/1214536))。
 
-- [Permissions API](/ja/docs/Web/API/Permissions_API) が、Nightly だけでなくすべてのリリース版で、既定で有効になりました ([Firefox バグ 1221106](https://bugzil.la/1221106))。
+- [権限 API](/ja/docs/Web/API/Permissions_API) が、Nightly だけでなくすべてのリリース版で、既定で有効になりました ([Firefox バグ 1221106](https://bugzil.la/1221106))。
 - WOFF フォントのサニタイズ処理を、少々緩和しました ([Firefox バグ 1244693](https://bugzil.la/1244693))。
 
 ### MathML
