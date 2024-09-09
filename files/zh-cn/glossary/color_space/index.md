@@ -91,5 +91,5 @@ CIELab 色彩空间包括 Lab、Lch、Oklab 和 Oklch，是设备无关的色彩
 - [CSS 数据类型：`<color>`](/zh-CN/docs/Web/CSS/color_value)
 - [sRGB 色彩空间](https://webstore.iec.ch/en/publication/6168)
 - 维基百科上的 [CIELAB 色彩空间](https://zh.wikipedia.org/wiki/CIELAB色彩空间)
-- 维基百科上的 [CIE 1931 色彩空间](https://en.wikipedia.org/wiki/CIE_1931色彩空间)
+- 维基百科上的 [CIE 1931 色彩空间](https://zh.wikipedia.org/wiki/CIE_1931色彩空间)
 - [Oklab](https://bottosson.github.io/posts/oklab/) 色彩空间
