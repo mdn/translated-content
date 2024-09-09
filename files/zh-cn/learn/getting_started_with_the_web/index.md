@@ -15,7 +15,7 @@ l10n:
 
 ## 指南
 
-通过学习下列的文章，你将从无到拥有第一个线上网页。让我们开始旅程吧！
+通过学习下列的文章，你将从零开始获得第一个在线网页。让我们开始旅程吧！
 
 - [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 
