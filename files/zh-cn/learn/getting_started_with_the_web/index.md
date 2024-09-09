@@ -54,6 +54,6 @@ l10n:
 - [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 课程合作伙伴_</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业道路*教授成为合格的前端 Web 开发者所需的知识，这里有有趣的交互式课程和挑战、有学识的老师以及提供帮助的社区。让你从零到获得第一份前端工作！许多课程有单独的免费版本。
 - [Web 解密](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : 由 [Jérémie Patonnier](https://github.com/JeremiePat) 创建的一套很棒的解释 Web 基础知识的视频系列，面向的是 Web 开发的纯新手。
+  - : 由 [Jérémie Patonnier](https://github.com/JeremiePat) 创建的一系列很棒的解释 Web 基础知识的视频，面向的是 Web 开发的纯新手。
 - [Web 和 Web 标准](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards)
   - : 这篇文章提供一些实用的和 Web 相关的背景故事——Web 是如何诞生的、什么是 Web 标准技术、Web 和 Web 标准技术是如何一起工作的、为什么“Web 开发者”是一个很好的职业选择，以及在课程中你将学习什么样的最佳实践。
