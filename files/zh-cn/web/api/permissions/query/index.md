@@ -2,7 +2,7 @@
 title: Permissions：query() 方法
 slug: Web/API/Permissions/query
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}

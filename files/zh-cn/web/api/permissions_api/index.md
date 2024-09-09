@@ -2,7 +2,7 @@
 title: 权限 API
 slug: Web/API/Permissions_API
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: a251e34887530216e319fee73b5b859c8c943a53
 ---
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
@@ -24,6 +24,7 @@ l10n:
 并非所有 API 的权限状态都可以通过权限 API 查询。权限相关的 API 的非详尽列表包括：
 
 - [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API)：`background-sync`（应当总是被授予）
+- [Compute Pressure API](/zh-CN/docs/Web/API/Compute_Pressure_API)：`compute-pressure`
 - [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API)：`geolocation`
 - [Local Font Access API](/zh-CN/docs/Web/API/Local_Font_Access_API)：`local-fonts`
 - [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)：`microphone`、`camera`

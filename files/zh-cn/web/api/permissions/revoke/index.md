@@ -2,12 +2,16 @@
 title: Permissions：revoke() 方法
 slug: Web/API/Permissions/revoke
 l10n:
-  sourceCommit: afdbe078d7c0357430ff360538edafba3af5496d
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 {{domxref("Permissions")}} 接口的 **`revoke()`** 方法可将当前设置的权限还原为默认状态，即通常的 `prompt` 状态。该方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
+
+This method is removed from the main permissions API specification because its use case is unclear. Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it's unlikely to reach the standards track. For more context, see the [original discussion to remove `permissions.revoke()`](https://github.com/w3c/permissions/issues/46).
+
+此方法已从主 Permissions API 规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已将此 A​​PI 放在首选项后面，但它不太可能达到标准轨道。有关更多上下文，请参阅[关于删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
 
 ## 语法
 
