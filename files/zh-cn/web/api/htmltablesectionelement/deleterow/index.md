@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`deleteRow()`** 方法从给定的 {{HtmlElement("section")}} 中移除一个特殊行（{{HtmlElement("tr")}}）。
+{{domxref("HTMLTableSectionElement")}} 接口的 **`deleteRow()`** 方法从给定的 {{HtmlElement("section")}} 中移除特定的行（{{HtmlElement("tr")}}）。
 
 ## 语法
 
@@ -18,20 +18,20 @@ deleteRow(index)
 ### 参数
 
 - `index`
-  - : `index` 是一个表示应该删除行的整数。然而，特殊索引 `-1` 可以用于删除该部分的最后一行。
+  - : `index` 是一个表示应该删除行的整数。然而，特殊索引 `-1` 可以用于删除当前分段的最后一行。
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : 如果 `index` 大于等于行数或小于 `-1`，则抛出异常。
+  - : 如果 `index` 大于等于行数或小于 `-1`，则抛出该异常。
 
 ## 示例
 
-在这个示例中，有两个按钮允许你从表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
+在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
 
 ### HTML
 
@@ -107,7 +107,7 @@ removeButton.addEventListener("click", () => {
 });
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", "100%", 175)}}
 

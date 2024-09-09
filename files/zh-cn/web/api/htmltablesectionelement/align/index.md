@@ -7,10 +7,10 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`align`** 属性是一个指示如何在 {{htmlelement("thead")}}、{{htmlelement("tbody")}} 或 {{htmlelement("tfoot")}} 表格部分水平对齐文本字符串，单个行和单元格可以覆盖它。
+{{domxref("HTMLTableSectionElement")}} 接口的 **`align`** 属性是一个指示如何在 {{htmlelement("thead")}}、{{htmlelement("tbody")}} 或 {{htmlelement("tfoot")}} 表格部分水平对齐文本的字符串，单个行和单元格可以覆盖它。
 
 > [!NOTE]
-> 此属性已废弃，且应使用 CSS 在单元格中水平对齐文本。使用 CSS {{cssxref("text-align")}} 属性，其优先水平对齐单元格中文本。
+> 此属性已弃用，应使用 CSS 在单元格中水平对齐文本。使用 CSS {{cssxref("text-align")}} 属性，其用于水平对齐单元格中文本，且优先级更高。
 
 ## 值
 

@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLTableSectionElement.align")}} {{deprecated_inline}}
-  - : 一个包含枚举值反映 [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) 属性的字符串，其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
+  - : 一个反映 [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) 属性的字符串枚举值。其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
 - {{domxref("HTMLTableSectionElement.rows")}} {{ReadOnlyInline}}
   - : 返回包含 section 中行的实时 {{domxref("HTMLCollection")}}，此 `HTMLCollection` 是实时的，且当行添加或删除时自动更新。
 - {{domxref("HTMLTableSectionElement.ch")}} {{deprecated_inline}}
