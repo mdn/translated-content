@@ -20,7 +20,7 @@ Express は、JavaScript で書かれ、Node.js 実行環境内でホストさ�
 
 ## ガイド
 
-- [Express/Node の入門](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Express/Node の紹介](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
   - : この最初の Express 記事では、"Node とは何ですか？"、"Express とは何ですか？" という質問に答えます。Express ウェブフレームワークが特別になった理由の概要を説明します。主な機能の概要を説明し、Express アプリケーションの主な構成要素をいくつか紹介します (ただし、現時点ではテスト用の開発環境はまだありません)。
 - [Node (Express) 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
   - : Express の目的がわかったので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境を設定およびテストする方法を説明します。この記事は、オペレーティングシステム共通の、Express アプリの開発を始めるために必要なものを提供します。
