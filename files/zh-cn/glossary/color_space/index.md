@@ -13,7 +13,7 @@ l10n:
 
 _sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再局限于这个色彩空间。[CSS 色彩模块第 4 版](https://drafts.csswg.org/css-color-4)指定了几种预定义的色彩空间，而 [CSS 色彩模块第 5 版](https://drafts.csswg.org/css-color-5/)则进一步规定了用于定义自定义色彩空间的特性。
 
-## 命名的色彩空间
+## 具名色彩空间
 
 预定义的 [RGB 色彩空间](#rgb_色彩空间)包括 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb` 和 `rec2020`。预定义的 [CIELAB 色彩空间](#cielab_色彩空间)包括 `lab-d50` 和 `lab-d65`。预定义的 [XYZ 色彩空间](#xyz_色彩空间)包括 `xyz-d50` 和 `xyz-d65`（以及作为其别名的 `xyz`）。
 
