@@ -15,7 +15,7 @@ l10n:
 
 然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些为表单控件添加样式的特定技术，一些用于处理诸如验证和创建自定义表单控件等内容的脚本知识。因此，在学习下列其他文章之前，我们会建议你先离开去学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
-以上内容很好地表明了我们为什么将 web 表单放在单独模块中，而不是将其混入 HTML、CSS 和 JavaScript 专题中——表单元素比大多数其他的 HTML 元素要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密配合才能充分利用。
+以上内容很好地表明了我们为什么将 Web 表单放在单独模块中，而不是将其混入 HTML、CSS 和 JavaScript 专题中——表单元素比大多数其他的 HTML 元素要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密配合才能充分利用。
 
 > [!NOTE]
 > 如果你工作的计算机/掌上电脑/其他设备无法创建文件，可以使用在线编码程序（例如，[JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/)）实验（大多数）代码示例。
@@ -57,7 +57,7 @@ l10n:
 以下文章对于学习路径来说没那么重要，但是当你掌握了上述技术并想了解更多内容时，它们会变得有趣且实用。
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-  - : 在某些情况下，出于样式或功能的原因，原生表单部件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单部件。本文通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
+  - : 在某些情况下，出于样式或功能的原因，原生表单微件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单微件。本文通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
   - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过自定义的 JavaScript 而不是标准的表单提交发送请求。本文还说明为什么要这么做，以及这样做的意图。（参见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
