@@ -45,7 +45,7 @@ l10n:
 
   - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。这篇文章描述如何以最简便的方式将你的简单示例上线至网络。
 
-- [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [万维网是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
 
   - : 当你访问最喜欢的网站时，有很多你可能不知道的复杂的事情在后台发生。本文将概述在电脑上浏览网页时发生的事情。
 
