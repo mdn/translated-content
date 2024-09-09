@@ -13,7 +13,7 @@ l10n:
 
 ## 值
 
-`NaN` 的值与 {{jsxref("Number.NaN")}} 的值相同。
+其与 {{jsxref("Number.NaN")}} 的值相同。
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -33,7 +33,7 @@ l10n:
 
 `NaN` 及其行为不是 JavaScript 发明的。它在浮点运算中的语义（包括 `NaN !== NaN`）是由 [IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 指定的。`NaN` 的行为包括：
 
-- 如果 `NaN` 涉及数学运算（但不涉及[位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#静默逃逸的 NaN 值)。）
+- 如果 `NaN` 涉及数学运算（但不涉及[位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#静默逃逸的_nan_值)。）
 - 当 `NaN` 是任何关系比较（`>`、`<`、`>=`、`<=`）的操作数之一时，结果总是 `false`。
 - `NaN` 不等于（通过 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)、[`!=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)、[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`!==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)）任何其他值——包括与另一个 `NaN` 值。
 
@@ -81,7 +81,7 @@ const arr = [2, 4, NaN, 12];
 arr.indexOf(NaN); // -1
 arr.includes(NaN); // true
 
-// 合适定义的谓词的方法总是能够找到 NaN
+// 接受正确定义的断言的方法总是能够找到 NaN
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
@@ -96,6 +96,7 @@ const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // 获取 NaN 的字节表示
 const n = f2b(NaN);
+const m = f2b(NaN);
 // 更改符号位，对于 NaN 而言，这个比特位不重要。
 n[7] += 2 ** 7;
 // n[0] += 2**7; 对于大端处理器
