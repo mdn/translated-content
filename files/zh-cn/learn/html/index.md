@@ -24,7 +24,7 @@ l10n:
 
 本专题包含以下模块，建议按顺序学习这些模块。你应该毫无疑问的从第一模块开始学习。
 
-- [介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
   - : 本模块分为几个阶段：熟悉重要的概念和语法、在文本中应用 HTML、创建超链接、使用 HTML 构建网页。
 - [多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
   - : 本模块探索了在网页中如何使用 HTML 嵌入多媒体，包含：不同的嵌入图像的方法，以及嵌入视频、音频，甚至完整的其它网页的方式。
