@@ -56,4 +56,4 @@ l10n:
 - [Web 解密](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
   - : 由 [Jérémie Patonnier](https://github.com/JeremiePat) 创建的一套很棒的解释 Web 基础知识的视频系列，面向的是 Web 开发的纯新手。
 - [Web 和 Web 标准](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards)
-  - : 这篇文章提供一些实用的和 Web 相关的背景故事——Web 是如何诞生的、什么是 Web 标准技术、Web 和 Web 标准技术是如何一起工作的、为什么 “Web 开发者”是一个很好的职业选择，以及在课程中你将学习什么样的最佳实践。
+  - : 这篇文章提供一些实用的和 Web 相关的背景故事——Web 是如何诞生的、什么是 Web 标准技术、Web 和 Web 标准技术是如何一起工作的、为什么“Web 开发者”是一个很好的职业选择，以及在课程中你将学习什么样的最佳实践。
