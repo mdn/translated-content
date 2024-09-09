@@ -43,7 +43,7 @@ l10n:
 
 - [发布简单代码](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
 
-  - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。本文描述如何以最简便的方式将你的简单示例上线至网络。
+  - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。这篇文章描述如何以最简便的方式将你的简单示例上线至网络。
 
 - [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
 
