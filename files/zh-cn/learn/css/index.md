@@ -11,7 +11,7 @@ l10n:
 
 ## 前提
 
-在尝试 CSS 之前，你应该学习 HTML 的基础知识。我们建议你先学习 [介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
+在尝试 CSS 之前，你应该学习 HTML 的基础知识。我们建议你先学习 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
 
 一旦你理解了 HTML 的基础知识，我们就建议你同时学习额外的 HTML 和 CSS，在这两个专题之间来回切换。这么做是因为，使用 CSS 后，HTML 会更有意思，学习 HTML 也更有趣。并且不了解 HTML 的话，也无法学习 CSS。
 
