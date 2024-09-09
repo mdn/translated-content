@@ -11,7 +11,7 @@ l10n:
 
 ## 前提
 
-在开始本模块之前，你应该至少学习过[介绍 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。此时此刻，你应该会发现[入门指南](#入门指南)很容易理解，并且也能够使用[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
+在开始本模块之前，你应该至少学习过 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。此时此刻，你应该会发现[入门指南](#入门指南)很容易理解，并且也能够使用[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 
 然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些为表单控件添加样式的特定技术，一些用于处理诸如验证和创建自定义表单控件等内容的脚本知识。因此，在学习下列其他文章之前，我们会建议你先离开去学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
