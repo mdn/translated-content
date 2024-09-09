@@ -41,7 +41,7 @@ l10n:
 
   - : JavaScript 是用于为网站添加交互特性的编程语言。例如，游戏、按钮按下或在表单中输入数据时会发生的事情、动态的样式效果、动画，等等。在这篇文章中，我们将让你了解这门令人兴奋的语言的潜力，以及如何入门。
 
-- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [发布你的网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
 
   - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。这篇文章描述如何以最简便的方式将你的简单示例上线至网络。
 
