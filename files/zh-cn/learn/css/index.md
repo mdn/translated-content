@@ -7,44 +7,48 @@ l10n:
 
 {{LearnSidebar}}
 
-层叠样式表——或 {{glossary("CSS")}}——是你在 {{glossary("HTML")}} 之后应该学习的第二门技术。HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，你可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
+层叠样式表——或 {{glossary("CSS")}}——是你在学完 {{glossary("HTML")}} 之后应该学习的第一门技术。HTML 用于为你的内容定义结构和语义，CSS 用于为内容提供样式和对内容进行布局。例如，你可以使用 CSS 更改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其它装饰特性。
 
-## 学习路径
+## 前提
 
-在尝试学习 CSS 之前，你应该了解 HTML 的基础知识。建议你先学习 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块。
+在尝试 CSS 之前，你应该学习 HTML 的基础知识。我们建议你先学习 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
 
-一旦你掌握了 HTML 的基础知识，我们建议你同时学习更深入的 HTML 和 CSS，在这两个主题之间来回切换学习。这是因为当你应用 CSS 时，HTML 会变得更加有趣，学习起来也更有乐趣，而不了解 HTML 就无法学习 CSS。
+一旦你理解了 HTML 的基础知识，我们就建议你同时更深入地学习 HTML 和 CSS，在这两个专题之间来回切换。这么做是因为在应用了 CSS 后，HTML 会变得更加有趣，学习起来也更有乐趣。并且不了解 HTML 的话，也无法学习 CSS。
 
-在开始这个主题之前，你还应该熟悉使用计算机和被动地使用网络（即，仅仅浏览和消费内容）。你应该按照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中详细说明的内容设置好一个基本的工作环境，并且理解如何创建和管理文件，这在[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中有详细介绍——这些都是我们从零[开始学网页](/zh-CN/docs/Learn/Getting_started_with_the_web)初学者完整模块的一部分。
+在开始本专题之前，你还应该熟悉如何使用电脑，如何被动地使用 Web（例如，只是浏览和消费内容）。你应该按照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中的详细内容搭建基础工作环境，以及按照[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中的内容理解如何创建和管理文件——两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)纯新手模块的一部分。
 
-如果你对网页开发完全陌生，建议你在继续学习这个主题之前，先完成从零[开始学网页](/zh-CN/docs/Learn/Getting_started_with_the_web)的学习。不过，[CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)文章中涵盖的大部分内容也在我们的 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块中有更详细的讲解。
+在开始本专题之前，还是建议你先学习 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)，尤其当你是 Web 开发的纯新手的话。不过，[CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)这篇文章中涉及的大部分内容在 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块中也有所涉及，而且更详细。
 
 ## 模块
 
-本主题包含以下模块，建议按顺序阅读这些模块。你应该从第一个模块开始。
+本专题包含以下模块，建议按顺序学习这些模块。你应该从第一个模块开始。
 
 - [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
-  - : CSS（层叠样式表）用于样式化和布局网页。例如，可以更改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其他装饰功能。本模块将为你提供通往精通 CSS 之路的平缓起点，让你了解 CSS 的基本工作原理、语法，以及如何开始使用 CSS 为 HTML 添加样式。
-- [构建 CSS 块](/zh-CN/docs/Learn/CSS/Building_Blocks)
-  - : 本模块承接 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)，进行进一步的学习——既然你已经熟悉了 CSS 的语言和语法，有了一些使用 CSS 的基本经验，是时候再深入一些了。本模块涉及了层叠与继承、可用的所有种类的选择器、单位、尺寸、样式化背景和边框、调试，还有更多。这样做的目的是，在继续深入到更加具体的规则，例如[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)前，为你提供一个编写合格 CSS 的工具包，帮你理解所有必要的理论。
-- [样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)
-  - : 在覆盖了 CSS 语言的基础知识之后，下一个需要集中学习的 CSS 主题是文本样式化——这是你使用 CSS 最常做的事情之一。这里我们研究文本样式化的基本原理，包括设置字体、粗细、斜体、行距和字母间距、阴影等文本特征。我们最后还会讨论如何将自定义字体应用到页面上，以及如何样式化列表和链接。
+  - : CSS（层叠样式表）用于为网页添加样式，对网页进行布局——例如，修改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其它装饰特性。在前往掌握 CSS 基础知识（CSS 的运作方式，CSS 语法是什么样子，在 HTML 中如何使用 CSS 添加样式）的道路上，本模块是一个很好的开始。
+- [CSS 构建块](/zh-CN/docs/Learn/CSS/Building_Blocks)
+
+  - : 本模块承接 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)——这时你已经熟悉 CSS 语言及其语法，有了基本的使用经验，是时候再深入一些。在本模块中，你会学习层叠和继承、可用的选择器类型、单位、大小、为背景和边框添加样式、调试，以及其它内容。
+
+    本文的目的是，在了解诸如[为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)等特定领域的知识之前，提供一个能让你编写合格 CSS 的工具集并帮助你理解基本的理论。
+
+- [为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)
+  - : 在学完 CSS 语言的基础知识后，下一个集中学习的 CSS 主题是为文本添加样式——用 CSS 做的最多的事之一。本文介绍了为文本添加样式的基础知识，包括：设置字体、加粗、斜体、行间距、字间距、阴影和其它文本特性。在本模块中，还会学习的内容有：在页面中应用自定义字体、为列表和链接添加样式。
 - [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)
-  - : 到目前为止，我们已经学习了 CSS 基础知识、如何设置文本样式、如何设计并操作内容所在的盒子。现在应该考虑如何把你的盒子以合适的位置放置在视口内和其他盒子旁边了。我们已经学习了在深入 CSS 布局之前需要学会的必要知识，下一步我们通过学习设置 display 属性，使用新的布局工具如弹性盒（flexbox）、CSS 网格和定位，以及你仍想知道的一些传统技术，来深入学习 CSS 布局。
+  - : 看到这儿，你已经学习过 CSS 基础知识、如何为文本添加样式、如何为放置内容的盒子添加样式并操纵它。现在，是时候学习参照视口或另一个盒子时如何将盒子放置在正确的位置。必要的前置知识已经具备，此时你可以深入 CSS 布局，学习不同的显示设置、现代的布局工具（如弹性盒、CSS 网格）、定位，以及一些你可能仍想了解的传统技术。
 
 ## 解决常见的 CSS 问题
 
-[使用 CSS 解决常见问题](/zh-CN/docs/Learn/CSS/Howto)解释了怎样使用 CSS 解决创建一个网页时常遇到的问题。
+[使用 CSS 解决常见问题](/zh-CN/docs/Learn/CSS/Howto)提供了用于解释如何使用 CSS 解决创建网页时常遇到的问题的内容的链接。
 
-从这里开始，你大致就能在 HTML 元素和它们的背景上应用颜色、改变形状尺寸和元素的位置、向元素上添加并定义边框。但是，只要你对 CSS 的基础知识有了扎实的了解，就没有做不到的事情了。学习 CSS 的最大好处之一就是，一旦你了解了 CSS 的基础知识，即使你还不知道如何操作，通常也能很好地了解哪些可以做到，哪些不可以做到！
+刚开始，你主要是为 HTML 元素及其背景应用颜色，改变元素的大小、形状和位置，为元素添加和定义边框。但这并不是你唯一能做的，只要你对 CSS 的基础知识有了坚实的理解的话。学习 CSS 最棒的事情之一就是，一旦你了解了基础，即使你还不知道如何做，通常会对能做的和不能做的有一个很好的感知。
 
-## “CSS 是怪异的”
+## “CSS 真奇怪”
 
-CSS 确实有些独特，它的工作方式与大多数编程语言和设计工具有些不同。为什么 CSS 会以这种方式工作呢？在下面的视频中，Miriam Suzanne 提供了一个有用的解释，说明了 CSS 为什么会这样工作，以及为什么它会这样演变：
+CSS 与你接触到的大多数编程语言和设计工具的运作方式有点不同。CSS 为什么以这种方式运作？在下面的视频中，对 CSS 为什么这样运作以及 CSS 为什么演变成这样做了很好的解释：
 
 {{EmbedYouTube("aHUtMbJw8iA")}}
 
-## 参阅
+## 参见
 
 - [MDN 上的 CSS 文档](/zh-CN/docs/Web/CSS)
-  - : MDN 上 CSS 文档的主要入口，可以在这里找到 CSS 语言所有特性的详细参考文档。想要了解某个属性可以取的所有值吗？这是一个很好的去处。
+  - : MDN 上 CSS 文档的主入口，在这里可以找到 CSS 语言全部特性的详细参考文档。想要了解某个属性可以取的所有值吗？这是一个很好的去处。
