@@ -19,7 +19,7 @@ l10n:
 
 - [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 
-  - : 当谈到构建网站的工具时，有很多可供选择的工具。如果你初入门径，你可能会被外面一系列的代码编辑器、框架和测试工具所迷惑。在这篇文章中，我们将一步一步地教你如何安装开始基础的 Web 开发所需的软件。
+  - : 说到建设网站的工具，有很多可供选择的。如果你初入门径，你可能会被外面一系列的代码编辑器、框架和测试工具所迷惑。在这篇文章中，我们将一步一步地教你如何安装开始基础的 Web 开发所需的软件。
 
 - [你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 
