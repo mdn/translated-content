@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[垫片](<https://zh.wikipedia.org/wiki/垫片_(程序设计))>)
+- 维基百科上的[垫片](<https://zh.wikipedia.org/wiki/垫片_(程序设计)>)
