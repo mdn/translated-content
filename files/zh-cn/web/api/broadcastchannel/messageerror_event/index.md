@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-{{domxref("BroadcastChannel")}} 接口的 **`messageerror`** 事件在无法反序列化的消息到达通道时触发。
+{{domxref("BroadcastChannel")}} 接口的 **`messageerror`** 事件在无法反序列化的消息到达频道时触发。
 
 ## 语法
 
@@ -55,7 +55,7 @@ channel.addEventListener("messageerror", (event) => {
 });
 ```
 
-相同，但使用 `onmessage` 和 `onmessageerror` 事件处理器属性：
+下述代码也实现了相同需求，但使用 `onmessage` 和 `onmessageerror` 事件处理器属性：
 
 ```js
 const channel = new BroadcastChannel("example-channel");
