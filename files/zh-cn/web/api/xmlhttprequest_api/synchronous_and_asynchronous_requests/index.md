@@ -186,7 +186,7 @@ if (request.status === 200) {
 
 **`myFile.txt`** ( [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest)对象同步请求的文件):
 
-```
+```plain
 Hello World!!
 ```
 

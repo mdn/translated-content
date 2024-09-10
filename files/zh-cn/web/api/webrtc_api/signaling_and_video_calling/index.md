@@ -199,7 +199,7 @@ function sendToServer(msg) {
 
 处理 `"userlist"` 消息的代码会调用 `handleUserlistMsg()`。在这里，我们在聊天面板左侧显示的用户列表中为每个连接的用户设置处理程序。此方法接收一个消息对象，其 `users` 属性是一个字符串数组，指定每个连接用户的用户名。
 
-```
+```js
 function handleUserlistMsg(msg) {
   var i;
   var listElem = document.querySelector(".userlistbox");
@@ -208,7 +208,7 @@ function handleUserlistMsg(msg) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
+  msg.users.forEach(function (username) {
     var item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
@@ -314,22 +314,25 @@ function handleGetUserMediaError(e) {
 
 调用方和被调用方都使用 `createPeerConnection()` 函数来构造它们的 {{domxref("RTCPeerConnection")}} 对象及其各自的 WebRTC 连接端。当调用者试图启动调用时，由 `invite()` 调用；当被调用者从调用者接收到要约消息时，由`handleVideoOfferMsg()` 调用。
 
-```
+```js
 function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
-      iceServers: [     // Information about ICE servers - Use your own!
-        {
-          urls: "stun:stun.stunprotocol.org"
-        }
-      ]
+    iceServers: [
+      // Information about ICE servers - Use your own!
+      {
+        urls: "stun:stun.stunprotocol.org",
+      },
+    ],
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.ontrack = handleTrackEvent;
   myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
   myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.oniceconnectionstatechange =
+    handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange =
+    handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 ```
@@ -413,7 +416,7 @@ function handleNegotiationNeededEvent() {
 
 当请求到达时，调用被调用方的 `handleVideoOfferMsg()` 函数时会收到`"video-offer"` 消息。这个函数需要做两件事。首先，它需要创建自己的 {{domxref("RTCPeerConnection")}} 并添加包含麦克风和网络摄像头的音频和视频的磁道。其次，它需要对收到的请求进行处理，构建并返回应答。
 
-```
+```js
 function handleVideoOfferMsg(msg) {
   var localStream = null;
 
@@ -422,32 +425,36 @@ function handleVideoOfferMsg(msg) {
 
   var desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection
+    .setRemoteDescription(desc)
+    .then(function () {
+      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+    })
+    .then(function (stream) {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    var msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(function () {
+      return myPeerConnection.createAnswer();
+    })
+    .then(function (answer) {
+      return myPeerConnection.setLocalDescription(answer);
+    })
+    .then(function () {
+      var msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription,
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -535,7 +542,7 @@ function handleAddStreamEvent(event) {
 
 当远程对等方通过调用{{domxref("RTCPeerConnection.removeTrack()")}}.从连接中删除磁道时，你的代码将接收事件 {{domxref("MediaStream/removetrack_event", "removetrack")}} 事件。`"removetrack"` 的处理程序是：
 
-```
+```js
 function handleRemoveTrackEvent(event) {
   var stream = document.getElementById("received_video").srcObject;
   var trackList = stream.getTracks();

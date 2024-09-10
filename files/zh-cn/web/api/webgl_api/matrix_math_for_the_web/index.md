@@ -284,8 +284,8 @@ function rotateAroundZAxis(a) {
 
 另一个需要记住的点是在 WebGL 和 CSS3 中的矩阵相乘需要和变换发生的顺序相反。例如，缩放对象到 80%，向下移动 200 像素，然后绕原点旋转 90 度在伪代码中应该像下面这样。
 
-```
-  transformation = rotate * translate * scale
+```plain
+transformation = rotate * translate * scale
 ```
 
 ### 组合多种变换

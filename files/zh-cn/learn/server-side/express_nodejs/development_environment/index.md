@@ -308,7 +308,7 @@ express helloworld
 > 也可以指定模板库来使用其他丰富的设置。可通过 help 命令来查看所有选项：
 >
 > ```bash
-> $ express --help
+> express --help
 > ```
 
 NPM 将在当前位置的子目录中创建新的 Express 应用，可以在控制台看到构建的过程。在完成时，NPM 会提示你需要安装哪些 Node 依赖，以及如何开启应用。

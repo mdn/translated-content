@@ -9,8 +9,8 @@ slug: Web/API/Window/matchMedia
 
 ## 语法
 
-```
-mqList = window.matchMedia(mediaQueryString)
+```js-nolint
+matchMedia(mediaQueryString)
 ```
 
 ### 参数
@@ -36,8 +36,8 @@ mqList = window.matchMedia(mediaQueryString)
 
 ### JavaScript
 
-```
-let mql = window.matchMedia('(max-width: 600px)');
+```js
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```

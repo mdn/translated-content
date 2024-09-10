@@ -33,42 +33,40 @@ JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功
 这三层依次建立，秩序井然。以简单文本标签作为示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：
 
 ```html
-<p>Player 1: Chris</p>
+<button type="button">Player 1: Chris</button>
 ```
 
-![作为纯文本段落出现的“Player 1: Chris”](just-html.png)
+![没有样式的“Player 1: Chris”按钮](just-html.png)
 
 然后我们可以为它加一点 CSS 让它更好看：
 
 ```css
-p {
+button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgb(0 0 200 / 0.6);
-  background: rgb(0 0 200 / 0.6);
-  color: rgb(255 255 255 / 1);
-  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
   border-radius: 10px;
   padding: 3px 10px;
-  display: inline-block;
   cursor: pointer;
 }
 ```
 
-![已添加样式的“Player 1: Chris”段落](html-and-css.png)
+![已添加样式的“Player 1: Chris”按钮](html-and-css.png)
 
 最后，我们可以再加上一些 JavaScript 来实现动态行为：
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  const name = prompt("请输入新的名字");
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
@@ -100,7 +98,7 @@ API 通常分为两类。
 - {{domxref("Document_Object_Model","文档对象模型 API","","nocode")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小演示中看到那样），这就是 DOM 在运行。
 - {{domxref("Geolocation","地理位置 API","","nocode")}} 获取地理信息。这就是为什么[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
 - {{domxref("Canvas_API","画布（Canvas）","","nocode")}} 和 {{domxref("WebGL_API","WebGL","","nocode")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 以及 [webglsamples](https://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Guide/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
+- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Media/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
 
 > [!NOTE]
 > 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
@@ -123,7 +121,7 @@ API 通常分为两类。
 
 ![当页面加载时，HTML、CSS 和 JavaScript 代码共同创建浏览器标签页中的内容](execution.png)
 
-JavaScript 的一个非常常见的用途是通过文档对象模型 API（如上所述）动态修改 HTML 和 CSS，以更新用户界面。请注意，网页文档中的代码通常按照其在页面上出现的顺序加载和执行。如果 JavaScript 先于要修改的 HTML 和 CSS 加载和运行，则可能发生错误。你将在本文后面的[脚本加载策略](#脚本加载策略)部分了解到解决这个问题的方法。
+JavaScript 的一个非常常见的用途是通过文档对象模型 API（如上所述）动态修改 HTML 和 CSS，以更新用户界面。
 
 ### 浏览器安全
 
@@ -137,19 +135,19 @@ JavaScript 的一个非常常见的用途是通过文档对象模型 API（如�
 当浏览器执行到一段 JavaScript 代码时，通常会按从上往下的顺序执行这段代码。这意味着你需要注意代码书写的顺序。比如，我们回到第一个例子中的 JavaScript 代码：
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("输入一个新的名字：");
-  para.textContent = `玩家 1：${name}`;
+  button.textContent = `玩家 1：${name}`;
 }
 ```
 
-这里我们选定一个文本段落（第 1 行)，然后给它附上一个事件监听器（第 3 行），使得在它被点击时，`updateName()` 代码块（5 – 8 行）便会运行。`updateName()` 代码块（这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。
+首先使用 `document.querySelector` 选定一个按钮，然后使用 `addEventListener` 给它附上一个事件监听器（第 3 行），使得在它被点击时，`updateName()` 代码块（5 – 8 行）便会运行。`updateName()` 代码块（这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。
 
-如果你互换了代码里最初两行的顺序，会导致问题。浏览器[开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`TypeError: para is undefined`。这意味着 `para` 对象还不存在，所以我们不能为它增添一个事件监听器。
+如果互换了代码里最初两行的顺序，会导致问题。[浏览器开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`Uncaught ReferenceError: Cannot access 'button' before initialization`。这意味着 `button` 对象还未初始化，所以我们不能为它增添事件监听器。
 
 > [!NOTE]
 > 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。
@@ -184,13 +182,15 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 1. 首先，下载示例文件 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)。放在一个方便的文件夹里。
 2. 分别在浏览器和文本编辑器中打开这个文件。你会看到这个 HTML 文件创建了一个简单的网页，其中有一个可点击按钮。
-3. 然后转到文本编辑器，在 `</body>` 标签结束前插入以下代码：
+3. 接下来，打开文本编辑器，在正文底部——就在结束标签 `</body>` 之前——添加以下内容：
 
    ```html
    <script>
      // 在此编写 JavaScript 代码
    </script>
    ```
+
+   请注意，Web 文档中，代码通常是按其在页面上出现的顺序加载和执行。通过把 JavaScript 放在底部，来确保所有的 HTML 元素完成加载（请参阅下面的[脚本加载策略](#脚本加载策略)）。
 
 4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“// 在此编写 JavaScript 代码”一行下方添加以下代码：
 
@@ -223,10 +223,10 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 这很不错，但是能不能把 JavaScript 代码放置在一个外部文件中呢？现在我们来研究一下。
 
 1. 首先，在刚才的 HTML 文件所在的目录下创建一个名为 `script.js` 的新文件。请确保扩展名为 `.js`，只有这样才能被识别为 JavaScript 代码。
-2. 将 {{htmlelement("script")}} 元素替换为：
+2. 移除当前位于 `</body>` 底部的 {{htmlelement("script")}} 元素，并且在结束标签 `</head>` 之前添加以下内容（这样浏览器就能比在底部时更快开始加载文件）：
 
    ```html
-   <script src="script.js" defer></script>
+   <script type="module" src="script.js"></script>
    ```
 
 3. 在 `script.js` 文件中，添加下面的脚本：
@@ -245,7 +245,10 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    }
    ```
 
-4. 保存并刷新浏览器，你会发现二者完全一样！区别在于，现在我们把 JavaScript 写进了一个外部文件。这样做一般会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。
+4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URL 不符合条件。有两个解决方案可以解决这个问题：
+   - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 `8000` 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
+   - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>` 代替 `<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#脚本加载策略)。但是注意，本教程其他部分使用的特性可能需要本地 HTTP 服务器。
+5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
 > [!NOTE]
 > 你可以在 GitHub 上查看 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 以及 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
@@ -291,82 +294,20 @@ for (let i = 0; i < buttons.length; i++) {
 > [!NOTE]
 > 请尝试修改 `apply-javascript.html` 以添加更多按钮。刷新后可发现按下任一按钮时都会创建一个段落。这样很高效吧？
 
-### 脚本调用策略
+### 脚本加载策略
 
-要让脚本调用的时机符合预期，需要解决一系列的问题。这里看似简单，实际大有文章。最常见的问题就是：HTML 元素是按其在页面中出现的次序调用的，如果用 JavaScript 来管理页面上的元素（更精确的说法是使用[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型)），若 JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
+页面上的所有 HTML 代码都按其出现的顺序加载。如果使用 JavaScript 去操作页面上的元素（更准确的说，是[文档对象模型](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#文档对象模型)），那么如果 JavaScript 在 HTML 之前就被加载和解析了，代码将无法运行。
 
-在上文的“内部”、“外部”示例中，JavaScript 在文档头部，解析 HTML 文档体之前加载并执行。这样做是有隐患的，需要使用一些结构来避免错误发生。
+有几种不同的策略来确保 JavaScript 只在 HTML 解析之后运行：
 
-“内部”示例使用了以下结构：
+- 在上面的内部 JavaScript 示例中，脚本元素放在文档正文的底部，因此只能在 HTML 正文的其他部分被解析以后运行。
+- 在上面的外部 JavaScript 实例中，脚本元素放在文档的头部，在解析 HTML 正文之前解析。但是由于我们使用了 `<script type="module">`，代码被视为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且浏览器在执行 JavaScript 模块之前会等待所有的 HTML 代码都处理完毕（也可以把外部脚本放在正文的底部，但是如果 HTML 内容较多且网络较慢，在浏览器开始获取并加载脚本之前可能需要大量的时间，因此将外部脚本放在头部通常会更好一些）。
+- 如果仍然想在文档头部使用非模块脚本，可能阻塞整个页面的显示，并且可能出现错误，因为脚本在文档解析之前执行：
 
-```js
-document.addEventListener("DOMContentLoaded", () => {
-  // …
-});
-```
+  - 对于外部脚本，应该在 {{htmlelement("script")}} 元素上添加 `defer`（或者如果不需要 HTML 解析完成，则可以使用 `async`）属性。
+  - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded` 事件监听器](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)中。
 
-这是一个事件监听器，它监听浏览器的 `DOMContentLoaded` 事件，其标志了 HTML 文档体完全加载和解析。该代码块中的 JavaScript 在事件被触发后才会运行，因此避免了错误（你将在课程的后面[学习事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)中了解到这些）。
-
-“外部”示例中使用了 JavaScript 的一项现代技术（`defer` 属性）来解决这一问题，它告知浏览器在遇到 `<script>` 元素时继续下载 HTML 内容。
-
-```html
-<script src="script.js" defer></script>
-```
-
-上述情况下，脚本和 HTML 将一并加载，代码将顺利运行。
-
-> [!NOTE]
-> 在外部示例中，我们不需要使用 `DOMContentLoaded` 事件，因为 `defer` 属性为我们解决了这个问题。我们没有在内部 JavaScript 示例中使用 `defer` 解决方案，因为 `defer` 只适用于外部脚本。
-
-解决此问题的旧方法是：把脚本元素放在文档体的底端（也就是 `</body>` 标签之前，与之相邻），这样脚本就可以在 HTML 解析完毕后加载了。此方案的问题是：只有在所有 HTML DOM 加载完成后才开始脚本的加载/解析过程。对于有大量 JavaScript 代码的大型网站，可能会带来显著的性能损耗。
-
-#### async 和 defer
-
-上述的脚本阻塞问题实际有两种解决方案——`async` 和 `defer`。我们来依次讲解。
-
-浏览器遇到 `async` 脚本时不会阻塞页面渲染，而是直接下载然后运行。但是，一旦下载完成，脚本就会执行，从而阻止页面渲染。脚本的运行次序无法控制。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
-
-使用 `defer` 属性加载的脚本将按照它们在页面上出现的顺序加载。在页面内容全部加载完毕之前，脚本不会运行，如果脚本依赖于 DOM 的存在（例如，脚本修改了页面上的一个或多个元素），这一点非常有用。
-
-以下是不同脚本加载方法的可视化表示，以及这对页面意味着什么：
-
-![三种脚本加载方法的工作原理：默认情况下，在获取和执行 JavaScript 时，解析过程被阻塞。使用 async 时，解析暂停，仅执行。使用 defer 时，解析不会暂停，但在解析完所有其他内容后才开始执行](async-defer.jpg)
-
-_该图片来自 [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 获得授权。_
-
-比如，如果你的页面要加载以下三个脚本：
-
-```html
-<script async src="js/vendor/jquery.js"></script>
-
-<script async src="js/script2.js"></script>
-
-<script async src="js/script3.js"></script>
-```
-
-三者的调用顺序是不确定的。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
-
-`async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
-
-解决这一问题可使用 `defer` 属性，脚本将按照在页面中出现的顺序加载和运行：
-
-```html
-<script defer src="js/vendor/jquery.js"></script>
-
-<script defer src="js/script2.js"></script>
-
-<script defer src="js/script3.js"></script>
-```
-
-添加 `defer` 属性的脚本将按照在页面中出现的顺序加载，因此第二个示例可确保 `jquery.js` 必定加载于 `script2.js` 和 `script3.js` 之前，同时 `script2.js` 必定加载于 `script3.js` 之前。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM 的存在（例如，它们修改了页面上的一个或多个元素），这将非常有用。
-
-脚本调用策略小结：
-
-- `async` 和 `defer` 都指示浏览器在一个单独的线程中下载脚本，而页面的其他部分（DOM 等）正在下载，因此在获取过程中页面加载不会被阻塞。
-- `async` 属性的脚本将在下载完成后立即执行。这将阻塞页面，并不保证任何特定的执行顺序。
-- 带有 `defer` 属性的脚本将按照它们的顺序加载，并且只有在所有脚本加载完毕后才会执行。
-- 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 `async`。
-- 如果脚本需要等待页面解析，且依赖于其他脚本，调用这些脚本时应使用 `defer`，将关联的脚本按所需顺序置于 HTML 的相应 `<script>` 元素中。
+  这超出了本教程的范围，除非你需要支持非常老的浏览器，否则不要这样做，使用 `<script type="module">` 代替即可。
 
 ## 注释
 

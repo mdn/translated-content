@@ -4221,16 +4221,16 @@
     "modified": "2020-10-15T22:16:14.686Z",
     "contributors": ["elielsonbatista"]
   },
-  "Web/API/console/time_static": {
-    "modified": "2019-10-03T22:24:48.908Z",
-    "contributors": ["gcacars"]
-  },
-  "Web/API/console/timeend_static": {
+  "Web/API/console/timeEnd_static": {
     "modified": "2019-03-23T23:04:24.266Z",
     "contributors": ["teoli", "perrucho"]
   },
-  "Web/API/console/timestamp_static": {
+  "Web/API/console/timeStamp_static": {
     "modified": "2019-10-03T22:25:43.901Z",
+    "contributors": ["gcacars"]
+  },
+  "Web/API/console/time_static": {
+    "modified": "2019-10-03T22:24:48.908Z",
     "contributors": ["gcacars"]
   },
   "Web/API/console/warn_static": {
@@ -6190,10 +6190,6 @@
   "Web/HTTP/Basics_of_HTTP": {
     "modified": "2019-03-18T20:54:14.334Z",
     "contributors": ["mauromattos00", "wdot789"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-03-23T22:04:02.281Z",
-    "contributors": ["krisfertig", "rbertoche", "marciioluucas"]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-12-16T17:35:45.160Z",
@@ -11329,6 +11325,10 @@
   "orphaned/Web/HTML/favicon": {
     "modified": "2019-05-05T00:27:21.844Z",
     "contributors": ["willianpascoal"]
+  },
+  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
+    "modified": "2019-03-23T22:04:02.281Z",
+    "contributors": ["krisfertig", "rbertoche", "marciioluucas"]
   },
   "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
     "modified": "2020-07-20T20:48:22.250Z",

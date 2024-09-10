@@ -1,12 +1,13 @@
 ---
 title: www 付きと www なしの URL の選択
 slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+l10n:
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
 
-ウェブサイトの管理者の間で繰り返される質問が、www URL と非 www URL のどちらを選択するかです。このページでは、何が最良かについてアドバイスを提供します。
+ウェブサイトの管理者の間で繰り返される質問が、 'www' (`www.example.com`) のついた URL と非 'www' (`example.com`) URL のどちらを選択するかです。このページでは、何が最良かについてアドバイスを提供します。
 
 ## ドメイン名とは何か
 
@@ -17,7 +18,7 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 ## では、自身のウェブサイトでどちらかを選択しなければならないのか
 
 - **はい**、ひとつを選択して維持しなければなりません。基準となる場所に応じてどちらを選択するかはあなた次第ですが、どちらかを選択したら、それを維持してください。それにより、ユーザーや検索エンジンから見てウェブサイトが首尾一貫したものになります。これは、常に選択したドメインにリンクする (ウェブサイト内で相対 URL を使用すれば、難しくはないでしょう)、および常に同じドメインへのリンクを (電子メールやソーシャルネットワークなどで) 共有することを含みます。
-- **いいえ**、二つ持つことができます。どちらが公式なドメインであるかについて、一貫性を持って矛盾しないことが重要です。**この公式なドメインは*正規名*と呼ばれます。** すべての絶対パスリンクで正規名を使用するべきです。しかし、それでも他のドメインを機能させることができます。HTTP ではどちらのドメインが正規のものであるかをユーザーや検索エンジンに対して明らかにするとともに、非正規のドメインが機能して想定したページを提供できるようにするための技術が 2 つあります。
+- **いいえ**、2 つ持つことができます。どちらが公式なドメインであるかについて、一貫性を持って矛盾しないことが重要です。**この公式なドメインは*正規名*と呼ばれます。** すべての絶対パスリンクで正規名を使用するべきです。しかし、それでも他のドメインを機能させることができます。HTTP ではどちらのドメインが正規のものであるかをユーザーや検索エンジンに対して明らかにするとともに、非正規のドメインが機能して想定したページを提供できるようにするための技術が 2 つあります。
 
 従って、正規なドメインとしてひとつ選択してください! 以下の 2 つの技術によって、非正規のドメインも機能させることができます。
 
@@ -37,13 +38,15 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) に、[あるドメインから別のドメインへリダイレクトするように Apache を設定する方法](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258) の例があります。
 
-### \<link rel="canonical"> を使用する
+### `<link rel="canonical">` を使用する
 
 ページの正規のアドレスは何かを示す、専用の HTML {{HTMLElement("link")}} 要素をページに追加できます。これは人間向けのページリーダーには影響がありませんが、検索エンジンのクローラーに対してページが実際はどこにあるかを示します。この方法では検索エンジンが同じページで何度もインデックスを作成したり、重複したコンテンツやスパムであると判断されたり、検索エンジンの結果ページでページが排除されたりランクが下がったりすることがなくなります。
 
 このようなタグを追加するときは両方のドメインで同じコンテンツを提供して、どの URL が正規であるかを検索エンジンに示します。先ほどの例では `http://www.example.org/whaddup` が `http://example.org/whaddup` と同じコンテンツを提供していますが、head に {{htmlelement("link")}} 要素を追加します:
 
-`<link href="http://example.org/whaddup" rel="canonical">`
+```html
+<link href="http://example.org/whaddup" rel="canonical" />
+```
 
 リダイレクトの場合と異なり、ブラウザーの履歴では非 www URL と www URL が独立した項目であるとみなします。
 
@@ -53,7 +56,10 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 ## 状況を判断する
 
-これは[自転車置き場](http://bikeshed.com/)問題と考えられる、とても主観的な話題です。もっと深く読んでみたいと思ったら、この件に関する[多くの](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/)[記事](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)をご覧ください。
+これは非常に主観的なトピックであり、[自転車置き場](https://bikeshed.com/)問題として考えることもできます。より深くお読みになりたい場合は、以下のリソースをご参照ください。
+
+- [Options for bare domains](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) (netlify.com, 2020)
+- [WWW vs non-WWW – Which Is Better for WordPress SEO?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) (wpbeginner.com, 2023)
 
 ## 関連情報
 
