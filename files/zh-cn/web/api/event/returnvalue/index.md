@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
 
 {{domxref("Event")}} 接口的 **`returnValue`** 属性表示该事件的默认操作是否已被阻止。
 
