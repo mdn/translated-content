@@ -160,7 +160,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 #### DeclarativeContent API
 
-- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [未被实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
+- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.com/docs/extensions/reference/api/declarativeContent) API [未被实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
 
 ### 其他不兼容情况
 
