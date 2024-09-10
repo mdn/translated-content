@@ -41,8 +41,6 @@ HTML 文書としてフラグが立てられた DOM 内の HTML 要素に対し�
 
 要素の属性の値を取得するためには、通常 `getAttributeNode` の代わりに [getAttribute](/ja/docs/Web/API/Element/getAttribute) が使用されます。
 
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}
