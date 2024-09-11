@@ -23,7 +23,7 @@ block-size: fit-content;
 
 ## 예제
 
-### Using fit-content for box sizing
+### 박스 크기에 fit-content 사용하기
 
 #### HTML
 
@@ -57,7 +57,7 @@ block-size: fit-content;
 
 #### 결과
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("박스 크기에 fit-content 사용하기", "100%", 200)}}
 
 ## 명세
 
