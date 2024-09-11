@@ -50,7 +50,7 @@ l10n:
 - `baseline`
   - : 使用父级的 {{Glossary("dominant baseline")}} 选择。将框的相应 {{Glossary("baseline/typography", "baseline")}} 与其父级的基线匹配。
 - `before-edge` {{deprecated_inline}}
-  - : 正在对齐的对象的对齐点与父文本内容元素的“前边缘”基线对齐。
+  - : 正在对齐的对象的对齐点与父文本内容元素的“before-edge”基线对齐。
 - `text-bottom`
   - : 将盒子的底部与父元素内容区域的顶部相匹配。
 - `text-before-edge`
@@ -61,34 +61,34 @@ l10n:
     > 此关键字可能会映射到 `text-top`。
 
 - `middle`
-  - : 将框的垂直中点与父框的基线加上父框 x 轴高度的一半对齐。
+  - : 将盒子的垂直中点与父盒子的基线加上父盒子 x 轴高度的一半对齐。
 - `central`
-  - : 将框的中心基线与其父框的中心基线相匹配。
+  - : 将盒子的中心基线与其父盒子的中心基线相匹配。
 - `after-edge` {{deprecated_inline}}
-  - : 正在对齐的对象的对齐点与父文本内容元素的“后边缘”基线对齐。
+  - : 正在对齐的对象的对齐点与父文本内容元素的“after-edge”基线对齐。
 - `text-top`
-  - : 将框的顶部与父级内容区域的顶部相匹配。
+  - : 将盒子的顶部与父级内容区域的顶部相匹配。
 - `text-after-edge`
 
-  - : 正在对齐的对象的对齐点与父文本内容元素的“text-before-edge”基线对齐。
+  - : 正在对齐的对象的对齐点与父文本内容元素的“text-after-edge”基线对齐。
 
     > [!NOTE]
     > 此关键字可能会映射到 `text-bottom`。
 
 - `ideographic`
-  - : 将框的表意字符面下侧基线与其父项的基线相匹配。
+  - : 将盒子的表意字符面下侧基线与其父盒子的基线相匹配。
 - `alphabetic`
-  - : 将框的字母基线与其父框的字母基线相匹配。
+  - : 将盒子的字母基线与其父盒子的“alphabetic”基线相匹配。
 - `hanging`
-  - : 正在对齐的对象的对齐点与父文本内容元素的“悬挂”基线对齐。
+  - : 正在对齐的对象的对齐点与父文本内容元素的“hanging”基线对齐。
 - `mathematical`
-  - : 将框的数学基线与其父框的数学基线相匹配。
+  - : 将盒子的数学基线与其父盒子的“mathematical”基线相匹配。
 - `top`
-  - : 将对齐子树的顶部与行框的顶部对齐。
+  - : 将对齐子树的顶部与盒子的顶部对齐。
 - `center`
-  - : 将对齐子树的中心与行框的中心对齐。
+  - : 将对齐子树的中心与盒子的中心对齐。
 - `bottom`
-  - : 将对齐子树的底部与行框的底部对齐。
+  - : 将对齐子树的底部与盒子的底部对齐。
 
 SVG 2 对此属性的定义进行了一些更改。特别是：`auto`、`before-edge` 和 `after-edge` 已经被移除。为了向后兼容，`text-before-edge` 可以映射到 `text-top`，`text-after-edge` 映射到 `text-bottom`。`text-before-edge` 和 `text-after-edge` 都不应该与 {{cssxref("vertical-align")}} 属性一起使用。
 
@@ -145,4 +145,4 @@ SVG 2 对此属性的定义进行了一些更改。特别是：`auto`、`before-
 
 ## 参见
 
-- [CSS baseline alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment#baseline_alignment)
+- [CSS 基线对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#基线对齐)
