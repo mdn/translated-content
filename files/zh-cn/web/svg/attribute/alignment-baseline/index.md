@@ -43,7 +43,7 @@ l10n:
       <td>有</td>
     </tr>
   </tbody>
-</table> 
+</table>
 
 - `auto` {{deprecated_inline}}
   - : 该值是字符所属文稿的 dominant-baseline 值——即使用父元素的 dominant-baseline。
