@@ -48,7 +48,7 @@ l10n:
 - `auto` {{deprecated_inline}}
   - : 该值是字符所属文稿的 dominant-baseline 值——即使用父元素的 dominant-baseline。
 - `baseline`
-  - : 使用父级的 {{Glossary("dominant baseline")}} 选择。将框的相应 {{Glossary("baseline/typography", "baseline")}} 与其父级的基线匹配。
+  - : 使用父元素的{{Glossary("dominant baseline", "主导基线")}}选择。将盒子的相应{{Glossary("baseline/typography", "基线")}}与其父元素的基线匹配。
 - `before-edge` {{deprecated_inline}}
   - : 正在对齐的对象的对齐点与父文本内容元素的“before-edge”基线对齐。
 - `text-bottom`
