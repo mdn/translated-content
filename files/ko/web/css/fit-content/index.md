@@ -29,11 +29,11 @@ block-size: fit-content;
 
 ```html
 <div class="container">
-  <div class="item">Item</div>
-  <div class="item">Item with more text in it.</div>
+  <div class="item">항목</div>
+  <div class="item">더 많은 텍스트가 포함된 항목입니다.</div>
   <div class="item">
-    Item with more text in it, hopefully we have added enough text so the text
-    will start to wrap.
+    텍스트가 더 많이 포함된 항목입니다. 텍스트가 줄바꿈되기를 기대하며 충분한
+    양의 텍스트를 추가했습니다.
   </div>
 </div>
 ```
