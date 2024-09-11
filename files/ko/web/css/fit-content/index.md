@@ -1,0 +1,73 @@
+---
+title: fit-content
+slug: Web/CSS/fit-content
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+---
+
+{{CSSRef}}
+
+**`fit-content`** 키워드는 {{cssxref("fit-content_function", "fit-content(stretch)")}}와 동일합니다. 실제로 이는 박스가 사용 가능한 공간을 사용하되, 절대 {{cssxref("max-content")}}보다 크지는 않음을 의미합니다.
+
+{{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} 및 {{cssxref("max-height")}}에 대해 박스 크기로 사용될 때, 최대 및 최소 크기는 콘텐츠의 크기를 의미합니다.
+
+> [!NOTE]
+> CSS Sizing 명세는 {{cssxref("fit-content_function", "fit-content()")}} 함수도 정의합니다. 이 페이지에서는 해당 키워드에 대해 설명합니다.
+
+## 구문
+
+```css
+width: fit-content;
+block-size: fit-content;
+```
+
+## 예제
+
+### Using fit-content for box sizing
+
+#### HTML
+
+```html
+<div class="container">
+  <div class="item">Item</div>
+  <div class="item">Item with more text in it.</div>
+  <div class="item">
+    Item with more text in it, hopefully we have added enough text so the text
+    will start to wrap.
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+.container {
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 20em;
+}
+
+.item {
+  width: fit-content;
+  background-color: #8ca0ff;
+  padding: 5px;
+  margin-bottom: 1em;
+}
+```
+
+#### 결과
+
+{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 함께 보기
+
+- 연관된 크기 키워드: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- [CSS box sizing](/ko/docs/Web/CSS/CSS_box_sizing) 모듈
