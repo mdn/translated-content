@@ -9,7 +9,7 @@ l10n:
 
 **`fit-content`** 키워드는 {{cssxref("fit-content_function", "fit-content(stretch)")}}와 동일합니다. 실제로 이는 박스가 사용 가능한 공간을 사용하되, 절대 {{cssxref("max-content")}}보다 크지는 않음을 의미합니다.
 
-{{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} 및 {{cssxref("max-height")}}에 대해 박스 크기로 사용될 때, 최대 및 최소 크기는 콘텐츠의 크기를 의미합니다.
+{{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} 및 {{cssxref("max-height")}} 의 박스 크기로 사용할 경우, 최대 및 최소 크기는 콘텐츠의 크기를 참조합니다.
 
 > [!NOTE]
 > CSS Sizing 명세는 {{cssxref("fit-content_function", "fit-content()")}} 함수도 정의합니다. 이 페이지에서는 해당 키워드에 대해 설명합니다.
@@ -23,7 +23,7 @@ block-size: fit-content;
 
 ## 예제
 
-### 박스 크기에 fit-content 사용하기
+### fit-content를 사용해 박스 크기 설정하기
 
 #### HTML
 
@@ -57,7 +57,7 @@ block-size: fit-content;
 
 #### 결과
 
-{{EmbedLiveSample("박스 크기에 fit-content 사용하기", "100%", 200)}}
+{{EmbedLiveSample("fit-content를 사용해 박스 크기 설정하기", "100%", 200)}}
 
 ## 명세
 
@@ -69,5 +69,5 @@ block-size: fit-content;
 
 ## 함께 보기
 
-- 연관된 크기 키워드: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- 연관된 크기 설정 키워드: {{cssxref("min-content")}}, {{cssxref("max-content")}}
 - [CSS box sizing](/ko/docs/Web/CSS/CSS_box_sizing) 모듈
