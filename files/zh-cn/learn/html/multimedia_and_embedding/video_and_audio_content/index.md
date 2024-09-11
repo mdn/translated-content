@@ -45,7 +45,7 @@ l10n:
 我们不会教你如何制作音频和视频，因为那需要完全不同的技术。如果你没有音频和视频的话，也没有关系，我们为你提供了[示例音频和视频文件以及示例代码](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)供你实验。
 
 > [!NOTE]
-> 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
+> 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com/) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
 ### \<video> 元素
 
@@ -59,7 +59,7 @@ l10n:
 </video>
 ```
 
-当中值得注意的有：
+值得注意的特性有：
 
 - [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
   - : 同 {{htmlelement("img")}} 元素的使用方式相同，`src`（来源）属性指向你想要嵌入到网页中的视频资源，它们的运作方式完全相同。
@@ -244,7 +244,7 @@ WEBVTT
 
 要让其与 HTML 媒体一起显示，你需要做如下工作：
 
-1. 将其保存为 `.vtt` 文件，放在合理的位置。
+1. 将其保存为 `.vtt` 文件，放在服务器可以提供服务的地方（见下文），例如和 HTML 文件放在同一文件夹。
 2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Element/track#label)，以帮助读者在查找时识别语言。
 
 如下是例子：
@@ -257,11 +257,11 @@ WEBVTT
 </video>
 ```
 
-上面这串代码会显示一段带有字幕的视频，如下：
+为了尝试这种方法，需要在[本地 HTTP 服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)上托管文件。在浏览器的输出中，会看到一个显示字幕的视频，有点像这样：
 
 ![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
-如果你想了解更多细节，你可以阅读[为 HTML 视频添加标题和字幕](/zh-CN/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上你可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
+更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
 
 > [!NOTE]
 > 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
