@@ -9,9 +9,22 @@ l10n:
 
 En esta evaluación, deberás tomar parte del conocimiento que has aprendido en los artículos de este módulo y aplicarlo a la creación de una aplicación divertida que genere historias aleatorias. ¡Que te diviertas!
 
-| Prerrequisitos: | Antes de intentar esta evaluación, deberías haber revisado todos los artículos de este módulo.                  |
-| --------------- | --------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Probar la comprensión de los fundamentos de JavaScript, como variables, números, operadores, cadenas y matrices |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerrequisitos:</th>
+      <td>
+        Antes de intentar esta evaluación, deberías haber revisado todos los artículos de este módulo.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Probar la comprensión de los fundamentos de JavaScript, como variables, números, operadores, cadenas y arreglos.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Punto de partida
 
@@ -55,9 +68,9 @@ Variables y funciones iniciales:
 2. Ahora observa la segunda sección del archivo de texto sin procesar — "2. RAW TEXT STRINGS". Esta contiene cadenas de texto que actuarán como entrada en nuestro programa. Nos gustaría que mantengas estas variables internas dentro del archivo `main.js`:
 
    1. Almacena la primera, la más larga, cadena de texto dentro de una variable llamada `storyText`.
-   2. Almacena el primer conjunto de tres cadenas dentro de un array llamado `insertX`.
-   3. Almacena el segundo conjunto de tres cadenas dentro de un array llamado `insertY`.
-   4. Almacena el tercer conjunto de tres cadenas dentro de un array llamado `insertZ`.
+   2. Almacena el primer conjunto de tres cadenas dentro de un arreglo llamado `insertX`.
+   3. Almacena el segundo conjunto de tres cadenas dentro de un arreglo llamado `insertY`.
+   4. Almacena el tercer conjunto de tres cadenas dentro de un arreglo llamado `insertZ`.
 
 Colocar el controlador de evento y la función incompleta:
 
