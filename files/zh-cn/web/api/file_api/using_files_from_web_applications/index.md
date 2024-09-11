@@ -487,10 +487,10 @@ function createThrobber(img) {
 
 这个例子演示了如何异步上传文件，在服务器端使用了 PHP，在客户端使用了 JavaScript。
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
-    // Example:
+    // 示例：
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
