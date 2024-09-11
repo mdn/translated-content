@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 {{domxref("FileReader")}} 接口的 **`readAsText()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性更改为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件，并且 {{domxref("FileReader.result","result")}} 属性包含表示文件内容的文本字符串。
 

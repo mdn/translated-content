@@ -34,7 +34,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 - {{DOMxRef("Blob.arrayBuffer()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的二进制格式的 {{jsxref("ArrayBuffer")}}。
 - {{DOMxRef("Blob.bytes()")}}
-  - : Returns a promise that resolves with an {{jsxref("Uint8Array")}} containing the contents of the `Blob`.返回一个兑现一个包含 `Blob` 内容的 {{jsxref("Uint8Array")}} 的 promise。
+  - : 返回一个 promise，其会兑现一个包含 `Blob` 内容的 {{jsxref("Uint8Array")}}。
 - {{DOMxRef("Blob.slice()")}}
   - : 返回一个新的 `Blob` 对象，其中包含调用它的 blob 的指定字节范围内的数据。
 - {{DOMxRef("Blob.stream()")}}

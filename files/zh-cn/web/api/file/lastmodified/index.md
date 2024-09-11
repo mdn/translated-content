@@ -59,7 +59,7 @@ filepicker.addEventListener("change", (event) => {
 
 ### 动态创建文件
 
-如果文件是动态创建的，可以在 {{domxref("File.File()", "File()")}} 构造函数中提供最后修改时间。如果未提供则会继承文件对象被创建时的 {{jsxref("Date.now()")}}。
+如果文件是动态创建的，可以在 {{domxref("File.File()", "File()")}} 构造函数中提供最后修改时间。如果未提供该参数，`lastModified` 将会继承文件对象被创建时的时间（来自 {{jsxref("Date.now()")}}）。
 
 ```js
 const fileWithDate = new File([], "file.bin", {
