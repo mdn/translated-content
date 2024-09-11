@@ -29,8 +29,6 @@ Debe usarse preferiblemente `removeAttribute` en lugar de establecer el valor de
 
 Intentar eliminar un atributo que no existe en el elemento no disparará una excepción.
 
-{{ DOMAttributeMethods() }}
-
 ## Especificaciones
 
 {{Specifications}}

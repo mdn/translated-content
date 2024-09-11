@@ -5,9 +5,9 @@ slug: Web/API/KeyboardEvent
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{event('keydown')}}, {{event('keypress')}} 또는 {{event('keyup')}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.
+**`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}} 또는 {{domxref("Element/keyup_event", "keyup")}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.
 
-> **참고:** `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{event("input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
+> **참고:** `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{domxref("Element/input_event", "input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
 
 {{InheritanceDiagram}}
 
@@ -202,7 +202,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 ## 사용 일람
 
-키보드 이벤트의 타입은 {{event("keydown")}}, {{event("keypress")}}, 그리고 {{event("keyup")}}의 3가지 타입이 있습니다. 대부분의 키에서, Gecko는 다음과 같은 키 이벤트를 전송합니다.
+키보드 이벤트의 타입은 {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, 그리고 {{domxref("Element/keyup_event", "keyup")}}의 3가지 타입이 있습니다. 대부분의 키에서, Gecko는 다음과 같은 키 이벤트를 전송합니다.
 
 1. 키가 처음 눌렸을 때는, `keydown` 이벤트가 전송됩니다.
 2. 그 키가 보조 키가 아니라면, `keypress` 이벤트가 전송됩니다.

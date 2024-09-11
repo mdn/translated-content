@@ -121,7 +121,7 @@ l10n:
 #### サービスワーカー関連
 
 - [フェッチ API](/ja/docs/Web/API/Fetch_API) の {{domxref("Response")}} オブジェクトに、リダイレクトされたリクエストのレスポンスであるかを示す {{domxref("Response.redirected", "redirected")}} プロパティを実装しました。このプロパティを使用する前に、ドキュメントでセキュリティ関連の注意事項を確認してください ([Firefox バグ 1243792](https://bugzil.la/1243792))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
 
 #### メディアストリーム
 

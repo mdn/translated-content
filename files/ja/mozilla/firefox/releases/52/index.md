@@ -106,7 +106,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
-- [Notifications API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
+- [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
 - {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Link_types) の機能を反映します。
 - [Web Components API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。

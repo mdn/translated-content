@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`** 은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
 
-> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{event("negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
+> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ async openCall(pc) {
 }
 ```
 
-위 함수의 결과로 트랙 묶음이 스트림 없이 원격 유저에게 전달됩니다. 모든 트랙들이 동일한 스트림에 추가된다 하더라도, 원격 유저의 {{event("track")}}이벤트 핸들러가 각 트랙을 어느 스트림에 추가 할지를 결정합니다. {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 핸들러는 아래와 같이 작성 될 수 있습니다:
+위 함수의 결과로 트랙 묶음이 스트림 없이 원격 유저에게 전달됩니다. 모든 트랙들이 동일한 스트림에 추가된다 하더라도, 원격 유저의 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러가 각 트랙을 어느 스트림에 추가 할지를 결정합니다. {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 핸들러는 아래와 같이 작성 될 수 있습니다:
 
 ```js
 let inboundStream = null;
@@ -111,7 +111,7 @@ async openCall(pc) {
 }
 ```
 
-아래와 같이, 원격 유저는 {{event("track")}} 이벤트 핸들러를 사용 할 수 있습니다:
+아래와 같이, 원격 유저는 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러를 사용 할 수 있습니다:
 
 ```js
 pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
@@ -184,4 +184,4 @@ pc.setRemoteDescription(desc)
 - [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - [Introduction to the Real-time Transport Protocol (RTP)](/ko/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.ontrack")}}
-- {{event("track")}}
+- {{DOMxRef("RTCPeerConnection/track_event", "track")}}

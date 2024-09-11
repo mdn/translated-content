@@ -2,7 +2,7 @@
 title: FileSystemHandle：isSameEntry() 方法
 slug: Web/API/FileSystemHandle/isSameEntry
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: a9edf113447f37911ccc0c26ac507ed1d1629606
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
@@ -26,12 +26,16 @@ isSameEntry(fileSystemHandle)
 
 ## 示例
 
-以下函数将单个条目与条目数组进行比对，返回包含不相符条目的新数组。
+以下函数将单个条目与条目数组进行比对，并返回一个 {{jsxref("Promise")}}，其会兑现包含不相符条目的新数组。
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
-
+async function removeMatches(fileEntry, entriesArr) {
+  const newArr = [];
+  for (const entry of entriesArr) {
+    if (!(await fileEntry.isSameEntry(entry))) {
+      newArr.push(entry);
+    }
+  }
   return newArr;
 }
 ```
