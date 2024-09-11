@@ -1,11 +1,12 @@
 ---
-title: Request.clone()
+title: "Request: clone() メソッド"
+short-title: clone()
 slug: Web/API/Request/clone
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`clone()`** は {{domxref("Request")}} インターフェイスのメソッドで、現在の `Request` オブジェクトのコピーを生成します。
 
@@ -32,7 +33,7 @@ clone()
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクタをー使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストをコピーしています。
+次のスニペットは、{{domxref("Request.Request()")}} コンストラクターをー使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストをコピーしています。
 
 ```js
 const myRequest = new Request("flowers.jpg");
