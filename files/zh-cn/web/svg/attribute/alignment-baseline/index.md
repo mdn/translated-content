@@ -46,7 +46,7 @@ l10n:
 </table> 
 
 - `auto` {{deprecated_inline}}
-  - : 该值是字符所属脚本的主导基线 - 即使用父级的 {{SVGAttr("dominant-baseline")}}。
+  - : 该值是字符所属文稿的 dominant-baseline 值——即使用父元素的 dominant-baseline。
 - `baseline`
   - : 使用父级的 {{Glossary("dominant baseline")}} 选择。将框的相应 {{Glossary("baseline/typography", "baseline")}} 与其父级的基线匹配。
 - `before-edge` {{deprecated_inline}}
