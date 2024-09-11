@@ -43,7 +43,7 @@ l10n:
       <td>有</td>
     </tr>
   </tbody>
-</table>                                                                                 |
+</table> 
 
 - `auto` {{deprecated_inline}}
   - : 该值是字符所属脚本的主导基线 - 即使用父级的 {{SVGAttr("dominant-baseline")}}。
