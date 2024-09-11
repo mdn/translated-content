@@ -9,7 +9,7 @@ l10n:
 
 Cuando diseñas páginas para tú sitio web es bueno tener una idea de los diseños más comunes.
 
-<table>
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prerrequisitos:</th>
@@ -93,11 +93,11 @@ En este ejemplo, mira la imagen (B1) justo debajo del encabezado. Está relacion
 
 ### Es una trampa
 
-**[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas...
+**[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas:
 
 ![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-...pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
+Pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
 
 ¿Por qué pensarías que es un diseño de tres columnas? Porque la imagen en la parte superior derecha está en forma de L, porque B1 parece una columna sosteniendo el conenido principal desplazado, y porque la "M" y la "I" del logo MICA crean una línea de fuerza vertical.
 
