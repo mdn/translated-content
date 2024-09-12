@@ -3783,7 +3783,7 @@
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/margin-new	/ja/docs/Web/CSS/margin
 /ja/docs/Web/CSS/margin_collapsing	/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
-/ja/docs/Web/CSS/masonry-auto-flow	/ja/docs/conflicting/Web/CSS/grid-auto-flow
+/ja/docs/Web/CSS/masonry-auto-flow	/ja/docs/Web/CSS/grid-auto-flow
 /ja/docs/Web/CSS/max()	/ja/docs/Web/CSS/max
 /ja/docs/Web/CSS/min()	/ja/docs/Web/CSS/min
 /ja/docs/Web/CSS/minmax()	/ja/docs/Web/CSS/minmax
