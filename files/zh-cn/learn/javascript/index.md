@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{Glossary("JavaScript")}} 是一种允许你在 Web 页面上实现复杂功能的编程语言。每次 Web 页面不仅仅只是显示静态信息——而是显示及时的内容更新、交互式地图、2D/3D 动画图形、滚动的视频播放器，等等——你都可以打赌 JavaScript 可能参与其中。
+{{Glossary("JavaScript")}} 是一种允许你在网页上实现复杂功能的编程语言。每次网页不仅仅只是显示静态信息——而是显示及时的内容更新、交互式地图、2D/3D 动画图形、滚动的视频播放器，等等——你都可以打赌 JavaScript 可能参与其中。
 
 ## 前提
 
@@ -35,18 +35,18 @@ JavaScript 可以说比相关技术（如 [HTML](/zh-CN/docs/Learn/HTML) 和 [CS
 >
 > 我们认为，ECMAScript 2015 及后续版本中添加到 JavaScript 的特性使开发人员能够编写更易读、可靠和富有表现力的代码，因此了解它们很重要。
 >
-> 我们在这门课程中教授的特性是稳定的，并且多年来一直受到所有主要浏览器的支持。
+> 我们在这门课程中教授的是稳定的并且多年来一直受到所有主要浏览器支持的特性。
 
 本主题包含以下模块，建议按顺序学习。
 
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
-  - : 在我们的第一个 JavaScript 模块中，我们首先回答一些基本问题，例如“什么是 JavaScript？”，“它看起来是什么样的？”和“它能做什么？”，然后带你体验第一次实际编写 JavaScript。之后，我们将详细讨论一些关键的 JavaScript 特性，如变量、字符串、数字和数组。
+  - : 在第一个 JavaScript 模块中，我们首先回答一些基本问题，例如“什么是 JavaScript？”，“它看起来是什么样的？”和“它能做什么？”，然后带你体验第一次实际编写 JavaScript。之后，我们将详细讨论一些关键的 JavaScript 特性，如变量、字符串、数字和数组。
 - [创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 在这个模块中，我们将继续涵盖所有 JavaScript 的关键基础特性，重点关注常见的代码块类型，如条件语句、循环、函数和事件。你已经在课程中看到了这些内容，但只是顺便提及——在这里我们将明确讨论它们。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
   - : 在 JavaScript 中，大多数都是对象，从核心 JavaScript 特性（如字符串和数组）到构建在 JavaScript 之上的浏览器 API。你甚至可以创建自己的对象，将相关的函数和变量封装起来。如果你想进一步提高对语言的了解并编写更高效的代码，理解 JavaScript 的面向对象特性非常重要，因此我们提供了这个模块来帮助你。在这里，我们将详细教授对象理论和语法，看看如何创建你自己的对象，并解释 JSON 数据是什么以及如何使用它。
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - : 在这个模块中，我们将了解异步 JavaScript，为什么它很重要，以及如何使用它有效地处理潜在的阻塞操作，如从服务器获取资源。
+  - : 在这个模块中，我们将了解异步 JavaScript，为什么它很重要，以及如何使用它有效地处理潜在的阻塞操作（如从服务器获取资源）。
 - [客户端 Web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
   - : 在为网站或应用程序编写客户端 JavaScript 时，你很快就会开始使用 API——用于操作浏览器和操作系统不同方面的接口，或者甚至是从其他网站或服务获取数据。在这个模块中，我们将探讨 API 是什么，以及如何使用一些你经常遇到的常见 API。
 
@@ -61,4 +61,4 @@ JavaScript 可以说比相关技术（如 [HTML](/zh-CN/docs/Learn/HTML) 和 [CS
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 非常适合有抱负的 Web 开发人员的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前40节课是免费的。
 - [编码数学](https://www.youtube.com/user/codingmath)
-  - : 一个由 [Keith Peters](https://www.bit-101.com/2017/about-me/) 教授的优秀的视频教程系列，教你成为有效程序员所需的数学知识。
+  - : 一个由 [Keith Peters](https://www.bit-101.com/2017/about-me/) 创建的优秀的视频教程系列，教你成为有效程序员所需的数学知识。
