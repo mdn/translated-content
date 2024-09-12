@@ -1,7 +1,6 @@
 ---
 title: Web 性能
 slug: Learn/Performance
-page-type: learn-module
 l10n:
   sourceCommit: 5085525b3452de07dbac7fa700aaaf5ff5360a2f
 ---
