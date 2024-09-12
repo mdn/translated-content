@@ -1,6 +1,7 @@
 ---
 title: masonry-auto-flow
-slug: Web/CSS/masonry-auto-flow
+slug: conflicting/Web/CSS/grid-auto-flow
+original_slug: Web/CSS/masonry-auto-flow
 ---
 
 {{CSSRef}}
