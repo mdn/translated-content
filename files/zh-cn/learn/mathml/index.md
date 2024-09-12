@@ -15,7 +15,7 @@ l10n:
 
 ## 前提
 
-在学习 MathML 之前，假设你已经具备一些 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 的基础知识。因此，强烈建议你首先熟悉这两种技术。请先学习以下模块：
+在学习 MathML 之前，会假设你已经具备一些 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 的基础知识。因此，强烈建议你首先至少熟悉这两种技术。请先学习以下模块：
 
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
@@ -31,4 +31,4 @@ l10n:
 ## 参见
 
 - [MDN 上的 MathML](/zh-CN/docs/Web/MathML)
-  - : 这是 MDN 上 MathML 文档的主要入口，你将在这里找到 MathML 语言所有功能的详细参考文档。想知道一个属性可以取的所有值吗？这是一个好去处。
+  - : 这是 MDN 上 MathML 文档的主要入口，你将在这里找到 MathML 语言所有特性的详细参考文档。想知道一个属性可以取的所有值吗？这是一个好去处。
