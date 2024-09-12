@@ -125,7 +125,7 @@ bCondition1 || (bCondition2 && bCondition3);
 
 sera toujours égale à :
 
-```js
+```js-nolint
 bCondition1 || bCondition2 && bCondition3;
 ```
 
