@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`rows`** 只读属性返回一个包含 section 中行属性的实时 {{domxref("HTMLCollection")}}。此 `HTMLCollection` 是实时的，且当行添加或移除时自动更新。
+{{domxref("HTMLTableSectionElement")}} 接口的 **`rows`** 只读属性返回一个包含当前分段中行属性的动态 {{domxref("HTMLCollection")}}。此 `HTMLCollection` 是动态的，并在添加或移除行时自动更新。
 
 ## 值
 
