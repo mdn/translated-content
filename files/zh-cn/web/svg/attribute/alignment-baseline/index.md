@@ -110,11 +110,11 @@ SVG 2 对此属性的定义进行了一些更改。特别是：`auto`、`before-
     stroke="grey" />
 
   <!-- 锚点的实际应用 -->
-  <text alignment-baseline="hanging" x="60" y="10">A hanging</text>
+  <text alignment-baseline="hanging" x="60" y="10">hanging</text>
 
-  <text alignment-baseline="middle" x="60" y="65">A middle</text>
+  <text alignment-baseline="middle" x="60" y="65">middle</text>
 
-  <text alignment-baseline="baseline" x="60" y="110">A baseline</text>
+  <text alignment-baseline="baseline" x="60" y="110">baseline</text>
 
   <!-- 锚点的具体化 -->
   <circle cx="60" cy="10" r="3" fill="red" />
