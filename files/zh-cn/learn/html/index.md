@@ -1,7 +1,6 @@
 ---
 title: 使用 HTML 构建 Web
 slug: Learn/HTML
-page-type: learn-topic
 l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
