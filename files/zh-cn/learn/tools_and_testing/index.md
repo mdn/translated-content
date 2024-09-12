@@ -1,7 +1,6 @@
 ---
 title: 工具和测试
 slug: Learn/Tools_and_testing
-page-type: learn-topic
 l10n:
   sourceCommit: 11a08e7da75bfb0b3e606eb26a9a0ad9301a1be5
 ---
