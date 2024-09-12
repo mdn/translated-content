@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTableSectionElement`** 接口提供用于操作 HTML 表格部分（即 {{HTMLElement("thead")}}、{{HTMLElement("tfoot")}} 和 {{HTMLElement("tbody")}}）布局和呈现的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
+**`HTMLTableSectionElement`** 接口提供特定的属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作当前分段的布局和呈现，即 HTML 表格中的表头、表尾和主体部分（{{HTMLElement("thead")}}、{{HTMLElement("tfoot")}} 和 {{HTMLElement("tbody")}}）。
 
 {{InheritanceDiagram}}
 
