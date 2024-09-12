@@ -1,7 +1,6 @@
 ---
 title: JavaScript——动态客户端脚本语言
 slug: Learn/JavaScript
-page-type: learn-topic
 l10n:
   sourceCommit: 70f49e78d0f6830748fcaa490d98b4ae3e2da161
 ---
