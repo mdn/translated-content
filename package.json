@@ -31,7 +31,7 @@
     "cld": "^2.10.0",
     "fdir": "^6.3.0",
     "front-matter": "^4.0.2",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "markdown-it": "^14.1.0",
     "markdownlint-cli2": "0.14.0",
