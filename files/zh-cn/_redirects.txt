@@ -2202,7 +2202,8 @@
 /zh-CN/docs/Web/CSS/transform-function/translate3d()	/zh-CN/docs/Web/CSS/transform-function/translate3d
 /zh-CN/docs/Web/CSS/transform-function/translateX()	/zh-CN/docs/Web/CSS/transform-function/translateX
 /zh-CN/docs/Web/CSS/transform-function/translateY()	/zh-CN/docs/Web/CSS/transform-function/translateY
-/zh-CN/docs/Web/CSS/url()	/zh-CN/docs/Web/CSS/url
+/zh-CN/docs/Web/CSS/url	/zh-CN/docs/Web/CSS/url_value
+/zh-CN/docs/Web/CSS/url()	/zh-CN/docs/Web/CSS/url_function
 /zh-CN/docs/Web/CSS/var()	/zh-CN/docs/Web/CSS/var
 /zh-CN/docs/Web/CSS/word-wrap	/zh-CN/docs/Web/CSS/overflow-wrap
 /zh-CN/docs/Web/CSS/偏移	/zh-CN/docs/Web/CSS/offset

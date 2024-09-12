@@ -26,7 +26,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 이미지를 가져올 수 없을 때
 
-이미지를 불러오거나 그릴 때 오류가 발생했고, [`onerror`](/ko/docs/Web/HTML/Global_attributes#onerror) 속성에 오류 처리기를 등록했다면 {{event("error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
+이미지를 불러오거나 그릴 때 오류가 발생했고, [`onerror`](/ko/docs/Web/HTML/Global_attributes#onerror) 속성에 오류 처리기를 등록했다면 {{domxref("HTMLElement/error_event", "error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
 
 - [`src`](/ko/docs/Web/HTML/Element/img#src) 속성이 비었거나 {{jsxref("null")}}임.
 - `src`의 URL이 현재 사용자가 보는 페이지의 URL과 같음.

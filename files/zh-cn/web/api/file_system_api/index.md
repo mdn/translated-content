@@ -2,7 +2,7 @@
 title: 文件系统 API
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -20,7 +20,7 @@ l10n:
 你还可以从以下途径获得句柄：
 
 - {{domxref('HTML Drag and Drop API', 'HTML 拖放 API', '', 'nocode')}} 的 {{domxref('DataTransferItem.getAsFileSystemHandle()')}} 方法。
-- [文件处理 API](https://developer.chrome.com/en/articles/file-handling/)。
+- [文件处理 API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling)。
 
 每种句柄都提供了其独有的功能，取决于你使用的种类，会有些许差异（详见[接口](#接口)部分）。在获得句柄后，你便可以访问文件的数据或是被选中的目录的信息（包含子目录）。此 API 开辟了 web 此前一直缺乏的潜在功能。但不论如何，安全性是设计 API 时的首要考量，除非用户明确授权，否则就不允许访问文件和目录的数据（注意：[源私有文件系统](#源私有文件系统)并非如此，因为其对用户不可见）。
 

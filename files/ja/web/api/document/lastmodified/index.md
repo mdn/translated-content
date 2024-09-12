@@ -80,7 +80,7 @@ if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
 }
 ```
 
-外部ページが変更されたかどうかを知りたい場合、{{HTTPMethod("HEAD")}} リクエストを {{domxref("fetch()")}} API によって行い、{{HTTPHeader("Last-Modified")}} レスポンスヘッダーを調べます。
+外部ページが変更されたかどうかを知りたい場合、{{HTTPMethod("HEAD")}} リクエストを {{domxref("Window/fetch", "fetch()")}} API によって行い、{{HTTPHeader("Last-Modified")}} レスポンスヘッダーを調べます。
 
 ## 仕様書
 
