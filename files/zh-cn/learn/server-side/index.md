@@ -45,4 +45,4 @@ l10n:
 - [正确配置服务器 MIME 类型](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
   - : 配置服务器以向浏览器发送正确的 {{Glossary("MIME type", "MIME 类型")}}（也称为媒体类型或内容类型）对于浏览器能够正确处理和显示内容非常重要。对于防止恶意内容伪装成良性内容也很重要。
 - [Apache 配置：.htaccess](/zh-CN/docs/Learn/Server-side/Apache_Configuration_htaccess)
-  - : Apache 的 .htaccess 文件允许用户在不修改主配置文件的情况下配置他们控制的Web服务器目录。
+  - : Apache 的 .htaccess 文件允许用户在不修改主配置文件的情况下配置他们控制的 Web 服务器目录。
