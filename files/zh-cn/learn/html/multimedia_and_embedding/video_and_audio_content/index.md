@@ -45,7 +45,7 @@ l10n:
 我们不会教你如何制作音频和视频，因为那需要完全不同的技术。如果你没有音频和视频的话，也没有关系，我们为你提供了[示例音频和视频文件以及示例代码](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)供你实验。
 
 > [!NOTE]
-> 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com/) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
+> 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/)、[Dailymotion](http://www.dailymotion.com/)、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
 ### \<video> 元素
 
