@@ -22,9 +22,9 @@ l10n:
 
 你需要了解“Web 是如何工作的”。我们建议你首先阅读以下主题：
 
-- [什么是Web服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [什么是 Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - [构建网站需要哪些软件？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [如何将文件上传到Web服务器？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [如何将文件上传到 Web 服务器？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 有了这些基本理解，你就可以准备好逐步学习本节中的模块。
 
@@ -37,14 +37,13 @@ l10n:
 - [Django Web 框架（Python）](/zh-CN/docs/Learn/Server-side/Django)
   - : Django 是一个非常流行且功能齐全的服务器端 Web 框架，用 Python 编写。这个模块解释了为什么 Django 是一个如此好的 Web 服务器框架，如何设置开发环境以及如何使用它执行常见任务。
 - [Express Web 框架（Node.js/JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
-  - : Express 是一个流行的Web框架，用 JavaScript 编写并在 Node.js 运行时环境中托管。这个模块解释了该框架的一些关键优势，如何设置开发环境以及如何执行常见的 Web 开发和部署任务。
+  - : Express 是一个流行的 Web 框架，用 JavaScript 编写并在 Node.js 运行时环境中托管。这个模块解释了该框架的一些关键优势，如何设置开发环境以及如何执行常见的 Web 开发和部署任务。
 
 ## See also
 
 - [无框架的 Node 服务器](/zh-CN/docs/Learn/Server-side/Node_server_without_framework)
   - : 这篇文章提供了一个使用纯 Node.js 构建的简单静态文件服务器，适合那些不想使用框架的人。
 - [正确配置服务器 MIME 类型](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
-  - : 配置服务器以向浏览器发送正确的 {{Glossary("MIME type", "MIME 类型")}}（也称为媒体类型或内容类型）对于浏览器能够正确处理和显示内容非常重要。
-    防止恶意内容伪装成良性内容也很重要。
+  - : 配置服务器以向浏览器发送正确的 {{Glossary("MIME type", "MIME 类型")}}（也称为媒体类型或内容类型）对于浏览器能够正确处理和显示内容非常重要。对于防止恶意内容伪装成良性内容也很重要。
 - [Apache 配置：.htaccess](/zh-CN/docs/Learn/Server-side/Apache_Configuration_htaccess)
   - : Apache 的 .htaccess 文件允许用户在不修改主配置文件的情况下配置他们控制的Web服务器目录。
