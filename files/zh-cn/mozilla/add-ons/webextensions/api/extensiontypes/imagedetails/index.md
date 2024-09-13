@@ -2,7 +2,7 @@
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 l10n:
-    sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
 {{AddonSidebar}}
@@ -16,7 +16,7 @@ l10n:
 - `format` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}。结果图片的格式，默认为 `"png"`。
 - `quality` {{optional_inline}}
-  - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字并将转为 0—1 之间的值，传递为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数。若省略该属性则将使用 92 作为取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数将减少。对于 PNG 图片，该值将被忽略。
+  - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值，作为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数传递给函数。若该属性被省略，则将使用 92 作为取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数将减少。对于 PNG 图片，该值将被忽略。
 - `rect` {{optional_inline}}
 
   - : `object`，指定要捕获的文档区域，单位为 CSS 像素，相对于页面。所有属性默认为 `0`。这些属性是：
@@ -26,7 +26,7 @@ l10n:
     - `width`：矩形的宽度。
     - `height`：矩形的高度。
 
-    该选项在 Firefox 82 中引入。若省略，则捕获当前可见视口。
+    该选项在 Firefox 82 中引入。若省略该属性，则将捕获当前可见视口。
 
 - `scale` {{optional_inline}}
   - : `number`，渲染的比例，默认为 [`devicePixelRatio`](/zh-CN/docs/Web/API/Window/devicePixelRatio)。该选项在 Firefox 82 中引入。
