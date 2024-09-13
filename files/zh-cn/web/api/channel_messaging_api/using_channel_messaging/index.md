@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
-[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让两个在附加到同一文档的不同浏览上下文中运行的单独脚本（比如：两个 {{HTMLElement("iframe")}} 元素, 或者主文档和一个 {{HTMLElement("iframe")}}, 或者使用同一个 {{domxref("SharedWorker")}} 的两个文档）直接通信，通过两端都有端口的双向频道（或管道）相互传递消息。
+[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让两个在附加到同一文档的不同浏览上下文中运行的单独脚本（比如：两个 {{HTMLElement("iframe")}} 元素，或者主文档和一个 {{HTMLElement("iframe")}}, 或者使用同一个 {{domxref("SharedWorker")}} 的两个文档）直接通信，通过两端都有端口的双向频道（或管道）相互传递消息。
 
 在本文中，我们将探索这项技术的基本用法。
 
@@ -22,13 +22,13 @@ l10n:
 
 ## 简单的示例
 
-为了帮助你开始，我们在 Github 上发布了一些 demo. 一开始可以先看我们的[消息传递基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)），它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。
+为了帮助你开始，我们在 Github 上发布了一些 demo。一开始可以先看我们的[消息传递基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)），它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。
 
 然后，看看我们的[多条消息传递演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage)（[在线运行](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)），它展示了一个稍微复杂一点的例子，可以在主页面和 IFrame 之间发送多条消息。
 
 本文中，我们重点说后面的这个例子。它看起来像是这样：
 
-![演示中“您好，这是我的演示”以五条单独的消息发送。这些消息以项目符号列表的形式显示。](channel-messaging-demo.png)
+![演示中“你好，这是我的演示”以五条单独的消息发送。这些消息以项目符号列表的形式显示。](channel-messaging-demo.png)
 
 ## 创建频道
 
@@ -78,7 +78,7 @@ function onMessage(e) {
 
 1. 被发送的消息。对于一开始的端口传递，这个消息可以是个空字符串，但是在例子里，我们传了 `'init'`。
 2. 消息将被发送到的源。`*` 意思是“任何源”。
-3. 一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame，然后它就可以用于与主页面通信了。
+3. 一个对象，它的所有权会被传递给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame，然后它就可以用于与主页面通信了。
 
 当我们的按钮被点击时，我们阻止了默认的表单提交，然后把输入到输入框里的内容通过 {{domxref("MessageChannel")}} 发送给 IFrame。
 
@@ -108,7 +108,7 @@ function onMessage(e) {
 }
 ```
 
-当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 `initPort` 函数。它会保存传递过来的端口, 并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。
+当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 `initPort` 函数。它会保存传递过来的端口，并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。
 
 当收到从主页面发来的消息时，我们创建一个列表项，并把它插入到这个无序列表中，然后把这个列表项的 {{domxref("Node.textContent","textContent")}} 设置为事件的 `data` 属性（里面包含真正的消息）。
 
