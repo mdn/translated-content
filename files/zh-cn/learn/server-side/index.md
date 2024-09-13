@@ -38,7 +38,7 @@ l10n:
 - [Express Web 框架（Node.js/JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
   - : Express 是一个流行的 Web 框架，用 JavaScript 编写并在 Node.js 运行时环境中托管。这个模块解释了该框架的一些关键优势，如何设置开发环境以及如何执行常见的 Web 开发和部署任务。
 
-## See also
+## 参见
 
 - [无框架的 Node 服务器](/zh-CN/docs/Learn/Server-side/Node_server_without_framework)
   - : 这篇文章提供了一个使用纯 Node.js 构建的简单静态文件服务器，适合那些不想使用框架的人。
