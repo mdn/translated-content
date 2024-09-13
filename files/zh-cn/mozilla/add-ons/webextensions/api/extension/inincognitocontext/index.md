@@ -2,7 +2,7 @@
 title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 l10n:
-    sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
 {{AddonSidebar}}
@@ -15,7 +15,7 @@ l10n:
 let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
 ```
 
-### Value
+### 取值
 
 指示当前脚本是否在隐私标签页或进程中运行的*布尔*值。
 
