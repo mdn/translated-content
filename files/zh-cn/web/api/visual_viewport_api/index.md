@@ -15,7 +15,7 @@ l10n:
 
 如果网页元素需要在屏幕上可见，而与网页的可见部分无关，该怎么办？例如，如果你需要一组图像控件无论设备的捏合缩放级别如何都能保持在屏幕上，该怎么办？目前各浏览器在处理这个问题上存在差异。可视视口可让网页开发人员根据屏幕上显示的内容对元素进行相对定位，从而解决这个问题。
 
-要访问窗口的可视视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它包含三个事件：{{domxref("VisualViewport/resize_event", "resize")}}，{{domxref("VisualViewport/scroll_event", "scroll")}} 和 {{domxref("VisualViewport/scrollend_event", "scrollend")}}，分别在视口调整大小、滚动和完成滚动操作时触发。
+要访问窗口的可视视口，可以从 {{domxref("window.visualViewport")}} 属性中获取 {{domxref("VisualViewport")}} 对象。该对象包含一组描述视口的属性。它包含三个事件：{{domxref("VisualViewport/resize_event", "resize")}}、{{domxref("VisualViewport/scroll_event", "scroll")}} 和 {{domxref("VisualViewport/scrollend_event", "scrollend")}}，分别在视口调整大小、滚动和完成滚动操作时触发。
 
 通过前两个事件，可以在滚动或缩放时相对于可视视口定位元素，这些元素通常会锚定在布局视口上。通过 `scrollend` 事件，可以在滚动操作完成时更新元素。例如，你可以使用这些事件在缩放和滚动时将元素固定在可视视窗上，并在滚动结束时对其进行更新。
 
@@ -75,7 +75,7 @@ const scrollendUpdater = () => {
 };
 ```
 
-`updateText()` 函数如下所示。它将第一段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 {{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值，并将第二段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 W{{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值。定义 `updateText()` 后，我们立即调用它，以便在页面加载时正确显示信息框。
+`updateText()` 函数如下所示。它将第一段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 {{domxref("VisualViewport.offsetLeft")}} 和 {{domxref("VisualViewport.offsetTop")}} 值，并将第二段的 {{domxref("HTMLElement.innerText")}} 设置为显示当前的 {{domxref("Window.scrollX")}} 和 {{domxref("Window.scrollY")}} 值。定义 `updateText()` 后，我们立即调用它，以便在页面加载时正确显示信息框。
 
 ```js
 function updateText() {
