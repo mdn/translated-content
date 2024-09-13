@@ -26,9 +26,7 @@ l10n:
 
 ```html
 <div style="white-space: pre-line;">
-  <div id="el" style="border-top: 1px solid blue; color: red;">
-    要素の例
-  </div>
+  <div id="el" style="border-top: 1px solid blue; color: red;">要素の例</div>
   <div id="output"></div>
 </div>
 ```
