@@ -2,7 +2,7 @@
 title: extension.onRequestExternal
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 l10n:
-    sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
 {{AddonSidebar}}
