@@ -2,7 +2,7 @@
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 l10n:
-    sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
 {{AddonSidebar}}
@@ -31,7 +31,7 @@ chrome.extension.onRequest.hasListener(listener)
 - `removeListener(listener)`
   - : 停止监听该事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否注册到该事件上。若该监听器正在监听，则返回 `true`，否则返回 `false`。
+  - : 检查 `listener` 是否注册到该事件上。若该监听器正在监听该事件则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
