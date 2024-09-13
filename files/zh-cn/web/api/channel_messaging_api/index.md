@@ -13,7 +13,7 @@ l10n:
 
 使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数来创建消息频道。一旦创建，可以通过 {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}} 属性访问频道的两个端口（这两个属性都会返回 {{domxref("MessagePort")}} 对象）。创建频道的应用程序使用 `port1`，在另一端的程序使用 `port2`——你向 `port2` 发送信息，然后携带 2 个参数（需要传递的消息，要传递所有权的对象，在这里是端口自身）调用 {{domxref("window.postMessage")}} 方法将端口传递到另一个浏览器上下文。
 
-当这些可传递的对象被传递后，他们就从之前所属的上下文中消失了。比如一个 port，一旦被发送，在原本的上下文中就再也不可用了。
+当这些可传递的对象被传递后，他们就从之前所属的上下文中消失了。比如一个端口，一旦被发送，在原本的上下文中就再也不可用了。
 
 另一个浏览器上下文可以使用 {{domxref("MessagePort.onmessage")}} 监听信息，并使用事件的 `data` 属性获取消息内容。你可以通过 {{domxref("MessagePort.postMessage")}} 将消息发送回原始文档进行响应。
 
