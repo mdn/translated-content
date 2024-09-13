@@ -2,7 +2,7 @@
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 2cba64f68aab9e233fecfc2bab8bea4118716c14
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -102,7 +102,7 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### 列出文件夹中的内容
 
-{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await…of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
+{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
 
 例如：
 
@@ -179,7 +179,7 @@ size = accessHandle.getSize();
 const dataView = new DataView(new ArrayBuffer(size));
 
 // 将整个文件读取到数据视图。
-accessHandle.read(dataView);
+accessHandle.read(dataView, { at: 0 });
 // 打印 `"Some textMore content"`。
 console.log(textDecoder.decode(dataView));
 

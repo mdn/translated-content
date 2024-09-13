@@ -24,7 +24,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 속�
 ### 이벤트 처리기
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) {{event("complete")}} 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers)입니다.
+  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers)입니다.
 
 ## 메서드
 

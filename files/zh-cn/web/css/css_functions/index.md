@@ -224,7 +224,7 @@ selector {
 ### 图像函数
 
 - {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
-  - : 定义一个 {{CSSxRef("&lt;image&gt;")}}，与 {{CSSxRef("url", "url()")}} 函数类似，但增加了一些功能，包括指定图片的方向性和首选图片不被支持时的后备图片。
+  - : 定义一个 {{CSSxRef("&lt;image&gt;")}}，与 {{CSSxRef("url_value", "&lt;url&gt;")}} 类型类似，但增加了一些功能，包括指定图片的方向性和首选图片不被支持时的后备图片。
 - {{CSSxRef("image/image-set","image-set()")}}
   - : 从一组给定的 CSS 图片中挑选最合适的图片，主要用于高像素密度的屏幕。
 - {{CSSxRef("cross-fade", "cross-fade()")}}
@@ -268,7 +268,7 @@ CSS 计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过�
   - : 使用定义在 HTML 元素上的属性值。
 - {{CSSxRef("env", "env()")}}
   - : 使用用户代理定义的环境变量。
-- {{CSSxRef("url", "url()")}}
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : 使用指定 URL 定义的文件。
 - {{CSSxRef("var", "var()")}}
   - : 使用自定义属性值，而不是其他属性值的任何部分。

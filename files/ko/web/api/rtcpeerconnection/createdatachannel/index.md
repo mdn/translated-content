@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/createDataChannel
 
 {{domxref("RTCPeerConnection")}} 인터페이스의 **`createDataChannel()`** 메소드는 어떤 형식의 데이터든 송신 할 수 있도록 원격 유저와 연결하는 신규 채널을 생성합니다.이 방법은 이미지, 파일 전송, 문자 채팅, 게임 패킷 업데이트 등과 같은 백채널 컨텐츠에 유용하게 사용 가능합니다.
 
-연결 인터페이스에 신규 채널이 처음 추가되면, 재협상 과정이 {{event("negotiationneeded")}} 이벤트를 전달하여 시작됩니다.
+연결 인터페이스에 신규 채널이 처음 추가되면, 재협상 과정이 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 전달하여 시작됩니다.
 
 ## Syntax
 
@@ -61,7 +61,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 
 ## 예시
 
-아래의 예제에서는 어떻게 데이터 채널을 생성하고, 생성 할 때 메세지를 전송하고 수신하는 이벤트인 {{event("open")}}와 {{event("message")}}에대한 핸들러를 설정합니다. (onnegotiationneeded는 이미 설정이 되었다고 가정하고 간소화한 예입니다.)
+아래의 예제에서는 어떻게 데이터 채널을 생성하고, 생성 할 때 메세지를 전송하고 수신하는 이벤트인 {{DOMxRef("RTCDataChannel/open_event", "open")}}와 {{DOMxRef("RTCDataChannel/message_event", "message")}}에대한 핸들러를 설정합니다. (onnegotiationneeded는 이미 설정이 되었다고 가정하고 간소화한 예입니다.)
 
 ```js
 // Offerer side

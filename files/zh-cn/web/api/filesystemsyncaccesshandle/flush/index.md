@@ -2,7 +2,7 @@
 title: FileSystemSyncAccessHandle：flush() 方法
 slug: Web/API/FileSystemSyncAccessHandle/flush
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
