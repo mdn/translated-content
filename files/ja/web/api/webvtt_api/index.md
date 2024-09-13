@@ -51,7 +51,7 @@ WebVTTの最も重要な機能は、ファイル形式またはウェブ API を
   - : {{domxref("VTTCue")}} などのさまざまなキュー型用の抽象ベースクラスです。
 - {{domxref("TextTrackCueList")}}
   - : 配列風オブジェクトで、{{domxref("TextTrackCue")}} オブジェクトの動的に更新されるリストを表します。
-  この型のインスタンスは {{domxref('TextTrack.cues')}} から、{{domxref("TextTrack")}} オブジェクト内のすべてのキューを取得するために取得します。
+    この型のインスタンスは {{domxref('TextTrack.cues')}} から、{{domxref("TextTrack")}} オブジェクト内のすべてのキューを取得するために取得します。
 - {{domxref("TextTrackList")}}
   - : メディア要素に対して定義されたテキストトラックの一覧を表し、各トラックは、一覧に別個の {{domxref("TextTrack")}} インスタンスとして表されます。
 
