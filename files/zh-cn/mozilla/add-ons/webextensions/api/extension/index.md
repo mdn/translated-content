@@ -21,7 +21,7 @@ l10n:
 - {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
   - : 设置为回调的生命周期，如果异步扩展 API 导致错误。如果没有发生错误，`lastError` 将为 {{jsxref("undefined")}}。
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
-  - : 对于在隐身模式标签中运行的内容脚本，以及在隐身模式进程中运行的扩展页面返回 `True`。（仅适用于具有“`split`” `incognito_behavior` 取值的扩展。）
+  - : 对于在隐身模式标签中运行的内容脚本，以及在隐身模式进程中运行的扩展页面返回 `true`。（仅适用于具有 `incognito_behavior` 取值为“`split`”的扩展。）
 
 ## 函数
 
