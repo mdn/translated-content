@@ -27,7 +27,7 @@ l10n:
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
   - : 这个模块为学习 HTML 奠定了基础，让你熟悉重要的概念和语法，了解如何在文本中应用 HTML，如何创建超链接以及如何使用 HTML 构建网页结构。
 - [多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
-  - : 这个模块探讨如何使用 HTML 在网页中包含多媒体内容，包括：包含图像的不同方式，以及如何嵌入视频、音频，甚至整个其它网页。
+  - : 这个模块探讨如何使用 HTML 在网页中包含多媒体内容，包括：包含图像的不同方式，以及如何嵌入视频、音频，甚至整个其他网页。
 - [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
   - : 在网页上以易于理解、{{glossary("Accessibility", "无障碍的")}}方式表示表格数据可能是个挑战。这个模块涵盖基本的表格标记，以及更复杂的特性（诸如实现标题和摘要）。
 
