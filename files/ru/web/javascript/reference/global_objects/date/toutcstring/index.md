@@ -28,8 +28,8 @@ dateObj.toUTCString()
 ### Пример: использование метода `toUTCString()`
 
 ```js
-var today = new Date();
-var UTCstring = today.toUTCString();
+const today = new Date();
+const UTCstring = today.toUTCString();
 // Mon, 03 Jul 2006 21:44:38 GMT
 ```
 
