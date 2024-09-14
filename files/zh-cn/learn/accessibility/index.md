@@ -25,7 +25,7 @@ l10n:
 
 ## 前提
 
-为了充分理解本模块，最好先完成  [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 主题的前两个模块，或者更好的做法是，在你学习相关技术主题的同时，完成无障碍模块的相关部分。
+为了充分理解本模块，最好先完成 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 主题的前两个模块，或者更好的做法是，在你学习相关技术主题的同时，完成无障碍模块的相关部分。
 
 > [!NOTE]
 > 如果你工作的计算机/掌上电脑/其他设备无法创建文件，可以使用在线编码程序（例如，[JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/)）实验大多数代码示例。
