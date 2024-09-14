@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-学习区的本部分是为可能会遇到的常见问题提供答案，而这些问题不必是结构化的核心学习路径的部分（例如，[HTML](/zh-CN/docs/Learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 中的学习文章）。这些文章专注于它们自己的内容。
+这个学习区为可能会遇到的常见问题提供答案，而这些问题不必是结构化的核心学习路径的一部分（例如，[HTML](/zh-CN/docs/Learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 中的学习文章）。这些文章专注于它们自己的内容。
 
 - [HTML 问题](/zh-CN/docs/Learn/HTML/Howto)
 - [CSS 问题](/zh-CN/docs/Learn/CSS/Howto)
