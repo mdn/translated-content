@@ -1,20 +1,22 @@
 ---
-title: 画中画（Picture-in-Picture）API
+title: 画中画 API
 slug: Web/API/Picture-in-Picture_API
 l10n:
-  sourceCommit: 7c1f91ddd9cd584b041d18a916ab850a226824ad
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-**画中画 API** 允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
+**画中画 API（Picture-in-Picture API）**允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
 
-> **备注：** [文档画中画 API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
+> **备注：** [文档画中画 API（Document Picture-in-Picture API）](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
 
 ## 接口
 
 - {{DOMxRef("PictureInPictureWindow")}}
   - : 表示浮动的视频窗口；包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理器属性。
+- {{DOMxRef("PictureInPictureEvent")}}
+  - : 表示画中画相关事件，包括 {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}、{{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}} 和 {{domxref("PictureInPictureWindow/resize_event", "resize")}}。
 
 ## 实例方法
 
