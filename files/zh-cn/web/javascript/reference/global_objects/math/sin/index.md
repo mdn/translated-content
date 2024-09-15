@@ -1,17 +1,21 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+page-type: javascript-static-method
+browser-compat: javascript.builtins.Math.sin
 ---
 
 {{JSRef}}
 
 ## 概述
 
-**`Math.sin()`** 函数返回一个数值的正弦值。
+**`Math.sin()`** 静态方法返回一个弧度的正弦值。
+
+{{EmbedInteractiveExample("pages/js/math-sin.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 Math.sin(x)
 ```
 
@@ -22,19 +26,21 @@ Math.sin(x)
 
 ## 描述
 
-`sin` 方法返回一个 -1 到 1 之间的数值，表示给定角度（单位：弧度）的正弦值。
+`x` 的正弦值，介于 -1 到 1 之间（包含 -1 和 1）。如果 `x` 为 {{jsxref("Infinity")}}、`-Infinity` 或 {{jsxref("NaN")}},则返回 {{jsxref("NaN")}}。
 
-由于 `sin` 是 `Math` 的静态方法，所以应该像这样使用：`Math.sin()`，而不是作为你创建的 `Math` 实例的方法。
+由于 `sin` 是 `Math` 的静态方法，所以应该像这样使用：`Math.sin()`，而不是作为你创建的 `Math` 实例的方法（`Math` 不是构造函数）。
 
 ## 示例
 
 ### 示例：使用 `Math.sin`
 
 ```js
+Math.sin(-Infinity); // NaN
+Math.sin(-0); // -0
 Math.sin(0); // 0
 Math.sin(1); // 0.8414709848078965
-
 Math.sin(Math.PI / 2); // 1
+Math.sin(Infinity); // NaN
 ```
 
 ## 规范
