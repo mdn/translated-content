@@ -62,5 +62,5 @@ if (popoverSupported) {
 
 ## 関連情報
 
-- HTML の [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) グローバル属性
+- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)
