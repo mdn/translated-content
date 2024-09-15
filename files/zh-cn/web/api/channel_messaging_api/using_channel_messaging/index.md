@@ -1,5 +1,5 @@
 ---
-title: 使用频道消息传递
+title: 使用频道传递消息
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 l10n:
   sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
@@ -7,13 +7,13 @@ l10n:
 
 {{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
-[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让两个在附加到同一文档的不同浏览上下文中运行的单独脚本（比如：两个 {{HTMLElement("iframe")}} 元素，或者主文档和一个 {{HTMLElement("iframe")}}, 或者使用同一个 {{domxref("SharedWorker")}} 的两个文档）直接通信，通过两端都有端口的双向频道（或管道）相互传递消息。
+[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让两个在附加到同一文档的不同浏览上下文中运行的单独脚本（比如：两个 {{HTMLElement("iframe")}} 元素，或者主文档和一个 {{HTMLElement("iframe")}}，或者使用同一个 {{domxref("SharedWorker")}} 的两个文档）直接通信，通过两端都有端口的双向频道（或管道）相互传递消息。
 
 在本文中，我们将探索这项技术的基本用法。
 
 ## 用例
 
-频道消息传递在这样的场景中特别有用：假如你有一个社交站点，它在主界面中通过 IFrame 内嵌了来自其他站点的内容，比如游戏，通讯录或者一个音乐播放器，有着个性化的音乐选择。当这些内容作为独立的单元时，一切都是 OK 的，但是当你想在主站点和 {{HTMLElement("iframe")}}, 或者在不同的 {{HTMLElement("iframe")}} 中交互时，困难就出现了。举例来说，假如你想从主站点向通讯录里添加一个联系人；或者想从游戏里，把最高分加入到个人资料；又或者，希望从音频播放器里，添加新的背景音乐到游戏中？因为浏览器使用的安全模型，使用传统的 web 技术来做这些事并不容易。你必须去考虑不同的源之间彼此是否信任，以及如何传递消息。
+频道消息传递在这样的场景中特别有用：假如你有一个社交站点，它在主界面中通过 iframe 内嵌了来自其他站点的内容，比如游戏，通讯录或者一个音乐播放器，有着个性化的音乐选择。当这些内容作为独立的单元时，一切都是 OK 的，但是当你想在主站点和 {{HTMLElement("iframe")}}，或者在不同的 {{HTMLElement("iframe")}} 间交互时，困难就出现了。举例来说，假如你想从主站点向通讯录里添加一个联系人；或者想从游戏里，把最高分加入到个人资料；又或者，希望从音频播放器里，添加新的背景音乐到游戏中？因为浏览器使用的安全模型，使用传统的 Web 技术来做这些事并不容易。你必须去考虑不同的源之间彼此是否信任，以及如何传递消息。
 
 换个角度说，频道消息可以提供一个安全的频道让你在不同的浏览上下文间传递数据。
 
@@ -22,7 +22,7 @@ l10n:
 
 ## 简单的示例
 
-为了帮助你开始，我们在 Github 上发布了一些 demo。一开始可以先看我们的[消息传递基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)），它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。
+为了帮助你开始，我们在 Github 上发布了一些演示。一开始可以先看我们的[消息传递基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)），它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。
 
 然后，看看我们的[多条消息传递演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage)（[在线运行](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)），它展示了一个稍微复杂一点的例子，可以在主页面和 IFrame 之间发送多条消息。
 
@@ -116,7 +116,7 @@ function onMessage(e) {
 
 ## 在主页面中接收确认消息
 
-回到主页面，我们来一起看看 onmessage 事件处理器。
+回到主页面，我们来一起看看 `onmessage` 事件处理器。
 
 ```js
 // 处理 port1 上收到的消息
