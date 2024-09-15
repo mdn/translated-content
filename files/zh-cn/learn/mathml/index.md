@@ -1,7 +1,6 @@
 ---
 title: 使用 MathML 编写数学公式
 slug: Learn/MathML
-page-type: learn-topic
 l10n:
   sourceCommit: 865acb22b74a49927b98267566369d4677414f53
 ---
