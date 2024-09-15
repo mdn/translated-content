@@ -39,7 +39,7 @@ l10n:
 ## 表单样式指南
 
 - [为 Web 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-  - : 本文介绍如何使用 CSS 为表单添加样式，包括完成基本样式任务所需了解的全部基础知识。
+  - : 这篇文章介绍如何使用 CSS 为表单添加样式，包括完成基本样式任务所需了解的全部基础知识。
 - [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
   - : 在这里学习一些更高级的表单样式技术，用于处理一些很难设置样式的表单元素。
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
@@ -48,18 +48,18 @@ l10n:
 ## 验证和提交表单数据
 
 - [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-  - : 仅仅发送数据还不够——还需要确保用户填写的表单数据的格式是正确的，以便后续能正确处理，也要确保数据不会破坏应用程序。我们也想帮助用户正确填写表单，让用户在使用应用程序时不会感到困扰。表单验证帮助我们实现这些目标——本文讲解你需要了解的内容。
+  - : 仅仅发送数据还不够——还需要确保用户填写的表单数据的格式是正确的，以便后续能正确处理，也要确保数据不会破坏应用程序。我们也想帮助用户正确填写表单，让用户在使用应用程序时不会感到困扰。表单验证帮助我们实现这些目标——这篇文章讲解你需要了解的内容。
 - [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
-  - : 本文讨论的是当用户提交表单时，会发生什么——表单数据的去向，以及当表单数据到达之后如何处理？还研究一些与发送表单数据有关联的安全问题。
+  - : 这篇文章讨论的是当用户提交表单时，会发生什么——表单数据的去向，以及当表单数据到达之后如何处理？还研究一些与发送表单数据有关联的安全问题。
 
 ## 高级文章
 
 以下文章对于学习路径来说没那么重要，但是当你掌握了上述技术并想了解更多内容时，它们会变得有趣且实用。
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-  - : 在某些情况下，出于样式或功能的原因，原生表单微件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单微件。本文通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
+  - : 在某些情况下，出于样式或功能的原因，原生表单控件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单控件。这篇文章通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过自定义的 JavaScript 而不是标准的表单提交发送请求。本文还说明为什么要这么做，以及这样做的意图。（参见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
+  - : 这篇文章将讨论如何使用表单来构建 HTTP 请求，并通过自定义的 JavaScript 而不是标准的表单提交发送请求。这篇文章还说明为什么要这么做，以及这样做的意图。（参见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : 最后一篇文章提供的参考意在方便查找 CSS 属性与表单元素的兼容性关系。
 
