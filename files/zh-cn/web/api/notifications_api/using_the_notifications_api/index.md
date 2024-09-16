@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -153,45 +153,58 @@ document.addEventListener("visibilitychange", () => {
 假设有以下基本 HTML：
 
 ```html
-<button>提醒我！</button>
+<button id="notify">提醒我！</button>
+<section id="demo-logs"></section>
+```
+
+```css hidden
+#demo-logs {
+  width: 90%;
+  height: 100px;
+  background-color: #ddd;
+  overflow-x: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
 ```
 
 可以通过这种方式处理多个通知：
 
 ```js
-window.addEventListener("load", () => {
-  const button = document.querySelector("button");
+const demoLogs = document.querySelector("#demo-logs");
 
-  if (window.self !== window.top) {
-    // 确保如果我们的文档位于框架中，我们会让用户首先在自己的选项卡或窗口中打开它。否则，它将无法请求发送通知的权限
-    button.textContent = "查看上面示例代码的实时运行结果";
-    button.addEventListener("click", () => window.open(location.href));
-    return;
-  }
+window.addEventListener("load", () => {
+  const button = document.querySelector("#notify");
 
   button.addEventListener("click", () => {
     if (Notification?.permission === "granted") {
-      // 如果用户同意收到通知让我们尝试发送十个通知
+      demoLogs.innerText += `该网站有显示通知的权限。正在显示通知。\n`;
+      // 如果用户同意接收通知,让我们尝试发送十个通知
       let i = 0;
       // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
-        // 由于 tag 参数，我们应该只能看到“Hi！9”通知
-        const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
+        // 由于 tag 参数，我们应该只能看到“来自 MDN 的第 9 个你好”通知
+        const n = new Notification(`来自 MDN 的第 9 个你好。`, {
+          tag: "soManyNotification",
+        });
         if (i === 9) {
           clearInterval(interval);
         }
         i++;
       }, 200);
-    } else if (Notification && Notification.permission !== "denied") {
+    } else if (Notification?.permission !== "denied") {
+      demoLogs.innerText += "请求通知许可。\n";
       // 如果用户没有告诉他们是否想要收到通知（注意：由于 Chrome，我们不确定是否设置了权限属性），因此检查“默认”值是不安全的。
       Notification.requestPermission().then((status) => {
         // 如果用户同意
         if (status === "granted") {
+          demoLogs.innerText +=
+            "用户授予权限。正在发送通知。\n";
           let i = 0;
           // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
-            // 由于 tag 参数，我们应该只能看到“嗨！9”通知
-            const n = new Notification(`嗨！${i}`, {
+            // 由于 tag 参数，我们应该只能看到“来自 MDN 的消息 9。”通知
+            const n = new Notification(`来自 MDN 的消息 ${i}。`, {
               tag: "soManyNotification",
             });
             if (i === 9) {
@@ -201,12 +214,12 @@ window.addEventListener("load", () => {
           }, 200);
         } else {
           // 否则，我们可以回退到常规模式的提醒
-          alert("Hi!");
+          demoLogs.innerText += `用户拒绝了权限请求。\n`;
         }
       });
     } else {
       // 如果用户拒绝收到通知，我们可以回退到常规模式的提醒
-      alert("Hi!");
+      demoLogs.innerText += `该站点没有显示通知的权限。\n`;
     }
   });
 });
@@ -214,7 +227,9 @@ window.addEventListener("load", () => {
 
 ### 结果
 
-{{ EmbedLiveSample('标签示例', '100%', 30) }}
+{{ EmbedLiveSample('标签示例', '100%', 200) }}
+
+为了测试上述示例，请更改 `https://live.mdnplay.dev` 网站的[发送通知设置](https://support.mozilla.org/zh-CN/kb/firefox-page-info-window#w_permissions)。
 
 ## 参见
 

@@ -2,7 +2,7 @@
 title: BatteryManager：chargingTime 属性
 slug: Web/API/BatteryManager/chargingTime
 l10n:
-  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{ApiRef("Battery API")}}{{securecontext_header}}

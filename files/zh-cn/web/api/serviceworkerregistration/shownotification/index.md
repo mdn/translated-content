@@ -56,7 +56,7 @@ showNotification(title, options)
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
       - : 指示在屏幕足够大的设备上，通知应保持活动状态，直到用户单击或关闭它。如果此值不存在或为 `false`，桌面版 Chrome 将在大约二十秒后自动最小化通知。默认值为 `false`。
     - `silent` {{optional_inline}}
-      - : 设置后表示不应发出声音或振动。如果 _options_ 参数的 `silent` 属性为 `true` 并且 _options_ 参数的 `vibrate` 属性存在，则会抛出 `TypeError` 异常。默认值为 `false`。
+      - : 设置后表示不应发出声音或振动。如果 _options_ 参数的 `silent` 属性为 `true` 并且 _options_ 参数的 `vibrate` 属性存在，则会抛出 `TypeError` 异常。默认值为 `null`，表示使用设备默认值。
     - `tag` {{optional_inline}}
       - : 给定通知的 ID，允许你在必要时使用脚本查找、替换或删除通知。
     - `timestamp` {{optional_inline}}

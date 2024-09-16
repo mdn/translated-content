@@ -2,7 +2,7 @@
 title: Notification：Notification() 构造函数
 slug: Web/API/Notification/Notification
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: e011d5695b264ced5a3f4bb822ca7904e23b7e83
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
@@ -65,7 +65,7 @@ new Notification(title, options)
         使用 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件中的 `event.action` 构建适当的响应。
 
     - `silent` {{optional_inline}}
-      - : 一个布尔值，指定通知是否静音（不发出声音或振动），无论设备设置如何。默认值为 `null`。如果被设置为 `true`，那么不能同时存在 `vibrate` 参数。
+      - : 一个布尔值，指定通知是否静音（不发出声音或振动），无论设备设置如何。默认值 `null` 表示使用设备默认值。如果被设置为 `true`，那么不能同时存在 `vibrate` 参数。
 
 ### 返回值
 
@@ -84,11 +84,11 @@ new Notification(title, options)
 
 ## 示例
 
-在我们的 [`Emogotchi` 演示](https://chrisdavidmills.github.io/emogotchi/)（[查看源代码](https://github.com/chrisdavidmills/emogotchi)）中，当我们想要触发通知时，我们运行 `spawnNotification()` 函数。该函数传递参数来指定我们想要的正文、图标和标题，然后它创建必要的 `options` 对象并使用 `Notification()` 构造函数触发通知。
+这是一个最基本的示例，仅在已授予权限时才显示通知。有关更完整的示例，请参阅 {{domxref("Notification")}} 页面。
 
 ```js
-function spawnNotification(body, icon, title) {
-  const notification = new Notification(title, { body, icon });
+if (Notification.permission === "granted") {
+  const notification = new Notification("你好呀！");
 }
 ```
 
