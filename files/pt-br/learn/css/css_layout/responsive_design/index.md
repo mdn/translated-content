@@ -197,7 +197,6 @@ Outras dicas úteis são:
 - Você pode fazer uso de recursos do CSS como [gradients](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients) e [shadows](/pt-BR/docs/Web/CSS/box-shadow) para criar efeitos visuais sem o uso de imagens.
 - Também é possível usar media queries dentro do atributo media de elementos [`<source>`](/pt-BR/docs/Web/HTML/Element/source) aninhados no interior de elementos [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/[`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) para servir arquivos de áudio ou de vídeo conforme seja o mais apropriado para diferentes dispositivos (video/audio responsivos).
 
-
 ## Tipografia responsiva
 
 Algo que não foi abordado nos trabalhos iniciais de design responsivo, mas que posteriormente recebeu atenção foi a chamada tipografia responsiva. Essencialmente, a tipografia responsiva descreve as mudanças nos tamanhos de fonte dentro dos blocos de media queries ou através de unidades de viewport para reagir de forma reflexiva à quantidade de tela disponível.
