@@ -9,7 +9,6 @@ Design Responsivo, também conhecido como Web Design Responsivo (RWD na sigla em
 
 Essa abordagem, atualmente tornada como o padrão de boas práticas no contexto do desenvolvimento web, mudou drasticamente a forma como se projetavam páginas web até então e nesse artigo apresentamos algumas técnicas para dominá-la e aplicá-la de maneira efetiva em projetos no decorrer do seu aprendizado.
 
-
 <table class="learn-box standard-table">
   <tbody>
     <tr>
@@ -192,13 +191,11 @@ Também é possível utilizar o _art direction_ para imagens usadas em tamanhos 
 
 Você pode encontrar um guia detalhado nesta seção de Aprenda HTML do MDN sobre [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
-
 Outras dicas úteis são:
 
 - Tenha certeza de sempre utilizar uma imagem de formato apropriado para as imagens que você planeja utilizar (como `.png` ou `.jpg`/`.jpeg`) e de otimizar o tamanho do arquivo com o auxílio de editores gráficos antes de colocar as imagens no seu website ou página web.
 - Você pode fazer uso de recursos do CSS como [gradients](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients) e [shadows](/pt-BR/docs/Web/CSS/box-shadow) para criar efeitos visuais sem o uso de imagens.
 - Também é possível usar media queries dentro do atributo media de elementos [`<source>`](/pt-BR/docs/Web/HTML/Element/source) aninhados no interior de elementos [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/[`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) para servir arquivos de áudio ou de vídeo conforme seja o mais apropriado para diferentes dispositivos (video/audio responsivos).
-
 
 
 ## Tipografia responsiva
@@ -242,7 +239,6 @@ Em um computador desktop contudo, vemos o tamanho maior dessa seção da heading
 
 Essa forma de abordar a tipografia responsiva demonstra que o uso das media queries não se restringe somente a mudar o layout da página. Elas podem ajustar qualquer elemento para torná-lo mais utilizável ou atrativo em tamanhos de tela alternativos.
 
-
 ### Usando unidades de Viewport para tipografia responsiva
 
 Uma abordagem muito interessante para isso é usar a unidade de viewport `vw` para habilitar tipografia responsiva. O valor `1vw`é equivalente a um porcento (**1%**) da largura total do viewport, o que significa quê, caso você determine o seu tamanho de fonte utilizando `vw, esta vai sempre referenciar-se com o tamanho da viewport
@@ -267,7 +263,6 @@ Isso significa que só é necessário especificar unicamente o tamanho da fonte 
 
 > [!NOTE]
 > Veja um exemplo disso em ação: [exemplo](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
-
 
 ## A meta tag de viewport
 
@@ -296,7 +291,6 @@ Existem outras configurações que você pode fazer uso com a meta tag de viewpo
 - `user-scalable`: Bloqueia mudanças de zoom se estiver com valor de `no`.
 
 Você deve evitar o uso de `minimum-scale`, `maximum-scale` e em particular da configuração `user-scalable` com o valor de `no`. Usuários devem ter permissão para aumentar ou diminuir o zoom da tela tanto quanto for necessário; Quando o valor da configuração `user-scalable` está com o valor configurado para `no`, não é possível controlar o zoom da página e isso pode ocasionar problemas de acessibilidade, principalmente para deficientes visuais.
-
 
 ## Resumo
 
