@@ -5,11 +5,9 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
-Design Responsivo, também conhecido como Web Design Responsivo (RWD na sigla em inglês), é uma abordagem para o design e desenvolvimento de páginas web que tem por objetivo permitir uma boa renderização e usabilidade dessas páginas
-em todas as telas, independentemente de qual seja o tamanho ou a resolução da tela.
+Design Responsivo, também conhecido como Web Design Responsivo (RWD na sigla em inglês), é uma abordagem para o design e desenvolvimento de páginas web que tem por objetivo permitir uma boa renderização e usabilidade dessas páginas em todas as telas, independentemente de qual seja o tamanho ou a resolução da tela. 
 
-Essa abordagem, atualmente tornada como o padrão de boas práticas no contexto do desenvolvimento web, mudou drasticamente a forma como se projetavam páginas web até então e nesse artigo apresentamos algumas técnicas para dominá-la
-e aplicá-la de maneira efetiva em projetos no decorrer do seu aprendizado.
+Essa abordagem, atualmente tornada como o padrão de boas práticas no contexto do desenvolvimento web, mudou drasticamente a forma como se projetavam páginas web até então e nesse artigo apresentamos algumas técnicas para dominá-la e aplicá-la de maneira efetiva em projetos no decorrer do seu aprendizado.
 
 
 <table class="learn-box standard-table">
@@ -35,7 +33,8 @@ e aplicá-la de maneira efetiva em projetos no decorrer do seu aprendizado.
   </tbody>
 </table>
 
-##  Antes do Design Responsivo
+## Antes do Design Responsivo
+
 Nos primórdios do web design, páginas eram criadas para serem visualizadas em um tamanho de tela específico, usualmente o de telas de computadores pessoais (PCs) do tipo desktop. Se o usuário tivesse uma tela maior ou menor do que o esperado, efeitos colaterais desse tipo de design estático poderiam variar desde barras de rolagem indesejadas, tamanhos de linha excessivamente longos até uso inadequado do espaço. 
 
 À medida que diferentes tamanhos de tela foram aparecendo, surgiu o conceito de web design responsivo (RWD), um conjunto de práticas que permite que páginas da Web alterem seu layout e aparência para se adequarem a diferentes larguras, resoluções, etc. É uma ideia que mudou a forma de como projetamos para a Web com múltiplos dispositivos e, neste artigo, ajudaremos você a entender as principais técnicas que você precisa conhecer para dominá-la.
@@ -62,9 +61,9 @@ Já o site de largura fixa criava uma barra de rolagem horizontal em telas menor
 > [!NOTE]
 > As capturas de tela acima foram tiradas usando o [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) no Firefox DevTools.
 
-Outra variável que entrou na equação foi o fato que, à medida que o ambiente web para dispositivos móveis começava a se tornar bem mais presente com o lançamento dos primeiros smartphones, houve o surgimento de demanda por parte tanto de empresas que desejavam contemplar os usuários de dispositivos móveis quanto desses mesmos usuários. Para atender isso, muitas vezes era decidido que se criaria uma versão mobile do site, com uma URL diferente (geralmente algo como `m.exemplo.com` ou `exemplo.mobi`) Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas, com as versões mobile frequentemente recebendo uma prioridade bem menor.
+Outra variável que entrou na equação foi o fato que, à medida que o ambiente web para dispositivos móveis começava a se tornar bem mais presente com o lançamento dos primeiros smartphones, houve o surgimento de demanda por parte tanto de empresas que desejavam contemplar os usuários de dispositivos móveis quanto desses mesmos usuários. Para atender isso, muitas vezes era decidido que se criaria uma versão mobile do site, com uma URL diferente (geralmente algo como `m.exemplo.com` ou `exemplo.mobi`). Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas, com as versões mobile frequentemente recebendo uma prioridade bem menor. Além disso, esses sites para celular geralmente ofereciam uma experiência muito restrita. À medida que os dispositivos móveis se tornaram mais poderosos e capazes de exibir sites completos, as limitações do design dos sites ficavam bem evidentes.
 
-Além disso, esses sites para celular geralmente ofereciam uma experiência muito restrita. À medida que os dispositivos móveis se tornaram mais poderosos e capazes de exibir sites completos, as limitações do design dos sites ficavam bem evidentes.
+O meio-termo encontrado, antes do design responsivo tornar-se para a solução padrão para essa e outras situações, foi pensar os designs para que eles fossem mobile-friendly, isto é mais amigáveis com as particularidades presentes nos dispositivos móveis e essa forma de pensar recebeu ao longo do tempo outros nomes como web design mobile e desenvolvimento web mobile. Aqui encontramos ideias comuns que despontariam no design responsivo mais à frente, as principais diferenças entre essas duas abordagens tem a ver com os dispositivos envolvidos e as ferramentas de tecnologia disponíveis para construir as soluções.
 
 ## Layouts flexiveis antes do Design Responsivo
 
@@ -85,6 +84,7 @@ O termo design responsivo foi [cunhado por Ethan Marcotte em 2010](https://alist
 O restante deste artigo indicará informações sobre esses recursos para que você possa usá-los ao criar um site responsivo.
 
 ## Media Queries
+
 Media Queries nos permitem executar uma série de testes (e.g. se a tela do usuário é maior que uma certa largura, ou uma certa resolução) e aplicar um CSS seletivamente para estilizar a página de acordo com as necessidades do usuário e as capacidades da tela pela qual ele acessa a página.
 
 Por exemplo, a seguinte media query testa se a página atual está sendo exibida como mídia de tela (portanto, não é um documento impresso) e o viewport tem pelo menos `800px` ou `80 rem` de largura. O CSS para o seletor `.container` será aplicado apenas se essas duas condições forem verdade.
@@ -110,6 +110,7 @@ Encontre mais detalhes sobre o assunto na documentação MDN para [Media Queries
 Media queries podem ajudar no design responsivo, mas não são obrigatórias. Grids flexíveis, unidades relativas e valores de unidade máximos e mínimos podem ser utilizados sem as queries.
 
 ## Tecnologias de layout responsivo
+
 Sites responsivos são alicerçados em grids flexíveis, isso significa que não é mais necessário o esforço hercúleo de criar um layout com medidas absolutas perfeitas para cada dispositivo possível existente que é capaz de acessar a sua página. Essa abordagem seria impraticável mesmo se fosse possível dado o vasto número de dispositivos com tamanhos diferentes que existem e o fato de que, mesmo nos desktops, as pessoas nem sempre utilizam a janela do navegador maximizada.
 
 Ao utilizar um grid flexível, você pode mudar uma propriedade ou adicionar um _breakpoint_, para alterar o design onde quer que o conteúdo comece a ficar com exibição ruim. Por exemplo, para garantir que linhas não atinjam um comprimento em que ficam ilegivelmente longas à medida que o tamanho da tela aumenta, é possível usar `columns`; Se uma `box` fica esmagada com duas palavras por linha à medida que ela se estreita, você pode definir um _breakpoint_.
@@ -117,6 +118,7 @@ Ao utilizar um grid flexível, você pode mudar uma propriedade ou adicionar um 
 Diversos métodos de layout modernos como o [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) são, por padrão, responsivos. Todos eles presumem prontamente que você está tentando criar um grid flexível e oferecem maneiras mais fáceis para fazer isso.
 
 ### Multicol
+
 O mais antigo desses métodos de layout é o multicol - quando você especifica uma `colum-count`, indicando o número de colunas no qual você deseja que o seu conteúdo seja dividido. O navegador então calcula o tamanho dessas colunas, que mudará conforme o tamanho disponível na tela.
 
 ```css
@@ -136,6 +138,7 @@ Se, ao invés de especificar uma `column-count`, você escolher especificar uma 
 Também é possível usar a propriedade abreviada `columns` para fornecer tanto o número máximo de colunas da `column-count` quanto a largura mínima por coluna da `column-width`. Dessa forma é possível assegurar que, caso o tamanho da tela aumente, os comprimentos de linha não fiquem longos demais a ponto de ficarem ilegíveis e, caso o tamanho da tela diminua, estreitas demais requerendo rolagem horizontal frequente a cada, digamos, um ou dois parágrafos.
 
 ### Flexbox
+
 No Flexbox, items flex apresentam o comportamento inicial de encolher e distribuir espaço entre si de acordo com o espaço disponível no seu container. Mudando os valores para `flex-grow` e `flex-shrink`, conseguimos manipular como esses items devem se comportar quando ocorre de haver mais ou menos espaço ao redor.
 
 No exemplo abaixo cada um dos items flex vai ocupar quantidades iguais de espaço no flex container, usando a propriedade abreviada `flex: 1` como está descrito no tópico de layout [Flexbox: Dimensionamento flexível de elementos flex](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
@@ -154,6 +157,7 @@ No exemplo abaixo cada um dos items flex vai ocupar quantidades iguais de espaç
 > Para exemplificar o layout responsivo simples mostrado acima foi refatorado, mas dessa vez utilizando flexbox. É perceptível que não é necessário utilizar valores percentuais arcanos para calcular o tamanho das colunas: [exemplo](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
+
 No CSS Layout Grid, a unidade `fr` permite distribuir o espaço disponível ao longo das faixas do grid. O exemplo a seguir cria um grid container com três faixas iguais de tamanho fixado em `1fr`. Isto irá criar três faixas em formato de colunas, cada coluna tomando para si uma parte do espaço disponível no container. 
 
 Você pode descobrir mais sobre como criar um grid com a unidade `fr` no tópico Aprenda Layout com Grids em [Grids Flexíveis com a unidade fr](/pt-BR/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
@@ -169,6 +173,7 @@ Você pode descobrir mais sobre como criar um grid com a unidade `fr` no tópico
 > A versão do layout em grid é ainda mais simples pois podemos definir as colunas no `.wrapper`: [exemplo](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
 
 ## Imagens/mídias responsivas
+
 A abordagem considerada mais simples para garantir que mídias como imagens, vídeos e áudios nunca sejam maiores que o seu respectivo container responsivo é a seguinte:
 
 ```css
@@ -197,9 +202,11 @@ Outras dicas úteis são:
 
 
 ## Tipografia responsiva 
+
 Algo que não foi abordado nos trabalhos iniciais de design responsivo, mas que posteriormente recebeu atenção foi a chamada tipografia responsiva. Essencialmente, a tipografia responsiva descreve as mudanças nos tamanhos de fonte dentro dos blocos de media queries ou através de unidades de viewport para reagir de forma reflexiva à quantidade de tela disponível.
 
 ### Usando Media Queries para tipografia responsiva
+
 Neste exemplo, queremos configurar a nossa heading tag de nível 1 (`<h1>`) para ter a medida de `4rem`, ou seja 4 vezes o tamanho da nossa fonte base. Esse é uma tag de tamanho bem grande e por isso desejamos que esse tamanho  ocorra somente em telas com tamanho suficiente para comportá-lo. 
 
 Para fazer isso, primeiro criamos uma heading tag com tamanho bem menor para então usar media queries para sobrescrever o tamanho inicialmente definido pelo tamanho maior de `4rem` caso seja detectado que o usuário tem uma tela com no mínimo 1200px de tamanho.
@@ -237,6 +244,7 @@ Essa forma de abordar a tipografia responsiva demonstra que o uso das media quer
 
 
 ### Usando unidades de Viewport para tipografia responsiva
+
 Uma abordagem muito interessante para isso é usar a unidade de viewport `vw` para habilitar tipografia responsiva. O valor `1vw`é equivalente a um porcento (**1%**) da largura total do viewport, o que significa quê, caso você determine o seu tamanho de fonte utilizando `vw, esta vai sempre referenciar-se com o tamanho da viewport
 
 ```css
@@ -262,6 +270,7 @@ Isso significa que só é necessário especificar unicamente o tamanho da fonte 
 
 
 ## A meta tag de viewport
+
 Se você olhar minuciosamente o código fonte de uma página responsiva, é bem possível que você note a seguinte tag {{htmlelement("meta")}} dentro do elemento `<head>` do documento:
 
 ```html
@@ -290,6 +299,7 @@ Você deve evitar o uso de `minimum-scale`, `maximum-scale` e em particular da c
 
 
 ## Resumo
+
 Em suma, Design Responsivo refere-se ao design de site ou aplicação que é capaz de reagir adequadamente ao ambiente no qual é visualizado, não importa qual sejam as características desse ambiente. Ela engloba alguns recursos do HTML e do CSS e é, essencialmente, o padrão de como websites e páginas web são construídas atualmente. 
 
 Pense, por exemplo, nos sites que você acessa diariamente no seu celular - é bastante raro topar com um site que é apenas uma versão diminuída do site para computadores ou no qual é necessário "duelar" com o zoom e a barra de rolagem para encontrar e utilizar partes do site. Isso se tornou algo cada vez menos comum justamente em razão do ambiente web ter caminhado na direção em favor da adoção de designs responsivos. 
