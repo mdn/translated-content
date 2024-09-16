@@ -192,14 +192,15 @@ Também é possível utilizar o _art direction_ para imagens usadas em tamanhos 
 
 Você pode encontrar um guia detalhado nesta seção de Aprenda HTML do MDN sobre [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
+
 Outras dicas úteis são:
 * Tenha certeza de sempre utilizar uma imagem de formato apropriado para as imagens que você planeja utilizar (como `.png` ou `.jpg`/`.jpeg`) e de otimizar o tamanho do arquivo com o auxílio de editores gráficos antes de colocar as imagens no seu website ou página web.
 * Você pode fazer uso de recursos do CSS como [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) e [shadows](/pt-BR/docs/Web/CSS/box-shadow) para criar efeitos visuais sem o uso de imagens.
 * Também é possível usar media queries dentro do atributo media de elementos [`<source>`](/pt-BR/docs/Web/HTML/Element/source) aninhados no interior de elementos [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/[`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) para servir arquivos de áudio ou de vídeo conforme seja o mais apropriado para diferentes dispositivos (video/audio responsivos).
 
+
 >[!NOTE]
 > Algumas recomendações de editores gráficos open-source que você pode usar para otimizar suas imagens são o [Inkscape](https://inkscape.org/) e o [GIMP](https://www.gimp.org/)
-
 
 ## Tipografia responsiva 
 
