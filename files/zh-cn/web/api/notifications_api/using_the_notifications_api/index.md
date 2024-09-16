@@ -179,7 +179,7 @@ window.addEventListener("load", () => {
   button.addEventListener("click", () => {
     if (Notification?.permission === "granted") {
       demoLogs.innerText += `该网站有显示通知的权限。正在显示通知。\n`;
-      // 如果用户同意接收通知,让我们尝试发送十个通知
+      // 如果用户同意接收通知，让我们尝试发送十个通知
       let i = 0;
       // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
@@ -198,8 +198,7 @@ window.addEventListener("load", () => {
       Notification.requestPermission().then((status) => {
         // 如果用户同意
         if (status === "granted") {
-          demoLogs.innerText +=
-            "用户授予权限。正在发送通知。\n";
+          demoLogs.innerText += "用户授予权限。正在发送通知。\n";
           let i = 0;
           // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
