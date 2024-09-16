@@ -199,8 +199,6 @@ Outras dicas úteis são:
 * Também é possível usar media queries dentro do atributo media de elementos [`<source>`](/pt-BR/docs/Web/HTML/Element/source) aninhados no interior de elementos [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/[`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) para servir arquivos de áudio ou de vídeo conforme seja o mais apropriado para diferentes dispositivos (video/audio responsivos).
 
 
->[!NOTE]
-> Algumas recomendações de editores gráficos open-source que você pode usar para otimizar suas imagens são o [Inkscape](https://inkscape.org/) e o [GIMP](https://www.gimp.org/)
 
 ## Tipografia responsiva 
 
