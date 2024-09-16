@@ -61,7 +61,7 @@ useResponse.addEventListener("click", async () => {
 
 reset.addEventListener("click", () => {
   document.location.reload();
-  });
+});
 ```
 
 #### 結果
