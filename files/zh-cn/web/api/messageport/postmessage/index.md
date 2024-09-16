@@ -2,7 +2,7 @@
 title: MessagePort：postMessage() 方法
 slug: Web/API/MessagePort/postMessage
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: e0310b3f565d3147fa80d9e63ace41e0fc244fa6
 ---
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
@@ -13,18 +13,20 @@ l10n:
 
 ```js-nolint
 postMessage(message)
-postMessage(message, options)
 postMessage(message, transfer)
+postMessage(message, options)
 ```
 
 ### 参数
 
 - `message`
   - : 需要通过 channel 发送的消息。可以是任何基本数据类型。多个数据项可以作为数组发送。
-- `options` {{optional_inline}}
-  - : 一个可选对象，包含一个带有[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的 `transfer` 的字段，数组中包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到接收方，发送方将不能再使用它们。
 - `transfer` {{optional_inline}}
-  - : 一个可选[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到接收方，发送方将不能再使用它们。
+  - : 一个包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)的可选的[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。这些对象的所有权将转移到接收方，发送方将不能再使用它们。这些可转移对象应附加到消息中；否则它们将被转移，但实际上在接收方无法访问。
+- `options` {{optional_inline}}
+  - : 包含以下属性的可选对象：
+    - `transfer` {{optional_inline}}
+      - : 与 `transfer` 参数含义相同。
 
 ### 返回值
 

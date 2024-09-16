@@ -36,7 +36,7 @@ Como dissemos antes e diremos novamente — _tudo_ é um objeto em JavaScript. Q
 var string = "This is my string";
 ```
 
-sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos diponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!
+sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos disponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!
 
 **Agora, antes de seu cérebro começar a derreter, não se preocupe!** Você não precisa saber sobre a maioria deles no início da sua jornada de aprendizado. Mas há alguns que você potencialmente usará com bastante frequência que veremos aqui.
 
@@ -180,7 +180,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
    browserType.indexOf("zilla");
    ```
 
-   Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
+   Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caracteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
 
 2. Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
 
@@ -215,7 +215,7 @@ browserType.slice(2);
 Isso retornará "zilla" — isso é porque a posição de caracter 2 é a letra z, e porque você não incluiu o segundo parametro, a substring retornou todos os caracteres restantes na string.
 
 > [!NOTE]
-> O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} pagina para ver o que mais você pode descobrir.
+> O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} página para ver o que mais você pode descobrir.
 
 ### Mudando entre maiúsculas e minúsculas
 
