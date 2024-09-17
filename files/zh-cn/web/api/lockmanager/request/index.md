@@ -2,7 +2,7 @@
 title: LockManager：request() 方法
 slug: Web/API/LockManager/request
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
@@ -36,7 +36,7 @@ request(name, options, callback)
 
     - `mode` {{optional_inline}}
 
-      - : `"exclusive"` 或 `"shared"` 之一。默认值是· `"exclusive"`。
+      - : `"exclusive"` 或 `"shared"` 之一。默认值是 `"exclusive"`。
 
     - `ifAvailable` {{optional_inline}}
 
