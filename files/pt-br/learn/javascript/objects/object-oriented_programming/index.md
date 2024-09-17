@@ -58,7 +58,7 @@ Em pseudocódigo, uma classe denominada `Professor` poderia ser escrita dessa fo
 classe Professor
     propriedades
         nome
-        leciona 
+        leciona
     metodos
         atribuiNota(atividade)
         apresentaSe()
@@ -104,14 +104,14 @@ Dessa forma criamos dois objetos, ambos instâncias da classe `Professor`.
 
 ## Herança
 
-Suponha que em nossa escola também queremos representar alunos. Ao contrário de professores, alunos não podem atribuir notas ao corrigir atividades, não lecionam matérias e pertencem a uma turma escolar definida por ano. 
+Suponha que em nossa escola também queremos representar alunos. Ao contrário de professores, alunos não podem atribuir notas ao corrigir atividades, não lecionam matérias e pertencem a uma turma escolar definida por ano.
 
 Porém, alunos também tem um nome e talvez queiram apresentar-se aos colegas de turma, então podemos escrever a definição de uma classe Aluno dessa forma:
 
 ```plain
 classe Aluno
     propriedades
-        nome 
+        nome
         ano
     construtor
         Aluno(nome, ano)
