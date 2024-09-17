@@ -1,13 +1,14 @@
 ---
-title: Blob.size
+title: "Blob: size プロパティ"
+short-title: size
 slug: Web/API/Blob/size
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("Blob")}} インターフェイスの **`size`** プロパティは、 {{domxref("Blob")}} または {{domxref("File")}} の大きさをバイト単位で返します。
+**`size`** は {{domxref("Blob")}} インターフェイスのプロパティで、この {{domxref("Blob")}} または {{domxref("File")}} の大きさをバイト単位で返します。
 
 ### 値
 
