@@ -22,7 +22,7 @@ l10n:
 你需要了解“Web 是如何工作的”。我们建议你首先阅读以下主题：
 
 - [什么是 Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [构建网站需要哪些软件？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [我需要什么软件来构建一个网站](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
 - [如何将文件上传到 Web 服务器？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 有了这些基本理解，你就可以准备好逐步学习本节中的模块。
