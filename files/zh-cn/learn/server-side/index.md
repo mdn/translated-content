@@ -34,7 +34,7 @@ l10n:
 - [服务器端网站编程第一步](/zh-CN/docs/Learn/Server-side/First_steps)
   - : 这个模块提供了与技术无关的服务器端网站编程信息，例如“它是什么？”、“它与客户端编程有何不同？”，以及“它为什么有用？”。这个模块还概述了一些更流行的服务器端 Web 框架，并提供了如何为你的网站选择最佳框架的指导。最后，提供了 Web 服务器安全性的介绍。
 - [Django Web 框架（Python）](/zh-CN/docs/Learn/Server-side/Django)
-  - : Django 是一个非常流行且功能齐全的服务器端 Web 框架，用 Python 编写。这个模块解释了为什么 Django 是一个如此好的 Web 服务器框架，如何设置开发环境以及如何使用它执行常见任务。
+  - : Django 是一个用 Python 编写的，非常流行且功能齐全的服务器端 Web 框架。这个模块解释了为什么 Django 是一个如此优秀的 Web 服务器框架、如何设置开发环境，以及如何使用它执行常见任务。
 - [Express Web 框架（Node.js/JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
   - : Express 是一个流行的 Web 框架，用 JavaScript 编写并在 Node.js 运行时环境中托管。这个模块解释了该框架的一些关键优势，如何设置开发环境以及如何执行常见的 Web 开发和部署任务。
 
