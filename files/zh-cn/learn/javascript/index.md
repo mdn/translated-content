@@ -60,4 +60,4 @@ JavaScript 可以说比相关技术（如 [HTML](/zh-CN/docs/Learn/HTML) 和 [CS
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 非常适合有抱负的 Web 开发人员的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课是免费的。
 - [编码数学](https://www.youtube.com/user/codingmath)
-  - : 一个由 [Keith Peters](https://www.bit-101.com/2017/about-me/) 创建的优秀的视频教程系列，教你成为有效程序员所需的数学知识。
+  - : 一个由 [Keith Peters](https://www.bit-101.com/2017/about-me/) 创建的优秀的视频教程系列，教你成为高效的程序员所需的数学知识。
