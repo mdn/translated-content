@@ -36,7 +36,7 @@ l10n:
 - [Django Web 框架（Python）](/zh-CN/docs/Learn/Server-side/Django)
   - : Django 是一个用 Python 编写的，非常流行且功能齐全的服务器端 Web 框架。这个模块解释了为什么 Django 是一个如此优秀的 Web 服务器框架、如何设置开发环境，以及如何使用它执行常见任务。
 - [Express Web 框架（Node.js/JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
-  - : Express 是一个流行的 Web 框架，用 JavaScript 编写并在 Node.js 运行时环境中托管。这个模块解释了该框架的一些关键优势，如何设置开发环境以及如何执行常见的 Web 开发和部署任务。
+  - : Express 是用 JavaScript 编写并在 Node.js 运行时环境中托管的一个流行的 Web 框架。这个模块解释了该框架的一些关键优势、如何设置开发环境，以及如何执行常见的 Web 开发和部署任务。
 
 ## 参见
 
