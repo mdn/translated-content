@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("GPUCompilationMessage")}} インターフェイスの読み取り専用プロパティ  **`offset`** は、シェーダーコードの始点から、メッセージが対応する点または関連する部分文字列の始点までのオフセットを表す数値です。
+{{domxref("GPUCompilationMessage")}} インターフェイスの読み取り専用プロパティ **`offset`** は、シェーダーコードの始点から、メッセージが対応する点または関連する部分文字列の始点までのオフセットを表す数値です。
 
 ## 値
 
