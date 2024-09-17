@@ -39,7 +39,7 @@ JavaScript 可以说比相关技术（如 [HTML](/zh-CN/docs/Learn/HTML) 和 [CS
 本主题包含以下模块，建议按顺序学习。
 
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
-  - : 在第一个 JavaScript 模块中，我们首先回答一些基本问题，例如“什么是 JavaScript？”，“它看起来是什么样的？”和“它能做什么？”，然后带你体验第一次实际编写 JavaScript。之后，我们将详细讨论一些关键的 JavaScript 特性，如变量、字符串、数字和数组。
+  - : 在第一个 JavaScript 模块中，我们首先回答一些基本问题，例如“什么是 JavaScript？”、“它看起来是什么样的？”和“它能做什么？”，然后带你体验第一次实际编写 JavaScript。之后，我们将详细讨论一些关键的 JavaScript 特性，如变量、字符串、数字和数组。
 - [创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 在这个模块中，我们将继续涵盖所有 JavaScript 的关键基础特性，重点关注常见的代码块类型，如条件语句、循环、函数和事件。你已经在课程中看到了这些内容，但只是顺便提及——在这里我们将明确讨论它们。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
