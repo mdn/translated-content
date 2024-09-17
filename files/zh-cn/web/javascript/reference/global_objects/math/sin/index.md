@@ -24,7 +24,7 @@ Math.sin(x)
 
 ## 返回值
 
-`x` 的正弦值，介于 -1 到 1 之间（包含 -1 和 1）。如果 `x` 为 {{jsxref("Infinity")}}、`-Infinity` 或 {{jsxref("NaN")}},则返回 {{jsxref("NaN")}}。
+`x` 的正弦值，介于 -1 到 1 之间（包含 -1 和 1）。如果 `x` 为 {{jsxref("Infinity")}}、`-Infinity` 或 {{jsxref("NaN")}}，则返回 {{jsxref("NaN")}}。
 
 ## 描述
 
