@@ -25,6 +25,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
 - [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
 - [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
 - [決済ハンドラー API](/ja/docs/Web/API/Payment_Handler_API)
 - [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
@@ -53,7 +54,8 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
 - [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [WebVTT API](/ja/docs/Web/API/WebVTT_API)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [プッシュ通知 API](/ja/docs/Web/API/Push_API)
 - [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
