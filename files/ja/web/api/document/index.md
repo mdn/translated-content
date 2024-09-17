@@ -263,7 +263,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : 最上位のサイトが、同じ[関連ウェブサイト設定](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)内の別のウェブサイトから発信された埋め込みコンテンツの代わりに、サードパーティクッキーへのアクセスをリクエストできるようにします。
 - {{domxref("Document.startViewTransition()")}}
-  - : 新しい{{domxref("View Transitions API", "ビュートランジション", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
+  - : 新しい{{domxref("View Transitions API", "ビュー遷移", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
 
 `Document` インターフェイスは、{{DOMxRef("XPathEvaluator")}} インターフェイスによって拡張されています。
 
