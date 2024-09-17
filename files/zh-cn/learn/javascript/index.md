@@ -43,7 +43,7 @@ JavaScript 可以说比相关技术（如 [HTML](/zh-CN/docs/Learn/HTML) 和 [CS
 - [创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 在这个模块中，我们将继续涵盖所有 JavaScript 的关键基础特性，重点关注常见的代码块类型，如条件语句、循环、函数和事件。你已经在课程中看到了这些内容，但只是顺便提及——在这里我们将明确讨论它们。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
-  - : 在 JavaScript 中，大多数都是对象，从核心 JavaScript 特性（如字符串和数组）到构建在 JavaScript 之上的浏览器 API。你甚至可以创建自己的对象，将相关的函数和变量封装起来。如果你想进一步提高对语言的了解并编写更高效的代码，理解 JavaScript 的面向对象特性非常重要，因此我们提供了这个模块来帮助你。在这里，我们将详细教授对象理论和语法，看看如何创建你自己的对象，并解释 JSON 数据是什么以及如何使用它。
+  - : 在 JavaScript 中，大多数东西都是对象，从 JavaScript 核心特性（如字符串和数组）到构建在 JavaScript 之上的浏览器 API。你甚至可以创建自己的对象，将相关的函数和变量封装起来。如果你想进一步提高对语言的了解并编写更高效的代码，理解 JavaScript 的面向对象特性非常重要，因此我们提供了这个模块来帮助你。在这里，我们将详细教授对象理论和语法，看看如何创建你自己的对象，并解释 JSON 数据是什么以及如何使用它。
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
   - : 在这个模块中，我们将了解异步 JavaScript，为什么它很重要，以及如何使用它有效地处理潜在的阻塞操作（如从服务器获取资源）。
 - [客户端 Web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
