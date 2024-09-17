@@ -26,6 +26,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
 - [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API)
 - [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
+- [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API)
 - [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
 - [決済ハンドラー API](/ja/docs/Web/API/Payment_Handler_API)
 - [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
@@ -65,7 +66,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [ウェブ MIDI API](/ja/docs/Web/API/Web_MIDI_API)
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 
-## 仕様書
+## API 仕様書英語索引
 
 利用可能なすべての API の一覧です。
 
