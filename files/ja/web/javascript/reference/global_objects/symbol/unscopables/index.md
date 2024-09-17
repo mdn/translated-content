@@ -146,8 +146,8 @@ const character = {
   },
   student: "Luke",
   [Symbol.unscopables]: {
-  // オブジェクトに `null` プロトタイプを持たせて、
-  // `Object.prototype` メソッドがスコープから外れないようにする
+    // オブジェクトに `null` プロトタイプを持たせて、
+    // `Object.prototype` メソッドがスコープから外れないようにする
     __proto__: null,
     // `student` をスコープ対象外にする
     student: true,
