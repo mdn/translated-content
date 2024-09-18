@@ -57,7 +57,7 @@ l10n:
 以下文章对于学习路径来说没那么重要，但是当你掌握了上述技术并想了解更多内容时，它们会变得有趣且实用。
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-  - : 在某些情况下，出于样式或功能的原因，原生表单控件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单控件。这篇文章通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
+  - : 在某些情况下，出于样式或功能的原因，原生表单微件无法提供你所需的东西。在这种情况下，你会需要使用原生 HTML 构建表单微件。这篇文章通过一个案例研究说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
   - : 这篇文章将讨论如何使用表单来构建 HTTP 请求，并通过自定义的 JavaScript 而不是标准的表单提交发送请求。这篇文章还说明为什么要这么做，以及这样做的意图。（参见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
