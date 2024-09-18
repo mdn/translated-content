@@ -57,7 +57,7 @@ request(name, options, callback)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}}，在锁释放后解析（或拒绝）回调结果，或者拒绝若请求中止。
+一个 {{jsxref('Promise')}}，在锁释放后兑现（或拒绝）回调结果，或者在请求中止时拒绝。
 
 ### 异常
 
@@ -68,9 +68,9 @@ request(name, options, callback)
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果无法获取当前环境的锁管理器，则抛出该异常。
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : 如果 `name` 以连字符（`-`）开头，或选项 `steal` 和 `ifAvailable` 均为 `true`，或者选项 `signal` 存在且选项 `steal` 或 `ifAvailable` 为 `true`。
+  - : 如果 `name` 以连字符（`-`）开头且 `steal` 和 `ifAvailable` 选项均为 `true`，或选项 `signal` 存在且 `steal` 或 `ifAvailable` 选项为 `true` 时，则抛出该异常。
 - `AbortError` {{domxref("DOMException")}}
-  - : 如果选项 `signal` 存在并且被中止，则抛出该异常。
+  - : 如果 `signal` 选项存在并且被中止，则抛出该异常。
 
 ## 示例
 
