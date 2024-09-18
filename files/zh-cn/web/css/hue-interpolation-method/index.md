@@ -13,7 +13,7 @@ slug: Web/CSS/hue-interpolation-method
 
 `<hue-interpolation-method>` 值由色相插值算法的名称后接字面标记 `hue` 所构成：
 
-```
+```plain
 shorter hue
 longer hue
 increasing hue
