@@ -15,7 +15,7 @@ l10n:
 
 ## 예제
 
-이 예제는 문서에 {{HTMLElement("script")}} 객체가 있음을 보여주기 위한 것입니다.
+다음은 페이지 내 {{HTMLElement("script")}} 요소의 존재를 확인하는 예시입니다.
 
 ```js
 let scripts = document.scripts;
