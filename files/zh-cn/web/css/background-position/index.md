@@ -84,20 +84,20 @@ background-position: unset;
 
 基本上发生的情况是从相应的容器尺寸中*减去*背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
 以 X 轴为例，假设我们有一个 300px 宽的图像，我们在一个 100px 宽的容器中使用它，`background-size` 设置为 `auto`：
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 因此，位置百分比为 -25%、0%、50%、100%、125%，我们得到这些图像到容器边界偏移值：
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px

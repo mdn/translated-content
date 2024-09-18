@@ -9,13 +9,6 @@ slug: Web/API/MediaQueryList
 
 如果你需要以编程方式来检测一个 document 上的媒体查询的值的变化，这个 `MediaQueryList` 对象使得通过观察其 document 而检测它的媒体查询的值的变化成为可能，而不是周期性地对这些媒体查询的值进行检查。
 
-## 方法概述
-
-```
-void addListener(MediaQueryListListener listener);
-void removeListener(MediaQueryListListener listener);
-```
-
 ## 实例属性
 
 _`MediaQueryList` 接口从它的父接口 {{DOMxRef("EventTarget")}} 继承了属性。_
@@ -31,12 +24,6 @@ _`MediaQueryList` 接口从它的父接口 {{DOMxRef("EventTarget")}} 继承了�
 
 在媒体查询列表上增加一个新的监听器，如果列表中已经存在了这个指定的监听器，这个方法将失去作用。
 
-```
-void addListener(
-  MediaQueryListListener listener
-);
-```
-
 #### 参数 ( 针对 addListener 方法)
 
 - `listener`
@@ -45,12 +32,6 @@ void addListener(
 ### removeListener()
 
 从媒体查询列表中移除一个监听器，如果列表中不存在这个指定的监听器，则这个方法将失去作用。
-
-```
-void removeListener(
-  MediaQueryListListener listener
-);
-```
 
 #### 参数 (针对 removeListener 方法)
 

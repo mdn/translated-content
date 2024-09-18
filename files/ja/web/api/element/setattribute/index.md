@@ -79,8 +79,6 @@ button.setAttribute("disabled", "");
   重要なことは、属性が存在する場合、実際の値に関係なく、その値は `true` とみなされるということです。
   属性が存在しない場合、その値は `false` となります。`disabled` 属性の値を空文字列 (`""`) に設定することで、`disabled` を `true` に設定することになり、その結果ボタンは無効になります。
 
-{{DOMAttributeMethods}}
-
 ## 仕様書
 
 {{Specifications}}

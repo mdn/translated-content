@@ -17,8 +17,17 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 
 ## 语法
 
-```
-语法：attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```css
+/* 关键字值 */
+-webkit-touch-callout: default;
+-webkit-touch-callout: none;
+
+/* 全局值 */
+-webkit-touch-callout: initial;
+-webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
+-webkit-touch-callout: unset;
 ```
 
 ### 解释
