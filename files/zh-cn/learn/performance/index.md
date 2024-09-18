@@ -27,7 +27,7 @@ l10n:
 
 本主题包含以下指南。以下是学习它们的建议顺序；你绝对应该从第一个开始。
 
-- [为什么关注 Web 性能](/zh-CN/docs/Learn/Performance/why_web_performance)
+- [Web 性能的重要性](/zh-CN/docs/Learn/Performance/why_web_performance)
   - : 这篇文章讨论了 Web 性能对于无障碍、用户体验和你的业务目标的重要性。
 - [什么是 Web 性能？](/zh-CN/docs/Learn/Performance/What_is_web_performance)
   - : 你知道 Web 性能很重要，但什么是 Web 性能？这篇文章介绍了性能的组成部分，从网页加载和渲染（包括你的内容如何进入用户的浏览器以供查看），到我们在考虑性能时需要考虑的人群。
