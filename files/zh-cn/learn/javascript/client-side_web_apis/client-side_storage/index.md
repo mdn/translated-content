@@ -725,7 +725,7 @@ self.addEventListener("install", (e) => {
 
 在处理程序内部，我们首先记录所请求资产的 URL。然后，我们使用该 {{domxref("FetchEvent.respondWith()")}} 方法为请求提供自定义响应。
 
-在这个块中，我们 {{domxref("CacheStorage.match()")}} 用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果未找到匹配，或者 `undefined` 如果未找到匹配，则此承诺将满足匹配的响应。
+在这个块中，我们 {{domxref("CacheStorage.match()")}} 用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果 `undefined` 如果未找到匹配，则此 Promise 将满足匹配的响应。
 
 如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中[获取（）](/zh-CN/docs/Web/API/fetch)响应并返回该响应。
 
@@ -738,7 +738,7 @@ self.addEventListener("fetch", (e) => {
 });
 ```
 
-这就是我们简单的服务工作者。你可以使用它们进行更多的负载 - 有关详细信息，请参阅 [service worker 手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 在他的文章中[添加 service worker 和离线到你的 Web 应用程序](https://developers.google.com/web/fundamentals/codelabs/offline/)，这启发了这个简单的例子。
+这就是我们简单的服务工作者。你可以使用它们进行更多的负载——有关详细信息，请参阅 [service worker 手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 的[添加 service worker 和离线到你的 Web 应用程序](https://developers.google.com/web/fundamentals/codelabs/offline/)一文给予这一简单示例的启发。
 
 #### 测试离线示例
 
