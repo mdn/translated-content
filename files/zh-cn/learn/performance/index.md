@@ -21,11 +21,11 @@ l10n:
 - [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
 
-一旦你完成了本模块的学习，你可能会对深入研究 Web 性能感到兴奋——你可以在我们的[主要 MDN Web 性能部分](/zh-CN/docs/Web/Performance)找到许多进一步的教学内容，包括性能 API 的概述、测试和分析工具，以及性能瓶颈的陷阱。
+一旦你完成了本模块的学习，你可能会对深入研究 Web 性能感到兴奋——你可以在我们[主要的 MDN Web 性能部分](/zh-CN/docs/Web/Performance)找到许多进一步的教学内容，包括性能 API 的概述、测试和分析工具，以及性能瓶颈的陷阱。
 
 ## 指南
 
-本主题包含以下指南。以下是学习它们的建议顺序；你绝对应该从第一个开始。
+本主题包含以下指南。以下是建议的学习顺序；你绝对应该从第一个开始。
 
 - [Web 性能的重要性](/zh-CN/docs/Learn/Performance/why_web_performance)
   - : 这篇文章讨论了 Web 性能对于无障碍、用户体验和你的业务目标的重要性。
@@ -58,5 +58,5 @@ l10n:
   - : 除了 HTML、CSS、JavaScript 和媒体文件的前端组件外，还有可以使应用程序变慢的特性和可以使应用程序在主观和客观上都变快的特性。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不良实践。在这里，我们将介绍这些特性的基本知识，并针对每个主题都提供了更深入地提升性能的链接。
 - [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
   - : 在这篇文章中，我们将学习响应式图像的概念——在屏幕尺寸、分辨率和其他特征差异很大的设备上表现良好的图像——并了解 HTML 提供的帮助实现它们的工具。这有助于提高不同设备的性能。响应式图像只是[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)的一部分，这是你未来要学习的 CSS 主题。
-- [MDN 上的主要 Web 性能部分](/zh-CN/docs/Web/Performance)
-  - : 我们的主要 Web 性能部分——在这里，你将找到更多关于 Web 性能的详细信息，包括性能 API 的概述、测试和分析工具，以及性能瓶颈的陷阱。
+- [MDN 上主要的 Web 性能部分](/zh-CN/docs/Web/Performance)
+  - : 我们主要的 Web 性能部分——在这里，你将找到更多关于 Web 性能的详细信息，包括性能 API 的概述、测试和分析工具，以及性能瓶颈的陷阱。
