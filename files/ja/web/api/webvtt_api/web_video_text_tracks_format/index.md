@@ -420,7 +420,7 @@ NOTE TODO まだ作業が残っていることを示す行を追加すること�
 これらのスタイルはキューの外観とサイズを指定するために使用しますが、位置やレイアウトは指定できません。これらは[キュー設定](#キュー設定)で制御できます。
 
 > [!NOTE]
-> WebVTT キューは、[video/audio 要素を埋め込んだ](<(/ja/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet)>)関連文書から読み込まれた CSS スタイルにも一致します。
+> WebVTT キューは、[video/audio 要素を埋め込んだ](/ja/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet)関連文書から読み込まれた CSS スタイルにも一致します。
 
 `STYLE` ブロックは、ファイル内のすべてのキューブロックより前に現れなければなりません。
 
