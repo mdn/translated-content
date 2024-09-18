@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+  sourceCommit: 83ec73ac6fec9cae23c54b729e6481f50a0a45e7
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}

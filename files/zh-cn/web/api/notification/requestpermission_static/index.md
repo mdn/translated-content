@@ -2,7 +2,7 @@
 title: Notification：requestPermission() 静态方法
 slug: Web/API/Notification/requestPermission_static
 l10n:
-  sourceCommit: 1d32183ba01cac6355135962686935e092f0251b
+  sourceCommit: 09ad551d5fecae5872328ece2871fdf02b115b6e
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
