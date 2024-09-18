@@ -11,25 +11,21 @@ l10n:
 
 ## 값
 
-```js
-var scriptList = document.scripts;
-```
-
-반환된 {{HTMLElement("script")}} 리스트 객체는 {{domxref("HTMLCollection")}}입니다. 일반 배열로 사용하여 해당 요소에 액세스할 수 있습니다.
+{{domxref("HTMLCollection")}}입니다. 이를 사용하여 목록의 모든 요소를 배열처럼 가져올 수 있습니다.
 
 ## 예제
 
 이 예제는 문서에 {{HTMLElement("script")}} 객체가 있음을 보여주기 위한 것입니다.
 
 ```js
-var scripts = document.scripts;
+let scripts = document.scripts;
 
 if (scripts.length) {
   alert("This page has scripts!");
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
