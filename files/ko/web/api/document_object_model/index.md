@@ -1,8 +1,6 @@
 ---
 title: 문서 객체 모델 (DOM)
 slug: Web/API/Document_Object_Model
-page-type: web-api-overview
-spec-urls: https://dom.spec.whatwg.org/
 ---
 
 {{DefaultAPISidebar("DOM")}}

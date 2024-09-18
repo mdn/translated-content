@@ -1,8 +1,6 @@
 ---
 title: UI 이벤트
 slug: Web/API/UI_Events
-page-type: web-api-overview
-spec-urls: https://w3c.github.io/uievents/
 ---
 
 {{DefaultAPISidebar("UI Events")}}
