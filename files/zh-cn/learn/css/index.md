@@ -15,7 +15,7 @@ l10n:
 
 一旦你理解了 HTML 的基础知识，我们就建议你同时更深入地学习 HTML 和 CSS，在这两个主题之间来回切换。这么做是因为在应用了 CSS 后，HTML 会变得更加有趣，学习起来也更有乐趣。并且不了解 HTML 的话，也无法学习 CSS。
 
-在开始本主题之前，你还应该熟悉如何使用电脑，如何被动地使用 Web（例如，只是浏览和消费内容）。你应该按照[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中的详细内容搭建基础工作环境，以及按照[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中的内容理解如何创建和管理文件——这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)纯新手模块的一部分。
+在开始本主题之前，你还应该熟悉如何使用电脑，如何被动地使用 Web（例如，只是浏览和消费内容）。你应该按照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中的详细内容搭建基础工作环境，以及按照[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中的内容理解如何创建和管理文件——这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)纯新手模块的一部分。
 
 在开始本主题之前，还是建议你先学习 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)，尤其当你是 Web 开发的纯新手的话。不过，[CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)这篇文章中涉及的大部分内容在 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块中也有所涉及，而且更详细。
 
