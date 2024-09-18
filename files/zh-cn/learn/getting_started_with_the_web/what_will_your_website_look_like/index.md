@@ -1,6 +1,8 @@
 ---
 title: 设计网站外观
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
+l10n:
+  sourceCommit: 865acb22b74a49927b98267566369d4677414f53
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
@@ -65,10 +67,10 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 选好字体后，你有两种方式使用它：
 
 1. 在你的代码中添加一个引用，从 Google 服务器加载这个字体。
-2. 下载字体文件到你的系统内，自行挂载这个文件，并在你网站的代码中使用。
+2. 下载字体文件到你的系统内，自行托管这个文件，并在你网站的代码中使用。
 
 > [!NOTE]
-> 在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
+> 在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，可以选择第二种方式，也可以选择 GDPR 认可的字体供应商，如 [Bunny Fonts](https://fonts.bunny.net/about)。
 
 另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 
