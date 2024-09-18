@@ -36,7 +36,7 @@ l10n:
 - [测量性能](/zh-CN/docs/Learn/Performance/Measuring_performance)
   - : 既然你了解了一些性能指标，我们将深入探讨性能工具、指标和 API，以及如何将性能作为 Web 开发工作流程的一部分。
 - [多媒体：图像](/zh-CN/docs/Learn/Performance/Multimedia)
-  - : 最容易提升 Web 性能的方式通常是媒体优化。根据每个用户代理的能力、大小和像素密度提供不同的媒体文件是可能的。在这篇文章中，我们讨论了图像对性能的影响，以及减少每个图像发送的字节数的方法。
+  - : 最容易提升 Web 性能的方式通常是媒体优化。根据每个用户代理的能力、尺寸和像素密度提供不同的媒体文件是可能的。在这篇文章中，我们讨论了图像对性能的影响，以及减少每个图像发送的字节数的方法。
 - [多媒体：视频](/zh-CN/docs/Learn/Performance/video)
   - : 最容易提升 Web 性能的方式通常是媒体优化。在这篇文章中，我们讨论了视频内容对性能的影响，并提供了一些技巧，如从背景视频中删除音轨可以提高性能。
 - [JavaScript 性能优化](/zh-CN/docs/Learn/Performance/JavaScript)
