@@ -1,6 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
+l10n:
+  sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
 {{CSSRef}}
@@ -51,8 +53,8 @@ border-image-slice: unset;
 
 - 仅指定了**一**个位置（1 个值）时，创建的（上下左右）四个切片将具有相同的宽度/高度。
 - 当指定了**两**个位置（2 个值）时，第一个值表示垂直方向的两个切片的高度（即 **top** 与 **bottom**），第二个值表示水平方向两侧切片的宽度（即 **left** 和 **right**）。
-- 当指定了**三**个位置（3 个值）时，第一个值表示顶部切片的高度（即 **top**），第二个值表示水平方向两侧切片的宽度（即 **left** 和 **right**），第三个值则表示底部切片的高度（即 **buttom**）。
-- 当指定了**四**个位置（4 个值）时，这四个值则分别对应 **top**、**right**、**buttom**、**left**（上、右、下、左）四个切片的宽度/高度。
+- 当指定了**三**个位置（3 个值）时，第一个值表示顶部切片的高度（即 **top**），第二个值表示水平方向两侧切片的宽度（即 **left** 和 **right**），第三个值则表示底部切片的高度（即 **bottom**）。
+- 当指定了**四**个位置（4 个值）时，这四个值则分别对应 **top**、**right**、**bottom**、**left**（上、右、下、左）四个切片的宽度/高度。
 
 可选值 `fill` 可放在上面声明的值的末尾。
 
@@ -176,3 +178,4 @@ sliceSlider.addEventListener("input", () => {
 ## 参见
 
 - [图解说明 1 到 4 个值的语法](/zh-CN/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [CSS中的边框图像：Interop 2023的关键关注领域]（/zh-CN/blog/border-images-interop-2023/）在 MDN 博客（2023）
