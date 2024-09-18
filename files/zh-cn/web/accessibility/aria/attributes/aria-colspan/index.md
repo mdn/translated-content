@@ -144,7 +144,7 @@ l10n:
 - {{domxref("Element.ariaColSpan")}}
   - : [`ariaColSpan`](/zh-CN/docs/Web/API/Element/ariaColSpan) 属性，作为每个元素接口的一部分，反映了 `aria-colspan` 属性的值，该属性定义了单元格或网格单元格在表格、网格或树网格中跨越的列数。
 
-## 关联角色
+## 相关角色
 
 用于角色：
 
