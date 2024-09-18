@@ -55,7 +55,7 @@ l10n:
 ## 参见
 
 - [Web 性能资源](/zh-CN/docs/Learn/Performance/Web_Performance_Basics)
-  - : 除了 HTML、CSS、JavaScript 和媒体文件的前端组件外，还有一些功能可以使应用程序变慢，也有一些功能可以使应用程序在主观和客观上都更快。有许多与 Web 性能相关的 API、开发工具、最佳实践和不良实践。在这里，我们将介绍许多功能的基本知识，并提供深入了解每个主题以提高性能的链接。
+  - : 除了 HTML、CSS、JavaScript 和媒体文件的前端组件外，还有可以使应用程序变慢的特性和可以使应用程序在主观和客观上都变快的特性。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不良实践。在这里，我们将介绍这些特性的基本知识，并针对每个主题都提供了更深入地提升性能的链接。
 - [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
   - : 在这篇文章中，我们将学习响应式图像的概念——在屏幕尺寸、分辨率和其他功能差异很大的设备上表现良好的图像——并了解 HTML 提供的帮助实现它们的工具。这有助于提高不同设备的性能。响应式图像只是[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)的一部分，这是你未来要学习的 CSS 主题。
 - [MDN 上的主要 Web 性能部分](/zh-CN/docs/Web/Performance)
