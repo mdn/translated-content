@@ -43,7 +43,7 @@ device.popErrorScope().then((error) => {
   if (error) {
     // error は GPUOutOfMemoryError のオブジェクトインスタンス
     buffer = null;
-    console.error(`アウトオブメモリー、バッファが大きすぎます。エラー: ${error.message}`);
+    console.error(`Out of memory, buffer too large. Error: ${error.message}`);
   }
 });
 ```
