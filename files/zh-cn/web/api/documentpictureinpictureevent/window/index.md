@@ -9,7 +9,7 @@ l10n:
 
 ## `window` 属性
 
-**`window`** 只读属性属于 {{domxref("DocumentPictureInPictureEvent")}} 接口，返回一个 {{domxref("Window")}} 实例，表示事件触发时 `DocumentPictureInPicture` 窗口中的浏览上下文。
+{{domxref("DocumentPictureInPictureEvent")}} 接口的 **`window`** 只读属性，返回一个 {{domxref("Window")}} 实例，表示事件触发时 `DocumentPictureInPicture` 窗口中的浏览上下文。
 
 ## 值
 
