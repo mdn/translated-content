@@ -34,7 +34,7 @@ _親の {{domxref("Event")}} からプロパティを継承します。_
 
 device.addEventListener("uncapturederror", (event) => {
   // エラーを再浮上させる
-  console.error("WebGPU エラーがキャプチャされませんでした:", event.error.message);
+  console.error("A WebGPU error was not captured:", event.error.message);
   reportErrorToServer({
     type: event.error.constructor.name,
     message: event.error.message,
