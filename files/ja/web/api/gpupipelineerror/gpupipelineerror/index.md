@@ -42,5 +42,5 @@ new GPUPipelineError(message, options)
 
 ## 関連情報
 
-- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
 - [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
