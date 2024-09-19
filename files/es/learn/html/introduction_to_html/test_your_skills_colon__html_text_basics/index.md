@@ -14,7 +14,13 @@ El objetivo de esta prueba de habilidad es evaluar si has comprendido el artícu
 
 ## Texto básico HTML 1
 
-En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo. Intenta actualizando el código más abajo para recrear el ejemplo terminado:
+En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo. 
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
+
+Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
@@ -23,6 +29,10 @@ En esta tarea queremos que etiquetes el HTML entregado utilizando elementos sem�
 ## Texto básico HTML 2
 
 En esta tarea necesitamos que cambies la primera lista no marcada en una lista no ordenada, y la segunda en una lista ordenada.
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
 
 Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
@@ -33,6 +43,10 @@ Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 ## Texto básico HTML 3
 
 En esta tarea se te entrega un párrafo, y tu objetivo es usar algunos elementos en línea para marcar algunas palabras con importancia, y otras con énfasis
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
 
 Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
