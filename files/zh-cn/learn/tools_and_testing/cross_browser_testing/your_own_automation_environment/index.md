@@ -579,7 +579,6 @@ function searchTextOnGoogle() {
 
 searchTextOnGoogle();
 ```
-
 3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
 4. 在终端中运行以下命令，以执行测试：
 
@@ -589,7 +588,6 @@ searchTextOnGoogle();
 
    测试将发送到 LambdaTest，其输出将反馈在 LambdaTest 控制台中。
    如果你希望从 LambdaTest 平台提取这些结果用于报告，那么你可以通过使用 [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/) 来实现。
-
 5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。你还会看到 **passed** 或 **failed** 的状态，而不是 **completed**，因为有 `if` 或 `else` 代码块。
 
    [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
