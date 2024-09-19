@@ -39,7 +39,7 @@ requestWindow(options)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : 如果 API 已被明确禁用（例如通过浏览器设置），则抛出此异常。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 在符合以下条件时抛出此异常:
+  - : 在符合以下条件时抛出此异常：
     - `requestWindow()` 不是从顶级 `window` 对象调用的。
     - `requestWindow()` 是从画中画窗口的 `window` 对象调用的（即 {{domxref("DocumentPictureInPicture.window")}}）。
     - 调用 `requestWindow()` 时不满足 {{Glossary("Transient_activation", "瞬态激活")}}。
