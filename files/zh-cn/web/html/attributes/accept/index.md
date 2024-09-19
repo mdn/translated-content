@@ -78,8 +78,7 @@ accept 是 {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} 类型
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="file">选择要上传的文件</label>
-    <input type="file" id="file" name="file" multiple />
+    <label for="file">选择要上传的文件</label><input type="file" id="file" name="file" multiple />
   </div>
   <div>
     <button>提交</button>
@@ -120,8 +119,7 @@ div {
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="profile_pic">选择要上传的文件</label>
-    <input
+    <label for="profile_pic">选择要上传的文件</label><input
       type="file"
       id="profile_pic"
       name="profile_pic"
