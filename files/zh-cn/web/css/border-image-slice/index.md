@@ -178,4 +178,4 @@ sliceSlider.addEventListener("input", () => {
 ## 参见
 
 - [图解说明 1 到 4 个值的语法](/zh-CN/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
-- [CSS中的边框图像：Interop 2023 的关键关注领域]（/zh-CN/blog/border-images-interop-2023/）在 MDN 博客（2023）
+- MDN 博客上的 [CSS 中的边框图像：Interop 2023 的关键关注领域](/zh-CN/blog/border-images-interop-2023/)（2023）
