@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`accept`** 属性的值是一个以逗号分隔的列表，其中包含一个或多个文件类型，或[唯一文件类型标识符](#唯一文件类型标识符)，说明允许的文件类型。
+**`accept`** 属性的值是一个以逗号分隔的列表，其中包含一个或多个文件类型/[唯一文件类型标识符](#唯一文件类型标识符)（描述了允许的文件类型）。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
 
