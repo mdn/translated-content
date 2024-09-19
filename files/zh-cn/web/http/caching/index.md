@@ -515,7 +515,7 @@ Cache-Control: no-cache, private
 
 因此，你可以使用包含基于版本号或哈希值的更改部分的 URL 来提供 JavaScript 和 CSS。一些方法如下所示。
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -545,7 +545,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 一些常用的缓存头值如下所示。
 
-```
+```plain
 36 cache-control max-age=0
 37 cache-control max-age=604800
 38 cache-control max-age=2592000

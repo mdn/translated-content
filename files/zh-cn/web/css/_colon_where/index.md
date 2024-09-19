@@ -26,6 +26,14 @@ footer p:hover {
 
 `:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/Specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
 
+## 语法
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
+
 ### 可容错选择器解析
 
 规范将 `:is()` 和 `:where()` 定义为接受一个[可容错选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
@@ -142,12 +150,6 @@ footer a {
 > 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
 
 {{EmbedLiveSample('示例', '100%', 600)}}
-
-## 语法
-
-```
-:where( <complex-selector-list> )
-```
 
 ## 规范
 
