@@ -58,7 +58,8 @@ l10n:
 ### email 输入
 
 ```html
-<label for="emails">想要将邮件发送给谁？</label><input
+<label for="emails">想要将邮件发送给谁？</label
+><input
   type="email"
   multiple
   name="emails"
@@ -97,7 +98,8 @@ input:invalid {
 ```html
 <form method="post" enctype="multipart/form-data">
   <p>
-    <label for="uploads">选择要上传的图像：</label><input
+    <label for="uploads">选择要上传的图像：</label
+    ><input
       type="file"
       id="uploads"
       name="uploads"
@@ -105,7 +107,8 @@ input:invalid {
       multiple />
   </p>
   <p>
-    <label for="text">选择要上传的文本文件：</label><input type="file" id="text" name="text" accept=".txt" />
+    <label for="text">选择要上传的文本文件：</label
+    ><input type="file" id="text" name="text" accept=".txt" />
   </p>
   <p>
     <input type="submit" value="提交" />
@@ -126,7 +129,8 @@ input:invalid {
 ```html
 <form method="get" action="#">
   <p>
-    <label for="dwarfs">选择你喜欢的小矮人樵夫：</label><select multiple name="dwarfs" id="dwarfs">
+    <label for="dwarfs">选择你喜欢的小矮人樵夫：</label
+    ><select multiple name="dwarfs" id="dwarfs">
       <option>grumpy@woodworkers.com</option>
       <option>happy@woodworkers.com</option>
       <option>sleepy@woodworkers.com</option>
@@ -137,7 +141,8 @@ input:invalid {
     </select>
   </p>
   <p>
-    <label for="favoriteOnly">选择你最喜欢的小矮人：</label><select name="favoriteOnly" id="favoriteOnly">
+    <label for="favoriteOnly">选择你最喜欢的小矮人：</label
+    ><select name="favoriteOnly" id="favoriteOnly">
       <option>grumpy@woodworkers.com</option>
       <option>happy@woodworkers.com</option>
       <option>sleepy@woodworkers.com</option>
