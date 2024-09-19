@@ -44,16 +44,13 @@ accept 是 {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} 类型
 
 ```html
 <p>
-  <label for="soundFile">选择一个音频文件：</label>
-  <input type="file" id="soundFile" accept="audio/*" />
+  <label for="soundFile">选择一个音频文件：</label><input type="file" id="soundFile" accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">选择一个视频文件：</label>
-  <input type="file" id="videoFile" accept="video/*" />
+  <label for="videoFile">选择一个视频文件：</label><input type="file" id="videoFile" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">选择一些图像：</label>
-  <input type="file" id="imageFile" accept="image/*" multiple />
+  <label for="imageFile">选择一些图像：</label><input type="file" id="imageFile" accept="image/*" multiple />
 </p>
 ```
 
