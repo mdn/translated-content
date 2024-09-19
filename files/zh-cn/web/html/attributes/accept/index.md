@@ -15,9 +15,9 @@ l10n:
 
 accept 是 {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} 类型的属性。{{htmlelement("form")}} 元素曾经支持这个属性，但已被移除，改用 {{HTMLElement("input/file", "file")}}。
 
-由于一种给定的文件类型可以用多种方式识别，因此在需要特定类型的文件时，提供一套完整的类型说明是非常有用的，或者使用通配符来表示任何格式的类型都是可以接受的。
+由于一种给定的文件类型可以用多种方式标识，因此在需要特定类型的文件时，提供一套完整的类型说明是非常有用的，或者使用通配符来表示任何格式的类型也是可以接受的。
 
-例如，有多种方法可以识别 Microsoft Word 文件，因此接受 Word 文件的网站可能会使用像这样的 `<input>`：
+例如，有多种方法可以标识 Microsoft Word 文件，因此接受 Word 文件的网站可能会使用像这样的 `<input>`：
 
 ```html
 <input
@@ -36,7 +36,7 @@ accept 是 {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} 类型
 
 `accept` 属性并不验证所选文件的类型；它为浏览器提供提示，引导用户选择正确的文件类型。用户仍然有可能（在大多数情况下）在文件选择器中切换一个选项，从而覆盖此选项并选择任何他们想要的文件，然后选择不正确的文件类型。
 
-因此，应确保服务器端验证预期需求。
+因此，应确保服务器端验证预期要求。
 
 ## 示例
 
@@ -102,15 +102,15 @@ div {
 
 无论用户使用何种设备或操作系统，file 输入都会提供一个按钮，打开文件选择对话框，让用户选择文件。
 
-如上所示，包含 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性可指定同时选择多个文件。用户可以根据平台允许的方法（如按下 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）从文件选择器中选择多个文件。如果你只想让用户从每个 `<input>` 中选择单个文件，省略 `multiple` 属性。
+如上所示，包含 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性可指定同时选择多个文件。用户可以根据平台允许的方法（如按下 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）从文件选择器中选择多个文件。如果你只想让用户从每个 `<input>` 中选择单个文件，请省略 `multiple` 属性。
 
 ### 限制所接受的文件类型
 
-通常情况下，你不希望用户任意选择文件类型，而是希望他们选择特定类型的文件。例如，如果你的 file 输入让用户上传个人资料图片，你可能希望他们选择网络兼容的图片格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
+通常情况下，你不希望用户选择任意的文件类型，而是希望他们选择特定类型的文件。例如，如果你的 file 输入让用户上传个人资料图片，你可能希望他们选择 web 兼容的图片格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
 
 可接受的文件类型可通过 [`accept`](/zh-CN/docs/Web/HTML/Element/input/file#accept) 属性指定，该属性使用逗号分隔的列表，列出允许的文件扩展名或 MIME 类型。举例如下：
 
-- `accept="image/png"` 或 `accept=".png"`——接受 PNG 文件
+- `accept="image/png"` 或 `accept=".png"`——接受 PNG 文件。
 - `accept="image/png, image/jpeg"` 或 `accept=".png, .jpg, .jpeg"`——接受 PNG 或 JPEG 文件。
 - `accept="image/*"`——接收任何具有 `image/*` MIME 类型的文件。（很多移动端设备在使用此属性时也会让用户使用照相机拍照。）
 - `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"`——接受任何看起来像 MS Word 文档的东西。
