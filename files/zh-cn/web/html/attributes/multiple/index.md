@@ -33,6 +33,7 @@ l10n:
 
 {{HTMLElement("select")}} 元素上的 `multiple` 属性表示从选项列表中选择零个或多个选项的控件。若不存在该属性，{{HTMLElement("select")}} 元素表示从选项列表中选择一个 {{HTMLElement("option")}} 的控件。
 
+```html
 <select multiple name="dwarfs" id="dwarfs">
   <option>Grumpy</option>
   <option>Happy</option>
