@@ -2,12 +2,12 @@
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-若后台脚本在运行中，返回后台页面的 [Window](/zh-CN/docs/Web/API/Window)。若脚本未运行，则返回 null。
+若后台脚本在运行中，则将返回后台页面的 [Window](/zh-CN/docs/Web/API/Window)。若脚本不在运行，则将返回 null。
 
 这是一个同步函数。
 
@@ -30,7 +30,7 @@ let page = browser.extension.getBackgroundPage()
 
 ## 示例
 
-考虑[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)定义了一个函数 `foo()`：
+考虑定义了一个函数 `foo()` 的[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)：
 
 ```js
 // background.js
@@ -46,7 +46,7 @@ function foo() {
 // popup.js
 
 let page = browser.extension.getBackgroundPage();
-page.foo(); // -> "我是在 backgroubd.js 中被定义的"
+page.foo(); // -> "我是在 background.js 中被定义的"
 ```
 
 {{WebExtExamples}}
@@ -56,7 +56,7 @@ page.foo(); // -> "我是在 backgroubd.js 中被定义的"
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getBackgroundPage) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#method-getBackgroundPage) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
