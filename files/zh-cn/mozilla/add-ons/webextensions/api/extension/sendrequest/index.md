@@ -2,7 +2,7 @@
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}{{Deprecated_Header}}
@@ -10,7 +10,7 @@ l10n:
 > [!WARNING]
 > 该方法已被弃用。请改用 {{WebExtAPIRef("runtime.sendMessage")}}。
 
-向插件中其他的监听器发送请求。类似于 {{WebExtAPIRef('runtime.connect')}}，但只发送单一请求并可选地带有响应。在扩展的每个页面中，{{WebExtAPIRef('extension.onRequest')}} 事件都会触发。
+向插件中其他的监听器发送请求。该方法类似于 {{WebExtAPIRef('runtime.connect')}}，但它只能发送可选地带有响应的单一请求。发送请求后在扩展的每个页面中，{{WebExtAPIRef('extension.onRequest')}} 事件都会触发。
 
 ## 语法
 
@@ -32,10 +32,10 @@ chrome.extension.sendRequest(
   - : `any`。
 - `responseCallback` {{optional_inline}}
 
-  - : `function`，将传递如下参数：
+  - : `function`，将传递如下参数的函数：
 
     - `response`
-      - : `any`，由请求处理程序发送的 JSON 响应对象。如果在连接到插件时发生错误，回调函数将不带参数调用，且 {{WebExtAPIRef('runtime.lastError')}} 将被设置为错误消息。
+      - : `any`，由请求处理程序发送的 JSON 响应对象。如果在连接到插件时发生错误，回调函数将不带参数地被调用，且 {{WebExtAPIRef('runtime.lastError')}} 将被设置为错误消息。
 
 ## 浏览器兼容性
 
@@ -44,7 +44,7 @@ chrome.extension.sendRequest(
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-sendRequest) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#method-sendRequest) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
