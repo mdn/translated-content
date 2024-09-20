@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: focus() メソッド"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 1ca8335a919a2877ab9dc1bf6ad5967682d7c876
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -29,8 +30,8 @@ focus(options)
     - `preventScroll` {{optional_inline}}
       - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。`preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。`preventScroll` が `true` に設定されている場合、スクロールしません。
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを強制的に可視的に示すことができます。
-        既定では、あるいはプロパティが `true` でない場合でも、ブラウザーがユーザーにとってのアクセシビリティを向上させると判断した場合は、可視表示を提供することがあります。
+      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを強制的に可視的に示すことができ、`false` に設定すると、それを防ぐことができます。
+        このプロパティが指定されていない場合は、ブラウザーがユーザーにとってのアクセシビリティを向上させると判断した場合は、可視表示を提供することがあります。
 
 ### 返値
 
