@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-有关插件的工具。获取你的插件的资源包的 URL。获取你的插件页面的 [`Window`](/zh-CN/docs/Web/API/Window) 对象。获取各种设置的值。
+有关插件的工具；获取你的插件的资源包的 URL；获取你的插件页面的 [`Window`](/zh-CN/docs/Web/API/Window) 对象；获取各种设置的值。
 
 > **备注：** **该模块中的消息 API 被弃用**，取而代之为在 [`runtime`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime) 模块中的等价 API。
 
@@ -19,9 +19,9 @@ l10n:
 ## 属性
 
 - {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
-  - : 设置为回调的生命周期，如果异步扩展 API 导致错误。如果没有发生错误，`lastError` 将为 {{jsxref("undefined")}}。
+  - : 如果异步扩展 API 中出现错误，将在回调的调用中将该属性设置为那一错误。若没有发生错误，`lastError` 将为 {{jsxref("undefined")}}。
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
-  - : 对于在隐身模式标签中运行的内容脚本，以及在隐身模式进程中运行的扩展页面返回 `true`。（仅适用于具有 `incognito_behavior` 取值为“`split`”的扩展。）
+  - : 对在隐身模式标签中运行的内容脚本、在隐身模式进程中运行的扩展页面返回 `true`。（仅适用于 `incognito_behavior` 取值为“`split`”的扩展。）
 
 ## 函数
 
@@ -56,7 +56,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
