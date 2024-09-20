@@ -2,13 +2,13 @@
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
 > [!WARNING]
-> 此 API 在 Firefox 中未实现，因为自 Chrome 33 起已被弃用。请改用 [runtime.onMessage](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)。
+> 因为该方法自 Chrome 33 起被弃用，该 API 在 Firefox 中并未被实现。请改用 [runtime.onMessage](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)。
 
 当从扩展进程或内容脚本发送请求时触发。
 
@@ -46,7 +46,7 @@ chrome.extension.onRequest.hasListener(listener)
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}。
     - `sendResponse`
-      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象，或者如果没有响应则为 undefined。如果在同一文档中有多个 `onRequest` 监听器，则只有一个可以发送响应。
+      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象（如果没有响应则为 undefined）。如果在同一文档中有多个 `onRequest` 监听器，则只有一个可以发送响应。
 
 ## 浏览器兼容性
 
@@ -55,7 +55,7 @@ chrome.extension.onRequest.hasListener(listener)
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequest) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#event-onRequest) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
