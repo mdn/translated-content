@@ -2,7 +2,7 @@
 title: extension.onRequestExternal
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -46,7 +46,7 @@ chrome.extension.onRequestExternal.hasListener(listener)
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}。
     - `sendResponse`
-      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象，或者如果没有响应则为 undefined。
+      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象（如果没有响应则为 undefined）。
 
 ## 浏览器兼容性
 
@@ -55,7 +55,7 @@ chrome.extension.onRequestExternal.hasListener(listener)
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequestExternal) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#event-onRequestExternal) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
