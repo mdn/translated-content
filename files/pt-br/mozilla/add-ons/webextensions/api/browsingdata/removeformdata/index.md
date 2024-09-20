@@ -76,7 +76,7 @@ browser.browsingData.removeFormData({}).then(onRemoved, onError);
 {{WebExtExamples}}
 
 > [!NOTE]
-> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData?hl=pt-br).
 >
 > A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
 
