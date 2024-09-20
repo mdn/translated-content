@@ -1,5 +1,5 @@
 ---
-title: HTMLMediaElement： audioTracks 属性
+title: HTMLMediaElement：audioTracks 属性
 slug: Web/API/HTMLMediaElement/audioTracks
 l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
