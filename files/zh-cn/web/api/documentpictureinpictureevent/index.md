@@ -62,4 +62,4 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 ## 参见
 
 - {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
-- [使用文档画中画 API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- [使用 DocumentPictureInPictureEvent API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
