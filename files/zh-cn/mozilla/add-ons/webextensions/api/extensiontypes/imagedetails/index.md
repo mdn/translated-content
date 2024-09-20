@@ -2,12 +2,12 @@
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-有关图片格式、质量、区域和缩放的详细信息。
+有关捕获图片格式、质量、区域和比例的详细信息。
 
 ## 类型
 
@@ -16,7 +16,7 @@ l10n:
 - `format` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}。结果图片的格式，默认为 `"png"`。
 - `quality` {{optional_inline}}
-  - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值，作为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数传递给函数。若该属性被省略，则将使用 92 作为取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数将减少。对于 PNG 图片，该值将被忽略。
+  - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值作为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数传递给函数。在属性被忽略时将采用 92 作为默认取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数也将减少。当图片格式设置为 PNG 时，该属性将被忽略。
 - `rect` {{optional_inline}}
 
   - : `object`，指定要捕获的文档区域，单位为 CSS 像素，相对于页面。所有属性默认为 `0`。这些属性是：
@@ -26,7 +26,7 @@ l10n:
     - `width`：矩形的宽度。
     - `height`：矩形的高度。
 
-    该选项在 Firefox 82 中引入。若省略该属性，则将捕获当前可见视口。
+    该选项在 Firefox 82 中引入。若省略该属性，则将捕获当前可视视口。
 
 - `scale` {{optional_inline}}
   - : `number`，渲染的比例，默认为 [`devicePixelRatio`](/zh-CN/docs/Web/API/Window/devicePixelRatio)。该选项在 Firefox 82 中引入。
@@ -38,7 +38,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-ImageDetails) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
+> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes/#type-ImageDetails) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
