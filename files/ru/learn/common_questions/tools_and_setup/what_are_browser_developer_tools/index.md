@@ -86,7 +86,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 - [Firefox Page inspector](/ru/docs/Tools/Page_Inspector)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
-- [Chrome DOM inspector](https://developers.google.com/web/tools/chrome-devtools/?hl=ru) (Inspector в Opera схож с Inspector в Chrome)
+- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/?hl=ru) (Inspector в Opera схож с Inspector в Chrome)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## Консоль JavaScript
@@ -141,5 +141,5 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 - [Firefox Web Console](/ru/docs/Tools/Web_Console)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
-- [Chrome JavaScript Console](https://developers.google.com/web/tools/chrome-devtools/?hl=ru) (Inpector в Opera схож с Inspector в Chrome)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/?hl=ru) (Inpector в Opera схож с Inspector в Chrome)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
