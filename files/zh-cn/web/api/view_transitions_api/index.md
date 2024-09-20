@@ -187,7 +187,7 @@ figcaption {
 
 这是有效的，因为默认情况下，`::view-transition-group` 在新旧视图之间过渡高度和宽度。我们只需要在两个状态上设置固定的高度，就可以使其正常工作。
 
-> **备注：** [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions/)包含了其他几个自定义示例。
+> **备注：** [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions?hl=zh-cn)包含了其他几个自定义示例。
 
 ### 使用 JavaScript 控制动画
 
@@ -290,7 +290,7 @@ function spaNavigate(data) {
 ## 示例
 
 - [基础视图过渡演示](https://mdn.github.io/dom-examples/view-transitions/)：一个基本的图像库演示，其中包含新旧图像之间的单独过渡，以及新旧标题之间的单独过渡。
-- [HTTP 203 播放列表](https://http203-playlist.netlify.app/)：一个更复杂的视频播放器演示应用程序，包含了许多不同的视图过渡，在[使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions/)中解释了其中的很多视图过渡。
+- [HTTP 203 播放列表](https://http203-playlist.netlify.app/)：一个更复杂的视频播放器演示应用程序，包含了许多不同的视图过渡，在[使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions?hl=zh-cn)中解释了其中的很多视图过渡。
 
 ## 规范
 
@@ -302,5 +302,5 @@ function spaNavigate(data) {
 
 ## 参见
 
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions/)
+- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions?hl=zh-cn)
 - [View Transitions API：创建平滑的页面过渡](https://stackdiary.com/view-transitions-api/)

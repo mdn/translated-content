@@ -181,7 +181,7 @@ A 级：
 
 模拟器基本上是在计算机内部运行的程序，用于模拟某种设备或特定的设备环境，使你能够更方便地进行一些测试，而无需寻找特定的硬件/软件组合进行测试。
 
-模拟器可以简单地用于测试设备条件。例如，如果你想快速测试响应式设计中的宽度/高度媒体查询，可以使用 Firefox 的[响应式设计模式](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)。Safari 也有类似的模式，可以通过转到“Safari > 首选项”并勾选“显示开发菜单”，然后选择“开发 > 进入响应式设计模式”来启用。Chrome 也有类似的功能：设备模式（参见[使用设备模式模拟移动设备](https://developer.chrome.google.cn/docs/devtools/device-mode/)）。
+模拟器可以简单地用于测试设备条件。例如，如果你想快速测试响应式设计中的宽度/高度媒体查询，可以使用 Firefox 的[响应式设计模式](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)。Safari 也有类似的模式，可以通过转到“Safari > 首选项”并勾选“显示开发菜单”，然后选择“开发 > 进入响应式设计模式”来启用。Chrome 也有类似的功能：设备模式（参见[使用设备模式模拟移动设备](https://developer.chrome.google.cn/docs/devtools/device-mode?hl=zh-cn)）。
 
 然而，通常情况下，你需要安装某种模拟器。你可能需要测试的常见设备/浏览器如下：
 

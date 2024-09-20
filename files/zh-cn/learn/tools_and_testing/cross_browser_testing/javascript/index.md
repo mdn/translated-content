@@ -179,7 +179,7 @@ fetch(requestURL).then((response) => {
 不幸的是，我们仍然有同样的错误，问题并没有消失。现在让我们使用浏览器开发工具的一个更复杂的特性来调查一下这个问题，它在 Firefox 中被称为 [JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)。
 
 > [!NOTE]
-> 其他浏览器中也有类似的工具；Chrome 中的[来源面板](https://developer.chrome.google.cn/docs/devtools/#sources)、Safari 中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
+> 其他浏览器中也有类似的工具；Chrome 中的[来源面板](https://developer.chrome.google.cn/docs/devtools?hl=zh-cn#sources)、Safari 中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
 
 在 Firefox 中，调试器标签页大致如图所示：
 

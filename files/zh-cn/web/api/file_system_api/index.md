@@ -20,7 +20,7 @@ l10n:
 你还可以从以下途径获得句柄：
 
 - {{domxref('HTML Drag and Drop API', 'HTML 拖放 API', '', 'nocode')}} 的 {{domxref('DataTransferItem.getAsFileSystemHandle()')}} 方法。
-- [文件处理 API](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-handling)。
+- [文件处理 API](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-handling?hl=zh-cn)。
 
 每种句柄都提供了其独有的功能，取决于你使用的种类，会有些许差异（详见[接口](#接口)部分）。在获得句柄后，你便可以访问文件的数据或是被选中的目录的信息（包含子目录）。此 API 开辟了 web 此前一直缺乏的潜在功能。但不论如何，安全性是设计 API 时的首要考量，除非用户明确授权，否则就不允许访问文件和目录的数据（注意：[源私有文件系统](#源私有文件系统)并非如此，因为其对用户不可见）。
 
@@ -238,5 +238,5 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access?hl=zh-cn)
 - [源私有文件系统](https://web.dev/articles/origin-private-file-system)

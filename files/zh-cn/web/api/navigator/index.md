@@ -141,7 +141,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : 清除当前应用图标的徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
-  - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developer.chrome.google.cn/docs/privacy-sandbox/) API。
+  - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developer.google.com/privacy-sandbox?hl=zh-cn) API。
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : 返回一个值，表示指定的媒体元素、音频上下文或媒体特性“类型”是否允许自动播放。
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}

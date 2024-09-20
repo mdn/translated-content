@@ -63,7 +63,7 @@ slug: Learn/Performance/Measuring_performance
 
 ![Firefox 网络监视器显示已加载的素材列表以及每个素材的加载时间](network-monitor.png)
 
-你还可以查看 [Chrome 的网络监视器文档](https://developer.chrome.google.cn/docs/devtools/network/)
+你还可以查看 [Chrome 的网络监视器文档](https://developer.chrome.google.cn/docs/devtools/network?hl=zh-cn)
 
 ## 性能监视工具
 
@@ -71,7 +71,7 @@ slug: Learn/Performance/Measuring_performance
 
 ![开发者工具性能面板显示录制 #1. 的瀑布图](perf-monitor.png)
 
-另见 [Chrome 性能工具文档](https://developer.chrome.google.cn/docs/devtools/performance/)。
+另见 [Chrome 性能工具文档](https://developer.chrome.google.cn/docs/devtools/performance?hl=zh-cn)。
 
 ## 性能 API
 

@@ -37,7 +37,7 @@ let prompting = browser.downloads.acceptDanger(
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-acceptDanger) API。
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads?hl=zh-cn#method-acceptDanger) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

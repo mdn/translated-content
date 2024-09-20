@@ -79,7 +79,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads) API。
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads?hl=zh-cn) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -120,5 +120,5 @@ async function computeOutlineFormat() {
 ## 参见
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
-- [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
+- [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts?hl=zh-cn)
 - {{cssxref("@font-face")}}

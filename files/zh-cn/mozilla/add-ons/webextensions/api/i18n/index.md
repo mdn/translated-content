@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.google.cn/extensions/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
+> 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.google.cn/docs/extensions/reference/api/i18n?hl=zh-cn) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
 >
 > 微软 Edge 的兼容性数据由微软公司提供，并在这里收录在《知识共享 3.0 美国许可证》中。
 

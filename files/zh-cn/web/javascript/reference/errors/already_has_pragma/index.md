@@ -44,4 +44,4 @@ X-SourceMap: /path/to/file.js.map
 ## 参见
 
 - 火狐源代码文档中的[使用源码映射](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- 在 developer.chrome.com 上的 [JavaScript 源码映射简介](https://developer.chrome.google.cn/blog/sourcemaps/)（2012）
+- 在 developer.chrome.com 上的 [JavaScript 源码映射简介](https://developer.chrome.google.cn/blog/sourcemaps?hl=zh-cn)（2012）

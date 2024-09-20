@@ -21,7 +21,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 - 异步 API：
 
   - **在 Firefox 和 Safari 中**：异步 API 使用 Promise 实现。
-  - **在 Chrome 浏览器中**：在 Manifest V2 中，异步 API 使用回调实现。在 Manifest V3 中，大多数适当的方法都支持 [promise](https://developer.chrome.google.cn/docs/extensions/develop/migrate#promises)。（参见 [Chrome bug 328932](https://crbug.com/328932)）Manifest V3 支持回调，以实现向后兼容。
+  - **在 Chrome 浏览器中**：在 Manifest V2 中，异步 API 使用回调实现。在 Manifest V3 中，大多数适当的方法都支持 [promise](https://developer.chrome.google.cn/docs/extensions/develop/migrate?hl=zh-cn#promises)。（参见 [Chrome bug 328932](https://crbug.com/328932)）Manifest V3 支持回调，以实现向后兼容。
 
 本页其余部分将详细介绍这些不兼容性和其他不兼容性。
 
@@ -60,7 +60,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
   setCookie.then(logCookie, logError);
   ```
 
-- **在 Chrome 中**：在 Manifest V2 中，异步 API 使用回调来返回值，并使用 {{WebExtAPIRef("runtime.lastError")}} 来返回错误。在 Manifest V3 中，为实现向后兼容，支持回调，并在大多数适当的方法中支持 [promise](https://developer.chrome.google.cn/docs/extensions/develop/migrate#promises)。
+- **在 Chrome 中**：在 Manifest V2 中，异步 API 使用回调来返回值，并使用 {{WebExtAPIRef("runtime.lastError")}} 来返回错误。在 Manifest V3 中，为实现向后兼容，支持回调，并在大多数适当的方法中支持 [promise](https://developer.chrome.google.cn/docs/extensions/develop/migrate?hl=zh-cn#promises)。
 
   ```js
   function logCookie(c) {
@@ -112,7 +112,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 - **在 Firefox 中**：使用 [proxy.settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) 属性或 [proxy.onRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) 属性设置代理，以动态提供 [ProxyInfo](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo)。
   有关 API 的更多信息，请参阅 [proxy](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy)。
-- **在 Chrome 中**：代理设置在 [`proxy.ProxyConfig`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy#type-ProxyConfig) 对象中定义。根据 Chrome 浏览器的代理设置，该设置可能包含 [`proxy.ProxyRules`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy#type-ProxyRules) 或 [`proxy.PacScript`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy#type-PacScript)。代理设置使用 [proxy.settings](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy#property-settings) 属性。
+- **在 Chrome 中**：代理设置在 [`proxy.ProxyConfig`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy?hl=zh-cn?hl=zh-cn#type-ProxyConfig) 对象中定义。根据 Chrome 浏览器的代理设置，该设置可能包含 [`proxy.ProxyRules`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy?hl=zh-cn#type-ProxyRules) 或 [`proxy.PacScript`](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy?hl=zh-cn#type-PacScript)。代理设置使用 [proxy.settings](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy?hl=zh-cn#property-settings) 属性。
   有关 API 的更多信息，请参阅 [chrome.proxy](https://developer.chrome.google.cn/docs/extensions/reference/api/proxy)。
 
 #### Tabs API
@@ -160,7 +160,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 #### DeclarativeContent API
 
-- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.google.cn/docs/extensions/reference/api/declarativeContent) API [未被实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
+- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.google.cn/docs/extensions/reference/api/declarativeContent?hl=zh-cn) API [未被实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
 
 ### 其他不兼容情况
 
@@ -181,7 +181,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 #### Manifest“key”属性
 
 - **在 Firefox 中**：由于 Firefox 对 `web_accessible_resources` 使用随机 UUID，因此不支持此属性。Firefox 扩展可通过 `browser_specific_settings.gecko.id` 清单键（请参阅 [browser_specific_settings.gecko](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_属性) 来固定其扩展 ID）。
-- **在 Chrome 中**：在使用未打包的扩展时，清单可能包含一个 [`"key"` 属性](https://developer.chrome.google.cn/docs/extensions/mv3/manifest/key/)，以便在不同机器上固定扩展 ID。这主要在使用 `web_accessible_resources` 时有用。
+- **在 Chrome 中**：在使用未打包的扩展时，清单可能包含一个 [`"key"` 属性](https://developer.chrome.google.cn/docs/extensions/reference/manifest/key?hl=zh-cn)，以便在不同机器上固定扩展 ID。这主要在使用 `web_accessible_resources` 时有用。
 
 #### 内容脚本 HTTP(S) 请求
 
@@ -241,7 +241,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 ### 应用清单位置
 
-- **在 Chrome 中**：应用程序清单预计会放在不同的位置。请参阅 Chrome 文档中的[本地消息主机位置](https://developer.chrome.google.cn/docs/apps/nativeMessaging/#native-messaging-host-location)。
+- **在 Chrome 中**：应用程序清单预计会放在不同的位置。请参阅 Chrome 文档中的[本地消息主机位置](https://developer.chrome.google.cn/docs/apps/nativeMessaging?hl=zh-cn#native-messaging-host-location)。
 
 ### 应用持久化
 

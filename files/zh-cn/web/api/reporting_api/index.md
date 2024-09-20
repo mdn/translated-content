@@ -111,7 +111,7 @@ if (navigator.mozGetUserMedia) {
 - JavaScript API: `dom.reporting.enabled`（仅在 Nightly 版本中可用）
 - HTTP 标头：`dom.reporting.header.enabled`
 
-Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.google.cn/docs/capabilities/web-apis/reporting-api)。
+Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.google.cn/docs/capabilities/web-apis/reporting-api?hl=zh-cn)。
 
 ## 参见
 

@@ -81,7 +81,7 @@ write(markup)
 > 仅在 Edge 中，在 {{HTMLElement("iframe")}} 中多次调用 `document.write()` 会导致错误“SCRIPT70: Permission denied”。
 
 > [!NOTE]
-> 从 55 版本开始，当满足特定条件时，Chrome 将不会执行通过 `<script>` 元素中的 `document.write()`。有关详细信息，请参阅[干预 document.write()](https://developer.chrome.google.cn/blog/removing-document-write/)。
+> 从 55 版本开始，当满足特定条件时，Chrome 将不会执行通过 `<script>` 元素中的 `document.write()`。有关详细信息，请参阅[干预 document.write()](https://developer.chrome.google.cn/blog/removing-document-write?hl=zh-cn)。
 
 ## 规范
 

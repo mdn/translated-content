@@ -50,7 +50,7 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/extensions/storage) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
+> 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/docs/extensions/reference/api/storage?hl=zh-cn) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
 >
 > Microsoft Edge 的适配数据由 Microsoft Corporation 提供并且被包含在 Creative Commons Attribution 3.0 United States License 许可证下。
 
