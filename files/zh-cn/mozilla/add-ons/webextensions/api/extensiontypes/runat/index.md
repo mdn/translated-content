@@ -2,12 +2,12 @@
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-最早将 JavaScript、CSS 插入到标签页中的时间点。
+尽快将 JavaScript、CSS 插入到标签页中的时间点。
 
 ## 类型
 
@@ -17,6 +17,8 @@ l10n:
 - `"document_end"`: 对应于 `interactive`——DOM 已经加载完成，但资源（例如脚本和图像）可能仍在加载中。
 - `"document_idle"`: 对应于 `complete`——文档及其所有资源都已加载完成。
 
+默认值为 `"document_idle"`。
+
 ## 浏览器兼容性
 
 {{Compat}}
@@ -24,7 +26,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-RunAt) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
+> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-RunAt) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
