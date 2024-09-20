@@ -39,7 +39,7 @@ video.addEventListener("canplay", (event) => {
 });
 ```
 
-使用`oncanplay`事件处理器属性:
+使用`oncanplay`事件处理器属性：
 
 ```js
 const video = document.querySelector("video");
