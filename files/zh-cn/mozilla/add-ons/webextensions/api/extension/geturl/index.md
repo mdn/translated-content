@@ -35,7 +35,7 @@ browser.extension.getURL(
 
 ## 示例
 
-给定一个打包在附加组件中的文件，路径为 "beasts/frog.html"，可以这样获取完整的 URL：
+给定一个打包在附加组件中的文件，路径为“beasts/frog.html”，可以这样获取完整的 URL：
 
 ```js
 let fullURL = browser.extension.getURL("beasts/frog.html");
