@@ -26,7 +26,7 @@ new DocumentPictureInPictureEvent(type, init)
 
 ## 示例
 
-开发者通常不会手动使用此构造函数。当 {{domxref("DocumentPictureInPicture.enter_event", "enter")}} 事件触发时，会自动构造一个新的 `DocumentPictureInPictureEvent` 对象。
+开发者通常不会手动使用此构造函数。当由于触发 {{domxref("DocumentPictureInPicture.enter_event", "enter")}} 事件而调用处理器时，会自动构造一个新的 `DocumentPictureInPictureEvent` 对象。
 
 ```js
 documentPictureInPicture.addEventListener("enter", (event) => {
