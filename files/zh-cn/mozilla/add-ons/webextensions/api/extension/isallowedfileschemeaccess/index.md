@@ -2,7 +2,7 @@
 title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -23,7 +23,7 @@ let isAllowed = browser.extension.isAllowedFileSchemeAccess()
 
 ### 返回值
 
-将会兑现布尔值的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)：如果插件被允许访问“file://”URL，则为 `true`，否则为 `false`。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会兑现布尔值：如果插件被允许访问“file://”URL，则为 `true`，否则为 `false`。
 
 Firefox 总是返回 `false`。
 
@@ -35,7 +35,7 @@ Firefox 总是返回 `false`。
 
 ```js
 function logIsAllowed(answer) {
-  console.log(`Is allowed: ${answer}`);
+  console.log(`是否允许访问：${answer}`);
 }
 
 let isAllowed = browser.extension.isAllowedFileSchemeAccess();
@@ -45,7 +45,7 @@ isAllowed.then(logIsAllowed);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#method-isAllowedFileSchemeAccess) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
