@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API。
+> 该 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.google.cn/extensions/sessions) API。
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。
 

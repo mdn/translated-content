@@ -142,4 +142,4 @@ l10n:
 ### 扩展开发
 
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
-  - : Web 扩展是一种用于开发浏览器附加组件的跨浏览器系统。很大程度上，该系统与谷歌 Chrome 和 Opera 支持的[扩展 API](https://developer.chrome.com/docs/extensions/reference/) 是兼容的。为这些浏览器编写的扩展在大多数情况下[仅需一点改动](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就能在火狐或[微软 Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) 上运行。这些 API 与[多进程版本的火狐](https://wiki.mozilla.org/Firefox/multiprocess)也完全兼容。
+  - : Web 扩展是一种用于开发浏览器附加组件的跨浏览器系统。很大程度上，该系统与谷歌 Chrome 和 Opera 支持的[扩展 API](https://developer.chrome.google.cn/docs/extensions/reference/) 是兼容的。为这些浏览器编写的扩展在大多数情况下[仅需一点改动](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就能在火狐或[微软 Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) 上运行。这些 API 与[多进程版本的火狐](https://wiki.mozilla.org/Firefox/multiprocess)也完全兼容。

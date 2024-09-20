@@ -79,7 +79,7 @@ console.log(original.byteLength); // 0
 
 ## 参见
 
-- [可转移对象：像闪电一样快！](https://developer.chrome.com/blog/transferable-objects-lightning-fast/)
+- [可转移对象：像闪电一样快！](https://developer.chrome.google.cn/blog/transferable-objects-lightning-fast/)
 - [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [HTML 规范中的可转移对象](https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects)
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}

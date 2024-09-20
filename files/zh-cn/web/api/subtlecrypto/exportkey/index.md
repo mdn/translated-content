@@ -100,7 +100,7 @@ window.crypto.subtle
 ```js
 /*
 将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
+代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -151,7 +151,7 @@ window.crypto.subtle
 ```js
 /*
 将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
+代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));

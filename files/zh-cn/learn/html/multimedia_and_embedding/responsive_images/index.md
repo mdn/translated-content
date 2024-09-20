@@ -116,7 +116,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 > [!NOTE]
 > 在桌面端浏览器测试上面的示例时，如果你把浏览器设到最小宽度，却没有加载更小的图片，请检查一下此时的视口是什么（你可以打开浏览器的 JavaScript 控制台，输入 `document.querySelector('html').clientWidth` 来获得近似视口宽度）。不同的浏览器设置了窗口可以缩小到的最小宽度，它可能比你想的更宽一点。使用移动端浏览器测试时，可以使用类似 Firefox 的 `about:debugging` 页这样的工具，使用桌面端开发者工具检查在移动端加载的页面。
 >
-> 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)标签或 Chrome 开发者工具的[网络](https://developer.chrome.com/docs/devtools/network/)面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
+> 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)标签或 Chrome 开发者工具的[网络](https://developer.chrome.google.cn/docs/devtools/network/)面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
 
 不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性引用的图像文件。
 

@@ -90,7 +90,7 @@ l10n:
 了解更多 Inspector 在不同的浏览器中的细节：
 
 - [Firefox 页面检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM 检查器](https://developer.chrome.com/docs/devtools/dom/)（Opera 的 inspector 和它一样）
+- [Chrome DOM 检查器](https://developer.chrome.google.cn/docs/devtools/dom/)（Opera 的 inspector 和它一样）
 - [Safari DOM 检查器和样式浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## JavaScript 调试器
@@ -205,7 +205,7 @@ document.querySelector("h1").appendChild(loginImage);
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
 - [Firefox Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript 控制台](https://developer.chrome.com/docs/devtools/console/)（Opera 与它相同）
+- [Chrome JavaScript 控制台](https://developer.chrome.google.cn/docs/devtools/console/)（Opera 与它相同）
 - [Safari 控制台](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## 参见
