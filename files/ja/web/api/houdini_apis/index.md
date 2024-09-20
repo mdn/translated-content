@@ -77,7 +77,7 @@ CSS 型付きオブジェクトモデルは、CSS 値を型付き JavaScript オ
 
 - [CSS 型付きオブジェクトモデルリファレンス](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [CSS 型付きオブジェクトモデルガイド](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/docs/css-ui/cssom?hl=ja)
 
 ### CSS 描画 API
 

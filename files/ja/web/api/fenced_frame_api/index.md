@@ -28,18 +28,18 @@ l10n:
 
 `<fencedframe>` は他の API によって、様々な種類の別サイトのコンテンツを埋め込んだり、データを収集したりするために用いられ、プライバシーを保護する方法で異なる用途を満たします。これらのほとんどは、前回まではサードパーティーのクッキーや、プライバシーにとって好ましくない他のメカニズムに頼っていました。
 
-- [共有ストレージ API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) は、セキュアな環境でパーティション分割されていないクロスサイトデータにアクセスし、 `<fencedframe>` 内で計算や結果の表示をすることを提供します。例えば：
+- [共有ストレージ API](https://developers.google.com/privacy-sandbox/relevance/shared-storage?hl=zh-tw) は、セキュアな環境でパーティション分割されていないクロスサイトデータにアクセスし、 `<fencedframe>` 内で計算や結果の表示をすることを提供します。例えば：
   - 広告主は広告のリーチを測定したり、ユーザーが他のサイトで既に見た広告に基づいて後続の広告を配信したりできます。
   - 開発者は A/B テストを行うことができ、ユーザーが割り当てられているグループに基づいて、または何人のユーザーが既にそれぞれを見たかに基づいて、ユーザーにバリアントを表示させることができます。
   - 企業は、ユーザーが他にも見たことのあるサイトに基づいて、ユーザーの使い勝手をカスタマイズすることができます。例えば、ユーザーが既に会員権を購入している場合、他のプロパティで会員登録広告を表示させないようにすることができます。
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) を開発することで、関心グループベースの広告、つまりリマーケティングやカスタムオーディエンスの使用用途を実装することができます。広告空間に対する複数の入札を評価し、落札した広告を `<fencedframe>` に表示することができます。
-- [プライベートアグリゲーション API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) は、(共有ストレージまたはプロテクトオーディエンスAPIを元とする)`<fencedframe>`からデータを収集し、集計レポートを作成することができます。
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience?hl=zh-tw) を開発することで、関心グループベースの広告、つまりリマーケティングやカスタムオーディエンスの使用用途を実装することができます。広告空間に対する複数の入札を評価し、落札した広告を `<fencedframe>` に表示することができます。
+- [プライベートアグリゲーション API](https://developers.google.com/privacy-sandbox/relevance/private-aggregation?hl=zh-tw) は、(共有ストレージまたはプロテクトオーディエンスAPIを元とする)`<fencedframe>`からデータを収集し、集計レポートを作成することができます。
 
 ## `<fencedframe>` はどのように動作するのか
 
 前述の通り、 {{htmlelement("fencedframe")}} に埋め込まれたコンテンツを通常のスクリプトで直接制御することはできません。
 
-どのコンテンツを `<fencedframe>` に表示させるかを設定するには、 API （[Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/)や[共有ストレージ](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)など）を利用して {{domxref("FencedFrameConfig")}} オブジェクトを生成し、 JavaScript で `<fencedframe>` の {{domxref("HTMLFencedFrameElement.config")}} プロパティの値として設定します。
+どのコンテンツを `<fencedframe>` に表示させるかを設定するには、 API （[Protected Audience](https://developers.google.com/privacy-sandbox/relevance/protected-audience?hl=zh-tw)や[共有ストレージ](https://developers.google.com/privacy-sandbox/relevance/shared-storage?hl=zh-tw)など）を利用して {{domxref("FencedFrameConfig")}} オブジェクトを生成し、 JavaScript で `<fencedframe>` の {{domxref("HTMLFencedFrameElement.config")}} プロパティの値として設定します。
 
 次の例は、 Protected Audience API の広告オークションから `FencedFrameConfig` を取得し、それを使用して落札した広告を `<fencedframe>` に表示します。
 
@@ -57,9 +57,9 @@ frame.config = frameConfig;
 
 どちらの方法でも、ブラウザーは埋め込むコンテンツのターゲット位置を含む URL を格納します。不透明な URN、または `FencedFrameConfig` 内部の `url` プロパティに割り当てられたものです。埋め込みコンテキストで実行する JavaScript では、 URL の値を読み取ることはできません。
 
-> **メモ:** [プライバシーサンドボックス](https://developer.chrome.com/docs/privacy-sandbox/) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
+> **メモ:** [プライバシーサンドボックス](https://developer.google.com/privacy-sandbox?hl=zh-tw) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
 
-> **メモ:** `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) を参照してください。
+> **メモ:** `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developers.google.com/privacy-sandbox/relevance/shared-storage?hl=zh-tw) を参照してください。
 
 ### `Fence` オブジェクトにおけるフェンスフレーム期のへのアクセス
 
@@ -104,7 +104,7 @@ Supports-Loading-Mode: fenced-frame
 ## インターフェイス
 
 - {{domxref("FencedFrameConfig")}}
-  - : {{htmlelement("fencedframe")}} のナビゲーションを表します。つまり、何かコンテンツが表示されます。 `FencedFrameConfig` は [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) などのソースから返され、 {{domxref("HTMLFencedFrameElement.config")}} の値として設定します。
+  - : {{htmlelement("fencedframe")}} のナビゲーションを表します。つまり、何かコンテンツが表示されます。 `FencedFrameConfig` は [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience?hl=zh-tw) などのソースから返され、 {{domxref("HTMLFencedFrameElement.config")}} の値として設定します。
 - {{domxref("Fence")}}
   - : フェンスフレームの機能に関連するいくつかの関数を格納します。 `<fencedframe>` 内に埋め込まれた文書にのみ利用できます。
 - {{domxref("HTMLFencedFrameElement")}}
@@ -119,7 +119,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## Enrollment and local testing
 
-{{domxref("Navigator.runAdAuction()")}} などの {{domxref("FencedFrameConfig")}} を作成する一部の API 機能（[Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)）や {{domxref("WindowSharedStorage. selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、他にも {{domxref("Fence.reportEvent()")}} のような機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
+{{domxref("Navigator.runAdAuction()")}} などの {{domxref("FencedFrameConfig")}} を作成する一部の API 機能（[Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience?hl=zh-tw)）や {{domxref("WindowSharedStorage. selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、他にも {{domxref("Fence.reportEvent()")}} のような機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
 
 > [!NOTE]
 > Chrome では、登録しなくてもフレームコードをローカルでテストすることができます。ローカルテストを許可するには、以下の Chrome 開発者フラグを有効にしてください。
@@ -143,5 +143,5 @@ Supports-Loading-Mode: fenced-frame
 
 ## 関連情報
 
-- [Fenced frames](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/3pcd/fenced-frame?hl=zh-tw) on developer.chrome.com
+- [The Privacy Sandbox](https://developer.google.com/privacy-sandbox?hl=zh-tw) on developer.chrome.com

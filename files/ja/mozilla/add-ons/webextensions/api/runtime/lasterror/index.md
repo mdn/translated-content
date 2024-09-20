@@ -71,7 +71,7 @@ setCookie.then(logCookie, logError);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium から作成されています。
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime?hl=ja#property-lastError) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium から作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

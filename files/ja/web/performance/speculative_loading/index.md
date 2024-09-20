@@ -28,7 +28,7 @@ l10n:
 
 投機的読み込みは主に 2 つの方法で実現されます。
 
-まず、ブラウザーによっては、さまざまな経験則に基づいてページを自動的に事前レンダリングし、自動的なパフォーマンス向上を提供します。これがどのように行われるかは、ブラウザーの実装によって異なります。例えば Chrome は、アドレスバーに一致する文字列が入力されると、そのページを訪問するという高い確信がある場合は、自動的にページを事前レンダリングします（詳しくは [Viewing Chrome's address bar predictions](https://developer.chrome.com/blog/prerender-pages/#viewing-chromes-address-bar-predictions) を参照してください）。さらに、検索エンジンからの指示により、アドレスバーに検索キーワードが入力されると、検索結果ページが自動的に事前レンダリングされることもあります。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)と同じ仕組みを使って行います。
+まず、ブラウザーによっては、さまざまな経験則に基づいてページを自動的に事前レンダリングし、自動的なパフォーマンス向上を提供します。これがどのように行われるかは、ブラウザーの実装によって異なります。例えば Chrome は、アドレスバーに一致する文字列が入力されると、そのページを訪問するという高い確信がある場合は、自動的にページを事前レンダリングします（詳しくは [Viewing Chrome's address bar predictions](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=ja#viewing-chromes-address-bar-predictions) を参照してください）。さらに、検索エンジンからの指示により、アドレスバーに検索キーワードが入力されると、検索結果ページが自動的に事前レンダリングされることもあります。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)と同じ仕組みを使って行います。
 
 2つ目に、開発者がブラウザーに実行させたい投機的読み込みの指示を提供するために使用することができる、さまざまなプラットフォーム機能があります。これについては次の節で紹介します。
 
@@ -131,7 +131,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、特定の [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダー（`no-cache` や `no-store` など）は先読みをブロックする可能性があります。
 
-多くのブラウザーでは、何らかの形で[キャッシュ分割](https://developer.chrome.com/en/blog/http-cache-partitioning/)を実装しており、これが異なる最上位サイトで使用することを意図したリソースに対しては、 `<link rel="prefetch">` を無意味なものにしています。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読み指定があったとします。
+多くのブラウザーでは、何らかの形で[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning?hl=ja)を実装しており、これが異なる最上位サイトで使用することを意図したリソースに対しては、 `<link rel="prefetch">` を無意味なものにしています。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読み指定があったとします。
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />
@@ -159,7 +159,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 <link rel="prerender" href="/next-page" />
 ```
 
-参照先の文書を取得し、次に静的に見つけられるリンクされたリソースを取得してそれらも取得し、その結果を 5 分間の期限付きでディスク上の HTTP キャッシュに格納します。例外は JavaScript で読み込まれるサブリソースで、これは見つけられません。問題は他にもあります。 `<link rel="prefetch">` のように、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーによってブロックされたり、ブラウザーの[キャッシュ分割](https://developer.chrome.com/en/blog/http-cache-partitioning/)によって、異なる最上位サイトで使用することが意図されているリソースに対して役に立たなくなったりします。
+参照先の文書を取得し、次に静的に見つけられるリンクされたリソースを取得してそれらも取得し、その結果を 5 分間の期限付きでディスク上の HTTP キャッシュに格納します。例外は JavaScript で読み込まれるサブリソースで、これは見つけられません。問題は他にもあります。 `<link rel="prefetch">` のように、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーによってブロックされたり、ブラウザーの[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning?hl=ja)によって、異なる最上位サイトで使用することが意図されているリソースに対して役に立たなくなったりします。
 
 ### 投機ルール API
 
@@ -182,4 +182,4 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ## 関連情報
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=ja) on developer.chrome.com (2023)

@@ -40,7 +40,7 @@ l10n:
 
 ### キャッシュ分割の効果
 
-多くのブラウザーが何らかの形で[キャッシュ分割](https://developer.chrome.com/en/blog/http-cache-partitioning/) を実装するようになり、異なる最上位のサイトで使用することを意図したリソースでは `<link rel="prefetch">` が役に立たなくなりました。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読みを考えてください。
+多くのブラウザーが何らかの形で[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning?hl=ja) を実装するようになり、異なる最上位のサイトで使用することを意図したリソースでは `<link rel="prefetch">` が役に立たなくなりました。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読みを考えてください。
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />

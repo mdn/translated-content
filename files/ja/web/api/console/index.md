@@ -60,7 +60,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : 指定された[タイマー](#タイマー)の値をコンソールへ出力します。
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
+  - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/performance/reference?hl=ja) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
 - {{domxref("console/trace_static", "console.trace()")}}
   - : [スタックトレース](#スタックトレース)を出力します。
 - {{domxref("console/warn_static", "console.warn()")}}

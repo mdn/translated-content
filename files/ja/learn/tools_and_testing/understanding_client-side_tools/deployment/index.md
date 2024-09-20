@@ -312,7 +312,7 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 - ビルドステップ中に[画像を圧縮](https://github.com/ralscha/parcel-plugin-compress)できますか?
 - React を [もっと小さいもの](https://preactjs.com/) に置き換えることはできますか?
-- [パフォーマンス監査](https://developer.chrome.com/docs/lighthouse/performance/) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
+- [パフォーマンス監査](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl=ja) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
 - 新しいデプロイが成功したか失敗したかを知らせる通知を設定していただけますか?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

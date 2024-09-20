@@ -20,7 +20,7 @@ l10n:
 以下の方法によりファイルハンドルへのアクセス権を得ることもできます。
 
 - {{domxref('HTML Drag and Drop API', 'HTML ドラッグ＆ドロップ API', '', 'nocode')}} の {{domxref('DataTransferItem.getAsFileSystemHandle()')}} メソッド
-- [ファイルハンドリング API](https://developer.chrome.com/en/articles/file-handling/)
+- [ファイルハンドリング API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling?hl=ja)
 
 それぞれのハンドルが自身の機能を提供し、どっちを使っているかによって少し違いがあります（詳細は、[インターフェイス](#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9)の節を参照してください）。ファイルのデータや、選択されたディレクトリーの情報（子を含む）にアクセスできます。この API により、ウェブに欠けていた潜在的な機能への道が開きます。それでも、セキュリティは API の設計時に最大限考慮するべきことであり、ファイルやディレクトリーのデータへのアクセスはユーザーが特に許可しない限り禁止されています（これは、ユーザーから見えない[オリジンプライベートファイルシステム](#オリジンプライベートファイルシステム)の場合とは異なります）。
 
@@ -224,5 +224,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/) (web.dev)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access?hl=ja) (web.dev)
 - [The origin private file system](https://web.dev/articles/origin-private-file-system) (web.dev)
