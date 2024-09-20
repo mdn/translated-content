@@ -2,7 +2,7 @@
 title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -33,7 +33,7 @@ let windows = browser.extension.getViews(
     - `type` {{optional_inline}}
       - : `string`，指示要获取的视图类型的 {{WebExtAPIRef('extension.ViewType')}}。如果省略，此函数将返回所有视图。
     - `windowId` {{optional_inline}}
-      - : `integer`，要限制搜索范围的窗口。如果省略，此函数将返回所有视图。在 Firefox 版本 92 及更早版本中，侧边栏视图并不匹配，因此将不会返回。
+      - : `integer`，要限制搜索范围的窗口。如果省略，此函数将返回所有视图。在 Firefox 版本 92 及更早版本中，由于侧边栏视图并不匹配，因此将不会被返回。
 
 ### 返回值
 
@@ -70,7 +70,7 @@ const windows = browser.extension.getViews({ type: "popup" });
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getViews) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#method-getViews) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
