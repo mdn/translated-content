@@ -243,9 +243,9 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 We don't support the following APIs, but plan to, soon:
 
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [debugger](https://developer.chrome.com/extensions/debugger)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
+- [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger?hl=ru)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox?hl=ru)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions?hl=ru)
 
 This doesn't mean that these are the only additional APIs we will support, but that they are our current priorities.
 

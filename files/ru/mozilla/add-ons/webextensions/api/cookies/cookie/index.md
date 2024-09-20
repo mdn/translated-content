@@ -59,7 +59,7 @@ gettingAll.then(logCookies);
 {{WebExtExamples}}
 
 > [!NOTE]
-> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
+> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies?hl=ru#type-Cookie). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

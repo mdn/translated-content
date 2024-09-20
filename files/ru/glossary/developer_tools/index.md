@@ -13,6 +13,6 @@ slug: Glossary/Developer_Tools
 
 - [Firefox Developer Tools](/ru/docs/Tools) on MDN
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
-- [Chrome DevTools](https://developer.chrome.com/devtools) on chrome.com
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools?hl=ru) on chrome.com
 - [Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1) on apple.com
 - [Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide) on microsoft.com

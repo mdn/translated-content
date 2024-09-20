@@ -43,7 +43,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) и [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/Firefox/Multiprocess_Firefox).
+Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/docs/extensions?hl=ru), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/Firefox/Multiprocess_Firefox).
 
 ## Что дальше?
 
