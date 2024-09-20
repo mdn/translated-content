@@ -2,7 +2,7 @@
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -10,7 +10,7 @@ l10n:
 > [!WARNING]
 > 此方法已被弃用，请改用 {{WebExtAPIRef("runtime.lastError")}}。
 
-{{APIRef("extension.lastError")}} 的别名。
+{{APIRef("runtime.lastError")}} 的别名。
 
 ## 浏览器兼容性
 
@@ -19,7 +19,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#property-lastError) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#property-lastError) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
