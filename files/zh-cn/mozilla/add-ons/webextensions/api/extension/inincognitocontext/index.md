@@ -2,12 +2,12 @@
 title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-布尔值，`true` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
+布尔值，其中 `true` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
 
 ## 语法
 
@@ -17,7 +17,7 @@ let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
 
 ### 取值
 
-指示当前脚本是否在隐私标签页或进程中运行的*布尔*值。
+指示当前脚本是否在隐私标签页或进程中运行的*布尔值*。
 
 ## 浏览器兼容性
 
@@ -26,7 +26,7 @@ let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#property-inIncognitoContext) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#property-inIncognitoContext) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
