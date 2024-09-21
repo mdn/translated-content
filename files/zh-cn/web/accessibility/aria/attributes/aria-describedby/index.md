@@ -21,7 +21,8 @@ l10n:
 
 `aria-describedby` 属性适用于关联内容包含以纯文本形式表达的描述。如果内容较大、包含有用的语义或具有复杂结构需要用户导航，则使用 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-details)。`aria-details` 允许辅助技术用户访问关联的结构化内容，并提供额外的导航命令，使理解结构更容易，或者以较小的片段体验信息。
 
-> [!NOTE] > `aria-describedby` 的内容应仅为文本字符串。如果内容中有重要的潜在语义，请考虑使用 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-details)。
+> [!NOTE] 
+> `aria-describedby` 的内容应仅为文本字符串。如果内容中有重要的潜在语义，请考虑使用 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-details)。
 
 ## 示例
 
@@ -31,7 +32,8 @@ l10n:
 <p id="trash-desc">垃圾桶中的项目将在 30 天后被永久删除。</p>
 ```
 
-> [!NOTE] > `aria-describedby` 属性并不是为了引用外部资源中的描述。由于其值是一个或多个 `id`（如果多个则以空格分隔），因此必须引用同一 DOM 文档中的元素。
+> [!NOTE] 
+> `aria-describedby` 属性并不是为了引用外部资源中的描述。由于其值是一个或多个 `id`（如果多个则以空格分隔），因此必须引用同一 DOM 文档中的元素。
 
 ## 值
 
