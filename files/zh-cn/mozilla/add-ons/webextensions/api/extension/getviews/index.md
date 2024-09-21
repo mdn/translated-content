@@ -7,14 +7,14 @@ l10n:
 
 {{AddonSidebar}}
 
-返回当前扩展内运行的每个页面的 [Window](/zh-CN/docs/Web/API/Window) 对象数组。这包括：
+返回当前扩展内运行的每个页面的 [Window](/zh-CN/docs/Web/API/Window) 对象数组。例如，这包括：
 
-- 背景页面（若定义了）
+- 后台页面（若定义了）
 - 任何弹出页面（若定义并已加载）
 - 任何选项页面（若定义并已加载）
-- 任何托管扩展打包内容的浏览器标签页
+- 任何托管了扩展打包内容的浏览器标签页
 
-在 Firefox 中，如果从隐私浏览窗口的页面调用此方法，例如从隐私窗口中的侧边栏或从隐私窗口打开的弹出窗口，则其返回值将不包括扩展的背景页面。
+在 Firefox 中，如果从隐私浏览窗口的页面调用此方法，例如从隐私窗口中的侧边栏或从隐私窗口打开的弹出窗口，则其返回值将不包括扩展的后台页面。
 
 ## 语法
 
@@ -33,11 +33,11 @@ let windows = browser.extension.getViews(
     - `type` {{optional_inline}}
       - : `string`，指示要获取的视图类型的 {{WebExtAPIRef('extension.ViewType')}}。如果省略，此函数将返回所有视图。
     - `windowId` {{optional_inline}}
-      - : `integer`，要限制搜索范围的窗口。如果省略，此函数将返回所有视图。在 Firefox 版本 92 及更早版本中，由于侧边栏视图并不匹配，因此将不会被返回。
+      - : `integer`，要限制搜索范围的窗口。如果省略，此函数将返回所有视图。在 Firefox 版本 92 及更早版本中，侧边栏视图并不匹配，因此将不会被返回。
 
 ### 返回值
 
-`object` 的 `array`：[Window](/zh-CN/docs/Web/API/Window) 对象数组。
+`object` 数组（`array`）：[Window](/zh-CN/docs/Web/API/Window) 对象数组。
 
 ## 浏览器兼容性
 
@@ -55,13 +55,13 @@ for (const extensionWindow of windows) {
 }
 ```
 
-仅获取托管扩展打包内容的浏览器标签页中的窗口：
+仅获取托管了扩展打包内容的浏览器标签页中的窗口：
 
 ```js
 const windows = browser.extension.getViews({ type: "tab" });
 ```
 
-仅获取弹出窗口中的窗口：
+仅获取弹出页面中的窗口：
 
 ```js
 const windows = browser.extension.getViews({ type: "popup" });
