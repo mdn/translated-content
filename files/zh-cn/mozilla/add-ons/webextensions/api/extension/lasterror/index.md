@@ -10,7 +10,7 @@ l10n:
 > [!WARNING]
 > 此方法已被弃用，请改用 {{WebExtAPIRef("runtime.lastError")}}。
 
-{{APIRef("runtime.lastError")}} 的别名。
+{{WebExtAPIRef("runtime.lastError")}} 的别名。
 
 ## 浏览器兼容性
 
