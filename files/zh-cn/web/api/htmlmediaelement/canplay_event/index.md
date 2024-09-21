@@ -2,18 +2,18 @@
 title: HTMLMediaElement：canplay 事件
 slug: Web/API/HTMLMediaElement/canplay_event
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-当用户代理可以播放媒体时就会触发 **`canplay`** 事件，但是预计没有加载足够的数据以流畅的播放媒体至结束，可能需要停顿来缓存更多内容。
+**`canplay`** 事件会在用户代理可以播放媒体，但是估计没有加载足够的数据以流畅地播放媒体至结束（可能需要停顿来缓存更多内容）时触发。
 
 此事件无法被取消也不会冒泡。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名，或者设置一个事件处理器属性。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名，或者设置事件处理器属性。
 
 ```js
 addEventListener("canplay", (event) => {});
@@ -23,13 +23,13 @@ oncanplay = (event) => {};
 
 ## 事件类型
 
-一个通用型 {{domxref("Event")}} 。
+通用 {{domxref("Event")}}。
 
 ## 示例
 
 这些示例为 HTMLMediaElement 的 `canplay` 事件添加了一个事件监听器。事件处理器会在事件被触发时发送一条信息。
 
-使用 `addEventListener()`:
+使用 `addEventListener()`：
 
 ```js
 const video = document.querySelector("video");
@@ -39,7 +39,7 @@ video.addEventListener("canplay", (event) => {
 });
 ```
 
-使用`oncanplay`事件处理器属性：
+使用 `oncanplay` 事件处理器属性：
 
 ```js
 const video = document.querySelector("video");

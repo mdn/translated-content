@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} 对象的只读属性 **`buffered`** 返回一个新的静态[规范化 `TimeRanges` 对象](/zh-CN/docs/Web/API/TimeRanges#normalized_timeranges_objects)。该对象表示用户代理在访问`buffered`属性时已缓冲的媒体资源（如果有）的范围。
+{{domxref("HTMLMediaElement")}} 对象的只读属性 **`buffered`** 返回一个新的静态[规范化 `TimeRanges` 对象](/zh-CN/docs/Web/API/TimeRanges#规范化的_timeranges_对象)，该对象表示用户代理在访问 `buffered` 属性时已缓冲的媒体资源（如果有）的范围。
 
 ## 返回值
 
-一个新的静态[规范化 `TimeRanges` 对象](/zh-CN/docs/Web/API/TimeRanges#normalized_timeranges_objects)。该对象表示用户代理在访问`buffered`属性时已缓冲的媒体资源（如果有）的范围。
+一个新的静态[规范化 `TimeRanges` 对象](/zh-CN/docs/Web/API/TimeRanges#规范化的_timeranges_对象)，表示用户代理在访问 `buffered` 属性时已缓冲的媒体资源（如果有）的范围。
 
 ## 示例
 
@@ -30,4 +30,4 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 
 ## 参见
 
-- {{domxref("HTMLMediaElement")}}: 用于指定 `HTMLMediaElement.buffered` 属性的接口
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.buffered` 属性的接口
