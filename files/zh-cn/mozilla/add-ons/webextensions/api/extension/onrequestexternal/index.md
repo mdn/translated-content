@@ -8,7 +8,7 @@ l10n:
 {{AddonSidebar}}
 
 > [!WARNING]
-> 此 API 在 Firefox 中未实现，因为自 Chrome 33 起已被弃用。请改用 [runtime.onMessageExternal](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal)。
+> 因为该方法自 Chrome 33 起被弃用，该 API 在 Firefox 中并未被实现。请改用 [runtime.onMessageExternal](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal)。
 
 当来自另一个扩展的请求被发送时触发。
 
@@ -27,7 +27,7 @@ chrome.extension.onRequestExternal.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听该事件的监听器。
+  - : 添加一个该事件的监听器。
 - `removeListener(listener)`
   - : 停止监听该事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
