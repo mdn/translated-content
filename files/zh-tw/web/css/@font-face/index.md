@@ -5,7 +5,7 @@ slug: Web/CSS/@font-face
 
 {{CSSRef}}
 
-`@font-face` CSS @ 規則允許指定用於顯示文字之自定義字型，該字型可以從網路或用戶自己電腦上安裝的本地字型載入。透過自定義字型， `@font-face` 消除了對使用者電腦上安裝的有限數量字型的依賴。
+`@font-face` CSS @ 規則允許指定用於顯示文字之自定義字型，該字型可以從網路或用戶自己電腦上安裝的本地字型載入。透過自定義字型，`@font-face` 消除了對使用者電腦上安裝的有限數量字型的依賴。
 
 ## 語法
 
@@ -79,7 +79,7 @@ slug: Web/CSS/@font-face
 
 ### 備註
 
-- Web 字型受到相同網域的限制（字型檔案必須與使用它們的頁面位於相同網域），除非使用[HTTP存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
+- Web 字型受到相同網域的限制（字型檔案必須與使用它們的頁面位於相同網域），除非使用 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
 - `@font-face` 不能在 CSS 選擇器中宣告。例如，以下內容將無法運作：
 
   ```css example-bad
@@ -133,7 +133,7 @@ slug: Web/CSS/@font-face
 
 ### 指定本地替代字型
 
-下面這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：
+下面這個範例會套用使用者本地的「Helvetica Neue Bold」字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載「MgOpenModernaBold.ttf」字型：
 
 ```css
 @font-face {
