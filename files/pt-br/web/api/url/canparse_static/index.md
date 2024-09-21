@@ -1,5 +1,5 @@
 ---
-title: "URL: canParse() static method"
+title: "URL: método estático canParse()"
 short-title: canParse()
 slug: Web/API/URL/canParse_static
 l10n:
