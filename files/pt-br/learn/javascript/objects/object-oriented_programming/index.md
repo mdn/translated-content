@@ -42,7 +42,7 @@ Depois da introdução dos conceitos mencionados anteriormente, o próximo passo
   </tbody>
 </table>
 
-A programação orientada a objetos pode ser entendida como a modelagem de um sistema como uma coleção de objetos, onde cada objeto representa algum aspecto particular do sistema. Objetos contêm em si tanto funções (ou métodos) quanto dados em campos (também conhecidos como propriedades ou atributos). 
+A programação orientada a objetos pode ser entendida como a modelagem de um sistema como uma coleção de objetos, onde cada objeto representa algum aspecto particular do sistema. Objetos contêm em si tanto funções (ou métodos) quanto dados em campos (também conhecidos como propriedades ou atributos).
 
 Um objeto fornece uma interface pública para outras partes do código que desejam utilizá-lo, mas mantém o seu próprio estado, privativo e interno; Outras partes do sistema não devem preocupar-se com o que acontece dentro do objeto.
 
