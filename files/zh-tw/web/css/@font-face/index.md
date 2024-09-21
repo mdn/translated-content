@@ -5,7 +5,7 @@ slug: Web/CSS/@font-face
 
 {{CSSRef}}
 
-`@font-face` CSS @ 規則允許指定用於顯示文字之自定義字型，該字型可以從網路或用戶自己電腦上安裝的本地字型載入。透過自定義字型，`@font-face` 消除了對使用者電腦上安裝的有限數量字型的依賴。
+`@font-face` [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/At-rule)允許指定用於顯示文字之自定義字型，該字型可以從遠端伺服器或用戶自己電腦上安裝的本地字型載入。
 
 ## 語法
 
@@ -38,7 +38,8 @@ slug: Web/CSS/@font-face
 
   - : {{cssxref("font-weight")}} 值，接受兩個值來指定 font-face 支援的範圍，例如 `font-weight: 100 400;`。
 
-    > **備註：** {{cssxref("font-variant")}} 描述符已於 2018 年從規範中刪除。 {{cssxref("font-variant")}} 值屬性仍受支援，但沒有對應的描述符。
+    > [!NOTE]
+    > font-variant 描述符已於 2018 年從規範中刪除。 {{cssxref("font-variant")}} 值屬性仍受支援，但沒有對應的描述符。
 
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : 允許控制 OpenType 字型中的進階排版功能。
@@ -66,7 +67,7 @@ slug: Web/CSS/@font-face
 > [!NOTE]
 > 在舊版瀏覽器上加載字型的回退策略描述在 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/@font-face/src#指定舊版瀏覽器的後備方案)。
 
-`@font-face` 不僅可以在 CSS 的頂層使用，還可以在任何 [CSS 條件規則群組](/zh-TW/docs/CSS/At-rule#條件規則群組)內使用。
+`@font-face` 不僅可以在 CSS 的頂層使用，還可以在任何 [CSS 條件群組 @ 規則](/zh-TW/docs/Web/CSS/CSS_conditional_rules#at_規則)內使用。
 
 ### 字型 MIME 類型
 
@@ -156,7 +157,5 @@ slug: Web/CSS/@font-face
 
 - [關於 WOFF](/zh-TW/docs/WOFF)
 - [FontSquirrel @font-face 生成器](https://www.fontsquirrel.com/tools/webfont-generator)
-- [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
+- [使用 @font-face 的漂亮字型](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)
-- [WOFF 與瀏覽器相容性](https://caniuse.com/woff)
-- [SVG 字型與瀏覽器相容性](https://caniuse.com/svg-fonts)
