@@ -1,6 +1,6 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/console/timestamp_static
+slug: Web/API/console/timeStamp_static
 ---
 
 {{ APIRef("Console API") }}{{Non-standard_header}}

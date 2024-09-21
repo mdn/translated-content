@@ -307,7 +307,7 @@ console.log("setTimeout 之后");
 
 会在控制台输出：
 
-```
+```plain
 setTimeout 之后
 foo 被调用
 ```

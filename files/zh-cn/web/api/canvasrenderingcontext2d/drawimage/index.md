@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D：drawImage() 方法
 slug: Web/API/CanvasRenderingContext2D/drawImage
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
 ---
 
 {{APIRef}}
@@ -63,7 +63,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```html
 <canvas id="canvas"></canvas>
 <div style="display:none;">
-  <img id="source" src="rhino.jpg" width="300" height="227" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
 </div>
 ```
 
@@ -109,7 +113,7 @@ image.height = 45; // 使用可选的图片尺寸
 image.onload = drawImageActualSize; // 图片加载完成后进行绘制
 
 // 加载一个固定尺寸（以 CSS 像素为单位）为 300x227 的图片
-image.src = "rhino.jpg";
+image.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 
 function drawImageActualSize() {
   // 在画布上使用图片的实际尺寸（以 CSS 像素为单位）

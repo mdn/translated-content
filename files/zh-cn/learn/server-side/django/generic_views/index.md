@@ -488,7 +488,7 @@ def book_detail_view(request,pk):
 >
 > 还要注意，如果你没有定义顺序（在基于类的视图或模型上），你还会看到开发服务器中的错误，如下所示：
 >
-> ```
+> ```plain
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)

@@ -11,7 +11,7 @@ l10n:
 > このプロパティのこのインターフェイスは、[Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨になりました。
 > かわりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-レガシーな読み取り専用プロパティ **`PerformanceTiming.navigationStart`** は、同じブラウジングコンテキストの前の文書のアンロードのプロンプトが終了した直後の時刻を UNIX エポックからのミリ秒数で表す `unsigned long long` 値を返します。前の文書が無い場合は、この値は {{domxref("PerformanceTiming.fetchStart")}} と同じになります。
+レガシーな読み取り専用プロパティ **`PerformanceTiming.navigationStart`** は、同じ閲覧コンテキストの前の文書のアンロードのプロンプトが終了した直後の時刻を UNIX エポックからのミリ秒数で表す `unsigned long long` 値を返します。前の文書が無い場合は、この値は {{domxref("PerformanceTiming.fetchStart")}} と同じになります。
 
 ## 値
 

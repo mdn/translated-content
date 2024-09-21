@@ -2,7 +2,7 @@
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
 l10n:
-  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
+  sourceCommit: e92950d09467164afc9dfd8b35be9c909b63a8ab
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}

@@ -41,7 +41,7 @@ _Не имеет специфичных обработчиков событий;
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("hashchange")}} вызвано.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("languagechange")}} вызвано.
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код, который будет вызван при появлении события {{domxref("Window.languagechange_event", "languagechange")}}.
 - {{domxref("WindowEventHandlers.onmessage")}}
   - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("message")}} вызвано.
 - {{domxref("WindowEventHandlers.onoffline")}}

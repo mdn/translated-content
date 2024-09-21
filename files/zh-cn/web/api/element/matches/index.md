@@ -12,14 +12,14 @@ slug: Web/API/Element/matches
 
 ## 语法
 
-```
-let result = element.matches(selectorString);
+```js-nolint
+matches(selectors)
 ```
 
 - `result` 的值为 `true` 或 `false`.
 - `selectorString` 是个 css 选择器字符串。
 
-## 例子
+## 示例
 
 ```html
 <ul id="birds">

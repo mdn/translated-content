@@ -118,7 +118,7 @@ slug: Web/API/Web_components
 
     - {{cssxref("::slotted")}}: 슬롯으로 삽입된 모든 컨텐츠와 일치합니다.
 
-- {{event("slotchange")}} 이벤트
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} 이벤트
   - : 슬롯에 포함된 노드가 변경될 때 {{domxref("HTMLSlotElement")}} 인스턴스({{htmlelement("slot")}} 엘리먼트)에서 실행됩니다.
 
 ## 예제

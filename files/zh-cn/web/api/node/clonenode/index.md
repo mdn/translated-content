@@ -9,8 +9,9 @@ slug: Web/API/Node/cloneNode
 
 ## 语法
 
-```
-var dupNode = node.cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 - `node`

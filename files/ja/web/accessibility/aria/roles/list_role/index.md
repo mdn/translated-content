@@ -73,7 +73,7 @@ HTML の {{htmlelement("ol")}} と {{htmlelement("ul")}} とは異なり、ARIA 
 > [!NOTE]
 > タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

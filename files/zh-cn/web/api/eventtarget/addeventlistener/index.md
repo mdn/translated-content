@@ -63,7 +63,7 @@ addEventListener(type, listener, useCapture);
 
 无（{{jsxref("undefined")}}）。
 
-## 用法说明
+## 使用说明
 
 ### 事件监听回调
 

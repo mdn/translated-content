@@ -9,8 +9,8 @@ slug: Web/API/Document/getElementsByTagName
 
 ## 语法
 
-```
-var elements = document.getElementsByTagName(name);
+```js-nolint
+getElementsByTagName(name)
 ```
 
 - `elements` 是一个由发现的元素出现在树中的顺序构成的动态的 HTML 集合 {{domxref("HTMLCollection")}} (但是看下面的提示) 。

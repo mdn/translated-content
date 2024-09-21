@@ -20,7 +20,7 @@ slug: Web/CSS/transform-function/rotateY
 
 **`rotateY()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
-```
+```css
 rotateY(a)
 ```
 

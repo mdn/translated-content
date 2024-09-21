@@ -1,6 +1,6 @@
 ---
 title: "USBDevice: vendorId プロパティ"
-slug: Web/API/USBDevice/vendorID
+slug: Web/API/USBDevice/vendorId
 l10n:
   sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---

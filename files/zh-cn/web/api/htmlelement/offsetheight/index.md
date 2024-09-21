@@ -16,13 +16,9 @@ slug: Web/API/HTMLElement/offsetHeight
 > [!NOTE]
 > 这个属性值会被四舍五入为整数值，如果你需要一个浮点数值，请用 {{ domxref("element.getBoundingClientRect()") }}.
 
-## 语法
+## 值
 
-```
-var intElemOffsetHeight = document.getElementById(id_attribute_value).offsetHeight;
-```
-
-*intElemOffsetHeight*是一个变量存储对应元素的 offsetHeight 像素的整数值。offsetHeight 属性是只读的。
+一个数字。
 
 ## 示例
 

@@ -75,7 +75,7 @@ discarding.then(onDiscarded, onError);
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-discard) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

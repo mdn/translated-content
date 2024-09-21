@@ -107,7 +107,7 @@ slug: Web/Accessibility/ARIA/Roles/navigation_role
 
 - [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/) (英語)
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

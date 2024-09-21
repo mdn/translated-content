@@ -440,7 +440,7 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 >
 > 順帶一提，若你不再基於類的 view 或 model 定義順序（order），開發伺服器會將會報錯類似的訊息：
 >
-> ```
+> ```plain
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
