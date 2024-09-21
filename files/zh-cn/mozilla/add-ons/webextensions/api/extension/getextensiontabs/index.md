@@ -10,7 +10,7 @@ l10n:
 > [!WARNING]
 > 此方法已被弃用。请改用 {{WebExtAPIRef("extension.getViews()")}}。
 
-返回当前扩展内每个标签页运行的 JavaScript [Window](/zh-CN/docs/Web/API/Window) 对象的数组。如果指定了 `windowId`，则仅返回附加到指定窗口的标签页的 Window 对象。
+返回表示当前扩展内运行的每个标签页的 JavaScript [Window](/zh-CN/docs/Web/API/Window) 对象的数组。如果指定了 `windowId`，则仅返回附加到指定窗口的标签页的 Window 对象。
 
 ## 语法
 
@@ -20,7 +20,7 @@ chrome.extension.getExtensionTabs(
 )
 ```
 
-该 API 也可通过 `browser.extension.getExtensionTabs()` 使用。
+该 API 同样以 `browser.extension.getExtensionTabs()` 的形式可用。
 
 ### 参数
 
@@ -29,7 +29,7 @@ chrome.extension.getExtensionTabs(
 
 ### 返回值
 
-`object` 的 `array`：全局 window 对象的数组。
+`object` 数组（`array`）：全局 window 对象的数组。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ chrome.extension.getExtensionTabs(
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getExtensionTabs) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-getExtensionTabs) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
