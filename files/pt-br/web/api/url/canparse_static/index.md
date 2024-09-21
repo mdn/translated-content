@@ -8,13 +8,11 @@ l10n:
 
 {{ApiRef("URL API")}}
 
-**TRADUÇÃO EM PROGRESSO**
-
-O método estático **`URL.canParse()`**  da interface {{domxref("URL")}} retorna um valor booleano de **`true`** ou **`false`** para indicar se uma URL absoluta ou uma URL relativa combinada com a URL base é analisável e válida.
+O método estático **`URL.canParse()`** da interface {{domxref("URL")}} retorna um valor booleano de **`true`** ou **`false`** para indicar se uma URL absoluta ou uma URL relativa combinada com a URL base é analisável e válida.
 
 Esse método é uma alternativa mais fácil e mais rápida em relação a construir uma `URL` dentro de um bloco [try...catch](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch).
 
-Ela retorna `true` para os mesmos valores que passariam com sucesso no [construtor `URL()`](/en-US/docs/Web/API/URL/URL), portanto valores que são válidos e `false` para valores reprovados e que fariam esse construtor lançar uma exceção [TypeError](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError), portanto valores que são inválidos.
+Ela retorna `true` para os mesmos valores que passariam com sucesso no [construtor `URL()`](/pt-BR/docs/Web/API/URL/URL), portanto valores que são válidos e `false` para valores reprovados e que fariam esse construtor lançar uma exceção [TypeError](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError), portanto valores que são inválidos.
 
 ## Sintaxe
 
