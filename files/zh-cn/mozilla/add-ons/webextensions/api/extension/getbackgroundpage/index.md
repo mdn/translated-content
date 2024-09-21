@@ -2,7 +2,7 @@
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: d82c19fea93f7b36787c6d84af600c955c2732d5
 ---
 
 {{AddonSidebar}}
@@ -40,7 +40,7 @@ function foo() {
 }
 ```
 
-在[弹窗](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面)中运行的脚本可以直接调用这个函数：
+在[弹窗](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)中运行的脚本可以直接调用这个函数：
 
 ```js
 // popup.js
