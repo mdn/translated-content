@@ -27,7 +27,7 @@ chrome.extension.onRequest.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听该事件的监听器。
+  - : 添加一个该事件的监听器。
 - `removeListener(listener)`
   - : 停止监听该事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
