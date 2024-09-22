@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.fileName
+title: "Error: fileName"
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
