@@ -189,7 +189,7 @@ You can also _art direct_ images used at different sizes, thus providing a diffe
 
 You can find a detailed [guide to Responsive Images in the Learn HTML section](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) here on MDN.
 
-## Tipografia responsiva 
+## Tipografia responsiva
 
 Um elemento que não foi abordado nos trabalhos iniciais de design responsivo foi o da tipografia responsiva. Essencialmente, esse elemento descreve as mudanças nos tamanhos de fonte dentro das media queries ou através de unidades de viewport para reagir de forma reflexiva à quantidade de tela disponível.
 
