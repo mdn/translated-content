@@ -18,7 +18,7 @@ localStorage.setItem("corDefinida", "#a4509b");
 ```
 
 > [!NOTE]
-> Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](http://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
+> Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](https://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
 
 Os dois mecanismos presentes na Web Storage são os seguintes:
 
@@ -35,9 +35,15 @@ Para poder usarmos o localStorage, devemos antes verificar se ele é compatível
 
 ### Testando a disponibilidade
 
-Navegadores compatíveis com localStorage terão uma propriedade no objeto `window` chamada `localStorage`. Contudo, por várias razões, apenas verificar se essa propriedade existe pode gerar erros. Se ela existir, ainda não haverá garantias de que o localStorage está de fato disponível para uso, já que vários navegadores fornecem opções que desativam o localStorage. Dessa forma, um navegador pode ser _compatível_ com o localStorage, mas também pode não torná-lo _disponível_ para os scripts usarem. One example of that is Safari, which in Private Browsing mode gives us an empty localStorage object with a quota of zero, effectively making it unusable. However, we might still get a legitimate QuotaExceededError, which only means that we've used up all available storage space, but storage is actually _available_. Our feature detect should take these scenarios into account.
+> [!NOTE]
+> Esta API está disponível nas versões atuais de todos os principais navegadores de internet (_browsers_). O teste de disponibilidade só é necessário se você precisa oferecer suporte para browsers muito antigos ou em circunstâncias limitadas como as descritas abaixo.
 
-Here is a function that detects whether localStorage is both supported and available:
+Navegadores compatíveis com localStorage terão uma propriedade no objeto `window` chamada `localStorage`. Contudo, por várias razões, apenas verificar se essa propriedade existe pode gerar erros. Se ela existir, ainda não haverá garantias de que a API localStorage está de fato disponível para uso, já que vários navegadores fornecem opções que desativam o localStorage. Dessa forma, um navegador pode ser _compatível_ com o localStorage, mas também pode não torná-lo _disponível_ para os scripts usarem.
+
+Contextualizando com um exemplo, para um documento visto no modo anônimo de um navegador, alguns navagadores podem nos dar um objeto `localStorage` de quota zero, tornando-o efetivamente inusável. Comparativamente, também é possível receber um erro `QuotaExceededError` legítimo, o que significaria que todo o espaço disponível foi utilizado, ainda que exista armazenamento _disponível_. Nossa ferramente de detecção também deve tomar esses cenários como passíveis de acontecer.
+
+> [!WARNING]
+> Função **obsoleta** que era utilizada para detectar se o localStorage era tanto suportado quanto disponível.
 
 ```js
 function storageAvailable(type) {
@@ -66,36 +72,60 @@ function storageAvailable(type) {
 }
 ```
 
-And here is how you would use it:
+> [!WARNING]
+> Desde a época em que esse artigo foi parcialmente traduzido, a propriedade [code](/en-US/docs/Web/API/DOMException/code) de `DOMException` (mostrada no código acima como `e.code`) ficou deprecada e portanto esse código mostrado acima não deve ser utilizado em implementações modernas e caso você tenha seguido esse exemplo, é sugerido que você atualize seu código antigo para a versão mais moderna, mostrada abaixo:
 
 ```js
-if (storageAvailable("localStorage")) {
-  // Yippee! We can use localStorage awesomeness
-} else {
-  // Too bad, no localStorage for us
+function storageAvailable(type){
+  let storage;
+  try{
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      e.name == "QuotaExceededError" &&
+      //reconhece o erro QuotaExceededError apenas se algo já foi armazenado
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
-You can test for sessionStorage instead by calling `storageAvailable('sessionStorage')`.
+E aqui está como você a usaria:
 
-See here for a [brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).
+```js
+if (storageAvailable("localStorage")) {
+  // Obaaa! Podemos usufruir de tudo que há de incrível no localStorage
+} else {
+  // Péssimas notícias, localStorage não disponível
+}
+```
 
-## Example
+Outra forma de testar essa disponibilidade do `sessionStorage` é chamando a função `storageAvailable('sessionStorage')`.
 
-To illustrate some typical web storage usage, we have created a simple example, imaginatively called **Web Storage Demo**. The [landing page](https://mdn.github.io/dom-examples/web-storage/) provides controls that can be used to customize the color, font, and decorative image:
+Veja mais aqui sobre [uma breve história dos detectores de localStorage](https://gist.github.com/paulirish/5558557).
 
-![](landing.png)When you choose different options, the page is instantly updated; in addition, your choices are stored in `localStorage`, so that when you leave the page and load it again, later on, your choices are remembered.
+## Exemplo
 
-We have also provided an [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.
+Para ilustrar o uso típico do armazenamento na web, criamos um exemplo simples e criativamente nomeado como **Web Storage Demo**. A [landing page](https://mdn.github.io/dom-examples/web-storage/) providencia os controles para customizar a cor, fonte e a imagem decorativa:
+
+![](landing.png)Quando você escolhe opções diferentes, a página é atualizada instantaneamente; Somado a isso, suas escolhas são armazenadas no `localStorage`, assim quando você sair da página e carregá-la de novo depois, suas escolhas serão lembradas.
+
+Também foi providenciada uma [página para saída de eventos](https://mdn.github.io/dom-examples/web-storage/event.html) — caso você abra essa página em outra aba e faça mudanças nas escolhas da landing page, você conseguirá visualizar a emissãop das informações atualizadas de armazenamento assim que um {{domxref("StorageEvent")}} for acionado.
 
 ![](event-output.png)
 
 > [!NOTE]
-> As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> Além de visualizar as páginas de exemplo ao vivo dos links acima, você também pode acessar aqui o [código-fonte](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
-### Testing whether your storage has been populated
+### Testando se o seu armazenamento foi populado
 
-To start with on [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we will test whether the storage object has already been populated (i.e., the page was previously accessed):
+Para começar, no [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), é preciso testar se o objeto `storage` já foi preenchido (i.e., _populado_ pois a página foi acessada anteriormente):
 
 ```js
 if (!localStorage.getItem("bgcolor")) {
@@ -105,13 +135,16 @@ if (!localStorage.getItem("bgcolor")) {
 }
 ```
 
-The {{domxref("Storage.getItem()")}} method is used to get a data item from storage; in this case, we are testing to see whether the `bgcolor` item exists; if not, we run `populateStorage()` to add the existing customization values to the storage. If there are already values there, we run `setStyles()` to update the page styling with the stored values.
+A função {{domxref("Storage.getItem()")}} é usado para obter um item de dados do armazenamento; nesse caso, testamos se o item `bgcolor` existe; caso não, executamos a função `populateStorage()` para adicionar os valores existentes de personalização para o armazenamento. Caso já existam valores presentes lá, executamos o método `setStyles()` para atualizar a página, aplicando os estilos dos valores armazenados.
 
-**Note**: You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.
+> [!NOTE]
+> Você pode usar {{domxref("Storage.length")}} para testar se o objeto de armazenamento está vazio ou não.
 
-### Getting values from storage
+### Obtendo valores do armazenamento
 
-As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:
+Como notado acima, valores podem ser recuperados do armazenamento utilizando {{domxref("Storage.getItem()")}}. Esse método recebe como argumento a chave do item de dados e retorna o valor de dados desse item.
+
+Para demonstrar:
 
 ```js
 function setStyles() {
@@ -129,11 +162,11 @@ function setStyles() {
 }
 ```
 
-Here, the first three lines grab the values from local storage. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
+Aqui, o código das três primeiras lines pegam os valores do armazenamneto local. Em seguida, definimos os valores mostrados nos elementos do formulário para esses valores, assim eles podem continuar sincronizados sempre que a página for recarregada. Por último, nós atualizamos os estilos ou a imagem decorativa na página para assim as opções de personalização reaparecerem ao recarregar.
 
-### Setting values in storage
+### Definindo valores no armazenamento
 
-{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.
+O método {{domxref("Storage.setItem()")}} é utilizado tanto para criar novos itens de dados, e (se o item de dados já existe) para atualizar valores existentes. Esse método recebe dois argumentos - a chave do item de dados que se pretende criar/modificar e valor a ser armazenado nele.
 
 ```js
 function populateStorage() {
@@ -145,9 +178,9 @@ function populateStorage() {
 }
 ```
 
-The `populateStorage()` function sets three items in local storage — the background color, font, and image path. It then runs the `setStyles()` function to update the page styles, etc.
+A função `populateStorage()` no código acima define três itens no armazenamento local — a or de fundo, a fonte das letras e o caminho da imagem. Daí a função `setStyles()` é executada para atualizar os estilos da página entre outras coisas.
 
-We've also included an `onchange` handler on each form element so that the data and styling are updated whenever a form value is changed:
+Também incluímos um manipulador `onchange` em cada elemento do formulário assim as informações e o estilo são atualizados sempre que um valor do formulário sofre mudanças:
 
 ```js
 bgcolorForm.onchange = populateStorage;
@@ -155,11 +188,23 @@ fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;
 ```
 
-### Responding to storage changes with the StorageEvent
+`Storage` só consegue armazenar e recuperar informações que estejam no tipo de dados string. Para outros tipos de dados, é preciso convertê-los para string. Para objetos simples e arrays, pode-se utilizar {{jsxref("JSON.stringify()")}}.
 
-The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object (note that this event is not fired for sessionStorage changes). This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+```js
+const person = { nome : "Alex" };
+localStorage.setItem("user", person);
+console.log(localStorage.getItem("user")); // "[object Object]"; não é muito útil!
+localStorage.setItem("user", JSON.stringify(person));
+console.log(JSON.parse(localStorage.getItem("user"))); // { nome: "Alex" }
+```
 
-On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) the only JavaScript is as follows:
+Contudo não existe uma forma genérica para armazenar tipos de dados arbitrários. Mais que isso, o objeto recuperado é uma [deep copy](/en-US/docs/Glossary/Deep_copy) do objeto original e alterações na cópia não afetam o objeto original.
+
+### Reagindo a mudanças no storage com StorageEvent
+
+O {{domxref("StorageEvent")}} é acionado sempre que uma mudança é feita no objeto {{domxref("Storage")}} (deve notar-se que esse evento não é acionado para mudanças relacionadas com o sessionStorage). Porém isso não funciona na mesma página que faz as mudanças — essa é mais uma maneira para as outras páginas do domínio que utilizam o mesmo armazenamento `storage` sincronizarem as mudanças feitas. Páginas de domínios diferentes não podem acessar os mesmos objetos storage.
+
+Na página de eventos (mostrada aqui como [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) esse é o único código JavaScript presente:
 
 ```js
 window.addEventListener("storage", function (e) {
@@ -171,14 +216,14 @@ window.addEventListener("storage", function (e) {
 });
 ```
 
-Here we add an event listener to the `window` object that fires when the {{domxref("Storage")}} object associated with the current origin is changed. As you can see above, the event object associated with this event has a number of properties containing useful information — the key of the data that changed, the old value before the change, the new value after that change, the URL of the document that changed the storage, and the storage object itself.
+Nele colocamos um `EventListener` para o objeto `window` que é acionado quando o objeto {{domxref("Storage")}} associado com a origem atual é mudado. Como pode ser visto no código acima, o objeto de evento associado com esse evento tem um número de propriedades contendo informações úteis — a chave do dado ou dados que sofrem alteração, o valor anterior à mudança, o valor novo depois da mudança, a URL do documento que mudou o objeto storage e o objeto storage propriamente dito.
 
-### Deleting data records
+### Excluindo registros de dados
 
-Web Storage also provides a couple of simple methods to remove data. We don't use these in our demo, but they are very simple to add to your project:
+Web Storage fornece também um par de métodos simples para remover dados. Eles não foram utilizados na nossa demo, mas adicioná-los ao seu projeto é bastante simples:
 
-- {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that domain.
-- {{domxref("Storage.clear()")}} takes no arguments, and simply empties the entire storage object for that domain.
+- {{domxref("Storage.removeItem()")}} recebe um único argumento — a chave do item de dados que você quer remover — e o remove individualmente do objeto de armazenamento para aquele domínio.
+- {{domxref("Storage.clear()")}} não recebe argumentos e esvazia completamente o objeto de armazenamento para aquele domínio.
 
 ## Especificações
 
@@ -188,6 +233,6 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 
 {{Compat}}
 
-## See also
+## Veja Também
 
 - [Web Storage API landing page](/pt-BR/docs/Web/API/Web_Storage_API)
