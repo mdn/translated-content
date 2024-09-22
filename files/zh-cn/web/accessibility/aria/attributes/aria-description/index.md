@@ -9,7 +9,7 @@ l10n:
 
 全局 `aria-description` 属性定义了一个字符串值，用于描述或注解当前元素。
 
-> **注意：** `aria-description` 仍处于 W3C ARIA 1.3 编辑草案中。暂时请继续使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)，自 ARIA 1.1 起已获得支持。
+> **备注：** `aria-description` 仍处于 W3C ARIA 1.3 编辑草案中。暂时请继续使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)，自 ARIA 1.1 起已获得支持。
 
 ## 描述
 
