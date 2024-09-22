@@ -195,7 +195,7 @@ Um elemento que não foi abordado nos trabalhos iniciais de design responsivo fo
 
 ### Usando Media Queries para tipografia responsiva
 
-Neste exemplo, queremos configurar a nossa etiqueta de cabeçalho de nível 1 (h1) para ter a medida de `4rem`, ou seja 4 vezes o tamanho da nossa fonte base. Esse é uma etiqueta bem grande e por isso desejamos que esse tamanho extra grande ocorra somente em telas com tamanho suficiente para comportá-lo. 
+Neste exemplo, queremos configurar a nossa etiqueta de cabeçalho de nível 1 (h1) para ter a medida de `4rem`, ou seja 4 vezes o tamanho da nossa fonte base. Esse é uma etiqueta bem grande e por isso desejamos que esse tamanho extra grande ocorra somente em telas com tamanho suficiente para comportá-lo.
 
 Para fazer isso, primeiro criamos uma etiqueta de cabeçalho com tamanho bem menor para então usar media queries para sobrescrever o tamanho inicialmente definido pelo tamanho maior de `4rem` caso seja detectado que o usuário tem uma tela com no mínimo 1200px de tamanho.
 ```css
