@@ -145,4 +145,4 @@ Chrome では、アプリマニフェストの `allowed_extensions` キーは、
 
 ### アプリマニフェストの位置
 
-Chrome は、別の場所でアプリのマニフェストを見つけることを期待しています。 Chrome ドキュメントの[「ネイティブメッセージングホストの場所」](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging?hl=ja#native-messaging-host-location)をご覧ください。
+Chrome は、別の場所でアプリのマニフェストを見つけることを期待しています。 Chrome ドキュメントの[「ネイティブメッセージングホストの場所」](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location)をご覧ください。

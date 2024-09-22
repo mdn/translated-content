@@ -142,4 +142,4 @@ l10n:
 ### 拡張機能の開発
 
 - [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions は、ブラウザーのアドオンを開発するための、ブラウザー間互換システムです。多くの部分において、このシステムは Google Chrome や Opera が対応している[拡張機能 API](https://developer.chrome.com/docs/extensions?hl=ja) と大体において互換性があります。これらのブラウザー用に書かれたアドオンは大抵の場合、 Firefox や [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) でも [ほんの少し変更を加えるだけで](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、動かすことができます。この API は[マルチプロセス Firefox](https://wiki.mozilla.org/Firefox/multiprocess) とも完全な互換性があります。
+  - : WebExtensions は、ブラウザーのアドオンを開発するための、ブラウザー間互換システムです。多くの部分において、このシステムは Google Chrome や Opera が対応している[拡張機能 API](https://developer.chrome.com/docs/extensions) と大体において互換性があります。これらのブラウザー用に書かれたアドオンは大抵の場合、 Firefox や [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) でも [ほんの少し変更を加えるだけで](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、動かすことができます。この API は[マルチプロセス Firefox](https://wiki.mozilla.org/Firefox/multiprocess) とも完全な互換性があります。

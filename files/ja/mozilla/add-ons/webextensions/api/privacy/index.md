@@ -25,7 +25,7 @@ privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy?hl=ja) API.
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

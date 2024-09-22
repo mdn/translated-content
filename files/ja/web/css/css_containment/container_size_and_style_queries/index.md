@@ -432,5 +432,5 @@ output {
 - CSS {{Cssxref("contain")}} プロパティ
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ
-- [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries?hl=ja) (2022)
+- [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries) (2022)
 - [Style queries](https://una.im/style-queries/) (una.im, 2022)

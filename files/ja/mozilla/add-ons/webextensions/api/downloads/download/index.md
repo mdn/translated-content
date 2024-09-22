@@ -82,7 +82,7 @@ downloading.then(onStartedDownload, onFailed);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads?hl=ja#method-download) API を元にしています。
+> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-download) API を元にしています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

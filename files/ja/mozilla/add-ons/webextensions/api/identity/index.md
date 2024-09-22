@@ -64,7 +64,7 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity?hl=ja) API に基づいています。
+> この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
