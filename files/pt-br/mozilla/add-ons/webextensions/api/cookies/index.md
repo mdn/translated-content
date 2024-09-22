@@ -97,7 +97,7 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies?hl=pt-br) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

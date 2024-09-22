@@ -94,7 +94,7 @@ Descubra mais sobre o Inspetor em diferentes navegadores:
 
 - [Inspetor de páginas do Firefox](/pt-BR/docs/Tools/Page_Inspector)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
-- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/?hl=pt-br) (Inspetor da Opera funciona da mesma forma)
+- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/) (Inspetor da Opera funciona da mesma forma)
 - [Inspetor do Safari DOM e explorador de estilo](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## O depurador JavaScript
@@ -203,7 +203,7 @@ Descubra mais sobre o console JavaScript em diferentes navegadores:
 
 - [Firefox Web Console](/pt-BR/docs/Tools/Web_Console)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
-- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/?hl=pt-br) (O inspetor do Ópera funciona da mesma forma)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/) (O inspetor do Ópera funciona da mesma forma)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## Veja também
