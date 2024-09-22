@@ -42,5 +42,5 @@ b1.tabIndex = 1;
 
 ## 같이 보기
 
-- [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Accessibility of keyboard-navigable JavaScript widgets](/ko/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - HTML 전역 특성 [`tabindex`](/ko/docs/Web/HTML/Global_attributes/tabindex)
