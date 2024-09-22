@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 {{AddonSidebar}}
 
-Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la [API de extensión](https://developer.chrome.com/docs/extensions?hl=es-419) soportada por Google Chrome, Opera y el [borrador del grupo de la comunidad del W3C](https://browserext.github.io/browserext/).
+Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la [API de extensión](https://developer.chrome.com/docs/extensions) soportada por Google Chrome, Opera y el [borrador del grupo de la comunidad del W3C](https://browserext.github.io/browserext/).
 
 Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) con sólo [unos pocos cambios](/es/Add-ons/WebExtensions/Porting_from_Google_Chrome). La API también es totalmente compatible con [multiprocesos de Firefox](/es/Firefox/Multiprocess_Firefox).
 

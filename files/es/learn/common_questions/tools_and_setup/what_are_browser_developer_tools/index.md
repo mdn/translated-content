@@ -227,7 +227,7 @@ Obtén más información sobre la consola de JavaScript en diferentes navegadore
 
 - [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
 - [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
-- [Consola JavaScript de Chrome.](https://developer.chrome.com/docs/devtools/?hl=es-419) (el inspector de Opera funciona de la misma manera)
+- [Consola JavaScript de Chrome.](https://developer.chrome.com/docs/devtools/) (el inspector de Opera funciona de la misma manera)
 - [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## Ve también

@@ -252,7 +252,7 @@ Por ejemplo, los "métodos de array" como [`map()`](/es/docs/Web/JavaScript/Refe
 > [!WARNING]
 > Hay un error que solía ser frecuente: extender `Object.prototype` o uno de los otros prototipos integrados. Un ejemplo de esta característica errónea es definir `Array.prototype.myMethod = function () {...}` y luego usar `myMethod` en todas las instancias de matriz.
 >
-> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parche de mono/monkey patching arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate?hl=es-419), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
+> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parche de mono/monkey patching arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
 >
 > La **única** buena razón para extender un prototipo integrado es respaldar las características de los motores JavaScript más nuevos, como `Array.prototype.forEach`.
 

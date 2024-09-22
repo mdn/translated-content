@@ -46,4 +46,4 @@ Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#O
 
 - [Opera Dragonfly documentación: Consola](http://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Usando F12 Herramientas de Consola para ver Errores y Estados](http://msdn.microsoft.com/library/gg589530)
-- [Herramientas de Desarrollo de Chrome: Usando la Consola](https://developer.chrome.com/docs/devtools/?hl=es-419#assertions)
+- [Herramientas de Desarrollo de Chrome: Usando la Consola](https://developer.chrome.com/docs/devtools/#assertions)
