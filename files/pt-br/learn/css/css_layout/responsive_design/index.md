@@ -214,6 +214,7 @@ h1 {
   }
 }
 ```
+
 Nós editamos nosso exemplo acima de grid responsivo com o método delineado. Você consegue observar como a seção da etiqueta de cabeçalho muda de tamanho conforme o layout chega na versão de duas colunas.
 
 No dispositivo móvel, a seção de etiqueta de cabeçalho é menor:
