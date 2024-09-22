@@ -232,7 +232,7 @@ As this approach to typography shows, you do not need to restrict media queries 
 
 ### Usando unidadades de Viewport para tipografia responsiva
 
-Uma abordagem muito interessante para isso é usar a unidade de viewport `vw` para habilitar tipografia responsiva. O valor `1vw`é equivalente a um porcento (**1%**) da largura total do viewport, 
+Uma abordagem muito interessante para isso é usar a unidade de viewport `vw` para habilitar tipografia responsiva. O valor `1vw`é equivalente a um porcento (**1%**) da largura total do viewport,
 An interesting approach is to use the viewport unit `vw` to enable responsive typography. `1vw` is equal to one percent of the viewport width, meaning that if you set your font size using `vw`, it will always relate to the size of the viewport.
 
 ```css
