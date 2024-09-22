@@ -1,7 +1,6 @@
 ---
 title: Requisições síncronas e assíncronas
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
-original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
 `XMLHttpRequest` suporta comunicações síncronas e assíncronas. No geral, entretando, requisições assíncronas devem prevalecer sobre requisições síncronas por questões de performance.
@@ -137,11 +136,13 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **Nota:** Support for `timeout` was added in Gecko 12.0.
+> [!NOTE]
+> Support for `timeout` was added in Gecko 12.0.
 
 ## Synchronous request
 
-> **Nota:** Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> [!NOTE]
+> Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Em casos raros, o uso do método síncrono é preferível ao invés do método assíncrono.
 
@@ -207,7 +208,8 @@ self.onmessage = function (event) {
 };
 ```
 
-> **Nota:** The effect, because of the use of the `Worker`, is however asynchronous.
+> [!NOTE]
+> The effect, because of the use of the `Worker`, is however asynchronous.
 
 It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/En/DOM/Using_web_workers) for examples and details.
 

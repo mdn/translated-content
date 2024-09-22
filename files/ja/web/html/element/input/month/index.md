@@ -2,7 +2,7 @@
 title: <input type="month">
 slug: Web/HTML/Element/input/month
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -92,7 +92,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。
 しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement.value")}} プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### step
 
@@ -101,7 +102,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> [!NOTE]
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `month` 入力欄では、 `step` の値は月数で指定され、倍率は 1 です (数値も月単位であるため)。
 `step` の既定値は 1 ヶ月です。
@@ -165,10 +167,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
 
-```html
+```html-nolint
 <form>
   <div>
-    <label for="month">何月にいらっしゃいますか？ (6 ～ 9 月)</label>
+    <label for="month">
+      何月にいらっしゃいますか？ (6 ～ 9 月)
+    </label>
     <input
       id="month"
       type="month"
@@ -224,7 +228,8 @@ input:valid + span::after {
 }
 ```
 
-> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。
+> [!WARNING]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。
 > HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。
 > HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。
 > サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
@@ -234,9 +239,9 @@ input:valid + span::after {
 前述のように、現時点で日付入力を書く上で一番の問題は、多くの主要なブラウザーがまだすべてを実装している訳ではないということです。デスクトップでは Chrome/Opera と Edge のみが対応しており、モバイルでは多くの最新のブラウザーが対応しています。
 例えば、 `month` の選択画面は Android 版 Chrome ではこのように表示されます。
 
-![Chrome for Android での日付ピッカー](month-android.png)
+![Chrome for Android での月ピッカー](month-android.png)
 
-対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
+対応していないブラウザーでは、テキスト入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
 
 2 番目の問題はより深刻です。すでに述べたように、 `month` 入力欄では、実際の値が常に `yyyy-mm` の書式で正規化されます。
 一方、既定の設定では、 `text` 入力欄ではどの書式で入力されるかの認識がなく、以下のように人間が日付を書く様々な方法で入力される可能性があります。
@@ -307,16 +312,14 @@ input:valid + span::after {
 }
 ```
 
-（すべての主要なブラウザーが対応するまでの間）ブラウザーに依存しない方法によってフォームで日付を扱う最善の方法は、ユーザーが年と月を別々なコントロール（({{htmlelement("select")}} 要素であることが多いです。以下の実装を見てください）に入力するようにするか、 [jQuery date picker](https://jqueryui.com/datepicker/) のような JavaScript ライブラリーを使用することです。
+（すべての主要なブラウザーが対応するまでの間）ブラウザーに依存しない方法によってフォームで日付を扱う最善の方法は、ユーザーが年と月を別々なコントロール（{{htmlelement("select")}} 要素であることが多いです。以下の実装を見てください）に入力するようにするか、 [jQuery date picker](https://jqueryui.com/datepicker/) のような JavaScript ライブラリーを使用することです。
 
 ## 例
 
 この例では、ユーザーが年と月を選択できるよう設計されたユーザーインターフェイスの要素を 2 組作成します。
 1 つ目はネイティブの `month` 入力欄であり、もう 1 つは年と月を個別に選択することができる一対の {{HTMLElement("select")}} 要素で、まだ `<input type="month">` に対応していないブラウザーのためのものです。
 
-### 結果
-
-{{EmbedLiveSample('Examples', 600, 140)}}
+{{EmbedLiveSample('例', 600, 140)}}
 
 ### HTML
 
@@ -448,7 +451,8 @@ function populateYears() {
 }
 ```
 
-> **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+> [!NOTE]
+> 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
 
 ## 技術的概要
 
@@ -464,7 +468,7 @@ function populateYears() {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

@@ -33,7 +33,7 @@ Pour débuter cette évaluation, vous devez&nbsp;:
 - récupérer les fichiers [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) de l'exercice ainsi que [le lien externe sur l'icône](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - en faire une copie sur votre ordinateur.
 
-> **Note :** Autrement, il reste possible d'utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
+Autrement, il reste possible d'utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
 
 ## Énoncé de l'exercice
 

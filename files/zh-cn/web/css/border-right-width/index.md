@@ -1,59 +1,70 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的**`border-right-width`** 用来设置盒子右边框的宽度。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-right-width`** 用于设置元素右边框的宽度。
 
 {{EmbedInteractiveExample("pages/css/border-right-width.html")}}
 
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 border-right-width: thin;
 border-right-width: medium;
 border-right-width: thick;
 
-/* <length> values */
+/* <length> 值 */
 border-right-width: 10em;
 border-right-width: 3vmax;
 border-right-width: 6px;
 
-/* Global keywords */
+/* 全局关键字 */
 border-right-width: inherit;
 border-right-width: initial;
+border-right-width: revert;
+border-right-width: revert-layer;
 border-right-width: unset;
 ```
 
-### 数值
+### 值
 
 - `<line-width>`
 
-  - : 定义边框的宽度，或者作为显性非负的长度值 {{cssxref("&lt;length&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
+  - : 定义边框的宽度，明确的非负 {{cssxref("&lt;length&gt;")}} 值或者是关键字。如果它是关键字，则必须是以下值之一：
 
-    - `thin` 一个细边框
-    - `medium` 一个中等边框
-    - `thick` 一个粗边框
+    - `thin`
+    - `medium`
+    - `thick`
 
-    > **备注：** 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
+> [!NOTE]
+> 因为规范没有定义每个关键字表示的确切宽度，所以使用其中的某个关键字所得到的精确结果是特定于实现的。不过，它们通常遵循 `thin ≤ medium ≤ thick` 的模式，且这些值在单独的文档中是固定不变的。
 
-### 形式语法
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### 边框宽度对比
+
+#### HTML
 
 ```html
-<div>Element 1</div>
-<div>Element 2</div>
+<div>元素 1</div>
+<div>元素 2</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -69,15 +80,13 @@ div:nth-child(2) {
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample('示例', '100%')}}
+{{EmbedLiveSample('边框宽度对比', '100%')}}
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
@@ -85,5 +94,5 @@ div:nth-child(2) {
 
 ## 参见
 
-- The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
-- The other border-right-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-right")}}, {{Cssxref("border-right-style")}}, and {{Cssxref("border-right-color")}}.
+- 其他与 border-width 相关的 CSS 属性：{{Cssxref("border-bottom-width")}}、{{Cssxref("border-left-width")}}、{{Cssxref("border-top-width")}} 和 {{Cssxref("border-width")}}。
+- 其他与 border-right 相关的 CSS 属性：{{Cssxref("border")}}、{{Cssxref("border-right")}}、{{Cssxref("border-right-style")}} 和 {{Cssxref("border-right-color")}}。

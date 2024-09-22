@@ -31,7 +31,7 @@ O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janel
 ```js
 // Verifique se o opener existe e não está fechado
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 

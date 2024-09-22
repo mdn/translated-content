@@ -48,7 +48,7 @@ l10n:
 - {{cssxref("background-repeat")}} で、キーワード `round` および `space` をサポートしました ([Firefox バグ 548372](https://bugzil.la/548372))。
 - {{cssxref("background-clip")}} で、キーワード `text` をデフォルトで有効化しました ([Firefox バグ 1264905](https://bugzil.la/1264905))。
 - 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
-- {{cssxref(":dir()")}} 疑似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
+- {{cssxref(":dir()")}} 擬似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
 - {{cssxref("clip-path")}} の実験的な実装 (デフォルトで有効化していません) で、複数の {{cssxref("&lt;basic-shape&gt;")}} 値の間で補間処理が可能になりました ([Firefox バグ 1110460](https://bugzil.la/1110460))。
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
@@ -121,7 +121,7 @@ l10n:
 #### サービスワーカー関連
 
 - [フェッチ API](/ja/docs/Web/API/Fetch_API) の {{domxref("Response")}} オブジェクトに、リダイレクトされたリクエストのレスポンスであるかを示す {{domxref("Response.redirected", "redirected")}} プロパティを実装しました。このプロパティを使用する前に、ドキュメントでセキュリティ関連の注意事項を確認してください ([Firefox バグ 1243792](https://bugzil.la/1243792))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
 
 #### メディアストリーム
 
@@ -170,7 +170,7 @@ _変更なし。_
 
 ### プラグインと Flash
 
-Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザービリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
+Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザビリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
 
 これはプラグインがない未来への行程の、次のステップになります。機能を果たすためにプラグインを必要としない段階に、HTML はとても近づいています。
 

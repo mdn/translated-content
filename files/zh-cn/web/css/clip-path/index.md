@@ -52,7 +52,7 @@ clip-path: unset;
 ### 取值
 
 - `<clip-source>`
-  - : 用 {{cssxref("url", "url()")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
+  - : 用 {{cssxref("url_value", "&lt;url&gt;")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : 一种形状，其大小和位置由 `<geometry-box>` 的值定义。如果没有指定 `<geometry-box>`，则将使用 `border-box` 用为参考框。取值可为以下值中的任意一个：
@@ -90,7 +90,8 @@ clip-path: unset;
 - `none`
   - : 不创建剪切路径。
 
-> **备注：** CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
+> [!NOTE]
+> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
 
 ## 形式定义
 

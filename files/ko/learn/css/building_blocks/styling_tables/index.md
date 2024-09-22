@@ -28,7 +28,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 ## 전형적인 HTML 표
 
-전형적인 HTML 표를 살펴 봅시다. 글쎄요, 일반적인 표의 예들은 — 신발, 날씨 또는 직원들에 관한 것입니다; 우리는 영국의 유명한 펑크 밴드에 관한것을 만들어서 더 흥미롭게 만들기로 결정했습니다. 코드는 다음과 같습니다:
+전형적인 HTML 표를 살펴 봅시다. 글쎄요, 일반적인 표의 예들은 — 신발, 날씨 또는 직원들에 관한 것입니다; 우리는 영국의 유명한 펑크 밴드에 관한것을 만들어서 더 흥미롭게 만들기로 결정했습니다. 코드는 다음과 같습니다.
 
 ```html
 <table>
@@ -75,7 +75,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 </table>
 ```
 
-[`scope`](/ko/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
+[`scope`](/ko/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조).
 
 ![](table-unstyled.png)
 
@@ -87,7 +87,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 1. 시작하려면, [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 의 로컬 사본을 만들고 두 이미지 ([노이즈](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) 및 [표범가죽](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) 를 모두 다운로드한 다음, 세 개의 결과 파일을 로컬 컴퓨터의 작업 디렉토리에 넣습니다.
 2. 다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하십시오.
-3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오:
+3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오.
 
    ```html
    <link href="style.css" rel="stylesheet" type="text/css" />
@@ -95,7 +95,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 ### 간격 및 레이아웃
 
-가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다 — 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, `style.css` 파일에 다음 CSS 를 추가하십시오:
+가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다 — 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, `style.css` 파일에 다음 CSS 를 추가하십시오.
 
 ```css
 /* 간격 */
@@ -129,7 +129,7 @@ td {
 }
 ```
 
-가장 중요한 부분은 다음과 같습니다:
+가장 중요한 부분은 다음과 같습니다.
 
 - `fixed` 의 {{cssxref("table-layout")}} 값은 일반적으로 표가 기본적으로 좀 더 예측 가능하게 작동하므로 표에 설정하는 것이 좋습니다. 일반적으로, 표의 열은 내용의 양에 따라 크기가 정해지는 경향이 있으며, 그 결과 이상한 결과가 발생합니다. `table-layout: fixed` 를 사용하면 제목의 너비에 따라 열의 크기를 지정한 다음 내용을 적절하게 처리할 수 있습니다. 이것이 우리가 `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) 선택자 ("{{htmlelement("thead")}} 요소 내에서 {{htmlelement("th")}} 요소인 _n번째_ 자식 요소{{htmlelement("thead")}} 를 순서대로 선택합니다") 요소를 설정하고 백분율 너비를 설정했습니다. 전체 열 너비는 제목 너비를 따르므로, 표 열의 크기를 정할 수 있습니다. Chris Coyier 는 이 기술에 대해 [고정 표 레이아웃](https://css-tricks.com/fixing-tables-long-strings/) 에서 자세히 설명합니다.
 
@@ -139,7 +139,7 @@ td {
 - 우리는 전체 표 주위에 {{cssxref("border")}} 를 넣었습니다. 나중에 표 머리글과 바닥글에 테두리를 씌울 것입니다 — 표 바깥쪽에 테두리가 없고 틈새가 생기면 정말 이상하게 보입니다.
 - {{htmlelement("th")}} 및 {{htmlelement("td")}} 요소에 {{cssxref("padding")}} 을 설정했습니다 — 이렇게 하면 데이터 항목에 숨을 공간이 생깁니다. 표를 훨씬 읽기 쉽게 보이게합니다.
 
-이 시점에서, 우리 표는 이미 훨씬 좋아보입니다:
+이 시점에서, 우리 표는 이미 훨씬 좋아보입니다.
 
 ![](table-with-spacing.png)
 
@@ -149,7 +149,7 @@ td {
 
 우선, [Google Fonts](https://www.google.com/fonts) 에서 펑크 밴드 관련 표에 적합한 글꼴을 찾았습니다. 원하는 경우 거기에 가서 다른 것을 찾을 수 있습니다. 제공된 {{htmlelement("link")}} 요소 및 custom {{cssxref("font-family")}} 선언을 Google Fonts 에서 제공하는 선언으로 바꾸면 됩니다.
 
-먼저, 다음 {{htmlelement("link")}} 요소를 기존 `<link>` 요소 바로 위의 HTML head 에 추가하십시오:
+먼저, 다음 {{htmlelement("link")}} 요소를 기존 `<link>` 요소 바로 위의 HTML head 에 추가하십시오.
 
 ```html
 <link
@@ -158,7 +158,7 @@ td {
   type="text/css" />
 ```
 
-이제 이전 CSS 아래의 `style.css` 파일에, 다음 CSS 를 추가하십시오:
+이제 이전 CSS 아래의 `style.css` 파일에, 다음 CSS 를 추가하십시오.
 
 ```css
 /* typography */
@@ -189,14 +189,14 @@ tfoot th {
 }
 ```
 
-여기에서는 표에 특별한 것은 없습니다. 우리는 일반적으로 쉽게 읽을 수 있도록 글꼴 스타일을 조정합니다:
+여기에서는 표에 특별한 것은 없습니다. 우리는 일반적으로 쉽게 읽을 수 있도록 글꼴 스타일을 조정합니다.
 
 - 전역 sans-serif 글꼴 스택을 설정했습니다; 이것은 순전히 문체 선택입니다. 또한 {{htmlelement("thead")}} 및 {{htmlelement("tfoot")}} 요소의 제목에 맞춤 글꼴을 설정하여 멋지고 펑키한 모양을 만들었습니다.
 - 가독성을 높이기 위해 제목과 셀에 {{cssxref("letter-spacing")}} 을 설정했습니다. 다시 말하지만, 주로 스타일 선택입니다.
 - {{htmlelement("tbody")}} 내부의 표 셀에서 텍스트를 가운데 정렬하여 제목과 일치하도록 했습니다. 기본적으로, 셀에는 {{cssxref("text-align")}} 에 `left` 값이 제공되고, 머리글에는 `center` 값이 제공되지만 둘 다에 대해 정렬을 동일하게 설정하는것이 좋습니다. 제목 글꼴의 기본 굵은체는 모양을 구별하기에 충분합니다.
 - 데이터와 시작적으로 더 잘 연결되도록 {{htmlelement("tfoot")}} 내부에서 제목을 오른쪽 정렬했습니다.
 
-결과는 조금 깔끔해 보입니다:
+결과는 조금 깔끔해 보입니다.
 
 ![](table-with-typography.png)
 
@@ -204,7 +204,7 @@ tfoot th {
 
 이제 그래픽과 색상으로 넘어가겠습니다! 표에는 punk and attitude 가 가득하기 때문에, 밝은 인상적인 스타일링을 제공해야합니다. 걱정하지 마십시오. 표를 크게 만들 필요는 없습니다 — 더 미묘하고 세련된 것을 선택할 수 있습니다.
 
-아래에서 다시 CSS 를 `style.css` 파일에 추가하고, 다시 시작하십시오:
+아래에서 다시 CSS 를 `style.css` 파일에 추가하고, 다시 시작하십시오.
 
 ```css
 thead,
@@ -234,7 +234,7 @@ tfoot td {
 
 #### 얼룩말 줄무늬 (Zebra striping)
 
-우리는 표의 다른 데이터 행을 더 쉽게 구문 분석하고 읽을 수 있도록 번갈아 가며 **zebra stripes** 를 구현하는 방법을 보여주기 위해 별도의 섹션을 제공하고자 했습니다. `style.css` 파일의 맨 아래에 다름 CSS 를 추가하십시오:
+우리는 표의 다른 데이터 행을 더 쉽게 구문 분석하고 읽을 수 있도록 번갈아 가며 **zebra stripes** 를 구현하는 방법을 보여주기 위해 별도의 섹션을 제공하고자 했습니다. `style.css` 파일의 맨 아래에 다름 CSS 를 추가하십시오.
 
 ```css
 tbody tr:nth-child(odd) {
@@ -258,7 +258,7 @@ table {
 - 또한 모든 본문 행에 반복적인 배경 타일을 추가하여, 약간의 노이즈 (약간 시각적 왜곡이 있는 반투명 `.png`) 를 사용하여 질감을 제공했습니다.
 - 마지막으로, `:nth-child` 선택자를 지원하지 않는 브라우저는 여전히 본문 행의 배경을 갖도록 전체 표에 단색 배경색을 지정했습니다.
 
-이러한 색상은 다음과 같은 모양을 만듭니다:
+이러한 색상은 다음과 같은 모양을 만듭니다.
 
 ![](table-with-color.png)
 
@@ -266,7 +266,7 @@ table {
 
 ### caption 스타일링
 
-표와 관련하여 마지막으로 해야할 일이 있습니다 — caption 에 스타일을 지정하는 일입니다. 이렇게 하려면, `style.css` 파일의 맨 아래에 다름을 추가하십시오:
+표와 관련하여 마지막으로 해야할 일이 있습니다 — caption 에 스타일을 지정하는 일입니다. 이렇게 하려면, `style.css` 파일의 맨 아래에 다름을 추가하십시오.
 
 ```css
 caption {
@@ -280,7 +280,7 @@ caption {
 }
 ```
 
-`bottom` 값을 가진 {{cssxref("caption-side")}} 속성을 제외하고는 여기서 주목할만한 것이 없습니다. 이로 인해 caption 이 표의 맨 아래에 배치되고 다른 선언과 함께 최종 모양을 얻을 수 있습니다 ([punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) 참조):
+`bottom` 값을 가진 {{cssxref("caption-side")}} 속성을 제외하고는 여기서 주목할만한 것이 없습니다. 이로 인해 caption 이 표의 맨 아래에 배치되고 다른 선언과 함께 최종 모양을 얻을 수 있습니다([punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) 참조).
 
 ![](table-with-caption.png)
 
@@ -290,7 +290,7 @@ caption {
 
 ## 표 스타일링 빠르게 하는 팁
 
-다음 단계로 넘어가지 전에, 위에서 설명한 가장 유용한 요점에 대한 간단한 목록을 제공해야 한다고 생각했습니다:
+다음 단계로 넘어가지 전에, 위에서 설명한 가장 유용한 요점에 대한 간단한 목록을 제공해야 한다고 생각했습니다.
 
 - 표 마크 업을 가능한 한 간단하게 만들고, 유연한 작업을 유지하십시오 예: 백분유을 사용하여 디자인의 반응속도를 향상시킵니다.
 - {{cssxref("table-layout")}}`: fixed` 를 사용하여 제목 ({{htmlelement("th")}}) 에서 {{cssxref("width")}} 를 설정하여 열 너비를 쉽게 설정할 수 있는 예측 가능한 표 레이아웃을 작성합니다.

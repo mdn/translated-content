@@ -45,9 +45,11 @@ Cette clé permet de définir les propriétés de la clé expérimentale de [`th
 
 Pour découvrir les sélecteurs CSS des éléments de l'interface utilisateur Firefox ou des variables CSS internes de Firefox, utilise la [boite à outils du navigateur](/fr/docs/Outils/Boîte_à_outils_du_navigateur).
 
-> **Note :** Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.
+> [!NOTE]
+> Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.
 
-> **Attention :** Cette fonctionnalité est expérimentale et peut être sujette à modification.
+> [!WARNING]
+> Cette fonctionnalité est expérimentale et peut être sujette à modification.
 
 ## Syntaxe
 

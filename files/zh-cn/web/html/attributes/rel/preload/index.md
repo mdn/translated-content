@@ -71,9 +71,11 @@ slug: Web/HTML/Attributes/rel/preload
 - `worker`：JavaScript web worker 或 shared worker。
 - `video`：视频文件，通常在 {{htmlelement("video")}} 中使用。
 
-> **备注：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_cors_的获取请求)。
+> [!NOTE]
+> 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_cors_的获取请求)。
 
-> **备注：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到——请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束——请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
+> [!NOTE]
+> 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到——请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束——请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
 
 ## 包括 MIME 类型
 
@@ -193,7 +195,8 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 脚本和预加载
 
-> **备注：** 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+> [!NOTE]
+> 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 
 关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
 

@@ -17,9 +17,8 @@ API, которые мы рассмотрели до сих пор, встрое
 
 Давайте снова посмотрим на наш пример карты (см. [исходный код на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.
 
-> **Примечание:** По умолчанию использование сторонних API на вашем сайте позволит им отслеживать файлы cookie своих доменов, устанавливать файлы cookie в исходное состояние, получать заголовки ссылок, определяющие посещаемые страницы, и разрешать им выполнять JavaScript на страницах, на которых они загружаются с теми же разрешениями (например, выполнить запросы AJAX на ваши серверы с теми же кукисами сеанса). Должны быть оценены вопросы регулирования, безопасности и конфиденциальности.
-
-> **Примечание:** Возможно, вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn#Getting_our_code_examples), в этом случае вы можете просто искать репо для файлов примеров, которые вам нужны в каждом разделе.
+> [!NOTE]
+> Возможно вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn#получение_наших_примеров_кода), в этом случае вы можете просто искать репозиторий с файлами примеров, которые вам нужны в каждом разделе.
 
 ### Они находятся на сторонних серверах
 
@@ -58,7 +57,8 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 Это вся информация, которую API Карт Google требует для построения простой карты. Сервер, к которому вы подключаетесь, обрабатывает все сложные вещи, такие как отображение правильных фрагментов карты для отображаемой области и т. д.
 
-> **Примечание:** Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
+> [!NOTE]
+> Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
 
 ### Разрешения обрабатываются по-разному
 
@@ -90,8 +90,6 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
    5. Нажмите кнопку _Enable_.
    6. Нажмите _Create credentials_, затем выберите _API key_.
    7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
-
-   > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
 
 3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
 
@@ -130,9 +128,11 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
    Here we specify the icon property value as the `iconBase` plus the icon filename, to create the complete URL. Now try reloading your example and you'll see a custom marker displayed on your map!
 
-> **Примечание:** See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
+> [!NOTE]
+> See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
 
-> **Примечание:** See [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) to find out what other icons are available, and see what their reference names are. Their file name will be the icon name they display when you click on them, with ".png" added on the end.
+> [!NOTE]
+> See [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) to find out what other icons are available, and see what their reference names are. Their file name will be the icon name they display when you click on them, with ".png" added on the end.
 
 ### Displaying a popup when the marker is clicked
 
@@ -279,9 +279,11 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 &fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **Примечание:** You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
+> [!NOTE]
+> You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
 
-> **Примечание:** The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn/HTML/Forms/Form_validation) for more details on how these work.
+> [!NOTE]
+> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn/HTML/Forms/Form_validation) for more details on how these work.
 
 ### Requesting data from the API
 

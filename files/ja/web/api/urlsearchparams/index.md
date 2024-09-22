@@ -32,6 +32,8 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## インスタンスメソッド
 
+- `URLSearchParams.[@@iterator]()`
+  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター")}}を返します。
 - {{domxref("URLSearchParams.append()")}}
   - : 指定されたキーと値のペアを新しい検索パラメーターとして追加します。
 - {{domxref("URLSearchParams.delete()")}}
@@ -140,7 +142,7 @@ const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' はスペースに�
 console.log(atob(binQuery) === rawData); // false
 ```
 
-You can avoid this by encoding the data with the {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
+データを {{jsxref("encodeURIComponent", "encodeURIComponent()")}} でエンコードすることで、これを回避できます。
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";
@@ -159,9 +161,9 @@ console.log(atob(binQuery) === rawData); // true
 
 ```js
 const emptyVal = new URLSearchParams("foo=&bar=baz");
-console.log(emptyVal.get("foo")); // returns ''
+console.log(emptyVal.get("foo")); // '' を返す
 const noEquals = new URLSearchParams("foo&bar=baz");
-console.log(noEquals.get("foo")); // also returns ''
+console.log(noEquals.get("foo")); // これも '' を返す
 console.log(noEquals.toString()); // 'foo=&bar=baz'
 ```
 

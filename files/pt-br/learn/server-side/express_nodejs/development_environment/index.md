@@ -39,7 +39,8 @@ O _Node_ e o _NPM_ são instalados em conjunto por meio de um pacote binário pr
 
 NPM também pode ser utilizado para instalar (globalmente) o Express Application Generator, uma ferramenta que cria um "esqueleto" de um app Express, seguindo o padrão MVC. O gerador de app é opcional porque você não precisa dessa ferramenta para criar um app ou um construtor Express para ter a mesma arquitetura. Nós vamos usá-lo nesta seção porque nos permite iniciar uma aplicação de uma maneira mais rápida e promover uma estrutura modular.
 
-> **Nota:** Ao contrário de muitos outros framework que não oferecem um servidor web junto ao ambiente de desenvolvimento, o Node/Express cria e roda o seu próprio servidor web.
+> [!NOTE]
+> Ao contrário de muitos outros framework que não oferecem um servidor web junto ao ambiente de desenvolvimento, o Node/Express cria e roda o seu próprio servidor web.
 
 Há outras ferramentas periféricas que integram o ambiente de desenvolvimento, é o caso dos editores de textos (códigos), conhecidos como IDE, e versionadores de códigos, como o Git, que ajudam a gerenciar diferentes versões do código. Estamos partindo da ideia de que você já conhece essas ferramentas e as têm instaladas (em especial o editor de texto).
 
@@ -130,7 +131,8 @@ Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro 
 
    O código importa o módulo "http" e o utiliza para criar um servidor (`createServer()`) que escuta as requisições HTTP na porta 8000. O script, então, imprime a mensagem no console. A função `createServer()` recebe como argumento uma função callback que é chamada quando recebe uma requisição HTTP - isso retorna uma resposta com um status 200 ("OK") do HTTP e o texto "Hello World".
 
-   > **Nota:** Não se preocupe se você não entendeu exatamente o que esse código faz. Nós vamos explicar isso em mais detalhes quando iniciarmos a parte do Express.
+   > [!NOTE]
+   > Não se preocupe se você não entendeu exatamente o que esse código faz. Nós vamos explicar isso em mais detalhes quando iniciarmos a parte do Express.
 
 2. Inicie o servidor e navegue pelo mesmo diretório que o seu arquivo hellonode.js no terminal. Depois chame o Node da seguinte forma:
 
@@ -145,7 +147,8 @@ Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro 
 
 Ao lado do próprio Node, o NPM é a ferramenta de trabalho mais importante nas aplicações Node. O NPM é usado para buscar qualquer pacote (biblioteca JavaScript) que uma aplicação precisa para ser desenvolvida, testada ou produzida, além de ser adotado para rodar testes ao longo de todo o processo de desenvolvimento.
 
-> **Nota:** A partir da perspectiva do Node, Express é um pacote que precisa ser instalado utilizando o NPM e depois importado para o seu código.
+> [!NOTE]
+> A partir da perspectiva do Node, Express é um pacote que precisa ser instalado utilizando o NPM e depois importado para o seu código.
 
 Você pode usar o NPM separadamente para buscar cada pacote desejado. Em geral, nós gerenciamos as dependências com um arquivo chamado [package.json](https://docs.npmjs.com/files/package.json). Esse arquivo lista todas as dependências para um pacote JavaScript específico, incluindo o nome do pacote, a versão, descrição, arquivo de inicialização, produção de dependências, desenvolvimento de dependências, versões do Node que podem ser utilizadas. O **package.json** contém tudo que o NPM precisa para buscar e rodar a sua aplicação (se você está escrevendo uma biblioteca para ser reutilizável, você pode usar essa definição para fazer o upload do pacote para o repositório npm e deixá-lo acessível a qualquer usuário).
 
@@ -153,7 +156,8 @@ Você pode usar o NPM separadamente para buscar cada pacote desejado. Em geral, 
 
 Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependências do projeto e importá-los/chamá-los para dentro da aplicação Node.
 
-> **Nota:** Nesta seção mostraremos como buscar e instalar o pacote do Express. Depois, explicaremos como esse e outros pacotes já estão especificados para nós graças ao _Express Application Generator_. É muito importante entendermos como o NPM funciona e o que é criado com o generator.
+> [!NOTE]
+> Nesta seção mostraremos como buscar e instalar o pacote do Express. Depois, explicaremos como esse e outros pacotes já estão especificados para nós graças ao _Express Application Generator_. É muito importante entendermos como o NPM funciona e o que é criado com o generator.
 
 1. Primeiro passo é criar um diretório para sua aplicação. No prompt, insira os comandos a seguir.
 
@@ -237,13 +241,13 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
 
 ### Desenvolvendo dependências
 
-Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [esling](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
+Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [eslint](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
 
 ```bash
 npm install eslint --save-dev
 ```
 
-Assim, a esling vai aparecer da seguinte forma na lista de dependências do **package.json**.
+Assim, a eslint vai aparecer da seguinte forma na lista de dependências do **package.json**.
 
 ```json
   "devDependencies": {
@@ -251,15 +255,17 @@ Assim, a esling vai aparecer da seguinte forma na lista de dependências do **pa
   }
 ```
 
-> **Nota:** "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" são ferramentas que nos ajudam a identificar e reportar que o código está sendo escrito dentro das melhores práticas.
+> [!NOTE]
+> "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" são ferramentas que nos ajudam a identificar e reportar que o código está sendo escrito dentro das melhores práticas.
 
 ### Rodando tarefas
 
 Além de definir e buscar dependências, você também pode nomear scripts dentro do seu arquivo **package.json** e chamar o NPM para executá-lo a partir de um [run-script](https://docs.npmjs.com/cli/run-script) command. Essa abordagem é comum para automatizar testes e tarefas ao longo do desenvolvimento (por exemplo: minificar o JavaScript, reduzir imagens, LINT/análise de códigos, etc).
 
-> **Nota:** Ferramentas de automação de tarefas como o [Gulp](http://gulpjs.com/) e o [Grunt](http://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
+> [!NOTE]
+> Ferramentas de automação de tarefas como o [Gulp](http://gulpjs.com/) e o [Grunt](http://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
 
-Para definir o script que roda o _esling_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
+Para definir o script que roda o _eslint_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
 
 ```json
 "scripts": {
@@ -293,7 +299,8 @@ Para criar um aplicativo Express chamado "helloworld" com as configurações pad
 express helloworld
 ```
 
-> **Nota:** Nota: Você também pode definir a biblioteca de template que pretende usar e muitas outras configurações. Use o comando `help` para ver todas as opções.
+> [!NOTE]
+> Nota: Você também pode definir a biblioteca de template que pretende usar e muitas outras configurações. Use o comando `help` para ver todas as opções.
 >
 > ```bash
 > express --help
@@ -301,7 +308,8 @@ express helloworld
 
 O NPM vai criar um novo aplicativo Express em uma subpasta na localização em que você está. O progresso será apresentado no console. Para finalizar, o processo, a ferramenta mostrará os comandos que você precisa seguir para instalar a dependência Node e iniciar o seu app.
 
-> **Nota:** O novo app terá um arquivo package.json no diretório raiz. Você pode abrir esse arquivo para checar o que foi instalado, incluindo o Express e Jade (template library) .
+> [!NOTE]
+> O novo app terá um arquivo package.json no diretório raiz. Você pode abrir esse arquivo para checar o que foi instalado, incluindo o Express e Jade (template library) .
 >
 > ```js
 > {

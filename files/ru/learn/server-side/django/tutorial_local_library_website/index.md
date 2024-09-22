@@ -3,7 +3,7 @@ title: "Руководство по Django: сайт местной библио
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 Первая статья в нашем цикле объясняет, что вы узнаете, и разбирает пример сайта "местная библиотека", который мы будем разрабатывать и улучшать в последующих статьях.
 

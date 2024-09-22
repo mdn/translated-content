@@ -1,6 +1,9 @@
 ---
-title: DelayNode.delayTime
+title: "DelayNode: delayTime プロパティ"
+short-title: delayTime
 slug: Web/API/DelayNode/delayTime
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -9,7 +12,8 @@ slug: Web/API/DelayNode/delayTime
 
 `delayTime` は秒単位で表し、その最小値は `0` です。最大値は作成時に、 {{domxref("BaseAudioContext.createDelay")}} メソッドの `maxDelayTime` 引数で定義されます。
 
-> **メモ:** 返される {{domxref("AudioParam")}} は読み取り専用ですが、表している値はそうではありません。
+> [!NOTE]
+> 返される {{domxref("AudioParam")}} は読み取り専用ですが、表している値はそうではありません。
 
 ## 値
 

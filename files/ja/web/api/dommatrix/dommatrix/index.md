@@ -3,7 +3,7 @@ title: "DOMMatrix: DOMMatrix() コンストラクター"
 short-title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 l10n:
-  sourceCommit: 6441e1a4ab820e07b4a8b42a63329ae335f7f142
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("Geometry Interfaces")}}

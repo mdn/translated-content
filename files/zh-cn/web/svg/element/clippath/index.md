@@ -70,7 +70,7 @@ svg {
   - : 为 `<clipPath>` 元素的内容定义坐标系。
     _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

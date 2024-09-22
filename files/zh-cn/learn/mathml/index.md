@@ -1,13 +1,16 @@
 ---
 title: 使用 MathML 编写数学公式
 slug: Learn/MathML
+l10n:
+  sourceCommit: 865acb22b74a49927b98267566369d4677414f53
 ---
 
 {{LearnSidebar}}
 
 数学标记语言（Mathematical Markup Language）或 {{glossary("MathML")}} 是用于在网页中编写数学公式的标记语言，其支持分数、上下标、根号、矩阵、积分、级数等。尽管它最初被设计为独立的 XML 语言，但 MathML 通常嵌入在 {{Glossary('HTML')}} 文档中，并可视为 HTML 的扩展。
 
-> **警告：** 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
+> [!WARNING]
+> 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
 
 ## 前提
 
@@ -15,13 +18,13 @@ slug: Learn/MathML
 
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)
+- [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
 
 尽管所需的概念将根据需要进行解释，但对数学符号和 [TeX](https://zh.wikipedia.org/wiki/TeX) 渲染规则有一定的了解可能会对你有帮助。
 
 ## 模块
 
-- [MathML 入门](/zh-CN/docs/Learn/MathML/First_steps)
+- [MathML 第一步](/zh-CN/docs/Learn/MathML/First_steps)
   - : MathML 是用于在网页中编写数学公式的标记语言。该模块将以比较轻松的方式开始你的 MathML 掌握之旅，介绍其工作原理、语法以及如何在 HTML 中开始使用它。
 
 ## 参见

@@ -101,8 +101,8 @@ l10n:
 
 ```css
 @import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports(not (display: grid) and (display: flex)) screen
-  and (max-width: 400px);
+@import url("flexy.css") supports(not (display: grid) and (display: flex))
+  screen and (max-width: 400px);
 ```
 
 上記の `@import` ルールは、`display: grid` が対応している場合はグリッドを使用するレイアウトをインポートし、そうでない場合は `display: flex` を使用する CSS をインポートする方法を示しています。
@@ -115,8 +115,8 @@ l10n:
 例えば、下記のコードでは、[子結合子](/ja/docs/Web/CSS/Child_combinator) (`selector()`) と `font-tech()` 関数の両方を条件とする `@import` を表示しています。
 
 ```css
-@import url("whatever.css") supports((selector(h2 > p)) and
-    (font-tech(color-COLRv1)));
+@import url("whatever.css")
+supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
 ```
 
 ### カスケードレイヤーへのCSSルールのインポート

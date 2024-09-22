@@ -3,6 +3,8 @@ title: WebVTT
 slug: Web/API/WebVTT_API
 ---
 
+{{DefaultAPISidebar("WebVTT")}}
+
 WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。
 
 WebVTT 當中可以採用空白或分隔字元（tab）。
@@ -542,7 +544,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby tag** (`<ruby></ruby>`)
-  - : Used with ruby text tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 18 - Ruby tag
 
@@ -551,7 +553,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby text tag** (`<rt></rt>`)
-  - : Used with ruby tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 19 - Ruby text tag
 

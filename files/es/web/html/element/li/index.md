@@ -3,6 +3,8 @@ title: li
 slug: Web/HTML/Element/li
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento `li` del ingles _item list_ o _elemento de lista_ declara cada uno de los elementos de una lista.

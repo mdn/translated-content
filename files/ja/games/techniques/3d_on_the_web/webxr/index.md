@@ -1,14 +1,14 @@
 ---
 title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebXR
-original_slug: Games/Techniques/3D_on_the_web/WebVR
 ---
 
 {{GamesSidebar}}
 
 仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。
 
-> **メモ:** WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
+> [!NOTE]
+> WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
 
 ## VR 機器
 
@@ -16,13 +16,15 @@ Oculus Rift の人気とその他の多くの機器が間もなく市場に登�
 
 ![](hmds.jpg)
 
-> **メモ:** 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
+> [!NOTE]
+> 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
 
 ## WebVR API
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) は、コンピューターに接続された VR 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。
 
-> **メモ:** もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
+> [!NOTE]
+> もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
 
 ### ブラウザーの対応と仕様書の状態
 
@@ -105,7 +107,7 @@ function setView() {
 
 ![](sechelt.jpg)
 
-Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、Web ベースの VR 体験の出発点です。
+Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、ウェブベースの VR 体験の出発点です。
 
 WebVR のシンプルなビルディングブロックを提供する [A-Frame](https://aframe.io/) と呼ばれるマークアップフレームワークもあるため、VRウェブサイトやゲームをすばやく構築して実験できます。 詳細については、[A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)というチュートリアルを参照してください。
 
@@ -113,7 +115,7 @@ WebVR のシンプルなビルディングブロックを提供する [A-Frame](
 
 ## WebVR の未来
 
-それは起こっています — 消費者向けデバイスは現在市場に出回っており、Web 上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
+それは起こっています — 消費者向けデバイスは現在市場に出回っており、ウェブ上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
 
 ## 関連項目
 

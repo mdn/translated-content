@@ -1,6 +1,8 @@
 ---
 title: 源（Origin）
 slug: Glossary/Origin
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +13,7 @@ Web 内容的**源**由用于访问它的 {{Glossary("URL")}} 的*方案*（协�
 
 ## 示例
 
-由于它们具有相同的协议（`http`）和主机名（`example.com`），以下两个地址是同源的。注意不同文件路径与是否同源无关：
+由于它们具有相同的协议（`http`）和主机名（`example.com`），以下两个地址是同源的。注意不同的文件路径与是否同源无关：
 
 - `http://example.com/app1/index.html`
 - `http://example.com/app2/index.html`
@@ -40,5 +42,5 @@ Web 内容的**源**由用于访问它的 {{Glossary("URL")}} 的*方案*（协�
 ## 参见
 
 - [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
-- {{Glossary("Site")}}
+- {{Glossary("Site", "站点")}}
 - [HTML 规范：源](https://html.spec.whatwg.org/multipage/origin.html#origin)

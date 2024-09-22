@@ -46,7 +46,7 @@ When using the `Vary: User-Agent` header, caching servers should consider the us
 Vary: User-Agent
 ```
 
-## Specifications
+## Спецификации
 
 | Specification                    | Title                                                         |
 | -------------------------------- | ------------------------------------------------------------- |
@@ -60,7 +60,7 @@ Vary: User-Agent
 
 - [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
-## See also
+## Смотрите также
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)

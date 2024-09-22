@@ -15,9 +15,9 @@ slug: Web/HTML/Element/dl
 
 1. *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。
 
-- _标签省略_ {{no_tag_omission}}
-- *允许的父元素*符合流内容的任何元素
-- _DOM 接口_ {{domxref("HTMLDListElement")}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
+- _允许的父元素_：符合流内容的任何元素
+- _DOM 接口_：{{domxref("HTMLDListElement")}}
 
 ## 属性
 

@@ -45,11 +45,12 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 それと同じことで、そうですね、例えば 3 次元グラフィックのプログラムを JavaScript や Python のような高水準言語で書かれた API を使ってやる方が、C や C++ のような低レベル言語から直接コンピューターの GPU やグラフィック機能を叩いてやるよりも、ずっと簡単です。
 
-> **メモ:** API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
+> [!NOTE]
+> API という語についてもっと詳しいことは [API の用語解説](/ja/docs/Glossary/API) を参照して下さい。
 
 ### クライアントサイド JavaScript での API
 
-クライアントサイド API では、実際とてもたくさんの API が使えます、それらは JavaScript 言語本体の一部ではなく、あなたにスーパーパワーを与えるべく JavaScript 言語のコアの上に築かれた代物です。それらはおおよそ二つのカテゴリに分けられます。
+クライアントサイド API では、実際とてもたくさんの API が使えます、それらは JavaScript 言語本体の一部ではなく、あなたにスーパーパワーを与えるべく JavaScript 言語のコアの上に築かれた代物です。それらはおおよそ二つのカテゴリーに分けられます。
 
 - **ブラウザー API** はウェブブラウザーに組み込まれていて、ブラウザーやコンピューターの環境の情報を取得し、これを使って役に立つ複雑なことを行えるようにするものです。 例えば [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) は、ブラウザー内での音声を操作、たとえば音声トラックの取得、音量の変更、エフェクトの適用などを行うための JavaScript の仕組みを提供します。実際には、裏でブラウザーは低レベル（例えば C++ や Rust）の複雑なコードを使って実際の音声処理を行います。しかし、この複雑さを API が抽象化して隠蔽します。
 - **サードパーティ API** は既定ではブラウザーに組み込まれておらず、一般的にウェブのどこかから、コードと情報を取得する必要があります。例えば [Twitter API](https://developer.twitter.com/ja/docs) を使うと、自分のウェブサイトに自分の最新のツイートを表示したりすることができます。これは、 Twitter サービスに問い合わせを行い、特定の情報を返すために使用することができる特別な一連の仕組みを提供します。
@@ -63,7 +64,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - JavaScript — ブラウザーに組込まれた高水準スクリプト言語で、ウェブページやアプリに機能を実装するのに使うことができます。 [Node](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction) のようなブラウザー以外の他のプログラミング環境でも使えます。
 - ブラウザー API — JavaScript 言語の上に乗って、より簡単に機能を実装するためにブラウザーに組み込まれた仕組みです。
 - サードパーティ API — サードパーティのプラットフォーム（Twitter や Facebook など）上に作られた構造で、それらのプラットフォームの機能をウェブページで利用できるようにします（例えば自分の最新のツイートを自分のウェブページに表示するなど）。
-- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React がなどがあります。
+- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React がなどがあります。
 - JavaScript フレームワーク — ライブラリーの一階層上にあたる JavaScript フレームワーク（Angular や Ember など）は、HTML、CSS、JavaScript などの技術をパッケージ化してインストールする傾向があり、これを使用してウェブアプリケーション全体をゼロから書きます。ライブラリーとフレームワークの大きな違いは、「制御の逆転 (Inversion of Control)」です。ライブラリーからメソッドを呼び出す場合、制御するのは開発者です。フレームワークでは、制御が逆転しています。フレームワークが開発者のコードを呼び出すのです。
 
 ## API で何ができる?
@@ -94,7 +95,8 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - [Twilio API](https://www.twilio.com/) は、自分のアプリに音声や動画の通話機能を作成したり、SMS/MMS を送信したりなどするためのフレームワークを提供します。
 - [Mastodon API](https://docs.joinmastodon.org/api/) を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。
 
-> **メモ:** サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
+> [!NOTE]
+> サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
 
 ## API はどのように動作するのか
 
@@ -104,7 +106,8 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 コードは 1 つ以上の [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を使用して API と対話します。オブジェクトは API が使用するデータ（オブジェクトプロパティに含まれる）、および API が利用可能にする機能（オブジェクトメソッドに含まれる）のコンテナーとして機能します。
 
-> **メモ:** もし、まだオブジェクトがどのように動作するのかよくわからない場合は、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)モジュールに戻って練習をしてください。
+> [!NOTE]
+> もし、まだオブジェクトがどのように動作するのかよくわからない場合は、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)モジュールに戻って練習をしてください。
 
 ウェブオーディオ API の例に戻ってみましょう。ウェブオーディオ API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます。
 
@@ -173,7 +176,8 @@ audioElement.addEventListener("ended", () => {
 });
 ```
 
-> **メモ:** 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは ウェブオーディオ API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが、密接に関連しています。
+> [!NOTE]
+> 気づいた方もいるかも知れませんが、音声を再生・停止する `play()` と `pause()` メソッドは ウェブオーディオ API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが、密接に関連しています。
 
 次に {{domxref("GainNode")}} を、 {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} を使用して作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。
 
@@ -225,7 +229,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **メモ:** この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) で見られます（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てください）。
+> [!NOTE]
+> この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) で見られます（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てください）。
 
 ### 状態の変化を捉えるのにイベントを使う
 
@@ -273,7 +278,8 @@ WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オ�
 
 ウェブオーディオ API や {{domxref("HTMLMediaElement")}} API には、[自動再生ポリシー](/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy)と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。
 
-> **メモ:** ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルでは動作しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、ウェブオーディオ API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
+> [!NOTE]
+> ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルでは動作しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、ウェブオーディオ API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
 
 ## まとめ
 

@@ -12,14 +12,15 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 - 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用[CSS](/zh-CN/docs/Web/CSS) 装饰样式。
 - 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
 
-```
+```html
 <link rel="stylesheet" src="styles.css" media="screen" />
 <link rel="stylesheet" src="styles.css" media="print" />
 ```
 
 - 使用{{domxref("Window.matchMedia()")}} 和{{domxref("MediaQueryList.addListener()")}} 方法来[测试和监控媒体状态](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)。
 
-> **备注：** 本页的例子使用 CSS `@media` 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。
+> [!NOTE]
+> 本页的例子使用 CSS `@media` 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。
 
 ## 语法
 
@@ -27,7 +28,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 当媒体类型（如果指定）与在其上显示文档的设备匹配并且所有媒体功能表达式都计算为 true 时，媒体查询将计算为 true。涉及未知媒体类型的查询始终为 false。
 
-> **备注：** 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表[仍将下载](http://scottjehl.github.com/CSS-Download-Tests/)。但是，除非查询结果变为 true，否则其内容将不适用。
+> [!NOTE]
+> 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表[仍将下载](http://scottjehl.github.com/CSS-Download-Tests/)。但是，除非查询结果变为 true，否则其内容将不适用。
 
 ## 定位媒体类型
 
@@ -79,7 +81,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 在前面的示例中，我们已经看到 `and` 运算符用于将媒体类型与媒体功能分组。`and` 运算符还可以将多个媒体功能组合到单个媒体查询中。同时，`not` 运算符会否定媒体查询，从而基本上颠倒了它的正常含义。`only` 运算符可防止较早的浏览器应用样式。
 
-> **备注：** 在大多数情况下，默认情况下，如果未指定其他类型，则使用`all`媒体类型。但是，如果使用`not`或`only`运算符，则必须显式指定媒体类型。
+> [!NOTE]
+> 在大多数情况下，默认情况下，如果未指定其他类型，则使用`all`媒体类型。但是，如果使用`not`或`only`运算符，则必须显式指定媒体类型。
 
 ### 结合多种类型和特性
 
@@ -149,7 +152,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 媒体查询 4 级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。级别 4 添加了用于编写此类的查询范围上下文。例如，使用最大宽度`max-` 功能，我们可以编写以下代码：
 
-> **备注：** 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/@media#Browser_compatibility)。
+> [!NOTE]
+> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/@media#Browser_compatibility)。
 
 ```css
 @media (max-width: 30em) { ... }

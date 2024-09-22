@@ -19,7 +19,8 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* 多个属性值 */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image: image(url(mask.png), skyblue),
+  linear-gradient(rgba(0, 0, 0, 1), transparent);
 
 /* 全局属性值 */
 mask-image: inherit;
@@ -36,7 +37,7 @@ mask-image: unset;
 - `none`
   - : 默认值，透明的黑色图像层，也就是没有遮罩层。
 - `<mask-source>`
-  - : 对 {{SVGElement("mask")}} 或 CSS 图像的 {{cssxref("url","url()")}} 引用
+  - : 一个引用了 {{SVGElement("mask")}} 或 CSS 图像的 {{cssxref("url_value", "&lt;url&gt;")}}。
 - {{cssxref("&lt;image&gt;")}}
   - : 用作蒙版图像层的图像值。
 

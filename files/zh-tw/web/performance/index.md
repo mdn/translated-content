@@ -170,7 +170,7 @@ JavaScript
 
 - [DOMContentLoaded](/zh-TW/docs/Web/Events/DOMContentLoaded)
 - [Garbage collection](/zh-TW/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/zh-TW/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/zh-TW/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 

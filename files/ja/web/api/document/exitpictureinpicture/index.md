@@ -3,12 +3,12 @@ title: "Document: exitPictureInPicture() メソッド"
 short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 l10n:
-  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
+  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
 ---
 
-{{ApiRef("Picture-in-Picture API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-{{domxref("Document")}} の **`exitPictureInPicture()`** メソッドは、この文書に含まれ、現在浮動している動画をピクチャインピクチャモードから外し、画面の前回状態に戻すようリクエストします。これは通常、 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} を前回呼び出したときの効果を逆転させます。
+**`exitPictureInPicture()`** は {{domxref("Document")}} インターフェイスのメソッドで、この文書に含まれ、現在浮動している動画をピクチャインピクチャモードから外し、画面の前回状態に戻すようリクエストします。これは通常、 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} を前回呼び出したときの効果を逆転させます。
 
 ## 構文
 
@@ -23,6 +23,11 @@ exitPictureInPicture()
 ### 返値
 
 プロミス ({{jsxref("Promise")}}) で、{{Glossary("user agent", "ユーザーエージェント")}}がピクチャインピクチャモードを終了した時点で解決されます。全画面モードを終了しようとしてエラーが発生した場合、プロミスの `catch()` ハンドラーが呼び出されます。
+
+### 例外
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : `document.pictureInPictureElement` が `null` の場合に発生します。
 
 ## 例
 

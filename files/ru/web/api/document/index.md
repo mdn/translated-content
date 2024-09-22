@@ -3,7 +3,7 @@ title: Document
 slug: Web/API/Document
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
@@ -24,7 +24,8 @@ slug: Web/API/Document
 
 ## Свойства
 
-> **Примечание:** Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
+> [!NOTE]
+> Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
@@ -151,7 +152,8 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 ## Methods
 
-> **Примечание:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.

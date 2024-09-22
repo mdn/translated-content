@@ -3,7 +3,7 @@ title: Element.tagName
 slug: Web/API/Element/tagName
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 ## Описание
 
@@ -17,9 +17,11 @@ var elementName = element.tagName;
 
 - **`elementName`** это строка, содержащая название HTML-тега элемента **`element`**.
 
-> **Предупреждение:** В XML (и XML-подобных языках) возвращаемое значение будет в нижнем регистре, а в HTML - в верхнем.
+> [!WARNING]
+> В XML (и XML-подобных языках) возвращаемое значение будет в нижнем регистре, а в HTML - в верхнем.
 
-> **Примечание:** Существует более древнее и обыденное свойство [nodeName](/en/DOM/Node.nodeName)!
+> [!NOTE]
+> Существует более древнее и обыденное свойство [nodeName](/en/DOM/Node.nodeName)!
 
 ## Пример
 

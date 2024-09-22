@@ -61,7 +61,8 @@ async (param1, param2, ...paramN) => {
 
 기존의 익명 함수를 가장 간단한 화살표 함수로 단계별로 분해해 보겠습니다. 이 과정에서 각 단계는 유효한 화살표 함수입니다.
 
-> **참고:** 기존 함수 표현식과 화살표 함수는 구문 외에도 더 많은 차이점이 있습니다. 다음 몇 개의 하위 섹션에서 두 함수의 동작 차이에 대해 자세히 소개하겠습니다.
+> [!NOTE]
+> 기존 함수 표현식과 화살표 함수는 구문 외에도 더 많은 차이점이 있습니다. 다음 몇 개의 하위 섹션에서 두 함수의 동작 차이에 대해 자세히 소개하겠습니다.
 
 ```js-nolint
 // 기존의 익명 함수
@@ -238,7 +239,8 @@ class C {
 }
 ```
 
-> **참고:** 클래스 필드는 프로토타입이 아닌 인스턴스에 정의되므로 인스턴스를 생성할 때마다 새 함수 참조가 생성되고 새 클로저가 할당되어 일반적인 언바운드 메서드보다 메모리 사용량이 늘어날 수 있습니다.
+> [!NOTE]
+> 클래스 필드는 프로토타입이 아닌 인스턴스에 정의되므로 인스턴스를 생성할 때마다 새 함수 참조가 생성되고 새 클로저가 할당되어 일반적인 언바운드 메서드보다 메모리 사용량이 늘어날 수 있습니다.
 
 비슷한 이유로 [`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 화살표 함수에서 호출할 때 유용하지 않습니다. 화살표 함수는 화살표 함수가 정의된 범위를 기반으로 `this`을 설정하고 함수가 호출되는 방식에 따라 `this` 값이 변하지 않기 때문입니다.
 
@@ -382,7 +384,7 @@ setTimeout(() => {
 
 ### call, bind, apply 메서드 사용하기
 
-[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다:
+[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다.
 
 ```js
 const obj = {

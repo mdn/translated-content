@@ -65,7 +65,7 @@ elem.dispatchEvent(event);
 
 ## 觸發自定義事件
 
-下面的例子演示了一個複選框藉由 DOM 的 methods 模擬一次點擊（換言之，讓程式執行一次「點擊事件」。）。 [觀看實例](http://developer.mozilla.org/samples/domref/dispatchEvent.html)。
+下面的例子演示了一個複選框藉由 DOM 的 methods 模擬一次點擊（換言之，讓程式執行一次「點擊事件」。）。 [觀看實例](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
 
 ```js
 function simulateClick() {

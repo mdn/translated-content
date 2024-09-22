@@ -43,7 +43,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_dra
 </html>
 ```
 
-`charset` を定義し、 {{htmlelement("title")}} と簡単なな CSS をヘッダーに記述しました。本体には {{htmlelement("canvas")}} と {{htmlelement("script")}} 要素があり、前者にはゲームを描画し、後者にはそれを制御する JavaScript のコードを記述します。 {{htmlelement("canvas")}} 要素は簡単に参照を取得できるように `id` を `myCanvas` とし、幅は 480 ピクセル、高さは 320 ピクセルとしています。このチュートリアルで書くすべての JavaScript のコードは開始の `<script>` と終了の `</script>` タグの間に配置されます。
+`charset` を定義し、 {{htmlelement("title")}} と簡単な CSS をヘッダーに記述しました。本体には {{htmlelement("canvas")}} と {{htmlelement("script")}} 要素があり、前者にはゲームを描画し、後者にはそれを制御する JavaScript のコードを記述します。 {{htmlelement("canvas")}} 要素は簡単に参照を取得できるように `id` を `myCanvas` とし、幅は 480 ピクセル、高さは 320 ピクセルとしています。このチュートリアルで書くすべての JavaScript のコードは開始の `<script>` と終了の `</script>` タグの間に配置されます。
 
 ## キャンバスの基本
 
@@ -56,7 +56,7 @@ const ctx = canvas.getContext("2d");
 
 ここでは {{htmlelement("canvas")}} 要素への参照を `canvas` に保存しています。それから 2D 描画コンテキストを保存するために `ctx` 変数を作成しています。 2D 描画コンテキストは実際にキャンバスに描画するために使うツールとなります。
 
-赤い四角形をキャンバスの上に表示するコード例を見てみましょう。下記のコードを先程記述した JavaScript のあとに追記して、 `index.html` をブラウザーで読み込んでみてください。
+赤い四角形をキャンバスの上に表示するサンプルコードを見てみましょう。下記のコードを先程記述した JavaScript のあとに追記して、 `index.html` をブラウザーで読み込んでみてください。
 
 ```js
 ctx.beginPath();
@@ -105,7 +105,8 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-> **メモ:** 与えられた図形の大きさや色を変えてみましょう。
+> [!NOTE]
+> 与えられた図形の大きさや色を変えてみましょう。
 
 ## 次のステップ
 

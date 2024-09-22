@@ -3,6 +3,8 @@ title: Ejemplo 2 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
 ---
 
+{{CSSRef}}
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 Este es un ejemplo muy simple, pero es la clave para entender el concepto de _contexto de apilamiento._ Tenemos los mismos 4 DIVs del ejemplo previo, pero ahora las propiedades z-index son asignadas en ambos niveles de la jerarquía.
@@ -20,7 +22,8 @@ Para entender mejor esta situación, esta es la jerarquía del contexto de apila
 
     - DIV #4 (z-index 10)
 
-> **Nota:** Vale la pena recordar que en general la jerarquía HTML es diferente de la jerarquía del contexto de apilamiento. En la jerarquía del contexto de apilamiento, los elementos que no crean un contexto de apilamiento son colapsados en sus padres.
+> [!NOTE]
+> Vale la pena recordar que en general la jerarquía HTML es diferente de la jerarquía del contexto de apilamiento. En la jerarquía del contexto de apilamiento, los elementos que no crean un contexto de apilamiento son colapsados en sus padres.
 
 ### Código fuente de ejemplo
 

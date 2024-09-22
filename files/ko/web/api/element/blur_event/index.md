@@ -3,6 +3,8 @@ title: blur
 slug: Web/API/Element/blur_event
 ---
 
+{{APIRef}}
+
 `blur` 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 [`focusout`](/ko/docs/Mozilla_event_reference/focusout) 이벤트의 가장 다른점은 [`focusout`](/ko/docs/Mozilla_event_reference/focusout) 은 이벤트 버블링이 발생합니다.
 
 ## General info
@@ -20,7 +22,8 @@ slug: Web/API/Element/blur_event
 - Default Action
   - : None.
 
-> **Note:** 이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ([Firefox bug 452307](https://bugzil.la/452307)): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, Firefox와 크롬은 도큐먼트의 `body` 에 추가합니다.
+> [!NOTE]
+> 이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ([Firefox bug 452307](https://bugzil.la/452307)): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, Firefox와 크롬은 도큐먼트의 `body` 에 추가합니다.
 
 ## Properties
 

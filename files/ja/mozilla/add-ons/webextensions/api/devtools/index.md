@@ -18,13 +18,14 @@ l10n:
 - {{WebExtAPIRef("devtools.network")}}
   - : 開発者ツールが接続されているウィンドウ（インスペクトウィンドウ）に関連するネットワークリクエストの情報を取得します。
 - {{WebExtAPIRef("devtools.panels")}}
-  - : ユーザーエージェント開発者ツール内に表示されるユーザーインターフェースパネルを作成します。
+  - : ユーザーエージェント開発者ツール内に表示されるユーザーインターフェイスパネルを作成します。
 
 ## ブラウザーの互換性
 
 {{Compat}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
 >
 > Microsoft Edge の互換性データは、 Microsoft Corporation によって提供され、 Creative Commons Attribution 3.0 United States License の下でここに記載されています。
 

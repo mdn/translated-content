@@ -23,14 +23,14 @@ GET /example.html HTTP/1.1
 Host: example.com
 ```
 
-리다이렉트는 필수 헤더를 갖습니다({{HTTPHeader("Location")}}):
+리다이렉트는 필수 헤더를 갖습니다({{HTTPHeader("Location")}}).
 
 ```http
 302 Found
 Location: /NewPage.html
 ```
 
-대표적인 헤더의 집합:
+대표적인 헤더의 집합은 아래와 같습니다.
 
 ```http
 304 Not Modified
@@ -48,7 +48,8 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **참고:** 이전 버전의 명세는 다음을 참조합니다.
+> [!NOTE]
+> 이전 버전의 명세는 다음을 참조합니다.
 >
 > - {{Glossary("General header")}}: 요청과 응답 모두에 적용되지만 결국 본문에서 전송되는 데이터와 관련이 없는 헤더입니다.
 > - {{Glossary("Entity header")}}: 콘텐츠 길이 또는 MIME 유형과 같은 엔터티 본문에 대한 추가 정보를 포함하는 헤더(이것은 현재 Representation metadata 헤더라고 하는 것의 상위 집합)입니다.

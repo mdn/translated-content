@@ -115,7 +115,8 @@ Vous pouvez aussi passer un objet {{domxref("Request")}} au constructeur `Reques
 var copie = new Request(maRequete);
 ```
 
-> **Note :** Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/fr/docs/Web/API/ServiceWorker_API).
+> [!NOTE]
+> Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/fr/docs/Web/API/ServiceWorker_API).
 
 ## Spécifications
 

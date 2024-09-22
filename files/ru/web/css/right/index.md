@@ -95,6 +95,6 @@ right: unset;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("position")}}, {{cssxref("left")}}, {{cssxref("top")}}, {{cssxref("bottom")}}

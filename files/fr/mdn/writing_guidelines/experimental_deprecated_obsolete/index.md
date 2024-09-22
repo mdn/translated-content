@@ -91,7 +91,8 @@ Une nouvelle technologie ne doit pas être documentée si&nbsp;:
 
 Il arrive parfois, pendant le développement d'une spécification et au fur à et mesure de l'évolution de standards évolutifs que de nouveaux éléments, de nouvelles méthodes ou propriétés ou autres soient ajoutés à la spécification, y restent pendant quelque temps avant d'être retirés. Cela arrive parfois rapidement et peut aussi prendre plusieurs mois ou années avant que la suppression soit effectuée. Gérer cette suppression dans la documentation peut alors s'avérer délicat. Voici quelques lignes directrices pour vous aider à décider de ce qu'il faut faire.
 
-> **Note :** Pour la suite de cette discussion, le terme «&nbsp;élément&nbsp;» sera utilisé de façon générique pour indique n'importe quel objet qui peut faire partie d'une spécification&nbsp;: un élément, un attribut d'un élément, une interface, une méthode spécifique, une propriété, un membre d'une interface, etc.
+> [!NOTE]
+> Pour la suite de cette discussion, le terme «&nbsp;élément&nbsp;» sera utilisé de façon générique pour indique n'importe quel objet qui peut faire partie d'une spécification&nbsp;: un élément, un attribut d'un élément, une interface, une méthode spécifique, une propriété, un membre d'une interface, etc.
 
 - Si l'élément n'a _jamais_ été implémenté dans une version release d'_aucun_ navigateur (y compris derrière une préférence ou un marqueur/flag), on supprimera toute référence à cet élément de la documentation.
 
@@ -139,4 +140,5 @@ Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit 
 
 Il arrive (rarement) qu'il y ait un conflit entre les différentes versions d'une spécification (généralement pour celles du W3C et du WHATWG). Par exemple, une des spécifications peut indiquer une fonctionnalité comme dépréciée tandis que l'autre n'indique pas cet état. Dans ces cas, on étudiera le comportement réel des navigateurs et on écrira une note afin d'indiquer cet état. Ainsi, en janvier 2019, l'attribut global [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode) était touché par un conflit de spécification qui était indiqué ainsi sur la page&nbsp;:
 
-> **Attention :** Conflit de spécification&nbsp;: la [spécification WHATWG liste l'attribut `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) et les navigateurs travaillent à son implémentation. La [spécification W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ne le mentionne plus en revanche (ce qui indique qu'il est considéré comme obsolète). Jusqu'à ce qu'un consensus soit atteint, on pourra considérer que c'est la définition du WHATWG qui est correcte.
+> [!WARNING]
+> Conflit de spécification&nbsp;: la [spécification WHATWG liste l'attribut `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) et les navigateurs travaillent à son implémentation. La [spécification W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ne le mentionne plus en revanche (ce qui indique qu'il est considéré comme obsolète). Jusqu'à ce qu'un consensus soit atteint, on pourra considérer que c'est la définition du WHATWG qui est correcte.

@@ -3,7 +3,7 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Pointer Lock API")}}{{ SeeCompatTable() }}
 
 **指针锁定**(以前叫做鼠标锁定) 提供了一种输入方法，这种方法是基于鼠标随着时间推移的运动的（也就是，deltas），而不仅是鼠标光标的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。
 
@@ -168,13 +168,15 @@ document.exitPointerLock();
 
 当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。这是一个简单事件所以不包含任何的额外数据。
 
-> **备注：** 该事件目前在 Firefox 中使用前缀的格式是 `mozpointerlockchange` ，在 Chrome 中是 `webkitpointerlockchange`。
+> [!NOTE]
+> 该事件目前在 Firefox 中使用前缀的格式是 `mozpointerlockchange` ，在 Chrome 中是 `webkitpointerlockchange`。
 
 ## pointerlockerror 事件
 
 当调用 `requestPointerLock` 或 `exitPointerLock`而引发错误时， `pointerlockerror` 事件被分发到 `document`。这是一个简单事件所以不包含任何的额外数据。
 
-> **备注：** 该事件目前在 Firefox 中被加上前缀为 `mozpointerlockerror` ，在 Chrome 中为 `webkitpointerlockerror`。
+> [!NOTE]
+> 该事件目前在 Firefox 中被加上前缀为 `mozpointerlockerror` ，在 Chrome 中为 `webkitpointerlockerror`。
 
 ## 鼠标事件扩展
 
@@ -187,7 +189,8 @@ partial interface MouseEvent {
 };
 ```
 
-> **备注：** movement 属性目前在 Firefox 中被加上前缀为 `.mozMovementX` 和 `.mozMovementY` , 在 Chrome 中为`.webkitMovementX` 和 `.webkitMovementY`。
+> [!NOTE]
+> movement 属性目前在 Firefox 中被加上前缀为 `.mozMovementX` 和 `.mozMovementY` , 在 Chrome 中为`.webkitMovementX` 和 `.webkitMovementY`。
 
 鼠标事件的两个新参数—`movementX` 和 `movementY`—提供了鼠标位置的变化情况。这两个参数的值，等于两个[`MouseEvent`](/zh-CN/DOM/MouseEvent) 属性（ `screenX` 和 `screenY）`之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ `eNow` 和 `ePrevious`）中。换言之，指针锁定参数 `movementX = eNow.screenX - ePrevious.screenX`。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）
 

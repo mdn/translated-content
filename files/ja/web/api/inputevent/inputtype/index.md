@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-入力された入力種別を含む文字列です。`insertText`、`deleteContentBackward`、`insertFromPaste`、`formatBold` など、多くの値を取り得ます。利用可能な入力種別の完全なリストは、[Input Events Level 1 仕様の Attributes の章](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)を参照してください。
+入力された入力種別を含む文字列です。`insertText`、`deleteContentBackward`、`insertFromPaste`、`formatBold` など、多くの値を取り得ます。利用可能な入力種別の完全なリストは、[Input Events Level 2 仕様の Attributes の章](https://w3c.github.io/input-events/#interface-InputEvent-Attributes)を参照してください。
 
 ## 例
 
@@ -56,7 +56,8 @@ function logInputType(event) {
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **メモ:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> [!NOTE]
+> もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 

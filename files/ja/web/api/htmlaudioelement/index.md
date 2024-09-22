@@ -42,7 +42,8 @@ const audioElement = new Audio("car_horn.wav");
 audioElement.play();
 ```
 
-> **メモ:** よくあるのが、ページを読み込んだらすぐに audio 要素を再生しようとすることです。現代のブラウザーは、既定の自動再生ポリシーによって、このようなことが起こらないようにブロックしています。良い習慣と回避方法については、[Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) および [Chrome](https://developer.chrome.com/blog/autoplay/) のものを参照してください。
+> [!NOTE]
+> よくあるのが、ページを読み込んだらすぐに audio 要素を再生しようとすることです。現代のブラウザーは、既定の自動再生ポリシーによって、このようなことが起こらないようにブロックしています。良い習慣と回避方法については、[Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) および [Chrome](https://developer.chrome.com/blog/autoplay/) のものを参照してください。
 
 audio 要素のプロパティとしてよく用いられるものには、{{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, {{domxref("HTMLMediaElement.volume", "volume")}} などがあります。このスニペットは、音声ファイルの再生時間を変数にコピーします。
 
@@ -70,4 +71,4 @@ _親である {{domxref("HTMLMediaElement")}} およびその祖先である {{d
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [HTML での音声と動画の使用](/ja/docs/Web/Media/HTML_media)
-- このインタフェースを実装した HTML 要素: {{HTMLElement("audio")}}
+- このインターフェイスを実装した HTML 要素: {{HTMLElement("audio")}}

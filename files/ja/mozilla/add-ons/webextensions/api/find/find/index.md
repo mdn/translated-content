@@ -91,7 +91,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
         - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
         - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
-        例えば Web ページ上で:
+        例えばウェブページ上で:
 
         ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 

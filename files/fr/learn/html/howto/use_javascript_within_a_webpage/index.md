@@ -3,6 +3,8 @@ title: Utiliser JavaScript au sein d'une page web
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 ---
 
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
 
 <table class="standard-table">
@@ -31,7 +33,8 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 
 {{Glossary("JavaScript")}} est un langage de programmation principalement utilisé côté client et qui peut également être utilisé côté serveur. Il permet entre autres de rendre les pages web interactives. JavaScript offre une myriade de possibilités.
 
-> **Note :** Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+> [!NOTE]
+> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
 ## Comment déclencher le code JavaScript depuis le document HTML
 

@@ -69,7 +69,8 @@ Le DOM, quant à lui, ressemble à ça&nbsp;:
 
 ![](dom-screenshot.png)
 
-> **Note :** Ce diagramme du DOM a été créé en utilisant l'outil [<i lang="en">Live DOM viewer</i>](https://software.hixie.ch/utilities/js/live-dom-viewer/) de Ian Hickson.
+> [!NOTE]
+> Ce diagramme du DOM a été créé en utilisant l'outil [<i lang="en">Live DOM viewer</i>](https://software.hixie.ch/utilities/js/live-dom-viewer/) de Ian Hickson.
 
 Vous pouvez voir ici que chaque élément et morceau de texte dans le document possède sa propre entrée dans l'arbre — chacune étant appelée **nœud** (<i lang="en">node</i>). Vous rencontrerez également plusieurs termes pour décrire les différents type de nœuds ou leur position dans l'arbre les uns par rapport aux autres&nbsp;:
 
@@ -224,7 +225,8 @@ La première d'entre elles consiste à ajouter des styles en ligne (<i lang="en"
    </p>
    ```
 
-> **Note :** Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
+> [!NOTE]
+> Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
 
 Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, que nous allons étudier maintenant.
 
@@ -257,7 +259,8 @@ Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, 
 
 Dans les deux prochaines sections, nous verrons un exemple d'utilisation plus concret des API du DOM.
 
-> **Note :** Vous pouvez trouver la [version finale de `dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) sur GitHub ([le voir en direct aussi](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!NOTE]
+> Vous pouvez trouver la [version finale de `dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) sur GitHub ([le voir en direct aussi](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Apprentissage actif&nbsp;: une liste de courses dynamique
 
@@ -285,7 +288,8 @@ Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que v
 10. Ajoutez un gestionnaire d'événement au bouton «&nbsp;Supprimer&nbsp;», de façon à ce que lorsqu'on le clique le `<li>` dans lequel il se situe soit supprimé.
 11. Enfin, utilisez la méthode [`HTMLElement.focus`](/fr/docs/Web/API/HTMLElement/focus) pour donner le focus au champ, qu'il soit prêt à recevoir la valeur du prochain article de la liste de courses.
 
-> **Note :** Si vous bloquez vraiment, jetez un œil à notre [liste de courses terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> [!NOTE]
+> Si vous bloquez vraiment, jetez un œil à notre [liste de courses terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Résumé
 

@@ -60,7 +60,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample('同步的 JavaScript', '100%', '70px')}}
 
-> **備註：** 使用 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 有個很重要的事情要記得，雖然用在證明是否為同步的阻塞操作非常有用，但非常不建議用在實際的應用程式上，使用體驗將會相當糟糕。
+> [!NOTE]
+> 使用 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 有個很重要的事情要記得，雖然用在證明是否為同步的阻塞操作非常有用，但非常不建議用在實際的應用程式上，使用體驗將會相當糟糕。
 
 ## 非同步 JavaScript
 
@@ -158,7 +159,8 @@ fetch("products.json")
   });
 ```
 
-> **備註：** 你可以在 GitHub （[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)，[線上範例](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)）找到最終版本。
+> [!NOTE]
+> 你可以在 GitHub （[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)，[線上範例](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)）找到最終版本。
 
 在這裡我們看到 `fetch()` 帶一個參數——你想要在網路上提取資源的網址——並回傳一個 [promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 。這一個 promise 用來表示一個完成或失敗的非同步操作的物件。它代表的是一種中間的狀態。本質上，它代表瀏覽器述說著：「我承諾我會盡快給予你一個答覆」，因此名稱就叫做「 promise 」。
 
@@ -167,7 +169,8 @@ fetch("products.json")
 - 兩個 [`then()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 區塊。兩個都含有回呼函式且先前的操作成功時就會執行，每一個回呼函式都會收到上一個成功完成操作的結果，因此你可以繼續執行一些事情。每一個 `.then()` 區塊都會回傳另一個 promise ，代表你可以將多個 `.then()` 區塊彼此作連結，所以多個非同步操作可以一個接著一個被用來依序執行。
 - 如果任何一個 `.then()` 區塊失敗就會跑到 [`catch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 區塊——類似像在同步區塊內部的 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 做法，在 `catch()` 內部會提供一個失敗的物件，可以用來報告是發生甚麼類型的錯誤。要注意到同步的 `try...catch` 不能與 promises 一起做使用，儘管它可以和 [async ／ await](/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await) 待配使用，這稍後將會學習到。
 
-> **備註：** 你將會在稍後的單元學習到更多關於 promise 的觀念，即使現在尚未完全理解你也不需要太擔心。
+> [!NOTE]
+> 你將會在稍後的單元學習到更多關於 promise 的觀念，即使現在尚未完全理解你也不需要太擔心。
 
 ### 事件佇列
 
@@ -252,13 +255,15 @@ TypeError: image is undefined; can't access its "src" property
 
 這是因為在這個時間點瀏覽器試著去執行最後的 `console.log()` 時 `fetch()` 還沒有完成執行，所以 `image` 變數尚未賦予值因而導致錯誤。
 
-> **備註：** 由於安全性考量，你沒辦法呼叫 `fetch()` 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個[網路伺服器](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)來執行。
+> [!NOTE]
+> 由於安全性考量，你沒辦法呼叫 `fetch()` 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個[網路伺服器](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)來執行。
 
 ## 主動學習：讓一切非同步化！
 
 為了修復 `fetch()` 這個有問題的範例讓三個 `console.log()` 的敘述可以依序被執行你可以讓第三個 `console.log()` 也非同步的被執行。你可以新增一個新的 `.then()` 再將其放在裡面，這個新增的 `.then()` 再串連 promise 區塊的倒數第二個結尾；或者也可以將其放入原本的 `.then()` 中來解決這個問題。試著現在修復這個問題吧。
 
-> **備註：** 如果你的想法卡住，你可以[在這裡](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html)找到解答（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html)）。你也可以在我們稍後的[優雅的使用 Promise 來處理非同步操作](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises) 這個單元找到更多關於 promise 的資訊。
+> [!NOTE]
+> 如果你的想法卡住，你可以[在這裡](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html)找到解答（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html)）。你也可以在我們稍後的[優雅的使用 Promise 來處理非同步操作](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises) 這個單元找到更多關於 promise 的資訊。
 
 ## 結論
 

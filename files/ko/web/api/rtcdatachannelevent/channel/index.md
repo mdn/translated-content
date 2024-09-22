@@ -19,7 +19,7 @@ var channel = RTCDataChannelEvent.channel;
 
 ## 예시
 
-{{event("datachannel")}} 이벤트 핸들러 안 코드의 첫 줄에서 이벤트 객체의 채널을 가져오고, 이를 데이터 트래픽을 관리하는 코드에 사용 될 수 있도록 지역 변수로 저장합니다.
+{{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} 이벤트 핸들러 안 코드의 첫 줄에서 이벤트 객체의 채널을 가져오고, 이를 데이터 트래픽을 관리하는 코드에 사용 될 수 있도록 지역 변수로 저장합니다.
 
 ```js
 pc.ondatachannel = function (event) {
@@ -40,7 +40,7 @@ pc.ondatachannel = function (event) {
 
 ## See also
 
-- {{event("datachannel")}}
+- {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCPeerConnection.ondatachannel")}}
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

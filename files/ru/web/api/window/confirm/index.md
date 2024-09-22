@@ -3,7 +3,7 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
 Метод **`Window.confirm()`** отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.
 

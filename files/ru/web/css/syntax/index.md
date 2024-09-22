@@ -28,7 +28,8 @@ slug: Web/CSS/Syntax
 
 ![](css_syntax_-_declaration.png)
 
-> **Примечание:** Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.
+> [!NOTE]
+> Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.
 
 ## CSS rulesets
 
@@ -40,7 +41,8 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
 
-> **Примечание:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
+> [!NOTE]
+> It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 >
 > This leads to an important consequence: if one single basic selector is invalid, like when using an unknown pseudo-element or pseudo-class, the whole _selector_ is invalid and therefor the entire rule is ignored (as invalid too).
 
@@ -61,7 +63,7 @@ Any statement which isn't a rule or an at-rule is invalid and ignored.
 
 There is another group of statements, the **nested statements**, these are statements that can be used in a specific subset of at-rules, the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which runs the browser matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside a conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/ru/docs/CSS/CSS3#conditionals). Now, though it still is experimental and not supported by every browser, a conditional group rules can contain a wider range of content, rulesets but also some, but not all, at-rules.
 
-## See also
+## Смотрите также
 
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)

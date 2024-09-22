@@ -13,7 +13,8 @@ slug: Web/API/BaseAudioContext/sampleRate
 
 ## 示例
 
-> **备注：** 如果需要完整的 Web Audio 实现示例，可以查看 [MDN Github repo](https://github.com/mdn/webaudio-examples) 上的 Web 音频演示。不妨试试在浏览器控制台输入 `audioCtx.sampleRate`。
+> [!NOTE]
+> 如果需要完整的 Web Audio 实现示例，可以查看 [MDN Github repo](https://github.com/mdn/webaudio-examples) 上的 Web 音频演示。不妨试试在浏览器控制台输入 `audioCtx.sampleRate`。
 
 ```js
 const audioCtx = new AudioContext();

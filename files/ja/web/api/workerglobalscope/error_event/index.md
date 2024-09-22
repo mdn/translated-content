@@ -1,8 +1,9 @@
 ---
 title: "WorkerGlobalScope: error イベント"
+short-title: error
 slug: Web/API/WorkerGlobalScope/error_event
 l10n:
-  sourceCommit: e713a02caebc813b7b3c422d15baa9693c4bfd02
+  sourceCommit: 684163db5787fb191daacf956af9c4315a06254a
 ---
 
 {{APIRef("Web Workers API")}}
@@ -16,7 +17,7 @@ l10n:
 ```js
 addEventListener("error", (event) => {});
 
-onerror = (event) => {};
+onerror = (message, filename, lineno, colno, error) => {};
 ```
 
 ## イベント型

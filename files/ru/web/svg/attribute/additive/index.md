@@ -3,6 +3,8 @@ title: additive
 slug: Web/SVG/Attribute/additive
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут определяет, является ли анимация аддитивной.

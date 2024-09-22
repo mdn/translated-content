@@ -3,21 +3,16 @@ title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent.metaKey`** 为只读属性，返回一个 {{jsxref("Boolean", "布尔值")}}，在事件发生时，用于指示 <kbd>Meta</kbd> 键是按下状态（`true`），还是释放状态（`false`）。
 
-> **备注：** 在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。
+> [!NOTE]
+> 在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。
 
-## 语法
+## 值
 
-```
-var metaKeyPressed = instanceOfKeyboardEvent.metaKey
-```
-
-### 返回值
-
-一个布尔值
+一个布尔值。
 
 ## 示例
 

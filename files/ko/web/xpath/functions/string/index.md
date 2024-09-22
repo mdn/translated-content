@@ -3,7 +3,7 @@ title: string
 slug: Web/XPath/Functions/string
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `string` 함수는 인수를 문자열로 변환합니다.
 

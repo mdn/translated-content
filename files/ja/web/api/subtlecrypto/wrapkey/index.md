@@ -81,7 +81,8 @@ AES-KW は [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394) で定義�
 
 ## 例
 
-> **メモ:** GitHub で[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)ことができます。
+> [!NOTE]
+> GitHub で[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)ことができます。
 
 ### Raw ラップ
 

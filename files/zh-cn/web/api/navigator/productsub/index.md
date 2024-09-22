@@ -1,39 +1,31 @@
 ---
-title: Navigator.productSub
+title: Navigator：productSub 属性
 slug: Web/API/Navigator/productSub
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
-**`Navigator.productSub`** 只读属性返回当前浏览器的编译版本号。
+**`Navigator.productSub`** 只读属性返回当前浏览器的构建版本号。
 
-## 语法
+## 值
 
-```plain
-prodSub = window.navigator.productSub
-```
+一个字符串。
 
-- `prodSub`是一个字符串。
-
-## 例子
+## 示例
 
 ```js
-<script>
-function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
-  dt.data = window.navigator.productSub;
-}
-</script>
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
+document.body.textContent = `productSub：${navigator.productSub}`;
 ```
 
-## 注释
+{{ EmbedLiveSample("示例") }}
 
-在 IE 上，这个属性返回 undefined。
+## 备注
 
-在苹果 Safari 上和 Google 的 Ghrome 上这个属性总是返回 20030107。
+在 IE 中，这个属性返回 undefined。
+
+在 Apple Safari 和 Google Chrome 中，这个属性始终返回 `20030107`。
 
 ## 规范
 

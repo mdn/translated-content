@@ -5,9 +5,12 @@ l10n:
   sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
 ---
 
+{{AccessibilitySidebar}}
+
 Dans cet article, nous verrons des conseils pratiques pour écrire du contenu web qui respecte le principe de **perceptibilité** décrit dans les règles pour l'accessibilité des contenus web (WCAG) 2.0 et 2.1. Les états du contenu doivent pouvoir être perçus par les utilisatrices et utilisateurs d'une façon ou d'une autre en utilisant un de leurs sens.
 
-> **Note :** Les définitions du W3C pour cette catégorie, les règles associées et les critères de réussite sont présentes sur la page [Principe 1&nbsp;: l'information et les composants de l'interface utilisateur doivent être présentés à l'utilisatrice ou à l'utilisateur de façon à ce qu'il puisse les percevoir](https://www.w3.org/Translations/WCAG21-fr/#perceivable).
+> [!NOTE]
+> Les définitions du W3C pour cette catégorie, les règles associées et les critères de réussite sont présentes sur la page [Principe 1&nbsp;: l'information et les composants de l'interface utilisateur doivent être présentés à l'utilisatrice ou à l'utilisateur de façon à ce qu'il puisse les percevoir](https://www.w3.org/Translations/WCAG21-fr/#perceivable).
 
 ## Règle 1.1 — Des équivalents textuels doivent être fournis pour tout contenu non textuel
 
@@ -75,7 +78,8 @@ L'information principale à retenir ici est que le texte peut être converti sou
   </tbody>
 </table>
 
-> **Note :** Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
+> [!NOTE]
+> Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
 
 ## Règle 1.2 — Fournir des alternatives textuelles aux médias temporels
 
@@ -138,7 +142,8 @@ Les médias temporels sont les médias qui ont une durée comme les fichiers aud
  </tbody>
 </table>
 
-> **Note :** Voir aussi [la description du WCAG pour la règle 1.2 sur les alternatives aux médias temporels](https://www.w3.org/Translations/WCAG21-fr/#time-based-media).
+> [!NOTE]
+> Voir aussi [la description du WCAG pour la règle 1.2 sur les alternatives aux médias temporels](https://www.w3.org/Translations/WCAG21-fr/#time-based-media).
 
 ## Règle 1.3 — Créer du contenu pouvant être présenté de différentes façons
 
@@ -246,7 +251,8 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
   </tbody>
 </table>
 
-> **Note :** Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
+> [!NOTE]
+> Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
 
 ## Règle 1.4 — Faciliter la perception visuelle et auditive du contenu, notamment en séparant le premier plan de l'arrière-plan
 
@@ -448,7 +454,8 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
   </thead>
 </table>
 
-> **Note :** Voir aussi [la description du WCAG pour la règle 1.4 sur le contenu distinguable et la facilitation de la perception visuelle et auditive du contenu, notamment pour distinguer le premier-plan de l'arrière-plan](https://www.w3.org/Translations/WCAG21-fr/#distinguishable).
+> [!NOTE]
+> Voir aussi [la description du WCAG pour la règle 1.4 sur le contenu distinguable et la facilitation de la perception visuelle et auditive du contenu, notamment pour distinguer le premier-plan de l'arrière-plan](https://www.w3.org/Translations/WCAG21-fr/#distinguishable).
 
 ## Voir aussi
 

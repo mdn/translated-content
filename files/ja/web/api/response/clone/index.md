@@ -1,11 +1,12 @@
 ---
-title: Response.clone()
+title: "Response: clone() メソッド"
+short-title: clone()
 slug: Web/API/Response/clone
 l10n:
-  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`clone()`** は {{domxref("Response")}} インターフェイスのメソッドで、レスポンスオブジェクトの複製を作成します。この複製はあらゆる面で同一ですが、異なる変数に格納されます。
 
@@ -34,8 +35,8 @@ clone()
 ## 例
 
 [Fetch Response clone の例](https://github.com/mdn/dom-examples/blob/main/fetch/fetch-response-clone/index.html)（[Fetch Response clone のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response-clone/) を参照）では、 {{domxref("Request.Request","Request()")}} コンストラクターで新しい {{domxref("Request")}} オブジェクトを作成し、 JPG のパスを渡します。
-そして {{domxref("fetch()")}} を使用してこのリクエストを読み込みます。
-フェッチが正常に解決されると、それを複製し、2 つの {{domxref("Response.blob")}} 呼び出しを使用して両方のレスポンスから blob を抽出し、 {{domxref("URL.createObjectURL")}} を使用して blob からオブジェクト URL を作成し、それらを 2 つの別々の {{htmlelement("img")}} 要素で表示します。
+そして {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストを読み込みます。
+フェッチが正常に解決されると、それを複製し、2 つの {{domxref("Response.blob")}} 呼び出しを使用して両方のレスポンスから blob を抽出し、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して blob からオブジェクト URL を作成し、それらを 2 つの別々の {{htmlelement("img")}} 要素で表示します。
 
 ```js
 const image1 = document.querySelector(".img1");

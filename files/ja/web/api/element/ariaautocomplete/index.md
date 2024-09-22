@@ -3,7 +3,7 @@ title: "Element: ariaAutoComplete プロパティ"
 short-title: ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 l10n:
-  sourceCommit: 0cadcbcd77aeb0da27a33de28ce233a558801dc4
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -25,7 +25,7 @@ l10n:
 
 ## 例
 
-この例では、IDが `animal` の要素の `aria-autocomplete` 属性は "`inline`" に設定されています。これは `listbox` ポップアップを呼び出すコンボボックスに期待される値です。
+この例では、ID が `animal` の要素の `aria-autocomplete` 属性は "`inline`" に設定されています。これは `listbox` ポップアップを呼び出すコンボボックスに期待される値です。
 
 ```html
 <div class="animals-combobox">

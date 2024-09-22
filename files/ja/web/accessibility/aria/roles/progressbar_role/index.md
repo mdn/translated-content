@@ -3,6 +3,8 @@ title: progressbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
 ---
 
+{{AccessibilitySidebar}}
+
 このテクニックは、[`progressbar`](http://www.w3.org/TR/wai-aria/#progressbar) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
 
 `progressbar` ロールは、長い時間がかかったり、いくつかの手順で構成されるタスクの進捗状況を表示する要素に使用するべきです。
@@ -13,7 +15,8 @@ slug: Web/Accessibility/ARIA/Roles/progressbar_role
 
 プログレスバーがページの特定の領域のロード進捗状況を説明している場合、作者は、[aria-describedby](http://www.w3.org/TR/wai-aria/#aria-describedby) を使用してステータスを指し示すべきであり、ロードが完了するまで領域の [aria-busy](http://www.w3.org/TR/wai-aria/#aria-busy) 属性を `true` に設定する**べき**です（SHOULD）。 これは常に読み取り専用なので、ユーザーはプログレスバーの値を変更することはできません。
 
-> **メモ:** 支援技術は、[aria-valuetext](http://www.w3.org/TR/wai-aria/#aria-valuetext) が指定されていない限り、`aria-valuemin` の値と `aria-valuemax` の値の間の範囲のパーセントとして、`aria-valuenow` の値を一般にレンダリングします。 この計算に適した方法で、`aria-valuemin`、`aria-valuemax`、`aria-valuenow` の値を設定することをお勧めします。
+> [!NOTE]
+> 支援技術は、[aria-valuetext](http://www.w3.org/TR/wai-aria/#aria-valuetext) が指定されていない限り、`aria-valuemin` の値と `aria-valuemax` の値の間の範囲のパーセントとして、`aria-valuenow` の値を一般にレンダリングします。 この計算に適した方法で、`aria-valuemin`、`aria-valuemax`、`aria-valuenow` の値を設定することをお勧めします。
 
 > **メモ:** `progressbar` ロールを持つ要素の暗黙の [`aria-readonly`](http://www.w3.org/TR/wai-aria/#aria-readonly) の値は `true` です。
 
@@ -21,7 +24,8 @@ slug: Web/Accessibility/ARIA/Roles/progressbar_role
 
 スクリーンリーダーは進捗状況の更新が発生したときにアナウンスするべきです。 プログレスバーにラベルが付いている場合は、ラベルテキストも同様に述べるべきです。
 
-> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> [!NOTE]
+> 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ## 例
 

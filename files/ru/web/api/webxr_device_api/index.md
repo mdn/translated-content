@@ -164,7 +164,7 @@ WebGL API расширяется спецификацией WebXR для тог�
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Graphics on the web](/ru/docs/Web/Guide/Graphics)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)

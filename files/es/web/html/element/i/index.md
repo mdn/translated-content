@@ -3,6 +3,8 @@ title: i
 slug: Web/HTML/Element/i
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto marcado con un estilo en cursiva o italica.

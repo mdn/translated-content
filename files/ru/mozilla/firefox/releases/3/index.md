@@ -217,7 +217,7 @@ slug: Mozilla/Firefox/Releases/3
 - **Speed.** Firefox 3 has gotten a performance boost by completely replacing the part of the software that handles drawing to your screen, as well as to how page layout work is handled.
 - **Memory use reduced.** Firefox 3 is more memory efficient than ever, with over 300 memory "leak" bugs fixed and new features to help automatically locate and dispose of leaked memory blocks.
 
-### See also
+## Смотрите также
 
 - [Updating extensions for Firefox 3](/en/Updating_extensions_for_Firefox_3)
 - [Updating web applications for Firefox 3](/en/Updating_web_applications_for_Firefox_3)

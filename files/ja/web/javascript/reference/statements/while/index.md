@@ -78,7 +78,7 @@ while (currentNode = iterator.nextNode()) {
 
 …そして、文書中にコメントノードがなくなったとき、次のようになります。
 
-1. `iterator.nextNode()` は [`null``](/ja/docs/Web/JavaScript/Reference/Operators/null) を返す。
+1. `iterator.nextNode()` は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返す。
 2. 従って `currentNode = iterator.nextNode()` も `null` になり、これは[偽値](/ja/docs/Glossary/Falsy)である。
 3. そのため、ループを終了する。
 

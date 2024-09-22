@@ -66,9 +66,10 @@ svg {
   - : 设置 foreignObject 的 y 坐标。
     值得类型：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/zh-CN/docs/Web/SVG/Content_type#Percentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
 
-> **备注：** 从 SVG2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 CSS 属性。
+> [!NOTE]
+> 从 SVG2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 CSS 属性。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

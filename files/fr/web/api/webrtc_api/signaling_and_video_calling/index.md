@@ -3,6 +3,8 @@ title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
+{{DefaultAPISidebar("WebRTC")}}
+
 Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
 
 ## Contenu semi-ancien, à partir de RTCPeerConnection
@@ -111,7 +113,8 @@ pc.setRemoteDescription(
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> [!NOTE]
+> Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 

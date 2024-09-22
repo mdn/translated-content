@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 02e06e701230eb5c67caa00fc8d09604a07d5734
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 网页应用经常使用 JavaScript 来模拟桌面组件，比如菜单、树状视图、富文本以及标签面板等。网页中这些微件通常是由 {{ HTMLElement("div") }} 和 {{ HTMLElement("span") }} 等元素组合而成，并不是原生的，也不会提供对应的桌面组件所拥有的键盘功能。本文档主要描述能让 JavaScript 微件使用键盘访问的技术。
 
@@ -17,7 +15,8 @@ l10n:
 
 使用键盘时，元素获得焦点的顺序默认为源顺序。在特殊情况下，作者可能希望重新定义顺序。为此，作者可以将 `tabindex` 设置为任意正数。
 
-> **警告：** 避免为 `tabindex` 使用正值。具有正 `tabindex` 值的元素会被放在页面上默认的交互式元素之前，这意味着页面作者在使用一个或多个 `tabindex` 正值时，必须为页面上所有可聚焦元素设置（并维护）`tabindex` 值。
+> [!WARNING]
+> 避免为 `tabindex` 使用正值。具有正 `tabindex` 值的元素会被放在页面上默认的交互式元素之前，这意味着页面作者在使用一个或多个 `tabindex` 正值时，必须为页面上所有可聚焦元素设置（并维护）`tabindex` 值。
 
 下面表格阐述主流浏览器中 `tabindex` 的行为：
 

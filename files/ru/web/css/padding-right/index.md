@@ -50,7 +50,7 @@ padding-right: unset;
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

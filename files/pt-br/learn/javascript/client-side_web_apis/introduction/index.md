@@ -50,7 +50,8 @@ _Fonte da imagem: [Overloaded plug socket](https://www.flickr.com/photos/easy-pi
 
 Da mesma forma, caso você queira programar gráficos em 3D, é muito mais fácil usar uma API escrita em linguagem de alto nível como JavaScript ou Python, do que escrever em código de mais baixo nível (C ou C++) que controla diretamente a GPU ou outras funções gráficas.
 
-> **Nota:** para mais informações, consulte o [termo API](/pt-BR/docs/Glossario/API) no glossário.
+> [!NOTE]
+> para mais informações, consulte o [termo API](/pt-BR/docs/Glossario/API) no glossário.
 
 ### APIs JavaScript client-side
 
@@ -96,7 +97,8 @@ APIs de terceiros são bastante variadas. Dentre as mais populares, que você ev
 - The [YouTube API](https://developers.google.com/youtube/), which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.
 - The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
 
-> **Nota:** Você pode encontrar informações sobre muitas outras APIs de terceiros no [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
+> [!NOTE]
+> Você pode encontrar informações sobre muitas outras APIs de terceiros no [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
 
 ## Como as APIs funcionam?
 
@@ -106,7 +108,8 @@ APIs JavaScript possuem pequenas diferenças mas, em geral, possuem funcionalida
 
 Your code interacts with APIs using one or more [JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
 
-> **Nota:** If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects) module before continuing.
+> [!NOTE]
+> If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects) module before continuing.
 
 Let's return to the example of the Geolocation API — this is a very simple API that consists of a few simple objects:
 
@@ -135,7 +138,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
 });
 ```
 
-> **Nota:** When you first load up the above example, you should be given a dialog box asking if you are happy to share your location with this application (see the [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) section later in the article). You need to agree to this to be able to plot your location on the map. If you still can't see the map, you may need to set your permissions manually; you can do this in various ways depending on what browser you are using; for example in Firefox go to > _Tools_ > _Page Info_ > _Permissions_, then change the setting for _Share Location_; in Chrome go to _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ then change the settings for _Location_.
+> [!NOTE]
+> When you first load up the above example, you should be given a dialog box asking if you are happy to share your location with this application (see the [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) section later in the article). You need to agree to this to be able to plot your location on the map. If you still can't see the map, you may need to set your permissions manually; you can do this in various ways depending on what browser you are using; for example in Firefox go to > _Tools_ > _Page Info_ > _Permissions_, then change the setting for _Share Location_; in Chrome go to _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ then change the settings for _Location_.
 
 We first want to use the {{domxref("Geolocation.getCurrentPosition()")}} method to return the current location of our device. The browser's {{domxref("Geolocation")}} object is accessed by calling the {{domxref("Navigator.geolocation")}} property, so we start off by using
 
@@ -154,7 +158,8 @@ But we can use the dot syntax to chain our property/method access together, redu
 
 The {{domxref("Geolocation.getCurrentPosition()")}} method only has a single mandatory parameter, which is an anonymous function that will run when the device's current position has been successfully retrieved. This function itself has a parameter, which contains a {{domxref("Position")}} object representing the current position data.
 
-> **Nota:** A function that is taken by another function as an argument is called a [callback function](/pt-BR/docs/Glossary/Callback_function).
+> [!NOTE]
+> A function that is taken by another function as an argument is called a [callback function](/pt-BR/docs/Glossary/Callback_function).
 
 This pattern of invoking a function only when an operation has been completed is very common in JavaScript APIs — making sure one operation has completed before trying to use the data the operation returns in another operation. These are called **[asynchronous](/pt-BR/docs/Glossary/Asynchronous) operations**. Because getting the device's current position relies on an external component (the device's GPS or other geolocation hardware), we can't guarantee that it will be done in time to just immediately use the data it returns. Therefore, something like this wouldn't work:
 
@@ -199,7 +204,8 @@ With this done, our map now renders.
 
 This last block of code highlights two common patterns you'll see across many APIs. First of all, API objects commonly contain constructors, which are invoked to create instances of those objects that you'll use to write your program. Second, API objects often have several options available that can be tweaked to get the exact environment you want for your program. API constructors commonly accept options objects as parameters, which is where you'd set such options.
 
-> **Nota:** Don't worry if you don't understand all the details of this example immediately. We'll cover using third party APIs in a lot more detail in a future article.
+> [!NOTE]
+> Don't worry if you don't understand all the details of this example immediately. We'll cover using third party APIs in a lot more detail in a future article.
 
 ### Possuem pontos de entrada reconhecíveis
 
@@ -232,7 +238,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Nota:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> [!NOTE]
+> You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### Usam eventos para lidar com mudanças de estado
 
@@ -257,7 +264,8 @@ request.onload = function () {
 };
 ```
 
-> **Nota:** You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
+> [!NOTE]
+> You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
 The first five lines specify the location of resource we want to fetch, create a new instance of a request object using the `XMLHttpRequest()` constructor, open an HTTP `GET` request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.
 

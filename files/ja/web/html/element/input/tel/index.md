@@ -2,7 +2,7 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
 {{HTMLSidebar}}
@@ -29,19 +29,19 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
-ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小文字数が設定されません。
+ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小長が設定されません。
 
 入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -55,13 +55,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/inputlabels)を参照してください。
+> [!NOTE]
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#labels)を参照してください。
 
 ### readonly
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### size
 
@@ -82,11 +84,11 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 - `off`
   - : 自動修正やテキストの置き換えを無効にします。
 
-### mozactionhint
+### mozactionhint {{deprecated_inline}}
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) グローバル属性を使用してください。
+**非推奨: 代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。**
 
 ## tel 入力欄の使用
 
@@ -159,7 +161,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> **メモ:** 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
+> [!NOTE]
+> 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
 
 ### 既定のオプションの提供
 
@@ -201,7 +204,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 以前にも触れましたが、電話番号で万能のクライアント側検証方法を提供することは非常に困難です。では、どうすればいいのでしょうか。いくつかの選択肢を考えてみましょう。
 
-> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用には*なりません*>。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）が送信された場合に災害が発生するおそれがあります。
+> [!WARNING]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用には*なりません*>。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）が送信された場合に災害が発生するおそれがあります。
 
 ### 電話番号を必須にする
 
@@ -473,7 +477,7 @@ input:valid + span::after {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -530,8 +534,6 @@ input:valid + span::after {
 
 - [HTML フォームガイド](/ja/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-
   - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
-
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -3,11 +3,12 @@ title: Document.characterSet
 slug: Web/API/Document/characterSet
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 **`Document.characterSet`** доступное только для чтения свойство, возвращает кодировку текущей страницы. Кодировка это набор символов, используемый для отрисовки документа, которая может отличаться от кодировки, заданной на странице (пользователь может переназначить кодировку)
 
-> **Примечание:** Свойства `document.charset` и `document.inputEncoding` это устаревшие алиасы `document.characterSet`. Не используйте их больше.
+> [!NOTE]
+> Свойства `document.charset` и `document.inputEncoding` это устаревшие алиасы `document.characterSet`. Не используйте их больше.
 
 ## Синтаксис
 

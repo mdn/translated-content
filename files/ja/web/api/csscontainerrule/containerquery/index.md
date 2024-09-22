@@ -22,7 +22,7 @@ l10n:
 
 ## 値
 
-コンテナクエリーの入った文字列です。
+コンテナークエリーの入った文字列です。
 
 ホワイトスペースの除去などの正規化が行われるため、値が元の文字列と同じになるとは限らないことに注意してください。
 
@@ -110,6 +110,6 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 
 ## 関連情報
 
-- [CSS 封じ込めモジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

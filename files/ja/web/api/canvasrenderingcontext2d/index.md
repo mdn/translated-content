@@ -236,7 +236,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : 描画スタイルの状態を `save()` によって保存された '状態スタック' の最後の要素に復元します。
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : {{domxref("HTMLCanvasElement")}} への読み取り専用の後方参照。 {{HTMLElement("canvas")}} 要素と関連付けられていない場合、 {{jsxref("null")}} になる可能性があります。
+  - : {{domxref("HTMLCanvasElement")}} への読み取り専用の後方参照。 {{HTMLElement("canvas")}} 要素と関連付けられていない場合、 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になる可能性があります。
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : 実際のコンテキスト属性を含むオブジェクトを返します。コンテキスト属性は {{domxref("HTMLCanvasElement.getContext()")}} で要求することができます。
 

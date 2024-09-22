@@ -1,15 +1,16 @@
 ---
 title: "CanvasRenderingContext2D: globalAlpha プロパティ"
+short-title: globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
-Canvas 2D API の **`CanvasRenderingContext2D.globalAlpha`** プロパティは、図形や画像をキャンバスに描画する際に適用されるアルファ値 (透明度) を設定します。
+**`CanvasRenderingContext2D.globalAlpha`** はキャンバス 2D API のプロパティで、図形や画像をキャンバスに描画する際に適用されるアルファ値（透明度）を設定します。
 
-> **メモ:** [Canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)も参照してください。
+> **メモ:** [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)も参照してください。
 
 ## 値
 
@@ -82,8 +83,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180",
-  "canvas_globalalpha.png")}}
+{{EmbedLiveSample("Overlaying_transparent_shapes", "", "180")}}
 
 ## 仕様書
 

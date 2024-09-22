@@ -3,6 +3,8 @@ title: Aperçu sur le développement des applications Web et des Widgets accessi
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 
+{{AccessibilitySidebar}}
+
 Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l'utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l'histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d'écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d'utilisateurs.
 
 ## Problématique
@@ -39,7 +41,8 @@ _Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuv
 
 [WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l'iniative du [W3C sur l'accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d'interfaces utilisateurs les plus connus.
 
-> **Attention :** Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
+> [!WARNING]
+> Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
 
 Les spécifications ARIA distinguent 3 types d'attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
 

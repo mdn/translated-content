@@ -1,7 +1,6 @@
 ---
 title: console：error() 静态方法
 slug: Web/API/console/error_static
-original_slug: Web/API/console/error
 ---
 
 {{APIRef("Console API")}}
@@ -12,11 +11,11 @@ original_slug: Web/API/console/error
 
 ## 语法
 
-```
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
-console.exception(obj1 [, obj2, ..., objN]);
-console.exception(msg [, subst1, ..., substN]);
+```js-nolint
+error(val1)
+error(val1, /* …, */ valN)
+error(msg)
+error(msg, subst1, /* …, */ substN)
 ```
 
 > **备注：** `console.exception()` 是 `console.error()` 的别名；它们功能相同。

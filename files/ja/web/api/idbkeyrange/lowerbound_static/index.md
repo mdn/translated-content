@@ -1,19 +1,20 @@
 ---
-title: IDBKeyRange.lowerBound()
+title: "IDBKeyRange: lowerBound() 静的メソッド"
+short-title: lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound_static
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBKeyRange")}} インターフェイスの **`lowerBound()`** メソッドは、下限のみを持つ新しいキーの範囲を生成します。デフォルトでは、端点の値を含む「閉」です。
-
-{{AvailableInWorkers}}
+**`lowerBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドで、下限のみを持つ新しいキーの範囲を生成します。既定では、端点の値を含む「閉」です。
 
 ## 構文
 
 ```js-nolint
-lowerBound(lower)
-lowerBound(lower, open)
+IDBKeyRange.lowerBound(lower)
+IDBKeyRange.lowerBound(lower, open)
 ```
 
 ### 引数
@@ -21,7 +22,7 @@ lowerBound(lower, open)
 - `lower`
   - : 新しいキーの範囲の下限を指定します。
 - `open` {{optional_inline}}
-  - : 下限が端点の値を除くかどうかを表します。デフォルトは `false` です。
+  - : 下限が端点の値を除くかどうかを表します。既定値は `false` です。
 
 ### 返値
 
@@ -36,7 +37,8 @@ lowerBound(lower, open)
 
 以下の例では、下限が指定されたキーの範囲の使用法を示します。`keyRangeValue = IDBKeyRange.lowerBound("F", false);` と宣言します。これは、値 `"F"` とそれより後の全てを含む範囲です。({{domxref("IDBTransaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keyRangeValue` として {{domxref("IDBObjectStore.openCursor")}} でカーソルを開きます。これにより、このカーソルはキーの値が `"F"` のレコードと、それより後の全てのレコードのみを取得します。`IDBKeyRange.lowerBound("F", true);` を用いた場合、範囲に `"F"` は含まれず、それより後の値のみを含みます。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {
@@ -54,7 +56,7 @@ function displayData() {
 
       cursor.continue();
     } else {
-      console.log("全エントリーを表示しました。");
+      console.log("全項目を表示しました。");
     }
   };
 }

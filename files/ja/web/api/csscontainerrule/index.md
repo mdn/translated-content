@@ -10,7 +10,7 @@ l10n:
 **`CSSContainerRule`** インターフェイスは、単一の CSS の {{cssxref("@container")}} ルールを表します。
 
 この型のオブジェクトを使用して、 {{cssxref("@container")}} のクエリー条件と、コンテナー名が定義されている場合はコンテナー名を取得することができます。
-なお、コンテナ名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
+なお、コンテナー名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
 
 {{InheritanceDiagram}}
 
@@ -102,7 +102,8 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ```
 
-> **メモ:** この例のスタイルは、コードが正しいシートを探しやすいように、 id を持つインライン HTML の `style` 要素で定義しています。
+> [!NOTE]
+> この例のスタイルは、コードが正しいシートを探しやすいように、 id を持つインライン HTML の `style` 要素で定義しています。
 > また、長さをインデックスにして（例えば `document.styleSheets[document.styleSheets.length-1]`）文書から各例の正しいシートを探すこともできますが、そうすると各例の正しいシートを動作するのが複雑になります。
 
 出力例は下記の通りです。
@@ -200,6 +201,6 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container-name")}}, {{cssxref("container-type")}}, {{cssxref("container")}} 一括指定プロパティ
-- [CSS 封じ込めモジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

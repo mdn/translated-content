@@ -11,7 +11,8 @@ Une tâche assez courante en HTML consiste à structurer des données sous forme
 
 Avant de commencer ce module, vous devez déjà connaître les bases du HTML — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
 
-> **Note :** Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

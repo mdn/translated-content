@@ -15,8 +15,8 @@ slug: Web/API/Event/initEvent
 
 ## 语法
 
-```
-event.initEvent(type, bubbles, cancelable);
+```js-nolint
+event.initEvent(type, bubbles, cancelable)
 ```
 
 - `type`
@@ -26,21 +26,24 @@ event.initEvent(type, bubbles, cancelable);
 - `cancelable`
   - : 一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
 
-## 范例
+## 示例
 
-```
+```js
 // 创建事件。
-var event = document.createEvent('Event');
+const event = document.createEvent("Event");
 
 // 初始化一个点击事件，可以冒泡，无法被取消
-event.initEvent('click', true, false);
+event.initEvent("click", true, false);
 
-// 设置事件监听。
-elem.addEventListener('click', function (e) {
-  // e.target 就是监听事件目标元素
-}, false);
+// 监听事件。
+elem.addEventListener(
+  "click",
+  (e) => {
+    // e.target 与 elem 相匹配
+  },
+  false,
+);
 
-// 触发事件监听
 elem.dispatchEvent(event);
 ```
 

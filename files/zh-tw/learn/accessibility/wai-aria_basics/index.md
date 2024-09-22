@@ -60,7 +60,8 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 有關 WAI-ARIA 屬性的重要觀點是他們不會影響網頁的任何內容，除了透過瀏覽器無障礙 API 揭露資訊之外(螢幕報讀器即從中獲得資訊)。儘管 WAI-ARIA 屬性對 CSS 選擇元素很有用，但不會影響網頁結構、DOM 等。
 
-> **備註：** 你可以在 WAI-ARIA 規格中找到所有 ARIA 的角色及其用法的很有用清單，請參見 [Definition of Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)連結以獲得更進一步的資訊。
+> [!NOTE]
+> 你可以在 WAI-ARIA 規格中找到所有 ARIA 的角色及其用法的很有用清單，請參見 [Definition of Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)連結以獲得更進一步的資訊。
 >
 > 本規格也涵括所有屬性與狀態的清單，請參見 [Definitions of States and Properties (all aria-\* attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)連結以獲得更進一步的資訊。
 
@@ -80,7 +81,8 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 在本文中，我們未試圖涵蓋每一個 WAI-ARIA 特徵及其確切的支援細節。相反地，我們將涵蓋最關鍵的 WAI-ARIA 特徵讓你知道；如果我們沒有提到任何支援細節，你可認定該特徵得到很好的支援。我們會明確地提到這個例外情況。
 
-> **備註：** 某些 JavaScript 儲存庫支援 WAI-ARIA，亦即當他們產生 UI 特徵如複雜的表單控制措施，他們添加 ARIA 屬性來增進這些特徵的無障礙。如果你在尋找第三方的 JavaScript 解決方案來快速的開發 UI，你應該謹慎地考量其 UI 插件的無障礙作為你決定使用的重要因素。jQuery UI(參見[About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support))、 [ExtJS](https://www.sencha.com/products/extjs/)與 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)是良好範例。
+> [!NOTE]
+> 某些 JavaScript 儲存庫支援 WAI-ARIA，亦即當他們產生 UI 特徵如複雜的表單控制措施，他們添加 ARIA 屬性來增進這些特徵的無障礙。如果你在尋找第三方的 JavaScript 解決方案來快速的開發 UI，你應該謹慎地考量其 UI 插件的無障礙作為你決定使用的重要因素。jQuery UI(參見[About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support))、 [ExtJS](https://www.sencha.com/products/extjs/)與 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)是良好範例。
 
 ### 何時應該使用 WAI-ARIA?
 
@@ -95,7 +97,8 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 再說一次，只有需要的時候才使用它！
 
-> **備註：** 請確保有各類實際的使用者來測試你的網站 — 非身障者、使用螢幕報讀器者、使用鍵盤導覽者等。他們將比你更能了解它運作的效果。
+> [!NOTE]
+> 請確保有各類實際的使用者來測試你的網站 — 非身障者、使用螢幕報讀器者、使用鍵盤導覽者等。他們將比你更能了解它運作的效果。
 
 ## 實作 WAI-ARIA 開發
 
@@ -227,7 +230,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
-> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> [!NOTE]
+> 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新你的 `<section>` 標籤如下所示：
 
@@ -237,7 +241,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 `aria-atomic="true"`屬性告訴螢幕報讀器以一個原子單位方式讀出完整的元素內容，而不僅只讀出更新的部分。
 
-> **備註：** 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
+> [!NOTE]
+> 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
 
 > **備註：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
 
@@ -301,7 +306,8 @@ var intervalID = window.setInterval(showQuote, 10000);
      aria-required="true" />
    ```
 
-> **備註：** 你可以查看完成的範例 [form-validation-updated.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html)。
+> [!NOTE]
+> 你可以查看完成的範例 [form-validation-updated.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html)。
 
 除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA 也能賦予一些進階的表單標籤技術。我們已經談論過使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 [路標/地標](#路標地標) 章節。如果你想要指定一個非`<label>` 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)。更多細節請參見 [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced) 。
 
@@ -350,7 +356,8 @@ function toggleMusician(bool) {
 
 現在當你使用螢幕報讀器測試它時，按鈕將會用句子如"Click me!, button" 讀出—這樣好多了。
 
-> **備註：** 記住最好盡可能使用正確的語意元素，如果你希望創建一個按鈕，並且可使用 {{htmlelement("button")}} 元素，就應該使用 {{htmlelement("button")}} 元素！
+> [!NOTE]
+> 記住最好盡可能使用正確的語意元素，如果你希望創建一個按鈕，並且可使用 {{htmlelement("button")}} 元素，就應該使用 {{htmlelement("button")}} 元素！
 
 #### 透過複雜的插件引導使用者
 
@@ -399,7 +406,8 @@ function toggleMusician(bool) {
 </div>
 ```
 
-> **備註：** 這裡最引人注目的是我們移除在原來範例中的連結，並且只使用清單項目作為頁籤—這樣做是因為對螢幕報讀器使用者比較少困擾(連結並非真正地帶妳到哪個地方；他們只是改變視窗)，並且可讓組件大小/位置在組件特徵中有很好的運作—當這些是放在連結上的時候，瀏覽器將維持報讀"1 of 1"，而非"1 of 3"、"2 of 3"等。
+> [!NOTE]
+> 這裡最引人注目的是我們移除在原來範例中的連結，並且只使用清單項目作為頁籤—這樣做是因為對螢幕報讀器使用者比較少困擾(連結並非真正地帶妳到哪個地方；他們只是改變視窗)，並且可讓組件大小/位置在組件特徵中有很好的運作—當這些是放在連結上的時候，瀏覽器將維持報讀"1 of 1"，而非"1 of 3"、"2 of 3"等。
 
 新的特徵如下：
 
@@ -412,7 +420,8 @@ function toggleMusician(bool) {
 
 在我們的測試中，這些新的結構確實提供整體的改善。頁籤現在被認定為頁籤（如螢幕報讀器讀出「索引標籤」），被選取的頁籤以「已選取」指出並讀出頁籤的名稱，螢幕報讀器也告訴你目前所在的頁籤數目。此外，因為設置 `aria-hidden`（只有非隱藏的頁籤才設定 `aria-hidden="false"`），非隱藏的頁籤是唯一你可以向下導覽的內容，意即所選取的內容很容易找到。
 
-> **備註：** 如果有任何你很明確地不希望螢幕報讀器讀出的內容，你可賦予它們 `aria-hidden="true"` 屬性。
+> [!NOTE]
+> 如果有任何你很明確地不希望螢幕報讀器讀出的內容，你可賦予它們 `aria-hidden="true"` 屬性。
 
 ## 總結
 

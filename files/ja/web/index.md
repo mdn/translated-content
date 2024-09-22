@@ -2,7 +2,7 @@
 title: 開発者向けのウェブ技術
 slug: Web
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: 0eab51ab27144f978646f44eeb0f3b91910aa2e1
 ---
 
 <section id="Quick_links">
@@ -56,6 +56,8 @@ l10n:
   - : ウェブアプリマニフェストにより、縦画面/横画面の方向や表示モード（全画面など）をあらかじめ設定し、ユーザーの機器のホーム画面へウェブアプリケーションをインストールすることができます。
 - [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps)
   - : プログレッシブウェブアプリは、ネイティブアプリのような使い勝手をもたらします。
+- [用語集](/ja/docs/Glossary)
+  - : ウェブ関連用語の定義。
 
 ## 開発者ツールの文書
 

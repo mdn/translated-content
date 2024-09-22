@@ -24,14 +24,14 @@ data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作�
 
 例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
-```
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```js
+const blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 根据行、列读取某像素点的 R/G/B/A 值的公式：
 
-```
-imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
+```js
+imageData.data[50 * (imageData.width * 4) + 200 * 4 + 0 / 1 / 2 / 3];
 ```
 
 你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以字节为单位）：
@@ -66,7 +66,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 这个方法会返回一个 `ImageData` 对象，它代表了画布区域的对象数据，此画布的四个角落分别表示为 (`left`, `top`), (`left + width`, `top`), (`left`, `top + height`), 以及 (`left + width`, `top + height`) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
+> [!NOTE]
+> 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
 
 这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 

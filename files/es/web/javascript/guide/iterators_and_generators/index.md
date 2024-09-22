@@ -54,7 +54,7 @@ console.log(it.next().done); // true
 
 ## Generadores
 
-Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Objetos_globales/Generador","generadores","","true")}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
+Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Objetos_globales/Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
 
 Una función generadora (constructor GeneratorFunction) es un tipo especial de función que sirve como una fábrica de iteradores. Cuando se ejecuta, regresa un nuevo objeto Generador. Una función se convierte en una Función Generadora si utiliza la sintáxis {{jsxref("Sentencias/function*","function*")}}.
 
@@ -110,7 +110,7 @@ for (let valor of miIterable) {
 
 ### Sintaxis que esperan objetos iterables
 
-Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Sentencias/for...of","for-of")}}, {{jsxref("Operadores/Spread_operator","el operador de propagación")}}, {{jsxref("Operadores/yield*","yield*")}}, y {{jsxref("Operadores/Destructuring_assignment","la asignación por desestructuración","","true")}}.
+Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Sentencias/for...of","for-of")}}, {{jsxref("Operadores/Spread_operator","el operador de propagación")}}, {{jsxref("Operadores/yield*","yield*")}}, y {{jsxref("Operadores/Destructuring_assignment","la asignación por desestructuración","",1)}}.
 
 ```js
 for (let valor of ["a", "b", "c"]) {

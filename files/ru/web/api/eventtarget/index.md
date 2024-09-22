@@ -3,7 +3,7 @@ title: EventTarget
 slug: Web/API/EventTarget
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 **`EventTarget`** - это интерфейс, реализуемый объектами, которые могут генерировать события и могут иметь подписчиков на эти события.
 

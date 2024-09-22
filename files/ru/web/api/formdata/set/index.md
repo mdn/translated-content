@@ -3,13 +3,13 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод set() из интерфейса {{domxref("FormData")}} присваивает новое значение существующему ключу внутри объекта `FormData`, или добавляет ключ/значение если до этого они не были установлены.
 
 Разница между `set()` и {{domxref("FormData.append")}} в том, что если заданный ключ уже существует, `set()` заменит данные в нем на новые, а {{domxref("FormData.append")}} добавит новое значение к остальным в конец.
-
-> **Примечание:** Данный метод также доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -29,7 +29,8 @@ formData.set(name, value, filename);
 - `filename`{{optional_inline}}
   - : Имя файла, которое будет отправлено серверу ([`USVString`](/ru/docs/Web/API/USVString)), когда [`Blob`](/ru/docs/Web/API/Blob) или [`File`](/ru/docs/Web/API/File) прошёл проверку как второй параметр. Стандартное имя файла для [`Blob`](/ru/docs/Web/API/Blob) объектов это "blob".
 
-> **Примечание:** Если вы укажете [`Blob`](/ru/docs/Web/API/Blob) в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
+> [!NOTE]
+> Если вы укажете [`Blob`](/ru/docs/Web/API/Blob) в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
 
 ## Пример
 
@@ -54,7 +55,7 @@ formData.set("userpic", myFileInput.files[0], "chris.jpg");
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
 - [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

@@ -75,7 +75,8 @@ l10n:
 
 {{EmbedLiveSample('Web app search')}}
 
-> **メモ:** JavaScript を使用していないユーザーもいること、そして JavaScript が正常にダウンロードされ、解釈され、実行されるまでは、どのユーザーも JavaScript を実行していないことを忘れずにしてください。ユーザーが JavaScript を無効にしていても、確実にサイトのコンテンツにアクセスできるように保証してください。
+> [!NOTE]
+> JavaScript を使用していないユーザーもいること、そして JavaScript が正常にダウンロードされ、解釈され、実行されるまでは、どのユーザーも JavaScript を実行していないことを忘れずにしてください。ユーザーが JavaScript を無効にしていても、確実にサイトのコンテンツにアクセスできるように保証してください。
 
 ### 複数の検索
 
@@ -126,7 +127,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>

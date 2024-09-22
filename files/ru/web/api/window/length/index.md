@@ -1,30 +1,30 @@
 ---
-title: Window.length
+title: "Window: свойство length"
 slug: Web/API/Window/length
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-## Сводка
+Возвращает число фреймов (как {{HTMLElement("frame")}} так и {{HTMLElement("iframe")}} ) в окне.
 
-Возвращает кол-во фреймов (например {{HTMLElement("frame")}} или {{HTMLElement("iframe")}}) в текущем окне.
+## Значение
 
-## Синтаксис
-
-```
-framesCount = window.length;
-```
-
-- `framesCount` - кол-во фреймов на странице.
+Число.
 
 ## Пример
 
 ```js
 if (window.length) {
-  // Этот документ содержит фреймы
+  // этот документ содержит фреймы
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

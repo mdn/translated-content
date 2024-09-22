@@ -1,9 +1,11 @@
 ---
 title: FileSystemSyncAccessHandle
 slug: Web/API/FileSystemSyncAccessHandle
+l10n:
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 {{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemSyncAccessHandle`** 接口用于表示一个指向某个文件系统条目的同步句柄。
 
@@ -13,7 +15,8 @@ slug: Web/API/FileSystemSyncAccessHandle
 
 这个接口通过 {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} 方法来访问。
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
+> [!NOTE]
+> 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 实例属性
 
@@ -52,7 +55,7 @@ onmessage = async (e) => {
   // 获取草稿文件的句柄
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
-  // Get sync access handle
+  // 获取同步访问句柄
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // 获取文件的大小
@@ -69,7 +72,7 @@ onmessage = async (e) => {
   // 将更改持久化至磁盘
   accessHandle.flush();
 
-  // 用完 FileSystemSyncAccessHandle 后记得把它关闭
+  // 如果完成，请始终关闭 FileSystemSyncAccessHandle
   accessHandle.close();
 };
 ```
@@ -85,4 +88,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

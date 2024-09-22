@@ -1,15 +1,17 @@
 ---
-title: SpeechRecognitionEvent.emma
+title: "SpeechRecognitionEvent: emma プロパティ"
+short-title: emma
 slug: Web/API/SpeechRecognitionEvent/emma
 l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`emma`** は {{domxref("SpeechRecognitionEvent")}} インターフェイスの読み取り専用プロパティで、結果の Extensible MultiModal Annotation markup language (EMMA) — XML — 表現を返します。
 
-> **メモ:** EMMA は [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/) 仕様書で定められています。この仕様書に複数の EMMA の例があります。
+> [!NOTE]
+> EMMA は [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/) 仕様書で定められています。この仕様書に複数の EMMA の例があります。
 
 ## 値
 

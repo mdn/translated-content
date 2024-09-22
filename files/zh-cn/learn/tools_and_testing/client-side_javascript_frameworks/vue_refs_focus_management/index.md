@@ -155,7 +155,8 @@ Vue 让你在这个生命周期的不同阶段使用**生命周期方法**运行
 9. `activated()`：只用于用特殊的 `keep-alive` 标签包装的组件。在组件被激活后运行。
 10. `deactivated()`：只用于用特殊的 `keep-alive` 标签包装的组件。在组件被停止激活后运行。
 
-> **备注：** Vue 文档提供了一个[很好的图表，可以直观地看到这些钩子何时发生](https://cn.vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)。这篇文章来自 [Digital Ocean 社区博客，更深入地探讨了生命周期方法](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle)。
+> [!NOTE]
+> Vue 文档提供了一个[很好的图表，可以直观地看到这些钩子何时发生](https://cn.vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)。这篇文章来自 [Digital Ocean 社区博客，更深入地探讨了生命周期方法](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle)。
 
 现在我们已经了解了生命周期方法，让我们用一个方法在我们的 `ToDoItemEditForm` 组件被安装时触发焦点。
 
@@ -223,6 +224,7 @@ deleteToDo(toDoId) {
 
 这就是使用 Vue 进行焦点管理的全部内容，同时也是我们的应用的全部内容！恭喜你完成了我们所有的 Vue 教程。在下一篇文章中，我们将用一些进一步的资源来结束你的 Vue 学习。
 
-> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 todo-vue 仓库中找到一个完成版本的 Vue 应用示例代码。关于运行中的实时版本，请看 <https://mdn.github.io/todo-vue/>。
+> [!NOTE]
+> 如果你需要对照我们的版本检查你的代码，你可以在我们的 todo-vue 仓库中找到一个完成版本的 Vue 应用示例代码。关于运行中的实时版本，请看 <https://mdn.github.io/todo-vue/>。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

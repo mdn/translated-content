@@ -22,8 +22,8 @@ slug: Web/HTML/Element/article
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
-   <th scope="row"><dfn>标记省略</dfn></th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>

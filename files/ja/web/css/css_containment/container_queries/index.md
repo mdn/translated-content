@@ -1,7 +1,6 @@
 ---
 title: CSS コンテナークエリー
 slug: Web/CSS/CSS_containment/Container_queries
-original_slug: Web/CSS/CSS_container_queries
 ---
 
 {{CSSRef}}
@@ -47,7 +46,7 @@ original_slug: Web/CSS/CSS_container_queries
 ```
 
 次に、 {{cssxref("@container")}} アットルールを使用してコンテナークエリーを定義します。
-次の例のクエリーは、格納コンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルを適用します。
+次の例のクエリーは、コンテナーコンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルを適用します。
 具体的には、このクエリーは、コンテナーの幅が `700px` よりも広い場合、カードのタイトルに大きなフォントサイズを適用します。
 
 ```css
@@ -69,7 +68,7 @@ original_slug: Web/CSS/CSS_container_queries
 
 コンテナークエリーの構文の詳細については、 {{cssxref("@container")}} のページを参照してください。
 
-### 格納コンテキストの命名
+### コンテナーコンテキストの命名
 
 前の節では、コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先に基づいてスタイル設定を適用しました。
 {{Cssxref("container-name")}} プロパティを使用して、コンテナーコンテキストに名前を付けることが可能です。一度名前をつけると、その名前を `@container` クエリーで使用することができ、特定のコンテナーを対象とすることができます。
@@ -82,7 +81,7 @@ original_slug: Web/CSS/CSS_container_queries
 }
 ```
 
-そして、 `@container` アットルールを用いて、この格納コンテキストを対象とすることができます。
+そして、 `@container` アットルールを用いて、このコンテナーコンテキストを対象とすることができます。
 
 ```css
 @container sidebar (min-width: 700px) {
@@ -94,7 +93,7 @@ original_slug: Web/CSS/CSS_container_queries
 
 コンテナーコンテキストの命名に関する詳細情報は、 {{cssxref("container-name")}} ページにあります。
 
-### コンテナー一の括指定構文
+### コンテナーの一括指定構文
 
 コンテナーを宣言するための一括指定は `container` プロパティを使用します。
 

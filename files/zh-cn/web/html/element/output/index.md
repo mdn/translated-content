@@ -18,8 +18,8 @@ slug: Web/HTML/Element/output
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
   </tr>
   <tr>
-   <th scope="row">省略标签</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许父元素</th>

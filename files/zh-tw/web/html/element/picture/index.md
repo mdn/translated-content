@@ -29,7 +29,7 @@ slug: Web/HTML/Element/picture
 | [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                             | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
-| Tag omission                                                  | {{no_tag_omission}}                                                                                                                                     |
+| 標籤省略                                                      | 不允許，開始和結束標籤都是必須的。                                                                                                                      |
 | Permitted parents                                             | Any element that allows embedded content.                                                                                                               |
 | Implicit ARIA role                                            | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                     |
 | Permitted ARIA roles                                          | No `role` permitted                                                                                                                                     |
@@ -43,7 +43,8 @@ slug: Web/HTML/Element/picture
 
 你可以使用 {{cssxref("object-position")}} 屬性來在元素的 frame 內調整圖片位置，也可以用 {{cssxref("object-fit")}} 屬性控制圖片在 frame 內如何調整大小。
 
-> **備註：** 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
+> [!NOTE]
+> 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
 
 ## 範例
 

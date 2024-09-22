@@ -3,7 +3,7 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
 

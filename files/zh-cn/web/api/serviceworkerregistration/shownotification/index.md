@@ -2,14 +2,12 @@
 title: ServiceWorkerRegistration：showNotification() 方法
 slug: Web/API/ServiceWorkerRegistration/showNotification
 l10n:
-  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 {{domxref("ServiceWorkerRegistration")}} 接口的 **`showNotification()`** 方法在一个活动状态下的 Service Worker 上创建通知。
-
-{{AvailableInWorkers}}
 
 ## 语法
 

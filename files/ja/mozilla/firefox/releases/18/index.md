@@ -54,7 +54,7 @@ Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。
 ### ネットワーク
 
 - HTTPの `Accept-Language` ヘッダーの Quality プロパティ ("q-values") は 2 桁に丸められるようになりました。 ([Firefox バグ 672448](https://bugzil.la/672448))
-- [`X-FRAME-OPTIONS`](/ja/docs/Web/HTTP/Headers/X-Frame-Options) HTTP レスポンスヘッダの `ALLOW-FROM` 構文がサポートされました。([Firefox バグ 690168](https://bugzil.la/690168))
+- [`X-FRAME-OPTIONS`](/ja/docs/Web/HTTP/Headers/X-Frame-Options) HTTP レスポンスヘッダーの `ALLOW-FROM` 構文がサポートされました。([Firefox バグ 690168](https://bugzil.la/690168))
 
 ### 開発者ツール
 
@@ -67,7 +67,7 @@ Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。
 - `nsIUploadChannel`
   - : `setUploadStream()` が 2GB を超える content-length をサポートしました。([Firefox バグ 790617](https://bugzil.la/790617))
 - `nsIEditor`
-  - : `addEditorObserver()` が削除されました。代わりに `setEditorObserver()` を使ってください。 `removeEditorObserver()` は `nsIEditorObserver` パラメータを受け取らなくなります。([Firefox バグ 785091](https://bugzil.la/785091))
+  - : `addEditorObserver()` が削除されました。代わりに `setEditorObserver()` を使ってください。 `removeEditorObserver()` は `nsIEditorObserver` 引数を受け取らなくなります。([Firefox バグ 785091](https://bugzil.la/785091))
 - `nsIHttpProtocolHandler`
   - : `http-on-modify-request` オブザーバが `nsIChannel.asyncOpen()` 中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバには新しく `http-on-opening-request` オブザーバトピックが追加されています`。詳細は`([Firefox バグ 800799](https://bugzil.la/800799))をご覧ください。
 - `nsIProtocolProxyService`

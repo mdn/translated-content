@@ -194,7 +194,7 @@ function Car(make, model, year) {
 var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
-该创建了 `mycar` 并且将指定的值赋给它的属性。因而 `mycar.make` 的值是字符串 "Eagle"， `mycar.year` 的值是整数 1993，依此类推。
+该语句创建了 `mycar` 并且将指定的值赋给它的属性。因而 `mycar.make` 的值是字符串 `"Eagle"`，`mycar.year` 的值是整数 `1993`，依此类推。
 
 你可以通过调用 `new` 创建任意数量的 `car` 对象。例如：
 
@@ -534,7 +534,8 @@ fruit == fruitbear; // return false
 fruit === fruitbear; // return false
 ```
 
-> **备注：** "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
+> [!NOTE]
+> "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
 
 ```js
 // 两个变量，同一个对象

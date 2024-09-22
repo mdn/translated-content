@@ -3,7 +3,7 @@ title: Web App Manifest
 slug: Web/Manifest
 ---
 
-{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。
 
@@ -107,7 +107,8 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 - `rtl`（右至左）
 - `auto`（讓瀏覽器根據 Unicode 雙向演算法對書寫方向做出最佳的猜測）
 
-> **備註：** 當省略其值時，預設為 `auto`。
+> [!NOTE]
+> 當省略其值時，預設為 `auto`。
 
 ### `display`
 
@@ -126,7 +127,8 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 | `minimal-ui` | 這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。                                                                             | `browser`         |
 | `browser`    | 預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。                                                                                                  | (None)            |
 
-> **備註：** 你能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於你的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
+> [!NOTE]
+> 你能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於你的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
 
 ### `icons`
 
@@ -205,7 +207,8 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 "prefer_related_applications": false
 ```
 
-> **備註：** 當省略其值時，預設為 `false。`
+> [!NOTE]
+> 當省略其值時，預設為 `false。`
 
 ### `related_applications`
 

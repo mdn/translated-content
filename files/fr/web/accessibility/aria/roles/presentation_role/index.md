@@ -3,6 +3,8 @@ title: Utiliser le rôle presentation
 slug: Web/Accessibility/ARIA/Roles/presentation_role
 ---
 
+{{AccessibilitySidebar}}
+
 Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
 
 ## Description
@@ -13,7 +15,8 @@ Le rôle `presentation` est utilisé pour retirer toute représentation sémanti
 
 Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle `presentation`.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ## Exemples
 

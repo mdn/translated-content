@@ -3,6 +3,8 @@ title: Rendimiento Web
 slug: Web/Performance
 ---
 
+{{QuickLinksWithSubPages}}
+
 El rendimiento web es la medición objetiva y la experiencia percibida por el usuario del tiempo de carga y el tiempo de ejecución; es el tiempo que tarda un sitio en cargarse, ser interactivo y responsivo, y que tan fluido es el contenido durante las interacciones del usuario: ¿el desplazamiento es suave? ¿Se puede hacer clic en los botones? ¿Las ventanas emergentes se abren rápidamente y se animan fluidamente al hacerlo? El rendimiento web incluye mediciones objetivas como el tiempo de carga, cuadros por segundo y tiempo para interactuar y subjetivas de cuánto tiempo se sintió que tardó en cargarse el contenido.
 
 Cuanto más tarde un sitio en responder, más usuarios abandonarán el sitio. Es importante minimizar los tiempos de carga y respuesta, y agregar funciones adicionales para ocultar la latencia al hacer que la experiencia sea lo más accesible e interactiva posible, tan pronto como sea posible, mientras se carga de forma asíncrona en las partes que más tarda la experiencia.

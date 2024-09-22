@@ -2,12 +2,12 @@
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`size`** 접근자 속성은 {{jsxref("Map")}} 객체의 요소 수를 반환합니다.
+{{jsxref("Map")}} 인스턴스의 **`size`** 접근자 속성은 이 Map 객체의 요소 수를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 

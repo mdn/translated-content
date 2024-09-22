@@ -1,8 +1,9 @@
 ---
-title: WorkerGlobalScope.self
+title: "WorkerGlobalScope: self プロパティ"
+short-title: self
 slug: Web/API/WorkerGlobalScope/self
 l10n:
-  sourceCommit: 74f46a45c075037d7591a6cdbda96734b5b6f7fd
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{APIRef("Web Workers API")}}
@@ -23,7 +24,7 @@ console.log(self);
 
 コンソールに書き込まれたワーカーオブジェクトと同じ型のワーカーグローバルスコープが取得されます。ある時は次のようになります。
 
-```
+```plain
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity

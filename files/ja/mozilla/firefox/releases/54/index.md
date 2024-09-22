@@ -23,14 +23,14 @@ Firefox 54 は、米国時間 2017 年 6 月 13 日にリリースされまし�
 - Mozilla がコンテンツ専用のスレッドを (Electrolysis または e10s プロジェクトで) Firefox に導入したとき、{{HTMLElement("option")}} 要素へのスタイル設定機能のを一時的に削除しました。Firefox 54 より {{cssxref("color")}} および {{cssxref("background-color")}} プロパティを使用して、`<option>` 要素に再び前景色や背景色を設定できるようになりました。詳しくは [Firefox バグ 910022](https://bugzil.la/910022) をご覧ください。Linux では、コントラストが不足するためまだ無効化していますので注意してください (進捗状況は [Firefox バグ 1338283](https://bugzil.la/1338283) で確認してください)。
 - [CSS Animations](/ja/docs/Web/CSS/CSS_Animations) でアニメーションが早期に終了したとき、想定どおりに {{domxref("Element/animationcancel_event", "animationcancel")}} イベントが発生するようになりました ([Firefox バグ 1302648](https://bugzil.la/1302648))。
 - 透過色 (すなわち、アルファチャンネルが 0 である色) が、特定の状況 で [`transparent` 色キーワード](/ja/docs/Web/CSS/color_value#transparent_keyword) にシリアライズされていました。これを、仕様書や他のブラウザーの実装に従うよう修正しました。詳しくは [Firefox バグ 1339394](https://bugzil.la/1339394) をご覧ください。
-- 独自仕様である `:-moz-table-border-nonzero` 疑似クラスが、ウェブコンテンツで使用できなくなりました。Firefox 内部の UA スタイルシートのみに制限されています ([Firefox バグ 1341925](https://bugzil.la/1341925))。
+- 独自仕様である `:-moz-table-border-nonzero` 擬似クラスが、ウェブコンテンツで使用できなくなりました。Firefox 内部の UA スタイルシートのみに制限されています ([Firefox バグ 1341925](https://bugzil.la/1341925))。
 - \[css-grid] overflow:auto を指定したコンテンツがグリッド内で重なり合う問題を修正しました ([Firefox バグ 1348857](https://bugzil.la/1348857))。
 - \[css-grid] 固有の比率を持つ、サイズをパーセンテージで指定したグリッドアイテムに対する、Transferred min-size の寄与に関する問題を修正しました ([Firefox バグ 1349320](https://bugzil.la/1349320))。
 
 ### JavaScript
 
 - `"u"` (Unicode) フラグと `"i"` (大文字・小文字を無視) フラグを設定した {{jsxref("RegExp")}} で `\b` および `\B` は、U+017F (LATIN SMALL LETTER LONG S) および U+212A (KELVIN SIGN) を単語に使用される文字として扱うようになりました ([Firefox バグ 1338373](https://bugzil.la/1338373))。
-- {{jsxref("DataView")}} コンストラクターで、`byteOffset` パラメーターが {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) の範囲外であるときに {{jsxref("RangeError")}} が発生するようになりました ([Firefox バグ 1317382](https://bugzil.la/1317382))。
+- {{jsxref("DataView")}} コンストラクターで、`byteOffset` 引数が {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) の範囲外であるときに {{jsxref("RangeError")}} が発生するようになりました ([Firefox バグ 1317382](https://bugzil.la/1317382))。
 - {{jsxref("Date.UTC()")}} メソッドで引数が 2 個未満である場合の動作を、ECMAScript 2017 に準拠するように更新しました ([Firefox バグ 1050755](https://bugzil.la/1050755))。
 - {{jsxref("Function.prototype.toString()")}} メソッドを、最新の [仕様案](https://tc39.es/Function-prototype-toString-revision/) に準拠するよう更新しました ([Firefox バグ 1317400](https://bugzil.la/1317400))。
 

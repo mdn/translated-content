@@ -57,7 +57,7 @@ blockquote {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -65,7 +65,7 @@ blockquote {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}

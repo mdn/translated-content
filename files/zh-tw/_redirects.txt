@@ -95,6 +95,7 @@
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Status/502
 /zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
+/zh-TW/docs/Glossary/Routers	/zh-TW/docs/Glossary/Router
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
 /zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/Character_encoding
@@ -350,7 +351,6 @@
 /zh-TW/docs/SVG/Tutorial/渐变	/zh-TW/docs/Web/SVG/Tutorial/Gradients
 /zh-TW/docs/SVG/教學	/zh-TW/docs/Web/SVG/Tutorial
 /zh-TW/docs/Security/MixedContent	/zh-TW/docs/Web/Security/Mixed_content
-/zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/zh-TW/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /zh-TW/docs/Security/弱簽章演算法	/zh-TW/docs/Web/Security/Weak_Signature_Algorithm
 /zh-TW/docs/Security/缺少安全性的密碼	/zh-TW/docs/Web/Security/Insecure_passwords
 /zh-TW/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -409,6 +409,7 @@
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/Web/API/Media_Streams_API	/zh-TW/docs/Web/API/Media_Capture_and_Streams_API
+/zh-TW/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/zh-TW/docs/Web/API/Navigator/registerProtocolHandler
 /zh-TW/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
@@ -489,6 +490,8 @@
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Schemes/data
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS
@@ -575,6 +578,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isFinite_函數	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isNaN_函數	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件	/zh-TW/docs/Web/JavaScript/Guide
+/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 /zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
 /zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays

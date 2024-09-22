@@ -9,8 +9,6 @@ slug: Glossary/Ligature
 
 你可使用 {{cssxref("font-variant-ligatures")}} 在自己的網頁上設計出連字。
 
-## Learn more
+## 參見
 
-### General knowledge
-
-- [Ligature](https://zh.wikipedia.org/wiki/Typographic_ligature) on Wikipedia
+- 維基百科上的[連字](https://zh.wikipedia.org/wiki/合字)

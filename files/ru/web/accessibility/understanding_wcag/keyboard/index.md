@@ -3,13 +3,16 @@ title: Русский
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
 ---
 
+{{AccessibilitySidebar}}
+
 Чтобы веб-страница была полностью доступной, она должна быть управляема кем-то, кто использует только клавиатуру для доступа к ней и управления ею. Сюда входят пользователи программ чтения с экрана, но также могут быть пользователи, у которых есть проблемы с использованием указывающего устройства, такого как мышь или трекбол, или у которых мышь не работает в данный момент, или которые просто предпочитают использовать клавиатуру для ввода, когда это возможно.
 
 Фокусируемые элементы должны иметь интерактивную семантику
 
 Если элемент можно сфокусировать с помощью клавиатуры, он должен быть интерактивным; то есть пользователь должен иметь возможность что-то сделать с ним и произвести какое-либо изменение (например, активировать ссылку или изменить параметр).
 
-> **Примечание:** One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
+> [!NOTE]
+> One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
 
 Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
 

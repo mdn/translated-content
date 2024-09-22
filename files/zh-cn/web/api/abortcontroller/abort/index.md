@@ -1,11 +1,13 @@
 ---
-title: AbortController.abort()
+title: AbortController：abort() 方法
 slug: Web/API/AbortController/abort
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("AbortController")}} 接口的 **`abort()`** 方法会在 DOM 请求完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。
+{{domxref("AbortController")}} 接口的 **`abort()`** 方法会在一个异步操作完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。
 
 ## 语法
 
@@ -57,7 +59,8 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当 `abort()` 被调用时，`fetch()` promise 将会抛出 `DOMException` 类型的 `Error`（名称为 `AbortError`）。
+> [!NOTE]
+> 当 `abort()` 被调用时，`fetch()` promise 将会抛出 `DOMException` 类型的 `Error`（名称为 `AbortError`）。
 
 你可以在 github 上找到[完整的工作示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 

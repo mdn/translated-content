@@ -33,7 +33,8 @@ A segurança efetiva do site requer um esforço de design em todo o site: em sua
 
 O restante deste artigo fornece mais detalhes sobre algumas ameaças comuns e algumas das etapas simples que você pode executar para proteger seu site.
 
-> **Nota:** Este é um tópico introdutório projetado para ajudá-lo a começar a pensar na segurança do site, mas não é exaustivo.
+> [!NOTE]
+> Este é um tópico introdutório projetado para ajudá-lo a começar a pensar na segurança do site, mas não é exaustivo.
 
 ## Ameaças à segurança do site
 
@@ -43,11 +44,12 @@ Esta seção lista apenas algumas das ameaças mais comuns do site e como elas s
 
 XSS é um termo usado para descrever uma classe de ataques que permitem que um invasor injete scripts do lado do cliente _através_ do site nos navegadores de outros usuários. Como o código injetado chega ao navegador a partir do site, o código é _confiável_ e pode fazer coisas como enviar o cookie de autorização do site do usuário ao invasor. Quando o invasor possui o cookie, ele pode fazer login em um site como se fosse o usuário e fazer tudo que o usário pode, como acessar os detalhes do cartão de crédito, ver detalhes do contato ou alterar senhas.
 
-> **Nota:** As vulnerabilidades XSS têm sido historicamente mais comuns do que qualquer outro tipo de ameaça à segurança.
+> [!NOTE]
+> As vulnerabilidades XSS têm sido historicamente mais comuns do que qualquer outro tipo de ameaça à segurança.
 
 As vulnerabilidades do XSS são divididas em _refletidas_ e _persistentes_, de acordo como o site retorna os scripts injetados para um navegador.
 
-- Uma vulnerabilidade XSS _refletida_ ocorre quando o conteúdo do usuário passado para o servidor é retornado _imediatamente_ e _não é modificado_ para exibição no navegador. Quaisquer scripts no conteúdo original do usuário serão executados quando a nova página for carregada. Por exemplo, considere uma função de pesquisa no site em que os termos de pesquisa são codificados como parâmetros de URL e esses termos são exibidos junto com os resultados. Um invasor pode construir um link de pesquisa que contenha um script malicioso como parâmetro (por exemplo, `http://sitedecompra.com?q=produto<script%20src="http://sitedomal.com/trapaca.js">`) e enviar por e-mail para outro usuário. Se o usuário alvo clicar nesse "link interessante", o script será executado quando os resultados da pesquisa forem exibidos. Conforme discutido anteriormente, isso fornece ao invasor todas as informações necessárias para entrar no site como usuário alvo, potencialmente fazendo compras como o usuário ou compartilhando suas informações de contato.
+- Uma vulnerabilidade XSS _refletida_ ocorre quando o conteúdo do usuário passado para o servidor é retornado _imediatamente_ e _não é modificado_ para exibição no navegador. Quaisquer scripts no conteúdo original do usuário serão executados quando a nova página for carregada. Por exemplo, considere uma função de pesquisa no site em que os termos de pesquisa são codificados como parâmetros de URL e esses termos são exibidos junto com os resultados. Um invasor pode construir um link de pesquisa que contenha um script malicioso como parâmetro (por exemplo, `https://developer.mozilla.org?q=beer<script%20src="http://example.com/tricky.js"></script>`) e enviar por e-mail para outro usuário. Se o usuário alvo clicar nesse "link interessante", o script será executado quando os resultados da pesquisa forem exibidos. Conforme discutido anteriormente, isso fornece ao invasor todas as informações necessárias para entrar no site como usuário alvo, potencialmente fazendo compras como o usuário ou compartilhando suas informações de contato.
 - Uma vulnerabilidade _persistente_ do XSS ocorre quando o script mal-intencionado é armazenado no site e posteriormente exibido novamente sem modificação para que outros usuários executem sem querer. Por exemplo, um quadro de discussão que aceita comentários que contêm HTML não modificado pode armazenar um script mal-intencionado de um invasor. Quando os comentários são exibidos, o script é executado e pode enviar ao invasor as informações necessárias para acessar a conta do usuário. Esse tipo de ataque é extremamente popular e poderoso, porque o invasor pode até não ter nenhum envolvimento direto com as vítimas.
 
 Embora os dados das solicitações `POST` ou `GET` sejam a fonte mais comum de vulnerabilidades XSS, qualquer dado do navegador é potencialmente vulnerável, como dados de cookies renderizados pelo navegador ou arquivos de usuário que são carregados e exibidos.
@@ -78,7 +80,8 @@ A instrução modificada cria uma instrução SQL válida que exclui a tabela de
 
 Para evitar esse tipo de ataque, você deve garantir que os dados do usuário passados para uma consulta SQL não possam alterar a natureza da consulta. Uma maneira de fazer isso é utilizar '[escape](https://pt.wikipedia.org/wiki/Caractere_de_escape)' em todos os caracteres na entrada do usuário que tenham um significado especial no SQL.
 
-> **Nota:** A instrução SQL trata o caractere **'** como o início e o final de uma cadeia de caracteres literal. Ao colocar uma barra invertida na frente desse caractere (**\\'**), "escapamos" do símbolo e dizemos ao SQL para tratá-lo como um caractere (apenas uma parte da string).
+> [!NOTE]
+> A instrução SQL trata o caractere **'** como o início e o final de uma cadeia de caracteres literal. Ao colocar uma barra invertida na frente desse caractere (**\\'**), "escapamos" do símbolo e dizemos ao SQL para tratá-lo como um caractere (apenas uma parte da string).
 
 Na declaração a seguir, escapamos o caractere **'**. O SQL agora interpretará o nome como toda a string em negrito (que é um nome muito estranho, mas não prejudicial).
 
@@ -88,7 +91,8 @@ SELECT * FROM usarios WHERE name = 'a\';DROP TABLE usuarios; SELECT * FROM useri
 
 _Frameworks web_ geralmente cuidam do caractere que está escapando para você. O Django, por exemplo, garante que todos os dados do usuário passados para os conjuntos de consultas (consultas de modelo) sejam escapados.
 
-> **Nota:** Esta seção baseia-se fortemente nas informações da [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> Esta seção baseia-se fortemente nas informações da [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Cross-Site Request Forgery (CSRF)
 
@@ -100,7 +104,8 @@ Se um usuário clicar no botão enviar, uma solicitação HTTP `POST` será envi
 
 O resultado é que qualquer usuário que clicar no botão _Enviar_ enquanto estiver conectado ao site de negociação fará a transação. John fica rico.
 
-> **Nota:** O truque aqui é que John não precisa ter acesso aos cookies do usuário (ou credenciais de acesso). O navegador do usuário armazena essas informações e as inclui automaticamente em todas as solicitações ao servidor associado.
+> [!NOTE]
+> O truque aqui é que John não precisa ter acesso aos cookies do usuário (ou credenciais de acesso). O navegador do usuário armazena essas informações e as inclui automaticamente em todas as solicitações ao servidor associado.
 
 Uma maneira de impedir esse tipo de ataque é o servidor exigir que as solicitações `POST` incluam um segredo gerado pelo site específico do usuário. O segredo seria fornecido pelo servidor ao enviar o formulário da web usado para fazer transferências. Essa abordagem impede John de criar seu próprio formulário, uma vez que ele precisaria conhecer o segredo que o servidor está fornecendo ao usuário. Mesmo se descobrisse o segredo e criasse um formulário para um usuário específico, ele não seria mais capaz de usar o mesmo formulário para atacar todos os usuários.
 
@@ -122,7 +127,8 @@ Para obter uma lista abrangente das ameaças à segurança do site, consulte [Ca
 
 Quase todas as explorações de segurança nas seções anteriores são bem-sucedidas quando a aplicação web confia nos dados do navegador. Tudo o que você fizer para melhorar a segurança do seu site, você deve limpar todos os dados originados pelo usuário antes de serem exibidos no navegador, usados em consultas SQL ou passados para um sistema operacional ou para uma chamada do sistema de arquivos.
 
-> **Aviso:** Importante: A lição mais importante que você pode aprender sobre segurança do site é nunca confiar nos dados do navegador. Isso inclui, mas não se limita a dados nos parâmetros de URL de solicitações `GET`, `POST`, cabeçalhos HTTP, cookies e arquivos enviados por usuários. Sempre verifique e limpe todos os dados recebidos. Sempre assuma o pior.
+> [!WARNING]
+> Importante: A lição mais importante que você pode aprender sobre segurança do site é nunca confiar nos dados do navegador. Isso inclui, mas não se limita a dados nos parâmetros de URL de solicitações `GET`, `POST`, cabeçalhos HTTP, cookies e arquivos enviados por usuários. Sempre verifique e limpe todos os dados recebidos. Sempre assuma o pior.
 
 Uma série de outras etapas concretas que você pode executar são:
 

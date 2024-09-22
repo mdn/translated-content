@@ -3,6 +3,8 @@ title: FileHandle API
 slug: Web/API/File_and_Directory_Entries_API
 ---
 
+{{DefaultAPISidebar("File and Directory Entries API")}}
+
 FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [File](/zh-TW/docs/DOM/File) API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。
 
 ## API
@@ -172,4 +174,4 @@ interface FileRequest : DOMRequest
 
 ### API 與 FileWriter 的差異？
 
-[FileWriter 規格](http://dev.w3.org/2009/dap/file-system/file-writer.html)定義了 FileWriter，也就是用以呈現「可編輯的檔案」的物件。[Public-webapps 討論串](http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html)則下了結論：若單一檔案同時寫入不同的實體 (Entity)，將導致 API 成效不彰。最後就是 FileHandle API 應具備自己的 LockedFile 與交易機制。
+[FileWriter 規格](https://dev.w3.org/2009/dap/file-system/file-writer.html)定義了 FileWriter，也就是用以呈現「可編輯的檔案」的物件。[Public-webapps 討論串](https://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html)則下了結論：若單一檔案同時寫入不同的實體 (Entity)，將導致 API 成效不彰。最後就是 FileHandle API 應具備自己的 LockedFile 與交易機制。

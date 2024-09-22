@@ -13,9 +13,11 @@ Para construir um `Blob` a partir de outro objeto ou dado não-blob , utilize o 
 
 As APIs que aceitam objetos `Blob` também são listados na documentação {{domxref("File")}}.
 
-> **Nota:** O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
+> [!NOTE]
+> O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
 
-> **Nota:** Esteja ciente que o método `slice()` possui prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice()` para Firefox 12 e anteriores, e `blob.webkitSlice()` para Safari. Uma versão antiga do método `slice()`, sem prefixos de fornecedor, tem semântica diferente, e portanto é obsoleta. O suporta para `blob.mozSlice()` foi descontinuado a partir do Firefox 30.
+> [!NOTE]
+> Esteja ciente que o método `slice()` possui prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice()` para Firefox 12 e anteriores, e `blob.webkitSlice()` para Safari. Uma versão antiga do método `slice()`, sem prefixos de fornecedor, tem semântica diferente, e portanto é obsoleta. O suporte para `blob.mozSlice()` foi descontinuado a partir do Firefox 30.
 
 ## Construtor
 
@@ -54,7 +56,8 @@ oBuilder.append(aFileParts[0]);
 var oMyBlob = oBuilder.getBlob("text/xml"); // o blob
 ```
 
-> **Aviso:** O {{ domxref("BlobBuilder") }} oferece outra maneira para criar Blobs, mas é depreciado e não deveria mais ser usado.
+> [!WARNING]
+> O {{ domxref("BlobBuilder") }} oferece outra maneira para criar Blobs, mas é depreciado e não deveria mais ser usado.
 
 ### Exemplo para criar uma URL para uma array tipada usando blob
 

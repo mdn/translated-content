@@ -3,6 +3,8 @@ title: Introducción
 slug: Web/API/Document_Object_Model/Introduction
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 Ésta sección da una breve introducción conceptual del [DOM](/es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](/es/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
 
 ## ¿Qué es el DOM?

@@ -88,9 +88,10 @@ function drawVRScene() {
 }
 ```
 
-> **Примечание:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> [!NOTE]
+> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -98,6 +99,6 @@ function drawVRScene() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebVR API](/ru/docs/Web/API/WebVR_API)

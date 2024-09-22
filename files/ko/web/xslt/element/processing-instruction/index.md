@@ -3,7 +3,7 @@ title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:processing-instruction>` 요소는 출력 문서에 처리 명령을 씁니다.
 

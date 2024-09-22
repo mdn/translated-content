@@ -9,11 +9,13 @@ l10n:
 
 **`VREyeParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、指定した目のためにシーンを正しくレンダリングするためのすべての情報（視界の情報を含む）を表します。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このインターフェイスは {{domxref("VRDisplay.getEyeParameters()")}} メソッドを通じてアクセスできます。
 
-> **警告:** このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxref("VRFrameData")}} で指定された行列を使用してください。
+> [!WARNING]
+> このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxref("VRFrameData")}} で指定された行列を使用してください。
 
 ## インスタンスプロパティ
 

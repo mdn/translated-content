@@ -3,7 +3,9 @@ title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
 
-**HTML-элемент `<optgroup>`** позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
+{{HTMLSidebar}}
+
+HTML-элемент **`<optgroup>`** позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                |
 | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,7 +15,8 @@ slug: Web/HTML/Element/optgroup
 | Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                |
 | DOM-интерфейс                                          | {{domxref("HTMLOptGroupElement")}}                                                                                                                                                 |
 
-> **Примечание:** Элементы optgroup не могут быть вложенными друг в друга.
+> [!NOTE]
+> Элементы optgroup не могут быть вложенными друг в друга.
 
 ## Атрибуты
 
@@ -58,5 +61,3 @@ slug: Web/HTML/Element/optgroup
 ## Смотрите также
 
 - Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
-
-{{HTMLSidebar}}

@@ -161,7 +161,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. 保存你的代码，将其加载到浏览器中，然后尝试。
 
-> **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
+> [!NOTE]
+> 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 
 在这一点上，我们希望你编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
 

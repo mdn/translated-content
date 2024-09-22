@@ -1,37 +1,52 @@
 ---
-title: Element.removeAttributeNS()
+title: Element：removeAttributeNS() 方法
 slug: Web/API/Element/removeAttributeNS
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`removeAttributeNS` 移除元素的指定属性
+{{domxref("Element")}} 接口的 **`removeAttributeNS()`** 方法从元素中移除指定命名空间的指定属性。
 
-在 Firefox 3 及更高版本中，此方法会将 DOM 值重置为其默认值。
+如果你正在处理 HTML，并且你不需要指定要移除的属性属于某个特定的命名空间，那么使用 {{domxref("Element.removeAttribute()", "removeAttribute()")}} 方法即可。
 
-## 用法
+## 语法
 
-```plain
-element.removeAttributeNS(namespace,attrName);
+```js-nolint
+removeAttributeNS(namespace, attrName)
 ```
 
-- `namespace` 包含当前属性的 namespace 字符串
-- `attrName` 当前移除的属性名字符串
+### 参数
 
-## 例子
+- `namespace`：一个表示包含该属性的命名空间的字符串。
+- `attrName`：一个表示要从当前节点移除的属性的名称的字符串。
 
-```plain
-// <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//      special:specialAlign="utterleft" width="200px" />
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+## 示例
+
+```js
+// 给定：
+//   <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//     special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
 d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// now: <div id="div1" width="200px" />
+// 现在：<div id="div1" width="200px" />
 ```
 
-## Notes
+## 规范
 
-{{ DOMAttributeMethods() }}
+{{Specifications}}
 
-## Specification
+## 浏览器兼容性
 
-[DOM Level 2 Core: removeAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}

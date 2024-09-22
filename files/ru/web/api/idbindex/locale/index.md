@@ -80,7 +80,7 @@ Not currently part of any specification.
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using IndexedDB](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}

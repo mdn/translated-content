@@ -1,24 +1,25 @@
 ---
-title: Document.hidden
+title: "Document: свойство hidden"
 slug: Web/API/Document/hidden
+l10n:
+  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Доступное только для чтения свойство **`Document.hidden`** возвращает булево значение, показывающее является ли страница скрытой или нет.
+Доступное только для чтения свойство **`Document.hidden`** возвращает логическое значение, указывающее, считается ли страница скрытой или нет.
 
-## Синтаксис
+Свойство {{domxref("Document.visibilityState")}} предоставляет альтернативный способ определить, скрыта ли страница.
 
-```
-var boolean = document.hidden
-```
+## Значение
 
-## Примеры
+Логическое значение, `true` если страница скрыта и `false` в противном случае.
+
+## Пример
 
 ```js
-document.addEventListener("visibilitychange", function () {
+document.addEventListener("visibilitychange", () => {
   console.log(document.hidden);
-  // Modify behavior...
 });
 ```
 
@@ -29,3 +30,7 @@ document.addEventListener("visibilitychange", function () {
 ## Совместимость с браузерами
 
 {{Compat}}
+
+## Смотрите также
+
+- {{domxref("Document.visibilityState")}}

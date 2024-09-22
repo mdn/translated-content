@@ -89,11 +89,11 @@ for (var prop in obj) {
 
 ## Поддержка: инициализатор переменных
 
-До SpiderMonkey 40, можно было инициализировать переменные (`i=0`) в цикле `for...in`:
+До SpiderMonkey 40, можно было инициализировать переменные (`i = 0`) в цикле `for...in`:
 
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
+```js-nolint example-bad
+var obj = { a: 1, b: 2, c: 3 };
+for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1

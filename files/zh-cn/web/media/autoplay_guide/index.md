@@ -3,6 +3,8 @@ title: 媒体和 Web Audio API 的自动播放指南
 slug: Web/Media/Autoplay_guide
 ---
 
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
+
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio API 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
 当源媒体没有音轨或音轨静音时，阻止自动播放*不会*应用于 {{HTMLElement("video")}} 元素。具有活动音轨的媒体被认为是**可听的**，并且阻止自动播放适用于它们。**听不见的**媒体不受阻止自动播放的影响。
@@ -41,9 +43,10 @@ audioElement.play();
 
 否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。
 
-详情，请参阅 [Google Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) 和 [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/) 的自动播放政策。
+详情，请参阅 [Google Chrome](https://developer.chrome.com/blog/autoplay/) 和 [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/) 的自动播放政策。
 
-> **备注：** 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。
+> [!NOTE]
+> 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。
 
 ## 能自动播放的媒体元素
 
@@ -99,13 +102,15 @@ function handleFirstPlay(event) {
 
 此时，你的网站或应用程序可以开始执行依赖于视频启动的任何操作。
 
-> **备注：** 此方法不区分自动播放和用户手动开始播放。
+> [!NOTE]
+> 此方法不区分自动播放和用户手动开始播放。
 
 ### play() 方法
 
 术语“自动播放”还指脚本尝试在处理用户输入事件的上下文之外触发包含音频的媒体播放的场景。这是通过调用媒体元素的 {{domxref("HTMLMediaElement.play", "play()")}} 方法来完成的。
 
-> **备注：** 强烈建议你尽可能使用 `autoplay` 属性，因为 `autoplay` 属性对自动播放首选项的支持比其他自动播放媒体的方式更广泛。它还让浏览器负责开始播放，并优化播放的时间。
+> [!NOTE]
+> 强烈建议你尽可能使用 `autoplay` 属性，因为 `autoplay` 属性对自动播放首选项的支持比其他自动播放媒体的方式更广泛。它还让浏览器负责开始播放，并优化播放的时间。
 
 #### 示例：播放视频
 
@@ -157,7 +162,8 @@ if (startPlayPromise !== undefined) {
 
 你还可以指定 `'none'` 以完全禁用自动播放，`'*'` 以允许来自所有域的自动播放，或指定一个或多个可以自动播放媒体的特定来源。这些来源由空格字符分隔。
 
-> **备注：** 指定的功能策略适用于文档以及嵌套在其中的每个 {{HTMLElement("iframe")}}，除非这些框架包含为该框架以及嵌套在其中的所有框架设置新的功能策略的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)。
+> [!NOTE]
+> 指定的功能策略适用于文档以及嵌套在其中的每个 {{HTMLElement("iframe")}}，除非这些框架包含为该框架以及嵌套在其中的所有框架设置新的功能策略的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)。
 
 当使用 `<iframe>` 上的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 属性指定该框架及其嵌套框架的功能策略时，你还可以指定值 `'src'` 以允许仅自动播放来自与该框架的 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) 属性指定的域相同的域的媒体。
 

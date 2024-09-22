@@ -17,11 +17,11 @@ slug: Web/HTTP/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">成功時のレスポンスの本文</th>
-      <td>なし</td>
+      <td>あり</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
-      <td>なし</td>
+      <td>あり</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>

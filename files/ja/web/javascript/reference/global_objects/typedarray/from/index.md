@@ -51,7 +51,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 
 ## 解説
 
-詳しくは {{jsxref("Array.from()")}} を娯楽んだ歳。
+詳しくは {{jsxref("Array.from()")}} をご覧ください。
 
 {{jsxref("Array.from()")}} と `TypedArray.from()` の間には微妙な違いがあります（メモ: 下記で言及する `this` 値は `TypedArray.from()` が呼び出された `this` 値であり、 `mapFn` を呼び出すために用いた `thisArg` 引数ではありません）。
 

@@ -1,7 +1,6 @@
 ---
 title: CSS Container Queries
 slug: Web/CSS/CSS_containment/Container_queries
-original_slug: Web/CSS/CSS_container_queries
 ---
 
 {{CSSRef}}

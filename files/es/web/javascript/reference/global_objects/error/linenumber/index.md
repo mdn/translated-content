@@ -3,6 +3,8 @@ title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
 
+{{JSRef}}
+
 No es una norma
 
 Esta característica no es una norma y no está en la lista de normas. No la utilice en sitios de producción que enfrenta la Web: no va a funcionar para todos los usuarios. También puede haber grandes incompatibilidades entre implementaciones y el comportamiento puede cambiar en el futuro.

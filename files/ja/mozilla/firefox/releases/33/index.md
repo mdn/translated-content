@@ -19,11 +19,11 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 - @media サイドバー
 - 新たな CSS 規則の追加
 - keyframes の編集
-- 3 次ベジェ曲線エディタ
+- 3 次ベジェ曲線エディター
 - Transform のハイライト表示
 - 持続的にキャッシュを無効化
 - 新たなコマンド
-- エディタの設定
+- エディターの設定
 - WebIDE
 
 詳しくは [hacks ブログの記事](https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/)をご覧ください。このリリースで[機能追加や修正](http://mzl.la/1pGLFDs)を行った 33 名の貢献者に感謝します。
@@ -56,7 +56,7 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 
 - 非標準の {{jsxref("Number.toInteger()")}} メソッドを削除しました ([Firefox バグ 1022396](https://bugzil.la/1022396))。
 - {{jsxref("Map.prototype.set()")}}、{{jsxref("WeakMap.prototype.set()")}}、{{jsxref("Set.prototype.add()")}} の各メソッドがチェイン可能になり、`undefined` ではなく同等のオブジェクトを返すようになりました ([Firefox バグ 1031632](https://bugzil.la/1031632))。
-- [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)は関数のボディにある関数宣言より先に評価されますので、これらの関数はデフォルトパラメータから参照できなくなりました ([Firefox バグ 1022962](https://bugzil.la/1022962))。
+- [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)は関数のボディにある関数宣言より先に評価されますので、これらの関数はデフォルト引数から参照できなくなりました ([Firefox バグ 1022962](https://bugzil.la/1022962))。
 - オブジェクトリテラルで短縮プロパティを許容するようになりました。明示的に定義されていない場合は、プロパティのキーは同名の変数で初期化されます。例: `function f(x, y) { return {x, y}; }` は `function f(x, y) { return {x: x, y: y}; }` と等価です ([Firefox バグ 875002](https://bugzil.la/875002))。
 - [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) および [`yield*`](/ja/docs/Web/JavaScript/Reference/Operators/yield*) の構文解析を、最新の ES6 仕様に準拠するよう更新しました ([Firefox バグ 981599](https://bugzil.la/981599))。
 - 非標準の `hasOwn` トラップを削除しました ([Firefox バグ 980565](https://bugzil.la/980565))。
@@ -65,11 +65,11 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 
 - {{domxref("RadioNodeList")}} API が実装され、{{domxref("RadioNodeList.value")}} で選択しているラジオボタンにアクセスできます ([Firefox バグ 779723](https://bugzil.la/779723))。
 - {{domxref("DOMMatrix")}} を追加しました ([Firefox バグ 1018497](https://bugzil.la/1018497))。
-- 非標準の (ただし他のブラウザで実装されている) `DOMException.stack` プロパティを追加しました。これはスタックを可読性の高い書式 (既存の非標準プロパティ {{jsxref("Error.stack")}} と同じ書式) で表した文字列を返します ([Firefox バグ 857648](https://bugzil.la/857648))。
+- 非標準の (ただし他のブラウザーで実装されている) `DOMException.stack` プロパティを追加しました。これはスタックを可読性の高い書式 (既存の非標準プロパティ {{jsxref("Error.stack")}} と同じ書式) で表した文字列を返します ([Firefox バグ 857648](https://bugzil.la/857648))。
 - {{HTMLElement("canvas")}} 向けに、一次 Transform を {{domxref("SVGMatrix")}} 表記によりパターンを変更することが可能な {{domxref("CanvasPattern.setTransform()")}} メソッドを追加しました ([Firefox バグ 1019257](https://bugzil.la/1019257))。
 - 設定項目 `media.mediasource.enabled` で制御しており Nightly および Aurora のみで有効化している Media Source Extensions の実験的な実装で、MP4 をサポートしました ([Firefox バグ 1000686](https://bugzil.la/1000686))。
 - {{domxref("HTMLMediaElement.audioTracks")}} プロパティおよび {{domxref("HTMLMediaElement.videoTracks")}} プロパティを実験的に実装しました。これらは設定項目 `media.track.enabled` で制御されており、デフォルトは無効です ([Firefox バグ 744896](https://bugzil.la/744896))。
-- 非標準の `XMLHttpRequest.mozBackgroundRequest()` は Web サイトからアクセス不可になりました。Firefox 内部のコード (Chrome コード) のみ使用できます ([Firefox バグ 1035242](https://bugzil.la/1035242))。
+- 非標準の `XMLHttpRequest.mozBackgroundRequest()` はウェブサイトからアクセス不可になりました。Firefox 内部のコード (Chrome コード) のみ使用できます ([Firefox バグ 1035242](https://bugzil.la/1035242))。
 - 仕様から削除された `touchenter` イベントおよび `touchleave` イベントを削除しました ([Firefox バグ 1036444](https://bugzil.la/1036444))。
 - {{domxref("HTMLTrackElement")}} が発生させる、以前は `loaded` と呼ばれていたイベントを仕様に合致するよう {{domxref("Window/load_event", "load")}} にリネームしました ([Firefox バグ 1035505](https://bugzil.la/1035505))。
 - IndexedDB の `FileHandle` インターフェイスを {{domxref("IDBMutableFile")}} にリネームしました ([Firefox バグ 1006485](https://bugzil.la/1006485))。
@@ -109,7 +109,7 @@ _変更なし。_
 
 - [`Panel` コンストラクター](</ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#panel(options)>)の新たなオプションにより、パネルのコンテキストメニューをサポートしました。
 - [`tab.readyState`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#readyState) をサポートしました。
-- [`BrowserWindow`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow) 引数を [`sidebar.show()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)>) および [`sidebar.hide()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)>) に追加しました。サイドバーを表示または非表示にするウィンドウを制御するためのパラメータです。
+- [`BrowserWindow`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow) 引数を [`sidebar.show()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)>) および [`sidebar.hide()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)>) に追加しました。サイドバーを表示または非表示にするウィンドウを制御するための引数です。
 
 #### 詳細
 

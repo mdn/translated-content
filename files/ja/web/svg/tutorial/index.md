@@ -1,48 +1,50 @@
 ---
-title: SVG教本
+title: SVG チュートリアル
 slug: Web/SVG/Tutorial
+l10n:
+  sourceCommit: 48129f6abd9500385b18d9b64e7398ce5f8e0e25
 ---
 
-**変倍ベクタ図形** (Scalable Vector Graphics; [SVG](/ja/docs/SVG)) は図形をタグ付けする W3C の XML 派生言語です。SVG は，Firefox、Opera、WebKit ブラウザ、Internet Explorer 及び他のブラウザにおいて部分的に実装されています。
+{{SVGRef}}
 
-本教本は SVG の内部構造の説明を目的としており，また技術的詳細が目白押しです。美しい画像を描きたいだけなら，より有用な資料は[Inkscape の文書群](https://inkscape.org/learn/)にて見付かるでしょう。他に，W3C の[SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)も，良い SVG 概説を提供しています。
+変倍可能ベクターグラフィック (Scalable Vector Graphics, [SVG](/ja/docs/Web/SVG)) は、グラフィックをマークアップするための W3C の XML 派生言語です。
 
-> **メモ:** このチュートリアルは執筆の非常に早い段階にあります。もしあなたが可能なら、力を貸し、1 つまたは 2 つのパラグラフを書いて手助けしてください。ページ全体を書いていただければ、なお良いです。
+本チュートリアルは SVG の内部構造の説明を目的としており、また技術的詳細が目白押しです。美しい画像を描きたいだけなら、より有用な資料は [Inkscape の文書群](https://inkscape.org/learn/)にて見つかるでしょう。他に、W3C の [SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)も、良い SVG 入門記事を提供しています。この記念日カレンダーをテーマにした [SVG チュートリアル](https://svg-tutorial.com)も調べてみてください。25 の記念日で SVG をコード化する手順を説明しています。
 
-##### ゼロから始める SVG の紹介
+## ゼロから始める SVG 入門
 
-- [概要](/ja/docs/SVG/Tutorial/Introduction)
-- [始めましょう](/ja/docs/SVG/Tutorial/Getting_Started)
-- [配置](/ja/docs/SVG/Tutorial/Positions)
-- [基本的な図形](/ja/docs/SVG/Tutorial/Basic_Shapes)
-- [パス](/ja/docs/SVG/Tutorial/Paths)
-- [塗りつぶしとストローク](/ja/docs/SVG/Tutorial/Fills_and_Strokes)
-- [階調](/ja/docs/SVG/Tutorial/Gradients)
-- [模様](/ja/docs/SVG/Tutorial/Patterns)
-- [テキスト](/ja/docs/SVG/Tutorial/Texts)
-- [基本的なトランスフォーム](/ja/docs/SVG/Tutorial/Basic_Transformations)
-- [クリッピングとマスキング](/ja/docs/SVG/Tutorial/Clipping_and_masking)
-- [他の SVG コンテンツ](/ja/docs/SVG/Tutorial/Other_content_in_SVG)
-- [フィルタ効果](/ja/docs/SVG/Tutorial/Filter_effects)
-- [SVG フォント](/ja/docs/SVG/Tutorial/SVG_Fonts)
-- [SVG image 要素](/ja/docs/SVG/Tutorial/SVG_Image_Tag)
-- [SVG のツール](/ja/docs/SVG/Tutorial/Tools_for_SVG)
-- [他のチュートリアル](/ja/docs/SVG/Tutorial/Other_Tutorials)
+- [概要](/ja/docs/Web/SVG/Tutorial/Introduction)
+- [始めましょう](/ja/docs/Web/SVG/Tutorial/Getting_Started)
+- [配置](/ja/docs/Web/SVG/Tutorial/Positions)
+- [基本図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)
+- [パス](/ja/docs/Web/SVG/Tutorial/Paths)
+- [塗りつぶしとストローク](/ja/docs/Web/SVG/Tutorial/Fills_and_Strokes)
+- [グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)
+- [パターン](/ja/docs/Web/SVG/Tutorial/Patterns)
+- [テキスト](/ja/docs/Web/SVG/Tutorial/Texts)
+- [基本的な座標変換](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)
+- [クリッピングとマスク](/ja/docs/Web/SVG/Tutorial/Clipping_and_masking)
+- [SVG におけるその他のコンテンツ](/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+- [フィルター効果](/ja/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG フォント](/ja/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG の image 要素](/ja/docs/Web/SVG/Tutorial/SVG_Image_Tag)
+- [SVG のツール](/ja/docs/Web/SVG/Tutorial/Tools_for_SVG)
+- [SVG と CSS](/ja/docs/Web/SVG/Tutorial/SVG_and_CSS)
 
-続く話題はより発展的であり、従って各々自身の教本を習得すべきです。
+以下はより高度なトピックですので、自分自身でチュートリアルを取得する必要があります。
 
-##### JavaScript による SVG のスクリプティング
+## JavaScript による SVG のスクリプト処理
 
-未定
+TBD
 
-##### SVG フィルタのチュートリアル
+## SVG フィルターのチュートリアル
 
-未定
+TBD
 
-##### SMIL を用いた SVG のアニメーション
+## SMIL を用いた SVG のアニメーション
 
-未定
+TBD
 
-##### SVG によるフォント作成
+## SVG によるフォント作成
 
-未定
+TBD

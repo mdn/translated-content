@@ -3,7 +3,7 @@ title: document
 slug: Web/XPath/Functions/document
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `document` は、外部の文書、または複数の外部の文書からノード集合を見つけ、結果のノード集合を返します。
 
@@ -40,7 +40,7 @@ document(URI [,node-set] )
 
 - URI は XSL 文書に関連するため、`document("")` は現在の文書のルートノードを返します。
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ## 定義
 

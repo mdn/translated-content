@@ -11,7 +11,7 @@ slug: Web/HTML/Element/i
 
 - _[Content catergories](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content), palpable content.
 - _允许量_ [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
-- _标签忽略_ {{no_tag_omission}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
 - _Permitted parent elements_ Any element that accepts [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
 

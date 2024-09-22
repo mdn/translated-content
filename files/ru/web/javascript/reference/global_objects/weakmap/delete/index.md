@@ -35,7 +35,7 @@ wm.delete(window); // Возвращает true. Успешно удалён.
 wm.has(window); // Возвращает false. Объекта window больше нет в WeakMap.
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

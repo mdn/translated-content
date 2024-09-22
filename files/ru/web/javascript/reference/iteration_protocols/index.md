@@ -311,7 +311,7 @@ console.log(gen.next().value); // '2'
 // ...
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

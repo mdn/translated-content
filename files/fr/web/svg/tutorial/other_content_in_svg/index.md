@@ -3,6 +3,8 @@ title: Contenu embarqué dans le SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
 
 En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.
@@ -38,7 +40,8 @@ L'image embarquée devient un élément SVG normal. Cela implique que vous pouve
 
 L'élément **`foreignObject`** est donc la bonne méthode pour embarquer du **XHTML** dans du SVG. Si le SVG doit contenir du texte de longueur conséquente, la disposition HTML est bien plus pratique et utilisable que l'élément SVG `text`. Une autre utilisation bien pratique de cet élément est l'adjonction de formules avec MathML. Pour des applications scientifiques utilisant le SVG, c'est un bon moyen de permettre la communication entre ces deux univers.
 
-> **Note :** Gardez à l'esprit que le contenu du `foreignObject` doit pouvoir être analysé et pris en compte par votre lecteur SVG. Il y a peu de chances qu'un lecteur SVG autonome soit capable de restituer du contenu HTML or MathML.
+> [!NOTE]
+> Gardez à l'esprit que le contenu du `foreignObject` doit pouvoir être analysé et pris en compte par votre lecteur SVG. Il y a peu de chances qu'un lecteur SVG autonome soit capable de restituer du contenu HTML or MathML.
 
 Etant donné que le `foreignObject` est un élément SVG comme un autre, vous pouvez, comme dans le case de l'élément `image`, utiliser toute la panoplie des attributs SVG qui pourrait s'appliquer au contenu embarqué.
 

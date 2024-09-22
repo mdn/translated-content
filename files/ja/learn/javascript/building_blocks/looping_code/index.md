@@ -534,7 +534,8 @@ while (i < cats.length) {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **メモ:** これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)を見ることもできます）。
+> [!NOTE]
+> これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)を見ることもできます）。
 
 [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) ループはとてもよく似ていますが、while 構造の別な形です。
 
@@ -573,9 +574,11 @@ do {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **メモ:** こちらも、これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
+> [!NOTE]
+> こちらも、これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
-> **警告:** while と do...while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。
+> [!WARNING]
+> while と do...while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。
 > そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
 
 ## アクティブラーニング: 発射のカウントダウン
@@ -599,11 +602,12 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 - イテレーターを含めることを忘れないでください！ですが、この例では各反復の後にカウント（アップではなく）ダウンするため、`i++` は要らないでしょう。減少方向にどうやって反復するのでしょうか？
 
-> **メモ:** あなたがループ（例えば while(i>=0)）からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
+> [!NOTE]
+> あなたがループ（例えば while(i>=0)）からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
 
 間違えた場合は、［リセット］ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、［解答を表示］を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 410px;overflow: auto;"></div>
 
@@ -777,7 +781,7 @@ textarea.onkeyup = () => {
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit:</p>
@@ -982,7 +986,8 @@ do {
 } while (条件)
 ```
 
-> **メモ:** 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
+> [!NOTE]
+> 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
 
 ## スキルテスト
 

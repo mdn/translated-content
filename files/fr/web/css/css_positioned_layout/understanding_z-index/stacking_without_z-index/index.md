@@ -3,7 +3,7 @@ title: Empilement sans z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
-{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
 
 ## Empilement sans `z-index`
 
@@ -17,7 +17,7 @@ On gardera à l'esprit que, lorsque la propriété {{cssxref("order")}} modifie 
 
 Dans l'exemple suivant, les blocs en position absolue et relative sont correctement positionnés et dimensionnés pour illustrer les règles d'empilement. L'opacité a été réduite pour rendre les éléments transparents et faciliter ainsi la visualisation des superpositions.
 
-> **Note :**
+> [!NOTE]
 >
 > - Dans un groupe d'éléments sans aucune propriété `z-index`, tel que les blocs positionnés (DIV #1 à #4) dans l'exemple, l'ordre d'empilement des éléments est celui de leur ordre dans la hiérarchie HTML, quelle que soit leur position.
 > - Les blocs standards (DIV #5) dans le flux normal, sans aucune propriété de positionnement, sont toujours rendus avant les éléments positionnés, et apparaissent en dessous de ces derniers, même s'ils interviennent plus tard dans la hiérarchie HTML.

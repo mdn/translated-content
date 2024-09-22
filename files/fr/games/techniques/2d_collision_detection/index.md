@@ -33,7 +33,8 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
 }
 ```
 
-> **Note :** vous pouvez tester un [exemple interactif de cet algorithme](http://jsfiddle.net/knam8/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!NOTE]
+> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/knam8/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
 
 ## Collision de cercles
 
@@ -52,7 +53,8 @@ if (distance < circle1.radius + circle2.radius) {
 }
 ```
 
-> **Note :** vous pouvez tester un [exemple interactif de cet algorithme](http://jsfiddle.net/gQ3hD/2/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!NOTE]
+> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/gQ3hD/2/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
 
 ## Théorème des axes séparateurs
 

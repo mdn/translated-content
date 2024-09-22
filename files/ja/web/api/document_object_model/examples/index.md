@@ -53,14 +53,16 @@ l10n:
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -69,7 +71,7 @@ l10n:
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -383,9 +385,9 @@ P
 </html>
 ```
 
-## 例 8: DOM のテーブルインタフェースの使用
+## 例 8: DOM のテーブルインターフェイスの使用
 
-DOM の {{domxref("HTMLTableElement")}} インタフェースで、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは {{domxref("HTMLTableElement.insertRow")}} と {{domxref("HTMLTableRowElement.insertCell")}} です。
+DOM の {{domxref("HTMLTableElement")}} インターフェイスで、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは {{domxref("HTMLTableElement.insertRow")}} と {{domxref("HTMLTableRowElement.insertCell")}} です。
 
 以下の例では、既存のテーブルに行といくつかのセルを追加しています。
 

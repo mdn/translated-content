@@ -7,7 +7,8 @@ slug: Web/CSS/hyphens
 
 Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
 
-> **Nota:** Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
+> [!NOTE]
+> Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
 
 ## Sintaxis
 
@@ -34,7 +35,8 @@ La propiedad `hyphens` se especifica con una única palabra de la lista a contin
 - `auto`
   - : El navegador es libre de separar palabras en puntos de separación apropiados, siguiendo cualquiera de las reglas elegidas. Sin embargo, las oportunidades de separación de línea (ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo) anularán la separación automática cuando exista.
 
-> **Nota:** El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
+> [!NOTE]
+> El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
 
 ### Sintaxis formal
 

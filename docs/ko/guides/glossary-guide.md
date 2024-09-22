@@ -1,6 +1,6 @@
 # 용어 안내서
 
-새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다. [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
+새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://korean.go.kr/kornorms/main/main.do)을 고려해 추가할 것을 권장합니다. [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
 
 ## 공통
 
@@ -22,9 +22,9 @@
 
 ## 용어 안내서 `참고 링크` 우선 순위
 
-- 1. 해당 단어에 대한 의견을 나눈 PR 링크
-- 2. 적절한 ko MDN 문서 링크
-- 3. 적절한 en-us MDN 문서 링크
+1. 해당 단어에 대한 의견을 나눈 PR 링크
+2. 적절한 ko MDN 문서 링크
+3. 적절한 en-us MDN 문서 링크
 
 ## Section Title
 
@@ -59,6 +59,7 @@
 | Polyfill               | 폴리필          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Recommendations        | 권장 사항       |                                                                                                                                         |
 | Reference              | 참고서          |                                                                                                                                         |
+| Return Value           | 반환 값         |                                                                                                                                         |
 | See also               | 같이 보기       | [링크][target]                                                                                                                          |
 | Specifications         | 명세서          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Static properties      | 정적 속성       |                                                                                                                                         |
@@ -93,47 +94,69 @@
 
 **사전 순으로 용어집을 편집해주세요.**
 
-| 용어               | 번역            | 기타                                                                                                   |
-| ------------------ | --------------- | ------------------------------------------------------------------------------------------------------ |
-| Application        | 애플리케이션    |                                                                                                        |
-| Assertion          | 어설션          |                                                                                                        |
-| Attribute          | 특성            |                                                                                                        |
-| Boolean            | 불리언          |                                                                                                        |
-| Class              | 클래스          |                                                                                                        |
-| Content(s)         | 콘텐츠          |                                                                                                        |
-| Context            | 맥락            |                                                                                                        |
-| Decoding           | 디코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                                         |
-| Document           | 문서            |                                                                                                        |
-| Element            | 요소            |                                                                                                        |
-| Encoding           | 인코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                                         |
-| Entity             | 개체            |                                                                                                        |
-| Enumerated         | 열거형          |                                                                                                        |
-| Error              | 오류            |                                                                                                        |
-| Expression         | 표현식 또는 식  |                                                                                                        |
-| Framework          | 프레임워크      |                                                                                                        |
-| Global             | 전역            |                                                                                                        |
-| Glossary           | 용어 사전       |                                                                                                        |
-| Grammar            | 문법            |                                                                                                        |
-| In modern browsers | 최신 브라우저   |                                                                                                        |
-| Literal            | 리터럴          |                                                                                                        |
-| Mantissa           | 가수부          |                                                                                                        |
-| Method             | 메서드          | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
-| Module             | 모듈            | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다.                                                        |
-| Module             | 과정            | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module)                         |
-| Object             | 객체            |                                                                                                        |
-| Origin             | 출처            |                                                                                                        |
-| Override           | 재정의          |                                                                                                        |
-| Primitive          | 원시 (값)       |                                                                                                        |
-| Property           | 속성            |                                                                                                        |
-| Psuedo-            | 의사-           |                                                                                                        |
-| Reference          | 참고서          |                                                                                                        |
-| Regular expression | 정규 표현식     |                                                                                                        |
-| Rendering          | 렌더링          |                                                                                                        |
-| Section            | 구획            |                                                                                                        |
-| Statement          | 명령문 또는 문  |                                                                                                        |
-| short-circuit      |                 |                                                                                                        |
-| User agent         | 사용자 에이전트 |                                                                                                        |
-| Update             | 갱신            |                                                                                                        |
+| 용어                | 번역            | 기타                                                                           |
+| ------------------- | --------------- | ------------------------------------------------------------------------------ |
+| Application         | 애플리케이션    |                                                                                |
+| Assertion           | 어설션          |                                                                                |
+| Attribute           | 특성            |                                                                                |
+| Boolean             | 불리언          |                                                                                |
+| Capture             | 캡처            |                                                                                |
+| Class               | 클래스          |                                                                                |
+| Content(s)          | 콘텐츠          |                                                                                |
+| Context             | 맥락            |                                                                                |
+| Control             | 컨트롤          |                                                                                |
+| Cross-browser       | 크로스 브라우저 |                                                                                |
+| Custom              | 사용자 정의     |                                                                                |
+| Decoding            | 디코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                 |
+| Document            | 문서            |                                                                                |
+| Element             | 요소            |                                                                                |
+| Encoding            | 인코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                 |
+| Entity              | 개체            |                                                                                |
+| Enumerated          | 열거형          |                                                                                |
+| Error               | 오류            |                                                                                |
+| Event               | 이벤트          |                                                                                |
+| Expression          | 표현식 또는 식  |                                                                                |
+| Fallback            | 폴백            |                                                                                |
+| Framework           | 프레임워크      |                                                                                |
+| Global              | 전역            |                                                                                |
+| Glossary            | 용어 사전       |                                                                                |
+| Grammar             | 문법            |                                                                                |
+| Hash                | 해시            |                                                                                |
+| In modern browsers  | 최신 브라우저   |                                                                                |
+| Library             | 라이브러리      |                                                                                |
+| License             | 라이선스        |                                                                                |
+| Literal             | 리터럴          |                                                                                |
+| Mantissa            | 가수부          |                                                                                |
+| Mechanism           | 메커니즘        |                                                                                |
+| Media               | 미디어          |                                                                                |
+| Method              | 메서드          | method [meθəd] 메서드                                                          |
+| Mime                | MIME            |                                                                                |
+| Module              | 모듈            | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다.                                |
+| Module              | 과정            | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) |
+| Object              | 객체            |                                                                                |
+| On-demand(onDemand) | 온디맨드        |                                                                                |
+| Origin              | 출처            |                                                                                |
+| Override            | 재정의          |                                                                                |
+| Primitive           | 원시 (값)       |                                                                                |
+| Profile             | 프로필          |                                                                                |
+| Property            | 속성            |                                                                                |
+| Protocol            | 프로토콜        |                                                                                |
+| Psuedo-             | 의사-           |                                                                                |
+| Reference           | 참고서          |                                                                                |
+| Regular expression  | 정규 표현식     |                                                                                |
+| Rendering           | 렌더링          |                                                                                |
+| Section             | 구획            |                                                                                |
+| Space bar           | 스페이스 바     |                                                                                |
+| Statement           | 명령문 또는 문  |                                                                                |
+| Tag                 | 태그            |                                                                                |
+| Tip                 | 팁              |                                                                                |
+| Trigger             | 트리거          |                                                                                |
+| Tutorial            | 튜토리얼        |                                                                                |
+| User agent          | 사용자 에이전트 |                                                                                |
+| Update              | 갱신            |                                                                                |
+| Workflow            | 워크플로우      |                                                                                |
+| Truthy              | 참 같은         |                                                                                |
+| Falsy               | 거짓 같은       |                                                                                |
 
 ## CSS
 
@@ -158,6 +181,7 @@
 | Descriptor         | 설명자          |                             |                                                                                         |
 | Flexbox            | 플렉스박스      |                             |                                                                                         |
 | Flow               | 플로            | 레이아웃 방식일 경우에 한정 |                                                                                         |
+| Formal definition  | 형식 정의       |                             |                                                                                         |
 | Formal syntax      | 형식 구문       |                             |                                                                                         |
 | Grid               | 그리드          |                             |                                                                                         |
 | Inline             | 인라인          |                             |                                                                                         |

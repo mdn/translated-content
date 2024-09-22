@@ -3,7 +3,7 @@ title: "Animation: Animation() コンストラクター"
 short-title: Animation()
 slug: Web/API/Animation/Animation
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Web Animations") }}

@@ -3,6 +3,8 @@ title: Transformations XML avec XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
+{{XsltSidebar}}
+
 ### [Présentation](/fr/Transformations_XML_avec_XSLT/Présentation)
 
 La séparation du contenu et de la présentation est l'une des caractéristiques principale du [XML](/fr/XML). La structure d'un document XML est conçue pour refléter et clarifier les relations entre les différents aspects du contenu lui-même, sans l'obsurcir par la nécessité d'y intégrer des indications sur la présentation qui lui sera appliquée ensuite. Cette structure intelligente est particulièrement importante, car de plus en plus de transferts de données sont automatisés et se font entre des machines très hétérogènes reliées par un réseau.

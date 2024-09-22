@@ -3,23 +3,19 @@ title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 ---
 
-{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 {{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
 
 与这些数值代码等价的常量，请参考 {{ domxref("KeyboardEvent", "KeyEvent") }}.
 
-> **备注：** **该属性已被废弃，请勿再使用该属性。**
+> [!NOTE]
 >
-> 请使用 {{domxref("KeyboardEvent.key")}} 取代。
+> 该属性已被弃用，请勿再使用该属性。要获取字符的 Unicode 值，请改用 {{domxref("KeyboardEvent.key", "key")}} 属性。
 
-## 语法
+## 值
 
-```
-var value = event.charCode;
-```
-
-- _`value`_ 被按下的字符键的字符 Unicode 值
+一个表示按下的字符键的 Unicode 值的数字。
 
 ## 示例
 

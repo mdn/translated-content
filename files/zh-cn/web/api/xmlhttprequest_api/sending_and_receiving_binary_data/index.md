@@ -3,6 +3,8 @@ title: 发送和接收二进制数据
 slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 ## 使用 JavaScript 类型数组接受二进制数据
 
 可以通过设置一个 XMLHttpRequest 对象的 `responseType`属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。`response` 属性的值会根据 `responseType` 属性包含实体主体（entity body），它可能会是一个 `ArrayBuffer`、`Blob`、`Document`、`JSON`, string，或者为`NULL(如果请求未完成或失败)`
@@ -107,7 +109,8 @@ xhr.send(myArray);
 
 上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。
 
-> **备注：** 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
+> [!NOTE]
+> 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
 
 ## 提交表单和上传文件
 
@@ -157,5 +160,3 @@ req.open("PUT", url, false); // 同步模式！
 req.setRequestHeader("Content-Type", mimeType);
 req.send(stream);
 ```
-
-{{APIRef("XMLHttpRequest")}}

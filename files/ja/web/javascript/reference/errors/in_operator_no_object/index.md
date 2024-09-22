@@ -43,7 +43,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 ### オペランドを null や undefined にすることはできない
 
-調査対象のオブジェクトが実際に {{jsxref("null")}} や {{jsxref("undefined")}} になっていないことを確認してください。
+調査対象のオブジェクトが実際に [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} になっていないことを確認してください。
 
 ```js example-bad
 var foo = null;

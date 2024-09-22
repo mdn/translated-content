@@ -3,6 +3,8 @@ title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
+{{DefaultAPISidebar("IndexedDB")}}
+
 IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
 
 ## Acerca de este documento
@@ -349,7 +351,8 @@ db
 
 See how this works? Since there's only one object store, you can avoid passing a list of object stores you need in your transaction and just pass the name as a string. Also, you're only reading from the database, so you don't need a `"readwrite"` transaction. Calling `transaction()` with no mode specified gives you a `"readonly"` transaction. Another subtlety here is that you don't actually save the request object to a variable. Since the DOM event has the request as its target you can use the event to get to the `result` property.
 
-> **Nota:** You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:
+> [!NOTE]
+> You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:
 >
 > - When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
 > - Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for [_transactions_ in the Basic Concepts article](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
@@ -386,7 +389,8 @@ request.onsuccess = function (event) {
 
 So here we're creating an `objectStore` and requesting a customer record out of it, identified by its ssn value (`444-44-4444`). We then put the result of that request in a variable (`data`), update the `age` property of this object, then create a second request (`requestUpdate`) to put the customer record back into the `objectStore`, overwriting the previous value.
 
-> **Nota:** that in this case we've had to specify a `readwrite` transaction because we want to write to the database, not just read out of it.
+> [!NOTE]
+> That in this case we've had to specify a `readwrite` transaction because we want to write to the database, not just read out of it.
 
 ### El uso de un cursor
 
@@ -424,7 +428,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **Nota:** Note: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). these aren't part of the IndexedDB standard, so may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:
+> [!NOTE]
+> Note: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). these aren't part of the IndexedDB standard, so may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:
 >
 > ```js
 > objectStore.getAll().onsuccess = function (event) {
@@ -1299,7 +1304,8 @@ Tutorials
 
 - [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
 
-  > **Nota:** This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed `setVersion()` method.
+  > [!NOTE]
+  > This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed `setVersion()` method.
 
 - [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 

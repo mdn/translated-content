@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Classes/static
 
 静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
 
-> **メモ:** クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
+> [!NOTE]
+> クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
 
 {{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
@@ -41,7 +42,7 @@ class ClassWithStatic {
 
 静的メソッドの多くは、インスタンスを作成したり複製したりするなどの、ユーティリティ関数です。パブリック静的フィールドは、作成するすべてのクラスインスタンスではなく、クラスごとに一つだけフィールドを存在させたい場合に有益です。これは、キャッシュや固定の構成値、 あるいはインスタンスをまたがって複製する必要のないデータなどに有益です。
 
-静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算されたプロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
+静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
 
 静的フィールドは初期化子を持つことができます。初期化子を持たない静的フィールドは `undefined` に初期化されます。パブリック静的フィールドはサブクラスでは再初期化されませんが、プロトタイプチェーン経由でアクセスすることができます。
 
@@ -86,7 +87,8 @@ console.log(SubClassWithStaticField.subStaticField); // "基底クラスの静�
 
 静的フィールド初期化子と[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)は、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
-> **メモ:** これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> [!NOTE]
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 ## 例
 

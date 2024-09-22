@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 
 ## 例
 
-cookies API のほとんどは入力パラメータまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
+cookies API のほとんどは入力パラメーターまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
 
 以下の例ではすべての cookie を取得し、コンソールログに `Cookie` オブジェクト中のいくつかのプロパティを出力します。
 
@@ -60,7 +60,8 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

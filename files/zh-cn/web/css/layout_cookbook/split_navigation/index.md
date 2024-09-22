@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/split-navigation--download.html)
 
@@ -28,10 +28,6 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 自动外边距会吸收其应用方向上的所有可用空间。这就是利用自动外边距实现区块居中的工作原理——区块两侧都有一个试图占用所有空间的空白，从而将区块推到了中间。
 
 在这种情况下，左侧的自动边距会占用所有可用空间，并将项目推到右侧。你可以将类 `push` 应用到列表中的任何项目上。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 

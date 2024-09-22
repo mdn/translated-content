@@ -45,7 +45,7 @@ a:local-link {
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Cette fonctionnalité est une proposition intégrée dans la spécification. Actuellement, aucun navigateur ne la prend en charge.
 
 ## Voir aussi
 

@@ -9,7 +9,8 @@ slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 
 ## API 差异
 
-> **备注：** 查看 [ReadTheDocs](https://webextension-api.thunderbird.net/en/latest/) 了解 Thunderbird 特定的 WebExtension API 文档。
+> [!NOTE]
+> 查看 [ReadTheDocs](https://webextension-api.thunderbird.net/en/latest/) 了解 Thunderbird 特定的 WebExtension API 文档。
 
 因为都基于 Gecko，Thunderbird 支持许多 Firefox 支持的 API，但有一些区别，查看 [manifest.json 的浏览器兼容性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)和 [JavaScript API 的浏览器支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)了解详情。
 

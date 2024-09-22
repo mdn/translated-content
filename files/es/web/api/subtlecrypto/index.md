@@ -7,7 +7,8 @@ slug: Web/API/SubtleCrypto
 
 La interfaz **`SubtleCrypto`** de la [Web Crypto API](/es/docs/Web/API/Web_Crypto_API) provee una serie de funciones criptográficas de bajo nivel. Se accede a ella a través de las propiedades {{domxref("Crypto.subtle")}} disponible en un contexto de la ventana (via {{domxref("Window.crypto")}}).
 
-> **Advertencia:** Esta API proporciona una serie de primitivos criptográficos de bajo nivel. Es muy fácil hacer un mal uso de ellos, y las trampas involucradas pueden ser muy sutiles.
+> [!WARNING]
+> Esta API proporciona una serie de primitivos criptográficos de bajo nivel. Es muy fácil hacer un mal uso de ellos, y las trampas involucradas pueden ser muy sutiles.
 >
 > Incluso suponiendo que se utilicen correctamente las funciones criptográficas básicas, la gestión segura de las claves y el diseño general del sistema de seguridad son extremadamente difíciles de conseguir correctamente, y generalmente son el dominio de expertos en seguridad especializados.
 >

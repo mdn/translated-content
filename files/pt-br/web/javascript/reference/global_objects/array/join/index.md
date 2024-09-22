@@ -26,7 +26,8 @@ Uma string com todos os elementos do array juntos. Se `arr.length` é `0`, uma s
 
 As conversões em string de todos os elementos de um array são juntados em apenas uma string.
 
-> **Aviso:** Obs: Se um elemento é `undefined` ou `null`, ele é convertido em uma string vazia.
+> [!WARNING]
+> Se um elemento é `undefined` ou `null`, ele é convertido em uma string vazia.
 
 ## Exemplos
 

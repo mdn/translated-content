@@ -389,7 +389,7 @@ MPEG-1 和 MPEG-2 最主要的差別在於媒體資料格式而非封裝格式�
 
 **[MPEG-4](https://zh.wikipedia.org/wiki/MPEG-4)** (**MP4**) 是最新版 MPEG 檔案格式。這個格式有兩種版本，分別定義於規範中的 part 1 和 part 14。MP4 是現今流行的封裝容器，它支援了大部份常用的編解碼器，同時它也廣泛地被支援。
 
-初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO base media file format](https://zh.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime file format](https://zh.wikipedia.org/wiki/QuickTime_file_format)。
+初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO 基本媒體文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
 | 音訊        | 視訊        |
 | ----------- | ----------- |
@@ -1037,11 +1037,11 @@ The video is offered first in WebM format (with the [`type`](/zh-TW/docs/Web/HTM
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
 | {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
 | {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
-| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
+| [QuickTime File Format Specification](https://developer.apple.com/documentation/quicktime-file-format)                                                       | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
+| [Resource Interchange File Format](https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)            | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
 | [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
-| [Matroska Specifications](https://matroska.org/technical/specs/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
+| [Matroska Specifications](https://matroska.org/technical/elements.html)                                                                                      | The specification for the Matroska container format upon which WebM is based                                    |
 | [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/zh-TW/docs/Web/API/Media_Source_Extensions_API) |
 
 ## Browser compatibility

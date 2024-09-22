@@ -2,14 +2,12 @@
 title: Web Locks API
 slug: Web/API/Web_Locks_API
 l10n:
-  sourceCommit: 955d8d3b31be8c89efea86265b0e26a401186dbc
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 **Web Locks API** 允许在一个标签页或 worker 中运行的脚本异步获取锁，在执行工作时保持锁，最后释放锁。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个标签页或 worker 中运行的 Web 应用程序协调工作和资源的使用。
-
-{{AvailableInWorkers}}
 
 ## 概念和用法
 

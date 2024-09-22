@@ -2,7 +2,7 @@
 title: "String: length"
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 l10n:
-  sourceCommit: ec9930c566de0a795d499a744187454afee5d726
+  sourceCommit: f01f00dd9fb1dbb2af9c40c5b06421e883d71910
 ---
 
 {{JSRef}}
@@ -51,6 +51,20 @@ function getCharacterLength(str) {
 }
 
 console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
+```
+
+書記素単位でカウントしたい場合は、 [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) を使用してください。まず、分割したい文字列を [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドに渡し、返された `Segments` オブジェクトを反復処理をして長さを取得してください。
+
+```js
+function getGraphemeCount(str) {
+  const segmenter = new Intl.Segmenter("ja-JP", { granularity: "grapheme" });
+
+  // ここで使用されている Segments オブジェクトのイテレーターは、文字を書記素で反復処理します。
+  // 文字は複数の Unicode 文字で構成されている場合があります。
+  return [...segmenter.segment(str)].length;
+}
+
+console.log(getGraphemeCount("👨‍👩‍👧‍👧")); // 1
 ```
 
 ## 例
@@ -104,4 +118,4 @@ console.log(myString.length); // 9
 
 ## 関連情報
 
-- [JavaScript `String.length` and Internationalizing Web Applications](https://downloads.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+- [`Array`: `length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length)

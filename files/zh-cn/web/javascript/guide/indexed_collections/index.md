@@ -43,7 +43,8 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **备注：** 以上代码，`arrayLength` 必须为一个 `Number`。否则，将会创建一个只有单个元素（内含提供的值）的数组。调用 `arr.length` 会返回 `arrayLength`，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
+> [!NOTE]
+> 以上代码，`arrayLength` 必须为一个 `Number`。否则，将会创建一个只有单个元素（内含提供的值）的数组。调用 `arr.length` 会返回 `arrayLength`，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
 
 除了上面所示的新定义的变量外，数组还可以被赋值为新对象或现有对象的属性：
 
@@ -94,7 +95,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 你可以将数组的第一个元素引用为 `myArray[0]`，将数组的第二个元素引用为 `myArray[1]`，等等...元素的索引从零开始。
 
-> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问数组的其他属性，就像对象一样。
+> [!NOTE]
+> 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问数组的其他属性，就像对象一样。
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -113,7 +115,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **备注：** 如果你在以上代码中给数组运算符的是一个非整型数值，那么它将作为一个表示数组的对象的属性创建，而不是数组的元素。
+> [!NOTE]
+> 如果你在以上代码中给数组运算符的是一个非整型数值，那么它将作为一个表示数组的对象的属性创建，而不是数组的元素。
 >
 > ```js
 > const arr = [];
@@ -380,7 +383,8 @@ a.forEach((element) => {
 
 接受回调的 `forEach` 方法（以及下面的其他方法）被称为*迭代方法*，因为它们以某种方式遍历整个数组。每个都接受第二个可选的参数 `thisArg`。如果提供，`thisArg` 将成为回调函数体中 `this` 关键字的值。如果没有提供，就像在明确的对象上下文之外被调用一样，当函数在严格模式下时，`this` 是 `undefined`，当函数在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下时，`this` 将引用全局对象（[`window`](/zh-CN/docs/Web/API/Window)、[`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 等。）。
 
-> **备注：** 上面介绍的 `sort()` 方法不是迭代方法，因为它的回调函数只用于比较，不能基于元素顺序以任何特定顺序调用。`sort()` 也不接受 `thisArg` 形参。
+> [!NOTE]
+> 上面介绍的 `sort()` 方法不是迭代方法，因为它的回调函数只用于比较，不能基于元素顺序以任何特定顺序调用。`sort()` 也不接受 `thisArg` 形参。
 
 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法返回由每个数组元素上执行 `callback` 的返回值所组成的新数组。
 
@@ -566,7 +570,7 @@ for (i = 0; i < 4; i++) {
 
 这个例子创建的数组拥有以下行数据：
 
-```
+```plain
 Row 0: [0,0] [0,1] [0,2] [0,3]
 Row 1: [1,0] [1,1] [1,2] [1,3]
 Row 2: [2,0] [2,1] [2,2] [2,3]

@@ -78,7 +78,7 @@ floats를 어떻게 사용하는지 알아보자. 우리는 요소 주위에 텍
 </p>
 ```
 
-이제 다음 CSS를 HTML에 적용하십시요.({{htmlelement("style")}} 요소를 사용할지 개별 `.css` 파일에 대한 {{htmlelement("link")}}를 사용할지는 당신의 선택 여하에 달려있습니다.):
+이제 다음 CSS를 HTML에 적용하십시요.({{htmlelement("style")}} 요소를 사용할지 개별 `.css` 파일에 대한 {{htmlelement("link")}}를 사용할지는 당신의 선택 여하에 달려있습니다.).
 
 ```css
 body {
@@ -326,7 +326,7 @@ body {
 
 {{ EmbedLiveSample('float_3', '100%', 600) }}
 
-다음 단락은 float 요소를 clear 하며, 더 이상 그 옆에 부상하지 않음을 알아야 합니다. `clear` 속성은 다음과 같은 값을 받아들입니다:
+다음 단락은 float 요소를 clear 하며, 더 이상 그 옆에 부상하지 않음을 알아야 합니다. `clear` 속성은 다음과 같은 값을 받아들입니다.
 
 - `left`: 왼쪽에 부상한 항목들 clear
 - `right`: 오른쪽에 부상한 항목들 clear

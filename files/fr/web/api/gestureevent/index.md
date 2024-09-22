@@ -3,9 +3,9 @@ title: GestureEvent
 slug: Web/API/GestureEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{Non-standard_Header}}
 
-{{Non-standard_header()}}
+{{APIRef("UI Events")}}
 
 L'interface propriétaire **`GestureEvent`** propre à WebKitdonne des informations sur les gestes multi-touches. Les événements utilisant cette interface incluent [`gesturestart`](/fr/docs/Web/API/Element/gesturestart_event), [`gesturechange`](/fr/docs/Web/API/Element/gesturechange_event) et [`gestureend`](/fr/docs/Web/API/Element/gestureend_event).
 

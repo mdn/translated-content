@@ -97,7 +97,8 @@ if (shoppingDone === true) {
 
 这段代码显示的结果是变量 `shoppingDone` 总是返回 `false`，意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
 
-> **备注：** 你可以[在 Github 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)）
+> [!NOTE]
+> 你可以[在 Github 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)）
 
 ### else if
 
@@ -150,7 +151,8 @@ function setWeather() {
 3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if () { }` 块中的条件是怎么被判断的，除了第一个，它是在 `if () { }` 中被判断的。
 4. 最后一个 `else { }` 中的选择通常被叫做“最后招数”——在所有的条件都不为 `true` 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的“--作出选择--”选项时，就会有这样的效果。
 
-> **备注：** 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)。）
+> [!NOTE]
+> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)。）
 
 ### 关于比较运算符
 
@@ -279,20 +281,21 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 [`switch` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 在这里是你的朋友——它们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。这里有一些伪代码，可以给你一点灵感：
 
-```
-switch (表达式) {
-  case 选择1:
-    运行这段代码
+```js
+switch (expression) {
+  case choice1:
+    // 运行这段代码
     break;
 
-  case 选择2:
-    否则，运行这段代码
+  case choice2:
+    // 否则，运行这段代码
     break;
 
   // 包含尽可能多的情况
 
   default:
-    实际上，仅仅运行这段代码
+    // 此外，仅运行这段代码
+    break;
 }
 ```
 
@@ -357,13 +360,14 @@ function setWeather() {
 
 {{ EmbedLiveSample('switch 语句示例', '100%', 100) }}
 
-> **备注：** 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)。）
+> [!NOTE]
+> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)。）
 
 ## 三元运算符
 
 在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else` 块占用的代码要少很多。伪代码看起来像这样：
 
-```
+```js-nolint
 condition ? 运行这段代码 : 否则，运行这段代码
 ```
 
@@ -414,7 +418,8 @@ select.addEventListener("change", () =>
 
 最后，我们还有一个 [onchange](/zh-CN/docs/Web/API/HTMLElement/change_event)事件监听器，用于运行一个包含三元运算符的函数。它以 `select.value === 'black'` 测试条件开始。如果这返回 `true`，我们运行带有黑色和白色参数的函数 `update()`，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回 `false`，我们运行带有白色和黑色参数的函数 `update()`，这意味着站点颜色被反转。
 
-> **备注：** 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)。）
+> [!NOTE]
+> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)。）
 
 ## 主动学习：一个简单的日历
 

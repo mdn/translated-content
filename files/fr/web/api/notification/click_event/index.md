@@ -22,7 +22,7 @@ Dans l'exemple qui suit, on utilise le gestionnaire d'évènement `onclick` pour
 ```js
 notification.onclick = function (event) {
   event.preventDefault(); // empêcher le navigateur de passer le focus sur l'onglet de la navigation
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 

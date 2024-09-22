@@ -3,6 +3,8 @@ title: El contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 ---
 
+{{CSSRef}}
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 El contexto de apilamiento es la conceptualización tridimensional de los elementos HTML a lo largo de un eje-Z imaginario relativo al usuario que se asume está de cara al viewport o página web. Los elementos HTML ocupan este espacio por orden de prioridad basado en sus atributos.
@@ -33,7 +35,8 @@ En resumen:
 - Cada contexto de apilamiento es completamente independiente de sus hermanos: solo los elementos descendientes son considerados cuando el apilamiento es procesado.
 - Cada contexto de apilamiento es auto contenido: luego que los contenidos del elemento son apilados, el elemento completo es considerado en el orden de apilamiento del contexto del padre.
 
-> **Nota:** La jerarquía de apilar contextos es un sub conjunto de la jerarquía de elementos HTML, porque solo ciertos elementos crean contextos de apilamiento. Podemos decir que los elementos que no crean sus propios contextos de apilamiento son asimilados por el contexto de apilamiento padre.
+> [!NOTE]
+> La jerarquía de apilar contextos es un sub conjunto de la jerarquía de elementos HTML, porque solo ciertos elementos crean contextos de apilamiento. Podemos decir que los elementos que no crean sus propios contextos de apilamiento son asimilados por el contexto de apilamiento padre.
 
 ## El ejemplo
 
@@ -53,7 +56,7 @@ En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento
 
 Es importante notar que el DIV #4, DIV #5 y el DIV #6 son hijos del DIV #3, así que el apilamiento de esos elementos es completamente resuelto dentro del DIV#3. Una vez que el apilamiento y el renderizado dentro del DIV#3 ha sido completado, todo el elemento DIV#3 es apilado en el elemento raíz con respecto a sus DIV hermanos.
 
-> **Nota:**
+> [!NOTE]
 >
 > - DIV #4 es renderizado debajo de DIV #1 porque el z-index (5) de DIV #1 es válido dentro del contexto de apilamiento del elemento raiz, mientras que el z-index (6) de DIV #4 es válido dentro del contexto de apilamiento de DIV #3. Así que DIV #4 está debajo de DIV #1, porque DIV #4 pertenece a DIV #3, que tiene un valor z-index menor.
 > - Por la misma razón DIV #2 (z-index 2) es renderizado bajo DIV#5 (z-index 1) porque DIV #5 pertenece a DIV #3, que tiene un valor z-index mayor.

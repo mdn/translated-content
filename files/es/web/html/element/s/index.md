@@ -3,6 +3,8 @@ title: s
 slug: Web/HTML/Element/s
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.
@@ -105,4 +107,5 @@ slug: Web/HTML/Element/s
 
 ### Comentarios
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO

@@ -38,7 +38,8 @@ Los argoritmos digest, también conocidos como [funciones criptográficas hash](
 
 Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.1, y produce una salida de 160 bits de largo.
 
-> **Advertencia:** Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
+> [!WARNING]
+> Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
 
 ### SHA-256
 
@@ -52,7 +53,8 @@ Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/F
 
 Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.4, y produce una salida de 512 bits de largo.
 
-> **Nota:** Sugerencia: Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
+> [!NOTE]
+> Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
 
 ## Ejemplos
 

@@ -13,7 +13,8 @@ slug: Web/HTML/Element/input/password
 
 输入过程的具体细节可能因浏览器而异。例如，有的浏览器经常在隐藏它之前显示键入的字符一段时间，而另外一些浏览器允许用户切换明文显示模式。移动端设备上检查是否输入了预期的密码通常比较困难，而这两种机制都能解决这个问题。
 
-> **备注：** 任何涉及密码等敏感信息的表单（例如登录表格）都应通过 HTTPS 提供。许多浏览器现在都实现了警告不安全登录表单的机制，参阅[不安全的密码](/zh-CN/docs/Web/Security/Insecure_passwords)。
+> [!NOTE]
+> 任何涉及密码等敏感信息的表单（例如登录表格）都应通过 HTTPS 提供。许多浏览器现在都实现了警告不安全登录表单的机制，参阅[不安全的密码](/zh-CN/docs/Web/Security/Insecure_passwords)。
 
 ## 值
 
@@ -21,7 +22,8 @@ slug: Web/HTML/Element/input/password
 
 如果指定了 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，则 `password` 中的内容只有通过验证才有效；参见[验证](#验证)一节以获得更多信息。
 
-> **备注：** 换行（U+000A）和回车（U+000D）符不允许在 `password` 中出现。当对密码控件设置值时，换行和回车符都会从值中删除。
+> [!NOTE]
+> 换行（U+000A）和回车（U+000D）符不允许在 `password` 中出现。当对密码控件设置值时，换行和回车符都会从值中删除。
 
 ## 额外属性
 
@@ -45,7 +47,8 @@ slug: Web/HTML/Element/input/password
 
 如果没有指定模式，或指定了无效的模式，则不会应用任何正则表达式，且该属性将被完全忽略。
 
-> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
+> [!NOTE]
+> 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
 
 强烈建议在密码输入中使用模式，以帮助确保用户选择和使用有效的密码，并使用广泛的字符类别。通过一个模式，你可以规定大小写规则、要求使用一些数字和/或标点符号，等等。参阅[验证](#验证)一节以获取详细说明和示例。
 
@@ -55,13 +58,15 @@ slug: Web/HTML/Element/input/password
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> [!NOTE]
+> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### readonly
 
 一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement","HTMLInputElement.value")}} 的 `value` 属性来更改。
 
-> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
+> [!NOTE]
+> 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
 ### size
 

@@ -3,7 +3,7 @@ title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 ---
 
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。
 
@@ -15,14 +15,14 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 ## 语法
 
-```
-event.initMouseEvent(type, canBubble, cancelable, view,
+```js-nolint
+initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget);
+                     button, relatedTarget)
 ```
 
-### 形参
+### 参数
 
 - _`type`_
   - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`，`mousedown`，`mouseup`，`mouseover`，`mousemove`，`mouseout`。

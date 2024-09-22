@@ -1,9 +1,11 @@
 ---
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **`<frequency-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("frequency")}} または {{Cssxref("percentage")}} が取りうる値を表します。周波数の値、例えば音声の高さは、現在どの CSS プロパティでも使用されていません。
 
@@ -15,7 +17,11 @@ slug: Web/CSS/frequency-percentage
 
 ### calc() での使用
 
-許可されている型として `<frequency-percentage>` が指定されているところでは、これはパーセント値が周期として解決されるので、 [`calc()`](</ja/docs/Web/CSS/calc()>) の式で利用することができます。
+許可されている型として `<frequency-percentage>` が指定されているところでは、これはパーセント値が周期として解決されるので、 [`calc()`](/ja/docs/Web/CSS/calc) の式で利用することができます。
+
+## 形式文法
+
+{{csssyntax}}
 
 ## 例
 

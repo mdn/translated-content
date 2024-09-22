@@ -50,7 +50,7 @@ var sending = browser.runtime.sendMessage(
 
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
 
-    1. 有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
+    1. 有効な `options` オブジェクトである (つまり、ブラウザーがサポートする `options` のプロパティのみを持つオブジェクト)
     2. null
     3. undefined
 
@@ -108,7 +108,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

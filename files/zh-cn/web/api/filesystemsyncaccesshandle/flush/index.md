@@ -1,15 +1,18 @@
 ---
 title: FileSystemSyncAccessHandle：flush() 方法
 slug: Web/API/FileSystemSyncAccessHandle/flush
+l10n:
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 {{domxref("FileSystemSyncAccessHandle")}} 接口的 **`flush()`** 方法用于将通过 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法对句柄相关联的文件所做的所有更改持久化保存到磁盘上。
 
 请记住：只当你需要在指定的时间将更改提交到磁盘的时候才需要调用这个方法，不然你可以让底层操作系统在其认为合适的时间点处理这项任务，这大多数情况下都不会有问题。
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、`flush()`、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
+> [!NOTE]
+> 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、`flush()`、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 语法
 
@@ -65,7 +68,7 @@ onmessage = async (e) => {
   // 将更改持久化至磁盘
   accessHandle.flush();
 
-  // 用完 FileSystemSyncAccessHandle 后记得把它关闭
+  // 如果完成，请始终关闭 FileSystemSyncAccessHandle
   accessHandle.close();
 };
 ```
@@ -81,4 +84,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

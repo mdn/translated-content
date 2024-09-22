@@ -22,7 +22,7 @@ slug: Web/HTTP/Headers/Origin
 
 ## 语法
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>
@@ -59,7 +59,8 @@ Origin: <scheme>://<hostname>:<port>
 - 没有为 sandbox 属性设置 `allow-same-origin` 值的 iframe。
 - 响应（response）是网络错误。
 
-> **备注：** 了解更详细的关于其值何时为 `null` 的清单，请参见 Stack Overflow：[When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/)。
+> [!NOTE]
+> 了解更详细的关于其值何时为 `null` 的清单，请参见 Stack Overflow：[When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/)。
 
 ## 示例
 
@@ -68,7 +69,7 @@ Origin: https://developer.mozilla.org
 ```
 
 ```http
-Origin: http://developer.mozilla.org:80
+Origin: https://developer.mozilla.org:80
 ```
 
 ## 规范

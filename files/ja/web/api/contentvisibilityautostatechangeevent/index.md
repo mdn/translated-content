@@ -2,10 +2,10 @@
 title: ContentVisibilityAutoStateChangeEvent
 slug: Web/API/ContentVisibilityAutoStateChangeEvent
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: f33c6e8a7204272b90d8f005f3d8c743333d7dbf
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 **`ContentVisibilityAutoStateChangeEvent`** インターフェイスは {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントのイベントオブジェクトです。これは、{{cssxref("content-visibility", "content-visibility: auto")}}が設定されている要素で、[ユーザーに関連する](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user)、[コンテンツをスキップする](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)ことを開始または停止するときに発行されます。
 
@@ -67,6 +67,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS 封じ込め](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

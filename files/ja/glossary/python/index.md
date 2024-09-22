@@ -19,7 +19,7 @@ Python は OSI に承認されたオープンソースライセンスのもと�
    4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
    5. MDN の [Django Web Framework (Python)](/ja/docs/Learn/Server-side/Django)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Java")}}
    2. {{Glossary("JavaScript")}}

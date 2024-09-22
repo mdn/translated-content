@@ -44,7 +44,8 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 
 在客户端，HTML 表单只不过是一种方便的用户友好的方式，可以配置 HTTP 请求将数据发送到服务器。这使用户能够提供在 HTTP 请求中传递的信息。
 
-> **备注：** 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/zh-CN/docs/Learn/Server-side/First_steps)模块。
+> [!NOTE]
+> 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/zh-CN/docs/Learn/Server-side/First_steps)模块。
 
 ### 在客户端：定义如何发送数据
 
@@ -78,7 +79,8 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 <form action="#">…</form>
 ```
 
-> **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当你这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是你指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
+> [!NOTE]
+> 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当你这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是你指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
 
 #### `method` 属性
 
@@ -124,7 +126,8 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!NOTE]
+> 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 ##### POST 方法
 
@@ -161,7 +164,8 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例——见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html)（[预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上看到本例——见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html)（[预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)）。
 
 #### 查看 HTTP 请求
 
@@ -205,7 +209,8 @@ HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要�
 
 ![](php-result.png)
 
-> **备注：** 当你将本例加载到本地浏览器中时，这个示例将无法工作---浏览器无法解析 PHP 代码，因此当提交表单时，浏览器只会为你提供下载 PHP 文件。为了让它生效，你需要通过某种类型的 PHP 服务器运行这个示例。本地 PHP 测试的好选择有[MAMP](https://www.mamp.info/en/downloads/)(Mac 和 Windows) 和[AMPPS](http://ampps.com/download)(Mac、Windows、Linux)。
+> [!NOTE]
+> 当你将本例加载到本地浏览器中时，这个示例将无法工作---浏览器无法解析 PHP 代码，因此当提交表单时，浏览器只会为你提供下载 PHP 文件。为了让它生效，你需要通过某种类型的 PHP 服务器运行这个示例。本地 PHP 测试的好选择有[MAMP](https://www.mamp.info/en/downloads/)(Mac 和 Windows) 和[AMPPS](http://ampps.com/download)(Mac、Windows、Linux)。
 
 #### 例子：Python
 
@@ -234,7 +239,8 @@ if __name__ == "__main__":
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
-> **备注：** 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
+> [!NOTE]
+> 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
 
 #### 其他语言和框架
 
@@ -248,7 +254,8 @@ if __name__ == "__main__":
 
 要注意的是，即使使用这些框架，使用表单也不一定很容易。但这比从头开始编写所有功能要简单得多，而且会节省很多时间。
 
-> **备注：** 向你介绍任何服务器端语言或框架超出了本文的范围。如果你想要学习这些它们，上面的链接会给你一些帮助。
+> [!NOTE]
+> 向你介绍任何服务器端语言或框架超出了本文的范围。如果你想要学习这些它们，上面的链接会给你一些帮助。
 
 ## 特殊案例：发送文件
 
@@ -278,9 +285,11 @@ if __name__ == "__main__":
 </form>
 ```
 
-> **备注：** 一些浏览器支持{{HTMLElement("input")}}的[`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple)属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使你的生活更轻松。
+> [!NOTE]
+> 一些浏览器支持{{HTMLElement("input")}}的[`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple)属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使你的生活更轻松。
 
-> **警告：** 为了防止滥用，许多服务器配置了文件和 HTTP 请求的大小限制。在发送文件之前，先检查服务器管理员的权限是很重要的。
+> [!WARNING]
+> 为了防止滥用，许多服务器配置了文件和 HTTP 请求的大小限制。在发送文件之前，先检查服务器管理员的权限是很重要的。
 
 ## 常见的安全问题
 
@@ -324,7 +333,8 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 如果你遵循这三条规则，你应该避免很多问题，但是如果你想要得到一个有能力的第三方执行的安全检查，这是一个好主意。不要以为你已经看到了所有可能的问题。
 
-> **备注：** 我们的[服务器端](/zh-CN/docs/Learn/Server-side)学习主题的[网站安全性文章](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
+> [!NOTE]
+> 我们的[服务器端](/zh-CN/docs/Learn/Server-side)学习主题的[网站安全性文章](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
 
 ## 结论
 

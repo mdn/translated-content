@@ -19,15 +19,16 @@ slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 
 例如，在 Apache 中，将以下行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf` 文件中（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或者位于 `.htaccess` 文件中。
 
-> **警告：** 你必须将 HTTPS 或 HTTP 协议作为源的一部分。
+> [!WARNING]
+> 你必须将 HTTPS 或 HTTP 协议作为源的一部分。
 
-```
+```apacheconf
 Header set Access-Control-Allow-Origin 'origin'
 ```
 
 在 Nginx 中，对应的配置为：
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'origin'
 ```
 

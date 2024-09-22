@@ -3,7 +3,9 @@ title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 ---
 
-{{ApiRef("Document")}}Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
+{{APIRef("Document")}}
+
+Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
 
 ## Синтаксис
 
@@ -65,7 +67,7 @@ var nodeList = [];
 while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -73,6 +75,6 @@ while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The interface of the object it creates: {{domxref("TreeWalker")}}.

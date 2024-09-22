@@ -178,7 +178,8 @@ request.onupgradeneeded= function(event) {
 
 ### `readyState` constants
 
-> **警告：** These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
+> [!WARNING]
+> These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
 
 | Constant      | Value     | Description                                                         |
 | ------------- | --------- | ------------------------------------------------------------------- |

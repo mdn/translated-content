@@ -35,8 +35,9 @@
 
 | 英文词汇      | 翻译         | 备注                                                                                 | 引用来源                                                                    |
 | ------------- | ------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| CORS          | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。                                         | https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297 |
 | cache busting | 缓存破坏     | 通过修改引用资源的文件名，强制浏览器重新下载新文件。实际使用可译作“（使）缓存失效”。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1508540582 |
+| CORS          | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。                                         | https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297 |
+| cross-origin  | 跨源         |                                                                                      | 同 `CORS`                                                                   |
 | Header        | 标头         | HTTP 消息中的附加信息。                                                              | 来自 Google Chrome 控制台                                                   |
 
 ### JavaScript
@@ -45,9 +46,11 @@
 | ------------------ | ---------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | bare module        | 裸模块           | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。                             | https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277 |
 | brand check        | 特定类型检查     | 通过一段代码来对特定的数据类型进行检查。                                                 | https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483 |
+| constructor        | 构造函数         |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
 | exotic object      | 特异对象         |                                                                                          |                                                                             |
-| normative optional | 可选标准         |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
+| handler            | 处理器           |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
 | interface          | 接口             |                                                                                          | https://zh.wikipedia.org/wiki/介面_(資訊科技)                               |
+| normative optional | 可选标准         |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
 | primitive          | 原始值/类型      | 基本类型包括对象，而原始类型不包括对象。                                                 | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
 | unscopable         | 非作用域（属性） |                                                                                          | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
 | well-known symbol  | 内置通用符号     |                                                                                          | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
@@ -55,24 +58,27 @@
 
 ## 标题/表格
 
-| 英文词汇               | 翻译         | 备注               | 引用来源                                                                    |
-| ---------------------- | ------------ | ------------------ | --------------------------------------------------------------------------- |
-| Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                      |
-| Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
-| Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
-| Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
-| Examples               | 示例         |                    |                                                                             |
-| Exceptions             | 异常         |                    |                                                                             |
-| Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
-| Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
-| Objective              | 目标         | 在学习区表格中使用 |                                                                             |
-| Parameters             | 参数         |                    |                                                                             |
-| Prerequisites          | 前提         | 在学习区表格中使用 |                                                                             |
-| See also               | 参见         |                    |                                                                             |
-| Specifications         | 规范         |                    |                                                                             |
-| Technical summary      | 技术概要     |                    | https://github.com/mdn/translated-content/issues/11456                      |
-| Test your skills       | 技能测试     |                    |                                                                             |
-| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585 |
+| 英文词汇               | 翻译         | 备注               | 引用来源                                                                     |
+| ---------------------- | ------------ | ------------------ | ---------------------------------------------------------------------------- |
+| Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                       |
+| Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935  |
+| Associated interfaces  | 相关接口     |                    |                                                                              |
+| Associated roles       | 相关角色     |                    |                                                                              |
+| Browser compatibility  | 浏览器兼容性 |                    |                                                                              |
+| Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894  |
+| Examples               | 示例         |                    |                                                                              |
+| Exceptions             | 异常         |                    |                                                                              |
+| Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Objective              | 目标         | 在学习区表格中使用 |                                                                              |
+| Parameters             | 参数         |                    |                                                                              |
+| Prerequisites          | 前提         | 在学习区表格中使用 |                                                                              |
+| See also               | 参见         |                    |                                                                              |
+| Specifications         | 规范         |                    |                                                                              |
+| Technical summary      | 技术概要     |                    | https://github.com/mdn/translated-content/issues/11456                       |
+| Test your skills       | 技能测试     |                    |                                                                              |
+| Usage context          | 使用上下文   |                    | https://github.com/mdn/translated-content/pull/23257#issuecomment-2309852450 |
+| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585  |
 
 ## 通用术语
 

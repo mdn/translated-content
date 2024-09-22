@@ -1,6 +1,8 @@
 ---
 title: 表达式语句
 slug: Web/JavaScript/Reference/Statements/Expression_statement
+l10n:
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
@@ -39,12 +41,12 @@ expression;
 - `function`：这将是 [`function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或者 [`function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)，而不是 [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或者 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`：这将是 [`async function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)或者 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)，而不是 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)或者 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - `class`：这将是 [`class` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)，而不是 [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)下的标识符）
+- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#额外的保留字)下的标识符）
 - `{`：这将是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)，而不是[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 因此，以下所有内容均无效：
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('
@@ -115,7 +117,8 @@ function range2(start, end) {
 }
 ```
 
-> **警告：** 这仅演示了该语言的功能。过度的使用表达式语句来替代控制流语句会大大降低代码的可读性。
+> [!WARNING]
+> 这仅演示了该语言的功能。过度的使用表达式语句来替代控制流语句会大大降低代码的可读性。
 
 ## 规范
 

@@ -27,7 +27,8 @@ Stream API 允许 JavaScript 以编程方式访问从网络接收的数据流，
 
 你也可以使用 {{domxref("WritableStream")}} 将数据写入流。
 
-> **备注：** 你可以在这些文章中找到关于流理论的更多细节和实践——[Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
+> [!NOTE]
+> 你可以在这些文章中找到关于流理论的更多细节和实践——[Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)、[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)、[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)，以及[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
 ## Stream 接口
 

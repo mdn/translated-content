@@ -17,7 +17,8 @@ Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
 
 {{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-> **Note :** Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
+> [!NOTE]
+> Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
 >
 > ```css
 > border-bottom-style: dotted;

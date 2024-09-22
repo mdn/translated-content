@@ -76,7 +76,7 @@ setCookie.then(logCookie, logError);
 
 #### [proxy](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
-- この API は Chrome API の設計とはまったく異なります。 Chrome の API を使用すると、拡張機能で PAC ファイルを登録できますが、明示的なプロキシルールを定義することもできます。これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。 この API は Chrome の `proxy` API と互換性がないため、この API は `browser` の名前空間でのみ使用できます。
+- この API は Chrome API の設計とはまったく異なります。 Chrome の API を使用すると、拡張機能で PAC ファイルを登録できますが、明示的なプロキシールールを定義することもできます。これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。 この API は Chrome の `proxy` API と互換性がないため、この API は `browser` の名前空間でのみ使用できます。
 
 #### [tabs](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
@@ -88,13 +88,13 @@ setCookie.then(logCookie, logError);
 
 <!---->
 
-- Firefox では、`tabs.query()` を使用して URL でタブにクエリを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
+- Firefox では、`tabs.query()` を使用して URL でタブにクエリーを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
 - Firefox では、`beforeunload` イベントの後に `tabs.remove()` の promise が実行されますが、Chrome では コールバック が `beforeunload` を待ちません。
 
 #### [webRequest](/ja/Add-ons/WebExtensions/API/webRequest)
 
 - Firefox では、元の URL が`http:`または`https:`を使用する場合にのみ、リクエストをリダイレクトできます。
-- Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシ認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。
+- Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシー認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。
 - Firefox では、拡張機能が外部 URL (例 HTTPS) から[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの URL を一覧にした [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) キーを含むことが必須です。 その URL にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば POST データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。
 
 #### [windows](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)

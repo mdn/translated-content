@@ -12,7 +12,7 @@ slug: Glossary/HTTP_3
    1. MDN 上の [HTTP](/ja/docs/Web/HTTP)
    2. Wikipedia 上の [HTTP/3](https://ja.wikipedia.org/wiki/HTTP/3)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{glossary("HTTP")}}
    2. {{glossary("HTTP 2", "HTTP/2")}}

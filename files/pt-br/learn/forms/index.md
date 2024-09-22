@@ -11,7 +11,7 @@ Este guia tem uma série de artigos que vão ajudar você a ficar craque em HTML
 
 Antes de iniciar este guia, você deve estar familiarizado com os conceitos da nossa [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML).
 
-> **Nota:** **Dica**: Se você está usando um computador/tablet/outro aparelho onde você não pode criar seus próprios arquivos, você pode testar (a maior parte) dos códigos de exemplo em uma ferramenta online como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/pt-BR/).
+> **Nota:** **Dica**: Se você está usando um computador/tablet/outro aparelho onde você não pode criar seus próprios arquivos, você pode testar (a maior parte) dos códigos de exemplo em uma ferramenta online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias básicos
 

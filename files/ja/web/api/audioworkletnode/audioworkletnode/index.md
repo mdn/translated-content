@@ -29,7 +29,8 @@ new AudioWorkletNode(context, name, options)
 
     <!-- 仕様書ではこのオブジェクトは AudioWorkletNodeOptions と呼ばれています -->
 
-    > **メモ:** このオブジェクトに[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を適用した結果が内部で対応する {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} コンストラクターに渡されます。
+    > [!NOTE]
+    > このオブジェクトに[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を適用した結果が内部で対応する {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} コンストラクターに渡されます。
     > これにより、用いるユーザー定義の {{domxref("AudioWorkletProcessor")}} の初期化のカスタマイズが可能になります。
 
     - `numberOfInputs` {{optional_inline}}

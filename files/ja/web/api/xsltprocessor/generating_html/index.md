@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 457f4ed29a1eed6ac732e0982bb4c1631fa0226c
 ---
 
+{{APIRef("XSLT")}}
+
 ブラウザーにおける XSLT のよくある活用法の一つが、クライアント上で XML を HTML へと変換することです。この例は、記事についての情報を含む文書 (example2.xml) を入力し、HTML 文書へ変換します。
 
 記事の `<body>` 要素は HTML 要素（`<b>` および `<u>` タグ）を含んでいます。この XML 文書は HTML 要素と XML 要素の両方を含んでいますが、必要な名前空間は XML 要素のための名前空間 1 つだけです。HTML には名前空間が無く、XHTML 名前空間を使用すると HTML 文書のように動作しない XML 文書を XSL に生成させてしまうため、XSL スタイルシート内の `xsl:output` によって結果の文書が HTML として扱われるようにします。XML 要素については、独自の名前空間 `http://devedge.netscape.com/2002/de` と、それによって与えられる myNS 接頭辞 `(xmlns:myNS="http://devedge.netscape.com/2002/de")` が必要です。

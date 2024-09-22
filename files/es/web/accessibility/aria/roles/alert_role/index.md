@@ -3,6 +3,8 @@ title: Using the alert role
 slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Descripción
 
 Esta técnica demuestra como usar el rol [alert](https://www.w3.org/TR/wai-aria-1.1/#alert) y describe el efecto que tiene en los navegadores y tecnologías de asistencia.
@@ -27,7 +29,8 @@ Productos de tecnología asistencial deben escuchar por dicho evento y notificar
 - Lectores de pantalla pueden interrumpir la entrada actual (sea por voz o braile) e inmediatamente anunciar o desplegar el mensaje de alerta.
 - Lupas de pantalla pueden indicar visualmente que una alerta ha ocurrido y que texto tuvo la alerta.
 
-> **Nota:** Opiniones pueden diferir en como tecnologías de asistencia deben manejar esta técnica. La información proveida anteriormente es una de estas opiniones y por lo tanto no es normativa.
+> [!NOTE]
+> Opiniones pueden diferir en como tecnologías de asistencia deben manejar esta técnica. La información proveida anteriormente es una de estas opiniones y por lo tanto no es normativa.
 
 ### Ejemplos
 

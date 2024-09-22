@@ -84,7 +84,8 @@ Vous pourriez également faire défiler sur l'axe x en utilisant [`overflow-x`](
 
 Comme pour `scroll`, une barre de défilement apparaîtra sur l'axe sélectionné qu'il y ait suffisamment de contenu ou pas pour créer un défilement.
 
-> **Note :** vous pouvez spécifier le défilement x et y simultanément en utilisant la propriété `overflow` en déclarant deux valeurs. Si deux mots clés sont spécifiés, le premier s'applique à `overflow-x` et le second à `overflow-y`. Sinon, `overflow-x` et `overflow-y` sont définis sur la même valeur. Par exemple, `overflow: scroll hidden` définira `overflow-x` sur `scroll` et `overflow-y` sur `hidden`.
+> [!NOTE]
+> Vous pouvez spécifier le défilement x et y simultanément en utilisant la propriété `overflow` en déclarant deux valeurs. Si deux mots clés sont spécifiés, le premier s'applique à `overflow-x` et le second à `overflow-y`. Sinon, `overflow-x` et `overflow-y` sont définis sur la même valeur. Par exemple, `overflow: scroll hidden` définira `overflow-x` sur `scroll` et `overflow-y` sur `hidden`.
 
 Si vous souhaitez que les barres de défilement n'apparaissent que s'il y a plus de contenu que la boîte ne peut en contenir, utilisez `overflow: auto`. Dans ce cas c'est le navigateur qui décidera d'afficher ou non les barres de défilement. Les navigateurs de bureau ne le font généralement que lorsqu'il y a suffisamment de contenu pour provoquer un débordement.
 

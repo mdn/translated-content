@@ -3,6 +3,8 @@ title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 
+{{CSSRef}}
+
 Псевдокласс **`:focus-visible`** применяется, в то время как элемент соответствует псевдоклассу :focus, и UA ({{glossary("User Agent")}}) определяет с помощью эвристики, что фокус должен быть сделан очевидным для элемента.
 
 Этот селектор полезен для предоставления другого индикатора фокуса, основанного на модальности ввода пользователя (мышь против клавиатуры).
@@ -97,7 +99,7 @@ Make sure the visual focus indicator can be seen by people with low vision. This
 
 It may not be obvious as to why the focus indicator is appearing and disappearing if a person is using mixed forms of input. For users with cognitive concerns, or who are less technologically literate, this lack of consistent behavior for interactive elements may be confusing.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -105,7 +107,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}

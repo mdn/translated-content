@@ -3,10 +3,10 @@ title: "Event: stopImmediatePropagation() メソッド"
 short-title: stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 l10n:
-  sourceCommit: 32b07aa5b6ac4799a88e7b87a4d8333643ab6427
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`stopImmediatePropagation()`** は {{domxref("Event")}} インターフェイスのメソッドで、呼び出されている同じイベントの他のリスナーを抑止します。
 
@@ -112,7 +112,7 @@ document
 
 #### 結果
 
-それぞれのクリックイベントハンドラーは、呼び出されるとステータスメッセージを表示します。中央のボタンを押すと、`stopPropagation()` によって、そのボタンがクリックされたときに登録されたイベントハンドラはすべて実行されますが、その後に続くはずの div のクリックイベントハンドラーは実行されないことがわかります。しかし、一番下のボタンを押すと、`stopImmediatePropagation()` はそのイベント以降の伝播をすべて停止します。
+それぞれのクリックイベントハンドラーは、呼び出されるとステータスメッセージを表示します。中央のボタンを押すと、`stopPropagation()` によって、そのボタンがクリックされたときに登録されたイベントハンドラーはすべて実行されますが、その後に続くはずの div のクリックイベントハンドラーは実行されないことがわかります。しかし、一番下のボタンを押すと、`stopImmediatePropagation()` はそのイベント以降の伝播をすべて停止します。
 
 {{ EmbedLiveSample("Comparing event-stopping functions", 500, 550) }}
 

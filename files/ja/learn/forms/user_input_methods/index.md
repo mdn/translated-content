@@ -1,7 +1,6 @@
 ---
-title: ユーザ入力とコントロール
+title: ユーザー入力とコントロール
 slug: Learn/Forms/User_input_methods
-original_slug: Web/Guide/User_input_methods
 ---
 
 現代のウェブのユーザー入力は、単純なマウスやキーボードだけではありません。この記事では、ユーザー入力を管理し、オープンなウェブアプリに制御を実装するための推奨事項を、FAQ、実例、および基礎となる技術について、より詳細な情報を必要とする人のための詳細な情報へのリンクとともに提供します。関連する API とイベントには、[タッチイベント](/ja/docs/Web/API/Touch_events)、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API)、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)、[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)、[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) などがあります。
@@ -18,7 +17,7 @@ original_slug: Web/Guide/User_input_methods
 
 利用できる入力の仕組みはアプリを動かしているデバイスの性能に依存します。
 
-- デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェースで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
+- デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェイスで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
 - ポインターを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) は、あなたのアプリを全画面モードで表示するのに役立ちます。
 - [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
 - キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。
@@ -38,11 +37,12 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
-> **メモ:** キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> [!NOTE]
+> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
 #### マウス
 
-ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェースによって表されます。一般的なマウスイベントは、[`click イベント`](/ja/docs/Web/Reference/Events/click)、[`dblclick イベント`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup イベント`](/ja/docs/Web/API/Element/mouseup_event)、そして [`mousedown イベント`](/ja/docs/Web/Reference/Events/mousedown)を含みます。マウスイベントインターフェースが使用している全てのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Reference/Events)に記載されています。
+ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントは、[`click イベント`](/ja/docs/Web/Reference/Events/click)、[`dblclick イベント`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup イベント`](/ja/docs/Web/API/Element/mouseup_event)、そして [`mousedown イベント`](/ja/docs/Web/Reference/Events/mousedown)を含みます。マウスイベントインターフェイスが使用している全てのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Reference/Events)に記載されています。
 
 入力デバイスがマウスの場合、ユーザー入力を Pointer Lock API やドラッグ＆ドロップ API の実装でも制御できます (下記を参照してください)。
 
@@ -61,19 +61,21 @@ element.addEventListener("touchmove", handleMove, false);
 
 ここでの `element` は、あなたがタッチイベントを登録したい DOM 要素です。
 
-> **メモ:** タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
+> [!NOTE]
+> タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
 
 #### ポインターイベント
 
 マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](http://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
 
-> **メモ:** Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
+> [!NOTE]
+> Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
 
 ### コントロールの実装
 
 #### ポインターロック
 
-典型的なゲーム開発では、ブラウザやスクリーンの境界を超えた時でさえもマウスイベントにアクセスすることが必要なケースがあるかもしれません。[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) はポインティングデバイスの全ての制御を可能にします。
+典型的なゲーム開発では、ブラウザーやスクリーンの境界を超えた時でさえもマウスイベントにアクセスすることが必要なケースがあるかもしれません。[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) はポインティングデバイスの全ての制御を可能にします。
 
 以下は `element` にポインターロックをリクエストしているコードです。
 
@@ -81,7 +83,8 @@ element.addEventListener("touchmove", handleMove, false);
 element.requestPointerLock();
 ```
 
-> **メモ:** 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
+> [!NOTE]
+> 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
 
 #### 画面の向き
 
@@ -89,7 +92,8 @@ element.requestPointerLock();
 
 画面の向きのデータは {{domxref("screen.orientation")}} 属性、または [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通して取得することができます。`screen.orientation` が変化した時、{{domxref("screen.orientationchange")}} イベントがスクリーンオブジェクトで発火されます。{{domxref("screen.lockOrientation")}} メソッドを呼ぶことで画面の向きを固定することができます。また、{{domxref("screen.unlockOrientation")}} メソッドはそれまで設定されていた画面のロックを全て解除します。
 
-> **メモ:** Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
+> [!NOTE]
+> Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
 
 #### 全画面
 
@@ -108,7 +112,8 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **メモ:** 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
+> [!NOTE]
+> 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
 
 #### ドラッグ＆ドロップ
 
@@ -139,7 +144,8 @@ if (elem.requestFullscreen) {
 <div contenteditable="true">このテキストは閲覧者が編集することができます。</div>
 ```
 
-> **メモ:** 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
+> [!NOTE]
+> 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
 
 ## 例
 

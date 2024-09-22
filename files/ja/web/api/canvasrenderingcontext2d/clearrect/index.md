@@ -1,6 +1,9 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
+title: "CanvasRenderingContext2D: clearRect() メソッド"
+short-title: clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+l10n:
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{APIRef}}
@@ -11,11 +14,11 @@ slug: Web/API/CanvasRenderingContext2D/clearRect
 
 ## 構文
 
-```js
-void ctx.clearRect(x, y, width, height);
+```js-nolint
+clearRect(x, y, width, height)
 ```
 
-`clearRect()` メソッドは、矩形領域のピクセルを透明な黒 (`rgba(0,0,0,0)`) に設定します。矩形の角は `(x, y)` にあり、大きさは `width` と `height` で指定されます。
+`clearRect()` メソッドは、矩形領域のピクセルを透明な黒 (`rgb(0 0 0 / 0%)`) に設定します。矩形の左上の角は `(x, y)` にあり、大きさは `width` と `height` で指定されます。
 
 ### 引数
 
@@ -27,6 +30,10 @@ void ctx.clearRect(x, y, width, height);
   - : 矩形領域の幅を指定します。
 - `height`
   - : 矩形領域の高さを指定します。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

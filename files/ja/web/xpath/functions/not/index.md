@@ -3,7 +3,7 @@ title: not
 slug: Web/XPath/Functions/not
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `not` 関数は式を論理値として評価し、その逆の値を返します。
 

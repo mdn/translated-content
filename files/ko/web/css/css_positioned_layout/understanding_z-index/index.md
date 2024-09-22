@@ -3,6 +3,8 @@ title: CSS z-index 이해하기
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 ---
 
+{{CSSRef}}
+
 우리들은 HTML 페이지를 2차원 평면으로 생각한다. 왜냐하면 여러 텍스트, 이미지와 다른 엘리먼트들이 서로 겹치지 않고 배열되기 때문이다. 하나의 렌더링 흐름만이 존재하며 모든 엘리먼트들은 다른 엘리먼트들이 어떤 공간을 차지하고 있는지 알고 있다.
 
 > _In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually._

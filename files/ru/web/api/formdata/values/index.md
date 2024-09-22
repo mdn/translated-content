@@ -3,11 +3,11 @@ title: FormData.values()
 slug: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData.values()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем значениям в этом объекте. Значения - это {{domxref("USVString")}} или {{domxref("Blob")}} объекты.
-
-> **Примечание:** Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -40,7 +40,7 @@ value1
 value2
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

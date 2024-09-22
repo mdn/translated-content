@@ -3,6 +3,8 @@ title: Tutorial de SVG
 slug: Web/SVG/Tutorial
 ---
 
+{{SVGRef}}
+
 Los graficos de vectores escalables, SVG , es un dialecto XML de W#C usado para describir graficos. Esta parcialente implementado en Firefox, Opera, WebKit , Internet Explorer y otros.
 
 Este tutorial intenta explicar SVG a profundidad y esta elaborado con detalles tecnicos. Si quieres dibujar hermosas imagenes, podras encontrar recursos mas utiles en la [Documentacion de Inkscape](https://inkscape.org/en/learn/) . Otra buena introduccion es brindada por el W3C's [SVG Primer](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) .

@@ -3,14 +3,15 @@ title: "PushManager: unregister() メソッド"
 short-title: unregister()
 slug: Web/API/PushManager/unregister
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{deprecated_header}}{{ ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 **`unregister()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
 
-> **メモ:** 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
+> [!NOTE]
+> 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
 
 ## 構文
 

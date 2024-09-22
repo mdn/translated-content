@@ -30,9 +30,7 @@ function Default() {}
 var defaultReference = new Default();
 ```
 
-## Смотреть также
-
-### Техническая справка
+## Смотрите также
 
 - [Конструктор в ООП для JavaScript](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor) на MDN
 - [Оператор new в JavaScript](/ru/docs/Web/JavaScript/Reference/Operators/new) на MDN

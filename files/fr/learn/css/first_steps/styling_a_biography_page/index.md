@@ -30,7 +30,8 @@ Le temps est venu d'évaluer tout ce que vous avez appris dans les leçons préc
 
 Vous pouvez travailler dans l'éditeur ci-dessous ou [télécharger le point de départ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) pour travailler en local sur votre machine, avec votre propre éditeur de code. Ce point de départ est une page HTML avec le CSS interne écrit dans la section `<head>`. Sur votre machine, n'hésitez pas à travailler avec une feuille de style externe. Vous pouvez aussi utiliser des éditeurs en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour travailler sur les tâches proposées.
 
-> **Note :** ne restez pas coincé, appelez à l'aide — voir la section [Evaluation et comment obtenir de l'aide](#evaluation) au bas de cette page.
+> [!NOTE]
+> Ne restez pas coincé, appelez à l'aide — voir la section [Evaluation et comment obtenir de l'aide](#evaluation) au bas de cette page.
 
 ## Travailler avec CSS
 

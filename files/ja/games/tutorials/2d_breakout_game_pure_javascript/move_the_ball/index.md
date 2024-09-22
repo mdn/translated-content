@@ -134,7 +134,8 @@ function draw() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
 
-> **メモ:** 動くボールの速さや向きを変えてみましょう。
+> [!NOTE]
+> 動くボールの速さや向きを変えてみましょう。
 
 ## 次のステップ
 

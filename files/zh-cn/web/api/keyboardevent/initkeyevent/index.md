@@ -3,9 +3,10 @@ title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("UI Events")}}
 
-> **警告：** 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
+> [!WARNING]
+> 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 >
 > 该方法已从 DOM 规范中删除，并且不受任何现代浏览器支持。Firefox 从版本 93 开始默认通过首选项（`dom.keyboardevent.init_key_event.enabled`）隐藏此方法，并计划很快移除它。
 
@@ -13,41 +14,41 @@ slug: Web/API/KeyboardEvent/initKeyEvent
 
 KeyboardEvent.initKeyEvent 方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent") 创建的事件的值。以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent") 方法创建。在调度之前，必须调用 initKeyEvent 来设置事件。
 
-## Syntax
+## 语法
 
+```js-nolint
+initKeyEvent (type, bubbles, cancelable, view,
+                    ctrlKey, altKey, shiftKey, metaKey,
+                    keyCode, charCode)
 ```
-event.initKeyEvent (type, bubbles, cancelable, viewArg,
-                    ctrlKeyArg, altKeyArg, shiftKeyArg, metaKeyArg,
-                    keyCodeArg, charCodeArg)
-```
 
-### Parameters
+### 参数
 
-- _`type`_
+- `type`
   - : 是表示事件类型的{{domxref("DOMString")}}。
-- _`bubbles`_
+- `bubbles`
   - : 是{{jsxref("Boolean")}}指示事件是否应该通过事件链冒泡（请参阅冒泡）。
-- _`cancelable`_
+- `cancelable`
   - : 是{{jsxref("Boolean")}}我指出事件是否可以被取消（见可取消）。
-- _`viewArg`_
+- `viewArg`
   - : 指定{{domxref("UIEvent.view")}}; 此值可能为空。
-- _`ctrlKeyArg`_
+- `ctrlKey`
 
   - : 如果要生成的虚拟键是包含
 
     <kbd>Ctrl</kbd>
 
-    键的键的组合，则为{{jsxref("Boolean")}}
+    键的键的组合，则为 {{jsxref("Boolean")}}
 
-- _`altKeyArg`_
+- `altKey`
 
-  - _: `如果要生成的虚拟键是包含`_
+  - \_: 如果要生成的虚拟键是包含
 
     <kbd>Alt</kbd>
 
-    _`键的键的组合，则为{{jsxref("Boolean")}}。`_
+    键的键的组合，则为 {{jsxref("Boolean")}}。
 
-- _`shiftKeyArg`_
+- `shiftKey`
 
   - : A {{jsxref("Boolean")}}如果要生成的虚拟键是包含
 
@@ -55,50 +56,42 @@ event.initKeyEvent (type, bubbles, cancelable, viewArg,
 
     键的键组合，则返回 true。
 
-- _`metaKeyArg`_
+- `metaKey`
 
-  - _: `是{{jsxref("Boolean")}}如果要生成的虚拟键是包含`_
+  - \_: 是{{jsxref("Boolean")}}如果要生成的虚拟键是包含
 
     <kbd>Meta</kbd>
 
-    _`键的键的组合，则为 true。`_
+    键的键的组合，则为 `true`。
 
-- _`keyCodeArg`_
+- `keyCode`
   - : 是一个无符号长整型，表示被按下的键的虚拟键码值，否则为 0.请参阅{{domxref("KeyboardEvent.keyCode")}}以获取键码列表。
-- _`charCodeArg`_
+- `charCode`
   - : 是一个无符号长整型，表示与按下的键相关的 Unicode 字符，否则为 0。
 
-## Example
+## 示例
 
+```js
+const event = document.createEvent("KeyboardEvent"); // 创建 key 事件
+// 定义事件
+event.initKeyEvent(
+  "keypress", // type 参数
+  true, // canBubble 参数
+  true, // cancelable 参数
+  null, // view 参数，指定 UIEvent.view。该值应为 null。
+  false, // ctrlKey 参数
+  false, // altKey 参数
+  false, // shiftKey 参数
+  false, // metaKey 参数
+  9, // keyCode 参数
+  0, // charCode 参数
+);
+
+document.getElementById("blah").dispatchEvent(event);
 ```
-var event = document.createEvent('KeyboardEvent'); // create a key event
-// define the event
-event.initKeyEvent("keypress",       // typeArg,
-                   true,             // canBubbleArg,
-                   true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
-                   false,            // ctrlKeyArg,
-                   false,            // altKeyArg,
-                   false,            // shiftKeyArg,
-                   false,            // metaKeyArg,
-                    9,               // keyCodeArg,
-                    0);              // charCodeArg);
 
-document.getElementById('blah').dispatchEvent(event);
-```
-
-## Specification
+## 规范
 
 键盘事件的这种实现基于 DOM 2 事件早期版本中的关键事件规范，后来从该规范中删除。
 
 initKeyEvent 是 DOM Level 3 事件的当前 Gecko 等价物（最初起草并且不推荐使用{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} {{domxref("Keyboard.initKeyboardEvent()")}}方法与以下参数：
-
-```
-typeArg of type DOMString
-canBubbleArg of type boolean
-cancelableArg of type boolean
-viewArg of type views::AbstractView
-keyIdentifierArg of type DOMString
-keyLocationArg of type unsigned long
-modifiersList of type DOMString);
-```

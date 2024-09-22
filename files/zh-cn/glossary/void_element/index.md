@@ -1,11 +1,13 @@
 ---
 title: 空元素
 slug: Glossary/Void_element
+l10n:
+  sourceCommit: 73d8e953dbd0cf882a47419766f1a76b7332dd40
 ---
 
 {{GlossarySidebar}}
 
-**空元素**（empty element）是 HTML 中**不能**存在子节点（例如内嵌的元素或者文本节点）的{{Glossary("element", "元素")}}。空元素只有开始标签且不能指定结束标签。
+**空元素**（void element）是 HTML 中**不能**存在子节点（例如内嵌的元素或者文本节点）的{{Glossary("element", "元素")}}。空元素只有开始标签且不能指定结束标签。
 
 在 HTML 中，空元素不能有结束标签。例如，`<input type="text"></input>` 是无效的 HTML。相反，不能有任何子节点的 SVG 或 MathML 元素可以使用结束标签来代替 XML 开始标签中的自闭合标签语法。
 
@@ -42,7 +44,8 @@ _HTML 中不存在自闭合标签（`<tag />`）。_
 
 在 SVG 和 MathML 中，有任何子节点的元素不允许使用自闭合标签。在这种情况下，如果元素的开始标签被标记为自闭合，则该元素不能有结束标签。
 
-> **备注：** 如果开始标签中的尾随 `/`（斜杠）字符直接位于未使用引号包裹的属性值之后（两者之间没有空格），则该斜杠字符将成为属性值的一部分，而不是被解析器丢弃。例如，标记 `<img src=http://www.example.com/logo.svg/>` 会导致 `src` 属性的值为 `http://www.example.com/logo.svg/`——这会导致 URL 错误。
+> [!NOTE]
+> 如果开始标签中的尾随 `/`（斜杠）字符直接位于未使用引号包裹的属性值之后（两者之间没有空格），则该斜杠字符将成为属性值的一部分，而不是被解析器丢弃。例如，标记 `<img src=http://www.example.com/logo.svg/>` 会导致 `src` 属性的值为 `http://www.example.com/logo.svg/`——这会导致 URL 错误。
 
 ## 参见
 

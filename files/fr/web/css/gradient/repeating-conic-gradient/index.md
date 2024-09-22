@@ -33,7 +33,8 @@ background: repeating-conic-gradient(
 - `<color-hint>`
   - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleurs adjacents. Cette indication indique l'emplacement où la couleur doit être la couleur intermédiaire entre les deux arrêts environnant. Si cette valeur est absente, la moitié de la transition entre les couleurs sera atteinte à la moitié de l'arc entre les deux arrêts.
 
-> **Note :** Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 

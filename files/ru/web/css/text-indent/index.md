@@ -99,7 +99,7 @@ p {
 
 {{ EmbedLiveSample('Percentage_indent_example','100%','100%') }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

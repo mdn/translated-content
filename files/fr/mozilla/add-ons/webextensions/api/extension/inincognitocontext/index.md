@@ -13,7 +13,7 @@ Valeur booléenne, `true` pour les scripts de contenu s'exécutant dans les ongl
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >

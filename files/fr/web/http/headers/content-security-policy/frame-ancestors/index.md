@@ -45,7 +45,8 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 La \<source> peut être une des suivantes :
 
-> **Note :** The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
+> [!NOTE]
+> The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
 
 - \<host-source>
 
@@ -56,7 +57,8 @@ La \<source> peut être une des suivantes :
     - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
     - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
 
-    > **Attention :** Si aucun schéma d'URL n'est spécifié comme `host-source` et que l'{{HTMLElement("iframe")}} est chargée via une URL `https:`, la page chargeant l'iframe doit aussi être chargée en `https:`, selon la spécification du W3C sur [les correspondances de valeurs de sources](https://w3c.github.io/webappsec-csp/2/#match-source-expression).
+    > [!WARNING]
+    > Si aucun schéma d'URL n'est spécifié comme `host-source` et que l'{{HTMLElement("iframe")}} est chargée via une URL `https:`, la page chargeant l'iframe doit aussi être chargée en `https:`, selon la spécification du W3C sur [les correspondances de valeurs de sources](https://w3c.github.io/webappsec-csp/2/#match-source-expression).
 
 - \<scheme-source>
 

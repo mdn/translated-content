@@ -1,10 +1,9 @@
 ---
 title: Utilizando XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 En esta guía le echaremos un vistazo a cómo usar
 {{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)
@@ -41,13 +40,11 @@ de estos dos tipos de peticiones en la página [peticiones síncronas
 y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
-> **Nota:** A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
-> los efectos negativos en la experiencia del usuario.
+> [!NOTE]
+> A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a los efectos negativos en la experiencia del usuario.
 
-> **Nota:** La función constructora
-> `XMLHttpRequest` no se limita a los documentos XML. Comienza con
-> **"XML "** porque cuando se creó el formato principal que se utilizaba originalmente
-> para el intercambio de datos asíncrono era XML.
+> [!NOTE]
+> La función constructora `XMLHttpRequest` no se limita a los documentos XML. Comienza con **"XML"** porque cuando se creó el formato principal que se utilizaba originalmente para el intercambio de datos asíncrono era XML.
 
 ## Manejando las respuestas
 
@@ -192,9 +189,8 @@ function transferCanceled(evt) {
 Las líneas 3-6 añaden escuchadores de eventos para los distintos eventos que se envían al realizar una
 transferencia de datos utilizando `XMLHttpRequest`.
 
-> **Nota:** Tienes que añadir los escuchadores de eventos antes de
-> llamar a `open()` en la petición. De lo contrario, los eventos `progress
-> no se dispararán.
+> [!NOTE]
+> Tienes que añadir los escuchadores de eventos antes de llamar a `open()` en la petición. De lo contrario, los eventos `progress no se dispararán.
 
 El manejador de eventos de progreso, especificado por la función `updateProgress()` en
 este ejemplo, recibe el número total de bytes a transferir así como el número de
@@ -218,19 +214,14 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **Nota:** Los eventos de progreso no están disponibles para el
-> protocolo `file:`.
+> [!NOTE]
+> Los eventos de progreso no están disponibles para el protocolo `file:`.
 
-> **Nota:** A partir de Gecko 9.0, se puede confiar en que los eventos de progreso
-> lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos
-> en los que se recibe el último paquete y se cierra la conexión antes de que se
-> dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente
-> cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar
-> de forma fiable el progreso observando únicamente el evento "progress".
+> [!NOTE]
+> A partir de Gecko 9.0, se puede confiar en que los eventos de progreso lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos en los que se recibe el último paquete y se cierra la conexión antes de que se dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar de forma fiable el progreso observando únicamente el evento "progress".
 
-> **Nota**: A partir de Gecko 12.0, si su evento de progreso es llamado con
-> un `responseType` de "moz-blob", el valor de la respuesta es un
-> {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
+> [!NOTE]
+> A partir de Gecko 12.0, si su evento de progreso es llamado con un `responseType` de "moz-blob", el valor de la respuesta es un {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
 
 También se pueden detectar las tres condiciones de finalización de la carga (`abort`,
 `load`, o `error`) utilizando el evento `loadend`:
@@ -709,25 +700,14 @@ La sintaxis para activar este script es:
 AJAXSubmit(myForm);
 ```
 
-> **Nota:** Este framework utiliza la API {{domxref("FileReader")}}
-> para transmitir las cargas de archivos. Este es un API reciente y no está implementada en IE9 o
-> inferiores. Por esta razón, la carga sólo en AJAX se considera **una técnica experimental**.
-> Si no necesita subir archivos binarios, este framework funciona
-> bien en la mayoría de los navegadores.
+> [!NOTE]
+> Este framework utiliza la API {{domxref("FileReader")}} para transmitir las cargas de archivos. Este es un API reciente y no está implementada en IE9 o inferiores. Por esta razón, la carga sólo en AJAX se considera **una técnica experimental**. Si no necesita subir archivos binarios, este framework funciona bien en la mayoría de los navegadores.
 
-> **Nota:** La mejor manera de enviar contenido binario es a través de
-> {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con
-> con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el
-> método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la
-> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-> de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
-> junto con el método {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior
-> tiene sentido sólo cuando se trata de archivos pequeños. Si no tiene intención de
-> de cargar contenido binario, considere utilizar la API `FormData`.
+> [!NOTE]
+> La mejor manera de enviar contenido binario es a través de {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} junto con el método {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior tiene sentido sólo cuando se trata de archivos pequeños. Si no tiene intención de de cargar contenido binario, considere utilizar la API `FormData`.
 
-> **Nota:** El método no estándar `sendAsBinary`
-> se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto.
-> En su lugar se puede utilizar el método estándar `send(Blob data)`.
+> [!NOTE]
+> El método no estándar `sendAsBinary` se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto. En su lugar se puede utilizar el método estándar `send(Blob data)`.
 
 ### Uso de los objetos FormData
 
@@ -909,11 +889,8 @@ API `FormData`**. Nótese la brevedad del código:
 </html>
 ```
 
-> **Nota:** Como hemos dicho, los objetos **{{domxref("FormData")}}
-> no son objetos [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga
-> en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData`
-> tampoco es necesario utilizar la API {{domxref("FileReader")}}**:
-> los archivos se cargan y suben automáticamente.
+> [!NOTE]
+> Como hemos dicho, los objetos **{{domxref("FormData")}} no son objetos [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData` tampoco es necesario utilizar la API {{domxref("FileReader")}}**: los archivos se cargan y suben automáticamente.
 
 ## Obtener la fecha de la última modificación
 

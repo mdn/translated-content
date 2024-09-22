@@ -1,21 +1,21 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate_static
-original_slug: WebAssembly/JavaScript_interface/instantiate
 ---
 
 {{WebAssemblySidebar}}
 
 **`WebAssembly.instantiate()`** 関数は WebAssembly コードをコンパイルおよびインスタンス化することができます。この関数は 2 つのオーバーロードを持ちます。
 
-- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
+- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリーコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
 - 第二のオーバーロードは、すでにコンパイルされた {{jsxref("WebAssembly.Module")}} を受け取り、解決時にその `Module` の `Instance` を渡す `Promise` を返します。このオーバーロードは、すでに `Module` がコンパイル済みの場合に有用です。
 
-> **警告:** このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率的な方法ではありません。可能であれば、代わりにもっと新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
+> [!WARNING]
+> このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率的な方法ではありません。可能であれば、代わりにもっと新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
 
 ## 構文
 
-### 第一のオーバーロード — wasm バイナリコード
+### 第一のオーバーロード — wasm バイナリーコード
 
 ```
 Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
@@ -85,7 +85,8 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports.exported_func());
 ```
 
-> **メモ:** この例は Github 上の [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) でも見ることができます ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/))。
+> [!NOTE]
+> この例は Github 上の [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) でも見ることができます ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/))。
 
 ### 第二のオーバーロードの例
 

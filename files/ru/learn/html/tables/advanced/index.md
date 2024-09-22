@@ -29,7 +29,8 @@ slug: Learn/HTML/Tables/Advanced
 
 Заголовок помещают сразу после тега `<table>`.
 
-> **Примечание:** Атрибут [`summary`](/ru/docs/Web/HTML/Element/table#summary) также может быть использован в `<table>` элементе предоставляя описание — это также читается скринридерами. Однако мы рекомендуем вместо этого использовать `<caption>` элемент, так как `summary` {{glossary("deprecated")}} в HTML5 спецификации и не может быть прочитан зрячими пользователями (он не отображается на странице).
+> [!NOTE]
+> Атрибут [`summary`](/ru/docs/Web/HTML/Element/table#summary) также может быть использован в `<table>` элементе предоставляя описание — это также читается скринридерами. Однако мы рекомендуем вместо этого использовать `<caption>` элемент, так как `summary` {{glossary("deprecated")}} в HTML5 спецификации и не может быть прочитан зрячими пользователями (он не отображается на странице).
 
 ### Упражнение: Добавление заголовка
 
@@ -39,7 +40,8 @@ slug: Learn/HTML/Tables/Advanced
 2. Добавьте подходящий заголовок к таблице.
 3. Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.
 
-> **Примечание:** Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> [!NOTE]
+> Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Добавление структуры с помощью \<thead>, \<tfoot> и \<tbody>
 
@@ -79,7 +81,8 @@ slug: Learn/HTML/Tables/Advanced
 
 7. Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
 
-> **Примечание:** Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> [!NOTE]
+> Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Ваша готовая таблица должна выглядеть примерно так:
 
@@ -194,7 +197,8 @@ slug: Learn/HTML/Tables/Advanced
 
 {{ EmbedLiveSample('Hidden_example', '100%', 300) }}
 
-> **Примечание:** Этот пример можно также найти на GitHub по ссылке [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> [!NOTE]
+> Этот пример можно также найти на GitHub по ссылке [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Вложенные таблицы
 
@@ -375,7 +379,8 @@ slug: Learn/HTML/Tables/Advanced
 </tbody>
 ```
 
-> **Примечание:** Этот метод создания очень точного определения ассоциаций между заголовками и данными в ячейках, но использует **гораздо** больше разметки и оставляет обширное пространство для ошибок. Атрибута `scope` обычно достаточно для большинства таблиц.
+> [!NOTE]
+> Этот метод создания очень точного определения ассоциаций между заголовками и данными в ячейках, но использует **гораздо** больше разметки и оставляет обширное пространство для ошибок. Атрибута `scope` обычно достаточно для большинства таблиц.
 
 ### Упражнение: играем со scope и headers
 
@@ -383,7 +388,8 @@ slug: Learn/HTML/Tables/Advanced
 2. Теперь попробуем добавить соответствующий атрибут `scope`, который наиболее соответствует этой таблице.
 3. И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты `id` и `headers`.
 
-> **Примечание:** вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!NOTE]
+> Вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Заключение
 

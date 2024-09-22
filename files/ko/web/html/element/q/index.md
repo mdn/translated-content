@@ -34,7 +34,7 @@ slug: Web/HTML/Element/q
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -55,7 +55,8 @@ slug: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **참고:** 오래된 브라우저에서는 앞뒤 따옴표를 적용하려면 추가 스타일을 사용해야 할 수 있습니다.
+> [!NOTE]
+> 오래된 브라우저에서는 앞뒤 따옴표를 적용하려면 추가 스타일을 사용해야 할 수 있습니다.
 
 ## 특성
 

@@ -42,7 +42,8 @@ Pour désactiver cette fonctionnalité sur une certaine partie du document, on c
 }
 ```
 
-> **Note :** Dans la spécification, il est indiqué qu'il n'est pas possible de « revenir » avec l'ancrage dans un élément fils si l'ancrage a été désactivé sur un élément parent. Ainsi, si on désactive l'ancrage pour l'ensemble du document, on ne pourra pas appliquer (avec succès) `overflow-anchor: auto` à un autre endroit du document.
+> [!NOTE]
+> Dans la spécification, il est indiqué qu'il n'est pas possible de « revenir » avec l'ancrage dans un élément fils si l'ancrage a été désactivé sur un élément parent. Ainsi, si on désactive l'ancrage pour l'ensemble du document, on ne pourra pas appliquer (avec succès) `overflow-anchor: auto` à un autre endroit du document.
 
 ### Supression triggers
 

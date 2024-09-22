@@ -1,6 +1,8 @@
 ---
 title: パフォーマンス API
 slug: Web/API/Performance_API
+l10n:
+  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -15,28 +17,38 @@ slug: Web/API/Performance_API
 
 パフォーマンス項目のほとんどは、何もしなくても記録され、{{domxref("Performance.getEntries()")}} または {{domxref("PerformanceObserver")}} からアクセスできます。例えば、 {{domxref("PerformanceEventTiming")}} の項目は、設定された閾値より時間がかかるイベントに対して記録されます。しかし、パフォーマンス API では {{domxref("PerformanceMark")}} や {{domxref("PerformanceMeasure")}} インターフェイスを使用して、自分自身でカスタムイベントを定義したり記録したりすることも可能です。
 
-主となる {{domxref("Performance")}} インターフェイスは {{domxref("performance_property", "self.performance")}} を使用して各グローバルで使用でき、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
+主となる {{domxref("Performance")}} インターフェイスは {{domxref("Window.performance", "Window")}} および {{domxref("WorkerGlobalScope.performance", "Worker")}} グローバルスコーの両方にあり、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
 
 このインターフェイスでは、さまざまな種類のパフォーマンス項目が記録されるときに、それを待ち受けするために使用することができます。
 
+より概念的な情報については、下記の[パフォーマンス API ガイド](#ガイド)を参照してください。
+
 ![パフォーマンス API の UML 図](diagram.svg)
 
-## インターフェイス
+## リファレンス
+
+パフォーマンス API には、以下のインターフェイスが存在します。
 
 - {{domxref("EventCounts")}}
   - : {{domxref("performance.eventCounts")}} によって返される、イベント種別毎に発送されたイベント数を保持する読み取り専用のマップです。
 - {{domxref("LargestContentfulPaint")}}
   - : ビューポート内に表示される最大の画像またはテキストブロックのレンダリング時間を、ページの最初の読み込みを開始した時点から記録して測定します。
+- {{domxref("LayoutShift")}}
+  - : ページ上の要素の動きに基づいて、ウェブページのレイアウトの安定性に関する調査結果を提供します。
+- {{domxref("LayoutShiftAttribution")}}
+  - : シフトした要素に関するデバッグ情報を提供します。
 - {{domxref("Performance")}}
-  - : パフォーマンス測定にアクセスするためのメインインターフェイスです。ウィンドウとワーカーのコンテキストで {{domxref("performance_property", "self.performance")}} を使用することで利用することができます。
+  - : パフォーマンス測定にアクセスするためのメインインターフェイスです。ウィンドウとワーカーのコンテキストで {{domxref("Window.performance")}} または {{domxref("WorkerGlobalScope.performance")}} を使用することで利用することができます。
 - {{domxref("PerformanceElementTiming")}}
   - : 特定の要素のレンダリングタイムスタンプを測定します。
 - {{domxref("PerformanceEntry")}}
   - : 単一のパフォーマンス指標をカプセル化したパフォーマンスタイムライン上の項目です。すべてのパフォーマンス指標はこのインターフェイスを継承します。
 - {{domxref("PerformanceEventTiming")}}
   - : イベントの遅延時間、最初の入力遅延 (FID) を測定します。
+- {{domxref("PerformanceLongAnimationFrameTiming")}}
+  - : レンダリングを専有し、他のタスクの実行を妨げる[長時間アニメーションフレーム (LoAF)](/ja/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame) に関する指標を提供します。
 - {{domxref("PerformanceLongTaskTiming")}}
-  - : レンダリングを占有し、他のタスクの実行を妨害する長時間のタスクを検出します。
+  - : レンダリングを専有し、他のタスクの実行を妨げる[長時間のタスク](/ja/docs/Glossary/Long_task)に関する指標を提供します。
 - {{domxref("PerformanceMark")}}
   - : パフォーマンスタイムライン上に自分自身で記入するためのカスタムマーカー。
 - {{domxref("PerformanceMeasure")}}
@@ -51,18 +63,27 @@ slug: Web/API/Performance_API
   - : ウェブページ構築時のレンダリング処理を測定します。
 - {{domxref("PerformanceResourceTiming")}}
   - : 画像、スクリプト、フェッチ呼び出しなどのリソースのリダイレクト開始・終了時刻、フェッチ開始時刻、 DNS ルックアップ開始・終了時刻、レスポンス開始・終了時刻などのネットワーク負荷の指標を測定します。
+- {{domxref("PerformanceScriptTiming")}}
+  - : [長時間アニメーションフレーム (LoAF)](/ja/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame) の発生原因となる個々のスクリプトに関する指標を提供します。
 - {{domxref("PerformanceServerTiming")}}
   - : HTTP の {{HTTPHeader("Server-Timing")}} ヘッダーのレスポンスで送られてくるサーバー指標を示します。
 - {{domxref("TaskAttributionTiming")}}
   - : タスクの種類と、長時間のタスクを担当するコンテナーを特定します。
+- {{domxref("VisibilityStateEntry")}}
+  - : ページの可視状態が変化した時点を測定します。例えば、タブがフォアグラウンドからバックグラウンド、またはその逆に切り替わった時点です。
 
-## ガイドとチュートリアル
+## ガイド
 
-- [パフォーマンス API の使用](/ja/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [パフォーマンスタイムラインの使用](/ja/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-- [ユーザータイミング API の使用](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [ナビゲーションタイミング API の使用](/ja/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
-- [リソースタイミング API の使用](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+以下のガイドは、パフォーマンス API の主要な概念を理解し、その能力の概要を提供するのに役立つでしょう。
+
+- [パフォーマンスデータ](/ja/docs/Web/API/Performance_API/Performance_data): パフォーマンスデータの収集、アクセス、作業を行います。
+- [高精度タイミング](/ja/docs/Web/API/Performance_API/High_precision_timing): 高精度な時刻及びモノトニック時計を測定します。
+- [リソースタイミング](/ja/docs/Web/API/Performance_API/Resource_timing): 画像、CSS、JavaScript などの取得したリソースのネットワークタイミングを測定します。
+- [ナビゲーションタイミング](/ja/docs/Web/API/Performance_API/Navigation_timing): 文書内のナビゲーションのタイミングを測定します。
+- [ユーザータイミング](/ja/docs/Web/API/Performance_API/User_timing): 自分のアプリケーションに合わせたパフォーマンスデータの測定と記録を行います。
+- [サーバータイミング](/ja/docs/Web/API/Performance_API/Server_timing): サーバー側の指標を収集します。
+- [長時間アニメーションフレームタイミング](/ja/docs/Web/API/Performance_API/Long_animation_frame_timing): 長時間アニメーションフレーム (LoAF) とその発生要因に関するメトリクスを収集します。
+- [bfcache のブロック理由の監視](/ja/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons): 現在の文書がバック/フォワードキャッシュ ({{Glossary("bfcache")}}) の使用をブロックされた理由を報告します。
 
 ## 仕様書
 

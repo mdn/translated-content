@@ -3,6 +3,8 @@ title: patternContentUnits
 slug: Web/SVG/Attribute/patternContentUnits
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 Атрибут `patternContentUnits` определяет систему координат для содержимого {{ SVGElement("pattern") }}. Заметьте, что этот атрибут не имеет эффекта, если {{ SVGAttr("viewBox") }} определён на {{ SVGElement("pattern") }} элементе.

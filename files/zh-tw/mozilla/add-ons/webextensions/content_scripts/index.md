@@ -11,9 +11,11 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](/zh-TW/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)，但它們可以透過一個訊息系統[來與後端腳本溝通](/zh-TW/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)，從而間接地使用擴充套件 APIs。
 
-> **備註：** 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/CSP) 錯誤。
+> [!NOTE]
+> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/CSP) 錯誤。
 
-> **備註：** 由於錯誤 [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996)，透過 `var foo` or `window.foo = "bar"` 加入 content script 的 global 作用域的值可能會消失。
+> [!NOTE]
+> 由於錯誤 [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996)，透過 `var foo` or `window.foo = "bar"` 加入 content script 的 global 作用域的值可能會消失。
 
 ## 讀入內容腳本
 
@@ -362,7 +364,8 @@ window.addEventListener("message", function (event) {
 
 完全版的範例請[查看 GitHub 上的示範頁面](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html)並按照教學做。
 
-> **警告：** 注意到當你透過這個方式跟不被信任的內容腳本互動時要非常小心。套件有很強的權限，惡意網頁可以輕易地騙出這些權限。
+> [!WARNING]
+> 注意到當你透過這個方式跟不被信任的內容腳本互動時要非常小心。套件有很強的權限，惡意網頁可以輕易地騙出這些權限。
 >
 > 舉個簡單的例子，假設一接收訊息的內容腳本長這樣：
 >
@@ -425,7 +428,7 @@ window.addEventListener("message", function (event) {
 
 在 Chrome 裡，這會產出這樣的結果：
 
-```
+```plain
 In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
@@ -434,7 +437,7 @@ In page script, window.y: undefined
 
 而在 Firefox 裡會產生這些：
 
-```
+```plain
 In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1

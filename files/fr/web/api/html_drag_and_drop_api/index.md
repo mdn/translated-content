@@ -32,7 +32,8 @@ Chaque [type d'évènement de déplacement](/fr/docs/Web/API/DragEvent#Event_typ
 | [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …l'utilisateur commence à déplacer un élément (voir [démarrer une opération de glissement](/fr/docs/DragDrop/Drag_Operations#dragstart)).                                                 |
 | [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | …un élément est déposé sur une cible valide (voir [déposer un élément](/fr/docs/DragDrop/Drag_Operations#drop)).                                                                          |
 
-> **Note :** Les évènements `dragstart` et `dragend` ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.
+> [!NOTE]
+> Les évènements `dragstart` et `dragend` ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.
 
 ## Interfaces
 

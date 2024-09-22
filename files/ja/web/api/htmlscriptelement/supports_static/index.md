@@ -3,10 +3,10 @@ title: "HTMLScriptElement: supports() 静的メソッド"
 short-title: supports()
 slug: Web/API/HTMLScriptElement/supports_static
 l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+  sourceCommit: 3bd335bf04ca78b7f4917ebc99e0f4f47f11d3de
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 **`supports()`** は {{domxref("HTMLScriptElement")}} インターフェイスの静的メソッドで、ユーザーエージェントが対応しているスクリプトの種類を機能的に検出するための、単純で一貫したメソッドを提供します。
 
@@ -26,14 +26,14 @@ HTMLScriptElement.supports(type)
     対応している値は以下の通りで、大文字と小文字が区別されます。
 
     - `"classic"`
-      - : クラシックスクリプトが対応しているかどうかをテストします。
+      - : クラシックスクリプトに対応しているかどうかを検査します。
         「クラシック」スクリプトとは、モジュールスクリプトより前の通常の、伝統的な JavaScript ファイルのことです。
     - `"module"`
-      - : [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているかどうかをテストします。
+      - : [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているかどうかを検査します。
     - `"importmap"`
-      - : インポートマップに対応しているかどうかをテストします。
+      - : インポートマップに対応しているかどうかを検査します。
     - `"speculationrules"`
-      - : 投機ルールが対応し、有効になっているかどうかをテストします。
+      - : 投機ルールに対応し、有効になっているかどうかを検査します。
 
     他の値であれば、このメソッドは `false` を返します。
 
@@ -43,7 +43,7 @@ HTMLScriptElement.supports(type)
 
 ## 例
 
-下記のコードは `HTMLScriptElement.supports()` が定義されているかどうかを調べ、定義されている場合はそれを使用して特定の種類のスクリプトに対応しているかどうかをテストする方法を示しています。
+下記のコードは `HTMLScriptElement.supports()` が定義されているかどうかを調べ、定義されている場合はそれを使用して特定の種類のスクリプトに対応しているかどうかを検査する方法を示しています。
 
 ```js
 const log = document.getElementById("log");

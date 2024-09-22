@@ -112,7 +112,7 @@ _変更なし。_
 
 #### IndexedDB
 
-- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
+- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザーの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
 
 #### 開発者ツール
 
@@ -136,7 +136,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- {{Glossary("CSP")}} でアスタリスク (`*`) を使用した場合に、`data:`、`blob:`、`:filesystem` の各スキーマは提供元のマッチング対象に含まれなくなりました。これらのスキーマを CSP でマッチさせるには、関連するヘッダで明示的に定義しなければなりません ([Firefox バグ 1086999](https://bugzil.la/1086999))。
+- {{Glossary("CSP")}} でアスタリスク (`*`) を使用した場合に、`data:`、`blob:`、`:filesystem` の各スキーマは提供元のマッチング対象に含まれなくなりました。これらのスキーマを CSP でマッチさせるには、関連するヘッダーで明示的に定義しなければなりません ([Firefox バグ 1086999](https://bugzil.la/1086999))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

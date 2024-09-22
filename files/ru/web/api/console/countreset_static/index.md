@@ -1,7 +1,6 @@
 ---
-title: Console.countReset()
-slug: Web/API/console/countreset_static
-original_slug: Web/API/console/countReset
+title: "console: статический метод countReset()"
+slug: Web/API/console/countReset_static
 ---
 
 {{APIRef("Console API")}}

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module.exports()
 slug: WebAssembly/JavaScript_interface/Module/exports_static
-original_slug: WebAssembly/JavaScript_interface/Module/exports
 ---
 
 {{WebAssemblySidebar}}
@@ -41,7 +40,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
 );
 ```
 
-ワーカー ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラをセットアップします。モジュールを受け取ったとき、{{jsxref("WebAssembly.Instantiate()")}} メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `WebAssembly.Module.exports` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
+ワーカー ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったとき、{{jsxref("WebAssembly.Instantiate()")}} メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `WebAssembly.Module.exports` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
 
 ```js
 var importObject = {

@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Свойство **onfocus** устанавливает обработчик события onFocus на данный элемент.
 

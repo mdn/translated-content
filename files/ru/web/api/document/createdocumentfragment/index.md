@@ -3,7 +3,7 @@ title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Создаёт новый пустой {{domxref("DocumentFragment")}}.
 
@@ -45,7 +45,7 @@ element.appendChild(fragment);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

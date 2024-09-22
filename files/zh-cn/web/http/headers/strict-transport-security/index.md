@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 HTTP **`Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动重定向到 HTTPS。
 
-> **备注：** 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人攻击。
+> [!NOTE]
+> 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人攻击。
 
 <table class="properties">
   <tbody>

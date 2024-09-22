@@ -3,6 +3,8 @@ title: Uso de la Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
 
+{{DefaultAPISidebar("Web Speech API")}}
+
 La API Web Speech API proporciona dos funcionalidades distintas — reconocimiento de voz, y síntesis de voz (también conocido como texto a voz o tts) — lo que nos ofrece nuevas e interesantes posibilidades para accesibilidad y otros mecanismos. Este artículo ofrece una breve introducción en las dos áreas, así como unas demos.
 
 ## Reconocimiento de voz
@@ -11,7 +13,8 @@ El reconocimiento de voz implica recibir voz a través del micrófono de un disp
 
 La API Web Speech tiene una interfaz principal de control para el - {{domxref ("SpeechRecognition")}} -, además de una serie de interfaces estrechamente relacionadas para representar la gramática, los resultados, etc. Normalmente, el sistema de reconocimiento de voz predeterminado que dispone el dispositivo se utilizará para el reconocimiento de voz: la mayoría de los sistemas operativos modernos tienen un sistema de reconocimiento de voz para emitir comandos de voz. Piense en Dictado en macOS, Siri en iOS, Cortana en Windows 10, Android Speech, etc.
 
-> **Nota:** En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
+> [!NOTE]
+> En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
 
 ### Demo
 

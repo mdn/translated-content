@@ -161,7 +161,8 @@ document.getElementById("toggleBox").addEventListener("click", function () {
 
 Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.
 
-> **Примечание:** At this time, no major browser supports `animationcancel`.
+> [!NOTE]
+> At this time, no major browser supports `animationcancel`.
 
 ### Result
 
@@ -179,7 +180,7 @@ If your browser supports `animationcancel`, hiding the box using the button will
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The {{event("animationcancel")}} event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

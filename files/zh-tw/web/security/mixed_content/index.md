@@ -3,6 +3,8 @@ title: 混合內容
 slug: Web/Security/Mixed_content
 ---
 
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
+
 當使用者以 {{Glossary("HTTPS")}} 瀏覽網站時，他們與伺服器之間的連線就會以 {{Glossary("TLS")}} 加密，以防受到竊聽或中間人攻擊。一個含有 HTTP 明文內容的 HTTPS 頁面稱為**混合內容（mixed content）**。這種頁面只有部份加密，沒有加密的內容，易於遭到竊聽和中間人攻擊。這會令網頁不安全。
 
 ## 混合內容的類型
@@ -42,25 +44,25 @@ slug: Web/Security/Mixed_content
 - 所有用到 {{cssxref("url")}} 的 CSS 值（{{cssxref("@font-face")}}、{{cssxref("cursor")}}、{{cssxref("background-image")}}……等等）。
 - {{HTMLElement("object")}}（`data` 屬性）
 
-其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
+其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://source.chromium.org/chromium#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
 
 ## 網頁主控台的警告
 
 Firefox 網頁主控台會在網站含有混合內容時，於「網路」標籤顯示警告。以 HTTP 傳輸的混合內容資源會被標為紅色，後面會附上導往這一頁的「混合內容」標註。
 
-[![Screen shot of the web console displaying a mixed content warning.](mixed_content_-_net_pane.png)](/files/12545/Mixed_content_-_Net_pane.png)
+![顯示 Web 控制台中的混合內容警告的擷圖。](mixed_content_-_net_pane.png)
 
 找到網頁主控台的警告後，可以在你的網站使用 [Content Security Policy (CSP)](/zh-TW/docs/Web/HTTP/CSP) 或網站爬蟲找到問題，，例如 [HTTPS Checker](https://httpschecker.net/guides/https-checker) 或是 [Mixed Content Scan](https://github.com/bramus/mixed-content-scan)。
 
 從 Firefox 23 以後，預設會封鎖混合內容（要封鎖混合的顯示內容也可以設定）。為了令 web 開發者便於尋找混合內容的錯誤，所有遭到封鎖的混合內容會被紀錄到網頁主控台的安全標籤，如下所示：
 
-[![A screenshot of blocked mixed content errors in the Security Pane of the Web Console](mixed_content_webconsole.png)](/files/5261/blocked-mixed-content-errors.png)
+![Web 控制台安全面板中被封鎖的混合內容錯誤的擷圖](mixed_content_webconsole.png)
 
 要修正這個錯誤，就要移除所有的 HTTP 請求、並以 HTTPS 取代之。部份例子包含 JavaScript 檔案、CSS 樣式表、影像檔、影片檔或是其他多媒體文件。
 
-> **備註：** Firefox 55 以後，在本機端會允許混合內容的載入（請參見 [Firefox bug 903966](https://bugzil.la/903966)）。
+> [!NOTE]
+> Firefox 55 以後，在本機端會允許混合內容的載入（請參見 [Firefox bug 903966](https://bugzil.la/903966)）。
 
 ## 參見
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [如何修正含有混和內容的網站](/zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content)

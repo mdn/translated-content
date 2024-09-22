@@ -49,7 +49,8 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
     - `size(chunk)`
       - : 一个包含参数 `chunk` 的方法。它表示用于每一个块的大小，以字节为单位。
 
-> **备注：** 你可以自定义 `readableStrategy` 或 `writableStrategy`，或者使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例作为对象的值。
+> [!NOTE]
+> 你可以自定义 `readableStrategy` 或 `writableStrategy`，或者使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例作为对象的值。
 
 ## 示例
 

@@ -13,7 +13,8 @@ Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的�
 
 最好能有基本的編程概念、並了解 [Python](/zh-TW/docs/Glossary/Python) 語言，但並不是理解本教程的核心概念的必然條件。
 
-> **備註：** 對於初學者來說，Python 是最容易閱讀和理解的編程語言之一。也就是說，如果你想更好的理解本教程，網上有很多免費書籍及免費教程可供參考學習（建議初學者查看 Python 官網的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) )。
+> [!NOTE]
+> 對於初學者來說，Python 是最容易閱讀和理解的編程語言之一。也就是說，如果你想更好的理解本教程，網上有很多免費書籍及免費教程可供參考學習（建議初學者查看 Python 官網的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) )。
 
 ## 指引
 

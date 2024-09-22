@@ -33,17 +33,20 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
-> **备注：** Express 应用生成器并非唯一的 Express 应用生成工具，而且生成项目的结构也不是组织文件和目录的唯一可行方式。但生成项目具有易于扩展和理解的模块化结构。最简单的 Express 应用请参阅 [Hello world 示例](http://expressjs.com.cn/starter/hello-world.html)（Express 镜像站）。
+> [!NOTE]
+> Express 应用生成器并非唯一的 Express 应用生成工具，而且生成项目的结构也不是组织文件和目录的唯一可行方式。但生成项目具有易于扩展和理解的模块化结构。最简单的 Express 应用请参阅 [Hello world 示例](http://expressjs.com.cn/starter/hello-world.html)（Express 镜像站）。
 
 ## 使用应用生成器
 
-> **备注：** 本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同，为在 Windows 上获得一致的体验，可以：
+> [!NOTE]
+> 本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同，为在 Windows 上获得一致的体验，可以：
 >
 > - 自己弄懂 cmd/PowerShell 与 bash 的区别。
 > - 使用 [Git](https://git-scm.com/) 或 [MSYS2](http://www.msys2.org/) 为 Windows 提供的 bash。（推荐）
 > - 使用 Windows 的 Linux 子系统。（到 Microsoft Store 中搜索“Linux”，安装喜欢的版本（Ubuntu 18.04、openSUSE 42、Debian 等），仅限 Windows 10，使用前需要先安装 [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)）
 
-> **备注：** 你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 [CNPM](https://npm.taobao.org/) 代替之，功能和用法基本一致（只是不能上传自己的包）。
+> [!NOTE]
+> 你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 [CNPM](https://npm.taobao.org/) 代替之，功能和用法基本一致（只是不能上传自己的包）。
 
 你应该已经安装好了生成器，它是 [设置 Node 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：
 
@@ -84,13 +87,15 @@ express
 
 还可以使用 `--view` 选择视图（模板）引擎，并且/或者使用 `--css` 选择 CSS 生成引擎。
 
-> **备注：** 不推荐用 `--hogan`、`--ejs`、`--hbs` 等参数选用模板引擎。请使用 `--view`（或 `-v`）。
+> [!NOTE]
+> 不推荐用 `--hogan`、`--ejs`、`--hbs` 等参数选用模板引擎。请使用 `--view`（或 `-v`）。
 
 ### 我应该用哪个视图引擎？
 
 Express 应用生成器支持多款流行的视图/模板引擎，包括 [EJS](https://www.npmjs.com/package/ejs)、[Hbs](http://github.com/donpark/hbs)、[Pug](https://pugjs.org/api/getting-started.html) (Jade)、[Twig](https://www.npmjs.com/package/twig) 和 [Vash](https://www.npmjs.com/package/vash)，缺省选项是 Jade。Express 本身也支持大量其他模板语言，[开箱即用](https://github.com/expressjs/express/wiki#template-engines)。
 
-> **备注：** 如果要使用生成器不支持的模板引擎，请参阅 [在 Express 中使用模板引擎](http://expressjs.com.cn/guide/using-template-engines.html)（Express 文档）和所选视图引擎的文档。
+> [!NOTE]
+> 如果要使用生成器不支持的模板引擎，请参阅 [在 Express 中使用模板引擎](http://expressjs.com.cn/guide/using-template-engines.html)（Express 文档）和所选视图引擎的文档。
 
 一般来说，你应该选择一个大而全的模板引擎，可以尽快进入生产状态。就像你选择其他组件一样！选用模板引擎需要考虑以下因素：
 
@@ -108,7 +113,8 @@ Express 应用生成器支持多款流行的视图/模板引擎，包括 [EJS](h
   - 支持异步操作和流。
   - 可以在同时在客户端和服务器上使用。如果一款模板引擎可以在客户端使用，那么就使在客户端托管数据并完成所有（或大多数）渲染成为可能。
 
-> **备注：** 互联网上有许多资源，可帮助你选择合适的视图/模板引擎。
+> [!NOTE]
+> 互联网上有许多资源，可帮助你选择合适的视图/模板引擎。
 
 本项目选用 [Pug](https://pugjs.org/api/getting-started.html) 模板引擎（Jade 是它不久前的曾用名），它是最流行的 Express / JavaScript 模板语言之一，且对 Express 生成器 [开箱即用](https://github.com/expressjs/express/wiki#template-engines)。
 
@@ -116,7 +122,8 @@ Express 应用生成器支持多款流行的视图/模板引擎，包括 [EJS](h
 
 Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/)。
 
-> **备注：** CSS 的一些限制导致某些任务完成起来非常困难。CSS 引擎提供了更强大的语法来定义 CSS，然后将定义编译为纯 CSS 供浏览器使用。
+> [!NOTE]
+> CSS 的一些限制导致某些任务完成起来非常困难。CSS 引擎提供了更强大的语法来定义 CSS，然后将定义编译为纯 CSS 供浏览器使用。
 
 与模板引擎一样，你也应该使用样式表引擎，这可以最大化团队生产力。本项目将使用原始 CSS（默认的），因为我们对 CSS 要求不复杂，没有必要使用引擎。
 
@@ -156,7 +163,8 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 一个 Express 应用就配置成功了，它托管于 localhost:3000。
 
-> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
+> [!NOTE]
+> 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
 
 ## 文件改动时重启服务器
 
@@ -199,7 +207,8 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。
 
-> **备注：** 这里必须使用“`npm run <scriptname>`”命令，而不是 `npm start`，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 `start` 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。
+> [!NOTE]
+> 这里必须使用“`npm run <scriptname>`”命令，而不是 `npm start`，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 `start` 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。
 
 ## 生成的项目
 
@@ -327,7 +336,8 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 ```
 
-> **备注：** 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。
+> [!NOTE]
+> 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。
 
 下面我们用导入的 `express` 模块来创建 `app` 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '`views`' 以指定模板的存储文件夹（此处设为子文件夹 **/views**）。然后设置 '`view engine`' 以指定模板库（本例中设为“pug” ）。
 
@@ -357,7 +367,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 ```
 
-> **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 `users` 在 `/profile` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
+> [!NOTE]
+> 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 `users` 在 `/profile` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
 
 最后一个中间件为错误和 HTTP 404 响应添加处理方法。
 
@@ -407,7 +418,8 @@ module.exports = router;
 
 该路由定义了一个回调，在检测到正确模式的 HTTP `GET` 请求时将调用该回调。正确模式即导入模块时指定的路由（'`/users`'）加该模块（'`/`'）中定义的任何内容。换句话说，在收到 `/users/` URL 时使用此路由。
 
-> **备注：** 用 node 启动该应用并访问 <http://localhost:3000/users/>，浏览器会返回一条消息：'respond with a resource'。
+> [!NOTE]
+> 用 node 启动该应用并访问 <http://localhost:3000/users/>，浏览器会返回一条消息：'respond with a resource'。
 
 值得注意的是，上述回调函数有第三个参数 '`next`'，因此它是一个中间件函数，而不是简单的路由回调。`next` 参数暂时还用不到，在 `'/'` 路径中添加多个路由处理器时才会涉及。
 

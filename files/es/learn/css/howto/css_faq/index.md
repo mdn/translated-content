@@ -3,6 +3,8 @@ title: Preguntas frecuentes sobre CSS
 slug: Learn/CSS/Howto/CSS_FAQ
 ---
 
+{{LearnSidebar}}
+
 #### Mi CSS es válida, pero no se representa correctamente
 
 Los navegadores utilizan la declaración `DOCTYPE` para elegir entre mostrar el documento usando un modo que sea más compatible con los estándares de la Web o mostrarlo con los fallos de los navegadores antiguos. El uso de una declaración `DOCTYPE` correcta y moderna al inicio del código HTML mejorará el cumplimiento de los estándares del navegador.

@@ -3,7 +3,7 @@ title: Window.getSelection()
 slug: Web/API/Window/getSelection
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 ## Коротко
 

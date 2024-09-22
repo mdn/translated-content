@@ -3,15 +3,15 @@ title: "ReadableByteStreamController: desiredSize プロパティ"
 short-title: desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 l10n:
-  sourceCommit: dcce943de1c2fa0f6a82de3c90bc98285f27ed6f
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`desiredSize`** は {{domxref("ReadableByteStreamController")}} インターフェイスの読み取り専用プロパティで、ストリームの内部キューを満たすために必要な「希望サイズ」を返します。
 
 この値は、ストリームが、基盤となるソースへの推奨する流量を示すために使用します。
-データ流入のスロットリングや一時停止に対応しているソース（すべてではありません）は、ストリームバッファの `desiredSize` が正の値で、使用可能な限りゼロに近づくように流入を制御する必要があります。
+データ流入のスロットリングや一時停止に対応しているソース（すべてではありません）は、ストリームバッファーの `desiredSize` が正の値で、使用可能な限りゼロに近づくように流入を制御する必要があります。
 
 `desiredSize` は下流コンシューマーの[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用するために使用します。
 

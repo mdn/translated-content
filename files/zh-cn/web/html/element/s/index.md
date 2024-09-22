@@ -19,7 +19,7 @@ slug: Web/HTML/Element/s
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -40,7 +40,8 @@ slug: Web/HTML/Element/s
 
 这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-> **备注：** 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
+> [!NOTE]
+> 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
 
 ## 示例
 

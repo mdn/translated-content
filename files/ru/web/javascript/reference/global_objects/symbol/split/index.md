@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}

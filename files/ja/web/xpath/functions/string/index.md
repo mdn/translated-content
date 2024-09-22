@@ -3,7 +3,7 @@ title: string
 slug: Web/XPath/Functions/string
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `string` 関数は与えられた引数を文字列に変換します。
 

@@ -39,7 +39,8 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 在著手開發之前，應先安裝至少兩款瀏覽器以利後續測試。
 
-> **備註：** Internet Explorer 與當今的 web 不相容，可能會讓專案跑不動。
+> [!NOTE]
+> Internet Explorer 與當今的 web 不相容，可能會讓專案跑不動。
 
 ### 安裝伺服器軟體
 

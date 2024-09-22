@@ -240,7 +240,8 @@ Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"
    response;
    ```
 
-> **Nota:** Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
+> [!NOTE]
+> Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
 
 ### Concatenação em contexto
 

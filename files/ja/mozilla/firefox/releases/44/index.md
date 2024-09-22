@@ -152,7 +152,7 @@ l10n:
 - {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} プロパティおよび {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} イベントを実装しました ([Firefox バグ 1178091](https://bugzil.la/1178091))。
 - {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ([Firefox バグ 1209744](https://bugzil.la/1209744))。
 - {{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドに対応しました ([Firefox バグ 1103188](https://bugzil.la/1103188))。
-- {{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ([Firefox バグ 1070216](https://bugzil.la/1070216))。
+- {{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクターを実装しました ([Firefox バグ 1070216](https://bugzil.la/1070216))。
 - {{domxref("RTCOfferOptions")}} の、非標準である制約的なオプションリストの対応を廃止しました。
 
 #### 新規 API

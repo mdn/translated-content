@@ -3,6 +3,8 @@ title: Firefox 4 pour les développeurs
 slug: Mozilla/Firefox/Releases/4
 ---
 
+{{FirefoxSidebar}}
+
 1. Notes de versions pour développeurs
 
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)

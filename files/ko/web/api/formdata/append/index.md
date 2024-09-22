@@ -3,13 +3,16 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 인터페이스의 **`append()`** 메서드는 `FormData` 객체의 기존 키에 새 값을 추가하거나, 키가 없는 경우 키를 추가합니다.
 
 {{domxref("FormData.set")}} 과 `append()` 의 차이점은 지정된 키가 이미 있으면, {{domxref("FormData.set")}} 은 모든 기존 값을 새 값으로 덮어쓰기를 합니다. 반면 `append()` 는 기존 값 집합의 끝에 새로운 값을 추가합니다.
 
-> **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!NOTE]
+> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
 ## Syntax
 

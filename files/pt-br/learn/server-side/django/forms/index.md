@@ -110,7 +110,8 @@ Com base no diagrama acima, as principais coisas que o manuseio de formulários 
 
 O Django fornece várias ferramentas e abordagens para ajudá-lo nas tarefas detalhadas acima. O mais fundamental é a classe `Form`, o que simplifica a geração de HTML de formulário e a limpeza/validação de dados. Na próxima seção, descreveremos como os formulários funcionam usando o exemplo prático de uma página para permitir que os bibliotecários renovem os livros.
 
-> **Nota:** Entendendo como `Form` é usado para ajudá-lo quando discutirmos as classes de estrutura de formulário mais "de alto nível" do Django.
+> [!NOTE]
+> Entendendo como `Form` é usado para ajudá-lo quando discutirmos as classes de estrutura de formulário mais "de alto nível" do Django.
 
 ## Renew-book form usando uma function view
 
@@ -189,7 +190,8 @@ Há duas coisas importantes a serem observados. A primeira é que temos nossos d
 
 O segundo ponto é que, se um valor cai fora da nossa gama que levanta um `ValidationError`, especificando o texto de erro que deseja exibir no formulário se um valor inválido for inserido. Os exemplos acima também envolvem este texto em um dos [Django's translation functions](https://docs.djangoproject.com/en/2.1/topics/i18n/translation/) `ugettext_lazy()` (importado como `_()`), que é uma boa prática se você quiser traduzir o seu site mais tarde.
 
-> **Nota:** Existem muitos outros exemplos e métodos para validar os forms [Form e field validation](https://docs.djangoproject.com/en/2.1/ref/forms/validation/) (Django docs). Por exemplo, nos casos em que você tem vários campos que dependem uns dos outros, você pode substituir a função [Form.clean()](https://docs.djangoproject.com/en/2.1/ref/forms/api/#django.forms.Form.clean) e novamente levantar uma `ValidationError`.
+> [!NOTE]
+> Existem muitos outros exemplos e métodos para validar os forms [Form e field validation](https://docs.djangoproject.com/en/2.1/ref/forms/validation/) (Django docs). Por exemplo, nos casos em que você tem vários campos que dependem uns dos outros, você pode substituir a função [Form.clean()](https://docs.djangoproject.com/en/2.1/ref/forms/api/#django.forms.Form.clean) e novamente levantar uma `ValidationError`.
 
 Isso é tudo que necessitamos para o form neste exemplo?
 
@@ -205,7 +207,8 @@ urlpatterns += [
 
 A configuração da URL irá redirecionar as URLs com o formato **/catalog/book/_\<bookinstance id>_/renew/** para a função chamada `renew_book_librarian()` em **views.py**, e enviar o id `BookInstance` como parâmetro nomeado `pk`. O padrão corresponde apenas se `pk` estiver com a formatação `uuid` correta.
 
-> **Nota:** Podemos citar nos nossos dados capturados na URL "`pk`" qualquer coisa que quisermos, porque nós temos o controle completo sobra a função view (nós não estamos usando uma view detail genérica, onde se espera os parâmetros com um certo nome). Contudo, a abreviação `pk` para "chave primária", é uma convenção razoável para uso!
+> [!NOTE]
+> Podemos citar nos nossos dados capturados na URL "`pk`" qualquer coisa que quisermos, porque nós temos o controle completo sobra a função view (nós não estamos usando uma view detail genérica, onde se espera os parâmetros com um certo nome). Contudo, a abreviação `pk` para "chave primária", é uma convenção razoável para uso!
 
 ### View
 
@@ -391,7 +394,8 @@ A maior parte disso será totalmente familiar dos tutoriais anteriores. Estendem
 
 O código do formulário é relativamente simples. Primeiro, declaramos a tag `form`, especificando onde o formulário deve ser submetido (`action`) e o `method` para submeter os dados (nesse caso, um "HTTP POST") — se você lembrar da visão geral de [Formulários HTML](#HTML_forms) na parte superior da página, uma `action` vazia, como mostrada, significa que os dados do formulário serão postados de volta para a URL atual da página (que é o que queremos!). Dentro das tags, definimos a entrada `submit`, que um usuário pode apertar para submeter os dados. O `{% csrf_token %}` adicionado apenas dentro das tags do formulário é parte da proteção de falsificação ente sites (cross-site forgery protection) do Django.
 
-> **Nota:** Adicione o `{% csrf_token %}` para todos os _templates_ Django que você cria que utiliza `POST` para submeter dados. Isso reduzirá a chance de que os formulários sejam invadidos por usuários maliciosos.
+> [!NOTE]
+> Adicione o `{% csrf_token %}` para todos os _templates_ Django que você cria que utiliza `POST` para submeter dados. Isso reduzirá a chance de que os formulários sejam invadidos por usuários maliciosos.
 
 Tudo que resta é a variável `\{{ form }}` do _template_, que passamos para o _template_ no dicionário _context_. Talvez, sem supresa, quando usado como mostrado, isto fornece a renderização padrão de todos os campos do formulário, incluindo seus _labels_, _widgets_ e texto de ajuda — a renderização é como mostrado abaixo:
 
@@ -413,7 +417,8 @@ Tudo que resta é a variável `\{{ form }}` do _template_, que passamos para o _
 </tr>
 ```
 
-> **Nota:** Talvez não seja óbvio porque temos apenas um campo, mas, por padrão, todo campo é definido em sua própria linha de tabela. Essa mesma renderização é fornecida se você referenciar a váriavel de _template_ `\{{ form.as_table }}`.
+> [!NOTE]
+> Talvez não seja óbvio porque temos apenas um campo, mas, por padrão, todo campo é definido em sua própria linha de tabela. Essa mesma renderização é fornecida se você referenciar a váriavel de _template_ `\{{ form.as_table }}`.
 
 Se você fosse inserir uama data inválida, você também obteria uma lista dos erros renderizados na página (mostrado em negrito abaixo).
 
@@ -461,7 +466,8 @@ Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usu�
 {% endif %}
 ```
 
-> **Nota:** Lembre que seu login de teste precisará ter a permissão "`catalog.can_mark_returned`" para acessar a página de renovação de livro (talvez use sua conta de superusuário).
+> [!NOTE]
+> Lembre que seu login de teste precisará ter a permissão "`catalog.can_mark_returned`" para acessar a página de renovação de livro (talvez use sua conta de superusuário).
 
 Você pode, alternativamente, construir manualmente uma URL de teste como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/`) (um id válido de _bookinstance_ pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo`id`).
 
@@ -498,7 +504,8 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back']
 ```
 
-> **Nota:** Isso pode não parecer muito mais simples do que apenas usar um `Form` (e não é nesse caso, porque temos apenas um campo). No entanto, se você tiver muitos campos, isso pode reduzir a quantidade de código significativamente!
+> [!NOTE]
+> Isso pode não parecer muito mais simples do que apenas usar um `Form` (e não é nesse caso, porque temos apenas um campo). No entanto, se você tiver muitos campos, isso pode reduzir a quantidade de código significativamente!
 
 O restante das informações vem das definições de campo do modelo (ex. rótulos, _widgets_, texdo de ajuda, mensagens de erro). Se isso não for suficiente, então podemos substituí-los em nossa `class Meta`, especificando um dicionário contendo o campo para mudar e seu novo valor. Por exemplo, neste formulário podemos querer um rótulo para nosso campo de "_Renewal date_" (em vez do padrão baseado no padrão com base no nome do campo: _Due Back_), e também queremos que nosso campo de ajuda seja específico para esse caso de uso. A `Meta` abaixo mostra como substituir esses campos, e você pode definir `widgets` and `error_messages` da mesma forma, se os padrões não forem suficientes.
 
@@ -634,7 +641,8 @@ Não há nada particularmente novo aqui! Você pode ver que as _views_ são clas
 
 As páginas de criação, atualização e remoção de autor agora estão prontas para teste (neste caso, não nos incomodaremos em conectá-las a barra lateral do site, embora você possa fazer se desejar).
 
-> **Nota:** Usuários observadores devem ter notado que não fizemos nada para previnir que usuários não autorizadosde acessem as páginas! Deixamos isso como um exercício para você (dica: você pode usar `PermissionRequiredMixin` e criar uma nova permissão ou reutilizar nossa permissão `can_mark_returned`).
+> [!NOTE]
+> Usuários observadores devem ter notado que não fizemos nada para previnir que usuários não autorizadosde acessem as páginas! Deixamos isso como um exercício para você (dica: você pode usar `PermissionRequiredMixin` e criar uma nova permissão ou reutilizar nossa permissão `can_mark_returned`).
 
 ### Testando a página
 

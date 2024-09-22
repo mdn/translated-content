@@ -3,17 +3,19 @@ title: 为 HTML 5 视频提供的 DASH 自适应串流
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
+
 经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。
 
 ## 浏览器支持
 
 Firefox 21 包含了针对 HTM5 WebM 视频的 DASH 实现，但默认没有启用。可以通过在“about:config”里调整“`media.dash.enabled`”首选项来开启。
 
-Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [媒体源扩展 API（MSE）](http://www.w3.org/TR/media-source/)的实现取代。MSE 可实现通过 JavaScript 库（例如 dash.js）来提供对 DASH 的支持。详情参见 Bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617)。
+Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [媒体源扩展 API（MSE）](https://www.w3.org/TR/media-source/)的实现取代。MSE 可实现通过 JavaScript 库（例如 dash.js）来提供对 DASH 的支持。详情参见 Bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617)。
 
 ## 使用 DASH - 服务端
 
-首先，你需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据你的需求，启动从 [ffmpeg.org](http://www.ffmpeg.org) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
+首先，你需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据你的需求，启动从 [ffmpeg.org](https://www.ffmpeg.org/) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
 
 ### 1. 使用现有的 WebM 文件创建一个音频文件和多个视频文件
 
@@ -94,8 +96,8 @@ ffmpeg \
 
 ## Links
 
-[WebM DASH Specification at The WebM Project](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+[WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
-[DASH Industry Forum](http://dashif.org/)
+[DASH Industry Forum](https://dashif.org/)
 
-[WebM project description of how to create DASH files with FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+[WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

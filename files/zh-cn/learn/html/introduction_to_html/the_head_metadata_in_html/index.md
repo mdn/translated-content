@@ -96,7 +96,8 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 
 ![一个包含英文和日文字符的网页，字符编码设置为拉丁文。日语字符不能正确显示。](bad-encoding.png)
 
-> **备注：** 一些浏览器（比如 Chrome）会自动修正错误的编码，所以根据你所使用的浏览器不同，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的问题。
+> [!NOTE]
+> 一些浏览器（比如 Chrome）会自动修正错误的编码，所以根据你所使用的浏览器不同，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的问题。
 
 ### 主动学习：体验字符编码
 
@@ -149,9 +150,11 @@ description 也被使用在搜索引擎显示的结果页中。下面通过一�
 
    ![“MDN Web Docs”的搜索结果](mdn-search-result.png)
 
-> **备注：** 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——这是一种可以使你的站点对搜索引擎更友好的方式。
+> [!NOTE]
+> 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——这是一种可以使你的站点对搜索引擎更友好的方式。
 
-> **备注：** 许多 `<meta>` 特性已经不再使用。例如，keyword `<meta>` 元素（`<meta name="keywords" content="fill, in, your, keywords, here">`，为搜索引擎提供关键词，用于确定该页面与不同搜索词的相关性）已经被搜索引擎忽略了，因为作弊者填充了大量关键词到 keyword，错误地引导搜索结果。
+> [!NOTE]
+> 许多 `<meta>` 特性已经不再使用。例如，keyword `<meta>` 元素（`<meta name="keywords" content="fill, in, your, keywords, here">`，为搜索引擎提供关键词，用于确定该页面与不同搜索词的相关性）已经被搜索引擎忽略了，因为作弊者填充了大量关键词到 keyword，错误地引导搜索结果。
 
 ### 其他类型的元数据
 
@@ -200,39 +203,43 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 
 ![Firefox 的书签面板，显示了一个书签的例子，旁边显示了一个 favicon。](bookmark-favicon.png)
 
-如今还有很多其他的图标类型可以考虑。例如，你可以在 MDN Web 文档的源代码中找到它：
+你可能还需要在不同的场景使用不同的图标。例如，你可以在 MDN Web 文档的源代码中找到它：
 
 ```html
-<!-- 含有高分辨率 Retina 显示屏的第三代 iPad：-->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+这是一种使网站在保存到苹果设备主屏幕时显示图标的方法。你甚至可以为不同的设备提供不同的图标，以确保图标在所有设备上都看起来美观。例如：
+
+```html
+<!-- 含有高分辨率 Retina 显示屏的 iPad Pro：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- 含有高分辨率 Retina 显示屏的 iPhone：-->
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 三倍分辨率的 iPhone：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- 第一代和第二代 iPad：-->
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- 没有 Retina 的 iPad、iPad mini 等：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- 不含高分辨率 Retina 显示的 iPhone、iPod Touch 和 Android 2.1+ 设备：-->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
-<!-- 基本 favicon -->
-<link
-  rel="icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 二倍分辨率的 iPhone 和其他设备：-->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
+<!-- 基本图标 -->
+<link rel="icon" href="/favicon.ico" />
 ```
 
 这些注释解释了每个图标的用途——这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到 iPad 的主屏幕时使用。
 
-不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。
+不用担心现在实现所有这些类型的图标——这是一个相当先进的特性，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。如果你确实想了解更多关于所有这些值以及如何选择它们，请阅读 {{HTMLElement("link")}} 元素的参考页面。
 
-> **备注：** 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
+> [!NOTE]
+> 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
 
 ## 在 HTML 中应用 CSS 和 JavaScript
 
@@ -265,7 +272,8 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 - JavaScript 在页面中添加了一个空列表。现在当你点击列表中的任何地方，浏览器会弹出一个对话框要求你为新列表项输入一些文本内容。当你点击 OK 按钮，刚刚那个新的列表项会添加到页面上；当你点击那些已有的列表项，会弹出一个对话框允许你修改列表项的文本。
 - CSS 使页面背景变成了绿色，文本变得大了一点。它还将 JavaScript 添加到页面中的一些内容进行了样式化。（带有黑色边框的红色条是 CSS 添加到 JavaScript 生成的列表中的样式）
 
-> **备注：** 如果你卡在这个练习当中，无法正常应用 CSS 和 JavaScript，试着查看一下我们的 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) 页面实例。
+> [!NOTE]
+> 如果你卡在这个练习当中，无法正常应用 CSS 和 JavaScript，试着查看一下我们的 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) 页面实例。
 
 ## 为文档设定主语言
 

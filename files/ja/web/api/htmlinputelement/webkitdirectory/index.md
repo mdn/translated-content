@@ -1,15 +1,19 @@
 ---
 title: "HTMLInputElement: webkitdirectory プロパティ"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("File and Directory Entries API")}}
 
-**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
+**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
+ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。
+選択されているファイルシステムの項目は、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
 
-> **メモ:** このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
+> [!NOTE]
+> このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
 
 ## 値
 
@@ -54,14 +58,14 @@ l10n:
 
 この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 document.getElementById("filepicker").addEventListener(

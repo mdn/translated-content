@@ -3,11 +3,11 @@ title: FormData.keys()
 slug: Web/API/FormData/keys
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.keys()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.
-
-> **Примечание:** Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -40,7 +40,7 @@ key1
 key2
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

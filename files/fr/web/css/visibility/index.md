@@ -9,7 +9,8 @@ La propriété **`visibility`** peut être utilisée afin de cacher un élément
 
 {{EmbedInteractiveExample("pages/css/visibility.html")}}
 
-> **Note :** Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur `none`.
+> [!NOTE]
+> Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur `none`.
 
 ## Syntaxe
 

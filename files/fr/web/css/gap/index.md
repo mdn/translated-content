@@ -103,7 +103,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "230px")}}
+{{EmbedLiveSample("Disposition flexible", "auto", "230px")}}
 
 ### Disposition en grille
 
@@ -147,7 +147,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "230px")}}
+{{EmbedLiveSample("Disposition en grille", "auto", "230px")}}
 
 ### Disposition multi-colonnes
 
@@ -172,7 +172,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "120px")}}
+{{EmbedLiveSample("Disposition multi-colonnes", "auto", "120px")}}
 
 ## Spécifications
 

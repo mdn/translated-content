@@ -142,7 +142,8 @@ if (navigator.getUserMedia) {
 }
 ```
 
-> **Примечание:** Код выше был взят из демо Web Dictaphone. Некоторые строчки были пропущены для краткости. Полный код смотрите [здесь](https://github.com/mdn/web-dictaphone/)
+> [!NOTE]
+> Код выше был взят из демо Web Dictaphone. Некоторые строчки были пропущены для краткости. Полный код смотрите [здесь](https://github.com/mdn/web-dictaphone/)
 
 ## Спецификации
 

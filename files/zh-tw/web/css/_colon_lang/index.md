@@ -7,7 +7,8 @@ slug: Web/CSS/:lang
 
 **`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
 
-> **備註：** 在 HTML 中，語言是通過 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。
+> [!NOTE]
+> 在 HTML 中，語言是通過 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。
 
 ## 語法
 
@@ -72,4 +73,4 @@ slug: Web/CSS/:lang
 
 - 語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}
 - HTML [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性
-- [BCP 47 - Tags for Identifying Languages (BCP 47 - 識別語言的標籤)](https://tools.ietf.org/html/bcp47)
+- [BCP 47——識別語言的標籤](https://www.rfc-editor.org/info/bcp47)

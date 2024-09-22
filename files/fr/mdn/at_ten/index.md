@@ -3,6 +3,8 @@ title: MDN a 10 ans
 slug: MDN/At_ten
 ---
 
+{{MDNSidebar}}
+
 Fêtons 10 années passées à documenter votre Web.
 
 ## L'histoire de MDN

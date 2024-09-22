@@ -39,8 +39,6 @@ slug: Web/HTML/Global_attributes
     - `true` 或者*空字符串*，表明元素是可被编辑的；
     - `false`，表明元素不能被编辑。
 
-- [`contextmenu`](/zh-CN/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}}
-  - : {{HTMLElement("menu")}} 的 [**`id`**](#id)，作为该元素的上下文菜单。
 - [`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*)
   - : 形成一类属性，称为自定义数据属性，允许在 [HTML](/zh-CN/docs/Web/HTML) 和其 {{glossary("DOM")}} 表示之间交换专有信息，可由脚本使用。所有这些自定义数据属性都可以通过所属元素的 {{DOMxRef("HTMLElement")}} 接口来访问。通过 {{DOMxRef("HTMLElement.dataset")}} 属性可以访问它们。
 - [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir)

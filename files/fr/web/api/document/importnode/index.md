@@ -18,7 +18,8 @@ var node = document.importNode(externalNode, deep);
 - `deep`
   - : Une valeur booléenne qui indique s'il faut ou non importer la totalité de la sous-arborescence DOM provenant de `externalNode`. Si ce paramètre est `true` (_vrai_), alors `externalNode` et tous ses descendants sont copiés; si `false` _(faux)_, seul le nœud unique, `externalNode`, est importé.
 
-> **Note :** Dans la spécification DOM4, `deep` est répertorié en tant qu'argument facultatif. S'il est omis, la méthode agit comme si la valeur de `deep` était `true`, par défaut, elle utilisait le clonage profond comme comportement par défaut. Pour créer un clone superficiel, la profondeur doit être définie sur `false`.
+> [!NOTE]
+> Dans la spécification DOM4, `deep` est répertorié en tant qu'argument facultatif. S'il est omis, la méthode agit comme si la valeur de `deep` était `true`, par défaut, elle utilisait le clonage profond comme comportement par défaut. Pour créer un clone superficiel, la profondeur doit être définie sur `false`.
 >
 > Ce comportement a été modifié dans la dernière spécification, et s'il est omis, la méthode agira comme si la valeur de `deep` était `false`. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` à la fois pour la compatibilité en amont et en aval. Avec Gecko 28.0, la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0, un clone superficiel est défini par défaut au lieu d'un clone profond.
 

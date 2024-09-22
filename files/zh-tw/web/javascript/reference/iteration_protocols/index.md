@@ -7,23 +7,22 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 為 ECMAScript 2015 中的一些補充內容，並非新的內建物件或語法，而是協議。這些協議可被任何遵守特定協定的物件所實作。
 
-本文介紹兩種協議：[可迭代協議（iterable protocol）](#The_iterable_protocol)以及[迭代器協議（iterator protocol）](#The_iterator_protocol)。
+本文介紹兩種協議：[可迭代協議](#可迭代協議)以及[迭代器協議](#迭代器協議)。
 
 ## 可迭代協議
 
-**可迭代（iterable）**協議允許 JavaScript 物件定義或客制他們的迭代行為，例如哪些值可在 {{jsxref("Statements/for...of", "for..of")}} 語法結構中被迭代出來。部分內建型別為擁有預設迭代行為的[可迭代內建物件（built-in iterables）](#Built-in_iterables)，如 {{jsxref("Array")}} 或 {{jsxref("Map")}}，而其他型別（如 {{jsxref("Object")}}）則否。
+**可迭代**（iterable）協議允許 JavaScript 物件定義或客制他們的迭代行為，例如哪些值可在 {{jsxref("Statements/for...of", "for..of")}} 語法結構中被迭代出來。部分內建型別為擁有預設迭代行為的[可迭代內建物件](#可迭代內建物件)，如 {{jsxref("Array")}} 或 {{jsxref("Map")}}，而其他型別（如 {{jsxref("Object")}}）則否。
 
-為了成為**可迭代的（iterable）**，一個物件必須實作 **@@iterator** 方法，意思是這個物件（或其[原型鏈](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的其中一個原型物件）必須擁有一個鍵（key）值為 **@@iterator**（即 {{jsxref("Symbol.iterator")}} 常數）的屬性：
+為了成為**可迭代的**，一個物件必須實作 **`[Symbol.iterator]()`** 方法，意思是這個物件（或其[原型鏈](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的其中一個原型物件）必須擁有一個鍵（key）值為 `[Symbol.iterator]`（即 {{jsxref("Symbol.iterator")}} 常數）的屬性：
 
-| 屬性                | 值                                                                                    |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | 回傳符合[迭代器協議（iterator protocol）](#The_iterator_protocol)之物件的無引數函式。 |
+- `[Symbol.iterator]`
+  - : 回傳符合[迭代器協議](#迭代器協議)之物件的無引數函式。
 
-每當物件需要被迭代時（比如在一個開始的 `for..of` 迴圈中），物件的 `@@iterator` 方法會被以不傳入引數的方式呼叫，並會使用其回傳的**迭代器（iterator）**來獲得被迭代出來的值。
+每當物件需要被迭代時（比如在一個開始的 `for..of` 迴圈中），物件的 `[Symbol.iterator]()` 方法會被以不傳入引數的方式呼叫，並會使用其回傳的**迭代器**來獲得被迭代出來的值。
 
 ## 迭代器協議
 
-**迭代器（iterator）**協議定義了一個標準方式來產出一連串（有限或無限）的值，並且可能於所有值都被產出後回傳一個值。
+**迭代器**（iterator）協議定義了一個標準方式來產出一連串（有限或無限）的值，並且可能於所有值都被產出後回傳一個值。
 
 當物件以下列語義實作了 **`next()`** 方法即為一個迭代器：
 
@@ -68,7 +67,8 @@ slug: Web/JavaScript/Reference/Iteration_protocols
   </tbody>
 </table>
 
-> **備註：** 我們無法反射性的一眼看出一個特定的物件是否實作了迭代器協議，然而要建立一個同時滿足迭代器及可迭代協議的物件卻是相當容易（如下例所示）。範例的做法允許一個迭代器被各個預期其可迭代行為的語法所消費。因此很少有需要實作迭代器協議而沒有實作可迭代協議的情況。
+> [!NOTE]
+> 我們無法反射性的一眼看出一個特定的物件是否實作了迭代器協議，然而要建立一個同時滿足迭代器及可迭代協議的物件卻是相當容易（如下例所示）。範例的做法允許一個迭代器被各個預期其可迭代行為的語法所消費。因此很少有需要實作迭代器協議而沒有實作可迭代協議的情況。
 >
 > ```js
 > var myIterator = {
@@ -90,7 +90,7 @@ var someString = "hi";
 typeof someString[Symbol.iterator]; // "function"
 ```
 
-`String` 的[預設迭代器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)會回傳字串中的一個一個字元：
+`String` 的[預設迭代器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)會回傳字串中的一個一個字元：
 
 ```js
 var iterator = someString[Symbol.iterator]();
@@ -101,13 +101,13 @@ iterator.next(); // { value: "i", done: false }
 iterator.next(); // { value: undefined, done: true }
 ```
 
-部分內建語法結構（built-in constructs），如 [spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator)，其內部也使用了相同的迭代協議：
+部分內建語法結構（built-in constructs），如 [spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，其內部也使用了相同的迭代協議：
 
 ```js
 [...someString]; // ["h", "i"]
 ```
 
-我們可以藉由提供我們自己的 `@@iterator` 來重新定義迭代行為：
+我們可以藉由提供我們自己的 `[Symbol.iterator]()` 來重新定義迭代行為：
 
 ```js
 var someString = new String("hi"); // need to construct a String object explicitly to avoid auto-boxing
@@ -128,7 +128,7 @@ someString[Symbol.iterator] = function () {
 };
 ```
 
-請注意，重新定義 `@@iterator` 會影響使用迭代協議之內建語法結構的行為：
+請注意，重新定義 `[Symbol.iterator]()` 會影響使用迭代協議之內建語法結構的行為：
 
 ```js
 [...someString]; // ["bye"]
@@ -139,7 +139,7 @@ someString + ""; // "hi"
 
 ### 可迭代內建物件
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 以及 {{jsxref("Set")}} 全都是可迭代內建物件，因為他們每一個的原型物件皆實作了 `@@iterator` 方法。
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 以及 {{jsxref("Set")}} 全都是可迭代內建物件，因為他們每一個的原型物件皆實作了 `[Symbol.iterator]()` 方法。
 
 ### 自定義可迭代物件
 
@@ -186,7 +186,7 @@ new WeakSet(
 
 ### 用於可迭代物件的語法
 
-部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
+部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
 
 ```js
 for (let value of ["a", "b", "c"]) {
@@ -208,9 +208,9 @@ gen().next(); // { value:"a", done:false }
 a; // "a"
 ```
 
-### 非良好的（Non-well-formed）可迭代物件
+### 非良好的可迭代物件
 
-假如可迭件物件的 `@@iterator` 方法不是回傳一個迭代器物件，即是非良好的（non-well-formed）可迭代物件。如以下方式使用可能會導致執行時期異常或錯誤行為：
+假如可迭件物件的 `[Symbol.iterator]()` 方法不是回傳一個迭代器物件，即是非良好的（non-well-formed）可迭代物件。如以下方式使用可能會導致執行時期異常或錯誤行為：
 
 ```js
 var nonWellFormedIterable = {}
@@ -325,7 +325,7 @@ for (const val of simple) {
 
 ## 生成器物件是迭代器還是可迭代物件？
 
-[生成器物件（generator object）](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Generator)同時為迭代器及可迭代物件：
+[生成器物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Generator)同時為迭代器及可迭代物件：
 
 ```js
 var aGeneratorObject = (function* () {
@@ -336,13 +336,13 @@ var aGeneratorObject = (function* () {
 typeof aGeneratorObject.next;
 // "function", because it has a next method, so it's an iterator
 typeof aGeneratorObject[Symbol.iterator];
-// "function", because it has an @@iterator method, so it's an iterable
+// "function", because it has an [Symbol.iterator]() method, so it's an iterable
 aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
-// true, because its @@iterator method returns itself (an iterator), so it's an well-formed iterable
+// true, because its [Symbol.iterator]() method returns itself (an iterator), so it's an well-formed iterable
 [...aGeneratorObject];
 // [1, 2, 3]
 ```
 
 ## 參見
 
-- 更多關於 ES2015 生成器（generators）的資訊，可參考[生成器函式 function\* 文件](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)。
+- 更多關於 ES2015 生成器（generator）的資訊，可參考[生成器函式 function\* 文件](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)。

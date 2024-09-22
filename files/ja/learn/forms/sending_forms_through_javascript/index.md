@@ -89,7 +89,7 @@ function sendData(data) {
   // リクエストをセットアップします
   XHR.open("POST", "https://example.com/cors.php");
 
-  // フォームデータの POST リクエストを扱うために必要な HTTP ヘッダを追加します
+  // フォームデータの POST リクエストを扱うために必要な HTTP ヘッダーを追加します
   XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // 最後に、データを送信します
@@ -105,7 +105,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Building_an_XMLHttpRequest_manually", "100%", 50)}}
 
-> **メモ:** この {{domxref("XMLHttpRequest")}} の使用は、第三者のウェブサイトにデータを送信したい場合にも、同一オリジンポリシーの対象となります。オリジン間リクエストの場合は、 [CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
+> [!NOTE]
+> この {{domxref("XMLHttpRequest")}} の使用は、第三者のウェブサイトにデータを送信したい場合にも、同一オリジンポリシーの対象となります。オリジン間リクエストの場合は、 [CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
 
 ### XMLHttpRequest と FormData オブジェクトの使用
 
@@ -148,7 +149,7 @@ function sendData(data) {
   // リクエストをセットアップします
   XHR.open("POST", "https://example.com/cors.php");
 
-  // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
+  // FormData オブジェクトを送信するだけです。HTTP ヘッダーは自動的に設定されます
   XHR.send(FD);
 }
 

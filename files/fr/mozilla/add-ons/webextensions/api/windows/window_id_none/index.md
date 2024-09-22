@@ -13,7 +13,7 @@ La valeur `windowId` que représente l'absence d'une fenêtre du navigateur.
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >

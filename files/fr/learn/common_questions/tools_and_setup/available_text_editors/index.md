@@ -3,6 +3,8 @@ title: Choisir, installer et paramétrer un éditeur de texte
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
 
 <table class="standard-table">
@@ -41,7 +43,8 @@ Voici quelques questions qui peuvent vous aider à choisir :
 
 Nous n'avons pas évoqué le prix. Bien entendu, cela a également son importance. Cependant, il faut garder à l'esprit qu'il n'y a pas nécessairement de lien entre le coût d'un outil et la richesse de ses fonctionnalités. Un éditeur de texte étant un outil de base pour le développement, il est très probable que vous trouviez un éditeur de texte gratuit qui réponde tout à fait à vos besoins.
 
-> **Note :** Le développement web est un domaine principalement anglophone, vous trouverez de nombreuses documentations également en français mais soyez conscient-es que la plupart des informations autour de certains logiciels seront en anglais sur le Web.
+> [!NOTE]
+> Le développement web est un domaine principalement anglophone, vous trouverez de nombreuses documentations également en français mais soyez conscient-es que la plupart des informations autour de certains logiciels seront en anglais sur le Web.
 
 Voici un tableau de quelques éditeurs de texte connus :
 
@@ -59,15 +62,16 @@ Voici un tableau de quelques éditeurs de texte connus :
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
+      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
+      <td>GPL 3</td>
       <td style="text-align: center">Gratuit</td>
       <td>Windows, Mac, Linux</td>
-      <td><a href="https://discuss.atom.io/categories">Forum</a></td>
-      <td><a href="https://atom.io/docs/latest/">Manuel en ligne</a></td>
-      <td style="text-align: center">
-        <a href="https://atom.io/packages">Oui</a>
+      <td>
+        <a href="https://bfwiki.tellefsen.net/index.php/Mailinglists">liste de diffusion</a>,
+        <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">Wiki</a>
       </td>
+      <td><a href="https://bluefish.openoffice.nl/manual/">Manuel en ligne</a></td>
+      <td>Oui</td>
     </tr>
     <tr>
       <td><a href="http://brackets.io/">Brackets</a></td>
@@ -190,12 +194,12 @@ Voici un tableau de quelques éditeurs de texte connus :
       <td>Windows, Mac, Linux</td>
       <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
       <td>
-        <a href="http://docs.activestate.com/komodo/8.5/" rel="external"
+        <a href="https://docs.activestate.com/komodo" rel="external"
           >Manuel en ligne</a
         >
       </td>
       <td style="text-align: center">
-        <a href="http://komodoide.com/resources/addons/">Oui</a>
+        <a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Oui</a>
       </td>
     </tr>
     <tr>

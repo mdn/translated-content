@@ -20,7 +20,8 @@ Un {{domxref("Boolean")}}.
 
 En nuestro [ejemplo de Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (véase [Fetch Response en vivo](http://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasando una ruta a un JPG. Luego traemos esta petición usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL usando {{domxref("URL.createObjectURL")}}, y mostrar esto en un {{htmlelement("img")}}.
 
-> **Nota:** en la parte superior del bloque de `fetch()` imprimimos el valor de `ok` en la consola.
+> [!NOTE]
+> En la parte superior del bloque de `fetch()` imprimimos el valor de `ok` en la consola.
 
 ```js
 var imagen = document.querySelector("img");

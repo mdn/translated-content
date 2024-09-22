@@ -2,12 +2,14 @@
 title: "HTML 属性: for"
 slug: Web/HTML/Attributes/for
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: a9ee909247680532544008dbc65a9f033fce4b39
 ---
 
 {{HTMLSidebar}}
 
 **`for`** 属性は {{htmlelement("label")}} と {{htmlelement("output")}} で利用できる属性です。 `<label>` 要素上で使用された場合、このラベルが説明するフォーム要素を示します。 `<output>` 要素上で使用された場合、その出力欄で使用される値を表す要素間の関係を明示的に示すことができます。
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-for.html", "tabbed-shorter")}}
 
 ## 使用方法
 

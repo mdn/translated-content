@@ -3,7 +3,7 @@ title: XMLHttpRequest 中的 HTML
 slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加 [HTML](/zh-CN/docs/Web/HTML) 解析功能，此前它仅支持 {{Glossary("XML")}} 解析。该功能允许 Web 应用程序使用 `XMLHttpRequest` 获得已解析的 {{Glossary("DOM")}} 形式的 HTML 资源。
 

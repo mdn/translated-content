@@ -1,18 +1,19 @@
 ---
-title: CSSStyleValue.parseAll()
+title: "CSSStyleValue: parseAll() 静的メソッド"
+short-title: parseAll()
 slug: Web/API/CSSStyleValue/parseAll_static
 l10n:
-  sourceCommit: 711f8d381b5a1b9c1cfcf6719c401d4f9853222f
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
-**`parseAll()`** は {{domxref("CSSStyleValue")}} インターフェイスのメソッドで、出現したすべての特定の CSS プロパティを指定された値に設定し、それぞれが与えられた値の 1 つを格納した {{domxref('CSSStyleValue')}} オブジェクトの配列を返します。
+**`parseAll()`** は {{domxref("CSSStyleValue")}} インターフェイスのメソッドで、特定の CSS プロパティが出現したものすべてに指定された値に設定し、それぞれが指定された値のいずれかを含む {{domxref('CSSStyleValue')}} オブジェクトの配列を返します。
 
 ## 構文
 
 ```js-nolint
-parseAll(property, value)
+CSSStyleValue.parseAll(property, value)
 ```
 
 ### 引数
@@ -24,7 +25,7 @@ parseAll(property, value)
 
 ### 返値
 
-`CSSStyleValue` オブジェクトの配列で、それぞれが与えられた値の 1 つを格納します。
+`CSSStyleValue` オブジェクトの配列で、それぞれが与えられた値の 1 つを格納したものです。
 
 ## 仕様書
 
@@ -36,6 +37,6 @@ parseAll(property, value)
 
 ## 関連情報
 
-- {{domxref("CSSStyleValue.parse()")}}
+- [`CSSStyleValue.parse()`](/ja/docs/Web/API/CSSStyleValue/parse_static)
 - [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)

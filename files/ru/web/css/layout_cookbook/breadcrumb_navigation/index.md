@@ -17,11 +17,20 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Примечание:** [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [!CALLOUT]
+>
+> [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Примечание:** В приведённом выше примере используются два селектора для вставки содержимого перед каждым li, кроме первого. Этого также можно добиться, используя только один селектор: .breadcrumb li:not(:first-child)::before {
-> content: "→";
-> }Это решение использует более сложный селектор, но требует меньше правил. Смело выбирайте то решение, которое вам больше по душе.
+> [!NOTE]
+> В приведённом выше примере используются два селектора для вставки содержимого перед каждым li, кроме первого. Этого также можно добиться, используя только один селектор:
+>
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
+>
+> Это решение использует более сложный селектор, но требует меньше правил. Смело выбирайте то решение, которое вам больше по душе.
 
 ## Сделанный выбор
 
@@ -40,7 +49,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
 - [Создание следа из хлебных крошек](https://www.w3.org/TR/WCAG20-TECHS/G65.html)

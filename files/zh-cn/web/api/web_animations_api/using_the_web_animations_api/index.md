@@ -23,9 +23,9 @@ web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本�
 
 ### The CSS version
 
-这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
+这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](https://codepen.io/rachelnabors/pen/QyOqqW)):
 
-[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
 
 请注意背景的移动，爱丽丝的旋转，以及她的颜色偏移变化。本教程我们将仅仅关注爱丽丝。这是控制爱丽丝动画的简化的 CSS：
 
@@ -91,7 +91,8 @@ var aliceTiming = {
 - 一个，持续时间是毫秒，而不是秒 - 3000 不是 3 秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web 动画 API 只支持毫秒。
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **备注：** CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> [!NOTE]
+> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -101,7 +102,7 @@ var aliceTiming = {
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
-And boom: the animation starts playing (see the finished [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
+And boom: the animation starts playing (see the finished [version on Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
 
 可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不需要为关键帧和时间属性创建对象：
 
@@ -134,9 +135,9 @@ document.getElementById("alice").animate(
 
 ## 使用 play()，pause()，reverse() 和 playbackRate 控制播放
 
-虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)）：
+虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](https://codepen.io/rachelnabors/pen/PNYGZQ)）：
 
-[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 在这个游戏中，爱丽丝有一个动画，使她从小到大，我们通过一个瓶子和一个蛋糕控制。这两个都有自己的动画。
 
@@ -359,7 +360,8 @@ aliceChange.onfinish = endGame;
 
 Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) and [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel).
 
-> **备注：** These promises are not fully supported as of this writing.
+> [!NOTE]
+> These promises are not fully supported as of this writing.
 
 ## 结论
 
@@ -367,6 +369,6 @@ Prefer promises? The Web Animations API also specifies two promises: [`onfinish`
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
 - [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

@@ -7,7 +7,8 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 在 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中，使用 {{domxref("WebGLRenderingContext")}} 中的 **`enableVertexAttribArray()`** 方法，可以打开属性数组列表中指定索引处的通用顶点属性数组。
 
-> **备注：** 你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
+> [!NOTE]
+> 你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 在 WebGL 中，作用于顶点的数据会先储存在[attributes](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)。这些数据仅对 JavaScript 代码和顶点着色器可用。属性由索引号引用到 GPU 维护的属性列表中。在不同的平台或 GPU 上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL 层会分配其他属性。
 
@@ -15,8 +16,8 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 ## 语法
 
-```
-void gl.enableVertexAttribArray(index);
+```js-nolint
+enableVertexAttribArray(index)
 ```
 
 ### 参数

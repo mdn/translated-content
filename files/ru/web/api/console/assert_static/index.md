@@ -1,7 +1,6 @@
 ---
 title: console.assert()
 slug: Web/API/console/assert_static
-original_slug: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}{{Non-standard_Header}}
@@ -10,7 +9,8 @@ original_slug: Web/API/console/assert
 
 {{AvailableInWorkers}}
 
-> **Примечание:** Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
+> [!NOTE]
+> Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
 >
 > В браузере, вызов console.assert() с ложным утверждением вызовет печать ошибки в консоль без прерывания текущего выполнения скрипта, а в Node.js в аналогичном случае будет выброшена ошибка - AssertionError.
 

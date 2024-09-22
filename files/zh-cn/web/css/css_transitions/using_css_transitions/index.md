@@ -258,7 +258,8 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **备注：** 如果在过渡完成之前，因为元素变为 {{cssxref("display")}}`: none`，或者动画属性的值被改变，而中止了过渡，则 `transitionend` 事件不会触发。
+> [!NOTE]
+> 如果在过渡完成之前，因为元素变为 {{cssxref("display")}}`: none`，或者动画属性的值被改变，而中止了过渡，则 `transitionend` 事件不会触发。
 
 ## 规范
 

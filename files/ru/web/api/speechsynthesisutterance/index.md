@@ -84,7 +84,7 @@ inputForm.onsubmit = function (event) {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -92,6 +92,6 @@ inputForm.onsubmit = function (event) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Speech API](/ru/docs/Web/API/Web_Speech_API)

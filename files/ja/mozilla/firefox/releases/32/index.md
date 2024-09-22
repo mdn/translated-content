@@ -15,12 +15,12 @@ l10n:
 
 - [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - _スクラッチパッドのコード補完とインラインドキュメント_
-- [インスペクターのルールビューでユーザエージェントのスタイルを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
+- [インスペクターのルールビューでユーザーエージェントのスタイルを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
 - [要素選択ボタンを移動](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards-2)
 - [インスペクターの情報バーにノードの寸法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards)
 - [ページ全体のスクリーンショットボタンを追加](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra-tools)
 - ツールに HiDPI 画像を追加
-- インスペクタで、`display:none` が設定されているノードを異なる書式で表示
+- インスペクターで、`display:none` が設定されているノードを異なる書式で表示
 
 [Firefox 31 から Firefox 32 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox)
 

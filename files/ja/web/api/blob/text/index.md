@@ -1,11 +1,12 @@
 ---
-title: Blob.text()
+title: "Blob: text() メソッド"
+short-title: text()
 slug: Web/API/Blob/text
 l10n:
   sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 **`text()`** は {{domxref("Blob")}} インターフェイスのメソッドで、 {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、 UTF-8 として解釈されます。
 

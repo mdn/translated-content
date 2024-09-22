@@ -10,7 +10,8 @@ l10n:
 
 **`PopStateEvent()`** コンストラクターは、新しい {{domxref("PopStateEvent")}} オブジェクトを生成します。
 
-> **メモ:** ウェブ開発者は通常このコンストラクタを呼び出す必要はありません。ブラウザーは {{domxref("Window/popstate_event", "popstate")}} イベントを発行するときにこれらのオブジェクトを生成するからです。
+> [!NOTE]
+> ウェブ開発者は通常このコンストラクターを呼び出す必要はありません。ブラウザーは {{domxref("Window/popstate_event", "popstate")}} イベントを発行するときにこれらのオブジェクトを生成するからです。
 
 ## 構文
 

@@ -39,7 +39,8 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 最後の例には記憶装置として用いられる丸括弧があります。
 パターンのこの部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups)を参照してください。
 
-> **メモ:** すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
+> [!NOTE]
+> すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
 
 ### 単純なパターンの使い方
 
@@ -412,7 +413,8 @@ Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.pr
 
 ## 例
 
-> **メモ:** 複数の例が次の場所にあります。
+> [!NOTE]
+> 複数の例が次の場所にあります。
 >
 > - {{jsxref("RegExp/exec", "exec()")}}、{{jsxref("RegExp/test", "test()")}}、{{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/split", "split()")}} のリファレンスページ
 > - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)、[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)

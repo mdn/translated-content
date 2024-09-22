@@ -3,8 +3,8 @@ title: サイト表示互換性に関するノウハウ
 slug: orphaned/Web/Compatibility_FAQ
 ---
 
-モバイルデバイスを利用する上で、特定のデバイス／ブラウザに依存せず、どのブラウザでもサイトが正常表示可能な環境が理想的と考えています。
-本稿では、主にAndroid版Firefoxで発生しているよくあるサイト表示不具合をパターン毎に分類し、Web標準に従ったコンテンツ記載によりブラウザ間の表示互換性を保てるノウハウをご紹介します。
+モバイルデバイスを利用する上で、特定のデバイス／ブラウザーに依存せず、どのブラウザーでもサイトが正常表示可能な環境が理想的と考えています。
+本稿では、主にAndroid版Firefoxで発生しているよくあるサイト表示不具合をパターン毎に分類し、ウェブ標準に従ったコンテンツ記載によりブラウザー間の表示互換性を保てるノウハウをご紹介します。
 
 ## 目次
 
@@ -24,7 +24,7 @@ slug: orphaned/Web/Compatibility_FAQ
 
 - [`ページの背景色が抜けている`](/ja/docs/Web/Compatibility_FAQ/No_Background_Shown.html)
 - [`アイコン,バナーの色が抜けている`](/ja/docs/Web/Compatibility_FAQ/Empty_Background_Color.html)
-- [`mobile版Firefoxと他ブラウザで下線の色が相違している`](/ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html)
+- [`mobile版Firefoxと他ブラウザーで下線の色が相違している`](/ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html)
 - [`枠のシャドウや角丸が抜けている`](/ja/docs/Web/Compatibility_FAQ/No_Decoreation_Shown.html)
 
 ### 3. 画面要素の一部が表示されない
@@ -36,4 +36,4 @@ slug: orphaned/Web/Compatibility_FAQ
 ### TIPS
 
 - [`mobile版Firefox向けベンダープレフィックス対処方法まとめ`](/ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html)
-- [`ブラウザごとの表示の違い(User-Agent-Stylesheetによる表示差異)`](/ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html)
+- [`ブラウザーごとの表示の違い(User-Agent-Stylesheetによる表示差異)`](/ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html)

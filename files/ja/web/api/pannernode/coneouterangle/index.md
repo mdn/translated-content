@@ -1,11 +1,14 @@
 ---
-title: PannerNode.coneOuterAngle
+title: "PannerNode: coneOuterAngle プロパティ"
+short-title: coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{ APIRef("Web Audio API") }}
 
-`coneOuterAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、倍精度実数値で円錐の外側の体積を一定値だけ減少させる角度を、度単位で記述します。
+`coneOuterAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、 {{domxref("PannerNode.coneOuterGain","coneOuterGain")}} プロパティで定義する、倍精度実数値で円錐の外側の体積を一定値だけ減少させる角度を、度単位で記述します。
 
 `coneOuterAngle` プロパティの既定の値は `0` です。
 

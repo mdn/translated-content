@@ -2,7 +2,7 @@
 title: Code splitting (코드분할)
 slug: Glossary/Code_splitting
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: d821201936ea3f67634381b2086998ebfc29f39c
 ---
 
 {{GlossarySidebar}}
@@ -15,7 +15,6 @@ l10n:
 
 ## 같이 보기
 
-- 번들링(Bundling)
 - [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)
 - [HTTP/2](/ko/docs/Glossary/HTTP_2)
 - [트리 쉐이킹(Tree shaking)](/ko/docs/Glossary/Tree_shaking)

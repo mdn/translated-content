@@ -1,8 +1,9 @@
 ---
-title: WorkerGlobalScope.navigator
+title: "WorkerGlobalScope: navigator プロパティ"
+short-title: navigator
 slug: Web/API/WorkerGlobalScope/navigator
 l10n:
-  sourceCommit: 5b82af59e9723c502cf660fe9c32f9fd8dee49ac
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{APIRef("Web Workers API")}}
@@ -23,7 +24,7 @@ console.log(navigator);
 
 を呼び出すと（これらは基本的に `self.console.log(self.navigator);` と同等であり、ワーカーのスコープで呼び出されたとき、 {{domxref("WorkerGlobalScope.self")}} で参照されるもの）、 {{domxref("WorkerNavigator")}} オブジェクトが次のようにコンソールに出力されるのが分かるでしょう。
 
-```
+```plain
 Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
     appCodeName: "Mozilla"
     appName: "Netscape"

@@ -3,6 +3,8 @@ title: L’algorithme de clonage structuré
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
 
+{{DefaultAPISidebar("Web Workers API") }}
+
 L'algorithme de clonage structuré est un nouvel algorithme [défini par la spécification HTML5](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data) pour sérialiser les objets JavaScript complexes. Il est plus puissant que [JSON](/fr/docs/JSON) en cela qu'il supporte la sérialisation d'objets contenant des graphes cycliques — des objets peuvent faire référence à des objets faisant référence à d'autres objets dans le même graphe. De plus, dans certains cas, l'algorithme de clonage structuré peut être plus efficace que JSON.
 
 L'algorithme, essentiellement, parcourt tous les champs de l'objet original, copiant les valeurs de chaque champ dans un nouvel objet. Si un champ est lui-même un objet avec des champs, ces champs sont parcourus de manière récursive jusqu'à ce que chaque champ et sous-champ aient été copié dans le nouvel objet.
@@ -82,7 +84,8 @@ function clone(objectToBeCloned) {
 }
 ```
 
-> **Note :** Cet algorithme ne prend en charge que les objets spéciaux [`RegExp`](/fr/docs/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array) et [`Date`](/fr/docs/JavaScript/Reference/Global_Objects/Date). Vous pouvez implémenter d'autres cas spéciaux selon vos besoins.
+> [!NOTE]
+> Cet algorithme ne prend en charge que les objets spéciaux [`RegExp`](/fr/docs/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array) et [`Date`](/fr/docs/JavaScript/Reference/Global_Objects/Date). Vous pouvez implémenter d'autres cas spéciaux selon vos besoins.
 
 ## Voir aussi
 

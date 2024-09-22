@@ -95,7 +95,8 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 这个技术是用来让图片**可响应**的，所以在更小的设备上浏览的时候，它们会合适地缩放。你无论怎样都不应该用这个技术先载入大原始尺寸的图片，再对它们在浏览器中进行缩放。图像应该合适地调整尺寸，以使它们不会比预计中展示时所需要的最大尺寸大。下载过大的图像会造成你的网站变慢，如果用户使用按量收费的网络连接，会让用户花更多钱。
 
-> **备注：**了解更多关于[响应式图片技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
+> [!NOTE]
+> 了解更多关于[响应式图片技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
 
 ## 视口单位
 

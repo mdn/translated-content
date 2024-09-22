@@ -13,7 +13,8 @@ On peut accéder à un contrôle particulier du formulaire via la collection ren
 
 Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
 
-> **Note :** De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
+> [!NOTE]
+> De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
 
 ## Valeur
 

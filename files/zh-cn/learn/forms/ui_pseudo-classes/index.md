@@ -44,7 +44,8 @@ slug: Learn/Forms/UI_pseudo-classes
 
 还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
-> **备注：** 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
+> [!NOTE]
+> 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
 
 ## 根据必需与否为输入控件添加样式
 
@@ -99,9 +100,11 @@ input:optional {
 
 在下一节，我们将看一个更好的例子，使用 `:required` 表示必填字段，这也是对使用生成内容的挖掘。
 
-> **备注：** 你可能不会发现自己经常使用 `:optional` 这个伪类。表单控件默认是可选的，所以你可以将可选状态的样式当作默认样式，然后在必需的组件上添加样式。
+> [!NOTE]
+> 你可能不会发现自己经常使用 `:optional` 这个伪类。表单控件默认是可选的，所以你可以将可选状态的样式当作默认样式，然后在必需的组件上添加样式。
 
-> **备注：** 如果一组同名的单选按钮中的一个单选按钮具有 `required` 属性，那么所有的单选按钮都将无效，直到有一个被选中，但只有分配了该属性的单选按钮才会真正匹配 {{cssxref(':required')}}。
+> [!NOTE]
+> 如果一组同名的单选按钮中的一个单选按钮具有 `required` 属性，那么所有的单选按钮都将无效，直到有一个被选中，但只有分配了该属性的单选按钮才会真正匹配 {{cssxref(':required')}}。
 
 ## 使用伪类生成内容
 
@@ -133,7 +136,8 @@ input[type="radio"]:checked::before {
 
 这真的很有用——屏幕阅读器已经让它们的用户知道单选按钮或复选框被选中了，所以你不希望它们读出另一个表示选择的 DOM 元素——那会让人困惑。有一个纯粹的视觉指示器可以解决这个问题。
 
-> **备注：** 这个示例也说明了如何将伪类和伪元素结合使用。
+> [!NOTE]
+> 这个示例也说明了如何将伪类和伪元素结合使用。
 
 回到我们之前的必填/可选的例子，这次我们不会改变输入本身的外观——我们将使用生成的内容来添加一个指示标签（[在这里看到它的实时演示](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)，并在这里看到[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)）。
 
@@ -248,7 +252,8 @@ input:valid + span::before {
 
 和之前一样，我们将 `<span>` 设置为 `position: relative`，这样我们就可以将生成的内容相对于它们定位。然后，我们根据表单的数据是有效还是无效，绝对定位不同的生成内容——分别是绿色复选框或红色叉号。为了给无效数据增加一点额外的紧迫感，我们还在无效时给输入的数据加上了厚厚的红边。
 
-> **备注：** 我们使用 `::before` 来添加这些标签，因为我们已经使用 `::after` 来添加“required”标签。
+> [!NOTE]
+> 我们使用 `::before` 来添加这些标签，因为我们已经使用 `::after` 来添加“required”标签。
 
 你可以在下方尝试：
 
@@ -260,7 +265,8 @@ input:valid + span::before {
 
 正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 指定，分别供其数据在指定范围之内或之外所使用。
 
-> **备注：** 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
+> [!NOTE]
+> 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
 
 值得注意的是，数据在范围内的输入也会被 `:valid` 伪类匹配，而数据在范围外的输入也会被 `:invalid` 伪类匹配。那么，为什么要同时拥有这两个类呢？这个问题实际上是一个语义问题——超出范围是一种更具体的无效通信类型，所以你可能想为超出范围的输入提供一个不同的消息，这将比只说“无效”对用户更有帮助。你甚至可能想同时提供这两种信息。
 
@@ -314,7 +320,8 @@ input:out-of-range + span::after {
 
 这一点做得很好——当页面第一次加载时，会显示“required”，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“Outside allowable value range”的信息，取代了原先的“required”。
 
-> **备注：** 要输入一个无效的/超出范围的值，你必须实际聚焦于表格，用键盘输入该值。控件提供的按钮不会让你在允许的范围之外增加/减少数值。
+> [!NOTE]
+> 要输入一个无效的/超出范围的值，你必须实际聚焦于表格，用键盘输入该值。控件提供的按钮不会让你在允许的范围之外增加/减少数值。
 
 ## 为启用或禁用、只读或可读写输入控件添加样式
 
@@ -557,7 +564,8 @@ input:default ~ span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **备注：** 你也可以在 GitHub 的 [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) 中找到这个示例的实时演示（也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 的 [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) 中找到这个示例的实时演示（也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html)）。
 
 对于 `:indeterminate` 示例，我们没有默认的选定的单选按钮——这很重要——如果有的话，就不会有 indeterminate 状态的样式。我们用下面的 CSS 来设计不确定的单选按钮：
 
@@ -584,9 +592,11 @@ input[type="radio"]:indeterminate {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **备注：** 你也可以在 GitHub 的 [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) 上找到这个示例的运行实例，也可以参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)。
+> [!NOTE]
+> 你也可以在 GitHub 的 [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) 上找到这个示例的运行实例，也可以参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)。
 
-> **备注：** 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkbox#中间状态复选框)。
+> [!NOTE]
+> 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkbox#中间状态复选框)。
 
 ## 更多伪类
 

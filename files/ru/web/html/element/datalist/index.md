@@ -3,6 +3,8 @@ title: <datalist>
 slug: Web/HTML/Element/datalist
 ---
 
+{{HTMLSidebar}}
+
 **HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
@@ -10,7 +12,7 @@ slug: Web/HTML/Element/datalist
 | [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                                     |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                 |
+| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                    |
 | Допустимые родители                                              | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
 | Допустимые ARIA-роли                                             | Нет                                                                                                                                                                 |
 | DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                                  |
@@ -54,5 +56,3 @@ slug: Web/HTML/Element/datalist
 
 - Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Element/input#list);
 - Элемент {{HTMLElement("option")}}.
-
-{{HTMLSidebar}}

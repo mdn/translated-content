@@ -240,7 +240,8 @@ _[Указывающее устройство](#term_pointer) –_ это уст
 | Кнопка мыши X2 (вперёд)                                                                                   | `4`    | `16`    |
 | Кнопка пера "ластик"                                                                                      | `5`    | `32`    |
 
-> **Примечание:** Свойство `button` указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.
+> [!NOTE]
+> Свойство `button` указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.
 
 ## Pointer capture
 
@@ -348,7 +349,7 @@ Here are some _best practices_ to consider when using pointer events:
 - Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).
 - The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

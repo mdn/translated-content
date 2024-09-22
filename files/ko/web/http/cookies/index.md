@@ -18,7 +18,8 @@ HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브�
 
 과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API) (`localStorage`와 `sessionStorage`) 와 [IndexedDB](/ko/docs/Web/API/IndexedDB_API) 를 사용하면 됩니다.
 
-> **참고:** 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](/ko/docs/Tools/Storage_Inspector)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
+> [!NOTE]
+> 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](/ko/docs/Tools/Storage_Inspector)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
 
 ## 쿠키 만들기
 
@@ -51,7 +52,8 @@ Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
 
-> **참고:** Here's how to use the `Set-Cookie` header in various server-side applications:
+> [!NOTE]
+> Here's how to use the `Set-Cookie` header in various server-side applications:
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -62,8 +64,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 쿠키의 라이프타임은 두가지 방법으로 정의할 수 있습니다:
 
-- _세션_ 쿠키는 현재 세션이 끝날 때 삭제됩니다. 브라우저는 "현재 세션"이 끝나는 시점을 정의하며, 어떤 브라우저들은 재시작할 때 *세션을 복원*해 세션 쿠키가 무기한 존재할 수 있도록 합니다.
-- *영속적인 쿠키*는 `Expires` 속성에 명시된 날짜에 삭제되거나, `Max-Age` 속성에 명시된 기간 이후에 삭제됩니다.
+- 세션 쿠키 (`Expires`, `Max-Age` 속성이 없는 쿠키)는 현재 세션이 끝날 때 삭제됩니다. 브라우저는 "현재 세션"이 끝나는 시점을 정의하며, 어떤 브라우저들은 재시작할 때 세션을 복원해 세션 쿠키가 무기한 존재할 수 있도록 합니다.
+- 영속적인 쿠키는 `Expires` 속성에 명시된 날짜에 삭제되거나, `Max-Age` 속성에 명시된 기간 이후에 삭제됩니다.
 
 예를 들면 아래와 같습니다:
 
@@ -71,7 +73,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **참고:** When an expiry date is set, the time and date set is relative to the client the cookie is being set on, not the server.
+> [!NOTE]
+> 쿠키 만료 시점을 설정할 때, 만료 시점의 시간과 날짜는 서버의 시간이 아니라 쿠키가 저장되는 클라이언트의 시간을 기준으로 합니다.
 
 ### `Secure`과 `HttpOnly` 쿠키
 
@@ -118,7 +121,8 @@ console.log(document.cookie);
 
 ## 보안
 
-> **참고:** 기밀 혹은 민감한 정보는 전체 메커니즘이 본질적으로 위험하기 때문에 HTTP 쿠키 내에 저장되거나 전송되어서는 안됩니다.
+> [!NOTE]
+> 기밀 혹은 민감한 정보는 전체 메커니즘이 본질적으로 위험하기 때문에 HTTP 쿠키 내에 저장되거나 전송되어서는 안됩니다.
 
 ### 세션 하이재킹과 XSS
 

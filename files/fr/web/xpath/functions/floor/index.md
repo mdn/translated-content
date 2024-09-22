@@ -3,7 +3,7 @@ title: floor
 slug: Web/XPath/Functions/floor
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `floor` évalue un nombre décimal et retourne le plus grand nombre entier inférieur ou égal au nombre évalué.
 

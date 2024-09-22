@@ -7,7 +7,8 @@ slug: Web/API/Performance/now
 
 **`performance.now()`** 方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}}。
 
-> **警告：** 这个时间戳实际上并不是高精度的。为了降低像[Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
+> [!WARNING]
+> 这个时间戳实际上并不是高精度的。为了降低像[Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
 
 {{AvailableInWorkers}}
 
@@ -20,8 +21,8 @@ slug: Web/API/Performance/now
 
 ## 语法
 
-```
-const t = window.performance.now();
+```js-nolint
+now()
 ```
 
 ## 示例
@@ -42,14 +43,13 @@ console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。");
 为了提供对定时攻击和指纹的保护，performance.now() 的精度可能会根据浏览器的设置而被舍弃。
 在 Firefox 中，privacy.reduceTimerPrecision 偏好是默认启用的，默认值为 1ms。
 
-```
+```js
 // 降低时间精度 (1ms) 在 Firefox 60
 performance.now();
 // 8781416
 // 8781815
 // 8782206
 // ...
-
 
 // 降低时间精度 当 `privacy.resistFingerprinting` 启用
 performance.now();
@@ -63,7 +63,7 @@ performance.now();
 
 从 Firefox 79 开始，如果你使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离你的文档，就可以使用高分辨率定时器。
 
-```
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -78,6 +78,6 @@ Cross-Origin-Embedder-Policy: require-corp
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks

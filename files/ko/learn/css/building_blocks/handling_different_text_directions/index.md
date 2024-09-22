@@ -49,7 +49,7 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/ko/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
+[`writing-mode`](/ko/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다.
 
 - `horizontal-tb`: 블록의 표시 방향은 위에서 아래 입니다. 문장은 가로로 표시됩니다.
 - `vertical-rl`: 블록의 표시 방향은 오른쪽에서 왼쪽입니다. 문장은 수직으로 표시됩니다.

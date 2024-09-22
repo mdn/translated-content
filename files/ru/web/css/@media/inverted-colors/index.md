@@ -58,7 +58,7 @@ p {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

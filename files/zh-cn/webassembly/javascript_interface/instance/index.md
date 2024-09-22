@@ -1,39 +1,67 @@
 ---
 title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
+l10n:
+  sourceCommit: d23f8c5c52bdfb6151476a2574e72d323d0d30f4
 ---
 
-{{WebAssemblySidebar}} {{SeeCompatTable}}
+{{WebAssemblySidebar}}
 
-**`WebAssembly.Instance`** 对象本身是有状态的，是 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 的一个可执行实例。`实例`包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
-
-`WebAssembly.Instance()` 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .
+**`WebAssembly.Instance`** 对象本身是有状态的，是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 的一个可执行实例。`Instance` 对象包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
 
 ## 构造函数
 
-> **警告：** 由于大型模块的实例化代价极高，开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
+- [`WebAssembly.Instance()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+  - : 创建一个新的 `Instance` 对象。
 
-```plain
-var myInstance = new WebAssembly.Instance(module, importObject);
+## 实例属性
+
+- [`exports`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports)
+  - : 返回一个包含此 WebAssembly 模块实例所导出的全部成员对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。
+
+## 示例
+
+### 同步实例化 WebAssembly 模块
+
+`WebAssembly.Instance()` 构造函数以同步方式实例化一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 对象，例如：
+
+```js
+const importObject = {
+  imports: {
+    imported_func(arg) {
+      console.log(arg);
+    },
+  },
+};
+
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    const mod = new WebAssembly.Module(bytes);
+    const instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
-### 参数
+获得一个 `Instance` 的首选方式是异步的，例如像这样使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 函数：
 
-- _module_
-  - : 要被实例化的 [`WebAssembly.Module`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象。
-- _importObject_ {{optional_inline}}
-  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象。There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
+```js
+const importObject = {
+  imports: {
+    imported_func(arg) {
+      console.log(arg);
+    },
+  },
+};
 
-## 实例化
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
+```
 
-所有的 `Instance` 实例继承自`Instance()` [属性对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype)— 修改它会影响所有的`Instance` 实例。
+示例也说明如何使用 `exports` 属性来访问导出的函数。
 
-### 实例属性
-
-- {{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}
-  - : 返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。
-
-## 规格
+## 规范
 
 {{Specifications}}
 
@@ -41,8 +69,8 @@ var myInstance = new WebAssembly.Instance(module, importObject);
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

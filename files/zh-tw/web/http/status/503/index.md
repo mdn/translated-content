@@ -1,21 +1,24 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-超文本傳輸協定(英文：HyperText Transfer Protocol (HTTP) ) **`503 Service Unavailable`** 表示目前伺服器暫時不能處理連線的請求。
+超文本傳輸協定（HTTP）**`503 Service Unavailable`** 伺服器錯誤回應代碼表示伺服器尚未準備好處理請求。
 
-起因通常是伺服器正在進行維護或是當下流量過載。這種錯誤回傳應該是暫時性的，並且{{HTTPHeader("Retry-After")}} HTTP header 中要盡可能描述到系統大概恢復正常的時間。.
+常見原因是伺服器正在進行維護或超載。此回應應用於臨時情況，如果可能，{{HTTPHeader("Retry-After")}} HTTP 標頭應包含恢復服務的預估時間。
 
-> **備註：** 回傳這種錯誤的同時，也要同時顯示一張對使用者友善的網頁，來簡單描述問題。
+> [!NOTE]
+> 伴隨此回應，應發送一個友好的頁面來解釋問題。
 
-回傳此錯誤時，務必注意和快取存取相關的標頭（Caching-related headers），因為 503 狀態通常要是暫時性的，而這種回應不應該被暫存至快取。
+與此回應一起發送的與緩存相關的標頭應該被處理，因為 503 狀態通常是一個臨時條件，通常不應該將回應緩存。
 
 ## 狀態
 
-```plain
+```http
 503 Service Unavailable
 ```
 
@@ -25,19 +28,9 @@ slug: Web/HTTP/Status/503
 
 ## 瀏覽器相容性
 
-以下資訊是從 MDN 的 GitHub 取得 (<https://github.com/mdn/browser-compat-data>).
-
 {{Compat}}
 
-## 請參閱
+## 參見
 
 - {{HTTPHeader("Retry-After")}}
-
-## 了解更多
-
-### 一般知識
-
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [HTTP Error 503](https://kinsta.com/blog/http-error-503/)
-- [503 Service Unvailaible WordPress](https://secure.wphackedhelp.com/blog/503-service-unavailable-error-wordpress/)
-- [如何修復在 WordPress 當中「503 Service Unavailable Error」的問題？](https://techmoon.xyz/503-service-unavailable-error/)
+- [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.503)

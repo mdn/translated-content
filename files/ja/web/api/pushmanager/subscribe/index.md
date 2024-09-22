@@ -29,7 +29,8 @@ subscribe(options)
     - `applicationServerKey`
       - : Base64 でエンコードされた文字列または {{jsxref("ArrayBuffer")}} で、プッシュサーバーがアプリケーションサーバーを認証するために使用する[楕円曲線 DSA](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA) P-256 公開鍵が入ります。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [VAPID](https://tools.ietf.org/html/rfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と**_同じではありません_**。詳しくは "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
 
-    > **メモ:** この引数は Chrome や Edge など、一部のブラウザーでは必須です。
+    > [!NOTE]
+    > この引数は Chrome や Edge など、一部のブラウザーでは必須です。
 
 ### 返値
 
@@ -55,13 +56,13 @@ navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
   serviceWorkerRegistration.pushManager.subscribe(options).then(
     (pushSubscription) => {
       console.log(pushSubscription.endpoint);
-      // アプリケーションサーバが必要としているプッシュサブスクリプションの
+      // アプリケーションサーバーが必要としているプッシュサブスクリプションの
       // 詳細はここから使用できます。たとえば、XMLHttpRequest を使用して
       // これを送信できます。
     },
     (error) => {
       // 開発中は、コンソールにエラーを表示するのに役立ちます。
-      // 本番環境では、アプリケーションサーバにエラー情報を送信
+      // 本番環境では、アプリケーションサーバーにエラー情報を送信
       // するためにも 役立ちます。
       console.error(error);
     },

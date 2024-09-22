@@ -34,7 +34,8 @@ border-width: inherit /* Родительское значение */
     - `medium`
     - `thick`
 
-    > **Примечание:** The specification doesn't precisely define the thickness of each of the keywords, which is therefore implementation specific. Nevertheless, it requests that the thickness does follow the `thin ≤ medium ≤ thick` inequality and that the values are constant on a single document.
+    > [!NOTE]
+    > The specification doesn't precisely define the thickness of each of the keywords, which is therefore implementation specific. Nevertheless, it requests that the thickness does follow the `thin ≤ medium ≤ thick` inequality and that the values are constant on a single document.
 
 - `inherit`
   - : Is a keyword indicating that all four values are inherited from their parent's element calculated value.
@@ -90,7 +91,7 @@ p {
 
 {{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -98,7 +99,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
 - The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}

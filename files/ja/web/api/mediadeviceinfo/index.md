@@ -22,7 +22,8 @@ l10n:
 - {{domxref("MediaDeviceInfo.label")}} {{ReadOnlyInline}}
   - : この機器を記述する文字列を返します（例えば "External USB Webcam"）。
 
-> **メモ:** セキュリティのため、`label` フィールドはアクティブなメディアストリームが存在するか、メディア機器への継続的な権限をユーザーが付与しない限り、常に空欄になります。機器ラベルの組み合わせによって、ユーザーを識別するための[フィンガープリント](/ja/docs/Glossary/Fingerprinting)の一部として利用することができてしまいます。
+> [!NOTE]
+> セキュリティのため、`label` フィールドはアクティブなメディアストリームが存在するか、メディア機器への継続的な権限をユーザーが付与しない限り、常に空欄になります。機器ラベルの組み合わせによって、ユーザーを識別するための[フィンガープリント](/ja/docs/Glossary/Fingerprinting)の一部として利用することができてしまいます。
 
 ## インスタンスメソッド
 
@@ -67,7 +68,7 @@ audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCI
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

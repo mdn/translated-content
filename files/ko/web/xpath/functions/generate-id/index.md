@@ -3,7 +3,7 @@ title: generate-id
 slug: Web/XPath/Functions/generate-id
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `generate-id` 함수는 제공한 노드 집합의 첫 노드를 위한 유일한 id를 만들고 그 id를 포함하는 문자열을 반환합니다.
 

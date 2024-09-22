@@ -3,6 +3,8 @@ title: animationstart
 slug: Web/API/Element/animationstart_event
 ---
 
+{{APIRef}}
+
 `animationstart` 事件会在 CSS 动画开始时触发。如果有 `animation-delay` 延时，事件会在延迟时效过后立即触发。为负数的延时时长会致使事件被触发时事件的 `elapsedTime` 属性值等于该时长的绝对值（并且，相应地，动画将直接播放该时长绝对值之后的动画）。
 
 ## 基本信息

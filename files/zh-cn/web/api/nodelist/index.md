@@ -131,7 +131,8 @@ forEach.call(firstDiv.childNodes, function (divChild) {
 });
 ```
 
-> **备注：** 请注意，在上面的代码中，将某个宿主对象（如 `NodeList`）作为 `this` 传递给原生方法（如 forEach）不能保证在所有浏览器中工作，已知在一些浏览器中会失败。
+> [!NOTE]
+> 请注意，在上面的代码中，将某个宿主对象（如 `NodeList`）作为 `this` 传递给原生方法（如 forEach）不能保证在所有浏览器中工作，已知在一些浏览器中会失败。
 
 ## 规范
 

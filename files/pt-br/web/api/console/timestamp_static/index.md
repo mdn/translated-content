@@ -1,7 +1,6 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/console/timestamp_static
-original_slug: Web/API/console/timeStamp
+slug: Web/API/console/timeStamp_static
 ---
 
 {{ APIRef("Console API") }}{{Non-standard_header}}
@@ -12,7 +11,8 @@ Adiciona um marcador simples para as ferramentas [Timeline](https://developer.ch
 
 Opcionalmente, você pode fornecer um argumento como rótulo do carimbo de hora, e esse rótulo será então mostrado juntamente com a marcação.
 
-> **Nota:** essa funcionalidade está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> essa funcionalidade está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 

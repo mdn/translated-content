@@ -45,8 +45,6 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/Firefox/Multiprocess_Firefox).
 
-Мы также намерены расширять API для поддержки нужд разработчиков дополнений, и если у вас есть идеи, мы будем рады услышать их. Вы можете связаться с нами через рассылку [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) или на [IRC](https://wiki.mozilla.org/IRC) канале [#webextensions](irc://irc.mozilla.org/webextensions).
-
 ## Что дальше?
 
 - Попробуйте создать [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).

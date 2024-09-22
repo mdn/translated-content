@@ -35,7 +35,7 @@ No [modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), contudo, é
 
 Esse exemplo lança um `SyntaxError`:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 
 for (const i = 0 in obj) {

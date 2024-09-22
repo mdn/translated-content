@@ -3,7 +3,7 @@ title: <dialog>
 slug: Web/HTML/Element/dialog
 ---
 
-{{SeeCompatTable}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<dialog>`** определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.
 
@@ -12,7 +12,7 @@ slug: Web/HTML/Element/dialog
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент) |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённый контент                                              | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                                                      |
-| Опускание тегов                                                  | {{no_tag_omission}}                                                                                                                                              |
+| Опускание тегов                                                  | Нет, открывающий и закрывающий теги обязательны.                                                                                                                 |
 | Разрешённые родительские элементы                                | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                    |
 | DOM-интерфейс                                                    | {{domxref("HTMLDialogElement")}}                                                                                                                                 |
 
@@ -138,5 +138,3 @@ slug: Web/HTML/Element/dialog
 - Событие {{event("close")}}
 - Событие {{event("cancel")}}
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).
-
-{{HTMLSidebar}}

@@ -25,7 +25,8 @@ L'attribut `inert` peut être ajouté à des sections de contenu qui ne devraien
 
 L'attribut `inert` peut également être placé sur des éléments masqués ou en dehors de l'écran. En effet, un tel élément (avec ses descendants) est retiré de la navigation au clavier et de l'arbre d'accessibilité.
 
-> **Note :** Bien qu'`inert` soit un attribut universel qui puisse être appliqué à n'importe quel élément, on l'utilisera généralement pour des sections de contenu. Pour neutraliser des contrôles de façon individuelle, mieux vaudra utiliser l'attribut HTML [`disabled`](/fr/docs/Web/HTML/Attributes/disabled) et la pseudo-classe CSS [`:disabled`](/fr/docs/Web/CSS/:disabled).
+> [!NOTE]
+> Bien qu'`inert` soit un attribut universel qui puisse être appliqué à n'importe quel élément, on l'utilisera généralement pour des sections de contenu. Pour neutraliser des contrôles de façon individuelle, mieux vaudra utiliser l'attribut HTML [`disabled`](/fr/docs/Web/HTML/Attributes/disabled) et la pseudo-classe CSS [`:disabled`](/fr/docs/Web/CSS/:disabled).
 
 ## Accessibilité
 

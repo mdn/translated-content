@@ -13,7 +13,8 @@ l10n:
 
 处理指令可能与 [XML 声明](/zh-CN/docs/Web/XML/XML_introduction#xml_声明)不同。
 
-> **备注：** 用户定义的处理指令不能以 `xml` 开头，因为以 `xml` 为前缀的处理指令目标名称是由 xml 规范为特定用途保留的（如 `<?xml-stylesheet ?>`）。
+> [!NOTE]
+> 用户定义的处理指令不能以 `xml` 开头，因为以 `xml` 为前缀的处理指令目标名称是由 xml 规范为特定用途保留的（如 `<?xml-stylesheet ?>`）。
 
 例如：
 

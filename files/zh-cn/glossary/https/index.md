@@ -1,6 +1,8 @@
 ---
 title: HTTPS
 slug: Glossary/HTTPS
+l10n:
+  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
 {{GlossarySidebar}}

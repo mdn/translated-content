@@ -107,7 +107,8 @@ Basado en el diagrama de anterior, las principales pasos que hace el proceso del
 
 Django provee una serie de herramientas y enfoques para ayudarlo con las tareas detalladas anteriormente. La más fundamental es la clase `Form`, la cuál simplifica la generación de formularios HTML y la limpieza y validación de datos. En la siguiente sección describimos cómo funcionan los formularios usando el ejemplo práctico de una página para permitir a los bibliotecarios renovar libros.
 
-> **Nota:** Comprender como se usa la clase `Form` lo ayudará cuando analicemos las clases de marco de formulario de más "alto nivel" de Django.
+> [!NOTE]
+> Comprender como se usa la clase `Form` lo ayudará cuando analicemos las clases de marco de formulario de más "alto nivel" de Django.
 
 ## Renew-book form usando un Form y la funcion view
 
@@ -184,7 +185,8 @@ Hay dos cosas importantes a tener en cuenta. El primero es que obtenemos nuestro
 
 El segundo punto es que si un valor cae fuera de nuestro rango, elevamos un `ValidationError`, especificando el texto de error que queremos mostrar en el formulario si se ingresa un valor no válido. El ejemplo anterior también envuelve este texto en uno de las [funciones de traduccion de Django](https://docs.djangoproject.com/en/1.10/topics/i18n/translation/) `ugettext_lazy()` (importado como `_()`), lo cual es una buena práctica si desea traducir su sitio más tarde.
 
-> **Nota:** Existen muchos otros métodos y ejemplos para validar formularios en [Validacion de Formularios y campos](https://docs.djangoproject.com/en/1.10/ref/forms/validation/) (Django docs). Por ejemplo, en los casos en que tiene varios campos que dependen unos de otros, puede anular la función [Form.clean()](https://docs.djangoproject.com/en/1.10/ref/forms/api/#django.forms.Form.clean) function y colocar un `ValidationError`.
+> [!NOTE]
+> Existen muchos otros métodos y ejemplos para validar formularios en [Validacion de Formularios y campos](https://docs.djangoproject.com/en/1.10/ref/forms/validation/) (Django docs). Por ejemplo, en los casos en que tiene varios campos que dependen unos de otros, puede anular la función [Form.clean()](https://docs.djangoproject.com/en/1.10/ref/forms/api/#django.forms.Form.clean) function y colocar un `ValidationError`.
 
 ¡Eso es todo lo que necesitamos para el formulario en este ejemplo!
 
@@ -204,7 +206,8 @@ urlpatterns += [
 
 La configuración de URL redirigirá las URL con el formato **/catalog/book/_\<bookinstance id>_/renew/** a la función llamada `renew_book_librarian()` en **views.py**, y envia el id de `BookInstance` como parametro llamado `pk`.
 
-> **Nota:** Podemos nombrar nuestros datos de URL capturados "pk" como queramos, porque tenemos un control completo sobre la función de vista (no estamos usando una clase de vista de detalles genérica que espere parámetros con un nombre determinado). sin embargo `pk`, abreviatura de "primary key", es una convención razonable de usar!
+> [!NOTE]
+> Podemos nombrar nuestros datos de URL capturados "pk" como queramos, porque tenemos un control completo sobre la función de vista (no estamos usando una clase de vista de detalles genérica que espere parámetros con un nombre determinado). sin embargo `pk`, abreviatura de "primary key", es una convención razonable de usar!
 
 ### View
 
@@ -297,7 +300,8 @@ Si el formulario no es válido llamamos `render()` de nuevo, pero esta vez el va
 
 Si el formulario es válido, entonces podemos comenzar a usar los datos, accediendo a ellos a través del atributo `form.cleaned_data` (ejemplo `data = form.cleaned_data['renewal_date']`). Aquí solo guardamos los datos en el valor `due_back` asociado al objeto `BookInstance`.
 
-> **Advertencia:** Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo `request.POST['renewal_date']` o `request.GET['renewal_date']` (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.
+> [!WARNING]
+> Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo `request.POST['renewal_date']` o `request.GET['renewal_date']` (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.
 
 El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos `HttpResponseRedirect` y `reverse()` para redirigir a la vista llamada `'all-borrowed'`(esto fue creado como el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself)).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').
 
@@ -372,7 +376,8 @@ La mayor parte de esto será completamente familiar de los tutoriales anteriores
 
 El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action` como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
 
-> **Nota:** Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.
+> [!NOTE]
+> Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.
 
 Todo lo que queda es la variable de la plantilla `\{{form}}`, que pasamos a la plantilla en el diccionario de contexto. Quizás, como era de esperar, cuando se usa como se muestra, proporciona la representación predeterminada de todos los campos del formulario, incluidas sus etiquetas, widgets y texto de ayuda; la representación es la que se muestra a continuación:
 
@@ -394,7 +399,8 @@ Todo lo que queda es la variable de la plantilla `\{{form}}`, que pasamos a la p
 </tr>
 ```
 
-> **Nota:** Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta `table` arriba).Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla `\{{ form.as_table }}`.
+> [!NOTE]
+> Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta `table` arriba).Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla `\{{ form.as_table }}`.
 
 Si tuviera que ingresar una fecha no válida, también obtendría una lista de los errores que se muestran en la página (en negrita a continuación).
 
@@ -441,7 +447,8 @@ Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and per
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
 ```
 
-> **Nota:** Recuerde que su inicio de sesión de prueba deberá tener el permiso "`catalog.can_mark_returned`" para acceder a la página de renovar el libro (quizás use su cuenta de superusuario).
+> [!NOTE]
+> Recuerde que su inicio de sesión de prueba deberá tener el permiso "`catalog.can_mark_returned`" para acceder a la página de renovar el libro (quizás use su cuenta de superusuario).
 
 Alternativamente, puede construir manualmente una URL de prueba como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (se puede obtener un ID de instancia de libro válido navegando a la página de detalles de un libro en su biblioteca y copiando el campo `id`).
 
@@ -477,7 +484,8 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **Nota:** Esto podría no parece mucho más simple que simplemente usar un `Form` (y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
+> [!NOTE]
+> Esto podría no parece mucho más simple que simplemente usar un `Form` (y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
 
 El resto de la información proviene de las definiciones de campo del modelo (por ejemplo, etiquetas, widgets, texto de ayuda, mensajes de error). Si estos no son del todo correctos, entonces podemos anularlos en nuestro `class Meta`, especificando un diccionario que contiene el campo a cambiar y su nuevo valor. Por ejemplo, en este formulario podríamos querer una etiqueta para nuestro campo de "Fecha de renovación" (en lugar del valor predeterminado basado en el nombre del campo: Fecha de vencimiento), y también queremos que nuestro texto de ayuda sea específico para este caso de uso. El `Meta` a continuación le muestra cómo anular estos campos, y puede configurar de manera similar `widgets` y `error_messages` si los valores predeterminados no son suficientes.
 
@@ -523,7 +531,8 @@ La clase `RenewBookModelForm` a continuación es ahora funcionalmente equivalent
 
 El algoritmo de manejo de formularios que utilizamos en nuestro ejemplo de vista de funciones anterior representa un patrón extremadamente común en las vistas de edición de formularios. Django extrae gran parte de esta "plantilla" para ti, para crear vistas de edición genéricas ( [generic editing views](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/) ) para crear, editar y eliminar vistas basadas en modelos. No solo manejan el comportamiento de "vista", sino que crean automáticamente la clase de formulario (un `ModelForm`) para tu modelo.
 
-> **Nota:** Además de las vistas de edición descritas aquí, también hay una clase [FormView](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#formview) , que se encuentra en algún lugar entre nuestra vista de función y las otras vistas genéricas en términos de "flexibilidad" frente a "esfuerzo de codificación". Usando `FormView` tu necesitas crear el `Form`, pero no tiene que implementar todo el patrón estándar de manejo de formularios. En su lugar, solo tiene que proporcionar una implementación de la función que se llamará una vez que se sepa que el envío es válido.
+> [!NOTE]
+> Además de las vistas de edición descritas aquí, también hay una clase [FormView](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#formview) , que se encuentra en algún lugar entre nuestra vista de función y las otras vistas genéricas en términos de "flexibilidad" frente a "esfuerzo de codificación". Usando `FormView` tu necesitas crear el `Form`, pero no tiene que implementar todo el patrón estándar de manejo de formularios. En su lugar, solo tiene que proporcionar una implementación de la función que se llamará una vez que se sepa que el envío es válido.
 
 En esta sección, vamos a usar vistas de edición genéricas para crear páginas para agregar funcionalidad para crear, editar y eliminar registros de `Author` de nuestra libreria — Proporcionar efectivamente una reimplementación básica de partes del sitio de administración (esto podría ser útil si necesita ofrecer la funcionalidad de administrador de una manera más flexible que puede proporcionar el sitio de administrador).
 
@@ -615,7 +624,8 @@ urlpatterns += [
 
 Las páginas de crear, actualiza y eliminar autor ahora estan listas para probar (no nos molestaremos en engancharlas en la barra lateral del sitio en este caso, aunque puede hacerlo si lo desea).
 
-> **Nota:** ¡Los usuarios observadores habrán notado que no hicimos nada para evitar que usuarios no autorizados accedan a las páginas! Lo dejamos como un ejercicio para usted (pista: puede usar el `PermissionRequiredMixin` y cree un nuevo permiso o reutilice nuestro permiso `can_mark_returned` ).
+> [!NOTE]
+> ¡Los usuarios observadores habrán notado que no hicimos nada para evitar que usuarios no autorizados accedan a las páginas! Lo dejamos como un ejercicio para usted (pista: puede usar el `PermissionRequiredMixin` y cree un nuevo permiso o reutilice nuestro permiso `can_mark_returned` ).
 
 ### Probando la página
 

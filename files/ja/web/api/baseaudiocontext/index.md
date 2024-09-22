@@ -1,37 +1,34 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
+l10n:
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
 {{APIRef("Web Audio API")}}
 
-`BaseAudioContext` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。
+`BaseAudioContext` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェイスのいずれかを介して、その機能を使用することになります。
 
 `BaseAudioContext` はイベントのターゲットとなることができるので、 {{domxref("EventTarget")}} インターフェイスを実装しています。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("BaseAudioContext.audioWorklet")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : {{domxref("AudioWorklet")}} オブジェクトを返します。これは {{domxref("AudioNode")}} を JavaScript コードで作成および管理するために使用することができ、 {{domxref("AudioWorkletProcessor")}} インターフェイスを実装していて、バックグラウンドで実行して音声データを処理することができます。
-- {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.currentTime")}} {{ReadOnlyInline}}
   - : スケジューリングに使用される秒単位で増加するハードウェア時間を表す倍精度浮動小数点値を返します。 `0` から始まります。
-- {{domxref("BaseAudioContext.destination")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.destination")}} {{ReadOnlyInline}}
   - : このコンテキストですべての音声の最終的な出力先を表す {{domxref("AudioDestinationNode")}} を返します。 オーディオレンダリングデバイスと考えることができます。
-- {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.listener")}} {{ReadOnlyInline}}
   - : 三次元空間化に使用される {{domxref("AudioListener")}} オブジェクトを返します。
-- {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.sampleRate")}} {{ReadOnlyInline}}
   - : このコンテキスト内のすべてのノードで使用されるサンプリングレート（サンプル/秒）を単精度浮動小数点値で返します。 {{domxref("AudioContext")}} のサンプリングレートを変更することはできません。
-- {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}
   - : 現在の `AudioContext` の状態を返します。
 
-### イベント
-
-- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
-  - : 状態変化メソッド（{{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, {{domxref("AudioContext.close")}}）のいずれかが呼ばれたことによって `AudioContext` の状態が変化したときに発生します。
-
-## メソッド
+## インスタンスメソッド
 
 _{{domxref("EventTarget")}} インターフェイスから継承しているメソッドもあります。_
 
@@ -58,7 +55,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createGain()")}}
   - : {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
 - {{domxref("BaseAudioContext.createIIRFilter()")}}
-  - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルタを表します。
+  - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルターを表します。
 - {{domxref("BaseAudioContext.createOscillator()")}}
   - : {{domxref("OscillatorNode")}} を作成します。これは周期的な波形を表すソースです。基本的には音程を生成します。
 - {{domxref("BaseAudioContext.createPanner()")}}
@@ -73,6 +70,11 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
   - : 非線形歪み効果を実装するために使用される {{domxref("WaveShaperNode")}} を作成します。
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
   - : {{jsxref("ArrayBuffer")}} に格納された音声ファイルのデータを非同期にデコードします。この場合、 `ArrayBuffer` は通常 {{domxref("XMLHttpRequest")}} の `response` 属性に `responseType` を設定した後に読み込まれます。このメソッドは完全なファイルに対してのみ動作し、音声ファイルの断片に対しては動作しません。
+
+### イベント
+
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : 状態変化メソッド（{{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, {{domxref("AudioContext.close")}}）のいずれかが呼び出されたことによって `AudioContext` の状態が変化したときに発生します。
 
 ## 例
 

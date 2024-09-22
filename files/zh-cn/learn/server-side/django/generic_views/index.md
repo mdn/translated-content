@@ -70,7 +70,8 @@ class BookListView(generic.ListView):
 
 就是这样！通用视图将查询数据库，以获取指定模型（`Book`）的所有记录，然后呈现位于 **/locallibrary/catalog/templates/catalog/book_list.html** 的模板（我们将在下面创建）。在模板中，你可以使用名为`object_list` 或 `book_list`的模板变量（即通常为“`the_model_name_list`”），以访问书本列表。
 
-> **备注：** 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的`/application_name/templates/`目录中`（/catalog/templates/`），查找模板`/application_name/the_model_name_list.html`（在本例中为`catalog/book_list.html`）。
+> [!NOTE]
+> 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的`/application_name/templates/`目录中`（/catalog/templates/`），查找模板`/application_name/the_model_name_list.html`（在本例中为`catalog/book_list.html`）。
 
 你可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果`book_list`对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，你可能会列出其他用户阅读的前 5 本书，而不是列出所有书本。
 
@@ -116,7 +117,8 @@ class BookListView(generic.ListView):
 - 然后添加新的上下文信息。
 - 然后返回新的（更新的）上下文。
 
-> **备注：** 查看[内置的基于类的通用视图](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/)（Django 文档），了解更多可以执行的操作示例。
+> [!NOTE]
+> 查看[内置的基于类的通用视图](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/)（Django 文档），了解更多可以执行的操作示例。
 
 ### 创建列表视图模板
 
@@ -184,7 +186,8 @@ class BookListView(generic.ListView):
 
 我们还可以在模板中，调用模型中的函数 - 在这里，我们调用`Book.get_absolute_url()`，来获取可用于显示关联详细记录的 URL。这项工作提供的函数没有任何参数（没有办法传递参数！）
 
-> **备注：** 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！
+> [!NOTE]
+> 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！
 
 #### 更新基本模板
 
@@ -220,13 +223,16 @@ urlpatterns = [
 
 在这里，我们使用 `'<int:pk>'` 来捕获 book id，它必须是一个整数，并将其作为名为 `pk` 的参数（主键的缩写）传递给视图。
 
-> **备注：** 如前所述，我们匹配的 URL 实际上是 `catalog/book/<digits>`（因为我们在应用程序 **catalog** 中，假定使用`/catalog/`）。
+> [!NOTE]
+> 如前所述，我们匹配的 URL 实际上是 `catalog/book/<digits>`（因为我们在应用程序 **catalog** 中，假定使用`/catalog/`）。
 
-> **警告：** 基于类的通用详细信息视图，需要传递一个名为 **pk** 的参数。如果你正在编写自己的函数视图，则可以使用你喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。
+> [!WARNING]
+> 基于类的通用详细信息视图，需要传递一个名为 **pk** 的参数。如果你正在编写自己的函数视图，则可以使用你喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。
 
 #### 高级路径匹配/正则表达式入门
 
-> **备注：** 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对你使用 Django 有帮助。
+> [!NOTE]
+> 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对你使用 Django 有帮助。
 
 `path()`提供的模式匹配非常简单，对于你只想捕获任何字符串或整数的（非常常见的）情况非常有用。如果需要更精细的过滤（例如，仅过滤具有一定数量字符的字符串），则可以使用 [re_path()](https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path) 方法。
 
@@ -367,7 +373,8 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
 
 你可以在一个匹配中捕获多个模式，从而在 URL 中，编码许多不同的信息。
 
-> **备注：** 作为一项挑战，请考虑如何对网址进行编码，以列出特定年份，月份，日期的所有图书，以及可用于匹配它的规则表达式 RE。
+> [!NOTE]
+> 作为一项挑战，请考虑如何对网址进行编码，以列出特定年份，月份，日期的所有图书，以及可用于匹配它的规则表达式 RE。
 
 #### 在 URL 地图中传递其他选项
 
@@ -380,7 +387,8 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **备注：** 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用**相同的名称**，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。
+> [!NOTE]
+> 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用**相同的名称**，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。
 
 ### 视图 (基于类别)
 
@@ -451,7 +459,8 @@ def book_detail_view(request,pk):
 {% endblock %}
 ```
 
-> **备注：** 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，你应该像这样更新 URL：
+> [!NOTE]
+> 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，你应该像这样更新 URL：
 >
 > ```python
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -474,11 +483,12 @@ def book_detail_view(request,pk):
 
 需要此方法，是因为你仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于你没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，你可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
 
-> **备注：** 这里我们使用`all()`来获取所有记录（默认值）。虽然你可以使用`filter()`方法获取代码中的记录子集，但你无法直接在模板中执行此操作，因为你无法指定函数的参数。
+> [!NOTE]
+> 这里我们使用`all()`来获取所有记录（默认值）。虽然你可以使用`filter()`方法获取代码中的记录子集，但你无法直接在模板中执行此操作，因为你无法指定函数的参数。
 >
 > 还要注意，如果你没有定义顺序（在基于类的视图或模型上），你还会看到开发服务器中的错误，如下所示：
 >
-> ```
+> ```plain
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
@@ -519,7 +529,8 @@ def book_detail_view(request,pk):
 
 此时，我们应该创建了显示书本列表，和书本详细信息页面所需的所有内容。运行服务器（`python3 manage.py runserver`），并打开浏览器到 <http://127.0.0.1:8000/>。
 
-> **警告：** 请还不要点击任何作者、或作者详细信息链接 - 你将在挑战练习中，创建这些链接！
+> [!WARNING]
+> 请还不要点击任何作者、或作者详细信息链接 - 你将在挑战练习中，创建这些链接！
 
 单击所有书籍链接 **All books** ，以显示书籍列表。
 
@@ -598,7 +609,7 @@ class BookListView(generic.ListView):
 
 URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表和详细视图几乎完全相同。模板将有所不同，但会分享类似的行为。
 
-> **备注：**
+> [!NOTE]
 >
 > - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新“所有图书”**All books** 链接时，所做的相同过程。
 > - 为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（**/locallibrary/catalog/templates/catalog/book_detail.html**），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。

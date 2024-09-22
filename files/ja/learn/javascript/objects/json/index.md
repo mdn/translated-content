@@ -31,7 +31,8 @@ JavaScript Object Notation (JSON) は、構造化データを表現するため�
 
 JSON は文字列として存在します。ですので、ネットワークを通してデータを転送したい場合に便利です。 JSON データへアクセスしたい場合は、JavaScript オブジェクトへ変換する必要があります。 JavaScript にはこれらを相互に変換できるメソッドを持った [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) というグローバルなオブジェクトがあるので、変換は難しくありません。
 
-> **メモ:** 文字列をネイティブオブジェクトへ変換することは「デシリアライズ」 (_deserialization_) と呼ばれており、ネイティブオブジェクトをネットワークを通して転送できように文字列へ変換することは「シリアライズ」 (_serialization_) と呼ばれています。
+> [!NOTE]
+> 文字列をネイティブオブジェクトへ変換することは「デシリアライズ」 (_deserialization_) と呼ばれており、ネイティブオブジェクトをネットワークを通して転送できように文字列へ変換することは「シリアライズ」 (_serialization_) と呼ばれています。
 
 JSON 文字列はそれ自身をファイルとして格納することもできます。 `.json` という拡張子の付いたただのテキストファイルで、 {{glossary("MIME type", "MIME タイプ")}}は `application/json` です。
 
@@ -98,7 +99,8 @@ superHeroes["members"][1]["powers"][2];
 4. そのオブジェクト内で、 `powers` プロパティへアクセスするため, `["powers"]` と指定します。
 5. `powers` プロパティは選択したヒーローの能力を含んだ配列となっており、その中の 3 番目が欲しいので、 `[2]` と記述します。
 
-> **メモ:** 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。
+> [!NOTE]
+> 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。
 
 ## JSON の配列
 
@@ -250,7 +252,7 @@ function populateHeroes(obj) {
 
 始めに、JavaScript オブジェクトの `members` プロパティを新しい変数に保存します。この配列には複数のオブジェクトがあり、それぞれにヒーローについての情報が入ります。
 
-次に、[for...of ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#the_for...of_loop)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
+次に、[for...of ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#for...of_ループ)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
 
 1. 新しい要素をいくつか作成します。`<article>` 1 つ、 `<h2>` 1 つ、 `<p>` 3 つ、`<ul>` 1 つです。
 2. `<h2>` の中身を現在のヒーローの名前 (`name`) にします。
@@ -259,9 +261,11 @@ function populateHeroes(obj) {
 5. 別の `for` ループを使用して、今のヒーローの超能力を反復処理します。それぞれに対して `<li>` 要素を作成し、中に超能力を入れ、 `listItem` に `<ul>` 要素（`myList`）を `appendChild()` で追加します。
 6. 最後に、 `<h2>`、`<p>`、`<ul>` を `<article>` (`myArticle`) の中に追加してから、その `<article>` を `<section>` の中に追加します。これらを追加する順序は重要で、これが HTML の中で表示される順序になります。
 
-> **メモ:** 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
+> [!NOTE]
+> 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
 
-> **メモ:** もし、 JavaScript オブジェクトへのアクセスに使用しているドット/ブラケット記法がよく分からない場合は、 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) を別のタブやテキストエディターで開き、それを参照しながら JavaScript を読んでみるとよいでしょう。また、ドットやブラケット記法の詳細については、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事を見返してみてください。
+> [!NOTE]
+> もし、 JavaScript オブジェクトへのアクセスに使用しているドット/ブラケット記法がよく分からない場合は、 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) を別のタブやテキストエディターで開き、それを参照しながら JavaScript を読んでみるとよいでしょう。また、ドットやブラケット記法の詳細については、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事を見返してみてください。
 
 ### 最上位の関数の呼び出し
 

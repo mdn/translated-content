@@ -1,6 +1,9 @@
 ---
-title: Document.close()
+title: "Document: close() メソッド"
+short-title: close()
 slug: Web/API/Document/close
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,13 +12,21 @@ slug: Web/API/Document/close
 
 ## 構文
 
+```js-nolint
+close()
 ```
-document.close();
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-```
+```js
 // 書きこむ文書を開きます。
 document.open();
 

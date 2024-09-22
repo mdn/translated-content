@@ -3,7 +3,7 @@ title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:processing-instruction>` écrit une instruction de traitement dans le document de sortie.
 

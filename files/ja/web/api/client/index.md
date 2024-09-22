@@ -23,7 +23,7 @@ l10n:
 - {{domxref("Client.url")}} {{ReadOnlyInline}}
   - : 文字列としてのクライアントの URL。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

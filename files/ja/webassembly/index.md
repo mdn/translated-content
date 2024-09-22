@@ -72,10 +72,6 @@ WebAssembly は JavaScript を補完、並行して動作するように設計�
 
 {{Specifications}}
 
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)

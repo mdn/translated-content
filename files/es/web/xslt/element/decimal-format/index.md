@@ -3,7 +3,7 @@ title: decimal-format
 slug: Web/XSLT/Element/decimal-format
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:decimal-format>` define los caracteres y los símbolos que serán usados en la conversión de números a cadenas de texto usando la función `format-number( )`.
 

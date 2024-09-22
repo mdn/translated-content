@@ -29,7 +29,8 @@ La sección de arriba suena realmente emocionante, y debería serlo. JavaScript 
 
 Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentirse cómodo con HTML y CSS. Deberás comenzar poco a poco y continuar trabajando en pasos pequeños y consistentes. Para comenzar, mostraremos cómo añadir JavaScript básico a tu página, creando un «_¡Hola Mundo!_» de ejemplo ([el estándar en los ejemplos básicos de programación](https://es.wikipedia.org/wiki/Hola_mundo)).
 
-> **Advertencia:** si no has venido siguiendo el resto de nuestro curso, [descarga este código de ejemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) y úsalo como punto de partida.
+> [!WARNING]
+> Si no has venido siguiendo el resto de nuestro curso, [descarga este código de ejemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) y úsalo como punto de partida.
 
 1. Primero, ve a tu sitio de pruebas y crea una carpeta llamada `scripts`. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado `main.js` y guárdalo.
 2. A continuación, abre tu archivo `index.html` e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre `</body>`:
@@ -48,7 +49,8 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 
 5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](hello-world.png)
 
-> **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
+> [!NOTE]
+> La razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
 >
 > Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
 
@@ -58,13 +60,15 @@ El texto del título ha sido cambiado por _¡Hola mundo!_ usando JavaScript. Hic
 
 Después de eso, estableciste el valor de la propiedad {{domxref("Node.textContent", "textContent")}} de la variable `miTitulo` (que representa el contenido del título) como _¡Hola mundo!_
 
-> **Nota:** Las dos características que has utilizado en este ejercicio forman parte de la API del [Modelo de Objeto de Documento (DOM)](/es/docs/Web/API/Document_Object_Model), que tiene la capacidad de manipular documentos.
+> [!NOTE]
+> Las dos características que has utilizado en este ejercicio forman parte de la API del [Modelo de Objeto de Documento (DOM)](/es/docs/Web/API/Document_Object_Model), que tiene la capacidad de manipular documentos.
 
 ## Curso intensivo de fundamentos del lenguaje
 
 Ahora se explicarán algunas de las funciones básicas del lenguaje JavaScript para que puedas comprender mejor cómo funciona todo. Mejor aún, estas características son comunes para todos los lenguajes de programación. Si puedes entender esos fundamentos, deberías ser capaz de comenzar a programar en casi cualquier cosa.
 
-> **Advertencia:** en este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> [!WARNING]
+> En este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -74,13 +78,17 @@ Las {{Glossary("Variable", "Variables")}} son contenedores en los que puedes alm
 let nombreDeLaVariable;
 ```
 
-> **Nota:** todas las líneas en JS deben acabar en punto y coma (;) para indicar que es ahí donde termina la declaración. Si no los incluyes puedes obtener resultados inesperados. Sin embargo, algunas personas creen que es una buena práctica tener punto y coma al final de cada declaración. Hay otras reglas para cuando se debe y no se debe usar punto y coma. Para más detalles, vea [Guía del punto y coma en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) (en inglés).
+> [!NOTE]
+> Todas las líneas en JS deben acabar en punto y coma (;) para indicar que es ahí donde termina la declaración. Si no los incluyes puedes obtener resultados inesperados. Sin embargo, algunas personas creen que es una buena práctica tener punto y coma al final de cada declaración. Hay otras reglas para cuando se debe y no se debe usar punto y coma. Para más detalles, vea [Guía del punto y coma en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) (en inglés).
 
-> **Nota:** puedes llamar a una variable con casi cualquier nombre, pero hay algunas restricciones (ver [este artículo sobre las reglas existentes](/es/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables)). Si no estás seguro, puedes [comprobar el nombre de la variable](https://mothereff.in/js-variables) para ver si es válido.
+> [!NOTE]
+> Puedes llamar a una variable con casi cualquier nombre, pero hay algunas restricciones (ver [este artículo sobre las reglas existentes](/es/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables)). Si no estás seguro, puedes [comprobar el nombre de la variable](https://mothereff.in/js-variables) para ver si es válido.
 
-> **Nota:** JavaScript distingue entre mayúsculas y minúsculas. `miVariable` es una variable distinta a `mivariable`. Si estás teniendo problemas en tu código, revisa las mayúsculas y minúsculas.
+> [!NOTE]
+> JavaScript distingue entre mayúsculas y minúsculas. `miVariable` es una variable distinta a `mivariable`. Si estás teniendo problemas en tu código, revisa las mayúsculas y minúsculas.
 
-> **Nota:** para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn/JavaScript/First_steps/Variables#Diferencia_entre_var_y_let).
+> [!NOTE]
+> Para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn/JavaScript/First_steps/Variables#Diferencia_entre_var_y_let).
 
 Tras declarar una variable, puedes asignarle un valor:
 
@@ -270,7 +278,8 @@ Un {{Glossary("operator", "operador")}} es básicamente un símbolo matemático 
 
 Hay muchos operadores por explorar, pero con esto será suficiente por ahora. Mira [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators) para ver la lista completa.
 
-> **Nota:** mezclar tipos de datos puede dar lugar a resultados extraños cuando se hacen cálculos, así que asegúrate de que relacionas tus variables correctamente y de que recibes los resultados que esperabas. Por ejemplo, teclea: `"3" + "25"` en tu consola. ¿Por qué no obtienes lo que esperabas? Porque las comillas convierten los números en "strings" (el término inglés para denominar cadenas de caracteres) y de este modo has acabado con los "strings" concatenados entre sí, y no con los números sumados. Si tecleas: `35 + 25`, obtendrás el resultado correcto.
+> [!NOTE]
+> Mezclar tipos de datos puede dar lugar a resultados extraños cuando se hacen cálculos, así que asegúrate de que relacionas tus variables correctamente y de que recibes los resultados que esperabas. Por ejemplo, teclea: `"3" + "25"` en tu consola. ¿Por qué no obtienes lo que esperabas? Porque las comillas convierten los números en "strings" (el término inglés para denominar cadenas de caracteres) y de este modo has acabado con los "strings" concatenados entre sí, y no con los números sumados. Si tecleas: `35 + 25`, obtendrás el resultado correcto.
 
 ### Condicionales
 
@@ -322,7 +331,8 @@ multiplica(20, 20);
 multiplica(0.5, 3);
 ```
 
-> **Nota:** la sentencia [`return`](/es/docs/Web/JavaScript/Reference/Statements/return) le dice al navegador que devuelva la variable `resultado` fuera de la función, para que esté disponible para su uso. Esto es necesario porque las variables definidas dentro de funciones, solo están disponibles dentro de esas funciones. Esto se conoce como «{{Glossary("Scope", "ámbito")}} (_scope_ en inglés) de la variable». Lee más sobre [ámbito o alcance de la variable](/es/docs/Web/JavaScript/Guide/Grammar_and_types#%C3%81mbito_de_variable).
+> [!NOTE]
+> La sentencia [`return`](/es/docs/Web/JavaScript/Reference/Statements/return) le dice al navegador que devuelva la variable `resultado` fuera de la función, para que esté disponible para su uso. Esto es necesario porque las variables definidas dentro de funciones, solo están disponibles dentro de esas funciones. Esto se conoce como «{{Glossary("Scope", "ámbito")}} (_scope_ en inglés) de la variable». Lee más sobre [ámbito o alcance de la variable](/es/docs/Web/JavaScript/Guide/Grammar_and_types#%C3%81mbito_de_variable).
 
 ### Eventos
 

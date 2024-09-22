@@ -58,7 +58,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **備註：** 如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 ([查看模型教學文章](/zh-TW/docs/Learn/Server-side/Django/Models))，你必需也要導入並註冊該模型！
+> [!NOTE]
+> 如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 ([查看模型教學文章](/zh-TW/docs/Learn/Server-side/Django/Models))，你必需也要導入並註冊該模型！
 
 這是**註冊模型**最簡單的方式。
 
@@ -94,7 +95,8 @@ python3 manage.py runserver
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **備註：** 在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)。
+> [!NOTE]
+> 在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)。
 
 當你新增完書本後，點擊上方書籤的 **Home** 連結回到主要管理頁面，接著點擊 **Books** 連結來展示目前的書本清單(你也可以點及其他連結看看其他模型的列表)，現在你已經加了幾本書，畫面應該會與下方截圖類似，你可以看到下方陳列了每本書的標題，這是我們在上一篇文章所提到的 Book 模型中的 `__str__()` 方法所回傳的值。
 
@@ -210,7 +212,8 @@ class BookAdmin(admin.ModelAdmin):
 
 很不幸地，我們無法直接在 `list_display` 中指定「書籍類別」(genre field)字段，因為它是一個 `ManyToManyField` (多對多字段)，因為如果這樣做會造成很大的資料庫讀寫「成本」，所以 Django 會預防這樣的狀況發生，因此，取而代之，我們將定義一個 `display_genre` 函式以「字串」形式得到書籍類別。(下方有定義此函式)
 
-> **備註：** Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
+> [!NOTE]
+> Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
 
 將以下程式碼添加到`Book`模型（**models.py**）。 這會從`genre`記錄的的頭三個值（如果有的話）創建一個字符串, 和創建一個在管理者網站中出現的`short_description`標題。
 
@@ -228,7 +231,8 @@ class BookAdmin(admin.ModelAdmin):
 
 `Genre` 模型(如果定義了語言模型，則還有 `Language` 模型）都有一個欄位，因此沒有必要為它們創建其他模型以顯示欄位。
 
-> **備註：** 更新 `BookInstance` 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！
+> [!NOTE]
+> 更新 `BookInstance` 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！
 
 ### 加入列表過濾器 (List Filter)
 
@@ -265,7 +269,8 @@ class AuthorAdmin(admin.ModelAdmin):
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **備註：** 你還可以使用 `exclude` 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。
+> [!NOTE]
+> 你還可以使用 `exclude` 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。
 
 #### Sectioning the detail view
 
@@ -316,7 +321,8 @@ Now navigate to a view for a `Book` in your website — at the bottom you should
 
 In this case all we've done is declare our tabular inline class, which just adds all fields from the _inlined_ model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) for more information).
 
-> **備註：** There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to 0 in `BooksInstanceInline` model, try it by yourself.
+> [!NOTE]
+> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to 0 in `BooksInstanceInline` model, try it by yourself.
 
 ## 自我挑戰
 

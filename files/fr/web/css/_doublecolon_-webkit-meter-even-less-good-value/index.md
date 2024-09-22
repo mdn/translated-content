@@ -29,7 +29,8 @@ meter::-webkit-meter-even-less-good-value {
 
 {{EmbedLiveSample('Exemples', '100%', 50)}}
 
-> **Note :** Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
+> [!NOTE]
+> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
 
 ## Spécifications
 

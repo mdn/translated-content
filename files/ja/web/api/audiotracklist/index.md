@@ -52,7 +52,7 @@ const audioTracks = document.querySelector("video").audioTracks;
 
 ### トラック数の変化の監視
 
-この例では、利用可能なチャンネル数に関する情報を表示するアプリがあります。 それを最新に保つために、 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} イベントと {{domxref("AudioTrackList/removetrack_event", "removetrack")}} イベントのためのハンドラを設定しています。
+この例では、利用可能なチャンネル数に関する情報を表示するアプリがあります。 それを最新に保つために、 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} イベントと {{domxref("AudioTrackList/removetrack_event", "removetrack")}} イベントのためのハンドラーを設定しています。
 
 ```js
 audioTracks.onaddtrack = updateTrackCount;

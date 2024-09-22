@@ -13,7 +13,7 @@ slug: Learn/Getting_started_with_the_web/HTML_basics
 
 HTML 不是一门编程语言，而是一种用于定义内容结构的*标记语言*。HTML 由一系列的{{Glossary("element", "元素")}}组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对{{Glossary("tag", "标签")}}可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：
 
-```
+```plain
 My cat is very grumpy
 ```
 
@@ -48,7 +48,8 @@ My cat is very grumpy
 2. 属性的名称，并接上一个等号。
 3. 由引号所包围的属性值。
 
-> **备注：** 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
+> [!NOTE]
+> 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
 
 ### 嵌套元素
 
@@ -125,7 +126,8 @@ My cat is very grumpy
 
 可以试着为图像编写一些更好的 `alt` 文本。
 
-> **备注：** 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
+> [!NOTE]
+> 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
 
 ## 标记文本
 
@@ -144,7 +146,8 @@ My cat is very grumpy
 
 可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
 
-> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+> [!NOTE]
+> 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
 
 ### 段落（Paragraph）
 

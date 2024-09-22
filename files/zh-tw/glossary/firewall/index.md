@@ -9,8 +9,6 @@ slug: Glossary/Firewall
 
 防火墻可以像單一軟體的一樣簡單或者更複雜，就像專門的軟體，衹有防火墻一個功能。
 
-## 了解更多
+## 參見
 
-### 基礎知識
-
-- 維基百科上的 [Firewall (computing)](<https://zh.wikipedia.org/wiki/Firewall_(computing)>)
+- 維基百科上的[防火牆](https://zh.wikipedia.org/wiki/防火墙)

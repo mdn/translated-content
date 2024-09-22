@@ -2,7 +2,7 @@
 title: マージンの相殺の習得
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 l10n:
-  sourceCommit: 28505c5b2d83732399d8ba96e4b32793580a7f13
+  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
 {{CSSRef}}
@@ -14,7 +14,7 @@ l10n:
 - 隣接兄弟要素
   - : 隣接兄弟要素のマージンは相殺されます (後ろの兄弟要素がそれ以前の浮動状態を[解除](/ja/docs/Web/CSS/clear) する必要がある場合を除く)。
 - 親と子孫を隔てるコンテンツがない場合
-  - : あるブロックの {{cssxref("margin-top")}} と、1 つ以上の子孫ブロックの {{cssxref("margin-top")}} を隔てる境界、パディング、インライン部分、 [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)の生成、_[浮動の解除](/ja/docs/Web/CSS/clear)_ のいずれもがない場合、もしくは、あるブロックの {{cssxref("margin-bottom")}} と1つ以上の子孫ブロックの {{cssxref("margin-bottom")}} を隔て境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}} のいずれもがない場合、それぞれマージンが折り畳まれます。折り畳まれた側のマージンは、親要素の外側に出ます。
+  - : あるブロックの {{cssxref("margin-top")}} と、1 つ以上の子孫ブロックの {{cssxref("margin-top")}} を隔てる境界、パディング、インライン部分、 [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)の生成、_[浮動の解除](/ja/docs/Web/CSS/clear)_ のいずれもがない場合、もしくは、あるブロックの {{cssxref("margin-bottom")}} と1つ以上の子孫ブロックの {{cssxref("margin-bottom")}} を隔て境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}} のいずれもがない場合、それぞれマージンが折り畳まれます。折り畳まれた側のマージンは、親要素の外側に出ます。
 - 空ブロック
   - : あるブロックの {{cssxref("margin-top")}} を {{cssxref("margin-bottom")}} と隔てる境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}} のいずれもがない場合、上端と下端のマージンは相殺されます。
 

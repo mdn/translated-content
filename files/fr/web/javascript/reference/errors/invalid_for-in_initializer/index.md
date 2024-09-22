@@ -25,12 +25,10 @@ L'en-tête d'une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructi
 
 Cet exemple déclenchera une exception `SyntaxError` :
 
-```js example-bad
-"use strict";
+```js-nolint example-bad
+const obj = { a: 1, b: 2, c: 3 };
 
-var obj = {a: 1, b: 2, c: 3 };
-
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 

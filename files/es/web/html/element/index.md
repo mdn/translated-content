@@ -7,7 +7,8 @@ slug: Web/HTML/Element
 
 Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTML")}}. Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente con facilidad. Aunque esta guía está escrita para aquellos que son nuevos escribiendo código, se pretende que sea una referencia útil para cualquiera.
 
-> **Nota:** Para más información básica acerca de los elementos y atributos HTML, vea [la sección sobre elementos en el artículo 'Introducción a HTML'](/es/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks).
+> [!NOTE]
+> Para más información básica acerca de los elementos y atributos HTML, vea [la sección sobre elementos en el artículo 'Introducción a HTML'](/es/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks).
 
 ## Raíz principal
 
@@ -220,7 +221,8 @@ Los Componentes Web son una tecnología relacionada con HTML que hacen que sea p
 
 ## Elementos obsoletos y en desuso
 
-> **Advertencia:** Estos son elementos HTML viejos los cuales están obsoletos y no deben usarse. **Nunca debería usarlos en un nuevo proyecto y debería reemplazarlos en proyectos viejos tan pronto como sea posible.** Se listan aquí solo con propósitos informativos.
+> [!WARNING]
+> Estos son elementos HTML viejos los cuales están obsoletos y no deben usarse. **Nunca debería usarlos en un nuevo proyecto y debería reemplazarlos en proyectos viejos tan pronto como sea posible.** Se listan aquí solo con propósitos informativos.
 
 | Elemento                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

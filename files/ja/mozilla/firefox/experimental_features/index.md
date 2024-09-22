@@ -14,7 +14,8 @@ slug: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
+> [!NOTE]
+> 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
@@ -727,11 +728,11 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 ### WebRTC とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API) にある以下の機能は実験的なものです。
+[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
 
 非同期の SourceBuffer の追加と削除
 
-これにより、メディアソースバッファを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
+これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
 
 <table>
   <thead>
@@ -1226,7 +1227,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### Document の autoplayPolicy プロパティ
 
-{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザ全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
+{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザー全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
 
 <table>
   <thead>
@@ -1391,11 +1392,11 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
   </tbody>
 </table>
 
-### 支払いリクエスト API
+### 決済リクエスト API
 
-#### 主要な支払いの扱い
+#### 主要な決済の扱い
 
-[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの支払いを処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
+[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
 
 <table>
   <thead>
@@ -1705,7 +1706,8 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> **メモ:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
+> [!NOTE]
+> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
 
 <table>
   <thead>

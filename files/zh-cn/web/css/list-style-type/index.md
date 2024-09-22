@@ -92,9 +92,9 @@ list-style-type 的属性值可以是以下任意一项：
 - `katakana` {{experimental_inline}}
   - : Dictionary-order katakana lettering
 - `hiragana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `katakana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `japanese-informal` {{experimental_inline}}
   - : Japanese informal numbering
 - `japanese-formal` {{experimental_inline}}

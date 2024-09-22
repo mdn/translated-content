@@ -20,7 +20,8 @@ window.navigator.registerProtocolHandler(protocol, uri, title);
 - `protocol` это протокол нуждающийся в обработке, записанный в виде строки.
 - `uri` это URI обработчика в виде строки. Вы можете включить "%s", что бы показать куда вставлять выходящие URI документа для обработки.
 
-  > **Примечание:** Примечание: ДОЛЖНА быть `http` или `https` схема
+  > [!NOTE]
+  > Обработчик URK должен использовать схему `https`. Старые браузеры также поддерживают `http`.
 
 - `title` это заголовок обработчика, представленный пользователю в виде строки.
 
@@ -40,9 +41,7 @@ navigator.registerProtocolHandler("burger",
 
 ![](protocolregister.png)
 
-> **Примечание:** "[Регистрация службы веб-почты, как mailto-обработчик](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)", показывает как сделать это в рамках XPCOM.
-
-## Спецификация
+## Спецификации
 
 Specified by the WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers) (HTML5).
 

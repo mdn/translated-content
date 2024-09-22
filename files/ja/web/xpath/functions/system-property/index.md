@@ -3,7 +3,7 @@ title: system-property
 slug: Web/XPath/Functions/system-property
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `system-property`関数は、指定されたシステムプロパティを表すオブジェクトを返します。
 
@@ -24,7 +24,7 @@ system-property(name)
 
 ### 注
 
-- xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサの場合、これは 1.0 です
+- xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサーの場合、これは 1.0 です
 - xsl:vendor: XSLT プロセッサーのベンダーを識別する文字列
 - xsl:vendor-url: XSLT プロセッサーのベンダーを識別する URL を含む文字列。通常これはベンダーのウェブサイトのホストページ (ホームページ) です
 

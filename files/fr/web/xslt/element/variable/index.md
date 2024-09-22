@@ -3,7 +3,7 @@ title: variable
 slug: Web/XSLT/Element/variable
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:variable>` déclare une variable globale ou locale dans une feuille de style et lui attribue une valeur. Comme XSLT ne permet pas d'effet de bord, une fois que la valeur de la variable est établie, elle reste la même jusqu'à ce que la variable soit hors de portée.
 

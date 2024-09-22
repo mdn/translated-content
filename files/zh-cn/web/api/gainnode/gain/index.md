@@ -11,7 +11,8 @@ slug: Web/API/GainNode/gain
 
 一个 {{domxref("AudioParam")}}。
 
-> **备注：** 虽然 `AudioParam` 属性是只读的，但其返回的值不是。
+> [!NOTE]
+> 虽然 `AudioParam` 属性是只读的，但其返回的值不是。
 
 ## 示例
 

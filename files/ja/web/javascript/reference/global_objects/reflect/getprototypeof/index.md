@@ -22,7 +22,7 @@ Reflect.getPrototypeOf(target)
 
 ### 返値
 
-与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、{{jsxref("null")}} を返します。
+与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
 ### 例外
 

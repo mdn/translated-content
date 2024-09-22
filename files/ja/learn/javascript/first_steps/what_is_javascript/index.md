@@ -90,7 +90,7 @@ JavaScript は次のことを実現する一般的なプログラミング機能
 - ウェブページで起きるイベントに対処します。先ほどの例では {{domxref("Element/click_event", "click")}} イベントを使用して、ボタンがクリックされたことを検出し、ラベルを更新するコードを実行しました。
 - 他にもたくさんのことができます。
 
-しかしさらに期待が大きいのは、クライアントサイド JavaScript 言語の上に構築された機能です。いわゆる**アプリケーションプログラミングインタフェース** (**API**) は、JavaScript コードで使用するための特別なスーパーパワーを提供します。
+しかしさらに期待が大きいのは、クライアントサイド JavaScript 言語の上に構築された機能です。いわゆる**アプリケーションプログラミングインターフェイス** (**API**) は、JavaScript コードで使用するための特別なスーパーパワーを提供します。
 
 API がなければ難しかったり、不可能であるようなコードを、すぐに使えるブロックのように、開発者がプログラムを作ることができるようになります。
 家を作るときの既製の家具と同じことを、プログラミングでしてくれるのです。自分で設計し、使用する木材を選定し、正しい形で板を切り出して、正しいサイズのネジを見つけて、自分で組み立てるよりも、既に切り出されたボードとネジを使って本棚を組み立てるだけの方がずっと簡単ですよね。
@@ -108,7 +108,8 @@ API は大まかに 2 種類に分けられます。
   このウェブ技術を使用してすごいことをやってのける人たちがいます。 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) や [webglsamples](https://webglsamples.org/) などのページを見てください。
 - [音声と動画の API](/ja/docs/Web/Media/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や {{domxref("WebRTC API", "WebRTC")}} などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
 
-> **メモ:** 上記の多くは古いブラウザーでは動作しません。試すには Firefox、Chrome、Edge、Opera といった最近のブラウザーを使うとよいでしょう。
+> [!NOTE]
+> 上記の多くは古いブラウザーでは動作しません。試すには Firefox、Chrome、Edge、Opera といった最近のブラウザーを使うとよいでしょう。
 > プロダクションコードを提供する（顧客に実際のコードを納品する）段になったら、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を読んでみるとよいでしょう。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
@@ -116,7 +117,8 @@ API は大まかに 2 種類に分けられます。
 - [Twitter API](https://developer.twitter.com/en/docs) を使用すると、ウェブサイトに最新のツイートを表示させることができます。
 - [Google マップ API](https://developers.google.com/maps/) や [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) を使用すると、ウェブサイトに専用の地図を埋め込み、付加機能を付けることもできます。
 
-> **メモ:** このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [クライアントサイドウェブ API モジュール](/ja/docs/Learn/JavaScript/Client-side_web_APIs) で扱っています。
+> [!NOTE]
+> このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [クライアントサイドウェブ API モジュール](/ja/docs/Learn/JavaScript/Client-side_web_APIs) で扱っています。
 
 ワクワクすることはもっとたくさんあります！ ですが、まだ興奮しすぎないでください。24 時間程度の勉強だけでは、Facebook や Google マップや Instagram は作れません。まずはやらなければならない基本がたくさんあるのです。さあ、先に進みましょう！
 
@@ -138,7 +140,8 @@ JavaScript のごく一般的な用途は、(先ほど例示した) Document Obj
 ブラウザーのそれぞれのタブは、コードを実行するための入れ物を個別に持ちます (この入れ物を技術的用語では「実行環境」と呼びます)。つまり、それぞれのタブ内でコードは完全に分かれて実行されており、あるタブで動いているコードは他のタブや他のウェブサイトのコードに、直接的には干渉できません。これは良いセキュリティ対策です。
 互いに干渉することが出来てしまえば、ウェブの悪党たちは、他のタブで開いているウェブサイトから情報を盗み出したり、もっとひどいことをするためにコードを書き始めることでしょう。
 
-> **メモ:** 他のウェブサイトや、タブに安全にデータや実行可能なコードを送る方法はあります。けれども、このコースでは扱わない高度な技術です。
+> [!NOTE]
+> 他のウェブサイトや、タブに安全にデータや実行可能なコードを送る方法はあります。けれども、このコースでは扱わない高度な技術です。
 
 ### JavaScript の実行順序
 
@@ -162,7 +165,8 @@ function updateName() {
 もし、最初の 2 行を入れ替えた場合、動かなくなってしまいます。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に `Uncaught ReferenceError: Cannot access 'button' before initialization` というエラーが出るでしょう。
 この意味は `button` オブジェクトがまだ初期化されていないため、イベントリスナーが設定できないということを表しています。
 
-> **メモ:** これはとてもよくあるエラーです。オブジェクトに対して何かをする前にはそのオブジェクトへの参照が存在していることに気を配らなければなりません。
+> [!NOTE]
+> これはとてもよくあるエラーです。オブジェクトに対して何かをする前にはそのオブジェクトへの参照が存在していることに気を配らなければなりません。
 
 ### インタープリターとコンパイルコード
 
@@ -237,12 +241,14 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
 
 5. ファイルを保存してブラウザーを更新してください。ボタンを押す度に新しい段落が作られて、下に表示されるようになりましたね。
 
-> **メモ:** もし上記の例が上手く動いていないとしたら、もう一度最初から手順を確認してください。
+> [!NOTE]
+> もし上記の例が上手く動いていないとしたら、もう一度最初から手順を確認してください。
 > コピーしてコードを書いたファイルは `.html` というファイル名ですか？
 > {{htmlelement("script")}} 要素を `</head>` タグの直前に追加しましたか？
 > JavaScript を上の例の通りに書きましたか？ **JavaScript は大文字小文字を区別しますので、見えている通りに書かなければなりません。正しく書いていなければ、動いてくれません。**
 
-> **メモ:** GitHub にあるこちらのバージョン、[apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([ライブ](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html))でも見ることもできます。
+> [!NOTE]
+> GitHub にあるこちらのバージョン、[apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([ライブ](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html))でも見ることもできます。
 
 ### 外部 JavaScript
 
@@ -276,7 +282,8 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
    コードを整理して、複数の HTML ファイルから再利用できるようにするには、このようにするのが良いでしょう。
    大きなスクリプトの塊がないほうが、HTML も読みやすくなります。
 
-> **メモ:** GitHub でこちらのバージョンも見られます。[apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) と [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) です ([ライブでも見られます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))。
+> [!NOTE]
+> GitHub でこちらのバージョンも見られます。[apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) と [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) です ([ライブでも見られます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))。
 
 ### インライン JavaScript ハンドラー
 
@@ -321,7 +328,8 @@ for (const button of buttons) {
 これは `onclick` 属性よりも少し長いかもしれませんが、ページ上にいくつボタンがあっても、またいくつ追加されたり削除されたりしても、すべてのボタンに対して機能します。
 JavaScript は変更する必要がありません。
 
-> **メモ:** 自分の `apply-javascript.html` ファイルを編集して、いくつかボタンを追加してみて下さい。
+> [!NOTE]
+> 自分の `apply-javascript.html` ファイルを編集して、いくつかボタンを追加してみて下さい。
 > 再度読み込むとどのボタンを押しても段落が作られるのがわかるでしょう。
 > 素敵でしょう。
 
@@ -353,7 +361,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 この場合、スクリプトと HTML の両方が同時に読み込まれ、コードが機能します。
 
-> **メモ:** 外部の場合は、`defer` 属性が問題を解決したため、`DOMContentLoaded` イベントを使用する必要はありませんでした。
+> [!NOTE]
+> 外部の場合は、`defer` 属性が問題を解決したため、`DOMContentLoaded` イベントを使用する必要はありませんでした。
 > `defer` は外部スクリプトに対してのみ機能するため、内蔵の例では `defer` による解決策を使用しませんでした。
 
 この問題に対する昔ながらの解決策は、すべての HTML が解釈された後に読み込まれるように、 body の下部に（たとえば `</body>` タグの直前に） script 要素を置くことでした。
@@ -462,7 +471,8 @@ for (const button of buttons) {
 }
 ```
 
-> **メモ:** 一般的にコメントは多いほうが少ないよりも優れていますが、変数が何であるかを説明する (変数名はおそらくもっと直感的にするべきです) ため、または非常に単純な操作を説明する (コードが複雑すぎるかもしれません) ために、多くのコメントを追加する場合は注意が必要です。
+> [!NOTE]
+> 一般的にコメントは多いほうが少ないよりも優れていますが、変数が何であるかを説明する (変数名はおそらくもっと直感的にするべきです) ため、または非常に単純な操作を説明する (コードが複雑すぎるかもしれません) ために、多くのコメントを追加する場合は注意が必要です。
 
 ## まとめ
 

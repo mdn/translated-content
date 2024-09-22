@@ -26,7 +26,8 @@ Rust 和 WebAssembly 有两大主要用例：
 
 前往 [Install Rust](https://www.rust-lang.org/install.html) 页面并跟随指示安装 Rust。这里会安装一个名为“rustup”的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常 Rust 开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 `rustc`、Rust 的包管理工具 `cargo`、Rust 的标准库 `rust-std` 以及一些有用的文档 `rust-docs`。
 
-> **备注：** 需要注意，在安装完成后，你需要把 cargo 的 `bin` 目录添加到你系统的 `PATH` 。一般来说它会自动添加，但需要你重启终端后才会生效。
+> [!NOTE]
+> 需要注意，在安装完成后，你需要把 cargo 的 `bin` 目录添加到你系统的 `PATH`。一般来说它会自动添加，但需要你重启终端后才会生效。
 
 ### wasm-pack
 

@@ -3,23 +3,26 @@ title: getBBox
 slug: Web/API/SVGGraphicsElement/getBBox
 ---
 
+{{APIRef("SVG")}}
+
 **`SVGGraphicsElement.getBBox()`**允许我们确定对象适合的最小矩形的坐标。返回的坐标是相对于当前 svg 空间的，即在将所有几何属性应用于目标元素中包含的所有元素之后。
 
 Note: `getBBox` must return the actual bounding box at the time the method was called, even in case the element has not yet been rendered. It also neglects any transformation applied on the element or its parents.
 
 > **备注：** `getBBox` returns different values than getBoundingClientRect, as the latter returns value relative to the viewport
 
-## Syntax
+## 语法
 
-```
-let bboxRect = object.getBBox();
+```js-nolint
+getBBox()
+getBBox(options)
 ```
 
-### Return value
+### 返回值
 
 The returned value is a [SVGRect](/zh-CN/docs/Web/API/SVGRect) object, which defines the bounding box. This value is irrespective of any transformation attribute applied to it or the parent elements.
 
-## Example
+## 示例
 
 ### HTML
 
@@ -58,10 +61,10 @@ rectBoundingClientRect.setAttribute("width", boundingClientRectGroup.width);
 rectBoundingClientRect.setAttribute("height", boundingClientRectGroup.height);
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
 - [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)

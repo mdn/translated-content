@@ -3,7 +3,9 @@ title: FormData
 slug: Web/API/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La interfaz **`FormData`** proporciona una manera sencilla de construir un conjunto de parejas clave/valor que representan los campos de un formulario y sus valores, que pueden ser enviados fácilmente con el método {{domxref("XMLHttpRequest.send()")}}. Utiliza el mismo formato que usaría un formulario si el tipo de codificación fuera `"multipart/form-data"`.
 
@@ -11,7 +13,8 @@ También puede pasarse directamente al constructor de {{domxref("URLSearchParams
 
 Un objeto que implementa `FormData` puede usarse directamente en una estructura {{jsxref("Statements/for...of", "for...of")}}, en lugar de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` es equivalente a `for (var p of myFormData.entries())`.
 
-> **Nota:** Esta característica está disponible en [Web Workers](/es/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Esta característica está disponible en [Web Workers](/es/docs/Web/API/Web_Workers_API).
 
 ## Constructor
 

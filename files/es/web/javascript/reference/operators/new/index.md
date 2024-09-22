@@ -69,7 +69,8 @@ console.log(car1.color); // 'black'
 console.log(car2.color); // 'color original'
 ```
 
-> **Nota:** Si no escribiste el operador `new`, **la función `constructor` se invocará como cualquier función normal**, _sin crear un objeto._ En este caso, el valor de `this` también es diferente.
+> [!NOTE]
+> Si no escribiste el operador `new`, **la función `constructor` se invocará como cualquier función normal**, _sin crear un objeto._ En este caso, el valor de `this` también es diferente.
 
 ## Ejemplos
 

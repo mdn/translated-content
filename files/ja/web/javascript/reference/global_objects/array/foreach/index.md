@@ -47,7 +47,8 @@ forEach(callbackFn, thisArg)
 - 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
 
-> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `forEach()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -116,7 +117,8 @@ items.forEach((item) => {
 
 ### 配列の内容の出力
 
-> **メモ:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
+> [!NOTE]
+> 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
 >
 > 以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
 
@@ -163,7 +165,8 @@ console.log(obj.sum); // 16
 
 `thisArg` 引数 (`this`) が `forEach()` に提供されているため、`callbackFn` の呼び出しのたびにこれが渡されます。コールバックはこれを `this` の値として使用します。
 
-> **メモ:** コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
+> [!NOTE]
+> コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
 
 ### オブジェクトをコピーする関数
 

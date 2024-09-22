@@ -3,6 +3,8 @@ title: Motifs
 slug: Web/SVG/Tutorial/Patterns
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
 
 Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissages les plus complexes à utiliser en SVG. Ce sont également des outils très puissants, ils méritent donc d'être abordés pour que vous en connaissiez les fondamentaux. Comme les dégradés, l'élément {{SVGElement('pattern')}} doit être placé dans la section `<defs>` du fichier SVG.
@@ -200,7 +202,8 @@ window.addEventListener("load", drawSvg);
 
 {{ EmbedLiveSample('Code_jouable_2','220','350') }}
 
-> **Note :** Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
+> [!NOTE]
+> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
 
 ## Unités du motif: userSpaceOnUse
 

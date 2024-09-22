@@ -3,7 +3,7 @@ title: 鼠标事件
 slug: Web/API/MouseEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent`** 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：[`click`](/zh-CN/docs/Web/API/Element/click_event)、[`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)、[`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)、[`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)。
 

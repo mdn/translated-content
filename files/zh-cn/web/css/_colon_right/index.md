@@ -16,15 +16,17 @@ slug: Web/CSS/:right
 
 这里的“左”或“右”不是固定的，取决与文档的写作方向。如果第一页主要文字方向是从左到右的，那么它就是{{cssxref(":right")}}右页，反之它就是{{cssxref(":left")}}左页。
 
-> **备注：** Note: 可通过 `bdo` 标签 的 `dir` 属性改变文字方向。
+> [!NOTE]
+> 可通过 `bdo` 标签 的 `dir` 属性改变文字方向。
 
-> **备注：** 此伪类只能用于更改页面的 {{ cssxref("margin") }}, {{cssxref("padding") }}, {{ cssxref("border") }}, and {{cssxref("background") }} 属性。其他属性都将被忽略，只会影响页框，不会影响文档内容。
+> [!NOTE]
+> 此伪类只能用于更改页面的 {{ cssxref("margin") }}, {{cssxref("padding") }}, {{ cssxref("border") }}, and {{cssxref("background") }} 属性。其他属性都将被忽略，只会影响页框，不会影响文档内容。
 
 ## 语法
 
-```
-@page:right{
-    margin: * *;
+```css
+:right {
+  /* ... */
 }
 ```
 

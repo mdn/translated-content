@@ -41,7 +41,8 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
   - : 回傳一個 {{domxref("DOMString")}} 表示 HTTP 伺服器回應之字串。和 {{domxref("XMLHTTPRequest.status")}} 不同的是，`XMLHttpRequest.statusText` 包含了回應的整個文字訊息（如 "`200 OK`"）。
 
-> **備註：** The HTTP/2 specification ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+> [!NOTE]
+> The HTTP/2 specification ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 為一無符號長整數（`unsigned long`），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。
@@ -98,7 +99,8 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
   - : 使用 C++ 程式時，用來初始化這個物件。
 
-    > **警告：** 請勿在 JavaScript 中呼叫這個方法。
+    > [!WARNING]
+    > 請勿在 JavaScript 中呼叫這個方法。
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
   - : 初始化請求。這方法是用於原生程式，若想在 JavaScript 中初始化一個請求，請使用 [`open()`](</zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()>) 這個方法來代替。請參照 `open()` 的相關文件。

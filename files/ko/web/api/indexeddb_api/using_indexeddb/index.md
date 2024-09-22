@@ -259,7 +259,8 @@ request.onupgradeneeded = function (event) {
 
 이미 존재하는 객체 저장소의 레코드를 읽기 위해서 트랜잭션은 `readonly` 혹은 `readwrite` 모드이면 됩니다. 이미 존재하는 객체 저장소에 변경점을 기록하기 위해서는 트랜잭션이 반드시 `readwrite` 모드여야합니다. 특정 트랜잭션은 {{domxref("IDBDatabase.transaction")}} 으로 열 수 있습니다. 이 메소드는 접근하고 싶은 객체 저장소들의 배열로 정의된 범위인 `storeNames`와 트랜잭션의 모드`mode` (`readonly` 혹은 `readwrite`), 2개의 인자를 받습니다. 이 메소드는 객체 저장소에 접근할 수 있는 {{domxref("IDBIndex.objectStore")}} 메소드를 포함한 트랜잭션 객체를 반환합니다. 모드가 지정되지 않는다면 기본적으로 트랜잭션은 `readonly` 모드로 열립니다.
 
-> **참고:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+> [!NOTE]
+> As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
 트랜잭션에서 적합한 범위와 모드를 사용함으로써 자료 접근을 빠르게 할 수 있습니다. 여기 두개의 팁이 있습니다:
 
@@ -387,7 +388,8 @@ request.onsuccess = function (event) {
 
 이제 우리는 `objectStore`를 만들고 사회보장번호(SSN)가 (`444-44-4444`)인 고객 레코드를 요청했습니다. 그리고 우리는 그 결과를 변수(`data`)에 넣고, 이 객체의 `age` 속성을 업데이트하여, 두 번째 요청(`requestUpdate`)을 만들어 고객 레코드를 다시 `objectStore`에 집어넣어 이전 값을 덮어썼습니다.
 
-> **참고:** 이 때 우리는 `readwrite` 모드를 사용해야 합니다. 우리가 지금 한 것은 단순히 데이터를 읽어오는 게 아니라, 다시 쓰는 것이기 때문입니다.
+> [!NOTE]
+> 이 때 우리는 `readwrite` 모드를 사용해야 합니다. 우리가 지금 한 것은 단순히 데이터를 읽어오는 게 아니라, 다시 쓰는 것이기 때문입니다.
 
 ### 커서 사용하기
 
@@ -597,11 +599,11 @@ When the browser shuts down (because the user chose the Quit or Exit option), th
 
 1. Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
 2. Once all of the transactions have completed, the database connection is closed.
-3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
+3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{domxref("IDBDatabase/close_event", "close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
 
 The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).
 
-Prior to these browser versions, the transactions are aborted silently, and no {{event("close")}} event is fired, so there is no way to detect an unexpected database closure.
+Prior to these browser versions, the transactions are aborted silently, and no {{domxref("IDBDatabase/close_event", "close")}} event is fired, so there is no way to detect an unexpected database closure.
 
 Since the user can exit the browser at any time, this means that you cannot rely upon any particular transaction to complete, and on older browsers, you don't even get told when they don't complete. There are several implications of this behavior.
 
@@ -628,7 +630,8 @@ This new functionality enables developers to specify a locale when creating an i
 
 {{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: `locale` (returns the locale if any, or null if none is specified) and `isAutoLocale` (returns `true` if the index was created with an auto locale, meaning that the platform's default locale is used, `false` otherwise.)
 
-> **참고:** This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable `dom.indexedDB.experimental`.
+> [!NOTE]
+> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable `dom.indexedDB.experimental`.
 
 ## Full IndexedDB example
 
@@ -1333,7 +1336,7 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
+- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 

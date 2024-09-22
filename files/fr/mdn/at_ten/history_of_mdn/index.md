@@ -3,6 +3,8 @@ title: L'histoire de MDN
 slug: MDN/At_ten/History_of_MDN
 ---
 
+{{MDNSidebar}}
+
 Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN regardent dans le rétroviseur des dix dernières années de [developer.mozilla.org](/) et imaginent la décennie à venir. Vous pourrez entendre l'histoire des différentes migrations entre les logiciels de wiki, la façon dont la communauté a été construite et découvrir de nombreuses anecdotes de l'histoire du site. Le groupe réuni discute également des défis actuels et des projets sur lesquels la communauté MDN travaille cette année.
 
 ### Audio

@@ -38,7 +38,7 @@ var float32 = new Float32Array(2);
 float32[0] = 42;
 console.log(float32[0]); // 42
 console.log(float32.length); // 2
-console.log(float32.BYTES_PER_ELEMENT); // 8
+console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // From an array
 var arr = new Float32Array([21, 31]);

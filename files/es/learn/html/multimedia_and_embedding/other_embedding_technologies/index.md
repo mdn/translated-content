@@ -232,7 +232,8 @@ Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 - [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox)
   - : Este atributo, que funciona en navegadores un poco más modernos que el resto de la funciones de `<iframe>` (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
 
-> **Nota:** Para mejorar la velocidad, es una buena idea establecer el atributo `src` de iframes con JavaScript después de que se cargue el contenido principal. Esto hace que tu página pueda utilizarse antes y disminuye el tiempo de carga de tu página principal (an important {{Glossary("SEO")}}.)
+> [!NOTE]
+> Para mejorar la velocidad, es una buena idea establecer el atributo `src` de iframes con JavaScript después de que se cargue el contenido principal. Esto hace que tu página pueda utilizarse antes y disminuye el tiempo de carga de tu página principal (an important {{Glossary("SEO")}}.)
 
 ### Con respecto a la seguridad
 
@@ -271,19 +272,22 @@ Unsandboxed content can do way too much (executing JavaScript, submitting forms,
 
 If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
-> **Nota:** Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
+> [!NOTE]
+> Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
 
 #### Configure CSP directives
 
 {{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/Security/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/es/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable [clickjacking](https://es.wikipedia.org/wiki/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
-> **Nota:** You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
+> [!NOTE]
+> You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
 
 ## The \<embed> and \<object> elements
 
 The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!
 
-> **Nota:** A **plugin** is software that provides access to content the browser cannot read natively.
+> [!NOTE]
+> A **plugin** is software that provides access to content the browser cannot read natively.
 
 However, you are unlikely to use these elements very much — Applets haven't been used for years, Flash is no longer very popular, due to a number of reasons (see [The case against plugins](#the_case_against_plugins), below), PDFs tend to be be better linked to than embedded, and other content such as images and video have much better, easier elements to handle those. Plugins and these embedding methods are really a legacy technology, and we are mainly mentioning them in case you come across them in certain circumstances like intranets, or enterprise projects.
 

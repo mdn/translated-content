@@ -55,7 +55,7 @@ if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

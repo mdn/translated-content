@@ -48,7 +48,7 @@ delete x;
 // is deprecated
 ```
 
-変数のコンテンツを解放するには、{{jsxref("null")}} を設定してください。
+変数のコンテンツを解放するには、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を設定してください。
 
 ```js example-good
 "use strict";

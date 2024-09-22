@@ -293,7 +293,7 @@ slug: Web/Media/Formats/Video_codecs
 
 有损压缩算法会引入[**振铃效应**](https://zh.wikipedia.org/wiki/振鈴效應)，即对象外部区域被压缩算法生成的彩色像素污染的效果。当算法使用跨越对象与其背景之间的清晰边界的块时，就会发生这种情况。这在较高的压缩级别下尤其常见。
 
-[![振铃效应示例](ringing-effects.png)](ringing-effects.png)
+![振铃效应示例](ringing-effects.png)
 
 请注意上方星星边缘周围的蓝色和粉红色条纹（以及步进和其他重要的压缩伪影）。那些边缘是振铃效应。振铃效应在某些方面类似于[飞蚊噪声](#飞蚊噪声)，除了振铃效果或多或少稳定不变，而蚊子噪音闪烁和移动。
 
@@ -303,7 +303,7 @@ slug: Web/Media/Formats/Video_codecs
 
 **分色**发生在压缩导致渐变中颜色细节丢失时。图像不是通过区域中的各种颜色进行平滑过渡，而是呈现为块状的，带有接近图像原始外观的颜色斑点。
 
-[![](posterize-effect.jpg)](posterize-effect.jpg)
+![分辨率模糊的秃鹰照片。](posterize-effect.jpg)
 
 请注意上面照片中秃鹰（以及背景中的雪鸮）羽毛中颜色的块状。由于这些后化鬼影，在很大程度上丢失了羽毛的细节。
 
@@ -311,7 +311,7 @@ slug: Web/Media/Formats/Video_codecs
 
 **轮廓**或**色带**是一种特殊的分色形式，其中色块在图像中形成条带或条纹。当视频使用了低精度的量化配置进行编码时，就会发生这种情况。压缩后的视频的内容中呈现出“分层”的外观，其中不是平滑的渐变和过渡，而是从颜色到颜色的过渡是突然的，导致出现色条。
 
-[![压缩引入轮廓的图像示例](contouring-effect.jpg)](contouring-effect.jpg)
+![压缩引入轮廓的图像示例](contouring-effect.jpg)
 
 在上面的示例图像中，请注意天空如何具有不同深浅的蓝色带，而不是随着天空颜色向地平线变化而形成一致的渐变。这就是轮廓效果。
 
@@ -319,7 +319,7 @@ slug: Web/Media/Formats/Video_codecs
 
 **飞蚊噪声**是一种时间鬼影，表现为噪声或**边缘繁忙**，表现为闪烁的朦胧或闪烁，大致跟随在具有硬边缘或前景对象和背景之间的尖锐过渡的对象的边缘之外。效果在外观上可能类似于[振铃效应](#振铃效应)。
 
-![](mosquito-effect-sm.png)
+![因压缩而引入飞蚊噪声的图像示例。](mosquito-effect-sm.png)
 
 上面的照片显示了许多地方的飞蚊噪音，包括在桥梁周围的天空中。在右上角，插图显示了图像中出现蚊子噪声的部分的特写。
 
@@ -1745,7 +1745,8 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。V
    </video>
    ```
 
-> **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video>` 标签。
+> [!NOTE]
+> 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video>` 标签。
 
 ### 高质量视频演示的建议
 
@@ -1828,6 +1829,6 @@ let recorder = new MediaRecorder(sourceStream, options);
 - {{RFC(3839)}}：3GPP 多媒体文件的 MIME 类型注册
 - {{RFC(4381)}}：3GPP2 多媒体文件的 MIME 类型注册
 - {{RFC(4337)}}：MPEG-4 多媒体文件的 MIME 类型注册
-- [Opera 浏览器中的视频编解码器](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
+- [Opera 浏览器中的视频编解码器](https://blogs.opera.com/news/#codecs--the-fly-in-the-ointment)
 - IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement)和[音频（audio）](/zh-CN/docs/Web/HTML/Element/audio)编解码器
 - [Chrome 浏览器中的视频和音频解码器](https://www.chromium.org/audio-video/)

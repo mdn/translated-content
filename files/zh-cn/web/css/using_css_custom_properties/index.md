@@ -27,7 +27,8 @@ element {
 
 然而这条规则不是绝对的，如果有理由去限制你的自定义属性，那么就应该限制。
 
-> **备注：** 自定义属性名是大小写敏感的，`--my-color` 和 `--My-color` 会被认为是两个不同的自定义属性。
+> [!NOTE]
+> 自定义属性名是大小写敏感的，`--my-color` 和 `--My-color` 会被认为是两个不同的自定义属性。
 
 如前所述，使用一个局部变量时用 {{cssxref("var()")}} 函数包裹以表示一个合法的属性值：
 
@@ -174,7 +175,8 @@ element {
 
 用 {{cssxref("var()")}} 函数可以定义多个**备用值**（fallback value），当给定值未定义时将会用备用值替换。这对于 [Custom Element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 都很有用。
 
-> **备注：** 备用值并不是用于实现浏览器兼容性的。如果浏览器不支持 CSS 自定义属性，备用值也没什么用。它仅对支持 CSS 自定义属性的浏览器提供了一个备份机制，该机制仅当给定值未定义或是无效值的时候生效。
+> [!NOTE]
+> 备用值并不是用于实现浏览器兼容性的。如果浏览器不支持 CSS 自定义属性，备用值也没什么用。它仅对支持 CSS 自定义属性的浏览器提供了一个备份机制，该机制仅当给定值未定义或是无效值的时候生效。
 
 函数的第一个参数是[自定义属性](https://www.w3.org/TR/css-variables/#custom-property)的名称。如果提供了第二个参数，则表示备用值，当[自定义属性](https://www.w3.org/TR/css-variables/#custom-property)值无效时生效。第二个参数可以嵌套，但是不能继续平铺展开下去了，例如：
 
@@ -201,7 +203,8 @@ element {
 
 第二个例子展示了如何处理一个以上的 fallback。该技术可能会导致性能问题，因为它花了更多的时间在处理这些变量上。
 
-> **备注：** 像[自定义属性](https://www.w3.org/TR/css-variables/#custom-property)这些 fallback 语法允许使用逗号。比如 `var(--foo, red, blue)` 定义了一个 `red, blue` 的备用值——从第一个逗号到最后的全部内容，都会被作为备用值的一部分。
+> [!NOTE]
+> 像[自定义属性](https://www.w3.org/TR/css-variables/#custom-property)这些 fallback 语法允许使用逗号。比如 `var(--foo, red, blue)` 定义了一个 `red, blue` 的备用值——从第一个逗号到最后的全部内容，都会被作为备用值的一部分。
 
 ## 有效性和值
 
@@ -246,7 +249,8 @@ p {
 
 段落颜色并不是蓝色，因为无效代换导致了它被替换成了默认初始值的黑色。如果你直接写 `color: 16px` 的话，则会导致语法错误，而前面的定义则会生效（段落显示为蓝色）。
 
-> **备注：** 当 CSS 属性 - 值对中存在语法错误，该行则会被忽略。然而如果自定义属性的值无效，它并不会被忽略，从而会导致该值被覆盖为默认值。
+> [!NOTE]
+> 当 CSS 属性 - 值对中存在语法错误，该行则会被忽略。然而如果自定义属性的值无效，它并不会被忽略，从而会导致该值被覆盖为默认值。
 
 ## JavaScript 中的值
 

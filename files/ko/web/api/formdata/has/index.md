@@ -3,11 +3,14 @@ title: FormData.has()
 slug: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 인터페이스의 **`has()`** 메서드는 `FormData` 객체에 특정 키가 들어 있는지 여부를 나타내는 boolean 을 반환합니다.
 
-> **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!NOTE]
+> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
 ## Syntax
 

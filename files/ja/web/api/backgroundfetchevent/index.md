@@ -9,14 +9,14 @@ l10n:
 
 {{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchEvent`** インターフェイスは、 {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}} で実行されるバックグラウンドのフェッチイベントのためのイベント型です。
 
-これはイベント型で、`onbackgroundfetchabort` 、および、 `onbackgroundfetchclick` イベントハンドラプロパティに渡されます。
+これはイベント型で、`onbackgroundfetchabort` 、および、 `onbackgroundfetchclick` イベントハンドラープロパティに渡されます。
 
 {{InheritanceDiagram}}
 
 ## コンストラクター
 
 - {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}} {{Experimental_Inline}}
-  - : 新規に `BackgroundFetchEvent` オブジェクトを作成します。通常、このコンストラクタが使用されることはありません。なぜなら、これらのオブジェクトはブラウザによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
+  - : 新規に `BackgroundFetchEvent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## プロパティ
 

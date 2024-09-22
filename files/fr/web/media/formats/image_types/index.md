@@ -392,7 +392,8 @@ La prise en charge navigateur n'étant pas aussi large que pour les autres forma
 
 Le type de fichier BMP **(image Bitmap)** est le plus répandu sur les ordinateurs Windows, et n'est généralement utilisé que dans des cas particuliers pour les applications et contenus web.
 
-> **Attention :** Vous devriez généralement éviter d'utiliser le BMP pour le contenu des sites web, car ce n'est pas une utilisation généralement acceptée du format.
+> [!WARNING]
+> Vous devriez généralement éviter d'utiliser le BMP pour le contenu des sites web, car ce n'est pas une utilisation généralement acceptée du format.
 
 BMP soutient théoriquement une variété de représentations de données internes. La forme la plus simple, et la plus couramment utilisée, de fichier BMP est une image tramée non compressée, chaque pixel occupant 3 octets représentant ses composantes rouge, verte et bleue, et chaque ligne étant rembourrée avec des `0x00` octets à un multiple de 4 octets de large.
 
@@ -631,7 +632,8 @@ Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft p
 
 Un fichier ICO peut contenir plusieurs icônes, et commence par un répertoire contenant des détails sur chacune d'entre elles. Ce répertoire est suivi des données relatives aux icônes. Les données de chaque icône peuvent être soit une image [BMP](#bmp) sans l'en-tête du fichier, soit une image [PNG](#png) complète (y compris l'en-tête du fichier). Si vous utilisez des fichiers ICO, vous devez utiliser le format BMP, car la prise en charge du format PNG dans les fichiers ICO n'a été ajoutée qu'à partir de Windows Vista et pourrait ne pas être bien prise en charge.
 
-> **Attention :** Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site).
+> [!WARNING]
+> Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site).
 
 <table class="standard-table">
   <tbody>
@@ -873,7 +875,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Sans perte; sur la base de la
+        Avec perte; sur la base de la
         <a
           href="https://fr.wikipedia.org/wiki/Transformée_en_cosinus_discrète"
           >transformée en cosinus discrète</a

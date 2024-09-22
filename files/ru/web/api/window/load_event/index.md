@@ -3,6 +3,8 @@ title: load
 slug: Web/API/Window/load_event
 ---
 
+{{APIRef}}
+
 Событие `load` происходит когда ресурс и его зависимые ресурсы закончили загружаться.
 
 ## General info

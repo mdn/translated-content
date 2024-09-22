@@ -3,7 +3,10 @@ title: WebRTC 介绍
 slug: Web/API/WebRTC_API/Session_lifetime
 ---
 
-> **备注：** 此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。
+{{DefaultAPISidebar("WebRTC")}}
+
+> [!NOTE]
+> 此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。
 >
 > WebRTC 允许你将任意数据，音频或视频（或其任何组合）的点对点通信构建到浏览器应用程序中。在本文中，我们将介绍一个 WebRTC 会话的生命周期，从建立连接到不再需要时关闭连接。
 
@@ -75,4 +78,5 @@ LocalMediaStream object
 
 WebRTC 在 Firefox 浏览器的偏好选择选项是隐藏的。可以到 [about:config](/about:config) 这个页面设置 'media.navigator.enabled' 为 'true'。
 
-> **备注：** 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。
+> [!NOTE]
+> 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。

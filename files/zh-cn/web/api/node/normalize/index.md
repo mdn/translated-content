@@ -1,50 +1,70 @@
 ---
-title: Node.normalize()
+title: Node：normalize() 方法
 slug: Web/API/Node/normalize
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-`Node.normalize()` 方法将当前节点和它的后代节点”规范化“（normalized）。在一个"规范化"后的 DOM 树中，不存在一个空的文本节点，或者两个相邻的文本节点。
-
-注 1：“空的文本节点”并不包括空白字符 (空格，换行等) 构成的文本节点。
-
-注 2：两个以上相邻文本节点的产生原因包括：
-
-1. 通过脚本调用有关的 DOM 接口进行了文本节点的插入和分割等。
-2. HTML 中超长的文本节点会被浏览器自动分割为多个相邻文本节点。
+{{domxref("Node")}} 接口的 **`normalize()`** 方法将指定的节点及其所有子树转化为*规范化*形式。在规范化子树中，子树上的文本节点都不为空，且没有相邻的文本节点。
 
 ## 语法
 
-```plain
-element.normalize();
+```js-nolint
+normalize()
 ```
 
-## 例子
+### 参数
+
+无。
+
+### 返回值
+
+无。
+
+## 示例
+
+```html
+<output id="result"></output>
+```
 
 ```js
-var wrapper = document.createElement("div");
+const wrapper = document.createElement("div");
 
-wrapper.appendChild(document.createTextNode("Part 1 "));
-wrapper.appendChild(document.createTextNode("Part 2 "));
+wrapper.appendChild(document.createTextNode("第 1 部分"));
+wrapper.appendChild(document.createTextNode("第 2 部分"));
 
-// 这时 (规范化之前),wrapper.childNodes.length === 2
-// wrapper.childNodes[0].textContent === "Part 1 "
-// wrapper.childNodes[1].textContent === "Part 2 "
+let node = wrapper.firstChild;
+let result = "规范化之前：<br/>";
+while (node) {
+  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
+  node = node.nextSibling;
+}
 
 wrapper.normalize();
-// 现在 (规范化之后), wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2"
+
+node = wrapper.firstChild;
+result += "<br/><br/>规范化之后：<br/>";
+while (node) {
+  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
+  node = node.nextSibling;
+}
+
+const output = document.getElementById("result");
+output.innerHTML = result;
 ```
+
+{{ EmbedLiveSample("示例", "100%", "170")}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("Text.splitText()")}}
+- {{domxref("Text.splitText()")}}，它的相反操作。

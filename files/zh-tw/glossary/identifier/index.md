@@ -9,8 +9,6 @@ slug: Glossary/Identifier
 
 在 {{glossary("JavaScript")}} 中， 識別字衹能包含字母數字字符 (或 "$" 或 "\_")，并不能以數字開頭。識別字不同於字符串，字符串是數據而識別字是代碼的一部分。在 JavaScript 中，沒有辦法把識別字轉換為字符串，但有時候可能把字符串解析為識別碼。
 
-## 了解更多
+## 參見
 
-### 基礎知識
-
-- 維基百科上的 [識別字](https://zh.wikipedia.org/wiki/Identifier#In_computer_science)
+- 維基百科上的[識別字](https://zh.wikipedia.org/wiki/標識符)

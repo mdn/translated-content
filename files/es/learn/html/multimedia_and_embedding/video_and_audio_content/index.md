@@ -47,7 +47,8 @@ Una solución nativa podría resolver mucho de esto si es implementado correctam
 
 No te enseñaremos como crear archivos de audio y video — eso requiere un conocimiento completamente diferente. Por el contrario, te proporcionamos [archivos de audio y video de muestra con códigos de ejemplo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para que tu mismo experimentes, en caso de que no puedas conseguirlos por ti mismo.
 
-> **Nota:** Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultades que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
+> [!NOTE]
+> Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultades que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
 
 ### El elemento \<video>
 
@@ -99,11 +100,13 @@ Por ejemplo:
 
 Un reproductor de audio tenderá a reproducir directamente un track de audio. Por ejemplo un archivo MP3 u Ogg. No necesitan contenedores.
 
-> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/es/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
+> [!NOTE]
+> No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/es/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
 
 Los formatos anteriores existen para comprimir los archivos de audio y video volviéndolos manejables (el tamaño sin comprimir es muy grande). Los browsers contienen diferentes **{{Glossary("Codec","Codecs")}}**, como Vorbis o H.264, los cuales son usados para convertir el sonido y video comprimidos en binario y viceversa. Pero desafortunadamente, como indicamos antes, no todos los browsers soportan los mismos codecs, por lo tanto, habrá que proveer varios archivos para cada producción multimedia. Si te falta el codec correcto para decodificar el medio, simplemente no se reproducirá.
 
-> **Nota:** Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
+> [!NOTE]
+> Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
 
 Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
 
@@ -122,7 +125,8 @@ Tomamos el atributo `src` del tag `<video>` y en su lugar incluimos elementos se
 
 Cada elemento `<source>` tambien tiene un atributo `type` . Esto es opcional, pero se recomienda que se incluyan, ya que contienen {{glossary("MIME type","MIME types")}} de los archivos de vídeo y los navegadores pueden leerlos y omitir inmediatamente los vídeos que no tienen. Si no estan incluidos, los navegadores cargarán e intentarán reproducir cada archivo hasta que encuentren uno que funcione, lo que llevará aún más tiempo y recursos.
 
-> **Nota:** Nuestro [articulo sobre soporte de formatos multimedia](/es/docs/Web/HTML/Supported_media_formats) contiene algunos de los habituales {{glossary("MIME type","MIME types")}}.
+> [!NOTE]
+> Nuestro [articulo sobre soporte de formatos multimedia](/es/docs/Web/HTML/Supported_media_formats) contiene algunos de los habituales {{glossary("MIME type","MIME types")}}.
 
 ### Otras características de la etiqueta \<video>
 
@@ -153,7 +157,7 @@ Esto nos dará un resultado que se parece a esto:
 Las nuevas características son:
 
 - [`width`](/es/docs/Web/HTML/Element/video#width) y [`height`](/es/docs/Web/HTML/Element/video#height)
-  - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamaños establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
+  - : Puede controlar el tamaño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamaños establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
 - [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay)
   - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
 - [`loop`](/es/docs/Web/HTML/Element/video#loop)
@@ -191,7 +195,8 @@ Esto produce algo como lo siguiente en un navegador:
 
 ![Un sencillo reproductor de audio con botón de reproducción, temporizador, control de volumen y barra de progreso](audio-player.png)
 
-> **Nota:** Puedes [reproducir este ejemplo de audio](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> [!NOTE]
+> Puedes [reproducir este ejemplo de audio](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Esto ocupa menos espacio que un reproductor de video, ya que no hay un componente visual; solo necesita mostrar los controles para reproducir el audio. Otras diferencias con respecto al video HTML5 son las siguentes:
 
@@ -232,7 +237,8 @@ Ahora hablaremos de un concepto un poco más avanzado que es realmente útil con
 
 ¿No estaría bien poder ofrecer a estas personas una transcripción de las palabras que se pronuncian en el audio/vídeo? Pues bien, gracias al vídeo HTML5 se puede, con el formato [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) y el elemento {{htmlelement("track")}}.
 
-> **Nota:** "Transcribir" significa "escribir palabras habladas como texto". El texto resultante es una "transcripción".
+> [!NOTE]
+> "Transcribir" significa "escribir palabras habladas como texto". El texto resultante es una "transcripción".
 
 WebVTT es un formato para escribir archivos de texto que contienen múltiples cadenas de texto junto con metadatos tales como en qué momento del vídeo desea que se muestre cada cadena de texto, e incluso información limitada de estilo/posicionamiento. Estas cadenas de texto se llaman **cues**, y se pueden mostrar diferentes tipos para diferentes propósitos, siendo los más comunes:
 
@@ -280,7 +286,8 @@ El resultado será un vídeo con subtítulos, como éste:
 
 Para más detalles, lee [Añadir subtítulos a vídeos HTML5](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Puedes [encontrar el ejemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompaña a este artículo en Github, escrito por Ian Devlin (consulta también el [código fuente](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Este ejemplo utiliza algo de JavaScript para permitir a los usuarios elegir entre diferentes subtítulos. Ten en cuenta que para activar los subtítulos, tienes que pulsar el botón "CC" y seleccionar una opción: English, Deutsch o Español.
 
-> **Nota:** Las pistas de texto también te ayudan con {{glossary("SEO")}}, ya que a los motores de búsqueda les gusta especialmente el texto. Las pistas de texto incluso permiten a los motores de búsqueda enlazar directamente con un punto del vídeo.
+> [!NOTE]
+> Las pistas de texto también te ayudan con {{glossary("SEO")}}, ya que a los motores de búsqueda les gusta especialmente el texto. Las pistas de texto incluso permiten a los motores de búsqueda enlazar directamente con un punto del vídeo.
 
 ### Aprendizaje activo: Incorpora tu propio audio y vídeo
 

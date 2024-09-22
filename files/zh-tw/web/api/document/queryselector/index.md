@@ -56,9 +56,9 @@ var el = document.querySelector(".myclass");
 
 {{Compat}}
 
-## 規格文件
+## 規範
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+{{Specifications}}
 
 ## 詳見
 

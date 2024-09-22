@@ -40,7 +40,8 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat,
+      )
+      center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }
@@ -104,7 +105,8 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 {{cssxref("background-position")}} 属性允许你选择背景图片出现在它所应用的盒子上的位置。这使用了一个坐标系统，其中方框的左上角是 `(0,0)`，方框沿水平（`x`）和垂直（`y`）轴定位。
 
-> **备注：** 默认的 `background-position` 值是 `(0,0)`。
+> [!NOTE]
+> 默认的 `background-position` 值是 `(0,0)`。
 
 最常见的 `background-position` 值有两个单独的值——一个水平值后面跟着一个垂直值。
 
@@ -170,7 +172,8 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 当你这样做时，你可能会出现背景图片相互重叠的情况。背景将分层，最后列出的背景图片位于最下层，而之前的每张图片都堆在代码中紧随其后的那张图片之上。
 
-> **备注：** 渐变可以与常规的背景图像很好地混合在一起。
+> [!NOTE]
+> 渐变可以与常规的背景图像很好地混合在一起。
 
 其他 `background-*` 属性也可以像 `background-image` 一样使用逗号分隔的方式设置：
 
@@ -260,7 +263,8 @@ background-position:
 }
 ```
 
-> **备注：** 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> [!NOTE]
+> 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
 
 有各种各样的样式可以用于边框。在下面的例子中，我们为框的四个边使用了不同的边框样式。调整边框样式、宽度和颜色，看看边框是如何工作的。
 

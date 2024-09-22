@@ -26,7 +26,7 @@ slug: Web/HTML/Global_attributes/inputmode
 
 Атрибутом по умолчанию является `text`, которое учитывает локализацию пользователя.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

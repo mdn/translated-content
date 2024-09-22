@@ -3,6 +3,8 @@ title: u
 slug: Web/HTML/Element/u
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto subrayado.
@@ -58,6 +60,7 @@ Para obtener el mismo resultado puede usarse La propiedad CSS text-decoration: u
 
 Si por algún motivo necesita usar elementos desaprobados como u, recuerde que debe declarar un DOCTYPE transicional.
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO
 
 de momento no funciona

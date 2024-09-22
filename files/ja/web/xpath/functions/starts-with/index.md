@@ -3,7 +3,7 @@ title: starts-with
 slug: Web/XPath/Functions/starts-with
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。
 

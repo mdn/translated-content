@@ -3,6 +3,8 @@ title: ¿Cómo empiezo a diseñar mi sitio web?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Este artículo cubre el primer paso importante de cada proyecto: definir lo que se desea lograr con él.
 
 <table>
@@ -42,7 +44,8 @@ La técnica es esencial. Los músicos necesitan dominar su instrumento. Pero los
 
 Una discusión de horas con los amigos es un buen comienzo, pero inadecuado. Debes sentarte y estructurar tus ideas, para tener una visión clara sobre el camino que debes tomar para materializar tus ideas. Para hacer esto, sólo necesitas lápiz y papel y algo de tiempo para responder al menos las siguientes preguntas.
 
-> **Nota:** Hay innumerables maneras de llevar a cabo la ideación del proyecto. No podemos presentarlas a todas aquí (un libro entero no sería suficiente). Lo que presentamos aquí es un método sencillo para manejar lo que los profesionales llaman [Ideación de Proyectos](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Planificación de Proyectos](https://es.wikipedia.org/wiki/Planeamiento_de_proyectos) y [Gestión de Proyectos](https://es.wikipedia.org/wiki/Gesti%C3%B3n_de_proyectos).
+> [!NOTE]
+> Hay innumerables maneras de llevar a cabo la ideación del proyecto. No podemos presentarlas a todas aquí (un libro entero no sería suficiente). Lo que presentamos aquí es un método sencillo para manejar lo que los profesionales llaman [Ideación de Proyectos](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Planificación de Proyectos](https://es.wikipedia.org/wiki/Planeamiento_de_proyectos) y [Gestión de Proyectos](https://es.wikipedia.org/wiki/Gesti%C3%B3n_de_proyectos).
 
 ### ¿Qué es exactamente lo que quiero lograr?
 

@@ -31,7 +31,7 @@ isClosed = windowRef.closed;
 ```js
 // проверяет, если window.opener существует и не закрыт
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
@@ -55,6 +55,6 @@ function refreshPopupWindow() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 HTML5

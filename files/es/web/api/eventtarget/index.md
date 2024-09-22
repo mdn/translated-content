@@ -3,7 +3,7 @@ title: EventTarget
 slug: Web/API/EventTarget
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 `EventTarget` es una interfaz implementada por los objetos que pueden administrar eventos y sus escuchadores.
 

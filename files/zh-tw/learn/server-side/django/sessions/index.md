@@ -67,7 +67,8 @@ MIDDLEWARE = [
 
 下面的代碼片段顯示瞭如何獲取，設置和刪除與當前會話（瀏覽器）相關的鍵「 `my_car`」的某些數據。
 
-> **備註：** Django 的一大優點是，你無需考慮將會話綁定到視圖中當前請求的機制。 如果我們在視圖中使用以下片段，我們將知道有關`my_car` 的信息僅與發送當前請求的瀏覽器相關聯。
+> [!NOTE]
+> Django 的一大優點是，你無需考慮將會話綁定到視圖中當前請求的機制。 如果我們在視圖中使用以下片段，我們將知道有關`my_car` 的信息僅與發送當前請求的瀏覽器相關聯。
 
 ```python
 # Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
@@ -104,7 +105,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **備註：** 你可以更改行為，以便站點可以通過在你的項目設置（**locallibrary/locallibrary/settings.py**）中添加`SESSION_SAVE_EVERY_REQUEST = True` 來更新每個請求的數據庫/發送 cookie。
+> [!NOTE]
+> 你可以更改行為，以便站點可以通過在你的項目設置（**locallibrary/locallibrary/settings.py**）中添加`SESSION_SAVE_EVERY_REQUEST = True` 來更新每個請求的數據庫/發送 cookie。
 
 ## Simple example — getting visit counts
 
@@ -120,7 +122,8 @@ def index(request):
 
     # Number of visits to this view, as counted in the session variable.
     num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
+    num_visits += 1
+    request.session['num_visits'] = num_visits
 
     context = {
         'num_books': num_books,
@@ -136,7 +139,8 @@ def index(request):
 
 在這裡，我們首先獲取`'num_visits'`會話密鑰的值，如果之前未設置，則將其設置為 0。 每次接收到請求時，我們都將增加該值並將其存儲回會話中（對於下一次用戶訪問該頁面）。 然後將`num_visits` 變量傳遞到我們的上下文變量中的模板。
 
-> **備註：** 我們也可能會在此處測試瀏覽器是否甚至支持 cookie（例如，請參閱[How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/)）或設計我們的 UI，以便無論是否支持 cookie 都無關緊要。
+> [!NOTE]
+> 我們也可能會在此處測試瀏覽器是否甚至支持 cookie（例如，請參閱[How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/)）或設計我們的 UI，以便無論是否支持 cookie 都無關緊要。
 
 將以下區塊底部看到的行添加到\`\`動態內容''部分底部的主 HTML 模板(**/locallibrary/catalog/templates/index.html**)中以顯示上下文變量：
 

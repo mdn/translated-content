@@ -7,13 +7,14 @@ slug: Web/API/WebRTC_API/Using_data_channels
 
 {{domxref("RTCPeerConnection")}} 인터페이스를 사용하여 WebRTC Peerconnction을 연결하면 이제 두 Peer간의 커넥션을 통하여 미디어 데이터를 주고 받을수 있게됩니다. 그뿐아니라 WebRTC로 할수 있는 일은 더 있습니다. 이 가이드에서 우리는 peer connection에 데이터 채널을 추가하는 방법과 임의의 데이터, 즉 우리가 원하는 어떠한 포멧의 데이터들을 안전하게 주고 받는 방법을 배우게 될 것 입니다.
 
-> **참고:** 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
+> [!NOTE]
+> 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
 
 ## 데이터 채널 만들기
 
 {{domxref("RTCDataChannel")}}를 이용한 기초적인 데이터 전송은 아래의 두 방법중 하나를 이용하여 만들수 있습니다.
 
-- WebRTC가 전송수단을 만들게 하고 {{event("datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
+- WebRTC가 전송수단을 만들게 하고 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
 - 데이터 전송을 할 수 있는 코드를 스스로 작성하고 새로운 채널이 연결되었다는 것을 알려줄수 있는 코드를 작성해주십시오.
 
 위에서 언급한 두가지 방법을 각각 살펴보겠습니다. 우선은 가장 일반적으로 사용되는 첫번째 방법부터 살펴보겠습니다.

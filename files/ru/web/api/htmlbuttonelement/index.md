@@ -225,6 +225,6 @@ WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-cla
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML element implementing this interface: {{ HTMLElement("button") }}

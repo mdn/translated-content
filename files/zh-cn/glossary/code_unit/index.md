@@ -1,5 +1,5 @@
 ---
-title: 码元（Code unit）
+title: 码元
 slug: Glossary/Code_unit
 ---
 

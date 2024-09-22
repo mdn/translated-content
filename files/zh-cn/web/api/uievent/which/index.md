@@ -3,17 +3,11 @@ title: KeyboardEvent.which
 slug: Web/API/UIEvent/which
 ---
 
-{{ APIRef("DOM Events") }} {{Deprecated_header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 {{domxref("KeyboardEvent")}} 接口的 **`which`** 只读属性返回所按下键的数字 `keyCode` 或所按下字母数字键的字符代码 (`charCode`) 。
 
-## 语法
-
-```
-var keyResult = event.which;
-```
-
-### 返回值
+## 值
 
 - `keyResult` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
 

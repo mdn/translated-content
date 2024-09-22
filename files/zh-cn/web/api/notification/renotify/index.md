@@ -2,14 +2,12 @@
 title: Notification：renotify 属性
 slug: Web/API/Notification/renotify
 l10n:
-  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`renotify`** 只读属性指定在新通知替换旧通知后是否应当通知用户，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` 选项中指定。
-
-{{AvailableInWorkers}}
 
 ## 值
 

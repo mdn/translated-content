@@ -3,7 +3,7 @@ title: "Element: prepend() メソッド"
 short-title: prepend()
 slug: Web/API/Element/prepend
 l10n:
-  sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
+  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +15,7 @@ l10n:
 ```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### 引数

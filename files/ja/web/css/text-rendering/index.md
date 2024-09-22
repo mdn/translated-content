@@ -45,7 +45,8 @@ text-rendering: unset;
 
     しかし、 `geometricPrecision` は — レンダリングエンジンが完全に対応していれば — なめらかにテキストを拡縮することができます。倍率が大きい場合、文字列の描画があまり美しくならないかもしれませんが、寸法は Windows や Linux が対応しているフォントの大きさに切り上げられたり切り捨てられたりせず、期待通りになります。
 
-    > **メモ:** WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
+    > [!NOTE]
+    > WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
 
 ## 公式定義
 

@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-> **备注：** 在 `element:nth-child()` 的语法中，子元素的计数包括任何元素类型的兄弟子元素；但是只有当*该子元素位置上的*元素与选择器的其他组件匹配时，才被视为匹配。
+> [!NOTE]
+> 在 `element:nth-child()` 的语法中，子元素的计数包括任何元素类型的兄弟子元素；但是只有当*该子元素位置上的*元素与选择器的其他组件匹配时，才被视为匹配。
 
 ## 语法
 
