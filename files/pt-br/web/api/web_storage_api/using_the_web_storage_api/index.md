@@ -73,12 +73,12 @@ function storageAvailable(type) {
 ```
 
 > [!WARNING]
-> Desde a época em que esse artigo foi parcialmente traduzido, a propriedade [code](/en-US/docs/Web/API/DOMException/code) de `DOMException` (mostrada no código acima como `e.code`) ficou deprecada e portanto esse código mostrado acima não deve ser utilizado em implementações modernas e caso você tenha seguido esse exemplo, é sugerido que você atualize seu código antigo para a versão mais moderna, mostrada abaixo:
+> Desde a época em que esse artigo foi parcialmente traduzido, a propriedade [code](/pt-BR/docs/Web/API/DOMException/code) de `DOMException` (mostrada no código acima como `e.code`) ficou deprecada e portanto esse código mostrado acima não deve ser utilizado em implementações modernas e caso você tenha seguido esse exemplo, é sugerido que você atualize seu código antigo para a versão mais moderna, mostrada abaixo:
 
 ```js
-function storageAvailable(type){
+function storageAvailable(type) {
   let storage;
-  try{
+  try {
     storage = window[type];
     const x = "__storage_test__";
     storage.setItem(x, x);
@@ -191,14 +191,14 @@ imageForm.onchange = populateStorage;
 `Storage` só consegue armazenar e recuperar informações que estejam no tipo de dados string. Para outros tipos de dados, é preciso convertê-los para string. Para objetos simples e arrays, pode-se utilizar {{jsxref("JSON.stringify()")}}.
 
 ```js
-const person = { nome : "Alex" };
+const person = { nome: "Alex" };
 localStorage.setItem("user", person);
 console.log(localStorage.getItem("user")); // "[object Object]"; não é muito útil!
 localStorage.setItem("user", JSON.stringify(person));
 console.log(JSON.parse(localStorage.getItem("user"))); // { nome: "Alex" }
 ```
 
-Contudo não existe uma forma genérica para armazenar tipos de dados arbitrários. Mais que isso, o objeto recuperado é uma [deep copy](/en-US/docs/Glossary/Deep_copy) do objeto original e alterações na cópia não afetam o objeto original.
+Contudo não existe uma forma genérica para armazenar tipos de dados arbitrários. Mais que isso, o objeto recuperado é uma [deep copy](/pt-BR/docs/Glossary/Deep_copy) do objeto original e alterações na cópia não afetam o objeto original.
 
 ### Reagindo a mudanças no storage com StorageEvent
 
