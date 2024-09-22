@@ -43,7 +43,7 @@ l10n:
 
 - `media`
 
-    リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)です。
+  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)です。
 
 - `height`
 
@@ -145,6 +145,7 @@ l10n:
     height="400" />
 </picture>
 ```
+
 ## 技術的な詳細
 
 <table class="properties">
