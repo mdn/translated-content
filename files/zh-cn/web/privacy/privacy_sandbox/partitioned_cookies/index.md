@@ -64,7 +64,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 参见
 
-- [具有独立分区状态的 Cookie（CHIPS）——developer.chrome.com](https://developers.google.cn/privacy-sandbox/3pcd/chips?hl=zh-cn)
+- [具有独立分区状态的 Cookie（CHIPS）——developer.chrome.com](https://developers.google.cn/privacy-sandbox/3pcd/chips)
 - [CHIPS 解释](https://github.com/privacycg/CHIPS)
 
 <section id="Quick_links">
