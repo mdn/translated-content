@@ -11,7 +11,6 @@ em todas as telas, independentemente de qual seja o tamanho ou a resolução da 
 Essa abordagem, atualmente tornada como o padrão de boas práticas no contexto do desenvolvimento web, mudou drasticamente a forma como se projetavam páginas web até então e nesse artigo apresentamos algumas técnicas para dominá-la
 e aplicá-la de maneira efetiva em projetos no decorrer do seu aprendizado.
 
-
 <table class="learn-box standard-table">
   <tbody>
     <tr>
