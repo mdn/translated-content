@@ -111,7 +111,8 @@ Media queries can help with RWD, but are not a requirement. Flexible grids, rela
 
 ## Tecnologias de layout responsivo
 
-Sites responsivos são alicerçados em grids flexíveis 
+Sites responsivos são alicerçados em grids flexíveis
+
 <!-- -->
 Modern layout methods such as [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
 
