@@ -119,7 +119,7 @@ Modern layout methods such as [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS
 
 ### Multicol
 
-O mais antigo desses métodos de layout é o multicol -  quando você especifica uma `colum-count`, 
+O mais antigo desses métodos de layout é o multicol - quando você especifica uma `colum-count`,
 The oldest of these layout methods is multicol — when you specify a `column-count`, this indicates how many columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.
 
 ```css
