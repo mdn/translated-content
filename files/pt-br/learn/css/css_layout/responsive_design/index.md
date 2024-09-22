@@ -64,8 +64,6 @@ Já o site de largura fixa criava uma barra de rolagem horizontal em telas menor
 > [!NOTE]
 > As capturas de tela acima foram tiradas usando o [Responsive Design Mode](/pt-BR/docs/Tools/Responsive_Design_Mode) no Firefox DevTools.
 
-
-
 Contudo, na medida que a Web para dispositivos móveis começava a se tornar realidade com os primeiros telefones com essas características, empresas que desejavam adotar os dispositivos móveis geralmente criavam uma versão mobile do seu site, com uma URL diferente (geralmente algo como m.exemplo.com ou exemplo.mobi) Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas.
 
 Além disso, esses sites para celular geralmente ofereciam uma experiência muito restrita. À medida que os dispositivos móveis se tornaram mais poderosos e capazes de exibir sites completos, os usuários de celular ficaram frustrados, pois, se viram presos na versão mobile do site e incapazes de acessar todas as informações que faziam parte da versão para desktop.
