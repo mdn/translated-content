@@ -64,7 +64,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console.timeEnd()")}}
   - : Останавливает указанный [таймер](/ru/docs/Web/API/console#Timers) и записывает в лог, сколько прошло секунд от его старта.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Ставит маркер в браузерном инструменте измерения производительности [Timeline](https://developer.chrome.com/docs/devtools/?hl=ru) или [Waterfall](/ru/docs/Tools/Производительность/Waterfall).
+  - : Ставит маркер в браузерном инструменте измерения производительности [Timeline](https://developer.chrome.com/docs/devtools/) или [Waterfall](/ru/docs/Tools/Производительность/Waterfall).
 - {{domxref("console.trace()")}}
   - : Вывод [трассировки стека](/ru/docs/Web/API/console#Stack_traces).
 - {{domxref("console.warn()")}}

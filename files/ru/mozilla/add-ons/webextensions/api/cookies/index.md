@@ -78,7 +78,7 @@ In order to use this API, an add-on must specify the "cookies" [API permission](
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies?hl=ru). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
+> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
