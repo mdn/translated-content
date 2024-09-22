@@ -173,7 +173,6 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 
 ## Imagens Responsivas
 
-
 The simplest approach to responsive images was as described in Marcotte's early articles on responsive design. Basically, you would take an image that was at the largest size that might be needed, and scale it down. This is still an approach used today, and in most stylesheets you will find the following CSS somewhere:
 
 ```css
