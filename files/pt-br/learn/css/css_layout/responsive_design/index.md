@@ -194,7 +194,6 @@ You can find a detailed [guide to Responsive Images in the Learn HTML section](/
 
 Um elemento que não foi abordado nos trabalhos iniciais de design responsivo foi o da tipografia responsiva. Essencialmente, esse elemento descreve as mudanças nos tamanhos de fonte dentro das media queries ou através de unidades de viewport para reagir de forma reflexiva à quantidade de tela disponível.
 
-
 ### Usando Media Queries para tipografia responsiva
 
 Neste exemplo, queremos configurar a nossa etiqueta de cabeçalho de nível 1 (h1) para ter a medida de `4rem`, ou seja 4 vezes o tamanho da nossa fonte base. Esse é uma etiqueta bem grande e por isso desejamos que esse tamanho extra grande ocorra somente em telas com tamanho suficiente para comportá-lo. 
