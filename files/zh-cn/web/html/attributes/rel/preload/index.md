@@ -223,7 +223,7 @@ document.body.appendChild(preloadedScript);
 还存在其他预加载特性，但都不如 `<link rel="preload">` 适合该目的：
 
 - `<link rel="prefetch">` 在浏览器中支持已久，但它是用于预取将在下一次导航/页面加载时使用的资源（例如，当你跳转到下一页时）。这是可以的，但对于当前页面没有用！此外，浏览器会给预取（`prefetch`）的资源比预加载（`preload`）的资源更低的优先级——当前页面比下一页更重要。有关更多详细信息，请参阅{{Glossary("prefetch", "预取")}}。
-- `<link rel="prerender">` 在后台渲染指定的网页，如果用户导航到该页面，可以加速其加载。由于有可能浪费用户的带宽，Chrome 将 `prerender` 视为 [NoState 预取](https://developer.chrome.google.cn/blog/nostate-prefetch?hl=zh-cn)。
+- `<link rel="prerender">` 在后台渲染指定的网页，如果用户导航到该页面，可以加速其加载。由于有可能浪费用户的带宽，Chrome 将 `prerender` 视为 [NoState 预取](https://developer.chrome.google.cn/blog/nostate-prefetch)。
 - `<link rel="subresource">` {{non-standard_inline}} 一段时间以前在 Chrome 中得到了支持，其目的是解决与 `preload` 相同的问题，但它存在一个问题：没有办法确定项目的优先级（`as` 当时还不存在），所以它们都是以相当低的优先级获取的。
 - 有许多基于脚本的资源加载器，但它们无法控制浏览器的获取优先级队列，并面临着同样的性能问题。
 

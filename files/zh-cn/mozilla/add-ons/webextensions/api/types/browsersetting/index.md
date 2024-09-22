@@ -11,7 +11,7 @@ l10n:
 
 它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，和监听其值的变化。
 
-请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.google.cn/docs/extensions/reference/api/types?hl=zh-cn?hl=zh-cn#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
+请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.google.cn/docs/extensions/reference/api/types?hl=zh-cn#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
 
 ## 方法
 

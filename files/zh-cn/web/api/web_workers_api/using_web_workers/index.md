@@ -804,7 +804,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 要了解如何调试 Web Worker，请参阅每个浏览器的 JavaScript 调试器的文档：
 
-- [Chrome Sources panel](https://developer.chrome.google.cn/docs/devtools/sources?hl=zh-cn)
+- [Chrome Sources panel](https://developer.chrome.google.cn/docs/devtools/sources)
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## worker 中可用的函数和接口

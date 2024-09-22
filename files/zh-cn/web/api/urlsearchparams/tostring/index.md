@@ -48,4 +48,4 @@ console.log(params.toString()); // 输出“foo=1&bar=2&foo=4”
 ## 参见
 
 - {{domxref("URL")}} 接口。
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams?hl=zh-cn)
+- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams)

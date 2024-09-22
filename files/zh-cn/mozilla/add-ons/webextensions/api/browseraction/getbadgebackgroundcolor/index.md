@@ -62,7 +62,7 @@ browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction?hl=zh-cn#method-getBadgeBackgroundColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-getBadgeBackgroundColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

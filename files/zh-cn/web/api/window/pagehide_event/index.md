@@ -53,7 +53,7 @@ onpagehide = (event) => {};
 
 如果你特别想要检测页面卸载事件，`pagehide` 事件是最佳选项。
 
-有关此事件如何与页面生命周期中其他事件相关的更多信息，请参阅[页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api?hl=zh-cn) 指南。
+有关此事件如何与页面生命周期中其他事件相关的更多信息，请参阅[页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api) 指南。
 
 ## 示例
 
@@ -92,6 +92,6 @@ window.onpagehide = (event) => {
 ## 参见
 
 - {{domxref("Window.pageshow_event", "pageshow")}} 事件。
-- [页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api?hl=zh-cn#developer-recommendations-for-each-state) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指南。
+- [页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指南。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)：是一个 JavaScript 库，用于处理跨浏览器的页面生命周期行为不一致问题。
 - [回退或前进缓存](https://web.dev/articles/bfcache)解释了什么是回退或前进缓存，以及它对各种页面生命周期事件的影响。

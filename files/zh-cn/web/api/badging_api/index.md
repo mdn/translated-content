@@ -83,5 +83,5 @@ navigator.clearAppBadge();
 
 ## 参见
 
-- [应用程序图标标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api?hl=zh-cn)
+- [应用程序图标标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api)
 - [Badging API Explainer](https://github.com/w3c/badging/blob/main/explainer.md)

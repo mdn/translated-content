@@ -316,7 +316,7 @@ Netlify 部分的内容就到此为止。我们可以选择更改 Netlify 项目
 
 - 能否在构建步骤中[压缩图片](https://github.com/ralscha/parcel-plugin-compress)？
 - 能否将 React 换成[更小的](https://preactjs.com/)依赖？
-- 能否添加更多测试来防止糟糕的构建部署，例如[性能审核](https://developer.chrome.google.cn/docs/lighthouse/performance/performance-scoring?hl=zh-cn)？
+- 能否添加更多测试来防止糟糕的构建部署，例如[性能审核](https://developer.chrome.google.cn/docs/lighthouse/performance/performance-scoring)？
 - 能否设置一个通知，令你及时得知部署成功与否？
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

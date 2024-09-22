@@ -85,4 +85,4 @@ navigator.usb.getDevices().then((devices) => {
 
 ## 参见
 
-- [通过网页访问 USB 设备](https://developer.chrome.google.cn/docs/capabilities/usb?hl=zh-cn)
+- [通过网页访问 USB 设备](https://developer.chrome.google.cn/docs/capabilities/usb)

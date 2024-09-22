@@ -227,6 +227,6 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 
 - {{HTTPHeader("Permissions-Policy")}} HTTP 标头
 - iframe 的 {{HTMLElement("iframe", "allow", "#属性")}} 属性
-- [使用权限特性控制浏览器特性](https://developer.chrome.google.cn/docs/privacy-security/permissions-policy?hl=zh-cn)：使用指南，其中还包含几个演示链接。
+- [使用权限特性控制浏览器特性](https://developer.chrome.google.cn/docs/privacy-security/permissions-policy)：使用指南，其中还包含几个演示链接。
 - [chromestatus.com 上的权限/特性策略](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)

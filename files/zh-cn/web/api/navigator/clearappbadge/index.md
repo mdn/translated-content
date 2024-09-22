@@ -50,4 +50,4 @@ navigator.clearAppBadge();
 
 ## 参见
 
-- [应用程序图标的标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api?hl=zh-cn)
+- [应用程序图标的标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api)

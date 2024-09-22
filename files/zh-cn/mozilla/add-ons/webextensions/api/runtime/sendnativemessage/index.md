@@ -65,7 +65,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
+> 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
 >
 > 微软 Edge 的兼容性数据由 Microsoft Corporation 提供，并且包含在这里基于 Creative Commons Attribution 3.0 United States License。
 

@@ -112,4 +112,4 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 - [`Vary` HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Vary)
 - [客户端提示的基础架构](https://wicg.github.io/client-hints-infrastructure/)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [使用用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints?hl=zh-cn)（web.dev）
+- [使用用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（web.dev）
