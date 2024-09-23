@@ -13,7 +13,7 @@ l10n:
 
 当 `aria-disabled` 属性设置为 `true` 时，它表示该元素及其所有可聚焦的子元素被视为处于禁用状态。此声明将告知使用辅助技术（如屏幕阅读器）的人，这些元素不应被编辑或以其他方式操作。
 
-与 HTML 的 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 布尔属性不同，后者会将表单控件语义上标识为禁用状态，改变其样式以反映该状态，并抑制所有功能，使元素的值无法参与表单提交，而 `aria-disabled="true"` <strong>仅仅</strong> 在语义上暴露这些元素为禁用状态。Web 开发者必须手动确保在暴露为禁用状态时，这些元素的功能被抑制。
+与 HTML 的 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 布尔属性不同，后者会将表单控件语义上标识为禁用状态，改变其样式以反映该状态，并抑制所有功能，使元素的值无法参与表单提交，而 `aria-disabled="true"` <strong>仅仅</strong>在语义上暴露这些元素为禁用状态。Web 开发者必须手动确保在暴露为禁用状态时，这些元素的功能被抑制。
 
 当需要禁用本地 HTML 表单控件时，开发者需要指定 `disabled` 属性，因为它提供了禁用控件的所有一般预期功能。然而，有时可能需要将元素暴露为禁用状态，但仍可供用户通过 <kbd>Tab</kbd> 键进行导航。这样可以提高其可发现性，因为这些元素不会从网页的焦点顺序中移除，`aria-disabled` 不会改变这些元素的聚焦性，也不会默认通过浏览器样式使其变得暗淡，使其更易于阅读。一些例子包括：
 
@@ -32,7 +32,7 @@ l10n:
 <div role="button" aria-disabled="true" tabindex="-1">编辑</div>
 ```
 
-类似于需要使用 JavaScript 确保设置 `aria-disabled="true"` 的元素不可操作，该元素还需要样式调整。与 HTML 的 `disabled` 属性相反，指定它会应用 `:disabled` 用户代理样式，而添加 `aria-disabled="true"` 则不会。可以使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`来样式化元素。
+类似于需要使用 JavaScript 确保设置 `aria-disabled="true"` 的元素不可操作，该元素还需要样式调整。与 HTML 的 `disabled` 属性相反，指定它会应用 `:disabled` 用户代理样式，而添加 `aria-disabled="true"` 则不会。可以使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]` 来样式化元素。
 
 ```css
 [aria-disabled="true"] {
