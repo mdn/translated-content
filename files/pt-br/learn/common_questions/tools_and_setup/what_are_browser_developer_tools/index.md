@@ -94,7 +94,7 @@ Descubra mais sobre o Inspetor em diferentes navegadores:
 
 - [Inspetor de páginas do Firefox](/pt-BR/docs/Tools/Page_Inspector)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
-- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/) (Inspetor da Opera funciona da mesma forma)
+- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom) (Inspetor da Opera funciona da mesma forma)
 - [Inspetor do Safari DOM e explorador de estilo](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## O depurador JavaScript
