@@ -116,7 +116,7 @@ form.addEventListener("submit", (event) => {
 });
 ```
 
-为表单元素添加了一个提交事件处理程序。首先调用{{domxref("Event.preventDefault()", "preventDefault()")}}阻止浏览器内置的表单提交，这样我们就可以接手了。然后，调用 `sendData()` 来获取表单元素并将其传递给 `FormData` 构造函数。 
+为表单元素添加了一个提交事件处理程序。首先调用{{domxref("Event.preventDefault()", "preventDefault()")}}阻止浏览器内置的表单提交，这样我们就可以接手了。然后，调用 `sendData()` 来获取表单元素并将其传递给 `FormData` 构造函数。
 
 之后，我们使用 `fetch()` 以 HTTP `POST` 请求的形式发送 `FormData` 实例。
 
