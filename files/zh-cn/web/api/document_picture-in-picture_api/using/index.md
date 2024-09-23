@@ -10,7 +10,7 @@ l10n:
 本指南提供了 {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} 典型用法的详细指导。
 
 > [!NOTE]
-> 你可以在 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)中看到特色演示（另请参阅完整的 [源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
+> 你可以在 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)中看到特色演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
 
 ## 示例 HTML
 
@@ -18,9 +18,7 @@ l10n:
 
 ```html
 <div id="container">
-  <p class="in-pip-message">
-    视频播放器当前位于单独的画中画窗口中。
-  </p>
+  <p class="in-pip-message">视频播放器当前位于单独的画中画窗口中。</p>
   <div id="player">
     <video
       src="assets/bigbuckbunny.mp4"
@@ -176,8 +174,7 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 });
 ```
 
-> [!NOTE]
-> {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
+> **备注：** {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
 
 ## 访问元素并处理事件
 
