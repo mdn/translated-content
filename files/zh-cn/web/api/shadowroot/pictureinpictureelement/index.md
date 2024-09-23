@@ -2,7 +2,7 @@
 title: ShadowRoot：pictureInPictureElement 属性
 slug: Web/API/ShadowRoot/pictureInPictureElement
 l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+  sourceCommit: bb4d21e3c6e71db4e0ba983a450d6ed628e82670
 ---
 
 {{APIRef("Picture-in-Picture API")}}
