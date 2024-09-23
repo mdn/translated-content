@@ -2,7 +2,7 @@
 title: PictureInPictureEvent
 slug: Web/API/PictureInPictureEvent
 l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+  sourceCommit: bb4d21e3c6e71db4e0ba983a450d6ed628e82670
 ---
 
 {{APIRef("Picture-in-Picture API")}}
