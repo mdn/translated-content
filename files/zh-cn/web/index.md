@@ -2,7 +2,7 @@
 title: 面向开发者的 Web 技术
 slug: Web
 l10n:
-  sourceCommit: 4c305e35916e89c5e34e4e1b70b2f56f0bcfc6e6
+  sourceCommit: c640274a19227cd5790912ea76841732baa6731f
 ---
 
 <section id="Quick_links">
@@ -21,8 +21,12 @@ l10n:
   - : 让更多人能够使用你的网站，即使他们的某些能力受限。
 - [性能](/zh-CN/docs/Web/Performance)
   - : 让网站上的内容尽可能快地变得可用和可交互。
+- [隐私](/zh-CN/docs/Web/Privacy)
+  - : 保护用户的个人数据。
 - [安全](/zh-CN/docs/Web/Security)
   - : 保护用户免受数据泄露和数据盗窃、侧信道攻击，以及跨站脚本、内容注入和点击劫持之害。
+- [词汇表](/zh-CN/docs/Glossary)
+  - : Web 相关术语的定义。
 
 ## Web 技术参考
 
@@ -46,6 +50,8 @@ l10n:
   - : 可缩放矢量图形用于创建可平滑地缩放至任意尺寸的图像。
 - [MathML](/zh-CN/docs/Web/MathML)
   - : 通过 MathML 能在 Web 上显示复杂的数学符号。
+- [URI](/zh-CN/docs/Web/URI)
+  - : 不同的技术（包括：浏览器自身通过地址栏）以不同的方式使用统一资源定位符识别资源。
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
   - : WebDriver 是一种浏览器自动化机制，可通过模拟真人使用浏览器的操作远程控制浏览器。被广泛应用于 Web 应用的跨浏览器测试。
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
@@ -54,8 +60,16 @@ l10n:
   - : Web 应用清单能让用户将 Web 应用安装到其设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用能提供类似原生移动应用的用户体验。
-- [词汇表](/zh-CN/docs/Glossary)
-  - : Web 相关术语的定义。
+- [OpenSearch](/zh-CN/docs/Web/OpenSearch)
+  - : OpenSearch 允许网站描述自身的搜索引擎，以便浏览器或客户端应用程序能使用那个搜索引擎。
+- [XML](/zh-CN/docs/Web/XML)
+  - : 可扩展标记语言是可由[文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)严格序列化的一种语言。
+- [XSLT](/zh-CN/docs/Web/XSLT)
+  - : 可扩展样式表语言转换是一种基于 [XML](/zh-CN/docs/Web/XML/XML_introduction) 的语言，和专门的处理软件一起使用，用于 XML 文档转换。
+- [XPath](/zh-CN/docs/Web/XPath)
+  - : XPath 使用非 XML 语法来提供一种灵活地定位（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分的方法。它也可以用于检查文档中某个定位节点是否与某个模式（pattern）匹配。
+- [EXSLT](/zh-CN/docs/Web/EXSLT)
+  - : EXSLT 是一组 [XSLT](/zh-CN/docs/Web/XSLT) 的扩展。
 
 ## 开发者工具文档
 
@@ -65,5 +79,5 @@ l10n:
   - : Chrome 内置的 Web 开发者工具的文档。
 - [Safari Web 监视器](https://webkit.org/web-inspector/)
   - : Safari 内置的 Web 开发者工具的文档。
-- [Edge 开发者工具](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
+- [Edge 开发者工具](https://docs.microsoft.com/zh-CN/microsoft-edge/devtools-guide-chromium/landing/)
   - : Edge 内置的 Web 开发者工具的文档。
