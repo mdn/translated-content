@@ -105,6 +105,7 @@ Il existe toute une variété d'outils, à choisir en fonction de vos compétenc
 
 Parmi les autres outils existants, on peut citer :
 
+- [Intel XDK (en anglais)](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — une alternative très intéressante, similaire à CocoonIO.
 - [Electron](https://www.electronjs.org/) — connu sous Atom Shell — est un outil open-source et multi-plateformes de GitHub.
 - [Manifold.js](https://manifoldjs.com/) — cet outil de l'équipe Microsoft peut créer des distributions natives de jeux HTML5 depuis iOS, Android et Windows.
 
