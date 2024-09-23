@@ -228,7 +228,7 @@ window.addEventListener("load", () => {
 
 {{ EmbedLiveSample('标签示例', '100%', 200) }}
 
-为了测试上述示例，请更改 `https://live.mdnplay.dev` 网站的[发送通知设置](https://support.mozilla.org/zh-CN/kb/firefox-page-info-window#w_permissions)。
+为了测试上述示例，请更改 `https://live.mdnplay.dev` 网站的[发送通知设置](https://support.mozilla.org/zh-CN/kb/页面信息窗口#w_quan-xian)。
 
 ## 参见
 

@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法向用户为当前来源请求显示通知的权限。
 
-该方法返回一个 {{jsxref("Promise")}}，该字符串表示是否授予或拒绝权限。
+该方法返回一个 {{jsxref("Promise")}}，会兑现一个表示是否授予或拒绝权限的字符串。
 
 ## 语法
 
