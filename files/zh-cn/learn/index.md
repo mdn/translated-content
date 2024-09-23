@@ -1,88 +1,105 @@
 ---
 title: 学习 Web 开发
 slug: Learn
+l10n:
+  sourceCommit: 3ab7947b53ae1a8ba41111b29c34585a188718ae
 ---
 
 {{LearnSidebar}}
 
-欢迎来到 MDN 学习区。本系列文章旨在为零基础 Web 开发初学者提供指导和开始编写网站代码所需的所有内容。
+欢迎来到 MDN 学习区。本系列文章意在为 Web 开发的纯新手提供编写网站的基本技巧，而非意在让你从“新手”变成“专家”，但能让你从“新手”变得“熟练”。从那之后，你就能开始以你自己的方式学习 [MDN 的其余部分](/zh-CN)，和其他需要大量前置知识的中高级资源。
 
-该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其他中、高级资源。
-
-从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，亦或是仅仅想了解一点点 Web 技术，我们都希望你能感到宾至如归。
+从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，抑或是仅想进一步了解 Web 技术的工作原理，我们都希望你能感到宾至如归。
 
 ## 学习起点
 
-- 零基础的初学者
-  - : 如果你完全没有 Web 开发经验，那么我们推荐从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)部分开始，该部分教程通过实践的方式向你介绍 Web 开发。
-- 有一定基础
-  - : 如果你已经具备了一定的开发知识，下一步就是深入学习 {{glossary("HTML")}} 和 {{glossary("CSS")}}。先学习 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)，再学习 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)。
-- 学习脚本编写
-  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过 [JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
-- 框架与工具
-  - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
+你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始学习。除此之外，你应该从下面的专题开始学习。
+
+- HTML 和 CSS
+  - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
+- JavaScript
+  - : JavaScript 为网站提供交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)开始学习。
+- 框架和工具
+  - : 掌握原生 HTML、CSS 和 JavaScript 的基本知识之后，你应该学习[客户端 Web 开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)，接着考虑钻研[客户端 JavaScript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)。你也应该考虑学习[服务器端网站编程](/zh-CN/docs/Learn/Server-side)的基础知识。
 
 > [!NOTE]
-> 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
+> 在[术语表](/zh-CN/docs/Glossary)中能找到术语定义。此外，要是有和 Web 开发相关的特定问题，[常见问题](/zh-CN/docs/Learn/Common_questions)中的内容也许会帮助到你。
 
 > [!CALLOUT]
 >
-> #### 想要成为一名前端工程师？
+> #### 想成为一名前端 Web 开发者吗？
 >
-> 如果你想要成为一名前端 Web 工程师而又不确定首先要学习什么，我们建议你使用 [MDN 教学课程](/en-US/curriculum/)来规划学习。它提供了结构化的学习路径，涵盖成为一名成功的前端开发人员所需的基本技能与实践，以及推荐的学习资源。
+> 你要是想成为一名前端 Web 开发者，但不确定该从哪开始学习，我们会建议使用 [MDN 课程](/en-US/curriculum/)作为你的学习计划。它提供一个结构化的学习路径，包含：成为一名成功的前端开发者所需的基本技巧和练习，以及推荐学习资源。
 >
 > [**现在开始**](/en-US/curriculum/)
 
-## 涵盖的主题
+## 涵盖的专题
 
-以下列表包含了 MDN 学习区涵盖的所有主题：
+下面列表包含 MDN 学习区全部的专题。
 
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
-  - : 为零基础初学者提供实用的 Web 开发入门简介。
-- [HTML 构建网站](/zh-CN/docs/Learn/HTML)
-  - : HTML 是用于构建网页的内容并定义其含义或目的的语言。该专题将详细讲解 HTML。
-- [CSS 风格化站点](/zh-CN/docs/Learn/CSS)
-  - : CSS 是用于对网页内容进行设计、布局或添加动画等行为的语言。该专题对 CSS 进行了全面介绍。
-- [JavaScript - 动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
-  - : JavaScript 是用于向网页添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的所有重点。
-- [Web 表单 - 操作用户数据](/zh-CN/docs/Learn/Forms)
-  - : Web 表单是用于进行用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
-- [无障碍 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
-  - : “无障碍”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
-- [Web 性能优化 - 让网站更快做出响应](/zh-CN/docs/Learn/Performance)
-  - : Web 性能是确保网络应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
-- [工具与测试](/zh-CN/docs/Learn/Tools_and_testing)
-  - : 该专题涵盖了开发人员常用的效率工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
+  - : 为纯新手提供实用的 Web 开发介绍。
+- [HTML——为 Web 提供结构](/zh-CN/docs/Learn/HTML)
+  - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该专题将详细讲解 HTML。
+- [CSS——为 Web 提供样式](/zh-CN/docs/Learn/CSS)
+  - : CSS 是用于为 Web 内容添加样式、对 Web 内容进行布局、添加诸如动画的行为的语言。该专题对 CSS 做了全面的覆盖。
+- [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
+  - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
+- [Web 表单——操作用户数据](/zh-CN/docs/Learn/Forms)
+  - : Web 表单是用于和用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题涵盖 Web 表单的结构、样式和交互相关的全部要点。
+- [无障碍——让每个人都能使用 Web](/zh-CN/docs/Learn/Accessibility)
+  - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该专题包含一切所需了解的信息。
+- [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
+  - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
+- [MathML](/zh-CN/docs/Learn/MathML)
+  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该专题讲解 MathML。
+- [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
+  - : 该专题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
 - [服务器端网站编程](/zh-CN/docs/Learn/Server-side)
-  - : 即使你专注于客户端的 Web 开发，了解服务器和服务端代码的运行机制仍然很有用。该专题简单介绍了服务端的运作机制，并包含了两份分别有关使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的教程。
+  - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该专题对服务器端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
+
+## 任务和评估
+
+在 MDN 的学习 Web 开发部分，有许多独立的任务和评估，等待你完成。有两种主要类型：
+
+- “技能测试”任务，例如，在[代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#技能测试！)。
+- 在某些模块的结尾处，包含更深入的**评估**，例如，[图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)。
+
+每个类型都有相应的评分指南和推荐解决方案，可用于帮助你评估你的工作。某些模式能让你更容易地找到这些资源，例如：
+
+- 上面的**技能测试**任务示例的评分指南和资源位于 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>。
+- 上面的**评估**示例的评分指南和资源位于 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>。
+
+> [!NOTE]
+> 任务和评估中的评分指南及其它资源大多数位于 [`mdn/learning-area`](https://github.com/mdn/learning-area/)，还有一些位于 [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)。
 
 ## 获取代码示例
 
-学习区的所有代码示例都可以在 GitHub 上的 [MDN 学习区示例中文版](https://github.com/roy-tian/learning-area/) 上寻得。如果你想把获取所有代码示例的副本，直接 [包含最新 master 分支内容的压缩文件](https://github.com/roy-tian/learning-area/archive/master.zip) 即可。
+学习区的所有代码示例都[可以在 Github 上找到](https://github.com/mdn/learning-area/)。如果你想将代码示例都复制到你的电脑，最简单的方式就是[下载包含最新 main 分支内容的压缩文件](https://codeload.github.com/mdn/learning-area/zip/main)。
 
-如果你希望以更灵活的方式复制代码仓库并随时更新本地副本，可参考以下更复杂的步骤：
+如果你更喜欢以一种更灵活的方式（允许自动更新）复制仓库，你可以参考下面复杂一点的指导：
 
-1. 在电脑上安装 Github 底层使用的版本控制系统 [Git](https://git-scm.com/downloads)。
+1. 在电脑上安装 [Git](https://git-scm.com/downloads)。它是 Github 底层使用的版本控制系统。
 
-2. 打开操作系统的命令提示符（[Windows](https://docs.microsoft.com/zh-cn/windows/terminal/)）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)、[macOS](https://support.apple.com/zh-cn/guide/terminal/welcome/mac)）。
+2. 打开电脑的[命令提示符](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）或终端（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)、[macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）。
 
-3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
+3. 要将学习区仓库复制到名为 learning-area 的目录（learning-area 目录将位于命令提示符/终端指向的当前目录中），使用下面的命令：
 
    ```bash
-   git clone https://github.com/roy-tian/learning-area
+   git clone https://github.com/mdn/learning-area
    ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)) 进入该目录，查找所需文件。
+4. 现在，你能通过访达/文件资源管理器或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)进入目录并寻找你想要的文件。
 
-你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
+你可以将 GitHub 上的主版本的任意改动更新到本地 `learning-area` 仓库，步骤如下：
 
-1. 在命令提示符 / 终端中使用 `cd` 指令进入 `learning-area` 文件夹。例如，当你在父目录时：
+1. 在命令提示符/终端中使用 `cd` 命令进入 `learning-area` 目录。例如，假设你在 `learning-area` 目录的父目录中：
 
    ```bash
    cd learning-area
    ```
 
-2. 执行以下命令以更新仓库：
+2. 使用下列命令更新仓库：
 
    ```bash
    git pull
@@ -90,29 +107,23 @@ slug: Learn
 
 ## 联系我们
 
-如果你想就任何事宜联系我们，最好的方式是在[论坛](https://discourse.mozilla.org/c/mdn/236)上留言。如果你认为网站上有任何错误或遗漏、请求新的学习主题、针对你不理解的部分请求帮助、或提出任何其他问题，我们都期待听到你的意见。
+如果你因事想与我们取得联系，请使用[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)。如果你认为网站上有任何错误或遗漏、想请求新的学习主题、针对不理解的部分想请求帮助，或想提出任何其他问题，我们愿意倾听你的声音。
 
-如果你有兴趣帮助我们开发或改进社区内容，请阅读[如何做出贡献](/zh-CN/docs/MDN/Community/Contributing)部分并联系我们！无论你是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
+如果你对帮助开发或改进内容感兴趣，请阅读[如何做出贡献](/zh-CN/docs/MDN/Community/Contributing)并联系我们！无论你是学习者、老师，还是有经验的 Web 开发者，抑或是其他对帮助改善学习体验感兴趣的人，我们都不胜荣幸！
 
 ## 参见
 
-- [Mozilla 开发者新闻通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
-  - : 我们为 Web 开发者编写的新闻报，对各水平开发者而言都是优秀的资源。
+- [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 课程合作伙伴_</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业道路*教授成为合格的前端 Web 开发者所需的知识，这里有有趣的交互式课程和挑战、有学识的老师以及提供帮助的社区。让你从零到获得第一份前端工作！许多课程有单独的免费版本。
 - [学习 JavaScript](https://learnjavascript.online/)
-  - : 为有进取心的 Web 开发人员准备的优秀资源——在互动环境中学习 JavaScript，其包含由自动评估系统提供指引的简短的课程和互动测试。前 40 节课为免费课程，而想要购买完整的付费课程只需一次性支付少量费用。
-- [揭开 Web 的面纱](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : 面向 Web 开发的零基础教学视频系列，由 [Jérémie Patonnier](https://twitter.com/JeremiePat) 出品。
+  - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中学习 JavaScript，包含简短的课程和自动评估的交互式测试。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
 - [Codecademy](https://www.codecademy.com/)
-  - : 用于从零学习编程语言的优秀交互式网站。
-- [BitDegree](https://www.bitdegree.org/learn/)
-  - : 用游戏的方式学习基础编程理论。主要针对初学者。
-- [Code.org](https://code.org/)
-  - : 基本的编程理论和实践，主要针对儿童与完全的初学者。
-- [EXLskills](https://exlskills.com/learn-en/courses)
-  - : 免费开放的学习技术技能的课程，由导师指导和基于项目的学习。
+  - : 优秀的交互式网站——从零学习编程语言。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - : 用于学习 Web 开发的交互式网站，带有教程和项目。
-- [Web 学习路线图](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : 用于学习入门级 Web 开发素养与新时代常用技能，另分门别类地提供教学活动。
-- [Edabit](https://edabit.com/challenges/javascript)
-  - : 上千个 JavaScript 交互式编程挑战。
+  - : 通过教程和项目学习 Web 开发的交互式网站。
+- [The Odin Project](https://www.theodinproject.com/)
+  - : 特点是拥有免费和开源的全栈教学课程，课程涵盖初级到高级。
+- [MDN 博客](/en-US/blog/)
+  - : MDN 团队和客座作者为 MDN 博客编写的与新的站点开发、HTML、CSS、JavaScript 以及其它 Web 开发新闻相关的文章。
+- [Mozilla 开发者时事通讯](https://www.mozilla.org/zh-CN/newsletter/developer/)
+  - : 面向 Web 开发者的时事通讯，对各水平开发者而言都是优秀的资源。

@@ -54,8 +54,6 @@ alert(d2.attributes[1].value);
 
 このメソッドが使われることはあまりなく、通常は {{domxref("Element.setAttribute()")}} が要素の属性を変更するために使われます。
 
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

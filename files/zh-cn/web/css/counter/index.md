@@ -23,6 +23,14 @@ counter(countername, upper-roman)
 
 ## 语法
 
+```css
+/* 简单的用法 */
+counter(countername);
+
+/* 改变计数器的显示 */
+counter(countername, upper-roman)
+```
+
 ### 值
 
 - `<custom-ident> 自定义标识`
@@ -32,15 +40,7 @@ counter(countername, upper-roman)
 
 ### 形式语法
 
-```
-counter( <custom-ident>, <counter-style>? )
-
-where
-<counter-style> = <counter-style-name> | symbols()
-
-where
-<counter-style-name> = <custom-ident>
-```
+{{CSSSyntax}}
 
 ## 示例
 

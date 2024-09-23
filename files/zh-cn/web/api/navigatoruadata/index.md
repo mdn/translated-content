@@ -2,7 +2,7 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}

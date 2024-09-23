@@ -31,7 +31,7 @@ slug: Web/HTML/Element/script
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -84,7 +84,7 @@ slug: Web/HTML/Element/script
   - : 일반 `script` 요소는 표준 {{glossary("CORS")}}를 통과하지 못했을 때 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}에 최소한의 정보만 넘깁니다. `crossorigin` 속성은 정적 미디어에 대해 별도의 도메인을 사용하는 사이트의 오류 기록을 허용하기 위해 사용할 수 있습니다. 유효한 인수에 대한 보다 자세한 설명은 [CORS 설정 속](/ko/docs/Web/HTML/Attributes/crossorigin)성 문서를 참고하세요.
 - `defer`
 
-  - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{event("DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
+  - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
 
     `defer` 속성을 가진 스크립트는 자신의 평가가 끝나기 전까지 `DOMContentLoaded` 이벤트의 발생을 막습니다.
 
@@ -141,7 +141,7 @@ slug: Web/HTML/Element/script
 
 브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](/ko/docs/Web/HTML/Element/script#async), [`defer`](/ko/docs/Web/HTML/Element/script#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
 
-스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{event("load")}} 대신 {{event("error")}} 이벤트를 요소에 전송합니다.
+스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{domxref("HTMLElement/load_event", "load")}} 대신 {{domxref("HTMLElement/error_event", "error")}} 이벤트를 요소에 전송합니다.
 
 ## 예제
 

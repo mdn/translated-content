@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-**`connectStart`** は読み取り専用プロパティで、リソースを取得するためにユーザーエージェントがサーバへの接続の確立を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`connectStart`** は読み取り専用プロパティで、リソースを取得するためにユーザーエージェントがサーバーへの接続の確立を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
 ## 値
 

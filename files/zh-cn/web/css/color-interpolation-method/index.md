@@ -13,9 +13,9 @@ slug: Web/CSS/color-interpolation-method
 
 `<color-interpolation-method>` 指定了插值应使用直角坐标颜色空间还是带可选色相插值方法的极坐标颜色空间：
 
-```
+```plain
 in <rectangular-color-space>
-/* 或者 */
+// 或者
 in <polar-color-space>[ <hue-interpolation method>]
 ```
 
