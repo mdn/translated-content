@@ -1,48 +1,32 @@
 ---
-title: cookies.CookieStore
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
+title: extension.inIncognitoContext
+slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
+l10n:
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-{{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
+布尔值，其中 `true` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
 
-不同瀏覽模式（browsing mode）的視窗，有不同的 cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 cookie 存放空間。
+## 语法
 
-## 型別
+```js-nolint
+let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
+```
 
-此型別的值都是物件，並包含以下屬性：
+### 取值
 
-- `id`
-  - : `string`，代表 cookie 存放空間內的唯一識別號（identifier）。
-- `tabIds`
-  - : `integers` 的 `array`，識別所有分享此 cookie 存放空間的瀏覽頁籤。
+指示当前脚本是否在隐私标签页或进程中运行的*布尔值*。
 
-## 瀏覽器相容性
+## 浏览器兼容性
 
 {{Compat}}
-
-## 示例
-
-在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。
-
-```js
-function logStores(cookieStores) {
-  for (store of cookieStores) {
-    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
-  }
-}
-
-var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
-```
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
->
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension/#property-inIncognitoContext) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
