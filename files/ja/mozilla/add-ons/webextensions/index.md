@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 {{AddonSidebar}}
 
-拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/extensions) と互換性があります。
+拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/docs/extensions) と互換性があります。
 
 これらのブラウザー用に書かれた拡張機能は大抵の場合、[ほんの少し変更を加えるだけで](/ja/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome) Firefox や [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) でも動かすことができます。この API は [マルチプロセス Firefox](/ja/Firefox/Multiprocess_Firefox) にも完全互換です。
 
