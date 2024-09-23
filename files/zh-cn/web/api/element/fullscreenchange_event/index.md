@@ -54,9 +54,7 @@ onfullscreenchange = (event) => {};
 function fullscreenchanged(event) {
   // 如果有元素处于全屏模式，则 document.fullscreenElement 将指向该元素。如果没有元素处于全屏模式，则该属性的值为 null。
   if (document.fullscreenElement) {
-    console.log(
-      `元素：${document.fullscreenElement.id} 进入全屏模式。`,
-    );
+    console.log(`元素：${document.fullscreenElement.id} 进入全屏模式。`);
   } else {
     console.log("退出全屏模式。");
   }
@@ -73,7 +71,7 @@ document
   .getElementById("toggle-fullscreen")
   .addEventListener("click", (event) => {
     if (document.fullscreenElement) {
-    // exitFullscreen 方法只能在 Document 对象上使用。
+      // exitFullscreen 方法只能在 Document 对象上使用。
       document.exitFullscreen();
     } else {
       el.requestFullscreen();
