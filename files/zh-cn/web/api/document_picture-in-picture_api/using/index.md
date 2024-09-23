@@ -67,7 +67,7 @@ if ("documentPictureInPicture" in window) {
 
 ## 打开画中画窗口
 
-以下 JavaScript 调用 {{domxref("DocumentPictureInPicture.requestWindow", "window.documentPictureInPicture.requestWindow()")}} 打开一个空白的画中画窗口。返回的 {{jsxref("Promise")}} 用画中画 {{domxref("Window")}} 对象实现。使用 {{domxref("Element.append()")}} 将视频播放器移动到该窗口，然后我们显示消息通知用户它已被移动。
+以下 JavaScript 调用 {{domxref("DocumentPictureInPicture.requestWindow", "window.documentPictureInPicture.requestWindow()")}} 打开一个空白的画中画窗口。返回的 {{jsxref("Promise")}} 兑现画中画 {{domxref("Window")}} 对象。使用 {{domxref("Element.append()")}} 将视频播放器移动到该窗口，然后我们显示消息通知用户它已被移动。
 
 `requestWindow()` 的 `width` 和 `height` 选项将画中画窗口设置为所需大小。如果选项值太大或太小而无法适应用户友好的窗口大小，浏览器可能会限制选项值。
 
