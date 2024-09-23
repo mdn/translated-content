@@ -203,7 +203,7 @@ Descubra mais sobre o console JavaScript em diferentes navegadores:
 
 - [Firefox Web Console](/pt-BR/docs/Tools/Web_Console)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
-- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/) (O inspetor do Ópera funciona da mesma forma)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console) (O inspetor do Ópera funciona da mesma forma)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## Veja também
