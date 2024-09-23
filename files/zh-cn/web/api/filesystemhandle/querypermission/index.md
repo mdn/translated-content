@@ -2,7 +2,7 @@
 title: FileSystemHandle：queryPermission() 方法
 slug: Web/API/FileSystemHandle/queryPermission
 l10n:
-  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
+  sourceCommit: 4e8bc4593e38b3902430fa701a6256c95d7bbbdc
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
@@ -27,9 +27,9 @@ queryPermission(descriptor)
 
 ### 返回值
 
-一个兑现 {{domxref("PermissionStatus")}} 对象的 {{jsxref("Promise")}}。
+一个兑现为 {{domxref('PermissionStatus.state')}} 的 {{jsxref("Promise")}}，其值为 `'granted'`、`'denied'` 或 `'prompt'`。它也可能因出现以下异常而被拒绝。
 
-如果 {{domxref('PermissionStatus.state')}} 返回了“prompt”，则站点必须在对句柄进行任何操作前调用 `requestPermission()` 请求授权。如果此方法返回了“denied”，则任何操作都会被拒绝。从本地文件系统句柄构造器返回的句柄通常会在初始时对只读权限状态返回“granted”。但是，除开用户收回了权限的情况，从 IndexedDB 获取的句柄也有可能会返回“prompt”。
+如果其兑现为“prompt”，则网站必须先调用 `requestPermission()`，然后才能对句柄执行任何操作。如果其兑现为“denied”，则任何操作都将被拒绝。通常，本地文件系统句柄工厂返回的句柄最初将兑现“granted”作为其读取权限状态。但是，除了通过用户撤销权限之外，从 IndexedDB 检索到的句柄也可能兑现为“prompt”。
 
 ### 异常
 

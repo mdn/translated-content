@@ -14,8 +14,8 @@ DocumentFragment.queryselectorall() 方法返回{{domxref("NodeList")}}中的元
 
 ## 语法
 
-```
-elementList = documentframgment.querySelectorAll(selectors);
+```js-nolint
+querySelectorAll(selectors)
 ```
 
 ### 参数

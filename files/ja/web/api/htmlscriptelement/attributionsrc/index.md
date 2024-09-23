@@ -13,7 +13,7 @@ l10n:
 サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[属性ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[属性トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録を行った `Attribution-Reporting-Eligible` ヘッダーの値に依存します。
 
 > [!NOTE]
-> 他にも、JavaScript の属性ソースまたはトリガーは、{{domxref("fetch()")}} リクエストに `attributionReporting` オプションをつけて送信するか（`fetch()` 呼び出しで直接設定するか、`fetch()` 呼び出しに渡された {{domxref("Request")}} オブジェクトで）、{{domxref("XMLHttpRequest")}} で {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} をリクエストオブジェクトについて呼び出したりすることもできます。
+> 他にも、JavaScript の属性ソースまたはトリガーは、{{domxref("Window/fetch", "fetch()")}} リクエストに `attributionReporting` オプションをつけて送信するか（`fetch()` 呼び出しで直接設定するか、`fetch()` 呼び出しに渡された {{domxref("Request")}} オブジェクトで）、{{domxref("XMLHttpRequest")}} で {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} をリクエストオブジェクトについて呼び出したりすることもできます。
 
 詳細は[属性レポート API](/ja/docs/Web/API/Attribution_Reporting_API) です。
 

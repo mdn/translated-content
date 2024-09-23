@@ -9,7 +9,8 @@ La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/f
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
-> **Note :** Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
+> [!NOTE]
+> Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
 
 ## Syntaxe
 

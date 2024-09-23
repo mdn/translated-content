@@ -77,13 +77,13 @@ SVG 規範支持超大體積的 SVG 文件，以便符合一些應用程式的�
 
 現在你已經大致瞭解了如何創建 SVG 文件，下一步就是將 SVG 文件上傳到服務器上。這裡有一些問題需要注意。對於一般的 SVG 文件，服務器的 HTTP 響應端是：
 
-```
+```http
 Content-Type: image/svg+xml
 ```
 
 對於經過壓縮的 SVG 文件，響應端應該是：
 
-```
+```http
 Content-Type: image/svg+xml
 Content-Encoding: gzip
 ```

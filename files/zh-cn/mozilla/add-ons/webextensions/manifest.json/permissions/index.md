@@ -53,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 Firefox 浏览器，自 56 以后的版本，扩展都会自动获取其源的主机权限，如以下形式：
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 

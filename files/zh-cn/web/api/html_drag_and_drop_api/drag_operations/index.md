@@ -23,8 +23,10 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 下面的例子允许拖拽一个段落的内容：
 
-```
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+```html
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -40,8 +42,10 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 这个例子使用 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性为 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件添加监听程序。
 
-```
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+```html
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -250,7 +254,7 @@ function doDragOver(event) {
 
 在所有拖拽操作相关的事件中，事件的 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
 
-```
+```js
 function onDrop(event) {
   const data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
@@ -266,16 +270,17 @@ function onDrop(event) {
 
 你可以取回其他类型的数据。如果数据是一个链接，其类型应为 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。你可以将链接插入到内容中。
 
-```
+```js
 function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
-  lines.filter(line => !line.startsWith("#"))
-    .forEach(line => {
+  lines
+    .filter((line) => !line.startsWith("#"))
+    .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
       event.target.appendChild(link);
-    })
+    });
   event.preventDefault();
 }
 ```
@@ -296,10 +301,16 @@ var link = event.dataTransfer.getData("URL");
 
 下面的例子返回格式支持最佳的数据：
 
-```
+```js
 function doDrop(event) {
-  const supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  const types = event.dataTransfer.types.filter(type => supportedTypes.includes(type));
+  const supportedTypes = [
+    "application/x-moz-file",
+    "text/uri-list",
+    "text/plain",
+  ];
+  const types = event.dataTransfer.types.filter((type) =>
+    supportedTypes.includes(type),
+  );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
   }

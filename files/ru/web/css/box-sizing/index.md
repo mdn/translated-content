@@ -33,7 +33,8 @@ slug: Web/CSS/box-sizing
 
 {{csssyntax}}
 
-> **Примечание:** Значение `padding-box` устарело
+> [!NOTE]
+> Значение `padding-box` устарело
 
 ## Пример
 

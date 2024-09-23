@@ -7,7 +7,8 @@ slug: Web/API/CacheStorage/open
 
 **`open()`** метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим `cacheName (именем тега кеша)`.
 
-> **Примечание:** If the specified {{domxref("Cache")}} does not exist, a new cache is created with that `cacheName`.
+> [!NOTE]
+> If the specified {{domxref("Cache")}} does not exist, a new cache is created with that `cacheName`.
 
 ## Синтаксис
 

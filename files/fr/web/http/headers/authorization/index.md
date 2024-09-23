@@ -45,7 +45,8 @@ Authorization: <type> <credentials>
     - L'identifiant de l'utilisateur et le mot de passe sont combinés avec deux-points : (`aladdin:sesameOuvreToi`).
     - Cette chaîne de caractères est ensuite encodée en [base64](/fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64) (`YWxhZGRpbjpzZXNhbWVPdXZyZVRvaQ==`).
 
-    > **Note :** L'encodage en Base64 n'est pas un chiffrement ou un hachage ! Cette méthode est aussi peu sûre que d'envoyer les identifiants en clair (l'encodage base64 est un encodage réversible). Il faudra privilégier HTTPS lorsqu'on emploie une authentification "basique".
+    > [!NOTE]
+    > L'encodage en Base64 n'est pas un chiffrement ou un hachage ! Cette méthode est aussi peu sûre que d'envoyer les identifiants en clair (l'encodage base64 est un encodage réversible). Il faudra privilégier HTTPS lorsqu'on emploie une authentification "basique".
 
 ## Exemples
 

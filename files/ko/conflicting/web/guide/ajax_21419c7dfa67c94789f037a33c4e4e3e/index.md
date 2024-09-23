@@ -30,7 +30,8 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 }
 ```
 
-> **참고:** 주의: 위의 코드는 XMLHttp 인스턴스를 만드는데 사용된 간단한 버전의 코드입니다. 좀 더 현실적인 사용 예를 보려면 이 글의 3단계를 보십시오.
+> [!NOTE]
+> 주의: 위의 코드는 XMLHttp 인스턴스를 만드는데 사용된 간단한 버전의 코드입니다. 좀 더 현실적인 사용 예를 보려면 이 글의 3단계를 보십시오.
 
 서버에 요청(Request)을 하기에 앞서, 서버로 보낸 요청에 대한 응답을 받았을 때 어떤 동작을 할 것인지 정해야합니다. 위에서 생성한 httpRequest 의 `onreadystatechange` property에 특정 함수(`nameOfTheFunction`)를 할당하면 요청에 대한 상태가 변화할 때 특정 함수(`nameOfTheFunction`)가 불리게 됩니다.
 

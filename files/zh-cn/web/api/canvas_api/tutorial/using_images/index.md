@@ -158,8 +158,8 @@ function draw() {
 > 图像可能会因为大幅度的缩放而变得起杂点或者模糊。如果你的图像里面有文字，那么最好还是不要进行缩放，因为那样处理之后很可能图像里的文字就会变得无法辨认了。
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="zh">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -167,17 +167,19 @@ function draw() {
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const img = new Image();
+  img.onload = () => {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
+
+draw();
 ```
 
 结果看起来像这样：
@@ -202,23 +204,31 @@ function draw() {
 我用一个与上面用到的不同的方法来装载图像，直接将图像插入到 HTML 里面，然后通过 CSS 隐藏（`display:none`）它。两个图像我都赋了 `id` ，方便后面使用。看下面的脚本，相当简单，首先对犀牛头做好切片（第一次`drawImage`）放在 canvas 上，然后再上面套个相框（第二次`drawImage`）。
 
 ```html
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
+async function draw() {
+  // 等待所有图片的加载。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
 
-  // Draw slice
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 绘制切片
   ctx.drawImage(
     document.getElementById("source"),
     33,
@@ -231,9 +241,11 @@ function draw() {
     104,
   );
 
-  // Draw frame
+  // 绘制相框
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
+draw();
 ```
 
 {{EmbedLiveSample("示例：相框", "", "160")}}

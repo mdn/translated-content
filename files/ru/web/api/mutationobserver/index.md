@@ -30,7 +30,8 @@ slug: Web/API/MutationObserver
 
 `MutationObserverInit` — объект, который может содержать следующие свойства:
 
-> **Примечание:** Так или иначе необходимо установить `true` для одного из следующих свойств: `childList`, `attributes`, `characterData`. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"
+> [!NOTE]
+> Так или иначе необходимо установить `true` для одного из следующих свойств: `childList`, `attributes`, `characterData`. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"
 
 | Property                | Description                                                                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |

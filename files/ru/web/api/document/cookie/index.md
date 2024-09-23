@@ -29,7 +29,8 @@ document.cookie = newCookie;
 
   - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
-    > **Примечание:** Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
+    > [!NOTE]
+    > Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
     The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](/ru/docs/Web/API/Document/cookie#Using_relative_URLs_in_the_path_parameter).
 
@@ -37,7 +38,8 @@ document.cookie = newCookie;
   - `;max-age=max-age-in-seconds` (e.g., `60*60*24*365` or 31536000 for a year)
   - `;expires=date-in-GMTString-format` If neither `expires` nor `max-age`specified it will expire at the end of session.
 
-    > **Предупреждение:** When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies
+    > [!WARNING]
+    > When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies
     > One of the most beloved features of Firefox [prevents session cookies from ever expiring](https://bugzilla.mozilla.org/show_bug.cgi?id=345345).
     > The same [issue](https://code.google.com/p/chromium/issues/detail?id=128513) is also occuring with google chrome (and probably with other browsers offering similar features)
 
@@ -55,11 +57,14 @@ document.cookie = newCookie;
   - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
   - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.
 
-  > **Примечание:** The dash is considered part of the prefix.
+  > [!NOTE]
+  > The dash is considered part of the prefix.
 
-  > **Примечание:** These flags are only setable with the `secure` attribute.
+  > [!NOTE]
+  > These flags are only setable with the `secure` attribute.
 
-> **Примечание:** As you can see from the code above, `document.cookie` is an [accessor property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with native _setter_ and _getter_ functions, and consequently is **not** a [data property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
+> [!NOTE]
+> As you can see from the code above, `document.cookie` is an [accessor property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with native _setter_ and _getter_ functions, and consequently is **not** a [data property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
 
 ## Примеры
 

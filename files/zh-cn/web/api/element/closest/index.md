@@ -9,8 +9,8 @@ slug: Web/API/Element/closest
 
 ## 语法
 
-```
-var closestElement = targetElement.closest(selectors);
+```js-nolint
+closest(selectors)
 ```
 
 ### 参数

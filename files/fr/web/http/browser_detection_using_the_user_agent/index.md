@@ -9,7 +9,8 @@ Afficher des pages web ou des services en fonction du navigateur est généralem
 
 Les navigateurs et les standards ne sont cependant pas parfaits, il reste certains cas limites pour lesquels connaître le navigateur utilisé peut s'avérer utile. Utiliser la chaîne de caractères fournie par l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) et disponible en JavaScript via la propriété [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) dans ce but paraît simple, mais le faire de manière fiable est en réalité très difficile. Ce document va vous guider pour le faire aussi correctement que possible.
 
-> **Note :** Il est important de rappeler qu'utiliser le contenu de l'en-tête `User-Agent` est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils&nbsp;!
+> [!NOTE]
+> Il est important de rappeler qu'utiliser le contenu de l'en-tête `User-Agent` est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils&nbsp;!
 
 ## Considérations à prendre en compte avant d'identifier le navigateur
 
@@ -262,4 +263,5 @@ Le tableau suivant résume de quelle façon les principaux navigateurs indiquent
 
 En résumé, nous recommandons de chercher la chaîne `Mobi` dans la chaîne `User-Agent` pour détecter un appareil mobile.
 
-> **Note:** Si l'appareil est suffisamment grand pour ne pas être indiqué `Mobi`, il est préférable de servir la version du site pour ordinateur. De toute manière, supporter les interactions tactiles pour un site «&nbsp;pour ordinateur&nbsp;» est une bonne pratique. En effet, de plus en plus d'ordinateurs sont équipés d'écrans tactiles.
+> [!NOTE]
+> Si l'appareil est suffisamment grand pour ne pas être indiqué `Mobi`, il est préférable de servir la version du site pour ordinateur. De toute manière, supporter les interactions tactiles pour un site «&nbsp;pour ordinateur&nbsp;» est une bonne pratique. En effet, de plus en plus d'ordinateurs sont équipés d'écrans tactiles.

@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 该滤镜对输入图像进行高斯模糊，属性{{ SVGAttr("stdDeviation") }}中指定的数量定义了钟形。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

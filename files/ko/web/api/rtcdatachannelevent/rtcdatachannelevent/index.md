@@ -21,7 +21,7 @@ var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
 - `type`
   - : 이벤트의 이름을 알려주는 {{domxref("DOMString")}}입니다. 이름은 `RTCDataChannelEvent` 타입의 한 종류인 "datachannel" 딱 한 가지만 존재합니다.
 - `RtcDataChannelEventInit`
-  - : 아래의 필드를 가지는 `RTCDataChannelEventInit` 딕셔너리 입니다:\* `"channel"`은 {domxref("RTCDataChannel")}}의 한 종류로, 이벤트에 의해 데이터 채널이 확인되었다는 것을 알려줍니다.
+  - : 아래의 필드를 가지는 `RTCDataChannelEventInit` 딕셔너리 입니다:\* `"channel"`은 {{domxref("RTCDataChannel")}}의 한 종류로, 이벤트에 의해 데이터 채널이 확인되었다는 것을 알려줍니다.
     - `"bubbles"`은 옵션으로 설정이 가능하며, `EventInit`에서 상속됩니다. 이는 해당 이벤트가 무조건 `bubble`이 되어야하는지의 여부를 알려줍니다. 기본 값은 `false`입니다
     - `"cancelable"`은 옵션으로 설정이 가능하며, `EventInit`에서 상속됩니다. 이는 해당 이벤트가 취소 될 수 있는지의 여부를 알려줍니다. 기본 값은 `false`입니다.
 
@@ -31,7 +31,7 @@ var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
 
 ## 예시
 
-아래 예제는 신규 {{event("datachannel")}}를 생성합니다. `dc`는 이미 존재하는 데이터 채널을 뜻합니다.
+아래 예제는 신규 {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}를 생성합니다. `dc`는 이미 존재하는 데이터 채널을 뜻합니다.
 
 ```js
 var event = new RTCDataChannelEvent("datachannel", { channel: dc });

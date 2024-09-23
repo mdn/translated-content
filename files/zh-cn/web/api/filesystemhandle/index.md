@@ -2,7 +2,7 @@
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
 l10n:
-  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
+  sourceCommit: 6c592023efa1f762eaa1eb1f36241750626be51c
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
@@ -13,9 +13,9 @@ l10n:
 
 以下是基于 `FileSystemHandle` 的接口的列表。
 
-- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
+- {{domxref("FileSystemFileHandle")}}
   - : 提供一个指向文件条目的句柄。
-- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
+- {{domxref("FileSystemDirectoryHandle")}}
   - : 提供一个指向目录条目的句柄。
 
 ## 实例属性

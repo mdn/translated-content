@@ -12,19 +12,19 @@ slug: Web/API/EventSource/close
 
 ## 语法
 
-```
-eventSource.close();
+```js-nolint
+close()
 ```
 
 ### 参数
 
-None.
+无。
 
 ### 返回值
 
-Void.
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
 ```js
 var button = document.querySelector("button");

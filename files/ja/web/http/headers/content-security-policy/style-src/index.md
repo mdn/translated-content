@@ -159,7 +159,7 @@ Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6t
 
 ### 安全ではない style 式
 
-`'unsafe-eval'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-eval'` が `style-src` ディレクティブで指定されていななかった場合、以下のメソッドはブロックされて何の効果も現れません。
+`'unsafe-eval'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-eval'` が `style-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
 - {{domxref("CSSStyleSheet.insertRule()")}}
 - {{domxref("CSSGroupingRule.insertRule()")}}

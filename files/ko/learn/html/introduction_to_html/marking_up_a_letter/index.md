@@ -55,7 +55,8 @@ l10n:
 
 프로젝트를 시작하기 위해서는 두 가지가 필요합니다. [마크업을 할 기본 텍스트](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)와 [HTML에 스타일을 입힐 CSS 코드](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt)입니다. 텍스트 편집기를 이용해 .html 파일을 만들거나 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/)와 같은 온라인 코딩 도구를 사용하여 작업을 진행합니다.
 
-> **참고:** 문제가 해결되지 않으면 이 페이지 하단의 평가 또는 추가 도움말 구획을 참조해 도움을 요청하세요.
+> [!NOTE]
+> 문제가 해결되지 않으면 이 페이지 하단의 평가 또는 추가 도움말 구획을 참조해 도움을 요청하세요.
 
 ## 프로젝트 요약
 

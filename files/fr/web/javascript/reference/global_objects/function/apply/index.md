@@ -7,9 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux)).
 
-> **Note :** Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
+> [!NOTE]
+> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
 
-> **Note :** Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition).
+> [!NOTE]
+> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition).
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -40,7 +42,8 @@ On peut aussi passer {{jsxref("Fonctions/arguments", "arguments ")}} en tant que
 
 Depuis la cinquième édition d'ECMAScript, il est possible d'utiliser des objet semblables à des tableaux à la place. En pratique tout objet possédant une propriété `length` et une propriété entière comprise entre `[0..length[` est un objet semblable à un tableau. On peut ainsi, par exemple, utiliser un objet {{domxref("NodeList")}} ou un objet quelconque comme `{'length': 2, '0': 'manger', '1': 'bananes'}`.
 
-> **Note :** Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
+> [!NOTE]
+> Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
 
 ## Exemples
 
@@ -56,7 +59,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **Note :** La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
+> [!NOTE]
+> La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -86,7 +90,8 @@ console.log(monInstance instanceof MonConstructeur); // "true"
 console.log(monInstance.constructor); // "MonConstructeur"
 ```
 
-> **Note :** On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+> [!NOTE]
+> On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -109,7 +114,8 @@ console.log(monInstance.constructor); // "MonConstructeur"
 > };
 > ```
 
-> **Note :** Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
+> [!NOTE]
+> Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
 
 ### Utiliser `apply` et des fonctions natives
 

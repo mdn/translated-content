@@ -89,7 +89,8 @@ _Наследует методы своего родителя, {{domxref("HTMLE
 </script>
 ```
 
-> **Примечание:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!NOTE]
+> You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Спецификации
 

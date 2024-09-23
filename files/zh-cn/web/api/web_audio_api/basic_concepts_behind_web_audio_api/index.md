@@ -84,7 +84,7 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 网页音频接口使用了分离式的片段储存方式：左 (L) 右 (R) 声道像这样存储：
 
-```
+```plain
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 ```
 
@@ -92,7 +92,7 @@ LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 
 另一种储存方式是使用交错式的片段储存方式：
 
-```
+```plain
 LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 ```
 

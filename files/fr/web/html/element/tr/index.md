@@ -36,7 +36,8 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 
     Si cet attribut n'est pas renseigné, la valeur est héritée du nœud parent.
 
-    > **Note :** Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!NOTE]
+    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut [`char`](#attr-char) comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
@@ -45,19 +46,22 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 
   - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
 
-    > **Note :** L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    > [!NOTE]
+    > L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - **`char`**{{deprecated_inline}}
 
   - : Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#attr-align) ne vaut pas `char`, l'attribut est ignoré.
 
-    > **Note :** Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - **`charoff`** {{deprecated_inline}}
 
   - : Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut `char`. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.
 
-    > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
+    > [!NOTE]
+    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
 
 - **`valign`** {{deprecated_inline}}
 
@@ -72,7 +76,8 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 

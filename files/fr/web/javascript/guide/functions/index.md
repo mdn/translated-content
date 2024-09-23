@@ -52,7 +52,8 @@ y = mavoiture.fabricant; // y aura la valeur "Toyota"
 // (la propriété fabricant a été modifiée par la fonction)
 ```
 
-> **Note :** Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
+> [!NOTE]
+> Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
 
 ```js
 function maFonction(monObjet) {
@@ -149,7 +150,8 @@ function carré(n) {
 
 La portée d'une fonction est la fonction dans laquelle elle est déclarée ou le programme entier si elle est déclarée au niveau le plus haut.
 
-> **Note :** Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
+> [!NOTE]
+> Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
 
 ```js example-bad
 console.log(carré); // La fonction carré est remontée/hoisted mais vaut undefined
@@ -330,7 +332,8 @@ En résumé :
 
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
-> **Note :** Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> [!NOTE]
+> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
 
 L'exemple qui suit illustre l'imbrication de fonctions :
 

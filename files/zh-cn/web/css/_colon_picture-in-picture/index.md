@@ -15,7 +15,7 @@ slug: Web/CSS/:picture-in-picture
 }
 ```
 
-## 用法说明
+## 使用说明
 
 `:picture-in-picture` 伪类允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
 

@@ -29,7 +29,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran devraient annoncer le groupe lorsque le focus atteint l'un des contrôles appartenant au groupe, et si [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.
 - Les loupes d'écran devraient agrandir le groupe.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

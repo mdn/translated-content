@@ -9,8 +9,9 @@ slug: Web/API/Document/createElement
 
 ## 语法
 
-```
-var element = document.createElement(tagName[, options]);
+```js-nolint
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### 参数

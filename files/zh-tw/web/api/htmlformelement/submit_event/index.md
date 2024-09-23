@@ -12,7 +12,7 @@ slug: Web/API/HTMLFormElement/submit_event
 ## 基本資料
 
 - 定義規範
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#form-submission-algorithm)
+  - : [HTML5](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-submission-algorithm)
 - Interface
   - : {{domxref("Event")}}
 - Bubbles

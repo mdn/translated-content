@@ -383,7 +383,8 @@ console.log(clone.get(1)); // um
 console.log(original === clone); // false (Útil para comparações superficiais)
 ```
 
-> **Nota:** Tenha em mente que _o dado em si_ não é clonado.
+> [!NOTE]
+> Tenha em mente que _o dado em si_ não é clonado.
 
 Maps podem ser mesclados, mantendo as chaves únicas:
 

@@ -19,7 +19,7 @@ l10n:
 
 在用戶端—伺服器協定中，是用戶端建立連接。在 HTTP 中打開連接意味著在底層傳輸層啟動一個連接，這通常是 TCP。
 
-對於 TCP，用於計算機上的 HTTP 伺服器的默認端口是 80。也可以使用其他端口，例如 8000 或 8080。要提取的頁面的 URL 包含域名和連接埠，如果連接埠是 80 則後者可以省略。有關更多詳細訊息，請參見[識別 Web 上的資源](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)。
+對於 TCP，用於計算機上的 HTTP 伺服器的默認端口是 80。也可以使用其他端口，例如 8000 或 8080。要提取的頁面的 URL 包含域名和連接埠，如果連接埠是 80 則後者可以省略。有關更多詳細訊息，請參見 [URL 參考](/zh-TW/docs/Web/URI)。
 
 > [!NOTE]
 > 用戶端—伺服器模型不允許伺服器在沒有明確請求的情況下向用戶端發送數據。但是，各種 Web API 使這種用例成為可能，包括 [Push API](/zh-TW/docs/Web/API/Push_API)、[伺服器發送事件](/zh-TW/docs/Web/API/Server-sent_events)和 [WebSockets API](/zh-TW/docs/Web/API/WebSockets_API)。
@@ -157,7 +157,7 @@ X-Cache: Error from cloudfront
 
 ## 參見
 
-- [在 Web 上識別資源](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URL](/zh-TW/docs/Web/URI)
 - [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)

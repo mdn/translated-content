@@ -56,7 +56,8 @@ function fetchVideo() {
 }
 ```
 
-> **Примечание:** При вызове `abort()`, промис `fetch()` будет отклонён с `AbortError`.
+> [!NOTE]
+> При вызове `abort()`, промис `fetch()` будет отклонён с `AbortError`.
 
 Вы можете найти полный рабочий пример на GitHub — смотрите [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([и живой пример](https://mdn.github.io/dom-examples/abort-api/)).
 

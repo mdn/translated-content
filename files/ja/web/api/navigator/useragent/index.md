@@ -3,7 +3,7 @@ title: "Navigator: userAgent プロパティ"
 short-title: userAgent
 slug: Web/API/Navigator/userAgent
 l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -25,19 +25,13 @@ l10n:
 
 文字列で、ブラウザーが {{Glossary("HTTP")}} ヘッダーで提供する完全なユーザーエージェント文字列と、 {{domxref("Navigator")}} オブジェクト上のメソッドやその他の関連メソッドへのレスポンスを指定します。
 
-ユーザーエージェント文字列は形式的な構造に基づいて構築されており、いくつかの情報に分解することができます。これらの情報の各部分は、ユーザ－が設定可能な他の Navigator のプロパティから来ています。Gecko ベースのブラウザは以下の一般的な構造に準拠しています。
-
-```plain
-userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
-Localization; rv: revision-version-number) product/productSub
-Application-Name Application-Name-version
-```
+ユーザーエージェント文字列は形式的な構造に基づいて構築されており、いくつかの情報に分解することができます。これらの情報の各部分は、ユーザー－が設定可能な他の Navigator のプロパティから来ています。ユーザーエージェント文字列の形式について、より詳しい情報については、HTTP の {{HTTPHeader("User-agent")}} ヘッダーを参照してください。
 
 ## 例
 
 ```js
 alert(window.navigator.userAgent);
-// alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
+// alerts "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0"
 ```
 
 ## 仕様書

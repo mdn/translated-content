@@ -7,7 +7,8 @@ slug: Web/SVG/Element/svg
 
 Элемент `svg` является контейнером, который определяет новую систему координат и [область просмотра](/ru/docs/Web/SVG/Attribute/viewBox). Он используется, как самый внешний элемент документов SVG, но также может использоваться для встраивания фрагмента SVG в документ SVG или HTML.
 
-> **Примечание:** Примечание. Атрибут `xmlns` требуется только для самого внешнего элемента `svg` документов SVG. Это не нужно для внутренних элементов `svg` или внутри документов HTML.
+> [!NOTE]
+> Атрибут `xmlns` требуется только для самого внешнего элемента `svg` документов SVG. Это не нужно для внутренних элементов `svg` или внутри документов HTML.
 
 ## Пример
 
@@ -69,7 +70,8 @@ svg {
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
     _Value type_: [**\<length>**](/ru/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ru/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Примечание:** Примечание. Начиная с SVG2, `x`, `y`, `width` и `height` являются Geometry Properties, то есть эти атрибуты также можно использовать в качестве CSS-свойств.
+> [!NOTE]
+> Примечание. Начиная с SVG2, `x`, `y`, `width` и `height` являются Geometry Properties, то есть эти атрибуты также можно использовать в качестве CSS-свойств.
 
 ## Примечания по использованию
 

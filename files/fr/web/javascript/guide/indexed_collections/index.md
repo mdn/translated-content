@@ -40,7 +40,8 @@ let arr = [];
 arr.length = longueurTableau;
 ```
 
-> **Note :** Dans le code ci-dessus `longueurTableau` doit être un nombre. Si ce n'est pas le cas, un tableau d'un seul élément (ayant la valeur fournie) sera créé. `arr.length` renverra `longueurTableau`, mais le tableau ne contiendra que des éléments «&nbsp;vides&nbsp;» non définis. Si on utilise une boucle [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) sur ce tableau, on ne trouvera aucun élément.
+> [!NOTE]
+> Dans le code ci-dessus `longueurTableau` doit être un nombre. Si ce n'est pas le cas, un tableau d'un seul élément (ayant la valeur fournie) sera créé. `arr.length` renverra `longueurTableau`, mais le tableau ne contiendra que des éléments «&nbsp;vides&nbsp;» non définis. Si on utilise une boucle [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) sur ce tableau, on ne trouvera aucun élément.
 
 On a vu comment créer un tableau, il est aussi possible d'affecter des tableaux à des propriétés d'objets (que ce soit lors de leur création ou pour les modifier)&nbsp;:
 
@@ -90,7 +91,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **Note :** Si on utilise une valeur non entière pour désigner un élément du tableau, cela créera une propriété sur l'objet plutôt qu'un élément du tableau&nbsp;:
+> [!NOTE]
+> Si on utilise une valeur non entière pour désigner un élément du tableau, cela créera une propriété sur l'objet plutôt qu'un élément du tableau&nbsp;:
 >
 > ```js
 > let arr = [];
@@ -116,7 +118,8 @@ let monTableau = ["Air", "Eau", "Feu"];
 
 On pourra accéder au premier élément du tableau en utilisant `monTableau[0]`, on accèdera au deuxième élément avec `monTableau[1]`. Les indices des éléments sont comptés à partir de 0.
 
-> **Note :** Les crochets peuvent également être utilisés pour faire référence aux propriétés du tableau (les tableaux sont des objets JavaScript à part entière). On pourra donc avoir&nbsp;:
+> [!NOTE]
+> Les crochets peuvent également être utilisés pour faire référence aux propriétés du tableau (les tableaux sont des objets JavaScript à part entière). On pourra donc avoir&nbsp;:
 >
 > ```js
 > let arr = ["un", "deux", "trois"];

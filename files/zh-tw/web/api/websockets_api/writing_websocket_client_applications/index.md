@@ -179,4 +179,4 @@ mySocket.close();
 
 ## 參考資料
 
-[IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01](https://tools.ietf.org/html/draft-abarth-thewebsocketprotocol-01)
+[IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01](https://datatracker.ietf.org/doc/html/draft-abarth-thewebsocketprotocol-01)

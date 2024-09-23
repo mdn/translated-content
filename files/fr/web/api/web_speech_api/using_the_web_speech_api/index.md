@@ -13,7 +13,8 @@ La reconnaissance vocale implique de recevoir de la voix à travers un dispositi
 
 L'API Web Speech a une interface principale de contrôle — {{domxref("SpeechRecognition")}} — plus un nombre d'interfaces inter-reliées pour représenter une grammaire, des résultats, etc. Généralement, le système de reconnaissance vocale par défaut disponible sur le dispositif matériel sera utilisé pour la reconnaissance vocale — la plupart des systèmes d'exploitation modernes ont un système de reonnaissance vocale pour transmettre des commandes vocales. On pense à Dictation sur macOS, Siri sur iOS, Cortana sur Windows 10, Android Speech, etc.
 
-> **Note :** Sur certains navigateurs, comme Chrome, utiliser la reconnaissance vocale sur une page web implique de disposer d'un moteur de reconnaissance basé sur un serveur. Votre flux audio est envoyé à un service web pour traitement, le moteur ne fonctionnera donc pas hors ligne.
+> [!NOTE]
+> Sur certains navigateurs, comme Chrome, utiliser la reconnaissance vocale sur une page web implique de disposer d'un moteur de reconnaissance basé sur un serveur. Votre flux audio est envoyé à un service web pour traitement, le moteur ne fonctionnera donc pas hors ligne.
 
 ### Demo
 

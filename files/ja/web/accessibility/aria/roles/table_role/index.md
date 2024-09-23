@@ -41,7 +41,7 @@ ARIA の role 属性の table 値は、このロールを含む要素を、ネ�
 > [!WARNING]
 > 表が選択状態を維持している場合、2 次元ナビゲーションを使用している場合、またはユーザーがセルの順序を並べ替えることができる場合は、代わりにグリッド（[`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)）またはツリーグリッド（[`treegrid`](/ja/docs/Web)）を使用します。
 
-ARIA の表を作成するには、`role="table"` をコンテナ要素に追加します。 そのコンテナ内では、各行に `role="row"` を設定し、子セルを含ませます。 各セルには、列ヘッダー（`columnheader`）、行ヘッダー（`rowheader`）、または単なるセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)）のいずれかのロールがあります。 行は、表の子になることも、行グループ（[`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)）内になることもあります。
+ARIA の表を作成するには、`role="table"` をコンテナー要素に追加します。 そのコンテナー内では、各行に `role="row"` を設定し、子セルを含ませます。 各セルには、列ヘッダー（`columnheader`）、行ヘッダー（`rowheader`）、または単なるセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)）のいずれかのロールがあります。 行は、表の子になることも、行グループ（[`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)）内になることもあります。
 
 表のキャプションは、`aria-labelledby`、`aria-label`、または `aria-describeby` によって定義できます。 {{htmlelement("tbody")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}}、{{htmlelement("th")}}、{{htmlelement("td")}} など、他のすべての意味論的な表の要素は、`rowgroup`、`row`、`columnheader`、`cell` などの関連するロールを介して追加する必要があります。
 
@@ -57,7 +57,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 - [role="rowgroup"](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
   - : 表のオプションの子である行グループは、{{htmlelement("thead")}}、{{htmlelement("tbody")}}、および {{htmlelement("tfoot")}} と同様に、行のグループをカプセル化します。
 - [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : 表内の行、およびオプションで行グループ（`rowgroup`）内の行、つまり 1 つ以上のセル（`cell`）、列ヘッダー（`columnheader`）、または行ヘッダー（`rowheader`）のコンテナです。
+  - : 表内の行、およびオプションで行グループ（`rowgroup`）内の行、つまり 1 つ以上のセル（`cell`）、列ヘッダー（`columnheader`）、または行ヘッダー（`rowheader`）のコンテナーです。
 - aria-describedby 属性
   - : 値として、表のキャプションとして機能する要素の `id` を取ります。
 - aria-label 属性
@@ -126,7 +126,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 
 無し
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
