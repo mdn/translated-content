@@ -85,9 +85,7 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(
-        `尝试启用全屏模式时出错：${err.message}（${err.name}）`,
-      );
+      alert(`尝试启用全屏模式时出错：${err.message}（${err.name}）`);
     });
   } else {
     document.exitFullscreen();
@@ -112,9 +110,7 @@ elem
   .requestFullscreen({ navigationUI: "show" })
   .then(() => {})
   .catch((err) => {
-    alert(
-      `尝试切换到全屏模式时发生错误：${err.message}（${err.name}）`,
-    );
+    alert(`尝试切换到全屏模式时发生错误：${err.message}（${err.name}）`);
   });
 ```
 
