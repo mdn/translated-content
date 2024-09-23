@@ -63,7 +63,7 @@
       },
       {
         "name": "chrome-dev-mirror-links",
-        "message": "Don't use developer.chrome.com for links in zh-cn localizations",
+        "message": "Use the CN mirror site for developer.chrome.com",
         "searchPattern": "/\\]\\(https:\\/\\/developer.chrome.com\\//g",
         "replace": "](https://developer.chrome.google.cn/",
         "searchScope": "text",
