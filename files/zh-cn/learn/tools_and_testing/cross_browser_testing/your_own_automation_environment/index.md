@@ -34,7 +34,7 @@ l10n:
 
 ## Selenium
 
-[Selenium](https://www.selenium.dev/) 是最流行的浏览器自动化测试工具。最简单的方法是使用基于 Selenium 的 WebDriver API，它通过调用浏览器接口实现自动化，执行诸如“打开网页”、“移动网页上的元素”、“点击链接”、“查看链接是否打开 URL”等操作。这是运行自动化测试的理想选择。
+[Selenium](https://www.selenium.dev/) 是最流行的浏览器自动化测试工具。使用 Selenium 有很多种方式，但最佳方式是通过其强大的 WebDriver API，它建立在 Selenium 的基础上，通过调用浏览器接口实现自动化，执行诸如“打开网页”、“移动网页上的元素”、“点击链接”、“查看链接是否打开 URL”等操作。这是运行自动化测试的理想选择。
 
 安装和使用 WebDriver 的方式取决于你的编程环境。常见的环境都提供安装 WebDriver 的包或框架，并且支持与 WebDriver 通信的多语言绑定，如 Java、C#、Ruby、Python、JavaScript（Node）等。查看[建立一个 Selenium-WebDriver 的工程](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started/)以了解 Selenium 在不同语言下的具体配置。
 
@@ -45,10 +45,10 @@ l10n:
 > [!NOTE]
 > 如果你需要了解在其他服务器端环境下使用 WebDriver 的方式，也可以点击[支持 Selenium 的平台](https://www.selenium.dev/downloads/)来获取更多有用的链接。
 
-### 在 Node 下建立 Selenium
+### 在 Node 下搭建 Selenium 环境
 
 1. 参考上一个章节[配置 Node 和 npm 环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#配置_Node_和_npm_环境)，创建一个新的 npm 工程，并取一个不同的名字，如 `selenium-test`。
-2. 接下来，我们需要安装一个框架从而能够在 Node 中运行 Selenium。我们选择 Selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新及时，维护良好。如果你想要其他选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/) 也都是不错的选择。要安装 selenium-webdriver，在你的工程目录下运行以下命令：
+2. 接下来，我们需要安装一个框架从而能够在 Node 中运行 Selenium。我们选择 Selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新及时，维护良好。如果你想要其他选择，[webdriver.io](https://webdriver.io/) 和 [nightwatch.js](https://nightwatchjs.org/) 也都是不错的选择。要安装 selenium-webdriver，在你的工程目录下运行以下命令：
 
    ```bash
    npm install selenium-webdriver
@@ -59,7 +59,7 @@ l10n:
 
 接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) 页面（参见第一部分的表格）查看如何下载。显然，有些浏览器是操作系统特定的，我们将坚持使用 Firefox 和 Chrome，因为它们可以在所有主要的操作系统上使用。
 
-1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/)（用于 Firefox）和 [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html) 驱动。
+1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/)（用于 Firefox）和 [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads?hl=zh-cn) 驱动。
 2. 将它们解压到一个容易访问的地方，比如你的主用户目录的根目录。
 3. 将 `chromedriver` 和 `geckodriver` 驱动的目录添加到你的系统 `PATH` 变量中，这应该是从你的硬盘根目录开始的一个绝对路径。举个例子，如果我们使用的是 macOS 机器，用户名为 bob，并且将驱动放在用户的根目录下，那么路径就是 `/Users/bob`。
 
@@ -84,7 +84,7 @@ l10n:
    ```
 
 4. 保存并关闭文件，然后重启命令终端以使 Bash 的配置生效。
-5. 在命令终端上敲下面命令，查看新的路径是否已经添加到 `PATH` 变量中：
+5. 在命令终端上输入以下命令，查看新的路径是否已经添加到 `PATH` 变量中：
 
    ```bash
    echo $PATH
@@ -97,7 +97,7 @@ l10n:
 OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 1. 在你的工程目录下创建一个新的文件 `google_test.js`：
-2. 将下面代码复制到文件中保存：
+2. 将以下内容复制到上述文件中，然后保存：
 
    ```js
    const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
@@ -118,7 +118,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
    > [!NOTE]
    > 此函数是一个 {{glossary("IIFE")}}（立即调用函数表达式）。
 
-3. 在终端上，确保在你的工程目录下输入如下命令：
+3. 在终端上，确保在你的项目目录下输入如下命令：
 
    ```bash
    node google_test
@@ -130,7 +130,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 接下来，让我们来试一下同时在多个浏览器上进行测试。
 
-1. 在你的工程目录下创建另外一个新文件 `google_test_multiple.js`。你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写 `.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html)。
+1. 在你的工程目录下创建另外一个新文件 `google_test_multiple.js`。你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写 `.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser 枚举值](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser)页面。
 2. 将下面代码复制到文件中保存：
 
    ```js
@@ -162,13 +162,13 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
    searchTest(driver_chr);
    ```
 
-3. 在终端上，确保在你的工程目录下输入如下命令：
+3. 在终端上，确保在你的项目目录下输入如下命令：
 
    ```bash
    node google_test_multiple
    ```
 
-4. 如果你用的是 Mac，并决定测试 Safari 浏览器，可能会产生一个错误信息：“Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.”（无法创建会话：你必须启用 Safari 的 "开发 "菜单中的 "允许远程自动化 "选项，才能通过 WebDriver 控制 Safari）。如果是这样，请根据指示操作并重新尝试一遍。
+4. 如果你用的是 Mac，并决定测试 Safari 浏览器，可能会产生一个错误信息：“Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.”（无法创建会话：你必须启用 Safari 的“开发”菜单中的“允许远程自动化”选项，才能通过 WebDriver 控制 Safari）。如果是这样，请根据指示操作并重新尝试一遍。
 
 现在，我们像上次一样完成了测试，这一次浏览器的测试代码放到了 `searchTest()` 函数中。我们对多个浏览器创建了新的浏览器实例，然后将每一个实例传递给函数，这样就可以在全部 3 个浏览器下执行测试！
 
@@ -176,7 +176,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 ## WebDriver 语法速成课程
 
-现在我们来看一下 webdriver 的一些关键语法。更完整的细节，可以参考 [selenium-webdriver JavaScript API 参考](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/)以及 Selenium 主要的文档 [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)，里面有用不同语言编写的丰富的学习示例。
+现在我们来看一下 webdriver 的一些关键语法。更完整的细节，可以参考 [selenium-webdriver JavaScript API 参考](https://www.selenium.dev/selenium/docs/api/javascript/)以及 Selenium 主要的文档 [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)，里面有用不同语言编写的丰富的学习示例。
 
 ### 启动新的测试
 
@@ -223,7 +223,7 @@ driver.get("http://www.google.com");
 ```
 
 > [!NOTE]
-> 可以查看 [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) 了解这一部分和下面提到的内容的详情。
+> 可以查看 [WebDriver 类参考](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html)了解这一部分和下面提到的内容的详情。
 
 你可以使用包含 `file://` 的 URL 来指向需要测试的本地文件：
 
@@ -469,7 +469,7 @@ const driver = new Builder().forBrowser("firefox").build();
 WebDriver 会等待 2 秒然后填充表单的文本框。接下来我们使用 `getAttribute()` 获取它的 `value` 属性值，并对它进行测试（如是否为空），最后将测试结果打印出来。
 
 > [!NOTE]
-> 还有一个方法叫 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait)，它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)，其中定义了使用 `wait()` 的常见条件。
+> 还有一个方法叫 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait)，它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html)，其中定义了使用 `wait()` 的常见条件。
 
 ### 使用后关闭驱动
 
@@ -486,7 +486,7 @@ driver.quit();
 有很多编写最佳测试的实践方法，你可以参考[测试设计考虑](https://www.selenium.dev/zh-cn/documentation/test_practices/)来了解一些背景。总的来说，测试应该遵循如下几点：
 
 1. 使用好的定位策略：当你[同文档交互](#同文档交互)时，确保你使用的定位器和页面对象是不变的。如对元素进行测试，确保这个元素有固定的 ID 或页面位置，这样可以通过 CSS 选择器定位到它，不至于在下一个迭代就发生变化。尽可能让你的测试稳健，而不是有一点改动就会崩溃。
-2. 写原子测试：一个测试只测一件事，这样有利于跟踪哪一个测试文件执行的是哪种测试。举例来说，前面的`google_test.js` 就只测试了一个简单的用例——页面的搜索结果标题是否正确。我们可以给它改一个名字，比如改为 `results_page_title_set_correctly.js`，这样当我们添加更多的测试文件时它的作用会更直观。
+2. 写原子测试：一个测试只测一件事，这样有利于跟踪哪一个测试文件执行的是哪种测试。举例来说，前面的 `google_test.js` 就只测试了一个简单的用例——页面的搜索结果标题是否正确。我们可以给它改一个名字，比如改为 `results_page_title_set_correctly.js`，这样当我们添加更多的测试文件时它的作用会更直观。
 3. 写独立的测试：每一个测试只需要自己执行，不需要依赖其他的测试。
 
 除此之外，我们还要提一下测试结果/测试报告——在前面的例子中，我们只是简单的把测试结果通过 `console.log()` 语句打印出来，这个完全只在 JavaScript 中完成，你可以使用任何你想要的测试运行和报告系统，如 [Mocha](https://mochajs.org/)、[Chai](https://www.chaijs.com/) 或其他的工具。
@@ -579,6 +579,7 @@ function searchTextOnGoogle() {
 
 searchTextOnGoogle();
 ```
+
 3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
 4. 在终端中运行以下命令，以执行测试：
 
@@ -588,7 +589,8 @@ searchTextOnGoogle();
 
    测试将发送到 LambdaTest，其输出将反馈在 LambdaTest 控制台中。
    如果你希望从 LambdaTest 平台提取这些结果用于报告，那么你可以通过使用 [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/) 来实现。
-5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。你还会看到 **passed** 或 **failed** 的状态，而不是 **completed**，因为有 `if` 或 `else` 代码块。
+
+5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://accounts.lambdatest.com/dashboard)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。你还会看到 **passed** 或 **failed** 的状态，而不是 **completed**，因为有 `if` 或 `else` 代码块。
 
    [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
 
@@ -657,7 +659,7 @@ searchTextOnGoogle();
    node bstack_google_test
    ```
 
-   测试被发送给 BrowserStackces，测试结果会返回到你的控制台。这体现了包含报告机制的重要性！
+   测试被发送给 BrowserStack，测试结果会返回到你的控制台。这体现了包含报告机制的重要性！
 
 5. 现在回到 [BrowserStack automation dashboard](https://www.browserstack.com/automate) 页面，你会看到测试列出来的结果：
    ![BrowserStack 自动测试结果](bstack_automated_results.png)
@@ -694,7 +696,7 @@ searchTextOnGoogle();
    'project' : 'Google test 2'
    ```
 
-4. 接下来获取当前会话的 `sessionId` ，从而知道往哪儿发送请求（后面你会看到，ID 包含在请求的 URL 中）。将下面代码添加到创建 `driver` 对象（`let driver ...`）的代码块下面：
+4. 接下来获取当前会话的 `sessionId`，从而知道往哪儿发送请求（后面你会看到，ID 包含在请求的 URL 中）。将下面代码添加到创建 `driver` 对象（`let driver …`）的代码块下面：
 
    ```js
    let sessionId;
@@ -877,8 +879,8 @@ searchTextOnGoogle();
 如果你不想使用 Sauce Labs 或 BrowserStack 之类的服务，你也可以配置自己的远程测试服务器。具体操作如下：
 
 1. Selenium 的远端服务器要求运行 Java，从 [Java SE 下载页面](https://www.oracle.com/java/technologies/downloads/)下载适合你平台的最新 JDK 并安装。
-2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以“selenium-server-standalone”开头的文件。下载完成后，放到一个靠谱的地方，比如主目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中创建 Selenium](#在_node_下建立_selenium) 小节）。
-3. 在作为服务器的电脑终端上执行如下代码，安装单机版服务器
+2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以“selenium-server-standalone”开头的文件。下载完成后，放到一个靠谱的地方，比如主目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中搭建 Selenium 环境](#在_node_下搭建_selenium_环境)小节）。
+3. 在作为服务器的电脑终端上执行如下代码，安装独立服务器。
 
    ```bash
    java -jar selenium-server-standalone-3.0.0.jar
