@@ -56,7 +56,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console.timeLog_static", "console.timeLog()")}}
   - : 打印特定[定时器](#定时器)所运行的时间。
 - {{domxref("console.timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : 添加一个标记到浏览器的 [Timeline](https://developer.chrome.com/devtools/docs/timeline) 或 [Waterfall](https://profiler.firefox.com/docs/) 工具。
+  - : 添加一个标记到浏览器的 [Timeline](https://developer.chrome.google.cn/docs/devtools/performance/timeline-reference) 或 [Waterfall](https://profiler.firefox.com/docs/) 工具。
 - {{domxref("console.trace_static", "console.trace()")}}
   - : 输出[堆栈跟踪](#堆栈跟踪)。
 - {{domxref("console.warn_static", "console.warn()")}}
