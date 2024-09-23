@@ -24,6 +24,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 {{domxref("FormData")}}接口以上述方式对数据进行编码，在本文的其余部分，我们将对 `FormData` 进行快速介绍。更多详情，请参阅的[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)指南。
 
 ## 手动创建 `FormData` 对象
+
 可以为要添加的每个字段调用其 {{domxref("FormData.append()", "append()")}} 方法（传入字段的名称和值），以此来填充 `FormData` 对象。对于文本字段，值可以是字符串；对于二进制字段（包括{{domxref("File")}}对象），值可以是{{domxref("Blob")}}。
 
 在下面的示例中，当用户点击按钮时，将以表单提交的形式发送数据：
