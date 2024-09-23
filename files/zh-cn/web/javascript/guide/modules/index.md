@@ -11,9 +11,9 @@ slug: Web/JavaScript/Guide/Modules
 
 JavaScript 程序本来很小——在早期，它们大多被用来执行独立的脚本任务，在你的 web 页面需要的地方提供一定交互，所以一般不需要多大的脚本。过了几年，我们现在有了运行大量 JavaScript 脚本的复杂程序，还有一些被用在其他环境（例如 [Node.js](/zh-CN/docs/Glossary/Node.js)）。
 
-因此，近年来，有必要开始考虑提供一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://en.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)，以及最新的 [Webpack](https://webpack.github.io/) 和 [Babel](https://babeljs.io/)）。
+复杂的项目需要一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://zh.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)、[Webpack](https://webpack.js.org/) 和 [Babel](https://babeljs.io/)）。
 
-目前现代流浏览器都已经不需要额外转译就原生支持了模块化功能。这是件好事——浏览器可以优化模块加载，这比使用一个单独的库进行额外的客户端处理和额外的网络开销更高效。不过，这并不会使像 Webpack 这类的打包工具过时——打包工具仍然在将代码划分为合理大小的块方面表现出色，并且能够进行其他优化，如代码压缩、消除无用代码和树摇优化。
+目前现代流浏览器都已经不需要额外转译就原生支持了模块化特性。这是件好事——浏览器可以优化模块加载，这比使用一个单独的库进行额外的客户端处理和额外的网络开销更高效。不过，这并不会使像 Webpack 这类的打包工具过时——打包工具仍然在将代码划分为合理大小的分块方面表现出色，并且能够进行其他优化，如极简化、消除无用代码和摇树优化。
 
 ## 介绍一个例子
 
