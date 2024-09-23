@@ -315,7 +315,7 @@ cursor:
 
 ## 示例
 
-```
+```css
 .foo {
   cursor: crosshair;
 }
