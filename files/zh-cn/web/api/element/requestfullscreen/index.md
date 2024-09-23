@@ -55,40 +55,29 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使用此功能。
 
-## Usage notes
+## 使用说明
 
-### Compatible elements
+### 兼容元素
 
-An element that you wish to place into fullscreen mode has to meet a small number of
-simple requirements:
+你希望置于全屏模式的元素必须满足一些简单的要求：
 
-- It must be one of the standard HTML elements or {{SVGElement("svg")}} or
-  {{MathMLElement("math")}}.
-- It is _not_ a {{HTMLElement("dialog")}} element.
-- It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
-  attribute applied to it.
+- 它必须是标准 HTML 元素之一或 {{SVGElement("svg")}} 或 {{MathMLElement("math")}}。
+- 它不是 {{HTMLElement("dialog")}} 元素。
+- 它必须位于顶级文档中或已应用 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性的 {{HTMLElement("iframe")}} 元素。
 
-Additionally, any set Permissions Policies must allow the use of this feature.
+此外，任何设置的权限策略都必须允许使用此特性。
 
-### Detecting fullscreen activation
+### 检测全屏激活
 
-You can determine whether or not your attempt to switch to fullscreen mode is
-successful by using the {{jsxref("Promise")}} returned by
-`requestFullscreen()`, as seen in the [examples](#examples) below.
+你可以使用 `requestFullscreen()` 返回的 {{jsxref("Promise")}} 来确定切换到全屏模式的尝试是否成功，如下面的[示例](#示例)所示。
 
-To learn when other code has toggled fullscreen mode on and off, you should establish
-listeners for the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event on the {{domxref("Document")}}.
-It's also important to listen for `fullscreenchange` to be aware when, for
-example, the user manually toggles fullscreen mode, or when the user switches
-applications, causing your application to temporarily exit fullscreen mode.
+要了解其他代码何时打开和关闭全屏模式，你应该为 {{domxref("Document")}} 上的 {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} 事件创建监听器。监听 `fullscreenchange` 也很重要，例如，当用户手动切换全屏模式时，或者当用户切换应用程序时，导致应用程序暂时退出全屏模式。
 
 ## 示例
 
-### Requesting fullscreen mode
+### 请求全屏模式
 
-This function toggles the first {{HTMLElement("video")}} element found in the document
-into and out of fullscreen mode.
+此函数可将文档中找到的第一个 {{HTMLElement("video")}} 元素切换为全屏模式或退出全屏模式。
 
 ```js
 function toggleFullscreen() {
@@ -97,7 +86,7 @@ function toggleFullscreen() {
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
       alert(
-        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+        `尝试启用全屏模式时出错：${err.message}（${err.name}）`,
       );
     });
   } else {
@@ -106,23 +95,15 @@ function toggleFullscreen() {
 }
 ```
 
-If the document isn't already in fullscreen mode—detected by looking to see if
-{{domxref("document.fullscreenElement")}} has a value—we call the video's
-`requestFullscreen()` method. We don't need to do anything special if
-successful, but if the request fails, our promise's `catch()` handler
-presents an alert with an appropriate error message.
+如果文档尚未处于全屏模式（通过查看 {{domxref("document.fullscreenElement")}} 是否有值来检测），我们将调用视频的 `requestFullscreen()` 方法。如果成功，我们不需要做任何特殊的事情，但如果请求失败，我们的 promise 的 `catch()` 处理器会显示带有适当错误消息的警报。
 
-If, on the other hand, fullscreen mode is already in effect, we call
-{{domxref("document.exitFullscreen()")}} to disable fullscreen mode.
+另一方面，如果全屏模式已经生效，我们将调用 {{domxref("document.exitFullscreen()")}} 来禁用全屏模式。
 
-You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
+你可以在 [Glitch](https://glitch.com/) 上[查看此示例的实际操作](https://fullscreen-requestfullscreen-demo.glitch.me/)或[查看或重新混合代码](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo)。
 
-### Using navigationUI
+### 使用 navigationUI
 
-In this example, the entire document is placed into fullscreen mode by calling
-`requestFullscreen()` on the document's
-{{DOMxRef("Document.documentElement")}}, which is the document's root
-{{HTMLElement("html")}} element.
+在此示例中，通过在文档的 {{DOMxRef("Document.documentElement")}}（即文档的根 {{HTMLElement("html")}} 元素）上调用 `requestFullscreen()`，将整个文档置于全屏模式。
 
 ```js
 let elem = document.documentElement;
@@ -132,17 +113,16 @@ elem
   .then(() => {})
   .catch((err) => {
     alert(
-      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
+      `尝试切换到全屏模式时发生错误：${err.message}（${err.name}）`,
     );
   });
 ```
 
-The promise's resolve handler does nothing, but if the promise is rejected, an error
-message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
+promise 的解析处理器不执行任何操作，但如果 promise 被拒绝，则会通过调用 {{DOMxRef("Window.alert", "alert()")}} 显示错误消息。
 
-### Using the screen option
+### 使用 screen 选项
 
-If you wanted to make the element fullscreen on the primary OS screen, you could use code like the following:
+如果你想让元素在主操作系统屏幕上全屏显示，你可以使用如下代码：
 
 ```js
 try {
@@ -155,7 +135,7 @@ try {
 }
 ```
 
-The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{domxref("ScreenDetails")}} object for the current device, which contains {{domxref("ScreenDetailed")}} objects representing the different available screens.
+{{domxref("Window.getScreenDetails()")}} 方法用于检索当前设备的 {{domxref("ScreenDetails")}} 对象，其中包含代表不同可用屏幕的 {{domxref("ScreenDetailed")}} 对象。
 
 ## 规范
 
