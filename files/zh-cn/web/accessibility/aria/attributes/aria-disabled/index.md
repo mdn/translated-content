@@ -32,7 +32,7 @@ l10n:
 <div role="button" aria-disabled="true" tabindex="-1">编辑</div>
 ```
 
-类似于需要使用 JavaScript 确保设置 `aria-disabled="true"` 的元素不可操作，该元素还需要样式调整。与 HTML 的 `disabled` 属性相反，指定它会应用 `:disabled` 用户代理样式，而添加 `aria-disabled="true"` 则不会。可以使用 [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]` 来样式化元素。
+类似于需要使用 JavaScript 确保设置 `aria-disabled="true"` 的元素不可操作，该元素还需要样式调整。与 HTML 的 `disabled` 属性相反，指定它会应用 `:disabled` 用户代理样式，而添加 `aria-disabled="true"` 则不会。可以使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`来样式化元素。
 
 ```css
 [aria-disabled="true"] {
@@ -51,7 +51,7 @@ l10n:
 }
 ```
 
-[`forced-colors` 媒体查询](/zh-CN/docs/Web/CSS/@media/forced-colors) 检测用户代理是否启用了强制颜色模式；如果是，文本和边框颜色都设置为 [系统颜色 `greyText`](/zh-CN/docs/Web/CSS/system-color#syntax)。
+[`forced-colors` 媒体查询](/zh-CN/docs/Web/CSS/@media/forced-colors)检测用户代理是否启用了强制颜色模式；如果是，文本和边框颜色都设置为[系统颜色 `greyText`](/zh-CN/docs/Web/CSS/system-color#syntax)。
 
 另一件需要注意的事，当使用 `aria-disabled` 而不是本地 HTML 属性时，ARIA 属性将需要手动样式，以便在 Windows 高对比度模式下直观地传达该元素被禁用。
 
