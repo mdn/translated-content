@@ -13,6 +13,8 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 因此，近年来，有必要开始考虑提供一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://en.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)，以及最新的 [Webpack](https://webpack.github.io/) 和 [Babel](https://babeljs.io/)）。
 
+目前现代流浏览器都已经不需要额外转译就原生支持了模块化功能。这是件好事——浏览器可以优化模块加载，这比使用一个单独的库进行额外的客户端处理和额外的网络开销更高效。不过，这并不会使像 Webpack 这类的打包工具过时——打包工具仍然在将代码划分为合理大小的块方面表现出色，并且能够进行其他优化，如代码压缩、消除无用代码和树摇优化。
+
 ## 介绍一个例子
 
 为了演示模块的使用，我们创建了[一系列简单的示例](https://github.com/mdn/js-examples/tree/main/module-examples) ，你可以在 GitHub 上找到。这个例子演示了一个简单的模块的集合用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。
