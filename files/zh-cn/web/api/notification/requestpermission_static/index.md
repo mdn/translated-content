@@ -23,7 +23,7 @@ Notification.requestPermission(callback)
 ### 参数
 
 - `callback` {{optional_inline}} {{deprecated_inline}}
-  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 返回值的语法。
+  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 {{jsxref("Promise")}} 返回值的语法。
 
 ### 返回值
 
