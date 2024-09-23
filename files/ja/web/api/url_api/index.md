@@ -90,7 +90,7 @@ function fillTableWithParameters(tbl) {
 }
 ```
 
-この例の働くバージョンは [Glitch にあります](https://url-api.glitch.me)。 ページをロードするときに URL に引数を追加するだけで、表に表示されます。 例えば、[`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable) を試してください。
+この例の動作するバージョンは [Glitch にあります](https://url-api.glitch.me)。 ページを読み込むときに URL に引数を追加するだけで、表に表示されます。 例えば、[`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable) を試してください。
 
 ## 仕様書
 
