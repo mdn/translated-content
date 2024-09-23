@@ -98,8 +98,6 @@ Le Web est le choix le plus évident et le plus intéressant pour des jeux HTML5
 
 Il existe toute une variété d'outils, à choisir en fonction de vos compétences, de vos frameworks favoris ou des plateformes que vous visez. Tout l'enjeu consiste à choisir le meilleur outil pour réaliser la tâche que vous souhaitez réaliser.
 
-- [Phonegap](https://phonegap.com/) — basé sur Cordova, c'est l'outil le plus populaire pour construire et packager des applications JavaScript à destination des plateformes natives.
-- [CocoonIO](https://web.archive.org/web/20200708044410/http://blog.cocoon.io/) — le plus populaire des outils dédiés à la conception de jeux HTML5 pour de multiples boutiques natives. CocoonIO propose ses propres optimisations de performance pour les jeux utilisant Canvas, et fonctionne avec beaucoup de frameworks de jeu.
 - [Ejecta](https://impactjs.com/ejecta) — un outil conçu spécifiquement pour packager les jeux créés avec le framework [ImpactJS](https://impactjs.com/) pour iOS, par ailleurs développé par le créateur d'ImpactJS. L'outil propose une intégration fluide avec ImpactJS, mais ne supporte qu'un framework et app store.
 - [NW.js](https://nwjs.io/) — anciennement connu sous le nom de Node-Webkit, c'est la solution à privilégier lorsqu'on souhaite construire des jeux d'ordinateur qui fonctionnent sur Windows, Mac et Linux. Les distributions sont packagés grâce au moteur WebKit afin d'offrir un rendu sur n'importe quelle plateforme.
 
