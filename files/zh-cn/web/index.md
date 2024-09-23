@@ -79,5 +79,5 @@ l10n:
   - : Chrome 内置的 Web 开发者工具的文档。
 - [Safari Web 监视器](https://webkit.org/web-inspector/)
   - : Safari 内置的 Web 开发者工具的文档。
-- [Edge 开发者工具](https://docs.microsoft.com/zh-CN/microsoft-edge/devtools-guide-chromium/landing/)
+- [Edge 开发者工具](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
   - : Edge 内置的 Web 开发者工具的文档。
