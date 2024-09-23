@@ -2,7 +2,7 @@
 title: 画中画 API
 slug: Web/API/Picture-in-Picture_API
 l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+  sourceCommit: bb4d21e3c6e71db4e0ba983a450d6ed628e82670
 ---
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
@@ -72,7 +72,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 
 ## 控制访问权限
 
-可以使用[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制画中画的可用性。全屏模式的特性由字符串 `"picture-in-picture"` 标识，默认的允许列表的值是 `"self"`，意味着在顶级文档上下文以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
+可以使用[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制画中画的可用性。全屏模式的特性由字符串 `"picture-in-picture"` 标识，默认的允许列表的值是 `*`，意味着在顶级文档上下文以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
 
 ## 示例
 
@@ -82,7 +82,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 
 ### 切换画中画模式
 
-当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理程序调用：
+当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理器调用：
 
 ```js
 function togglePictureInPicture() {
