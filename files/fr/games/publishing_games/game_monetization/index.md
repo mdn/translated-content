@@ -43,7 +43,7 @@ Trouver des éditeurs peut être difficile au début — esssayez de les recherc
 
 ### Licences exclusives
 
-La licence exclusive est un type de licence pour un éditeur — vous avez créé un jeu et vous en vendez tous les droits à une seule entité ainsi que les droits de le redistribuer — [Softgames](https://www.softgames.com:443/) est un exemple d'un tel éditeur. Vous ne pouvez pas le revendre sous quelque forme que ce soit tant que l'éditeur en a les droits - c'est pourquoi les accords exclusifs valent beaucoup d'argent. Combien exactement? Cela dépend de la qualité du jeu, de son genre, de son éditeur et de bien d'autres, mais généralement, ce sera entre 2000 et 5000 USD. Une fois que vous avez vendu une licence exclusive, vous pouvez oublier la promotion de ce jeu particulier car vous ne gagnerez pas plus, alors ne concluez un tel accord que si vous êtes sûr qu'il est suffisamment rentable.
+La licence exclusive est un type de licence pour un éditeur — vous avez créé un jeu et vous en vendez tous les droits à une seule entité ainsi que les droits de le redistribuer — [Softgames](https://www.softgames.com/) est un exemple d'un tel éditeur. Vous ne pouvez pas le revendre sous quelque forme que ce soit tant que l'éditeur en a les droits - c'est pourquoi les accords exclusifs valent beaucoup d'argent. Combien exactement? Cela dépend de la qualité du jeu, de son genre, de son éditeur et de bien d'autres, mais généralement, ce sera entre 2000 et 5000 USD. Une fois que vous avez vendu une licence exclusive, vous pouvez oublier la promotion de ce jeu particulier car vous ne gagnerez pas plus, alors ne concluez un tel accord que si vous êtes sûr qu'il est suffisamment rentable.
 
 ### Licences non exclusives
 

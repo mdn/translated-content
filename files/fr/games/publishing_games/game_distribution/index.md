@@ -70,10 +70,9 @@ Voyons quelles options sont à notre disposition en matière de marketplaces/mag
 
 ### Boutiques en ligne
 
-Les meilleures plateformes de jeux HTML5 sont des boutiques Web. Il est facile de [préparer un jeu pour ces plateformes](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515), puisque cela ne demande que très peu voire aucune modification au jeu lui-même : il suffit en général d'ajouter une simple notice explicative ("manifeste") avec toutes les informations nécessaires dans un dossier zip contenant l'ensemble des ressources.
+Les meilleures plateformes de jeux HTML5 sont des boutiques Web. Il est facile de préparer un jeu pour ces plateformes, puisque cela ne demande que très peu voire aucune modification au jeu lui-même : il suffit en général d'ajouter une simple notice explicative ("manifeste") avec toutes les informations nécessaires dans un dossier zip contenant l'ensemble des ressources.
 
 - Le magasin d'applications [Chrome Web Store](https://chrome.google.com/webstore/) représente également une option intéressante : une notice explicative, votre jeu dans un dossier zip et un formulaire de soumission à remplir en ligne, c'est tout ce dont vous avez besoin pour mettre votre jeu à disposition.
-- [Tizen](https://tizenstore.com/) accorde beaucoup d'importance au soutien des applications écrites en JavaScript : leur boutique fait partie des options disponibles.
 
 ### Les App Store natifs
 
