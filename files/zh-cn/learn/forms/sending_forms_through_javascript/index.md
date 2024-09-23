@@ -16,8 +16,8 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 因此，当这些 web 应用想要提交表单数据时，仅使用 HTML 表单来收集用户输入，而不提交数据。当用户尝试发送数据时，应用会接过控制并使用 JavaScript API（如 {{domxref("Window/fetch", "fetch()")}}）来发送数据。
 
 ## JavaScript 表单提交的问题
- 
-如果Web应用的服务器端点由开发人员控制，那么他们可以选择任意方式发送表单数据，例如以JSON对象的形式。
+
+如果 Web 应用的服务器端点由开发人员控制，那么他们可以选择任意方式发送表单数据，例如以 JSON 对象的形式。
 
 然而，如果服务器端点希望提交表单，web 应用就必须以特定方式对数据进行编码。例如，例如，如果数据仅为文本，则可以由 URL 编码的键/值对列表组成，并以 `application/x-www-form-urlencoded` 的{{httpheader("Content-Type")}} 发送。如果表单包含二进制数据，则必须使用 `multipart/form-data` 内容类型发送。
 
