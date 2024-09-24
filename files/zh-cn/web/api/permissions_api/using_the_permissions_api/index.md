@@ -1,5 +1,5 @@
 ---
-title: 使用 Permissions API
+title: 使用权限 API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 l10n:
   sourceCommit: 805d398f95c9d1ad8769e65d56bbfe2a31205021
@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Permissions API")}}
 
-本文提供了使用 W3C [Permissions API](/zh-CN/docs/Web/API/Permissions_API)——它提供了一种用于查询当前上下文的 API 权限授权状态的编程方式——的基本指南。
+本文提供了使用[权限 API](/zh-CN/docs/Web/API/Permissions_API)——它提供了一种用于查询当前上下文的 API 权限授权状态的编程方式——的基本指南。
 
 ## 申请权限面临的困境
 
@@ -15,7 +15,7 @@ l10n:
 
 由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限──例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API) 允许显式地检查权限状态和申请权限，然而，[Geolocation API](/zh-CN/docs/Web/API/Geolocation_API) 却不能。
 
-[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在 [Worker](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions) 中也是如此（但有一个明显的例外）。
+[权限 API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在 [Worker](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions) 中也是如此（但有一个明显的例外）。
 
 许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多权限启用的 API 列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
 
@@ -27,9 +27,9 @@ l10n:
 
 ![英国格林菲尔德地图的截图](location-finder-with-permissions-api.png)
 
-你可以[在线运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或[在 Github 查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见──所以接下来我们会重点关注和 Permissions API 有关的代码，如果你想学习其他部分，请自行阅读。
+你可以[在线运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或[在 Github 查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见──所以接下来我们会重点关注和权限 API 有关的代码，如果你想学习其他部分，请自行阅读。
 
-### 访问 Permissions API
+### 访问权限 API
 
 浏览器现已包含 {{domxref("Navigator.permissions")}} 属性使开发者可以访问全局的 {{domxref("Permissions")}} 对象。这个对象最终将包含用来查询、申请和重置权限的方法，尽管，目前只有 {{domxref("Permissions.query()")}}；我们接下来会讨论它。
 
@@ -82,14 +82,3 @@ handlePermission();
 ### 响应权限状态变化
 
 你会注意到，在上面的代码中，在 {{domxref("PermissionStatus")}} 对象上有一个 `onchange` 事件回调——这让我们可以对感兴趣的 API 的状态变化做出响应。目前，我们只是上报了状态的变化。
-
-## 总结和展望未来
-
-目前，较之我们已有的，这个 API 并没有提供太多额外内容。如果在浏览器询问时，我们选择了从不分享我们的位置，那么不使用浏览器菜单选项的话，我们将无法返回权限的初始状态（询问）：
-
-- **Firefox**：_工具 > 页面信息 > 权限 > 访问你的位置_。选择“总是询问”。
-- **Chrome**：_汉堡菜单 > 设置 > 显示高级设置。在隐私部分，点击“内容设置”。在出现的对话框中，找到“位置”部分，选择“当网站试图访问时询问”……最后，点击“管理特例”_，移除你对特定网站的授权。
-
-但是，未来浏览器会提供 `request()` 方法，他让我们可以在任何时候以编程的方式来请求权限。这非常值得期待尽快被实现。
-
-有提案建议为网站添加强制[请求](https://github.com/WICG/permissions-request)和[撤销](https://github.com/WICG/permissions-revoke)权限的功能，但由于用例不明确且遭到浏览器供应商的反对，因此进展不大。请参阅从主规范中[删除 `permissions.request()`](https://github.com/w3c/permissions/issues/83) 和[删除 `permissions.revoke()`](https://github.com/w3c/permissions/issues/46) 的讨论。

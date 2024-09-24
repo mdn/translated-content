@@ -2,7 +2,7 @@
 title: Permissions：revoke() 方法
 slug: Web/API/Permissions/revoke
 l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
@@ -11,31 +11,38 @@ l10n:
 
 此方法已从 Permissions API 主要规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已将此 A​​PI 放在首选项之后，但它不太可能达到标准轨道。有关更多上下文，请参阅[关于删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
 
+{{domxref("Permissions")}} 接口的 **`revoke()`** 方法将当前设置的权限恢复为其默认状态，通常为 `prompt`。此方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
+
+此方法已从主要权限 API 规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已将此 A​​PI 放在首选项后面，但它不太可能达到标准轨道。有关更多上下文，请参阅[删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
+
 ## 语法
 
 ```js-nolint
-revoke(descriptor)
+revoke(permissionDescriptor)
 ```
 
 ### 参数
 
-- `descriptor`
-  - : 一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的键——值对列表组成的操作选项。可用的选项有：
+- `permissionDescriptor`
+
+  - : 设置 `revoke` 操作选项的对象。此描述符的可用选项取决于权限类型。所有权限都有一个名称：
+
     - `name`
-      - : 要查询其权限的 API 的名称。每个浏览器支持不同的值集。你可以查阅 [Firefox 的值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 的值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、[WebKit 的值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)。
-    - `userVisibleOnly`
-      - : （仅限推送，Firefox 不支持——请参阅下面的[浏览器兼容性](#浏览器兼容性)部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 `false`。
-    - `sysex`（仅限 MIDI）
-      - : 表示是否需要接收系统专用消息。默认为 `false`。
+      - : 包含要查询其权限的 API 名称的字符串。如果浏览器不支持该权限名称，则返回的 {{jsxref("Promise")}} 将使用 {{jsxref("TypeError")}} 拒绝。
 
-> [!NOTE]
-> 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API) 和 [Push](/zh-CN/docs/Web/API/Push_API) 的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true`。
+    对于 `push` 权限，你还可以指定：
 
-> **备注：** `persistent-storage` 权限允许使用持久盒（即[持久存储](https://storage.spec.whatwg.org/#persistence)）进行存储，如 [Storage API](https://storage.spec.whatwg.org/) 所述。
+    - `userVisibleOnly` {{optional_inline}}
+      - : （仅推送，Firefox 不支持——请参阅下面的浏览器支持部分）表示你是否要为每条消息显示通知或能够发送静默推送通知。默认值为 `false`。
+
+    对于 `midi` 权限，你还可以指定：
+
+    - `sysex` {{optional_inline}}
+      - : 指示是否需要接收系统独有消息。默认值为 `false`。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，其会在调用兑现处理器时传入指示请求的结果的 {{domxref("PermissionStatus")}} 对象。
+使用 {{domxref("PermissionStatus")}} 对象调用其兑现处理器以指示请求的结果的 {{jsxref("Promise")}}。
 
 ### 异常
 
