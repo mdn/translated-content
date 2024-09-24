@@ -76,7 +76,7 @@ slug: Web/HTML/Element/form
 - `name`
   - : 表单的名称。HTML 4 中不推荐（应使用 `id`）。在 HTML 5 中，该值必须是所有表单中独一无二的，而且不能是空字符串。
 - `rel`
-  - : 根据 value 创建一个超链接或注释，详见 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性.
+  - : 根据 value 创建一个超链接或注释，详见 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性。
 
 ### 关于提交表单的属性
 
