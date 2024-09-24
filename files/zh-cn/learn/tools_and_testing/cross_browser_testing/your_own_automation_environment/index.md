@@ -176,7 +176,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 ## WebDriver 语法速成课程
 
-现在我们来看一下 webdriver 的一些关键语法。更完整的细节，可以参考 [selenium-webdriver JavaScript API 参考](https://www.selenium.dev/selenium/docs/api/javascript/)以及 Selenium 主要的文档 [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)，里面有用不同语言编写的丰富的学习示例。
+现在我们来看一下 webdriver 的一些关键语法。更完整的细节，可以参考 [selenium-webdriver JavaScript API 参考](https://www.selenium.dev/selenium/docs/api/javascript/)以及 Selenium 主要的文档 [Selenium WebDriver](https://www.selenium.dev/zh-cn/documentation/webdriver/)，里面有用不同语言编写的丰富的学习示例。
 
 ### 启动新的测试
 
@@ -223,7 +223,7 @@ driver.get("http://www.google.com");
 ```
 
 > [!NOTE]
-> 可以查看 [WebDriver 类参考](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html)了解这一部分和下面提到的内容的详情。
+> 可以查看 [WebDriver 类参考](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html)了解这一部分和下面提到的内容的详情。
 
 你可以使用包含 `file://` 的 URL 来指向需要测试的本地文件：
 
@@ -280,7 +280,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 
 ### 测试元素
 
-同 web 文档和元素交互的方式很多。在 WebDriver 的文档中有很多常用的例子，你可以从[获取文本值](https://www.selenium.dev/documentation/webdriver/elements/information/#text-content)开始。
+同 web 文档和元素交互的方式很多。在 WebDriver 的文档中有很多常用的例子，你可以从[获取文本值](https://www.selenium.dev/zh-cn/documentation/webdriver/elements/information/#文本内容)开始。
 
 如果需要获取按钮中的文本，可以这样操作：
 
@@ -521,64 +521,64 @@ driver.quit();
 1. 在你的项目目录中，创建一个新文件 `lambdatest_google_test.js`。
 2. 将下列内容复制到文件中：
 
-```js
-const { By, Builder } = require("selenium-webdriver");
-
-// 用户名：用户名可以在自动化仪表板上找到
-const USERNAME = "{username}";
-
-// 访问密钥：访问密钥可以从自动化仪表板或个人资料部分生成
-const KEY = "{accessKey}";
-
-// 网格 URL：网格 URL 可以在自动化仪表板上找到
-const GRID_HOST = "hub.lambdatest.com/wd/hub";
-
-function searchTextOnGoogle() {
-  // 配置功能
-  const capabilities = {
-    platform: "windows 10",
-    browserName: "chrome",
-    version: "67.0",
-    resolution: "1280x800",
-    network: true,
-    visual: true,
-    console: true,
-    video: true,
-    name: "Test 1", // 测试名称
-    build: "NodeJS build", // 构建名称
-  };
-
-  // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
-  const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
-
-  // 设置并构建 Selenium 驱动对象
-  const driver = new Builder()
-    .usingServer(gridUrl)
-    .withCapabilities(capabilities)
-    .build();
-
-  // 导航到 URL，搜索文本并获取页面标题
-  driver.get("https://www.google.com/ncr").then(function () {
-    driver
-      .findElement(By.name("q"))
-      .sendKeys("LambdaTest\n")
-      .then(function () {
-        driver.getTitle().then((title) => {
-          setTimeout(() => {
-            if (title === "LambdaTest - Google Search") {
-              driver.executeScript("lambda-status=passed");
-            } else {
-              driver.executeScript("lambda-status=failed");
-            }
-            driver.quit();
-          }, 5000);
-        });
+    ```js
+    const { By, Builder } = require("selenium-webdriver");
+    
+    // 用户名：用户名可以在自动化仪表板上找到
+    const USERNAME = "{username}";
+    
+    // 访问密钥：访问密钥可以从自动化仪表板或个人资料部分生成
+    const KEY = "{accessKey}";
+    
+    // 网格 URL：网格 URL 可以在自动化仪表板上找到
+    const GRID_HOST = "hub.lambdatest.com/wd/hub";
+    
+    function searchTextOnGoogle() {
+      // 配置功能
+      const capabilities = {
+        platform: "windows 10",
+        browserName: "chrome",
+        version: "67.0",
+        resolution: "1280x800",
+        network: true,
+        visual: true,
+        console: true,
+        video: true,
+        name: "Test 1", // 测试名称
+        build: "NodeJS build", // 构建名称
+      };
+    
+      // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
+      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
+    
+      // 设置并构建 Selenium 驱动对象
+      const driver = new Builder()
+        .usingServer(gridUrl)
+        .withCapabilities(capabilities)
+        .build();
+    
+      // 导航到 URL，搜索文本并获取页面标题
+      driver.get("https://www.google.com/ncr").then(function () {
+        driver
+          .findElement(By.name("q"))
+          .sendKeys("LambdaTest\n")
+          .then(function () {
+            driver.getTitle().then((title) => {
+              setTimeout(() => {
+                if (title === "LambdaTest - Google Search") {
+                  driver.executeScript("lambda-status=passed");
+                } else {
+                  driver.executeScript("lambda-status=failed");
+                }
+                driver.quit();
+              }, 5000);
+            });
+          });
       });
-  });
-}
-
-searchTextOnGoogle();
-```
+    }
+    
+    searchTextOnGoogle();
+    ```
 
 3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
 4. 在终端中运行以下命令，以执行测试：
@@ -661,7 +661,7 @@ searchTextOnGoogle();
 
    测试被发送给 BrowserStack，测试结果会返回到你的控制台。这体现了包含报告机制的重要性！
 
-5. 现在回到 [BrowserStack automation dashboard](https://www.browserstack.com/automate) 页面，你会看到测试列出来的结果：
+5. 现在回到 [BrowserStack 自动化仪表板](https://www.browserstack.com/automate)页面，你会看到测试列出来的结果：
    ![BrowserStack 自动测试结果](bstack_automated_results.png)
 
 如果你点击了测试链接，就会进入一个新的屏幕，在那里可以看到测试的视频记录，以及与测试相关的多个详细信息记录。
