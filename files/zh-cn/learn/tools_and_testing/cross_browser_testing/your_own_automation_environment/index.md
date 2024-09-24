@@ -581,6 +581,7 @@ driver.quit();
    ```
 
 3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
+
 4. 在终端中运行以下命令，以执行测试：
 
    ```bash
