@@ -184,7 +184,7 @@ console.log("b");
 
 数组推导式和生成器推导式已被移除。
 
-```
+```js-nolint
 // 遗留的数组推导式
 [for (x of iterable) x]
 [for (x of iterable) if (condition) x]

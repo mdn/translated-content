@@ -24,7 +24,7 @@ slug: Web/HTTP/Headers/Cookie
 
 ## 语法
 
-```
+```http
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
@@ -35,7 +35,7 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## 示例
 
-```
+```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
 

@@ -42,7 +42,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : 要素の実効ズームサイズを示す数値。要素がレンダリングされない場合は 1.0 です。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を に反映した文字列です。
+  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を反映した文字列です。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : この要素の最初の子要素を返します。
 - {{DOMxRef("Element.id")}}
