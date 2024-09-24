@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
 
-**Document Picture-in-Picture API** 可以打开一个始终在顶部的窗口，该窗口可以填充任意 HTML 内容——例如带有自定义控件的视频或一组显示视频会议参与者的串流。它扩展了早期的 [`<video>` 的 Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)，该 API 专用于将 HTML {{htmlelement("video")}} 元素放入始终在顶层的窗口中。
+**Document Picture-in-Picture API** 可以打开一个始终在顶层的窗口，该窗口可以填充任意 HTML 内容——例如带有自定义控件的视频或一组显示视频会议参与者的串流。它扩展了早期的 [`<video>` 的 Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)，该 API 专用于将 HTML {{htmlelement("video")}} 元素放入始终在顶层的窗口中。
 
 ## 概念和用法
 
@@ -18,7 +18,7 @@ l10n:
 
 为了解决这些问题，web 浏览器引入了 API，允许应用生成属于同一会话且始终在顶层的窗口。第一个公认的用例是让视频内容在单独的窗口中播放，以便用户可以在查看其他内容的同时继续观看视频。这是使用 [`<video>` 的 Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API) 来处理的，它直接用于将 {{htmlelement("video")}} 元素放入单独的窗口中。
 
-然而，我们发现此 API 存在一定限制——你只能将单个 `<video>` 元素放入始终在顶部的窗口中，并且浏览器生成的控件数量极少。**Document Picture-in-Picture API** 的引入带来来更大的灵活性。这允许将*任何*内容放置在始终在顶层的窗口中，以用于各种用例，包括：
+然而，我们发现此 API 存在一定限制——你只能将单个 `<video>` 元素放入始终在顶层的窗口中，并且浏览器生成的控件数量极少。**Document Picture-in-Picture API** 的引入带来来更大的灵活性。这允许将*任何*内容放置在始终在顶层的窗口中，以用于各种用例，包括：
 
 - 始终位于顶层的自定义视频播放器，显示一个或多个具有自定义控件和样式的视频。
 - 视频会议系统，允许用户始终看到其他参与者的串流，以及用于呈现内容、静音、结束通话等的控件。
