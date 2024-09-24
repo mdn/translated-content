@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`DocumentPictureInPictureEvent`** 接口是 {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} 的事件对象，表示当画中画（Picture-in-Picture）窗口打开时触发的 {{domxref("DocumentPictureInPicture/enter_event", "enter")}} 事件。
+**`DocumentPictureInPictureEvent`** 接口是 {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} 的 {{domxref("DocumentPictureInPicture/enter_event", "enter")}} 事件（会在画中画窗口打开时触发）的对象。
 
 {{InheritanceDiagram}}
 
@@ -18,14 +18,14 @@ l10n:
 
 ## 实例方法
 
-_继承自其父类 {{DOMxRef("Event")}} 的方法。_
+_继承其父接口 {{DOMxRef("Event")}} 的方法。_
 
 ## 实例属性
 
-_继承自其父类 {{DOMxRef("Event")}} 的属性。_
+_继承其父接口 {{DOMxRef("Event")}} 的属性。_
 
 - {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个 {{domxref("Window")}} 实例，表示事件触发时的画中画窗口的浏览上下文。
+  - : 返回一个 {{domxref("Window")}} 实例，表示触发事件的 `DocumentPictureInPicture` 窗口的浏览上下文。
 
 ## 示例
 
@@ -62,4 +62,4 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 ## 参见
 
 - {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
-- [使用 DocumentPictureInPictureEvent API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- [使用 Document Picture-in-Picture API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
