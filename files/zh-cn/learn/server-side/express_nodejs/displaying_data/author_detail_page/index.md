@@ -1,6 +1,8 @@
 ---
 title: 作者详情页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
+l10n:
+  sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
 {{LearnSidebar}}
@@ -83,5 +85,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分 : [书本实例细节页面和自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 的下一个部分：[书本实例细节页面和自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
