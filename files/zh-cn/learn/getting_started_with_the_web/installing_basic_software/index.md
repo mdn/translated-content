@@ -36,11 +36,11 @@ l10n:
 下面看起来是一个可怕的列表，但幸运的是，你可以在不了解大部分工具的情况下开始 Web 开发。
 
 - **计算机**。也许这对一些人来说听起来习以为常，但你们中的一些人正在使用手机或图书馆的电脑阅读本文。对于需要认真对待的 Web 开发而言，最好购买一台运行 Windows、macOS 或 Linux 的台式机或笔记本电脑。
-- **文本编辑器**，用来写代码。可以是一个文本编辑器（如 [Visual Studio Code](https://code.visualstudio.com/)、[Notepad++](https://notepad-plus-plus.org/)、[Sublime Text](https://www.sublimetext.com/) 、[GNU Emacs](https://www.gnu.org/software/emacs/) 或者 [VIM](https://www.vim.org/) ），或一个混合编辑器（ [Dreamweaver](https://www.adobe.com/products/dreamweaver.html) 或 [WebStorm](https://www.jetbrains.com/webstorm/)）。Office 文档不适合这种用途，因为它们依赖隐藏的元素，会干扰网络浏览器使用的渲染引擎。
-- **网络浏览器**，用来测试代码。目前，最常用的浏览器是 [Firefox](https://www.mozilla.org/zh-CN/firefox/)、[Chrome](https://www.google.cn/intl/zh-CN/chrome/)、[Safari](https://www.apple.com.cn/safari/) 和 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)。你还应该测试你的网站在移动设备和你的目标受众可能正在使用的任何其它浏览器上的表现。[Lynx](https://lynx.browser.org/)，一个基于文本的终端网络浏览器，用于了解视力障碍用户对你的网站的体验是非常好的。
+- **文本编辑器**，用来写代码。可以是一个文本编辑器（如 [Visual Studio Code](https://code.visualstudio.com/)、[Notepad++](https://notepad-plus-plus.org/)、[Sublime Text](https://www.sublimetext.com/) 、[GNU Emacs](https://www.gnu.org/software/emacs/) 或者 [VIM](https://www.vim.org/) ），或一个混合编辑器（ [Dreamweaver](https://www.adobe.com/products/dreamweaver.html) 或 [WebStorm](https://www.jetbrains.com/webstorm/)）。Office 文档编辑器不适合这种用途，因为它们依赖隐藏的元素，会干扰网络浏览器使用的渲染引擎。
+- **网络浏览器**，用来测试代码。目前，最常用的浏览器是 [Firefox](https://www.mozilla.org/zh-CN/firefox/)、[Chrome](https://www.google.cn/intl/zh-CN/chrome/)、[Safari](https://www.apple.com.cn/safari/) 和 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)。你还应该测试你的网站在移动设备和你的目标受众可能正在使用的任何其他浏览器上的表现。[Lynx](https://lynx.browser.org/)，一个基于文本的终端网络浏览器，用于了解视力障碍用户对你的网站的体验是非常好的。
 - **图形编辑器**，如 [GIMP](https://www.gimp.org/)、[Figma](https://www.figma.com/)、[Paint.NET](https://www.getpaint.net/)、[Photoshop](https://www.adobe.com/products/photoshop.html)、[Sketch](https://www.sketch.com) 或 [XD](https://www.adobe.com/products/xd.html)，为你的网页制作图像或图形。
 - **版本控制系统**，用来管理服务器上的文件、与团队合作开展项目、共享代码和资产、避免编辑冲突。现在，[Git](https://git-scm.com/) 是最流行的版本控制系统，还有 [GitHub](https://github.com/) 或 [GitLab](https://gitlab.com) 托管服务。
 
-对于 更多信息 其他项目特定的工具，尤其是 对于客户端 Web 开发，参见 指南
+对于其他的特定项目的工具的更多信息，尤其是对于客户端 Web 开发，参见[理解客户端 Web 开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)指南。
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
