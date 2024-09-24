@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
-*你的网站会是什么样子*？讨论的是你编写代码之前不得不为你的网站准备的计划和设计工作，包括“网站提供哪些信息？”、“用哪些字体和颜色？”、“网站是做什么的？”。
+_你的网站会是什么样子_？讨论的是你编写代码之前不得不为你的网站准备的计划和设计工作，包括“网站提供哪些信息？”、“用哪些字体和颜色？”、“网站是做什么的？”。
 
 ## 第一步：计划
 
