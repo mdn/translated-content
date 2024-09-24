@@ -521,64 +521,63 @@ driver.quit();
 1. 在你的项目目录中，创建一个新文件 `lambdatest_google_test.js`。
 2. 将下列内容复制到文件中：
 
-    ```js
-    const { By, Builder } = require("selenium-webdriver");
-    
-    // 用户名：用户名可以在自动化仪表板上找到
-    const USERNAME = "{username}";
-    
-    // 访问密钥：访问密钥可以从自动化仪表板或个人资料部分生成
-    const KEY = "{accessKey}";
-    
-    // 网格 URL：网格 URL 可以在自动化仪表板上找到
-    const GRID_HOST = "hub.lambdatest.com/wd/hub";
-    
-    function searchTextOnGoogle() {
-      // 配置功能
-      const capabilities = {
-        platform: "windows 10",
-        browserName: "chrome",
-        version: "67.0",
-        resolution: "1280x800",
-        network: true,
-        visual: true,
-        console: true,
-        video: true,
-        name: "Test 1", // 测试名称
-        build: "NodeJS build", // 构建名称
-      };
-    
-      // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
-      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
-    
-      // 设置并构建 Selenium 驱动对象
-      const driver = new Builder()
-        .usingServer(gridUrl)
-        .withCapabilities(capabilities)
-        .build();
-    
-      // 导航到 URL，搜索文本并获取页面标题
-      driver.get("https://www.google.com/ncr").then(function () {
-        driver
-          .findElement(By.name("q"))
-          .sendKeys("LambdaTest\n")
-          .then(function () {
-            driver.getTitle().then((title) => {
-              setTimeout(() => {
-                if (title === "LambdaTest - Google Search") {
-                  driver.executeScript("lambda-status=passed");
-                } else {
-                  driver.executeScript("lambda-status=failed");
-                }
-                driver.quit();
-              }, 5000);
-            });
-          });
-      });
-    }
-    
-    searchTextOnGoogle();
-    ```
+   ```js
+   const { By, Builder } = require("selenium-webdriver");
+
+   // 用户名：用户名可以在自动化仪表板上找到
+   const USERNAME = "{username}";
+
+   // 访问密钥：访问密钥可以从自动化仪表板或个人资料部分生成
+   const KEY = "{accessKey}";
+
+   // 网格 URL：网格 URL 可以在自动化仪表板上找到
+   const GRID_HOST = "hub.lambdatest.com/wd/hub";
+
+   function searchTextOnGoogle() {
+     // 配置功能
+     const capabilities = {
+       platform: "windows 10",
+       browserName: "chrome",
+       version: "67.0",
+       resolution: "1280x800",
+       network: true,
+       visual: true,
+       console: true,
+       video: true,
+       name: "Test 1", // 测试名称
+       build: "NodeJS build", // 构建名称
+     };
+
+     // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
+     const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
+
+     // 设置并构建 Selenium 驱动对象
+     const driver = new Builder()
+       .usingServer(gridUrl)
+       .withCapabilities(capabilities)
+       .build();
+
+     // 导航到 URL，搜索文本并获取页面标题
+     driver.get("https://www.google.com/ncr").then(function () {
+       driver
+         .findElement(By.name("q"))
+         .sendKeys("LambdaTest\n")
+         .then(function () {
+           driver.getTitle().then((title) => {
+             setTimeout(() => {
+               if (title === "LambdaTest - Google Search") {
+                 driver.executeScript("lambda-status=passed");
+               } else {
+                 driver.executeScript("lambda-status=failed");
+               }
+               driver.quit();
+             }, 5000);
+           });
+         });
+     });
+   }
+
+   searchTextOnGoogle();
 
 3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
 4. 在终端中运行以下命令，以执行测试：
