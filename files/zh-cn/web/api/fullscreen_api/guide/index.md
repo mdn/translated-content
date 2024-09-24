@@ -2,7 +2,7 @@
 title: 全屏 API 指南
 slug: Web/API/Fullscreen_API/Guide
 l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
