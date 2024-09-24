@@ -25,7 +25,7 @@ requestWindow(options)
     - `height`
       - : 一个非负数，表示要为画中画窗口的视口设置的高度（以像素为单位）。如果未指定 `options`，则使用默认值 0。
     - `width`
-      - : 一个非负数，表示要设置的画中画窗口视口宽度（以像素为单位）。如果未指定 `options`，则使用默认值 0。
+      - : 一个非负数，表示要为画中画窗口的视口设置的宽度（以像素为单位）。如果未指定 `options`，则使用默认值 0。
 
 > [!NOTE]
 > 如果指定了其中一个选项，则必须同时指定另一个选项，否则会抛出错误。如果两个值均未指定、指定为 0 或设置过大，则浏览器将根据需要限制或忽略这些值以提供合理的用户体验。限制的大小将根据浏览器实现、显示器尺寸和其他因素而有所不同。
@@ -42,7 +42,7 @@ requestWindow(options)
   - : 在符合以下条件时抛出此异常：
     - `requestWindow()` 不是从顶级 `window` 对象调用的。
     - `requestWindow()` 是从画中画窗口的 `window` 对象调用的（即 {{domxref("DocumentPictureInPicture.window")}}）。
-    - 调用 `requestWindow()` 时不满足 {{Glossary("Transient_activation", "瞬态激活")}}。
+    - 调用 `requestWindow()` 时不满足{{Glossary("Transient_activation", "瞬态激活")}}。
 - `RangeError` {{domxref("DOMException")}}
   - : 如果仅设置了 `height` 和 `width` 中的一个，或者 `height` 和 `width` 设置为负值，则抛出。
 
