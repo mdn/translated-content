@@ -14,7 +14,7 @@ El objetivo de esta prueba de habilidad es evaluar si has comprendido el artícu
 
 ## Texto básico HTML 1
 
-En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo. 
+En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo.
 
 El ejemplo terminado debería de tener este aspecto:
 
