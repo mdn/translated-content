@@ -309,7 +309,6 @@ La notación de repetición toma una lista de vías específicas, por lo tanto, 
   <div>8</div>
   <div>9</div>
 </div>
-
 ```
 
 ```css live-sample___vias-repeat-intercaladas
@@ -337,7 +336,6 @@ La notación de repetición toma una lista de vías específicas, por lo tanto, 
   padding: 1px;
   color: #d9480f;
 }
-
 ```
 
 {{ EmbedLiveSample('vias-repeat-intercaladas', '220', '140') }}
