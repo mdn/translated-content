@@ -7,12 +7,12 @@ l10n:
 
 {{AddonSidebar}}
 
-若后台脚本在运行中，则将返回后台页面的 [Window](/zh-CN/docs/Web/API/Window)。若脚本不在运行，则将返回 null。
+若后台脚本在运行中，则返回后台页面的 [Window](/zh-CN/docs/Web/API/Window)。若脚本不在运行，则返回 null。
 
 这是一个同步函数。
 
 > [!NOTE]
-> 该方法不能在隐私浏览模式下使用——它将总是返回 null。请考虑使用 {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} 或 {{WebExtAPIRef("runtime.connect","runtime.connect()")}}。更多信息请参见 [Firefox bug 1329304](https://bugzil.la/1329304)。
+> 该方法不能在隐私浏览模式下使用——它总是返回 null。请考虑使用 {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} 或 {{WebExtAPIRef("runtime.connect","runtime.connect()")}}。更多信息请参见 [Firefox bug 1329304](https://bugzil.la/1329304)。
 
 ## 语法
 
@@ -30,7 +30,7 @@ let page = browser.extension.getBackgroundPage()
 
 ## 示例
 
-考虑定义了一个函数 `foo()` 的[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)：
+考虑定义了一个 `foo()` 函数的[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)：
 
 ```js
 // background.js
