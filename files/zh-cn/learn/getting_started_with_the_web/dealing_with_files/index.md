@@ -67,7 +67,7 @@ l10n:
 
 3. 该行代码 `<img src="" alt="My test image">` 用于向页面中插入图片。我们需要告知 HTML 图片的位置。这张图片位于 _images_ 目录下，与 `index.html` 处于同一目录。为了从 `index.html` 访问到我们的图像，我们需要的文件路径是 `images/your-image-filename`。例如，这里的图像叫做 `firefox-icon.png`，那么文件路径就是 `images/firefox-icon.png`。
 4. 在 HTML 代码 `src=""` 的双引号之间插入文件路径。
-5. 将 `alt` 属性的内容变为你所引入的[图像的描述信息](/zh-CN/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions)。在这个例子中，就是 `alt="火狐 logo：盘绕世界的火狐"`。
+5. 将 `alt` 属性的内容变为你所引入的[图像的描述信息](/zh-CN/docs/Web/HTML/Element/img#使用有实际意义的备用描述)。在这个例子中，就是 `alt="火狐 logo：盘绕世界的火狐"`。
 6. 保存 HTML 文件，然后使用浏览器打开（双击该文件）。你应该看到新网页显示了图像！
 
 ![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
