@@ -70,7 +70,7 @@ button.setAttribute("disabled", "");
 
 这说明了两件事：
 
-- 上面对 `setAttribute()` 的第一次调用显示了将 `name` 属性的值更改为“helloButton”。你可以使用浏览器的页面检查器（[Chrome](https://developer.chrome.com/docs/devtools/dom/properties/)、[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect)、[Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html)、[Safari](https://support.apple.com/zh-cn/guide/safari-developer/welcome/mac)）查看此内容。
+- 上面对 `setAttribute()` 的第一次调用显示了将 `name` 属性的值更改为“helloButton”。你可以使用浏览器的页面检查器（[Chrome](https://developer.chrome.google.cn/docs/devtools/dom/properties)、[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect)、[Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html)、[Safari](https://support.apple.com/zh-cn/guide/safari-developer/welcome/mac)）查看此内容。
 - 要设置布尔属性的值（例如 `disabled`），可以指定任何值。建议使用空字符串或属性名称。重要的是，如果属性确实存在，_则不管其实际值如何_，都将视其值为 `true`。该属性的缺失表示其值是 `false`。我们通过把 `disabled` 属性的值设置为空字符串（`""`），以将 `disable` 设置为 `true`，这将导致按钮被禁用。
 
 ## 规范

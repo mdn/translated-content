@@ -22,7 +22,7 @@ slug: Web/HTTP/Headers/Origin
 
 ## 语法
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>

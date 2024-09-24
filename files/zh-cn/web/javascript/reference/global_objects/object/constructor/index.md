@@ -67,7 +67,7 @@ console.log(`theTree.constructor 是 ${theTree.constructor}`);
 
 这个示例会打印以下输出：
 
-```
+```plain
 theTree.constructor 是 function Tree(name) {
   this.name = name;
 }

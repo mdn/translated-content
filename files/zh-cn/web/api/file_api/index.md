@@ -2,7 +2,7 @@
 title: 文件 API
 slug: Web/API/File_API
 l10n:
-  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
@@ -78,7 +78,7 @@ fileInput.addEventListener("change", () => {
 });
 ```
 
-### 运行结果
+### 结果
 
 {{EmbedLiveSample("读取文件", "", "300")}}
 
@@ -89,4 +89,5 @@ fileInput.addEventListener("change", () => {
 ## 参见
 
 - [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)：文件 input 元素
+- {{domxref("Blob.text()")}}
 - {{domxref("DataTransfer")}} 接口

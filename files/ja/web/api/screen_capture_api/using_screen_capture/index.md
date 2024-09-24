@@ -2,7 +2,7 @@
 title: 画面キャプチャ API の使用
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 l10n:
-  sourceCommit: 0f445d840bbe4361685121828e67413901705d21
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
@@ -63,13 +63,13 @@ function startCapture(displayMediaOptions) {
 }
 ```
 
-いずれにせよ、{{Glossary("user agent", "ユーザーエージェント")}}は、共有する画面領域を選択するようユーザーに促すユーザーインタフェースを提示して応答します。これらの `startCapture()` の実装はどちらも、キャプチャされた表示画像を含む {{domxref("MediaStream")}} を返します。
+いずれにせよ、{{Glossary("user agent", "ユーザーエージェント")}}は、共有する画面領域を選択するようユーザーに促すユーザーインターフェイスを提示して応答します。これらの `startCapture()` の実装はどちらも、キャプチャされた表示画像を含む {{domxref("MediaStream")}} を返します。
 
 必要な画面の種類を指定する方法と、結果として得られるストリームを調整する他の方法については、以下の[オプションと制約](#オプションと制約)を参照してください。
 
 ### キャプチャする表示面を選択するウィンドウの例
 
-[![Chrome のソース面を選ぶウィンドウの画面ショット](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+![Chrome のソース面を選ぶウィンドウの画面ショット](chrome-screen-capture-window.png)
 
 そして、キャプチャしたストリーム `captureStream` を、ストリームを入力として受け付けるあらゆるものに使用することができます。以下の[例](#例)は、ストリームを利用するためのいくつかの方法を示しています。
 
@@ -220,7 +220,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-これにより、おなじみの {{domxref("console/log_static", "console/log()")}} や {{domxref("console.error_static", "console.error()")}} などを使って、ドキュメント内のログボックスに情報を記録することができるようになります。
+これにより、おなじみの {{domxref("console/log_static", "console.log()")}} や {{domxref("console.error_static", "console.error()")}} などを使って、ドキュメント内のログボックスに情報を記録することができるようになります。
 
 ##### 画面キャプチャの開始
 
@@ -228,7 +228,7 @@ console.error = (msg) =>
 
 ```js
 async function startCapture() {
-  logElem.innerHTML = "";
+  logElem.textContent = "";
 
   try {
     videoElem.srcObject =
@@ -284,13 +284,13 @@ HTML は簡単な紹介文から始まり、本題に入ります。
 
 ```html
 <p>
-  This example shows you the contents of the selected part of your display.
-  Click the Start Capture button to begin.
+  この例では、ディスプレイの選択した部分の内容を表示します。
+  キャプチャ開始ボタンをクリックすると開始します。
 </p>
 
 <p>
-  <button id="start">Start Capture</button>&nbsp;<button id="stop">
-    Stop Capture
+  <button id="start">キャプチャ開始</button>&nbsp;<button id="stop">
+    キャプチャ停止
   </button>
 </p>
 
@@ -333,7 +333,7 @@ HTML の主要な部分は以下の通りです。
 
 最終的にはこのようになります。ブラウザーが画面キャプチャ API に対応している場合、"Start Capture" をクリックすると、共有する画面、ウィンドウ、タブを選択するための{{Glossary("user agent", "ユーザーエージェント")}}のインターフェイスが表示されます。
 
-{{EmbedLiveSample("単純な画面キャプチャ", 640, 800, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Streaming screen capture", 640, 800, "", "", "", "display-capture")}}
 
 ## セキュリティ
 

@@ -32,4 +32,4 @@ const { x, y, width, height } = navigator.virtualKeyboard.boundingRect;
 ## 参见
 
 - {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}
-- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
+- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.google.cn/docs/web-platform/virtual-keyboard)
