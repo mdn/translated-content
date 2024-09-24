@@ -11,13 +11,13 @@ l10n:
 
 ## 申请权限面临的困境
 
-惨淡的事实是，权限在 Web 开发中是令人厌恶却不得不面对的问题，对于开发者而言，处理它毫无乐趣。
+Web 上的权限是令人厌恶却不得不面对的问题，但对于开发人员来说，处理它们并不是一件有趣的事。
 
 由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限──例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API) 允许显式地检查权限状态和申请权限，然而，[Geolocation API](/zh-CN/docs/Web/API/Geolocation_API) 却不能。
 
 [权限 API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在 [Worker](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions) 中也是如此（但有一个明显的例外）。
 
-许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多权限启用的 API 列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
+许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#权限相关的_api)中提供了许多权限启用的 API 列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
 
 {{domxref("Permissions")}} 还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准及不被广泛支持）。
 
@@ -31,7 +31,7 @@ l10n:
 
 ### 访问权限 API
 
-浏览器现已包含 {{domxref("Navigator.permissions")}} 属性使开发者可以访问全局的 {{domxref("Permissions")}} 对象。这个对象最终将包含用来查询、申请和重置权限的方法，尽管，目前只有 {{domxref("Permissions.query()")}}；我们接下来会讨论它。
+浏览器现已包含 {{domxref("Navigator.permissions")}} 属性使开发者可以访问全局的 {{domxref("Permissions")}} 对象。这个对象最终将包含用来查询、申请和撤销权限的方法，尽管，目前只有 {{domxref("Permissions.query()")}}；我们接下来会讨论它。
 
 ### 查询权限状态
 

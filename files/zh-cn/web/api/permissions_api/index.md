@@ -26,7 +26,7 @@ l10n:
 
 触发此提示的机制将取决于特定 API——它未定义为权限 API 的一部分。通常，触发器是调用方法来访问或打开该特性的代码，或者注册随后将访问该特性的通知的代码。
 
-请注意，并非所有功能都需要提示。权限可能由 `Permission Policy` 授予，由{{glossary("transient activated", "瞬态激活")}}隐式授予，或通过其他机制授予。
+请注意，并非所有功能都需要提示。权限可能由 `Permission Policy` 授予，由{{glossary("transient activation", "瞬态激活")}}隐式授予，或通过其他机制授予。
 
 ### 撤销权限
 
@@ -42,7 +42,7 @@ l10n:
 并非所有 API 的权限状态都可以通过权限 API 查询。权限相关的 API 的非详尽列表包括：
 
 - [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API)：`background-sync`（应当总是被授予）
-- [Clipboard_API](/zh-CN/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
+- [Clipboard_API](/zh-CN/docs/Web/API/Clipboard_API#security_considerations)：`clipboard-read`、`clipboard-write`
 - [Compute Pressure API](/zh-CN/docs/Web/API/Compute_Pressure_API)：`compute-pressure`
 - [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API#security_considerations)：`geolocation`
 - [Local Font Access API](/zh-CN/docs/Web/API/Local_Font_Access_API)：`local-fonts`
@@ -54,7 +54,7 @@ l10n:
 - [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs)：`accelerometer`、`gyroscope`、`magnetometer`、`ambient-light-sensor`
 - [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API)：`storage-access`、`top-level-storage-access`
 - [Storage API](/zh-CN/docs/Web/API/Storage_API)：`persistent-storage`
-- [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API): `bluetooth`
+- [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)：`bluetooth`
 - [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)：`midi`
 - [Window Management API](/zh-CN/docs/Web/API/Window_Management_API)：`window-management`
 

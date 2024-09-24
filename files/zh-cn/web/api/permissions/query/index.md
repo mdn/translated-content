@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Permissions")}} 接口的 **`query()`** 方法会返回全局作用域中用户权限的状态。
 
-用户权限名称在每个功能的各自规范中定义。不同浏览器版本支持的权限在 [`Permissions` 接口的兼容性数据](/zh-CN/docs/Web/API/Permissions#browser_compatibility)中列出（另请参阅 [Firefox 值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)和 [WebKit 值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)的相关源代码）。
+用户权限名称在每个功能的各自规范中定义。不同浏览器版本支持的权限在 [`Permissions` 接口的兼容性数据](/zh-CN/docs/Web/API/Permissions#浏览器兼容性)中列出（另请参阅 [Firefox 值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)和 [WebKit 值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)的相关源代码）。
 
 每个权限所控制的 API 在[权限 API](/zh-CN/docs/Web/API/Permissions_API) 概述主题中的[权限相关的 API](/zh-CN/docs/Web/API/Permissions_API#权限相关的_api) 中列出。
 
