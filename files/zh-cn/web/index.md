@@ -75,7 +75,7 @@ l10n:
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : Firefox 内置的 Web 开发者工具的文档。
-- [Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)
+- [Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools)
   - : Chrome 内置的 Web 开发者工具的文档。
 - [Safari Web 监视器](https://webkit.org/web-inspector/)
   - : Safari 内置的 Web 开发者工具的文档。
