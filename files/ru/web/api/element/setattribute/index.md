@@ -70,7 +70,7 @@ button.setAttribute("disabled", "");
 
 Этот пример иллюстрирует два аспекта:
 
-- Первый вызов `setAttribute()` изменяет значение атрибута `name` на "helloButton". Это можно увидеть с помощью инспектора кода в браузере ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties?hl=ru), [Edge](https://learn.microsoft.com/ru-ru/microsoft-edge/devtools-guide-chromium/css/inspect), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
+- Первый вызов `setAttribute()` изменяет значение атрибута `name` на "helloButton". Это можно увидеть с помощью инспектора кода в браузере ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties), [Edge](https://learn.microsoft.com/ru-ru/microsoft-edge/devtools-guide-chromium/css/inspect), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
 - Используемое значение при установке логического атрибута не важно. Само наличие атрибута означает, что он равен `true`, а отсутствие — `false`. Таким образом, присваивая значению атрибута `disabled` пустую строку (`""`), мы переключаем `disabled` в `true`, что приводит к отключению кнопки. В качестве значения для логических атрибутов рекомендуется использовать пустую строку или имя самого атрибута.
 
 ## Спецификации
