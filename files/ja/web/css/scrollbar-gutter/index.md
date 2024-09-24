@@ -53,14 +53,14 @@ scrollbar-gutter: unset;
 
 ## 例
 
-The examples below show how the different values for the `scrollbar-gutter` property would affect a scrollable `div` element (`.container`) with one or more paragraphs contained within.
+次の例は、`scrollbar-gutter` プロパティの異なる値が、1 つ以上の段落を含むスクロール可能な `div` 要素（`.container`）にどのように影響するかを示しています。
 
 > [!NOTE]
-> In the images for the examples, the user's system settings are set to classic scrollbars (always shown).
+> 例の画像では、ユーザーのシステム設定は従来のスクロールバー（常に表示）に設定されています。
 
 ### 例 1
 
-Prevent unneeded layout changes as the content growing or shrinking causes the scrollbar to appear/disappear, a space is reserved for it.
+コンテンツが大きくなったり小さくなったりすることでスクロールバーが表示されたり消えたりするため、そのための空間が確保され、不要なレイアウト変更を防ぐことができます。
 
 ```css
 .container {
@@ -68,11 +68,11 @@ Prevent unneeded layout changes as the content growing or shrinking causes the s
 }
 ```
 
-![A containing div element with a paragraph of text inside and a space to the right where the scrollbar is](stable-no-scroll.png)
+![div 要素の中にテキストの段落があり、スクロールバーの右側に空間がある。](stable-no-scroll.png)
 
 ### 例 2
 
-Add symmetric spacing to both sides of the box so the content is centered:
+ボックスの両側に左右対称の空間を追加し、コンテンツが中央に来るようにします。
 
 ```css
 .container {
@@ -80,12 +80,12 @@ Add symmetric spacing to both sides of the box so the content is centered:
 }
 ```
 
-![A containing div element with a paragraph of text inside, a space to the right where the scrollbar is and a matching empty space to the left](stable-both-edges.png)
+![テキストの段落を含む div 要素で、スクロールバーがある右側に空間があり、左側に同じ空間がある。](stable-both-edges.png)
 
 ### 例 3
 
-Align the contents of a non-scrolling element and a scrolling one adjacent to it:
-This example shows two divs side by side. The one on the left has no scroll, but the one on the right does. Both have `scrollbar-gutter` applied, which also reserves space for the div on the left which doesn't have scrollable content. This is a good technique to use to keep the width of content consistent.
+スクロールしない要素と、それに隣接するスクロールする要素の内容を揃えます。
+この例では、2 つの div を横に並べています。左側のものはスクロールしませんが、右側のものはスクロールします。両方とも `scrollbar-gutter` が適用されており、スクロール可能なコンテンツを持たない左側の div のための空間も確保されています。これは、コンテンツの幅を一定に保つために使う良いテクニックです。
 
 ```css
 .container1 {
@@ -98,13 +98,13 @@ This example shows two divs side by side. The one on the left has no scroll, but
 }
 ```
 
-![Two adjacent divs containing text, both with space for a scrollbar](side-by-side.png)
+![テキストを含む 2 つの隣接する div で、両方ともスクロールバーのための空間がある。](side-by-side.png)
 
 ### スクロールバーのオーバーレイ
 
-For reference, this image shows the same div as above, but with the user's system settings set to overlay scrollbars. Note here the scrollbar will only show when the user is scrolling and on top of the content, so no space is reserved for it and the `scrollbar-gutter` property has no effect.
+参考までに、この画像は上記と同じ div を示していますが、ユーザーのシステム設定がスクロールバーをオーバーレイするように設定されています。ここでは、スクロールバーはユーザーがスクロールしているときだけ表示され、コンテンツの上に表示されるため、スクロールバーのための空間は確保されず、`scrollbar-gutter` プロパティは影響しないことに注意してください。
 
-![One div with text, no visible scrollbar](for-ref-no-scroll.png)
+![テキストを含む 1 つの div、スクロールバーなし](for-ref-no-scroll.png)
 
 ## 仕様書
 
