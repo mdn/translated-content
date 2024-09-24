@@ -737,13 +737,13 @@ driver.quit();
 
 代码很直观——测试一完成，就会发送一个 API 调用到 BrowserStack 来更新测试状态是通过还是完成，并且给出相关的原因。
 
-现在回到 [BrowserStack 自动化仪表盘](https://www.browserstack.com/automate)页面，你会看到测试会话如之前一样正常运行，并且增加了更新的数据：
+现在回到 [BrowserStack 自动化仪表盘](https://live.browserstack.com/dashboard)页面，你会看到测试会话如之前一样正常运行，并且增加了更新的数据：
 
 ![BrowserStack 自定义结果](bstack_custom_results.png)
 
 ### Sauce Labs
 
-在 Sauce Labs 远程运行 Selenium 测试与在 BrowserStack 一样简单，尽管它们有一些语法的差异。所需的代码应该满足以下样式。
+在 Sauce Labs 远程运行 Selenium 测试与在 BrowserStack 一样简单，尽管它们有一些语法的差异。所需的代码应该遵循以下模式。
 
 我们来撰写一个示例：
 
