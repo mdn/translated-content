@@ -2,7 +2,7 @@
 title: Element：fullscreenerror 事件
 slug: Web/API/Element/fullscreenerror_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
 ---
 
 {{APIRef("Fullscreen API")}}

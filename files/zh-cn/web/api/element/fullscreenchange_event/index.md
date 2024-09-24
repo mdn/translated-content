@@ -2,7 +2,7 @@
 title: Element：fullscreenchange 事件
 slug: Web/API/Element/fullscreenchange_event
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
 ---
 
 {{APIRef("Fullscreen API")}}
