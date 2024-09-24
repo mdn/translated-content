@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-当一个交互式小部件或元素（如组合框、选项卡、按钮等）用于调整或修改文档或应用程序中的另一个元素或组件时，可以使用 `aria-controls` 属性以编程方式将相应的元素与控制元素关联起来。`aria-controls` 属性用于标识由设置该属性的元素控制的一个或多个元素，无论是哪种类型的交互触发了受影响的行为。
+当一个交互式微件或元素（如组合框、标签页、按钮等）用于调整或修改文档或应用程序中的另一个元素或微件时，可以使用 `aria-controls` 属性以编程方式将相应的元素与控制元素关联起来。`aria-controls` 属性用于标识由设置该属性的元素控制的一个或多个元素，无论是哪种类型的交互触发了受影响的行为。
 
 例如，[组合框](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)元素的 `aria-controls` 设置为一个值，引用了作为弹出窗口的元素。`aria-controls` 仅在弹出窗口可见时需要设置，但如果引用的元素不可见，则设置是有效的，且编程实现更为简便。
 
@@ -19,11 +19,11 @@ l10n:
 
 - 手风琴小部件中的按钮部分，切换其相关面板内容的可见性。每个按钮可能都有一个 `aria-controls`，指定引用包含与调用控制相关内容的元素的 ID。
 - 具有 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) 角色的元素：滚动条需要一个 `aria-controls` 属性，引用它所控制的元素的 ID。
-- 一组选项卡，每个选项卡显示不同的选项卡面板：每个具有 [`role="tab"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色的元素都具有一个 `aria-controls` 属性，引用其关联的 [`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)。
+- 一组选项卡，每个选项卡显示不同的标签页面板：每个具有 [`role="tab"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色的元素都具有一个 `aria-controls` 属性，引用其关联的 [`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)。
 
 ## 示例
 
-在以下选项卡示例中，每个选项卡都控制一个选项卡面板：
+在以下标签页示例中，每个标签页都控制一个标签页面板：
 
 ```html
 <div class="tab-interface">
@@ -34,7 +34,7 @@ l10n:
       aria-controls="panel-1"
       id="tab-1"
       tabindex="0">
-      第一选项卡
+      第一标签页
     </span>
     <span
       role="tab"
@@ -42,7 +42,7 @@ l10n:
       aria-controls="panel-2"
       id="tab-2"
       tabindex="-1">
-      第二选项卡
+      第二标签页
     </span>
     <span
       role="tab"
@@ -50,7 +50,7 @@ l10n:
       aria-controls="panel-3"
       id="tab-3"
       tabindex="-1">
-      第三选项卡
+      第三标签页
     </span>
   </div>
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
@@ -76,7 +76,7 @@ l10n:
 ```
 
 > [!NOTE]
-> ARIA 仅修改元素的可访问性树，标识辅助技术如何向用户呈现内容。ARIA 不改变任何隐式功能或样式。
+> ARIA 仅修改元素的无障碍树，标识辅助技术如何向用户呈现内容。ARIA 不改变任何隐式功能或样式。
 
 ## 值
 
