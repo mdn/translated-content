@@ -5,7 +5,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-label
 
 {{AccessibilitySidebar}}
 
-El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) en su lugar.
+El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) en su lugar.
 
 Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.
 
@@ -39,7 +39,7 @@ Todos los elementos del DOM
 
 ### Técnicas ARIA relacionadas
 
-- [Usando el atributo aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [Usando el atributo aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
 ### Compatibilidad
 
