@@ -16,4 +16,4 @@ L'encodage de caractères Unicode le plus courant sur le Web est {{Glossary("UTF
 ## Voir aussi
 
 - [Unicode](https://fr.wikipedia.org/wiki/Unicode) sur Wikipédia
-- [The Unicode Standard : A Technical Introduction](http://www.unicode.org/standard/principles.html) (en)
+- [The Unicode Standard : A Technical Introduction](https://www.unicode.org/standard/principles.html) (en)
