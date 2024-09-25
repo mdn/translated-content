@@ -30,11 +30,10 @@ l10n:
 页面的 HTML 如下所示：
 
 ```html
-<h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
+<h1>MDN Web Docs 演示：:picture-in-picture 伪类</h1>
 
 <p>
-  This demo uses the <code>:picture-in-picture</code> pseudo-class to
-  automatically change the style of a video entirely using CSS.
+  此演示使用 <code>:picture-in-picture</code> 伪类通过 CSS 自动完全改变视频的样式。
 </p>
 
 <video id="pip-video"></video>
