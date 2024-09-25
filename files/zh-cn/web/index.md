@@ -51,7 +51,7 @@ l10n:
 - [MathML](/zh-CN/docs/Web/MathML)
   - : 通过 MathML 能在 Web 上显示复杂的数学符号。
 - [URI](/zh-CN/docs/Web/URI)
-  - : 不同的技术（包括：浏览器自身通过地址栏）以不同的方式使用统一资源定位符识别资源。
+  - : 不同的技术（包括：浏览器自身通过地址栏）以不同的方式使用统一资源定位符标识资源。
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
   - : WebDriver 是一种浏览器自动化机制，可通过模拟真人使用浏览器的操作远程控制浏览器。被广泛应用于 Web 应用的跨浏览器测试。
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
