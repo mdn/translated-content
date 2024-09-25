@@ -1,8 +1,8 @@
 ---
-title: ":nth-child()"
+title: :nth-child()
 slug: Web/CSS/:nth-child
 l10n:
-  sourceCommit: d546a54139681cad9b176db2ca494b6a6bb8f7c6
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
 {{CSSRef}}
@@ -408,6 +408,63 @@ td {
 第二个表格使用了 _of 语法_，使用 `:nth-child(even of :not([hidden]))` 以只选择**不**隐藏的 `tr`。
 
 {{EmbedLiveSample('使用 of selector 修复条纹表格', 550, 180)}}
+
+### 样式化表格列
+
+要设置表格列的样式，你不能在 {{HTMLElement("col")}} 元素上设置样式，因为表格单元格不是它的子元素（就像你可以使用行元素 {{HTMLElement("tr")}}一样）。像 `:nth-child()` 伪类可以方便地选择列单元格。
+
+在这个例子中，我们为每个列设置不同的样式。
+
+#### HTML
+
+```html-nolint
+<table>
+<caption>学生名册</caption>
+<colgroup>
+  <col/>
+  <col/>
+  <col/>
+</colgroup>
+  <thead>
+    <tr><th>姓名</th><th>年龄</th><th>国家</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mamitiana</td><td>23</td><td>马达加斯加</td></tr>
+    <tr><td>Yuki</td><td>48</td><td>日本</td></tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+td {
+  padding: 0.125rem 0.5rem;
+  height: 3rem;
+  border: 1px solid black;
+}
+
+tr :nth-child(1) {
+  text-align: left;
+  vertical-align: bottom;
+  background-color: silver;
+}
+
+tbody tr :nth-child(2) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody tr :nth-child(3) {
+  text-align: right;
+  vertical-align: top;
+  background-color: tomato;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('样式化表格列', 100, 200)}}
 
 ## 规范
 
