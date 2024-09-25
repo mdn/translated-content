@@ -33,8 +33,8 @@ l10n:
 <h1>MDN Web Docs 演示：:picture-in-picture 伪类</h1>
 
 <p>
-  此演示使用 <code>:picture-in-picture</code> 伪类通过 CSS
-  自动完全改变视频的样式。
+  此演示使用 CSS <code>:picture-in-picture</code>
+  伪类自动改变视频的完整样式。
 </p>
 
 <video id="pip-video"></video>
