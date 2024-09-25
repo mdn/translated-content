@@ -61,7 +61,7 @@ l10n:
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用能提供类似原生移动应用的用户体验。
 - [OpenSearch](/zh-CN/docs/Web/OpenSearch)
-  - : OpenSearch 允许网站描述自身的搜索引擎，以便浏览器或客户端应用程序能使用那个搜索引擎。
+  - : OpenSearch 允许网站描述自身的搜索引擎，以便浏览器或客户端应用程序能使用该搜索引擎。
 - [XML](/zh-CN/docs/Web/XML)
   - : 可扩展标记语言是可由[文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)严格序列化的一种语言。
 - [XSLT](/zh-CN/docs/Web/XSLT)
