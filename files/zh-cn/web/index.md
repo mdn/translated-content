@@ -25,7 +25,7 @@ l10n:
   - : 保护用户的个人数据。
 - [安全](/zh-CN/docs/Web/Security)
   - : 保护用户免受数据泄露和数据盗窃、侧信道攻击，以及跨站脚本、内容注入和点击劫持之害。
-- [词汇表](/zh-CN/docs/Glossary)
+- [术语表](/zh-CN/docs/Glossary)
   - : Web 相关术语的定义。
 
 ## Web 技术参考
