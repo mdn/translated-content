@@ -37,4 +37,4 @@ _此接口还从其父级 {{domxref("Event")}} 继承了方法_。
 
 ## 参见
 
-- {{domxref("Event")}} 基本接口
+- {{domxref("Event")}} 父接口
