@@ -59,7 +59,7 @@ l10n:
 
 接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) 页面（参见第一部分的表格）查看如何下载。显然，有些浏览器是操作系统特定的，我们将坚持使用 Firefox 和 Chrome，因为它们可以在所有主要的操作系统上使用。
 
-1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/)（用于 Firefox）和 [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads?hl=zh-cn) 驱动。
+1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/)（用于 Firefox）和 [ChromeDriver](https://developer.chrome.google.cn/docs/chromedriver/downloads) 驱动。
 2. 将它们解压到一个容易访问的地方，比如你的主用户目录的根目录。
 3. 将 `chromedriver` 和 `geckodriver` 驱动的目录添加到你的系统 `PATH` 变量中，这应该是从你的硬盘根目录开始的一个绝对路径。举个例子，如果我们使用的是 macOS 机器，用户名为 bob，并且将驱动放在用户的根目录下，那么路径就是 `/Users/bob`。
 
