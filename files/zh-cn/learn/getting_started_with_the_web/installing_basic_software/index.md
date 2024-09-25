@@ -15,7 +15,7 @@ l10n:
 
 ### 安装文本编辑器
 
-你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是 [Notepad](https://zh.wikipedia.org/wiki/记事本)，macOS 则是 [TextEdit](<https://zh.wikipedia.org/wiki/文字編輯_(應用程式)>)。不同的 Linux 发行版会有所不同；Ubuntu 22.04 长期支持发行版默认是 [GNOME Text Editor](https://zh.wikipedia.org/wiki/Gedit)。
+你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是[记事本](https://zh.wikipedia.org/wiki/Windows記事本)，macOS 则是[文字编辑](<https://zh.wikipedia.org/wiki/文字編輯_(應用程式)>)。不同的 Linux 发行版会有所不同；Ubuntu 22.04 长期支持发行版默认是 [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor)。
 
 比起使用 Notepad 或 TextEdit 进行 Web 开发，你可能可以做得更好。我们建议从 [Visual Studio Code](https://code.visualstudio.com/) 开始，它是一个免费的编辑器，提供实时预览和代码提示。
 
