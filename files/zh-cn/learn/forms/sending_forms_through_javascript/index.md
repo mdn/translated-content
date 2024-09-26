@@ -1,6 +1,8 @@
 ---
 title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
+l10n:
+  sourceCommit: 4414bc297a05373570250fe1fb154eab197f29ca
 ---
 
 {{LearnSidebar}}
