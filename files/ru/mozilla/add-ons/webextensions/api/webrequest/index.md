@@ -127,7 +127,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> Этот API основан на Chromium API [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
+> Этот API основан на Chromium API [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

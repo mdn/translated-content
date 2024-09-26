@@ -37,7 +37,7 @@ console.log(manifest.name);
 {{WebExtExamples}}
 
 > [!NOTE]
-> Этот API основан на Chromium API [`chrome.runtime`](https://developer.chrome.com/extensions/runtime). Эта документация основана на [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) из кода Chromium.
+> Этот API основан на Chromium API [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime). Эта документация основана на [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
