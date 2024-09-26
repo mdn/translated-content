@@ -25,7 +25,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 
 ## 手动创建 `FormData` 对象
 
-可以为要添加的每个字段调用其 {{domxref("FormData.append()", "append()")}} 方法（传入字段的名称和值），以此来填充 `FormData` 对象。对于文本字段，值可以是字符串；对于二进制字段（包括{{domxref("File")}}对象），值可以是{{domxref("Blob")}}。
+可以为要添加的每个字段调用其 {{domxref("FormData.append()", "append()")}} 方法（传入字段的名称和值），以此来填充 `FormData` 对象。对于文本字段，值可以是字符串；对于二进制字段（包括 {{domxref("File")}} 对象），值可以是 {{domxref("Blob")}}。
 
 在下面的示例中，当用户点击按钮时，将以表单提交的形式发送数据：
 
