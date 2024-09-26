@@ -35,8 +35,7 @@ URL.parse(url, base)
     親ディレクトリーおよびカレントディレクトリーへの相対参照は、`base` URL のカレントディレクトリーを基準として解決されます。
     ルートへの相対参照は、`base` のオリジンを基準として解決されます。 詳細については、[相対参照の URL への解決](/ja/docs/Web/API/URL_API/Resolving_relative_references)を参照してください。
 
-> [!NOTE]
-> `url` および `base` 引数は、渡した値が例えば {{domxref("HTMLAnchorElement")}} や {{domxref("HTMLAreaElement")}} 要素など、何であれそれぞれ文字列化されます。文字列を受け入れる他の Web API と同様です。
+> **Note:** `url` および `base` 引数は、渡した値が例えば {{domxref("HTMLAnchorElement")}} や {{domxref("HTMLAreaElement")}} 要素など、何であれそれぞれ文字列化されます。文字列を受け入れる他の Web API と同様です。
 > 具体的には、どちらかの引数に既存の {{domxref("URL")}} オブジェクトを使用することができます。そのオブジェクトの {{domxref("URL.href", "href")}} プロパティから文字列化されます。
 
 ### 返値
