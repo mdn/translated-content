@@ -19,7 +19,7 @@ startsWith(searchString, position)
 ### 参数
 
 - `searchString`
-  - : 要在该字符串开头搜索的子串。不能是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有不是正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此省略它或传递 `undefined` 将导致 `startsWith()` 搜索字符串 `"undefined"`，这应该不是你想要的结果。
+  - : 要在该字符串开头搜索的子串。不能是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有不是字符串的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此省略它或传递 `undefined` 将导致 `startsWith()` 搜索字符串 `"undefined"`，这应该不是你想要的结果。
 - `position` {{optional_inline}}
   - : `searchString` 期望被找到的起始位置（即 `searchString` 的第一个字符的索引）。默认为 `0`。
 
