@@ -63,4 +63,4 @@ document.onpointerlockchange = (event) => {
 
 ## 参见
 
-- [使用 Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API)
+- [使用 Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API)
