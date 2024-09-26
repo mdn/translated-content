@@ -21,7 +21,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 
 然而，如果服务器端点希望提交表单，web 应用就必须以特定方式对数据进行编码。例如，如果数据仅为文本，则可以由 URL 编码的键/值对列表组成，并以 `application/x-www-form-urlencoded` 的 {{httpheader("Content-Type")}} 发送。如果表单包含二进制数据，则必须使用 `multipart/form-data` 内容类型发送。
 
-{{domxref("FormData")}}接口以上述方式对数据进行编码，在本文的其余部分，我们将对 `FormData` 进行快速介绍。更多详情，请参阅的[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)指南。
+{{domxref("FormData")}} 接口以上述方式对数据进行编码，在本文的其余部分，我们将对 `FormData` 进行简要介绍。更多详情，请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)指南。
 
 ## 手动创建 `FormData` 对象
 
