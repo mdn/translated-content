@@ -11,7 +11,7 @@ l10n:
 
 ## 激活全屏模式
 
-对于一个你想要以全屏模式展示的元素（例如 {{HTMLElement("video")}}），你可用通过调用它的 {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} 方法激活它的全屏模式。
+对于一个你想要以全屏模式展示的元素（例如 {{HTMLElement("video")}}），你可以通过调用它的 {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} 方法激活它的全屏模式。
 
 我们来看看 {{HTMLElement("video")}} 这个元素：
 
