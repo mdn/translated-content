@@ -39,7 +39,7 @@ requestFullscreen(options)
 
 ### 异常
 
-_`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，而不是抛出一个传统的异常。拒绝控制器接收以下的某一个值：_
+_`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，而不是抛出一个传统的异常。拒绝处理器接收以下的某一个值：_
 
 - {{jsxref("TypeError")}}
 
