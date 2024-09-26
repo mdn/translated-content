@@ -79,7 +79,7 @@ send.addEventListener("click", sendData);
     <input type="text" id="username" name="username" value="Dominic" />
   </p>
   <p>
-    <label for="avatar">Select an avatar</label>
+    <label for="avatar">选择一个头像</label>
     <input type="file" id="avatar" name="avatar" required />
   </p>
   <input type="submit" value="Submit" />
