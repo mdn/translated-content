@@ -62,7 +62,7 @@ send.addEventListener("click", sendData);
 
 1. 首先，构建一个新的、空的 `FormData` 对象。
 2. 接下来，调用 `append()` 两次，向 `FormData` 对象添加两个项目：一个文本字段和一个文件。
-3. 最后，我们使用 `fetch() API` 发出 {{httpmethod("POST")}} 请求，并将 `FormData` 对象设置为请求主体。
+3. 最后，我们使用 `fetch()` API 发出 {{httpmethod("POST")}} 请求，并将 `FormData` 对象设置为请求体。
 
 请注意，不必设置 {{httpheader("Content-Type")}} 标头：当将 `FormData` 对象传入 `fetch()` 时，会自动设置正确的标头。
 
