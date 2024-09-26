@@ -296,49 +296,12 @@ La notación de repetición se puede utilizar para una parte del listado de vía
 
 La notación de repetición toma una lista de vías específicas, por lo tanto, puede utilizarla para crear un patrón de iteración de vías. En el próximo ejemplo, mi cuadrícula consistirá de 10 vías, una vía `1fr` seguida por una vía `2fr`, repetida cinco veces.
 
-```html live-sample___vias-repeat-intercaladas
-<div class="wrapper">
-  <div>0</div>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-</div>
-```
-
-```css live-sample___vias-repeat-intercaladas
+```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr 2fr);
 }
 ```
-
-```css hidden live-sample___vias-repeat-intercaladas
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1px;
-  color: #d9480f;
-}
-```
-
-{{ EmbedLiveSample('vias-repeat-intercaladas', '220', '140') }}
 
 ### La cuadrícula implícita y explícita
 
