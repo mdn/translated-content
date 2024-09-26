@@ -75,7 +75,7 @@ send.addEventListener("click", sendData);
 ```html
 <form id="userinfo">
   <p>
-    <label for="username">Enter your name:</label>
+    <label for="username">输入你的姓名：</label>
     <input type="text" id="username" name="username" value="Dominic" />
   </p>
   <p>
