@@ -2,7 +2,7 @@
 title: 使用权限 API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 l10n:
-  sourceCommit: 805d398f95c9d1ad8769e65d56bbfe2a31205021
+  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -19,7 +19,7 @@ Web 上的权限是令人厌恶却不得不面对的问题，但对于开发人�
 
 许多 API 现已启用权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)、[Push API](/zh-CN/docs/Web/API/Push_API) 和 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#权限相关的_api)中提供了许多权限启用的 API 列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器支持情况。
 
-{{domxref("Permissions")}} 还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准及不被广泛支持）。
+{{domxref("Permissions")}} 还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准且不被广泛支持）。
 
 ## 一个简单的例子
 
@@ -42,7 +42,7 @@ Web 上的权限是令人厌恶却不得不面对的问题，但对于开发人�
 - `"prompt"`
   - : 隐藏“Enable Geolocation”按钮，因为用户会被（浏览器）引导授权 Geolocation 权限，所以它不需要了。接下来 {{domxref("Geolocation.getCurrentPosition()")}} 函数会运行，它会引导用户授权；如果用户授权了，它会继续执行 `revealPosition()` 函数（会显示地图）；如果用户拒绝了， `positionDenied()` 函数会被执行（这会让“Enable Geolocation”按钮显示出来）。
 - `"denied"`
-  - : “Enable Geolocation”按钮会被显示（这段代码也需要放在这里，以防在页面首次加载时，这个源的权限状态就已经被设置为拒绝了）。
+  - : “Enable Geolocation”按钮会显示（这段代码也需要放在这里，以防在页面首次加载时，这个源的权限状态就已经被设置为拒绝了）。
 
 ```js
 function handlePermission() {
@@ -77,7 +77,7 @@ handlePermission();
 
 ### 权限描述符
 
-{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数——它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 `PermissionDescriptor` 的更加复杂的 `PermissionDescriptor` 以包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个布尔值指定 [`userVisibleOnly`](/zh-CN/docs/Web/API/PushManager/subscribe#参数) 是 `true` 还是 `false`。
+{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数——它包含你感兴趣的 API 的名称。一些 API 有更复杂的 `PermissionDescriptor` 结构，该结构继承自默认的 `PermissionDescriptor`，包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个布尔值指定 [`userVisibleOnly`](/zh-CN/docs/Web/API/PushManager/subscribe#参数) 是 `true` 还是 `false`。
 
 ### 响应权限状态变化
 

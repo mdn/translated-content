@@ -13,8 +13,7 @@ l10n:
 
 历史上不同的 API 对自己的权限的处理方式不一致——例如，[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 提供了自己的方法来请求权限和检查权限状态，而 [Geolocation API](/zh-CN/docs/Web/API/Geolocation) 没有。权限 API 提供的工具允许开发者在使用权限时实现一致的用户体验。
 
-此 API 的权限有效地汇总了上下文的所有安全限制，包括在安全上下文中使用 API 的任何要求、应用于文档的 [Permissions-Policy](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy) 限制、用户交互要求和用户提示。
-因此，例如，如果 API 受到权限策略的限制，则返回的权限将被 `denied`，并且不会提示用户访问。
+此 API 的权限有效地汇总了上下文的所有安全限制，包括在安全上下文中使用 API 的任何要求、应用于文档的 [Permissions-Policy](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy) 限制、用户交互要求和用户提示。因此，例如，如果 API 受到权限策略的限制，则返回的权限将会为 `denied`，并且不会提示用户访问。
 
 `permissions` 属性已在 {{domxref("Navigator")}} 对象上可用，在标准浏览上下文和 worker 上下文中均可用（{{domxref("WorkerNavigator")}}——因此可在 worker 内进行权限检查），并返回 {{domxref("Permissions")}} 对象，该对象提供对权限 API 功能的访问。
 
@@ -34,8 +33,8 @@ l10n:
 
 用户可以使用浏览器设置手动删除特定网站的权限：
 
-- **Firefox**：_汉堡菜单 > 设置 > 隐私和安全 > 权限_（然后选择感兴趣的权限的**设置**按钮）。
-- **Chrome**：_汉堡菜单 > 设置 > 显示高级设置_。在*隐私*部分中，单击*内容设置*。在出现的对话框中，找*位置*部分并选择*当网站尝试... 时询问*。最后，单击*管理例外*并删除你授予你感兴趣的网站的权限。
+- **Firefox**：_菜单 > 设置 > 隐私和安全 > 权限_（然后选择感兴趣的权限的**设置**按钮）。
+- **Chrome**：_菜单 > 设置 > 显示高级设置_。在*隐私*部分中，单击*内容设置*。在出现的对话框中，找到*位置*部分并选择*当网站尝试... 时询问*。最后，单击*管理例外*并删除你授予你感兴趣的网站的权限。
 
 ### 权限相关的 API
 

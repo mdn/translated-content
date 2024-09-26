@@ -9,11 +9,7 @@ l10n:
 
 {{domxref("Permissions")}} 接口的 **`revoke()`** 方法可将当前设置的权限还原为默认状态，即通常的 `prompt` 状态。该方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
 
-此方法已从 Permissions API 主要规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已将此 A​​PI 放在首选项之后，但它不太可能达到标准轨道。有关更多上下文，请参阅[关于删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
-
-{{domxref("Permissions")}} 接口的 **`revoke()`** 方法将当前设置的权限恢复为其默认状态，通常为 `prompt`。此方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
-
-此方法已从主要权限 API 规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已将此 A​​PI 放在首选项后面，但它不太可能达到标准轨道。有关更多上下文，请参阅[删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
+此方法已从主要权限 API 规范中删除，因为其用例不明确。权限由浏览器管理，当前权限模型不涉及网站开发人员能够强制请求或撤销权限。浏览器已以首选项形式提供此 API，但它不太可能达到标准轨道。有关更多上下文，请参阅[删除 `permissions.revoke()` 的原始讨论](https://github.com/w3c/permissions/issues/46)。
 
 ## 语法
 
