@@ -126,7 +126,7 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 
 配置系统允许你发布网站，可用于静态和动态站点，通常与测试系统一起工作。例如，典型的工具链会等待你将更改推送到远程回购，运行一些测试以查看更改是否正确，然后如果测试通过，则自动将你的应用程序部署到生产站点。
 
-[Netlify](https://netlify.com) 是目前最流行的部署工具之一，但其他包括 [Vercel](https://vercel.com/) 和 [Github Pages](https://pages.github.com/)。
+[Netlify](https://netlify.com) 是目前最流行的部署工具之一，但其他包括 [Vercel](https://vercel.com/), [Genezio](https://genezio.com/)  和 [Github Pages](https://pages.github.com/)。
 
 #### 其他的
 
