@@ -13,7 +13,7 @@ l10n:
 
 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)允许 Web 设计人员提供在 Web 文档上使用的自定义字体，因而在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at 规则，Web 字体可以通过 `url()` 函数中提供的 URL 加载。
 
-`@font-face` 还有其他几个有用的特性。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector)已经变得臭名昭著。
+`@font-face` 还有其他几个有用的特性。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts#local_fonts_as_fingerprint_vector)已经变得臭名昭著。
 
 此外，由于准确的字体枚举和访问底层字体数据（例如，应用过滤器和转换）方面的挑战，高端设计工具历来难以在 Web 上提供。当前的应用程序通常依赖于变通办法，例如要求用户将字体上传到服务器，在服务器上处理字体以获取原始字节数据，或者安装单独的本地程序以提供附加功能。
 
@@ -115,6 +115,6 @@ async function computeOutlineFormat() {
 
 ## 参见
 
-- [使用带有本地字体的高级排版](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
+- [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
 - {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令
