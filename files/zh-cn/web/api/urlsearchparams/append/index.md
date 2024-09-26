@@ -50,4 +50,4 @@ params.append("foo", 4);
 ## 参见
 
 - {{domxref("URL")}}
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.com/blog/urlsearchparams/)
+- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams)

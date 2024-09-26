@@ -808,7 +808,7 @@ function fibonacci(num) {
 
 ウェブワーカーをデバッグする方法については、各ブラウザーの JavaScript デバッガーのドキュメントを参照してください。
 
-- [Chrome のソースパネル](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Chrome のソースパネル](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox の JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## ワーカーで使用できる関数とインターフェイス

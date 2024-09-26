@@ -102,7 +102,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 3. 当媒体条件为真时，图像将填充的**插槽的宽度**（`480px`）
 
 > [!NOTE]
-> 对于插槽的宽度，你可以不提供绝对宽度（如 `480px`），而是提供相对于视口的宽度（如 `50vw`），但不能提供百分比。你也许已经注意到最后一个插槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。在浏览器成功匹配某一个媒体条件之后，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
+> 在 `sizes` 中，可以使用任何[长度值](/zh-CN/docs/Web/CSS/length)。例如，与其提供绝对宽度（如 `480px`），不如提供相对于视口的宽度（如 `50vw`），但不能提供百分比。你也许已经注意到最后一个插槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。在浏览器成功匹配某一个媒体条件之后，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
 
 有了这些属性后，浏览器会：
 
@@ -116,7 +116,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 > [!NOTE]
 > 在桌面端浏览器测试上面的示例时，如果你把浏览器设到最小宽度，却没有加载更小的图片，请检查一下此时的视口是什么（你可以打开浏览器的 JavaScript 控制台，输入 `document.querySelector('html').clientWidth` 来获得近似视口宽度）。不同的浏览器设置了窗口可以缩小到的最小宽度，它可能比你想的更宽一点。使用移动端浏览器测试时，可以使用类似 Firefox 的 `about:debugging` 页这样的工具，使用桌面端开发者工具检查在移动端加载的页面。
 >
-> 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)标签或 Chrome 开发者工具的[网络](https://developer.chrome.com/docs/devtools/network/)面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
+> 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)标签或 Chrome 开发者工具的[网络](https://developer.chrome.google.cn/docs/devtools/network)面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
 
 不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性引用的图像文件。
 
@@ -125,7 +125,9 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 
 ### 分辨率切换：相同的尺寸，不同的分辨率
 
-如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 描述符（一种更简单的语法），而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
+假如有一张图片，在不同屏幕分辨率下，以相同的实际尺寸显示。通过提供高分辨率版本的图片，可以在高分辨显示器上提供更好的用户体验。
+
+为此，你可以使用 `srcset` 结合 x 描述符（一种更简单的语法），而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
 
 ```html
 <img
@@ -133,6 +135,8 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
   src="elva-fairy-640w.jpg"
   alt="Elva dressed as a fairy" />
 ```
+
+请注意，即使图片仍然以相同的尺寸显示，但在高分辨率显示器下，可以看到等多细节。
 
 ![一张照片，内容是一个小女孩打扮成仙女，图像应用了老式相机胶片效果](resolution-example.png)
 
