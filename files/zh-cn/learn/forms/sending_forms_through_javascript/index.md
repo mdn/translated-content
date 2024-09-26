@@ -11,7 +11,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 
 根据文章[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)中的描述，标准 HTML 表单提交会加载发送数据的目标 URL，这意味着浏览器窗口将以加载整个页面的方式进行导航。
 
-然而，许多 web 应用（特别是{{glossary("progressive web apps","渐进式 web 应用")}}和{{glossary("progressive web apps","单页面应用")}}）都使用 JavaScript API 向服务器请求数据，并更新页面的相关部分，从而避免了加载整个页面的开销。
+然而，许多 web 应用（特别是{{glossary("progressive web apps","渐进式 web 应用")}}和{{glossary("SPA","单页面应用")}}）都使用 JavaScript API 向服务器请求数据，并更新页面的相关部分，从而避免加载整个页面的开销。
 
 因此，当这些 web 应用想要提交表单数据时，仅使用 HTML 表单来收集用户输入，而不提交数据。当用户尝试发送数据时，应用会接管控制权并使用 JavaScript API（如 {{domxref("Window/fetch", "fetch()")}}）来发送数据。
 
