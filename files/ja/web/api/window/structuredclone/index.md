@@ -1,7 +1,7 @@
 ---
 title: structuredClone() グローバル関数
-short-title: structuredClone()
-slug: Web/API/structuredClone
+slug: Web/API/Window/structuredClone
+original_slug: Web/API/structuredClone
 l10n:
   sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
 ---
