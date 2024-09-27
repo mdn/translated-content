@@ -1,7 +1,7 @@
 ---
 title: reportError() グローバル関数
-short-title: reportError()
-slug: Web/API/reportError
+slug: Web/API/Window/reportError
+original_slug: Web/API/reportError
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
