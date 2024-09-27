@@ -1,6 +1,7 @@
 ---
 title: queueMicrotask()
-slug: Web/API/queueMicrotask
+slug: Web/API/Window/queueMicrotask
+original_slug: Web/API/queueMicrotask
 ---
 
 {{APIRef("HTML DOM")}}
