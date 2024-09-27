@@ -144,7 +144,7 @@ greetUser("Veronica");
 ## 参见
 
 - [微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- {{domxref("queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
   - [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
   - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn/JavaScript/Asynchronous)

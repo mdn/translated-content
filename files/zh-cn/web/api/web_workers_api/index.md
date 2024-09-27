@@ -44,8 +44,8 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
