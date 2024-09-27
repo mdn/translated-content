@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`baseline-shift`** 属性允许相对于父文本内容元素的 `dominant-baseline` 重新定位 `dominant-baseline`。移动的对象可能是上标或下标。
+**`baseline-shift`** 属性允许相对于父文本内容元素的 dominant-baseline 重新定位 dominant-baseline。移动的对象可能是上标或下标。
 
 > [!NOTE]
 > 作为一个表现属性，`baseline-shift` 可以用作 CSS 属性。
