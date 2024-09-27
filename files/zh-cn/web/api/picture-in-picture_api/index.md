@@ -62,9 +62,9 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : 当 {{DOMxRef("PictureInPictureWindow")}} 大小改变时触发该事件。
 
-## 添加控制
+## 添加控件
 
-如果通过[媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API) 设置了媒体操作处理器，则浏览器会在画中画叠加层中自动添加相应操作的控制。例如，如果已设置 `"nexttrack"` 动作，则画中画视图中可能会显示跳过按钮。但该特性不支持添加自定义 HTML 按钮或控件。
+如果通过[媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API) 设置了媒体操作处理器，则浏览器会在画中画叠加层中自动添加相应操作的控件。例如，如果已设置 `"nexttrack"` 动作，则画中画视图中可能会显示跳过按钮。但该特性不支持添加自定义 HTML 按钮或控件。
 
 ## 控制样式
 
