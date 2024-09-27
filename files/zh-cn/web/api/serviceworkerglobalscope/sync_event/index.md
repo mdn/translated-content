@@ -66,5 +66,5 @@ self.onsync = (event) => {
 
 ## 参见
 
-- [使用定期后台同步 API 获得更丰富的离线体验](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
+- [使用定期后台同步 API 获得更丰富的离线体验](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)
 - [定期后台同步的示例应用](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

@@ -1,19 +1,24 @@
 ---
 title: Symbol() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
+l10n:
+  sourceCommit: 6a557b06944a0a6eaa1e9e352fc58b973b2e03a1
 ---
 
 {{JSRef}}
 
-`Symbol()` コンストラクターは **symbol** 型の値を返しますが、 "`new Symbol()`" という構文に対応しておらず、サブクラス化を意図していないため、コンストラクターとしては不完全です。 `class` 定義の [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 句の値として使用することもできますが、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) の呼び出しを行うと例外が発生します。
+**`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
 {{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 
 ## 構文
 
+```js-nolint
+Symbol()
+Symbol(description)
 ```
-Symbol([description])
-```
+
+> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -24,37 +29,37 @@ Symbol([description])
 
 ### シンボルの作成
 
-新しいプリミティブであるシンボルを生成するには、解説にあるように `Symbol()` を任意の文字列とともに書きます。
+新しいプリミティブのシンボルを作成するには、解説にあるように `Symbol()` を任意の文字列とともに書きます。
 
 ```js
-let sym1 = Symbol();
-let sym2 = Symbol("foo");
-let sym3 = Symbol("foo");
+const sym1 = Symbol();
+const sym2 = Symbol("foo");
+const sym3 = Symbol("foo");
 ```
 
-上記のコードは 3 つの新しいシンボルを生成します。なお、 `Symbol("foo")` は `"foo"` と言う文字列を強制的に記号にするわけではないことに注意してください。毎回新しいシンボルを生成します。
+上記のコードは 3 つの新しいシンボルを生成します。なお、`Symbol("foo")` は `"foo"` という文字列をシンボルに変換するわけではないことに注意してください。毎回新しいシンボルを生成します。
 
 ```js
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-### new Symbol(...)
+### new Symbol()
 
 以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
 
-```js
-let sym = new Symbol(); // TypeError
+```js example-bad
+const sym = new Symbol(); // TypeError
 ```
 
-このため、新しいシンボル値の代わりに明示的なシンボルラッパーオブジェクトを作成することができず、プリミティブなデータ型の周りに明示的なラッパーオブジェクトを作成することは一般的に可能です (例えば、 `new Boolean`, `new String`, `new Number` です)。
+一般的に他のプリミティブデータ型は明示的なラッパーオブジェクトを作成することは可能ですが（例えば、 `new Boolean`, `new String`, `new Number`）、新しいシンボル値の代わりに明示的に `Symbol` ラッパーオブジェクトを作成することはできません。
 
 本当に `Symbol` のラッパーオブジェクトを生成したい場合は、 `Object()` 関数を使用することができます。
 
 ```js
-let sym = Symbol("foo");
-let symObj = Object(sym);
-typeof sym; // => "symbol"
-typeof symObj; // => "object"
+const sym = Symbol("foo");
+const symObj = Object(sym);
+typeof sym; // "symbol"
+typeof symObj; // "object"
 ```
 
 ## 仕様書
@@ -67,4 +72,4 @@ typeof symObj; // => "object"
 
 ## 関連情報
 
-- [用語集: Symbol データ型](/ja/docs/Glossary/Symbol)
+- [`Symbol` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)

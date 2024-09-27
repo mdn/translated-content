@@ -65,7 +65,7 @@ clip-path: unset;
       - : 定义一个椭圆（使用两个半径和一个圆心位置）。
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : 定义一个多边形（使用一个 SVG 填充规则和一组顶点）。
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : 定义一个任意形状（使用一个可选的 SVG 填充规则和一个 SVG 路径定义）。
 
 - `<geometry-box>`

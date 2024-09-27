@@ -1,9 +1,12 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() 静的メソッド"
+short-title: redirect()
 slug: Web/API/Response/redirect_static
+l10n:
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`redirect()`** は {{domxref("Response")}} インターフェイスのメソッドで、指定された URL へのリダイレクトをもたらす `Response` を返します。
 
@@ -15,8 +18,8 @@ slug: Web/API/Response/redirect_static
 ## 構文
 
 ```js-nolint
-redirect(url)
-redirect(url, status)
+Response.redirect(url)
+Response.redirect(url, status)
 ```
 
 ### 引数
@@ -24,7 +27,7 @@ redirect(url, status)
 - `url`
   - : 新しいレスポンスの発信元 URL。
 - `status` {{optional_inline}}
-  - : response のオプションのステータスコード (例 `302`)
+  - : レスポンスのステータスコードを示すオプションの番号で、{{HTTPStatus("301", "301")}}、{{HTTPStatus("302", "302")}}、{{HTTPStatus("303", "303")}}、{{HTTPStatus("307", "307")}}、{{HTTPStatus("308", "308")}} のいずれかです。省略されたときは、既定で {{HTTPStatus("302", "302 Found")}} が使われます。
 
 ### 返値
 

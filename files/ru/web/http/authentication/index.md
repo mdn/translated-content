@@ -170,8 +170,7 @@ https://username:password@www.example.com/
 ```
 
 **Использование таких URL-адресов устарело**. В браузере Chrome в URL-адресах часть
-`username:password@` даже[
-вырезана](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) из соображений безопасности. В браузере Firefox, проверяется, действительно ли сайт требует
+`username:password@` даже[вырезана](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) из соображений безопасности. В браузере Firefox, проверяется, действительно ли сайт требует
 аутентификации и если нет, тогда Firefox предупредит пользователя запросом (prompt) "You are about to log in to the
 site "www\.example.com" with the username "username", but the website does not require authentication. This may be an
 attempt to trick you.".

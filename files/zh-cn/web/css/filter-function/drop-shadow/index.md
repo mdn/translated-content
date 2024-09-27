@@ -14,10 +14,28 @@ The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shado
 > [!NOTE]
 > 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
 
-## Syntax
+## 语法
 
-```
-drop-shadow(offset-x offset-y blur-radius spread-radius color)
+```css
+/* 双长度值 */
+/* drop-shadow( <length> <length> ) */
+drop-shadow(5px 5px)
+
+/* 三长度值 */
+/* drop-shadow( <length> <length> <length> ) */
+drop-shadow(5px 5px 15px)
+
+/* 双长度值加一个颜色值 */
+/* drop-shadow( <length> <length> <color> ) */
+drop-shadow(5px 5px red)
+
+/* 三长度值加一个颜色值 */
+/* drop-shadow( <length> <length> <length> <color> ) */
+drop-shadow(5px 5px 15px red)
+
+/* 可以改变颜色和长度值的顺序 */
+/* drop-shadow( <color> <length> <length> <length> ) */
+drop-shadow(#e23 0.5rem 0.5rem 1rem)
 ```
 
 The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword is not allowed.
