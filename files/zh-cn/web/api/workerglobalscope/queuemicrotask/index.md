@@ -1,13 +1,13 @@
 ---
-title: Window：queueMicrotask() 方法
-slug: Web/API/Window/queueMicrotask
+title: WorkerGlobalScope：queueMicrotask() 方法
+slug: Web/API/WorkerGlobalScope/queueMicrotask
 l10n:
   sourceCommit: 5fc275a2cb01ea3c361d6a0af057e96a00122984
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-{{domxref("Window")}} 接口的 **`queueMicrotask()`** 方法，将微任务加入队列以在控制返回浏览器的事件循环之前的安全时间执行。
+{{domxref("WorkerGlobalScope")}} 接口的 **`queueMicrotask()`** 方法，将微任务加入队列以在控制返回浏览器的事件循环之前的安全时间执行。
 
 微任务是一个简短的函数，它将在当前任务完成其工作后运行，并且在执行上下文的控制权返回到浏览器的事件循环之前没有其他代码等待运行时运行。
 
@@ -71,7 +71,7 @@ MyElement.prototype.loadData = function (url) {
 
 ## 参见
 
-- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
 - [`core-js` 中 `queueMicrotask()` 的 polyfill](https://github.com/zloirock/core-js#queuemicrotask)
 - [在 JavaScript 中通过 queueMicrotask() 使用微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
