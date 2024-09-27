@@ -3,7 +3,7 @@ title: "PerformanceObserverEntryList: getEntriesByType() メソッド"
 short-title: getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
 l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{APIRef("Performance API")}}
