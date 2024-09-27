@@ -13,7 +13,7 @@ l10n:
 
 ## HTML 到底是什么？
 
-HTML 是一种用于定义内容结构的*标记语言*。HTML 由一系列的**{{Glossary("element", "元素")}}**组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对{{Glossary("tag", "标签")}}可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：
+HTML 是一种用于定义内容结构的*标记语言*。HTML 由一系列的{{Glossary("element", "元素")}}组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对{{Glossary("tag", "标签")}}可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：
 
 ```plain
 My cat is very grumpy
@@ -71,7 +71,7 @@ My cat is very grumpy
 
 ### 空元素
 
-不包含任何内容的元素称为**{{glossary("void element", "空元素")}}**。比如 {{htmlelement("img")}} 元素：
+不包含任何内容的元素称为{{glossary("void element", "空元素")}}。比如 {{htmlelement("img")}} 元素：
 
 ```html
 <img src="images/firefox-icon.png" alt="My test image" />
