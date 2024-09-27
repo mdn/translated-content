@@ -28,7 +28,7 @@ l10n:
 - {{WebExtAPIRef("extension.getBackgroundPage()")}}
   - : 返回当前扩展内运行的后台页面的 [`Window`](/zh-CN/docs/Web/API/Window) 对象。如果扩展不存在后台页面，则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 - {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
-  - : 返回当前扩展内运行的每个标签的 JavaScript [`Window`](/zh-CN/docs/Web/API/Window) 对象的数组。如果指定了 `windowId`，则仅返回附加到指定窗口的标签的 Window 对象。
+  - : 返回当前扩展内运行的每个标签的 JavaScript [`Window`](/zh-CN/docs/Web/API/Window) 对象的数组。
 - {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}
   - : 将扩展安装目录内的相对路径转换为完全限定的 URL。
 - {{WebExtAPIRef("extension.getViews()")}}
