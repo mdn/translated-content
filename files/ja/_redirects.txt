@@ -3374,8 +3374,11 @@
 /ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
+/ja/docs/Web/API/queueMicrotask	/ja/docs/Web/API/Window/queueMicrotask
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
+/ja/docs/Web/API/reportError	/ja/docs/Web/API/Window/reportError
+/ja/docs/Web/API/structuredClone	/ja/docs/Web/API/Window/structuredClone
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/tableRow.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
 /ja/docs/Web/API/window.URL	/ja/docs/Web/API/URL
