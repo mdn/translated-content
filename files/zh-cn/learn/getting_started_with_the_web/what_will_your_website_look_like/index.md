@@ -62,7 +62,7 @@ _你的网站会是什么样子_？讨论的是你编写代码之前不得不为
 
 ### 字体
 
-和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.com/fonts) 是 Google 旗下的提供许多字体许可的网络服务。
+和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.com/fonts) 是 Google 旗下的提供许多字体许可的 Web 服务。
 
 选好字体后，你有两种主要的使用方式：
 
@@ -70,8 +70,8 @@ _你的网站会是什么样子_？讨论的是你编写代码之前不得不为
 2. 将字体文件下载到你的系统，自行托管这个文件，并在你网站的代码中使用托管的副本文件。
 
 > [!NOTE]
-> 使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果这对你而言是潜在的问题，那么可以选择第二种方式，也可以选择 GDPR 认可的字体供应商，如 [Bunny Fonts](https://fonts.bunny.net/about)。
+> 使用 Google Fonts 上托管的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为该字体服务会暴露用户的 IP 地址。如果这对你而言是潜在的问题，那么可以选择第二种方式，也可以选择符合 GDPR 的字体供应商，如 [Bunny Fonts](https://fonts.bunny.net/about)。
 
-另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
+另一个选择是使用[安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
