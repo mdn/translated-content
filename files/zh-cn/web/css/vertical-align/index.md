@@ -1,25 +1,27 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
+l10n:
+  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的属性 **`vertical-align`** 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。
+[CSS](/zh-CN/docs/CSS) 的属性 **`vertical-align`** 用来指定行内元素（inline）、行内块元素（inline-block）、表格单元格（table-cell）元素的垂直对齐方式。
 
 {{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
 vertical-align 属性可被用于两种环境：
 
-- 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：
-- 垂直对齐表格单元内容。
+- 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于[垂直对齐行文本内的图片](#行内盒的垂直对齐)
+- 垂直对齐[表格单元格的内容](#表格单元格中的垂直对齐)
 
 注意 `vertical-align` 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐[块级元素](/zh-CN/docs/Glossary/Block-level_content)。
 
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -29,16 +31,18 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* <length> values */
+/* 长度值 */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* <percentage> values */
+/* 百分比值 */
 vertical-align: 20%;
 
-/* Global values */
+/* 全局值 */
 vertical-align: inherit;
 vertical-align: initial;
+vertical-align: revert;
+vertical-align: revert-layer;
 vertical-align: unset;
 ```
 
@@ -80,7 +84,7 @@ vertical-align: unset;
 
 ### 表格单元格的值
 
-- `baseline` (以及 `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
+- `baseline`（以及 `sub`、`super`、`text-top`、`text-bottom`、`<length>`、`<percentage>`）
   - : 使单元格的基线，与该行中所有以基线对齐的其他单元格的基线对齐。
 - `top`
   - : 使单元格内边距的上边缘与该行顶部对齐。
@@ -91,37 +95,40 @@ vertical-align: unset;
 
 可以是负数。
 
+## 形式定义
+
+{{CSSInfo}}
+
 ### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### 基础示例
+
+#### HTML
 
 ```html
 <div>
-  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
-  a default alignment.
+  <img src="frame_image.svg" alt="link" width="32" height="32" />
+  默认对齐方式的图像
 </div>
 <div>
-  An
   <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a text-top alignment.
+  字体顶部对齐的图像
 </div>
 <div>
-  An
   <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a text-bottom alignment.
+  字体底部对齐的图像
 </div>
 <div>
-  An
   <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a middle alignment.
+  中部对齐的图像
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 img.top {
@@ -135,15 +142,127 @@ img.middle {
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample("示例")}}
+{{EmbedLiveSample("基础示例")}}
+
+### 行内盒的垂直对齐
+
+#### HTML
+
+```html-nolint
+<p>
+top:         <img style="vertical-align: top" src="star.png" alt="star"/>
+middle:      <img style="vertical-align: middle" src="star.png" alt="star"/>
+bottom:      <img style="vertical-align: bottom" src="star.png" alt="star"/>
+super:       <img style="vertical-align: super" src="star.png" alt="star"/>
+sub:         <img style="vertical-align: sub" src="star.png" alt="star"/>
+</p>
+
+<p>
+text-top:    <img style="vertical-align: text-top" src="star.png" alt="star"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png" alt="star"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png" alt="star"/>
+-1em:        <img style="vertical-align: -1em" src="star.png" alt="star"/>
+20%:         <img style="vertical-align: 20%" src="star.png" alt="star"/>
+-100%:       <img style="vertical-align: -100%" src="star.png" alt="star"/>
+</p>
+```
+
+```css hidden
+#* {
+  box-sizing: border-box;
+}
+
+img {
+  margin-right: 0.5em;
+}
+
+p {
+  height: 3em;
+  padding: 0 0.5em;
+  font-family: monospace;
+  text-decoration: underline overline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("行内盒的垂直对齐", '100%', 160, "", "")}}
+
+### 表格单元格中的垂直对齐
+
+此示例，我们有一个表格包含一行共六个单元格。该行设置 `vertical-align` 的默认值为 `bottom`。
+
+- 前四个单元格分别设置它们自己的 `vertical-align` 值，这些值会覆盖行的默认值。
+- 第五个单元格没有设置任何 `vertical-align` 值，因此继承行的值。
+- 第六个单元格仅用于确保单元格有足够的高度，以便观察效果。
+
+#### HTML
+
+```html
+<table>
+  <tr class="bottom">
+    <td class="baseline">baseline</td>
+    <td class="top">top</td>
+    <td class="middle">middle</td>
+    <td>bottom</td>
+    <td>Row's style</td>
+    <td>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      pretium felis eu sem mattis vulputate.
+    </td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 0.5em;
+  font-family: monospace;
+}
+
+.bottom {
+  vertical-align: bottom;
+}
+
+.baseline {
+  vertical-align: baseline;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("表格单元格中的垂直对齐", '100%', 230, "", "")}}
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
@@ -151,7 +270,7 @@ img.middle {
 
 ## 参见
 
-- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#Center_item)
+- [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#元素居中)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
-- [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)
+- [理解 `vertical-align`，如何（不）垂直居中内容](http://phrogz.net/css/vertical-align/index.html)
+- [Vertical-Align：你要知道的事](https://christopheraue.net/design/vertical-align)
