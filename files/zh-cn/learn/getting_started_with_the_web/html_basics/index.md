@@ -163,7 +163,7 @@ alt 属性的关键字即“描述文本”。alt 文本应向用户完整地传
 <p>这是一个段落</p>
 ```
 
-试着向一个或几个段落中添加一些文本（[*你的网站会是什么样子？*](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)文章中有这些文本），并把它们放在你的 {{htmlelement("img")}} 元素下方。
+试着向一个或几个段落中添加一些文本（[_你的网站会是什么样子？_](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)文章中有这些文本），并把它们放在你的 {{htmlelement("img")}} 元素下方。
 
 ### 列表（List）
 
