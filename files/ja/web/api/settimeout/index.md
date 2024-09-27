@@ -1,11 +1,12 @@
 ---
-title: setTimeout()
+title: setTimeout() グローバル関数
+short-title: setTimeout()
 slug: Web/API/setTimeout
 l10n:
-  sourceCommit: c09b8e9dd0022a33cf84355704ca281d6a5f29f5
+  sourceCommit: 8acf54a3eb1536134a39896c3ceb1578f9b4eea7
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 グローバルの **`setTimeout()`** メソッドは、時間切れになると関数または指定されたコードの断片を実行するタイマーを設定します。
 
@@ -19,7 +20,7 @@ setTimeout(functionRef)
 setTimeout(functionRef, delay)
 setTimeout(functionRef, delay, param1)
 setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### 引数
@@ -44,11 +45,11 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 返される `timeoutID` は正の整数値で、 `setTimeout()` を呼び出して作成したタイマーを識別します。この値を {{domxref("clearTimeout","clearTimeout()")}} へ渡すことで、タイムアウトを取り消すことができます。
 
-`timeoutID` の値は、同じオブジェクト (ウィンドウやワーカー) において、後に `setTimeout()` や `setInterval()` を呼び出しても再使用されないことが保証されています。ただし、別なオブジェクトでは別の ID プールを使用します。
+`timeoutID` の値は、同じオブジェクト（ウィンドウやワーカー）においてタイマーが有効な間、後に `setTimeout()` や `setInterval()` を呼び出しても再使用されないことが保証されています。ただし、別なオブジェクトでは別の ID プールを使用します。
 
 ## 解説
 
-タイムアウトは、 {{domxref("clearTimeout()")}} を使用して取り消すことができます。
+タイムアウトは、{{domxref("clearTimeout()")}} を使用して取り消すことができます。
 
 関数を繰り返して（例えば _N_ ミリ秒ごとに）呼び出すには、 {{domxref("setInterval()")}} を使用することを検討してください。
 
@@ -62,7 +63,7 @@ setTimeout(() => {
 }, "1000");
 ```
 
-しかし、多くの場合、暗黙の型強制は予期しない、驚くべき結果をもたらす可能性があります。例えば、以下のコードを実行すると、文字列 `"1 second"` は最終的に数字 `0` に強制され、その結果、コードは遅延ゼロで直ちに実行されます。
+しかし、多くの場合、暗黙の型強制は予期しない、驚くべき結果をもたらす可能性があります。例えば、以下のコードを実行すると、文字列 `"1 second"` は最終的に数字 `0` に変換され、その結果、コードは遅延ゼロで直ちに実行されます。
 
 ```js example-bad
 setTimeout(() => {
@@ -109,9 +110,9 @@ setTimeout(() => {
 
 ### "this" の問題
 
-`setTimeout()` にメソッドを渡すと、 `this` が期待とは異なる値で起動されることがあります。一般的な問題は [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this#オブジェクトのメソッドとして)で詳細に説明されています。
+`setTimeout()` にメソッドを渡すと、 `this` が期待とは異なる値で起動されることがあります。一般的な問題は [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this#コールバック)で詳細に説明されています。
 
-`setTimeout()` によって実行されるコードは、 `setTimeout` が呼び出された関数とは別の実行コンテキスト内から呼び出されます。呼び出された関数に `this` キーワードを設定する通常の規則を適用して、呼び出しあるいは `bind` で `this` を設定しなければ、厳格モードでなければ `global` (または `window`)、厳格モードでは undefined になります。これは、 `setTimeout` が呼び出された関数の `this` 値と同じにはなりません。
+`setTimeout()` によって実行されるコードは、`setTimeout` が呼び出された関数とは別の実行コンテキストから呼び出されます。呼び出された関数で `this` キーワードを設定する際の通常のルールが適用され、`this` を呼び出し時に設定していない場合、または `bind` で設定していない場合、`window`（または `global` ）オブジェクトが既定で使用されます。これは、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)であっても同様です。これは、`setTimeout` を呼び出した関数の `this` の値と同じではありません。
 
 以下の例をご覧ください。
 
@@ -199,7 +200,7 @@ setTimeout(() => {
 }, 500);
 ```
 
-{{domxref("setTimeout()")}} に渡した文字列はグローバルコンテキストで評価されます。そのため、{{domxref("setTimeout()")}} が呼び出されたコンテキストのローカルシンボルは、文字列を評価したコードからは利用できません。
+`setTimeout()` に渡した文字列はグローバルコンテキストで評価されます。そのため、`setTimeout()` が呼び出されたコンテキストのローカルシンボルは、文字列を評価したコードからは利用できません。
 
 ### 遅延が指定値より長い理由
 
@@ -212,9 +213,17 @@ setTimeout(() => {
 この例では、 `setTimeout` の呼び出しを `0` ミリ秒の遅延でネストし、ハンドラーが呼び出されるたびに遅延時間を記録しています。最初の 4 回は遅延が約 0 ミリ秒、その後は約 4 ミリ秒になります。
 
 ```html
-<button id="run">Run</button>
-<pre>previous    this    actual delay</pre>
-<div id="log"></div>
+<button id="run">実行</button>
+<table>
+  <thead>
+    <tr>
+      <th>前回</th>
+      <th>今回</th>
+      <th>実際の遅延</th>
+    </tr>
+  </thead>
+  <tbody id="log"></tbody>
+</table>
 ```
 
 ```js
@@ -222,10 +231,9 @@ let last = 0;
 let iterations = 10;
 
 function timeout() {
-  // log the time of this call
+  // この呼び出しの時刻をログ出力
   logline(new Date().getMilliseconds());
-
-  // if we are not finished, schedule the next call
+  // まだ終わっていない場合は、次の呼び出しをスケジュール
   if (iterations-- > 0) {
     setTimeout(timeout, 0);
   }
@@ -238,36 +246,47 @@ function run() {
     log.removeChild(log.lastElementChild);
   }
 
-  // initialize iteration count and the starting timestamp
+  // 反復処理の回数と開始タイムスタンプを初期化
   iterations = 10;
   last = new Date().getMilliseconds();
-
   // start timer
   setTimeout(timeout, 0);
 }
 
-function pad(number) {
-  return number.toString().padStart(3, "0");
-}
-
 function logline(now) {
-  // log the last timestamp, the new timestamp, and the difference
-  const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
-    now - last
-  }`;
-  document.getElementById("log").appendChild(newLine);
+  // 最後のタイムスタンプ、新しいタイムスタンプ、および差分をログ出力
+  const tableBody = document.getElementById("log");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = last;
+  logRow.insertCell().textContent = now;
+  logRow.insertCell().textContent = now - last;
   last = now;
 }
 
 document.querySelector("#run").addEventListener("click", run);
 ```
 
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+```
+
 {{EmbedLiveSample("Nested_timeouts", 100, 420)}}
 
 #### アクティブでないタブのタイムアウト
 
-バックグラウンドのタブによる負荷（および関連するバッテリーの使用量）を軽減するために、ブラウザはアクティブでないタブの最小タイムアウト時間を強制します。また、ページがウェブオーディオ API の {{domxref("AudioContext")}} を使用して音声を再生している場合、このタイムアウトが免除されることもあります。
+バックグラウンドのタブによる負荷（および関連するバッテリーの使用量）を軽減するために、ブラウザーはアクティブでないタブの最小タイムアウト時間を強制します。また、ページがウェブオーディオ API の {{domxref("AudioContext")}} を使用して音声を再生している場合、このタイムアウトが免除されることもあります。
 
 この仕様はブラウザーに依存します。
 
@@ -284,7 +303,8 @@ Firefox は、トラッキングスクリプトとして認識されたスクリ
 
 #### タイムアウトの遅延
 
-ページ（または OS やブラウザー）が他のタスクでビジー状態場合、タイムアウトが予想より遅れて発生することがあります。注意すべき重要なケースとして、 `setTimeout()` を呼び出したスレッドが終了するまで、関数やコードスニペットを実行することができないことがあります。例えば、
+ページ（または OS やブラウザー）が他のタスクでビジー状態場合、タイムアウトが予想より遅れて発生することがあります。
+注意すべき重要なケースとして、 `setTimeout()` を呼び出したスレッドが終了するまで、関数やコードスニペットを実行することができないことがあります。例えば、
 
 ```js
 function foo() {
@@ -296,7 +316,7 @@ console.log("After setTimeout");
 
 このコードは、コンソールへ以下のように出力します。
 
-```
+```plain
 After setTimeout
 foo has been called
 ```
@@ -313,7 +333,22 @@ Firefox は現在のタブがロードされている間、 `setTimeout()` タ�
 
 ### 最大の遅延時間
 
-Internet Explorer、Chrome、Safari、Firefox を含むブラウザーは、内部で遅延時間を 32 ビット符号付き整数値で保存します。このため 2,147,483,647 ms (約 24.8 日) より大きな遅延時間を使用すると整数値がオーバーフローして、その結果直ちに実行されるタイムアウトになります。
+ブラウザーは遅延時間を内部的に 32 ビット符号付き整数として格納するため、
+2,147,483,647 ミリ秒(約 24.8 日)を超える遅延時間を使用すると、整数オーバーフローが発生します。例えば、次のコードでは、
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
+```
+
+…タイムアウトが即座に実行される結果となります（`2**32 - 5000` が負の数にオーバーフローするため）。一方、次のコードのようにすると、
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
+```
+
+…タイムアウトは約5秒後に実行されます。
+
+**メモ**: これは、Node.js の `setTimeout` の動作と一致しません。Node.js では、2,147,483,647 ミリ秒を超えるタイムアウトは即座に実行されます。
 
 ## 例
 
