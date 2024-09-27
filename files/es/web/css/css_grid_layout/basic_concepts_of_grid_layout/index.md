@@ -91,6 +91,8 @@ Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref(
 
 ![](1_grid_track.png)
 
+### Ejemplo básico
+
 Puedo modificar nuestro ejemplo anterior al agregar la propiedad `grid-template-columns`, para así definir el tamaño (ancho) de las vías de cada columna.
 
 Ahora he creado una cuadrícula con tres vías por columna de 200 píxeles. Los elementos hijo se posicionarán en esta cuadrícula uno en cada una de las celdas de la cuadrícula.
@@ -132,9 +134,9 @@ Ahora he creado una cuadrícula con tres vías por columna de 200 píxeles. Los 
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '140') }}
+{{ EmbedLiveSample('Ejemplo_basico', '610', '140') }}
 
-### La Unidad fr
+### La unidad fr
 
 Las vías se pueden definir usando cualquier unidad de medida. Grid también introduce una unidad de longitud adicional para ayudarnos a crear vías de cuadrícula flexibles. La nueva unidad fr representa una fracción del espacio disponible en el contenedor de la cuadrícula. La siguiente definición de cuadrícula crearía tres vias con el mismo ancho, que se expanden y se encogen de acuerdo el espacio disponible.
 
@@ -175,9 +177,21 @@ Las vías se pueden definir usando cualquier unidad de medida. Grid también int
 }
 ```
 
-{{ EmbedLiveSample('La_Unidad_fr', '220', '140') }}
+{{ EmbedLiveSample('La_unidad_fr', '220', '140') }}
+
+### Tamaño desigual
 
 En el próximo ejemplo creamos una definición con una vía de `2fr` y luego dos vías de `1fr`. El espacio disponible se divide en cuatro. Dos partes corresponden a la primera vía y una parte a cada una de las dos vias restantes.
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -186,7 +200,41 @@ En el próximo ejemplo creamos una definición con una vía de `2fr` y luego dos
 }
 ```
 
-En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fracción(fr). La primera vía tiene 500 píxeles, por lo que este ancho fijo se sustrae del espacio disponible.El espacio restante se divide en tres y se asigna en proporción a las dos vías flexibles.
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('Tamaño_desigual', '220', '140') }}
+
+### Mezclando tamanaños absolutos y flexibles
+
+En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fracción(fr). La primera vía tiene 500 píxeles, por lo que este ancho fijo se sustrae del espacio disponible. El espacio restante se divide en tres y se asigna en proporción a las dos vías flexibles.
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -194,6 +242,28 @@ En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fr
   grid-template-columns: 500px 1fr 2fr;
 }
 ```
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('Mezclando_tamanaños_absolutos_y_flexibles', '220', '140') }}
 
 ### Listando vías con la notación `repeat()`
 
