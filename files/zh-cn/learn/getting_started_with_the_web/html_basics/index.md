@@ -220,7 +220,7 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
    ```html
    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">
-    Mozilla Manifesto
+     Mozilla Manifesto
    </a>
    ```
 
