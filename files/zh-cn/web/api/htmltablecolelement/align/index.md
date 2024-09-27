@@ -29,7 +29,7 @@ l10n:
 
 在 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上使用 CSS `text-align`。由于列的 {{htmlelement("td")}} 元素不是 {{htmlelement("col")}} 的子元素，在 HTML 中设置 `align` 属性或在 CSS 中对 {{HTMLElement("col")}} 元素设置 `text-align` 属性将不起作用。相反，使用 [`:is(td, tr):nth-child(n)`](/zh-CN/docs/Web/CSS/:nth-child) 选择列的单元格，其中 `n` 是列号，或类似值。
 
-{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#样式化表格列)。
+{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#为表格列添加样式)。
 
 ## 规范
 

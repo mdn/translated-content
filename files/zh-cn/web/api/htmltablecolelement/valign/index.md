@@ -32,7 +32,7 @@ l10n:
 
 使用 CSS `vertical-align`。由于 {{htmlelement("td")}} 不是 {{htmlelement("col")}} 的子元素，因此不能直接在 {{HTMLElement("col")}} 上设置它，需要使用 `td:nth-child(n)` 或类似值（`n` 是列号）来选择列的单元格。
 
-{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#样式化表格列)。
+{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#为表格列添加样式)。
 
 ## 规范
 
