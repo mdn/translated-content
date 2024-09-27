@@ -49,7 +49,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
 
