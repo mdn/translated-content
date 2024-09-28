@@ -43,9 +43,9 @@ slug: Learn/HTML/Tables/Basics
 ```html hidden
 <table>
   <caption>
-    关于太阳系行星的数据（来源:
+    关于太阳系行星的数据（来源：
     <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-      >NASA的行星概况表 - 公制单位</a
+      >NASA 的行星概况表 - 公制单位</a
     >）
   </caption>
   <thead>
@@ -176,7 +176,7 @@ slug: Learn/HTML/Tables/Basics
       <td>-225</td>
       <td>5</td>
       <td>
-        于2006年从行星除名，但这
+        于 2006 年从行星除名，但这
         <a
           href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
           >仍然存在争议</a
@@ -300,7 +300,7 @@ th {
 
 ## 使用 \<th> 元素添加标题
 
-现在，让我们把注意力转向表格标题，位于行或列开头的特殊单元格，定义了行或列包含的数据类型（例如，本章第一个示例中的 “人员” 和 “年龄” 单元格）。为了说明它们为什么这么有用，来看下面这个例子，首先是源代码：
+现在，让我们把注意力转向表格标题，位于行或列开头的特殊单元格，定义了行或列包含的数据类型（例如，本章第一个示例中的“人员”和“年龄”单元格）。为了说明它们为什么这么有用，来看下面这个例子，首先是源代码：
 
 ```html
 <table>
@@ -342,7 +342,7 @@ th {
 </table>
 ```
 
-```css hidden
+````css hidden
 table {
   border-collapse: collapse;
 }
@@ -410,7 +410,7 @@ th {
     <td>公鸡</td>
   </tr>
 </table>
-```
+````
 
 ```css hidden
 table {
@@ -446,7 +446,7 @@ th {
 在继续阅读之前，我们将在本文介绍最后一个特性。HTML 有一种为整列数据的定义样式信息的方法：就是 **[`<col>`](/zh-CN/docs/Web/HTML/Element/col)** 和 **[`<colgroup>`](/zh-CN/docs/Web/HTML/Element/colgroup)** 元素。它们存在是因为如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 `<td>` 或 `<th>` 上定义样式，或者使用一个复杂的选择器，比如 {{cssxref(":nth-child()")}}。
 
 > [!NOTE]
-> 这样设计列的样式[仅限于几个属性](https://www.w3.org/TR/CSS22/tables.html#columns)：[`border`](/en-US/docs/Web/CSS/border), [`background`](/en-US/docs/Web/CSS/background), [`width`](/en-US/docs/Web/CSS/width), and [`visibility`](/en-US/docs/Web/CSS/visibility)。要设置其他属性，必须对列中的每个 `<td>` 或 `<th>` 进行样式设置，或者使用复杂的选择器，如 {{cssxref(":nth-child")}}。
+> 这样设计列的样式[仅限于几个属性](https://www.w3.org/TR/CSS22/tables.html#columns)：[`border`](/zh-CN/docs/Web/CSS/border), [`background`](/zh-CN/docs/Web/CSS/background), [`width`](/zh-CN/docs/Web/CSS/width), and [`visibility`](/zh-CN/docs/Web/CSS/visibility)。要设置其他属性，必须对列中的每个 `<td>` 或 `<th>` 进行样式设置，或者使用复杂的选择器，如 {{cssxref(":nth-child")}}。
 
 下面是一个简单的示例：
 
