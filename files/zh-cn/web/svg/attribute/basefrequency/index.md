@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`baseFrequency`** 属性表示 {{SVGElement("feTurbulence")}} 过滤器基元的噪点函数的基础频率参数。
+**`baseFrequency`** 属性表示 {{SVGElement("feTurbulence")}} 滤镜原语的噪点函数的基础频率参数。
 
 你可以将此属性与以下 SVG 元素一起使用：
 
