@@ -34,11 +34,11 @@ requestPointerLock(options)
 
 ## 安全
 
-调用 `requestPointerLock()` 时需要{{Glossary("Transient activated", "瞬态激活")}}。用户必须与页面或 UI 元素进行交互才能使此特性正常工作。此外，目标元素的关联文档必须处于活动状态。
+调用 `requestPointerLock()` 时需要{{Glossary("Transient activation", "瞬态激活")}}。用户必须与页面或 UI 元素进行交互才能使此特性正常工作。此外，目标元素的关联文档必须处于活动状态。
 
-如果在通过默认解锁手势释放指针锁后立即调用 `requestPointerLock()`（而不是通过 `exitPointerLock()` 调用），即使有{{Glossary("transient activated", "瞬态激活")}}，调用也会失败。
+如果在通过默认解锁手势释放指针锁后立即调用 `requestPointerLock()`（而不是通过 `exitPointerLock()` 调用），即使有{{Glossary("Transient activation", "瞬态激活")}}，调用也会失败。
 
-如果使用 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 调用 `requestPointerLock()`，则必须先调用 `requestPointerLock()`，因为 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 将消耗{{Glossary("Transient activated", "瞬态激活")}} 的状态。
+如果使用 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 调用 `requestPointerLock()`，则必须先调用 `requestPointerLock()`，因为 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 将消耗{{Glossary("Transient activation", "瞬态激活")}} 的状态。
 
 在 {{htmlelement("iframe")}} 元素中调用 `requestPointerLock()` 时，必须添加 `allow-pointer-lock` [沙盒令牌](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)。此外，其他 {{htmlelement("iframe")}} 元素中的其他元素不得处于指针锁定模式。
 
