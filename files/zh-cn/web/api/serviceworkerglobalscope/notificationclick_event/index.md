@@ -2,10 +2,10 @@
 title: ServiceWorkerGlobalScope：notificationclick 事件
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 l10n:
-  sourceCommit: 0eaece3a8c265e9d396255c5fda094553d66eca2
+  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} 接口的 **`notificationclick`** 事件在点击由 {{domxref("ServiceWorkerRegistration.showNotification()")}} 生成的系统通知时触发。
 

@@ -23,12 +23,12 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
 
