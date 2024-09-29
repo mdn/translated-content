@@ -1,6 +1,8 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
@@ -22,7 +24,7 @@ slug: Web/API/Battery_Status_API
 
 ## 예제
 
-아래 예제에서는 배터리가 충전중인 상태 (전원 케이블을 연결하여 충전 중인지) 와 배터리 수준의 변화를 감시합니다. 각각 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}} 와 {{domxref("BatteryManager.levelchange_event", "levelchange")}} 이벤트가 발생하면 완료됩니다.
+이 예제에서는 배터리가 충전중인 상태(전원 케이블을 연결하여 충전 중인지)와 배터리 잔량 및 타이밍의 변화를 모두 관찰합니다. 이 작업은 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}, {{domxref("BatteryManager.levelchange_event", "levelchange")}}, {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}, {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} 이벤트를 수신하는 방식으로 수행됩니다.
 
 ```js
 navigator.getBattery().then((battery) => {
@@ -64,9 +66,9 @@ navigator.getBattery().then((battery) => {
 });
 ```
 
-명세서의 예제도 [**확인**](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)해보세요.
+[명세서의 예시도](https://www.w3.org/TR/battery-status/#examples) 참조하세요.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -74,6 +76,6 @@ navigator.getBattery().then((battery) => {
 
 {{Compat}}
 
-## 더보기
+## 같이 보기
 
 - [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
