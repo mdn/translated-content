@@ -7,8 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`try...catch`** 문은 `try` 블록과 `catch` 블록, `finally` 블록 중 하나 혹은 두 블록으로 구성됩니다.
-`try` 블록 내 코드가 먼저 실행되고, 만약 그 안에서 예외가 발생한다면 `catch` 블록 내 코드가 실행됩니다. `finally` 블록 내 코드는 항상 실행되며, 제어 흐름이 전체 구문을 종료하기 전에 실행됩니다.
+**`try...catch`** 문은 `try` 블록과 `catch` 블록, `finally` 블록 중 하나 혹은 두 블록으로 구성됩니다. `try` 블록 내 코드가 먼저 실행되고, 만약 그 안에서 예외가 발생한다면 `catch` 블록 내 코드가 실행됩니다. `finally` 블록 내 코드는 항상 실행되며, 제어 흐름이 전체 구문을 종료하기 전에 실행됩니다.
 
 {{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
