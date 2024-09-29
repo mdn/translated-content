@@ -28,8 +28,7 @@ try {
 - `catchStatements`
   - : `try` 블록에서 예외가 발생했을 때 실행될 구문들입니다.
 - `exceptionVar` {{optional_inline}}
-  - : 해당 `catch` 블록에서 잡힌 예외를 담는 선택적 [식별자 혹은 패턴](#catch_binding)입니다. 만약 `catch` 블록에서 예외 값을 사용하지 않는 경우
-    `exceptionVar` 과 괄호를 생략할 수 있습니다.
+  - : 해당 `catch` 블록에서 잡힌 예외를 담는 선택적 [식별자 혹은 패턴](#catch_binding)입니다. 만약 `catch` 블록에서 예외 값을 사용하지 않는 경우 `exceptionVar` 과 괄호를 생략할 수 있습니다.
 - `finallyStatements`
   - : `try...catch...finally` 구문에서 제어 흐름이 빠져나가기 전에 실행되는 구문들입니다. 예외가 발생했는지 여부와 관계없이 항상 실행됩니다.
 
