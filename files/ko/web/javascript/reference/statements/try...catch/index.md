@@ -129,8 +129,8 @@ try {
 }
 ```
 
-`finally` 블록 내의 제어 흐름 구문(`return`, `throw`, `break`, `continue`)은 `try` 블록이나 `catch` 블록의 어떤 반환 값이든 mask"할 것입니다.
-아래 예시에서, `try`블록에서 1을 리턴하려고 합니다. 그러나 리턴되기 전에 제어 흐름이 `finally`블록에 먼저 전달되어 `finally` 블록의 리턴 값(2)이 대신 리턴됩니다.
+```suggestion
+`finally` 블록 내의 제어 흐름 구문(`return`, `throw`, `break`, `continue`)은 `try` 블록이나 `catch` 블록의 완료 값을 "가립니다". 아래 예시에서, `try`블록에서 1을 반환하려고 하지만, 반환하기 전에 제어 흐름이 `finally`블록에 먼저 전달되어 `finally` 블록의 반환 값(2)이 대신 반환됩니다.
 
 ```js
 function doIt() {
