@@ -40,7 +40,7 @@ try {
 - `try...finally`
 - `try...catch...finally`
 
-[`if`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 나 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for)과 같은 다른 구문과 달리, `try`, `catch`, `finally` 구문에서는 반드시 소괄호 ()가 아닌 중괄호 {} 로 감싸진 블록을 사용해야 합니다.
+다른 구조인 [`if`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 나 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for)와 달리, `try`, `catch`, `finally` 블록은 반드시 단일 구문이 아닌 중괄호 {} 로 감싸진 블록이어야 합니다.
 
 ```js-nolint example-bad
 try doSomething(); // SyntaxError
