@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-**`virtualkeyboardpolicy`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是一个枚举属性。当在元素上指定元素内容可编辑时（例如，它是 {{htmlelement("input")}} 或 {{htmlelement("textarea")}} 元素，或具有 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) 属性的元素），它会控制平板电脑、手机或其他可能没有硬件键盘的设备上的屏幕虚拟键盘行为。
+**`virtualkeyboardpolicy`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是一个枚举属性。当在元素上指定元素内容可编辑时（例如，它是 {{htmlelement("input")}} 或 {{htmlelement("textarea")}} 元素，或具有 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性的元素），它会控制平板电脑、手机或其他可能没有硬件键盘的设备上的屏幕虚拟键盘行为。
 
 该属性必须设置以下值之一：
 
