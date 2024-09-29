@@ -53,8 +53,7 @@ catch (e) console.log(e);
 
 하나 이상의 `try` 문을 중첩해서 사용할 수 있습니다. 내부 `try` 문에 `catch` 블록이 없는 경우, 외부 `try` 문의 `catch` 블록이 대신 사용됩니다. 즉, 즉, 중첩된 `try` 문 내에서 예외가 발생하면, 가장 가까운 상위 `catch` 블록이 해당 예외를 처리하게 됩니다.
 
-또한, `try` 문을 사용하여 JavaScript 예외를 처리할 수 있습니다.
-JavaScript 예외 처리에 대한 자세한 정보는 [JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)를 참고하시면 됩니다.
+또한, `try` 문을 사용하여 JavaScript 예외를 처리할 수 있습니다. JavaScript 예외 처리에 대한 자세한 정보는 [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)를 참고하시면 됩니다.
 
 ### Catch 바인딩
 
