@@ -59,7 +59,7 @@ block-size: fit-content;
 
 {{EmbedLiveSample("fit-content를 사용해 박스 크기 설정하기", "100%", 200)}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
