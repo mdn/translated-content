@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Pointer Lock API")}}
 
-**Pointer Lock API**(以前叫做 _Mouse Lock API_) 提供了一种基于鼠标随着时间推移（也就是增量）的运动的输入方法，而不仅是鼠标光标在视口中的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。例如，它是第一人称 3D 游戏的理想选择。
+**Pointer Lock API**（以前叫做 _Mouse Lock API_）提供了一种基于鼠标随着时间推移（也就是增量）的运动的输入方法，而不仅是鼠标光标在视口中的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。例如，它是第一人称 3D 游戏的理想选择。
 
 不仅如此，该 API 对于需要大量鼠标输入来控制移动、旋转对象和更改条目的任何应用程序都非常有用，例如，允许用户通过移动鼠标来控制视角，而无需单击任何按钮。然后释放按钮以执行其他操作。其他示例包括用于查看地图或卫星图像的应用程序。
 
@@ -24,7 +24,7 @@ l10n:
 
 ## 方法/属性概述
 
-本节对与指针锁定规范相关的每个属性和方法进行了简要说明。
+本章节对与指针锁定规范相关的每个属性和方法进行了简要说明。
 
 ### requestPointerLock()
 
@@ -92,9 +92,9 @@ Pointer lock API 还扩展了 {{domxref("Document")}} 接口，添加了一个�
 
 ```js
 if (document.pointerLockElement === canvas) {
-  console.log("The pointer lock status is now locked");
+  console.log("指针锁定状态现已锁定");
 } else {
-  console.log("The pointer lock status is now unlocked");
+  console.log("指针锁定状态现已解锁");
 }
 ```
 
@@ -106,7 +106,7 @@ document.exitPointerLock();
 
 ## pointerlockchange 事件
 
-当指针锁定状态改变时——例如，当调用 {{domxref("Element.requestPointerLock","requestPointerLock()")}} 或 {{domxref("Document.exitPointerLock","exitPointerLock()")}}，用户按下 ESC 键，等等。——{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} 事件在 `document` 上触发。这是一个不包含任何的额外数据的简单事件。
+当指针锁定状态改变时——例如，当调用 {{domxref("Element.requestPointerLock","requestPointerLock()")}} 或 {{domxref("Document.exitPointerLock","exitPointerLock()")}}，用户按下 ESC 键，等等——{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} 事件在 `document` 上触发。这是一个不包含任何的额外数据的简单事件。
 
 ```js
 document.addEventListener("pointerlockchange", lockChangeAlert, false);
