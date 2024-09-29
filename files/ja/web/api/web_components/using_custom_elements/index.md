@@ -259,7 +259,7 @@ class PopupInfo extends HTMLElement {
     super();
   }
 
-connectedCallback() {
+  connectedCallback() {
     // シャドウルートを生成
     const shadow = this.attachShadow({ mode: "open" });
 
