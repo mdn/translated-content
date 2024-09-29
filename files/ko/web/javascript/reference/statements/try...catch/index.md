@@ -70,8 +70,7 @@ try {
 }
 ```
 
-`catch` 절에 의해 생성된 바인딩은 `catch` 블록과 동일한 스코프에 존재합니다. 따라서 catch 블록 내에서 선언된 변수는 `catch` 절에 의해 생성된 바인딩과 동일한 이름을 가질 수 없습니다.
-([이 규칙에 한가지 예외가 있지만](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), 이는 더 이상 사용되지 않는 문법입니다.)
+`catch` 절에 의해 생성된 바인딩은 `catch` 블록과 동일한 범위에 존재합니다. 따라서 catch 블록 내에서 선언된 변수는 `catch` 절에 의해 생성된 바인딩과 동일한 이름을 가질 수 없습니다. ([이 규칙에 한가지 예외가 있지만](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), 이는 더 이상 사용되지 않는 문법입니다.)
 
 ```js-nolint example-bad
 try {
