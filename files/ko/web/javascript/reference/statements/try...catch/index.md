@@ -1,6 +1,8 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
+l10n:
+  sourceCommit: 4e947e81afc753bedcaaba75f262a07b92511849
 ---
 
 {{jsSidebar("Statements")}}
