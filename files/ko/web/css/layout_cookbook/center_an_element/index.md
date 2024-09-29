@@ -1,6 +1,8 @@
 ---
 title: 요소의 중앙 정렬
 slug: Web/CSS/Layout_cookbook/Center_an_element
+l10n:
+  sourceCommit: 70f49e78d0f6830748fcaa490d98b4ae3e2da161
 ---
 
 {{CSSRef}}
