@@ -1,5 +1,5 @@
 ---
-title: CSS color adjustment
+title: CSS 색상 조정
 slug: Web/CSS/CSS_color_adjustment
 l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
