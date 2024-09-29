@@ -1,8 +1,9 @@
 ---
-title: PointerEvent.tangentialPressure
+title: "PointerEvent: tangentialPressure プロパティ"
+short-title: tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}

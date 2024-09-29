@@ -1932,7 +1932,7 @@
 /es/docs/Web/CSS/env()	/es/docs/Web/CSS/env
 /es/docs/Web/CSS/filter-function/blur()	/es/docs/Web/CSS/filter-function/blur
 /es/docs/Web/CSS/filter-function/brightness()	/es/docs/Web/CSS/filter-function/brightness
-/es/docs/Web/CSS/filter-function/url	/es/docs/Web/CSS/url
+/es/docs/Web/CSS/filter-function/url	/es/docs/Web/CSS/url_value
 /es/docs/Web/CSS/filtro	/es/docs/Web/CSS/filter
 /es/docs/Web/CSS/grid-column-gap	/es/docs/Web/CSS/column-gap
 /es/docs/Web/CSS/grid-gap	/es/docs/Web/CSS/gap
@@ -1951,7 +1951,8 @@
 /es/docs/Web/CSS/transform-function/translate()	/es/docs/Web/CSS/transform-function/translate
 /es/docs/Web/CSS/transform-function/translateY()	/es/docs/Web/CSS/transform-function/translateY
 /es/docs/Web/CSS/transform-function/translateZ()	/es/docs/Web/CSS/transform-function/translateZ
-/es/docs/Web/CSS/url()	/es/docs/Web/CSS/url
+/es/docs/Web/CSS/url	/es/docs/Web/CSS/url_value
+/es/docs/Web/CSS/url()	/es/docs/Web/CSS/url_value
 /es/docs/Web/CSS/var()	/es/docs/Web/CSS/var
 /es/docs/Web/Demos	/es/docs/orphaned/Web/Demos
 /es/docs/Web/Demos_of_open_web_technologies	/es/docs/orphaned/Web/Demos

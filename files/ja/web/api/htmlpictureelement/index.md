@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLPictureElement`** インタフェースは、HTML の {{HTMLElement("picture")}} 要素を表します。これは固有のプロパティやメソッドを実装していません。
+**`HTMLPictureElement`** インターフェイスは、HTML の {{HTMLElement("picture")}} 要素を表します。これは固有のプロパティやメソッドを実装していません。
 
 {{InheritanceDiagram}}
 

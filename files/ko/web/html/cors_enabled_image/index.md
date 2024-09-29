@@ -73,7 +73,7 @@ function startDownload() {
 }
 ```
 
-여기서는 하드코딩된 URL(`imageURL`)을 사용하고 있지만 어디에서나 쉽게 찾을 수 있습니다. 다운로드를 시작하려면 {{domxref("HTMLImageElement.Image", "Image()")}} 생성자를 사용하여 새로운 {{domxref("HTMLImageElement")}} 객체를 생성합니다. 그런다음 `crossOrigin` 속성을 `"Anonymous"`으로 설정하여 교차 출처 다운로드를 허용하도록 이미지를 구성합니다. (이미지 교차 출처의 인증이 되지 않은 다운로드를 허용). 이미지 요소에서 발생하는 {{event("load")}} 이벤트에 대한 이벤트 수신기가 추가되며 이는 이미지 데이터가 수신되었음을 의미 합니다.
+여기서는 하드코딩된 URL(`imageURL`)을 사용하고 있지만 어디에서나 쉽게 찾을 수 있습니다. 다운로드를 시작하려면 {{domxref("HTMLImageElement.Image", "Image()")}} 생성자를 사용하여 새로운 {{domxref("HTMLImageElement")}} 객체를 생성합니다. 그런다음 `crossOrigin` 속성을 `"Anonymous"`으로 설정하여 교차 출처 다운로드를 허용하도록 이미지를 구성합니다. (이미지 교차 출처의 인증이 되지 않은 다운로드를 허용). 이미지 요소에서 발생하는 {{domxref("Window/load_event", "load")}} 이벤트에 대한 이벤트 수신기가 추가되며 이는 이미지 데이터가 수신되었음을 의미 합니다.
 
 마지막으로 이미지의 {{domxref("HTMLImageElement.src", "src")}} 속성을 다운로드할 이미지의 URL로 설정하면 다운로드가 시작됩니다.
 

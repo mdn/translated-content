@@ -191,7 +191,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 ### JavaScript 链接
 
-在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_和_defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
+在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Web/HTML/Element/script#defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
 
 ```html
 <script src="app.js" defer></script>

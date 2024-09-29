@@ -77,7 +77,7 @@ bash$ echo -n hello | base64
 
 下文介绍一些在创建和使用 `data` URL 时遇到的常见问题：
 
-```
+```html
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 

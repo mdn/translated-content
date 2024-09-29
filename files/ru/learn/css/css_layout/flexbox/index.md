@@ -7,9 +7,9 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 Это новая технология, которая уже имеет достаточно широкую поддержку браузеров. Flexbox предоставляет инструменты для быстрого создания сложных, гибких макетов, и функции, которые были сложны в традиционных методах CSS. В этой статье объясняются все основы данной технологии.
 
-| Необходимые навыки: | HTML основы (изучите [Введение в HTML](/ru/docs/Learn/HTML/Введение_в_HTML)), знание того, как работает CSS (изучите [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS)). |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:               | Узнать, как использовать систему адаптируемых блоков Flexbox для создания веб-макетов.                                                                                            |
+| Необходимые навыки: | HTML основы (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), знание того, как работает CSS (изучите [Вступление в CSS](/ru/docs/Learn/CSS/First_steps)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:               | Узнать, как использовать систему адаптируемых блоков Flexbox для создания веб-макетов.                                                                                         |
 
 ## Почему Flexbox?
 
@@ -25,7 +25,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## Разберём простой пример
 
-В этой статье вы проработаете серию упражнений, которые помогут понять, как работает flexbox. Чтобы начать, скачайте на компьютер стартовый файл — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) с нашего Github репозитория — загрузите его в современном браузере (Firefox или Chrome), а также в любимом редакторе кода. Также вы можете [посмотреть его вживую](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+В этой статье вы проработаете серию упражнений, которые помогут понять, как работает flexbox. Чтобы начать, скачайте на компьютер стартовый файл — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) с нашего Github репозитория — загрузите его в современном браузере (Firefox или Chrome), а также в любимом редакторе кода. Также вы можете [посмотреть его вживую](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 Вы увидите элемент {{htmlelement("header")}} с заголовком верхнего уровня внутри, и элемент {{htmlelement("section")}} содержащий три элемента {{htmlelement("article")}}. Мы будем использовать их для создания стандартного трёхколоночного макета.
 
@@ -79,7 +79,7 @@ flex-direction: column;
 
 ## Перенос строк
 
-Проблема может быть в том, что, если у вас фиксированная ширина или высота макета, ваши flexbox элементы переполнят контейнер и нарушат макет. Посмотрите на этот пример: [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) и [посмотрите его вживую](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (сохраните его себе на компьютер, если хотите изучить этот пример):
+Проблема может быть в том, что, если у вас фиксированная ширина или высота макета, ваши flexbox элементы переполнят контейнер и нарушат макет. Посмотрите на этот пример: [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) и [посмотрите его вживую](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (сохраните его себе на компьютер, если хотите изучить этот пример):
 
 ![](flexbox-example3.png)
 
@@ -89,7 +89,7 @@ flex-direction: column;
 flex-wrap: wrap;
 ```
 
-Также добавьте следующее свойство в CSS-правило для {{htmlelement("arcticle")}}:
+Также добавьте следующее свойство в CSS-правило для {{htmlelement("article")}}:
 
 ```css
 flex: 200px;
@@ -120,7 +120,7 @@ flex-flow: row wrap;
 
 ## Гибкое изменение размеров flex элементов
 
-Теперь давайте вернёмся к нашему первому примеру и посмотрим, как мы можем контролировать, в каких пропорциях flex элементы будут занимать место. Включите свою копию файла [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), или скачайте [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) ([просмотр](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Теперь давайте вернёмся к нашему первому примеру и посмотрим, как мы можем контролировать, в каких пропорциях flex элементы будут занимать место. Включите свою копию файла [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), или скачайте [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) ([просмотр](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 Прежде всего, добавим следующее правило в конец вашего CSS кода:
 
@@ -172,7 +172,7 @@ article:nth-of-type(3) {
 
 ## Горизонтальное и вертикальное выравнивание
 
-Flexbox также имеет функции для выравнивания flex элементов вдоль основной (main) или поперечной (cross) осей. Рассмотрим их на новом примере — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([просмотр](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)) — который мы превратим в аккуратную, гибкую кнопочную панель инструментов. На данный момент вы видите горизонтальную панель меню, кнопки которой застряли в верхнем левом углу.
+Flexbox также имеет функции для выравнивания flex элементов вдоль основной (main) или поперечной (cross) осей. Рассмотрим их на новом примере — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([просмотр](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)) — который мы превратим в аккуратную, гибкую кнопочную панель инструментов. На данный момент вы видите горизонтальную панель меню, кнопки которой застряли в верхнем левом углу.
 
 ![](flexbox-example5.png)
 
@@ -245,7 +245,7 @@ button:last-child {
 
 ## Вложенные flex блоки
 
-Можно создать несколько довольно сложных макетов с помощью flexbox. Совершенно нормально сделать flex элемент flex контейнером, чтобы его потомки также были flex блоками. Посмотрите на [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([см. вживую](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+Можно создать несколько довольно сложных макетов с помощью flexbox. Совершенно нормально сделать flex элемент flex контейнером, чтобы его потомки также были flex блоками. Посмотрите на [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([см. вживую](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 

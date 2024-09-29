@@ -2,7 +2,7 @@
 title: Blob：type 属性
 slug: Web/API/Blob/type
 l10n:
-  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
