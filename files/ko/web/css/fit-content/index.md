@@ -67,7 +67,7 @@ block-size: fit-content;
 
 {{Compat}}
 
-## 함께 보기
+## 같이 보기
 
 - 연관된 크기 설정 키워드: {{cssxref("min-content")}}, {{cssxref("max-content")}}
 - [CSS box sizing](/ko/docs/Web/CSS/CSS_box_sizing) 모듈
