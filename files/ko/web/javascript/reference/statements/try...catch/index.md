@@ -129,7 +129,6 @@ try {
 }
 ```
 
-```suggestion
 `finally` 블록 내의 제어 흐름 구문(`return`, `throw`, `break`, `continue`)은 `try` 블록이나 `catch` 블록의 완료 값을 "가립니다". 아래 예시에서, `try`블록에서 1을 반환하려고 하지만, 반환하기 전에 제어 흐름이 `finally`블록에 먼저 전달되어 `finally` 블록의 반환 값(2)이 대신 반환됩니다.
 
 ```js
