@@ -73,6 +73,40 @@ if ("documentPictureInPicture" in window) {
 
 ```js
 async function togglePictureInPicture() {
+  // 如果已经打开画中画窗口，则提前返回
+  if (window.documentPictureInPicture.window) {
+    return;
+  }
+
+  // 打开画中画窗口。
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
+    width: videoPlayer.clientWidth,
+    height: videoPlayer.clientHeight,
+  });
+
+  // ...
+
+  // 将播放器移至画中画窗口。
+  pipWindow.document.body.append(videoPlayer);
+
+  // 显示一条消息表明它已被移动
+  inPipMessage.style.display = "block";
+}
+```
+
+## 将样式表复制到画中画窗口
+
+要从原始窗口复制所有 CSS 样式表，请循环遍历文档中明确链接或嵌入的所有样式表（通过 {{domxref("Document.styleSheets")}}），然后将其附加到画中画窗口。请注意，这是一次性复制。
+
+```js
+// ...
+
+// 从初始文档复制样式表，以便播放器看起来相同。
+[...document.styleSheets].forEach((styleSheet) => {
+  try {
+    const cssRules = [...styleSheet.cssRules]
+      .map((rule) => rule.cssText)
+      .join("");
     const style = document.createElement("style");
 
     style.textContent = cssRules;
