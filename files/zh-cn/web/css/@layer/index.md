@@ -141,9 +141,10 @@ p {
 
 ```html
 <div class="item">
-  我被显示为 <code>color: rebeccapurple</code> ，因为
-  <code>special</code> 级联层晚于 <code>base</code> 级联层被定义。
-  我的绿色border，font-size和padding来自于 <code>base</code> 级联层。
+  我以 <code>color: rebeccapurple</code> 的样式显示，因为
+  <code>special</code> 层定义在 <code>base</code>
+  层之后。我的绿色边框、font-size 和内边距来自于 <code>base</code>
+  层。
 </div>
 ```
 
