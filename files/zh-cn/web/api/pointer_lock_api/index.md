@@ -172,7 +172,7 @@ canvas.addEventListener("click", async () => {
 ```
 
 > [!NOTE]
-> 上述代码片段在不支持 `requestPointerLock()` 的 promise 版本的浏览器中有效。请参阅[处理 requestPointerLock() 的 promise 版本和非 promise 版本](#handling_promise_and_non-promise_versions_of_requestpointerlock)了解详细说明。
+> 上述代码片段在不支持 `requestPointerLock()` 的 promise 版本的浏览器中有效。请参阅[处理 requestPointerLock() 的 promise 版本和非 promise 版本](#处理_requestpointerlock_的_promise_版本和非_promise_版本)了解详细说明。
 
 现在来看看专用的指针锁定事件监听器：`pointerlockchange`。当这种情况发生时，我们运行一个名为 `lockChangeAlert()` 的函数来处理变化。
 
