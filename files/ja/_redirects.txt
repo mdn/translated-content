@@ -3218,7 +3218,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/Window/createImageBitmap
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
@@ -3276,6 +3276,7 @@
 /ja/docs/Web/API/console/timeStamp	/ja/docs/Web/API/console/timeStamp_static
 /ja/docs/Web/API/console/trace	/ja/docs/Web/API/console/trace_static
 /ja/docs/Web/API/console/warn	/ja/docs/Web/API/console/warn_static
+/ja/docs/Web/API/createImageBitmap	/ja/docs/Web/API/Window/createImageBitmap
 /ja/docs/Web/API/crypto_property	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
