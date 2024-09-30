@@ -29,7 +29,7 @@ My cat is very grumpy
 
 让我们深入探索一下这个段落元素。
 
-![paragraph element including opening tag, content reading 'my cat is very grumpy', and a closing tag](grumpy-cat-small.png)
+![段落元素，包含：开始标签，‘my cat is very grumpy’的内容，结束标签](grumpy-cat-small.png)
 
 这个元素的主要部分有：
 
@@ -40,7 +40,7 @@ My cat is very grumpy
 
 元素也可以有下图中那样的属性：
 
-![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
+![段落开始标签，以及高亮的 class 属性：class=editor-note](grumpy-cat-attribute-small.png)
 
 属性包含的是不想在真正的内容中出现的和元素有关的额外信息。本例中，`class` 是属性*名*，`editor-note` 是属性*值*。`class` 属性是可以用于定位元素（以及任何其他有相同 `class` 值的元素）的标识名称，以便进一步为元素指定样式或进行其他操作时使用。一些属性没有值，如 [`required`](/zh-CN/docs/Web/HTML/Attributes/required)。
 
@@ -115,9 +115,9 @@ My cat is very grumpy
 <img src="images/firefox-icon.png" alt="My test image" />
 ```
 
-像之前所讲，该元素通过包含图像文件路径的地址属性 `src`，可在所在位置嵌入图像。
+正如之前讲的那样，该元素通过在属性 `src` 中包含图像文件路径的地址，可在所在位置嵌入图像。
 
-该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
+该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Element/img#使用有实际意义的备用描述)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
 
 1. 用户有视觉障碍。有严重视觉障碍的用户可以使用屏幕阅读器来朗读 alt 属性的内容。
 2. 有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：
@@ -234,9 +234,9 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面（也可以[查看这里](https://mdn.github.io/beginner-html-site/)）：
 
-![A web page screenshot showing a Firefox logo, a heading saying Mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
+![一张网页截图，包含：Firefox 标志，写着 Mozilla 很酷的标题以及两个文本段落](finished-test-page-small.png)
 
-如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)与你的文件进行比较。
+如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/main/index.html)与你的文件进行比较。
 
 在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的[学习 HTML](/zh-CN/docs/Learn/HTML) 主题。
 
