@@ -342,7 +342,7 @@ th {
 </table>
 ```
 
-````css hidden
+```css hidden
 table {
   border-collapse: collapse;
 }
@@ -351,6 +351,7 @@ th {
   border: 1px solid black;
   padding: 10px 20px;
 }
+```
 
 这是表格实际呈现的效果：
 
@@ -410,7 +411,7 @@ th {
     <td>公鸡</td>
   </tr>
 </table>
-````
+```
 
 ```css hidden
 table {
