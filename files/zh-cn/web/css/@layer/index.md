@@ -141,9 +141,9 @@ p {
 
 ```html
 <div class="item">
-  I am displayed in <code>color: rebeccapurple</code> because the
-  <code>special</code> layer comes after the <code>base</code> layer. My green
-  border, font-size, and padding come from the <code>base</code> layer.
+  我被显示为 <code>color: rebeccapurple</code> ，因为
+  <code>special</code> 级联层晚于 <code>base</code> 级联层被定义。
+  我的绿色border，font-size和padding来自于 <code>base</code> 级联层。
 </div>
 ```
 
