@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-当 {{SVGAttr("type")}} 属性为 `gamma` 时，`amplitude` 属性控制了组件转换元素的伽马函数的振幅。
+**`amplitude`** 属性用于在 {{SVGAttr("type")}} 属性为 `gamma` 时，控制组件转换元素的伽马函数的幅值。
 
 你可以将此属性与以下 SVG 元素一起使用：
 
