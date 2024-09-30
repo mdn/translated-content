@@ -143,8 +143,8 @@ p {
 <div class="item">
   我以 <code>color: rebeccapurple</code> 的样式显示，因为
   <code>special</code> 层定义在 <code>base</code>
-  层之后。我的绿色边框、font-size 和内边距来自于 <code>base</code>
-  层。
+  层之后。我的绿色边框、font-size 和内边距来自于
+  <code>base</code> 层。
 </div>
 ```
 
