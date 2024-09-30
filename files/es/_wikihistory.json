@@ -5472,6 +5472,10 @@
     "modified": "2019-03-23T22:45:47.266Z",
     "contributors": ["julian3xl"]
   },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2020-10-15T22:14:17.553Z",
+    "contributors": ["Bumxu"]
+  },
   "Web/API/Window/crypto": {
     "modified": "2020-02-12T20:26:38.795Z",
     "contributors": ["joseluisq", "AlePerez92", "victorjavierss"]
@@ -5766,10 +5770,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T21:53:36.780Z",
     "contributors": ["juanluisrp", "oderflaj"]
-  },
-  "Web/API/createImageBitmap": {
-    "modified": "2020-10-15T22:14:17.553Z",
-    "contributors": ["Bumxu"]
   },
   "Web/API/notification/icon": {
     "modified": "2019-03-23T22:59:32.492Z",
