@@ -433,8 +433,8 @@ th {
 让我们使用 `colspan` 和 `rowspan` 来改进现有的表格。
 
 1. 首先，把 [animals-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) 文件复制到你的本地环境，HTML 文件中包含了你刚才看到的动物示例的数据。
-2. 接着，使用 `colspan` 让 “动物”，“河马” 和 “鳄鱼” 横跨两列。
-3. 最后，使用 `rowspan` 让 “马” 和 “鸡” 竖跨两行。
+2. 接着，使用 `colspan` 让“动物”，“河马”和“鳄鱼”横跨两列。
+3. 最后，使用 `rowspan` 让“马”和“鸡”竖跨两行。
 4. 保存后，用浏览器打开你写的 HTML 文件，看看改进的地方。
 
 > [!NOTE]
