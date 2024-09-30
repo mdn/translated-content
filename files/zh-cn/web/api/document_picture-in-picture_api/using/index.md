@@ -10,7 +10,7 @@ l10n:
 本指南提供了 {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} 典型用法的详细指导。
 
 > [!NOTE]
-> 你可以在 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)中看到特色演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
+> 你可以在 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)中看到特性演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
 
 ## 示例 HTML
 
@@ -47,7 +47,7 @@ l10n:
 </div>
 ```
 
-## 特征检测
+## 特性检测
 
 要检查是否支持 Document Picture-in-Picture API，你可以测试 `window` 上的 `documentPictureInPicture` 属性是否可用：
 
@@ -105,7 +105,7 @@ async function togglePictureInPicture() {
 
 仅当以画中画模式显示时，此代码片段才会将文档 `<body>` 的背景变为红色。
 
-在[我们的演示](https://mdn.github.io/dom-examples/document-picture-in-picture/)中，我们将 `display-mode: picture-in-picture` 值与 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 媒体功能相结合，以根据用户的配色方案偏好创建仅当应用以画中画模式显示时才应用的明暗配色方案。
+在[我们的演示](https://mdn.github.io/dom-examples/document-picture-in-picture/)中，我们将 `display-mode: picture-in-picture` 值与 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 媒体特性相结合，以根据用户的配色方案偏好创建仅当应用以画中画模式显示时才应用的明暗配色方案。
 
 ```css
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
@@ -146,7 +146,7 @@ pipWindow.addEventListener("pagehide", (event) => {
 });
 ```
 
-## 当网站进入画中画模式时监听
+## 监听网站何时进入画中画模式
 
 监听 `DocumentPictureInPicture` 实例上的 {{domxref("DocumentPictureInPicture.enter_event", "enter")}} 事件，了解画中画窗口何时打开。
 
@@ -155,18 +155,18 @@ pipWindow.addEventListener("pagehide", (event) => {
 ```js
 documentPictureInPicture.addEventListener("enter", (event) => {
   const pipWindow = event.window;
-  console.log("视频播放器已进入 pip 窗口");
+  console.log("视频播放器已进入画中画窗口");
 
   const pipMuteButton = pipWindow.document.createElement("button");
-  pipMuteButton.textContent = "已静音";
+  pipMuteButton.textContent = "静音";
   pipMuteButton.addEventListener("click", () => {
     const pipVideo = pipWindow.document.querySelector("#video");
     if (!pipVideo.muted) {
       pipVideo.muted = true;
-      pipMuteButton.textContent = "未静音";
+      pipMuteButton.textContent = "取消静音";
     } else {
       pipVideo.muted = false;
-      pipMuteButton.textContent = "已静音";
+      pipMuteButton.textContent = "静音";
     }
   });
 
