@@ -1,6 +1,7 @@
 ---
 title: createImageBitmap()
-slug: Web/API/createImageBitmap
+slug: Web/API/Window/createImageBitmap
+original_slug: Web/API/createImageBitmap
 l10n:
   sourceCommit: 32539676aca5ea2913cfaefeab3ba986ecd2206f
 ---
