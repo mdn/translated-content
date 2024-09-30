@@ -41,7 +41,7 @@ l10n:
 并非所有 API 的权限状态都可以通过权限 API 查询。权限相关的 API 的非详尽列表包括：
 
 - [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API)：`background-sync`（应当总是被授予）
-- [Clipboard_API](/zh-CN/docs/Web/API/Clipboard_API#security_considerations)：`clipboard-read`、`clipboard-write`
+- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API#安全考虑)：`clipboard-read`、`clipboard-write`
 - [Compute Pressure API](/zh-CN/docs/Web/API/Compute_Pressure_API)：`compute-pressure`
 - [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API#security_considerations)：`geolocation`
 - [Local Font Access API](/zh-CN/docs/Web/API/Local_Font_Access_API)：`local-fonts`
