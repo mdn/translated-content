@@ -15561,6 +15561,10 @@
     "modified": "2019-03-24T00:15:16.672Z",
     "contributors": ["guoyi", "jjc", "teoli", "khalid32", "ziyunfei"]
   },
+  "Web/API/Window/queueMicrotask": {
+    "modified": "2020-10-15T22:23:11.878Z",
+    "contributors": ["RainSlide"]
+  },
   "Web/API/Window/rejectionhandled_event": {
     "modified": "2020-10-15T22:26:00.037Z",
     "contributors": ["mengli404"]
@@ -16279,10 +16283,6 @@
       "xgqfrms-GitHub",
       "Hawkeyes_Wind"
     ]
-  },
-  "Web/API/queueMicrotask": {
-    "modified": "2020-10-15T22:23:11.878Z",
-    "contributors": ["RainSlide"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-25T18:16:55.949Z",
