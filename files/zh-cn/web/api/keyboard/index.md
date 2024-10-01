@@ -2,7 +2,7 @@
 title: Keyboard
 slug: Web/API/Keyboard
 l10n:
-  sourceCommit: 722a5edf794b8fb7a379cdf79729fd913b0b264f
+  sourceCommit: d2dfabf734bc4dbba589eae6f40227b9b2068adc
 ---
 
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}{{securecontext_header}}
