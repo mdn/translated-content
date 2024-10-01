@@ -2536,8 +2536,8 @@
 /ja/docs/Tools/Working_with_iframes	https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html
 /ja/docs/Tools/about:debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
 /ja/docs/Transforming_XML_with_XSLT	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
-/ja/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
-/ja/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
+/ja/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
+/ja/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /ja/docs/Tutorials/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Upcoming_Firefox_features_for_developers	/ja/docs/Mozilla/Firefox/Releases/4
@@ -4702,6 +4702,7 @@
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Resources	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
+/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example	/ja/docs/Web/API/XSLTProcessor
@@ -4893,7 +4894,7 @@
 /ja/docs/XSLT/Transforming_XML_with_XSLT/An_Overview	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 /ja/docs/XSLT/Transforming_XML_with_XSLT/For_Further_Reading	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /ja/docs/XSLT/Transforming_XML_with_XSLT/Resources	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
-/ja/docs/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
+/ja/docs/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
 /ja/docs/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT/value-of	/ja/docs/Web/XSLT/Element/value-of
 /ja/docs/XSLT:Elements	/ja/docs/Web/XSLT/Element
