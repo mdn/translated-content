@@ -24,7 +24,7 @@ _还从其父接口 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
   - : 返回一个 {{jsxref('Promise')}}，兑现 {{domxref('KeyboardLayoutMap')}} 实例，该实例是一个类 map 对象，具有检索与特定物理键关联的字符串的功能。
 - {{domxref('Keyboard.lock()')}} {{experimental_inline}}
-  - : 启用对物理键盘上任意或所有按键的按键捕获后返回 {{jsxref('Promise')}}。
+  - : 返回一个 {{jsxref('Promise')}}，在启用对物理键盘上任意或所有按键的按键捕获后兑现。
 - {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
   - : 解锁 `lock()` 方法捕获的所有键并同步返回。
 
