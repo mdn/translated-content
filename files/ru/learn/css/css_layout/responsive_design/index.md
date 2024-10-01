@@ -220,9 +220,9 @@ h1 {
 
 Такой подход к типографике показывает, что вам не нужно ограничиваться в использовании медиавыражений только изменением макета страницы. Они могут быть использоваться для настройки любого элемента, чтобы сделать его более удобным или привлекательным при других размерах экрана.
 
-### Using viewport units for responsive typography
+### Использование единиц области просмотра для отзывчивой типографики
 
-An interesting approach is to use the viewport unit `vw` to enable responsive typography. `1vw` is equal to one percent of the viewport width, meaning that if you set your font size using `vw`, it will always relate to the size of the viewport.
+Интересным подходом является использование блока просмотра `vw` для обеспечения отзывчивой типографики. `1vw` равен одному проценту от ширины области просмотра, то есть если вы зададите размер шрифта с помощью `vw`, он всегда будет соответствовать размеру области просмотра.
 
 ```css
 h1 {
@@ -230,9 +230,9 @@ h1 {
 }
 ```
 
-The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
+Проблема в том, что пользователь теряет возможность масштабировать любой текст, заданный с помощью единицы `vw`, поскольку этот текст всегда связан с размером области просмотра. **Поэтому никогда не следует задавать текст, используя только единицы области просмотра**.
 
-There is a solution, and it involves using [`calc()`](/ru/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+Решение есть, и оно заключается в использовании [`calc()`](/ru/docs/Web/CSS/calc). Если вы добавите блок `vw` к значению, заданному с помощью фиксированного размера, например `em` или `rem`, то текст все равно будет масштабироваться. По сути, блок `vw` добавляется поверх этого масштабируемого значения:
 
 ```css
 h1 {
@@ -240,44 +240,43 @@ h1 {
 }
 ```
 
-This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.
+Это означает, что нам нужно только один раз указать размер шрифта для заголовка, а не настраивать его для мобильных устройств и переопределять в медиазапросах. Шрифт постепенно увеличивается по мере увеличения размера области просмотра.
 
-> [!NOTE]
-> See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> [!NOTE] Посмотрите на пример этого в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
 
-## The viewport meta tag
+## Мета-тег viewport
 
-If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the `<head>` of the document.
+Если вы посмотрите на HTML-источник отзывчивой страницы, то обычно увидите следующий тег {{htmlelement("meta")}} в `<head>` документа.
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+Этот метатег сообщает мобильным браузерам, что они должны установить ширину области просмотра, соответствующую ширине устройства, и масштабировать документ до 100% от его предполагаемого размера, что позволит отобразить документ в оптимизированном для мобильных устройств размере, который вы задумали.
 
-Why is this needed? Because mobile browsers tend to lie about their viewport width.
+Почему это необходимо? Потому что мобильные браузеры склонны обманывать относительно ширины области просмотра.
 
-This meta tag exists because when the original iPhone launched and people started to view websites on a small phone screen, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 960 pixels, render the page at that width, and show the result as a zoomed-out version of the desktop layout. Other mobile browsers (e.g. on Google Android) did the same thing. Users could zoom in and pan around the website to view the bits they were interested in, but it looked bad. You will still see this today if you have the misfortune to come across a site that does not have a responsive design.
+Этот метатег существует потому, что когда появился iPhone и люди начали просматривать сайты на маленьком экране телефона, большинство сайтов не были оптимизированы для мобильных устройств. Поэтому мобильный браузер устанавливал ширину области просмотра в 960 пикселей, рендерил страницу с такой шириной и показывал результат в виде уменьшенной версии макета для настольных компьютеров. Другие мобильные браузеры (например, на Google Android) делали то же самое. Пользователи могли увеличивать и панорамировать веб-сайт, чтобы просмотреть интересующие их фрагменты, но выглядело это плохо. Такое можно наблюдать и сегодня, если вы имеете несчастье наткнуться на сайт, не имеющий отзывчивого дизайна.
 
-The trouble is that your responsive design with breakpoints and media queries won't work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, and the viewport is set at 960px, you'll never see your narrow screen layout on mobile. By setting `width=device-width` you are overriding Apple's default `width=960px` with the actual width of the device, so your media queries will work as intended.
+Проблема в том, что ваш отзывчивый дизайн с точками разрыва и медиазапросами не будет работать так, как задумано, на мобильных браузерах. Если у вас узкоэкранный макет, который срабатывает при ширине области просмотра 480px или меньше, а область просмотра установлена на 960px, вы никогда не увидите свой узкоэкранный макет на мобильных устройствах. Задавая `width=device-width`, вы заменяете стандартное значение Apple `width=960px` на фактическую ширину устройства, поэтому ваши медиа-запросы будут работать так, как нужно.
 
-**So you should _always_ include the above line of HTML in the head of your documents.**
+**Так что вы должны _всегда_ включать приведенную выше строку HTML в шапку ваших документов.**.
 
-There are other settings you can use with the viewport meta tag, however in general the above line is what you will want to use.
+Существуют и другие настройки, которые можно использовать в мета-теге viewport, однако в целом вам подойдет приведенная выше строка.
 
-- `initial-scale`: Sets the initial zoom of the page, which we set to 1.
-- `height`: Sets a specific height for the viewport.
-- `minimum-scale`: Sets the minimum zoom level.
-- `maximum-scale`: Sets the maximum zoom level.
-- `user-scalable`: Prevents zooming if set to `no`.
+- `initial-scale`: Устанавливает начальный масштаб страницы, который мы задаем равным 1.
+- `height`: Устанавливает определенную высоту для области просмотра.
+- `minimum-scale`: Устанавливает минимальный уровень масштабирования.
+- `maximum-scale`: Устанавливает максимальный уровень масштабирования.
+- `user-scalable`: Предотвращает масштабирование, если установлено значение `no`.
 
-You should avoid using `minimum-scale`, `maximum-scale`, and in particular setting `user-scalable` to `no`. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.
+Вам следует избегать использования `minimum-scale`, `maximum-scale` и, в особенности, установки `user-scalable` в `no`. Пользователи должны иметь возможность изменять масштаб так сильно или так мало, как им нужно; предотвращение этого приводит к проблемам с доступностью.
 
-## Summary
+## Подытожим
 
-Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is now essentially just how we build websites by default. Consider the sites that you visit on your phone — it is probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.
+Отзывчивый дизайн - это дизайн сайта или приложения, который реагирует на среду, в которой его просматривают. Он включает в себя ряд функций и техник CSS и HTML и теперь по сути является тем, как мы создаем сайты по умолчанию. Подумайте о сайтах, которые вы посещаете на своем телефоне - вероятно, довольно редко можно встретить сайт, который представляет собой уменьшенную версию для настольных компьютеров или где вам нужно прокручивать страницу вбок, чтобы найти что-то. Это происходит потому, что веб перешел на такой подход к разработке отзывчивого дизайна.
 
-It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
+Кроме того, стало гораздо проще создавать отзывчивые дизайны с помощью методов верстки, которые вы изучили в этих уроках. Если вы новичок в веб-разработке, то сегодня в вашем распоряжении гораздо больше инструментов, чем в первые дни создания отзывчивого дизайна. Поэтому стоит проверить возраст всех материалов, на которые вы ссылаетесь. Хотя исторические статьи по-прежнему полезны, современное использование CSS и HTML значительно упрощает создание элегантных и полезных дизайнов, независимо от того, с какого устройства посетитель просматривает сайт.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
