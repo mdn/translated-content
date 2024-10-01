@@ -2,7 +2,7 @@
 title: 发布你的网站
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 l10n:
-   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
+  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
