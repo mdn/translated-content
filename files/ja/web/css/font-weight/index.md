@@ -148,7 +148,7 @@ font-weight: unset;
 
 `100` から `900` の数値は、おおよそ以下の太さ名に対応します ([OpenType 仕様書](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)を参照してください)。
 
-| 値  | 太さ名                                                                                                                            |
+| 値  | 太さ名                                                                                                                             |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | 100 | Thin (Hairline)                                                                                                                    |
 | 200 | Extra Light (Ultra Light)                                                                                                          |
