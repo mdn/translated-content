@@ -129,7 +129,7 @@ alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传
 可以试着为图像编写一些更好的 alt 文本。
 
 > [!NOTE]
-> 更多信息请参阅 [无障碍学习模块](/zh-CN/docs/learn/Accessibility)。
+> 更多信息请参阅[无障碍学习模块](/zh-CN/docs/learn/Accessibility)。
 
 ## 标记文本
 
