@@ -1738,7 +1738,7 @@
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
-/es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
+/es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/Window/createImageBitmap
 /es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/Window/fetch
 /es/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/es/docs/Web/API/Window/indexedDB
 /es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/Window/isSecureContext
@@ -1767,6 +1767,7 @@
 /es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeEnd_static
 /es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
 /es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
+/es/docs/Web/API/createImageBitmap	/es/docs/Web/API/Window/createImageBitmap
 /es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
@@ -2199,13 +2200,17 @@
 /es/docs/Web/HTML/microformatos	/es/docs/Web/HTML/microformats
 /es/docs/Web/HTML/Índice	/es/docs/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
+/es/docs/Web/HTTP/Basics_of_HTTP	/es/docs/conflicting/Web/HTTP
 /es/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/URI/Schemes/data
 /es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/es/docs/Web/URI/Schemes/data
 /es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/URI/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP	/es/docs/Web/HTTP/Evolution_of_HTTP
 /es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/es/docs/Web/HTTP/MIME_types
+/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/es/docs/Web/HTTP/MIME_types/Common_types
+/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /es/docs/Web/HTTP/Peticiones_condicionales	/es/docs/Web/HTTP/Conditional_requests
 /es/docs/Web/HTTP/Sesión	/es/docs/Web/HTTP/Session

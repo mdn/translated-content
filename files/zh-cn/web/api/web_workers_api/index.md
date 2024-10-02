@@ -42,7 +42,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
@@ -56,7 +56,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 以下函数**仅**对 worker 可用：
 
 - {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有 worker）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}}（仅限专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}（仅限专用 worker）
 
 ### 支持的 Web API
 
