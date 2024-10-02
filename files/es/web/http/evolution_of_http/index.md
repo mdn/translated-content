@@ -1,6 +1,7 @@
 ---
 title: Evolución del protocolo HTTP
-slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+slug: Web/HTTP/Evolution_of_HTTP
+original_slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 
 {{HTTPSidebar}}
