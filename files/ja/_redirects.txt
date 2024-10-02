@@ -4146,7 +4146,7 @@
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes
-/ja/docs/Web/HTTP/Basics_of_HTTP	/ja/docs/conflicting/Web/HTTP
+/ja/docs/Web/HTTP/Basics_of_HTTP	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/ja/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ja/docs/Web/URI/Schemes/data
 /ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/ja/docs/Web/URI/Schemes/data
@@ -4197,7 +4197,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/sync-xhr	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/web-share	/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share
-/ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
