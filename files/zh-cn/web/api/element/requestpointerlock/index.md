@@ -24,7 +24,7 @@ requestPointerLock(options)
 ### 参数
 
 - `options` {{optional_inline}}
-  - : 选项对象可以包含以下属性：
+  - : 选项对象，可以包含以下属性：
     - `unadjustedMovement` {{optional_inline}}
       - : 禁用操作系统级别的鼠标加速调整，而是访问原始鼠标输入。默认值为 `false`；将其设置为 `true` 将禁用鼠标加速。
 
@@ -68,8 +68,8 @@ canvas.addEventListener("click", async () => {
 
 更多示例代码请参见：
 
-- [指针锁定演示](https://mdn.github.io/dom-examples/pointer-lock/)（[查看源代码](https://github.com/mdn/dom-examples/tree/main/pointer-lock))
-- {{domxref("Pointer Lock API", "Pointer Lock API", "", "nocode")}}
+- [指针锁定演示](https://mdn.github.io/dom-examples/pointer-lock/)（[查看源代码](https://github.com/mdn/dom-examples/tree/main/pointer-lock)）
+- {{domxref("Pointer Lock API", "指针锁定 API", "", "nocode")}}
 - [禁用鼠标加速以提供更好的 FPS 游戏体验](https://web.dev/articles/disable-mouse-acceleration)
 
 ## 规范

@@ -40,4 +40,4 @@ exitPointerLock()
 
 - {{ domxref("Document.pointerLockElement") }}
 - {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/zh-CN/docs/Web/API/Pointer_Lock_API)
+- [指针锁定](/zh-CN/docs/Web/API/Pointer_Lock_API)
