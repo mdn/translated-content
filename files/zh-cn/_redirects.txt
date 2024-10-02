@@ -2427,7 +2427,7 @@
 /zh-CN/docs/Web/HTML/动作	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/属性	/zh-CN/docs/Web/HTML/Attributes
 /zh-CN/docs/Web/HTTP/Access_control_CORS	/zh-CN/docs/Web/HTTP/CORS
-/zh-CN/docs/Web/HTTP/Basics_of_HTTP	/zh-CN/docs/conflicting/Web/HTTP
+/zh-CN/docs/Web/HTTP/Basics_of_HTTP	/zh-CN/docs/Web/HTTP
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-CN/docs/Web/URI/Schemes/data
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-CN/docs/Web/URI/Schemes/data
