@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("Keyboard")}} 接口的 **`getLayoutMap()`** 方法返回一个 {{jsxref('Promise')}}，该实例兑现一个 {{domxref('KeyboardLayoutMap')}} 实例，该实例是一个类 map 的对象，具有检索与特定物理键关联的字符串的功能。
+{{domxref("Keyboard")}} 接口的 **`getLayoutMap()`** 方法返回一个 {{jsxref('Promise')}}，兑现一个 {{domxref('KeyboardLayoutMap')}} 实例，该实例是一个类 map 的对象，具有检索与特定物理键关联的字符串的功能。
 
 ## 语法
 
