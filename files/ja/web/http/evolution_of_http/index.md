@@ -1,6 +1,7 @@
 ---
 title: HTTP の進化
-slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+slug: Web/HTTP/Evolution_of_HTTP
+original_slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 l10n:
   sourceCommit: eb9eef29f1ccdaf1c8a464dbe4483c78f7a13b2a
 ---

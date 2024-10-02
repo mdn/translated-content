@@ -4146,11 +4146,15 @@
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes
+/ja/docs/Web/HTTP/Basics_of_HTTP	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/ja/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ja/docs/Web/URI/Schemes/data
 /ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/ja/docs/Web/URI/Schemes/data
+/ja/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP	/ja/docs/Web/HTTP/Evolution_of_HTTP
 /ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/ja/docs/Web/URI
-/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/ja/docs/Web/HTTP/MIME_types
+/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ja/docs/Web/HTTP/MIME_types/Common_types
+/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/ja/docs/Web/URI/Schemes/resource
 /ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy
 /ja/docs/Web/HTTP/Feature_Policy	/ja/docs/Web/HTTP/Permissions_Policy
@@ -4193,7 +4197,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/sync-xhr	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/web-share	/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share
-/ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
@@ -4201,7 +4205,7 @@
 /ja/docs/Web/HTTP/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
-/ja/docs/Web/HTTP/Resources_and_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+/ja/docs/Web/HTTP/Resources_and_URIs	/ja/docs/Web/HTTP/MIME_types
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
