@@ -1,6 +1,7 @@
 ---
 title: MIME 类型（IANA 媒体类型）
-slug: Web/HTTP/Basics_of_HTTP/MIME_types
+slug: Web/HTTP/MIME_types
+original_slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 
 {{HTTPSidebar}}

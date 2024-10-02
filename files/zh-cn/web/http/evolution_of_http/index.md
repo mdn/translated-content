@@ -1,6 +1,7 @@
 ---
 title: HTTP 的发展
-slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+slug: Web/HTTP/Evolution_of_HTTP
+original_slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 
 {{HTTPSidebar}}

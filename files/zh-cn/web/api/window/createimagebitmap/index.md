@@ -1,6 +1,7 @@
 ---
 title: self.createImageBitmap()
-slug: Web/API/createImageBitmap
+slug: Web/API/Window/createImageBitmap
+original_slug: Web/API/createImageBitmap
 ---
 
 {{APIRef("Canvas API")}}

@@ -1,6 +1,7 @@
 ---
 title: 常见 MIME 类型列表
-slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+slug: Web/HTTP/MIME_types/Common_types
+original_slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
 
 {{HTTPSidebar}}
