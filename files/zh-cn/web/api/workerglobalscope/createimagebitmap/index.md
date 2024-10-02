@@ -1,13 +1,13 @@
 ---
-title: Window：createImageBitmap() 方法
-slug: Web/API/Window/createImageBitmap
+title: WorkerGlobalScope：createImageBitmap() 方法
+slug: Web/API/WorkerGlobalScope/createImageBitmap
 l10n:
   sourceCommit: 58d79e9c2206e0a604cd4d7f6fba5181262af420
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers("worker")}}
 
-{{domxref("Window")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{domxref("Promise")}}。
+{{domxref("WorkerGlobalScope")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{domxref("Promise")}}。
 
 ## 语法
 
@@ -71,47 +71,7 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 
 ## 示例
 
-### 通过精灵表创建精灵
-
-此示例加载精灵表（sprite sheet），从中提取精灵，然后将每个精灵渲染到画布上。精灵表是包含多个较小图像（你希望能够单独渲染每个图像）的图像。
-
-```html hidden
-原图像：<img src="50x50.jpg" />
-<hr />
-<canvas id="myCanvas"></canvas>
-```
-
-```css hidden
-canvas {
-  border: 2px solid green;
-}
-```
-
-```js
-const canvas = document.getElementById("myCanvas"),
-  ctx = canvas.getContext("2d"),
-  image = new Image();
-
-// 等待精灵表加载完成
-image.onload = () => {
-  Promise.all([
-    // 从精灵表中裁剪出两个精灵
-    createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32),
-    createImageBitmap(image, 0, 0, 50, 50, { imageOrientation: "flipY" }),
-  ]).then((sprites) => {
-    // 将每个精灵绘制到画布上
-    ctx.drawImage(sprites[0], 0, 0);
-    ctx.drawImage(sprites[1], 32, 32);
-    ctx.drawImage(sprites[2], 64, 64);
-  });
-};
-
-// 从图像文件加载精灵表
-image.src = "50x50.jpg";
-```
-
-{{EmbedLiveSample("通过精灵表创建精灵", "100%", "250")}}
+参见 {{domxref("Window.createImageBitmap()")}} 以获取示例。
 
 ## 规范
 
@@ -123,6 +83,6 @@ image.src = "50x50.jpg";
 
 ## 参见
 
-- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("ImageData")}}
