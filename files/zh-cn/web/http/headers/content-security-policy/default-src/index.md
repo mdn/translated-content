@@ -1,11 +1,11 @@
 ---
-title: "CSP: default-src"
+title: CSP：default-src
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
 {{HTTPSidebar}}
 
-在 HTTP 协议中，{{HTTPHeader("Content-Security-Policy")}} (CSP) 首部字段中的 **`default-src`** 指令可以为其他 CSP 拉取指令（{{Glossary("fetch directive", "fetch directives")}}）提供备选项。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 default-src 指令的值。
+HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`default-src`** 指令可以为其他 CSP {{Glossary("fetch directive", "fetch 指令")}}提供回退。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 `default-src` 指令的值：
 
 - {{CSP("child-src")}}
 - {{CSP("connect-src")}}
@@ -19,9 +19,18 @@ slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 - {{CSP("style-src")}}
 - {{CSP("worker-src")}}
 
-| CSP 版本 | 1                               |
-| -------- | ------------------------------- |
-| 指令类型 | {{Glossary("Fetch directive")}} |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">CSP 版本</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">指令类型</th>
+      <td>{{Glossary("Fetch directive", "fetch 指令")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
@@ -40,17 +49,17 @@ Content-Security-Policy: default-src <source> <source>;
 
 ## 示例
 
-### `不继承 default-src 的情况`
+### 不继承 default-src 的情况
 
-假如设定了其他指令，那么 `default-src` 不会对它们起作用。这个首部
+假如设定了其他指令，那么 `default-src` 不会对它们起作用。这个标头：
 
-```bash
+```http
 Content-Security-Policy: default-src 'self'; script-src https://example.com
 ```
 
-与下列代码等价：
+与下面的等价：
 
-```bash
+```http
 Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';
