@@ -1,6 +1,7 @@
 ---
 title: HTTP の基本
-slug: Web/HTTP/Basics_of_HTTP
+slug: conflicting/Web/HTTP
+original_slug: Web/HTTP/Basics_of_HTTP
 ---
 
 {{HTTPSidebar}}
