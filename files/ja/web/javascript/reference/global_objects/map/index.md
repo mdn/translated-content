@@ -321,7 +321,7 @@ console.log(myMap.get(keyString)); // "'文字列' と結び付けられた値"
 console.log(myMap.get(keyObj)); // "keyObj と結び付けられた値"
 console.log(myMap.get(keyFunc)); // "keyFunc と結び付けられた値"
 
-console.log(myMap.get('文字列')); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
+console.log(myMap.get("文字列")); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
 console.log(myMap.get({})); // undefined, keyObj !== {} であるため
 console.log(myMap.get(function () {})); // undefined, keyFunc !== function () {} であるため
 ```
