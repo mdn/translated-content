@@ -71,7 +71,7 @@ My cat is very grumpy
 
 ### 空元素
 
-不包含任何内容的元素称为{{glossary("void element", "空元素")}}。比如 {{htmlelement("img")}} 元素：
+不包含任何内容的元素称为[**空元素**](/zh-CN/docs/Glossary/Void_element)。我们以 HTML 页面中已有的 {{htmlelement("img")}} 元素为例：
 
 ```html
 <img src="images/firefox-icon.png" alt="My test image" />
