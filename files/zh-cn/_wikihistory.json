@@ -15180,6 +15180,10 @@
     "modified": "2020-10-15T22:30:15.212Z",
     "contributors": ["Jee"]
   },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2019-03-18T20:44:01.174Z",
+    "contributors": ["fanerge", "varcat"]
+  },
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:26:03.129Z",
     "contributors": ["Fulgrim"]
@@ -16266,10 +16270,6 @@
   "Web/API/console/warn_static": {
     "modified": "2019-03-23T22:12:15.122Z",
     "contributors": ["pluwen", "choukin"]
-  },
-  "Web/API/createImageBitmap": {
-    "modified": "2019-03-18T20:44:01.174Z",
-    "contributors": ["fanerge", "varcat"]
   },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",
@@ -22375,61 +22375,6 @@
       "thomastao0215"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2020-05-07T23:19:31.676Z",
-    "contributors": [
-      "Filon",
-      "HardcorePhysician",
-      "Yayure",
-      "695919451",
-      "BobGreen",
-      "magiclyde",
-      "cissoid"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
-    "modified": "2020-02-20T03:41:08.272Z",
-    "contributors": [
-      "Babyfaceqian",
-      "XFJGitHub",
-      "lc-soft",
-      "BobGreen",
-      "enjolras1205",
-      "zihengCat",
-      "GuoShuai",
-      "Haruhi",
-      "huangchanghuan",
-      "keifergu",
-      "JsonLi",
-      "WeijieZhu"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2020-11-04T00:16:29.009Z",
-    "contributors": [
-      "lujjjh",
-      "andysongs",
-      "rascalquan",
-      "BobGreen",
-      "NewbieAndy",
-      "zhangchen",
-      "xgqfrms-GitHub",
-      "w11th",
-      "YuriTu"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-02-28T13:11:23.222Z",
-    "contributors": [
-      "chrisdavidmills",
-      "RainSlide",
-      "qq58553442",
-      "sam-dingkang",
-      "xgqfrms-GitHub",
-      "choury",
-      "pasturn"
-    ]
-  },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2019-03-23T22:26:23.825Z",
     "contributors": ["xgqfrms-GitHub", "konrumi", "Leogh", "jianyi1995"]
@@ -22653,6 +22598,23 @@
       "sintrb",
       "jdk137",
       "charlie"
+    ]
+  },
+  "Web/HTTP/Evolution_of_HTTP": {
+    "modified": "2020-02-20T03:41:08.272Z",
+    "contributors": [
+      "Babyfaceqian",
+      "XFJGitHub",
+      "lc-soft",
+      "BobGreen",
+      "enjolras1205",
+      "zihengCat",
+      "GuoShuai",
+      "Haruhi",
+      "huangchanghuan",
+      "keifergu",
+      "JsonLi",
+      "WeijieZhu"
     ]
   },
   "Web/HTTP/Headers": {
@@ -23228,6 +23190,32 @@
       "WayneCui",
       "oopsguy",
       "xgqfrms-GitHub"
+    ]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2020-11-04T00:16:29.009Z",
+    "contributors": [
+      "lujjjh",
+      "andysongs",
+      "rascalquan",
+      "BobGreen",
+      "NewbieAndy",
+      "zhangchen",
+      "xgqfrms-GitHub",
+      "w11th",
+      "YuriTu"
+    ]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2020-02-28T13:11:23.222Z",
+    "contributors": [
+      "chrisdavidmills",
+      "RainSlide",
+      "qq58553442",
+      "sam-dingkang",
+      "xgqfrms-GitHub",
+      "choury",
+      "pasturn"
     ]
   },
   "Web/HTTP/Messages": {
