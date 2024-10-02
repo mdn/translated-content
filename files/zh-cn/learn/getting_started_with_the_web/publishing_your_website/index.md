@@ -59,7 +59,7 @@ l10n:
 
 现在，让我们通过 GitHub Pages 向你演示发布网站是如此的简单。
 
-1. 首先， [注册一个 GitHub 账号，](https://github.com/) 并验证你的邮箱地址。
+1. 首先，[注册一个 GitHub 账号](https://github.com/)，并验证你的邮箱地址。
 2. 接下来，你需要[创建一个仓库](https://github.com/new)来存放文件。
 3. 在这个页面上，在 _Repository name_ 输入框里输入 _username_.github.io，username 是你的用户名。比如，我们的朋友 bobsmith 会输入 _bobsmith.github.io。
    同时勾选_ _Initialize this repository with a README_，然后点击 _Create repository_。![一个 GitHub 仓库页的示例](github-create-repo.png)
