@@ -84,4 +84,4 @@ canvas.addEventListener("click", async () => {
 
 - {{ domxref("Document.pointerLockElement") }}
 - {{ domxref("Document.exitPointerLock()") }}
-- [Pointer Lock](/zh-CN/docs/Web/API/Pointer_Lock_API)
+- [指针锁定](/zh-CN/docs/Web/API/Pointer_Lock_API)
