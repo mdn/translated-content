@@ -30288,14 +30288,6 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
-  "conflicting/Web/HTTP": {
-    "modified": "2019-11-23T23:17:48.338Z",
-    "contributors": ["mfuji09", "silverskyvicto", "cissoid"]
-  },
-  "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
-    "modified": "2020-08-12T12:42:41.854Z",
-    "contributors": ["mfuji09", "tamura4278"]
-  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",
     "contributors": [
