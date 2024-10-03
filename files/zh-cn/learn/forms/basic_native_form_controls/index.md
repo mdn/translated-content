@@ -141,7 +141,7 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 </fieldset>
 ```
 
-_以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。_
+_以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。_
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
