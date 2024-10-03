@@ -7,8 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/landmark_role
 
 랜드마크는 페이지의 중요한 하위 구획입니다. `landmark` 역할은 사용자가 직접 탐색하고자 할 만큼 중요한 콘텐츠 구획에 대한 aria 역할 값의 추상 상위 클래스입니다.
 
-> [!NOTE]
-> `landmark` 역할은 [추상 역할](/ko/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles)입니다. 문서의 완성도를 위해 여기에 포함되었습니다. 웹 작성자가 사용해서는 안 됩니다.
+> [!NOTE] > `landmark` 역할은 [추상 역할](/ko/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles)입니다. 문서의 완성도를 위해 여기에 포함되었습니다. 웹 작성자가 사용해서는 안 됩니다.
 
 ## 설명
 
