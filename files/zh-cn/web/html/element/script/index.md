@@ -115,7 +115,7 @@ slug: Web/HTML/Element/script
 
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
-      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)中。
+      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/MIME_types#textjavascript)中。
     - `module`
       - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
     - [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)

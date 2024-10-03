@@ -21,7 +21,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
