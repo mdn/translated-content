@@ -28,7 +28,7 @@ l10n:
 
 ### requestPointerLock()
 
-Pointer lock API 与 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) 类似，通过添加新方法 {{domxref("Element.requestPointerLock", "re​​questPointerLock()")}} 来扩展 DOM 元素。以下示例请求对 {{htmlelement("canvas")}} 元素进行指针锁定：
+指针锁定 API 与 [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 类似，通过添加新方法 {{domxref("Element.requestPointerLock", "re​​questPointerLock()")}} 来扩展 DOM 元素。以下示例请求对 {{htmlelement("canvas")}} 元素进行指针锁定：
 
 ```js
 canvas.addEventListener("click", async () => {
@@ -226,7 +226,7 @@ function updatePosition(e) {
 }
 ```
 
-`canvasDraw()` 函数在当前 `x` 和 `y` 位置绘制球：
+`canvasDraw()` 函数在当前 `x` 和 `y` 位置绘制圆：
 
 ```js
 function canvasDraw() {
