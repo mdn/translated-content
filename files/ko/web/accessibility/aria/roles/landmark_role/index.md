@@ -1,8 +1,6 @@
 ---
 title: "ARIA: landmark 역할"
 slug: Web/Accessibility/ARIA/Roles/landmark_role
-page-type: aria-role
-spec-urls: https://w3c.github.io/aria/#landmark
 ---
 
 {{AccessibilitySidebar}}
