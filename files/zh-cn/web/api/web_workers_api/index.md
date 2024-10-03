@@ -42,21 +42,21 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**对 worker 可用：
 
 - {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有 worker）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}}（仅限专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}（仅限专用 worker）
 
 ### 支持的 Web API
 

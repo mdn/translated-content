@@ -542,7 +542,7 @@ Promise 回调（.then）
 
 你可能遇到如下情况：你的一些 Promise 和任务（例如事件或回调）会以不可预测的顺序启动。此时，你或许可以通过使用微任务检查状态或平衡 Promise，并以此有条件地创建 Promise。
 
-如果你认为微任务可能会帮助你解决问题，那么请阅读[微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，学习如何用 [`queueMicrotask()`](/zh-CN/docs/Web/API/queueMicrotask) 来将一个函数作为微任务添加到队列中。
+如果你认为微任务可能会帮助你解决问题，那么请阅读[微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，学习如何用 {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} 来将一个函数作为微任务添加到队列中。
 
 ## 参见
 

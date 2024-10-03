@@ -295,7 +295,7 @@ La comportement de la récursion en tant que pile peut être observée avec cet 
 function truc(i) {
   if (i < 0) return;
   console.log("début :" + i);
-  toto(i - 1);
+  truc(i - 1);
   console.log("fin :" + i);
 }
 truc(3);

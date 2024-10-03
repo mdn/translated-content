@@ -1,13 +1,14 @@
 ---
-title: setInterval()
+title: setInterval() グローバル関数
+short-title: setInterval()
 slug: Web/API/setInterval
 l10n:
-  sourceCommit: c8485a8f94319d289a8892fd261d2fe38b623aa0
+  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-**`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("Worker")}} メソッドで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。
+**`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("WorkerGlobalScope")}} インターフェイスで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。
 
 このメソッド、インターバルを一意に識別するインターバル ID を返します。よって {{domxref("clearInterval", "clearInterval()")}} を呼び出して、後でインターバルを削除できます。
 
@@ -19,9 +20,9 @@ setInterval(code, delay)
 
 setInterval(func)
 setInterval(func, delay)
-setInterval(func, delay, arg0)
-setInterval(func, delay, arg0, arg1)
-setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
+setInterval(func, delay, arg1)
+setInterval(func, delay, arg1, arg2)
+setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ```
 
 ### 引数
@@ -29,20 +30,24 @@ setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 - `func`
   - : `delay` ミリ秒が経過するたびに実行する{{jsxref("function", "関数")}}です。最初の実行は `delay` ミリ秒後に行われます。
 - `code`
-  - : 関数の代わりに文字列を含める構文も許容されており、 `delay` ミリ秒が経過するたびに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
+  - : 関数の代わりに文字列を含める構文も許容されており、 `delay` ミリ秒が経過するたびに文字列をコンパイルして実行します。
+    この構文は**推奨しません**。{{jsxref("Global_Objects/eval", "eval()")}} の使用にセキュリティ上のリスクがあるのと同じ理由です。
 - `delay` {{optional_inline}}
-  - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。引数が 10 より小さい場合は、10 を使用します。実際の遅延が長くなることがあります。例えば[遅延の制約](#遅延の制約)をご覧ください。
-- `arg0, …, argN` {{optional_inline}}
+  - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。指定されなかった場合の既定値は 0 です。
+    `delay` 値で許される範囲についての詳細は、[遅延の制約](#遅延の制約)をご覧ください。
+- `arg1`, …, `argN` {{optional_inline}}
   - : タイマーが満了したときに、 _func_ で指定した関数に渡す追加の引数です。
 
 ### 返値
 
 返値 `intervalID` は 0 ではない正の整数値で、 `setInterval()` を呼び出して作成したタイマーを識別します。この値を {{domxref("clearInterval()")}} へ渡せば、インターバルを取り消すことができます。
 
-`setInterval()` と {{domxref("setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
+`setInterval()` と {{domxref("setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。
+ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
 > [!NOTE]
-> 引数 `delay` は、符号付き 32 ビット整数に変換されます。 IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
+> 引数 `delay` は、符号付き 32 ビット整数に変換されます。
+> IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
 
 ## 例
 
@@ -122,7 +127,8 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 ## "this" 問題
 
-`setInterval()` に（もっと言うと他のどんな関数でも）メソッドを渡すと、間違った [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値で呼び出されることがあります。この問題は [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this#オブジェクトのメソッドとして)で詳しく説明しています。
+`setInterval()` に（もっと言うと他のどんな関数でも）メソッドを渡すと、間違った [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値で呼び出されることがあります。
+この問題は [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this#コールバック)で詳しく説明しています。
 
 ### 解説
 
@@ -139,10 +145,11 @@ myArray.myMethod(); // "zero,one,two" と表示
 myArray.myMethod(1); // "one" と表示
 setTimeout(myArray.myMethod, 1000); // "[object Window]" と 1 秒後に表示
 setTimeout(myArray.myMethod, 1500, "1"); // "undefined" と 1.5 秒後に表示
-// passing the 'this' object with .call won't work
+
+// Passing the 'this' object with .call won't work
 // because this will change the value of this inside setTimeout itself
-// while we want to change the value of this inside myArray.myMethod
-// in fact, it will be an error because setTimeout code expects this to be the window object:
+// while we want to change the value of this inside myArray.myMethod.
+// In fact, it will be an error because setTimeout code expects this to be the window object:
 setTimeout.call(myArray, myArray.myMethod, 2000); // エラー: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 同じエラー
 ```
@@ -196,7 +203,7 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 ## 関連情報
 
 - [core-js にある `setInterval` のポリフィルで、コールバックに引数を渡すことができるもの](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("setTimeout()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("window.requestAnimationFrame()")}}
