@@ -80,7 +80,8 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 }
 ```
 
-> **Note :** WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> [!NOTE]
+> WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
 Si vous voulez savoir **si _une page externe_ a changé,** veuillez lire [ce paragraphe à propos de l'API `XMLHttpRequest()`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date).
 

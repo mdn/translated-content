@@ -100,7 +100,8 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 ![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **참고:** 크롬과 같은 어떤 브라우저는 자동으로 잘못된 인코딩을 고치기 때문에, 어떤 브라우저를 사용하는가에 따라 이 문제를 겪지 않을 수도 있습니다. 그래도 다른 브라우저에서 있을 잠재적인 문제를 피하기 위하여 인코딩을 `utf-8` 으로 설정해야 합니다.
+> [!NOTE]
+> 크롬과 같은 어떤 브라우저는 자동으로 잘못된 인코딩을 고치기 때문에, 어떤 브라우저를 사용하는가에 따라 이 문제를 겪지 않을 수도 있습니다. 그래도 다른 브라우저에서 있을 잠재적인 문제를 피하기 위하여 인코딩을 `utf-8` 으로 설정해야 합니다.
 
 ### 능동적 학습: character 인코딩 실험
 
@@ -157,9 +158,11 @@ started with developing web sites and applications." />
 
    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
-> **참고:** Google에서는 메인 MDN 홈페이지 링크 아래에 MDN의 몇 가지 관련 서브 페이지가 표시된다. 이를 사이트 링크라고하며 Google의 웹 마스터 도구에서 구성 할 수 있다. 그리고 이는 Google 검색 엔진에서 사이트의 검색 결과를 개선하는 방법이다.
+> [!NOTE]
+> Google에서는 메인 MDN 홈페이지 링크 아래에 MDN의 몇 가지 관련 서브 페이지가 표시된다. 이를 사이트 링크라고하며 Google의 웹 마스터 도구에서 구성 할 수 있다. 그리고 이는 Google 검색 엔진에서 사이트의 검색 결과를 개선하는 방법이다.
 
-> **참고:** 많은 `<meta>` 기능들이 더이상 사용되지 않는다. (예를들어 `<meta name="keywords" content="fill, in, your, keywords, here">` 같은, 다른 검색 용어에 대해 해당 페이지의 관련성을 부여하기 위해 검색 엔진에 제공하던 키워드 등..) 스팸 발송자들이 키워드 목록에 수백 개의 키워드를 채워버리는 악용 사례가 생겨 버렸기 때문에 이것들은 검색 엔진들이 아예 무시를 해버리게 되었다.
+> [!NOTE]
+> 많은 `<meta>` 기능들이 더이상 사용되지 않는다. (예를들어 `<meta name="keywords" content="fill, in, your, keywords, here">` 같은, 다른 검색 용어에 대해 해당 페이지의 관련성을 부여하기 위해 검색 엔진에 제공하던 키워드 등..) 스팸 발송자들이 키워드 목록에 수백 개의 키워드를 채워버리는 악용 사례가 생겨 버렸기 때문에 이것들은 검색 엔진들이 아예 무시를 해버리게 되었다.
 
 ### Other types of metadata
 
@@ -269,7 +272,8 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 - JavaScript가 빈 목록을 페이지에 추가했다. 이제 목록의 아무 곳이나 클릭하면 새 목록 항목에 대한 텍스트를 입력하라는 대화 상자가 나타난다. OK 버튼을 누르면 새로운 목록 아이템이 추가된다. 기존에 있던 목록의 아이템을 클릭하면 해당 아이템의 텍스트를 변경 할 수 있는 대화 상자가 나타난다.
 - CSS에 의해 배경이 녹색으로 변하고 텍스트가 커진다. 그리고 javaScript가 페이지에 추가 한 일부 스타일도 적용된다(검은색 테두리가 있는 빨간색 공간).
 
-> **참고:** CSS나 JS를 적용하는데서 부터 애를 먹고 있으면 [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) 페이지를 참고하기를 추천한다.
+> [!NOTE]
+> CSS나 JS를 적용하는데서 부터 애를 먹고 있으면 [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) 페이지를 참고하기를 추천한다.
 
 ## 문서의 기본 언어 설정
 

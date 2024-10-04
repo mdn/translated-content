@@ -2,7 +2,7 @@
 title: Document：pictureInPictureElement 属性
 slug: Web/API/Document/pictureInPictureElement
 l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+  sourceCommit: 20e15ad6027f10c7bdd48f36776876cd1aa3a63c
 ---
 
 {{APIRef("Picture-in-Picture API")}}
@@ -13,7 +13,9 @@ l10n:
 
 ## 值
 
-对于当前处在画中画模式 {{domxref("Element")}} 对象的引用；如果 `document` 在当前并未使用画中画模式，则返回值是 `null`。
+对当前处于画中画模式的 {{domxref("Element")}} 对象的引用。
+
+如果文档没有处于画中画模式的相关元素，则返回 `null`。例如，没有画中画元素，或者画中画元素来自 iframe 中。
 
 ## 示例
 

@@ -1,8 +1,9 @@
 ---
-title: Request.json()
+title: "Request: json() メソッド"
+short-title: json()
 slug: Web/API/Request/json
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
 {{APIRef("Fetch API")}}
@@ -37,7 +38,7 @@ const request = new Request("/myEndpoint", {
 });
 
 request.json().then((data) => {
-  // do something with the data sent in the request
+  // リクエストで送信されたデータに対して何らかの処理をする
 });
 ```
 

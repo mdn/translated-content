@@ -225,11 +225,11 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 布局类型现在是一个可枚举的对象而不是字符串：
 
-```
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。

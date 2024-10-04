@@ -28,7 +28,7 @@ var gettingWindow = browser.windows.getLastFocused(
     - `windowTypes`{{optional_inline}}
       - : Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec le type de fenêtre `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
-> **Note :**
+> [!NOTE]
 >
 > Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
@@ -63,7 +63,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >

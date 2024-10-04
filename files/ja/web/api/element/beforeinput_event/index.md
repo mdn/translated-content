@@ -34,7 +34,7 @@ _このインターフェイスには、親である {{DOMxRef("UIEvent")}} お�
 - {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
   - : 挿入された文字を文字列で返します。変更によって挿入されたテキストがない場合は、空文字列になることがあります（文字を削除した場合など）。
 - {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : 編集可能なコンテンツに追加またはされるリッチテキストまたはプレーンテキストデータに関する情報が入った {{DOMxRef("DataTransfer")}} オブジェクトを返します。
+  - : 編集可能なコンテンツに追加または削除されるリッチテキストまたはプレーンテキストデータに関する情報が入った {{DOMxRef("DataTransfer")}} オブジェクトを返します。
 - {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
   - : 編集可能なコンテンツの変更の種類、例えばテキストの挿入、削除、整形などを返します。入力型の完全なリストについては、プロパティページを参照してください。
 - {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}

@@ -1,11 +1,12 @@
 ---
 title: "ServiceWorkerGlobalScope: install イベント"
+short-title: install
 slug: Web/API/ServiceWorkerGlobalScope/install_event
 l10n:
-  sourceCommit: e910d1f446a8b3fa8c60c7cb34c272f4a13b3892
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`install`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration")}} が新しい {{domxref("ServiceWorkerRegistration.installing")}} ワーカーを取得したときに発行されます。
 
@@ -36,7 +37,7 @@ _固有のプロパティは実装していませんが、親である {{domxref
 以下のスニペットでは、`install`イベントハンドラーを使用して、キャッシュに多くのレスポンスを投入し、サービスワーカーがオフラインで資産を提供するために使用する方法を示しています。
 
 ```js
-this.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open("v1")
@@ -61,7 +62,7 @@ this.addEventListener("install", (event) => {
 また、 `oninstall` プロパティを使用して、イベントハンドラーを設定することもできます。
 
 ```js
-globalScope.oninstall = (event) => {
+self.oninstall = (event) => {
   // ...
 };
 ```

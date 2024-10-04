@@ -1,28 +1,60 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("HTML DOM")}}
 
-Page transition events fire when a webpage is being loaded or unloaded.
+**`PageTransitionEvent`** イベントオブジェクトは、文書が読み込まれるか、または終了する際に発行される [`pageshow`](/ja/docs/Web/API/Window/pageshow_event) および [`pagehide`](/ja/docs/Web/API/Window/pagehide_event) イベントのハンドラー内で使用できます。
 
-## DOM Information
+{{InheritanceDiagram}}
 
-### 継承関係
+## コンストラクター
 
-EventPageTransitionEvent
+- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
+  - : 新しい `PageTransitionEvent` オブジェクトを生成します。
 
-## メンバ
+## インスタンスプロパティ
 
-**PageTransitionEvent** オブジェクトは、以下のメンバを持ちます：
+_このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- Properties
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
+  - : キャッシュから読み込んでいる文書であるかどうかを示します。
 
-### 属性
+## 例
 
-**PageTransitionEvent** オブジェクトには以下の属性があります。
+### HTML
 
-| 属性名        | アクセス  | 説明                                                     |
-| ------------- | --------- | -------------------------------------------------------- |
-| **persisted** | Read-only | Web ページがキャッシュからロードされたかどうかを示す属性 |
+```html
+<!doctype html>
+<html lang="ja">
+  <body></body>
+</html>
+```
+
+### JavaScript
+
+```js
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    alert("このページはブラウザーがキャッシュしたものです");
+  } else {
+    alert("このページはブラウザーがキャッシュしたものではありません");
+  }
+});
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [`pageshow`](/ja/docs/Web/API/Window/pageshow_event) イベント
+- [`pagehide`](/ja/docs/Web/API/Window/pagehide_event) イベント

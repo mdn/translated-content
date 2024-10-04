@@ -22,7 +22,7 @@ l10n:
 
 ## 例
 
-以下の例は記事 [Insertable streams for MediaStreamTrack](https://developer.chrome.com/articles/mediastreamtrack-insertable-media-processing/) に載っているもので、ビデオストリーム内のバーコードをハイライトするバーコードスキャナーアプリケーションのデモを行います。これは、{{domxref("MediaStreamTrackProcessor.readable")}} 経由でアクセスしているストリームを変換します。
+以下の例は記事 [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing) に載っているもので、ビデオストリーム内のバーコードをハイライトするバーコードスキャナーアプリケーションのデモを行います。これは、{{domxref("MediaStreamTrackProcessor.readable")}} 経由でアクセスしているストリームを変換します。
 
 ```js
 const stream = await getUserMedia({ video: true });

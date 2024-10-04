@@ -44,21 +44,21 @@ _{{DOMxRef("Document")}} 인터페이스는 full-screen mode가 지원되고 사
 _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode와 window mode간에 변경하는 과정에서 오류가 발생하는 것을 감지하는데 사용할 수 있는 두 가지 이벤트를 정의합니다. 이러한 이벤트에 대한 이벤트 핸들러는 {{DOMxRef("Document")}} 와{{DOMxRef("Element")}} 인터페이스 에서 사용할 수 있습니다._
 
 > [!NOTE]
-> 이러한 이벤트 핸들러 속성(property)은 HTML 컨텐트 속성(attribute)으로 사용할 수 없습니다. 즉, HTML 컨텐트에서 {{Event("fullscreenchange")}} 및 {{Event("fullscreenerror")}} 이벤트를 지정할 수 없습니다. JavaScript 코드로 추가해야만 합니다.
+> 이러한 이벤트 핸들러 속성(property)은 HTML 컨텐트 속성(attribute)으로 사용할 수 없습니다. 즉, HTML 컨텐트에서 {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 및 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 이벤트를 지정할 수 없습니다. JavaScript 코드로 추가해야만 합니다.
 
 #### Event handlers on documents
 
 - {{DOMxRef("Document.onfullscreenchange")}}
-  - : 문서(document)가 full-screen mode로 전환되거나 full-screen mode를 종료할 때 {{DOMxRef("Document")}}로 보내지는 {{Event("fullscreenchange")}} 이벤트에 대한 이벤트 핸들러 입니다. 이 핸들러는 오직 전체 문서가 full-screen mode로 표시될 때만 호출됩니다.
+  - : 문서(document)가 full-screen mode로 전환되거나 full-screen mode를 종료할 때 {{DOMxRef("Document")}}로 보내지는 {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 이벤트에 대한 이벤트 핸들러 입니다. 이 핸들러는 오직 전체 문서가 full-screen mode로 표시될 때만 호출됩니다.
 - {{DOMxRef("Document.onfullscreenerror")}}
-  - : 전체 문서에 대해 full-screen mode를 사용하거나, 사용하지 않도록 설정하는 동안 오류가 발생하면, {{DOMxRef("Document")}}로 보내지는 {{Event("fullscreenerror")}} 이벤트의 이벤트 핸들러입니다.
+  - : 전체 문서에 대해 full-screen mode를 사용하거나, 사용하지 않도록 설정하는 동안 오류가 발생하면, {{DOMxRef("Document")}}로 보내지는 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 이벤트의 이벤트 핸들러입니다.
 
 #### Event handlers on elements
 
 - {{DOMxRef("Element.onfullscreenchange")}}
-  - : {{Event("fullscreenchange")}} 이벤트가 요소(element)로 전송되면, 요소가 full-screen mode로 배치되거나 제거되었음을 나타내는 이벤트 핸들러입니다.
+  - : {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 이벤트가 요소(element)로 전송되면, 요소가 full-screen mode로 배치되거나 제거되었음을 나타내는 이벤트 핸들러입니다.
 - {{DOMxRef("Element.onfullscreenerror")}}
-  - : full-screen mode 를 사용하거나, 사용하지 않도록 설정하는 동안 오류가 발생하면 요소로 보내지는 {{Event("fullscreenerror")}} 이벤트의 이벤트 핸들러입니다.
+  - : full-screen mode 를 사용하거나, 사용하지 않도록 설정하는 동안 오류가 발생하면 요소로 보내지는 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 이벤트의 이벤트 핸들러입니다.
 
 ### Obsolete properties
 
@@ -71,9 +71,9 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 
 _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode와 window mode간에 변경하는 과정에서 오류가 발생하는 것을 감지하는데 사용할 수 있는 두 가지 이벤트를 정의합니다._
 
-- {{Event("fullscreenchange")}}
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
   - : full-screen mode를 사용하거나, 사용하지 않도록 전환할 때 {{DOMxRef("Document")}} 혹은{{DOMxRef("Element")}} 로 보냅니다.
-- {{Event("fullscreenerror")}}
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : full-screen mode를 사용하거나, 사용하지 않도록 전환하려고 시도하는 중에 오류가 발생하면 `Document` 또는 `Element` 로 보냅니다.
 
 ## Dictionaries

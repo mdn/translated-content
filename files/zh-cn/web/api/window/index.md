@@ -175,7 +175,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 关闭当前窗口。
 - {{domxref("Window.confirm()")}}
   - : 显示一个带有用户需要回应的信息对话框。
-- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
   - : 接受各种不同的图像源，并返回一个 {{jsxref("Promise")}}，经兑现可得到 {{domxref("ImageBitmap")}}。可以选择将图片源裁剪成以 _(sx, sy)_ 为起点的像素矩形，宽度为 sw，高度为 sh。
 - {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
   - : 用于触发事件。

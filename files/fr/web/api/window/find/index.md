@@ -5,7 +5,8 @@ slug: Web/API/Window/find
 
 {{ApiRef}}{{Non-standard_Header}}
 
-> **Note :** La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir [bug Firefox 672395](https://bugzil.la/672395).
+> [!NOTE]
+> La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir [bug Firefox 672395](https://bugzil.la/672395).
 
 La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 

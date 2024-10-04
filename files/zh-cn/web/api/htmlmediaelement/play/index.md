@@ -1,5 +1,5 @@
 ---
-title: play()
+title: HTMLMediaElement：play() 方法
 slug: Web/API/HTMLMediaElement/play
 ---
 
@@ -9,8 +9,8 @@ slug: Web/API/HTMLMediaElement/play
 
 ## 语法
 
-```
-let promise = HTMLMediaElement.play();
+```js-nolint
+play()
 ```
 
 ### 参数
@@ -49,7 +49,7 @@ let promise = HTMLMediaElement.play();
 
 这个例子展示了如何确认播放已经开始以及如何优雅地处理自动播放被禁止：
 
-```
+```js
 let videoElem = document.getElementById("video");
 let playButton = document.getElementById("playbutton");
 
@@ -60,7 +60,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }

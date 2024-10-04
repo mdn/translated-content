@@ -10,13 +10,7 @@ slug: Web/API/Attr/localName
 > [!NOTE]
 > 在之前的 DOM 规范中此 API 被定义在 {{domxref("Node")}} 接口中。
 
-## 语法
-
-```
-name = attribute.localName
-```
-
-### 返回值
+## 值
 
 属性的限定名称的本名 {{domxref("DOMString")}} 。
 

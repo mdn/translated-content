@@ -51,7 +51,7 @@ slug: Mozilla/Firefox/Releases/82
 ### WebDriver conformance (Marionette)
 
 - より現実的なユーザーナビゲーションをシミュレートするため、サポートされるすべてのナビゲーションコマンドを親プロセスに移動しました ([Firefox バグ 1612831](https://bugzil.la/1612831))。
-- WebDriver 仕様書との適合性を向上させるため、すべてのコマンドで現在またはトップレベルのブラウジングコンテキストの確認を更新しました ([Firefox バグ 1493108](https://bugzil.la/1493108))。
+- WebDriver 仕様書との適合性を向上させるため、すべてのコマンドで現在またはトップレベルの閲覧コンテキストの確認を更新しました ([Firefox バグ 1493108](https://bugzil.la/1493108))。
 - `WebDriver:ElementClick` で、click イベントが実際に合成される前にコマンドが返る場合がある不具合を修正しました ([Firefox バグ 1394354](https://bugzil.la/1394354))。
 
 ## アドオン開発者向けの変更点

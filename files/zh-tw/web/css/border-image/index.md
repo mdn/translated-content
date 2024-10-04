@@ -14,9 +14,25 @@ CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓
 
 ## 語法
 
-```
-none |
-  [ <圖片> [ <數字> | <百分比> ]{1,4} [/ <邊框寬度>{1,4}]? ] && [ stretch | repeat | round ]{0,2}
+```css
+/* source | slice */
+border-image: linear-gradient(red, blue) 27;
+
+/* source | slice | repeat */
+border-image: url("/images/border.png") 27 space;
+
+/* source | slice | width */
+border-image: linear-gradient(red, blue) 27 / 35px;
+
+/* source | slice | width | outset | repeat */
+border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
+
+/* 全域值 */
+border-image: inherit;
+border-image: initial;
+border-image: revert;
+border-image: revert-layer;
+border-image: unset;
 ```
 
 ## 取值
@@ -64,18 +80,26 @@ none |
 
 \[這裡還需要一些活範例]
 
-```
-#header  { -moz-border-image: url(border.png) 27 27 27 27 round round; }
+```css
+#header {
+  -moz-border-image: url(border.png) 27 27 27 27 round round;
+}
 
-.button  { -moz-border-image: url(button.png) 0 5 0 5; }
+.button {
+  -moz-border-image: url(button.png) 0 5 0 5;
+}
 
-.example { -moz-border-image: url(example.jpg) 3 4 6 8 / 10px 12px 14px 22px; }
+.example {
+  -moz-border-image: url(example.jpg) 3 4 6 8 / 10px 12px 14px 22px;
+}
 ```
 
-```
+```css
 /* 鮮見例，在 Firefox 3.5 下看起來像是完全伸展的 background-image */
 
- div     { -moz-border-image: url(bgimage.png) 0; }
+div {
+  -moz-border-image: url(bgimage.png) 0;
+}
 ```
 
 ## 規範

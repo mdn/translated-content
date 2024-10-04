@@ -38,7 +38,7 @@ split(separator, limit)
 `separator` が空文字列 (`""`) の場合、`str` は UTF-16 の「文字」の配列に変換され、両端が空文字列になることはありません。
 
 > [!NOTE]
-> したがって、`"".split("")` は `separator` として文字列を渡されたときに空文字列の配列を生成する唯一の方法です。
+> したがって、`"".split("")` は `separator` として文字列を渡され、`limit` が `0` でないときに空の配列を生成する唯一の方法です。
 
 > [!WARNING]
 > 区切り文字として空文字列 (`""`) が用いられた場合、文字列はユーザが認識する文字（[書記素クラスタ](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）や Unicode 文字（コードポイント）ではなく、UTF-16 コード単位で分割されます。 これは[サロゲートペア](https://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。[StackOverflow の "How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402) を参照してください。

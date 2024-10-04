@@ -82,7 +82,7 @@ _変更なし。_
 ### WebDriver conformance (Marionette)
 
 - カレントページを PDF 文書として印刷する `WebDriver:Print` を追加しました ([Firefox バグ 1604506](https://bugzil.la/1604506))。
-- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されているブラウジングコンテキストではなく、常にトップレベルのブラウジングコンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
+- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されている閲覧コンテキストではなく、常にトップレベルの閲覧コンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
 - `Webdriver:TakeScreenshot` の `full` 引数を使用すると、ページ全体をキャプチャーします ([Firefox バグ 1571424](https://bugzil.la/1571424))。
 
 ## アドオン開発者向けの変更点

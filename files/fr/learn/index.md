@@ -32,7 +32,8 @@ Si vous débutez complètement, le développement web peut être un réel défi&
 - Les <i lang="en">frameworks</i> et l'outillage
   - : Lorsque vous aurez appris l'essentiel de HTML, CSS, et JavaScript, vous devriez étudier [les outils de développement web côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools) et éventuellement approfondir [les <i lang="en">frameworks</i> JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), ainsi que [la programmation web côté serveur](/fr/docs/Learn/Server-side).
 
-> **Note :** Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
+> [!NOTE]
+> Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
 
 ## Sujets abordés
 

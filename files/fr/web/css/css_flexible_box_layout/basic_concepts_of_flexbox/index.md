@@ -24,21 +24,21 @@ L'axe principal est défini par la propriété `flex-direction` qui peut prendre
 
 Si on choisit la valeur `row` ou `row-reverse`, l'axe principal sera aligné avec la direction « en ligne » (_inline_ direction) (c'est la direction logique qui suit le sens d'écriture du document).
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 Si on choisit la valeur `column` ou `column-reverse`, l'axe principal suivra la direction de bloc (_block direction_) et progressera le long de l'axe perpendiculaire au sens d'écriture.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### L'axe secondaire (_cross axis_)
 
 L'axe secondaire est perpendiculaire à l'axe principal. Ainsi, si `flex-direction` vaut `row` ou `row-reverse`, l'axe secondaire suivra l'axe des colonnes.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 Si l'axe principale est `column` ou `column-reverse`, l'axe secondaire suivra celui des lignes (horizontales).
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 Comprendre les liens entre les différents axes est crucial lorsqu'on commence à aligner/justifier des éléments flexibles sur un axe ou l'autre grâce aux fonctionnalités et propriétés des boîtes flexibles.
 
@@ -50,11 +50,11 @@ Nous verrons plus tard les détails des relations entre les spécifications des 
 
 Si `flex-direction` vaut `row` et que nous travaillons sur un document écrit en français, la ligne de début de l'axe principal sera située à gauche et la ligne de fin sera située à droite.
 
-![Working in English the start edge is on the left.](basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 Si on travaille sur un document écrit dans une langue arabe, la ligne de début de l'axe principal sera à droite et la ligne de fin à gauche.
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
 Dans les deux cas, la ligne de début de l'axe secondaire est située en haut et la ligne de fin de cet axe est située en bas car ces deux langues sont écrites horizontalement.
 
@@ -119,7 +119,7 @@ Avant de revenir à ces propriétés, il nous faut définir le concept d'**espac
 
 Prenons un conteneur de 500 pixels de large et qui contient trois éléments de 100 pixels de large. Il faut donc 300 pixels pour disposer ces éléments et il reste ainsi 200 pixels d'espace disponible. Si on ne modifie pas les valeurs initiales, l'espace disponible sera placé après le dernier élément.
 
-![This flex container has available space after laying out the items.](basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 Si on préfère que les éléments s'étirent pour occuper l'espace restant, il nous faut une méthode pour distribuer cet espace parmi les éléments. C'est le rôle des propriétés `flex-` qui s'appliquent aux éléments.
 
@@ -143,7 +143,8 @@ La propriété `flex-grow` permet de gérer la façon dont l'espace est ajouté 
 
 La taille minimale de l'élément sera prise en compte lors du rétrécissement. Cela signifie que `flex-shrink` peut être moins cohérent que `flex-grow` selon les cas aux limites. Nous verrons plus en détails comment cet algorithme fonctionne dans l'article Contrôler les proportions des éléments le long de l'axe principal.
 
-> **Note :** Les valeurs de `flex-grow` et `flex-shrink` sont des proportions. Autrement dit, si tous les éléments ont `flex: 1 1 200px` et qu'on souhaite qu'un d'eux grandissent deux fois plus, on utiliserait `flex: 2 1 200px` pour cet élément. Mais avoir `flex: 10 1 200px` d'une part et `flex: 20 1 200px` d'autre part fonctionnerait exactement de la même façon.
+> [!NOTE]
+> Les valeurs de `flex-grow` et `flex-shrink` sont des proportions. Autrement dit, si tous les éléments ont `flex: 1 1 200px` et qu'on souhaite qu'un d'eux grandissent deux fois plus, on utiliserait `flex: 2 1 200px` pour cet élément. Mais avoir `flex: 10 1 200px` d'une part et `flex: 20 1 200px` d'autre part fonctionnerait exactement de la même façon.
 
 ### La propriété raccourcie `flex` et les valeurs synthétiques
 

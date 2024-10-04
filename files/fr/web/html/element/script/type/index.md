@@ -22,7 +22,8 @@ La valeur de cet attribut indique le type de données représenté par le script
 - Toute autre valeur
   - : Le contenu embarqué est traité comme un bloc de données et ne sera pas traité par le navigateur. Afin d'indiquer des blocs de données, les développeuses et développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript. Tous les autres attributs seront ignorés, y compris l'attribut `src`.
 
-> **Note :** Dans les navigateurs antérieurs, le type identifiait le langage de script du code embarqué ou importé (à travers l'attribut `src`).
+> [!NOTE]
+> Dans les navigateurs antérieurs, le type identifiait le langage de script du code embarqué ou importé (à travers l'attribut `src`).
 
 ## Spécifications
 

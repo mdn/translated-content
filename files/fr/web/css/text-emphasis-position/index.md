@@ -83,7 +83,8 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
   </tbody>
 </table>
 
-> **Note :** La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
+> [!NOTE]
+> La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
 
 ## Syntaxe
 

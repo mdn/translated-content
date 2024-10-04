@@ -307,7 +307,7 @@ console.log("setTimeout 之后");
 
 会在控制台输出：
 
-```
+```plain
 setTimeout 之后
 foo 被调用
 ```
@@ -385,5 +385,6 @@ function clearMessage() {
 - [`core-js` 中允许向回调函数传递参数的 `setTimeout` 版本的 polyfill](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
 - {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("Window.requestAnimationFrame")}}
+- {{domxref("Window.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}

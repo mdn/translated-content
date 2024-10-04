@@ -11,12 +11,13 @@ slug: Web/HTML/Element/bdi
 
 Этот элемент полезен при встраивании текста с неизвестным направлением (например, из базы данных) внутрь текста с заданным направлением.
 
-> **Примечание:** Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
+> [!NOTE]
+> Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
 
 | [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                      | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                  |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                     |
+| Tag omission                                           | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
 | Permitted parent elements                              | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
 | DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                              |
 

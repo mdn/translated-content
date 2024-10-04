@@ -34,7 +34,8 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **Note :** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style).
+> [!NOTE]
+> Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style).
 
 ## Ensembles de règles CSS
 
@@ -48,7 +49,8 @@ Une règle CSS est visualisé dans le diagramme ci-dessous.
 
 Comme un élément de la page peut correspondre à plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée&nbsp;: c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-> **Note :** Même si on peut utiliser une règle utilisant un groupe de sélecteurs afin d'éviter de dupliquer une même règle pour chaque sélecteur distinct de ce groupe, cela n'a pas exactement le même effet. En effet, si on utilise un groupe de sélecteurs contenant un sélecteur invalide, c'est tout le groupe qui sera invalide et la règle sera ignoré. Si on utilise plusieurs règles pour chacun des sélecteurs individuels, seule celle du sélecteur invalide ne sera pas appliquée.
+> [!NOTE]
+> Même si on peut utiliser une règle utilisant un groupe de sélecteurs afin d'éviter de dupliquer une même règle pour chaque sélecteur distinct de ce groupe, cela n'a pas exactement le même effet. En effet, si on utilise un groupe de sélecteurs contenant un sélecteur invalide, c'est tout le groupe qui sera invalide et la règle sera ignoré. Si on utilise plusieurs règles pour chacun des sélecteurs individuels, seule celle du sélecteur invalide ne sera pas appliquée.
 
 ## Instructions CSS
 

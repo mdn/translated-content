@@ -9,10 +9,10 @@ slug: Web/API/WebGLRenderingContext/isEnabled
 
 默认的，除了 `gl.DITHER`，所有的功能项都是未启用的。
 
-## 句法
+## 语法
 
-```
-void gl.isEnabled(cap);
+```js-nolint
+isEnabled(cap)
 ```
 
 ### 参数

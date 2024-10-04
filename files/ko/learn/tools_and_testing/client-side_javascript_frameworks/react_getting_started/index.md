@@ -144,7 +144,7 @@ create-react-app은 실행되는 동안 터미널에 메시지들을 출력할 �
 
 이 과정이 완료되면 `moz-todo-react` 디렉토리 안으로 `cd`를 실행한 후 `npm start` 커맨드를 실행하세요. create-react-app에 의해 설치된 스크립트는 localhost:3000에서 실행되고 있는 로컬 서버에서 실행을 시작할 것입니다. 새로운 브라우저 탭을 열고 앱을 열면, 브라우저는 다음과 같이 무언가를 표시하고 있을 겁니다.
 
-![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](./default-create-react-app.png)
+![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](./default-vite.png)
 
 ### 애플리케이션 구조
 

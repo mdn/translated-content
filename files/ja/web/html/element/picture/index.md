@@ -55,7 +55,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

@@ -101,7 +101,7 @@ l10n:
 > [!NOTE]
 > 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう（[CSS 入門](/ja/docs/Learn/CSS/First_steps)は始めるのに良い場所です。 [スタイル設定された表](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)に関する具体的な記事もあります）。
 
-最終的な票は、次のようになるでしょう。
+最終的な表は、次のようになるでしょう。
 
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 

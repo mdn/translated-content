@@ -4,10 +4,6 @@ slug: Learn/JavaScript/Building_blocks/Event_bubbling
 original_slug: Web/API/Event/Comparison_of_Event_Targets
 ---
 
-{{ ApiRef() }}
-
-### Event targets
-
 Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.
 
 Существуют 5 целей для рассмотрения:
@@ -121,10 +117,6 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
   </tbody>
 </table>
 
-### Использование `explicitOriginalTarget` и `originalTarget`
-
-> **Note:** These properties are only available in Mozilla-based browsers.
-
 ### Примеры
 
 ```html
@@ -212,26 +204,4 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
     </script>
   </body>
 </html>
-```
-
-### Использование `target` и `relatedTarget`
-
-Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
-
-| Тип события | [event.target](/ru/docs/Web/API/Event/target) | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | --------------------------------------------- | ---------------------------------------------------------------- |
-| `mouseover` | EventTarget, в который входим указателем      | EventTarget, из которого выходим указателем                      |
-| `mouseout`  | EventTarget, из которого выходим указателем   | EventTarget, в который входим указателем                         |
-
-TODO: Также требуется описание событий `dragenter` и `dragexit`.
-
-#### Пример
-
-```xml
-<hbox id="outer">
-  <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
-        style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
-</hbox>
 ```

@@ -217,7 +217,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
   The second line.
   ```
 
-- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)：
+- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)：
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -608,7 +608,7 @@ print_r($_FILES);
 
 激活这些代码的语法很简单：
 
-```
+```js
 AJAXSubmit(myForm);
 ```
 

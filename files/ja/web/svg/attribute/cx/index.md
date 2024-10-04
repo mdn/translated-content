@@ -167,7 +167,7 @@ svg {
 
 {{EmbedLiveSample('radialGradient', 150, '100%')}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -115,7 +115,8 @@ flower.bloom();
 
 ### Funções vinculadas usadas como construtores
 
-> **Aviso:** Esta seção demonstra capacidades do JavaScript e documenta alguns casos de borda do método `bind()`. Os métodos mostrados abaixo não são os melhores jeitos de se fazer as coisas e provavelmente não deveriam ser usados em nenhum ambiente produtivo.
+> [!WARNING]
+> Esta seção demonstra capacidades do JavaScript e documenta alguns casos de borda do método `bind()`. Os métodos mostrados abaixo não são os melhores jeitos de se fazer as coisas e provavelmente não deveriam ser usados em nenhum ambiente produtivo.
 
 Funções vinculadas são automaticamente adequadas para uso com o operador {{jsxref("Operators/new", "new")}} para construir novas instâncias criadas pela função alvo. Quando uma função vinculada é usada para construir um valor, o `this` fornecido é ignorado. Porém, argumentos fornecidos ainda são prefixados à chamada do construtor:
 

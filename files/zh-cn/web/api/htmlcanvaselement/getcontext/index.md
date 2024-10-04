@@ -11,14 +11,14 @@ slug: Web/API/HTMLCanvasElement/getContext
 
 ## 语法
 
-```
-var ctx = canvas.getContext(contextType);
-var ctx = canvas.getContext(contextType, contextAttributes);
+```js-nolint
+getContext(contextType)
+getContext(contextType, contextAttributes)
 ```
 
 ### 参数
 
-- 上下文类型（contextType）
+- `contextType`
 
   - : 是一个指示使用何种上下文的 {{domxref("DOMString")}} 。可能的值是：
 
@@ -30,7 +30,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
     > [!NOTE]
     > 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/WebGL)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/WebGL) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
 
-- `上下文属性 (contextAttributes)`
+- `contextAttributes` {{optional_inline}}
 
   - : 你可以在创建渲染上下文的时候设置多个属性，例如：
 
@@ -71,7 +71,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
 
 如果 `contextType` 不是上述之一，返回{{jsxref("null")}}.
 
-## 例子
+## 示例
 
 定义 {{HTMLElement("canvas")}} 元素：
 

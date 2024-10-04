@@ -7,7 +7,8 @@ slug: Web/API/ShadowRoot/delegatesFocus
 
 **`delegatesFocus`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui renvoie un booléen indiquant si l'option `delegatesFocus` a été intialisée lors de l'attachement de la racine _shadow_ (cf. {{domxref("Element.attachShadow()")}}).
 
-> **Attention :** Cette fonctionnalité est expérimentale, non-standard et uniquement disponible dans Chrome.
+> [!WARNING]
+> Cette fonctionnalité est expérimentale, non-standard et uniquement disponible dans Chrome.
 
 ## Syntaxe
 

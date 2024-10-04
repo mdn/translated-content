@@ -454,7 +454,8 @@ Dans le prochain exemple, on renverse la disposition de la grille en travaillant
 
 La spécification pour les grilles CSS permet également d'ajouter des espaces (« gouttières ») entre les colonnes et entre les lignes grâce aux propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}. Celles-ci permettent de définir un espace, de la même façon que la propriété {{cssxref("column-gap")}} permet d'obtenir un espace pour un mode de disposition avec plusieurs colonnes.
 
-> **Note :** Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe `grid-` soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.
+> [!NOTE]
+> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe `grid-` soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.
 >
 > Les navigateurs actuels retirent progressivement ce préfixe (la version préfixée sera maintenue sous forme d'alias). À l'heure actuelle, certains navigateurs ne prennent pas encore la version sans préfixe et c'est pourquoi certains exemples de ce guide continuent d'utiliser les versions préfixées avec `grid-`.
 

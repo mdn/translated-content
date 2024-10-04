@@ -7,13 +7,15 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 Si vous avez déjà [compilé un module depuis un autre langage en utilisant des outils comme Emscripten](/fr/docs/WebAssembly/C_to_wasm), ou [chargé et éxecuté vous-même le code](/fr/docs/WebAssembly/Loading_and_running), l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.
 
-> **Note :** Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Concepts).
+> [!NOTE]
+> Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Concepts).
 
 ## Quelques exemples simples
 
 Parcourons quelques exemples illustrant l'utilisation de l'API Webassembly JavaScript, et en particulier la manière dont elle peut être utilisé pour charger un module wasm au sein d'une page web.
 
-> **Note :** Vous pouvez trouver des exemples de code dans notre repo GitHub [webassembly-examples](https://github.com/mdn/webassembly-examples).
+> [!NOTE]
+> Vous pouvez trouver des exemples de code dans notre repo GitHub [webassembly-examples](https://github.com/mdn/webassembly-examples).
 
 ### Préparation
 
@@ -138,7 +140,8 @@ Essayons de clarifier les affirmations ci-dessus à l'aide d'un exemple plus abo
 
 1. Faites une copie locale de `memory.wasm` dans le même dossier que précédement.
 
-   > **Note :** Vous pouvez trouver la représentation textuelle du module sur [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > [!NOTE]
+   > Vous pouvez trouver la représentation textuelle du module sur [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Retournez à votre fichier `memory.html`, et récupérez, compilez, et instancier votre module wasm comme précédement — Ajoutez à la fin de votre script les lignes suivantes:
 
@@ -190,7 +193,8 @@ Envisageons un exemple basique d'utilisation d'une table — un module WebAssemb
 
 1. Faites une copie locale de `table.wasm` dans un nouveau dossier.
 
-   > **Note :** vous pouvez voir une réprésentation textuelle du module sur [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+   > [!NOTE]
+   > Vous pouvez voir une réprésentation textuelle du module sur [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Créez une nouvelle copie du template [HTML](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) dans le même dossier et nommez le `table.html`.
 3. Comme précédement, récupérez, compilez, et instanciez le module wasm — ajoutez les lignes suivantes à l'intérieur d'un élement {{htmlelement("script")}} au bas du body html:

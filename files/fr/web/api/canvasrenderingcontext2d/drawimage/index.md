@@ -37,7 +37,7 @@ void ctx.drawImage(
   - : La coordonnée `y` dans le canvas de destination où placer le coin supérieur gauche de l'`image` source.
 - `dLargeur`
   - : La largeur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa largeur normale.
-- dHauteur
+- `dHauteur`
   - : La hauteur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa hauteur normale.
 - `sx`
   - : La coordonnée `x` du bord en haut à gauche de la partie de l'`image` source à dessiner dans le contexte du canvas.

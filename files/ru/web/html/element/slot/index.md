@@ -11,7 +11,7 @@ HTML-элемент **`<slot>`** является частью набора те
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
 | События                                                    | {{event("slotchange")}}                                                                                                                               |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                   |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                      |
 | Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                      |
 | Допустимые ARIA-роли                                       | Нет                                                                                                                                                   |
 | DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                                        |
@@ -69,7 +69,8 @@ HTML-элемент **`<slot>`** является частью набора те
 </template>
 ```
 
-> **Примечание:** вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
+> [!NOTE]
+> Вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
 
 ## Спецификации
 

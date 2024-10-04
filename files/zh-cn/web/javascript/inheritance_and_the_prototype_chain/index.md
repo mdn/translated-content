@@ -252,7 +252,7 @@ const regexp = new RegExp("abc");
 > [!WARNING]
 > 有一个常见的错误实践（misfeature）：扩展 `Object.prototype` 或其它内置原型。这种不良特性例子是，定义 `Array.prototype.myMethod = function () {...}`，然后在所有数组实例上使用 `myMethod`。
 >
-> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.com/blog/smooshgate/) 这样的事件，并且由于 JavaScript 致力于“不破坏 web”，因此这可能会对语言的发展造成极大的麻烦。
+> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.google.cn/blog/smooshgate) 这样的事件，并且由于 JavaScript 致力于“不破坏 web”，因此这可能会对语言的发展造成极大的麻烦。
 >
 > 扩展内置原型的**唯一**理由是向后移植新的 JavaScript 引擎的特性，比如 `Array.prototype.forEach`。
 
@@ -322,7 +322,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 让我们来仔细看看幕后发生了什么。
 
-如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
+如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
 
 ```js
 function doSomething() {}
@@ -337,7 +337,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 如上所示，`doSomething()` 有一个默认的 `prototype` 属性（正如控制台所示）。运行这段代码后，控制台应该显示一个类似于下面的对象。
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -365,7 +365,7 @@ console.log(doSomething.prototype);
 
 其结果为：
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -395,7 +395,7 @@ console.log(doSomeInstancing);
 
 这会产生类似于下面的输出：
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {

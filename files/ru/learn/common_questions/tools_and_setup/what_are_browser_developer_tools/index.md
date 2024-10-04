@@ -7,7 +7,8 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 Каждый современный интернет-браузер оснащён мощными инструментами для веб-разработчика. Эти инструменты позволяют делать различные вещи, от изучения загруженных в настоящий момент HTML, CSS и JavaScript до отображения в каких ресурсах нуждается страница и как долго она будет загружаться. Эта статья научит вас использовать базовые функции инструментов разработчика в вашем браузере.
 
-> **Примечание:** Прежде чем начать заниматься с примерами, откройте [пример сайта для начинающих](http://mdn.github.io/beginner-html-site-scripted/), с которым мы работали на [предыдущих занятиях](/en-US/Learn/Getting_started_with_the_web). Вам следует держать его открытым, чтобы выполнить описанные ниже действия.
+> [!NOTE]
+> Прежде чем начать заниматься с примерами, откройте [пример сайта для начинающих](http://mdn.github.io/beginner-html-site-scripted/), с которым мы работали на [предыдущих занятиях](/en-US/Learn/Getting_started_with_the_web). Вам следует держать его открытым, чтобы выполнить описанные ниже действия.
 
 ## Как открыть инструменты веб-разработчика в вашем браузере?
 
@@ -85,7 +86,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 - [Firefox Page inspector](/ru/docs/Tools/Page_Inspector)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
-- [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Inspector в Opera схож с Inspector в Chrome)
+- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/) (Inspector в Opera схож с Inspector в Chrome)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## Консоль JavaScript
@@ -140,5 +141,5 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 - [Firefox Web Console](/ru/docs/Tools/Web_Console)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
-- [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (Inpector в Opera схож с Inspector в Chrome)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/) (Inpector в Opera схож с Inspector в Chrome)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)

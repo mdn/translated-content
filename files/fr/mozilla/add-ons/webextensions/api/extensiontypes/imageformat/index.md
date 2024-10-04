@@ -17,7 +17,7 @@ Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"jpeg"`, 
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
 >

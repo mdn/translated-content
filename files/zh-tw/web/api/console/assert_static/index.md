@@ -91,5 +91,5 @@ console.assert(false, "the word is %s", "foo");
 
 - [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
+- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools#assertions)

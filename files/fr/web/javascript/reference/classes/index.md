@@ -56,7 +56,8 @@ let Rectangle = class Rectangle {
 };
 ```
 
-> **Note :** Les mêmes règles s'appliquent aux expressions de classes en ce qui concerne la remontée (_hoisting_) des classes (cf. le paragraphe précédent sur les remontées des déclarations de classe).
+> [!NOTE]
+> Les mêmes règles s'appliquent aux expressions de classes en ce qui concerne la remontée (_hoisting_) des classes (cf. le paragraphe précédent sur les remontées des déclarations de classe).
 
 ## Corps d'une classe et définition des méthodes
 
@@ -192,7 +193,8 @@ Rectangle.prototype.largeurProto = 25;
 
 {{SeeCompatTable}}
 
-> **Attention :** Les déclarations de champs publics et privés sont une [fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript](https://github.com/tc39/proposal-class-fields). Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que [Babel](https://babeljs.io/).
+> [!WARNING]
+> Les déclarations de champs publics et privés sont une [fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript](https://github.com/tc39/proposal-class-fields). Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que [Babel](https://babeljs.io/).
 
 #### Déclarations de champs publics
 
@@ -230,7 +232,8 @@ class Rectangle {
 
 Si on utilise les champs privés hors de la classe, cela génèrera une erreur. Ces champs ne peuvent être lus ou modifiés que depuis le corps de la classe. En évitant d'exposer des éléments à l'extérieur, on s'assure que les portions de code qui consomment cette classe n'utilise pas ses détails internes et on peut alors maintenir la classe dans son ensemble et modifier les détails internes si besoin.
 
-> **Note :** Les champs privés doivent nécessairement être déclarés en premier dans les déclarations de champ.
+> [!NOTE]
+> Les champs privés doivent nécessairement être déclarés en premier dans les déclarations de champ.
 
 Il n'est pas possible de créer des champs privés _a posteriori_ au moment où on leur affecterait une valeur. Autrement dit, il est possible de déclarer une variable normale au moment voulu lorsqu'on lui affecte une valeur tandis que pour les champs privés, ces derniers doivent être déclarés (éventuellement initialisés) en amont, au début du corps de la classe.
 
