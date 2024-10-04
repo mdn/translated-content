@@ -43,7 +43,6 @@ accent-color: unset;
 ### 값
 
 - `auto`
-  - : Represents a UA-chosen color, which should match the accent color of the platform, if any.
   - : 플랫폼의 강조 색상과 일치하는 사용자 에이전트가 선택한 색상을 나타냅니다.
 - {{cssxref("&lt;color&gt;")}}
   - : 강조 색상으로 사용되는 색상을 특정합니다.
