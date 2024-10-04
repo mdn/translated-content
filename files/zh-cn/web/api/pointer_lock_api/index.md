@@ -24,11 +24,11 @@ l10n:
 
 ## 方法/属性概述
 
-本章节对与指针锁定规范相关的每个属性和方法进行了简要说明。
+本小节对与指针锁定规范相关的每个属性和方法进行了简要说明。
 
 ### requestPointerLock()
 
-指针锁定 API 与 [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 类似，通过添加新方法 {{domxref("Element.requestPointerLock", "re​​questPointerLock()")}} 来扩展 DOM 元素。以下示例请求对 {{htmlelement("canvas")}} 元素进行指针锁定：
+指针锁定 API 与[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 类似，通过添加新方法 {{domxref("Element.requestPointerLock", "re​​questPointerLock()")}} 来扩展 DOM 元素。以下示例请求对 {{htmlelement("canvas")}} 元素进行指针锁定：
 
 ```js
 canvas.addEventListener("click", async () => {
@@ -53,7 +53,7 @@ canvas.addEventListener("click", async () => {
 
 ## 处理 requestPointerLock() 的 promise 版本和非 promise 版本
 
-上述代码片段在不支持基于承诺的 `requestPointerLock()` 版本或 `unadjustedMovement` 选项的浏览器中仍可正常工作——允许在不返回 promise 的函数前面使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 运算符，并且选项对象将在不支持的浏览器中被忽略。
+上述代码片段在不支持基于 promise 的 `requestPointerLock()` 版本或 `unadjustedMovement` 选项的浏览器中仍可正常工作——允许在不返回 promise 的函数前面使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 运算符，并且选项对象将在不支持的浏览器中被忽略。
 
 但是，这可能会造成混淆，并且有其他潜在的副作用（例如，尝试使用 `requestPointerLock().then()` 会在不支持的浏览器中引发错误），因此你可能需要使用以下代码明确处理此问题：
 
@@ -81,7 +81,7 @@ function requestPointerLockWithUnadjustedMovement() {
 
 ### pointerLockElement 和 exitPointerLock()
 
-Pointer lock API 还扩展了 {{domxref("Document")}} 接口，添加了一个新属性和一个新方法：
+指针锁定 API 还扩展了 {{domxref("Document")}} 接口，添加了一个新属性和一个新方法：
 
 - {{domxref("Document.pointerLockElement","pointerLockElement")}} 用于访问当前锁定的元素（如果有）。
 - {{domxref("Document.exitPointerLock","exitPointerLock()")}} 用于退出指针锁定。
@@ -215,7 +215,7 @@ function updatePosition(e) {
   if (y < -RADIUS) {
     y = canvas.height + RADIUS;
   }
-  tracker.textContent = `X 坐标：${x}, Y 坐标：${y}`;
+  tracker.textContent = `X 坐标：${x}，Y 坐标：${y}`;
 
   if (!animation) {
     animation = requestAnimationFrame(() => {
