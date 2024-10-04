@@ -33,7 +33,7 @@ My cat is very grumpy
 
 这个元素的主要部分有：
 
-1. **开始标签**（Opening tag）：包含元素的名称（本例为 p），及包围名称的**大于号**、**小于号**。这表示元素从这里开始或者开始起作用——在本例中即段落由此开始。
+1. **开始标签**（Opening tag）：包含元素的名称（本例为 p），及一对包围名称的**尖括号**。这表示元素从这里开始或者开始起作用——在本例中即段落由此开始。
 2. **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个*正斜杠*。这表示元素到这里结束——在本例中即段落在此结束。初学者常常会犯忘记添加结束标签的错误，这可能会产生一些奇怪的结果。
 3. **内容**（Content）：元素的内容，本例中就是所输入的文本本身。
 4. **元素**（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。
@@ -48,7 +48,7 @@ My cat is very grumpy
 
 1. 属性与元素名称（或上一个属性，如果元素有超过一个属性的话）之间的一个空格。
 2. 属性名，后接一个等号。
-3. 引号包围的属性值。
+3. 一对引号包围的属性值。
 
 > [!NOTE]
 > 不包含 {{Glossary("ASCII")}} 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
@@ -61,7 +61,7 @@ My cat is very grumpy
 <p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
-必须保证元素嵌套次序正确：本例首先使用 {{htmlelement("p")}} 标签，然后是 {{htmlelement("strong")}} 标签，因此要先结束 {{htmlelement("strong")}} 标签，最后再结束 {{htmlelement("p")}} 标签。这样是不对的：
+必须保证元素的嵌套次序正确：在上面的例子中，首先使用 {{htmlelement("p")}} 标签，然后是 {{htmlelement("strong")}} 标签，因此要先结束 {{htmlelement("strong")}} 标签，最后再结束 {{htmlelement("p")}} 标签。这样是不对的：
 
 ```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
@@ -81,7 +81,7 @@ My cat is very grumpy
 
 ### HTML 文档详解
 
-以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)文章中创建的 `index.html` 示例：
+以上把 HTML 元素作为个体进行介绍，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)文章中创建的 `index.html` 示例：
 
 ```html
 <!doctype html>
@@ -100,8 +100,8 @@ My cat is very grumpy
 这里有：
 
 - `<!doctype html>`——[文档类型](/zh-CN/docs/Glossary/Doctype)。这是必不可少的开头。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，这个元素用来关联 HTML 编写规范，以供自动查错等功能所用。而在当今，它作用有限，可以说仅用于保证文档正常读取。现在知道这些就足够了。
-- `<html></html>`——{{htmlelement("html")}} 元素。该元素包含整个页面的所有内容，有时候也称作根元素。里面也包含了 `lang` 属性，写明了页面的主要语种。
-- `<head></head>`——{{htmlelement("head")}} 元素。所有那些你加到页面中，且*不*向用户展示的页面内容，都以这个元素为容器。其中包含诸如提供给搜索引擎的{{Glossary("keyword", "关键字")}}和页面描述、用于设置页面样式的 CSS、字符集声明等等。
+- `<html></html>`——{{htmlelement("html")}} 元素。该元素包含整个页面的所有内容，有时候也称作根元素。它还包含 `lang` 属性，设置页面的主要语种。
+- `<head></head>`——{{htmlelement("head")}} 元素。该元素作为想在 HTML 页面中包含但不想向用户显示的内容的容器。包括想在搜索结果中显示的{{Glossary("keyword", "关键字")}}和页面描述、用于设置页面样式的 CSS、字符集声明等等。
 - `<meta charset="utf-8">`——该元素指明你的文档使用 UTF-8 字符编码，UTF-8 包括世界绝大多数书写语言的字符。它基本上可以处理任何文本内容。以它为编码还可以避免以后出现某些问题，没有理由再选用其他编码。
 - `<meta name="viewport" content="width=device-width">`——[视口元素](/zh-CN/docs/Web/CSS/Viewport_concepts#移动设备的视口)可以确保页面以视口宽度进行渲染，避免移动端浏览器以比视口更宽的宽度渲染内容，导致内容缩小。
 - `<title></title>`——{{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
@@ -124,7 +124,7 @@ My cat is very grumpy
 
 ![图片内容为文字“测试图片”](alt-text-example.png)
 
-alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传递图像要表达的意思。用 "测试图片" 来描述 Firefox 标志并不合适，修改成“Firefox 标志：一只盘旋在地球上的火狐”就好多了。
+alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传递图像要表达的意思。用“测试图片”来描述 Firefox 标志并不合适，修改成“Firefox 标志：一只盘旋在地球上的火狐”就好多了。
 
 可以试着为图像编写一些更好的 alt 文本。
 
@@ -148,7 +148,7 @@ alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传
 ```
 
 > [!NOTE]
-> 在 HTML 中，`<!--` 和 `-->` 之间的任何内容都是 **HTML 注释**。浏览器在渲染代码时，会忽略掉注释。换句话说，注释在页面上不可见——仅停留在代码中。HTML 注释是你书写与代码和逻辑相关的有用信息的一种方式。
+> 在 HTML 中，`<!--` 和 `-->` 之间的任何内容都是 **HTML 注释**。浏览器在渲染代码时，会忽略掉注释。换句话说，注释在页面上不可见——仅停留在代码中。HTML 注释是你书写与代码有关的注解或逻辑的一种方式。
 
 可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
 
@@ -226,7 +226,7 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 如果网址开始部分省略了 `https://` 或者 `http://`（称作*协议*），可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
 
-> **备注：** `href` 这个名字可能一开始看起来有点令人费解，代表超文本引用（_**h**ypertext **ref**erence_）。
+> **备注：** `href` 这个名字可能一开始看起来有点令人费解。如果它很难记忆的话，记住它代表的是超文本引用（_**h**ypertext **ref**erence_）。
 
 现在就为页面添加一个链接吧。
 
@@ -238,6 +238,6 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/main/index.html)与你的文件进行比较。
 
-在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的[学习 HTML](/zh-CN/docs/Learn/HTML) 主题。
+在这里，我们只是介绍了一点点 HTML。想学习更多，访问我们的[学习 HTML](/zh-CN/docs/Learn/HTML) 主题。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
