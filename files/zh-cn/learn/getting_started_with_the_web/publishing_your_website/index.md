@@ -38,13 +38,13 @@ l10n:
 有一些工具能让你在线发布网站：
 
 - [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并将其储存在 [Git](https://git-scm.com/) 版本控制系统里。然后你可以在代码项目上进行协作，系统默认是开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码、使用你的代码、学习你的代码、改善你的代码。GitHub 有一个非常有用的特性叫 [GitHub Pages](https://pages.github.com/)，允许你发布网站。
-- [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
+- [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 Web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
 
 尽管这类工具通常是免费的，但你只能使用有限的功能。
 
 ### 使用像 CodePen 这样基于 Web 的集成开发环境
 
-有许多仿真一个网站开发环境的 web 应用，能够输入 HTML、CSS 和 JavaScript 代码然后像显示网页一样显示代码的结果——都在一个浏览器标签页中。一般来说，这些工具相对简单，对学习很有帮助，便于分享代码（例如，你想向其他办公室的同事分享技术或者寻求除错帮助），以及免费（基础特性免费）。它们在一个独一无二的网址显示你提交的网页。不过，功能有限并且这些应用程序通常不提供资源（如图像）的托管空间。
+有许多仿真一个网站开发环境的 Web 应用，能够输入 HTML、CSS 和 JavaScript 代码然后像显示网页一样显示代码的结果——都在一个浏览器标签页中。一般来说，这些工具相对简单，对学习很有帮助，便于分享代码（例如，你想向其他办公室的同事分享技术或者寻求除错帮助），以及免费（基础特性免费）。它们在一个独一无二的网址显示你提交的网页。不过，功能有限并且这些应用程序通常不提供资源（如图像）的托管空间。
 
 使用一下以下几种工具，看看你最喜欢哪一个：
 
@@ -77,7 +77,7 @@ l10n:
 
 ## 延展阅读
 
-- [什么是 web 服务器？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [什么是 Web 服务器？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - [什么是域名？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [在互联网上做一件事要花费多少？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)：Codeacademy 提供的一个很好的教程，它比本文更深入一些，还展示了一些其他技术。
