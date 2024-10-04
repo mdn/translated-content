@@ -9415,34 +9415,6 @@
       "DavidPeniafiel"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2020-04-20T02:59:31.392Z",
-    "contributors": [
-      "obed3113",
-      "sanxofon",
-      "Sergio_Gonzalez_Collado",
-      "cissoid"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
-    "modified": "2019-03-23T22:10:11.567Z",
-    "contributors": ["Sergio_Gonzalez_Collado", "ChrisMHM"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-11-18T08:03:54.325Z",
-    "contributors": [
-      "IsaacAaron",
-      "sanxofon",
-      "Sergio_Gonzalez_Collado",
-      "kevinmont",
-      "juanrarodriguez18",
-      "strattadb"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-02-28T13:10:45.613Z",
-    "contributors": ["chrisdavidmills", "sanxofon", "franklevel", "gabrielnoe"]
-  },
   "Web/HTTP/CORS": {
     "modified": "2020-08-10T16:23:20.546Z",
     "contributors": [
@@ -9520,6 +9492,10 @@
       "eortizromero",
       "omertafox"
     ]
+  },
+  "Web/HTTP/Evolution_of_HTTP": {
+    "modified": "2019-03-23T22:10:11.567Z",
+    "contributors": ["Sergio_Gonzalez_Collado", "ChrisMHM"]
   },
   "Web/HTTP/Headers": {
     "modified": "2019-12-10T13:29:15.931Z",
@@ -9718,6 +9694,21 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T21:59:06.897Z",
     "contributors": ["JulioMoreyra", "francinysalles", "tonialfaro"]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2019-11-18T08:03:54.325Z",
+    "contributors": [
+      "IsaacAaron",
+      "sanxofon",
+      "Sergio_Gonzalez_Collado",
+      "kevinmont",
+      "juanrarodriguez18",
+      "strattadb"
+    ]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2020-02-28T13:10:45.613Z",
+    "contributors": ["chrisdavidmills", "sanxofon", "franklevel", "gabrielnoe"]
   },
   "Web/HTTP/Messages": {
     "modified": "2019-11-12T11:40:26.816Z",
@@ -14286,6 +14277,15 @@
       "Jorolo",
       "Omnisilver",
       "Nukeador"
+    ]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2020-04-20T02:59:31.392Z",
+    "contributors": [
+      "obed3113",
+      "sanxofon",
+      "Sergio_Gonzalez_Collado",
+      "cissoid"
     ]
   },
   "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {

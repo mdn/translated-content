@@ -1,6 +1,7 @@
 ---
 title: MIME タイプ（IANA メディア種別）
-slug: Web/HTTP/Basics_of_HTTP/MIME_types
+slug: Web/HTTP/MIME_types
+original_slug: Web/HTTP/Basics_of_HTTP/MIME_types
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
