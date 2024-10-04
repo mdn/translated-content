@@ -1,11 +1,8 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
-page-type: web-api-overview
-browser-compat:
-  - api.SyncManager
-  - api.ServiceWorkerGlobalScope.sync_event
-spec-urls: https://wicg.github.io/background-sync/spec/
+l10n:
+  sourceCommit: 5d967cb199d722dde686522d0870608321bd3b06
 ---
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
