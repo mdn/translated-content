@@ -13,7 +13,7 @@ l10n:
 
 我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会提供相关链接（如果你对更多细节感兴趣，也请试着在你惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
 
-在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
+在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于[分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
 
 1980 年，Tim Berners-Lee（通常称之为 TimBL）写了一个叫 ENQUIRE 的笔记本程序，这个程序实现了不同节点之间链接的概念。听起来有点熟悉对吧？
 
