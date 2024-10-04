@@ -9,7 +9,7 @@ l10n:
 
 **`:nth-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。つまり `:nth-child()` セレクターは、親要素内のすべての兄弟要素同士の位置に従って子要素を選択します。
 
-  {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
 > [!NOTE]
 > `element:nth-child()` の構文では、子要素のカウントにはあらゆる要素タイプの兄弟子要素が含まれます。しかし、その位置の子要素について、要素がセレクターの他の部分と一致する場合のみ、一致するとみなされます。
