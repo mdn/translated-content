@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
 
-{{cssxref("::first-line")}} 의사 요소에 적용할 수 있는 한정적인 수의 CSS만이 `::placeholder` 와 그 선택자 규칙에 사용될 수 있습니다.
+{{cssxref("::first-line")}} 의사 요소에 적용할 수 있는 하위 집합의 CSS만이 `::placeholder` 와 그 선택자 규칙에 사용될 수 있습니다.
 
 > [!NOTE]
 > 많은 브라우저에서 플레이스홀더 텍스트의 외형은 반투명하거나 옅은 회색을 기본값으로 가집니다.
