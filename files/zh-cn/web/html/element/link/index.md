@@ -114,7 +114,7 @@ l10n:
             <p>CSS @font-face</p>
             <div class="notecard note">
               <p>
-                <strong>备注：</strong> 此值需要
+                <strong>备注：</strong>此值需要
                 <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
@@ -171,7 +171,7 @@ l10n:
       - : 会发起一个跨源请求（即包含 `Origin` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被污染并限制使用。
     - `use-credentials`
       - : 会发起一个带有认证信息（进行 cookie、X.509 证书和/或 HTTP 基本认证）的跨域请求（即包含 `Origin` HTTP 标头）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被*污染*并限制使用。
-        当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous**。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
+        当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous** 关键字。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
 
 - `disabled`
 
@@ -199,7 +199,7 @@ l10n:
 - `imagesrcset`
   - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性是[一种 sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `integrity`
-  - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码学哈希值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只能在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
+  - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码学哈希值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
 
   - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
@@ -227,7 +227,7 @@ l10n:
     > 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式可以在一个文件中存储多个图标尺寸。ICO 具有更好的浏览器支持，因此如果需要跨浏览器支持，应使用这种格式。
 
 - `title`
-  - : 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet"> `时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
 - `type`
   - : 这个属性被用于定义链接的内容的类型。这个属性的值应该是类似于 **text/html**、**text/css** 这样的 MIME 类型。该属性的通常用法是定义被引用的样式表类型（如 **text/css**），但由于 CSS 是网络上使用的唯一样式表语言，因此不仅可以省略 `type` 属性，而且现在已成为推荐做法。它还用于 `rel="preload"` 链接类型，以确保浏览器只下载其支持的文件类型。
 
@@ -243,7 +243,7 @@ l10n:
   - : 该属性定义链接资源的字符编码。其值是以空格和/或逗号分隔的字符集列表，如 {{rfc(2045)}} 所定义。默认值为 `iso-8859-1`。
 
     > [!NOTE]
-    > 要产生与该废弃属性相同的效果，请在链接资源上使用 {{HTTPHeader("Content-Type")}} HTTP 标头。
+    > 要产生与该过时属性相同的效果，请在链接资源上使用 {{HTTPHeader("Content-Type")}} HTTP 标头。
 
 - `rev` {{Deprecated_Inline}}
 
@@ -300,7 +300,7 @@ l10n:
 <link rel="icon" href="/favicon.ico" />
 ```
 
-有关为苹果设备的图标选择什么 `sizes` 的信息，请参阅[苹果关于配置 Web 应用程序的文档](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)和引用的[苹果人机界面指南](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)。通常，提供一个大图像（如 192x192）并让浏览器根据需要缩小它就足够了，但你可能想为不同尺寸提供细节级别不同的图像，正如苹果设计指南建议的那样。为较低分辨率提供较小的图标也可以节省带宽。
+有关为苹果设备的图标选择什么尺寸（`sizes`）的信息，请参阅[苹果关于配置 Web 应用程序的文档](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)和引用的[苹果人机界面指南](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)。通常，提供一个大图像（如 192x192）并让浏览器根据需要缩小它就足够了，但你可能想为不同尺寸提供细节级别不同的图像，正如苹果设计指南建议的那样。为较低分辨率提供较小的图标也可以节省带宽。
 
 可能根本不需要提供 `<link>` 元素。例如，浏览器会自动从站点的根目录请求 `/favicon.ico`，苹果设备也会自动请求 `/apple-touch-icon-[size].png`、`/apple-touch-icon.png` 等。但是，提供明确的链接可以防止这些约定发生变化。
 
@@ -377,7 +377,8 @@ l10n:
     <tr>
       <th>允许的父元素</th>
       <td>
-        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a>属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。
+        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a>
+        属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。
       </td>
     </tr>
     <tr>
