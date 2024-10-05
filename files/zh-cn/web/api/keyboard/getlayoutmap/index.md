@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("Keyboard")}} 接口的 **`getLayoutMap()`** 方法返回一个 {{jsxref('Promise')}}，兑现一个 {{domxref('KeyboardLayoutMap')}} 实例，该实例是一个类 map 的对象，具有检索与特定物理键关联的字符串的功能。
+{{domxref("Keyboard")}} 接口的 **`getLayoutMap()`** 方法返回一个 {{jsxref('Promise')}}，其会兑现一个 {{domxref('KeyboardLayoutMap')}} 实例，该实例是一个类 map 的对象，具有检索与特定物理键关联的字符串的功能。
 
 ## 语法
 
@@ -21,7 +21,7 @@ getLayoutMap()
 
 ### 返回值
 
-一个 {{jsxref('Promise')}}，兑现一个 {{domxref('KeyboardLayoutMap')}} 实例。
+一个 {{jsxref('Promise')}}，其会兑现一个 {{domxref('KeyboardLayoutMap')}} 实例。
 
 ### 异常
 
@@ -36,7 +36,7 @@ getLayoutMap()
 const keyboard = navigator.keyboard;
 keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   const upKey = keyboardLayoutMap.get("KeyW");
-  window.alert(`Press ${upKey} to move up.`);
+  window.alert(`按下 ${upKey} 以向上移动。`);
 });
 ```
 
