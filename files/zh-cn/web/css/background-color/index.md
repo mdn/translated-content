@@ -51,9 +51,9 @@ background-color: unset;
 ### 值
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 背景色的统一颜色。它在指定的任何 {{cssxref("background-image")}} 后面渲染，尽管颜色仍然可以通过图像中任何透明度看到。
+  - : 背景色的统一颜色。它在指定的任何 {{cssxref("background-image")}} 后面渲染，尽管颜色仍然可以通过图像中任何透明的地方看到。
 
-## 无障碍考虑
+## 无障碍
 
 有一点很重要，要确保文本颜色与文本所在背景之间的对比度足够高，以便低视力的人群能够阅读页面内容。
 
@@ -175,4 +175,4 @@ td {
 
 - [多个背景的应用](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
-- 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}} 和 {{cssxref("print-color-adjust")}}
+- 其他颜色相关属性：{{cssxref("color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}} 和 {{cssxref("print-color-adjust")}}
