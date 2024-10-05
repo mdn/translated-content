@@ -15153,6 +15153,17 @@
     "modified": "2019-03-23T23:32:55.452Z",
     "contributors": ["teoli", "AshfaqHossain", "ziyunfei", "movinghorse"]
   },
+  "Web/API/Window/clearInterval": {
+    "modified": "2020-10-15T21:21:33.193Z",
+    "contributors": [
+      "RainCruise",
+      "RainSlide",
+      "luojia",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
+    ]
+  },
   "Web/API/Window/close": {
     "modified": "2020-10-15T21:06:33.538Z",
     "contributors": [
@@ -15726,6 +15737,26 @@
       "ziyunfei"
     ]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-11-25T18:16:55.949Z",
+    "contributors": [
+      "RayTang-hub",
+      "cellinlab",
+      "Jiangmenghao",
+      "TXYjing",
+      "Soul",
+      "fengbin",
+      "RainSlide",
+      "brandonhyc",
+      "xgqfrms-GitHub",
+      "shery",
+      "xgqfrms",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "sonicview"
+    ]
+  },
   "Web/API/Window/showModalDialog": {
     "modified": "2019-07-21T23:38:59.262Z",
     "contributors": ["fanyue", "SphinxKnight", "teoli", "ziyunfei", "c_king"]
@@ -16119,17 +16150,6 @@
     "modified": "2020-10-15T22:15:17.137Z",
     "contributors": ["CarmeloXue", "Sebastianz"]
   },
-  "Web/API/clearInterval": {
-    "modified": "2020-10-15T21:21:33.193Z",
-    "contributors": [
-      "RainCruise",
-      "RainSlide",
-      "luojia",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/clearTimeout": {
     "modified": "2020-06-09T04:49:33.480Z",
     "contributors": ["Humilitas", "zhangchen", "luojia", "paddingme"]
@@ -16282,26 +16302,6 @@
       "ZZES_REN",
       "xgqfrms-GitHub",
       "Hawkeyes_Wind"
-    ]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-11-25T18:16:55.949Z",
-    "contributors": [
-      "RayTang-hub",
-      "cellinlab",
-      "Jiangmenghao",
-      "TXYjing",
-      "Soul",
-      "fengbin",
-      "RainSlide",
-      "brandonhyc",
-      "xgqfrms-GitHub",
-      "shery",
-      "xgqfrms",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "sonicview"
     ]
   },
   "Web/API/setTimeout": {

@@ -1,6 +1,7 @@
 ---
 title: setInterval()
-slug: Web/API/setInterval
+slug: Web/API/Window/setInterval
+original_slug: Web/API/setInterval
 ---
 
 {{ApiRef("HTML DOM")}}
