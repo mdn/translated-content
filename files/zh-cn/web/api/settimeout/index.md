@@ -48,7 +48,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 使用 {{domxref("clearTimeout()")}} 取消超时。
 
-如果要重复调用某个函数（如每 _N_ 毫秒调用一次），考虑使用 {{domxref("setInterval()")}}。
+如果要重复调用某个函数（如每 _N_ 毫秒调用一次），考虑使用 {{domxref("Window.setInterval", "setInterval()")}}。
 
 ### 非数字延迟值被静默地强制转化为数字
 
@@ -383,8 +383,7 @@ function clearMessage() {
 ## 参见
 
 - [`core-js` 中允许向回调函数传递参数的 `setTimeout` 版本的 polyfill](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("clearTimeout")}}
-- {{domxref("setInterval()")}}
-- {{domxref("Window.requestAnimationFrame")}}
-- {{domxref("Window.queueMicrotask()")}}
-- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("Window.setInterval()")}} 和 {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("Window.queueMicrotask()")}} 和 {{domxref("WorkerGlobalScope.queueMicrotask()")}}

@@ -40,14 +40,14 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
 - {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
