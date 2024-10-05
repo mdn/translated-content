@@ -77,7 +77,7 @@ var personne = {
 };
 ```
 
-Après avoir sauvegardé et rafraîchit la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
+Après avoir sauvegardé et rafraîchi la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
 
 ```js
 personne.nom;
