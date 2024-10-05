@@ -1,33 +1,34 @@
 ---
-title: WindowTimers.clearInterval()
+title: Window：clearInterval() 方法
 slug: Web/API/Window/clearInterval
-original_slug: Web/API/clearInterval
+l10n:
+  sourceCommit: 1b45c29b1aefa5e128e901fb3b8b5c10750da232
 ---
 
 {{ApiRef("HTML DOM")}}
 
-`WindowOrWorkerGlobalScope` mixin 的 **`clearInterval()`** 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。
+{{domxref("Window")}} 接口的 **`clearInterval()`** 方法可取消先前通过调用 {{domxref("Window.setInterval", "setInterval()")}} 设置的重复定时任务。如果提供的参数未指定先前建立的操作，则此方法不执行任何动作。
 
 ## 语法
 
-```plain
-scope.clearInterval(intervalID)
+```js-nolint
+clearInterval(intervalID)
 ```
 
-### Parameters
+### 参数
 
 - `intervalID`
-  - : 要取消的定时器的 ID。是由 `setInterval()` 返回的。
+  - : 你要取消的重复操作的标识符。这个 ID 是由对应的 `setInterval()` 调用返回的。
 
-值得一提的是，{{domxref("setInterval()")}} 和 {{domxref("setTimeout()")}} 共用其定义的 IDs，即可以使用 `clearInterval()` 和 {{domxref("clearTimeout()")}} 中的任意一个。然而，为了使代码可读性更强，你应该尽量避免这种用法。
+值得一提的是，{{domxref("Window.setInterval", "setInterval()")}} 和 {{domxref("setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰起见，你应该尽量避免这种用法。
 
 ### 返回值
 
-{{jsxref("undefined")}}
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-查看 [`setInterval()` 的示例](/zh-CN/docs/DOM/window.setInterval#Example)。
+参见 {{domxref("Window.setInterval", "setInterval()")}} 以获取示例。
 
 ## 规范
 
@@ -39,9 +40,7 @@ scope.clearInterval(intervalID)
 
 ## 参见
 
-- [JavaScript 定时器](/zh-CN/docs/JavaScript/Timers)
-- {{domxref("setTimeout")}}
-- {{domxref("setInterval")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("Window.requestAnimationFrame")}}
-- [_Daemons_ management](/zh-CN/docs/JavaScript/Timers/Daemons)
+- {{domxref("clearTimeout()")}}
+- {{domxref("Window.setInterval()")}} 和 {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("Window.cancelAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
