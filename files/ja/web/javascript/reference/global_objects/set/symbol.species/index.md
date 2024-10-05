@@ -1,14 +1,13 @@
 ---
-title: Set[@@species]
+title: Set[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 l10n:
   sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
 ---
 
 {{JSRef}}
 
-**`Set[@@species]`** アクセサープロパティは、`Set` オブジェクトのコピー方法を指定する未使用のアクセッサープロパティです。
+**`Set[Symbol.species]`** 静的アクセサープロパティは、`Set` オブジェクトのコピー方法を指定する未使用のアクセサープロパティです。
 
 ## 構文
 
@@ -18,11 +17,11 @@ Set[Symbol.species]
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクター (`this`) の値です。この返値は、コピーされた `Set` インスタンスを生成するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、コピーされた `Set` インスタンスを生成するために使用されます。
 
 ## 解説
 
-`@@species` アクセサープロパティは、 `Set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
+`[Symbol.species]` アクセサープロパティは、 `Set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
 
 > [!NOTE]
 > このプロパティは現在、 `Set` のどのメソッドでも使用されていません。
@@ -31,7 +30,7 @@ Set[Symbol.species]
 
 ### 通常のオブジェクトの species
 
-`@@species` プロパティは、既定のコンストラクター関数、すなわち `Set` の `Set` コンストラクターを返します。
+`[Symbol.species]` プロパティは、既定のコンストラクター関数、すなわち `Set` の `Set` コンストラクターを返します。
 
 ```js
 Set[Symbol.species]; // Set() 関数
