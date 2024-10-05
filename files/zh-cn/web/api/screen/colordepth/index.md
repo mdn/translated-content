@@ -5,7 +5,7 @@ slug: Web/API/Screen/colorDepth
 
 {{APIRef("CSSOM")}}
 
-返回屏幕的颜色深度（color depth）。根据 CSSOM ( CSS 对象模型 ) 视图，某些实现为了兼容性原因总是返回 24。请参阅浏览器兼容性部分，了解哪些浏览器不遵循这一行为。
+返回屏幕的颜色深度（color depth）。根据 CSSOM（CSS 对象模型）视图，某些实现为了兼容性原因总是返回 24。请参阅浏览器兼容性部分，了解哪些浏览器不遵循这一行为。
 
 ## 示例
 
