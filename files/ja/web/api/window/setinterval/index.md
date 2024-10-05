@@ -1,7 +1,7 @@
 ---
 title: setInterval() グローバル関数
-short-title: setInterval()
-slug: Web/API/setInterval
+slug: Web/API/Window/setInterval
+original_slug: Web/API/setInterval
 l10n:
   sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---

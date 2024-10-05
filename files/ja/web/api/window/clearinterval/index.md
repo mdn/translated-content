@@ -1,6 +1,7 @@
 ---
 title: clearInterval()
-slug: Web/API/clearInterval
+slug: Web/API/Window/clearInterval
+original_slug: Web/API/clearInterval
 l10n:
   sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
