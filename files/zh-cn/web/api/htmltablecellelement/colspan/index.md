@@ -14,11 +14,11 @@ l10n:
 一个表示列数的正数。
 
 > [!NOTE]
-> 当设置新值时，该值会被*限制为*最接近的严格正数。
+> 当设置新值时，该值会被*钳制*到最接近的严格正数。
 
 ## 示例
 
-示例提供了两个按钮来修正主体第一个单元格的列跨度。
+示例提供了两个按钮来修改主体第一个单元格的列跨度。
 
 ### HTML
 
@@ -51,7 +51,7 @@ l10n:
 </table>
 <button id="increase">增加列跨度</button>
 <button id="decrease">减少列跨度</button>
-<div>第一个单元格跨越 <output>2</output> 列</div>
+<div>第一个单元格跨越 <output>2</output> 列。</div>
 ```
 
 ```css hidden

@@ -72,13 +72,13 @@ const rows = document.querySelectorAll("thead tr");
 const cells = rows[0].cells;
 
 for (const cell of cells) {
-  cell.textContent = `${cell.textContent} (${cell.abbr})`;
+  cell.textContent = `${cell.textContent}（${cell.abbr}）`;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Examples", "100%", 220)}}
+{{EmbedLiveSample("示例", "100%", 220)}}
 
 ## 规范
 

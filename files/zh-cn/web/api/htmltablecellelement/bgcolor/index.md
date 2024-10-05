@@ -20,7 +20,7 @@ l10n:
 - 十六进制代码，像 `#0000dd` 或 `#00d`
 
 > [!NOTE]
-> 这里接受的值是 CSS 颜色值的子集。仅仅 {{cssxref("named-color")}} 和 3 位 或 6 位 {{cssxref("hex-color")}}（没有 alpha 通道）。虽然所有 HTML 颜色值在 CSS 中都是有效的，但在另一个方向上并非如此。
+> 这里接受的值是 CSS 颜色值的子集。仅限 {{cssxref("named-color")}} 和 3 位 或 6 位 {{cssxref("hex-color")}}（没有 alpha 通道）。虽然所有 HTML 颜色值在 CSS 中都是有效的，但在另一个方向上并非如此。
 
 ## 示例
 

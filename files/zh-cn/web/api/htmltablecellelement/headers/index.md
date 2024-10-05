@@ -29,10 +29,10 @@ l10n:
   <tr>
     <th id="e1" headers="e">1（ID = e1）</th>
     <th id="e2" headers="e">2（ID = e2）</th>
-    <th id="ef" headers="e">最终（ID = ef）</th>
+    <th id="ef" headers="e">期末（ID = ef）</th>
     <th id="p1" headers="p">1（ID = p1）</th>
     <th id="p2" headers="p">2（ID = p2）</th>
-    <th id="pf" headers="p">最终（ID = pf）</th>
+    <th id="pf" headers="p">期末（ID = pf）</th>
   </tr>
   <tr>
     <td headers="h">15%</td>

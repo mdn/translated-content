@@ -14,11 +14,11 @@ l10n:
 
 ## 值
 
-A Boolean value.
+一个布尔值。
 
 ## 示例
 
-使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/white-space#在表格中控制换行)可用。
+使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个可用的[示例](/zh-CN/docs/Web/CSS/white-space#控制表格中的换行)。
 
 ## 规范
 

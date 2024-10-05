@@ -93,7 +93,7 @@ l10n:
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 220)}}
+{{EmbedLiveSample("示例", "100%", 260)}}
 
 ## 规范
 
