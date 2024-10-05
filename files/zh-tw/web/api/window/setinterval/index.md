@@ -1,18 +1,25 @@
 ---
-title: setInterval()
+title: Window：setInterval() 方法
 slug: Web/API/Window/setInterval
-original_slug: Web/API/setInterval
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`setInterval()`** 函式, {{domxref("Window")}} 與 {{domxref("Worker")}} 介面皆提供此一函式, 此函式作用為重複地執行一個函式呼叫或一個程式碼片斷, 每一次執行間隔固定的延遲時間. 此函式呼叫時將傳回一個間隔代碼(Interval ID)用以識別該間隔程序, 因此後續你可以呼叫 {{domxref("clearInterval()")}} 函式移除該間隔程序. 此函式為由 `WindowOrWorkerGlobalScope` 混合定義。
+{{domxref("Window")}} 介面的 **`setInterval()`** 方法作用為重複地執行一個函式呼叫或一個程式碼片斷，每一次執行間隔固定的延遲時間。
 
-## Syntax
+此方法呼叫時將傳回一個間隔 ID 用以識別該間隔程序，因此後續你可以呼叫 {{domxref("Window.clearInterval", "clearInterval()")}} 移除該間隔程序。
 
-```plain
-var intervalID = scope.setInterval(func, [delay, arg1, arg2, ...]);
-var intervalID = scope.setInterval(code, [delay]);
+## 語法
+
+```js-nolint
+setInterval(code)
+setInterval(code, delay)
+
+setInterval(func)
+setInterval(func, delay)
+setInterval(func, delay, arg1)
+setInterval(func, delay, arg1, arg2)
+setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
@@ -31,7 +38,7 @@ var intervalID = scope.setInterval(code, [delay]);
 
 ### Return value
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("clearInterval()")}} to cancel the timeout.
+The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the timeout.
 
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
@@ -274,7 +281,7 @@ Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Re
 
 ## Usage notes
 
-The `setInterval()` function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using {{domxref("clearInterval()")}}.
+The `setInterval()` function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using {{domxref("Window.clearInterval", "clearInterval()")}}.
 
 If you wish to have your function called _once_ after the specified delay, use {{domxref("setTimeout()")}}.
 
@@ -302,19 +309,18 @@ In these cases, a recursive `setTimeout()` pattern is preferred:
 
 In the above snippet, a named function `loop()` is declared and is immediately executed. `loop()` is recursively called inside `setTimeout()` after the logic has completed executing. While this pattern does not guarantee execution on a fixed interval, it does guarantee that the previous interval has completed before recursing.
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- [JavaScript timers](/zh-TW/Add-ons/Code_snippets/Timers)
-- {{domxref("setTimeout")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/zh-TW/Add-ons/Code_snippets/Timers/Daemons)
+- [`core-js` 中 `setInterval` 的 polyfill，允許將參數傳遞給回調](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("setTimeout()")}}
+- {{domxref("Window.clearInterval()")}} 與 {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}} 與 {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
