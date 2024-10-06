@@ -37,7 +37,7 @@ l10n:
 
 有一些工具能让你在线发布网站：
 
-- [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并将其储存在 [Git](https://git-scm.com/) 版本控制系统里。然后你可以在代码项目上进行协作，系统默认是开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码、使用你的代码、学习你的代码、改善你的代码。GitHub 有一个非常有用的特性叫 [GitHub Pages](https://pages.github.com/)，允许你发布网站。
+- [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并将其储存在 [Git](https://git-scm.com/) 版本控制系统里。然后你可以在代码项目上进行协作，系统默认是开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码，并进行使用、学习和改善。GitHub 有一个非常有用的特性叫 [GitHub Pages](https://pages.github.com/)，允许你发布网站。
 - [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 Web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
 
 尽管这类工具通常是免费的，但你只能使用有限的功能。
