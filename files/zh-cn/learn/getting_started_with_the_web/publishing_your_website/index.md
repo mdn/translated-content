@@ -62,7 +62,7 @@ l10n:
 1. 首先，[注册一个 GitHub 账号](https://github.com/)，并验证你的邮箱地址。
 2. 接下来，你需要[创建一个仓库](https://github.com/new)来存放文件。
 3. 在这个页面上，在 _Repository name_ 输入框里输入 _username_.github.io，_username_ 是你的用户名。比如，我们的朋友 Bob Smith 会输入 _bobsmith.github.io。
-   同时勾选“_Initialize this repository with a README_”，然后点击 _Create repository_。![一个 GitHub 仓库页的示例](github-create-repo.png)
+   同时勾选“\_Initialize this repository with a README_”，然后点击 _Create repository_。![一个 GitHub 仓库页的示例](github-create-repo.png)
 4. 然后，将你的网站文件夹里的内容拖拽到你的仓库，再点击 _Commit changes_。
 
    > [!NOTE]
