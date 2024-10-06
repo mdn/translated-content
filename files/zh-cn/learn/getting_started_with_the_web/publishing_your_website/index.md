@@ -73,7 +73,7 @@ l10n:
    > [!NOTE]
    > 你的网站可能需要几分钟的时间才能投入使用。如果它不能立即工作，等待几分钟，然后再试一次。
 
-想要了解更多，请看 [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages).
+想要了解更多，请看 [GitHub Pages 帮助](https://docs.github.com/zh/pages/getting-started-with-github-pages)。
 
 ## 延展阅读
 
