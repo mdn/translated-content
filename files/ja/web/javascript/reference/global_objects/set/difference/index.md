@@ -22,7 +22,7 @@ difference(other)
 
 ### 返値
 
-この集合に含まれる要素で、`other` 集合には含まれない要素を含む新しいオブジェクト {{jsxref("Set")}} オブジェクトです。
+新しい {{jsxref("Set")}} オブジェクトで、この Set に含まれる要素で、`other` 集合には含まれない要素が入ったものです。
 
 ## 解説
 
@@ -41,7 +41,7 @@ difference(other)
 
 `difference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
 
-- `this` の中の要素が `other.size` よりも多かった場合、`other` は `keys()` メソッドを呼び出すことで走査し、`this` の中のすべての要素のうち `other` にない要素で新しい Set を構築します。
+- `this` の中の要素が `other.size` よりも多かった場合、`other` を `keys()` メソッドを呼び出すことで走査し、`this` の中のすべての要素のうち `other` にない要素で新しい Set を構築します。
 - そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`other.has(e)` が[偽値](/ja/docs/Glossary/Falsy)を返すすべてを含む新しい Set を構築します。
 
 返される Set の要素の順序は、`this` の順序と同じです。
@@ -50,7 +50,7 @@ difference(other)
 
 ### difference() の使用
 
-次の例では、奇数（10 未満）と完全平方（10 未満）の集合を計算し、その差を求めます。結果は、完全平方ではない奇数の集合となります。
+次の例では、奇数（10 未満）と完全平方（10 未満）の集合の差を計算します。結果は、完全平方ではない奇数の集合となります。
 
 ```js
 const odds = new Set([1, 3, 5, 7, 9]);
@@ -68,7 +68,7 @@ console.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }
 
 ## 関連情報
 
-- [Polyfill of `Set.prototype.difference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.difference` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
 - {{jsxref("Set.prototype.isSubsetOf()")}}
