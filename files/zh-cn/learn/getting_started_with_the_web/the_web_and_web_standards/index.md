@@ -65,7 +65,7 @@ _唯一不变的就是变化。_
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[HTTP](/zh-CN/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（Hypertext Transfer Protocol，[HTTP](/zh-CN/docs/Web/HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
