@@ -1,6 +1,7 @@
 ---
 title: Глобальная функция setInterval()
-slug: Web/API/setInterval
+slug: Web/API/Window/setInterval
+original_slug: Web/API/setInterval
 ---
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
