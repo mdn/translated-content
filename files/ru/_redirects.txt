@@ -521,6 +521,7 @@
 /ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/performance_property	/ru/docs/Web/API/Window/performance
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
+/ru/docs/Web/API/setInterval	/ru/docs/Web/API/Window/setInterval
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
