@@ -57,7 +57,7 @@ l10n:
 - 浏览器首先解析 HTML 文件，并从中识别出所有的指向外部 CSS 样式表的 `<link>` 和指向脚本的 `<script>` 元素引用。
 - 继续解析 HTML 文件的同时，浏览器继续向服务器发送请求以获取 `<link>` 元素中找到的 CSS 文件以及 `<script>` 元素中找到的 JavaScript 文件，然后解析 CSS 和 JavaScript。
 - 接着浏览器会给解析后的 HTML 文件生成一个 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 树（在内存中），会给解析后的 CSS 文件生成一个 [CSSOM](/zh-CN/docs/Glossary/CSSOM) 树（在内存中），并且会[编译和执行](/zh-CN/docs/Web/Performance/How_browsers_work#javascript_编译)解析后的 JavaScript 脚本文件。
-- 伴随着构建 DOM 树、应用 CSSOM 树的样式、以及执行 JavaScript 脚本文件，浏览器会在屏幕上绘制出网页的界面；用户看到网页界面也就可以跟网页进行交互了。
+- 伴随着构建 DOM 树、应用 CSSOM 树的样式，以及执行 JavaScript 脚本文件，浏览器会在屏幕上绘制出网页的界面；用户看到网页界面也就可以跟网页进行交互了。
 
 ## DNS 解析
 
