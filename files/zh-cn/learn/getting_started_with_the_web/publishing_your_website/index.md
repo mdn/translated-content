@@ -18,7 +18,7 @@ l10n:
 想要对内容和网站外观拥有更多的控制，大多数人会选择购买 Web 托管服务和域名：
 
 - Web 托管服务是指在托管服务提供商的 [Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)上租用的文件空间。你将网站文件上传到 Web 服务器，然后 Web 服务器向网站用户提供网站内容。
-- [域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)是一个可以让人们访问的独一无二的地址，比如 `https://www.mozilla.org` 或 `https://www.bbc.co.uk`。你可以从**域名注册商**租借域名，期限自定。
+- [域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)是一个可以让人们访问的独一无二的地址，比如 `https://www.mozilla.org` 或 `https://www.bbc.co.uk`。你可以从**域名注册商**租借域名，年限自定。
 
 许多专业的网站通过这种方法接入互联网。
 
