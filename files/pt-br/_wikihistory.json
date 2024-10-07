@@ -4092,6 +4092,10 @@
     "modified": "2019-03-23T22:04:49.012Z",
     "contributors": ["jika"]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-10-15T22:16:56.864Z",
+    "contributors": ["luan0ap"]
+  },
   "Web/API/Window/storage_event": {
     "modified": "2019-03-23T22:03:39.969Z",
     "contributors": ["GPrimola", "gustavoverasmorais"]
@@ -4236,10 +4240,6 @@
   "Web/API/console/warn_static": {
     "modified": "2019-03-18T21:45:25.881Z",
     "contributors": ["raduq"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-10-15T22:16:56.864Z",
-    "contributors": ["luan0ap"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:18:55.700Z",
@@ -6187,18 +6187,6 @@
     "modified": "2019-03-18T20:54:05.177Z",
     "contributors": ["ViniciusMatias"]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2019-03-18T20:54:14.334Z",
-    "contributors": ["mauromattos00", "wdot789"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-12-16T17:35:45.160Z",
-    "contributors": ["JpOnline", "hugojunior", "marcusedu"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2019-03-23T22:04:21.860Z",
-    "contributors": ["khalid_ait", "berbare", "lpdouglas"]
-  },
   "Web/HTTP/CORS": {
     "modified": "2020-10-15T21:51:46.835Z",
     "contributors": [
@@ -6642,6 +6630,14 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T22:31:47.343Z",
     "contributors": ["FernandoKGA"]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2019-12-16T17:35:45.160Z",
+    "contributors": ["JpOnline", "hugojunior", "marcusedu"]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2019-03-23T22:04:21.860Z",
+    "contributors": ["khalid_ait", "berbare", "lpdouglas"]
   },
   "Web/HTTP/Messages": {
     "modified": "2020-04-19T17:43:58.667Z",
@@ -10634,6 +10630,10 @@
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-03-23T22:43:02.407Z",
     "contributors": ["expalmer", "fellyph"]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2019-03-18T20:54:14.334Z",
+    "contributors": ["mauromattos00", "wdot789"]
   },
   "conflicting/Web/HTTP/CORS": {
     "modified": "2020-04-19T11:26:06.291Z",
