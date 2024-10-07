@@ -41,4 +41,4 @@ time(label)
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
 - [微软 Edge 浏览器关于 `console.time()` 的文档](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#time)
 - [Node.JS 关于 `console.time()` 的文档](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
-- [谷歌 Chrome 浏览器关于 `console.time()` 的文档](https://developer.chrome.com/docs/devtools/console/api/#time)
+- [谷歌 Chrome 浏览器关于 `console.time()` 的文档](https://developer.chrome.google.cn/docs/devtools/console/api#time)

@@ -30,18 +30,18 @@ slug: Learn/HTML/Tables/Advanced
 Заголовок помещают сразу после тега `<table>`.
 
 > [!NOTE]
-> Атрибут [`summary`](/ru/docs/Web/HTML/Element/table#summary) также может быть использован в `<table>` элементе предоставляя описание — это также читается скринридерами. Однако мы рекомендуем вместо этого использовать `<caption>` элемент, так как `summary` {{glossary("deprecated")}} в HTML5 спецификации и не может быть прочитан зрячими пользователями (он не отображается на странице).
+> Атрибут [`summary`](/ru/docs/Web/HTML/Element/table#summary) также может быть использован в элементе `<table>` для добавления описания, которое также будет распознано программами для чтения с экрана. Однако мы рекомендуем вместо этого использовать элемент `<caption>`, так как `summary` является устаревшим и не может быть прочитан зрячими пользователями (он не отображается на странице).
 
 ### Упражнение: Добавление заголовка
 
 Давайте попробуем это, вернёмся к примеру который мы ранее встретили в прошлой статье.
 
-1. Откройте расписание занятий школьного учителя по языку в конце статьи [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col), или сделайте копию нашего [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) файла.
+1. Откройте расписание занятий школьного учителя по языку в конце статьи [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col) или сделайте копию нашего [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) файла.
 2. Добавьте подходящий заголовок к таблице.
 3. Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.
 
 > [!NOTE]
-> Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Добавление структуры с помощью \<thead>, \<tfoot> и \<tbody>
 
@@ -55,7 +55,7 @@ slug: Learn/HTML/Tables/Advanced
 - Элементом `<tfoot>` нужно обернуть ту часть, которая относится к footer таблицы — например, это может быть последняя строка в которой отражаются суммы по столбцам таблицы. Вы можете включить сюда footer таблицы, как и следовало ожидать, или чуть ниже заголовка таблицы (браузер всё равно отобразит его внизу таблицы).
 - Элементом `<tbody>` необходимо обернуть остальную часть содержимого таблицы которая не находится в header или footer таблицы. Этот блок располагают ниже заголовка таблицы или иногда footer таблицы, зависит от того какую структуру вы решите использовать (читать выше по тексту).
 
-> **Примечание:** `<tbody>` всегда включён в каждой таблице, неявно если не укажете его в коде. Проверьте это, открыв один из предыдущих примеров в котором не используется `<tbody>` и посмотрите HTML код в [browser developer tools](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools) — вы увидите, что браузер добавил этот тег самостоятельно. Вы могли бы задаться вопросом почему мы должны волноваться о его включении, но вы должны, потому что это даёт больше контроля над структурой таблицы и стилем.
+> **Примечание:** `<tbody>` всегда есть в каждой таблице, даже если он не указывается коде явно. Вы можете убедиться в этом, открыв один из предыдущих примеров в котором не используется `<tbody>` и посмотрев HTML код в [Developer Tools браузера](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — вы увидите, что браузер добавил этот тег самостоятельно. Вы могли бы задаться вопросом почему мы должны волноваться о его включении, но вы должны, потому что это даёт больше контроля над структурой таблицы и стилем.
 
 ### Упражнение: Добавление структуры таблицы
 
@@ -82,7 +82,7 @@ slug: Learn/HTML/Tables/Advanced
 7. Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
 
 > [!NOTE]
-> Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Введение в CSS](/ru/docs/Learn/CSS/First_steps) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Ваша готовая таблица должна выглядеть примерно так:
 
@@ -198,7 +198,7 @@ slug: Learn/HTML/Tables/Advanced
 {{ EmbedLiveSample('Hidden_example', '100%', 300) }}
 
 > [!NOTE]
-> Этот пример можно также найти на GitHub по ссылке [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> Этот пример можно также найти на GitHub по ссылке [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([живой пример](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Вложенные таблицы
 
@@ -389,16 +389,10 @@ slug: Learn/HTML/Tables/Advanced
 3. И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты `id` и `headers`.
 
 > [!NOTE]
-> Вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> Вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([живой пример](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([живой пример](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Заключение
 
-Есть ещё некоторые вещи которые можно узнать о HTML таблицах, но мы действительно дали всё что нужно на настоящий момент. Дальше вы возможно захотите больше узнать о стилизации HTML таблиц, посмотрите статью ["Стилизация таблиц"](/ru/docs/Learn/CSS/Styling_boxes/Styling_tables).
+Есть ещё некоторые вещи которые можно узнать о HTML таблицах, но мы действительно дали всё что нужно на настоящий момент. Дальше вы возможно захотите больше узнать о стилизации HTML таблиц, посмотрите статью ["Стилизация таблиц"](/ru/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## В этом блоке
-
-- [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics)
-- [HTML таблицы продвинутые возможности и доступность](/ru/docs/Learn/HTML/Tables/Advanced)
-- [Структурирование данных о планетах](/ru/docs/Learn/HTML/Tables/Structuring_planet_data)

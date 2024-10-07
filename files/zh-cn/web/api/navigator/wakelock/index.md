@@ -27,4 +27,4 @@ navigator.wakeLock
 
 - {{DOMxRef("WakeLock.request()")}}
 - [屏幕唤醒锁 API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API)
-- [使用屏幕唤醒锁 API 阻止息屏](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
+- [使用屏幕唤醒锁 API 阻止息屏](https://developer.chrome.google.cn/docs/capabilities/web-apis/wake-lock)

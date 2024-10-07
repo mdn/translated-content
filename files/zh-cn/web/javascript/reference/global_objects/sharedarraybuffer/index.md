@@ -166,4 +166,4 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
 - {{domxref("Window.crossOriginIsolated")}} 和 {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
-- [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.com/blog/enabling-shared-array-buffer/)，developer.chrome.com（2021）
+- [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.google.cn/blog/enabling-shared-array-buffer)，developer.chrome.google.cn（2021）
