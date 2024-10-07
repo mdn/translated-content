@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
-Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Breakout** écrit en JavaScript, en utilisant le framework [Phaser](http://phaser.io/).
+Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Breakout** écrit en JavaScript, en utilisant le framework [Phaser](https://phaser.io/).
 
 Chaque étape a des échantillons modifiables, disponibles pour jouer avec, de sorte que vous pouvez voir à quoi devraient ressembler les étapes intermédiaires. Vous apprendrez les bases de l'utilisation du framework Phaser pour implémenter les mécanismes fondamentaux du jeu comme le rendu et le mouvement des images, la détection des collisions, les mécanismes de contrôle, les fonctions d'aide spécifiques aux cadres, les animations et les interpolations, les états gagnants et perdants.
 

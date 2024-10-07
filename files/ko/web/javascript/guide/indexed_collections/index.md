@@ -559,7 +559,7 @@ const a = Array(5); // [ <5 empty items> ]
 // 배열 리터럴의 연속된 쉼표
 const b = [1, 2, , , 5]; // [ 1, 2, <2 empty items>, 5 ]
 
-// array.length보다 큰 인덱스의 슬록에 직접적으로 값 설정하기
+// array.length보다 큰 인덱스의 슬롯에 직접적으로 값 설정하기
 const c = [1, 2];
 c[4] = 5; // [ 1, 2, <2 empty items>, 5 ]
 

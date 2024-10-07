@@ -2,7 +2,7 @@
 title: Notification：click 事件
 slug: Web/API/Notification/click_event
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}

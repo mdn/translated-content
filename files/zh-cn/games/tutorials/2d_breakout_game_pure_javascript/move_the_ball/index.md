@@ -9,7 +9,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 从上一节中你已经知道如何去绘制一个球。现在让我们使它动起来。从技术上讲，我们将在画布上绘制一个球，之后让它消失，然后在一个稍微不用的位置上再绘制一个一样的球。就想电影里的每一帧动起来的感觉。
 
-我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用 JavaScript 时间函数 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或者 {{domxref("window.requestAnimationFrame()")}}。
+我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用 JavaScript 时间函数 {{domxref("Window.setInterval", "setInterval()")}} 或者 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}。
 
 在你的 HTML 文件只保留前两行，删除其他所有的 JavaScript 代码并在 draw() 函数中添加以下内容保证每 10 毫秒执行一次 draw() 函数：
 

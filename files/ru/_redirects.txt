@@ -521,6 +521,7 @@
 /ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/performance_property	/ru/docs/Web/API/Window/performance
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
+/ru/docs/Web/API/setInterval	/ru/docs/Web/API/Window/setInterval
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
@@ -682,11 +683,14 @@
 /ru/docs/Web/HTML/Общие_атрибуты/style	/ru/docs/Web/HTML/Global_attributes/style
 /ru/docs/Web/HTML/Общие_атрибуты/tabindex	/ru/docs/Web/HTML/Global_attributes/tabindex
 /ru/docs/Web/HTML/Ссылки	/ru/docs/Web/HTML/Reference
+/ru/docs/Web/HTTP/Basics_of_HTTP	/ru/docs/conflicting/Web/HTTP
 /ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/URI/Schemes/data
 /ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/ru/docs/Web/URI/Schemes/data
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/ru/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU	/ru/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/ru/docs/Web/HTTP/MIME_types
+/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ru/docs/Web/HTTP/MIME_types/Common_types
+/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Feature_Policy	/ru/docs/Web/HTTP/Permissions_Policy
 /ru/docs/Web/HTTP/Response_codes	/ru/docs/Web/HTTP/Status
 /ru/docs/Web/HTTP/Авторизация	/ru/docs/Web/HTTP/Authentication
