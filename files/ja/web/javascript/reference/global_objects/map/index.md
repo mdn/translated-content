@@ -311,8 +311,8 @@ const keyFunc = function () {};
 
 // 値を設定する
 myMap.set(keyString, "'文字列' と結び付けられた値");
-myMap.set(keyObj, 'keyObj と結び付けられた値');
-myMap.set(keyFunc, 'keyFunc と結び付けられた値');
+myMap.set(keyObj, "keyObj と結び付けられた値");
+myMap.set(keyFunc, "keyFunc と結び付けられた値");
 
 console.log(myMap.size); // 3
 
