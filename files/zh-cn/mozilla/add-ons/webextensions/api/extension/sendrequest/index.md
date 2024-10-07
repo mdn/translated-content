@@ -2,7 +2,7 @@
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5f090dea2cacee4ff4f654241f017a9f6649124e
 ---
 
 {{AddonSidebar}}{{Deprecated_Header}}
