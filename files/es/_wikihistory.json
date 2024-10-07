@@ -5460,6 +5460,10 @@
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": ["khrizenriquez"]
   },
+  "Web/API/Window/clearInterval": {
+    "modified": "2019-03-23T22:56:16.485Z",
+    "contributors": ["Guitxo"]
+  },
   "Web/API/Window/close": {
     "modified": "2020-10-15T21:37:07.614Z",
     "contributors": ["SphinxKnight", "dgrizzla", "Siro_Diaz"]
@@ -5639,6 +5643,10 @@
     "modified": "2019-03-23T22:57:50.655Z",
     "contributors": ["svera", "pedromagnus", "develasquez"]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-08-24T18:02:23.092Z",
+    "contributors": ["mastertrooper", "Makinita", "Klius", "claudionebbia"]
+  },
   "Web/API/Window/showModalDialog": {
     "modified": "2019-03-18T20:58:55.311Z",
     "contributors": ["SphinxKnight", "BubuAnabelas", "Grijander81"]
@@ -5711,10 +5719,6 @@
       "inma_610"
     ]
   },
-  "Web/API/clearInterval": {
-    "modified": "2019-03-23T22:56:16.485Z",
-    "contributors": ["Guitxo"]
-  },
   "Web/API/clearTimeout": {
     "modified": "2019-06-18T10:20:27.972Z",
     "contributors": ["AlePerez92", "fscholz", "basemnassar11", "VictorArias"]
@@ -5782,10 +5786,6 @@
   "Web/API/notification/requestPermission": {
     "modified": "2019-03-23T22:50:37.341Z",
     "contributors": ["MarkelCuesta", "jezdez", "Davdriver"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-08-24T18:02:23.092Z",
-    "contributors": ["mastertrooper", "Makinita", "Klius", "claudionebbia"]
   },
   "Web/API/setTimeout": {
     "modified": "2019-03-23T23:17:29.378Z",
