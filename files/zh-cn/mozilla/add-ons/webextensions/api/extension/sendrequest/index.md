@@ -22,12 +22,12 @@ chrome.extension.sendRequest(
 )
 ```
 
-该函数也可以通过[将会返回一个 Promise](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises) 的 `browser.extension.sendRequest()` 方法来使用。
+该 API 的返回 promise 的版本同样以 `browser.extension.sendRequest()` 的形式可用。
 
 ### 参数
 
 - `extensionId` {{optional_inline}}
-  - : `string`，你的插件希望连接到的插件的扩展 ID。如果省略，则默认为你自己的插件。
+  - : `string`，你所希望连接到的扩展的 ID。如果省略，则默认为你自己的扩展。
 - `request`
   - : `any`。
 - `responseCallback` {{optional_inline}}
