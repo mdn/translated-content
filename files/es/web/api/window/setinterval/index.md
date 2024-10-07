@@ -1,6 +1,7 @@
 ---
 title: setInterval()
-slug: Web/API/setInterval
+slug: Web/API/Window/setInterval
+original_slug: Web/API/setInterval
 l10n:
   sourceCommit: 0717d1c0a7528b2dd44d065fe90d860e3bdc2e6a
 ---

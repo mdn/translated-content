@@ -1736,17 +1736,17 @@
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
-/es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
+/es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/Window/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/Window/createImageBitmap
 /es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/Window/fetch
 /es/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/es/docs/Web/API/Window/indexedDB
 /es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/Window/isSecureContext
-/es/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/es/docs/Web/API/setInterval
+/es/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/es/docs/Web/API/Window/setInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/es/docs/Web/API/setTimeout
-/es/docs/Web/API/WindowTimers/clearInterval	/es/docs/Web/API/clearInterval
+/es/docs/Web/API/WindowTimers/clearInterval	/es/docs/Web/API/Window/clearInterval
 /es/docs/Web/API/WindowTimers/clearTimeout	/es/docs/Web/API/clearTimeout
-/es/docs/Web/API/WindowTimers/setInterval	/es/docs/Web/API/setInterval
+/es/docs/Web/API/WindowTimers/setInterval	/es/docs/Web/API/Window/setInterval
 /es/docs/Web/API/WindowTimers/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/XMLDocument/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
@@ -1755,6 +1755,7 @@
 /es/docs/Web/API/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/btoa	/es/docs/Web/API/Window/btoa
 /es/docs/Web/API/caches	/es/docs/Web/API/Window/caches
+/es/docs/Web/API/clearInterval	/es/docs/Web/API/Window/clearInterval
 /es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
 /es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static
 /es/docs/Web/API/console/dir	/es/docs/Web/API/console/dir_static
@@ -1774,6 +1775,7 @@
 /es/docs/Web/API/fetch	/es/docs/Web/API/Window/fetch
 /es/docs/Web/API/indexedDB	/es/docs/Web/API/Window/indexedDB
 /es/docs/Web/API/isSecureContext	/es/docs/Web/API/Window/isSecureContext
+/es/docs/Web/API/setInterval	/es/docs/Web/API/Window/setInterval
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
 /es/docs/Web/Accesibilidad/Comunidad	/es/docs/conflicting/Web/Accessibility
 /es/docs/Web/Accesibilidad/Understanding_WCAG	/es/docs/Web/Accessibility/Understanding_WCAG
