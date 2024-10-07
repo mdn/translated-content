@@ -21,7 +21,7 @@ l10n:
 ## 实例方法
 
 - `KeyboardLayoutMap[Symbol.iterator]()` {{experimental_inline}}
-  - : 返回一个包含键值对的新 [Iterator](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 对象。
+  - : 返回一个包含键/值对的新 [Iterator](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 对象。
 - {{domxref('KeyboardLayoutMap.entries()')}} {{experimental_inline}}
   - : 返回一个包含键/值对的新 [Iterator](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 对象。
 - {{domxref('KeyboardLayoutMap.forEach()')}} {{experimental_inline}}
