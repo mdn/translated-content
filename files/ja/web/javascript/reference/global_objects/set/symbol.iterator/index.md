@@ -1,16 +1,15 @@
 ---
-title: Set.prototype[@@iterator]()
+title: Set.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`[@@iterator]()`** は {{jsxref("Set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、 `Set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[Symbol.iterator]()`** は {{jsxref("Set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、 `Set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-**`@@iterator`** プロパティの初期値は {{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+このプロパティの初期値は、{{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
@@ -32,7 +31,7 @@ set[Symbol.iterator]()
 
 ### for...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`@@iterator` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.iterator]()` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
 
 ```js
 const mySet = new Set();
@@ -59,7 +58,7 @@ const setIter = mySet[Symbol.iterator]();
 
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+console.log(setIter.next().value); // {}
 ```
 
 ## 仕様書
