@@ -93,6 +93,7 @@ l10n:
       </td>
       <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
+-->
   </tbody>
 </table>
 
