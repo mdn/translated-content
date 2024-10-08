@@ -1,6 +1,7 @@
 ---
 title: clearTimeout()
-slug: Web/API/clearTimeout
+slug: Web/API/Window/clearTimeout
+original_slug: Web/API/clearTimeout
 l10n:
   sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---

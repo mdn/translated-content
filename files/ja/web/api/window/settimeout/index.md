@@ -1,7 +1,7 @@
 ---
 title: setTimeout() グローバル関数
-short-title: setTimeout()
-slug: Web/API/setTimeout
+slug: Web/API/Window/setTimeout
+original_slug: Web/API/setTimeout
 l10n:
   sourceCommit: 8acf54a3eb1536134a39896c3ceb1578f9b4eea7
 ---
