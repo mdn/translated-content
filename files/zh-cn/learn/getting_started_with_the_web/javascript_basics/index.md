@@ -452,7 +452,7 @@ function setUserName() {
 
 ## 参见
 
-- [JavaScript——动态客户端脚本语言](/en-US/docs/Learn/JavaScript)
+- [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
   - : 更深入 JavaScript 的细节。
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
