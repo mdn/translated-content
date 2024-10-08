@@ -1,12 +1,15 @@
 ---
-title: clearTimeout()
+title: Window：clearTimeout() 方法
 slug: Web/API/Window/clearTimeout
-original_slug: Web/API/clearTimeout
+l10n:
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef("HTML DOM")}}
 
-`WindowOrWorkerGlobalScope` 内置的 **`clearTimeout()`** 方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。
+{{domxref("Window")}} 接口的 **`clearTimeout()`** 方法取消先前通过调用 {{domxref("Window.setTimeout()")}} 建立的超时任务。
+
+如果参数未标识之前创建的操作，则此方法不执行任何动作。
 
 ## 语法
 
@@ -17,48 +20,49 @@ clearTimeout(timeoutID)
 ### 参数
 
 - `timeoutID`
-  - : 你要取消定时器的标识符。该 ID 由相应的`setTimeout()`调用返回。
+  - : 你要取消定时器的标识符。该 ID 由相应的 `setTimeout()` 调用返回。
 
-值得注意的是，{{domxref("setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}} 共享同一个 ID 池，意味着在技术上可以混用 `clearTimeout()` 和 {{domxref("Window.clearInterval", "clearInterval()")}}。但是，为了清楚起见，你应该避免这样做。
+值得注意的是，{{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}} 共享同一个 ID 池，意味着在技术上可以混用 `clearTimeout()` 和 {{domxref("Window.clearInterval", "clearInterval()")}}。但是，为了清楚起见，你应该避免这样做。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-在一个网页中运行如下脚本，并且点击一次页面。一秒钟后你会看见弹出一条信息。如果你在一秒内不停点击页面，弹出框将不再出现。
+在一个网页中运行如下脚本，并且点击一次页面。一秒钟后你会看见一条弹出的信息。如果你在一秒内不停点击页面，警报框将不再出现。
 
 ```js
-var alarm = {
-  remind: function (aMessage) {
+const alarm = {
+  remind(aMessage) {
     alert(aMessage);
-    delete this.timeoutID;
+    this.timeoutID = undefined;
   },
 
-  setup: function () {
-    this.cancel();
-    var self = this;
-    this.timeoutID = window.setTimeout(
-      function (msg) {
-        self.remind(msg);
+  setup() {
+    if (typeof this.timeoutID === "number") {
+      this.cancel();
+    }
+
+    this.timeoutID = setTimeout(
+      (msg) => {
+        this.remind(msg);
       },
       1000,
-      "Wake up!",
+      "醒醒！",
     );
   },
 
-  cancel: function () {
-    if (typeof this.timeoutID == "number") {
-      window.clearTimeout(this.timeoutID);
-      delete this.timeoutID;
-    }
+  cancel() {
+    clearTimeout(this.timeoutID);
   },
 };
-window.onclick = function () {
-  alarm.setup();
-};
+window.addEventListener("click", () => alarm.setup());
 ```
 
-## 注意
+## 备注
 
-传入一个错误的 ID 给 `clearTimeout()`不会有任何影响；也不会抛出异常。
+传入一个无效的 ID 给 `clearTimeout()` 不会有任何影响；也不会抛出异常。
 
 ## 规范
 
@@ -70,6 +74,7 @@ window.onclick = function () {
 
 ## 参见
 
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} 和 {{domxref("WorkerGlobalScope.clearInterval()")}}
-- {{domxref("Window.cancelAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("Window.cancelAnimationFrame()")}}

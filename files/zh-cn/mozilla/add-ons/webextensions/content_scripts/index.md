@@ -600,7 +600,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-上述内容同样适用于 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout)、{{domxref("Window.setInterval", "setInterval()")}} 和 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。
+上述内容同样适用于 {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}} 和 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 
 > [!WARNING]
 > 在页面的上下文中运行代码时要非常小心！
