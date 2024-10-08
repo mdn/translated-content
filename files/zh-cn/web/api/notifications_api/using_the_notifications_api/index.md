@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 83ec73ac6fec9cae23c54b729e6481f50a0a45e7
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -109,7 +109,7 @@ const notification = new Notification("待办列表", { body: text, icon: img })
 
 ## 关闭通知
 
-使用 {{domxref("Notification.close","close()")}} 删除不再与用户相关的通知（例如，对于消息应用程序，用户已经阅读了网页上的通知） ，或者以下歌曲已在音乐应用程序中播放以通知歌曲更改）。大多数现代浏览器会在一段时间（大约四秒）后自动关闭通知，但这不是你通常应该关心的事情，因为它取决于用户和用户代理。删除通知也可能发生在操作系统级别，用户应该对此保持控制。旧版本的 Chrome 不会自动删除通知，因此你可以在 {{domxref("setTimeout()")}} 之后执行此操作，以免从其他浏览器的通知托盘中删除通知。
+使用 {{domxref("Notification.close","close()")}} 删除不再与用户相关的通知（例如，对于消息应用程序，用户已经阅读了网页上的通知） ，或者以下歌曲已在音乐应用程序中播放以通知歌曲更改）。大多数现代浏览器会在一段时间（大约四秒）后自动关闭通知，但这不是你通常应该关心的事情，因为它取决于用户和用户代理。删除通知也可能发生在操作系统级别，用户应该对此保持控制。旧版本的 Chrome 不会自动删除通知，因此你可以在 {{domxref("Window.setTimeout", "setTimeout()")}} 之后执行此操作，以免从其他浏览器的通知托盘中删除通知。
 
 ```js
 const n = new Notification("我的歌");

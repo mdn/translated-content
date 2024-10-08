@@ -160,7 +160,7 @@ console.log(addThirtySeven(5, 10)); // 42
 
 ### 配合 setTimeout()
 
-在默认情况下，在 {{domxref("setTimeout()")}} 内部，`this` 关键字将被设置为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)，在浏览器中它是 {{domxref("window")}} 对象。当处理需要将 `this` 引用类实例的类方法时，你可以显式地将 `this` 绑定到回调函数，以便保持实例的引用。
+在默认情况下，在 {{domxref("Window.setTimeout", "setTimeout()")}} 内部，`this` 关键字将被设置为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)，在浏览器中它是 {{domxref("window")}} 对象。当处理需要将 `this` 引用类实例的类方法时，你可以显式地将 `this` 绑定到回调函数，以便保持实例的引用。
 
 ```js
 class LateBloomer {

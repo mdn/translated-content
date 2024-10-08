@@ -13,21 +13,21 @@ JavaScript 中的 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/
 
 为了正确地讨论微任务，首先最好知道什么是一个 JavaScript 任务以及微任务如何区别于任务。这里是一个快速、简单的解释，但若你想了解更多细节，可以阅读这篇文章中的信息 [In depth: Microtasks and the JavaScript runtime environment](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth).
 
-### 任务（Tasks）
+### 任务
 
-一个**任务**就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在**任务队列**（task queue）上被调度。
+一个**任务**（task）就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在**任务队列**（task queue）上被调度。
 
 在以下时机，任务会被添加到任务队列：
 
 - 一段新程序或子程序被直接执行时（比如从一个控制台，或在一个 {{HTMLElement("script")}} 元素中运行代码）。
 - 触发了一个事件，将其回调函数添加到任务队列时。
-- 执行到一个由 {{domxref("setTimeout()")}} 或 {{domxref("setInterval()")}} 创建的 timeout 或 interval，以致相应的回调函数被添加到任务队列时。
+- 执行到一个由 {{domxref("Window.setTimeout", "setTimeout()")}} 或 {{domxref("Window.setInterval", "setInterval()")}} 创建的 timeout 或 interval，以致相应的回调函数被添加到任务队列时。
 
 事件循环驱动你的代码按照这些任务排队的顺序，一个接一个地处理它们。在事件循环的单次迭代中，将执行任务队列中最旧的可运行任务。之后，微任务将被执行，直到微任务队列为空，然后浏览器可以选择更新渲染。然后浏览器继续进行事件循环的下一次迭代。
 
-### 微任务（Microtasks）
+### 微任务
 
-起初微任务和任务之间的差异看起来不大。它们很相似；都由位于某个队列的 JavaScript 代码组成并在合适的时候运行。但是，只有在迭代开始时队列中存在的任务才会被事件循环一个接一个地运行，这和处理微任务队列是殊为不同的。
+起初微任务（microtask）和任务之间的差异看起来不大。它们很相似；都由位于某个队列的 JavaScript 代码组成并在合适的时候运行。但是，只有在迭代开始时队列中存在的任务才会被事件循环一个接一个地运行，这和处理微任务队列是殊为不同的。
 
 有两点关键的区别。
 

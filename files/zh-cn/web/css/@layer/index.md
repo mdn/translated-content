@@ -141,9 +141,10 @@ p {
 
 ```html
 <div class="item">
-  I am displayed in <code>color: rebeccapurple</code> because the
-  <code>type</code> layer comes after the <code>base</code> layer. My green
-  border, font-size, and padding come from the <code>base</code> layer.
+  我以 <code>color: rebeccapurple</code> 的样式显示，因为
+  <code>special</code> 层定义在 <code>base</code>
+  层之后。我的绿色边框、font-size 和内边距来自于
+  <code>base</code> 层。
 </div>
 ```
 

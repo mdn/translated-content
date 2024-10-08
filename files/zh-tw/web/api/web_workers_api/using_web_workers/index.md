@@ -726,22 +726,22 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 大多數 Javascript 的功能 worker 皆可以使用，包含：
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
-- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, 與 {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, 與 {{domxref("WindowTimers.setInterval")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
+- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 與 {{jsxref("Global_Objects/String", "String")}}
+- {{domxref("setTimeout()")}} 與 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。
 
 > [!NOTE]
 > 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
-## 標準規範
+## 規範
 
 {{Specifications}}
 
-## 延伸閱讀
+## 參見
 
-- [`Worker`](/zh-TW/docs/Web/API/Worker) interface
-- [`SharedWorker`](/zh-TW/docs/Web/API/SharedWorker) interface
-- [Functions available to workers](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [Advanced concepts and examples](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("Worker")}} 介面
+- {{domxref("SharedWorker")}} 介面
+- [worker 中可用的函數](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- {{domxref("OffscreenCanvas")}} 介面
