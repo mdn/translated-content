@@ -1,6 +1,6 @@
 ---
 title: Глобальная функция clearTimeout()
-slug: Web/API/clearTimeout
+slug: Web/API/Window/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}
