@@ -2,7 +2,7 @@
 title: Web 和 Web 标准
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 l10n:
-  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{learnsidebar}}
@@ -13,17 +13,17 @@ l10n:
 
 我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会提供相关链接（如果你对更多细节感兴趣，也请试着在你惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
 
-在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于[分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
+在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于[分组交换](https://zh.wikipedia.org/wiki/分组交换)进行工作，并且首次实现了 [TCP/IP 协议族](https://zh.wikipedia.org/wiki/TCP/IP协议族)。这两种技术构成了互联网基础设施的基础。
 
 1980 年，Tim Berners-Lee（通常称之为 TimBL）写了一个叫 ENQUIRE 的笔记本程序，这个程序实现了不同节点之间链接的概念。听起来有点熟悉对吧？
 
-快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ；这两个出版物共同为 Web 的工作方式做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
+快进到 1989 年，TimBL 在 CERN 撰写了[《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html)和《HyperText》；这两个出版物共同为 Web 的工作方式做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
 到 1990 年底，TimBL 创建了运行第一个版本的 Web 所需的所有东西——[HTTP](/zh-CN/docs/Web/HTTP)、[HTML](/zh-CN/docs/Web/HTML)、名为 [WorldWideWeb](https://zh.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器、一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布、数以千计 Web 服务器的建立、上百万网页的生成，Web 爆发式发展。好吧，这只是对事件非常粗略的描述，但我向你说过会简单叙述。
 
-最后一个值得分享的重要事件发生在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/zh-CN/docs/Web/CSS) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
+最后一个值得分享的重要事件发生在 1994 年，TimBL 建立了[万维网联盟](https://zh.wikipedia.org/wiki/万维网联盟)（W3C），该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/zh-CN/docs/Web/CSS) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
 
 ## Web 标准
 
@@ -31,7 +31,7 @@ l10n:
 
 例如，[HTML 现行标准](https://html.spec.whatwg.org/multipage/)详细地描述了 HTML 的实现方式（所有 HTML 元素及其关联的 API 和其他相关技术）。
 
-Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如 [WHATWG](https://whatwg.org/)（负责 HTML 语言的现行标准），[ECMA](https://www.ecma-international.org/)（发布 ECMAScript 标准，JavaScript 基于该标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 WebGL）等。
+Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如 [WHATWG](https://whatwg.org/)（负责 HTML 语言的现行标准）、[ECMA](https://www.ecma-international.org/)（发布 ECMAScript 标准，JavaScript 基于该标准）、[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 WebGL）等。
 
 ### “开放”标准
 
@@ -63,16 +63,16 @@ _唯一不变的就是变化。_
 
 ### 浏览器
 
-你可能此刻正在 Web 浏览器中阅读这些文字（除非你已将其打印出来，或正在使用辅助技术读给你听，例如屏幕阅读器）。Web 浏览器是人们用来浏览 Web 的软件程序，包括 [Firefox](https://www.mozilla.org/en-US/firefox/)、[Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/)、[Safari](https://www.apple.com/safari/) 和 [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)。
+你可能此刻正在 Web 浏览器中阅读这些文字（除非你已将其打印出来，或正在使用辅助技术读给你听，例如屏幕阅读器）。Web 浏览器是人们用来浏览 Web 的软件程序，包括 [Firefox](https://www.mozilla.org/zh-CN/firefox/)、[Chrome](https://www.google.cn/chrome/)、[Opera](https://www.opera.com/)、[Safari](https://www.apple.com/safari/) 和 [Edge](https://www.microsoft.com/zh-cn/edge)。
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[HTTP](/zh-CN/docs/Web/HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（[HTTP](/zh-CN/docs/Web/HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
-"你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
+“你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？”
 
-"当然啦 Web 浏览器——给你"
+“当然啦 Web 浏览器——给你”
 
 [下载文件并渲染 Web 页面]
 ```
@@ -95,7 +95,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
   如果我们采用房屋建筑类比的话，HTML 就像房屋的地基和墙壁一样，赋予房屋结构并将其结合在一起。
 
-- 级联样式表（Cascading Style Sheets，CSS）是一种基于规则的语言，用于将样式应用于 HTML，例如，设置文本和背景的颜色，添加边框，设置动画效果或以某种方式对页面进行布局。作为一个简单的示例，以下代码会将我们的 HTML 段落变为红色：
+- 层叠样式表（CSS）是一种基于规则的语言，用于将样式应用于 HTML，例如，设置文本和背景的颜色，添加边框，设置动画效果或以某种方式对页面进行布局。作为一个简单的示例，以下代码会将我们的 HTML 段落变为红色：
 
   ```css
   p {
@@ -105,7 +105,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
   在房屋类比中，CSS 就像用来使房屋看起来更漂亮的油漆，墙纸，地毯和油画。
 
-- 从动态样式切换到从服务器获取更新，再到复杂的 3D 图形， **JavaScript** 是我们用来向网站添加交互性的编程语言。以下简单的 JavaScript 将在内存中存储一个对我们段落的引用，并更改其中的文本：
+- 从动态样式切换到从服务器获取更新，再到复杂的 3D 图形，**JavaScript** 是我们用来向网站添加交互性的编程语言。以下简单的 JavaScript 将在内存中存储一个对我们段落的引用，并更改其中的文本：
 
   ```js
   let pElem = document.querySelector("p");
@@ -118,11 +118,11 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 一旦了解了可用于构建网页的“原始”技术（例如 HTML、CSS 和 JavaScript），你很快就会遇到各种让工作更轻松或更有效的工具。例如：
 
-- 现代浏览器中的[开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
-- 可用于运行测试以显示你的代码是否按预期运行的[测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+- 现代浏览器中的[开发人员工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)可用于调试代码。
+- 可用于运行测试以显示你的代码是否按预期运行的[测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - 建立在 JavaScript 之上的库和框架，使你可以更快，更有效地构建特定类型的网站。
-- 所谓的“Linters” ，它包含了一组规则，检查你的代码之后，会突出显示你未正确遵循规则的地方。
-- Minifiers，它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
+- 所谓的“linter” ，它包含了一组规则，检查你的代码之后，会突出显示你未正确遵循规则的地方。
+- 极简化器（minifier），它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
 
 ### 服务器端语言和框架
 
@@ -130,7 +130,7 @@ HTML、CSS 和 JavaScript 是前端（或客户端）语言，这意味着浏览
 
 还有另一类语言，称为后端（或服务器端）语言，这意味着它们先在服务器上运行，然后再将结果发送到浏览器进行显示。服务器端语言的一种典型用法是从数据库中获取数据并生成包含该数据的 HTML，然后再将 HTML 发送给浏览器并向用户显示。
 
-服务器端框架的例子包括 ASP.NET（C#），Django（Python），Laravel（PHP）和 Next.js（JavaScript）。
+服务器端框架的例子包括 ASP.NET（C#）、Django（Python）、Laravel（PHP）和 Next.js（JavaScript）。
 
 ## Web 最佳实践
 
@@ -156,5 +156,5 @@ HTML、CSS 和 JavaScript 是前端（或客户端）语言，这意味着浏览
 
 ## 参见
 
-- [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [万维网的历史](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
+- [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
