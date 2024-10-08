@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-{{domxref("HTMLTableRowElement")}} 接口的 **`align`** 属性是一个指示如何在 {{htmlelement("tr")}} 表格行中水平对齐文本的字符串。单个单元格可以覆盖它。
+{{domxref("HTMLTableRowElement")}} 接口的 **`align`** 属性是一个指示如何在表格列元素（{{htmlelement("tr")}}）中水平对齐文本的字符串。单个单元格可以覆盖它。
 
 > [!NOTE]
 > 此属性已弃用，应使用 CSS 在单元格中水平对齐文本。使用 CSS {{cssxref("text-align")}} 属性，其用于水平对齐单元格中文本，且优先级更高。
@@ -25,7 +25,7 @@ l10n:
 - `justify`
   - : 将文本分散到单元格中。使用 `text-align: justify` 代替。
 - `char`
-  - : 从不完全支持，将文本与指定字符对齐。在支持的情况下，使用 `text-align: <string>,` 其中字符串是单个字符。
+  - : 从不完全支持，将文本与指定字符对齐。在支持的情况下，使用 `text-align: <string>`，其中字符串是单个字符。
 
 ## 示例
 
