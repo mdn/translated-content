@@ -2,7 +2,7 @@
 title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
 l10n:
-  sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
+  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
 
 {{HTMLSidebar}}
