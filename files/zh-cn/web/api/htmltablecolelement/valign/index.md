@@ -11,7 +11,7 @@ l10n:
 
 > [!NOTE]
 > 此属性已弃用，应使用 CSS 在表格列中垂直对齐文本。使用 CSS {{cssxref("vertical-align")}} 属性，其用于垂直对齐列单元格中文本，且优先级更高。
-> 
+>
 > 由于 {{htmlelement("td")}} 不是 {{htmlelement("col")}} 的子元素，因此不能直接在 {{HTMLElement("col")}} 上设置它，需要使用 `td:nth-child(n)` 或类似值（`n` 是列号）来选择列的单元格。
 
 ## 值
