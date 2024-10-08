@@ -1,14 +1,14 @@
 ---
-title: clearTimeout()
+title: "Window: clearTimeout() メソッド"
+short-title: clearTimeout()
 slug: Web/API/Window/clearTimeout
-original_slug: Web/API/clearTimeout
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef("HTML DOM")}}
 
-グローバルの **`clearTimeout()`** メソッドは、 {{domxref("setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
+**`clearTimeout()`** は {{domxref("Window")}} インターフェイスのメソッドで、{{domxref("Window.setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
 
 指定された引数で前回確立されたアクションを識別できなかった場合、このメソッドは何も行いません。
 
@@ -23,7 +23,7 @@ clearTimeout(timeoutID)
 - `timeoutID`
   - : 解除したいタイムアウトの識別子です。この ID は対応する `setTimeout()` から返されたものです。
 
-注目すべきは、 {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} で使用される ID のプールは共有されますので、技術的には `clearTimeout()` および {{domxref("clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
+注目すべきは、 {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} で使用される ID のプールは共有されますので、技術的には `clearTimeout()` および {{domxref("Window.clearInterval", "clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
 
 ### 返値
 
@@ -31,7 +31,7 @@ clearTimeout(timeoutID)
 
 ## 例
 
-ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。１秒後にメッセージがポップアップします。１秒間に複数回ページをクリックしても、アラートは一度しか表示されません。
+ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。1 秒後にメッセージがポップアップします。1 秒間に複数回ページをクリックしても、アラートは一度しか表示されません。
 
 ```js
 const alarm = {
@@ -75,7 +75,7 @@ window.addEventListener("click", () => alarm.setup());
 
 ## 関連情報
 
-- {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("Window.cancelAnimationFrame()")}}
