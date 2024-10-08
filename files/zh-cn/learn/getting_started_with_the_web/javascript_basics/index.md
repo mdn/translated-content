@@ -307,8 +307,7 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> [!NOTE] 
-> [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器将 `result` 变量返回到函数外面。这一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（阅读更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
+> [!NOTE] > [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器将 `result` 变量返回到函数外面。这一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（阅读更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
 
 ### 事件
 
