@@ -55,7 +55,7 @@ vertical-align: unset;
 这些值使元素相对其父元素垂直对齐：
 
 - `baseline`
-  - : 使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的基线，如{{HTMLElement("textarea")}} ，这意味着这些元素使用此值的表现因浏览器而异。
+  - : 使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的基线，如 {{HTMLElement("textarea")}}，这意味着这些元素使用此值的表现因浏览器而异。
 - `sub`
   - : 使元素的基线与父元素的下标基线对齐。
 - `super`
@@ -65,11 +65,11 @@ vertical-align: unset;
 - `text-bottom`
   - : 使元素的底部与父元素的字体底部对齐。
 - `middle`
-  - : 使元素的中部与父元素的基线加上父元素 x-height（译注：[x 高度](https://www.zhangxinxu.com/wordpress/2015/06/about-letter-x-of-css/)）的一半对齐。
+  - : 使元素的中部与父元素的基线加上父元素 x-height 的一半对齐。
 - {{cssxref("&lt;length&gt;")}}
   - : 使元素的基线对齐到父元素的基线之上的给定长度。可以是负数。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是{{Cssxref("line-height")}}属性的百分比。可以是负数。
+  - : 使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是 {{Cssxref("line-height")}} 属性的百分比。可以是负数。
 
 #### 相对行的值
 
