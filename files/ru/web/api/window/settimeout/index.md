@@ -1,7 +1,6 @@
 ---
 title: Глобальная функция setTimeout()
 slug: Web/API/Window/setTimeout
-original_slug: Web/API/setTimeout
 ---
 
 {{APIRef("HTML DOM")}} {{AvailableInWorkers}}
