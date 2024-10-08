@@ -2,7 +2,7 @@
 title: DocumentPictureInPicture
 slug: Web/API/DocumentPictureInPicture
 l10n:
-  sourceCommit: 4bb7edfa824ee4790abe60637b7876acd3eb827d
+  sourceCommit: bac20b9ed34bf5b6427ba9274c99c1737dc309ff
 ---
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -15,21 +15,21 @@ l10n:
 
 ## 实例属性
 
-_从其父级 {{DOMxRef("EventTarget")}} 继承属性。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
 - {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个 {{domxref("Window")}} 实例，代表画中画窗口内的浏览上下文。
 
 ## 实例方法
 
-_从其父级 {{DOMxRef("EventTarget")}} 继承方法。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承方法。_
 
 - {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}} {{Experimental_Inline}}
   - : 为当前主浏览环境打开画中画窗口。返回一个 {{jsxref("Promise")}}，其兑现一个 {{domxref("Window")}} 实例，代表画中画窗口内的浏览环境。
 
 ## 事件
 
-_从其父级 {{DOMxRef("EventTarget")}} 继承事件。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承事件。_
 
 - {{domxref("DocumentPictureInPicture/enter_event", "enter")}} {{Experimental_Inline}}
   - : 当画中画窗口成功打开时触发。
