@@ -34,7 +34,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 ## 已弃用的属性
 
 > [!WARNING]
-> 此属性已弃用，不应再使用。它们被记录下来主要是为了帮助理解旧的代码来源。
+> 这些属性已被弃用，不应再使用。记录这些属性主要是为了帮助理解旧代码库。
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
   - : 一个反映 [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) 属性的字符串枚举值。其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
