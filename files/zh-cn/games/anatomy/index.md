@@ -209,7 +209,7 @@ var tNow = window.performance.now();
 
 一种常见的技术是以恒定的频率更新模拟，然后绘制尽可能多的（或尽可能少的）实际帧。更新方法可以继续循环，而不用考虑用户看到的内容。绘图方法可以查看最后的更新以及发生的时间。由于绘制知道何时表示，以及上次更新的模拟时间，它可以预测为用户绘制一个合理的框架。这是否比官方更新循环更频繁（甚至更不频繁）无关紧要。更新方法设置检查点，并且像系统允许的那样频繁地，渲染方法画出周围的时间。在 Web 标准中分离更新方法有很多种方法：
 
-- 绘制 `requestAnimationFrame` 并更新 {{domxref("setInterval()")}} 或 {{domxref("setTimeout()")}}。
+- 在 `requestAnimationFrame()` 中绘制，并在 {{domxref("Window.setInterval", "setInterval()")}} 或 {{domxref("setTimeout()")}} 中更新。
 
   - 即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。
 

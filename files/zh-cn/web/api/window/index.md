@@ -167,8 +167,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 取消之前使用 {{domxref("Window.requestIdleCallback")}} 安排的回调。
 - {{domxref("Window.clearImmediate()")}}
   - : 取消使用 `setImmediate()` 设置的重复执行任务。
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : 取消使用 {{domxref("setInterval()")}} 设置的重复执行任务。
+- {{domxref("Window.clearInterval()")}}
+  - : 取消使用 {{domxref("Window.setInterval()")}} 设置的重复执行任务。
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
   - : 取消使用 {{domxref("setTimeout()")}} 设置的延时执行任务。
 - {{domxref("Window.close()")}}
@@ -233,7 +233,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 将文档滚动至特定坐标。
 - {{domxref("Window.setImmediate()")}}
   - : 在浏览器完成其他繁重的任务后执行一个函数。
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : 安排一个函数，在给定的毫秒数过去后执行。
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : 切换用户调整窗口大小的能力。
