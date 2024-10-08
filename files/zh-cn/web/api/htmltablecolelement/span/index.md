@@ -47,7 +47,7 @@ l10n:
 </table>
 <button id="increase">增加列跨度</button>
 <button id="decrease">减少列跨度</button>
-<div>第一个 &lt;列&gt; 跨度 <output>2</output> 实际列。</div>
+<div>第一个 &lt;col&gt; 跨度 <output>2</output> 实际列。</div>
 ```
 
 ```css hidden
@@ -99,7 +99,7 @@ decreaseButton.addEventListener("click", () => {
 });
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", "100%", 175)}}
 
