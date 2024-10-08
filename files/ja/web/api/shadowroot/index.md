@@ -2,7 +2,7 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 l10n:
-  sourceCommit: 9091d8b54a600e5b751c97b1e47261324ef475d8
+  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
 {{APIRef('Shadow DOM')}}
@@ -20,8 +20,10 @@ l10n:
 - {{domxref("ShadowRoot.adoptedStyleSheets")}}
   - : シャドウ DOM のサブツリーで使用するために構築されたスタイルシートの配列を追加します。
     これらは、同じ親 {{domxref("Document")}} ノードを共有する他の DOM サブツリーや、文書自身と共有されることがあります。
+- {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
+  - : 論理値で、シャドウルートがクローン可能であるかどうかを示します。
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
-  - : シャドウが取り付けられたときに `delegatesFocus` が設定されていたかどうかを示す論理値を返します（{{domxref("Element.attachShadow()")}} を参照）。
+  - : 論理値で、フォーカスできないノードが選択された場合に、シャドウルートがフォーカスを譲るかどうかを示します。
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : このシャドウツリーで現在全画面モードになっている要素です。
 - {{domxref("ShadowRoot.host")}} {{ReadOnlyInline}}
@@ -36,6 +38,12 @@ l10n:
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : ポインターがロックされている間、マウスイベントのターゲットとして設定されている {{DOMxRef('Element')}} を返します。
     ロックが保留中か、ポインターがロックされていないか、ターゲットがほかのツリーにある場合は `null` を返します。
+- {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
+  - : 論理値で、シャドウルートがシリアライズ可能かどうかを示します。
+    要素内のシリアライズ可能なシャドウルートは、[`options.serializableShadowRoots`](/ja/docs/Web/API/Element/getHTML#serializableshadowroots) 引数が `true` に設定されている場合、{{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} によってシリアライズされます。
+    これは、シャドウルートが作成される際に設定されます。
+- {{DOMxRef("ShadowRoot.slotAssignment")}} {{ReadOnlyInline}}
+  - : スロット割り当ての型（`manual` または `named`）を持つ文字列を返します。
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : シャドウツリーに明示的にリンクされている、または埋め込まれている {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。
 
@@ -49,6 +57,8 @@ l10n:
   - : 指定された座標における最上位の要素を返します。
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : 指定された座標における全要素からなる配列を返します。
+- {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
+  - : HTML 文字列を、無害化せずに文書フラグメントとして解析し、シャドウルートに元から存在するサブツリーを置き換えます。HTML 文字列には宣言型のシャドウルートを記載することができます。これは、[`ShadowRoot.innerHTML`](#shadowroot.innerhtml) を使用して設定された HTML のテンプレート要素として解釈されます。
 
 ## イベント
 

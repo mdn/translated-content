@@ -2,7 +2,7 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -171,7 +171,7 @@ console.log(Array.from.call(NotArray, { length: 1, 0: "foo" }));
 // NotArray { '0': 'foo', length: 1 }
 ```
 
-`this` の値がコンストラクタでない場合は、プレーンな `Array` オブジェクトを返します。
+`this` の値がコンストラクターでない場合は、プレーンな `Array` オブジェクトを返します。
 
 ```js
 console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]

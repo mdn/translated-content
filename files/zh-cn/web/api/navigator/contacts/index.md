@@ -31,5 +31,5 @@ const supported = "contacts" in navigator && "ContactsManager" in window;
 
 ## 参见
 
-- [网页联系人选择器](https://developer.chrome.com/docs/capabilities/web-apis/contact-picker)
+- [网页联系人选择器](https://developer.chrome.google.cn/docs/capabilities/web-apis/contact-picker)
 - [Glitch 上的联系人选择器演示](https://contact-picker.glitch.me/)

@@ -87,4 +87,4 @@ barcodeDetector
 ## 参见
 
 - [barcodefaq.com：包含有关不同条形码和不同类型示例的信息的网站。](https://www.barcodefaq.com/)
-- [图像中的加速形状检测](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
+- [图像中的加速形状检测](https://developer.chrome.google.cn/docs/capabilities/shape-detection#barcodedetector)
