@@ -101,7 +101,7 @@ addButton.addEventListener("click", () => {
 });
 
 removeButton.addEventListener("click", () => {
-  // 从主体删除行
+  // 从表格体删除行
   row.deleteCell(-1);
 
   // 更新行数
@@ -109,7 +109,7 @@ removeButton.addEventListener("click", () => {
 });
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", "100%", 175)}}
 

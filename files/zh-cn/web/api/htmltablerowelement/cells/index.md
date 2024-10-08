@@ -76,7 +76,7 @@ function updateCellNumber() {
 }
 
 addButton.addEventListener("click", () => {
-  // 在第一行的默认添加单元格
+  // 在第一行的末尾添加单元格
   const newCell = row.insertCell();
   newCell.textContent = `单元格 ${cells.length}`;
 
@@ -85,7 +85,7 @@ addButton.addEventListener("click", () => {
 });
 
 removeButton.addEventListener("click", () => {
-  // 从主体删除行
+  // 从表格体删除行
   row.deleteCell(-1);
 
   // 更新行数
@@ -93,7 +93,7 @@ removeButton.addEventListener("click", () => {
 });
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", "100%", 175)}}
 
