@@ -25,7 +25,7 @@ l10n:
 
 ### Set の合成
 
-Set オブジェクトは、数学演算のように集合を合成するためのいくつかのメソッドを提供します。これらのメソッドには、以下が含まれます。
+`Set` オブジェクトは、数学演算のように集合を合成するためのいくつかのメソッドを提供します。これらのメソッドには、以下のようなものがあります。
 
 <table>
   <thead>
@@ -43,7 +43,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="A Venn diagram where two circles overlap. The difference of A and B is the part of A that is not overlapping B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference/diagram.svg" alt="A Venn diagram where two circles overlap. The difference of A and B is the part of A that is not overlapping B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
@@ -51,7 +51,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection/diagram.svg" alt="A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
@@ -59,7 +59,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/union", "A.union(B)")}}</td>
@@ -67,7 +67,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -75,7 +75,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom/diagram.svg" alt="A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
@@ -83,7 +83,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -91,7 +91,7 @@ Set オブジェクトは、数学演算のように集合を合成するため�
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
   </tbody>
 </table>
