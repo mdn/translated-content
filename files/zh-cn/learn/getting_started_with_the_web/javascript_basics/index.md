@@ -62,7 +62,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
 
 ### 发生了什么？
 
-使用 JavaScript 把标题文本改成了 _Hello world!_ 。用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，然后把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像。若要对某个元素进行操作，首先得选择它。
+使用 JavaScript 把标题文本改成了 _Hello world!_。用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，然后把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像。若要对某个元素进行操作，首先得选择它。
 
 接着，把 `myHeading` 变量的 {{domxref("Node.textContent", "textContent")}} 属性（表示标题内容）的值设置为 _Hello world!_。
 
