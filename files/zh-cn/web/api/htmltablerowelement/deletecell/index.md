@@ -80,7 +80,7 @@ button {
 ```js
 // 获取相关接口元素
 const bodySection = document.querySelectorAll("tbody")[0];
-const row = bodySection.rows[0]; // 选择主体部分的第一行
+const row = bodySection.rows[0]; // 选择表格体部分的第一行
 const cells = row.cells; // 集合是动态的，因此总是最新的
 const cellNumberDisplay = document.querySelectorAll("output")[0];
 
@@ -92,7 +92,7 @@ function updateCellNumber() {
 }
 
 addButton.addEventListener("click", () => {
-  // 在第一行的默认添加单元格
+  // 在第一行的末尾添加单元格
   const newCell = row.insertCell();
   newCell.textContent = `单元格 ${cells.length}`;
 
