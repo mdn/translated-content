@@ -194,9 +194,9 @@ l10n:
 - `hreflang`
   - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 {{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
 - `imagesizes`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性是[一种 sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性具有与 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `imagesrcset`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性是[一种 sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性具有与 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `integrity`
   - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码学哈希值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
