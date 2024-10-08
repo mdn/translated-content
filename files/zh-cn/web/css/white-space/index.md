@@ -62,7 +62,7 @@ white-space: unset;
 
     - 任何保留的空白序列总是占用空间，包括行末的。
     - 每个保留的空白字符后（包括空白字符之间）都可以被截断。
-    - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（最小内容——`min-content`——大小和最大内容——`max-content`——大小）。
+    - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（{{cssxref("min-content")}} 尺寸和 {{cssxref("max-content")}} 尺寸）。
 
 下面的表格总结了各种 `white-space` 关键字值的行为：
 
@@ -129,6 +129,8 @@ white-space: unset;
   </tbody>
 </table>
 
+默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line`值，每个制表符都会被转化为一个空格（U+0020）字符。
+
 > [!NOTE] > **空格**和**其他空白分隔符**之间存在区别。定义如下：
 >
 > - 空格
@@ -180,7 +182,6 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-    <option>preserve nowrap</option>
   </select>
   }
 </div>
@@ -198,7 +199,7 @@ pre {
 
 ```css hidden
 .box {
-  width: 300px;
+  width: 350px;
   padding: 16px;
 }
 
@@ -210,6 +211,7 @@ pre {
 
 #css-code select {
   font-family: inherit;
+  width: 100px;
 }
 
 #results {
@@ -224,7 +226,7 @@ pre {
 const select = document.querySelector("#css-code select");
 const results = document.querySelector("#results p");
 select.addEventListener("change", (e) => {
-  results.setAttribute("style", `white-space: ${e.target.value}`);
+  results.style.setProperty("white-space", e.target.value);
 });
 ```
 
@@ -269,7 +271,7 @@ td {
 
 #### 结果
 
-{{EmbedLiveSample("在表格中控制换行", "100%", "100%")}}
+{{EmbedLiveSample("控制表格中的换行", "100%", "100%")}}
 
 ### SVG 文本元素的多行文本
 
