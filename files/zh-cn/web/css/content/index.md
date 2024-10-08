@@ -9,30 +9,51 @@ slug: Web/CSS/content
 
 CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的[_可替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)。
 
-{{cssinfo}}
-
 ## 语法
 
-```
-Formal syntax: {{csssyntax("content")}}
-```
+```css
+/* 不能与其他值组合的关键字 */
+content: normal;
+content: none;
 
-```
-content: normal                                /* Keywords that cannot be combined with other values */
-content: none
+/* <content-replacement>：<image> 值 */
+content: url("http://www.example.com/test.png");
+content: linear-gradient(#e66465, #9198e5);
+content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
-content: 'prefix'                              /* <string> value, non-latin characters must be encoded e.g. \00A0 for &nbsp; */
-content: url(http://www.example.com/test.html) /* <uri> value */
-content: chapter_counter                       /* <counter> values */
-content: attr(value string)                    /* attr() value linked to the HTML attribute value */
-content: open-quote                            /* Language- and position-dependant keywords */
-content: close-quote
-content: no-open-quote
-content: no-close-quote
+/* 语音输出：“/”后为替代文本  */
+content: url("../img/test.png") / "这是替代文本";
 
-content: open-quote chapter_counter            /* Except for normal and none, several values can be used simultaneously */
+/* <string> 值 */
+content: "unparsed text";
 
-content: inherit
+/* <counter> 值，后跟可选的 <list-style-type> */
+content: counter(chapter_counter);
+content: counter(chapter_counter, upper-roman);
+content: counters(section_counter, ".");
+content: counters(section_counter, ".", decimal-leading-zero);
+
+/* attr() 值会链接到 HTML 属性值 */
+content: attr(href);
+
+/* <quote> 值 */
+content: open-quote;
+content: close-quote;
+content: no-open-quote;
+content: no-close-quote;
+
+/* <content-list>：content 值的列表。
+可以同时使用多个值 */
+content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("/img/test.png") "suffix" / "Alt text";
+content: open-quote counter(chapter_counter);
+
+/* 全局值 */
+content: inherit;
+content: initial;
+content: revert;
+content: revert-layer;
+content: unset;
 ```
 
 ### 值
@@ -53,6 +74,14 @@ content: inherit
   - : 这些值会被 {{ cssxref("quotes") }} 中定义的字符串替换。
 - `no-open-quote` | `no-close-quote`
   - : 不会生产任何内容，但是会改变（增加或降低）引号层级。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 

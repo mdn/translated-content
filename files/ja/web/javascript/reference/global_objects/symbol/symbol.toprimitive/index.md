@@ -1,18 +1,24 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
+title: Symbol.prototype[Symbol.toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
+l10n:
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`[@@toPrimitive]()`** メソッドは、 Symbol オブジェクトをプリミティブ値に変換します。
+**`[Symbol.toPrimitive]()`** メソッドは、{{jsxref("Symbol")}} オブジェクトをプリミティブ値に変換します。
 
 ## 構文
 
+```js-nolint
+symbolValue[Symbol.toPrimitive](hint)
 ```
-Symbol()[Symbol.toPrimitive](hint)
-```
+
+### 引数
+
+- `hint`
+  - : 文字列値で、返すプリミティブ値を示します。この値は無視されます。
 
 ### 返値
 
@@ -20,13 +26,13 @@ Symbol()[Symbol.toPrimitive](hint)
 
 ## 解説
 
-{{jsxref("Symbol")}} オブジェクトの `[@@toPrimitive]()` メソッドは、 Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。 `hint` 引数は使われません。
+`[Symbol.toPrimitive]()` は {{jsxref("Symbol")}} オブジェクトのメソッドで、Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。 `hint` 引数は使われません。
 
-JavaScript はオブジェクトをプリミティブ値に変換するために `[@@toPrimitive]()` メソッドを呼び出します。 `[@@toPrimitive]()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
+JavaScript はオブジェクトをプリミティブ値に変換するために `[Symbol.toPrimitive]()` メソッドを呼び出します。 `[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
 
 ## 例
 
-### @@toPrimitive の使用
+### `[Symbol.toPrimitive]()` の使用
 
 ```js
 const sym = Symbol("example");

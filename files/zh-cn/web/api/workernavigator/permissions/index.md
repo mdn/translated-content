@@ -2,10 +2,10 @@
 title: WorkerNavigator：permissions 属性
 slug: Web/API/WorkerNavigator/permissions
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers("worker")}}
 
 {{domxref("WorkerNavigator")}} 接口的 **`permissions`** 只读属性返回一个 {{domxref("Permissions")}} 对象，可以用于查询或更新 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 涵盖的 API 权限状态。
 

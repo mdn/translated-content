@@ -20,8 +20,10 @@ dialog::backdrop {
 
 ## 语法
 
-```
-::backdrop
+```css
+::backdrop {
+  /* ... */
+}
 ```
 
 ## 示例

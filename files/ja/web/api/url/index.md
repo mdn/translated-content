@@ -2,23 +2,20 @@
 title: URL
 slug: Web/API/URL
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 **`URL`** インターフェイスは、{{glossary("URL", "URL")}} の解釈、構築、正規化、およびエンコードに使用します。 URL のコンポーネントを簡単に読み取って変更できるプロパティを提供することで機能します。
 
 通常、新しい `URL` オブジェクトを作成するにはコンストラクターを呼び出すときに URL を文字列として指定するか、相対 URL とベース URL を指定します。その後、解釈された URL のコンポーネントを簡単に読み取ったり、URL を変更したりすることができます。
 
-ブラウザーがまだ {{domxref("URL.URL", "URL()")}} コンストラクターに対応していない場合は、{{domxref("Window")}} インターフェイスの {{domxref("URL")}} プロパティを使用して URL オブジェクトにアクセスできます。対象とするブラウザーのいずれかに、この接頭辞を付ける必要があるかどうかを確認してください。
-
-{{AvailableInWorkers}}
-
 ## コンストラクター
 
 - {{domxref("URL.URL", "URL()")}}
-  - : 絶対 URL 文字列、または相対 URL 文字列とベース URL 文字列を使用して指定された URL を参照する `URL` オブジェクトを作成して返します。
+  - : `URL` オブジェクトを、URL 文字列とオプションのベース URL 文字列から作成し、それを返します。
+    渡された引数が有効な URL を定義していない場合、例外が発生します。
 
 ## プロパティ
 
@@ -49,12 +46,14 @@ l10n:
 
 ## 静的メソッド
 
-- [`canParse()`](/ja/docs/Web/API/URL/canParse_static)
+- {{domxref("URL.canParse_static", "canParse()")}}
   - : URL 文字列とオプションのベース URL 文字列から定義された URL が解釈可能で有効かどうかを示す論理値を返します。
-- {{domxref("URL/createObjectURL_static", "createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : 一意の blob URL の入った文字列を返します。 これは、スキームとして `blob:` の入った URL で、その後にブラウザー内のオブジェクトを一意に識別する不透明な文字列が続きます。
-- {{domxref("URL/revokeObjectURL_static", "revokeObjectURL()")}}
-  - : {{domxref("URL.createObjectURL_static")}} を使用して以前に生成したオブジェクト URL を取り消します。
+- {{domxref("URL.parse_static", "parse()")}}
+  - : `URL` オブジェクトを、URL 文字列とオプションのベース URL 文字列から作成して返します。渡された引数が無効な `URL` を定義している場合は、`null` を返します。
+- {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
+  - : {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して以前に生成したオブジェクト URL を取り消します。
 
 ## メソッド
 
@@ -74,7 +73,7 @@ console.log(url.pathname); // "/cats"
 ```
 
 コンストラクターは URL を有効な URL に解釈できない場合に例外を発生させます。
-上記のコードを [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックの中で呼び出すか、[`canParse()`](/ja/docs/Web/API/URL/canParse_static) 静的メソッドを使って先に URL が有効かどうかをチェックしてください。
+上記のコードを [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックの中で呼び出すか、{{domxref("URL.canParse_static", "canParse()")}} 静的メソッドを使って先に URL が有効かどうかをチェックしてください。
 
 ```js
 if (URL.canParse("../cats", "http://www.example.com/dogs")) {
@@ -131,5 +130,4 @@ const response = await fetch(
 - [`URL` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/ja/docs/Web/API/URL_API)
 - [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- `URL` オブジェクトを取得するプロパティ: {{domxref("URL")}}
 - {{domxref("URLSearchParams")}}

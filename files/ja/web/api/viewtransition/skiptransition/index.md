@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`skipTransition()`** は {{domxref("ViewTransition")}} インターフェイスのメソッドで、ビュートランジションのアニメーション部分をスキップしますが、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
+**`skipTransition()`** は {{domxref("ViewTransition")}} インターフェイスのメソッドで、ビュー遷移のアニメーション部分をスキップしますが、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
 
 ## 構文
 
@@ -27,7 +27,7 @@ skipTransition()
 ## 例
 
 ```js
-// 新しいビュートランジションを開始
+// 新しいビュー遷移を開始
 const transition = document.startViewTransition(() => displayNewImage());
 
 // アニメーションをスキップし、DOM を更新する

@@ -91,5 +91,5 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 ## 参见
 
-- [介绍 Background Fetch](https://developer.chrome.com/blog/background-fetch/)
+- [介绍 Background Fetch](https://developer.chrome.google.cn/blog/background-fetch)
 - [Background Fetch——HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)
