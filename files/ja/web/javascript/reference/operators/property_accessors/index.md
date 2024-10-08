@@ -2,7 +2,7 @@
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
 {{jsSidebar("Operators")}}
