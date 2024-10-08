@@ -10,7 +10,7 @@ l10n:
 {{domxref("HTMLTableRowElement")}} 接口的 **`vAlign`** 属性是一个指示如何在表格列元素（{{htmlelement("tr")}}）中垂直对齐文本的字符串。单个单元格可以覆盖它。
 
 > [!NOTE]
-> 此属性已弃用。请使用 CSS {{cssxref("vertical-align")}} 属性来垂直对齐分段单元格中的文本。
+> 此属性已弃用。请使用 CSS {{cssxref("vertical-align")}} 属性来逐行垂直对齐单元格的文本。
 
 ## 值
 
