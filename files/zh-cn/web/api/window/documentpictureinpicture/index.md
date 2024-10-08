@@ -2,7 +2,7 @@
 title: Window：documentPictureInPicture 属性
 slug: Web/API/Window/documentPictureInPicture
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: bac20b9ed34bf5b6427ba9274c99c1737dc309ff
 ---
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
