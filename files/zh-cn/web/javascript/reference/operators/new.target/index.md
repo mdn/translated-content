@@ -15,7 +15,7 @@ new.target
 
 `new.target`语法由一个关键字"`new`"，一个点，和一个属性名"`target`"组成。通常"`new.`"`的`作用是提供属性访问的上下文，但这里"`new.`"其实不是一个真正的对象。不过在构造方法调用中，`new.target`指向被`new`调用的构造函数，所以"`new.`"成为了一个虚拟上下文。
 
-`new.target`属性适用于所有函数访问的元属性。在 [arrow functions](http://www.javascripttutorial.net/es6/javascript-arrow-function/) 中，`new.target` 指向最近的外层函数的`new.target`（An arrow function expression does not have its own this, arguments, super , or new\.target) 。
+`new.target`属性适用于所有函数访问的元属性。在 [arrow functions](http://www.javascripttutorial.net/es6/javascript-arrow-function/) 中，`new.target` 指向最近的外层函数的`new.target`（箭头函数表达式没有自己的 this、arguments、super 或 new.target) 。
 
 ## 示例
 
