@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的属性 **`vertical-align`** 用来指定行内元素（inline）、行内块元素（inline-block）、表格单元格（table-cell）元素的垂直对齐方式。
+[CSS](/zh-CN/docs/Web/CSS) **`vertical-align`** 属性用来指定行内（inline）、行内区块（inline-block）、表格单元格（table-cell）盒子的垂直对齐方式。
 
 {{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
-vertical-align 属性可被用于两种环境：
+vertical-align 属性可被用于两种上下文：
 
 - 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于[垂直对齐行文本内的图片](#行内盒的垂直对齐)
 - 垂直对齐[表格单元格的内容](#表格单元格中的垂直对齐)
@@ -31,11 +31,11 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* 长度值 */
+/* <length> 值 */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* 百分比值 */
+/* <percentage> 值 */
 vertical-align: 20%;
 
 /* 全局值 */
@@ -116,15 +116,15 @@ vertical-align: unset;
 </div>
 <div>
   <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
-  字体顶部对齐的图像
+  字体顶部（text-top）对齐的图像
 </div>
 <div>
   <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
-  字体底部对齐的图像
+  字体底部（text-bottom）对齐的图像
 </div>
 <div>
   <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
-  中部对齐的图像
+  中部（middle）对齐的图像
 </div>
 ```
 
@@ -271,6 +271,6 @@ td {
 ## 参见
 
 - [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#元素居中)
-- {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
+- {{Cssxref("line-height")}}、{{Cssxref("text-align")}}、{{Cssxref("margin")}}
 - [理解 `vertical-align`，如何（不）垂直居中内容](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align：你要知道的事](https://christopheraue.net/design/vertical-align)
