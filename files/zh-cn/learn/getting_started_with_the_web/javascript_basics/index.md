@@ -31,7 +31,7 @@ JavaScript 本身相对简洁，但非常灵活。开发者在核心 JavaScript 
 
 JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的增长，你的网站在功能和创新力上将达到一个新的维度。
 
-然而，熟练掌握 JavaScript 比熟练掌握 HTML 和 CSS 要更有挑战。你必须从简单的开始，然后逐步前进。首先，来看看如何在页面中添加 JavaScript 完成“Hello world!”示例（“Hello world!”是[标准的介绍性编程示例](https://zh.wikipedia.org/wiki/Hello_World)）。
+然而，熟练掌握 JavaScript 比熟练掌握 HTML 和 CSS 要更有挑战。你必须从简单的开始，然后逐步前进。首先，来看看如何在页面中添加 JavaScript 完成 _Hello world!_ 示例（_Hello world!_ 是[标准的介绍性编程示例](https://zh.wikipedia.org/wiki/Hello_World)）。
 
 > [!WARNING]
 > 如果你没有完成之前的课程，请先[下载这个示例代码](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)，把示例代码当作起始点。
@@ -43,7 +43,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
    <script src="scripts/main.js"></script>
    ```
 
-3. 这句话的功能与 CSS 的 {{htmlelement("link")}} 元素类似。在页面中引入 JavaScript，这样 JavaScript 就能对 HTML 上起作用（和 CSS，以及页面上的任何其他内容一起）。
+3. 这句话的功能与 CSS 的 {{htmlelement("link")}} 元素类似。在页面中引入 JavaScript，这样 JavaScript 就能对 HTML 起作用（和 CSS，以及页面上的任何其他内容一起）。
 4. 将下列代码添加到 `scripts/main.js` 文件：
 
    ```js
@@ -184,7 +184,7 @@ myVariable = "斯蒂夫";
 
 ### 运算符
 
-{{Glossary("Operator","运算符")}}是一种基于两个值（或变量）生成对应结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试这些示例。
+`{{Glossary("Operator","运算符")}}`是一种基于两个值（或变量）生成对应结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试这些示例。
 
 <table class="standard-table">
   <thead>
@@ -270,7 +270,7 @@ if (iceCream === "chocolate") {
 }
 ```
 
-`if ()` 中的表达式是一个测试。用（上文所提到的）严格相等运算符来比较 `iceCream` 变量 与 `'chocolate'` 字符串是否相等。如果返回 `true`，则运行第一个代码块；如果返回 `false`，则运行 `else` 关键字之后的第二个代码块。
+`if ()` 中的表达式是一个测试。用（上文所提到的）严格相等运算符来比较 `iceCream` 变量与 `chocolate` 字符串是否相等。如果返回 `true`，则运行第一个代码块；如果返回 `false`，则运行 `else` 关键字之后的第二个代码块。
 
 ### 函数
 
@@ -307,7 +307,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> [!NOTE] > [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器将 `result` 变量返回到函数外面。这一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（阅读更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
+> [!NOTE] 
+> [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器将 `result` 变量返回到函数外面。这一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（阅读更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
 
 ### 事件
 
@@ -394,7 +395,7 @@ document.querySelector("html").addEventListener("click", () => {
    }
    ```
 
-   `setUserName()` 函数包含一个 [`prompt()`](/zh-CN/docs/Web/API/Window/prompt) 函数，与 `alert()` 类似会弹出一个对话框。`prompt()` 函数的功能更多，需要用户输入数据，并在用户点击*确定*后将数据存储在一个变量中。在这个例子里，我们要求用户输入一个名字。接下来，代码调用 [`localStorage`] API，它允许我们将数据存储在浏览器中并供后续获取。我们使用 `localStorage` 的 `setItem()` 函数创建并存储一个`'name'` 的数据项，并将它的值设置为包含用户名的 `myName` 变量。最后将标题的 `textContent` 属性设置为带有用户新设置的名字的字符串。
+   `setUserName()` 函数包含一个 [`prompt()`](/zh-CN/docs/Web/API/Window/prompt) 函数，与 `alert()` 类似会弹出一个对话框。`prompt()` 函数的功能更多，需要用户输入数据，并在用户点击*确定*后将数据存储在一个变量中。在这个例子里，我们要求用户输入一个名字。接下来，代码调用 `localStorage` API，它允许我们将数据存储在浏览器中并供后续获取。我们使用 `localStorage` 的 `setItem()` 函数创建并存储一个`'name'` 的数据项，并将它的值设置为包含用户名的 `myName` 变量。最后将标题的 `textContent` 属性设置为带有用户新设置的名字的字符串。
 
 4. 在函数声明的后面添加下列条件语句块。我们称之为初始化代码，因为它在初次加载时开始工作。
 
@@ -407,9 +408,9 @@ document.querySelector("html").addEventListener("click", () => {
    }
    ```
 
-   这里的第一行使用取非运算符（逻辑非，用 `!` 表示）检测 `'name'` 数据是否存在。若不存在，调用 `setUserName()` 创建 `name` 数据。若存在（即用户上次访问时设置了用户名），调用 `getItem()` 获取保存的名字，然后像 `setUserName()` 中那样设置标题的 `textContent`。
+   这里的第一行使用取非运算符（逻辑非，用 `!` 表示）检测 `name` 数据是否存在。若不存在，调用 `setUserName()` 创建 `name` 数据。若存在（即用户上次访问时设置了用户名），调用 `getItem()` 获取保存的名字，然后像 `setUserName()` 中那样设置标题的 `textContent`。
 
-5. 设置按钮的 onclick 事件处理器。按钮点击时，运行 setUserName() 函数。这样用户就可以通过点击按钮设置新名字了。
+5. 设置按钮的 `onclick` 事件处理器。按钮点击时，运行 `setUserName()` 函数。这样用户就可以通过点击按钮设置新名字了。
 
    ```js
    myButton.onclick = function () {
