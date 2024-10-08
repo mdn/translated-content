@@ -1,6 +1,7 @@
 ---
 title: setTimeout() 全局函数
-slug: Web/API/setTimeout
+slug: Web/API/Window/setTimeout
+original_slug: Web/API/setTimeout
 ---
 
 {{APIRef("HTML DOM")}}
