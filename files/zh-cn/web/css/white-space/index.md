@@ -230,7 +230,7 @@ select.addEventListener("change", (e) => {
 
 {{EmbedLiveSample("试试看", "100%", 350)}}
 
-### 在表格中控制换行
+### 控制表格中的换行
 
 #### HTML
 
