@@ -36,7 +36,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
 > [!WARNING]
 > 如果你没有完成之前的课程，请先[下载这个示例代码](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)，把示例代码当作起始点。
 
-1. 打开测试站点的目录，创建一个名为 `scripts` 的新目录。然后在 `scripts` 目录中创建一个名为 main.js 的新文件，并保存。
+1. 打开测试站点的目录，创建一个名为 `scripts` 的新目录。然后在 scripts 目录中创建一个名为 `main.js` 的新文件，并保存。
 2. 打开 `index.html` 文件，在结束标签 `</body>` 前添加下列代码：
 
    ```html
@@ -255,7 +255,7 @@ myVariable = "斯蒂夫";
 运算符种类远不止这些，不过目前上表已经够用了。在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)中了解完整列表。
 
 > [!NOTE]
-> 执行计算时，混用类型类型可能出现一些奇怪的结果，注意要正确地引用变量，然后得到预期的结果。比如在控制台输入 `"35" + "25"`，为什么没有得到预期的结果？因为引号将数字转换成了字符串，所以结果是拼接两个字符串而不是把两个数字相加。如果输入 `35 + 25`，你就会得到两个数字的和。
+> 执行计算时，混用数据类型可能出现一些奇怪的结果。注意要正确地引用变量，然后得到预期的结果。比如在控制台输入 `"35" + "25"`，为什么没有得到预期的结果？因为引号将数字转换成了字符串，所以结果是拼接两个字符串而不是把两个数字相加。如果输入 `35 + 25`，你就会得到两个数字的和。
 
 ### 条件语句
 
@@ -452,7 +452,7 @@ function setUserName() {
 ## 参见
 
 - [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
-  - : 更深入 JavaScript 的细节。
+  - : 更深入地了解 JavaScript。
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
 
