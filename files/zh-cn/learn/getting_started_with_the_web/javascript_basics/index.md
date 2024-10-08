@@ -9,41 +9,41 @@ l10n:
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-JavaScript 是用于为网站添加交互特性的编程语言。例如，游戏、按钮按下或在表单中输入数据时会发生的事情、动态的样式效果、动画，等等。在本文中，我们将让你了解这门令人兴奋的语言的潜力，以及如何入门。
+JavaScript 是一门为网站添加交互性的编程语言。交互性体现在游戏、点击按钮或输入表单时的响应行为；动态的样式；动画，等等。本文将帮助你入门 JavaScript，并进一步加深你对 JavaScript 所能实现的功能的理解。
 
 ## JavaScript 到底是什么？
 
 {{Glossary("JavaScript")}} 是一门为网站添加交互性的强有力的编程语言。由布兰登·艾克发明。
 
-JavaScript 的应用场合极其广泛且新手友好。有了更多的经验之后，你将能够创建游戏、2D 和 3D 图形动画、全面的数据库驱动的应用程序，等等。
+JavaScript 是一门多功能的、新手友好的编程语言。随着经验的积累，你将能够创建游戏、2D 和 3D 图形动画、全面的数据库驱动应用程序，等等。
 
-JavaScript 自身相对简洁，却非常灵活。开发者们基于核心的 JavaScript 语言编写了大量实用工具，可以使开发工作事半功倍。包括：
+JavaScript 本身相对简洁，但非常灵活。开发者在核心 JavaScript 语言的基础上编写了各种工具，让你能以最小的努力解锁了大量的功能。这些工具包括：
 
-- 浏览器应用程序编程接口（{{Glossary("API","API")}}）内置于 Web 浏览器，提供诸如动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流和生成 3D 图像与音频样本的功能。
-- 第三方 API 让开发者在站点中整合其他的内容提供商（如 [Disqus](https://disqus.com/)、Facebook）提供的功能。
-- 第三方框架和库用于快速构建网站和应用。
+- Web 浏览器内置的应用程序编程接口（{{Glossary("API","API")}}），提供了丰富的功能，例如：动态创建 HTML 和设置 CSS 样式；从用户的摄像头采集和处理视频流、生成 3D 图形和音频样本。
+- 允许开发者将来自其他内容提供商（如 [Disqus](https://disqus.com/)、Facebook）的功能整合到自己的网站中的第三方 API。
+- 能够应用于 HTML 加速网站和应用程序开发的第三方框架和库。
 
-作为一篇 JavaScript 的简介，详细介绍核心的 JavaScript 语言和上述工具的区别超出了本文的范围。你可以在 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)，以及 MDN 的其余部分学习更多。
+作为一篇 JavaScript 的简要介绍，阐述核心 JavaScript 和上述的工具之间的区别超出了本文的范围。你可以在 MDN 的 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)，以及 MDN 的其余部分了解更多信息。
 
-下面对核心的语言的一部分做个介绍，还会接触一些浏览器 API 特性。玩得高兴！
+接下来将介绍核心语言的一些方面，并提供体验一些浏览器 API 特性的机会。祝你玩得开心！
 
 ## “Hello World!”示例
 
 JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的增长，你的网站在功能和创新力上将达到一个新的维度。
 
-然而，熟练掌握 JavaScript 比熟练掌握 HTML 和 CSS 要更有挑战。你必须从简单的开始，然后逐步前进。首先，来看看如何在页面中添加 JavaScript 完成一个“Hello world!”示例（“Hello world!”是[标准的介绍性编程示例](https://zh.wikipedia.org/wiki/Hello_World)）。
+然而，熟练掌握 JavaScript 比熟练掌握 HTML 和 CSS 要更有挑战。你必须从简单的开始，然后逐步前进。首先，来看看如何在页面中添加 JavaScript 完成“Hello world!”示例（“Hello world!”是[标准的介绍性编程示例](https://zh.wikipedia.org/wiki/Hello_World)）。
 
 > [!WARNING]
-> 如果你没有完成之前的课程实践，请先[下载这个示例代码](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)。
+> 如果你没有完成之前的课程，请先[下载这个示例代码](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)，把示例代码当作起始点。
 
 1. 打开测试站点的目录，创建一个名为 `scripts` 的新目录。然后在 `scripts` 目录中创建一个名为 main.js 的新文件，并保存。
-2. 在 `index.html` 文件中，在结束标签 `</body>` 前添加下列代码：
+2. 打开 `index.html` 文件，在结束标签 `</body>` 前添加下列代码：
 
    ```html
    <script src="scripts/main.js"></script>
    ```
 
-3. 与 CSS 的 {{htmlelement("link")}} 元素类似，在页面中引入 JavaScript，这样 JavaScript 能在 HTML 上产生效果，（和 CSS，以及页面上的任何其他内容一起）。
+3. 这句话的功能与 CSS 的 {{htmlelement("link")}} 元素类似。在页面中引入 JavaScript，这样 JavaScript 就能对 HTML 上起作用，（和 CSS，以及页面上的任何其他内容一起）。
 4. 将下列代码添加到 `scripts/main.js` 文件：
 
    ```js
@@ -51,46 +51,46 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
    myHeading.textContent = "Hello world!";
    ```
 
-5. 确认保存了 HTML 和 JavaScript 文件。在浏览器中打开 `index.html`。你应该看到类似的内容：
+5. 确认保存了 HTML 和 JavaScript 文件。然后在浏览器中打开 `index.html`。你应该看到类似的内容：
 
 ![“hello world”标题，下面是 firefox 标志](hello-world.png)
 
 > [!NOTE]
 > 上面将 {{htmlelement("script")}} 元素放在 HTML 文件的底部附近的原因是**浏览器会按照代码在文件中的顺序进行读取**。
 >
-> 如果 JavaScript 先加载，并期望对还未加载的 HTML 产生效果，可能会出现问题。将 JavaScript 放在 HTML 页面的底部附近是一种解决方案。想要了解更多的替代方案，参见[脚本加载策略](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#脚本加载策略)。
+> 如果 JavaScript 先加载，并期望操纵还未加载的 HTML，可能会出现问题。将 JavaScript 放在 HTML 页面的底部附近是一种解决方案。想要了解更多的替代方案，参见[脚本加载策略](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#脚本加载策略)。
 
 ### 发生了什么？
 
-使用 JavaScript 把标题改成了“Hello world!” 。首先用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，接着把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。
+使用 JavaScript 把标题文本改成了 _Hello world!_ 。用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，然后把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像。若要对某个元素进行操作，首先得选择它。
 
-然后，把 `myHeading` 变量的 {{domxref("Node.textContent", "textContent")}} 属性（表示标题内容）的值设置为“Hello world!” 。
+接着，把 `myHeading` 变量的 {{domxref("Node.textContent", "textContent")}} 属性（表示标题内容）的值设置为 _Hello world!_。
 
 > [!NOTE]
-> 在这个练习中用到的两个特性都来自[文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)（用于操作文档）。
+> 在这个练习中用到的两个特性都来自[文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)（DOM API 用于操纵文档）。
 
 ## JavaScript 速成课程
 
-为了让你更好地理解 JavaScript 的运行机制，我们会解释一些核心的语言特性。值得注意的是，这些特性是所有编程语言的共性。如果掌握了这些基础知识，你也可以开始用其他语言写代码。
+为了让你更好地理解 JavaScript 的运行机制，我们会解释一些语言的核心特性。值得注意的是，这些特性是所有编程语言的共性。如果掌握了这些基础知识，你也可以开始用其他语言写代码。
 
 > [!WARNING]
-> 学习本节时，请尝试将示例代码输入到 JavaScript 控制台，看看会发生什么。想了解 JavaScript 控制台的更多信息，参见[探索浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
+> 学习本节时，请尝试在 JavaScript 控制台中输入示例代码行，看看会发生什么。在[探索浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中了解更多有关 JavaScript 控制台的信息。
 
 ### 变量
 
-{{Glossary("Variable", "变量")}} 是存储值的容器。要声明一个变量，先输入 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 关键字，然后输入变量名：
+{{Glossary("Variable", "变量")}}是存储值的容器。要声明变量，先输入 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 关键字，然后输入变量名：
 
 ```js
 let myVariable;
 ```
 
-行末的分号表示语句结束。仅当你需要在单行内分割多条语句时，这个分号才是必须的。然而，一些人认为每条语句末尾加分号是最佳实践。对于何时应该使用、何时不应该使用分号有其他的规则。更多细节参见 [JavaScript 中的分号指南](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/)。
+行尾的分号表示语句结束。仅当你需要在单行内分隔多条语句时，分号才是必须的。然而，一些人认为每条语句末尾加分号是最佳实践。对于何时应该使用、何时不应该使用分号有其他的规则。在[你的 JavaScript 分号指南](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/)中了解更多细节。
 
 变量名几乎可以任意取，但有一些限制（参见 [命名规则小节](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量)）。如果你不确定，还可以[验证变量名](https://mothereff.in/js-variables)是否有效。
 
 JavaScript 对大小写敏感。这意味着 `myVariable` 和 `myvariable` 是不同的。如果代码中有问题，检查一下大小写！
 
-声明一个变量后，你可以给它赋值：
+声明变量后，你可以给它赋值：
 
 ```js
 myVariable = "鲍勃";
@@ -108,14 +108,14 @@ let myVariable = "鲍勃";
 myVariable;
 ```
 
-变量赋值之后，你可以修改变量的值：
+给变量赋值后，你可以修改变量的值：
 
 ```plain
 let myVariable = "鲍勃";
 myVariable = "斯蒂夫";
 ```
 
-注意变量可以存储拥有不同[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)的值：
+注意变量可以存储不同[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)的值：
 
 <table class="standard-table">
   <thead>
@@ -129,25 +129,25 @@ myVariable = "斯蒂夫";
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
-        字符串就是文本序列。用单引号或双引号括起来的值就是字符串。
+        字符串：字符产就是文本序列。用单引号或双引号括起来的值就是字符串。
       </td>
       <td><code>let myVariable = '鲍勃';</code> 或者 <br/><code>let myVariable = "鲍勃";</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Number")}}</th>
-      <td>这是数字。数字周围没有引号。</td>
+      <td>数字：数字周围没有引号。</td>
       <td><code>let myVariable = 10;</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Boolean")}}</th>
       <td>
-        这是真/假值。单词 <code>true</code>/<code>false</code> 是特殊的关键字，不需要引号。
+        布尔：真/假值。单词 <code>true</code>/<code>false</code> 是不需要引号的特殊关键字。
       </td>
       <td><code>let myVariable = true;</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Array")}}</th>
-      <td>这个结构让你在单一引用中存储多个值。</td>
+      <td>数组：让你在单一引用中存储多个值的结构。</td>
       <td>
         <code>let myVariable = [1,'鲍勃','斯蒂夫',10];</code><br />像这样引用数组成员：<code>myVariable[0]</code>，<code>myVariable[1]</code>，等等。
       </td>
@@ -155,16 +155,16 @@ myVariable = "斯蒂夫";
     <tr>
       <th scope="row">{{Glossary("Object")}}</th>
       <td>
-        都是对象。JavaScript 里一切皆对象，对象能在变量中存储。这一点要牢记于心。
+        对象：JavaScript 里的一切都是对象，对象能在变量中存储。这一点要牢记于心。
       </td>
       <td>
-        <code>let myVariable = document.querySelector('h1');</code><br />上面所有示例都是对象。
+        <code>let myVariable = document.querySelector('h1');</code><br />上面的示例都是。
       </td>
     </tr>
   </tbody>
 </table>
 
-那么变量有什么用呢？编程时变量无处不在。如果值不能修改，那么就无法做任何动态的工作，比如发送个性化的问候，或是改变图片库中展示的图片。
+那么变量有什么用呢？编程时变量无处不在。如果值不能修改，那么就无法做任何动态的工作，比如个性化的问候，或是改变图片库中展示的图片。
 
 ### 注释
 
@@ -184,7 +184,7 @@ myVariable = "斯蒂夫";
 
 ### 运算符
 
-{{Glossary("Operator","运算符")}}是基于两个值（或变量）生成一个结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试一下这些示例。
+{{Glossary("Operator","运算符")}}是一种基于两个值（或变量）生成对应结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试这些示例。
 
 <table class="standard-table">
   <thead>
@@ -198,7 +198,7 @@ myVariable = "斯蒂夫";
   <tbody>
     <tr>
       <th scope="row">加</th>
-      <td>将两个数字相加，或拼接两个字符串。</td>
+      <td>将两个数字相加或拼接两个字符串。</td>
       <td><code>+</code></td>
       <td>
         <code>6 + 9;<br />'Hello ' + 'world!';</code>
@@ -206,10 +206,10 @@ myVariable = "斯蒂夫";
     </tr>
     <tr>
       <th scope="row">减、乘、除</th>
-      <td>这些运算符操作与基础算术一致。</td>
+      <td>这些运算符的作用与基础算术一致。</td>
       <td><code>-</code>、<code>*</code>、<code>/</code></td>
       <td>
-        <code>9 - 3;<br />8 * 2; //JS 中的乘法是一个星号<br />9 / 3;</code>
+        <code>9 - 3;<br />8 * 2; //乘法在 JS 中是一个星号<br />9 / 3;</code>
       </td>
     </tr>
     <tr>
@@ -242,7 +242,7 @@ myVariable = "斯蒂夫";
           <code>let myVariable = 3;<br />!(myVariable === 3);</code>
         </p>
         <p>
-          “不等于”用不同的语法得出了基本上一样的结果。这里测试“<code>myVariable</code> 不等于 3”。返回 <code>false</code>，因为 <code>myVariable</code> 不等于 3：
+          “不等于”用不同的语法得出了基本上一样的结果。这里测试“<code>myVariable</code> 不等于 3”。返回 <code>false</code>，因为 <code>myVariable</code> 等于 3：
         </p>
         <p>
           <code>let myVariable = 3;<br />myVariable !== 3;</code>
@@ -252,7 +252,7 @@ myVariable = "斯蒂夫";
   </tbody>
 </table>
 
-运算符种类远不止这些，不过目前上表已经够用了。完整列表参见 [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)。
+运算符种类远不止这些，不过目前上表已经够用了。在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)中了解完整列表。
 
 > [!NOTE]
 > 执行计算时，混用类型类型可能出现一些奇怪的结果，注意要正确地引用变量，然后得到预期的结果。比如在控制台输入 `"35" + "25"`，为什么没有得到预期的结果？因为引号将数字转换成了字符串，所以结果是拼接两个字符串而不是把两个数字相加。如果输入 `35 + 25`，你就会得到两个数字的和。
@@ -270,23 +270,23 @@ if (iceCream === "chocolate") {
 }
 ```
 
-`if ()` 中的表达式是一个测试。用（上文所提到的）严格相等运算符来比较 `iceCream` 变量 与 `'chocolate'` 字符串是否相等。如果返回 `true`，则运行第一个代码块；如果返回 `false`，则运行 `else` 关键字后面的第二个代码块。
+`if ()` 中的表达式是一个测试。用（上文所提到的）严格相等运算符来比较 `iceCream` 变量 与 `'chocolate'` 字符串是否相等。如果返回 `true`，则运行第一个代码块；如果返回 `false`，则运行 `else` 关键字之后的第二个代码块。
 
 ### 函数
 
-{{Glossary("Function", "函数")}} 用来封装可复用的功能。定义代码体为一个函数，在代码中通过调用函数名执行函数是可能的。这是重复书写相同的代码的一个很好的替代方式。你已经见过一些函数的使用了。比如：
+{{Glossary("Function", "函数")}}是一种将你希望重复使用的功能封装起来的方式。你可以将一段代码定义为一个函数，当你在代码中调用该函数名时，它会执行。这是一种避免重复编写相同代码的好方式。你已经看到了一些函数的使用示例了。比如：
 
 ```js
 let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert("hello!");
+alert("你好！");
 ```
 
 `document.querySelector` 和 `alert` 是浏览器内置的函数。
 
-如果你发现有个像变量名，但后面跟着小括号——`()`——的东西，它很可能是函数。函数经常接收{{Glossary("Argument", "参数")}}：函数用来执行特定的任务。参数位于括号内，多个参数之间用逗号分开。
+如果你发现有个像变量名，但后面跟着小括号——`()`——的东西，它很可能是函数。函数经常接收{{Glossary("Argument", "参数")}}：函数用来执行特定的任务。参数位于小括号内，多个参数之间用逗号分开。
 
 比如， `alert()` 函数在浏览器窗口内弹出一个警告框，但还应为其提供一个字符串参数，告诉它警告框里要显示的内容。
 
@@ -299,7 +299,7 @@ function multiply(num1, num2) {
 }
 ```
 
-尝试在控制台运行这个函数；然后多试几组参数。比如：
+尝试在控制台中运行这个函数；然后多试几组参数。比如：
 
 ```js
 multiply(4, 7);
@@ -308,11 +308,11 @@ multiply(0.5, 3);
 ```
 
 > [!NOTE]
->[`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器返回 `result` 变量到函数外面，。这是一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（了解更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
+>[`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句告诉浏览器将 `result` 变量返回到函数外面。这一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的{{Glossary("Scope", "作用域")}}。（阅读更多有关[变量的作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)的内容。）
 
 ### 事件
 
-事件能为网页添加真正的交互。它们是监听浏览器活动的代码块，并在响应中运行代码。最明显的例子就是处理[点击事件](/zh-CN/docs/Web/API/Element/click_event)，当你用鼠标点击时，浏览器会触发该事件。作为演示，将下面的代码输入到控制台，然后点击网页的任意位置：
+事件处理器能为网页添加真正的交互。它们是监听浏览器活动的代码块，并在响应中运行代码。最明显的例子就是处理[点击事件](/zh-CN/docs/Web/API/Element/click_event)，当你用鼠标点击时，浏览器会触发该事件。作为演示，在控制台中输入下面的代码，然后点击网页的任意位置：
 
 ```js
 document.querySelector("html").addEventListener("click", function () {
@@ -320,7 +320,7 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-将事件处理器与元素绑定有许多方法。在这里选用了 {{htmlelement("html")}} 元素，然后调用了它的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数，传递一个要监听的（`'click'`）事件名和一个事件发生时要运行的函数。
+将事件处理器与元素绑定有许多方法。这里我们选择了 {{htmlelement("html")}} 元素，然后调用了它的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数，传递一个要监听的（`'click'`）事件名和一个事件发生时要运行的函数。
 
 刚刚我们传递给 `addEventListener()` 的函数被称为*匿名函数*，因为它没有名字。匿名函数还有另一种书写方式，我们称之为*箭头函数*。箭头函数使用 `() =>` 而不是 `function ()`：
 
@@ -332,9 +332,9 @@ document.querySelector("html").addEventListener("click", () => {
 
 ## 完善示例网站
 
-现在你已经具备了一些 JavaScript 基础，下面来为示例网站添加一些新特性。
+现在你已经具备了一些 JavaScript 基础，下面让我们为示例网站添加一些新特性。
 
-在继续下面之前，将 `main.js` 文件中的内容都删掉——即你在“Hello world!”示例中添加的内容——并保存这个空文件。要是不这样做的话，已经存在的代码将会与你下面要写的新代码产生冲突。
+在继续下面的内容之前，将 `main.js` 文件中的内容都删掉——即你在“Hello world!”示例中添加的内容——并保存这个空文件。要是不这样做的话，已经存在的代码将会与你下面要写的新代码产生冲突。
 
 ### 添加一个图像切换器
 
@@ -360,7 +360,7 @@ document.querySelector("html").addEventListener("click", () => {
 
 5. 保存所有文件并用浏览器打开 `index.html`。现在，当你点击图片时，会切换成另一张。
 
-发生的事情是这样的。把 {{htmlelement("img")}} 元素的引用存储在 `myImage` 变量。接下来，将它的 `onclick` 事件处理器属性等于一个无名函数（“匿名”函数）。这样每次点击图片时：
+发生的事情是这样的。把 {{htmlelement("img")}} 元素的引用存储在 `myImage` 变量中。接下来，让它的 `onclick` 事件处理器属性等于一个无名函数（“匿名”函数）。这样每次点击图片时：
 
 1. 获取这张图片的 `src` 属性值。
 2. 用一个条件句来判断 `src` 的值是否等于原始图片的路径：
@@ -372,20 +372,20 @@ document.querySelector("html").addEventListener("click", () => {
 
 接下来，让我们在用户第一次访问站点时将页面标题修改为个性化欢迎信息。这个欢迎消息会一直存在。名字信息会由 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 保存下来，即使用户关闭页面之后再重新打开。还会添加一个选项，改变用户名字以更新欢迎信息。
 
-1. 在 `index.html` 中，在 {{htmlelement("script")}} 元素前添加下列代码：
+1. 打开 `index.html`，在 {{htmlelement("script")}} 元素前添加下列代码：
 
    ```html
    <button>Change user</button>
    ```
 
-2. 在 `main.js` 中，将下列代码原封不动地添加到文件的底部。将获取新按钮和标题的引用，并存储到变量中：
+2. 打开 `main.js`，将下列代码原封不动地添加到文件的底部。将获取新按钮和标题的引用，并存储到变量中：
 
    ```js
    let myButton = document.querySelector("button");
    let myHeading = document.querySelector("h1");
    ```
 
-3. 添加下列设置个性化欢迎信息的函数。什么都还没发生，但一会就会发生了。
+3. 添加下列设置个性化欢迎信息的函数。现在什么都还没发生，但一会就会发生了。
 
    ```js
    function setUserName() {
