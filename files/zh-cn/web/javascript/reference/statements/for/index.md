@@ -2,7 +2,7 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 l10n:
-  sourceCommit: 2a71e92730e3cb0eef85991d04b10ef15531ab0c
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{jsSidebar("Statements")}}
@@ -34,6 +34,13 @@ for (initialization; condition; afterthought)
   - : 每次循环迭代结束时执行的表达式。执行时机是在下一次判定 `condition` 之前。通常被用于更新或者递增计数器变量。
 - `statement`
   - : 只要条件的判定结果为真就会被执行的语句。你可以使用[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)来执行多个语句。如果没有任何语句要执行，请使用一个[空语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)（`;`）。
+
+## 描述
+
+就像其他循环语句，你可以在 `statement` 中使用[控制流程语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#控制流程)：
+
+- {{jsxref("Statements/break", "break")}} 停止 `statement` 的执行，并转到循环后的第一条语句。
+- {{jsxref("Statements/continue", "continue")}} 停止 `statement` 的执行，并重新执行 `afterthought`，然后是 `condition`。
 
 ## 示例
 
@@ -139,7 +146,7 @@ for (; i < 3; i++) {
 }
 ```
 
-它打印了 `3`、`3` 和 `3`，因为每个 `setTimeout` 创建了一个新的闭包，它引用了 `i` 变量，但是如果 `i` 不是循环体的局部变量，那么所有的闭包都会引用同一个变量，并且由于 [`setTimeout`](/zh-CN/docs/Web/API/setTimeout) 的异步性质，它可能在循环已经退出之后才被调用，导致所有队列里的回调函数的 `i` 值都被设置为 `3`。
+它打印了 `3`、`3` 和 `3`，因为每个 `setTimeout` 创建了一个新的闭包，它引用了 `i` 变量，但是如果 `i` 不是循环体的局部变量，那么所有的闭包都会引用同一个变量，并且由于 {{domxref("Window.setTimeout", "setTimeout()")}} 的异步性质，它可能在循环已经退出之后才被调用，导致所有队列里的回调函数的 `i` 值都被设置为 `3`。
 
 如果你使用 `var` 语句来初始化，那么变量声明将只作用于函数作用域，而不是词法作用域（即它不会局限于循环体）。
 

@@ -134,7 +134,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - `window[0]`、`window[1]` 等
   - : 以逐帧形式返回对 `window` 对象的引用，要了解更多细节，参见 {{domxref("Window.frames")}}。
 
-### 已废弃属性
+### 已弃用的属性
 
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回**当前事件**，即当前由 JavaScript 代码的上下文处理的事件，如果当前没有事件被处理，则返回 `undefined`。应尽可能使用直接传递给事件处理程序的 {{domxref("Event")}} 对象来代替。
@@ -169,8 +169,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 取消使用 `setImmediate()` 设置的重复执行任务。
 - {{domxref("Window.clearInterval()")}}
   - : 取消使用 {{domxref("Window.setInterval()")}} 设置的重复执行任务。
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : 取消使用 {{domxref("setTimeout()")}} 设置的延时执行任务。
+- {{domxref("Window.clearTimeout()")}}
+  - : 取消使用 {{domxref("Window.setTimeout()")}} 设置的延时执行任务。
 - {{domxref("Window.close()")}}
   - : 关闭当前窗口。
 - {{domxref("Window.confirm()")}}
@@ -237,7 +237,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 安排一个函数，在给定的毫秒数过去后执行。
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : 切换用户调整窗口大小的能力。
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : 安排函数在给定的时间内执行。
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
   - : 根据窗口的内容确定其大小。
@@ -252,7 +252,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : 更新当前 chrome 窗口（用户界面）的命令状态。
 
-### 已废弃方法
+### 已弃用的方法
 
 - {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。

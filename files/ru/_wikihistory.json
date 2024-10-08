@@ -7486,6 +7486,10 @@
       "shimopus"
     ]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-11-18T12:13:20.493Z",
+    "contributors": ["kosarev_va", "WhiteApfel", "lilka9", "AliaksandrZahorski"]
+  },
   "Web/API/Window/stop": {
     "modified": "2019-03-23T22:28:10.946Z",
     "contributors": ["maximTorba"]
@@ -7790,10 +7794,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-11-18T12:13:20.493Z",
-    "contributors": ["kosarev_va", "WhiteApfel", "lilka9", "AliaksandrZahorski"]
   },
   "Web/API/setTimeout": {
     "modified": "2020-11-18T12:03:29.649Z",

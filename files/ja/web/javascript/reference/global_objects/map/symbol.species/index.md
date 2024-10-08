@@ -1,14 +1,13 @@
 ---
-title: get Map[@@species]
+title: Map[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 l10n:
-  sourceCommit: 8183cfa3a25c440ca4ff0f39fe941871ed495a7b
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`Map[@@species]`** は静的アクセサープロパティで、 `Map` オブジェクトをコピーする方法を示す未使用のアクセサープロパティです。
+**`Map[Symbol.species]`** は静的アクセサープロパティで、 `Map` オブジェクトをコピーする方法を示す未使用のアクセサープロパティです。
 
 ## 構文
 
@@ -18,11 +17,11 @@ Map[Symbol.species]
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクター (`this`) の値です。返さる値は、 `Map` インスタンスのコピーを構築するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。返される値は、`Map` インスタンスのコピーを構築するために使用されます。
 
 ## 解説
 
-species アクセサープロパティは `Map` オブジェクトのデフォルトコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターに代入して変更することによりオーバーライドすることができます。
+species アクセサープロパティは `Map` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターに代入して変更することによりオーバーライドすることができます。
 
 > [!NOTE]
 > このプロパティは現在、どの `Map` のメソッドからも使われていません。
@@ -31,7 +30,7 @@ species アクセサープロパティは `Map` オブジェクトのデフォ�
 
 ### 通常のオブジェクトの species
 
-species プロパティはデフォルトコンストラクター関数を返しますので、 `Map` オブジェクトには `Map` コンストラクターを返します。
+species プロパティは既定のコンストラクター関数を返しますので、`Map` オブジェクトには `Map` コンストラクターを返します。
 
 ```js
 Map[Symbol.species]; // function Map()

@@ -7,15 +7,15 @@ slug: Web/JavaScript/Reference/Operators/new.target
 
 ## 语法
 
-```plain
+```js-nolint
 new.target
 ```
 
 ## 描述
 
-`new.target`语法由一个关键字"`new`"，一个点，和一个属性名"`target`"组成。通常"`new.`"`的`作用是提供属性访问的上下文，但这里"`new.`"其实不是一个真正的对象。不过在构造方法调用中，`new.target`指向被`new`调用的构造函数，所以"`new.`"成为了一个虚拟上下文。
+`new.target` 语法由关键字 `new`、点和标识符 `target` 组成。由于 `new` 是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)而非标识符；其并不是[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)，而是一种特殊的表达式语法。
 
-`new.target`属性适用于所有函数访问的元属性。在 [arrow functions](http://www.javascripttutorial.net/es6/javascript-arrow-function/) 中，`new.target` 指向最近的外层函数的`new.target`（An arrow function expression does not have its own this, arguments, super , or new\.target) 。
+`new.target` 元属性在所有的函数/类主体均可用。在函数或类的外部使用 `new.target` 会导致语法错误。
 
 ## 示例
 

@@ -21,7 +21,7 @@ JavaScript 中的 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/
 
 - 一段新程序或子程序被直接执行时（比如从一个控制台，或在一个 {{HTMLElement("script")}} 元素中运行代码）。
 - 触发了一个事件，将其回调函数添加到任务队列时。
-- 执行到一个由 {{domxref("setTimeout()")}} 或 {{domxref("Window.setInterval", "setInterval()")}} 创建的 timeout 或 interval，以致相应的回调函数被添加到任务队列时。
+- 执行到一个由 {{domxref("Window.setTimeout", "setTimeout()")}} 或 {{domxref("Window.setInterval", "setInterval()")}} 创建的 timeout 或 interval，以致相应的回调函数被添加到任务队列时。
 
 事件循环驱动你的代码按照这些任务排队的顺序，一个接一个地处理它们。在事件循环的单次迭代中，将执行任务队列中最旧的可运行任务。之后，微任务将被执行，直到微任务队列为空，然后浏览器可以选择更新渲染。然后浏览器继续进行事件循环的下一次迭代。
 

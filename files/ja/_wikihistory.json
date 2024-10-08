@@ -13903,6 +13903,18 @@
       "Hfjapancom"
     ]
   },
+  "Web/API/Window/clearTimeout": {
+    "modified": "2020-10-15T21:16:17.778Z",
+    "contributors": [
+      "mfuji09",
+      ".Hiroya",
+      "mushahiroyuki",
+      "fscholz",
+      "jsx",
+      "ethertank",
+      "Potappo"
+    ]
+  },
   "Web/API/Window/close": {
     "modified": "2020-10-15T21:16:53.403Z",
     "contributors": [
@@ -14553,6 +14565,23 @@
       "Hfjapancom"
     ]
   },
+  "Web/API/Window/setTimeout": {
+    "modified": "2020-10-15T21:15:57.322Z",
+    "contributors": [
+      "mfuji09",
+      "yyss",
+      "hamasaki",
+      "teoli",
+      "AshfaqHossain",
+      "ethertank",
+      "dextra",
+      "Ceth",
+      "Shoot",
+      "Marsf",
+      "Mgjbot",
+      "Hfjapancom"
+    ]
+  },
   "Web/API/Window/showModalDialog": {
     "modified": "2019-08-18T18:14:25.207Z",
     "contributors": [
@@ -15094,18 +15123,6 @@
     "modified": "2020-04-13T14:03:23.203Z",
     "contributors": ["mfuji09", "Marsf"]
   },
-  "Web/API/clearTimeout": {
-    "modified": "2020-10-15T21:16:17.778Z",
-    "contributors": [
-      "mfuji09",
-      ".Hiroya",
-      "mushahiroyuki",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/console": {
     "modified": "2020-10-15T21:08:48.807Z",
     "contributors": [
@@ -15182,23 +15199,6 @@
   "Web/API/console/warn_static": {
     "modified": "2019-03-23T22:34:47.743Z",
     "contributors": ["yyss"]
-  },
-  "Web/API/setTimeout": {
-    "modified": "2020-10-15T21:15:57.322Z",
-    "contributors": [
-      "mfuji09",
-      "yyss",
-      "hamasaki",
-      "teoli",
-      "AshfaqHossain",
-      "ethertank",
-      "dextra",
-      "Ceth",
-      "Shoot",
-      "Marsf",
-      "Mgjbot",
-      "Hfjapancom"
-    ]
   },
   "Web/API/treeWalker": {
     "modified": "2020-10-15T21:21:02.292Z",

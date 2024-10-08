@@ -2,7 +2,7 @@
 title: Window：setInterval() 方法
 slug: Web/API/Window/setInterval
 l10n:
-  sourceCommit: 1cefd237f7e20b060020324904fec16bef3ebbec
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -39,7 +39,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 返回值 `intervalID` 是一个非零数值，用来标识调用 `setInterval()` 创建的定时器；这个值可以用来传递给 {{domxref("Window.clearInterval", "clearInterval()")}} 来清除定时器。
 
-值得注意的是，`setInterval()` 和 {{domxref("setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰可见，你应该尝试始终匹配，以避免维护代码时产生混淆。
+值得注意的是，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰可见，你应该尝试始终匹配，以避免维护代码时产生混淆。
 
 > [!NOTE]
 > 参数 `delay` 会被转换成一个有符号 32 位整数。这将 `delay` 限制到了 2147483647 毫秒（大约 24.8 天）以内，因为它在 IDL 中被指定为一个有符号整数。
@@ -158,17 +158,17 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 相同的错误
 
 `setInterval()` 函数通常用于为重复执行的函数设置一个时间间隔（例如：动画）。你可以使用 {{domxref("Window.clearInterval", "clearInterval()")}} 取消定时器。
 
-如果你希望在指定的延迟后，仅执行*一次*函数，请使用 {{domxref("setTimeout()")}}。
+如果你希望在指定的延迟后，仅执行*一次*函数，请使用 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
 ### 延迟限制
 
 定时器是可以嵌套的；这意味着，`setInterval()` 的回调中可以嵌入对 `setInterval()` 的调用以创建另一个定时器，即使第一个定时器还在运行。为了减轻这对性能产生的潜在影响，一旦定时器嵌套超过 5 层深度，浏览器将自动强制设置定时器的最小时间间隔为 4 毫秒。如果尝试将深层嵌套中调用 `setInterval()` 的延迟设定为小于 4 毫秒的值，其将被固定为 4 毫秒。
 
-在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#延时比指定值更长的原因)。
+在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)。
 
 ### 确保执行时间短于定时器时间间隔
 
-如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其他的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
+如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("Window.setTimeout", "setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其他的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
 
 在这些场景下，应首选递归调用 `setTimeout()` 的模式：
 
@@ -195,7 +195,6 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 相同的错误
 ## 参见
 
 - [`core-js` 中 `setInterval` 的 polyfill，支持向回调函数传递参数](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} 和 {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
