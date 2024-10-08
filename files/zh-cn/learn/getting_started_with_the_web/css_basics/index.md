@@ -1,17 +1,19 @@
 ---
 title: CSS 基础
 slug: Learn/Getting_started_with_the_web/CSS_basics
+l10n:
+  sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---
 
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
-CSS（Cascading Style Sheets，层叠样式表）是为 web 内容添加样式的代码。本节将介绍 CSS 的基础知识，并解答像这样的问题：怎样将文本设置为红色？怎样将内容显示在屏幕的特定位置？怎样用背景图片或颜色来装饰网页？
+CSS（层叠样式表）是为 web 内容添加样式的代码。*CSS 基础*将介绍 CSS 入门知识。我们会解答像这样的问题：怎样将文本设置为红色？怎样将内容显示在屏幕的特定位置？怎样用背景图片或颜色来装饰网页？
 
 ## 什么是 CSS？
 
-和 HTML 类似，CSS 也不是真正的编程语言，甚至不是标记语言。**CSS 是一门样式表语言**，这也就是说人们可以用它来选择性地为 HTML 元素添加样式。举例来说，以下 CSS 代码选择了所有的段落文字，并将它们设置为红色。
+和 HTML 类似，CSS 不是一门编程语言。它也不是标记语言。**CSS 是一门样式表语言**。CSS 是用来选择性地为 HTML 元素添加样式。例如，下列地 CSS 代码选择了所有的段落文本，并将它们设置为红色。
 
 ```css
 p {
@@ -19,21 +21,23 @@ p {
 }
 ```
 
-让我们来试一试！在文本编辑器中，将上述的三行 CSS 代码粘贴到一个新的文件中，将文件命名为 `style.css` 并保存到 `styles` 文件夹下。
+让我们来试一试！使用文本编辑器，在新文件中粘贴上面的三行 CSS 代码。在 `styles` 文件夹中将文件保存为 `style.css`。
 
-为了使代码发挥作用，我们仍然需要将上述 CSS 样式应用到你的 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
+为了使代码发挥作用，我们仍需要将上面的 CSS 应用到 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
 
-1. 打开 `index.html` 文件，然后将下面一行粘贴到文档头部（也就是 {{HTMLElement("head")}} 和 `</head>` 标签之间）。
+1. 打开 `index.html` 文件，将下面一行粘贴到文档头部（也就是 {{HTMLElement("head")}} 和 `</head>` 标签之间）。
 
    ```html
    <link href="styles/style.css" rel="stylesheet" />
    ```
 
-2. 保存 `index.html` 并用浏览器将其打开。应该看到以下页面：
+2. 保存 `index.html` 文件，并用浏览器打开。你应该看到类似的内容：
 
-![一个 Mozilla 徽标和一些段落，段落文字通过 css 设置为红色](website-screenshot-styled.png)如果段落文字变红，那么祝贺你，CSS 样式已经生效了。
+![一个 Mozilla 标志和一些段落，段落文字通过 css 设置为红色](website-screenshot-styled.png)
 
-### “CSS 规则集”详解
+如果段落文本变红，那么祝贺你！CSS 样式已经生效了。
+
+### CSS 规则集详解
 
 让我们来剖析一下红色段落文字的 CSS 代码，了解它是如何工作的：
 
@@ -42,13 +46,13 @@ p {
 整个结构称为**规则集**（*规则集*通常简称*规则*），注意各个部分的名称：
 
 - 选择器（Selector）
-  - : HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素（在这个例子中就是 {{HTMLElement("p")}} 元素）。要给不同元素添加样式，只需要更改选择器。
+  - : HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素（本例中就是 {{HTMLElement("p")}} 元素）。要给不同元素添加样式，只需要更改选择器。
 - 声明（Declaration）
-  - : 一个单独的规则，如 `color: red;` 用来指定添加样式元素的**属性**。
+  - : 一条单独的规则，如 `color: red;` 用来指定添加样式的元素**属性**。
 - 属性（Properties）
-  - : 改变 HTML 元素样式的途径（本例中 `color` 就是 {{htmlelement("p")}} 元素的属性）。CSS 中，由编写人员决定修改哪个属性以改变规则。
-- 属性的值（Property value）
-  - : 在属性的右边，冒号后面即**属性的值**，它从指定属性的众多外观中选择一个值（我们除了 `red` 之外还有很多属性值可以用于 `color` ）。
+  - : 改变 HTML 元素样式的方式（本例中 `color` 就是 {{htmlelement("p")}} 元素的属性）。在 CSS 中，选择你想在规则中操纵的属性。
+- 属性值（Property value）
+  - : 位于属性的右边，冒号后面即**属性值**，它从指定属性的众多外观中选择一个值（我们除了 `red` 之外还有很多属性值可以用于 `color` ）。
 
 注意其他重要的语法：
 
@@ -237,7 +241,7 @@ body {
 
 这里有对于 {{htmlelement("body")}} 元素的几条声明，我们来逐条查看：
 
-- `width: 600px;` 强制页面永远保持 600 像素宽。
+- `width: 600px;` 强制文档体永远保持 600 像素宽。
 - `margin: 0 auto;` 当你在 `margin` 或 `padding` 这样的属性上设置两个值时，第一个值影响元素的*上下*方向（在这个例子中设置为 `0`）；第二个值影响*左右*方向。(这里，`auto` 是一个特殊的值，它将可用的水平空间平均分配给左和右）。如 [Margin 语法](/zh-CN/docs/Web/CSS/margin#语法)中所记载的那样，你也可以使用一个、两个、三个或四个值。
 - `background-color: #FF9500;` 如前文所述，指定元素的背景颜色。我们给 body 用了一种略微偏红的橘色以与深蓝色的 {{htmlelement("html")}} 元素形成反差，你也可以尝试其他颜色。
 - `padding: 0 20px 20px 20px;` 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为 20 像素。值以上、右、下、左的顺序排列。与 `margin` 一样，你也可以像 [Padding 语法](/zh-CN/docs/Web/CSS/padding#语法)中所记载的那样，使用一个、两个、三个或四个值。
@@ -290,7 +294,7 @@ img {
 > [!NOTE]
 > 如果你暂时不能理解 `display: block` 和块级元素与行级元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。`display` 属性的更多信息请查看 [display 属性参考页面](/zh-CN/docs/Web/CSS/display)。
 
-## 总结
+## 小结
 
 如果你按部就班完成本文的实践，那么最终可以得到以下页面：
 
