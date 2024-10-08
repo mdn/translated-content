@@ -17,7 +17,7 @@ JavaScript 是一门为网站添加交互性的编程语言。交互性体现在
 
 JavaScript 是一门多功能的、新手友好的编程语言。随着经验的积累，你将能够创建游戏、2D 和 3D 图形动画、全面的数据库驱动应用程序，等等。
 
-JavaScript 本身相对简洁，但非常灵活。开发者在核心 JavaScript 语言的基础上编写了各种工具，让你能以最小的努力解锁了大量的功能。这些工具包括：
+JavaScript 本身相对简洁，但非常灵活。开发者在核心 JavaScript 语言的基础上编写了各种工具，让你能以最小的努力解锁大量的功能。这些工具包括：
 
 - Web 浏览器内置的应用程序编程接口（{{Glossary("API","API")}}），提供了丰富的功能，例如：动态创建 HTML 和设置 CSS 样式；从用户的摄像头采集和处理视频流、生成 3D 图形和音频样本。
 - 允许开发者将来自其他内容提供商（如 [Disqus](https://disqus.com/)、Facebook）的功能整合到自己的网站中的第三方 API。
@@ -43,7 +43,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
    <script src="scripts/main.js"></script>
    ```
 
-3. 这句话的功能与 CSS 的 {{htmlelement("link")}} 元素类似。在页面中引入 JavaScript，这样 JavaScript 就能对 HTML 上起作用，（和 CSS，以及页面上的任何其他内容一起）。
+3. 这句话的功能与 CSS 的 {{htmlelement("link")}} 元素类似。在页面中引入 JavaScript，这样 JavaScript 就能对 HTML 上起作用（和 CSS，以及页面上的任何其他内容一起）。
 4. 将下列代码添加到 `scripts/main.js` 文件：
 
    ```js
@@ -86,7 +86,7 @@ let myVariable;
 
 行尾的分号表示语句结束。仅当你需要在单行内分隔多条语句时，分号才是必须的。然而，一些人认为每条语句末尾加分号是最佳实践。对于何时应该使用、何时不应该使用分号有其他的规则。在[你的 JavaScript 分号指南](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/)中了解更多细节。
 
-变量名几乎可以任意取，但有一些限制（参见 [命名规则小节](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量)）。如果你不确定，还可以[验证变量名](https://mothereff.in/js-variables)是否有效。
+变量名几乎可以任意取，但有一些限制（参见[命名规则小节](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量)）。如果你不确定，还可以[验证变量名](https://mothereff.in/js-variables)是否有效。
 
 JavaScript 对大小写敏感。这意味着 `myVariable` 和 `myvariable` 是不同的。如果代码中有问题，检查一下大小写！
 
@@ -129,7 +129,7 @@ myVariable = "斯蒂夫";
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
-        字符串：字符产就是文本序列。用单引号或双引号括起来的值就是字符串。
+        字符串：字符串就是文本序列。用单引号或双引号括起来的值就是字符串。
       </td>
       <td><code>let myVariable = '鲍勃';</code> 或者 <br/><code>let myVariable = "鲍勃";</code></td>
     </tr>
