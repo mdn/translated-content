@@ -45,10 +45,10 @@ requestIdleCallback(callback, options)
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
-- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

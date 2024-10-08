@@ -465,7 +465,6 @@
 /zh-CN/docs/DOM/window.setImmediate	/zh-CN/docs/Web/API/Window/setImmediate
 /zh-CN/docs/DOM/window.setInterval	/zh-CN/docs/Web/API/Window/setInterval
 /zh-CN/docs/DOM/window.setTimeout	/zh-CN/docs/Web/API/Window/setTimeout
-/zh-CN/docs/DOM/window.setTimeout12	/zh-CN/docs/Web/API/Window/setTimeout
 /zh-CN/docs/DOM/文件系统API的基本概念	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument

@@ -30,11 +30,11 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 ### 有安排地更新画布
 
-首先，可以用 {{domxref("Window.setInterval", "setInterval()")}}、{{domxref("window.setTimeout()")}} 和 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 来设定定期执行一个指定函数。
+首先，可以用 {{domxref("Window.setInterval", "setInterval()")}}、{{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 来设定定期执行一个指定函数。
 
 - {{domxref("Window.setInterval", "setInterval()")}}
   - : 当设定好间隔时间后，function 会定期执行。
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : 在设定好的时间之后执行函数
 - {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : 告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。
