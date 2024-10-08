@@ -5460,6 +5460,10 @@
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": ["khrizenriquez"]
   },
+  "Web/API/Window/clearInterval": {
+    "modified": "2019-03-23T22:56:16.485Z",
+    "contributors": ["Guitxo"]
+  },
   "Web/API/Window/close": {
     "modified": "2020-10-15T21:37:07.614Z",
     "contributors": ["SphinxKnight", "dgrizzla", "Siro_Diaz"]
@@ -5471,6 +5475,10 @@
   "Web/API/Window/confirm": {
     "modified": "2019-03-23T22:45:47.266Z",
     "contributors": ["julian3xl"]
+  },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2020-10-15T22:14:17.553Z",
+    "contributors": ["Bumxu"]
   },
   "Web/API/Window/crypto": {
     "modified": "2020-02-12T20:26:38.795Z",
@@ -5635,6 +5643,10 @@
     "modified": "2019-03-23T22:57:50.655Z",
     "contributors": ["svera", "pedromagnus", "develasquez"]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-08-24T18:02:23.092Z",
+    "contributors": ["mastertrooper", "Makinita", "Klius", "claudionebbia"]
+  },
   "Web/API/Window/showModalDialog": {
     "modified": "2019-03-18T20:58:55.311Z",
     "contributors": ["SphinxKnight", "BubuAnabelas", "Grijander81"]
@@ -5707,10 +5719,6 @@
       "inma_610"
     ]
   },
-  "Web/API/clearInterval": {
-    "modified": "2019-03-23T22:56:16.485Z",
-    "contributors": ["Guitxo"]
-  },
   "Web/API/clearTimeout": {
     "modified": "2019-06-18T10:20:27.972Z",
     "contributors": ["AlePerez92", "fscholz", "basemnassar11", "VictorArias"]
@@ -5767,10 +5775,6 @@
     "modified": "2020-10-15T21:53:36.780Z",
     "contributors": ["juanluisrp", "oderflaj"]
   },
-  "Web/API/createImageBitmap": {
-    "modified": "2020-10-15T22:14:17.553Z",
-    "contributors": ["Bumxu"]
-  },
   "Web/API/notification/icon": {
     "modified": "2019-03-23T22:59:32.492Z",
     "contributors": ["joxhker"]
@@ -5782,10 +5786,6 @@
   "Web/API/notification/requestPermission": {
     "modified": "2019-03-23T22:50:37.341Z",
     "contributors": ["MarkelCuesta", "jezdez", "Davdriver"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-08-24T18:02:23.092Z",
-    "contributors": ["mastertrooper", "Makinita", "Klius", "claudionebbia"]
   },
   "Web/API/setTimeout": {
     "modified": "2019-03-23T23:17:29.378Z",
@@ -9415,34 +9415,6 @@
       "DavidPeniafiel"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2020-04-20T02:59:31.392Z",
-    "contributors": [
-      "obed3113",
-      "sanxofon",
-      "Sergio_Gonzalez_Collado",
-      "cissoid"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
-    "modified": "2019-03-23T22:10:11.567Z",
-    "contributors": ["Sergio_Gonzalez_Collado", "ChrisMHM"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-11-18T08:03:54.325Z",
-    "contributors": [
-      "IsaacAaron",
-      "sanxofon",
-      "Sergio_Gonzalez_Collado",
-      "kevinmont",
-      "juanrarodriguez18",
-      "strattadb"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-02-28T13:10:45.613Z",
-    "contributors": ["chrisdavidmills", "sanxofon", "franklevel", "gabrielnoe"]
-  },
   "Web/HTTP/CORS": {
     "modified": "2020-08-10T16:23:20.546Z",
     "contributors": [
@@ -9520,6 +9492,10 @@
       "eortizromero",
       "omertafox"
     ]
+  },
+  "Web/HTTP/Evolution_of_HTTP": {
+    "modified": "2019-03-23T22:10:11.567Z",
+    "contributors": ["Sergio_Gonzalez_Collado", "ChrisMHM"]
   },
   "Web/HTTP/Headers": {
     "modified": "2019-12-10T13:29:15.931Z",
@@ -9718,6 +9694,21 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T21:59:06.897Z",
     "contributors": ["JulioMoreyra", "francinysalles", "tonialfaro"]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2019-11-18T08:03:54.325Z",
+    "contributors": [
+      "IsaacAaron",
+      "sanxofon",
+      "Sergio_Gonzalez_Collado",
+      "kevinmont",
+      "juanrarodriguez18",
+      "strattadb"
+    ]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2020-02-28T13:10:45.613Z",
+    "contributors": ["chrisdavidmills", "sanxofon", "franklevel", "gabrielnoe"]
   },
   "Web/HTTP/Messages": {
     "modified": "2019-11-12T11:40:26.816Z",
@@ -14286,6 +14277,15 @@
       "Jorolo",
       "Omnisilver",
       "Nukeador"
+    ]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2020-04-20T02:59:31.392Z",
+    "contributors": [
+      "obed3113",
+      "sanxofon",
+      "Sergio_Gonzalez_Collado",
+      "cissoid"
     ]
   },
   "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {

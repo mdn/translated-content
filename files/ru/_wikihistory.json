@@ -7486,6 +7486,10 @@
       "shimopus"
     ]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-11-18T12:13:20.493Z",
+    "contributors": ["kosarev_va", "WhiteApfel", "lilka9", "AliaksandrZahorski"]
+  },
   "Web/API/Window/stop": {
     "modified": "2019-03-23T22:28:10.946Z",
     "contributors": ["maximTorba"]
@@ -7790,10 +7794,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-11-18T12:13:20.493Z",
-    "contributors": ["kosarev_va", "WhiteApfel", "lilka9", "AliaksandrZahorski"]
   },
   "Web/API/setTimeout": {
     "modified": "2020-11-18T12:03:29.649Z",
@@ -10549,31 +10549,6 @@
       "deniskoronets"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2020-07-14T17:05:38.093Z",
-    "contributors": ["vladimir.i.kuropatka", "enonotugh", "cissoid"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-10-21T06:21:06.123Z",
-    "contributors": [
-      "ismorozs",
-      "dartraiden",
-      "wcoder",
-      "vfr5cv",
-      "dawsonbotsford"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-02-28T13:11:18.234Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "nickvoronin",
-      "MineDen",
-      "vladkras",
-      "david.orbelian"
-    ]
-  },
   "Web/HTTP/CORS": {
     "modified": "2020-10-21T11:45:01.641Z",
     "contributors": [
@@ -10849,6 +10824,27 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T22:01:31.139Z",
     "contributors": ["n00b"]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2019-10-21T06:21:06.123Z",
+    "contributors": [
+      "ismorozs",
+      "dartraiden",
+      "wcoder",
+      "vfr5cv",
+      "dawsonbotsford"
+    ]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2020-02-28T13:11:18.234Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "nickvoronin",
+      "MineDen",
+      "vladkras",
+      "david.orbelian"
+    ]
   },
   "Web/HTTP/Messages": {
     "modified": "2020-05-02T15:29:40.125Z",
@@ -15941,6 +15937,10 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2020-07-14T17:05:38.093Z",
+    "contributors": ["vladimir.i.kuropatka", "enonotugh", "cissoid"]
   },
   "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
     "modified": "2020-01-09T21:04:16.499Z",
