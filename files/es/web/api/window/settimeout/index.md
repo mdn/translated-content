@@ -1,6 +1,7 @@
 ---
 title: setTimeout()
-slug: Web/API/setTimeout
+slug: Web/API/Window/setTimeout
+original_slug: Web/API/setTimeout
 l10n:
   sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
