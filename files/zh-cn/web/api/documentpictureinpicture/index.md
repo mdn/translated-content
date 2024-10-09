@@ -50,7 +50,7 @@ const pipWindow = await window.documentPictureInPicture.requestWindow({
 // ...
 ```
 
-请参阅 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)获取完整的实时运行示例（另请参阅完整的[源代码](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture)）。
+请参阅 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)获取完整的可运行演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
 
 ## 规范
 
