@@ -1,7 +1,7 @@
 ---
 title: setTimeout() 전역 함수
-short-title: setTimeout()
-slug: Web/API/setTimeout
+slug: Web/API/Window/setTimeout
+original_slug: Web/API/setTimeout
 l10n:
   sourceCommit: f7caa8a517867a37571e6bfb40c60b40081610fd
 ---

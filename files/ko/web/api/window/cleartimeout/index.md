@@ -1,7 +1,7 @@
 ---
 title: clearTimeout() 전역 함수
-short-title: clearTimeout()
-slug: Web/API/clearTimeout
+slug: Web/API/Window/clearTimeout
+original_slug: Web/API/clearTimeout
 l10n:
   sourceCommit: 15db4f1dd87a80c4aec2cfba3e73bc8291f29110
 ---

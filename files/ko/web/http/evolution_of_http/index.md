@@ -1,6 +1,7 @@
 ---
 title: HTTP의 진화
-slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+slug: Web/HTTP/Evolution_of_HTTP
+original_slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

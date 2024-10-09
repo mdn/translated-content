@@ -1,7 +1,7 @@
 ---
 title: structuredClone() 전역 함수
-short-title: structuredClone()
-slug: Web/API/structuredClone
+slug: Web/API/Window/structuredClone
+original_slug: Web/API/structuredClone
 l10n:
   sourceCommit: 15db4f1dd87a80c4aec2cfba3e73bc8291f29110
 ---

@@ -1,6 +1,7 @@
 ---
 title: 일반 MIME 타입
-slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+slug: Web/HTTP/MIME_types/Common_types
+original_slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
