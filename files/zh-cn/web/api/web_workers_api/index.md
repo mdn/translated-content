@@ -38,24 +38,24 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 
 所有 worker 和主线程（来自 `WindowOrWorkerGlobalScope`）共有的一些函数（子集）是：
 
-- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
-- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
-- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**对 worker 可用：
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有 worker）
+- {{domxref("WorkerGlobalScope.importScripts()")}}（所有 worker）
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}（仅限专用 worker）
 
 ### 支持的 Web API

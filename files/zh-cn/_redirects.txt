@@ -425,7 +425,7 @@
 /zh-CN/docs/DOM/window.btoa	/zh-CN/docs/Web/API/Window/btoa
 /zh-CN/docs/DOM/window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
 /zh-CN/docs/DOM/window.clearImmediate	/zh-CN/docs/Web/API/Window/clearImmediate
-/zh-CN/docs/DOM/window.clearInterval	/zh-CN/docs/Web/API/clearInterval
+/zh-CN/docs/DOM/window.clearInterval	/zh-CN/docs/Web/API/Window/clearInterval
 /zh-CN/docs/DOM/window.close	/zh-CN/docs/Web/API/Window/close
 /zh-CN/docs/DOM/window.content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/DOM/window.document	/zh-CN/docs/Web/API/Window/document
@@ -463,9 +463,8 @@
 /zh-CN/docs/DOM/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/DOM/window.scrollByPages	/zh-CN/docs/Web/API/Window/scrollByPages
 /zh-CN/docs/DOM/window.setImmediate	/zh-CN/docs/Web/API/Window/setImmediate
-/zh-CN/docs/DOM/window.setInterval	/zh-CN/docs/Web/API/setInterval
-/zh-CN/docs/DOM/window.setTimeout	/zh-CN/docs/Web/API/setTimeout
-/zh-CN/docs/DOM/window.setTimeout12	/zh-CN/docs/Web/API/setTimeout
+/zh-CN/docs/DOM/window.setInterval	/zh-CN/docs/Web/API/Window/setInterval
+/zh-CN/docs/DOM/window.setTimeout	/zh-CN/docs/Web/API/Window/setTimeout
 /zh-CN/docs/DOM/文件系统API的基本概念	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument
@@ -1822,7 +1821,7 @@
 /zh-CN/docs/Web/API/Window.btoa	/zh-CN/docs/Web/API/Window/btoa
 /zh-CN/docs/Web/API/Window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
 /zh-CN/docs/Web/API/Window.clearImmediate	/zh-CN/docs/Web/API/Window/clearImmediate
-/zh-CN/docs/Web/API/Window.clearInterval	/zh-CN/docs/Web/API/clearInterval
+/zh-CN/docs/Web/API/Window.clearInterval	/zh-CN/docs/Web/API/Window/clearInterval
 /zh-CN/docs/Web/API/Window.close	/zh-CN/docs/Web/API/Window/close
 /zh-CN/docs/Web/API/Window.document	/zh-CN/docs/Web/API/Window/document
 /zh-CN/docs/Web/API/Window.find	/zh-CN/docs/Web/API/Window/find
@@ -1862,12 +1861,11 @@
 /zh-CN/docs/Web/API/Window.scrollY	/zh-CN/docs/Web/API/Window/scrollY
 /zh-CN/docs/Web/API/Window.self	/zh-CN/docs/Web/API/Window/self
 /zh-CN/docs/Web/API/Window.setImmediate	/zh-CN/docs/Web/API/Window/setImmediate
-/zh-CN/docs/Web/API/Window.setInterval	/zh-CN/docs/Web/API/setInterval
+/zh-CN/docs/Web/API/Window.setInterval	/zh-CN/docs/Web/API/Window/setInterval
 /zh-CN/docs/Web/API/Window.showModalDialog	/zh-CN/docs/Web/API/Window/showModalDialog
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
 /zh-CN/docs/Web/API/Window/DOMContentLoaded_event	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
-/zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/Web/API/Window
@@ -1884,8 +1882,6 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
-/zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval
-/zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/setTimeout
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/Window/btoa
@@ -1901,8 +1897,8 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-CN/docs/Web/API/Window/btoa
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/caches	/zh-CN/docs/Web/API/Window/caches
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/zh-CN/docs/Web/API/clearInterval
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/zh-CN/docs/Web/API/Window/clearInterval
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/Window/clearTimeout
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/zh-CN/docs/Web/API/Window/createImageBitmap
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/Window/fetch
@@ -1910,9 +1906,9 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/zh-CN/docs/Web/API/Window/queueMicrotask
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/setInterval
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/setTimeout
-/zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/Window/setInterval
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/Window/setTimeout
+/zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/Window/clearTimeout
 /zh-CN/docs/Web/API/Worker/onmessage	/zh-CN/docs/Web/API/Worker/message_event
 /zh-CN/docs/Web/API/Worker/onmessageerror	/zh-CN/docs/Web/API/Worker/messageerror_event
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument
@@ -1933,6 +1929,8 @@
 /zh-CN/docs/Web/API/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/btoa	/zh-CN/docs/Web/API/Window/btoa
 /zh-CN/docs/Web/API/caches	/zh-CN/docs/Web/API/Window/caches
+/zh-CN/docs/Web/API/clearInterval	/zh-CN/docs/Web/API/Window/clearInterval
+/zh-CN/docs/Web/API/clearTimeout	/zh-CN/docs/Web/API/Window/clearTimeout
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/console/dir_static
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/console/group_static
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/console/groupCollapsed_static
@@ -2039,6 +2037,8 @@
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
 /zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents
+/zh-CN/docs/Web/API/setInterval	/zh-CN/docs/Web/API/Window/setInterval
+/zh-CN/docs/Web/API/setTimeout	/zh-CN/docs/Web/API/Window/setTimeout
 /zh-CN/docs/Web/API/structuredClone	/zh-CN/docs/Web/API/Window/structuredClone
 /zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/Web/API/剪贴板_API	/zh-CN/docs/Web/API/Clipboard_API

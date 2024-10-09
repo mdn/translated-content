@@ -11,7 +11,7 @@ JavaScript 本质上是一门单线程语言。对于在它被设计出来的那
 
 当然，随着时间的流逝，计算机已经发展成为强大的多核系统，而 JavaScript 已经成为计算世界中使用最广泛的语言之一。大量最流行的应用程序至少有一部分是基于 JavaScript 代码的。为了支持这一点，有必要找到方法让项目摆脱单线程语言的限制。
 
-自从定时器（{{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}}）加入到 Web API 后，浏览器提供的 JavaScript 环境就已经逐渐发展到包含任务调度、多线程应用开发等强大的特性。了解 JavaScript 运行时是如何安排和运行代码的对了解 `queueMicrotask()` 会非常有作用。
+自从定时器（{{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}}）加入到 Web API 后，浏览器提供的 JavaScript 环境就已经逐渐发展到包含任务调度、多线程应用开发等强大的特性。了解 JavaScript 运行时是如何安排和运行代码的对了解 `queueMicrotask()` 会非常有作用。
 
 ## JavaScript 执行上下文
 
@@ -118,7 +118,7 @@ greetUser("Veronica");
 
 #### 任务 vs 微任务
 
-一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。除了使用事件，你还可以使用 {{domxref("setTimeout()")}} 或者 {{domxref("setInterval()")}} 来添加任务。
+一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。除了使用事件，你还可以使用 {{domxref("Window.setTimeout", "setTimeout()")}} 或者 {{domxref("Window.setInterval", "setInterval()")}} 来添加任务。
 
 任务队列和微任务队列的区别很简单，但却很重要：
 

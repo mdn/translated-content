@@ -17,25 +17,25 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 一些函数在所有的 worker 和主线程中均可用（来自 `WindowOrWorkerGlobalScope`）：
 
-- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
-- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
-- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**在 worker 中可用：
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有的 worker）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}}（仅专用 worker）
+- {{domxref("WorkerGlobalScope.importScripts()")}}（所有的 worker）
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}（仅专用 worker）
 
 ## Worker 中可用的 Web API
 
