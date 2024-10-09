@@ -2,7 +2,7 @@
 title: DocumentPictureInPicture
 slug: Web/API/DocumentPictureInPicture
 l10n:
-  sourceCommit: bac20b9ed34bf5b6427ba9274c99c1737dc309ff
+  sourceCommit: 26aaa0b6f92933d915563b1d1210cc46f4ec0e09
 ---
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{securecontext_header}}
