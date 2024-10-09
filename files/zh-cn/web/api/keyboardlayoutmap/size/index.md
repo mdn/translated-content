@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("KeyboardLayoutMap")}} 接口的 **`size`** 只读属性返回映射中的元素数量。
 
-该属性与 {{jsxref("Map.prototype.size")}} 相同。
+该属性与 {{jsxref("Map.prototype.size")}} 相似。
 
 ## 值
 
