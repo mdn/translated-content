@@ -129,7 +129,7 @@ white-space: unset;
   </tbody>
 </table>
 
-默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line`值，每个制表符都会被转化为一个空格（U+0020）字符。
+默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line` 值，每个制表符都会被转化为一个空格（U+0020）字符。
 
 > **备注：** **空格**和**其他空白分隔符**之间存在区别。定义如下：
 >
@@ -230,7 +230,7 @@ select.addEventListener("change", (e) => {
 });
 ```
 
-{{EmbedLiveSample("试试看", "100%", 350)}}
+{{EmbedLiveSample("试试看", "100%", 450)}}
 
 ### 控制表格中的换行
 
