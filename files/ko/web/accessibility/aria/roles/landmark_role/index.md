@@ -1,6 +1,8 @@
 ---
 title: "ARIA: landmark 역할"
 slug: Web/Accessibility/ARIA/Roles/landmark_role
+l10n:
+  sourceCommit: 194bd13942ad0c532c92d364e0d5d0c36732d98c
 ---
 
 {{AccessibilitySidebar}}
