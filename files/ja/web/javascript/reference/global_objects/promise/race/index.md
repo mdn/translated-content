@@ -2,7 +2,7 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{JSRef}}
@@ -39,7 +39,7 @@ Promise.race(iterable)
 
 ### Promise.race() の使用
 
-この例では、 `Promise.race()` を使用して、 [`setTimeout()`](/ja/docs/Web/API/setTimeout) で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
+この例では、 `Promise.race()` を使用して、{{domxref("Window.setTimeout", "setTimeout()")}} で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
 
 ```js
 function sleep(time, value, state) {
