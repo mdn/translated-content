@@ -437,7 +437,7 @@ function setUserName() {
 }
 ```
 
-翻译一下就是：如果 `myName` 没有值，就再次从头运行`setUserName()`。如果有值（如果上面的表达式为假），就把值存储到 `localStorage` 并设置为标题文本。
+翻译一下就是：如果 `myName` 没有值，就再次从头运行`setUserName()`。如果有值（如果上面的表达式不为真），就把值存储到 `localStorage` 并设置为标题文本。
 
 ## 小结
 
