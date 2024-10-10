@@ -67,7 +67,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
 接着，把 `myHeading` 变量的 {{domxref("Node.textContent", "textContent")}} 属性（表示标题内容）的值设置为 _Hello world!_。
 
 > [!NOTE]
-> 在这个练习中用到的两个特性都来自[文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)（DOM API 用于操纵文档）。
+> 在这个练习中用到的两个特性都来自[文档对象模型（DOM）API](/zh-CN/docs/Web/API/Document_Object_Model)（DOM API 用于操纵文档）。
 
 ## JavaScript 速成课程
 
