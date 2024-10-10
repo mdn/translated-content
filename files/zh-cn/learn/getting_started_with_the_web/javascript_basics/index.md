@@ -419,7 +419,7 @@ document.querySelector("html").addEventListener("click", () => {
 
 ### 用户名为 null？
 
-运行示例代码，弹出输入用户名的对话框，试着点击*取消*按钮。此时标题会显示为 _Mozilla is cool, null_。这是因为取消提示对话框后值将设置为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，_Null_ 是 JavaScript 中的一个特殊值，表示引用的值不存在。
+运行示例代码，弹出输入用户名的对话框，试着点击*取消*按钮。此时标题会显示为 _Mozilla is cool, null_。这是因为取消提示对话框后值将设置为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。_null_ 是 JavaScript 中的一个特殊值，表示引用的值不存在。
 
 也可以不输入任何名字直接点击*确认*，你的标题会显示为 _Mozilla is cool,_，原因么显而易见。
 
