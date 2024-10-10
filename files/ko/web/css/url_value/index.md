@@ -1,6 +1,7 @@
 ---
 title: <url>
-slug: Web/CSS/url
+slug: Web/CSS/url_value
+original_slug: Web/CSS/url
 ---
 
 {{ CssRef() }}
