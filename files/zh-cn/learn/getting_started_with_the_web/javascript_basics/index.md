@@ -134,26 +134,26 @@ myVariable = "斯蒂夫";
       <td><code>let myVariable = '鲍勃';</code> 或者 <br/><code>let myVariable = "鲍勃";</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Number")}}</th>
+      <th scope="row">{{Glossary("Number", "数字")}}</th>
       <td>数字：数字周围没有引号。</td>
       <td><code>let myVariable = 10;</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Boolean")}}</th>
+      <th scope="row">{{Glossary("Boolean", "布尔")}}</th>
       <td>
         布尔：真/假值。单词 <code>true</code>/<code>false</code> 是不需要引号的特殊关键字。
       </td>
       <td><code>let myVariable = true;</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Array")}}</th>
+      <th scope="row">{{Glossary("Array", "数组")}}</th>
       <td>数组：让你在单一引用中存储多个值的结构。</td>
       <td>
         <code>let myVariable = [1,'鲍勃','斯蒂夫',10];</code><br />像这样引用数组成员：<code>myVariable[0]</code>，<code>myVariable[1]</code>，等等。
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Object")}}</th>
+      <th scope="row">{{Glossary("Object", "对象")}}</th>
       <td>
         对象：JavaScript 里的一切都是对象，对象能在变量中存储。这一点要牢记于心。
       </td>
