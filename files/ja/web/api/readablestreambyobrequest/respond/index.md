@@ -30,14 +30,14 @@ respond(bytesWritten)
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : リクエストが関連付けられた{{domxref("ReadableByteStreamController")}}を持っていないか、ビューバッファが切り離されていないか、移譲できません。
+  - : リクエストが関連付けられた {{domxref("ReadableByteStreamController")}} を持っていないか、ビューバッファーが切り離されていないか、移譲できません。
 
 ## 例
 
 下記のコードは[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)のライブ例から引用しています。
 
 このメソッドは、コンシューマーからの待機中の読み取りリクエストを履行するために、データのゼロコピー移譲を行う一環として、基盤となるバイトソースによって呼び出されます。
-基盤となるバイトソースは最初に {{domxref("ReadableStreamBYOBRequest.view")}} にデータを書き込み、次にこの `respond()` メソッドを呼び出して、バッファにコピーされたデータの量を示し、データをリーダーに移譲させます。
+基盤となるバイトソースは最初に {{domxref("ReadableStreamBYOBRequest.view")}} にデータを書き込み、次にこの `respond()` メソッドを呼び出して、バッファーにコピーされたデータの量を示し、データをリーダーに移譲させます。
 
 下記のコードはこの用途を示すもので、データをビューにコピーするために `readInto()` メソッドを使用しています。
 

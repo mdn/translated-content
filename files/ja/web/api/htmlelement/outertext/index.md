@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: outerText プロパティ"
+short-title: outerText
 slug: Web/API/HTMLElement/outerText
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef("DOM")}}

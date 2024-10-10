@@ -638,7 +638,7 @@
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/Window/fetch
-/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/setInterval
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/Window/setInterval
 /pt-BR/docs/Web/API/WindowTimers.clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/XMLDocument/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
@@ -670,6 +670,7 @@
 /pt-BR/docs/Web/API/notificacoes	/pt-BR/docs/Web/API/Notification
 /pt-BR/docs/Web/API/origin	/pt-BR/docs/Web/API/Window/origin
 /pt-BR/docs/Web/API/performance_property	/pt-BR/docs/Web/API/Window/performance
+/pt-BR/docs/Web/API/setInterval	/pt-BR/docs/Web/API/Window/setInterval
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/Web/Accessibility/ARIA
@@ -814,11 +815,14 @@
 /pt-BR/docs/Web/HTML/ReferenciaHTML	/pt-BR/docs/Web/HTML/Reference
 /pt-BR/docs/Web/HTML/formatos_midia_suportados	/pt-BR/docs/Web/Media/Formats
 /pt-BR/docs/Web/HTML/microformatos	/pt-BR/docs/Web/HTML/microformats
-/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP	/pt-BR/docs/Web/HTTP/Basics_of_HTTP
+/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP	/pt-BR/docs/conflicting/Web/HTTP
 /pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web	/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types	/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types
-/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types/Complete_list_of_MIME_types	/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types	/pt-BR/docs/Web/HTTP/MIME_types
+/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/MIME_types/Complete_list_of_MIME_types	/pt-BR/docs/Web/HTTP/MIME_types/Common_types
+/pt-BR/docs/Web/HTTP/Basics_of_HTTP	/pt-BR/docs/conflicting/Web/HTTP
 /pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/pt-BR/docs/Web/HTTP/MIME_types
+/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/pt-BR/docs/Web/HTTP/MIME_types/Common_types
 /pt-BR/docs/Web/HTTP/Cabecalhos_HTTP	/pt-BR/docs/Web/HTTP/Headers
 /pt-BR/docs/Web/HTTP/Compressão	/pt-BR/docs/Web/HTTP/Compression
 /pt-BR/docs/Web/HTTP/Controle_Acesso_CORS	/pt-BR/docs/Web/HTTP/CORS

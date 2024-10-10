@@ -2,7 +2,7 @@
 title: FontData
 slug: Web/API/FontData
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
@@ -95,5 +95,5 @@ async function computeOutlineFormat() {
 
 ## 参见
 
-- [使用带有本地字体的高级排版](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
+- [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

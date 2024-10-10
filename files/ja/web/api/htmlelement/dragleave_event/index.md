@@ -1,15 +1,16 @@
 ---
 title: "HTMLElement: dragleave イベント"
+short-title: dragleave
 slug: Web/API/HTMLElement/dragleave_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragleave` イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。
 
-このイベントはキャンセル不可です。
+このイベントはキャンセル不可で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -42,7 +43,7 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 ドラッグ可能な要素がコンテナーの上にある間は、もう一方のコンテナーの背景を紫色にし、ドラッグ可能な要素がコンテナーの上にドロップされる可能性があることを知らせます。 `dragleave` イベントを待ち受けて、ドラッグ可能な要素がコンテナーからドラッグされたときにコンテナーの背景をリセットするようにします。
 
-ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+しかし、この例ではドロップは実装していません。ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
 #### HTML
 
@@ -120,9 +121,3 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragleave_event", "dragleave")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragleave_event", "dragleave")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragleave_event", "dragleave")}} イベント

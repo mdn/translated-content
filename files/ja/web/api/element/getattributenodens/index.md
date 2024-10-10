@@ -29,8 +29,6 @@ getAttributeNodeNS(namespace, nodeName)
 
 `getAttributeNodeNS` は [getAttributeNode](getAttributeNode) よりも、特定の名前空間に含まれる属性を特定することができる点でより具体的です。対応するセッターメソッドは [setAttributeNodeNS](/ja/docs/Web/API/Element/setAttributeNodeNS) です。
 
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

@@ -9,8 +9,8 @@ HTTP {{HTTPHeader("Permissions-Policy")}} 标头当中的 `camera` 指令控制�
 
 ## 语法
 
-```
-Permissions-Policy: camera <allowlist>;
+```http
+Permissions-Policy: camera=<allowlist>;
 ```
 
 - \<allowlist>
