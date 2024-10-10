@@ -22,7 +22,7 @@ Cette méthode devrait être utilisée lorsque les noms des groupes peuvent êtr
 Object.groupBy(items, fnRappel)
 ```
 
-### Parameters
+### Paramètres
 
 - `items`
   - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un [tableau (`Array`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) dont les éléments seront groupés.
