@@ -184,7 +184,7 @@ myVariable = "斯蒂夫";
 
 ### 运算符
 
-`{{Glossary("Operator","运算符")}}`是一种基于两个值（或变量）生成对应结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试这些示例。
+{{Glossary("Operator","运算符")}}是一种基于两个值（或变量）生成对应结果的数学符号。在下列表格中，介绍了一些最简单的运算符以及一些对应的示例，可以在 JavaScript 控制台中尝试这些示例。
 
 <table class="standard-table">
   <thead>
