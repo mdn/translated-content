@@ -127,7 +127,7 @@ myVariable = "斯蒂夫";
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{Glossary("String")}}</th>
+      <th scope="row">{{Glossary("String", "字符串")}}</th>
       <td>
         字符串：字符串就是文本序列。用单引号或双引号括起来的值就是字符串。
       </td>
