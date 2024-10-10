@@ -300,6 +300,6 @@ img {
 
 （你可以[在这里查看我们的版本](https://mdn.github.io/beginner-html-site-styled/)。）如果你遇到困难，你可以将 [Github 上的完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)与你的文件进行比较。
 
-在这里，我们只是介绍 CSS 的表面。想学习更多，参见[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)。
+在这里，我们只是介绍了 CSS 的表面。想学习更多，参见[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
