@@ -319,7 +319,7 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-将事件处理器与元素绑定有许多方法。这里我们选择了 {{htmlelement("html")}} 元素，然后调用了它的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数，传递一个要监听的（`'click'`）事件名和一个事件发生时要运行的函数。
+将事件处理器与元素绑定有许多方法。这里我们选择了 {{htmlelement("html")}} 元素，然后调用了它的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数，并传递要监听的事件名（`'click'`）和事件发生时要运行的函数。
 
 刚刚我们传递给 `addEventListener()` 的函数被称为*匿名函数*，因为它没有名字。匿名函数还有另一种书写方式，我们称之为*箭头函数*。箭头函数使用 `() =>` 而不是 `function ()`：
 
