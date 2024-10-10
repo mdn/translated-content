@@ -2,7 +2,7 @@
 title: Window：showSaveFilePicker() 方法
 slug: Web/API/Window/showSaveFilePicker
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -36,7 +36,7 @@ showSaveFilePicker()
         - `description` {{Optional_Inline}}
           - : 允许的文件类型类别的可选描述。默认为空字符串。
         - `accept`
-          - : 一个 {{jsxref('Object')}}，其键设置为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)，值设置为文件扩展名的{{jsxref('Array', '数组', '', 'nocode')}}（参见下面的示例）。
+          - : 一个 {{jsxref('Object')}}，其键设置为 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types/Common_types)，值设置为文件扩展名的{{jsxref('Array', '数组', '', 'nocode')}}（参见下面的示例）。
 
 ### 返回值
 
