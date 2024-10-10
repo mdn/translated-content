@@ -369,7 +369,7 @@ document.querySelector("html").addEventListener("click", () => {
 
 ### 添加个性化欢迎信息
 
-接下来，让我们在用户第一次访问站点时将页面标题修改为个性化欢迎信息。这个欢迎消息会一直存在。名字信息会由 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 保存下来，即使用户关闭页面之后再重新打开。还会添加一个选项，改变用户名字以更新欢迎信息。
+接下来，让我们在用户第一次访问站点时将页面标题修改为个性化欢迎信息。这个欢迎消息会一直存在。名字信息会由 [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API) 保存下来，即使用户关闭页面之后再重新打开。还会添加一个选项，改变用户名字以更新欢迎信息。
 
 1. 打开 `index.html`，在 {{htmlelement("script")}} 元素前添加下列代码：
 
