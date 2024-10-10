@@ -95,7 +95,7 @@ downloading.then(onStartedDownload, onFailed);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

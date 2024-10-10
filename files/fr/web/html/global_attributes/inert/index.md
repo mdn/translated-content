@@ -46,5 +46,5 @@ Lorsqu'on fournira des indications visuelles et non-visuelles à propos de cette
 
 - L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
 - La propriété [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert) du DOM
-- [Une introduction à `inert` (en anglais)](https://developer.chrome.com/articles/inert/)
+- [Une introduction à `inert` (en anglais)](https://web.dev/articles/inert?hl=zh-tw)
 - [L'attribut `inert` arrive enfin sur le Web (en anglais)](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
