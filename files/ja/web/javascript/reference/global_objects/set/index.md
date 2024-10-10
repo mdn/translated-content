@@ -2,7 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 l10n:
-  sourceCommit: ef30b142b03870b8ca70919f1a65a96736898c3a
+  sourceCommit: 0a9c10fc67901972221dc7b3d006334fbfa73dce
 ---
 
 {{JSRef}}
@@ -11,9 +11,9 @@ l10n:
 
 ## 解説
 
-`Set` オブジェクトは値のコレクションです。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値はコレクション内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
+`Set` オブジェクトは値の集合です。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値は集合内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
 
-仕様書では `Set` の実装について「平均アクセス時間がコレクション内の要素数に対して線形探索以下」であることが要求されています。したがって、計算量が O(N) よりも優れている限り、内部的にはハッシュ表（ルックアップは O(1)）、探索木（ルックアップは O(log(N))）、または他のデータ構造として表すことができます。
+仕様書では `Set` の実装について「平均アクセス時間が集合内の要素数に対して線形探索以下」であることが要求されています。したがって、計算量が O(N) よりも優れている限り、内部的にはハッシュ表（ルックアップは O(1)）、探索木（ルックアップは O(log(N))）、または他のデータ構造として表すことができます。
 
 ### 値の等価性
 
@@ -22,6 +22,106 @@ l10n:
 ### パフォーマンス
 
 [`has`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/has) メソッドは、値が `Set` 内にあるかどうかをチェックします。これは、以前に `Set` に追加された要素のほとんどを確認するよりも平均すると高速なアプローチを使用します。特に、 `Array` オブジェクトの `length` が `Set` オブジェクトの `size` と等しい場合、平均して [`Array.prototype.includes`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドより速くなります。
+
+### Set の合成
+
+`Set` オブジェクトは、数学演算のように集合を合成するためのいくつかのメソッドを提供します。これらのメソッドには、以下のようなものがあります。
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">メソッド</th>
+      <th scope="col">返値の型</th>
+      <th scope="col">数学の同等のもの</th>
+      <th scope="col">ベン図</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="A Venn diagram where two circles overlap. The difference of A and B is the part of A that is not overlapping B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
+      <td><code>論理型</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
+      <td><code>論理型</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
+      <td><code>論理型</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+  </tbody>
+</table>
+
+より一般化できるように、これらのメソッドは Set オブジェクトだけでなく、[Set 風](#set_風オブジェクト)オブジェクトも受け入れます。
+
+### Set 風オブジェクト
+
+すべての [Set 合成メソッド](#set-の合成)では、 {{jsxref("Operators/this", "this")}} が実際の `Set` インスタンスであることが要求されますが、引数は Set 風であるだけで構いません。Set 風オブジェクトとは、次のことを提供するオブジェクトです。
+
+- {{jsxref("Set/size", "size")}} プロパティが数値を保持すること。
+- {{jsxref("Set/has", "has()")}} メソッドが要素を取り、論理値を返すこと。
+- {{jsxref("Set/keys", "keys()")}} メソッドが Set 内の要素の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返すこと。
+
+例えば、{{jsxref("Map")}} オブジェクトは Set 風です。なぜなら、{{jsxref("Map/size", "size")}}、{{jsxref("Map/has", "has()")}}、{{jsxref("Map/keys", "keys()")}} を保有しており、Set メソッドで使用する際に、キーの Set のように動作するからです。
+
+```js
+const a = new Set([1, 2, 3]);
+const b = new Map([
+  [1, "one"],
+  [2, "two"],
+  [4, "four"],
+]);
+console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+```
+
+> [!NOTE]
+> Set 風プロトコルは、要素を生成するために `keys()` メソッドを [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の代わりに呼び出します。これは、Map を有効な Set 風オブジェクトにするためです。なぜなら、Map の場合、イテレーターは項目を生成しますが、`has()` メソッドはキーを取得するからです。
+
+[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)は、`has()` メソッドや `size` プロパティを持っておらず、`keys()` メソッドが要素ではなくインデックスを生成するため、Set 風ではありません。{{jsxref("WeakSet")}} オブジェクトも、`keys()` メソッドを持たないため、Set 風ではありません。
 
 ### Set 風のブラウザー API
 
@@ -43,7 +143,7 @@ interface GPUSupportedFeatures {
 
 `Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください。
 
-- 読み取り専用の `Set` 風オブジェクトには [`size`](#set.prototype.size) プロパティがあり、 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`@@iterator`](#set.prototypeiterator) の各メソッドがあります。
+- 読み取り専用の `Set` 風オブジェクトには [`size`](#set.prototype.size) プロパティがあり、 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`[Symbol.iterator]()`](#set.prototypesymbol.iterator) の各メソッドがあります。
 - 読み書き可能な `Set` 風オブジェクトには、それに加えて [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) の各メソッドがあります。
 
 メソッドとプロパティは `Set` の等価なエンティティと同じ動作をしますが、項目のの型に制限があります。
@@ -66,7 +166,7 @@ interface GPUSupportedFeatures {
 
 ## 静的プロパティ
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
+- [`Set[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : 派生オブジェクトを生成するために使用されるコンストラクター関数です。
 
 ## インスタンスプロパティ
@@ -77,28 +177,42 @@ interface GPUSupportedFeatures {
   - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `Set` インスタンスの場合、初期値は {{jsxref("Set/Set", "Set")}} コンストラクターです。
 - {{jsxref("Set.prototype.size")}}
   - : `Set` オブジェクト内の値の数を返します。
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列の `"Set"` です。 このプロパティは {{jsxref("Object.prototype.toString()")}} で利用されます。
+- `Set.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列の `"Set"` です。 このプロパティは {{jsxref("Object.prototype.toString()")}} で利用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Set.prototype.add()")}}
-  - : `Set` オブジェクト内に同じ値を持つ要素がまだ存在しなかった場合、指定した値を持つ新しい要素を `Set` オブジェクトに挿入します。
+  - : この `Set` オブジェクト内に同じ値を持つ要素がまだ存在しなかった場合、指定した値を持つ新しい要素を `Set` オブジェクトに挿入します。
 - {{jsxref("Set.prototype.clear()")}}
-  - : すべての要素を `Set` オブジェクトから取り除きます。
+  - : この `Set` オブジェクトからすべての要素を取り除きます。
 - {{jsxref("Set.prototype.delete()")}}
   - : `value` に関連した要素を取り除き、要素の削除に成功したかどうかを示す論理値を返します。 `Set.prototype.has(value)` はその後は `false` を返します。
+- {{jsxref("Set.prototype.difference()")}}
+  - : 集合を取り、この `Set` の中にあって与えられた集合の中にない要素が入った新しい `Set` を返します。
 - {{jsxref("Set.prototype.entries()")}}
   - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `Set` では _value_ と同じになります。
 - {{jsxref("Set.prototype.forEach()")}}
-  - : `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
+  - : この `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
 - {{jsxref("Set.prototype.has()")}}
-  - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
+  - : この `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
+- {{jsxref("Set.prototype.intersection()")}}
+  - : 集合を取り、この `Set` の中と与えられた集合の中の両方にある要素が入った新しい `Set` を返します。
+- {{jsxref("Set.prototype.isDisjointFrom()")}}
+  - : 集合を取り、この `Set` の中に与えられた集合の中の要素がないかどうかを示す論理値を返します。
+- {{jsxref("Set.prototype.isSubsetOf()")}}
+  - : 集合を取り、この `Set` の中のすべての要素が与えられた集合の中に存在するかどうかを示す論理値を返します。
+- {{jsxref("Set.prototype.isSupersetOf()")}}
+  - : 集合を取り、与えられた集合の中のすべての要素がこの `Set` に存在するかどうかを示す論理値を返します。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} の別名です。
+- {{jsxref("Set.prototype.symmetricDifference()")}}
+  - : 集合を取り、この `Set` または与えられた集合の中に存在するものの、両方には存在しない要素が入った新しい `Set` を返します。
+- {{jsxref("Set.prototype.union()")}}
+  - : 集合を取り、この `Set` または与えられた集合の中のどちらか、または両方に存在する要素が入った新しい `Set` を返します。
 - {{jsxref("Set.prototype.values()")}}
   - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
-- [`Set.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 
 ## 例
@@ -270,25 +384,19 @@ console.log([...mySet]); // myArray と全く同じ Array が表示されます�
 
 ```js
 // 配列から重複する要素を取り除くために使用
+const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
-const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
-
-console.log([...new Set(numbers)]);
-
-// [2, 3, 4, 5, 6, 7, 32]
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### 文字列との関係
 
 ```js
-const text = "India";
+// 大文字小文字の区別あり（集合に "F" と "f" が入る）
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
-const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size; // 5
-
-// 大文字と小文字の区別して重複を削除
-new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+// 重複削除（"f" は文字列中に 2 回現れるが、1 つしか入らない）
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### Set を使用して、リスト中の値の一意性を保証
