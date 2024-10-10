@@ -1,7 +1,7 @@
 ---
 title: clearInterval() 전역 함수
-short-title: clearInterval()
-slug: Web/API/clearInterval
+slug: Web/API/Window/clearInterval
+original_slug: Web/API/clearInterval
 l10n:
   sourceCommit: 3ce863eafe2d98caca1b395691c47f255947a6e0
 ---
