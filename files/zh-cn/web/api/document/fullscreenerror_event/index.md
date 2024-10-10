@@ -2,12 +2,12 @@
 title: Document：fullscreenerror 事件
 slug: Web/API/Document/fullscreenerror_event
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
 ---
 
-{{ApiRef}}
+{{APIRef("Fullscreen API")}}
 
-当浏览器不能切换至全屏模式时，会触发 `fullscreenerror` 事件。
+**`fullscreenerror`** 事件在浏览器不能切换全屏模式时触发。
 
 与 [`fullscreenchange` 事件](/zh-CN/docs/Web/API/Document/fullscreenchange_event)一样，会触发两个 `fullscreenerror` 事件；第一个事件会发送给未能更改模式的 {{domxref("Element")}}，第二个事件会发送给拥有该元素的 {{domxref("Document")}}。
 

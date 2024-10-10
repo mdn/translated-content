@@ -90,4 +90,4 @@ self.addEventListener("sync", (event) => {
 
 ## 参见
 
-- [介绍 Background Sync](https://developer.chrome.com/blog/background-sync/)
+- [介绍 Background Sync](https://developer.chrome.google.cn/blog/background-sync)

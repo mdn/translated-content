@@ -2,7 +2,7 @@
 title: StorageManager：getDirectory() 方法
 slug: Web/API/StorageManager/getDirectory
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}} {{AvailableInWorkers}}

@@ -20,22 +20,24 @@ slug: Web/CSS/outline
 
 ## 语法
 
-```
+```css
 /* 样式 */
 outline: solid;
 
-/* 颜色 | 样式 */
-outline: #f66 dashed;
+/* 样式 | 颜色 */
+outline: dashed #f66;
 
-/* 样式 | 宽度 */
-outline: inset thick;
+/* 宽度 | 样式 */
+outline: thick inset;
 
-/* 颜色 | 样式 | 宽度 */
-outline: green solid 3px;
+/* 宽度 | 样式 | 颜色 */
+outline: 3px solid green;
 
 /* 全局值 */
 outline: inherit;
 outline: initial;
+outline: revert;
+outline: revert-layer;
 outline: unset;
 ```
 
@@ -53,21 +55,27 @@ outline: unset;
 - `<'outline-width'>`
   - : 设置轮廓的宽度。没有设置时默认值为 `medium`。参见 {{cssxref("outline-width")}}。
 
-### 形式语法
+## 形式定义
 
-{{csssyntax("outline")}}
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-### HTML
+### 使用 outline 设置焦点样式
 
-```
-<a href="#">This link has a special focus style.</a>
+#### HTML
+
+```html
+<a href="#">该链接具有特殊的焦点样式。</a>
 ```
 
 ### CSS
 
-```
+```css
 a {
   border: 1px solid;
   border-radius: 3px;
@@ -83,7 +91,9 @@ a:focus {
 }
 ```
 
-### 结果
+#### 结果
+
+{{EmbedLiveSample("使用 outline 设置焦点样式", "100%", 85)}}
 
 ## 无障碍考虑
 
@@ -95,8 +105,6 @@ a:focus {
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 

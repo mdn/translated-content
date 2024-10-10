@@ -2,7 +2,7 @@
 title: Notification：silent 属性
 slug: Web/API/Notification/silent
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: e011d5695b264ced5a3f4bb822ca7904e23b7e83
 ---
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个布尔值。默认值是 `false`；设为 `true` 将使通知静音。
+布尔值或 `null`。如果为 `true`，则使通知静音；如果为 `null`，则遵循设备的默认设置。
 
 ## 示例
 

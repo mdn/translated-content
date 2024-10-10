@@ -349,7 +349,7 @@ button:before {
    1. 我们清除在快进功能上设置的所有类和时间间隔。这样做是因为如果我们在按下 `fwd`（快进）按钮后再按下 `rwd`（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。
    2. 使用 `if` 语句检查是否已在 `rwd` 按钮上设置了用来指示它已被按下的 `active` 类。{{domxref("classList")}} 是一个存在于每个元素上的非常方便的属性。它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用 `classList.contains()` 方法检查列表是否包含 `active` 类，将返回布尔值 `true`/`false` 结果。
    3. 如果在 `rwd` 按钮上设置了 `active`，我们将使用 `classList.remove()` 删除它，清除第一次按下按钮时设置的时间间隔（参见下面的更多解释），并调用 {{domxref("HTMLMediaElement.play()")}} 取消快退并开始正常播放视频。
-   4. 如果尚未设置，使用 `classList.add()` 将 `active` 类添加到 `rwd` 按钮，调用 {{domxref("HTMLMediaElement.pause()")}} 暂停视频，然后设置 `intervalRwd` 变量为 {{domxref("setInterval()")}} 的调用结果。调用时，`setInterval()` 会创建一个时间间隔。这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次 `windBackward()` 函数——我们将使用此函数不断快退视频。要停止 {{domxref("setInterval()")}} 运行，你必须调用 {{domxref("clearInterval()")}}，并给出要清除的时间间隔的标识名，在本例中是变量名称 `intervalRwd`（请参阅函数中较早的一个 `clearInterval()` 调用）。
+   4. 如果尚未设置，使用 `classList.add()` 将 `active` 类添加到 `rwd` 按钮，调用 {{domxref("HTMLMediaElement.pause()")}} 暂停视频，然后设置 `intervalRwd` 变量为 {{domxref("Window.setInterval", "setInterval()")}} 的调用结果。调用时，`setInterval()` 会创建一个时间间隔。这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次 `windBackward()` 函数——我们将使用此函数不断快退视频。要停止 {{domxref("Window.setInterval", "setInterval()")}} 运行，你必须调用 {{domxref("Window.clearInterval", "clearInterval()")}}，并给出要清除的时间间隔的标识名，在本例中是变量名称 `intervalRwd`（请参阅函数中较早的一个 `clearInterval()` 调用）。
 
 3. 最后，对于本节，定义在 `setInterval()` 调用中需要调用的 `windBackward()` 和 `windForward()` 函数。在以上两个函数下面添加以下内容：
 

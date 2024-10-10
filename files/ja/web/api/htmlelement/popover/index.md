@@ -1,11 +1,12 @@
 ---
 title: "HTMLElement: popover プロパティ"
+short-title: popover
 slug: Web/API/HTMLElement/popover
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 **`popover`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素のポップオーバー状態（`"auto"` または `"manual"`）を JavaScript から取得したり設定したりします。機能検出に使用することもできます。
 
@@ -61,4 +62,5 @@ if (popoverSupported) {
 
 ## 関連情報
 
+- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)
