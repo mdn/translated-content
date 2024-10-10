@@ -298,7 +298,7 @@ img {
 
 ![一个居中的 Mozilla 的标志，还有一个页眉和段落。现在它看起来很有风格，整个页面的背景是蓝色的，居中的主要内容条是橙色的背景](website-screenshot-final.png)
 
-（你可以[在这里](https://mdn.github.io/beginner-html-site-styled/)查看我们的版本。）如果你遇到困难，你可以将 [Github 上的完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)与你的文件进行比较。
+（你可以[在这里查看我们的版本](https://mdn.github.io/beginner-html-site-styled/)。）如果你遇到困难，你可以将 [Github 上的完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)与你的文件进行比较。
 
 在这里，我们只是介绍 CSS 的表面。想学习更多，参见[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)。
 
