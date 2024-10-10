@@ -233,7 +233,7 @@ myVariable = "斯蒂夫";
       <td>
         返回和先前逻辑上相反的值。非将 <code>true</code> 变为 <code>false</code>，等等。当它和相等运算符一起使用时，否定运算符测试两个值是否<em>不</em>相等。
       </td>
-      <td><code>!</code>, <code>!==</code></td>
+      <td><code>!</code>、<code>!==</code></td>
       <td>
         <p>
           对于“非”，基本表达式是 <code>true</code>，但结果返回的是 <code>false</code>，因为我们否定了这个值：
