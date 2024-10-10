@@ -1,17 +1,23 @@
 ---
-title: Error.prototype.cause
+title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`cause`** 속성은 오류의 구체적인 원래 원인을 나타냅니다.
+{{jsxref("Error")}} 인스턴스의 **`cause`** 데이터 속성은 오류의 구체적인 원래 원인을 나타냅니다.
 
 예외를 잡아서 다시 예외를 발생시킬 때 원래 발생한 오류에 접근 할 수 있으면서 보다 구체적인 혹은 유용한 에러 메시지를 추가할때 사용합니다.
 
 ## 값
 
-`options.cause` 인자의 [`Error()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)에 전달되는 값입니다.
+`options.cause` 인자의 [`Error()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)에 전달되는 값입니다. 존재하지 않을 수도 있습니다.
+
+{{js_property_attributes(1, 0, 1)}}
+
+## 설명
 
 값은 어떤 타입이든 가능합니다. `catch`문의 변수 역시 `Error`라고 확신할 수 없는 것과 마찬가지로 여러분이 처리할 오류의 `cause`에 `Error`가 있다고 가정하지 마시기 바랍니다. 아래의 예제 "오류 원인으로 구조화된 데이터 제공"는 의도적으로 오류가 아닌 것을 `cause`로 제공하는 경우를 보여줍니다.
 

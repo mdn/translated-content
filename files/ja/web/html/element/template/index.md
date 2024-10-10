@@ -364,4 +364,4 @@ container.appendChild(secondClone);
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
 - [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) (developer.chrome.com, 2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)

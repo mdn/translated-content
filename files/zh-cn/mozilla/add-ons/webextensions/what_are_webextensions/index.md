@@ -48,7 +48,7 @@ l10n:
 
 ![Axe 辅助功能测试扩展显示在网页中发现的辅助功能问题。](axe_developer_tools_add_on.png)
 
-Firefox 扩展使用 [WebExtensions API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.com/extensions) 兼容。在大多数情况下，为这些浏览器所写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。
+Firefox 扩展使用 [WebExtensions API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.google.cn/docs/extensions) 兼容。在大多数情况下，为这些浏览器所写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。
 
 如果你有想法或者问题，可以在 [dev-addons 讨论版块](https://discourse.mozilla.org/c/add-ons/35)或者 [Matrix](https://chat.mozilla.org/#/room/#addons:mozilla.org) 上的 [Add-ones room](https://wiki.mozilla.org/Matrix) 与我们联系。
 

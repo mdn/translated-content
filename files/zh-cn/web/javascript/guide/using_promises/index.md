@@ -435,15 +435,15 @@ for (const f of [func1, func2, func3]) {
 
 可以通过 Promise 的构造函数从零开始创建 {{jsxref("Promise")}}。这种方式（通过构造函数的方式）应当只在封装旧 API 的时候用到。
 
-理想状态下，所有的异步函数应该会返回 Promise。但有一些 API 仍然使用旧方式来传入成功（或者失败）的回调。最典型的例子就是 {{domxref("WindowTimers.setTimeout", "setTimeout()")}} 函数：
+理想状态下，所有的异步函数应该会返回 Promise。但有一些 API 仍然使用旧方式来传入成功（或者失败）的回调。最典型的例子就是 {{domxref("Window.setTimeout", "setTimeout()")}} 函数：
 
 ```js
 setTimeout(() => saySomething("10 秒钟过去了"), 10 * 1000);
 ```
 
-混用旧式回调和 Promise 可能会造成运行时序问题。如果 `saySomething` 函数失败了，或者包含了编程错误，那就没有办法捕获它了。这得怪 `setTimeout`。
+混用旧式回调和 Promise 可能会造成运行时序问题。如果 `saySomething` 函数失败了，或者包含了编程错误，那就没有办法捕获它了。这得怪 `setTimeout()`。
 
-幸运地是，我们可以将 `setTimeout` 封装入 Promise 内。最好的做法是，将这些有问题的函数封装起来，留在底层，并且永远不要再直接调用它们：
+幸运地是，我们可以将 `setTimeout()` 封装入 Promise 内。最好的做法是，将这些有问题的函数封装起来，留在底层，并且永远不要再直接调用它们：
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -453,7 +453,7 @@ wait(10 * 1000)
   .catch(failureCallback);
 ```
 
-通常，Promise 的构造函数接收一个执行函数（executor），我们可以在这个执行函数里手动地解决（resolve）或拒绝（reject）一个 Promise。既然 `setTimeout` 并不会真的执行失败，那么我们可以在这种情况下忽略拒绝的情况。你可以在 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 参考中查看更多关于执行函数的信息。
+通常，Promise 的构造函数接收一个执行函数（executor），我们可以在这个执行函数里手动地解决（resolve）或拒绝（reject）一个 Promise。既然 `setTimeout()` 并不会真的执行失败，那么我们可以在这种情况下忽略拒绝的情况。你可以在 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 参考中查看更多关于执行函数的信息。
 
 ## 时序
 
@@ -510,7 +510,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### 任务队列 vs. 微任务
 
-Promise 回调被处理为[微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，而 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 回调被处理为任务队列。
+Promise 回调被处理为[微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，而 {{domxref("Window.setTimeout", "setTimeout()")}} 回调被处理为任务队列。
 
 ```js
 const promise = new Promise((resolve, reject) => {
@@ -542,7 +542,7 @@ Promise 回调（.then）
 
 你可能遇到如下情况：你的一些 Promise 和任务（例如事件或回调）会以不可预测的顺序启动。此时，你或许可以通过使用微任务检查状态或平衡 Promise，并以此有条件地创建 Promise。
 
-如果你认为微任务可能会帮助你解决问题，那么请阅读[微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，学习如何用 [`queueMicrotask()`](/zh-CN/docs/Web/API/queueMicrotask) 来将一个函数作为微任务添加到队列中。
+如果你认为微任务可能会帮助你解决问题，那么请阅读[微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)，学习如何用 {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} 来将一个函数作为微任务添加到队列中。
 
 ## 参见
 

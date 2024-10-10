@@ -2,7 +2,7 @@
 title: transform
 slug: Web/CSS/transform
 l10n:
-  sourceCommit: fca9bb892a6016c09620a1e3aed3d84ce3780615
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
+このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
 
 > [!WARNING]
 > 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
@@ -59,8 +59,6 @@ transform: unset;
 
 `transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
 
-複数の関数値に {{cssxref("transform-function/perspective", "perspective()")}} が含まれる場合は、先頭に置く必要があります。
-
 ### 値
 
 - {{cssxref("&lt;transform-function&gt;")}}
@@ -68,7 +66,7 @@ transform: unset;
 - `none`
   - : 座標変換を何も適用しないことを指定します。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
 

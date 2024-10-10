@@ -2,14 +2,14 @@
 title: URLSearchParams
 slug: Web/API/URLSearchParams
 l10n:
-  sourceCommit: 92ae2da158d7462890f6d76d9bd605468bd906eb
+  sourceCommit: 6cca2796f0dcfe90e2b6a069b5e10e0d139278a3
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-**`URLSearchParams`** インターフェイスは URL のクエリー文字列の操作に役立つメソッドを定義します。
+**`URLSearchParams`** インターフェイスは、URL のクエリー文字列の操作に役立つメソッドを定義します。
 
-`URLSearchParams` を実装しているオブジェクトは、{{jsxref("Statements/for...of", "for...of")}} 構造の中で直接使用して、キーと値のペアをクエリー文字列に現れるのと同じ順序で反復処理することができます。例えば次の 2 行は等価です。
+`URLSearchParams` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)ですので、{{jsxref("Statements/for...of", "for...of")}} 構造の中で直接使用して、キーと値のペアをクエリー文字列に現れるのと同じ順序で反復処理することができます。例えば次の 2 行は等価です。
 
 ```js
 for (const [key, value] of mySearchParams) {
@@ -18,7 +18,7 @@ for (const [key, value] of mySearchParams.entries()) {
 }
 ```
 
-{{availableinworkers}}
+`URLSearchParams` は機能的には {{jsxref("Map")}} に似ていますが、反復処理を行う際には、`Map` では実装方法の関係で発生しないような[落とし穴](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#concurrent_modifications_when_iterating)に陥る可能性があります。
 
 ## コンストラクター
 
@@ -27,19 +27,19 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## インスタンスプロパティ
 
-- {{domxref("URLSearchParams.size", 'size')}}
+- {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
   - : 検索パラメーター項目の総数を示します。
 
 ## インスタンスメソッド
 
-- `URLSearchParams.[@@iterator]()`
-  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+- `URLSearchParams[Symbol.iterator]()`
+  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
 - {{domxref("URLSearchParams.append()")}}
   - : 指定されたキーと値のペアを新しい検索パラメーターとして追加します。
 - {{domxref("URLSearchParams.delete()")}}
   - : 指定された名前と値に一致する検索パラメーターを、検索パラメーターのリストからすべて削除します。
 - {{domxref("URLSearchParams.entries()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+  - : このオブジェクトに含まれるすべてのキーと値のペアを、クエリー文字列に現れるのと同じ順序で反復処理することができる{{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
 - {{domxref("URLSearchParams.forEach()")}}
   - : コールバック関数を介して、このオブジェクトに含まれるすべての値を反復処理します。
 - {{domxref("URLSearchParams.get()")}}
@@ -49,7 +49,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.has()")}}
   - : 指定されたパラメーター、またはパラメーターと値のペアが存在するかどうかを示す論理値を返します。
 - {{domxref("URLSearchParams.keys()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアのキーを反復処理する {{jsxref("Iteration_protocols", "イテレーター")}}を返します。
+  - : このオブジェクトに含まれるすべてのキーと値のペアのキーを反復処理する {{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
 - {{domxref("URLSearchParams.set()")}}
   - : 指定された検索パラメーターに結び付けられた値を指定された値に設定します。複数の値が存在していた場合、他のものは削除されます。
 - {{domxref("URLSearchParams.sort()")}}
@@ -57,7 +57,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.toString()")}}
   - : URL で使用するのに適したクエリー文字列を返します。
 - {{domxref("URLSearchParams.values()")}}
-  - : このオブジェクトに含まれるすべてのキーと値のペアの値を反復処理する {{jsxref("Iteration_protocols", "イテレーター")}}を返します。
+  - : このオブジェクトに含まれるすべてのキーと値のペアの値を反復処理する {{jsxref("Iteration_protocols","イテレーター","","nocode")}}を返します。
 
 ## 例
 
@@ -107,7 +107,7 @@ console.log(searchParams.getAll("foo")); // ["bar", "baz"]
 
 ### URL の解釈なし
 
-`URLSearchParams` コンストラクターは URL 全体を解釈しません。しかし、文字列から最初の `?` 以降が存在すれば、削除します。
+`URLSearchParams` コンストラクターは URL 全体を解釈しません。しかし、もし存在すれば、文字列から最初の `?` 以降を削除します。
 
 ```js
 const paramsString1 = "http://example.com/search?query=%40";
@@ -130,7 +130,7 @@ console.log(searchParams3.has("query")); // true
 
 ### プラス記号の温存
 
-`URLSearchParams` コンストラクターはプラス記号 (`+`) をスペースとして解釈します。以下の例では、[16 進エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#16_進エスケープシーケンス) を使って、URL 検索パラメーターに格納する必要のあるバイナリデータ（各バイトが情報を持つ）を含む文字列を模倣しています。`btoa()` でエンコードされた文字列は `+` を含んでおり、 `URLSearchParams` では温存されないことに注意してください。
+`URLSearchParams` コンストラクターはプラス記号 (`+`) を空白として解釈します。以下の例では、[16 進エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#16_進エスケープシーケンス) を使って、URL 検索パラメーターに格納する必要のあるバイナリーデータ（各バイトが情報を持つ）を含む文字列を模倣しています。`btoa()` でエンコードされた文字列は `+` を含んでおり、 `URLSearchParams` では温存されないことに注意してください。
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";

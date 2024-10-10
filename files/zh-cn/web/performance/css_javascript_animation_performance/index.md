@@ -18,7 +18,7 @@ CSS 中的 transition 和 animation 都可以用于编写动画，它们都有�
 
 ## requestAnimationFrame
 
-{{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} 提供了一种用 JavaScript 代码制作动画的高效方式。本方法的回调函数在绘制下一帧之前由浏览器调用。与需要一个延迟参数的 {{domxref("setTimeout()")}} 或 {{domxref("setInterval()")}} 相比，`requestAnimationFrame()` 效率高得多。开发人员可以在 `requestAnimationFrame()` 回调函数中通过简单地改变元素的样式（或者更新画布绘制，等等）来创建动画。
+{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 提供了一种用 JavaScript 代码制作动画的高效方式。本方法的回调函数在绘制下一帧之前由浏览器调用。与需要一个延迟参数的 {{domxref("Window.setTimeout", "setTimeout()")}} 或 {{domxref("Window.setInterval", "setInterval()")}} 相比，`requestAnimationFrame()` 效率高得多。开发人员可以在 `requestAnimationFrame()` 回调函数中通过简单地改变元素的样式（或者更新画布绘制，等等）来创建动画。
 
 > [!NOTE]
 > 像 CSS transitions 和 animations 一样，当页面在后台运行时，`requestAnimationFrame()` 会暂停。

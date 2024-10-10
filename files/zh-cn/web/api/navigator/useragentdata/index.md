@@ -31,4 +31,4 @@ console.log(navigator.userAgentData.brands);
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)

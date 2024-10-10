@@ -30,7 +30,7 @@ clip-path: view-box;
 /* <basic-shape> values */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
+clip-path: ellipse(50px 60px at 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
@@ -65,7 +65,7 @@ clip-path: unset;
       - : 定义一个椭圆（使用两个半径和一个圆心位置）。
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : 定义一个多边形（使用一个 SVG 填充规则和一组顶点）。
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : 定义一个任意形状（使用一个可选的 SVG 填充规则和一个 SVG 路径定义）。
 
 - `<geometry-box>`
