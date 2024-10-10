@@ -439,7 +439,7 @@ function setUserName() {
 
 翻译一下就是：如果 `myName` 没有值，就再次从头运行`setUserName()`。如果有值（如果上面的表达式不为真），就把值存储到 `localStorage` 并设置为标题文本。
 
-## 小结
+## 总结
 
 如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面。你也可以[查看我们的版本](https://mdn.github.io/beginner-html-site-scripted/)。
 
