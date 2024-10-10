@@ -423,7 +423,7 @@ document.querySelector("html").addEventListener("click", () => {
 
 也可以不输入任何名字直接点击*确认*，你的标题会显示为 _Mozilla is cool,_，原因么显而易见。
 
-要避免这些问题，应该检查用户没有空名字。更新 `setUserName()` 为：
+要避免这些问题，应该检查用户没有输入空名字。更新 `setUserName()` 为：
 
 ```js
 function setUserName() {
