@@ -35,10 +35,10 @@ Un objet [`Element`](/fr/docs/Web/API/Element) décrivant l'objet élément du D
 
 ## Exemples
 
-### Contenu HTML
+### HTML
 
 ```html
-<html>
+<html lang="fr">
   <head>
     <title>exemple de getElementById</title>
   </head>
@@ -50,7 +50,7 @@ Un objet [`Element`](/fr/docs/Web/API/Element) décrivant l'objet élément du D
 </html>
 ```
 
-### Contenu JavaScript
+### JavaScript
 
 ```js
 function changerCouleur(nouvelleCouleur) {
@@ -95,7 +95,7 @@ Contrairement à d'autres méthodes de recherche d'éléments, comme [`Document.
 
 S'il n'y a pas d'élément avec l'identifiant (`id`) fourni, cette fonction retourne `null`. À noter que le paramètre `id` est sensible à la casse, ainsi `document.getElementById("Main")` retournera `null` au lieu de l'élément `<div id="main">` étant donné que «&nbsp;M&nbsp;» et «&nbsp;m&nbsp;» sont différents pour cette méthode.
 
-Les éléments absents du document ne sont pas cherchés par `getElementById()`. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec {{domxref("Node.insertBefore()")}} ou une méthode similaire avant de pouvoir y accéder avec `getElementById()`&nbsp;:
+Les éléments absents du document ne sont pas cherchés par `getElementById()`. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec [`Node.insertBefore()`](/fr/docs/Web/API/Node/insertBefore) ou une méthode similaire avant de pouvoir y accéder avec `getElementById()`&nbsp;:
 
 ```js
 const element = document.createElement("div");
