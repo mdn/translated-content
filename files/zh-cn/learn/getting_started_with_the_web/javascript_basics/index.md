@@ -43,7 +43,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
    <script src="scripts/main.js"></script>
    ```
 
-3. 与 CSS 的 {{htmlelement("link")}} 元素的功能类似，它将 JavaScript 引入以作用于 HTML （以及 CSS 和页面上的任何其他内容）。
+3. 与 CSS 的 {{htmlelement("link")}} 元素的功能类似，它将 JavaScript 引入以作用于 HTML（以及 CSS 和页面上的任何其他内容）。
 4. 将下列代码添加到 `scripts/main.js` 文件：
 
    ```js
