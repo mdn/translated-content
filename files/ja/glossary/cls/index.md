@@ -13,7 +13,7 @@ CLS は、ユーザーが予期しないレイアウトシフトにどの程度�
 
 レイアウトシフトは、例えば {{htmlelement("img")}} や {{htmlelement("video")}} 要素に `width` および `height` 属性が設定されていない場合に発生することがあります。ブラウザーがこれらの要素を実際に読み込むまで、占有するスペースを正確に予測できないことが原因です。
 
-{{domxref("LayoutShift")}} インターフェースは [Performance API](/ja/docs/Web/API/Performance_API) の一部であり、個々のレイアウトシフトを測定するために使用できます。個々のレイアウトシフトの値を用いて、ウェブページの CLS スコアを計算できます。
+{{domxref("LayoutShift")}} インターフェイスは [Performance API](/ja/docs/Web/API/Performance_API) の一部であり、個々のレイアウトシフトを測定するために使用できます。個々のレイアウトシフトの値を用いて、ウェブページの CLS スコアを計算できます。
 
 ## 関連情報
 
