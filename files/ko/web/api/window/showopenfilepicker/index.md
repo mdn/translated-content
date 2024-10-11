@@ -36,7 +36,7 @@ showOpenFilePicker()
       - : 선택 가능한 파일 유형들의 {{jsxref('Array')}}입니다. 각 요소는 아래의 옵션을 포함하는 객체입니다.
 
         - `description` {{Optional_Inline}}
-          - : 선택 가능한 파일 유형에 대한 설명입니다. 기본 값은 빈 문자열입니다.
+          - : 사용 가능한 파일 유형에 대한 설명입니다. 기본 값은 빈 문자열입니다.
         - `accept`
           - : 키는 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다 (아래 예제를 참고하세요).
 
@@ -103,5 +103,5 @@ async function getFile() {
 
 ## 같이 보기
 
-- [File System API](/en-US/docs/Web/API/File_System_API)
+- [File System API](/ko/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

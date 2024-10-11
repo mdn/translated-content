@@ -8,72 +8,61 @@ l10n:
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`showSaveFilePicker()`** method of the
-{{domxref("Window")}} interface shows a file picker that allows a user to save a file.
-Either by selecting an existing file, or entering a name for a new file.
+{{domxref("Window")}} 인터페이스의 **`showSaveFilePicker()`** 메서드는 사용자가 기존 파일을 선택하거나, 새로운 파일 이름을 입력해서 파일을 저장할 수 있는 선택창을 엽니다.
 
-## Syntax
+## 구문
 
 ```js-nolint
 showSaveFilePicker()
 ```
 
-### Parameters
+### 매개변수
 
 - `options` {{Optional_Inline}}
 
-  - : An object containing options, which are as follows:
+  - : 아래의 옵션을 포함하는 객체입니다.
 
     - `excludeAcceptAllOption` {{Optional_Inline}}
-      - : A boolean value that defaults to
-        `false`. By default, the picker should include an option to not apply
-        any file type filters (instigated with the type option below). Setting this option
-        to `true` means that option is _not_ available.
+      - : 기본 값 `false`인 불리언입니다. 기본적으로 파일 선택창에는 파일 유형 필터(아래의 `type` 참고)를 적용하지 않는 옵션이 존재합니다. 이 옵션을 `true`로 설정하면 사용자가 해당 옵션을 선택할 수 없습니다.
     - `id` {{Optional_Inline}}
-      - : By specifying an ID, the browser can remember different directories for different
-        IDs. If the same ID is used for another picker, the picker opens in the same
-        directory.
+      - : ID를 지정하면 브라우저가 파일 선택창의 ID마다 마지막으로 탐색한 디렉토리를 기억합니다. 다른 파일 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉토리에서 파일 선택창이 열립니다.
     - `startIn` {{Optional_Inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
-        `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
+      - : 파일 선택창이 열릴 때의 최초 디렉토리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉토리 식별자(`"desktop"`, `"documents"`,
+        `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
     - `suggestedName` {{Optional_Inline}}
-      - : A {{jsxref('String')}}. The suggested file name.
+      - : 추천하는 파일 이름을 지정하는 {{jsxref('String')}}입니다.
     - `types` {{Optional_Inline}}
 
-      - : An {{jsxref('Array')}} of allowed file types to save. Each
-        item is an object with the following options:
+      - : 저장 가능한 파일 유형들의 {{jsxref('Array')}}입니다. 각 요소는 아래의 옵션을 포함하는 객체입니다.
 
         - `description` {{Optional_Inline}}
-          - : An optional description of the category of files
-            types allowed. Default to be an empty string.
+          - : 사용 가능한 파일 유형에 대한 설명입니다. 기본 값은 빈 문자열입니다.
         - `accept`
-          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
-            for an example).
+          - : 키는 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다 (아래 예제를 참고하세요).
 
-### Return value
+### 반환 값
 
-A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemFileHandle')}} object.
+{{domxref('FileSystemFileHandle')}} 객체로 이행하는 {{jsxref("Promise")}}.
 
-### Exceptions
+### 예외
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the user dismisses the file picker without selecting or inputting a file,
-    or if the user agent deems any selected files too sensitive or dangerous.
-- `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
+  - : 사용자가 파일을 선택하지 않고 파일 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때 파일이 너무 민감하거나 위험할 때 발생합니다.
+  - `SecurityError` {{domxref("DOMException")}}
+  - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
-  - : Thrown if accept types can't be processed, which may happen if:
-    - Any key string of the `accept` options of any item in `types` options can't parse a valid MIME type.
-    - Any value string(s) of the `accept` options of any item in `types` options is invalid, for example, if it does not start with `.` and if end with `.`, or if it contains any invalid code points and its length is more than 16.
-    - The `types` options is empty and the `excludeAcceptAllOption` options is `true`.
+  - : 다음과 같은 상황에 의해 허용하는 파일 유형을 처리할 수 없으면 발생합니다.
+    - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아님.
+    - `types` 옵션의 `accept` 옵션 내 어떤 값이 유효하지 않음. 예컨대 `.`로 시작하지 않거나, `.`로 끝나거나, 유효하지 않은 코드 포인트를 포함하거나, 길이가 16 초과.
+    - `types` 옵션이 비어있는데 `excludeAcceptAllOption` 옵션이 `true`임.
 
-## Security
+## 보안
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[사용자의 임시 활성화](/ko/docs/Web/Security/User_activation)가 필요합니다. 이 기능이 동작하려면 사용자가 페이지 또는 UI 요소와 상호작용해야 합니다.
 
-## Examples
+## 예제
 
-The following function shows a file picker, with text files highlighted for selection.
+다음 코드는 텍스트 파일들을 선택할 수 있는 파일 선택창을 엽니다.
 
 ```js
 async function getNewFileHandle() {
@@ -89,15 +78,15 @@ async function getNewFileHandle() {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- [File System API](/en-US/docs/Web/API/File_System_API)
+- [File System API](/ko/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
