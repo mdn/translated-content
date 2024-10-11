@@ -2,7 +2,7 @@
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 l10n:
-  sourceCommit: 42d459068e64ea5893a23fb059c17549cb4c64a7
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -138,7 +138,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 `Child` のインスタンスの `constructor` は `Child.prototype` が再割り当てされるため、 `Parent` になります。
 
-言語がオブジェクトの `constructor` プロパティを読み取ることはほとんどありません。唯一の例外は、クラスの新しいインスタンスを作成するために [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) を使用する場合ですが、そのような用途はまれであり、いずれにせよ、組み込みクラスのサブクラスを作成するためには [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 構文を使用する必要があります。
+言語がオブジェクトの `constructor` プロパティを読み取ることはほとんどありません。唯一の例外は、クラスの新しいインスタンスを作成するために [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) を使用する場合ですが、そのような用途はまれであり、いずれにせよ、組み込みクラスのサブクラスを作成するためには [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 構文を使用する必要があります。
 
 しかし、呼び出し側がインスタンスから元クラスにアクセスするために `constructor` を使用している場合、`Child.prototype.constructor` が常に `Child` 自体を指していることを保証することは非常に重要です。以下はオブジェクトを作成するための `create()` メソッドを持っている場合です。
 
@@ -159,7 +159,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create は undefined、 constructor === Parent だから
 ```
 
-上の例では、 `constructor` が `Parent` にリンクしているため、例外が発生します。これを避けるには、使用するコンストラクタを割り当ててください。
+上の例では、 `constructor` が `Parent` にリンクしているため、例外が発生します。これを避けるには、使用するコンストラクターを割り当ててください。
 
 ```js
 function Parent() {
