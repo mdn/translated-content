@@ -15,7 +15,7 @@ File System API를 사용하여 사용자의 로컬 기기 또는 사용자가 �
 
 파일 및 디렉터리와의 상호작용 대부분은 핸들을 통해 진행합니다. 부모 {{domxref('FileSystemHandle')}} 클래스를 기반으로, 각각 파일과 디렉터리 핸들을 정의하는 자식 클래스인 {{domxref('FileSystemFileHandle')}}과 {{domxref('FileSystemDirectoryHandle')}} 클래스가 존재합니다.
 
-핸들은 사용자 시스템의 어느 파일이나 디렉터리를 나타냅니다. 핸들에 접근하려면 우선 {{domxref('window.showOpenFilePicker()')}}나 {{domxref('window.showDirectoryPicker()')}} 등의 메서드를 호출해 사용자에게 파일 또는 디렉터리 피커를 보여줘야 합니다. 사용자가 피커를 통해 파일 또는 디렉터리를 성공적으로 선택하면 핸들이 반환됩니다.
+핸들은 사용자 시스템의 어느 파일이나 디렉터리를 나타냅니다. 핸들에 접근하려면 우선 {{domxref('window.showOpenFilePicker()')}}나 {{domxref('window.showDirectoryPicker()')}} 등의 메서드를 호출해 사용자에게 파일 또는 디렉터리 선택창을 보여줘야 합니다. 사용자가 선택창을 통해 파일 또는 디렉터리를 성공적으로 선택하면 핸들이 반환됩니다.
 
 다음 방법으로도 핸들을 얻을 수 있습니다.
 
@@ -55,11 +55,11 @@ File System API를 사용하여 사용자의 로컬 기기 또는 사용자가 �
 ### 다른 인터페이스 확장
 
 - {{domxref("Window.showDirectoryPicker()")}}
-  - : 사용자가 디렉터리를 선택할 수 있는 디렉터리 피커를 엽니다.
+  - : 사용자가 디렉터리를 선택할 수 있는 디렉터리 선택창을 엽니다.
 - {{domxref("Window.showOpenFilePicker()")}}
-  - : 사용자가 파일 한 개 또는 여러 개를 선택할 수 있는 파일 피커를 엽니다.
+  - : 사용자가 파일 한 개 또는 여러 개를 선택할 수 있는 파일 선택창을 엽니다.
 - {{domxref("Window.showSaveFilePicker()")}}
-  - : 사용자가 파일을 저장할 수 있는 파일 피커를 엽니다.
+  - : 사용자가 파일을 저장할 수 있는 파일 선택창을 엽니다.
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
   - : 드래그된 아이템이 파일이라면 {{domxref('FileSystemFileHandle')}}을, 디렉터리라면 {{domxref('FileSystemDirectoryHandle')}}을 반환합니다.
 - {{domxref("StorageManager.getDirectory()")}}
@@ -69,18 +69,18 @@ File System API를 사용하여 사용자의 로컬 기기 또는 사용자가 �
 
 ### 파일 접근하기
 
-다음 코드는 사용자가 파일을 선택할 수 있도록 파일 피커를 엽니다.
+다음 코드는 사용자가 파일을 선택할 수 있는 파일 선택창을 엽니다.
 
 ```js
 async function getFile() {
-  // 파일 피커를 열고 구조 분해로 첫 번째 핸들을 가져옴
+  // 파일 선택창을 열고 구조 분해로 첫 번째 핸들을 가져옴
   const [fileHandle] = await window.showOpenFilePicker();
   const file = await fileHandle.getFile();
   return file;
 }
 ```
 
-다음 비동기 함수는 파일 피커를 열고, 사용자가 파일을 선택하면 `getFile()` 메서드를 사용해 그 파일의 내용을 가져옵니다.
+다음 비동기 함수는 파일 선택창을 열고, 사용자가 파일을 선택하면 `getFile()` 메서드를 사용해 그 파일의 내용을 가져옵니다.
 
 ```js
 const pickerOpts = {
@@ -97,7 +97,7 @@ const pickerOpts = {
 };
 
 async function getTheFile() {
-  // 파일 피커를 열고 구조 분해로 첫 번째 핸들을 가져옴
+  // 파일 선택창을 열고 구조 분해로 첫 번째 핸들을 가져옴
   const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // 파일 내용 가져오기
@@ -120,7 +120,7 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-  // 파일 피커를 열어 파일 핸들 가져오기
+  // 파일 선택창을 열어 파일 핸들 가져오기
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // 사용자가 취소했거나 다른 이유로 파일 열기 실패
@@ -145,7 +145,7 @@ async function returnPathDirectories(directoryHandle) {
 
 ### 파일 쓰기
 
-다음 비동기 함수는 저장 파일 피커를 엽니다. 저장 파일 피커는 파일이 선택된 후 {{domxref('FileSystemFileHandle')}}을 반환합니다. 그 후 {{domxref('FileSystemFileHandle.createWritable()')}} 메서드로 쓰기 스트림을 생성할 수 있습니다.
+다음 비동기 함수는 저장 파일 선택창을 엽니다. 저장 파일 선택창은 파일이 선택된 후 {{domxref('FileSystemFileHandle')}}을 반환합니다. 그 후 {{domxref('FileSystemFileHandle.createWritable()')}} 메서드로 쓰기 스트림을 생성할 수 있습니다.
 
 다음으로, 스트림에 사용자의 {{domxref('Blob')}}을 쓰고, 스트림을 닫습니다.
 
