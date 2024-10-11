@@ -80,7 +80,7 @@ block content
 
 要完成这一挑战，你必须：
 
-1. 在*书本实例详细信息*页面中将变量 `due_back` 替换为 `due_back_formatted`。
+1. 在*书本实例详情*页面中将变量 `due_back` 替换为 `due_back_formatted`。
 2. 更新作者 `Author` 模型以添加寿命虚拟属性。寿命应类似于：_date_of_birth - date_of_death_，这两个值的格式与 `BookInstance.due_back_formatted` 的日期格式相同。
 3. 在当前显示使用 `date_of_birth` 和 `date_of_death` 的所有视图中使用 `Author.lifespan`。
 
