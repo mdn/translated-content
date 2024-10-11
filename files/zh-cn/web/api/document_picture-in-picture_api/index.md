@@ -2,7 +2,7 @@
 title: Document Picture-in-Picture API
 slug: Web/API/Document_Picture-in-Picture_API
 l10n:
-  sourceCommit: ac80d4deda2b072a4fc7e866b5edb14a91226319
+  sourceCommit: 26aaa0b6f92933d915563b1d1210cc46f4ec0e09
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
@@ -60,7 +60,7 @@ l10n:
 
 ## 示例
 
-请参阅 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)获取完整的可运行演示（另请参阅完整的[源代码](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture)）。
+请参阅 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)获取完整的可运行演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
 
 ## 规范
 

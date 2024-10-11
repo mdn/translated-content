@@ -2,7 +2,7 @@
 title: WorkerGlobalScope：setInterval() 方法
 slug: Web/API/WorkerGlobalScope/setInterval
 l10n:
-  sourceCommit: 1cefd237f7e20b060020324904fec16bef3ebbec
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
@@ -41,7 +41,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 返回值 `intervalID` 是一个非零数值，用来标识调用 `setInterval()` 创建的定时器；这个值可以用来传递给 {{domxref("Window.clearInterval", "clearInterval()")}} 来清除定时器。
 
-值得注意的是，`setInterval()` 和 {{domxref("setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰可见，你应该尝试始终匹配，以避免维护代码时产生混淆。
+值得注意的是，`setInterval()` 和 {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("WorkerGlobalScope.clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰可见，你应该尝试始终匹配，以避免维护代码时产生混淆。
 
 > [!NOTE]
 > 参数 `delay` 会被转换成一个有符号 32 位整数。这将 `delay` 限制到了 2147483647 毫秒（大约 24.8 天）以内，因为它在 IDL 中被指定为一个有符号整数。
@@ -61,7 +61,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ## 参见
 
 - [`core-js` 中 `setInterval` 的 polyfill，支持向回调函数传递参数](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} 和 {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}

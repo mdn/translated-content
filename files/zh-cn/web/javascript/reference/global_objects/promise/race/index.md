@@ -34,7 +34,7 @@ Promise.race(iterable)
 
 ### 使用 Promise.race()
 
-这个例子展示了如何使用 `Promise.race()` 来比较多个使用 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
+这个例子展示了如何使用 `Promise.race()` 来比较多个使用 {{domxref("Window.setTimeout", "setTimeout()")}} 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
 
 ```js
 function sleep(time, value, state) {

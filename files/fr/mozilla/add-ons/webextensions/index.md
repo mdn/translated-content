@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 Les extensions, ou modules complémentaires, peuvent étendre et modifier les fonctionnalités d'un navigateur. Les extensions pour Firefox sont construites avec l'API WebExtensions qui fonctionnent pour les différents navigateurs.
 
-La technologie d'extensions Firefox est, en grande partie, compatible avec l'[API d'extension](https://developer.chrome.com/extensions) prise en charge par les navigateurs Chromium tels que Google Chrome, Microsoft Edge et Opera. Dans la plupart des cas, les extensions écrites dans ces navigateurs fonctionnent sur Firefox avec [seulement quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+La technologie d'extensions Firefox est, en grande partie, compatible avec l'[API d'extension](https://developer.chrome.com/docs/extensions) prise en charge par les navigateurs Chromium tels que Google Chrome, Microsoft Edge et Opera. Dans la plupart des cas, les extensions écrites dans ces navigateurs fonctionnent sur Firefox avec [seulement quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
 ## Ressources principales
 

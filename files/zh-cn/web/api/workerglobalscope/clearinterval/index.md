@@ -2,7 +2,7 @@
 title: WorkerGlobalScope：clearInterval() 方法
 slug: Web/API/WorkerGlobalScope/clearInterval
 l10n:
-  sourceCommit: 1b45c29b1aefa5e128e901fb3b8b5c10750da232
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
@@ -20,7 +20,7 @@ clearInterval(intervalID)
 - `intervalID`
   - : 你要取消的重复操作的标识符。这个 ID 是由对应的 `setInterval()` 调用返回的。
 
-值得一提的是，{{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} 和 {{domxref("setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰起见，你应该尽量避免这种用法。
+值得一提的是，{{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} 和 {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("WorkerGlobalScope.clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。然而，为了清晰起见，你应该尽量避免这种用法。
 
 ### 返回值
 
@@ -40,7 +40,7 @@ clearInterval(intervalID)
 
 ## 参见
 
-- {{domxref("clearTimeout()")}}
-- {{domxref("Window.setInterval()")}} 和 {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.clearInterval()")}}
-- {{domxref("Window.cancelAnimationFrame()")}} 和 {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
