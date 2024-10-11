@@ -45,7 +45,7 @@ forEach(callbackFn, thisArg)
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   keyboardLayoutMap.forEach((key, code) => {
-    console.log(`${code} keyboard code represents ${key} key`);
+    console.log(`键盘代码 ${code} 表示 ${key} 键`);
   });
 });
 ```
