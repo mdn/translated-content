@@ -71,7 +71,7 @@ console.log(usefulVariable);
 registerProcessor("test-processor", TestProcessor);
 ```
 
-次に、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して {{domxref("AudioWorkletNode")}} のインスタンスを生成し、生成したノードを音声グラフに接続します。コンソールに {{domxref("console.log()")}} の呼び出しによる出力が出るはずです。
+次に、メインスクリプトファイルで処理器をロードし、処理器の名前を渡して {{domxref("AudioWorkletNode")}} のインスタンスを生成し、生成したノードを音声グラフに接続します。コンソールに {{domxref("console/log_static", "console.log()")}} の呼び出しによる出力が出るはずです。
 
 ```js
 const audioContext = new AudioContext();
