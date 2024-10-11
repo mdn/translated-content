@@ -2,7 +2,7 @@
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{JSRef}}
@@ -57,7 +57,7 @@ console.log(copy); // { a: 1 }
 
 ### ディープクローンについての注意
 
-[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に [`structuredClone()`](/ja/docs/Web/API/structuredClone) のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
+[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に {{DOMxRef("Window.structuredClone", "structuredClone()")}} のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
 
 元の値がオブジェクトへの参照である場合、参照の値のみがコピーされます。
 
