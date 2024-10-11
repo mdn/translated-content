@@ -1,6 +1,8 @@
 ---
 title: SyncManager
 slug: Web/API/SyncManager
+l10n:
+  sourceCommit: 827afd73ec059bafee34c55818407f9de97ac5cf
 ---
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers}}
