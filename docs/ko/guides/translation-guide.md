@@ -203,4 +203,4 @@ MDN 문서는 구어체의 격식체를 **권장**하고 있습니다. 하지만
 
 번역 후의 줄 수와 원문의 줄 수가 같도록 해주세요. 이는 원문과 달라진 부분을 빨리 찾을 수 있으므로 유지보수에 도움이 됩니다.
 
-관련 논의는 [Exploring Guidelines for Line Length and Newline in Markdown Documentation. #655](https://github.com/orgs/mdn/discussions/655#discussioncomment-9251708)에서 확인할 수 있습니다.
+관련 논의는 [Exploring Guidelines for Line Length and Newline in Markdown Documentation. #655](https://github.com/orgs/mdn/discussions/655#discussioncomment-9251708)에서 확인할 수 있습니다.
