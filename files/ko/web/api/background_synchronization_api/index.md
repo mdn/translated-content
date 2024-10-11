@@ -1,6 +1,8 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+l10n:
+  sourceCommit: 0c763b1f885044ec411f3b8b4ea0ab024739d03e
 ---
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
