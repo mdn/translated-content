@@ -44,7 +44,7 @@ l10n:
 - {{domxref("WebTransport.getStats", "getStats()")}} {{Experimental_Inline}}
   - : 异步返回一个 {{jsxref("Promise")}}，其会兑现一个包含 HTTP/3 连接统计信息的对象。
 
-## 实例
+## 示例
 
 以下示例代码展示了如何将 HTTP/3 服务器的 URL 传递给 {{domxref("WebTransport.WebTransport", "WebTransport()")}} 构造函数以连接到该服务器。注意，方案需要是 HTTPS，且需要明确指定端口号。一旦 {{domxref("WebTransport.ready")}} promise 兑现，你就可以开始使用连接。
 
