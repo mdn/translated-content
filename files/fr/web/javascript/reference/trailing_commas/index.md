@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("More")}}
 
-Les **virgules finales** (<i lang="em">trailing commas</i> en anglais) s'avèrent utiles lorsqu'on souhaite ajouter de nouveaux éléments, paramètres ou de nouvelles propriétés à du code JavaScript. Si on souhaite ajouter une propriété en fin de course, on peut simplement ajouter une ligne sans avoir à modifier la précédente si celle-ci utilise une virgule finale. Cela permet d'avoir des vues de différences (<i lang="en">diffs</i>) plus claires et de simplifier l'édition de code.
+Les **virgules finales** (<i lang="en">trailing commas</i> en anglais) s'avèrent utiles lorsqu'on souhaite ajouter de nouveaux éléments, paramètres ou de nouvelles propriétés à du code JavaScript. Si on souhaite ajouter une propriété en fin de course, on peut simplement ajouter une ligne sans avoir à modifier la précédente si celle-ci utilise une virgule finale. Cela permet d'avoir des vues de différences (<i lang="en">diffs</i>) plus claires et de simplifier l'édition de code.
 
 Les virgules finales peuvent être utilisées dans les littéraux de tableau depuis le début. Elles sont désormais utilisables dans la liste des paramètres d'une fonction, les imports nommés, les exports nommés, etc.
 
