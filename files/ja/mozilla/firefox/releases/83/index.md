@@ -29,7 +29,7 @@ slug: Mozilla/Firefox/Releases/83
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) を追加しました。既定値 `Intl` を返します (最近 ECMA 仕様書に追加されました)。([Firefox バグ 1670053](https://bugzil.la/1670053))
+- [`Intl[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Symbol.toStringTag) を追加しました。既定値 `Intl` を返します (最近 ECMA 仕様書に追加されました)。([Firefox バグ 1670053](https://bugzil.la/1670053))
 
 ### HTTP
 
