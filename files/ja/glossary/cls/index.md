@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Cumulative Layout Shift(CLS)** はウェブサイトのユーザビリティを測定する指標であり、 Google が [Core Web Vital](https://web.dev/explore/learn-core-web-vitals) を構成する指標群の一つとして設計しました。
+**Cumulative Layout Shift (CLS)** はウェブサイトのユーザビリティを測定する指標であり、 Google が [Core Web Vital](https://web.dev/explore/learn-core-web-vitals) を構成する指標群の一つとして設計しました。
 
 CLS は、ユーザーが予期しないレイアウトシフトにどの程度遭遇するかを測定します。レイアウトシフトとは、ページの要素が予期せずに移動することを指します。ただし、ボタンを押すなどのユーザーアクションや、アニメーションの一部として起こる移動は、測定の対象外となります。
 
