@@ -25,7 +25,7 @@ showDirectoryPicker()
     - `id` {{optional_inline}}
       - : ID를 지정하면 브라우저가 선택창의 ID마다 마지막으로 탐색한 디렉터리를 기억합니다. 다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉터리에서 선택창이 열립니다.
     - `mode` {{optional_inline}}
-      - : 디렉터리에 대한 읽기 전용 접근 시 `"read"`, 읽기와 쓰기 모두 가능한 접근 시 `"readwrite"`을 지정하는 문자열입니다. 기본 값은 `"read"`입니다.
+      - : 디렉터리에 대한 읽기 전용 접근 시 `"read"`, 읽기와 쓰기 모두 가능한 접근 시 `"readwrite"`이어야 합니다. 기본 값은 `"read"`입니다.
     - `startIn` {{optional_inline}}
       - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
