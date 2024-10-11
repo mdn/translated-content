@@ -25,9 +25,9 @@ showSaveFilePicker()
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 기본 값 `false`인 불리언입니다. 기본적으로 파일 선택창에는 파일 유형 필터(아래의 `type` 참고)를 적용하지 않는 옵션이 존재합니다. 이 옵션을 `true`로 설정하면 사용자가 해당 옵션을 선택할 수 없습니다.
     - `id` {{Optional_Inline}}
-      - : ID를 지정하면 브라우저가 파일 선택창의 ID마다 마지막으로 탐색한 디렉토리를 기억합니다. 다른 파일 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉토리에서 파일 선택창이 열립니다.
+      - : ID를 지정하면 브라우저가 선택창의 ID마다 마지막으로 탐색한 디렉토리를 기억합니다. 다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉토리에서 선택창이 열립니다.
     - `startIn` {{Optional_Inline}}
-      - : 파일 선택창이 열릴 때의 최초 디렉토리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉토리 식별자(`"desktop"`, `"documents"`,
+      - : 선택창이 열릴 때의 최초 디렉토리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉토리 식별자(`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
     - `suggestedName` {{Optional_Inline}}
       - : 추천하는 파일 이름을 지정하는 {{jsxref('String')}}입니다.
@@ -47,7 +47,7 @@ showSaveFilePicker()
 ### 예외
 
 - `AbortError` {{domxref("DOMException")}}
-  - : 사용자가 파일을 선택하지 않고 파일 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때 파일이 너무 민감하거나 위험할 때 발생합니다.
+  - : 사용자가 파일을 선택하지 않고 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때 파일이 너무 민감하거나 위험할 때 발생합니다.
   - `SecurityError` {{domxref("DOMException")}}
   - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
