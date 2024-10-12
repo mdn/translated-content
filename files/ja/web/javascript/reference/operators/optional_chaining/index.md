@@ -51,7 +51,7 @@ const nestedProp =
   temp === null || temp === undefined ? undefined : temp.second;
 ```
 
-オプションチェーンは、宣言されていないルートオブジェクトでは使用できませんが、値が `undefined` のルートオブジェクトでは使用することができます。
+オプショナルチェーンは、宣言されていないルートオブジェクトでは使用できませんが、値が `undefined` のルートオブジェクトでは使用することができます。
 
 ```js example-bad
 undeclaredVar?.prop; // ReferenceError: undeclaredVar is not defined
@@ -103,14 +103,14 @@ const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```
 
-[テンプレートリテラルタグ](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)はオプションチェーンにはできません（[SyntaxError: tagged template cannot be used with optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)を参照）。
+[テンプレートリテラルタグ](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)はオプショナルチェーンにはできません（[SyntaxError: tagged template cannot be used with optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)を参照）。
 
 ```js-nolint example-bad
 String?.raw`Hello, world!`;
 String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
-{{jsxref("Operators/new", "new")}} 式のコンストラクターはオプションチェーンを使用できません（[SyntaxError: new keyword cannot be used with an optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_new_optional) を参照）。
+{{jsxref("Operators/new", "new")}} 式のコンストラクターはオプショナルチェーンを使用できません（[SyntaxError: new keyword cannot be used with an optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_new_optional) を参照）。
 
 ```js-nolint example-bad
 new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression
@@ -119,7 +119,7 @@ new Map?.();
 
 ### 短絡評価
 
-オプションチェーン式を使用する場合、左オペランドが `null` または `undefined` の場合、その式は評価されません。例えば次のようになります。
+オプショナルチェーン式を使用する場合、左オペランドが `null` または `undefined` の場合、その式は評価されません。例えば次のようになります。
 
 ```js
 const potentiallyNullObj = null;
@@ -134,7 +134,7 @@ console.log(x); // x がインクリメントされていないので 0
 ```js
 const potentiallyNullObj = null;
 const prop = potentiallyNullObj?.a.b;
-// これはエラーを発生しません。最初のオプションチェーンで評価がすでに停止しているためです。
+// これはエラーを発生しません。最初のオプショナルチェーンで評価がすでに停止しているためです。
 ```
 
 これは下記のものと等価です。
