@@ -29,8 +29,7 @@ showOpenFilePicker()
     - `multiple` {{Optional_Inline}}
       - : 기본 값 `false`인 불리언입니다. `true`로 설정 시 여러 파일을 선택할 수 있습니다.
     - `startIn` {{Optional_Inline}}
-      - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`,
-        `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
+      - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`, `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
     - `types` {{Optional_Inline}}
 
       - : 선택 가능한 파일 유형들의 {{jsxref('Array')}}입니다. 각 요소는 아래의 옵션을 포함하는 객체입니다.
@@ -52,9 +51,9 @@ showOpenFilePicker()
   - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
   - : 다음과 같은 상황에 의해 허용하는 파일 유형을 처리할 수 없으면 발생합니다.
-    - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아님.
-    - `types` 옵션의 `accept` 옵션 내 어떤 값이 유효하지 않음. 예컨대 `.`로 시작하지 않거나, `.`로 끝나거나, 유효하지 않은 코드 포인트를 포함하거나, 길이가 16 초과.
-    - `types` 옵션이 비어있는데 `excludeAcceptAllOption` 옵션이 `true`임.
+    - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아닌 경우.
+    - `types` 옵션의 `accept` 옵션 내 어떤 값이 유효하지 않은 경우, 예컨대 `.`로 시작하지 않거나, `.`로 끝나거나, 유효하지 않은 코드 포인트를 포함하거나, 길이가 16 초과할 때.
+    - `types` 옵션이 비어있는데 `excludeAcceptAllOption` 옵션이 `true`인 경우.
 
 ## 보안
 

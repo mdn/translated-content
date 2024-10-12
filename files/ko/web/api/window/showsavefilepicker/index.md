@@ -52,9 +52,9 @@ showSaveFilePicker()
   - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
   - : 다음과 같은 상황에 의해 허용하는 파일 유형을 처리할 수 없으면 발생합니다.
-    - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아님.
-    - `types` 옵션의 `accept` 옵션 내 어떤 값이 유효하지 않음. 예컨대 `.`로 시작하지 않거나, `.`로 끝나거나, 유효하지 않은 코드 포인트를 포함하거나, 길이가 16 초과.
-    - `types` 옵션이 비어있는데 `excludeAcceptAllOption` 옵션이 `true`임.
+    - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아닌 경우.
+    - `types` 옵션의 `accept` 옵션 내 어떤 값이 유효하지 않은 경우, 예컨대 `.`로 시작하지 않거나, `.`로 끝나거나, 유효하지 않은 코드 포인트를 포함하거나, 길이가 16 초과할 때.
+    - `types` 옵션이 비어있는데 `excludeAcceptAllOption` 옵션이 `true`인 경우.
 
 ## 보안
 

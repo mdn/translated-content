@@ -27,8 +27,7 @@ showDirectoryPicker()
     - `mode` {{optional_inline}}
       - : 디렉터리에 대한 읽기 전용 접근 시 `"read"`, 읽기와 쓰기 모두 가능한 접근 시 `"readwrite"`이어야 합니다. 기본 값은 `"read"`입니다.
     - `startIn` {{optional_inline}}
-      - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`,
-        `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
+      - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`, `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
 
 ### 반환 값
 
