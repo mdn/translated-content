@@ -34,7 +34,8 @@ showOpenFilePicker()
         다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉터리에서
         선택창이 열립니다.
     - `multiple` {{Optional_Inline}}
-      - : 기본 값 `false`인 불리언입니다. `true`로 설정 시 여러 파일을 선택할 수 있습니다.
+      - : 기본 값 `false`인 불리언입니다.
+        `true`로 설정 시 여러 파일을 선택할 수 있습니다.
     - `startIn` {{Optional_Inline}}
       - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`, `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
     - `types` {{Optional_Inline}}
