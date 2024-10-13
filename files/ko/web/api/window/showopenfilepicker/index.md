@@ -40,7 +40,8 @@ showOpenFilePicker()
       - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`, `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
     - `types` {{Optional_Inline}}
 
-      - : 선택 가능한 파일 유형들의 {{jsxref('Array')}}입니다. 각 요소는 아래의 옵션을 포함하는 객체입니다.
+      - : 선택 가능한 파일 유형들의 {{jsxref('Array')}}입니다.
+        각 요소는 아래의 옵션을 포함하는 객체입니다.
 
         - `description` {{Optional_Inline}}
           - : 사용 가능한 파일 유형에 대한 설명입니다. 기본 값은 빈 문자열입니다.
