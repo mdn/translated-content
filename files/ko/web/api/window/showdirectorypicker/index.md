@@ -38,7 +38,9 @@ showDirectoryPicker()
 ### 예외
 
 - `AbortError` {{domxref("DOMException")}}
-  - : 사용자가 디렉터리를 선택하지 않고 선택창을 닫았을 때, 사용자 에이전트가 판단했을 때 디렉터리가 너무 민감하거나 위험할 때, 또는 지정한 `mode` 옵션에 대해 선택한 디렉터리의 {{domxref('PermissionStatus.state')}}가 `"granted"`가 아닐 때 발생합니다.
+  - : 사용자가 디렉터리를 선택하지 않고 선택창을 닫았을 때,
+    사용자 에이전트가 판단했을 때 디렉터리가 너무 민감하거나 위험할 때, 또는 지정한 `mode` 옵션에 대해
+    선택한 디렉터리의 {{domxref('PermissionStatus.state')}}가 `"granted"`가 아닐 때 발생합니다.
 - `SecurityError` {{domxref("DOMException")}}
   - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 
