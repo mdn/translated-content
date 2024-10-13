@@ -8,7 +8,9 @@ l10n:
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 인터페이스의 **`showOpenFilePicker()`** 메서드는 사용자가 파일 한 개 또는 여러 개를 선택할 수 있는 파일 선택창을 열고, 선택한 파일들의 핸들을 반환합니다.
+{{domxref("Window")}} 인터페이스의 **`showOpenFilePicker()`** 메서드는
+사용자가 파일 한 개 또는 여러 개를 선택할 수 있는 파일 선택창을 열고
+선택한 파일들의 핸들을 반환합니다.
 
 ## 구문
 
