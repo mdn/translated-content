@@ -42,7 +42,7 @@ https://developer.mozilla.org/fr/search?q=URL
 
 Chacune de ces URL peut être saisie dans la barre d'adresse d'un navigateur pour lui indiquer de charger la ressource associée. Dans ces trois exemples, il s'agit d'une page web.
 
-Une URL se compose de différentes parties, certaines sont obligatoires tandis que d'autres sont optionnelles. Les parties les plus importantes sont mise en évidence dans l'illustration suivante et les sections ci-après décrivent en détails ces composantes&nbsp;:
+Une URL se compose de différentes parties, certaines sont obligatoires tandis que d'autres sont optionnelles. Les parties les plus importantes sont mises en évidence dans l'illustration suivante et les sections ci-après décrivent en détails ces composantes&nbsp;:
 
 ![Une URL complète](mdn-url-all.png)
 
@@ -56,7 +56,7 @@ Une URL se compose de différentes parties, certaines sont obligatoires tandis q
 
 ![Le schéma](mdn-url-protocol@x2_update.png)
 
-_Le schéma_ est la première partie d'une URL et indique le protocole que le navigateur doit utiliser afin de requêter la ressource (un [protocole](/fr/docs/Glossary/Protocol) est un ensemble de méthodes pour échanger ou transférrer des données au sein d'un réseau d'ordinateurs. Pour les sites web, on utilise généralement le protocole HTTPS ou HTTP (une version non sécurisée). Pour accéder à une page web, il faut utiliser l'un de ces protocoles. Toutefois, les navigateurs gèrent également d'autres schéma comme `mailto:` (pour ouvrir un client de courrier électronique), ne soyez donc pas surpris de croiser d'autres protocoles.
+_Le schéma_ est la première partie d'une URL et indique le protocole que le navigateur doit utiliser afin de demander la ressource (un [protocole](/fr/docs/Glossary/Protocol) est un ensemble de méthodes pour échanger ou transférer des données au sein d'un réseau d'ordinateurs. Pour les sites web, on utilise généralement le protocole HTTPS ou HTTP (une version non sécurisée). Pour accéder à une page web, il faut utiliser l'un de ces protocoles. Toutefois, les navigateurs gèrent également d'autres schémas comme `mailto:` (pour ouvrir un client de courrier électronique), ne soyez donc pas surpris de croiser d'autres protocoles.
 
 ## Autorité
 
@@ -125,7 +125,7 @@ Toutes les URL suivantes sont des URL relatives&nbsp;:
 - URL relative par rapport au schéma&nbsp;: `//developer.mozilla.org/fr/docs/Learn`
   - : Ici, seul le protocole manque. Le navigateur utilisera alors le même protocole que celui utilisé pour charger le document contenant cette URL.
 - URL relative par rapport au domaine&nbsp;: `/fr/docs/Learn`
-  - : Le protocole et le nom de domaine sont manquants. Le navugateur utiliser la même protocole et le même nom de domaine que ceux utilisés pour charger le document contenant cette URL.
+  - : Le protocole et le nom de domaine sont manquants. Le navigateur utiliser le même protocole et le même nom de domaine que ceux utilisés pour charger le document contenant cette URL.
 - Sous-ressources&nbsp;: `Common_questions/Web_mechanics/What_is_a_URL`
   - : Le protocole et le nom de domaine sont manquants, et le chemin ne commence pas par `/`. Le navigateur tentera de trouver le document dans un sous-répertoire de celui contenant la ressource courante. Dans ce cas, cette URL relative correspond à l'URL absolue `https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL`.
 - Remonter dans l'arborescence&nbsp;: `../CSS/display`
