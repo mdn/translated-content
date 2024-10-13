@@ -8,7 +8,9 @@ l10n:
 
 {{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 인터페이스의 **`showDirectoryPicker()`** 메서드는 사용자가 디렉터리 한 개를 선택할 수 있는 디렉터리 선택창을 엽니다.
+{{domxref("Window")}} 인터페이스의 **`showDirectoryPicker()`** 메서드는
+사용자가 디렉터리 한 개를 선택할 수 있는
+디렉터리 선택창을 엽니다.
 
 ## 구문
 
