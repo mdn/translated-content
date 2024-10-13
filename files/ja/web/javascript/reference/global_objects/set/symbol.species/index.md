@@ -2,7 +2,7 @@
 title: Set[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
 l10n:
-  sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
