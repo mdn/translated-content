@@ -47,7 +47,8 @@ showSaveFilePicker()
 ### 예외
 
 - `AbortError` {{domxref("DOMException")}}
-  - : 사용자가 파일을 선택하지 않고 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때 파일이 너무 민감하거나 위험할 때 발생합니다.
+  - : 사용자가 파일을 선택하지 않고 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때
+    파일이 너무 민감하거나 위험할 때 발생합니다.
   - `SecurityError` {{domxref("DOMException")}}
   - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
