@@ -64,7 +64,7 @@ HTTP запросы - это сообщения, отправляемые кли
 Тела можно грубо разделить на две категории:
 
 - Одноресурсные тела (Single-resource bodies), состоящие из одного отдельного файла, определяемого двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.
-- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой кусок информации. Они обычно связаны с [HTML-формами](/ru/docs/Web/Guide/HTML/Forms).
+- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой сегмент информации. Они обычно связаны с [HTML-формами](/ru/docs/Web/Guide/HTML/Forms).
 
 ## Ответы HTTP
 
