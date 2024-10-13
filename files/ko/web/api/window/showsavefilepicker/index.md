@@ -33,7 +33,8 @@ showSaveFilePicker()
       - : 추천하는 파일 이름을 지정하는 {{jsxref('String')}}입니다.
     - `types` {{Optional_Inline}}
 
-      - : 저장 가능한 파일 유형들의 {{jsxref('Array')}}입니다. 각 요소는 아래의 옵션을 포함하는 객체입니다.
+      - : 저장 가능한 파일 유형들의 {{jsxref('Array')}}입니다.
+        각 요소는 아래의 옵션을 포함하는 객체입니다.
 
         - `description` {{Optional_Inline}}
           - : 사용 가능한 파일 유형에 대한 설명입니다.
