@@ -46,7 +46,7 @@ slug: Web/HTML/Element/article
 
 ## 使用说明
 
-- 每个`<article>`，通常包括标题（\<h1> - \<h6>元素）作为`<article>`元素的子元素。
+- 每个`<article>`，通常包括标题（{{HTMLElement("h1")}} - {{HTMLElement("h6")}}元素）作为`<article>`元素的子元素。
 - 当`<article>`元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的`<article>`元素可嵌套在代表博客文章的`<article>`元素中。
 - `<article>`元素的作者信息可通过{{HTMLElement("address")}}元素提供，但是不适用于嵌套的`<article>`元素。
 - `<article>`元素的发布日期和时间可通过{{HTMLElement("time")}}元素的[`pubdate`](/zh-CN/docs/Web/HTML/Element/time#pubdate)属性表示。
