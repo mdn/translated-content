@@ -8,7 +8,9 @@ l10n:
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 인터페이스의 **`showSaveFilePicker()`** 메서드는 사용자가 기존 파일을 선택하거나, 새로운 파일 이름을 입력해서 파일을 저장할 수 있는 선택창을 엽니다.
+{{domxref("Window")}} 인터페이스의 **`showSaveFilePicker()`** 메서드는 사용자가
+기존 파일을 선택하거나, 새로운 파일 이름을 입력해서 파일을 저장할 수 있는
+선택창을 엽니다.
 
 ## 구문
 
@@ -23,9 +25,14 @@ showSaveFilePicker()
   - : 아래의 옵션을 포함하는 객체입니다.
 
     - `excludeAcceptAllOption` {{Optional_Inline}}
-      - : 기본 값 `false`인 불리언입니다. 기본적으로 파일 선택창에는 파일 유형 필터(아래의 `type` 참고)를 적용하지 않는 옵션이 존재합니다. 이 옵션을 `true`로 설정하면 사용자가 해당 옵션을 선택할 수 없습니다.
+      - : 기본 값 `false`인 불리언입니다.
+        기본적으로 파일 선택창에는 파일 유형 필터(아래의 `type` 참고)를
+        적용하지 않는 옵션이 존재합니다. 이 옵션을 `true`로 설정하면
+        사용자가 해당 옵션을 선택할 수 없습니다.
     - `id` {{Optional_Inline}}
-      - : ID를 지정하면 브라우저가 선택창의 ID마다 마지막으로 탐색한 디렉터리를 기억합니다. 다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉터리에서 선택창이 열립니다.
+      - : ID를 지정하면 브라우저가 선택창의 ID마다 마지막으로 탐색한 디렉터리를 기억합니다.
+        다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉터리에서
+        선택창이 열립니다.
     - `startIn` {{Optional_Inline}}
       - : 선택창이 열릴 때의 최초 디렉터리를 가리키는 `FileSystemHandle`, 또는 널리 알려진 디렉터리 식별자(`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, 또는 `"videos"`)입니다.
