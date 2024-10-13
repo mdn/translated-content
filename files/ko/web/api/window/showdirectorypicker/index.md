@@ -50,7 +50,8 @@ showDirectoryPicker()
 
 ## 예제
 
-다음 비동기 함수는 디렉터리 선택창을 열고, 사용자가 디렉터리를 선택한 후에 {{domxref('FileSystemDirectoryHandle')}}를 반환합니다.
+다음 비동기 함수는 디렉터리 선택창을 열고, 사용자가 디렉터리를 선택한 후에
+{{domxref('FileSystemDirectoryHandle')}}를 반환합니다.
 
 ```js
 async function getDir() {
