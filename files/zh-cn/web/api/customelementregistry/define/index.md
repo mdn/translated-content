@@ -14,8 +14,9 @@ slug: Web/API/CustomElementRegistry/define
 
 ## 语法
 
-```
-customElements.define(name, constructor, options);
+```js-nolint
+define(name, constructor)
+define(name, constructor, options)
 ```
 
 ### 参数

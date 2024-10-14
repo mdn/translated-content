@@ -506,7 +506,7 @@ const checkAllTodos = (completed) => {
 
 在这种情况下，当 `editing` 是 `false` 时，编辑 `<input>` 不可见，因为它不存在于 DOM 中。在 `onEdit()` 函数中，我们将 `editing` 设置为 `true`，然后立即尝试访问 `nameEl` 变量并执行 `nameEl.focus()`。问题在于，Svelte 还没有更新 DOM。
 
-解决这个问题的一种方法是使用 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 函数，延迟调用 `nameEl.focus()`，直到下一个事件循环，并给 Svelte 更新 DOM 的机会。
+解决这个问题的一种方法是使用 {{domxref("Window.setTimeout", "setTimeout()")}} 函数，延迟调用 `nameEl.focus()`，直到下一个事件循环，并给 Svelte 更新 DOM 的机会。
 
 现在尝试一下这个解决方案：
 

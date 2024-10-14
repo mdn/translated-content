@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: hidden プロパティ"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -104,5 +105,5 @@ document.getElementById("okButton").addEventListener(
 
 ## 関連情報
 
-- [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
+- [hidden](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
 - {{cssxref("display")}}

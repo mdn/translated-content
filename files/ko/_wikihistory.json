@@ -4579,6 +4579,10 @@
     "modified": "2020-10-15T21:38:39.029Z",
     "contributors": ["alattalatta", "es-lee", "hallower"]
   },
+  "Web/API/Window/setTimeout": {
+    "modified": "2019-03-23T22:22:22.449Z",
+    "contributors": ["DevJang", "TroyTae"]
+  },
   "Web/API/Window/status": {
     "modified": "2019-03-23T22:46:22.063Z",
     "contributors": ["pi1992"]
@@ -4652,10 +4656,6 @@
   "Web/API/XSLTProcessor": {
     "modified": "2019-11-21T00:57:37.403Z",
     "contributors": ["wbamberg", "chrisdavidmills", "teoli", "Netaras"]
-  },
-  "Web/API/setTimeout": {
-    "modified": "2019-03-23T22:22:22.449Z",
-    "contributors": ["DevJang", "TroyTae"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:15:43.285Z",
@@ -5968,7 +5968,7 @@
     "modified": "2020-10-15T21:45:37.546Z",
     "contributors": ["alattalatta", "Netaras"]
   },
-  "Web/CSS/url": {
+  "Web/CSS/url_value": {
     "modified": "2020-10-15T22:10:55.121Z",
     "contributors": ["alattalatta"]
   },
@@ -6817,28 +6817,6 @@
     "modified": "2019-09-03T21:33:24.429Z",
     "contributors": ["minijaypark", "rubysoho07", "chj1768"]
   },
-  "Web/HTTP/Basics_of_HTTP": {
-    "modified": "2019-03-23T22:27:07.176Z",
-    "contributors": ["peacekimjapan", "gaucho1218", "frankradio", "teoli"]
-  },
-  "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
-    "modified": "2019-12-02T03:03:46.499Z",
-    "contributors": [
-      "SeonHyungJo",
-      "PeterHoo",
-      "chanspark",
-      "knight2995",
-      "devcken"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-03-23T22:27:10.370Z",
-    "contributors": ["Jo-Seungjun", "DublinCity", "kangsan_Chang", "devcken"]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-02-28T13:11:05.868Z",
-    "contributors": ["chrisdavidmills", "devcken"]
-  },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-09-13T12:21:12.513Z",
     "contributors": [
@@ -6932,6 +6910,16 @@
       "GiwonKwon",
       "Younghoo",
       "jkpark",
+      "devcken"
+    ]
+  },
+  "Web/HTTP/Evolution_of_HTTP": {
+    "modified": "2019-12-02T03:03:46.499Z",
+    "contributors": [
+      "SeonHyungJo",
+      "PeterHoo",
+      "chanspark",
+      "knight2995",
       "devcken"
     ]
   },
@@ -7162,6 +7150,14 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-11-23T08:49:47.380Z",
     "contributors": ["nesez", "Simtu"]
+  },
+  "Web/HTTP/MIME_types": {
+    "modified": "2019-03-23T22:27:10.370Z",
+    "contributors": ["Jo-Seungjun", "DublinCity", "kangsan_Chang", "devcken"]
+  },
+  "Web/HTTP/MIME_types/Common_types": {
+    "modified": "2020-02-28T13:11:05.868Z",
+    "contributors": ["chrisdavidmills", "devcken"]
   },
   "Web/HTTP/Messages": {
     "modified": "2019-03-18T20:59:38.193Z",
@@ -10607,10 +10603,6 @@
     "modified": "2019-01-16T16:15:56.433Z",
     "contributors": ["chrisdavidmills", "Netaras"]
   },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference": {
-    "modified": "2019-03-23T23:41:43.827Z",
-    "contributors": ["chrisdavidmills", "teoli", "Netaras"]
-  },
   "WebAssembly": {
     "modified": "2020-10-15T21:52:54.017Z",
     "contributors": [
@@ -10783,6 +10775,10 @@
     "modified": "2020-10-15T22:06:25.915Z",
     "contributors": ["alattalatta", "SphinxKnight", "dolmoon"]
   },
+  "conflicting/Web/HTTP": {
+    "modified": "2019-03-23T22:27:07.176Z",
+    "contributors": ["peacekimjapan", "gaucho1218", "frankradio", "teoli"]
+  },
   "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-03-18T21:43:18.320Z",
     "contributors": ["jkpark"]
@@ -10794,6 +10790,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
     "modified": "2020-03-12T19:46:46.133Z",
     "contributors": ["magnoliaa"]
+  },
+  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
+    "modified": "2019-03-23T23:41:43.827Z",
+    "contributors": ["chrisdavidmills", "teoli", "Netaras"]
   },
   "orphaned/Learn/Front-end_web_developer": {
     "modified": "2020-09-26T16:42:10.726Z",

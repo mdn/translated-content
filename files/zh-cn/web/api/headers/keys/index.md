@@ -12,8 +12,8 @@ slug: Web/API/Headers/keys
 
 ## 语法
 
-```
-headers.keys();
+```js-nolint
+keys()
 ```
 
 ### 返回值
@@ -36,7 +36,7 @@ for (var key of myHeaders.keys()) {
 
 控制台打印结果：
 
-```
+```plain
 content-type
 vary
 ```

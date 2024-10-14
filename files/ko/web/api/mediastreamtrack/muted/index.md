@@ -21,7 +21,7 @@ const mutedFlag = track.muted;
 트랙이 중단된 상태면 `true`, 아니면 `false`.
 
 > [!NOTE]
-> 되도록이면 트랙의 중단 상태를 알기 위해 `muted`를 폴링 하는 것보다는 {{event("mute")}}와 {{event("unmute")}} 이벤트를 수신하세요.
+> 되도록이면 트랙의 중단 상태를 알기 위해 `muted`를 폴링 하는 것보다는 {{domxref("MediaStreamTrack.mute_event", "mute")}}와 {{domxref("MediaStreamTrack.unmute_event", "unmute")}} 이벤트를 수신하세요.
 
 ## 예제
 

@@ -36,7 +36,7 @@ slug: Web/API/PerformanceLongTaskTiming
 
 即执行任务的容器清单。针对没有在顶层页面容器内执行的任务，`containerId`、`containerName`和`containerSrc`字段可以用来提供任务源信息。
 
-## 用法
+## 示例
 
 ```js
 var observer = new PerformanceObserver(function (list) {

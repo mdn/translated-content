@@ -13,16 +13,16 @@ slug: Web/CSS/-webkit-touch-callout
 
 ## 语法
 
-```
-Formal syntax: default | none
-```
-
 ```css
--webkit-touch-callout: default; /* displays the callout */
--webkit-touch-callout: none; /* disables the callout */
+/* 关键字值 */
+-webkit-touch-callout: default;
+-webkit-touch-callout: none;
 
+/* 全局值 */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
 

@@ -12,13 +12,13 @@ slug: Web/API/ServiceWorkerRegistration/update
 
 ## 语法
 
-```
-ServiceWorkerRegistration.update();
+```js-nolint
+update()
 ```
 
 ### 参数
 
-None.
+无。
 
 ### 返回
 

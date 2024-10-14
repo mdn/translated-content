@@ -12,12 +12,6 @@ slug: Web/API/Window/mozInnerScreenX
 > [!NOTE]
 > 该坐标以 CSS 像素报告显示，而不是硬件像素。这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用 [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) 属性。
 
-## 语法
-
-```
-screenX = window.mozInnerScreenX;
-```
-
 ## 值
 
 - _screenX_ 存储的是 `window.mozInnerScreenX` 的属性值。

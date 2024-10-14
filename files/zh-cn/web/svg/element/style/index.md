@@ -7,7 +7,7 @@ slug: Web/SVG/Element/style
 
 `style`元素元素样式表直接在 SVG 内容中间嵌入。SVG 的`style`元素的属性与 HTML 中的相应的元素并无二致（请阅读 HTML 的 {{HTMLElement("style")}} 元素）。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

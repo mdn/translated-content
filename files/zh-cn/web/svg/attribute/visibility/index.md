@@ -14,7 +14,7 @@ slug: Web/SVG/Attribute/visibility
 
 作为一个表现属性，它可以直接用作 CSS 样式表内部的属性。请阅读 {{ cssxref("visibility","CSS visibility") }} 以了解更多信息。
 
-## 用法
+## 使用说明
 
 | 类别   | 表现属性                                     |
 | ------ | -------------------------------------------- |

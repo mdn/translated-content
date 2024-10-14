@@ -3,8 +3,10 @@ title: テキストフラグメント
 slug: Web/URI/Fragment/Text_fragments
 original_slug: Web/Text_fragments
 l10n:
-  sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
+
+{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
 
 **テキストフラグメント**は、URL フラグメントの特定の構文を使用することにより、作成者が ID で注釈を付けなくても、ウェブ文書内のテキストの特定の部分に直接リンクできるようにするものです。対応しているブラウザーは、リンクされたテキストに注意を引く方法を自由に選べます。例えば、色の強調表示やページ上のコンテンツへのスクロールなどです。これは、ウェブコンテンツの作成者が、使用可能な ID が存在しなくても、制御下にない他のコンテンツに深くリンクすることができるため有益なものです。さらに、ユーザーが互いに交換するための、より効果的なコンテンツ共有リンクを生成するために使用することもできます。
 
@@ -33,7 +35,7 @@ ID が変更または削除された場合、文書フラグメントは無視�
 
 テキストフラグメントは文書フラグメントと似た様式であり、URL の後にハッシュ記号 (`#`) を付けます。しかし、構文は多少異なります。
 
-```
+```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 
@@ -93,7 +95,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 ### 複数のテキストフラグメントが付いた URL
 
-アンパサンド(`&`)文字で区切ることで、同じ URL で強調表示する複数のテキストフラグメントを指定することができます。
+アンパサンド (`&`) 文字で区切ることで、同じ URL で強調表示する複数のテキストフラグメントを指定することができます。
 
 - [https://developer.mozilla.org/ja/docs/Web/HTML/Element/a#:~:text=リンクされた&text=扱う](/ja/docs/Web/HTML/Element/a#:~:text=リンクされた&text=扱う) は、テキスト文字列 `Causes` および `linked` のうち最初に出現するものにスクロールし強調表示します。
 - [https://developer.mozilla.org/ja/docs/Web/HTML/Element/a#:~:text=リンク先%20URL,-の&text=非推奨の-,属性,属性](/ja/docs/Web/HTML/Element/a#:~:text=リンク先%20URL,-の&text=非推奨の-,属性,属性) は、2 つのテキストにスクロールし強調表示します。
@@ -125,27 +127,8 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 ```js
 document.fragmentDirective;
-```
-
-以下のような構造を持つ {{domxref("FragmentDirective")}} オブジェクトインスタンスが返されるはずです。
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
+// 対応していれば、空の FragmentDirective オブジェクトを返す
+// それ以外の場合は undefined
 ```
 
 この機能は、現在は主に機能検出を目的としていますが、将来的には、翻訳ヒントなど他の情報を記載するために展開することができます。
@@ -174,4 +157,4 @@ items: [
 
 ## 関連情報
 
-- [Boldly link where no one has linked before: Text Fragments](https://web.dev/text-fragments/)
+- [Boldly link where no one has linked before: Text Fragments](https://web.dev/articles/text-fragments)

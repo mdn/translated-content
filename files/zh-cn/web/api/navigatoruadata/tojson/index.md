@@ -2,7 +2,7 @@
 title: NavigatorUAData：toJSON() 方法
 slug: Web/API/NavigatorUAData/toJSON
 l10n:
-  sourceCommit: ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}

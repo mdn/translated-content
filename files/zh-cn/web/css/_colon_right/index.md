@@ -24,9 +24,9 @@ slug: Web/CSS/:right
 
 ## 语法
 
-```
-@page:right{
-    margin: * *;
+```css
+:right {
+  /* ... */
 }
 ```
 

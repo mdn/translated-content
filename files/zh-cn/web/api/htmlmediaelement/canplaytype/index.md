@@ -12,8 +12,8 @@ slug: Web/API/HTMLMediaElement/canPlayType
 
 ## 语法
 
-```
-str = audioOrVideo.canPlayType(mediaType);
+```js-nolint
+canPlayType(type)
 ```
 
 ### 参数

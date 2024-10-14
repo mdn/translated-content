@@ -14,7 +14,7 @@ Dans les exemples ci-avant, on peut voir plusieurs fonctionnalités de `<textare
 Le deuxième exemple détaille des fonctionnalités plus complexes :
 
 - Les attributs `rows` et `cols` permettent de définir la taille exacte qui doit être occupée par l'élément `<textarea>`. Les navigateurs pouvant être différents, c'est une bonne idée que d'utiliser ces attributs pour garantir une certaine homogénéité.
-- `maxlength` définit le nombre maximal de caractères qui peuvent être saisis dans l'élément `<textarea>`. Il est également possible de définir une taile minimale avec l'attribut `minlength` et d'utiliser l'attribut `required` afin de bloquer l'envoi du formulaire si aucune valeur n'est saisie. Cela permet une validation basique (on ne peut pas utiliser ici d'expressions rationnelles comme le permet l'attribut `pattern` sur les éléments {{HTMLElement("input")}}).
+- `maxlength` définit le nombre maximal de caractères qui peuvent être saisis dans l'élément `<textarea>`. Il est également possible de définir une taille minimale avec l'attribut `minlength` et d'utiliser l'attribut `required` afin de bloquer l'envoi du formulaire si aucune valeur n'est saisie. Cela permet une validation basique (on ne peut pas utiliser ici d'expressions rationnelles comme le permet l'attribut `pattern` sur les éléments {{HTMLElement("input")}}).
 - `wrap` indique la gestion des retours à la ligne et la façon d'afficher le texte saisi lorsque celui-ci atteint le bord de la zone du `<textarea>`
 - Pour prévoir un contenu par défaut, il faut inscrire le texte entre les balises de l'élément. `<textarea>` ne prend pas en charge l'attribut `value`.
 

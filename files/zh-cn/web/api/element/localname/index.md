@@ -10,13 +10,7 @@ slug: Web/API/Element/localName
 > [!NOTE]
 > 在 DOM4 之前这个 API 定义在{{domxref("Node")}}接口。
 
-## 语法
-
-```
-name = element.localName
-```
-
-### 返回值
+## 值
 
 {{domxref("DOMString")}} 返回元素限定名的本地部分。
 

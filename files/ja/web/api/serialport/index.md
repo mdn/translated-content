@@ -2,12 +2,12 @@
 title: SerialPort
 slug: Web/API/SerialPort
 l10n:
-  sourceCommit: f7fe5c73572eb10466583d275c20cd6e55867455
+  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
-{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
-{{domxref("Web_Serial_API", "Web Serial API")}} の `SerialPort` インターフェイスは、ホストデバイスのシリアルポートへのアクセスを提供します。
+`SerialPort` は [ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API) のインターフェイスで、ホスト機器のシリアルポートへのアクセスを提供します。
 
 {{InheritanceDiagram}}
 
@@ -48,7 +48,7 @@ l10n:
 
 ### ポートを開く
 
-シリアルポートで通信を行う前に、ポートを開く必要があります。ポートを開くことで、サイトはデータがどのように送受信されるかを決めるために必要なパラメータを設定できます。開発者は、適切なパラメータを決めるために接続するデバイスのドキュメントを参照するべきです。
+シリアルポートで通信を行う前に、ポートを開く必要があります。ポートを開くことで、サイトはデータがどのように送受信されるかを決めるために必要なパラメーターを設定できます。開発者は、適切なパラメーターを決めるために接続するデバイスのドキュメントを参照するべきです。
 
 ```js
 await port.open({ baudRate: 9600 /* ボーレートを決める */ });

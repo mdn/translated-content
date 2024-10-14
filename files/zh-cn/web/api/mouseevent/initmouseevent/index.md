@@ -15,14 +15,14 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 ## 语法
 
-```
-event.initMouseEvent(type, canBubble, cancelable, view,
+```js-nolint
+initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget);
+                     button, relatedTarget)
 ```
 
-### 形参
+### 参数
 
 - _`type`_
   - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`，`mousedown`，`mouseup`，`mouseover`，`mousemove`，`mouseout`。

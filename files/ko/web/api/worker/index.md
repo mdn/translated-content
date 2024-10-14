@@ -27,7 +27,7 @@ slug: Web/API/Worker
 - {{domxref("Worker.onmessage")}}
   - : `message` 유형의 {{domxref("MessageEvent")}}가 워커로 확산되면, 즉 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}를 통해 워커에서 부모 문서로 메시지를 전송하면 호출할 {{domxref("EventListener")}}입니다. 메시지는 {{domxref("MessageEvent.data", "data")}} 속성에 들어있습니다.
 - {{domxref("Worker.onmessageerror")}}
-  - : {{event("messageerror")}} 이벤트가 발생하면 호출할 {{event("Event_handlers", "event handler")}}입니다.
+  - : [`messageerror`](/ko/docs/Web/API/Worker/messageerror_event) 이벤트가 발생하면 호출할 이벤트 처리기입니다.
 
 ## 메서드
 
@@ -81,7 +81,7 @@ first.onchange = function () {
 
 ### 교차 출처에서의 워커 오류 동작
 
-초기 명세에서는 교차 출처 워커 스크립트를 불러오려 시도하면 `SecurityError`가 발생했습니다. 요즘은 오류 대신 {{event("error")}} 이벤트가 발생합니다.
+초기 명세에서는 교차 출처 워커 스크립트를 불러오려 시도하면 `SecurityError`가 발생했습니다. 요즘은 오류 대신 {{domxref("Worker/error_event", "error")}} 이벤트가 발생합니다.
 
 ## 같이 보기
 

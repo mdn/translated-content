@@ -146,7 +146,7 @@ let playing = false;
 - `playing`
   - : 현재 음을 재생하고 있는지 아닌지를 추적하기 위해 사용할 {{jsxref("Boolean")}}.
 
-이제 `setup()` 함수를 살펴봅시다. 이 함수는 window의 {{event("load")}} 이벤트에 대한 이벤트 처리기(handler)입니다. 이것은 DOM이 준비되기 위한 모든 초기화 작업을 다룹니다.
+이제 `setup()` 함수를 살펴봅시다. 이 함수는 window의 load 이벤트에 대한 이벤트 처리기(handler)입니다. 이것은 DOM이 준비되기 위한 모든 초기화 작업을 다룹니다.
 
 ```js
 function setup() {
@@ -182,7 +182,7 @@ window.addEventListener("load", setup, false);
 
 먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를 `context` 변수에 저장합니다. 그리고 나서 `playButton`에 재생 버튼에 대한 참조와 `volumeControl`에 사용자가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.
 
-그리고 나서 재생 버튼의 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
+그리고 나서 재생 버튼의 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트와 볼륨 슬라이더의 {{domxref("Element/input_event", "input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
 
 다음으로, {{domxref("GainNode")}} `gainNode1`은 연결되지 않은 오실레이터의 볼륨을 다루기 위해 생성됩니다 (`oscNode1`). 이 gain은 0.5로 설정합니다. 또한 `gainNode2`와 `gainNode3`를 생성하고 이들의 값을 `gainNode1`의 값과 동일하게 설정합니다. 그 후, 볼륨 슬라이더의 값을 같은 값으로 설정해 이 값이 슬라이더가 제어하는 gain 레벨과 동기화되도록 합니다.
 
@@ -190,7 +190,7 @@ window.addEventListener("load", setup, false);
 
 마지막으로, gain 노드에 전달되는 모든 소리가, 출력이 스피커이든, 헤드폰이든, 녹음 스트림이든, 또는 어떠한 다른 destination 유형이든 간에 출력에 도달하도록 모든 gain 노드를 {{domxref("AudioContext")}}의 {{domxref("BaseAudioContext/destination", "destination")}}에 연결합니다.
 
-window의 {{event("load")}} 이벤트 처리기를 `setup()` 함수에 설정하면, 무대는 준비 완료되었습니다. 어떻게 작동되는지 살펴봅시다.
+window의 load 이벤트 처리기를 `setup()` 함수에 설정하면, 무대는 준비 완료되었습니다. 어떻게 작동되는지 살펴봅시다.
 
 #### 오실레이터 켜고 끄기
 

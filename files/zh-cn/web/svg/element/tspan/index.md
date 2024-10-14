@@ -7,7 +7,7 @@ slug: Web/SVG/Element/tspan
 
 在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
