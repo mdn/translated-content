@@ -12,8 +12,8 @@ slug: Web/API/Clipboard/writeText
 
 ## 语法
 
-```
-var promise = navigator.clipboard.writeText(newClipText)
+```js-nolint
+writeText(newClipText)
 ```
 
 ### 参数

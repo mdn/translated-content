@@ -213,14 +213,14 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 
 We don't yet support the following APIs, but plan to, soon:
 
-- [commands](https://developer.chrome.com/extensions/commands)
+- [commands](https://developer.chrome.com/docs/extensions/reference/api/commands)
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [downloads](https://developer.chrome.com/extensions/downloads)
-- [history](https://developer.chrome.com/extensions/history)
-- [idle](https://developer.chrome.com/extensions/idle)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
-- [Native messaging (runtime.connectNative)](https://developer.chrome.com/extensions/runtime#method-connectNative)
+- [downloads](https://developer.chrome.com/docs/extensions/reference/api/downloads)
+- [history](https://developer.chrome.com/docs/extensions/reference/api/history)
+- [idle](https://developer.chrome.com/docs/extensions/reference/api/idle)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
+- [Native messaging (runtime.connectNative)](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative)
 
 ### CSS
 

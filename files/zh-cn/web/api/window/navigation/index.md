@@ -31,6 +31,6 @@ let currentNavEntries = window.navigation.entries();
 
 ## 参见
 
-- [新型客户端路由：Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api?hl=zh-cn)
+- [新型客户端路由：Navigation API](https://developer.chrome.google.cn/docs/web-platform/navigation-api)
 - [Navigation API 解释](https://github.com/WICG/navigation-api/blob/main/README.md)
 - Domenic Denicola 的 [Navigation API 在线演示](https://gigantic-honored-octagon.glitch.me/)

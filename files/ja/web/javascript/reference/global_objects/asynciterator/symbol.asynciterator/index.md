@@ -1,14 +1,13 @@
 ---
-title: AsyncIterator.prototype[@@asyncIterator]()
+title: AsyncIterator.prototype[Symbol.asyncIterator]()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator
-original_slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`[@@asyncIterator]()`** は {{jsxref("AsyncIterator")}} インスタンスのメソッドで、[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装し、組み込みの非同期イテレーターを、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループのような非同期反復可能オブジェクトを期待するほとんどの構文で利用できるようにします。これは [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値を返しますが、これは非同期イテレーターオブジェクトそのものです。
+**`[Symbol.asyncIterator]()`** は {{jsxref("AsyncIterator")}} インスタンスのメソッドで、[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装し、組み込みの非同期イテレーターを、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループのような非同期反復可能オブジェクトを期待するほとんどの構文で利用できるようにします。これは [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値を返しますが、これは非同期イテレーターオブジェクトそのものです。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
@@ -30,7 +29,7 @@ asyncIterator[Symbol.asyncIterator]()
 
 ### for await...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。 `@@asyncIterator` メソッドが存在することで、すべての組み込み非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期反復処理可能プロトコル)にすることができます、また、 `for await. ..of` ループなどの反復処理構文は、自動的にこのメソッドを呼び出し、ループ処理する非同期イテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.asyncIterator]()` メソッドが存在することで、すべての組み込み非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期反復処理可能プロトコル)にすることができます、また、 `for await...of` ループなどの反復処理構文は、自動的にこのメソッドを呼び出し、ループ処理する非同期イテレーターを取得します。
 
 ```js
 const asyncIterator = (async function* () {

@@ -47,7 +47,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## 例
 
-フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 是t内を無効にするには、子孫ではなく、その要素にこの属性を追加します。
+フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 自体を無効にするには、子孫ではなく、その要素にこの属性を追加します。
 
 ```html-nolint
 <fieldset>

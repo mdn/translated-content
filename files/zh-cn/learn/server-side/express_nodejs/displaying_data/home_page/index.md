@@ -126,7 +126,7 @@ block content
 
 此处，我们应该已经创建了呈现 index 页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 `http://localhost:3000/`。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。
 
-![Home page - Express Local Library site](locallibary_express_home.png)
+![主页 - Express 教程：本地图书馆网站](locallibary_express_home.png)
 
 > [!NOTE]
 > 你将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果你尝试，取决于你点击的链接，你将获取“NOT IMPLEMENTED: Book list”等错误。在“控制器”文件中的不同控制器中，会指定这些字符串文字（将被合适的数据替换）。

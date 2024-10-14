@@ -14,7 +14,7 @@ slug: Web/HTML/Element/del
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                  | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                           |
+| Пропуск тегов                                          | Нет, открывающий и закрывающий теги обязательны.                                                                                              |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
 | Допустимые ARIA-роли                                   | Любые                                                                                                                                         |
 | DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                                 |

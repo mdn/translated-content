@@ -1,30 +1,29 @@
 ---
-title: get ArrayBuffer[@@species]
+title: ArrayBuffer[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`ArrayBuffer[@@species]`** は静的アクセサープロパティで、配列バッファーメソッドから返値を作成するために使用されるコンストラクタを返します。
+**`ArrayBuffer[Symbol.species]`** は静的アクセサープロパティで、配列バッファーメソッドから返値を作成するために使用されるコンストラクターを返します。
 
-> **警告:** `@@species` が存在することで、任意のコードを実行することができ、セキュリティ上の脆弱性を⽣じる可能性があります。また、ある種の最適化もとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼らないでください。
+> **警告:** `[Symbol.species]` が存在することで、任意のコードを実行することができ、セキュリティ上の脆弱性を⽣じる可能性があります。また、ある種の最適化もとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼らないでください。
 
 ## 構文
 
-```js
-ArrayBuffer[Symbol.species];
+```js-nolint
+ArrayBuffer[Symbol.species]
 ```
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列バッファーを作成する配列バッファーのメソッドから返値を作成するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列バッファーを作成する配列バッファーのメソッドから返値を作成するために使用されます。
 
 ## 解説
 
-`@@species` アクセサープロパティは、既定のコンストラクターである `ArrayBuffer` オブジェクトを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドできます。
+`[Symbol.species]` アクセサープロパティは、既定のコンストラクターである `ArrayBuffer` オブジェクトを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドできます。
 
 ```js
 // 説明のための仮想の基盤実装
@@ -35,14 +34,14 @@ class ArrayBuffer {
 }
 ```
 
-この 多態的な実装のために、派生したサブクラスの `@@species` も既定値ではコンストラクター自身を返すことになります。
+この 多態的な実装のために、派生したサブクラスの `[Symbol.species]` も既定値ではコンストラクター自身を返すことになります。
 
 ```js
 class SubArrayBuffer extends ArrayBuffer {}
 SubArrayBuffer[Symbol.species] === SubArrayBuffer; // true
 ```
 
-既存のオブジェクトを変異させず、新しい配列バッファーのインスタンスを返す配列バッファーのメソッド（例: [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice)) を呼び出す場合、オブジェクトの `constructor[@species]` にアクセスすることになります。返されたコンストラクターは、配列バッファーメソッドの返値を構成するために使用されます。
+既存のオブジェクトを変異させず、新しい配列バッファーのインスタンスを返す配列バッファーのメソッド（例: [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice)）を呼び出す場合、オブジェクトの `constructor[Symbol.species]` にアクセスすることになります。返されたコンストラクターは、配列バッファーメソッドの返値を構成するために使用されます。
 
 ## 例
 
@@ -60,7 +59,7 @@ ArrayBuffer[Symbol.species]; // ArrayBuffer() 関数
 
 ```js
 class MyArrayBuffer extends ArrayBuffer {
-  // MyArrayBuffer species を親である ArrayBuffer コンストラクタにオーバーライド。
+  // MyArrayBuffer species を親である ArrayBuffer コンストラクターにオーバーライド。
   static get [Symbol.species]() {
     return ArrayBuffer;
   }

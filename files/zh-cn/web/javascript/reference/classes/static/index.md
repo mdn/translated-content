@@ -85,7 +85,7 @@ console.log(ClassWithStaticField.anotherBaseStaticField); // "基类静态字段
 console.log(SubClassWithStaticField.subStaticField); // "基类静态方法输出"
 ```
 
-表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}}。（将初始化表达式视为隐式封装在函数中。）
+表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化表达式视为隐式封装在函数中。）
 
 静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)是逐个求值的。字段初始化器可以引用其上的字段值，但不能引用其下的字段值。所有静态方法都会事先添加并可被访问，但如果它们引用的字段在被初始化的字段的下方，则调用它们时可能会出现与预期不符的情况。
 

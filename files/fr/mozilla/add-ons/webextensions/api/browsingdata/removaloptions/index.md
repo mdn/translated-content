@@ -39,7 +39,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

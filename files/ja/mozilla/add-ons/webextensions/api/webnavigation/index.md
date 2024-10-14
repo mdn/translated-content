@@ -27,7 +27,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} はページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変更された場合に発火します。
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} はあらゆる場所で発火します。
 
-それぞれのナビゲーションは特定のブラウザーフレーム内の URL の遷移です。ブラウザーフレームはタブ ID とフレーム ID で識別されます。フレームはタブ内の再上位のブラウジングコンテキストである場合や、[iframe](/ja/docs/Web/HTML/Element/iframe) として実装されたネストされたブラウジングコンテキストである場合があります。
+それぞれのナビゲーションは特定のブラウザーフレーム内の URL の遷移です。ブラウザーフレームはタブ ID とフレーム ID で識別されます。フレームはタブ内の再上位の閲覧コンテキストである場合や、[iframe](/ja/docs/Web/HTML/Element/iframe) として実装されたネストされた閲覧コンテキストである場合があります。
 
 それぞれのイベントの `addListener()` の呼び出しはオプションの filter パラメーターを受け入れます。filter は 1 つ以上の URL パターンを指定し、イベントはターゲット URL がパターンにマッチしたナビゲーションの時だけに発火します。
 
@@ -77,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

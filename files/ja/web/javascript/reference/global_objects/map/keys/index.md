@@ -2,12 +2,12 @@
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`keys()`** メソッドは、 `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。この具体的な用途では、このイテレーターオブジェクトは反復可能オブジェクトでもあるので、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用することができます。
+**`keys()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
@@ -17,9 +17,13 @@ l10n:
 keys()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-{{jsxref("Map")}} の新しいイテレーターオブジェクト。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 

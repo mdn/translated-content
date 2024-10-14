@@ -2,7 +2,7 @@
 title: 執筆スタイルガイド
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
 {{MDNSidebar}}
@@ -160,9 +160,11 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
   - **使用例を説明する**。説明されている機能について、特に一般的な使用例がある場合は、それについて話してください。一般的な開発上の問題を解決するために文書化された方法を読者が理解すると仮定するのではなく、実際にその利用例についての節を追加し、例とその例がどのように機能するかを説明するテキストを追加してください。
   - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
+
     > [!NOTE]
     > 検索エンジンのランキングを操作するために、キーワードを入れすぎたり、関係のないキーワードを使ったりすることは、良い慣習ではありません。このような行為は発見されやすく、罰せられる傾向にあります。
     > 同様に、ページのサイズや検索順位を上げるために、反復的で役に立たない内容や、キーワードの塊を実際のページ内に追加するようなことも**しないでください**。これは、コンテンツの読みやすさと検索結果の両方に悪影響を及ぼします。
+
   - **トピックの内容を重視する**。特定のキーワードではなく、記事のトピックに沿ってコンテンツを書く方がはるかに良いことです。実際、多くの SEO 担当者は、記事の長さに応じて 5 ～ 100 種類のキーワード（ショートテール、ミディアムテール、ロングテール）をリストアップし、記事に含めるようにしています。そうすることで、表現が多様化し、繰り返しが少なくなります。
 
 ## 執筆スタイル
@@ -443,7 +445,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
-- **正**: この概念は下記の[アクセシビリティの考慮](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns)の節で詳しく説明しています。
+- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
@@ -519,7 +521,7 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 ページ内に画像やその他のメディアを載せる場合は、以下のガイドラインに従ってください。
 
-- メディアのライセンスが使用することを許可していることを確認してください。 [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA) と互換性のあるものを使用するようにしましょう。
+- メディアのライセンスが使用することを許可していることを確認してください。 [CC0](https://creativecommons.org/public-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA) と互換性のあるものを使用するようにしましょう。
 - 画像の場合、<https://tinypng.com> または <https://imageoptim.com> を通すとページが軽量化されます。
 - `SVG` の場合は、 [SVGOMG](https://jakearchibald.github.io/svgomg/) を通してコードを実行し、 `SVG` ファイルの最後に空行があることを確認してください。
 - すべての画像に[説明的な `alt` テキストを入れる](/ja/docs/MDN/Writing_guidelines/Howto/Images_media#画像に代替テキストを追加)必要があります。
@@ -670,16 +672,15 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 ### おすすめのスタイルガイド
 
-ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
-[非公式の crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) がオンラインで利用できます。
+ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
 
 ### 言語、文法、綴り
 
 記事の執筆と編集スキルを磨きたければ、以下のリソースが役立つことでしょう。（英語の情報）
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)

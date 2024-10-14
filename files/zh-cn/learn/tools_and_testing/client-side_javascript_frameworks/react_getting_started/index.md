@@ -156,7 +156,7 @@ npx create-react-app moz-todo-react
 
 create-react-app 提供了开发 React 应用所需的工具。它的初始文件结构如下：
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules

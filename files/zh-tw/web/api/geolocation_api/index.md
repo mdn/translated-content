@@ -248,12 +248,11 @@ prompt(
 
 ## Gecko 註記
 
-Firefox 可透過 Google 的定位服務 (Google Location Services，GLS)，根據使用者的 WiFi 資訊而找出使用者的位置。與 Google 之間所交換的資料，包含 WiFi 存取點 (Access Point) 資料、Access token (類似 2 個禮拜的 cookie)、使用者的 IP 位址。若需更多資訊，可參閱 [Mozilla 的隱私權政策](http://www.mozilla.com/en-US/legal/privacy/)與 [Google 的隱私權政策](http://www.google.com/privacy-lsf.html)。其內將詳述資料的使用方式。
+Firefox 可透過 Google 的定位服務 (Google Location Services，GLS)，根據使用者的 WiFi 資訊而找出使用者的位置。與 Google 之間所交換的資料，包含 WiFi 存取點 (Access Point) 資料、Access token (類似 2 個禮拜的 cookie)、使用者的 IP 位址。若需更多資訊，可參閱 [Mozilla 的隱私權政策](https://www.mozilla.org/zh-TW/privacy/)與 [Google 的隱私權政策](https://www.google.com/privacy/lsf.html)。其內將詳述資料的使用方式。
 
 Firefox 3.6 (Gecko 1.9.2) 新支援了 [GPSD](http://catb.org/gpsd/) (GPS daemon) 服務，適合 Linux 的地理位置定位。
 
-## 另請參閱
+## 參見
 
 - [`navigator.geolocation`](/zh-TW/docs/Web/API/window.navigator.geolocation)
-- [w3.org 的 Geolocation API](http://www.w3.org/TR/geolocation-API/)
-- [Geolocation API 相關 Demos](/zh-TW/demos/tag/tech:geolocation)
+- [w3.org 的 Geolocation API](https://www.w3.org/TR/geolocation/)

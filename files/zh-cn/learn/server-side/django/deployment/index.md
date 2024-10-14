@@ -236,7 +236,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 将你的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
 2. 打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
 
-   ```
+   ```ignore
    # Text backup files
    *.bak
 
@@ -252,7 +252,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 使用 status 命令，检查要添加的所有文件是否正确（你希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-   ```
+   ```bash
    > git status
    On branch master
    Your branch is up-to-date with 'origin/master'.
@@ -296,7 +296,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 在 GitHub 储存库的根目录中，创建文件`Procfile`（无扩展名），以声明应用程序的进程类型和入口点。将以下文本复制到其中：
 
-```
+```plain
 web: gunicorn locallibrary.wsgi --log-file -
 ```
 
@@ -447,7 +447,7 @@ pip3 freeze > requirements.txt
 
 安装上面所有不同的依赖项后，你的 **requirements.txt** 文件，应至少列出这些项目（尽管版本号可能不同）。请删除下面未列出的任何其他依赖项，除非你已为此应用程序明确添加它们。
 
-```
+```plain
 dj-database-url==0.4.1
 Django==2.0
 gunicorn==19.6.0
@@ -462,7 +462,7 @@ whitenoise==3.2.2
 
 **runtime.txt** 文件（如果已定义）告诉 Heroku 使用哪种编程语言。在 repo 的根目录中，创建文件并添加以下文本：
 
-```
+```plain
 python-3.6.4
 ```
 

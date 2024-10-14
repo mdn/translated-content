@@ -2,31 +2,41 @@
 title: CSS カスタムプロパティ（変数）の使用
 slug: Web/CSS/Using_CSS_custom_properties
 l10n:
-  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
+  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
 {{CSSRef}}
 
-**カスタムプロパティ**（**CSS 変数**や**カスケード変数**と呼ばれることもあります）は、CSS の作者によって作成され、文書全体で再利用可能な特定の値を含むエンティティです。カスタムプロパティ記法（たとえば、**`--main-color: black;`**）で設定し、{{cssxref("var", "var()")}} 関数（たとえば、 `color: var(--main-color);`）でアクセスします。
+**カスタムプロパティ**（**CSS 変数**や**カスケード変数**と呼ばれることもあります）は、CSS の作者によって作成され、文書全体で再利用可能な特定の値を表すエンティティです。これらは、{{cssxref("@property")}} アットルールまたはカスタムプロパティ構文（例: **`--primary-color: blue;`**）を使用して設定します。 カスタムプロパティは、CSS の {{cssxref("var", "var()")}} 関数（例: **`color: var(--primary-color);`**）を使用してアクセスします。
 
-複雑なウェブサイトには、膨大な量の CSS があり、しばしば同じ値が使われています。たとえば、同じ色が異なる場所で数百も使われており、色を変更する場合、グローバルに検索し、置き換えをしなくてはなりません。カスタムプロパティを使えば、一ヶ所に値を保存しておき、複数の場所から参照することができます。更なるメリットとして、意味的な識別をしやすくなります。たとえば、 `--main-text-color` は `#00ff00` より、とりわけ同じ色がさまざまな文脈で使われる場合は理解しやすいでしょう。
+複雑なウェブサイトには膨大な量の CSS が含まれており、その結果、CSS の値が重複することがよくあります。例えば、スタイルシートの異なる場所で同じ色が使用されていることはよくあります。多くの場所で重複している色を変更するには、すべてのルールと CSS ファイルを検索して置換する必要があります。カスタムプロパティを使用すると、値を 1 か所で定義し、他の複数の場所で参照できるため、作業が容易になります。また、可読性と意味づけも利点のひとつです。例えば、`--main-text-color` は 16 進数表記のカラーコード `#00ff00` よりも理解しやすく、特にその色が様々なコンテキストで使用される場合にはその傾向が顕著です。
 
-カスタムプロパティはカスケードの対象であり、親から値を継承します。
+[ダッシュ 2 本 (`--`) を使用して](/ja/docs/Web/CSS/--*)定義されたカスタムプロパティは、[カスケード](/ja/docs/Web/CSS/Cascade)の対象となり、親から値を継承します。
+{{cssxref("@property")}} アットルールを使用すると、カスタムプロパティをより詳細に制御でき、親から値を継承するかどうか、初期値をどうするか、適用すべき型制約をどうするかを指定できます。
 
 > [!NOTE]
-> 変数は、メディアクエリーやコンテナークエリーの中では動作しません。{{cssxref("var", "var()")}} 関数は、要素のすべてのプロパティの、任意の場所で使用することができます。{{cssxref("var", "var()")}} 関数はプロパティ名やセレクターなど、プロパティ値以外のところでは使用できません。従って、メディアクエリーやコンテナークエリーの中では使用できません。
+> 変数は、メディアクエリーやコンテナークエリーの中では動作しません。
+> {{cssxref("var", "var()")}} 関数は、要素のすべてのプロパティの、任意の場所で使用することができます。
+> {{cssxref("var", "var()")}} 関数はプロパティ名やセレクターなど、プロパティ値以外のところでは使用できません。従って、メディアクエリーやコンテナークエリーの中では使用できません。
 
-## 基本的な使用方法
+## カスタムプロパティの宣言
 
-カスタムプロパティの宣言は、ハイフン 2 つ (`--`) で始まるカスタムプロパティ名と、何らかの有効な CSS 値になるプロパティ値を使用することで行われます。他のプロパティと同様、これはルールセットの中で次のように書きます。
+CSS では、プロパティ名の接頭辞として ダッシュ 2 本を使用するか、{{cssxref("@property")}} アットルールを使用してカスタムプロパティを宣言できます。
+以下の項では、これら 2 つの方法について説明します。
+
+### ダッシュ 2 本 (`--`) の接頭辞の使用
+
+ダッシュ 2 本で始まるカスタムプロパティは、`--` で始まってプロパティ名（例: `--my-property`）が続くもので、[有効な CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)であればどのような値でも指定できます。
+他のプロパティと同様に、これはルールのセット内に記述します。次の例では、カスタムプロパティ `--main-bg-color` を作成し、[`<named-color>`](/ja/docs/Web/CSS/named-color) 値として `brown` を使用する方法を示しています。
 
 ```css
-element {
+section {
   --main-bg-color: brown;
 }
 ```
 
-なお、ルールセットに指定されたセレクターは、カスタムプロパティを使用することができるスコープを定義します。よく使われる方法は、カスタムプロパティを {{cssxref(":root")}} 擬似クラスで定義することで、これにより HTML 文書の全体にわたって適用することができます。
+ルールセットに指定されたセレクター（例えば、上記の例では [`<section>`](/ja/docs/Web/HTML/Element/section) 要素）は、カスタムプロパティを使用できるスコープを定義します。
+このため、カスタムプロパティを {{cssxref(":root")}} 擬似クラスで定義し、グローバルに参照できるようにすることが一般的です。
 
 ```css
 :root {
@@ -34,252 +44,437 @@ element {
 }
 ```
 
-但し、これは常にこうしなければならないわけではありません。カスタムプロパティのスコープを制限する良い理由があるかもしれません。
+常にこうしなければならないわけではありません。カスタムプロパティのスコープを制限する正当な理由があるかもしれません。
 
 > [!NOTE]
 > カスタムプロパティの名前は大文字小文字を区別します。 — `--my-color` は `--My-color` とは別なカスタムプロパティとして扱われます。
 
-前述の通り、普通のプロパティ値の代わりに {{cssxref("var", "var()")}} 関数の中でカスタムプロパティ名を使用することで、カスタムプロパティの値を使用することができます。
+### `@property` アットルールの使用
+
+{{cssxref("@property")}} アットルールを使用すると、カスタムプロパティの定義をより詳細に表現できるようになり、プロパティに関連付けられた型、既定値の設定、および継承の制御が可能にります。
+次の例では、`--logo-color` というカスタムプロパティが [`<color>`](/ja/docs/Web/CSS/color_value) を期待するものとして作成されます。
 
 ```css
-element {
+@property --logo-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #c0ffee;
+}
+```
+
+直接 CSS でなく JavaScript でカスタムプロパティを定義したり作業したりしたい場合は、そのために対応する API があります。
+どのように動作するかについては、 [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API) ページを参照してください。
+
+### `var()` によるカスタムプロパティの参照
+
+どの方法でカスタムプロパティを定義しても、標準プロパティ値の代わりに {{cssxref("var", "var()")}} 関数の中でそのプロパティを参照することができます。
+
+```css
+details {
   background-color: var(--main-bg-color);
 }
 ```
 
 ## カスタムプロパティの第一歩
 
-それぞれ異なるクラスの要素に同じ色を適用するシンプルな CSS から始めましょう。
+スタイルを設定する HTML から始めましょう。
+コンテナーとして機能する `<div>` があり、その中に子要素を記載します。その中には、入れ子になった要素もあります。
 
-```css
-.one {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
+```html
+<div class="container">
+  <div class="one">
+    <p>One</p>
+  </div>
+  <div class="two">
+    <p>Two</p>
+    <div class="three">
+      <p>Three</p>
+    </div>
+  </div>
+  <input class="four" placeholder="Four" />
+  <textarea class="five">Five</textarea>
+</div>
+```
 
-.two {
+次の CSS を使用すると、クラスに基づいていくつかの異なる要素をスタイル設定することができます（下記では、色に焦点を当てるため、一部のレイアウトルールは表示されていません）。
+クラスに応じて、`cornflowerblue` または `aquamarine` の要素に背景色を設定しています。
+
+```css hidden
+/* フォント、境界線、パディングを設定 */
+body {
+  font-family: sans-serif;
   color: white;
-  background-color: black;
-  margin: 10px;
-  width: 150px;
-  height: 70px;
-  display: inline-block;
-}
-.three {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 75px;
-}
-.four {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 100px;
 }
 
-.five {
-  background-color: brown;
+div,
+input,
+textarea {
+  border: 2px black solid;
+  padding: 4px;
+  margin: 4px;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
 }
 ```
 
-これを下の HTML に適用します。
-
-```html
-<div>
-  <div class="one">1:</div>
-  <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three" />
-  <textarea class="four">4: Lorem Ipsum</textarea>
-</div>
+```css
+/* それぞれのクラスに、いくつかの色を設定 */
+.one {
+  background-color: cornflowerblue;
+}
+.two {
+  color: black;
+  background-color: aquamarine;
+}
+.three {
+  background-color: cornflowerblue;
+}
+.four {
+  background-color: cornflowerblue;
+}
+.five {
+  background-color: cornflowerblue;
+}
 ```
 
 このようになるはずです。
 
-{{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
+{{EmbedLiveSample("First_steps_with_custom_properties",600,360)}}
 
-## :root 擬似クラスの使用
-
-CSS 中に同じ宣言が繰り返し出てくることに注意してください。いろいろな場所で背景色が `brown` に設定されています。 CSS の宣言によっては、カスケードの上流でこれを宣言し、 CSS の継承によってこの問題を自然に解決することもできます。些末なプロジェクトを除いて、常にこの手法が使えるわけではありません。 {{cssxref(":root")}} 擬似クラスでカスタムプロパティを宣言し、文書内の必要な場所で使用することで、繰り返して書く必要性を減らすことができるのです。
+これらのルール全体で繰り返される値をカスタムプロパティで置き換える機会があります。
+`.container` スコープで `--main-bg-color` を定義し、その値を複数の場所で参照した後、更新されたスタイルは次のようになります。
 
 ```css
-:root {
-  --main-bg-color: brown;
+/* ここで --main-bg-color を定義 */
+.container {
+  --main-bg-color: cornflowerblue;
 }
 
+/* それぞれのクラスに、いくつかの色を設定 */
 .one {
-  color: white;
   background-color: var(--main-bg-color);
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
 }
-
 .two {
-  color: white;
-  background-color: black;
-  margin: 10px;
-  width: 150px;
-  height: 70px;
-  display: inline-block;
+  color: black;
+  background-color: aquamarine;
 }
 .three {
-  color: white;
   background-color: var(--main-bg-color);
-  margin: 10px;
-  width: 75px;
 }
 .four {
-  color: white;
   background-color: var(--main-bg-color);
-  margin: 10px;
-  width: 100px;
 }
-
 .five {
   background-color: var(--main-bg-color);
 }
 ```
 
-```html hidden
-<div>
-  <div class="one"></div>
-  <div class="two">Text <span class="five">- more text</span></div>
-  <input class="three" />
-  <textarea class="four">Lorem Ipsum</textarea>
-</div>
+## :root 擬似クラスの使用
+
+CSS 宣言の中には、カスケードのより上位で宣言し、CSS 継承でこの問題を解決することが可能なものもあります。複雑なプロジェクトでは、常に可能であるとは限りません。CSS 作者は、{{cssxref(":root")}} 擬似クラスにカスタムプロパティを宣言し、文書内の必要な箇所でそれを使用することで、繰り返し記述の必要性を減らすことができます。
+
+```css
+/* ここで --main-bg-color を定義 */
+:root {
+  --main-bg-color: cornflowerblue;
+}
+
+/* それぞれのクラスに、いくつかの色を設定 */
+.one {
+  background-color: var(--main-bg-color);
+}
+.two {
+  color: black;
+  background-color: aquamarine;
+}
+.three {
+  background-color: var(--main-bg-color);
+}
+.four {
+  background-color: var(--main-bg-color);
+}
+.five {
+  background-color: var(--main-bg-color);
+}
 ```
 
-この例では、前回の例と同じ結果になりますが、目的のプロパティ値の正規宣言を1つだけ行うことができます。後でページ全体の値を変更したい場合に、とても有益です。
+これは前回と同じ結果になりますが、望ましいプロパティ値の標準的な宣言（`--main-bg-color: cornflowerblue;`）が可能になり、これは後で自分のプロジェクト全体で値を変更したい場合にとても有益なものです。
 
 ## カスタムプロパティの継承
 
 カスタムプロパティは継承されます。これはつまり、もし与えられた要素にカスタムプロパティの値がない場合、その値は親の値を使用するということです。 HTML を見てみましょう。
 
-```html
+```html live-sample___dash-custom-property-inheritance
 <div class="one">
+  <p>One</p>
   <div class="two">
-    <div class="three"></div>
-    <div class="four"></div>
+    <p>Two</p>
+    <div class="three"><p>Three</p></div>
+    <div class="four"><p>Four</p></div>
   </div>
 </div>
 ```
 
-下記の CSS を適用するとします。
+```css hidden live-sample___dash-custom-property-inheritance
+div {
+  color: black;
+  font-family: sans-serif;
+  width: 75%;
+  height: 80%;
+  margin: 4px;
+  border: 2px black solid;
+  display: inline-block;
+}
 
-```css
+p {
+  margin: 0;
+}
+
+.one {
+  height: 250px;
+}
+
 .two {
-  --test: 10px;
+  height: 80%;
 }
 
 .three {
-  --test: 2em;
+  height: 40%;
+}
+
+.four {
+  height: 40%;
 }
 ```
 
-この場合、 `var(--test)` の結果は以下の通りです。
+```css live-sample___dash-custom-property-inheritance
+div {
+  background-color: var(--box-color);
+}
 
-- `class="two"` の要素: `10px`
-- `class="three"` の要素: `2em`
-- `class="four"` の要素: `10px` (親から継承)
-- `class="one"` の要素: _無効な値_、これはすべてのカスタムプロパティの既定値です。
+.two {
+  --box-color: cornflowerblue;
+}
 
-これらはカスタムプロパティであり、実際には他のプログラミング言語で見られるような変数ではないことに留意してください。値は必要に応じて計算され、他のルールで使用するために格納されるわけではありません。例えば、要素にプロパティを設定して、兄弟の子孫のルールで受け取ることを期待することはできません。通常の CSS と同様、プロパティは一致するセレクターおよびその子孫に対してのみ設定されます。
+.three {
+  --box-color: aquamarine;
+}
+```
+
+{{embedlivesample("dash-custom-property-inheritance", "100%", "280px")}}
+
+`var(--box-color)` の結果は次のように、継承状況によって変わります。
+
+- `class="one"`: _無効値_、これはすべてのカスタムプロパティの既定値です。
+- `class="two"`: `cornflowerblue`
+- `class="three"`: `aquamarine`
+- `class="four"`: `cornflowerblue`（親から継承）
+
+上記の例が示すカスタムプロパティの 1 つの側面は、他のプログラミング言語の変数とまったく同じには動作しないということです。
+この値は、必要とされる場所で計算され、このスタイルシートの他の場所に保存されて再利用されることはありません。
+例えば、プロパティの値を設定しても、兄弟の子孫のルールでその値を取得することはできません。
+プロパティは、一致するセレクターとその子孫に対してのみ設定されます。
+
+### `@property` を使用して継承を制御
+
+`@property` アットルールでは、プロパティを継承するかどうかを明示的に指定できます。
+次の例では、`@property` アットルールを使用してカスタムプロパティを作成しています。
+継承は無効になっており、[`<color>`](/ja/docs/Web/CSS/color_value) データ型が定義され、`cornflowerblue` が初期値として設定されています。
+
+親要素は、`--box-color` の値を緑に設定し、`--box-color` を背景色の値として使用します。
+子要素も `background-color: var(--box-color)` を使用しており、継承が有効になっている場合（または、ダッシュ 2 本の構文を使用して定義されている場合）には、`green` 色が設定されていることが期待されます。
+
+```html live-sample___at-property-inheritance
+<div class="parent">
+  <p>親要素</p>
+  <div class="child">
+    <p>子要素で、--box-color の継承が無効になっています。</p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___at-property-inheritance
+div {
+  color: white;
+  font-family: sans-serif;
+  width: 200px;
+  height: 200px;
+  margin: 4px;
+  padding: 8px;
+  border: 2px black solid;
+  display: inline-block;
+}
+```
+
+```css live-sample___at-property-inheritance
+@property --box-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: cornflowerblue;
+}
+
+.parent {
+  --box-color: green;
+  background-color: var(--box-color);
+}
+
+.child {
+  width: 80%;
+  height: 40%;
+  background-color: var(--box-color);
+}
+```
+
+アットルールで `inherits: false;` が設定されており、`.child` スコープ内で `--box-color` プロパティの値が宣言されていないため、親から継承されるはずの `green` の代わりに `cornflowerblue` の初期値が使用されます。
+
+{{embedlivesample("at-property-inheritance", "100%", "250px")}}
 
 ## カスタムプロパティ代替値
 
-[`var()`](/ja/docs/Web/CSS/var) 関数を使用して、指定された変数が定義されていない場合の**代替値**を複数定義することができます。[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)および[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で作業するときに便利なことがあります。
+カスタムプロパティの代替値は、`var()` 関数と `@property` アットルールの `initial-value` を使用して定義できます。
 
 > [!NOTE]
-> 代替値はブラウザーの互換性を修正するためには使用されません。ブラウザーが CSS カスタムプロパティに対応していない場合、代替値は助けになりません。これは CSS カスタムプロパティに対応しているブラウザーのための単なるバックアップであり、与えられた変数が定義されていなかったり、無効な値であったりした場合に別な値を選択させるためのものです。
+> 代替値はブラウザーの互換性を修正するためには使用されません。ブラウザーが CSS カスタムプロパティに対応していない場合、代替値は助けになりません。
+> これは CSS カスタムプロパティに対応しているブラウザーのための単なるバックアップであり、与えられた変数が定義されていなかったり、無効な値であったりした場合に別な値を選択させるためのものです。
 
-関数の最初の引数は、代替される[カスタムプロパティ](https://www.w3.org/TR/css-variables/#custom-property)の名前です。関数の二番目の引数は、もしあれば、参照された[カスタムプロパティ](https://www.w3.org/TR/css-variables/#custom-property)が無効であった場合に代わりに使用される代替値です。この関数は引数を 2 つだけ受け付けるので、最初のカンマの後のものは、すべて二番目の引数として割り当てます。二番目の引数が無効な場合、次のように代替処理は失敗します。
+### `var()` 関数の代替値の定義
+
+[`var()`](/ja/docs/Web/CSS/var) 関数を使用して、指定された変数が定義されていない場合の**代替値**を複数定義することができます。[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)および[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で作業するときに便利なことがあります。
+
+関数の最初の引数は、カスタムプロパティの名前です。関数の 2 番目の引数は、省略可能で、参照されたカスタムプロパティが無効であった場合に代わりに使用される代替値です。
+この関数は引数を 2 つだけ受け付けるので、最初のカンマの後のものは、すべて 2 番目の引数として割り当てます。2 番目の引数が無効な場合、次のように代替処理は失敗します。
 
 ```css
-.two {
+.one {
   /* --my-var が定義されていなければ red */
   color: var(--my-var, red);
 }
 
-.three {
+.two {
   /* my-var 及び --my-background が定義されていなければ pink */
-  background-color: var(--my-var, var(--my-background, pink));
+  color: var(--my-var, var(--my-background, pink));
 }
 
 .three {
   /* 無効: "--my-background, pink" */
-  background-color: var(--my-var, --my-background, pink);
+  color: var(--my-var, --my-background, pink);
 }
 ```
 
-代替としてのカスタムプロパティを含めるには、上記の二番目の例のようにすることが、複数の代替値を提供するための正しい方法です。この技法は変数全体を解釈するのにより時間が掛かるので、性能上の問題が見られます。
+代替値としてのカスタムプロパティを含めるには、上記の 2 番目の例 (`var(--my-var, var(--my-background, pink))`) のようにすることが、`var()` で複数の代替値を提供するための正しい方法です。
+ただし、階層化された変数の解析に時間がかかるため、この方法によるパフォーマンスへの影響を認識しておく必要があります。
 
 > [!NOTE]
 > 代替値の構文は、[カスタムプロパティ](https://www.w3.org/TR/css-variables/#custom-property)の場合のように、カンマを使用することができます。例えば、 `var(--foo, red, blue)` は `red, blue` という代替値を定義します。最初のカンマから関数の終わりまでが代替値とみなされます。
 
-## 値と妥当性
+### `@property` の初期値を使用した代替値
 
-CSS の各プロパティには、定義された値のセットを割り当てることができます。プロパティに有効な値の集合から外れた値を割り当てた場合、そのプロパティは「無効」とみなされます。
+`var()` を使用する以外に、`@property` アットルールで定義された `initial-value` を代替メカニズムとして使用することができます。実際、これはすでに [`@property` の継承](#property_を使用して継承を制御)の節で見てきました。
 
-ブラウザーは、通常のプロパティに無効な値が設定された場合、その値を破棄し、要素には、その宣言が単に存在しない場合に設定されるはずの値が割り当てられます。
+次の例では、`@property` アットルールを使用して、`--box-color` の初期値を `cornflowerblue` に設定しています。
+アットルールに続くルールセットでは、`--box-color` を `aquamarine` に設定したいのですが、値の名前にタイプミスがあります。
+3 番目の `<div>` でも同じことが言有効な [`<color>` 値](/ja/docs/Web/CSS/color_value)を期待するカスタムプロパティに `2rem` を使用しています。
+`2rem` と `aqumarine` はどちらもカラー値として無効であるため、`cornflowerblue` の初期値が適用されます。
 
-しかし、カスタムプロパティの値が解釈されるとき、ブラウザーはその値がどこで使用されるかをまだ知らないので、ほとんどすべての値を*妥当*とみなす必要があります。
+```css live-sample___at-property-initial-value
+@property --box-color {
+  syntax: "<color>";
+  initial-value: cornflowerblue;
+  inherits: false;
+}
 
-残念なことに、これらの値は妥当であっても、意味のない可能性がある場所で `var()` 関数表記で使用することができてしまいます。プロパティとカスタム変数が無効な CSS 文を生成する可能性があることから、*計算時に妥当*という新しい概念が導かれます。
+.one {
+  --box-color: aquamarine;
+  background-color: var(--box-color);
+}
 
-ブラウザーが無効な `var()` の置き換えに遭遇した場合、プロパティの[初期値](/ja/docs/Web/CSS/initial_value)または[継承値](/ja/docs/Web/CSS/Inheritance)が使用されます。
+.two {
+  --box-color: aqumarine;
+  background-color: var(--box-color);
+}
 
-次の 2 つの例でこれを説明します。
-
-### 無効な通常プロパティ
-
-この例では、`16px` という値を {{cssxref("color")}} プロパティに適用しようとしています。これは無効であるため、CSS は破棄され、結果はルールが存在しなかったかのようになり、代わりに前回の `color: blue` ルールが適用され、段落は青色となります。
-
-#### HTML
-
-```html
-<p>この段落は初期値で黒です。</p>
+.three {
+  --box-color: 2rem;
+  background-color: var(--box-color);
+}
 ```
 
-#### CSS
+```css hidden live-sample___at-property-initial-value
+div {
+  color: white;
+  font-family: sans-serif;
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  padding: 8px;
+  border: 2px black solid;
+  display: inline-block;
+}
+.one {
+  color: black;
+}
+```
 
-```css
+```html hidden live-sample___at-property-initial-value
+<div class="one">
+  <p>One</p>
+</div>
+<div class="two">
+  <p>Two.</p>
+</div>
+<div class="three">
+  <p>Three.</p>
+</div>
+```
+
+{{embedlivesample("at-property-initial-value", "100%", "150px")}}
+
+## 無効なカスタムプロパティ
+
+CSS の各プロパティには、定義された[値のセット](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)を割り当てることができます。
+プロパティに有効な値の集合から外れた値を割り当てた場合、そのプロパティは「無効」とみなされます。
+
+ブラウザーが通常の CSS プロパティの無効な値（例えば、{{cssxref("color")}} プロパティにおける `16px` という値）に遭遇すると、その宣言は破棄され、要素には宣言が存在しなかった場合の値が割り当てられます。
+次の例では、通常のCSS宣言が無効である場合の挙動を示しています。 `color: 16px;` は無視され、代わりに以前の `color: blue` ルールが適用されます。
+
+```html live-sample___invalid-property
+<p>この段落は初期状態で黒です。</p>
+```
+
+```css live-sample___invalid-property
 p {
   color: blue;
 }
 
 p {
+  /* おっと、有効な色ではない */
   color: 16px;
 }
 ```
 
-#### 結果
+{{EmbedLiveSample('invalid-property', 100, 50)}}
 
-{{EmbedLiveSample('Invalid normal properties', 100, 100)}}
+しかし、カスタムプロパティの値が解釈される際には、ブラウザーはまだそれらがどこで使用されるのかを知りません。そのため、ほぼすべての値を _有効_ とみなさなければなりません。
+残念ながら、これらの有効な値は、`var()` 関数記法によって、意味をなさない可能性のあるコンテキストで使用されてしまうことがあります。
+プロパティとカスタム変数は、無効な CSS 文につながる可能性があり、「計算時に有効」という概念につながります。
 
-### 無効なカスタムプロパティ
+ブラウザが無効な `var()` 置換に遭遇した場合は、プロパティの[初期値](/ja/docs/Web/CSS/initial_value)または[継承値](/ja/docs/Web/CSS/Inheritance)が使用されます。
+この例は、カスタムプロパティを使用している点を除いて、最後の例と同じです。
 
-この例は前回のものと同様ですが、カスタムプロパティを使用しています。
-
-期待通りに、ブラウザーは `--text-color` の値で `var(--text-color)` の場所を置き換えようとしますが、 `16px` は {{cssxref("color")}} に妥当なプロパティ値ではありません。置き換え後、プロパティは意味をなさなくなります。ブラウザーはこの状況を 2 段階で扱います。
+期待通りに、ブラウザーは `--text-color` の値で `var(--text-color)` の場所を置き換えようとしますが、 `16px` は {{cssxref("color")}} に妥当なプロパティ値ではありません。
+置き換え後、プロパティは意味をなさなくなります。ブラウザーはこの状況を 2 段階で扱います。
 
 1. {{cssxref("color")}} プロパティが継承可能であるかを確認します。可能ですが、 `<p>` には `color` プロパティを持つ親がありません。よって次の段階に進みます。
 2. 値を**既定の初期値**、つまり、黒に設定します。
 
-#### HTML
-
-```html
-<p>この段落は初期値で黒です。</p>
+```html live-sample___invalid-custom-property
+<p>この段落は初期状態で黒です。</p>
 ```
 
-#### CSS
-
-```css
+```css live-sample___invalid-custom-property
 :root {
   --text-color: 16px;
 }
@@ -293,9 +488,35 @@ p {
 }
 ```
 
-#### 結果
+{{EmbedLiveSample('invalid-custom-property', 100, 50)}}
 
-{{EmbedLiveSample('Invalid custom properties', 100, 100)}}
+このような場合、`@property` アットルールを使用してプロパティの初期値を定義することで、予期せぬ結果を防ぐことができます。
+
+```html live-sample___invalid-custom-property-fallbacks
+<p>この段落は初期状態で黒です。</p>
+```
+
+```css live-sample___invalid-custom-property-fallbacks
+@property --text-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: cornflowerblue;
+}
+
+:root {
+  --text-color: 16px;
+}
+
+p {
+  color: blue;
+}
+
+p {
+  color: var(--text-color);
+}
+```
+
+{{EmbedLiveSample('invalid-custom-property-fallbacks', 100, 50)}}
 
 ## JavaScript での値
 
@@ -315,4 +536,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 ## 関連情報
 
 - [カスタムプロパティの構文](/ja/docs/Web/CSS/--*)
+- {{cssxref("@property")}} アットルール
 - [`var()`](/ja/docs/Web/CSS/var)
+- [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
+- [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール

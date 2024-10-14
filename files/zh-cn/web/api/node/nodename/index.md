@@ -7,15 +7,6 @@ slug: Web/API/Node/nodeName
 
 返回当前节点的节点名称
 
-## 语法
-
-```
-var str = node.nodeName;
-```
-
-- `str` 是一个存储了当前节点的节点名称的字符串。
-- `nodeName 是一个只读属性`.
-
 ## 附注
 
 下表列出了所有类型的节点的`nodeName`属性的值。

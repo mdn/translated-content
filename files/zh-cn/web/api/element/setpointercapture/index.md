@@ -16,8 +16,8 @@ slug: Web/API/Element/setPointerCapture
 
 ## 语法
 
-```
-targetElement.setPointerCapture(pointerId);
+```js-nolint
+setPointerCapture(pointerId)
 ```
 
 ### 参数

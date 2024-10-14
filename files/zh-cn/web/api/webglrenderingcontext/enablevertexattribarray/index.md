@@ -16,8 +16,8 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 ## 语法
 
-```
-void gl.enableVertexAttribArray(index);
+```js-nolint
+enableVertexAttribArray(index)
 ```
 
 ### 参数

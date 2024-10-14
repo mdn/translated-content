@@ -5,18 +5,12 @@ slug: Web/API/Document/getElementsByTagNameNS
 
 {{ ApiRef("DOM") }}
 
-```
-Firefox 3.6 note
-
-请参阅 Notes section of element.getElementsByTagNameNS 中的更改，这些更改同时适用于 Firefox 3.6 的 API.
-```
-
 返回带有指定名称和命名空间的元素集合。整个文件结构都会被搜索，包括根节点。
 
 ## 语法
 
-```
-elements = document.getElementsByTagNameNS(namespace, name)
+```js-nolint
+getElementsByTagNameNS(namespace, name)
 ```
 
 - `elements` 是一个在树中按顺序查询到的动态的 HTML 集合 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) (但是看下面的提示)。

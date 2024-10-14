@@ -48,7 +48,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ### 块级链接
 
-就像之前提到的那样，任何内容，甚至[块级内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#块级元素和内联元素)都可以作为链接出现。如果想让标题元素变为链接，就把它包裹在锚点元素（`<a>`）内，像这个代码段一样：
+就像之前提到的那样，任何内容，甚至{{Glossary("Block/CSS", "块级元素")}}都可以作为链接出现。如果想让标题元素变为链接，就把它包裹在锚点元素（`<a>`）内，像这个代码段一样：
 
 ```html
 <a href="https://developer.mozilla.org/zh-CN/">
@@ -63,7 +63,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ### 图片链接
 
-如果有需要作为链接的图片，使用 {{htmlelement("a")}} 元素来包裹要引用图片的 {{htmlelement("img")}} 元素。
+如果有需要作为链接的图片，使用 {{htmlelement("a")}} 元素来包裹要引用图片的 {{htmlelement("img")}} 元素。下面的示例使用相对路径来引用本地存储的 SVG 图像文件。
 
 ```css hidden
 img {
@@ -75,7 +75,7 @@ img {
 
 ```html
 <a href="https://developer.mozilla.org/zh-CN/">
-  <img src="mdn_logo.svg" alt="MDN Web 文档主页" />
+  <img src="mdn_logo.svg" alt="MDN Web 文档" />
 </a>
 ```
 
@@ -92,10 +92,11 @@ img {
 
 ```html
 <p>
-  我创建了一个指向<a
+  我创建了一个指向
+  <a
     href="https://www.mozilla.org/zh-CN/"
-    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。"
-    >Mozilla 主页</a
+    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">
+    Mozilla 主页</a
   >的超链接。
 </p>
 ```
@@ -207,13 +208,15 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 **好的**链接文本：[下载 Firefox](https://www.mozilla.org/zh-CN/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/"> 下载 Firefox </a></p>
+<p><a href="https://www.mozilla.org/zh-CN/firefox/">下载 Firefox </a></p>
 ```
 
-**不好的**链接文本：[点击这里](https://www.mozilla.org/firefox/)下载 Firefox
+**不好的**链接文本：[点击这里](https://www.mozilla.org/zh-CN/firefox/)下载 Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/"> 点击这里 </a>下载 Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/zh-CN/firefox/">点击这里 </a>下载 Firefox
+</p>
 ```
 
 其他提示：
@@ -312,7 +315,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 ```
 
 > [!NOTE]
-> 每个字段的值必须使用 URL 编码，即使用[百分号转义的](https://zh.wikipedia.org/wiki/百分号编码)非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
+> 每个字段的值必须使用 URL 编码，即使用{{Glossary("Percent-encoding", "百分号转义")}}的非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。阅读 [GET 方法](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
 
 这里有一些其他的示例 `mailto` 链接：
 

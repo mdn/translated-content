@@ -36,7 +36,7 @@ for (var value of myHeaders.values()) {
 
 返回值为：
 
-```
+```plain
 text/xml
 Accept-Language
 ```

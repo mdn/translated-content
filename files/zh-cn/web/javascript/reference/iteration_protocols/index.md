@@ -125,7 +125,7 @@ JavaScript 语言指定了产生或使用可迭代对象和迭代器的 API。
 
 从内置迭代返回的迭代器实际上都继承了一个公共类（目前尚未暴露），该类实现了上述 `[Symbol.iterator]() { return this; }` 方法，使它们都是可迭代的迭代器。将来，除了迭代器协议要求的 `next()` 方法外，这些内置迭代器可能还有其他[辅助方法](https://github.com/tc39/proposal-iterator-helpers)。你可以通过在图形控制台中记录迭代器的原型链来检查它。
 
-```
+```plain
 console.log([][Symbol.iterator]());
 
 Array Iterator {}

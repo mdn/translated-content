@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: blur() メソッド"
+short-title: blur()
 slug: Web/API/HTMLElement/blur
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18

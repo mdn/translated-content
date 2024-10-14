@@ -108,7 +108,7 @@ var ctx = canvas.getContext("2d", { alpha: false });
 - 尽可能避免 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}特性
 - 尽可能避免[text rendering](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
 - 尝试不同的方法来清除画布 ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. 调整 canvas 大小)
-- 有动画，请使用{{domxref("window.requestAnimationFrame()")}} 而非{{domxref("window.setInterval()")}}
+- 有动画，请使用 {{domxref("Window.requestAnimationFrame()")}} 而非 {{domxref("Window.setInterval", "setInterval()")}}
 - 请谨慎使用大型物理库
 
 ## 参见

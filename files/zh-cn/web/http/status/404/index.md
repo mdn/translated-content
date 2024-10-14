@@ -11,7 +11,7 @@ HTTP 响应状态码 **`404 Not Found`** 指的是服务器无法找到所请求
 
 ## 状态
 
-```
+```http
 404 Not Found
 ```
 
@@ -19,7 +19,7 @@ HTTP 响应状态码 **`404 Not Found`** 指的是服务器无法找到所请求
 
 你可以自定义 404 页面，使其对用户更友好，以及提供一些引导。例如，Apache 服务器可以在 `.htaccess` 文件中指定自定义 404 页面的路径，代码片段如下：
 
-```
+```apacheconf
 ErrorDocument 404 /notfound.html
 ```
 

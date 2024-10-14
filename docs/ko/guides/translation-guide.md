@@ -41,57 +41,34 @@
 
 | 용어          | 번역             | 참고 링크                     |
 | ------------- | ---------------- | ----------------------------- |
-| Note          | 참고             |                               |
-| Warning       | 경고             |                               |
-| Callout       | 알림             |                               |
 | Objective     | 목표             | [링크][What_is_accessibility] |
 | Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
 
 ### 교육 과정 callout
 
 ```markdown
-> **알림:**
+> [!CALLOUT]
 >
 > #### 프론트엔드 웹 개발자가 되고자 하시나요?
 >
-> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
+> 프론트엔드 웹 개발자가 되고 싶지만 무엇을 먼저 배워야 할지 모르겠다면, MDN 커리큘럼을 참고해 학습 계획을 세우는 것을 추천합니다. 이 커리큘럼은 성공적인 프론트엔드 개발자가 되기 위한 필수 기술과 실습을 체계적으로 학습할 수 있는 경로를 제공하며, 추천 학습 자료도 함께 제공합니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/curriculum/)
 ```
 
-### 카드 번역
+## GFM Alerts
 
-카드는 참고, 경고 그리고 알림의 세 가지 유형이 있으며, 영어 원문에서는 다음과 같이 표시됩니다.
+`> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!CAUTION]`, `> [!WARNING]`은 새로 추가된 github markdown으로 영어 문법만 사용할 수 있습니다.
 
 ```markdown
-# 참고
+// bad
 
-> **Note:** This is a note.
-
-# 경고
-
-> **Warning:** This is a warning.
-
-# 알림
-
-> **Callout:** This is a callout.
+> [!참고]
+> ...
 ```
 
-이런 카드는 아래와 같이 번역해주시면 됩니다.
-
-```markdown
-# 참고
-
-> **참고:** 참고입니다.
-
-# 경고
-
-> **경고:** 경고입니다.
-
-# 알림
-
-> **알림:** 알림입니다.
-```
+- [[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925)
+- [Incorrect formatting for highlighted notes in GitHub flavoured Markdown](https://github.com/prettier/prettier/issues/16454)
 
 ## 역주/역자주
 

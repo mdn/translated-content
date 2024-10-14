@@ -3,16 +3,17 @@ title: "Navigator: sendBeacon() メソッド"
 short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 l10n:
-  sourceCommit: 497bd67ca89834d869f008319cd2b9d941451622
+  sourceCommit: f2088b8912ef205a737551441d54b73507bd3ac6
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを [HTTP POST](/ja/docs/Web/HTTP/Methods/POST) リクエストで送ります。
 
-これはウェブサーバーに分析データを送信するために使用することを意図しており、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
+これはウェブサーバーに分析データを送信するために使用するためのものであり、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
 
-> **メモ:** `POST` 以外のメソッドでリクエストを送信したり、リクエストプロパティを変更したり、サーバーのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/fetch#keepalive) を設定したものを使用してください。
+> [!NOTE]
+> リクエストを `POST` 以外のメソッドで送信したり、リクエストプロパティを変更したり、サーバーのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/Window/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) を設定したものを使用してください。
 
 ## 構文
 
@@ -110,6 +111,6 @@ document.addEventListener("visibilitychange", function logData() {
 - [`visibilitychange`](/ja/docs/Web/API/Document/visibilitychange_event) イベント
 - {{domxref("Beacon_API","ビーコン API", "", "true")}} 概要ページ
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) は、 `beforeunload`/`unload`ではなく、`visibilitychange`を使用する理由について詳しく説明しています。
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api/#developer-recommendations-for-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): ページのライフサイクル動作におけるクロスブラウザーでの不整合に対処する JavaScript ライブラリーです。
 - [Back/forward cache](https://web.dev/articles/bfcache) は、バック/フォワードキャッシュとは何か、そして様々なページライフサイクルイベントに対するその意味について説明します。

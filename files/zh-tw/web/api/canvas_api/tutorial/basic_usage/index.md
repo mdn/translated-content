@@ -105,7 +105,7 @@ if (canvas.getContext) {
 </html>
 ```
 
-一旦網頁載入完成後，程式碼會呼叫 draw()函數(這是利用 document 上的 load 事件完成)，這類 draw()函數也可以透過{{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}或其他事件處理函數來呼叫，只要呼叫的時間點是在網頁載入完後。
+一旦網頁載入完成後，程式碼會呼叫 `draw()` 函數（這是利用 document 上的 {{domxref("Window/load_event", "load")}} 事件完成），這類 `draw()` 函數也可以透過 {{domxref("window.setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}} 或其他事件處理函數來呼叫，只要呼叫的時間點是在網頁載入完後。
 
 這是我們的範本實際看起來的樣子:
 

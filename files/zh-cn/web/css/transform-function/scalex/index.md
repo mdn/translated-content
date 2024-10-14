@@ -15,7 +15,7 @@ slug: Web/CSS/transform-function/scaleX
 
 ## Syntax
 
-```
+```css
 scaleX(s)
 ```
 

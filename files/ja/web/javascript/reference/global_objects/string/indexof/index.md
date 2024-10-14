@@ -2,14 +2,14 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
 ---
 
 {{JSRef}}
 
 **`indexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最初に出現するインデックスを返します。 オプションで開始位置を取り、指定した数値以上のインデックスで指定した部分文字列が最初に出現するインデックスを返します。
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
 
 ## 構文
 
@@ -107,7 +107,7 @@ console.log(str.indexOf("new")); // 6
 
 以下の例は 2 つの文字列の変数を定義しています。
 
-それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、`indexOf()` メソッドは大文字と小文字を区別するので、`"cheddar"` という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
+それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console/log_static", "console.log()")}} メソッドは `19` を表示します。しかし、`indexOf()` メソッドは大文字と小文字を区別するので、`"cheddar"` という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
 
 ```js
 const myString = "brie, pepper jack, cheddar";
