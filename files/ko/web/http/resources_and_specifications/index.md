@@ -1,6 +1,8 @@
 ---
 title: HTTP 리소스와 명세
 slug: Web/HTTP/Resources_and_specifications
+l10n:
+  sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
 ---
 
 {{HTTPSidebar}}
