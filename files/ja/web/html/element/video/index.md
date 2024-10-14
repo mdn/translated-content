@@ -439,7 +439,8 @@ AddType video/webm .webm
 
   恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a
     href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-    download="ed_1024_512kb.mp4">MP4 をダウンロード</a
+    download="ed_1024_512kb.mp4"
+    >MP4 をダウンロード</a
   >してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
