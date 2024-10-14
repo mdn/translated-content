@@ -409,6 +409,7 @@
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/Web/API/Media_Streams_API	/zh-TW/docs/Web/API/Media_Capture_and_Streams_API
+/zh-TW/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/zh-TW/docs/Web/API/Navigator/registerProtocolHandler
 /zh-TW/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
@@ -425,10 +426,11 @@
 /zh-TW/docs/Web/API/PositionOptions/timeout	/zh-TW/docs/Web/API/Geolocation/getCurrentPosition
 /zh-TW/docs/Web/API/Web_Video_Text_Tracks_Format	/zh-TW/docs/Web/API/WebVTT_API
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/Web/OpenSearch
-/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
+/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/Window/setInterval
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /zh-TW/docs/Web/API/console/assert	/zh-TW/docs/Web/API/console/assert_static
+/zh-TW/docs/Web/API/setInterval	/zh-TW/docs/Web/API/Window/setInterval
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
@@ -489,6 +491,8 @@
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Schemes/data
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS

@@ -75,7 +75,7 @@ MDN Web 文档中的**已弃用**（deprecated）术语用于标记不再推荐�
   > [!NOTE]
   > 本地化文档中并不需要添加 `status` 元数据（同样适用于下文），文档构建系统会自动合并来自英文文档的元数据。参见[针对 MDN 文档的本地化指南](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#元数据)，以了解更多信息。
 
-  ```
+  ```yaml
   status:
     - deprecated
   ```
@@ -93,7 +93,7 @@ MDN Web 文档中的**已弃用**（deprecated）术语用于标记不再推荐�
 
 - 如果该项目有任何仅描述该项目的文档页面（例如 {{domxref("RTCPeerConnection.close()")}}），请在页面顶部添加 [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) 宏，并在元数据中添加以下 `status:` 条目：
 
-  ```
+  ```yaml
   status:
     - deprecated
   ```

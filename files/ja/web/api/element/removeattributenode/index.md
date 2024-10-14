@@ -46,8 +46,6 @@ d.removeAttributeNode(d_align);
 
 `removeAttributeNodeNS` メソッドはありません。`removeAttributeNode` メソッドは、名前空間付き属性と名前空間付きでない属性の両方を削除することができます。
 
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

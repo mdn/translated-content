@@ -12,13 +12,7 @@ slug: Web/API/RTCPeerConnection/currentLocalDescription
 > [!NOTE]
 > 与 {{domxref("RTCPeerConnection.localDescription")}} 不同，这个值代表了当前连接的本地端的事实当前状态； `localDescription` 也许指明了一个当前正在切换中的连接的 description。
 
-## 语法
-
-```
-sessionDescription = RTCPeerConnection.currentLocalDescription;
-```
-
-### 返回值
+## 值
 
 连接本地端的当前 description 描述，如果成功设置了一个。否则返回 null。
 

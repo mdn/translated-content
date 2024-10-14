@@ -45,7 +45,7 @@ myObject.greet(); // 来自 Madrid 的问候
 
 这里有一个对象，它具有数据属性 `city` 和方法 `greet()`。如果你在控制台中输入对象的名称，然后*跟随一个小数点*（如同 `myObject.`），控制台会列出该对象可用的一系列属性。你会看到，除了 `city` 和 `greet` 外，还有很多其他属性！
 
-```
+```plain
 __defineGetter__
 __defineSetter__
 __lookupGetter__

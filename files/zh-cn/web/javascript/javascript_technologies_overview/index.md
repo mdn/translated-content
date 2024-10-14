@@ -66,7 +66,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的**约定**，它是跨平台的，并且与**编程语言无关**。通过调用**DOM 树**上对象的方法可以操纵这些对象。文档对象模型核心是由 [W3C](/zh-CN/docs/Glossary/W3C) 进行标准化的，它将 HTML 和 XML 文档抽象成对象，并在其上定义接口以及操纵这些对象的机制，DOM 定义的元素有：
 
-- [DOM 核心](https://dom.spec.whatwg.org/)中定义了文档结构、树模型，以及 DOM 事件架构，包括：[`Node`](/zh-CN/docs/Web/API/Node)、[`Element`](/zh-CN/docs/Web/API/Element)、[`DocumentFragment`](/zh-CN/docs/Web/API/DocumentFragment)、[`Document`](/zh-CN/docs/Web/API/Document)、[`DOMImplementation`](/zh-CN/docs/Web/API/DOMImplementation)、[`Event`](/zh-CN/docs/Web/API/Event)、[`EventTarget`](/zh-CN/docs/Web/API/EventTarget)，等等
+- [DOM 核心](https://dom.spec.whatwg.org/)中定义了文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
 - [DOM 事件](https://w3c.github.io/uievents/)中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。
 - [DOM 元素遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)对象等其他内容。
 
@@ -74,15 +74,15 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的意义。比如元素的 `className` 属性以及例如 [`document.body`](/zh-CN/docs/Web/API/Document/body) 这样的 API。
+[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的意义。比如元素的 `className` 属性以及例如 {{domxref("Document.body")}} 这样的 API。
 
-HTML 规范同时还约束了元素之间的关系，例如无序列表 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素中，只能以 [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。
+HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlelement("ul")}} 元素中，只能以 {{htmlelement("li")}} 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。
 
-想了解更多关于 [`Document`](/zh-CN/docs/Web/API/Document) 对象、[`Window`](/zh-CN/docs/Web/API/Window) 对象以及其他 DOM 元素的信息？请访问 MDN 的 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
+想了解更多关于 {{domxref("Document")}} 对象、{{domxref("Window")}} 对象以及其他 DOM 元素的信息？请访问 MDN 的 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
 
 ## 其他值得关注的 API
 
-- [`setTimeout`](/zh-CN/docs/Web/API/setTimeout) 和 [`setInterval`](/zh-CN/docs/Web/API/setInterval) 函数最早被定义在 HTML 标准的 [`Window`](/zh-CN/docs/Web/API/Window) 接口下。
+- {{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}} 函数最早被定义在 HTML 标准的 {{domxref("Window")}} 接口下。
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) 使得发起异步 HTTP 请求成为可能。
 - [Fetch API](https://fetch.spec.whatwg.org/) 为网络请求提供了更符合人体工程学的抽象。
 - [CSS 对象模型](https://drafts.csswg.org/cssom/) 将 CSS 规则抽象成对象。
@@ -91,7 +91,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 [`<ul>`]
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的绘图 API。
 - [WebAssembly 接口](https://webassembly.github.io/spec/js-api) 提供了 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间的通信工具。
 
-非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 [`fetch()`](/zh-CN/docs/Web/API/fetch) 和 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout)。
+非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
 ## 有哪些 JavaScript 的实现？
 
@@ -104,7 +104,7 @@ mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网�
 - Google 的 [V8](http://code.google.com/p/v8/)，在 Google Chrome 浏览器和较新的 Opera 浏览器中使用。这同时也是[Node.js](https://nodejs.org/en/)使用的引擎。
 - [JavaScriptCore](http://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro)，被用在了一些 WebKit 浏览器如 Apple Safari。
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
-- [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
+- [Chakra](<https://zh.wikipedia.org/wiki/Chakra_(JScript引擎)>) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
 
 每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
 

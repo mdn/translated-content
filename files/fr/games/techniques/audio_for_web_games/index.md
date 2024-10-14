@@ -214,7 +214,7 @@ Tout ceci est possible en utilisant l'élément standard {{HTMLElement ("audio")
 
 ## API Web Audio pour les jeux
 
-Maintenant qu'il est supporté dans tous les navigateurs modernes à l'exception d'Opera Mini et d'Internet Explorer ([bien que Microsoft travaille maintenant dessus](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webaudioapi/)), une approche acceptable pour de nombreuses situations est d'utiliser l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) (voir la page [Puis-je utiliser l'API Web Audio ?](http://caniuse.com/#search=web%20audio%20api) pour plus d'informations sur la compatibilité du navigateur). L'API Web Audio est une API JavaScript audio avancée, idéale pour l'audio du jeu. Les développeurs peuvent générer de l'audio et manipuler des échantillons audio tout en positionnant le son dans l'espace de jeu 3D.
+Maintenant qu'il est supporté dans tous les navigateurs modernes à l'exception d'Opera Mini et d'Internet Explorer ([bien que Microsoft travaille maintenant dessus](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webaudioapi/)), une approche acceptable pour de nombreuses situations est d'utiliser l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) (voir la page [Puis-je utiliser l'API Web Audio ?](https://caniuse.com/#search=web%20audio%20api) pour plus d'informations sur la compatibilité du navigateur). L'API Web Audio est une API JavaScript audio avancée, idéale pour l'audio du jeu. Les développeurs peuvent générer de l'audio et manipuler des échantillons audio tout en positionnant le son dans l'espace de jeu 3D.
 
 Une stratégie inter-navigateurs envisageable serait de fournir un son basique à l'aide de l'élément standard {{HTMLElement ("audio")}} et, là où cela est pris en charge, d'améliorer l'expérience en utilisant l'API Web Audio.
 
@@ -373,8 +373,8 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
 - [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)
-- [Developing Game Audio with the Web Audio API (HTML5Rocks) (en)](http://www.html5rocks.com/en/tutorials/webaudio/games/)
-- [Mixing Positional Audio and WebGL (HTML5Rocks) (en)](http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API (HTML5Rocks) (en)](https://web.dev/articles/webaudio-games)
+- [Mixing Positional Audio and WebGL (HTML5Rocks) (en)](https://web.dev/articles/webaudio-positional-audio)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits (en)](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)
 - [Making HTML5 Audio Actually Work on Mobile (en)](http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
-- [Audio Sprites (and fixes for iOS) (en)](http://remysharp.com/2010/12/23/audio-sprites/)
+- [Audio Sprites (and fixes for iOS) (en)](https://remysharp.com/2010/12/23/audio-sprites/)

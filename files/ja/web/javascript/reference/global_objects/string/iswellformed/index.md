@@ -2,7 +2,7 @@
 title: String.prototype.isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 l10n:
-  sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
@@ -14,6 +14,10 @@ l10n:
 ```js-nolint
 isWellFormed()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -31,10 +35,10 @@ JavaScript の文字列は UTF-16 エンコードです。UTF-16 エンコーデ
 
 ```js
 const strings = [
-  // 孤立高サロゲート
+  // 孤立上位サロゲート
   "ab\uD800",
   "ab\uD800c",
-  // 孤立低サロゲート
+  // 孤立下位サロゲート
   "\uDFFFab",
   "c\uDFFFab",
   // 整形式

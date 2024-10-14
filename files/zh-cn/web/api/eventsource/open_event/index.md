@@ -9,8 +9,12 @@ slug: Web/API/EventSource/open_event
 
 ## 语法
 
-```
-eventSource.onopen = function
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("open", (event) => {});
+
+onopen = (event) => {};
 ```
 
 ## 示例

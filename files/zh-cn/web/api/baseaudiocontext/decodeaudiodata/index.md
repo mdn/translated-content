@@ -11,20 +11,13 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 
 ## 语法
 
-旧版的回调函数语法
+```js-nolint
+// 基于 Promise 的语法返回一个 Promise：
+decodeAudioData(arrayBuffer)
 
-```
-audioCtx.decodeAudioData(audioData, function(decodedData) {
-  // use the decoded data here
-});
-```
-
-新版的 promise-based 语法：
-
-```
-audioCtx.decodeAudioData(audioData).then(function(decodedData) {
-  // use the decoded data here
-});
+// 回调语法没有返回值：
+decodeAudioData(arrayBuffer, successCallback)
+decodeAudioData(arrayBuffer, successCallback, errorCallback)
 ```
 
 ## 举例

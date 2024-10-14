@@ -27,10 +27,8 @@ fetch(url).then(function (response) {
 
 ## 语法
 
-```
-cache.put(request, response).then(function() {
-  // request/response pair has been added to the cache
-});
+```js-nolint
+put(request, response)
 ```
 
 ### 参数

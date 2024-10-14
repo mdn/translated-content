@@ -331,15 +331,15 @@ browser.pkcs11.installModule("my_module");
 
 如果想要全局可见，使用下面的路径创建注册表：
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -352,15 +352,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要用户级别可见，使用下面的路径创建注册表：
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -370,29 +370,29 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要全局可见，将清单文件存放在：
 
-```
+```plain
 /Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
 如果想要用户级别可见，将清单文件存放在：
 
-```
+```plain
 ~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
@@ -400,42 +400,42 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要全局可见，将清单文件存放在：
 
-```
+```plain
 /usr/lib/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/pkcs11-modules/<name>.json
 ```
 
 或者：
 
-```
+```plain
 /usr/lib64/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 如果想要用户级别可见，将清单文件存放在：
 
-```
+```plain
 ~/.mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/pkcs11-modules/<name>.json
 ```

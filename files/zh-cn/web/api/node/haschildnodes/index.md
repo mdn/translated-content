@@ -5,17 +5,15 @@ slug: Web/API/Node/hasChildNodes
 
 {{ApiRef}}
 
-### 概述
-
 **hasChildNodes**方法返回一个[布尔值](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean),表明当前[节点](/zh-CN/docs/DOM/Node)是否包含有[子节点](/zh-CN/docs/DOM/Node.childNodes).
 
 ## 语法
 
-```
-element.hasChildNodes()
+```js-nolint
+hasChildNodes()
 ```
 
-## 例子
+## 示例
 
 下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。
 

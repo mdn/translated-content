@@ -13,7 +13,7 @@ slug: Web/API/Text/splitText
 
 ## 语法
 
-```
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 

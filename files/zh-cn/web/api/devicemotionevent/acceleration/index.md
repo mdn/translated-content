@@ -10,12 +10,6 @@ acceleration 属性会返回设备的加速度记录（单位：[m / s2](https:/
 > [!NOTE]
 > 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
 
-## 语法
-
-```
-var acceleration = instanceOfDeviceMotionEvent.acceleration;
-```
-
 ## 值
 
 `acceleration`是一个包括三轴（x、y、z）加速度信息的对象，每个轴都有自己的属性：

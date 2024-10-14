@@ -56,7 +56,7 @@ _変更なし。_
 
 - `setWindowRect` 機能の既定値が、すべてのデスクトップアプリケーション (Thunderbird を含む) で `true` に、Android の GeckoView で `false` になりました ([Firefox バグ 1650872](https://bugzil.la/1650872))。
 - 以下のコマンドで Fission をサポートしました: `WebDriver:SwitchToFrame`、`WebDriver:SwitchToParentFrame`、`WebDriver:GetCurrentURL`。すべての Fission 互換コマンドは、`marionette.actors.enabled` が `true` に設定されている場合に限って利用できます。
-- 新しいウィンドウを開いた後、ブラウジングコンテキストの監視が破損する問題を修正しました ([Firefox バグ 1661495](https://bugzil.la/1661495))。
+- 新しいウィンドウを開いた後、閲覧コンテキストの監視が破損する問題を修正しました ([Firefox バグ 1661495](https://bugzil.la/1661495))。
 - `WebDriver:SwitchToWindow` が失敗したとき、統一された `NoSuchWindowError` が常に返るようになりました ([Firefox バグ 1663429](https://bugzil.la/1663429))。
 
 #### 廃止

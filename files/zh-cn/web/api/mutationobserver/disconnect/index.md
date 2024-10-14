@@ -9,8 +9,8 @@ slug: Web/API/MutationObserver/disconnect
 
 ## 语法
 
-```
-mutationObserver.disconnect()
+```js-nolint
+disconnect()
 ```
 
 ### 参数

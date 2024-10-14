@@ -81,7 +81,7 @@ slug: Web/Accessibility/ARIA/Roles/feed_role
 
 [フィードパターンの実装例](https://w3c.github.io/aria-practices/examples/feed/feed.html) (英語)
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

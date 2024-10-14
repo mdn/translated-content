@@ -9,8 +9,10 @@ slug: Web/API/AudioBufferSourceNode/start
 
 ## 语法
 
-```
-AudioBufferSourceNode.start([when][, offset][, duration]);
+```js-nolint
+start(when)
+start(when, offset)
+start(when, offset, duration)
 ```
 
 ### 参数
