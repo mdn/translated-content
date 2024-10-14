@@ -112,7 +112,7 @@ function updateButton() {
 
 #### 设置禁用属性
 
-你可以在运行时通过设置 `disabled` 为 `true` 或 `false` 来启用和禁用按钮。在这个例子中，我们的按钮一开始是启用的，但如果你按下它，就会用 `button.disabled = true` 将其禁用。然后，一个 {{domxref("setTimeout()")}} 函数被用来在两秒后将按钮重置为启用状态。
+你可以在运行时通过设置 `disabled` 为 `true` 或 `false` 来启用和禁用按钮。在这个例子中，我们的按钮一开始是启用的，但如果你按下它，就会用 `button.disabled = true` 将其禁用。然后，一个 {{domxref("Window.setTimeout", "setTimeout()")}} 函数被用来在两秒后将按钮重置为启用状态。
 
 ```html
 <input type="button" value="已启用" />

@@ -1,13 +1,14 @@
 ---
-title: Response.arrayBuffer()
+title: "Response: arrayBuffer() メソッド"
+short-title: arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 l10n:
-  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
+  sourceCommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
-**`arrayBuffer()`** は {{domxref("Response")}} インターフェイスのメソッドで、リクエストの本体を読み取り、 {{jsxref("ArrayBuffer")}} で解決されるプロミスを返します。
+**`arrayBuffer()`** は {{domxref("Response")}} インターフェイスのメソッドで、{{domxref("Response")}} を取り、終わりまで読み取ります。{{jsxref("ArrayBuffer")}} で解決されるプロミスを返します。
 
 ## 構文
 
@@ -22,6 +23,18 @@ arrayBuffer()
 ### 返値
 
 {{jsxref("ArrayBuffer")}} で解決されるプロミス。
+
+### 例外
+
+- {{domxref("DOMException")}} `AbortError`
+  - : リクエストが[中止された](/ja/docs/Web/API/Fetch_API/Using_Fetch#リクエストの中止)場合。
+- {{jsxref("TypeError")}}
+  - : 以下のいずれかの原因で発生します。
+    - レスポンス本体が[妨害またはロック](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)されている場合。
+    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheader("Content-Encoding")}} ヘッダーが不正な場合など）。
+- {{jsxref("RangeError")}}
+  - : 関連づけられた `ArrayBuffer` を作成する際に問題が発生した場合。
+    例えば、データサイズが [`Number.MAX_SAFE_INTEGER`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) を超える場合など。
 
 ## 例
 
@@ -57,7 +70,7 @@ function getData() {
     });
 }
 
-// wire up buttons to stop and play audio
+// 音声の停止と再生を行うボタンを配線する
 
 play.onclick = () => {
   getData().then((source) => {

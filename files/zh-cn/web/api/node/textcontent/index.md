@@ -9,14 +9,7 @@ slug: Web/API/Node/textContent
 
 > **备注：** `textContent` 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在[重要方面有不同之处](/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别) 。
 
-## 语法
-
-```
-let text = someNode.textContent;
-someOtherNode.textContent = string;
-```
-
-### 返回值
+## 值
 
 一个字符串或 `null`.
 

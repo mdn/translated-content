@@ -24,21 +24,21 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если вы выберете `row` или `row-reverse`, ваша главная ось будет проходить в горизонтальном направлении **(inline direction)**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![Если для flex-direction задано значение row, то главная ось проходит в горизонтальном направлении.](basics1.svg)
 
 Если вы выберете `column` или `column-reverse`, ваша главная ось будет проходить в вертикальном направлении **(block direction)**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![Если для flex-direction задано значение column, то главная ось проходит в вертикальном направлении.](basics2.svg)
 
 ### Побочная ось
 
 Побочная ось проходит перпендикулярно главной оси, поэтому, если свойство `flex-direction` (главная ось) задано как `row` или `row-reverse`, побочная ось будет проходить в вертикальном направлении.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![Если для flex-direction задано значение row, то побочная ось проходит в вертикальном направлении.](basics3.svg)
 
 Если свойство `flex-direction` задано как `column` или `column-reverse`, побочная ось будет проходить в горизонтальном направлении.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![Если для flex-direction задано значение column, то поперечная ось проходит в горизонтальном направлении.](basics4.svg)
 
 Понимание того, с какой осью вы работаете (главная или побочная) очень важно для дальнейшего изучения Flexbox.
 
@@ -50,11 +50,11 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если свойству `flex-direction` задано значение `row` и вы работаете с английским языком, то начало главной оси будет слева, а конец главной оси – справа.
 
-![Working in English the start edge is on the left.](basics5.png)
+![При работе на английском языке начало главной оси находится слева.](basics5.svg)
 
 Если бы вы работаете с арабским языком, то начало главной оси будет справа, а конец главной оси – слева.
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![Для языков с направлением письма справа налево начало главной оси находится справа.](basics6.svg)
 
 В обоих случаях начало побочной оси находится вверху flex контейнера, а конец – внизу, поскольку оба языка имеют режим горизонтальной записи.
 
@@ -119,7 +119,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если наш контейнер шириной 500 пикселей содержит три элемента шириной 100 пикселей каждый, для их размещения нам потребуется пространство шириной в 300 пикселей. Остаётся 200 пикселей свободного пространства. Если мы не изменим исходные значения этих свойств, флексбокс разместит это пространство за последним элементом.
 
-![This flex container has available space after laying out the items.](basics7.png)
+![В этом flex-контейнере остаётся место после размещения элементов.](basics7.svg)
 
 Если вместо этого мы хотим чтобы элементы росли и заполняли собой свободное пространство, нам нужно указать способ распределения оставшегося пространства между элементами. Это как раз то для чего предназначены `flex` свойства.
 

@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
-**`PresentationAvailability`** オブジェクトは利用可能な[プレゼンテーション用の画面](https://www.w3.org/TR/presentation-api/#dfn-presentation-display)に紐付けられ、プレゼンテーションの要求に対する _プレゼンテーション用の画面の利用可能性_ を表します。[操作を行うユーザーエージェント](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent)が (`start()` の保留中の要求が無くても) バックグラウンドで[利用可能なプレゼンテーション用の画面のリストを監視](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays)できる場合、`PresentationAvailability` オブジェクトは[操作を行うブラウジングコンテキスト](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context)で実装され _**なければなりません**_。
+**`PresentationAvailability`** オブジェクトは利用可能な[プレゼンテーション用の画面](https://www.w3.org/TR/presentation-api/#dfn-presentation-display)に紐付けられ、プレゼンテーションの要求に対する _プレゼンテーション用の画面の利用可能性_ を表します。[操作を行うユーザーエージェント](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent)が (`start()` の保留中の要求が無くても) バックグラウンドで[利用可能なプレゼンテーション用の画面のリストを監視](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays)できる場合、`PresentationAvailability` オブジェクトは[操作を行う閲覧コンテキスト](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context)で実装され _**なければなりません**_。
 
 `value` 属性は設定された最新の値を返さ _**なければなりません**_。この値は[利用可能なプレゼンテーション用画面のリストを監視する](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays)アルゴリズムにより更新されます。
 

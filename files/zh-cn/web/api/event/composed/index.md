@@ -67,13 +67,13 @@ document.querySelector("html").addEventListener("click", function (e) {
 
 `<open-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 而 `<closed-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

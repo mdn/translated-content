@@ -2,7 +2,7 @@
 title: FileReader：readAsArrayBuffer() 方法
 slug: Web/API/FileReader/readAsArrayBuffer
 l10n:
-  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}

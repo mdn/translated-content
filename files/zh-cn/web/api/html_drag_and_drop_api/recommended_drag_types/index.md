@@ -14,8 +14,8 @@ HTML 拖放支持拖动各种类型的数据，包括纯文本，URL，HTML 代�
 
 拖动文字时请使用 `text/plain` 类型，那么数据必须是字符串，例如：
 
-```
-event.dataTransfer.setData("text/plain", "This is text to drag")
+```js
+event.dataTransfer.setData("text/plain", "这是要拖动的文本");
 ```
 
 拖动文本框中的文字和页面选中部分的文字是自动完成的，所以你不需要手动处理这些拖动。
@@ -28,10 +28,10 @@ event.dataTransfer.setData("text/plain", "This is text to drag")
 
 Links should include data of two types; the first should be the URL using the type `text/uri-list`, and the second is the URL using the `text/plain` type. Both types should use the same data, the URL of the link. For example:
 
-```
-var dt = event.dataTransfer;
-dt.setData("text/uri-list", "http://www.mozilla.org");
-dt.setData("text/plain", "http://www.mozilla.org");
+```js
+const dt = event.dataTransfer;
+dt.setData("text/uri-list", "https://www.mozilla.org");
+dt.setData("text/plain", "https://www.mozilla.org");
 ```
 
 As usual, set the `text/plain` type last as it is less specific than the uri type.
@@ -42,9 +42,9 @@ To drag multiple links, you can also separate each link with a linebreak. A line
 
 For example:
 
-```
+```plain
 https://www.mozilla.org
-#A second link
+#第二个链接
 http://www.example.com
 ```
 
@@ -52,13 +52,13 @@ This sample `text/uri-list` data contains two links and a comment.
 
 When retrieving a dropped link, you should ensure you handle the case where multiple links may have been dragged, including any comments that appear in the data. For convenience, the special type `URL` may be used to refer to the first valid link within the data for the `text/uri-list` type. You should not add data using the `URL` type; attempting to do so will just set the value of the `text/uri-list` type instead.
 
-```
-var url = event.dataTransfer.getData("URL");
+```js
+const url = event.dataTransfer.getData("URL");
 ```
 
 You may also see data using the Mozilla specific type `text/x-moz-url`. If it appears, it should be used before the `text/uri-list` type. It holds the URL of the link followed by the title of the link, separated by a linebreak. For example:
 
-```
+```plain
 https://www.mozilla.org
 Mozilla
 http://www.example.com
@@ -73,45 +73,11 @@ XML content may use the `text/xml` type, but you should ensure that the data val
 
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text and should not include any of the source tags or attributes. For instance:
 
+```js
+const dt = event.dataTransfer;
+dt.setData("text/html", "你好，<strong>陌生人</strong>");
+dt.setData("text/plain", "你好，陌生人");
 ```
-var dt = event.dataTransfer;
-dt.setData("text/html", "Hello there, <strong>stranger</strong>");
-dt.setData("text/plain", "Hello there, stranger");
-```
-
-## 拖动文件
-
-A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/zh-CN/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
-
-```
-event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
-```
-
-If possible, you may also include the file URL of the file using both the `text/uri-list` and/or `text/plain` types. These types should be added last so that the more specific `application/x-moz-file` type has higher priority.
-
-The following example shows how to create an area for receiving dropped files:
-
-```
-<listbox ondragenter="return checkDrag(event)"
-         ondragover="return checkDrag(event)"
-         ondrop="doDrop(event)"/>
-
-<script>
-function checkDrag(event)
-{
-  return event.dataTransfer.types.contains("application/x-moz-file");
-}
-
-function doDrop(event)
-{
-  var file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
-  if (file instanceof Components.interfaces.nsIFile)
-    event.currentTarget.appendItem(file.leafName);
-}
-</script>
-```
-
-In this example, the event returns false only if the data transfer contains the `application/x-moz-file` type. During the drop event, the data associated with the file type is retrieved, and the filename of the file is added to the listbox. Note that the `instanceof` operator is used here as the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method will return an `nsISupports` that needs to be checked and converted into an nsIFile. This is also a good extra check in case someone made a mistake and added a non-file for this type.
 
 ### 更新 DataTransfer.types
 
@@ -139,10 +105,8 @@ You should also include the `application/x-moz-file` type if the image is locate
 
 It is important to set the data in the right order, from most specific to least specific. The image type such as `image/jpeg` should come first, followed by the `application/x-moz-file` type. Next, you should set the `text/uri-list` data and finally the `text/plain` data. For example:
 
-```
-var dt = event.dataTransfer;
-dt.mozSetDataAt("image/png", stream, 0);
-dt.mozSetDataAt("application/x-moz-file", file, 0);
+```js
+const dt = event.dataTransfer;
 dt.setData("text/uri-list", imageurl);
 dt.setData("text/plain", imageurl);
 ```

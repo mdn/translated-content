@@ -27,5 +27,5 @@ event.stopPropagation();
 
 ## 參見
 
-- See the [DOM specification](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) for the explanation of event flow. (The [DOM Level 3 Events draft](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) has an illustration.)
+- See the [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) for the explanation of event flow. (The [DOM Level 3 Events draft](https://www.w3.org/TR/uievents/#event-flow) has an illustration.)
 - {{domxref("Event.preventDefault()")}} is a related method that prevents the default action of the event from happening.

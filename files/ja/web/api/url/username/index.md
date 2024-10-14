@@ -3,14 +3,12 @@ title: "URL: username プロパティ"
 short-title: username
 slug: Web/API/URL/username
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 **`username`** は {{domxref("URL")}} インターフェイスのプロパティで、ドメイン名の前に指定されたユーザー名をの入った文字列です。
-
-{{AvailableInWorkers}}
 
 ## 値
 
@@ -25,7 +23,7 @@ const url = new URL(
 console.log(url.username); // "anonymous" とログ出力
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

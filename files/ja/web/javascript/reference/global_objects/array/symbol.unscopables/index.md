@@ -1,14 +1,13 @@
 ---
-title: Array.prototype[@@unscopables]
+title: Array.prototype[Symbol.unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`@@unscopables`** は `Array.prototype` のデータプロパティで、すべての {{jsxref("Array")}} インスタンスで共有されます。 ES2015 以前の ECMAScript 標準には含まれておらず、 [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインディングの目的では無視されるプロパティ名を含んでいます。
+**`[Symbol.unscopables]`** は `Array.prototype` のデータプロパティで、すべての {{jsxref("Array")}} インスタンスで共有されます。 ES2015 以前の ECMAScript 標準には含まれておらず、 [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインドの目的では無視されるプロパティ名を含んでいます。
 
 ## 値
 
@@ -37,25 +36,25 @@ l10n:
 - [`toSpliced()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-`Array.prototype[@@unscopables]` は、上記のプロパティ名をすべて `true` の値で持つ、空のオブジェクトです。この[プロトタイプは `null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) なので、 `Object.prototype` のプロパティ、例えば [`toString`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は偶然にスコープ付けできなくなることはなく、 `with` 文の中の `toString()` は引き続き配列の中で呼び出すことができます。
+`Array.prototype[Symbol.unscopables]` は、上記のプロパティ名をすべて `true` の値で持つ、空のオブジェクトです。この[プロトタイプは `null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) なので、 `Object.prototype` のプロパティ、例えば [`toString`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は偶然にスコープ付けできなくなることはなく、 `with` 文の中の `toString()` は引き続き配列の中で呼び出すことができます。
 
 自作オブジェクトに `unscopables` を設定する方法については、 {{jsxref("Symbol.unscopables")}} を見てください。
 
 ## 例
 
-ECMAScript 2015 以前に書かれた以下のコードで `keys.push('something')` を呼び出すことを考えてみてください。
+ECMAScript 2015 以前に書かれた以下のコードで `values.push('something')` を呼び出すことを考えてみてください。
 
 ```js
-var keys = [];
+var values = [];
 
-with (Array.prototype) {
-  keys.push("something");
+with (values) {
+  values.push("something");
 }
 ```
 
-ECMAScript 2015 で {{jsxref("Array.prototype.keys()")}} メソッドが導入されたとき、もし `@unscopables` データプロパティも導入されていなければ、 `keys.push('something')` の呼び出しは壊れていました。 JavaScript ランタイムが `keys` を {{jsxref("Array.prototype.keys()")}} メソッドであると解釈し、この例のコードで定義された配列 `keys` とは解釈しませんでした。
+ECMAScript 2015 が {{jsxref("Array.prototype.values()")}} メソッドを導入したとき、上記のコードの `with` 文は、外部の変数 `values` ではなく、配列メソッドの `values.values` として値を解釈し始めました。`values.push('something')` が呼び出されると、これで `values.values` メソッドの `push` にアクセスすることになるため、エラーが発生します。これにより、Firefox にバグが報告されました（[Firefox バグ 883914](https://bugzil.la/883914)）。
 
-すなわち、 `@unscopables` データプロパティが `Array.prototype` にあるのは、 ECMAScript 2015 で導入された `Array` プロパティを `with` 文のバインドの目的では無視するようにし、 ECMAScript 2015 以前に書かれたコードを壊さず、期待どおりに動作し続けられるようにするものです。
+そのため、`Array.prototype` の `[Symbol.unscopables]` データプロパティは、`with` 文のバインドの目的で ECMAScript 2015 で導入された配列プロパティを無視させることになりました。これにより、ECMAScript 2015 より前に書かれたコードは、動作しなくなるのではなく、期待通りに動作し続けることができます。
 
 ## 仕様書
 
@@ -67,7 +66,7 @@ ECMAScript 2015 で {{jsxref("Array.prototype.keys()")}} メソッドが導入�
 
 ## 関連情報
 
-- [`Array.prototype[@@unscopables]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype[Symbol.unscopables]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}

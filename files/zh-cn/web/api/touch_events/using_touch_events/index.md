@@ -48,40 +48,52 @@ slug: Web/API/Touch_events/Using_Touch_Events
 
 对每一个触摸事件类型注册一个事件处理器。
 
-```
+```js
 // Register touch event handlers
-someElement.addEventListener('touchstart', process_touchstart, false);
-someElement.addEventListener('touchmove', process_touchmove, false);
-someElement.addEventListener('touchcancel', process_touchcancel, false);
-someElement.addEventListener('touchend', process_touchend, false);
+someElement.addEventListener("touchstart", process_touchstart, false);
+someElement.addEventListener("touchmove", process_touchmove, false);
+someElement.addEventListener("touchcancel", process_touchcancel, false);
+someElement.addEventListener("touchend", process_touchend, false);
 ```
 
 在事件处理程序中处理事件，实现应用程序的手势语义。
 
-```
+```js
 // touchstart handler
 function process_touchstart(ev) {
   // Use the event's data to call out to the appropriate gesture handlers
   switch (ev.touches.length) {
-    case 1: handle_one_touch(ev); break;
-    case 2: handle_two_touches(ev); break;
-    case 3: handle_three_touches(ev); break;
-    default: gesture_not_supported(ev); break;
+    case 1:
+      handle_one_touch(ev);
+      break;
+    case 2:
+      handle_two_touches(ev);
+      break;
+    case 3:
+      handle_three_touches(ev);
+      break;
+    default:
+      gesture_not_supported(ev);
+      break;
   }
 }
 ```
 
 访问触摸点的属性。
 
-```
+```js
 // Create touchstart handler
-someElement.addEventListener('touchstart', function(ev) {
-  // Iterate through the touch points that were activiated
-  // for this element and process each event 'target'
-  for (var i=0; i < ev.targetTouches.length; i++) {
-    process_target(ev.targetTouches[i].target);
-  }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  function (ev) {
+    // Iterate through the touch points that were activiated
+    // for this element and process each event 'target'
+    for (var i = 0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  },
+  false,
+);
 ```
 
 阻止游览器产生模拟鼠标事件。

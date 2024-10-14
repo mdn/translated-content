@@ -12,8 +12,8 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 
 ## 语法
 
-```
-DataTransferItem.webkitGetAsEntry();
+```js-nolint
+webkitGetAsEntry()
 ```
 
 ### 参数

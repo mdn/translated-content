@@ -128,7 +128,7 @@ Firefox の場合:
 
 Clipboard API の {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.read", "navigator.clipboard.read()")}} メソッドを使うと、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でクリップボードから任意のテキストまたはバイナリーデータを読み取ることができます。これにより、編集可能な要素に貼り付けることなく、クリップボードのデータにアクセスすることができます。
 
-一度 [Permissions API](/ja/docs/Web/API/Permissions_API) から `"clipboard-read"` パーミッションを取得すると、クリップボードから簡単に読み取ることができるようになります。例えば、このコードのスニペットはクリップボードからテキストを取得し、ID が `"outbox"` の要素の内容をそのテキストで置き換えます。
+一度 [権限 API](/ja/docs/Web/API/Permissions_API) から `"clipboard-read"` パーミッションを取得すると、クリップボードから簡単に読み取ることができるようになります。例えば、このコードのスニペットはクリップボードからテキストを取得し、ID が `"outbox"` の要素の内容をそのテキストで置き換えます。
 
 ```js
 navigator.clipboard
@@ -170,6 +170,6 @@ Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/
 ## 関連情報
 
 - [Clipboard API](/ja/docs/Web/API/Clipboard_API)
-- [Permissions API](/ja/docs/Web/API/Permissions_API)
+- [権限 API](/ja/docs/Web/API/Permissions_API)
 - [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)

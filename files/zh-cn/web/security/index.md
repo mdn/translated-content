@@ -58,7 +58,7 @@ slug: Web/Security
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 响应头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。
 - [HTTP X-Content-Type-Options](/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** 响应的 HTTP 头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)的方法，或者换句话说，MIME 类型是故意配置的。
+  - : **`X-Content-Type-Options`** 响应的 HTTP 头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/MIME_types#mime_嗅探)的方法，或者换句话说，MIME 类型是故意配置的。
 
 ## 点击劫持保护
 

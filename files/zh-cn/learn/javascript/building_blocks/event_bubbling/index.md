@@ -36,7 +36,7 @@ container.addEventListener("click", handleClick);
 
 你会发现在用户单击按钮时，父元素上触发了单击事件：
 
-```
+```plain
 你在 DIV 元素上进行了点击
 ```
 
@@ -75,7 +75,7 @@ button.addEventListener("click", handleClick);
 
 你会发现在用户单击按钮时，所有三个元素都触发了单击事件：
 
-```
+```plain
 你在 BUTTON 元素上进行了点击
 你在 DIV 元素上进行了点击
 你在 BODY 元素上进行了点击
@@ -267,7 +267,7 @@ button.addEventListener("click", handleClick);
 
 在这种情况下，消息出现的顺序发生了颠倒：`<body>` 事件处理器首先触发，然后是 `<div>` 的，最后是 `<button>` 的：
 
-```
+```plain
 你在 BODY 元素上进行了点击
 你在 DIV 元素上进行了点击
 你在 BUTTON 元素上进行了点击

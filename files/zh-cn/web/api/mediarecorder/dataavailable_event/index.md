@@ -19,33 +19,33 @@ slug: Web/API/MediaRecorder/dataavailable_event
 
 ## 语法
 
-```
-MediaRecorder.ondataavailable = function(event) { ... }
-MediaRecorder.addEventListener('dataavailable', function(event) { ... })
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("dataavailable", (event) => {});
+
+ondataavailable = (event) => {};
 ```
 
 ## 示例
 
-```
-...
-  var chunks = [];
+```js
+const chunks = [];
 
-  mediaRecorder.onstop = function(e) {
-    console.log("data available after MediaRecorder.stop() called.");
+mediaRecorder.onstop = (e) => {
+  console.log("数据将在调用 MediaRecorder.stop() 后可用。");
 
-    var audio = document.createElement('audio');
-    audio.controls = true;
-    var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-    var audioURL = window.URL.createObjectURL(blob);
-    audio.src = audioURL;
-    console.log("录像停止");
-  }
+  const audio = document.createElement("audio");
+  audio.controls = true;
+  const blob = new Blob(chunks, { type: mediaRecorder.mimeType });
+  const audioURL = window.URL.createObjectURL(blob);
+  audio.src = audioURL;
+  console.log("录制停止");
+};
 
-  mediaRecorder.ondataavailable = function(e) {
-    chunks.push(e.data);
-  }
-
-...
+mediaRecorder.ondataavailable = (e) => {
+  chunks.push(e.data);
+};
 ```
 
 ## 规范

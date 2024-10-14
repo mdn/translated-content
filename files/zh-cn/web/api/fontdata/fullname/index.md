@@ -51,5 +51,5 @@ async function logFontData() {
 
 ## 参见
 
-- [使用带有本地字体的高级排版](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

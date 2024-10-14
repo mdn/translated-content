@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`FormData`** インターフェイスは、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは {{domxref("fetch()")}}、{{domxref("XMLHttpRequest.send()")}}、{{domxref("navigator.sendBeacon()")}} の各メソッドを用いることで送信が可能です。エンコーディング型を `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。
+**`FormData`** インターフェイスは、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは {{domxref("Window/fetch", "fetch()")}}、{{domxref("XMLHttpRequest.send()")}}、{{domxref("navigator.sendBeacon()")}} の各メソッドを用いることで送信が可能です。エンコーディング型を `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。
 
 単純な `GET` の送信を用いる {{HTMLElement("form")}} が行うようなクエリー引数を生成したい場合は、{{domxref("URLSearchParams")}} コンストラクターに直接渡すことも可能です。
 
@@ -16,7 +16,7 @@ l10n:
 > [!NOTE]
 > この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("FormData.FormData","FormData()")}}
   - : 新しい `FormData` オブジェクトを作成します。

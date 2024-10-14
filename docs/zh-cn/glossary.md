@@ -58,26 +58,27 @@
 
 ## 标题/表格
 
-| 英文词汇               | 翻译         | 备注               | 引用来源                                                                    |
-| ---------------------- | ------------ | ------------------ | --------------------------------------------------------------------------- |
-| Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                      |
-| Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
-| Associated interfaces  | 相关接口     |                    |                                                                             |
-| Associated roles       | 相关角色     |                    |                                                                             |
-| Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
-| Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
-| Examples               | 示例         |                    |                                                                             |
-| Exceptions             | 异常         |                    |                                                                             |
-| Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
-| Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
-| Objective              | 目标         | 在学习区表格中使用 |                                                                             |
-| Parameters             | 参数         |                    |                                                                             |
-| Prerequisites          | 前提         | 在学习区表格中使用 |                                                                             |
-| See also               | 参见         |                    |                                                                             |
-| Specifications         | 规范         |                    |                                                                             |
-| Technical summary      | 技术概要     |                    | https://github.com/mdn/translated-content/issues/11456                      |
-| Test your skills       | 技能测试     |                    |                                                                             |
-| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585 |
+| 英文词汇               | 翻译         | 备注               | 引用来源                                                                     |
+| ---------------------- | ------------ | ------------------ | ---------------------------------------------------------------------------- |
+| Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                       |
+| Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935  |
+| Associated interfaces  | 相关接口     |                    |                                                                              |
+| Associated roles       | 相关角色     |                    |                                                                              |
+| Browser compatibility  | 浏览器兼容性 |                    |                                                                              |
+| Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894  |
+| Examples               | 示例         |                    |                                                                              |
+| Exceptions             | 异常         |                    |                                                                              |
+| Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Objective              | 目标         | 在学习区表格中使用 |                                                                              |
+| Parameters             | 参数         |                    |                                                                              |
+| Prerequisites          | 前提         | 在学习区表格中使用 |                                                                              |
+| See also               | 参见         |                    |                                                                              |
+| Specifications         | 规范         |                    |                                                                              |
+| Technical summary      | 技术概要     |                    | https://github.com/mdn/translated-content/issues/11456                       |
+| Test your skills       | 技能测试     |                    |                                                                              |
+| Usage context          | 使用上下文   |                    | https://github.com/mdn/translated-content/pull/23257#issuecomment-2309852450 |
+| Usage notes            | 使用说明     |                    | https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585  |
 
 ## 通用术语
 

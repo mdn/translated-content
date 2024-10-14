@@ -109,7 +109,7 @@ class Author(models.Model):
 
 Django 使用 unittest 模块的[内置测试查找](https://docs.python.org/3/library/unittest.html#unittest-test-discovery)，它将在任何使用模式**test\*.py** 命名的文件中，查找当前工作目录下的测试。如果你正确命名文件，则可以使用你喜欢的任何结构。我们建议你为测试代码创建一个模块，并为模型，视图，表单和你需要测试的任何其他类型的代码，分别创建文件。例如：
 
-```
+```plain
 catalog/
     /tests/
     __init__.py

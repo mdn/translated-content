@@ -1,11 +1,12 @@
 ---
-title: Request.url
+title: "Request: url プロパティ"
+short-title: url
 slug: Web/API/Request/url
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`url`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストの URL を保持します。
 

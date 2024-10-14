@@ -17,7 +17,7 @@ slug: Web/HTTP/Session
 
 在客户端——服务器协议中，连接是由客户端发起建立的。在 HTTP 中打开连接意味着在底层传输层启动连接，通常是 TCP。
 
-使用 TCP 时，HTTP 服务器的默认端口号是 80，另外还有 8000 和 8080 也很常用。页面的 URL 会包含域名和端口号，但当端口号为 80 时可以省略。前往[标识互联网上的内容](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)获取更多内容。
+使用 TCP 时，HTTP 服务器的默认端口号是 80，另外还有 8000 和 8080 也很常用。页面的 URL 会包含域名和端口号，但当端口号为 80 时可以省略。参见 [URL 参考](/zh-CN/docs/Web/URI)以获取更多内容。
 
 > [!NOTE]
 > 客户端——服务器模型不允许服务器在没有显式请求时发送数据给客户端。为了解决这个问题，Web 开发者们使用了许多技术：例如，使用 {{domxref("XMLHTTPRequest")}} 或 {{domxref("Fetch")}} API 周期性地请求服务器，使用 HTML [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API)，或其他类似协议。
@@ -154,7 +154,7 @@ X-Cache: Error from cloudfront
 
 ## 参见
 
-- [识别互联网上的内容](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URL](/zh-CN/docs/Web/URI)
 - [HTTP 标头（header）](/zh-CN/docs/Web/HTTP/Headers)
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)

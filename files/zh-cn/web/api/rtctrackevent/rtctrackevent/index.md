@@ -11,7 +11,7 @@ slug: Web/API/RTCTrackEvent/RTCTrackEvent
 
 ## 语法
 
-```
+```js-nolint
 new RTCTrackEvent(type, options)
 ```
 
