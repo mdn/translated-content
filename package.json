@@ -27,7 +27,7 @@
     "node": ">=18.12.0"
   },
   "dependencies": {
-    "autocorrect-node": "2.11.1",
+    "autocorrect-node": "2.12.0",
     "cld": "^2.10.0",
     "fdir": "^6.4.0",
     "front-matter": "^4.0.2",
