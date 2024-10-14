@@ -2,8 +2,8 @@
 title: "HTMLVideoElement: height プロパティ"
 short-title: height
 slug: Web/API/HTMLVideoElement/height
-page-type: web-api-instance-property
-browser-compat: api.HTMLVideoElement.height
+l10n:
+  sourceCommit: d8a52569d8d465eb626af3d33600c8c638a7a322
 ---
 
 {{APIRef("HTML DOM")}}
