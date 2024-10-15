@@ -7,22 +7,19 @@ l10n:
 
 {{HTTPSidebar}}
 
-Une requête d'intervalle HTTP demande au serveur d'envoyer une partie de la ressource au client. Les requêtes d'intervalle sont utiles pour différents clients, comme les lecteurs média qui permettent d'aller à unRange requests are useful for various clients, including media players that support random access, data tools that require only part of a large file, and download managers that let users pause and resume a download.
+Une requête d'intervalle HTTP (ou requête partielle) demande au serveur d'envoyer une partie de la ressource au client. Les requêtes d'intervalle sont utiles pour différents clients, comme les lecteurs média qui permettent d'aller à un instant donné de l'audio ou de la vidéo, les outils d'édition qui ont uniquement besoin d'une fraction d'un grand fichier pour le manipuler, les gestionnaires de téléchargement qui permettent de suspendre puis de reprendre un téléchargement.
 
-## Checking if a server supports partial requests
+## Vérifier si un serveur prend en charge les requêtes partielles
 
-If an HTTP response includes the [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges) header with any value other than `none`, the server supports range requests.
-If responses omit the `Accept-Ranges` header, it indicates the server doesn't support partial requests.
-If range requests are not supported, applications can adapt to this condition; for instance, download managers can disable pause buttons that relied on range requests to resume a download.
+Si la réponse HTTP inclut l'en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges) avec une autre valeur que `none`, cela indique que le serveur prend en charge les requêtes d'intervalle. Si la réponse ne contient pas l'en-tête `Accept-Ranges`, cela indique que le serveur ne les prend pas en charge. Si les requêtes d'intervalle ne sont pas prises en charge, les applications peuvent s'adapter à cette condition&nbsp;; par exemple un gestionnaire de téléchargement pourrait désactiver les boutons de mise en pause qui s'appuient sur les requêtes d'intervalle pour suspendre/reprendre un téléchargement.
 
-To check if a server supports range requests, you can issue a {{HTTPMethod("HEAD")}} request to inspect headers without requesting the resource in full.
-If you use [curl](https://curl.se/), you can use the `-I` flag to make a `HEAD` request:
+Pour vérifier si un serveur prend en charge les requêtes d'intervalle, vous pouvez envoyer une requête [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) afin d'inspecter les en-têtes sans demander la ressource complète. Si vous utilisez [curl](https://curl.se/), vous pouvez utiliser l'option `-I` afin d'envoyer une requête `HEAD`&nbsp;:
 
 ```bash
 curl -I https://i.imgur.com/z4d4kWk.jpg
 ```
 
-This will produce the following HTTP request:
+Cela produira la requête HTTP suivante&nbsp;:
 
 ```http
 HEAD /z4d4kWk.jpg HTTP/2
@@ -31,7 +28,7 @@ User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-The response only contains headers and doesn't include a response body:
+La réponse contiendra uniquement les en-têtes et pas de corps dans la réponse&nbsp;:
 
 ```http
 HTTP/2 200
@@ -42,24 +39,21 @@ accept-ranges: bytes
 content-length: 146515
 ```
 
-In this response, `Accept-Ranges: bytes` indicates that 'bytes' can be used as units to define a range (currently, no other unit is possible).
-The [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) header is also helpful as it indicates the total size of the image if you were to make the same request using the `GET` method instead.
+Dans cette réponse, `Accept-Ranges: bytes` indique que 'bytes' (les octets) peut être utilisé comme unité afin de définir un intervalle (il n'existe pas d'autres unités disponibles actuellement). L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) est aussi utile et indique la taille totale de l'image s'il fallait envoyer la même requête avec la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) à la place.
 
-## Requesting a specific range from a server
+## Demander un intervalle donné au serveur
 
-If the server supports range requests, you can specify which part (or parts) of the document you want the server to return by including the [`Range`](/fr/docs/Web/HTTP/Headers/Range) header in a HTTP request.
+Si le serveur prend en charge les requêtes d'intervalle, on pourra indiquer la ou les parties du document qu'on souhaite récupérer depuis le serveur en précisant l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) dans la requête HTTP.
 
-### Single part ranges
+### Demander un seul intervalle
 
-We can request a single range from a resource using curl for illustration.
-The `-H` option appends a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
-The last option is `--output -` which will allow printing the binary output to the terminal:
+On peut demander un intervalle simple. Nous allons ici utiliser curl pour illustrer ce cas. L'option `-H` ajoute un en-tête à la requête. Ici il s'agit de l'en-tête `Range` dont on se sert pour demander les 1024 premiers octets. La dernière option, `--output -`, permet d'afficher le résultat binaire dans le terminal&nbsp;:
 
 ```bash
 curl https://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023" --output -
 ```
 
-The issued request looks like this:
+La requête émise ressemble à&nbsp;:
 
 ```http
 GET /z4d4kWk.jpg HTTP/2
@@ -69,7 +63,7 @@ Accept: */*
 Range: bytes=0-1023
 ```
 
-The server responds with a [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) status:
+Et le serveur répond avec un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206)&nbsp;:
 
 ```http
 HTTP/2 206
@@ -78,23 +72,20 @@ content-length: 1024
 content-range: bytes 0-1023/146515
 …
 
-(binary content)
+(contenu binaire)
 ```
 
-The [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) header indicates the size of the requested range, not the full size of the image.
-The [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) response header indicates where this partial message belongs within the full resource.
+L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) indique alors la taille de l'intervalle demandé, pas la taille complète de l'image. L'en-tête de réponse [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) indique que ce message partiel appartient à une ressource plus étendue.
 
-### Multipart ranges
+### Demander plusieurs intervalles
 
-The [`Range`](/fr/docs/Web/HTTP/Headers/Range) header also allows you to get multiple ranges at once in a multipart document. The ranges are separated by a comma.
+L'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) permet également de récupérer plusieurs intervalles à la fois pour un document en plusieurs parties. Les intervalles sont alors séparés par une virgule.
 
 ```bash
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-The server responds with the [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) status as shown below.
-The response contains a [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) header, indicating that a multipart byterange follows.
-The boundary string (`3d6b6a416f9b5` in this case) separates the body parts, each of which has its own `Content-Type` and `Content-Range` fields:
+Le serveur répond avec un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) comme indiqué ci-après. La réponse contient un en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) qui indique qu'un intervalle d'octets en plusieurs parties suit. La chaîne de caractères de délimitation (`3d6b6a416f9b5` dans cet exemple) est utilisée afin de séparer les parties du corps. Chacune possède ses propres champs `Content-Type` et `Content-Range`&nbsp;:
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -117,27 +108,27 @@ eta http-equiv="Content-type" content="text/html; c
 --3d6b6a416f9b5--
 ```
 
-### Conditional range requests
+### Requêtes d'intervalle conditionnelles
 
-When resuming to request more parts of a resource, you need to guarantee that the stored resource has not been modified since the last fragment has been received.
+Lorsqu'on envoie des requêtes ultérieures pour récupérer d'autres parties de la ressource, il faut s'assurer que la ressource stockée n'a pas été modifiée depuis la réception du dernier fragment.
 
-The {{HTTPHeader("If-Range")}} HTTP request header makes a range request conditional: if the condition is fulfilled, the range request will be issued and the server sends back a {{HTTPStatus("206")}} `Partial Content` answer with the appropriate body. If the condition is not fulfilled, the full resource is sent back, with a [`200 OK`](/fr/docs/Web/HTTP/Status/200) status. This header can be used either with a {{HTTPHeader("Last-Modified")}} validator, or with an {{HTTPHeader("ETag")}}, but not with both.
+L'en-tête de requête [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range) permet de construire une requête d'intervalle conditionnelle&nbsp;: si la condition indiquée est respectée, la requête d'intervalle sera respectée et le serveur renverra une réponse HTTP [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) avec le corps approprié. Si la condition n'est pas respectée, la ressource complète sera renvoyée avec un statut [`200 OK`](/fr/docs/Web/HTTP/Status/200). Cet en-tête peut être utilisé avec un validateur [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) ou [`ETag`](/fr/docs/Web/HTTP/Headers/ETag), mais pas avec les deux.
 
 ```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
-## Partial request responses
+## Réponses aux requêtes d'intervalle
 
-There are three relevant statuses, when working with range requests:
+Trois statuts de réponse s'appliquent pour les requêtes d'intervalle&nbsp;:
 
-- A successful range request elicits a [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) status from the server.
-- A range request that is out of bounds will result in a [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Status/416) status, meaning that none of the range values overlap the extent of the resource. For example, the first-byte-pos of every range might be greater than the resource length.
-- If range requests are not supported, an [`200 OK`](/fr/docs/Web/HTTP/Status/200) status is sent back and the entire response body is transmitted.
+- Lorsqu'une requête d'intervalle réussit, le serveur émet un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206).
+- Lorsqu'une requête d'intervalle dépasse les limites de la ressource, cela causera un statut [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Status/416), indiquant qu'aucune valeur de l'intervalle n'appartient à la ressource, par exemple, si l'octet de départ de chaque intervalle demandé est supérieur à la longueur de la ressource.
+- Si les requêtes d'intervalle ne sont pas prises en charge, un statut [`200 OK`](/fr/docs/Web/HTTP/Status/200) est renvoyé avec l'intégralité du corps de la réponse.
 
-## Comparison to chunked `Transfer-Encoding`
+## Comparaison avec l'envoi fragmenté (<i lang="en">chunked</i>) avec `Transfer-Encoding`
 
-The [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding) header allows chunked encoding, which is useful when larger amounts of data are sent to the client and the total size of the response is not known until the request has been fully processed. The server sends data to the client straight away without buffering the response or determining the exact length, which leads to improved latency. Range requests and chunking are compatible and can be used with or without each other.
+L'en-tête [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding) permet d'envoyer une ressource par fragments, ce qui s'avère utile lorsqu'il faut envoyer beaucoup de données et que la taille totale de la réponse n'est pas connue avant que la requête ait été complètement traitée. Le serveur envoie alors directement des données au client, sans mettre la réponse en tampon ni en déterminant la longueur exacte, ce qui permet de diminuer la latence. Les requêtes d'intervalle et les envois fragmentés sont compatibles et peuvent être utilisés ensemble ou non.
 
 ## Voir aussi
 
