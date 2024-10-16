@@ -287,7 +287,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - 一个模块实例可以使用 0-1 个表格实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表格实例。
 - 一个内存或表格实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
 
-你可以在我们的理解文本格式一本中看到多样性的应用——参见[修改表格和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking)。
+你可以在我们的理解文本格式一本中看到多样性的应用——参见[改变表格和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表格和动态链接)部分。
 
 ## 总结
 
