@@ -22,7 +22,7 @@ l10n:
 ### 准备工作
 
 1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
-2. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
+2. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的[简单模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
 3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm#初识文本格式) 一文中讨论了这一点）：
 
    ```wasm
