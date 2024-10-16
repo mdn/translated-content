@@ -1,8 +1,9 @@
 ---
 title: "PaymentRequest: PaymentRequest() コンストラクター"
+short-title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+  sourceCommit: 32f666e453bdb8c93d305075453b6e304cae94de
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}
@@ -23,9 +24,11 @@ new PaymentRequest(methodData, details, options)
   - : 販売者ウェブサイトが受け入れる決済手段の識別子と、関連する決済手段固有のデータを格納する配列です。配列の各項目には以下のフィールドが含まれます。
 
     - `supportedMethods`
-      - : この仕様の初期の実装では、これは販売者のウェブサイトが受け入れる決済手段の識別子の列でした。最近のブラウザーでは、この引数はクレジットカードよりも一般的で、単一の文字列であり、`data` 引数の意味は `supportedMethods` によって変化します。例えば、Example Pay の決済手段は、ここに文字列 `https://example.com/pay` を指定することで選択されます。
+
+      - : 文字列で、[決済手段識別子](/ja/docs/Web/API/Payment_Request_API/Concepts#決済手段識別情報)が入ります。これは URL、または[標準化された決済手段識別子](/ja/docs/Web/API/Payment_Request_API/Concepts#決済手段識別子の標準化)のいずれかです。`data` フィールドの値と構造は、`supportedMethods` フィールドの値によって異なります。
+
     - `data`
-      - : 対応している決済手段が必要とするかもしれないオプション情報を提供する JSON シリアライズ可能なオブジェクトです。これは `supportedMethods` で示す決済ハンドラーが期待する種類に適合していなければなりません。開発者は、データオブジェクトの期待される形について、決済手段の管理者に相談する必要があります。
+      - : 対応している決済手段が必要とするかもしれないオプション情報を提供する JSON シリアライズ可能なオブジェクトです。これは `supportedMethods` で示す決済ハンドラーが期待する種類に適合していなければなりません。開発者は、データオブジェクトの期待される形について、決済手段の管理者に相談する必要があります。`supportedMethods` が `secure-payment-confirmation` の場合、`data` は {{domxref("SecurePaymentConfirmationRequest")}} 辞書に適合する必要があります。
 
 - `details`
 
@@ -41,7 +44,7 @@ new PaymentRequest(methodData, details, options)
       - : ユーザーが選ぶことのできる配送オプションです。この配列が空の場合、販売者は現在の配送先住所に配送できないことを示す。既定値の配送オプションは、この配列で示すことができます。
     - `modifiers`
 
-      - : 特定の決済手段に対する変更仕様です。例 えば、決済のための合計金額を決済手段に基づいて調整することです。このパラメータには、以下のフィールドが格納されます。
+      - : 特定の決済手段に対する変更仕様です。例 えば、決済のための合計金額を決済手段に基づいて調整することです。このパラメーターには、以下のフィールドが格納されます。
 
         - `additionalDisplayItems`
           - : `details.displayItems` プロパティに追加する項目の配列です。このプロパティは、`details.modifiers.total` で異なる金額を示す割引または割増料金の行を追加するために一般的に使用されます。
@@ -68,9 +71,9 @@ new PaymentRequest(methodData, details, options)
 
 ### 返値
 
-新しい{{domxref("PaymentRequest")}}オブジェクトで、入力引数によって設定された通りの用途で使用するように構成されています。
+新しい {{domxref("PaymentRequest")}} オブジェクトで、入力引数によって設定された通りの用途で使用するように構成されています。
 
-### Exceptions
+### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
   - : この機能を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされている。

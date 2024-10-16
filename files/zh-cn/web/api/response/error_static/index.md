@@ -15,8 +15,8 @@ slug: Web/API/Response/error_static
 
 ## 语法
 
-```
-error()
+```js-nolint
+Response.error()
 ```
 
 ### 参数

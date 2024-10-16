@@ -7,7 +7,8 @@ slug: Web/CSS/text-decoration-style
 
 La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
 
-> **Note :** Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
+> [!NOTE]
+> Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
 
 {{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
 

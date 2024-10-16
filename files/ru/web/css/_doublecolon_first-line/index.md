@@ -14,7 +14,8 @@ p::first-line {
 }
 ```
 
-> **Примечание:** В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
+> [!NOTE]
+> В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
 
 ## Разрешённые свойства
 

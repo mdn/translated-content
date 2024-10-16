@@ -9,8 +9,8 @@ slug: Web/API/Range/selectNode
 
 ## 语法
 
-```
-range.selectNode(referenceNode);
+```js-nolint
+selectNode(referenceNode)
 ```
 
 ### 参数

@@ -31,7 +31,8 @@ Le système de coordonnées de l'appareil a son origine située au centre de l'a
 - L'axe **y** se situe sur le plan de l'écran et est positif vers le haut et négatif vers le bas.
 - L'axe **z** est perpendiculaire à l'écran ou au clavier et va positivement lorsqu'on s'éloigne de l'écran.
 
-> **Note :** Sur un téléphone ou une tablette, l'orientation de l'appareil est toujours prise selon l'orientation standard de l'écran. Sur la plupart des appareils, il s'agit de l'orientation en portrait. Sur un ordinateur portable, l'orientation est relative au clavier. Si vous souhaitez détecter les changements d'orientation d'un appareil afin de les compenser, vous pouvez utiliser l'évènement [`change`](/fr/docs/Web/API/ScreenOrientation/change_event).
+> [!NOTE]
+> Sur un téléphone ou une tablette, l'orientation de l'appareil est toujours prise selon l'orientation standard de l'écran. Sur la plupart des appareils, il s'agit de l'orientation en portrait. Sur un ordinateur portable, l'orientation est relative au clavier. Si vous souhaitez détecter les changements d'orientation d'un appareil afin de les compenser, vous pouvez utiliser l'évènement [`change`](/fr/docs/Web/API/ScreenOrientation/change_event).
 
 ## À propos de la rotation
 

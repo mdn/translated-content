@@ -9,7 +9,8 @@ La fonction **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} activ
 
 Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.
 
-> **Note :** Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), `"downloads.shelf"`, ainsi que la permission `"downloads"`.
+> [!NOTE]
+> Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), `"downloads.shelf"`, ainsi que la permission `"downloads"`.
 
 ## Syntaxe
 
@@ -30,9 +31,9 @@ Cette API est également disponible en tant que `browser.downloads.setShelfEnabl
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

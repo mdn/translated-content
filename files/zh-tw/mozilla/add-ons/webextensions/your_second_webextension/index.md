@@ -325,7 +325,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 首先，請再三的確認檔案有放到相對應的資料夾中：
 
-```
+```plain
 beastify/
 
     beasts/

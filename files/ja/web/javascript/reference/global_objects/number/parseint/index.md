@@ -2,7 +2,7 @@
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
@@ -21,7 +21,7 @@ Number.parseInt(string, radix)
 ### 引数
 
 - `string`
-  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
 - `radix` {{optional_inline}}
 
   - : `2` から `36` までの整数で、 `string` の*基数*（数学的記数法の底）を表します。
@@ -38,13 +38,13 @@ Number.parseInt(string, radix)
 
 ### Number.parseInt と parseInt
 
-このメソッドはグローバル関数の {{jsxref("parseInt", "parseInt()")}} と同じです。
+このメソッドはグローバル関数の {{jsxref("parseInt()")}} と同じです。
 
 ```js
 Number.parseInt === parseInt; // true
 ```
 
-この目的は、グローバル値のモジュール化のためです。詳細や例は {{jsxref("parseInt", "parseInt()")}} を参照してください。
+この目的は、グローバル値のモジュール化のためです。詳細や例は {{jsxref("parseInt()")}} を参照してください。
 
 ## 仕様書
 
@@ -57,5 +57,5 @@ Number.parseInt === parseInt; // true
 ## 関連情報
 
 - [`Number.parseInt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- 所属先の {{jsxref("Number")}} オブジェクト
-- グローバルメソッドの {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("Number")}}
+- {{jsxref("parseInt()")}}

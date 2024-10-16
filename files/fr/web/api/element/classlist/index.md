@@ -71,7 +71,8 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **Note :** Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Prothèse d'émulation
 

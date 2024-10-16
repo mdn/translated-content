@@ -1,36 +1,39 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
+l10n:
+  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
 ---
 
 {{HTTPSidebar}}
 
-{{Glossary("representation header", "实体消息首部")}} **`Content-Encoding`** 列出了对当前实体消息（消息荷载）应用的任何编码类型，以及编码的顺序。它让接收者知道需要以何种顺序解码该实体消息才能获得原始荷载格式。Content-Encoding 主要用于在不丢失原媒体类型内容的情况下压缩消息数据。
+{{Glossary("representation header", "表示标头")}} **`Content-Encoding`** 列出了对当前应用资源的任何编码类型，以及编码的顺序。它让接收者知道需要以何种顺序解码数据以获得 {{HTTPHeader("Content-Type")}} 标头中描述的原始内容格式。内容编码主要用于在不丢失原媒体类型内容的情况下压缩内容。
 
-请注意原始媒体/内容的类型通过 {{HTTPHeader("Content-Type")}} 首部给出，而 `Content-Encoding` 应用于数据的表示，或“编码形式”。如果原始媒体以某种方式编码（例如 zip 文件），则该信息不应该被包含在 `Content-Encoding` 首部内。
+一般建议服务器应对数据尽可能地进行压缩，并在适当情况下对内容进行编码。对一种压缩过的媒体类型如 .zip 或 .jpeg 进行额外的压缩并不合适，因为这反而有可能会使内容增大。如果原始媒体以某种方式编码（例如 .zip 文件），则该信息不应该被包含在 `Content-Encoding` 标头内。
 
-一般建议服务器应对数据尽可能地进行压缩，并在适当情况下对内容进行编码。对一种压缩过的媒体类型如 zip 或 jpeg 进行额外的压缩并不合适，因为这反而有可能会使荷载增大。
+当存在 `Content-Encoding` 标头时，其他元数据（例如 {{HTTPHeader("Content-Type")}}）指示的是数据编码后的形式，而不是原始数据的形式（除非显式声明）。内容编码与 {{HTTPHeader("Transfer-Encoding")}} 不同，因为 `Transfer-Encoding` 处理的是 HTTP 消息本身如何在网络上[逐跳](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)传输。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Representation header")}}</td>
+   <th scope="row">标头类型</th>
+   <td>{{Glossary("Representation header", "表示标头")}}</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+   <td>否</td>
   </tr>
  </tbody>
 </table>
 
 ## 语法
 
-```
+```http
 Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: br
+Content-Encoding: zstd
 
 // 多个，按应用的编码顺序列出
 Content-Encoding: deflate, gzip
@@ -43,23 +46,25 @@ Content-Encoding: deflate, gzip
 - `compress`
   - : 采用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）压缩算法。这个名称来自 UNIX 系统的 _compress_ 程序，该程序实现了前述算法。与其同名程序已经在大部分 UNIX 发行版中消失一样，这种内容编码方式已经被大部分浏览器弃用，部分因为专利问题（这项专利在 2003 年到期）。
 - `deflate`
-  - : 采用 [zlib](https://zh.wikipedia.org/wiki/zlib) 结构（在 {{rfc(1950)}} 中规定），和 [deflate](https://zh.wikipedia.org/wiki/DEFLATE) 压缩算法（在 {{rfc(1951)}} 中规定)。
+  - : 采用 [zlib](https://zh.wikipedia.org/wiki/zlib) 结构（在 {{rfc(1950)}} 中规定）和 [deflate](https://zh.wikipedia.org/wiki/DEFLATE) 压缩算法（在 {{rfc(1951)}} 中规定)。
 - `br`
-  - : 表示采用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 算法的编码方式。
+  - : 采用 {{glossary("Brotli compression","Brotli")}} 算法结构（在 {{rfc(7932)}} 中规定）的格式。
+- `zstd`
+  - : 采用 {{glossary("Zstandard compression","Zstandard")}} 算法结构（在 {{rfc(8878)}} 中规定）的格式。
 
 ## 示例
 
 ### 使用 gzip 方式进行压缩
 
-客户端可以事先声明一系列可以支持的压缩模式，与请求一齐发送。{{HTTPHeader("Accept-Encoding")}} 这个首部就是用来进行这种内容编码形式协商的：
+在客户端，可以声明一个将在 HTTP 请求中一齐发送的压缩模式列表。{{HTTPHeader("Accept-Encoding")}} 标头用于协商内容编码。
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
-服务器在 `Content-Encoding` 响应首部提供了实际采用的压缩模式：
+服务器通过 `Content-Encoding` 响应标头指示所使用的模式进行响应。
 
-```
+```http
 Content-Encoding: gzip
 ```
 
@@ -77,3 +82,6 @@ Content-Encoding: gzip
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Transfer-Encoding")}}
+- {{Glossary("Brotli compression", "Brotli 压缩")}}
+- {{Glossary("GZip compression", "GZip 压缩")}}
+- {{Glossary("Zstandard compression", "Zstandard 压缩")}}

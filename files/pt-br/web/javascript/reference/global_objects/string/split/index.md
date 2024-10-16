@@ -28,7 +28,8 @@ str.split([separator[, limit]])
 - `separator`
   - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
 
-> **Aviso:** Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
+> [!WARNING]
+> Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
 
 - `limite`
 
@@ -165,7 +166,8 @@ O script exibirá o texto a seguir:
 
 ### Revertendo uma String usando `split()`
 
-> **Aviso:** Esta não é a melhor maneira de reverter uma string:
+> [!WARNING]
+> Esta não é a melhor maneira de reverter uma string:
 >
 > ```js example-bad
 > const str = "asdfghjkl";

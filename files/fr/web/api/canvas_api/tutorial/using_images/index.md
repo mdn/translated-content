@@ -114,7 +114,8 @@ Une fois la référence à l'objet image source obtenue, on peut utiliser la mé
 - [`drawImage(image, x, y)`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
   - : Dessine le `CanvasImageSource` spécifié par le paramètre `image` aux coordonnées (`x`, `y`).
 
-> **Note :** Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine `<svg>`.
+> [!NOTE]
+> Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine `<svg>`.
 
 ### Exemple : un graphique linéaire simple
 
@@ -161,7 +162,8 @@ La seconde variante de la méthode `drawImage()` ajoute deux paramètres supplé
 
 Dans cet exemple, nous utiliserons une image comme fond d'écran en la répétant plusieurs fois sur le canevas. Cette opération est réalisée simplement en faisant une boucle qui place l'image redimensionnée à différentes positions. Dans le code ci-dessous, la première boucle `for` s'occupe des lignes alors que la seconde gère les colonnes. L'image est redimensionnée à un tiers de sa taille originale, ce qui fait 50×38 pixels.
 
-> **Note :** Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.
+> [!NOTE]
+> Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.
 
 ```html hidden
 <html>

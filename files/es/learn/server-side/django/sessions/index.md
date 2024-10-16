@@ -123,7 +123,8 @@ def index(request):
 
     # Numero de visitas a esta view, como está contado en la variable de sesión.
     num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
+    num_visits += 1
+    request.session['num_visits'] = num_visits
 
     context = {
         'num_books':num_books,

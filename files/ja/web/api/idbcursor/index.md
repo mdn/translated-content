@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-> [!NOTE]
-> {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
+> **メモ:** {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
 
 **`IDBCursor`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
 

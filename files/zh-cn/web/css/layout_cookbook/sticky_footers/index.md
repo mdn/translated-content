@@ -20,7 +20,7 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载此示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 

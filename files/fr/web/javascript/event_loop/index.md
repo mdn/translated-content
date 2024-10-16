@@ -67,7 +67,8 @@ Dans les navigateurs web, des messages sont ajoutés à chaque fois qu'un évén
 
 La fonction [`setTimeout`](/fr/docs/DOM/window.setTimeout) est appelée avec deux arguments : un message à la suite de la queue et la durée à attendre (optionnelle, par défaut elle vaut 0). La durée représente le temps minimal à attendre avant que le message soit placé dans la queue. S'il n'y a pas d'autre message dans la queue, le message sera traîté directement. En revanche, s'il y a d'autres messages auparavant, le message de `setTimeout` devra attendre la fin du traîtement des messages précédents déjà présents dans la queue. C'est pourquoi le deuxième argument de cette fonction indique une durée minimum et non une durée garantie.
 
-> **Attention :** L'argument passé pour le délai à `setTimeout` ne correspond pas au temps exact. Cela correspond au délai minimum et non à un délai garanti. Par exemple `setTimeout(maFonction(),100);` indique uniquement que `maFonction` sera lancé **au moins** après 100 millisecondes.
+> [!WARNING]
+> L'argument passé pour le délai à `setTimeout` ne correspond pas au temps exact. Cela correspond au délai minimum et non à un délai garanti. Par exemple `setTimeout(maFonction(),100);` indique uniquement que `maFonction` sera lancé **au moins** après 100 millisecondes.
 
 Voici un exemple qui illustre ce concept (`setTimeout` ne s'exécute pas immédiatement après la fin du _timer_) :
 

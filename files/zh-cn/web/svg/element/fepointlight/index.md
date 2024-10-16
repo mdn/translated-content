@@ -5,7 +5,7 @@ slug: Web/SVG/Element/fePointLight
 
 {{SVGRef}}
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

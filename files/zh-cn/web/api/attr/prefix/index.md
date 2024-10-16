@@ -10,12 +10,6 @@ slug: Web/API/Attr/prefix
 > [!NOTE]
 > 在 DOM4 之前此 API 被定义在 {{domxref("Node")}} 接口中。
 
-## 语法
-
-```
-string = attribute.prefix
-```
-
 ## 示例
 
 下例在控制台中输出“x”。

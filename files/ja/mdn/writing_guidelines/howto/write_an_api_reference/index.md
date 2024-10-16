@@ -340,7 +340,7 @@ API ランディングページは、 API の規模によって長さが大き�
 以下に、メソッドページの例を示します。
 
 - {{domxref("Document.getAnimations")}} （[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)）
-- {{domxref("fetch()")}} （[フェッチ API](/ja/docs/Web/API/Fetch_API)）
+- {{domxref("Window/fetch", "fetch()")}} （[フェッチ API](/ja/docs/Web/API/Fetch_API)）
 
 ## サイドバー
 

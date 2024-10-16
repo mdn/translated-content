@@ -13,7 +13,8 @@ Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez 
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-> **Attention :** Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
+> [!WARNING]
+> Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
 
 ## Syntaxe
 
@@ -130,8 +131,8 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

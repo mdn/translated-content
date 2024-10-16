@@ -37,7 +37,6 @@ slug: Web/HTML/Element/area
   - : A hint of the media for which the linked resource was designed, for example `print and screen`. If omitted, it defaults to `all`. Use this attribute only if the **href** attribute is present.
 - `nohref`
   - : Indicates that no hyperlink exists for the associated area. Either this attribute or the **href** attribute must be present in the element.
-    > **Примечание:** This attribute is obsolete in HTML5, instead omitting the **href** attribute is sufficient.
 - `referrerpolicy` {{experimental_inline}}
   - : A string indicating which referrer to use when fetching the resource:
     - `"no-referrer"` meaning that the `Referer:` header will not be sent.

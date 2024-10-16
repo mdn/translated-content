@@ -62,7 +62,7 @@ slug: Learn/Forms/Basic_native_form_controls
 
 单行文本框只有一个真正的约束：如果你输入带有换行符的文本，浏览器会在发送数据之前删除这些换行符。
 
-_以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的文本输入框。_
+_以下截图现实了 macOS 上的 Firefox 71 和 Safari 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的文本输入框。_
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
@@ -141,7 +141,7 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 </fieldset>
 ```
 
-_以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。_
+_以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。_
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
@@ -253,7 +253,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 
 例如，当你点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
-```
+```url
 http://foo.com?pos.x=123&pos.y=456
 ```
 

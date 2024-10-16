@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}
 
-**`DOMMatrixReadOnly`** インターフェイスは、 2D および 3D 演算に適した読み取り専用の 4×4 行列を表します。 {{domxref("DOMMatrix")}} インタフェースは、 `DOMMatrixReadOnly` をベースとして[変更可能](https://ja.wikipedia.org/wiki/イミュータブル)にしており、作成後に行列を変更することができます。
+**`DOMMatrixReadOnly`** インターフェイスは、 2D および 3D 演算に適した読み取り専用の 4×4 行列を表します。 {{domxref("DOMMatrix")}} インターフェイスは、 `DOMMatrixReadOnly` をベースとして[変更可能](https://ja.wikipedia.org/wiki/イミュータブル)にしており、作成後に行列を変更することができます。
 
 このインターフェイスは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)内で利用できるはずですが、一部の実装はまだそうなっていません。
 

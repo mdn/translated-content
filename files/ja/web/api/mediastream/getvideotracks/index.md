@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Media Capture and Streams")}}
 
-**`getVideoTracks()`** は {{domxref("MediaStream")}} インタフェースのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。
+**`getVideoTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。
 
 ## 構文
 

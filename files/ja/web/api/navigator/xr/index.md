@@ -3,7 +3,7 @@ title: "Navigator: xr プロパティ"
 short-title: xr
 slug: Web/API/Navigator/xr
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -16,7 +16,7 @@ l10n:
 
 ## 使用上の注意
 
-それぞれの {{domxref("Window")}} には独自の {{domxref("Navigator")}} のインスタンスがあり、{{domxref("Window.navigator","window.navigator")}} または単に {{domxref("Window.navigator", "navigator")}} としてアクセスできます。 同時に、新しい {{domxref("XRSystem")}} インスタンスも作成され、{{domxref("Navigator.xr", "navigator.xr")}} として `navigator` インスタンスにアタッチされます。 `xr` プロパティが存在する場合は、それを使用して [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) にアクセスできます。
+それぞれの {{domxref("Window")}} には独自の {{domxref("Navigator")}} のインスタンスがあり、{{domxref("Window.navigator","window.navigator")}} または単に {{domxref("Window.navigator", "navigator")}} としてアクセスできます。 同時に、新しい {{domxref("XRSystem")}} インスタンスも作成され、`navigator.xr` として `navigator` インスタンスに装着されます。 `xr` プロパティが存在する場合は、それを使用して [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) にアクセスできます。
 
 WebXR が利用可能かどうかを判断するには、次のようにします。
 
@@ -28,7 +28,7 @@ if ("xr" in window.navigator) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

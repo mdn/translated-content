@@ -35,7 +35,8 @@ browser.tabs.get(
 
 {{WebExtExamples}}
 
-> **Примечание:** Этот API основан на Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. Это документация получена из [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) в коде Chromium.
+> [!NOTE]
+> Этот API основан на Chromium API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-get) API. Это документация получена из [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) в коде Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -9,7 +9,8 @@ slug: Web/API/console/assert_static
 
 {{AvailableInWorkers}}
 
-> **Примечание:** Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
+> [!NOTE]
+> Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
 >
 > В браузере, вызов console.assert() с ложным утверждением вызовет печать ошибки в консоль без прерывания текущего выполнения скрипта, а в Node.js в аналогичном случае будет выброшена ошибка - AssertionError.
 
@@ -85,4 +86,4 @@ console.assert(false, "слово %s", "foo");
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)
+- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/#assertions)

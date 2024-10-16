@@ -31,7 +31,8 @@ Les évènements tactiles sont semblables aux évènements liés à la souris, s
 
 Dans cet exemple, on suit plusieurs points de contact à la fois, ce qui permet à la personne de dessiner dans un canevas ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) avec plusieurs doigts en même temps. Cet exemple ne fonctionnera qu'avec un navigateur qui prend en charge les évènements tactiles.
 
-> **Note :** Dans le texte qui suit, on utilise le terme «&nbsp;doigt&nbsp;» pour décrire le contact avec la surface. Bien entendu, il peut s'agir d'une autre méthode de contact, comme un stylet ou autre.
+> [!NOTE]
+> Dans le texte qui suit, on utilise le terme «&nbsp;doigt&nbsp;» pour décrire le contact avec la surface. Bien entendu, il peut s'agir d'une autre méthode de contact, comme un stylet ou autre.
 
 ### Création du canevas
 
@@ -266,7 +267,8 @@ Vous pouvez tester cet exemple sur un appareil mobile en touchant le cadre qui s
 
 {{EmbedLiveSample('','100%', 900)}}
 
-> **Note :** De façon plus générale, cet exemple fonctionne sur les plateformes qui fournissent des évènements tactiles. Il est possible de tester cet exemple sur les navigateurs de bureau qui peuvent simuler de tels évènements&nbsp;:
+> [!NOTE]
+> De façon plus générale, cet exemple fonctionne sur les plateformes qui fournissent des évènements tactiles. Il est possible de tester cet exemple sur les navigateurs de bureau qui peuvent simuler de tels évènements&nbsp;:
 >
 > - Sur Firefox, on peut activer «&nbsp;la simulation des évènements tactiles&nbsp;» dans [la vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (il peut être nécessaire de recharger la page).
 > - Sur Chrome, on peut utiliser [le mode appareil](https://developer.chrome.com/docs/devtools/device-mode/) et choisir [un type d'appareil](https://developer.chrome.com/docs/devtools/device-mode/#type) qui émet des évènements tactiles.

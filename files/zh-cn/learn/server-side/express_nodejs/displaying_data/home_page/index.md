@@ -7,6 +7,9 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。
 
+> [!NOTE]
+> 我们将会使用 Mongoose 来获取数据库的信息。在继续学习之前，你可能希望重新阅读 [Mongoose 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose#mongoose_入门)中有关[搜索记录](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose#搜索记录)的部分。
+
 ## 路由
 
 在[前面的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中，我们创建了索引页的路由。此处要提醒的是，所有的路由函数都定义在 **/routes/catalog.js** 中：
@@ -78,7 +81,16 @@ exports.index = asyncHandler(async (req, res, next) => {
 });
 ```
 
-成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为 '**index**' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
+我们使用 [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) 方法来获取每个模型的实例个数。可以在模型上调用该方法，并使用一组可选的条件进行匹配，然后返回一个 `Query` 对象。紧接着我们可以调用 [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) 来进行查询操作，其返回一个 `Promise` 对象，该 Promise 对象要么兑现结果，要么在出现数据库错误时被拒绝。
+
+因为对文档数量查询的操作相互独立，因此我们使用 [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 来并行地运行这些查询请求。该方法返回一个新的 Promise，因此我们可以使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 来等待其的完成（*此函数*的执行会在 `await` 处阻塞）。当所有查询完成时，`all()` 返回的 promise 会兑现，便会继续执行路由处理函数，并使用数据库查询的结果填充数组。
+
+成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为“**index**”的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
+
+> [!NOTE]
+> 在 Pug 模板中，如果使用了未传入的键或变量，它将被渲染为空字符串，并且会在表达式中被求值为 `false`。而其他的模板语言也可能会要求你为所使用的所有对象传递值。
+
+请注意，我们的代码之所以非常简单，是因为我们可以假设数据库查询成功。如果任何操作失败，抛出的异常将会被 `asyncHandler()` 捕获然后被传递给链中的下一个（`next`）中间件处理器。
 
 ## 视图
 
@@ -114,7 +126,7 @@ block content
 
 此处，我们应该已经创建了呈现 index 页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 `http://localhost:3000/`。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。
 
-![Home page - Express Local Library site](locallibary_express_home.png)
+![主页 - Express 教程：本地图书馆网站](locallibary_express_home.png)
 
 > [!NOTE]
 > 你将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果你尝试，取决于你点击的链接，你将获取“NOT IMPLEMENTED: Book list”等错误。在“控制器”文件中的不同控制器中，会指定这些字符串文字（将被合适的数据替换）。

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
 
-> **Note :** Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
+> [!NOTE]
+> Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
 
 {{EmbedInteractiveExample("pages/js/date-parse.html")}}
 
@@ -72,7 +73,8 @@ Date.parse("2019-01-01T00:00:00");
 
 ### Chaînes de caractères non-standard
 
-> **Note :** Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
+> [!NOTE]
+> Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
 
 Si `IPOdate` est un objet {{jsxref("Date")}}, on peut définir sa valeur au 9 août 1995 (heure locale), de la façon suivante :
 

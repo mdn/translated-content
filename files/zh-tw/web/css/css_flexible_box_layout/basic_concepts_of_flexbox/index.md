@@ -11,9 +11,6 @@ CSS3 **彈性盒子**，又稱**flexbox**，是為了適應不同螢幕尺寸和
 
 一些時髦的佈局，也能因而透過更簡潔的程式碼完成。這種有意的獨立性只影響視覺渲染，基於 HTML 原始碼的語意順序及瀏覽不會受到影響。
 
-> [!NOTE]
-> 儘管 [CSS 彈性盒子佈局規範](http://www.w3.org/TR/css3-flexbox/)還處於最終徵求意見稿（Last Call Working Draft）階段（參見[最新編輯草案](http://dev.w3.org/csswg/css-flexbox/)）、也不是所有瀏覽器都實做彈性盒子的所有功能。但這麼說好了，現在主流的瀏覽器，都對 flexbox 有著良好的支持。請參見[相容性表格](/zh-TW/docs/Web/Guide/CSS/Flexible_boxes#Browser_compatibility)的具體屬性，以獲取最新的相容狀態。
-
 ## 彈性盒子的概念
 
 Flex 排版的大致定義，是能更改該項目的長與（或）高，以便貼合任何顯示設備的空間。Flex container 能針對該元件擴張以便填補可用的空間、或收縮以便阻止空間溢出。
@@ -252,7 +249,7 @@ Recall that while the display order of the elements is independent of their orde
 
 以下提供一些與彈性盒子相關的網站讓你親手操作：
 
-- [Flexbox Playground](http://demo.agektmr.com/flexbox/)
+- [Flexbox Playground](https://demo.agektmr.com/flexbox/)
 - [Flexy Boxes](http://the-echoplex.net/flexyboxes)
 - [Flexbox Properties Demonstration](https://codepen.io/justd/pen/yydezN)
 - [Flexbox Froggy](http://flexboxfroggy.com/)

@@ -2,7 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 l10n:
-  sourceCommit: f15b8d5828c480af144a9b8f88b2724e2997f571
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -23,7 +23,7 @@ JavaScript のほぼすべての[オブジェクト](/ja/docs/Web/JavaScript/Dat
 - [`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) は非推奨であり、使用すべきではありません。代わりに静的な代替である {{jsxref("Object.defineProperty()")}} や {{jsxref("Object.getOwnPropertyDescriptor()")}} を使用してください。
 - [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティは非推奨であり、使用すべきではありません。代替である {{jsxref("Object.getPrototypeOf()")}} および {{jsxref("Object.setPrototypeOf()")}} は静的メソッドです。
 - [`propertyIsEnumerable()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) および [`hasOwnProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) メソッドは、それぞれ {{jsxref("Object.getOwnPropertyDescriptor()")}} および {{jsxref("Object.hasOwn()")}} 静的メソッドに置き換えることができます。
-- [`isPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) メソッドは通常、コンストラクターの `prototype` ぷおrパティを検査しているのであれば、[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) で置き換えられます。
+- [`isPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) メソッドは通常、コンストラクターの `prototype` プロパティを検査しているのであれば、[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) で置き換えられます。
 
 意味的に等価な静的メソッドが存在しない場合、または `Object.prototype` メソッドを本当に使用したい場合は、オブジェクトが予期しない結果をもたらすオーバーライドプロパティを保有しないように、代わりに対象とするオブジェクトの `Object.prototype` メソッドを直接 [`call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) を呼び出す必要があります。
 
@@ -145,7 +145,7 @@ JavaScript には `null` プロトタイプオブジェクトを生成する組�
 
 - {{jsxref("Object.groupBy()")}} の返値
 - {{jsxref("RegExp.prototype.exec()")}} の返値の `groups` および `indices.groups` プロパティ
-- [`Array.prototype[@@unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) （すべての `@@unscopables` オブジェクトはプロトタイプが `null` である）
+- [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) （すべての `[Symbol.unscopables]` オブジェクトはプロトタイプが `null` である）
 - [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta)
 - モジュールの名前空間オブジェクト。 [`import * as ns from "module";`](/ja/docs/Web/JavaScript/Reference/Statements/import#namespace_import) または [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) から取得したもの。
 

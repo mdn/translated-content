@@ -118,7 +118,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 4. 你想调用的在 `messages.json` 中定义的消息名称，接着是
 5. 两个下划线
 
-```
+```plain
  __MSG_ + messageName + __
 ```
 
@@ -178,13 +178,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 接下来我们看一个例子：在 `en/messages.json` 文件中原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
 
-```
+```plain
 你点击了 $URL$。
 ```
 
 我们可以看到链接点击后会打开 `https://developer.mozilla.org`。在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url"` 占位符里的 `$URL$` 这个占位符。所以最后的消息字符串就变成了：
 
-```
+```plain
 你点击了 https://developer.mozilla.org。
 ```
 
@@ -263,13 +263,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 [在 manifests 中检索本地化的字符串](#在_manifests_中检索本地化的字符串) 中看到的相同的方式调用。例如：
 
-```
+```plain
 __MSG_extensionName__
 ```
 
 预定义的消息使用完全相同的语法，例如在消息名称之前使用 `@@`
 
-```
+```plain
 __MSG_@@ui_locale__
 ```
 

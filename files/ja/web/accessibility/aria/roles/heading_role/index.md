@@ -80,7 +80,7 @@ slug: Web/Accessibility/ARIA/Roles/heading_role
 
 無し
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

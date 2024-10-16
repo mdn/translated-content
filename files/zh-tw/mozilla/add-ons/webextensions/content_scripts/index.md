@@ -428,7 +428,7 @@ window.addEventListener("message", function (event) {
 
 在 Chrome 裡，這會產出這樣的結果：
 
-```
+```plain
 In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
@@ -437,14 +437,14 @@ In page script, window.y: undefined
 
 而在 Firefox 裡會產生這些：
 
-```
+```plain
 In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-這些也適用於 [`setTimeout()`](/zh-TW/docs/Web/API/setTimeout)、[`setInterval()`](/zh-TW/docs/Web/API/setInterval)、與 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function)。
+這些也適用於 [`setTimeout()`](/zh-TW/docs/Web/API/setTimeout)、{{domxref("Window.setInterval", "setInterval()")}} 與 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 
 當在頁面執行程式碼時一定要小一萬個心，頁面的環境有可能被惡意的網頁所控制，它們可以重新定義與你互動的物件來作出一些出乎意料的行爲：
 

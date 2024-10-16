@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feDistantLight
 
 该滤镜定义了一个距离光源，可以用在灯光滤镜{{SVGElement("feDiffuseLighting")}}元素或{{SVGElement("feSpecularLighting")}}元素的内部。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

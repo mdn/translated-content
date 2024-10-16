@@ -203,37 +203,40 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 
 ![Firefox 的书签面板，显示了一个书签的例子，旁边显示了一个 favicon。](bookmark-favicon.png)
 
-如今还有很多其他的图标类型可以考虑。例如，你可以在 MDN Web 文档的源代码中找到它：
+你可能还需要在不同的场景使用不同的图标。例如，你可以在 MDN Web 文档的源代码中找到它：
 
 ```html
-<!-- 含有高分辨率 Retina 显示屏的第三代 iPad：-->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+这是一种使网站在保存到苹果设备主屏幕时显示图标的方法。你甚至可以为不同的设备提供不同的图标，以确保图标在所有设备上都看起来美观。例如：
+
+```html
+<!-- 含有高分辨率 Retina 显示屏的 iPad Pro：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- 含有高分辨率 Retina 显示屏的 iPhone：-->
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 三倍分辨率的 iPhone：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- 第一代和第二代 iPad：-->
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- 没有 Retina 的 iPad、iPad mini 等：-->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- 不含高分辨率 Retina 显示的 iPhone、iPod Touch 和 Android 2.1+ 设备：-->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
-<!-- 基本 favicon -->
-<link
-  rel="icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 二倍分辨率的 iPhone 和其他设备：-->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
+<!-- 基本图标 -->
+<link rel="icon" href="/favicon.ico" />
 ```
 
 这些注释解释了每个图标的用途——这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到 iPad 的主屏幕时使用。
 
-不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。
+不用担心现在实现所有这些类型的图标——这是一个相当先进的特性，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。如果你确实想了解更多关于所有这些值以及如何选择它们，请阅读 {{HTMLElement("link")}} 元素的参考页面。
 
 > [!NOTE]
 > 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。

@@ -24,16 +24,7 @@ slug: Web/API/HTMLElement/hidden
 > [!NOTE]
 > Elements that are not `hidden` must not link to elements which are.
 
-## 语法
-
-```
-isHidden = HTMLElement.hidden;
-
-
-HTMLElement.hidden = true | false;
-```
-
-### 值
+## 值
 
 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，则设置为 `true`，否则设置为 `false`。
 

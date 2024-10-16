@@ -70,7 +70,8 @@ Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/d
 </page>
 ```
 
-> **Note :** Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.
+> [!NOTE]
+> Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.
 
 ## Spécifications
 

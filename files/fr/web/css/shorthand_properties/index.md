@@ -96,7 +96,8 @@ background: #000 url(images/bg.gif) no-repeat left top;
 
 Voir [`background`](/fr/docs/Web/CSS/background) pour plus d'informations.
 
-> **Note :** La forme raccourcie correspond plus précisément aux propriétés détaillées indiquées ici avec également, `background-attachment: scroll` et d'autres propriétés supplémentaires.
+> [!NOTE]
+> La forme raccourcie correspond plus précisément aux propriétés détaillées indiquées ici avec également, `background-attachment: scroll` et d'autres propriétés supplémentaires.
 
 ## Propriétés typographiques
 
@@ -120,7 +121,8 @@ font:
 
 Voir [`font`](/fr/docs/Web/CSS/font) pour plus d'informations sur cette propriété.
 
-> **Note :** Cette déclaration raccourcie avec [`font`](/fr/docs/Web/CSS/font) est en réalité équivalente aux déclarations détaillées présentes ici, avec en plus `font-variant: normal`, `font-size-adjust: none`, et `font-stretch: normal`.
+> [!NOTE]
+> Cette déclaration raccourcie avec [`font`](/fr/docs/Web/CSS/font) est en réalité équivalente aux déclarations détaillées présentes ici, avec en plus `font-variant: normal`, `font-size-adjust: none`, et `font-stretch: normal`.
 
 ## Propriétés pour les bordures
 

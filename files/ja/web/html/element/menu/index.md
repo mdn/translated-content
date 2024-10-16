@@ -106,7 +106,7 @@ button {
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

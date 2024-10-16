@@ -16,7 +16,8 @@ Dois novos modelos foram criados no HTTP/1.1.
 
 ![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **Nota:** HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
+> [!NOTE]
+> HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
 
 Um ponto importante para observar, que gerenciamento de conexão HTTP, aplica-se para a conexão entre dois nós consecutivos, que é o [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh) e não [end-to-end](/pt-BR/docs/Web/HTTP/Headers#e2e) . O modelo usado em conexões entre um cliente e seu primeiro proxy pode diferir do modelo entre um proxy e o servidor de destino (ou qualquer proxies intermédios). Os cabeçalhos HTTP envolvidos na definição do modelo de conexão, como {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}}, são [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh), cabeçalhos com seus valores poderão ser alterados por nós intermediários.
 
@@ -28,7 +29,8 @@ O handshake TCP em si é demorado, mas uma conexão TCP adapta-se a sua carga, t
 
 cabeçalhos com seus valores poderão ser alterados por nós intermediários. (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to `close`). Em HTTP/1.1 este modelo é apenas usado quando o {{HTTPHeader("Connection")}}cabeçalho é enviado com um valor de fechamento.
 
-> **Nota:** A menos que lidemos com um sistema muito antigo, que não suporta uma conexão persistente, não há nenhuma razão convincente para usar este modelo.
+> [!NOTE]
+> A menos que lidemos com um sistema muito antigo, que não suporta uma conexão persistente, não há nenhuma razão convincente para usar este modelo.
 
 ## Conexões Persistentes
 
@@ -42,7 +44,8 @@ Em HTTP/1.1, persistencia é o padrão e o cabeçalho não é mais necessário (
 
 ## HTTP pipelining
 
-> **Nota:** HTTP o pipelining não é ativado por padrão em navegadores modernos:
+> [!NOTE]
+> HTTP o pipelining não é ativado por padrão em navegadores modernos:
 >
 > - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) são ainda comuns e eles levam a comportamentos estranhos e erráticos que desenvolvedores Web não podem prever e diagnosticar facilmente.
 > - Pipelining é complexo para implementar corretamente: o tamanho do recurso a ser transferido, a efetiva [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será usado, bem como a largura de banda efetiva, têm uma incidência direta na melhoria fornecida pelo pipeline. Sem conhecer eles, mensagens importantes podem ser atrasadas por detrás aqueles sem importância. A noção de importante mesmo evolui durante o layout de página! Pipeline HTTP, portanto, traz uma melhoria marginal na maioria dos casos apenas.
@@ -60,7 +63,8 @@ Hoje, cada proxy HTTP/1.1-compatível e servidor devem apoiar o pipelining, embo
 
 ## Domain sharding
 
-> **Nota:** A menos que você tem uma necessidade muito específica e imediata, não use esta técnica depreciada; Mude para HTTP/2 ao invéz. Em HTTP/2, sharding domínio não é mais útil: a conexão HTTP/2 é capaz de manipular as solicitações sem prioridades paralelas muito bem. Sharding domínio é mesmo prejudicial ao desempenho. A maioria dos implementação de HTTP/2 usam uma técnica chamada [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) para reverter o sharding de domínio eventual.
+> [!NOTE]
+> A menos que você tem uma necessidade muito específica e imediata, não use esta técnica depreciada; Mude para HTTP/2 ao invéz. Em HTTP/2, sharding domínio não é mais útil: a conexão HTTP/2 é capaz de manipular as solicitações sem prioridades paralelas muito bem. Sharding domínio é mesmo prejudicial ao desempenho. A maioria dos implementação de HTTP/2 usam uma técnica chamada [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) para reverter o sharding de domínio eventual.
 
 Como uma conexão de HTTP/1.x está serializando solicitações, mesmo sem qualquer ordenação, não pode ser ideal sem largura de banda grande o suficiente disponível. Como uma solução, os navegadores abrir várias conexões para cada domínio, enviando solicitações paralelas. Era padrão conexões de 2 a 3, mas isto agora aumentou para um uso mais comum de 6 conexões paralelas. Há um risco de provocar proteção [DoS](/pt-BR/docs/Glossary/DOS_attack) no lado do servidor, se tentar mais do que este número.
 

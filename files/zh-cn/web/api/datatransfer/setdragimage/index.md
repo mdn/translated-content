@@ -15,8 +15,8 @@ slug: Web/API/DataTransfer/setDragImage
 
 ## 语法
 
-```
-void dataTransfer.setDragImage(img, xOffset, yOffset);
+```js-nolint
+setDragImage(imgElement, xOffset, yOffset)
 ```
 
 ### 参数

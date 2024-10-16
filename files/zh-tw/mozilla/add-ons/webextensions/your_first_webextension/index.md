@@ -99,7 +99,7 @@ document.body.style.border = "5px solid red";
 
 首先，仔細檢查這些檔案是否在正確的位置：
 
-```
+```plain
 borderify/
     icons/
         border-48.png

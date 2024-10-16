@@ -105,7 +105,7 @@ if (canvas.getContext) {
 </html>
 ```
 
-上面的脚本中包含一个叫做 draw() 的函数，当页面加载结束的时候就会执行这个函数。通过使用在文档上加载事件来完成。只要页面加载结束，这个函数，或者像是这个的，同样可以使用 {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}， {{domxref("WindowTimers.setInterval", "window.setInterval()")}}，或者其他任何事件处理程序来调用。
+上面的脚本中包含一个叫做 draw() 的函数，当页面加载结束的时候就会执行这个函数。通过使用在文档上加载事件来完成。只要页面加载结束，这个函数，或者像是这个的，同样可以使用 {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}}，或者其他任何事件处理程序来调用。
 
 模板看起来会是这样。如这里所示，它最初是空白的。
 

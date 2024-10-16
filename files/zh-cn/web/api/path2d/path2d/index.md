@@ -9,10 +9,10 @@ slug: Web/API/Path2D/Path2D
 
 ## 语法
 
-```
-new Path2D();
-new Path2D(path);
-new Path2D(d);
+```js-nolint
+new Path2D()
+new Path2D(path)
+new Path2D(d)
 ```
 
 ### 参数

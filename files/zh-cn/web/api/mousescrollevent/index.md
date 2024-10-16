@@ -11,7 +11,7 @@ slug: Web/API/MouseScrollEvent
 
 ## 方法概述
 
-```
+```webidl
 void initMouseScrollEvent(
   in DOMString typeArg,
   in boolean canBubbleArg,

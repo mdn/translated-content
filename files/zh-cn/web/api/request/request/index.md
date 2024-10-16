@@ -9,8 +9,9 @@ slug: Web/API/Request/Request
 
 ## 语法
 
-```
-var myRequest = new Request(input[, init]);
+```js-nolint
+new Request(input)
+new Request(input, options)
 ```
 
 ### 参数

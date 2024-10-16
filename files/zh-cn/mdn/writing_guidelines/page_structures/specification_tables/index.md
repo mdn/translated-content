@@ -23,13 +23,13 @@ MDN 上的每一个参考页面都应该提供有关该 API 或技术定义的�
 
 默认情况下，使用 `browser-compat` 键中的值。每个值都引用了 [browser-compat-data](https://github.com/mdn/browser-compat-data) 仓库中的一个特定特性及其相关的兼容性和规范信息。例如，{{cssxref("text-align")}} 页有以下键，它用来获取相关的规范信息。
 
-```md
+```yaml
 browser-compat: css.property.text-align
 ```
 
 有些特性不在上述仓库中维护。在这些情况下，可以使用 `spec-urls` 键将规范信息添加到页面元数据中。例如，[`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性拥有以下页面元数据：
 
-```
+```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: console：countReset() 静态方法
-slug: Web/API/console/countreset_static
+slug: Web/API/console/countReset_static
 ---
 
 {{APIRef("Console API")}}
@@ -30,13 +30,13 @@ countReset(label)
 
 若传入 label 参数：
 
-```
+```plain
  counter-name: 0
 ```
 
 若不传入 label 参数：
 
-```
+```plain
 default: 0
 ```
 
@@ -44,13 +44,13 @@ default: 0
 
 若传入一个不存在的 `label`，`countReset` 返回下面的警告信息：
 
-```
+```plain
 Counter "counter-name" doesn’t exist.
 ```
 
 若 `label` 没有被传入 并且 `count()` 也没有被调用过，`countReset` 返回下面的警告信息：
 
-```
+```plain
 Counter "default" doesn’t exist.
 ```
 
@@ -77,7 +77,7 @@ console.countReset();
 
 控制台打印输出结果：
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -110,7 +110,7 @@ console.count("alice");
 
 我们看到的输出如下：
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

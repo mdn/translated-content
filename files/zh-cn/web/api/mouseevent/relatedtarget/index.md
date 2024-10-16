@@ -19,13 +19,7 @@ slug: Web/API/MouseEvent/relatedTarget
 
 如果事件没有次要目标，`relatedTarget` 将返回 `null`.
 
-## 语法
-
-```
-var target = instanceOfMouseEvent.relatedTarget
-```
-
-### 返回值
+## 值
 
 {{domxref("EventTarget")}} 对象或者 `null`.
 

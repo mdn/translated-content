@@ -2207,7 +2207,7 @@
     "modified": "2019-03-23T22:36:10.122Z",
     "contributors": ["yachiehwu", "alphan_chen"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
+  "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:51:06.175Z",
     "contributors": ["chrisdavidmills", "teoli", "Coolcd"]
   },
@@ -2379,6 +2379,10 @@
     "modified": "2020-10-15T21:58:23.409Z",
     "contributors": ["iigmir", "EyiLee", "EricPing"]
   },
+  "Web/API/Window/setInterval": {
+    "modified": "2020-10-15T22:29:07.467Z",
+    "contributors": ["chrischi0922s"]
+  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
@@ -2426,10 +2430,6 @@
   "Web/API/console/assert_static": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": ["lin826", "iigmir"]
-  },
-  "Web/API/setInterval": {
-    "modified": "2020-10-15T22:29:07.467Z",
-    "contributors": ["chrischi0922s"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-11T08:39:45.699Z",
@@ -2867,10 +2867,6 @@
       "jwhitlock",
       "yyss"
     ]
-  },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2020-06-08T05:57:19.890Z",
-    "contributors": ["hikariTW", "willynpi"]
   },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-09-21T11:14:16.789Z",

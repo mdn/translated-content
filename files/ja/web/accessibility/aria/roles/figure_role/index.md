@@ -112,7 +112,7 @@ ARIA の図表 (`figure`) ロールは、適切な意味論がまだ存在しな
 </figure>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

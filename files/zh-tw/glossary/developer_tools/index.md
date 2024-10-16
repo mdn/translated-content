@@ -14,6 +14,6 @@ slug: Glossary/Developer_Tools
 - 維基百科上的 [Web 開發工具](https://zh.wikipedia.org/wiki/Web开发工具)
 - MDN 上的[火狐開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Firebug](https://getfirebug.com/) (Firefox 的前開發者工具)
-- 在 chrome.com 上的 [Chrome DevTools](https://developer.chrome.com/devtools)
+- 在 chrome.com 上的 [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - 在 apple.com 上的[Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1)
 - 在 microsoft.com 的 [Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide)
