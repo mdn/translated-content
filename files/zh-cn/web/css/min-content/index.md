@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-`min-content` 尺寸关键字表示内容的最小{{glossary("intrinsic size", "固有尺寸")}} 。对于文本内容而言，这意味着内容会利用所有软换行的机会，变得尽可能的小。
+`min-content` 尺寸关键字表示内容的最小{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容而言，这意味着内容会利用所有软换行的机会，变得尽可能的小。
 
-可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用到和从 `min-content` 的动画。
+可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `min-content` 开始或结束的动画。
 
 ## 语法
 
@@ -97,4 +97,4 @@ grid-template-columns: 200px 1fr min-content;
 ## 参见
 
 - 相关尺寸关键字：{{cssxref("max-content")}}、{{cssxref("fit-content")}}
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_sizing) 模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块

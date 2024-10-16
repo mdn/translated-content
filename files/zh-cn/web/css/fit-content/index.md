@@ -11,7 +11,7 @@ l10n:
 
 当用作 {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("min-width")}}、{{cssxref("min-height")}}、{{cssxref("max-width")}} 和 {{cssxref("max-height")}} 的布局盒子尺寸时，最大和最小尺寸指的是内容尺寸。
 
-可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用到和从 `fit-content` 的动画。
+可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `fit-content` 开始或结束的动画。
 
 > [!NOTE]
 > CSS 尺寸规范另外还定义了 {{cssxref("fit-content_function", "fit-content()")}} 函数。本页详细介绍了该关键字的用法。
@@ -71,4 +71,4 @@ block-size: fit-content;
 ## 参见
 
 - 相关尺寸关键字：{{cssxref("min-content")}}、{{cssxref("max-content")}}
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_sizing) 模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块

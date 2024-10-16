@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-`max-content` 尺寸关键字表示内容的最大{{glossary("intrinsic size", "固有尺寸")}} 。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
+`max-content` 尺寸关键字表示内容的最大{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
 
-可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用到和从 `max-content` 的动画。
+可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `max-content` 开始或结束的动画。
 
 ## 语法
 
@@ -105,4 +105,4 @@ grid-template-columns: 200px 1fr max-content;
 ## 参见
 
 - 相关尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_sizing) 模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
