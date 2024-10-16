@@ -133,7 +133,7 @@ memory.grow(1);
 
 注意：由于 {{jsxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功 [`Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象（带有一个新的 byteLength），同时任何先前的 ArrayBuffer 对象都将被“分离开来”，或者说与先前指向的底层内存断开连接。
 
-和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建一个新的 `WebAssembly.Memory` 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问（通过 [`Instance.prototype.exports`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)）。
+和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建一个新的 `WebAssembly.Memory` 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问（通过 [`Instance.prototype.exports`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports)）。
 
 ### 更复杂的内存示例
 
@@ -213,7 +213,7 @@ WebAssembly 表格是一个可变大小的带类型的[引用](https://zh.wikipe
    console.log(tbl.get(1)()); // 42
    ```
 
-这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
+这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [Table.prototype.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
 
 > [!NOTE]
 > 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
