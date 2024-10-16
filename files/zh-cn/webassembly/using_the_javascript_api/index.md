@@ -296,5 +296,5 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 ## 参见
 
 - [webassembly.org](http://webassembly.org/)
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
+- Mozilla Research 上的 [WebAssembly](https://research.mozilla.org/webassembly/)
