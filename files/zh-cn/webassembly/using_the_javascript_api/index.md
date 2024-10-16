@@ -45,7 +45,7 @@ l10n:
 
 ### 串流 WebAssembly 模块
 
-Firefox 58 新增了直接从底层源编译和实例化 WebAssembly 模块的功能。这是通过 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static) 和 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法实现的。这些方法比非串流的方法更简单，因为它们可以将字节码直接转化为“模块”/“实例”，而无需将 {{domxref(“Response”)}} 单独放入 {{jsxref(“ArrayBuffer”)}} 中。
+Firefox 58 新增了直接从底层源编译和实例化 WebAssembly 模块的功能。这是通过 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static) 和 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法实现的。这些方法比非串流的方法更简单，因为它们可以将字节码直接转化为“模块”/“实例”，而无需将 {{domxref("Response")}} 单独放入 {{jsxref("ArrayBuffer")}} 中。
 
 本示例（参见 GitHub 上的 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 演示，或者[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）展示了如何使用 `instantiateStreaming()` 获取 Wasm 模块、向其中导入 JavaScript 函数、编译和实例化该模块以及访问其导出函数，所有这些都只需一步即可完成。
 
@@ -66,7 +66,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 如果你不能或不想使用上述的流方法，你可以使用非串流的方法 [`WebAssembly.compile()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static)/[`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 来代替。
 
-这些方法不能直接访问字节码，因此需要额外的步骤：在编译/实例化 Wasm 模块之前将响应转化为 {{jsxref(“ArrayBuffer”)}}} 。
+这些方法不能直接访问字节码，因此需要额外的步骤：在编译/实例化 Wasm 模块之前将响应转化为 {{jsxref("ArrayBuffer")}}} 。
 
 相应的代码如下
 
