@@ -1,11 +1,15 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
+l10n:
+  sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
 {{CSSRef}}
 
-`max-content` 尺寸关键字代表了内容的最大宽度或最大高度。对于文本内容而言，这意味着内容即便溢出也不会被换行。
+`max-content` 尺寸关键字表示内容的最大{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
+
+可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `max-content` 开始或结束的动画。
 
 ## 语法
 
@@ -18,13 +22,6 @@ block-size: max-content;
 
 /* 在 grid track 中使用 */
 grid-template-columns: 200px 1fr max-content;
-
-/* 全局值 */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: revert-layer;
-max-content: unset;
 ```
 
 ## 示例
@@ -35,10 +32,8 @@ max-content: unset;
 
 ```html
 <div id="container">
-  <div class="item">Item</div>
-  <div class="item">
-    Item with more text in it which will overflow the fixed width box.
-  </div>
+  <div class="item">选项</div>
+  <div class="item">包含更多文本的项目将超出固定宽度盒子。</div>
 </div>
 ```
 
@@ -69,9 +64,9 @@ max-content: unset;
 
 ```html
 <div id="container">
-  Item
-  <div>Item with more text in it.</div>
-  Flexible item
+  <div>项目</div>
+  <div>项目中包含更多文本。</div>
+  <div>弹性项目</div>
 </div>
 ```
 
@@ -109,4 +104,5 @@ max-content: unset;
 
 ## 参见
 
-- 其他尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
+- 相关尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
