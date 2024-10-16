@@ -23,7 +23,7 @@ l10n:
 
 1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
 2. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
-3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm#初识文本格式) 一文中讨论了）：
+3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm#初识文本格式) 一文中讨论了这一点）：
 
    ```wasm
    (module
@@ -60,15 +60,15 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 这样做的最终结果是，我们调用了导出的 WebAssembly 函数 `exported_func`，该函数又调用了导入的 JavaScript 函数 `imported_func`，该函数会将 WebAssembly 实例内部提供的值（42）记录到控制台。如果你现在保存你的示例代码，并在支持 WebAssembly 的浏览器中加载它，你就能看到程序这样运行起来！
 
 > [!NOTE]
-> 这是一个迂回曲折、啰嗦冗长，却并没有什么意义的示例，但它确实说明了在 Web 应用程序中使用 WebAssembly 代码和 JavaScript 的可能性。正如我们在其他地方所说的那样，WebAssembly 的目标并不是取代 JavaScript；相反，两者可以相互协作，取长补短。
+> 这是一个迂回曲折、啰嗦冗长，但却并没有什么意义的示例，但它确实说明了在 Web 应用程序中使用 WebAssembly 代码和 JavaScript 的可能性。正如我们在其他地方所说的那样，WebAssembly 的目标并不是取代 JavaScript；相反，两者可以相互协作，取长补短。
 
 ### 不使用流加载我们的 Wasm 模块
 
 如果你不能或不想使用上述的流方法，你可以使用非串流的方法 [`WebAssembly.compile()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static)/[`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 来代替。
 
-这些方法不能直接访问字节码，因此需要额外的步骤：在编译/实例化 Wasm 模块之前将响应转化为 {{jsxref("ArrayBuffer")}}} 。
+这些方法不能直接访问字节码，因此需要额外的步骤：在编译/实例化 Wasm 模块之前将响应转化为 {{jsxref("ArrayBuffer")}}}。
 
-相应的代码如下
+相应的代码如下：
 
 ```js
 fetch("simple.wasm")
@@ -81,7 +81,7 @@ fetch("simple.wasm")
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+ 中，Developer Tool Debugger Panel 能够显示网页中任何 Wasm 代码的文本表示。要查看它，你可以进入调试器面板，点击“wasm://”条目。
+Firefox 54+ 中的 Developer Tool Debugger Panel 能够显示网页中任何 Wasm 代码的文本表示。要查看这一面板，你可以进入调试器面板，点击“wasm://”条目。
 
 ![突出显示了一个模块的开发工具调试器面板](wasm-debug.png)
 
@@ -113,7 +113,7 @@ fetch("simple.wasm")
    data.setUint32(0, 42, true);
    ```
 
-   你也可以得到刚才的值：
+   你也可以这样做来获取刚才的值：
 
    ```js
    data.getUint32(0, true);
@@ -276,7 +276,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 ```
 
 > [!NOTE]
-> 你可以查看[在 GitHub 上实时运行的实例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)及其[源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
+> 你可以查看[在 GitHub 上实时运行的实例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)及其[源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)。
 
 ## 多样性
 
