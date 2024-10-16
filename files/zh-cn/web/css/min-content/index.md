@@ -1,11 +1,15 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
+l10n:
+  sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
 {{CSSRef}}
 
-`min-content` 是一个 CSS 的尺寸关键字，表示的是内容的最小宽度。对于文本内容而言，这意味着内容会利用所有软换行的机会，变得尽可能的小，大小不会超过最长单词的宽度。
+`min-content` 尺寸关键字表示内容的最小{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容而言，这意味着内容会利用所有软换行的机会，变得尽可能的小。
+
+可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `min-content` 开始或结束的动画。
 
 ## 语法
 
@@ -18,13 +22,6 @@ block-size: min-content;
 
 /* 在 grid track 中使用 */
 grid-template-columns: 200px 1fr min-content;
-
-/* 全局值 */
-min-content: inherit;
-min-content: initial;
-min-content: revert;
-min-content: revert-layer;
-min-content: unset;
 ```
 
 ## 示例
@@ -34,8 +31,8 @@ min-content: unset;
 #### HTML
 
 ```html
-<div class="item">Item</div>
-<div class="item">Item with more text in it.</div>
+<div class="item">项目</div>
+<div class="item">项目中包含更多文本。</div>
 ```
 
 #### CSS
@@ -59,9 +56,9 @@ min-content: unset;
 
 ```html
 <div id="container">
-  Item
-  <div>Item with more text in it.</div>
-  Flexible item
+  <div>项目</div>
+  <div>项目中包含更多文本。</div>
+  <div>弹性项目</div>
 </div>
 ```
 
@@ -96,3 +93,8 @@ min-content: unset;
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- 相关尺寸关键字：{{cssxref("max-content")}}、{{cssxref("fit-content")}}
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
