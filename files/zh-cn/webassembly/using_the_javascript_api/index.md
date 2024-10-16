@@ -22,8 +22,8 @@ l10n:
 ### 准备工作
 
 1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
-3. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
-4. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式) 一文中讨论了）：
+2. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
+3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式) 一文中讨论了）：
 
    ```wasm
    (module
@@ -33,7 +33,7 @@ l10n:
            call $i))
    ```
 
-5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 `my_namespace.imported_func` 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。在你的 HTML 文件中创建一个 `<script></script>` 节点，并添加下面的代码：
+4. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 `my_namespace.imported_func` 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。在你的 HTML 文件中创建一个 `<script></script>` 节点，并添加下面的代码：
 
    ```js
    const importObject = {
@@ -45,7 +45,7 @@ l10n:
 
 ### 串流 WebAssembly 模块
 
-Firefox 58 新增了直接从底层源编译和实例化 WebAssembly 模块的功能。这是通过 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static) 和 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法实现的。这些方法比非串流的方法更简单，因为它们可以将字节码直接转化为 “模块”/“实例”，而无需将 {{domxref(“Response”)}} 单独放入 {{jsxref(“ArrayBuffer”)}} 中。
+Firefox 58 新增了直接从底层源编译和实例化 WebAssembly 模块的功能。这是通过 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static) 和 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法实现的。这些方法比非串流的方法更简单，因为它们可以将字节码直接转化为“模块”/“实例”，而无需将 {{domxref(“Response”)}} 单独放入 {{jsxref(“ArrayBuffer”)}} 中。
 
 本示例（参见 GitHub 上的 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 演示，或者[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）展示了如何使用 `instantiateStreaming()` 获取 Wasm 模块、向其中导入 JavaScript 函数、编译和实例化该模块以及访问其导出函数，所有这些都只需一步即可完成。
 
@@ -76,8 +76,7 @@ fetch("simple.wasm")
   .then((bytes) => WebAssembly.instantiate(bytes, importObject))
   .then((results) => {
     results.instance.exports.exported_func();
-  }
-);
+  });
 ```
 
 ### 在开发者工具查看 wasm
@@ -225,7 +224,7 @@ WebAssembly 能够创建全局变量实例，这些实例既可从 JavaScript �
 
 要在 JavaScript 中创建 WebAssembly 全局实例，你需要使用 [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Global) 构造函数，如下所示：
 
-``js
+```js
 const global = new WebAssembly.Global({ value: “i32”, mutable: true }, 0)；
 ```
 
