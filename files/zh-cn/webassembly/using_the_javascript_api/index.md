@@ -23,7 +23,7 @@ l10n:
 
 1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
 2. 然后，在你的本机的 wasm 文件处于同一目录下，创建一个名为 `index.html` 的简单的 HTML 文件（如果你没有模板，可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)）。
-3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式) 一文中讨论了）：
+3. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示（我们也在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm#初识文本格式) 一文中讨论了）：
 
    ```wasm
    (module
@@ -185,7 +185,7 @@ WebAssembly 表格是一个可变大小的带类型的[引用](https://zh.wikipe
 
 当调用一个函数指针的时候，WebAssembly 调用函数提供索引。在进行索引和调用索引到的函数引用之前，可以对该索引进行表格的边界检查。因而，目前的表格是一个相当底层的用来安全地和可移植地编译底层编程语言特性的基本类型。
 
-表格可以通过 [Table.prototype.set()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) 和 [Table.prototype.grow()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow) 进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过 [Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 得到最新值。
+表格可以通过 [Table.prototype.set()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/set) 和 [Table.prototype.grow()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/grow) 进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过 [Table.prototype.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 得到最新值。
 
 ### 表格示例
 
@@ -225,7 +225,7 @@ WebAssembly 能够创建全局变量实例，这些实例既可从 JavaScript �
 要在 JavaScript 中创建 WebAssembly 全局实例，你需要使用 [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Global) 构造函数，如下所示：
 
 ```js
-const global = new WebAssembly.Global({ value: “i32”, mutable: true }, 0)；
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0)；
 ```
 
 可以看到，它接受两个参数：
