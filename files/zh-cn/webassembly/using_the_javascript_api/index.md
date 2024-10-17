@@ -111,7 +111,7 @@ Firefox 54+ 中的 Developer Tool Debugger Panel 能够显示网页中任何 Was
    data.setUint32(0, 42, true);
    ```
 
-   你也可以这样做来获取刚才的值：
+  需要注意这里的参数 `true` 强制要求使用小端序进行读写，因为 WebAssembly 的内存总是小端序的。你也可以这样做来获取刚才的值：
 
    ```js
    data.getUint32(0, true);
@@ -152,7 +152,7 @@ memory.grow(1);
    });
    ```
 
-3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 accumulate() 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
+3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 `accumulate()` 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
 
    ```js
    const summands = new DataView(memory.buffer);
@@ -177,17 +177,17 @@ memory.grow(1);
 
 WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia.org/wiki/參照)数组，其中的引用可以被 JavaScript 和 WebAssembly 代码存取。然而，内存提供的是一个可变大小的带类型的原始字节数组。所以，把引用存储在内存中是不安全。由于安全、可移植性和稳定性等原因，作为引擎信任的引用值是千万不能被直接读写的。
 
-表有一个元素类型，其限制了可以存储在表格的引用类型。在当前的 WebAssembly 版本中，只有一种 WebAssembly 代码所需要的引用类型——函数——也就是唯一合法的元素类型。在将来的版本中，更多的元素类型会被加入。
+表有一个元素类型，其限制了可以存储在表的引用类型。在当前的 WebAssembly 版本中，只有一种 WebAssembly 代码所需要的引用类型——函数——也就是唯一合法的元素类型。在将来的版本中，更多的元素类型会被加入。
 
 函数引用对于编译诸如 C/C++ 这类拥有函数指针的语言来说是必要的。在 C/C++ 的原生实现中，函数指针是通过函数代码在进程的虚地址空间的原始地址表示的，并且由于前面提到的安全原因，它是不能被直接存储在线性内存中的。取而代之的是，函数引用被存储在表中。它们的整数索引可以存储在线性内存中并进行传递。
 
 当调用一个函数指针的时候，WebAssembly 调用函数提供索引。在进行索引和调用索引到的函数引用之前，可以对该索引进行表的安全边界检查。因而，目前的表是一个相当底层的用来安全地和可移植地编译底层编程语言特性的基本类型。
 
-表格可以通过 [`Table.prototype.set()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/set) 和 [`Table.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/grow) 进行更改，它们会更新表格中的一个值和增加可以存储在表格的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 得到最新值。
+表可以通过 [`Table.prototype.set()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/set) 和 [`Table.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/grow) 进行更改，它们会更新表中的一个值和增加可以存储在表的大小。这允许间接可调用函数集合可以随着时间而改变，其对于[动态链接技术](http://webassembly.org/docs/dynamic-linking/)来说是必要的。这些更改对于 JavaScript 和 wasm 模块来说是立即生效的。同时，在 JavaScript 可以通过 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 得到最新值。
 
 ### 表示例
 
-让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在 [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm) 中找到该示例。
+让我们看一个简单的表示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表：元素 0 返回 13，元素 1 返回 42。你可以在 [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm) 中找到该示例。
 
 1. 在一个新的目录中复制一份 table.wasm。
 
@@ -203,7 +203,7 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
    });
    ```
 
-4. 现在，让我们获取表格中的数据——将下面的代码放入到指定的位置：
+4. 现在，让我们获取表中的数据——将下面的代码放入到指定的位置：
 
    ```js
    const tbl = results.instance.exports.tbl;
@@ -211,7 +211,7 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
    console.log(tbl.get(1)()); // 42
    ```
 
-这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
+这段代码获取获取了存储在表中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
 
 > [!NOTE]
 > 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
@@ -281,15 +281,15 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 现在，我们已经展示了 WebAssembly 的主要组成模块的使用，这里是提到多样性概念的好地方。这为 WebAssembly 提供了大量的关于架构效率的优势：
 
 - 一个模块可以有 N 个实例，这与一个函数可以产生 N 个闭包值一样。
-- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表格与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
-- 一个模块实例可以使用 0-1 个表格实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表格实例。
-- 一个内存或表格实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
+- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
+- 一个模块实例可以使用 0-1 个表实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表实例。
+- 一个内存或表实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
 
-你可以在我们的理解文本格式一本中看到多样性的应用——参见[改变表格和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表格和动态链接)部分。
+你可以在我们的理解文本格式一本中看到多样性的应用——参见[改变表和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表和动态链接)部分。
 
 ## 总结
 
-本文带你了解了使用 WebAssembly 的 JavaScript API 的基本知识，包括在 JavaScript 上下文中导入一个 WebAssembly 模块、使用该模块的函数以及在 JavaScript 中使用 WebAssembly 的内存和表格。同时，我们也介绍了多样性的概念。
+本文带你了解了使用 WebAssembly 的 JavaScript API 的基本知识，包括在 JavaScript 上下文中导入一个 WebAssembly 模块、使用该模块的函数以及在 JavaScript 中使用 WebAssembly 的内存和表。同时，我们也介绍了多样性的概念。
 
 ## 参见
 
