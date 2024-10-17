@@ -115,7 +115,7 @@ Puedes usar {{jsxref("String.prototype.toWellFormed()")}}, que reemplaza los sus
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
