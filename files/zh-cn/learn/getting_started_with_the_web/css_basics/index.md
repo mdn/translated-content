@@ -287,7 +287,7 @@ img {
 {{htmlelement("body")}} 元素是**块级**元素，意味着它占据页面上的空间。页面上的其他元素会尊重为块级元素设置的外边距。而图片是**行级**元素，所以为了使图像有外边距，我们必须使用 `display: block` 给予其块级行为。
 
 > [!NOTE]
-> 上面的做法假定所选图片小于 body 的宽度（600 像素）。超过 600 像素的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：1）使用[图片编辑器](https://en.wikipedia.org/wiki/Raster_graphics_editor) 减小图片宽度；2）用 CSS 限制图片大小，将 `<img>` 元素 {{cssxref("width")}} 属性的值设置为小于 600 像素的值。
+> 上面的做法假定所选图片小于 body 的宽度（600 像素）。超过 600 像素的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：1）使用[图片编辑器](https://zh.wikipedia.org/wiki/點陣圖圖像編輯器) 减小图片宽度；2）用 CSS 限制图片大小，将 `<img>` 元素 {{cssxref("width")}} 属性的值设置为小于 600 像素的值。
 
 > [!NOTE]
 > 如果你暂时不能理解 `display: block`、块级元素和行级元素之间的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。在 [display 参考页面](/zh-CN/docs/Web/CSS/display)能找到更多有关不同的 display 值的信息。
