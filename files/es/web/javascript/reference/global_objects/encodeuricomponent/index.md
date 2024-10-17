@@ -1,6 +1,8 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+l10n:
+  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
 ---
 
 {{jsSidebar("Objects")}}
@@ -39,7 +41,7 @@ Una nueva cadena de caracteres que representa el `uriComponent` proporcionado co
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-En comparación con {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapa un conjunto más amplio de caracteres. Usa `encodeURIComponent()` en campos ingresados por el usuario en formularios enviados con {{HTTPMethod("POST")}} al servidor, ya que esto codificará los símbolos `&` que podrían generarse inadvertidamente durante la entrada de datos para {{glossary("character reference", "character references")}} u otros caracteres que requieran codificación/decodificación. Por ejemplo, si un usuario escribe `Jack & Jill`, sin `encodeURIComponent()`, el símbolo & podría interpretarse en el servidor como el inicio de un nuevo campo y poner en riesgo la integridad de los datos.
+En comparación con {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapa un conjunto más amplio de caracteres. Usa `encodeURIComponent()` en campos ingresados por el usuario en formularios enviados con {{HTTPMethod("POST")}} al servidor, ya que esto codificará los símbolos `&` que podrían generarse inadvertidamente durante la entrada de datos para {{glossary("character reference", "caracteres de referencia")}} u otros caracteres que requieran codificación/decodificación. Por ejemplo, si un usuario escribe `Jack & Jill`, sin `encodeURIComponent()`, el símbolo & podría interpretarse en el servidor como el inicio de un nuevo campo y poner en riesgo la integridad de los datos.
 
 Para [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), los espacios deben reemplazarse por `+`, por lo que puede que se desee continuar una llamada a `encodeURIComponent()` con un reemplazo adicional de la cadena `%20` por `+`.
 
@@ -69,7 +71,8 @@ function encodeRFC5987ValueChars(str) {
         /['()*]/g,
         (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
       )
-      // Los siguientes códigos no son necesarios para el percent-encoding según el RFC5987,
+      // Los siguientes códigos no son necesarios para el percent-encoding según el
+      // RFC5987,
       // por lo que podemos permitir una mejor legibilidad en la transmisión: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
         String.fromCharCode(parseInt(hex, 16)),
@@ -91,9 +94,9 @@ function encodeRFC3986URIComponent(str) {
 }
 ```
 
-### Codificación de un sustituto solitario lanza un error
+### Codificación de un sustituto solitario lanza
 
-Se lanzará un {{jsxref("URIError")}} si se intenta codificar un sustituto que no es parte de un par alto-bajo. Por ejemplo:
+Un {{jsxref("URIError")}} será lanaado si se intenta codificar un sustituto que no es parte de un par alto-bajo. Por ejemplo:
 
 ```js
 // El par alto-bajo está bien
@@ -112,11 +115,11 @@ Puedes usar {{jsxref("String.prototype.toWellFormed()")}}, que reemplaza los sus
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con los navegadores
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - {{jsxref("decodeURI()")}}
 - {{jsxref("encodeURI()")}}
