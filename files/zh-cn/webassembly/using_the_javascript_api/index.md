@@ -91,7 +91,7 @@ Firefox 54+ 中的 Developer Tool Debugger Panel 能够显示网页中任何 Was
 
 但与本地 C/C++ 程序不同的是，本地 C/C++ 程序的可用内存范围横跨整个进程，而特定 WebAssembly 实例可访问的内存仅限于 WebAssembly 内存对象所包含的一个特定范围（可能非常小）。这样，一个网络应用程序就可以使用多个独立的库，每个库都在内部使用 WebAssembly，并拥有完全相互隔离的独立内存。此外，较新的实现还可以创建[共享内存](/zh-CN/docs/WebAssembly/Understanding_the_text_format#共享内存)，这些内存可以使用 [`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 在 Window 和 Worker 上下文之间传输，并在多个地方使用。
 
-在 JavaScript 中，Memory 实例可被视为一个可调整大小的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)（如果是共享存储器的话，则是 [`SharedArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)），就像使用 `ArrayBuffers`一样，Web 应用可以创建多个独立的 Memory 对象。你可以使用 [`WebAssembly.Memory()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 构造函数创建一个对象（参数包括初始大小和（可选）最大大小，以及说明是否为共享内存的 `shared` 属性）。
+在 JavaScript 中，Memory 实例可被视为一个可调整大小的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)（如果是共享存储器的话，则是 [`SharedArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)），就像使用 `ArrayBuffers` 一样，Web 应用可以创建多个独立的 Memory 对象。你可以使用 [`WebAssembly.Memory()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 构造函数创建一个对象（参数包括初始大小和（可选）最大大小，以及说明是否为共享内存的 `shared` 属性）。
 
 让我们从一个快速示例开始探索。
 
@@ -111,7 +111,7 @@ Firefox 54+ 中的 Developer Tool Debugger Panel 能够显示网页中任何 Was
    data.setUint32(0, 42, true);
    ```
 
-  需要注意这里的参数 `true` 强制要求使用小端序进行读写，因为 WebAssembly 的内存总是小端序的。你也可以这样做来获取刚才的值：
+   需要注意这里的参数 `true` 强制要求使用小端序进行读写，因为 WebAssembly 的内存总是小端序的。你也可以这样做来获取刚才的值：
 
    ```js
    data.getUint32(0, true);
@@ -129,9 +129,9 @@ memory.grow(1);
 
 如果在创建内存实例时提供了最大值，则尝试超过此最大值将抛出 {{jsxref("RangeError")}} 异常。引擎利用这个提供的上限来提前预留内存，这样可以使调整大小更有效率。
 
-注意：由于 {{jsxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功 [`Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象（带有一个新的 byteLength），同时任何先前的 ArrayBuffer 对象都将被“分离开来”，或者说与先前指向的底层内存断开连接。
+注意：由于 {{jsxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功执行 [`Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象（带有一个新的 byteLength），同时任何先前的 ArrayBuffer 对象都将被“分离开来”，或者说与先前指向的底层内存断开连接。
 
-和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建一个新的 `WebAssembly.Memory` 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问（通过 [`Instance.prototype.exports`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports)）。
+和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建一个新的 `WebAssembly.Memory` 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问（通过使用 [`Instance.prototype.exports`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports)）。
 
 ### 更复杂的内存示例
 
@@ -163,7 +163,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-注意我们是如何在内存对象的缓冲区（[`Memory.prototype.buffer`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer)）——而不是在内存对象本身——上创建 {{jsxref("Uint32Array")}} 视图的。
+注意我们是如何在内存对象的缓冲区（[`Memory.prototype.buffer`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer)）中，而不是在内存对象本身上创建 {{jsxref("Uint32Array")}} 视图的。
 
 内存导入与函数导入很像，只是内存对象取代了 JavaScript 函数作为了传入值。内存导入在下面两方面很有用：
 
@@ -194,7 +194,7 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
    > [!NOTE]
    > 你可以在 [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) 中查看模块的文本表示。
 
-2. 创建一份 [HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
+2. 创建一份 [HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为 `table.html`.
 3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 节点里面：
 
    ```js
@@ -211,7 +211,7 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
    console.log(tbl.get(1)()); // 42
    ```
 
-这段代码获取获取了存储在表中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
+这段代码获取获取了存储在表中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的：在其后面还要加一对小括号才可以真正的调用该函数获取到信息。
 
 > [!NOTE]
 > 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
@@ -233,11 +233,11 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0)；
   - `value`：它的数据类型，可以是 WebAssembly 模块接受的任何数据类型 - `i32`、`i64`、`f32` 或 `f64`。
   - `mutable`：布尔值，指示值是否可变。
 
-- 包含变量实际值的值。它可以是任何值，只要其类型符合指定的数据类型。
+- 包含变量实际值的值。它可以是任何值，只要类型符合指定的数据类型。
 
 那么我们该如何使用呢？在下面的示例中，我们将全局变量定义为可变的 `i32` 类型，其值为 0。
 
-然后改变全局变量的值，首先使用 `Global.value` 属性将其值改为 `42`，然后使用从 `global.wasm` 模块导出的 `incGlobal()` 函数将其值改为 43（无论给定的是什么值，该函数都会加 1，然后返回新值）。
+然后改变全局变量的值。首先使用 `Global.value` 属性将其值改为 `42`，然后使用从 `global.wasm` 模块导出的 `incGlobal()` 函数将其值改为 43（无论给定的是什么值，该函数都会加 1，然后返回新值）。
 
 ```js
 const output = document.getElementById("output");
@@ -278,14 +278,14 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## 多样性
 
-现在，我们已经展示了 WebAssembly 的主要组成模块的使用，这里是提到多样性概念的好地方。这为 WebAssembly 提供了大量的关于架构效率的优势：
+现在，我们已经展示了 WebAssembly 的主要组成模块的使用，我们应该现在提起多样性这一概念，这能为 WebAssembly 提供了大量的关于架构效率的优势：
 
 - 一个模块可以有 N 个实例，这与一个函数可以产生 N 个闭包值一样。
 - 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
 - 一个模块实例可以使用 0-1 个表实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表实例。
 - 一个内存或表实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
 
-你可以在我们的理解文本格式一本中看到多样性的应用——参见[改变表和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表和动态链接)部分。
+你可以在我们的理解文本格式一文中看到多样性的应用——参见[改变表和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表和动态链接)部分。
 
 ## 总结
 
