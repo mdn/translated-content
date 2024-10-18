@@ -1,6 +1,6 @@
 ---
 title: "console : méthode statique timeLog()"
-slug: Web/API/console/timelog_static
+slug: Web/API/console/timeLog_static
 l10n:
   sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---

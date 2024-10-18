@@ -1,6 +1,6 @@
 ---
 title: "console : méthode statique groupCollapsed()"
-slug: Web/API/console/groupcollapsed_static
+slug: Web/API/console/groupCollapsed_static
 l10n:
   sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
