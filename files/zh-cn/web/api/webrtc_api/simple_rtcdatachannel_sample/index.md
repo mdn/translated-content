@@ -275,7 +275,7 @@ function handleReceiveMessage(event) {
 
 ### 断开节点
 
-当用户点击 "Disconnect" 按钮。在之前我们设置的按钮事件处理逻辑中 `disconnectPeers()` 方法被调用。
+当用户点击“Disconnect”按钮，根据之前我们设置的按钮事件处理逻辑，就会调用 `disconnectPeers()`。
 
 ```js
 function disconnectPeers() {
