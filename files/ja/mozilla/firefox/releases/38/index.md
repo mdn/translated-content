@@ -74,7 +74,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 
 ### インターフェイス/API/DOM
 
-- Fetch API の {{domxref("fetch()")}} メソッドを実装しました ([Firefox バグ 1039846](https://bugzil.la/1039846))。
+- Fetch API の {{domxref("Window/fetch", "fetch()")}} メソッドを実装しました ([Firefox バグ 1039846](https://bugzil.la/1039846))。
 - {{domxref("BroadcastChannel")}} API を実装して、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用可能にしました ([Firefox バグ 966439](https://bugzil.la/966439) および [Firefox バグ 1121420](https://bugzil.la/1121420))。
 - Console API が [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました。
 - {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} を実装しました ([Firefox バグ 1119527](https://bugzil.la/1119527))。
