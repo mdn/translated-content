@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 如果你不熟悉本文中提到到基础概念并且需要更多的解释，请先阅读 [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)。
 
-## 一个简单的例子
+## 简单示例
 
 让我们通过一步一步的例子来了解如何在 WebAssembly 中使用 Javascript API，和如何在网页中加载一个 wasm 模块。
 
