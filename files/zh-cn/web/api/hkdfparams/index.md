@@ -29,7 +29,7 @@ l10n:
 
 ## 示例
 
-参见示例 {{domxref("SubtleCrypto.deriveKey()")}}。
+参见 {{domxref("SubtleCrypto.deriveKey()")}} 的示例。
 
 ## 规范
 
