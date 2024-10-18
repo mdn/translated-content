@@ -271,7 +271,7 @@ function handleReceiveMessage(event) {
 }
 ```
 
-该方法只是简单地注入了一些 {{Glossary("DOM")}}，它创建了 {{HTMLElement("p")}} (paragraph) 元素，然后创建了 {{domxref("Text")}} 用于显示从事件的 `data` 属性拿到的消息文本。该 text node 作为子节点附加到 `receiveBox` block，显示在浏览器窗口内容区。
+该方法只是简单地注入了一些 {{Glossary("DOM")}}，它创建了 {{HTMLElement("p")}} (paragraph) 元素，然后创建了 {{domxref("Text")}} 用于显示从事件的 `data` 属性拿到的消息文本。该文本节点作为子节点附加到 `receiveBox` 块，显示在浏览器窗口内容区。
 
 ### 断开节点
 
