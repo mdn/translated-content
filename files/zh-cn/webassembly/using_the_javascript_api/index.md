@@ -79,7 +79,7 @@ fetch("simple.wasm")
 
 ### 在开发者工具查看 wasm
 
-Firefox 54+ 中的 Developer Tool Debugger Panel 能够显示网页中任何 Wasm 代码的文本表示。要查看这一面板，你可以进入调试器面板，点击“wasm://”条目。
+Firefox 54+ 中的开发者工具调试器面板能够显示网页中任何 Wasm 代码的文本表示。要查看这一面板，你可以进入调试器面板，点击“wasm://”条目。
 
 ![突出显示了一个模块的开发工具调试器面板](wasm-debug.png)
 
