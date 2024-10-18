@@ -2,7 +2,7 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{HTMLSidebar}}
@@ -119,7 +119,7 @@ div {
 - `size`
   - : バイト数によるファイルサイズです。
 - `type`
-  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
@@ -396,22 +396,25 @@ function validFileType(file) {
 
 ```js
 function returnFileSize(number) {
-  if (number < 1024) {
+  if (number < 1e3) {
     return `${number} バイト`;
-  } else if (number >= 1024 && number < 1048576) {
-    return `${(number / 1024).toFixed(1)} KB`;
-  } else if (number >= 1048576) {
-    return `${(number / 1048576).toFixed(1)} MB`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  } else {
+    return `${(number / 1e6).toFixed(1)} MB`;
   }
 }
 ```
+
+> [!NOTE]
+> ここで使用されている "KB" および "MB" の単位は、1KB = 1000B という [SI 接頭辞](https://ja.wikipedia.org/wiki/2進接頭辞)の慣例に従っており、macOS と同様です。システムが異なると、ファイルサイズの表し方も異なります。例えば、Ubuntu では 1KiB = 1024B という IEC 接頭辞を使用していますが、RAM の仕様では 2 のべき乗を表す SI 接頭辞 (1KB = 1024B) がよく使われます。このため、ここでは `1e3` (`1000`) や `1e6` (`100000`) を `1024` や `1048576` の代わりに使用しました。 アプリケーションでは、正確なサイズが重要である場合は、ユーザーに単位系を明確に伝える必要があります。
 
 ```js hidden
 const button = document.querySelector("form button");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const para = document.createElement("p");
-  para.append("Image uploaded!");
+  para.append("画像がアップロードされました。");
   preview.replaceChildren(para);
 });
 ```
@@ -466,7 +469,7 @@ button.addEventListener("click", (e) => {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
