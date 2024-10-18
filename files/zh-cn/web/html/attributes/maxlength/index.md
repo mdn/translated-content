@@ -25,7 +25,7 @@ l10n:
 <input type="password" maxlength="4" />
 ```
 
-{{EmbedLiveSample('Examples', '100%', 200)}}
+{{EmbedLiveSample('示例', '100%', 200)}}
 
 ## 规范
 
