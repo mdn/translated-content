@@ -73,6 +73,6 @@ window.addEventListener("error", (error) => {
 
 - {{DOMxRef("Window")}}
 - {{DOMxRef("WorkerGlobalScope.reportError()")}}
-- {{DOMxRef("Window/error_event", "error")}} event
-- {{DOMxRef("WorkerGlobalScope/error_event", "error")}} event
-- {{DOMxRef("HTMLElement/error_event", "error")}} event
+- {{DOMxRef("Window/error_event", "error")}} 事件
+- {{DOMxRef("WorkerGlobalScope/error_event", "error")}} 事件
+- {{DOMxRef("HTMLElement/error_event", "error")}} 事件
