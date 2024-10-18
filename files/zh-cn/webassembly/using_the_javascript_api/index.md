@@ -152,7 +152,7 @@ memory.grow(1);
    });
    ```
 
-3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 `accumulate()` 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
+3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 `accumulate()` 在该模块实例的线性内存（`mem`）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
 
    ```js
    const summands = new DataView(memory.buffer);
@@ -163,7 +163,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-注意我们是如何在内存对象的缓冲区（[`Memory.prototype.buffer`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer)）中，而不是在内存对象本身上创建 {{jsxref("Uint32Array")}} 视图的。
+注意我们是如何在内存对象的缓冲区（[`Memory.prototype.buffer`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer)）中，而不是在内存对象本身上创建 {{jsxref("DataView")}} 视图的。
 
 内存导入与函数导入很像，只是内存对象取代了 JavaScript 函数作为了传入值。内存导入在下面两方面很有用：
 
@@ -195,7 +195,7 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
    > 你可以在 [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) 中查看模块的文本表示。
 
 2. 创建一份 [HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为 `table.html`.
-3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 节点里面：
+3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 {{htmlelement("script")}} 节点里面：
 
    ```js
    WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
@@ -214,11 +214,11 @@ WebAssembly 表是一个可变大小的带类型的[引用](https://zh.wikipedia
 这段代码获取获取了存储在表中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 函数获取的：在其后面还要加一对小括号才可以真正的调用该函数获取到信息。
 
 > [!NOTE]
-> 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
+> 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例。
 
 ## 全局变量
 
-WebAssembly 能够创建全局变量实例，这些实例既可从 JavaScript 访问，也可在一个或多个 [`WebAssembly.Module``](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 实例中导入/导出。这非常有用，因为它允许动态地链接多个模块。
+WebAssembly 能够创建全局变量实例，这些实例既可从 JavaScript 访问，也可在一个或多个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 实例中导入/导出。这非常有用，因为它允许动态地链接多个模块。
 
 要在 JavaScript 中创建 WebAssembly 全局实例，你需要使用 [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Global) 构造函数，如下所示：
 
