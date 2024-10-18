@@ -9,7 +9,7 @@ l10n:
 
 `maxlength` 属性定义了用户可以在 {{htmlelement('input')}} 或 {{htmlelement('textarea')}} 中输入的最大[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)。该属性的值必须是 0 或更高的整数。
 
-字符串长度是以 UTF-16 编码单元为单位进行测量的，通常（[对于大多数语言脚本](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters)）等同于字符数。如果未指定 `maxlength`，或指定了无效值，则输入没有最大长度限制。
+字符串长度是以 UTF-16 编码单元为单位进行测量的，通常（[对于大多数语言脚本](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length#长度不等于字符数的字符串)）等同于字符数。如果未指定 `maxlength`，或指定了无效值，则输入没有最大长度限制。
 
 任何 `maxlength` 的值必须大于或等于 [`minlength`](/zh-CN/docs/Web/HTML/Attributes/minlength) 的值（如果存在且有效）。如果字段文本值的长度超过了 `maxlength` 的 UTF-16 编码单元长度，输入将无法通过约束验证。约束验证仅在用户更改值时应用。
 
