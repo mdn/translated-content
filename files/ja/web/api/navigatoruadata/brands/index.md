@@ -1,11 +1,12 @@
 ---
-title: NavigatorUAData.brands
+title: "NavigatorUAData: brands プロパティ"
+short-title: brands
 slug: Web/API/NavigatorUAData/brands
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 **`brands`** は {{domxref("NavigatorUAData")}} インターフェイスの読み取り専用プロパティで、ブランド情報の配列を返します。
 
