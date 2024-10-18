@@ -108,7 +108,7 @@ l10n:
     - `allow-orientation-lock`
       - : リソースが[画面の方向をロック](/ja/docs/Web/API/Screen/lockOrientation)することができるようにします。
     - `allow-pointer-lock`
-      - : リソースが[ポインターロック API](/ja/docs/WebAPI/Pointer_Lock) を使用できるようにします。
+      - : リソースが[ポインターロック API](/ja/docs/Web/API/Pointer_Lock_API) を使用できるようにします。
     - `allow-popups`
       - : ポップアップを許可します（{{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}} などから）。このキーワードが使用されていない場合、その機能は静かに失敗します。
     - `allow-popups-to-escape-sandbox`
@@ -126,7 +126,7 @@ l10n:
     - `allow-top-navigation-by-user-activation`
       - : リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
     - `allow-top-navigation-to-custom-protocols`
-      - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` や `allow-top-navigation` キーワードでも有効になります。
+      - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` や `allow-top-navigation` キーワードでも有効になります。
 
     > [!NOTE]
     >
