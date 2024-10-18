@@ -281,9 +281,9 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 现在，我们已经展示了 WebAssembly 的主要组成模块的使用，我们应该现在提起多样性这一概念，这能为 WebAssembly 提供了大量的关于架构效率的优势：
 
 - 一个模块可以有 N 个实例，这与一个函数可以产生 N 个闭包值一样。
-- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
+- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多内存实例](https://webassembly.org/features/)）。
 - 一个模块实例可以使用 0-1 个表实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表实例。
-- 一个内存或表实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
+- 一个内存或表实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md)成为可能。
 
 你可以在我们的理解文本格式一文中看到多样性的应用——参见[改变表和动态链接](/zh-CN/docs/WebAssembly/Understanding_the_text_format#改变表和动态链接)部分。
 
