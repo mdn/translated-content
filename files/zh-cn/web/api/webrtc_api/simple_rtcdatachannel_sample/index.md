@@ -154,7 +154,7 @@ localConnection
 
 逐行解读上面的代码：
 
-1. 首先调用 {{domxref("RTCPeerConnection.createOffer()")}} 方法创建 {{Glossary("SDP")}} (Session Description Protocol) 字节块用于描述我们期待建立的连接。该方法可选地接受一个描述连接限制的对象，例如连接是否必须支持音频、视频或者两者都支持。在我们的简单示例中，没有引入该限制。
+1. 首先调用 {{domxref("RTCPeerConnection.createOffer()")}} 方法创建 {{Glossary("SDP")}}（Session Description Protocol）字节块用于描述我们期待建立的连接。该方法可选地接受一个描述连接限制的对象，例如连接是否必须支持音频、视频或者两者都支持。在我们的简单示例中，没有引入该限制。
 2. 如果该 offer 成功建立，我们将上述字节块传递给 local 连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。用于配置 local 端的连接。
 3. 下一步通过调用 `remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知 remote 节点上述描述，将 local 节点连接到到远程。现在 `remoteConnection` 了解正在建立的连接。
 4. 该是 remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。该方法生成一个 SDP 二进制块，用于描述 remote 节点愿意并且有能力建立的连接。这样的连接配置是两端均可以支持可选项的结合。
