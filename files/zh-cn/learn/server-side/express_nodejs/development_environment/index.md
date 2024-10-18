@@ -101,7 +101,7 @@ $ npm -v
 6.7.0
 ```
 
-下面的测试也许会带来小小激动：创建一个非常基础的“纯 Node”服务器，在浏览器中访问正确的 URL 地址时将直接打印 "Hello world"：
+下面的测试也许会带来小小激动：创建一个非常基础的“纯 Node”服务器，在浏览器中访问正确的 URL 地址时将直接打印“Hello world”：
 
 1. 以下代码使用了纯 Node 的特性（与 Express 无关）和一些 ES6 的语法，把它复制到 **hellonode.js** 文件中：
 
@@ -127,7 +127,7 @@ $ npm -v
    });
    ```
 
-   代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息 "Hello World"。
+   代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息“Hello World”。
 
    > [!NOTE]
    > 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
@@ -135,11 +135,16 @@ $ npm -v
 2. 在命令行工具中进入 hellonode.js 文件所在的目录，输入“node + 文件名”并运行，服务器就启动了：
 
    ```bash
-   $ node hellonode.js
+   node hellonode.js
+   ```
+
+   服务器启动后，你将看到控制台输出，指示服务器正在运行的 IP 地址：
+
+   ```plain
    服务器运行于 http://127.0.0.1:3000/
    ```
 
-3. 在浏览器中访问这个 URL（[http://127.0.0.1:3000/](http://127.0.0.1:8000/)），如果一切正常，浏览器会直接显示出 "Hello world" 字符串。
+3. 在浏览器中访问 URL `http://127.0.0.1:3000`，如果一切正常，浏览器会直接显示出“Hello world”字符串。
 
 ## 使用 NPM
 
@@ -192,7 +197,7 @@ $ npm -v
    npm install express
    ```
 
-   此时 **package.json** 文件的底部会出现依赖列表（"dependencies"），其中包含 Express：
+   此时 **package.json** 文件的底部会出现依赖列表（dependency），其中包含 Express：
 
    ```json
    {
@@ -216,30 +221,36 @@ $ npm -v
    ```js
    const express = require("express");
    const app = express();
+   const port = 3000;
 
    app.get("/", (req, res) => {
      res.send("Hello World!");
    });
 
-   app.listen(8000, () => {
-     console.log("示例程序正在监听 8000 端口！");
+   app.listen(port, () => {
+     console.log(`示例程序正在监听 ${port} 端口！`);
    });
    ```
 
-   以上代码展示了一个最简单的 "HelloWorld" Express 应用。它导入了 "express" 模块并用它创建了一个服务器（app）来监听 8000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送 "Hello World!"。
+   以上代码展示了一个最简单的“HelloWorld”Express 应用。它导入了“express”模块并用它创建了一个服务器（app）来监听 3000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送“Hello World!”。
 
    在 myapp 应用的根目录下新建一个 **index.js** 文件，将上述代码粘贴进来并保存。
 
-5. 在命令行输入 node + 文件名 即可启动服务器：
+5. 你可以通过在命令提示符中使用脚本调用 node 来启动服务器：
 
    ```bash
-   $ node index.js
-   示例程序正在监听 8000 端口！
+   node index.js
    ```
 
-6. 在浏览器中访问这个 URL（<http://127.0.0.1:8000/>），如果一切正常，浏览器会直接显示出 "Hello world!" 字符串。
+   你将会看到以下控制台输出：
 
-### 开发依赖（Development dependencies）
+   ```plain
+   示例程序正在监听 3000 端口！
+   ```
+
+6. 在浏览器中访问这个 URL `http://127.0.0.1:3000/`，如果一切正常，浏览器会直接显示出“Hello world!”字符串。
+
+### 开发依赖
 
 如果一个依赖只在开发过程中用到，应该将其保存为“开发依赖”（这样，包的用户便无需在生产环境中安装它们）。比如，如果要使用 [eslint](http://eslint.org/)（一款流行的 JavaScript lint 工具）可以这样调用 NPM：
 
@@ -256,7 +267,7 @@ npm install eslint --save-dev
 ```
 
 > [!NOTE]
-> "[lint](https://zh.wikipedia.org/wiki/Lint)" 是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。
+> “[lint](https://zh.wikipedia.org/wiki/Lint)”是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。
 
 ### 运行任务
 
@@ -358,7 +369,7 @@ DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下�
 
 ![设置 DEBUG 命令显示的日志信息](debug.png)
 
-打开浏览器并访问 <http://127.0.0.1:3000/> 将看到 Express 的默认欢迎页面。
+打开浏览器并访问 `http://127.0.0.1:3000/` 将看到 Express 的默认欢迎页面。
 
 ![生成应用的默认主页](express.png)
 

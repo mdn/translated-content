@@ -636,11 +636,11 @@
 /pt-BR/docs/Web/API/WindowEventHandlers/onpopstate	/pt-BR/docs/conflicting/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onstorage	/pt-BR/docs/Web/API/Window/storage_event
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/Window/atob
-/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/Window/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/Window/fetch
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/Window/setInterval
-/pt-BR/docs/Web/API/WindowTimers.clearTimeout	/pt-BR/docs/Web/API/clearTimeout
-/pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
+/pt-BR/docs/Web/API/WindowTimers.clearTimeout	/pt-BR/docs/Web/API/Window/clearTimeout
+/pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/Window/clearTimeout
 /pt-BR/docs/Web/API/XMLDocument/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
 /pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas	/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
@@ -648,6 +648,7 @@
 /pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
 /pt-BR/docs/Web/API/atob	/pt-BR/docs/Web/API/Window/atob
+/pt-BR/docs/Web/API/clearTimeout	/pt-BR/docs/Web/API/Window/clearTimeout
 /pt-BR/docs/Web/API/console/assert	/pt-BR/docs/Web/API/console/assert_static
 /pt-BR/docs/Web/API/console/clear	/pt-BR/docs/Web/API/console/clear_static
 /pt-BR/docs/Web/API/console/count	/pt-BR/docs/Web/API/console/count_static
