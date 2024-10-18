@@ -14,13 +14,13 @@ l10n:
 - `name`
   - : 一个字符串，应设置为 `HMAC`。
 - `hash`
-  - : 表示要使用的[摘要算法](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)的字符串。可以取值为 `SHA-256`、`SHA-384` 或 `SHA-512`。
+  - : 表示要使用的[摘要函数](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)名称的字符串。可以取值为 `SHA-256`、`SHA-384` 或 `SHA-512`。
 - `length` {{optional_inline}}
   - : 一个表示密钥位长度的 `Number`。如果省略此属性，则密钥的长度将等于所选摘要函数生成的摘要的长度。除非你有充分的理由使用不同的长度，否则请省略此属性并使用默认值。
 
 ## 示例
 
-参见示例 {{domxref("SubtleCrypto.generateKey()")}}。
+参见 {{domxref("SubtleCrypto.generateKey()")}} 的示例。
 
 ## 规范
 
