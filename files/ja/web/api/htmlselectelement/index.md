@@ -2,7 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,10 +13,8 @@ l10n:
 
 ## プロパティ
 
-_このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} からプロパティを継承しています。_
+_このインターフェイスには {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLSelectElement.autofocus")}}
-  - : 論理値で、 HTML の [`autofocus`](/ja/docs/Web/HTML/Element/select#autofocus) 属性を反映し、ページが読み込みの際に、ユーザーが異なるコントロールに入力するなどで上書きをしない限り、コントロールが入力フォーカスを持つべきかどうかを示します。文書中のフォーム関連要素の中で、この属性を指定できるのは 1 つだけです。
 - {{domxref("HTMLSelectElement.disabled")}}
   - : 論理値で、 HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#disabled) 属性を反映し、コントロールが無効か否か、つまりクリックを受け付けるかどうかを示します。
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
@@ -52,34 +50,34 @@ _このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Eleme
 
 ## メソッド
 
-_このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} からメソッドを継承しています。_
+_このインターフェイスには {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} から継承したメソッドがあります。_
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : 要素をこの `select` 要素にある `option` 要素の集合に加えます。
-- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
-  - : この要素から入力フォーカスを外します。_このメソッドは {{domxref("HTMLElement")}} での実装になりました_。
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : 要素に何らかの制約があるか、それを満たしているかをチェックします。要素が制約に違反していた場合、ブラウザーはキャンセル可能な {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを要素に送ります（そして `false` を返します）。
-- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
-  - : この要素に入力フォーカスを与えます。_このメソッドは {{domxref("HTMLElement")}} での実装になりました_。
 - {{domxref("HTMLSelectElement.item()")}}
-  - : この {{HTMLElement("select")}} 要素の選択肢の集合から項目を取得します。配列風に角括弧または括弧で序数を指定することで、明示的にこのメソッドを呼び出さずに項目にアクセスすることもできます。
+  - : この {{HTMLElement("select")}} 要素の選択肢の集合から項目を取得します。角括弧または括弧で序数を指定することで、明示的にこのメソッドを呼び出さずに項目にアクセスすることもできます。
 - {{domxref("HTMLSelectElement.namedItem()")}}
-  - : 選択肢の集合から指定した名前で項目を取得します。名前の文字列は option ノードの `id` または `name` 属性と一致させることができます。配列風に角括弧または括弧で名前を指定することで、明示的にこのメソッドを呼び出さずに項目にアクセスすることもできます。
+  - : 選択肢の集合から指定した名前で項目を取得します。名前の文字列は option ノードの `id` または `name` 属性と一致させることができます。角括弧または括弧で名前を指定することで、明示的にこのメソッドを呼び出さずに項目にアクセスすることもできます。
 - {{domxref("HTMLSelectElement.remove()")}}
   - : この `select` 要素の選択肢の集合から、指定された序数の要素を削除します。
 - {{domxref("HTMLSelectElement.reportValidity()")}}
   - : このメソッドは、この要素の制約の問題があれば、ユーザーに報告します。問題があれば、キャンセル可能な {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを要素で発生させ、 `false` を返します。問題がなければ、 `true` を返します。
 - {{domxref("HTMLSelectElement.setCustomValidity()")}}
   - : 選択要素の独自の検証メッセージを指定されたメッセージに設定します。空文字列を使用すると、要素に独自の検証エラーが*ない*ことを示します。
+- {{domxref("HTMLSelectElement.showPicker()", "showPicker()")}}
+  - : オプションピッカーを表示します。
 
 ## イベント
+
+_このインターフェイスには {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} から継承したイベントがあります。_
 
 これらのイベントを待ち受けするには {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
 - {{domxref("HTMLElement/change_event", "change")}} イベント
   - : ユーザーが選択肢を選択したときに発行されます。
-- {{domxref("HTMLElement/input_event", "input")}} イベント
+- {{domxref("Element/input_event", "input")}} イベント
   - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} の各要素の `value` が変化したときに発行されます。
 
 ## 例
