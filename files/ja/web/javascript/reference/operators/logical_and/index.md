@@ -78,8 +78,8 @@ console.log(A() && B());
 
 AND 演算子は OR 演算子よりも高い優先順位を持つので、 `&&` 演算子は `||` 演算子よりも先に実行されます（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
-```js
-false || (true && true); // true を返す
+```js-nolint
+true || false && false; // true を返す
 true && (false || false); // false を返す
 2 == 3 || (4 < 0 && 1 == 1); // false を返す
 ```
