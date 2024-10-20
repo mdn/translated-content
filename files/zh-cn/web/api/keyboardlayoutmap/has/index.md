@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-{{domxref('KeyboardLayoutMap')}} 接口的 **`has()`** 方法返回一个布尔值，指示该对象是否具有具有指定键的元素。
+{{domxref('KeyboardLayoutMap')}} 接口的 **`has()`** 方法返回一个布尔值，指示该对象是否具有指定键的元素。
 
 在 [UI 事件 KeyboardEvent 代码值](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system)规范中可以找到有效键的列表。
 
