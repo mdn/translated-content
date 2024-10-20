@@ -1,17 +1,17 @@
 ---
-title: structuredClone() グローバル関数
+title: "Window: structuredClone() メソッド"
+short-title: structuredClone()
 slug: Web/API/Window/structuredClone
-original_slug: Web/API/structuredClone
 l10n:
-  sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-グローバルの **`structuredClone()`** メソッドは、指定された値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
+**`structuredClone()`** は {{domxref("Window")}} のメソッドで、指定された値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
 
 このメソッドでは、元の値の[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を、新しいオブジェクトにクローンするのではなく、移譲することもできます。
-移譲されたオブジェクトは元のオブジェクトから切り離され、新しいオブジェクトに装着されます。元のオブジェクトからはもうアクセスできなくなります。
+移譲されたオブジェクトは元のオブジェクトから切り離され、新しいオブジェクトに関連付けられます。元のオブジェクトからはもうアクセスできなくなります。
 
 ## 構文
 
@@ -59,8 +59,7 @@ console.assert(clone.itself === clone); // 循環参照も保持されている
 
 ### 移譲される値
 
-[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)（のみ）が複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `transfer` プロパティを使用します。
-移譲により、元のオブジェクトは使用不可能になります。
+[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)（のみ）が複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `transfer` プロパティを使用します。移譲により、元のオブジェクトは使用不可能になります。
 
 > [!NOTE]
 > これが役立つ場面として、バッファー内のデータを保存する前に非同期で検証する場合です。
@@ -112,7 +111,7 @@ console.log(mushrooms1.amanita); // ["muscaria"]
 
 ### オブジェクトの移譲
 
-この例では、 {{jsxref("ArrayBuffer")}} を作成し、そのバッファーがメンバーであるオブジェクトを複製し、バッファーを移譲しています。複製したオブジェクトでバッファーを使用することができますが、元のバッファを使用しようとすると例外が発生します。
+この例では、 {{jsxref("ArrayBuffer")}} を作成し、そのバッファーがメンバーであるオブジェクトを複製し、バッファーを移譲しています。複製したオブジェクトでバッファーを使用することができますが、元のバッファーを使用しようとすると例外が発生します。
 
 ```js
 // バイト単位のサイズを指定して ArrayBuffer を作成
