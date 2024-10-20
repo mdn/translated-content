@@ -15,7 +15,7 @@ JavaScript 的动态特性包括：运行时对象构造、变量参数列表、
 
 JavaScript 标准是 [ECMAScript 语言规范](https://tc39.es/ecma262/)（ECMA-262）和 [ECMAScript 国际化 API 规范](https://tc39.es/ecma402/)（ECMA-402）。只要某个浏览器实现了某个特性，我们就会尝试详细记录这个特性。这意味着，当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)在浏览器中实现时，文档和 MDN 文章中的示例可能会使用这些新特性。大多数时候发生在[阶段](https://tc39.es/process-document/) 3 和阶段 4 之间，通常在正式发布之前。
 
-不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)弄混——**JavaScript *不是*“解释型的 Java”**。“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标。然而，这两门编程语言有着非常不同的语法、语义和用途。
+不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)弄混——**JavaScript _不是_“解释型的 Java”**。“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标。然而，这两门编程语言有着非常不同的语法、语义和用途。
 
 JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)）的文档包含以下内容：
 
