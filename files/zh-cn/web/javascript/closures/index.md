@@ -1,31 +1,61 @@
 ---
 title: 闭包
 slug: Web/JavaScript/Closures
+l10n:
+  sourceCommit: 2463abc1ca0fb6588d182651f8f659ae0d618915
 ---
 
 {{jsSidebar("Intermediate")}}
 
-**闭包**（closure）是一个函数以及其捆绑的周边环境状态（**lexical environment**，**词法环境**）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript 中，闭包会随着函数的创建而被同时创建。
+**闭包**是捆绑起来（封闭的）的函数和函数周围状态（**词法环境**）的引用的组合。换而言之，闭包让函数能访问它的外部作用域。在 JavaScript 中，闭包会随着函数的创建而同时创建。
 
 ## 词法作用域
 
-请看下面的代码：
+请看下面的示例代码：
 
 ```js
 function init() {
-  var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+  var name = "Mozilla"; // name 是 init 创建的局部变量
   function displayName() {
-    // displayName() 是内部函数，一个闭包
-    alert(name); // 使用了父函数中声明的变量
+    // displayName() 是内部函数，它形成一个闭包
+    alert(name); // 使用父函数中声明的变量
   }
   displayName();
 }
 init();
 ```
 
-`init()` 创建了一个局部变量 `name` 和一个名为 `displayName()` 的函数。`displayName()` 是定义在 `init()` 里的内部函数，并且仅在 `init()` 函数体内可用。请注意，`displayName()` 没有自己的局部变量。然而，因为它可以访问到外部函数的变量，所以 `displayName()` 可以使用父函数 `init()` 中声明的变量 `name` 。
+`init()` 创建了一个局部变量 `name` 和一个名为 `displayName()` 的函数。`displayName()` 是定义在 `init()` 里的内部函数，并且仅在 `init()` 函数体内可用。请注意，`displayName()` 没有自己的局部变量。然而，因为它可以访问到外部作用域的变量，所以 `displayName()` 可以使用父函数 `init()` 中声明的变量 `name`。
 
-使用[这个 JSFiddle 链接](https://jsfiddle.net/xAFs9/3/)运行该代码后发现， `displayName()` 函数内的 `alert()` 语句成功显示出了变量 `name` 的值（该变量在其父函数中声明）。这个*词法作用域*的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。
+使用[这个 JSFiddle 链接](https://jsfiddle.net/3dxck52m/)运行该代码后发现，`displayName()` 函数成功显示了变量 `name` 的值（该变量在其父函数中声明）。这个*词法作用域*的例子描述了解析器在函数嵌套的情况下解析变量名的方式。*词法（lexical）*一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问在它们外部作用域中声明的变量。
+
+### let 作用域和 const 作用域
+
+传统上（ES 6 之前），JavaScript 变量仅有两种类型的作用域：*函数作用域*和*全局作用域*。用 `var` 声明的变量要么属于函数作用域要么属于全局作用域，这取决于变量是在函数内声明的还是在函数外声明的。这可能有些棘手，因为带花括号的块并不会创建作用域：
+
+```js
+if (Math.random() > 0.5) {
+  var x = 1;
+} else {
+  var x = 2;
+}
+console.log(x);
+```
+
+对于来自块会创建作用域的其他语言（如 C、Java）的开发者而言，上面的代码应该在 `console.log` 这一行抛出一个错误，因为我们在任意一个块中的 `x` 的作用域的外边。然而，因为块不会为 `var` 创建作用域，这里的 `var` 语句实际上创建的是全局作用域。下面也介绍了一个[实际的例子](#在循环中创建闭包一个常见错误)，解释在和闭包结合时，这个特性如何造成真实的问题。
+
+在 ES 6 中，JavaScript 引入了 `let` 和 `const` 声明，这些声明围绕在诸如[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)的其他东西之中，会创建块级作用域的变量。
+
+```js
+if (Math.random() > 0.5) {
+  const x = 1;
+} else {
+  const x = 2;
+}
+console.log(x); // ReferenceError: x is not defined
+```
+
+本质上，ES 6 最终将块当作作用域，但仅当你使用 `let` 或 `const` 声明变量，ES 6 中引入的[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)引入了另一种作用域。闭包能够捕获所有这些作用域中的变量，稍后我们会介绍这些情形。
 
 ## 闭包
 
@@ -33,14 +63,14 @@ init();
 
 ```js
 function makeFunc() {
-  var name = "Mozilla";
+  const name = "Mozilla";
   function displayName() {
-    alert(name);
+    console.log(name);
   }
   return displayName;
 }
 
-var myFunc = makeFunc();
+const myFunc = makeFunc();
 myFunc();
 ```
 
@@ -59,8 +89,8 @@ function makeAdder(x) {
   };
 }
 
-var add5 = makeAdder(5);
-var add10 = makeAdder(10);
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
 
 console.log(add5(2)); // 7
 console.log(add10(2)); // 12
@@ -74,7 +104,7 @@ console.log(add10(2)); // 12
 
 ## 实用的闭包
 
-闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来。这显然类似于面向对象编程。在面向对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法相关联。
+闭包很有用，因为它允许将数据（词法环境）与运算数据的函数关联起来。这显然类似于面向对象编程。在面向对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法相关联。
 
 因此，通常你使用只有一个方法的对象的地方，都可以使用闭包。
 
@@ -127,41 +157,46 @@ document.getElementById("size-16").onclick = size16;
 <a href="#" id="size-16">16</a>
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/cubr4hs0/","","200")}}
+用 [JSFiddle](https://jsfiddle.net/hotae160/) 运行这段代码。
 
 ## 用闭包模拟私有方法
 
-编程语言中，比如 Java，是支持将方法声明为私有的，即它们只能被同一个类中的其他方法所调用。
+像 Java 这样的编程语言是支持将方法声明为私有的，即它们只能被同一个类中的其他方法所调用。
 
 而 JavaScript 没有这种原生支持，但我们可以使用闭包来模拟私有方法。私有方法不仅仅有利于限制对代码的访问：还提供了管理全局命名空间的强大能力，避免非核心的方法弄乱了代码的公共接口部分。
 
 下面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为[模块模式（module pattern）](http://www.google.com/search?q=javascript+module+pattern)：
 
 ```js
-var Counter = (function () {
-  var privateCounter = 0;
+const counter = (function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
+
   return {
-    increment: function () {
+    increment() {
       changeBy(1);
     },
-    decrement: function () {
+
+    decrement() {
       changeBy(-1);
     },
-    value: function () {
+
+    value() {
       return privateCounter;
     },
   };
 })();
 
-console.log(Counter.value()); /* logs 0 */
-Counter.increment();
-Counter.increment();
-console.log(Counter.value()); /* logs 2 */
-Counter.decrement();
-console.log(Counter.value()); /* logs 1 */
+console.log(counter.value()); // 0.
+
+counter.increment();
+counter.increment();
+console.log(counter.value()); // 2.
+
+counter.decrement();
+console.log(counter.value()); // 1.
 ```
 
 在之前的示例中，每个闭包都有它自己的词法环境；而这次我们只创建了一个词法环境，为三个函数所共享：`Counter.increment`，`Counter.decrement` 和 `Counter.value`。
@@ -174,33 +209,38 @@ console.log(Counter.value()); /* logs 1 */
 > 你应该注意到我们定义了一个匿名函数，用于创建一个计数器。我们立即执行了这个匿名函数，并将他的值赋给了变量`Counter`。我们可以把这个函数储存在另外一个变量`makeCounter`中，并用他来创建多个计数器。
 
 ```js
-var makeCounter = function () {
-  var privateCounter = 0;
+const makeCounter = function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function () {
+    increment() {
       changeBy(1);
     },
-    decrement: function () {
+
+    decrement() {
       changeBy(-1);
     },
-    value: function () {
+
+    value() {
       return privateCounter;
     },
   };
 };
 
-var Counter1 = makeCounter();
-var Counter2 = makeCounter();
-console.log(Counter1.value()); /* logs 0 */
-Counter1.increment();
-Counter1.increment();
-console.log(Counter1.value()); /* logs 2 */
-Counter1.decrement();
-console.log(Counter1.value()); /* logs 1 */
-console.log(Counter2.value()); /* logs 0 */
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1.value()); // 0.
+
+counter1.increment();
+counter1.increment();
+console.log(counter1.value()); // 2.
+
+counter1.decrement();
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
 ```
 
 请注意两个计数器 `Counter1` 和 `Counter2` 是如何维护它们各自的独立性的。每个闭包都是引用自己词法作用域内的变量 `privateCounter` 。
@@ -210,30 +250,141 @@ console.log(Counter2.value()); /* logs 0 */
 > [!NOTE]
 > 以这种方式使用闭包，提供了许多与面向对象编程相关的好处——特别是数据隐藏和封装。
 
+## 闭包作用域链
+
+嵌套函数能访问的外部函数的作用域包括外部函数包围的作用域——高效地形成一条函数作用域链。阐释，consider 下面地示例代码：
+
+```js
+// 全局作用域
+const e = 10;
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      // 外部函数作用域
+      return function (d) {
+        // 局部作用域
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
+
+console.log(sum(1)(2)(3)(4)); // 20
+```
+
+你也可以不用匿名函数：
+
+```js
+// 全局作用域
+const e = 10;
+function sum(a) {
+  return function sum2(b) {
+    return function sum3(c) {
+      // 外部函数作用域
+      return function sum4(d) {
+        // 局部作用域
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
+
+const sum2 = sum(1);
+const sum3 = sum2(2);
+const sum4 = sum3(3);
+const result = sum4(4);
+console.log(result); // 20
+```
+
+在上面地示例中，有一系列地嵌套函数，所有地嵌套函数都能访问外部函数地作用域。在这个上下文中，我们说闭包能访问*全部*的外部作用域。
+
+闭包也能捕获块作用域和模块作用域中的变量。例如，下面的示例创建了一个块级作用域变量 `y` 上的闭包：
+
+```js
+function outer() {
+  let getY;
+  {
+    const y = 6;
+    getY = () => y;
+  }
+  console.log(typeof y); // undefined
+  console.log(getY()); // 6
+}
+
+outer();
+```
+模块上的闭包更有趣。
+
+```js
+// myModule.js
+let x = 5;
+export const getX = () => x;
+export const setX = (val) => {
+  x = val;
+};
+```
+
+这里，模块导出一对 getter-setter 函数，它们包住了模块作用域变量 `x`。即使在 `x` 不能从其他模块中直接访问，它也能通过函数进行读写。
+
+```js
+import { getX, setX } from "./myModule.js";
+
+console.log(getX()); // 5
+setX(6);
+console.log(getX()); // 6
+```
+
+闭包也能包住导入的值，这称为*实时 {{Glossary("binding", "绑定")}}*，因为在原始值变化时，导入值也相应地变化。
+
+```js
+// myModule.js
+export let x = 1;
+export const setX = (val) => {
+  x = val;
+};
+```
+
+```js
+// closureCreator.js
+import { x } from "./myModule.js";
+
+export const getX = () => x; // 包住导入的实时绑定
+```
+
+```js
+import { getX } from "./closureCreator.js";
+import { setX } from "./myModule.js";
+
+console.log(getX()); // 1
+setX(2);
+console.log(getX()); // 2
+```
+
 ## 在循环中创建闭包：一个常见错误
 
 在 ECMAScript 2015 引入 [`let` 关键字](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
+    // Culprit is the use of `var` on this line
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
@@ -256,7 +407,7 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
@@ -267,7 +418,7 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
@@ -289,12 +440,12 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
@@ -305,7 +456,7 @@ function setupHelp() {
       document.getElementById(item.id).onfocus = function () {
         showHelp(item.help);
       };
-    })(); // 马上把当前循环项的 item 与事件回调相关联起来
+    })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
   }
 }
 
@@ -321,7 +472,7 @@ function showHelp(help) {
 
 function setupHelp() {
   const helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
@@ -348,7 +499,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
@@ -417,4 +568,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-在前面的两个示例中，继承的原型可以为所有对象共享，不必在每一次创建对象时定义方法。参见 [对象模型的细节](/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model) 一章可以了解更为详细的信息。
+在前面的两个示例中，继承的原型可以为所有对象共享，不必在每一次创建对象时定义方法。参见 [继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 一章可以了解更为详细的信息。
