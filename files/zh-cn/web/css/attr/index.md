@@ -27,7 +27,7 @@ attr(src url);
 attr(data-count number);
 attr(data-width px);
 
-/* 带默认值 */
+/* 带回退值 */
 attr(data-count number, 0);
 attr(src url, "");
 attr(data-width px, inherit);
