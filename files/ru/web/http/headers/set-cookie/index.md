@@ -5,113 +5,160 @@ slug: Web/HTTP/Headers/Set-Cookie
 
 {{HTTPSidebar}}
 
-HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
+Заголовок HTTP-ответа **`Set-Cookie`** используется для отправки куки-файла с сервера агенту пользователя, чтобы он мог позже отправить его обратно на сервер.
+Для отправки нескольких куки-файлов в одном ответе должны быть отправлены несколько заголовков **`Set-Cookie`**.
 
-Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Cookies).
+> **Предупреждение:** Браузеры блокируют доступ клиентскому JavaScript-коду к заголовкам `Set-Cookie`, как этого требует спецификация, определяющая `Set-Cookie` как [запрещённый заголовок ответа](https://fetch.spec.whatwg.org/#forbidden-response-header-name), который [должен быть исключён](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) из любого ответа доступного для клиентских скриптов.
 
-| Тип заголовка                         | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | нет                             |
+Больше информации содержится в руководстве по [использованию HTTP-кук](/ru/docs/Web/HTTP/Cookies).
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header", "Заголовок ответа")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>нет</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
+      <td>да</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Синтаксис
 
-```
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
-Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
-Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
+Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
+Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
+Set-Cookie: <cookie-name>=<cookie-value>; Partitioned
 Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
 Set-Cookie: <cookie-name>=<cookie-value>; Secure
-Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
 
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
-Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None {{experimental_inline}}
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None; Secure
 
-// Multiple directives are also possible, for example:
+// Также возможно указать несколько атрибутов, например:
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
 ```
 
-## Директивы
-
-- По умолчанию - хост текущего URL документа, не включая поддомены
-- В текущей спецификация начальная точка в имени хоста игнорируется (`.example.com`)
-- Cookie будут отправляться также на поддомены указанного хоста
-- Указывать несколько хостов недопустимо.
-
-<!---->
-
-- По умолчанию - хост текущего URL документа, не включая поддомены
-- В текущей спецификация начальная точка в имени хоста игнорируется (.example.com)
-- Cookie будут отправляться также на поддомены указанного хоста
-- Указывать несколько хостов недопустимо.
-
-<!---->
+## Атрибуты
 
 - `<cookie-name>=<cookie-value>`
 
-  - : Cookie начинается с пары имя-значение:
+  - : Задаёт имя и значение куки. Объявление куки начинается с пары имя-значение.
 
-    - `<cookie-name>` может содержать любые символы US-ASCII, за исключением управляющих символов (CTLs), пробелов, или табуляций. Оно также не должно содержать разделительных символов, таких как следующие: `( ) < > @ , ; : \ " / [ ] ? = { }`.
-    - `<cookie-value>` может быть опционально заключено в двойные кавычки, разрешены любые символы US-ASCII за исключением CTLs, пробела, двойных кавычек, запятой, точки с запятой, и обратного слеша. **Кодирование:** Многие реализации выполняют кодирование в значениях cookies, однако этого не требуется по спецификации RFC. Однако, это помогает удовлетворить требование о разрешённых символах в \<cookie-value>.
-    - **`__Secure-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Secure-` (подчёркивание является частью префикса ) должны быть установлены вместе с флагом secure, и должны быть с безопасной страницы (HTTPS).
-    - **`__Host-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Host-` должны быть установлены с флагом secure `secure`, должны быть с безопасной страницы (HTTPS), не должны иметь определённый домен (и, следовательно, не не посылаются поддоменами), а также параметр Path должен быть "/".
+    `<cookie-name>` может содержать любые символы US-ASCII за исключением управляющих (символы {{Glossary("ASCII")}} от 0 до 31 и 127) и разделительных (пробел, табуляция и символы: `( ) < > @ , ; : \ " / [ ] ? = { }`).
+
+    `<cookie-value>` может быть обёрнуто в двойные кавычки и включать любой символ US-ASCII за исключением управляющих (символы ASCII от 0 до 31 и 127), {{glossary("Whitespace", "пробельных символов")}}, двойных кавычек, запятых, точек с запятой и обратных слешей.
+
+    **Кодирование**: Многие реализации выполняют [процентное кодирование](https://en.wikipedia.org/wiki/Percent-encoding) значения куки, однако это не требуется спецификацией RFC. Процентное кодирование помогает удовлетворить требования к символам, разрешённым для `<cookie-value>`.
+
+    > **Примечание:** Некоторые имена куки (`<cookie-name>`) имеют специальное значение:
+    >
+    > **Префикс `__Secure-`**: Куки с именами, начинающимися с `__Secure-` (дефис является частью префикса), должны быть установлены с флагом `secure` с защищённой страницы (HTTPS).
+    >
+    > **Префикс `__Host-`**: Куки с именами, начинающимися с `__Host-`, отправляются только на поддомен или домен хоста, который их установил, и ни на какой другой хост. Они должны быть установлены с флагом `secure`, должны быть с защищенной страницы (HTTPS), не должны иметь указанного домена, и путь должен быть `/`.
+
+- `Domain=<domain-value>` {{optional_inline}}
+
+  - : Определяет хост, на который будет отправлен куки.
+
+    В качестве значения может быть установлен только текущий домен или домен более высокого порядка, если это не является [общедоступным суффиксом](https://en.wikipedia.org/wiki/Public_Suffix_List). Установка домена сделает куки доступным для него, а также для всех его поддоменов.
+
+    Если атрибут не указан, по умолчанию используется хост текущего URL документа, не включая поддомены.
+
+    В отличие от предыдущих спецификаций, начальные точки в именах доменов (`.example.com`) игнорируются.
+
+    Множественные значения хостов/доменов _не_ допускаются, но если домен _указан_, то поддомены всегда включаются.
 
 - `Expires=<date>` {{optional_inline}}
 
-  - : Максимальное время жизни cookie в формате метки даты-времени HTTP. См. {{HTTPHeader("Date")}} о деталях формата Если не определён, cookie будет иметь время жизни **сессионного cookie.** Сессия окончена, когда клиент отключается, что приводит к удалению сессионных cookie в этот момент. Однако, многие браузеры имеют возможность, называемую восстановление сессии, которая сохраняет все ваши вкладки и затем возвращает их, когда вы в следующий раз запускаете браузер. Cookies будут также присутствовать, словно вы никогда не закрывали браузер.
+  - : Указывает максимальный срок жизни куки в виде метки времени HTTP-даты.
+    См. {{HTTPHeader("Date")}} для необходимого формата.
 
-    Когда устанавливается срок действия, время и дата устанавливаются не относительно сервера, а относительно клиента, на котором установлено cookie,
+    Если не указано, куки становится **session cookie**.
+    Сеанс завершается, когда клиент отключается, после чего
+    сеансовый куки удаляется.
 
-- `Max-Age=<number>` {{optional_inline}}
-  - : Количество секунд, после которого cookie устаревает. Ноль или отрицательное число приводят к моментальному устареванию cookie. Старые браузеры (ie6, ie7, and ie8) не поддерживают Max-Age. Для прочих браузеров, если оба параметра (`Expires` and `Max-Age`) установлены, `Max-Age` будет иметь преимущество.
-- `Domain=<domain-value>` {{optional_inline}}
+    > **Предупреждение:** Многие веб-браузеры имеют функцию _восстановления сеанса_, которая сохраняет все вкладки и восстанавливает их при следующем использовании браузера. Session cookie также будут восстановлены, как если бы браузер никогда не закрывался.
 
-  - : Хост, на который будут отправляться cookie.
-
-    По умолчанию - хост текущего URL документа, не включая поддомены
-    В текущей спецификация начальная точка в имени хоста игнорируется (.example.com)
-    Cookie будут отправляться также на поддомены указанного хоста
-    Указывать несколько хостов недопустимо.
-
-- `Path=<path-value>` {{optional_inline}}
-
-  - : Путь, который должен существовать в запрошенном URL, иначе браузер не отправит заголовок Cookie.
-
-    Пример: `/` - cookie будет отправляться со всеми запросами
-    Пример: `/docs/` - cookie будет отправляться с запросами к директории docs и её поддиректориям
-
-- `Secure` {{optional_inline}}
-
-  - : Cookie будет отправлен на сервер только с запросами c использованием SSL и протокола HTTPS.
-
-    Cookie не будет дополнительно шифроваться, поэтому в нем не стоит хранить конфиденциальную информацию.
-
-    **Note:** небезопасные сайты (`http:`) не могут использовать cookie с атрибутом "secure" (начиная с Chrome 52+ и Firefox 52+).
+    Когда установлена дата `Expires`, крайний срок считается относительно к _клиенту_, на котором устанавливается куки, а не к серверу.
 
 - `HttpOnly` {{optional_inline}}
 
-  - : Запрещает JavaScript доступ к cookie
+  - : Запрещает JavaScript доступ к куки, например, через свойство {{domxref("Document.cookie")}}.
+    Обратите внимание, что куки, созданный с `HttpOnly`, все равно будет отправлен с запросами, инициированными JavaScript, например, при вызове {{domxref("XMLHttpRequest.send()")}} или {{domxref("fetch()")}}.
+    Это снижает вероятность атак с использованием межсайтового скриптинга ({{Glossary("Cross-site_scripting", "XSS")}}).
 
-    Полезно для защиты от XSS-атак.
+- `Max-Age=<number>` {{optional_inline}}
+
+  - : Указывает количество секунд до истечения срока действия куки. Ноль или отрицательное число приведет к немедленному истечению срока действия куки. Если установлены оба атрибута `Expires` и `Max-Age`, приоритет будет у `Max-Age`.
+
+- `Partitioned` {{optional_inline}}{{experimental_inline}}
+
+  - : Указывает, что куки должны храниться с использованием разделенного хранилища. См. [Cookies с независимым разделённым хранением (CHIPS)](/ru/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) для получения дополнительных сведений.
+
+- `Path=<path-value>` {{optional_inline}}
+
+  - : Указывает путь, который _должен_ существовать в запрашиваемом URL, чтобы браузер отправил заголовок `Cookie`.
+
+    Символ слеш (`/`) интерпретируется как разделитель директорий, и поддиректории также будут подходить. Например, для `Path=/docs`,
+
+    - подойдут пути запроса `/docs`, `/docs/`, `/docs/Web/`, и `/docs/Web/HTTP`.
+    - не подойдут `/`, `/docsets`, `/fr/docs`.
 
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - :&#x20;
+  - : Контролирует, отправляется ли куки с cross-site запросами, обеспечивая некоторую защиту от атак межсайтовой подделки запросов ({{Glossary("CSRF")}}).
 
-    - `Strict`: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the `SameSite=Strict` attribute are sent.
-    - `Lax`: The cookie is withheld on cross-site subrequests, such as calls to load images or frames, but is sent when a user navigates to the URL from an external site, such as by following a link
-    - `None`: The browser sends the cookie with both cross-site and same-site requests
+    Возможные значения атрибута:
 
-    Allows servers to assert that a cookie ought not to be sent along with cross-site requests, which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
+    - `Strict`
 
-    Современные браузеры используют `SameSite=Lax`. Если необходима работа `SameSite=None` cookie должна быть установлена с атрибутом `Secure`.
+      - : Означает, что браузер отправляет куки только для запросов с того же сайта, то есть запросов, исходящих с того же сайта, который установил куки.
+        Если запрос исходит с другого домена или схемы (даже с тем же доменом), куки с атрибутом `SameSite=Strict` не отправляются.
+
+    - `Lax`
+
+      - : Означает, что куки не отправляются при cross-site запросах, таких как запросы для загрузки изображений или фреймов, но отправляются, когда пользователь переходит на сайт-источник с внешнего сайта (например, следуя по ссылке).
+        Это поведение по умолчанию, если атрибут `SameSite` не указан.
+
+    - `None`
+
+      - : Означает, что браузер отправляет куки как с cross-site запросами, так и с запросами с того же сайта.
+        Атрибут `Secure` также должен быть установлен при установке этого значения, например `SameSite=None; Secure`. Если `Secure` отсутствует, будет выведена ошибка:
+
+        ```plain
+        Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
+
+        This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
+        ```
+
+        > **Примечание:** Куки с атрибутом [`Secure`](#secure) отправляются на сервер только с зашифрованным запросом по протоколу HTTPS. Обратите внимание, что небезопасные сайты (`http:`) не могут устанавливать куки с атрибутом `Secure`, и поэтому не могут использовать `SameSite=None`.
+
+        > **Предупреждение:** Куки с атрибутом `SameSite=None; Secure`, которые также не имеют атрибута [`Partitioned`](#partitioned), могут быть заблокированы в кросс-сайтовых контекстах в будущих версиях браузеров. Такое поведение защищает данные пользователей от межсайтового отслеживания. См. [Cookies с независимым разделённым хранением (CHIPS)](/ru/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) и [Third-party cookies](/ru/docs/Web/Privacy/Third-party_cookies).
+
+- `Secure` {{optional_inline}}
+
+  - : Указывает, что куки отправляются на сервер только при выполнении запроса по протоколу `https:` (за исключением localhost), и поэтому более устойчивы к [атакам типа "человек посередине"](/ru/docs/Glossary/MitM).
+
+    > **Примечание:** Не следует полагать, что `Secure` предотвращает весь доступ к конфиденциальной информации в куки (ключи сессий, данные для входа и т. д.). Куки с этим атрибутом все еще могут быть прочитаны/изменены при доступе к жесткому диску клиента или из JavaScript, если атрибут куки `HttpOnly` не установлен.
+    >
+    > Небезопасные сайты (`http:`) не могут устанавливать куки с атрибутом `Secure` (с Chrome 52 и Firefox 52). Требования `https:` игнорируются, когда атрибут `Secure` установлен для localhost (с Chrome 89 и Firefox 75).
 
 ## Примеры
 
-### Сессионный cookie
+### Session cookie
 
-Сессионные cookies будут удалены после отключения клиента. В них не указываются директивы `Expires` или `Max-Age`. Учитывайте, что часто в браузере включено восстановление сессии.
+**Session cookies** будут удалены после отключения клиента. Куки считаются сессионными если не указываются атрибуты `Expires` или `Max-Age`. Учитывайте, что часто в браузере включено восстановление сессии.
 
 ```
 Set-Cookie: sessionid=38afes7a8; HttpOnly; Path=/
@@ -119,45 +166,66 @@ Set-Cookie: sessionid=38afes7a8; HttpOnly; Path=/
 
 ### Постоянный cookie
 
-Вместо истечения срока действия, когда клиент закрыт, срок действия постоянных файлов cookie истекает в определённую дату (`Expires`) или по истечении определённого промежутка времени (`Max-Age`).
+**Постоянные куки** удаляются в определенную дату (`Expires`) или после определенного времени (`Max-Age`), а не при закрытии клиента.
 
+```http
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
 ```
-Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+
+```http
+Set-Cookie: id=a3fWa; Max-Age=2592000
 ```
 
 ### Неверные домены
 
-Файл cookie, принадлежащий домену, который не включает исходный сервер, [должен быть отклонён пользовательским](https://tools.ietf.org/html/rfc6265#section-4.1.2.3). Следующий cookie будет отклонён, если он был установлен сервером, размещённым на originalcompany.com.
+Файл cookie, принадлежащий домену, который не включает исходный сервер, [должен быть отклонён пользовательским агентом](https://tools.ietf.org/html/rfc6265#section-4.1.2.3). Следующий cookie будет отклонён, если он был установлен сервером, размещённым на `originalcompany.com`:
 
+```http
+Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
 ```
-Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 30 Aug 2019 00:00:00 GMT
+
+Куки для поддомена домена сервера будет отклонен.
+
+Следующий куки будет отклонен, если он установлен сервером, размещенным на example.com:
+
+```http
+Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 ```
 
-### Cookie prefixes
+### Cookie с префиксами
 
-Cookies names with the prefixes `__Secure-` and `__Host-` can be used only if they are set with the `secure` directive from a secure (HTTPS) origin. In addition, cookies with the `__Host-` prefix must have a path of "/" (the entire host) and must not have a domain attribute. For clients that don't implement cookie prefixes, you cannot count on having these additional assurances and the cookies will always be accepted.
+Имена куки с префиксами `__Secure-` или `__Host-` могут использоваться только в том случае, если они установлены с атрибутом `secure` с защищенного (HTTPS) источника.
 
-```
-// Both accepted when from a secure origin (HTTPS)
+Кроме того, куки с префиксом `__Host-` должны иметь путь `/` (означающий любой путь на хосте) и не должны иметь атрибут `Domain`.
+
+> **Предупреждение:** Для клиентов, которые не реализуют префиксы куки, нельзя полагаться на эти дополнительные гарантии, и куки с префиксами всегда будут приниматься.
+
+```http
+// Оба куки будут выставлены при условие что соединение защищено (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/
 
-// Rejected due to missing Secure directive
+// Отклонено из-за отсутствия атрибута Secure
 Set-Cookie: __Secure-id=1
 
-// Rejected due to the missing Path=/ directive
+// Отклонено из-за отсутствия атрибута Path=/
 Set-Cookie: __Host-id=1; Secure
 
-// Rejected due to setting a domain
-Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
+// Отклонено из-за выставления атрибута Domain
+Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 ```
+
+### Partitioned cookie
+
+```http
+Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
+```
+
+> **Примечание:** Partitioned куки должны быть установлены с атрибутом `Secure`. Кроме того, рекомендуется использовать префикс `__Host` при установке разделенных куки, чтобы они были привязаны к имени хоста, а не к регистрируемому домену.
 
 ## Спецификации
 
-| Specification                                                                                    | Title                                                         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                             | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-02](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-02) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -165,10 +233,11 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Compatibility notes
 
-- Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the "secure" directive anymore.
+- Начиная с Chrome 52 и Firefox 52, небезопасные сайты (`http:`) не могут устанавливать куки с атрибутом `Secure`.
 
 ## Смотрите также
 
-- [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
+- [HTTP-куки](/ru/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
+- [Samesite cookies explained](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)
