@@ -44,11 +44,11 @@ let nLastModif = Date.parse(document.lastModified);
 
 请注意，作为字符串的 `lastModified` 无法*轻松*用于比较文档的修改日期。
 
-下面是一个页面切换时显示提示消息的示例（参见：[JavaScript cookies API](/zh-cn/docs/Web/API/Document/cookie)）：
+下面是一个页面切换时显示提示消息的示例（参见：[JavaScript cookies API](/zh-CN/docs/Web/API/Document/cookie)）：
 
 ```js
 // 与 'timestamp' 中的 'last_modif=timestamp' 匹配
-// 例如，'last_modif=1687964614822' 中的 '1687964614822' 
+// 例如，'last_modif=1687964614822' 中的 '1687964614822'
 const pattern = /last_modif\s*=\s*([^;]*)/;
 
 if (
