@@ -1,14 +1,14 @@
 ---
-title: createImageBitmap()
+title: "Window: createImageBitmap() メソッド"
+short-title: createImageBitmap()
 slug: Web/API/Window/createImageBitmap
-original_slug: Web/API/createImageBitmap
 l10n:
-  sourceCommit: 32539676aca5ea2913cfaefeab3ba986ecd2206f
+  sourceCommit: 58d79e9c2206e0a604cd4d7f6fba5181262af420
 ---
 
 {{APIRef("Canvas API")}}
 
-**`createImageBitmap()`** メソッドは、指定されたソースからビットマップを作成し、オプションでそのソースの一部のみを切り抜きます。このメソッドは、ウィンドウとワーカーの両方のグローバルスコープに存在します。このメソッドは、さまざまな画像ソースを受け付け、 {{domxref("ImageBitmap")}} に解決する {{jsxref("Promise")}} を返します。
+**`createImageBitmap()`** は {{domxref("Window")}} インターフェイスのメソッドで、指定されたソースからビットマップを作成し、オプションでそのソースの一部のみを切り抜きます。このメソッドは、ウィンドウとワーカーの両方のグローバルスコープに存在します。このメソッドは、さまざまな画像ソースを受け付け、 {{domxref("ImageBitmap")}} に解決する {{jsxref("Promise")}} を返します。
 
 ## 構文
 
@@ -66,6 +66,19 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 
 この例では、スプライトシートをロードし、個々のスプライトを抽出し、各スプライトをキャンバスにレンダリングします。スプライトシートとは、複数の小さな画像を含む画像で、それぞれを個別にレンダリングできるようにしたいものです。
 
+```html hidden
+元の画像:
+<img src="50x50.jpg" />
+<hr />
+<canvas id="myCanvas"></canvas>
+```
+
+```css hidden
+canvas {
+  border: 2px solid green;
+}
+```
+
 ```js
 const canvas = document.getElementById("myCanvas"),
   ctx = canvas.getContext("2d"),
@@ -74,19 +87,23 @@ const canvas = document.getElementById("myCanvas"),
 // スプライトシートがロードされるのを待ちます
 image.onload = () => {
   Promise.all([
-    // スプライトシートから2つのスプライトを切り取ります
+    // スプライトシートから 2 つのスプライトを切り取ります
     createImageBitmap(image, 0, 0, 32, 32),
     createImageBitmap(image, 32, 0, 32, 32),
+    createImageBitmap(image, 0, 0, 50, 50, { imageOrientation: "flipY" }),
   ]).then((sprites) => {
     // 各スプライトをキャンバスに描きます
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
+    ctx.drawImage(sprites[2], 64, 64);
   });
 };
 
 // 画像ファイルからスプライトシートを読み込みます
-image.src = "sprites.png";
+image.src = "50x50.jpg";
 ```
+
+{{EmbedLiveSample("Creating sprites from a sprite sheet", "100%", "250")}}
 
 ## 仕様書
 
@@ -98,5 +115,6 @@ image.src = "sprites.png";
 
 ## 関連情報
 
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("ImageData")}}
