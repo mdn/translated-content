@@ -18,7 +18,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLParamElement.name")}} {{Deprecated_Inline}}
   - : 表示参数名称的字符串。它反映 [`name`](/zh-CN/docs/Web/HTML/Element/param#name) 属性。
 - {{domxref("HTMLParamElement.value")}} {{Deprecated_Inline}}
-  - : 表示与参数关联值的字符串。它反映 [`value`](/zh-CN/docs/Web/HTML/Element/param#value) 属性。
+  - : 表示与参数关联的值的字符串。它反映 [`value`](/zh-CN/docs/Web/HTML/Element/param#value) 属性。
 - {{domxref("HTMLParamElement.type")}} {{Deprecated_Inline}}
   - : 当 `valueType` 具有 `"ref"` 值时，表示包含参数类型的字符串。它反映 [`type`](/zh-CN/docs/Web/HTML/Element/param#type) 属性。
 - {{domxref("HTMLParamElement.valueType")}} {{Deprecated_Inline}}
