@@ -7,9 +7,9 @@ l10n:
 
 {{JsSidebar}}
 
-**JavaScript**（**JS**）是一门轻量级的、解释型的（或[即时](https://zh.wikipedia.org/wiki/即時編譯)编译型的）、函数优先的编程语言。虽然 JavaScript 最著名的是作为 Web 页面的脚本语言，但[很多非浏览器环境](https://zh.wikipedia.org/wiki/JavaScript#其他)也使用它，例如 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org)、[Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) 等。JavaScript 是一门[基于原型的](/zh-CN/docs/Glossary/Prototype-based_programming)、多范式的、[单线程的](/zh-CN/docs/Glossary/Thread)[动态](/zh-CN/docs/Glossary/Dynamic_typing)语言，支持面向对象、命令式和声明式（如函数式编程）风格。
+**JavaScript**（**JS**）是一种具有{{Glossary("First-class Function", "函数优先")}}特性的轻量级、解释型或者说[即时编译型](https://zh.wikipedia.org/wiki/即時編譯)的编程语言。虽然作为 Web 页面中的脚本语言被人所熟知，但是它也被用到了很多[非浏览器环境](https://zh.wikipedia.org/wiki/JavaScript#其他)中，例如 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org)、[Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) 等。进一步说，JavaScript 是一种[基于原型](/zh-CN/docs/Glossary/Prototype-based_programming)、多范式、[单线程](/zh-CN/docs/Glossary/Thread)的[动态](/zh-CN/docs/Glossary/Dynamic_typing)语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。
 
-JavaScript 的动态特性包括：运行时对象构造、变量参数列表、函数变量、动态脚本创建（通过 [`eval`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)）、对象内枚举（通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 和 [`Object` 工具方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#静态方法)）和源代码恢复（JavaScript 函数会存储其源代码文本，可以通过 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) 检索）。
+JavaScript 的动态特性包括运行时对象的构造、变量参数列表、函数变量、动态脚本创建（通过 [`eval`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)）、对象内枚举（通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 和 [`Object` 工具方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#静态方法)）和源代码恢复（JavaScript 函数会存储其源代码文本，可以使用 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) 进行检索）。
 
 本部分文档将专注于 JavaScript 语言本身，而不是专注于 Web 页面或其他宿主环境特有的那部分。想要了解 Web 页面特有的 {{Glossary("API")}} 信息，请参考 [Web API](/zh-CN/docs/Web/API) 以及 {{Glossary("DOM")}}。
 
@@ -22,11 +22,11 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 - [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
 - [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)
 
-像了解更多与 JavaScript 规范及相关技术有关的信息，参见 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+有关 JavaScript 规范和相关技术的更多信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
 
 ## 教程
 
-通过指南和教程学习如何用 JavaScript 编程。
+借助指南和教程来学习如何用 JavaScript 编程。
 
 ### 面向纯新手
 
