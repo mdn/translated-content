@@ -135,7 +135,7 @@ l10n:
 
 - [`step`](/zh-CN/docs/Web/HTML/Attributes/step)
 - [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
-- 其他 meter 属性: [`low`](/zh-CN/docs/Web/HTML/Attributes/low), [`high`](/zh-CN/docs/Web/HTML/Attributes/high), [`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
+- 其他 meter 属性：[`low`](/zh-CN/docs/Web/HTML/Attributes/low), [`high`](/zh-CN/docs/Web/HTML/Attributes/high), [`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
 - [表单校验](/zh-CN/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}
