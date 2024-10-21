@@ -7,13 +7,13 @@ l10n:
 
 {{deprecated_header}}{{APIRef("HTML DOM")}}
 
-已弃用的 **`HTMLFontElement.color`** 属性是一个反映 [`color`](/zh-CN/docs/Web/HTML/Element/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
+已过时的 **`HTMLFontElement.color`** 属性是一个反映 [`color`](/zh-CN/docs/Web/HTML/Element/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
 
 字符串的格式必须遵循以下 HTML 微语法（参见 [`<color>`](/zh-CN/docs/Web/CSS/color_value)）之一：
 
 | 微语法                   | 描述                              | 示例                      |
 | ------------------------ | --------------------------------- | ------------------------- |
-| 有效的命名颜色字符串     | _颜色命名（大小写不敏感）_        | `Green`, `green`, `GREEN` |
+| 有效的命名颜色字符串     | _颜色命名（大小写不敏感）_        | `Green`、`green`、`GREEN` |
 | 有效的十六进制颜色字符串 | _#RRGGBB_                         | `#008000`                 |
 | 使用十进制的 RGB         | _rgb(x x x)（x 在 0-255 范围内）_ | `rgb(0 128 0)`            |
 
