@@ -18,16 +18,20 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 ## 语法
 
 ```css
-/* 关键字值 */
--webkit-touch-callout: default;
--webkit-touch-callout: none;
+/* 简单用法 */
+attr(data-count);
+attr(title);
 
-/* 全局值 */
--webkit-touch-callout: initial;
--webkit-touch-callout: inherit;
--webkit-touch-callout: revert;
--webkit-touch-callout: revert-layer;
--webkit-touch-callout: unset;
+/* 带类型或单位 */
+attr(src url);
+attr(data-count number);
+attr(data-width px);
+
+/* 带默认值 */
+attr(data-count number, 0);
+attr(src url, "");
+attr(data-width px, inherit);
+attr(data-something, "default");
 ```
 
 ### 解释
