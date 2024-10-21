@@ -82,7 +82,7 @@ reportButton.addEventListener("click", () => {
 
 前の例の HTML に［問題を修正］ボタンを追加します。
 
-```html hidden
+```html-nolint hidden
 <form action="#" method="post">
   <p>
     <label for="age">年齢 (21 ～ 65) </label>
@@ -97,7 +97,7 @@ reportButton.addEventListener("click", () => {
 <button type="button" id="fix">問題を修正</button>
 ```
 
-```html hidden
+```html-nolint hidden
    </p>
 <p id="log"></p>
 </form>
