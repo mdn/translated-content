@@ -206,33 +206,45 @@ O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que
   <fieldset>
     <legend>Escolha seus interesses</legend>
     <div>
+      <label>
+        <input type="checkbox" id="coding" name="interest" value="coding" />
+        Codificação
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="music" name="interest" value="music" />
+        Música
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="art" name="interest" value="art" />
+        Arte
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="sports" name="interest" value="sports" />
+        Esportes
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="cooking" name="interest" value="cooking" />
+        Culinária
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="other" name="interest" value="other" />
+        Outro
+      </label>
       <input
-        type="checkbox"
-        id="codificação"
-        name="interesse"
-        value="codificação" />
-      <label for="coding"> Codificação </label>
-    </div>
-    <div>
-      <input type="checkbox" id="música" name="interesse" value="música" />
-      <label for="music"> Música </label>
-    </div>
-    <div>
-      <input type="checkbox" id="arte" name="interesse" value="arte" />
-      <label for="art"> Art </label>
-    </div>
-    <div>
-      <input type="checkbox" id="sports" name="interesse" value="esportes" />
-      <label for="sports"> Esportes </label>
-    </div>
-    <div>
-      <input type="checkbox" id="cozinhar" name="interesse" value="cozinhar" />
-      <label for="cooking"> Cozinhando </label>
-    </div>
-    <div>
-      <input type="checkbox" id="outro" name="interesse" value="outro" />
-      <label for="other"> Outro </label>
-      <input type="text" id="otherValue" name="outro" />
+        type="text"
+        id="otherValue"
+        name="other"
+        aria-label="Other interest" />
     </div>
     <div>
       <button type="submit">Enviar formulário</button>
@@ -245,48 +257,48 @@ O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que
 
 ```css
 html {
-  font-family: sem serifa;
+  font-family: sans-serif;
 }
 
 form {
-  largura: 600px;
-  margem: 0 auto;
+  width: 600px;
+  margin: 0 auto;
 }
 
 div {
-  margem inferior: 10px;
+  margin-bottom: 10px;
 }
 
 fieldset {
-  fundo: ciano;
-  borda: 5px azul sólido;
+  background: cyan;
+  border: 5px solid blue;
 }
 
 legend {
-  preenchimento: 10px;
-  fundo: azul;
-  cor: ciano;
+  padding: 10px;
+  background: blue;
+  color: cyan;
 }
 ```
 
 ### JavaScript
 
 ```js
-var otherCheckbox = document.querySelector ('entrada [valor = "outro"]');
-var otherText = document.querySelector ('input [id = "otherValue"]');
-otherText.style.visibility = 'oculto';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.onchange = function () {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
-  } outro {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
+  } else {
+    otherText.style.visibility = "hidden";
   }
-};
+});
 ```
 
-{{EmbedLiveSample ('Examples', '100%', 300)}}
+{{EmbedLiveSample ('Exemplos', '100%', 300)}}
 
 ## Especificações
 
