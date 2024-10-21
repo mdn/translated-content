@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`HmacImportParams`** 字典表示当为 [HMAC](/zh-CN/docs/Web/API/SubtleCrypto/sign#hmac) 算法生成密钥时，此对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.importKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}}。
+[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`HmacImportParams`** 字典表示当为 [HMAC](/zh-CN/docs/Web/API/SubtleCrypto/sign#hmac) 算法生成密钥时，应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.importKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 ## 实例属性
 
@@ -15,7 +15,7 @@ l10n:
   - : 一个字符串，应设置为 `HMAC`。
 - `hash`
 
-  - : 表示要使用的[摘要算法](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)的字符串。可以取值为 `SHA-256`、`SHA-384` 或 `SHA-512`。
+  - : 表示要使用的[摘要函数](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)的字符串。可以取值为 `SHA-256`、`SHA-384` 或 `SHA-512`。
 
     > [!WARNING]
     > 从技术上讲，虽然你可以在这里传递 `SHA-1`，但强烈建议不要这样做，因为它被认为是脆弱的。
@@ -25,7 +25,7 @@ l10n:
 
 ## 示例
 
-参见示例 {{domxref("SubtleCrypto.importKey()")}}。
+参见 {{domxref("SubtleCrypto.importKey()")}} 的示例。
 
 ## 规范
 
