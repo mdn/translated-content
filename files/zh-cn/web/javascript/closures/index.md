@@ -308,6 +308,7 @@ function outer() {
 
 outer();
 ```
+
 模块作用域的闭包更有趣。
 
 ```js
