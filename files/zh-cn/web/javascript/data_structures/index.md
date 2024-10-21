@@ -2,42 +2,42 @@
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
 l10n:
-  sourceCommit: 29c3cbae33047f895b6988615519a6d0f0b31815
+  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
 {{jsSidebar("More")}}
 
-编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文尝试列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。
+编程语言都有内置的数据结构，但各种编程语言的数据结构常有不同之处。本文尝试列出 JavaScript 语言中内置的数据结构及其属性，它们可以用来构建其他的数据结构。
 
-[JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)提供了对常见数据类型的类似总结，但是更倾向于和其他语言进行比较。
+[语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)对常见数据类型提供了类似的总结，但是更倾向于和其他语言进行比较。
 
-## 动态和弱类型
+## 动态类型和弱类型
 
-JavaScript 是一种有着[动态类型](https://zh.wikipedia.org/wiki/類型系統#靜態和動態檢查)的[动态](https://zh.wikipedia.org/wiki/动态语言)语言。JavaScript 中的变量与任何特定值类型没有任何关联，任何变量都可以被赋予（和重新赋予）各种类型的值：
+JavaScript 是一种有着[动态类型](https://zh.wikipedia.org/wiki/類型系統#靜態和動態檢查)的[动态](https://zh.wikipedia.org/wiki/动态语言)语言。JavaScript 中的变量与任何特定值类型没有任何关联，任何变量都可以赋值为（和重新赋值）各种类型的值：
 
 ```js
-let foo = 42; // foo 现在是一个数值
+let foo = 42; // foo 现在是一个数字
 foo = "bar"; // foo 现在是一个字符串
-foo = true; // foo 现在是一个布尔值
+foo = true; // foo 现在是一个布尔
 ```
 
-JavaScript 也是一个[弱类型](https://zh.wikipedia.org/wiki/強弱型別)语言，这意味着当操作涉及不匹配的类型时，它允许隐式类型转换，而不是抛出类型错误。
+JavaScript 也是一个[弱类型](https://zh.wikipedia.org/wiki/強弱型別)语言，这意味着当运算涉及不匹配的类型时，它允许隐式类型转换，而不是抛出类型错误。
 
 ```js
-const foo = 42; // foo 现在是一个数值
+const foo = 42; // foo 现在是一个数字
 const result = foo + "1"; // JavaScript 将 foo 强制转换为字符串，因此可以将其与另一个操作数连接起来
 console.log(result); // 421
 ```
 
-隐式强制转换是非常方便的，但当转换发生在预期之外的地方，或发生在预期的另一个方向（例如，字符串转换为数值，而不是数值转换为字符串）时，就会产生一些微妙的错误。对于 [symbol](#symbol_类型) 和 [BigInt](#bigint_类型)，JavaScript 有意禁止了某些隐式类型转换。
+隐式强制转换是非常方便的，但当转换发生在预期之外的地方，或发生在预期的另一个方向（例如，字符串转换为数字，而不是数字转换为字符串）时，就会产生一些难以捉摸的错误。对于 [symbol](#symbol_类型) 和 [BigInt](#bigint_类型)，JavaScript 有意禁止了某些隐式类型转换。
 
 ## 原始值
 
-除了 [Object](#object) 以外，所有类型都定义了表示在语言最低层面的[不可变](/zh-CN/docs/Glossary/Immutable)值。我们将这些值称为*原始值*。
+除了 [Object](#object) 以外，所有类型都定义了直接表示在语言最底层的[不可变](/zh-CN/docs/Glossary/Immutable)值。我们将这些类型的值称为*原始值*。
 
 除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，所有原始类型都可以使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符进行测试。`typeof null` 返回 `"object"`，因此必须使用 `=== null` 来测试 `null`。
 
-除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)，所有原始类型都有它们相应的对象包装类型，这为处理原始值提供可用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装到相应的包装对象中，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要采用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
+除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)，所有原始类型都有它们相应的对象包装类型，它们为处理原始值提供了有用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装到相应的包装对象中，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要使用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
 
 | 类型                         | `typeof` 返回值 | 对象包装器            |
 | ---------------------------- | --------------- | --------------------- |
@@ -49,7 +49,7 @@ console.log(result); // 421
 | [String](#string_类型)       | `"string"`      | {{jsxref("String")}}  |
 | [Symbol](#symbol_类型)       | `"symbol"`      | {{jsxref("Symbol")}}  |
 
-对象包装器类的参考页面包含关于每个类型可用方法和属性类型的更多用法，以及原始类型本身的详细描述。
+对象包装器类的参考页面包含每个类型可用的方法和属性的更多信息，以及原始类型自身语义的详细描述。
 
 ### Null 类型
 
@@ -78,9 +78,9 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 ### Number 类型
 
-{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
+{{jsxref("Number")}} 类型是一种[双精度 64 位二进制格式 IEEE 754 值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1023</sup> × (2 - 2<sup>-52</sup>)（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及相同范围的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
 
-±(2<sup>-1074</sup> ~ 2<sup>1024</sup>) 范围之外的值会自动转换：
+超出表示范围的值会自动转换：
 
 - 大于 {{jsxref("Number.MAX_VALUE")}} 的正值被转换为 `+Infinity`。
 - 小于 {{jsxref("Number.MIN_VALUE")}} 的正值被转换为 `+0`。
@@ -96,18 +96,18 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-{{jsxref("NaN")}}（“**N**ot **a** **N**umber”）是一个特殊种类的数值，当算术运算的结果不表示数值时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
+{{jsxref("NaN")}}（“**N**ot **a** **N**umber”）是一个特殊种类的数字值，当算术运算的结果不表示数字时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
 
 虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)。当应用位运算符时，number 首先转换为 32 位整数。
 
 > [!NOTE]
-> 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
+> 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数字内的几个布尔值，但通常这不是最佳实践。JavaScript 提供了表示一组布尔的其他方法（如布尔数组，或将布尔值赋值给命名属性的对象）。位掩码也往往会使代码更难阅读、理解和维护。
 
-可能有必要在非常受限的环境中使用此类技术，例如在试图应对本地存储的限制时，或在极端情况下（例如当网络上的每个位计数时）。只有当这项技术是优化尺寸的最后一项措施时，才应考虑这项技术。
+可能有必要在非常受限的环境中使用此类技术，例如在试图应对本地存储的限制时，或在极端情况下（例如当网络上的每个位计数时）。只有当这项技术是优化大小的最后一项措施时，才应考虑这项技术。
 
 ### BigInt 类型
 
-{{jsxref("BigInt")}} 类型在 Javascript 中是一个数字的原始值，它可以表示任意大小的整数。使用 BigInt，你可以安全地存储和操作巨大的整数，甚至超过 Number 的安全整数限制（{{jsxref("Number.MAX_SAFE_INTEGER")}}）。
+{{jsxref("BigInt")}} 类型在 Javascript 中是一个数字的原始值，它可以表示任意大小的整数。使用 BigInt，你可以安全地存储和运算巨大的整数，甚至超过 Number 的安全整数限制（{{jsxref("Number.MAX_SAFE_INTEGER")}}）。
 
 BigInt 是通过将 `n` 附加到整数末尾或调用 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 函数来创建的。
 
@@ -122,17 +122,17 @@ x + 1n === x + 2n; // false，因为 9007199254740992n 和 9007199254740993n 不
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true，因为都等于 9007199254740992
 ```
 
-你可以使用大多数运算符处理 BigInt，包括 `+`、`*`、`-`、`**` 和 `%`。——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，而是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)相等。
+你可以使用大多数运算符处理 BigInt，包括 `+`、`*`、`-`、`**` 和 `%`。——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，而是[非严格](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)相等。
 
 BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示小数，但可以更精确地表示大整数。这两种类型都不能相互替代。如果 BigInt 值在算术表达式中与常规 number 值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 
 ### String 类型
 
-{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的长度是它的元素的数量。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）) 参考页面。
+{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）) 参考页面。
 
 JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就不可能修改它。字符串方法基于当前字符串的内容创建一个新的字符串——例如：
 
-- 使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 获取原始的子字符串。
+- 使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 获取原始字符串的子字符串。
 - 使用串联运算符（`+`）或 [`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat) 将两个字符串串联。
 
 #### 注意代码中的“字符串类型”！
@@ -141,15 +141,15 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 - 容易通过字符串拼接来构造复杂的字符串。
 - 字符串容易被调试（你看到的打印的内容始终是字符串）。
-- 字符串通常是许多 API 的常见标准（[input 字段](/zh-CN/docs/Web/API/HTMLInputElement)、[local storage](/zh-CN/docs/Web/API/Web_Storage_API) 中的值，以及 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 使用 `responseText` 等作为响应，等等）而且这些 API 可能只能与字符串一同使用。
+- 字符串通常是许多 API 的常见标准（[input 字段](/zh-CN/docs/Web/API/HTMLInputElement)、[local storage](/zh-CN/docs/Web/API/Web_Storage_API) 中的值，以及 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 使用 {{domxref("Response.text()")}} 时的响应，等等）而且这些 API 可能只能与字符串一同使用。
 
-使用约定，字符串一般可以用来表示任何数据结构。但这并不总是一个好主意。例如，使用一个分隔符，可以模拟一个列表（而 JavaScript 数组可能更适合）。不幸的是，当分隔符用于列表中的元素时，列表就会被破坏。这时可以选择转义字符，等等。所有这些都需要约定，并造成不必要的维护负担。
+按照常规，用字符串表示任何数据结构是可能的。但这并不总是一个好主意。例如，使用一个分隔符，可以模拟一个列表（而 JavaScript 数组可能更适合）。不幸的是，当分隔符是某个“列表”元素时，列表遭到破坏。这时可以选择转义字符，等等。所有这些都需要约定，并造成不必要的维护负担。
 
 表示文本数据时候推荐使用字符串。当需要表示复杂的数据时，使用字符串*解析*并使用适当的抽象。
 
 ### Symbol 类型
 
-{{jsxref("Symbol")}} 是**唯一**并且**不可变**的原始值并且可以用来作为对象属性的键（如下）。在某些程序语言当中，Symbol 也被称作“原子（atom）类型”。symbol 的目的是去创建一个唯一属性键，保证不会与其他代码中的键产生冲突。
+{{jsxref("Symbol")}} 是**唯一**并且**不可变**的原始值并且可以用来作为对象属性的键（如下）。在某些程序语言当中，Symbol 也被称作“原子”。symbol 的目的是去创建一个唯一属性键，保证不会与其他代码中的键产生冲突。
 
 ## Object
 
@@ -157,7 +157,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 ### 属性
 
-在 JavaScript 中，对象可以被看作是一组属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量_object_literals)来定义一个对象时，会自动初始化一组有限的属性；然后，这些属性还可以被添加和移除。对象属性等价于键值对。属性键要么是[字符串](#string-类型)类型，要么是 [symbol](#symbol-类型)。属性值可以是任何类型的值，包括其他对象，从而可以构建复杂的数据结构。
+在 JavaScript 中，对象可以被看作是一个属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量_object_literals)会初始化一组有限的属性；然后，这些属性还可以被添加和移除。对象属性等价于键值对。属性键要么是[字符串](#string-类型)，要么是 [symbol](#symbol-类型)。当其他类型（如数字）用于索引对象时，值会隐式地转化为字符串。属性值可以是任何类型的值，包括其他对象，从而可以构建复杂的数据结构。
 
 有两种对象属性的类型：[*数据*属性](#数据属性)和[*访问器*属性](#访问器属性)。每个属性都有对应的*特性*（attribute）。JavaScript 引擎可在内部访问每个属性，但是你可以通过 {{jsxref("Object.defineProperty()")}} 设置它们，或通过 {{jsxref("Object.getOwnPropertyDescriptor()")}} 读取它们。你可以在 {{jsxref("Object.defineProperty()")}} 页面阅读更多有关各种细微差别的信息。
 
@@ -170,7 +170,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `writable`
   - : 一个布尔值，表示是否可以通过赋值来改变属性。
 - `enumerable`
-  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[枚举性和属性所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其他函数和语法交互。
+  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其他函数和语法交互。
 - `configurable`
   - : 一个布尔值，表示该属性是否可以删除，是否可以更改为访问器属性，并可以更改其特性。
 
@@ -179,7 +179,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 将键与两个访问器函数（`get` 和 `set`）相关联，以获取或者存储值。
 
 > [!NOTE]
-> 重要的是，意识到它是访问器*属性*——而不是访问器*方法*。我们可以将函数作为值来提供给 JavaScript 对象的访问器，使得对象表现得像一个类——但这并不能使该对象成为类。
+> 重要的是，意识到它是访问器*属性*——而不是访问器*方法*。我们可以将函数作为值给一个 JavaScript 对象提供类似类的访问器——但这并不能使该对象成为类。
 
 一个访问器属性有着以下的特性：
 
