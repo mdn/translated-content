@@ -11,7 +11,7 @@ l10n:
 
 字符串长度是以 UTF-16 码元为单位进行计算的，通常（[对于大多数语言脚本](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length#长度不等于字符数的字符串)）等同于字符个数。如果未指定 `maxlength`，或指定了无效值，则输入将没有最大长度限制。
 
-任何 `maxlength` 的值必须大于或等于 [`minlength`](/zh-CN/docs/Web/HTML/Attributes/minlength) 的值（如果存在且有效）。如果字段文本值的长度超过了 `maxlength` 的 UTF-16 编码单元长度，输入将无法通过约束验证。约束验证仅在用户更改值时应用。
+任何 `maxlength` 的值必须大于或等于 [`minlength`](/zh-CN/docs/Web/HTML/Attributes/minlength) 的值（如果存在且有效）。如果字段文本值的长度超过了 `maxlength` 的 UTF-16 码元长度，输入将无法通过约束验证。约束验证仅在用户更改值时应用。
 
 ### 约束验证
 
