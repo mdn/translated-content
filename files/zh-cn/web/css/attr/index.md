@@ -22,7 +22,7 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 attr(data-count);
 attr(title);
 
-/* 带类型或单位 */
+/* 带类型 */
 attr(src url);
 attr(data-count number);
 attr(data-width px);
