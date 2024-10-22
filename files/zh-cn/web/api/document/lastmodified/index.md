@@ -24,7 +24,7 @@ alert(document.lastModified);
 // 返回：Tuesday, December 16, 2017 11:09:42
 ```
 
-### 将 lastModified 转换为日期对象
+### 将 lastModified 转换为 Date 对象
 
 此示例将 `lastModified` 转换为 {{jsxref("Date")}} 对象。
 
@@ -34,7 +34,7 @@ let oLastModif = new Date(document.lastModified);
 
 ### 将 lastModified 转换成毫秒
 
-此示例将 `lastModified` 转换为自 1970 年 1 月 1 日 00:00:00（本地时间）以来的毫秒数。
+此示例将 `lastModified` 转换为自本地时间 1970 年 1 月 1 日 00:00:00 以来的毫秒数。
 
 ```js
 let nLastModif = Date.parse(document.lastModified);
@@ -47,7 +47,7 @@ let nLastModif = Date.parse(document.lastModified);
 下面是一个页面切换时显示提示消息的示例（参见：[JavaScript cookies API](/zh-CN/docs/Web/API/Document/cookie)）：
 
 ```js
-// 与 'timestamp' 中的 'last_modif=timestamp' 匹配
+// 在 'last_modif=timestamp' 中匹配 'timestamp'
 // 例如，'last_modif=1687964614822' 中的 '1687964614822'
 const pattern = /last_modif\s*=\s*([^;]*)/;
 
@@ -81,7 +81,7 @@ if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
 }
 ```
 
-如果你想知道某个*外部*页面是否发生了变化，可以使用 {{HTTPMethod("HEAD")}} 请求并通过 {{domxref("Window/fetch", "fetch()")}} API 发起请求，并检查 {{HTTPHeader("Last-Modified")}} 响应标头信息。
+如果你想知道某个*外部*页面是否发生了变化，可以通过 {{domxref("Window/fetch", "fetch()")}} API 发起 {{HTTPMethod("HEAD")}} 请求，并检查 {{HTTPHeader("Last-Modified")}} 响应标头信息。
 
 ## 规范
 
