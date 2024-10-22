@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-**`HTMLParamElement`** 接口提供用于操作 {{HTMLElement("param")}} 元素的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），表示一对键和一个充当 {{HTMLElement("object")}} 元素的参数值。
+**`HTMLParamElement`** 接口提供用于操作 {{HTMLElement("param")}} 元素（表示一对充当 {{HTMLElement("object")}} 元素的参数的键和值）的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
 {{InheritanceDiagram}}
 
