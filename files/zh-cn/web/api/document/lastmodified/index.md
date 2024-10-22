@@ -26,7 +26,7 @@ alert(document.lastModified);
 
 ### 将 lastModified 转换为日期对象
 
-此示例将 `lastModified` 转换为 {{jsxref(“Date”)}} 对象。
+此示例将 `lastModified` 转换为 {{jsxref("Date")}} 对象。
 
 ```js
 let oLastModif = new Date(document.lastModified);
