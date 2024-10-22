@@ -189,7 +189,7 @@ const counter = (function () {
   };
 })();
 
-console.log(counter.value()); // 0.
+console.log(counter.value()); // 0
 
 counter.increment();
 counter.increment();
