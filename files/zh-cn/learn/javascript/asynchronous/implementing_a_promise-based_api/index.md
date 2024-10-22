@@ -32,7 +32,7 @@ slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 
 ### 用 setTimeout() 包裹
 
-我们将会使用 {{domxref("setTimeout()")}} 来实现 `alarm()` 函数。`setTimeout()` 以一个回调函数和一个以毫秒为单位的延迟作为参数。当调用 `setTimeout()` 时，它将启动一个设置为给定延迟的计时器，当时间过期时，它就会调用给定的回调函数。
+我们将会使用 {{domxref("Window.setTimeout", "setTimeout()")}} 来实现 `alarm()` 函数。`setTimeout()` 以一个回调函数和一个以毫秒为单位的延迟作为参数。当调用 `setTimeout()` 时，它将启动一个设置为给定延迟的计时器，当时间过期时，它就会调用给定的回调函数。
 
 在下面的例子中，我们使用一个回调函数和一个 1000 毫秒的延迟调用 `setTimeout()`：
 
@@ -205,7 +205,7 @@ button.addEventListener("click", async () => {
 
 ## 参见
 
-- [Promise() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
-- [使用 Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [`Promise()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
+- [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

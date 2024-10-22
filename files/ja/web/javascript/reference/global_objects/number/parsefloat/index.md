@@ -2,7 +2,7 @@
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
@@ -20,7 +20,7 @@ Number.parseFloat(string)
 ### 引数
 
 - `string`
-  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{Glossary("whitespace", "ホワイトスペース")}}は無視されます。
 
 ### 返値
 
@@ -32,7 +32,7 @@ Number.parseFloat(string)
 
 ### Number.parseFloat と parseFloat
 
-このメソッドは、グローバルの {{jsxref("parseFloat", "parseFloat()")}} 関数と同じ機能を持っています。
+このメソッドは、グローバルの {{jsxref("parseFloat()")}} 関数と同じ機能を持っています。
 
 ```js
 Number.parseFloat === parseFloat; // true
@@ -40,7 +40,7 @@ Number.parseFloat === parseFloat; // true
 
 この目的は、グローバルのモジュール化にあります。
 
-さらなる詳細と例は {{jsxref("parseFloat", "parseFloat()")}} を参照してください。
+さらなる詳細と例は {{jsxref("parseFloat()")}} を参照してください。
 
 ## 仕様書
 
@@ -53,5 +53,5 @@ Number.parseFloat === parseFloat; // true
 ## 関連情報
 
 - [`Number.parseFloat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}: このメソッドが所属するオブジェクト
-- グローバルの {{jsxref("parseFloat", "parseFloat()")}} メソッド
+- {{jsxref("Number")}}
+- {{jsxref("parseFloat()")}}

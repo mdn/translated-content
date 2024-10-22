@@ -82,7 +82,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 
 ## 其他值得关注的 API
 
-- [`setTimeout`](/zh-CN/docs/Web/API/setTimeout) 和 {{domxref("Window.setInterval", "setInterval()")}} 函数最早被定义在 HTML 标准的 {{domxref("Window")}} 接口下。
+- {{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}} 函数最早被定义在 HTML 标准的 {{domxref("Window")}} 接口下。
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) 使得发起异步 HTTP 请求成为可能。
 - [Fetch API](https://fetch.spec.whatwg.org/) 为网络请求提供了更符合人体工程学的抽象。
 - [CSS 对象模型](https://drafts.csswg.org/cssom/) 将 CSS 规则抽象成对象。
@@ -91,7 +91,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的绘图 API。
 - [WebAssembly 接口](https://webassembly.github.io/spec/js-api) 提供了 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间的通信工具。
 
-非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout)。
+非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
 ## 有哪些 JavaScript 的实现？
 

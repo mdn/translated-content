@@ -2,7 +2,7 @@
 title: <relative-size>
 slug: Web/CSS/relative-size
 l10n:
-  sourceCommit: aeb87af1283cb24e735a00b1409b087b4ed2a0fb
+  sourceCommit: e97c79b17d685c08bef41ffc0b6c2f9e5ddc42f4
 ---
 
 {{CSSRef}}
@@ -23,13 +23,13 @@ l10n:
 
   - : 継承サイズより一回り小さい相対サイズ。
 
-- `bigger`
+- `larger`
 
   - : 継承サイズより一回り大きい相対サイズ。
 
 ## 解説
 
-`<relative-size>` キーワードは要素の現在のサイズからの相対サイズです。継承サイズが {{cssxref("absolute-size")}} キーワードを使用して定義されている場合、 `<relative-size>` 値は [`<absolute-size>` 表](/ja/docs/Web/CSS/absolute-size#description)の隣接サイズと等しくなります。それ以外の場合、相対的なサイズの増減は 120% から 150% の間になります。
+`<relative-size>` キーワードは要素の現在のサイズからの相対サイズです。継承サイズが {{cssxref("absolute-size")}} キーワードを使用して定義されている場合、 `<relative-size>` 値は [`<absolute-size>` 表](/ja/docs/Web/CSS/absolute-size#解説)の隣接サイズと等しくなります。それ以外の場合、相対的なサイズの増減は 120% から 150% の間になります。
 
 ## 例
 

@@ -1,16 +1,16 @@
 ---
-title: setInterval() グローバル関数
+title: "Window: setInterval() メソッド"
+short-title: setInterval()
 slug: Web/API/Window/setInterval
-original_slug: Web/API/setInterval
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-**`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("WorkerGlobalScope")}} インターフェイスで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。
+**`setInterval()`** は {{domxref("Window")}} インターフェイスのメソッドで、一定の間隔を置いて関数やコードスニペットを繰り返し呼び出します。
 
-このメソッド、インターバルを一意に識別するインターバル ID を返します。よって {{domxref("clearInterval", "clearInterval()")}} を呼び出して、後でインターバルを削除できます。
+このメソッド、インターバルを一意に識別するインターバル ID を返します。よって {{domxref("Window.clearInterval", "clearInterval()")}} を呼び出して、後でインターバルを削除できます。
 
 ## 構文
 
@@ -34,15 +34,15 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
     この構文は**推奨しません**。{{jsxref("Global_Objects/eval", "eval()")}} の使用にセキュリティ上のリスクがあるのと同じ理由です。
 - `delay` {{optional_inline}}
   - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。指定されなかった場合の既定値は 0 です。
-    `delay` 値で許される範囲についての詳細は、[遅延の制約](#遅延の制約)をご覧ください。
+    `delay` 値で許される範囲についての詳細は、[待ち時間の制約](#待ち時間の制約)をご覧ください。
 - `arg1`, …, `argN` {{optional_inline}}
   - : タイマーが満了したときに、 _func_ で指定した関数に渡す追加の引数です。
 
 ### 返値
 
-返値 `intervalID` は 0 ではない正の整数値で、 `setInterval()` を呼び出して作成したタイマーを識別します。この値を {{domxref("clearInterval()")}} へ渡せば、インターバルを取り消すことができます。
+返値 `intervalID` は 0 ではない正の整数値で、 `setInterval()` を呼び出して作成したタイマーを識別します。この値を {{domxref("Window.clearInterval", "clearInterval()")}} へ渡せば、インターバルを取り消すことができます。
 
-`setInterval()` と {{domxref("setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。
+`setInterval()` と {{domxref("Window.setTimeout", "setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("Window.clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。
 ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
 > [!NOTE]
@@ -123,8 +123,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-[`clearInterval()`](/ja/docs/Web/API/clearInterval) も参照してください。
-
 ## "this" 問題
 
 `setInterval()` に（もっと言うと他のどんな関数でも）メソッドを渡すと、間違った [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値で呼び出されることがあります。
@@ -164,19 +162,19 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 
 ## 使用上のメモ
 
-`setInterval()` 関数は一般に、アニメーションのように何度も実行される関数に遅延をセットするのに使われます。 {{domxref("clearInterval()")}} を使ってインターバルを取り消すことができます。
+`setInterval()` 関数は一般に、アニメーションのように何度も実行される関数のために待ち時間を設定するのに使われます。 {{domxref("Window.clearInterval", "clearInterval()")}} を使ってインターバルを取り消すことができます。
 
-指定時間後に*一度*だけ関数を呼び出したい場合には、　{{domxref("setTimeout()")}} を使用してください。
+指定時間後に*一度*だけ関数を呼び出したい場合には、　{{domxref("Window.setTimeout", "setTimeout()")}} を使用してください。
 
-### 遅延の制約
+### 待ち時間の制約
 
 `setInterval()` のコールバックは順番に `setInterval()` を呼び出し、最初のインターバルがまだ進行中であっても、別のインターバルを開始させることができます。このことがパフォーマンスに与える潜在的な影響を軽減するために、インターバルが 5 レベルを超えてネストされると、ブラウザーは自動的にインターバルの最小値として 4 ミリ秒を強制するようになります。深くネストされた `setInterval()` の呼び出しで 4ms 未満の値を指定しようとすると、 4ms に固定されます。
 
-ブラウザーは、状況によってはさらに厳しい最小間隔値を強制するかもしれませんが、これは一般的なことではありません。また、コールバックの呼び出しの間に経過する実際の時間は、与えられた `delay` よりも長いかもしれないことに注意してください。例については[遅延が指定値より長い理由](/ja/docs/Web/API/setTimeout#遅延が指定値より長い理由)を参照してください。
+ブラウザーは、状況によってはさらに厳しい最小間隔値を強制するかもしれませんが、これは一般的なことではありません。また、コールバックの呼び出しの間に経過する実際の時間は、与えられた `delay` よりも長いかもしれないことに注意してください。例については[待ち時間が指定値より長い理由](/ja/docs/Web/API/Window/setTimeout#待ち時間が指定値より長い理由)を参照してください。
 
 ### 実行時間をインターバルより確実に短くする
 
-ロジックの実行時間がインターバル時間より長くなる可能性がある場合は、{{domxref("setTimeout()")}} を使用して名前付き関数を再帰的に呼び出すことを推奨します。例えば 5 秒おきにリモートサーバーへ接続するために `setInterval()` を使用する場合、ネットワークの遅延やサーバーの応答がないなどさまざまな問題で、割り当てられた時間内にリクエストが完了しない可能性があります。そのため、必ずしも順番どおりには返らない XHR リクエストがキュー内にあることに気づくかもしれません。
+ロジックの実行時間がインターバル時間より長くなる可能性がある場合は、{{domxref("Window.setTimeout", "setTimeout()")}} を使用して名前付き関数を再帰的に呼び出すことを推奨します。例えば 5 秒おきにリモートサーバーへ接続するために `setInterval()` を使用する場合、ネットワークの遅延やサーバーの応答がないなどさまざまな問題で、割り当てられた時間内にリクエストが完了しない可能性があります。そのため、必ずしも順番どおりには返らない XHR リクエストがキュー内にあることに気づくかもしれません。
 
 この場合は、再帰的な `setTimeout()` のパターンを推奨します。
 
@@ -203,7 +201,7 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 ## 関連情報
 
 - [core-js にある `setInterval` のポリフィルで、コールバックに引数を渡すことができるもの](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

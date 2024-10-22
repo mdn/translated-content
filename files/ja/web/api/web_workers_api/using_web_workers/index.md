@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-ウェブワーカーは、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。さらに、{{domxref("fetch()")}} や {{domxref("XMLHttpRequest")}} など API を用いて、ネットワークリクエストを行うことができます。ワーカーが生成されると、それを作成した JavaScript コードが指定するイベントハンドラーにメッセージを投稿することで、そのコードにメッセージを送ることができます（逆も同様）。
+ウェブワーカーは、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。さらに、{{domxref("Window/fetch", "fetch()")}} や {{domxref("XMLHttpRequest")}} など API を用いて、ネットワークリクエストを行うことができます。ワーカーが生成されると、それを作成した JavaScript コードが指定するイベントハンドラーにメッセージを投稿することで、そのコードにメッセージを送ることができます（逆も同様）。
 
 この記事では、ウェブワーカーを使用するための詳しい紹介をしています。
 
@@ -26,7 +26,7 @@ l10n:
 
 ワーカーは、親ページと同じ{{glossary("origin", "オリジン")}}内でホスティングされている限り、新しいワーカーを生み出すことができます。
 
-また、ワーカーは {{domxref("fetch()")}} や [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) などの API を用いて、ネットワークリクエストを行うことができます（ただし、`XMLHttpRequest` の {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性は常に `null` になることに注意してください）。
+また、ワーカーは {{domxref("Window/fetch", "fetch()")}} や [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) などの API を用いて、ネットワークリクエストを行うことができます（ただし、`XMLHttpRequest` の {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性は常に `null` になることに注意してください）。
 
 ## 専用ワーカー
 
@@ -816,7 +816,7 @@ function fibonacci(num) {
 標準的な JavaScript 機能のほとんどがウェブワーカー内で使用できます。以下のものを含みます。
 
 - {{domxref("Navigator")}}
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} および {{domxref("setInterval()")}}
 
