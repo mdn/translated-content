@@ -196,7 +196,7 @@ counter.increment();
 console.log(counter.value()); // 2
 
 counter.decrement();
-console.log(counter.value()); // 1.
+console.log(counter.value()); // 1
 ```
 
 在之前的示例中，每个闭包都有它自己的词法环境。而这次，只创建了一个由三个函数共享的词法环境：`Counter.increment`、`Counter.decrement` 和 `Counter.value`。
