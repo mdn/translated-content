@@ -1,6 +1,8 @@
 ---
 title: 跨源资源共享（CORS）
 slug: Web/HTTP/CORS
+l10n:
+  sourceCommit: a19e6ab98874804411266067ccdb9898b2afa7bf
 ---
 
 {{HTTPSidebar}}
@@ -11,7 +13,7 @@ slug: Web/HTTP/CORS
 
 出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
 
-![CORS 机制的图表表示](cors_principle.png)
+![CORS 机制的图表表示](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
 CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）使用 CORS，以降低跨源 HTTP 请求所带来的风险。
 
@@ -82,17 +84,18 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 比如说，假如站点 `https://foo.example` 的网页应用想要访问 `https://bar.other` 的资源。`foo.example` 的网页中可能包含类似于下面的 JavaScript 代码：
 
 ```js
-const xhr = new XMLHttpRequest();
-const url = "https://bar.other/resources/public-data/";
+const fetchPromise = fetch("https://bar.other");
 
-xhr.open("GET", url);
-xhr.onreadystatechange = someHandler;
-xhr.send();
+fetchPromise
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  });
 ```
 
 此操作实行了客户端和服务器之间的简单交换，使用 CORS 标头字段来处理权限：
 
-![简单 GET 请求的示意图](simple-req.png)
+![简单 GET 请求的示意图](https://mdn.github.io/shared-assets/images/diagrams/http/cors/simple-request.svg)
 
 以下是浏览器发送给服务器的请求报文：
 
@@ -146,17 +149,24 @@ Access-Control-Allow-Origin: https://foo.example
 如下是一个需要执行预检请求的 HTTP 请求：
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("POST", "https://bar.other/resources/post-here/");
-xhr.setRequestHeader("X-PINGOTHER", "pingpong");
-xhr.setRequestHeader("Content-Type", "application/xml");
-xhr.onreadystatechange = handler;
-xhr.send("<person><name>Arun</name></person>");
+const fetchPromise = fetch("https://bar.other/doc", {
+  method: "POST",
+  mode: "cors",
+  headers: {
+    "Content-Type": "text/xml",
+    "X-PINGOTHER": "pingpong",
+  },
+  body: "<person><name>Arun</name></person>",
+});
+
+fetchPromise.then((response) => {
+  console.log(response.status);
+});
 ```
 
 上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。
 
-![](preflight_correct.png)
+![预检请求的示意图](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
 > [!NOTE]
 > 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 标头，它们仅用于 `OPTIONS` 请求。
@@ -261,7 +271,7 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 
 如果上面两种方式难以做到，我们仍有其他办法：
 
-1. 发出一个[简单请求](#简单请求)（使用 {{domxref("Response.url")}} 或 {{domxref("XMLHttpRequest.responseURL")}}）以判断真正的预检请求会返回什么地址。
+1. 发出一个[简单请求](#简单请求)（使用 Fetch API 中的 {{domxref("Response.url")}} 或 {{domxref("XMLHttpRequest.responseURL")}}）以判断真正的预检请求会返回什么地址。
 2. 发出另一个请求（*真正*的请求），使用在上一步通过 `Response.url` 或 `XMLHttpRequest.responseURL` 获得的 URL。
 
 不过，如果请求是由于存在 `Authorization` 字段而引发了预检请求，则这一方法将无法使用。这种情况只能由服务端进行更改。
@@ -276,22 +286,17 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 本例中，`https://foo.example` 的某脚本向 `https://bar.other` 发起一个 GET 请求，并设置 Cookies。在 `foo.example` 中可能包含这样的 JavaScript 代码：
 
 ```js
-const invocation = new XMLHttpRequest();
 const url = "https://bar.other/resources/credentialed-content/";
 
-function callOtherDomain() {
-  if (invocation) {
-    invocation.open("GET", url, true);
-    invocation.withCredentials = true;
-    invocation.onreadystatechange = handler;
-    invocation.send();
-  }
-}
+const request = new Request(url, { credentials: "include" });
+
+const fetchPromise = fetch(request);
+fetchPromise.then((response) => console.log(response));
 ```
 
-第 7 行将 {{domxref("XMLHttpRequest")}} 的 `withCredentials` 标志设置为 `true`，从而向服务器发送 Cookies。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起“预检请求”。但是，如果服务器端的响应中未携带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`，浏览器将**不会**把响应内容返回给请求的发送者。
+本代码创建了一个 {{domxref("Request")}} 对象，并在构造器中将 `credentials` 选项设置为 `"include"`，然后将该请求作为 `fetch()` 的参数传递。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起预检请求。但是，浏览器会**拒绝**任何不带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 标头的响应，且**不会**把响应提供给调用的网页内容。
 
-![](cred-req-updated.png)
+![包含 Access-Control-Allow-Credentials 响应标头的简单 GET 请求的示意图](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
 客户端与服务器端交互示例如下：
 
@@ -325,7 +330,7 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-即使第 10 行指定了 Cookie 是属于 `https://bar.other` 的内容的，但是，如果 `https://bar.other` 的响应中缺失 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`（第 16 行），则响应内容会被忽略，不会提供给 web 内容。
+虽然请求的 `Cookie` 标头包含了为 `https://bar.other` 上的内容指定的 cookie，但如果 bar.other 没有像本例中演示的那样响应一个值为 `true` 的 {{HTTPHeader("Access-Control-Allow-Credentials")}}，该响应将被忽略，网络内容将无法使用。
 
 #### 预检请求和凭据
 
