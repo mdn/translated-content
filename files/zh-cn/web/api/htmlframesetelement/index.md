@@ -31,7 +31,7 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 以下 {{domxref("Window")}} `onXYZ` 事件处理器属性也可用作针对 `window` 对象的别名。然而，建议直接在 `window` 对象上而不是直接在 `HTMLFrameSetElement` 上监听它们。
 
 > [!NOTE]
-> 在 `HTMLFrameSetElement` 上使用 `addEventListener()` 对下面列出的 `onXYZ` 事件处理器不起作用。代替使用监听 {{domxref("window")}} 对象上的事件。
+> 在 `HTMLFrameSetElement` 上使用 `addEventListener()` 对下面列出的 `onXYZ` 事件处理器不起作用。监听 {{domxref("window")}} 对象上的事件代替。
 
 - {{domxref("window.afterprint_event", "HTMLFrameSetElement.onafterprint")}}
   - : 在关联文档开始打印或打印预览关闭后触发。
