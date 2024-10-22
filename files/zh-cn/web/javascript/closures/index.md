@@ -193,7 +193,7 @@ console.log(counter.value()); // 0
 
 counter.increment();
 counter.increment();
-console.log(counter.value()); // 2.
+console.log(counter.value()); // 2
 
 counter.decrement();
 console.log(counter.value()); // 1.
