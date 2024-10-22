@@ -58,7 +58,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-    // 或使用 for...in 和 Object.hasOwn 过滤，或者： return Object.keys(obj);
+    // 或使用 for...in 和 Object.hasOwn 过滤，或者：return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
