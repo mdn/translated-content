@@ -282,10 +282,8 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 Como paso final, crea un fichero dentro de tu carpeta catalog llamado **urls.py**, y añade el siguiente texto para definir la `urlpatterns` importada (vacía). Éste es donde añadimos nuestros patrones a medida que construimos la aplicación.
 
 ```python
-from django.conf.urls import url
-
+from django.urls import path
 from . import views
-
 
 urlpatterns = [
 
