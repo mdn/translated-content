@@ -22,7 +22,7 @@ l10n:
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   for (const [code, key] of keyboardLayoutMap.entries()) {
-    console.log(`键盘代码 ${code} 代表键 ${key} key`);
+    console.log(`键盘代码 ${code} 代表键 ${key}`);
   }
 });
 ```
