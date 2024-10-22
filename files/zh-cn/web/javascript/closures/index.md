@@ -380,7 +380,7 @@ function setupHelp() {
   ];
 
   for (var i = 0; i < helpText.length; i++) {
-    // 在这一行使用的 `var` 是责任人
+    // 罪魁祸首是在这一行使用的 `var`
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
