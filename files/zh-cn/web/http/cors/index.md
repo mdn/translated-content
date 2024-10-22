@@ -294,7 +294,7 @@ const fetchPromise = fetch(request);
 fetchPromise.then((response) => console.log(response));
 ```
 
-本代码创建了一个 {{domxref("Request")}} 对象，并在构造器中将 `credentials` 选项设置为 `"include"`，然后将该请求作为 `fetch()` 的参数传递。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起预检请求。但是，浏览器会**拒绝** 任何不带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 标头的相应，且**不会**把响应提供给调用的网页内容。
+本代码创建了一个 {{domxref("Request")}} 对象，并在构造器中将 `credentials` 选项设置为 `"include"`，然后将该请求作为 `fetch()` 的参数传递。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起预检请求。但是，浏览器会**拒绝**任何不带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 标头的响应，且**不会**把响应提供给调用的网页内容。
 
 ![包含 Access-Control-Allow-Credentials 响应标头的简单 GET 请求的示意图](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
