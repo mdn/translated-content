@@ -40,10 +40,6 @@ operated by the People's Front of Judea.</p>
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 相关内容
 
 - [Wikipedia: HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
