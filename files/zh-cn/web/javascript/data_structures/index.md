@@ -266,7 +266,7 @@ console.log({} + []); // "[object Object]"
 - [数字类型强制转换](#数字类型强制转换)、[number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)、[BigInt 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_强制转换)：`[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
 - [string 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
-在所有情况下，`[Symbol.toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果 `valueOf` 或 `toString` 不可调用或返回对象， 它们将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会根据上下文进一步的进行强制类型转换。
+在所有情况下，`[Symbol.toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果 `valueOf` 或 `toString` 不可调用或返回对象，它们将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会根据上下文进一步的进行强制类型转换。
 
 ## 参见
 
