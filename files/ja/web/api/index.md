@@ -36,6 +36,8 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ### サ
 
+- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
+- [サービスワーカー API](Web/API/Service_Worker_API)
 - [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
@@ -65,6 +67,10 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 
+### ヤ
+
+- [URL API](/ja/docs/Web/API/URL_API)
+
 ## API 仕様書英語索引
 
 利用可能なすべての API の一覧です。
@@ -77,6 +83,6 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 {{APIListAlpha}}
 
-## 関連情報
+## ブラウザーの互換性
 
 - [Web API イベントリファレンス](/ja/docs/Web/Events)
