@@ -24,11 +24,11 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 有四种内置的查询对象属性的方法。它们全部都支持字符串和 symbol 键。下表总结了每个方法支持的类型。
 
 |                                                                                                             | 可枚举的、自己的 | 可枚举的、继承的 | 不可枚举的、自己的 | 不可枚举的、继承的 |
-| ----------------------------------------------------------------------------------------------------------- | --------------- | --------------------- | ------------------- | ------------------------- |
-| [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`       | `false ❌`            | `false ❌`          | `false ❌`                |
-| [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`       | `false ❌`            | `true ✅`           | `false ❌`                |
-| [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`       | `false ❌`            | `true ✅`           | `false ❌`                |
-| [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`       | `true ✅`             | `true ✅`           | `true ✅`                 |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ---------------- | ------------------ | ------------------ |
+| [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`        | `false ❌`       | `false ❌`         | `false ❌`         |
+| [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`        | `false ❌`       | `true ✅`          | `false ❌`         |
+| [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`        | `false ❌`       | `true ✅`          | `false ❌`         |
+| [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`        | `true ✅`        | `true ✅`          | `true ✅`          |
 
 ## 遍历对象属性
 
