@@ -1,5 +1,5 @@
 ---
-title: JavaScript 中的相等性判断
+title: 相等比较和相同
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 l10n:
   sourceCommit: 8e1184924387f88e2ee63a3c786b007aaf573105
