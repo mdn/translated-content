@@ -52,7 +52,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 ## 事件
 
 - `bounce` {{Deprecated_Inline}}
-  - : 当到达其滚动位置的末尾时触发。只有当行为设置为 `alternate` 时才触发。
+  - : 当到达其滚动位置的末尾时触发。只有当行为属性设置为 `alternate` 时才触发。
 - `finish` {{Deprecated_Inline}}
   - : 当完成循环属性设置的滚动量时触发。只有当循环属性设置为大于 0 的数字时才触发。
 - `start` {{Deprecated_Inline}}
