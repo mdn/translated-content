@@ -1,5 +1,5 @@
 ---
-title: "文档：lastElementChild 属性"
+title: 文档：lastElementChild 属性
 short-title: lastElementChild
 slug: Web/API/Document/lastElementChild
 ---
