@@ -27,7 +27,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}

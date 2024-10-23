@@ -19,6 +19,6 @@ slug: Web/HTTP/Status/504
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - {{HTTPStatus(502)}}

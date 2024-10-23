@@ -26,6 +26,6 @@ slug: Web/HTTP/Status/200
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)

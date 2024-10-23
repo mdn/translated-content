@@ -21,6 +21,6 @@ slug: Web/HTTP/Status/503
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Retry-After")}}
