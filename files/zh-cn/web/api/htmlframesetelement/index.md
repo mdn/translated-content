@@ -31,14 +31,14 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 以下 {{domxref("Window")}} `onXYZ` 事件处理器属性也可用作针对 `window` 对象的别名。然而，建议直接在 `window` 对象上而不是直接在 `HTMLFrameSetElement` 上监听它们。
 
 > [!NOTE]
-> 在 `HTMLFrameSetElement` 上使用 `addEventListener()` 对下面列出的 `onXYZ` 事件处理器不起作用。监听 {{domxref("window")}} 对象上的事件代替。
+> 在 `HTMLFrameSetElement` 上使用 `addEventListener()` 对下面列出的 `onXYZ` 事件处理器不起作用。请监听 {{domxref("window")}} 对象上的事件。
 
 - {{domxref("window.afterprint_event", "HTMLFrameSetElement.onafterprint")}}
   - : 在关联文档开始打印或打印预览关闭后触发。
 - {{domxref("window.beforeprint_event", "HTMLFrameSetElement.onbeforeprint")}}
   - : 在关联文档即将打印或打印预览时触发。
 - {{domxref("window.beforeunload_event", "HTMLFrameSetElement.onbeforeunload")}}
-  - : 当 window、文档及其资源即将卸载时触发。
+  - : 当窗口、文档及其资源即将卸载时触发。
 - {{domxref("window.gamepadconnected_event", "HTMLFrameSetElement.ongamepadconnected")}}
   - : 当浏览器检测到游戏手柄已连接或首次使用游戏手柄的按钮/轴时触发。
 - {{domxref("window.gamepaddisconnected_event", "HTMLFrameSetElement.ongamepaddisconnected")}}
@@ -48,9 +48,9 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 - {{domxref("window.languagechange_event", "HTMLFrameSetElement.onlanguagechange")}}
   - : 当用户的首选语言改变时触发。
 - {{domxref("window.message_event", "HTMLFrameSetElement.onmessage")}}
-  - : 当窗口接收到无法反序列化的消息时触发，例如来自另一个浏览上下文的 [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 调用。
+  - : 当窗口接收到消息（例如来自另一个浏览上下文的 [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 调用）时触发。
 - {{domxref("window.messageerror_event", "HTMLFrameSetElement.onmessageerror")}}
-  - : 当 window 接收到无法反序列的消息时触发。
+  - : 当窗口接收到无法反序列的消息时触发。
 - {{domxref("window.offline_event", "HTMLFrameSetElement.onoffline")}}
   - : 当浏览器失去网络访问权限且 {{domxref("Navigator.onLine")}} 的值变为 `false` 时触发。
 - {{domxref("window.online_event", "HTMLFrameSetElement.ononline")}}
@@ -81,4 +81,4 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 ## 参见
 
 - 实现此接口的 HTML 元素：{{HTMLElement("frameset")}}。
-- 框架外此元素的对应物：`HTMLFrameSetElement`。
+- 框架外此元素的等价元素：`HTMLFrameSetElement`。
