@@ -232,10 +232,10 @@ td {
 ```html
 <table>
   <tr>
-  <th scope="col">名前</th>
-  <th scope="col">ID</th>
-  <th scope="col">入会日</th>
-  <th scope="col">残高</th>
+    <th scope="col">名前</th>
+    <th scope="col">ID</th>
+    <th scope="col">入会日</th>
+    <th scope="col">残高</th>
   </tr>
   <tr>
     <th scope="row">Margaret Nguyen</th>
