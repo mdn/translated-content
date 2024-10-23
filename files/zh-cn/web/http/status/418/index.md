@@ -21,10 +21,6 @@ HTTP **`418 I'm a teapot`** 客户端错误响应状态码表示服务器拒绝�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [维基百科：超文本咖啡壶控制协议](https://zh.wikipedia.org/wiki/超文本咖啡壶控制协议)
