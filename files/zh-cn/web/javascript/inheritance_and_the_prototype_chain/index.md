@@ -1,5 +1,5 @@
 ---
-title: 继承与原型链
+title: 继承和原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 
@@ -448,7 +448,7 @@ doSomething.prototype.prop: undefined
 doSomething.prototype.foo:  bar
 ```
 
-## 使用不同的方法来创建对象和改变原型链
+## 不同的创建对象和改变原型链的方法
 
 我们碰到过很多创建对象和改变其原型链的方法。我们将系统地总结不同的方法，并比较每种方法的优缺点。
 
@@ -740,7 +740,7 @@ Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 
 注意：仅检查属性是否为 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 是**不够的**。该属性很可能存在，但其值恰好设置为 `undefined`。
 
-## 结论
+## 总结
 
 对于 Java 或 C++ 的开发者来说，JavaScript 可能有点令人困惑，因为它是完全动态、完全是在执行期间确定的，而且根本没有静态类型。一切都是对象（实例）或函数（构造函数），甚至函数本身也是 `Function` 构造函数的实例。即使是语法结构中的“类”也只是运行时的构造函数。
 
