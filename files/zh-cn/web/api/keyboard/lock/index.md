@@ -52,7 +52,7 @@ navigator.keyboard.lock();
 
 ### 捕获指定的按键
 
-以下示例捕获“W”、“A”、“S”和“D”键。无论按键时使用了哪些修饰键，它都会捕获这些键。假设采用标准美国 QWERTY 布局，注册`"KeyW"` 可确保“W”、“Shift+“W”、Control+“W”、Control+Shift+“W”以及所有其他带有“W”的键修饰键组合都发送到应用程序。这同样适用于 `"KeyA"`、`"KeyS"`和 `"KeyD"`。
+以下示例捕获“W”、“A”、“S”和“D”键。无论按键时使用了哪些修饰键，它都会捕获这些键。假设采用标准美国 QWERTY 布局，注册 `"KeyW"` 可确保“W”、“Shift+“W”、Control+“W”、Control+Shift+“W”以及所有其他带有“W”的键修饰键组合都发送到应用程序。这同样适用于 `"KeyA"`、`"KeyS"`和 `"KeyD"`。
 
 ```js
 navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);
