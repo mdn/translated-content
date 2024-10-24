@@ -1,9 +1,8 @@
 ---
 title: MIME タイプ（IANA メディア種別）
 slug: Web/HTTP/MIME_types
-original_slug: Web/HTTP/Basics_of_HTTP/MIME_types
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{HTTPSidebar}}
@@ -79,7 +78,7 @@ MIME タイプは大文字と小文字を区別しませんが、伝統的に小
   - : 三次元のオブジェクトやシーンなどのモデルデータです。例えば、 `model/3mf` や `model/vrml` などがあります。
     [（IANA での model 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
 - `text`
-  - : テキストのみのデータで、人間が読むことができるあらゆるコンテンツ、ソースコード、コンマ区切り値 (CSV) 形式のデータのようなテキストデータを含みます。
+  - : テキストのみのデータで、人間が読むことができるあらゆるコンテンツ、ソースコード、カンマ区切り値 (CSV) 形式のデータのようなテキストデータを含みます。
     例えば、 `text/plain`, `text/csv`, `text/html` などがあります。
     [（IANA での text 型の登録を見る）](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
 - `video`
@@ -190,18 +189,7 @@ MIME タイプが `image` であるファイルは、画像データを含んで
 音声ファイルや動画ファイルの MIME タイプに関しては、通常、コンテナー形式（ファイルタイプ）を指定します。
 オプションの[コーデック引数](/ja/docs/Web/Media/Formats/codecs_parameter)を MIME タイプに追加すると、使用するコーデックと、コーデックプロファイル、レベルなど、メディアのエンコードに使用したオプションをさらに指定することができます。
 
-ウェブコンテンツに使用されるMIMEタイプのうち、最も一般的なものを以下に一覧で示します。
-ただし、これは利用可能なすべてのタイプの完全なリストではありません。
-これについては[メディアコンテナー形式のガイド](/ja/docs/Web/Media/Formats/Containers)を参照してください。
-
-| MIME タイプ                                             | 音声または動画のタイプ                                                                                                                                                      |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | WAVE コンテナー形式の音声ファイル。 PCM オーディオコーデック (WAVE コーデック "1") はたいていサポートされていますが、他のコーデックのサポートは (あるとしても) 限定的です。 |
-| `audio/webm`                                            | WebM コンテナー形式の音声ファイル。 Vorbis や Opus が WebM 仕様書で公式に対応しているコーデックです。                                                                       |
-| `video/webm`                                            | WebM コンテナー形式の、おそらく音声も含む動画ファイル。VP8 や VP9 がもっとも一般的に使用される動画コーデックです。 Vorbis や Opus がもっとも一般的な音声コーデックです。    |
-| `audio/ogg`                                             | Ogg コンテナー形式の音声ファイル。 Vorbis が、このコンテナーでもっとも一般的に使用される音声コーデックです。しかし、 Opus も同様に Ogg で対応しました。                     |
-| `video/ogg`                                             | Ogg コンテナー形式の、おそらく音声も含む動画ファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis ですが、 Opus がもっと有名になってきています。                 |
-| `application/ogg`                                       | OGG コンテナー形式を使用する音声または動画のファイル。通常の動画コーデックは Theora、音声コーデックは Vorbis です。                                                         |
+よくあるメディア型についての詳しい情報は、[よくある MIME タイプ](/ja/docs/Web/HTTP/MIME_types/Common_types)ページを参照してください。
 
 ### multipart/form-data
 
@@ -305,6 +293,8 @@ Content-Range: bytes 300-400/1270
 
 ## 正しい MIME タイプを設定することの重要性
 
+サーバーの設定項目によっては、ファイルの結合、圧縮、キャッシュなどの最適化を行うために、関連する MIME タイプを使用することがあります。特定の MIME タイプのファイルを圧縮する Apache の設定例については、[h5bp/server-configs-apache](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/web_performance/compression.conf) を参照してください。
+
 多くのウェブサーバーは未知の種類のリソースについて、既定の `application/octet-stream` MIME タイプを送ります。セキュリティ上の理由で、多くのブラウザーはこのようなリソースに既定のアクションを定義することを許可せず、リソースを使用するためにディスクへ保存することをユーザーに強制します。
 
 以下のような誤ったサーバー設定がよく見られます。
@@ -314,9 +304,9 @@ Content-Range: bytes 300-400/1270
   この場合、サーバーが `application/x-rar-compressed` を送信するように設定してください。
 - 音声および動画。
   正しい MIME タイプを持つリソースだけが、 {{HTMLElement("video")}} または {{HTMLElement("audio")}} 要素で再生されます。
-  [音声および動画に対して正しい MIME タイプを使用する](/ja/docs/Web/Media/Formats)よう注意してください。
-- 独自のファイルタイプ。
-  特別な操作ができなくなるため、`application/octet-stream` の使用は避けてください。ほとんどのブラウザーは、この汎用的な MIME タイプに既定の動作 (「Word で開く」など) を定義することができません。 `application/vnd.mspowerpoint` のような特定の型ならば、ユーザーがそのようなファイルを自動的に選択したプレゼンテーションソフトウェアで開くことができます。
+  [音声および動画の MIME タイプ](/ja/docs/Web/Media/Formats)を正しく使用するよう注意してください。
+- 独自のファイル型。
+  `application/vnd.mspowerpoint` のような特定の型ならば、ユーザーがそのようなファイルを自動的に選択したプレゼンテーションソフトウェアで開くことができます。
 
 ## MIME スニッフィング
 
