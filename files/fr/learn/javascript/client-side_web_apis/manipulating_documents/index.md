@@ -184,7 +184,7 @@ Supprimer des éléments est également plutôt simple, dès lors qu'on a une r�
 sect.removeChild(linkPara);
 ```
 
-Si vous souhaitez un élément uniquement à partir d'une référence à cet élément, comme c'est souvent le cas, vous pouvez utiliser [`Element.remove()`](/fr/docs/Web/API/Element/remove)&nbsp;:
+Si vous souhaitez supprimer un élément uniquement à partir d'une référence à cet élément, comme c'est souvent le cas, vous pouvez utiliser [`Element.remove()`](/fr/docs/Web/API/Element/remove)&nbsp;:
 
 ```js
 linkPara.remove();
