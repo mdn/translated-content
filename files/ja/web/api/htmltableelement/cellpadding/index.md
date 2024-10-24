@@ -3,7 +3,7 @@ title: "HTMLTableElement: cellPadding プロパティ"
 short-title: cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
@@ -12,7 +12,9 @@ l10n:
 
 ## 値
 
-文字列で、ピクセル数（例えば "10"）またはパーセント値（例えば "10%"）を表します。
+文字列で、ピクセル数（例えば `"10"`）またはパーセント値（例えば `"10%"`）を表します。
+
+`null` 値に設定するには、その `null` 値を空文字列 (`""`) に変換します。そのため、`elt.cellPadding = null` は `elt.cellPadding = ""` と同等です。
 
 ## 例
 
@@ -24,7 +26,7 @@ t.cellPadding = "10";
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement.cellPadding_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158).
+{{Specifications}}
 
 ## ブラウザーの互換性
 

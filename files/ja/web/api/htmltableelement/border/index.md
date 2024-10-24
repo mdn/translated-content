@@ -3,7 +3,7 @@ title: "HTMLTableElement: border プロパティ"
 short-title: border
 slug: Web/API/HTMLTableElement/border
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
@@ -24,9 +24,7 @@ t.border = "2";
 
 ## 仕様書
 
-W3C DOM 2 HTML Specification [_HTMLTableElement.border_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50969400).
-
-この属性は HTML 4.0 で非推奨になりました。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
