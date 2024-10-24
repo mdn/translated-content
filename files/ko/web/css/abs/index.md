@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`abs()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 입력된 값의 절대값을 반환하며, 이 값의 타입은 입력값과 동일합니다.
+**`abs()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 입력된 값의 절댓값을 반환하며, 이 값의 타입은 입력값과 동일합니다.
 
 ## 구문
 
