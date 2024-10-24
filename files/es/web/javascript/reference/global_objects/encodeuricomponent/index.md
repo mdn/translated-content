@@ -96,7 +96,7 @@ function encodeRFC3986URIComponent(str) {
 
 ### Codificación de un sustituto solitario lanza
 
-Un {{jsxref("URIError")}} será lanaado si se intenta codificar un sustituto que no es parte de un par alto-bajo. Por ejemplo:
+Un {{jsxref("URIError")}} será lanzado si se intenta codificar un sustituto que no es parte de un par alto-bajo. Por ejemplo:
 
 ```js
 // El par alto-bajo está bien
