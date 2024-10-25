@@ -128,7 +128,7 @@ BigInt 值和 number 值相比，不总是更精确，也不总是更不精确�
 
 ### String 类型
 
-{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)表示的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个的索引 `1`，依此类推。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 码元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）) 参考页面。
+{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个的索引为 `1`，依此类推。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 码元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇) 参考页面。
 
 JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就不可能修改它。字符串方法会基于当前字符串的内容创建一个新的字符串——例如：
 
