@@ -3834,7 +3834,7 @@
 /ja/docs/Web/CSS/transform-function/translateZ()	/ja/docs/Web/CSS/transform-function/translateZ
 /ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url_value
 /ja/docs/Web/CSS/url	/ja/docs/Web/CSS/url_value
-/ja/docs/Web/CSS/url()	/ja/docs/Web/CSS/url_value
+/ja/docs/Web/CSS/url()	/ja/docs/Web/CSS/url_function
 /ja/docs/Web/CSS/user-ident	/ja/docs/Web/CSS/custom-ident
 /ja/docs/Web/CSS/var()	/ja/docs/Web/CSS/var
 /ja/docs/Web/CSS/visible	/ja/docs/Web/CSS/visibility
