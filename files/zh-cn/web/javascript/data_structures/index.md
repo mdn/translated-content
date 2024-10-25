@@ -13,7 +13,7 @@ l10n:
 
 ## 动态类型和弱类型
 
-JavaScript 是一门有着[动态类型](https://zh.wikipedia.org/wiki/類型系統#靜態和動態檢查)的[动态](https://zh.wikipedia.org/wiki/动态语言)语言。JavaScript 中的变量与任何特定值类型没有任何直接关联，任何变量都可以赋值（和重新赋值）为各种类型的值：
+JavaScript 是一门有着[动态类型](https://zh.wikipedia.org/wiki/類型系統#靜態和動態檢查)的[动态](https://zh.wikipedia.org/wiki/动态语言)语言。JavaScript 中的变量与任何特定值类型没有任何直接关联，任何变量都可以被赋值（和被重新赋值）为各种类型的值：
 
 ```js
 let foo = 42; // foo 现在是数字
