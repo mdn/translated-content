@@ -1,7 +1,9 @@
 ---
-title: "Element: copy event"
+title: "Element: evento copy"
 short-title: copy
 slug: Web/API/Element/copy_event
+l10n:
+  sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
 ---
 
 {{APIRef}}
@@ -14,7 +16,7 @@ Un manejador para este evento permite _modificar_ el contenido del portapapeles 
 
 Sin embargo, el manejador no puede _leer_ los datos del portapapeles.
 
-Es posible construir y lanzar un evento [sintético](/es/docs/Web/Events/Creating_and_triggering_events) de `copia`, pero esto no afectar al portapapeles del sistema.
+Es posible construir y lanzar un evento `copy` [sintético](/es/docs/Web/Events/Creating_and_triggering_events), pero esto no afectará al portapapeles del sistema.
 
 La [burbuja](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
 
@@ -68,9 +70,9 @@ source.addEventListener("copy", (event) => {
 });
 ```
 
-#### Result
+#### Resultado
 
-{{ EmbedLiveSample('Live_example', '100%', '120px') }}
+{{ EmbedLiveSample('Ejemplo_en_vivo', '100%', '120px') }}
 
 ## Especificaciones
 
