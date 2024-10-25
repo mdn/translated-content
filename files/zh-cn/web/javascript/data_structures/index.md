@@ -18,7 +18,7 @@ JavaScript 是一门有着[动态类型](https://zh.wikipedia.org/wiki/類型系
 ```js
 let foo = 42; // foo 现在是数字
 foo = "bar"; // foo 现在是字符串
-foo = true; // foo 现在是布尔
+foo = true; // foo 现在是布尔值
 ```
 
 JavaScript 也是一门[弱类型](https://zh.wikipedia.org/wiki/強弱型別)语言，这意味着当运算涉及不匹配的类型时，它允许隐式类型转换，而不是抛出类型错误。
