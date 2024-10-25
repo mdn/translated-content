@@ -157,7 +157,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 ### 属性
 
-在 JavaScript 中，对象可以被看作是一个属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量_object_literals)会初始化一组有限的属性；然后，可以添加和移除属性。对象属性等价于键值对。属性键要么是[字符串](#string-类型)，要么是 [symbol](#symbol-类型)。当其他类型（如数字）用于索引对象时，值会隐式地转化为字符串。属性值可以是任何类型的值，包括其他对象，从而可以构建复杂的数据结构。
+在 JavaScript 中，对象可以被看作是一个属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量)会初始化一组有限的属性；然后，可以添加和移除属性。对象属性等价于键值对。属性键要么是[字符串](#string_类型)，要么是 [symbol](#symbol_类型)。当其他类型（如数字）用于索引对象时，值会隐式地转化为字符串。属性值可以是任何类型的值，包括其他对象，从而可以构建复杂的数据结构。
 
 有两种类型的对象属性：[*数据*属性](#数据属性)和[*访问器*属性](#访问器属性)。每个属性都有对应的*特性*。每个特性由 JavaScript 引擎进行内部访问，但是你可以通过 {{jsxref("Object.defineProperty()")}} 设置它们，或通过 {{jsxref("Object.getOwnPropertyDescriptor()")}} 读取它们。你可以在 {{jsxref("Object.defineProperty()")}} 页面阅读更多有关各种细微差别的信息。
 
