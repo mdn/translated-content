@@ -3,53 +3,65 @@ title: 创建种类表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
 
-本章节演示如何定义我们的页面，创建`Genre` 物件（这是一个很好的起点，因为类型只有一个字段，它的名称`name`，没有依赖项）。像任何其他页面一样，我们需要设置路由，控制器和视图。
+{{LearnSidebar}}
 
-## 引入验证与无害化方法
+本章节演示如何定义页面来创建 `Genre` 对象（这是一个很好的起点，因为 `Genre` 只有一个字段，即它的名称 `name`，并且没有依赖项）。与任何其他页面一样，我们需要设置路由，控制器和视图。
 
-在我们的控制器中使用 _express-validator_ 验证器，我們必須导入我们想要从 **'express-validator/check**' 和 **'express-validator/filter**' 模块中使用的函数。
+## 导入验证与修整方法
 
-打开**/controllers/genreController.js**，并在文件顶部添加以下行：
+要控制器中使用 _express-validator_，我們必須从 `'express-validator'` 模块中 _require_ 我们想使用的函数。
+
+打开 **/controllers/genreController.js**，在文件顶部、路由处理函数之前添加下方代码：
 
 ```js
-const { body, validationResult } = require("express-validator/check");
-const { sanitizeBody } = require("express-validator/filter");
+const { body, validationResult } = require("express-validator");
 ```
 
-## 控制器—get 路由
+> [!NOTE]
+> 此语法允许我们使用 `body` 和 `validationResult` 作为关联的中间件函数，正如你将在下面的 post 路由部分中看到的那样。它相当于：
+>
+> ```js
+> const validator = require("express-validator");
+> const body = validator.body;
+> const validationResult = validator.validationResult;
+> ```
 
-找到导出的`genre_create_get()` 控制器方法，并将其替换为以下代码。这只是渲染**genre_form.pug**视图，传递一个 title 变量。
+## 控制器——get 路由
+
+找到导出的 `genre_create_get()` 控制器方法，并将其替换为以下代码。这将渲染 **genre_form.pug** 视图，传递一个标题变量。
 
 ```js
-// Display Genre create form on GET.
-exports.genre_create_get = function (req, res, next) {
+// 呈现 GET 方法获取的种类表格
+exports.genre_create_get = (req, res, next) => {
   res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
-## 控制器—post 路由
+请注意，这里我们将使用一个“普通”的函数替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 中添加的占位 asynchronous handler 函数。我们不需要该路由的 `asyncHandler()` 函数的包装，因为它不包含任何可能引发异常的代码。
 
-找到导出的`genre_create_post()`控制器方法，并将其替换为以下代码。
+## 控制器——post 路由
+
+找到导出的 `genre_create_post()` 控制器方法，并将其替换为以下代码。
 
 ```js
-// Handle Genre create on POST.
+// 处理 POST 方法创建的 Genre 表单
 exports.genre_create_post = [
-  // Validate that the name field is not empty.
-  body("name", "Genre name required").isLength({ min: 1 }).trim(),
+  // 验证及修整名字字段
+  body("name", "Genre name must contain at least 3 characters")
+    .trim()
+    .isLength({ min: 3 })
+    .escape(),
 
-  // Sanitize (trim and escape) the name field.
-  sanitizeBody("name").trim().escape(),
-
-  // Process request after validation and sanitization.
-  (req, res, next) => {
-    // Extract the validation errors from a request.
+  // 处理验证及修整过后的请求
+  asyncHandler(async (req, res, next) => {
+    // 从请求中提取验证时产生的错误信息
     const errors = validationResult(req);
 
-    // Create a genre object with escaped and trimmed data.
-    var genre = new Genre({ name: req.body.name });
+    // 使用经过 trim() 和 escape() 处理过的数据创建一个种类对象
+    const genre = new Genre({ name: req.body.name });
 
     if (!errors.isEmpty()) {
-      // There are errors. Render the form again with sanitized values/error messages.
+      // 出现错误，并使用修整过的数据/错误信息重新渲染表单
       res.render("genre_form", {
         title: "Create Genre",
         genre: genre,
@@ -57,131 +69,118 @@ exports.genre_create_post = [
       });
       return;
     } else {
-      // Data from form is valid.
-      // Check if Genre with same name already exists.
-      Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
-        if (err) {
-          return next(err);
-        }
-
-        if (found_genre) {
-          // Genre exists, redirect to its detail page.
-          res.redirect(found_genre.url);
-        } else {
-          genre.save(function (err) {
-            if (err) {
-              return next(err);
-            }
-            // Genre saved. Redirect to genre detail page.
-            res.redirect(genre.url);
-          });
-        }
-      });
+      // 表格中的数据有效
+      // 检查是否存在同名的 Genre
+      const genreExists = await Genre.findOne({ name: req.body.name })
+        .collation({ locale: "en", strength: 2 })
+        .exec();
+      if (genreExists) {
+        // 存在同名的 Genre，则重定向到详情页面
+        res.redirect(genreExists.url);
+      } else {
+        await genre.save();
+        // 保存新创建的 Genre，然后重定向到详情页面
+        res.redirect(genre.url);
+      }
     }
-  },
+  }),
 ];
 ```
 
-首先要注意的是，控制器不是单个中间件函数（带参数（`req, res, next`）），而是指定一组中间件函数。数组传递给路由器函数，并按顺序调用每个方法。
+首先需要注意的是，控制器不是单个中间件函数（带参数`(req, res, next)`），而是指定了中间件函数*数组*。该数组传递给路由器函数并依次执行各个方法。
 
 > [!NOTE]
-> 这种方法是必需的，因为消毒/验证器是中间件功能。
+> 这种方法是必要的，因为验证器是中间件函数。
 
-数组中的第一个方法定义了一个验证器（`body`），来检查 name 字段是否为空（在执行验证之前调用`trim()`，以删除任何尾随/前导空格）。
-
-数组中的第二个方法（`sanitizeBody()`），创建一个清理程序来调用`trim()`修剪名称字段和调用`escape()`转义任何危险的 HTML 字符。
+数组中的第一个方法定义了一个 body 验证器（`body()`），用于验证和修整字段。这个方法使用 `trim()` 删除所有的首部/尾部空白，检查 _name_ 字段是否为空，然后使用 `escape()` 删除任何危险的 HTML 字符。
 
 ```js
-// Validate that the name field is not empty.
-body('name', 'Genre name required').isLength({ min: 1 }).trim(),
-
-// Sanitize (trim and escape) the name field.
-sanitizeBody('name').trim().escape(),
+[
+  // 检验 name 字段不为空
+  body("name", "Genre name must contain at least 3 characters")
+    .trim()
+    .isLength({ min: 3 })
+    .escape(),
+  // …
+];
 ```
 
-> [!NOTE]
-> 验证期间运行的清洁器不会修改请求。这就是为什么我们必须在上面的两个步骤中调用`trim()`！
-
-在指定验证器和清理器之后，我们创建了一个中间件函数，来提取任何验证错误。我们使用`isEmpty()` 来检查验证结果中，是否有任何错误。如果有，那么我们再次渲染表单，传入我们的已清理种类对象和错误消息的数组（`errors.array()`）。
+指定验证器后，我们创建一个中间件函数来提取任何验证错误。我们使用 `isEmpty()` 来检查验证结果是否有错误。如果有，我们就再次渲染表单，传入经过修整的种类对象和错误消息数组（`errors.array()`）。
 
 ```js
-// Process request after validation and sanitization.
-(req, res, next) => {
+// 处理验证和修整之后的请求
+asyncHandler(async (req, res, next) => {
+  // 从请求中提取验证错误
+  const errors = validationResult(req);
 
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+  // 使用经过 trim() 和 escape() 处理过的数据创建一个种类对象
+  const genre = new Genre({ name: req.body.name });
 
-    // Create a genre object with escaped and trimmed data.
-    var genre = new Genre(
-      { name: req.body.name }
-    );
-
-    if (!errors.isEmpty()) {
-        // There are errors. Render the form again with sanitized values/error messages.
-        res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
-    return;
-    }
-    else {
-        // Data from form is valid.
-        ... <save the result> ...
-    }
-}
-```
-
-如果种类名称数据有效，那么我们检查，是否已存在具有相同名称的种类`Genre`（因为我们不想创建重复项）。
-
-如果是，我们会重定向到现有种类的详细信息页面。如果没有，我们保存新种类，并重定向到其详细信息页面。
-
-```js
-// Check if Genre with same name already exists.
-Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
-  if (err) {
-    return next(err);
-  }
-  if (found_genre) {
-    // Genre exists, redirect to its detail page.
-    res.redirect(found_genre.url);
-  } else {
-    genre.save(function (err) {
-      if (err) {
-        return next(err);
-      }
-      // Genre saved. Redirect to genre detail page.
-      res.redirect(genre.url);
+  if (!errors.isEmpty()) {
+    // 出现错误，并使用修整过的数据/错误信息重新渲染表单
+    res.render("genre_form", {
+      title: "Create Genre",
+      genre: genre,
+      errors: errors.array(),
     });
+    return;
+  } else {
+    // 表格中的数据有效
+    // …
   }
 });
 ```
 
-在我们所有的 `POST`控制器中，都使用了相同的模式：我们运行验证器，然后运行消毒器，然后检查错误，并使用错误信息重新呈现表单，或保存数据。
+如果种类名称数据有效，那么我们执行不区分大小写的搜索，以查看是否存在具有相同名称的种类 `Genre`（因为我们不想创建仅字母大小写不同的重复或过于近似的记录，例如“Fantasy”，“fantasy”，“FaNtAsY”等等）。为了在搜索时忽略掉大小写和重音，我们链式调用了 [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) 方法，指定“en”的区域设置和 2 的强度（更多信息请参阅 MongoDB 的 [Collation](https://www.mongodb.com/docs/manual/reference/collation/)主题）。
+
+如果匹配的种类 `Genre` 已经存在，我们将重定向到其详情页面。如果不存在，我们则保存新种类并重定向到其详情页面。请注意，这里我们 `await` 数据库的查询结果，遵循与其他路由处理程序相同的模式。
+
+```js
+// 检查是否存在同名的 Genre
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
+if (genreExists) {
+  // 存在同名的 Genre，则重定向到详情页面
+  res.redirect(genreExists.url);
+} else {
+  await genre.save();
+  // 保存新创建的 Genre，然后重定向到详情页面
+  res.redirect(genre.url);
+}
+```
+
+我们所有的 post 控制器中都使用了相同的模式：运行验证器（带有修整功能），然后检查错误并重新渲染带有错误信息的表单或保存数据。
 
 ## 视图
 
-当我们创建一个新的种类`Genre`时，在`GET`和`POST`控制器/路由中，都会呈现相同的视图（稍后在我们更新种类`Genre`时也会使用它）。
-
-在`GET`情况下，表单为空，我们只传递一个 title 变量。在`POST`情况下，用户先前输入了无效数据 - 在种类变量`genre`中，我们传回了输入数据的已清理版本，并且在`errors`变量中，我们传回了一组错误消息。
+当我们创建新的种类 `Genre` 时，相同的视图会在 `GET` 和 `POST` 控制器/路由中呈现（稍后当我们*更新*种类时也会使用它），在 `GET` 情况下，表单为空，我们只传递一个标题变量。在 `POST` 情况下，用户之前输入了无效数据——对于 `genre` 变量，我们回传经过修整后的输入数据，对于错误变量，则回传一组错误消息。下面的代码显示了在两种情况下渲染模板的控制器代码。
 
 ```js
+// 渲染 GET 方法获取的视图
 res.render("genre_form", { title: "Create Genre" });
+
+// 渲染 POST 方法使用的视图
 res.render("genre_form", {
   title: "Create Genre",
-  genre: genre,
+  genre,
   errors: errors.array(),
 });
 ```
 
-创建 **/views/genre_form.pug**，并复制下面的文本。
+创建 **/views/genre_form.pug**，并复制下方的代码。
 
-```plain
+```pug
 extends layout
 
 block content
+
   h1 #{title}
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='name') Genre:
-      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name))
+      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
     button.btn.btn-primary(type='submit') Submit
 
   if errors
@@ -190,32 +189,32 @@ block content
         li!= error.msg
 ```
 
-从我们之前的教程中，可以很好地理解这个模板的大部分内容。首先，我们扩展 **layout.pug**基本模板，并覆盖名为“**content**”的块`block`。然后我们有一个标题，我们从控制器传入的标题`title`（通过`render()` 方法）。
+从我们之前的教程中可以很好地理解这个模板的大部分内容。首先，我们扩展 **layout.pug** 基本模板并覆盖名为 **content** 的模块 `block`。然后我们就创建了网页头部，其包含了我们从控制器传入的标题 `title`（通过 `render()` 方法）。
 
-接下来，我们有 HTML 表单的 Pug 代码，它使用`POST`方法将数据发送到服务器，并且因为操作`action`是空字符串，所以将数据发送到与页面相同的 URL。
+接下来，pug 代码中的 HTML 表单部分则会使用 `method="POST"` 方法将数据发送到服务器，并且由于 `action` 是空字符串，因此会将数据发送到与页面相同的 URL。
 
-表单定义了一个名为“name”的“text”类型的必填字段。字段的默认值，取决于是否定义了种类变量`genre`。如果从`GET`路由调用，它将为空，因为这是一个新表单。如果从`POST`路由调用，它将包含用户最初输入的（无效）值。
+该表单定义了一个名为“name”的“text”类型的必填字段。该字段的默认值取决于是否定义了种类 `genre` 变量。如果从 `GET` 路由调用，它将为空，因为这是一个新表单。如果从 `POST` 路由调用，它将包含用户最初输入的（无效）值。
 
-页面的最后一部分是错误代码。如果已定义错误变量，则只会打印错误列表（换句话说，当模板在`GET`路由上呈现时，此部分不会出现）。
+该页面的最后一部分是错误代码。如果已定义错误变量，则只会打印错误列表（换句话说，当模板在 `GET` 路由上呈现时，此部分将不会出现）。
 
 > [!NOTE]
-> 这只是呈现错误的一种方法。你还可以从错误变量中，获取受影响字段的名称，并使用这些，来控制错误消息的呈现位置，以及是否应用自定义 CSS 等。
+> 这只是呈现错误的一种方法。你还可以从错误变量中获取受影响字段的名称，并使用它们来控制错误消息的呈现位置以及是否应用自定义 CSS 等。
 
 ## 它看起來像是？
 
-运行应用程序，打开浏览器到<http://localhost:3000/>，然后选择 Create new genre 链接。如果一切设置正确，你的网站应该类似于以下屏幕截图。输入值后，应保存该值，你将进入种类详细信息页面。
+运行应用程序，打开浏览器到 `http://localhost:3000/`，然后选择 _Create new genre_ 链接。如果一切设置正确，你的网站应该类似于下方的屏幕截图。输入值后，应将其保存，并且你将进入种类详情页面。
 
-![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
+![种类创建页面——Express 本地图书馆网站](locallibary_express_genre_create_empty.png)
 
-我们针对服务器端，验证的唯一错误是种类字段不能为空。下面的屏幕截图，显示了如果你没有提供种类（以红色突出显示），错误列表会是什么样子。
+我们在服务器端验证的唯一错误是种类字段必须至少包含三个字符。下面的屏幕截图显示了如果你提供仅包含一个或两个字符的类型（以黄色突出显示），错误列表会是什么样子。
 
-![](locallibary_express_genre_create_error.png)
+![本地图书馆应用的创建种类部分。左栏有一个垂直导航栏。右侧部分是创建一个新种类，标题为“创建种类”。有一个标有“种类”的输入字段。底部有一个提交按钮。“提交”按钮正下方有一条错误消息，上面写着“需要类型名称”。本文作者强调了该错误消息。表格中没有视觉指示表明类型是必需的，也没有错误消息仅在出现错误时出现。](locallibary_express_genre_create_error.png)
 
 > [!NOTE]
-> 我们的验证使用`trim()`，来确保不接受空格作为种类名称。我们还可以在表单中 的字段定义中，添加值`required='true'`，来验证客户端字段不为空：
+> 我们的验证使用 `trim()` 来确保不接受空格作为种类名称。我们还对表单中​​字段定义添加 `required` ![布尔属性](/zh-CN/docs/Glossary/Boolean/HTML)来验证客户端上的字段不为空：
 >
-> ```js
-> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
+> ```pug
+> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
 > ```
 
 ## 下一步
