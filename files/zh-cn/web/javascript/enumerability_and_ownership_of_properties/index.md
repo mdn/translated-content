@@ -11,19 +11,19 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 - 可枚举或不可枚举；
 - 字符串或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)；
-- 自己的属性或从原型链继承的属性。
+- 自有属性或从原型链继承的属性。
 
-*可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化的属性，该标识值默认为 `true`。对于通过 [Object.defineProperty](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，该标识值默认为 `false`。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环 和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
+*可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化器创建的属性，该标识值默认为 `true`。对于通过 [Object.defineProperty](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，该标识值默认为 `false`。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环 和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
 
-属性的所有权由属性是否直接属于该对象决定的，而不是由属性是否属于原型链决定的。
+属性的所有权由属性是否直接属于该对象决定的，而不是由属性是否属于它的原型链决定的。
 
-所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自己的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的一个接着一个地访问对象属性的方法。
+所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自有的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的一个接着一个地访问对象属性的方法。
 
 ## 查询对象属性
 
 有四种内置的查询对象属性的方法。它们全部都支持字符串和 symbol 键。下表总结了每个方法支持的类型。
 
-|                                                                                                             | 可枚举的、自己的 | 可枚举的、继承的 | 不可枚举的、自己的 | 不可枚举的、继承的 |
+|                                                                                                             | 可枚举的、自有的 | 可枚举的、继承的 | 不可枚举的、自有的 | 不可枚举的、继承的 |
 | ----------------------------------------------------------------------------------------------------------- | ---------------- | ---------------- | ------------------ | ------------------ |
 | [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`        | `false ❌`       | `false ❌`         | `false ❌`         |
 | [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`        | `false ❌`       | `true ✅`          | `false ❌`         |
@@ -36,7 +36,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 仅访问字符串属性或仅访问 symbol 属性的方法有额外的注解。✅ 表示能访问这个类型的属性；❌ 表示不能访问这个类型的属性。
 
-|                                                                                                                                                                                                                                                                        | 可枚举的、自己的 | 可枚举的、继承的 | 不可枚举的、自己的 | 不可枚举的、继承的 |
+|                                                                                                                                                                                                                                                                        | 可枚举的、自有的 | 可枚举的、继承的 | 不可枚举的、自有的 | 不可枚举的、继承的 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------- | ------------------ | ------------------ |
 | [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)<br />[`Object.values`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)<br />[`Object.entries`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) | ✅<br />(字符串) | ❌               | ❌                 | ❌                 |
 | [`Object.getOwnPropertyNames`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)                                                                                                                                                         | ✅<br />(字符串) | ❌               | ✅<br />(字符串)   | ❌                 |
