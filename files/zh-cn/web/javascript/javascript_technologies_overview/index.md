@@ -22,7 +22,7 @@ JavaScript 的核心语言由 ECMA TC39 委员会标准化为称作 ECMAScript �
 除却一些其他元素，ECMAScript 定义了：
 
 - 语法（解析规则、关键词、流程控制、对象初始化，等等）
-- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义{{jsxref("Error")}}类型的能力）
+- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义 {{jsxref("Error")}} 类型的能力）
 - 类型（布尔、数字、字符串、函数、对象，等等）
 - 基于原型的继承机制
 - 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
@@ -120,7 +120,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 
 JavaScript 引擎暴露了应用程序开发者用于将 JavaScript 整合到软件中的公共 API，JavaScript 大多数常见的宿主环境是 Web 浏览器。Web 浏览器一般使用公共的 API 创建用于将 [DOM](https://dom.spec.whatwg.org/) 反射到 JavaScript 的**宿主对象**。
 
-JavaScript 另一个常见的应用是作为（Web）服务器端脚本语言。JavaScript Web 服务器通过暴漏表示 HTTP 请求和响应的宿主对象，然后 JavaScript 程序就能操作这些对象动态地生成 Web 页面。[Node.js](https://nodejs.org/) 是流行的服务器端脚本语言的宿主环境。
+JavaScript 另一个常见的应用是作为（Web）服务器端脚本语言。JavaScript Web 服务器通过暴露表示 HTTP 请求和响应的宿主对象，然后 JavaScript 程序就能操作这些对象动态地生成 Web 页面。[Node.js](https://nodejs.org/) 是流行的服务器端脚本语言的宿主环境。
 
 ## Shell
 
