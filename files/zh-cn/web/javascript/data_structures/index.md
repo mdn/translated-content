@@ -68,7 +68,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 `null` 在核心语言中使用频率少得多。最重要的地方是[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)的末端，其次是与原型交互的方法，如 {{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} 等，接受或返回 `null` 而不是 `undefined`。
 
-`null` 是一个[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)，但 `undefined` 是一个普通的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，这个标识符恰好是一个全局属性。实际上区别很小，因为 `undefined` 不应该重新定义或者遮蔽。
+`null` 是一个[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)，但 `undefined` 是一个普通的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，这个标识符恰好是一个全局属性。实际上区别很小，因为 `undefined` 不应该被重新定义或者遮蔽。
 
 ### Boolean 类型
 
