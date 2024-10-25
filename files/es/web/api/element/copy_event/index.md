@@ -18,7 +18,6 @@ Es posible construir y lanzar un evento [sintético](/es/docs/Web/Events/Creatin
 
 La [burbuja](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
 
-
 ## Sintaxis
 
 Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
