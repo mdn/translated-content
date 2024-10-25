@@ -37,7 +37,7 @@ console.log(result); // 421
 
 除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 以外，所有的原始类型都可以使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符进行测试。`typeof null` 返回 `"object"`，因此必须使用 `=== null` 测试 `null`。
 
-除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)以外，所有的原始类型都有对应的对象包装类型，它们为处理原始值提供了有用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供了像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装成对应的包装对象，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要使用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
+除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 以外，所有的原始类型都有对应的对象包装类型，它们为处理原始值提供了有用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供了像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装成对应的包装对象，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要使用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
 
 | 类型                         | `typeof` 返回值 | 对象包装器            |
 | ---------------------------- | --------------- | --------------------- |
