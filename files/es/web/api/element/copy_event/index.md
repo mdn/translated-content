@@ -14,7 +14,7 @@ Un manejador para este evento permite _modificar_ el contenido del portapapeles 
 
 Sin embargo, el manejador no puede _leer_ los datos del portapapeles.
 
-Es posible construir y lanzar un evento [sintético](/es/docs/Web/Events/Creating_and_triggering_events)  de `copia`, pero esto no afectar al portapapeles del sistema.
+Es posible construir y lanzar un evento [sintético](/es/docs/Web/Events/Creating_and_triggering_events) de `copia`, pero esto no afectar al portapapeles del sistema.
 
 La [burbuja](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
 
