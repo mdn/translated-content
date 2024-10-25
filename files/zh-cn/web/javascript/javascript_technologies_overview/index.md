@@ -1,6 +1,8 @@
 ---
 title: JavaScript 技术概览
 slug: Web/JavaScript/JavaScript_technologies_overview
+l10n:
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{JsSidebar("Introductory")}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript 核心语言（ECMAScript）
 
-JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标准化的编程语言。“ECMAScript”是语言标准的术语，但“ECMAScript”和“JavaScript”是可以互换使用的。
+JavaScript 的核心语言由 ECMA TC39 委员会标准化为称作 ECMAScript 的语言。“ECMAScript”是表示语言标准的术语，但“ECMAScript”和“JavaScript”是可以互换使用的。
 
 该核心语言同样可以被用在非浏览器环境之中，例如 [Node.js](https://nodejs.org)。
 
@@ -20,10 +22,10 @@ JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标�
 除却一些其他元素，ECMAScript 定义了：
 
 - 语法（解析规则、关键词、流程控制、对象初始化，等等）
-- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义{{jsxref("Error", "错误", "", 1)}}类型的能力）
-- 类型（布尔值、数字、字符串、函数、对象，等等）
+- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义{{jsxref("Error")}}类型的能力）
+- 类型（布尔、数字、字符串、函数、对象，等等）
 - 基于原型的继承机制
-- 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
+- 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 - [模块系统](/zh-CN/docs/Web/JavaScript/Guide/Modules)
 - 基本内存模型
@@ -42,7 +44,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ## 国际化 API
 
-由 ECMA TC39 进行标准化的 [ECMAScript 国际化 API 规范](https://402.ecma-international.org/1.0/)是在 ECMAScript 语言规范之上额外增加的。国际化 API 为 JavaScript 提供了国际化的规则排序（字符串比较）、数字格式化、日期时间格式化等功能，能够让应用选择语言，并根据实际需要选用功能。本标准在 2012 年 12 月审批通过，可以在 {{jsxref("Intl")}} 对象页面查看各个浏览器对其的实现情况。如今，国际化规范也每年批准一次，浏览器不断改进其实现。
+由 ECMA TC39 进行标准化的 [ECMAScript 国际化 API 规范](https://402.ecma-international.org/1.0/)是在 ECMAScript 语言规范之上额外增加的。国际化 API 为 JavaScript 应用程序提供了国际化的规则排序（字符串比较）、数字格式化、日期时间格式化等功能，能够让应用选择语言，并根据实际需要选用功能。初始标准在 2012 年 12 月审批通过；可以在 {{jsxref("Intl")}} 对象的文档中查看各个浏览器的实现状态。如今，国际化规范也每年批准一次，以及浏览器在不断地改进其实现。
 
 ### 相关资源
 
@@ -64,21 +66,21 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ### DOM 的核心
 
-文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的**约定**，它是跨平台的，并且与**编程语言无关**。通过调用**DOM 树**上对象的方法可以操纵这些对象。文档对象模型核心是由 [W3C](/zh-CN/docs/Glossary/W3C) 进行标准化的，它将 HTML 和 XML 文档抽象成对象，并在其上定义接口以及操纵这些对象的机制，DOM 定义的元素有：
+文档对象模型（DOM）是用来对 HTML、XHTML 及 XML 文档中的对象进行表示和交互的跨平台以及**编程语言无关的约定**。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。文档对象模型核心是由 [W3C](/zh-CN/docs/Glossary/W3C) 进行标准化的，这个模型定义了编程语言无关的、将 HTML 和 XML 抽象为对象的接口，也定义了操作这种抽象的机制。在由 DOM 定义的东西中，我们能找到：
 
-- [DOM 核心](https://dom.spec.whatwg.org/)中定义了文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
-- [DOM 事件](https://w3c.github.io/uievents/)中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。
-- [DOM 元素遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)对象等其他内容。
+- [DOM 核心](https://dom.spec.whatwg.org/)中的文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
+- [DOM 事件](https://w3c.github.io/uievents/)中的一个不太严谨的 DOM 事件架构的定义，以及一些特殊事件。
+- [DOM 遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)等其他内容。
 
-从 ECMAScript 的角度来看，DOM 规范中定义的对象被称作“宿主对象”。
+从 ECMAScript 的角度来看，DOM 规范中定义的对象称作“宿主对象”。
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的意义。比如元素的 `className` 属性以及例如 {{domxref("Document.body")}} 这样的 API。
+[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的*意义*。HTML DOM 包括：元素的 `className` 属性以及 {{domxref("Document.body")}} API，等等。
 
 HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlelement("ul")}} 元素中，只能以 {{htmlelement("li")}} 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。
 
-想了解更多关于 {{domxref("Document")}} 对象、{{domxref("Window")}} 对象以及其他 DOM 元素的信息？请访问 MDN 的 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
+想了解更多关于 {{domxref("Document")}} 对象、{{domxref("Window")}} 对象以及其他 DOM 元素的信息？阅读 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
 
 ## 其他值得关注的 API
 
@@ -89,41 +91,54 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [WebWorker](https://html.spec.whatwg.org/multipage/workers.html) 允许进行并行计算。
 - [WebSocket](https://html.spec.whatwg.org/multipage/#network) 允许进行底层双向通信。
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的绘图 API。
-- [WebAssembly 接口](https://webassembly.github.io/spec/js-api) 提供了 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间的通信工具。
+- [WebAssembly 接口](https://webassembly.github.io/spec/js-api)为 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间提供通信工具。
 
 非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
 ## 有哪些 JavaScript 的实现？
 
-mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网景公司的 Brendan Eich 创建，并不断地更新以符合 ECMA-262 Edition 5 及其之后的标准版本。这个引擎，代号 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) ，是由 C/C++ 语言开发的。而 [Rhino](/zh-CN/docs/Rhino) 引擎，主要由 Norris Boyd（同样也是在网景公司）创建，则是一个 Java 语言开发的 JavaScript 实现。与 SpiderMonkey 类似，Rhino 符合 ECMA-262 Edition 5 标准。
+有三个主要的用于浏览器环境和其他环境的 JavaScript 实现：
 
-有很多优化技术如 TraceMonkey (Firefox 3.5)、JägerMonkey (Firefox 4) 和 IonMonkey 被不断添加到了 SpiderMonkey JavaScript 引擎。并且提升 JavaScript 执行效率的工作一直在进行。
+- Mozilla 的 [SpiderMonkey](https://spidermonkey.dev/)，用于 Firefox。它是*首*款 JavaScript 引擎，由 Brendan Eich 在 Netscape 创造。
+- Google 的 [V8](https://v8.dev/)，用于 Google Chrome、Opera、Edge、[Node.js](https://nodejs.org/)、[Deno](https://deno.com/)、[Electron](https://www.electronjs.org/)，等等。
+- Apple 的 [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore)（也称为 SquirrelFish/Nitro），用于 WebKit 浏览器（如 Apple Safari）和 [Bun](https://bun.sh/)。
 
-除了以上实现，还有其他一些流行的 JavaScript 引擎，如：
+除了以上实现，还有其他流行的 JavaScript 引擎，如：
 
-- Google 的 [V8](http://code.google.com/p/v8/)，在 Google Chrome 浏览器和较新的 Opera 浏览器中使用。这同时也是[Node.js](https://nodejs.org/en/)使用的引擎。
-- [JavaScriptCore](http://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro)，被用在了一些 WebKit 浏览器如 Apple Safari。
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
 - [Chakra](<https://zh.wikipedia.org/wiki/Chakra_(JScript引擎)>) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
 
-每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
+- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>)，用于早期版本的 Opera。
+- Microsoft 的 [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) 引擎，用于 Internet Explorer（尽管它实现的语言正式名称为“JScript”，为了避免商标问题）。早期版本的 Edge 使用的新 JavaScript 引擎，让人困惑地也叫 [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>)。
+- [LibJS](https://serenityos.github.io/libjs-website/)，用于 [SerenityOS](https://serenityos.org/) 地浏览器实现。
+- Mozilla 的 [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) 引擎，用 Java 语言实现的 JavaScript 引擎，主要由 Norris Boyd 创造（也在 Netscape）。
 
-另一个常见的 JavaScript 应用是作为服务端脚本语言。JavaScript 服务器提供宿主对象代表 HTTP 请求和响应，随后可以通过 JavaScript 程序来动态的生成 Web 页面。[Node.js](https://nodejs.org/en/)便是一个流行的例子。
+还有一些为非浏览器目的特别裁剪过的引擎：
+
+- [Engine262](https://engine262.js.org/)，用 JavaScript 实现的 JavaScript 引擎。创建的目的是为 JavaScript 开发者探索规范中的新语言特性和查找规范中的问题。
+- [Moddable XS](https://www.moddable.com/)，用于嵌入式系统，如 IoT。
+- [QuickJS](https://bellard.org/quickjs/)，一个小型、嵌入式的 JavaScript 引擎。
+- Meta 的 [Hermes](https://github.com/facebook/hermes) 引擎，为 [React Native](https://reactnative.dev/docs/hermes) 进行优化的引擎。
+- Oracle 的 [GraalJS](https://www.graalvm.org/)，由 Oracle Labs 在 GraalVM 上构建的高性能引擎。
+
+JavaScript 引擎暴露了应用程序开发者用于将 JavaScript 整合到软件中公共 API，JavaScript 大多数常见的宿主环境是 Web 浏览器。Web 浏览器一般使用公共的 API 创建用于将 [DOM](https://dom.spec.whatwg.org/) 反射到 JavaScript 的**宿主对象**。
+
+JavaScript 另一个常见的应用是作为（Web）服务器端脚本语言。JavaScript Web 服务器通过暴漏表示 HTTP 请求和响应 的宿主对象，然后 JavaScript 程序额能操作这些对象动态地生成 Web 页面。[Node.js](https://nodejs.org/) 是流行的服务器端脚本语言的宿主环境。
 
 ## Shell
 
-JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无需重载 web 页面。其在开发和代码调试中非常有用。
+JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载 web 页面。其在开发和代码调试中非常有用。
 
 ### 独立的 JavaScript shell
 
 以下 JavaScript shell 是与 Perl 或 Python 类似的独立的环境：
 
-- [Node.js](https://nodejs.org/)——Node.js 是用于构建快速、可扩展的网络应用的平台。
+- [Node.js](https://nodejs.org/)——Node.js 是用于轻易构建快速、可扩展的网络应用的平台。
 - [ShellJS](https://github.com/shelljs/shelljs)——用于 Node.js 的便携式 Unix shell 命令。
 
 ### 基于浏览器的 JavaScript shell
 
-以下 JavaScript shell 是通过浏览器的 JavaScript 引擎运行代码的：
+以下 JavaScript shell 是通过浏览器的 JavaScript 引擎运行代码：
 
 - Firefox 有一个[内置的 JavaScript 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html)，支持多行编辑。
 - [Babel 交互式解释器](https://babeljs.io/repl)——一个基于浏览器的、用于试验下一代 JavaScript 特性的[交互式解释器](https://zh.wikipedia.org/wiki/读取﹣求值﹣输出循环)。
@@ -135,8 +150,8 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : 包括 [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等。
-- [JavaScript Shell](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#shell)
-  - : Javascript Shell 使你可以即时测试 JavaScript 代码片段。
+- [学习 JavaScript](https://learnjavascript.online/)
+  - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
 - [TogetherJS](https://togetherjs.com/)
   - : 添加 TogetherJS 到你的网站，让用户实时互助，协作更简单。
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
@@ -148,8 +163,8 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 - [JSBin](https://jsbin.com/)
   - : JS Bin 是一个开源的协作式的 web 开发调试工具。
 - [Codepen](https://codepen.io/)
-  - : Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
+  - : Codepen 也是一个 Web 开发协作工具，可用作展示实时结果的 playground。
 - [StackBlitz](https://stackblitz.com/)
-  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular 等技术的全栈应用
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持托管和部署使用了 React、Angular 等技术的全栈应用
 - [RunJS](https://runjs.app/)
   - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与浏览器 API。
