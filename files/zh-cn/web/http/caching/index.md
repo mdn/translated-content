@@ -33,7 +33,11 @@ Cache-Control: private
 
 个性化内容通常由 cookie 控制，但 cookie 的存在并不能表明它是私有的，因此单独的 cookie 不会使响应成为私有的。
 
-请注意，如果响应具有 `Authorization` 标头，则不能将其存储在私有缓存（或共享缓存，除非 Cache-Control 指定的是 `public`）中。
+请注意，如果响应具有 `Authorization` 标头，则不能将其存储在共享缓存中，即使设置了 `max-age` 也不能，需明确指定 `public` 指令。
+
+```http
+Cache-Control: public, max-age=604800
+```
 
 ### 共享缓存
 
