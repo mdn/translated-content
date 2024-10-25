@@ -1,6 +1,8 @@
 ---
 title: 继承和原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
+l10n:
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
 {{jsSidebar("Advanced")}}
@@ -18,7 +20,7 @@ JavaScript 对于使用过基于类的语言（如 Java 或 C++）的开发者�
 JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaScript 对象有一条指向原型对象的链。当试图访问对象的属性时，不仅在该对象上查找属性，还会在该对象的原型上查找属性，以及原型的原型，依次层层向上查找，直到找到一个名字匹配的属性或到达原型链的末尾。
 
 > [!NOTE]
-> 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符合用于标识 `someObject` 的原型。`[[Prototype]]` 内部插槽分别使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 函数访问和修改。其与非标准但许多 JavaScript 引擎实现的 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器等价。为了保持简洁和避免困惑，我们会避免使用 `obj.__proto__` 符号，而是使用 `obj.[[Prototype]]` 作为代替。其对应于 `Object.getPrototypeOf(obj)`。
+> 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符号用于标识 `someObject` 的原型。`[[Prototype]]` 内部插槽分别使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 函数访问和修改。其与非标准但许多 JavaScript 引擎实现的 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器等价。为了保持简洁和避免困惑，我们会避免使用 `obj.__proto__` 符号，而是使用 `obj.[[Prototype]]` 作为代替。其对应于 `Object.getPrototypeOf(obj)`。
 >
 > 它不应与函数的 `func.prototype` 属性混淆，后者赋值为指定函数用作构造函数时创建的所有对象*实例*的 `[[Prototype]]`。我们将在[后面的小节](#构造函数)中讨论构造函数的 `prototype` 属性。
 
@@ -93,9 +95,9 @@ console.log(o.d); // 5
 
 ### 继承“方法”
 
-JavaScript 中定义的“[方法](/zh-CN/docs/Glossary/Method)”的形式和基于类的语言定义方法的形式不同。在 JavaScript 中，任何函数都能以属性的形式添加到对象上。继承函数与继承其他属性没有差别，包括上面的属性遮蔽（在函数继承中，称作*方法重写*）。
+JavaScript 中定义“[方法](/zh-CN/docs/Glossary/Method)”的形式和基于类的语言定义方法的形式不同。在 JavaScript 中，任何函数都能以属性的形式添加到对象上。继承的函数与继承的其他属性没有差别，包括上面的属性遮蔽（在继承的函数中，称作*方法重写*）。
 
-当执行继承函数时，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值指向的是继承对象，而不是将该函数作为其自有属性的原型对象。
+当执行继承的函数时，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值指向的是继承对象，而不是将该函数作为其自有属性的原型对象。
 
 ```js
 const parent = {
@@ -129,7 +131,7 @@ console.log(child.method()); // 5
 
 ## 构造函数
 
-原型的强大之处在于，如果一组属性应该出现在每一个实例上，那我们就可以复用它们——尤其是对于方法。假设我们要创建多个盒子，其中每个盒子都是一个对象，包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
+原型的强大之处在于，如果一组属性应该出现在每一个实例上，那我们就可以复用它们——尤其是对于方法。假设我们要创建多个盒子，其中每个盒子都是一个对象，这个对象包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
 
 ```js-nolint
 const boxes = [
@@ -349,7 +351,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 ```
 
 > [!NOTE]
-> 遵循规范的术语，Chrome 控制台使用 `[[Prototype]]` 来表示对象的原型；Firefox 使用 `<prototype>`。为了保持一致性，我们将使用 `[[Prototype]]`。
+> 遵循规范的术语，Chrome 控制台使用 `[[Prototype]]` 表示对象的原型；而 Firefox 使用 `<prototype>`。为了保持一致性，我们将使用 `[[Prototype]]`。
 
 我们可以像下面这样，向 `doSomething()` 的原型添加属性。
 
@@ -474,7 +476,7 @@ const p = { b: 2, __proto__: o };
 // p ---> o ---> Object.prototype ---> null
 ```
 
-在[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)中使用 `__proto__` 键时，将 `__proto__` 键指向非对象的值只会被忽略，而非抛出异常。与 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 的 setter 相反，对象字面量初始化器中的 `__proto__` 是标准化的、被优化的，甚至比 {{jsxref("Object.create")}} 更高效。在创建对象时声明额外的自有属性比 {{jsxref("Object.create")}} 更符合习惯。
+在[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)中使用 `__proto__` 键时，将 `__proto__` 键指向非对象的值（译者注：`null` 不会被忽略）只会被忽略，而非抛出异常。与 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 的 setter 相反，对象字面量初始化器中的 `__proto__` 是标准化的、被优化的，甚至比 {{jsxref("Object.create")}} 更高效。在创建对象时声明额外的自有属性比 {{jsxref("Object.create")}} 更符合习惯。
 
 ### 使用构造函数
 
@@ -493,7 +495,7 @@ const g = new Graph();
 // 在执行 new Graph() 时，g.[[Prototype]] 是 Graph.prototype 的值。
 ```
 
-自从非常早期的 JavaScript 开始，构造函数一直可用。因此，它是非常快速、非常标准，以及非常 JIT 优化过的。然而，它也很正确使用，因为以这种方式添加的方法默认是可枚举的，而这与类语法或内置方法的表现行为不一致。构造很长的继承链也容易出错，就像前面展示的那样。
+自从非常早期的 JavaScript 开始，构造函数一直可用。因此，它是非常快速、非常标准，以及非常 JIT 优化过的。然而，它也很难正确使用，因为以这种方式添加的方法默认是可枚举的，而这与类语法或内置方法的表现行为不一致。构造很长的继承链也容易出错，就像前面展示的那样。
 
 ### 使用 Object.create()
 
@@ -518,7 +520,7 @@ console.log(d.hasOwnProperty);
 
 与对象初始化器中的 `__proto__` 键类似，`Object.create()` 允许在创建时直接设置对象的原型，这允许运行时进一步优化对象。还允许使用 `Object.create(null)` 创建原型为 `null` 的对象。`Object.create()` 的第二个参数能精确地指明新对象中每个属性地特性，而这会是一把双刃剑：
 
-- 它能在对象创建期间创建不可枚举地属性，而这用对象字面量做不到。
+- 它能在对象创建期间创建不可枚举的属性，而这用对象字面量做不到。
 - 它比对象字面量更加冗余以及更容易出错。
 - 它可能比对象字面量更慢，特别是创建很多属性时。
 
@@ -545,7 +547,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-在定义复杂的继承结构式，类提供了非常高的可读性和可维护性。[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)是原型继承中没有简单替代方案的特性。然而，类比传统的构造函数的性能要差，以及不支持旧环境。
+在定义复杂的继承结构时，类提供了非常高的可读性和可维护性。[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)是原型继承中没有简单替代方案的特性。然而，类比传统的构造函数的性能要差，以及不支持旧环境。
 
 ### 使用 Object.setPrototypeOf()
 
@@ -575,7 +577,7 @@ console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
 
-与 `Object.setPrototypeOf` 相比，将 `__proto__` 设置为非对象的值只会被忽略，而非抛出异常。它也只有稍微好一点的浏览器支持。然而，它是非标准的，并且已废弃。你应该几乎总是使用 `Object.setPrototypeOf` 作为代替。
+与 `Object.setPrototypeOf` 相比，将 `__proto__` 设置为非对象的值（译者注：`null` 不会被忽略）只会被忽略，而非抛出异常。它也只有稍微好一点的浏览器支持。然而，它是非标准的，并且已废弃。你应该几乎总是使用 `Object.setPrototypeOf` 作为代替。
 
 ## 性能
 
@@ -614,7 +616,7 @@ Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 
 对于 Java 或 C++ 的开发者来说，JavaScript 可能有点令人困惑，因为它是完全动态、完全是在执行期间确定的，而且根本没有静态类型。一切都是对象（实例）或函数（构造函数），甚至函数本身也是 `Function` 构造函数的实例。即使是语法结构中的“类”也只是运行时的构造函数。
 
-JavaScript 中的所有构造函数都有一个称作 `prototype` 的特殊属性，它与 `new` 运算符一起使用。原型对象的引用复制到新实例的内部属性 `[[Prototype]]` 中。例如，当你执行 `const a1 = new A()` 时，JavaScript（在内存中创建对象之后，用为对象定义的 `this` 运行 `A()` 之前）设置 `a1.[[Prototype]] = A.prototype`。然后，当你访问实例的属性时，JavaScript 首先检查它们是否直接该对象上存在，如果不存在，则在 `[[Prototype]]` 中查找。会*递归*查询 `[[Prototype]]`，即 `a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething`，以此类推，直至找到或 `Object.getPrototypeOf` 返回 `null`。这意味着在 `prototype` 上定义的所有属性实际上都由所有实例共享，并且甚至可以更改 `prototype` 的部分内容，使得更改被应用到所有现有的实例中。
+JavaScript 中的所有构造函数都有一个称作 `prototype` 的特殊属性，它与 `new` 运算符一起使用。原型对象的引用复制到新实例的内部属性 `[[Prototype]]` 中。例如，当你执行 `const a1 = new A()` 时，JavaScript（在内存中创建对象之后，用为对象定义的 `this` 运行 `A()` 之前）设置 `a1.[[Prototype]] = A.prototype`。然后，当你访问实例的属性时，JavaScript 首先检查它们是否直接在该对象上存在，如果不存在，则在 `[[Prototype]]` 中查找。会*递归*查询 `[[Prototype]]`，即 `a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething`，以此类推，直至找到或 `Object.getPrototypeOf` 返回 `null`。这意味着在 `prototype` 上定义的所有属性实际上都由所有实例共享，并且甚至可以更改 `prototype` 的部分内容，使得更改被应用到所有现有的实例中。
 
 在上面的示例中，如果你执行 `const a1 = new A(); const a2 = new A();`，那么 `a1.doSomething` 实际上会引用 `Object.getPrototypeOf(a1).doSomething`——这与你定义的 `A.prototype.doSomething` 相同，即 `Object.getPrototypeOf(a1).doSomething === Object.getPrototypeOf(a2).doSomething === A.prototype.doSomething`。
 
