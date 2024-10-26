@@ -94,7 +94,7 @@ setTimeout(() => {
 
 while (true) {
   if (new Date().getTime() / 1000 - seconds >= 2) {
-    console.log("Good, looped for 2 seconds");
+    console.log("很好，在 2 秒后循环");
     break;
   }
 }
