@@ -122,7 +122,7 @@ x + 1n === x + 2n; // false，因为 9007199254740992n 和 9007199254740993n 不
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true，因为都等于 9007199254740992
 ```
 
-你可以使用大多数运算符处理 BigInt，包括 `+`、`*`、`-`、`**` 和 `%`。——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，而是[非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
+你可以使用大多数运算符处理 BigInt，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，而是[非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
 
 BigInt 值和 number 值相比，不总是更精确，也不总是更不精确，因为 BigInt 不能表示小数，但能更精确地表示大整数。这两种类型都不能相互替代。如果在算术表达式中将 BigInt 值和常规 number 值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 
@@ -192,19 +192,19 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `configurable`
   - : 布尔值，表示属性是否可以删除，是否可以更改为访问器属性，以及是否可以更改其特性。
 
-对象的[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)指向另一个对象或者 `null`——从概念上讲，它是对象的隐藏属性，通常表示为 `[[Prototype]]`。对象的 `[[Prototype]]` 属性也可以在对象自身上访问。
+对象的[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)指向另一个对象或者 `null`——从概念上讲，它是对象的隐藏属性，通常表示为 `[[Prototype]]`。对象的 `[[Prototype]]` 的属性也可以在对象自身上访问。
 
 对象是临时的键值对，因此经常被用作 map。不过，这可能存在人体工程学、安全性和性能方面的问题。请使用 {{jsxref("Map")}} 存储任意的数据。[`Map` 参考](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map#object_和_map_的比较)对使用普通对象和使用 map 存储键值之间的利弊进行了更详细的讨论。
 
 ### Date
 
-当表示日期时，最好的选择是使用在 JavaScript 内置的 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 工具类。
+当表示日期时，最好的选择是使用 JavaScript 中内置的 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 工具类。
 
 ### 索引类集合：数组和类型化数组
 
-[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)是整数键的属性和 `length` 属性有着特殊关系的常规对象。
+[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)是整数键的属性和 `length` 属性之间有着特殊关系的常规对象。
 
-此外，数组对象继承了 `Array.prototype` 的一组操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组追加一个元素），等等。这使得数组成为表示有序列表的理想选择。
+此外，数组继承了 `Array.prototype` 的一组操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组追加一个元素），等等。这使得数组成为表示有序列表的理想选择。
 
 [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了对应的类似数组语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)页。类型化数组通常用于连接 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}}。
 
