@@ -186,7 +186,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `get`
   - : 当执行值的 get 访问时，使用一个空的参数列表调用函数获取属性值。参见 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。可能是 `undefined`。
 - `set`
-  - : 使用包含分配值的参数调用函数。每当尝试更改指定属性时执行。参见 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。可能是 `undefined`。
+  - : 使用包含赋予的值的参数调用函数。每当尝试更改指定属性时执行。参见 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。可能是 `undefined`。
 - `enumerable`
   - : 布尔值，表示属性是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行枚举。另请参阅[属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举性如何与其他函数和语法交互。
 - `configurable`
