@@ -68,7 +68,7 @@ while (queue.waitForMessage()) {
 
 `queue.waitForMessage()` 会同步地等待消息到达 (如果当前没有任何消息等待被处理)。
 
-### "执行至完成"
+### “执行至完成”
 
 每一个消息完整地执行后，其他消息才会被执行。
 
