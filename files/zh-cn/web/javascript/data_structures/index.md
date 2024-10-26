@@ -238,7 +238,7 @@ JavaScript 有一个内置对象的标准库。请阅读[参考](/zh-CN/docs/Web
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果某个操作数是字符串，执行字符串串联；否则，执行数字相加。
 - [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符——如果某个操作数是原始值，而另一个操作数是对象（object），则该对象将转换为没有首选类型的原始值。
 
-如果值已经是原始值，则此操作不会进行任何转换。对象将依次调用它的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `default` 作为 hint 值）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与 [number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)的行为相似，但与 [string 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)不同。
+如果值已经是原始值，则此操作不会进行任何转换。对象将依次调用它的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `default` 作为 hint 值）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与 [number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)的行为相似，但与[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)不同。
 
 `[Symbol.toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都没有返回原始值，则抛出 {{jsxref("TypeError")}}。例如，在下面的代码中：
 
@@ -264,7 +264,7 @@ console.log({} + []); // "[object Object]"
 
 - [原始值强制转换](#原始值强制转换)：`[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
 - [数字类型强制转换](#数字类型强制转换)、[number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)、[BigInt 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_强制转换)：`[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
-- [string 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
+- [字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
 在所有情况下，`[Symbol.toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果 `valueOf` 或 `toString` 不可调用或返回对象，它们将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会根据上下文进一步的进行强制类型转换。
 
