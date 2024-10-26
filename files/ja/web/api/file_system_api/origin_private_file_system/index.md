@@ -192,10 +192,6 @@ console.log(textDecoder.decode(dataView));
 accessHandle.truncate(4);
 ```
 
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
 - [The origin private file system](https://web.dev/articles/origin-private-file-system) (web.dev)
