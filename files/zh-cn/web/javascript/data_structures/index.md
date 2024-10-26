@@ -181,7 +181,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 > [!NOTE]
 > 重要的是，意识到它是访问器*属性*——而不是访问器*方法*。我们可以将函数作为值给一个 JavaScript 对象提供近似于类的访问器——但这并不能使该对象成为类。
 
-一个访问器属性有以下特性：
+访问器属性有以下特性：
 
 - `get`
   - : 当执行值的 get 访问时，使用一个空的参数列表调用函数获取属性值。参见 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。可能是 `undefined`。
