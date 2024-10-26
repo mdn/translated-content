@@ -26,7 +26,9 @@ l10n:
 </button>
 
 <div popover id="mypopover">
-  <button commandfor="mypopover" command="hide-popover">ポップオーバーを非表示</button>
+  <button commandfor="mypopover" command="hide-popover">
+    ポップオーバーを非表示
+  </button>
 </div>
 ```
 
