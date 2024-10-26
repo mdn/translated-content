@@ -88,7 +88,7 @@ while (queue.waitForMessage()) {
 const seconds = new Date().getTime() / 1000;
 
 setTimeout(() => {
-  // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行
+  // 输出“2”，表示回调函数并没有在 500 毫秒之后立即执行
   console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500);
 
