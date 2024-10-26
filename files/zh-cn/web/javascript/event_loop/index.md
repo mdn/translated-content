@@ -89,7 +89,7 @@ const seconds = new Date().getTime() / 1000;
 
 setTimeout(() => {
   // 输出“2”，表示回调函数并没有在 500 毫秒之后立即执行
-  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
+  console.log(`在 ${new Date().getTime() / 1000 - seconds} 秒后运行`);
 }, 500);
 
 while (true) {
