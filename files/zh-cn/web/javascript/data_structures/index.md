@@ -206,11 +206,11 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 此外，数组继承了 `Array.prototype` 的一组操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组追加一个元素），等等。这使得数组成为表示有序列表的理想选择。
 
-[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了对应的类似数组语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)页。类型化数组通常用于连接 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}}。
+[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了与数组相对应的类似语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)页。类型化数组通常与 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}} 一起使用。
 
 ### 带键的集合：Map、Set、WeakMap、WeakSet
 
-这些数据结构用对象引用当作键。{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示唯一值的集合，而 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 表示键值相关联的集合。
+这些数据结构把对象的引用当作键。{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示唯一值的集合，而 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 表示键值相关联的集合。
 
 你也可以自己实现 `Map` 和 `Set`。然而，因为对象不能比较（例如，在 `<`“小于”的意义上），另一方面，引擎也没有暴露对象的哈希函数，因此查找性能必定是线性的。它们的原生实现（包括 `WeakMap`）有着近似对数到常数时间的查找性能。
 
@@ -232,7 +232,7 @@ JavaScript 有一个内置对象的标准库。请阅读[参考](/zh-CN/docs/Web
 
 ### 原始值强制转换
 
-[原始值强制转换](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive)过程用于得到期望的原始值，但对实际的类型应该是什么并没有强烈的偏好。通常情况下可以接受 [string](#string_类型)、[number](#number_类型)或 [BigInt](#bigint_类型)。例如：
+[原始值强制转换](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive)过程用于得到期望的原始值，但对实际的类型应该是什么并没有强烈的偏好。通常情况下可以接受 [string](#string_类型)、[number](#number_类型) 或 [BigInt](#bigint_类型)。例如：
 
 - [`Date()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 构造函数，当它收到一个不是 `Date` 实例的参数时——字符串表示日期字符串，而 number 表示时间戳。
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果某个操作数是字符串，执行字符串串联；否则，执行数字相加。
@@ -252,13 +252,13 @@ console.log({} + []); // "[object Object]"
 
 ### 数字类型强制转换
 
-有两种数字类型：[number](#number_类型) 和 [BigInt](#bigint_类型)。有时候，JavaScript 语言期望使用 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是 number）；其他时候，它可能容忍并且根据操作数的类型执行不同的运算。有关不允许从其他类型隐式转换的严格强制转换过程，请参阅 [number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)和 [BigInt 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_强制转换)。
+有两种数字类型：[Number](#number_类型) 和 [BigInt](#bigint_类型)。有时候，JavaScript 语言期望使用 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是 number）；其他时候，它可能容忍并且根据操作数的类型执行不同的运算。有关不允许从其他类型隐式转换的严格强制转换过程，请参阅 [number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)和 [BigInt 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_强制转换)。
 
 数字类型强制转换与 [number 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)几乎相同，只是 BigInt 会按原样返回，而不是引起 {{jsxref("TypeError")}}。强制数字类型转换用于所有算术运算，因为它们重载了 number 和 BigInt 类型。唯一例外的是[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)，它总是实施 number 强制转换。
 
 ### 其他类型强制转换
 
-除了 null、undefined 以及 Symbol 以外，所有的数据类型都有它们各自的强制转换过程。更多细节，请参见 [string 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)、[boolean 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)以及 [object 强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。
+除了 Null、Undefined 以及 Symbol 类型以外，所有的数据类型都有它们各自的强制转换过程。更多细节，请参见[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)、[布尔值强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)以及[对象强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。
 
 你可能已经注意到，有三种不同的路径可以将对象转换为原始值：
 
