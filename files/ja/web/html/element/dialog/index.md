@@ -204,7 +204,7 @@ confirmBtn.addEventListener("click", (event) => {
 - ダイアログフォーム内のフォームを、`dialog` メソッドを使用して確定することによって（例えば、[HTML のみの例](#html_のみのダイアログ)を参照）。
 - <kbd>Esc</kbd> キーを押すことよって。
 - {{domxref("HTMLDialogElement.close()")}} メソッドを呼び出すことによって（[モーダルの例](#モーダルダイアログの作成)にあるように）。
-   この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxref("HTMLDialogElement.close()")}} メソッドを介してダイアログを閉じます。
+  この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxref("HTMLDialogElement.close()")}} メソッドを介してダイアログを閉じます。
 
 ［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Element/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッド ([`method`](/ja/docs/Web/HTML/Element/form#method)) を上書きします。フォームのメソッドが [`dialog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
 
