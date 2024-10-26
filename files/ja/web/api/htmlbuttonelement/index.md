@@ -2,7 +2,7 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 l10n:
-  sourceCommit: 51a663ab797d3766a77e40af6565e43ae7af3d07
+  sourceCommit: c640274a19227cd5790912ea76841732baa6731f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,10 +15,6 @@ l10n:
 
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
-- {{domxref("HTMLButtonElement.accessKey")}}
-  - : 文字列で、ボタンにアクセスするためのキーボードの 1 文字のキーを示します。
-- {{domxref("HTMLButtonElement.autofocus")}}
-  - : 論理値で、ページが読み込みの際、ユーザーが異なるコントロールに入力するなどで上書きをしない限り、コントロールが入力フォーカスを持つべきかどうかを示します。文書中のフォーム関連要素の中で、この属性を指定できるのは 1 つだけです。
 - {{domxref("HTMLButtonElement.disabled")}}
   - : 論理値で、コントロールが無効か否か、つまりクリックを受け付けるかどうかを示します。
 - {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
@@ -36,16 +32,12 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
   - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、このボタンのラベルとなる {{HTMLElement("label")}} 要素を表します。
-- {{domxref("HTMLButtonElement.menu")}} {{experimental_inline}}
-  - : {{domxref("HTMLMenuElement")}} で、ボタンが `type="menu"` である場合にクリックした場合に表示されるメニュー要素を表します。
 - {{domxref("HTMLButtonElement.name")}}
   - : 文字列で、フォームを送信したときのオブジェクトの名前を表します。指定された場合は、空文字列にすることはできません。
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} {{Experimental_Inline}}
+- {{domxref("HTMLButtonElement.popoverTargetAction")}}
   - : 制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性の値を反映します。
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} {{Experimental_Inline}}
+- {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : ボタンで制御するポップオーバー要素を取得および設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性と同等のものです。
-- {{domxref("HTMLButtonElement.tabIndex")}}
-  - : `long` で、タブ順でのこの要素の位置を表します。
 - {{domxref("HTMLButtonElement.type")}}
 
   - : 文字列で、このボタンの動作を示します。これは列挙型属性で、以下の値を取ることができます。
@@ -67,6 +59,11 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 ## インスタンスメソッド
 
 _親である {{domxref("HTMLElement")}} から継承したメソッドもあります_。
+
+- {{domxref("HTMLButtonElement.checkValidity()")}}
+  - : この要素の値に懸賞の問題ない場合は `true` を返します。それ以外の場合は `false` を返します。
+- {{domxref("HTMLButtonElement.reportValidity()")}}
+  - : `checkValidity()` と同じ処理を行いますが、 `invalid` イベントがキャンセルされなかった場合は、ユーザーにも結果を報告します。
 
 ## 仕様書
 
