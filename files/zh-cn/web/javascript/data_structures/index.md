@@ -35,7 +35,7 @@ console.log(result); // 421
 
 除了 [Object](#object) 以外，所有的类型都定义了[不可变的](/zh-CN/docs/Glossary/Immutable)、在语言最底层直接表示的值。我们将这些类型的值称为*原始值*。
 
-除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 以外，所有的原始类型都可以使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符进行测试。`typeof null` 返回 `"object"`，因此必须使用 `=== null` 测试 `null`。
+除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 以外，所有的原始类型都可以使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符进行测试。`typeof null` 返回 `"object"`，因此必须使用 `=== null` 来测试 `null`。
 
 除了 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 以外，所有的原始类型都有对应的对象包装类型，它们为处理原始值提供了有用的方法。例如，[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 对象提供了像 [`toExponential()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) 这样的方法。当在原始值上访问属性时，JavaScript 会自动将值包装成对应的包装对象，并访问对象上的属性。然而，在 `null` 或 `undefined` 上访问属性时，会抛出 `TypeError` 异常，这需要使用[可选链](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)运算符。
 
