@@ -4,6 +4,7 @@ slug: Web/API/Navigator/clipboard
 l10n:
   sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
+
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
 **`clipboard`** 는 {{domxref("Navigator")}} 인터페이스의 읽기 전용 속성이며, 클립보드의 내용을 읽기 혹은 쓰기 용도로서 객체로 반환합니다.
