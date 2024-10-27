@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`validationMessage`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、{{htmlelement("select")}} コントロールが満たさない（もしあれば）検証制約を記述したローカライズされたメッセージを表す文字列を返します。
+**`validationMessage`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、（もしあれば）この {{htmlelement("input")}} コントロールが満たしていない検証制約を記述したローカライズされたメッセージを表す文字列を返します。
 
 この `<input>` 要素が制約検証の対象ではない場合（{{domxref("HTMLInputElement.willValidate")}} が `false` の場合）、または制約を満たしている場合は空文字列 (`""`) となります。
 
