@@ -47,7 +47,7 @@ Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos e
 import * as myModule from "/modules/my-module.js";
 ```
 
-Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
+Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembro exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
 
 ```js
 myModule.doAllTheAmazingThings();
@@ -69,7 +69,7 @@ Esto inserta `foo` y `bar` en el ámbito actual.
 import { foo, bar } from "my-module.js";
 ```
 
-### Importa un miembre con un alias mas conveniente
+### Importa un miembro con un alias más conveniente
 
 Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta `shortName` en el ámbito actual.
 
@@ -88,9 +88,9 @@ import {
 } from "/modules/my-module.js";
 ```
 
-### Importa un módulo entero para efectos secundarios sólamente
+### Importa un módulo entero para efectos secundarios solamente
 
-Importa un módulo entero para efectos secundarios sólamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
+Importa un módulo entero para efectos secundarios solamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
 
 ```js
 import "/modules/my-module.js";
