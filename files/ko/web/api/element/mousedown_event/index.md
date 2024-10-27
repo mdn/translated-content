@@ -30,7 +30,7 @@ onmousedown = (event) => {};
 
 ## 이벤트 속성
 
-_부모인 {{domxref("UIEvent")}}와 {{domxref("Event")}}의 속성을 상속합니다._
+부모인 {{domxref("UIEvent")}}와 {{domxref("Event")}}의 속성을 상속합니다.
 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : 마우스 이벤트 발생 시점에 <kbd>alt</kbd>가 눌려있었으면 `true`를 반환합니다.
