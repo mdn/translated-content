@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-The **`Number.isInteger()`** 정적 메서드는 전달받은 값의 정수 여부를 판별합니다.
+**`Number.isInteger()`** 정적 메서드는 전달받은 값의 정수 여부를 판별합니다.
 
 {{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
