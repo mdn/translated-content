@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 797c56885288c72b474ed80d49f55dd25670de55
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 **`find()`** 메서드는 {{jsxref("Iterator")}} 인스턴스의 메서드로, {{jsxref("Array.prototype.find()")}}와 유사합니다. 이 메서드는 제공된 테스트 함수를 만족하는 첫 번째 요소를 반환합니다. 만약 테스트 함수를 만족하는 값이 없다면, {{jsxref("undefined")}}가 반환됩니다.
 
