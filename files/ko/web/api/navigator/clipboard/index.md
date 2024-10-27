@@ -2,7 +2,7 @@
 title: "Navigator: clipboard 속성"
 slug: Web/API/Navigator/clipboard
 l10n:
-  sourceCommit: 7087ffd50a4d81d1b91fe603c26456e9ce398574
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
  
 {{APIRef("Clipboard API")}} {{securecontext_header}}
