@@ -11,7 +11,7 @@ l10n:
 
 ## 설명
 
-`growable` 속성은 설정 접근자 함수가 `undefined`인 접근자 속성으로, 읽기만 간으합니다. 이 값은 배열이 생성될 때 설정됩니다. 생성자에서 `maxByteLength` 옵션이 설정되면, `growable`은 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
+`growable` 속성은 설정 접근자 함수가 `undefined`인 접근자 속성으로, 읽기만 가능합니다. 이 값은 배열이 생성될 때 설정됩니다. 생성자에서 `maxByteLength` 옵션이 설정되면, `growable`은 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
 
 ## 예제
 
