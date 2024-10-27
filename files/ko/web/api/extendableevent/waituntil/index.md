@@ -3,7 +3,7 @@ title: "ExtendableEvent: waitUntil() 메서드"
 short-title: waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
