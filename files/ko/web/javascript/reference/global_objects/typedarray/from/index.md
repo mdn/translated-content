@@ -58,7 +58,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 
 - `TypedArray.from()`의 `this` 값이 생성자가 아닌 경우, `TypedArray.from()`는 {{jsxref("TypeError")}}를 발생시키고, `Array.from()`는 기본적으로 새 {{jsxref("Array")}}를 생성합니다.
 - `this`가 생성하는 객체는 `TypedArray` 인스턴스여야 하며, `Array.from()`는 `this` 값을 어떤 객체로든 생성할 수 있습니다.
-- `source` 매개변수가 반복자인 경우 `TypedArray.from()`은 먼저 반복자에서 모든 값을 수집한 다음 그 갯수를 사용하여 `this`의 인스턴스를 생성하고 마지막으로 인스턴스에 값을 설정합니다. `Array.from()`은 반복자로부터 값을 받을 때마다 각 값을 설정한 다음 마지막에 `length`를 설정합니다.
+- `source` 매개변수가 반복자인 경우 `TypedArray.from()`은 먼저 반복자에서 모든 값을 수집한 다음 그 개수를 사용하여 `this`의 인스턴스를 생성하고 마지막으로 인스턴스에 값을 설정합니다. `Array.from()`은 반복자로부터 값을 받을 때마다 각 값을 설정한 다음 마지막에 `length`를 설정합니다.
 - `TypedArray.from()`은 `[[Set]]`을 사용하는 반면 `Array.from()`은 `[[DefineOwnProperty]]`을 사용합니다. 따라서 {{jsxref("Proxy")}} 객체로 작업할 때는 [`handler.set()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) 대신 [`handler.defineProperty()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty)를 호출하여 새 요소를 생성합니다.
 - `Array.from()`이 반복자가 아닌 유사 배열을 가져올 때, 중간에 빠진 부분을 존중합니다. `TypedArray.from()`은 결과가 희소 배열이 안되도록 보장합니다.
 
