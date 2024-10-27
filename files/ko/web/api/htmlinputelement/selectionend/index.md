@@ -1,6 +1,7 @@
 ---
 title: "HTMLInputElement: selectionEnd property"
 short-title: selectionEnd
+slug: Web/API/HTMLInputElement/selectionEnd
 l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
