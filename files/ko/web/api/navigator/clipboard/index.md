@@ -7,7 +7,7 @@ l10n:
  
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-**`clipboard`** 는 {{domxref("Navigator")}} 인터페이스의 읽기 전용 속성이며, 클립보드의 내용을 읽기 혹은 쓰기 용도로서 객체로 반환합니다.
+**`clipboard`** 는 {{domxref("Navigator")}} 인터페이스의 읽기 전용 속성이며, 클립보드의 내용을 읽기 혹은 쓰기 용도로서 객체로 반환합니다.
 [Clipboard API](/ko/docs/Web/API/Clipboard_API)는 웹 애플리케이션에서 잘라내기, 복사 혹은 붙여넣기 기능을 사용할 수 있도록 하는 기능입니다.
 
 ## 값
