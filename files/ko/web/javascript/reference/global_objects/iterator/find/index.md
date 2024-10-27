@@ -2,7 +2,7 @@
 title: Iterator.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 l10n:
-  sourceCommit: 797c56885288c72b474ed80d49f55dd25670de55
+  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
 ---
 
 {{JSRef}}
