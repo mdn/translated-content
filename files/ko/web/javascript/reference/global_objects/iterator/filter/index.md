@@ -2,7 +2,7 @@
 title: Iterator.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 l10n:
-  sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
+  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
 ---
 
 {{JSRef}}
