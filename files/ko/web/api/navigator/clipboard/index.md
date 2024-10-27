@@ -22,7 +22,7 @@ l10n:
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+    (clipText) => (document.querySelector(".clip-text").innerText = clipText),
   );
 ```
 
