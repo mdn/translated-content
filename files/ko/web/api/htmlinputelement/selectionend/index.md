@@ -65,7 +65,7 @@ console.log(colorEnd.selectionEnd); // 결과 : null
 
 {{Specifications}}
 
-## 브
+## 브라우저 호환성
 
 {{Compat}}
 
