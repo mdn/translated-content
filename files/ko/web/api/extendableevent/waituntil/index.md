@@ -40,7 +40,8 @@ waitUntil(promise)
 
 ### 매개변수
 
-{{jsxref("Promise")}}.
+- `promise`
+  - : 이벤트의 수명을 연장하는 {{jsxref("Promise")}} 객체.
 
 ### 반환 값
 
