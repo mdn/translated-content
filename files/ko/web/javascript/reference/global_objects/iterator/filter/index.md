@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 {{jsxref("Iterator")}} 인스턴스의 **`filter()`** 메서드는 제공된 콜백 함수가 `true`를 반환하는 반복자의 요소만 산출한 새로운 [반복자 헬퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers)를 반환합니다.
 
