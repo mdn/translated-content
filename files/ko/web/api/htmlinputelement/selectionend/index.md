@@ -10,7 +10,8 @@ l10n:
 
 {{domxref("HTMLInputElement")}} 인터페이스의 **`selectionEnd`** 속성은 선택된 텍스트의 끝 인덱스를 가리키는 숫자입니다. 이는 선택된 텍스트가 없다면 현재 텍스트 인풋이 커서 위치 바로 다음의 문자 오프셋을 반환합니다.
 
-> [!NOTE] > [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)에 따르면 `selectionEnd` 속성은 text, search, URL, tel, password 타입을 가진 인풋에만 적용됩니다. 최신 브라우저에서는, 이와 같은 인풋 타입이 아닌 경우에 `selectionEnd` 속성을 설정할 경우 예외가 발생됩니다. 또한, 텍스트 인풋이 아닌 요소에 `selectionEnd` 속성으로 접근할 경우 이 속성은 `null` 를 반환합니다.
+> [!NOTE] 
+> `selectionEnd` 속성은 [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)에 따라 text, search, URL, tel, password 타입을 가진 인풋에만 적용됩니다. 최신 브라우저에서는, 이와 같은 인풋 타입이 아닌 경우에 `selectionEnd` 속성을 설정할 경우 예외가 발생됩니다. 또한, 텍스트 인풋이 아닌 요소에 `selectionEnd` 속성으로 접근할 경우 이 속성은 `null` 를 반환합니다.
 
 `selectionEnd` 가 `selectionStart` 보다 작으면,
 두 값은 모두 `selectionEnd` 의 값으로 처리됩니다.
