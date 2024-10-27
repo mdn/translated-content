@@ -32,7 +32,7 @@ navigator.clipboard
 클립보드에 텍스트가 없거나 비어있다면  `"cliptext"` 클래스 요소의 내용은 초기화됩니다.
 이러한 경우에는 [`readText()`](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText) 가 비어있는 스트링 값을 반환합니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
