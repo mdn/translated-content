@@ -254,7 +254,7 @@ salutation: function() {
 }
 ```
 
-Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
+Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est éxécuté — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'éxécution change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms de variable différents).
 
 Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
 
@@ -274,7 +274,7 @@ var personne2 = {
 };
 ```
 
-Dans ce cas, `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet dans lequel se situe le code. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple).
+Dans ce cas, `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet pour lequel le code est éxécuté. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple, comme nous le verrons dans le prochain article).
 
 ## Vous utilisiez des objets depuis le début !
 
