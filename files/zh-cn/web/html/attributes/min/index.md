@@ -136,7 +136,7 @@ input:invalid {
 
 - [`step`](/zh-CN/docs/Web/HTML/Attributes/step)
 - [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
-- 其他 meter 属性：[`low`](/zh-CN/docs/Web/API/HTMLMeterElement/low)、[`high`](/zh-CN/docs/Web/API/HTMLMeterElement/high)、[`optimum`](/zh-CN/docs/Web/API/HTMLMeterElement/optimum)
+- 其他 meter 属性：[`low`](/zh-CN/docs/Web/HTML/Attributes/low)、[`high`](/zh-CN/docs/Web/HTML/Attributes/high)、[`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
 - [表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
