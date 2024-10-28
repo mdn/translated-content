@@ -428,7 +428,7 @@ Comenzando con Firefox 45, pueden instalar temporalmente una extensión desde el
 
 Abre "about:debugging" en Firefox, de clic en "Cargar complemento temporalmente", y seleccione el archivo manifest.json. Entonces, debería de ver el ícono de la extensión aparecer en la barra de herramientas de Firefox:
 
-![The beastify icon in the Firefox toolbar](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_icon.png)
+![The beastify icon in the Firefox toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_icon.png)
 
 Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y vea cómo cambia la página web:
 
