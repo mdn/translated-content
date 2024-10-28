@@ -428,11 +428,11 @@ Comenzando con Firefox 45, pueden instalar temporalmente una extensión desde el
 
 Abre "about:debugging" en Firefox, de clic en "Cargar complemento temporalmente", y seleccione el archivo manifest.json. Entonces, debería de ver el ícono de la extensión aparecer en la barra de herramientas de Firefox:
 
-{{EmbedYouTube("sAM78GU4P34")}}
+![The beastify icon in the Firefox toolbar](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_icon.png)
 
 Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y vea cómo cambia la página web:
 
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![A page replaced with the image of a turtle](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_page.png)
 
 ## Desarrollo desde la línea de comandos
 
