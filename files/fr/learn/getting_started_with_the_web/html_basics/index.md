@@ -122,7 +122,7 @@ Revenons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/img)&nbsp;:
 <img src="images/firefox-icon.png" alt="Mon image de test" />
 ```
 
-Comment mentionné auparavant, cet élément permet d'intégrer une image dans la page là où l'élément est placé. L'image à afficher est désignée par l'attribut `src` (source) qui contient le chemin vers le fichier image.
+Comme mentionné auparavant, cet élément permet d'intégrer une image dans la page là où l'élément est placé. L'image à afficher est désignée par l'attribut `src` (source) qui contient le chemin vers le fichier image.
 
 Nous avons également inclus un attribut `alt` (pour texte alternatif). [L'attribut `alt`](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives), permet d'indiquer un texte descriptif pour les personnes qui ne peuvent pas voir l'image&nbsp;:
 

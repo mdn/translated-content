@@ -58,10 +58,6 @@ Content-Range: bytes 4590-7999/8000
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPHeader("If-Range")}}

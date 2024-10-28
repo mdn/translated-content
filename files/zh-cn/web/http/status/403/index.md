@@ -26,10 +26,6 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPStatus("401")}}
