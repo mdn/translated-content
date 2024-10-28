@@ -432,7 +432,7 @@ Abre "about:debugging" en Firefox, de clic en "Cargar complemento temporalmente"
 
 Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y vea cómo cambia la página web:
 
-![A page replaced with the image of a turtle](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_page.png)
+![A page replaced with the image of a turtle](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/beastify_page.png)
 
 ## Desarrollo desde la línea de comandos
 
