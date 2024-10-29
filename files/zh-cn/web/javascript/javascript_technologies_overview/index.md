@@ -21,7 +21,7 @@ JavaScript 的核心语言由 ECMA TC39 委员会标准化为称作 ECMAScript �
 
 除却一些其他元素，ECMAScript 定义了：
 
-- 语法（解析规则、关键词、流程控制、对象初始化，等等）
+- 语法（解析规则、关键字、流程控制、对象字面初始化，等等）
 - 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义 {{jsxref("Error")}} 类型的能力）
 - 类型（布尔、数字、字符串、函数、对象，等等）
 - 基于原型的继承机制
