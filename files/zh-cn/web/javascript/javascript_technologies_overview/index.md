@@ -162,6 +162,6 @@ JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载
 - [Codepen](https://codepen.io/)
   - : Codepen 也是一个 Web 开发协作工具，可用作展示实时结果的 playground。
 - [StackBlitz](https://stackblitz.com/)
-  - : StackBlitz 同样是一个支持调试的在线 playground，它支持托管和部署使用了 React、Angular 等技术的全栈应用
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持托管和部署使用了 React、Angular 等技术的全栈应用。
 - [RunJS](https://runjs.app/)
   - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与浏览器 API。
