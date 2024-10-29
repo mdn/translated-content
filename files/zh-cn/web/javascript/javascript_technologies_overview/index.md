@@ -99,7 +99,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 
 有三个主要的用于浏览器环境和其他环境的 JavaScript 实现：
 
-- Mozilla 的 [SpiderMonkey](https://spidermonkey.dev/)，用于 Firefox。它是*首*款 JavaScript 引擎，由 Brendan Eich 在 Netscape 创造。
+- Mozilla 的 [SpiderMonkey](https://spidermonkey.dev/)，用于 Firefox。它是*首*款 JavaScript 引擎，由 Netscape 公司的 Brendan Eich 创建。
 - Google 的 [V8](https://v8.dev/)，用于 Google Chrome、Opera、Edge、[Node.js](https://nodejs.org/)、[Deno](https://deno.com/)、[Electron](https://www.electronjs.org/)，等等。
 - Apple 的 [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore)（也称为 SquirrelFish/Nitro），用于 WebKit 浏览器（如 Apple Safari）和 [Bun](https://bun.sh/)。
 
