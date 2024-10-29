@@ -110,7 +110,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [LibJS](https://serenityos.github.io/libjs-website/)，用于 [SerenityOS](https://serenityos.org/) 的浏览器实现。
 - Mozilla 的 [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) 引擎，用 Java 语言实现的 JavaScript 引擎，主要由 Norris Boyd 创造（也在 Netscape）。
 
-还有一些为非浏览器目的特别裁剪过的引擎：
+还有一些引擎是专门为非浏览器用途定制的：
 
 - [Engine262](https://engine262.js.org/)，用 JavaScript 实现的 JavaScript 引擎。创建的目的是为 JavaScript 开发者探索规范中的新语言特性和查找规范中的问题。
 - [Moddable XS](https://www.moddable.com/)，用于嵌入式系统，如 IoT。
