@@ -76,7 +76,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是根据 DOM 定义的。位于 DOM 核心抽象概念之上，HTML 还定义了元素的*意义*。HTML DOM 包括：元素的 `className` 属性以及 {{domxref("Document.body")}} API，等等。
+[HTML](https://html.spec.whatwg.org/multipage/)，Web 的标记语言，是以 DOM 的形式定义的，位于 DOM 核心抽象概念之上。HTML 还定义了元素的*意义*。HTML DOM 包括：元素的 `className` 属性以及 {{domxref("Document.body")}} API，等等。
 
 HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlelement("ul")}} 元素中，只能以 {{htmlelement("li")}} 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。
 
