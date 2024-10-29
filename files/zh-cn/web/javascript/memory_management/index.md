@@ -238,7 +238,6 @@ class MyWeakMap {
 
 > **Note:** `WeakRef` 和 `FinalizationRegistry` 能直接内省进垃圾回收机制。[尽量避免使用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#尽量避免使用)因为运行时语义几乎完全不受保证。
 
-
 所有用对象作为值的变量都是那个对象的引用。然而，这样的引用是*强引用*——它们的存在会阻止垃圾回收器将对象标记为适合回收。[`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) 是对象的*弱引用*，这让对象能被垃圾回收，同时在对象的声明周期期间仍保留了读取对象的内容的能力。
 
 一个 `WeakRef` 用例是将字符串 URL 映射为大对象的缓存系统。这个缓存系统我们不能使用 `WeakMap`。因为 `WeakMap` 对象的*键*是弱引用的，而不是*值*——如果你访问键，你将总是确定地得到值（因为能访问键意味着键仍然有效）。这里，从键得到的是 `undefined` 是没问题的（如果对应的值不再有效），因为我们只需要重新计算，但是我们不想让不可达的对象呆在缓存中。在这个例子中，我们使用普通的 `Map`，但是值使用 `WeakRef` 对象，而不是真正的对象值。
