@@ -5,13 +5,13 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 
 {{LearnSidebar}}
 
-本章节演示如何定义页面来创建 `Genre` 对象（这是一个很好的起点，因为 `Genre` 只有一个字段，即它的名称 `name`，并且没有依赖项）。与任何其他页面一样，我们需要设置路由，控制器和视图。
+本章节演示如何定义页面来创建 `Genre` 对象（这是一个很好的起点，因为 `Genre` 只有一个字段，即它的名称 `name`，并且没有依赖项）。与任何其他页面一样，我们需要设置路由、控制器和视图。
 
-## 导入验证与修整方法
+## 导入验证与清理方法
 
-要控制器中使用 _express-validator_，我們必須从 `'express-validator'` 模块中 _require_ 我们想使用的函数。
+要控制器中使用 _express-validator_，我们必须从 `'express-validator'` 模块中 _require_ 我们想使用的函数。
 
-打开 **/controllers/genreController.js**，在文件顶部、路由处理函数之前添加下方代码：
+打开 **/controllers/genreController.js**，在文件顶部、路由处理器之前添加下方代码：
 
 ```js
 const { body, validationResult } = require("express-validator");
@@ -31,37 +31,37 @@ const { body, validationResult } = require("express-validator");
 找到导出的 `genre_create_get()` 控制器方法，并将其替换为以下代码。这将渲染 **genre_form.pug** 视图，传递一个标题变量。
 
 ```js
-// 呈现 GET 方法获取的种类表格
+// 呈现 GET 方法获取的 Genre 表单
 exports.genre_create_get = (req, res, next) => {
   res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
-请注意，这里我们将使用一个“普通”的函数替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 中添加的占位 asynchronous handler 函数。我们不需要该路由的 `asyncHandler()` 函数的包装，因为它不包含任何可能引发异常的代码。
+请注意，这里我们将使用一个“普通”express 路由处理器替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 中添加的占位异步处理器。我们不需要为该路由添加 `asyncHandler()` 包装器，因为它不包含任何可能引发异常的代码。
 
 ## 控制器——post 路由
 
 找到导出的 `genre_create_post()` 控制器方法，并将其替换为以下代码。
 
 ```js
-// 处理 POST 方法创建的 Genre 表单
+// 处理 POST 方法创建的 Genre
 exports.genre_create_post = [
-  // 验证及修整名字字段
+  // 验证及清理名称字段
   body("name", "Genre name must contain at least 3 characters")
     .trim()
     .isLength({ min: 3 })
     .escape(),
 
-  // 处理验证及修整过后的请求
+  // 处理验证及清理过后的请求
   asyncHandler(async (req, res, next) => {
     // 从请求中提取验证时产生的错误信息
     const errors = validationResult(req);
 
-    // 使用经过 trim() 和 escape() 处理过的数据创建一个种类对象
+    // 使用经去除空白字符和转义处理的数据创建一个类型对象
     const genre = new Genre({ name: req.body.name });
 
     if (!errors.isEmpty()) {
-      // 出现错误，并使用修整过的数据/错误信息重新渲染表单
+      // 出现错误。使用清理后的值/错误信息重新渲染表单
       res.render("genre_form", {
         title: "Create Genre",
         genre: genre,
@@ -79,7 +79,7 @@ exports.genre_create_post = [
         res.redirect(genreExists.url);
       } else {
         await genre.save();
-        // 保存新创建的 Genre，然后重定向到详情页面
+        // 保存新创建的 Genre，然后重定向到类型的详情页面
         res.redirect(genre.url);
       }
     }
@@ -87,12 +87,12 @@ exports.genre_create_post = [
 ];
 ```
 
-首先需要注意的是，控制器不是单个中间件函数（带参数`(req, res, next)`），而是指定了中间件函数*数组*。该数组传递给路由器函数并依次执行各个方法。
+首先需要注意的是，控制器不是单个中间件函数（带有参数`(req, res, next)`），而是指定了中间件函数*数组*。该数组传递给路由器函数并依次执行各个方法。
 
 > [!NOTE]
 > 这种方法是必要的，因为验证器是中间件函数。
 
-数组中的第一个方法定义了一个 body 验证器（`body()`），用于验证和修整字段。这个方法使用 `trim()` 删除所有的首部/尾部空白，检查 _name_ 字段是否为空，然后使用 `escape()` 删除任何危险的 HTML 字符。
+数组中的第一个方法定义了一个 body 验证器（`body()`），用于验证和清理字段。这个方法使用 `trim()` 删除所有的首部/尾部空白，检查 _name_ 字段是否为空，然后使用 `escape()` 删除任何危险的 HTML 字符。
 
 ```js
 [
@@ -105,19 +105,19 @@ exports.genre_create_post = [
 ];
 ```
 
-指定验证器后，我们创建一个中间件函数来提取任何验证错误。我们使用 `isEmpty()` 来检查验证结果是否有错误。如果有，我们就再次渲染表单，传入经过修整的种类对象和错误消息数组（`errors.array()`）。
+指定验证器后，我们创建一个中间件函数来提取任何验证错误。我们使用 `isEmpty()` 来检查验证结果是否有错误。如果有，我们就再次渲染表单，传入经过清理的类型对象和错误消息数组（`errors.array()`）。
 
 ```js
-// 处理验证和修整之后的请求
+// 处理验证和清理之后的请求
 asyncHandler(async (req, res, next) => {
   // 从请求中提取验证错误
   const errors = validationResult(req);
 
-  // 使用经过 trim() 和 escape() 处理过的数据创建一个种类对象
+  // 使用经去除空白字符和转义处理的数据创建一个类型对象
   const genre = new Genre({ name: req.body.name });
 
   if (!errors.isEmpty()) {
-    // 出现错误，并使用修整过的数据/错误信息重新渲染表单
+    // 出现错误。使用清理后的值/错误信息重新渲染表单
     res.render("genre_form", {
       title: "Create Genre",
       genre: genre,
@@ -125,15 +125,15 @@ asyncHandler(async (req, res, next) => {
     });
     return;
   } else {
-    // 表格中的数据有效
+    // 表单中的数据有效
     // …
   }
 });
 ```
 
-如果种类名称数据有效，那么我们执行不区分大小写的搜索，以查看是否存在具有相同名称的种类 `Genre`（因为我们不想创建仅字母大小写不同的重复或过于近似的记录，例如“Fantasy”，“fantasy”，“FaNtAsY”等等）。为了在搜索时忽略掉大小写和重音，我们链式调用了 [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) 方法，指定“en”的区域设置和 2 的强度（更多信息请参阅 MongoDB 的 [Collation](https://www.mongodb.com/docs/manual/reference/collation/)主题）。
+如果类型名称数据有效，那么我们执行不区分大小写的搜索，以查看是否存在具有相同名称的 `Genre`（因为我们不想创建仅字母大小写不同的重复或过于近似的记录，例如“Fantasy”、“fantasy”、“FaNtAsY”等等）。为了在搜索时忽略掉大小写和重音，我们链式调用了 [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) 方法，指定“en”的区域设置和 2 的强度（更多信息请参阅 MongoDB 的 [排序规则](https://www.mongodb.com/docs/manual/reference/collation/)主题）。
 
-如果匹配的种类 `Genre` 已经存在，我们将重定向到其详情页面。如果不存在，我们则保存新种类并重定向到其详情页面。请注意，这里我们 `await` 数据库的查询结果，遵循与其他路由处理程序相同的模式。
+如果匹配名称的 `Genre` 已经存在，我们将重定向到其详情页面。如果不存在，我们则保存新种类并重定向到其详情页面。请注意，这里我们 `await` 数据库的查询结果，遵循与其他路由处理器相同的模式。
 
 ```js
 // 检查是否存在同名的 Genre
@@ -150,17 +150,17 @@ if (genreExists) {
 }
 ```
 
-我们所有的 post 控制器中都使用了相同的模式：运行验证器（带有修整功能），然后检查错误并重新渲染带有错误信息的表单或保存数据。
+我们所有的 post 控制器中都使用了相同的模式：运行验证器（带有清理功能），然后检查错误并重新渲染带有错误信息的表单或保存数据。
 
 ## 视图
 
-当我们创建新的种类 `Genre` 时，相同的视图会在 `GET` 和 `POST` 控制器/路由中呈现（稍后当我们*更新*种类时也会使用它），在 `GET` 情况下，表单为空，我们只传递一个标题变量。在 `POST` 情况下，用户之前输入了无效数据——对于 `genre` 变量，我们回传经过修整后的输入数据，对于错误变量，则回传一组错误消息。下面的代码显示了在两种情况下渲染模板的控制器代码。
+当我们创建新的种类 `Genre` 时，会在 `GET` 和 `POST` 控制器/路由中渲染相同的视图（稍后当我们*更新*种类时也会使用它），在 `GET` 情况下，表单为空，我们只传递一个标题变量。在 `POST` 情况下，用户之前输入了无效数据——对于 `genre` 变量，我们回传经清理后的输入数据，对于错误变量，则回传一组错误消息。下面的代码显示了在两种情况下渲染模板的控制器代码。
 
 ```js
-// 渲染 GET 方法获取的视图
+// 渲染 GET 路由
 res.render("genre_form", { title: "Create Genre" });
 
-// 渲染 POST 方法使用的视图
+// 渲染 POST 路由
 res.render("genre_form", {
   title: "Create Genre",
   genre,
@@ -168,7 +168,7 @@ res.render("genre_form", {
 });
 ```
 
-创建 **/views/genre_form.pug**，并复制下方的代码。
+创建 **/views/genre_form.pug**，并复制下面的文本。
 
 ```pug
 extends layout
@@ -189,7 +189,7 @@ block content
         li!= error.msg
 ```
 
-从我们之前的教程中可以很好地理解这个模板的大部分内容。首先，我们扩展 **layout.pug** 基本模板并覆盖名为 **content** 的模块 `block`。然后我们就创建了网页头部，其包含了我们从控制器传入的标题 `title`（通过 `render()` 方法）。
+从我们之前的教程中可以很好地理解这个模板的大部分内容。首先，我们扩展 **layout.pug** 基本模板并覆盖名为“**content**”的 `block`。然后我们使用从控制器传入 `title`（通过 `render()` 方法）创建了一个标题。
 
 接下来，pug 代码中的 HTML 表单部分则会使用 `method="POST"` 方法将数据发送到服务器，并且由于 `action` 是空字符串，因此会将数据发送到与页面相同的 URL。
 
@@ -211,7 +211,7 @@ block content
 ![本地图书馆应用的创建种类部分。左栏有一个垂直导航栏。右侧部分是创建一个新种类，标题为“创建种类”。有一个标有“种类”的输入字段。底部有一个提交按钮。“提交”按钮正下方有一条错误消息，上面写着“需要类型名称”。本文作者强调了该错误消息。表格中没有视觉指示表明类型是必需的，也没有错误消息仅在出现错误时出现。](locallibary_express_genre_create_error.png)
 
 > [!NOTE]
-> 我们的验证使用 `trim()` 来确保不接受空格作为种类名称。我们还对表单中​​字段定义添加 `required` ![布尔属性](/zh-CN/docs/Glossary/Boolean/HTML)来验证客户端上的字段不为空：
+> 我们的验证使用 `trim()` 来确保不接受空格作为种类名称。我们还对表单中​​字段定义添加 `required` [布尔属性](/zh-CN/docs/Glossary/Boolean/HTML)以在客户端测验证该字段不为空：
 >
 > ```pug
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
