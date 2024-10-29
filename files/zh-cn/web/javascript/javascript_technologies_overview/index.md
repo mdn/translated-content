@@ -9,7 +9,7 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) 定义网页的结构与内容，[CSS](/zh-CN/docs/Web/CSS) 定义其格式与样式，而 [JavaScript](/zh-CN/docs/Web/JavaScript) 则为网页增加可交互性，创作功能丰富的 Web 应用。
 
-但是，如果从浏览器的范畴去理解“JavaScript”这个术语，它包含了截然不同的两个方面。一方面是 JavaScript 的核心语言（ECMAScript），另一方面是大量的 [Web API](/zh-CN/docs/Web/Reference/API)，包括 DOM（文档对象模型）。
+但是，如果从浏览器的范畴去理解“JavaScript”这个术语，它包含了截然不同的两个方面。一方面是 JavaScript 的核心语言（ECMAScript），另一方面是大量的 [Web API](/zh-CN/docs/Web/API)，包括 DOM（文档对象模型）。
 
 ## JavaScript 核心语言（ECMAScript）
 
@@ -25,7 +25,7 @@ JavaScript 的核心语言由 ECMA TC39 委员会标准化为称作 ECMAScript �
 - 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义 {{jsxref("Error")}} 类型的能力）
 - 类型（布尔、数字、字符串、函数、对象，等等）
 - 基于原型的继承机制
-- 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
+- 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 - [模块系统](/zh-CN/docs/Web/JavaScript/Guide/Modules)
 - 基本内存模型
@@ -68,7 +68,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 文档对象模型（DOM）是一种跨平台以及**编程语言无关的约定**，用于表示 HTML、XHTML 及 XML 文档中的对象并与之交互。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。[W3C](/zh-CN/docs/Glossary/W3C) 将核心文档对象模型标准化，该模型定义了与语言无关的接口，将 HTML 和 XML 文档抽象为对象，还定义了操作这种抽象的机制。在由 DOM 定义的事物中，我们可以发现：
 
-- [DOM 核心](https://dom.spec.whatwg.org/)中的文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
+- [DOM 核心](https://dom.spec.whatwg.org/)中的文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等。
 - [DOM 事件](https://w3c.github.io/uievents/)中的一个不太严谨的 DOM 事件架构的定义，以及一些特殊事件。
 - [DOM 遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)等其他内容。
 
@@ -93,7 +93,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的绘图 API。
 - [WebAssembly 接口](https://webassembly.github.io/spec/js-api)为 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间提供通信工具。
 
-非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。
+非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 Web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
 ## 有哪些 JavaScript 的实现？
 
@@ -124,7 +124,7 @@ JavaScript 另一个常见的应用是作为（Web）服务器端脚本语言。
 
 ## Shell
 
-JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载 web 页面。其在开发和代码调试中非常有用。
+JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载 Web 页面。其在开发和代码调试中非常有用。
 
 ### 独立的 JavaScript shell
 
@@ -158,7 +158,7 @@ JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载
 - [Plunker](https://plnkr.co/)
   - : Plunker 是一个在线社区，用于创建、协作和共享你的 Web 开发创意。编辑你的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
 - [JSBin](https://jsbin.com/)
-  - : JS Bin 是一个开源的协作式的 web 开发调试工具。
+  - : JS Bin 是一个开源的协作式的 Web 开发调试工具。
 - [Codepen](https://codepen.io/)
   - : Codepen 也是一个 Web 开发协作工具，可用作展示实时结果的 playground。
 - [StackBlitz](https://stackblitz.com/)
