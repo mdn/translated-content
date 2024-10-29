@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`HTMLAllCollection.length`** 属性返回 {{domxref("HTMLAllCollection")}} 中项目的条目数。
+**`HTMLAllCollection.length`** 属性返回 {{domxref("HTMLAllCollection")}} 中项目的数量。
 
 ## 值
 
-表示 `HTMLAllCollection` 中项目条目数的整数值。
+表示 `HTMLAllCollection` 中项目数量的整数值。
 
 ## 规范
 

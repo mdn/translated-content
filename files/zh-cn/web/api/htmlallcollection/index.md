@@ -7,14 +7,14 @@ l10n:
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-**`HTMLAllCollection`** 接口表示*所有*文档元素的结合，通过索引（类似于数组）和元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 访问。它由 {{domxref("document.all")}} 属性返回。
+**`HTMLAllCollection`** 接口表示*所有*文档元素（通过索引（类似于数组）和元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 访问）的集合。它由 {{domxref("document.all")}} 属性返回。
 
 `HTMLAllCollection` 的形态与 {{domxref("HTMLCollection")}} 非常相似，但两者在行为上存在许多细微差异，例如，`HTMLAllCollection` 可以作为函数调用，并且其 `item()` 方法可以使用表示元素 `id` 和 `name` 属性的字符串调用。
 
 ## 实例属性
 
 - {{domxref("HTMLAllCollection.length")}} {{ReadOnlyInline}}
-  - : 返回集合中项目的条数。
+  - : 返回集合中项目的数量。
 
 ## 实例方法
 
