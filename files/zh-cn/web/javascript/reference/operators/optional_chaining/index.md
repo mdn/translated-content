@@ -102,17 +102,17 @@ const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```
 
-[模板字符串标签](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板)不能是可选链（参见[语法错误：带标签的模板不能与可选链一起使用](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)）：
+[模板字符串标签](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板)不能是可选链（参见 [SyntaxError: tagged template cannot be used with optional chain](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)）：
 
 ```js-nolint example-bad
 String?.raw`Hello, world!`;
-String.raw?.`Hello, world!`; // 语法错误：可选链上的标签模板无效
+String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
-{{jsxref("Operators/new", "new")}} 表达式的构造函数不能是可选链（参见[语法错误：new 关键字不能与可选链一起使用](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)）：
+{{jsxref("Operators/new", "new")}} 表达式的构造函数不能是可选链（参见 [SyntaxError: new keyword cannot be used with an optional chain](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)）：
 
 ```js-nolint example-bad
-new Intl?.DateTimeFormat(); // 语法错误：new 表达式的可选链无效
+new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression
 new Map?.();
 ```
 
@@ -151,7 +151,7 @@ const prop =
 ```js
 const potentiallyNullObj = null;
 const prop = (potentiallyNullObj?.a).b;
-// 类型错误：不能读取未定义的属性（读取“b”）
+// TypeError: Cannot read properties of undefined (reading 'b')
 ```
 
 这等价于：
