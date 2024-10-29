@@ -33,7 +33,7 @@ const nestedProp = obj.first && obj.first.second;
 
 在访问 `obj.first.second` 之前，要保证 `obj.first` 的值不是 `null`（也不是 `undefined`）。这样做可以避免在不对 `obj.first` 进行校验情况下直接访问 `obj.first.second` 而可能引发的错误。
 
-这是 JavaScript 中的一个惯用模式，但当链很长时，它会变得冗长，且不安全。例如，如果 `obj.first` 是一个非 `null` 或 `undefined` 的 {{Glossary("Falsy", "假值")}}，比如 `0`，它仍然会短路并使 `nestedProp` 变为 `0`，这可能是不可取的。
+这是 JavaScript 中的一个惯用模式，但当链很长时，它会变得冗长，且不安全。例如，如果 `obj.first` 是一个非 `null` 或 `undefined` 的{{Glossary("Falsy", "假值")}}，比如 `0`，它仍然会短路并使 `nestedProp` 变为 `0`，这可能是不可取的。
 
 然而，使用可选链运算符（`?.`），在访问 `obj.first.second` 之前，不再需要基于 `obj.first` 的状态进行明确的测试和短路操作了：
 
@@ -41,7 +41,7 @@ const nestedProp = obj.first && obj.first.second;
 const nestedProp = obj.first?.second;
 ```
 
-通过使用 `?.` 运算符取代 `.` 运算符，JavaScript 会在尝试访问 `obj.first.second` 之前，先隐式地检查并确定 `obj.first` 既不是 `null` 也不是 `undefined`。如果`obj.first` 是 `null` 或者 `undefined`，表达式将会短路计算直接返回 `undefined`。
+通过使用 `?.` 运算符取代 `.` 运算符，JavaScript 会在尝试访问 `obj.first.second` 之前，先隐式地检查并确定 `obj.first` 既不是 `null` 也不是 `undefined`。如果 `obj.first` 是 `null` 或者 `undefined`，表达式将会自动短路，并返回 `undefined`。
 
 这等价于以下表达式，但实际上没有创建临时变量：
 
@@ -54,7 +54,7 @@ const nestedProp =
 可选链运算符不能用于未声明的根对象，但可以用于值为 `undefined` 的根对象。
 
 ```js example-bad
-undeclaredVar?.prop; // 引用错误：未定义的变量 undeclaredVar
+undeclaredVar?.prop; // ReferenceError: undeclaredVar is not defined
 ```
 
 ### 函数调用中的可选链
@@ -67,16 +67,16 @@ undeclaredVar?.prop; // 引用错误：未定义的变量 undeclaredVar
 const result = someInterface.customMethod?.();
 ```
 
-然而，如果存在一个具有这样名称的属性且不是函数，使用 `?.` 仍然会引发一个 {{jsxref("TypeError")}} 异常，即“`someInterface.customMethod` 不是一个函数”。
+然而，如果存在一个具有这样名称的属性且不是函数，使用 `?.` 仍然会引发一个 {{jsxref("TypeError")}} 异常，即“`someInterface.customMethod` is not a function（不是一个函数）”。
 
 > [!NOTE]
-> 如果 `someInterface` 自身是 `null` 或者 `undefined`，异常 {{JSxRef("TypeError")}} 仍会被抛出（`someInterface is null`）。如果你希望允许 `someInterface` 自身也为 `null` 或者 `undefined`，你需要在这个位置使用 `?.`：`someInterface?.customMethod?.()`。
+> 如果 `someInterface` 自身是 `null` 或者 `undefined`，{{JSxRef("TypeError")}} 异常仍会被抛出（`someInterface is null`）。如果你希望允许 `someInterface` 自身也为 `null` 或者 `undefined`，你需要在这个位置使用 `?.`：`someInterface?.customMethod?.()`。
 
 `eval?.()` 是进入[_间接求值_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)模式的最短方式。
 
 ### 表达式中的可选链
 
-你也可以将可选链操作符与[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)结合使用，它允许将表达式作为属性名传递：
+你也可以将可选链运算符与[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)结合使用，它允许将表达式作为属性名传递：
 
 ```js
 const nestedProp = obj?.["prop" + "Name"];
@@ -90,7 +90,7 @@ function printMagicIndex(arr) {
 }
 
 printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
-printMagicIndex(); // undefined；如果未使用 ?. 操作符，这将抛出一个错误：“无法读取未定义的属性（读取“42”时）”
+printMagicIndex(); // undefined；如果未使用 ?. 运算符，这将抛出一个错误：“Cannot read properties of undefined (reading '42')”
 ```
 
 ### 无效的可选链
@@ -99,7 +99,7 @@ printMagicIndex(); // undefined；如果未使用 ?. 操作符，这将抛出一
 
 ```js-nolint example-bad
 const object = {};
-object?.property = 1; // 语法错误：赋值中的左侧无效
+object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```
 
 [模板字符串标签](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板)不能是可选链（参见[语法错误：带标签的模板不能与可选链一起使用](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)）：
@@ -166,7 +166,7 @@ const prop = temp.b;
 
 ## 示例
 
-### 基本例子
+### 基本示例
 
 此示例在一个不含 `bar` 成员的 Map 中查找 `bar` 成员的 `name` 属性，因此结果是 `undefined`。
 
@@ -179,7 +179,7 @@ const nameBar = myMap.get("bar")?.name;
 
 ### 处理可选的回调函数或者事件处理器
 
-如果使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来解构的一个对象的回调函数或 fetch 方法，你可能得到不能当做函数直接调用的不存在的值，除非你已经校验了他们的存在性。使用`?.`的你可以忽略这些额外的校验：
+如果使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来解构的一个对象的回调函数或 fetch 方法，你可能得到不能当做函数直接调用的不存在的值，除非你已经校验了它们的存在性。你可以使用 `?.` 来忽略这些额外的校验：
 
 ```js
 // 不使用可选链的写法
@@ -230,7 +230,7 @@ const customerName = customer.name?.getName?.(); // 方法不存在，customerNa
 
 ```js
 function printCustomerCity(customer) {
-  const customerCity = customer?.city ?? "Unknown city";
+  const customerCity = customer?.city ?? "未知城市";
   console.log(customerCity);
 }
 
@@ -241,7 +241,7 @@ printCustomerCity({
 printCustomerCity({
   name: "Carl",
   details: { age: 82 },
-}); // "Unknown city"
+}); // "未知城市"
 ```
 
 ## 规范
