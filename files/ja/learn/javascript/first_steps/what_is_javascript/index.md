@@ -212,7 +212,7 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
 ### 内蔵 JavaScript
 
 1. まずは [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html) ファイルを自分のコンピューターにコピーします。どこか適当な場所に保存してください。
-2. キストエディターとウェブブラウザーでそのファイルを開いてください。クリックできるボタンが 1 つあるウェブページを作る HTML だということがわかりますね。
+2. テキストエディターとウェブブラウザーでそのファイルを開いてください。クリックできるボタンが 1 つあるウェブページを作る HTML だということがわかりますね。
 3. 次に、テキストエディターで `</head>` タグの直前に以下のコードを追加します。
 
    ```html
