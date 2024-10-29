@@ -66,7 +66,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ### DOM 的核心
 
-文档对象模型（DOM）是用来对 HTML、XHTML 及 XML 文档中的对象进行表示和交互的跨平台以及**编程语言无关的约定**。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。文档对象模型核心是由 [W3C](/zh-CN/docs/Glossary/W3C) 进行标准化的，这个模型定义了编程语言无关的、将 HTML 和 XML 抽象为对象的接口，也定义了操作这种抽象的机制。在由 DOM 定义的东西中，我们能找到：
+文档对象模型（DOM）是一种跨平台以及**编程语言无关的约定**，用于表示 HTML、XHTML 及 XML 文档中的对象进并与之交互。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。[W3C](/zh-CN/docs/Glossary/W3C) 将核心文档对象模型标准化，该模型定义了与语言无关的接口，将 HTML 和 XML 文档抽象为对象，还定义了操作这种抽象的机制。在由 DOM 定义的事物中，我们可以发现：
 
 - [DOM 核心](https://dom.spec.whatwg.org/)中的文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
 - [DOM 事件](https://w3c.github.io/uievents/)中的一个不太严谨的 DOM 事件架构的定义，以及一些特殊事件。
