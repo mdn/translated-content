@@ -108,7 +108,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [Carakan](https://zh.wikipedia.org/wiki/Presto#JavaScript引擎)，用于早期版本的 Opera。
 - Microsoft 的 [Chakra](<https://zh.wikipedia.org/wiki/Chakra_(JScript引擎)>) 引擎，用于 Internet Explorer（尽管它实现的语言正式名称为“JScript”，为了避免商标问题）。早期版本的 Edge 使用的新 JavaScript 引擎，令人困惑的是，它也叫作 [Chakra](<https://zh.wikipedia.org/wiki/Chakra_(JavaScript引擎)>)。
 - [LibJS](https://serenityos.github.io/libjs-website/)，用于 [SerenityOS](https://serenityos.org/) 的浏览器实现。
-- Mozilla 的 [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) 引擎，用 Java 语言实现的 JavaScript 引擎，主要由 Norris Boyd 创造（也在 Netscape）。
+- Mozilla 的 [Rhino](<https://zh.wikipedia.org/wiki/Rhino_(JavaScript引擎)>) 引擎，用 Java 语言实现的 JavaScript 引擎，主要由 Norris Boyd（也曾在 Netscape）创建。
 
 还有一些引擎是专门为非浏览器用途定制的：
 
