@@ -146,7 +146,7 @@ JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载
 用于编写和调试 JavaScript 代码的实用工具。
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : 包括 [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等。
+  - : 包括 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript 性能分析](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)等。
 - [学习 JavaScript](https://learnjavascript.online/)
   - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
 - [TogetherJS](https://togetherjs.com/)
