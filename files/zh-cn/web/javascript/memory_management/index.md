@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Advanced")}}
 
-底层语言（如 c 语言）拥有手动的内存管理基本操作，例如：[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 和 [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions)。相反，JavaScript 是在创建对象时自动分配内存，并在不再使用时自动释放内存（*垃圾回收*）。这个自动性是混乱的潜在根源：它让开发者错误地以为他们不需要担心内存管理。
+底层语言（如 C 语言）拥有手动的内存管理基本操作，例如：[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 和 [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions)。相反，JavaScript 是在创建对象时自动分配内存，并在不再使用时自动释放内存（*垃圾回收*）。这个自动性是混乱的潜在根源：它让开发者错误地以为他们不需要担心内存管理。
 
 ## 内存生命周期
 
@@ -90,11 +90,11 @@ const a3 = a.concat(a2);
 
 ## 垃圾回收
 
-如上文所述，自动寻找一些内存是否“不再需要”这个一般性问题是无法判定的。因此，垃圾回收器对这个一般性问题实现了一个存在限制的解决方案。本节将解释理解主要的垃圾回收算法及其相应的局限所必须的概念。
+如上文所述，自动寻找一些内存是否“不再需要”这个一般性问题是无法判定的。因此，垃圾回收器对这个一般性问题实现了一个存在限制的解决方案。本节将解释理解主要的垃圾回收算法及其对应的局限所必须的概念。
 
 ### 引用
 
-垃圾回收算法依赖的主要概念是引用。在内存管理的上下文中，如果一个对象有访问另一个对象的权限（隐式或者显式），称作前面的对象引用后面的对象。例如，一个 Javascript 对象具有对它的[原型](/zh-CN/JavaScript/Guide/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
+垃圾回收算法依赖的主要概念是引用。在内存管理的上下文中，如果一个对象有访问另一个对象的权限（隐式或者显式），称作前面的对象引用后面的对象。例如，一个 JavaScript 对象具有对它的[原型](/zh-CN/JavaScript/Guide/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
 
 在这个上下文中，“对象”的概念不仅指常规的 JavaScript 对象，还包括函数作用域（或者全局词法作用域）。
 
@@ -155,25 +155,25 @@ f();
 
 这个算法将“对象不再需要”这个定义简化为“对象不可达”。
 
-这个算法假定有一组叫做*根*的对象。在 Javascript 中，根是全局对象。垃圾回收器将定期从这些根开始，找到从这些根能引用到的所有对象，然后找到从这些对象能引用到的所有对象，等等。从根开始，垃圾回收器将找到所有可以到达的对象并收集所有不能到达的对象。
+这个算法假定有一组叫做*根*的对象。在 JavaScript 中，根是全局对象。垃圾回收器将定期从这些根开始，找到从这些根能引用到的所有对象，然后找到从这些对象能引用到的所有对象，等等。从根开始，垃圾回收器将找到所有可以到达的对象并收集所有不能到达的对象。
 
 这个算法是对上一个算法的改进。因为对于引用计数算法，有零引用的对象实际上是不可达的，但是有引用的对象却不一定，就像在循环引用中看到的那样。
 
-当前，所有现代的引擎搭载的是标记清除垃圾回收器。过去几年中，在 JavaScript 垃圾回收领域做出的改进（分代/增量/并发/并行 垃圾回收）都是这个算法的实现改进，而不是垃圾回收算法本身的改进，也不是何时“对象不再需要”这个定义的简化。
+当前，所有现代的引擎搭载的是标记清除垃圾回收器。过去几年中，在 JavaScript 垃圾回收领域做出的改进（分代/增量/并发/并行垃圾回收）都是这个算法的实现改进，而不是垃圾回收算法本身的改进，也不是何时“对象不再需要”这个定义的简化。
 
 这个方法的直接好处就是循环不再是一个问题。在上面的示例中，在函数调用返回之后，从全局对象可达的任何资源都将不再引用这两个对象。因此，垃圾回收器会认为它们不可达并回收为它们分配的内存。
 
-然而，手动控制垃圾回收的能力仍不存在。有时候动手决定何时释放内存以及释放哪块内存会很方便。为了释放对象的内存，需要显式地变成不可达。在 JavaScript 中，编程式地触发垃圾回收也不可能——永不可能出现在核心语言中，尽管引擎可能在可选的标志中暴露了相关的 API。
+然而，手动控制垃圾回收的能力仍不存在。有时候手动决定何时释放内存以及释放哪块内存会很方便。为了释放对象的内存，需要显式地变成不可达。在 JavaScript 中，编程式地触发垃圾回收也不可能——永不可能出现在核心语言中，尽管引擎可能在可选的标志中暴露了相关的 API。
 
 ## 配置引擎的内存模型
 
-JavaScript 引擎典型地提供了暴露内存模型地标志。例如，Node.js 为配置和除错内存问题提供了暴露底层的 V8 机制的额外选项和工具。这个配置可能在浏览器中不能使用，Web 页面更不用说（通过 HTTP 标头，等等）。
+JavaScript 引擎典型地提供了暴露内存模型地标志。例如，Node.js 为配置和调试内存问题提供了暴露底层的 V8 机制的额外选项和工具。这个配置可能在浏览器中不能使用，Web 页面更不用说（通过 HTTP 标头，等等）。
 
 ```bash
 node --max-old-space-size=6000 index.js
 ```
 
-使用标志和 [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging) 也能为出错内存问题暴露垃圾回收器：
+使用标志和 [Chrome 调试器](https://nodejs.org/en/learn/getting-started/debugging) 也能为调试内存问题暴露垃圾回收器：
 
 ```bash
 node --expose-gc --inspect index.js
@@ -189,7 +189,7 @@ node --expose-gc --inspect index.js
 
 `WeakMap` 和 `WeakSet` 的名字来源于*弱引用*值的概念。假设 `x` 被 `y`弱引用，这意味着尽管你能通过 `y` 访问 `x`的值，但如果 `x` 不再被*强引用*的话，标记清除算法不会认为 `x` 是可达的。大多数数据结构，除了在这讨论的这两个，都是强引用传入的对象，这样你才能在任意时间取回这些对象。只要程序中不再有键的引用，`WeakMap` 和 `WeakSet` 的键能被垃圾回收（对 `WeakMap` 对象，值接着也适合被回收）。这一点由两个特性确保：
 
-- `WeakMap` 和 `WeakSet` 仅能存储对象或 symbol。这是因为仅对象是可垃圾回收的——原始值总是被复制的（也就是，`1 === 1` 但 `{} !== {}`），这让原始值永远呆在集合中。[已注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)（如 `Symbol.for("key")`）也是被复制，因此也不是可垃圾回收的，但是用 `Symbol("key")` 创建的 symbol 是可垃圾回收的。[内置通用 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols)（如 `Symbol.iterator`）来自于一组固定的集合，在程序的整个声明周期中是唯一的，类似于雇固有的对象（如 `Array.prototype`），所以它们也能作为键。
+- `WeakMap` 和 `WeakSet` 仅能存储对象或 symbol。这是因为仅对象是可垃圾回收的——原始值总是被复制的（也就是，`1 === 1` 但 `{} !== {}`），这让原始值永远呆在集合中。[已注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)（如 `Symbol.for("key")`）也是被复制，因此也不是可垃圾回收的，但是用 `Symbol("key")` 创建的 symbol 是可垃圾回收的。[内置通用 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#内置通用（well-known）symbol)（如 `Symbol.iterator`）来自于一组固定的集合，在程序的整个声明周期中是唯一的，类似于雇固有的对象（如 `Array.prototype`），所以它们也能作为键。
 - `WeakMap` 和 `WeakSet` 是不可迭代的。这禁止你使用 `Array.from(map.keys()).length` 观察对象的存活性或获取任意适合垃圾回收的键的引用（垃圾回收应尽可能不可见）。
 
 在典型的 `WeakMap` 和 `WeakSet` 的解释中（就像上面那样），通常暗示，键首先被垃圾回收，然后值也被垃圾回收。然而，考虑值引用键这个例子：
@@ -236,7 +236,7 @@ class MyWeakMap {
 
 ### WeakRefs 和 FinalizationRegistry
 
-> **Note:** `WeakRef` 和 `FinalizationRegistry` 能直接内省进垃圾回收机制。[尽量避免使用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)因为运行时语义几乎完全不受保证。
+> **Note:** `WeakRef` 和 `FinalizationRegistry` 能直接内省进垃圾回收机制。[尽量避免使用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#尽量避免使用)因为运行时语义几乎完全不受保证。
 
 
 所有用对象作为值的变量都是那个对象的引用。然而，这样的引用是*强引用*——它们的存在会阻止垃圾回收器将对象标记为适合回收。[`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) 是对象的*弱引用*，这让对象能被垃圾回收，同时在对象的声明周期期间仍保留了读取对象的内容的能力。
