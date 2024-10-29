@@ -49,7 +49,7 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-使用严格相等几乎总是正确的选择。对于除了数字之外的值，严格相等有着明确的语义：值仅与它自身相等。对于数字，严格相等有着稍微不同的语义处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 `+0` 和 `-0` 在解决一些特定的数学问题时区分正负是必要的，但是大部分情况下我们并不用关心。严格相等认为这两个值是全等的。第二个情况是，浮点数包含了 `NaN` 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。严格相等认为 `NaN` 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 `x` 的值为 `NaN`）
+使用严格相等几乎总是正确的选择。对于除了数字之外的值，严格相等有着明确的语义：值仅与它自身相等。对于数字，严格相等使用稍微不同的语义处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 `+0` 和 `-0` 在解决一些特定的数学问题时区分正负是必要的，但是大部分情况下我们并不用关心。严格相等认为这两个值是全等的。第二个情况是，浮点数包含了 `NaN` 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。严格相等认为 `NaN` 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 `x` 的值为 `NaN`）
 
 除了 `===` 之外，数组索引查找方法也使用严格相等，包括 [`Array.prototype.indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)、[`Array.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)、[`TypedArray.prototype.index()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)、[`TypedArray.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf) 和 [`case`](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 匹配。这意味着你不能使用 `indexOf(NaN)` 查找数组中 `NaN` 值的索引，也不能将 `NaN` 用作 `case` 值在 `switch` 语句中匹配任何内容。
 
@@ -143,7 +143,7 @@ function sameValueZero(x, y) {
 }
 ```
 
-零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在处理 `NaN` 时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) 及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 需要比较键的相等性的方法中。
+零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在处理 `NaN` 时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)，以及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 的需要比较键的相等性的方法。
 
 ## 相等性方法比较
 
