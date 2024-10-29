@@ -18,8 +18,6 @@ O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTM
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Especifica a URI de um recurso manifest indicando os recursos que devem ser carregados na memória local. Veja [Recursos offline em Firefox](/pt-BR/docs/HTML/Using_the_application_cache) para detalhes.
 - `version` {{deprecated_inline}}
   - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.
 

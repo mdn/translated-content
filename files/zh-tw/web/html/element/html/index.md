@@ -11,8 +11,6 @@ slug: Web/HTML/Element/html
 
 此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-- `manifest` {{deprecated_inline}}
-  - : 指定了應該在本地緩存的資源清單的 {{glossary("URI")}}。
 - `version` {{deprecated_inline}}
   - : 指定了管理當前文件的 HTML {{glossary("Doctype", "文件類型定義")}}的版本。這個屬性是不必要的，因為它與文件類型聲明中的版本訊息是多餘的。
 - `xmlns`
