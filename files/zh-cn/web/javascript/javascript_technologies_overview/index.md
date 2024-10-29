@@ -36,9 +36,9 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 在 ECMAScript 第 6 版（称为 ES6）之前，规范是几年发布一次，通常用它们的主要版本号来指代（ES3、ES5 等）。在 ES6 之后，规范以发布年份命名（ES2017、ES2018 等）。ES6 是 ES2015 的代名词。_ESNext_ 是一个动态名称，指的是撰写本文时的下一个版本。ESNext 中的特性更准确地称为提案，因为根据定义，规范尚未最终确定。
 
-目前委员会批准的 ECMA-262 的快照有 [PDF 版本](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)和 [HTML 版本](https://262.ecma-international.org/13.0/)。ECMA-262 和 ECMA-402 正处于维护状态，仍在由规范编辑者更新；TC39 网站托管了最新版本的 [ECMA-262](https://tc39.es/ecma262/) 和 [ECMA-402](https://tc39.es/ecma402/)。
+目前委员会批准的 ECMA-262 的快照位于 Ecma International 的 [ECMA-262 语言规范页面](https://ecma-international.org/publications-and-standards/standards/ecma-262/)，有 PDF 和 HTML 两个格式可用。ECMA-262 和 ECMA-402 正处于维护状态，仍在由规范编辑者更新；TC39 网站托管了最新版本的 [ECMA-262](https://tc39.es/ecma262/) 和 [ECMA-402](https://tc39.es/ecma402/)。
 
-新的语言特性，包括新的语法和 API 的引入以及现有行为的修订，都以提案的形式进行讨论。每个提案都需要经过 [4 个阶段的过程](https://tc39.es/process-document/)，通常在第 3 或 第 4 阶段时，JavaScript 引擎会实现这些提案，以供公众使用。
+新的语言特性，包括新的语法和 API 的引入以及现有行为的修订，都以提案的形式进行讨论。每个提案都需要经过 [4 个阶段的过程](https://tc39.es/process-document/)，通常在第 3 或第 4 阶段时，JavaScript 引擎会实现这些提案，以供公众使用。
 
 有关 ECMAScript 历史的更多信息，请参阅[维基百科上的 ECMAScript 条目](https://zh.wikipedia.org/wiki/ECMAScript)。
 
@@ -66,7 +66,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ### DOM 的核心
 
-文档对象模型（DOM）是一种跨平台以及**编程语言无关的约定**，用于表示 HTML、XHTML 及 XML 文档中的对象进并与之交互。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。[W3C](/zh-CN/docs/Glossary/W3C) 将核心文档对象模型标准化，该模型定义了与语言无关的接口，将 HTML 和 XML 文档抽象为对象，还定义了操作这种抽象的机制。在由 DOM 定义的事物中，我们可以发现：
+文档对象模型（DOM）是一种跨平台以及**编程语言无关的约定**，用于表示 HTML、XHTML 及 XML 文档中的对象并与之交互。通过调用 **DOM 树**中的对象的方法对其进行定位和操纵。[W3C](/zh-CN/docs/Glossary/W3C) 将核心文档对象模型标准化，该模型定义了与语言无关的接口，将 HTML 和 XML 文档抽象为对象，还定义了操作这种抽象的机制。在由 DOM 定义的事物中，我们可以发现：
 
 - [DOM 核心](https://dom.spec.whatwg.org/)中的文档结构、树模型，以及 DOM 事件架构，包括：{{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}}，等等
 - [DOM 事件](https://w3c.github.io/uievents/)中的一个不太严谨的 DOM 事件架构的定义，以及一些特殊事件。
