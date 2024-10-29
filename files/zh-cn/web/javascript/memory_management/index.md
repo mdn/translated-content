@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Advanced")}}
 
-底层语言（如 C 语言）拥有手动的内存管理基本操作，例如：[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 和 [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions)。相反，JavaScript 是在创建对象时自动分配内存，并在不再使用时自动释放内存（*垃圾回收*）。这个自动性是混乱的潜在根源：它让开发者错误地以为他们不需要担心内存管理。
+底层语言（如 C 语言）拥有手动的内存管理基本操作，例如：[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 和 [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions)。相反，JavaScript 是在创建对象时自动分配内存，并在不再使用时自动释放内存（_垃圾回收_）。这个自动性是混乱的潜在根源：它让开发者错误地以为他们不需要担心内存管理。
 
 ## 内存生命周期
 
