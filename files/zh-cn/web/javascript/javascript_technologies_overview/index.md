@@ -135,7 +135,7 @@ JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载
 
 ### 基于浏览器的 JavaScript shell
 
-以下 JavaScript shell 是通过浏览器的 JavaScript 引擎运行代码：
+以下 JavaScript shell 通过浏览器的 JavaScript 引擎运行代码：
 
 - Firefox 有一个[内置的 JavaScript 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html)，支持多行编辑。
 - [Babel 交互式解释器](https://babeljs.io/repl)——一个基于浏览器的、用于试验下一代 JavaScript 特性的[交互式解释器](https://zh.wikipedia.org/wiki/读取﹣求值﹣输出循环)。
