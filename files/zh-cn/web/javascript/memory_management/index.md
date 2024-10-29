@@ -185,7 +185,7 @@ node --expose-gc --inspect index.js
 
 ### WeakMap 和 WeakSet
 
-[`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) 和 [`WeakSet`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) 的 API 几乎镜像非 weak 版的：[`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)。`WeakMap` 维护一个键-值对的集合，而 `WeakSet` 维护一个唯一值的集合，两者都能高效的添加、删除和查询。
+[`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) 和 [`WeakSet`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) 的 API 几乎镜像非 weak 版的：[`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)。`WeakMap` 维护一个键 - 值对的集合，而 `WeakSet` 维护一个唯一值的集合，两者都能高效的添加、删除和查询。
 
 `WeakMap` 和 `WeakSet` 的名字来源于*弱引用*值的概念。假设 `x` 被 `y`弱引用，这意味着尽管你能通过 `y` 访问 `x`的值，但如果 `x` 不再被*强引用*的话，标记清除算法不会认为 `x` 是可达的。大多数数据结构，除了在这讨论的这两个，都是强引用传入的对象，这样你才能在任意时间取回这些对象。只要程序中不再有键的引用，`WeakMap` 和 `WeakSet` 的键能被垃圾回收（对 `WeakMap` 对象，值接着也适合被回收）。这一点由两个特性确保：
 
