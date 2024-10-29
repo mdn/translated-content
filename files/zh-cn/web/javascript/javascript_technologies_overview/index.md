@@ -130,7 +130,7 @@ JavaScript shell 允许你快速测试 JavaScript 代码片段，而无需重载
 
 以下 JavaScript shell 是与 Perl 或 Python 类似的独立的环境：
 
-- [Node.js](https://nodejs.org/)——Node.js 是用于轻易构建快速、可扩展的网络应用的平台。
+- [Node.js](https://nodejs.org/)——Node.js 是可轻松构建快速、可扩展网络应用程序的平台。
 - [ShellJS](https://github.com/shelljs/shelljs)——用于 Node.js 的便携式 Unix shell 命令。
 
 ### 基于浏览器的 JavaScript shell
