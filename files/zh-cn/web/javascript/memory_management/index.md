@@ -291,4 +291,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 出于性能和安全考虑，不会保证何时调用回调，或者是否会调用。它应该仅用于清除——非关键的清除。有其他更确定的资源管理的方式，例如 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)，总是会执行 `finally` 块。`WeakRef` 和 `FinalizationRegistry` 仅用于长时间运行的程序中的内存用量优化。
 
-更多有关 [`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) and [`FinalizationRegistry`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) 的 API 的信息，参见对应的参考页面。
+更多有关 [`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) 和 [`FinalizationRegistry`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) 的 API 的信息，参见对应的参考页面。
