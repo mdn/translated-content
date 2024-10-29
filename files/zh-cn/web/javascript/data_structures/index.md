@@ -216,7 +216,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 通常，要将数据绑定到 DOM 节点，可以直接在对象上设置属性，或使用 `data-*` 属性。这样做的缺点是，在同一上下文中运行的任何脚本都可以使用这些数据。而 `Map` 和 `WeakMap` 则可以轻松地将数据*隐蔽地*绑定到对象上。
 
-`WeakMap` 和 `WeakSet` 只允许将可垃圾回收的值作为键，这些键要么是对象，要么是[未注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，即使键仍在集合中，也可能被回收。它们专门用于[优化内存使用](/zh-CN/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management)。
+`WeakMap` 和 `WeakSet` 只允许将可垃圾回收的值作为键，这些键要么是对象，要么是[未注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，即使键仍在集合中，也可能被回收。它们专门用于[优化内存使用](/zh-CN/docs/Web/JavaScript/Memory_management#帮助内存管理的数据结构)。
 
 ### 结构化数据：JSON
 
