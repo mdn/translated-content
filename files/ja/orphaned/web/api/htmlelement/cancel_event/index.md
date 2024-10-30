@@ -1,7 +1,7 @@
 ---
 title: "HTMLElement: cancel イベント"
-short-title: cancel
-slug: Web/API/HTMLElement/cancel_event
+slug: orphaned/Web/API/HTMLElement/cancel_event
+original_slug: Web/API/HTMLElement/cancel_event
 l10n:
   sourceCommit: 682c529a1be5f26ae378cb6affd56cdc15dddd4d
 ---
