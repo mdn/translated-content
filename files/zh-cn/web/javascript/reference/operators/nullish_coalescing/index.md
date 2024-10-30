@@ -88,7 +88,7 @@ const notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
 const preservingFalsy = myText ?? "Hi neighborhood";
-console.log(preservingFalsy); // '' (myText 既不是 undefined 也不是 null)
+console.log(preservingFalsy); // ''（myText 既不是 undefined 也不是 null）
 ```
 
 ### 短路
@@ -143,4 +143,4 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 - [逻辑空赋值运算符（`??=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
 - [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [函数中的默认参数值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
