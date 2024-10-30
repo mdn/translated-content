@@ -1,19 +1,19 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-page-type: css-property
-browser-compat: css.properties.transition-duration
+l10n:
+  sourceCommit: 1608a85abb1d05dadc63f27c93fc3e4b7e630db0
 ---
 
 {{CSSRef}}
 
-The **`transition-duration`** [CSS](/ko/docs/Web/CSS) property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
+**`transition-duration`** [CSS](/ko/docs/Web/CSS) 속성은 트랜지션 애니메이션이 완료되는 데 걸리는 시간을 설정합니다. 기본값은 `0s` 로, 애니메이션이 발생하지 않습니다.
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
-You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If the number of specified durations is less than in the master list, the user agent repeats the list of durations. If the number of specified durations is more than in the master list, the list is truncated to the right size. In both the cases, the CSS declaration stays valid.
+여러 개의 지속 시간을 지정할 수 있으며, 각 지속 시간은 마스터 목록 역할을 하는 {{ cssxref("transition-property") }} 속성에 지정된 대로 해당 프로퍼티에 적용됩니다. 지정된 지속 시간 수가 마스터 목록보다 적으면 사용자 에이전트는 지속 시간 목록을 반복합니다. 지정된 기간의 수가 마스터 목록보다 많으면 목록이 적절한 크기로 잘립니다. 두 경우 모두 CSS 선언은 유효하게 유지됩니다.
 
-## Syntax
+## 구문
 
 ```css
 /* <time> values */
@@ -30,20 +30,20 @@ transition-duration: revert-layer;
 transition-duration: unset;
 ```
 
-### Values
+### 값
 
 - `<time>`
-  - : Is a {{cssxref("&lt;time&gt;")}} denoting the amount of time the transition from the old value of a property to the new value should take. A time of `0s` indicates that no transition will happen, that is the switch between the two states will be instantaneous. A negative value for the time renders the declaration invalid.
+  - : {{cssxref("&lt;time&gt;")}} 은 프로퍼티의 이전 값에서 새 값으로 트랜지션되는 데 걸리는 시간을 나타냅니다. 시간이 `0s` 이면 트랜지션이 일어나지 않음을 의미하며, 두 상태 사이의 전환이 즉시 일어납니다. 시간에 음수 값을 지정하면 해당 선언은 무효가 됩니다.
 
-## Formal definition
+## 형식 정의
 
 {{CSSInfo}}
 
-## Formal syntax
+## 형식 구문
 
 {{csssyntax}}
 
-## Examples
+## 예제
 
 ### Example showing different durations
 
@@ -110,19 +110,19 @@ const changeButton = document.querySelector("#change");
 changeButton.addEventListener("click", change);
 ```
 
-#### Result
+#### 결과
 
 {{EmbedLiveSample("Example_showing_different_durations",275,200)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
