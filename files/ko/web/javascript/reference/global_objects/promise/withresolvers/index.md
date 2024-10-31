@@ -79,8 +79,8 @@ async function* readableToAsyncIterable(stream) {
 ```js
 class NotPromise {
   constructor(executor) {
-    // The "resolve" and "reject" functions behave nothing like the native
-    // promise's, but Promise.withResolvers() just returns them, as is.
+    // "resolve"와 "reject" 함수는 네이티브 프로미스의 것과 전혀 다르게 동작하지만,
+    // Promise.withResolvers()는 그냥 이 함수들을 반환합니다.
     executor(
       (value) => console.log("Resolved", value),
       (reason) => console.log("Rejected", reason),
