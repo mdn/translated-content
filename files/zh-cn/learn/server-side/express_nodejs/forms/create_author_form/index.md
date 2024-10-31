@@ -9,7 +9,7 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 
 ## 导入验证和修整方法
 
-与![创建种类表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) 一样，要使用 _express-validator_，我们必须 _require_ 我们想要使用的函数。
+与[创建种类表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) 一样，要使用 _express-validator_，我们必须 _require_ 我们想要使用的函数。
 
 打开 **/controllers/authorController.js**，并将以下代码添加到文件顶部（路由函数上方）：
 
@@ -118,7 +118,7 @@ exports.author_create_post = [
   ];
   ```
 
-- 我们可以使用 `optional()` 函数来保证仅当有字段输入时才去运行后续的验证（这允许我们验证可选字段）。例如，下面我们检查可选的出生日期是否符合 ISO8601 标准（传递的`{ values: "falsy" }`对象意味着我们将接受空字符串或 `null` 作为空值）。
+- 我们可以使用 `optional()` 函数来保证仅当有字段输入时才去运行后续的验证（这允许我们验证可选字段）。例如，下面我们检查可选的出生日期是否符合 ISO8601 标准（传递的 `{ values: "falsy" }` 对象意味着我们将接受空字符串或 `null` 作为空值）。
 
   ```js
   [
