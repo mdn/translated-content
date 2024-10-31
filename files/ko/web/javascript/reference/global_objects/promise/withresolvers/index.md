@@ -90,7 +90,7 @@ class NotPromise {
 
 const { promise, resolve, reject } = Promise.withResolvers.call(NotPromise);
 resolve("hello");
-// Logs: Resolved hello
+// 로그 출력: Resolved hello
 ```
 
 ## 명세서
