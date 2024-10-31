@@ -1,11 +1,27 @@
 ---
 title: 접근성
 slug: Learn/Accessibility
+l10n:
+  sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
 
 {{LearnSidebar}}
 
 웹 개발자가 되기위해서 HTML, CSS 및 JavaScript를 배우는 것이 필요하지만 배운 지식을 효과적으로 사용하기위해서는 지식이상의 기술이 필요로 합니다. 이 기술을 사용해서 웹사이트에 접근하려는 모든 사용자를 차별없이 접근할수 있도록 해야합니다. 이를 위하여 모범 사례([HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목에서 설명) 를 준수하고 [브라우저 호환성 테스트를 거치며](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) 처음부터 접근성을 고려해야합니다. 이 문서에서는 후자에 대해 자세히 다룰 것입니다.
+
+# 개요
+
+사이트를 "접근 가능"하다고 말할 때, 이는 모든 사용자가 웹에 접근하는 방식에 상관없이 모든 기능과 콘텐츠를 사용할 수 있음을 의미합니다. 특히, 신체적 또는 정신적 장애가 있는 사용자도 예외가 아닙니다.
+
+- 사이트는 키보드, 마우스, 터치 스크린 사용자를 비롯해 스크린 리더와 Alexa, Google Home 같은 음성 비서와 같은 다양한 웹 접근 방식을 사용하는 사용자들에게 접근 가능해야 합니다.
+- 애플리케이션은 청각, 시각, 신체적 또는 인지 능력에 상관없이 모든 사람이 이해하고 사용할 수 있어야 합니다.
+- 또한 사이트는 해를 끼치지 않아야 합니다. 예를 들어 모션 같은 웹 기능은 편두통이나 간질 발작을 유발할 수 있습니다.
+
+**HTML은 올바르게 사용될 경우 기본적으로 접근 가능합니다.** 웹 접근성은 웹에 누가, 어떻게 접근하든지 콘텐츠가 계속 접근 가능하도록 보장하는 것을 포함합니다.
+
+Firefox Accessibility Inspector는 웹 페이지의 접근성 문제를 점검하는 데 매우 유용한 도구입니다. 다음 비디오는 이에 대한 좋은 소개를 제공합니다.
+
+{{EmbedYouTube("7mqqgIxX_NU")}}
 
 ## 선결조건
 
@@ -37,6 +53,14 @@ slug: Learn/Accessibility
 
 ## 참고 항목
 
-- [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today) — an excellent series of video tutorials by Marcy Sutton.
-- [Deque University resources](https://dequeuniversity.com/resources/) — includes code examples, screen reader references, and other useful resources.
-- [WebAIM resources](https://webaim.org/resources/) — includes guides, checklists, tools, and more.
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
+- [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
+  - : An excellent series of video tutorials by Marcy Sutton.
+- [Deque University resources](https://dequeuniversity.com/resources/)
+  - : Includes code examples, screen reader references, and other useful resources.
+- [WebAIM resources](https://webaim.org/resources/)
+  - : Includes guides, checklists, tools, and more.
+- [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
+  - : Includes a list of web accessibility evaluation tools.
+
