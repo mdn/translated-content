@@ -45,7 +45,7 @@ transition-duration: unset;
 
 ## 예제
 
-### Example showing different durations
+### 다양한 지속 시간을 보여주는 예시
 
 #### HTML
 
