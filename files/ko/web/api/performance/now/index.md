@@ -56,9 +56,9 @@ currentTime = performance.timeOrigin + performance.now();
 
 단계 2 명세는 `performance.now()` 의 수면 중 틱을 요구합니다. 수면 중 틱은 오직 윈도우에서 파이어폭스와 크로미움에서만 나타나는 것으로 보입니다. 다른 운영 체제에서 관련된 브라우저 버그는 다음과 같습니다:
 
-- 크롬/크로미움 ([버그](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
-- 파이어폭스 ([버그](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
-- 사파리/웹킷 ([버그](https://bugs.webkit.org/show_bug.cgi?id=225610))
+- 크롬/크로미움 ([버그](https://crbug.com/1206450))
+- 파이어폭스 ([버그](https://bugzil.la/1709767))
+- 사파리/웹킷 ([버그](https://webkit.org/b/225610))
 
 명세서 상 더 많은 정보는 이슈 [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601) 에서 확인할 수 있습니다.
 
