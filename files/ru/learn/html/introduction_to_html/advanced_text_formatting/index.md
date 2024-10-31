@@ -238,11 +238,11 @@ textarea.onkeyup = () => {
 
 ### Блочные цитаты
 
-Если часть содержимого уровня блока (будь то абзац, несколько абзацев, список и т. д.) цитируется из другого источника, вы должны обернуть её внутри элемента {{htmlelement("blockquote")}}, чтобы обозначить это, и указать URL-адрес, указывающий на источник цитаты, внутри атрибута [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite). Например, следующая разметка берётся из страницы элемента MDN **`<blockquote>`**:
+Если часть содержимого уровня блока (будь то абзац, несколько абзацев, список и т.д.) цитируется из другого источника, вы должны обернуть её внутри элемента {{htmlelement("blockquote")}}, чтобы обозначить это, и указать URL-адрес, указывающий на источник цитаты, внутри атрибута [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite). Например, следующая разметка берётся из страницы элемента MDN **`<blockquote>`**:
 
 ```html
 <p>
-  <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+  <strong>HTML-элемент <code>&lt;blockquote&gt;</code></strong> (от англ.
   <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в нём
   текст является развёрнутой цитатой.
 </p>
@@ -255,7 +255,7 @@ textarea.onkeyup = () => {
 <blockquote
   cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
   <p>
-    <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+    <strong>HTML-элемент <code>&lt;blockquote&gt;</code></strong> (от англ.
     <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в
     нём текст является развёрнутой цитатой.
   </p>
@@ -301,7 +301,7 @@ textarea.onkeyup = () => {
 
 <blockquote cite="/ru/docs/Web/HTML/Element/blockquote">
   <p>
-    <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+    <strong>HTML-элемент <code>&lt;blockquote&gt;</code></strong> (от англ.
     <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в
     нем текст является развёрнутой цитатой.
   </p>
