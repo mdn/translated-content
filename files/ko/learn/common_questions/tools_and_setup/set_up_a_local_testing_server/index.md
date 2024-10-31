@@ -88,13 +88,13 @@ npx http-server /path/to/project -o -p 9999
 
 1. Python이 설치되어 있는지 확인하려면 다음 명령어를 실행합니다.
 
-  ```bash
-  python -V
-  # 위 명령어가 실패하면,
-  python3 -V
-  # 또는 "py" 명령어가 사용 가능하면,
-  py -3 -V
-  ```
+```bash
+python -V
+# 위 명령어가 실패하면,
+python3 -V
+# 또는 "py" 명령어가 사용 가능하면,
+py -3 -V
+```
 
 2. Python이 설치되어 있지 않으면, [설치 가이드](https://www.python.org/downloads/)를 참고하여 설치하세요. (더 자세한 설명은 [Django 튜토리얼](/ko/docs/Learn/Server-side/Django/development_environment#installing_python_3)에서도 확인할 수 있습니다). 설치가 완료되면 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
 
