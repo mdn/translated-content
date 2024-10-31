@@ -280,15 +280,12 @@
 /ko/docs/Learn/CSS/Introduction_to_CSS/선택자	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Learn/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
 /ko/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders
-/ko/docs/Learn/Common_questions/HTML_features_for_accessibility	/ko/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
 /ko/docs/Learn/Common_questions/How_does_the_Internet_work	/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 /ko/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /ko/docs/Learn/Common_questions/Thinking_before_coding	/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-/ko/docs/Learn/Common_questions/Upload_files_to_a_web_server	/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 /ko/docs/Learn/Common_questions/What_are_hyperlinks	/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /ko/docs/Learn/Common_questions/What_is_a_URL	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
 /ko/docs/Learn/Common_questions/What_is_a_web_server	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
-/ko/docs/Learn/Common_questions/What_software_do_I_need	/ko/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /ko/docs/Learn/Common_questions/set_up_a_local_testing_server	/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ko/docs/Learn/Common_questions/코딩하기_전에_생각하기	/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /ko/docs/Learn/Front-end_web_developer	/ko/docs/orphaned/Learn/Front-end_web_developer
