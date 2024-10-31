@@ -71,9 +71,9 @@ npx -v
 
 3. 폴더가 `/path/to/project`라고 가정하고, 서버를 시작하려면 다음 명령어를 실행합니다.
 
-  ```bash
-  npx http-server /path/to/project -o -p 9999
-  ```
+```bash
+npx http-server /path/to/project -o -p 9999
+```
 
   이 명령어는 `/path/to/project` 폴더 내 모든 파일을 `localhost:9999`에서 호스팅합니다. `-o` 옵션은 `index.html` 페이지를 웹 브라우저에서 자동으로 열어줍니다. `index.html` 파일이 없을 경우, 폴더 목록이 표시됩니다.
 
