@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8ab0f2fde2a9c1c7e547884abedf3848f8d7dda5
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
 **`performance.now()`** 메서드는 밀리초 단위의 고해상도 타임스탬프를 반환합니다. 이는 {{domxref("Performance.timeOrigin")}} (윈도우 맥락에서는 탐색이 시작되었을 때의 시간이나 {{domxref("Worker")}} 혹은 {{domxref("ServiceWorker")}} 맥락에서는 워커가 진행된 시간) 으로부터의 시간 경과를 나타냅니다.
 
