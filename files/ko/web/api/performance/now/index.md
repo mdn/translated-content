@@ -1,6 +1,7 @@
 ---
 title: "Performance: now() method"
 short-title: now()
+slug: Web/API/Performance/now
 l10n:
   sourceCommit: 024449e686746a0d036edeb2323bfe21adfa2155
 ---
