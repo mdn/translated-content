@@ -10,9 +10,9 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">요구지식:</th>
+      <th scope="row">선행 지식:</th>
       <td>
-        <a href="/en-US/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works(인터넷이 작동하는 법)</a
         >을 배워야 한다.
       </td>

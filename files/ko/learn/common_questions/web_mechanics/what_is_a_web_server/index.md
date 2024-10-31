@@ -1,6 +1,8 @@
 ---
 title: 웹 서버란 무엇일까?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
+l10n:
+  sourceCommit: bd48972c8a9c2acf3b8fa6e41248d0952eb0c406
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -10,18 +12,18 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선수 지식</th>
+      <th scope="row">선행 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/ko/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>
     </tr>
     <tr>
-      <th scope="row">목표</th>
+      <th scope="row">목표:</th>
       <td>
         웹 서버가 무엇인지를 배우고, 어떻게 동작하는지에 대한 전반적인 이해를
         얻을 것입니다.
@@ -43,9 +45,9 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 
 웹 사이트를 공개하기 위해서는, 당신은 정적 혹은 동적 웹 서버가 필요합니다.
 
-정적 웹 서버 혹은 스택은 HTTP 서버 (소프트웨어)가 있는 컴퓨터(하드웨어)로 구성되어 있습니다. 서버가 그 불려진 파일을 당신의 브라우저에게 전송하기 때문에, 저희는 그것을 "정적"이라고 부릅니다.
+**정적 웹 서버** 혹은 스택은 HTTP 서버 (소프트웨어)가 있는 컴퓨터(하드웨어)로 구성되어 있습니다. 서버가 그 불려진 파일을 당신의 브라우저에게 전송하기 때문에, 저희는 그것을 "정적"이라고 부릅니다.
 
-동적 웹 서버는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.
+**동적 웹 서버**는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.
 
 예를 들어, 당신이 브라우저에서 보는 최종 웹페이지들을 생성하기 위해, 애플리케이션 서버는 아마 데이터베이스로 온 컨텐츠들로 이루어진 HTML 템플릿을 채울지 모릅니다. MDN 혹은 Wikipedia와 같은 사이트들은 수 천개의 웹페이지들을 가지고 있지만, 그것들은 실제의 HTML 문서가 아니라 오직 약간의 HTML 템플릿과 엄청 큰 데이터베이스로 되어있습니다. 이 구성은 내용들을 전달하고 관리하기 쉽고 빠르게 만들어 줍니다.
 
@@ -64,13 +66,13 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 - 항상 같은 IP주소를 가지고 있습니다(모든 {{Glossary("ISP", "ISPs")}}가 홈 라인에 대해 고정된 IP주소를 제공하는 것은 아닙니다.)
 - 제 3자에 의해 유지보수 됩니다
 
-이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/en-US/Learn/How_much_does_it_cost#Hosting) 찾을 수 있습니다.
+이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting) 찾을 수 있습니다.
 
-당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Upload_files_to_a_web_server)
+당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 ### HTTP를 이용해 통신하기
 
-두 번째로, 웹 서버는 {{Glossary("HTTP")}} (hypertext transfer protocol)을 위한 지원합니다. 이름이 의미하듯이, HTTP는 어떻게 두 컴퓨터간의 hypertext(예를 들어, 연결된 웹 문서)를 전송하는지를 서술합니다.
+두 번째로, 웹 서버는 {{Glossary("HTTP")}} (Hypertext Transfer Protocol)을 위한 지원합니다. 이름이 의미하듯이, HTTP는 어떻게 두 컴퓨터간의 hypertext(예를 들어, 연결된 웹 문서)를 전송하는지를 서술합니다.
 
 프로토콜은 두 컴퓨터간의 통신를 위한 규칙의 집합입니다. HTTP는 문자로 된, 독립적인 프로토콜입니다.
 
@@ -89,7 +91,9 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
-3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은404 error pages를 디자인하는데 많은 시간을 할애합니다.
+3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 {{HTTPStatus("404", "404 Not Found")}} 입니다.
+   404 오류는 매우 흔하기 때문에 일부 웹 디자이너들은 404 오류 페이지를 디자인하는 데 많은 시간과 노력을 들이기도 합니다.
+   ![The MDN 404 page as an example of such error page](mdn-404.jpg)
 
 ### 정적 vs. 동적 컨텐츠
 
