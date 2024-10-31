@@ -135,4 +135,4 @@ Python, PHP, JavaScript 같은 서버 측 언어를 사용하는 경우, 서버 
   ```
 
 서버 측 프레임워크나 개발 서버를 제공하는 프로그래밍 언어를 사용하지 않는 경우, Python의 `http.server` 모듈을 사용하여 CGI(Common Gateway Interface) 스크립트를 호출함으로써 Python, PHP, JavaScript 등으로 작성된 서버 측 코드를 테스트할 수 있습니다.
-이 기능 사용 예시는 [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi)의 _How to Launch an HTTP Server in One Line of Python Code_에서 확인할 수 있습니다.
+이 기능 사용 예시는 [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi)의 *How to Launch an HTTP Server in One Line of Python Code*에서 확인할 수 있습니다.
