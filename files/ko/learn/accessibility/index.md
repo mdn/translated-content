@@ -63,4 +63,3 @@ Firefox Accessibility Inspector는 웹 페이지의 접근성 문제를 점검�
   - : Includes guides, checklists, tools, and more.
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : Includes a list of web accessibility evaluation tools.
-
