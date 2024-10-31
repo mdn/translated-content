@@ -90,7 +90,7 @@ visibility の値は*可視*及び*不可視*の間で補間可能です。従�
 }
 ```
 
-{{EmbedLiveSample('Basic_example')}}
+{{EmbedLiveSample('基本的な例')}}
 
 ### 表の例
 
@@ -132,7 +132,7 @@ td {
 }
 ```
 
-{{EmbedLiveSample('Table_example')}}
+{{EmbedLiveSample('表の例')}}
 
 ## 仕様書
 

@@ -2,7 +2,7 @@
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 1176e753733ee9d2e8966cc7cf03df495dce9aba
 ---
 
 {{HTTPSidebar}}
