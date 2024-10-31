@@ -81,7 +81,7 @@ npx http-server /path/to/project -o -p 9999
 
 또 다른 방법으로 Python의 `http.server` 모듈을 사용할 수 있습니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Python의 오래된 버전(2.7까지)에는 `SimpleHTTPServer`라는 유사한 모듈이 제공되었습니다. Python 2는 이미 지원이 종료되었으므로 Python 3 사용을 권장합니다.
 
 이 방법을 사용하려면,
