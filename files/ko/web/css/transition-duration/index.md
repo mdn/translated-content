@@ -112,7 +112,7 @@ changeButton.addEventListener("click", change);
 
 #### 결과
 
-{{EmbedLiveSample("Example_showing_different_durations",275,200)}}
+{{EmbedLiveSample("다양한_지속_시간을_보여주는_예시",275,200)}}
 
 ## 명세서
 
