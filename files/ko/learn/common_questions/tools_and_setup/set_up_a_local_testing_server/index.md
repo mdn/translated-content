@@ -61,11 +61,11 @@ Node.js의 [`http-server`](https://www.npmjs.com/package/http-server) 모듈은 
 
 1. 다음 명령어를 실행하여 Node.js가 이미 설치되어 있는지 확인합니다.
 
-  ```bash
-  node -v
-  npm -v
-  npx -v
-  ```
+```bash
+node -v
+npm -v
+npx -v
+```
 
 2. Node.js가 설치되지 않았다면, [설치 가이드](https://nodejs.org/en/download/package-manager)를 참고하여 설치 후 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
 
