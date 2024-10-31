@@ -22,7 +22,7 @@ slug: Web/HTML/Element/head
 К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
 - `profile` {{deprecated_inline}}
-  - : {{glossary("URI")}} одного или более профилей метаданных, разделённых {{Glossary("whitespace", "пробелами")}}.
+  - : {{glossary("URI")}} одного или более профилей метаданных, разделённые {{Glossary("whitespace", "пробелами")}}.
 
 ## Пример
 
