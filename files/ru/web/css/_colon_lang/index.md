@@ -72,7 +72,7 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
 - HTML [`lang`](/ru/docs/Web/HTML/Global_attributes#lang) attribute

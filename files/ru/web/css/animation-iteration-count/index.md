@@ -46,7 +46,7 @@ animation-iteration-count: 2, 0, infinite;
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
 - [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

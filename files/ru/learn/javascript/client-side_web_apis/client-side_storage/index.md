@@ -761,7 +761,7 @@ self.addEventListener("fetch", function (e) {
 
 Это всё, пока что. Мы надеемся наш краткий обзор `client-side storage` окажется полезным для вас.
 
-## Также стоит почитать
+## Смотрите также
 
 - [Web storage API](/ru/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/ru/docs/Web/API/IndexedDB_API)
