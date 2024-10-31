@@ -281,7 +281,6 @@
 /ko/docs/Learn/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
 /ko/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders
 /ko/docs/Learn/Common_questions/How_does_the_Internet_work	/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-/ko/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /ko/docs/Learn/Common_questions/Thinking_before_coding	/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /ko/docs/Learn/Common_questions/What_are_hyperlinks	/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /ko/docs/Learn/Common_questions/What_is_a_URL	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
