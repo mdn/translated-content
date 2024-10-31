@@ -61,21 +61,21 @@ Node.js의 [`http-server`](https://www.npmjs.com/package/http-server) 모듈은 
 
 1. 다음 명령어를 실행하여 Node.js가 이미 설치되어 있는지 확인합니다.
 
-```bash
-node -v
-npm -v
-npx -v
-```
+   ```bash
+   node -v
+   npm -v
+   npx -v
+   ```
 
 2. Node.js가 설치되지 않았다면, [설치 가이드](https://nodejs.org/en/download/package-manager)를 참고하여 설치 후 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
 
 3. 폴더가 `/path/to/project`라고 가정하고, 서버를 시작하려면 다음 명령어를 실행합니다.
 
-```bash
-npx http-server /path/to/project -o -p 9999
-```
+   ```bash
+   npx http-server /path/to/project -o -p 9999
+   ```
 
-이 명령어는 `/path/to/project` 폴더 내 모든 파일을 `localhost:9999`에서 호스팅합니다. `-o` 옵션은 `index.html` 페이지를 웹 브라우저에서 자동으로 열어줍니다. `index.html` 파일이 없을 경우, 폴더 목록이 표시됩니다.
+   이 명령어는 `/path/to/project` 폴더 내 모든 파일을 `localhost:9999`에서 호스팅합니다. `-o` 옵션은 `index.html` 페이지를 웹 브라우저에서 자동으로 열어줍니다. `index.html` 파일이 없을 경우, 폴더 목록이 표시됩니다.
 
 ### Python 사용하기
 
@@ -88,31 +88,31 @@ npx http-server /path/to/project -o -p 9999
 
 1. Python이 설치되어 있는지 확인하려면 다음 명령어를 실행합니다.
 
-```bash
-python -V
-# 위 명령어가 실패하면,
-python3 -V
-# 또는 "py" 명령어가 사용 가능하면,
-py -3 -V
-```
+   ```bash
+   python -V
+   # 위 명령어가 실패하면,
+   python3 -V
+   # 또는 "py" 명령어가 사용 가능하면,
+   py -3 -V
+   ```
 
 2. Python이 설치되어 있지 않으면, [설치 가이드](https://www.python.org/downloads/)를 참고하여 설치하세요. (더 자세한 설명은 [Django 튜토리얼](/ko/docs/Learn/Server-side/Django/development_environment#installing_python_3)에서도 확인할 수 있습니다). 설치가 완료되면 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
 
 3. Python이 설정되었다면, `cd` 명령어를 사용하여 테스트할 웹사이트 코드가 있는 폴더로 이동합니다.
 
-```bash
-# 폴더 이름을 입력하여 이동합니다, 예를 들어
-cd Desktop
-# 상위 폴더로 이동하려면 두 점을 사용합니다
-cd ..
-```
+   ```bash
+   # 폴더 이름을 입력하여 이동합니다, 예를 들어
+   cd Desktop
+   # 상위 폴더로 이동하려면 두 점을 사용합니다
+   cd ..
+   ```
 
 4. 해당 폴더에서 서버를 시작하는 명령어를 입력합니다.
 
-```bash
-# Windows에서는 "python -m http.server" 또는 "py -3 -m http.server" 사용
-python3 -m http.server
-```
+   ```bash
+   # Windows에서는 "python -m http.server" 또는 "py -3 -m http.server" 사용
+   python3 -m http.server
+   ```
 
 5. 기본적으로, 이 명령어는 해당 폴더의 내용을 로컬 웹 서버의 포트 8000에서 실행합니다. 웹 브라우저에서 `localhost:8000` URL로 이동하여 이 서버에 접속할 수 있습니다. 여기서 폴더의 내용이 나열되며, 실행하려는 HTML 파일을 클릭하면 됩니다.
 
