@@ -3,7 +3,7 @@ title: "Performance: now() method"
 short-title: now()
 slug: Web/API/Performance/now
 l10n:
-  sourceCommit: 024449e686746a0d036edeb2323bfe21adfa2155
+  sourceCommit: 8ab0f2fde2a9c1c7e547884abedf3848f8d7dda5
 ---
 
 {{APIRef("Performance API")}}
