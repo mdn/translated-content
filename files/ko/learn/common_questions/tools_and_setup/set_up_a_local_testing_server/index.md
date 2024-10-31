@@ -109,10 +109,10 @@ cd ..
 
 4. 해당 폴더에서 서버를 시작하는 명령어를 입력합니다.
 
-  ```bash
-  # Windows에서는 "python -m http.server" 또는 "py -3 -m http.server" 사용
-  python3 -m http.server
-  ```
+```bash
+# Windows에서는 "python -m http.server" 또는 "py -3 -m http.server" 사용
+python3 -m http.server
+```
 
 5. 기본적으로, 이 명령어는 해당 폴더의 내용을 로컬 웹 서버의 포트 8000에서 실행합니다. 웹 브라우저에서 `localhost:8000` URL로 이동하여 이 서버에 접속할 수 있습니다. 여기서 폴더의 내용이 나열되며, 실행하려는 HTML 파일을 클릭하면 됩니다.
 
