@@ -87,7 +87,7 @@ HTML-элемент **`<base>`** определяет основной адре�
     </tr>
     <tr>
       <th scope="row">Неявная ARIA-роль</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет</a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a></td>
     </tr>
     <tr>
       <th scope="row">Допустимые ARIA-роли</th>
