@@ -133,7 +133,7 @@ const SimplePropertyRetriever = {
 };
 ```
 
-## See also
+## 参见
 
 - [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)
 - [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
