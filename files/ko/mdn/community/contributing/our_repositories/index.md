@@ -2,7 +2,7 @@
 title: MDN 웹 문서 저장소
 slug: MDN/Community/Contributing/Our_repositories
 l10n:
-  sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
+  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
 {{MDNSidebar}}
@@ -79,4 +79,3 @@ MDN 웹 문서 GitHub에는 많은 예제 저장소가 있습니다. 이 저장�
 - [**houdini-예제**](https://github.com/mdn/houdini-examples)
 - [**headless-예제**](https://github.com/mdn/headless-examples)
 - [**perf-예제**](https://github.com/mdn/perf-examples)
-- [**devtools-예제**](https://github.com/mdn/devtools-examples)
