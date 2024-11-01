@@ -7,14 +7,6 @@ slug: Web/HTML/Element/meta
 
 HTML-элемент **`<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Мета данные. Если задан [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) атрибут: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                   |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | Отсутствует - это {{Glossary("empty element","пустой элемент")}}.                                                                                                                                                                                           |
-| Пропуск тегов                                              | Так как это пустой элемент, то открывающий тег должен присутствовать, а закрывающий - отсутствовать.                                                                                                                                                        |
-| Допустимые родители                                        | `<meta charset>`, `<meta http-equiv>`: {{HTMLElement("head")}} элемент. Если [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}. |
-| Допустимые ARIA-роли                                       | Отсутствуют                                                                                                                                                                                                                                                 |
-| DOM-интерфейс                                              | {{domxref("HTMLMetaElement")}}                                                                                                                                                                                                                              |
-
 ## Атрибуты
 
 Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
@@ -185,6 +177,64 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
 <!-- Переход на другую страницу через три секунды -->
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
+
+## Техническая сводка
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ru/docs/Web/HTML/Content_categories">Категории контента</a>
+      </th>
+      <td>
+        Мета данные. Если задан 
+        <a href="/ru/docs/Web/HTML/Global_attributes#itemprop">itemprop</a> атрибут: 
+        <a href="/ru/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, 
+        <a href="/ru/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимое содержимое</th>
+      <td>Отсутствует - это {{Glossary("void element","пустой элемент")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Пропуск тегов</th>
+      <td>Открывающий тег должен присутствовать, а закрывающий - отсутствовать.</td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые родители</th>
+      <td>
+        <ul>
+          <li>
+            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} элемент. Если <a href="/ru/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a> это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}.
+          </li>
+          <li>
+            <code>&#x3C;meta name></code>: любой элемент, который принимает <a href="/ru/docs/Web/HTML/Content_categories#метаданные">метаданные</a>.
+          </li>
+          <li>
+            <code>&#x3C;meta itemprop></code>: любой элемент, который принимает
+            <a href="/ru/docs/Web/HTML/Content_categories#метаданные">метаданные</a> или <a href="/ru/docs/Web/HTML/Content_categories#основной_поток">основной поток</a
+            >.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Неявная ARIA-роль</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые ARIA-роли</th>
+      <td>Отсутствуют</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM-интерфейс</th>
+      <td>{{domxref("HTMLMetaElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Спецификации
 
