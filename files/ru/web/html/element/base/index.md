@@ -1,27 +1,22 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
+page-type: html-element
+browser-compat: html.elements.base
 ---
 
 {{HTMLSidebar}}
 
-**HTML-элемент** **`<base>`** определяет основной адрес (URL), используемый для всех относительных адресов (URLs) в документе. Может быть только один **`<base>`** элемент в одном документе.
-Основной адрес (URL) документа можно запросить скриптом используя {{domxref('document.baseURI')}}.
+HTML-элемент **`<base>`** определяет основной адрес (URL), используемый для всех относительных адресов (URLs) в документе. Может быть только один `<base>` элемент в документе.
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Метаданные                                                       |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| Допустимое содержимое                                            | Отсутствует. Это {{Glossary("empty element","пустой элемент")}}. |
-| Пропуск тегов                                                    | Без закрывающего тега.                                           |
-| Допустимые родители                                              | {{HTMLElement("head")}}, {{HTMLElement("body")}}.                |
-| Допустимые ARIA-роли                                             | Нет                                                              |
-| DOM-интерфейс                                                    | {{domxref("HTMLBaseElement")}}                                   |
+Используемый базовый URL документа можно получить в скриптах с помощью {{domxref('Node.baseURI')}}. Если в документе нет элементов `<base>`, то значение `baseURI` по умолчанию равно {{domxref("location.href")}}.
 
-## Атрибуты **`<base>`**
+## Атрибуты
 
-К элементу **`<base>`**`можно применять` [глобальные атрибуты.](/ru/docs/Web/HTML/Global_attributes)
+К элементу `<base>`можно применять [глобальные атрибуты.](/ru/docs/Web/HTML/Global_attributes)
 
 > [!WARNING]
-> Элемент `<base>` должен иметь атрибут `href`, `target` или оба. Если указан хотя бы один из этих атрибутов, `<base>` должен располагаться перед другими элементами с атрибутами URL, такими как `href` у {{HTMLElement("link")}}.
+> Элемент `<base>` должен иметь атрибут `href`, `target` или оба. Если указан хотя бы один из этих атрибутов, `<base>` **должен** располагаться перед другими элементами с атрибутами URL, такими как `href` у {{HTMLElement("link")}}.
 
 - `href`
   - : Базовый URL, используемый в документе для относительных URL. Разрешены абсолютные и относительные URL.
@@ -67,6 +62,41 @@ slug: Web/HTML/Element/base
 <base target="_blank" />
 <base target="_top" href="https://example.com/" />
 ```
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a>
+      </th>
+      <td>Метаданные</td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимое содержимое</th>
+      <td>Отсутствует. Это {{Glossary("void element","пустой элемент")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Пропуск тегов</th>
+      <td>Должен иметь открывающий тег и без закрывающего тега.</td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые родители</th>
+      <td>Тег {{HTMLElement("head")}}, который не содержит другой элемент <code>&lt;base&gt;</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Неявная ARIA-роль</th>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые ARIA-роли</th>
+      <td>Атрибут <code>role</code> не допускается</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM-интерфейс</th>
+      <td>{{domxref("HTMLBaseElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Спецификации
 
