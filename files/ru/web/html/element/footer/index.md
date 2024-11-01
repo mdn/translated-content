@@ -34,7 +34,7 @@ slug: Web/HTML/Element/footer
 </footer>
 ```
 
-## Проблемы доступности
+## Доступность
 
 У программа чтения с экрана [VoiceOver](https://help.apple.com/voiceover/info/guide/) есть проблема, при которой она не читает элемент `<footer>` (не добавляет [роль-ориентир](/ru/docs/Learn/Доступность/WAI-ARIA_basics#SignpostsLandmarks) элемента `<footer>` в список ориентиров). Чтобы решить эту проблему добавьте `role="contentinfo"` в элемент `<footer>`.
 

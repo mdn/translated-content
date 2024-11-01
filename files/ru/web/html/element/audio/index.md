@@ -122,7 +122,7 @@ slug: Web/HTML/Element/audio
 </audio>
 ```
 
-## Проблемы доступности
+## Доступность
 
 Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
