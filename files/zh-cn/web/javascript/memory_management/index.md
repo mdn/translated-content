@@ -26,7 +26,7 @@ l10n:
 为了不让程序员费心内存分配，JavaScript 在值初次声明时自动分配内存。
 
 ```js
-const n = 123; // 为数字分配内存
+const n = 123; // 为数值分配内存
 const s = "azerty"; // 为字符串分配内存
 
 const o = {
