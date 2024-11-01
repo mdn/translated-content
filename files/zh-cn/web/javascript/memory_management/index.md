@@ -70,8 +70,8 @@ const s2 = s.substr(0, 3); // s2 是一个新的字符串
 // JavaScript 可能决定不分配内存，
 // 只是存储了 [0-3] 的范围。
 
-const a = ["ouais ouais", "nan nan"];
-const a2 = ["generation", "nan nan"];
+const a = ["yeah yeah", "no no"];
+const a2 = ["generation", "no no"];
 const a3 = a.concat(a2);
 // 有四个元素的新数组，由 a 和 a2 元素连接而成。
 ```
