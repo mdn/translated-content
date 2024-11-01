@@ -213,8 +213,7 @@ span {
 
 {{cssxref("background-position")}} 속성을 사용하면 적용되는 박스에서 배경 이미지가 나타나는 위치를 선택할 수 있습니다. 박스의 왼쪽 상단 모서리가 `(0,0)` 이고, 박스가 가로 (`x`) 및 세로 (`y`) 축을 따라 위치하는 좌표계를 사용합니다.
 
-> [!NOTE]
-> `background-position` 의 기본값은 `(0,0)` 입니다.
+> [!NOTE] `background-position` 의 기본값은 `(0,0)` 입니다.
 
 가장 일반적인 `background-position` 값은 — 수평 값과 수직 값의 두 가지 개별 값을 갖습니다.
 
