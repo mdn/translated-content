@@ -220,7 +220,6 @@ CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 
 
 다음 예제에서는, `::before` 의사 요소를 사용하여 빈 문자열을 추가했습니다. 너비와 높이로 스타일을 지정할 수 있도록 이것을 `display: block`으로 설정했습니다. 그런 다음 CSS를 사용하여 다른 요소처럼 스타일을 지정합니다. CSS를 가지고 놀면서 모양과 작동 방식을 변경할 수 있습니다.
 
-
 ```html live-sample___before-styled
 <p class="box">Content in the box in my HTML page.</p>
 ```
