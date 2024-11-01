@@ -2,7 +2,7 @@
 title: 의사 클래스와 의사 요소
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: 26a87658fdd41e4d55dfd9cd3e9c1025e3038988
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">전제 조건:</th>
       <td>
-        기본 컴퓨터 활용 능력,
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >설치된 기본 소프트웨어</a
@@ -46,11 +45,55 @@ l10n:
 
 간단한 예를 살펴보겠습니다. 기사의 첫 번째 단락을 더 크고 굵게 만들고 싶다면 아래 첫 번째 예와 같이 해당 단락에 클래스를 추가한 다음 해당 클래스에 CSS를 추가할 수 있습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child.html", '100%', 800)}}
+```html live-sample___first-child
+<article>
+  <p class="first">
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-child
+.first {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-child")}}
 
 그러나, 이 방법은 유지하기가 귀찮을 수 있습니다 - 문서 상단에 새 단락이 추가되면 어떻게 될까요? 클래스를 새 단락으로 이동해야 합니다. 클래스를 추가하는 대신 {{cssxref(":first-child")}} 의사 클래스 선택자를 사용할 수 있습니다 - 이것은 _항상_ 문서의 첫 번째 하위 요소를 대상으로 하며 더 이상 HTML을 편집할 필요가 없습니다(어쨌든 CMS에서 생성되기 때문에 항상 가능한 것은 아닙니다).
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child2.html", '100%', 700)}}
+```html live-sample___first-child2
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-child2
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-child2")}}
 
 모든 의사 클래스는 이와 같은 방식으로 작동합니다. HTML에 클래스를 추가한 것처럼 동작하여 특정 상태에 있는 문서의 일부를 대상으로 합니다. MDN의 다른 예를 살펴보십시오.
 
@@ -68,7 +111,23 @@ l10n:
 - [`:hover`](/ko/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
 - [`:focus`](/ko/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
+```html live-sample___hover
+<p><a href="">Hover over me</a></p>
+```
+
+```css live-sample___hover
+a:link,
+a:visited {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+a:hover {
+  color: hotpink;
+}
+```
+
+{{EmbedLiveSample("hover")}}
 
 ## 의사-요소란 무엇인가요?
 
@@ -83,7 +142,29 @@ l10n:
 
 `::first-line` 의사 요소 선택자는 이 작업을 안정적으로 수행합니다. - 단어 수가 증가하거나 감소하더라도 여전히 첫 번째 행만 선택합니다.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}
+```html live-sample___first-line
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-line
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-line")}}
 
 마치 `<span>`이 첫 번째 서식이 지정된 줄을 마법처럼 감싸고 줄 길이가 변경될 때마다 업데이트되는 것처럼 작동합니다.
 
@@ -107,19 +188,55 @@ CSS를 사용하여 문서에 콘텐츠를 삽입하기 위해 [`content`](/ko/d
 
 이를 사용하여 아래의 실제 예와 같이 텍스트 문자열을 삽입할 수 있습니다. {{cssxref("content")}} 속성의 텍스트 값을 변경해고 출력에서 변경되는 것을 확인해보세요. 또한 `::before` 의사 요소를 `::after`로 변경하고 요소의 시작 부분 대신 끝에 삽입된 텍스트를 볼 수 있습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before.html", '100%', 400)}}
+```html live-sample___before
+<p class="box">Content in the box in my HTML page.</p>
+```
+
+```css live-sample___before
+.box::before {
+  content: "This should show before the other content. ";
+}
+```
+
+{{EmbedLiveSample("before")}}
 
 CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 자주 수행하는 작업이 아닙니다. 해당 텍스트는 일부 스크린 리더에서 액세스할 수 없고 나중에 다른 사람이 찾아서 편집하기 어려울 수 있기 때문입니다.
 
 이러한 의사 요소를 보다 효과적으로 사용하는 방법은 아이콘을 삽입하는 것입니다. 예를 들어 아래 예에 추가된 작은 화살표는 스크린 리더에서 읽지 않기를 바라는 시각적 표시기입니다.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/after-icon.html", '100%', 400)}}
+```html live-sample___after-icon
+<p class="box">Content in the box in my HTML page.</p>
+```
+
+```css live-sample___after-icon
+.box::after {
+  content: " ➥";
+}
+```
+
+{{EmbedLiveSample("after-icon")}}
 
 이러한 의사 요소는 빈 문자열을 삽입하는 데 자주 사용되며, 그런 다음 페이지의 모든 요소처럼 스타일을 지정할 수 있습니다.
 
 다음 예제에서는, `::before` 의사 요소를 사용하여 빈 문자열을 추가했습니다. 너비와 높이로 스타일을 지정할 수 있도록 이것을 `display: block`으로 설정했습니다. 그런 다음 CSS를 사용하여 다른 요소처럼 스타일을 지정합니다. CSS를 가지고 놀면서 모양과 작동 방식을 변경할 수 있습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
+
+```html live-sample___before-styled
+<p class="box">Content in the box in my HTML page.</p>
+```
+
+```css live-sample___before-styled
+.box::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  border: 1px solid black;
+}
+```
+
+{{EmbedLiveSample("before-styled")}}
 
 `content` 속성과 함께 `::before` 및 `::after` 의사 요소를 사용하는 것을 CSS에서는 "생성된 콘텐츠"라고 하며, 이 기술이 다양한 작업에 사용되는 것을 자주 볼 수 있습니다. 좋은 예는 CSS로 화살표를 생성하는 데 도움이 되는 [CSS Arrow Please](https://cssarrowplease.com/) 사이트입니다. 화살표를 만들 때 CSS를 보면 {{cssxref("::before")}} 및 {{cssxref("::after")}} 의사 요소가 사용 중인 것을 볼 수 있습니다. 이러한 선택자를 볼 때마다 {{cssxref("content")}} 속성을 살펴보고 HTML 요소에 추가되는 항목을 확인하세요.
 
