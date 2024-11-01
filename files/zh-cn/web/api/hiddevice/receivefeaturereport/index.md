@@ -24,7 +24,7 @@ receiveFeatureReport(reportId)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，它解决为包含功能报告的 {{jsxref("DataView")}} 对象。
+一个 {{jsxref("Promise")}}，它兑现为包含功能报告的 {{jsxref("DataView")}} 对象。
 
 ### 异常
 

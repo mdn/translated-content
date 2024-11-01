@@ -21,7 +21,7 @@ forget()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，一旦连接关闭、设备被遗忘且权限重置，它将解决为 `undefined`。
+一个 {{jsxref("Promise")}}，一旦连接关闭、设备被遗忘且权限重置，它将兑现为 `undefined`。
 
 ## 示例
 

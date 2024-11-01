@@ -36,17 +36,17 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
 - {{domxref("HIDDevice.open()")}} {{Experimental_Inline}}
-  - : 打开此 HID 设备的连接，并返回一个 {{jsxref("Promise")}}，一旦连接成功，该 Promise 就会解决。
+  - : 打开此 HID 设备的连接，并返回一个 {{jsxref("Promise")}}，一旦连接成功，该 Promise 就会兑现。
 - {{domxref("HIDDevice.close()")}} {{Experimental_Inline}}
-  - : 关闭此 HID 设备的连接，并返回一个 {{jsxref("Promise")}}，一旦连接关闭，该 Promise 就会解决。
+  - : 关闭此 HID 设备的连接，并返回一个 {{jsxref("Promise")}}，一旦连接关闭，该 Promise 就会兑现。
 - {{domxref("HIDDevice.forget()")}} {{Experimental_Inline}}
-  - : 关闭此 HID 设备的连接并重置访问权限，然后返回一个 {{jsxref("Promise")}}，一旦权限被重置，该 Promise 就会解决。
+  - : 关闭此 HID 设备的连接并重置访问权限，然后返回一个 {{jsxref("Promise")}}，一旦权限被重置，该 Promise 就会兑现。
 - {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
-  - : 向此 HID 设备发送一个输出报告，并返回一个 {{jsxref("Promise")}}，一旦报告发送成功，该 Promise 就会解决。
+  - : 向此 HID 设备发送一个输出报告，并返回一个 {{jsxref("Promise")}}，一旦报告发送成功，该 Promise 就会兑现。
 - {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}
-  - : 向此 HID 设备发送一个功能报告，并返回一个 {{jsxref("Promise")}}，一旦报告发送成功，该 Promise 就会解决。
+  - : 向此 HID 设备发送一个功能报告，并返回一个 {{jsxref("Promise")}}，一旦报告发送成功，该 Promise 就会兑现。
 - {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}
-  - : 以 {{jsxref("Promise")}} 的形式从 HID 设备接收一个功能报告，该 Promise 以一个 {{jsxref("DataView")}} 的形式解决，从而允许以类型化的方式访问此消息的内容。
+  - : 以 {{jsxref("Promise")}} 的形式从 HID 设备接收一个功能报告，该 Promise 以一个 {{jsxref("DataView")}} 的形式兑现，从而允许以类型化的方式访问此消息的内容。
 
 ## 示例
 
