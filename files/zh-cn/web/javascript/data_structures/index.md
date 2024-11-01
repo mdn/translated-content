@@ -258,7 +258,7 @@ console.log({} + []); // "[object Object]"
 
 ### 其他类型强制转换
 
-除了 Null、Undefined 以及 Symbol 类型以外，所有的数据类型都有它们各自的强制转换过程。更多细节，请参见[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)、[布尔值强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)以及[对象强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。
+除了 Null、Undefined 以及 Symbol 类型以外，所有的数据类型都有它们各自的强制转换过程。更多细节，请参见[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)、[布尔值强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#布尔值强制转换)以及[对象强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。
 
 你可能已经注意到，有三种不同的路径可以将对象转换为原始值：
 
