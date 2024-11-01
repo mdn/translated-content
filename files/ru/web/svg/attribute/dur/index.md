@@ -44,7 +44,7 @@ svg {
 
 {{EmbedLiveSample("Пример", 220, 150)}}
 
-## Примечания к использованию
+## Примечания по использованию
 
 <table class="properties">
   <tbody>
