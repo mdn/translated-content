@@ -18,7 +18,7 @@ l10n:
 
 기존 활성 로케일 중 하나에 기여하고 싶다면 [mdn/translated-content GitHub 저장소](https://github.com/mdn/translated-content)를 확인하세요. 이 저장소에는 모든 활성 로케일의 현지화된 문서와 이슈 추적이 포함되어 있습니다. 먼저 [번역 가이드](https://github.com/mdn/translated-content/tree/main/docs)를 읽어보는 것을 권장합니다.
 
-도움이 필요하거나 질문이 있다면 아래에 나열된 활성 회원 또는 커뮤니티와 자유롭게 연락하거나, [채널로 문의](/en-US/docs/MDN/Community/Communication_channels)주세요.
+도움이 필요하거나 질문이 있다면 아래에 나열된 활성 회원 또는 커뮤니티와 자유롭게 연락하거나, [채널로 문의](/ko/docs/MDN/Community/Communication_channels)주세요.
 
 ## 활성 로케일
 
