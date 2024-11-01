@@ -33,7 +33,7 @@
 /ja/docs/API/Document/createDocumentFragment	/ja/docs/Web/API/Document/createDocumentFragment
 /ja/docs/API/Document/createElement	/ja/docs/Web/API/Document/createElement
 /ja/docs/API/Document/createElementNS	/ja/docs/Web/API/Document/createElementNS
-/ja/docs/API/Document/createEntityReference	/ja/docs/conflicting/Web/API/Document
+/ja/docs/API/Document/createEntityReference	/ja/docs/Web/API/Document
 /ja/docs/API/Document/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/API/Document/createExpression	/ja/docs/Web/API/Document/createExpression
 /ja/docs/API/Document/createNSResolver	/ja/docs/Web/API/Document/createNSResolver
@@ -2674,7 +2674,7 @@
 /ja/docs/Web/API/Document/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Document/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument
-/ja/docs/Web/API/Document/createEntityReference	/ja/docs/conflicting/Web/API/Document
+/ja/docs/Web/API/Document/createEntityReference	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/documentURIObject	/ja/docs/orphaned/Web/API/Document/documentURIObject
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
@@ -2751,8 +2751,8 @@
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
-/ja/docs/Web/API/EventListener	/ja/docs/conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98
-/ja/docs/Web/API/EventListener/handleEvent	/ja/docs/conflicting/Web/API/EventTarget/addEventListener
+/ja/docs/Web/API/EventListener	/ja/docs/Web/API/EventTarget/addEventListener
+/ja/docs/Web/API/EventListener/handleEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventSource/onerror	/ja/docs/Web/API/EventSource/error_event
 /ja/docs/Web/API/EventSource/onmessage	/ja/docs/Web/API/EventSource/message_event
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
@@ -2840,6 +2840,7 @@
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/HTMLElement/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/HTMLElement/beforeinput_event	/ja/docs/Web/API/Element/beforeinput_event
+/ja/docs/Web/API/HTMLElement/cancel_event	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLElement/contextMenu	/ja/docs/orphaned/Web/API/HTMLElement/contextMenu
 /ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/HTMLElement/input_event	/ja/docs/Web/API/Element/input_event
@@ -2882,7 +2883,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/search	/ja/docs/Web/API/HTMLAnchorElement/search
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
-/ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/conflicting/Web/API/HTMLInputElement
+/ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/Web/API/HTMLInputElement
 /ja/docs/Web/API/HTMLMediaElement/onerror	/ja/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLScriptElement/supports	/ja/docs/Web/API/HTMLScriptElement/supports_static
@@ -3104,8 +3105,8 @@
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
-/ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
-/ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
+/ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
+/ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/Web/API/Pointer_events
 /ja/docs/Web/API/UIEvent/layerX	/ja/docs/Web/API/MouseEvent/layerX
@@ -3746,7 +3747,7 @@
 /ja/docs/Web/CSS/calc()	/ja/docs/Web/CSS/calc
 /ja/docs/Web/CSS/calc-constant	/ja/docs/Web/CSS/calc-keyword
 /ja/docs/Web/CSS/clamp()	/ja/docs/Web/CSS/clamp
-/ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
+/ja/docs/Web/CSS/color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/orphaned/Web/CSS/color_value/hexadecimal_rgb
 /ja/docs/Web/CSS/color_value/hsla	/ja/docs/Web/CSS/color_value/hsl
 /ja/docs/Web/CSS/color_value/rgba	/ja/docs/Web/CSS/color_value/rgb
@@ -4270,7 +4271,7 @@
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ja/docs/Web/JavaScript/Reference/Errors/Bad_return
-/ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+/ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
