@@ -41,7 +41,7 @@ l10n:
       - : 修改后的用途
     - `0x07` 到 `0x7F`
       - : 保留供未来使用
-    - `0x80` to `0xFF`
+    - `0x80` 到 `0xFF`
       - : 供应商定义
 
     有关这些类型的更多信息，请参阅[设备类定义](https://www.usb.org/document-library/device-class-definition-hid-111)文档。
