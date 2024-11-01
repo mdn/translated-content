@@ -267,7 +267,7 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 ```js
 function cached(getter) {
-  // 一个 Map：从字符串 URL 到结果的 WeakRef
+  // 一个 Map：从字符串 URL 到 WeakRef 结果
   const cache = new Map();
   // 每次值被垃圾回收之后，用缓存中的 key 作为参数调用回调，能移除缓存条目
   const registry = new FinalizationRegistry((key) => {
