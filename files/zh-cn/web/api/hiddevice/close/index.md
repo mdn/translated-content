@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-{{domxref("HIDDevice")}} 接口的 **`close()`** 方法用于关闭 HID 设备的连接
+{{domxref("HIDDevice")}} 接口的 **`close()`** 方法用于关闭 HID 设备的连接。
 
 ## 语法
 

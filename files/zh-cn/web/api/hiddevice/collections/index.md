@@ -17,7 +17,7 @@ l10n:
 
   - : 一个整数，表示请求设备的 HID 用途中的用途页面组件。顶级集合的用途用于识别设备类型。
 
-    可以在 [HID 使用表](https://usb.org/document-library/hid-usage-tables-15) 文档中找到标准 HID 用途值。
+    可以在 [HID 使用表](https://usb.org/document-library/hid-usage-tables-15)文档中找到标准 HID 用途值。
 
 - `usage`
   - : 一个整数，表示此集合关联的 HID 用途中的用途 ID 组件。
@@ -39,7 +39,7 @@ l10n:
       - : 用途开关
     - `0x06`
       - : 修改后的用途
-    - `0x07` to `0x7F`
+    - `0x07` 到 `0x7F`
       - : 保留供未来使用
     - `0x80` to `0xFF`
       - : 供应商定义
