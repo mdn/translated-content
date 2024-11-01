@@ -15,7 +15,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 *可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化器创建的属性，该标识值默认为 `true`。对于通过 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，默认并不是可枚举的。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
 
-属性的所有权由属性是否直接属于该对象决定的，而不是由属性是否属于它的原型链决定的。
+属性的所有权取决于属性是否直接属于该对象，而不是对象的原型链。
 
 所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自有的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的一个接着一个地访问对象属性的方法。
 
