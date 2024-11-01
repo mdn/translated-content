@@ -94,7 +94,7 @@ span {
 
 ### 배경 이미지
 
-{{cssxref("background-image")}} 속성은 요소의 배경에 이미지를 표시할 수 있게 해줍니다. 아래 예시에서는 두 개의 상자가 있으며, 하나는 상자보다 큰 배경 이미지를 가지고 있습니다 ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)). 다른 하나는 작은 별 모양의 이미지 (![star.png](https://mdn.github.io/shared-assets/images/examples/star.png))를 가지고 있습니다.
+{{cssxref("background-image")}} 속성은 요소의 배경에 이미지를 표시할 수 있게 해줍니다. 아래 예시에서는 두 개의 상자가 있으며, 하나는 상자보다 큰 배경 이미지를 가지고 있습니다 ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)). 다른 하나는 작은 별 모양의 이미지 ([star.png](https://mdn.github.io/shared-assets/images/examples/star.png))를 가지고 있습니다.
 
 이 예제는 배경 이미지에 대한 두 가지를 보여줍니다. 기본적으로 큰 이미지는 박스에 맞게 축소되지 않으므로 작은 이미지만 표시되는 반면, 작은 이미지는 박스를 채우기 위해 바둑판 식으로 배열됩니다. 이 경우 실제 이미지는 단일 별 입니다.
 
