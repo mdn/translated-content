@@ -24,7 +24,7 @@ JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaS
 >
 > 它不应与函数的 `func.prototype` 属性混淆，后者赋值为指定函数用作构造函数时创建的所有对象*实例*的 `[[Prototype]]`。我们将在[后面的小节](#构造函数)中讨论构造函数的 `prototype` 属性。
 
-有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#不同的创建对象和改变原型链的方法)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#原型_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未废弃的。
+有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#使用不同的方法来创建对象和改变原型链)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#原型_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被废弃的。
 
 在像 `{ a: 1, b: 2, __proto__: c }` 这样的对象字面量中，`c` 值（必须为 `null` 或另一个对象）将变成字面量所表示的对象的 `[[Prototype]]`，而其他键（如 `a` 和 `b`）将变成对象的*自有属性*。这种语法读起来非常自然，因为 `[[Prototype]]` 只是对象的“内部属性”。
 
@@ -131,7 +131,7 @@ console.log(child.method()); // 5
 
 ## 构造函数
 
-原型的强大之处在于，如果一组属性应该出现在每一个实例上，那我们就可以复用它们——尤其是对于方法。假设我们要创建多个盒子，其中每个盒子都是一个对象，这个对象包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
+原型的强大之处在于，如果一组属性应该出现在每一个实例上，那我们就可以复用它们——尤其是对于方法。假设我们要创建多个盒子，其中每一个盒子都是一个对象，包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
 
 ```js-nolint
 const boxes = [
@@ -141,7 +141,7 @@ const boxes = [
 ];
 ```
 
-这是不够好的，因为每个实例都有做相同事情的自有函数属性，这是冗余且不必要的。相反，我们可以将 `getValue` 移动到所有盒子的 `[[Prototype]]` 上：
+这是不够好的，因为每一个实例都有自己的，做相同事情的函数属性，这是冗余且不必要的。相反，我们可以将 `getValue` 移动到所有盒子的 `[[Prototype]]` 上：
 
 ```js
 const boxPrototype = {
@@ -173,7 +173,7 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它就是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认有一个自有属性：[`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
+我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自有属性：[`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
 
 > [!NOTE]
 > 如果构造函数返回非原始值，则该值将成为 `new` 表达式的结果。在这种情况下，`[[Prototype]]` 可能无法正确绑定——但在实践中应该很少发生。
@@ -193,7 +193,7 @@ class Box {
 }
 ```
 
-类是构造函数的语法糖，这意味着你仍然可以修改 `Box.prototype` 改变所有实例的行为。然而，由于类设计为对底层原型机制的抽象，我们将在本教程中使用更轻量级的构造函数语法，以充分展示原型的工作原理。
+类是构造函数的语法糖，这意味着你仍然可以修改 `Box.prototype` 来改变所有实例的行为。然而，由于类被设计为对底层原型机制的抽象，我们将在本教程中使用更轻量级的构造函数语法，以充分展示原型的工作原理。
 
 因为 `Box.prototype` 引用的对象和所有实例的 `[[Prototype]]` 是同一个对象，所以我们可以通过改变 `Box.prototype` 改变所有实例的行为。
 
@@ -273,7 +273,7 @@ Map.prototype.get(1);
 
 ### 构建更长的继承链
 
-`Constructor.prototype` 属性将成为构造函数的实例的 `[[Prototype]]`，包括 `Constructor.prototype` 的自有 `[[Prototype]]`。默认情况下，`Constructor.prototype` 是一个*普通对象*——即 `Object.getPrototypeOf(Constructor.prototype) === Object.prototype`。唯一的例外是 `Object.prototype` 本身，其 `[[Prototype]]` 是 `null`——即 `Object.getPrototypeOf(Object.prototype) === null`。因此，一个典型的构造函数将构建以下原型链：
+`Constructor.prototype` 属性将成为构造函数实例的 `[[Prototype]]`，包括 `Constructor.prototype` 自身的 `[[Prototype]]`。默认情况下，`Constructor.prototype` 是一个*普通对象*——即 `Object.getPrototypeOf(Constructor.prototype) === Object.prototype`。唯一的例外是 `Object.prototype` 本身，其 `[[Prototype]]` 是 `null`——即 `Object.getPrototypeOf(Object.prototype) === null`。因此，一个典型的构造函数将构建以下原型链：
 
 ```js
 function Constructor() {}
@@ -305,14 +305,14 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-你可能还会看到一些使用 {{jsxref("Object.create()")}} 构建继承链的旧代码。然而，因为这会重新为 `prototype` 属性赋值并删除 [`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性，所以更容易出错，而且如果构造函数还没有创建任何实例，性能提升可能并不明显。
+你可能还会看到一些使用 {{jsxref("Object.create()")}} 来构建继承链的旧代码。然而，因为这会重新为 `prototype` 属性赋值并删除 [`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性，所以更容易出错，而且如果构造函数还没有创建任何实例，性能提升可能并不明显。
 
 ```js example-bad
 function Base() {}
 function Derived() {}
 // 将 `Derived.prototype` 重新赋值为一个新对象，
 // `Base.prototype` 作为新对象的 `[[Prototype]]`
-// 请不要这样做——使用 Object.setPrototypeOf 修改它
+// 请不要这样做——使用 Object.setPrototypeOf 来修改它
 Derived.prototype = Object.create(Base.prototype);
 ```
 
@@ -446,7 +446,7 @@ doSomething.prototype.prop: undefined
 doSomething.prototype.foo:  bar
 ```
 
-## 不同的创建对象和改变原型链的方法
+## 使用不同的方法来创建对象和改变原型链
 
 我们碰到过很多创建对象和改变其原型链的方法。我们将系统地总结不同的方法，并比较每种方法的优缺点。
 
@@ -566,7 +566,7 @@ Object.setPrototypeOf(obj, anotherObj);
 
 所有对象都继承了 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter，它可以用来设置现有对象的 `[[Prototype]]`（如果对象没有覆盖 `__proto__` 属性）。
 
-> **警告：** `Object.prototype.__proto__` 访问器是**非标准**的，且已废弃。你应该几乎总是使用 `Object.setPrototypeOf` 作为代替。
+> **警告：** `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf` 作为代替。
 
 ```js
 const obj = {};
