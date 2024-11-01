@@ -21,7 +21,7 @@ getDevices()
 
 ### 返回值
 
-一个会解决为一组 {{domxref("HIDDevice")}} 对象的 {{jsxref("Promise")}}。
+一个兑现一组 {{domxref("HIDDevice")}} 对象的 {{jsxref("Promise")}}。
 
 ## 示例
 
