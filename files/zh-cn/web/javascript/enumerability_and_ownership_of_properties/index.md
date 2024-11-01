@@ -51,7 +51,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 注：以下实现并非是适用于所有情况的最优算法，但可以快捷的展示语言特性。
 
-- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)` 时将发生判断操作。
+- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)` 时将发生检测操作。
 - 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach((value, prop) => {}));` 时将发生迭代操作。 (或使用 `filter()`、`map()` 等方法)
 
 ```js
