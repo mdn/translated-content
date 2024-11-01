@@ -9,15 +9,15 @@ l10n:
 
 键盘 API（Keyboard API）提供了使用连接到运行浏览器的设备的物理键盘的方法。
 
-它提供了多种功能。*键盘映射*提供了一个接口，用于检索键盘上特定物理键生成的字符串，以便向用户正确识别该键。*键盘锁定*使网页能够捕获通常由用户代理或底层操作系统保留的键。Keyboard API 的预期用途是提供全屏沉浸式体验的 Web 应用程序，例如游戏或远程访问应用程序。
+它提供了多种功能。*键盘映射*提供了一个接口，用于检索键盘上特定物理键生成的字符串，以便向用户正确标识该键。*键盘锁定*使网页能够捕获通常由用户代理或底层操作系统保留的键。Keyboard API 的预期用途是提供全屏沉浸式体验的 Web 应用程序，例如游戏或远程访问应用程序。
 
 ## 概念和用法
 
 ### 键盘映射
 
-在物理键盘上，`code` 属性包含所按下按键的物理位置，`key` 属性包含按下键盘上该物理位置的按键所生成的字符串。`key` 值考虑了键盘的语言环境（例如“en-US”）、布局（例如“QWERTY”）和修饰键状态（<kbd>Shift</kbd>、<kbd>Control</kbd>等）。过去没有办法检索这些信息。
+在物理键盘上，`code` 属性包含所按下按键的物理位置，`key` 属性包含按下键盘上该物理位置的按键所生成的字符串。`key` 值考虑了键盘的区域设置（例如“en-US”）、布局（例如“QWERTY”）和修饰键状态（<kbd>Shift</kbd>、<kbd>Control</kbd> 等）。过去没有办法检索这些信息。
 
-键盘映射 API 提供了一种通过 {{domxref('Keyboard')}} 接口和 {{domxref('KeyboardLayoutMap')}} 接口检索特定按键所生成的字符串的方法。通过 {{domxref('navigator.keyboard')}} 访问 {{domxref('Keyboard')}} 接口。{{domxref('Keyboard')}} 提供 {{domxref('Keyboard.getLayoutMap')}} 方法，该方法返回一个 promise，其兑现一个 {{domxref('KeyboardLayoutMap')}} 对象，该对象包含用于将代码转换为键的成员。有效代码值列表可在 [UI 事件 KeyboardEvent 代码值](https://w3c.github.io/uievents-code/)规范的[写入系统键](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system)部分中找到。
+键盘映射 API 提供了一种通过 {{domxref('Keyboard')}} 接口和 {{domxref('KeyboardLayoutMap')}} 接口检索特定按键所生成的字符串的方法。可以通过 {{domxref('navigator.keyboard')}} 属性访问 {{domxref('Keyboard')}} 接口。{{domxref('Keyboard')}} 接口提供 {{domxref('Keyboard.getLayoutMap')}} 方法，该方法返回一个 promise，其兑现一个 {{domxref('KeyboardLayoutMap')}} 对象，该对象包含用于将代码转换为键的成员。有效代码值列表可在 [UI 事件 KeyboardEvent 代码值](https://w3c.github.io/uievents-code/)规范的[写入系统键](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system)部分中找到。
 
 以下示例演示如何获取与英语 QWERTY 键盘上标记为 <kbd>W</kbd> 的键相关联的位置特定或布局特定字符串。
 
