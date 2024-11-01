@@ -330,7 +330,6 @@
 /ko/docs/MDN/Contribute/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ko/docs/MDN/Contribute/Howto	/ko/docs/conflicting/MDN/Community/Contributing
 /ko/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/ko/docs/MDN/Contribute/Howto/Report_a_problem	/ko/docs/MDN/Community/Issues
 /ko/docs/MDN/Contribute/Processes	/ko/docs/conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Guidelines/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
