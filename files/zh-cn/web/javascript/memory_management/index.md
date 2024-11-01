@@ -263,7 +263,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) 提供了一个更强的机制观察垃圾回收。它让你注册对象以及对象被垃圾回收时得到通知。例如，对于上面的缓存系统这个例子，即使在 blob 自身被垃圾回收时，引用 blob 的 `WeakRef` 对象不会被垃圾回收——随着时间的积累，`Map` 可能积聚大量的无用条目。在这里例子中，使用 `FinalizationRegistry` 能执行清除。
+[`FinalizationRegistry`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) 提供了一个更强的机制观察垃圾回收。它让你注册对象以及对象被垃圾回收时得到通知。例如，对于上面的缓存系统这个例子，即使在 blob 自身被垃圾回收时，引用 blob 的 `WeakRef` 对象不会被垃圾回收——随着时间的积累，`Map` 可能积聚大量的无用条目。在这里的例子中，使用 `FinalizationRegistry` 能执行清除。
 
 ```js
 function cached(getter) {
