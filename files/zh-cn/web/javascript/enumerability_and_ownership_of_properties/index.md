@@ -13,7 +13,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 - 字符串或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)；
 - 自有属性或从原型链继承的属性。
 
-*可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化器创建的属性，该标识值默认为 `true`。对于通过 [Object.defineProperty](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，该标识值默认为 `false`。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环 和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
+*可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化器创建的属性，该标识值默认为 `true`。对于通过 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，默认并不是可枚举的。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
 
 属性的所有权由属性是否直接属于该对象决定的，而不是由属性是否属于它的原型链决定的。
 
