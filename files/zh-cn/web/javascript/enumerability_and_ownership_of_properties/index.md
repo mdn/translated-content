@@ -2,7 +2,7 @@
 title: 属性的可枚举性和所有权
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 l10n:
-  sourceCommit: a4b17b78fdca327f05e4a13e2b779d69e70212cd
+  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
 {{JsSidebar("More")}}
