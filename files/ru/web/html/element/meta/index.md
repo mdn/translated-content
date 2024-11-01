@@ -28,37 +28,42 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
   - : Этот атрибут содержит значение для [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`name`](/ru/docs/Web/HTML/Element/meta#name) атрибута, в зависимости от контекста.
 
 - `http-equiv`
-  - : Этот атрибут определяет прагму, которая может изменять поведение серверов и пользователей. Значение прагмы определяется с помощью [`content`](/ru/docs/Web/HTML/Element/meta#content) и может быть следующим:
+  - : Определяет директиву pragma. Название атрибута сокращено от `http-equivalent`, так как все допустимые значения являются именами конкретных HTTP-заголовков:
 
-    - `"content-language"`
+    - `content-security-policy`
+      - : Позволяет авторам страниц определять [политику содержимого](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) для текущей страницы. Политики содержимого в основном указывают разрешённые источники сервера и конечные точки скриптов, что помогает защититься от атак межсайтового скриптинга (XSS).
 
-      - : Эта прагма определяет значение языка страницы по умолчанию.
+        См. также {{HTTPHeader("Content-Security-Policy")}}.
 
-        > [!NOTE]
-        > Не используйте эту прагму, так как она устарела Используйте глобальный атрибут {{HTMLElement("html")}} элемента вместо этого.
+    - `content-type`
+      - : Задаёт [MIME-тип](/ru/docs/Web/HTTP/MIME_types) и кодировку символов документа. Атрибут `content`, если он указан, должен иметь значение `"text/html; charset=utf-8"`. Это эквивалентно элементу `<meta>` с заданным атрибутом [`charset`](#charset) и подчиняется тем же ограничениям на размещение в документе. **Примечание:** Может использоваться только в документах, обслуживаемых с MIME-типом `text/html`, но не в документах, обслуживаемых с XML MIME-типом.
 
-    - `"Content-Security-Policy"`
-      - : Это значение позволит администратору веб-сайта определить политику содержания для обслуживаемых ресурсов. За некоторыми исключениями, политика в основном включают в себя указание происхождения сервера и конечные точки сценария. Это помогает предотвратить атаки межсайтового скриптинга.
-    - `"content-type"`
+        См. также {{HTTPHeader("Content-Type")}}.
 
-      - : Этот атрибут определяет [MIME type](/ru/docs/MIME) документа. За ним следует синтаксис такой же как и в поле заголовка объекта содержимого HTTPI, однако как и внутри HTML-элемента, большинство этих значений не доступно.
-        Поэтому допустимым синтаксисом для его содержимого является литеральная строка '`text/html`', за которой следует набор символов со следующим синтаксисом: '`; charset=`_`IANAcharset`_' где `IANAcharset` это предпочтительное _MIME имя_ для набора символов, который определяется как[IANA.](https://www.iana.org/assignments/character-sets)
+    - `default-style`
+      - : Устанавливает имя набора [стилей CSS](/ru/docs/Web/CSS) по умолчанию.
 
-        > [!NOTE]
-        > Не используйте эту прагму, так как она устарела. Используйте атрибут[`charset`](/ru/docs/Web/HTML/Element/meta#charset) в элементе {{HTMLElement("meta")}} вместо этого.
-        > {{HTMLElement("meta")}} не может быть использована для выбора типа документа в XHTML документе, или в HTML5 документе, за которым следует XHTML синтаксис, никогда не задавайте MIME тип как XHTML MIME. Это будет некорректно.
-        > Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибутом.
+    - `x-ua-compatible`
+      - : Если указан, атрибут `content` должен иметь значение `"IE=edge"`. Юзер-агенты обязаны игнорировать эту директиву.
 
-    - `"default-style"`
-      - : Специализация этой прагмы - предпочтительный стиль таблиц, используемый на странице. [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут должен содержать заголовок {{HTMLElement("link")}} элемента который [`href`](/ru/docs/Web/HTML/Element/link#href) связывает атрибут с CSS таблцей стилей, или заголовок {{HTMLElement("style")}} элемента, который содержит [CSS](/ru/docs/Web/CSS) таблицу стилей.
-    - `"refresh"`
-      - : Эта прагма определяет:
-        - Количество секунд перезагрузки таблицы, если [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут содержит только целое положительное число;
-        - Время, в количестве секунд, за которое страница должна быть перенаправлена на другую, если [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут содержит целое положительное число, заканчивающийся строкой '`;url=`' и корректный URL.
-    - `"set-cookie"`
-      - : Эта прагма определяет [cookie](/ru/docs/cookie) для страницы. Её содержимое должно заканчиваться синтаксисом, определяемым [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
-        > [!NOTE]
-        > Не используете эту прагму, так как она устарела. Используйте HTTP header set-cookie вместо этого.
+    - `refresh`
+      - : Эта инструкция задаёт:
+        - Количество секунд до перезагрузки страницы — если значение атрибута [`content`](#content) является неотрицательным целым числом.
+        - Количество секунд до перенаправления на другую страницу — если значение атрибута [`content`](#content) представляет собой неотрицательное целое число, за которым следует `;url=` и корректный URL.
+
+        Таймер запускается, когда страница _полностью загружена_, то есть после срабатывания событий {{domxref("Window/load_event", "load")}} и {{domxref("Window/pageshow_event", "pageshow")}}.
+
+        См. также {{HTTPHeader("Refresh")}}.
+
+        > [!WARNING]
+        >
+        > Страницы с установленным значением `refresh` рискуют иметь слишком короткий интервал времени. Люди, использующие вспомогательные технологии, такие как скринридеры, могут не успеть прочитать и понять содержимое страницы перед автоматическим перенаправлением. Резкое и неожиданное обновление содержимого страницы также может вызвать дезориентацию у людей с нарушениями зрения.
+        >
+        > - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+        > - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+        > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+        > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+        > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - `name`
 
