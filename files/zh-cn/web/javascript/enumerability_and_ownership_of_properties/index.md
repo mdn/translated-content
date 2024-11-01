@@ -17,7 +17,7 @@ JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 属性的所有权取决于属性是否直接属于该对象，而不是对象的原型链。
 
-所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自有的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的一个接着一个地访问对象属性的方法。
+所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自有的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的逐一访问一组对象属性的方法。
 
 ## 查询对象属性
 
