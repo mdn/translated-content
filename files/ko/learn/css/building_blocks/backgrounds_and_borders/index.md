@@ -283,8 +283,7 @@ span {
 
 {{EmbedLiveSample("position")}}
 
-> [!NOTE]
-> `background-position` 은 {{cssxref("background-position-x")}} 및 {{cssxref("background-position-y")}} 의 줄임말로, 다른 축 위치 값을 개별적으로 설정할 수 있습니다.
+> [!NOTE] `background-position` 은 {{cssxref("background-position-x")}} 및 {{cssxref("background-position-y")}} 의 줄임말로, 다른 축 위치 값을 개별적으로 설정할 수 있습니다.
 
 ### 그라데이션 (Gradient) 배경
 
