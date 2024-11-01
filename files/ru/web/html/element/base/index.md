@@ -63,6 +63,8 @@ HTML-элемент **`<base>`** определяет основной адре�
 <base target="_top" href="https://example.com/" />
 ```
 
+## Техническая сводка
+
 <table class="properties">
   <tbody>
     <tr>
