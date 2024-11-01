@@ -245,7 +245,7 @@ class MyWeakMap {
 
 ```js
 function cached(getter) {
-  // 一个 Map：从字符串 URL 到结果的 WeakRef
+  // 一个 Map：从字符串 URL 到 WeakRef 结果
   const cache = new Map();
   return async (key) => {
     if (cache.has(key)) {
