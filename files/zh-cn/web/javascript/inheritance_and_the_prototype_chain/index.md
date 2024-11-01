@@ -1,5 +1,5 @@
 ---
-title: 继承和原型链
+title: 继承与原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 l10n:
   sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
