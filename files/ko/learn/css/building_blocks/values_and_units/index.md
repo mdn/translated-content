@@ -11,7 +11,7 @@ CSS 규칙은 [선언](/ko/docs/Web/CSS/Syntax#css_declarations)으로 구성되
 CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는지를 설명하는 **값 유형을** 가지고 있습니다.
 이번 학습에서는 자주 사용되는 값 유형이 무엇인지, 그리고 그것이 어떻게 작동하는지를 살펴보겠습니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 각 [CSS 속성 페이지](/ko/docs/Web/CSS/Reference#index)에는 해당 속성에 사용할 수 있는 값 유형이 나열된 구문 섹션이 있습니다.
 
 <table class="learn-box standard-table">
