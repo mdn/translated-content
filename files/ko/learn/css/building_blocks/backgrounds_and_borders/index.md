@@ -1,24 +1,26 @@
 ---
 title: 배경 및 테두리
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
+l10n:
+  sourceCommit: 198d4613e48ec627c860551526131f363f244d36
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
 
 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴보겠습니다. 그라데이션 (gradients), 배경 이미지, 둥근 테두리를 추가하는 것에서 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">전제조건:</th>
+      <th scope="row">선행 지식:</th>
       <td>
         기본 컴퓨터 활용 능력,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
@@ -52,7 +54,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
         rgba(51, 56, 57, 1) 96%
       )
       center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
+    url(image.png) center no-repeat,
     rebeccapurple;
 }
 ```
@@ -64,20 +66,71 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 {{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/ko/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
 
 아래 예에서는 다양한 색상 값을 사용하여 박스, 제목 및 {{htmlelement("span")}} 요소에 배경색을 추가했습니다.
+사용 가능한 [\<color>](/ko/docs/Web/CSS/color_value) 값을 사용하여, 이것들을 가지고 놀아보십시오.
 
-**사용 가능한 [\<color>](/ko/docs/Web/CSS/color_value) 값을 사용하여, 이것들을 가지고 놀아보십시오.**
+```html live-sample___color
+<div class="box">
+  <h2>Background Colors</h2>
+  <p>Try changing the background <span>colors</span>.</p>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 800)}}
+```css live-sample___color
+.box {
+  padding: 0.3em;
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgb(255 255 255 / 50%);
+}
+```
+
+{{EmbedLiveSample("color")}}
 
 ### 배경 이미지
 
-{{cssxref("background-image")}} 속성을 사용하면 요소의 배경에 이미지를 표시할 수 있습니다. 아래 예에는 두 개의 박스가 있습니다 — 하나는 박스보다 큰 배경 이미지이고 다른 하나는 별 모양의 작은 이미지 입니다.
+{{cssxref("background-image")}} 속성은 요소의 배경에 이미지를 표시할 수 있게 해줍니다. 아래 예시에서는 두 개의 상자가 있으며, 하나는 상자보다 큰 배경 이미지를 가지고 있습니다 ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)). 다른 하나는 작은 별 모양의 이미지 (![star.png](https://mdn.github.io/shared-assets/images/examples/star.png))를 가지고 있습니다.
 
 이 예제는 배경 이미지에 대한 두 가지를 보여줍니다. 기본적으로 큰 이미지는 박스에 맞게 축소되지 않으므로 작은 이미지만 표시되는 반면, 작은 이미지는 박스를 채우기 위해 바둑판 식으로 배열됩니다. 이 경우 실제 이미지는 단일 별 입니다.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 800)}}
+```html live-sample___background-image
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
 
-**배경 이미지 외에 배경색을 지정하면 이미지가 색상 위에 표시됩니다. 위 예제에 `background-color` 속성을 추가하여 실제 상태를 확인하십시오.**
+```css live-sample___background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+}
+
+.b {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+}
+```
+
+{{EmbedLiveSample("background-image")}}
+
+배경 이미지 외에 배경색을 지정하면 이미지가 색상 위에 표시됩니다. 
+위 예제에 `background-color` 속성을 추가하여 실제 상태를 확인하십시오.
 
 #### 배경 이미지 반복 제어
 
@@ -87,10 +140,33 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 - `repeat-x` — 수평으로 반복합니다.
 - `repeat-y` — 수직으로 반복합니다.
 - `repeat` — 기본값; 양방향으로 반복합니다.
+- `space` — 가능한 한 많이 반복하며, 여분의 공간이 있으면 이미지 사이에 공간을 추가합니다.
+- `round` — `space`와 비슷하지만, 여분의 공간을 채우기 위해 이미지를 늘립니다.
 
-**아래 예에서 이러한 값을 사용해 보십시오. 값이 `no-repeat` 로 설정되어 별 하나만 표시됩니다. 다른 값 — `repeat-x` 및 `repeat-y` — 를 사용하여 그 효과가 무엇인지 확인하십시오.**
+아래 예에서 이러한 값을 사용해 보십시오. 값이 `no-repeat` 로 설정되어 별 하나만 표시됩니다. 다른 값 — `repeat-x` 및 `repeat-y` — 를 사용하여 그 효과가 무엇인지 확인하십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 800)}}
+```html live-sample___repeat
+<div class="box"></div>
+```
+
+```css hidden live-sample___repeat
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
+```css live-sample___repeat
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("repeat")}}
 
 #### 배경 이미지 크기 조정
 
@@ -109,13 +185,36 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 - 길이 단위를 제거하고 `background-size: cover` 또는 `background-size: contain` 을 사용할 때 어떻게 되는지 확인 하십시오.
 - 이미지가 박스보다 작으면, `background-repeat` 의 값을 변경하여 이미지를 반복할 수 있습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+```html live-sample___size
+<div class="box"></div>
+```
+
+```css hidden live-sample___size
+.box {
+  width: 500px;
+  height: 100px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+```
+
+```css live-sample___size
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-repeat: no-repeat;
+  background-size: 80px 10em;
+}
+```
+
+{{EmbedLiveSample("size")}}
 
 #### 배경 이미지 배치
 
 {{cssxref("background-position")}} 속성을 사용하면 적용되는 박스에서 배경 이미지가 나타나는 위치를 선택할 수 있습니다. 박스의 왼쪽 상단 모서리가 `(0,0)` 이고, 박스가 가로 (`x`) 및 세로 (`y`) 축을 따라 위치하는 좌표계를 사용합니다.
 
-> **참고:** `background-position` 의 기본값은 `(0,0)` 입니다.
+> [!NOTE]
+> `background-position` 의 기본값은 `(0,0)` 입니다.
 
 가장 일반적인 `background-position` 값은 — 수평 값과 수직 값의 두 가지 개별 값을 갖습니다.
 
@@ -123,7 +222,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -133,7 +232,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -143,7 +242,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top 20px;
 }
@@ -153,17 +252,40 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
 ```
 
-**아래 예제를 사용하여 이러한 값을 가지고 실습하면서 박스 안에서 별을 움직이십시오.**
+아래 예제를 사용하여 이러한 값을 가지고 실습하면서 박스 안에서 별을 움직이십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-> **참고:** `background-position` 은 {{cssxref("background-position-x")}} 및 {{cssxref("background-position-y")}} 의 줄임말로, 다른 축 위치 값을 개별적으로 설정할 수 있습니다.
+```css hidden live-sample___position
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
+```css live-sample___position
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+  background-position: 120px 1em;
+}
+```
+
+{{EmbedLiveSample("position")}}
+
+> [!NOTE]
+> `background-position` 은 {{cssxref("background-position-x")}} 및 {{cssxref("background-position-y")}} 의 줄임말로, 다른 축 위치 값을 개별적으로 설정할 수 있습니다.
 
 ### 그라데이션 (Gradient) 배경
 
@@ -173,7 +295,45 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 아래 예제에서 다른 그라디언트를 사용해 보십시오. 두 개의 박스에는 각각 전체 박스에 걸쳐 펼쳐지는 선형 그라디언트와 설정된 크기의 방사형 그라디언트가 있습니다. 따라서 반복됩니다.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 800)}}
+```html live-sample___gradients
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+```css live-sample___gradients
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 400px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: linear-gradient(
+    105deg,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+}
+
+.b {
+  background-image: radial-gradient(
+    circle,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+  background-size: 100px 50px;
+}
+```
+
+{{EmbedLiveSample("gradients")}}
 
 ### 여러 배경 이미지
 
@@ -197,9 +357,34 @@ background-position:
 
 다른 속성의 각 값은 다른 속성의 같은 위치에 있는 값과 일치합니다. 예를 들어, `image1` 의 `background-repeat` 값은 `no-repeat` 입니다. 그러나, 다른 속성의 값이 다른 경우 어떻게 됩니까? 답은 더 적은 수의 값이 순환한다는 것입니다 — 위의 예에서는 4 개의 배경 이미지가 있지만 2 개의 `background-position` 값만 있습니다. 처음 두 위치 값은 처음 두 이미지에 적용되고 다시 순환됩니다 — `image3` 에는 첫 번째 위치값이 제공되고, `image4` 에는 두 번째 위치값이 제공됩니다.
 
-**해봅시다. 아래 예에서는 두 개의 이미지를 포함했습니다. 쌓인 순서를 설명하려면, 목록에서 어떤 배경 이미지가 먼저 나오는지 전환해 보십시오. 또는 다른 속성을 사용하여 위치, 크기 또는 반복 값을 변경하십시오.**
+해봅시다. 아래 예에서는 두 개의 이미지를 포함했습니다. 쌓인 순서를 설명하려면, 목록에서 어떤 배경 이미지가 먼저 나오는지 전환해 보십시오. 또는 다른 속성을 사용하여 위치, 크기 또는 반복 값을 변경하십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 800)}}
+```html live-sample___multiple-background-image
+<div class="wrapper">
+  <div class="box"></div>
+</div>
+```
+
+```css live-sample___multiple-background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+}
+```
+
+{{EmbedLiveSample("multiple-background-image")}}
 
 ### 배경 첨부 (attachment)
 
@@ -224,7 +409,29 @@ background-position:
 
 모든 고려 사항을 보려면 MDN 페이지의 {{cssxref("background")}} 를 살펴보십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}
+```html live-sample___background
+<div class="box"></div>
+```
+
+```css live-sample___background
+.box {
+  width: 500px;
+  height: 300px;
+  padding: 0.5em;
+  background:
+    linear-gradient(
+        105deg,
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
+      no-repeat,
+    rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("background", "", "320px")}}
 
 ### 배경이 있는 접근성 고려 사항
 
@@ -275,9 +482,34 @@ background-position:
 > [!NOTE]
 > 위쪽, 오른쪽, 아래쪽 및 왼쪽 테두리 속성에는 문서의 쓰기 모드 (예: 왼쪽에서 오른쪽으로 또는 오른쪽에서 왼쪽으로 텍스트 또는 위에서 아래로) 와 관련된 논리적 속성이 매핑되어 있습니다. 다음 수업에서는 [다양한 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) 에 대해 다룰것입니다.
 
-**테두리에 사용할 수 있는 다양한 스타일이 있습니다. 아래 예에서 우리는 박스의 네 면에 다른 테두리 스타일을 사용했습니다. 테두리 스타일, 너비 및 색상으로 실습하여 테두리의 작동 방식을 확인 하십시오.**
+테두리에 사용할 수 있는 다양한 스타일이 있습니다. 아래 예에서 우리는 박스의 네 면에 다른 테두리 스타일을 사용했습니다. 테두리 스타일, 너비 및 색상으로 실습하여 테두리의 작동 방식을 확인 하십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
+```html live-sample___borders
+<div class="box">
+  <h2>Borders</h2>
+  <p>Try changing the borders.</p>
+</div>
+```
+
+```css live-sample___borders
+* {
+  padding: 0.2em;
+}
+.box {
+  width: 500px;
+  background-color: #567895;
+  border: 5px solid #0b385f;
+  border-bottom-style: dashed;
+  color: #fff;
+}
+
+h2 {
+  border-top: 2px dotted rebeccapurple;
+  border-bottom: 1em double rgb(24 163 78);
+}
+```
+
+{{EmbedLiveSample("borders", "", "200px")}}
 
 ### 둥근 테두리
 
@@ -299,21 +531,34 @@ background-position:
 }
 ```
 
-아래 예에서 네 모서리를 모두 설정한 다음, 오른쪽 위 모서리의 값을 변경하여 다르게 만들었습니다. 값을 사용하여 모서리를 변경할 수 있습니다. 사용 가능한 구문 옵션을 보려면 {{cssxref("border-radius")}} 의 속성 페이지를 살펴보십시오.
+> [!NOTE]
+> 위의 border 속성과 마찬가지로, 이 border-radius 속성에도 [논리적 border-radius 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values#properties)이 매핑되어 있습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
+아래 예에서 네 모서리를 모두 설정한 다음, 오른쪽 위 모서리의 값을 변경하여 다르게 만들었습니다. 값을 사용하여 모서리를 변경할 수 있습니다. 사용 가능한 구문 옵션을 보려면 {{cssxref("border-radius")}} 의 속성 페이지를 살펴보십시오. [border-radius 생성기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)를 사용하여 둥근 모서리 값을 출력할 수 있습니다.
 
-## 배경과 테두리로 실습하기
+```html live-sample___corners
+<div class="box">
+  <h2>Borders</h2>
+  <p>Try changing the borders.</p>
+</div>
+```
 
-새로운 지식을 테스트하려면 아래 예제를 시작점으로 사용하여 배경과 테두리를 사용하여 다음을 작성하십시오.
+```css live-sample___corners
+.box {
+  width: 500px;
+  height: 110px;
+  padding: 0.5em;
+  border: 10px solid rebeccapurple;
+  border-radius: 1em;
+  border-top-right-radius: 10% 30%;
+}
+```
 
-1. 박스에 둥근 모서리가 10px 인, 5px 검은색 단색 테두리를 지정하십시오.
-2. 배경 이미지를 추가하고 (URL `balloons.jpg` 사용) 박스를 덮도록 크기를 조정하십시오.
-3. `<h2>` 에 반투명 검정색 배경색을 지정하고 텍스트를 흰색으로 만듭니다.
+{{EmbedLiveSample("corners")}}
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 800)}}
+## 실력 점검!
 
-> **참고:** [여기에서 해결책을 살펴 보기](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) 할 수 있지만 — 먼저 스스로 알아보십시오!
+이 글의 끝에 도달했지만, 가장 중요한 정보를 기억하고 있나요? 다음으로 넘어가기 전에 이 정보를 잘 기억하고 있는지 확인할 수 있는 추가 테스트가 있습니다. [실력 점검: 배경과 테두리](/ko/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders)를 확인해보세요.
 
 ## 요약
 
