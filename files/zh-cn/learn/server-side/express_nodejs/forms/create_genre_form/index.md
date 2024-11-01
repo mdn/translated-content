@@ -37,7 +37,7 @@ exports.genre_create_get = (req, res, next) => {
 };
 ```
 
-请注意，这里我们将使用一个“普通”express 路由处理器替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 中添加的占位异步处理器。我们不需要为该路由添加 `asyncHandler()` 包装器，因为它不包含任何可能引发异常的代码。
+请注意，这里我们将使用一个“普通”express 路由处理器替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中添加的占位异步处理器。我们不需要为该路由添加 `asyncHandler()` 包装器，因为它不包含任何可能引发异常的代码。
 
 ## 控制器——post 路由
 
@@ -87,7 +87,7 @@ exports.genre_create_post = [
 ];
 ```
 
-首先需要注意的是，控制器不是单个中间件函数（带有参数`(req, res, next)`），而是指定了中间件函数*数组*。该数组传递给路由器函数并依次执行各个方法。
+首先需要注意的是，控制器不是单个中间件函数（带有参数 `(req, res, next)`），而是指定了中间件函数*数组*。该数组传递给路由器函数并依次执行各个方法。
 
 > [!NOTE]
 > 这种方法是必要的，因为验证器是中间件函数。
@@ -131,7 +131,7 @@ asyncHandler(async (req, res, next) => {
 });
 ```
 
-如果类型名称数据有效，那么我们执行不区分大小写的搜索，以查看是否存在具有相同名称的 `Genre`（因为我们不想创建仅字母大小写不同的重复或过于近似的记录，例如“Fantasy”、“fantasy”、“FaNtAsY”等等）。为了在搜索时忽略掉大小写和重音，我们链式调用了 [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) 方法，指定“en”的区域设置和 2 的强度（更多信息请参阅 MongoDB 的 [排序规则](https://www.mongodb.com/docs/manual/reference/collation/)主题）。
+如果类型名称数据有效，那么我们执行不区分大小写的搜索，以查看是否存在具有相同名称的 `Genre`（因为我们不想创建仅字母大小写不同的重复或过于近似的记录，例如“Fantasy”、“fantasy”、“FaNtAsY”等等）。为了在搜索时忽略掉大小写和重音，我们链式调用了 [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) 方法，指定“en”的区域设置和 2 的强度（更多信息请参阅 MongoDB 的[排序规则](https://www.mongodb.com/docs/manual/reference/collation/)主题）。
 
 如果匹配名称的 `Genre` 已经存在，我们将重定向到其详情页面。如果不存在，我们则保存新种类并重定向到其详情页面。请注意，这里我们 `await` 数据库的查询结果，遵循与其他路由处理器相同的模式。
 
@@ -200,7 +200,7 @@ block content
 > [!NOTE]
 > 这只是呈现错误的一种方法。你还可以从错误变量中获取受影响字段的名称，并使用它们来控制错误消息的呈现位置以及是否应用自定义 CSS 等。
 
-## 它看起來像是？
+## 它看起来像是？
 
 运行应用程序，打开浏览器到 `http://localhost:3000/`，然后选择 _Create new genre_ 链接。如果一切设置正确，你的网站应该类似于下方的屏幕截图。输入值后，应将其保存，并且你将进入种类详情页面。
 
