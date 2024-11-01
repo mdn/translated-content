@@ -24,7 +24,7 @@ JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaS
 >
 > 它不应与函数的 `func.prototype` 属性混淆，后者赋值为指定函数用作构造函数时创建的所有对象*实例*的 `[[Prototype]]`。我们将在[后面的小节](#构造函数)中讨论构造函数的 `prototype` 属性。
 
-有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#使用不同的方法来创建对象和改变原型链)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#原型_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被废弃的。
+有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#使用不同的方法来创建对象和改变原型链)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#原型_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被弃用的。
 
 在像 `{ a: 1, b: 2, __proto__: c }` 这样的对象字面量中，`c` 值（必须为 `null` 或另一个对象）将变成字面量所表示的对象的 `[[Prototype]]`，而其他键（如 `a` 和 `b`）将变成对象的*自有属性*。这种语法读起来非常自然，因为 `[[Prototype]]` 只是对象的“内部属性”。
 
