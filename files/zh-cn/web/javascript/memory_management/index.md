@@ -73,7 +73,7 @@ const s2 = s.substr(0, 3); // s2 是一个新的字符串
 const a = ["yeah yeah", "no no"];
 const a2 = ["generation", "no no"];
 const a3 = a.concat(a2);
-// 有四个元素的新数组，由 a 和 a2 元素连接而成。
+// 有四个元素的新数组，由 a 和 a2 其中的元素连接而成。
 ```
 
 ### 使用值
