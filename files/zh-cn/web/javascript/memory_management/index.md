@@ -86,7 +86,7 @@ const a3 = a.concat(a2);
 
 底层语言要求开发人员手动确定在程序的哪个点不再需要已分配的内存并释放这块内存。
 
-一些高级语言（如 JavaScript）使用的是自动内存管理（也就是[垃圾回收](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>)（GC））的形式。垃圾回收器的目的是监控内存分配和确定一块已分配的内存何时不再需要并释放这块内存。这个自动过程是个近似的说法，因为确定一块特定的内存是否仍然需要这个一般性问题是[无法判定的](http://en.wikipedia.org/wiki/Decidability_%28logic%29)。
+一些高级语言（如 JavaScript）使用的是自动内存管理（也就是[垃圾回收](<https://zh.wikipedia.org/wiki/垃圾回收_(計算機科學)>)（GC））的形式。垃圾回收器的目的是监控内存分配和确定一块已分配的内存何时不再需要并释放这块内存。这个自动过程是个近似的说法，因为确定一块特定的内存是否仍然需要这个一般性问题是[无法判定的](http://en.wikipedia.org/wiki/Decidability_%28logic%29)。
 
 ## 垃圾回收
 
