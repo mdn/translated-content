@@ -148,4 +148,6 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
 
 ## Смотрите также
 
-- Другие элементы, содержащие метаданные: {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}},{{HTMLElement("title")}}.
+- [Стандартные имена метаданных](/en-US/docs/Web/HTML/Element/meta/name)
+- [Изучение: `<meta>`](/ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#метаданные_элемент_meta)
+- [Мета-тег viewport](/en-US/docs/Web/HTML/Viewport_meta_tag)
