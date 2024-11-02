@@ -86,7 +86,7 @@ l10n:
 - **`Promise.try()`**: <code>javascript.options.experimental.promise_try</code>。{{jsxref("Promise.try()")}} はあらゆる種類 (値を返す、例外が発生する、同期、非同期) のコールバックを受け取り、その結果を Promise の機能 (たとえば {{jsxref("Promise.then", ".then()")}} や {{jsxref("Promise.catch", ".catch()")}}) で扱えるようにするため {{jsxref("Promise")}} にラップする便利なメソッドです ([Firefox bug 1905364](https://bugzil.la/1905364))。
 
 - **`JSON.parse` with source**: <code>javascript.options.experimental.json_parse_with_source</code>。[`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) は、大きな浮動小数点数や日付の値を JavaScript の値と JSON 文字列の間で変換するときに精度が低下することに関する問題を軽減する機能を提供するように `JSON.parse` の動作を拡張します ([Firefox bug 1913085](https://bugzil.la/1913085)、[Firefox bug 1925334](https://bugzil.la/1925334))。特に、以下の機能を使用可能です:
-  - `JSON.parse()` の [引数 `reviver` 内の引数 `context` ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): パースした元の JSON ソース文字列へアクセスできます。
+  - `JSON.parse()` の [引数 `reviver` 内の引数 `context`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): パースした元の JSON ソース文字列へアクセスできます。
   - [`JSON.isRawJSON()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): 値が `JSON.rawJSON()` から返されたオブジェクトであるかを確認します。
   - [`JSON.rawJSON()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): JSON 文字列の一部を含む "raw JSON" オブジェクトを生成します。これをオブジェクトに含めることで、オブジェクトが文字列化されるときに指定した値を維持できます。
 
