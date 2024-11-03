@@ -3,7 +3,7 @@ title: "HTMLTableElement: cellSpacing プロパティ"
 short-title: cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 l10n:
-  sourceCommit: 4656260748aea78929639c4bf776d643d9911a82
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -27,7 +27,7 @@ t.cellSpacing = "10";
 
 ## 仕様書
 
-- W3C DOM 2 HTML 仕様書 [_HTMLTableElement.cellSpacing_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3939,6 +3939,10 @@
     "modified": "2019-03-23T22:28:57.111Z",
     "contributors": ["cezaraugusto"]
   },
+  "Web/API/Window/clearTimeout": {
+    "modified": "2020-10-15T21:31:54.685Z",
+    "contributors": ["GarkGarcia", "teoli", "Willkuns"]
+  },
   "Web/API/Window/closed": {
     "modified": "2019-03-18T20:58:51.070Z",
     "contributors": ["SphinxKnight", "haskellcamargo"]
@@ -4178,10 +4182,6 @@
   "Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:03:40.500Z",
     "contributors": ["EduardoRedressa"]
-  },
-  "Web/API/clearTimeout": {
-    "modified": "2020-10-15T21:31:54.685Z",
-    "contributors": ["GarkGarcia", "teoli", "Willkuns"]
   },
   "Web/API/console": {
     "modified": "2019-03-23T23:17:34.298Z",

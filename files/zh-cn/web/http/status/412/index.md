@@ -17,10 +17,6 @@ slug: Web/HTTP/Status/412
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPStatus("304")}}

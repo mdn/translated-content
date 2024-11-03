@@ -36,10 +36,6 @@ Location: http://www.example.org/index.asp
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPStatus("308")}}，当使用的请求方法永远不会更改时，等价于此状态代码。
