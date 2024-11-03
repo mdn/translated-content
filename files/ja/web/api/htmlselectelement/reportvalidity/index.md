@@ -3,7 +3,7 @@ title: "HTMLSelectElement: reportValidity() メソッド"
 short-title: reportValidity()
 slug: Web/API/HTMLSelectElement/reportValidity
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 89d17a618d9a09519b1a667ecab74c4c40515e8f
 ---
 
 {{APIRef("HTML DOM")}}
