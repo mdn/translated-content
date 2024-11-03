@@ -1,5 +1,5 @@
 ---
-title: Стандартные имена метаданных
+title: Стандартные name метаданных
 slug: Web/HTML/Element/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
