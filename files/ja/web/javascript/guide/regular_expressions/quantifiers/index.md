@@ -134,7 +134,6 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```
 
 ### 文字数のカウント
- 
 この例では、 1 文字だけの単語、 2 文字以上 6 文字以下の単語、 13 文字以上の単語を検索します。
 
 ```js
