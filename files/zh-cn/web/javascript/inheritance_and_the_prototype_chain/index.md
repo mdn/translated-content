@@ -518,7 +518,7 @@ console.log(d.hasOwnProperty);
 // undefined，因为 d 没有继承 Object.prototype
 ```
 
-与对象初始化器中的 `__proto__` 键类似，`Object.create()` 允许在创建时直接设置对象的原型，这允许运行时进一步优化对象。还允许使用 `Object.create(null)` 创建原型为 `null` 的对象。`Object.create()` 的第二个参数能精确地指明新对象中每个属性地特性，而这会是一把双刃剑：
+与对象初始化器中的 `__proto__` 键类似，`Object.create()` 允许在创建时直接设置对象的原型，这允许运行时进一步优化对象。还允许使用 `Object.create(null)` 创建原型为 `null` 的对象。`Object.create()` 的第二个参数能精确地指明新对象中每个属性的特性，而这会是一把双刃剑：
 
 - 它能在对象创建期间创建不可枚举的属性，而这用对象字面量做不到。
 - 它比对象字面量更加冗余以及更容易出错。
