@@ -1,126 +1,124 @@
 ---
-title: 制作 OpenSearch 搜索模块
+title: OpenSearch 描述格式
 slug: Web/OpenSearch
+l10n:
+  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
 
 {{AddonSidebar}}
 
-[OpenSearch 描述语法](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document)叙述了搜索引擎，以便网站用户透过浏览器或其他客户端程序使用之。OpenSearch 支持最新版的 Firefox、Internet Explorer、Safari、Chrome.
+[**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用于描述搜索引擎的 Web 接口。这允许网站描述一个它自己的搜索引擎，浏览器或者其他客户端应用可以使用这个搜索引擎。OpenSearch 至少受到 Firefox、Safari 和 Chrome 的支持。（参见[参考资料](#参考资料)以获取其他浏览器文档的链接。）
 
-Firefox 还支持搜索建议与 `<SearchForm>` 元素……等 OpenSearch 标准内尚未包含的功能。这篇文章会聚焦在如何撰写可支持 Firefox 特殊功能、且和 OpenSearch 格式兼容的搜索插件。
+Firefox 还支持 OpenSearch 标准内尚未包含的额外特性（如搜索建议和 `<SearchForm>` 元素）。这篇文章会聚焦在如何创建支持 Firefox 的额外特性且和 OpenSearch 格式兼容的搜索插件。
 
-OpenSearch 描述文件能[从网页安装搜索模块](#自动测知搜索模块)中描述的方式安装。
+OpenSearch 描述文件能[自动发现搜索插件](#自动发现搜索插件)中描述的方式安装。
+
+> [!WARNING]
+> OpenSearch 插件已经无法上传到 [addons.mozilla.org](https://addons.mozilla.org/)（AMO）上了。搜索引擎特性必须使用 WebExtension API，且在 `manifest.json` 文件中使用 [chrome 设置](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)。
 
 ## OpenSearch 描述文件
 
-这个描述搜索引擎的 XML 文件其实很简单，参考下面的基本样板，以斜体标示的部分则依需求修改即可。
+描述搜索引擎的 XML 文件遵循以下基本模板。在 _\[方括号\]_ 内的部分应针对你编写的特定插件进行自定义。
 
 ```xml
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>SNK</ShortName>
-  <Description>Search engine full name and summary</Description>
-  <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">data:image/x-icon;base64,AAABAAEAEBAAA ...</Image>
-  <Url type="text/html" template="searchURL">
-    <Param name="key name" value="{searchTerms}"/>
-    ...
-    <Param name="key name" value="parameter value"/>
-  </Url>
-  <Url type="application/x-suggestions+json" template="suggestionURL"/>
-  <moz:SearchForm>http://example.com/search</moz:SearchForm>
+  <ShortName>[SNK]</ShortName>
+  <Description>[搜索引擎的全名和总结]</Description>
+  <InputEncoding>[UTF-8]</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
+  <Url type="text/html" template="[searchURL]"/>
+  <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
+  <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
 ```
 
 - ShortName
-  - : 搜索引擎简称。**Restrictions:** The value must contain 16 or fewer characters of plain text. The value must not contain HTML or other markup.
+  - : 搜索引擎简称。其必须是 **16 个或更少字符**的纯文本，没有 HTML 或其他标记。
 - Description
-  - : 搜索引擎的简要描述。**Restrictions:** The value must contain 1024 or fewer characters of plain text. The value must not contain HTML or other markup.
+  - : 搜索引擎的简要描述。其必须是 **1024 个或更少字符**的纯文本，没有 HTML 或其他标记。
 - InputEncoding
-  - : 搜索引擎数据输入时的编码方式，例如说：`<InputEncoding>UTF-8</InputEncoding>`。
+  - : 在将输入提交给搜索引擎时使用的[字符编码](/zh-CN/docs/Glossary/Character_encoding)。
 - Image
 
-  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-CN/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
+  - : 搜索引擎图标的 URL。在可能的情况下，包含一个 16x16 的 `image/x-icon` 类型的图标（例如 `/favicon.ico`），以及一个 64x64 的 `image/jpeg` 或 `image/png` 类型的图标。
+
+    URL 也可以使用 [`data:` URL 方案](/zh-CN/docs/Web/URI/Schemes/data)。（你可以在 [`data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 直接从图标文件生成 `data:` URL。）
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
-    <!-- or -->
+    <!-- 或 -->
     <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA ... DAAA=</Image>
     ```
 
-    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URI (search plug-ins are stored in the profile's "searchplugins" folder). `http:` URIs are changed to `data:` URIs when this is done.
+    Firefox 以 [base64](https://zh.wikipedia.org/wiki/Base64) `data:` URL 形式缓存图标（搜索插件存储于[配置文件](https://support.mozilla.org/zh-CN/kb/用户配置文件——Firefox%20保存书签、密码和其他用户数据的文件)的 `searchplugins/` 文件夹下）。完成后，`http:` 和 `https:` 的 URL 会被转换为 `data:` URL。
 
     > [!NOTE]
-    > For icons loaded remotely (i.e. from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than 10 kilobytes in size.
+    > 对于远程加载的图标（即，来自 `https://` URL 而不是 `data:` URL），Firefox 将拒绝超过 **10 KB** 的图标。
 
-    ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
+    ![Firefox 搜索框中显示来自 Google 的搜索建议](searchsuggestionsample.png)
 
-- **Url**
+- Url
 
-  - : 描述搜索用的 URL。以 `template` 属性指定其搜索 URL。Firefox 支持以下型态的 URL：
+  - : 描述搜索用的 URL。`template` 属性指示搜索查询的基本 URL。
 
-    - `type="text/html"`，即是搜索用的 URL。
-    - `type="application/x-suggestions+json"`，用以取回「搜索建议」的 URL。
-    - `type="application/x-moz-keywordsearch"` specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.
+    Firefox 支持三种 URL 类型：
 
-    这些型态的 URL 都可以使用 `{searchTerms}` 字符串来决定要关键词于 URL 中的位置，其他可用的参数请参考 [OpenSearch 1.1 参数规格](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)。
+    - `type="text/html"` 指定真实搜索查询的 URL。
+    - `type="application/x-suggestions+json"` 指定用以获取搜索建议的 URL。在 Firefox 63 及以后的版本中，也接受作为其别名的 `type="application/json"`。
+    - `type="application/x-moz-keywordsearch"` 指定在地址栏中输入关键词搜索时使用的 URL。其仅受 Firefox 的支持。
 
-    在支持「搜索建议」的模块中，搜索的 URL 应可取回一组以 JSON 格式编写的数据，提供这类服务的详细方法请见[让搜索模块支持搜索建议](/zh-CN/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0)。
+    对于这些 URL 类型，都可以使用 `{searchTerms}` 替换用户在搜索栏或地址栏中输入的关键词，[OpenSearch 1.1 参数](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)中描述了其他受支持的搜索参数。
 
-- Param
-  - : 随搜索要求一并送出的参数，每组皆有参数名称及其值。指定参数时可放入 `{searchTerms}` 字符串来取得用户输入的搜索关键词。
-- moz:SearchForm
+    对于搜索建议，可使用 `application/x-suggestions+json` URL 模板来获取 [JSON](/zh-CN/docs/Glossary/JSON) 格式的建议列表。
 
-  - : 搜索网站的网址，提供 Firefox 使用者不搜索、直接连到搜索网站的方法。
+## 自动发现搜索插件
 
-    > [!NOTE]
-    > 由于此元素非 OpenSearch 标准规格而是 Firefox 独有，故加上「`moz:`」名称空间，已确保不支持的客户端能直接跳过此元素。
+提供搜索插件的网站可以宣告它们，以便 Firefox 用户可以轻松安装这些插件。
 
-## 自动测知搜索模块
-
-提供搜索模块的网站能以「自动测知」的方式，让 Firefox 用户轻易安装搜索模块，增加使用率。
-
-只要在网页的 `<head>` 区段内加上下一行就可以支持自动测知功能：
+要支持自动发现，请在你网页的 `<head>` 中为每个插件添加一个 `<link>` 元素：
 
 ```html
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="searchTitle"
-  href="pluginURL" />
+  title="[searchTitle]"
+  href="[pluginURL]" />
 ```
 
-如上所示地修改上面的**粗体字** :
+如下所示地修改在 _\[方括号\]_ 内的项目：
 
-- **searchTitle**
-  - : 这是搜索引擎的名称，例如「Search MDC」或「雅虎搜索」等。这个名称应该与引擎名称一样。
-- **pluginURL**
-  - : 浏览器可以下载的搜索引擎 XML 文件位置。
+- searchTitle
+  - : 要执行的搜索的名称，例如“搜索 MDC”或“雅虎搜索”等。其必须匹配插件文件的 `ShortName`。
+- pluginURL
+  - : 到 XML 搜索插件的 URL，以便浏览器可以下载插件。
 
-如果网站拥有多种搜索模块，也可以让它们全部支持自动测知。例如：
+如果网站拥有多种搜索插件，也可以让它们全部支持自动发现。例如：
 
 ```html
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="MySite: By Author"
+  title="我的网站：根据作者"
   href="http://example.com/mysiteauthor.xml" />
 
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="MySite: By Title"
+  title="我的网站：根据标题"
   href="http://example.com/mysitetitle.xml" />
 ```
 
 这样，网站就能提供以作者或以标题，作为搜索独立实体的模块。
 
-## 让 OpenSearch 插件自动更新
+> [!NOTE]
+> 在 Firefox 中，搜索框中图标的变化表明有一个提供的搜索插件。（见图片，绿色加号。）因此，如果用户界面中没有显示搜索框，他们将*不会*收到任何指示。_一般而言，不同浏览器的行为会有所不同_。
 
-只要在 `Url` 元素添加额外的
-`application/opensearchdescription+xml` type 属性，OpenSearch 插件就可以自动更新。`rel` 属性需要是 `self`、要自动更新的 template 则需要是属于 OpenSearch 文件的 URL。
+## OpenSearch 插件自动更新
 
-例如说：
+OpenSearch 插件可以自动更新。要支持这一特性，需要在 `Url` 元素包含 `type="application/opensearchdescription+xml` 和 `rel="self"`。`template` 属性需要是自动更新的 OpenSearch 文档的 URL。
+
+例如：
 
 ```xml
 <Url type="application/opensearchdescription+xml"
@@ -129,24 +127,25 @@ OpenSearch 描述文件能[从网页安装搜索模块](#自动测知搜索模�
 ```
 
 > [!NOTE]
-> 目前的 [addons.mozilla.org](https://addons.mozilla.org)（AMO）不支持自动更新 OpenSearch 插件。如果要把搜索插件放到 AMO，请不要用上自动更新的功能。
+> 目前，[addons.mozilla.org](https://addons.mozilla.org)（AMO）不支持 OpenSearch 插件的自动更新。如果要把搜索插件放到 AMO，请在提交前移除自动更新特性。
 
 ## 除错技巧
 
-如果搜索插件 XML 发生错误，you could run into errors when adding a discovered plugin。如果错误讯息没有用，以下技巧能帮忙找出问题。
+如果搜索插件 XML 存在错误，则在添加已发现的插件时可能会遇到错误。如果错误消息没有实际帮助，以下技巧能帮你找出问题。
 
-- 供应服务器 OpenSearch 插件服务的服务器必须使用 `Content-Type: application/opensearchdescription+xml`。
-- 确认搜索插件 XML 的格式正确。你可以直接用 Firefox 加载该文件。template URL 的 & 符号需要像 `&amp;` 这样跳脱，标签也要用正斜线或 end tag 关闭。
-- `xmlns` 属性很重要，少了它就会出现「Firefox could not download the search plugin」的错误讯息。
-- 你**必须**包含 `text/html` URL：搜索插件只包含 Atom 或 [RSS](/zh-CN/RSS) URL 类型（虽然它有效，但 Firefox 不支持）都可能发生「could not download the search plugin」错误。
-- 远程撷取的小图标（favicon）不能大于 10KB（请参见 [Firefox bug 361923](https://bugzil.la/361923)）。
+- 服务器必须使用 `Content-Type: application/opensearchdescription+xml` 提供 OpenSearch 插件。
+- 确保搜索插件 XML 的格式正确。你可以直接用 Firefox 加载该文件来进行检查。`template` URL 的 & 符号必须像 `&amp;` 这样转义，标签也要用正斜杠或匹配的闭标签关闭。
+- `xmlns` 属性很重要——少了它就会出现错误消息“Firefox 无法下载搜索插件”。
+- 你**必须**包含 `text/html` URL：搜索插件只包含 Atom 或 [RSS](/zh-CN/docs/Glossary/RSS) URL 类型（虽然它有效，但 Firefox 不支持）都可能发生“无法下载搜索插件”错误。
+- 远程获取的图标（favicon）不能大于 10KB（参见 [Firefox bug 361923](https://bugzil.la/361923)）。
 
-In addition, the search plugin service provides a logging mechanism that may be of use to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Logging information will appear in Firefox's [Error Console](/zh-CN/Error_Console) (Tools 〉 Error Console) when search plugins are added.
+此外，搜索插件服务还提供了日志记录机制，这对插件开发者来说可能很有用。使用 `about:config` 将 `browser.search.log` 首选项设为 `true`。然后，在添加搜索插件之后，Firefox 的[浏览器控制台](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)（工具 ➤ 浏览器工具 ➤ 浏览器控制台）中就会出现日志信息。
 
-## 参考
+## 参考资料
 
-- [OpenSearch Documentation](https://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
-- imdb.com has a [working osd.xml](http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml)
-- [`data:` URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme)
-- [OpenSearch Plugin Generator](https://7is7.com/software/firefox/opensearch.html)
-- [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [OpenSearch 文档](https://github.com/dewitt/opensearch)
+- [Safari 8.0 版本通知：快速网站搜索](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
+- [Microsoft Edge 开发指南：搜索供应商发现](https://learn.microsoft.com/zh-cn/archive/microsoft-edge/legacy/developer/)
+- [Chromium 项目：按 Tab 键搜索](https://www.chromium.org/tab-to-search/)
+- imdb.com 有一个[可用的 `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
+- [Ready2Search](https://ready.to/search/en/)——创建 OpenSearch 插件。[通过 Ready2Search 进行自定义搜索](https://ready.to/search/make/en_make_plugin.htm)
