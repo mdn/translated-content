@@ -1,6 +1,8 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+l10n:
+  sourceCommit: c420b9b3126451f53d112afe33e007d6efdb605d
 ---
 
 {{JSRef}}
