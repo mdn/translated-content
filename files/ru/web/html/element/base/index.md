@@ -1,8 +1,8 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-page-type: html-element
-browser-compat: html.elements.base
+l10n:
+  sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
 ---
 
 {{HTMLSidebar}}
