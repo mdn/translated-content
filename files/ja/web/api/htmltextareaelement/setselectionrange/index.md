@@ -12,8 +12,7 @@ l10n:
 
 このメソッドは {{domxref("HTMLTextAreaElement.selectionStart")}}、{{domxref("HTMLTextAreaElement.selectionEnd")}}、{{domxref("HTMLTextAreaElement.selectionDirection")}} の各プロパティも更新します。
 
-> [!NOTE]
-> `<textarea>` にフォーカスを当てると、 `setSelectionRange()` メソッドを使用してテキストの一部を選択できるようになります。 フォーカスを設定すると、 `selectchange` イベントも発行されます。
+> **メモ:** `<textarea>` にフォーカスを当てると、 `setSelectionRange()` メソッドを使用してテキストの一部を選択できるようになります。 フォーカスを設定すると、 `selectchange` イベントも発行されます。
 
 `<textarea>` 要素のテキストを**すべて**選択するには、 {{domxref("HTMLTextAreaElement.select()")}} メソッドを使用します。
 
