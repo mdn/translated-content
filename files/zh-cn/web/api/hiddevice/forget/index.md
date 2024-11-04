@@ -2,7 +2,7 @@
 title: HIDDevice：forget() 方法
 slug: Web/API/HIDDevice/forget
 l10n:
-  sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
+  sourceCommit: e4d6e3444fc0f46a2f12de882c5b12c44fb75e02
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
@@ -41,7 +41,7 @@ async function blink() {
   await device.open();
   // 关闭
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // 打开
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
   await new Promise((resolve) => setTimeout(resolve, 100));
