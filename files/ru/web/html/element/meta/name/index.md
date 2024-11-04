@@ -1,8 +1,8 @@
 ---
-title: Стандартные name метаданных
+title: Стандартные имена метаданных
 slug: Web/HTML/Element/meta/name
-page-type: html-attribute
-browser-compat: html.elements.meta.name
+l10n:
+  sourceCommit: 81c67156fef5fb82c439c8f0d8ce6d4dee86a3e3
 ---
 
 {{HTMLSidebar}}
