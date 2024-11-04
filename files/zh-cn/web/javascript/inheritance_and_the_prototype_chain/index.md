@@ -311,7 +311,7 @@ const obj = new Derived();
 function Base() {}
 function Derived() {}
 // 将 `Derived.prototype` 重新赋值为一个新对象，
-// `Base.prototype` 作为新对象的 `[[Prototype]]`
+// 并将 `Base.prototype` 作为新对象的 `[[Prototype]]`
 // 请不要这样做——使用 Object.setPrototypeOf 来修改它
 Derived.prototype = Object.create(Base.prototype);
 ```
