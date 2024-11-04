@@ -195,7 +195,7 @@ class Box {
 
 类是构造函数的语法糖，这意味着你仍然可以修改 `Box.prototype` 来改变所有实例的行为。然而，由于类被设计为对底层原型机制的抽象，我们将在本教程中使用更轻量级的构造函数语法，以充分展示原型的工作原理。
 
-因为 `Box.prototype` 引用的对象和所有实例的 `[[Prototype]]` 是同一个对象，所以我们可以通过改变 `Box.prototype` 改变所有实例的行为。
+因为 `Box.prototype` 引用的对象和所有实例的 `[[Prototype]]` 是同一个对象，所以我们可以通过改变 `Box.prototype` 来改变所有实例的行为。
 
 ```js
 function Box(value) {
