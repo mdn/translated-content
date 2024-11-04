@@ -1,6 +1,8 @@
 ---
 title: <meta> - элемент для описания метаданных
 slug: Web/HTML/Element/meta
+l10n:
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{HTMLSidebar}}
