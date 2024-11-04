@@ -1,8 +1,8 @@
 ---
 title: "<html>: Элемент HTML документа / корневой элемент"
 slug: Web/HTML/Element/html
-page-type: html-element
-browser-compat: html.elements.html
+l10n:
+  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
 {{HTMLSidebar}}
