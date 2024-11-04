@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`validity`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティは、この要素の有効状態を表す {{domxref("ValidityState")}} オブジェクトを返します。
+**`validity`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この要素の有効状態を表す {{domxref("ValidityState")}} オブジェクトを返します。
 
 ## 値
 
