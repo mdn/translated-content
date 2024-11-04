@@ -1,14 +1,13 @@
 ---
-title: "Document: children 属性"
-short-title: children
+title: Document：children 属性
 slug: Web/API/Document/children
-page-type: web-api-instance-property
-browser-compat: api.Document.children
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ APIRef("DOM") }}
 
-只读的 **`children`** 属性返回一个实时的 {{domxref("HTMLCollection")}}，其中包含对调用该属性的文档的所有子 {{domxref("Element", "元素")}}。
+**`children`** 只读属性返回一个实时的 {{domxref("HTMLCollection")}}，其中包含对调用该属性的文档的所有子{{domxref("Element", "元素", "", 1)}}。
 
 对于 HTML 文档，这通常只有根 `<html>` 元素。
 
@@ -38,7 +37,7 @@ document.children;
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - {{domxref("Element.children")}}
 - {{domxref("Node.childNodes")}}
