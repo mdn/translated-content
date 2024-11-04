@@ -2,7 +2,6 @@
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
- 
 {{JSRef}}
 
 El objeto **`Intl.DateTimeFormat`** permite el formateo de fechas y horas teniendo en cuenta las peculiaridades de cada idioma.
@@ -26,16 +25,16 @@ Estas propiedades están definidas en `Intl.DateTimeFormat.prototype` y son comp
 - {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
   - : La función constructora que creó el objeto de instancia. Para instancias de `Intl.DateTimeFormat`, el valor inicial es el constructor {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}}.
 - `Intl.DateTimeFormat.prototype[Symbol.toStringTag]`
-  - : El valor inicial de la propiedad [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) es la cadena `"Intl.DateTimeFormat"`. Esta propiedad se usa en {{jsxref("Object.prototype.toString()")}}.
+  - : El valor inicial de la propiedad [`[Symbol.toStringTag]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) es la cadena `"Intl.DateTimeFormat"`. Esta propiedad se usa en {{jsxref("Object.prototype.toString()")}}.
 
 ## Métodos de instancia
 
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
   - : Función getter que formatea una fecha según el idioma y las opciones de formato de este objeto `DateTimeFormat`.
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : Este método recibe dos [Fechas](/es-ES/docs/Web/JavaScript/Reference/Global_Objects/Date) y formatea el rango de fechas de la manera más concisa posible según el idioma y las opciones proporcionadas al instanciar `DateTimeFormat`.
+  - : Este método recibe dos [Fechas](/es/docs/Web/JavaScript/Reference/Global_Objects/Date) y formatea el rango de fechas de la manera más concisa posible según el idioma y las opciones proporcionadas al instanciar `DateTimeFormat`.
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : Este método recibe dos [Fechas](/es-ES/docs/Web/JavaScript/Reference/Global_Objects/Date) y devuelve un Array de objetos que contienen los tokens específicos del idioma que representan cada parte del rango de fechas formateado.
+  - : Este método recibe dos [Fechas](/es/docs/Web/JavaScript/Reference/Global_Objects/Date) y devuelve un Array de objetos que contienen los tokens específicos del idioma que representan cada parte del rango de fechas formateado.
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
   - : Devuelve un {{jsxref("Array")}} de objetos que representan la cadena de fecha en partes, que se pueden usar para un formato personalizado sensible al idioma.
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
