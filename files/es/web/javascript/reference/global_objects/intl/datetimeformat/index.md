@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
+
 {{JSRef}}
 
 El objeto **`Intl.DateTimeFormat`** permite el formateo de fechas y horas teniendo en cuenta las peculiaridades de cada idioma.
