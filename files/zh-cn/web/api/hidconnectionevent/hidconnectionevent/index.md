@@ -1,5 +1,5 @@
 ---
-title: HIDConnectionEvent：HIDConnectionEvent() constructor
+title: HIDConnectionEvent：HIDConnectionEvent() 构造函数
 slug: Web/API/HIDConnectionEvent/HIDConnectionEvent
 l10n:
   sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
