@@ -576,7 +576,7 @@ console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
 
-与 `Object.setPrototypeOf` 相比，将 `__proto__` 设置为非对象的值只会被忽略，而非抛出异常。它也只有稍微好一点的浏览器支持。然而，它是非标准的，并且已被废弃。你应该几乎总是使用 `Object.setPrototypeOf`。
+与 `Object.setPrototypeOf` 相比，将 `__proto__` 设置为非对象的值只会被忽略，而非抛出异常。它也只有稍微好一点的浏览器支持。然而，它是非标准的，并且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf`。
 
 ## 性能
 
