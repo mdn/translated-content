@@ -1,5 +1,5 @@
 ---
-title: HIDConnectionEvent: HIDConnectionEvent() constructor
+title: HIDConnectionEvent：HIDConnectionEvent() constructor
 slug: Web/API/HIDConnectionEvent/HIDConnectionEvent
 l10n:
   sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
@@ -18,8 +18,7 @@ new HIDConnectionEvent(type, options)
 ### 参数
 
 - `type`
-  - : 一个字符串，表示事件的名称。
-    它是区分大小写的，浏览器会将其设置为 `connect` 或 `disconnect`。
+  - : 一个字符串，表示事件的名称。它是区分大小写的，浏览器会将其设置为 `connect` 或 `disconnect`。
 - `options`
   - : 一个对象，_除了 {{domxref("Event/Event", "Event()")}} 中定义的属性外_，还可以包含以下属性：
     - `device`
