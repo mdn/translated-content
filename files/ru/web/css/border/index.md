@@ -74,6 +74,6 @@ style {
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
 - {{ Cssxref("border-radius") }}-related CSS properties: {{ Cssxref("border-top-left-radius") }}, {{ Cssxref("border-top-right-radius") }}, {{ Cssxref("border-bottom-right-radius") }}, {{ Cssxref("border-bottom-left-radius") }}
