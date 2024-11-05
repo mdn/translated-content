@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-{{domxref("HIDInputReportEvent")}} 接口的 **`device`** 属性返回表示发送输入报告的 HID 接口的 {{domxref("HIDDevice")}} 实例
+{{domxref("HIDInputReportEvent")}} 接口的 **`device`** 属性返回表示发送输入报告的 HID 接口的 {{domxref("HIDDevice")}} 实例。
 
 ## 值
 
