@@ -41,7 +41,7 @@ requestDevice(options)
 
 ### 返回值
 
-一个会解决为与传入的过滤器匹配的已连接 {{domxref("HIDDevice")}} 对象数组的 {{jsxref("Promise")}}。
+一个会兑现为与传入的过滤器匹配的已连接 {{domxref("HIDDevice")}} 对象数组的 {{jsxref("Promise")}}。
 
 ### 异常
 
@@ -56,7 +56,7 @@ requestDevice(options)
 
 ### 匹配具有所有四个过滤器规则的设备
 
-在以下示例中，请求一个具有供应商 ID `0xABCD`、产品 ID `0x1234`、用途页面 `0x0C` 和用途 ID `0x01`的 HID 设备。只有匹配所有这些规则的设备才会显示。
+在以下示例中，请求一个具有供应商 ID `0xABCD`、产品 ID `0x1234`、用途页面 `0x0C` 和用途 ID `0x01` 的 HID 设备。只有匹配所有这些规则的设备才会显示。
 
 ```js
 let requestButton = document.getElementById("request-hid-device");

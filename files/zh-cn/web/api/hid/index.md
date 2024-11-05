@@ -20,9 +20,9 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
 - {{domxref("HID.getDevices","getDevices()")}} {{Experimental_Inline}}
-  - : 返回一个 {{jsxref("Promise")}}，其在解决时提供一个数组，包含用户之前已通过 {{domxref("HID.requestDevice","requestDevice()")}} 调用授予访问权限的已连接 HID 设备。
+  - : 返回一个 {{jsxref("Promise")}}，其在兑现时提供一个数组，包含用户之前已通过 {{domxref("HID.requestDevice","requestDevice()")}} 调用授予访问权限的已连接 HID 设备。
 - {{domxref("HID.requestDevice","requestDevice()")}} {{Experimental_Inline}}
-  - : 返回一个 {{jsxref("Promise")}}，其在解决时提供一个包含已连接 {{domxref("HIDDevice")}} 对象的数组。调用此函数将触发用户代理的权限流程，以便从返回的设备列表中获得访问一个选定设备的权限。
+  - : 返回一个 {{jsxref("Promise")}}，其在兑现时提供一个包含已连接 {{domxref("HIDDevice")}} 对象的数组。调用此函数将触发用户代理的权限流程，以便从返回的设备列表中获得访问一个选定设备的权限。
 
 ### 事件
 
