@@ -1,6 +1,8 @@
 ---
 title: 创建作者表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
+l10n:
+  sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
 {{LearnSidebar}}
