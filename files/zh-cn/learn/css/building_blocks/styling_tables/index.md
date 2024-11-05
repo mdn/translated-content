@@ -132,15 +132,15 @@ td {
 
 最重要的部分如下：
 
-- 在你的表上，给 {{cssxref("table-layout")}} 属性设置 `fixed` 值通常是一个好主意，因为它使表的行为在默认情况下更可预测。通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。因此，我们使用 `thead th:nth-child(n)`（{{cssxref(":nth-child")}} 选择器，选择了 {{htmlelement("thead")}} 元素中 {{htmlelement("th")}} 的第 n 个子元素）选择了四个不同的标题，并为它们设置了百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。Chris Coyier 在[固定表格布局](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
+- 在你的表格上，给 {{cssxref("table-layout")}} 属性设置 `fixed` 值通常是一个好主意，因为它使表格的行为在默认情况下更可预测。通常情况下，表格列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。因此，我们使用 `thead th:nth-child(n)`（{{cssxref(":nth-child")}} 选择器，选择了 {{htmlelement("thead")}} 元素中 {{htmlelement("th")}} 的第 n 个子元素）选择了四个不同的标题，并为它们设置了百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表格列尺寸的方式。Chris Coyier 在[固定表格布局](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
 
   我们将这些样式与 100% 的 {{cssxref("width")}} 结合在一起，这意味着表格将填满它所放置的任何容器，并能很好地响应（尽管还需要再做一些工作，才能在窄屏幕宽度上看起来不错）。
 
-- 为 {{cssxref("border-collapse")}} 属性设置 `collapse` 值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当你在表元素上设置边框时，它们之间将会有间隔，如下图所示：![默认边框间距为 2x2 的表格，显示无边框折叠](no-border-collapse.png)这看起来不太好（虽然可能是你想要的样子，谁知道呢？）。使用 `border-collapse: collapse;`，让边框合为一条，现在看起来好多了：![一个 2x2 的表格，其 border-collapse 属性设置为 collapse，边框合为一条线](border-collapse.png)
-- 我们在整个表格周围设置了 {{cssxref("border")}}，这是必要的，因为我们将在表页眉和页脚后面设置一些边框——当你在表格外面没有一个边界而且以空隙结尾的时候，它看起来很奇怪，而且是不连贯的。
-- 我们在 {{htmlelement("th")}} 和 {{htmlelement("td")}} 元素上设置了一些 {{cssxref("padding")}}——这些元素使数据项有了一些空间，使表看起来更加清晰。
+- 为 {{cssxref("border-collapse")}} 属性设置 `collapse` 值对于任何表格样式的工作来说都是一个标准的最佳实践。默认情况下，当你在表格元素上设置边框时，它们之间将会有间隔，如下图所示：![默认边框间距为 2x2 的表格，显示无边框折叠](no-border-collapse.png)这看起来不太好（虽然可能是你想要的样子，谁知道呢？）。使用 `border-collapse: collapse;`，让边框合为一条，现在看起来好多了：![一个 2x2 的表格，其 border-collapse 属性设置为 collapse，边框合为一条线](border-collapse.png)
+- 我们在整个表格周围设置了 {{cssxref("border")}}，这是必要的，因为我们将在表格页眉和页脚后面设置一些边框——当你在表格外面没有一个边界而且以空隙结尾的时候，它看起来很奇怪，而且是不连贯的。
+- 我们在 {{htmlelement("th")}} 和 {{htmlelement("td")}} 元素上设置了一些 {{cssxref("padding")}}——这些元素使数据项有了一些空间，使表格看起来更加清晰。
 
-此刻，我们的表看起来好多了：
+此刻，我们的表格看起来好多了：
 
 ![一个半样式的表格，其中的间距使数据更加清晰，并显示了英国著名朋克乐队的概况](table-with-spacing.png)
 
@@ -199,7 +199,7 @@ tfoot th {
 
 结果看起来更整洁一些：
 
-![使用全局无衬线字体和良好间距的样式表，使数据更加清晰易读，并显示了英国著名朋克乐队的摘要](table-with-typography.png)
+![使用全局无衬线字体和良好间距的样式表格，使数据更加清晰易读，并显示了英国著名朋克乐队的摘要](table-with-typography.png)
 
 ### 图形和颜色
 
@@ -233,7 +233,7 @@ tfoot td {
 
 #### 斑马条纹
 
-我们想用一个单独的部分来展示如何实现**斑马条纹**——通过改变不同数据行的颜色，使表中交替行不同的数据行可以更容易地进行解析和读取。将下面的 CSS 添加到你的 `style.css` 文件底部：
+我们想用一个单独的部分来展示如何实现**斑马条纹**——通过改变不同数据行的颜色，使表格中交替行不同的数据行可以更容易地进行解析和读取。将下面的 CSS 添加到你的 `style.css` 文件底部：
 
 ```css
 /* 斑马条纹 */
@@ -285,15 +285,15 @@ caption {
 
 这里没有什么值得注意的地方，除了 {{cssxref("caption-side")}} 属性，它被设置为 `bottom` 值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版 [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)）：
 
-![样式表下方的白色背景，包含表格内容的标题。例如“英国著名朋克乐队汇总”](table-with-caption.png)
+![样式表格下方的白色背景，包含表格内容的标题。例如“英国著名朋克乐队汇总”](table-with-caption.png)
 
 ## 表格样式化小贴士
 
 在继续讨论之前，我们想先为你快速列出上述最有用的要点：
 
 - 使你的表格标记尽可能简单，并且保持灵活性（例如使用百分比），这样设计就更有响应性。
-- 使用 {{cssxref("table-layout", "table-layout: fixed")}} 创建更可控的表布局，可以通过在表头（{{htmlelement("th")}}）中设置 {{cssxref("width")}} 来轻松设置列的宽度。
-- 使用 {{cssxref("border-collapse", "border-collapse: collapse")}} 使表元素边框合并，生成一个更整洁、更易于控制的外观。
+- 使用 {{cssxref("table-layout", "table-layout: fixed")}} 创建更可控的表格布局，可以通过在表头（{{htmlelement("th")}}）中设置 {{cssxref("width")}} 来轻松设置列的宽度。
+- 使用 {{cssxref("border-collapse", "border-collapse: collapse")}} 使表格元素边框合并，生成一个更整洁、更易于控制的外观。
 - 使用 {{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}} 将表格分割成逻辑块，并提供额外的应用 CSS 的地方，因此如果需要的话，可以更容易地将样式层叠在一起。
 - 使用斑马条纹来让其他行更容易阅读。
 - 使用 {{cssxref("text-align")}} 将 {{htmlelement("th")}} 和 {{htmlelement("td")}} 文本对齐，这样会更整齐、更容易看懂。
