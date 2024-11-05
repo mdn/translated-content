@@ -34,14 +34,14 @@ l10n:
 ```html
 <table>
   <caption>
-    英国最著名的朋克乐队概述
+    A summary of the UK's most famous punk bands
   </caption>
   <thead>
     <tr>
-      <th scope="col">乐队名</th>
-      <th scope="col">成立年份</th>
-      <th scope="col">专辑数量</th>
-      <th scope="col">最著名的单曲</th>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
     </tr>
   </thead>
   <tbody>
@@ -58,7 +58,7 @@ l10n:
       <td>London Calling</td>
     </tr>
 
-    <!-- 一些其他的优秀乐队 -->
+    <!-- several other great bands -->
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -69,7 +69,7 @@ l10n:
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="2">专辑总数</th>
+      <th scope="row" colspan="2">Total albums</th>
       <td colspan="2">77</td>
     </tr>
   </tfoot>
@@ -132,7 +132,7 @@ td {
 
 最重要的部分如下：
 
-- 在你的表格上，给 {{cssxref("table-layout")}} 属性设置 `fixed` 值通常是一个好主意，因为它使表格的行为在默认情况下更可预测。通常情况下，表格列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。因此，我们使用 `thead th:nth-child(n)`（{{cssxref(":nth-child")}} 选择器，选择了 {{htmlelement("thead")}} 元素中 {{htmlelement("th")}} 的第 n 个子元素）选择了四个不同的标题，并为它们设置了百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表格列尺寸的方式。Chris Coyier 在[固定表格布局](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
+- 在你的表格上，给 {{cssxref("table-layout")}} 属性设置 `fixed` 值通常是一个好主意，因为它使表格的行为在默认情况下更可预测。通常情况下，表格列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 `table-layout: fixed`，你可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。因此，我们使用 `thead th:nth-child(n)`（{{cssxref(":nth-child")}}）选择器，选择了 {{htmlelement("thead")}} 元素中 {{htmlelement("th")}} 的第 n 个子元素）选择了四个不同的标题，并为它们设置了百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表格列尺寸的方式。Chris Coyier 在[固定表格布局](https://css-tricks.com/fixing-tables-long-strings/)中更详细地讨论了这一技术。
 
   我们将这些样式与 100% 的 {{cssxref("width")}} 结合在一起，这意味着表格将填满它所放置的任何容器，并能很好地响应（尽管还需要再做一些工作，才能在窄屏幕宽度上看起来不错）。
 
