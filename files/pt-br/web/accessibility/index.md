@@ -32,19 +32,19 @@ A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da 
 
 ## Outras documentações
 
-- [Entendendo as Diretrizes de Acessibilidade do Conteúdo Web](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [Entendendo as Diretrizes de Acessibilidade do Conteúdo Web](/pt-BR/docs/Web/Accessibility/Understanding_WCAG)
   - : Este conjunto de artigos fornece explicações rápidas para ajudar você a entender as etapas que precisam ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade do Conteúdo Web 2.0 do W3C (WCAG 2.0 ou apenas WCAG, para os propósitos desta redação).
-- [Introdução à cor e acessibilidade](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Introdução à cor e acessibilidade](/pt-BR/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Este artigo discute nossa percepção de luz e cor, fornece uma base para o uso da cor em designs acessíveis e demonstra as melhores práticas para conteúdo visual e legível.
-- [Componentes JavaScript navegáveis por teclado](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Componentes JavaScript navegáveis por teclado](/pt-BR/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Até agora, as pessoas desenvolvedoras web que queriam tornar seus componentes baseados em `<div>` e `<span>` estilizados não tinham técnicas adequadas. A **acessibilidade por teclado** faz parte dos requisitos mínimos de acessibilidade, dos quais uma pessoa desenvolvedora deve estar ciente.
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [ARIA](/pt-BR/docs/Web/Accessibility/ARIA)
   - : Esta é uma coleção de artigos para aprender como usar Aplicações de Internet Ricas Acessíveis (ARIA) para tornar seus documentos HTML mais acessíveis.
-- [Lista de verificação da acessibilidade móvel](/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Lista de verificação da acessibilidade móvel](/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Este artigo fornece uma lista de verificação concisa de requisitos de acessibilidade para pessoas desenvolvedoras de aplicativos móveis.
-- [Acessibilidade cognitiva](/en-US/docs/Web/Accessibility/Cognitive_accessibility)
+- [Acessibilidade cognitiva](/pt-BR/docs/Web/Accessibility/Cognitive_accessibility)
   - : Este artigo explica como garantir que o conteúdo web que você está criando seja acessível a pessoas com deficiências cognitivas.
-- [Acessibilidade para distúrbios convulsivos](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Acessibilidade para distúrbios convulsivos](/pt-BR/docs/Web/Accessibility/Seizure_disorders)
   - : Alguns tipos de conteúdo visual web podem induzir convulsões em pessoas com certos distúrbios cerebrais. Este artigo ajuda você a entender os tipos de conteúdo que podem ser problemáticos e a encontrar ferramentas e estratégias que ajudam a evitá-los.
 
 ## Consulte também
