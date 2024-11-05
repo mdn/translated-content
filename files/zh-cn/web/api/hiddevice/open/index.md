@@ -24,7 +24,7 @@ open()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，一旦连接打开，它将兑现为 `undefined`。
+一个 {{jsxref("Promise")}}，会在连接打开时兑现为 `undefined`。
 
 ### 异常
 

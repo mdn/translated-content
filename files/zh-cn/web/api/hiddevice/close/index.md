@@ -21,7 +21,7 @@ close()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，一旦连接关闭，它将兑现为 `undefined`。
+一个 {{jsxref("Promise")}}，会在连接关闭时兑现为 `undefined`。
 
 ## 示例
 

@@ -26,7 +26,7 @@ sendFeatureReport(reportId, data)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，一旦报告发送，它将兑现为 `undefined`。
+一个 {{jsxref("Promise")}}，会在报告发送时兑现为 `undefined`。
 
 ### 异常
 
