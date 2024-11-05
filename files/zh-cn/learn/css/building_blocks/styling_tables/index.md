@@ -283,7 +283,7 @@ caption {
 }
 ```
 
-这里没有什么值得注意的地方，除了 {{cssxref("caption-side")}} 属性，它被设置为 `bottom` 值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版 [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)）：
+这里没有什么值得注意的地方，除了 {{cssxref("caption-side")}} 属性，它被设置为 `bottom` 值。这就导致标题被放置在表格的底部，与其他声明一起提供了最后的外观（见预览版 [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)）：
 
 ![样式表格下方的白色背景，包含表格内容的标题。例如“英国著名朋克乐队汇总”](table-with-caption.png)
 
@@ -300,7 +300,7 @@ caption {
 
 ## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，可以通过一些进一步的测试来验证自己是否记住了这些信息，参见[技能测试：表格](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
 
 ## 总结
 
