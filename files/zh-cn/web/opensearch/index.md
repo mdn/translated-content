@@ -129,7 +129,7 @@ OpenSearch 插件可以自动更新。要支持这一特性，需要在 `Url` �
 > [!NOTE]
 > 目前，[addons.mozilla.org](https://addons.mozilla.org)（AMO）不支持 OpenSearch 插件的自动更新。如果要把搜索插件放到 AMO，请在提交前移除自动更新特性。
 
-## 除错技巧
+## 排错技巧
 
 如果搜索插件 XML 存在错误，则在添加已发现的插件时可能会遇到错误。如果错误消息没有实际帮助，以下技巧能帮你找出问题。
 
