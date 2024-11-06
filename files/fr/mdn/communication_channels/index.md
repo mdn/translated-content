@@ -1,7 +1,6 @@
 ---
 title: Canaux de communication
 slug: MDN/Community/Communication_channels
-page-type: mdn-community-guide
 ---
 
 {{MDNSidebar}}
