@@ -1,6 +1,8 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -244,9 +246,9 @@ Consulta [uso de gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients
 
 ## Véase también
 
-- [Using CSS gradients](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [&lt;hue-interpolation-method&gt;](/es/docs/Web/CSS/hue-interpolation-method)
-- [&lt;color-interpolation-method&gt;](/es/docs/Web/CSS/color-interpolation-method)
+- [Uso de degradados CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- Otras funciones de gradiente: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/es/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/es/docs/Web/CSS/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
-- [CSS images module](/es/docs/Web/CSS/CSS_images)
+- [Módulo de imágenes CSS](/es/docs/Web/CSS/CSS_images)
