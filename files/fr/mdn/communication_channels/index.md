@@ -1,6 +1,6 @@
 ---
 title: Canaux de communication
-slug: MDN/Community/Communication_channels
+slug: fr/mdn/community/communication_channels
 page-type: mdn-community-guide
 ---
 
