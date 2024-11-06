@@ -1,16 +1,8 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/create
 ---
+
 {{JSRef}}
 
 La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
@@ -19,8 +11,10 @@ La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné
 
 ## Syntaxe
 
-    Object.create(proto)
-    Object.create(proto, objetPropriétés)
+```js
+Object.create(proto);
+Object.create(proto, objetPropriétés);
+```
 
 ### Paramètres
 
@@ -51,10 +45,10 @@ function Forme() {
 }
 
 // Méthode de la classe parente
-Forme.prototype.déplacer = function(x, y) {
+Forme.prototype.déplacer = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Forme déplacée.');
+  console.info("Forme déplacée.");
 };
 
 // Rectangle - classe fille
@@ -72,10 +66,10 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('instance de Rectangle ? ', (rect instanceof Rectangle));
+console.log("instance de Rectangle ? ", rect instanceof Rectangle);
 // true
-console.log('une instance de Forme ? ', (rect instanceof Forme));
- // true
+console.log("une instance de Forme ? ", rect instanceof Forme);
+// true
 rect.déplacer(1, 1);
 // Affiche 'Forme déplacée.'
 ```
@@ -92,7 +86,7 @@ MaClasse.prototype = Object.create(ClasseParente1.prototype); // héritage d'une
 Object.assign(MaClasse.prototype, ClasseParente2.prototype); // mixin pour une autre
 MaClasse.prototype.constructor = MaClasse; // On réaffecte le constructeur
 
-MaClasse.prototype.maMéthode = function() {
+MaClasse.prototype.maMéthode = function () {
   // faire quelque chose
 };
 ```
@@ -108,29 +102,30 @@ var o;
 // comme prototype
 o = Object.create(null);
 
-
 o = {};
 // est équivalent à :
 o = Object.create(Object.prototype);
-
 
 // Exemple où on crée un objet avec quelques propriétés
 // (On voit ici que le second paramètres fait correspondre les clés
 // avec des descripteurs de propriétés.)
 o = Object.create(Object.prototype, {
   // toto est une propriété de donnée
-  toto: { writable: true, configurable: true, value: 'hello' },
+  toto: { writable: true, configurable: true, value: "hello" },
   // truc est une propriété d'accesseur/mutateur
   truc: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) { console.log('Définir `o.truc` à', value); }
-/* avec les accesseurs ES2015 on aura :
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Définir `o.truc` à", value);
+    },
+    /* avec les accesseurs ES2015 on aura :
     get() { return 10; },
     set(value) { console.log('Définir `o.truc` à', value); } */
-  }
+  },
 });
-
 
 function Constructeur() {}
 o = new Constructeur();
@@ -139,7 +134,6 @@ o = Object.create(Constructeur.prototype);
 // Bien entendu, si la fonction Constructeur
 // possède des instructions pour l'initialisation,
 // Object.create() ne pourra pas le reproduire
-
 
 // on crée un nouvel objet dont le prototype est
 // un nouvel objet vide et on y ajoute une propriété
@@ -162,14 +156,17 @@ delete o.p;
 // false
 
 // Pour définir une propriété selon ES3
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 
 // Équivalent à
 // o2 = Object.create({p: 42});
@@ -177,15 +174,11 @@ o2 = Object.create({}, {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES2015', '#sec-object.create', 'Object.create')}}     | {{Spec2('ES2015')}}     |                                                         |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Voir aussi
 

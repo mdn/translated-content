@@ -1,14 +1,8 @@
 ---
 title: IDBIndex.unique
 slug: Web/API/IDBIndex/unique
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBIndex/unique
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`unique`**, rattachée à l'interface `IDBIndex`, est un booléen qui indique si l'index utilisé permet d'avoir des clés dupliquées.
@@ -19,7 +13,9 @@ Cette caractéristique est décidée lors de la création de l'index, avec la m�
 
 ## Syntaxe
 
-    var myIndex = objectStore.index('index');
+```js
+var myIndex = objectStore.index("index");
+```
 
 ### Valeur
 
@@ -31,48 +27,63 @@ Dans l'exemple suivant, on ouvre une transaction en lecture sur un magasin d'obj
 
 On affiche le caractère unique des clé dans la console (ici, on voit que la propriété vaut `false`).
 
-Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([voir la démonstration _live_](https://mdn.github.io/IDBIndex-example/)).
+Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([voir la démonstration _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  var transaction = db.transaction(["contactsList"], "readonly");
+  var objectStore = transaction.objectStore("contactsList");
 
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
   console.log(myIndex.unique);
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Les éléments sont affichés.');
+      console.log("Les éléments sont affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.unique")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -82,4 +93,4 @@ function displayDataByIndex() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

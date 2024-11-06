@@ -1,22 +1,18 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - BiDi
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.unicode-bidi
-translation_of: Web/CSS/unicode-bidi
 ---
+
 {{CSSRef}}
 
 **`unicode-bidi`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("direction")}} プロパティと共に、文書内の双方向テキストの扱いを指定します。例えば、テキストブロックに左書き (LTR) と右書き (RTL) の両方のテキストが含まれている場合、ユーザーエージェントは、複雑な Unicode アルゴリズムを用いてテキストの表示方法を決定します。 `unicode-bidi` プロパティは、このアルゴリズムを上書きして開発者がテキストの埋め込みを制御できるようにします。
 
+{{EmbedInteractiveExample("pages/css/unicode-bidi.html")}}
+
 `unicode-bidi` と {{cssxref("direction")}} プロパティだけは、 {{cssxref("all")}} 一括指定プロパティによる影響を受けません。
 
-> **Warning:** このプロパティは文書型定義 (DTD) デザイナー向けです。ウェブデザイナー等の作者は、このアルゴリズムを**上書きすべきではありません**。
+> [!WARNING]
+> このプロパティは文書型定義 (DTD) デザイナー向けです。ウェブデザイナー等の作者は、このアルゴリズムを**上書きすべきではありません**。
 
 ## 構文
 
@@ -74,12 +70,8 @@ unicode-bidi: unset;
 ### HTML
 
 ```html
-<div class="bible-quote">
-  A line of text
-</div>
-<div>
-  Another line of text
-</div>
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
 ```
 
 ### 結果

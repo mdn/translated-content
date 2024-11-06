@@ -1,18 +1,9 @@
 ---
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setIcon
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Définit l'icône de la barre latérale.
 
@@ -26,7 +17,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
 
-Si vous ne spécifiez pas d'icône dans la clé sidebar_action, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
+Si vous ne spécifiez pas d'icône dans la clé `sidebar_action`, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
 
 Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `tabId` , l'icône est définie uniquement pour l'onglet donné. C'est ce qu'on appelle _"tab-specific icon"_.
 
@@ -38,8 +29,8 @@ Si vous définissez une nouvelle icône en utilisant `setIcon()`, et omettez l'o
 
 ```js
 var settingIcon = browser.sidebarAction.setIcon(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -71,8 +62,8 @@ var settingIcon = browser.sidebarAction.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -82,7 +73,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
         si `path` n'est pas vide mais ne pointe pas vers un fichier d'icône, l'icône est masquée.
 
-        si `path` est `null`, et `tabId`a été spécifié, et que l'onglet spécifié possède un jeu d'icônes spécifique à l'onglet: l'icône spécifique à l'onglet est réinitialisée à l'icône globale (si une icône globale est définie) ou à l'icône manifeste.
+        si `path` est `null`, et `tabId` a été spécifié, et que l'onglet spécifié possède un jeu d'icônes spécifique à l'onglet: l'icône spécifique à l'onglet est réinitialisée à l'icône globale (si une icône globale est définie) ou à l'icône manifeste.
 
         si `path` est `null`, et `tabId` a été omis, et qu'il y avait un jeu d'icônes global, il sera réinitialisé à l'icône de manifest.
 
@@ -93,16 +84,12 @@ var settingIcon = browser.sidebarAction.setIcon(
 
 <!---->
 
-- Si `windowId`et `tabId` sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.
+- Si `windowId` et `tabId` sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.
 - SI `windowId` et `tabId` sont tous deux omis, l'icône est définie globalement.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument une fois l'icône définie.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setIcon",2)}}
 
 ## Exemples
 
@@ -115,13 +102,13 @@ function toggle(tab) {
   if (on) {
     browser.sidebarAction.setIcon({
       path: "off.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = false;
   } else {
     browser.sidebarAction.setIcon({
       path: "on.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = true;
   }
@@ -130,8 +117,12 @@ function toggle(tab) {
 browser.browserAction.onClicked.addListener(toggle);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).

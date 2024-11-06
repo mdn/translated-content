@@ -1,15 +1,8 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-self
-translation_of: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。
@@ -33,15 +26,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* 位置による配置 */
-justify-self: center;     /* 中央付近にアイテムを集める */
-justify-self: start;      /* 開始側にアイテムを集める */
-justify-self: end;        /* 終端側にアイテムを集める */
+justify-self: center; /* 中央付近にアイテムを集める */
+justify-self: start; /* 開始側にアイテムを集める */
+justify-self: end; /* 終端側にアイテムを集める */
 justify-self: flex-start; /* 開始側にフレックスアイテムを集める */
-justify-self: flex-end;   /* 終端側にフレックスアイテムを集める */
+justify-self: flex-end; /* 終端側にフレックスアイテムを集める */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* 左側にアイテムを集める */
-justify-self: right;      /* 右側にアイテムを集める */
+justify-self: left; /* 左側にアイテムを集める */
+justify-self: right; /* 右側にアイテムを集める */
 
 /* ベースラインの配置 */
 justify-self: baseline;
@@ -113,13 +106,13 @@ justify-self: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 簡単なデモ
 
 以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには `justify-items` の値を `stretch` に — 既定値に — 設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
@@ -159,11 +152,11 @@ span:nth-child(2) {
 }
 
 span:nth-child(3) {
-justify-self: center;
+  justify-self: center;
 }
 
 span:nth-child(4) {
-justify-self: end;
+  justify-self: end;
 }
 
 article span {
@@ -173,7 +166,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
@@ -185,11 +179,11 @@ article {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('簡単なデモ', '100%', 200)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.justify-self.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -197,6 +191,6 @@ article {
 
 ## 関連情報
 
-- CSS グリッドガイド: _[CSS グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{CSSxRef("justify-items")}} プロパティ

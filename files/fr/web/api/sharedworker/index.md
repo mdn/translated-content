@@ -1,20 +1,14 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-tags:
-  - API
-  - Interface
-  - Reference
-  - Shared
-  - SharedWorker
-  - Worker
-translation_of: Web/API/SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **`SharedWorker`** représente un type spécifique de worker qui peut être _accédé_ à partir de plusieurs contextes de navigation, tels que plusieurs fenêtres, iframes ou même workers. Ils implémentent une autre interface que les workers dédiés et ont un contexte global différent, {{domxref("SharedWorkerGlobalScope")}}.
 
-> **Note :** Si un SharedWorker peut être accédé à partir de plusieurs contextes de navigation, tous ces contextes de navigation doivent partager exactement la même origine (même protocole, hôte et port.)
+> [!NOTE]
+> Si un SharedWorker peut être accédé à partir de plusieurs contextes de navigation, tous ces contextes de navigation doivent partager exactement la même origine (même protocole, hôte et port.)
 
 ## Constructeurs
 
@@ -38,7 +32,7 @@ _Hérite des méthodes de son parent, {{domxref("EventTarget")}}, et implémente
 
 ## Exemple
 
-Dans notre  [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](http://mdn.github.io/simple-shared-worker/)), nous avons deux pages HTML, qui chacune utilise du code JavaScript pour réaliser un calcul simple. Les différents scripts utilisent le même worker pour effectuer ce calcul — ils peuvent tous les deux y accéder, même si leurs pages s'exécutent à l'intérieur de fenêtres différentes.
+Dans notre [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](http://mdn.github.io/simple-shared-worker/)), nous avons deux pages HTML, qui chacune utilise du code JavaScript pour réaliser un calcul simple. Les différents scripts utilisent le même worker pour effectuer ce calcul — ils peuvent tous les deux y accéder, même si leurs pages s'exécutent à l'intérieur de fenêtres différentes.
 
 L'extrait de code suivant illustre la création d'un objet `SharedWorker` en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :
 
@@ -55,46 +49,44 @@ myWorker.port.start();
 Lorsque le port est démarré, les deux scripts envoient des messages au worker et gèrent les messages qu'il renvoie en utilisant respectivement `port.postMessage()` et `port.onmessage` :
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message envoyé au worker');
-  }
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message envoyé au worker');
-  }
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message reçu du worker');
-  }
+myWorker.port.onmessage = function (e) {
+  result1.textContent = e.data;
+  console.log("Message reçu du worker");
+};
 ```
 
-Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
+Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event) — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0];
 
-    port.onmessage = function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    }
+  port.onmessage = function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                  |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}} | {{Spec2('HTML WHATWG')}} | Aucune modification de {{SpecName("Web Workers")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorker")}}
+{{Compat}}
 
 ## Voir aussi
 

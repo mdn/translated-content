@@ -1,8 +1,8 @@
 ---
 title: Les modules JavaScript
 slug: Web/JavaScript/Guide/Modules
-translation_of: Web/JavaScript/Guide/Modules
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Métaprogrammation")}}
 
 Ce guide aborde l'ensemble des notions vous permettant d'utiliser la syntaxe des modules en JavaScript.
@@ -21,25 +21,20 @@ Cette implémentation permettra aux navigateurs d'optimiser le chargement des mo
 
 L'utilisation des modules natifs JavaScript repose sur les instructions [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) et [`export`](/fr/docs/Web/JavaScript/Reference/Statements/export) dont vous pouvez voir l'état de la compatibilité ici&nbsp;:
 
-### `import`
-
-{{Compat("javascript.statements.import")}}
-
-### `export`
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Commençons par un exemple
 
-Pour illustrer le fonctionnement des modules, nous avons créé [un ensemble d'exemples disponibles sur GitHub](https://github.com/mdn/js-examples/tree/master/modules). Ces exemples illustrent un ensemble de modules pour créer un élément {{htmlelement("canvas")}} sur une page web puis dessiner (et afficher des informations) sur les différentes formes du canevas.
+Pour illustrer le fonctionnement des modules, nous avons créé [un ensemble d'exemples disponibles sur GitHub](https://github.com/mdn/js-examples/tree/master/module-examples). Ces exemples illustrent un ensemble de modules pour créer un élément {{htmlelement("canvas")}} sur une page web puis dessiner (et afficher des informations) sur les différentes formes du canevas.
 
 Ces opérations sont assez simples, mais nous les avons choisies pour nous concentrer plutôt sur le fonctionnement des modules.
 
-> **Note :** Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
+> [!NOTE]
+> Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
 
 ## Structure de l'exemple
 
-Dans notre premier exemple (cf. [basic-modules](https://github.com/mdn/js-examples/tree/master/modules/basic-modules)), nous avons l'arborescence de fichier suivante&nbsp;:
+Dans notre premier exemple (cf. [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules)), nous avons l'arborescence de fichier suivante&nbsp;:
 
 ```plain
 index.html
@@ -49,7 +44,8 @@ modules/
     square.js
 ```
 
-> **Note :** Tous les exemples de ce guide suivent la même structure.
+> [!NOTE]
+> Tous les exemples de ce guide suivent la même structure.
 
 Le répertoire dédié aux modules contient deux modules&nbsp;:
 
@@ -92,7 +88,7 @@ Pour commencer et afin d'utiliser les fonctionnalités d'un module, on devra les
 La méthode la plus simple consiste à placer cette instruction devant chaque valeur qu'on souhaite exporter, par exemple&nbsp;:
 
 ```js
-export const name = 'square';
+export const name = "square";
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -102,7 +98,7 @@ export function draw(ctx, length, x, y, color) {
     length: length,
     x: x,
     y: y,
-    color: color
+    color: color,
   };
 }
 ```
@@ -120,17 +116,17 @@ export { name, draw, reportArea, reportPerimeter };
 Lorsque des fonctionnalités sont exportées par un premier module, on peut les importer dans un script afin de les utiliser. Voici la méthode la plus simple pour ce faire&nbsp;:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-On utilise ici l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import), suivie d'une liste d'identifiants séparés par des virgules et délimitée par des accolades, suivie du mot-clé `from` puis du chemin vers le fichier du module. Le chemin est relatif à la racine du site. Dans notre cas, pour `basic-module`, on écrira `/js-examples/modules/basic-modules`.
+On utilise ici l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import), suivie d'une liste d'identifiants séparés par des virgules et délimitée par des accolades, suivie du mot-clé `from` puis du chemin vers le fichier du module. Le chemin est relatif à la racine du site. Dans notre cas, pour `basic-module`, on écrira `/js-examples/module-examples/basic-modules`.
 
 Ici, nous avons écrit le chemin d'une façon légèrement différente&nbsp;: on utilise le point (`.`) afin d'indiquer « l'emplacement courant », suivi du chemin vers le fichier. Cela permet d'éviter d'avoir à écrire l'intégralité du chemin à chaque fois, c'est aussi plus court et cela permet de déplacer le script et le modules sans avoir à modifier les scripts.
 
 Ainsi&nbsp;:
 
 ```bash
-/js-examples/modules/basic-modules/modules/square.js
+/js-examples/module-examples/basic-modules/modules/square.js
 ```
 
 devient&nbsp;:
@@ -139,22 +135,24 @@ devient&nbsp;:
 ./modules/square.js
 ```
 
-Vous pouvez voir ces lignes dans [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js).
+Vous pouvez voir ces lignes dans [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Note :** Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
+> [!NOTE]
+> Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
 
 Une fois les fonctionnalités importées dans le script, vous pouvez utiliser les valeurs dans votre script. Dans `main.js`, après les lignes d'import, on trouvera&nbsp;:
 
 ```js
-let myCanvas = create('myCanvas', document.body, 480, 320);
+let myCanvas = create("myCanvas", document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
-let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Note :** Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
+> [!NOTE]
+> Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
 
 ## Charger le module via le document HTML
 
@@ -211,16 +209,17 @@ export default function(ctx) {
 Dans le fichier `main.js`, on importe la fonction par défaut avec cette ligne
 
 ```js
-import randomSquare from './modules/square.js';
+import randomSquare from "./modules/square.js";
 ```
 
 On voit ici aussi l'absence d'accolade, car il n'y a qu'un seul export par défaut possible par module (et ici, on sait qu'il s'agit de `randomSquare`). La ligne ci-avant est en fait une notation raccourcie équivalente à&nbsp;:
 
 ```js
-import {default as randomSquare} from './modules/square.js';
+import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Note :** Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
+> [!NOTE]
+> Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
 
 ## Gestion des conflits de nommage
 
@@ -238,11 +237,14 @@ Ainsi, les deux fragments qui suivent permettraient d'obtenir le même résultat
 // dans module.js
 export {
   fonction1 as nouveauNomDeFonction,
-  fonction2 as autreNouveauNomDeFonction
+  fonction2 as autreNouveauNomDeFonction,
 };
 
 // dans main.js
-import { nouveauNomDeFonction, autreNouveauNomDeFonction } from './modules/module.js';
+import {
+  nouveauNomDeFonction,
+  autreNouveauNomDeFonction,
+} from "./modules/module.js";
 ```
 
 ```js
@@ -250,11 +252,13 @@ import { nouveauNomDeFonction, autreNouveauNomDeFonction } from './modules/modul
 export { fonction1, fonction2 };
 
 // dans main.js
-import { fonction1 as nouveauNomDeFonction,
-         fonction2 as autreNouveauNomDeFonction } from './modules/module.js';
+import {
+  fonction1 as nouveauNomDeFonction,
+  fonction2 as autreNouveauNomDeFonction,
+} from "./modules/module.js";
 ```
 
-Prenons un exemple concret. Dans le répertoire [`renaming`](https://github.com/mdn/js-examples/tree/master/modules/renaming), vous verrez le même système de modules que précédemment auquel nous avons ajouté `circle.js` et `triangle.js` afin de dessiner et d'écrire des informations sur des cercles et des triangles.
+Prenons un exemple concret. Dans le répertoire [`renaming`](https://github.com/mdn/js-examples/tree/master/module-examples/renaming), vous verrez le même système de modules que précédemment auquel nous avons ajouté `circle.js` et `triangle.js` afin de dessiner et d'écrire des informations sur des cercles et des triangles.
 
 Dans chaque module, on exporte les fonctionnalités avec des noms identiques&nbsp;: l'instruction `export` utilisée est la même à chaque fin de fichier&nbsp;:
 
@@ -265,9 +269,9 @@ export { name, draw, reportArea, reportPerimeter };
 Lorsqu'on importe les valeurs dans `main.js`, si on essaie d'utiliser
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/circle.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 ```
 
 Le navigateur déclenchera une erreur telle que <q lang="en">_SyntaxError: redeclaration of import name_</q> (Firefox).
@@ -275,35 +279,48 @@ Le navigateur déclenchera une erreur telle que <q lang="en">_SyntaxError: redec
 Pour éviter ce problème, on renomme les imports afin qu'ils soient uniques&nbsp;:
 
 ```js
-import { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+import {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+} from "./modules/square.js";
 
-import { name as circleName,
-         draw as drawCircle,
-         reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+import {
+  name as circleName,
+  draw as drawCircle,
+  reportArea as reportCircleArea,
+  reportPerimeter as reportCirclePerimeter,
+} from "./modules/circle.js";
 
-import { name as triangleName,
-        draw as drawTriangle,
-        reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+import {
+  name as triangleName,
+  draw as drawTriangle,
+  reportArea as reportTriangleArea,
+  reportPerimeter as reportTrianglePerimeter,
+} from "./modules/triangle.js";
 ```
 
 On aurait pu également résoudre le problème dans les fichiers de chaque module.
 
 ```js
 // dans square.js
-export { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter };
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
 ```
 
 ```js
 // dans main.js
-import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from './modules/square.js';
+import {
+  squareName,
+  drawSquare,
+  reportSquareArea,
+  reportSquarePerimeter,
+} from "./modules/square.js";
 ```
 
 Les deux approches fonctionnent. C'est à vous de choisir le style. Toutefois, il est souvent plus pratique d'effectuer le renommage à l'import, notamment lorsqu'on importe des fonctionnalités de modules tiers sur lesquels on n'a pas le contrôle.
@@ -313,7 +330,7 @@ Les deux approches fonctionnent. C'est à vous de choisir le style. Toutefois, i
 La méthode précédente fonctionne mais reste « brouillonne ». Pour faire mieux, on peut importer l'ensemble des fonctionnalités de chaque module dans un objet, de la façon suivante&nbsp;:
 
 ```js
-import * as Module from './modules/module.js';
+import * as Module from "./modules/module.js";
 ```
 
 Cela récupère tous les exports disponibles depuis `module.js` et les transforme en propriétés et méthodes rattachées à l'objet `Module` qui fournit alors un espace de noms (_namespace_)&nbsp;:
@@ -324,7 +341,7 @@ Module.function2()
 etc.
 ```
 
-Là encore, prenons un exemple concret avec le répertoire [module-objects](https://github.com/mdn/js-examples/tree/master/modules/module-objects). Il s'agit du même exemple que précédemment mais qui a été réécrit afin de tirer parti de cette syntaxe. Dans les modules, les exports sont tous écrits ainsi&nbsp;:
+Là encore, prenons un exemple concret avec le répertoire [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects). Il s'agit du même exemple que précédemment mais qui a été réécrit afin de tirer parti de cette syntaxe. Dans les modules, les exports sont tous écrits ainsi&nbsp;:
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
@@ -333,17 +350,17 @@ export { name, draw, reportArea, reportPerimeter };
 En revanche, pour les imports, on les récupère ainsi&nbsp;:
 
 ```js
-import * as Canvas from './modules/canvas.js';
+import * as Canvas from "./modules/canvas.js";
 
-import * as Square from './modules/square.js';
-import * as Circle from './modules/circle.js';
-import * as Triangle from './modules/triangle.js';
+import * as Square from "./modules/square.js";
+import * as Circle from "./modules/circle.js";
+import * as Triangle from "./modules/triangle.js";
 ```
 
 Dans chaque cas, on peut accéder aux imports comme propriétés des objets ainsi créés&nbsp;:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -354,7 +371,7 @@ On obtient alors un code plus lisible.
 
 Comme mentionné avant, il est possible d'importer et d'exporter des classes. Cette méthode peut aussi être utilisée afin d'éviter les conflits de nommage. Elle s'avère notamment utile lorsque vous utilisez déjà des classes pour construire vos objets (cela permet de garder une certaine cohérence dans le style).
 
-Pour voir le résultat obtenu, vous pouvez consulter le répertoire [classes](https://github.com/mdn/js-examples/tree/master/modules/classes) du dépôt où l'ensemble a été réécrit pour tirer parti des classes ECMAScript. Ainsi, [`square.js`](https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js) contient désormais l'ensemble des fonctionnalités via une classe&nbsp;:
+Pour voir le résultat obtenu, vous pouvez consulter le répertoire [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) du dépôt où l'ensemble a été réécrit pour tirer parti des classes ECMAScript. Ainsi, [`square.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) contient désormais l'ensemble des fonctionnalités via une classe&nbsp;:
 
 ```js
 class Square {
@@ -376,16 +393,16 @@ Il suffit d'exporter cette classe&nbsp;:
 export { Square };
 ```
 
-Puis de l'importer ainsi dans [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/classes/main.js)&nbsp;:
+Puis de l'importer ainsi dans [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js)&nbsp;:
 
 ```js
-import { Square } from './modules/square.js';
+import { Square } from "./modules/square.js";
 ```
 
 Ensuite, on peut utiliser cette classe afin de dessiner le carré&nbsp;:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -396,19 +413,21 @@ square1.reportPerimeter();
 Il arrivera qu'on veuille agréger des modules entre eux. On peut avoir plusieurs niveaux de dépendances et vouloir simplifier les choses en combinant différents sous-modules en un seul module parent. Pour cela, on pourra utiliser la notation raccourcie suivante&nbsp;:
 
 ```js
-export * from 'x.js'
-export { name } from 'x.js'
+export * from "x.js";
+export { name } from "x.js";
 ```
 
-Pour voir cela en pratique, vous pouvez consulter le répertoire [module-aggregation](https://github.com/mdn/js-examples/tree/master/modules/module-aggregation). Dans cet exemple (construit sur le précédent qui utilise les classes), on a un module supplémentaire intitulé `shapes.js` qui agrège les fonctionnalités fournies par `circle.js`, `square.js` et `triangle.js`. Les sous-modules ont également été déplacés dans un répertoire `shapes` situé dans un répertoire `modules`. L'arborescence utilisée est donc&nbsp;:
+Pour voir cela en pratique, vous pouvez consulter le répertoire [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation). Dans cet exemple (construit sur le précédent qui utilise les classes), on a un module supplémentaire intitulé `shapes.js` qui agrège les fonctionnalités fournies par `circle.js`, `square.js` et `triangle.js`. Les sous-modules ont également été déplacés dans un répertoire `shapes` situé dans un répertoire `modules`. L'arborescence utilisée est donc&nbsp;:
 
-    modules/
-      canvas.js
-      shapes.js
-      shapes/
-        circle.js
-        square.js
-        triangle.js
+```
+modules/
+  canvas.js
+  shapes.js
+  shapes/
+    circle.js
+    square.js
+    triangle.js
+```
 
 Dans chaque sous-module, l'export aura la même forme&nbsp;:
 
@@ -416,30 +435,31 @@ Dans chaque sous-module, l'export aura la même forme&nbsp;:
 export { Square };
 ```
 
-Pour l'agrégation au sein de [`shapes.js`](https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js), on écrit les lignes suivantes&nbsp;:
+Pour l'agrégation au sein de [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), on écrit les lignes suivantes&nbsp;:
 
 ```js
-export { Square } from './shapes/square.js';
-export { Triangle } from './shapes/triangle.js';
-export { Circle } from './shapes/circle.js';
+export { Square } from "./shapes/square.js";
+export { Triangle } from "./shapes/triangle.js";
+export { Circle } from "./shapes/circle.js";
 ```
 
 On récupère ainsi l'ensemble des exports de chaque module et on les rend disponibles via `shapes.js`.
 
-> **Note :** Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
+> [!NOTE]
+> Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
 
 Dans le fichier `main.js`, on pourra alors remplacer&nbsp;:
 
 ```js
-import { Square } from './modules/square.js';
-import { Circle } from './modules/circle.js';
-import { Triangle } from './modules/triangle.js';
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
 par&nbsp;:
 
 ```js
-import { Square, Circle, Triangle } from './modules/shapes.js';
+import { Square, Circle, Triangle } from "./modules/shapes.js";
 ```
 
 ## Chargement dynamique de modules
@@ -449,32 +469,38 @@ Cette nouvelle fonctionnalité permet aux navigateurs de charger les modules lor
 Pour utiliser cette fonctionnalité, on pourra utiliser `import()` comme une fonction et lui passer le chemin du module en argument. Cette fonction renverra [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), qui sera résolue en un module objet donnant accès aux exports.
 
 ```js
-import('./modules/monModule.js')
-  .then((module) => {
-    // Faire qqc avec le module.
-  });
+import("./modules/monModule.js").then((module) => {
+  // Faire qqc avec le module.
+});
 ```
 
-Dans nos exemples, regardons le répertoire [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports), également basé sur les classes. Cette fois, on ne dessine rien au chargement de l'exemple, mais on ajoute trois boutons — "Circle", "Square" et "Triangle" — qui, lorsqu'ils seront utilisés, chargeront dynamiquement les modules nécessaires et les utiliseront pour charger la forme associée.
+Dans nos exemples, regardons le répertoire [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports), également basé sur les classes. Cette fois, on ne dessine rien au chargement de l'exemple, mais on ajoute trois boutons — "Circle", "Square" et "Triangle" — qui, lorsqu'ils seront utilisés, chargeront dynamiquement les modules nécessaires et les utiliseront pour charger la forme associée.
 
-Dans cet exemple, nous avons uniquement modifié [index.html](https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html) et [main.js](https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js) — les exports restent les mêmes.
+Dans cet exemple, nous avons uniquement modifié [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) et [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) — les exports restent les mêmes.
 
 Dans `main.js`, on récupère une référence à chaque bouton en utilisant [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector). Par exemple&nbsp;:
 
 ```js
-let squareBtn = document.querySelector('.square');
+let squareBtn = document.querySelector(".square");
 ```
 
 Ensuite, on attache un gestionnaire d'évènement à chaque bouton afin qu'on puisse appuyer dessus. Le module correspondant est alors chargé dynamiquement et utilisé pour dessiner la forme&nbsp;:
 
 ```js
-squareBtn.addEventListener('click', () => {
-  import('./modules/square.js').then((Module) => {
-    let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+squareBtn.addEventListener("click", () => {
+  import("./modules/square.js").then((Module) => {
+    let square1 = new Module.Square(
+      myCanvas.ctx,
+      myCanvas.listId,
+      50,
+      50,
+      100,
+      "blue",
+    );
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
-  })
+  });
 });
 ```
 
@@ -484,9 +510,9 @@ On voit ici que, parce que la promesse renvoie un objet module à la résolution
 
 L'utilisation du mot-clé `await` au plus haut niveau est une fonctionnalité disponible dans les modules. Cela permet d'avoir des modules qui agissent comme des [grandes fonctions asynchrones](/fr/docs/Learn/JavaScript/Asynchronous/Introducing), ce qui signifie que le code peut être évalué avant d'être utilisé dans des modules parents mais sans bloquer le chargement des modules frères et sœurs.
 
-Prenons un exemple. Vous trouverez les fichiers et le code de cette section au sein du répertoire [`top-level-await`](https://github.com/mdn/js-examples/tree/master/modules/top-level-await) qui repart des exemples précédents.
+Prenons un exemple. Vous trouverez les fichiers et le code de cette section au sein du répertoire [`top-level-await`](https://github.com/mdn/js-examples/tree/master/module-examples/top-level-await) qui repart des exemples précédents.
 
-Tout d'abord, on déclare une palette de couleurs dans un fichier [`colors.json`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json) distinct&nbsp;:
+Tout d'abord, on déclare une palette de couleurs dans un fichier [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) distinct&nbsp;:
 
 ```js
 {
@@ -498,12 +524,11 @@ Tout d'abord, on déclare une palette de couleurs dans un fichier [`colors.json`
 }
 ```
 
-Ensuite, on crée un module intitulé [`getColors.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js) qui utilise une requête _fetch_ pour charger le fichier [`colors.json`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json) et qui renvoie les données comme un objet.
+Ensuite, on crée un module intitulé [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) qui utilise une requête _fetch_ pour charger le fichier [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) et qui renvoie les données comme un objet.
 
 ```js
 // requête fetch
-const colors = fetch('../data/colors.json')
-	.then(response => response.json());
+const colors = fetch("../data/colors.json").then((response) => response.json());
 
 export default await colors;
 ```
@@ -512,7 +537,7 @@ Voyez ici la dernière ligne qui effectue l'export.
 
 On y utilise le mot-clé `await` avant la constante `colors` qu'on souhaite exporter. Cela signifie que si d'autres modules incluent celui-ci, ils devront attendre que `colors` ait été téléchargé et analysé avant de pouvoir l'utiliser.
 
-Incluons ce module dans le fichier [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js)&nbsp;:
+Incluons ce module dans le fichier [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js)&nbsp;:
 
 ```js
 import colors from './modules/getColors.js';
@@ -541,7 +566,7 @@ let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190,
 ...
 ```
 
-C'est utile ici, car le code au sein de [`main.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js) ne s'exécutera pas tant que le code de [`getColors.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js) n'aura pas été exécuté. Toutefois, cela ne bloquera pas le chargement des autres modules. Ainsi, notre module [`canvas.js`](https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/canvas.js) continuera de charger tandis que les données de `colors` sont récupérées.
+C'est utile ici, car le code au sein de [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) ne s'exécutera pas tant que le code de [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) n'aura pas été exécuté. Toutefois, cela ne bloquera pas le chargement des autres modules. Ainsi, notre module [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) continuera de charger tandis que les données de `colors` sont récupérées.
 
 ## Diagnostiquer les problèmes avec les modules
 

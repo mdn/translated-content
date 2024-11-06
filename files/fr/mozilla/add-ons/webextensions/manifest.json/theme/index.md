@@ -1,18 +1,8 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -46,11 +36,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 
 Utilisez la clé du thème pour définir un thème statique à appliquer à Firefox.
 
-> **Note :** Si vous voulez inclure un thème avec une extension, veuillez voir l'API  {{WebExtAPIRef("theme")}}.
+> [!NOTE]
+> Si vous voulez inclure un thème avec une extension, veuillez voir l'API {{WebExtAPIRef("theme")}}.
 
-> **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ({{bug(1545109)}}). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
+> [!NOTE]
+> Depuis mai 2019, les thèmes doivent être signés pour être installés ([bug Firefox 1545109](https://bugzil.la/1545109)). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
 
-> **Note :** Prise en charge des thèmes dans Firefox pour Android : Une nouvelle version de Firefox pour Android, basée sur GeckoView, est en cours de développement. Une [pré-version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) ne support pas les thèmes.
+> [!NOTE]
+> Prise en charge des thèmes dans Firefox pour Android : Une nouvelle version de Firefox pour Android, basée sur GeckoView, est en cours de développement. Une [pré-version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) ne support pas les thèmes.
 
 ## Formats des images
 
@@ -130,7 +123,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
             énumérant les valeurs définissant l'alignement des éléments
             correspondants du tableau
             <code>"additional_backgrounds":</code>.<br />Les options
-            d'alignement comprennent  : <code>"bottom" <em>(bas)</em></code
+            d'alignement comprennent : <code>"bottom" <em>(bas)</em></code
             >, <code>"center" <em>(centre)</em></code
             >, <code>"left" <em>(gauche)</em></code
             >, <code>"right" <em>(droite)</em></code
@@ -202,7 +195,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
           également que dans Firefox 60 et suivants, tout
           {{cssxref("text-shadow")}} appliqué au texte d'en-tête est
           supprimé si aucun <code>headerURL</code> n'est spécifié (voir
-          {{bug(1404688)}}).
+          [bug Firefox 1404688](https://bugzil.la/1404688)).
         </p>
         <p>
           Dans Firefox pour Android, <code>headerURL</code> ou
@@ -251,7 +244,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
         <p>
           Un tableau d'URLs pour les images de fond supplémentaires à ajouter à
           la zone d'en-tête et à afficher derrière l'image
-          <code>"theme_frame"</code> :  Ces images superposent la première image
+          <code>"theme_frame"</code> : Ces images superposent la première image
           du tableau en haut, la dernière image du tableau en bas.
         </p>
         <p>Optionel.</p>
@@ -268,7 +261,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
 
 ### Couleurs
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"` étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
 
 <table class="standard-table">
   <tbody>
@@ -280,7 +273,8 @@ Ces propriétés définissent les couleurs utilisées pour les différentes part
   </tbody>
 </table>
 
-> **Note :** Lorsqu'un composant est affecté par plusieurs propriétés de couleur, les propriétés sont listées par ordre de priorité.
+> [!NOTE]
+> Lorsqu'un composant est affecté par plusieurs propriétés de couleur, les propriétés sont listées par ordre de priorité.
 
 Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne contenant un [code de couleur CSS](/fr/docs/Web/CSS/color_value), ou un tableau RVB tel que `"tab_background_text": [ 107 , 99 , 23 ]`, ou en héxadécimal, tel que `"tab_background_text": #6b6317`.
 
@@ -311,7 +305,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
             <strong>Attention :</strong> <code>accentcolor</code> a été supprimé
             dans Firefox 70. Vous commencerez à recevoir des avertissements dans
             Firefox 65 et plus tard si vous chargez un thème qui utilise cette
-            propriété. Utilisez  <code>frame</code> à la place.
+            propriété. Utilisez <code>frame</code> à la place.
           </p>
         </div>
         <p>
@@ -416,7 +410,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
             contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
-            et  <code>button_background_hover</code>.
+            et <code>button_background_hover</code>.
           </p>
         </div>
         <pre class="brush: json">
@@ -443,7 +437,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
             contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
-            et  <code>button_background_hover</code>.
+            et <code>button_background_hover</code>.
           </p>
         </div>
         <pre class="brush: json">
@@ -578,7 +572,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur d'arrière-plan des éléments mis en surbrillance à l'aide du
-          clavier dans les fenêtre contextuelles (tel que l’élément sélectionné
+          clavier dans les fenêtre contextuelles (tel que l'élément sélectionné
           dans le menu déroulant de la barre d'URL).
         </p>
         <div class="note">
@@ -1260,10 +1254,11 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
 
 En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une des propriétés ci-dessus. Ceux-ci sont fournis pour la compatibilité avec Chrome. Si un alias est donné et que la version non-alias est également donnée, alors la valeur sera tirée de la version non-alias.
 
-> **Attention :** A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
+> [!WARNING]
+> A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
 
-| Nom                   | Alias pour                                  |
-| --------------------- | ------------------------------------------- |
+| Nom                   | Alias pour                           |
+| --------------------- | ------------------------------------ |
 | `bookmark_text`       | `toolbar_text {{Deprecated_Inline}}` |
 | `frame`               | `accentcolor {{Deprecated_Inline}}`  |
 | `frame_inactive`      | `accentcolor {{Deprecated_Inline}}`  |
@@ -1320,7 +1315,7 @@ En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une
         <p>Optional.</p>
         <p>
           Un tableau de valeurs d'énumérations définissant, comme l'élément de
-          tableau  <code>"additional_backgrounds":</code> correspondant de
+          tableau <code>"additional_backgrounds":</code> correspondant de
           répétition. Les options comprennent :
         </p>
         <ul>
@@ -1416,38 +1411,6 @@ Il vous donnera un navigateur qui ressemble à ceci :
 
 Dans cette capture d'écran, `"toolbar_vertical_separator"` est la ligne verticale blanche dans la barre d'URL divisant l'icône du mode Lecteur des autres icônes.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme")}}
-
-### Couleurs
-
-{{Compat("webextensions.manifest.theme.colors", 10)}}
-
-### Images
-
-{{Compat("webextensions.manifest.theme.images", 10)}}
-
-### Propriétés
-
-{{Compat("webextensions.manifest.theme.properties", 10)}}
-
-### Compatibilité de Chrome
-
-Dans Chrome:
-
-- `colors/toolbar_text` n'est pas utilisé, utilisez `colors/bookmark_text` à la place.
-- `images/theme_frame` ancre l'image en haut à gauche de l'en-tête et si l'image ne remplit pas la zone de l'en-tête de l'image.
-- toutes les couleurs doivent être spécifiées sous la forme d'un tableau de valeurs RVB, comme ceci :
-
-```json
-"theme": {
-  "colors": {
-     "frame": [255, 0, 0],
-     "tab_background_text": [0, 255, 0],
-     "bookmark_text": [0, 0, 255]
-  }
-}
-```
-
-A partir de Firefox 59, la forme tableau et la forme couleur CSS sont acceptées pour toutes les propriétés. Avant cela, `colors/frame` et `colors/tab_background_text` nécessitaient la forme tableau, alors que d'autres propriétés nécessitaient la forme couleur CSS.
+{{Compat}}

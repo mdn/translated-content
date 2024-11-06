@@ -1,12 +1,11 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-tags:
-  - API
-  - Glisser-deposer
-translation_of: Web/API/DataTransfer
 ---
-L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Glisser_et_d%C3%A9poser).
+
+{{APIRef("HTML Drag and Drop API")}}
+
+L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Glisser_et_déposer).
 
 Cet objet est disponible depuis la propriété `dataTransfer` de tous les événements de glisser. Il ne peut pas être créé séparément.
 
@@ -193,7 +192,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
 
 L'effet utilisé, qui doit toujours être l'une des valeurs possibles de `effectAllowed`.
 
-Pour les événements ` d``ragenter ` et `dragover`, la propriété `dropEffect` est initialisée en fonction des actions initiées par l'utilisateur. Ceci est spécifique à la plateforme, mais en général, l'utilisateur peut appuyer sur les touches de modification pour ajuster l'action souhaitée. Dans un gestionnaire d'événement ` d``ragenter ` et `dragover`, la propriété `dropEffect` peut être modifiée si l'action de l'utilisateur demandée n'est pas celle souhaitée.
+Pour les événements `dragenter` et `dragover`, la propriété `dropEffect` est initialisée en fonction des actions initiées par l'utilisateur. Ceci est spécifique à la plateforme, mais en général, l'utilisateur peut appuyer sur les touches de modification pour ajuster l'action souhaitée. Dans un gestionnaire d'événement `dragenter` et `dragover`, la propriété `dropEffect` peut être modifiée si l'action de l'utilisateur demandée n'est pas celle souhaitée.
 
 Pour les évènements `dragstart`, `drag`, and `dragleave` events, `dropEffect` est initialisé à "none". Toute valeur peut être assignée à `dropEffect`, mais elle sera ignorée.
 
@@ -232,7 +231,7 @@ Contient une liste de tous les fichiers locaux disponibles sur le transfert de d
 
 #### Exemple
 
-Cet exemple retourne la liste des fichiers traînée dans la fenêtre du navigateur: <http://jsfiddle.net/9C2EF/>
+Cet exemple retourne la liste des fichiers traînée dans la fenêtre du navigateur: <https://jsfiddle.net/9C2EF/>
 
 ### types
 
@@ -240,7 +239,8 @@ Contient une liste des types de format des données stockées pour le premier é
 
 L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisée pour contrôler le curseur au cours d'un glisser d'onglet.
 
-> **Note :** Cette méthode n'est actuellement implémentée que sur Windows.
+> [!NOTE]
+> Cette méthode n'est actuellement implémentée que sur Windows.
 
 #### Valeurs possibles
 
@@ -249,25 +249,29 @@ L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisé
 - `default`
   - : Utilise le comportement par défaut de Gecko, qui consiste à utiliser une flèche pour curseur au cours d'un glisser.
 
-> **Note :** Si vous spécifiez une valeur autre que "default", "auto" est supposé.
+> [!NOTE]
+> Si vous spécifiez une valeur autre que "default", "auto" est supposé.
 
 ### mozItemCount
 
 Le nombre d'éléments glissés.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ### mozSourceNode
 
 le {{ domxref("Node") }} au dessus duquel le curseur de la souris se trouvait lorsque le bouton a été pressé pour initialiser le glisser. Cette valeur est nulle pour un glisser externe, ou si l'appelant ne peut pas accéder au nœud.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ### mozUserCancelled
 
 Cette propriété s'applique uniquement à l'événement `dragend`, et est positionnée à `true` si l'utilisateur a annulé le glisser en appuyant sur la touche échappe. Elle est positionnée à `false` dans les autres cas, y compris si le glisser a échoué pour toute autre raison, par exemple en raison d'un déposer sur un emplacement non valide. Cette propriété n'est pas encore implémenté sous Linux.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ## Methods
 
@@ -275,9 +279,11 @@ Cette propriété s'applique uniquement à l'événement `dragend`, et est posit
 
 Spécifie la source du glisser. Ceci est rarement utilisé, mais a pour effet de modifier la cible des événements `drag` et `dragend`. La cible par défaut est le nœud qui est glissé.
 
-     void addElement(
-       in Element element
-     );
+```
+void addElement(
+  in Element element
+);
+```
 
 #### Parametres
 
@@ -288,9 +294,11 @@ Spécifie la source du glisser. Ceci est rarement utilisé, mais a pour effet de
 
 Supprime les données associées au type spécifié. L'argument type est facultatif. Si le type est vide ou non spécifié, les données associées à tous les types sont supprimées. Si les données pour le type spécifié n'existent pas, ou le transfert de données ne contient pas de données, cette méthode n'aura aucun effet.
 
-     void clearData(
-       [optional] in String type
-     );
+```
+void clearData(
+  [optional] in String type
+);
+```
 
 #### Parametres
 
@@ -303,9 +311,11 @@ Récupère les données du type spécifié, ou une chaîne vide si les données 
 
 Une erreur de sécurité se produira si vous tentez de récupérer des données lors d'un glisser qui a été spécifié à partir d'un domaine différent ou auquel l'appelant n'a pas accès. Ces données ne seront disponibles qu'à l'issue du déposer au cours d'un événement drop.
 
-     void getData(
-       in String type
-     );
+```
+void getData(
+  in String type
+);
+```
 
 #### Parametres
 
@@ -316,10 +326,12 @@ Une erreur de sécurité se produira si vous tentez de récupérer des données 
 
 Définit une donnée pour le type spécifié. Si des données pour le type n'existe pas, elle est ajoutée à la fin, de telle sorte que le dernier élément dans la liste des types sera le nouveau format. Si une donnée pour le type existe déjà, la donnée existante est remplacée à la même position. C'est-à-dire que l'ordre de la liste des types ne change pas lors du remplacement de la donnée d'un même type.
 
-     void setData(
-       in String type,
-       in String data
-     );
+```
+void setData(
+  in String type,
+  in String data
+);
+```
 
 #### Parametres
 
@@ -336,11 +348,13 @@ Si le nœud est un élément HTML img, un élément canvas HTML ou un élément 
 
 Les coordonnées spécifient le décalage à l'intérieur de l'image spécifiant la position du curseur de la souris. Pour centrer l'image, par exemple, utiliser des valeurs qui sont la moitié de la largeur et de la hauteur de l'image.
 
-     void setDragImage(
-       in Element image,
-       in long x,
-       in long y
-     );
+```
+void setDragImage(
+  in Element image,
+  in long x,
+  in long y
+);
+```
 
 #### Parametres
 
@@ -359,14 +373,15 @@ Si le dernier format de l'élément est supprimé, l'élément entier est retir�
 
 Si la liste `format` est vide, alors les données associées à tous les formats sont supprimées. Si le format n'est pas trouvé, alors cette méthode n'a aucun effet.
 
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
-
-> **Note :** Cette méthode est spécifique à Gecko.
-
-     void mozClearDataAt(
-       [optional] in String type,
-       in unsigned long index
-     );
+```
+void mozClearDataAt(
+  [optional] in String type,
+  in unsigned long index
+);
+```
 
 #### Parametres
 
@@ -379,12 +394,15 @@ Si la liste `format` est vide, alors les données associées à tous les formats
 
 Récupère les données associées au format donné pour un élément à l'index spécifié, ou null si elle n'existe pas. L'indice devrait être compris entre zéro et le nombre d'éléments moins un.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
-     nsIVariant mozGetDataAt(
-       [optional] in String type,
-       in unsigned long index
-     );
+```
+nsIVariant mozGetDataAt(
+  [optional] in String type,
+  in unsigned long index
+);
+```
 
 #### Parametres
 
@@ -395,19 +413,22 @@ Récupère les données associées au format donné pour un élément à l'index
 
 ### mozSetDataAt()
 
-Un transfert de données peut stocker plusieurs éléments, chacun à un index commençant à zéro. ` mozSetDataAt(``) ` ne peut être appelé qu'avec un index inférieur à `mozItemCount,` auquel cas un élément existant est modifié, ou égal à `mozItemCount,` auquel cas un nouvel élément est ajouté, et `mozItemCount` est incrémenté de un.
+Un transfert de données peut stocker plusieurs éléments, chacun à un index commençant à zéro. `mozSetDataAt()` ne peut être appelé qu'avec un index inférieur à `mozItemCount,` auquel cas un élément existant est modifié, ou égal à `mozItemCount,` auquel cas un nouvel élément est ajouté, et `mozItemCount` est incrémenté de un.
 
 Les données doivent être ajoutées par ordre de préférence, avec le format le plus spécifique ajouté en premier et le format moins spécifique ajouté en dernier. Si la donnée du format spécifié existe déjà, elle est remplacée dans la même position que la donnée précédente.
 
 La donnée doit être une chaîne, ou un type primitif booléen, ou un type numérique (qui sera converti en une chaîne), ou une [nsISupports](/fr/docs/XPCOM_Interface_Reference/nsISupports).
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
-     void mozSetDataAt(
-       [optional] in String type,
-       in nsIVariant data,
-       in unsigned long index
-     );
+```
+void mozSetDataAt(
+  [optional] in String type,
+  in nsIVariant data,
+  in unsigned long index
+);
+```
 
 #### Parametres
 
@@ -422,11 +443,14 @@ La donnée doit être une chaîne, ou un type primitif booléen, ou un type num�
 
 Contient une liste des types de format des données qui sont stockées pour un élément à l'index spécifié. Si l'index n'est pas dans compris entre 0 et le nombre d'éléments moins un, une liste de chaîne vide est retournée.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
-     nsIVariant mozTypesAt(
-       in unsigned long index
-     );
+```
+nsIVariant mozTypesAt(
+  in unsigned long index
+);
+```
 
 #### Parameters
 
@@ -435,4 +459,4 @@ Contient une liste des types de format des données qui sont stockées pour un �
 
 ## Voir Aussi
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/fr/docs/Web/DragDrop/Drag_and_Drop)

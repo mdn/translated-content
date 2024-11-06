@@ -1,17 +1,8 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-tags:
-  - クラス
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - PluralRules
-  - リファレンス
-browser-compat: javascript.builtins.Intl.PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules`** オブジェクトは、複数形が影響する書式や言語ルールを使用できるようにします。
@@ -44,15 +35,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ```js
 // アラビア語は様々な複数形の規則を持っています
 
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

@@ -1,15 +1,8 @@
 ---
 title: NON binaire (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
-browser-compat: javascript.operators.bitwise_not
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et fournit la valeur ainsi obtenue. À l'instar des autres opérateurs binaires, il convertit son opérande en un entier signé sur 32 bits.
@@ -19,14 +12,14 @@ L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et
 ## Syntaxe
 
 ```js
-~a
+~a;
 ```
 
 ## Description
 
 L'opérande est converti en un entier signé sur 32 bits. Les nombres avec plus de 32 bits voient leurs bits les plus significatifs être tronqués. Voici un exemple où l'entier qui suit est supérieur à une valeur pouvant être exprimée sur 32 bits : la conversion écrête la valeur pour obtenir un entier signé sur 32 bits :
 
-```js
+```plain
 Avant : 11100110111110100000000000000110000000000001
 Après :             10100000000000000110000000000001
 ```
@@ -43,10 +36,11 @@ La table de vérité pour l'opération `NON` est :
 ```js
  9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
+
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
-L'entier signé sur 32 bits est inversé selon [le complément à deux](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_%C3%A0_deux). Autrement dit, la présence du bit le plus significatif est utilisée pour exprimer des entiers négatifs.
+L'entier signé sur 32 bits est inversé selon [le complément à deux](https://fr.wikipedia.org/wiki/Complément_à_deux). Autrement dit, la présence du bit le plus significatif est utilisée pour exprimer des entiers négatifs.
 
 Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x + 1)`. Ainsi, `~-5` renverra `4`.
 
@@ -57,9 +51,9 @@ Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x +
 ### Utiliser le NON binaire
 
 ```js
-~0;  // -1
+~0; // -1
 ~-1; // 0
-~1;  // -2
+~1; // -2
 ```
 
 ## Spécifications

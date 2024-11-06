@@ -1,11 +1,8 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-width
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
@@ -17,7 +14,11 @@ Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -26,12 +27,10 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="3" stroke="green" />
 
   <!-- Définit l'épaisseur avec un nombre -->
-  <circle cx="15" cy="5" r="3" stroke="green"
-          stroke-width="3" />
+  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
   <!-- Définit l'épaisseur avec un pourcentage -->
-  <circle cx="25" cy="5" r="3" stroke="green"
-          stroke-width="2%" />
+  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
 
@@ -65,38 +64,15 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!NOTE]
+> SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 Une valeur en pourcentage est toujours calculée en tant que pourcentage de la longueur diagonale {{SVGAttr('viewBox')}} normalisée.
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-width")}}
-
-## Spécification
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeWidthProperty", "stroke-width")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td><p>Définition pour les formes et le texte</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeWidthProperty", "stroke-width")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Définition initiale pour les formes et le texte</td>
-    </tr>
-  </tbody>
-</table>
+{{Compat}}

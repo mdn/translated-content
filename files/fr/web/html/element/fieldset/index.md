@@ -1,17 +1,9 @@
 ---
-title: '<fieldset> : l''élément pour les ensembles de champs'
-slug: Web/HTML/Element/Fieldset
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/fieldset
-browser-compat: html.elements.fieldset
+title: "<fieldset> : l'élément pour les ensembles de champs"
+slug: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Element/Label)) dans un formulaire HTML.
 
@@ -31,7 +23,8 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
   - : Le nom associé au groupe.
 
-    > **Note :** L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/Legend) du `<fieldset>`.
+    > [!NOTE]
+    > L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/Legend) du `<fieldset>`.
 
 ## Mise en forme avec CSS
 
@@ -57,7 +50,7 @@ Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul 
 <form action="#">
   <fieldset>
     <legend>Titre simple</legend>
-    <input type="radio" name="radio" id="radio">
+    <input type="radio" name="radio" id="radio" />
     <label for="radio">L'esprit de la radio</label>
   </fieldset>
 </form>
@@ -79,11 +72,11 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
     <legend>Fieldset désactivé</legend>
     <div>
       <label for="name">Nom : </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archétype : </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>

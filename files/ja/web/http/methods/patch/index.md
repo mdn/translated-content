@@ -1,12 +1,8 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-translation_of: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `PATCH` リクエストメソッド**は、リソースへの部分的な変更を適用します。
@@ -43,7 +39,7 @@ translation_of: Web/HTTP/Methods/PATCH
     </tr>
     <tr>
       <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
-      <td>不可</td>
+      <td>鮮度を表す情報が含まれている場合のみ可能</td>
     </tr>
     <tr>
       <th scope="row">
@@ -76,9 +72,9 @@ Content-Length: 100
 
 ### レスポンス
 
-成功レスポンスは [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) ステータスコードで示されます。
+成功レスポンスは [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) ステータスコードで示されます。
 
-この例の場合、本文が含まれていないため {{HTTPStatus("204")}} コードで成功レスポンスが示されます。もし {{HTTPStatus("200")}} コードであれば本文が含まる可能性があります。 
+この例の場合、本文が含まれていないため {{HTTPStatus("204")}} コードで成功レスポンスが示されます。もし {{HTTPStatus("200")}} コードであれば本文が含まる可能性があります。
 
 ```
 HTTP/1.1 204 No Content
@@ -88,8 +84,8 @@ ETag: "e0023aa4f"
 
 ## 仕様書
 
-| 仕様書                    | 題名                 |
-| -------------------------------- | --------------------- |
+| 仕様書                   | 題名                  |
+| ------------------------ | --------------------- |
 | {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
 ## 関連情報

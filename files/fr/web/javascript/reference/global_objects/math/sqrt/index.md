@@ -1,14 +1,8 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sqrt
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par&nbsp;:
@@ -19,7 +13,9 @@ La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonct
 
 ## Syntaxe
 
-    Math.sqrt(x)
+```js
+Math.sqrt(x);
+```
 
 ### Paramètres
 
@@ -39,27 +35,22 @@ Si la valeur de `x` est négative, `sqrt` renverra {{jsxref("NaN")}}.
 ## Exemples
 
 ```js
-Math.sqrt(9);  // 3
-Math.sqrt(2);  // 1.414213562373095
+Math.sqrt(9); // 3
+Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0
 ```
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.sqrt")}}
+{{Compat}}
 
 ## Voir aussi
 

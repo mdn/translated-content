@@ -1,13 +1,8 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/tab-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).
@@ -48,6 +43,8 @@ tab-size: unset;
 
 ### HTML
 
+<!-- markdownlint-disable MD010 -->
+
 ```html
 <pre class="exemple">
 	print "tabulation avant"
@@ -70,13 +67,11 @@ tab-size: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#tab-size-property', 'tab-size')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.tab-size")}}
+{{Compat}}
 
 ## Voir aussi
 

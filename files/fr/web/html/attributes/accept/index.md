@@ -1,15 +1,8 @@
 ---
-title: 'Attribut HTML : accept'
+title: "Attribut HTML : accept"
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Attributes/accept
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`accept`** prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une [spécification de type de fichier unique](#unique_file_type_specifiers), décrivant les types de fichiers à autoriser. La propriété `accept` est un attribut pour les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type [`file`](/fr/docs/Web/HTML/Element/Input/file). Elle était prise en charge par l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form), mais a été supprimée au profit de [`file`](/fr/docs/Web/HTML/Element/Input/file) dans HTML5.
@@ -19,16 +12,18 @@ Comme un type de fichier donné peut être identifié de plusieurs manières, il
 Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un `<input>` comme celui-ci&nbsp;:
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média&nbsp;:
 
 ```html
-<input type="file" id="soundFile" accept="audio/*">
-<input type="file" id="videoFile" accept="video/*">
-<input type="file" id="imageFile" accept="image/*">
+<input type="file" id="soundFile" accept="audio/*" />
+<input type="file" id="videoFile" accept="video/*" />
+<input type="file" id="imageFile" accept="image/*" />
 ```
 
 L'attribut `accept` ne valide pas les types de fichiers sélectionnés ; il fournit des indications aux navigateurs pour guider les utilisateurs vers la sélection des bons types de fichiers. Il est toujours possible (dans la plupart des cas) pour les utilisateurs de basculer une option dans le sélecteur de fichiers qui permet de passer outre et de sélectionner le fichier de leur choix, puis de choisir des types de fichiers incorrects.
@@ -42,15 +37,15 @@ Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fi
 ```html
 <p>
   <label for="soundFile">Sélectionnez un fichier audio :</label>
-  <input type="file" id="soundFile" accept="audio/*">
+  <input type="file" id="soundFile" accept="audio/*" />
 </p>
 <p>
   <label for="videoFile">Sélectionnez un fichier vidéo :</label>
-  <input type="file" id="videoFile" accept="video/*">
+  <input type="file" id="videoFile" accept="video/*" />
 </p>
 <p>
   <label for="imageFile">Sélectionner des images :</label>
-  <input type="file" id="imageFile" accept="image/*" multiple>
+  <input type="file" id="imageFile" accept="image/*" multiple />
 </p>
 ```
 
@@ -71,7 +66,7 @@ Un **spécificateur de type de fichier unique** est une chaîne qui décrit un t
 L'attribut `accept` prend comme valeur une chaîne de caractères contenant une ou plusieurs de ces spécificateurs de type de fichier unique, séparées par des virgules. Par exemple, un sélecteur de fichiers qui a besoin d'un contenu pouvant être présenté comme une image, y compris les formats d'image standard et les fichiers PDF, pourrait ressembler à ceci :
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## Utilisation des champs pour saisir des fichiers
@@ -82,7 +77,7 @@ L'attribut `accept` prend comme valeur une chaîne de caractères contenant une 
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="file">Choisissez le fichier à téléverser</label>
-    <input type="file" id="file" name="file" multiple>
+    <input type="file" id="file" name="file" multiple />
   </div>
   <div>
     <button>Soumettre</button>
@@ -100,7 +95,8 @@ Cela produit le résultat suivant :
 
 {{EmbedLiveSample('Utilisation_des_champs_pour_saisir_des_fichiers', 650, 100)}}
 
-> **Note :** Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Quel que soit le dispositif ou le système d'exploitation de l'utilisateur, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur de choisir un fichier.
 
@@ -123,8 +119,11 @@ Examinons un exemple plus complet :
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choisissez le fichier à téléverser</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Soumettre</button>
@@ -142,14 +141,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Voir aussi
 

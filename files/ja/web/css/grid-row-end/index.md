@@ -1,17 +1,13 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-row-end
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
-**`grid-row-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの末尾側の端を指定します。
+**`grid-row-end`** は CSS のプロパティで、グリッド行の中におけるグリッドアイテムの末尾の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の末尾の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-row-end.html")}}
 
@@ -37,6 +33,7 @@ grid-row-end: 5 somegridarea span;
 grid-row-end: inherit;
 grid-row-end: initial;
 grid-row-end: revert;
+grid-row-end: revert-layer;
 grid-row-end: unset;
 ```
 
@@ -48,9 +45,10 @@ grid-row-end: unset;
 
   - : `<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
+    > [!NOTE]
+    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
 
- そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
+    そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
     `<custom-ident>` は `span` の値を取ることができません。
 
@@ -118,7 +116,9 @@ grid-row-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -144,7 +144,7 @@ grid-row-end: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_row_end_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの行の末尾位置の設定', '230', '420') }}
 
 ## 仕様書
 
@@ -157,5 +157,5 @@ grid-row-end: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-row-start")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- グリッドレイアウトガイド: [CSS グリッドでの行ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

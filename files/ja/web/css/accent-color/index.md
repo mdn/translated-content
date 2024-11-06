@@ -1,19 +1,10 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ユーザーインターフェイス
-  - HTML 色
-  - Input
-  - リファレンス
-  - HTML 整形
-  - accent-color
-  - recipe:css-property
-browser-compat: css.properties.accent-color
-translation_of: Web/CSS/accent-color
+l10n:
+  sourceCommit: 3c1fd4b3e12458003f4d325ad394fc62bcc7fb3b
 ---
+
 {{CSSRef}}
 
 **`accent-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{Glossary("accent", "強調表示")}}色を設定します。
@@ -27,6 +18,8 @@ translation_of: Web/CSS/accent-color
 - [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
 - [`<progress>`](/ja/docs/Web/HTML/Element/progress)
 
+各ユーザーエージェントには、読みやすさとコントラストを確実に保持するためのバリエーションを持つアクセントカラーがあります。そのアクセントカラーはすべてのユーザーインターフェイスコントロールで使用されるわけではなく、コントロールのすべての状態で使用されるわけでもありません。 `accent-color` は、それが適用される状態でアクセントカラーを使用するユーザーインターフェイスコントロールにのみ適用されます。
+
 ## 構文
 
 ```css
@@ -34,15 +27,16 @@ translation_of: Web/CSS/accent-color
 accent-color: auto;
 
 /* <color> 値 */
-accent-color: red;
+accent-color: darkred;
 accent-color: #5729e9;
-accent-color: rgb(0, 200, 0);
-accent-color: hsl(228, 4%, 24%);
+accent-color: rgb(0 200 0);
+accent-color: hsl(228 4% 24%);
 
 /* グローバル値 */
 accent-color: inherit;
 accent-color: initial;
 accent-color: revert;
+accent-color: revert-layer;
 accent-color: unset;
 ```
 
@@ -89,7 +83,7 @@ input.custom {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
+{{EmbedLiveSample('独自の強調色を設定', 500, 200)}}
 
 ## 仕様書
 
@@ -101,7 +95,7 @@ input.custom {
 
 ## 関連情報
 
-- {{HTMLElement("input")}} 要素
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: その他の色に関するプロパティ
 - {{cssxref("&lt;color&gt;")}} データ型
-- その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
+- {{HTMLElement("input")}} 要素
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

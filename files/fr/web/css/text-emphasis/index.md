@@ -1,12 +1,8 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis
 ---
+
 {{CSSRef}}
 
 La propriété **`text-emphasis`** est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.
@@ -27,13 +23,13 @@ text-emphasis: none; /* Pas de marque */
 
 /* Chaîne de caractères */
 /* Type <string>        */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
 /* À ne pas utiliser, cela pourra être */
 /* considéré comme 't' uniquement      */
-text-emphasis: 'toto';
+text-emphasis: "toto";
 
 /* Valeurs avec mot(s)-clé(s) */
 text-emphasis: filled;
@@ -73,9 +69,13 @@ text-emphasis: unset;
 - `<color>`
   - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera `currentColor`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -99,15 +99,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis")}}
+{{Compat}}
 
 ## Voir aussi
 

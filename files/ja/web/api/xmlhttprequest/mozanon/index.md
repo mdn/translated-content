@@ -1,18 +1,11 @@
 ---
-title: XMLHttpRequest.mozAnon
+title: "XMLHttpRequest: mozAnon プロパティ"
+short-title: mozAnon
 slug: Web/API/XMLHttpRequest/mozAnon
-tags:
-  - API
-  - 認証
-  - Cookies
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - mozAnon
-translation_of: Web/API/XMLHttpRequest/mozAnon
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.mozAnon`** は論理値です。 true の場合、リクエストは Cookie や認証ヘッダーなしで送信されます。

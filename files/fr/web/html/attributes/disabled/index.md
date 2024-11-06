@@ -1,23 +1,18 @@
 ---
-title: 'Attribut HTML : disabled'
+title: "Attribut HTML : disabled"
 slug: Web/HTML/Attributes/disabled
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/disabled
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non mutable, non focusable, ou même non soumis avec le formulaire. L'utilisateur ne peut ni modifier ni cibler le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est spécifié sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun événement de navigation, comme les clics de souris ou les événements liés au focus.
 
-L'attribut `disabled` est utilisé par [`<button>`](/fr/docs/Web/HTML/Element/Button), [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset), [`<keygen>`](/fr/docs/Web/HTML/Element/Keygen), [`<optgroup>`](/fr/docs/Web/HTML/Element/Optgroup), [`<option>`](/fr/docs/Web/HTML/Element/Option), [`<select>`](/fr/docs/Web/HTML/Element/select), [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) et [`<input>`](/fr/docs/Web/HTML/Element/Input).
+L'attribut `disabled` est utilisé par [`<button>`](/fr/docs/Web/HTML/Element/Button), [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset), [`<optgroup>`](/fr/docs/Web/HTML/Element/Optgroup), [`<option>`](/fr/docs/Web/HTML/Element/Option), [`<select>`](/fr/docs/Web/HTML/Element/select), [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) et [`<input>`](/fr/docs/Web/HTML/Element/Input).
 
 Cet attribut booléen indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite ce paramètre de l'élément contenant, par exemple `fieldset` ; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un [`<optgroup>`](/fr/docs/Web/HTML/Element/Optgroup), le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.
 
-> **Note :** Si un [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset) est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ([`<legend>`](/fr/docs/Web/HTML/Element/Legend)).
+> [!NOTE]
+> Si un [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset) est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ([`<legend>`](/fr/docs/Web/HTML/Element/Legend)).
 
 Lorsqu'un élément de support a l'attribut `disabled` est appliqué, la pseudo-classe [`:disabled`](/fr/docs/Web/CSS/:disabled) s'y applique également. Inversement, les éléments qui prennent en charge l'attribut `disabled` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe [`:enabled`](/fr/docs/Web/CSS/:enabled).
 
@@ -31,7 +26,8 @@ La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Attributes/rea
 
 Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, [`required`](/fr/docs/Web/HTML/Attributes/required) n'a aucun effet sur les entrées dont l'attribut `disabled` est également spécifié. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que [`pattern`](/fr/docs/Web/HTML/Attributes/pattern), n'ont aucun effet, tant que le contrôle n'est pas activé.
 
-> **Note :** L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `disabled` est spécifié.
+> [!NOTE]
+> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `disabled` est spécifié.
 
 ### Utilisation
 
@@ -50,26 +46,35 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 ```html
 <fieldset>
   <legend>Cases à cocher</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> Régulier
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> désactivé
-  </label></p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="regular" /> Régulier
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="disabled" disabled /> désactivé
+    </label>
+  </p>
 </fieldset>
 
 <fieldset>
   <legend>Boutons radio</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> Régulier
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> désactivé
-  </label></p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="regular" /> Régulier
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="disabled" disabled /> désactivé
+    </label>
+  </p>
 </fieldset>
 
 <p>
-  <label>Sélectionnez une option :
+  <label
+    >Sélectionnez une option :
     <select>
       <optgroup label="Groupe 1">
         <option>Option 1.1</option>
@@ -91,10 +96,12 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 <fieldset disabled>
   <legend>Champ désactivé</legend>
   <p>
-    <label>Nom : <input type="name" name="radio" value="régulier"> Régulier</label>
+    <label
+      >Nom : <input type="name" name="radio" value="régulier" /> Régulier</label
+    >
   </p>
   <p>
-    <label>Nombre : <input type="number"></label>
+    <label>Nombre : <input type="number" /></label>
   </p>
 </fieldset>
 ```
@@ -103,15 +110,11 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-disabled', 'disabled attribute')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-disabled', 'disabled attribute')}}         | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-disabled-attribute', 'disabled attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## Voir aussi
 

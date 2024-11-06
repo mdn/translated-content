@@ -1,21 +1,8 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - Limits
-  - 最大
-  - リファレンス
-  - 寸法
-  - max-width
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.max-width
-translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
 **`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、 `max-width` で指定した値を上回ることを防ぎます。
@@ -65,7 +52,7 @@ max-width: unset;
 
 ページを拡大縮小して文字サイズを拡大した際に、 `max-width` を設定した要素が他のコンテンツを切り捨てたり妨げたりしないことを確認してください。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 公式定義
@@ -121,6 +108,6 @@ max-width: unset;
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - 対応する論理的プロパティ: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}

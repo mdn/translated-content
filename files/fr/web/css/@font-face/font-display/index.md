@@ -1,13 +1,8 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-tags:
-  - CSS
-  - Descripteur
-  - Experimental
-  - Reference
-translation_of: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
@@ -58,8 +53,9 @@ font-display: optional;
 ```css
 @font-face {
   font-family: FonteExemple;
-  src: url(/chemin/vers/fonts/examplefont.woff) format('woff'),
-       url(/chemin/vers/fonts/examplefont.eot) format('eot');
+  src:
+    url(/chemin/vers/fonts/examplefont.woff) format("woff"),
+    url(/chemin/vers/fonts/examplefont.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -68,10 +64,8 @@ font-display: optional;
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}

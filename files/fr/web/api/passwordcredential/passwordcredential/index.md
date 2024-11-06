@@ -1,14 +1,8 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential/PasswordCredential
-tags:
-  - API
-  - Constructeur
-  - Credential Management API
-  - PasswordCredential
-  - Reference
-translation_of: Web/API/PasswordCredential/PasswordCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`PasswordCredential`** permet de créer un nouvel objet {{domxref("PasswordCredential")}}.
@@ -17,8 +11,10 @@ Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance 
 
 ## Syntaxe
 
-    var mesCredentials = new PasswordCredential(passwordCredentialData)
-    var mesCredentials = new PasswordCredential(HTMLFormElement)
+```js
+var mesCredentials = new PasswordCredential(passwordCredentialData);
+var mesCredentials = new PasswordCredential(HTMLFormElement);
+```
 
 ### Paramètres
 
@@ -55,21 +51,18 @@ Dans cet exemple, nous verrons comment définir un formulaire et capturer les do
 Dans le script, on pourra faire référence à ce formulaire et l'utiliser pour créer un objet {{domxref("PasswordCredential")}} afin de le stocker dans le système de mots de passe de l'agent utilisateur.
 
 ```js
-var form = document.querySelector('#form');
+var form = document.querySelector("#form");
 var creds = new PasswordCredential(form);
 // Stocker les informations d'authentification
-navigator.credentials.store(creds)
-  .then(function(creds) {
+navigator.credentials.store(creds).then(function (creds) {
   // Faire quelque chose avec les informations d'authentification si besoin
 });
 ```
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.PasswordCredential")}}
+{{Compat}}

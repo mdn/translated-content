@@ -1,18 +1,14 @@
 ---
-title: '-webkit-transform-2d'
+title: "-webkit-transform-2d"
 slug: Web/CSS/@media/-webkit-transform-2d
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/@media/-webkit-transform-2d
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-transform-2d`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui indique si les transformations CSS en 2D (cf. {{cssxref("transform")}}) préfixées sont prises en charge par le navigateur.
 
-> **Note :** Cette caractéristique est uniquement prise en charge par WebKit et Blink. Mieux vaut utiliser la méthode alternative standard avec {{cssxref("@supports")}} à la place si possible.
+> [!NOTE]
+> Cette caractéristique est uniquement prise en charge par WebKit et Blink. Mieux vaut utiliser la méthode alternative standard avec {{cssxref("@supports")}} à la place si possible.
 
 ## Spécifications
 
@@ -20,7 +16,7 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transform-2d")}}
+{{Compat}}
 
 ## Voir aussi
 

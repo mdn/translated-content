@@ -1,21 +1,18 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-tags:
-  - API
-  - Propriété
-  - Reference
-translation_of: Web/API/ServiceWorker/onstatechange
-original_slug: Web/API/ServiceWorker/onstatechange
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
 
-## Syntax
+## Syntaxe
 
-    ServiceWorker.onstatechange = function(statechangeevent) { ... }
-    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```js
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
 ## Examples
 
@@ -25,19 +22,19 @@ Ce fragment de code présente [un exemple d'enregistrement d'évenements pour le
 var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
-  document.querySelector('#kind').textContent = 'installé';
+  document.querySelector("#kind").textContent = "installé";
 } else if (registration.waiting) {
   serviceWorker = registration.waiting;
-  document.querySelector('#kind').textContent = 'en attente';
+  document.querySelector("#kind").textContent = "en attente";
 } else if (registration.active) {
   serviceWorker = registration.active;
-  document.querySelector('#kind').textContent = 'actif';
+  document.querySelector("#kind").textContent = "actif";
 }
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+  serviceWorker.addEventListener("statechange", function (e) {
+    logState(e.target.state);
   });
 }
 ```
@@ -56,12 +53,10 @@ navigator.serviceWorker.register(..).then(function(swr) {
 })
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                | État                                 | Commentaire        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#service-worker-onstatechange-attribute', 'ServiceWorker.onstatechange')}} | {{Spec2('Service Workers')}} | Définition intiale |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorker.onstatechange")}}
+{{Compat}}

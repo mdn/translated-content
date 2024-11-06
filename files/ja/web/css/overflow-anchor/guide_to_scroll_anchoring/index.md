@@ -1,13 +1,8 @@
 ---
 title: スクロールアンカリングの紹介
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-tags:
-  - CSS
-  - ガイド
-  - overflow-anchor
-  - スクロールアンカリング
-translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 ---
+
 {{CSSRef}}
 
 ウェブのユーザーであれば、おそらくスクロールアンカリングが解決する問題をよく知っているはずです。速度の遅い接続で長いページを閲覧し、コンテンツを読むためにスクロールを始めるとします。一所懸命に読んでいる間に、ページの見ている部分が突然ジャンプしてしまうことがあります。これはコンテンツの上部に、大きな画像やその他の要素が読み込まれたことによって引き起こされます。
@@ -57,7 +52,8 @@ body {
 }
 ```
 
-> **Note:** 仕様書にも書かれていますが、スクロールアンカリングが無効にされた場合、その子孫要素から再び有効にすることはできません。例えば、スクロールアンカリングが文書全体で無効にされた際、文書内の一部に `overflow-anchor: auto` を指定しても、その部分でスクロールアンカリングは動作しません。
+> [!NOTE]
+> 仕様書にも書かれていますが、スクロールアンカリングが無効にされた場合、その子孫要素から再び有効にすることはできません。例えば、スクロールアンカリングが文書全体で無効にされた際、文書内の一部に `overflow-anchor: auto` を指定しても、その部分でスクロールアンカリングは動作しません。
 
 ### 抑制トリガー
 
@@ -72,7 +68,8 @@ body {
 
 さらに、スクロールボックス内の任意の場所で {{cssxref("position")}} を変更した場合もスクロールアンカリングが無効になります。
 
-> **Note:** バグ {{bug(1584285)}} で、Firefox Nightly に `layout.css.scroll-anchoring.suppressions.enabled` フラグが追加され、これらのトリガーを無効化できるようになりました。
+> [!NOTE]
+> バグ [Firefox バグ 1584285](https://bugzil.la/1584285) で、Firefox Nightly に `layout.css.scroll-anchoring.suppressions.enabled` フラグが追加され、これらのトリガーを無効化できるようになりました。
 
 ## その他の解説
 
@@ -84,4 +81,4 @@ body {
 
 ブラウザーでスクロールアンカリングが利用できるかどうかを検査する必要がある場合は、[機能クエリー](/ja/docs/Web/CSS/@supports)を使用して `overflow-anchor` プロパティに対応しているかどうかを検査してください。
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}

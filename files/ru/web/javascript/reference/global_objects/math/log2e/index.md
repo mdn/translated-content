@@ -1,0 +1,46 @@
+---
+title: Math.LOG2E
+slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+---
+
+{{JSRef}}
+
+## Сводка
+
+Свойство **`Math.LOG2E`** представляет двоичный логарифм из e, приблизительно равный 1,442:
+
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1,442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1,442</annotation></semantics></math>
+
+{{js_property_attributes(0, 0, 0)}}
+
+## Описание
+
+Поскольку свойство `LOG2E` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.LOG2E`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.LOG2E`
+
+Следующая функция возвращает двоичный логарифм из e:
+
+```js
+function getLog2e() {
+  return Math.LOG2E;
+}
+
+getLog2e(); // 1.4426950408889634
+```
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}} {{experimental_inline}}

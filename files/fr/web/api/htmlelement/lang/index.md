@@ -1,11 +1,8 @@
 ---
 title: element.lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/lang
 ---
+
 {{ ApiRef() }}
 
 ## Résumé
@@ -27,9 +24,9 @@ _langueUtilisee_ est une variable chaîne de caracteres recevant la langue dans 
 // ce bout de code compare la langue de base et
 // redirige vers une autre URL suivant la langue
 if (document.documentElement.lang === "en") {
-    window.location.href = "un_document.html.en";
-} else if(document.documentElement.lang === "ru") {
-    window.location.href = "un_document.html.ru";
+  window.location.href = "un_document.html.en";
+} else if (document.documentElement.lang === "ru") {
+  window.location.href = "un_document.html.ru";
 }
 ```
 
@@ -39,8 +36,6 @@ Les codes de langues renvoyés par cette propriété sont définis dans la [RFC 
 
 Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |
+{{Specifications}}

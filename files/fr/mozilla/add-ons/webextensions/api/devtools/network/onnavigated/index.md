@@ -1,26 +1,18 @@
 ---
 title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.network
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
 
 ## Syntaxe
 
 ```js
-browser.devtools.network.onNavigated.addListener(listener)
-browser.devtools.network.onNavigated.removeListener(listener)
-browser.devtools.network.onNavigated.hasListener(listener)
+browser.devtools.network.onNavigated.addListener(listener);
+browser.devtools.network.onNavigated.removeListener(listener);
+browser.devtools.network.onNavigated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -43,9 +35,9 @@ Les événements ont trois fonctions :
     - `url`
       - : `string`. La nouvelle URL pour la fenêtre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.onNavigated")}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,13 +51,14 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
 >
 > Les données de compatibilité de Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +85,4 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

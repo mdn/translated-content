@@ -1,22 +1,15 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS テキスト
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.overflow-wrap
-translation_of: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 **`overflow-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インライン要素に対して、テキストが行ボックスをあふれないように、ブラウザーが分割できない文字列の途中で改行を入れるかどうかの設定を適用します。
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-> **Note:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
+> **メモ:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
 
 このプロパティはもともと、標準外かつ接頭辞のない `word-wrap` と呼ばれる Microsoft 拡張であり、多くのブラウザーはこの名前で実装していました。 `overflow-wrap` に改名されたため、 `word-wrap` は別名になりました。
 
@@ -63,52 +56,67 @@ overflow-wrap: unset;
 #### HTML
 
 ```html
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>normal</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>word-break</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
-<p lang="en">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>normal</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, without
+  <code>lang</code> attribute)
+</p>
+<p lang="en">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, English rules)
+</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, German rules)
+</p>
 ```
 
 #### CSS
 
 ```css
 p {
-   width: 13em;
-   margin: 2px;
-   background: gold;
+  width: 13em;
+  margin: 2px;
+  background: gold;
 }
 
 .ow-anywhere {
-   overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .ow-break-word {
-   overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .word-break {
-   word-break: break-all;
+  word-break: break-all;
 }
 
 .hyphens {
-   hyphens: auto;
+  hyphens: auto;
 }
 ```
 

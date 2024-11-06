@@ -1,13 +1,8 @@
 ---
 title: Location.replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/API/Location/replace
 ---
+
 {{APIRef("Location")}}
 
 La méthode **`Location.replace()`** remplace la ressource actuelle par celle présente à l'URL donnée. La différence avec la méthode {{domxref("Location.assign","assign()")}} est que, après avoir utilisé `replace()`, la page actuelle ne sera pas enregistrée dans l'historique de session {{domxref("History")}}, ce qui signifie que l'utilisateur ne sera pas en mesure d'utiliser le bouton _précédent_ pour y revenir.
@@ -18,7 +13,9 @@ Si l'URL donnée n'est pas valide, une {{domxref("DOMException")}} de type `SYNT
 
 ## Syntaxe
 
-    object.replace(url);
+```js
+object.replace(url);
+```
 
 ### Paramètres
 
@@ -29,19 +26,18 @@ Si l'URL donnée n'est pas valide, une {{domxref("DOMException")}} de type `SYNT
 
 ```js
 // Navigue vers l'article Location.reload en remplaçant la page actuelle
-document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.replace(
+  "https://developer.mozilla.org/fr/docs/Web/API/Location.reload",
+);
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaires                                             |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-replace", "Location.replace()")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-replace", "Location.replace()")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

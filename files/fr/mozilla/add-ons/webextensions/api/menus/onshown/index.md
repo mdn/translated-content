@@ -1,18 +1,9 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensiosn
-  - Reference
-  - WebExtensions
-  - menus
-  - onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur a montré un menu.
 
@@ -20,7 +11,7 @@ Une extension peut utiliser cet événement pour mettre à jour ses éléments d
 
 Le gestionnaire peut ajouter, supprimer ou mettre à jour des éléments de menu.
 
-Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open)  ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
+Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open) ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
 
 Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler `refresh()`, sinon la mise à jour sera visible par l'utilisateur.
 
@@ -82,9 +73,9 @@ Firefox rend cet événement disponible via l'espace de noms `contextMenus` ains
 ## Syntaxe
 
 ```js
-browser.menus.onShown.addListener(listener)
-browser.menus.onShown.removeListener(listener)
-browser.menus.onShown.hasListener(listener)
+browser.menus.onShown.addListener(listener);
+browser.menus.onShown.removeListener(listener);
+browser.menus.onShown.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -120,9 +111,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -131,12 +122,12 @@ Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

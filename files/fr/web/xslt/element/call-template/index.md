@@ -1,20 +1,19 @@
 ---
 title: call-template
 slug: Web/XSLT/Element/call-template
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/call-template
-original_slug: Web/XSLT/call-template
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:call-template>` invoque un modèle nommé.
 
 ### Syntaxe
 
-    <xsl:call-template name=NOM>
-    	<xsl:with-param> [optionnel]
-    </xsl:call-template>
+```xml
+<xsl:call-template name=NOM>
+  <xsl:with-param> [optionnel]
+</xsl:call-template>
+```
 
 ### Attribut obligatoire
 

@@ -1,13 +1,8 @@
 ---
 title: Instructions
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Reference/Instructions
 ---
+
 {{jsSidebar("Statements")}}
 
 Les applications JavaScript sont composées de plusieurs instructions organisées grâce à une syntaxe. Une instruction peut s'étaler sur plusieurs lignes et on peut avoir plusieurs instructions sur une seule ligne si chaque instruction est séparée de la suivante par un point-virgule.
@@ -91,18 +86,12 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | Statut                       | Commentaires                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('ES1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES1')}}         | Définition initiale.                                                 |
-| {{SpecName('ES3', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES3')}}         |                                                                      |
-| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES5.1')}}     |                                                                      |
-| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}}         | {{Spec2('ES6')}}         | Nouveaux éléments : `function*`, `let`, `for...of`, `yield`, `class` |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ESDraft')}} |                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Op%C3%A9rateurs).
+- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Opérateurs).

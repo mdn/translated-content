@@ -1,14 +1,9 @@
 ---
-title: '<section> : l''élément de section générique'
+title: "<section> : l'élément de section générique"
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/section
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<section>`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
 
@@ -16,7 +11,8 @@ L'élément HTML **`<section>`** représente une section générique d'un docume
 
 Ainsi, un menu de navigation devrait être délimité par un élément {{htmlelement("nav")}} mais une liste de résultat de recherche, qui ne dispose pas d'élément spécifique pour être représentée, pourrait être englobée dans un élément `<section>`.
 
-> **Note :** Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
+> [!NOTE]
+> Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
 
 ## Attributs
 
@@ -41,7 +37,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("",'','130')}}
 
 ## Résumé technique
 
@@ -90,15 +86,15 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("search")}}, {{ARIARole("status")}},
-        {{ARIARole("tabpanel")}}
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
       </td>
     </tr>
     <tr>
@@ -110,15 +106,11 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |              |
-| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,9 @@
 ---
-title: '<rtc> : l''élément de conteneur de texte Ruby'
+title: "<rtc> : l'élément de conteneur de texte Ruby"
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rtc
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
 
@@ -19,16 +13,14 @@ L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est
 
 Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
 <ruby>
-   <rb>旧</rb> <rt>jiù</rt>
-   <rb>金</rb> <rt>jīn</rt>
-   <rb>山</rb> <rt>shān</rt>
-   <rtc>San Francisco</rtc>
+  <rb>旧</rb> <rt>jiù</rt> <rb>金</rb> <rt>jīn</rt> <rb>山</rb> <rt>shān</rt>
+  <rtc>San Francisco</rtc>
 </ruby>
 ```
 
@@ -41,7 +33,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple",600,120)}}
+{{EmbedLiveSample("",600,120)}}
 
 ## Résumé technique
 
@@ -62,7 +54,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
       <td>
         Du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou des éléments {{HTMLElement("rt")}}.
@@ -94,16 +86,11 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('HTML5.3', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.3')}} |                      |
-| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |                      |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |                      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}} | {{Spec2('HTML5 W3C')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,19 +1,11 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - Response Header
-  - Security
-  - nginx
-translation_of: Web/HTTP/Headers/X-Frame-Options
-original_slug: Web/HTTP/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
-**`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头是用来给浏览器指示允许一个页面可否在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免[点击劫持](/en-US/docs/Web/Security/Types_of_attacks#click-jacking)攻击。
+**`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头是用来给浏览器指示允许一个页面可否在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免[点击劫持](/zh-CN/docs/Web/Security/Types_of_attacks#click-jacking)攻击。
 
 仅当访问文档的用户使用支持 `X-Frame-Options` 的浏览器时，此附加的安全性才会被提供。
 
@@ -36,7 +28,7 @@ original_slug: Web/HTTP/X-Frame-Options
 
 `X-Frame-Options` 有两个可能的值：
 
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -48,25 +40,26 @@ X-Frame-Options: SAMEORIGIN
 - `DENY`
   - : 表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。
 - `SAMEORIGIN`
-  - : 表示该页面可以在相同域名页面的 frame 中展示。规范让浏览器厂商决定此选项是否应用于顶层、父级或整个链，有人认为该选项不是很有用，除非所有的祖先页面都属于同一来源（origin）（见 {{bug(725490)}}）。参见[浏览器兼容性](#浏览器兼容性)以获取详细的兼容性信息。
+  - : 表示该页面可以在相同域名页面的 frame 中展示。规范让浏览器厂商决定此选项是否应用于顶层、父级或整个链，有人认为该选项不是很有用，除非所有的祖先页面都属于同一来源（origin）（见 [Firefox bug 725490](https://bugzil.la/725490)）。参见[浏览器兼容性](#浏览器兼容性)以获取详细的兼容性信息。
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : 这是一个被弃用的指令，不再适用于现代浏览器，请不要使用它。在支持旧版浏览器时，页面可以在指定来源的 frame 中展示。请注意，在旧版 Firefox 上，它会遇到与 `SAMEORIGIN` 相同的问题——它不会检查 frame 所有的祖先页面来确定他们是否是同一来源。{{HTTPHeader("Content-Security-Policy")}} HTTP 首部有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，你可以使用这一指令来代替。
 
 ## 示例
 
-> **备注：** 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
+> [!NOTE]
+> 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
 
 ### 配置 Apache
 
 配置 Apache 在所有页面上发送 `X-Frame-Options` 响应头，需要把下面这行添加到 'site' 的配置中：
 
-```
+```apacheconf
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
 要将 Apache 的配置 `X-Frame-Options` 设置成 `DENY`，按如下配置去设置你的站点：
 
-```
+```apacheconf
 Header set X-Frame-Options "DENY"
 ```
 
@@ -74,7 +67,7 @@ Header set X-Frame-Options "DENY"
 
 配置 Nginx 发送 `X-Frame-Options` 响应头，把下面这行添加到 'http', 'server' 或者 'location' 的配置中：
 
-```
+```nginx
 add_header X-Frame-Options SAMEORIGIN always;
 ```
 
@@ -102,13 +95,13 @@ add_header X-Frame-Options SAMEORIGIN always;
 
 配置 HAProxy 发送 `X-Frame-Options` 响应头，添加这些到你的前端、监听（listen），或者后端的配置里面：
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
 或者，在较新的版本中：
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 
@@ -117,16 +110,16 @@ http-response set-header X-Frame-Options SAMEORIGIN
 要配置 Express 以发送 `X-Frame-Options` 响应头，你可以使用借助了 [frameguard](https://helmetjs.github.io/docs/frameguard/) 的 [helmet](https://helmetjs.github.io/) 来设置首部。在你的服务器配置里面添加：
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 或者，你也可以直接用 frameguard：
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## 规范

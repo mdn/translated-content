@@ -1,19 +1,9 @@
 ---
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Met à jour un élément de menu précédemment créé.
 
@@ -25,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.menus.update(
-  id,               // integer or string
-  updateProperties // object
-)
+  id, // integer or string
+  updateProperties, // object
+);
 ```
 
 ### Paramètres
@@ -36,7 +26,7 @@ var updating = browser.menus.update(
   - : `integer` ou `string`. L'ID de l'article à mettre à jour.
 - `updateProperties`
 
-  - : `object`. Les propriétés à mettre à jour. Identique à l'objet `createProperties` passé à  {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'`id` ne peut être défini. En outre, les `icônes` ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
+  - : `object`. Les propriétés à mettre à jour. Identique à l'objet `createProperties` passé à {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'`id` ne peut être défini. En outre, les `icônes` ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
 
     - `checked` {{optional_inline}}
       - : `boolean`. L'état initial d'une case à cocher ou d'un élément radio : `true` fpour sélectionné et `false` pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.
@@ -48,7 +38,7 @@ var updating = browser.menus.update(
         - `"_execute_page_action"`: simuler un clic sur l'action de la page de l'extension, en ouvrant son popup si elle en a une
         - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
 
-        Cliquer sur l'élément déclenchera toujours l'événement  {{WebExtAPIRef("menus.onClicked")}}, mais rien ne garantit l'ordre ici: la commande peut être exécutée avant le lancement de `onClicked`.
+        Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais rien ne garantit l'ordre ici: la commande peut être exécutée avant le lancement de `onClicked`.
 
     - `contexts` {{optional_inline}}
 
@@ -80,7 +70,8 @@ var updating = browser.menus.update(
             }
         ```
 
-        > **Note :** The top-level menu item uses the [icons](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
+        > [!NOTE]
+        > The top-level menu item uses the [icons](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}
       - : `string`. L'ID unique à affecter à cet article. Obligatoire pour les pages d'événements. Ne peut pas être le même qu'un autre ID pour cette extension.
@@ -131,13 +122,13 @@ function onError() {
 browser.menus.create({
   id: "do-not-click-me",
   title: "Do not click this button",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "do-not-click-me") {
     var updating = browser.contextMenus.update(info.menuItemId, {
-      title: "Do not click this button again"
+      title: "Do not click this button again",
     });
     updating.then(onUpdated, onError);
   }
@@ -146,15 +137,16 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.update", 10)}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -181,4 +173,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

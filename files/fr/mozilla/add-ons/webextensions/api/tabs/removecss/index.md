@@ -1,19 +1,9 @@
 ---
 title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Mehod
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeCSS
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
 
@@ -21,10 +11,12 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ## Syntaxe
 
-    var removing = browser.tabs.removeCSS(
-      tabId,           // optional integer
-      details          // object
-    )
+```js
+var removing = browser.tabs.removeCSS(
+  tabId, // optional integer
+  details, // object
+);
+```
 
 ### Paramètres
 
@@ -41,7 +33,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
     - `code`{{optional_inline}}
       - : `string`. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
     - `file`{{optional_inline}}
       - : `string`. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `frameId`{{optional_inline}}
@@ -64,28 +56,29 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, {code: css});
+var insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, {code: css});
+  var removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.removeCSS")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +105,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

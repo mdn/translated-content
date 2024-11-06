@@ -1,14 +1,8 @@
 ---
-title: 'Element : évènement click'
+title: "Element : évènement click"
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Reference
-  - click
-translation_of: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 L'évènement **`click`** est déclenché à partir d'un élément lorsqu'un bouton d'un dispositif de pointage (comme celui d'une souris par exemple) est pressé puis relaché lorsque le pointeur est sur l'élément.
@@ -38,7 +32,7 @@ L'évènement **`click`** est déclenché à partir d'un élément lorsqu'un bou
 
 Si le bouton est pressé sur un élément et que le pointeur est déplacé sur un autre élément, l'évènement sera déclenché sur l'ancêtre le plus près qui contient les deux éléments.
 
-`click` est déclenché après que les évènements {{event("mousedown")}} et {{event("mouseup")}} aient été déclenchés.
+`click` est déclenché après que les évènements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) aient été déclenchés.
 
 ## Notes d'utilisation
 
@@ -46,7 +40,7 @@ L'objet {{domxref("MouseEvent")}}, passé au gestionnaire d'évènement (lorsque
 
 ### Internet Explorer
 
-Internet Explorer 8 & 9 souffrent d'un bug où les élméents avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
+Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
 
 Quelques méthodes de contournement pour ce bug :
 
@@ -92,9 +86,9 @@ Dans cet exemple, on affiche le nombre de clics consécutifs sur un bouton HTML 
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', event => {
+button.addEventListener("click", (event) => {
   button.innerHTML = `Nombre de clics : ${event.detail}`;
 });
 ```
@@ -107,15 +101,11 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-click')}}                                             | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-click', 'click')}}                             | {{Spec2('DOM3 Events')}} |
-| {{SpecName('DOM2 Events', '#Events-eventgroupings-mouseevents-h3', 'click')}} | {{Spec2('DOM2 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.click_event")}}
+{{Compat}}
 
 ## Voir aussi
 

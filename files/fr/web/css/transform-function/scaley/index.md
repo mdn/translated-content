@@ -1,10 +1,8 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
-translation_of: Web/CSS/transform-function/scaleY()
-original_slug: Web/CSS/transform-function/scaleY()
-browser-compat: css.types.transform-function.scaleY
 ---
+
 {{CSSRef}}
 
 La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément avec un facteur multiplicateur. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
@@ -128,8 +126,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX())
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ())
+- [`scaleX()`](</fr/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleZ()`](</fr/docs/Web/CSS/transform-function/scaleZ()>)
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/transform-origin)

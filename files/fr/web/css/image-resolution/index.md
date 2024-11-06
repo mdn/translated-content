@@ -1,12 +1,11 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-browser-compat: css.properties.image-resolution
-translation_of: Web/CSS/image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`**  spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
+La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`** spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
 
 La résolution de l'image est définie par le nombre de pixels par unité de longueur de l'image, par exemple exprimé en pixels par pouce. Par défaut, CSS part du principe que la résolution d'une image est d'un pixel image par unité de pixel CSS. Cependant, la propriété `image-resolution` permet de définir une résolution différente.
 
@@ -34,7 +33,8 @@ image-resolution: unset;
 - `snap`
   - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un pixel image défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
 
-> **Note :** Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
+> [!NOTE]
+> Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
 
 ## Définition formelle
 

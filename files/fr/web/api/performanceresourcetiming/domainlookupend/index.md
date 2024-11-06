@@ -1,16 +1,8 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - domainLookupEnd
-translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`domainLookupEnd`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait terminé la recherche du nom de domaine pour la ressource.
@@ -43,13 +35,19 @@ function print_PerformanceEntries() {
 }
 function print_start_and_end_properties(perfEntry) {
   // Imprime les horodatages des propriétés *start et *end
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+  properties = [
+    "connectStart",
+    "connectEnd",
+    "domainLookupStart",
+    "domainLookupEnd",
+    "fetchStart",
+    "redirectStart",
+    "redirectEnd",
+    "requestStart",
+    "responseStart",
+    "responseEnd",
+    "secureConnectionStart",
+  ];
 
   for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété
@@ -66,11 +64,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-domainlookupend',
-        'domainLookupEnd')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.domainLookupEnd")}}
+{{Compat}}

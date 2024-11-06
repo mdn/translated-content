@@ -1,12 +1,8 @@
 ---
 title: L'opérateur conditionnel
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - JavaScript
-  - Opérateur
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
@@ -15,7 +11,9 @@ L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui c
 
 ## Syntaxe
 
-    condition ? exprSiVrai : exprSiFaux
+```js
+condition ? exprSiVrai : exprSiFaux;
+```
 
 ### Paramètres
 
@@ -31,7 +29,7 @@ L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui c
 SI `condition` vaut `true`, l'opérateur renverra la valeur d'`exprSiVrai;` dans le cas contraire, il renverra la valeur de `exprSiFaux`. Par exemple, on peut afficher un message différent en fonction d'une variable `estMembre` avec cette déclaration :
 
 ```js
-"Le prix est : " + (estMembre ? "15 €" : "30 €")
+"Le prix est : " + (estMembre ? "15 €" : "30 €");
 ```
 
 On peut également affecter des variables dont la valeur dépendra du test :
@@ -44,8 +42,12 @@ On peut enchaîner plusieurs évaluations ternaires l'une à la suite de l'autre
 
 ```js
 var premierControle = false,
-    secondControle = false,
-    acces = premierControle ? "Accès refusé" : secondControle ? "Accès refusé" : "Accès autorisé";
+  secondControle = false,
+  acces = premierControle
+    ? "Accès refusé"
+    : secondControle
+      ? "Accès refusé"
+      : "Accès autorisé";
 
 console.log(acces); // "Accès autorisé"
 ```
@@ -53,23 +55,21 @@ console.log(acces); // "Accès autorisé"
 Il est également possible d'utiliser cet opérateur pour effectuer l'une ou l'autre expression selon le cas de figure qui se présente :
 
 ```js
-var stop = false, age = 16;
+var stop = false,
+  age = 16;
 
-age > 18 ? location.assign("continue.html") : stop = true;
+age > 18 ? location.assign("continue.html") : (stop = true);
 ```
 
 en utilisant l'{{jsxref("Opérateurs/L_opérateur_virgule","opérateur virgule")}}, on peut même y placer plusieurs instructions (attention toutefois à la lisibilité et à se demander si un {{jsxref("Instructions/if...else","if...else")}} n'est pas plus approprié).
 
 ```js
-var stop = false, age = 23;
+var stop = false,
+  age = 23;
 
-age > 18 ? (
-    console.log("OK, accès autorisé."),
-    location.assign("continue.html")
-) : (
-    stop = true,
-    console.log("Accès refusé !")
-);
+age > 18
+  ? (console.log("OK, accès autorisé."), location.assign("continue.html"))
+  : ((stop = true), console.log("Accès refusé !"));
 ```
 
 De la même façon, on peut effectuer plusieurs opérations, encadrées par des parenthèses, avant d'affecter le résultat de l'opérateur à une variable. Conformément à l'opérateur virgule, ce sera **_la dernière valeur qui sera affectée_**. Ici aussi, attention à la lisibilité du code relativement à un `if...else`.
@@ -77,16 +77,15 @@ De la même façon, on peut effectuer plusieurs opérations, encadrées par des 
 ```js
 var age = 16;
 
-var url = age > 18 ? (
-    console.log("Accès autorisé."),
-    // console.log renvoie "undefined", mais cela importe peu car
-    // ce n'est pas le dernier élément de l'expression
-    "continue.html" // la valeur à affecter si âge > 18
-) : (
-    console.log("Accès refusé !"),
-    // etc.
-    "stop.html" // la valeur à affecter si âge <= 18
-);
+var url =
+  age > 18
+    ? (console.log("Accès autorisé."),
+      // console.log renvoie "undefined", mais cela importe peu car
+      // ce n'est pas le dernier élément de l'expression
+      "continue.html") // la valeur à affecter si âge > 18
+    : (console.log("Accès refusé !"),
+      // etc.
+      "stop.html"); // la valeur à affecter si âge <= 18
 
 location.assign(url); // "stop.html"
 ```
@@ -113,16 +112,11 @@ var func2 = function( .. ) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}                     | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## Voir aussi
 

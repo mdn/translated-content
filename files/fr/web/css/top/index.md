@@ -1,13 +1,8 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - Positionnement
-  - Propriété
-  - Reference
-translation_of: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 La propriété **`top`** définit une partie de la position des éléments positionnés, elle n'a aucun effet pour les éléments non-positionnés.
@@ -60,12 +55,16 @@ top: unset;
 
   - : Un mot-clé qui représente :
 
-    - Pour les éléments positionnés de façon absolue, la position de l'élément en fonction de la propriété {{cssxref("bottom")}} et qui traite `height: auto` comme une hauteur basée sur le contenu. Si `bottom`vaut également `auto`, l'élément est positionné verticalement comme s'il avait été un élément statique.
+    - Pour les éléments positionnés de façon absolue, la position de l'élément en fonction de la propriété {{cssxref("bottom")}} et qui traite `height: auto` comme une hauteur basée sur le contenu. Si `bottom` vaut également `auto`, l'élément est positionné verticalement comme s'il avait été un élément statique.
     - Pour les éléments positionnés de façon relative, le décalage de l'élément par rapport à sa position originale, basée sur la propriété {{cssxref("bottom")}}. Si `bottom` vaut également `auto`, aucun décalage n'est appliqué.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -91,7 +90,7 @@ div {
 p.relatif {
   position: relative;
   top: 5em;
-  border: 2px black solid
+  border: 2px black solid;
 }
 ```
 
@@ -131,17 +130,11 @@ p.absolu {
 
 ## Spécifications
 
-| Spécification                                                                | État                                     | Commentaires                                                           |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'top')}} | {{Spec2('CSS3 Transitions')}} | `top` peut désormais être animée.                                      |
-| {{SpecName('CSS3 Positioning', '#propdef-top', 'top')}}     | {{Spec2('CSS3 Positioning')}} | Description du comportement pour le positionnement adhérent (_sticky_) |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-top', 'top')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.top")}}
+{{Compat}}
 
 ## Voir aussi
 

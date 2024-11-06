@@ -1,15 +1,10 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-repeat
-translation_of: Web/CSS/background-repeat
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
+
 {{CSSRef}}
 
 **`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。
@@ -39,13 +34,15 @@ background-repeat: no-repeat round;
 background-repeat: inherit;
 background-repeat: initial;
 background-repeat: revert;
+background-repeat: revert-layer;
 background-repeat: unset;
 ```
 
 ### 値
 
 - `<repeat-style>`
-  - : 値 1 つの構文は完全な値 2 つの構文に対する一括指定です。 
+
+  - : 値 1 つの構文は完全な値 2 つの構文に対する一括指定です。
 
     <table class="standard-table">
       <tbody>
@@ -93,7 +90,8 @@ background-repeat: unset;
         <tr>
           <td><code>space</code></td>
           <td>
-            画像は指定された方向に切り抜きなしで敷き詰められる回数だけ繰り返されます。最初の画像と最後の画像は領域の両端にそれぞれ接触するように描画され、余白が画像同士の間に均一に分配されます。{{cssxref("background-position")}} プロパティは、画像を 1 つしか切り抜きなしで敷き詰められない場合を除き、無視されます。`space` を使用していて背景画像が切り抜かれるのは、領域幅を超える背景画像が指定された場合のみです。
+            画像は指定された方向に切り抜きなしで敷き詰められる回数だけ繰り返されます。最初の画像と最後の画像は領域の両端にそれぞれ接触するように描画され、余白が画像同士の間に均一に分配されます。
+            {{cssxref("background-position")}} プロパティは、画像を 1 つしか切り抜きなしで敷き詰められない場合を除き、無視されます。`space` を使用していて背景画像が切り抜かれるのは、領域幅を超える背景画像が指定された場合のみです。
           </td>
         </tr>
         <tr>
@@ -121,33 +119,40 @@ background-repeat: unset;
 
 ## 例
 
-<h3 id="Setting_background-repeat">background-repeat の設定</h3>
+### background-repeat の設定
 
 #### HTML
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
-    <div class="five"></div>
-  </li>
-  <li>round
-    <div class="six"></div>
-  </li>
-  <li>repeat-x, repeat-y (multiple images)
-    <div class="seven"></div>
-  </li>
+  <li>
+    space
+    <div class="five"></div>
+  </li>
+  <li>
+    round
+    <div class="six"></div>
+  </li>
+  <li>
+    repeat-x, repeat-y (複数の画像)
+    <div class="seven"></div>
+  </li>
 </ol>
 ```
 
@@ -164,9 +169,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(starsolid.gif);
-    width: 160px;
-    height: 70px;
+  background-image: url(starsolid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* 背景の繰り返し */
@@ -191,19 +196,17 @@ div {
 
 /* 複数の画像 */
 .seven {
-  background-image:  url(starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(starsolid.gif), url(favicon32.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```
 
 #### 結果
 
-この例では、リストの各要素に `background-repeat` の異なる値が対応付けられています。
+この例では、リストの各要素に `background-repeat` の様々な値が対応付けられています。
 
-{{EmbedLiveSample('Setting_background-repeat', 240, 560)}}
+{{EmbedLiveSample('background-repeat の設定', 240, 560)}}
 
 ## 仕様書
 
@@ -215,4 +218,4 @@ div {
 
 ## 関連情報
 
-- [CSS での複数の背景の利用方法](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [CSS での複数の背景の利用方法](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

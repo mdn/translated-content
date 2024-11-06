@@ -1,10 +1,8 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules
-browser-compat: javascript.builtins.Intl.PluralRules
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.PluralRules`** permet de mettre en forme des chaînes de caractères en fonction des règles de nombre (pluriel) d'une locale donnée.
@@ -38,15 +36,15 @@ Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin 
 // L'arabe possède plusieurs règles
 // de nombre
 
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

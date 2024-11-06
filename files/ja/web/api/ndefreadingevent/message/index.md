@@ -1,14 +1,8 @@
 ---
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
-tags:
-  - API
-  - Property
-  - リファレンス
-  - message
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.message
 ---
+
 {{securecontext_header}}{{APIRef()}}
 
 **`message`** は {{domxref("NDEFReadingEvent")}} インターフェイスのプロパティで、受信したメッセージの入った {{DOMxRef("NDEFMessage")}} オブジェクトを返します。
@@ -24,21 +18,25 @@ browser-compat: api.NDEFReadingEvent.message
 ```js
 const ndefReader = new NDEFReader();
 
-  function read() {
-    return new Promise((resolve, reject) => {
-      const ctlr = new AbortController();
-      ctlr.signal.onabort = reject;
-      ndefReader.addEventListener("reading", event => {
+function read() {
+  return new Promise((resolve, reject) => {
+    const ctlr = new AbortController();
+    ctlr.signal.onabort = reject;
+    ndefReader.addEventListener(
+      "reading",
+      (event) => {
         ctlr.abort();
         resolve(event);
-      }, { once: true });
-      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
-    });
-  }
-
-  read().then(({ serialNumber }) => {
-    console.log(serialNumber);
+      },
+      { once: true },
+    );
+    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });
+}
+
+read().then(({ serialNumber }) => {
+  console.log(serialNumber);
+});
 ```
 
 ## 仕様書

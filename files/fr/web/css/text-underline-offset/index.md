@@ -1,12 +1,8 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-underline-offset
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.
@@ -56,7 +52,7 @@ p {
   text-underline-offset: 1em;
 }
 
-.deuxlignes{
+.deuxlignes {
   text-decoration-line: underline overline;
 }
 ```
@@ -64,12 +60,10 @@ p {
 ### HTML
 
 ```html
-<p class="uneligne">
-  Voici un texte souligné avec une ligne ondulée rouge !
-</p>
+<p class="uneligne">Voici un texte souligné avec une ligne ondulée rouge !</p>
 <p class="deuxlignes">
-  Ce texte a une ligne en dessous et une ligne au dessus.
-  Seule la ligne du dessous est déplacée.
+  Ce texte a une ligne en dessous et une ligne au dessus. Seule la ligne du
+  dessous est déplacée.
 </p>
 ```
 
@@ -79,15 +73,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Text Decoration', '#<span class="pl-s">underline-offset</span>', 'text-underline-offset')}} | {{Spec2('CSS4 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-underline-offset")}}
+{{Compat}}
 
 ## Voir aussi
 

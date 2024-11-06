@@ -1,23 +1,17 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet `Symbol`.
 
 ## Syntaxe
 
-    Symbol().valueOf();
+```js
+Symbol().valueOf();
+```
 
 ### Valeur de retour
 
@@ -31,14 +25,11 @@ JavaScript appelle la méthode `valueOf` afin de convertir l'objet en une valeur
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

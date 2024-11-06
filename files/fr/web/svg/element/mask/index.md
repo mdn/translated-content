@@ -1,14 +1,8 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - Masque
-  - NeedsCompatTable
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/mask
 ---
+
 {{SVGRef}}
 
 L'élément **`<mask>`** définit un masque alpha. Ce masque peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("mask")}}.
@@ -18,7 +12,11 @@ Le masque permet de rendre des zones de l'élément sur lequel est appliqué (se
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -28,7 +26,9 @@ html,body,svg { height:100% }
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
     <!-- Tous les pixels noirs sont invisibles -->
-    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
   </mask>
 
   <polygon points="-10,110 110,110 110,-10" fill="orange" />
@@ -44,7 +44,7 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : Définit la hauteur du masque.
-    _Valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 - {{SVGAttr("maskContentUnits")}}
   - : Définit le système de coordonnées pour le contenu du `<mask>`.
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
@@ -53,13 +53,13 @@ html,body,svg { height:100% }
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `objectBoundingBox`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Définit la coordonnée de l'axe x du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Définit la coordonnée de l'axe y du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Définit la largeur du masque.
-    _Valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 
 ### Attributs globaux
 
@@ -78,14 +78,11 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('CSS Masks', '#MaskElement', '&lt;mask&gt;')}}         | {{Spec2('CSS Masks')}} |                     |
-| {{SpecName('SVG1.1', 'masking.html#Masking', '&lt;mask&gt;')}} | {{Spec2('SVG1.1')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.mask")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Exemple
-  - Géolocalisation
-  - Géolocalisation API
-  - Méthode
-  - Reference
-translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 La méthode **`Geolocation.watchPosition()`** permet de manipuler une fonction appelée automatiquement à chaque fois que la position de l'appareil change. Vous pouvez de même, en option, manipuler une autre fonction appelée automatiquement pour gérer les erreurs.
@@ -18,7 +11,11 @@ Cette méthode retourne une valeur ID de veille qui permet de libérer les fonct
 
 ## Syntaxe
 
-    id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
+```
 
 ### Paramètres
 
@@ -38,40 +35,39 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Bravo, vous avez atteint la cible');
+    console.log("Bravo, vous avez atteint la cible");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.warn("ERROR(" + err.code + "): " + err.message);
 }
 
 target = {
-  latitude : 0,
-  longitude: 0
+  latitude: 0,
+  longitude: 0,
 };
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-> **Note :** Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
+> [!NOTE]
+> Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Specification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

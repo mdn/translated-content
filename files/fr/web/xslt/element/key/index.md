@@ -1,19 +1,18 @@
 ---
 title: key
 slug: Web/XSLT/Element/key
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/key
-original_slug: Web/XSLT/key
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:key>` déclare une clef nommée qui peut être utilisée dans toute la feuille de styles à l'aide de la fonction `key( )`.
 
 ### Syntaxe
 
-    <xsl:key name=NOM match=EXPRESSION
-    	use=EXPRESSION />
+```xml
+<xsl:key name=NOM match=EXPRESSION
+  use=EXPRESSION />
+```
 
 ### Attributs obligatoires
 

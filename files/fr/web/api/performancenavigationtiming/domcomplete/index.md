@@ -1,15 +1,8 @@
 ---
 title: PerformanceNavigationTiming.domComplete
 slug: Web/API/PerformanceNavigationTiming/domComplete
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming/domComplete
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`domComplete`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à [`complete`](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
@@ -37,13 +30,18 @@ function print_nav_timing_data() {
     console.log("= Entrée de navigation : entry[" + i + "]");
     let p = perfEntries[i];
     // propriétés du DOM
-    console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
+    console.log(
+      "Contenu du DOM chargé = " +
+        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+    );
     console.log("Contenu du DOM complet = " + p.domComplete);
     console.log("Contenu du DOM interactif = " + p.interactive);
 
     // temps de chargement et de déchargement des documents
     console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart));
+    console.log(
+      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    );
 
     // autres propriétés
     console.log("type = " + p.type);
@@ -54,11 +52,8 @@ function print_nav_timing_data() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2',
-      '#dom-performancenavigationtiming-domcomplete', 'domComplete')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming.domComplete")}}
+{{Compat}}

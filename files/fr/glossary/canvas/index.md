@@ -1,29 +1,16 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - Glossaire
-  - Graphismes
-  - HTML
-  - JavaScript
-  - scripts
-translation_of: Glossary/Canvas
-original_slug: Glossaire/Canvas
 ---
+
+{{GlossarySidebar}}
+
 L'élément {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ fournit une zone graphique vide sur laquelle des {{Glossary("API","API")}} {{Glossary("JavaScript")}} spécifiques peuvent dessiner (telles que des Canvas 2D ou du {{Glossary("WebGL")}}) .
 
-## En savoir plus
+## Voir aussi
 
-### Culture Générale
-
-- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} sur Wikipedia
-
-### Apprentissage
-
+- [L'élément `<canvas>`](<https://fr.wikipedia.org/wiki/Canvas_(HTML)>) sur Wikipédia
 - [Tutoriel Canvas](/fr/docs/Tutoriel_canvas) sur MDN
-
-### Informations techniques
-
 - L'élément {{HTMLElement("canvas")}} sur MDN
 - [La documentation générale des Canvas](/fr/docs/Web/HTML/Canvas) sur MDN
 - {{domxref("CanvasRenderingContext2D")}}: l'API pour dessiner des canvas 2D

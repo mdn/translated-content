@@ -1,14 +1,8 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 L'objet **`TreeWalker`** représente les noeuds d'un sous-arbre de document et une position à l'intérieur.
@@ -149,7 +143,8 @@ _Cette interface n'hérite d'aucune propriété._
 
 _Cette interface n'hérite d'aucune méthode._
 
-> **Note :** Le TreeWalker considère uniquement les nœuds DOM visibles.
+> [!NOTE]
+> Le TreeWalker considère uniquement les nœuds DOM visibles.
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : Déplace le {{domxref("Node")}} actuel vers le premier noeud ancêtre _visible_ dans l'ordre du document et renvoie le noeud trouvé. Il déplace également le noeud actuel vers celui-ci. Si aucun noeud n'existe ou s'il est antérieur au _noeud racine_ défini lors de la construction de l'objet, renvoie `null` et le noeud courant n'est pas modifié.
@@ -168,14 +163,11 @@ _Cette interface n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#treeWalker', 'TreeWalker')}}                                                 | {{Spec2('DOM WHATWG')}}             | Suppression de la propriété `expandEntityReferences`. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker', 'TreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker")}}
+{{Compat}}
 
 ## Voir aussi
 

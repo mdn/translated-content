@@ -1,16 +1,8 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.GeneratorFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef}}
 
 **`GeneratorFunction` 생성자**는 새로운 {{jsxref("Statements/function*", "generator function")}} 객체를 생성한다. JavaScript 에서 모든 generator function 은 실제로 `GeneratorFunction` object 이다.
@@ -18,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 주의할 점은, `GeneratorFunction` 이 전역 객체(global object)가 아니란 점이다. GeneratorFunction은 다음의 코드를 실행해서 얻을 수 있다.
 
 ```js
-Object.getPrototypeOf(function*(){}).constructor
+Object.getPrototypeOf(function* () {}).constructor;
 ```
 
 ## Syntax
@@ -51,17 +43,17 @@ new 없이 `GeneratorFunction` 생성자를 함수처럼 사용하는 것은 생
 ### GeneratorFunction 생성자로 generator function 생성하기
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
+var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
 var g = new GeneratorFunction("a", "yield a * 2");
 var iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

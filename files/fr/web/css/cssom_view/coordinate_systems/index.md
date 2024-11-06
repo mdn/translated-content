@@ -1,14 +1,8 @@
 ---
 title: Systèmes de coordonnées
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - Coordonnées
-  - Guide
-translation_of: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/Systèmes_de_coordonnées
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 ---
+
 {{cssref}}
 
 Lorsqu'on définit l'emplacement d'un pixel dans un contexte graphique, on indique les coordonnées de ce point par rapport à un point fixe du contexte qu'on appelle l'origine. La position du pixel est donc indiquée comme le décalage de ce pixel par rapport à l'origine, sur les deux axes du plan.
@@ -23,7 +17,8 @@ L'origine par défaut, dans les contextes relatifs au Web, est située dans le c
 
 Lorsqu'on dessine des graphiques en trois dimensions ou lorsqu'on utilise une troisième dimension pour empiler des objets de l'avant vers l'arrière, on utilise la coordonnée en Z. Celle-ci correspond à la distance entre le spectateur et l'objet. Elle est positive si l'objet est plus éloigné du spectateur que l'origine et négative s'il est plus proche.
 
-> **Note :** Il est en fait possible de modifier les définitions et les orientations de ces systèmes de coordonnées grâce à des propriétés CSS telles que {{cssxref("transform")}}. Toutefois, nous évoquerons uniquement le système de coordonnées standard.
+> [!NOTE]
+> Il est en fait possible de modifier les définitions et les orientations de ces systèmes de coordonnées grâce à des propriétés CSS telles que {{cssxref("transform")}}. Toutefois, nous évoquerons uniquement le système de coordonnées standard.
 
 ## Les systèmes de coordonnées CSSOM standard
 
@@ -101,7 +96,7 @@ inner.addEventListener("mouseleave", update, false);
 
 Le gestionnaire d'évènement `update()` appelle `setCoords()` pour chacun des systèmes de coordonnées et lui repasse en argument l'évènement qui s'est produit.
 
-Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : {{event("mouseenter")}}, {{event("mousemove")}} et {{event("mouseleave")}}.
+Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 

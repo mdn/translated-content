@@ -1,14 +1,10 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-columns
-translation_of: Web/CSS/grid-auto-columns
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
 **`grid-auto-columns`** は CSS のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
@@ -53,13 +49,15 @@ grid-auto-columns: min-content max-content auto;
 grid-auto-columns: 100px 150px 390px;
 grid-auto-columns: 10% 33.3%;
 grid-auto-columns: 0.5fr 3fr 1fr;
-grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr)
+  minmax(20%, 80vmax);
 grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 /* グローバル値 */
 grid-auto-columns: inherit;
 grid-auto-columns: initial;
 grid-auto-columns: revert;
+grid-auto-columns: revert-layer;
 grid-auto-columns: unset;
 ```
 
@@ -79,15 +77,20 @@ grid-auto-columns: unset;
   - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最大値を表すキーワードです。
 - {{cssxref("min-content")}}
   - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最小値を表すキーワードです。
-- {{cssxref("minmax()", "minmax(min, max)")}}
+- {{cssxref("minmax", "minmax(min, max)")}}
   - : _min_ 以上、_max_ 以下の寸法の範囲を定義する関数記法です。 _max_ が _min_ より小さい場合は、 _max_ は無視され、 _min_ として扱われます。`<flex>` の値は、最大値として、トラックのフレックス係数を設定します。最小値としては、ゼロ（または、グリッドコンテナーの寸法が最小コンテンツの制約を受けている場合は、最小コンテンツ）として扱われます。
-- {{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
+- {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : `min(max-content, max(auto, argument))` という式を表します。この式は、トラックの寸法が `auto` の最小値よりも大きい場合に _argument_ で固定されることを除いて、`auto` と同様 (すなわち `minmax(auto, max-content)`) に計算されます。
 - `auto`
 
-  - : 最大値であれば最小コンテンツと同一のキーワードです。最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}}で指定されたサイズ）を表します。
+  - : 最大値としては、そのトラック内のアイテムの最大の {{cssxref("max-content")}} のサイズを表します。
 
-    > **Note:** トラックの寸法が `auto` の場合は、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。
+    最小値としては、そのトラック内のアイテムの最大の最小サイズ（アイテムの {{cssxref("min-width")}}/{{cssxref("min-height")}} で指定します）を表します。これは常にではありませんが、 {{cssxref("min-content")}} のサイズであることが多いです。
+
+    {{cssxref("minmax", "minmax()")}} 表記の外で使用した場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同様の動作をします。
+
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合は、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。従って既定では、 `auto` サイズのトラックはグリッドコンテナーの残りの空間を占めます。
 
 ## 公式定義
 
@@ -105,9 +108,9 @@ grid-auto-columns: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 
@@ -129,7 +132,7 @@ grid-auto-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_column_size", "410px", "100px")}}
+{{EmbedLiveSample("グリッド列の寸法を設定", "410px", "100px")}}
 
 ## 仕様書
 
@@ -142,5 +145,5 @@ grid-auto-columns: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- グリッドレイアウトガイド: [CSS グリッドレイアウトでの自動配置 - 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#暗黙のグリッド内での行の大きさ)
-- 動画チュートリアル: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- グリッドレイアウトガイド: [グリッドレイアウトでの自動配置 - 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
+- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

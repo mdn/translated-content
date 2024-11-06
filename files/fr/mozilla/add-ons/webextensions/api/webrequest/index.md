@@ -1,17 +1,8 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 Ajout d'écouteurs d'événements pour les différentes étapes d'une requête HTTP. L'écouteur de l'événement reçoit des informations détaillées sur la demande et peut modifier ou annuler la demande.
@@ -26,17 +17,17 @@ Tous les évènements (excepté `onErrorOccurred`) peuvent prendre trois argumen
 
 - Le receveur d'évènements lui-même
 - un {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} objet, afin de n'être notifié que pour les requêtes effectués par des URLs particulières ou pour un type particulier de ressources.
-- un  `extraInfoSpec` objet optionnel. Vous pouvez utiliser celui-ci pour passer des instructions spécifiques à l'évènement supplémentaires.
+- un `extraInfoSpec` objet optionnel. Vous pouvez utiliser celui-ci pour passer des instructions spécifiques à l'évènement supplémentaires.
 
 Une fonction d'écoute reçoit un objet `details` qui contient des informations à propos de la requête. Il inclut un ID de requête, fourni afin de permettre à une extension de relier des évènements associés à une même requête. Il est unique à chaque session de navigation et à l'extension. Il reste le même tout au long d'une requête, même durant les redirections et les échanges d'authentifications.
 
-Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)  "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
+Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
 
-Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à  "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
+Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
 
 ## Modifier une requête
 
-Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez  :
+Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez :
 
 - Annuler une requête avec:
 
@@ -63,7 +54,8 @@ Sur certains de ces événements, vous pouvez modifier la demande. Plus précis�
 
 Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.
 
-> **Attention :** Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.
+> [!WARNING]
+> Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir le [bug Firefox 1475832](https://bugzil.la/1475832) pour plus de détails.
 
 ## Accéder aux informations de sécurité
 
@@ -75,7 +67,7 @@ Vous pouvez lire les détails de la prise de contact TLS, mais vous ne pouvez pa
 
 Pour modifier les corps de réponse HTTP pour une requête, appelez {{WebExtAPIRef("webRequest.filterResponseData")}}, en lui transmettant l'ID de la requête. Cela renvoie un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour examiner et modifier les données reçues par le navigateur.
 
-Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking" ainsi que la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequest" et la [permission de l'hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour l'hôte concerné.
+Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking" ainsi que la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequest" et la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour l'hôte concerné.
 
 ## Types
 
@@ -131,21 +123,22 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Déclenché lorsqu'une erreur se produit.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
-[Extra notes on Chrome incompatibilities](/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
+[Extra notes on Chrome incompatibilities](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -172,4 +165,4 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,33 +1,23 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
 
-Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
+Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
 
 Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.tabs.connect(
-  tabId,      // integer
-  connectInfo // optional object
-)
+  tabId, // integer
+  connectInfo, // optional object
+);
 ```
 
 ### Parameters
@@ -54,11 +44,10 @@ In this example a background script listens for a click on a [browser action](/f
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    var examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    var examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 
@@ -66,9 +55,10 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });
@@ -76,17 +66,18 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.connect")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +104,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

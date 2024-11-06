@@ -1,13 +1,8 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - マニフェスト
-  - ウェブ
-  - related_applications
-browser-compat: html.manifest.related_applications
-translation_of: Web/Manifest/related_applications
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -25,7 +20,8 @@ translation_of: Web/Manifest/related_applications
 
 `related_applications` フィールドはオブジェクトの配列で、基礎となるプラットフォームにインストール可能、またはアクセス可能なネイティブアプリケーション — たとえば、 Google Play ストアで入手可能なネイティブの Android アプリケーションなどを指定します。このようなアプリケーションは、ネイティブアプリの同等品のように、同様または同等の機能を提供するマニフェストのウェブサイトの代替品となることを意図しています。
 
-> **Note:** 開発者は `prefer_related_applications` に `true` を設定することで、ネイティブアプリケーションがウェブアプリケーションよりも推奨されることを示すことができます。
+> [!NOTE]
+> 開発者は `prefer_related_applications` に `true` を設定することで、ネイティブアプリケーションがウェブアプリケーションよりも推奨されることを示すことができます。
 
 ## 例
 
@@ -46,11 +42,11 @@ translation_of: Web/Manifest/related_applications
 
 アプリケーションオブジェクトには、次の値を入れることができます。
 
-| メンバー     | 説明                                                                                                                    |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| メンバー   | 説明                                                                                                                             |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `platform` | アプリケーションを見つけることができるプラットフォームです。[利用できる値の一覧](https://github.com/w3c/manifest/wiki/Platforms) |
-| `url`      | アプリケーションを見つけることができる URL です。                                                                                 |
-| `id`       | 指定されたプラットフォームでアプリケーションを表す ID です。                                                            |
+| `url`      | アプリケーションを見つけることができる URL です。                                                                                |
+| `id`       | 指定されたプラットフォームでアプリケーションを表す ID です。                                                                     |
 
 ## 仕様書
 

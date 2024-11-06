@@ -1,10 +1,9 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-translation_of: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`email`** permettent à une utilisatrice ou un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas.
 
@@ -12,7 +11,8 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `email` emploieront un élément `<input>` [`"text"`](/fr/docs/Web/HTML/Element/Input/text) à la place.
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `email` emploieront un élément `<input>` [`"text"`](/fr/docs/Web/HTML/Element/Input/text) à la place.
 
 <table class="properties">
   <tbody>
@@ -75,7 +75,8 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si 
 
 Un attribut booléen qui indique, s'il est présent, que plusieurs adresses électroniques peuvent être saisies en étant séparées par des virgules (et éventuellement des espaces). Voir la section sur [la saisie de plusieurs adresses](#gérer_plusieurs_adresses_mail) ci-après.
 
-> **Note :** Normalement, lorsque l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est indiqué, la personne remplissant le formulaire doit saisir une adresse mail valide pour que le champ soit considéré valide. Toutefois, si l'attribut `multiple` est ajouté, une liste de zéro adresses (une chaîne de caractères vide ou un texte constitué uniquement d'espaces) sera une valeur valide. Autrement dit, la personne remplissant le formulaire n'est pas obligée de saisir une adresse lorsque `multiple` est présent, quelle que soit la valeur de `required`.
+> [!NOTE]
+> Normalement, lorsque l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est indiqué, la personne remplissant le formulaire doit saisir une adresse mail valide pour que le champ soit considéré valide. Toutefois, si l'attribut `multiple` est ajouté, une liste de zéro adresses (une chaîne de caractères vide ou un texte constitué uniquement d'espaces) sera une valeur valide. Autrement dit, la personne remplissant le formulaire n'est pas obligée de saisir une adresse lorsque `multiple` est présent, quelle que soit la valeur de `required`.
 
 ### `pattern`
 
@@ -83,7 +84,8 @@ L'attribut `pattern` est une expression rationnelle que doit respecter la valeur
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
-> **Note :** L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation de cet attribut ci-après](#validation_grâce_à_une_expression_rationnelle) pour plus d'exemples.
 
@@ -93,13 +95,15 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode&nbsp;: voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir [la page sur `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir [la page sur `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 
@@ -113,14 +117,15 @@ Les adresses mails font partie des informations les plus fréquentes dans les fo
 
 On notera toutefois que le navigateur ne vérifie pas si l'adresse saisie existe réellement ou correspond à une utilisatrice existante ou un utilisateur existant du site, ou si elle respecte quelque autre critère. Autrement dit, le navigateur vérifie uniquement que l'adresse fournie est bien formée.
 
-> **Note :** Il est également important de rappeler qu'une utilisatrice ou un utilisateur peut modifier le HTML de la page grâce aux outils de développement. Votre site _ne doit pas_ reposer sur les mécanismes de validation du navigateur. Il est crucial de vérifier l'adresse électronique _côté serveur_ dès que le texte fournit est impliqué, d'une façon ou d'une autre, dans une fonctionnalité sensible (par exemple la connexion à un site, un achat, etc.).
+> [!NOTE]
+> Il est également important de rappeler qu'une utilisatrice ou un utilisateur peut modifier le HTML de la page grâce aux outils de développement. Votre site _ne doit pas_ reposer sur les mécanismes de validation du navigateur. Il est crucial de vérifier l'adresse électronique _côté serveur_ dès que le texte fournit est impliqué, d'une façon ou d'une autre, dans une fonctionnalité sensible (par exemple la connexion à un site, un achat, etc.).
 
 ### Un champ `email` simple
 
 À l'heure actuelle, l'ensemble des navigateurs qui implémentent cet élément le gèrent comme un champ texte standard auquel certaines fonctionnalités de validation sont ajoutées. La spécification laisse toutefois une marge de manœuvre pour cette validation (l'élément pourrait, par exemple, consulter le répertoire de l'appareil pour choisir une adresse parmi cette liste). Dans sa forme la plus simple, un champ `email` peut être écrit de cette façon&nbsp;:
 
 ```html
-<input id="emailAddress" type="email">
+<input id="emailAddress" type="email" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -132,7 +137,7 @@ Un tel champ est considéré comme valide lorsqu'il est vide ou lorsqu'une adres
 Grâce à l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple), on peut configurer le champ afin de saisir plusieurs adresses mail.
 
 ```html
-<input id="emailAddress" type="email" multiple>
+<input id="emailAddress" type="email" multiple />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -161,7 +166,7 @@ Il est parfois utile de fournir une indication contextuelle quant à la valeur q
 Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@example.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
 
 ```html
-<input type="email" placeholder="sophie@example.com">
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -175,7 +180,7 @@ Il est possible de contrôler la taille physique de la boîte de saisie et égal
 La taille physique de la boîte de saisie peut être paramétrée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Grâce à cet attribut, on peut indiquer le nombre de caractères que le champ peut afficher. Dans l'exemple qui suit, la boîte d'édition pourra contenir jusqu'à 15 caractères&nbsp;:
 
 ```html
-<input type="email" size="15">
+<input type="email" size="15" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -187,7 +192,7 @@ L'attribut `size` ne contraint pas la longueur de l'adresse qu'on pourra saisir.
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractères de large et dans laquelle on ne peut saisir des adresses qui ont au moins 3 caractères et au plus 64 caractères.
 
 ```html
-<input type="email" size="32" minlength="3" maxlength="64">
+<input type="email" size="32" minlength="3" maxlength="64" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -199,7 +204,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 On peut également fournir une valeur par défaut en remplissant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément&nbsp;:
 
 ```html
-<input type="email" value="default@example.com">
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -209,14 +214,14 @@ On peut également fournir une valeur par défaut en remplissant l'attribut [`va
 Pour améliorer encore l'ergonomie, on peut fournir une liste d'options par défaut parmi laquelle l'utilisatrice ou l'utilisateur peut choisir. Cela fonctionne en utilisant l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) dont la valeur est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient différents éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) dont les valeurs des attributs `value` fournissent les adresses suggérées. L'utilisatrice ou l'utilisateur n'est pas contraint à saisir une valeur parmi celles-ci, elles sont uniquement fournies à titre indicatif.
 
 ```html
-<input type="email" size="40" list="defaultEmails">
+<input type="email" size="40" list="defaultEmails" />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 
@@ -228,7 +233,8 @@ Lorsqu'on utilise l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)
 
 Il existe deux niveaux de validation pour les champs de saisie de type `email`. Tout d'abord, on a le niveau standard qui permet de vérifier automatiquement si l'adresse électronique est bien formatée. Ensuite, il est possible d'ajouter un filtre spécifique si besoin de répondre à des contraintes plus spécifiques.
 
-> **Attention :** La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.
+> [!WARNING]
+> La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.
 
 ### Validation simple
 
@@ -241,7 +247,8 @@ Les navigateurs qui implémentent le type `email` fournissent une validation aut
 
 Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) peuvent être utilisées afin de mettre en forme la valeur selon qu'elle est valide ou non — voir [Validation des données de formulaires](/fr/docs/Learn/Forms/Form_validation) pour en apprendre davantage.
 
-> **Note :** La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bug 15489 du W3C](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
+> [!NOTE]
+> La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bug 15489 du W3C](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
 
 ### Validation grâce à une expression rationnelle
 
@@ -275,19 +282,29 @@ label::after {
 
 ```html
 <form>
- <div class="emailBox">
-   <label for="emailAddress">Votre adresse mail</label><br>
-   <input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="nomutilisateur@beststartupever.com" pattern=".+@beststartupever.com"
-          title="Merci de fournir uniquement une adresse Best Startup Ever">
- </div>
+  <div class="emailBox">
+    <label for="emailAddress">Votre adresse mail</label><br />
+    <input
+      id="emailAddress"
+      type="email"
+      size="64"
+      maxlength="64"
+      required
+      placeholder="nomutilisateur@beststartupever.com"
+      pattern=".+@beststartupever.com"
+      title="Merci de fournir uniquement une adresse Best Startup Ever" />
+  </div>
 
- <div class="messageBox">
-   <label for="message">Requête</label><br>
-   <textarea id="message" cols="80" rows="8" required
-             placeholder="Mes chaussures sont trop petites."></textarea>
- </div>
-  <input type="submit" value="Envoyer la requête">
+  <div class="messageBox">
+    <label for="message">Requête</label><br />
+    <textarea
+      id="message"
+      cols="80"
+      rows="8"
+      required
+      placeholder="Mes chaussures sont trop petites."></textarea>
+  </div>
+  <input type="submit" value="Envoyer la requête" />
 </form>
 ```
 
@@ -303,7 +320,7 @@ L'attribut [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder) ind
 
 Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format `_nomutilisateur_@beststartupever.com`. C'est pourquoi on utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) avec la valeur `".+@beststartupever.com"`. Cette valeur est une expression rationnelle qui permet de vérifier que la chaîne de caractère contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (`@`) puis du nom de domaine `beststartupever.com`.
 
-On notera que cette expression rationnelle ne permet pas de vérifier que l'adresse électronique est valide (on pourra par exemple avoir ` @beststartupever.com` (avec une espace en début de chaîne) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression rationnelle fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
+On notera que cette expression rationnelle ne permet pas de vérifier que l'adresse électronique est valide (on pourra par exemple avoir `@beststartupever.com` (avec une espace en début de chaîne) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression rationnelle fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
 
 Lorsqu'on utilise l'attribut `pattern`. il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) afin de décrire le motif de l'expression rationnelle. Autrement dit, dans ce cas, l'attribut `title` doit décrire le format souhaité plutôt que contenir une autre information. En effet, cet attribut sera affiché ou prononcé en cas d'erreur. Par exemple, le navigateur pourrait afficher le message «&nbsp;Le texte saisi ne correspond pas au motif requis.&nbsp;» suivi du texte indiqué dans la valeur de `title`. Par exemple si l'attribut `title` vaut «&nbsp;Adresse mail&nbsp;», le message affiché serait «&nbsp;Le texte saisi ne correspond pas au motif requis. Adresse mail&nbsp;» ce qui n'est pas correct.
 
@@ -311,25 +328,32 @@ C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir
 
 ![](adresse-electronique-mauvais-motif.png)
 
-> **Note :** Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
+> [!NOTE]
+> Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
 
 ## Exemples
 
-Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte  `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
+Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
 
 L'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) qui précède l'élément `<input>` permettra d'afficher un libellé avant la boîte de saisie. Le lien entre les deux est fait grâce à l'attribut `for` qui contient `"emailAddress"` qui est l'identifiant de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Grâce à cette association, cliquer sur l'étiquette permettra de placer le focus sur le champ de saisie.
 
 ```html
-<label for="emailAddress">Adresse mail</label><br/>
-<input id="emailAddress" type="email" placeholder="user@example.gov"
-       list="defaultEmails" size="64" maxlength="256" multiple>
+<label for="emailAddress">Adresse mail</label><br />
+<input
+  id="emailAddress"
+  type="email"
+  placeholder="user@example.gov"
+  list="defaultEmails"
+  size="64"
+  maxlength="256"
+  multiple />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 

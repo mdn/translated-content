@@ -1,17 +1,8 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/bind
 ---
+
 {{JSRef}}
 
 La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
@@ -20,7 +11,9 @@ La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appel�
 
 ## Syntaxe
 
-    let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...]]])
+```js
+let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Paramètres
 
@@ -56,17 +49,19 @@ Une fonction liée peut également être construite à l'aide de l'opérateur {{
 
 ### Créer une fonction liée
 
-La façon la plus simple d'utiliser `bind()`est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
+La façon la plus simple d'utiliser `bind()` est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
 
 Une erreur courante lorsqu'on débute en JavaScript est d'extraire une méthode d'un objet, puis plus tard d'appeler cette méthode depuis un objet et de s'attendre à utiliser l'objet original en tant que valeur de `this` (par exemple en utilisant cette méthode dans un _callback_). Sans précaution, cependant, l'objet original est perdu. Créer une fonction liée depuis la méthode, en utilisant l'objet original, résout simplement le problème :
 
 ```js
 this.x = 9; // en dehors de tout contexte,
-            // pour un navigateur, this est
-            // l'objet window
+// pour un navigateur, this est
+// l'objet window
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -97,8 +92,7 @@ var leadingThirtysevenList = list.bind(null, 37);
 var list2 = leadingThirtysevenList(); // [37]
 var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
-
-function sommeArguments(arg1, arg2){
+function sommeArguments(arg1, arg2) {
   return arg1 + arg2;
 }
 
@@ -113,17 +107,16 @@ Par défaut à l'intérieur de {{domxref("window.setTimeout()")}}, le mot-clé `
 
 ```js
 function Fleur() {
-  this.nbPétales = Math.floor( Math.random() * 12 ) + 1;
+  this.nbPétales = Math.floor(Math.random() * 12) + 1;
 }
 
 // On déclare floraison après un délai d'une seconde
-Fleur.prototype.floraison = function() {
-  window.setTimeout( this.declare.bind( this ), 1000 );
+Fleur.prototype.floraison = function () {
+  window.setTimeout(this.declare.bind(this), 1000);
 };
 
-Fleur.prototype.declare = function() {
-  console.log('Je suis une fleur avec ' +
-     this.nbPétales + ' pétales !');
+Fleur.prototype.declare = function () {
+  console.log("Je suis une fleur avec " + this.nbPétales + " pétales !");
 };
 
 var fleur = new Fleur();
@@ -133,7 +126,8 @@ fleur.floraison();
 
 ### Les fonctions liées utilisées en tant que constructeurs
 
-> **Attention :** Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
+> [!WARNING]
+> Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
 
 Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur :
 
@@ -143,19 +137,18 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
 p.toString(); // "1,2"
 
-
 var emptyObj = {};
 var YAxisPoint = Point.bind(emptyObj, 0 /* x */);
 // non supporté dans le polyfill ci dessous,
 // fonctionne avec le bind natif :
-var YAxisPoint = Point.bind(null,0 /* x */);
+var YAxisPoint = Point.bind(null, 0 /* x */);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); //  "0,5"
@@ -208,15 +201,11 @@ slice(arguments);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-function.prototype.apply', 'Function.prototype.bind')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Voir aussi
 

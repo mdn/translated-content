@@ -1,13 +1,8 @@
 ---
 title: Compteurs CSS
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 Les **compteurs CSS** sont des variables dont les valeurs sont incrémentées par les règles CSS et qui permettent de savoir combien de fois elles sont utilisées. Cela permet par exemple d'adapter la mise en forme du contenu en fonction de son emplacement dans le document.
@@ -32,17 +27,18 @@ La fonction `counters()` prend également deux formes : `counters(nom, chaine)` 
 
 Dans l'exemple qui suit, la feuille de style CSS préfixe chaque titre de niveau 3 avec « Section \<la valeur du compteur> : ».
 
-> **Note :** La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est `decimal`).
+> [!NOTE]
+> La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est `decimal`).
 
 #### CSS
 
 ```css
 body {
-  counter-reset: section;                    /* On initialise le compteur à 0 */
+  counter-reset: section; /* On initialise le compteur à 0 */
 }
 
 h3::before {
-  counter-increment: section;                /* On incrémente le compteur section */
+  counter-increment: section; /* On incrémente le compteur section */
   content: "Section " counter(section) " : "; /* On affiche le compteur */
 }
 ```
@@ -67,17 +63,17 @@ Un compteur CSS est particulièrement utile lorsqu'il s'agit de gérer les liste
 
 ```css
 ol {
-  counter-reset: section;                /* On crée une nouvelle instance du
+  counter-reset: section; /* On crée une nouvelle instance du
                                             compteur section avec chaque ol */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* On incrémente uniquement cette
+  counter-increment: section; /* On incrémente uniquement cette
                                             instance du compteur */
-  content: counters(section,".") " ";    /* On ajoute la valeur de toutes les
+  content: counters(section, ".") " "; /* On ajoute la valeur de toutes les
                                             instances séparées par ".". */
-                                         /* Si on doit supporter < IE8 il faudra
+  /* Si on doit supporter < IE8 il faudra
                                             faire attention à ce qu'il n'y ait
                                             aucun blanc après ',' */
 }
@@ -85,7 +81,7 @@ li::before {
 
 ### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->
@@ -121,10 +117,7 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

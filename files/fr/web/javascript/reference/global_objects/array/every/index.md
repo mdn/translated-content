@@ -1,28 +1,22 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/every
 ---
+
 {{JSRef}}
 
 La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
 
-> **Note :** Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 
 ## Syntaxe
 
-    arr.every(callback[, thisArg])
+```js
+arr.every(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -68,19 +62,25 @@ Dans l'exemple suivant, on teste si tous les éléments du tableau sont supérie
 function estAssezGrand(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(estAssezGrand);   // false
+[12, 5, 8, 130, 44].every(estAssezGrand); // false
 [12, 54, 18, 130, 44].every(estAssezGrand); // true
 ```
 
 ### Utiliser les fonctions fléchées avec `every`
 
-{{jsxref("Fonctions/Fonctions_fl%C3%A9ch%C3%A9es","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","",1)}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
-[{a:1, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // true
-[{a:2, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // false
+[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
+[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
+[
+  { a: 1, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // true
+[
+  { a: 2, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // false
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -89,12 +89,12 @@ function estAssezGrand(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this vaut null ou n est pas défini');
+      throw new TypeError("this vaut null ou n est pas défini");
     }
 
     // 1. Soit O le résultat de l'appel à ToObject auquel on a
@@ -108,7 +108,7 @@ if (!Array.prototype.every) {
 
     // 4. Si IsCallable(callbackfn) est faux, on lève une exception
     // TypeError.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -122,7 +122,6 @@ if (!Array.prototype.every) {
 
     // 7. On répète tant que k < len
     while (k < len) {
-
       var kValue;
 
       // a. Soit Pk la valeur de ToString(k).
@@ -132,7 +131,6 @@ if (!Array.prototype.every) {
       //    Cette étape peut être combinée avec l'étape c
       // c. Si kPresent vaut true, alors
       if (k in O) {
-
         // i. Soit kValue le résultat de l'appel de la méthode
         //    interne Get de O avec l'argument Pk.
         kValue = O[k];
@@ -156,15 +154,11 @@ if (!Array.prototype.every) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## Voir aussi
 

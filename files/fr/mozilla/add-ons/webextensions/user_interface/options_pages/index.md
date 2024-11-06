@@ -1,10 +1,8 @@
 ---
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
+
 {{AddonSidebar}}
 
 Une page Option vous permet de définir des préférences pour votre WebExtension que vos utilisateurs peuvent modifier. Les utilisateurs peuvent accéder à la page d'options de l'extension à partir du gestionnaire des add-ons du navigateur:
@@ -13,7 +11,7 @@ Une page Option vous permet de définir des préférences pour votre WebExtensio
 
 La façon dont les utilisateurs accèdent à la page et la manière dont elle est intégrée à l'interface utilisateur du navigateur varient d'un navigateur à l'autre.
 
-Vous pouvez ouvrir la page en programmant en appelant  [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
+Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
 
 Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
 
@@ -22,22 +20,21 @@ Les pages d'options ont une politique de sécurité de contenu qui restreint les
 Pour créer une page d'options, écrivez un fichier HTML définissant la page. Cette page peut inclure des fichiers CSS et JavaScript, comme une page Web normale. Cette page, contine un exemple dans [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour), comprend un fichier :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
     <meta charset="utf-8" />
   </head>
 
-<body>
-  <form>
+  <body>
+    <form>
       <label>Favourite colour</label>
-      <input type="text" id="colour" >
+      <input type="text" id="colour" />
       <button type="submit">Save</button>
-  </form>
-  <script src="options.js"></script>
-</body>
-
+    </form>
+    <script src="options.js"></script>
+  </body>
 </html>
 ```
 

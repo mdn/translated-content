@@ -1,18 +1,17 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/element-available
-original_slug: Web/XPath/Fonctions/element-available
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `element-available` détermine si un élément est disponible et retourne la valeur booléenne `true` ou `false`.
 
 ### Syntaxe
 
-    element-available( QName )
+```
+element-available( QName )
+```
 
 ### Arguments
 

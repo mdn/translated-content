@@ -1,12 +1,8 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/justify-items
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-items`** définit la valeur par défaut de {{cssxref("justify-self")}} pour tous les éléments d'une boîte et permet ainsi de définir le comportement par défaut pour la justification des éléments d'une boîte le long de l'axe en ligne (c'est-à-dire l'axe correspondant au sens d'écriture).
@@ -30,15 +26,15 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Alignement par rapport à l'axe */
-justify-items: center;     /* Les éléments sont regroupés au centre */
-justify-items: start;      /* Les éléments sont regroupés au début  */
-justify-items: end;        /* Les éléments sont regroupés à la fin  */
+justify-items: center; /* Les éléments sont regroupés au centre */
+justify-items: start; /* Les éléments sont regroupés au début  */
+justify-items: end; /* Les éléments sont regroupés à la fin  */
 justify-items: flex-start; /* Les éléments sont regroupés au début de l'axe */
-justify-items: flex-end;   /* Les éléments sont regroupés à la fin de l'axe */
+justify-items: flex-end; /* Les éléments sont regroupés à la fin de l'axe */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Les éléments sont regroupés à gauche */
-justify-items: right;      /* Les éléments sont regroupés à droite */
+justify-items: left; /* Les éléments sont regroupés à gauche */
+justify-items: right; /* Les éléments sont regroupés à droite */
 
 /* Alignement par rapport à la ligne de base */
 justify-items: baseline;
@@ -127,7 +123,9 @@ Cette propriété peut être définie selon trois formes différentes :
 ### CSS
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -148,7 +146,7 @@ Cette propriété peut être définie selon trois formes différentes :
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -190,21 +188,11 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.justify-items.flex_context")}}
-
-### Prise en charge pour les grilles CSS
-
-{{Compat("css.properties.justify-items.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

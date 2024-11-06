@@ -1,16 +1,8 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/EPSILON
 ---
+
 {{JSRef}}
 
 La propriété **`Number.EPSILON`** représente la différence entre le chiffre 1 (un) et la plus petite valeur supérieure à 1 qui peut être représentée par un nombre en JavaScript.
@@ -30,27 +22,24 @@ La propriété `EPSILON` vaut environ `2.2204460492503130808472633361816E-16` (c
 ```js
 x = 0.2;
 y = 0.3;
-equal = (Math.abs(x - y) < Number.EPSILON);
+equal = Math.abs(x - y) < Number.EPSILON;
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
 if (Number.EPSILON === undefined) {
-  Number.EPSILON  =  Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.EPSILON")}}
+{{Compat}}
 
 ## Voir aussi
 

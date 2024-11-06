@@ -1,26 +1,21 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Float32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Float32Array`** représente un tableau de nombres flottants représentés sur 32 bits (ce qui correspond au type C `float`), l'ordre des octets utilisés étant celui de la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_) utilisé, on pourra utiliser une {{jsxref("DataView")}}. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est établi, on peut référencer des éléments dans le tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle des crochets.
 
 ## Syntaxe
 
-    new Float32Array(); // Apparu avec ES2017
-    new Float32Array(longueur);
-    new Float32Array(tableauTypé);
-    new Float32Array(objet);
-    new Float32Array(buffer [, décalageOctets [, longueur]]);
+```js
+new Float32Array(); // Apparu avec ES2017
+new Float32Array(longueur);
+new Float32Array(tableauTypé);
+new Float32Array(objet);
+new Float32Array(buffer [, décalageOctets [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe de ce constructeur et les paramètres utilisés, voir la page {{jsxref("Objets_globaux/TypedArray","TypedArray","#Syntaxe")}}.
 
@@ -89,7 +84,7 @@ Chacun des objets `Float32Array` hérite de {{jsxref("TypedArray.prototype", "%T
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
@@ -129,7 +124,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // Construction à partir d'un tableau
-var arr = new Float32Array([21,31]);
+var arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un tableau typé
@@ -142,22 +137,20 @@ var buffer = new ArrayBuffer(16);
 var z = new Float32Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {Spec2('Typed Array')}}      | Remplacée par ECMAScript 2015.                                                                                                          |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}         | Défintion initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                   |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}} | ECMAScript 2017 a modifié le constructeur afin que celui-ci utilise l'opération interne `ToIndex` et puisse être utilisé sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Float32Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

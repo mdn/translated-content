@@ -1,19 +1,16 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) d'une valeur donnée.
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-> **Note :** La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
+> [!NOTE]
+> La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
 
 ## Syntaxe
 
@@ -51,9 +48,13 @@ La propriété `counter-increment` peut être définie de deux façons :
 - `none`
   - : Aucun compteur n'est incrémenté. Cette valeur est utilisée comme valeur par défaut et permet également d'annuler des incréments décrits par des règles moins spécifiques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -87,16 +88,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#propdef-counter-increment", "counter-increment")}}             | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#propdef-counter-increment", "counter-increment")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ## Voir aussi
 

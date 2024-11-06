@@ -1,15 +1,11 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
-La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}À l'instar des autres propriétés raccourcies, toutes les valeurs qui ne sont pas explicitement utilisées dans la déclaration sont réinitialisées avec [leur valeur initiale](/fr/docs/Web/CSS/Valeur_initiale).
 
@@ -43,7 +39,8 @@ outline: unset;
 
 La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance.
 
-> **Note :** Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
+> [!NOTE]
+> Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
 
 ### Valeurs
 
@@ -54,9 +51,13 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 - `<'outline-color'>`
   - : Depuis Gecko 1.9 (Firefox 3), la valeur de la propriété {{cssxref("color")}} de l'élément est utilisée. Voir {{cssxref("outline-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -90,7 +91,7 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 ```html
 <p class="exemple">
   petit texte
-    <span class=grand>Grand Texte</span>
+  <span class="grand">Grand Texte</span>
   petit texte
 </p>
 ```
@@ -103,7 +104,7 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 }
 
 .grand {
-  font-size:xx-large;
+  font-size: xx-large;
 }
 ```
 
@@ -117,17 +118,12 @@ Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le st
 
 - {{cssxref(":focus")}}
 - [Comment concevoir des indicateurs de focus utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- [_Understanding Success Criterion 2.4.7  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
+- [_Understanding Success Criterion 2.4.7 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | Aucun changement.    |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

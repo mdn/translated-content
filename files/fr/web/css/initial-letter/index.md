@@ -1,13 +1,8 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/initial-letter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`initial-letter`** permet de définir la mise en forme pour les lettrines (qu'elles soient abaissées, surélevées ou autre).
@@ -18,9 +13,9 @@ initial-letter: normal;
 
 /* Valeurs numériques            */
 /* Types <number> puis <integer> */
-initial-letter: 1.5;   /* La première lettre occupe 1.5 lignes */
-initial-letter: 3.0;   /* La première lettre occupe 3 lignes   */
-initial-letter: 3.0 2; /* La première lettre occupe 3 lignes et
+initial-letter: 1.5; /* La première lettre occupe 1.5 lignes */
+initial-letter: 3; /* La première lettre occupe 3 lignes   */
+initial-letter: 3 2; /* La première lettre occupe 3 lignes et
                           s'enfonce de deux lignes vers le bas */
 
 /* Valeurs globales */
@@ -42,9 +37,13 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 - `<integer>`
   - : Cet argument définit le nombre de lignes dont s'enfoncera la lettrine vers le bas. La valeur utilisée doit être supérieure à 0. Si cet argument est absent, on dupliquera la valeur du premier argument, arrondi vers le bas à l'entier positif le plus proche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -52,8 +51,8 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ```css
 .exemple {
-  -webkit-initial-letter: 3.0 2;
-  initial-letter: 3.0 2;
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
 }
 ```
 
@@ -61,9 +60,9 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ```html
 <p class="exemple">
-  Un grand rosier se trouvait à l’entrée du jardin&nbsp;;
-  les roses qu’il portait étaient blanches, mais trois
-  jardiniers étaient en train de les peindre en rouge.
+  Un grand rosier se trouvait à l’entrée du jardin&nbsp;; les roses qu’il
+  portait étaient blanches, mais trois jardiniers étaient en train de les
+  peindre en rouge.
 </p>
 ```
 
@@ -73,12 +72,8 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Inline', '#sizing-drop-initials', 'initial-letter')}} | {{Spec2('CSS3 Inline')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.initial-letter")}}
+{{Compat}}

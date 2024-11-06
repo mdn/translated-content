@@ -1,19 +1,10 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-block
-  - margin-block-end
-  - recipe:css-property
-browser-compat: css.properties.margin-block-end
-translation_of: Web/CSS/margin-block-end
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
 **`margin-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
@@ -24,9 +15,9 @@ translation_of: Web/CSS/margin-block-end
 
 ```css
 /* <length> 値 */
-margin-block-end: 10px;  /* 絶対的な長さ */
-margin-block-end: 1em;   /* テキストの大きさに対する相対値 */
-margin-block-end: 5%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-end: 10px; /* 絶対的な長さ */
+margin-block-end: 1em; /* テキストの大きさに対する相対値 */
+margin-block-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-block-end: auto;
@@ -35,6 +26,7 @@ margin-block-end: auto;
 margin-block-end: inherit;
 margin-block-end: initial;
 margin-block-end: revert;
+margin-block-end: revert-layer;
 margin-block-end: unset;
 ```
 
@@ -56,7 +48,7 @@ margin-block-end: unset;
 
 ## 例
 
-<h3 id="Setting_block_end_margin">ブロック方向の末尾のマージンを設定</h3>
+### ブロック方向の末尾のマージンを設定
 
 #### HTML
 
@@ -84,7 +76,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_end_margin", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の末尾のマージンを設定", 140, 140)}}
 
 ## 仕様書
 
@@ -96,5 +88,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

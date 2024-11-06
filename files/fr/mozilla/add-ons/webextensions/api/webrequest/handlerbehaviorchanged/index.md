@@ -1,19 +1,9 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 ---
-{{AddonSidebar()}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
+
+{{AddonSidebar}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
 
 Supposons que le travail d'une extension consiste à bloquer les requêtes Web par rapport à un modèle, et le scénario suivant se produit :
 
@@ -26,7 +16,7 @@ Comme la page sera rechargée à partir du cache mémoire, il se peut que l'audi
 
 La fonction `handlerBehaviorChanged()` est conçue pour résoudre ce problème. Il vide le cache en mémoire, de sorte que les rechargements de page déclenchent les auditeurs d'événements.
 
-Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux et mauvais pour la performance. Le module webRequest définit une propriété en lecture seule  {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}} : faire plus d'appels que ce nombre en 10 minutes n'aura aucun effet.
+Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux et mauvais pour la performance. Le module webRequest définit une propriété en lecture seule {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}} : faire plus d'appels que ce nombre en 10 minutes n'aura aucun effet.
 
 L'implémentation de la mise en cache, d'où la nécessité de cette fonction, varie d'un navigateur à l'autre, de sorte que dans certains navigateurs, cette fonction ne fait rien.
 
@@ -35,7 +25,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+var flushingCache = browser.webRequest.handlerBehaviorChanged();
 ```
 
 ### Paramètres
@@ -46,13 +36,13 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments, lorsque l'opération sera terminée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.handlerBehaviorChanged")}}
+{{Compat}}
 
 ## Exemples
 
-Dans le snippet suivant, nous vidons le cache en mémoire via un appel à `handlerBehaviorChanged()`,  et signalons cette action en enregistrant un message approprié à la console.
+Dans le snippet suivant, nous vidons le cache en mémoire via un appel à `handlerBehaviorChanged()`, et signalons cette action en enregistrant un message approprié à la console.
 
 ```js
 function onFlushed() {
@@ -69,13 +59,14 @@ flushingCache.then(onFlushed, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +93,4 @@ flushingCache.then(onFlushed, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,18 +1,9 @@
 ---
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - set
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Utilisez `BrowserSetting.set()` pour modifier le paramètre du navigateur vers une nouvelle valeur.
 
@@ -23,21 +14,21 @@ Certaines règles peuvent être restreintes lorsque les extensions sont capables
 
 Cela signifie que si l'extension X essaie de modifier un paramètre :
 
-1.  Si le réglage est verrouillé, le réglage n'est pas modifié. Cependant, le changement de X est rappelé, et il est stocké dans une file d'attente, commandé par la priorité de X par rapport à toutes les autres extensions qui ont essayé de modifier le paramètre. Si le réglage devient déverrouillé plus tard, la première extension de la file d'attente permet de modifier le réglage.
-2.  Sinon, si aucune autre extension n'a déjà changé le paramètre, X réussit à modifier le réglage, puis on dit "contrôler" le réglage.
-3.  Sinon, si une extension de priorité inférieure Y a déjà changé le paramètre, X réussit à modifier le réglage et maintenant le réglage.  However, Y's change is remembered, and is stored in a queue in precedence order. Cependant, le changement de Y est rappelé et est stocké dans une file d'attente dans l'ordre de priorité. Si X efface ensuite sa valeur, ou si X est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
-4.  Sinon, si une extension de priorité supérieure Z a déjà changé le paramètre, X ne réussit pas à modifier le paramètre, mais sa modification est mise en file d'attente. Si Z efface ensuite sa valeur, ou si Z est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
+1. Si le réglage est verrouillé, le réglage n'est pas modifié. Cependant, le changement de X est rappelé, et il est stocké dans une file d'attente, commandé par la priorité de X par rapport à toutes les autres extensions qui ont essayé de modifier le paramètre. Si le réglage devient déverrouillé plus tard, la première extension de la file d'attente permet de modifier le réglage.
+2. Sinon, si aucune autre extension n'a déjà changé le paramètre, X réussit à modifier le réglage, puis on dit "contrôler" le réglage.
+3. Sinon, si une extension de priorité inférieure Y a déjà changé le paramètre, X réussit à modifier le réglage et maintenant le réglage. However, Y's change is remembered, and is stored in a queue in precedence order. Cependant, le changement de Y est rappelé et est stocké dans une file d'attente dans l'ordre de priorité. Si X efface ensuite sa valeur, ou si X est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
+4. Sinon, si une extension de priorité supérieure Z a déjà changé le paramètre, X ne réussit pas à modifier le paramètre, mais sa modification est mise en file d'attente. Si Z efface ensuite sa valeur, ou si Z est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
 
 Une extension peut déterminer lequel de ces scénarios s'applique en examinant la propriété "`levelOfControl`" renvoyée d'un appel à [`BrowserSetting.get()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/get).
 
-la méthode [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) renvoie une promesse qui résout un booléen : Si une tentative de modification d'un paramètre aboutit à la modification du paramètre (scenarios 2 et 3 ci-dessus) le booléen est  `true`: sinon il est `false`.
+la méthode [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) renvoie une promesse qui résout un booléen : Si une tentative de modification d'un paramètre aboutit à la modification du paramètre (scenarios 2 et 3 ci-dessus) le booléen est `true`: sinon il est `false`.
 
 ## Syntaxe
 
 ```js
 var setting = setting.set(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -53,7 +44,7 @@ var setting = setting.set(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `booléen`: `true` si le paramètre a été modifié, `false` sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
@@ -71,24 +62,23 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-      value: false
-    });
-    setting.then(onSet);
-
+  var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    value: false,
+  });
+  setting.then(onSet);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,4 +105,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

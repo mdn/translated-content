@@ -1,15 +1,8 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.table-layout
-translation_of: Web/CSS/table-layout
 ---
+
 {{CSSRef}}
 
 **`table-layout`** は CSS のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
@@ -57,10 +50,22 @@ table-layout: unset;
 
 ```html
 <table>
-  <tr><td>Ed</td><td>Wood</td></tr>
-  <tr><td>Albert</td><td>Schweitzer</td></tr>
-  <tr><td>Jane</td><td>Fonda</td></tr>
-  <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 
@@ -74,10 +79,10 @@ table {
 }
 
 td {
-  border: 1px solid blue;
+  border: 1px solid blue;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 ```
 

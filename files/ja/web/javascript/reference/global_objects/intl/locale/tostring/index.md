@@ -1,17 +1,8 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.Locale.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。
@@ -23,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ## 構文
 
 ```js
-toString()
+toString();
 ```
 
 ### 返値
@@ -39,7 +30,10 @@ toString()
 ### toString の使用
 
 ```js
-let myLocale = new Intl.Locale("ja-Jpan-JP", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja-Jpan-JP", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // "ja-Jpan-JP" と表示
 console.log(myLocale.toString()); // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示
 ```

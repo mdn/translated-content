@@ -1,16 +1,8 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 ---
+
 {{JSRef}}
 
 La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) qui contient les clés de chaque élément de l'objet `Map`, dans leur ordre d'insertion.
@@ -19,7 +11,9 @@ La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/G
 
 ## Syntaxe
 
-    maMap.keys()
+```js
+maMap.keys();
+```
 
 ### Valeur de retour
 
@@ -44,14 +38,11 @@ console.log(mapIter.next().value); // Object
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

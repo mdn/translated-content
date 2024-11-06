@@ -1,29 +1,23 @@
 ---
-title: 'HTMLElement: copy イベント'
+title: "HTMLElement: copy イベント"
+short-title: copy
 slug: Web/API/HTMLElement/copy_event
-tags:
-  - API
-  - クリップボード API
-  - HTMLElement
-  - イベント
-  - リファレンス
-  - ウェブ
-  - copy
-browser-compat: api.HTMLElement.copy_event
-translation_of: Web/API/HTMLElement/oncopy
+l10n:
+  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を行おうとした時に発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener('copy', event => { });
+addEventListener("copy", (event) => {});
 
-oncopy = event => { };
+oncopy = (event) => {};
 ```
 
 ## イベント型
@@ -36,8 +30,8 @@ oncopy = event => { };
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, `copy`, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
 
@@ -47,7 +41,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+<textarea id="editor" rows="3">
+このフィールドにテキストをコピー＆ペーストしてみてください。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>
@@ -56,19 +52,19 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 function logCopy(event) {
-  log.innerText = 'コピーがブロックされました。\n' + log.innerText;
+  log.innerText = `コピーがブロックされました。\n${log.innerText}`;
   event.preventDefault();
 }
 
 function logPaste(event) {
-  log.innerText = '貼り付けがブロックされました。\n' + log.innerText;
+  log.innerText = `貼り付けがブロックされました。\n${log.innerText}`;
   event.preventDefault();
 }
 
-const editor = document.getElementById('editor');
+const editor = document.getElementById("editor");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

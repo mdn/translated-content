@@ -1,14 +1,8 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.and
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.and()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の AND を計算し、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ## 構文
 
 ```js
-Atomics.and(typedArray, index, value)
+Atomics.and(typedArray, index, value);
 ```
 
 ### 引数
@@ -69,7 +63,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // 古い値である 5 を返す
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## 仕様書

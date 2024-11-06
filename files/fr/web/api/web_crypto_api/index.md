@@ -1,16 +1,16 @@
 ---
 title: API Web Crypto
 slug: Web/API/Web_Crypto_API
-translation_of: Web/API/Web_Crypto_API
-browser-compat: api.Crypto
 ---
+
 {{DefaultAPISidebar("Web Crypto API")}}
 
 L'API **Web Cryptography** (aussi appelée <i lang="en">Web Crypto API</i>) est une interface permettant à un script d'utiliser des primitives cryptographiques afin de construire des systèmes utilisant la cryptographie.
 
 {{AvailableInWorkers}}
 
-> **Attention :** L'API Web Crypto fournit un ensemble de primitives cryptographiques de bas niveau. Il est très facile de mal les utiliser et les pièges peuvent être très subtils.
+> [!WARNING]
+> L'API Web Crypto fournit un ensemble de primitives cryptographiques de bas niveau. Il est très facile de mal les utiliser et les pièges peuvent être très subtils.
 >
 > Même si vous utilisez les fonctionnalités cryptographiques basiques correctement, ayez conscience que la gestion sécurisée des clés et la conception générale d'un système sécurisé sont des tâches extrêmement difficiles à réaliser correctement et qui incombent donc généralement à des experts en sécurité.
 >
@@ -24,10 +24,8 @@ Certains navigateurs implémentent une interface appelée [`Crypto`](/fr/docs/We
 
 ## Spécifications
 
-| Spécification                                            |
-| -------------------------------------------------------- |
-| [API Web Cryptography](https://w3c.github.io/webcrypto/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat}}
+{{Compat}}

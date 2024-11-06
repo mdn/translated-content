@@ -1,12 +1,10 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-translation_of: Web/CSS/vertical-align
+l10n:
+  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
+
 {{CSSRef}}
 
 **`vertical-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。
@@ -15,10 +13,10 @@ translation_of: Web/CSS/vertical-align
 
 vertical-align は、2 つの場面で使用することができます。
 
-- 包含する行ボックスの中で、インライン要素のボックスの垂直方向の配置を決める場合。例えば、[テキストの行の中で画像の垂直位置を決める](#vertical_alignment_in_a_line_box)ために使用することができます。
+- 包含する行ボックスの中で、インラインレベル要素のボックスの垂直方向の配置を決める場合。例えば、[テキストの行の中で画像の垂直位置を決める](#vertical_alignment_in_a_line_box)ために使用することができます。
 - [表のセルの内容](#vertical_alignment_in_a_table_cell)の垂直方向の配置を決める場合。
 
-`vertical-align` はインライン要素、インラインブロック要素、表のセル要素だけに適用されることに注意してください。つまり、[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)の垂直方向の配置には使用できません。
+`vertical-align` はインライン要素、インラインブロック要素、表のセル要素だけに適用されることに注意してください。つまり、[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)の垂直方向の配置には使用できません。
 
 ## 構文
 
@@ -44,6 +42,7 @@ vertical-align: 20%;
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: revert;
+vertical-align: revert-layer;
 vertical-align: unset;
 ```
 
@@ -70,7 +69,7 @@ vertical-align: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 要素のベースラインを、親要素のベースラインの指定値分上に揃えます。負の値を使えます。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : &lt;length&gt; 値と似ていますが、{{Cssxref("line-height")}} プロパティに対するパーセント値で指定します。負の値を使えます。
+  - : 要素のベースラインを、親要素のベースラインから指定されたパーセント値分上に配置します。値は、{{Cssxref("line-height")}} プロパティのパーセント値です。負の値も指定できます。
 
 #### 行との相対値
 
@@ -106,49 +105,70 @@ vertical-align: unset;
 
 ## 例
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
 #### HTML
 
 ```html
-<div>An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
-<div>An <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
-<div>An <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
-<div>An <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+<div>
+  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
+  a default alignment.
+</div>
+<div>
+  An
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-top alignment.
+</div>
+<div>
+  An
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-bottom alignment.
+</div>
+<div>
+  An
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a middle alignment.
+</div>
 ```
 
 #### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("基本的な例")}}
 
-<h3 id="Vertical_alignment_in_a_line_box">行ボックス内での垂直方向の配置</h3>
+### 行ボックス内での垂直方向の配置
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+top:         <img style="vertical-align: top" src="star.png" alt="star"/>
+middle:      <img style="vertical-align: middle" src="star.png" alt="star"/>
+bottom:      <img style="vertical-align: bottom" src="star.png" alt="star"/>
+super:       <img style="vertical-align: super" src="star.png" alt="star"/>
+sub:         <img style="vertical-align: sub" src="star.png" alt="star"/>
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+text-top:    <img style="vertical-align: text-top" src="star.png" alt="star"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png" alt="star"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png" alt="star"/>
+-1em:        <img style="vertical-align: -1em" src="star.png" alt="star"/>
+20%:         <img style="vertical-align: 20%" src="star.png" alt="star"/>
+-100%:       <img style="vertical-align: -100%" src="star.png" alt="star"/>
 </p>
 ```
 
@@ -163,7 +183,7 @@ img {
 
 p {
   height: 3em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-family: monospace;
   text-decoration: underline overline;
   margin-left: auto;
@@ -174,24 +194,30 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_line_box", 1200, 160)}}
+{{EmbedLiveSample("行ボックス内での垂直方向の配置", 1200, 160)}}
 
-<h3 id="Vertical_alignment_in_a_table_cell">表のセル内での垂直方向の配置</h3>
+### 表のセル内での垂直方向の配置
+
+例えば、6 つのセルがある単一の行のある表があるとします。 この行は、既定値として `vertical-align` を `bottom` に設定します。
+
+- 最初の 4 つのセルはそれぞれ自分自身で `vertical-align` の値を設定し、これらの値は行の値を上書きします。
+- 5 番目のセルは `vertical-align` の値を設定しないので、行の値を継承します。
+
+6 番目のセルは、効果を確認するためにセルの高さを十分に確保することを保証するためにのみ使用します。
 
 #### HTML
 
 ```html
 <table>
-  <tr>
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
+  <tr class="bottom">
+    <td class="baseline">baseline</td>
+    <td class="top">top</td>
+    <td class="middle">middle</td>
+    <td>bottom</td>
+    <td>Row's style</td>
     <td>
-      <p>There is a theory which states that if ever anyone discovers exactly
-      what the Universe is for and why it is here, it will instantly disappear and
-      be replaced by something even more bizarre and inexplicable.</p>
-      <p>There is another theory which states that this has already happened.</p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      pretium felis eu sem mattis vulputate.
     </td>
   </tr>
 </table>
@@ -206,7 +232,9 @@ table {
   width: 80%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -214,11 +242,27 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
+
+.bottom {
+  vertical-align: bottom;
+}
+
+.baseline {
+  vertical-align: baseline;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
+}
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", 1200, 230)}}
+{{EmbedLiveSample("表のセル内での垂直方向の配置", 1200, 230)}}
 
 ## 仕様書
 
@@ -230,7 +274,7 @@ td {
 
 ## 関連情報
 
-- [フレックスボックスの典型的な使用例の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
+- [フレックスボックスの典型的な使用例の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

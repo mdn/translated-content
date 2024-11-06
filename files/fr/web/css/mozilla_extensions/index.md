@@ -1,21 +1,16 @@
 ---
 title: Extensions CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-tags:
-  - CSS
-  - Mozilla
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/Mozilla_Extensions
-original_slug: Web/CSS/Extensions_Mozilla
 ---
+
 {{CSSRef}}
 
 Les applications Mozilla, telles que Firefox, prennent en charge un certain nombre d'extensions spécifiques à [CSS](/fr/docs/Web/CSS) : des propriétés, des valeurs, des pseudo-éléments, des pseudo-classes, des règles @ et des requêtes média. Ces extensions utilisent le préfixe `-moz`.
 
 ## Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)
 
-> **Note :** Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
+> [!NOTE]
+> Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
 
 ### B
 
@@ -71,9 +66,11 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Anciennes propriétés spécifiques, désormais standardisées
 
-> **Note :** Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+> [!NOTE]
+> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
 
-- ### A
+### A
+
 - {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
@@ -84,7 +81,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
-- ### B
+
+### B
+
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
 - {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
@@ -100,7 +99,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-style")}}]
 - {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-width")}}]
 - {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- ### C
+
+### C
+
 - {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
@@ -111,7 +112,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
-- ### F – M
+
+### F – M
+
 - {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
@@ -119,20 +122,26 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-end")}}]
 - {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-start")}}]
 - {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- ### O
+
+### O
+
 - {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
 - {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
 - {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
 - {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
 - {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
 - {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
-- ### P
+
+### P
+
 - {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-start")}}]
 - {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-end")}}]
 - {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
 - {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- ### T – U
+
+### T – U
+
 - {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
 - {{CSSxRef("text-align-last","-moz-text-align-last")}} {{deprecated_inline}}
 - {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}} {{deprecated_inline}}
@@ -244,22 +253,22 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ### {{cssxref("background-image")}}
 
-- #### Dégradés
+#### Dégradés
 
-  - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-  - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
-- #### Éléments
+#### Éléments
 
-  - {{cssxref("-moz-element")}}
+- {{cssxref("-moz-element")}}
 
-- #### Sub-images
+#### Sub-images
 
-  - {{cssxref("-moz-image-rect")}}
+- {{cssxref("-moz-image-rect")}}
 
 ### {{Cssxref("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. {{bug(1306214)}}) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
+- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. [bug Firefox 1306214](https://bugzil.la/1306214)) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
 
 ### {{Cssxref("border-style")}} et {{Cssxref("outline-style")}}
 
@@ -414,7 +423,8 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Pseudo-éléments et pseudo-classes
 
-- ### A – D
+### A – D
+
 - {{CSSxRef("::-moz-anonymous-block")}} eg@:- bug 331432
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
 - {{CSSxRef(":-moz-any")}}
@@ -424,7 +434,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("::-moz-color-swatch")}}
 - {{CSSxRef("::-moz-cell-content")}}
 - {{CSSxRef(":-moz-drag-over")}}
-- ### F – I
+
+### F – I
+
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
@@ -435,7 +447,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef(":-moz-handler-crashed")}}
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
-- ### L
+
+### L
+
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-list-bullet")}}
 - {{CSSxRef(":-moz-list-number")}}
@@ -445,7 +459,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
-- ### N – R
+
+### N – R
+
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
 - {{CSSxRef("::-moz-page")}}
@@ -453,14 +469,16 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}
+- {{CSSxRef("::placeholder")}}{{Deprecated_Inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
 - {{CSSxRef("::-moz-range-track")}}
 - {{CSSxRef(":-moz-read-only")}}
 - {{CSSxRef(":-moz-read-write")}}
-- ### S
+
+### S
+
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
 - {{CSSxRef("::-moz-scrolled-page-sequence")}}
@@ -468,7 +486,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef("::-moz-svg-foreign-content")}}
-- ### T
+
+### T
+
 - {{CSSxRef("::-moz-table")}}
 - {{CSSxRef("::-moz-table-cell")}}
 - {{CSSxRef("::-moz-table-column")}}
@@ -490,7 +510,9 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef(":-moz-tree-row(hover)")}}
 - {{CSSxRef(":-moz-tree-separator")}}
 - {{CSSxRef(":-moz-tree-twisty")}}
-- ### U – X
+
+### U – X
+
 - {{CSSxRef(":user-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
 - {{CSSxRef(":-moz-user-disabled")}}
@@ -524,7 +546,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Autres
 
-- {{Cssxref("-moz-alt-content")}} {{Bug("11011")}}
+- {{Cssxref("-moz-alt-content")}} [bug Firefox 11011](https://bugzil.la/11011)
 
 ## Voir aussi
 

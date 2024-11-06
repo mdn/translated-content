@@ -1,9 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-translation_of: Web/API/WebSocket
-browser-compat: api.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 L'objet `WebSocket` fournit l'API qui permet de créer et de gérer une connexion [WebSocket](/fr/docs/Web/API/WebSockets_API) à un serveur ainsi que d'envoyer et de recevoir des données sur cette connexion.
@@ -89,16 +88,16 @@ Pour construire un objet `WebSocket`, on utilisera le constructeur [`WebSocket()
 
 ```js
 // Créer une connexion WebSocket
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // La connexion est ouverte
-socket.addEventListener('open', function (event) {
- socket.send('Coucou le serveur !');
+socket.addEventListener("open", function (event) {
+  socket.send("Coucou le serveur !");
 });
 
 // Écouter les messages
-socket.addEventListener('message', function (event) {
-  console.log('Voici un message du serveur', event.data);
+socket.addEventListener("message", function (event) {
+  console.log("Voici un message du serveur", event.data);
 });
 ```
 

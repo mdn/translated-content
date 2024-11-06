@@ -1,9 +1,8 @@
 ---
-title: '::-moz-range-track'
+title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
-browser-compat: css.selectors.-moz-range-track
-translation_of: Web/CSS/::-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-moz-range-track`** est un pseudo-élément spécifique à Mozilla et représente la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range`.
@@ -19,13 +18,13 @@ Le pseudo-élément **`::-moz-range-track`** est un pseudo-élément spécifique
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background-color: green;
 }
 ```

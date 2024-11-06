@@ -1,20 +1,14 @@
 ---
 title: 可変フォントガイド
-slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Text
-  - variable fonts
-  - web fonts
-translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ---
+
 {{CSSRef}}
 
 **可変フォント** (Variable fonts) は幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを 1 つのファイルに組み込むことができる OpenType フォント仕様の進化版です。CSS および単一の {{cssxref("@font-face")}} 参照を介して、特定のフォントファイルに含まれるすべてのバリエーションにアクセスできます。この記事では、可変フォントの使用を開始するために知っておく必要があるすべての内容を説明します。
 
-> **Note:** OS で可変フォントを使用するには、最新のフォントであることを確認してください。たとえば、Linux 系の OS には最新の Linux Freetype バージョンが必要であり、10.13 より前の macOS は可変フォントに対応していません。OS が最新でない場合、ウェブページや Firefox 開発ツールで可変フォントを使用できません。
+> [!NOTE]
+> OS で可変フォントを使用するには、最新のフォントであることを確認してください。たとえば、Linux 系の OS には最新の Linux Freetype バージョンが必要であり、10.13 より前の macOS は可変フォントに対応していません。OS が最新でない場合、ウェブページや Firefox 開発ツールで可変フォントを使用できません。
 
 ## 可変フォント: 何であるか、何が違うのか
 
@@ -53,15 +47,17 @@ translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 #### メモ
 
-1.  `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
+1. `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
+   `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
 
-2.  `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
+2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
 
 ### 太さ (Weight)
 
@@ -72,7 +68,7 @@ translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 次のライブ例の CSS を編集することで、font-weight の値を操作することができます。
@@ -83,12 +79,13 @@ font-variation-settings: 'wght' 375;
 
 幅 (`wdth` タグで表される) は、文字の幅をどれだけ狭くするか、あるいは広くするか (植字用語でいう condensed または extended) というデザイン上の軸を定義します。これは通常、CSS で {{cssxref("font-stretch")}} プロパティを使用して設定され、値は「通常」(100%) の上または下のパーセント値で表されます。与えられた数値がフォントにエンコードされた範囲外である場合、ブラウザーは許容される最も近い値でフォントをレンダリングしなければなりません。
 
-> **Note:** % 記号は `font-variation-settings` を使用する上では不要です。
+> [!NOTE]
+> % 記号は `font-variation-settings` を使用する上では不要です。
 
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 次のライブ例の CSS を編集することで、フォントの幅の値を変更することができます。
@@ -99,12 +96,12 @@ font-variation-settings: 'wdth' 115;
 
 イタリック (`ital`) 軸は、オンかオフのどちらかであるという点で動作が異なり、その中間はありません。イタリックのデザインには、正立のデザインとは大きく異なる字形が含まれていることが多く、正立からイタリックへの移行の際には、通常、いくつかのグリフ (または文字) の置換が行われます。イタリックと斜体は同じように使われることが多いのですが、実際には全く異なるものです。斜体はこの文脈では `slant` という用語で定義されており (下の節を参照)、書体は通常どちらか一方を持ちますが、両方を持つことはありません。
 
-CSS では、{{cssxref("font-style")}} プロパティを使用して、イタリックと斜体の両方をテキストに適用します。 また、`font-synthesis: none;` が導入され、ブラウザーが誤って変動軸と合成されたイタリックを適用するのを防ぐことができます。これは、擬似太字を防ぐためにも使用できます。
+CSS では、{{cssxref("font-style")}} プロパティを使用して、イタリックと斜体の両方をテキストに適用します。 また、`font-synthesis: none;` が導入され、ブラウザーが誤って変動軸と合成されたイタリックを適用するのを防ぐことができます。これは、擬似太字を防ぐためにも使用できます。
 
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 
 font-synthesis: none;
 ```
@@ -117,12 +114,12 @@ font-synthesis: none;
 
 斜体 (`slnt`タグで表される) は、または 'oblique' とも良く呼ばれますが、文字の角度を変えるという点で真のイタリックとは異なりますが、何らかの文字の置換を行うわけではありません。また、数値の範囲で表現されるという点で、可変性があります。これにより、フォントをその軸に沿ってどこでも変化させることができます。許容される範囲は通常 0 (直立) から 20 度で、その範囲内の任意の数値を与えることができるので、フォントをほんの少しだけ斜めにすることができます。ただし、-90 〜 90 度の範囲であれば、どのような値でも有効です。
 
-> **Note:** `deg` キーワードは `font-variation-settings` を使用する上では不要です。
+> **メモ:** `deg` キーワードは `font-variation-settings` を使用する上では不要です。
 
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 次のライブ例の CSS を編集することで、フォントの斜体の値を変更することができます。
@@ -142,7 +139,7 @@ CSS で可変フォントに対応するために、{{cssxref("font-optical-sizi
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 次のライブ例の CSS を編集することで、オプティカルサイズをを変更することができます。
@@ -158,7 +155,7 @@ font-variation-settings: 'opsz' 36;
 等級は書体デザインの歴史の中で知られており、より一般的なカスタム軸の一つになるかもしれません。ある書体の異なる等級をデザインすることは、使用目的や印刷技術に応じて行われることが多かったのです。'grade' という言葉は、書体デザインの相対的な太さや濃さを意味しますが、従来の「太さ」とは異なり、テキストが占める物理的な空間は変化しないため、テキストの等級を変えても、テキストやその周りの要素の全体的なレイアウトが変わることはありません。これにより、等級は、テキスト自体の再フローを引き起こすことなく、変化やアニメーションを行うことができるバリエーションの軸として有効です。
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 次のライブ例の CSS を編集することで、等級の値をを変更することができます。
@@ -175,11 +172,11 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: normal;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
 }
 ```
 
@@ -187,25 +184,26 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
 }
 ```
 
-> **Note:** この例では、上限の度数に特定の値が設定されていませんが、軸があることを示すことで、ブラウザーが直立かイタリックかを判断できるようになっています (イタリックはオンかオフしかないことを思い出してください)。
+> [!NOTE]
+> この例では、上限の度数に特定の値が設定されていませんが、軸があることを示すことで、ブラウザーが直立かイタリックかを判断できるようになっています (イタリックはオンかオフしかないことを思い出してください)。
 
 #### イタリック体のみを含み、直立文字を含まないフォントの例
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: italic;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
 ```
 
@@ -213,17 +211,18 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
 }
 ```
 
-> **Note:** すべてのブラウザーがフォント指定形式の完全な構文を実装しているわけではないので、慎重にテストしてください。可変フォントに対応しているブラウザーはすべて、形式を format-variations ではなく、ファイル形式だけに設定してもレンダリングされますが (例：`woff2-variations` ではなく `woff2`)、可能であれば適切な構文を使用することをお勧めします。
+> [!NOTE]
+> すべてのブラウザーがフォント指定形式の完全な構文を実装しているわけではないので、慎重にテストしてください。可変フォントに対応しているブラウザーはすべて、形式を format-variations ではなく、ファイル形式だけに設定してもレンダリングされますが (例：`woff2-variations` ではなく `woff2`)、可能であれば適切な構文を使用することをお勧めします。
 
-> **Note:** `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
+> **メモ:** `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
 
 ## 古いブラウザーでの作業
 
@@ -231,13 +230,13 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

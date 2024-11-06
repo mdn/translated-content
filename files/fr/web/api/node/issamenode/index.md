@@ -1,15 +1,17 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-translation_of: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.
 
 ## Syntaxe
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 ### Paramètres
 
@@ -44,11 +46,14 @@ Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le 
 
 ```js
 let output = document.getElementById("output");
-let divList  = document.getElementsByTagName("div");
+let divList = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
-output.innerHTML += "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
-output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
+output.innerHTML +=
+  "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
+output.innerHTML +=
+  "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
+output.innerHTML +=
+  "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
 ```
 
 ### Résultats
@@ -57,14 +62,11 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Pas de changement (a été longtemps retiré). |
-| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isSameNode")}}
+{{Compat}}
 
 ## Voir aussi
 

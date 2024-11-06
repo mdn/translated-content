@@ -1,21 +1,20 @@
 ---
 title: choose
 slug: Web/XSLT/Element/choose
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/choose
-original_slug: Web/XSLT/choose
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:choose>` définit un choix parmi un certain nombre d'alternatives. Il se comporte comme l'instruction switch d'un langage procédural.
 
 ### Syntaxe
 
-    <xsl:choose>
-    	<xsl:when>
-    	<xsl:otherwise> [optionnel]
-    </<xsl:choose>
+```xml
+<xsl:choose>
+  <xsl:when>
+  <xsl:otherwise> [optionnel]
+</xsl:choose>
+```
 
 ### Attributs obligatoires
 

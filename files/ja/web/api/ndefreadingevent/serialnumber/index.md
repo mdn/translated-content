@@ -1,15 +1,8 @@
 ---
 title: NDEFReadingEvent.serialNumber
 slug: Web/API/NDEFReadingEvent/serialNumber
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - serialNumber
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.serialNumber
-tranlation_of: Web/API/NDEFReadingEvent/serialNumber
 ---
+
 {{securecontext_header}}{{APIRef()}}
 
 **`serialNumber`** は {{domxref("NDEFReadingEvent")}} インターフェイスのプロパティで、衝突防止や識別に使用する機器のシリアル番号、またはシリアル番号がない場合は空文字列を返します。
@@ -25,21 +18,25 @@ tranlation_of: Web/API/NDEFReadingEvent/serialNumber
 ```js
 const ndefReader = new NDEFReader();
 
-  function read() {
-    return new Promise((resolve, reject) => {
-      const ctlr = new AbortController();
-      ctlr.signal.onabort = reject;
-      ndefReader.addEventListener("reading", event => {
+function read() {
+  return new Promise((resolve, reject) => {
+    const ctlr = new AbortController();
+    ctlr.signal.onabort = reject;
+    ndefReader.addEventListener(
+      "reading",
+      (event) => {
         ctlr.abort();
         resolve(event);
-      }, { once: true });
-      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
-    });
-  }
-
-  read().then(({ serialNumber }) => {
-    console.log(serialNumber);
+      },
+      { once: true },
+    );
+    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });
+}
+
+read().then(({ serialNumber }) => {
+  console.log(serialNumber);
+});
 ```
 
 ## 仕様書

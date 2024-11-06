@@ -1,19 +1,12 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - box-flex
-  - recipe:css-property
-browser-compat: css.properties.box-flex
-translation_of: Web/CSS/box-flex
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> [!WARNING]
+> このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
 **`-moz-box-flex`** および **`-webkit-box-flex`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` が、これを内包するボックスを、包含ボックスのレイアウトの方向で埋めるまで拡張する方法を指定します。
 
@@ -26,7 +19,7 @@ translation_of: Web/CSS/box-flex
 -webkit-box-flex: 2;
 -webkit-box-flex: 3.5;
 
-/* Global values */
+/* グローバル値 */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
 -moz-box-flex: unset;
@@ -68,7 +61,7 @@ translation_of: Web/CSS/box-flex
 ### box-flex の設定
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>-moz-box-flex example</title>
@@ -80,13 +73,13 @@ translation_of: Web/CSS/box-flex
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>

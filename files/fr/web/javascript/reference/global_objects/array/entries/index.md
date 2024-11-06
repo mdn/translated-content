@@ -1,25 +1,19 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
+
 {{JSRef}}
 
-La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
+La méthode **`entries()`** renvoie un nouvel objet de type **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
 ## Syntaxe
 
-    arr.entries()
+```js
+arr.entries();
+```
 
 ### Valeur de retour
 
@@ -44,7 +38,7 @@ for (const [index, element] of arr.entries()) {
 On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) :
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 for (let e of eArr) {
@@ -57,14 +51,11 @@ for (let e of eArr) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

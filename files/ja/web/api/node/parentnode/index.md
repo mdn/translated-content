@@ -1,13 +1,10 @@
 ---
-title: Node.parentNode
+title: "Node: parentNode プロパティ"
 slug: Web/API/Node/parentNode
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.parentNode
-translation_of: Web/API/Node/parentNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`parentNode`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、 DOM ツリー内の特定のノードの親ノードを返します。

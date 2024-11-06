@@ -1,14 +1,8 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.store
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ## 構文
 
 ```js
-Atomics.store(typedArray, index, value)
+Atomics.store(typedArray, index, value);
 ```
 
 ### 引数

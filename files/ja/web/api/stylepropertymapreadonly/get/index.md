@@ -1,17 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - get()
-browser-compat: api.StylePropertyMapReadOnly.get
-translation_of: Web/API/StylePropertyMapReadOnly/get
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`get()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの最初の値を {{domxref("CSSStyleValue")}} で返します。
@@ -19,7 +10,7 @@ translation_of: Web/API/StylePropertyMapReadOnly/get
 ## 構文
 
 ```js
-var declarationBlock = StylePropertyMapReadOnly.get(property)
+var declarationBlock = StylePropertyMapReadOnly.get(property);
 ```
 
 ### 引数
@@ -37,7 +28,7 @@ var declarationBlock = StylePropertyMapReadOnly.get(property)
 
 ```html
 <p>
-   <a href="https://example.com">リンク</a>
+  <a href="https://example.com">リンク</a>
 </p>
 <dl id="results"></dl>
 ```
@@ -49,8 +40,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 
@@ -58,27 +49,26 @@ Element インターフェイスの [`computedStyleMap()`](/ja/docs/Web/API/Elem
 
 ```js
 // 要素を取得
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // すべての計算済みスタイルを `computedStyleMap` で受け取る
 const styleMap = myElement.computedStyleMap();
 
 // 入力する <dl> を取得
-const stylesList = document.querySelector('#results');
+const stylesList = document.querySelector("#results");
 
 // 関心のあるプロパティのリスト
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
+const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
 
 // 関心のあるプロパティを反復処理
-for ( let i = 0; i < ofInterest.length; i++ ) {
-
+for (let i = 0; i < ofInterest.length; i++) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.innerText = ofInterest[i];
   stylesList.appendChild(cssProperty);
 
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   // use get() to find the value
   cssValue.innerText = styleMap.get(ofInterest[i]);
   stylesList.appendChild(cssValue);

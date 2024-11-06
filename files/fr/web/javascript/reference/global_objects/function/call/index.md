@@ -1,25 +1,22 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/call
 ---
+
 {{JSRef}}
 
 La méthode **`call()`** réalise un appel à une fonction avec une valeur `this` donnée et des arguments fournis individuellement.
 
-> **Note :** Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
+> [!NOTE]
+> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
 ## Syntaxe
 
-    fun.call(thisArg[, arg1[, arg2[, ...]]])
+```js
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Paramètres
 
@@ -40,7 +37,7 @@ Il est possible d'affecter un objet `this` différent lors de l'appel à une fon
 
 ## Exemples
 
-### Utiliser `call()` pour chaîner le constructeur d'un objet.
+### Utiliser `call()` pour chaîner le constructeur d'un objet
 
 Il est possible d'utiliser `call` pour chaîner le constructeur d'un objet, de façon similaire à Java. Dans l'exemple suivant, le constructeur de l'objet `Product` est défini avec deux paramètres, `name` et `price`. Deux autres fonctions, `Food` et `Toy` invoquent `Product` en passant `this,` `name` et `price`. `Product` initialise les propriétés `name` et `price`, tandis que les fonctions spécialisées définissent la propriété `category`.
 
@@ -52,16 +49,16 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### Utiliser `call()` pour invoquer une fonction anonyme
@@ -70,15 +67,15 @@ Dans cet exemple (purement inventé), on crée une fonction anonyme et on utilis
 
 ```js
 var animaux = [
-  {espece: 'Lion', nom: 'Roi'},
-  {espece: 'Éléphant', nom: 'Dumbo'}
+  { espece: "Lion", nom: "Roi" },
+  { espece: "Éléphant", nom: "Dumbo" },
 ];
 
 for (var i = 0; i < animaux.length; i++) {
   (function (i) {
     this.print = function () {
-      console.log('#' + i  + ' ' + this.espece + ' : ' + this.nom);
-    }
+      console.log("#" + i + " " + this.espece + " : " + this.nom);
+    };
     this.print();
   }).call(animaux[i], i);
 }
@@ -96,7 +93,7 @@ function saluer() {
 
 var personne1 = {
   nom: "Sénèque",
-  role: "philosophe"
+  role: "philosophe",
 };
 
 saluer.call(personne1); // Sénèque est un philosophe.
@@ -107,24 +104,25 @@ saluer.call(personne1); // Sénèque est un philosophe.
 Dans l'exemple qui suit, on appelle la fonction `afficher()` sans lui passer d'argument. C'est donc l'objet global qui est utilisé comme contexte :
 
 ```js
-var prenom = 'Archibald';
+var prenom = "Archibald";
 
 function afficher() {
-  console.log('prenom vaut ' + this.prenom);
+  console.log("prenom vaut " + this.prenom);
 }
 
 afficher.call(); // prenom est Archibald
 ```
 
-> **Note :** La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
+> [!NOTE]
+> La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
 >
 > ```js
-> 'use strict';
+> "use strict";
 >
-> var prenom = 'Archibald';
+> var prenom = "Archibald";
 >
 > function afficher() {
->   console.log('prenom vaut ' + this.prenom);
+>   console.log("prenom vaut " + this.prenom);
 > }
 >
 > afficher.call(); // Cannot read the property prenom' of undefined
@@ -132,16 +130,11 @@ afficher.call(); // prenom est Archibald
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.call")}}
+{{Compat}}
 
 ## Voir aussi
 

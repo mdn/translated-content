@@ -1,18 +1,17 @@
 ---
 title: distinct
 slug: Web/EXSLT/set/distinct
-tags:
-  - EXSLT
-  - XSLT
-translation_of: Web/EXSLT/set/distinct
 ---
-{{ XsltRef() }}
+
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
 
 `set:distinct()` retourne un sous-ensemble des nœuds appartenant à l'ensemble de nœuds spécifié, en ne retournant que les nœuds possédant une valeur de chaîne unique.
 
 ### Syntaxe
 
-    set:distinct(ensembleNœuds)
+```
+set:distinct(ensembleNœuds)
+```
 
 ### Arguments
 

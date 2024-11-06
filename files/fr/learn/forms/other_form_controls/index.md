@@ -1,8 +1,8 @@
 ---
 title: Les autres contrôles de formulaire
 slug: Learn/Forms/Other_form_controls
-translation_of: Learn/Forms/Other_form_controls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont pas des éléments `<input>`. C'est le cas par exemple des listes déroulantes, des champs textes sur plusieurs lignes mais aussi d'autres fonctionnalités comme l'élément [`<output>`](/fr/docs/Web/HTML/Element/output) (croisé dans l'article précédent), et des barres de progression.
@@ -18,7 +18,7 @@ Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont 
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        Comprendre les fonctionnalités des formulaires en dehors des éléments <code>&lt;input&gt;</code> et comment les implémenter  l'aide de HTML.
+        Comprendre les fonctionnalités des formulaires en dehors des éléments <code>&lt;input&gt;</code> et comment les implémenter l'aide de HTML.
       </td>
     </tr>
   </tbody>
@@ -46,9 +46,10 @@ Sur le plan visuel, le texte saisi passe à la ligne automatiquement et le contr
 
 Les captures suivantes montrent l'aspect par défaut, avec le focus, ou désactivé d'éléments `<textarea>` sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox 71 et Chrome 79 sur Windows 10.
 
-![Aspect par défaut, avec le focus et désactivé pour les éléments \<textarea> sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox et Chrome sur Windows 10.](textarea_basic.png)
+![Aspect par défaut, avec le focus et désactivé pour les éléments 'textarea' sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox et Chrome sur Windows 10.](textarea_basic.png)
 
-> **Note :** Un autre exemple, peut-être plus intéressant, est [celui construit dans le premier article de cette série](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) ([voir également le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> Un autre exemple, peut-être plus intéressant, est [celui construit dans le premier article de cette série](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) ([voir également le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ### Contrôler l'affichage d'un champ multi-ligne
 
@@ -63,7 +64,7 @@ Les captures suivantes montrent l'aspect par défaut, avec le focus, ou désacti
     - `soft` (la valeur par défaut)
       - : Le texte affiché dans le navigateur passe à la ligne automatiquement, mais la valeur envoyée par le formulaire ne contient pas de sauts de ligne automatiques.
     - `hard`
-      - : Lorsque cette valeur est utilisée, l'attribut `cols` doit être précisé. Cette valeur indique le texte affiché *et* la valeur envoyée contiennent des sauts de ligne automatique.
+      - : Lorsque cette valeur est utilisée, l'attribut `cols` doit être précisé. Cette valeur indique le texte affiché _et_ la valeur envoyée contiennent des sauts de ligne automatique.
     - `off`
       - : Il n'y a pas de passage automatique à la ligne.
 
@@ -88,7 +89,8 @@ Vous pouvez manipuler l'exemple interactif situé en haut de la page de référe
 
 Les contrôles de listes déroulantes sont un outil pratique pour permettre de sélectionner une valeur parmi différentes options, sans occuper trop d'espace sur l'interface utilisateur. HTML dispose de deux formes de listes déroulantes&nbsp;: **la boîte de sélection avec `<select>`**, et **la boîte d'autocomplétion avec `<datalist>`**. Dans les deux cas, l'interaction est la même, une fois que le contrôle est activé, le navigateur affiche une liste de valeurs parmi lesquelles la personne peut choisir.
 
-> **Note :** Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> [!NOTE]
+> Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Boîte de sélection
 
@@ -154,23 +156,25 @@ Par défaut, une boîte de sélection permet de choisir une seule valeur. En ajo
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="fruits">
-     <option>Banane</option>
-     <option selected>Cerise</option>
-     <option>Citron</option>
-   </optgroup>
-   <optgroup label="legumes">
-     <option>Carotte</option>
-     <option>Aubergine</option>
-     <option>Pomme de terre</option>
-   </optgroup>
+    <option>Banane</option>
+    <option selected>Cerise</option>
+    <option>Citron</option>
+  </optgroup>
+  <optgroup label="legumes">
+    <option>Carotte</option>
+    <option>Aubergine</option>
+    <option>Pomme de terre</option>
+  </optgroup>
 </select>
 ```
 
 {{EmbedLiveSample("", 120, 120)}}
 
-> **Note :** Dans le cas d'une sélection multiple, on peut voir que la boîte de sélection n'affiche plus les valeurs comme une liste déroulante. À la place, l'ensemble des valeurs est affiché dans la liste et c'est l'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) qui détermine la hauteur du contrôle.
+> [!NOTE]
+> Dans le cas d'une sélection multiple, on peut voir que la boîte de sélection n'affiche plus les valeurs comme une liste déroulante. À la place, l'ensemble des valeurs est affiché dans la liste et c'est l'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) qui détermine la hauteur du contrôle.
 
-> **Note :** Tous les navigateurs qui prennent en charge l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) prennent également en charge l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple).
+> [!NOTE]
+> Tous les navigateurs qui prennent en charge l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) prennent également en charge l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple).
 
 ### Boîte d'autocomplétion
 
@@ -186,7 +190,7 @@ Prenons un exemple.
 
 ```html
 <label for="monFruit">Quel est votre fruit préféré ?</label>
-<input type="text" name="monFruit" id="monFruit" list="maSuggestion">
+<input type="text" name="monFruit" id="monFruit" list="maSuggestion" />
 <datalist id="maSuggestion">
   <option>Pomme</option>
   <option>Banane</option>
@@ -207,7 +211,7 @@ La quasi-totalité des navigateurs prend en charge `<datalist>`, toutefois, si v
 
 ```html
 <label for="monFruit">Quel est votre fruit préféré ? (avec alternative)</label>
-<input type="text" id="monFruit" name="fruit" list="listeFruit">
+<input type="text" id="monFruit" name="fruit" list="listeFruit" />
 
 <datalist id="listeFruit">
   <label for="suggestion">ou sélectionnez un fruit</label>
@@ -248,7 +252,8 @@ Pour ces cas, les différents navigateurs se comportent de façon hétérogène 
 
 Il existe d'autres fonctionnalités relatives aux formulaires qui ne sont pas aussi évidentes que celles déjà abordées, mais qui s'avèrent utiles dans certaines situations. Voyons donc ces fonctionnalités rapidement.
 
-> **Note :** Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> [!NOTE]
+> Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Jauges et barres de progression
 
@@ -313,22 +318,3 @@ Au cours des derniers articles, nous avons vu qu'il existe de nombreux types de 
 Maintenant que vous en savez un peu plus sur le HTML derrière les différents contrôles de formulaire, voyons [comment les mettre en forme](/fr/docs/Learn/Forms/Styling_web_forms).
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de champ de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- **Les autres contrôles de formulaire**
-- [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes CSS liées à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Validation du formulaire côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité des contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

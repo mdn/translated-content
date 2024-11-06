@@ -1,15 +1,8 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
-tags:
-  - ':placeholder-shown'
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.placeholder-shown
-translation_of: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}
 
 **`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
@@ -17,13 +10,17 @@ translation_of: Web/CSS/:placeholder-shown
 ```css
 /* プレイスホルダーが有効な要素を選択 */
 :placeholder-shown {
-  border: 2px solid silver;
+  border: 2px solid silver;
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+
 ## 構文
 
-{{CSSSyntax}}
+```
+:placeholder-shown
+```
 
 ## 例
 
@@ -34,7 +31,7 @@ translation_of: Web/CSS/:placeholder-shown
 #### HTML
 
 ```html
-<input placeholder="何か入力してください！">
+<input placeholder="何か入力してください！" />
 ```
 
 #### CSS
@@ -63,16 +60,15 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input id="input1" placeholder="Name, Rank, and Serial Number">
-<br><br>
-<input id="input2" placeholder="Name, Rank, and Serial Number">
+<input id="input1" placeholder="Name, Rank, and Serial Number" /> <br /><br />
+<input id="input2" placeholder="Name, Rank, and Serial Number" />
 ```
 
 #### CSS
 
 ```css
 #input2:placeholder-shown {
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -88,19 +84,25 @@ input:placeholder-shown {
 
 ```html
 <form id="test">
-  <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
-  </p>
-  <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
-  </p>
-  <p>
-    <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
-  </p>
-  <input type="submit"/>
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name" />
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch" />
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
+  </p>
+  <input type="submit" />
 </form>
 ```
 
@@ -108,14 +110,14 @@ input:placeholder-shown {
 
 ```css
 input {
-  background-color: #E8E8E8;
-  color: black;
+  background-color: #e8e8e8;
+  color: black;
 }
 
 input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+  background-color: yellow;
+  color: red;
+  font-style: italic;
 }
 ```
 

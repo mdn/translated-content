@@ -1,14 +1,9 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<small>`** permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d'un contrat, des mentions relatives au droit d'auteur, etc.) quelle que soit la présentation.
 
@@ -24,15 +19,14 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ```html
 <p>
-   Voici une phrase avant des infos à
-   présenter en plus petit.
-   <small>© tous droits réservés</small>
+  Voici une phrase avant des infos à présenter en plus petit.
+  <small>© tous droits réservés</small>
 </p>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("","100%",'')}}
 
 ## Résumé technique
 
@@ -90,15 +84,11 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-small-element', '&lt;small&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-small-element', '&lt;small&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#edef-SMALL', '&lt;small&gt;')}}                 | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## Notes
 

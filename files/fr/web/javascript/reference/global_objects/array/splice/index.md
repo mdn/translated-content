@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/splice
 ---
+
 {{JSRef}}
 
 La méthode **`splice()`** modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments [à même le tableau](https://en.wikipedia.org/wiki/In-place_algorithm).On peut ainsi vider ou remplacer une partie d'un tableau.
@@ -18,12 +11,14 @@ La méthode **`splice()`** modifie le contenu d'un tableau en retirant des élé
 
 ## Syntaxe
 
-    var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+```js
+var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+```
 
 ### Paramètres
 
 - `début`
-  - : L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant `0`). Si sa valeur est supérieure à la longueur du tableau `array.length`, `début` est ramené à la longueur du tableau `array.length`. S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index  `array.length + début`. Si `array.length + début` est inférieur à `0`, le changement commencera à l'index `0`.
+  - : L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant `0`). Si sa valeur est supérieure à la longueur du tableau `array.length`, `début` est ramené à la longueur du tableau `array.length`. S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index `array.length + début`. Si `array.length + début` est inférieur à `0`, le changement commencera à l'index `0`.
 - `nbASupprimer`
   - : Un entier indiquant le nombre d'anciens éléments à remplacer.
     Si ce paramètre est absent ou si sa valeur est supérieure ou égale à `array.length - début`, alors les éléments entre `début` et la fin du tableau seront supprimés. Si `nbASupprimer` vaut 0, aucun élément ne sera supprimé. Dans ce cas, il est nécessaire de spécifier au moins un nouvel élément.
@@ -45,7 +40,7 @@ Si vous spécifiez un nombre différent d'éléments à insérer et d'éléments
 Le script suivant illustre l'utilisation de `splice` :
 
 ```js
-var mesPoissons  = ["scalaire", "clown", "mandarin", "chirurgien"];
+var mesPoissons = ["scalaire", "clown", "mandarin", "chirurgien"];
 
 // supprime 0 élément à partir de l'index 2, et insère "tambour"
 var enleves = mesPoissons.splice(2, 0, "tambour");
@@ -87,16 +82,11 @@ enleves = mesAnimaux.splice(-2, 1);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Voir aussi
 

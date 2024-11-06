@@ -1,12 +1,8 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.
@@ -20,10 +16,10 @@ Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (_i
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-top: 10px;  /* Une longueur absolue */
-margin-top: 1em;   /* Une longueur proportionnelle à la taille du texte */
-margin-top: 5%;    /* Une marge relative à la largeur */
-                   /* du bloc englobant le plus proche */
+margin-top: 10px; /* Une longueur absolue */
+margin-top: 1em; /* Une longueur proportionnelle à la taille du texte */
+margin-top: 5%; /* Une marge relative à la largeur */
+/* du bloc englobant le plus proche */
 
 /* Valeur avec un mot-clé */
 margin-top: auto;
@@ -45,9 +41,13 @@ Le mot-clé `auto` ou une valeur de longueur (`<length>`) ou de pourcentage (`<p
 - `auto`
   - : Voir {{cssxref("margin")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,12 +71,11 @@ div {
 
 ```html
 <div></div>
-<p class=exemple>
-  C’est ce qui arriva en effet, et bien plus tôt
-  qu’elle ne s’y attendait. Elle n’avait pas bu
-  la moitié de la bouteille, que sa tête touchait
-  au plafond et qu’elle fut forcée de se baisser
-  pour ne pas se casser le cou.</p>
+<p class="exemple">
+  C’est ce qui arriva en effet, et bien plus tôt qu’elle ne s’y attendait. Elle
+  n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond et
+  qu’elle fut forcée de se baisser pour ne pas se casser le cou.
+</p>
 ```
 
 ### Résultat
@@ -85,15 +84,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                             |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement significatif                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | `margin-top` peut désormais être animée.                 |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-top")}}
+{{Compat}}

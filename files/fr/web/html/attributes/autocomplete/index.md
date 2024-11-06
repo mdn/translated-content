@@ -1,25 +1,8 @@
 ---
-title: 'Attribut HTML : autocomplete'
+title: "Attribut HTML : autocomplete"
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
-translation_of: Web/HTML/Attributes/autocomplete
-original_slug: Web/HTML/Attributs/autocomplete
 ---
+
 {{HTMLSidebar}}
 
 L'attribut `autocomplete` est disponible sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<form>`](/fr/docs/Web/HTML/Element/Form). `autocomplete` permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'[agent utilisateur](/fr/docs/Glossary/User_agent), de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.
@@ -30,11 +13,12 @@ Si les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr
 
 Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Form#attr-autocomplete) pour l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form).
 
-> **Note :** Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
+> [!NOTE]
+> Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
 >
-> 1.  Que ceux-ci aient un attribut `name` et/ou `id`
-> 2.  Que ceux-ci descendent d'un élément `<form>`
-> 3.  Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Element/Input/submit)
+> 1. Que ceux-ci aient un attribut `name` et/ou `id`
+> 2. Que ceux-ci descendent d'un élément `<form>`
+> 3. Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Element/Input/submit)
 
 ## Valeurs
 
@@ -42,7 +26,8 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
-    > **Note :** Pour la plupart des navigateurs modernes, utiliser `autocomplete="off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir [l'article sur l'attribut `autocomplete` et les champs des formulaires de connexion](/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+    > [!NOTE]
+    > Pour la plupart des navigateurs modernes, utiliser `autocomplete="off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir [l'article sur l'attribut `autocomplete` et les champs des formulaires de connexion](/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -120,7 +105,7 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 - `transaction-amount`
   - : Le montant de la transaction, pour un formulaire de paiement, exprimé dans la devise fournie par `transaction-currency`.
 - `language`
-  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF).
+  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/Étiquette_d%27identification_de_langues_IETF).
 - `bday`
   - : Une date de naissance complète.
 - `bday-day`
@@ -155,14 +140,15 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 
 Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
 
-> **Note :** À la différence des autres navigateurs, pour Firefox, l'attribut `autocomplete` contrôlera également si [l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>`. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut `autocomplete` avec la valeur `off`, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut `autocomplete` ne devrait pas s'appliquer à l'élément `<input>` d'après son type. Voir [bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
+> [!NOTE]
+> À la différence des autres navigateurs, pour Firefox, l'attribut `autocomplete` contrôlera également si [l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>`. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut `autocomplete` avec la valeur `off`, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut `autocomplete` ne devrait pas s'appliquer à l'élément `<input>` d'après son type. Voir [bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
 
 ## Exemples
 
 ```html
 <div>
   <label for="cc-number">Entrez votre numéro de carte de crédit</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 
@@ -228,17 +214,15 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 « 〒 » et les sept chiffres suivants indiquent le code postal.
 
-`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est`address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
+`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est `address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## Voir aussi
 

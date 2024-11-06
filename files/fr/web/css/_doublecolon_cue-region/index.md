@@ -1,16 +1,11 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
-tags:
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::cue-region
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/docs/Web/API/WebVTT_API#Styling_WebTT_cues) de pistes VTT.
+Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#Styling_WebTT_cues) de pistes VTT.
 
 ```css
 ::cue-region {
@@ -44,17 +39,16 @@ Les propriétés sont appliquées à l'intégralité des indications textuelles 
 
 ## Exemples
 
-> **Note :** Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
+> [!NOTE]
+> Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("WebVTT", "#the-cue-region-pseudo-element", "the <code>::cue-region</code> pseudo-element")}} | {{Spec2("WebVTT")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.cue-region")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,8 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété **`@@iterator`** est le même objet fonction que la valeur initiale de la propriété {{jsxref("Set.prototype.values()", "Set.prototype.values")}}.
@@ -20,7 +11,9 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet fonctio
 
 ## Syntaxe
 
-    monSet[Symbol.iterator]
+```js
+monSet[Symbol.iterator];
+```
 
 ### Valeur de retour
 
@@ -46,7 +39,7 @@ console.log(setIter.next().value); // {}
 ### Utiliser `[@@iterator]()` avec une boucle `for..of`
 
 ```js
-const monSet= new Set();
+const monSet = new Set();
 monSet.add("0");
 monSet.add(1);
 monSet.add({});
@@ -58,14 +51,11 @@ for (const v of monSet) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

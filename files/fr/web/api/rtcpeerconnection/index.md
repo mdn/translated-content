@@ -1,9 +1,8 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
-browser-compat: api.RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 L'interface **`RTCPeerConnection`** représente une connexion WebRTC entre un ordinateur local et un pair distant. Elle fournit des méthodes pour se connecter à un pair distant, entretenir et surveiller la connexion et fermer la connexion dès qu'elle n'est plus nécessaire.

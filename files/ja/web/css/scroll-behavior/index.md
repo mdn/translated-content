@@ -1,15 +1,8 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSSOM View
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.scroll-behavior
-translation_of: Web/CSS/scroll-behavior
 ---
+
 {{CSSRef}}
 
 **`scroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ナビゲーションや CSSOM のスクローリング API によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。
@@ -41,7 +34,7 @@ scroll-behavior: unset;
 - `auto`
   - : スクロールするボックスは瞬時にスクロールします。
 - `smooth`
-  - : スクロールするボックスは、ユーザーエージェント定義のタイミング関数を使い、ユーザーエージェント定義の時間をかけて、円滑ににスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
+  - : スクロールするボックスは、ユーザーエージェント定義のタイミング関数を使い、ユーザーエージェント定義の時間をかけて、円滑にスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
 
 ## 公式定義
 
@@ -78,7 +71,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, .scroll-container {
+nav,
+.scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -105,7 +99,7 @@ nav {
 
 #### 結果
 
-{{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}
+{{ EmbedLiveSample("スクロールの動きをスムーズに設定", "100%", 250) }}
 
 ## 仕様書
 

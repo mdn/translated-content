@@ -1,10 +1,9 @@
 ---
 title: Éclairage en WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 La première chose à comprendre à propos de WebGL est que contrairement au standard OpenGL, WebGL n'a pas de support pour l'éclairage. Vous avez à le faire par vous même. Heureusement ce n'est pas si dur à faire, et cet article va vous expliquer quelques bases.
 
@@ -14,16 +13,16 @@ Rentrer dans les détails de la théorie derrière la simulation de l'éclairage
 
 Il y a trois types basiques d'éclairage :
 
-1.  **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
-2.  **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
-3.  **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
+1. **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
+2. **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
+3. **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
 
-Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 Une fois que nous avons appréhendé le concept de source et de réfléction de la lumière, il y a deux choses que nous avons besoin d'implémenter pour nos lumières directionnelles.
 
-1.  Nous avons besoin d'associer la **surface normale** avec chaque sommet. C'est un vecteur qui est perpendiculaire à la face associé à ce sommet.
-2.  Nous avons besoin de connaître la direction dans laquelle la lumière arrive. Ceci est défini par la direction du vecteur.
+1. Nous avons besoin d'associer la **surface normale** avec chaque sommet. C'est un vecteur qui est perpendiculaire à la face associé à ce sommet.
+2. Nous avons besoin de connaître la direction dans laquelle la lumière arrive. Ceci est défini par la direction du vecteur.
 
 Puis nous mettons à jour le vertex shader pour ajuster la couleur de chaque sommet. en prenant en compte la lumière ambiante ainsi que l'effet de la lumière directionnelle donné par l'angle qui rencontre la face du cube. Nous allons voir comment faire avec les shaders.
 
@@ -37,43 +36,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // Front
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // Back
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // Top
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // Bottom
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // Right
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // Left
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 Ceci doit vous être plutôt familier maintenant. Nous créons un nouveau buffer, on le lie avec le tableau sur lequel nous allons travailler, puis nous allons envoyer l'ensemble de notre tableau au buffer en appelant la méthode `bufferData()`.
@@ -90,8 +75,12 @@ Enfin, nous avons besoin de mettre à jour le code qui construit les matrices un
 ```js
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
-var nUniform = gl.getUniformLocation(shaderProgram, 'uNormalMatrix');
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## Mettre à jour les shaders
@@ -162,11 +151,9 @@ Ici nous récupérons la couleur de chaque texel (tas de pixel pour une texture)
 
 Et c'est tout !
 
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
-
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Exercices
 

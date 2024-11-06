@@ -1,16 +1,8 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
+
 {{AddonSidebar}}
 
 Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
@@ -25,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 - {{WebExtAPIRef("commands.getAll")}}
   - : Obtient toutes les commandes enregistrées pour cette extension.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé “manifest”.
+  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé "manifest".
 - {{WebExtAPIRef("commands.update")}}
   - : Modifiez la description ou le raccourci de la commande donnée.
 
@@ -36,15 +28,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +64,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.createLinearGradient()`** de l'API Canvas 2D crée un gradient le long de la ligne donnée par les coordonnées représentées par les paramètres.
@@ -15,7 +15,9 @@ NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors d
 
 ## Syntaxe
 
-    CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```js
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
 ### Paramètres
 
@@ -48,12 +50,12 @@ Ceci est seulement un simple fragment de code qui utilise la méthode `createLin
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var gradient = ctx.createLinearGradient(0, 0, 200, 0);
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(1, 'white');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(1, "white");
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
 ```
@@ -73,7 +75,8 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
+ctx.fillRect(10,10,200,100);</textarea
+>
 ```
 
 ```js hidden
@@ -89,14 +92,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -106,17 +109,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}
-
-## Notes spécifiques à Gecko
-
-- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
+{{Compat}}
 
 ## Voir aussi
 

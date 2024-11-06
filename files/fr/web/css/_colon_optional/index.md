@@ -1,15 +1,11 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:optional
 ---
+
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}  pour lesquels l'attribut {{htmlattrxref("required","input")}} n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} pour lesquels l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required) n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
 
 ```css
 /* Cible les élméents <input> qui sont optionnels */
@@ -19,7 +15,8 @@ input:optional {
 }
 ```
 
-> **Note :** Afin de mettre en forme les champs obligatoires, on pourra utiliser la pseudo-classe {{cssxref(":required")}}.
+> [!NOTE]
+> Afin de mettre en forme les champs obligatoires, on pourra utiliser la pseudo-classe {{cssxref(":required")}}.
 
 ## Syntaxe
 
@@ -46,11 +43,11 @@ input:required {
 ```html
 <form>
   <label for="url-input">Tapez une URL :</label>
-  <input type="url" id="url-input">
-  <br>
-  <br>
+  <input type="url" id="url-input" />
+  <br />
+  <br />
   <label for="email-input">Tapez une adresse électronique :</label>
-  <input type="email" id="email-input" required>
+  <input type="email" id="email-input" required />
 </form>
 ```
 
@@ -60,7 +57,7 @@ input:required {
 
 ## Accessibilité
 
-Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut {{htmlattrxref("input","required")}}. Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
+Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
 
 Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
 
@@ -69,16 +66,11 @@ Les champs obligatoires devraient également être indiqués visuellement et cet
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-optional', ':optional')}}         | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-optional', ':optional')}}             | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#opt-pseudos', ':optional')}}             | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                          |
-| {{SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional')}} | {{Spec2('CSS3 Basic UI')}} | Définition de la pseudo-classe mais sans la sémantique associée.              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Voir aussi
 

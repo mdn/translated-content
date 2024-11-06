@@ -1,12 +1,8 @@
 ---
 title: Ajouter une page de paramètres
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - Paramètres
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_une_page_de_paramètres
 ---
+
 {{AddonSidebar}}
 
 Une page de paramètres donne aux utilisateurs la possiblité de voir et de changer les paramètres (parfois aussi appelée "préférences" ou "options") de l'extension.
@@ -17,7 +13,8 @@ Avec les WebExtensions, les paramètres sont généralement stockés en utilisan
 - Écrire un script, inclus depuis le fichier HTML, qui alimente les paramètres depuis le stockage et met à jour les paramètres stockés quand l'utilisateur les change.
 - Renseigner le chemin du fichier HTML come clé de [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui) dans manifest.json. Ainsi, le document HTML sera affiché dans le gestionnaire d'extension, aux cotés des nom et description de l'extension.
 
-> **Note :** Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage).
+> [!NOTE]
+> Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage).
 
 ## Une WebExtension simple
 
@@ -27,7 +24,6 @@ Créez un nouveau dossier nommé "settings", dans lequel vous créez un fichier 
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -38,7 +34,6 @@ Créez un nouveau dossier nommé "settings", dans lequel vous créez un fichier 
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -64,7 +59,6 @@ D'abord, mettez à jour le contenu de "manifest.json" avec ceci :
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -84,10 +78,9 @@ D'abord, mettez à jour le contenu de "manifest.json" avec ceci :
 
   "applications": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "addon@example.com"
     }
   }
-
 }
 ```
 
@@ -100,24 +93,21 @@ Vous avez ajoutez trois nouvelles clés :
 Ensuite, puisque vous avez promis de fournir "options.html", créons-le. Créez un fichier avec ce nom dans le répertoire "settings", et donnez-lui le contenu suivant :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -129,12 +119,11 @@ Créez "options.js", lui-aussi dans le dossier "settings", et remplissez le comm
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -153,19 +142,21 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 Cela fait deux choses :
 
-- Quand le document a été chargé, le script attribue une valeur à "color" depuis le stockage grâce à[` storage.sync.get()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get). Si la valeur n'est pas renseignée, il utilise par défaut "blue". Ceci récupère les valeurs de la zone de stockage de `synchronisation`.
+- Quand le document a été chargé, le script attribue une valeur à "color" depuis le stockage grâce à [`storage.sync.get()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get). Si la valeur n'est pas renseignée, il utilise par défaut "blue". Ceci récupère les valeurs de la zone de stockage de `synchronisation`.
 - Quand l'utilisateur valide le formulaire en cliquant sur "Save", le script stocke la valeur de textbox en utilisant [`storage.sync.set()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/set). Ceci permet d'enregistrer la valeur dans la zone de stockage de `synchronisation`.
 
 Vous pouvez stocker les valeurs des paramètres dans le stockage local à la place si vous pensez que le stockage local est préférable pour votre extension.
 
-> **Note :** L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`,  vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)  comme indiqué dans l'exemple de manifeste ci-dessus.
+> [!NOTE]
+> L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`, vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) comme indiqué dans l'exemple de manifeste ci-dessus.
 
 Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure depuis le stockage :
 
-> **Attention :** A cause d'un bug dans [browser.storage.local.get()](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get) dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'`item.color` dans `onGot()` doivent être changer pour `item[0].color`.
+> [!WARNING]
+> A cause d'un bug dans [browser.storage.local.get()](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get) dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'`item.color` dans `onGot()` doivent être changer pour `item[0].color`.
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 
@@ -183,11 +174,13 @@ getting.then(onGot, onError);
 
 A ce moment, l'extension complète devrait ressembler à ceci :
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 Maintenant :
 

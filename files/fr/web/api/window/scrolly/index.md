@@ -1,15 +1,17 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.
 
 ## Syntaxe
 
-    var y = window.scrollY;
+```js
+var y = window.scrollY;
+```
 
 - `y` est le nombre de pixels verticaux défilés.
 
@@ -18,7 +20,7 @@ La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriét�
 ```js
 // make sure and go down to the second page
 if (window.scrollY) {
-  window.scroll(0, 0);  // reset the scroll position to the top left of the document.
+  window.scroll(0, 0); // reset the scroll position to the top left of the document.
 }
 
 window.scrollByPages(1);
@@ -30,27 +32,35 @@ Utilisez cette propriété pour être sûre que le document n'as pas été défi
 
 La propriété `pageYOffset` est un alias de la propriété `scrollY`:
 
-    window.pageYOffset == window.scrollY; // toujours vrai
+```js
+window.pageYOffset == window.scrollY; // toujours vrai
+```
 
 Pour une compatibilité multi-navigateur, utilisez `window.pageYOffset` à la place de `window.scrollY`. **En outre**, les anciennes versions d'Internet Explorer (< 9) ne supportent pas non plus la propriété et doit-être utilisé à l'aide d'autres propriétés qui ne sont pas standards. Un exemple entièrement compatible :
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Status                           | Commentaire(s) |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## Voir aussi
 

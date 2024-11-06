@@ -1,9 +1,8 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-translation_of: Web/API/Event/preventDefault
-browser-compat: api.Event.preventDefault
 ---
+
 {{apiref("DOM")}}
 
 La méthode **`preventDefault()`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), indique à l'agent utilisateur que si l'évènement n'est pas explicitement géré, l'action par défaut ne devrait pas être exécutée comme elle l'est normalement.
@@ -27,10 +26,14 @@ Lorsqu'on clique sur une case à cocher, par défaut, cela coche ou décoche la 
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-  console.log("Désolé ! preventDefault() ne vous laissera pas cocher ceci.");
-  event.preventDefault();
-}, false);
+document.querySelector("#id-checkbox").addEventListener(
+  "click",
+  function (event) {
+    console.log("Désolé ! preventDefault() ne vous laissera pas cocher ceci.");
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 #### HTML
@@ -40,7 +43,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 ```
 
@@ -58,8 +61,9 @@ Voici le formulaire contenant le champ texte :
 
 ```html
 <form>
-  <label>Un champ texte
-    <input type="text" id="mon-champ-texte">
+  <label
+    >Un champ texte
+    <input type="text" id="mon-champ-texte" />
   </label>
 </form>
 ```
@@ -69,8 +73,8 @@ Voici le formulaire contenant le champ texte :
 Et voici le fragment de code JavaScript qui s'occupe de la logique principale. On commence par enregistrer un gestionnaire d'évènement pour [`keypress`](/fr/docs/Web/API/Element/keypress_event) :
 
 ```js
-let monChampTexte = document.getElementById('mon-champ-texte');
-monChampTexte.addEventListener('keypress', bloqueSaisie, false);
+let monChampTexte = document.getElementById("mon-champ-texte");
+monChampTexte.addEventListener("keypress", bloqueSaisie, false);
 ```
 
 La fonction `bloqueSaisie()` empêche toute saisie au clavier :
@@ -79,7 +83,7 @@ La fonction `bloqueSaisie()` empêche toute saisie au clavier :
 function bloqueSaisie(evt) {
   evt.preventDefault();
   console.log("Une saisie a été empêchée.");
-};
+}
 ```
 
 #### Résultat

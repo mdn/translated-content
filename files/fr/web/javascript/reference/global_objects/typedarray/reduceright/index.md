@@ -1,23 +1,17 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduceRight
 ---
+
 {{JSRef}}
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la droite vers la gauche) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduceRight()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
 ## Syntaxe
 
-    typedarray.reduceRight(callback[, valeurInitiale])
+```js
+typedarray.reduceRight(callback[, valeurInitiale])
+```
 
 ### Paramètres
 
@@ -48,9 +42,11 @@ La méthode `reduceRight` exécute la fonction `callback` une fois pour chaque �
 L'appel à `reduceRight` utilisant la fonction `callback` ressemble à :
 
 ```js
-typedarray.reduceRight(function(valeurPrécédente, valeurCourante, index, typedarray) {
-  // ...
-});
+typedarray.reduceRight(
+  function (valeurPrécédente, valeurCourante, index, typedarray) {
+    // ...
+  },
+);
 ```
 
 Lors du premier appel à la fonction callback, `valeurPrécédente` et `valeurCourante` peuvent être un ou deux valeurs différentes. Si `valeurInitiale` est fournie, `valeurPrécédente` sera alors égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur du tableau. Si le paramètre `valeurInitiale` n'est pas utilisé, `valeurPrécédente` sera égale au premier élément du tableau typé et `valeurCourante` sera égale au second élément.
@@ -60,7 +56,7 @@ Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été
 ## Exemples
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -68,14 +64,11 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reduceRight")}}
+{{Compat}}
 
 ## Voir aussi
 

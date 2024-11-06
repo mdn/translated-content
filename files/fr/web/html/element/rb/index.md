@@ -1,14 +1,9 @@
 ---
-title: '<rb> : l''élément de base ruby'
+title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-translation_of: Web/HTML/Element/rb
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté. Un élément `<rb>` devrait encadrer chaque segment atomique du texte de base.
 
@@ -28,10 +23,13 @@ Dans cet exemple, on fournit une annotation pour le caractère original correspo
 
 ```html
 <ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 On voit ici que deux éléments `<rb>` sont inclus et permettent de délimiter les deux segments du texte de base. Pour l'annotation, chaque partie correspondante est délimitée par un élément {{htmlelement("rt")}}.
 
@@ -39,15 +37,20 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 ### Avec prise en charge de ruby
 
 ```html hidden
-<ruby> <rb>漢<rb>字 <rp>(</rp><rt>kan<rt>ji<rp>)</rp> </ruby>
+<ruby>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
+</ruby>
 ```
 
 ```css hidden
@@ -56,9 +59,9 @@ body {
 }
 ```
 
-Voici le résultat obtenu :
+#### Résultat
 
-{{EmbedLiveSample("Avec_prise_en_charge_de_ruby", "100%", 60)}}
+{{EmbedLiveSample("", "100%", 60)}}
 
 Pour un navigateur qui ne prend pas en charge les annotations ruby, voici à quoi aurait ressemblé le résultat :
 
@@ -74,9 +77,12 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", "100%", 60)}}
+#### Résultat
 
-> **Note :** Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
+{{EmbedLiveSample("", "100%", 60)}}
+
+> [!NOTE]
+> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 
 ## Résumé technique
 
@@ -124,13 +130,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rb-element', '&lt;rb&gt;')}} | {{Spec2('HTML5 W3C')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.rb")}}
+{{Compat}}
 
 ## Voir aussi
 

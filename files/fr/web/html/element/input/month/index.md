@@ -1,10 +1,9 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-translation_of: Web/HTML/Element/input/month
-browser-compat: html.elements.input.input-month
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `YYYY-MM`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
 
@@ -57,7 +56,7 @@ Il est possible de définir une valeur par défaut pour le contrôle en utilisan
 
 ```html
 <label for="bday-month">Quel est le mois de votre naissance ?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06">
+<input id="bday-month" type="month" name="bday-month" value="2017-06" />
 ```
 
 {{EmbedLiveSample('', 600, 60)}}
@@ -72,12 +71,12 @@ Il est également possible de manipuler la date en JavaScript grâce à la propr
 
 ```html
 <label for="bday-month">Quel est le mois de votre naissance ?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06">
+<input id="bday-month" type="month" name="bday-month" value="2017-06" />
 ```
 
 ```js
 let monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '1978-06';
+monthControl.value = "1978-06";
 ```
 
 {{EmbedLiveSample("", 600, 60)}}
@@ -106,7 +105,8 @@ Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut 
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut toutefois être modifiée grâce à du code JavaScript, qui changerait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura aucun effet si l'attribut `readonly` est défini.
+> [!NOTE]
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura aucun effet si l'attribut `readonly` est défini.
 
 ### `step`
 
@@ -114,7 +114,8 @@ L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le 
 
 Une chaîne de caractères `any` indique qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur (sous réserve qu'elle respecte les autres contraintes potentiellement indiquées par `min` ou `max`) est valide.
 
-> **Note :** Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> [!NOTE]
+> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
 
 Pour les champs `month`, la valeur de l'attribut `step` est exprimée en mois et le facteur d'amplification est égal à 1 (la valeur sous-jacente est également exprimée en mois). La valeur par défaut pour cet attribut est 1.
 
@@ -131,7 +132,7 @@ Dans son expression la plus simple, il suffit d'employer un élément `<input>` 
 ```html
 <form>
   <label for="bday-month">Quel est le mois de votre naissance ?</label>
-  <input id="bday-month" type="month" name="bday-month">
+  <input id="bday-month" type="month" name="bday-month" />
 </form>
 ```
 
@@ -144,8 +145,12 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min)
 ```html
 <form>
   <label for="bday-month">Quel est le mois de votre naissance ?</label>
-  <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="2017-08">
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2017-08" />
 </form>
 ```
 
@@ -172,12 +177,17 @@ Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
 <form>
   <div>
     <label for="month">À quel mois souhaitez-vous venir cet été ?</label>
-    <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2017-06"
+      max="2017-09"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Envoyer le formulaire">
+    <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
 ```
@@ -206,20 +216,21 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour la personne naviguant le site de modifier le code HTML ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour la personne naviguant le site de modifier le code HTML ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ## Gérer la prise en charge des navigateurs
 
@@ -242,14 +253,22 @@ Une façon de contourner ce problème consiste à utiliser l'attribut [`pattern`
 ```html
 <form>
   <div>
-    <label for="month">À quel mois souhaitez-vous venir cet été ? (utilisez le format yyyy-mm)</label>
-    <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required
-           pattern="[0-9]{4}-[0-9]{2}">
+    <label for="month"
+      >À quel mois souhaitez-vous venir cet été ? (utilisez le format
+      yyyy-mm)</label
+    >
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2017-06"
+      max="2017-09"
+      required
+      pattern="[0-9]{4}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Envoyer le formulaire">
+    <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
 ```
@@ -274,15 +293,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -301,7 +320,7 @@ Voici le fragment de code HTML utilisé&nbsp;:
 <form>
   <div class="nativeDatePicker">
     <label for="month-visit">À quel mois souhaitez-vous venir cet été ?</label>
-    <input type="month" id="month-visit" name="month-visit">
+    <input type="month" id="month-visit" name="month-visit" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">À quel mois souhaitez-vous venir cet été ?</p>
@@ -326,8 +345,7 @@ Voici le fragment de code HTML utilisé&nbsp;:
       </span>
       <span>
         <label for="year">Année :</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
   </div>
@@ -350,15 +368,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -367,27 +385,27 @@ Une partie intéressante du code est celle qui permet de détecter la prise en c
 
 ```js
 // On définit des variables
-let nativePicker = document.querySelector('.nativeDatePicker');
-let fallbackPicker = document.querySelector('.fallbackDatePicker');
-let fallbackLabel = document.querySelector('.fallbackLabel');
+let nativePicker = document.querySelector(".nativeDatePicker");
+let fallbackPicker = document.querySelector(".fallbackDatePicker");
+let fallbackLabel = document.querySelector(".fallbackLabel");
 
-let yearSelect = document.querySelector('#year');
-let monthSelect = document.querySelector('#month');
+let yearSelect = document.querySelector("#year");
+let monthSelect = document.querySelector("#month");
 
 // Par défaut on masque le sélecteur alternatif
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // On teste si un nouveau contrôle est automatiquement
 // converti en un champ texte
-let test = document.createElement('input');
-test.type = 'month';
+let test = document.createElement("input");
+test.type = "month";
 // Si c'est le cas, on exécute le code dans ce bloc if
-if(test.type === 'text') {
+if (test.type === "text") {
   // on masque le sélecteur natif et on masque le sélecteur alternatif
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // on génère les valeurs pour les années
   populateYears();
@@ -400,15 +418,16 @@ function populateYears() {
 
   // On ajoute l'année courante et les 100 années à venir
   // dans l'élément <select> pour l'année
-  for(let i = 0; i <= 100; i++) {
-    let option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    let option = document.createElement("option");
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 ```
 
-> **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia](https://fr.wikipedia.org/wiki/Numérotation_ISO_des_semaines#Années_longues)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> [!NOTE]
+> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia](https://fr.wikipedia.org/wiki/Numérotation_ISO_des_semaines#Années_longues)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
 
 ## Spécifications
 

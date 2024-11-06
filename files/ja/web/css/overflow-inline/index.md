@@ -1,20 +1,13 @@
 ---
 title: overflow-inline
 slug: Web/CSS/overflow-inline
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-inline
-translation_of: Web/CSS/overflow-inline
 ---
+
 {{CSSRef}}
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、内容がボックスのインライン方向の先頭および末尾方向の端をはみ出した時に、どのように表示するかを設定します。これは表示なし、スクロールバー付き、内容をはみ出させるの何れかになります。
 
-> **Note:** `overflow-inline` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
+> **メモ:** `overflow-inline` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
 
 ## 構文
 
@@ -61,28 +54,26 @@ overflow-inline: unset;
 
 ```html
 <ul>
-  <li><code>overflow-inline:hidden</code> — ボックスの外側のテキストを隠す
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:hidden</code> — ボックスの外側のテキストを隠す
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:scroll</code> — 常にスクロールバーを表示
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:scroll</code> — 常にスクロールバーを表示
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:visible</code> — 必要に応じてテキストをボックスの外に表示
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:visible</code> —
+    必要に応じてテキストをボックスの外に表示
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:auto</code> — 多くのブラウザーでは  <code>scroll</code> と同じ
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:auto</code> — 多くのブラウザーでは
+    <code>scroll</code> と同じ
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```
@@ -90,16 +81,27 @@ overflow-inline: unset;
 #### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-inline: hidden;}
-#div2 { overflow-inline: scroll;}
-#div3 { overflow-inline: visible;}
-#div4 { overflow-inline: auto;}
+#div1 {
+  overflow-inline: hidden;
+}
+#div2 {
+  overflow-inline: scroll;
+}
+#div3 {
+  overflow-inline: visible;
+}
+#div4 {
+  overflow-inline: auto;
+}
 ```
 
 #### 結果
@@ -117,5 +119,5 @@ overflow-inline: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-block")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS 論理プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
 - [書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)

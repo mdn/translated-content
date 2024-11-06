@@ -1,19 +1,9 @@
 ---
-title: '<area> : l''élément de zone'
+title: "<area> : l'élément de zone"
 slug: Web/HTML/Element/area
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/area
-browser-compat: html.elements.area
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
 
@@ -143,7 +133,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
 
-    > **Note :** La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
+    > [!NOTE]
+    > La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
 
 ### Attributs dépréciés ou obsolètes
 
@@ -153,23 +144,29 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Indique une absence d'hyperlien pour la zone d'intérêt. Cet attribut doit être présent si **href** ne l'est pas et _vice versa_.
 
-    > **Note :** Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
+    > [!NOTE]
+    > Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
 
 - **`tabindex`** {{deprecated_inline}}
   - : Une valeur numérique définissant l'ordre de la zone d'intérêt parmi les différentes étiquettes. Cet attribut est un attribut universel avec HTML5.
 - **`type`** {{deprecated_inline}}
   - : Sans effet car ignoré par les navigateurs.
 
-## Exemple
+## Exemples
 
 Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
 
 ```html
 <map name="exemple-map-1">
-  <area shape="rect" coords="0,0 200,200" href="https://developer.mozilla.org" target="_blank" alt="Page d'accueil MDN" />
+  <area
+    shape="rect"
+    coords="0,0 200,200"
+    href="https://developer.mozilla.org"
+    target="_blank"
+    alt="Page d'accueil MDN" />
   <area shape="default" />
 </map>
-<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150">
+<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150" />
 ```
 
 ### Résultat

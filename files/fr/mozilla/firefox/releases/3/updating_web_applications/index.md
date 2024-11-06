@@ -1,11 +1,8 @@
 ---
 title: Mise à jour des applications Web pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
-original_slug: Mise_à_jour_des_applications_Web_pour_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Un certain nombre de changements présents dans Firefox 3 pourraient affecter votre site ou application Web. Vous pourriez en outre tirer parti de plusieurs de ses nouvelles fonctionnalités. Cet article servira de point de départ au fur et à mesure de la mise à jour de votre contenu pour bénéficier au maximum des possibilités de Firefox 3.
@@ -30,11 +27,15 @@ Firefox 3 corrige un bug de sécurité dans les éléments `frame` et `iframe` q
 
 L'élément \<script> dans les documents HTML servis en mode `text/html` doit à présent être obligatoirement accompagné d'une balise fermante \</script>, même si aucun contenu n'est fourni entre les deux balises. Dans les versions précédentes de Firefox, il était possible de faire ceci&nbsp;:
 
-    <script ... />
+```html
+<script ... />
+```
 
 Le balisage doit à présent respecter les spécifications HTML (si c'est effectivement du HTML), il devient donc obligatoire de placer une balise de fermeture séparément, comme ceci&nbsp;:
 
-    <script ...></script>
+```html
+<script ...></script>
+```
 
 Ce changement améliore tant la compatibilité que la sécurité.
 
@@ -46,7 +47,7 @@ Les valeurs de taille de police (`font-size`) utilisant les unités em et ex ét
 
 Les valeurs de `font-size` sont à présent basées sur une «&nbsp;taille de police désirée&nbsp;» qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
 
-Consultez le {{ Bug(322943) }} pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
+Consultez le [bug Firefox 322943](https://bugzil.la/322943) pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
 
 ### Changements concernant la sécurité
 
@@ -58,14 +59,19 @@ Firefox 3 ne permet plus au contenu web que d'accéder aux éléments dans les e
 
 Une possibilité existe cependant pour les extensions désirant rendre le contenu accessible aux pages web. Ces extensions peuvent spécifier un paramètre spécial dans leur fichier chrome.manifest comme ceci&nbsp;:
 
-    content mypackage location/ contentaccessible=yes
+```
+content mypackage location/ contentaccessible=yes
+```
 
 Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
 
-> **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
+> [!NOTE]
+> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
 >
->     content mypackage location/
->     content mypackage location/ contentaccessible=yes
+> ```
+> content mypackage location/
+> content mypackage location/ contentaccessible=yes
+> ```
 
 #### Champs d'envoi de fichiers (upload)
 
@@ -73,10 +79,10 @@ Dans les versions précédentes de Firefox, un certain nombre de cas existaient 
 
 ### Changements dans JavaScript
 
-Firefox 3 intègre [JavaScript 1.8](fr/Nouveaut%c3%a9s_dans_JavaScript_1.8). Un changement important qui pourrait nécessiter une mise à jour de vos sites ou applications Web est que l'objet obsolète et non standard `Script` n'est plus géré. Il ne s'agit pas de la balise `<script>` mais d'un objet JavaScript qui n'avait jamais été standardisé. Il est finalement peu probable que vous l'ayez jamais utilisé, et vous n'aurez sans doute aucun problème.
+Firefox 3 intègre [JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8). Un changement important qui pourrait nécessiter une mise à jour de vos sites ou applications Web est que l'objet obsolète et non standard `Script` n'est plus géré. Il ne s'agit pas de la balise `<script>` mais d'un objet JavaScript qui n'avait jamais été standardisé. Il est finalement peu probable que vous l'ayez jamais utilisé, et vous n'aurez sans doute aucun problème.
 
-### Voir également
+### Voir aussi
 
-- [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
-- [Nouveautés dans JavaScript 1.8](fr/Nouveaut%c3%a9s_dans_JavaScript_1.8)
-- [Mise à jour des extensions pour Firefox 3](fr/Mise_%c3%a0_jour_des_extensions_pour_Firefox_3)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
+- [Nouveautés dans JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8)
+- [Mise à jour des extensions pour Firefox 3](/fr/Mise_à_jour_des_extensions_pour_Firefox_3)

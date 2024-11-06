@@ -1,16 +1,8 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.only-child
-translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 **`:only-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素がない要素を表します。 `:first-child:last-child` または `:nth-child(1):nth-last-child(1)` と同じですが、詳細度はより低くなります。
@@ -22,11 +14,16 @@ p:only-child {
 }
 ```
 
-> **Note:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
+
+> [!NOTE]
+> 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-child
+```
 
 ## 例
 
@@ -42,7 +39,10 @@ p:only-child {
 <div>
   <div>I am the 1st sibling.</div>
   <div>I am the 2nd sibling.</div>
-  <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+  <div>
+    I am the 3rd sibling,
+    <div>but this is an only child.</div>
+  </div>
 </div>
 ```
 
@@ -70,12 +70,14 @@ div {
 
 ```html
 <ol>
-  <li>First
+  <li>
+    First
     <ul>
       <li>This list has just one element.</li>
     </ul>
   </li>
-  <li>Second
+  <li>
+    Second
     <ul>
       <li>This list has three elements.</li>
       <li>This list has three elements.</li>

@@ -1,30 +1,24 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/blink
 ---
+
 {{JSRef}}{{deprecated_header}}
 
-La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui affiche la chaine de caractères en clignotant.
+La méthode **`blink()`** crée un élément HTML `<blink>` qui affiche la chaine de caractères en clignotant.
 
-> **Attention :** Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
+> [!WARNING]
+> Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
 
 ## Syntaxe
 
-    str.blink()
+```js
+str.blink();
+```
 
 ### Valeur de retour
 
-Une chaine de caractères représentant un élément HTML {{HTMLElement("blink")}}.
+Une chaine de caractères représentant un élément HTML `<blink>`.
 
 ## Description
 
@@ -55,14 +49,11 @@ Cet exemple produira le code HTML suivant :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.blink', 'String.prototype.blink')}}         | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.blink")}}
+{{Compat}}
 
 ## Voir aussi
 

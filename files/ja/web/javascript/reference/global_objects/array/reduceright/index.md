@@ -1,59 +1,40 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - ポリフィル
-browser-compat: javascript.builtins.Array.reduceRight
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+l10n:
+  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
 ---
+
 {{JSRef}}
 
-**`reduceRight()`** メソッドは、アキュームレーターと配列のそれぞれの値に対して (右から左へ) 関数を適用して、単一の値にします。
+**`reduceRight()`** は {{jsxref("Array")}} インスタンスのメソッドで、アキュームレーターと配列のそれぞれの値に対して（右から左へ）関数を適用して、単一の値にします。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+左から右へ適用する場合は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
-左から右へ適用する際は {{jsxref("Array.prototype.reduce()")}} を参照してください。
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
 
 ## 構文
 
-```js
-// アロー関数
-reduceRight((accumulator, currentValue) => { ... } )
-reduceRight((accumulator, currentValue, index) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
-
-// コールバック関数
+```js-nolint
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// コールバック畳み込み関数
-reduceRight(function callbackFn(accumulator, currentValue) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 ```
 
 ### 引数
 
 - `callbackFn`
-  - : 配列内のそれぞれの値に対して実行するコールバック関数であり、 4 つの引数を取ります。
+
+  - : 配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduceRight()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
-      - : コールバック関数の前回の呼び出しで返された値、もしくは、指定されていれば `initialValue` です。(下記参照)
+      - : 前回の `callbackFn` の呼び出し結果の値です。初回の呼び出しでは `initialValue` が指定されていた場合はその値、そうでない場合はこの配列の末尾の要素の値です。
     - `currentValue`
-      - : 配列内で現在処理中の要素です。
-    - `index`{{optional_inline}}
-      - : 配列内で現在処理中の要素の位置です。
-    - `array`{{optional_inline}}
+      - : 現在の要素の値です。初回の呼び出しでは `initialValue` が指定された場合は末尾の要素の値であり、そうでない場合は末尾から 2 番目の要素の値です。
+    - `currentIndex`
+      - : `currentValue` のインデックス位置です。初回の呼び出しでは、 `initialValue` が指定された場合は `array.length - 1`、そうでない場合は `array.length - 2` です。
       - : `reduceRight()` が呼び出された配列です。
 
 - `initialValue` {{optional_inline}}
-  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値がが渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 reduce または reduceRight を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
+  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値がが渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 `reduceRight()` を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
 
 ### 返値
 
@@ -61,13 +42,32 @@ reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }
 
 ## 解説
 
-`reduceRight` は、配列内に存在するそれぞれの要素に対してコールバック関数を一度ずつ実行します。配列内の穴は対象外です。初期値 (あるいは直前のコールバックの呼び出し結果)、現在の要素の値、現在の位置、繰り返しが行われる配列の 4 つの引数を受け取ります。
+`reduceRight()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。
 
-reduceRight の `callbackFn` の呼び出しは、以下のように見えるでしょう。
+`callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
+
+他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduceRight()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
+
+`reduceRight()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
+
+- `callbackFn` は `reduceRight()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
+
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+
+`reduceRight()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+
+## 例
+
+### 初期値がない場合の reduceRight() の動作
+
+reduceRight の `callbackFn` の呼び出しは次のようになります：
 
 ```js
-arr.reduceRight(function(accumulator, currentValue, index, array) {
-  // ...
+arr.reduceRight((accumulator, currentValue, index, array) => {
+  // …
 });
 ```
 
@@ -78,215 +78,64 @@ arr.reduceRight(function(accumulator, currentValue, index, array) {
 この関数を使用した場合について見てみましょう。
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
-  return accumulator + currentValue;
-});
+[0, 1, 2, 3, 4].reduceRight(
+  (accumulator, currentValue, index, array) => accumulator + currentValue,
+);
 ```
 
 コールバックは 4 回呼び出され、ぞれぞれの呼び出しの引数と返値は次のようになります。
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">返値</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">初回の呼び出し</th>
-      <td><code>4</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>7</code></td>
-    </tr>
-    <tr>
-      <th scope="row">2 回目の呼び出し</th>
-      <td><code>7</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>9</code></td>
-    </tr>
-    <tr>
-      <th scope="row">3 回目の呼び出し</th>
-      <td><code>9</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-    <tr>
-      <th scope="row">4 回目の呼び出し</th>
-      <td><code>10</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `4`           | `3`            | `3`     | `7`          |
+| Second call | `7`           | `2`            | `2`     | `9`          |
+| Third call  | `9`           | `1`            | `1`     | `10`         |
+| Fourth call | `10`          | `0`            | `0`     | `10`         |
 
 `reduceRight` の返値は、コールバック呼び出しの最後の返値である (`10`) になります。
 
-`initialValue` を渡した場合、結果は次のようになります。
+### 初期値がある場合の reduceRight() の動作
+
+ここでは、同じアルゴリズムを使用して同じ配列を縮小しますが、 `reduceRight()` の 2 つ目の引数である `initialValue` として `10` を使用します。
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
-  return accumulator + currentValue;
-}, 10);
+[0, 1, 2, 3, 4].reduceRight(
+  (accumulator, currentValue, index, array) => accumulator + currentValue,
+  10,
+);
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">返値</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">初回の呼び出し</th>
-      <td><code>10</code></td>
-      <td><code>4</code></td>
-      <td><code>4</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>14</code></td>
-    </tr>
-    <tr>
-      <th scope="row">2 回目の呼び出し</th>
-      <td><code>14</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>17</code></td>
-    </tr>
-    <tr>
-      <th scope="row">3 回目の呼び出し</th>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>19</code></td>
-    </tr>
-    <tr>
-      <th scope="row">4 回目の呼び出し</th>
-      <td><code>19</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-    <tr>
-      <th scope="row">5 回目の呼び出し</th>
-      <td><code>20</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `4`            | `4`     | `14`         |
+| Second call | `14`          | `3`            | `3`     | `17`         |
+| Third call  | `17`          | `2`            | `2`     | `19`         |
+| Fourth call | `19`          | `1`            | `1`     | `20`         |
+| Fifth call  | `20`          | `0`            | `0`     | `20`         |
 
-この場合の `reduceRight` の返値は `20` になります。
-
-## ポリフィル
-
-`reduceRight` は ECMA-262 の第 5 版に追加されたもので、すべての実装には存在しない可能性があります。これを回避するには、スクリプトの最初に次のコードを挿入して、ネイティブには対応していない実装でも `reduceRight` を使用できるようにします。
-
-```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.22
-// Reference: https://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
-    }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
-    }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
-    if (arguments.length >= 2) {
-      value = arguments[1];
-    } else {
-      while (k >= 0 && !(k in t)) {
-        k--;
-      }
-      if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
-      }
-      value = t[k--];
-    }
-    for (; k >= 0; k--) {
-      if (k in t) {
-        value = callback(value, t[k], k, t);
-      }
-    }
-    return value;
-  };
-}
-```
-
-## 例
+`reduceRight` から返される値はこのときのもので、もちろん `20` です。
 
 ### 配列内のすべての値を合計する
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
-  return a + b;
-});
+const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum is 6
-```
-
-### 配列中の配列を平坦化する
-
-```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
-}, []);
-// flattened is [4, 5, 2, 3, 0, 1]
 ```
 
 ### 一連のコールバックを使用して非同期関数のリストを実行し、それぞれの結果を次のコールバックに渡す
 
 ```js
-const waterfall = (...functions) => (callback, ...args) =>
-  functions.reduceRight(
-    (composition, fn) => (...results) => fn(composition, ...results),
-    callback
-  )(...args);
+const waterfall =
+  (...functions) =>
+  (callback, ...args) =>
+    functions.reduceRight(
+      (composition, fn) =>
+        (...results) =>
+          fn(composition, ...results),
+      callback,
+    )(...args);
 
-const randInt = max => Math.floor(Math.random() * max)
+const randInt = (max) => Math.floor(Math.random() * max);
 
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
@@ -308,28 +157,28 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // -> 14
+computation(console.log, 5); // -> 14
 
 // same as:
 
 const computation2 = (input, callback) => {
-  const f6 = x=> div4(callback, x);
+  const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
-  const f4 = x => split(f5, x);
-  const f3 = x => sub2(f4, x);
-  const f2 = x => mult3(f3, x);
+  const f4 = (x) => split(f5, x);
+  const f3 = (x) => sub2(f4, x);
+  const f2 = (x) => mult3(f3, x);
   add5(f2, input);
-}
+};
 ```
 
-### `reduce` と `reduceRight` の違い
+### reduce と reduceRight の違い
 
 ```js
-var a = ['1', '2', '3', '4', '5'];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+const a = ["1", "2", "3", "4", "5"];
+const left = a.reduce((prev, cur) => prev + cur);
+const right = a.reduceRight((prev, cur) => prev + cur);
 
-console.log(left);  // "12345"
+console.log(left); // "12345"
 console.log(right); // "54321"
 ```
 
@@ -340,19 +189,47 @@ console.log(right); // "54321"
 Wikipedia の [Function composition](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>) も参照してください。
 
 ```js
-const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
+const compose =
+  (...args) =>
+  (value) =>
+    args.reduceRight((acc, fn) => fn(acc), value);
 
 // 渡された数値をインクリメントする
-const inc = (n) => n + 1
+const inc = (n) => n + 1;
 
 // 渡された数値を 2 倍にする
-const double = (n) => n * 2
+const double = (n) => n * 2;
 
 // 合成関数を使用する
 console.log(compose(double, inc)(2)); // 6
 
 // 合成関数を使用する
 console.log(compose(inc, double)(2)); // 5
+```
+
+### reduceRight() を疎配列で使用
+
+`reduceRight()` は疎配列の欠落している要素をスキップしますが、値が `undefined` の場合はスキップしません。
+
+```js
+console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
+```
+
+### 配列以外のオブジェクトに対する reduceRight() の呼び出し
+
+`reduceRight()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 99, // length が 3 であるため reduceRight() からは無視される
+};
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1 すなわち 4 - 3 - 2
 ```
 
 ## 仕様書
@@ -365,5 +242,13 @@ console.log(compose(inc, double)(2)); // 5
 
 ## 関連情報
 
-- `Array.prototype.reduceRight` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-array) で利用できます
+- [`Array.prototype.reduceRight` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

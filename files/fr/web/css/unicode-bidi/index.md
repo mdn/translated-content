@@ -1,19 +1,16 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/unicode-bidi
 ---
+
 {{CSSRef}}
 
 La propriété **`unicode-bidi`**, associée à la propriété {{cssxref("direction")}}, permet de gérer du texte bidirectionnel dans un document. Par exemple, si un bloc de texte contient à la fois du texte qui se lit de droite à gauche et du texte qui se lit de gauche à droite, l'agent utilisateur utilisera un algorithme Unicode complexe pour savoir comment afficher le texte. Cette propriété prend le pas sur l'algorithme et permet au développeur de contrôler l'intégration du texte.
 
 Les propriétés `unicode-bidi` et {{cssxref("direction")}} sont les deux seules propriétés qui ne sont pas impactées par {{cssxref("all")}}.
 
-> **Note :** Cette propriété est d'abord destinée aux concepteurs de DTD, les auteurs Web ne devraient pas surcharger sa valeur.
+> [!NOTE]
+> Cette propriété est d'abord destinée aux concepteurs de DTD, les auteurs Web ne devraient pas surcharger sa valeur.
 
 ```css
 /* Avec un mot-clé */
@@ -63,16 +60,13 @@ unicode-bidi: unset;
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS3 Writing Modes', '#unicode-bidi', 'unicode-bidi')}}             | {{Spec2('CSS3 Writing Modes')}} | Ajout des mots-clés `plaintext`, `isolate` et `isolate-override`. |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-unicode-bidi', 'unicode-bidi')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.unicode-bidi")}}
+{{Compat}}
 
 ## Voir aussi
 

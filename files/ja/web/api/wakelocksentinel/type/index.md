@@ -1,16 +1,8 @@
 ---
 title: WakeLockSentinel.type
 slug: Web/API/WakeLockSentinel/type
-tags:
-  - プロパティ
-  - 読み取り専用
-  - 画面起動ロック API
-  - 起動ロック
-  - WakeLockSentinel
-  - 画面
-browser-compat: api.WakeLockSentinel.type
-translation_of: Web/API/WakeLockSentinel/type
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`type`** は {{domxref("WakeLockSentinel")}} インターフェイスの読み取り専用プロパティで、現在取得している {{domxref("WakeLockSentinel")}} の種別の文字列表現を返します。
@@ -37,7 +29,7 @@ var type = sentinel.type;
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // 'screen' と出力
 };
 

@@ -1,28 +1,22 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/some
 ---
+
 {{JSRef}}
 
 La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
 
-> **Note :** Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
 ## Syntaxe
 
-    arr.some(callback[, objetThis])
+```js
+arr.some(callback[, objetThis])
+```
 
 ### Paramètres
 
@@ -50,7 +44,7 @@ La méthode `some()` exécute la fonction `callback` une seule fois pour chaque 
 
 La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur  {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
 
@@ -64,7 +58,7 @@ L'exemple suivant teste si certains éléments d'un tableau sont plus grands que
 
 ```js
 function estAssezGrand(element, indice, array) {
-  return (element >= 10);
+  return element >= 10;
 }
 var resultat = [2, 5, 8, 1, 4].some(estAssezGrand);
 // resultat vaut false
@@ -74,26 +68,23 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ### Tester la valeur des éléments avec les fonctions fléchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10); // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
+[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
-> **Note :** Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+> [!NOTE]
+> Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}                 | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Voir aussi
 

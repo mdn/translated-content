@@ -1,12 +1,8 @@
 ---
 title: Firefox 7 pour les développeurs
 slug: Mozilla/Firefox/Releases/7
-tags:
-  - Firefox
-  - Firefox 7
-translation_of: Mozilla/Firefox/Releases/7
-original_slug: Mozilla/Firefox/Versions/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
@@ -15,11 +11,11 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 ### HTML
 
-- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis {{gecko("2.0")}}.
+- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
-- L'attribut {{htmlattrxref("background", "body")}} de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
-- L'attribut {{htmlattrxref("label", "option")}} de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
+- L'attribut [`background`](/fr/docs/Web/HTML/Element/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
+- L'attribut [`label`](/fr/docs/Web/HTML/Element/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
 
 #### Canvas
 
@@ -91,7 +87,8 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir [Updating extensions for Firefox 7](/fr/docs/Firefox/Updating_extensions_for_Firefox_7) pour plus d'informations.
 
-> **Note :** Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
+> [!NOTE]
+> Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
 ### Modules de code JavaScript
 
@@ -106,8 +103,8 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 ### XUL
 
-- Les éléments {{xulelem("tree")}} peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les {{XULAttr("datasources")}} ont tous des ID uniques spécifiés par les attributs "id".
-- Les éléments {{xulelem("panel")}} peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut {{XULAttr("backdrag")}}.
+- Les éléments `<tree>` peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les `datasources` ont tous des ID uniques spécifiés par les attributs "id".
+- Les éléments `<panel>` peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut `backdrag`.
 
 ### XPCOM
 
@@ -137,7 +134,7 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 - L'interface `nsIDOMWindow_2_0_BRANCH` a été intégrée dans l'interface `nsIDOMWindowInternal`.
 - Les méthodes `nsINavHistoryObserver` avec des paramètres d'URI exigent désormais un GUID.
 - L'interface `nsISHistory_2_0_BRANCH` a été intégrée dans l'interface `nsISHistory`.
-- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
+- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir [bug Firefox 661574](https://bugzil.la/661574) et [bug Firefox 661573](https://bugzil.la/661573))
   Les histogrammes de télémétrie définis avec `nsITelemetry.newHistogram()` ne seront pas rapportés dans le ping de télémétrie.
 - L'interface `nsIMemoryReporter` a été sensiblement modifiée, si vous l'utilisez, vous devez faire quelques ajustements à votre code.
 - Les en-têtes `nsIXMLHttpRequest` fixées par `nsIXMLHttpRequest.setRequestHeader()` sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.
@@ -193,6 +190,6 @@ Les interfaces suivantes ont été supprimées dans le cadre du retrait de l'API
 - La structure de la fenêtre de la bibliothèque (`places.xul`) [a été nettoyée](https://bugzilla.mozilla.org/show_bug.cgi?id=588027). Cela [pourrait casser les extensions](https://bugzilla.mozilla.org/show_bug.cgi?id=677417) et les thèmes
 - L'apparence de la fenêtre d'aperçu avant impression [a été modernisé](https://bugzilla.mozilla.org/show_bug.cgi?id=663028) et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('6')}}

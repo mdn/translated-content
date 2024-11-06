@@ -1,28 +1,18 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsqu'un ou plusieurs éléments changent.
 
 ## Syntaxe
 
 ```js
-browser.storage.onChanged.addListener(callback)
-browser.storage.onChanged.removeListener(listener)
-browser.storage.onChanged.hasListener(listener)
+browser.storage.onChanged.addListener(callback);
+browser.storage.onChanged.removeListener(listener);
+browser.storage.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -50,9 +40,9 @@ Les événements ont trois fonctions:
     - `areaName`
       - : `string`. Le nom de la zone de stockage (`"sync"`, `"local"` or `"managed"`) auquel les modifications ont été apportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.onChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -81,13 +71,14 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +105,4 @@ browser.storage.onChanged.addListener(logStorageChange);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

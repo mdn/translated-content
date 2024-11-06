@@ -1,16 +1,9 @@
 ---
-title: '<br> : l''élément de saut de ligne'
+title: "<br> : l'élément de saut de ligne"
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
-browser-compat: html.elements.br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<br>`** crée un saut de ligne (un retour chariot) dans le texte. Il s'avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu'on écrit une adresse ou un poème).
 
@@ -18,7 +11,8 @@ L'élément HTML **`<br>`** crée un saut de ligne (un retour chariot) dans le t
 
 Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque point où nous voulons que le texte soit interrompu. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
-> **Note :** Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
+> [!NOTE]
+> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
 
 ## Attributs
 
@@ -42,14 +36,14 @@ Bien qu'il soit possible d'appliquer une marge ([`margin`](/fr/docs/Web/CSS/marg
 Dans l'exemple suivant, nous utilisons des éléments `<br>` pour créer des sauts de ligne entre les différentes lignes d'une adresse postale :
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
 {{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
 

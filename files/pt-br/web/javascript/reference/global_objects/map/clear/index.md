@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.clear
 ---
+
 {{JSRef}}
 
 O método **`clear()`** remove todos os elementos de um objeto `Map`.
@@ -19,7 +12,7 @@ O método **`clear()`** remove todos os elementos de um objeto `Map`.
 ## Sintaxe
 
 ```js
-clear()
+clear();
 ```
 
 ### Valor retornado
@@ -32,16 +25,16 @@ clear()
 
 ```js
 var myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-myMap.size;       // 2
-myMap.has('bar'); // true
+myMap.size; // 2
+myMap.has("bar"); // true
 
 myMap.clear();
 
-myMap.size;       // 0
-myMap.has('bar')  // false
+myMap.size; // 0
+myMap.has("bar"); // false
 ```
 
 ## Especificações

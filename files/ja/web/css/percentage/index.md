@@ -1,21 +1,16 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.percentage
-translation_of: Web/CSS/percentage
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
+
 {{CSSRef}}
 
 **`<percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、パーセント値による割合を表します。要素の親オブジェクトからの相対的な寸法を定義するためによく使われます。 {{CSSxRef("width")}}、 {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}、 {{CSSxRef("font-size")}} など、たくさんのプロパティでパーセント値を使うことができます。
 
-> **Note:** 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
+> [!NOTE]
+> 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
 
 ## 構文
 
@@ -23,11 +18,11 @@ translation_of: Web/CSS/percentage
 
 ## 補間
 
-アニメーションをする時、 `<percentage>` データ型は浮動小数点の実数として補間が行われます。補間の速度は、アニメーションに関連付けられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で定義します。
+アニメーションをする時、 `<percentage>` データ型は浮動小数点の実数として{{Glossary("interpolation", "補間")}}が行われます。補間の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)で定義します。
 
 ## 例
 
-<h3 id="Width_and_margin-left">幅と左マージン</h3>
+### 幅と左マージン
 
 ```html
 <div style="background-color:navy;">
@@ -44,7 +39,7 @@ translation_of: Web/CSS/percentage
 
 {{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
-<h3 id="Font-size">font-size</h3>
+### font-size
 
 ```html
 <div style="font-size:18px;">

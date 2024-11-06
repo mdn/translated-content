@@ -1,20 +1,14 @@
 ---
 title: Types CSS
 slug: Web/CSS/CSS_Types
-tags:
-  - Aperçu
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Type
-translation_of: Web/CSS/CSS_Types
-original_slug: Web/CSS/Types_CSS
 ---
+
 {{CSSRef}}
 
 Le module **_CSS basic data types_** définit les différents types de données CSS qui permettent de définir les types de valeurs (mots-clés et unités) acceptées par les différentes propriétés et fonctions. Lorsqu'on utilise une notation formelle, les types de données sont représentés par un mot-clé entre chevrons (< >).
 
-> **Note :** Les types de donnée CSS sont un type spécial de [composant de type de valeur](https://www.w3.org/TR/css3-values/#component-types).
+> [!NOTE]
+> Les types de donnée CSS sont un type spécial de [composant de type de valeur](https://www.w3.org/TR/css3-values/#component-types).
 
 ## Référence
 
@@ -67,12 +61,9 @@ Le module **_CSS basic data types_** définit les différents types de données 
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values')}} | {{Spec2('CSS4 Values')}} |                      |
-| {{SpecName('CSS3 Values')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 
 - [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les valeurs et les unités](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

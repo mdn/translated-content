@@ -1,20 +1,17 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
-original_slug: Web/JavaScript/Reference/Erreurs/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Unexpected identifier after numeric literal (Edge)
-    SyntaxError: identifier starts immediately after numeric literal (Firefox)
-    SyntaxError: Unexpected number (Chrome)
+```
+SyntaxError: Unexpected identifier after numeric literal (Edge)
+SyntaxError: identifier starts immediately after numeric literal (Firefox)
+SyntaxError: Unexpected number (Chrome)
+```
 
 ## Type d'erreur
 
@@ -46,7 +43,7 @@ alert(1.toto);
 Pour éviter ce problème, il faudra renommer les variables afin d'éviter d'utiliser un chiffre au début :
 
 ```js example-good
-var vie1 = 'toto';
+var vie1 = "toto";
 var toto = vie1;
 ```
 

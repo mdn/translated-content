@@ -1,15 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-family
-translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS の **`font-family`** プロパティは、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
@@ -22,7 +15,7 @@ CSS の **`font-family`** プロパティは、選択した要素に対して、
 
 指定されたフォントが利用可能であるという保証はないので、 `font-family` リストの中に、総称ファミリーを少なくとも 1 つ、常に追加しておくべきです。総称ファミリーを使うことで、必要ならば、ブラウザーで受け付け可能な代替フォントを選択させることができます。
 
-`font-family` プロパティでは、優先順位の高い方から低い方へ、フォントのリストを指定します。フォント選択は、ユーザーのシステム上に存在する、リスト中の一番最初に指定されたフォントを選んで終わるとは**限りません**。むしろ、フォント選択は **1 文字ずつ**行われます。なぜなら、利用可能なフォントが、その文字を表示するのに必要なグリフを欠いている場合には、そのフォントよりも順位の低い利用可能なフォントが試行されるからです。あるフォントが一部の[スタイル](/ja/docs/Web/CSS/font-style)、[種類](/ja/docs/Web/CSS/font-variant、[大きさ](/ja/docs/Web/CSS/font-size)でのみ利用可能な場合、これらのプロパティがフォントファミリーの選択に影響する可能性があります。
+`font-family` プロパティでは、優先順位の高い方から低い方へ、フォントのリストを指定します。フォント選択は、ユーザーのシステム上に存在する、リスト中の一番最初に指定されたフォントを選んで終わるとは**限りません**。むしろ、フォント選択は **1 文字ずつ**行われます。なぜなら、利用可能なフォントが、その文字を表示するのに必要なグリフを欠いている場合には、そのフォントよりも順位の低い利用可能なフォントが試行されるからです。あるフォントが一部の[スタイル](/ja/docs/Web/CSS/font-style)、[種類](/ja/docs/Web/CSS/font-variant)、[大きさ](/ja/docs/Web/CSS/font-size)でのみ利用可能な場合、これらのプロパティがフォントファミリーの選択に影響する可能性があります。
 
 ## 構文
 
@@ -100,7 +93,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
         例: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy
 
     - `system-ui`
-       - : 指定されたプラットフォームの既定のユーザーインターフェイスフォントからグリフを取ります。文字の伝統は世界で様々であるため、この総称は他の総称にきれいに一致しない文字フォントを提供します。
+      - : 指定されたプラットフォームの既定のユーザーインターフェイスフォントからグリフを取ります。文字の伝統は世界で様々であるため、この総称は他の総称にきれいに一致しない文字フォントを提供します。
     - `ui-serif`
       - : ユーザーインターフェイス既定のセリフ付きフォントです。
     - `ui-sans-serif`
@@ -114,7 +107,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `emoji`
       - : 絵文字を表示するために特別にデザインされたフォントです。
     - `fangsong`
-      - : セリフ風の Song と手書き風の Kai の形の間にある中国語の文字の特定のスタイルです。このスタイルは政府文書によく使用されます。
+      - : セリフ風の明朝体と手書き風の楷書体との間にある中国語の文字の特定のスタイル (宋朝体) です。このスタイルは政府文書によく使用されます。
 
 ### 有効なファミリー名
 
@@ -131,19 +124,29 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 以下の宣言は**無効**です。
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
 以下の例は技術的には**有効**ですが、推奨されません。
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ## 公式定義
@@ -193,37 +196,21 @@ font-family: Gill Sans Extrabold, sans-serif;
 ```
 
 ```html hidden
-<div class="serif">
-  This is an example of a serif font.
-</div>
+<div class="serif">This is an example of a serif font.</div>
 
-<div class="sansserif">
-  This is an example of a sans-serif font.
-</div>
+<div class="sansserif">This is an example of a sans-serif font.</div>
 
-<div class="monospace">
-  This is an example of a monospace font.
-</div>
+<div class="monospace">This is an example of a monospace font.</div>
 
-<div class="cursive">
-  This is an example of a cursive font.
-</div>
+<div class="cursive">This is an example of a cursive font.</div>
 
-<div class="fantasy">
-  This is an example of a fantasy font.
-</div>
+<div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">
-  This is an example of a math font.
-</div>
+<div class="math">This is an example of a math font.</div>
 
-<div class="emoji">
-  This is an example of an emoji font.
-</div>
+<div class="emoji">This is an example of an emoji font.</div>
 
-<div class="fangsong">
-  This is an example of a fangsong font.
-</div>
+<div class="fangsong">This is an example of a fangsong font.</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}

@@ -1,19 +1,9 @@
 ---
 title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPopup
-  - pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
 
@@ -23,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingPopup = browser.pageAction.getPopup(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -40,13 +30,13 @@ var gettingPopup = browser.pageAction.getPopup(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accompli avec une chaîne contenant l'URL du popup.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.getPopup")}}
+{{Compat}}
 
 ## Exemples
 
-Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 function gotPopup(popupURL) {
@@ -55,12 +45,12 @@ function gotPopup(popupURL) {
 
 browser.contextMenus.create({
   id: "get-popup",
-  title: "Get popup URL"
+  title: "Get popup URL",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "get-popup") {
-    var gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+    var gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
     gettingPopup.then(gotPopup);
   }
 });
@@ -68,13 +58,14 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +92,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

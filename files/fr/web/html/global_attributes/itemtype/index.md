@@ -1,16 +1,8 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Référence(2)
-translation_of: Web/HTML/Global_attributes/itemtype
-original_slug: Web/HTML/Attributs_universels/itemtype
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
@@ -23,13 +15,16 @@ L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont 
 
 Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](http://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](http://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](http://schema.org/startDate) et [`location`](http://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent).
 
-> **Note :** Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
+> [!NOTE]
+> Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
 
 ## Syntaxe
 
 ### Syntaxe formelle
 
-    itemtype = URL
+```
+itemtype = URL
+```
 
 ### Exemple simple
 
@@ -70,22 +65,18 @@ Google et les autres moteurs de recherche participent au vocabulaire défini par
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemtype")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
 - Les autres attributs universels relatifs aux microdonnées :
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)

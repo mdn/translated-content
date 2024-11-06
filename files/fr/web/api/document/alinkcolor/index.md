@@ -1,24 +1,20 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - HTML DOM
-  - Obsolete
-  - Propriété
-  - Reference
-translation_of: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
 
 ## Syntaxe
 
-    var color = document.alinkColor;
-    document.alinkColor = color;
+```js
+var color = document.alinkColor;
+document.alinkColor = color;
+```
 
-*color* est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
+_color_ est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
 
 ## Notes
 
@@ -32,4 +28,4 @@ Une autre alternative est `document.body.aLink`, même si elle est [obsolète da
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.alinkColor")}}
+{{Compat}}

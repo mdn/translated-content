@@ -1,14 +1,8 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/UTC
 ---
+
 {{JSRef}}
 
 La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du constructeur {{jsxref("Date")}} et renvoie le nombre de millièmes de seconde depuis le 1er janvier 1970, 00:00:00, temps universel. Autrement dit, elle renvoie la date en UTC.
@@ -17,7 +11,9 @@ La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du const
 
 ## Syntaxe
 
-    Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```js
+Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```
 
 ## Paramètres
 
@@ -27,7 +23,8 @@ La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du const
 
   - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
 
-    > **Note :** Cet argument est optionnel depuis ECMAScript 2017.
+    > [!NOTE]
+    > Cet argument est optionnel depuis ECMAScript 2017.
 
 - `jour`{{optional_inline}}
   - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.
@@ -71,36 +68,11 @@ var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                                |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}} | {{Spec2('ESDraft')}} | Le paramètre pour le mois est devenu optionnel avec ES2017. |
-| {{SpecName('ES6', '#sec-date.utc', 'Date.UTC')}}     | {{Spec2('ES6')}}         |                                                             |
-| {{SpecName('ES5.1', '#sec-15.9.4.3', 'Date.UTC')}} | {{Spec2('ES5.1')}}     |                                                             |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.UTC")}}
-
-## Notes de compatibilité
-
-### Utiliser `Date.UTC` avec moins de deux arguments
-
-Lorsqu'on fournit moins de deux arguments à `Date.UTC`, {{jsxref("NaN")}} sera renvoyé. Ce comportement a été spécifié dans ECMAScript 2017 et les moteurs qui n'obéissaient pas à cette règle on été mis à jour (cf. {{bug(1050755)}}, [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
-
-```js
-Date.UTC();
-Date.UTC(1);
-
-// Safari: NaN
-// Chrome/Opera/V8: NaN
-
-// Firefox <54: non-NaN
-// Firefox 54+: NaN
-
-// IE: non-NaN
-// Edge: NaN
-```
+{{Compat}}
 
 ## Voir aussi
 

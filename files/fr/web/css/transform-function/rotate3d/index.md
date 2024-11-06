@@ -1,10 +1,8 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-translation_of: Web/CSS/transform-function/rotate3d()
-original_slug: Web/CSS/transform-function/rotate3d()
-browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
@@ -13,11 +11,14 @@ La fonction **`rotate3d()`** définit une transformation qui déplace un éléme
 
 Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté qui définissent l'axe de rotation. Cet axe est défini par un vecteur `[x, y, z]` et passe par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)). Si le vecteur n'est pas normalisé (autrement dit, si la somme des carrés de ses trois composantes ne vaut pas 1), il sera normalisé par le moteur. Un vecteur qui ne peut être normalisé (par exemple le vecteur nul `[0, 0, 0]`) empêchera la rotation d'être appliquée mais la propriété CSS restera valide.
 
-> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!NOTE]
+> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 
-    rotate3d(x, y, z, a)
+```
+rotate3d(x, y, z, a)
+```
 
 ### Valeurs
 
@@ -118,8 +119,8 @@ p {
   margin: auto;
 }
 
-.transformation{
-  transform: rotate3d(0,1,0,60deg);
+.transformation {
+  transform: rotate3d(0, 1, 0, 60deg);
   background-color: blue;
 }
 ```

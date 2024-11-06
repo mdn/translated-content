@@ -1,22 +1,13 @@
 ---
 title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeHistory
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
 - Effacer uniquement les eenregistrements des pages Web visitées après un certain temps.
 - Contrôlez si vous souhaitez effacer uniquement les enregistrements des pages web normales ou effacer les enregistrements des applications hébergées et des extensions.
@@ -27,8 +18,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeHistory(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -40,9 +31,9 @@ var removing = browser.browsingData.removeHistory(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removeHistory", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,11 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeHistory(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeHistory({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tous les enregistrements des pages visitées :
@@ -79,19 +70,19 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeHistory({}).
-then(onRemoved, onError);
+browser.browsingData.removeHistory({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +109,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

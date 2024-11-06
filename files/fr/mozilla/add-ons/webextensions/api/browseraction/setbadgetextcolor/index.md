@@ -1,18 +1,9 @@
 ---
 title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeTextColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Définit la couleur du texte du badge de l'action du navigateur. Les onglets sans couleur de texte de badge spécifique hériteront de la couleur globale du texte de badge.
 
@@ -20,8 +11,8 @@ Définit la couleur du texte du badge de l'action du navigateur. Les onglets san
 
 ```js
 browser.browserAction.setBadgeTextColor(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -48,44 +39,45 @@ browser.browserAction.setBadgeTextColor(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est définie à la place.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeTextColor",2)}}
-
 ## Exemples
 
 Une couleur de texte de badge qui commence par le rouge et passe au vert lorsque l'on clique sur l'action du navigateur :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeTextColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeTextColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener(()=> {
-  browser.browserAction.setBadgeTextColor({color: "green"});
+browser.browserAction.onClicked.addListener(() => {
+  browser.browserAction.setBadgeTextColor({ color: "green" });
 });
 ```
 
 Définissez la couleur du texte du badge uniquement pour l'onglet actif :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeTextColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeTextColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener((tab)=> {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setBadgeTextColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +104,4 @@ browser.browserAction.onClicked.addListener((tab)=> {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

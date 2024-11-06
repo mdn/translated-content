@@ -1,15 +1,12 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/page-break-before
 ---
+
 {{CSSRef}}
 
-> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.
+> [!WARNING]
+> Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.
 
 La propriété CSS **`page-break-before`** permet d'ajuster les sauts de page placés _avant_ l'élément courant.Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
 
@@ -62,9 +59,13 @@ Pour des raisons de compatibilité, si on traite `page-break-before` comme un sy
 - `verso` {{experimental_inline}}
   - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -72,23 +73,17 @@ Pour des raisons de compatibilité, si on traite `page-break-before` comme un sy
 /* Pour éviter d'avoir un saut de page avant */
 /* une note dans un div                      */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS Logical Properties', '#logical-page', 'recto and verso')}}         | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `recto` et `verso`.                                                                  |
-| {{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}         | {{Spec2('CSS3 Paged Media')}}         | Cette propriété peut désormais être étendues aux lignes de tableau et aux groupe de lignes de tableau. |
-| {{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}} | {{Spec2('CSS2.1')}}                         | Définition initiale.                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.page-break-before")}}
+{{Compat}}
 
 ## Voir aussi
 

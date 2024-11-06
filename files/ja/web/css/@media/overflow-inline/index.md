@@ -1,15 +1,8 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.overflow-inline
-translation_of: Web/CSS/@media/overflow-inline
 ---
+
 {{CSSRef}}
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)をインライン軸方向にあふれたコンテンツを端末がどのように扱うかを調べるために使用します。
@@ -28,7 +21,16 @@ translation_of: Web/CSS/@media/overflow-inline
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
+  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
+  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
+  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
+  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
+  sed eget ex.
+</p>
 ```
 
 ### CSS

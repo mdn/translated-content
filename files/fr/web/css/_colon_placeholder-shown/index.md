@@ -1,15 +1,11 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Element/input#placeholder).
 
 ```css
 /* Cible tout élément <input> ou <textarea> avec un */
@@ -53,12 +49,12 @@ input {
 #### HTML
 
 ```html
-<input placeholder="Saisir quelque chose ici">
+<input placeholder="Saisir quelque chose ici" />
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemples", 200, 60)}}
+{{EmbedLiveSample("Exemple_simple", 200, 60)}}
 
 ### Dépassement du texte
 
@@ -67,7 +63,8 @@ Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur d
 #### HTML
 
 ```html
-<input placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !">
+<input
+  placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
 ```
 
 #### CSS
@@ -97,7 +94,7 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input placeholder="Saisir quelque chose ici">
+<input placeholder="Saisir quelque chose ici" />
 ```
 
 #### CSS
@@ -133,17 +130,23 @@ input:placeholder-shown {
 <form id="test">
   <p>
     <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
+    <input id="name" placeholder="Student Name" />
   </p>
   <p>
     <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
+    <input id="branch" placeholder="Student Branch" />
   </p>
   <p>
     <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
   </p>
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -165,7 +168,7 @@ input.studentid:-moz-placeholder {
 
 ```css
 input {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 
@@ -182,18 +185,15 @@ input.studentid:placeholder-shown {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{cssxref("::placeholder")}}
-- {{cssxref("::-moz-placeholder")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}
-- [Les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- [Les formulaires HTML](/fr/docs/Learn/Forms)

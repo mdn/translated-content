@@ -1,20 +1,8 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - テキスト
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.line-height
-translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 **`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行ボックスの高さを設定します。これは主にテキストの行間を設定するために使用します。ブロックレベル要素では、要素に含まれる行ボックスの最小の高さを指定します。非[置換](/ja/docs/Web/CSS/Replaced_element)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
@@ -85,10 +73,24 @@ line-height: unset;
 ```css
 /* 以下のルールの結果はすべて、同じ line height です */
 
-div { line-height: 1.2;   font-size: 10pt; }   /* 数値/単位なし */
-div { line-height: 1.2em; font-size: 10pt; }   /* 長さ */
-div { line-height: 120%;  font-size: 10pt; }   /* パーセント値 */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* 一括指定 */
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+} /* 数値/単位なし */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+} /* 長さ */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+} /* パーセント値 */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+} /* 一括指定 */
 ```
 
 `line-height` を設定するには、上記の {{cssxref("font")}} 一括指定プロパティがより便利なことが多いのですが、この場合は同時に `font-family` プロパティも指定しなければなりません。
@@ -101,13 +103,15 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* 一括指定 */
 
 ```html
 <div class="box green">
- <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
-  length と percentage で line-height を指定すると、継承動作がうまくいきません。 ...
+  <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
+  length と percentage で line-height を指定すると、継承動作がうまくいきません。
+  ...
 </div>
 
 <div class="box red">
- <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
-  length と percentage で line-height を指定すると、継承動作がうまくいきません。 ...
+  <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
+  length と percentage で line-height を指定すると、継承動作がうまくいきません。
+  ...
 </div>
 
 <!-- 1 つ目の <h1> の line-height はそれ自身のフォントサイズから計算されます   (30px × 1.1) = 33px  -->

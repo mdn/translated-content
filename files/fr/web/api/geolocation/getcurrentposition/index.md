@@ -1,20 +1,17 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-tags:
-  - API
-  - Geolocation
-  - Méthode
-  - Reference
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle de l'appareil.
 
 ## Syntaxe
 
-    navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+```js
+navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+```
 
 ### Paramètres
 
@@ -36,13 +33,13 @@ La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle 
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Votre position actuelle est :');
+  console.log("Votre position actuelle est :");
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude : ${crd.longitude}`);
   console.log(`La précision est de ${crd.accuracy} mètres.`);
@@ -57,15 +54,13 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires            |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser la géolocalisation](/en-US/docs/WebAPI/Using_geolocation)
+- [Utiliser la géolocalisation](/fr/docs/WebAPI/Using_geolocation)
 - {{domxref("Navigator.geolocation")}}

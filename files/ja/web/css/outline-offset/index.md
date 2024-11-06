@@ -1,15 +1,10 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.outline-offset
-translation_of: Web/CSS/outline-offset
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
+
 {{CSSRef}}
 
 CSS の **`outline-offset`** プロパティは、要素の辺や境界線と[輪郭線](/ja/docs/Web/CSS/outline)との空間の量を設定します。
@@ -27,6 +22,7 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: revert;
+outline-offset: revert-layer;
 outline-offset: unset;
 ```
 

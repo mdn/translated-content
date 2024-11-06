@@ -1,13 +1,8 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::marker
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément **`::marker`** représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut `list-item` (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).
@@ -28,7 +23,8 @@ Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règ
 - {{cssxref("content")}}
 - [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_Fonts)
 
-> **Note :** La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
+> [!NOTE]
+> La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
 
 ## Syntaxe
 
@@ -40,7 +36,7 @@ Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règ
 
 ```css
 li::marker {
-  color:red;
+  color: red;
 }
 ```
 
@@ -48,8 +44,8 @@ li::marker {
 
 ```html
 <ol>
- <li>Savoir lacer ses chaussures</li>
- <li>Et compter deux par deux.</li>
+  <li>Savoir lacer ses chaussures</li>
+  <li>Et compter deux par deux.</li>
 </ol>
 ```
 
@@ -59,14 +55,11 @@ li::marker {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                         | Commentaires                       |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Aucune modification significative. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}             | {{Spec2('CSS3 Lists')}}             | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.marker")}}
+{{Compat}}
 
 ## Voir aussi
 

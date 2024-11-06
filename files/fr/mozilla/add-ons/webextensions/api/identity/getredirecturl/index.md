@@ -1,18 +1,9 @@
 ---
 title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - getRedirectURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Génère une URL que vous pouvez utiliser comme URL de redirection.
 
@@ -23,7 +14,7 @@ Voir [Obtenir une URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Get
 ## Syntaxe
 
 ```js
-var redirectURL = browser.identity.getRedirectURL()
+var redirectURL = browser.identity.getRedirectURL();
 ```
 
 ### Paramètres
@@ -34,9 +25,9 @@ None.
 
 Une chaîne contenant une valeur d'URL de redirection.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.getRedirectURL")}}
+{{Compat}}
 
 ## Exemples
 
@@ -48,8 +39,8 @@ var redirectURL = browser.identity.getRedirectURL();
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

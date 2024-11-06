@@ -1,18 +1,9 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
@@ -40,8 +31,8 @@ S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les cond
 
 ```js
 var authorizing = browser.identity.launchWebAuthFlow(
-  details   // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -70,13 +61,13 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+{{Compat}}
 
 ## Exemples
 
-Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
+Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
 
 ```js
 function validate(redirectURL) {
@@ -85,17 +76,18 @@ function validate(redirectURL) {
 
 function authorize() {
   const redirectURL = browser.identity.getRedirectURL();
-  const clientID = "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
+  const clientID =
+    "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 
@@ -106,8 +98,8 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

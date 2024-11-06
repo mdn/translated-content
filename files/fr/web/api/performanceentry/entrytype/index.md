@@ -1,16 +1,8 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
-tags:
-  - API
-  - Performance Timeline API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry/entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`entryType`** renvoie un [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de mesure de performance tel que, par exemple, « `mark` ». Cette propriété est en lecture seule.
@@ -45,7 +37,6 @@ L'exemple suivant montre l'utilisation de la propriété `entryType`.
 
 ```js
 function run_PerformanceEntry() {
-
   // Vérifie le support des fonctionnalités avant de continuer
   if (performance.mark === undefined) {
     console.log("performance.mark n'est pas pris en charge");
@@ -57,7 +48,7 @@ function run_PerformanceEntry() {
 
   // Vérifie le type d'entrée de toutes les entrées "begin".
   let entriesNamedBegin = performance.getEntriesByName("begin");
-  for (let i=0; i < entriesNamedBegin.length; i++) {
+  for (let i = 0; i < entriesNamedBegin.length; i++) {
     let typeOfEntry = entriesNamedBegin[i].entryType;
     console.log("L'entrée est de type : " + typeOfEntry);
   }
@@ -66,13 +57,8 @@ function run_PerformanceEntry() {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype',
-        'entryType')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-entrytype',
-        'entryType')}}         | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry.entryType")}}
+{{Compat}}

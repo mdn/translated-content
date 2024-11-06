@@ -1,23 +1,8 @@
 ---
 title: Tutoriels
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - Code
-  - Coding
-  - GitHub
-  - Guide
-  - HTML
-  - JavaScript
-  - MDN
-  - Tutorial
-  - Web Article
-  - Web Development
-translation_of: Web/Tutorials
-original_slug: Web/Tutoriels
 ---
+
 Les liens de cette page mènent à une variété de tutoriels et de matériel de formation. Que vous soyez débutante ou débutant, que vous appreniez les bases ou que vous soyez habitué⋅e au développement web, vous trouverez ici des ressources utiles pour les meilleures pratiques.
 
 Ces ressources sont créées par des entreprises et des développeuses et développeurs web qui ont adopté des normes ouvertes et les meilleures pratiques en matière de développement web et qui fournissent ou autorisent des traductions, par le biais d'une licence de contenu ouvert telle que Creative Commons.
@@ -179,4 +164,4 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 ### Développement d'extension
 
 - [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions est un système inter-navigateurs pour le développement d'extensions de navigateur. Dans une large mesure, le système est compatible avec l'API [extension API](https://developer.chrome.com/extensions) prise en charge par Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneront dans la plupart des cas dans Firefox ou [Microsoft Edge](https://developer.microsoft.com/fr/microsoft-edge/platform/documentation/extensions/) avec [juste quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+  - : WebExtensions est un système inter-navigateurs pour le développement d'extensions de navigateur. Dans une large mesure, le système est compatible avec l'API [extension API](https://developer.chrome.com/docs/extensions) prise en charge par Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneront dans la plupart des cas dans Firefox ou [Microsoft Edge](https://developer.microsoft.com/fr/microsoft-edge/platform/documentation/extensions/) avec [juste quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).

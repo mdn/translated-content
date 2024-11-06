@@ -1,10 +1,9 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-browser-compat: html.elements.input.input-range
-translation_of: Web/HTML/Element/input/range
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
 
@@ -61,8 +60,10 @@ Il n'existe pas de motif de validation. Cependant, voici les formes de validatio
 L'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`). Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut&nbsp;:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 Si on essaie d'obtenir une valeur inférieure au minimum, alors la valeur sera ramenée au minimum (de même si on essaye de dépasser le maximum).
@@ -95,7 +96,8 @@ L'attribut `step` est un nombre qui définit la granularité à laquelle la vale
 
 Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)).
 
-> **Note :** Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> [!NOTE]
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 Par défaut, l'incrément utilisé pour les champs de type `range` vaut 1 et on ne peut alors saisir que des entiers à moins que la valeur de base ne soit pas entière. Ainsi, si on définit `min` avec -10 et `value` avec 1.5, un attribut `step` qui vaut 1 permettra de saisir les valeurs positives 1.5, 2.5, 3.5, etc. et les valeurs négatives -0.5, -1.5, -2.5, etc.
 
@@ -107,7 +109,8 @@ Voir [l'attribut HTML `step`](/fr/docs/Web/HTML/Attributes/step).
 
 Semblable à la propriété CSS non-standard `moz-orient` qui agit sur les éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress) et [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `orient` définit l'orientation de la piste pour le contrôle d'intervalle. Les valeurs possibles incluent `horizontal` pour un affichage horizontal et `vertical` pour un affichage vertical.
 
-> **Note :** Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
+> [!NOTE]
+> Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
 
 ## Exemples
 
@@ -129,7 +132,7 @@ Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conv
 Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on pourra utiliser&nbsp;:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -141,7 +144,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 #### Utiliser l'attribut `step`
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -151,7 +154,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step)&nbsp;:
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -306,8 +309,8 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
   </tbody>
 </table>
 
-
-> **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
+> [!NOTE]
+> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
 
 ### Créer des contrôles d'intervalle verticaux
 
@@ -320,7 +323,7 @@ En attendant, il est possible de créer un contrôle vertical en utilisant les t
 Prenons ce contrôle&nbsp;:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample1.png")}}
@@ -339,7 +342,7 @@ Selon la spécification, pour afficher un tel contrôle verticalement, il suffit
 ```
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample2.png")}}
@@ -354,7 +357,7 @@ Tout d'abord, on enveloppe l'élément [`<input>`](/fr/docs/Web/HTML/Element/Inp
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -392,7 +395,7 @@ La propriété [`appearance`](/fr/docs/Web/CSS/appearance) possède une valeur n
 On utilise le même HTML que pour les exemples précédents&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 Ici, on cible uniquement les contrôles d'intervalles&nbsp;:
@@ -412,7 +415,7 @@ Firefox dispose d'un attribut HTML non-standard&nbsp;: `orient`.
 Le code HTML est semblable à celui utilisé précédemment, on y ajoute l'attribut avec une valeur `vertical`&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("", 200, 200)}}
@@ -424,7 +427,7 @@ La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) ne devrait pas ê
 Ici, on utilise le même HTML que précédemment&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 On cible uniquement les contrôles d'intervalle et on change leur mode d'écriture avec la valeur `bt-lr` qui signifie <i lang="en">bottom-to-top and left-to-right</i>, soit du bas vers le haut puis de la gauche vers la droite&nbsp;:
@@ -444,7 +447,7 @@ Comme chacun des exemples précédents fonctionne dans un navigateur différent,
 On garde l'attribut `orient` avec la valeur `vertical` pour Firefox&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 On cible les contrôles d'intervalle avec un mode d'écriture `bt-lr` pour Internet Explorer et on ajoute `-webkit-appearance: slider-vertical` pour les navigateurs basés sur WebKit&nbsp;:

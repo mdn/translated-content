@@ -1,13 +1,10 @@
 ---
-title: Node.ownerDocument
+title: "Node: ownerDocument プロパティ"
 slug: Web/API/Node/ownerDocument
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.ownerDocument
-translation_of: Web/API/Node/ownerDocument
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`ownerDocument`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードの最上位の文書オブジェクトを返します。

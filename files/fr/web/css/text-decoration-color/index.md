@@ -1,12 +1,8 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-decoration-color
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-color`** définit la couleur utilisée pour dessiner les lignes décorant le texte (quel que soit le style définit {{cssxref("text-decoration-line")}}).
@@ -15,11 +11,13 @@ La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer c
 
 {{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
-> **Note :** Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
+> [!NOTE]
+> Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
 
 Il est préférable d'utiliser cette propriété pour colorer ces décorations plutôt que d'utiliser d'autres éléments HTML.
 
-> **Note :** CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
+> [!NOTE]
+> CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
 
 ## Syntaxe
 
@@ -43,9 +41,13 @@ text-decoration-color: unset;
 - `<color>`
   - : La propriété `color` accepte différents mots-clés et valeurs numériques. Pour plus de détails, voir {{cssxref("&lt;color&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -75,15 +77,11 @@ text-decoration-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaires                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-color-property', 'text-decoration-color')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - CSS フォント
-  - リファレンス
-browser-compat: css.at-rules.font-face.font-family
-translation_of: Web/CSS/@font-face/font-family
 ---
+
 {{CSSRef}}
 
 **`font-family`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールで指定されたフォントのフォントファミリーを指定することができます。
@@ -20,7 +12,7 @@ translation_of: Web/CSS/@font-face/font-family
 ```css
 /* <string> 値 */
 font-family: "font family";
-font-family: 'another font family';
+font-family: "another font family";
 
 /* <custom-ident> 値 */
 font-family: examplefont;
@@ -46,7 +38,7 @@ font-family: examplefont;
 ```css
 @font-face {
   font-family: examplefont;
-  src: url('examplefont.ttf');
+  src: url("examplefont.ttf");
 }
 ```
 

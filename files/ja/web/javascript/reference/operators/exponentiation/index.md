@@ -1,14 +1,8 @@
 ---
 title: べき乗 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.exponentiation
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 べき乗演算子 (`**`) は、1 つ目のオペランドを2 つ目オペランドの累乗にした結果を返します。これは `Math.pow` と同等ですが、オペランドとして BigInt も受け入れます。
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 ## 構文
 
 ```js
-x ** y
+x ** y;
 ```
 
 ## 解説
@@ -46,19 +40,19 @@ JavaScript では、あいまいなべき乗式を記述することはできま
 ### 基本的なべき乗
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### 結合性
 
-```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### 単項演算子との使用
@@ -66,13 +60,13 @@ NaN ** 2 // NaN
 べき乗式の結果の符号を反転させる例です。
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 べき乗式の基底を強制的に負の数にする例です。
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## 仕様書

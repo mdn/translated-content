@@ -1,29 +1,28 @@
 ---
 title: document.implementation
 slug: Web/API/Document/implementation
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
-translation_of: Web/API/Document/implementation
 ---
+
+{{ ApiRef("DOM") }}
+
 ## Résumé
 
 Retourne un objet {{domxref("DOMImplementation")}} associé avec le document courant.
 
 ## Syntaxe
 
-    DOMImpObj = document.implementation;
+```js
+DOMImpObj = document.implementation;
+```
 
 ## Exemple
 
 ```js
 var modName = "HTML";
 var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+var conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
+alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 
 // alerte avec : "DOM HTML 2.0 pris en charge ?: true" si le module DOM niveau 2 HTML est pris en charge.
 ```
@@ -41,4 +40,4 @@ La recommandation DOM niveau 1 du W3C ne spécifiait que la méthode `hasFeature
 
 ## Notes propres à Gecko
 
-- À partir de Gecko 19.0 {{geckoRelease ("19.0")}} la méthode {{domxref ("DOMImplementation.hasFeature", "hasFeature")}} retournera toujours true.
+- À partir de Gecko 19.0, la méthode {{domxref ("DOMImplementation.hasFeature", "hasFeature")}} retournera toujours true.

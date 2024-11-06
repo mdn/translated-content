@@ -1,12 +1,8 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de requête **`Host`** spécifie le nom de domaine du serveur (pour de l'hébergement virtuel), et (optionnellement) le numéro du port TCP sur lequel le serveur écoute.
@@ -34,7 +30,9 @@ Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête
 
 ## Syntaxe
 
-    Host: <host>:<port>
+```
+Host: <host>:<port>
+```
 
 ## Directives
 
@@ -45,17 +43,17 @@ Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête
 
 ## Exemples
 
-    Host: developer.mozilla.org
+```
+Host: developer.mozilla.org
+```
 
 ## Spécifications
 
-| Spécification                            | Titre                                                              |
-| ---------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Host")}}
+{{Compat}}
 
 ## Voir aussi
 

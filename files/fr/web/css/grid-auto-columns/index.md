@@ -1,13 +1,8 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-auto-columns
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-auto-columns`** définit la taille d'une colonne de grille créée de façon implicite.
@@ -54,7 +49,8 @@ grid-auto-columns: min-content max-content auto;
 grid-auto-columns: 100px 150px 390px;
 grid-auto-columns: 10% 33.3%;
 grid-auto-columns: 0.5fr 3fr 1fr;
-grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr)
+  minmax(20%, 80vmax);
 grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 /* Valeurs globales */
@@ -87,11 +83,16 @@ grid-auto-columns: unset;
 
   - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
-    > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+    > [!NOTE]
+    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -127,15 +128,11 @@ grid-auto-columns: unset;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-auto-columns", "grid-auto-columns")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-auto-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

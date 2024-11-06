@@ -1,23 +1,8 @@
 ---
 title: API web utilisées côté client
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - API Web
-  - Apprendre
-  - Articles
-  - Codage
-  - DOM
-  - Débutant
-  - Graphismes
-  - JavaScript
-  - Localisation
-  - Media
-  - Module
-  - données
-translation_of: Learn/JavaScript/Client-side_web_APIs
-original_slug: Apprendre/JavaScript/Client-side_web_APIs
 ---
+
 {{LearnSidebar}}
 
 Lorsque vous écrivez du JavaScript côté client pour des sites Web ou des applications, vous n'irez pas très loin avant d'utiliser des API - des interfaces pour manipuler différents aspects du navigateur et du système d'exploitation sur lesquels le site opère, ou même des données provenant d'autres sites web ou services. Dans ce module, nous allons explorer ce que sont les API, et comment utiliser certaines API les plus courantes que vous rencontrerez souvent dans votre travail de développement.
@@ -28,7 +13,8 @@ Pour tirer le meilleur parti de ce module, vous devriez avoir parcouru les préc
 
 Une connaissance basique de [HTML](/fr/docs/Learn/HTML) et [CSS](/fr/docs/Learn/CSS) serait aussi utile.
 
-> **Note :** Si vous travaillez sur un ordinateur/tablette/autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de code en ligne tel que [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur/tablette/autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

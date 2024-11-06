@@ -1,26 +1,22 @@
 ---
-title: HTMLTableRowElement.insertCell()
+title: "HTMLTableRowElement: insertCell() メソッド"
+short-title: insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableRowElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLTableRowElement.insertCell
-translation_of: Web/API/HTMLTableRowElement/insertCell
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableRowElement.insertCell()`** メソッドは、新しいセル ({{HtmlElement("td")}}) を表の行 ({{HtmlElement("tr")}}) に挿入し、そのセルの参照を返します。
 
-> **Note:** `insertCell()` はセルを直接行に挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxref("Node.appendChild()")}} を使用して個別にセルを追加する必要はありません。
+> **メモ:** `insertCell()` はセルを直接行に挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxref("Node.appendChild()")}} を使用して個別にセルを追加する必要はありません。
 >
 > ただし、 `insertCell()` を使用して新しい `<th>` 要素を作成することはできません。
 
 ## 構文
 
-```js
+```js-nolint
 insertCell()
 insertCell(index)
 ```
@@ -51,9 +47,15 @@ insertCell(index)
 
 ```html
 <table id="my-table">
-  <tr><td>行 1</td></tr>
-  <tr><td>行 2</td></tr>
-  <tr><td>行 3</td></tr>
+  <tr>
+    <td>行 1</td>
+  </tr>
+  <tr>
+    <td>行 2</td>
+  </tr>
+  <tr>
+    <td>行 3</td>
+  </tr>
 </table>
 ```
 
@@ -71,12 +73,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // セルにテキストノードを追加
-  let newText = document.createTextNode('新しい最下行');
+  let newText = document.createTextNode("新しい最下行");
   newCell.appendChild(newText);
 }
 
 // addRow() を表の ID で呼び出す
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### 結果

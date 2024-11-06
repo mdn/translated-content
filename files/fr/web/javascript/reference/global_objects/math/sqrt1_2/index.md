@@ -1,14 +1,8 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-tags:
-  - JavaScript
-  - Math
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 La propriété **`Math.SQRT1_2`** représente la racine carrée d'1/2 et vaut environ 0.707 :
@@ -27,7 +21,7 @@ La fonction suivante renvoie la valeur de cette constante :
 
 ```js
 function getRoot1_2() {
-   return Math.SQRT1_2;
+  return Math.SQRT1_2;
 }
 
 getRoot1_2(); // 0.7071067811865476
@@ -35,16 +29,11 @@ getRoot1_2(); // 0.7071067811865476
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaires                                          |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.SQRT1_2")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,8 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/keys
 ---
+
 {{JSRef}}
 
 La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les clés pour chaque indice du tableau typé.
@@ -21,7 +11,9 @@ La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les 
 
 ## Syntaxe
 
-    arr.keys()
+```js
+arr.keys();
+```
 
 ### Valeur de retour
 
@@ -56,14 +48,11 @@ console.log(eArr.next().value); // 4
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,10 +1,8 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
-original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
-browser-compat: javascript.builtins.SyntaxError
 ---
+
 {{JSRef}}
 
 L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide. Une telle exception est déclenchée lorsque le moteur JavaScript rencontre des entités lexicales invalides ou dans un ordre invalide par rapport à la grammaire du langage.
@@ -33,15 +31,15 @@ L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interp
 
 ```js
 try {
-  eval('toto truc');
+  eval("toto truc");
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "missing ; before statement"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "Scratchpad/1"
-  console.log(e.lineNumber);             // 1
-  console.log(e.columnNumber);           // 4
-  console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
+  console.log(e.message); // "missing ; before statement"
+  console.log(e.name); // "SyntaxError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 1
+  console.log(e.columnNumber); // 4
+  console.log(e.stack); // "@Scratchpad/1:2:3\n"
 }
 ```
 
@@ -49,15 +47,15 @@ try {
 
 ```js
 try {
-  throw new SyntaxError('Coucou', 'unFichier.js', 10);
+  throw new SyntaxError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "Coucou"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "unFichier.js"
-  console.log(e.lineNumber);             // 10
-  console.log(e.columnNumber);           // 0
-  console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "SyntaxError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:11:9\n"
 }
 ```
 

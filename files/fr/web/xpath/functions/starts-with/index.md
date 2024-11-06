@@ -1,18 +1,17 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/starts-with
-original_slug: Web/XPath/Fonctions/starts-with
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `starts-with` vérifie si la première chaîne débute par la seconde, et retourne `true` ou `false`.
 
 ### Syntaxe
 
-    starts-with( meule , aiguille)
+```
+starts-with( meule , aiguille)
+```
 
 ### Arguments
 

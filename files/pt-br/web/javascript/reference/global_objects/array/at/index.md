@@ -1,18 +1,8 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-  - Polyfill
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 O método **`at()`** recebe um valor inteiro e retorna o item referente ao index dele, permitindo valores positivos ou negativos. Valores negativos contam apartir do último item do array.
@@ -24,7 +14,7 @@ Isto não quer dizer que exista alguma coisa errada em utilizar a notação com 
 ## Sintaxe
 
 ```js
-at(index)
+at(index);
 ```
 
 ### Parâmetros
@@ -44,7 +34,7 @@ O exemplo a seguir exibe uma função que retorna o último elemento encontrado 
 
 ```js
 // O array com items
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // A função que retorna o último item do array passado como argumento
 function returnLast(arr) {
@@ -56,22 +46,22 @@ const item1 = returnLast(cart);
 console.log(item1); // 'pear'
 
 // Adiciona um item ao array 'cart'
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // 'orange'
 ```
 
 ### Comparando métodos
 
-Este exemplo compara a diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
+Este exemplo compara as diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
 Todos os métodos abaixos são válidos, mas este exemplo destaca a sucintez e legibilidade do método `at()`.
 
 ```js
 // O array com items
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Usando a propriedade length
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // 'green'
 
 // Usando o método slice(). Perceba que um array é retornado

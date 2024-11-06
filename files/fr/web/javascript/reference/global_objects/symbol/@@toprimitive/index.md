@@ -1,23 +1,17 @@
 ---
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 La méthode **`[@@toPrimitive]()`** permet de convertir un objet symbole en une valeur primitive.
 
 ## Syntaxe
 
-    Symbol()[Symbol.toPrimitive](hint);
+```js
+Symbol()[Symbol.toPrimitive](hint);
+```
 
 ### Valeur de retour
 
@@ -31,14 +25,11 @@ Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir u
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.prototype-@@toprimitive', 'Symbol.prototype.@@toPrimitive')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.prototype-@@toprimitive', 'Symbol.prototype.@@toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.@@toPrimitive")}}
+{{Compat}}
 
 ## Voir aussi
 

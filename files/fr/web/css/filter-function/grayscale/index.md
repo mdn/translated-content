@@ -1,10 +1,8 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
-translation_of: Web/CSS/filter-function/grayscale()
-original_slug: Web/CSS/filter-function/grayscale()
-browser-compat: css.types.filter-function.grayscale
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
@@ -43,12 +41,12 @@ grayscale(100%)  /* Uniquement en niveaux de gris */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)

@@ -1,9 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
-translation_of: Web/CSS/font-stretch
-browser-compat: css.properties.font-stretch
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet de choisir entre la forme normale, condensée ou étendue d'une police.
@@ -139,7 +138,8 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 
 {{Specifications}}
 
-> **Note :** La propriété CSS `font-stretch` fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.
+> [!NOTE]
+> La propriété CSS `font-stretch` fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.
 
 ## Compatibilité des navigateurs
 

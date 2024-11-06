@@ -1,15 +1,17 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
-translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.moveTo()`** de l'API Canvas 2D déplace le point de départ d'un nouveau sous-chemin vers les coordonnées `(x, y)`.
 
 ## Syntaxe
 
-    void ctx.moveTo(x, y);
+```js
+void ctx.moveTo(x, y);
+```
 
 ### Paramètres
 
@@ -33,8 +35,8 @@ Ceci est un simple snippet de code qui utilise la méthode `moveTo` pour déplac
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(50, 50);
@@ -56,7 +58,8 @@ ctx.stroke();
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()</textarea>
+ctx.stroke()</textarea
+>
 ```
 
 ```js hidden
@@ -72,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -89,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.moveTo")}}
+{{Compat}}
 
 ## Voir aussi
 

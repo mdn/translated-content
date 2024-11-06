@@ -1,13 +1,8 @@
 ---
 title: La disposition en flux et le dépassement
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-original_slug: Web/CSS/CSS_Flow_Layout/Disposition_flux_et_dépassement
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}
 
 Lorsque le conteneur est trop petit pour son contenu, on obtient une situation de dépassement. Le comportement du dépassement est importante dès qu'on manipule des objets CSS dont la taille est contrainte. Dans ce guide, nous verrons le fonctionnement du dépassement avec le flux normal.
@@ -36,7 +31,8 @@ Avec la valeur `auto`, le contenu sera affiché sans barre de défilement s'il t
 
 Comme nous l'avons vu plus tôt, toute valeur qui est différente de `visible` créera un nouveau contexte de formatage de bloc.
 
-> **Note :** Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
+> [!NOTE]
+> Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
 
 Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
 

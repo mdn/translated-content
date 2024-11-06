@@ -1,15 +1,8 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/concat
 ---
+
 {{JSRef}}
 
 La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
@@ -18,7 +11,9 @@ La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîn
 
 ## Syntaxe
 
-    str.concat(string2[, string3, ..., stringN])
+```js
+str.concat(string2[, string3, ..., stringN])
+```
 
 ### Paramètres
 
@@ -43,11 +38,11 @@ console.log(coucou.concat("Tristan,", " bonne journée."));
 
 /* Bonjour Tristan, bonne journée. */
 
-var salutation = ['Bonjour', ' ', 'Alfred', ' ', '!'];
+var salutation = ["Bonjour", " ", "Alfred", " ", "!"];
 "".concat(...salutation); // "Bonjour Alfred !"
 
-"".concat({});   // [object Object]
-"".concat([]);   // ""
+"".concat({}); // [object Object]
+"".concat([]); // ""
 "".concat(null); // "null"
 "".concat(true); // "true"
 "".concat(4, 5); // "45"
@@ -59,16 +54,11 @@ Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Voir aussi
 

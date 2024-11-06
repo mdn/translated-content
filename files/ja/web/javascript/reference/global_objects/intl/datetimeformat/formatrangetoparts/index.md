@@ -1,30 +1,18 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html",
-	"taller")}}
-
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html", "taller")}}
 
 ## 構文
 
 ```js
-formatRangeToParts(startDate, endDate)
+formatRangeToParts(startDate, endDate);
 ```
 
 ## 例
@@ -33,7 +21,8 @@ formatRangeToParts(startDate, endDate)
 
 このメソッドは2つの {{jsxref("Date")}} を受け取り、期間を書式化する際の各部品を表す*ロケール特有*のトークンを含む {{jsxref("Array")}} オブジェクトを返します。
 
-> **Note:** 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
+> [!NOTE]
+> 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
 
 ```js
 let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
@@ -42,8 +31,8 @@ let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
 // > 'Wed, 10 Jan 2007 11:00:00 GMT'
 
 let fmt = new Intl.DateTimeFormat("en", {
-    hour: 'numeric',
-    minute: 'numeric'
+  hour: "numeric",
+  minute: "numeric",
 });
 
 console.log(fmt.formatRange(date1, date2));

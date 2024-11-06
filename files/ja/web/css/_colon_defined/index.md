@@ -1,16 +1,8 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.defined
-translation_of: Web/CSS/:defined
 ---
+
 {{ CSSRef }}
 
 **`:defined`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。
@@ -18,18 +10,20 @@ translation_of: Web/CSS/:defined
 ```css
 /* 定義されたすべての要素を選択 */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* 特定の custom 要素のすべてのインスタンスを選択 */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 ```
 
 ## 構文
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## 例
 
@@ -40,18 +34,19 @@ simple-custom:defined {
 このデモでは、非常にシンプルで些細なカスタム要素を定義しています。
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 次に、この要素のコピーを、標準的な `<p>` と共に文書に挿入します。
@@ -104,4 +99,4 @@ simple-custom:defined {
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

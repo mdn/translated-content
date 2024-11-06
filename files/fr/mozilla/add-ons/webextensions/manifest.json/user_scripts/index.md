@@ -1,14 +1,8 @@
 ---
 title: user_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
-  - user_scripts key
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

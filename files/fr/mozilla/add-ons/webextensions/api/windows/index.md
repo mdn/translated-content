@@ -1,17 +1,8 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-tags:
-  - API
-  - Add-os
-  - Extensions
-  - Interface
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API pour obtenir des informations sur les fenêtres ouvertes et à ouvrir, modifiée et fermée les fenêtres. Vous pouvez également écouter la fenêtre ouverte, fermée, et activée les événements.
@@ -60,19 +51,20 @@ Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API p
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Lancé quand la fenêtre courante change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +91,4 @@ Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API p
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

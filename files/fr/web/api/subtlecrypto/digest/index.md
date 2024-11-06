@@ -1,8 +1,8 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-translation_of: Web/API/SubtleCrypto/digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
@@ -11,7 +11,9 @@ Il prend en argument un identifiant pour l'algorithme de condensé et les donné
 
 ## Syntaxe
 
-    const digest = crypto.subtle.digest(algorithm, data);
+```js
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
 ### Paramètres
 
@@ -36,7 +38,8 @@ Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage 
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
-> **Attention :** Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> [!WARNING]
+> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
 ### SHA-256
 
@@ -50,7 +53,8 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
 
-> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#HMAC).
+> [!NOTE]
+> Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
 
 ## Exemples
 
@@ -59,12 +63,13 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.
 
 ```js
-const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+const text =
+  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -77,13 +82,16 @@ console.log(digestBuffer.byteLength);
 Le condensé est retourné sous forme d'un `ArrayBuffer`, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'`ArrayBuffer` vers une chaîne hexadécimale.
 
 ```js
-const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+const text =
+  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode comme (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // fait le condensé
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convertit le buffer en tableau d'octet
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convertit le tableau en chaîne hexadélimale
+  const msgUint8 = new TextEncoder().encode(message); // encode comme (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // fait le condensé
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convertit le buffer en tableau d'octet
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convertit le tableau en chaîne hexadélimale
   return hashHex;
 }
 
@@ -93,15 +101,11 @@ console.log(digestHex);
 
 ## Spécifications
 
-| Spécifications                                                                                                           | Statue                               | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Définition intiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SubtleCrypto.digest")}}
-
-> **Note :** Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive **crypto.subtle** pour les connexions non TLS.
+{{Compat}}
 
 ## Voir aussi
 

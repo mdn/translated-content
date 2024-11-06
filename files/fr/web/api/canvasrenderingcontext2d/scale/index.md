@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
-translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
+
 {{APIRef}}
 
 La méhode **`CanvasRenderingContext2D.scale()`** de l'API Canvas 2D ajoute une transformation de mise à l'échelle des unités du canevas, de x horizontalement et de y verticalement.
@@ -11,7 +11,9 @@ Par défaut, une unité sur le canevas est exactement un pixel. Si on applique, 
 
 ## Syntaxe
 
-    void ctx.scale(x, y);
+```js
+void ctx.scale(x, y);
+```
 
 ### Paramètres
 
@@ -35,8 +37,8 @@ Ceci est seulement un fragment de code simple qui utilise la méthode `scale`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.scale(10, 3);
 ctx.fillRect(10, 10, 10, 10);
@@ -58,7 +60,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.scale(10, 3);
 ctx.fillRect(10,10,10,10);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+>
 ```
 
 ```js hidden
@@ -74,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -105,7 +108,8 @@ Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontaleme
 ctx.scale(-1, 1);
 ctx.font = "48px serif";
 ctx.fillText("Hello world!", -320, 120);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+>
 ```
 
 ```js hidden
@@ -121,14 +125,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -138,13 +142,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-scale", "CanvasRenderingContext2D.scale")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.scale")}}
+{{Compat}}
 
 ## Voir aussi
 

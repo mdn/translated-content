@@ -1,16 +1,8 @@
 ---
 title: 객체로 작업하기
-slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript는 간단한 객체 기반 패러다임 위에 만들어졌습니다. 객체는 속성의 컬렉션이고, 속성은 이름('키')과 값 사이의 연결 관계입니다. 속성의 값이 함수인 경우에는 메서드라고 부릅니다. 브라우저 안에 미리 정의된 객체 뿐만 아니라 여러분이 직접 객체를 정의할 수도 있습니다. 이번 장에서는 객체, 속성, 함수, 메서드 사용법과 함께 직접 새로운 객체를 생성하는 법을 알아봅니다.
@@ -26,7 +18,7 @@ JavaScript에서 객체는 속성과 타입을 가진 독립적인 개체(entity
 JavaScript 객체는 자신과 연관된 속성들을 가집니다. 객체의 속성은 객체에 붙은 변수라고 설명할 수 있겠습니다. 객체의 속성은 일반적인 JavaScript 변수와 똑같은데, 다만 객체에 붙어있다는 점만 다릅니다. 속성에 접근할 땐 간단한 마침표 표기법을 사용합니다.
 
 ```js
-objectName.propertyName
+objectName.propertyName;
 ```
 
 다른 모든 JavaScript 변수와 마찬가지로, 객체의 이름(아마도 그냥 변수)과 속성의 이름 모두 대소문자를 구별합니다. 객체에 속성을 정의하려면 값을 할당하세요. 예를 들기 위해 `myCar`라는 객체를 생성하고, `make`, `model`, `year`라는 이름의 속성을 추가해보겠습니다.
@@ -42,9 +34,9 @@ myCar.year = 1969;
 
 ```js
 const myCar = {
-  make: 'Ford',
-  model: 'Mustang',
-  year: 1969
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
 };
 ```
 
@@ -57,9 +49,9 @@ myCar.color; // undefined
 JavaScript의 객체 속성은 대괄호 표기법([속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors))을 사용해 접근할 수도 있습니다. 객체를 때때로 '연관 배열'(associative array)이라고 부르기도 하는데, 속성은 자신에 접근할 수 있는 문자열 값과 연관되어 있기 때문입니다. 그러므로 `myCar` 객체의 속성에 아래와 같이 접근할 수도 있을 것입니다.
 
 ```js
-myCar['make'] = 'Ford';
-myCar['model'] = 'Mustang';
-myCar['year'] = 1969;
+myCar["make"] = "Ford";
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
 ```
 
 객체 속성 이름은 유효한 JavaScript 문자열 혹은 문자열로 변환 가능한 것이면 모두 가능하며, 빈 문자열도 여기 포함됩니다. 그러나 유효한 JavaScript 식별자가 아닌 이름(공백이나 붙임표, 숫자로 시작하는 이름)을 가진 속성은 대괄호 표기법으로만 접근할 수 있습니다. 대괄호 표기법은 속성 이름이 동적으로 정해지는 경우, 즉 런타임 시점까지 알 수 없는 경우 유용합니다. 아래 예제를 살펴보세요.
@@ -68,16 +60,16 @@ myCar['year'] = 1969;
 // 네 개의 변수를 쉼표로 구분해서
 // 한 번에 생성하고 할당
 const myObj = new Object(),
-      str = 'myString',
-      rand = Math.random(),
-      obj = new Object();
+  str = "myString",
+  rand = Math.random(),
+  obj = new Object();
 
-myObj.type              = '마침표 구문';
-myObj['date created']   = '공백을 포함한 문자열';
-myObj[str]              = '문자열 값';
-myObj[rand]             = '무작위 수';
-myObj[obj]              = '객체';
-myObj['']               = '빈 문자열까지';
+myObj.type = "마침표 구문";
+myObj["date created"] = "공백을 포함한 문자열";
+myObj[str] = "문자열 값";
+myObj[rand] = "무작위 수";
+myObj[obj] = "객체";
+myObj[""] = "빈 문자열까지";
 
 console.log(myObj);
 ```
@@ -87,18 +79,18 @@ console.log(myObj);
 속성 접근은 변수에 저장된 문자열 값으로도 가능합니다.
 
 ```js
-let propertyName = 'make';
-myCar[propertyName] = 'Ford';
+let propertyName = "make";
+myCar[propertyName] = "Ford";
 
-propertyName = 'model';
-myCar[propertyName] = 'Mustang';
+propertyName = "model";
+myCar[propertyName] = "Mustang";
 ```
 
 대괄호 표기법은 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in)과 함께 객체의 열거 가능한 속성을 순회할 때도 사용할 수 있습니다. 아래 함수는 이 방법의 동작 방식을 보이는 예제로, 객체와 객체 이름을 매개변수로 제공하면 객체의 속성들을 출력합니다.
 
 ```js
 function showProps(obj, objName) {
-  let result = '';
+  let result = "";
   for (let i in obj) {
     // obj.hasOwnProperty()를 사용해서 객체의 프로토타입 체인에 존재하지 않는 속성을 제외
     if (obj.hasOwnProperty(i)) {
@@ -121,8 +113,8 @@ myCar.year = 1969
 
 객체 속성을 나열하거나 순회하는 방법에는 세 가지 내장된 방법이 있습니다.
 
-- [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문. 이 방법은 객체와 객체의 프로토타입 체인에 존재하는 모든 열거 가능한 속성을 순회합니다.
-  이 방법은 객체와 객체의 프로토타입 체인 상의 열거 가능한 모든 프로퍼티를 순회한다.
+- [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문. 이 방법은 객체와 객체의 프로토타입 체인에 존재하는 모든 열거 가능한 속성을 순회합니다.
+  이 방법은 객체와 객체의 프로토타입 체인 상의 열거 가능한 모든 프로퍼티를 순회한다.
 - {{jsxref("Object.keys", "Object.keys(o)")}}. 이 방법은 `o` 객체 자신만의(프로토타입 체인을 제외한) 열거 가능한 속성 이름("키")을 배열로 반환합니다.
 - {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(o)")}}. 이 방법은 `o` 객체 자신만의 모든(열거 불가능하더라도) 속성 이름("키")을 배열로 반환합니다.
 
@@ -130,15 +122,15 @@ myCar.year = 1969
 
 ```js
 function listAllProperties(o) {
-	let objectToInspect = o;
-	let result = [];
+  let objectToInspect = o;
+  let result = [];
 
-  while(objectToInspect !== null) {
+  while (objectToInspect !== null) {
     result = result.concat(Object.getOwnPropertyNames(objectToInspect));
-    objectToInspect = Object.getPrototypeOf(objectToInspect)
+    objectToInspect = Object.getPrototypeOf(objectToInspect);
   }
 
-	return result;
+  return result;
 }
 ```
 
@@ -154,10 +146,10 @@ JavaScript에는 미리 정의된 객체가 여럿 존재합니다. 여기에 �
 
 ```js
 const obj = {
-  property_1:   value_1,   // 속성의 값은 식별자일 수도 있고
-  2:            value_2,   // 숫자일 수도 있고
+  property_1: value_1, // 속성의 값은 식별자일 수도 있고
+  2: value_2, // 숫자일 수도 있고
   // ...,
-  'property n': value_n    // 문자열일 수도 있음
+  "property n": value_n, // 문자열일 수도 있음
 };
 ```
 
@@ -170,14 +162,18 @@ const obj = {
 ```js
 let x;
 if (cond) {
-  x = {greeting: '안녕하세요'};
+  x = { greeting: "안녕하세요" };
 }
 ```
 
 다음 예제는 `myHonda`를 세 개의 속성과 함께 생성합니다. `engine` 속성 역시 자신만의 속성을 가진 객체임에 주목하세요.
 
 ```js
-const myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+const myHonda = {
+  color: "red",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
 ```
 
 객체 초기자로 배열을 생성할 수도 있습니다. [배열 리터럴](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#배열_리터럴)을 참고하세요.
@@ -229,8 +225,8 @@ function Person(name, age, sex) {
 두 개의 새로운 `Person` 객체도 인스턴스화 했다고 합시다.
 
 ```js
-const rand = new Person('Rand McKinnon', 33, 'M');
-const ken = new Person('Ken Jones', 39, 'M');
+const rand = new Person("Rand McKinnon", 33, "M");
+const ken = new Person("Ken Jones", 39, "M");
 ```
 
 이제 `Car`의 정의를, `Person` 객체를 갖는 `owner` 속성을 추가하도록 수정할 수 있습니다.
@@ -247,20 +243,20 @@ function Car(make, model, year, owner) {
 그 후에, 새로운 객체 인스턴스를 생성할 땐 이렇게 할 수 있습니다.
 
 ```js
-const car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-const car2 = new Car('Nissan', '300ZX', 1992, ken);
+const car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+const car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 문자열 리터럴이나 정수 값이 아니라 객체 `rand`와 `ken`을 소유자 매개변수로 지정했음을 볼 수 있습니다. 이제 `car2`의 소유자 이름을 알려면 이렇게 속성에 접근합니다.
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 이미 정의된 객체에도 속성을 추가할 수 있습니다. 예를 들어,
 
 ```js
-car1.color = 'black';
+car1.color = "black";
 ```
 
 위의 코드는 `car1`에 `color` 속성을 추가한 후 값으로 `'black'`을 할당하고 있습니다. 그러나 이 방법은 다른 객체에 영향을 주지 않습니다. 같은 타입의 모든 객체에 값을 추가하려면 `Car` 객체 타입의 정의를 수정해야 합니다.
@@ -272,10 +268,11 @@ car1.color = 'black';
 ```js
 // 동물 속성과 메서드 캡슐화
 const Animal = {
-  type: '무척추동물', // 속성 기본 값
-  displayType: function() {  // 동물 종류를 출력할 메서드
+  type: "무척추동물", // 속성 기본 값
+  displayType: function () {
+    // 동물 종류를 출력할 메서드
     console.log(this.type);
-  }
+  },
 };
 
 // animal1이라는 이름의 동물 타입 객체 생성
@@ -284,7 +281,7 @@ animal1.displayType(); // 출력: 무척추동물
 
 // fish라는 이름의 동물 타입 객체 생성
 const fish = Object.create(Animal);
-fish.type = '물고기';
+fish.type = "물고기";
 fish.displayType(); // 출력: 물고기
 ```
 
@@ -321,11 +318,11 @@ objectName.methodName = functionName;
 const myObj = {
   myMethod: function(params) {
     // 뭔가 하기...
-  }
+  }
 
-  // 이렇게도  동작해요
-  myOtherMethod(params) {
-    // 뭔가 다른거 하기...
+  // 이렇게도  동작해요
+  myOtherMethod(params) {
+    // 뭔가 다른거 하기...
   }
 };
 ```
@@ -376,22 +373,22 @@ car2.displayCar();
 
 ## `this`로 객체 참조하기
 
-JavaScript에는 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
+JavaScript에는 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
 
 ```js
 const Manager = {
-  name: "John",
-  age: 27,
-  job: "소프트웨어 엔지니어"
-}
+  name: "John",
+  age: 27,
+  job: "소프트웨어 엔지니어",
+};
 const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "소프트웨어 엔지니어 인턴"
-}
+  name: "Ben",
+  age: 21,
+  job: "소프트웨어 엔지니어 인턴",
+};
 
 function sayHi() {
-  console.log(`안녕하세요, 제 이름은 ${this.name}입니다.`)
+  console.log(`안녕하세요, 제 이름은 ${this.name}입니다.`);
 }
 
 // 두 객체 모두에 sayHi 함수 추가
@@ -431,12 +428,12 @@ const o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
 console.log(o.a); // 7
 console.log(o.b); // 8 <-- 이 시점에 get b() 메서드 실행
-o.c = 50;         //   <-- 이 시점에 set c(x) 메서드 실행
+o.c = 50; //   <-- 이 시점에 set c(x) 메서드 실행
 console.log(o.a); // 25
 ```
 
@@ -454,8 +451,16 @@ console.log(o.a); // 25
 const o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
 o.c = 10; // 설정자 실행, a 속성에 10 / 2 = 5 할당
@@ -476,7 +481,7 @@ myobj.b = 12;
 
 // a 속성을 제거해서 b 속성만 남김
 delete myobj.a;
-console.log ('a' in myobj); // 출력: false
+console.log("a" in myobj); // 출력: false
 ```
 
 ## 객체 비교
@@ -485,8 +490,8 @@ JavaScript의 객체는 참조 타입입니다. 두 개의 객체는 서로 같�
 
 ```js
 // 두 개의 변수, 두 개의 같은 속성을 가진 서로 다른 객체
-const fruit = {name: '사과'};
-const fruitbear = {name: '사과'};
+const fruit = { name: "사과" };
+const fruitbear = { name: "사과" };
 
 fruit == fruitbear; // false 반환
 fruit === fruitbear; // false 반환
@@ -494,14 +499,14 @@ fruit === fruitbear; // false 반환
 
 ```js
 // 두 개의 변수, 하나의 객체
-const fruit = {name: '사과'};
-const fruitbear = fruit;  // fruit 객체 참조를 fruitbear에 할당
+const fruit = { name: "사과" };
+const fruitbear = fruit; // fruit 객체 참조를 fruitbear에 할당
 
 // fruit과 fruitbear가 같은 객체를 가리킴
 fruit == fruitbear; // true 반환
 fruit === fruitbear; // true 반환
 
-fruit.name = '포도';
+fruit.name = "포도";
 console.log(fruitbear); // 출력: { name: "사과" }가 아니라 { name: "포도" }
 ```
 

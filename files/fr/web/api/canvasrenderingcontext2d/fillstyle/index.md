@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.fillStyle`** de l'API Canvas 2D spécifie la couleur ou style à utiliser à l'intérieur des formes. La valeur par défaut est `#000` (black).
@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.fillStyle = color;
-    ctx.fillStyle = gradient;
-    ctx.fillStyle = pattern;
+```js
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
 ### Options
 
@@ -39,10 +41,10 @@ Ceci est un simple snippet de code utilisant la propriété `fillStyle` pour dé
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -58,15 +60,16 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -74,17 +77,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
@@ -98,11 +101,15 @@ Dans cet exemple, nous allons utiliser deux boucles `for` pour dessiner une gril
 ```
 
 ```js hidden
-var ctx = document.getElementById('canvas').getContext('2d');
-for (var i = 0; i < 6; i++){
-  for (var j = 0; j < 6; j++){
-    ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
-                     Math.floor(255 - 42.5 * j) + ',0)';
+var ctx = document.getElementById("canvas").getContext("2d");
+for (var i = 0; i < 6; i++) {
+  for (var j = 0; j < 6; j++) {
+    ctx.fillStyle =
+      "rgb(" +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * j) +
+      ",0)";
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
 }
@@ -114,24 +121,11 @@ Le résultat devrait ressembler à ça:
 
 ## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Outre `ctx.fillStyle`, il existe dans les navigateurs basés sur WebKit et Blink une méthode non-standard et dépréciée, `ctx.setFillColor()`.
-
-  ```js
-  setFillColor(color, optional alpha);
-  setFillColor(grayLevel, optional alpha);
-  setFillColor(r, g, b, a);
-  setFillColor(c, m, y, k, a);
-  ```
+{{Compat}}
 
 ## Voir aussi
 

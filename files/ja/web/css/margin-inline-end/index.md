@@ -1,19 +1,10 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-inline
-  - margin-inline-end
-  - recipe:css-property
-browser-compat: css.properties.margin-inline-end
-translation_of: Web/CSS/margin-inline-end
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
 **`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
@@ -24,9 +15,9 @@ translation_of: Web/CSS/margin-inline-end
 
 ```css
 /* <length> 値 */
-margin-inline-end: 10px;   /* 絶対的な長さ */
-margin-inline-end: 1em;    /* テキストの大きさに対する相対値 */
-margin-inline-end: 5%;     /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-inline-end: 10px; /* 絶対的な長さ */
+margin-inline-end: 1em; /* テキストの大きさに対する相対値 */
+margin-inline-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-inline-end: auto;
@@ -35,6 +26,7 @@ margin-inline-end: auto;
 margin-inline-end: inherit;
 margin-inline-end: initial;
 margin-inline-end: revert;
+margin-inline-end: revert-layer;
 margin-inline-end: unset;
 ```
 
@@ -54,7 +46,7 @@ margin-inline-end: unset;
 
 ## 例
 
-<h3 id="Setting_inline_end_margin">インライン方向の末尾側のマージンの設定</h3>
+### インライン方向の末尾側のマージンの設定
 
 #### HTML
 
@@ -82,7 +74,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
+{{EmbedLiveSample("インライン方向の末尾側のマージンの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -94,6 +86,7 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-start")}}
 - 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

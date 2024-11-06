@@ -1,8 +1,8 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
-browser-compat: api.WebSocket.close
 ---
+
 {{APIRef("Web Sockets API")}}
 
 La méthode **`WebSocket.close()`** ferme la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket) ou interrompt l'éventuelle tentative de connexion. Si la connexion est déjà fermée (état `CLOSED`), cette méthode ne fait rien.
@@ -44,7 +44,8 @@ WebSocket.close(code, reason);
 
     non appairés.
 
-> **Note :** Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
+> [!NOTE]
+> Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
 
 ## Spécifications
 

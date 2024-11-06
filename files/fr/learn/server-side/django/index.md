@@ -1,13 +1,8 @@
 ---
 title: Django Web Framework (Python)
 slug: Learn/Server-side/Django
-tags:
-  - Apprendre
-  - Débutant
-  - Python
-  - django
-translation_of: Learn/Server-side/Django
 ---
+
 {{LearnSidebar}}
 
 Django est une infrastructure d'application (aussi appelé framework) côté serveur extremement populaire et dotée de beaucoup de fonctionnalités, écrite en Python. Ce module vous montrera pourquoi Django fait partie des frameworks web les plus populaires ainsi que comment l'installer, le mettre en place, et s'en servir afin de créer vos propres applications web.
@@ -18,7 +13,8 @@ Aucune connaissance sur ce framework n'est requise. Il vous faudra seulement com
 
 Une connaissance générale en programmation et plus précisement en [Python](/fr/docs/Glossaire/Python) est recommandée, mais pas nécessaire pour comprendre la majeure partie de ce module.
 
-> **Note :** Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du [Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
+> [!NOTE]
+> Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du [Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
 
 ## Guides
 

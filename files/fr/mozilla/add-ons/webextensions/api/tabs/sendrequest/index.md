@@ -1,21 +1,12 @@
 ---
 title: tabs.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
-{{AddonSidebar()}}
 
-> **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
+{{AddonSidebar}}
+
+> [!WARNING]
+> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
 
 Envoie une seule requête au(x) script(s) de contenu dans l'onglet spécifié, avec un rappel facultatif à exécuter lorsqu'une réponse est renvoyée. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque script de contenu exécuté dans l'onglet spécifié pour l'extension en cours.
 
@@ -25,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var sending = browser.tabs.sendRequest(
-  tabId,                   // integer
-  request                  // any
-)
+  tabId, // integer
+  request, // any
+);
 ```
 
 ### Paramètres
@@ -41,17 +32,18 @@ var sending = browser.tabs.sendRequest(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.sendRequest")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,4 +70,4 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

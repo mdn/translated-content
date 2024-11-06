@@ -1,15 +1,10 @@
 ---
 title: Preuve du théorème de Pythagore
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Débutant
-  - Education mathématique
-  - Exemple
-  - HTML5 Math
-  - MathML
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
-original_slug: Web/MathML/Exemples/MathML_Theoreme_de_Pythagore
 ---
+
+{{MathMLRef}}
+
 Nous allons prouver le théorème de Pythagore :
 
 **Définition :** dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés (appelés cathètes). Ainsi, soient a et b les cathètes et c l'hypothénuse, on a <math><mrow><msup><mi>a </mi><mn>2</mn></msup> <mo>+ </mo><msup><mi>b </mi><mn>2</mn></msup> <mo>= </mo><msup><mi>c </mi><mn>2</mn></msup> </mrow></math>.

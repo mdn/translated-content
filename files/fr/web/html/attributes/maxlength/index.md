@@ -1,17 +1,8 @@
 ---
-title: 'Attribut HTML : maxlength'
+title: "Attribut HTML : maxlength"
 slug: Web/HTML/Attributes/maxlength
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - maxlength
-  - textarea
-translation_of: Web/HTML/Attributes/maxlength
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`maxlength`** définit le nombre maximal de caractères (en unités de code UTF-16) que l'utilisateur peut saisir dans un [`<input>`](/fr/docs/Web/HTML/Element/Input) ou un [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea). Il doit s'agir d'un nombre entier égal ou supérieur à 0. Si aucune longueur maximale n'est spécifiée, ou si une valeur non valide est spécifiée, l'entrée ou la zone de texte n'a pas de longueur maximale.
@@ -25,21 +16,18 @@ Bien que le navigateur empêche généralement l'utilisateur de saisir plus de t
 ## Exemple
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Exemple', '', 100)}}
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-maxlength', 'maxlength attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-maxlength-accept', 'maxlength attribute')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## Voir aussi
 

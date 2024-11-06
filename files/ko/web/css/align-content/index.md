@@ -1,15 +1,9 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.align-content
 ---
-[CSS](/en-US/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_Grid_Layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
+
+[CSS](/ko/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_Grid_Layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
 
 아래의 대화형 예제는 그리드 레이아웃을 사용해 이 속성의 값을 시연합니다.
 
@@ -22,11 +16,11 @@ browser-compat: css.properties.align-content
 ```css
 /* Basic positional alignment */
 /* align-content does not take left and right values */
-align-content: center;     /* Pack items around the center */
-align-content: start;      /* Pack items from the start */
-align-content: end;        /* Pack items from the end */
+align-content: center; /* Pack items around the center */
+align-content: start; /* Pack items from the start */
+align-content: end; /* Pack items from the end */
 align-content: flex-start; /* Pack flex items from the start */
-align-content: flex-end;   /* Pack flex items from the end */
+align-content: flex-end; /* Pack flex items from the end */
 /* Normal alignment */
 align-content: normal;
 /* Baseline alignment */
@@ -37,12 +31,12 @@ align-content: last baseline;
 align-content: space-between; /* Distribute items evenly
                                  The first item is flush with the start,
                                  the last is flush with the end */
-align-content: space-around;  /* Distribute items evenly
+align-content: space-around; /* Distribute items evenly
                                  Items have a half-size space
                                  on either end */
-align-content: space-evenly;  /* Distribute items evenly
+align-content: space-evenly; /* Distribute items evenly
                                  Items have equal space around them */
-align-content: stretch;       /* Distribute items evenly
+align-content: stretch; /* Distribute items evenly
                                  Stretch 'auto'-sized items to fit
                                  the container */
 /* Overflow alignment */
@@ -54,7 +48,9 @@ align-content: initial;
 align-content: revert;
 align-content: unset;
 ```
+
 ### 값
+
 - `start`
   - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 시작 모서리에 배치합니다.
 - `end`
@@ -85,15 +81,22 @@ align-content: unset;
   - : 정렬 키워드와 함께 사용합니다. 주어진 키워드로 인해 항목이 정렬 컨테이너 밖으로 오버플로하게 되어 데이터가 유실될 수 있으면 항목 정렬에 `start`를 대신 사용합니다.
 - `unsafe`
   - : 정렬 키워드와 함께 사용합니다. 컨테이너와 항목의 상대적 크기 및 오버플로로 인한 데이터 유실에 상관하지 않고 주어진 정렬을 준수합니다.
+
 ## 형식 정의
+
 {{CSSInfo}}
-## 형식 구문 
+
+## 형식 구문
+
 {{csssyntax}}
+
 ## 예제
+
 ### CSS
+
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -201,13 +204,13 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
-values.addEventListener('change', function (evt) {
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -218,17 +221,17 @@ display.addEventListener('change', function (evt) {
 
 ## 명세
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
 
-## 같이 보기 
+## 같이 보기
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/ko/docs/Web/CSS/CSS_Box_Alignment)
 
 {{CSSRef}}

@@ -1,8 +1,8 @@
 ---
 title: Constructeur Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.DateTimeFormat()`** permet de créer des objets [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) qui formatent des horodatages en tenant compte de la locale et des options fournies.
@@ -12,9 +12,9 @@ Le constructeur **`Intl.DateTimeFormat()`** permet de créer des objets [`Intl.D
 ## Syntaxe
 
 ```js
-new Intl.DateTimeFormat()
-new Intl.DateTimeFormat(locales)
-new Intl.DateTimeFormat(locales, options)
+new Intl.DateTimeFormat();
+new Intl.DateTimeFormat(locales);
+new Intl.DateTimeFormat(locales, options);
 ```
 
 ### Paramètres
@@ -63,7 +63,8 @@ new Intl.DateTimeFormat(locales, options)
       - : Le style de formatage à utiliser pour les périodes du jour comme «&nbsp;dans la matinée&nbsp;», «&nbsp;à midi&nbsp;», etc. Les valeurs possibles sont&nbsp;:
         "`narrow`", "`short`", " `long`".
 
-        > **Note :** Cette option applique un effet uniquement si une horloge sur 12 heures est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
+        > [!NOTE]
+        > Cette option applique un effet uniquement si une horloge sur 12 heures est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
 
     - `numberingSystem`
       - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
@@ -118,7 +119,7 @@ new Intl.DateTimeFormat(locales, options)
 
     - `month`
 
-      - : La représentation du mois.  Les valeurs possibles sont&nbsp;:
+      - : La représentation du mois. Les valeurs possibles sont&nbsp;:
 
         - "`numeric`" (par exemple, `3`)
         - "`2-digit`" (par exemple, `03`)
@@ -159,7 +160,8 @@ new Intl.DateTimeFormat(locales, options)
         - "`shortGeneric`" pour la forme courte générique non-localisée (par exemple, `PT`, `Los Angeles Zeit`).
         - "`longGeneric`" pour la forme longue générique non-localisée (par exemple, `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-        > **Note :** L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays ou de ville, à la manière de "Pacific Time". Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme "Los Angeles Time".
+        > [!NOTE]
+        > L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays ou de ville, à la manière de "Pacific Time". Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme "Los Angeles Time".
 
     La valeur par défaut pour chaque composante de l'horodatage est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), et si toutes les propriétés valent [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), ce sera la valeur "`numeric`" qui sera utilisée pour `year`, `month`, et `day`.
 
@@ -179,19 +181,19 @@ console.log(new Intl.DateTimeFormat().format(date));
 ### Utiliser timeStyle et dateStyle
 
 ```js
-let o = new Intl.DateTimeFormat("fr" , {
-  timeStyle: "short"
+let o = new Intl.DateTimeFormat("fr", {
+  timeStyle: "short",
 });
 console.log(o.format(Date.now())); // "09:45"
 
-let o2 = new Intl.DateTimeFormat("fr" , {
-  dateStyle: "short"
+let o2 = new Intl.DateTimeFormat("fr", {
+  dateStyle: "short",
 });
 console.log(o2.format(Date.now())); // "29/12/2021"
 
-let o3 = new Intl.DateTimeFormat("fr" , {
+let o3 = new Intl.DateTimeFormat("fr", {
   timeStyle: "medium",
-  dateStyle: "short"
+  dateStyle: "short",
 });
 console.log(o3.format(Date.now())); // "29/12/2021 09:46:55"
 ```
@@ -203,16 +205,34 @@ On utilise l'option `dayPeriod` pour produire une chaîne de caractères qui ind
 ```js
 let date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
-dayPeriod: 'short', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "short",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > 4 at night"  (même formatage pour en-GB quelle que soit la valeur de dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
-    dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "narrow",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > "4 mat."  (même formatage pour fr avec narrow ou short)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
-    dayPeriod: 'long', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "long",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > "4 du matin"
 ```
 
@@ -222,17 +242,24 @@ On utilise l'option `timeZoneName` pour produire une chaîne de caractères repr
 
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
+const timezoneNames = [
+  "short",
+  "long",
+  "shortOffset",
+  "longOffset",
+  "shortGeneric",
+  "longGeneric",
+];
 
 for (const zoneName of timezoneNames) {
-  var formatter = new Intl.DateTimeFormat('fr', {
-    timeZone: 'Europe/Paris',
+  var formatter = new Intl.DateTimeFormat("fr", {
+    timeZone: "Europe/Paris",
     timeZoneName: zoneName,
   });
-  console.log(zoneName + " : " + formatter.format(date) );
+  console.log(zoneName + " : " + formatter.format(date));
 }
 
-// Résultat attendu : 
+// Résultat attendu :
 // short : 17/12/2021, UTC+1
 // long : 17/12/2021, heure normale d'Europe centrale
 // shortOffset : 17/12/2021, UTC+1

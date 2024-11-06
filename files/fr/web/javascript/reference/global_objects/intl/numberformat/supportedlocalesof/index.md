@@ -1,26 +1,19 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.supportedLocalesOf()`** renvoie un tableau de locales supportées parmi les locales fournies en argument afin d'éviter d'utiliser celle par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html")}}
 
 ## Syntaxe
 
-    Intl.NumberFormat.supportedLocalesOf(locales[, options])
+```js
+Intl.NumberFormat.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 
@@ -49,22 +42,18 @@ Si on dispose d'un environnement qui supporte les locales indonésienne et allem
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                             | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 1.0')}} | Définition initiale |
-| {{SpecName('ES Int 2.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.supportedLocalesOf', 'Intl.NumberFormat.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

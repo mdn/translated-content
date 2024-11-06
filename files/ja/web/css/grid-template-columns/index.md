@@ -1,15 +1,10 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-template-columns
-translation_of: Web/CSS/grid-template-columns
+l10n:
+  sourceCommit: 7c54c3925fd50b03ea55d36b4aa383a0b7ca7493
 ---
+
 {{CSSRef}}
 
 **`grid-template-columns`** は CSS のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
@@ -34,18 +29,22 @@ grid-template-columns: masonry;
 
 /* <auto-track-list> 値 */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-columns:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* グローバル値 */
 grid-template-columns: inherit;
 grid-template-columns: initial;
 grid-template-columns: revert;
+grid-template-columns: revert-layer;
 grid-template-columns: unset;
 ```
 
@@ -67,33 +66,30 @@ grid-template-columns: unset;
     `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
 
 - {{cssxref("max-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最大値を表すキーワードです。
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最大コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#max-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最大コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の文 _"Repetitio est mater studiorum"_ のサイズによって定義されます。
 - {{cssxref("min-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最小値を表すキーワードです。
-- {{cssxref("minmax()", "minmax(min, max)")}}
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最小コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#min-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最小コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の単語 _"studiorum"_ のサイズによって定義されます。
+- {{cssxref("minmax", "minmax(min, max)")}}
   - : _min_ 以上、 _max_ 以下の寸法の範囲を定義する関数表記法です。 _max_ が _min_ より小さい場合、 _max_ は無視され、関数は _min_ として扱われます。最大値として、 `<flex>` 値はトラックのフレックス係数を設定します。最小値としては無効です。
 - `auto`
 
   - : 最大値であれば max-content と同一のキーワードです。
 
-    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずそうとは限りません。
+    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずしもそうとは限りません。
 
-    {{cssxref("minmax()", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、`minmax(min-content,max-content)` と同じように動作します。
+    {{cssxref("minmax", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
 
-    > **Note:** トラックの寸法が `auto` の場合 (そして `auto` の場合だけ)、 {{cssxref("align-content")}} および{{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
 
-- `{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - : `min(max-content, max(auto, _argument_))` の式を表し、 `auto` と同様に (すなわち `minmax(auto, max-content)` と) 計算されますが、トラックの寸法が `auto` の最小値よりも大きい場合は _argument_ でクランプされるところが異なります。
-- {{cssxref("repeat()", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
+- `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
+  - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
+- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [subgrid](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
-
-> **Warning:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
->
-> サブグリッドの値はグリッド仕様書のレベル 2 にあり、現在のところ Firefox 71 以降でのみ実装されています。
 
 ## 公式定義
 
@@ -136,7 +132,7 @@ grid-template-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_column_sizes", "100%", "20px")}}
+{{EmbedLiveSample("グリッド列の寸法の指定", "100%", "20px")}}
 
 ## 仕様書
 
@@ -149,6 +145,6 @@ grid-template-columns: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- [グリッドレイアウトガイド: グリッドレイアウトの基本概念 - グリッドトラック](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#グリッドトラック)
-- 動画チュートリアル: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [グリッドレイアウトガイド: グリッドレイアウトの基本概念 - グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
+- 動画チュートリアル: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)

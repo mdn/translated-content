@@ -1,22 +1,17 @@
 ---
 title: DeviceMotionEvent.DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
-tags:
-  - API
-  - Constructeurs
-  - Mobile
-  - Mouvement
-  - Orientation
-  - axes
-translation_of: Web/API/DeviceMotionEvent/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{Non-standard_header}}
 
 Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotionEvent")}}.
 
 ## Syntaxe
 
-    var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```js
+var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```
 
 ### Paramètres
 
@@ -43,10 +38,8 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.DeviceMotionEvent")}}
+{{Compat}}

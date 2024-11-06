@@ -1,10 +1,8 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-translation_of: Web/CSS/filter-function/invert()
-original_slug: Web/CSS/filter-function/invert()
-browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`invert()`** permet d'inverser les couleurs de l'image. La valeur obtenue par cette fonction est de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
@@ -16,6 +14,7 @@ La fonction CSS **`invert()`** permet d'inverser les couleurs de l'image. La val
 ```css
 invert(multiplicateur)
 ```
+
 ### Paramètres
 
 - `multiplicateur`
@@ -42,12 +41,12 @@ invert(100%);  /* Négatif de l'image originale */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)

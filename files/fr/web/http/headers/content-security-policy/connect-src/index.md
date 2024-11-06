@@ -1,9 +1,8 @@
 ---
-title: 'CSP : connect-src'
+title: "CSP : connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
@@ -64,7 +63,7 @@ Content-Security-Policy: connect-src https://example.com/
 Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<a ping="https://not-example.com">
+<a ping="https://not-example.com"></a>
 
 <script>
   let xhr = new XMLHttpRequest();

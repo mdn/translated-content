@@ -1,20 +1,12 @@
 ---
 title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
+
 {{AddonSidebar}}
 
-> **Attention :** Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
+> [!WARNING]
+> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
 
 Convertit un chemin relatif dans le répertoire d'installation d'une extension en une URL complète.
 
@@ -22,8 +14,8 @@ Convertit un chemin relatif dans le répertoire d'installation d'une extension e
 
 ```js
 browser.extension.getURL(
-  path // string
-)
+  path, // string
+);
 ```
 
 ### Paramètres
@@ -35,9 +27,9 @@ browser.extension.getURL(
 
 `string`. The fully-qualified URL to the resource.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getURL")}}
+{{Compat}}
 
 ## Exemples
 
@@ -52,13 +44,14 @@ var fullURL = browser.extension.getURL("beasts/frog.html");
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,4 +78,4 @@ var fullURL = browser.extension.getURL("beasts/frog.html");
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

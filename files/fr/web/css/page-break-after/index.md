@@ -1,15 +1,12 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/page-break-after
 ---
+
 {{CSSRef}}
 
-> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-after")}}.
+> [!WARNING]
+> Cette propriété a été remplacée par la propriété {{cssxref("break-after")}}.
 
 La propriété CSS **`page-break-after`** permet d'ajuster les sauts de page placés _après_ l'élément courant.
 
@@ -64,9 +61,13 @@ Si pour des raisons de compatibilité, on doit traiter `page-break-after` comme 
 - `verso` {{experimental_inline}}
   - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -80,17 +81,11 @@ div.footnotes {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS Logical Properties', '#page', 'recto and verso')}}                     | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `recto` et `verso`.                                                                  |
-| {{SpecName('CSS3 Paged Media', '#page-break-after', 'page-break-after')}}             | {{Spec2('CSS3 Paged Media')}}         | Cette propriété peut désormais être étendues aux lignes de tableau et aux groupe de lignes de tableau. |
-| {{SpecName('CSS2.1', 'page.html#propdef-page-break-after', 'page-break-after')}} | {{Spec2('CSS2.1')}}                         | Définition initiale.                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.page-break-after")}}
+{{Compat}}
 
 ## Voir aussi
 

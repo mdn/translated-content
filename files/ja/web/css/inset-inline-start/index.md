@@ -1,19 +1,17 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset-inline-start
-translation_of: Web/CSS/inset-inline-start
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
+
 {{CSSRef}}
 
 **`inset-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行頭からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{EmbedInteractiveExample("pages/css/inset-inline-start.html")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -30,12 +28,11 @@ inset-inline-start: auto;
 inset-inline-start: inherit;
 inset-inline-start: initial;
 inset-inline-start: revert;
+inset-inline-start: revert-layer;
 inset-inline-start: unset;
 ```
 
 `inset-inline-start` と {{cssxref("inset-inline-end")}} の一括指定は {{cssxref("inset-inline")}} です。
-
-## 構文
 
 ### 値
 
@@ -51,7 +48,7 @@ inset-inline-start: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_offset">インライン方向の先頭のオフセットの設定</h3>
+### インライン方向の先頭のオフセットの設定
 
 #### HTML
 
@@ -80,7 +77,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_offset", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

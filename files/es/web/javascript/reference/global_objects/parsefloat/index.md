@@ -1,10 +1,8 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/parseFloat
-browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 La función **`parseFloat()`** analiza un argumento (si es necesario, lo convierte en una cadena) y devuelve un número de coma flotante.
@@ -60,12 +58,16 @@ Todos los siguientes ejemplos devuelven `3.14`:
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` devolviendo `NaN`
@@ -101,4 +103,3 @@ parseFloat("900719925474099267n");
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
 - {{jsxref("isNaN", "isNaN()")}}
-

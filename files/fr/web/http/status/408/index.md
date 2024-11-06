@@ -1,8 +1,8 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-translation_of: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`408 Request Timeout`** indique que le serveur souhaiterait clôturer cette connexion inutilisée. Pour certains serveurs, ce code est parfois envoyé sur une connexion inactive sans qu'il y ait nécessairement eu de requête de la part du client.
@@ -11,7 +11,8 @@ Un serveur doit envoyer l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Conn
 
 Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation.
 
-> **Note :** Certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
+> [!NOTE]
+> Certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
 
 ## Statut
 
@@ -21,9 +22,11 @@ Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome,
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.7: 408 Request Timeout](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.7) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

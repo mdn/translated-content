@@ -1,21 +1,17 @@
 ---
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Méthode
-  - Reference
-translation_of: Web/API/CanvasGradient/addColorStop
 ---
+
 {{APIRef("Canvas API")}}
 
 La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par un `décalage` et une `couleur`, au dégradé. Si le décalage n'est pas compris entre 0 et 1, une erreur INDEX_SIZE_ERR est générée, si la couleur ne peut pas être analysée en tant que {{cssxref ("&lt;color&gt;")}} CSS, une erreur SYNTAX_ERR est générée.
 
 ## Syntaxe
 
-    void gradient.addColorStop(décalage, couleur);
+```js
+void gradient.addColorStop(décalage, couleur);
+```
 
 ### Paramètres
 
@@ -39,12 +35,12 @@ Il s'agit seulement d'un simple fragment de code qui utilise la méthode `addCol
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 var degrade = ctx.createLinearGradient(0, 0, 200, 0);
-degrade.addColorStop(0, 'green');
-degrade.addColorStop(1, 'white');
+degrade.addColorStop(0, "green");
+degrade.addColorStop(1, "white");
 ctx.fillStyle = degrade;
 ctx.fillRect(10, 10, 200, 100);
 ```
@@ -64,7 +60,8 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
+ctx.fillRect(10,10,200,100);</textarea
+>
 ```
 
 ```js hidden
@@ -80,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -97,13 +94,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasGradient.addColorStop")}}
+{{Compat}}
 
 ## Voir aussi
 

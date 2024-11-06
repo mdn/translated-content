@@ -1,15 +1,10 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.align-items
-translation_of: Web/CSS/align-items
 ---
+
+{{CSSRef}}
+
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("Cross Axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("Grid Areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
 以下のデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
@@ -56,6 +51,7 @@ align-items: unset;
     - フレックスアイテムについては、このキーワードは `stretch` として動作します。
     - グリッドアイテムについては、このキーワードは `stretch` の一つと似た動作をしますが、ボックスにアスペクト比や内部寸法がある場合は `start` のように動作します。
     - このプロパティはブロックレベルボックスや、表のセルには適用されません。
+
 - `flex-start`
   - : フレックスアイテムの cross-start 側マージンの端は、ラインの cross-start の端に寄せられます。
 - `flex-end`
@@ -83,17 +79,17 @@ align-items: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### CSS
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* ライブサンプルで変更可能 */
   background-color: #8c8c8c;
@@ -213,26 +209,26 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("例", "260px", "290px")}}
 
 ## 仕様書
 
-{{Specifications("css.properties.align-items.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -240,10 +236,8 @@ display.addEventListener('change', function (evt) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナーにおけるアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウトにおけるボックスの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{cssxref("align-self")}} プロパティ
-
-{{CSSRef}}

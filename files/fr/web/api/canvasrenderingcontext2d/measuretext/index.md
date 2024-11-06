@@ -1,21 +1,17 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-tags:
-  - API
-  - Canevas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.measureText()`** renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).
 
 ## Syntaxe
 
-    ctx.measureText(texte);
+```js
+ctx.measureText(texte);
+```
 
 ### Paramètres
 
@@ -37,22 +33,20 @@ Un objet {{domxref("TextMetrics")}}.
 vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
-var texte = ctx.measureText('foo'); // objet TextMetrics
+var texte = ctx.measureText("foo"); // objet TextMetrics
 texte.width; // 16;
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-measuretext", "CanvasRenderingContext2D.measureText")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.measureText")}}
+{{Compat}}
 
 ## Voir aussi
 

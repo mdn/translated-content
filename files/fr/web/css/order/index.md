@@ -1,12 +1,8 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/order
 ---
+
 {{CSSRef}}
 
 La propriété **`order`** définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de `order`. Les éléments ayant la même valeur pour `order` seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.
@@ -34,19 +30,23 @@ order: unset;
 - `<integer>`
   - : Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
 ### HTML
 
 ```html
-<div id='main'>
-   <article>Lorem ipsum</article>
-   <nav> consectetur adipisicing elit, sed do eiusmod</nav>
-   <aside>tempor incididunt ut labore et dolore magna</aside>
+<div id="main">
+  <article>Lorem ipsum</article>
+  <nav>consectetur adipisicing elit, sed do eiusmod</nav>
+  <aside>tempor incididunt ut labore et dolore magna</aside>
 </div>
 ```
 
@@ -60,7 +60,7 @@ Grâce à ces déclarations CSS, on crée un disposition avec deux barres entour
 }
 
 #main > article {
-  flex:1;
+  flex: 1;
   order: 2;
   border: 1px dotted orange;
 }
@@ -88,20 +88,16 @@ La propriété `order` créera une incohérence entre l'ordre de présentation v
 
 - [_Flexbox & the keyboard navigation disconnect — Tink_ (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [_Source Order Matters, Adrian Roselli_ (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
 - [_Understanding Success Criterion 1.3.2, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#order-property', 'order')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/switch
-original_slug: Web/JavaScript/Reference/Instructions/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
@@ -16,29 +11,31 @@ L'instruction **`switch`** évalue une expression et, selon le résultat obtenu 
 
 ## Syntaxe
 
-    switch (expression) {
-      case valeur1:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression correspond à valeur1
-        instructions1;
-        [break;]
-      case valeur2:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression correspond à valeur2
-        instructions 2;
-        [break;]
-      ...
-      case valeurN:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression à valeurN
-        instructionsN;
-        [break;]
-      [default:
-        // Instructions à exécuter lorsqu'aucune des valeurs
-        // ne correspond
-        instructions_def;
-        [break;]]
-    }
+```js
+switch (expression) {
+  case valeur1:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur1
+    instructions1;
+    [break;]
+  case valeur2:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur2
+    instructions 2;
+    [break;]
+  …
+  case valeurN:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression à valeurN
+    instructionsN;
+    [break;]
+  [default:
+    // Instructions à exécuter lorsqu'aucune des valeurs
+    // ne correspond
+    instructions_def;
+    [break;]]
+}
+```
 
 - `expression`
   - : Une expression à comparer avec chacune des clause `case`.
@@ -97,22 +94,22 @@ Si on omet une instruction `break`, le script exécutera les instructions pour l
 ```js
 var toto = 0;
 switch (toto) {
-    case -1:
-        console.log('moins un');
-        break;
-    case 0: // toto vaut 0 donc ce cas correspond
-        console.log(0);
-        // NOTE : le break aurait du être placé ici
-    case 1: // pas de break pour 'case 0:' les instructions de ce cas sont
-            // exécutées aussi
-        console.log(1);
-        break; // on a un break a ce niveau donc les instructions
-               // des cas suivants ne seront pas exécutées
-    case 2:
-        console.log(2);
-        break;
-    default:
-        console.log('default');
+  case -1:
+    console.log("moins un");
+    break;
+  case 0: // toto vaut 0 donc ce cas correspond
+    console.log(0);
+  // NOTE : le break aurait du être placé ici
+  case 1: // pas de break pour 'case 0:' les instructions de ce cas sont
+    // exécutées aussi
+    console.log(1);
+    break; // on a un break a ce niveau donc les instructions
+  // des cas suivants ne seront pas exécutées
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
 }
 ```
 
@@ -121,7 +118,7 @@ switch (toto) {
 Oui, il est possible de placer le cas `default` entre deux autres cas. Ainsi, si on a une valeur qui ne correspond pas aux différents cas, elle passera par le bloc `default` puis par les autres s'il n'y a pas de `break`. Par exemple :
 
 ```js
-var toto = 5
+var toto = 5;
 switch (toto) {
   case 2:
     console.log(2); // ne sera pas exécuté
@@ -130,7 +127,7 @@ switch (toto) {
     console.log("default"); // sera exécuté
   case 1:
     console.log("1"); // sera exécuté car il n'y a
-                      // pas de break avant
+  // pas de break avant
 }
 // La console affichera "default" puis "1"
 ```
@@ -146,17 +143,17 @@ Cette méthode utilise le fait que s'il n'y a pas d'instruction {{jsxref("Instru
 On peut donc regrouper différentes valeurs les unes à la suite des autres pour exécuter des instructions pour ces valeurs :
 
 ```js
-var animal = 'girafe';
+var animal = "girafe";
 switch (animal) {
-    case 'vache':
-    case 'girafe':
-    case 'chien':
-    case 'cochon':
-        console.log('Cet animal est un mammifère');
-        break;
-    case 'oiseau':
-    default:
-        console.log('Cet animal n\'est pas un mammifère.');
+  case "vache":
+  case "girafe":
+  case "chien":
+  case "cochon":
+    console.log("Cet animal est un mammifère");
+    break;
+  case "oiseau":
+  default:
+    console.log("Cet animal n'est pas un mammifère.");
 }
 ```
 
@@ -166,61 +163,61 @@ Dans l'exemple qui suit, on illustre comment exécuter une série d'instructions
 
 ```js
 var toto = 1;
-var output = 'Résultat : ';
+var output = "Résultat : ";
 switch (toto) {
-    case 0:
-        output += 'Donc ';
-    case 1:
-        output += 'quel ';
-        output += 'est ';
-    case 2:
-        output += 'votre ';
-    case 3:
-        output += 'nom ';
-    case 4:
-        output += '?';
-        console.log(output);
-        break;
-    case 5:
-        output += '!';
-        console.log(output);
-        break;
-    default:
-        console.log('Veuillez choisir un nombre entre 0 et 5 !');
+  case 0:
+    output += "Donc ";
+  case 1:
+    output += "quel ";
+    output += "est ";
+  case 2:
+    output += "votre ";
+  case 3:
+    output += "nom ";
+  case 4:
+    output += "?";
+    console.log(output);
+    break;
+  case 5:
+    output += "!";
+    console.log(output);
+    break;
+  default:
+    console.log("Veuillez choisir un nombre entre 0 et 5 !");
 }
 ```
 
 Selon les valeurs fournies à la variable `toto`, on aura les résultats suivants :
 
-| Valeur                                                                    | Texte                                     |
-| ------------------------------------------------------------------------- | ----------------------------------------- |
+| Valeur                                                             | Texte                                     |
+| ------------------------------------------------------------------ | ----------------------------------------- |
 | toto vaut {{jsxref("NaN")}} ou est différent de 1, 2, 3, 4, 5 ou 0 | Veuillez choisir un nombre entre 0 et 5 ! |
-| 0                                                                         | Résultat : Donc quel est votre nom ?      |
-| 1                                                                         | Résultat : quel est votre nom ?           |
-| 2                                                                         | Résultat : votre nom ?                    |
-| 3                                                                         | Résultat : nom ?                          |
-| 4                                                                         | Résultat : ?                              |
-| 5                                                                         | Résultat : !                              |
+| 0                                                                  | Résultat : Donc quel est votre nom ?      |
+| 1                                                                  | Résultat : quel est votre nom ?           |
+| 2                                                                  | Résultat : votre nom ?                    |
+| 3                                                                  | Résultat : nom ?                          |
+| 4                                                                  | Résultat : ?                              |
+| 5                                                                  | Résultat : !                              |
 
 ### `switch` et les variables avec une portée de bloc
 
-Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
+Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
 
 Prenons cet exemple :
 
 ```js
-const action = 'dire_bonjour';
+const action = "dire_bonjour";
 switch (action) {
-  case 'dire_bonjour':
-    let message = 'bonjour';
+  case "dire_bonjour":
+    let message = "bonjour";
     console.log(message);
     break;
-  case 'dire_coucou':
-    let message = 'coucou';
+  case "dire_coucou":
+    let message = "coucou";
     console.log(message);
     break;
   default:
-    console.log('Aucune action reçue.');
+    console.log("Aucune action reçue.");
     break;
 }
 ```
@@ -232,20 +229,23 @@ Cela se produit car la première instruction `let message = 'bonjour';` entre en
 Pour régler ce problème, il suffit de rajouter des accolades pour définir un bloc d'instructions pour chaque `case` :
 
 ```js
-const action = 'dire_bonjour';
+const action = "dire_bonjour";
 switch (action) {
-  case 'dire_bonjour': { // accolade ajoutée
-    let message = 'bonjour';
+  case "dire_bonjour": {
+    // accolade ajoutée
+    let message = "bonjour";
     console.log(message);
     break;
   } // accolade ajoutée
-  case 'dire_coucou': { // accolade ajoutée
-    let message = 'coucou';
+  case "dire_coucou": {
+    // accolade ajoutée
+    let message = "coucou";
     console.log(message);
     break;
   } // accolade ajoutée
-  default: { // accolade ajoutée
-    console.log('Aucune action reçue.');
+  default: {
+    // accolade ajoutée
+    console.log("Aucune action reçue.");
     break;
   } // accolade ajoutée
 }
@@ -255,16 +255,11 @@ Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans c
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## Voir aussi
 

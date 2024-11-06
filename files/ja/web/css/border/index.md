@@ -1,21 +1,13 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS 境界
-  - CSS 一括指定プロパティ
-  - レイアウト
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border
-translation_of: Web/CSS/border
+l10n:
+  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
-{{CSSRef("CSS Borders")}}
 
-**`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{cssxref("border-width")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}} の値を設定します。
+{{CSSRef}}
 
-## 例
+**`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -23,9 +15,9 @@ translation_of: Web/CSS/border
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
- - {{cssxref("border-color")}}
- - {{cssxref("border-style")}}
- - {{cssxref("border-width")}}
+- [`border-color`](/ja/docs/Web/CSS/border-color)
+- [`border-style`](/ja/docs/Web/CSS/border-style)
+- [`border-width`](/ja/docs/Web/CSS/border-width)
 
 ## 構文
 
@@ -45,18 +37,21 @@ border: medium dashed green;
 /* グローバル値 */
 border: inherit;
 border: initial;
+border: revert;
+border: revert-layer;
 border: unset;
 ```
 
 `border` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は関係ありません。
 
-> **Note:** style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
+> [!NOTE]
+> style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
 
 ### 値
 
 - `<line-width>`
-  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{cssxref("border-width")}} を参照してください。
-- `<line-style>`
+  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{Cssxref("border-width")}} を参照してください。
+- {{cssxref("&lt;line-style&gt;")}}
   - : 境界線の種類を設定します。指定されなかった場合は既定値の `none` になります。 {{cssxref("border-style")}} を参照してください。
 - {{cssxref("&lt;color&gt;")}}
   - : 境界線の色を設定します。指定されなかった場合は既定値で要素の {{cssxref("color")}} プロパティになります。 {{cssxref("border-color")}} を参照してください。
@@ -71,8 +66,8 @@ border: unset;
 
 境界線と[輪郭線](/ja/docs/Web/CSS/outline)はよく似ています。しかし、輪郭線は以下の点で境界線とは異なります。
 
- - 輪郭線は領域を占有せず、要素のコンテンツの外側に描画されます。
- - 輪郭線は普通は矩形ですが、仕様によれば、矩形である必要はありません。
+- 輪郭線は領域を占有せず、要素のコンテンツの外側に描画されます。
+- 輪郭線は普通は矩形ですが、仕様によれば、矩形である必要はありません。
 
 ## 公式定義
 
@@ -84,7 +79,7 @@ border: unset;
 
 ## 例
 
-<h3 id="Setting_a_pink_outset_border">ピンク色の出っ張った境界の設定</h3>
+### ピンク色の出っ張った境界の設定
 
 #### HTML
 
@@ -109,7 +104,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_pink_outset_border')}}
+{{EmbedLiveSample('ピンク色の出っ張った境界の設定')}}
 
 ## 仕様書
 
@@ -124,5 +119,6 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- {{Cssxref("outline")}}
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

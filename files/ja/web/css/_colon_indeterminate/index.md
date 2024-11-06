@@ -1,20 +1,8 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
-tags:
-  - ':indeterminate'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - checkbox
-  - progress
-  - ラジオボタン
-browser-compat: css.selectors.indeterminate
-translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 **`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
@@ -34,7 +22,9 @@ input:indeterminate {
 
 ## 構文
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## 例
 
@@ -48,7 +38,7 @@ input:indeterminate {
 <fieldset>
   <legend>Checkbox</legend>
   <div>
-    <input type="checkbox" id="checkbox">
+    <input type="checkbox" id="checkbox" />
     <label for="checkbox">This checkbox label starts out lime.</label>
   </div>
 </fieldset>
@@ -56,11 +46,11 @@ input:indeterminate {
 <fieldset>
   <legend>Radio</legend>
   <div>
-    <input type="radio" id="radio1" name="radioButton">
+    <input type="radio" id="radio1" name="radioButton" />
     <label for="radio1">First radio label starts out lime.</label>
   </div>
   <div>
-    <input type="radio" id="radio2" name="radioButton">
+    <input type="radio" id="radio2" name="radioButton" />
     <label for="radio2">Second radio label also starts out lime.</label>
   </div>
 </fieldset>
@@ -76,15 +66,15 @@ input:indeterminate + label {
 
 ```css hidden
 fieldset {
-    padding: 1em 0.75em;
+  padding: 1em 0.75em;
 }
 
 fieldset:first-of-type {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 fieldset:not(:first-of-type) > div:not(:last-child) {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 ```
 
@@ -118,8 +108,8 @@ progress {
 }
 
 progress:indeterminate {
-  width:80vw;
-  height:20px;
+  width: 80vw;
+  height: 20px;
 }
 ```
 

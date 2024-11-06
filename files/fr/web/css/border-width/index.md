@@ -1,15 +1,11 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
-La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit la largeur de la bordure d'un élément.
+La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui définit la largeur de la bordure d'un élément.
 
 Cette propriété raccourcie définit les propriétés détaillées
 
@@ -36,10 +32,10 @@ border-width: thick;
 /* Valeur de type <length> */
 border-width: 5px;
 
-/* largeur verticale puis horizontale */
+/* côtés haut et bas | côtés gauche et droit */
 border-width: 2px 1.5em;
 
-/* haut | largeur horizontale | bas */
+/* côté haut | côtés gauche et droit | côté bas */
 border-width: 1px 2em 1.5cm;
 
 /* haut | droite | bas | gauche */
@@ -70,35 +66,34 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 
     La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
 ### HTML
 
 ```html
-<p id="unevaleur">
-  Une valeur : la bordure fait 6px sur les 4 côtés.
-</p>
+<p id="unevaleur">Une valeur : la bordure fait 6px sur les 4 côtés.</p>
 
 <p id="deuxvaleurs">
-  Deux valeurs différentes : elle fait 2px en haut
-  et en bas et elle mesure 10px pour les bords droit
-  et gauche.
+  Deux valeurs différentes : elle fait 2px en haut et en bas et elle mesure 10px
+  pour les bords droit et gauche.
 </p>
 
 <p id="troisvaleurs">
-  Trois valeurs différentes : 0.3em pour le haut,
-  9px pour le bas et zéro pour la droite et la
-  gauche.
+  Trois valeurs différentes : 0.3em pour le haut, 9px pour le bas et zéro pour
+  la droite et la gauche.
 </p>
 
 <p id="quatrevaleurs">
-  Quatre valeurs différentes : "thin" pour le haut,
-  "medium" pour la droite, "thick" pour le bas
-  et 1em pour la gauche.
+  Quatre valeurs différentes : "thin" pour le haut, "medium" pour la droite,
+  "thick" pour le bas et 1em pour la gauche.
 </p>
 ```
 
@@ -138,17 +133,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe. La modification du type de données {{cssxref("&lt;length&gt;")}} impacte cette propriété. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}} | {{Spec2('CSS2.1')}}                 | Ajout de la contrainte indiquant que la signification des valeurs doit être constante au sein d'un document.                      |
-| {{SpecName('CSS1', '#border-width', 'border-width')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-width")}}
+{{Compat}}
 
 ## Voir aussi
 

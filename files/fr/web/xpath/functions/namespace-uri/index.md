@@ -1,18 +1,17 @@
 ---
 title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/namespace-uri
-original_slug: Web/XPath/Fonctions/namespace-uri
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `namespace-uri` retourne une chaîne représentant l'URI de l'espace de nommage du premier nœud d'un ensemble de nœuds donné.
 
 ### Syntaxe
 
-    namespace-uri( [ensemble-de-nœuds] )
+```
+namespace-uri( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

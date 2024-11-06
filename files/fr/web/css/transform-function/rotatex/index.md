@@ -1,10 +1,8 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
-translation_of: Web/CSS/transform-function/rotateX()
-original_slug: Web/CSS/transform-function/rotateX()
-browser-compat: css.types.transform-function.rotateX
 ---
+
 {{CSSRef}}
 
 La fonction **`rotateX()`** définit une transformation qui déplace l'élément autour de l'axe des abscisses sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.
@@ -15,7 +13,8 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 
 `rotateX(a)` est une notation raccourcie, équivalente à `rotate3D(1, 0, 0, a)`.
 
-> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!NOTE]
+> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 

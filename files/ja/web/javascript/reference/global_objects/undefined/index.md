@@ -1,13 +1,8 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.builtins.undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバルの **`undefined`** プロパティはプリミティブ値の `{{Glossary("Undefined", "undefined")}}` を表します。これは JavaScript における{{Glossary("Primitive", "プリミティブ型")}}の一つです。
@@ -19,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ## 構文
 
 ```js
-undefined
+undefined;
 ```
 
 ## 解説
@@ -30,21 +25,22 @@ undefined
 
 まだ値が代入されていない変数は `undefined` 型となります。評価しようとしている変数に値が代入されていない場合、メソッドや文も `undefined` を返します。値を {{jsxref("Statements/return", "return")}} しない関数も `undefined` を返します。
 
-> **Note:** グローバルスコープ以外のスコープでは `undefined` を{{Glossary("identifier", "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxref("Lexical_grammar", "予約語", "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
+> [!NOTE]
+> グローバルスコープ以外のスコープでは `undefined` を{{Glossary("identifier", "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxref("Lexical_grammar", "予約語", "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
 >
 > ```js example-bad
 > //こんなことはしないこと！
 >
 > // "foo string" をログ出力する
-> (function() {
->   var undefined = 'foo';
+> (function () {
+>   var undefined = "foo";
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > // "foo string" をログ出力する
-> (function(undefined) {
+> (function (undefined) {
 >   console.log(undefined, typeof undefined);
-> })('foo');
+> })("foo");
 > ```
 
 ## 例
@@ -57,15 +53,15 @@ undefined
 var x;
 if (x === undefined) {
   // ここの文は実行される
-}
-else {
+} else {
   // ここの文は実行されない
 }
 ```
 
-> **Note:** ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
+> [!NOTE]
+> ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
 >
-> 詳しくは、{{jsxref("Operators", "比較演算子","","true")}}を参照してください。
+> 詳しくは、{{jsxref("Operators", "比較演算子","",1)}}を参照してください。
 
 ### typeof 演算子と undefined
 
@@ -73,8 +69,8 @@ else {
 
 ```js
 var x;
-if (typeof x === 'undefined') {
-   // ここの文は実行される
+if (typeof x === "undefined") {
+  // ここの文は実行される
 }
 ```
 
@@ -82,12 +78,13 @@ if (typeof x === 'undefined') {
 
 ```js
 // 直前まで x は宣言されていない
-if (typeof x === 'undefined') { // エラーなしで true と評価される
-   // ここの文は実行される
+if (typeof x === "undefined") {
+  // エラーなしで true と評価される
+  // ここの文は実行される
 }
 
-if (x === undefined) { // ReferenceError が発生
-
+if (x === undefined) {
+  // ReferenceError が発生
 }
 ```
 
@@ -96,7 +93,7 @@ if (x === undefined) { // ReferenceError が発生
 グローバルスコープは{{jsxref("globalThis", "グローバルオブジェクト", "", 1)}}に結びつけられているので、グローバルコンテキストに変数が存在するかどうかのチェックは、<em>グローバルオブジェクト</em>にプロパティが存在することを、 {{jsxref("Operators/in", "in")}} 演算子を使用してチェックすることで行うことができます。
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   // x がグローバルに定義されている場合のみ、ここの文を実行
 }
 ```
@@ -128,4 +125,4 @@ if (y === void 0) {
 ## 関連情報
 
 - JavaScript の {{Glossary("Primitive", "プリミティブ型")}}
-- {{jsxref("null")}}
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)

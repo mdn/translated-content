@@ -1,18 +1,8 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライゼーション
-  - メソッド
-  - NumberFormat
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.NumberFormat.format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールと整形オプションに従って数値を整形します。
@@ -24,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ## 構文
 
 ```js
-format(number)
+format(number);
 ```
 
 ### 引数
@@ -43,10 +33,10 @@ format(number)
 `format` ゲッター関数を使用して単一の通貨値を整形しましょう。こちらはロシアの例です。
 
 ```js
-var options = { style: 'currency', currency: 'RUB' };
-var numberFormat = new Intl.NumberFormat('ru-RU', options);
+var options = { style: "currency", currency: "RUB" };
+var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 руб."
 ```
 
 ### `format` と `map` の使用
@@ -56,9 +46,9 @@ console.log(numberFormat.format(654321.987));
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat('es-ES');
-var formatted = a.map(n => numberFormat.format(n));
-console.log(formatted.join('; '));
+var numberFormat = new Intl.NumberFormat("es-ES");
+var formatted = a.map((n) => numberFormat.format(n));
+console.log(formatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 

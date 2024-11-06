@@ -1,22 +1,11 @@
 ---
 title: GlobalFetch.fetch()
 slug: Web/API/fetch
-tags:
-  - API
-  - API Fetch
-  - Experimental
-  - Fetch
-  - GlobalFetch
-  - Méthode
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - requête
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch")}}
 
-La méthode **`fetch()`** du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
+La méthode globale **`fetch()`** démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
 
 `WindowOrWorkerGlobalScope` est aussi bien implémenté par {{domxref("Window")}} que par {{domxref("WorkerGlobalScope")}}, ce qui signifie que la méthode `fetch()` est disponible dans la plupart des cas où vous pourriez en avoir besoin.
 
@@ -24,11 +13,14 @@ Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} n'est rejetée que quand
 
 La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entête [Content Security Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qui est récupérée.
 
-> **Note :** Les paramètres de la méthode `fetch()` sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.
+> [!NOTE]
+> Les paramètres de la méthode `fetch()` sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.
 
 ## Syntaxe
 
-    const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```js
+const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```
 
 ### Paramètres
 
@@ -44,7 +36,7 @@ La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entêt
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
 
     - `method`
-      - : La méthode de la requête, par exemple `GET` ou `POST`.
+      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Les entêtes à ajouter à votre requête, contenues dans un objet {{domxref("Headers")}} ou dans un objet avec des {{domxref("ByteString")}} pour valeurs.
     - `body`
@@ -84,21 +76,21 @@ Une {{domxref("Promise")}} qui se résoud avec un object {{domxref("Response")}}
 Dans notre [exemple de requête avec fetch](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-request/)) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant `fetch()`. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.
 
 ```js
-const monImage = document.querySelector('img');
+const monImage = document.querySelector("img");
 
-let maRequete = new Request('fleurs.jpg');
+let maRequete = new Request("fleurs.jpg");
 
 fetch(maRequete)
-.then(function(reponse) {
-  if (!response.ok) {
-    throw new Error(`erreur HTTP! statut: ${reponse.status}`);
-  }
-  return reponse.blob();
-})
-.then(function(reponse) {
-  let URLobjet = URL.createObjectURL(reponse);
-  monImage.src = URLobjet;
-});
+  .then(function (reponse) {
+    if (!reponse.ok) {
+      throw new Error(`erreur HTTP! statut: ${reponse.status}`);
+    }
+    return reponse.blob();
+  })
+  .then(function (reponse) {
+    let URLobjet = URL.createObjectURL(reponse);
+    monImage.src = URLobjet;
+  });
 ```
 
 Dans notre [exemple fetch avec initialisation et requête](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode `fetch` :
@@ -124,33 +116,31 @@ fetch(maRequete, monInit).then(function(reponse) {
 Notez que vous pouvez aussi passer l'objet d'initialisation au constructeur de la requête pour obtenir le même effet, par exemple :
 
 ```js
-let maRequete = new Request('fleurs.jpg', monInit);
+let maRequete = new Request("fleurs.jpg", monInit);
 ```
 
 Vous pouvez aussi utiliser un objet litéral comme en-têtes dans votre objet d'initalisation.
 
 ```js
-const monInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+const monInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-let maRequete = new Request('fleurs.jpg', monInit);
+let maRequete = new Request("fleurs.jpg", monInit);
 ```
 
 ## Spécifications
 
-| Specification                                                        | Statut                                       | Commentaire                                                                                                                                                                         |
-| -------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}     | {{Spec2('Fetch')}}                     | Définie dans un `WindowOrWorkerGlobalScope` dans la nouvelle spécification.                                                                                                         |
-| {{SpecName('Fetch','#dom-global-fetch','fetch()')}} | {{Spec2('Fetch')}}                     | Définition initiale                                                                                                                                                                 |
-| {{SpecName('Credential Management')}}                     | {{Spec2('Credential Management')}} | Ajoute la possiblité d'utiliser une instance de {{domxref("FederatedCredential")}} ou de {{domxref("PasswordCredential")}} comme valeur de `init.credentials`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,12 @@
 ---
-title: MouseEvent.relatedTarget
+title: "MouseEvent: relatedTarget プロパティ"
+short-title: relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.relatedTarget
-translation_of: Web/API/MouseEvent/relatedTarget
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`MouseEvent.relatedTarget`** は読み取り専用プロパティで、もしあれば、マウスイベントの副ターゲットを表します。
 
@@ -64,7 +58,7 @@ translation_of: Web/API/MouseEvent/relatedTarget
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragenter")}}</td>
+      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
       <td>
         ポインティングデバイスが入った {{domxref("EventTarget")}}
       </td>
@@ -73,7 +67,7 @@ translation_of: Web/API/MouseEvent/relatedTarget
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragleave")}}</td>
+      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
       <td>
         ポインティングデバイスが離れた {{domxref("EventTarget")}}
       </td>
@@ -137,14 +131,14 @@ translation_of: Web/API/MouseEvent/relatedTarget
 ### JavaScript
 
 ```js
-const mouseoutLog = document.getElementById('log'),
-      red = document.getElementById('red'),
-      blue = document.getElementById('blue');
+const mouseoutLog = document.getElementById("log"),
+  red = document.getElementById("red"),
+  blue = document.getElementById("blue");
 
-red.addEventListener('mouseover', overListener);
-red.addEventListener('mouseout', outListener);
-blue.addEventListener('mouseover', overListener);
-blue.addEventListener('mouseout', outListener);
+red.addEventListener("mouseover", overListener);
+red.addEventListener("mouseout", outListener);
+blue.addEventListener("mouseover", overListener);
+blue.addEventListener("mouseout", outListener);
 
 function outListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
@@ -155,13 +149,13 @@ function outListener(event) {
 function overListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("Examples", 700, 280)}}
 
 ## 仕様書
 

@@ -1,16 +1,15 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-translation_of: Web/CSS/scroll-behavior
-browser-compat: css.properties.scroll-behavior
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
 
 {{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
-Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i>). Lorsque cette propriété est indiquée sur l'élément `body`, elle *ne se propage pas* à la zone d'affichage (<i lang="en">viewport</i>).
+Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i>). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage (<i lang="en">viewport</i>).
 
 Les agents utilisateur peuvent choisir d'ignorer cette propriété.
 
@@ -65,6 +64,7 @@ La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
 ```
 
 #### CSS
+
 ```css
 a {
   display: inline-block;
@@ -72,7 +72,8 @@ a {
   text-decoration: none;
 }
 
-nav, .scroll-container {
+nav,
+.scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;

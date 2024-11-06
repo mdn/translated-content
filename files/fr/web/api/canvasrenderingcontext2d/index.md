@@ -1,28 +1,27 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - graphique
-translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectangles, du texte, des images et d'autres objets sur l'élément canvas. Il fournit le contexte de rendu 2D pour la surface de dessin d'un élément {{HTMLElement("canvas")}}.
 
 Pour obtenir un objet de cette interface, appelez {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "2d" comme argument :
 
-    var canevas = document.getElementById('tutorial'); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
-    var ctx = canevas.getContext('2d');
+```js
+var canevas = document.getElementById("tutorial"); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
+var ctx = canevas.getContext("2d");
+```
 
 Une fois que vous avez le contexte de rendu 2D pour un canevas, vous pouvez dessiner à l'intérieur. Par exemple :
 
-    ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectangle
-    ctx.fillRect(10, 10, 55, 50);   // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
+```js
+ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectangle
+ctx.fillRect(10, 10, 55, 50); // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
+```
 
-Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
+Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
 
 ## Dessin de rectangles
 
@@ -33,7 +32,7 @@ Il existe trois méthodes qui dessinent immédiatement des rectangles sur la bit
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}
   - : Dessine un rectangle rempli à la position _(x, y)_ dont la taille est déterminée par _largeur_ et _hauteur_.
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-  - : Peint un rectangle ayant un point de départ en *(x, y)*, une largeur *l* et une hauteur _h_ sur le canevas, en utilisant le style de trait en cours.
+  - : Peint un rectangle ayant un point de départ en _(x, y)_, une largeur _l_ et une hauteur _h_ sur le canevas, en utilisant le style de trait en cours.
 
 ## Dessiner du texte
 
@@ -67,16 +66,16 @@ Les méthodes et propriétés suivantes controllent comment les lignes sont dess
 
 ## Styles de texte
 
-Les propriétés suivantes contrôlent la manière dont le texte est rendu à l’affichage.
+Les propriétés suivantes contrôlent la manière dont le texte est rendu à l'affichage.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
   - : Paramètre de fonte dont la valeur par défaut est `10px sans-serif`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : Paramètre d’alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
+  - : Paramètre d'alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : Paramètre d’alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
+  - : Paramètre d'alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direction d’affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
+  - : Direction d'affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
 
 ## Fill and stroke styles
 
@@ -120,17 +119,17 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
   - : Connects the last point in the subpath to the `x, y` coordinates with a straight line.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
-  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()`before creating the Bézier curve.
+  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
   - : Adds a quadratic Bézier curve to the current path.
 - {{domxref("CanvasRenderingContext2D.arc()")}}
-  - : Adds an arc to the path which is centered at *(x, y)* position with radius *r* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
+  - : Adds an arc to the path which is centered at _(x, y)_ position with radius _r_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.arcTo()")}}
   - : Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.
 - {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
-  - : Adds an ellipse to the path which is centered at *(x, y)* position with the radii *radiusX* and *radiusY* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
+  - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Creates a path for a rectangle at position *(x, y)* with a size that is determined by *width* and *height*.
+  - : Creates a path for a rectangle at position _(x, y)_ with a size that is determined by _width_ and _height_.
 
 ## Drawing paths
 
@@ -143,7 +142,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -153,8 +152,6 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}}
-  - : Current transformation matrix ({{domxref("SVGMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
@@ -171,7 +168,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 ## Compositing
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0`(opaque).
+  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
   - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
 
@@ -187,7 +184,7 @@ See also the {{domxref("ImageData")}} object.
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
   - : Creates a new, blank {{domxref("ImageData")}} object with the specified dimensions. All of the pixels in the new object are transparent black.
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at *(sx, sy)* and has an *sw* width and *sh* height.
+  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at _(sx, sy)_ and has an _sw_ width and _sh_ height.
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
   - : Paints data from the given {{domxref("ImageData")}} object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.
 
@@ -274,10 +271,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
@@ -303,16 +296,14 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("HTMLCanvasElement")}}

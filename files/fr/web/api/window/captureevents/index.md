@@ -1,46 +1,42 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Méthode
-  - Non-standard
-translation_of: Web/API/Window/captureEvents
 ---
+
 {{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}
 
 La méthode **`Window.captureEvents()`** enregistre la fenêtre pour capturer tous les événements du type spécifié.
 
 ## Syntaxe
 
-    window.captureEvents(eventType)
+```js
+window.captureEvents(eventType);
+```
 
 `eventType` est une combinaison des valeurs suivantes: `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD`.
 
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<!-- ... -->
-<script>
-function reg() {
-  window.captureEvents(Event.CLICK);
-  window.onclick = page_click;
-}
+  <head>
+    <!-- ... -->
+    <script>
+      function reg() {
+        window.captureEvents(Event.CLICK);
+        window.onclick = page_click;
+      }
 
-function page_click() {
-  alert('événement de clic sur la page détecté!');
-}
-</script>
-</head>
+      function page_click() {
+        alert("événement de clic sur la page détecté!");
+      }
+    </script>
+  </head>
 
-<body onload="reg();">
-<p>cliquez n'importe où sur cette page.</p>
-</body>
+  <body onload="reg();">
+    <p>cliquez n'importe où sur cette page.</p>
+  </body>
 </html>
 ```
 

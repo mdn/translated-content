@@ -1,12 +1,8 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("EventTarget")}} 인터페이스의 **`dispatchEvent()`** 메서드는 `EventTarget` 객체로 {{domxref("Event")}}를 발송해서, 해당 이벤트에 대해 등록된 {{domxref("EventListener")}}들을 (동기적으로) 순서대로 호출합니다. `dispatchEvent()`를 통해 직접 발송한 이벤트에도 캡처링과 버블링 단계를 포함한 일반적인 이벤트 처리 규칙이 적용됩니다.
@@ -20,7 +16,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
 ## 구문
 
 ```js
-dispatchEvent(event)
+dispatchEvent(event);
 ```
 
 ### 매개변수
@@ -37,7 +33,8 @@ dispatchEvent(event)
 - `InvalidStateError` {{domxref("DomException")}}
   - : 이벤트 초기화 시 이벤트 유형을 지정하지 않은 경우 발생합니다.
 
-> **경고:** 이벤트 처리기에서 발생한 예외는 처리하지 않은 예외로 보고됩니다. 이벤트 처리기는 중첩 호출 스택에서 동작하므로, 실행이 끝날 때까지 호출자는 대기하지만, 예외는 호출자로 전파되지 않습니다.
+> [!WARNING]
+> 이벤트 처리기에서 발생한 예외는 처리하지 않은 예외로 보고됩니다. 이벤트 처리기는 중첩 호출 스택에서 동작하므로, 실행이 끝날 때까지 호출자는 대기하지만, 예외는 호출자로 전파되지 않습니다.
 
 ## 예외
 
@@ -53,4 +50,4 @@ dispatchEvent(event)
 
 ## See also
 
-- The [Event object reference](/en-US/docs/Web/API/Event)
+- The [Event object reference](/ko/docs/Web/API/Event)

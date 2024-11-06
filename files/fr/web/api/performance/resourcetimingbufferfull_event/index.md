@@ -1,16 +1,8 @@
 ---
-title: 'Performance : Événement resourcetimingbufferfull'
+title: "Performance : Événement resourcetimingbufferfull"
 slug: Web/API/Performance/resourcetimingbufferfull_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Performance
-  - Reference
-  - Performance web
-  - onresourcetimingbufferfull
-translation_of: Web/API/Performance/resourcetimingbufferfull_event
 ---
+
 {{APIRef}}
 
 L'événement `resourcetimingbufferfull` se déclenche lorsque la mémoire [tampon de synchronisation des ressources](/fr/docs/Web/API/Performance/setResourceTimingBufferSize) du navigateur est pleine.
@@ -59,18 +51,16 @@ function init() {
 Notez que vous pouvez également configurer le gestionnaire à l'aide de la fonction addEventListener() :
 
 ```js
-performance.addEventListener('resourcetimingbufferfull', buffer_full);
+performance.addEventListener("resourcetimingbufferfull", buffer_full);
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-onresourcetimingbufferfull', 'onresourcetimingbufferfull')}} | {{Spec2('Resource Timing')}} | Définition initialen. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.resourcetimingbufferfull_event")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,11 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
-La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
+La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
 
 {{EmbedInteractiveExample("pages/css/border-color.html")}}
 
@@ -52,9 +47,13 @@ border-color: inherit;
 - `inherit`
   - : Un mot-clé qui indique que les quatre valeurs sont héritées depuis la valeur calculée de la propriété pour l'élément parent.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -96,7 +95,8 @@ ul {
 ```html
 <div id="unevaleur">
   <p><code>border-color: red;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -104,7 +104,8 @@ ul {
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> équivalent à</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -112,7 +113,8 @@ ul {
 </div>
 <div id="hauthoribas">
   <p><code>border-color: red cyan gold;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -120,7 +122,8 @@ ul {
 </div>
 <div id="hdbg">
   <p><code>border-color: red cyan black gold;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>
@@ -134,18 +137,11 @@ ul {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                             | Commentaires                                                                                         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-shorthand-keyword")}}         | {{Spec2("CSS Logical Properties")}} | Ajout du mot-clé `logical`.                                                                          |
-| {{SpecName("CSS3 Backgrounds", "#border-color", "border-color")}}             | {{Spec2('CSS3 Backgrounds')}}         | Le mot-clé `transparent` a été retiré pour être ajouté au type {{cssxref("&lt;color&gt;")}}. |
-| {{SpecName("CSS2.1", "box.html#border-color-properties", "border-color")}} | {{Spec2('CSS2.1')}}                         | Cette propriété est désormais une propriété raccourcie.                                              |
-| {{SpecName("CSS1", "#border-color", "border-color")}}                             | {{Spec2('CSS1')}}                         | Définition initiale.                                                                                 |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-color")}}
+{{Compat}}
 
 ## Voir aussi
 

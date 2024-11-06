@@ -1,14 +1,9 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/template
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<template>`** (ou **_Template Content_** ou modèle de contenu) est un mécanisme utilisé pour stocker du contenu HTML (côté client) qui ne doit pas être affiché lors du chargement de la page mais qui peut être instancié et affiché par la suite grâce à un script JavaScript.
 
@@ -54,7 +49,6 @@ Avec le tableau créé et le template défini, on utilise JavaScript pour insér
 // l'élément HTML template en vérifiant la présence
 // de l'attribut content pour l'élément template.
 if ("content" in document.createElement("template")) {
-
   // On prépare une ligne pour le tableau
   var template = document.querySelector("#productrow");
 
@@ -75,7 +69,6 @@ if ("content" in document.createElement("template")) {
 
   // Puis on insère
   tbody.appendChild(clone2);
-
 } else {
   // Une autre méthode pour ajouter les lignes
   // car l'élément HTML n'est pas pris en charge.
@@ -109,7 +102,7 @@ table td {
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
@@ -137,7 +130,7 @@ table td {
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >, du
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
@@ -148,7 +141,7 @@ table td {
           >des éléments destinés aux scripts</a
         >. L'élément {{HTMLElement("colgroup")}} est également autorisé
         s'il n'a pas l'attribut
-        {{htmlattrxref("span", "colgroup")}}.
+        <a href="/fr/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
       </td>
     </tr>
     <tr>
@@ -164,14 +157,11 @@ table td {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Voir aussi
 

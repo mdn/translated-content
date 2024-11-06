@@ -1,12 +1,10 @@
 ---
 title: menclose
 slug: Web/MathML/Element/menclose
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
-translation_of: Web/MathML/Element/menclose
 ---
+
+{{MathMLRef}}
+
 L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'une même notation, définie par l'attribut `notation`.
 
 ## Attributs
@@ -46,23 +44,18 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 
 ```html
 <math>
-
   <menclose notation="circle box">
     <mi> x </mi>
     <mo> + </mo>
     <mi> y </mi>
   </menclose>
-
 </math>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.menclose', 'menclose') }} | {{ Spec2('MathML3') }} | Définition actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.menclose', 'menclose') }} | {{ Spec2('MathML2') }} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.menclose")}}
+{{Compat}}

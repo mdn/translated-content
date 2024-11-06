@@ -1,15 +1,8 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/exchange
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
@@ -18,7 +11,9 @@ La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à
 
 ## Syntaxe
 
-    Atomics.exchange(typedArray, index, valeur)
+```js
+Atomics.exchange(typedArray, index, valeur);
+```
 
 ### Paramètres
 
@@ -45,19 +40,17 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
-Atomics.exchange(ta, 0, 12);  // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0);          // 12
+Atomics.exchange(ta, 0, 12); // renvoie 0, l'ancienne valeur
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaires                     |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.exchange', 'Atomics.exchange')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.exchange")}}
+{{Compat}}
 
 ## Voir aussi
 

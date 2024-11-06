@@ -1,19 +1,9 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
-{{AddonSidebar()}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
+
+{{AddonSidebar}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
 
 ```js
 var gettingCookies = browser.cookies.getAll();
@@ -22,17 +12,17 @@ gettingCookies.then(onGot, onError);
 
 La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant.
 
-Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
+Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
 
 ## Syntaxe
 
 ```js
-var myError = browser.runtime.lastError;  // null or Error object
+var myError = browser.runtime.lastError; // null or Error object
 ```
 
 ### Valeur
 
-Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si  `lastError` n'a pas été défini, la valeur est `null`.
+Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
 
 ## Examples
 
@@ -47,10 +37,7 @@ function logCookie(c) {
   }
 }
 
-browser.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 La même chose, mais en utilisant une promesse de gérer le résultat de `setCookie()`:
@@ -64,28 +51,27 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 
 setCookie.then(logCookie, logError);
 ```
 
-> **Note :** `runtime.lastError` est un alias pour  {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
+> **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +98,4 @@ setCookie.then(logCookie, logError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

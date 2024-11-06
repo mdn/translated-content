@@ -1,20 +1,19 @@
 ---
 title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/processing-instruction
-original_slug: Web/XSLT/processing-instruction
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:processing-instruction>` écrit une instruction de traitement dans le document de sortie.
 
 ### Syntaxe
 
-    <code><xsl:processing-instruction name=NOM>
-    	MODÈLE
-    </xsl:processing-instruction></code>
+```xml
+<xsl:processing-instruction name=NOM>
+  MODÈLE
+</xsl:processing-instruction>
+```
 
 ### Attribut obligatoire
 

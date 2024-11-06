@@ -1,16 +1,8 @@
 ---
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - encodedBodySize
-translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété **`encodedBodySize`** en lecture seule représente la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
@@ -34,23 +26,20 @@ Un `number` représentant la taille (en octets) reçue de la récupération (HTT
 Dans l'exemple suivant, la valeur des propriétés de taille de tous les [types](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrées.
 
 ```js
-function log_sizes(perfEntry){
+function log_sizes(perfEntry) {
   // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
   // si elles sont prises en charge
   if ("decodedBodySize" in perfEntry)
     console.log("decodedBodySize = " + perfEntry.decodedBodySize);
-  else
-    console.log("decodedBodySize = N'EST PAS pris en charge");
+  else console.log("decodedBodySize = N'EST PAS pris en charge");
 
   if ("encodedBodySize" in perfEntry)
     console.log("encodedBodySize = " + perfEntry.encodedBodySize);
-  else
-    console.log("encodedBodySize = N'EST PAS pris en charge");
+  else console.log("encodedBodySize = N'EST PAS pris en charge");
 
   if ("transferSize" in perfEntry)
     console.log("transferSize = " + perfEntry.transferSize);
-  else
-    console.log("transferSize = N'EST PAS pris en charge");
+  else console.log("transferSize = N'EST PAS pris en charge");
 }
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
@@ -63,11 +52,8 @@ function check_PerformanceEntries() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-encodedbodysize', 'encodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.encodedBodySize")}}
+{{Compat}}

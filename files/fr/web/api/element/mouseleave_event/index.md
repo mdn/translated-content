@@ -1,15 +1,8 @@
 ---
-title: 'Element : évènement mouseleave'
+title: "Element : évènement mouseleave"
 slug: Web/API/Element/mouseleave_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - mouseleave
-translation_of: Web/API/Element/mouseleave_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element")}} lorsque le curseur d'un dispositif de pointage (ex. une souris) se déplace en dehors de cet élément.
@@ -37,7 +30,7 @@ L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element
   </tbody>
 </table>
 
-`mouseleave` et {{event('mouseout')}} se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
+`mouseleave` et [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tous ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
 
 ![](mouseleave.png)
 
@@ -56,10 +49,10 @@ Ici, on utilise l'évènement `mouseenter` pour modifier la bordure d'un éléme
 ### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>Pas encore d'évènement !</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>Pas encore d'évènement !</li>
+  </ul>
 </div>
 ```
 
@@ -70,8 +63,8 @@ On met le `div` en forme afin de le rendre plus visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 
@@ -80,19 +73,23 @@ On met le `div` en forme afin de le rendre plus visible.
 ```js
 var enterEventCount = 0;
 var leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', e => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
-  addListItem("Voici le nombre d'évènements mouseenter : " + enterEventCount + ".");
+  addListItem(
+    "Voici le nombre d'évènements mouseenter : " + enterEventCount + ".",
+  );
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
-  addListItem("Voici le nombre d'évènements mouseleave : " + leaveEventCount + ".");
+  addListItem(
+    "Voici le nombre d'évènements mouseleave : " + leaveEventCount + ".",
+  );
 });
 
 function addListItem(text) {
@@ -116,14 +113,11 @@ function addListItem(text) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseleave_event")}}
+{{Compat}}
 
 ## Voir aussi
 

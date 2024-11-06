@@ -1,17 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - ウェブ
-  - font
-  - recipe:css-property
-browser-compat: css.properties.font-style
-translation_of: Web/CSS/font-style
 ---
+
 {{CSSRef}}
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
@@ -57,7 +48,8 @@ font-style: unset;
 
 TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が oblique の傾く角度を様々に実装するために使用され、 `"ital"` 変数の値が 1 ならば、 italic の値を使用します。 {{cssxref("font-variation-settings")}} を参照してください。
 
-> **Note:** 次の例を動作させるには、 CSS Fonts Level 4 の `font-style: oblique` が `<angle>` を受け入れる構文に対応したブラウザーが必要です。デモは `font-style: oblique 23deg;` を読み込みます。この値を変更すると、テキストの傾きが変わるのを確認することができます。
+> [!NOTE]
+> 次の例を動作させるには、 CSS Fonts Level 4 の `font-style: oblique` が `<angle>` を受け入れる構文に対応したブラウザーが必要です。デモは `font-style: oblique 23deg;` を読み込みます。この値を変更すると、テキストの傾きが変わるのを確認することができます。
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 
@@ -65,7 +57,7 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 テキストの長い区間に渡って `font-style` の値を `italic` に設定すると、失読症のような認知問題を抱える人にとって読むのが難しくなる可能性があります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義

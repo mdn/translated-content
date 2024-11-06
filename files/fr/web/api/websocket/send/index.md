@@ -1,8 +1,8 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
-browser-compat: api.WebSocket.send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 La méthode **`WebSocket.send()`** rajoute les données indiquées à la queue pour transmission au serveur via la connexion WebSocket, augmentant ainsi la valeur de `bufferedAmount` du nombre d'octets nécessaires pour les données. Si les données ne peuvent être envoyées (par exemple parce qu'elles doivent être mises en tampon mais que la mémoire tampon est pleine), la socket est fermée automatiquement.
@@ -51,7 +51,8 @@ WebSocket.send("Coucou serveur !");
 
     non appairés.
 
-> **Note :** Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
+> [!NOTE]
+> Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
 >
 > Avec Gecko 11.0, la prise en charge des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est implémentée mais pas celle pour les objets [`Blob`](/fr/docs/Web/API/Blob).
 

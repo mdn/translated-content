@@ -1,16 +1,8 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
-tags:
-  - アットルール
-  - CSS
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - supports
-browser-compat: css.at-rules.supports
-translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 **`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中に配置することができます。
@@ -31,6 +23,8 @@ translation_of: Web/CSS/@supports
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
 ## 構文
@@ -42,19 +36,21 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 もっとも基本的な対応条件は、単純な宣言 (プロパティ名に続けて、コロンで区切って値) です。宣言は括弧で囲む必要があります。以下の例は、ブラウザーが {{CSSxRef("transform-origin")}} プロパティの値として `5% 5%` を有効とみなすのであれば true を返します。
 
 ```css
-@supports (transform-origin: 5% 5%) {}
+@supports (transform-origin: 5% 5%) {
+}
 ```
 
 ### 関数構文
 
 第二の基本的な対応状況は関数の対応であり、これらの構文はすべてのブラウザーで対応されていますが、関数自体はまだ標準化の過程にあります。
 
-#### `selector()` {{Experimental_Inline}}
+#### `selector()` {{Experimental_Inline}}
 
 ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Child_combinator)に対応していれば true を返します。
 
 ```css
-@supports selector(A > B) {}
+@supports selector(A > B) {
+}
 ```
 
 ### not 演算子
@@ -62,31 +58,38 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 `not` 演算子は、新たな式を作成するために任意の式の前に置くことができ、元の式を否定します。以下の例は、ブラウザーが {{CSSxRef("transform-origin")}} プロパティの値として `10em 10em 10em` を有効と**みなさない**のであれば true を返します。
 
 ```css
-@supports not (transform-origin: 10em 10em 10em) {}
+@supports not (transform-origin: 10em 10em 10em) {
+}
 ```
 
 他の演算子と同様に、 `not` 演算子はどれだけ複雑な宣言にも適用できます。以下の例はすべて有効な式です。
 
 ```css
-@supports not (not (transform-origin: 2px)) {}
-@supports (display: grid) and (not (display: inline-grid)) {}
+@supports not (not (transform-origin: 2px)) {
+}
+@supports (display: grid) and (not (display: inline-grid)) {
+}
 ```
 
-> **Note:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `or` といった他の演算子と組み合わせるときは、括弧が必須です。
+> **メモ:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `or` といった他の演算子と組み合わせるときは、括弧が必須です。
 
 ### and 演算子
 
 `and` 演算子は 2 つの式から、元の式の論理積で構成される新たな式を作成します。元の式の両方が true になる場合に限り、新たな式が true になります。以下の例では 2 つの式が同時に true になる場合に限り、全体の式も true になります。
 
 ```css
-@supports (display: table-cell) and (display: list-item) {}
+@supports (display: table-cell) and (display: list-item) {
+}
 ```
 
 括弧を増やすことなく、複数の論理積を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display:contents) {}
-@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}
+@supports (display: table-cell) and (display: list-item) and (display: contents) {
+}
+@supports (display: table-cell) and
+  ((display: list-item) and (display: contents)) {
+}
 ```
 
 ### or 演算子
@@ -94,20 +97,20 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 `or` 演算子は 2 つの式から、元の式の論理和で構成される新たな式を作成します。元の式の一方または両方が true になる場合に限り、新たな式が true になります。以下の例では 2 つの式の少なくとも 1 つが true になる場合に限り、全体の式も true になります。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+}
 ```
 
 括弧を増やすことなく、複数の論理和を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-          (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
-          ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
 ```
 
-> **Note:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
+> **メモ:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
 
 ## 形式文法
 
@@ -147,9 +150,9 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 
 ```css
 @supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
+  body {
+    color: var(--varName);
+  }
 }
 ```
 
@@ -177,9 +180,9 @@ CSS Conditional Rules Level 4 仕様では、セレクターの対応を検査�
      nth-child(...)の `of` 引数に対応していないブラウザーでは、
      部分的に適用されます。 */
   :is(
-      :nth-child(1n of ul, ol) a,
+      :nth-child(1n of ul, ol) a,
       details > summary
-  ) {
+  ) {
     … /* :is(…) セレクターと :nth-child(…) の
           両方に対応している場合にのみ適用される CSS */
   }

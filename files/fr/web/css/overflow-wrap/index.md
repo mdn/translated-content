@@ -1,19 +1,16 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-> **Note :** À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
+> [!NOTE]
+> À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
 
 À l'origine, cette propriété était une extension non-standard sans préfixe de Microsoft et intitulée `word-wrap`. Implémentée sous ce nom par la plupart des navigateurs depuis, elle a été renommée en `overflow-wrap` et `word-wrap` est devenu un alias.
 
@@ -42,9 +39,13 @@ La propriété `overflow-wrap` peut être définie avec l'un des mots-clés suiv
 - `break-word`
   - : Indique que les mots qui ne subissent habituellement pas de césure peuvent être scindés à n'importe quelle position s'il n'y a pas d'autres positions envisageables pour la césure de la ligne. Les possibilités de rupture douces ajoutées par la césure **ne sont pas** prises en compte lors du calcul des tailles `min-content` intrinsèques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -80,33 +81,47 @@ p {
 
 ```html
 <h3><code>normal</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself.
+</p>
 <h3><code>overflow-wrap: anywhere</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>overflow-wrap: break-word</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. </p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>word-break: break-all</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>hyphens: auto</code>, without <code>lang</code> attribute</h3>
-<p class="hyphens">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>
-  though I've never been there myself. </p>
+<p class="hyphens">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em> though I've never been
+  there myself.
+</p>
 <h3><code>hyphens: auto</code>, English rules</h3>
-<p class="hyphens" lang="en">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p class="hyphens" lang="en">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
+  there myself.
+</p>
 <h3><code>hyphens: auto</code>, German rules</h3>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
+  there myself.
+</p>
 ```
 
 ### Résultat
@@ -115,15 +130,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap')}} | {{Spec2('CSS3 Text')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-wrap")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,8 @@
 ---
 title: Affectation après ET logique (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après ET logique (`x &&= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à vrai (_truthy_)](/fr/docs/Glossary/Truthy).
@@ -18,7 +12,7 @@ L'opérateur d'affectation après ET logique (`x &&= y`) n'affecte la valeur de 
 ## Syntaxe
 
 ```js
-expr1 &&= expr2
+expr1 &&= expr2;
 ```
 
 ## Description

@@ -1,15 +1,8 @@
 ---
-title: 'Attribut HTML : min'
+title: "Attribut HTML : min"
 slug: Web/HTML/Attributes/min
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - min
-  - Reference
-translation_of: Web/HTML/Attributes/min
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`min`** définit la valeur minimale qui est acceptable et valide pour l'entrée contenant l'attribut. Si la [valeur](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément est inférieure à cette valeur, l'élément échoue lors de la [validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`. Si une valeur est spécifiée pour `min` qui n'est pas un nombre valide, l'entrée n'a pas de valeur minimale.
@@ -116,15 +109,16 @@ Valable pour les types de saisie numérique, y compris les types [`date`](/fr/do
   </tbody>
 </table>
 
-> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!NOTE]
+> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
 Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeUnderflow`](/fr/docs/Web/API/ValidityState/rangeUnderflow) pour plus d'informations.
 
 Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `min` définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut [`max`](/fr/docs/Web/HTML/Attributes/max)), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
-| Élément                                      | Syntaxe                             | Exemple                                                                                            |
-| -------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [<number>](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
+| Élément                                      | Syntaxe                               | Exemple                                                                                            |
+| -------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
 
 ### Impact sur `step`
 
@@ -141,7 +135,7 @@ input:invalid {
 Nous définissons ensuite une entrée avec une valeur minimale de 7,2, en omettant l'attribut « step », qui a la valeur 1 par défaut.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 Comme `step` a pour valeur 1 par défaut, les valeurs valides comprennent `7,2`, `8,2`, `9,2`, et ainsi de suite. La valeur 8 n'est pas valide. Comme nous avons inclus une valeur non valide, les navigateurs compatibles afficheront la valeur comme non valide.
@@ -156,14 +150,11 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## Voir aussi
 

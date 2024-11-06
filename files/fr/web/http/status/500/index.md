@@ -1,9 +1,8 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-translation_of: Web/HTTP/Status/500
-browser-compat: http.status.500
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur serveur HTTP **`500 Internal Server Error`** indique que le serveur a rencontré un problème inattendu qui l'empêche de répondre à la requête.

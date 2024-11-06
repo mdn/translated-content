@@ -1,16 +1,8 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - initiatorType
-translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété **`initiatorType`** en lecture seule est une [chaîne de caractères](/fr/docs/Web/API/DOMString) qui représente le _type_ de ressource qui a initié l'événement de performance.
@@ -47,20 +39,15 @@ function print_PerformanceEntries() {
 function print_initiatorType(perfEntry) {
   // Imprime la valeur initiatorType de cet objet d'entrée de performance
   let value = "initiatorType" in perfEntry;
-  if (value)
-    console.log("... initiatorType = " + perfEntry.initiatorType);
-  else
-    console.log("... initiatorType = N'EST PAS pris en charge");
+  if (value) console.log("... initiatorType = " + perfEntry.initiatorType);
+  else console.log("... initiatorType = N'EST PAS pris en charge");
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing',
-        '#dom-performanceresourcetiming-initiatortype', 'initiatorType')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.initiatorType")}}
+{{Compat}}

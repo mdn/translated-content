@@ -1,14 +1,8 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
-tags:
-  - Aperçu
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - Reference
-translation_of: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 ---
+
 {{CSSRef}}
 
 **_CSSOM View_** (ou **Vue CSSOM**) est un module de la spécification CSS qui définit comment manipuler la vue d'un document et notamment le comportement lors du défilement (_scrolling_).
@@ -26,10 +20,8 @@ translation_of: Web/CSS/CSSOM_View
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

@@ -1,0 +1,13 @@
+{
+  "config": {
+    "extends": "./.markdownlint.jsonc",
+  },
+  "customRules": ["markdownlint-rule-search-replace"],
+  "ignores": [
+    "node_modules",
+    ".git",
+    ".github",
+    "**/conflicting/**",
+    "**/orphaned/**",
+  ],
+}

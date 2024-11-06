@@ -1,16 +1,8 @@
 ---
-title: 'Django didactique Section 4: Site d''administration de Django'
+title: "Django didactique Section 4: Site d'administration de Django"
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Python
-  - django
-  - django_admin
-translation_of: Learn/Server-side/Django/Admin_site
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 Nous avons créé le modèle de données pour le site web de la [bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website). Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.
@@ -66,7 +58,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **Note :** Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
+> [!NOTE]
+> Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
 >
 > Cela devrait être de la forme : `admin.site.register(Language)` et n'oubliez pas d'importer l'objet.
 
@@ -92,7 +85,8 @@ python3 manage.py runserver
 
 Pour vous authentifier au site, ouvrez l'URL _/admin_ du site local (concrètement, [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/)) et identifiez vous avec votre compte de super-utilisateur.
 
-> **Note :** Vous serez redirigé⋅e vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.
+> [!NOTE]
+> Vous serez redirigé⋅e vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.
 >
 > Si vous accéder au site local sans /admin, vous aurez un message d'erreur car les routages d'URL n'ont pas encore été traité. ne vous en inquiétez pas cela va venir...
 
@@ -106,7 +100,8 @@ Entrez les valeurs des champs. Pour les champs qui relèvent de relations entre 
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Note :** À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.
+> [!NOTE]
+> À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.
 
 Après avoir saisie les informations et ajouté vos livres, cliquez sur le lien **Accueil** pour revenir à la page principale du site d'administration. Cliquez sur le lien **Books** pour afficher la liste des livres enregistrés (ou sur d'autres liens pour voir les autres objets présents en base). Après avoir ajouter quelques livres, votre page devrait ressembler à celle ci-dessous. La liste des livres est affichée par titre ; c'est, en fait, la valeur délivrée par la méthode `__str__()` du modèle d'objet Book comme cela a été codé dans le précédent chapitre.
 
@@ -124,7 +119,7 @@ Ce qui manque actuellement ce sont des _Book Instances_. Vous n'en avez pas car 
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
-Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d’autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
+Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d'autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
 
 Nous avons terminé cette étape ! Vous savez comment configurer et utiliser le site d'administration. Vous pouvez continuer à créer des enregistrements pour Book, BookInstance, Genre et Author, que nous pourrons utiliser une fois que nous aurons créé nos propres vues de détail.
 
@@ -140,7 +135,7 @@ mais vous avez la possibilité de personnaliser le comportement du site d'admini
 - Des vues en liste
 
   - Ajouter des champs ou des informations supplémentaires affichés pour chaque enregistrement.
-  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d’une autre valeur de sélection (par exemple, le statut du prêt du livre).
+  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d'une autre valeur de sélection (par exemple, le statut du prêt du livre).
   - Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.
 
 - Vues détaillées
@@ -194,11 +189,11 @@ class BookInstanceAdmin(admin.ModelAdmin):
     pass
 ```
 
-Pour le moment, toutes les classes d’administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
+Pour le moment, toutes les classes d'administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
 
 ### Configurer les vues en liste
 
-La liste des auteurs (objet `Author`) est affichée dans l'application _LocalLibrary_ à l'aide du nom généré par la méthode  `__str__()`. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive [list_display](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin) pour ajouter d'autres champs de l'objet `Author`.
+La liste des auteurs (objet `Author`) est affichée dans l'application _LocalLibrary_ à l'aide du nom généré par la méthode `__str__()`. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive [list_display](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin) pour ajouter d'autres champs de l'objet `Author`.
 
 Modifiez votre classe `AuthorAdmin` comme décrit ci-dessous (vous pouvez copier et coller le code). Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à ceux spécifiés dans votre modèle d'objet `Author`.
 
@@ -211,7 +206,7 @@ Si vous accèdez à la page d'administration des auteurs, vous devriez obtenir u
 
 ![Admin Site - Improved Author List](admin_improved_author_list.png)
 
-Pour les livres, nous allons visulaiser les objets  `Book` en affichant les champs `author` and `genre`. Le champs `author` est de type `ForeignKey` décrivant une relation un à n. En conséquence, nous afficherons l'élément produit par la méthode `__str__()` de l'objet `Author` pour l'instance associée à votre livre. Le genre est une relation n à n, donc nous allons avoir à traiter son affichage de manière particulière. Modifiez la classe `BookAdmin` comme suit :
+Pour les livres, nous allons visulaiser les objets `Book` en affichant les champs `author` and `genre`. Le champs `author` est de type `ForeignKey` décrivant une relation un à n. En conséquence, nous afficherons l'élément produit par la méthode `__str__()` de l'objet `Author` pour l'instance associée à votre livre. Le genre est une relation n à n, donc nous allons avoir à traiter son affichage de manière particulière. Modifiez la classe `BookAdmin` comme suit :
 
 ```python
 class BookAdmin(admin.ModelAdmin):
@@ -220,7 +215,8 @@ class BookAdmin(admin.ModelAdmin):
 
 Le champ genre représente une relation n à n (`ManyToManyField`) qui ne peut pas être prise en charge par la directive `list_display`. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(`display_genre`) qui permettra de traiter l'affichage des informations souhaitées pour le genre.
 
-> **Note :** C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
+> [!NOTE]
+> C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
 
 Ajoutez le code ci-dessous dans votre modèle d'objet `Book` (concrètement dans le fichier **locallibrary/catalog/models.py**). Cette fonction génère une chaîne de caractère contenant les trois premières valeurs de tous les genres (s'ils existent) et créer une courte destription (`short_description`) qui sera utilisé par le site d'administration avec cette méthode.
 
@@ -238,7 +234,8 @@ Après avoir sauvegardé vos fichiers models.py et admin.py, vous pouvez accéde
 
 Les champs `Genre` `Language` ne dispose que d'une seule valeur. Il n'est donc pas utile de créer une page d'affichage spélicale.
 
-> **Note :** Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt `BookInstance` !
+> [!NOTE]
+> Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt `BookInstance` !
 
 ### Ajouter des filtres
 
@@ -257,7 +254,8 @@ La page de la vue en liste des ouvrages à consultation (BookInstance) est déso
 
 La vue est agencée, par défaut, en affichant verticalement dans l'ordre de déclaration des champs de l'objet modèle. Cette règle d'affichage peut être modifiée en indiquant quels champs afficher (ou exclure) et organiser les informations en sections avec un affichage horizontal ou vertical et les widgets à utiliser.
 
-> **Note :** Les modèles de l'application _LocalLibrary_ ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.
+> [!NOTE]
+> Les modèles de l'application _LocalLibrary_ ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.
 
 #### Contrôler l'affichage et la dispostion des champs
 
@@ -275,11 +273,12 @@ La page web de votre application locale devrait ressembler à celle ci-dessous :
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [exclude](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
+> [!NOTE]
+> Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [`exclude`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
 
 #### Organiser des sections dans votre vue de détail
 
-Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [fieldsets](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
+Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [`fieldsets`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
 
 Nous allons utiliser l'objet `BookInstance` pour mettre en avant cette possibilité. Nous avons à afficher des informations sur l'ouvrage (nom, édition, id) et sur sa disponibilité actuelle ou à venir (statut et retour de prêt). Nous choisissons d'afficher ces éléments dans deux sections différentes, l'une nommée et l'autre pas. Modifiez l'objet BookInstanceAdmin avec le texte en gras comme ci-dessous :
 
@@ -308,7 +307,7 @@ Le résultat de cette description devrait vous apparaître de manière analogue 
 
 Parfois, il peut être très utile d'ajouter à l'affichage des éléments associés en même temps. C'est le cas, par exemple, pour les copies d'ouvrage associés à un livre en bibliothèque. Il est utile pour le bibliothécaire de disposer à la fois des informations sur le livre et des copies présentes ou non en rayonnage..
 
-Pour cela, vous pouvez utiliser un d'objet pour un affichage horizontal ([TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline)) ou vertical ([StackedInline)](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.StackedInline) (qui n'est autre que l'affichage standard des données). Modifiez le code associé à votre modèle `BookInstance` dans le fichier **admin.py** pour disposer des informations _inline_ à l'affichage des informations sur votre objet `Book`. Gardez en mémoire que c'est l'objet  `BookAdmin` qui gère l'affichage les informations de l'objet `Book`; c'est donc `BookAdmin` il doit donc être modifié :
+Pour cela, vous pouvez utiliser un d'objet pour un affichage horizontal ([TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline)) ou vertical ([StackedInline)](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.StackedInline) (qui n'est autre que l'affichage standard des données). Modifiez le code associé à votre modèle `BookInstance` dans le fichier **admin.py** pour disposer des informations _inline_ à l'affichage des informations sur votre objet `Book`. Gardez en mémoire que c'est l'objet `BookAdmin` qui gère l'affichage les informations de l'objet `Book`; c'est donc `BookAdmin` il doit donc être modifié :
 
 ```python
 class BooksInstanceInline(admin.TabularInline):
@@ -326,40 +325,23 @@ Si vous allez consulter un livre, vous devriez pouvoir, au bas de la page, consu
 
 Dans le cas présent nous avons juste décidé d'afficher toutes les informations des copies associées à un livre. Si vous consultez sur la documentation Django les informations relatives au type [TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline) vous aurez accès à l'ensemble des éléments qui permettent de filtrer et afficher les éléments dont vous aurez besoin.
 
-> **Note :** Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut `extra` à 0 dans la définition de l'objet `BooksInstanceInline` ... essayez !
+> [!NOTE]
+> Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut `extra` à 0 dans la définition de l'objet `BooksInstanceInline` ... essayez !
 
 ## Défi
 
 Beaucoup de sujets ont été abordés dans ce chapitre, c'est l'occasion de les mettre en application :
 
-1.  Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
-2.  Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
+1. Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
+2. Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
 
 ## Résumé
 
 Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les base du site d'administration et à créer un suoper-utilisateur, voius avez aussi navigué dans le site d'admlinistration et vous avez appris à modifier les formulaires de saisie et comment ajouter, modifier ou supprimer des données.
 
-## A voir aussi
+## Voir aussi
 
-- [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
+- [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin) (Django docs)
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,10 +1,9 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-translation_of: Web/HTML/Element/input/week
-browser-compat: html.elements.input.input-week
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Numéro_de_semaine)).
 
@@ -64,7 +63,7 @@ Il est possible de définir une valeur par défaut grâce à l'attribut [`value`
 
 ```html
 <label for="week">À quelle semaine souhaiteriez-vous démarrer ?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('', 600, 60)}}
@@ -75,7 +74,7 @@ Il est également possible d'accéder à la valeur ou de la définir en JavaScri
 
 ```js
 let weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## Attributs supplémentaires
@@ -98,7 +97,8 @@ Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut 
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
+> [!NOTE]
+> Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
 
 ### `step`
 
@@ -106,7 +106,8 @@ L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le 
 
 Une chaîne de caractères `any` indique qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur (sous réserve qu'elle respecte les autres contraintes potentiellement indiquées par `min` ou `max`) est valide.
 
-> **Note :** Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> [!NOTE]
+> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
 
 Pour les champs de type `week`, la valeur de l'attribut `step` est indiquée en nombre de semaine et le facteur de multiplication est 604&nbsp;800&nbsp;000 (qui correspond au nombre de millisecondes dans une semaine). Par défaut, la valeur de `step` est 1, qui indique une semaine. La base à partir de laquelle incrémenter par défaut est -259&nbsp;200&nbsp;000 qui correspond à la première semaine de 1970 (`1970-W01`).
 
@@ -125,7 +126,7 @@ La forme la plus simple de `<input type="week">` se compose d'un élément `<inp
 ```html
 <form>
   <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -150,8 +151,7 @@ Les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/d
 ```html
 <form>
   <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
@@ -174,15 +174,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -199,12 +199,17 @@ Prenons un autre exemple (où la période a été restreinte comme précédemmen
 <form>
   <div>
     <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Envoyer le formulaire">
+    <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
 ```
@@ -217,7 +222,8 @@ Voici une capture d'écran du résultat obtenu si votre navigateur ne prend pas 
 
 ![](validation-controle-type-week-chrome.png)
 
-> **Attention :** la validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour une utilisatrice ou un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.
+> [!WARNING]
+> La validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour une utilisatrice ou un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.
 
 ## Gérer la prise en charge des navigateurs
 
@@ -250,8 +256,13 @@ Voici le code HTML utilisé&nbsp;:
 <form>
   <div class="nativeWeekPicker">
     <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">À quelle semaine souhaiteriez-vous commencer ?</p>
@@ -259,8 +270,7 @@ Voici le code HTML utilisé&nbsp;:
     <div>
       <span>
         <label for="week">Semaine :</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Année :</label>
@@ -290,15 +300,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -307,29 +317,29 @@ Dans le fragment de code JavaScript qui suit, on montre comment détecter si la 
 
 ```js
 // On définit certaines variables
-let nativePicker = document.querySelector('.nativeWeekPicker');
-let fallbackPicker = document.querySelector('.fallbackWeekPicker');
-let fallbackLabel = document.querySelector('.fallbackLabel');
+let nativePicker = document.querySelector(".nativeWeekPicker");
+let fallbackPicker = document.querySelector(".fallbackWeekPicker");
+let fallbackLabel = document.querySelector(".fallbackLabel");
 
-let yearSelect = document.querySelector('#year');
-let weekSelect = document.querySelector('#fallbackWeek');
+let yearSelect = document.querySelector("#year");
+let weekSelect = document.querySelector("#fallbackWeek");
 
 // À l'état initial, on masque le sélecteur alternatif
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // On teste si le sélecteur natif se transforme en
 // contrôle de saisie de texte ou non
-let test = document.createElement('input');
-test.type = 'week';
+let test = document.createElement("input");
+test.type = "week";
 // Si c'est le cas, on exécute le code dans le bloc
 // conditionnel if() {}
-if(test.type === 'text') {
+if (test.type === "text") {
   // On masque alors le sélecteur natif et
   // on affiche le sélecteur alternatif
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // On ajoute les semaines dynamiquement
   populateWeeks();
@@ -337,15 +347,16 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // On ajoute 52 semaines grâce à une boucle
-  for(let i = 1; i <= 52; i++) {
-    let option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 1; i <= 52; i++) {
+    let option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     weekSelect.appendChild(option);
   }
 }
 ```
 
-> **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> [!NOTE]
+> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
 
 ## Spécifications
 

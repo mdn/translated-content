@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** est un accesseur qui permet de représenter la longueur, en nombre d'éléments, d'un tableau typé.
@@ -18,7 +11,9 @@ La propriété **`length`** est un accesseur qui permet de représenter la longu
 
 ## Syntaxe
 
-    typedarray.length
+```js
+typedarray.length;
+```
 
 ## Description
 
@@ -41,14 +36,11 @@ uint8.length; // 6 (correspond à la longueur en prenant en compte le décalage 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.length', 'TypedArray.prototype.length')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.length', 'TypedArray.prototype.length')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.length")}}
+{{Compat}}
 
 ## Voir aussi
 

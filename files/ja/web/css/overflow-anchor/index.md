@@ -1,20 +1,15 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールアンカリング
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.overflow-anchor
-translation_of: Web/CSS/overflow-anchor
 ---
+
 {{CSSRef}}
 
 **`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロールアンカリングの動作をオプトアウトする方法を提供します。
 
 スクロールアンカリングの動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロールアンカリングによって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
+
+{{EmbedInteractiveExample("pages/css/overflow-anchor.html")}}
 
 ## 構文
 

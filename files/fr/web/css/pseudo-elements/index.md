@@ -1,14 +1,8 @@
 ---
 title: Pseudo-éléments
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudo-éléments
 ---
+
 {{CSSRef}}
 
 Un **pseudo-élément** est un mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle. Ainsi, le pseudo-élément {{cssxref("::first-line")}} permettra de ne cibler que la première ligne d'un élément visé par le sélecteur.
@@ -21,13 +15,16 @@ p::first-line {
 }
 ```
 
-> **Note :** À la différence des pseudo-éléments, [les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) peuvent être utilisées afin de mettre en forme un élément en fonction de son état.
+> [!NOTE]
+> À la différence des pseudo-éléments, [les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) peuvent être utilisées afin de mettre en forme un élément en fonction de son état.
 
 ## Syntaxe
 
-    sélecteur::pseudo-élément {
-      propriété: valeur;
-    }
+```
+sélecteur::pseudo-élément {
+  propriété: valeur;
+}
+```
 
 On ne peut utiliser qu'un seul pseudo-élément dans un sélecteur. Le pseudo-élément doit apparaître après les sélecteurs simple de la déclaration
 
@@ -63,17 +60,14 @@ p::first-line {
 
 ```html
 <p>
-  C’était le Lapin Blanc qui revenait en trottinant,
-  et qui cherchait de tous côtés, d’un air inquiet,
-  comme s’il avait perdu quelque chose ; Alice
-  l’entendit qui marmottait : « La Duchesse ! La
-  Duchesse ! Oh ! mes pauvres pattes ; oh ! ma robe
-  et mes moustaches ! Elle me fera guillotiner aussi
-  vrai que des furets sont des furets ! Où pourrais-je
-  bien les avoir perdus ? » Alice devina tout de suite
-  qu’il cherchait l’éventail et la paire de gants paille,
-  et, comme elle avait bon cœur, elle se mit à les
-  chercher aussi ; mais pas moyen de les trouver.
+  C’était le Lapin Blanc qui revenait en trottinant, et qui cherchait de tous
+  côtés, d’un air inquiet, comme s’il avait perdu quelque chose ; Alice
+  l’entendit qui marmottait : « La Duchesse ! La Duchesse ! Oh ! mes pauvres
+  pattes ; oh ! ma robe et mes moustaches ! Elle me fera guillotiner aussi vrai
+  que des furets sont des furets ! Où pourrais-je bien les avoir perdus ? »
+  Alice devina tout de suite qu’il cherchait l’éventail et la paire de gants
+  paille, et, comme elle avait bon cœur, elle se mit à les chercher aussi ; mais
+  pas moyen de les trouver.
 </p>
 ```
 

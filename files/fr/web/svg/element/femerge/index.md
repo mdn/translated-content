@@ -1,11 +1,8 @@
 ---
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
-tags:
-  - Element
-  - SVG Filter
-translation_of: Web/SVG/Element/feMerge
 ---
+
 {{SVGRef}}
 
 La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de différentes opérations de filtre les uns par dessus les autres. La liste des images à empiler est définit par une liste d'élément {{ SVGElement("feMergeNode") }} à l'intérieur de la balise. Pour y parvenir, stocker au préalable les résultats des filtres voulus dans un buffer temporaire grâce à l'attribut {{ SVGAttr("result") }}.
@@ -19,9 +16,7 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <filter id="feOffset" x="-40" y="-20" width="100" height="200">
     <feOffset in="SourceGraphic" dx="60" dy="60" />
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
@@ -31,7 +26,11 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
     </feMerge>
   </filter>
 
-  <rect x="40" y="40" width="100" height="100"
+  <rect
+    x="40"
+    y="40"
+    width="100"
+    height="100"
     style="stroke: #000000; fill: green; filter: url(#feOffset);" />
 </svg>
 ```
@@ -52,7 +51,7 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 
@@ -60,14 +59,11 @@ Cet élément implémente l'interface {{domxref("SVGFEMergeElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feMergeElement', '&lt;feMerge&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feMergeElement', '&lt;feMerge&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feMerge")}}
+{{Compat}}
 
 ## Voir aussi
 

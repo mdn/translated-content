@@ -1,16 +1,8 @@
 ---
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
-tags:
-  - API
-  - Interface
-  - Paint Timing
-  - Performance Timeline API
-  - PerformancePaintTiming
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformancePaintTiming
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/Paint_Timing_API) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.
@@ -42,9 +34,15 @@ Cette interface n'a pas de méthodes.
 function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) => {
-      console.log("Le temps pour " + performanceEntry.name + " est de " + performanceEntry.startTime + " millisecondes.");
+    let performanceEntries = performance.getEntriesByType("paint");
+    performanceEntries.forEach((performanceEntry, i, entries) => {
+      console.log(
+        "Le temps pour " +
+          performanceEntry.name +
+          " est de " +
+          performanceEntry.startTime +
+          " millisecondes.",
+      );
     });
   } else {
     console.log("Performance Timing n'est pas prise en charge.");
@@ -54,15 +52,15 @@ function showPaintTimings() {
 
 Le code ci-dessus produit une sortie de console semblable à ce qui suit :
 
-    Le temps pour first-paint est de 2785.915 millisecondes.
-    Le temps pour first-contentful-paint est de 2787.460 millisecondes.
+```
+Le temps pour first-paint est de 2785.915 millisecondes.
+Le temps pour first-contentful-paint est de 2787.460 millisecondes.
+```
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}} | {{Spec2('Paint Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformancePaintTiming")}}
+{{Compat}}

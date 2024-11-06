@@ -1,17 +1,8 @@
 ---
 title: Intl.DateTimeFormat() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-tags:
-  - Constructor
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat`** 생성자는 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} 객체를 생성합니다.
@@ -21,16 +12,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
 ## 구문
 
 ```js
-new Intl.DateTimeFormat()
-new Intl.DateTimeFormat(locales)
-new Intl.DateTimeFormat(locales, options)
+new Intl.DateTimeFormat();
+new Intl.DateTimeFormat(locales);
+new Intl.DateTimeFormat(locales, options);
 ```
 
 ### 매개변수
 
 - `locales` {{optional_inline}}
 
-  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `en-US-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
+  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `ko-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
 
     - `nu`
       - : 사용할 기수법. "`arab`",
@@ -56,7 +47,9 @@ new Intl.DateTimeFormat(locales, options)
   - : 다음 속성 일부 또는 전부를 포함하는 객체입니다.
 
     - `dateStyle`
+
       - : `format()`을 호출했을 때 사용할 날짜 서식입니다. 가능한 값은 다음을 포함합니다.
+
         - "`full`"
         - "`long`"
         - "`medium`"
@@ -65,7 +58,9 @@ new Intl.DateTimeFormat(locales, options)
         > **참고:** `dateStyle`은 `timeStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
 
     - `timeStyle`
+
       - : `format()`을 호출했을 때 사용할 시간 서식입니다. 가능한 값은 다음을 포함합니다.
+
         - "`full`"
         - "`long`"
         - "`medium`"
@@ -74,6 +69,7 @@ new Intl.DateTimeFormat(locales, options)
         > **참고:** `timeStyle`은 `dateStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
 
     - `calendar`
+
       - : 역법입니다. "`buddhist`",
         "`chinese`", " `coptic`", "`ethiopia`",
         "`ethiopic`", "`gregory`", " `hebrew`",
@@ -81,14 +77,16 @@ new Intl.DateTimeFormat(locales, options)
         `japanese`", "`persian`", "`roc`" 등을 사용할 수 있습니다.
 
     - `dayPeriod`
+
       - : (영어의 경우) "in the morning", "am", "noon", "n"처럼 시간의 위치를 나타낼 때 사용할 시간 서식입니다. "`narrow`", "`short`", " `long`" 등을 사용할 수 있습니다.
 
-      > **참고:**
+      > [!NOTE]
       >
       > - 12시간제 형식을 사용할 때만 결과의 차이가 있습니다.
       > - 한국어를 포함해, 많은 로케일에서는 지정한 너비에 상관하지 않고 같은 문자열을 반환합니다. ("새벽", "밤" 등)
 
     - `numberingSystem`
+
       - : 기수법입니다. "`arab`",
         "`arabext`", " `bali`", "`beng`",
         "`deva`", "`fullwide`", " `gujr`",
@@ -99,16 +97,20 @@ new Intl.DateTimeFormat(locales, options)
         `telu`", "`thai`", "`tibt`" 등을 사용할 수 있습니다.
 
     - `localeMatcher`
+
       - : 로케일 매칭 알고리즘입니다. 가능한 값은 "`lookup`", "`best fit`"이며 기본 값은 "`best fit`"입니다. 자세한 정보는 {{jsxref("Intl", "Intl", "#로케일_조정", 1)}} 문서를 참고하세요.
 
     - `timeZone`
+
       - : 시간대입니다. 구현체가 반드시 인식해야 하는 유일한 값은 "`UTC`"입니다. 기본 값은 런타임의 기본 시간대입니다. 구현체에 따라 "`Asia/Seoul`", "`Asia/Kolkata`",
         "`America/New_York`"처럼 [IANA 시간대 데이터베이스](https://www.iana.org/time-zones)의 시간대 이름을 인식할 수도 있습니다.
 
     - `hour12`
+
       - : 24시간제 대신 12시간제를 사용할지에 대한 여부입니다. 가능한 값은 `true` 또는 `false`입니다. 기본 값은 로케일에 따라 다릅니다. 이 값은 언어 태그의 `hc`, 옵션 중 `hourCycle`보다 우선합니다.
 
     - `hourCycle`
+
       - : 시간제입니다. "`h11`",
         "`h12`", "`h23`", "`h24`" 등을 사용할 수 있습니다. 이 값은 언어 태그의 `hc`보다 우선하며, `hour12`가 이 값보다 우선합니다.
 
@@ -174,7 +176,7 @@ new Intl.DateTimeFormat(locales, options)
     - `second`
       - : 초. 가능한 값은 `"numeric"`, `"2-digit"`입니다.
     - `fractionalSecondDigits`
-    
+
       - : 밀리초를 나타낼 소숫점 이하 자릿수. 가능한 값은 다음과 같습니다.
 
         - `0` (밀리초를 표시하지 않음.)
@@ -193,7 +195,8 @@ new Intl.DateTimeFormat(locales, options)
         - "`shortGeneric`" 지역을 특정하지 않는 일반적인 형식 (`PT`)
         - "`longGeneric`" 지역을 특정하지 않는 긴 일반적인 형식 (`Pacific Time`)
 
-        > **참고:** 요구한 형식을 사용할 수 없을 경우 시간대 서식이 다른 형태로 대체될 수 있습니다. 예를 들어 지역을 특정하지 않는 서식의 경우 특정 국가나 도시 이름을 포함하지 않아야 하지만, "Los Angeles Time"처럼 필요할 경우 이름을 포함할 수 있습니다.
+        > [!NOTE]
+        > 요구한 형식을 사용할 수 없을 경우 시간대 서식이 다른 형태로 대체될 수 있습니다. 예를 들어 지역을 특정하지 않는 서식의 경우 특정 국가나 도시 이름을 포함하지 않아야 하지만, "Los Angeles Time"처럼 필요할 경우 이름을 포함할 수 있습니다.
 
     각 구성요소 속성의 기본값은 {{jsxref("undefined")}}입니다. 그러나 모든 속성이 `undefined`일 경우, `year`, `month`, `day`는 "`numeric`"으로 취급합니다.
 
@@ -217,19 +220,19 @@ console.log(new Intl.DateTimeFormat().format(date));
 다음 예제는 지역화된 숫자 서식의 예시를 보입니다. 어플리케이션의 사용자 인터페이스 언어에 맞는 서식을 적용하려면 `locales` 매개변수로 적절한 언어(와, 필요한 경우 대체 언어)를 제공하는걸 잊지 마세요.
 
 ```js
-let o = new Intl.DateTimeFormat("en" , {
-  timeStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  timeStyle: "short",
 });
 console.log(o.format(Date.now())); // "13:31 AM"
 
-let o = new Intl.DateTimeFormat("en" , {
-  dateStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20"
 
-let o = new Intl.DateTimeFormat("en" , {
+let o = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
-  dateStyle: "short"
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```
@@ -240,16 +243,23 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+const timezoneNames = [
+  "short",
+  "long",
+  "shortOffset",
+  "longOffset",
+  "shortGeneric",
+  "longGeneric",
+];
+
 for (const zoneName of timezoneNames) {
-  var formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Los_Angeles',
+  var formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
     timeZoneName: zoneName,
   });
-  console.log(zoneName + ": " + formatter.format(date) );
+  console.log(zoneName + ": " + formatter.format(date));
 }
-	
+
 // 예상 출력 결과:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"

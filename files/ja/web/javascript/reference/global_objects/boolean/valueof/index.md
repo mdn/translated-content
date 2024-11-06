@@ -1,15 +1,8 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Boolean.valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ## 構文
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### 返値

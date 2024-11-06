@@ -1,15 +1,8 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - クラス
-  - インターフェイス
-  - JavaScript
-  - ポリフィル
-browser-compat: javascript.builtins.AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
+
 {{JSRef}}
 
 **`AggregateError`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{JSxRef("Promise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。
@@ -33,13 +26,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ### AggregateError の捕捉
 
 ```js
-Promise.any([
-  Promise.reject(new Error("some error")),
-]).catch(e => {
+Promise.any([Promise.reject(new Error("some error"))]).catch((e) => {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "All Promises rejected"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "All Promises rejected"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 });
 ```
 
@@ -47,14 +38,12 @@ Promise.any([
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("some error"),
-  ], 'Hello');
+  throw new AggregateError([new Error("some error")], "Hello");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Hello"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 }
 ```
 

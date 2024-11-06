@@ -1,15 +1,8 @@
 ---
-title: 'Attribut HTML : rel'
+title: "Attribut HTML : rel"
 slug: Web/HTML/Attributes/rel
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Link
-  - form
-  - rel
-translation_of: Web/HTML/Attributes/rel
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`rel`** définit la relation entre une ressource liée et le document actuel. Valable sur [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), et [`<form>`](/fr/docs/Web/HTML/Element/Form), les valeurs supportées dépendent de l'élément sur lequel se trouve l'attribut.
@@ -56,7 +49,8 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
 **Note :** L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise les attributs non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectivement.
 
-> **Note :** Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
+> [!NOTE]
+> Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
 
 - `alternate`
 
@@ -66,16 +60,23 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
       ```html
       <!-- une feuille de style persistante -->
-      <link rel="stylesheet" href="default.css">
+      <link rel="stylesheet" href="default.css" />
       <!-- feuilles de style alternativement -->
-      <link rel="alternate stylesheet" href="highcontrast.css" title="Contraste élevé">
+      <link
+        rel="alternate stylesheet"
+        href="highcontrast.css"
+        title="Contraste élevé" />
       ```
 
     - Avec un attribut [`hreflang`](hreflang) qui diffère de la langue du document, cela indique une traduction.
     - Avec l'attribut [`type`](type), il indique que le document référencé est le même contenu dans un format différent. Par exemple, avec `type="application/rss+xml"`, il crée un lien hypertexte référençant un flux de syndication.
 
       ```html
-      <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog">
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        href="posts.xml"
+        title="Blog" />
       ```
 
     - Les attributs [`hreflang`](hreflang) et [`type`](type) spécifient des liens vers des versions du document dans un format et une langue alternatifs, destinés à d'autres médias :
@@ -85,7 +86,8 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
       <link rel="alternate" href="/fr/pdf" hreflang="fr" type=application/pdf title="PDF Français">
       ```
 
-    > **Note :** L'attribut obsolète `rev="made"` est traité comme `rel="alternate"`.
+    > [!NOTE]
+    > L'attribut obsolète `rev="made"` est traité comme `rel="alternate"`.
 
 - `author`
   - : Indique l'auteur du document ou de l'article en cours. Pertinent pour les éléments [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot-clé `author` crée un lien hypertexte. Avec [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), il indique que le document lié (ou `mailto:`) fournit des informations sur l'auteur de l'ancêtre le plus proche d'un élément [`<article>`](/fr/docs/Web/HTML/Element/article) s'il en existe un, sinon le document entier. Pour [`<link>`](/fr/docs/Web/HTML/Element/link), il représente l'auteur du document entier.
@@ -106,12 +108,13 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
     L'utilisation la plus courante de la valeur `icon` est le favicon :
 
     ```html
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     ```
 
     S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leurs attributs [`media`](media), [`type`](type), et [`sizes`](sizes) pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.
 
-    > **Note :** Avant Firefox 83, l'attribut [crossorigin](/fr/docs/Web/HTML/Attributes/crossorigin) n'était pas pris en charge pour `rel="icon"` ; il existe également [un problème pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+    > [!NOTE]
+    > Avant Firefox 83, l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin) n'était pas pris en charge pour `rel="icon"` ; il existe également [un problème pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
     >
     > L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise respectivement le type non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6).
     >
@@ -122,10 +125,11 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
   - : Valable sur les éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/Form) et [`<link>`](/fr/docs/Web/HTML/Element/link), la valeur `license` indique que l'hyperlien mène à un document décrivant les informations relatives à la licence ; que le contenu principal du document actuel est couvert par la licence de droit d'auteur décrite par le document référencé. Si elle ne se trouve pas à l'intérieur de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), la norme ne fait pas de distinction entre un hyperlien s'appliquant à une partie spécifique du document ou au document dans son ensemble. Seules les données de la page peuvent l'indiquer.
 
     ```html
-    <link rel="license" href="#license">
+    <link rel="license" href="#license" />
     ```
 
-    > **Note :** Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
+    > [!NOTE]
+    > Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
 
 - `manifest`
   - : [Manifeste de l'application Web](/fr/docs/Web/Manifest). Nécessite l'utilisation du protocole CORS pour le « fetching cross-origin ».
@@ -159,7 +163,8 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
   - : Similaire au mot-clé [next](#next), pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/Form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), les valeurs `prev` indiquent que le document actuel fait partie d'une série, et que le lien renvoie à un document précédent de la série est le document référencé.
 
-    > **Note :** Le synonyme `previous` est incorrect et ne doit pas être utilisé.
+    > [!NOTE]
+    > Le synonyme `previous` est incorrect et ne doit pas être utilisé.
 
 - `search`
 
@@ -190,103 +195,35 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
     ```html
     <!-- iPad de troisième génération avec écran Retina haute résolution : -->
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png">
-      <!-- iPhone avec écran Retina haute résolution : -->
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png">
-      <!-- première et deuxième génération d'iPad: -->
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png">
-      <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
-      <link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png">
-      <!-- favicône de base -->
-      <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png">
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="/static/img/favicon144.e7e21ca263ca.png" />
+    <!-- iPhone avec écran Retina haute résolution : -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="/static/img/favicon114.d526f38b09c5.png" />
+    <!-- première et deuxième génération d'iPad: -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="/static/img/favicon72.cc65d1d762a0.png" />
+    <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="/static/img/favicon57.de33179910ae.png" />
+    <!-- favicône de base -->
+    <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png" />
     ```
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'links.html#linkTypes', 'l\'attribut rel')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Ajout de <code>opener</code>. Mise en place de <code>noopener</code> par
-        défaut pour <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'links.html#linkTypes', 'l\'attribut rel')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        Ajout de <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-        <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code> et
-        <code>author</code>.<br />Renommage de <code>copyright</code> en
-        <code>license</code>.<br />Suppression de <code>start</code>,
-        <code>chapitre</code>, <code>section</code>, <code>subsection</code> et
-        <code>appendice</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Preload", "#x2.link-type-preload", "preload")}}
-      </td>
-      <td>{{Spec2("Preload")}}</td>
-      <td>Ajout de <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}
-      </td>
-      <td>{{Spec2("Resource Hints")}}</td>
-      <td>
-        Ajout des valeurs <code>dns-prefetch</code>, <code>preconnect</code> et
-        <code>prerender</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td>
-        Ajout de <code>alternate</code>, <code>stylesheet</code>,
-        <code>start</code>, <code>chapter</code>, <code>section</code>,
-        <code>subsection</code>, <code>appendix</code> et
-        <code>bookmark</code>.<br />Renommage de <code>previous</code> par
-        <code>prev</code>.<br />Suppression de <code>top</code> et
-        <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td><p>Obsolète</p></td>
-      <td>
-        Ajout de <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code> et <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>Obsolète</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}
 
 ## Voir aussi
 

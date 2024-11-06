@@ -1,12 +1,8 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/transition-timing-function
 ---
+
 {{CSSRef}}
 
 La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
@@ -24,34 +20,36 @@ Dans les deux cas, la déclaration CSS reste valide.
 
 ## Syntaxe
 
-    /* Valeurs avec un mot-clé */
-    transition-timing-function: ease;
-    transition-timing-function: ease-in;
-    transition-timing-function: ease-out;
-    transition-timing-function: ease-in-out;
-    transition-timing-function: linear;
-    transition-timing-function: step-start;
-    transition-timing-function: step-end;
+```css
+/* Valeurs avec un mot-clé */
+transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;
 
-    /* Valeurs fonctionnelles */
-    transition-timing-function: steps(4, jump-end);
-    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Valeurs fonctionnelles */
+transition-timing-function: steps(4, jump-end);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
-    /* Valeurs avec une fonction en escalier */
-    transition-timing-function: steps(4, jump-start);
-    transition-timing-function: steps(10, jump-end);
-    transition-timing-function: steps(20, jump-none);
-    transition-timing-function: steps(5, jump-both);
-    transition-timing-function: steps(6, start);
-    transition-timing-function: steps(8, end);
+/* Valeurs avec une fonction en escalier */
+transition-timing-function: steps(4, jump-start);
+transition-timing-function: steps(10, jump-end);
+transition-timing-function: steps(20, jump-none);
+transition-timing-function: steps(5, jump-both);
+transition-timing-function: steps(6, start);
+transition-timing-function: steps(8, end);
 
-    /* Utilisation de plusieurs fonctions */
-    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Utilisation de plusieurs fonctions */
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
-    /* Valeurs globales */
-    transition-timing-function: inherit;
-    transition-timing-function: initial;
-    transition-timing-function: unset;
+/* Valeurs globales */
+transition-timing-function: inherit;
+transition-timing-function: initial;
+transition-timing-function: unset;
+```
 
 ### Valeurs
 
@@ -95,9 +93,13 @@ Dans les deux cas, la déclaration CSS reste valide.
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -115,33 +117,34 @@ Dans les deux cas, la déclaration CSS reste valide.
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration: 7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration: 2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
   var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  for (var c = els.length, i = 0; i < c; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
@@ -150,22 +153,22 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```css
 .ease {
-   transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .easein {
-   transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .easeout {
-   transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .easeinout {
-   transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .linear {
-   transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .cb {
-   transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -185,33 +188,34 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration:7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration:2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
   var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  for (var c = els.length, i = 0; i < c; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
@@ -220,22 +224,22 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```css
 .jump-start {
-   transition-timing-function: steps(5, jump-start);
+  transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   transition-timing-function: steps(5, jump-end);
+  transition-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   transition-timing-function: steps(5, jump-none);
+  transition-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(5, jump-both);
 }
 .step-start {
-   transition-timing-function: step-start;
+  transition-timing-function: step-start;
 }
 .step-end {
-   transition-timing-function: step-end;
+  transition-timing-function: step-end;
 }
 ```
 
@@ -249,17 +253,13 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État/th>                                 | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS)
 - {{domxref("TransitionEvent")}}

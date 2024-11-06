@@ -1,9 +1,8 @@
 ---
 title: Constructeur Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Uint32Array()`** permet de créer un nouveau tableau typé [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array) dont les éléments sont des nombres entiers non-signés, représentés sur 32 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
@@ -45,7 +44,7 @@ console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // À partir d'un tableau
-let arr = new Uint32Array([21,31]);
+let arr = new Uint32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -58,7 +57,9 @@ let buffer = new ArrayBuffer(16);
 let z = new Uint32Array(buffer, 0, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
+let iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 let uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```

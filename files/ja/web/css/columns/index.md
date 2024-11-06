@@ -1,15 +1,8 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.columns
-translation_of: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
@@ -70,9 +63,8 @@ columns: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `columns` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `columns`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 
@@ -86,7 +78,7 @@ columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
+{{EmbedLiveSample('3 つの等しい段の設定', 'auto', 120)}}
 
 ## 仕様書
 

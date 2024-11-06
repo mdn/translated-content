@@ -1,40 +1,15 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.where
-translation_of: Web/CSS/:where
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
+
 {{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-```css
-/* ヘッダー、メイン、フッターの何れかの中にある段落に
-   カーソルをかざしたときに選択 */
-:where(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-/* 上記のものは下記のものと同等です。 */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
 `:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` は[詳細度](/ja/docs/Web/CSS/Specificity)が常に 0 であるのに対して、 `:is()` は引数内で最も詳細度の高いセレクターの詳細度を取ります。
 
@@ -46,19 +21,20 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 
 ```css
 :where(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
-Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
+は `:unsupported` の部分に対応していないブラウザーでも `:valid` の部分が有効となり正しく解釈されます。一方で
 
 ```css
-:valid, :unsupported {
-  ...
+:valid,
+:unsupported {
+  /* … */
 }
 ```
 
-Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
+では、`:unsupported` に対応していないブラウザーでは、`:valid` に対応している場合でも全体が無視されます。
 
 ## 例
 
@@ -72,37 +48,59 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 <article>
   <h2>:is() でスタイル付けしたリンク</h2>
   <section class="is-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where() でスタイル付けしたリンク</h2>
   <section class="where-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>.
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">also リンクを含んでいます</a>.
+    <p>
+      こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 ```
 
-このやや矛盾した例では、2 つの記事があり、それぞれがセクション、脇、フッターを含んでいます。これらの記事は、子要素をマークするために使われるクラスによって異なります。
+このややわざとらしい例では、2 つの article 要素がそれぞれ section、aside、footer 要素を含んでいます。2つの article は、子要素をマークするために使われるクラスが異なります。
 
-中のリンクの選択をより簡単にして、しかし区別できるようにするために、次のように `:is()` や `:where()` を使うことができます。
+中のリンクの選択をより簡単にしながらも、区別できるようにするために、次のように `:is()` や `:where()` を使うことができます。
 
 ```css
 html {
@@ -129,15 +127,20 @@ footer a {
 
 これは赤いリンクに作用しません。 `:is()` の中のセレクターは全体のセレクターの詳細度で算出され、クラスセレクターは要素セレクターよりも高い詳細度を持っているからです。
 
-しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされてしまいます。
+しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされます。
 
-> **Note:** この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
+> [!NOTE]
+> この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 
 ## 構文
 
-{{CSSSyntax}}
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
 
 ## 仕様書
 
@@ -151,4 +154,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

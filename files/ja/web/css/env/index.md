@@ -1,20 +1,8 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS 変数
-  - CSS 関数
-  - Draft
-  - 関数
-  - リファレンス
-  - 変数
-  - env
-  - env()
-translation_of: Web/CSS/env()
-original_slug: Web/CSS/env()
-browser-compat: css.properties.custom-property.env
 ---
+
 {{CSSRef}}
 
 **`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
@@ -68,11 +56,8 @@ You can then use `env()` in your CSS:
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -138,8 +123,8 @@ button {
 <p>
   お使いのブラウザーが <code>env()</code> 関数に対応している場合、
   この段落のテキストと左の境界の間に 50px のパディングが設定されますが、
-  上、右、下には設定されません。
-  これは、他の CSS プロパティとは異なり、ユーザーエージェントプロパティ名は
+  上、右、下には設定されません。 これは、他の CSS
+  プロパティとは異なり、ユーザーエージェントプロパティ名は
   大文字・小文字が区別されるため、 <code>padding: 0 0 0 50px</code>
   と同等の CSS になるからです。
 </p>
@@ -149,11 +134,8 @@ button {
 p {
   width: 300px;
   border: 2px solid red;
-  padding:
-    env(safe-area-inset-top, 50px)
-    env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px)
-    env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -162,10 +144,23 @@ p {
 ### 値の例
 
 ```css
-padding: env(safe-area-inset-bottom, 50px); /* 画面が矩形のユーザーエージェントではゼロ */
-padding: env(Safe-area-inset-bottom, 50px); /* UA プロパティは大文字・小文字を区別するため 50px */
-padding: env(x, 50px 20px); /* x が妥当な環境変数でなければ padding: '50px 20px' が設定される */
-padding: env(x, 50px, 20px); /* x が妥当な環境変数でなく、 '50px, 20px' が妥当なパディング値でないため無視 */
+padding: env(
+  safe-area-inset-bottom,
+  50px
+); /* 画面が矩形のユーザーエージェントではゼロ */
+padding: env(
+  Safe-area-inset-bottom,
+  50px
+); /* UA プロパティは大文字・小文字を区別するため 50px */
+padding: env(
+  x,
+  50px 20px
+); /* x が妥当な環境変数でなければ padding: '50px 20px' が設定される */
+padding: env(
+  x,
+  50px,
+  20px
+); /* x が妥当な環境変数でなく、 '50px, 20px' が妥当なパディング値でないため無視 */
 ```
 
 代替値の構文は、カスタムプロパティの場合と同様、カンマが許容されます。ただし、プロパティ値がカンマに対応していない場合、値は妥当ではなくなります。
@@ -217,7 +212,6 @@ main {
 - [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_Variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/--*)
 - [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
-- {{CSSxRef("@viewport", "viewport-fit (@viewport)")}}
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

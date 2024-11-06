@@ -1,20 +1,11 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-tags:
-  - BigInt
-  - BigUInt64Array
-  - クラス
-  - JavaScript
-  - Reference
-  - TypedArray
-  - 型付き配列
-browser-compat: javascript.builtins.BigUint64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 ---
+
 {{JSRef}}
 
-**`BigUint64Array`** は型付き配列で、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0n` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
+**`BigUint64Array`** は型付き配列で、プラットフォームのバイト順による 64 ビット符号なし整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0n` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
 
 ## コンストラクター
 
@@ -114,7 +105,7 @@ console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // 配列から
-var arr = new BigUint64Array([21n,31n]);
+var arr = new BigUint64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
@@ -127,7 +118,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigUint64Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var biguint64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```

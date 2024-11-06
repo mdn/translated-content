@@ -1,24 +1,19 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/flatMap
 ---
+
 {{JSRef}}
 
 La méthode **`flatMap()`** permet d'appliquer une fonction à chaque élément du tableau puis d'aplatir le résultat en un tableau. Cela correspond à l'enchaînement de {{jsxref("Array.prototype.map()")}} suivi de {{jsxref("Array.prototype.flat()")}} de profondeur 1. `flatMap` est plus efficace que la combinaison de ces deux opérations, souvent réalisées conjointement.
 
 ## Syntaxe
 
-    var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-        // return element for new_array
-    }[, thisArg])
+```js
+var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
+    // return element for new_array
+}[, thisArg])
+```
 
 ### Paramètres
 
@@ -51,14 +46,14 @@ Pour la fonction de rappel, voir {{jsxref("Array.prototype.map()")}}. La méthod
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // seul un niveau est aplati
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -67,16 +62,18 @@ On peut utiliser un autre exemple où on génère une liste de mots à partir d'
 ```js
 let tableau1 = ["Coucou comment", "", "ça va ?"];
 
-tableau1.map(x => x.split(" "));
+tableau1.map((x) => x.split(" "));
 // [["Coucou", "comment"], [""], ["ça", "va", "?"]]
 
-tableau1.flatMap(x => x.split(" "));
+tableau1.flatMap((x) => x.split(" "));
 // ["Coucou", "comment", "", "ça", "va", "?"]
 ```
 
 On notera que la longueur de la liste obtenue avec `flatMap` est différente de la longueur de la liste originale.
 
-    //=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+//=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
 ## Équivalent
 
@@ -85,7 +82,7 @@ On notera que la longueur de la liste obtenue avec `flatMap` est différente de 
 ```js
 var arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
+arr.flatMap((x) => [x, x * 2]);
 // est équivalent à
 arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 // [1, 2, 2, 4, 3, 6, 4, 8]
@@ -93,13 +90,11 @@ arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 
 ## Spécifications
 
-| Spécification                                                                                              | État     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [ECMAScript 2019](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flatmap) | Finalisé | Proposition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Voir aussi
 

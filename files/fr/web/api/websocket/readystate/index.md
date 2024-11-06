@@ -1,8 +1,8 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
-browser-compat: api.WebSocket.readyState
 ---
+
 {{APIRef("Web Sockets API")}}
 
 La propriété en lecture seule **`WebSocket.readyState`** renvoie l'état courant de la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket).

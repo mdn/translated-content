@@ -1,16 +1,11 @@
 ---
-title: DOMRectReadOnly.right
+title: "DOMRectReadOnly: right プロパティ"
+short-title: right
 slug: Web/API/DOMRectReadOnly/right
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.right
-translation_of: Web/API/DOMRectReadOnly/right
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`right`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の右側の座標値を返します。（`x + width` と同じ、または `width` が負の数の場合は `x` と同じです。）

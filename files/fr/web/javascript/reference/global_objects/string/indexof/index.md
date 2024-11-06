@@ -1,27 +1,23 @@
 ---
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/indexOf
 ---
+
 {{JSRef}}
 
 La méthode **`indexOf()`** renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de `indexDébut`). Elle renvoie -1 si la valeur cherchée n'est pas trouvée.
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **Note :** Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
+> [!NOTE]
+> Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
 
 ## Syntaxe
 
-    str.indexOf(valeurRecherchée)
-    str.indexOf(valeurRecherchée, indexDébut)
+```js
+str.indexOf(valeurRecherchée);
+str.indexOf(valeurRecherchée, indexDébut);
+```
 
 ### Paramètres
 
@@ -39,14 +35,14 @@ L'indice de la première occurrence de la valeur indiquée, `-1` si elle n'est p
 Les caractères dans une chaîne de caractères sont indexés de la gauche à la droite. L'indice du premier caractère est 0, celui du dernier caractère (d'une chaîne `str`) est `str.length - 1.`
 
 ```js
-"Blue Whale".indexOf("Blue");     // retourne 0
-"Blue Whale".indexOf("Blute");    // retourne -1
+"Blue Whale".indexOf("Blue"); // retourne 0
+"Blue Whale".indexOf("Blute"); // retourne -1
 "Blue Whale".indexOf("Whale", 0); // retourne 5
 "Blue Whale".indexOf("Whale", 5); // retourne 5
-"Blue Whale".indexOf("");         // retourne 0
-"Blue Whale".indexOf("", 9);      // retourne 9
-"Blue Whale".indexOf("", 10);     // retourne 10
-"Blue Whale".indexOf("", 11);     // retourne 10
+"Blue Whale".indexOf(""); // retourne 0
+"Blue Whale".indexOf("", 9); // retourne 9
+"Blue Whale".indexOf("", 10); // retourne 10
+"Blue Whale".indexOf("", 11); // retourne 10
 ```
 
 ### Sensibilité à la casse
@@ -54,7 +50,7 @@ Les caractères dans une chaîne de caractères sont indexés de la gauche à la
 La méthode `indexOf()` est sensible à la casse. Par exemple, l'expression suivante retourne -1 :
 
 ```js
-"Blue Whale".indexOf("blue") // retourne -1
+"Blue Whale".indexOf("blue"); // retourne -1
 ```
 
 Attention : `0` n'est pas une valeur qui peut être évaluée à `true` et `-1` n'est pas une valeur qui peut être évaluée à `false`. Ainsi, si on souhaite tester si une chaîne de caractères existe au sein d'une autre chaîne de caractères, on procèdera de cette façon (ou on utilisera {{jsxref("String.prototype.includes()")}}
@@ -71,7 +67,7 @@ Attention : `0` n'est pas une valeur qui peut être évaluée à `true` et `-1` 
 L'exemple suivant utilise `indexOf()` et `lastIndexOf()` pour localiser différentes valeurs dans la chaîne de caractères "`Brave new world`".
 
 ```js
-const uneChaîne = "Brave new world"
+const uneChaîne = "Brave new world";
 
 console.log("Indice du premier w " + uneChaîne.indexOf("w"));
 // Affiche 8
@@ -92,9 +88,12 @@ L'exemple suivant définit 2 chaînes de caractères. Ces variables contiennent 
 const maChaîne = "brie, reblochon, cheddar";
 const maChaîneMajuscules = "Brie, Reblochon, Cheddar";
 
-console.log('maChaîne.indexOf("cheddar") is '+ maChaîne.indexOf("cheddar"));
+console.log('maChaîne.indexOf("cheddar") is ' + maChaîne.indexOf("cheddar"));
 // Affiche 19
-console.log('maChaîneMajuscules.indexOf("cheddar") is ' + maChaîneMajuscules.indexOf("cheddar"));
+console.log(
+  'maChaîneMajuscules.indexOf("cheddar") is ' +
+    maChaîneMajuscules.indexOf("cheddar"),
+);
 // Affiche -1
 ```
 
@@ -107,25 +106,20 @@ const str = "Chaîne x de test x";
 let count = 0;
 let pos = str.indexOf("x");
 
-while ( pos != -1 ) {
-   count++;
-   pos = str.indexOf( "x",pos + 1 );
+while (pos != -1) {
+  count++;
+  pos = str.indexOf("x", pos + 1);
 }
 console.log(count); // Affiche 2
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.indexOf")}}
+{{Compat}}
 
 ## Voir aussi
 

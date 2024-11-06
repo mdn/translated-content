@@ -1,13 +1,8 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-snap-type`** définit la force d'adhérence aux points d'accroche en cas de défilement d'un conteneur.
@@ -58,9 +53,13 @@ scroll-snap-type: unset;
 - `proximity`
   - : Le _viewport_ visuel du conteneur peut s'accrocher à un point d'accroche si aucun défilement n'est en cours, selon les paramètres de défilement de l'agent utilisateur. Si du contenu est ajouté, déplacé, supprimé ou redimensionne, le décalage induit peut être ajusté pour rester sur ce point d'accroche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -68,7 +67,9 @@ scroll-snap-type: unset;
 
 ```css
 /* setup */
-html, body, .holster {
+html,
+body,
+.holster {
   height: 100%;
 }
 .holster {
@@ -140,11 +141,11 @@ html, body, .holster {
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 
@@ -152,69 +153,69 @@ html, body, .holster {
 
 ```html
 <div class="holster">
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="ltr">
+    <div>X Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="ltr">
+    <div>X Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="ltr">
+    <div>Y Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="ltr">
+    <div>Y Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="rtl">
+    <div>X Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="rtl">
+    <div>X Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="rtl">
+    <div>Y Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="rtl">
+    <div>Y Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 </div>
 ```
 
@@ -224,12 +225,8 @@ html, body, .holster {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-type", "scroll-snap-type")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-type")}}
+{{Compat}}

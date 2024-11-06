@@ -1,9 +1,8 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-translation_of: Web/API/Navigator/registerProtocolHandler
-browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).
@@ -13,11 +12,12 @@ Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:`, ou a
 ## Syntaxe
 
 ```js
-registerProtocolHandler(schema, url)
-registerProtocolHandler(schema, url, titre)
+registerProtocolHandler(schema, url);
+registerProtocolHandler(schema, url, titre);
 ```
 
-> **Note :** La version avec l'argument déprécié `titre` est recommandée pour des raisons de compatibilité. Voir les informations sur les paramètres ci-après.
+> [!NOTE]
+> La version avec l'argument déprécié `titre` est recommandée pour des raisons de compatibilité. Voir les informations sur les paramètres ci-après.
 
 ### Paramètres
 
@@ -30,20 +30,23 @@ registerProtocolHandler(schema, url, titre)
   - : Une chaîne de caractères qui contient l'URL du gestionnaire.
     **Cette URL doit inclure `%s`**, comme emplacement à remplacer avec l'URL [échappée](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) à gérer.
 
-    > **Note :** L'URL du gestionnaire doit également utiliser le schéma `https`. Les anciens navigateurs prenaient aussi en charge `http`.
+    > [!NOTE]
+    > L'URL du gestionnaire doit également utiliser le schéma `https`. Les anciens navigateurs prenaient aussi en charge `http`.
 
 - `titre` {{deprecated_inline}}
 
   - : Un titre, lisible par un humain, pour le gestionnaire.
     **Cette valeur sera affichée à l'utilisatrice ou à l'utilisateur**, par exemple pour lui demander «&nbsp;Autorisez-vous ce site à gérer les liens \[schema]&nbsp;?&nbsp;» ou pour lister les gestionnaires enregistrés dans les paramètres du navigateur.
 
-    > **Note :** Le titre a été retiré de la spécification en raison des risques d'usurpation.
+    > [!NOTE]
+    > Le titre a été retiré de la spécification en raison des risques d'usurpation.
     > Ce paramètre `titre` devrait toujours être défini, car certains navigateurs **le considèrent obligatoire** (voir [le tableau de compatibilité qui suit](#compatibilité_des_navigateurs)).
     > Les navigateurs qui implémentent la spécification à jour accepteront probablement ce paramètre supplémentaire en l'ignorant.
 
 ### Exceptions
 
 - [`SecurityError`](/fr/docs/Web/API/DOMException#noms_derreur)
+
   - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
 
     - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
@@ -100,11 +103,13 @@ Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
 Si votre site est `burgers.example.com`, vous pouvez enregistrer un gestionnaire de protocole afin qu'il puisse gérer les liens `web+burger:`, de cette façon&nbsp;:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Gestionnaire de burger");
-                                  // L'argument du titre est inclus
-                                  // pour des raisons de compatibilité
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Gestionnaire de burger",
+);
+// L'argument du titre est inclus
+// pour des raisons de compatibilité
 ```
 
 Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisatrices et utilisateurs vers votre site, en insérant l'URL du burger demandée dans l'emplacement indiqué par `%s`.

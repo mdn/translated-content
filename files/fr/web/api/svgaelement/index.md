@@ -1,14 +1,10 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-  - WebAPI
-translation_of: Web/API/SVGAElement
 ---
+
+{{APIRef("SVG")}}
+
 ## SVG a DOM interface
 
 L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a>`](/fr/docs/Web/SVG/Element/a) ainsi qu'aux méthodes pour les manipuler.
@@ -57,8 +53,8 @@ L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a
 
 ## Propriétés
 
-| Nom     | Type                                         | Description                                                                                           |
-| ------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Nom     | Type                               | Description                                                                              |
+| ------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
 | `cible` | {{ domxref("SVGAnimatedString") }} | Correspond à attribuer {{ SVGAttr("cible") }} sur l'élément {{ SVGElement("a") }} donné. |
 
 ## Methodes
@@ -67,14 +63,11 @@ L'interface `SVGAElement` ne fournit aucune méthode spécifique.
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                   | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}     | {{Spec2("SVG2")}} | Remplacement de l'héritage de {{domxref("SVGElement")}} par {{domxref("SVGGraphicsElement")}} et suppression des implémentations d'interface de {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, et {{domxref("SVGTransformable")}} par {{domxref("HTMLHyperlinkElementUtils")}} |
-| {{SpecName("SVG1.1", "linking.html#InterfaceSVGAElement")}} | {{Spec2("SVG1.1")}} | Définition initiale                                                                                                                                                                                                                                                                                                                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGAElement")}}
+{{Compat}}
 
 ## Voir aussi
 

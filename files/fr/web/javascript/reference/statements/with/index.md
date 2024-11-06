@@ -1,25 +1,22 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Déprécié
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/with
-original_slug: Web/JavaScript/Reference/Instructions/with
 ---
+
 {{jsSidebar("Statements")}}
 
-> **Attention :** Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
+> [!WARNING]
+> Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
 
 L'instruction **`with`** permet d'étendre la portée chaînée d'une instruction.
 
 ## Syntaxe
 
-    with (expression) {
-      instruction
-    }
+```js
+with (expression) {
+  instruction;
+}
+```
 
 - `expression`
   - : L'expression fournie est ajoutée à la portée chaînée utilisée lors de l'évaluation de l'instruction. Les parenthèses sont obligatoires.
@@ -30,7 +27,8 @@ L'instruction **`with`** permet d'étendre la portée chaînée d'une instructio
 
 Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne des portées associée à l'exécution une fonction ou un script qui contiendrait ce nom. L'instruction `with` ajoute l'objet donné à la tête de la chaîne des portées lors de l'évaluation des instructions qu'elle contient. Si un nom non-qualifié est utilisé parmi ces instructions correspond à une propriété de la chaîne des portées, le nom sera alors lié à la propriété et à l'objet contenant cette propriété, sinon une erreur `ReferenceError` est renvoyée.
 
-> **Note :** L'utilisation de l'instruction `with` n'est pas recommandée et est interdite dans le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.
+> [!NOTE]
+> L'utilisation de l'instruction `with` n'est pas recommandée et est interdite dans le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.
 
 ### Avantages et inconvénients : les performances
 
@@ -42,23 +40,22 @@ Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne de
 - **Inconvénient :** l'instruction `with` peut rendre plus compliquée, que ce soit pour un humain ou un compilateur, la recherche d'un nom non-qualifié le long de la chaîne des portées. Ainsi, avec cet exemple :
 
   ```js
-    function f(x, o) {
-      with (o)
-        console.log(x);
-    }
-    ```
+  function f(x, o) {
+    with (o) console.log(x);
+  }
+  ```
 
   ce n'est que quand `f` est appelée que `x` est trouvé ou non, s'il est trouvé à partir de `o` ou (si o n'a pas de telle propriété) dans l'objet d'activation de `f` où `x` représente le premier argument de la fonction. Si `x` n'est pas défini dans l'objet passé en second argument, il n'y aura pas d'erreur renvoyée, juste des résultats imprévus.
 
 - **Inconvénient :** Du code utilisant l'instruction `with` pourrait ne pas être compatible dans le futur, en particulier lorsqu'il est utilisé avec autre chose qu'un objet simple. Par exemple :
 
   ```js
-    function f(toto, values) {
-      with (toto) {
-        console.log(values)
-      }
+  function f(toto, values) {
+    with (toto) {
+      console.log(values);
     }
-    ```
+  }
+  ```
 
   Si vous appelez `f([1,2,3], obj)` dans un environnement ECMAScript 5, la référence à `values` à l'intérieur de l'instruction `with` sera liée avec `obj`. Cependant, ECMAScript 2015 (ES6) a introduit une propriété `values` pour {{jsxref("Array.prototype")}} (afin qu'elle soit disponible pour chaque tableau). Dans un environnement ECMAScript 2015, la référence à `values` utilisée à l'intérieur de l'instruction `with` sera résolue avec `[1,2,3].values`.
 
@@ -81,17 +78,11 @@ with (Math) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                       |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------- |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                    |
-| {{SpecName('ES6', '#sec-with-statement', 'Instruction with')}} | {{Spec2('ES6')}}         |                                    |
-| {{SpecName('ES5.1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES5.1')}}     | Désormais interdit en mode strict. |
-| {{SpecName('ES3', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES3')}}         |                                    |
-| {{SpecName('ES1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES1')}}         | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.with")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,8 +1,8 @@
 ---
 title: Contenu mixte
 slug: Web/Security/Mixed_content
-translation_of: Web/Security/Mixed_content
 ---
+
 Lorsqu'une personne visite une page servie en [HTTPS](/fr/docs/Glossary/https), la connexion entre le navigateur et le serveur web est chiffrée avec [`TLS`](/fr/docs/Glossary/TLS) et est donc protégée des risques d'interception des données et d'attaques de l'homme du milieu. Une page HTTPS qui inclut du contenu récupéré en clair avec HTTP est appelée une page **de contenu mixte** (<i lang="en">mixed content</i> en anglais). De telles pages ne sont que partiellement chiffrées et le contenu non-chiffré reste alors sujet aux risques d'interception. Ces pages ne sont pas complètement sécurisées.
 
 ## Types de contenu mixte
@@ -47,7 +47,7 @@ D'autres types de ressources comme les polices de caractères ou les <i lang="en
 
 ## Chargement des ressources avec du contenu mixte
 
-La plupart des navigateurs empêchent le chargement *du contenu mixte actif*. D'autres bloquent également le chargement *du contenu mixte passif*.
+La plupart des navigateurs empêchent le chargement _du contenu mixte actif_. D'autres bloquent également le chargement _du contenu mixte passif_.
 
 ### Charger des ressources mixtes locales
 
@@ -82,7 +82,8 @@ En complément de ces alertes dans la console web, vous pouvez également utilis
 
 Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
 
-> **Note :** La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
+> [!NOTE]
+> La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
 
 ## Voir aussi
 

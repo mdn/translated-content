@@ -1,25 +1,24 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-tags:
-  - API
-  - DOM
-  - Méthodes
-translation_of: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`CustomEvent.initCustomEvent()`** initialise un objet `CustomEvent`. Si l'évènement a déjà été distribué, cette méthode ne change rien.
 
 Les évènements initialisés par ce moyen doivent être créés avec la méthode {{domxref("Document.createEvent()")}}. Cette méthode doit être appelée pour définir l'évènement avant son envoi en utilisant {{domxref("EventTarget.dispatchEvent()") }}. Une fois l'évènement envoyé, la méthode ne fait rien.
 
-> **Attention :** N'utilisez plus cette méthode car elle est dépréciée.
+> [!WARNING]
+> N'utilisez plus cette méthode car elle est dépréciée.
 >
 > À la place, utilisez les constructeurs d'évènements spécifiques comme {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. La page [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) donne plus d'informations sur la façon de les utiliser.
 
 ## Syntaxe
 
-    event.initCustomEvent(type, canBubble, cancelable, detail);
+```js
+event.initCustomEvent(type, canBubble, cancelable, detail);
+```
 
 ### Paramètres
 
@@ -34,13 +33,11 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}} | {{Spec2('DOM WHATWG')}} | Définition initiale, mais déjà dépréciée au profit de l'utilisation d'un constructeur,{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent.initCustomEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

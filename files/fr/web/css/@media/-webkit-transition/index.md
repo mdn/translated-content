@@ -1,26 +1,21 @@
 ---
-title: '-webkit-transition'
+title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Obsolete
-  - Reference
-translation_of: Web/CSS/@media/-webkit-transition
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
 
 **`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
 
-> **Note :** Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
+> [!NOTE]
+> Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
 
 ## Privilégier `@supports`
 
 S'il vous faut déterminer si les transitions CSS sont prises en charges, évitez d'utiliser `-webkit-transition`. En lieu et place, on utilisera la règle @ {{cssxref("@supports")}} :
 
 ```css
-@supports(transition: initial) {
+@supports (transition: initial) {
   /* Les règles CSS à utiliser si   */
   /* les transitions sont prises en */
   /* charge. */
@@ -33,7 +28,7 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transition")}}
+{{Compat}}
 
 ## Voir aussi
 

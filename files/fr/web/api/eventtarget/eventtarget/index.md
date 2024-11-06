@@ -1,21 +1,17 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-tags:
-  - API
-  - Cible
-  - Constructeur
-  - DOM
-  - évènements
-translation_of: Web/API/EventTarget/EventTarget
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("DOM")}}
 
 Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxref("EventTarget")}}.
 
 ## Syntaxe
 
-    var myEventTarget = new EventTarget();
+```js
+var myEventTarget = new EventTarget();
+```
 
 ### Paramètres
 
@@ -34,12 +30,14 @@ class MyEventTarget extends EventTarget {
     this._secret = mySecret;
   }
 
-  get secret() { return this._secret; }
-};
+  get secret() {
+    return this._secret;
+  }
+}
 
 let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret;  // == 5
-myEventTarget.addEventListener("foo", function(e) {
+let value = myEventTarget.secret; // == 5
+myEventTarget.addEventListener("foo", function (e) {
   this._secret = e.detail;
 });
 
@@ -50,13 +48,11 @@ let newValue = myEventTarget.secret; // == 7
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.EventTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

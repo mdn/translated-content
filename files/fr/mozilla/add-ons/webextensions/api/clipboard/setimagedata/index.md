@@ -1,18 +1,9 @@
 ---
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
-tags:
-  - API
-  - Add-ons
-  - Clipboard
-  - Extensions
-  - Method
-  - Referece
-  - WebExtensions
-  - setImageData
-translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
@@ -30,7 +21,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-browser.clipboard.setImageData(imageData, imageType)
+browser.clipboard.setImageData(imageData, imageType);
 ```
 
 ### Paramètres
@@ -44,9 +35,9 @@ browser.clipboard.setImageData(imageData, imageType)
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.clipboard.setImageData", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -57,9 +48,9 @@ Copiez une image distante :
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 Copiez une image fournie avec l'extension :
@@ -67,13 +58,13 @@ Copiez une image fournie avec l'extension :
 ```js
 // requires the API permission "clipboardWrite"
 
-fetch(browser.runtime.getURL('image.png'))
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch(browser.runtime.getURL("image.png"))
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

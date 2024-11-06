@@ -1,24 +1,17 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/strike
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`strike()`** permet de créer un élément HTML {{HTMLElement("strike")}} qui permet d'afficher la chaîne comme un texte barré.
 
 ## Syntaxe
 
-    str.strike()
+```js
+str.strike();
+```
 
 ### Valeur de retour
 
@@ -53,14 +46,11 @@ Cela produira le code HTML suivant dans la console :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.strike', 'String.prototype.strike')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.strike")}}
+{{Compat}}
 
 ## Voir aussi
 

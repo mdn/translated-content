@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/entries
 ---
+
 {{JSRef}}
 
 La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.
@@ -20,7 +11,9 @@ La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contien
 
 ## Syntaxe
 
-    arr.entries()
+```js
+arr.entries();
+```
 
 ### Valeur de retour
 
@@ -55,33 +48,11 @@ console.log(eArr.next().value); // [4, 50]
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ES2015', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}}
-      </td>
-      <td>{{Spec2('ES2015')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ESDraft', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}}
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

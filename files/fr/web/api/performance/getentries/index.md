@@ -1,14 +1,8 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntries()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (_entrées_) peuvent être créés en faisant des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous souhaitez filtrer les entrées de performance en fonction de leur type ou de leur nom, consultez la documentation des méthodes {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.
@@ -18,7 +12,7 @@ La méthode **`getEntries()`** renvoie une liste de tous les objets {{domxref("P
 ## Syntaxe
 
 ```js
-  entries = window.performance.getEntries();
+entries = window.performance.getEntries();
 ```
 
 ### Valeur de retour
@@ -49,38 +43,47 @@ function use_PerformanceEntry_methods() {
 
   // Utilise getEntries() pour itérer à travers chaque entrée.
   let p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Utilise getEntriesByType() pour obtenir toutes les entrées "mark".
   p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i = 0; i < p.length; i++) {
+    console.log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i = 0; i < p.length; i++) {
+    console.log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentries',
-        'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performance-getentries',
-        'getEntries()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.getEntries")}}
+{{Compat}}

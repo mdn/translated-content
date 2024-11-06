@@ -1,20 +1,8 @@
 ---
 title: theme expérimentation
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customisation
-  - Customise
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - navigatuer
-  - theme manifest
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -57,9 +45,11 @@ Cette clé permet de définir les propriétés de la clé expérimentale de [`th
 
 Pour découvrir les sélecteurs CSS des éléments de l'interface utilisateur Firefox ou des variables CSS internes de Firefox, utilise la [boite à outils du navigateur](/fr/docs/Outils/Boîte_à_outils_du_navigateur).
 
-> **Note :** Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.
+> [!NOTE]
+> Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.
 
-> **Attention :** Cette fonctionnalité est expérimentale et peut être sujette à modification.
+> [!WARNING]
+> Cette fonctionnalité est expérimentale et peut être sujette à modification.
 
 ## Syntaxe
 
@@ -154,7 +144,7 @@ La feuille de style définit :
 }
 ```
 
-où `#reload-button` est le sélecteur CSS interne de Firefox pour le bouton reload et  `--reload-button-color` est un nom arbitraire..
+où `#reload-button` est le sélecteur CSS interne de Firefox pour le bouton reload et `--reload-button-color` est un nom arbitraire..
 
 Dans le fichier `manifest.json`, `--reload-button-color` est alors mappé au nom à utiliser dans la propriété `theme` `colors` :
 
@@ -181,8 +171,8 @@ Ceci a pour effet de rendre l'icône de recharge orange.
 
 ![](theme_experiment.png)
 
-Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et  `properties` travaillent de la même manière que `colors`.
+Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et `properties` travaillent de la même manière que `colors`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme_experiment")}}
+{{Compat}}

@@ -1,22 +1,14 @@
 ---
 title: Les liens entre flexbox et les autres méthodes de disposition
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-tags:
-  - CSS
-  - Guide
-  - display
-  - flexbox
-  - grid
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous verrons comment les boîtes flexibles interagissent avec les autres modules CSS. Nous verrons quelles sont les spécifications qui décrivent les boîtes flexibles et pourquoi les boîtes flexibles sont différentes des autres modules.
 
-> **Note :** Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
+> [!NOTE]
+> Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
 
 ## Le module d'alignement des boîtes (_Box Alignment_)
 
@@ -28,7 +20,7 @@ Ces propriétés d'alignement sont actuellement détaillées dans les spécifica
 
 > « Note : Bien que les propriétés d'alignement soient définies dans le module CSS _Box Alignment_ [CSS-ALIGN-3](https://www.w3.org/TR/css-align-3/), le module _Flexible Box Layout_ reproduit les définitions des propriétés qui sont ici pertinentes afin de ne pas créer de dépendance normative qui ralentirait l'avancement de la spécification. Ces propriétés s'appliquent uniquement à la disposition flexible jusqu'à ce que _CSS Box Alignment Level 3_ soit terminé et définisse leurs effets pour les autres modes de disposition. De plus, toute nouvelle valeur qui apparaîtra dans le module _Box Alignment_ s'appliquera également à la disposition en boîtes flexibles. Autrement dit, le module _Box Alignment_, lorsqu'il sera complet, remplacera les définitions énoncées ici. »
 
-Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
+Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
 
 ### Les propriétés d'espacement (_gap_)
 
@@ -70,7 +62,7 @@ Dans le prochain exemple, on applique un flottement sur les éléments fils puis
 
 ## Les boîtes flexibles et la disposition en grille
 
-[La disposition en grille (_CSS Grid_)](/en-US/docs/Web/CSS/CSS_Grid_Layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
+[La disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_Grid_Layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
 
 Les propriétés du module d'alignement des boîtes peuvent être utilisées pour ces deux modes de dispositions.
 
@@ -108,7 +100,8 @@ En ajoutant `display: contents` à l'élément flexible qui contient deux élém
 
 On notera que cela ne retire que la boîte de la disposition. Les éléments fils au deuxième niveau ne deviennent pas des éléments fils directs pour d'autres notions. On peut voir dans l'exemple qu'on utilise un sélecteur sur les éléments fils directs pour gérer l'arrière-plan et les bordures : ces styles n'ont pas été appliqués aux éléments fils de deuxième rang. Ces éléments ont été disposés comme des éléments flexibles, mais ils ne récupèrent pas la mise en forme des éléments fils directs.
 
-> **Attention :** Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
+> [!WARNING]
+> Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
 
 En retirant la boîte de l'élément parent, on ne peut pas utiliser cette boîte pour, par exemple, ajouter une couleur d'arrière-plan commune aux éléments fils imbriqués. Si on retire `display: contents` dans l'exemple, on peut voir que l'arrière-plan orange rattaché à l'élément disparaît avec la boîte.
 

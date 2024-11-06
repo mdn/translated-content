@@ -1,20 +1,8 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS 関数
-  - Calculate
-  - Compute
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - max
-translation_of: Web/CSS/max()
-original_slug: Web/CSS/max()
-browser-compat: css.types.max
 ---
+
 {{CSSRef}}
 
 **`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
@@ -35,7 +23,7 @@ browser-compat: css.types.max
 
 - 表の列、列グループ、行、行グループ、セルの幅と高さのパーセント値を含む数式は、自動レイアウト表と固定レイアウト表のどちらでも、あたかも `auto` が指定されていたかのように扱われる*可能性があります*。
 - `min()` や他の `max()` 関数を式の値として入れ子にすることが認められています。式は完全な数式なので、 `calc()` 関数自体を使わずに直接加算、減算、乗算、除算を使うことができます。
-- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( * )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<length>` 構文値を使用できます。
+- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<length>` 構文値を使用できます。
 - `min()` と `max()` の値を組み合わせたり、 `max()` を `clamp()` や `calc()` 関数の中で使用したりすることができます (そしてよく必要になります)。
 
 ### 形式文法
@@ -63,7 +51,9 @@ h1.responsive {
 
 ```html
 <h1>このテキストは常に読みやすいですが、サイズは変わりません。</h1>
-<h1 class="responsive">このテキストは、常に読みやすく、ある意味でレスポンシブです。</h1>
+<h1 class="responsive">
+  このテキストは、常に読みやすく、ある意味でレスポンシブです。
+</h1>
 ```
 
 {{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}
@@ -82,7 +72,7 @@ small {
 
 これにより、ページが拡大縮小されたときにテキストの大きさが拡大縮小され、最小サイズは _1rem_ になります。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 仕様書

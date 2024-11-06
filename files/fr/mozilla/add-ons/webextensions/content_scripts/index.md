@@ -1,15 +1,11 @@
 ---
 title: Scripts de contenu
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - Add-ons
-  - JavaScript
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
-Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s’exécute dans le contexte d’une page web donnée (par opposition aux scripts d’arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
+Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s'exécute dans le contexte d'une page web donnée (par opposition aux scripts d'arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
 
 Les [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) peuvent accéder à l'ensemble des [API WebExtension](/fr/Add-ons/WebExtensions/API) mais ils ne peuvent pas accéder directement au contenu des pages web. Aussi, si votre extension doit manipuler le contenu des pages web, vous devrez utiliser les scripts de contenu.
 
@@ -17,7 +13,8 @@ Tout comme les scripts habituellement chargés par les pages web classiques, les
 
 Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebExtension](<#API WebExtensions>), mais ils peuvent [communiquer avec les scripts d'arrière-plan](#communication_background) grâce à un système de messages et ainsi accéder indirectement aux API WebExtension.
 
-> **Note :** que les scripts de contenu sont bloqués sur les domaines suivants :
+> [!NOTE]
+> Que les scripts de contenu sont bloqués sur les domaines suivants :
 >
 > - accounts-static.cdn.mozilla.net
 > - accounts.firefox.com
@@ -39,15 +36,16 @@ Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebEx
 >
 > Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](/fr/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) to move users away from addons.mozilla.org.
 
-> **Note :** Les valeurs ajoutées à la portée globale d'un script de contenu avec `var foo` ou `window.foo = "bar"` peuvent disparaître à cause du bogue [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
+> [!NOTE]
+> Les valeurs ajoutées à la portée globale d'un script de contenu avec `var foo` ou `window.foo = "bar"` peuvent disparaître à cause du bogue [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
 
 ## Charger des scripts de contenu
 
 Il est possible de charger un script de contenu dans une page web de trois manières différentes :
 
-1.  **Lors de la phase d'installation, pour les pages qui correspondent à certains motifs d'URL :** en utilisant la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans le fichier `manifest.json`, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns).
-2.  **Lors de l'exécution, pour les pages qui correspondent à certains motifs d'URL :** en utilisant l'API {{WebExtAPIRef("contentScripts")}}, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns). Cette méthode est la version dynamique de la première méthode.
-3.  **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode  [`tabs.executeScript()`](/fr/Add-ons/WebExtensions/API/Tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/Add-ons/WebExtensions/Browser_action)).
+1. **Lors de la phase d'installation, pour les pages qui correspondent à certains motifs d'URL :** en utilisant la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans le fichier `manifest.json`, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns).
+2. **Lors de l'exécution, pour les pages qui correspondent à certains motifs d'URL :** en utilisant l'API {{WebExtAPIRef("contentScripts")}}, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns). Cette méthode est la version dynamique de la première méthode.
+3. **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode [`tabs.executeScript()`](/fr/Add-ons/WebExtensions/API/Tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/Add-ons/WebExtensions/Browser_action)).
 
 Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.
 
@@ -71,7 +69,7 @@ Dans Firefox, ce comportement s'appelle [Vision Xray](/fr/docs/Mozilla/Tech/Xray
 Prenons par exemple la page web suivante&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -98,9 +96,9 @@ document.body.appendChild(p);
 window.toto = "Cette variable globale a été ajoutée par un script de la page.";
 
 // redéfinition de la fonction intégrée window.confirm()
-window.confirm = function() {
+window.confirm = function () {
   alert("Ce script de page peut aussi redéfinir ’confirm’.");
-}
+};
 ```
 
 Et maintenant une extension injecte ce script de contenu dans la page&nbsp;:
@@ -113,7 +111,7 @@ var pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // ne peut pas voir les propriétés ajoutées par un script de la page
-console.log(window.toto);  // non défini
+console.log(window.toto); // non défini
 
 // voit la forme originale des propriétés redéfinies
 window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() originale
@@ -123,9 +121,9 @@ L'inverse est également vrai&nbsp;: les scripts de la page ne peuvent pas voir 
 
 Ceci signifie que le script de contenu peut compter sur un comportement prévisible des propriétés du DOM et n'a pas à se soucier d'un éventuel conflit entre les variables qu'il définit et celles des scripts de page.
 
-Une des conséquences pratiques de ce comportement est que les scripts de contenu n’ont accès à aucune des bibliothèques JavaScript chargées par la page. Par exemple, si la page inclut jQuery, le script de contenu ne pourra pas le voir.
+Une des conséquences pratiques de ce comportement est que les scripts de contenu n'ont accès à aucune des bibliothèques JavaScript chargées par la page. Par exemple, si la page inclut jQuery, le script de contenu ne pourra pas le voir.
 
-Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bibliothèque doit être injectée en tant que script de contenu aux côtés du script de contenu qui veut l’utiliser.
+Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bibliothèque doit être injectée en tant que script de contenu aux côtés du script de contenu qui veut l'utiliser.
 
 ```json
 "content_scripts": [
@@ -136,7 +134,8 @@ Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bib
 ]
 ```
 
-> **Note :** Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
+> [!NOTE]
+> Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
 >
 > Voir [Partage d'objets avec des scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) pour plus de détails.
 
@@ -173,7 +172,7 @@ L'ensemble des propriétés et méthodes de l'API [`storage`](/fr/Add-ons/WebExt
 
 ### XHR et Fetch
 
-Les scripts de contenu peuvent effectuer des requêtes en utilisant les API classiques  [`window.XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [`window.fetch()`](/fr/docs/Web/API/Fetch_API).
+Les scripts de contenu peuvent effectuer des requêtes en utilisant les API classiques [`window.XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [`window.fetch()`](/fr/docs/Web/API/Fetch_API).
 
 Les scripts de contenu obtiennent les mêmes privilèges interdomaines que le reste de l'extension : si l'extension a demandé un accès interdomaine pour un domaine à l'aide de la clé [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ses scripts de contenu auront également accès à ce domaine.
 
@@ -246,7 +245,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -259,10 +258,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "Vous avez cliqué sur un lien&nbsp;!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "Vous avez cliqué sur un lien&nbsp;!",
+    message: message.url,
   });
 }
 ```
@@ -279,7 +278,7 @@ De chaque côté (contenu d'une part, arrière-plan d'autre part), les scripts p
 
 Pour créer la connexion&nbsp;:
 
-- L'un des côtés se tient à l'écoute des connexions avec [](/fr/Add-ons/WebExtensions/API/runtime/onConnect)[`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect).
+- L'un des côtés se tient à l'écoute des connexions avec [`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect).
 - L'autre côté appelle [`tabs.connect()`](/fr/Add-ons/WebExtensions/API/tabs/connect) (pour se connecter à un script de contenu) ou [`runtime.connect()`](/fr/Add-ons/WebExtensions/API/runtime/connect) (pour se connecter à un script d'arrière plan). Ces deux méthodes renvoient un objet [`runtime.Port`](/fr/Add-ons/WebExtensions/API/runtime/Port).
 - Le gestionnaire d'évènement [`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect) reçoit alors en argument un objet [`runtime.Port`](/fr/Add-ons/WebExtensions/API/runtime/Port) qui lui est propre.
 
@@ -294,16 +293,18 @@ Par exemple, dès le chargement, ce script de contenu&nbsp;:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "ici le script de contenu"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "ici le script de contenu" });
 
-myPort.onMessage.addListener(function(m) {
-  console.log("Dans le script de contenu, réception d'un message du script d'arrière-plan");
+myPort.onMessage.addListener(function (m) {
+  console.log(
+    "Dans le script de contenu, réception d'un message du script d'arrière-plan",
+  );
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "clic sur la page&nbsp;!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "clic sur la page&nbsp;!" });
 });
 ```
 
@@ -325,17 +326,19 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "salut, script de contenu&nbsp;!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("Dans le script d'arrière-plan, réception d'un message du script de contenu.")
+  portFromCS.postMessage({ greeting: "salut, script de contenu&nbsp;!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log(
+      "Dans le script d'arrière-plan, réception d'un message du script de contenu.",
+    );
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "clic sur le bouton&nbsp;!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "clic sur le bouton&nbsp;!" });
 });
 ```
 
@@ -353,12 +356,12 @@ function connected(p) {
   //...
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
-      p.postMessage({greeting: "clic sur le bouton !"})
-    })
+browser.browserAction.onClicked.addListener(function () {
+  ports.forEach((p) => {
+    p.postMessage({ greeting: "clic sur le bouton !" });
+  });
 });
 ```
 
@@ -385,28 +388,37 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("Le script de contenu a reçu ce message&nbsp;: \"" + event.data.message + "\"");
+window.addEventListener("message", function (event) {
+  if (
+    event.source == window &&
+    event.data &&
+    event.data.direction == "from-page-script"
+  ) {
+    alert(
+      'Le script de contenu a reçu ce message&nbsp;: "' +
+        event.data.message +
+        '"',
+    );
   }
 });
 ```
 
 Pour un exemple complet et fonctionnel, [visitez la page de démo sur Github](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) et suivez les instructions.
 
-> **Attention :** Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.
+> [!WARNING]
+> Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.
 >
 > Pour donner un exemple trivial, supposons que le code du script de contenu qui reçoit le message ressemble à ceci&nbsp;:
 >
 > ```js
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", function (event) {
+>   if (
+>     event.source == window &&
+>     event.data.direction &&
+>     event.data.direction == "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -428,15 +440,18 @@ Par exemple, considérons un script de contenu comme ceci &nbsp;:
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`Dans le script de contenu, window.x: ${window.x}`);
 console.log(`Dans le script de contenu, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 Ce code crée simplement des variables x et y en utilisant `window.eval()` et `eval()` puis enregistre leurs valeurs et envoie un message à la page.
@@ -444,7 +459,7 @@ Ce code crée simplement des variables x et y en utilisant `window.eval()` et `e
 À la réception du message, le script de page enregistre les mêmes variables :
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", function (event) {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`Dans le script de la page, window.x: ${window.x}`);
     console.log(`Dans le script de la page, window.y: ${window.y}`);
@@ -454,34 +469,39 @@ window.addEventListener("message", function(event) {
 
 Dans Chrome, cela produira le résultat suivant :
 
-    Dans le script de contenu, window.x: 1
-    Dans le script de contenu, window.y: 2
-    Dans le script de la page, window.x: undefined
-    Dans le script de la page, window.y: undefined
+```
+Dans le script de contenu, window.x: 1
+Dans le script de contenu, window.y: 2
+Dans le script de la page, window.x: undefined
+Dans le script de la page, window.y: undefined
+```
 
 Dans Firefox, on aura le résultat suivant :
 
-    Dans le script de contenu, window.x: undefined
-    Dans le script de contenu, window.y: 2
-    Dans le script de la page, window.x: 1
-    Dans le script de la page, window.y: undefined
+```
+Dans le script de contenu, window.x: undefined
+Dans le script de contenu, window.y: 2
+Dans le script de la page, window.x: 1
+Dans le script de la page, window.y: undefined
+```
 
 La même chose s'applique pour [`setTimeout()`](/fr/docs/Web/API/WindowTimers/setTimeout), [`setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval), et [`Function()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function).
 
-> **Attention :** Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez&nbsp;:
+> [!WARNING]
+> Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez&nbsp;:
 >
 > ```js
 > // page.js redéfinit console.log
 >
 > var original = console.log;
 >
-> console.log = function() {
+> console.log = function () {
 >   original(true);
-> }
+> };
 > ```
 >
 > ```js
 > // content-script.js appelle la version redéfinie
 >
-> window.eval('console.log(false)');
+> window.eval("console.log(false)");
 > ```

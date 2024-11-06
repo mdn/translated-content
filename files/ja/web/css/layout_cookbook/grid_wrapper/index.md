@@ -1,14 +1,8 @@
 ---
 title: グリッドラッパー
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
+
 {{CSSRef}}
 
 このパターンは、中央のラッパー内でグリッドのコンテンツを整列させるのに便利ですが、必要に応じて項目を脱出させて親要素やページの端に整列させることもできます。
@@ -21,7 +15,7 @@ translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
 
@@ -66,7 +60,7 @@ translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 
 ## アクセシビリティの考慮
 
-グリッドを使用すると（理由の範囲内で）項目を適切な場所に配置できますが、CSS グリッドを使用して項目を配置する場合は、基になるマークアップが論理的な順序に従うことが重要です（詳細については、[CSS グリッドのレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)を参照）。
+グリッドを使用すると（理由の範囲内で）項目を適切な場所に配置できますが、CSS グリッドを使用して項目を配置する場合は、基になるマークアップが論理的な順序に従うことが重要です（詳細については、[CSS グリッドのレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)を参照）。
 
 ## ブラウザーの互換性
 
@@ -74,11 +68,11 @@ translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{Cssxref("grid-template-columns")}}
-- [MDN の CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [MDN の CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
 - 記事: [CSS グリッド: minmax() によるさらなる柔軟性](https://css-irl.info/more-flexibility-with-minmax/)（英語）
 - 記事: [CSS グリッドを使った脱出](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)（英語）

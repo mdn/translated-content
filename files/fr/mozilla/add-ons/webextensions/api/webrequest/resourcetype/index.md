@@ -1,19 +1,9 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - ResourceType
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.
 
@@ -30,16 +20,16 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `font`
   - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
 - `image`
-  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de  `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
+  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
-  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut {{htmlattrxref("srcset", "img")}} d'un élement `<img>`.
+  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) d'un élement `<img>`.
 
 <!---->
 
 - `main_frame`
   - : Documents de niveau chargés dans un objet.
 - `media`
-  - : Ressources chargées par un élément  {{HTMLElement("video")}} ou  {{HTMLElement("audio")}}.
+  - : Ressources chargées par un élément {{HTMLElement("video")}} ou {{HTMLElement("audio")}}.
 - `object`
 
   - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
@@ -50,7 +40,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
   - : Requêtes envoyées par plugins.
 - `ping`
 
-  - : Demandes envoyées à l'URL donnée dans l'attribut {{htmlattrxref("ping", "a")}} d'un hyperlien, lorsque l'hyperlien est suivi.
+  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
 
@@ -77,19 +67,20 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `other`
   - : Ressources qui ne sont couvertes par aucun autre type disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.ResourceType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,4 +107,4 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

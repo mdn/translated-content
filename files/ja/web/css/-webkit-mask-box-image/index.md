@@ -1,16 +1,8 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - レイアウト
-  - 標準外
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-box-image
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
+
 {{ CSSRef() }} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。
@@ -18,7 +10,7 @@ translation_of: Web/CSS/-webkit-mask-box-image
 - {{ Xref_cssinitial() }}: なし
 - 適用先: すべての要素
 - {{ Xref_cssinherited() }}: なし
-- メディア: {{ Xref_cssvisual() }}
+- メディア: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: 指定通り
 
 ## 構文
@@ -71,7 +63,7 @@ translation_of: Web/CSS/-webkit-mask-box-image
 
 ```css
 .exampleone {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 ```
 
@@ -79,7 +71,7 @@ translation_of: Web/CSS/-webkit-mask-box-image
 
 ```css
 .exampletwo {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 

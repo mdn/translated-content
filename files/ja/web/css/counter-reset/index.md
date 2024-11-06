@@ -1,15 +1,8 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS リスト
-  - CSS プロパティ
-  - recipe:css-property
-browser-compat: css.properties.counter-reset
-translation_of: Web/CSS/counter-reset
 ---
+
 {{CSSRef}}
 
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値で初期化します。

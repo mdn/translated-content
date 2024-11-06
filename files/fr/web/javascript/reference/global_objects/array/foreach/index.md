@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
@@ -20,8 +11,10 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    arr.forEach(callback);
-    arr.forEach(callback, thisArg);
+```js
+arr.forEach(callback);
+arr.forEach(callback, thisArg);
+```
 
 ### Paramètres
 
@@ -61,7 +54,8 @@ L'ensemble des éléments traités par `forEach` est défini avant le premier ap
 
 `forEach()` ne modifie pas le tableau sur lequel elle est appelée, en revanche, la fonction de retour (_callback_) utilisée peut modifier le tableau.
 
-> **Note :** Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
+> [!NOTE]
+> Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
 >
 > - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) classique
 > - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
@@ -92,23 +86,24 @@ for (var i = 0; i < items.length; i++) {
 Et voici un fragment de code équivalent qui utilise `forEach` :
 
 ```js
-var items = ["item1", "item2", "item3"]
+var items = ["item1", "item2", "item3"];
 var copie = [];
 
-items.forEach(function(item){
+items.forEach(function (item) {
   copie.push(item);
 });
 ```
 
 ### Afficher le contenu d'un tableau
 
-> **Note :** Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
+> [!NOTE]
+> Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
 
 Le code suivant affiche une ligne pour chaque élément du tableau :
 
 ```js
 function logArrayElements(element, index, array) {
-    console.log("a[" + index + "] = " + element);
+  console.log("a[" + index + "] = " + element);
 }
 [2, 5, , 9].forEach(logArrayElements);
 // logs:
@@ -127,23 +122,25 @@ function Compteur() {
   this.compte = 0;
 }
 
-Compteur.prototype.ajouter = function(tableau) {
-  tableau.forEach(function(element) {
+Compteur.prototype.ajouter = function (tableau) {
+  tableau.forEach(function (element) {
     this.somme += element;
     ++this.compte;
-  },  this);
-  //  ^---- On a ajouté l'argument this ici.
+  }, this);
+  // ^---- On a ajouté l'argument this ici.
 };
 
 var obj = new Compteur();
 obj.ajouter([2, 5, 9]);
 console.log(obj.compte); // 3
-console.log(obj.somme);  // 16
+console.log(obj.somme); // 16
 ```
 
-> **Note :** Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
+> [!NOTE]
+> Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
 
-> **Note :** Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) fourni par le contexte lexical.
+> [!NOTE]
+> Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) fourni par le contexte lexical.
 
 ### Stopper une boucle
 
@@ -154,30 +151,30 @@ var SEUIL_MAX = 12;
 var v = [5, 2, 16, 4, 3, 18, 20];
 var res;
 
-res = v.every(function(element, index, array) {
-  console.log('élément :', element);
+res = v.every(function (element, index, array) {
+  console.log("élément :", element);
   if (element >= SEUIL_MAX) {
     return false;
   }
 
   return true;
 });
-console.log('res:', res);
+console.log("res:", res);
 // affiche :
 // élément : 5
 // élément : 2
 // élément : 16
 // res : false
 
-res = v.some(function(element, index, array) {
-  console.log('élément:', element);
+res = v.some(function (element, index, array) {
+  console.log("élément:", element);
   if (element >= SEUIL_MAX) {
     return true;
   }
 
   return false;
 });
-console.log('res:', res);
+console.log("res:", res);
 // affiche :
 // élément : 5
 // élément : 2
@@ -194,7 +191,7 @@ function copie(obj) {
   var copie = Object.create(Object.getPrototypeOf(obj));
   var propNames = Object.getOwnPropertyNames(obj);
 
-  propNames.forEach(function(nom) {
+  propNames.forEach(function (nom) {
     var desc = Object.getOwnPropertyDescriptor(obj, nom);
     Object.defineProperty(copie, nom, desc);
   });
@@ -211,8 +208,8 @@ var obj2 = copie(obj1); // obj2 ressemble désormais à obj1
 Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `"un"`, `"deux"`, `"trois"`, `"quatre"`. Lorsque le parcours du tableau arrive à l'élément `"deux"`, on décale le tableau d'un cran vers les premiers éléments. Aussi, l'élément `"quatre"` est décalé à la place de `"trois"` et `"trois"` est déplacé à la place de `"deux"`. Pour cette raison, lorsque `forEach` poursuit son parcours, elle saute la valeur "trois". Autrement dit, `forEach` n'utilise pas une copie du tableau au moment où elle est appelée, elle manipule le tableau directement. On voit aussi dans cet exemple que les éléments non initialisés ne sont pas traités par la fonction de rappel.
 
 ```js
-var mots = ["un", "deux", "trois",, "quatre"];
-mots.forEach(function(mot) {
+var mots = ["un", "deux", "trois", "quatre"];
+mots.forEach(function (mot) {
   console.log(mot);
   if (mot === "deux") {
     mots.shift();
@@ -225,15 +222,11 @@ mots.forEach(function(mot) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

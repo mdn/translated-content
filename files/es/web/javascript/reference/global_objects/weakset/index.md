@@ -1,13 +1,11 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakSet
-browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
-El objeto **`WeakSet`** te permite almacenar _objetos_ débiles en una colección.
+El objeto **`WeakSet`** te permite almacenar _objetos_ débiles en una colección.
 
 ## Descripción
 
@@ -19,7 +17,8 @@ Las principales diferencias con el objeto {{jsxref("Set")}} son:
 - `WeakSet` son colecciones de **objetos solamente**. No pueden contener valores arbitrarios de cualquier tipo, como pueden hacerlo los {{jsxref("Set")}}.
 - El `WeakSet` es _débil_, lo que significa que las referencias a objectos en un `WeakSet` se mantienen _débilmente_. Si no existen otras referencias a un objecto almacenado en `WeakSet`, esos objectos pueden ser recolectados como basura.
 
-  > **Nota:** Esto también significa que no hay una lista de objectos actuales almacenados en la colección. Los `WeakSets` no son enumerables.
+  > [!NOTE]
+  > Esto también significa que no hay una lista de objectos actuales almacenados en la colección. Los `WeakSets` no son enumerables.
 
 ### Caso de uso: Detección de referencias circulares
 
@@ -113,4 +112,3 @@ _no son **el mismo objeto**_. Y así ambos se añaden al conjunto.
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
-

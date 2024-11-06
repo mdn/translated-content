@@ -1,19 +1,9 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendNativeMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Envoie un seul message d'une extension à une application native.
 
@@ -21,7 +11,7 @@ Cela prend deux paramètres obligatoires : le nom de l'application native et un 
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). The first message sent by the native application is treated as a response to the `sendNativeMessage()` call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.
 
-Une nouvelle instance de l'application est lancée pour appel à  `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
+Une nouvelle instance de l'application est lancée pour appel à `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
 
 Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging).
 
@@ -29,9 +19,9 @@ Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Nati
 
 ```js
 var sending = browser.runtime.sendNativeMessage(
-  application,             // string
-  message                  // object
-)
+  application, // string
+  message, // object
+);
 ```
 
 ### Paramètres
@@ -45,9 +35,9 @@ var sending = browser.runtime.sendNativeMessage(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'expéditeur a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. Si une erreur survient lors de la connexion à l'application native, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.sendNativeMessage")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,13 +64,14 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +98,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

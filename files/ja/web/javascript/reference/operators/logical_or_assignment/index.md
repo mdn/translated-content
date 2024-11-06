@@ -1,15 +1,8 @@
 ---
 title: 論理和代入 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理代入
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.logical_or_assignment
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和代入演算子 (`x ||= y`) は、`x` が{{Glossary("falsy", "偽値")}}である場合にのみ代入を行います。
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ## 構文
 
 ```js
-expr1 ||= expr2
+expr1 ||= expr2;
 ```
 
 ## 解説
@@ -57,12 +50,12 @@ x = x || y;
 "lyrics" 要素が空の場合は、既定値を表示します。
 
 ```js
-document.getElementById('lyrics').textContent ||= 'No lyrics.'
+document.getElementById("lyrics").textContent ||= "No lyrics.";
 ```
 
 ここでの短絡評価は、要素が不必要に更新されることがなく、追加のパースやレンダリング作業、フォーカスの損失などの望ましくない副作用を引き起こすことがないので、特に有益です。
 
-注意: チェック対象の API が返す値に注意してください。空の文字列 ({{Glossary("falsy", "偽値")}}) が返される場合は、`||=` を使用する必要があります。それ以外の場合 (返値が {{jsxref("null")}} または {{jsxref("undefined")}} の場合) は `??=` 演算子を使用してください。
+注意: チェック対象の API が返す値に注意してください。空の文字列 ({{Glossary("falsy", "偽値")}}) が返される場合は、`||=` を使用する必要があります。それ以外の場合 (返値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合) は `??=` 演算子を使用してください。
 
 ## 仕様書
 

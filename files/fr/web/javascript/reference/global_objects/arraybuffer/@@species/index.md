@@ -1,22 +1,17 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Propriété
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur `ArrayBuffer`.
 
 ## Syntaxe
 
-    ArrayBuffer[Symbol.species]
+```js
+ArrayBuffer[Symbol.species];
+```
 
 ## Description
 
@@ -36,20 +31,19 @@ Pour un objet dérivé (par exemple une classe sur mesure `MonArrayBuffer`), le 
 class MonArrayBuffer extends ArrayBuffer {
   // On surcharge species pour renvoyer
   // le constructeur parent ArrayBuffer
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

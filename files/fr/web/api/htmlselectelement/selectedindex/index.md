@@ -1,16 +1,18 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
 
 ## Syntaxe
 
-    var index = selectElem.selectedIndex;
-    selectElem.selectedIndex = index;
+```js
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
 ## Exemple
 
@@ -31,26 +33,23 @@ translation_of: Web/API/HTMLSelectElement/selectedIndex
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select');
-var pElem = document.getElementById('p');
+var selectElem = document.getElementById("select");
+var pElem = document.getElementById("p");
 
 // Quand une nouvelle <option> est selectionnée
-selectElem.addEventListener('change', function() {
+selectElem.addEventListener("change", function () {
   var index = selectElem.selectedIndex;
   // Rapporter cette donnée au <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
-})
+  pElem.innerHTML = "selectedIndex: " + index;
+});
 ```
 
 {{EmbedLiveSample("Exemple", "200px", "80px")}}
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}         | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le snapshot précédent, {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale, snapshot de {{SpecName("HTML WHATWG")}}.            |
+{{Specifications}}
 
-## Compatibilité entre les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement.selectedIndex")}}
+{{Compat}}

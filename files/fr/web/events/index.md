@@ -1,19 +1,16 @@
 ---
 title: Référence des événements
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
-translation_of: Web/Events
 ---
+
 Les [événements DOM](/fr/docs/Web/API/Document_Object_Model/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
 
 Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
 
 Cette rubrique fournit un index des principales _sortes_ d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.
 
-> **Note :** Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
+> [!NOTE]
+> Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
 
 ## Index des événements
 
@@ -1250,7 +1247,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [cut](/fr/docs/Web/API/Window/cut_event)
   - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
   - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [error](/fr/docs/Web/API/Window/error_event)
   - [focus](/fr/docs/Web/API/Window/focus_event)
   - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)

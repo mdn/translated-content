@@ -1,15 +1,17 @@
 ---
 title: document.createDocumentFragment
 slug: Web/API/Document/createDocumentFragment
-translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
 
 ## Syntaxe
 
-    var fragment = document.createDocumentFragment();
+```js
+var fragment = document.createDocumentFragment();
+```
 
 `fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
 
@@ -26,22 +28,20 @@ Cet exemple crée une liste des principaux navigateurs du web.
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // en supposant qu'ul existe
+var element = document.getElementById("ul"); // en supposant qu'ul existe
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);
@@ -51,15 +51,13 @@ element.appendChild(fragment);
 
 {{EmbedLiveSample("Exemple", 600, 140)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale dans la spécification DOM 1. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## Voir aussi
 

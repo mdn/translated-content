@@ -1,10 +1,8 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/EvalError
-browser-compat: javascript.builtins.EvalError
 ---
+
 {{JSRef}}
 
 L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par JavaScript, toutefois, l'objet `EvalError` est toujours présent à des fins de compatibilité.
@@ -37,15 +35,15 @@ L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/f
 
 ```js
 try {
-  throw new EvalError('Coucou', 'unFichier.js', 10);
+  throw new EvalError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Coucou"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "unFichier.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

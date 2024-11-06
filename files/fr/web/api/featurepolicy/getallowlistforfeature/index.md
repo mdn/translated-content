@@ -1,20 +1,17 @@
 ---
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-translation_of: Web/API/FeaturePolicy/getAllowlistForFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La méthode **`getAllowlistForFeature()`** de {{DOMxRef("FeaturePolicy")}} permet d'obtenir la liste des permissions associée à une fonctionnalité pour ce Feature Policy.
 
 ## Syntaxe
 
-    const listePermissions = FeaturePolicy.getAllowlistForFeature(<fonctionnalité>)
+```js
+const listePermissions = FeaturePolicy.getAllowlistForFeature(<fonctionnalité>)
+```
 
 ### Parameter
 
@@ -24,7 +21,7 @@ Un nom de fonctionnalité doit être fourni.
 
 ### Valeur de retour
 
-Une [liste de permissions](fr/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour la fonctionnalité demandée est retournée.
+Une [liste de permissions](/fr/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour la fonctionnalité demandée est retournée.
 
 ## Erreurs
 
@@ -36,21 +33,18 @@ Cet exemple affiche toutes les origines à qui la directive Feature Policy perme
 
 ```js
 // D'abord, récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Puis demande la liste pour la fonctionnalité "camera"
-const listePermissions = featurePolicy.getAllowlistForFeature("camera")
+const listePermissions = featurePolicy.getAllowlistForFeature("camera");
 
-for (const origine of listePermissions)
-  console.log(origine)
+for (const origine of listePermissions) console.log(origine);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy","","getAllowlistForFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.getAllowlistForFeature")}}
+{{Compat}}

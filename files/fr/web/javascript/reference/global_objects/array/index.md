@@ -1,9 +1,8 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array
 ---
+
 {{JSRef}}
 
 L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
@@ -16,16 +15,16 @@ Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices po
 
 ### Opérations fréquentes
 
-**Créer un tableau**
+**Créer un tableau:**
 
 ```js
-let fruits = ['Apple', 'Banana'];
+let fruits = ["Apple", "Banana"];
 
 console.log(fruits.length);
 // 2
 ```
 
-**Accéder (via son index) à un élément du tableau**
+**Accéder (via son index) à un élément du tableau:**
 
 ```js
 let first = fruits[0];
@@ -35,55 +34,55 @@ let last = fruits[fruits.length - 1];
 // Banana
 ```
 
-**Boucler sur un tableau**
+**Boucler sur un tableau:**
 
 ```js
-fruits.forEach(function(item, index, array) {
+fruits.forEach(function (item, index, array) {
   console.log(item, index);
 });
 // Apple 0
 // Banana 1
 ```
 
-**Ajouter à la fin du tableau**
+**Ajouter à la fin du tableau:**
 
 ```js
-let newLength = fruits.push('Orange');
+let newLength = fruits.push("Orange");
 // ["Apple", "Banana", "Orange"]
 ```
 
-**Supprimer le dernier élément du tableau**
+**Supprimer le dernier élément du tableau:**
 
 ```js
 let last = fruits.pop(); // supprime Orange (à la fin)
 // ["Apple", "Banana"];
 ```
 
-**Supprimer le premier élément du tableau**
+**Supprimer le premier élément du tableau:**
 
 ```js
 let first = fruits.shift(); // supprime Apple (au début)
 // ["Banana"];
 ```
 
-**Ajouter au début du tableau**
+**Ajouter au début du tableau:**
 
 ```js
-let newLength = fruits.unshift('Strawberry') // ajoute au début
+let newLength = fruits.unshift("Strawberry"); // ajoute au début
 // ["Strawberry", "Banana"];
 ```
 
-**Trouver l'index d'un élément dans le tableau**
+**Trouver l'index d'un élément dans le tableau:**
 
 ```js
-fruits.push('Mango');
+fruits.push("Mango");
 // ["Strawberry", "Banana", "Mango"]
 
-let pos = fruits.indexOf('Banana');
+let pos = fruits.indexOf("Banana");
 // 1
 ```
 
-**Supprimer un élément par son index**
+**Supprimer un élément par son index:**
 
 ```js
 let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position pos
@@ -91,14 +90,15 @@ let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position 
 // ["Strawberry", "Mango"]
 ```
 
-**Supprimer des éléments à partir d'un index**
+**Supprimer des éléments à partir d'un index:**
 
 ```js
-let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+let vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
 console.log(vegetables);
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
-let pos = 1, n = 2;
+let pos = 1,
+  n = 2;
 
 let removedItems = vegetables.splice(pos, n);
 // n définit le nombre d'éléments à supprimer,
@@ -111,7 +111,7 @@ console.log(removedItems);
 // ["Turnip", "Radish"] (splice retourne la liste des éléments supprimés)
 ```
 
-**Copier un tableau**
+**Copier un tableau:**
 
 ```js
 let shallowCopy = fruits.slice(); // crée un nouveau tableau qui contient les éléments de fruits
@@ -124,9 +124,9 @@ Les tableaux sont indexés à partir de zéro: le premier élément d'un tableau
 
 ```js
 let arr = ["le premier élément", "le deuxième élément", "le dernier élément"];
-console.log(arr[0]);             // affiche "le premier élément"
-console.log(arr[1]);             // affiche "le deuxième élément"
-console.log(arr[arr.length - 1]);// affiche "le dernier élément"
+console.log(arr[0]); // affiche "le premier élément"
+console.log(arr[1]); // affiche "le deuxième élément"
+console.log(arr[arr.length - 1]); // affiche "le dernier élément"
 ```
 
 Les éléments d'un tableau sont des propriétés d'objets de la même manière que `toString` est une propriété. Cependant, essayer d'accéder à un élément du tableau comme suit renverra une erreur, car le nom de la propriété utilisé est invalide :
@@ -146,24 +146,24 @@ console.log(années[0]); // fonctionne correctement
 
 ```js
 renderer.3d.setTexture(model, "personnage.png");   // erreur de syntaxe
-renderer["3d"].setTexture(model, "personnage.png");// fonctionne correctement 
+renderer["3d"].setTexture(model, "personnage.png");// fonctionne correctement
 ```
 
 Dans cet exemple, on utilise des doubles quotes autour de `3d`. On peut aussi utiliser les doubles quotes pour accéder aux éléments d'un tableau (ex. : `années["2"]` au lieu de `années[2]`), mais ce n'est pas obligatoire. Dans l'instruction `années[2]`, le nombre sera converti en une chaîne de caractères par le moteur JavaScript. Pour cette raison, si on utilise les noms de propriété "2" et "02", on fera référence à deux propriétés différentes, et le fragment de code suivant renvoie donc `true`:
 
 ```js
-console.log(années["2"] != années["02"]); 
+console.log(années["2"] != années["02"]);
 ```
 
 De manière similaire, les propriétés nommées avec des mots-clés réservés ne peuvent être consultées qu'en utilisant la syntaxe avec crochets :
 
 ```js
 let promise = {
-  'var' : 'text',
-  'array': [1, 2, 3, 4]
+  var: "text",
+  array: [1, 2, 3, 4],
 };
 
-console.log(promise['var']);
+console.log(promise["var"]);
 ```
 
 ### Relation entre `length` et les propriétés numériques
@@ -181,9 +181,9 @@ Lorsqu'on définit une nouvelle propriété numérique pour un tableau, que l'in
 
 ```js
 fruits[5] = "mangue";
-console.log(fruits[5]);  // "mangue"
+console.log(fruits[5]); // "mangue"
 console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length); // 6 
+console.log(fruits.length); // 6
 ```
 
 On peut également modifier la propriété directement (cela n'ajoutera pas de nouveaux éléments) :
@@ -191,7 +191,7 @@ On peut également modifier la propriété directement (cela n'ajoutera pas de n
 ```js
 fruits.length = 10;
 console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length);  // 10
+console.log(fruits.length); // 10
 ```
 
 En revanche, si on diminue la valeur de [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length), cela supprimera des éléments :
@@ -271,6 +271,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 - [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
   - : Crée un nouvel objet `Array`.
+
 ## Propriétés statiques
 
 - [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)
@@ -295,7 +296,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 ## Méthodes des instances
 
 - [`Array.prototype.at()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/at){{Experimental_Inline}}
-  - : REnvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
+  - : Renvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
 - [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
   - : Renvoie un nouveau tableau qui est le tableau courant, joint avec d'autres tableaux ou valeurs.
 - [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
@@ -313,7 +314,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 - [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
   - : Renvoie l'indice de l'élément trouvé dans le tableau si un élément du tableau satisfait la condition fixée par la fonction passée en argument ou `-1` si aucun élément n'est trouvé.
 - [`Array.prototype.flat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
-  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée. 
+  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée.
 - [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
   - : Renvoie un nouveau tableau formé en appliquant une fonction de rappel donnée à chaque élément du tableau puis en «&nbsp;aplatissant&nbsp;» le tableau d'un niveau.
 - [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -360,6 +361,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
 - <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator()"><code>Array.prototype[@@iterator]()</code></a>
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
+
 ## Exemples
 
 ### Créer un tableau
@@ -368,11 +370,11 @@ Dans l'exemple suivant, on crée un tableau `tableauMsg`, d'une longueur nulle. 
 
 ```js
 let tableauMsg = [];
-tableauMsg[0] = 'Coucou';
-tableauMsg[99] = 'monde';
+tableauMsg[0] = "Coucou";
+tableauMsg[99] = "monde";
 
 if (tableauMsg.length === 100) {
-  console.log('La longueur du tableau vaut 100.');
+  console.log("La longueur du tableau vaut 100.");
 }
 ```
 
@@ -382,69 +384,69 @@ Dans l'exemple qui suit, on crée un plateau d'échec grâce à un tableau en de
 
 ```js
 let plateau = [
-  ['T','C','F','R','K','F','C','T'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['t','c','f','k','r','f','c','t'] ];
+  ["T", "C", "F", "R", "K", "F", "C", "T"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["t", "c", "f", "k", "r", "f", "c", "t"],
+];
 
-console.log(plateau.join('\n') + '\n\n');
+console.log(plateau.join("\n") + "\n\n");
 
 // On déplace le pion de deux cases en avant 2
 plateau[4][4] = plateau[6][4];
-plateau[6][4] = ' ';
-console.log(plateau.join('\n'));
+plateau[6][4] = " ";
+console.log(plateau.join("\n"));
 ```
 
 Voici le résultat affiché :
 
-    T,C,F,R,K,F,C,T
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-    p,p,p,p,p,p,p,p
-    t,c,f,k,r,f,c,t
+```
+T,C,F,R,K,F,C,T
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+p,p,p,p,p,p,p,p
+t,c,f,k,r,f,c,t
 
-    T,C,F,R,K,F,C,T
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , ,p, , ,
-     , , , , , , ,
-    p,p,p,p, ,p,p,p
-    t,c,f,k,r,f,c,t
+T,C,F,R,K,F,C,T
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , ,p, , ,
+  , , , , , , ,
+p,p,p,p, ,p,p,p
+t,c,f,k,r,f,c,t
+```
 
 ### Utiliser un tableau pour tabuler un ensemble de valeurs
 
 ```js
 values = [];
-for (let x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
-};
-console.table(values)
+for (let x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
+}
+console.table(values);
 ```
 
 Résulte en
 
 ```plain
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1  0
+1  2  2
+2  4  8
+3  8  18
+4  16  32
+5  32  50
+6  64  72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 (Le première colonne est l'index)
@@ -452,6 +454,7 @@ Résulte en
 ## Spécifications
 
 {{Specifications}}
+
 ## Compatibilité des navigateurs
 
 {{Compat}}

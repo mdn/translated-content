@@ -1,20 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les valeurs temporelles relatives, calculées pendant l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
@@ -23,7 +11,9 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 
 ## Syntaxe
 
-    relativeTimeFormat.resolvedOptions()
+```js
+relativeTimeFormat.resolvedOptions();
+```
 
 ### Valeur de retour
 
@@ -47,7 +37,7 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 
   - : Le format du message produit. Les valeurs possibles sont :
 
-    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
+    - `"always"` : la valeur par défaut (par exemple `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 
 - `numberingSystem`
@@ -56,25 +46,22 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 ## Exemples
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
+var de = new Intl.RelativeTimeFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-|                                                                                                                                                   |                         |              |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

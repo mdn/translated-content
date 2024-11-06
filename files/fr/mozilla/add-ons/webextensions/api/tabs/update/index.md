@@ -1,23 +1,13 @@
 ---
 title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 
-Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans  `updateProperties` ne sont pas modifiées.
+Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans `updateProperties` ne sont pas modifiées.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -25,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.tabs.update(
-  tabId,              // optional integer
-  updateProperties    // object
-)
+  tabId, // optional integer
+  updateProperties, // object
+);
 ```
 
 ### Paramètres
@@ -36,7 +26,7 @@ var updating = browser.tabs.update(
   - : `integer`. Par défaut à l'onglet sélectionné de la fenêtre en cours.
 - `updateProperties`
 
-  - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.
+  - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
 
     - `active`{{optional_inline}}
       - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
@@ -86,7 +76,7 @@ A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera
 
 ## Exemples
 
-Naviguez dans l'onglet actif de la fenêtre en cours pour https\://developer.mozilla.org :
+Naviguez dans l'onglet actif de la fenêtre en cours pour `https://developer.mozilla.org` :
 
 ```js
 function onUpdated(tab) {
@@ -97,11 +87,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+var updating = browser.tabs.update({ url: "https://developer.mozilla.org" });
 updating.then(onUpdated, onError);
 ```
 
-Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à https\://developer.mozilla.org:
+Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {
@@ -115,28 +105,29 @@ function onError(error) {
 function updateFirstTab(tabs) {
   var updating = browser.tabs.update(tabs[0].id, {
     active: true,
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
   updating.then(onUpdated, onError);
 }
 
-var querying = browser.tabs.query({currentWindow:true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(updateFirstTab, onError);
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.update", 10)}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,4 +154,4 @@ querying.then(updateFirstTab, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

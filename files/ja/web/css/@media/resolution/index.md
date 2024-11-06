@@ -1,15 +1,8 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.resolution
-translation_of: Web/CSS/@media/resolution
 ---
+
 {{CSSRef}}
 
 **`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末のピクセル解像度をテストするために使用することができます。

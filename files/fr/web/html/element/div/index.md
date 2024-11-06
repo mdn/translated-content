@@ -1,20 +1,9 @@
 ---
-title: '<div> : l''élément de division du contenu'
+title: "<div> : l'élément de division du contenu"
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
-translation_of: Web/HTML/Element/div
-browser-compat: html.elements.div
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<div>`** (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de [CSS](/fr/docs/Web/CSS).
 
@@ -103,7 +92,8 @@ En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi.
 
 Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Note :** L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> [!NOTE]
+> L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
@@ -115,14 +105,16 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 ```html
 <div>
-  <p>Tout type de contenu. Par exemple &lt;p&gt;,
-  &lt;table&gt;. À vous de voir&nbsp;!</p>
+  <p>
+    Tout type de contenu. Par exemple &lt;p&gt;, &lt;table&gt;. À vous de
+    voir&nbsp;!
+  </p>
 </div>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
-{{EmbedLiveSample("Un_exemple_simple", "", 80)}}
+{{EmbedLiveSample("", "", 80)}}
 
 ### Un exemple mis en forme
 
@@ -132,8 +124,9 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 ```html
 <div class="shadowbox">
-  <p>Voici un paragraphe très intéressant inscrit dans une boîte
-  avec une ombre.</p>
+  <p>
+    Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.
+  </p>
 </div>
 ```
 
@@ -151,7 +144,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("Un_exemple_mis_en_forme", "", 150)}}
+{{EmbedLiveSample("", "", 150)}}
 
 ## Accessibilité
 

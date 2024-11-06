@@ -1,14 +1,9 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Contenu de groupage HTML
-  - Element
-  - HTML
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.
 
@@ -18,15 +13,17 @@ L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 
-    > **Note :** Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
+    > [!NOTE]
+    > Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
 
-    > **Note :** Avant {{Gecko("9.0")}}, des valeurs négatives étaient incorrectement converties en 0. A partir de {{Gecko("9.0")}}, toutes les valeurs entières ont été correctement analysées.
+    > [!NOTE]
+    > Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste :
 
@@ -38,7 +35,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     Ce type surcharge celui utilisé par son élément parent {{HTMLElement("ol")}} si présent.
 
-    > **Note :** Cet attribut a été déprécié : utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > [!NOTE]
+    > Cet attribut a été déprécié : utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Exemples
 
@@ -90,7 +88,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 {{EmbedLiveSample("Liste_non_ordonnée")}}
 
-> **Note :** Pour d'autres exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
+> [!NOTE]
+> Pour d'autres exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
 
 ## Résumé technique
 
@@ -132,12 +131,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("presentation")}}, {{ARIARole("radio")}},
-        {{ARIARole("separator")}}, {{ARIARole("tab")}},
-        {{ARIARole("treeitem")}}.
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code>.
       </td>
     </tr>
     <tr>
@@ -149,15 +148,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                                   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                   |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | L'attribut `type` a été déprécié. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## Voir aussi
 

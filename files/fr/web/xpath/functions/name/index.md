@@ -1,18 +1,17 @@
 ---
 title: name
 slug: Web/XPath/Functions/name
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/name
-original_slug: Web/XPath/Fonctions/name
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `name` retourne une chaîne représentant le QName du premier nœud d'un ensemble de nœuds donné.
 
 ### Syntaxe
 
-    name( [ensemble-de-nœuds] )
+```
+name( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

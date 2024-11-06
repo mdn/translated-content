@@ -1,18 +1,9 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - Settings
-  - WebExtensions
-  - add-on
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.
 
@@ -25,7 +16,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getSettings = browser.browsingData.settings()
+var getSettings = browser.browsingData.settings();
 ```
 
 ### Paramètres
@@ -37,17 +28,17 @@ Aucun.
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant les informations sur les paramètres. Cet objet a trois propriétés :
 
 - `options`
-  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. Un objet  `RemovalOptions` décrivant les options de suppression actuellement sélectionnées.
+  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. Un objet `RemovalOptions` décrivant les options de suppression actuellement sélectionnées.
 - `dataToRemove`
   - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chaque propriété aura une valeur `true` si ce type est sélectionné pour la suppression et `false` dans le cas contraire.
 - `dataRemovalPermitted`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur  `true` si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et `false` dans le cas contraire.
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur `true` si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et `false` dans le cas contraire.
 
 Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.settings")}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,13 +60,14 @@ browser.browsingData.settings().then(onGotSettings, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +94,4 @@ browser.browsingData.settings().then(onGotSettings, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

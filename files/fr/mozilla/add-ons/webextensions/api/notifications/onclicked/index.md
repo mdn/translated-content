@@ -1,28 +1,18 @@
 ---
 title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).
 
 ## Syntaxe
 
 ```js
-browser.notifications.onClicked.addListener(listener)
-browser.notifications.onClicked.removeListener(listener)
-browser.notifications.onClicked.hasListener(listener)
+browser.notifications.onClicked.addListener(listener);
+browser.notifications.onClicked.removeListener(listener);
+browser.notifications.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -34,7 +24,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -45,24 +35,24 @@ Les événements ont trois fonctions :
     - `notificationId`
       - : `string`. ID de la notification sur laquelle l'utilisateur a cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onClicked")}}
+{{Compat}}
 
 ## Exemples
 
 Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClicked")}} pour écouter les notifications système en cours de clic. Lorsque cela se produit, nous enregistrons un message approprié à la console.
 
 ```js
-browser.notifications.onClicked.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' was clicked by the user');
+browser.notifications.onClicked.addListener(function (notificationId) {
+  console.log("Notification " + notificationId + " was clicked by the user");
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

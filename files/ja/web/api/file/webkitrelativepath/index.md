@@ -1,69 +1,59 @@
 ---
-title: File.webkitRelativePath
+title: "File: webkitRelativePath プロパティ"
+short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-tags:
-  - File
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - 標準外
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ウェブ
-  - webkitRelativePath
-browser-compat: api.File.webkitRelativePath
-translation_of: Web/API/File/webkitRelativePath
+l10n:
+  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
 ---
-{{APIRef("File API")}}{{non-standard_header}}
 
-**`File.webkitRelativePath`** は、 {{htmlattrxref("webkitdirectory", "input")}} 属性が設定された {{HTMLElement("input")}} 要素でユーザーが選択したディレクトリーに対するファイルのパスを指定する {{domxref("USVString")}} を持つ読み取り専用のプロパティです。
+{{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
 
-## 構文
+**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
 
-```js
-relativePath = File.webkitRelativePath
-```
+## 値
 
-### 値
-
-ユーザーが選択した祖先ディレクトリーを基準にしたファイルのパスを含む {{domxref("USVString")}}。
+ユーザーが選択した祖先ディレクトリーを基準にしたファイルのパスを含む文字列。
 
 ## 例
 
-この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリ階層に含まれるすべてのファイルのリストが生成され、表示されます。
+この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層に含まれるすべてのファイルのリストが生成され、表示されます。
 
-### HTML コンテンツ
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
+<output id="output"></output>
 ```
 
-### JavaScript コンテンツ
+```css hidden
+output {
+  display: block;
+  white-space: pre-wrap;
+}
+```
+
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+filepicker.addEventListener("change", (event) => {
+  const files = event.target.files;
+
+  for (const file of files) {
+    output.textContent += `${file.webkitRelativePath}\n`;
+  }
+});
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example') }}
+{{EmbedLiveSample('Example')}}
 
 ## 仕様書
 
 {{Specifications}}
-
-この API には、公式の W3C または WHATWG 仕様はありません。
 
 ## ブラウザーの互換性
 
@@ -71,6 +61,6 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## 関連情報
 
-- [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API)
+- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("HTMLInputElement.webkitdirectory")}}

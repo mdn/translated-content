@@ -1,23 +1,17 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/next
 ---
+
 {{JSRef}}
 
 La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et `value`. Cette méthode peut également recevoir un paramètre pour envoyer une valeur au générateur.
 
 ## Syntaxe
 
-    gen.next(valeur)
+```js
+gen.next(valeur);
+```
 
 ### Paramètres
 
@@ -49,10 +43,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### Envoyer des valeurs à un générateur
@@ -61,7 +55,7 @@ Ici, `next` est appelé avec une valeur. On notera ici que le premier appel n'af
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     var value = yield null;
     console.log(value);
   }
@@ -77,14 +71,11 @@ g.next(2);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## Voir aussi
 

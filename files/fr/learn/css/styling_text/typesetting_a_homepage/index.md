@@ -1,18 +1,8 @@
 ---
 title: Composition de la page d'accueil d'une école de communauté
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - CSS
-  - Codage
-  - Composer du texte
-  - Débutant
-  - Evaluation
-  - Fontes
-  - Fontes web
-  - Liens
-  - Listes
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 Dans cette évaluation, nous testerons votre compréhension de toutes les techniques pour la composition de textes à l'écran présentées au cours de ce module&nbsp;: elle consiste à créer la page d'accueil du site d'une école communale. Vous ne devriez avoir que du plaisir tout au long de ce parcours.
@@ -43,7 +33,7 @@ Pour débuter cette évaluation, vous devez&nbsp;:
 - récupérer les fichiers [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) de l'exercice ainsi que [le lien externe sur l'icône](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - en faire une copie sur votre ordinateur.
 
-> **Note :** Autrement, il reste possible d'utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
+Autrement, il reste possible d'utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
 
 ## Énoncé de l'exercice
 
@@ -51,7 +41,7 @@ Nous mettons à votre disposition un HTML pour la page d'accueil du site interne
 
 Fontes&nbsp;:
 
-- Primo, téléchargez quelques polices gratuites.  Comme il s'agit d'un collège, les polices choisies doivent donner à la page une impression de sérieux, de formalisme et de confiance — une police sérif ample pour le corps du texte général, associée une police sans sérif ou bloc sérif pour les en-têtes serait pas mal.
+- Primo, téléchargez quelques polices gratuites. Comme il s'agit d'un collège, les polices choisies doivent donner à la page une impression de sérieux, de formalisme et de confiance — une police sérif ample pour le corps du texte général, associée une police sans sérif ou bloc sérif pour les en-têtes serait pas mal.
 - Ensuite, utilisez le service ad-hoc pour créer le «&nbsp;bulletproof `@font-face` code&nbsp;» pour ces deux fontes.
 - Appliquez la police pour le corps à toute la page et celle pour les titres aux en‑têtes.
 
@@ -95,15 +85,11 @@ La capture d'écran ci-après montre un exemple possible du design terminé&nbsp
 
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-
-
 ## Dans ce module
-
-
 
 - [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
 - [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)

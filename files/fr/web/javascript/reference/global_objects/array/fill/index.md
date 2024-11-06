@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/fill
 ---
+
 {{JSRef}}
 
 La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.
@@ -20,9 +11,11 @@ La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux ind
 
 ## Syntaxe
 
-    arr.fill(valeur)
-    arr.fill(valeur, début)
-    arr.fill(valeur, début, fin)
+```js
+arr.fill(valeur);
+arr.fill(valeur, début);
+arr.fill(valeur, début, fin);
+```
 
 ### Paramètres
 
@@ -52,15 +45,15 @@ La méthode `fill()` est une méthode de modification, elle changera l'objet `th
 ## Exemples
 
 ```js
-[1, 2, 3].fill(4);            // [4, 4, 4]
-[1, 2, 3].fill(4, 1);         // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2);      // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1);      // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2);    // [4, 2, 3]
-[1, 2, 3].fill(4, 3, 3);      // [1, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN);  // [1, 2, 3]
-Array(3).fill(4);             // [4, 4, 4]
-[].fill.call({length: 3}, 4); // {0: 4, 1: 4, 2: 4, length: 3}
+[1, 2, 3].fill(4); // [4, 4, 4]
+[1, 2, 3].fill(4, 1); // [1, 4, 4]
+[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
+[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
+[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
+[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
+[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
+Array(3).fill(4); // [4, 4, 4]
+[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
 
 // Les objets sont copiés via une référence
 var arr = Array(3).fill({}); // [{}, {}, {}];
@@ -71,12 +64,11 @@ arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
 
 ```js
 if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
+  Object.defineProperty(Array.prototype, "fill", {
+    value: function (value) {
       // Steps 1-2.
       if (this == null) {
-        throw new TypeError('this is null or not defined');
+        throw new TypeError("this is null or not defined");
       }
 
       var O = Object(this);
@@ -89,19 +81,20 @@ if (!Array.prototype.fill) {
       var relativeStart = start >> 0;
 
       // Step 8.
-      var k = relativeStart < 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
+      var k =
+        relativeStart < 0
+          ? Math.max(len + relativeStart, 0)
+          : Math.min(relativeStart, len);
 
       // Steps 9-10.
       var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end >> 0;
+      var relativeEnd = end === undefined ? len : end >> 0;
 
       // Step 11.
-      var final = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+      var final =
+        relativeEnd < 0
+          ? Math.max(len + relativeEnd, 0)
+          : Math.min(relativeEnd, len);
 
       // Step 12.
       while (k < final) {
@@ -111,21 +104,18 @@ if (!Array.prototype.fill) {
 
       // Step 13.
       return O;
-    }
+    },
   });
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,8 @@
 ---
 title: Carte
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS Grid
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Card
-original_slug: Web/CSS/Layout_cookbook/Carte
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment créer des cartes (_cards_ en anglais), disposant éventuellement d'un pied de page, qui peuvent être organisée en listes.
@@ -44,7 +38,8 @@ La piste pour le titre est définie avec {{cssxref("max-content")}} ce qui empê
 
 Si la carte possède un pied de page, celui-ci sera dimensionné automatiquement car les lignes ajoutées sur la grille implicite sont dimensionnés automatiquement. Aussi, le pied de page sera suffisamment grand pour contenir l'ensemble de son texte.
 
-> **Note :** Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
+> [!NOTE]
+> Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
 
 ## Méthodes alternatives
 
@@ -60,15 +55,7 @@ Selon le contenu des cartes, il est possible voire souhaitable d'appliquer quelq
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
-
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## Voir aussi
 

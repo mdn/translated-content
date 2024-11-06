@@ -1,13 +1,8 @@
 ---
 title: vide
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/Empty
-original_slug: Web/JavaScript/Reference/Instructions/Vide
 ---
+
 {{jsSidebar("Statements")}}
 
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
@@ -16,7 +11,9 @@ Une **instruction vide** est utilisée pour ne fournir aucune instruction là o�
 
 ## Syntaxe
 
-    ;
+```js-nolint
+;
+```
 
 ## Description
 
@@ -30,47 +27,39 @@ L'instruction vide peut être utilisée dans les boucles. Par exemple, ici on a 
 var arr = [1, 2, 3];
 
 // Affecter 0 pour toutes les valeurs du tableau
-for (i = 0; i < arr.length; arr[i++] = 0) /* instruction vide */ ;
+for (i = 0; i < arr.length; arr[i++] = 0 /* instruction vide */);
 
-console.log(arr)
+console.log(arr);
 // [0, 0, 0]
 ```
 
-> **Note :** Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
+> [!NOTE]
+> Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
 
 ```js
-if (condition);  // Attention, ce "if" ne fait rien !
-   finDuMonde()  // Cette méthode est donc toujours lancée !!!
+if (condition); // Attention, ce "if" ne fait rien !
+finDuMonde(); // Cette méthode est donc toujours lancée !!!
 ```
 
 Un autre exemple avec une instruction {{jsxref("Instructions/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
 
 ```js
-if (un)
-  faire1èreEtape();
-else if (deux)
-  faire4èmeEtape();
-else if (trois)
-  ; // rien ici
+if (un) faire1èreEtape();
+else if (deux) faire4èmeEtape();
+else if (trois);
 else if (quatre)
+  // rien ici
   faire4èmeEtape();
-else
-  chargerFusée();
+else chargerFusée();
 ```
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Instruction vide')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-empty-statement', 'instruction vide')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ES5.1', '#sec-12.3', 'instruction vide')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES3', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES3')}}         |                      |
-| {{SpecName('ES1', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES1')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Voir aussi
 

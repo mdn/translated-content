@@ -1,20 +1,8 @@
 ---
 title: Envoyer et extraire les données des formulaires
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
@@ -56,7 +44,8 @@ Le web se fonde sur une architecture client/serveur élémentaire&nbsp;; en rés
 
 Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et convivial de configurer une requête HTTP pour envoyer des données à un serveur. L'utilisateur peut ainsi adresser des informations à joindre à la requête HTTP.
 
-> **Note :** Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps).
+> [!NOTE]
+> Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps).
 
 ## Côté client : définition de la méthode d'envoi des données
 
@@ -66,31 +55,32 @@ L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'en
 
 Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
 
-Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
+Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/Form) sont envoyées à la même page que celle du formulaire :
 
 ```html
-<form>
+<form></form>
 ```
 
 De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) était requis. Il n'y en a donc plus besoin.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
-> **Note :** Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> [!NOTE]
+> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
 
 ### L'attribut method
 
@@ -108,11 +98,11 @@ Considérons le formulaire suivant :
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">Quelle salutation voulez-vous adresser&nbsp;?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">À qui voulez‑vous l'adresser ?</label>
-    <input name="to" value="Maman">
+    <input name="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -131,10 +121,13 @@ Les données sont ajoutées à l'URL sous forme d'une suite de paires nom/valeur
 
 La requête HTTP ressemble à quelque chose comme&nbsp;:
 
-    GET /?say=Hi&to=Mom HTTP/1.1
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/1.1
+Host: foo.com
+```
 
-> **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!NOTE]
+> Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 #### La méthode POST
 
@@ -146,11 +139,11 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">Quelle salutation voulez-vous dire ?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">A qui voulez-vous le dire ?</label>
-    <input name="to" id="to" value="Maman">
+    <input name="to" id="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -160,26 +153,29 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 
 Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajoutée à l'URL et la requête HTTP ressemble à ceci, les données incorporées au corps de requête&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
-> **Note :** Vous trouverez cet exemple sur GitHub — voyez [post-method.html](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!NOTE]
+> Vous trouverez cet exemple sur GitHub — voyez [post-method.html](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 ### Voir les requêtes HTTP
 
 Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
-1.  Pressez F12
-2.  Selectionnez «&nbsp;Réseau&nbsp;»
-3.  Selectionnez «&nbsp;Tout&nbsp;»
-4.  Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
-5.  Selectionnez «&nbsp;En‑tête&nbsp;»
+1. Pressez F12
+2. Selectionnez «&nbsp;Réseau&nbsp;»
+3. Selectionnez «&nbsp;Tout&nbsp;»
+4. Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
+5. Selectionnez «&nbsp;En‑tête&nbsp;»
 
 Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
@@ -187,8 +183,8 @@ Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
 La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné ci‑dessus, avec une requête `GET` l'utilisateur verra les données dans la barre de l'URL, mais avec une requête `POST` il ne verra rien. Cela peut être important pour deux raisons&nbsp;:
 
-1.  Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
-2.  Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
+1. Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
+2. Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
 
 ## Côté serveur : récupérer les données
 
@@ -212,7 +208,8 @@ Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci 
 
 ![L'exécution du code PHP déclenche l'affichage de Hi Mom](php-result.png)
 
-> **Note :** Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont [MAMP](https://www.mamp.info/en/downloads/) (Mac et Windows) et [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
+> [!NOTE]
+> Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont [MAMP](https://www.mamp.info/en/downloads/) (Mac et Windows) et [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
 >
 > Notez également que si vous utilisez MAMP mais que vous n'avez pas installé MAMP Pro (ou si le temps d'essai de la démo de MAMP Pro a expiré), vous pourriez avoir des difficultés à le faire fonctionner. Pour le faire fonctionner à nouveau, nous avons constaté que vous pouvez charger l'application MAMP, puis choisir les options de menu _MAMP_ > _Préférences_ > _PHP_, et définir "Version standard :" à "7.2.x" (x sera différent selon la version que vous avez installée).
 
@@ -241,7 +238,8 @@ Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbs
 - [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
-> **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
+> [!NOTE]
+> À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
 
 ### Autres langages et canevas de structures
 
@@ -256,7 +254,8 @@ Il y a de nombreuses autres techniques côté serveur utilisables pour gérer de
 
 Enfin il faut noter que même en utilisant ces canevas, travailler avec des formulaires n'est pas toujours _facile_. Mais c'est quand même bien plus facile que d'essayer d'en écrire vous‑même les fonctionnalités et cela vous économisera pas mal de temps.
 
-> **Note :** Nous déborderions du cadre de cet article en vous initiant aux langages côté serveur ou aux canevas. Les liens ci‑dessus vous donneront des informations si vous souhaitez en apprendre plus.
+> [!NOTE]
+> Nous déborderions du cadre de cet article en vous initiant aux langages côté serveur ou aux canevas. Les liens ci‑dessus vous donneront des informations si vous souhaitez en apprendre plus.
 
 ## Cas particulier : envoyer des fichiers
 
@@ -278,7 +277,7 @@ Par exemple :
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choisir un fichier</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Envoyer le fichier</button>
@@ -286,7 +285,8 @@ Par exemple :
 </form>
 ```
 
-> **Note :** Les serveurs peuvent être configurés avec une limite de taille pour les fichiers et les requêtes HTTP afin d'éviter les abus.
+> [!NOTE]
+> Les serveurs peuvent être configurés avec une limite de taille pour les fichiers et les requêtes HTTP afin d'éviter les abus.
 
 ## Problèmes courants de sécurité
 
@@ -319,23 +319,3 @@ Si vous voulez en savoir plus par rapport aux applications web, vous pouvez cons
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de saisie HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Autres contrôles de formulaires](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes d'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Envoi de données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

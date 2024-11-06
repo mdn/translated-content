@@ -1,16 +1,8 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/keys
 ---
+
 {{JSRef}}
 
 La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).
@@ -19,7 +11,9 @@ La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propri
 
 ## Syntaxe
 
-    Object.keys(obj)
+```js
+Object.keys(obj);
+```
 
 ### Paramètres
 
@@ -42,23 +36,27 @@ console.log(Object.keys(arr));
 // affichera ['0', '1', '2']
 
 // un objet semblable à un tableau
-var obj = { 0 : "a", 1 : "b", 2 : "c"};
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj));
 // affichera ['0', '1', '2']
 
 // un objet semblable à un tableau avec
 // un ordre de clé aléatoire
-var an_obj = { 100: "a", 2: "b", 7: "c"};
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(an_obj));
 // affichera ['2', '7', '100']
 
 // getToto est une propriété non énumérable
-var monObjet = Object.create({}, {
-                                 getToto : {
-                                            value : function () {
-                                              return this.toto }
-                                           }
-                                  });
+var monObjet = Object.create(
+  {},
+  {
+    getToto: {
+      value: function () {
+        return this.toto;
+      },
+    },
+  },
+);
 monObjet.toto = 1;
 
 console.log(Object.keys(monObjet));
@@ -81,15 +79,11 @@ Object.keys("toto");
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

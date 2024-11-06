@@ -1,10 +1,9 @@
 ---
 title: <input type="text">
-slug: Web/HTML/Element/Input/text
-translation_of: Web/HTML/Element/input/text
-browser-compat: html.elements.input.input-text
+slug: Web/HTML/Element/input/text
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.
 
@@ -91,7 +90,8 @@ L'attribut `pattern` est une expression rationnelle que doit respecter la valeur
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
-> **Note :** L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation d'un motif de validation](#utiliser_un_motif_de_validation) pour plus de détails et un exemple.
 
@@ -101,19 +101,21 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript qui définirait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 
 L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative — le champ affiché peut être plus étroit ou plus large que la taille (`size`) spécifiée en fonction des caractères saisis et des paramètres de police ([`font`](/fr/docs/Web/CSS/font)) utilisés.
 
-Cet attribut *ne* définit *pas* la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut [`maxlength`](#maxlength).
+Cet attribut _ne_ définit _pas_ la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut [`maxlength`](#maxlength).
 
 ### `spellcheck`
 
@@ -161,7 +163,7 @@ Les éléments `<input>` de type `text` sont utilisés pour créer des champs te
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name">
+    <input type="text" id="uname" name="name" />
   </div>
   <div>
     <button>Envoyer</button>
@@ -183,8 +185,11 @@ Il est possible de fournir un texte indicatif qui sera affiché dans le champ lo
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur :</label>
-    <input type="text" id="uname" name="name"
-           placeholder="Un seul mot, en minuscules">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Un seul mot, en minuscules" />
   </div>
   <div>
     <button>Envoyer</button>
@@ -206,9 +211,12 @@ La taille physique du champ de saisie peut être adaptée grâce à l'attribut [
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name"
-           placeholder="Un seul mot, en minuscules"
-           size="30">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Un seul mot, en minuscules"
+      size="30" />
   </div>
   <div>
     <button>Envoyer</button>
@@ -222,7 +230,8 @@ La taille physique du champ de saisie peut être adaptée grâce à l'attribut [
 
 Les éléments `<input>` de type `text` ne possède pas de mécanisme de validation automatique. En revanche, il est possible d'ajouter certaines contraintes qui seront vérifiées côté client et que nous allons voir ici.
 
-> **Note :** La validation des données de formulaire HTML *ne doit pas* remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
+> [!NOTE]
+> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
 
 ### Un aparté sur la mise en forme
 
@@ -240,13 +249,13 @@ input + span {
 
 input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
 input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -261,7 +270,7 @@ On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-re
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name" required>
+    <input type="text" id="uname" name="name" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -271,21 +280,21 @@ On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-re
 ```
 
 ```css hidden
-div { 
+div {
   margin-bottom: 10px;
   position: relative;
-} 
-input + span { 
+}
+input + span {
   padding-right: 30px;
-} 
-input:invalid+span:after { 
+}
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -306,9 +315,15 @@ Dans l'exemple suivant, pour que le texte soit valide, il faut qu'il soit plus l
 <form>
   <div>
     <label for="uname">Choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name" required size="45"
-           placeholder="Le nom d'utilisateur doit mesurer entre 4 et 8 caractères"
-           minlength="4" maxlength="8">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      placeholder="Le nom d'utilisateur doit mesurer entre 4 et 8 caractères"
+      minlength="4"
+      maxlength="8" />
     <span class="validity"></span>
   </div>
   <div>
@@ -325,14 +340,14 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -343,7 +358,8 @@ Voici le résultat qui est alors obtenu&nbsp;:
 
 Si vous essayez d'envoyer le formulaire avec un nom d'utilisateur plus court (que 4 caractères), le navigateur affichera un message d'erreur. De plus le navigateur empêchera de saisir une valeur plus longue que 8 caractères.
 
-> **Note :** Si on indique `minlength` mais pas `required`, la valeur saisie est considérée comme valide car l'utilisatrice ou l'utilisateur peut ne pas saisir de valeur.
+> [!NOTE]
+> Si on indique `minlength` mais pas `required`, la valeur saisie est considérée comme valide car l'utilisatrice ou l'utilisateur peut ne pas saisir de valeur.
 
 ### Utiliser un motif de validation
 
@@ -355,8 +371,13 @@ Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un tex
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}" />
     <span class="validity"></span>
     <p>Un nom d'utilisateur doit être en minuscules sur 4 à 8 caractères.</p>
   </div>
@@ -381,15 +402,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

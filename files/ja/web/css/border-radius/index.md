@@ -1,15 +1,10 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-radius
-translation_of: Web/CSS/border-radius
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
+
 {{CSSRef}}
 
 **`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
@@ -20,7 +15,8 @@ translation_of: Web/CSS/border-radius
 
 `border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
 
-> **Note:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+> [!NOTE]
+> 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
 
 ## 構成要素のプロパティ
 
@@ -64,13 +60,14 @@ border-radius: 10px 5% / 20px 25em 30px 35em;
 border-radius: inherit;
 border-radius: initial;
 border-radius: revert;
+border-radius: revert-layer;
 border-radius: unset;
 ```
 
 `border-radius` プロパティは次のように指定することができます。
 
- - 1 ～ 4 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
- - その後に任意で、 "/" と 1 ～ 4 つの `<length>` または `<percentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
+- 1 ～ 4 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
+- その後に任意で、 "/" と 1 ～ 4 つの `<length>` または `<percentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
 
 ### 値
 
@@ -78,7 +75,7 @@ border-radius: unset;
   <tbody>
     <tr>
       <td><em>半径</em></td>
-      <td><img alt="all-corner.png" src="all-corner.png" /></td>
+      <td><img alt="水色の長方形に薄いグレーの境界線があります。4 つの角はすべて丸めてあります。" src="all-corner.png" /></td>
       <td>
         境界の四隅に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 1 つの構文でのみ使用されます。
       </td>
@@ -86,7 +83,7 @@ border-radius: unset;
     <tr>
       <td><em>左上と右下</em></td>
       <td>
-        <img alt="top-left-bottom-right.png" src="top-left-bottom-right.png" />
+        <img alt="水色の長方形に薄いグレーの境界線があります。左上と右下の 2 つの角は丸めてあります。" src="top-left-bottom-right.png" />
       </td>
       <td>
         要素ボックスの左上と右下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 2 つの構文でのみ使用されます。
@@ -95,7 +92,7 @@ border-radius: unset;
     <tr>
       <td><em>右上と左下</em></td>
       <td>
-        <img alt="top-right-bottom-left.png" src="top-right-bottom-left.png" />
+        <img alt="水色の長方形に薄いグレーの境界線があります。右上と左下の 2 つの角は丸めてあります。" src="top-right-bottom-left.png" />
       </td>
       <td>
         要素ボックスの右上と左下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 2 つまたは 3 つの構文でのみ使用されます。
@@ -103,28 +100,28 @@ border-radius: unset;
     </tr>
     <tr>
       <td><em>左上</em></td>
-      <td><img alt="top-left.png" src="top-left.png" /></td>
+      <td><img alt="水色の長方形に薄いグレーの境界線があります。左上の角は丸めてあります。" src="top-left.png" /></td>
       <td>
         要素ボックスの左上の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 3 つまたは 4 つの構文でのみ使用されます。
       </td>
     </tr>
     <tr>
       <td><em>右上</em></td>
-      <td><img alt="top-right.png" src="top-right.png" /></td>
+      <td><img alt="水色の長方形に薄いグレーの境界線があります。右上の角は丸めてあります。" src="top-right.png" /></td>
       <td>
         要素ボックスの右上の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 4 つの構文でのみ使用されます。
       </td>
     </tr>
     <tr>
       <td><em>右下</em></td>
-      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
+      <td><img alt="水色の長方形に薄いグレーの境界線があります。右下の角は丸めてあります。" src="bottom-right.png" /></td>
       <td>
         要素ボックスの右下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。3 つまたは 4 つの値の構文でのみ使用されます。
       </td>
     </tr>
     <tr>
       <td><em>左下</em></td>
-      <td><img alt="bottom-left.png" src="bottom-left.png" /></td>
+      <td><img alt="水色の長方形に薄いグレーの境界線があります。左下の角は丸めてあります。" src="bottom-left.png" /></td>
       <td>
         要素ボックスの左下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 4 つの構文でのみ使用されます。
       </td>
@@ -142,21 +139,21 @@ border-radius: unset;
 ```css
 border-radius: 1em/5em;
 
-/* ... is equivalent to: */
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+/* 次のものと同等 */
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
-/* ... is equivalent to: */
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+/* 次のものと同等 */
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## 公式定義
@@ -167,42 +164,48 @@ border-bottom-left-radius:  3px 4px;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ```html hidden
-  <pre id="example-1">
+<pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
+</pre>
+
+<pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  </pre>
-  <pre id="example-3">
+</pre>
+
+<pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
+</pre>
+
+<pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  </pre>
-  <pre id="example-5">
+</pre>
+
+<pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  </pre>
-  <pre id="example-6">
+</pre>
+
+<pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
+</pre>
+
+<pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  </pre>
+</pre>
 ```
 
 ```css hidden
@@ -258,11 +261,11 @@ pre#example-7 {
 
 ### ライブサンプル
 
- - 例 1 : [http://jsfiddle.net/Tripad/qnGKj/2/](http://jsfiddle.net/Tripad/qnGKj/2/)
- - 例 2 : [http://jsfiddle.net/Tripad/qnGKj/3/](http://jsfiddle.net/Tripad/qnGKj/3/)
- - 例 3 : [http://jsfiddle.net/Tripad/qnGKj/4/](http://jsfiddle.net/Tripad/qnGKj/4/)
- - 例 4 : [http://jsfiddle.net/Tripad/qnGKj/5/](http://jsfiddle.net/Tripad/qnGKj/5/)
- - 例 5 : [http://jsfiddle.net/Tripad/qnGKj/6/](http://jsfiddle.net/Tripad/qnGKj/6/)
+- 例 1 : [https://jsfiddle.net/Tripad/qnGKj/2/](https://jsfiddle.net/Tripad/qnGKj/2/)
+- 例 2 : [https://jsfiddle.net/Tripad/qnGKj/3/](https://jsfiddle.net/Tripad/qnGKj/3/)
+- 例 3 : [https://jsfiddle.net/Tripad/qnGKj/4/](https://jsfiddle.net/Tripad/qnGKj/4/)
+- 例 4 : [https://jsfiddle.net/Tripad/qnGKj/5/](https://jsfiddle.net/Tripad/qnGKj/5/)
+- 例 5 : [https://jsfiddle.net/Tripad/qnGKj/6/](https://jsfiddle.net/Tripad/qnGKj/6/)
 
 ## 仕様書
 
@@ -274,4 +277,4 @@ pre#example-7 {
 
 ## 関連情報
 
- - border-radius に関する CSS プロパティ: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}
+- border-radius に関する CSS プロパティ: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}

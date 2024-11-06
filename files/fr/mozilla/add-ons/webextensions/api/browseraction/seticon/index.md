@@ -1,27 +1,17 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Définit l'icône pour l'action du navigateur.
 
 Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .
 
-Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets  `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
+Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est  [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
+Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -29,8 +19,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var settingIcon = browser.browserAction.setIcon(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -43,7 +33,7 @@ var settingIcon = browser.browserAction.setIcon(
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet`ImageData`, et son nom est sa taille, comme ceci :
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
 
         ```json
         {
@@ -62,8 +52,8 @@ var settingIcon = browser.browserAction.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -89,10 +79,6 @@ Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setIcon",2)}}
-
 ## Exemples
 
 Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise `setIcon()` pour indiquer si l'écoute est activée ou désactivée :
@@ -105,15 +91,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
-    ["responseHeaders"]
+    { urls: ["<all_urls>"] },
+    ["responseHeaders"],
   );
-  browser.browserAction.setIcon({path: "icons/listening-on.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.browserAction.setIcon({path: "icons/listening-off.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -141,7 +127,7 @@ function getImageData() {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setIcon({imageData: getImageData()});
+  browser.browserAction.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -150,20 +136,26 @@ L'extrait suivant met à jour l'icône lorsque l'utilisateur clique, mais unique
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -190,4 +182,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

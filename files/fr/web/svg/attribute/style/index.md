@@ -1,12 +1,8 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/style
 ---
+
 {{SVGRef}}
 
 L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Attributs_universels/style).
@@ -42,7 +38,8 @@ L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) po
 
   - : La syntaxe des données de style dépend du langage de la feuille de style. Par défaut, le langage est [CSS](/fr/docs/Web/CSS).
 
-    > **Note :** En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
+    > [!NOTE]
+    > En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
 
 ## Exemple
 
@@ -50,8 +47,12 @@ L'exemple suivant stylise le rectangle en utilisant l'attribut `style`, avec CSS
 
 ```html
 <svg viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-  <rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/>
+  <rect
+    height="300"
+    width="600"
+    x="200"
+    y="100"
+    style="fill: red; stroke: blue; stroke-width: 3" />
 </svg>
 ```
 
@@ -79,4 +80,4 @@ Les éléments suivants peuvent utiliser l'attribut `style`:
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.style.style")}}
+{{Compat}}

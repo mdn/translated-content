@@ -1,12 +1,8 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis-style
 ---
+
 {{CSSRef}}
 
 La propriété **`text-emphasis-style`** définit le type d'emphase utilisée. Celui-ci peut également être (re)défini via la propriété raccourcie {{cssxref("text-emphasis")}}.
@@ -17,10 +13,10 @@ La propriété **`text-emphasis-style`** définit le type d'emphase utilisée. C
 text-emphasis-style: none;
 
 /*  Valeur distincte */
-text-emphasis-style: 'x';
-text-emphasis-style: '点';
-text-emphasis-style: '\25B2';
-text-emphasis-style: '*';
+text-emphasis-style: "x";
+text-emphasis-style: "点";
+text-emphasis-style: "\25B2";
+text-emphasis-style: "*";
 
 /* Valeurs avec un mot-clé */
 text-emphasis-style: filled;
@@ -57,9 +53,13 @@ text-emphasis-style: unset;
 - `<string>`
   - : Utilise la chaîne fournie comme marque. Attention, l'agent utilisateur peut tronquer la chaîne ou choisir d'ignorer les chaînes qui ont plus d'un graphème. Il est donc conseillé de n'utiliser qu'une seule lettre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -83,15 +83,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-style-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-style")}}
+{{Compat}}
 
 ## Voir aussi
 

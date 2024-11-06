@@ -1,22 +1,18 @@
 ---
 title: border-right-style
 slug: Web/CSS/border-right-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-right-style
-translation_of: Web/CSS/border-right-style
+l10n:
+  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
+
 {{CSSRef}}
 
-**`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) の形状を設定します。
+**`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **Note:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -37,10 +33,11 @@ border-right-style: outset;
 border-right-style: inherit;
 border-right-style: initial;
 border-right-style: revert;
+border-right-style: revert-layer;
 border-right-style: unset;
 ```
 
-`border-right-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-right-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -52,7 +49,7 @@ border-right-style: unset;
 
 ## 例
 
-<h3 id="Border_styles">境界の形状</h3>
+### 境界のスタイル
 
 #### HTML
 
@@ -83,28 +80,49 @@ border-right-style: unset;
 /* 表の外見を定義 */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-right-style の例のクラス */
-.b1 {border-right-style: none;}
-.b2 {border-right-style: hidden;}
-.b3 {border-right-style: dotted;}
-.b4 {border-right-style: dashed;}
-.b5 {border-right-style: solid;}
-.b6 {border-right-style: double;}
-.b7 {border-right-style: groove;}
-.b8 {border-right-style: ridge;}
-.b9 {border-right-style: inset;}
-.b10 {border-right-style: outset;}
+.b1 {
+  border-right-style: none;
+}
+.b2 {
+  border-right-style: hidden;
+}
+.b3 {
+  border-right-style: dotted;
+}
+.b4 {
+  border-right-style: dashed;
+}
+.b5 {
+  border-right-style: solid;
+}
+.b6 {
+  border-right-style: double;
+}
+.b7 {
+  border-right-style: groove;
+}
+.b8 {
+  border-right-style: ridge;
+}
+.b9 {
+  border-right-style: inset;
+}
+.b10 {
+  border-right-style: outset;
+}
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Border_styles') }}
+{{ EmbedLiveSample('境界のスタイル') }}
 
 ## 仕様書
 
@@ -116,5 +134,5 @@ tr, td {
 
 ## 関連情報
 
- - その他の形状に関する境界のプロパティ: {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
- - その他の右側の境界に関するプロパティ: {{ Cssxref("border-right") }}, {{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-width") }}
+- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
+- その他の右側の境界に関するプロパティ: {{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, {{Cssxref("border-right-width")}}

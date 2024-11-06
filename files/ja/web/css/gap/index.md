@@ -1,18 +1,8 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッド
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - gap
-  - recipe:css-property
-browser-compat: css.properties.gap
-translation_of: Web/CSS/gap
 ---
+
 {{CSSRef}}
 
 **`gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行や列の間のすき間 ({{glossary("gutters", "溝")}}) を定義します。これは {{CSSxRef("row-gap")}} および {{CSSxRef("column-gap")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。
@@ -68,7 +58,7 @@ gap: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -105,13 +95,12 @@ gap: unset;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("フレックスレイアウト", "auto", "120px")}}
 
 ### グリッドレイアウト
 
@@ -149,7 +138,7 @@ gap: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("グリッドレイアウト", "auto", "120px")}}
 
 ### 段組みレイアウト
 
@@ -157,9 +146,8 @@ gap: unset;
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -174,11 +162,11 @@ gap: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{EmbedLiveSample("段組みレイアウト", "auto", "120px")}}
 
 ## 仕様書
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -187,4 +175,4 @@ gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)

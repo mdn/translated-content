@@ -1,12 +1,8 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variant-position
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-position`** permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).
@@ -42,9 +38,13 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 - `super`
   - : Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -59,10 +59,11 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 ### HTML
 
 ```html
-<p> Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
-    Vite elle se remet sur ses pieds et regarde en l’air&nbsp;; mais tout
-    est noir là-haut. Elle voit devant elle un long passage et le Lapin
-    Blanc qui court à toutes jambes.
+<p>
+  Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
+  Vite elle se remet sur ses pieds et regarde en l’air&nbsp;; mais tout est noir
+  là-haut. Elle voit devant elle un long passage et le Lapin Blanc qui court à
+  toutes jambes.
 </p>
 ```
 
@@ -72,12 +73,8 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variant-position")}}
+{{Compat}}

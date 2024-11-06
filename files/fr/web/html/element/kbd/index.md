@@ -1,14 +1,9 @@
 ---
-title: '<kbd> : l''élément de saisie clavier'
+title: "<kbd> : l'élément de saisie clavier"
 slug: Web/HTML/Element/kbd
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/kbd
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant la saisie de texte par l'utilisateur à partir d'un clavier, d'une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le {{Glossary("user agent")}} rend par défaut le contenu d'un élément `<kbd>` en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.
 
@@ -25,18 +20,21 @@ Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attri
 D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de représenter certains scénarios plus spécifiques :
 
 - Imbriquer un élément `<kbd>` dans un autre élément `<kbd>` représente une touche ou une unité de saisie au sein d'une saisie plus grande. Cf. [Représenter les frappes de touches dans une saisie](#représenter_les_frappes_de_touches_dans_une_saisie) ci-après.
-- Imbriquer un élément `<kbd>` dans un élément  {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
+- Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
 - Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_l'écran) ci-après.
 
-> **Note :** Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
+> [!NOTE]
+> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
 
 ## Exemples
 
 ### Exemple simple
 
 ```html
-<p>Utilisez la commande <kbd>help macommande</kbd> afin de consulter
- la documentation pour la commande "macommande".</p>
+<p>
+  Utilisez la commande <kbd>help macommande</kbd> afin de consulter la
+  documentation pour la commande "macommande".
+</p>
 ```
 
 #### Résultat
@@ -55,9 +53,10 @@ Commençons par analyser le code HTML.
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -75,7 +74,7 @@ On peut alors ajouter un peu de CSS :
 
 ##### CSS
 
-On ajoute un règle pour les les éléments `<kbd>` avec la classe  `"key"` afin de représenter les touches d'un clavier :
+On ajoute un règle pour les les éléments `<kbd>` avec la classe `"key"` afin de représenter les touches d'un clavier :
 
 ```css
 kbd.key {
@@ -91,9 +90,10 @@ On met à jour le code HTML afin d'utiliser cette classe :
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -109,8 +109,8 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ```html
 <p>
-  S'il se produit une erreur de syntaxe, cet outil affichera
-  la commande initialement saisie pour que vous la revoyez :
+  S'il se produit une erreur de syntaxe, cet outil affichera la commande
+  initialement saisie pour que vous la revoyez :
 </p>
 <blockquote>
   <samp><kbd>custom-git ad mon-nouveau-fichier.cpp</kbd></samp>
@@ -123,7 +123,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ### Représenter les options de saisies à l'écran
 
-Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
+Imbriquer un élément `<samp>` dans un élément `<kbd>` représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
 
 #### HTML
 
@@ -132,14 +132,17 @@ Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans
 ```html
 <p>
   Pour créer un nouveau fichier, sélectionner l'option
-  <kbd><kbd><samp>Fichier</samp></kbd>⇒<kbd><samp>Nouveau
-  document</samp></kbd></kbd> dans le menu.
+  <kbd
+    ><kbd><samp>Fichier</samp></kbd
+    >⇒<kbd><samp>Nouveau document</samp></kbd></kbd
+  >
+  dans le menu.
 </p>
 
 <p>
   N'oubliez pas de cliquer sur le bouton
-  <kbd><samp>OK</samp></kbd> afin de confirmer
-  que vous avez saisi le nom du nouveau fichier.
+  <kbd><samp>OK</samp></kbd> afin de confirmer que vous avez saisi le nom du
+  nouveau fichier.
 </p>
 ```
 
@@ -160,11 +163,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -176,7 +179,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -190,7 +193,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -212,15 +215,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                                                        |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}     | Extension de l'élément afin d'inclure tout type de saisie de l'utilisateur (vocale, tactile, clavier). |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: Expression function*
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/function*
-original_slug: Web/JavaScript/Reference/Opérateurs/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.
@@ -19,9 +11,11 @@ Le mot-clé **`function*`** peut être utilisé pour définir une fonction gén�
 
 ## Syntaxe
 
-    function* [nom]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+function* [nom]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -41,21 +35,18 @@ Une expression `function*` est très semblable à une instruction {{jsxref('Inst
 L'exemple qui suit illustre comment définir une génératrice anonyme et l'affecter à une variable `x`. Cette fonction génèrera le carré de son argument :
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.function_star")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -67,4 +58,4 @@ var x = function*(y) {
 - L'objet {{jsxref("Function")}}
 - L'instruction {{jsxref("Instructions/function", "function")}}
 - L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
-- {{jsxref("Fonctions", "Fonctions et portée des fonctions","","1")}}
+- {{jsxref("Fonctions", "Fonctions et portée des fonctions","",1)}}

@@ -1,14 +1,8 @@
 ---
 title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Notifications
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications
 ---
+
 {{AddonSidebar}}
 
 Afficher les notifications à l'utilisateur, en utilisant le mécanisme de notification du système d'exploitation sous-jacent. Étant donné que cette API utilise le mécanisme de notification du système d'exploitation, les détails de l'apparence et du comportement des notifications peuvent varier en fonction du système d'exploitation et des paramètres de l'utilisateur.
@@ -31,7 +25,7 @@ La notification est identique sur tous les systèmes d'exploitation de bureau. Q
 - {{WebExtAPIRef("notifications.clear()")}}
   - : Effacer une notification spécifique, compte tenu de son identifiant.
 - {{WebExtAPIRef("notifications.create()")}}
-  - :  Créez et affichez une nouvelle notification.
+  - : Créez et affichez une nouvelle notification.
 - {{WebExtAPIRef("notifications.getAll()")}}
   - : Recevez toutes les notifications
 - {{WebExtAPIRef("notifications.update()")}}
@@ -48,12 +42,12 @@ La notification est identique sur tous les systèmes d'exploitation de bureau. Q
 - {{WebExtAPIRef("notifications.onShown")}}
   - : Lancé immédiatement après l'affichage d'une notification.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).

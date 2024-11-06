@@ -1,12 +1,8 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/Media_Queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.
@@ -30,7 +26,8 @@ Bien que toutes les unités représentent la même chose pour la valeur `0`, l'u
 - `x`
   - : Un alias pour `dppx`.
 
-> **Note :** Bien que le nombre `0` représente la même mesure pour ces différentes unités. Si la valeur est écrite sans unité, elle sera considérée comme invalide. Autrement dit, `0` est invalide et ne représente pas `0dpi`, `0dpcm` ou `0dppx`.
+> [!NOTE]
+> Bien que le nombre `0` représente la même mesure pour ces différentes unités. Si la valeur est écrite sans unité, elle sera considérée comme invalide. Autrement dit, `0` est invalide et ne représente pas `0dpi`, `0dpcm` ou `0dppx`.
 
 ## Exemples
 
@@ -75,9 +72,8 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 
 ```html
 <p class="exemple">
-  À ces mots le Chapelier ouvrit de grands yeux ; mais
-  il se contenta de dire : « Pourquoi une pie
-  ressemble-t-elle à un pupitre ? »
+  À ces mots le Chapelier ouvrit de grands yeux ; mais il se contenta de dire :
+  « Pourquoi une pie ressemble-t-elle à un pupitre ? »
 </p>
 ```
 
@@ -87,15 +83,11 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires             |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------ |
-| {{SpecName('CSS4 Values', '#resolution', '&lt;resolution&gt;')}}             | {{Spec2('CSS4 Values')}}         | Ajout de l'unité `x`.    |
-| {{SpecName('CSS3 Values', '#resolution', '&lt;resolution&gt;')}}             | {{Spec2('CSS3 Values')}}         | Ajout de l'unité `dppx`. |
-| {{SpecName('CSS3 Media Queries', '#resolution', '&lt;resolution&gt;')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.resolution")}}
+{{Compat}}
 
 ## Voir aussi
 

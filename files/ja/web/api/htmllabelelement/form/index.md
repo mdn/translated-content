@@ -1,17 +1,11 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form プロパティ"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
-tags:
-  - フォーム
-  - HTML DOM
-  - HTMLLabelElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - form
-browser-compat: api.HTMLLabelElement.form
-translation_of: Web/API/HTMLLabelElement/form
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLLabelElement.form`** は読み取り専用のプロパティで、このラベルに関連付けられたコントロールが所属するフォームを表す {{domxref("HTMLFormElement")}} オブジェクトを返します。関連付けられたコントロールがないか、そのコントロールがフォーム内にない場合は null を返します。

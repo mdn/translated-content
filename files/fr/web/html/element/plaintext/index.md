@@ -1,19 +1,14 @@
 ---
-title: '<plaintext> : l''élément de texte brut (déprécié)'
+title: "<plaintext> : l'élément de texte brut (déprécié)"
 slug: Web/HTML/Element/plaintext
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/plaintext
 ---
-{{HTMLRef}}{{deprecated_header}}
+
+{{HTMLSidebar}}{{deprecated_header}}
 
 L'élément HTML **`<plaintext>`** permet d'afficher du texte qui n'est pas interprété comme du HTML. Il ne possède pas de balise de fermeture, car tout ce qui suit n'est plus considéré comme du HTML.
 
-> **Note :** Ne pas utiliser cet élément.
+> [!NOTE]
+> Ne pas utiliser cet élément.
 >
 > - Il est déprécié depuis HTML 2, et n'a jamais été implementé par tous les navigateurs d'une manière cohérente. De plus, il est obsolète depuis HTML5, et pourra être rendu par les agents-utilisateurs qui l'acceptent comme un élément {{HTMLElement("pre")}}, qui interprètera le HTML contenu même si ce n'est pas ce qui est souhaité !
 > - Si l'élément {{HTMLElement("plaintext")}} est le premier élément de la page (sauf éléments non affichés), n'utilisez pas de HTML. Configurez votre serveur pour servir la page avec le [type MIME](/fr/docs/Properly_Configuring_Server_MIME_Types) `text/plain`.
@@ -28,11 +23,12 @@ Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/
 
 Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.plaintext")}}
+{{Compat}}
 
 ## Voir aussi
 

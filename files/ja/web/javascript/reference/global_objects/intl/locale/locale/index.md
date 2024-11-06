@@ -1,28 +1,19 @@
 ---
 title: Intl.Locale() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ロケール
-  - Reference
-browser-compat: javascript.builtins.Intl.Locale.Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
+
 {{JSRef}}
 
 **`Intl.Locale`** コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
-
 ## 構文
 
 ```js
-new Intl.Locale(tag)
-new Intl.Locale(tag, options)
+new Intl.Locale(tag);
+new Intl.Locale(tag, options);
 ```
 
 ### 引数
@@ -39,7 +30,7 @@ new Intl.Locale(tag, options)
 もっとも単純なものでは、{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターはロケール識別子の文字列を引数に取ります。
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Locale コンストラクターに options オブジェクトを渡して使用
@@ -50,11 +41,6 @@ let us = new Intl.Locale('en-US');
 let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(locale.hourCycle); // Prints "h12"
 ```
-
-## ポリフィル
-
-[formatjs Intl.Locale
-polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 
 ## 仕様書
 
@@ -68,3 +54,4 @@ polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 
 - {{jsxref("Intl.Collator")}}
 - [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [FormatJS における `Intl.Locale` のポリフィル](https://formatjs.io/docs/polyfills/intl-locale)

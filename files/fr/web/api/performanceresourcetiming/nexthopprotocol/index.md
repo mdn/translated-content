@@ -1,16 +1,8 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - nextHopProtocol
-translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`nextHopProtocol`** est une [chaîne de caractères](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
@@ -43,20 +35,15 @@ function print_PerformanceEntries() {
 }
 function print_nextHopProtocol(perfEntry) {
   let value = "nextHopProtocol" in perfEntry;
-  if (value)
-    console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
-  else
-    console.log("nextHopProtocol = N'EST PAS pris en charge");
+  if (value) console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
+  else console.log("nextHopProtocol = N'EST PAS pris en charge");
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-nexthopprotocol', 'nextHopProtocol')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.nextHopProtocol")}}
+{{Compat}}

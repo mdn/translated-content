@@ -1,13 +1,8 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - offset-rotate
-translation_of: Web/CSS/offset-rotate
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`offset-rotate`** définit l'orientation et la direction de l'élément lorsqu'il est positionné le long du chemin représenté par {{cssxref("offset-path")}}.
@@ -27,7 +22,7 @@ offset-rotate: reverse;
 /* Conserve une rotation constante quelle que soit la position
 /* sur le chemin  */
 offset-rotate: 90deg;
-offset-rotate: .5turn;
+offset-rotate: 0.5turn;
 ```
 
 - `auto`
@@ -39,9 +34,13 @@ offset-rotate: .5turn;
 - `reverse`
   - : L'élément est tourné de façon similaire à `auto`, mais fait face à la direction opposée. Cette valeur est équivalente à `auto 180deg`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -51,12 +50,12 @@ offset-rotate: .5turn;
 div {
   width: 40px;
   height: 40px;
-  background: #2BC4A2;
+  background: #2bc4a2;
   margin: 20px;
   clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
   animation: move 5000ms infinite alternate ease-in-out;
 
-  offset-path: path('M20,20 C20,50 180,-10 180,20');
+  offset-path: path("M20,20 C20,50 180,-10 180,20");
 }
 div:nth-child(1) {
   offset-rotate: auto;
@@ -89,14 +88,8 @@ div:nth-child(3) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-rotate-property', 'offset-rotate')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
-
-> **Note :** Les versions antérieures de la spécification utilisait le nom `motion-rotation` pour cette propriété.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-rotate")}}
+{{Compat}}

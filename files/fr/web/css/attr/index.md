@@ -1,9 +1,8 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-translation_of: Web/CSS/attr()
-original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 La fonction **`attr()`** est utilisée afin de récupérer la valeur d'un attribut d'un élément pour l'utiliser dans la feuille de style. Cette fonction peut également être utilisée sur [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) auquel cas c'est la valeur correspondant à l'élément source qui est renvoyée.
@@ -25,7 +24,8 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-> **Note :** La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
+> [!NOTE]
+> La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
 
 ## Syntaxe
 
@@ -350,15 +350,11 @@ body,
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values", "#attr-notation", "attr()")}} | {{Spec2("CSS4 Values")}} | Aucune modification.                                                                                                                                                                                                                                                                                              |
-| {{SpecName('CSS3 Values', '#attr-notation', 'attr()')}} | {{Spec2('CSS3 Values')}} | Ajout de deux paramètres optionnels. La fonction peut être utilisée sur toutes les propriétés et renvoyer des valeurs qui ne sont pas des chaînes de caractères. Ces modifications sont expérimentales et pourront être abandonnées pour la recommandation si la prise en charge des navigateurs est trop faible. |
-| {{SpecName('CSS2.1', 'generate.html#x18', 'attr()')}} | {{Spec2('CSS2.1')}}         | Utilisation limitée à {{cssxref("content")}}, la fonction renvoie toujours une chaîne de caractères ({{cssxref("&lt;string&gt;")}}).                                                                                                                                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.attr")}}
+{{Compat}}
 
 ## Voir aussi
 

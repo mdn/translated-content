@@ -1,12 +1,8 @@
 ---
 title: Compartimentation CSS (CSS Containment)
-slug: Web/CSS/CSS_Containment
-tags:
-  - CSS
-  - CSS Containment
-translation_of: Web/CSS/CSS_Containment
-original_slug: Web/CSS/Compartimentation_CSS
+slug: Web/CSS/CSS_containment
 ---
+
 {{CSSRef}}
 L'objectif du module de spécification _CSS Containment_ (pour Compartimentation CSS) consiste à améliorer les performances des pages web en permettant aux développeurs d'isoler un sous-ensemble de la page. Si le navigateur sait que cette partie est indépendante, le rendu peut être optimisé et les performances améliorées. Ce module de spécification définit une seule propriété CSS : {{cssxref("contain")}}. Dans cet article, nous verrons les objectifs principaux de cette spécification.
 
@@ -58,7 +54,7 @@ La disposition porte normalement sur l'intégralité d'un document et si on dép
 
 De plus :
 
-- Les dispositions flottantes (avec ` display:``float `) seront traitées indépendamment.
+- Les dispositions flottantes (avec `display: float`) seront traitées indépendamment.
 - Les marges ne fusionneront pas en dehors des limites du bloc englobant ainsi compartimenté
 - Le conteneur de la disposition sera un bloc englobant pour les éléments descendants avec des positions `absolute`/`fixed`.
 - La boîte englobante crée un contexte d'empilement et on peut donc utiliser {{cssxref("z-index")}}.
@@ -99,7 +95,8 @@ Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on po
 
 En utilisant `contain: style`, on s'assure que les propriétés {{cssxref("counter-increment")}} et {{cssxref("counter-set")}} créent de nouveaux compteurs limités à ce sous-arbre.
 
-> **Note :** La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
+> [!NOTE]
+> La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
 
 ### Valeurs spéciales
 

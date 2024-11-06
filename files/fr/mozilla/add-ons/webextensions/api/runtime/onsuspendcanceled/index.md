@@ -1,28 +1,18 @@
 ---
 title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspendCanceled
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'application ne sera pas déchargée après tout.
 
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspendCanceled.addListener(listener)
-browser.runtime.onSuspendCanceled.removeListener(listener)
-browser.runtime.onSuspendCanceled.hasListener(listener)
+browser.runtime.onSuspendCanceled.addListener(listener);
+browser.runtime.onSuspendCanceled.removeListener(listener);
+browser.runtime.onSuspendCanceled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -41,9 +31,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onSuspendCanceled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,13 +49,14 @@ browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +83,4 @@ browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

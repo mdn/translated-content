@@ -1,11 +1,8 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill-opacity
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.
@@ -17,7 +14,11 @@ Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -26,16 +27,13 @@ html,body,svg { height:100% }
   <circle cx="50" cy="50" r="40" />
 
   <!-- Définit l'opacité avec un nombre -->
-  <circle cx="150" cy="50" r="40"
-          fill-opacity="0.7" />
+  <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
 
   <!-- Définit l'opaité avec un pourcentage -->
-  <circle cx="250" cy="50" r="40"
-          fill-opacity="50%" />
+  <circle cx="250" cy="50" r="40" fill-opacity="50%" />
 
   <!-- Définit l'opacité avec une propriété CSS -->
-  <circle cx="350" cy="50" r="40"
-          style="fill-opacity: .25;" />
+  <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
 </svg>
 ```
 
@@ -67,15 +65,13 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant,  ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
-
-## Compatibilité des navigateurs
-
-{{Compat("svg.attributes.presentation.fill-opacity")}}
+> [!NOTE]
+> SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant, ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                   | Commentaire                                      |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------ |
-| {{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}     | {{Spec2("SVG2")}} | Définition pour les formes et le texte.          |
-| {{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte. |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

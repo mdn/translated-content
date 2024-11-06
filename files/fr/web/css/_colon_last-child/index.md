@@ -1,12 +1,8 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-child`** permet de cibler un élément qui est le dernier enfant de son parent.
@@ -20,7 +16,8 @@ li:last-child {
 }
 ```
 
-> **Note :** En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
+> [!NOTE]
+> En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
 
 ## Syntaxe
 
@@ -40,8 +37,8 @@ li:last-child {
 
 ```html
 <ul>
-   <li>Cet élément n'est pas vert !</li>
-   <li>Celui-ci est vert.</li>
+  <li>Cet élément n'est pas vert !</li>
+  <li>Celui-ci est vert.</li>
 </ul>
 ```
 
@@ -51,14 +48,11 @@ li:last-child {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                 |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS4 Selectors')}} | Il n'est plus obligatoire que l'élément ciblé ait un parent. |
-| {{SpecName('CSS3 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Voir aussi
 

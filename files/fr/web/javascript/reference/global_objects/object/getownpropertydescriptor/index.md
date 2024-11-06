@@ -1,15 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la propriété propre d'un objet (c'est-à-dire une propriété directement présente et pas héritée via la chaîne de prototypes).
@@ -18,7 +11,9 @@ La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la
 
 ## Syntaxe
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+```js
+Object.getOwnPropertyDescriptor(obj, prop);
+```
 
 ### Paramètres
 
@@ -55,7 +50,11 @@ Un descripteur de propriété est un enregistrement qui dispose des attributs su
 ```js
 var o, d;
 
-o = { get toto() { return 17; } };
+o = {
+  get toto() {
+    return 17;
+  },
+};
 d = Object.getOwnPropertyDescriptor(o, "toto");
 // d : {
 //       configurable: true,
@@ -75,9 +74,10 @@ d = Object.getOwnPropertyDescriptor(o, "truc");
 
 o = {};
 Object.defineProperty(o, "machin", {
-                                      value: 8675309,
-                                      writable: false,
-                                      enumerable: false });
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
 d = Object.getOwnPropertyDescriptor(o, "machin");
 // d : {
 //        value: 8675309,
@@ -107,15 +107,11 @@ Object.getOwnPropertyDescriptor("toto", 0);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}         | {{Spec2('ES6')}}         |                                                        |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-tags:
-  - API
-  - Audio
-  - DOM
-  - Interface
-  - Media
-  - Video
-translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLMediaElement`** ajoute à {{domxref("HTMLElement")}} les propriétés et les méthodes nécessaires pour prendre en charge les fonctionnalités de base liées aux médias qui sont communes aux vidéos et aux documents audios. {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}} héritent de cette interface.
@@ -22,16 +15,17 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
   - : est une {{domxref("AudioTrackList")}} qui liste les objets {{domxref("AudioTrack")}} (_pistes audio_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.autoplay")}}
 
-  - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML {{htmlattrxref("autoplay","video")}}, indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
+  - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay), indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
 
-    > **Note :** Les sites qui lisent automatiquement l'audio (ou les vidéos avec une piste audio) peuvent être désagréables pour les utilisateurs, il faut donc l'éviter autant que possible. Si vous devez offrir la fonctionnalité de lecture automatique, vous devez la faire activer (par un utilisateur qui la lance expréssement). Cependant, cela peut être utile lors de la création d'éléments média dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur.
+    > [!NOTE]
+    > Les sites qui lisent automatiquement l'audio (ou les vidéos avec une piste audio) peuvent être désagréables pour les utilisateurs, il faut donc l'éviter autant que possible. Si vous devez offrir la fonctionnalité de lecture automatique, vous devez la faire activer (par un utilisateur qui la lance expréssement). Cependant, cela peut être utile lors de la création d'éléments média dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur.
 
 - {{domxref("HTMLMediaElement.buffered")}}{{readonlyinline}}
   - : Renvoie un objet {{domxref("TimeRanges")}} qui indique les plages de la source du média que le navigateur a en mémoire tampon (le cas échéant) au moment de l'accès à la propriété `buffered`.
 - {{domxref("HTMLMediaElement.controller")}}
   - : est un objet {{domxref("MediaController")}} qui représente le contrôleur du média assigné à l'élément, ou `null` si aucun n'est défini.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("controls","video")}}, indiquant quels éléments de contrôle de ressource de l'interface utilisateur doivent être affichés.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`controls`](/fr/docs/Web/HTML/Element/video#controls), indiquant quels éléments de contrôle de ressource de l'interface utilisateur doivent être affichés.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : renvoie une {{domxref("DOMTokenList")}} qui aide l'agent utilisateur à sélectionner les contrôles à afficher sur l'élément du média chaque fois que l'agent utilisateur affiche son propre jeu de contrôles. La `DOMTokenList` prend une ou plusieurs des trois valeurs possibles : `nodownload`, `nofullscreen` et `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -41,7 +35,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : est un `double` indiquant le temps de lecture actuel en secondes. La définition de cette valeur recherche le média à la nouvelle heure.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("muted","video")}}, qui indique si la sortie audio de l'élément média doit être désactivée par défaut.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`muted`](/fr/docs/Web/HTML/Element/video#muted), qui indique si la sortie audio de l'élément média doit être désactivée par défaut.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : est un `double` indiquant le taux de lecture par défaut pour le média.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -53,9 +47,9 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.error")}}{{readonlyinline}}
   - : renvoie un objet {{domxref("MediaError")}} pour l'erreur la plus récente, ou `null` s'il n'y a pas eu d'erreur.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("loop","video")}} (_boucle_), lequel indique si l'élément média doit recommencer quand il arrive à la fin.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`loop`](/fr/docs/Web/HTML/Element/video#loop) (_boucle_), lequel indique si l'élément média doit recommencer quand il arrive à la fin.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("mediagroup","video")}}, lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un  {{domxref('MediaController')}} commun.
+  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`mediagroup`](/fr/docs/Web/HTML/Element/video#mediagroup), lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un {{domxref('MediaController')}} commun.
 - {{domxref("HTMLMediaElement.mediaKeys")}}{{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet {{domxref("MediaKeys")}} ou `null`. `MediaKeys` est un ensemble de clés qu'un élément `HTMLMediaElement` associé peut utiliser pour déchiffrer les données du média pendant la lecture.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}}{{readonlyinline}} {{non-standard_inline}}
@@ -66,7 +60,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 
   - : est un `unsigned long` qui indique le nombre d'échantillons qui seront renvoyés dans le "framebuffer" de chaque évènement `MozAudioAvailable`. Ce nombre est un total pour tous les canaux, et par défaut est défini par le nombre de canaux \* 1024 (c'est-à-dire, 2 canaux \* 1024 échantillons = total 2048).
 
-    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/en-US/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
+    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
 
 - {{domxref("HTMLMediaElement.mozSampleRate")}}{{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` représentant le nombre d'échantillons par seconde. Par exemple, 44100 échantillons par seconde correspondent à la fréquence d'échantillonnage utilisée par les CD audio.
@@ -81,7 +75,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.played")}}{{readonlyinline}}
   - : renvoie un objet {{domxref('TimeRanges')}} qui contient les plages de la source média que le navigateur a lu, le cas échéant.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : est une {{domxref("DOMString")}} (_chaîne_) qui reflète l'attribut HTML {{htmlattrxref("preload","video")}}, indiquant quelles données doivent être préchargées, le cas échéant. Les valeurs possibles sont : `none`, `metadata`, `auto`.
+  - : est une {{domxref("DOMString")}} (_chaîne_) qui reflète l'attribut HTML [`preload`](/fr/docs/Web/HTML/Element/video#preload), indiquant quelles données doivent être préchargées, le cas échéant. Les valeurs possibles sont : `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : est un {{jsxref('Boolean')}} qui détermine si la hauteur du son sera préservée. S'il est défini à `false` (_faux_), la hauteur du son s'ajustera à la vitesse de l'audio. C'est implémenté avec préfixe dans Firefox (`mozPreservesPitch`) et WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}}{{readonlyinline}}
@@ -93,7 +87,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.sinkId")}}{{readonlyinline}} {{experimental_inline}}
   - : Renvoie une {{domxref("DOMString")}} (_chaîne_) qui est l'identifiant unique du périphérique audio de sortie, ou une chaîne vide s'il utilise l'agent utilisateur par défaut. Cet identifiant doit être l'une des valeurs `MediaDeviceInfo.deviceid` retournées par {{domxref("MediaDevices.enumeratedDevices()")}}, `id-multimedia` ou `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
-  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("src","video")}}, lequel contient l'URL d'une ressource média à utiliser.
+  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`src`](/fr/docs/Web/HTML/Element/video#src), lequel contient l'URL d'une ressource média à utiliser.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : est un {{domxref('MediaStream')}} représentant le média à lire ou qui a joué dans le `HTMLMediaElement` courant, ou `null` s'il n'est pas assigné.
 - {{domxref("HTMLMediaElement.textTracks")}}{{readonlyinline}}
@@ -102,7 +96,8 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 
   - : Renvoie la liste d'objets {{domxref("VideoTrack")}} (_pistes vidéo_) contenus dans l'élément.
 
-    > **Note :** Gecko ne prend en charge que la lecture d'une seule piste et l'analyse des métadonnées des pistes n'est disponible que pour les médias avec le format de conteneur Ogg.
+    > [!NOTE]
+    > Gecko ne prend en charge que la lecture d'une seule piste et l'analyse des métadonnées des pistes n'est disponible que pour les médias avec le format de conteneur Ogg.
 
 - {{domxref("HTMLMediaElement.volume")}}
   - : est un `double` indiquant le volume audio, de 0.0 (silence) à 1.0 (le plus fort).
@@ -126,9 +121,9 @@ Ces attributs sont obsolètes et ne doivent plus être utilisés, même si un na
 ### Gestionnaires d'évènements obsolètes
 
 - {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'élément média est interrompu du fait du gestionnaire de canaux audio. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
+  - : définit le gestionnaire d'évènement appelé lorsque l'élément média est interrompu du fait du gestionnaire de canaux audio. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
 - {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'interruption est terminée. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
+  - : définit le gestionnaire d'évènement appelé lorsque l'interruption est terminée. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
 
 ## Méthodes
 
@@ -149,7 +144,7 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
-  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/en-US/docs/Web/Events/loadedmetadata).
+  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata).
 - {{domxref("HTMLMediaElement.pause()")}}
   - : met en pause la lecture du média.
 - {{domxref("HTMLMediaElement.play()")}}
@@ -166,20 +161,15 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un navigateur les prend encore en charge.
 
 - {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Cette méthode, disponible seulement pour les implémentations Mozilla, charge les données d'un autre élément de média. Ce fonctionnement est similaire à `load()` excepté qu'à la place d'exécuter l'algorithme normal de sélection de la ressource, la source est simplement définie sur  `currentSrc` de l'autre élément. Ceci est optimisé pour que cet élément accède à toutes les données mises en cache et en mémoire tampon de l'autre élément ; en fait, les deux éléments partagent les données téléchargées, de sorte que les données téléchargées par l'un ou l'autre élément sont disponibles pour les deux.
+  - : Cette méthode, disponible seulement pour les implémentations Mozilla, charge les données d'un autre élément de média. Ce fonctionnement est similaire à `load()` excepté qu'à la place d'exécuter l'algorithme normal de sélection de la ressource, la source est simplement définie sur `currentSrc` de l'autre élément. Ceci est optimisé pour que cet élément accède à toutes les données mises en cache et en mémoire tampon de l'autre élément ; en fait, les deux éléments partagent les données téléchargées, de sorte que les données téléchargées par l'un ou l'autre élément sont disponibles pour les deux.
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                     |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Définition initiale.                                                                                      |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Ajout de {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, et setMediaKeys. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Ajout de `sinkId`, `setSinkId()` et `captureStream()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## Voir aussi
 

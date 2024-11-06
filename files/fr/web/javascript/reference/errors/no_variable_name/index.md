@@ -1,19 +1,16 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
-original_slug: Web/JavaScript/Reference/Erreurs/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: missing variable name (Firefox)
-    SyntaxError: Unexpected token = (Chrome)
+```
+SyntaxError: missing variable name (Firefox)
+SyntaxError: Unexpected token = (Chrome)
+```
 
 ## Type d'erreur
 
@@ -63,11 +60,12 @@ var deux = document.getElementById('deux'),
 Voici une version corrigée :
 
 ```js example-good
-var x, y = "toto";
+var x,
+  y = "toto";
 var x = "toto";
 
-var un = document.getElementById('un');
-var deux = document.getElementById('deux');
+var un = document.getElementById("un");
+var deux = document.getElementById("deux");
 ```
 
 ### Tableaux
@@ -82,7 +80,7 @@ var arr = 1,2,3,4,5;
 Voici la forme équivalente correcte :
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## Voir aussi

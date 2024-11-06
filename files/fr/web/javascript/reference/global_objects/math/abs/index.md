@@ -1,14 +1,8 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/abs
 ---
+
 {{JSRef}}
 
 La fonction **`Math.abs()`** retourne la valeur absolue d'un nombre, c'est-à-dire
@@ -19,7 +13,9 @@ La fonction **`Math.abs()`** retourne la valeur absolue d'un nombre, c'est-à-di
 
 ## Syntaxe
 
-    Math.abs(x);
+```js
+Math.abs(x);
+```
 
 ### Paramètres
 
@@ -41,30 +37,25 @@ La valeur absolue du nombre passé en argument.
 Si la méthode est utilisée avec une chaîne de caractères non numérique, avec un tableau à plus d'un élément, sans paramètre ou avec {{jsxref("undefined")}}, la valeur retournée sera {{jsxref("NaN")}}. Si elle est utilisée avec {{jsxref("null")}}, la fonction renverra 0.
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
 Math.abs("string"); // NaN
-Math.abs();         // NaN
+Math.abs(); // NaN
 ```
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.1', 'Math.abs')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.abs', 'Math.abs')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## Voir aussi
 

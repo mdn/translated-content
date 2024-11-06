@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-tags:
-  - API
-  - DataTransfer
-  - HTML DOM
-  - Method
-  - Reference
-  - clearData
-  - drag and drop
-translation_of: Web/API/DataTransfer/clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.clearData()`** 方法删除给定类型的拖动操作的 {{domxref("DataTransfer","drag data")}}。如果给定类型的数据不存在，则此方法不执行任何操作。
@@ -19,7 +11,9 @@ translation_of: Web/API/DataTransfer/clearData
 
 此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为“Files”的条目在拖动。
 
-> **备注：** 该方法只能在 {{event("dragstart")}} 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
+> [!NOTE]
+> 该方法只能在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
+
 ## 语法
 
 ```js
@@ -39,7 +33,8 @@ DataTransfer.clearData([format]);
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Select this element, drag it to the Drop Zone and then release the selection to move the element.
+  Select this element, drag it to the Drop Zone and then release the selection
+  to move the element.
 </span>
 <span class="tweaked" id="target">Drop Zone</span>
 <div>Status: <span id="status">Drag to start</span></div>
@@ -66,68 +61,69 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
   // Select HTML elements
-  var draggable = document.getElementById('source');
-  var dropable = document.getElementById('target');
-  var status = document.getElementById('status');
-  var data = document.getElementById('data');
+  var draggable = document.getElementById("source");
+  var dropable = document.getElementById("target");
+  var status = document.getElementById("status");
+  var data = document.getElementById("data");
   var dropped = false;
   // Register event handlers
-  draggable.addEventListener('dragstart', dragStartHandler);
-  draggable.addEventListener('dragend', dragEndHandler);
-  dropable.addEventListener('dragover', dragOverHandler);
-  dropable.addEventListener('dragleave', dragLeaveHandler);
-  dropable.addEventListener('drop', dropHandler);
-  function dragStartHandler (event) {
-    status.textContent = 'Drag in process';
+  draggable.addEventListener("dragstart", dragStartHandler);
+  draggable.addEventListener("dragend", dragEndHandler);
+  dropable.addEventListener("dragover", dragOverHandler);
+  dropable.addEventListener("dragleave", dragLeaveHandler);
+  dropable.addEventListener("drop", dropHandler);
+  function dragStartHandler(event) {
+    status.textContent = "Drag in process";
     // Change target element's border to signify drag has started
-    event.currentTarget.style.border = '1px dashed blue';
+    event.currentTarget.style.border = "1px dashed blue";
     // Start by clearing existing clipboards; this will affect all types since we
     // don't give a specific type.
     event.dataTransfer.clearData();
     // Set the drag's format and data (use event target's id for data)
-    event.dataTransfer.setData('text/plain', event.target.id);
-    data.textContent = event.dataTransfer.getData('text/plain');
+    event.dataTransfer.setData("text/plain", event.target.id);
+    data.textContent = event.dataTransfer.getData("text/plain");
   }
-  function dragEndHandler (event) {
+  function dragEndHandler(event) {
     if (!dropped) {
-      status.textContent = 'Drag canceled';
+      status.textContent = "Drag canceled";
     }
-    data.textContent = event.dataTransfer.getData('text/plain') || 'empty';
+    data.textContent = event.dataTransfer.getData("text/plain") || "empty";
     // Change border to signify drag is no longer in process
-    event.currentTarget.style.border = '1px solid black';
+    event.currentTarget.style.border = "1px solid black";
     if (dropped) {
       // Remove all event listeners
-      draggable.removeEventListener('dragstart', dragStartHandler);
-      draggable.removeEventListener('dragend', dragEndHandler);
-      dropable.removeEventListener('dragover', dragOverHandler);
-      dropable.removeEventListener('dragleave', dragLeaveHandler);
-      dropable.removeEventListener('drop', dropHandler);
+      draggable.removeEventListener("dragstart", dragStartHandler);
+      draggable.removeEventListener("dragend", dragEndHandler);
+      dropable.removeEventListener("dragover", dragOverHandler);
+      dropable.removeEventListener("dragleave", dragLeaveHandler);
+      dropable.removeEventListener("drop", dropHandler);
     }
   }
-  function dragOverHandler (event) {
-    status.textContent = 'Drop available';
+  function dragOverHandler(event) {
+    status.textContent = "Drop available";
     event.preventDefault();
   }
-  function dragLeaveHandler (event) {
-    status.textContent = 'Drag in process (drop was available)';
+  function dragLeaveHandler(event) {
+    status.textContent = "Drag in process (drop was available)";
     event.preventDefault();
   }
-  function dropHandler (event) {
+  function dropHandler(event) {
     dropped = true;
-    status.textContent = 'Drop done';
+    status.textContent = "Drop done";
     event.preventDefault();
     // Get data linked to event format « text »
-    var _data = event.dataTransfer.getData('text/plain');
+    var _data = event.dataTransfer.getData("text/plain");
     var element = document.getElementById(_data);
     // Append drag source element to event's target element
     event.target.appendChild(element);
     // Change CSS styles and displayed text
-    element.style.cssText = 'border: 1px solid black;display: block; color: red';
+    element.style.cssText =
+      "border: 1px solid black;display: block; color: red";
     element.textContent = "I'm in the Drop Zone!";
   }
-})
+});
 ```
 
 {{EmbedLiveSample('示例', 300, 250)}}
@@ -145,5 +141,4 @@ window.addEventListener('DOMContentLoaded', function () {
 - [Drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

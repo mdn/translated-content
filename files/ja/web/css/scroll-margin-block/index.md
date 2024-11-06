@@ -1,12 +1,8 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
-tags:
-  - CSS
-  - recipe:css-shorthand-property
-  - scroll-margin-block
-browser-compat: css.properties.scroll-margin-block
 ---
+
 {{CSSRef}}
 
 `scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
@@ -25,9 +21,9 @@ browser-compat: css.properties.scroll-margin-block
 ```css
 /* <length> 値 */
 scroll-margin-block: 10px;
-scroll-margin-block: 1em .5em ;
+scroll-margin-block: 1em 0.5em;
 
-/* Global values */
+/* グローバル値 */
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;

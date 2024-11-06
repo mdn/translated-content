@@ -1,24 +1,16 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
+
 {{AddonSidebar}}
 
 Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
 
 Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).
 
-> **Note :** Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
+> [!NOTE]
+> Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
 
 L'historique du navigateur est un enregistrement chronologique des pages que l'utilisateur a visitées. l'API d'historique vous permet de :
 
@@ -32,7 +24,7 @@ Cependant, l'utilisateur peut avoir visité une seule page, plusieurs fois, de s
 - [Récupérer l'ensemble des visites effectuées par l'utilisateur sur une page particulière](/fr/Add-ons/WebExtensions/API/history/getVisits)
 - [Supprimer les visites à toutes les pages faites pendant une période de temps](/fr/Add-ons/WebExtensions/API/history/deleteRange).
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "history" dans le fichier  [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "history" dans le fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
 
 ## Types
 
@@ -67,19 +59,20 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : Lancé lorsqu'une URL est complètement supprimée de l'historique du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +99,4 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

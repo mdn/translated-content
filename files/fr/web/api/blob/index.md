@@ -1,12 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
-tags:
-  - API
-  - Référence(2)
-  - WebAPI
-translation_of: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 Un objet **`Blob`** représente un objet, semblable à un fichier, qui est immuable et qui contient des données brutes. Les _blobs_ (pour **B**inary **L**arge **Ob**jects) représentent des données qui ne sont pas dans un format JavaScript natif. L'interface {{domxref("File")}} est basée sur l'interface `Blob` et hérite des fonctionnalités de cette dernière tout en ajoutant des fonctionnalités pour gérer les fichiers sur le système de l'utilisateur.
@@ -15,9 +11,11 @@ Pour construire un `Blob` à partir d'objets qui ne sont pas des blobs ou à par
 
 Les API qui acceptent des objets `Blob` sont également listées sur la documentation de {{domxref("File")}}.
 
-> **Note :** La méthode `slice()` utilisait auparavant un deuxième argument qui indiquait le nombre d'octets à copier dans le nouveau blob. Si on utilisait un couple de valeur `début + longueur` qui dépassait la taille du blob source, le blob qui était renvoyé contenait les données à partir de l'indice de début et jusuq'à la fin du blob.
+> [!NOTE]
+> La méthode `slice()` utilisait auparavant un deuxième argument qui indiquait le nombre d'octets à copier dans le nouveau blob. Si on utilisait un couple de valeur `début + longueur` qui dépassait la taille du blob source, le blob qui était renvoyé contenait les données à partir de l'indice de début et jusuq'à la fin du blob.
 
-> **Note :** La méthode `slice()` doit être utilisée avec certains préfixes sur certaines versions de navigateurs : `blob.mozSlice()` pour Firefox 12 et antérieur, `blob.webkitSlice()` dans Safari. Un ancienne version de `slice()` sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de `blob.mozSlice()` a été abandonnée avec Firefox 30.
+> [!NOTE]
+> La méthode `slice()` doit être utilisée avec certains préfixes sur certaines versions de navigateurs : `blob.mozSlice()` pour Firefox 12 et antérieur, `blob.webkitSlice()` dans Safari. Un ancienne version de `slice()` sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de `blob.mozSlice()` a été abandonnée avec Firefox 30.
 
 ## Constructeur
 
@@ -46,8 +44,12 @@ Les API qui acceptent des objets `Blob` sont également listées sur la document
 
 Le constructeur {{domxref("Blob.Blob", "Blob()")}} permet de créer des blobs à partir d'autres objets. Par exemple, on peut construire un blob à partir d'une chaîne de caractères :
 
-    var debug = {coucou: "monde"};
-    var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
+```js
+var debug = { coucou: "monde" };
+var blob = new Blob([JSON.stringify(debug, null, 2)], {
+  type: "application/json",
+});
+```
 
 ### Créer une URL de données vers un tableau typé
 
@@ -55,7 +57,7 @@ Le constructeur {{domxref("Blob.Blob", "Blob()")}} permet de créer des blobs à
 var typedArray = GetTheTypedArraySomehow();
 
 // On ajoute un type MIME pertinent
-var blob = new Blob([typedArray], {type: 'application/octet-binary'});
+var blob = new Blob([typedArray], { type: "application/octet-binary" });
 var url = URL.createObjectURL(blob);
 
 // url ressemblera à :
@@ -72,9 +74,9 @@ La seule façon de lire le contenu d'un blob est d'utiliser un objet {{domxref("
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contient le contenu du
-   // blob sous la forme d'un tableau typé
+reader.addEventListener("loadend", function () {
+  // reader.result contient le contenu du
+  // blob sous la forme d'un tableau typé
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -83,13 +85,11 @@ En utilisant d'autres méthodes de {{domxref("FileReader")}}, on peut lire le co
 
 ## Spécifications
 
-| Spécification                                        | État                         | Commentaires         |
-| ---------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob")}}
+{{Compat}}
 
 ## Voir aussi
 

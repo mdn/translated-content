@@ -1,22 +1,17 @@
 ---
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 ---
+
 {{JSRef}}
 
 **`Set[@@species]`** renvoie le constructeur `Set`.
 
 ## Syntaxe
 
-    Set[Symbol.species]
+```js
+Set[Symbol.species];
+```
 
 ## Description
 
@@ -42,14 +37,11 @@ class MonSet extends Set
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-get-set-@@species', 'get Set [ @@species ]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-set-@@species', 'get Set [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

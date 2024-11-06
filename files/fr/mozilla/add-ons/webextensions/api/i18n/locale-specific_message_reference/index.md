@@ -1,23 +1,14 @@
 ---
 title: Locale-specific message reference
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
-tags:
-  - Internationalization
-  - Localization
-  - Reference
-  - String
-  - WebExtensions
-  - i18n
-  - message
-  - messages.json
-  - placeholders
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.
 
-> **Note :** Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/Add-ons/WebExtensions/WebExtension_i18n).
+> [!NOTE]
+> Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/Add-ons/WebExtensions/WebExtension_i18n).
 
 ## Exemple messages.json
 
@@ -44,9 +35,9 @@ Le code suivant montre un exemple de fichier `messages.json file`, tiré de notr
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -73,7 +64,8 @@ Le nom peut inclure les caractères suivants :
 - \_ (underscore)
 - @
 
-> **Note :** Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/Add-ons/WebExtensions/Internationalization#Predefined_messages).
+> [!NOTE]
+> Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/Add-ons/WebExtensions/Internationalization#Predefined_messages).
 
 ### message
 
@@ -85,7 +77,7 @@ Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `
 Autres points à noter :
 
 - Tout nombre de signes dollar consécutifs apparaissant dans les chaînes est remplacé par le même nombre de signes dollar moins un. donc, $$ > $, $$$ > $$, etc.
-- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
+- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des `/\$\d/` jetons dans le message.
 - Lorsqu'une chaîne locale est utilisée, les jetons correspondant à `/\$\d+/` sont remplacés par les remplacements passés à {{WebExtAPIRef("i18n.getMessage()")}}.
 - `getMessage()` ne traitera pas les appels avec plus de 9 placeholders/substitutions.
 
@@ -118,7 +110,7 @@ Le nom de l'espace réservé est utilisé pour représenter l'espace réservé d
 
 L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
 
-#### exemple
+#### Exemple
 
 {{optional_inline}}
 

@@ -1,18 +1,12 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - CSS プロパティ
-  - 改ページ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.page-break-before
-translation_of: Web/CSS/page-break-before
 ---
+
 {{CSSRef}}
 
-> **Warning:** このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
+> [!WARNING]
+> このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
 
 **`page-break-before`** CSS プロパティは、現在の要素の*前で*改ページが行われるように調整します。
 
@@ -34,6 +28,8 @@ page-break-before: initial;
 page-break-before: revert;
 page-break-before: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/page-break-before.html")}}
 
 ## 構文
 
@@ -83,7 +79,7 @@ page-break-before: unset;
 ```css
 /* div の前で改ページされないようにします */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

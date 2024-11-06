@@ -1,24 +1,19 @@
 ---
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/generateMipmap
 ---
+
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.
+La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.
 
 Les mipmaps sont utilisées pour créer de la distance avec des objets. Une mipmap de haute résolution est utilisée pour les objets qui sont proches, et une mipmap de résolution inférieure est utilisée pour les objets qui sont plus éloignés. Elles commencent avec la résolution de l'image de texture, puis la résolution est divisée par deux jusqu'à ce qu'une image de texture de dimension 1x1 soit créée.
 
 ## Syntaxe
 
-    void gl.generateMipmap(cible);
+```js
+void gl.generateMipmap(cible);
+```
 
 ### Paramètres
 
@@ -45,15 +40,11 @@ gl.generateMipmap(gl.TEXTURE_2D);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire                                                                                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.8", "generateMipmap")}}                                 | {{Spec2('WebGL')}}             | Définition initiale pour WebGL.                                                                 |
-| {{SpecName('OpenGL ES 2.0', "glGenerateMipmap.xml", "glGenerateMipmap")}}     | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API (similaire) d'OpenGL ES 2.0.                                                  |
-| {{SpecName('OpenGL ES 3.0', "glGenerateMipmap.xhtml", "glGenerateMipmap")}} | {{Spec2('OpenGL ES 3.0')}} | Page man de l'API (similaire) d'OpenGL ES 3.0 Ajoute : `gl.TEXTURE_3D` et `gl.TEXTURE_2D_ARRAY` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.generateMipmap")}}
+{{Compat}}
 
 ## Voir aussi
 

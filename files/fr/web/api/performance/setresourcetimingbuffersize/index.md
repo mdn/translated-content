@@ -1,14 +1,8 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La méthode **`setResourceTimingBufferSize()`** définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type `"resource"` (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).
@@ -20,7 +14,7 @@ La taille recommandée du tampon de synchronisation des ressources d'un navigate
 ## Syntaxe
 
 ```js
-  performance.setResourceTimingBufferSize(maxSize);
+performance.setResourceTimingBufferSize(maxSize);
 ```
 
 ### Arguments
@@ -52,11 +46,8 @@ function setResourceTimingBufferSize(maxSize) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize',
-        'setResourceTimingBufferSize()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.setResourceTimingBufferSize")}}
+{{Compat}}

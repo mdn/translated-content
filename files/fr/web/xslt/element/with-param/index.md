@@ -1,20 +1,19 @@
 ---
 title: with-param
 slug: Web/XSLT/Element/with-param
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/with-param
-original_slug: Web/XSLT/with-param
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:with-param>` définit la valeur d'un paramètre à passer à un modèle.
 
 ### Syntaxe
 
-    <xsl:with-param name=NOM select=EXPRESSION>
-    	MODÈLE
-    </xsl:with-param>
+```xml
+<xsl:with-param name=NOM select=EXPRESSION>
+  MODÈLE
+</xsl:with-param>
+```
 
 ### Attribut obligatoire
 

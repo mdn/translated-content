@@ -1,0 +1,62 @@
+name: "[via des pages MDN uniquement // fr]"
+description: Tickets rapportés via le lien "Report a problem with this content on GitHub" sur des pages MDN.
+labels: ["l10n-fr", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Avant toute chose
+
+        **Vous souhaitez éditer cette page vous-même ?** Le contenu est open source !
+        ↩ Revenez sur la page et cliquez sur le lien _Edit on GitHub_ en bas de la page.
+
+        **Est-ce que le problème porte sur le tableau de compatibilité des navigateurs ?**
+        ↩ Revenez sur la page et cliquez sur le lien _Report problems with this compatibility data on GitHub_ en bas de la page.
+
+        **Vous avez besoin d'aide avec votre navigateur ?**
+        Consultez le site d'aide du navigateur (https://support.mozilla.org/fr/products/firefox pour Firefox, https://support.apple.com/fr-fr/safari pour Safari, https://support.google.com/chrome/?hl=fr#topic=7439538 pour Chrome, https://support.microsoft.com/fr-fr/microsoft-edge pour Edge).
+
+        ---
+  - type: input
+    id: mdn-url
+    attributes:
+      label: URL MDN
+      description: Cette information est ajoutée automatiquement. Veuillez ne pas la modifier.
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Sur quelle section/titre porte ce problème ?
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quelle information était incorrecte, inutile ou incomplète ?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Que vous attendiez-vous à voir ?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Avez-vous des liens, références ou citations sur ce sujet ?
+      description: Des liens vers des informations qui pourront nous aider à confirmer le problème.
+  - type: textarea
+    id: more-info
+    attributes:
+      label: Souhaitez-vous ajouter autre chose ?
+      description: Cela peut être des étapes de reproduction du bogue, des captures ou enregistrements d'écran, un fragment de code.
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Et voilà, c'est terminé ! Les champs suivants sont remplis automatiquement. Vous pouvez cliquer sur **Submit new issue**.
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Métadonnées MDN
+      description: Remplies automatiquement. Ne pas modifier.

@@ -1,15 +1,8 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/construct
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new) sous la forme d'une fonction. Elle est équivalente à `new cible(...args)` et permet d'indiquer un prototype différent.
@@ -18,7 +11,9 @@ La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/
 
 ## Syntaxe
 
-    Reflect.construct(cible, listeArguments[, newCible])
+```js
+Reflect.construct(cible, listeArguments[, newCible])
+```
 
 ### Paramètres
 
@@ -74,11 +69,11 @@ Avant l'apparition de `Reflect`, on pouvait construire des objets avec une combi
 
 ```js
 function MaClasseA() {
-  this.name = 'A';
+  this.name = "A";
 }
 
 function MaClasseB() {
-  this.name = 'B';
+  this.name = "B";
 }
 
 // Avec cette instruction :
@@ -104,11 +99,11 @@ Mais quand on appelle `Reflect.construct()`, `new.target` pointe vers la valeur 
 
 ```js
 function MaClasseA() {
-  console.log('MaClasseA');
+  console.log("MaClasseA");
   console.log(new.target);
 }
 function MaClasseB() {
-  console.log('MaClasseB');
+  console.log("MaClasseB");
   console.log(new.target);
 }
 
@@ -131,14 +126,11 @@ MaClasseA.apply(obj3, args);
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.construct")}}
+{{Compat}}
 
 ## Voir aussi
 

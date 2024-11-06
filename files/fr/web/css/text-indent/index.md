@@ -1,12 +1,8 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 La propriété **`text-indent`** définit la longueur qui doit être laissée avant le début de la première ligne d'un élément contenant du texte.
@@ -51,9 +47,13 @@ text-indent: unset;
 - `hanging` {{experimental_inline}}
   - : Inverse les lignes indentées. Toutes les lignes, sauf la première, seront indentées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -62,10 +62,14 @@ text-indent: unset;
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -86,10 +90,14 @@ p {
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -107,15 +115,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                      |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text', '#text-indent-property', 'text-indent')}} | {{Spec2('CSS3 Text')}}             | Ajout des mots-clés `hanging` et `each-line`.                                                     |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-indent')}} | {{Spec2('CSS3 Transitions')}} | `text-indent` peut être animée.                                                                   |
-| {{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}} | {{Spec2('CSS2.1')}}                 | The behavior with `display: inline-block` and anonymous block boxes have been explicitly defined. |
-| {{SpecName('CSS1', '#text-indent', 'text-indent')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-indent")}}
+{{Compat}}

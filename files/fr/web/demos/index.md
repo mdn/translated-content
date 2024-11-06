@@ -1,9 +1,8 @@
 ---
 title: Démos de technologies open web
 slug: Web/Demos
-translation_of: Web/Demos_of_open_web_technologies
-original_slug: Web/Demos_of_open_web_technologies
 ---
+
 Mozilla supporte une large gamme de technologies open web vraiment intéressantes, et nous encourageons leur utilisation. Cette page offre des liens vers d'intéressantes démonstrations de ces technologies. Si vous avez entendu parler d'une bonne démonstration ou d'une application de technologie open web, veuillez ajouter un lien vers la section appropriée ici.
 
 ## Graphiques 2D
@@ -67,8 +66,8 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 
 ### Réalité Virtuelle
 
-- [La Mer Polaire](https://mozvr.com/demos/polarsea/) ([code source](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([code source](https://github.com/mozvr/sechelt))
+- [La Mer Polaire](https://github.com/MozillaReality/polarsea)
+- [Sechelt fly-through](https://github.com/MozillaReality/sechelt)
 
 ### Réalité augmentée
 

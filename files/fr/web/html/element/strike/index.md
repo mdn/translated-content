@@ -1,18 +1,14 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-translation_of: Web/HTML/Element/strike
 ---
-{{deprecated_header}}{{HTMLRef}}
+
+{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 
-> **Note :** Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
+> [!NOTE]
+> Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
 
 ## Attributs
 
@@ -22,15 +18,13 @@ Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/
 
 Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
 
 ## Exemples
 
 ```html
-<strike>
-  Plat du jour : Saumon
-</strike>
-ÉPUISÉ
+<strike> Plat du jour : Saumon </strike> ÉPUISÉ
 ```
 
 ### Résultat
@@ -39,15 +33,11 @@ Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "obsolete.html#strike", "&lt;strike&gt;")}}                 | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
-| {{SpecName("HTML5 W3C", "obsolete.html#strike", "&lt;strike&gt;")}}                     | {{Spec2("HTML5 W3C")}}     | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
-| {{SpecName("HTML4.01", "/present/graphics.html#edef-STRIKE", "&lt;strike&gt;")}} | {{Spec2("HTML4.01")}}     | Rendu déprécié pour être remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.strike")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.caption-side
-translation_of: Web/CSS/caption-side
 ---
+
 {{CSSRef}}
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
@@ -23,9 +16,7 @@ translation_of: Web/CSS/caption-side
 caption-side: top;
 caption-side: bottom;
 
-/* 警告: 非標準の値 */
-caption-side: block-start;
-caption-side: block-end;
+/* 倫理値 */
 caption-side: inline-start;
 caption-side: inline-end;
 
@@ -41,12 +32,8 @@ caption-side: unset;
 ### 値
 
 - `top`
-  - : キャプションボックスを表の上方に配置します。
-- `bottom`
-  - : キャプションボックスを表の下方に配置します。
-- `block-start`
   - : キャプションボックスを表のブロック方向の先頭に配置します。
-- `block-end`
+- `bottom`
   - : キャプションボックスを表のブロック方向の末尾に配置します。
 - `inline-start`
   - : キャプションボックスを表のインライン方向の先頭に配置します。
@@ -69,17 +56,21 @@ caption-side: unset;
 
 ```html
 <table class="top">
-  <caption>Caption ABOVE the table</caption>
+  <caption>
+    Caption ABOVE the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Caption BELOW the table</caption>
+  <caption>
+    Caption BELOW the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>

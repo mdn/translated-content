@@ -1,20 +1,17 @@
 ---
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
-original_slug: Web/JavaScript/Reference/Erreurs/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Invalid operand to 'in' (Edge)
-    TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-    TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
+TypeError: Invalid operand to 'in' (Edge)
+TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
+TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
 
 ## Type d'erreur
 
@@ -68,7 +65,7 @@ var toto = { machin: "bidule" };
 Attention lorsqu'on utilise l'opérateur `in` quand on recherche une valeur dans un objet {{jsxref("Array")}}. L'opérateur `in` vérifie la présence de l'index mais pas la valeur présente à cet index.
 
 ```js
-var arbres = ['cèdre', 'bouleau', 'pin', 'sapin', 'érable'];
+var arbres = ["cèdre", "bouleau", "pin", "sapin", "érable"];
 3 in arbres; // true
 "pin" in arbres; // false
 ```

@@ -1,15 +1,8 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-image
-translation_of: Web/CSS/list-style-image
 ---
+
 {{CSSRef}}
 
 **`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目のマーカーとして使われる画像を設定します。
@@ -18,7 +11,8 @@ translation_of: Web/CSS/list-style-image
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **Note:** このプロパティはリスト項目、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
+> [!NOTE]
+> このプロパティはリスト項目、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
 
 ## 構文
 
@@ -27,7 +21,7 @@ translation_of: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url>  値 */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* 有効な画像値 */
 list-style-image: linear-gradient(to left bottom, red, blue);
@@ -56,7 +50,7 @@ list-style-image: unset;
 
 ## 例
 
-<h3 id="Using_a_url_value">url 値の使用</h3>
+### url 値の使用
 
 #### HTML
 
@@ -77,9 +71,9 @@ ul {
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_url_value') }}
+{{ EmbedLiveSample('url 値の使用') }}
 
-<h3 id="Using_a_gradient">グラデーションの使用</h3>
+### グラデーションの使用
 
 #### HTML
 
@@ -101,7 +95,7 @@ ul {
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_gradient') }}
+{{ EmbedLiveSample('グラデーションの使用') }}
 
 ## 仕様書
 

@@ -1,19 +1,16 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 La propriété **`white-space`** est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **Note :** Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
+> [!NOTE]
+> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
 
 ## Syntaxe
 
@@ -107,9 +104,13 @@ Le tableau qui suit résume le comportement des différentes valeurs :
   </tbody>
 </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -119,17 +120,9 @@ Le tableau qui suit résume le comportement des différentes valeurs :
 
 ```html
 <code>
-var coucou = function(){
-  // on notera l'indentation
-  // avec deux espaces
-  console.log("Hello World");
-
-  var toto = function(){
-    // ici 4 espaces
-    console.log("Toto");
-  }
-  toto();
-}
+  var coucou = function(){ // on notera l'indentation // avec deux espaces
+  console.log("Hello World"); var toto = function(){ // ici 4 espaces
+  console.log("Toto"); } toto(); }
 </code>
 ```
 
@@ -161,8 +154,8 @@ function jeNAuraisJamaisDuAppelerCetteFonctionAvecUnNomAussiLong(toto){
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* current browsers */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* current browsers */
 }
 ```
 
@@ -172,16 +165,11 @@ pre {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                                                |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Définition de l'algorithme des césures de ligne et ajout de `break-spaces`. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Définition initiale.                                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 ## Voir aussi
 

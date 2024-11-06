@@ -1,16 +1,8 @@
 ---
-title: 'Window: paste 이벤트'
+title: "Window: paste 이벤트"
 slug: Web/API/Window/paste_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - paste
-browser-compat: api.Window.paste_event
-translation_of: Web/API/Window/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 붙여넣기를 했을 때 발생합니다.
@@ -41,8 +33,8 @@ translation_of: Web/API/Window/paste_event
 ## 예제
 
 ```js
-window.addEventListener('paste', (event) => {
-    console.log('붙여넣기 동작 실행')
+window.addEventListener("paste", (event) => {
+  console.log("붙여넣기 동작 실행");
 });
 ```
 

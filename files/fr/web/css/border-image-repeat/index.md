@@ -1,9 +1,8 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-browser-compat: css.properties.border-image-repeat
-translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
@@ -66,7 +65,7 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* Peut être changé avec la liste déroulante */
+  border-image-repeat: stretch; /* Peut être changé avec la liste déroulante */
 }
 ```
 
@@ -86,7 +85,8 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

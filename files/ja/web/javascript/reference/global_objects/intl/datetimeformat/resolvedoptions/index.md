@@ -1,29 +1,18 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl/DateTimeFormat")}} オブジェクトの初期化時に計算されたロケールや日付と時刻の整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
 
-
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -52,14 +41,14 @@ resolvedOptions()
 ### resolvedOptions メソッドの使用
 
 ```js
-var germanFakeRegion = new Intl.DateTimeFormat('de-XX', { timeZone: 'UTC' });
+var germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
 var usedOptions = germanFakeRegion.resolvedOptions();
 
-usedOptions.locale;          // "de"
-usedOptions.calendar;        // "gregory"
+usedOptions.locale; // "de"
+usedOptions.calendar; // "gregory"
 usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone;        // "UTC"
-usedOptions.month;           // "numeric"
+usedOptions.timeZone; // "UTC"
+usedOptions.month; // "numeric"
 ```
 
 ## 仕様書

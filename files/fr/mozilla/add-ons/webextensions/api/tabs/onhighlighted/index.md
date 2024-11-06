@@ -1,19 +1,9 @@
 ---
 title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlighted
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsque l'ensemble des onglets en surbrillance dans une fenêtre change
 
@@ -22,9 +12,9 @@ Notez qu'avant la version 63, Firefox n'avait pas le concept de mettre en évide
 ## Syntaxe
 
 ```js
-browser.tabs.onHighlighted.addListener(listener)
-browser.tabs.onHighlighted.removeListener(listener)
-browser.tabs.onHighlighted.hasListener(listener)
+browser.tabs.onHighlighted.addListener(listener);
+browser.tabs.onHighlighted.removeListener(listener);
+browser.tabs.onHighlighted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -70,15 +60,16 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onHighlighted")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,4 +96,4 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

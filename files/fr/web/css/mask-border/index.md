@@ -1,9 +1,8 @@
 ---
 title: mask-border
 slug: Web/CSS/mask-border
-translation_of: Web/CSS/mask-border
-browser-compat: css.properties.mask-border
 ---
+
 {{cssref}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-border`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de créer un masque le long de la bordure d'un élément.
@@ -23,16 +22,16 @@ Cette propriété est une propriété raccourcie pour les propriétés suivantes
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
 /* Valeurs globales */
 mask-border: inherit;

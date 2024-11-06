@@ -1,19 +1,9 @@
 ---
 title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onErrorOccurred
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.
 
@@ -21,11 +11,11 @@ Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut
 
 ```js
 browser.webNavigation.onErrorOccurred.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onErrorOccurred.removeListener(listener)
-browser.webNavigation.onErrorOccurred.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onErrorOccurred.removeListener(listener);
+browser.webNavigation.onErrorOccurred.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -49,11 +39,11 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
-### details
+### Détails
 
 - `tabId`
   - : `integer`. L'ID de l'onglet dans lequel la navigation se passait.
@@ -68,22 +58,18 @@ Les événements ont trois fonctions :
 - `error`
   - : `string`. Le code d'erreur. Il s'agit d'un code d'erreur interne qui n'est pas garanti pour rester identique ou être cohérent d'un navigateur à l'autre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onErrorOccurred")}}
+{{Compat}}
 
 ## Exemples
 
-Logs les URL cibles de `onErrorOccurred`, si le nom d'hôte de l'URL cible contient  "example.com" ou commence par "developer".
+Logs les URL cibles de `onErrorOccurred`, si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnErrorOccurred(details) {
   console.log("onErrorOccurred: " + details.url);
@@ -95,13 +81,14 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -128,4 +115,4 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

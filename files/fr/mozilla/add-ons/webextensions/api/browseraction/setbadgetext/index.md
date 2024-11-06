@@ -1,19 +1,9 @@
 ---
 title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeText
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.
 
@@ -23,8 +13,8 @@ Les onglets sans texte de badge spécifique hériteront du texte global du badge
 
 ```js
 browser.browserAction.setBadgeText(
-  details // object
-)
+  details, // object
+);
 ```
 
 Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
@@ -55,10 +45,6 @@ Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
 - si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
 - si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeText",2)}}
-
 ## Exemples
 
 Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton :
@@ -67,21 +53,26 @@ Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton
 var clicks = 0;
 
 function increment() {
-  browser.browserAction.setBadgeText({text: (++clicks).toString()});
+  browser.browserAction.setBadgeText({ text: (++clicks).toString() });
 }
 
 browser.browserAction.onClicked.addListener(increment);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +99,4 @@ browser.browserAction.onClicked.addListener(increment);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/some
 ---
+
 {{JSRef}}
 
 La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -20,7 +11,9 @@ La méthode **`some()`** teste si certains éléments du tableau typé remplisse
 
 ## Syntaxe
 
-    typedarray.some(callback[, thisArg])
+```js
+typedarray.some(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -62,7 +55,7 @@ Dans l'exemple qui suit, on teste s'il existe au moins un élément du tableau t
 function supérieurÀ10(élément, index, array) {
   return élément > 10;
 }
-new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10);  // false
+new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 ```
 
@@ -71,8 +64,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour arriver au même résultat :
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -82,8 +75,8 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```
@@ -92,14 +85,11 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.some")}}
+{{Compat}}
 
 ## Voir aussi
 

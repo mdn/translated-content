@@ -1,16 +1,8 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-repeat
-translation_of: Web/CSS/mask-repeat
 ---
+
 {{CSSRef}}
 
 **`mask-repeat`** は [CSS](/ja/docs/Web/CSS) プロパティで、マスク画像をどのように繰り返すかを設定します。マスク画像は水平軸、垂直軸、両方の軸で繰り返すか、まったく繰り返さないようにすることができます。
@@ -31,8 +23,13 @@ mask-repeat: round space;
 mask-repeat: no-repeat round;
 
 /* 複数の値 */
-mask-repeat: space round, no-repeat;
-mask-repeat: round repeat, space, repeat-x;
+mask-repeat:
+  space round,
+  no-repeat;
+mask-repeat:
+  round repeat,
+  space,
+  repeat-x;
 
 /* グローバル値 */
 mask-repeat: inherit;
@@ -139,7 +136,7 @@ mask-repeat: unset;
 
 ```css
 .examplethree {
-  mask-image: url('mask1.png'), url('mask2.png');
+  mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
 ```

@@ -1,10 +1,8 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-translation_of: Web/CSS/transform-function/matrix3d()
-original_slug: Web/CSS/transform-function/matrix3d()
-browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
 La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
@@ -24,7 +22,8 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 - `a4` `b4 c4`
   - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/number) qui définissent la translation à appliquer.
 
-> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
+> [!NOTE]
+> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
 
 <table class="standard-table">
   <thead>
@@ -84,8 +83,25 @@ p {
   background-color: teal;
 }
 
-.transformation{
-  transform: matrix3d(0.87,-0.5,0.00,0,0.50,0.87,0.00,0,0,0,1,0,0,0,0,1);
+.transformation {
+  transform: matrix3d(
+    0.87,
+    -0.5,
+    0,
+    0,
+    0.5,
+    0.87,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+  );
   background-color: blue;
 }
 ```
@@ -100,9 +116,9 @@ p {
 
 ```html
 <div class="foo">
- Lorem ipsum dolor sit amet, consectetur adipisicing elit.
- Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
- necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
@@ -119,7 +135,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 .foo {
   width: 50%;
@@ -130,7 +145,7 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-   /* Setting up animation for better demonstration */
+  /* Setting up animation for better demonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
@@ -145,29 +160,13 @@ body {
         Translates every Z point by 0
         Scales down by 10%
     */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
-
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
   }
   50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
   }
   to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
   }
 }
 ```

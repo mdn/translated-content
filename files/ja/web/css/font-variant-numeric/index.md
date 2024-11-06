@@ -1,15 +1,8 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-numeric
-translation_of: Web/CSS/font-variant-numeric
 ---
+
 {{CSSRef}}
 
 **`font-variant-numeric`** は CSS のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
@@ -22,12 +15,12 @@ translation_of: Web/CSS/font-variant-numeric
 font-variant-numeric: normal;
 font-variant-numeric: ordinal;
 font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
-font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
-font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
-font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
-font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
-font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
+font-variant-numeric: lining-nums; /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
 font-variant-numeric: oldstyle-nums stacked-fractions;
 
 /* グローバル値 */

@@ -1,14 +1,8 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 La propriété **`Number.MIN_VALUE`** représente la plus petite valeur numérique positive qu'il est possible de représenter en JavaScript.
@@ -29,24 +23,19 @@ Le code qui suit effectue la division de deux nombres. Si le résultat obtenu es
 
 ```js
 if (num1 / num2 >= Number.MIN_VALUE) {
-    func1();
+  func1();
 } else {
-    func2();
+  func2();
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-15.7.3.3', 'Number.MIN_VALUE')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-number.min_value', 'Number.MIN_VALUE')}}         | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.MIN_VALUE")}}
+{{Compat}}
 
 ## Voir aussi
 

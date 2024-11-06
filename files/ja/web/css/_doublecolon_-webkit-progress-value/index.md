@@ -1,25 +1,18 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
-tags:
-  - CSS
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-webkit-progress-value
-translation_of: Web/CSS/::-webkit-progress-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
 
-> **Note:** `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
+> **メモ:** `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
 
 ## 構文
 
-```css
-::-webkit-progress-value
+```css-nolint
+::-webkit-progress-value {}
 ```
 
 ## 例
@@ -29,18 +22,18 @@ translation_of: Web/CSS/::-webkit-progress-value
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS
 
 ```css
 progress {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
-  background-color: orange;
+  background-color: orange;
 }
 ```
 

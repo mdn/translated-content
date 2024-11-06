@@ -1,19 +1,19 @@
 ---
 title: Quality values
 slug: Glossary/Quality_values
-tags:
-  - Glossaire
-  - Mécanismes web
-translation_of: Glossary/Quality_values
-original_slug: Glossaire/Quality_values
 ---
-**_Quality values_** (_valeurs de qualité_), ou _q-values_ et _q-factors_, sont utilisés pour décrire l'ordre de priorité des valeurs séparées par une virgule dans une liste. C'est une syntaxe spéciale autorisée dans quelques [en-têtes HTTP](/fr/docs/HTTP/Headers) et en HTML. L'importance d'une valeur est marquée par le suffixe  `';q='` immédiatement suivi par une valeur comprise entre `0` et `1` inclus, avec jusqu'à trois décimales, la valeur la plus élevée indiquant la priorité la plus haute. Quand le paramètre n'est pas déclaré, la valeur par défaut est `1`.
+
+{{GlossarySidebar}}
+
+**_Quality values_** (_valeurs de qualité_), ou _q-values_ et _q-factors_, sont utilisés pour décrire l'ordre de priorité des valeurs séparées par une virgule dans une liste. C'est une syntaxe spéciale autorisée dans quelques [en-têtes HTTP](/fr/docs/HTTP/Headers) et en HTML. L'importance d'une valeur est marquée par le suffixe `';q='` immédiatement suivi par une valeur comprise entre `0` et `1` inclus, avec jusqu'à trois décimales, la valeur la plus élevée indiquant la priorité la plus haute. Quand le paramètre n'est pas déclaré, la valeur par défaut est `1`.
 
 ## Exemples
 
 La syntaxe suivante :
 
-    text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
+text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
 
 indique l'ordre de priorité :
 
@@ -25,7 +25,9 @@ indique l'ordre de priorité :
 
 S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre dans la liste est sans importance. Néanmoins, avec la même qualité, des valeurs plus spécifiques ont la priorité sur celles qui le sont moins :
 
-    text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
+text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
 
 | Valeur      | Priorité                       |
 | ----------- | ------------------------------ |
@@ -39,7 +41,7 @@ Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spéc
 
 ### Firefox
 
-À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ({{bug(672448)}}).
+À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ([bug Firefox 672448](https://bugzil.la/672448)).
 
 ## Plus d'informations
 

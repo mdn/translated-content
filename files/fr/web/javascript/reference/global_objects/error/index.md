@@ -1,10 +1,8 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error
-browser-compat: javascript.builtins.Error
 ---
+
 {{JSRef}}
 
 Les objets `Error` sont déclenchés lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions spécifiques. Voir ci-dessous pour les types d'erreur natifs standards.
@@ -88,15 +86,14 @@ Il est possible de ne gérer que certains types d'erreur particuliers en testant
 
 ```js
 try {
-  toto.truc()
+  toto.truc();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ' : ' + e.message)
+    console.error(e.name + " : " + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ' : ' + e.message)
+    console.error(e.name + " : " + e.message);
   }
   // ... etc
-
   else {
     // Si aucun cas ne correspond, on laisse l'erreur
     // non-gérée
@@ -132,7 +129,7 @@ function faireTruc() {
 try {
   faireTruc();
 } catch (err) {
-  switch(err.message) {
+  switch (err.message) {
     case "Echoue d'une certaine façon":
       gererUneFacon(err.cause);
       break;
@@ -149,7 +146,7 @@ Il est aussi possible d'utiliser la propriété `cause` des [types d'erreur pers
 class MonErreur extends Error {
   constructor(/* des arguments */) {
     // Il faut passer les paramètres `message` et `options`
-    // pour que la propriété "cause" soit initialisée. 
+    // pour que la propriété "cause" soit initialisée.
     super(message, options);
   }
 }
@@ -163,13 +160,15 @@ Voir [cette question (en anglais) sur StackOverflow](https://stackoverflow.com/q
 
 #### En utilisant les classes ES2015
 
-> **Attention :** Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Note :** Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
+> [!NOTE]
+> Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
 
 ```js
 class ErreurSpecifique extends Error {
-  constructor(toto = 'truc', ...params) {
+  constructor(toto = "truc", ...params) {
     // On passe les arguments restants (y compris ceux
     // de l'éditeur tiers) au constructeur parent
     super(...params);
@@ -180,7 +179,7 @@ class ErreurSpecifique extends Error {
       Error.captureStackTrace(this, ErreurSpecifique);
     }
 
-    this.name = 'ErreurSpecifique';
+    this.name = "ErreurSpecifique";
     // Les informations de débogage spécifiques
     this.toto = toto;
     this.date = new Date();
@@ -188,23 +187,24 @@ class ErreurSpecifique extends Error {
 }
 
 try {
-  throw new ErreurSpecifique('truc', 'trucMessage');
-} catch(e) {
-  console.error(e.name);    // ErreurSpecifique
-  console.error(e.toto);    // truc
+  throw new ErreurSpecifique("truc", "trucMessage");
+} catch (e) {
+  console.error(e.name); // ErreurSpecifique
+  console.error(e.toto); // truc
   console.error(e.message); // trucMessage
-  console.error(e.stack);   // stacktrace
+  console.error(e.stack); // stacktrace
 }
 ```
 
 #### En utilisant des objets ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
+> [!WARNING]
+> Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
 
 ```js
 function ErreurSpecifique(toto, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
-  instance.name = 'ErreurSpecifique';
+  instance.name = "ErreurSpecifique";
   instance.toto = toto;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
   if (Error.captureStackTrace) {
@@ -218,19 +218,19 @@ ErreurSpecifique.prototype = Object.create(Error.prototype, {
     value: Error,
     enumerable: false,
     writable: true,
-    configurable: true
-  }
+    configurable: true,
+  },
 });
 
-if (Object.setPrototypeOf){
+if (Object.setPrototypeOf) {
   Object.setPrototypeOf(ErreurSpecifique, Error);
 } else {
   ErreurSpecifique.__proto__ = Error;
 }
 
 try {
-  throw new ErreurSpecifique('truc', 'trucMessage');
-} catch(e){
+  throw new ErreurSpecifique("truc", "trucMessage");
+} catch (e) {
   console.error(e.name); // ErreurSpecifique
   console.error(e.toto); // truc
   console.error(e.message); // trucMessage

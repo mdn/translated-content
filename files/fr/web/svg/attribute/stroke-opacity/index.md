@@ -1,11 +1,8 @@
 ---
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-opacity
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-opacity`** définit l'opacité du contour (_couleur_, _dégradé_, _motif_, etc) appliqué à une forme SVG.
@@ -17,7 +14,11 @@ Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -26,16 +27,13 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="4" stroke="green" />
 
   <!-- Définit l'opacité avec un nombre entre 0 et 1-->
-  <circle cx="15" cy="5" r="4" stroke="green"
-          stroke-opacity="0.7" />
+  <circle cx="15" cy="5" r="4" stroke="green" stroke-opacity="0.7" />
 
   <!-- Définit l'opacité avec un pourcentage -->
-  <circle cx="25" cy="5" r="4" stroke="green"
-          stroke-opacity="50%" />
+  <circle cx="25" cy="5" r="4" stroke="green" stroke-opacity="50%" />
 
   <!-- Définit l'opacité comme propriété CSS -->
-  <circle cx="35" cy="5" r="4" stroke="green"
-          style="stroke-opacity: .3;" />
+  <circle cx="35" cy="5" r="4" stroke="green" style="stroke-opacity: .3;" />
 </svg>
 ```
 
@@ -67,17 +65,15 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!NOTE]
+> SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-opacity")}}
-
-## Spécification
-
-| Spécification                                                                                            | Statut                   | Commentaire                                     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeOpacityProperty", "stroke-opacity")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeOpacityProperty", "stroke-opacity")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

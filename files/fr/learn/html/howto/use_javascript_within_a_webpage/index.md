@@ -1,14 +1,10 @@
 ---
 title: Utiliser JavaScript au sein d'une page web
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
-translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-original_slug: Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
 
 <table class="standard-table">
@@ -37,7 +33,8 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 
 {{Glossary("JavaScript")}} est un langage de programmation principalement utilisé côté client et qui peut également être utilisé côté serveur. Il permet entre autres de rendre les pages web interactives. JavaScript offre une myriade de possibilités.
 
-> **Note :** Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+> [!NOTE]
+> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
 ## Comment déclencher le code JavaScript depuis le document HTML
 
@@ -57,9 +54,11 @@ Il est également possible d'insérer du code JavaScript directement dans la bal
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('Cette fonction est exécutée une fois quand la page est chargée.');
-});
+  window.addEventListener("load", function () {
+    console.log(
+      "Cette fonction est exécutée une fois quand la page est chargée.",
+    );
+  });
 </script>
 ```
 
@@ -90,7 +89,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
   - Si vous souhaitez mettre en place des effets visuels, CSS vous permettra d'y parvenir plus intuitivement.
   - _Puisque tout le monde, ou presque, a JavaScript activé, `<noscript>` ne représente donc pas une excuse pour écrire des scripts inaccessibles._
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}

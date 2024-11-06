@@ -1,26 +1,20 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-tags:
-  - API
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
-translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegistration")}} crée une notification dans un service worker actif.
 
-> **Note :** Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
-    serviceWorkerRegistration.showNotification(title, [options])
+```js
+serviceWorkerRegistration.showNotification(title, [options]);
+```
 
 ### Paramètres
 
@@ -32,11 +26,11 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
     - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
 
-      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
+      - action: Une {{domxref("DOMString")}} représentant une action utilisateur à afficher sur la notification.
       - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
       - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
 
-      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement {{event("notificationclick")}}.
+      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
 
     - `badge`: Un {{domxref ("USVString")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
     - `body`: Un {{domxref ("DOMString")}} représentant le corps du texte de la notification, qui est affiché sous le titre.
@@ -50,7 +44,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
     - `silent`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est `false`, ce qui signifie qu'il ne sera pas silencieux.
     - `tag`: Un {{domxref ("DOMString")}} représentant un tag d'identification pour la notification.
     - `timestamp`: Un {{domxref ("DOMTimeStamp")}} représentant l'heure à laquelle la notification a été créée. Il peut être utilisé pour indiquer l'heure à laquelle une notification est réelle. Par exemple, cela peut se produire dans le passé lorsqu'une notification est utilisée pour un message qui n'a pas pu être envoyé immédiatement parce que l'appareil était hors ligne, ou dans le futur pour une réunion sur le point de commencer.
-    - `vibrate`: Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns) que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration peut être un réseau avec aussi peu qu'un membre. Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, \[300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.
+    - `vibrate`: Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns) que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration est un tableau (qui peut contenir un seul élément comme plusieurs). Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, \[300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.
 
 ### Valeur de retour
 
@@ -59,21 +53,21 @@ Un {{jsxref('Promise')}} qui se résout en `undefined`.
 ## Exemples
 
 ```js
-navigator.serviceWorker.register('sw.js')
+navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
   Notification.requestPermission((result) => {
-    if (result === 'granted') {
+    if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
+        registration.showNotification("Vibration Sample", {
+          body: "Buzz! Buzz!",
+          icon: "../images/touch/chrome-touch-icon-192x192.png",
           vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
-        })
-      })
+          tag: "vibration-sample",
+        });
+      });
     }
-  })
+  });
 }
 ```
 
@@ -83,10 +77,8 @@ Vous pouvez également récupérer les détails des {{domxref ("Notification", "
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                     | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.showNotification")}}
+{{Compat}}

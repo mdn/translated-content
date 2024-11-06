@@ -1,20 +1,11 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch API")}}
 
-L'interface **`Request`** de l'[API Fetch](/en-US/docs/Web/API/Fetch_API) représente une demande de ressource.
+L'interface **`Request`** de l'[API Fetch](/fr/docs/Web/API/Fetch_API) représente une demande de ressource.
 
 Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domxref("Request.Request","Request()")}}, mais vous êtes plus susceptible de rencontrer un objet `Request` renvoyé à la suite d'une autre opération d'API, telle en tant que service worker {{domxref("FetchEvent.request")}}.
 
@@ -36,7 +27,7 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 - {{domxref("Request.headers")}} {{readonlyInline}}
   - : Contient l'objet {{domxref("Headers")}} associé de la requête.
 - {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contient la valeur d'[intégrité de la sous-ressource](/en-US/docs/Web/Security/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+  - : Contient la valeur d'[intégrité de la sous-ressource](/fr/docs/Web/Security/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 - {{domxref("Request.method")}} {{readonlyInline}}
   - : Contient la méthode de la requête (`GET`, `POST`, etc).
 - {{domxref("Request.mode")}} {{readonlyInline}}
@@ -75,26 +66,27 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 - {{domxref("Body.text()")}}
   - : Renvoie une promesse qui se résout avec une représentation {{domxref("USVString")}} (texte) du coprs de la requête.
 
-> **Note :** Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
+> [!NOTE]
+> Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
 
 ## Exemples
 
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis renvoyons certaines valeurs de propriété de la requête:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const URL = request.url;
 const method = request.method;
 const credentials = request.credentials;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, par exemple:
+Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple:
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -102,7 +94,10 @@ fetch(request)
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu du body pour une requête api qui nécessite une charge utile de body:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const URL = request.url;
 const method = request.method;
@@ -110,39 +105,39 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note :** Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
+> [!NOTE]
+> Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, par exemple et obtenir la réponse:
+Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple et obtenir la réponse:
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on api server!');
+      throw new Error("Something went wrong on api server!");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
 
 ## Spécifications
 
-| Spécification                                                    | Statut                   | Commentaire         |
-| ---------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/fr/docs/Web/HTTP)

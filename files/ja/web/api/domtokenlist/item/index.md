@@ -1,22 +1,22 @@
 ---
-title: DOMTokenList.item()
+title: "DOMTokenList: item() メソッド"
+short-title: item()
 slug: Web/API/DOMTokenList/item
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.item
-translation_of: Web/API/DOMTokenList/item
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
-> **Note:** このメソッドは `[]` 演算子と等価です。
-> したがって、 `aList.item(i)` は `aList[i]` と同じです。 {{jsxref("Array")}} の [[] 演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements)と同様です。
+> [!NOTE]
+> このメソッドは[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)と等価です。
+> したがって、 `aList.item(i)` は `aList[i]` と同じです。
 
 ## 構文
 
-```js
+```js-nolint
 tokenList.item(index)
 ```
 
@@ -27,7 +27,7 @@ tokenList.item(index)
 
 ### 返値
 
-返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
+返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
 
 ### 例外
 
@@ -49,7 +49,7 @@ tokenList.item(index)
 ```js
 const span = document.querySelector("span");
 const classes = span.classList;
-const item = classes.item(classes.length-1);
+const item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

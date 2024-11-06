@@ -1,18 +1,8 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
-tags:
-  - '@font-face'
-  - アットルール
-  - CSS
-  - CSS フォント
-  - フォント
-  - ニックネーム
-  - リファレンス
-  - 字体
-browser-compat: css.at-rules.font-face
-translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
@@ -22,8 +12,9 @@ translation_of: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 ```
 
@@ -60,11 +51,12 @@ translation_of: Web/CSS/@font-face
     ブラウザーにフォントのリソースがどの形式であるかのヒントを提供するために — それで最適なものを選択できます — `format()` 関数の中に形式を含めることができます。
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"),
-         url(basic-sans-serif.ttf) format("truetype");
+    src:
+      url(ideal-sans-serif.woff) format("woff"),
+      url(basic-sans-serif.ttf) format("truetype");
     ```
 
- 利用可能な形式は、`"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, `"svg"` です。
+利用可能な形式は、`"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, `"svg"` です。
 
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : フォントで使用される Unicode コードポイントの範囲です。
@@ -97,9 +89,8 @@ translation_of: Web/CSS/@font-face
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"),
-           local("HelveticaNeue-Bold"),
-           url(MgOpenModernaBold.ttf);
+      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
@@ -117,20 +108,22 @@ translation_of: Web/CSS/@font-face
 
 ```html
 <html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
-    }
+  <head>
+    <title>Web Font Sample</title>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -145,9 +138,8 @@ translation_of: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

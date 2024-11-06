@@ -1,18 +1,9 @@
 ---
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
-tags:
-  - API
-  - Add-ons
-  - Devtools.inspectedWindows
-  - Extensions
-  - Reference
-  - WebExtensions
-  - eval
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 
@@ -45,9 +36,9 @@ Le script accède à un certain nombre d'objets qui aident le script injecté à
 
 ```js
 var evaluating = browser.devtools.inspectedWindow.eval(
-  expression,       // string
-  options           // object
-)
+  expression, // string
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -85,7 +76,7 @@ Si une erreur s'est produite, l'élément 0 sera indéfini et l'élément 1 cont
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}
+{{Compat}}
 
 ## Exemples
 
@@ -112,8 +103,7 @@ function handleResult(result) {
 const checkjQuery = "typeof jQuery != 'undefined'";
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
 });
 ```
 
@@ -140,8 +130,7 @@ function handleResult(result) {
 }
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
 });
 ```
 
@@ -166,20 +155,20 @@ function handleResult(result) {
 }
 
 inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -206,4 +195,4 @@ inspectButton.addEventListener("click", () => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

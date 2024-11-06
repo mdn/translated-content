@@ -1,10 +1,8 @@
 ---
 title: オプションページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
+
 {{AddonSidebar}}
 
 オプションページでは、ユーザーから変更できるような拡張機能の設定画面を定義することができます。ユーザーはアドオンマネージャーを通じて、アドオンのオプションページにアクセスすることができます。
@@ -22,17 +20,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 オプションページを作成するには、ページを定義する HTML を書きます。このページは通常のページと同様に、 CSS と JavaScript ファイルを入れることができます。このページは、 [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) の例から取ってきていて、 JavaScript ファイルが含まれています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
       <label>Favorite color</label>
-      <input type="text" id="color"/>
+      <input type="text" id="color" />
       <button type="submit">Save</button>
     </form>
     <script src="options.js"></script>
@@ -53,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 },
 ```
 
-> **Note:** **Google Chrome** と **Opera** は `chrome_style` を `browser_style` の代わりに使用しますので、これらに対応する場合は、両方のキーを追加する必要があります。
+> **メモ:** **Google Chrome** と **Opera** は `chrome_style` を `browser_style` の代わりに使用しますので、これらに対応する場合は、両方のキーを追加する必要があります。
 
 [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) ページでオプションページと背景やコンテンツスクリプトの**共有オプション**を参照してください。
 

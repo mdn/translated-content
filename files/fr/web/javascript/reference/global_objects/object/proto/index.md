@@ -1,22 +1,15 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
-> **Attention :** Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
+> [!WARNING]
+> Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
 
-> **Attention :** Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
+> [!WARNING]
+> Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
 
 La propriété `__proto__` de {{jsxref("Object.prototype")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("null")}}) de l'objet courant.
 
@@ -26,9 +19,12 @@ La propriété `__proto__` peut également être utilisée avec un littéral obj
 
 ## Syntaxe
 
-    var proto = obj.__proto__;
+```js
+var proto = obj.__proto__;
+```
 
-> **Note :** le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
+> [!NOTE]
+> Le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
 
 ## Description
 
@@ -58,8 +54,12 @@ console.log(aucunProto.__proto__); // 17
 console.log(Object.getPrototypeOf(aucunProto)); // null
 
 var protoCaché = {};
-Object.defineProperty(protoCaché, "__proto__",
-                      { value: 42, writable: true, configurable: true, enumerable: true });
+Object.defineProperty(protoCaché, "__proto__", {
+  value: 42,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 console.log(protoCaché.__proto__); // 42
 console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
@@ -69,7 +69,8 @@ console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
 
 Dans ce qui suit, on crée un nouvelle instance d'`Employé` et on teste si `__proto__` est bien le même objet que le prototype de son constructeur.
 
-> **Attention :** Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
+> [!WARNING]
+> Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
 
 ```js
 // On déclare une fonction à utiliser comme constructeur
@@ -107,9 +108,16 @@ On notera que même la propriété `__proto__` de `Object.prototype` peut être 
 ```js
 var b = {};
 
-Object.prototype.__proto__ =
-    Object.create(null, //[[Prototype]]
-                  { salut: { value: function () {console.log('salut');}}});
+Object.prototype.__proto__ = Object.create(
+  null, //[[Prototype]]
+  {
+    salut: {
+      value: function () {
+        console.log("salut");
+      },
+    },
+  },
+);
 
 b.salut();
 ```
@@ -118,18 +126,11 @@ Si la propriété `__proto__` de {{jsxref("Object.prototype")}} ne permet pas d'
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                         | Commentaires                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-object.prototype.__proto__', 'Object.prototype.__proto__')}}                                     | {{Spec2('ES2015')}}     | Incluse dans l'annexe (normative) pour le fonctionnalités additionneles d'ECMAScript pour les navigateurs web (note : la spécification codifie ce qui est déjà présent dans les implémentations). |
-| {{SpecName('ESDraft', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.proto")}}
-
-## Notes de compatibilité
-
-Bien que la spécification ES2015 rende le support de `__proto__` nécessaire pour les navigateurs web, elle n'est pas obligatoire pour les autres environnements (bien que ce soit conseillé vu le caractère normatif de l'annexe). Si votre code doit être compatible avec un environnement qui n'est pas un navigateur web, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}} à la place.
+{{Compat}}
 
 ## Voir aussi
 

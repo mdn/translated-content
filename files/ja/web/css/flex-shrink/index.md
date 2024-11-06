@@ -1,16 +1,10 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - NeedsContent
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-shrink
-translation_of: Web/CSS/flex-shrink
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
+
 {{CSSRef}}
 
 **`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーよりも大きい場合、アイテムは `flex-shrink` の数値に従って縮小して収まります。
@@ -30,6 +24,7 @@ flex-shrink: 0.6;
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: revert;
+flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
@@ -50,14 +45,14 @@ flex-shrink: unset;
 
 ## 例
 
-<h3 id="Setting_flex_item_shrink_factor">フレックスアイテムの縮小係数の設定</h3>
+### フレックスアイテムの縮小係数の設定
 
 #### HTML
 
-```html
-全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。
-A、B、C には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。
-D と E の幅は他より狭くなります。
+```html-nolint
+<p>全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。</p>
+<p>A、B、C には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。</p>
+<p>D と E の幅は他より狭くなります。</p>
 <div id="content">
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>
@@ -77,7 +72,7 @@ D と E の幅は他より狭くなります。
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {
@@ -91,7 +86,7 @@ D と E の幅は他より狭くなります。
 
 #### 結果
 
-{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 300)}}
+{{EmbedLiveSample('フレックスアイテムの縮小係数の設定', 500, 300)}}
 
 ## 仕様書
 
@@ -103,5 +98,5 @@ D と E の幅は他より狭くなります。
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの主軸方向における比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

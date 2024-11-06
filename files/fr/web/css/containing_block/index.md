@@ -1,27 +1,23 @@
 ---
 title: À propos du bloc conteneur
 slug: Web/CSS/Containing_block
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/Containing_block
-original_slug: Web/CSS/A_Propos_Du_Bloc_Conteneur
 ---
+
 {{CSSRef}}
 
-Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes) de l'ancêtre de [bloc](/fr/docs/Web/HTML/Block-level_elements) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
+Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes) de l'ancêtre de [bloc](/fr/docs/Web/HTML/Block-level_elements) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
 
 Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :
 
-1.  La zone de contenu (_content area_)
-2.  La zone de remplissage (_padding area_)
-3.  La zone de bordure (_border area_)
-4.  La zone de marge (_margin area_)
+1. La zone de contenu (_content area_)
+2. La zone de remplissage (_padding area_)
+3. La zone de bordure (_border area_)
+4. La zone de marge (_margin area_)
 
 ![Diagram of the box model](box-model.png)
 
-> **Note :** Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte) en CSS.
+> [!NOTE]
+> Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) en CSS.
 
 On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
 
@@ -40,19 +36,20 @@ Le bloc englobant est entièrement déterminé par la valeur de la propriété {
 - Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
 - Si la propriété `position` vaut **`absolute`** ou `fixed`, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
 
-  1.  Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
-  2.  Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
-  3.  Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
-  4.  Une propriété {{cssxref("contain")}} qui vaut `paint`.
+  1. Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
+  2. Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
+  3. Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
+  4. Une propriété {{cssxref("contain")}} qui vaut `paint`.
 
-> **Note :** Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
+> [!NOTE]
+> Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
 
 ## Calcul des pourcentages à partir du bloc englobant
 
 Comme mentionné ci-avant, lorsque certaines propriétés ont une valeur en pourcentage, la valeur calculée dépend du bloc contenant l'élément. Les propriétés qui fonctionnent de cette manière sont les propriétés **_box model_** et **_offset_** :
 
-1.  Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
-2.  Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
+1. Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
+2. Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
 
 ## Quelques exemples
 
@@ -91,10 +88,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -124,8 +121,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == half the body's width */
-  height: 200px;  /* Note: a percentage would be 0 */
+  width: 50%; /* == half the body's width */
+  height: 200px; /* Note: a percentage would be 0 */
   background: cyan;
 }
 ```
@@ -161,10 +158,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -198,10 +195,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%;  /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%;   /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
+  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
 ```
@@ -236,10 +233,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```

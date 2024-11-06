@@ -1,40 +1,41 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
-tags:
-  - 属性セレクター
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.attribute
-translation_of: Web/CSS/Attribute_selectors
+l10n:
+  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
+
 {{CSSRef}}
 
-CSS の**属性セレクター** (attribute selector) は、指定された属性が存在するかどうか、またはその値に基づいて要素を選択します。
+CSS の**属性セレクター** (attribute selector) は、指定された属性が明示的に設定された要素に基づいて要素を照合します。オプションで、属性値または部分文字列の値が一致するように定義します。
+
+属性名と値の 大文字小文字の区別は文書言語に依存します。 HTML では、属性名は大文字と小文字を区別せず、仕様で定義された{{glossary("enumerated", "列挙")}}値も区別しません。[大文字小文字を区別しない HTML 属性値](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors)は HTML 仕様書に掲載されています。これらの属性では、値が不正なのか、設定する要素の属性が不正なのかに関わらず、セレクターの属性値は大文字と小文字を区別しません。
+
+[`class`](/ja/docs/Web/HTML/Global_attributes/class)、[`id`](/ja/docs/Web/HTML/Global_attributes/id)、[`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) 属性のように、属性値が大文字小文字を区別する場合、属性セレクターによる値の照合時は大文字小文字を区別します。[`role`](/ja/docs/Web/Accessibility/ARIA/Roles) や [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 属性のように、 HTML 仕様書の外で定義する属性も、大文字小文字を区別します。通常、大文字小文字を区別する属性セレクターは、大文字小文字を区別しない修飾子 (`i`) を含めることで区別しないようにすることができます。
 
 ```css
-/* title 属性を持つ <a> 要素 */
+/* <a> 要素で title 属性を持つもの */
 a[title] {
   color: purple;
 }
 
-/* href が "https://example.org" と一致する <a> 要素 */
-a[href="https://example.org"] {
+/* <a> 要素で href が "https://example.org" と一致するもの */
+a[href="https://example.org"]
+{
   color: green;
 }
 
-/* href に "example" を含む <a> 要素 */
+/* <a> 要素で href に "example" を含むもの */
 a[href*="example"] {
   font-size: 2em;
 }
 
-/* href が "org" で終わる <a> 要素 */
-a[href$=".org"] {
+/* <a> 要素で href が ".org" で終わるもの、大文字小文字を区別しない */
+a[href$=".org" i] {
   font-style: italic;
 }
 
-/* <a> 要素の class 属性に "logo" という語が含まれているもの */
+/* <a> 要素で class 属性に "logo" という語が含まれているもの */
 a[class~="logo"] {
   padding: 2px;
 }
@@ -47,7 +48,7 @@ a[class~="logo"] {
 - `[attr=value]`
   - : _attr_ という名前の属性の値が正確に _value_ である要素を表します。
 - `[attr~=value]`
-  - : _attr_ という名前の属性の値が正確に _value_ と一致する要素を表します。空白区切りの語のリストの形で、複数の _value_ を含めることができます。
+  - : _attr_ という名前の属性の値が空白区切りの語のリストであり、その内の 1 つが正確に _value_ と一致する要素を表します。
 - `[attr|=value]`
   - : _attr_ という名前の属性の値が正確に _value_ と一致するか、 _value_ で始まり直後にハイフン (`-` (U+002D)) が続く要素を表します。言語のサブコードの一致によく使われます。
 - `[attr^=value]`
@@ -57,9 +58,9 @@ a[class~="logo"] {
 - `[attr*=value]`
   - : _attr_ という名前の属性の値が、文字列中に _value_ を1つ以上含む要素を表します。
 - `[attr operator value i]`
-  - : 閉じ角括弧の前に `i` (または `I`) を追加すると、 (ASCII の範囲内の文字の場合) 値は大文字と小文字を区別せずに比較されます。
+  - : 閉じ角括弧の前に `i` (または `I`) を追加すると、 ({{Glossary("ASCII")}} の範囲内の文字の場合) 値は大文字と小文字を区別せずに比較されます。
 - `[attr operator value s]` {{Experimental_Inline}}
-  - : 閉じ角括弧の前に `s` (または `S`) を追加すると、 (ASCII の範囲内の文字の場合) 値は大文字と小文字を区別して比較されます。
+  - : 閉じ角括弧の前に `s` (または `S`) を追加すると、 ({{Glossary("ASCII")}} の範囲内の文字の場合) 値は大文字と小文字を区別して比較されます。
 
 ## 例
 
@@ -83,7 +84,7 @@ a[href*="example"] {
 }
 
 /* URL のどこかに "insensitive" が含まれるリンクで、
-			大文字小文字は区別しない */
+   大文字小文字は区別しない */
 a[href*="insensitive" i] {
   color: cyan;
 }
@@ -91,7 +92,7 @@ a[href*="insensitive" i] {
 /* URL のどこかに "cAsE" があるリンクに一致
 大文字小文字の区別つき */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* ".org" で終わるリンク */
@@ -99,9 +100,10 @@ a[href$=".org"] {
   color: red;
 }
 
-/* "https" で始まり ".org" で終わるリンク */
-a[href^="https"][href$=".org"] {
-  color: green;
+/* "https://" で始まり ".org" で終わるリンク */
+a[href^="https://"][href$=".org"]
+{
+  color: green;
 }
 ```
 
@@ -119,7 +121,7 @@ a[href^="https"][href$=".org"] {
 
 #### 結果
 
-{{EmbedLiveSample("Links")}}
+{{EmbedLiveSample("リンク")}}
 
 ### 言語
 
@@ -131,7 +133,7 @@ div[lang] {
   font-weight: bold;
 }
 
-/* すべｔの div のうち `lang` 属性のない者をイタリックにする。 */
+/* すべての div のうち `lang` 属性のないものをイタリックにする。 */
 div:not([lang]) {
   font-style: italic;
 }
@@ -147,14 +149,14 @@ div[lang="pt"] {
 }
 
 /* 中国語の div はすべて赤。
-   simplified (zh-CN) or traditional (zh-TW). */
+   簡体字 (zh-Hans-CN) または繁体字 (zh-Hant-TW) */
 div[lang|="zh"] {
   color: red;
 }
 
 /* 'data-lang' が中国語繁体字の div はすべて紫。 */
-/* 注: ハイフン区切りの属性は二重引用符なしで使用できる */
-div[data-lang="zh-TW"] {
+/* メモ: ハイフン区切りの属性は二重引用符なしで使用できる */
+div[data-lang="zh-Hant-TW"] {
   color: purple;
 }
 ```
@@ -164,36 +166,41 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-Hans-CN">世界您好！</div>
+<div lang="zh-Hant-TW">世界您好！</div>
+<div data-lang="zh-Hant-TW">世界您好！</div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Languages")}}
+{{EmbedLiveSample("言語")}}
 
 ### HTML 順序付きリスト
 
-HTML 仕様書では、 {{htmlattrxref("type", "input")}} 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の {{htmlattrxref("type", "ol")}} 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
+HTML 仕様書では、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の [`type`](/ja/docs/Web/HTML/Element/ol#type) 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
 
 #### CSS
 
 ```css
-/* HTML が type 属性を扱う方法の癖の都合上、リストの種別には、大文字小文字を区別する指定が必要です。 */
-ol[type="a"] {
+/* 文書の言語によっては大文字小文字を区別する */
+ol[type="a"]:first-child {
   list-style-type: lower-alpha;
   background: red;
 }
 
-ol[type="a" s] {
+ol[type="i" s] {
   list-style-type: lower-alpha;
   background: lime;
 }
 
-ol[type="A" s] {
+ol[type="I" s] {
   list-style-type: upper-alpha;
-  background: lime;
+  background: grey;
+}
+
+ol[type="a" i] {
+  list-style-type: upper-alpha;
+  background: green;
 }
 ```
 
@@ -201,13 +208,26 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>
+    Red background for case-insensitive matching (default for the type selector)
+  </li>
+</ol>
+<ol type="i">
+  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="I">
+  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="A">
+  <li>
+    Green background if `i` modifier is supported (case-insensitive match)
+  </li>
 </ol>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("HTML_ordered_lists")}}
+{{EmbedLiveSample("HTML 言語付きリスト")}}
 
 ## 仕様書
 
@@ -222,3 +242,4 @@ ol[type="A" s] {
 - {{CSSxRef("attr")}}
 - 単一要素の選択: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, {{DOMxRef("Element.querySelector()")}}
 - 一致するすべての要素の選択: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, {{DOMxRef("Element.querySelectorAll()")}}
+- [Case-insensitive attribute selector values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) on WHATWG

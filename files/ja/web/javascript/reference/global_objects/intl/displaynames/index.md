@@ -1,23 +1,13 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
-tags:
-  - Class
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
-
 
 ## コンストラクター
 
@@ -66,19 +56,19 @@ regionNames.of('MM'); // "緬甸"
 
 ```js
 // 英語の言語名を表示
-let languageNames = new Intl.DisplayNames(['en'], {type: 'language'});
-languageNames.of('fr');      // "French"
-languageNames.of('de');      // "German"
-languageNames.of('fr-CA');   // "Canadian French"
-languageNames.of('zh-Hant'); // "Traditional Chinese"
-languageNames.of('en-US');   // "American English"
-languageNames.of('zh-TW');   // "Chinese (Taiwan)"]
+let languageNames = new Intl.DisplayNames(["en"], { type: "language" });
+languageNames.of("fr"); // "French"
+languageNames.of("de"); // "German"
+languageNames.of("fr-CA"); // "Canadian French"
+languageNames.of("zh-Hant"); // "Traditional Chinese"
+languageNames.of("en-US"); // "American English"
+languageNames.of("zh-TW"); // "Chinese (Taiwan)"]
 
 // 繁体字中国語での言語名を表示
-languageNames = new Intl.DisplayNames(['zh-Hant'], {type: 'language'});
-languageNames.of('fr'); // "法文"
-languageNames.of('zh'); // "中文"
-languageNames.of('de'); // "德文"
+languageNames = new Intl.DisplayNames(["zh-Hant"], { type: "language" });
+languageNames.of("fr"); // "法文"
+languageNames.of("zh"); // "中文"
+languageNames.of("de"); // "德文"
 ```
 
 ### 文字体系コードの表示名
@@ -87,17 +77,17 @@ languageNames.of('de'); // "德文"
 
 ```js
 // 英語の文字体系名を表示
-let scriptNames = new Intl.DisplayNames(['en'], {type: 'script'});
+let scriptNames = new Intl.DisplayNames(["en"], { type: "script" });
 // Get script names
-scriptNames.of('Latn'); // "Latin"
-scriptNames.of('Arab'); // "Arabic"
-scriptNames.of('Kana'); // "Katakana"
+scriptNames.of("Latn"); // "Latin"
+scriptNames.of("Arab"); // "Arabic"
+scriptNames.of("Kana"); // "Katakana"
 
 // 繁体字中国語での文字体系名を表示
-scriptNames = new Intl.DisplayNames(['zh-Hant'], {type: 'script'});
-scriptNames.of('Latn'); // "拉丁文"
-scriptNames.of('Arab'); // "阿拉伯文"
-scriptNames.of('Kana'); // "片假名"
+scriptNames = new Intl.DisplayNames(["zh-Hant"], { type: "script" });
+scriptNames.of("Latn"); // "拉丁文"
+scriptNames.of("Arab"); // "阿拉伯文"
+scriptNames.of("Kana"); // "片假名"
 ```
 
 ### 通貨コードの表示名
@@ -106,19 +96,19 @@ scriptNames.of('Kana'); // "片假名"
 
 ```js
 // 英語の通貨名を表示
-let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
 // Get currency names
-currencyNames.of('USD'); // "US Dollar"
-currencyNames.of('EUR'); // "Euro"
-currencyNames.of('TWD'); // "New Taiwan Dollar"
-currencyNames.of('CNY'); // "Chinese Yuan"
+currencyNames.of("USD"); // "US Dollar"
+currencyNames.of("EUR"); // "Euro"
+currencyNames.of("TWD"); // "New Taiwan Dollar"
+currencyNames.of("CNY"); // "Chinese Yuan"
 
 // 繁体字中国語の通貨名を表示
-currencyNames = new Intl.DisplayNames(['zh-Hant'], {type: 'currency'});
-currencyNames.of('USD'); // "美元"
-currencyNames.of('EUR'); // "歐元"
-currencyNames.of('TWD'); // "新台幣"
-currencyNames.of('CNY'); // "人民幣"
+currencyNames = new Intl.DisplayNames(["zh-Hant"], { type: "currency" });
+currencyNames.of("USD"); // "美元"
+currencyNames.of("EUR"); // "歐元"
+currencyNames.of("TWD"); // "新台幣"
+currencyNames.of("CNY"); // "人民幣"
 ```
 
 ## 仕様書

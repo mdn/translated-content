@@ -1,15 +1,8 @@
 ---
 title: mask-border
 slug: Web/CSS/mask-border
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask-border
-translation_of: Web/CSS/mask-border
 ---
+
 {{CSSRef}}
 
 **`mask-border`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の境界の縁に沿ったマスクを生成することができます。
@@ -29,18 +22,18 @@ translation_of: Web/CSS/mask-border
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
-/* Global values */
+/* グローバル値 */
 mask-border: inherit;
 mask-border: initial;
 mask-border: revert;

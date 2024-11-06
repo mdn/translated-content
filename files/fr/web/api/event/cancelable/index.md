@@ -1,14 +1,8 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-tags:
-  - API
-  - Annulable
-  - DOM
-  - Propriétés
-  - évènements
-translation_of: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 La propriété _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
@@ -19,7 +13,9 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 
 ## Syntaxe
 
-    bool = event.cancelable
+```js
+bool = event.cancelable;
+```
 
 - Le résultat est un `booléen` qui est `true` (_vrai_) si l'événement peut être annulé.
 
@@ -29,7 +25,7 @@ Par exemple, les vendeurs de navigateurs proposent que l'évènement [`wheel`](/
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // L'événement peut être annulé, alors nous le faisons.
     event.preventDefault();
   } else {
@@ -40,10 +36,8 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventCancelableEvents);
+document.addEventListener("wheel", preventCancelableEvents);
 ```
-
-
 
 ## Notes
 
@@ -53,12 +47,8 @@ Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefaul
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.cancelable")}}
+{{Compat}}

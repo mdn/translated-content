@@ -1,23 +1,19 @@
 ---
 title: IDBIndex.getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBIndex/getAllKeys
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBIndex")}}, permet de récupérer les clés de tous les objets contenus dans l'index et de les enregistrer dans la propriété `result` de l'objet renvoyé par la méthode.
 
 ## Syntaxe
 
-    var getAllKeysRequest = IDBIndex.getAllKeys();
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete);
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```js
+var getAllKeysRequest = IDBIndex.getAllKeys();
+var getAllKeysRequest = IDBIndex.getAllKeys(requete);
+var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```
 
 ### Paramètres
 
@@ -34,31 +30,29 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront reçus les différents év�
 
 Cette méthode peut déclencher une des exceptions suivantes :
 
-| Exception                        | Description                                                                  |
-| -------------------------------- | ---------------------------------------------------------------------------- |
-| `TransactionInactiveError`       | La transaction pour cet index {{domxref("IDBIndex")}} est inactive. |
-| `InvalidStateError`              | L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.          |
-| {{jsxref("TypeError")}} | Le paramètre `quantite` n'est pas compris entre `0` et `2^32-1`              |
+| Exception                  | Description                                                         |
+| -------------------------- | ------------------------------------------------------------------- |
+| `TransactionInactiveError` | La transaction pour cet index {{domxref("IDBIndex")}} est inactive. |
+| `InvalidStateError`        | L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.          |
+| {{jsxref("TypeError")}}    | Le paramètre `quantite` n'est pas compris entre `0` et `2^32-1`     |
 
 ## Exemples
 
 ```js
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 var getAllKeyRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+getAllKeysRequest.onsuccess = function () {
   console.log(getAllKeysRequest.result);
-}
+};
 ```
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbindex-getallkeys', 'getAll()')}} | {{Spec2('IndexedDB 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getAllKeys")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -68,4 +62,4 @@ getAllKeysRequest.onsuccess = function() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

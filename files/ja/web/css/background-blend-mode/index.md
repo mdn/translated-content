@@ -1,14 +1,10 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - 合成と混合
-  - recipe:css-property
-browser-compat: css.properties.background-blend-mode
-translation_of: Web/CSS/background-blend-mode
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
+
 {{CSSRef}}
 
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。
@@ -19,7 +15,7 @@ translation_of: Web/CSS/background-blend-mode
 
 ## 構文
 
-```
+```css
 /* 1 値 */
 background-blend-mode: normal;
 
@@ -27,9 +23,10 @@ background-blend-mode: normal;
 background-blend-mode: darken, luminosity;
 
 /* グローバル値 */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
@@ -38,24 +35,24 @@ background-blend-mode: unset;
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : 適用する混合モードです。複数の値をカンマ区切りで置くことができます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### 基本的な例
 
 ```css
 .item {
-    width: 300px;
-    height: 300px;
-    background: url('image1.png'),url('image2.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("image1.png"), url("image2.png");
+  background-blend-mode: screen;
 }
 ```
 
@@ -64,39 +61,40 @@ background-blend-mode: unset;
 ```html hidden
 <div id="div"></div>
 <select id="select">
-    <option>normal</option>
-    <option>multiply</option>
-    <option selected>screen</option>
-    <option>overlay</option>
-    <option>darken</option>
-    <option>lighten</option>
-    <option>color-dodge</option>
-    <option>color-burn</option>
-    <option>hard-light</option>
-    <option>soft-light</option>
-    <option>difference</option>
-    <option>exclusion</option>
-    <option>hue</option>
-    <option>saturation</option>
-    <option>color</option>
-    <option>luminosity</option>
+  <option>normal</option>
+  <option>multiply</option>
+  <option selected>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
 </select>
 ```
 
 ```css hidden
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),url('tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-}
-console.log(document.getElementById('div'));
+document.getElementById("select").onchange = (event) => {
+  document.getElementById("div").style.backgroundBlendMode =
+    document.getElementById("select").selectedOptions[0].innerHTML;
+};
+console.log(document.getElementById("div"));
 ```
 
 {{ EmbedLiveSample('Examples', "330", "350") }}

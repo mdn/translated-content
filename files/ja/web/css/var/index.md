@@ -1,21 +1,8 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS カスタムプロパティ
-  - CSS 変数
-  - CSS 関数
-  - 実験的
-  - 関数
-  - リファレンス
-  - 変数
-  - var
-  - var()
-translation_of: Web/CSS/var()
-original_slug: Web/CSS/var()
-browser-compat: css.properties.custom-property.var
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
@@ -30,7 +17,8 @@ browser-compat: css.properties.custom-property.var
 
 {{csssyntax}}
 
-> **Note:** 代替の構文は、カスタムプロパティの構文と同様にカンマを使用できます。たとえば `var(--foo, red, blue)` では、 `red, blue` を代替として定義します。つまり、最初のカンマから関数の最後にかけてのすべてが、代替値と見なされます。
+> [!NOTE]
+> 代替の構文は、カスタムプロパティの構文と同様にカンマを使用できます。たとえば `var(--foo, red, blue)` では、 `red, blue` を代替として定義します。つまり、最初のカンマから関数の最後にかけてのすべてが、代替値と見なされます。
 
 ### 値
 
@@ -59,7 +47,10 @@ body {
 /* 代替 */
 /* コンポーネント内のスタイル: */
 .component .header {
-  color: var(--header-color, blue); /* header-color という変数は設定されていないため、代替値である blue がセットされます */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color という変数は設定されていないため、代替値である blue がセットされます */
 }
 
 .component .text {

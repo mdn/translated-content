@@ -1,15 +1,26 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
-translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
-La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y)_, les rayons *rayonX* et *rayonY* commençant à *angleDeDébut* et se terminant à *angleDeFin* en allant dans le sens indiqué par *antiHoraire* (par défaut, horaire).
+La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y)_, les rayons _rayonX_ et _rayonY_ commençant à _angleDeDébut_ et se terminant à _angleDeFin_ en allant dans le sens indiqué par _antiHoraire_ (par défaut, horaire).
 
 ## Syntaxe
 
-    void ctx.ellipse(x, y, rayonX, rayonY, rotation, angleDébut, angleFin, antihoraire);
+```js
+void ctx.ellipse(
+  x,
+  y,
+  rayonX,
+  rayonY,
+  rotation,
+  angleDébut,
+  angleFin,
+  antihoraire,
+);
+```
 
 ### Paramètres
 
@@ -45,11 +56,11 @@ Ceci est seulement un fragment de code simple dessinant une ellipse.
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
+ctx.ellipse(100, 100, 50, 75, (45 * Math.PI) / 180, 0, 2 * Math.PI);
 ctx.stroke();
 ```
 
@@ -66,7 +77,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -82,14 +94,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -99,13 +111,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ellipse", "CanvasRenderingContext2D.ellipse")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.ellipse")}}
+{{Compat}}
 
 ## Voir aussi
 

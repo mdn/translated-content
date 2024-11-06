@@ -1,12 +1,8 @@
 ---
 title: Commentaires
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Débutant
-  - Reference
-translation_of: Web/CSS/Comments
 ---
+
 {{CSSRef}}
 
 Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour empêcher le navigateur d'interpréter certaines parties de la feuille de style. Les commentaires n'ont donc aucun impact sur la disposition d'un document.
@@ -15,7 +11,9 @@ Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour em
 
 On peut utiliser des commentaires à chaque endroit où un blanc est autorisé.
 
-    /* Commentaire */
+```css
+/* Commentaire */
+```
 
 ## Exemples
 
@@ -27,7 +25,6 @@ Commentaire
 sur plusieurs
 lignes
 */
-
 
 /* Le commentaire qui suit permet
    de désactiver une règle */

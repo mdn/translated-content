@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - forEach()
-browser-compat: api.StylePropertyMapReadOnly.forEach
-translation_of: Web/API/StylePropertyMapReadOnly/forEach
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`StylePropertyMapReadOnly.forEach()`** メソッドは、指定された関数を {{domxref('StylePropertyMapReadOnly')}} のそれぞれの要素に対して 1 回ずつ呼び出します。
@@ -51,7 +41,7 @@ StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();
@@ -59,7 +49,7 @@ const allComputedStyles = buttonEl.computedStyleMap();
 // forEach ですべてのプロパティ/値の組に対してコードを実行することができます
 allComputedStyles.forEach((elem, index, arr) => {
   // code to run for each pair
-})
+});
 ```
 
 ## 仕様書

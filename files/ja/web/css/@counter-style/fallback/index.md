@@ -1,16 +1,8 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.fallback
-translation_of: Web/CSS/@counter-style/fallback
 ---
+
 {{CSSRef}}
 
 **`fallback`** 記述子は、現在のカウンタースタイルが特定のカウンター値でマーカー表現を生成できなかった場合に、代替で使用されるカウンタースタイルを指定するために使用します。
@@ -38,7 +30,11 @@ fallback: custom-gangnam-style;
 
 ## 形式文法
 
-{{csssyntax}}
+```
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## 例
 
@@ -85,4 +81,4 @@ fallback: custom-gangnam-style;
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}: 無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}: 無名のカウンタースタイルを生成する関数記法

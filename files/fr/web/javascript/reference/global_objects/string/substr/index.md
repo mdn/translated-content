@@ -1,19 +1,12 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/substr
 ---
+
 {{JSRef}}
 
-> **Attention :** Bien que `String.prototype.substr(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui définit l'ensemble des fonctionnalités historiques qui doivent être évitées autant que possible. On utilisera la méthode {{jsxref("String.prototype.substring()")}} à la place.
+> [!WARNING]
+> Bien que `String.prototype.substr(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui définit l'ensemble des fonctionnalités historiques qui doivent être évitées autant que possible. On utilisera la méthode {{jsxref("String.prototype.substring()")}} à la place.
 
 La méthode **`substr()`** retourne la partie d'une chaîne de caractères comprise entre l'indice de départ et un certain nombre de caractères après celui-ci.
 
@@ -21,7 +14,9 @@ La méthode **`substr()`** retourne la partie d'une chaîne de caractères compr
 
 ## Syntaxe
 
-    chn.substr(début[, longueur])
+```js
+chn.substr(début[, longueur])
+```
 
 ### Paramètres
 
@@ -55,16 +50,16 @@ Pour `début` comme pour `longueur`, NaN est traité comme 0.
 ## Exemples
 
 ```js
-var uneChaine = 'Mozilla';
+var uneChaine = "Mozilla";
 
-console.log(uneChaine.substr(0, 1));   // 'M'
-console.log(uneChaine.substr(1, 0));   // ''
-console.log(uneChaine.substr(-1, 1));  // 'a'
-console.log(uneChaine.substr(1, -1));  // ''
-console.log(uneChaine.substr(-3));     // 'lla'
-console.log(uneChaine.substr(1));      // 'ozilla'
+console.log(uneChaine.substr(0, 1)); // 'M'
+console.log(uneChaine.substr(1, 0)); // ''
+console.log(uneChaine.substr(-1, 1)); // 'a'
+console.log(uneChaine.substr(1, -1)); // ''
+console.log(uneChaine.substr(-3)); // 'lla'
+console.log(uneChaine.substr(1)); // 'ozilla'
 console.log(uneChaine.substr(-20, 2)); // 'Mo'
-console.log(uneChaine.substr(20, 2));  // ''
+console.log(uneChaine.substr(20, 2)); // ''
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -73,38 +68,35 @@ JScript de Microsoft ne supporte pas les valeurs négatives pour l'indice de dé
 
 ```js
 // N'appliquer que lorsque la fonction est incomplète
-if ('ab'.substr(-1) != 'b') {
+if ("ab".substr(-1) != "b") {
   /**
    *  Obtenir la sous-chaîne d'une chaîne
    *  @param  {entier}  début     où démarrer la sous-chaîne
    *  @param  {entier}  longueur combien de caractères à retourner
    *  @return {chaîne}
    */
-  String.prototype.substr = function(substr) {
-    return function(début, longueur) {
+  String.prototype.substr = (function (substr) {
+    return function (début, longueur) {
       // Appel de la méthode originale
-      return substr.call(this,
+      return substr.call(
+        this,
         // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
         // Ajuster le paramètre pour une valeur négative
         début < 0 ? this.length + début : début,
-        longueur)
-    }
-  }(String.prototype.substr);
+        longueur,
+      );
+    };
+  })(String.prototype.substr);
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définie dans la Compatibility Annex B (informative). Implémentée dans JavaScript 1.0.        |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Définie dans la Compatibility Annex B (informative).                                         |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.substr")}}
+{{Compat}}
 
 ## Voir aussi
 

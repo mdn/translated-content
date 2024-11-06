@@ -1,15 +1,8 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
-tags:
-  - Class
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de fournir des traductions des noms de langues, régions et systèmes d'écriture.
@@ -18,19 +11,19 @@ L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de f
 
 ## Constructeur
 
-- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames)
+- [`Intl.DisplayNames()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames)
   - : Crée un nouvel objet `Intl.DisplayNames`.
 
 ## Méthodes statiques
 
-- [`Intl.DisplayNames.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf)
+- [`Intl.DisplayNames.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf)
   - : Retourne un tableau contenant les langues fournies qui sont supportées sans avoir à se rabattre sur la langue locale par défaut au moment de l'exécution.
 
 ## Méthodes des instances
 
-- [`Intl.DisplayNames.prototype.of()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
+- [`Intl.DisplayNames.prototype.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
   - : Cette méthodes reçoit un `code` et retourne une chaine à partir sur la langue et les options fournies lors de l'instanciation de [`Intl.DisplayNames`](#).
-- [`Intl.DisplayNames.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
+- [`Intl.DisplayNames.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
   - : Retourne un nouvel objet dont les propriété feflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
 
 ## Exemples
@@ -63,19 +56,19 @@ Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom corre
 
 ```js
 // Obtenir le nom d'une langue en anglais
-let nomsLangues= new Intl.DisplayNames(['en'], {type: 'language'});
-nomsLangues.of('fr');      // "French"
-nomsLangues.of('de');      // "German"
-nomsLangues.of('fr-CA');   // "Canadian French"
-nomsLangues.of('zh-Hant'); // "Traditional Chinese"
-nomsLangues.of('en-US');   // "American English"
-nomsLangues.of('zh-TW');   // "Chinese (Taiwan)"
+let nomsLangues = new Intl.DisplayNames(["en"], { type: "language" });
+nomsLangues.of("fr"); // "French"
+nomsLangues.of("de"); // "German"
+nomsLangues.of("fr-CA"); // "Canadian French"
+nomsLangues.of("zh-Hant"); // "Traditional Chinese"
+nomsLangues.of("en-US"); // "American English"
+nomsLangues.of("zh-TW"); // "Chinese (Taiwan)"
 
 // Obtenir le nom d'une langue en chinois traditionnel
-nomsLangues = new Intl.DisplayNames(['zh-Hant'], {type: 'language'});
-nomsLangues.of('fr'); // "法文"
-nomsLangues.of('zh'); // "中文"
-nomsLangues.of('de'); // "德文"
+nomsLangues = new Intl.DisplayNames(["zh-Hant"], { type: "language" });
+nomsLangues.of("fr"); // "法文"
+nomsLangues.of("zh"); // "中文"
+nomsLangues.of("de"); // "德文"
 ```
 
 ### Affichage des noms de systèmes d'écriture
@@ -86,16 +79,16 @@ Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom corre
 
 ```js
 // Obtenir le nom d'un système d'écriture en anglais
-let nomsSystèmes = new Intl.DisplayNames(['en'], {type: 'script'});
-nomsSystèmes.of('Latn'); // "Latin"
-nomsSystèmes.of('Arab'); // "Arabic"
-nomsSystèmes.of('Kana'); // "Katakana"
+let nomsSystèmes = new Intl.DisplayNames(["en"], { type: "script" });
+nomsSystèmes.of("Latn"); // "Latin"
+nomsSystèmes.of("Arab"); // "Arabic"
+nomsSystèmes.of("Kana"); // "Katakana"
 
 // Obtenir le nom d'un système d'écriture en chinois traditionnel
-nomsSystèmes = new Intl.DisplayNames(['zh-Hant'], {type: 'script'});
-nomsSystèmes.of('Latn'); // "拉丁文"
-nomsSystèmes.of('Arab'); // "阿拉伯文"
-nomsSystèmes.of('Kana'); // "片假名"
+nomsSystèmes = new Intl.DisplayNames(["zh-Hant"], { type: "script" });
+nomsSystèmes.of("Latn"); // "拉丁文"
+nomsSystèmes.of("Arab"); // "阿拉伯文"
+nomsSystèmes.of("Kana"); // "片假名"
 ```
 
 ### Affichage des noms de devises
@@ -104,29 +97,27 @@ Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom corre
 
 ```js
 // Obtenir le nom d'une devise in English
-let nomsDevises = new Intl.DisplayNames(['en'], {type: 'currency'});
-nomsDevises.of('USD'); // "US Dollar"
-nomsDevises.of('EUR'); // "Euro"
-nomsDevises.of('TWD'); // "New Taiwan Dollar"
-nomsDevises.of('CNY'); // "Chinese Yuan"
+let nomsDevises = new Intl.DisplayNames(["en"], { type: "currency" });
+nomsDevises.of("USD"); // "US Dollar"
+nomsDevises.of("EUR"); // "Euro"
+nomsDevises.of("TWD"); // "New Taiwan Dollar"
+nomsDevises.of("CNY"); // "Chinese Yuan"
 
 // Obtenir le nom d'une devise in Traditional Chinese
-nomsDevises = new Intl.DisplayNames(['zh-Hant'], {type: 'currency'});
-nomsDevises.of('USD'); // "美元"
-nomsDevises.of('EUR'); // "歐元"
-nomsDevises.of('TWD'); // "新台幣"
-nomsDevises.of('CNY'); // "人民幣"
+nomsDevises = new Intl.DisplayNames(["zh-Hant"], { type: "currency" });
+nomsDevises.of("USD"); // "美元"
+nomsDevises.of("EUR"); // "歐元"
+nomsDevises.of("TWD"); // "新台幣"
+nomsDevises.of("CNY"); // "人民幣"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

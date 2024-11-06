@@ -1,20 +1,8 @@
 ---
 title: Outils et tests
 slug: Learn/Tools_and_testing
-tags:
-  - Accessibilité
-  - Apprendre
-  - Automatisation
-  - CSS
-  - Déboguage
-  - Débutant
-  - HTML
-  - JavaScript
-  - Outils
-  - tests
-translation_of: Learn/Tools_and_testing
-original_slug: Apprendre/Outils_et_tests
 ---
+
 {{LearnSidebar}}
 
 Une fois que vous commencerez à être à l'aise avec les langages de programmation web (comme le HTML, le CSS, et le JavaScript), et acquerrez plus d'expérience, lirez plus de ressources, et apprendrez plus de choses, vous commencerez à tomber sur toute sorte d'outils, comme par exemple des scripts CSS et JavaScript, des outils de tests et d'automatisation, et bien plus encore. Au fur et à mesure que vos projets web deviendront de plus en plus grands et complexes, vous allez vouloir savoir comment utiliser certains de ces outils et élaborer des tests fiables pour votre code. Cette partie de la zone d'apprentissage cherche à vous donner tout ce dont vous avez besoin afin de commencer sur de bonnes bases et faire des choix informés.
@@ -23,7 +11,8 @@ L'industrie du web est un endroit excitant où travailler, mais ce n'est pas san
 
 Savoir précisément quels outils prendre peut parfois être une tâche difficile, c'est pourquoi nous avons écrit cette séries d'articles, afin de vous expliquer quels types d'outils existent, ce qu'ils peuvent faire pour vous et comment se servir des plus utilisés dans l'industrie.
 
-> **Note :** parce que de nouveaux outils apparaissent tout le temps et que les anciens se démodent, nous avons écrit ceci afin d'être aussi neutre que possible — nous voulons nous concentrer premièrement et essentiellement sur les tâches générales que ces outils vont vous aider à accomplir, plutôt que de parler des outils qui sont spécifiques à une tâche. Nous devons bien sûr vous montrer comment utiliser un outil avant de vous en apprendre les techniques spécifiques, mais gardez à l'esprit que les outils que nous vous montrons ne sont pas forcément les meilleurs, ni les seuls disponibles — dans la plupart des cas il existe d'autre façons de faire, mais nous voulons vous fournir une méthodologie claire et qui fonctionne.
+> [!NOTE]
+> Parce que de nouveaux outils apparaissent tout le temps et que les anciens se démodent, nous avons écrit ceci afin d'être aussi neutre que possible — nous voulons nous concentrer premièrement et essentiellement sur les tâches générales que ces outils vont vous aider à accomplir, plutôt que de parler des outils qui sont spécifiques à une tâche. Nous devons bien sûr vous montrer comment utiliser un outil avant de vous en apprendre les techniques spécifiques, mais gardez à l'esprit que les outils que nous vous montrons ne sont pas forcément les meilleurs, ni les seuls disponibles — dans la plupart des cas il existe d'autre façons de faire, mais nous voulons vous fournir une méthodologie claire et qui fonctionne.
 
 ## Parcours d'apprentissage
 

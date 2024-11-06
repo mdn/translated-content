@@ -1,13 +1,8 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Ruby
-translation_of: Web/CSS/ruby-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`ruby-position`** définit la position d'un élément ruby par rapport à son élément de base. L'élément ruby peut ainsi être positionné au-dessus de l'élément (`over`), en-dessous (`under`) ou entre les caractères, sur leur droite (`inter-character`).
@@ -35,9 +30,13 @@ ruby-position: unset;
 - `inter-character`
   - : Un mot-clé qui indique que les annotations ruby doivent être placées entre les différents caractères.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -61,7 +60,7 @@ Ce fragment HTML rendra un résultat différent pour chaque valeur de `ruby-posi
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
@@ -80,7 +79,7 @@ On obtiendra le résultat suivant :
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 
@@ -90,15 +89,11 @@ On obtiendra le résultat suivant :
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Ruby', '#rubypos', 'ruby-position')}} | {{Spec2('CSS3 Ruby')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.ruby-position")}}
+{{Compat}}
 
 ## Voir aussi
 

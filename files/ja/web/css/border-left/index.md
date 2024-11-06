@@ -1,36 +1,31 @@
 ---
 title: border-left
 slug: Web/CSS/border-left
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-left
-translation_of: Web/CSS/border-left
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
+
 {{CSSRef}}
 
 **`border-left`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
 {{EmbedInteractiveExample("pages/css/border-left.html")}}
 
-他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり・・・
+他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
 border-left-style: dotted;
 border-left: thick green;
 ```
 
-・・・は、実際には以下と同じです・・・
+これは、実際には以下と同じです。
 
 ```css
 border-left-style: dotted;
 border-left: none thick green;
 ```
 
-・・・そして、 `border-left` の前で設定された {{cssxref("border-left-style")}} の値は無視されます。 {{cssxref("border-left-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`border-left` の前で設定された {{cssxref("border-left-style")}} の値は無視されます。 {{cssxref("border-left-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
@@ -51,6 +46,7 @@ border-left: medium dashed blue;
 border-left: inherit;
 border-left: initial;
 border-left: revert;
+border-left: revert-layer;
 border-left: unset;
 ```
 
@@ -75,14 +71,12 @@ border-left: unset;
 
 ## 例
 
-<h3 id="Applying_a_left_border">左の境界の適用</h3>
+### 左の境界の適用
 
 #### HTML
 
 ```html
-<div>
-  このボックスには左側に境界線があります。
-</div>
+<div>このボックスには左側に境界線があります。</div>
 ```
 
 #### CSS
@@ -100,7 +94,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Applying_a_left_border')}}
+{{EmbedLiveSample('左の境界の適用')}}
 
 ## 仕様書
 
@@ -115,5 +109,5 @@ div {
 - {{cssxref("border")}}
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

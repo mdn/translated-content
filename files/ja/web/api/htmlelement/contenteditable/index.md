@@ -1,15 +1,11 @@
 ---
-title: HTMLElement.contentEditable
+title: "HTMLElement: contentEditable プロパティ"
+short-title: contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.contentEditable
-translation_of: Web/API/HTMLElement/contentEditable
+l10n:
+  sourceCommit: 61f855f3f8155a2dc1ddb5671bdac032f11ecee7
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`contentEditable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素が編集可能かどうかを指定します。
@@ -18,9 +14,11 @@ translation_of: Web/API/HTMLElement/contentEditable
 
 - '`true`' は、要素の内容が編集可能 (`contenteditable`) であることを示します。
 - '`false`' は、要素が編集できないことを示します。
-- '`inherit`' は、要素がその親の編集可能状態を継承することを示します。
+- '`plaintext-only`' は要素の生のテキストは編集可能ですが、リッチテキストの書式は編集できないことを示します。
 
 {{domxref("HTMLElement.isContentEditable")}} プロパティを使用すると、このプロパティの計算済みの論理値をテストできます。
+
+属性がない、またはその値が不正な場合、その値は親要素から継承されます。したがって、要素は親要素に基づいて編集可能（または不可能）になります。
 
 ## 値
 
@@ -34,10 +32,7 @@ translation_of: Web/API/HTMLElement/contentEditable
 
 {{Compat}}
 
-Internet Explorer では、`contenteditable` を {{htmlelement("table")}}、{{htmlelement("col")}}、{{htmlelement("colgroup")}}、{{htmlelement("tbody")}}、{{htmlelement("td")}}、{{htmlelement("tfoot")}}、{{htmlelement("th")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}} 要素に直接適用することはできません。コンテンツを編集可能な {{htmlelement("span")}} または {{htmlelement("div")}} 要素を、表の個々のセル内に配置できます。
-
 ## 関連情報
 
-- [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
-- {{htmlattrxref("contenteditable")}} グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性

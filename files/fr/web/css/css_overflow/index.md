@@ -1,12 +1,8 @@
 ---
 title: CSS Overflow
-slug: Web/CSS/CSS_Overflow
-tags:
-  - CSS
-  - CSS Overflow
-  - Reference
-translation_of: Web/CSS/CSS_Overflow
+slug: Web/CSS/CSS_overflow
 ---
+
 {{CSSRef}}
 Le module de spécification **_CSS Overflow_** décrit les fonctionnalités CSS relatives au dépassement et au défilement du contenu pour les médias visuels. En CSS, le dépassement se produit lorsque le contenu d'une boîte s'étend au-delà des bords de la boîte.
 
@@ -43,10 +39,7 @@ L'exempel interactif suivant illustre comment la modification de la valeur de la
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                                                                |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Modification de la syntaxe afin de permettre d'utilise un ou deux mots-clés (plutôt qu'un seul auparavant). |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                                        |
+{{Specifications}}
 
 ## Voir aussi
 

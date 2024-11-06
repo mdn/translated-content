@@ -1,19 +1,9 @@
 ---
 title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdateAvailable
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Déclenché quand une mise à jour de l'extension est disponible. Cet événement permet à une extension de retarder une mise à jour : par exemple, car elle est au milieu d'une opération qui ne doit pas être interrompue.
 
@@ -26,9 +16,9 @@ Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponi
 ## Syntaxe
 
 ```js
-browser.runtime.onUpdateAvailable.addListener()
-browser.runtime.onUpdateAvailable.removeListener(listener)
-browser.runtime.onUpdateAvailable.hasListener(listener)
+browser.runtime.onUpdateAvailable.addListener();
+browser.runtime.onUpdateAvailable.removeListener(listener);
+browser.runtime.onUpdateAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -36,7 +26,7 @@ Les événements ont trois fonctions :
 - `addListener(callback)`
   - : Ajouter un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument`listener` est un écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est un écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifie que l'`écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
 
@@ -51,9 +41,9 @@ Les événements ont trois fonctions :
     - `details`
       - : `object`. Contient une seule propriété, une chaîne nommée `version`, qui représente le numéro de version de la mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onUpdateAvailable")}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,13 +59,14 @@ browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +93,4 @@ browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

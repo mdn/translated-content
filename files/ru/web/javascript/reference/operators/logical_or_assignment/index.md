@@ -1,14 +1,8 @@
 ---
 title: Присваивание логического ИЛИ (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 Оператор присваивания логического ИЛИ (`x ||= y`) присваивает значение переменной `x` только в случае, если её текущее значение {{Glossary("falsy", "ложноподобно")}}.
@@ -18,7 +12,7 @@ browser-compat: javascript.operators.logical_or_assignment
 ## Синтаксис
 
 ```js
-expr1 ||= expr2
+expr1 ||= expr2;
 ```
 
 ## Описание
@@ -56,7 +50,7 @@ x = x || y;
 Если в элементе с идентификатором "lyrics" нет содержимого, то следующее выражение вставит в него надпись:
 
 ```js
-document.getElementById('lyrics').textContent ||= 'Нет слов.'
+document.getElementById("lyrics").textContent ||= "Нет слов.";
 ```
 
 В данном примере сокращённое вычисление очень сильно выручает, поскольку элемент будет обновляться только при необходимости, что позволит избежать подобных эффектов вроде ненужного рендеринга, потери фокуса и т.д.
@@ -67,7 +61,7 @@ document.getElementById('lyrics').textContent ||= 'Нет слов.'
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

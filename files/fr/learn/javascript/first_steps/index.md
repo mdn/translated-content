@@ -1,33 +1,22 @@
 ---
 title: Premiers pas en JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - Article
-  - Auto-évaluation
-  - Chaînes de caractères
-  - Débutant
-  - Guide
-  - JavaScript
-  - Module
-  - Nombres
-  - Opérateurs
-  - Tableaux
-  - Variables
-translation_of: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme «&nbsp;qu'est-ce que JavaScript&nbsp;?&nbsp;», «&nbsp;à quoi ressemble-t-il&nbsp;?&nbsp;» et «&nbsp;de quoi est-il capable&nbsp;?&nbsp;». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
 
-## **Prérequis**
+## Prérequis
 
 Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 
-- [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
+- [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_à_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [Introduction au langage HTML](/fr/docs/Web/Guide/HTML/Introduction).
-- [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS).
+- [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_à_CSS).
 
-> **Note :** Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

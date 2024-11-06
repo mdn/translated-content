@@ -1,26 +1,16 @@
 ---
 title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getUILanguage
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent de {{WebExtAPIRef('i18n.getAcceptLanguages')}} qui renvoie les langues utilisateur préférées.
 
 ## Syntaxe
 
 ```js
-browser.i18n.getUILanguage()
+browser.i18n.getUILanguage();
 ```
 
 ### Paramètres
@@ -29,11 +19,11 @@ Aucun
 
 ### Valeur retournée
 
-`string`. Le code de langue de l'interface utilisateur du navigateur en tant que  {{WebExtAPIRef("i18n.LanguageCode")}}.
+`string`. Le code de langue de l'interface utilisateur du navigateur en tant que {{WebExtAPIRef("i18n.LanguageCode")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.getUILanguage")}}
+{{Compat}}
 
 ## Exemples
 
@@ -46,13 +36,14 @@ console.log(uiLanguage);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/extensions/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,4 +70,4 @@ console.log(uiLanguage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

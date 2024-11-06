@@ -1,18 +1,11 @@
 ---
 title: Subgrid
-slug: Web/CSS/CSS_Grid_Layout/Subgrid
-tags:
-  - CSS
-  - Guide
-  - grid
-  - subgrid
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
+slug: Web/CSS/CSS_grid_layout/Subgrid
 ---
+
 {{CSSRef}}
 
 La valeur **`subgrid`** a été ajoutée par le module de spécification _CSS Grid Layout_ de niveau 2 pour les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}. Dans ce guide, nous verrons comment utiliser cette valeur ainsi que les cas d'utilisation ou patrons de conception qui peuvent en bénéficier.
-
-> **Attention :** Cette fonctionnalité est uniquement disponible dans Firefox Nightly à des fins de tests. Vous pouvez télécharger [Firefox Nightly](https://www.mozilla.org/firefox/channel/desktop/#nightly) afin de tester les exemples ci-après.
 
 ## Une introduction à `subgrid`
 
@@ -92,9 +85,7 @@ Une telle ressemblance entre `subgrid` et les grilles imbriquées peut faciliter
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires                                                                                                                     |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Définition initiale des [sous-grilles (_subgrids_)](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#sous-grille). |
+{{Specifications}}
 
 ## Voir aussi
 

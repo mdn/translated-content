@@ -1,19 +1,8 @@
 ---
 title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - PluralRules
-  - Prototype
-  - リファレンス
-  - selectRange
-browser-compat: javascript.builtins.Intl.PluralRules.selectRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules.prototype.selectRange()`** メソッドは 2 つの値を受け取り、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
@@ -21,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectR
 ## 構文
 
 ```js
-formatRange(startRange, endRange)
+selectRange(startRange, endRange);
 ```
 
 ### 返値
@@ -37,10 +26,10 @@ formatRange(startRange, endRange)
 ### selectRange() の使用
 
 ```js
- new Intl.PluralRules('sl').selectRange(102, 201);
+new Intl.PluralRules("sl").selectRange(102, 201);
 // → 'few'
 
- new Intl.PluralRules('pt').selectRange(102, 102);
+new Intl.PluralRules("pt").selectRange(102, 102);
 // → 'other'
 ```
 

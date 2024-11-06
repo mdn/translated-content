@@ -1,16 +1,8 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/clz32
 ---
+
 {{JSRef}}
 
 La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
@@ -19,7 +11,9 @@ La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la repr
 
 ## Syntaxe
 
-    Math.clz32(x)
+```js
+Math.clz32(x);
+```
 
 ### Paramètres
 
@@ -43,27 +37,35 @@ Cette fonction est particulièrement utile aux systèmes qui compilent du code J
 ## Exemples
 
 ```js
-Math.clz32(1)                // 31
-Math.clz32(1000)             // 22
-Math.clz32()                 // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 
-var liste = [NaN, Infinity, -Infinity, 0, -0, null, undefined, 'machin', {}, []];
-liste.every(n => Math.clz32(n) == 32); // true
+var liste = [
+  NaN,
+  Infinity,
+  -Infinity,
+  0,
+  -0,
+  null,
+  undefined,
+  "machin",
+  {},
+  [],
+];
+liste.every((n) => Math.clz32(n) == 32); // true
 
-Math.clz32(true)             // 31
-Math.clz32(3.5)              // 30
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.clz32', 'Math.clz32')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.clz32")}}
+{{Compat}}
 
 ## Voir aussi
 

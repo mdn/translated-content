@@ -1,15 +1,10 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-template-areas
-translation_of: Web/CSS/grid-template-areas
+l10n:
+  sourceCommit: 84a12137458f9f1954cadb675cfc53639e97ed7b
 ---
+
 {{CSSRef}}
 
 **`grid-template-areas`** は CSS のプロパティで、グリッド内でセルを確立し、名前を割り当てることにより、名前付きの {{glossary("grid areas", "グリッド領域")}} を指定します。
@@ -26,13 +21,15 @@ grid-template-areas: none;
 
 /* <string> 値 */
 grid-template-areas: "a b";
-grid-template-areas: "a b b"
-                     "a c d";
+grid-template-areas:
+  "a b b"
+  "a c d";
 
 /* グローバル値 */
 grid-template-areas: inherit;
 grid-template-areas: initial;
 grid-template-areas: revert;
+grid-template-areas: revert-layer;
 grid-template-areas: unset;
 ```
 
@@ -41,7 +38,7 @@ grid-template-areas: unset;
 - `none`
   - : グリッドコンテナーは名前付きのグリッド領域を定義しません。
 - `{{cssxref("&lt;string&gt;")}}+`
-  - : リストのすべての文字列ごとに行が生成され、文字列内の各セルごとに列が生成されます。行の中や行をまたがって複数の名前付きセルトークンがあると、対応するグリッドセルにまたがる単一の名前付きグリッド領域を生成します。これらのセルが四角形を形成しない限り、宣言は無効です。
+  - : リストのすべての文字列ごとに行が生成され、文字列内の各セルごとに列が生成されます。行の中や行をまたがって同じ名前のセルトークンが複数あると、対応するグリッドセルにまたがる単一の名前付きグリッド領域を生成します。これらのセルが長方形にならないと、宣言は無効になります。
 
 ## 公式定義
 
@@ -58,12 +55,12 @@ grid-template-areas: unset;
 #### HTML
 
 ```html
-<section id="page">
+<div id="page">
   <header>ヘッダー</header>
   <nav>ナビゲーション</nav>
   <main>メイン領域</main>
   <footer>フッター</footer>
-</section>
+</div>
 ```
 
 #### CSS
@@ -73,9 +70,10 @@ grid-template-areas: unset;
   display: grid;
   width: 100%;
   height: 250px;
-  grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot";
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot";
   grid-template-rows: 50px 1fr 30px;
   grid-template-columns: 150px 1fr;
 }
@@ -103,7 +101,7 @@ grid-template-areas: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
+{{EmbedLiveSample("名前付きグリッド領域の指定", "100%", "285px")}}
 
 ## 仕様書
 
@@ -116,5 +114,5 @@ grid-template-areas: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- グリッドレイアウトガイド: [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- 動画チュートリアル: [Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)
+- グリッドレイアウトガイド: [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- 動画チュートリアル: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

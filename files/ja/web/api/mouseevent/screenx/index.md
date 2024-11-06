@@ -1,30 +1,19 @@
 ---
-title: MouseEvent.screenX
+title: "MouseEvent: screenX プロパティ"
+short-title: screenX
 slug: Web/API/MouseEvent/screenX
-tags:
-  - API
-  - CSSOM View
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.screenX
-translation_of: Web/API/MouseEvent/screenX
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
 
-> **Note:** マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
+> [!NOTE]
+> マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
 
-## 構文
-
-```js
-var x = instanceOfMouseEvent.screenX
-```
-
-### 返値
+## 値
 
 `double` の浮動小数点値です。
 
@@ -44,8 +33,8 @@ var x = instanceOfMouseEvent.screenX
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -56,7 +45,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ### イベントのルーティング
 

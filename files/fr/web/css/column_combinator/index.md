@@ -1,30 +1,27 @@
 ---
 title: Combinateur de colonne
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Column_combinator
-original_slug: Web/CSS/Combinateur_colonne
 ---
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+
+{{CSSRef}} {{SeeCompatTable}}
 
 Le **combinateur de colonne** (`||`) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.
 
 ```css
 /* Les cellules de tableaux qui appartiennent */
 /* à la colonne "selected" */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
 
 ## Syntaxe
 
-    column-selector || cell-selector {
-      /* propriétés pour le style */
-    }
+```css
+column-selector||cell-selector {
+  /* propriétés pour le style */
+}
+```
 
 ## Exemples
 
@@ -33,14 +30,14 @@ col.selected || td {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
     <tr>
       <td colspan="2">D</td>
@@ -57,7 +54,7 @@ col.selected || td {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;
@@ -70,13 +67,11 @@ col.selected || td {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Voir aussi
 

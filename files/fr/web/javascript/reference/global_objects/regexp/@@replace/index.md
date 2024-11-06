@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'un motif `this` dans une chaîne de caractère avec un outil de remplacement. La valeur renvoyée est la nouvelle chaîne ainsi créée. Cet outil de remplacement peut être une chaîne de caractère ou une fonction appelée pour chacune des correspondances.
@@ -18,7 +11,9 @@ La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'u
 
 ## Syntaxe
 
-    regexp[Symbol.replace](str, newSubStr|function)
+```js
+regexp[Symbol.replace](str, newSubStr|function)
+```
 
 ### Paramètres
 
@@ -38,9 +33,9 @@ Une nouvelle chaîne de caractères pour laquelle les correspondances (toutes ou
 Cette méthode est appelée de façon interne par la méthode {{jsxref("String.prototype.replace()")}} lorsque l'arugment `pattern` argument est un objet {{jsxref("RegExp")}}. Les deux lignes de code qui suivent sont équivalentes et la seconde est la version interne de la première :
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 Cette méthode existe afin de pouvoir personnaliser le comportement du remplacement pour les classes filles de `RegExp`.
@@ -55,9 +50,9 @@ Cette méthode peut être utilisée comme {{jsxref("String.prototype.replace()")
 
 ```js
 var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+var str = "2016-01-01";
+var newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### Utiliser `@@replace` dans une sous-classe
@@ -80,22 +75,19 @@ class MaRegExp extends RegExp {
   }
 }
 
-var re = new MaRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace appelle re[@@replace].
+var re = new MaRegExp("\\d", "", 3);
+var str = "01234567";
+var newstr = str.replace(re, "#"); // String.prototype.replace appelle re[@@replace].
 console.log(newstr); // ###34567
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@replace")}}
+{{Compat}}
 
 ## Voir aussi
 

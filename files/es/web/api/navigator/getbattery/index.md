@@ -1,9 +1,8 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
-translation_of: Web/API/Navigator/getBattery
-browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 El método **`getBattery()`** provee información acerca de la
@@ -12,12 +11,13 @@ batería del sistema. Retorna una promesa de batería, que es resuelta en un obj
 para monitorear el estado de la batería. Esto implementa la [API de Estado de Batería](/es/docs/Web/API/Battery_Status_API); ver esa
 documentación para detalles adicionales, una guía para usar la API, y código de ejemplo.
 
-> **Nota:** En algunos navegadores el acceso a esta característica está controlado por la directiva {{HTTPHeader("Feature-Policy")}}: {{HTTPHeader("Feature-Policy/battery","battery")}}.
+> [!NOTE]
+> En algunos navegadores el acceso a esta característica está controlado por la directiva {{HTTPHeader("Feature-Policy")}}: {{HTTPHeader("Feature-Policy/battery","battery")}}.
 
 ## Sintaxis
 
 ```js
-getBattery()
+getBattery();
 ```
 
 ### Parámetros
@@ -38,7 +38,8 @@ Este método no arroja excepciones reales; en su lugar, rechaza la promesa retor
 
   - : El Agente de Usuario no expone información de batería a contextos inseguros y este método fue llamado de un contexto inseguro.
 
-    > **Nota:** Versiones antiguas de algunos Agentes de Usuario pueden permitir el uso de esta característica en contextos inseguros.
+    > [!NOTE]
+    > Versiones antiguas de algunos Agentes de Usuario pueden permitir el uso de esta característica en contextos inseguros.
 
 - `NotAllowedError`
 
@@ -49,16 +50,16 @@ Este método no arroja excepciones reales; en su lugar, rechaza la promesa retor
 ## Ejemplos
 
 Este ejemplo obtiene el estado actual de carga de la batería y establece un
-manejador para el evento {{Event("chargingchange")}}, de manera tal que el estado de carga
+manejador para el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), de manera tal que el estado de carga
 es grabado cuando cambia.
 
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener("chargingchange", function () {
     batteryIsCharging = battery.charging;
   });
 });

@@ -1,18 +1,8 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-padding-inline
-  - scroll-padding-inline-end
-  - scroll-padding-inline-start
-browser-compat: css.properties.scroll-padding-inline
-translation_of: Web/CSS/scroll-padding-inline
 ---
+
 {{CSSRef}}
 
 `scroll-padding-inline` プロパティは、インライン方向の scroll-padding の個別指定を設定する一括指定プロパティです。
@@ -36,7 +26,7 @@ scroll-padding-inline: auto;
 
 /* <length> 値 */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* グローバル値 */

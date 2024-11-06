@@ -1,15 +1,8 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - Experimental
-  - Fonction CSS
-  - Reference
-  - Variables CSS
-translation_of: Web/CSS/var()
-original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 La fonction **`var()`** peut être utilisée à la place d'une valeur pour n'importe quelle propriété d'un élément. Elle permet d'insérer la valeur d'[une propriété personnalisée (custom property)](/fr/docs/Web/CSS/--*).
@@ -26,7 +19,8 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 
 {{csssyntax}}
 
-> **Note :** La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
+> [!NOTE]
+> La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
 
 ### Valeurs
 
@@ -38,7 +32,7 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 ## Exemples
 
 ```css
-:root{
+:root {
   --main-bg-color: pink;
 }
 
@@ -63,13 +57,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Voir aussi
 

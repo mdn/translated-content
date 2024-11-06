@@ -1,21 +1,16 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.offset
-translation_of: Web/CSS/offset
 ---
+
 {{CSSRef}}
 
 **`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
 
-> **Note:** 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
+> [!NOTE]
+> 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
+
+{{EmbedInteractiveExample("pages/css/offset.html")}}
 
 ## 構成要素のプロパティ
 
@@ -37,7 +32,7 @@ offset: none;
 
 /* オフセット経路 */
 offset: ray(45deg closest-side);
-offset: path('M 100 100 L 300 100 L 200 300 z');
+offset: path("M 100 100 L 300 100 L 200 300 z");
 offset: url(arc.svg);
 
 /* オフセット経路に距離と回転が加わったもの */

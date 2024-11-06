@@ -1,8 +1,10 @@
 ---
 title: Le chargement différé
 slug: Web/Performance/Lazy_loading
-translation_of: Web/Performance/Lazy_loading
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Le **chargement différé** (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path), ce qui se traduit par une réduction du temps de chargement de la page.
 
 Le chargement différé peut se dérouler à plusieurs moments du chargement d'une application, mais il se déroule typiquement lorsque l'internaute interagit avec la page, notamment lors du défilement de la page ou de la navigation.
@@ -37,9 +39,9 @@ Toute balise `<script>` utilisant `type="module"` sera traitée comme un [module
 Par défaut, les fichiers CSS sont traités comme des ressources [bloquant le rendu](/fr/docs/Web/Performance/Critical_rendering_path), donc le navigateur n'affichera aucun contenu traité tant que le [CSSOM (pour <i lang="en">CSS Object Model</i>)](/fr/docs/Web/API/CSS_Object_Model) est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu&nbsp;:
 
 ```html
-<link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
-<link href="print.css"    rel="stylesheet" media="print">
+<link href="style.css" rel="stylesheet" media="all" />
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait" />
+<link href="print.css" rel="stylesheet" media="print" />
 ```
 
 Pour cela, il est possible de réaliser certaines [optimisations CSS](/fr/docs/Learn/Performance/CSS).
@@ -61,7 +63,7 @@ Très souvent, les pages web contiennent beaucoup d'images et cela contribue à 
 L'attribut [`loading`](/fr/docs/Web/HTML/Element/Img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
 
 ```html
-<img src="image.jpg" alt="..." loading="lazy">
+<img src="image.jpg" alt="..." loading="lazy" />
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 
@@ -89,9 +91,7 @@ Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quel
 
 ## Spécifications
 
-| **Spécification**                                                        | **Statut**                       | **Commentaires** |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |                  |
+{{Specifications}}
 
 ## Voir aussi
 

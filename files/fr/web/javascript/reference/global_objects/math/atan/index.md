@@ -1,14 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan
 ---
+
 {{JSRef}}
 
 La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en radians. Elle est définie par :
@@ -19,7 +13,9 @@ La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en ra
 
 ## Syntaxe
 
-    Math.atan(x)
+```js
+Math.atan(x);
+```
 
 ### Paramètres
 
@@ -41,8 +37,8 @@ La méthode `Math.atan()` renvoie une valeur numérique comprise entre <math><se
 ### Utiliser `Math.atan()`
 
 ```js
-Math.atan(1);  // 0.7853981633974483
-Math.atan(0);  // 0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
 Math.atan(-0); // -0
 
 Math.atan(Infinity); // 1.5707963267948966
@@ -55,16 +51,11 @@ Math.atan(y / x);
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.atan")}}
+{{Compat}}
 
 ## Voir aussi
 

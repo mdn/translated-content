@@ -1,47 +1,38 @@
 ---
-title: Element.shadowRoot
+title: "Element: shadowRoot プロパティ"
+short-title: shadowRoot
 slug: Web/API/Element/shadowRoot
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - シャドウ DOM
-browser-compat: api.Element.shadowRoot
-translation_of: Web/API/Element/shadowRoot
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
+
 {{APIRef("Shadow DOM")}}
 
 `Element.shadowRoot` は読み取り専用のプロパティで、その要素がホストになっているシャドウルートを表します。
 
 既に存在している要素にシャドウルートを追加するには {{DOMxRef("Element.attachShadow()")}} を使用してください。
 
-## 構文
-
-```js
-var shadowroot = element.shadowRoot;
-```
-
-### 値
+## 値
 
 {{DOMxRef("ShadowRoot")}} オブジェクトインスタンス、またはシャドウルートが {{DOMxRef("ShadowRoot.mode", "mode")}} に `closed` を設定されて取り付けられた場合は `null` です（詳しくは {{DOMxRef("Element.attachShadow()")}} を参照してください）。
 
 ## 例
 
-次のスニペットは [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) の例から取ったものです ([ライブで確認](https://mdn.github.io/web-components-examples/life-cycle-callbacks))。その要素の属性で指定された大きさと色の正方形を表示する要素を生成します。
+次のスニペットは [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks) の例から取ったものです ([ライブで確認](https://mdn.github.io/web-components-examples/life-cycle-callbacks))。その要素の属性で指定された大きさと色の正方形を表示する要素を生成します。
 
 `<custom-square>` 要素のクラス定義の中に、外部関数である `updateStyle()` を呼び出すライフサイクルコールバックをいくつか入れて、実際にサイズと色を要素に適用しています。引数として `this` （カスタム要素そのもの）を渡していることが分かるでしょう。
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  connectedCallback() {
+    console.log("Custom square element added to page.");
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("Custom square element attributes changed.");
+    updateStyle(this);
+  }
 }
 ```
 
@@ -49,20 +40,20 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  const childNodes = Array.from(shadow.childNodes);
+  const shadow = elem.shadowRoot;
+  const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
-    if (childNode.nodeName === 'STYLE') {
-      childNode.textContent = `
-        div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
-        }
-      `;
-    }
-  });
+  childNodes.forEach((childNode) => {
+    if (childNode.nodeName === "STYLE") {
+      childNode.textContent = `
+        div {
+          width: ${elem.getAttribute("l")}px;
+          height: ${elem.getAttribute("l")}px;
+          background-color: ${elem.getAttribute("c")};
+        }
+      `;
+    }
+  });
 }
 ```
 
@@ -73,7 +64,3 @@ function updateStyle(elem) {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

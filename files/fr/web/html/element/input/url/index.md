@@ -1,10 +1,9 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/input/url
-translation_of: Web/HTML/Element/input/url
-browser-compat: html.elements.input.input-url
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
 
@@ -12,7 +11,8 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas de figure.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 <table class="properties">
   <tbody>
@@ -82,7 +82,8 @@ L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
-> **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour plus de détails et d'exemples.
 
@@ -90,7 +91,8 @@ Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour 
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
@@ -140,14 +142,15 @@ Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une 
 
 Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien. Seule une vérification de format est effectuée.
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ### Un simple champ
 
 Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un champ texte qui dispose de fonctionnalités de validation basiques. Dans sa forme la plus simple, un champ de saisie d'URL ressemblera à&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url">
+<input id="monURL" name="monURL" type="url" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -163,8 +166,11 @@ Il est parfois utile de fournir une indication sur le type de donnée attendu. S
 Dans l'exemple qui suit, le contrôle contient le texte indicatif `http://www.example.com`. Dans le résultat, vous pouvez voir comment ce texte disparaît/réapparaît lorsqu'on saisit une valeur dans le contrôle.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       placeholder="http://www.example.com">
+<input
+  id="monURL"
+  name="monURL"
+  type="url"
+  placeholder="http://www.example.com" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -178,8 +184,7 @@ Il est possible de contrôler la taille physique de la boîte utilisée pour le 
 C'est l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size) qui permet de contrôler la taille de la boîte utilisée. La valeur de cet attribut correspond au nombre de caractères qui seront affichés en même temps dans la boîte. Dans l'exemple suivant, on souhaite que la boîte de saisie mesure 30 caractères de large&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       size="30">
+<input id="monURL" name="monURL" type="url" size="30" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -191,13 +196,19 @@ L'attribut `size` ne limite pas la valeur qui peut être saisie mais uniquement 
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractères de large et on souhaite que l'URL soit plus longue que 10 caractères et moins longue que 80.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       size="30" minlength="10" maxlength="80">
+<input
+  id="monURL"
+  name="monURL"
+  type="url"
+  size="30"
+  minlength="10"
+  maxlength="80" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
 
-> **Note :** Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle sera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec `maxlength`.
+> [!NOTE]
+> Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle sera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec `maxlength`.
 
 ### Fournir des valeurs par défaut
 
@@ -206,8 +217,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractèr
 On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       value="http://www.example.com">
+<input id="monURL" name="monURL" type="url" value="http://www.example.com" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -217,15 +227,14 @@ On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/W
 On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list). Cette liste ne limite pas l'utilisatrice ou l'utilisateur à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Input#attr-autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       list="defaultURLs">
+<input id="monURL" name="monURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
-  <option value="http://w3.org/">
+  <option value="https://developer.mozilla.org/"></option>
+  <option value="http://www.google.com/"></option>
+  <option value="http://www.microsoft.com/"></option>
+  <option value="https://www.mozilla.org/"></option>
+  <option value="http://w3.org/"></option>
 </datalist>
 ```
 
@@ -233,21 +242,19 @@ On peut également fournir une liste d'options parmi lesquelles la personne sais
 
 Avec cet élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) associés, le navigateur affichera les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
 
-
 #### Utiliser des libellés pour les valeurs suggérées
 
 Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Element/Option#attr-label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'afficheront que les libellés tandis que d'autres afficheront le libellé et l'URL.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       list="defaultURLs">
+<input id="monURL" name="monURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
-  <option value="http://w3.org/" label="W3C">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
+  <option value="http://www.google.com/" label="Google"></option>
+  <option value="http://www.microsoft.com/" label="Microsoft"></option>
+  <option value="https://www.mozilla.org/" label="Mozilla"></option>
+  <option value="http://w3.org/" label="W3C"></option>
 </datalist>
 ```
 
@@ -257,7 +264,8 @@ Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Elemen
 
 Il existe deux niveaux de validation pour les contrôles de type `url`. Tout d'abord, le contrôle natif, toujours présent qui s'assure que la valeur correspond à une URL bien formée. Ensuite, on peut ajouter des options supplémentaires pour personnaliser le format de l'URL attendue.
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ### Validation simple
 
@@ -271,7 +279,7 @@ Comme vu ci-avant, on peut rendre la saisie de l'URL obligatoire avec l'attribut
 
 ```html
 <form>
-  <input id="monURL" name="monURL" type="url" required>
+  <input id="monURL" name="monURL" type="url" required />
   <button>Envoyer</button>
 </form>
 ```
@@ -302,14 +310,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -317,16 +326,21 @@ input:valid+span:after {
 ```html
 <form>
   <div>
-    <label for="myURL">Veuillez saisir l'adresse de la page problématique :</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.maboite\..*"
-           title="L'URL doit être sur le domaine maboite.">
+    <label for="myURL"
+      >Veuillez saisir l'adresse de la page problématique :</label
+    >
+    <input
+      id="myURL"
+      name="myURL"
+      type="url"
+      required
+      pattern=".*\.maboite\..*"
+      title="L'URL doit être sur le domaine maboite." />
     <span class="validity"></span>
   </div>
   <div>
     <label for="myComment">Quel est le problème ?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
+    <input id="myComment" name="myComment" type="text" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -347,7 +361,8 @@ Il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attri
 
 C'est pourquoi nous avons écrit «&nbsp;L'URL doit être sur le domaine maboite&nbsp;» qui est plus détaillé.
 
-> **Note :** Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
+> [!NOTE]
+> Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
 
 ## Exemples
 

@@ -1,17 +1,12 @@
 ---
 title: panneaux devtools
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - Débutant
-  - Guide
-  - WebExtensions
-  - interface utilisateur
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/panneaux_devtools
 ---
+
 {{AddonSidebar}}
 
-> **Note :** Cette fonctionnalité deviendra disponible dans Firefox 54.
+> [!NOTE]
+> Cette fonctionnalité deviendra disponible dans Firefox 54.
 
 Lorsqu'une extension fournit des outils utiles aux développeurs, il est possible d'ajouter une interface utilisateur pour les outils de développement du navigateur en tant que nouveau panneau.
 
@@ -46,14 +41,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 L'extension peut maintenant exécuter un code dans la fenêtre inspectée à l'aide de [`devtools`.inspectedWindow.eval()](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) ou en injectant un script de contenu via le script en arrière en passant un message. Vous pouvez trouver plus de détails sur la façon de procéder dans l'[Extension des outils de développement.](/fr/Add-ons/WebExtensions/Extending_the_developer_tools)

@@ -1,12 +1,8 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:active
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
@@ -23,9 +19,10 @@ La pseudo-classe `:active` est également activée lorsque l'utilisateur emploie
 
 La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{cssxref(":link")}}, {{cssxref(":hover")}} et {{cssxref(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note :** Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
+> [!NOTE]
+> Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
 
-## Syntax
+## Syntaxe
 
 {{csssyntax}}
 
@@ -36,21 +33,32 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Liens non visités */
-a:visited { color: purple; }     /* Liens visités */
-a:hover { background: yellow; }  /* Liens survolés */
-a:active { color: red; }         /* Liens actifs */
+a:link {
+  color: blue;
+} /* Liens non visités */
+a:visited {
+  color: purple;
+} /* Liens visités */
+a:hover {
+  background: yellow;
+} /* Liens survolés */
+a:active {
+  color: red;
+} /* Liens actifs */
 
-p:active { background: #eee; }   /* Paragraphes actifs */
+p:active {
+  background: #eee;
+} /* Paragraphes actifs */
 ```
 
 #### HTML
 
 ```html
-<p>Ce paragraphe contient un lien :
+<p>
+  Ce paragraphe contient un lien :
   <a href="#">Ce lien devient rouge quand vous cliquez dessus.</a>
-  Le paragraphe sera sur un fond gris quand vous cliquerez dessus
-  ou sur le lien.
+  Le paragraphe sera sur un fond gris quand vous cliquerez dessus ou sur le
+  lien.
 </p>
 ```
 
@@ -77,7 +85,9 @@ form button {
 ```html
 <form>
   <label for="mon-button">Un bouton :</label>
-  <button id="mon-button" type="button">Cliquez sur moi ou sur mon libellé !</button>
+  <button id="mon-button" type="button">
+    Cliquez sur moi ou sur mon libellé !
+  </button>
 </form>
 ```
 
@@ -87,17 +97,11 @@ form button {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}} | {{Spec2('HTML WHATWG')}}     |                      |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Aucune modification. |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Voir aussi
 

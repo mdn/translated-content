@@ -1,13 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
-original_slug: Web/JavaScript/Reference/Instructions/break
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction {{jsxref("Instructions/switch", "switch")}} ou {{jsxref("Instructions/label", "label")}} en cours et de passer le contrôle du programme à l'instruction suivant l'instruction terminée.
@@ -16,7 +11,9 @@ L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction
 
 ## Syntaxe
 
-    break [label];
+```js
+break [label];
+```
 
 - `label` {{optional_inline}}
   - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Instructions/switch", "switch")}}, ce paramètre est nécessaire.
@@ -35,15 +32,15 @@ La fonction qui suit utilise une instruction `break` qui interrompt la boucle {{
 
 ```js
 function testBreak(x) {
-   var i = 0;
+  var i = 0;
 
-   while (i < 6) {
-      if (i == 3) {
-         break;
-      }
-      i += 1;
-   }
-   return i * x;
+  while (i < 6) {
+    if (i == 3) {
+      break;
+    }
+    i += 1;
+  }
+  return i * x;
 }
 ```
 
@@ -53,14 +50,13 @@ Dans le code suivant, on utilise les instructions `break` avec des blocs étique
 
 ```js
 bloc_externe: {
-
   bloc_interne: {
-    console.log ('1');
-    break bloc_externe;  // interrompt bloc_externe ET bloc_interne
-    console.log (':-('); // ignoré
+    console.log("1");
+    break bloc_externe; // interrompt bloc_externe ET bloc_interne
+    console.log(":-("); // ignoré
   }
 
-  console.log ('2');     // ignoré
+  console.log("2"); // ignoré
 }
 ```
 
@@ -111,17 +107,11 @@ bloc_1: {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaires                                |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------- |
-| {{SpecName('ES1')}}                                                                 | {{Spec2('ES1')}}         | Définition initiale. Version non étiquetée. |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Version étiquetée ajoutée.                  |
-| {{SpecName('ES5.1', '#sec-12.8', 'instruction break')}}                 | {{Spec2('ES5.1')}}     |                                             |
-| {{SpecName('ES6', '#sec-break-statement', 'instruction break')}}     | {{Spec2('ES6')}}         |                                             |
-| {{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}} | {{Spec2('ESDraft')}} |                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.break")}}
+{{Compat}}
 
 ## Voir aussi
 

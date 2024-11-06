@@ -1,11 +1,8 @@
 ---
 title: <symbol>
 slug: Web/SVG/Element/symbol
-tags:
-  - SVG
-  - SVG Conteneur
-translation_of: Web/SVG/Element/symbol
 ---
+
 {{SVGRef}}
 
 L'élément **`<symbol>`** est utilisé pour définir un template de graphique pouvant être instancié par un élément {{SVGElement("use")}}.
@@ -15,22 +12,31 @@ L'utilisation d'éléments `symbol` pour les graphiques qui sont utilisés de mu
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 80 20"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Notre symbol a son propre système de coordonnées -->
   <symbol id="myDot" width="10" height="10" viewBox="0 0 2 2">
     <circle cx="1" cy="1" r="1" />
   </symbol>
 
-   <!-- Une grille pour matérialiser le positionnement du symbole -->
-  <path d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20" fill="none" stroke="pink" />
+  <!-- Une grille pour matérialiser le positionnement du symbole -->
+  <path
+    d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20"
+    fill="none"
+    stroke="pink" />
 
   <!-- Multiples instances de notre symbole -->
-  <use xlink:href="#myDot" x="5"  y="5" style="opacity:1.0" />
+  <use xlink:href="#myDot" x="5" y="5" style="opacity:1.0" />
   <use xlink:href="#myDot" x="20" y="5" style="opacity:0.8" />
   <use xlink:href="#myDot" x="35" y="5" style="opacity:0.6" />
   <use xlink:href="#myDot" x="50" y="5" style="opacity:0.4" />
@@ -44,28 +50,28 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : Cet attribut détermine la hauteur du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("preserveAspectRatio")}}
   - : Cet attribut définit comment le fragment svg doit être déformé s'il est inclus dans un conteneur ayant un ratio d'affichage (largeur:hauteur) différent.
     _Type de valeur_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_: `xMidYMid meet`; _Animation_: **oui**
 - {{SVGAttr("refX")}}
   - : Cet attribut détermine la coordonnée x du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|`left`|`center`|`right` ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`left`|`center`|`right` ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("refY")}}
   - : Cet attribut détermine la coordonnée y du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|`top`|`center`|`bottom` ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`top`|`center`|`bottom` ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("viewBox")}}
   - : Cet attribut définit les limites de la zone d'affichage du symbole.
-    _Type de valeur_: **[\<list-of-numbers>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: aucune; _Animation_: **oui**
+    _Type de valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: aucune; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Cet attribut définit la largeur du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Cet attribut détermine la coordonnée x du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Cet attribut détermine la coordonnée y du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 
 ### Attributs globaux
 
@@ -84,15 +90,13 @@ html,body,svg { height:100% }
 
 {{svginfo}}
 
-> **Note :** Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
+> [!NOTE]
+> Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire                                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SymbolElement', '&lt;symbol&gt;')}}     | {{Spec2('SVG2')}} | Permet aux propriétés de géométrie d'être spécifiées sur un symbole |
-| {{SpecName('SVG1.1', 'struct.html#SymbolElement', '&lt;symbol&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.symbol")}}
+{{Compat}}

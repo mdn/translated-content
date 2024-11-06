@@ -1,25 +1,19 @@
 ---
-title: MediaStream.clone()
+title: "MediaStream: clone() メソッド"
+short-title: clone()
 slug: Web/API/MediaStream/clone
-tags:
-  - API
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaStream
-  - メソッド
-  - リファレンス
-  - clone
-browser-compat: api.MediaStream.clone
-translation_of: Web/API/MediaStream/clone
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`clone()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、この `MediaStream` の複製を作成します。この新しい `MediaStream` オブジェクトは、新しい固有の {{domxref("MediaStream.id", "id")}} を持ち、 MediaStream に含まれる {{domxref("MediaStreamTrack")}} もそれぞれ `clone()` を呼び出して得られたものになります。
 
 ## 構文
 
-```js
-var stream = MediaStream.clone();
+```js-nolint
+clone()
 ```
 
 ### 引数

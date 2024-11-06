@@ -1,22 +1,17 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - CSS 基本ユーザーインターフェイス
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.resize
-translation_of: Web/CSS/resize
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
+
 {{CSSRef}}
 
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
 {{EmbedInteractiveExample("pages/css/resize.html")}}
 
-`resize` は以下の者には適用されません。
+`resize` は以下のものには適用されません。
 
 - インライン要素
 - {{cssxref("overflow")}} プロパティが `visible` であるブロック要素
@@ -36,10 +31,11 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: revert;
+resize: revert-layer;
 resize: unset;
 ```
 
-`resize` プロパティは以下の挙げた単一のキーワード値で指定します。
+`resize` プロパティは以下に挙げるキーワードから単一の値を指定します。
 
 ### 値
 
@@ -66,7 +62,7 @@ resize: unset;
 
 ## 例
 
-<h3 id="Disabling_resizability_of_textareas">テキストエリアの寸法の変更を無効化</h3>
+### テキストエリアの寸法の変更を無効化
 
 多くのブラウザーでは、 {{HTMLElement("textarea")}} 要素は既定で寸法が変更できます。 `resize` プロパティでこの動作を上書きすることができます。
 
@@ -86,9 +82,9 @@ textarea {
 
 #### 結果
 
-{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}
+{{EmbedLiveSample("テキストエリアの寸法の変更を無効化","200","100")}}
 
-<h3 id="Using_resize_with_arbitrary_elements">任意の要素に対する resize の使用</h3>
+### 任意の要素に対する resize の使用
 
 `resize` プロパティを使用して、任意の要素の寸法を変更可能にすることができます。以下の例では、寸法が変更可能な {{HTMLElement("div")}} の中に、寸法が変更可能な段落 ({{HTMLElement("p")}} 要素) を配置しています。
 
@@ -97,8 +93,8 @@ textarea {
 ```html
 <div class="resizable">
   <p class="resizable">
-    This paragraph is resizable in all directions, because
-    the CSS `resize` property is set to `both` on this element.
+    This paragraph is resizable in all directions, because the CSS `resize`
+    property is set to `both` on this element.
   </p>
 </div>
 ```
@@ -125,7 +121,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}
+{{EmbedLiveSample("任意の要素に対する resize の使用","450","450")}}
 
 ## 仕様書
 

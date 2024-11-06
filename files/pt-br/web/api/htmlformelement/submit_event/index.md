@@ -1,15 +1,6 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
-  - submit
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 
 {{APIRef}}
@@ -41,7 +32,8 @@ O evento **`submit`** é disparado quando é feita a submissão de um {{HtmlElem
 
 O evento `submit` é disparado quando a pessoa usuária clica em um botão ({{HtmlElement("button")}} ou {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) ou pressiona <kbd>Enter</kbd> enquanto está editando um campo (p. ex. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) em um formulário. O evento não é enviado ao formulário quando se chama o método {{domxref("HTMLFormElement.submit()", "form.submit()")}} diretamente.
 
-> **Nota:** Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, impedindo que seja disparado o evento `submit`.
+> [!NOTE]
+> Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, impedindo que seja disparado o evento `submit`.
 
 ## Exemplos
 
@@ -66,9 +58,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### Resultado
@@ -79,7 +71,7 @@ form.addEventListener('submit', logSubmit);
 
 {{Specifications}}
 
-## Compatibilidade com os navegadores
+## Compatibilidade com navegadores
 
 {{Compat}}
 

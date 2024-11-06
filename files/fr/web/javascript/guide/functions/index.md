@@ -1,15 +1,9 @@
 ---
 title: Fonctions
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Débutant
-  - Functions
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Functions
-original_slug: Web/JavaScript/Guide/Fonctions
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}
+
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}
 
 Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.
 
@@ -48,30 +42,31 @@ function maFonction(monObjet) {
   monObjet.fabricant = "Toyota";
 }
 
-var mavoiture = {fabricant: "Honda", modèle: "Accord", année: 1998};
+var mavoiture = { fabricant: "Honda", modèle: "Accord", année: 1998 };
 var x, y;
 
-x = mavoiture.fabricant;     // x aura la valeur "Honda"
+x = mavoiture.fabricant; // x aura la valeur "Honda"
 
 maFonction(mavoiture);
 y = mavoiture.fabricant; // y aura la valeur "Toyota"
-                         // (la propriété fabricant a été modifiée par la fonction)
+// (la propriété fabricant a été modifiée par la fonction)
 ```
 
-> **Note :** Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
+> [!NOTE]
+> Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
 
 ```js
 function maFonction(monObjet) {
-  monObjet = {fabricant: "Ford", modèle: "Focus", année: 2006};
+  monObjet = { fabricant: "Ford", modèle: "Focus", année: 2006 };
 }
 
-var mavoiture = {fabricant: "Honda", modèle: "Accord", année: 1998};
+var mavoiture = { fabricant: "Honda", modèle: "Accord", année: 1998 };
 var x, y;
 
-x = mavoiture.fabricant;     // x reçoit la valeur "Honda"
+x = mavoiture.fabricant; // x reçoit la valeur "Honda"
 
 maFonction(mavoiture);
-y = mavoiture.fabricant;     // y reçoit la valeur "Honda"
+y = mavoiture.fabricant; // y reçoit la valeur "Honda"
 ```
 
 Dans le premier exemple, l'objet `mavoiture` était passé à la fonction `maFonction` qui le modifiait. Dans le second exemple, la fonction n'a pas modifié l'objet qui avait été passé en argument, elle a créé une nouvelle variable locale, possédant le même nom que l'objet global passé en argument : il n'y a donc pas de modifications sur cet objet global.
@@ -81,14 +76,18 @@ Dans le premier exemple, l'objet `mavoiture` était passé à la fonction `maFon
 Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré` aurait pu être définie de la façon suivante :
 
 ```js
-var carré = function (nombre) { return nombre * nombre };
+var carré = function (nombre) {
+  return nombre * nombre;
+};
 var x = carré(4); //x reçoit la valeur 16
 ```
 
 Cependant, un nom peut être utilisé dans une expression de fonction, ce afin de l'utiliser dans la fonction (récursivité) ou afin de l'identifier dans les appels tracés par un éventuel débogueur :
 
 ```js
-var factorielle = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) };
+var factorielle = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
 console.log(factorielle(3));
 ```
@@ -98,8 +97,7 @@ Les expressions de fonction sont pratiques lorsqu'il s'agit de passer une foncti
 ```js
 function map(f, a) {
   var resultat = []; // Créer un nouveau tableau Array
-  for (var i = 0; i != a.length; i++)
-    resultat[i] = f(a[i]);
+  for (var i = 0; i != a.length; i++) resultat[i] = f(a[i]);
   return resultat;
 }
 ```
@@ -107,7 +105,9 @@ function map(f, a) {
 Le code suivant applique la fonction `cube` sur chacun des éléments du tableau :
 
 ```js
-var cube = function(x) { return x * x * x}; // Une expression de fonction
+var cube = function (x) {
+  return x * x * x;
+}; // Une expression de fonction
 map(cube, [0, 1, 2, 5, 10]);
 ```
 
@@ -117,10 +117,10 @@ En JavaScript, une fonction peut être définie selon une condition. Le fragment
 
 ```js
 var maFonction;
-if (num === 0){
-  maFonction = function(monObjet) {
-    monObjet.fabricant = "Toyota"
-  }
+if (num === 0) {
+  maFonction = function (monObjet) {
+    monObjet.fabricant = "Toyota";
+  };
 }
 ```
 
@@ -143,19 +143,22 @@ Les fonctions doivent appartenir à la portée dans laquelle elles sont appelée
 ```js
 console.log(carré(5));
 /* ... */
-function carré(n) { return n*n }
+function carré(n) {
+  return n * n;
+}
 ```
 
 La portée d'une fonction est la fonction dans laquelle elle est déclarée ou le programme entier si elle est déclarée au niveau le plus haut.
 
-> **Note :** Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
+> [!NOTE]
+> Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
 
 ```js example-bad
 console.log(carré); // La fonction carré est remontée/hoisted mais vaut undefined
 console.log(carré(5)); // TypeError: carré is not a function
 var carré = function (n) {
   return n * n;
-}
+};
 
 // Et avec let...
 
@@ -164,7 +167,7 @@ console.log(carré2(5)); // TypeError: carré2 is not a function
 
 let carré2 = function (n) {
   return n * n;
-}
+};
 ```
 
 Les arguments d'une fonction ne sont pas limités aux chaînes de caractères et aux nombres. Il est possible de passer des objets. La fonction `show_props` (définie dans le chapitre sur [l'utilisation des objets](/fr/docs/JavaScript/Guide/Utiliser_les_objets)) est un exemple de fonction utilisant un argument qui est un objet.
@@ -172,11 +175,9 @@ Les arguments d'une fonction ne sont pas limités aux chaînes de caractères et
 Une fonction peut être récursive, c'est-à-dire qu'elle peut s'appeler elle-même. Voici la fonction qui calcule récursivement la factorielle d'un nombre :
 
 ```js
-function factorielle(n){
-  if ((n === 0) || (n === 1))
-    return 1;
-  else
-    return (n * factorielle(n - 1));
+function factorielle(n) {
+  if (n === 0 || n === 1) return 1;
+  else return n * factorielle(n - 1);
 }
 ```
 
@@ -200,8 +201,8 @@ On ne peut pas accéder aux variables définies dans une fonction en dehors de c
 ```js
 // Les variables suivantes sont globales
 var num1 = 20,
-    num2 = 3,
-    nom = "Licorne";
+  num2 = 3,
+  nom = "Licorne";
 
 // Cette fonction est définie dans la portée globale
 function multiplier() {
@@ -211,9 +212,9 @@ function multiplier() {
 multiplier(); // Renvoie 60
 
 // Un exemple de fonction imbriquée
-function getScore () {
+function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function ajoute() {
     return nom + " a marqué " + (num1 + num2);
@@ -231,29 +232,30 @@ getScore(); // Renvoie "Licorne a marqué 5"
 
 Une fonction peut faire référence à elle-même et s'appeler elle-même. Il existe trois moyens pour qu'une fonction fasse référence à elle-même :
 
-1.  Le nom de la fonction
-2.  [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
-3.  Une variable de la portée qui fait référence à la fonction
+1. Le nom de la fonction
+2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
+3. Une variable de la portée qui fait référence à la fonction
 
 Par exemple, avec la définition de fonction suivante :
 
 ```js
 var toto = function truc() {
-   // les instructions de la fonction
+  // les instructions de la fonction
 };
 ```
 
 Dans le corps de la fonction, ces trois éléments seront équivalents :
 
-1.  `truc()`
-2.  `arguments.callee()`
-3.  `toto()`
+1. `truc()`
+2. `arguments.callee()`
+3. `toto()`
 
 Une fonction qui s'appelle elle-même est appelée une fonction _récursive_. Sous certains aspects, une récursion est semblable à une boucle : toutes les deux exécutent le même code plusieurs fois et toutes les deux requièrent une condition d'arrêt (pour éviter une boucle ou une récursion infinie). Par exemple, ce fragment de code utilisant une boucle :
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" représente la condition d'arrêt
+while (x < 10) {
+  // "x < 10" représente la condition d'arrêt
   // faire quelque chose
   x++;
 }
@@ -263,8 +265,10 @@ pourra être converti en une fonction récursive de la façon suivante :
 
 ```js
 function boucle(x) {
-  if (x >= 10) // "x >= 10" représente la condition d'arrêt (équivalent à "!(x < 10)")
+  if (x >= 10) {
+    // "x >= 10" représente la condition d'arrêt (équivalent à "!(x < 10)")
     return;
+  }
   // faire quelque chose
   boucle(x + 1); // l'appel récursif
 }
@@ -275,8 +279,9 @@ Malgré cela, certains algorithmes ne peuvent pas être convertis en boucles it�
 
 ```js
 function parcourirArbre(noeud) {
-  if (noeud === null) //
+  if (noeud === null) {
     return;
+  }
   // faire quelque chose avec le noeud
   for (var i = 0; i < noeud.childNodes.length; i++) {
     parcourirArbre(noeud.childNodes[i]);
@@ -292,18 +297,17 @@ Ce type de « comportement » peut-être observé avec l'exemple suivant :
 
 ```js
 function toto(i) {
-  if (i < 0)
-    return;
-  console.log('début : ' + i);
+  if (i < 0) return;
+  console.log("début : " + i);
   toto(i - 1);
-  console.log('fin : ' + i);
+  console.log("fin : " + i);
 }
 toto(3);
 ```
 
 qui affichera :
 
-```js
+```plain
 début : 3
 début : 2
 début : 1
@@ -328,7 +332,8 @@ En résumé :
 
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
-> **Note :** Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> [!NOTE]
+> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
 
 L'exemple qui suit illustre l'imbrication de fonctions :
 
@@ -339,9 +344,9 @@ function ajouteCarrés(a, b) {
   }
   return carré(a) + carré(b);
 }
-a = ajouteCarrés(2,3); // renvoie 13
-b = ajouteCarrés(3,4); // renvoie 25
-c = ajouteCarrés(4,5); // renvoie 41
+a = ajouteCarrés(2, 3); // renvoie 13
+b = ajouteCarrés(3, 4); // renvoie 25
+c = ajouteCarrés(4, 5); // renvoie 41
 ```
 
 La fonction interne étant une fermeture, on peut appeler la fonction parente afin de définir les arguments pour la fonction englobante et ceux de la fonction fille :
@@ -386,9 +391,9 @@ A(1); // affichera 6 (1 + 2 + 3)
 
 Dans cet exemple `C` accède au `y` de `B` et au `x` de `A`. Ceci est rendu possible car :
 
-1.  `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`.
-2.  `C` est une fermeture qui contient `B`.
-3.  La fermeture de `B` contient `A` donc la fermeture de `C` contient `A`, `C` peut ainsi accéder aux arguments et aux variables de `B` _et_ `A`. On dit que `C` _chaîne_ les portées de `B` et de `A` (dans cet ordre).
+1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`.
+2. `C` est une fermeture qui contient `B`.
+3. La fermeture de `B` contient `A` donc la fermeture de `C` contient `A`, `C` peut ainsi accéder aux arguments et aux variables de `B` _et_ `A`. On dit que `C` _chaîne_ les portées de `B` et de `A` (dans cet ordre).
 
 La réciproque n'est pas vraie. `A` ne peut pas accéder à `C`, car `A` ne peut pas accéder aux arguments ou aux variables de `B`, or `C` est une variable de `B`. De cette façon, `C` reste privée en dehors de `B`.
 
@@ -414,26 +419,27 @@ Le conflit se produit à l'instruction `return x` entre le paramètre x de la fo
 Les fermetures sont l'une des fonctionnalités les plus intéressantes de JavaScript. Comme on l'a vu précédemment, JavaScript permet d'imbriquer des fonctions et la fonction interne aura accès aux variables et paramètres de la fonction parente. À l'inverse, la fonction parente ne pourra pas accéder aux variables liées à la fonction interne. Cela fournit une certaine sécurité pour les variables de la fonction interne. De plus, si la fonction interne peut exister plus longtemps que la fonction parente, les variables et fonctions de la fonction parente pourront exister au travers de la fonction interne. On crée une fermeture lorsque la fonction interne est disponible en dehors de la fonction parente.
 
 ```js
-var animal = function(nom) {   // La fonction externe utilise un paramètre "nom"
+var animal = function (nom) {
+  // La fonction externe utilise un paramètre "nom"
   var getNom = function () {
-    return nom;                // La fonction interne accède à la variable "nom" de la fonction externe
-  }
-  return getNom;               // Renvoie la fonction interne pour la rendre disponible en dehors de la portée de la fonction parente
-}
+    return nom; // La fonction interne accède à la variable "nom" de la fonction externe
+  };
+  return getNom; // Renvoie la fonction interne pour la rendre disponible en dehors de la portée de la fonction parente
+};
 
 monAnimal = animal("Licorne");
 
-monAnimal();                   // Renvoie "Licorne"
+monAnimal(); // Renvoie "Licorne"
 ```
 
 Bien entendu, dans la pratique, les cas peuvent être plus complexes. On peut renvoyer un objet qui contient des méthodes manipulant les variables internes de la fonction parente.
 
 ```js
-var créerAnimal  = function (nom) {
+var créerAnimal = function (nom) {
   var sexe;
 
   return {
-    setNom: function(nouveauNom) {
+    setNom: function (nouveauNom) {
       nom = nouveauNom;
     },
 
@@ -445,57 +451,63 @@ var créerAnimal  = function (nom) {
       return sexe;
     },
 
-    setSexe: function(nouveauSexe) {
-      if (typeof nouveauSexe == "string" && (nouveauSexe.toLowerCase() == "mâle" || nouveauSexe.toLowerCase() == "femelle")) {
+    setSexe: function (nouveauSexe) {
+      if (
+        typeof nouveauSexe == "string" &&
+        (nouveauSexe.toLowerCase() == "mâle" ||
+          nouveauSexe.toLowerCase() == "femelle")
+      ) {
         sexe = nouveauSexe;
       }
-    }
-  }
-}
+    },
+  };
+};
 
 var animal = créerAnimal("Licorne");
-animal.getNom();        // Licorne
+animal.getNom(); // Licorne
 
 animal.setNom("Bobby");
 animal.setSexe("mâle");
-animal.getSexe();       // mâle
-animal.getNom();        // Bobby
+animal.getSexe(); // mâle
+animal.getNom(); // Bobby
 ```
 
 Dans le code précédent, la variable `nom` est de la fonction externe est accessible depuis les fonctions internes. Il est impossible d'accéder aux variables internes en dehors des fonctions internes. Les variables internes agissent comme des coffres-forts pour les fonctions internes. Elles permettent d'avoir un accès persistent et encapsulé aux données internes. Pour les fonctions, il n'est pas nécessaire de les affecter à une variable ou même de les nommer.
 
 ```js
-var getCode = (function (){
-  var codeAPI = "0]Eal(eh&2";    // Un code qu'on ne souhaite pas diffuser ni modifier
+var getCode = (function () {
+  var codeAPI = "0]Eal(eh&2"; // Un code qu'on ne souhaite pas diffuser ni modifier
 
   return function () {
     return codeAPI;
   };
 })();
 
-getCode();    // Renvoie la valeur du code
+getCode(); // Renvoie la valeur du code
 ```
 
 Il y a malgré tout quelques pièges auxquels il faut faire attention lorsqu'on utilise les fermetures. Si une fonction imbriquée définit une variable avec le même nom que le nom d'une variable de la portée externe, il n'y aura plus aucun moyen d'accéder à la variable.
 
 ```js
-var créerAnimal = function(nom) {  // La fonction externe définit une variable appelée "nom"
+var créerAnimal = function (nom) {
+  // La fonction externe définit une variable appelée "nom"
   return {
-    setNom: function(nom) {    // La fonction imbriquée définit une variable appelée "nom"
-      nom = nom;               // ??? comment accéder à la variable "nom" définie par la fonction externe
-    }
-  }
-}
+    setNom: function (nom) {
+      // La fonction imbriquée définit une variable appelée "nom"
+      nom = nom; // ??? comment accéder à la variable "nom" définie par la fonction externe
+    },
+  };
+};
 ```
 
-L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
 
 ## Utiliser l'objet `arguments`
 
 Les arguments d'une fonction sont maintenus dans un objet semblable à un tableau. Dans une fonction, il est possible d'utiliser les arguments passés à la fonction de la façon suivante :
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 où `i` représente l'index ordinal de l'argument (le premier argument ayant un indice à 0). On accède donc au premier argument avec `arguments[0]`. Le nombre total d'arguments est fourni grâce à `arguments.length`.
@@ -506,13 +518,13 @@ Par exemple, on peut construire une fonction qui concatène plusieurs chaînes. 
 
 ```js
 function monConcat(séparateur) {
-   var result = ""; // on initialise la liste
-   var i;
-   // on parcourt les arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + séparateur;
-   }
-   return result;
+  var result = ""; // on initialise la liste
+  var i;
+  // on parcourt les arguments
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + séparateur;
+  }
+  return result;
 }
 ```
 
@@ -545,9 +557,9 @@ Avant ECMAScript 2015, la stratégie pour manipuler des valeurs par défaut adap
 
 ```js
 function multiplier(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
-  return a*b;
+  return a * b;
 }
 
 multiplier(5); // 5
@@ -557,7 +569,7 @@ Si on peut utiliser les paramètres par défaut, il n'est plus nécessaire de fa
 
 ```js
 function multiplier(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiplier(5); // 5
@@ -571,7 +583,7 @@ La syntaxe des [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonction
 
 ```js
 function multiplier(facteur, ...lesArgs) {
-  return lesArgs.map(x => facteur * x);
+  return lesArgs.map((x) => facteur * x);
 }
 
 var arr = multiplier(2, 1, 2, 3);
@@ -584,25 +596,18 @@ console.log(arr); // [2, 4, 6]
 
 Les fonctions fléchées ont été introduites pour deux raisons principales : une syntaxe plus courte et l'absence de `this` rattaché à la fonction. Voir aussi [ce billet sur tech.mozfr.org sur les fonctions fléchées](https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees).
 
-
-
-
-
 ### Concision de la syntaxe
 
 Dans certaines constructions fonctionnelles, on peut apprécier une syntaxe courte. Par exemple, si on compare les deux dernières lignes de ce fragment de code :
 
 ```js
-var a = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryllium"
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s){ return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 console.log(a2); // affiche [8, 6, 7, 9]
-var a3 = a.map( s => s.length );
+var a3 = a.map((s) => s.length);
 console.log(a3); // affiche [8, 6, 7, 9]
 ```
 
@@ -626,13 +631,13 @@ function Personne() {
 var p = new Personne();
 ```
 
-Avec ECMAScript 3/5, ce problème fut résolu avec l'affectation de la valeur de `this` dans une variable a variable that could be closed over.
+Avec ECMAScript 3/5, ce problème fut résolu en affectant la valeur de `this` à une variable incluse dans la fermeture.
 
 ```js
 function Personne() {
   var self = this; // Certains utilisent `that`, d'autres `self`.
-                   // On utilisera l'un des deux et on pas
-                   // l'autre pour être cohérent.
+  // On utilisera l'un des deux et on pas
+  // l'autre pour être cohérent.
   self.âge = 0;
 
   setInterval(function grandir() {
@@ -648,7 +653,7 @@ On aurait aussi pu créer une fonction liée afin que la « bonne » valeur de `
 Les fonctions fléchées capturent la valeur de `this` dans le contexte englobant et cela permet de manipuler la valeur pertinente ici :
 
 ```js
-function Personne(){
+function Personne() {
   this.âge = 0;
 
   setInterval(() => {
@@ -688,4 +693,4 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 - {{jsxref("Objets_globaux/unescape","unescape()")}} {{deprecated_inline}}
   - : La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères pour laquelle les séquences d'échappement hexadécimales sont remplacées par les caractères qu'elles représentent. Les séquences d'échappement introduites peuvent provenir d'une fonction telle que {{jsxref("Objets_globaux/escape","escape()")}}. `unescape` est dépréciée et doit être remplacée par {{jsxref("Objets_globaux/decodeURI","decodeURI()")}} ou {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}

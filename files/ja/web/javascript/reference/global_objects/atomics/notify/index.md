@@ -1,26 +1,20 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.notify
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
+
 {{JSRef}}
 
 静的メソッドである **`Atomics.notify()`** は、待ち行列で休眠状態にあるエージェントに通知します。
 
-> **Note:** この操作は共有された {{jsxref("Int32Array")}} に対してのみ動作します。
+> [!NOTE]
+> この操作は共有された {{jsxref("Int32Array")}} に対してのみ動作します。
 > 共有されていない `ArrayBuffer` オブジェクトでは `0` を返します。
 
 ## 構文
 
 ```js
-Atomics.notify(typedArray, index, count)
+Atomics.notify(typedArray, index, count);
 ```
 
 ### 引数
@@ -29,14 +23,14 @@ Atomics.notify(typedArray, index, count)
   - : 共有された {{jsxref("Int32Array")}}。
 - `index`
   - : 起動する対象となる `typedArray` 中の位置。
-- `count` {{optional_inline}}
+- `count` {{optional_inline}}
   - : 通知する休眠状態のエージェントの数。既定値は {{jsxref("Infinity", "+Infinity")}} です。
 
 ### 返値
 
 - 起動したエージェントの数を返します。
 - 共有されていない {{jsxref("ArrayBuffer")}} オブジェクトが使用された場合は、 `0`
- を返します。
+  を返します。
 
 ### 例外
 

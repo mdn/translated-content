@@ -1,13 +1,8 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-decoration-skip
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
@@ -31,7 +26,8 @@ text-decoration-skip: initial;
 text-decoration-skip: unset;
 ```
 
-> **Note :** La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
+> [!NOTE]
+> La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
 
 ## Syntaxe
 
@@ -52,9 +48,13 @@ text-decoration-skip: unset;
 - `box-decoration`
   - : La propriété `text-decoration` n'est pas appliquée pour les marges, bordures et zones de remplissage (_padding_) des éléments fils.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -81,12 +81,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS4 Text Decoration", "#text-decoration-skip-property", "text-decoration-skip")}} | {{Spec2("CSS4 Text Decoration")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-skip")}}
+{{Compat}}

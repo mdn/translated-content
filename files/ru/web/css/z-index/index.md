@@ -1,14 +1,8 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.z-index
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`z-index`** определяет положение [позиционированного](/ru/docs/Web/CSS/position) элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index.
@@ -23,7 +17,7 @@ CSS-свойство **`z-index`** определяет положение [по
 ## Синтаксис
 
 ```css
-/* Ключевое слово */
+/* Ключевые слова */
 z-index: auto;
 
 /* Значения типа <integer> */
@@ -108,13 +102,13 @@ z-index: unset;
 
 #### Результат
 
-{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
+{{ EmbedLiveSample('Визуальное наложение элементов', '550', '200', '') }}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

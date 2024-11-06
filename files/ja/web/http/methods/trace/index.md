@@ -1,13 +1,8 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.TRACE
-translation_of: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `TRACE` メソッド**は、対象リソースまでのパスに沿ってメッセージのループバックテストを行い、便利なデバッグの仕組みを提供します。
@@ -22,11 +17,11 @@ translation_of: Web/HTTP/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">成功時のレスポンスの本文</th>
-      <td>なし</td>
+      <td>あり</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
-      <td>なし</td>
+      <td>あり</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>

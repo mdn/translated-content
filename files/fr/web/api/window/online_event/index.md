@@ -1,19 +1,14 @@
 ---
-title: 'Window: online event'
+title: "Window: online event"
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - Evènement
-  - Online
-  - Reference
-  - Window
-translation_of: Web/API/Window/online_event
 ---
+
 {{APIRef}}
 
 L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
 
-> **Note :** Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
+> [!NOTE]
+> Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
 
 <table class="properties">
   <tbody>
@@ -42,8 +37,8 @@ L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché 
 
 ```js
 // addEventListener version
-window.addEventListener('online', (event) => {
-    console.log("Vous êtes maintenant connecté au réseau.");
+window.addEventListener("online", (event) => {
+  console.log("Vous êtes maintenant connecté au réseau.");
 });
 
 // ononline version
@@ -54,14 +49,12 @@ window.ononline = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.online_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- [`offline`](/en-US/docs/Web/API/Window/offline_event)
+- [`offline`](/fr/docs/Web/API/Window/offline_event)

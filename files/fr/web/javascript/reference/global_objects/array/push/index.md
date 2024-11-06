@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/push
 ---
+
 {{JSRef}}
 
 La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
@@ -18,11 +11,13 @@ La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tablea
 
 ## Syntaxe
 
-    arr.push(élément1, ..., élémentN)
+```js
+arr.push(élément1, ..., élémentN)
+```
 
 ### Paramètres
 
-- `élément1, ...,élémentN`
+- `élément1, ..., élémentN`
   - : Les éléments à ajouter à la fin du tableau.
 
 ### Valeur de retour
@@ -50,7 +45,7 @@ var sports = ["plongée", "baseball"];
 var total = sports.push("football", "tennis");
 
 console.log(sports); // ["plongée", "baseball", "football", "tennis"]
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### Fusionner deux tableaux
@@ -58,8 +53,8 @@ console.log(total);  // 4
 Dans l'exemple qui suit, on utilise la méthode {{jsxref("Function.apply()")}} pour ajouter les différents éléments d'un second tableau
 
 ```js
-var legumes = ['navet', 'pomme de terre'];
-var autresLegumes = ['céleri', 'radis'];
+var legumes = ["navet", "pomme de terre"];
+var autresLegumes = ["céleri", "radis"];
 
 // On fusionne les deux tableaux
 // Équivalent à legumes.push('céleri', 'radis');
@@ -68,7 +63,21 @@ Array.prototype.push.apply(legumes, autresLegumes);
 console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 ```
 
-> **Note :** Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+> [!NOTE]
+> Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+
+L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
+
+```js
+const legumes = ["navet", "pomme de terre"];
+const autresLegumes = ["céleri", "radis"];
+
+// On fusionne les deux tableaux
+// Équivalent à legumes.push('céleri', 'radis');
+legumes.push(...autresLegumes);
+
+console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+```
 
 ### Utiliser un objet comme on utiliserait un tableau
 
@@ -76,13 +85,13 @@ Comme nous l'avons vu auparavant, `push` est une méthode générique et nous po
 
 ```js
 var obj = {
-    length: 0,
+  length: 0,
 
-    ajoutElem: function ajoutElem (elem) {
-        // obj.length est automatiquement incrémenté
-        // quand on ajoute un élément
-        [].push.call(this, elem);
-    }
+  ajoutElem: function ajoutElem(elem) {
+    // obj.length est automatiquement incrémenté
+    // quand on ajoute un élément
+    [].push.call(this, elem);
+  },
 };
 
 // Ajoutons quelques objets vides pour illustrer
@@ -95,16 +104,11 @@ console.log(obj.length);
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,20 +1,11 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - place-content
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-content
-translation_of: Web/CSS/place-content
 ---
+
 {{CSSRef}}
 
-**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。
-
+**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}
 
@@ -57,7 +48,8 @@ place-content: unset;
 
 最初の値は {{CSSxRef("align-content")}} プロパティの値で、2 番目の値は {{CSSxRef("justify-content")}} の値です。
 
-> **Note:** 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
+> [!NOTE]
+> 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
 
 ### 値
 
@@ -67,10 +59,10 @@ place-content: unset;
   - : 各アイテムは、適切な軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
 - `flex-start`
   - : 各アイテムは、フレックスコンテナーに依存して、主軸または交差軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
 - `flex-end`
   - : 各アイテムは、フレックスコンテナーに依存して、主軸または交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 - `center`
   - : 各アイテムは、配置コンテナーの中央に向けて互いに寄せて配置されます。
 - `left`
@@ -81,7 +73,7 @@ place-content: unset;
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。
 - `baseline`, `first baseline`, `last baseline`
   - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
- `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `space-around`
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムの前と最後のアイテムの後の余白は、隣接するアイテム同士の間隔の半分の幅になります。
 - `space-evenly`
@@ -93,7 +85,7 @@ place-content: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -106,27 +98,30 @@ place-content: unset;
 ```html
 <div id="container">
   <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
+  <div class="small">Lorem<br />ipsum</div>
   <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>ipsum</div>
+  <div class="large">Lorem<br />ipsum</div>
   <div class="large"></div>
   <div class="large"></div>
 </div>
 ```
 
 ```html hidden
-<code>writing-mode:</code><select id="writingMode">
+<code>writing-mode:</code
+><select id="writingMode">
   <option value="horizontal-tb" selected>horizontal-tb</option>
   <option value="vertical-rl">vertical-rl</option>
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
-<code>direction:</code><select id="direction">
+  <option value="sideways-lr">sideways-lr</option></select
+><code>;</code><br />
+<code>direction:</code
+><select id="direction">
   <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
-<code>place-content:</code><select id="alignContentAlignment">
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+<code>place-content:</code
+><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
   <option value="last baseline">last baseline</option>
@@ -143,7 +138,7 @@ place-content: unset;
   <option value="safe">safe</option>
   <option value="unsafe">unsafe</option>
 </select>
-  <select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>
@@ -157,28 +152,33 @@ place-content: unset;
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select><code>;</code>
+  <option value="unsafe">unsafe</option></select
+><code>;</code>
 ```
 
 ```js hidden
 var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
-}
+  document.getElementById("container").style.placeContent =
+    document.getElementById("alignContentAlignment").value +
+    " " +
+    document.getElementById("justifyContentAlignment").value;
+};
 
 var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+alignContentAlignment.addEventListener("change", update);
 
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
+var justifyContentAlignment = document.getElementById(
+  "justifyContentAlignment",
+);
 justifyContentAlignment.addEventListener("change", update);
 
 var writingM = document.getElementById("writingMode");
 writingM.addEventListener("change", function (evt) {
-   document.getElementById("container").style.writingMode = evt.target.value;
+  document.getElementById("container").style.writingMode = evt.target.value;
 });
 var direction = document.getElementById("direction");
 direction.addEventListener("change", function (evt) {
-   document.getElementById("container").style.direction = evt.target.value;
+  document.getElementById("container").style.direction = evt.target.value;
 });
 ```
 
@@ -187,7 +187,7 @@ direction.addEventListener("change", function (evt) {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
@@ -227,9 +227,9 @@ div > div {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{CSSxRef("align-content")}} プロパティ
 - {{CSSxRef("justify-content")}} プロパティ

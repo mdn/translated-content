@@ -1,39 +1,28 @@
 ---
-title: Element.getAnimations()
+title: "Element: getAnimations() メソッド"
+short-title: getAnimations()
 slug: Web/API/Element/getAnimations
-tags:
-  - API
-  - Animatable
-  - CSS
-  - CSS アニメーション
-  - CSS トランジション
-  - Element
-  - 実験的
-  - メソッド
-  - リファレンス
-  - トランジション
-  - ウェブアニメーション
-  - getAnimations
-  - waapi
-  - web animations api
-browser-compat: api.Element.getAnimations
-translation_of: Web/API/Element/getAnimations
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
-{{ SeeCompatTable() }}{{APIRef("Web Animations")}}
+
+{{APIRef("Web Animations")}}
 
 `getAnimations()` は {{domxref("Element")}} インターフェイスのメソッドで（`Animatable` ミックスインで指定されており）、この要素に影響を与える、あるいは将来的に影響を与える予定のすべての {{domxref("Animation")}} オブジェクトの配列を返します。オプションとして、子孫要素の {{domxref("Animation")}} オブジェクトも返すことができます。
 
-> **Note:** この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API)が含まれます。
+> [!NOTE]
+> この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API)が含まれます。
 
 ## 構文
 
-```js
-const animations = Element.getAnimations(options);
+```js-nolint
+getAnimations()
+getAnimations(options)
 ```
 
 ### 引数
 
-- `options {{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : 以下のプロパティを含むオプションオブジェクトです。
 
@@ -51,8 +40,7 @@ const animations = Element.getAnimations(options);
 
 ```js
 Promise.all(
-  elem.getAnimations({ subtree: true })
-    .map(animation => animation.finished)
+  elem.getAnimations({ subtree: true }).map((animation) => animation.finished),
 ).then(() => elem.remove());
 ```
 
@@ -67,7 +55,7 @@ Promise.all(
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
 - {{domxref("Document.getAnimations()")}} - 文書内のすべてのアニメーションを読み取る
 - {{domxref("Animation")}}

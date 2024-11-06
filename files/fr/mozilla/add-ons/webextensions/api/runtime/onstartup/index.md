@@ -1,28 +1,18 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStartup
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé quand un profil ayant cette extension installée démarre une session. Cet événement n'est pas déclenché lorsqu'une navigation privée / profil privé est démarré, même si cette extension fonctionne en mode de navigation privée 'split'.
 
 ## Syntaxe
 
 ```js
-browser.runtime.onStartup.addListener(listener)
-browser.runtime.onStartup.removeListener(listener)
-browser.runtime.onStartup.hasListener(listener)
+browser.runtime.onStartup.addListener(listener);
+browser.runtime.onStartup.removeListener(listener);
+browser.runtime.onStartup.hasListener(listener);
 ```
 
 ### Fonctions des événements
@@ -48,20 +38,21 @@ Ouvre <http://chilloutandwatchsomecatgifs.com/> quand le navigateur démarre :
 ```js
 function handleStartup() {
   browser.tabs.create({
-    url: "http://chilloutandwatchsomecatgifs.com/"
+    url: "http://chilloutandwatchsomecatgifs.com/",
   });
 }
 
 browser.runtime.onStartup.addListener(handleStartup);
 ```
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,8 +79,8 @@ browser.runtime.onStartup.addListener(handleStartup);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onStartup")}}
+{{Compat}}

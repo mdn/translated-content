@@ -1,17 +1,8 @@
 ---
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
-  - sound
-browser-compat: api.AudioScheduledSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API의 일부인 `AudioScheduledSourceNode` 인터페이스는 (선택적으로는 명시된 시간에) 시작되고 정지되는 능력을 공유하는 몇몇 유형의 오디오 소스 노드 인터페이스에 대한 부모 인터페이스입니다. 구체적으로 말하면, 이 인터페이스는 {{domxref("AudioScheduledSourceNode.start", "start()")}}와 {{domxref("AudioScheduledSourceNode.stop", "stop()")}} 메서드 뿐만 아니라, {{domxref("AudioScheduledSourceNode.onended", "onended")}} 이벤트 처리기 또한 정의합니다.
@@ -39,7 +30,7 @@ Web Audio API의 일부인 `AudioScheduledSourceNode` 인터페이스는 (선택
 
 - [`ended`](/ko/docs/Web/API/AudioScheduledSourceNode/ended_event)
   - : 소스 노드가 재생을 정지했을 때 발생되는데, 그 이유는 노드가 예정된 정지 시간에 도달했기 때문이거나, 오디오의 전체 재생이 수행되었거나, 혹은 전체 버퍼가 재생되었기 때문입니다.
-    또한 [`onended`](/en-US/docs/Web/API/AudioScheduledSourceNode/onended) 이벤트 처리기 속성으로도 사용 가능합니다.
+    또한 [`onended`](/ko/docs/Web/API/AudioScheduledSourceNode/onended) 이벤트 처리기 속성으로도 사용 가능합니다.
 
 ## 명세서
 

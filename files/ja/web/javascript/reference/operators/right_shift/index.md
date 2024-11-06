@@ -1,15 +1,8 @@
 ---
 title: 右シフト (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.right_shift
-translation_of: Web/JavaScript/Reference/Operators/Right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **右シフト演算子 (`>>`)** は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Right_shift
 ## 構文
 
 ```js
-a >> b
+a >> b;
 ```
 
 ## 解説
@@ -28,7 +21,7 @@ a >> b
 
 例えば、 `9 >> 2` は 2 となります。
 
-```js
+```plain
 .    9 (10 進数): 00000000000000000000000000001001 (2 進数)
                   --------------------------------
 9 >> 2 (10 進数): 00000000000000000000000000000010 (2 進数) = 2 (10 進数)
@@ -36,7 +29,7 @@ a >> b
 
 同様に、 `-9 >> 2` は符号が保存されるため、 `-3` になります。
 
-```js
+```plain
 .    -9 (10 進数): 11111111111111111111111111110111 (2 進数)
                    --------------------------------
 -9 >> 2 (10 進数): 11111111111111111111111111111101 (2 進数) = -3 (10 進数)
@@ -47,7 +40,7 @@ a >> b
 ### 右シフトの使用
 
 ```js
- 9 >> 2; //  2
+9 >> 2; // 2
 -9 >> 2; // -3
 ```
 
@@ -61,5 +54,5 @@ a >> b
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
 - [右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

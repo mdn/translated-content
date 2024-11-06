@@ -1,16 +1,8 @@
 ---
-title: '-webkit-text-stroke-color'
+title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-text-stroke-color
-translation_of: Web/CSS/-webkit-text-stroke-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-text-stroke-color`** は CSS のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/color_value)を示します。このプロパティが設定されない場合、 {{cssxref("color")}} プロパティの値が使用されます。
@@ -31,7 +23,7 @@ translation_of: Web/CSS/-webkit-text-stroke-color
 
 ### 値
 
- `<color>`
+- `<color>`
   - : 線の色。
 
 ## 公式定義
@@ -50,7 +42,7 @@ translation_of: Web/CSS/-webkit-text-stroke-color
 
 ```html
 <p>Text with stroke</p>
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 #### CSS
@@ -66,7 +58,7 @@ p {
 
 ```js hidden
 var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function(evt) {
+colorPicker.addEventListener("change", function (evt) {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```

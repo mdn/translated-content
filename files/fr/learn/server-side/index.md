@@ -1,18 +1,8 @@
 ---
 title: Programmation de Sites Web côté serveur
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 Le sujet abordant les sites **web dynamiques / la programmation coté serveur** est une série de modules vous montrant comment créer un site web dynamique (sites web intereagissant avec vous de manière à vous donner des informations personnelles en réponse aux requêtes HTTP). Les modules fournissent une introduction universelle à la programmation coté serveur à travers des guides spécifiques pour les debutants vous montrant comment vous servir des infrastructure d'application (aussi appelé frameworks) Django (fait en Python) et Express(fait en Node.js/JavaScript) afin de créer des applications basiques.
@@ -30,8 +20,8 @@ Des connaissances minimales en concepts de programmation pourront être utiles, 
 Vous allez avoir besoin de comprendre "comment le fonctionne le Web". Nous vous recommandons premièremement de lire les sujets suivants :
 
 - [Qu'est-ce qu'un serveur web](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web)
-- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/Apprendre/Quels_logiciels_sont_n%C3%A9cessaires_pour_construire_un_site_web)
-- [Comment transférer des fichiers à un serveur web ?](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
+- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web)
+- [Comment transférer des fichiers à un serveur web ?](/fr/Apprendre/Transférer_des_fichiers_vers_un_serveur_web)
 
 Ces articles vous donnerons les outils nécessaires afin de travailler avec les modules de cette section.
 

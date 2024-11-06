@@ -1,25 +1,15 @@
 ---
 title: Partage d'objets avec des scripts de page
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - script de contenu
-  - scripts de page
-translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page
 ---
+
 {{AddonSidebar}}
 
-> **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
+> [!NOTE]
+> Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
 
-> **Attention :** En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
+> [!WARNING]
+> En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
 >
 > L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.
 >
@@ -40,7 +30,7 @@ Le but de cette fonctionnalité est de rendre le script moins privilégié plus 
 
 Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](en-US/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](en-US/docs/Mozilla/Gecko/Script_security).
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](/fr/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
@@ -49,10 +39,10 @@ Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une proprié
 Prenons un exemple simple. Supposons qu'une page Web charge un script:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script type="text/javascript" src="main.js"></script>
@@ -88,7 +78,9 @@ Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les prop
 
 Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
 
-    XPCNativeWrapper(window.wrappedJSObject.foo);
+```js
+XPCNativeWrapper(window.wrappedJSObject.foo);
+```
 
 voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
 
@@ -112,7 +104,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -130,7 +122,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -138,7 +130,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 
@@ -148,10 +140,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: "Function call: " + message});
+  browser.runtime.sendMessage({ content: "Function call: " + message });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 Cela définit une fonction `notify()`, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:
@@ -179,17 +171,16 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 var messenger = {
-  notify: function(message) {
+  notify: function (message) {
     browser.runtime.sendMessage({
-      content: "Object method call: " + message
+      content: "Object method call: " + message,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, `messenger`, qui a une fonction `notify()`:

@@ -1,22 +1,17 @@
 ---
-title: >-
-  SyntaxError: applying the 'delete' operator to an unqualified name is
-  deprecated
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-original_slug: Web/JavaScript/Reference/Erreurs/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
-    SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-    SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```
+SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
+SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
+SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```
 
 ## Type d'erreur
 
@@ -37,7 +32,7 @@ Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference
 Essayer de supprimer une variable normale avec `delete` ne fonctionne pas, voire lève une exception en mode strict :
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -52,7 +47,7 @@ delete x;
 Pour libérer le contenu d'une variable, on peut la passer à {{jsxref("null")}} :
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 // ...
@@ -65,4 +60,4 @@ x = null;
 
 - [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)
 - [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire)
-- [TypeError: property "x" is non-configurable and can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+- [TypeError: property "x" is non-configurable and can't be deleted](/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete)

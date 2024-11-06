@@ -1,14 +1,8 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-tags:
-  - Class
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.FinalizationRegistry
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry`** オブジェクトにより、オブジェクトがガベージコレクションで回収されるときにコールバックを要求することができます。
@@ -17,12 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 
 `FinalizationRegistry` は、レジストリーに登録されているオブジェクトが*回収*される (ガベージコレクションされる) 時に*クリーンアップコールバック*を要求する方法を提供します。(クリーンアップコールバックは*ファイナライザー*と呼ばれることもあります。)</p>
 
-> **Note:** クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cleanup_callbacks)を参照してください。
+> [!NOTE]
+> クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cleanup_callbacks)を参照してください。
 
 コールバックで渡すレジストリーを作成します。
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```
@@ -73,7 +68,7 @@ registry.unregister(tokenObject);
 
 ここでは、 `FinalizationRegistry` が含まれている WeakRef の提案の著者が、その[説明文書](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)に盛り込んだ具体的なポイントを紹介します。
 
-> [ガベージコレクター](<https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3>) は複雑です。アプリケーションやライブラリーが、ガベージコレクターによる `FinalizationRegistry` のクリーンアップやファイナライザー [クリーンアップコールバック] の呼び出しをタイムリーに予測可能な方法で行うことに依存している場合、期待を裏切られる可能性があります。クリーンアップが予想よりもずっと遅く行われたり、まったく行われなかったりすることがあります。変化する原因には次のようなものがあります。
+> [ガベージコレクター](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3) は複雑です。アプリケーションやライブラリーが、ガベージコレクターによる `FinalizationRegistry` のクリーンアップやファイナライザー [クリーンアップコールバック] の呼び出しをタイムリーに予測可能な方法で行うことに依存している場合、期待を裏切られる可能性があります。クリーンアップが予想よりもずっと遅く行われたり、まったく行われなかったりすることがあります。変化する原因には次のようなものがあります。
 >
 > - あるオブジェクトが他のオブジェクトよりも早くガベージコレクションされることがあります。これは、世代別コレクションなどにより、同時に到達できなくなったとしても同様です。
 > - ガベージコレクションの作業は、差分技術やコンカレント技術を使って時間をかけて分割される可能性があります。
@@ -86,7 +81,7 @@ registry.unregister(tokenObject);
 
 クリーンアップコールバックには、いくつかの注意点があります。
 
--  開発者は、重要なプログラムロジックをクリーンアップコールバックに頼るべきではありません。クリーンアップコールバックは、プログラムの途中でメモリー使用量を削減するのに役立つかもしれませんが、それ以外ではほとんど役に立ちません。
+- 開発者は、重要なプログラムロジックをクリーンアップコールバックに頼るべきではありません。クリーンアップコールバックは、プログラムの途中でメモリー使用量を削減するのに役立つかもしれませんが、それ以外ではほとんど役に立ちません。
 - 適合する JavaScript の実装は、たとえガベージコレクションを行うものであっても、クリーンアップコールバックを呼び出すとは限りません。いつ、どのように呼び出すかは、 JavaScript エンジンの実装に完全に依存します。登録されたオブジェクトが回収されたとき、そのオブジェクトのためのクリーンアップコールバックは、そのときに呼ばれるかもしれないし、しばらくしてから呼ばれるかもしれないし、まったく呼ばれないかもしれません。
 - 多くの実装では、実行中のどこかの時点でクリーンアップコールバックが呼び出されると思われますが、それらの呼び出しは関連オブジェクトが再取得された後に実質的に行われるかもしれません。
 - また、通常はクリーンアップコールバックを呼び出す実装であっても、状況によっては呼び出さない可能性もあります。
@@ -101,7 +96,7 @@ registry.unregister(tokenObject);
 コールバックを渡すことでレジストリーを作成することができます。
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```

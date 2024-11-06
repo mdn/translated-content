@@ -1,15 +1,8 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
-original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/parse
 ---
+
 {{JSRef}}
 
 La méthode **`JSON.parse()`** analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne. On peut éventuellement utiliser cette fonction avec un paramètre de modification permettant de traiter l'objet avant qu'il soit renvoyé.
@@ -18,7 +11,9 @@ La méthode **`JSON.parse()`** analyse une chaîne de caractères JSON et constr
 
 ## Syntaxe
 
-    JSON.parse(texte[, reviver])
+```js
+JSON.parse(texte[, reviver])
+```
 
 ### Paramètres
 
@@ -41,11 +36,11 @@ Lève une exception {{jsxref("SyntaxError")}} si la chaine de caractère à anal
 
 ```js
 try {
-  JSON.parse('{}');              // {}
-  JSON.parse('true');            // true
-  JSON.parse('"toto"');          // "toto"
+  JSON.parse("{}"); // {}
+  JSON.parse("true"); // true
+  JSON.parse('"toto"'); // "toto"
   JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-  JSON.parse('null');            // null
+  JSON.parse("null"); // null
 } catch (e) {
   console.error("Parsing error:", e);
 }
@@ -59,17 +54,17 @@ Si le _reviver_ ne transforme que certaines valeurs et pas d'autres, assurez-vou
 
 ```js
 JSON.parse('{"p": 5}', (key, value) => {
-  if (typeof value === 'number') {
-    return value * 2;  // renvoie value * 2 pour les nombres
+  if (typeof value === "number") {
+    return value * 2; // renvoie value * 2 pour les nombres
   }
-  return value;        // pour le reste, la valeur est inchangée
+  return value; // pour le reste, la valeur est inchangée
 });
 
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-    console.log(key);            // on affiche le nom de la propriété dans la console
-    return value;                // et on renvoie la valeur inchangée.
+  console.log(key); // on affiche le nom de la propriété dans la console
+  return value; // et on renvoie la valeur inchangée.
 });
 
 // 1
@@ -85,21 +80,17 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ```js example-bad
 // les deux instructions qui suivent lèveront une SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{ "toto" : 1, }');
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Définition initiale. Implementée avec JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.JSON.parse")}}
+{{Compat}}
 
 ## Voir aussi
 

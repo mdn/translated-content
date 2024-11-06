@@ -1,15 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-browser-compat: http.headers.Cache-Control
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 
 {{HTTPSidebar}}
@@ -80,7 +71,7 @@ translation_of: Web/HTTP/Headers/Cache-Control
 - `共有キャッシュ`
   - : オリジンサーバーとクライアントの間に存在するキャッシュ (Proxy, CDN など)。1 つのレスポンスを保存し、それを複数のユーザーで再利用します。したがって、開発者は共有キャッシュにパーソナライズされたコンテンツをキャッシュとして保存することは避けるべきです。
 - `プライベートキャッシュ`
-  - : クライアント内に存在するキャッシュです。*ローカルキャッシュ*、あるいは単に*ブラウザーキャッシュ*などとも呼ばれます。ユーザーのためにパーソナライズされたコンテンツを保存し、再利用できます。
+  - : クライアント内に存在するキャッシュです。_ローカルキャッシュ_、あるいは単に*ブラウザーキャッシュ*などとも呼ばれます。ユーザーのためにパーソナライズされたコンテンツを保存し、再利用できます。
 - `レスポンスの格納`
   - : キャッシュ可能な場合には、レスポンスをキャッシュに保存します。しかし、そのまま再利用されるとは限りません。（通常、「キャッシュ」はレスポンスを保存することを意味します。）
 - `レスポンスの再利用`
@@ -191,7 +182,7 @@ Cache-Control: public, max-age=604800
 
 なお、`s-maxage` や `must-revalidate` もこの制限を解除します。
 
-リクエストに `Authorization` ヘッダーがない場合、あるいはレスポンスに ` s-maxage` または `must-revalidate` をすでに使用している場合は、` public` を使用する必要はありません。
+リクエストに `Authorization` ヘッダーがない場合、あるいはレスポンスに `s-maxage` または `must-revalidate` をすでに使用している場合は、`public` を使用する必要はありません。
 
 #### `must-understand`
 
@@ -213,7 +204,7 @@ Cache-Control: must-understand, no-store
 
 `no-transform` は、仲介者が（キャッシュを実装しているかどうかに関係なく）レスポンスの内容を変換すべきではないことを示します。
 
-注意: [Google’s Web Light](https://support.google.com/webmasters/answer/6211428) は、そのような仲介者の一種です。これは、キャッシュストアや低速接続のデータを最小化するために画像を変換し、オプトアウトオプションとして `no-transform` に対応します。
+注意: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) は、そのような仲介者の一種です。これは、キャッシュストアや低速接続のデータを最小化するために画像を変換し、オプトアウトオプションとして `no-transform` に対応します。
 
 #### `immutable`
 
@@ -304,7 +295,7 @@ Cache-Control: max-age=0
 
 ### `max-stale`
 
-リクエストディレクティブの `max-stale=N` は、クライアントが *N* 秒以内に失効した保存されたレスポンスを許可することを示します。
+リクエストディレクティブの `max-stale=N` は、クライアントが _N_ 秒以内に失効した保存されたレスポンスを許可することを示します。
 
 ```
 Cache-Control: max-stale=3600
@@ -364,7 +355,7 @@ Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 Cache-Control: no-store
 ```
 
-### “cache busting” における静的資産のキャッシュ
+### "cache busting" における静的資産のキャッシュ
 
 バージョン/ハッシュビルドを持つ静的資産を構築する場合、ファイル名やクエリー文字列にバージョン/ハッシュを追加することは、キャッシュを管理するための良い方法です。
 
@@ -393,7 +384,7 @@ React ライブラリーのバージョンは、ライブラリーを更新す�
 Cache-Control: max-age=31536000, immutable
 ```
 
-ライブラリーを更新したり、画像を編集したりすると、新しいコンテンツは新しい URL を持つはずなので、キャッシュは再利用されません。それを “cache busting” パターンと呼びます。
+ライブラリーを更新したり、画像を編集したりすると、新しいコンテンツは新しい URL を持つはずなので、キャッシュは再利用されません。それを "cache busting" パターンと呼びます。
 
 `no-cache` を使用して HTML レスポンス自体がキャッシュされないようにしてください。 `no-cache` では再検証することができるので、クライアントが HTML レスポンスや静的資産の新しいバージョンを正しく受信します。
 

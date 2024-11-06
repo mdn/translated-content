@@ -1,25 +1,17 @@
 ---
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
-tags:
-  - API
-  - 実験的
-  - PeriodicSyncManager
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - periodicSync
-browser-compat: api.ServiceWorkerRegistration.periodicSync
-translation_of: Web/API/ServiceWorkerRegistration/periodicSync
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`periodicSync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、定期的なバックグラウンド同期プロセスを管理する {{domxref('PeriodicSyncManager')}} インターフェイスへの参照を返します。
 
 ## 値
 
-{{domxref("PeriodicSyncManager")}} オブジェクトです。
+{{domxref('PeriodicSyncManager')}} オブジェクトです。
 
 ## 例
 
@@ -32,11 +24,9 @@ translation_of: Web/API/ServiceWorkerRegistration/periodicSync
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('periodicSync' in registration) {
-
+if ("periodicSync" in registration) {
   // Background Periodic Sync functionality
   const periodicSync = registration.periodicSync;
-
 }
 ```
 

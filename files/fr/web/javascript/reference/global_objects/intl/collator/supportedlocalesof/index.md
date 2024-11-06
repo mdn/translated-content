@@ -1,26 +1,19 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-collator-supportedlocalesof.html")}}
 
 ## Syntaxe
 
-    Intl.Collator.supportedLocalesOf(locales [, options])
+```js
+Intl.Collator.supportedLocalesOf(locales [, options])
+```
 
 ### Paramètres
 
@@ -43,26 +36,22 @@ Cette méthode renvoie un tableau qui est un sous-ensemble des balises de locale
 
 ## Exemples
 
-Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise,  `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
+Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise, `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.supportedLocalesOf', 'Intl.Collator.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Collator.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

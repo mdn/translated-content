@@ -1,8 +1,8 @@
 ---
 title: Pseudo-classes relatives à l'interface utilisateur
 slug: Learn/Forms/UI_pseudo-classes
-translation_of: Learn/Forms/UI_pseudo-classes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Dans les articles précédents, nous avons vu la mise en forme des différents contrôles de formulaire de façon générale. Cela inclut l'utilisation de certaines pseudo-classes, telles que `:checked` qui permet de cibler une case à cocher seulement lorsqu'elle est sélectionnée. Dans cet article, nous verrons en détails les différentes pseudo-classes disponibles et qui ont trait à l'interface utilisateur et qui permettent de mettre en forme les formulaires dans différents états.
@@ -44,7 +44,8 @@ Nous avons abordé ces pseudo-classes dans les articles précédents. Plus réce
 
 Il en existe de nombreuses autres, mais celles indiquées dans cette liste sont les plus utiles à première vue. Certaines des autres pseudo-classes permettent de résoudre des problèmes bien spécifiques ou ne sont pas encore prises en charge de façon homogène par les navigateurs. Celles de la liste précédente sont correctement prises en charge, mais il reste nécessaire de bien tester ses formulaires pour s'assurer qu'ils fonctionnent pour le public cible.
 
-> **Note :** Certaines des pseudo-classes vues ici portent sur la mise en forme des contrôles de formulaire selon leur état de validation (est-ce que la donnée saisie dans le champ est valide ou non&nbsp;?). Nous apprendrons comment paramétrer et contrôler les contraintes de validation dans notre prochain article sur [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation). En attendant, nous aborderons ce sujet de façon simple afin de ne pas créer de confusion.
+> [!NOTE]
+> Certaines des pseudo-classes vues ici portent sur la mise en forme des contrôles de formulaire selon leur état de validation (est-ce que la donnée saisie dans le champ est valide ou non&nbsp;?). Nous apprendrons comment paramétrer et contrôler les contraintes de validation dans notre prochain article sur [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation). En attendant, nous aborderons ce sujet de façon simple afin de ne pas créer de confusion.
 
 ## Mettre en forme les champs selon qu'ils sont obligatoires ou non
 
@@ -58,15 +59,15 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr/do
     <legend>Formulaire pour recueillir votre avis</legend>
     <div>
       <label for="prenom">Prénom : </label>
-      <input id="prenom" name="prenom" type="text" required>
+      <input id="prenom" name="prenom" type="text" required />
     </div>
     <div>
       <label for="nom">Nom : </label>
-      <input id="nom" name="nom" type="text" required>
+      <input id="nom" name="nom" type="text" required />
     </div>
     <div>
       <label for="email">Adresse électronique (pour vous répondre) : </label>
-      <input id="email" name="email" type="email">
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Envoyer</button></div>
   </fieldset>
@@ -97,9 +98,11 @@ Le formulaire qui précède n'est pas particulièrement mauvais, mais il n'est p
 
 Dans la prochaine section, nous verrons un meilleur exemple pour indiquer les champs obligatoires, qui utilise `:required` mais aussi du contenu généré.
 
-> **Note :** Il est probable que vous n'ayez pas souvent à utiliser la pseudo-classe `:optional`. Par défaut, les contrôles de formulaire sont optionnels et vous pouvez alors utiliser votre mise en forme par défaut pour les contrôles optionnels et rajouter les styles supplémentaires pour les contrôles obligatoires.
+> [!NOTE]
+> Il est probable que vous n'ayez pas souvent à utiliser la pseudo-classe `:optional`. Par défaut, les contrôles de formulaire sont optionnels et vous pouvez alors utiliser votre mise en forme par défaut pour les contrôles optionnels et rajouter les styles supplémentaires pour les contrôles obligatoires.
 
-> **Note :** Si un bouton radio fait partie d'un groupe de boutons radio qui portent le même nom et qu'il a l'attribut `required`, tous les boutons radio seront considérés comme invalides jusqu'à ce que l'un d'eux soit sélectionné. Toutefois, seul celui qui porte l'attribut `required` sera ciblé par la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required).
+> [!NOTE]
+> Si un bouton radio fait partie d'un groupe de boutons radio qui portent le même nom et qu'il a l'attribut `required`, tous les boutons radio seront considérés comme invalides jusqu'à ce que l'un d'eux soit sélectionné. Toutefois, seul celui qui porte l'attribut `required` sera ciblé par la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required).
 
 ## Utiliser du contenu généré avec des pseudo-classes
 
@@ -131,7 +134,8 @@ input[type="radio"]:checked::before {
 
 C'est utile ici, car les lecteurs d'écran indiquent déjà lorsqu'un bouton radio ou qu'une case à cocher est cochée/décochée et on ne veut pas qu'ils vocalisent un autre élément du DOM qui indique cet état de sélection, car cela pourrait être source de confusion. Avoir un indicateur purement visuel permet de résoudre ce problème.
 
-> **Note :** Cet exemple illustre également comment combiner une pseudo-classe et un pseudo-élément si nécessaire.
+> [!NOTE]
+> Cet exemple illustre également comment combiner une pseudo-classe et un pseudo-élément si nécessaire.
 
 Revenons à notre exemple obligatoire/optionnel précédent. Cette fois, nous ne modifierons pas l'apparence du champ, nous utiliserons du contenu généré afin d'ajouter un libellé ([voir le résultat ici](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
 
@@ -148,7 +152,7 @@ Les personnes qui utilisent un lecteur d'écran auront l'information qu'un champ
 ```html
 <div>
   <label for="prenom">Prénom : </label>
-  <input id="prenom" name="prenom" type="text" required>
+  <input id="prenom" name="prenom" type="text" required />
   <span></span>
 </div>
 ```
@@ -211,7 +215,7 @@ Comme dans l'exemple précédent, on utilise un élément `<span>` supplémentai
 ```html
 <div>
   <label for="prenom">Prénom *: </label>
-  <input id="prenom" name="prenom" type="text" required>
+  <input id="prenom" name="prenom" type="text" required />
   <span></span>
 </div>
 ```
@@ -234,19 +238,20 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
 
 Comme avant, on définit la position de l'élément `<span>` avec `position: relative` afin que le contenu généré puisse être placé relativement au contrôle auquel il s'applique. On positionne ensuite de façon absolue les différents contenus générés selon que les données sont valides ou invalides (avec une coche verte dans le premier cas et une croix rouge dans le second). Pour mettre en avant les données invalides et inviter à une action, on ajoute également une bordure rouge épaisse au contrôle correspondant.
 
-> **Note :** On utilise ici `::before` pour ajouter ces indicateurs, car on utilisait déjà `::after` pour les libellés «&nbsp;obligatoire&nbsp;».
+> [!NOTE]
+> On utilise ici `::before` pour ajouter ces indicateurs, car on utilisait déjà `::after` pour les libellés «&nbsp;obligatoire&nbsp;».
 
 Vous pouvez voir ici le résultat&nbsp;:
 
@@ -258,7 +263,8 @@ On voit ici comment les champs texte sont invalides lorsqu'ils sont vides et val
 
 Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/Input#attr-max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
 
-> **Note :** Les types de champs numériques sont&nbsp;: `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`.
+> [!NOTE]
+> Les types de champs numériques sont&nbsp;: `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`.
 
 On notera que les champs pour lesquels les données sont dans l'intervalle seront aussi ciblés par la pseudo-classe `:valid` et que les champs pour lesquels les données sont en dehors de l'intervalle seront également ciblés par la pseudo-classe `:invalid`. Pourquoi avoir les deux&nbsp;? Cela porte principalement sur la sémantique&nbsp;: savoir qu'une valeur est en dehors d'un intervalle est plus spécifique qu'une invalidité générique et on pourra alors fournir un message plus utile pour les valeurs en dehors d'un intervalle plutôt que de simplement indiquer que la valeur est invalide. Il est aussi possible de fournir les deux messages.
 
@@ -269,7 +275,7 @@ Le champ numérique utilisé pour l'exemple sera&nbsp;:
 ```html
 <div>
   <label for="age">Age (doit être supérieur à 12): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -308,11 +314,12 @@ Il s'agit de la même démarche que celle suivie avec l'exemple pour `:required`
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-Il est possible qu'un champ numérique soit obligatoire *et* qu'il soit en dehors de l'intervalle autorisé. Que se passe-t-il dans ce cas&nbsp;? Comme la règle `:out-of-range` apparaît après celle pour `:required`, [les règles de la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) s'appliquent et c'est le message pour l'intervalle qui est affiché.
+Il est possible qu'un champ numérique soit obligatoire _et_ qu'il soit en dehors de l'intervalle autorisé. Que se passe-t-il dans ce cas&nbsp;? Comme la règle `:out-of-range` apparaît après celle pour `:required`, [les règles de la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) s'appliquent et c'est le message pour l'intervalle qui est affiché.
 
 Cela fonctionne plutôt bien&nbsp;: lorsque la page charge pour initialement, c'est «&nbsp;Obligatoire&nbsp;» qui est montré avec une croix et une bordure rouge. Lorsqu'on saisit un âge valide (ici dans l'intervalle `12-120`), le champ devient valide. En revanche, si on change l'âge pour saisir une valeur en dehors de l'intervalle, le message «&nbsp;En dehors de l'intervalle autorisé&nbsp;» apparaît en lieu et place de «&nbsp;Obligatoire&nbsp;».
 
-> **Note :** Pour saisir une valeur invalide/en dehors de l'intervalle, il faudra placer le focus sur le contrôle et la saisir au clavier. En effet, les boutons d'incrément/décrément ne permettront pas de saisir une valeur en dehors de l'intervalle valide.
+> [!NOTE]
+> Pour saisir une valeur invalide/en dehors de l'intervalle, il faudra placer le focus sur le contrôle et la saisir au clavier. En effet, les boutons d'incrément/décrément ne permettront pas de saisir une valeur en dehors de l'intervalle valide.
 
 ## Mettre en forme les champs actifs ou désactivés, en lecture seule ou non
 
@@ -328,34 +335,47 @@ Prenons ce cas comme exemple. On commence par un formulaire HTML qui contient de
     <legend>Adresse de livraison</legend>
     <div>
       <label for="nom1">Nom : </label>
-      <input id="nom1" name="nom1" type="text" required>
+      <input id="nom1" name="nom1" type="text" required />
     </div>
     <div>
       <label for="adresse1">Adresse : </label>
-      <input id="adresse1" name="adresse1" type="text" required>
+      <input id="adresse1" name="adresse1" type="text" required />
     </div>
     <div>
       <label for="codepostal1">Code postal : </label>
-      <input id="codepostal1" name="codepostal1" type="text" required>
+      <input id="codepostal1" name="codepostal1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="facturation">
     <legend>Adresse de facturation</legend>
     <div>
-      <label for="facturation-checkbox">Identique à l'adresse de livraison :</label>
-      <input type="checkbox" id="facturation-checkbox" checked>
+      <label for="facturation-checkbox"
+        >Identique à l'adresse de livraison :</label
+      >
+      <input type="checkbox" id="facturation-checkbox" checked />
     </div>
     <div>
-      <label for="nom" class="libelle-facturation libelle-desactive">Nom : </label>
-      <input id="nom" name="nom" type="text" disabled required>
+      <label for="nom" class="libelle-facturation libelle-desactive"
+        >Nom :
+      </label>
+      <input id="nom" name="nom" type="text" disabled required />
     </div>
     <div>
-      <label for="adresse2" class="libelle-facturation libelle-desactive">Adresse : </label>
-      <input id="adresse2" name="adresse2" type="text" disabled required>
+      <label for="adresse2" class="libelle-facturation libelle-desactive"
+        >Adresse :
+      </label>
+      <input id="adresse2" name="adresse2" type="text" disabled required />
     </div>
     <div>
-      <label for="codepostal2" class="libelle-facturation libelle-desactive">Code postal : </label>
-      <input id="codepostal2" name="codepostal2" type="text" disabled required>
+      <label for="codepostal2" class="libelle-facturation libelle-desactive"
+        >Code postal :
+      </label>
+      <input
+        id="codepostal2"
+        name="codepostal2"
+        type="text"
+        disabled
+        required />
     </div>
   </fieldset>
 
@@ -382,26 +402,39 @@ Enfin, on utilise du JavaScript pour activer/désactiver les champs pour l'adres
 
 ```js
 // Attendre le chargement de la page
-document.addEventListener('DOMContentLoaded', function () {
-
-  // Ajoute un gestionnaire d'évènement `change` sur la case à cocher
-  document.getElementById('facturation-checkbox').addEventListener('change', basculerFacturation);
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // Ajoute un gestionnaire d'évènement `change` sur la case à cocher
+    document
+      .getElementById("facturation-checkbox")
+      .addEventListener("change", basculerFacturation);
+  },
+  false,
+);
 
 function basculerFacturation() {
   // On sélectionne les champs texte de l'adresse de facturation
-  let champsFacturation = document.querySelectorAll('#facturation input[type="text"]');
+  let champsFacturation = document.querySelectorAll(
+    '#facturation input[type="text"]',
+  );
   // On sélectionne les libellés de l'adresse de facturation
-  let libellesFacturation = document.querySelectorAll('.libelle-facturation');
+  let libellesFacturation = document.querySelectorAll(".libelle-facturation");
 
   // On active/désactive les champs et libellés
   for (let i = 0; i < champsFacturation.length; i++) {
     champsFacturation[i].disabled = !champsFacturation[i].disabled;
 
-    if(libellesFacturation[i].getAttribute('class') === 'libelle-facturation libelle-desactive') {
-      libellesFacturation[i].setAttribute('class', 'libelle-facturation');
+    if (
+      libellesFacturation[i].getAttribute("class") ===
+      "libelle-facturation libelle-desactive"
+    ) {
+      libellesFacturation[i].setAttribute("class", "libelle-facturation");
     } else {
-      libellesFacturation[i].setAttribute('class', 'libelle-facturation libelle-desactive');
+      libellesFacturation[i].setAttribute(
+        "class",
+        "libelle-facturation libelle-desactive",
+      );
     }
   }
 }
@@ -426,16 +459,17 @@ Voici le fragment HTML qui sera utilisé, on notera l'attribut `readonly`&nbsp;:
 ```html
 <div>
   <label for="nom">Nom : </label>
-  <input id="nom" name="nom" type="text"
-         value="M Dupont" readonly>
+  <input id="nom" name="nom" type="text" value="M Dupont" readonly />
 </div>
 ```
 
 Si vous essayez l'exemple interactif, vous pourrez voir que les éléments de formulaire situés en haut ne peuvent pas recevoir le focus. Toutefois, leurs valeurs sont envoyées avec le formulaire. On met en forme les contrôles du formulaire à l'aide des pseudo-classes `:read-only` et `:read-write`&nbsp;:
 
 ```css
-input:-moz-read-only, textarea:-moz-read-only,
-input:read-only, textarea:read-only {
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -461,7 +495,7 @@ Nous l'avons vu dans les articles précédents de ce module, les [boutons radio]
 - [`:default`](/fr/docs/Web/CSS/:default)
   - : Qui permet de cibler les boutons radio et cases à cocher qui sont sélectionnés par défaut lors du chargement de la page (grâce à la présence de l'attribut `checked`). Ils continuent d'être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même si la personne les désélectionne.
 - [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
-  - : Qui permet de cibler les boutons radio et cases à cocher qui ne sont ni cochés ni décochés. Ceux-ci sont considérés dans un état *indéterminé* et correspondront à la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate). Nous allons détailler cet aspect plus bas.
+  - : Qui permet de cibler les boutons radio et cases à cocher qui ne sont ni cochés ni décochés. Ceux-ci sont considérés dans un état _indéterminé_ et correspondront à la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate). Nous allons détailler cet aspect plus bas.
 
 ### `:checked`
 
@@ -513,7 +547,7 @@ Prenons comme exemples des versions modifiées de l'exemple précédent pour rap
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cerise" id="cerise">
+  <input type="radio" name="fruit" value="cerise" id="cerise" />
   <label for="cerise">Cerise</label>
   <span></span>
 </p>
@@ -544,7 +578,8 @@ Voici le résultat qu'on obtient&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **Note :** Vous pouvez également consulter [cet exemple `radios-checked-default.html` sur une page séparée](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (et [voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
+> [!NOTE]
+> Vous pouvez également consulter [cet exemple `radios-checked-default.html` sur une page séparée](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (et [voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
 
 Pour un exemple avec `:indeterminate`, on n'utilise pas de sélection par défaut (s'il y en avait une, l'état indéterminé n'aurait pas lieu). On met en forme les boutons radio indéterminés avec le fragment de CSS qui suit&nbsp;:
 
@@ -571,9 +606,11 @@ Voici le résultat correspondant&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **Note :** L'exemple est également disponible sur GitHub [sur une page séparée `radios-checked-indeterminate.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)).
+> [!NOTE]
+> L'exemple est également disponible sur GitHub [sur une page séparée `radios-checked-indeterminate.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)).
 
-> **Note :** Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Element/Input/checkbox#gérer_un_état_indéterminé) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox).
+> [!NOTE]
+> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Element/Input/checkbox#gérer_un_état_indéterminé) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox).
 
 ## D'autres pseudo-classes
 
@@ -581,7 +618,7 @@ Il existe d'autres pseudo-classes intéressantes et il serait trop long de les v
 
 Ces pseudo-classes sont correctement prises en charge par les navigateurs modernes&nbsp;:
 
-- La pseudo-classe [`:focus-within`](/fr/docs/Web/CSS/:focus-within) s'applique à un élément qui a le focus ou qui *contient* un élément qui a reçu le focus. Elle est utile si on veut mettre en avant un champ d'un formulaire qui a le focus.
+- La pseudo-classe [`:focus-within`](/fr/docs/Web/CSS/:focus-within) s'applique à un élément qui a le focus ou qui _contient_ un élément qui a reçu le focus. Elle est utile si on veut mettre en avant un champ d'un formulaire qui a le focus.
 - La pseudo-classe [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible) permet de cibler les éléments avec le focus qui ont reçu ce focus avec des interactions au clavier (plutôt qu'à la souris ou au doigt). Elle est utile si on veut distinguer visuellement le focus obtenu au clavier du focus obtenu autrement.
 - La pseudo-classe [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown) permet de cibler les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) et [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) pour lesquels les textes indicatifs (<i lang="en">placeholders</i>) s'affichent parce que la valeur de ces éléments est vide.
 
@@ -599,22 +636,3 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation).
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de champ de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- **Pseudo-classes CSS liées à l'interface utilisateur**
-- [Validation du formulaire côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité des contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

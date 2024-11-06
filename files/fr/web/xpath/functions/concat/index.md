@@ -1,18 +1,17 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/concat
-original_slug: Web/XPath/Fonctions/concat
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `concat` concatène deux ou plusieurs chaînes et retourne la chaîne résultante.
 
 ### Syntaxe
 
-    concat( chaîne1 , chaîne2 [, chaînen]* )
+```
+concat( chaîne1 , chaîne2 [, chaînen]* )
+```
 
 ### Arguments
 

@@ -1,15 +1,8 @@
 ---
 title: arguments オブジェクト
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - 関数
-  - JavaScript
-  - 名前空間
-  - リファレンス
-  - arguments
-browser-compat: javascript.functions.arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
@@ -18,24 +11,26 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 ## 解説
 
-> **Note:** ES6 互換のコードを書く場合は、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が推奨されます。
+> [!NOTE]
+> ES6 互換のコードを書く場合は、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が推奨されます。
 
-> **Note:** 「配列風」とは、 `arguments` が {{jsxref("Functions/arguments/length", "length")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{JSxRef("Array")}} の組込みメソッド、例えば {{jsxref("Array.forEach", "forEach()")}} や {{jsxref("Array.map", "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
+> [!NOTE]
+> 「配列風」とは、 `arguments` が {{jsxref("Functions/arguments/length", "length")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{JSxRef("Array")}} の組込みメソッド、例えば {{jsxref("Array.forEach", "forEach()")}} や {{jsxref("Array.map", "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
 
 `arguments` オブジェクトはすべての（[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)ではない）関数内で利用可能なローカル変数です。`arguments` オブジェクトを使うことにより、関数内で関数の引数を参照できます。このオブジェクトは、関数に渡された各引数に対する入力を含みます。最初の入力の添字は 0 から始まります。
 
 たとえば、もし関数に 3 つの引数が渡されたなら、次のようにその引数を参照できます。
 
 ```js
-arguments[0] // 1 番目の引数
-arguments[1] // 2 番目の引数
-arguments[2] // 3 番目の引数
+arguments[0]; // 1 番目の引数
+arguments[1]; // 2 番目の引数
+arguments[2]; // 3 番目の引数
 ```
 
 引数を設定したり再代入したりすることもできます。
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments` オブジェクトは {{jsxref("Array")}} ではありません。似ていますが、 `Array` のプロパティは {{jsxref("Array.length", "length")}} 以外ありません。たとえば、 {{jsxref("Array.pop", "pop()")}} メソッドはありません。
@@ -56,12 +51,12 @@ let args = Array.from(arguments);
 let args = [...arguments];
 ```
 
-`arguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxref("Math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
+`arguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxref("Math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  var longest = "";
+  for (var i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -112,13 +107,13 @@ function myConcat(separator) {
 
 ```js
 // "red, orange, blue" を返します
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // "elephant; giraffe; lion; cheetah" を返します
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // "sage. basil. oregano. pepper. parsley" を返します
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 ### HTML のリストを作る関数の定義
@@ -127,10 +122,10 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
+  var html = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  html += args.join('<li>');
-  html += '</' + type + 'l>'; // end list
+  html += args.join("<li>");
+  html += "</" + type + "l>"; // end list
   return html;
 }
 ```
@@ -138,7 +133,7 @@ function list(type) {
 この関数には任意の数の引数を渡すことができ、それぞれの引数を指定された型のリストに項目として追加します。例を示します。
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+let listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML の内容:
 "<ul><li>One<li>Two<li>Three</ul>"
@@ -160,7 +155,7 @@ foo(1, 2, 3); // [1, 2, 3]
 
 厳格モードでは、 `arguments` オブジェクトは関数に残余引数、デフォルト引数、分割引数が渡されたかどうかにかかわらず同じ動作をします。すなわち、関数の本体で変数に新しい値を代入しても、 `arguments` オブジェクトには影響しません。また、 `arguments` オブジェクトに新しい変数を代入しても、変数の値には影響ありません。
 
-> **Note:** `"use strict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params)が発生します。
+> **メモ:** `"use strict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params)が発生します。
 
 厳格モードでない関数で、単純な引数のみを渡した場合（すなわち、残余引数、デフォルト引数、分割引数ではない場合）、関数の本体で変数の値を新しい値にすると、 `arguments` オブジェクトと同期します。
 

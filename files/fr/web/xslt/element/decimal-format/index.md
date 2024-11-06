@@ -1,29 +1,28 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/decimal-format
-original_slug: Web/XSLT/decimal-format
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:decimal-format>` définit les caractères et symboles à utiliser lors de la conversion de nombres en chaînes à l'aide de la fonction `format-number( )`.
 
 ### Syntaxe
 
-    <xsl:decimal-format
-    	name=NOM
-    	decimal-separator=CARACTÈRE
-    	grouping-separator=CARACTÈRE
-    	infinity=CHAÎNE
-    	minus-sign=CARACTÈRE
-    	NaN=CHAÎNE
-    	percent=CARACTÈRE
-    	per-mille=CARACTÈRE
-    	zero-digit=CARACTÈRE
-    	digit=CARACTÈRE
-    	pattern-separator=CARACTÈRE />
+```xml
+<xsl:decimal-format
+  name=NOM
+  decimal-separator=CARACTÈRE
+  grouping-separator=CARACTÈRE
+  infinity=CHAÎNE
+  minus-sign=CARACTÈRE
+  NaN=CHAÎNE
+  percent=CARACTÈRE
+  per-mille=CARACTÈRE
+  zero-digit=CARACTÈRE
+  digit=CARACTÈRE
+  pattern-separator=CARACTÈRE />
+```
 
 ### Attributs obligatoires
 

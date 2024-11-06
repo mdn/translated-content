@@ -1,15 +1,8 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/iterator
 ---
+
 {{JSRef}}
 
 Le symbole **`Symbol.iterator`** définit l'itérateur par défaut d'un objet. C'est l'itérateur qui sera utilisé par [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of).
@@ -39,13 +32,13 @@ Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/
 Il est possible de construire un itérable de la façon suivante :
 
 ```js
-var monItérable = {}
+var monItérable = {};
 monItérable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...monItérable] // [1, 2, 3]
+[...monItérable]; // [1, 2, 3]
 ```
 
 On peut également définir ces itérables via des propriétés calculées dans des déclarations de classe ou dans des littéraux objets :
@@ -82,14 +75,11 @@ itérableMalFormé[Symbol.iterator] = () => 1
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.iterator', 'Symbol.iterator')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

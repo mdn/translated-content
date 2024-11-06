@@ -1,16 +1,8 @@
 ---
 title: PerformanceResourceTiming.responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - responseEnd
-translation_of: Web/API/PerformanceResourceTiming/responseEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`responseEnd`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur a reçu le dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui se produit en premier.
@@ -41,13 +33,19 @@ function print_PerformanceEntries() {
 }
 function print_start_and_end_properties(perfEntry) {
   // Imprime les horodatages des propriétés *start et *end
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+  properties = [
+    "connectStart",
+    "connectEnd",
+    "domainLookupStart",
+    "domainLookupEnd",
+    "fetchStart",
+    "redirectStart",
+    "redirectEnd",
+    "requestStart",
+    "responseStart",
+    "responseEnd",
+    "secureConnectionStart",
+  ];
 
   for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété
@@ -64,11 +62,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-responseend',
-        'responseEnd')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.responseEnd")}}
+{{Compat}}

@@ -1,18 +1,9 @@
 ---
-title: '<canvas> : l''élément de canevas graphique'
+title: "<canvas> : l'élément de canevas graphique"
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
-browser-compat: html.elements.canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/Canvas_API), ou l'API [WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 
@@ -105,7 +96,7 @@ Comme les autres éléments HTML, cet élément possède les [attributs globaux]
 - **`height`**
   - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
 - **`moz-opaque`** {{non-standard_inline}}{{deprecated_inline}}
-  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard [`canvas.getContext('2d', { alpha: false})`](fr/docs/Web/API/HTMLCanvasElement/getContext) à la place.
+  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard [`canvas.getContext('2d', { alpha: false})`](/fr/docs/Web/API/HTMLCanvasElement/getContext) à la place.
 - **`width`**
   - : La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.
 
@@ -136,7 +127,8 @@ La taille maximale d'un élément `<canvas>` dépend du navigateur utilisé. Voi
 | Safari     | 32 767 pixels    | 32 767 pixels    | 268 435 456 pixels (soit 16 384 x 16 384) |
 | IE         | 8 192 pixels     | 8 192 pixels     | ?                                         |
 
-> **Note :** Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
+> [!NOTE]
+> Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
 
 ## Exemples
 
@@ -155,9 +147,9 @@ Le fragment de code suivant ajoute un élément `canvas` au document. Un texte a
 On utilise également ce fragment de code JavaScript avec la méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) afin d'obtenir le contexte de dessin puis on dessine sur le canevas.
 
 ```js
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

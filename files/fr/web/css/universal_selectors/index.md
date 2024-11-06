@@ -1,14 +1,9 @@
 ---
 title: Sélecteurs universels
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Universal_selectors
-original_slug: Web/CSS/Sélecteurs_universels
 ---
-{{CSSRef("Selectors")}}
+
+{{CSSRef}}
 
 L'astérisque (\*) est le sélecteur universel en CSS. Il correspond à un élément de n'importe quel type.
 
@@ -26,7 +21,9 @@ En CSS 3, l'astérisque peut être combinée avec les espaces de nom :
 
 ## Syntaxe
 
-    * { style properties }
+```
+* { style properties }
+```
 
 L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs simples. Par exemple, `*.warning` et `.warning` seront équivalents.
 
@@ -35,12 +32,12 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 ### CSS
 
 ```css
-* [lang^=fr] {
-  color:green;
+* [lang^="fr"] {
+  color: green;
 }
 
 *.warning {
-  color:red;
+  color: red;
 }
 
 *#maincontent {
@@ -73,12 +70,8 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector')}}     | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                                                           |
-| {{SpecName('CSS3 Selectors', '#universal-selector', 'universal selector')}}         | {{Spec2('CSS3 Selectors')}} | Définition du comportement avec les espaces de noms et ajout d'indications pour omettre le sélecteur avec les pseudo-éléments. |
-| {{SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}

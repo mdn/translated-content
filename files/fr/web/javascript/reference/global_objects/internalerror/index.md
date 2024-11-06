@@ -1,10 +1,8 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
-browser-compat: javascript.builtins.InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 L'objet **`InternalError`** indique qu'une erreur interne liée au moteur JavaScript s'est produite.
@@ -46,7 +44,7 @@ function boucle(x) {
   if (x >= 10) {
     // "x >= 10" représente la condition d'arrêt
     return;
-  } 
+  }
   // faire des trucs
   boucle(x + 1); // l'appel récursif
 }
@@ -82,4 +80,3 @@ Cet objet ne fait partie d'aucune spécification.
 
 - [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
 - [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
-

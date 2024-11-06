@@ -1,0 +1,3 @@
+textRules:
+  # sorted by `LC_ALL=C sort` command
+  一二三,四五六.七八九: 0

@@ -1,18 +1,8 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - 字下げ
-  - レイアウト
-  - Reference
-  - recipe:css-property
-  - text-indent
-browser-compat: css.properties.text-indent
-translation_of: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 **`text-indent`** は CSS のプロパティで、ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定します。
@@ -32,12 +22,12 @@ text-indent: 40px;
    包含ブロックの幅に対する割合 */
 text-indent: 15%;
 
-/* Keyword values */
+/* キーワード値 */
 text-indent: 5em each-line;
 text-indent: 5em hanging;
 text-indent: 5em hanging each-line;
 
-/* Global values */
+/* グローバル値 */
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
@@ -65,15 +55,19 @@ text-indent: unset;
 
 ## 例
 
-<h2 id="Simple_indent">単純なインデントの例</h2>
+### 単純なインデントの例
 
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -87,76 +81,88 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Simple_indent','100%','100%') }}
+{{ EmbedLiveSample('単純なインデントの例','100%','100%') }}
 
-<h3 id="Skipping_indentation_on_the_first_paragraph">最初の段落の字下げをスキップ</h3>
+### 最初の段落の字下げをスキップ
 
 段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
-最初の段落とそれ以降の段落を別扱いにするには、次の例のように[隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)を使います。
+最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)を使います。
 
 #### HTML
 
 ```html
 <h2>Lorem ipsum</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
-venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor metus.
-Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus blandit eros
-et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur non, elementum ac
-sapien. Cras consequat turpis non augue ullamcorper, sit amet porttitor dui
-interdum.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
+  venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor
+  metus. Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus
+  blandit eros et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur
+  non, elementum ac sapien. Cras consequat turpis non augue ullamcorper, sit
+  amet porttitor dui interdum.
+</p>
 
-<p>Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
-tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla facilisi.
-In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor odio a semper.
-Donec vitae dapibus ipsum. Donec libero purus, convallis eu efficitur id, pulvinar
-elementum diam. Maecenas mollis blandit placerat. Ut gravida pellentesque nunc, in
-eleifend ante convallis sit amet.</p>
+<p>
+  Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
+  tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla
+  facilisi. In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor
+  odio a semper. Donec vitae dapibus ipsum. Donec libero purus, convallis eu
+  efficitur id, pulvinar elementum diam. Maecenas mollis blandit placerat. Ut
+  gravida pellentesque nunc, in eleifend ante convallis sit amet.
+</p>
 
 <h2>Donec ullamcorper elit nisl</h2>
 
-<p>Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce
-tempor in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
-nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit vestibulum
-nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-ac turpis egestas. Donec vulputate leo ut iaculis ultrices. Cras egestas rhoncus
-lorem. Nunc blandit tempus lectus, rutrum hendrerit orci eleifend id. Ut at quam
-velit.</p>
+<p>
+  Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce tempor
+  in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
+  nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit
+  vestibulum nulla. Pellentesque habitant morbi tristique senectus et netus et
+  malesuada fames ac turpis egestas. Donec vulputate leo ut iaculis ultrices.
+  Cras egestas rhoncus lorem. Nunc blandit tempus lectus, rutrum hendrerit orci
+  eleifend id. Ut at quam velit.
+</p>
 
-<p>Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
-sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
-iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus ac
-dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan libero,
-sed euismod ipsum ullamcorper sed.</p>
+<p>
+  Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
+  sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
+  iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus
+  ac dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan
+  libero, sed euismod ipsum ullamcorper sed.
+</p>
 ```
 
 #### CSS
 
 ```css
 p {
-    text-align: justify;
-    margin: 1em 0 0 0;
+  text-align: justify;
+  margin: 1em 0 0 0;
 }
 p + p {
-    text-indent: 2em;
-    margin: 0;
+  text-indent: 2em;
+  margin: 0;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}
+{{ EmbedLiveSample('最初の段落の字下げをスキップ','','500px') }}
 
-<h3 id="Percentage_indent">パーセント値の字下げ</h3>
+### パーセント値の字下げ
 
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -170,7 +176,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Percentage_indent','100%','100%') }}
+{{ EmbedLiveSample('パーセント値の字下げ','100%','100%') }}
 
 ## 仕様書
 

@@ -1,18 +1,8 @@
 ---
-title: 'Document: scroll事件'
+title: Document：scroll事件
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - 事件
-  - Reference
-  - 參考文件
-  - Scroll
-  - UIEvent
-browser-compat: api.Document.scroll_event
 ---
+
 {{APIRef}}
 
 **`scroll`** 事件會在捲動文件的可視區域時觸發。元件（Element）捲動相關請參見{{domxref("Element/scroll_event", "Element:&nbsp;scroll事件")}}。
@@ -40,7 +30,8 @@ browser-compat: api.Document.scroll_event
   </tbody>
 </table>
 
-> **註：**iOS的UIWebViews中，`scroll`事件不會在捲動時觸發，而只在捲動結束後觸發。請參見[Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari和WKWebViews不受本bug影響。
+> [!NOTE]
+> iOS 的 UIWebViews 中，`scroll`事件不會在捲動時觸發，而只在捲動結束後觸發。請參見 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 不受本 bug 影響。
 
 ## 範例
 
@@ -50,9 +41,7 @@ Since scroll events can fire at a high rate, the event handler shouldn't execute
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes thescroll event for requestAnimationFrame.
 
-
-
-有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。所以，建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}以調控事件的觸發次數，如下。
+有鑒於 `scroll` 事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如 DOM 修改）。所以，建議改用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 以調控事件的觸發次數，如下。
 
 不過需要注意，輸入事件和動畫影格的觸發速率大致相同，因此通常沒有必要進行下述的最佳化。本範例最佳化`requestAnimationFrame`的`scroll`事件。
 
@@ -66,11 +55,11 @@ function doSomething(scrollPos) {
   // 依據捲動位置進行某些操作
 }
 
-document.addEventListener('scroll', function(e) {
+document.addEventListener("scroll", function (e) {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(lastKnownScrollPosition);
       ticking = false;
     });

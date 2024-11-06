@@ -1,21 +1,8 @@
 ---
 title: Traiter les questions de soutien aux médias dans le contenu web
 slug: Web/Media/Formats/Support_issues
-tags:
-  - Audio
-  - Guide
-  - HTMLAudioElement
-  - HTMLMediaElement
-  - HTMLVideoElement
-  - Intermédiaire
-  - Media
-  - Son
-  - Sources
-  - Video
-  - WebRTC
-translation_of: Web/Media/Formats/Support_issues
-original_slug: Web/Media/Formats/Questions_sur_le_soutien
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 L'une des réalités du travail avec la présentation et la manipulation audio et vidéo sur le web est qu'il existe un certain nombre de formats de médias disponibles, de degrés de popularité variables et avec des capacités variées. La possibilité de choisir est bonne pour l'utilisateur, dans la mesure où il peut choisir le format qui répond le mieux à ses besoins. Il y a cependant un inconvénient : comme il y a un grand choix, avec tant de types de licences et de principes de conception différents, chaque développeur de navigateur web est laissé à lui-même pour décider des types de fichiers média et des codecs à prendre en charge.
@@ -41,13 +28,15 @@ Les images — qu'elles soient intégrés à l'aide de {{HTMLElement("img")}} ou
 Une fois que votre image a été convertie en forme progressive, vous pouvez simplement l'utiliser comme d'habitude.
 
 ```html
-<img src="/images/stafff-photo-huge-progressive.jpg"
-     alt="Photo du personnel, prise en janvier 1972">
+<img
+  src="/images/stafff-photo-huge-progressive.jpg"
+  alt="Photo du personnel, prise en janvier 1972" />
 ```
 
 Lors de l'utilisation d'une image progressive, les données sont stockées de telle sorte que le navigateur est en mesure de rendre une représentation de faible qualité de l'image dès que possible, puis de mettre à jour l'image au fur et à mesure de son chargement — ou une fois celui-ci terminé — pour la présenter en pleine qualité.
 
-> **Note :** Les images progressives (ou entrelacées) sont par nature légèrement plus grandes que les versions non progressives des mêmes images. C'est à vous de déterminer si l'entrelacement sera bénéfique pour vos utilisateurs.
+> [!NOTE]
+> Les images progressives (ou entrelacées) sont par nature légèrement plus grandes que les versions non progressives des mêmes images. C'est à vous de déterminer si l'entrelacement sera bénéfique pour vos utilisateurs.
 
 ## Vérification de la compatibilité en JavaScript
 

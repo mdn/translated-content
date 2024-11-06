@@ -1,18 +1,17 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/last
-original_slug: Web/XPath/Fonctions/last
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
 
 ### Syntaxe
 
-    last()
+```
+last()
+```
 
 ### Retour
 
@@ -20,7 +19,7 @@ Un entier égal à la taille du contexte dans le contexte d'évaluation d'expres
 
 ### Notes
 
-- Cette fonction est souvent utilisée avec la fonction [position()](fr/XPath/Fonctions/position) pour déterminer si un nœud particulier est le dernier d'un ensemble de nœud.
+- Cette fonction est souvent utilisée avec la fonction [position()](/fr/XPath/Fonctions/position) pour déterminer si un nœud particulier est le dernier d'un ensemble de nœud.
 
 ### Définition
 

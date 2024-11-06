@@ -1,12 +1,8 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-top-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-color`** définit la couleur utilisée pour la bordure haute d'un élément.
@@ -37,9 +33,13 @@ border-top-color: unset;
 - `<color>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté haut.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -61,9 +61,10 @@ border-top-color: unset;
 
 ```html
 <div class="maboite">
-  <p>Une boîte avec une bordure autour.
-     Notez le côté de la boîte qui est
-     <span class="texterouge">rouge</span>.</p>
+  <p>
+    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
+    <span class="texterouge">rouge</span>.
+  </p>
 </div>
 ```
 
@@ -73,16 +74,11 @@ border-top-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-top-color', 'border-top-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top-color")}}
+{{Compat}}
 
 ## Voir aussi
 

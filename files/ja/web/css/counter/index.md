@@ -1,16 +1,8 @@
 ---
 title: counter()
 slug: Web/CSS/counter
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS 関数
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/counter()
-original_slug: Web/CSS/counter()
-browser-compat: css.types.counter
 ---
+
 {{CSSRef}}
 
 **`counter()`** は [CSS](/ja/docs/Web/CSS) の関数で、指定された名前付きカウンターの現在値があれば、その文字列を返します。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)において用いるのが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
@@ -23,9 +15,11 @@ counter(countername);
 counter(countername, upper-roman)
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+
 [カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
 
-> **Note:** `counter()` 関数は CSS プロパティとも併用できますが、 {{CSSxRef("content")}} 以外のプロパティにおける対応は実験的であり、型または単位の引数への対応は限られています。
+> **メモ:** `counter()` 関数は CSS プロパティとも併用できますが、 {{CSSxRef("content")}} 以外のプロパティにおける対応は実験的であり、型または単位の引数への対応は限られています。
 >
 > [ブラウザーの互換性の表](#ブラウザーの互換性)を注意深く確認してから本番環境に用いてください。
 
@@ -66,8 +60,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -98,7 +92,7 @@ li {
 }
 li::after {
   content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+    counter(count, lower-alpha) "]";
 }
 ```
 
@@ -121,4 +115,4 @@ li::after {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS の [`counters()`](/ja/docs/Web/CSS/counters()) 関数
+- CSS の [`counters()`](</ja/docs/Web/CSS/counters()>) 関数

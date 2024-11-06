@@ -1,13 +1,8 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - WebVTT
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 Le pseudo-élément CSS **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#Styling_WebTT_cues) pour les médias avec des pistes VTT.
@@ -55,13 +50,11 @@ La règle CSS suivante permet d'avoir les indications textuelles dans un texte b
 
 ## Spécifications
 
-| Spécification                                                                | État                     | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## Voir aussi
 

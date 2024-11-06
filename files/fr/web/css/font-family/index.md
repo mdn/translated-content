@@ -1,12 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.
@@ -19,7 +15,8 @@ Pour fixer `font-family` et d'autres propriétés liées aux polices de caractè
 
 Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.
 
-> **Note :** La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
+> [!NOTE]
+> La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
 >
 > Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.
 
@@ -52,7 +49,9 @@ La propriété `font-family` permet de lister différentes familles de police, s
 Dans l'exemple suivant, on liste deux familles de police, la première utilise une valeur `<family-name>` et la seconde utilise une valeur `<generic-name>` :
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ### Valeurs
@@ -101,18 +100,30 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 Et ces déclarations sont **invalides** :
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -156,36 +167,26 @@ font-family: Hawaii 5-0, sans-serif;
 
 ```html
 <div class="exempleserif">
-Voici un exemple de police avec empattement (serif).
+  Voici un exemple de police avec empattement (serif).
 </div>
 
 <div class="exemplesansserif">
-Voici un exemple de police sans empattement (sans-serif).
+  Voici un exemple de police sans empattement (sans-serif).
 </div>
 
 <div class="exemplemonospace">
-Voici un exemple de police à chasse fixe (monospace).
+  Voici un exemple de police à chasse fixe (monospace).
 </div>
 
-<div class="exemplecursive">
-Voici un exemple de police cursive.
-</div>
+<div class="exemplecursive">Voici un exemple de police cursive.</div>
 
-<div class="exemplefantasy">
-Voici un exemple de police fantaisie.
-</div>
+<div class="exemplefantasy">Voici un exemple de police fantaisie.</div>
 
-<div class="exemplemath">
-Voici un exemple de police mathématique.
-</div>
+<div class="exemplemath">Voici un exemple de police mathématique.</div>
 
-<div class="exempleemoji">
-Voici un exemple de police emoji.
-</div>
+<div class="exempleemoji">Voici un exemple de police emoji.</div>
 
-<div class="exemplefangsong">
-Voici un exemple de police fangsong.
-</div>
+<div class="exemplefangsong">Voici un exemple de police fangsong.</div>
 ```
 
 ### Résultat
@@ -194,15 +195,8 @@ Voici un exemple de police fangsong.
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts', '#generic-font-families', 'generic font families')}} | {{Spec2('CSS4 Fonts')}} | Ajout de nouvelles familles génériques dont : `system-ui`, `emoji`, `math` et `fangsong`. |
-| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}                     | {{Spec2('CSS3 Fonts')}} | Aucune modification significative.                                                        |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}}         | {{Spec2('CSS2.1')}}         | Aucune modification significative.                                                        |
-| {{SpecName('CSS1', '#font-family', 'font-family')}}                                     | {{Spec2('CSS1')}}         | Définition initiale.                                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

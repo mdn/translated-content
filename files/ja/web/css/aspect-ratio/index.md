@@ -1,16 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-tags:
-  - CSS
-  - CSS プロパティ
-  - 画像
-  - リファレンス
-  - aspect-ratio
-  - recipe:css-property
-browser-compat: css.properties.aspect-ratio
-translation_of: Web/CSS/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの**推奨アスペクト比**を設定します。これは auto の大きさを計算したり、他のレイアウト関数で使用されたりします。
@@ -25,6 +17,8 @@ aspect-ratio: initial;
 aspect-ratio: revert;
 aspect-ratio: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
 
 ### 値
 
@@ -58,7 +52,14 @@ aspect-ratio: 0.5;
 Firefox では、内部のスタイルシートルールはこのようになっています。
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```

@@ -1,27 +1,26 @@
 ---
 title: Estilizando formularios HTML
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
-original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades. 
+En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Requisitos previos:</th>
       <td>
-        Conocimientos básicos de informática y una comprensión básica de 
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y 
+        Conocimientos básicos de informática y una comprensión básica de
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y
         <a href="/es/docs/Learn/CSS/First_steps">CSS</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        Comprender los problemas detrás del diseño de formularios y 
+        Comprender los problemas detrás del diseño de formularios y
         aprender algunas de las técnicas básicas de diseño que le serán útiles.
       </td>
     </tr>
@@ -29,6 +28,7 @@ En los artículos anteriores vimos todo el HTML que necesitas para crear y estru
 </table>
 
 ## ¿Porqué es tan difícil aplicar estilos a formularios con CSS?
+
 Se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt) en 1995; CSS fue lanzado a finales de 1996, y ningún navegador lo implementó correctamente por años. Los navegadores le dejaban el trabajo de manejar y renderizar los formularios a los sistemas operativos.
 
 Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido — y son, hasta el día de hoy — reacios a permitir el estilizado de estos porque los usuarios estaban acostumbrados al estilo de sus plataformas. Esto ha cambiado. Los dueños de los sitios web quieren estilos que encajen con el diseño de sus páginas más que nunca, y la plataforma web ha cambiado para hacer esto posible.
@@ -36,9 +36,11 @@ Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido 
 Para algunos controles, todavía es díficil reconstruirlos para permitir que se puedan estilizar, pero ya podemos usar CSS para estilizar muchas partes de los formularios, pero hay que estar atentos; tienes que tener cuidado para no romper la funcionalidad de este.
 
 ### No todos los controles se crean igual con CSS
+
 Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios; estos problemas se pueden dividir en tres categorías.
 
 #### Lo bueno
+
 A algunos elementos se les puede dar estilo con pocos o ningún problema independientemente de la plataforma. Entre estos se incluyen los siguientes elementos estructurales:
 
 1. {{HTMLElement("form")}}
@@ -50,14 +52,18 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 7. {{HTMLElement("output")}}
 
 #### Lo malo
+
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
+
 - Casillas de verificación ([checkbox](/es/docs/Web/HTML/Element/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Element/Input/radio)).
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Lo feo
+
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
+
 - [`<input type="color">`](/es/docs/Web/HTML/Element/input/color)
 - Controles relacionados al tiempo como [`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/es/docs/Web/HTML/Element/input/range)
@@ -71,7 +77,8 @@ El verdadero problema con todos estos controles es que tienen una estructura muy
 
 Si desea personalizar a fondo esos controles, realmente tiene que crear los suyos usando HTML, CSS y JavaScript. Esto está más allá del alcance de los artículos de formularios principales, pero lo analizamos en un artículo avanzado [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-> **Nota:** Hay algunos pseudoelementos CSS propietarios disponibles que le permiten diseñar componentes internos de estos controles de formulario, como {{cssxref('::-moz-range-track')}}, pero estos no son consistentes entre los navegadores , por lo que no se puede confiar. También los mencionaremos más adelante.
+> [!NOTE]
+> Hay algunos pseudoelementos CSS propietarios disponibles que le permiten diseñar componentes internos de estos controles de formulario, como {{cssxref('::-moz-range-track')}}, pero estos no son consistentes entre los navegadores , por lo que no se puede confiar. También los mencionaremos más adelante.
 
 ## Lo bueno
 
@@ -86,7 +93,10 @@ Veremos un ejemplo al final de este artículo para darle más ideas sobre el est
 Las funciones de fuente y texto CSS se pueden usar fácilmente con cualquier control (y sí, puede usar {{cssxref("@font-face")}} con controles de formulario). Sin embargo, el comportamiento del navegador suele ser inconsistente. De forma predeterminada, algunos controles no heredan {{cssxref("font-family")}} y {{cssxref("font-size")}} de sus padres. En su lugar, muchos navegadores utilizan la apariencia predeterminada del sistema. Para que la apariencia de sus formularios sea consistente con el resto de su contenido, puede agregar las siguientes reglas a su hoja de estilo:
 
 ```css
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -109,15 +119,18 @@ Todos los campos de texto tienen soporte completo para cada propiedad relacionad
 **Esto se debe a que cada control tiene sus propias reglas para el borde, el relleno (_padding_) y el margen**. Para dar el mismo tamaño a varios controles diferentes, puede usar la propiedad {{cssxref("box-sizing")}} junto con algunos valores consistentes para otras propiedades:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 ```
 
-En la captura de pantalla a continuación, la columna de la izquierda muestra la representación predeterminada de los controles de entrada `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}},`<input type="submit" >`, y {{htmlelement('button')}}. La columna de la derecha, por otro lado, muestra los mismos elementos con nuestra regla anterior aplicada a ellos. Observe cómo esto nos permite asegurarnos de que todos los elementos ocupen la misma cantidad de espacio, a pesar de las reglas predeterminadas de la plataforma para cada tipo de control.
+En la captura de pantalla a continuación, la columna de la izquierda muestra la representación predeterminada de los controles de entrada `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, y {{htmlelement('button')}}. La columna de la derecha, por otro lado, muestra los mismos elementos con nuestra regla anterior aplicada a ellos. Observe cómo esto nos permite asegurarnos de que todos los elementos ocupen la misma cantidad de espacio, a pesar de las reglas predeterminadas de la plataforma para cada tipo de control.
 
 ![Las propiedades del modelo de caja afectan a la mayoría de los tipos de entrada.](boxmodel_formcontrols1.png)
 
@@ -149,7 +162,8 @@ El `<fieldset>` también debe posicionarse, de modo que `<legend>` se posicione 
 
 El elemento {{HTMLElement("legend")}} es muy importante para la accesibilidad; las tecnologías de asistencia lo hablarán como parte de la etiqueta de cada elemento de formulario dentro del conjunto de campos, pero usar una técnica como la anterior está bien. El contenido de la leyenda aún se pronunciará de la misma manera; es sólo la posición visual la que ha cambiado.
 
-> **Nota:** También puede usar la propiedad {{cssxref("transform")}} para ayudar a posicionar su `<legend>`. Sin embargo, cuando lo coloca, por ejemplo, con un `transform: translateY();`, se mueve pero deja un feo espacio en el borde del `<fieldset>`, del que no es fácil deshacerse.
+> [!NOTE]
+> También puede usar la propiedad {{cssxref("transform")}} para ayudar a posicionar su `<legend>`. Sin embargo, cuando lo coloca, por ejemplo, con un `transform: translateY();`, se mueve pero deja un feo espacio en el borde del `<fieldset>`, del que no es fácil deshacerse.
 
 ## Un ejemplo de estilo específico
 
@@ -167,12 +181,12 @@ El HTML es solo un poco más complicado que el ejemplo que usamos en [el primer 
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -192,7 +206,7 @@ Agregue el código anterior en el cuerpo de su HTML.
 
 ¡Aquí es donde la diversión comienza! Antes de iniciar a codificar, necesitamos tres recursos adicionales:
 
-1. [El fondo de la postal](/en-US/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
+1. [El fondo de la postal](/es/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
 2. Una fuente de máquina de escribir: [La fuente "Secret Typewriter" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter): descargue el archivo TTF en el mismo directorio que el anterior.
 3. Una fuente dibujada a mano: [La fuente "Journal" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal): Descargue el archivo TTF en el mismo directorio que el anterior.
 
@@ -213,42 +227,44 @@ Primero, nos preparamos definiendo nuestras reglas {{cssxref("@font-face")}} y t
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 1.3rem sans-serif;
-  padding : 0.5em;
-  margin  : 0;
-  background : #222;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
 }
 
 form {
-  position : relative;
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background : #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 
   /* creamos nuestra malla (grid) */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
@@ -256,16 +272,19 @@ Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout)
 
 ```css
 h1 {
-  font : 1em "typewriter", monospace;
-  align-self : end;
+  font:
+    1em "typewriter",
+    monospace;
+  align-self: end;
 }
 
 #message {
-   grid-row: 1 / 5;
+  grid-row: 1 / 5;
 }
 
-#from, #reply {
-   display: flex;
+#from,
+#reply {
+  display: flex;
 }
 ```
 
@@ -275,28 +294,35 @@ Ahora podemos empezar a trabajar en los propios elementos del formulario. Primer
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 Los campos de texto requieren algunas reglas comunes. En otras palabras, eliminamos sus {{cssxref("border","borders")}} y {{cssxref("background","backgrounds")}}, y redefinimos sus {{cssxref("padding")}} y {{cssxref("margin")}}:
 
 ```css
-input, textarea {
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 80%;
-  background : none;
+input,
+textarea {
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 ```
 
 Cuando uno de estos campos tienen el foco, lo resaltamos con un fondo transparente gris claro (siempre es importante tener un estilo de foco, para la usabilidad y la accesibilidad del teclado):
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 ```
@@ -309,12 +335,12 @@ Los elementos {{HTMLElement("textarea")}} se representan de forma predeterminada
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 100%;
-  height  : 90%;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
 
   border-right: 1px solid;
 
@@ -329,24 +355,24 @@ El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con
 
 ```css
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
 button:after {
-  content      : " >>>";
+  content: " >>>";
 }
 
 button:hover,
 button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
+  outline: none;
+  background: #000;
+  color: #fff;
 }
 ```
 
@@ -356,7 +382,8 @@ button:focus {
 
 ![](updated-form-screenshot.jpg)
 
-> **Nota:** Si su ejemplo no funciona como esperaba y desea compararlo con nuestra versión, puede encontrarlo en GitHub; [verlo en vivo](https://mdn.github.io/learning-area/html/forms/postcard-example/) (ver también el [código fuente](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> [!NOTE]
+> Si su ejemplo no funciona como esperaba y desea compararlo con nuestra versión, puede encontrarlo en GitHub; [verlo en vivo](https://mdn.github.io/learning-area/html/forms/postcard-example/) (ver también el [código fuente](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
 
 ## ¡Pon a prueba tus habilidades!
 
@@ -368,22 +395,8 @@ Como puede ver, siempre que queramos crear formularios con solo campos de texto 
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Controles básicos de formularios nativos](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada de HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Estilizando formularios HTML](/es/docs/Learn/Forms/Styling_web_forms)
-- [Estilo de formulario avanzado](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases de interfaz de usuario](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación de formularios del lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Envío de datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### Temas avanzados
 
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Envío de formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-

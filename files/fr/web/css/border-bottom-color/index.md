@@ -1,12 +1,8 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-color`** permet de définir la couleur utilisée pour la bordure basse d'un élément.
@@ -34,12 +30,16 @@ border-bottom-color: unset;
 
 ### Valeurs
 
-- <`color>`
+- `<color>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté inférieur.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -61,9 +61,10 @@ border-bottom-color: unset;
 
 ```html
 <div class="maboite">
-  <p>Une boîte avec une bordure autour.
-     Notez le côté de la boîte qui est
-     <span class="texterouge">rouge</span>.</p>
+  <p>
+    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
+    <span class="texterouge">rouge</span>.
+  </p>
 </div>
 ```
 
@@ -73,16 +74,11 @@ border-bottom-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-color', 'border-bottom-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom-color', 'border-bottom-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-color")}}
+{{Compat}}
 
 ## Voir aussi
 

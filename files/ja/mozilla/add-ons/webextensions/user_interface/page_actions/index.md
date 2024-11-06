@@ -1,13 +1,8 @@
 ---
 title: アドレスバーボタン
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddressBarButton
-  - ページアクション
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSidebar}}
 
 このユーザーインターフェイスオプションは、ブラウザーのアドレスバーに追加されるボタンで、よく[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)と呼ばれます。ユーザーはボタンをクリックして拡張機能を操作します。
@@ -94,4 +89,4 @@ For details on how to create icons to use with your page action, see [Iconograph
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。

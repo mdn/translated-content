@@ -1,17 +1,8 @@
 ---
 title: scroll-padding-block-start
 slug: Web/CSS/scroll-padding-block-start
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding-block
-  - scroll-padding-block-start
-browser-compat: css.properties.scroll-padding-block-start
-translation_of: Web/CSS/scroll-padding-block-start
 ---
+
 {{CSSRef}}
 
 `scroll-padding-block-start` プロパティは、スクロールポートの*最適表示領域*のブロック方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。

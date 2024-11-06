@@ -1,27 +1,25 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/apply
 ---
+
 {{JSRef}}
 
 La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux)).
 
-> **Note :** Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
+> [!NOTE]
+> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
 
-> **Note :** Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition).
+> [!NOTE]
+> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition).
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
 ## Syntaxe
 
-    fun.apply(thisArg, [argsArray])
+```js
+fun.apply(thisArg, [argsArray]);
+```
 
 ### Paramètres
 
@@ -44,7 +42,8 @@ On peut aussi passer {{jsxref("Fonctions/arguments", "arguments ")}} en tant que
 
 Depuis la cinquième édition d'ECMAScript, il est possible d'utiliser des objet semblables à des tableaux à la place. En pratique tout objet possédant une propriété `length` et une propriété entière comprise entre `[0..length[` est un objet semblable à un tableau. On peut ainsi, par exemple, utiliser un objet {{domxref("NodeList")}} ou un objet quelconque comme `{'length': 2, '0': 'manger', '1': 'bananes'}`.
 
-> **Note :** Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
+> [!NOTE]
+> Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
 
 ## Exemples
 
@@ -60,13 +59,15 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **Note :** La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
+> [!NOTE]
+> La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructeur = this, fNouveauConstructeur = function() {
->     fConstructeur.apply(this, aArgs);
->   };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructeur = this,
+>     fNouveauConstructeur = function () {
+>       fConstructeur.apply(this, aArgs);
+>     };
 >   fNouveauConstructeur.prototype = fConstructeur.prototype;
 >   return new fNouveauConstructeur();
 > };
@@ -75,10 +76,10 @@ Function.prototype.construct = function (aArgs) {
 Exemple d'utilisation :
 
 ```js
-function MonConstructeur () {
-    for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this["propriété" + nProp] = arguments[nProp];
-    }
+function MonConstructeur() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["propriété" + nProp] = arguments[nProp];
+  }
 }
 
 var monTableau = [4, "Coucou monde !", false];
@@ -89,7 +90,8 @@ console.log(monInstance instanceof MonConstructeur); // "true"
 console.log(monInstance.constructor); // "MonConstructeur"
 ```
 
-> **Note :** On pourrait également utiliser {{jsxref("Object/__proto__", "Object.__proto__")}}
+> [!NOTE]
+> On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -112,7 +114,8 @@ console.log(monInstance.constructor); // "MonConstructeur"
 > };
 > ```
 
-> **Note :** Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
+> [!NOTE]
+> Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
 
 ### Utiliser `apply` et des fonctions natives
 
@@ -130,13 +133,11 @@ var max = Math.max.apply(null, nombres);
 var min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < nombres.length; i++) {
-  if (nombres[i] > max)
-    max = nombres[i];
-  if (nombres[i] < min)
-    min = nombres[i];
+  if (nombres[i] > max) max = nombres[i];
+  if (nombres[i] < min) min = nombres[i];
 }
 ```
 
@@ -148,8 +149,10 @@ function minimumDuTableau(tab) {
   var QUANTUM = 32768;
 
   for (var i = 0, longueur = tab.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                tab.slice(i, Math.min(i + QUANTUM, longueur)));
+    var submin = Math.min.apply(
+      null,
+      tab.slice(i, Math.min(i + QUANTUM, longueur)),
+    );
     min = Math.min(submin, min);
   }
 
@@ -161,16 +164,11 @@ var min = minimumDuTableau([5, 6, 2, 3, 7]);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,20 +1,13 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - CSS Text Decoration
-  - プロパティ
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-underline-offset
-browser-compat: css.properties.text-underline-offset
-translation_of: Web/CSS/text-underline-offset
 ---
+
 {{CSSRef}}
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
+
+{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
 `text-underline-offset` は {{cssxref('text-decoration')}} の一括指定の一部ではありません。一つの要素が複数の `text-decoration` による線を持つため、 `text-underline-offset` は下線のみに影響し、 `overline` や `line-through` などの他の装飾線には影響**しません**。
 
@@ -63,8 +56,10 @@ text-underline-offset: unset;
 
 ```html
 <p class="oneline">Here's some text with an offset wavy red underline!</p>
-<br>
-<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+<br />
+<p class="twolines">
+  This text has lines both above and below it. Only the bottom one is offset.
+</p>
 ```
 
 ```css

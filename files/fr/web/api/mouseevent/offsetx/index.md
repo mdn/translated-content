@@ -1,22 +1,17 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
-tags:
-  - API
-  - Experimental
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MouseEvent/offsetX
 ---
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
+
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`offsetX`** de l'interface {{domxref("MouseEvent")}} fournit le décalage sur l'axe X du pointeur de la souris entre cet évènement et la bordure de la marge intérieure du noeud cible.
 
 ## Syntaxe
 
-    var xOffset = instanceOfMouseEvent.offsetX;
+```js
+var xOffset = instanceOfMouseEvent.offsetX;
+```
 
 ### Valeur renvoyée
 
@@ -24,13 +19,11 @@ Un nombre à virgule flottante double précision `double`. Les premières versio
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View', '#dom-mouseevent-offsetx', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MouseEvent.offsetX")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.writing-mode
-translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 **`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。
@@ -56,7 +48,7 @@ writing-mode: unset;
   - : SVG1 文書を除き、非推奨です。CSS では、`horizontal-tb` を代わりに使用してください。
 - `tb` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
-- `tb-lr` {{deprecated_inline}}
+- `tb-lr` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-lr` を代わりに使用してください。
 - `tb-rl` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
@@ -130,48 +122,55 @@ HTML は単純な {{HTMLElement("table")}} であり、行方向に書字方向�
 
 ```css hidden
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
-td, th {
-  border: 1px black solid; padding: 3px;
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
 }
 th {
   background-color: lightgray;
 }
 .example {
-  height:75px;
-  width:75px;
+  height: 75px;
+  width: 75px;
 }
 ```
 
 内容物の方向を調整する CSS は次のようになります。
 
 ```css
-.example.Text1 span, .example.Text1 {
+.example.Text1 span,
+.example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
 }
 
-.example.Text2 span, .example.Text2 {
+.example.Text2 span,
+.example.Text2 {
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
 }
 
-.example.Text3 span, .example.Text3 {
+.example.Text3 span,
+.example.Text3 {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
 }
 
-.example.Text4 span, .example.Text4 {
+.example.Text4 span,
+.example.Text4 {
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: sideways-lr;
 }
 
-.example.Text5 span, .example.Text5 {
+.example.Text5 span,
+.example.Text5 {
   writing-mode: sideways-rl;
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
@@ -202,5 +201,5 @@ th {
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
 - [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
-- [Styling vertical text (Chinse, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - 広範なブラウザーの対応試験結果: [https://w3c.github.io/i18n-tests/results/writing-mode-vertical](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)

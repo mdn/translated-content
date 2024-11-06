@@ -1,16 +1,9 @@
 ---
-title: '<base> : l''élément pour l''URL de base du document'
+title: "<base> : l'élément pour l'URL de base du document"
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-translation_of: Web/HTML/Element/base
-browser-compat: html.elements.base
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<base>`** définit l'URL de base à utiliser pour recomposer toutes les URL relatives contenues dans un document. Il ne peut y avoir qu'un seul élément `<base>` au sein d'un document.
 
@@ -74,7 +67,8 @@ Il est possible d'accéder à l'URL de base d'un document via un script en utili
 
 Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
 
-> **Attention :** Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
+> [!WARNING]
+> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
 
 - **`href`**
   - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.
@@ -100,24 +94,24 @@ Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs p
 
 Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
 
-1.  Soit `<base href="https://example.com">`
-2.  … et ce lien : `<a href="#ancre">Anker</a>`
-3.  … le lien enverra vers `https://example.com/#ancre`.
+1. Soit `<base href="https://example.com">`
+2. … et ce lien : `<a href="#ancre">Anker</a>`
+3. … le lien enverra vers `https://example.com/#ancre`.
 
 ### Open Graph
 
 Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Exemples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Spécifications

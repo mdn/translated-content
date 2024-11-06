@@ -1,18 +1,11 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() メソッド"
+short-title: importNode()
 slug: Web/API/Document/importNode
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - ノード
-  - リファレンス
-  - コピー
-  - importNode
-browser-compat: api.Document.importNode
-translation_of: Web/API/Document/importNode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} オブジェクトの **`importNode()`** メソッドは、後で現在の文書に挿入するために、他の文書から {{domxref("Node")}} または {{domxref("DocumentFragment")}} の複製を作成します。
@@ -23,7 +16,7 @@ translation_of: Web/API/Document/importNode
 
 ## 構文
 
-```js
+```js-nolint
 importNode(externalNode)
 importNode(externalNode, deep)
 ```
@@ -43,12 +36,12 @@ importNode(externalNode, deep)
 
 インポートする側の文書のスコープにコピーされた `importedNode` です。
 
-> **Note:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
+> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
 
 ## 例
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
@@ -61,7 +54,8 @@ document.getElementById("container").appendChild(newNode);
 - {{domXref("document.importNode()")}} でクローンする、または
 - {{domXref("document.adoptNode()")}} で移行する
 
-> **Note:** Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
+> [!NOTE]
+> Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
 
 {{domXref("Node.ownerDocument")}} の問題に関して詳しくは、W3C DOM FAQ を参照してください。
 

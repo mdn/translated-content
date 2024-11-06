@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet.
@@ -18,7 +11,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 
 ## Syntaxe
 
-    obj.toString()
+```js
+obj.toString();
+```
 
 ### Valeur de retour
 
@@ -30,10 +25,11 @@ Chaque object possède une méthode `toString()` qui est appelée de façon auto
 
 ```js
 var o = new Object();
-o.toString();           // renvoie [object Object]
+o.toString(); // renvoie [object Object]
 ```
 
-> **Note :** À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
+> [!NOTE]
+> À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
 
 ## Exemples
 
@@ -51,7 +47,7 @@ function Chien(nom, race, couleur, sexe) {
   this.sexe = sexe;
 }
 
-monChien = new Chien('Gabby', 'Labrador', 'chocolat', 'femelle');
+monChien = new Chien("Gabby", "Labrador", "chocolat", "femelle");
 ```
 
 Si on appelle la méthode `toString()` sur cet objet, on aura le résultat suivant (provenant de la méthode originale, héritée d'{{jsxref("Object")}}) :
@@ -64,12 +60,20 @@ Dans le code qui suit, on surcharge la méthode `toString()` avec `chienToString
 
 ```js
 Chien.prototype.toString = function chienToString() {
-  var ret = 'Le chien ' + this.nom + ' est un ' + this.race + ' ' + this.sexe + ' ' + this.couleur;
+  var ret =
+    "Le chien " +
+    this.nom +
+    " est un " +
+    this.race +
+    " " +
+    this.sexe +
+    " " +
+    this.couleur;
   return ret;
-}
+};
 ```
 
-En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()`qui renverra la chaîne suivante :
+En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()` qui renverra la chaîne suivante :
 
 ```js
 Le chien Gabby est un labrador femelle chocolat.
@@ -82,27 +86,22 @@ Le chien Gabby est un labrador femelle chocolat.
 ```js
 var toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Depuis JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.                                                                                                                |
-| {{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | Lorsque la méthode est appelée sur {{jsxref("null")}}, elle renvoie `[object Null]`, et sur {{jsxref( "undefined")}} elle renvoie `[object Undefined]` |
-| {{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                                                                                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

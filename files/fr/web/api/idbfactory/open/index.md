@@ -1,14 +1,8 @@
 ---
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données).
@@ -25,8 +19,10 @@ Cette méthode peut également émettre les évènements `upgradeneeded`, `block
 
 La syntaxe standard est la suivante&nbsp;:
 
-    var IDBOpenDBRequest = indexedDB.open(nom);
-    var IDBOpenDBRequest = indexedDB.open(nom, version);
+```js
+var IDBOpenDBRequest = indexedDB.open(nom);
+var IDBOpenDBRequest = indexedDB.open(nom, version);
+```
 
 ### Paramètres
 
@@ -41,9 +37,11 @@ La syntaxe standard est la suivante&nbsp;:
 
   - : Dans Gecko, à partir de [la version 26](/fr/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
 
-    > **Attention :** l’attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
+    > [!WARNING]
+    > L'attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
 
-> **Note :** Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
+> [!NOTE]
+> Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
 
 ### Valeur de retour
 
@@ -55,7 +53,7 @@ Cette méthode peut lever une {{domxref("DOMException")}} de type suivant&nbsp;:
 
 | Exception   | Description                                                                |
 | ----------- | -------------------------------------------------------------------------- |
-| `TypeError` | La valeur de version est zéro ou un nombre négatif ou n’est pas un nombre. |
+| `TypeError` | La valeur de version est zéro ou un nombre négatif ou n'est pas un nombre. |
 
 ## Exemples
 
@@ -65,16 +63,24 @@ Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la s
 var request = window.indexedDB.open("toDoList", 4);
 ```
 
-Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([cf. l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var note = document.querySelector("ul");
 
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // NE PAS utiliser "var indexedDB = ..." si on n’est pas dans une fonction.
 // On pourrait avoir besoin de références vers quelques objets window.IDB* :
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // Mozilla n’a jamais préfixé ces objets, donc on n’a pas besoin de window.mozIDB*
 
 // On ouvre la version 4 de la base de données
@@ -82,13 +88,13 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // On ajoute deux gestionnaires d'évènements
 // Le premier utilisé en cas d'échec
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
 };
 
 // Et le second en cas de réussite
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // On stocke le résultat de l'ouverture dans la
   // variable db qui sera utilisée par la suite
@@ -99,14 +105,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory.open")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -116,4 +119,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés&nbsp;: {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier&nbsp;: {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs&nbsp;: {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

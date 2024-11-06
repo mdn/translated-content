@@ -1,27 +1,16 @@
 ---
-title: '<embed> : l''élément de contenu externe embarqué'
+title: "<embed> : l'élément de contenu externe embarqué"
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
-translation_of: Web/HTML/Element/embed
-browser-compat: html.elements.embed
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note :** Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
+> [!NOTE]
+> Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
 
 Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
 
@@ -31,19 +20,16 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
       <th scope="row">
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          title="HTML/Content categories#Flow content"
           >Contenu de flux</a
         >,
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          title="HTML/Content categories#phrasing_content"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"
@@ -123,10 +109,15 @@ Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attri
 
 Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
 
-## Exemple
+## Exemples
 
 ```html
-<embed type="video/quicktime" src="film.mov" width="640" height="480" title="Titre de ma vidéo">
+<embed
+  type="video/quicktime"
+  src="film.mov"
+  width="640"
+  height="480"
+  title="Titre de ma vidéo" />
 ```
 
 ## Accessibilité

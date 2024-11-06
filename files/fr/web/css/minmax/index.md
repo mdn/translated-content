@@ -1,9 +1,8 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
-original_slug: Web/CSS/minmax()
 ---
+
 {{CSSRef}}
 
 La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
@@ -99,15 +98,9 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ```html
 <div id="container">
-  <div>
-    Aussi large que le contenu, large d'au plus 300 pixels.
-  </div>
-  <div>
-    Item flexible mais dont la largeur vaut au moins 200 pixels.
-  </div>
-  <div>
-    Item avec une largeur de 150 pixels.
-  </div>
+  <div>Aussi large que le contenu, large d'au plus 300 pixels.</div>
+  <div>Item flexible mais dont la largeur vaut au moins 200 pixels.</div>
+  <div>Item avec une largeur de 150 pixels.</div>
 </div>
 ```
 
@@ -117,13 +110,11 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## Voir aussi
 

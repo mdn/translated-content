@@ -1,9 +1,8 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 La méthode **`at()`** prend comme argument un entier et renvoie l'élément du tableau typé situé à cette position. Il est possible d'utiliser des entiers positifs et négatifs. Si l'argument est négatif, la position est relative à la fin du tableau.
@@ -15,7 +14,7 @@ L'accès aux éléments d'un tableau typé en utilisant les crochets ne permet q
 ## Syntaxe
 
 ```js
-at(indice)
+at(indice);
 ```
 
 ### Paramètres
@@ -54,7 +53,7 @@ On compare ici différentes façons d'accéder à l'avant-dernier élément d'un
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // En utilisant la propriété length
-const avecLength = uint8[uint8.length-2];
+const avecLength = uint8[uint8.length - 2];
 console.log(avecLength); // Affiche 11 dans la console
 
 // En utilisant la méthode slice()

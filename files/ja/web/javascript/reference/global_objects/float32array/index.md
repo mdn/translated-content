@@ -1,15 +1,8 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Float32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
+
 {{JSRef}}
 
 **`Float32Array`** は型付き配列で、プラットフォームのバイト順による 32 ビット浮動小数点数 (C 言語の `float` データ型に相当) の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
@@ -112,7 +105,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // 配列から
-var arr = new Float32Array([21,31]);
+var arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -125,7 +118,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Float32Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```

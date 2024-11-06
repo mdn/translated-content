@@ -1,29 +1,17 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-  - Polyfill
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 Метод **`at()`** принимает значение в виде целого числа и возвращает элемент массива с данным индексом. В качестве аргумента метод принимает положительные и отрицательные числа. При отрицательном значении отсчёт происходит с конца массива.
-
-Получение элементов массива с помощью квадратных скобок по-прежнему остаётся корректным способом. Например, `array[0]` вернёт первый элемент. Однако, при работе с элементами в конце массива больше нет необходимости прибегать к {{jsxref('Array.prototype.length','array.length')}}. Например, для получения последнего элемента, вместо `array[array.length-1]` можно вызвать `array.at(-1)`. [(Смотрите примеры ниже)](#примеры)
 
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## Синтаксис
 
-```js
+```js-nolint
 at(index)
 ```
 
@@ -36,6 +24,14 @@ at(index)
 
 Элемент массива, соответствующий переданному индексу. Если переданный индекс не может быть найден, возвращает {{jsxref('undefined')}}.
 
+## Описание
+
+Метод `at()` является эквивиалентом получения элементов массива с помощью квадратных скобок с использованием неотрицательного индекса. Например, `array[0]` и `array.at(0)` оба вернут первый элемент. Однако, при вычислении значения с конца массива, нельзя использовать `array[-1]` как в Python или R, потому что все значения внутри квадратных скобок трактуются буквально как строковые свойства. Из-за этого попытка обращения к -1 элементу будет прочитана как `array["-1"]`, что является нормальным строковым значением, а не индексом массива.
+
+Обычной практикой является получении числа элементов массива {{jsxref("Array/length", "length")}} и последующее вычисление значения индекса — например, `array[array.length - 1]`. Метод `at()` разрешает относительную индексацию, поэтому может быть сокращено до `array.at(-1)`.
+
+Метод `at()` — это [generic](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Он ожидает только, что значение `this` будет иметь свойство `length` и свойства с числовыми ключом.
+
 ## Примеры
 
 ### Возврат последнего элемента массива
@@ -44,7 +40,7 @@ at(index)
 
 ```js
 // Массив со значениями
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // Функция, которая возвращает последний элемент переданного массива
 function returnLast(arr) {
@@ -56,7 +52,7 @@ const item1 = returnLast(cart);
 console.log(item1); // Выведет: 'pear'
 
 // Добавить элемент в наш массив 'cart'
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // Выведет: 'orange'
 ```
@@ -67,10 +63,10 @@ console.log(item2); // Выведет: 'orange'
 
 ```js
 // Наш массив с элементами
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Использование свойства 'length'
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // Выведет: 'green'
 
 // Использование метода slice(). Обратите внимание, что возвращается массив
@@ -82,11 +78,24 @@ const atWay = colors.at(-2);
 console.log(atWay); // Выведет: 'green'
 ```
 
+### Вызов at() в массивоподобных объектах
+
+Метод `at()` считывает свойство `length` для значения `this` и вычисляет индекс для обращения.
+
+```js
+const arrayLike = {
+  length: 2,
+  0: "a",
+  1: "b",
+};
+console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
+```
+
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

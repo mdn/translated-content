@@ -1,18 +1,17 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/string
-original_slug: Web/XPath/Fonctions/string
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `string` convertit l'argument passé en une chaîne.
 
 ### Syntaxe
 
-    string( [objet] )
+```
+string( [objet] )
+```
 
 ### Arguments
 

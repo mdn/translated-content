@@ -1,16 +1,8 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - CSS プロパティ
-  - 合成と混合
-  - NeedsContent
-  - isolation
-  - recipe:css-property
-browser-compat: css.properties.isolation
-translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
@@ -42,11 +34,11 @@ isolation: unset;
 - `isolate`
   - : 新しい重ね合わせコンテキストが必ず作成されます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
@@ -71,7 +63,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

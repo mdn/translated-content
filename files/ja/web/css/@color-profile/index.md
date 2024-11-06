@@ -1,17 +1,8 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Color
-  - color-profile
-browser-compat: css.at-rules.color-profile
-translation_of: Web/CSS/@color-profile
 ---
+
 {{CSSRef}}
 
 **`@color-profile`** は [CSS](/ja/docs/Web/CSS) の{{cssxref("at-rule", "アットルール", "", 1)}}で、色を指定するために後で使用する {{cssxref("color_value/color()", "color()")}} 関数で使用できるカラープロファイルを定義し名前を付けます。
@@ -20,7 +11,7 @@ translation_of: Web/CSS/@color-profile
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -50,10 +41,10 @@ translation_of: Web/CSS/@color-profile
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 .header {
-  background-color:   color(--swop5c 0% 70% 20% 0%);
+  background-color: color(--swop5c 0% 70% 20% 0%);
 }
 ```
 

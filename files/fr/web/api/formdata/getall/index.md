@@ -1,21 +1,16 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - getAll
-translation_of: Web/API/FormData/getAll
 ---
-{{APIRef("XMLHttpRequest")}}
+
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -43,25 +38,23 @@ var formData = new FormData();
 Si nous ajoutons deux valeurs `username` en utilisant {{domxref("FormData.append")}} :
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 La fonction `getAll()` suivante va retourner chaque valeurs de `username` dans un tableau :
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 

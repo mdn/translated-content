@@ -1,22 +1,14 @@
 ---
 title: CSS ボックス配置
-slug: Web/CSS/CSS_Box_Alignment
-tags:
-  - CSS
-  - CSS ボックス配置
-  - グリッドレイアウト
-  - ガイド
-  - 配置
-  - ボックス配置
-  - フレックスボックス
-  - 段組み
-translation_of: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
+
 {{CSSRef}}
 
 CSS ボックス配置 (CSS Box Alignment) モジュールは、ブロックレイアウト、表レイアウト、フレックスレイアウト、グリッドレイアウトなどの様々な CSS ボックスレイアウトにおける、ボックスの配置に関する機能を定義します。このモジュールは CSS 全体において一貫性のある配置方法を作成することを目指しています。この文書はこの仕様書にある全般的な概念を解説します。
 
-> **Note:** ボックス配置がどのように適用されるかは、各レイアウト方式のドキュメントに詳しく記載されています。
+> [!NOTE]
+> ボックス配置がどのように適用されるかは、各レイアウト方式のドキュメントに詳しく記載されています。
 
 ## 古い配置方法
 
@@ -26,7 +18,7 @@ CSS は伝統的に、配置機能がとても制約されていました。{{cs
 
 ## 基本的な例
 
-次の例は、ボックス配置のプロパティの一部が[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)にどのように適用されるかを示しています。
+次の例は、ボックス配置のプロパティの一部が[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)にどのように適用されるかを示しています。
 
 ## CSS グリッドレイアウトの配置の例
 
@@ -165,7 +157,8 @@ CSS は伝統的に、配置機能がとても制約されていました。{{cs
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 700)}}
 
-> **Note:** 初期のグリッドの実装は `-gap` プロパティに `grid-` 接頭辞を付けていました。すべてのブラウザーが接頭辞なしのプロパティに対応していますが、例やチュートリアルでは古いプロパティである {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, {{cssxref("gap", "grid-gap")}} を見かけることがあるかもしれません。接頭辞つきのものは接頭辞なしの物の別名として保持される予定です。
+> [!NOTE]
+> 初期のグリッドの実装は `-gap` プロパティに `grid-` 接頭辞を付けていました。すべてのブラウザーが接頭辞なしのプロパティに対応していますが、例やチュートリアルでは古いプロパティである {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, {{cssxref("gap", "grid-gap")}} を見かけることがあるかもしれません。接頭辞つきのものは接頭辞なしの物の別名として保持される予定です。
 
 また、スペース配分キーワードを使用したり、アイテムに余白を設けたりすると、表示される視覚的な溝が大きくなる場合がありますので注意してください。
 
@@ -205,9 +198,9 @@ CSS ボックス配置のプロパティは、相互作用する仕様に応じ�
 
 ## ガイド
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox guide: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッド guide: _[CSS グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 
 ## 外部リソース
 

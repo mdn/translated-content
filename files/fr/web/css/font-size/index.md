@@ -1,12 +1,8 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 La propriété **`font-size`** définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités `em` ou `ex`).
@@ -60,11 +56,16 @@ La propriété `font-size` peut être définie de deux façons :
 - `<percentage>`
   - : Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.
 
-> **Note :** Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
+> [!NOTE]
+> Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Les différentes approches
 
@@ -98,7 +99,7 @@ Un autre aspect important est la **composition** des valeurs exprimées avec cet
 <div>
   <span>
     Extérieur
-      <span>Intérieur</span>
+    <span>Intérieur</span>
     Extérieur
   </span>
 </div>
@@ -141,7 +142,7 @@ On utilisera le même fragment de HTML :
 ```html
 <span>
   Extérieur
-    <span>Intérieur</span>
+  <span>Intérieur</span>
   Extérieur
 </span>
 ```
@@ -157,15 +158,21 @@ Dans cet exemple, si la taille par défaut du navigateur vaut `16px`, tous les m
 ```css
 /* Le paragraphe sera écrit avec une grande */
 /* fonte.                                   */
-p { font-size: xx-large }
+p {
+  font-size: xx-large;
+}
 
 /* La taille du texte des h1 sera 2.5 fois plus */
 /* grande que le texte autour.                  */
-h1 { font-size: 250% }
+h1 {
+  font-size: 250%;
+}
 
 /* Le texte contenu dans des éléments span */
 /* mesurera 16px                           */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Démonstration
@@ -206,15 +213,8 @@ Les unités `em` et `ex` pour la propriété {{Cssxref("font-size")}} sont relat
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | Aucune modification.                    |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | `font-size` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                    |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

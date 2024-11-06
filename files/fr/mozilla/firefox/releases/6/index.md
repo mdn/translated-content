@@ -1,46 +1,44 @@
 ---
 title: Firefox 6 pour les développeurs
 slug: Mozilla/Firefox/Releases/6
-tags:
-  - Firefox
-  - Firefox 6
-translation_of: Mozilla/Firefox/Releases/6
-original_slug: Mozilla/Firefox/Versions/6
 ---
-1.  Notes de versions pour développeurs
 
-    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+{{FirefoxSidebar}}
 
-2.  Modules complémentaires
+1. Notes de versions pour développeurs
 
-    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
-    2.  [Thèmes](/fr/Add-ons/Themes)
+   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-3.  Fonctionnement interne de Firefox
+2. Modules complémentaires
 
-    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
-    2.  [Gecko](/fr/docs/Mozilla/Gecko)
-    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7.  [MFBT](/fr/docs/Mozilla/MFBT)
-    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
-    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. [WebExtensions](/fr/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/Add-ons/Themes)
 
-4.  Développer et contribuer
+3. Fonctionnement interne de Firefox
 
-    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5.  [Localisation](/fr/docs/Mozilla/Localization)
-    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
-    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. [Le projet Mozilla](/fr/docs/Mozilla/)
+   2. [Gecko](/fr/docs/Mozilla/Gecko)
+   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+   7. [MFBT](/fr/docs/Mozilla/MFBT)
+   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
+   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+
+4. Développer et contribuer
+
+   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+   2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+   5. [Localisation](/fr/docs/Mozilla/Localization)
+   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+   7. [Assurance qualité](/fr/docs/Mozilla/QA)
+   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
 
@@ -120,7 +118,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 ### SVG
 
 - L'attribut [`pathLength`](/fr/docs/Web/SVG/Attributs/pathLength) est désormais supporté.
-- Les modèles SVG, les dégradés et les filtres fonctionnent désormais correctement lorsqu'ils sont chargés à partir de [`data:` URLs](/en/data_URIs).
+- Les modèles SVG, les dégradés et les filtres fonctionnent désormais correctement lorsqu'ils sont chargés à partir de [`data:` URLs](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 ### MathML
 
@@ -153,7 +151,8 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir [Updating add-ons for Firefox 6](/fr/docs/Firefox/Updating_add-ons_for_Firefox_6).
 
-> **Note :** Firefox 6 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
+> [!NOTE]
+> Firefox 6 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
 ### Modules de code JavaScript
 
@@ -197,7 +196,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir
 - [`nsIHttpUpgradeListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpUpgradeListener)
   - : L'interface de rappel pour le traitement des demandes de mise à niveau HTTP via la méthode [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
 - [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer)
-  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/en/HTML/Structured_clones).
+  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/structuredClone).
 - [`nsITelemetry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITelemetry)
   - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
 - [`nsITimedChannel`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimedChannel)
@@ -228,7 +227,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 - [Utilisation des préférences à partir du code d'application](/fr/docs/Mozilla/Preferences/Using_preferences_from_application_code)
   - : Une nouvelle API statique est disponible pour accéder facilement aux préférences, ce n'est disponible que pour le code d'application et ne peut pas être utilisé par les modules complémentaires.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
 - [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)

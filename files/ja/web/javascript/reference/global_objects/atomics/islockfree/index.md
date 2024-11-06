@@ -1,14 +1,8 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
-browser-compat: javascript.builtins.Atomics.isLockFree
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ---
+
 {{JSRef}}
 
 静的な
@@ -20,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ## 構文
 
 ```js
-Atomics.isLockFree(size)
+Atomics.isLockFree(size);
 ```
 
 ### 引数

@@ -1,17 +1,9 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - UnintallSeft
-  - WebExtensions
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Désinstalle l'appel de l'extension.
 
@@ -23,8 +15,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var uninstallingSelf = browser.management.uninstallSelf(
-  options              // object
-)
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -42,9 +34,9 @@ var uninstallingSelf = browser.management.uninstallSelf(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.uninstallSelf")}}
+{{Compat}}
 
 ## Exemples
 
@@ -58,7 +50,7 @@ function onCanceled(error) {
 }
 
 var uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -73,7 +65,7 @@ function onCanceled(error) {
 
 var uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);
@@ -81,13 +73,14 @@ uninstalling.then(null, onCanceled);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +107,4 @@ uninstalling.then(null, onCanceled);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

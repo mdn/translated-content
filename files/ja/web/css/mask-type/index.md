@@ -1,16 +1,8 @@
 ---
 title: mask-type
 slug: Web/CSS/mask-type
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - リファレンス
-  - SVG
-  - recipe:css-property
-browser-compat: css.properties.mask-type
-translation_of: Web/CSS/mask-type
 ---
+
 {{CSSRef}}
 
 **`mask-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{svgElement("mask")}} 要素を*輝度*マスクと*アルファ*マスクのどちらとして扱うかを設定します。これは `<mask>` 要素自身に設定します。
@@ -50,19 +42,27 @@ mask-type: unset;
 
 ## 例
 
-<h3 id="Setting_an_alpha_mask">アルファマスクの設定</h3>
+### アルファマスクの設定
 
 #### HTML
 
 ```html
 <div class="redsquare"></div>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="0"
+  height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox"
-      style="mask-type:alpha">
-      <rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/>
+    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
+      <rect
+        x=".1"
+        y=".1"
+        width=".8"
+        height=".8"
+        fill="red"
+        fill-opacity="0.7" />
     </mask>
   </defs>
 </svg>
@@ -82,21 +82,32 @@ mask-type: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '102')}}
+{{EmbedLiveSample('アルファマスクの設定', '100%', '102')}}
 
-<h3 id="Setting_a_luminance_mask">輝度マスクの設定</h3>
+### 輝度マスクの設定
 
 #### HTML
 
 ```html
 <div class="redsquare"></div>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="0"
+  height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox"
+    <mask
+      id="m"
+      maskContentUnits="objectBoundingBox"
       style="mask-type:luminance">
-      <rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/>
+      <rect
+        x=".1"
+        y=".1"
+        width=".8"
+        height=".8"
+        fill="red"
+        fill-opacity="0.7" />
     </mask>
   </defs>
 </svg>
@@ -116,7 +127,7 @@ mask-type: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_luminance_mask', '100%', '102')}}
+{{EmbedLiveSample('輝度マスクの設定', '100%', '102')}}
 
 ## 仕様書
 

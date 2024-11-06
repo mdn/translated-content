@@ -1,43 +1,37 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-  - 参考
-  - recipe:css-property
-translation_of: Web/CSS/float
-original_slug: CSS/float
 ---
+
 {{CSSRef}}
 
-`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，尽管仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
+`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
 **浮动元素**是 `float` 的计算值非 `none` 的元素。
 
-由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
+由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
 
-| 指定值                | 计算值          |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _other_              | _unchanged_    |
+| 指定值               | 计算值      |
+| -------------------- | ----------- |
+| `inline`             | `block`     |
+| `inline-block`       | `block`     |
+| `inline-table`       | `table`     |
+| `table-row`          | `block`     |
+| `table-row-group`    | `block`     |
+| `table-column`       | `block`     |
+| `table-column-group` | `block`     |
+| `table-cell`         | `block`     |
+| `table-caption`      | `block`     |
+| `table-header-group` | `block`     |
+| `table-footer-group` | `block`     |
+| `inline-flex`        | `flex`      |
+| `inline-grid`        | `grid`      |
+| _other_              | _unchanged_ |
 
-> **备注：** 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
+> [!NOTE]
+> 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
 
 ## 语法
 
@@ -56,7 +50,7 @@ float: revert;
 float: unset;
 ```
 
-`float` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
+`float` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
 
 ### 值
 
@@ -96,11 +90,13 @@ float: unset;
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 
@@ -149,5 +145,5 @@ div {
 
 ## 参见
 
-- [块级格式化上下文（Block formatting context）](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - 使用 {{cssxref("clear")}} 强制元素移至浮动元素下方。

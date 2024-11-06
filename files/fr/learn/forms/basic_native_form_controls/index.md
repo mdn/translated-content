@@ -1,9 +1,8 @@
 ---
 title: Les contrôles de formulaire natifs
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
-original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn/Forms/How_to_structure_a_web_form), nous avons construit un exemple de formulaire web fonctionnel à l'aide de balises. Nous y avons vu certains des contrôles liés aux formulaires, les éléments communs pour organiser la structure et les bonnes pratiques pour l'accessibilité. Nous allons maintenant aborder les fonctionnalités des différents contrôles de formulaire, dans le détail. Nous étudierons l'ensemble des options disponibles pour recueillir les différents types de données. Dans cet article, nous verrons l'ensemble des contrôles de formulaire qui sont présents dans tous les navigateurs, depuis les débuts du Web.
@@ -40,13 +39,15 @@ Vous avez déjà découvert certains des éléments utilisés pour les formulair
   - [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 - Certains des attributs communs à l'ensemble des contrôles de formulaire.
 
-> **Note :** Les fonctionnalités discutées dans cet article sont prises en charge par l'ensemble des navigateurs. Ce n'est pas le cas pour tous les contrôles de formulaire. Nous verrons ces contrôles HTML5 plus récents dans les deux articles suivants. Si vous souhaitez consulter une référence plus avancée, vous devriez lire [la référence des éléments HTML relatifs aux formulaires](/fr/docs/Web/HTML/Element#forms), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/Input).
+> [!NOTE]
+> Les fonctionnalités discutées dans cet article sont prises en charge par l'ensemble des navigateurs. Ce n'est pas le cas pour tous les contrôles de formulaire. Nous verrons ces contrôles HTML5 plus récents dans les deux articles suivants. Si vous souhaitez consulter une référence plus avancée, vous devriez lire [la référence des éléments HTML relatifs aux formulaires](/fr/docs/Web/HTML/Element#forms), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/Input).
 
 ## Les champs de saisie pour du texte
 
 Les champs [`<input>`](/fr/docs/Web/HTML/Element/Input) pour saisir du texte sont les contrôles de formulaire les plus simples. Ils sont un outil pratique pour permettre à l'utilisatrice ou l'utilisateur de saisir n'importe quelle sorte de données. Nous avons déjà vu certains exemples simples.
 
-> **Note :** Les champs texte des formulaires permettent de saisir du texte simple. Cela signifie qu'on ne peut pas les utiliser pour saisir du texte complexe (en gras, italique, etc.). Si vous rencontrez un éditeur de texte complexe sur le Web, il s'agira d'un contrôle construit autrement avec du HTML, CSS et JavaScript.
+> [!NOTE]
+> Les champs texte des formulaires permettent de saisir du texte simple. Cela signifie qu'on ne peut pas les utiliser pour saisir du texte complexe (en gras, italique, etc.). Si vous rencontrez un éditeur de texte complexe sur le Web, il s'agira d'un contrôle construit autrement avec du HTML, CSS et JavaScript.
 
 Tous les contrôles textuels partagent certains comportements&nbsp;:
 
@@ -55,18 +56,24 @@ Tous les contrôles textuels partagent certains comportements&nbsp;:
 - Leur taille peut être contrainte&nbsp;: la taille physique de la boîte formant le champ peut être ajustée avec l'attribut [`size`](/fr/docs/Web/HTML/Attributes/size) et le nombre maximum de caractères qui peuvent être saisis dans le champ peut être défini avec l'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength).
 - La vérification orthographique peut être activée, si le navigateur la prend en charge, avec l'attribut [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck).
 
-> **Note :** L'élément HTML [`<input>`](/fr/docs/Web/HTML/Element/Input) est différent des autres éléments HTML, car il peut prendre de nombreuses formes différentes selon la valeur de son attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type). C'est ce même élément qu'on utilisera pour créer la plupart des types de champs de formulaire, que ce soit des textes sur une seule ligne, des dates et des heures, des contrôles sans texte comme des cases à cocher ou des boutons radio, des sélecteurs de couleurs, et des boutons.
+> [!NOTE]
+> L'élément HTML [`<input>`](/fr/docs/Web/HTML/Element/Input) est différent des autres éléments HTML, car il peut prendre de nombreuses formes différentes selon la valeur de son attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type). C'est ce même élément qu'on utilisera pour créer la plupart des types de champs de formulaire, que ce soit des textes sur une seule ligne, des dates et des heures, des contrôles sans texte comme des cases à cocher ou des boutons radio, des sélecteurs de couleurs, et des boutons.
 
 ### Un champ textuel sur une seule ligne
 
 Pour créer un champ permettant de saisir du texte sur une seule ligne, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `text`, ou pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) est absent (`text` étant la valeur par défaut). La valeur `text` est également la valeur utilisée par le navigateur au cas où la valeur indiquée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) serait inconnue du navigateur (par exemple, si on utilise `type="color"` et que le navigateur ne prend pas en charge les sélecteurs de couleur natifs).
 
-> **Note :** Vous pouvez trouver des exemples pour l'ensemble des types de champs avec du texte sur une seule ligne sur GitHub avec [`single-line-text-fields.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> [!NOTE]
+> Vous pouvez trouver des exemples pour l'ensemble des types de champs avec du texte sur une seule ligne sur GitHub avec [`single-line-text-fields.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 Voici un exemple de champ texte simple sur une ligne&nbsp;:
 
 ```html
-<input type="text" id="commentaire" name="commentaire" value="Je suis un champ texte">
+<input
+  type="text"
+  id="commentaire"
+  name="commentaire"
+  value="Je suis un champ texte" />
 ```
 
 Les champs texte sur une seule ligne n'ont qu'une contrainte&nbsp;: si on saisit du texte avec des sauts de ligne, le navigateur retirera les sauts de ligne avant d'envoyer les données au serveur.
@@ -75,14 +82,15 @@ _La capture d'écran qui suit illustre l'apparence des contrôles (par défaut, 
 
 ![Capture d'écran avec la mise en forme par défaut, avec le focus et la désactivation pour un champ texte pour Firefox, Safari, Chrome et Edge.](disabled.png)
 
-> **Note :** HTML5 a amélioré les différents champs textuels en ajoutant des valeurs spéciales pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) qui permettent d'imposer des contraintes de validation particulières et d'avoir d'autres fonctionnalités, par exemple pour la saisie d'URL ou de nombres. Nous verrons ceux-ci dans le prochain article, [les types de champs de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types).
+> [!NOTE]
+> HTML5 a amélioré les différents champs textuels en ajoutant des valeurs spéciales pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) qui permettent d'imposer des contraintes de validation particulières et d'avoir d'autres fonctionnalités, par exemple pour la saisie d'URL ou de nombres. Nous verrons ceux-ci dans le prochain article, [les types de champs de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types).
 
 #### Un champ pour saisir un mot de passe
 
 Un des types de champ de formulaire, présent à l'origine, est destiné à la saisie de mots de passe avec le type `password`&nbsp;:
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 La valeur `password` n'ajoute pas de contraintes particulières sur le texte qui est saisi. En revanche, elle masque la valeur saisie dans le champ (avec des points ou des astérisques) afin qu'elle ne puisse pas être facilement lue par d'autres.
@@ -96,7 +104,7 @@ Les navigateurs peuvent sensibiliser à ces aspects de sécurité lors de l'envo
 Un autre type de champ présent aux débuts de HTML est le type masqué (avec la valeur d'attribut `hidden`). Il permet de créer un champ de formulaire qui ne sera pas visible sur le site mais qui sera envoyé au serveur lors de l'envoi du formulaire (il peut, par exemple, permettre d'envoyer un horodatage au serveur pour indiquer l'heure de saisie du formulaire côté client). Étant masqué, le champ ne peut pas être vu ou édité de façon intentionnelle, il ne peut pas recevoir le focus et un outil de lecture d'écran ne le mentionnera pas.
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 Pour créer un tel élément, il est nécessaire de lui fournir des attributs `name` et `value`. La valeur contenue dans ce champ peut être éditée dynamiquement avec JavaScript. Un champ de type `hidden` ne devrait pas avoir de libellé associé.
@@ -109,7 +117,8 @@ Ces éléments sélectionnables sont des contrôles dont on peut changer l'état
 
 On notera que ces contrôles ne se comportent pas exactement comme les autres contrôles de formulaire. En effet, pour la plupart des champs de formulaires, lorsque le formulaire est envoyé, tous les champs ayant un attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name) sont envoyés, même si aucune valeur n'a été saisie. Pour les cases à cocher et les boutons radio, leurs valeurs sont uniquement envoyées lorsqu'ils sont cochés/sélectionnés. S'ils ne sont pas cochés/sélectionnés, rien n'est envoyé, même leur nom. S'ils sont cochés/sélectionnés sans valeur indiquée, leur nom est envoyé avec la valeur `on`.
 
-> **Note :** Vous pouvez retrouver les exemples de cette section sur GitHub sur le fichier [`checkable-items.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([voir la démonstration correspondante](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
+> [!NOTE]
+> Vous pouvez retrouver les exemples de cette section sur GitHub sur le fichier [`checkable-items.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([voir la démonstration correspondante](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
 Pour améliorer l'utilisabilité et l'accessibilité, il est conseillé de regrouper les différentes options de chaque liste au sein d'un élément [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset), avec un élément [`<legend>`](/fr/docs/Web/HTML/Element/Legend) fournissant une description de la liste. Chaque paire d'éléments [`<label>`](/fr/docs/Web/HTML/Element/Label)/[`<input>`](/fr/docs/Web/HTML/Element/Input) devrait former un élément de liste à part. Le libellé associé ([`<label>`](/fr/docs/Web/HTML/Element/Label)) est généralement placé immédiatement après le bouton radio ou la case à cocher, les instructions pour choisir parmi les groupes de cases à cocher ou de bouton radio sont généralement portées par le contenu de l'élément [`<legend>`](/fr/docs/Web/HTML/Element/Legend). Voir les exemples mentionnés ci-avant pour des illustrations.
 
@@ -118,7 +127,7 @@ Pour améliorer l'utilisabilité et l'accessibilité, il est conseillé de regro
 Une case à cocher est créée avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) prend la valeur [`checkbox`](/fr/docs/Web/HTML/Element/Input/checkbox).
 
 ```html
-<input type="checkbox" id="questionUn" name="abonnement" value="oui" checked>
+<input type="checkbox" id="questionUn" name="abonnement" value="oui" checked />
 ```
 
 Les cases à cocher qui portent sur le même sujet devraient partager le même attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name). Ajouter l'attribut [`checked`](/fr/docs/Web/HTML/Element/Input/checkbox#attr-checked) à un tel élément permettra d'avoir la case cochée lors du chargement de la page. Cliquer sur la case ou sur le libellé associé permettra de cocher/décocher la case.
@@ -129,15 +138,20 @@ Les cases à cocher qui portent sur le même sujet devraient partager le même a
   <ul>
     <li>
       <label for="carottes">Carottes</label>
-      <input type="checkbox" id="carottes" name="legume" value="carottes" checked>
+      <input
+        type="checkbox"
+        id="carottes"
+        name="legume"
+        value="carottes"
+        checked />
     </li>
     <li>
       <label for="haricots">Haricots</label>
-      <input type="checkbox" id="haricots" name="legume" value="haricots">
+      <input type="checkbox" id="haricots" name="legume" value="haricots" />
     </li>
     <li>
       <label for="chou">Chou</label>
-      <input type="checkbox" id="chou" name="legume" value="chou">
+      <input type="checkbox" id="chou" name="legume" value="chou" />
     </li>
   </ul>
 </fieldset>
@@ -147,7 +161,8 @@ L'image qui suit montre l'apparence des cases à cocher dans leur état par déf
 
 ![Aspect par défaut, avec le focus, et désactivé pour les cases à cocher de Firefox 71, Safari 13 sur macOS et Chrome 79 et Edge 18 sur Windows 10](checkboxes.png)
 
-> **Note :** Les cases à cocher et les boutons radio qui ont l'attribut [`checked`](/fr/docs/Web/HTML/Element/Input/checkbox#attr-checked) lors du chargement pourront être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même s'ils ne sont plus cochés/sélectionnés après. Les éléments qui sont cochés/sélectionnés peuvent être ciblés par la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked).
+> [!NOTE]
+> Les cases à cocher et les boutons radio qui ont l'attribut [`checked`](/fr/docs/Web/HTML/Element/Input/checkbox#attr-checked) lors du chargement pourront être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même s'ils ne sont plus cochés/sélectionnés après. Les éléments qui sont cochés/sélectionnés peuvent être ciblés par la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked).
 
 En raison de l'aspect marche/arrêt des cases à cocher, celles-ci sont parfois utilisées pour réaliser des interrupteurs en modifiant la mise en forme par défaut. Vous pouvez [en voir un exemple ici](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (avec [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
 
@@ -156,7 +171,7 @@ En raison de l'aspect marche/arrêt des cases à cocher, celles-ci sont parfois 
 Un bouton radio est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `radio`&nbsp;:
 
 ```html
-<input type="radio" id="soupe" name="plat" checked>
+<input type="radio" id="soupe" name="plat" checked />
 ```
 
 Il est possible de regrouper plusieurs boutons radio ensemble. S'ils partagent le même attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name), ils feront partie du même groupe. Seul un bouton d'un groupe donné peut être sélectionné à la fois. Cela signifie que sélectionner une des options entraînera la désélection de toutes les autres. Lorsque le formulaire est envoyé, seule la valeur du bouton radio sélectionné du groupe est envoyée. Si aucun n'est sélectionné, l'ensemble du groupe est considéré dans un état inconnu et aucune valeur n'est envoyée avec le formulaire. Lorsqu'un des boutons radio d'un groupe a été sélectionné, la personne ne peut plus désélectionner l'ensemble des boutons sans réinitialiser le formulaire.
@@ -167,15 +182,15 @@ Il est possible de regrouper plusieurs boutons radio ensemble. S'ils partagent l
   <ul>
     <li>
       <label for="soupe">Soupe</label>
-      <input type="radio" id="soupe" name="plat" value="soupe" checked>
+      <input type="radio" id="soupe" name="plat" value="soupe" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="plat" value="curry">
+      <input type="radio" id="curry" name="plat" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="plat" value="pizza">
+      <input type="radio" id="pizza" name="plat" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -198,20 +213,20 @@ Les boutons radio ne sont pas, à proprement parler, des boutons malgré leur no
 
 On a également l'élément [`<button>`](/fr/docs/Web/HTML/Element/Button). Celui-ci porte un attribut `type` qui peut valoir `submit`, `reset`, ou `button` pour copier le comportement des trois types d'élément `<input>` mentionnés avant. La différence principale entre ces deux éléments est la plus grande facilité de mise en forme des éléments `<button>`.
 
-> **Note :** Le contrôle de formulaire de type `image` s'affiche également comme un bouton, nous le verrons plus bas.
+> [!NOTE]
+> Le contrôle de formulaire de type `image` s'affiche également comme un bouton, nous le verrons plus bas.
 
-> **Note :** Vous pourrez trouver des exemples pour cette section sur GitHub avec le fichier [`button-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([voir le résultat obtenu avec](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+> [!NOTE]
+> Vous pourrez trouver des exemples pour cette section sur GitHub avec le fichier [`button-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([voir le résultat obtenu avec](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
 
 Voici des exemples pour chaque type de bouton `<input>`, accompagnés chacun de leur équivalent avec l'élément `<button>`.
 
 ### `submit`
 
 ```html
-<button type="submit">
-  Voici un <strong>bouton d'envoi</strong>
-</button>
+<button type="submit">Voici un <strong>bouton d'envoi</strong></button>
 
-<input type="submit" value="Voici un bouton d'envoi">
+<input type="submit" value="Voici un bouton d'envoi" />
 ```
 
 ### `reset`
@@ -221,17 +236,15 @@ Voici des exemples pour chaque type de bouton `<input>`, accompagnés chacun de 
   Voici un <strong>bouton de réinitialisation</strong>
 </button>
 
-<input type="reset" value="Voici un bouton de réinitialisation">
+<input type="reset" value="Voici un bouton de réinitialisation" />
 ```
 
 ### Générique
 
 ```html
-<button type="button">
-  Voici un <strong>bouton générique</strong>
-</button>
+<button type="button">Voici un <strong>bouton générique</strong></button>
 
-<input type="button" value="Voici un bouton générique">
+<input type="button" value="Voici un bouton générique" />
 ```
 
 Les boutons se comporteront de la même façon, que ce soient des éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) ou des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input). Toutefois, comme vous pouvez le voir dans les exemples, les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) permettent d'utiliser du HTML dans leur contenu au sein des balises `<button>`. En revanche, les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) sont des éléments vides et le contenu affiché provient de l'attribut `value` qui peut uniquement être du texte simple.
@@ -247,7 +260,12 @@ Le contrôle **de bouton d'image** s'affiche exactement comme un élément [`<im
 Un bouton d'image est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `image`. Cet élément prend en charge le même ensemble d'attributs que l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) et les attributs relatifs aux éléments de formulaire.
 
 ```html
-<input type="image" alt="Cliquez ici !" src="mon-img.png" width="80" height="30">
+<input
+  type="image"
+  alt="Cliquez ici !"
+  src="mon-img.png"
+  width="80"
+  height="30" />
 ```
 
 Si le bouton d'image est utilisé pour envoyer le formulaire, ce contrôle ne fournit pas sa valeur mais les coordonnées X / Y (relatives au coin en haut à gauche de coordonnées (0,0)) où le clic a eu lieu. Les coordonnées sont envoyées comme deux paires clé/valeur&nbsp;:
@@ -274,15 +292,15 @@ Pour créer [un sélecteur de fichier](/fr/docs/Web/HTML/Element/Input/file), on
 Dans cet exemple, on crée un sélecteur de fichier pour des images. La personne qui utilise le formulaire peut ici choisir plusieurs fichiers.
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 Sur certains appareils mobiles, le sélecteur de fichier peut accéder aux photos, vidéos et fichiers audios produits par l'appareil photo ou le micro en ajoutant des informations de captures avec l'attribut `accept`&nbsp;:
 
 ```html
-<input type="file" accept="image/*;capture=camera">
-<input type="file" accept="video/*;capture=camcorder">
-<input type="file" accept="audio/*;capture=microphone">
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
 ```
 
 ## Attributs communs
@@ -351,22 +369,3 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 Dans cet article, nous avons abordé les contrôles de formulaire présents depuis les débuts de HTML et qui sont pris en charge par l'ensemble des navigateurs. Dans la prochaine section, nous verrons les valeurs plus récentes possibles pour l'attribut `type` qui ont été ajoutées en HTML5.
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- **Les contrôles de formulaire natifs de base**
-- [Les types de champs de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes CSS liées à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Validation du formulaire côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité des contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,18 +1,13 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.background
-translation_of: Web/CSS/background
+l10n:
+  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
-{{CSSRef("CSS Background")}}
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。
+{{CSSRef}}
+
+**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
 {{EmbedInteractiveExample("pages/css/background.html")}}
 
@@ -48,6 +43,7 @@ background: no-repeat center/80% url("../img/image.png");
 background: inherit;
 background: initial;
 background: revert;
+background: revert-layer;
 background: unset;
 ```
 
@@ -70,25 +66,33 @@ background: unset;
 ### 値
 
 - `<attachment>`
-  - : {{cssxref("background-attachment")}} を参照
+  - : {{cssxref("background-attachment")}} を参照。既定値は `scroll` です。
 - `<box>`
-  - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照
+  - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照。既定値はそれぞれ `border-box` および `padding-box` です。
 - `<background-color>`
-  - : {{cssxref("background-color")}} を参照
+  - : {{cssxref("background-color")}} を参照。既定値は `transparent` です。
 - `<bg-image>`
-  - : {{Cssxref("background-image")}} を参照
+  - : {{Cssxref("background-image")}} を参照。既定値は `none` です。
 - `<position>`
-  - : {{cssxref("background-position")}} を参照
+  - : {{cssxref("background-position")}} を参照。既定値は 0% 0% です。
 - `<repeat-style>`
-  - : {{cssxref("background-repeat")}} を参照
+  - : {{cssxref("background-repeat")}} を参照。既定値は `repeat` です。
 - `<bg-size>`
-  - : {{cssxref("background-size")}} を参照。
+  - : {{cssxref("background-size")}} を参照。既定値は `auto` です。
+
+以下の 3 行の CSS は等価です。
+
+```css
+background: none;
+background: transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
+```
 
 ## アクセシビリティの考慮
 
-ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主に画面リーダーにとって重要であり、画面リーダーはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
+ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要であり、スクリーンリーダーはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 公式定義
@@ -101,17 +105,18 @@ background: unset;
 
 ## 例
 
-<h3 id="Setting_backgrounds_with_color_keywords_and_images">色キーワードと画像による背景の設定</h3>
+### 色キーワードと画像による背景の設定
 
 #### HTML
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
+<p></p>
 ```
 
 #### CSS
@@ -141,5 +146,5 @@ background: unset;
 ## 関連情報
 
 - {{cssxref("box-decoration-break")}}
-- [グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

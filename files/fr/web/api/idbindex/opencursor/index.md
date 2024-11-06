@@ -1,15 +1,8 @@
 ---
 title: IDBIndex.openCursor()
 slug: Web/API/IDBIndex/openCursor
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-  - openCursor
-translation_of: Web/API/IDBIndex/openCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openCursor()`** de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée [un curseur](/fr/docs/Web/API/IDBCursor) sur l'intervalle de clé fourni en argument.
@@ -26,7 +19,9 @@ La méthode la positionne le curseur de façon approprié, selon la direction in
 
 ## Syntaxe
 
-    var request = myIndex.openCursor(keyRange,direction);
+```js
+var request = myIndex.openCursor(keyRange, direction);
+```
 
 ### Paramètres
 
@@ -80,51 +75,67 @@ Ensuite, on parcourt les enregistrements pour insérer les données dans un tabl
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
+  tableEntry.innerHTML = "";
 
   //ouvre un transaction
-  var transaction = db.transaction(['contactsList'], 'readonly');
+  var transaction = db.transaction(["contactsList"], "readonly");
   //accés au magasin d'objet
-  var objectStore = transaction.objectStore('contactsList');
+  var objectStore = transaction.objectStore("contactsList");
 
   //on récupère l'index
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
 
   //un curseur qui itère sur l'index
   var request = myIndex.openCursor();
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     var cursor = request.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Tous les enregistrements ont été affichés.');
+      console.log("Tous les enregistrements ont été affichés.");
     }
   };
-};
+}
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.openCursor")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -134,4 +145,4 @@ function displayDataByIndex() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

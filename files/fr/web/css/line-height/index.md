@@ -1,12 +1,8 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 La propriété **`line-height`** définit la hauteur de la boîte d'une ligne.
@@ -62,9 +58,13 @@ La propriété `line-height` peut être définie grâce :
 - `-moz-block-height` {{non-standard_inline}}
   - : La hauteur de la ligne correspond à la hauteur du contenu pour le bloc courant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -72,10 +72,24 @@ La propriété `line-height` peut être définie grâce :
 /* Toutes les règles qui suivent
    fourniront un résultat équivalent */
 
-div { line-height: 1.2;   font-size: 10pt }   /* number */
-div { line-height: 1.2em; font-size: 10pt }   /* length */
-div { line-height: 120%;  font-size: 10pt }   /* percentage */
-div { font: 10pt/1.2 Georgia,"Bitstream Charter",serif }
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+} /* number */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+} /* length */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+} /* percentage */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+}
 ```
 
 ### Notes
@@ -114,12 +128,12 @@ h1 {
 
 ```html
 <div class="box green">
- <h1>Avoid unexpected results by using unitless line-height</h1>
+  <h1>Avoid unexpected results by using unitless line-height</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
 <div class="box red">
- <h1>Avoid unexpected results by using unitless line-height</h1>
+  <h1>Avoid unexpected results by using unitless line-height</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
@@ -139,17 +153,11 @@ Il est nécessaire d'utiliser une valeur minimale de `1.5` pour la propriété `
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}         | {{Spec2('CSS3 Transitions')}} | `line-height` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                         |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height")}}
+{{Compat}}
 
 ## Voir aussi
 

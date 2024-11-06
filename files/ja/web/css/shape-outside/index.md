@@ -1,22 +1,8 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - プロパティ
-  - Reference
-  - シェイプ
-  - マージン
-  - recipe:css-property
-  - shape-outside
-  - wrapping
-browser-compat: css.properties.shape-outside
-translation_of: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 **`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが回り込むシェイプ (形状) を — 矩形でない場合もありますが — 定義します。既定では、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
@@ -38,7 +24,9 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+shape-outside: path(
+  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+);
 
 /* <url> 値 */
 shape-outside: url(image.png);
@@ -61,7 +49,7 @@ shape-outside: unset;
   - : 浮動領域は影響を受けません。インラインコンテンツは通常通り、要素のマージンボックスを回り込みます。
 - `<shape-box>`
 
-  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
+  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
 
     - `margin-box`
       - : マージンの外側の縁で囲まれた形状を定義します。この形状の角の半径は、対応する {{cssxref("border-radius")}} および {{cssxref("margin")}} の値で決定されます。 `border-radius / margin` の比率が `1` 以上の場合、マージンの角の半径は `border-radius + margin` です。この比率が `1` 未満の場合、マージンの角の半径は `border-radius + (margin * (1 + (ratio-1)^3))` となります。
@@ -77,7 +65,7 @@ shape-outside: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : 浮動領域は指定された {{cssxref("&lt;image&gt;")}} のアルファチャンネルに基づいて、 {{cssxref("shape-image-threshold")}} で定義されたように抽出され計算されます。
 
-> **Note:** {{glossary("User agent", "ユーザーエージェント")}}は、`shape-outside` の値に含まれるすべての URL に対して、HTML5 の仕様で定義されている CORS に対応している可能性のあるフェッチメソッドを使用する必要があります。読み取りの際、ユーザーエージェントは "Anonymous" モードを使用し、参照元をスタイルシートの URL に設定し、文書の URL を含むオリジンを設定しなければなりません。この結果、有効な代替画像がないなどのネットワークエラーが発生した場合は、**`none`** の値を指定したのと同様になります。
+> **メモ:** {{glossary("User agent", "ユーザーエージェント")}}は、`shape-outside` の値に含まれるすべての URL に対して、HTML5 の仕様で定義されている CORS に対応している可能性のあるフェッチメソッドを使用する必要があります。読み取りの際、ユーザーエージェントは "Anonymous" モードを使用し、参照元をスタイルシートの URL に設定し、文書の URL を含むオリジンを設定しなければなりません。この結果、有効な代替画像がないなどのネットワークエラーが発生した場合は、**`none`** の値を指定したのと同様になります。
 
 ## 補間
 
@@ -108,10 +96,9 @@ shape-outside: unset;
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link. Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```

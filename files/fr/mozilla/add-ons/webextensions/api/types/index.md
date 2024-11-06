@@ -1,15 +1,8 @@
 ---
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
+
 {{AddonSidebar}}
 
 Définit le type `BrowserSetting` , qui est utilisé pour représenter un paramètre de navigateur.
@@ -19,17 +12,18 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 - {{WebExtAPIRef("types.BrowserSetting")}}
   - : Représente un paramètre de navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -56,4 +50,4 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

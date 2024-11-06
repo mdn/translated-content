@@ -1,9 +1,8 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-translation_of: Web/CSS/mask-size
-browser-compat: css.properties.mask-size
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-size`** définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.
@@ -43,7 +42,8 @@ mask-size: revert;
 mask-size: unset;
 ```
 
-> **Note :** Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
+> [!NOTE]
+> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
 
 ## Syntaxe
 
@@ -111,4 +111,3 @@ La taille de l'image affichée pour le masque est calculée de la façon suivant
 ## Voir aussi
 
 - [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
-

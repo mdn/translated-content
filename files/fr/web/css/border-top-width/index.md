@@ -1,12 +1,8 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-top-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-width`** définit l'épaisseur de la bordure pour le côté haut d'une boîte.
@@ -45,40 +41,38 @@ border-top-width: unset;
 
     La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
 ### CSS
 
 ```css
-.element1{
-	border-top: thick solid red;
+.element1 {
+  border-top: thick solid red;
 }
-.element2{
-	border-top: medium solid orange;
+.element2 {
+  border-top: medium solid orange;
 }
-.element3{
-	border-top: thin solid green;
+.element3 {
+  border-top: thin solid green;
 }
 ```
 
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat
@@ -87,16 +81,11 @@ border-top-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                       |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-top-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-top-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top-width")}}
+{{Compat}}
 
 ## Voir aussi
 

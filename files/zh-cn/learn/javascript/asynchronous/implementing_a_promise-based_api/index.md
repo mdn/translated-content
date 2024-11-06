@@ -1,17 +1,11 @@
 ---
 title: 如何实现基于 Promise 的 API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - Promise
-  - resolve
-  - reject
-  - then
-  - catch
-translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
+
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 在上一篇文章中，我们讨论了如何使用返回 promises 的 APIs。在本文中，我们将研究另一方面--如何实现返回 promises 的 APIs。跟使用基于 promise 的 APIs 相比，这是一个不太常见的任务，但它仍然值得了解。
 
@@ -38,7 +32,7 @@ translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 
 ### 用 setTimeout() 包裹
 
-我们将会使用 {{domxref("setTimeout()")}} 来实现 `alarm()` 函数。`setTimeout()` 以一个回调函数和一个以毫秒为单位的延迟作为参数。当调用 `setTimeout()` 时，它将启动一个设置为给定延迟的计时器，当时间过期时，它就会调用给定的回调函数。
+我们将会使用 {{domxref("Window.setTimeout", "setTimeout()")}} 来实现 `alarm()` 函数。`setTimeout()` 以一个回调函数和一个以毫秒为单位的延迟作为参数。当调用 `setTimeout()` 时，它将启动一个设置为给定延迟的计时器，当时间过期时，它就会调用给定的回调函数。
 
 在下面的例子中，我们使用一个回调函数和一个 1000 毫秒的延迟调用 `setTimeout()`：
 
@@ -47,20 +41,26 @@ translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 <div id="output"></div>
 ```
 
+```css hidden
+div {
+  margin: 0.5rem 0;
+}
+```
+
 ```js
-const output = document.querySelector('#output');
-const button = document.querySelector('#set-alarm');
+const output = document.querySelector("#output");
+const button = document.querySelector("#set-alarm");
 
 function setAlarm() {
   window.setTimeout(() => {
-    output.textContent = 'Wake up!';
+    output.textContent = "Wake up!";
   }, 1000);
 }
 
-button.addEventListener('click', setAlarm);
+button.addEventListener("click", setAlarm);
 ```
 
-{{EmbedLiveSample("用 setTimeout() 包裹", "100%", 100)}}
+{{EmbedLiveSample("用 setTimeout() 包裹", 600, 100)}}
 
 ### Promise() 构造器
 
@@ -76,7 +76,7 @@ button.addEventListener('click', setAlarm);
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -94,29 +94,40 @@ function alarm(person, delay) {
 
 这一部分同上一篇文章是相当相似的。我们可以调用 `alarm()`，在返回的 promise 中调用 `then()` 和 `catch()` 来设置 promise 兑现和拒绝状态的处理器。
 
-```html
+```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
 ```
 
+```css hidden
+button {
+  display: block;
+}
+
+div,
+button {
+  margin: 0.5rem 0;
+}
+```
+
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -124,44 +135,55 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => (output.textContent = message))
+    .catch((error) => (output.textContent = `Couldn't set alarm: ${error}`));
 });
 ```
 
-{{EmbedLiveSample("使用 alarm() API", "100%", 160)}}
+{{EmbedLiveSample("使用 alarm() API", 600, 160)}}
 
 尝试对 "Name" 和 "Delay" 设置不同的值。尝试为 "Delay" 设置一个负值。
 
 ## 在 alarm() API 上使用 async 和 await
 
-自从 `alarm()` 返回了一个 Promise，我们可以对它做任何我们可以对其他任何 promise 做的事情：`Promise.all()`，和 `async` / `await`：
+自从 `alarm()` 返回了一个 `Promise`，我们可以对它做任何我们可以对其他任何 promise 做的事情：`Promise.all()`，和 `async` / `await`：
 
-```html
+```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
 ```
 
+```css hidden
+button {
+  display: block;
+}
+
+div,
+button {
+  margin: 0.5rem 0;
+}
+```
+
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -169,30 +191,21 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', async () => {
+button.addEventListener("click", async () => {
   try {
     const message = await alarm(name.value, delay.value);
     output.textContent = message;
-  }
-  catch (error) {
+  } catch (error) {
     output.textContent = `Couldn't set alarm: ${error}`;
   }
 });
 ```
 
-{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", "100%", 160)}}
+{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", 600, 160)}}
 
 ## 参见
 
-- [Promise() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
-- [使用 Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [`Promise()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
+- [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
-
-## 在本模块中
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- **实现基于 promise 的 API**
-- [workers 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

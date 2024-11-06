@@ -1,14 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/let
-original_slug: Web/JavaScript/Reference/Instructions/let
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
@@ -17,7 +11,9 @@ L'instruction **`let`** permet de déclarer une variable dont la portée est cel
 
 ## Syntaxe
 
-    let var1 [= valeur1] [, var2 [= valeur2]] [, ..., varN [= valeurN]];
+```js
+let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
+```
 
 ### Paramètres
 
@@ -49,19 +45,19 @@ if (x > y) {
 function varTest() {
   var x = 1;
   if (true) {
-    var x = 2;  // c'est la même variable !
-    console.log(x);  // 2
+    var x = 2; // c'est la même variable !
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   if (true) {
-    let x = 2;  // c'est une variable différente
-    console.log(x);  // 2
+    let x = 2; // c'est une variable différente
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
@@ -90,8 +86,8 @@ for (var i = 1; i <= 5; i++) {
   var item = document.createElement("li");
   item.appendChild(document.createTextNode("Item " + i));
 
-  (function(i) {
-    item.onclick = function(ev) {
+  (function (i) {
+    item.onclick = function (ev) {
       console.log("Item " + i + " a reçu un clic.");
     };
   })(i);
@@ -109,30 +105,30 @@ Les variables déclarées avec `let` appartiennent à la portée du bloc dans le
 function varTest() {
   var x = 31;
   if (true) {
-    var x = 71;  // c'est la même variable !
-    console.log(x);  // 71
+    var x = 71; // c'est la même variable !
+    console.log(x); // 71
   }
-  console.log(x);  // 71
+  console.log(x); // 71
 }
 
 function letTest() {
   let x = 31;
   if (true) {
-    let x = 71;  // c'est une variable différente
-    console.log(x);  // 71
+    let x = 71; // c'est une variable différente
+    console.log(x); // 71
   }
-  console.log(x);  // 31
+  console.log(x); // 31
 }
 ```
 
 Au niveau le plus haut (la portée globale), `let` crée une variable globale alors que `var` ajoute une propriété à l'objet global :
 
 ```js
-var x = 'global';
-let y = 'global2';
+var x = "global";
+let y = "global2";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
-console.log(y);      // "global2"
+console.log(y); // "global2"
 ```
 
 ### Émuler le fonctionnement des interfaces privées
@@ -146,19 +142,19 @@ var Truc;
   let porteePrivee = new WeakMap();
   let compteur = 0;
 
-  Truc = function() {
-    this.unePropriete = 'toto';
+  Truc = function () {
+    this.unePropriete = "toto";
 
     porteePrivee.set(this, {
       cachee: ++compteur,
     });
   };
 
-  Truc.prototype.montrerPublique = function() {
+  Truc.prototype.montrerPublique = function () {
     return this.unePropriete;
   };
 
-  Truc.prototype.montrerPrivee = function() {
+  Truc.prototype.montrerPrivee = function () {
     return porteePrivee.get(this).cachee;
   };
 }
@@ -181,7 +177,7 @@ truc.montrerPrivee();
 Cette technique permet d'obtenir un état privé « statique ». Ainsi, dans l'exemple qui précède, toutes les instances de `Truc` partageront la même `portéePrivée`.
 Il était possible d'obtenir un tel isolement avec `var` mais il fallait passer par des fonctions isolées (généralement des fonctions immédiatement appelées (_IIFE_)).
 
-### Zone morte temporaire (_Temporal Dead Zone_ / TDZ)  et les erreurs liées à `let`
+### Zone morte temporaire (_Temporal Dead Zone_ / TDZ) et les erreurs liées à `let`
 
 Lorsqu'on redéclare une même variable au sein d'une même portée de bloc, cela entraîne une exception {{jsxref("SyntaxError")}}.
 
@@ -222,7 +218,7 @@ Par contre, si on ajoute une instruction de bloc dans la clause `case`, cela cr�
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let toto;
     break;
@@ -246,8 +242,8 @@ if (a === 1) {
   var a = 11; // la portée est la portée globale
   let b = 22; // la portée est celle du bloc if
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11
@@ -280,10 +276,10 @@ let i = 10;
 Dans l'exemple qui suit, dans l'expression `toto + 55`, l'identifiant `toto` fait référence à la variable du bloc courant et non à celle qui est déclarée au dessus et qui a la valeur 33. Dans l'instruction `let toto = (toto + 55);` l'instruction est bien remontée mais l'endroit où on utilise `toto` (dans le fragment `(toto + 55`)) est toujours dans la zone morte temporaire car `toto` n'a pas encore été affecté.
 
 ```js example-bad
-function test(){
+function test() {
   var toto = 33;
   if (true) {
-    let toto = (toto + 55); // ReferenceError: can't access lexical declaration `toto` before initialization
+    let toto = toto + 55; // ReferenceError: can't access lexical declaration `toto` before initialization
   }
 }
 test();
@@ -293,11 +289,12 @@ Si on utilise `let` avec un nom de variable qui est le même que celui de l'argu
 
 ```js example-bad
 function go(n) {
-  for (let n of n.a){ // ReferenceError: can't access lexical declaration `n' before initialization
+  for (let n of n.a) {
+    // ReferenceError: can't access lexical declaration `n' before initialization
     console.log(n);
   }
 }
-go({a:[1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### Les variables déclarées avec `let` et les boucles `for`
@@ -306,14 +303,16 @@ Le mot-clé `let` permet de lier des variables localement dans la portée des bo
 
 ```js
 var a = 0;
-for ( let i = a; i < 10; i++ ) {
+for (let i = a; i < 10; i++) {
   console.log(i);
 }
 ```
 
 #### Règles de portées
 
-    for (let expr1; expr2; expr3) instruction
+```js
+for (let expr1; expr2; expr3) instruction;
+```
 
 Dans cet exemple, `expr2`, `expr3`, et `instruction` sont contenues dans un bloc implicite qui contient la variable de bloc local déclarée avec `let expr1`.
 
@@ -331,8 +330,8 @@ if (a === 5) {
   let a = 4; // La portée est celle du bloc if
   var b = 1; // La portée est celle interne à la fonction
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
@@ -344,7 +343,7 @@ console.log(b); // 1
 Le mot-clé let permet de lier des variables à la portée de la boucle plutôt qu'à celle de la fonction (avec `var`) :
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 
@@ -353,14 +352,11 @@ console.log(i); // i n'est pas défini
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ES2015')}}     | Définition initiale. Cette définition n'inclue pas les expressions et blocs `let`. |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ESDraft')}} |                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.let")}}
+{{Compat}}
 
 ## Voir aussi
 

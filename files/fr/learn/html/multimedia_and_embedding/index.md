@@ -1,34 +1,18 @@
 ---
 title: Multimédia et Intégration
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Apprentissage
-  - Audio
-  - Codage
-  - Débutant
-  - Evaluation
-  - Flash
-  - Guide
-  - HTML
-  - Image Vectorielle
-  - Images
-  - Interactivité
-  - SVG
-  - Video
-  - iframes
-  - imagemaps
-translation_of: Learn/HTML/Multimedia_and_embedding
-original_slug: Apprendre/HTML/Multimedia_and_embedding
 ---
+
 {{LearnSidebar}}
 
-Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
+Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte. Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
 
 ## Prérequis
 
-Pour commencer ce module dans de bonnes conditions, vous devriez posséder les connaissances de base du HTML comme il est recommandé dans l'article : [introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML). Nous vous recommandons de passer du temps sur cette introduction en premier lieu (ou un article équivalent d'initiation au HTML) puis de repasser ici pour continuer.
+Pour commencer ce module dans de bonnes conditions, vous devriez posséder les connaissances de base du HTML comme il est recommandé dans l'article : [introduction au HTML](/fr/Apprendre/HTML/Introduction_à_HTML). Nous vous recommandons de passer du temps sur cette introduction en premier lieu (ou un article équivalent d'initiation au HTML) puis de repasser ici pour continuer.
 
-> **Note :** Si vous travaillez sur une tablette, ordinateur ou autre périphérique où vous n'auriez pas la capacité de créer vos propres fichiers, sachez que vous pouvez tester (la plupart) de vos lignes de code sur des programmes en ligne comme [JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez sur une tablette, ordinateur ou autre périphérique où vous n'auriez pas la capacité de créer vos propres fichiers, sachez que vous pouvez tester (la plupart) de vos lignes de code sur des programmes en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -52,9 +36,9 @@ Les évaluations qui suivent sont là pour tester votre compréhension des bases
 - [Évaluation : page d'accueil Mozilla](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla&nbsp;!
 
-## À voir aussi
+## Voir aussi
 
 - [Intégrer une carte interactive en haut d'une image](/fr/docs/Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image)
   - : Une représentation cartographique fournit un mécanisme qui lie différents secteurs d'une image à différents endroits. Pensez à une carte qui fournirait des informations plus approfondies sur chaque pays sur lequel vous cliquez. Cette technique peut parfois être d'une grande utilité.
 - [Web Principes fondamentaux 2](https://teach.mozilla.org/activities/web-lit-basics-two/)
-  - : Un excellent cours de Mozilla qui explore et teste les compétences développées dans le module : *Multimedia et intégration*. Approfondissez les fondamentaux de la composition de pages web, concevez des outils pour l'accessibilité, le partage de ressources, découvrez l'utilisation de supports en ligne et la mutualisation du travail (ce qui signifie que votre travail est librement disponible et partagé avec d'autres).
+  - : Un excellent cours de Mozilla qui explore et teste les compétences développées dans le module : _Multimedia et intégration_. Approfondissez les fondamentaux de la composition de pages web, concevez des outils pour l'accessibilité, le partage de ressources, découvrez l'utilisation de supports en ligne et la mutualisation du travail (ce qui signifie que votre travail est librement disponible et partagé avec d'autres).

@@ -1,24 +1,18 @@
 ---
 title: 減算 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.subtraction
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
-減算演算子 (`-`) は 2 つのオペランドの間で減算し、それらの差を生成します。
+減算演算子 (`-`) は 2 つのオペランドの間で減算し、それらの差を生成します。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
 ## 構文
 
 ```js
-x - y
+x - y;
 ```
 
 ## 例
@@ -26,14 +20,14 @@ x - y
 ### 数値の減算
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### 非数の減算
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## 仕様書

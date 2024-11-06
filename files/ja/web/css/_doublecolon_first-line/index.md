@@ -1,15 +1,8 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line (:first-line)"
 slug: Web/CSS/::first-line
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.first-line
-translation_of: Web/CSS/::first-line
 ---
+
 {{CSSRef}}
 
 **`::first-line`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行にスタイルを適用します。なお、最初の行の長さは要素の幅、文書の幅、文字列のフォントの大きさなど、様々な要因に左右されます。
@@ -21,7 +14,10 @@ p::first-line {
 }
 ```
 
-> **Note:** CSS3 では `::first-line` という (二重コロン付き) 表記が、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために導入されました。ブラウザーでは CSS2 で導入された `:first-line` も使用できます。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
+
+> [!NOTE]
+> CSS3 では `::first-line` という (二重コロン付き) 表記が、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために導入されました。ブラウザーでは CSS2 で導入された `:first-line` も使用できます。
 
 ## 利用可能なプロパティ
 
@@ -42,11 +38,15 @@ p::first-line {
 ### HTML
 
 ```html
-<p>スタイルはこの段落の最初の行にのみ適用されます。
-その後のすべての文字列は普通のスタイルになります。分かりますか？</p>
+<p>
+  スタイルはこの段落の最初の行にのみ適用されます。
+  その後のすべての文字列は普通のスタイルになります。分かりますか？
+</p>
 
-<span>ブロックレベル要素ではないので、この文字列の最初の行は、
-特殊なスタイルになりません。</span>
+<span
+  >ブロックレベル要素ではないので、この文字列の最初の行は、
+  特殊なスタイルになりません。</span
+>
 ```
 
 ### CSS

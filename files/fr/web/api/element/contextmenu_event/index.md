@@ -1,15 +1,8 @@
 ---
-title: 'Element : évènement contextmenu'
+title: "Element : évènement contextmenu"
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - contextemenu
-translation_of: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 L'évènement **`contextmenu`** est déclenché à partir d'un élément lorsque l'utilisateur tente d'ouvrir un menu contextuel. Cet évènement est généralement déclenché par un clic-droit ou en utilisant la touche du menu contextuel.
@@ -55,9 +48,9 @@ Dans cet exemple, on annule l'action par défaut de l'évènement `contextmenu` 
 ### JavaScript
 
 ```js
-noContext = document.getElementById('noContextMenu');
+noContext = document.getElementById("noContextMenu");
 
-noContext.addEventListener('contextmenu', e => {
+noContext.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 ```
@@ -68,13 +61,11 @@ noContext.addEventListener('contextmenu', e => {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-contextmenu', 'contextmenu')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.contextmenu_event")}}
+{{Compat}}
 
 ## Voir aussi
 

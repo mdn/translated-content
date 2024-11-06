@@ -1,18 +1,9 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
-tags:
-  - AP
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - NotificationOptions
-  - Refere
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Ce type contient les données nécessaires pour :
 
@@ -70,14 +61,14 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.NotificationOptions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

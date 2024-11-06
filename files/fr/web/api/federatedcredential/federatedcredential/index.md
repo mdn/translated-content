@@ -1,14 +1,8 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential/FederatedCredential
-tags:
-  - API
-  - Constructeur
-  - Credential Management API
-  - FederatedCredential
-  - Reference
-translation_of: Web/API/FederatedCredential/FederatedCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`FederatedCredential`** permet de créer un nouvel objet {{domxref("FederatedCredential")}}.
@@ -17,7 +11,9 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 
 ## Syntaxe
 
-    var mesCredentials = new FederatedCredential(init)
+```js
+var mesCredentials = new FederatedCredential(init);
+```
 
 ### Paramètres
 
@@ -29,10 +25,8 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FederatedCredential.FederatedCredential")}}
+{{Compat}}

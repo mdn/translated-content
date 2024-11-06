@@ -1,18 +1,13 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.transition-timing-function
-translation_of: Web/CSS/transition-timing-function
+l10n:
+  sourceCommit: b72abe9565faba1aaa9230fb857f4c6211dc4434
 ---
+
 {{CSSRef}}
 
-**`transition-timing-function`** は CSS のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
+**`transition-timing-function`** は CSS のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
 {{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
@@ -36,7 +31,7 @@ transition-timing-function: step-end;
 
 /* 関数値 */
 transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* 段階式の関数のキーワード */
 transition-timing-function: steps(4, jump-start);
@@ -47,22 +42,23 @@ transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
 /* 複数のタイミング関数 */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* グローバル値 */
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: revert;
+transition-timing-function: revert-layer;
 transition-timing-function: unset;
 ```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
 - `<easing-function>`
 
   - : 各々の {{cssxref("&lt;easing-function&gt;")}} は {{ cssxref("transition-property") }} で指定された、トランジションを行うプロパティに対応するイージング関数を表します。
 
-    段階のないキーワード値 (ease、linear、ease-in-out、など) はそれぞれ 4 つの固定点による三次ベジェ曲線を表しており、 cubic-bezier() 関数の値は定義済みの値以外を使用することができます。段階のあるタイミング関数は、入力の時間を時間的に等しい間隔で指定された数に分割します。これは、ステップ数とステップ位置によって定義されます。
+    段階のないキーワード値 (ease、linear、ease-in-out、など) はそれぞれ 4 つの固定点による三次ベジェ曲線を表しており、 cubic-bezier() 関数の値は定義済みの値以外を使用することができます。段階のあるイージング関数は、入力の時間を時間的に等しい間隔で指定された数に分割します。これは、ステップ数とステップ位置によって定義されます。
 
     - `ease`
       - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同等であり、既定値です。トランジションの半ばまで変化量が増加し、最後にはまた遅くなります。
@@ -102,7 +98,7 @@ transition-timing-function: unset;
 
 アニメーションは、ユーザーがどのようなアクションを期待されているのかを理解するためのガイド、ユーザーインターフェイス内の関係性の表示、どのようなアクションが発生したのかをユーザーに通知するなど、役に立つことがあります。アニメーションは、認知的な負荷を軽減し、変化に気づかないことを防ぎ、空間的な関係をよりよく思い出すことに役立ちます。しかし、アニメーションの中には、注意欠陥多動性障害 (ADHD) の人の認知に問題が発生するものや、前庭障害、てんかん、片頭痛、スコトープ過敏症の引き金となるような動きをするものもあります。
 
-アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)を使用して、アニメーションを使用しないことを希望するユーザーにも快適な利用環境を提供することを検討してください。
+アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#ユーザーエージェントクライアントヒント)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}）を使用して、アニメーションを減らすことを希望するユーザーにも快適な利用環境を提供することを検討してください。
 
 ## 公式定義
 
@@ -114,7 +110,7 @@ transition-timing-function: unset;
 
 ## 例
 
-<h3 id="Cubic-Bezier_examples">三次ベジェの例</h3>
+### 三次ベジェの例
 
 ```html hidden
 <div class="parent">
@@ -128,63 +124,64 @@ transition-timing-function: unset;
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration: 7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration: 2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
 .ease {
-   transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .easein {
-   transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .easeout {
-   transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .easeinout {
-   transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .linear {
-   transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .cb {
-   transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
 {{EmbedLiveSample("Cubic-Bezier_examples")}}
 
-<h3 id="Step_examples">ステップの例</h3>
+### ステップの例
 
 ```html hidden
 <div class="parent">
@@ -198,57 +195,58 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration:7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration:2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
 .jump-start {
-   transition-timing-function: steps(5, jump-start);
+  transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   transition-timing-function: steps(5, jump-end);
+  transition-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   transition-timing-function: steps(5, jump-none);
+  transition-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(5, jump-both);
 }
 .step-start {
-   transition-timing-function: step-start;
+  transition-timing-function: step-start;
 }
 .step-end {
-   transition-timing-function: step-end;
+  transition-timing-function: step-end;
 }
 ```
 
@@ -264,7 +262,8 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [`<easing-function>`](/ja/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

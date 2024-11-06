@@ -1,16 +1,8 @@
 ---
 title: Element
 slug: Web/SVG/Element
-tags:
-  - Conception adaptative
-  - Elements
-  - Graphiques vectoriels
-  - Références SVG
-  - SVG
-  - dessin
-  - l10n:priority
-translation_of: Web/SVG/Element
 ---
+
 Les dessins et les images SVG sont créés à l'aide d'un large éventail d'éléments dédiés à la construction, au dessin et à la mise en page d'images vectorielles et de diagrammes. Vous trouverez ici la documentation de référence pour chacun des éléments SVG.
 
 ## Éléments SVG de A à Z
@@ -212,7 +204,8 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 ## Élements obsolètes et dépréciés
 
-> **Attention :** Les éléments ci-dessous sont dépréciés et ne doivent pas être utilisés. **Vous ne devez absolument pas les utiliser dans des nouveux projets, et vous devez dans la mesure du possible les remplacer dans les vieux projets.** Ils sont listés là uniquemnt à titre informatif.
+> [!WARNING]
+> Les éléments ci-dessous sont dépréciés et ne doivent pas être utilisés. **Vous ne devez absolument pas les utiliser dans des nouveux projets, et vous devez dans la mesure du possible les remplacer dans les vieux projets.** Ils sont listés là uniquemnt à titre informatif.
 
 ### A
 

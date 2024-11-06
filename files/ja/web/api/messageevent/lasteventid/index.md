@@ -1,31 +1,25 @@
 ---
-title: MessageEvent.lastEventId
+title: "MessageEvent: lastEventId プロパティ"
+short-title: lastEventId
 slug: Web/API/MessageEvent/lastEventId
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - lastEventID
-  - messaging
-browser-compat: api.MessageEvent.lastEventId
-translation_of: Web/API/MessageEvent/lastEventId
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`lastEventId`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、このイベントの固有の ID を表す {{domxref("DOMString")}} です。
+**`lastEventId`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、このイベントの固有の ID を表す文字列です。
 
 ## 値
 
-ID を表す {{domxref("DOMString")}} です。
+ID を表す文字列です。
 
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.lastEventId);
 };
 ```

@@ -1,21 +1,9 @@
 ---
-title: '<caption> : l''élément de légende d''un tableau'
+title: "<caption> : l'élément de légende d'un tableau"
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
-translation_of: Web/HTML/Element/caption
-browser-compat: html.elements.caption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<caption>`** définit la légende (ou le titre) d'un tableau.
 
@@ -96,7 +84,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `bottom`
       - : La légende est affichée en dessous du tableau
 
-    > **Note :** Ne pas utiliser cet attribut. Il a été déprécié. L'élément `<caption>` devrait être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS [`caption-side`](/fr/docs/Web/CSS/caption-side) et [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Ne pas utiliser cet attribut. Il a été déprécié. L'élément `<caption>` devrait être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS [`caption-side`](/fr/docs/Web/CSS/caption-side) et [`text-align`](/fr/docs/Web/CSS/text-align).
 
 ## Notes d'utilisation
 
@@ -106,7 +95,7 @@ Quand l'élément [`<table>`](/fr/docs/Web/HTML/Element/table) (étant le parent
 
 Utiliser la propriété [`background-color`](/fr/docs/Web/CSS/background-color) sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec `background-color` sur l'élément `<caption>` pour que celui-ci ait la même couleur.
 
-## Exemple
+## Exemples
 
 Cet exemple simple présente un tableau qui comprend une légende.
 
@@ -114,7 +103,9 @@ Cet exemple simple présente un tableau qui comprend une légende.
 
 ```html
 <table>
-  <caption>Légende de l'exemple</caption>
+  <caption>
+    Légende de l'exemple
+  </caption>
   <tr>
     <th>Connexion</th>
     <th>Courriel :</th>
@@ -132,15 +123,17 @@ Cet exemple simple présente un tableau qui comprend une légende.
 
 ```css hidden
 caption {
-    caption-side: top;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0px;
-  }
-  table, th, td {
-    border: 1px solid black;
-  }
+  caption-side: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
 ```
 
 ### Résultat

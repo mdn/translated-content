@@ -1,16 +1,17 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-translation_of: Web/XPath/Functions/contains
-original_slug: Web/XPath/Fonctions/contains
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `contains` détermine si la chaîne passée en premier argument contient la chaîne passée en second argument et retourne le booléen `true` ou `false`.
 
 ### Syntaxe
 
-    contains( meule , aiguille )
+```
+contains( meule , aiguille )
+```
 
 ### Arguments
 

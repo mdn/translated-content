@@ -1,12 +1,8 @@
 ---
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -58,23 +54,24 @@ Les clés dans l'objet icons spécifient la taille de l'icône en pixels et la v
 
 Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre icône. Il existe actuellement deux réserves :
 
-1.  Vous devez spécifier un "viewBox" dans l'image. Par exemple :
+1. Vous devez spécifier un "viewBox" dans l'image. Par exemple :
 
-    ```html
-    <svg viewBox="0 0 48 48" width="48" height="48" ...
-    ```
+   ```html
+   <svg viewBox="0 0 48 48" width="48" height="48" ...
+   ```
 
-2.  Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre` manifest. `Par exemple :
+2. Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre `manifest`. Par exemple :
 
-    ```json
-    "icons": {
-      "48": "icon.svg",
-      "96": "icon.svg"
-    }
-    ```
+   ```json
+   "icons": {
+     "48": "icon.svg",
+     "96": "icon.svg"
+   }
+   ```
 
-> **Note :** si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
+> [!NOTE]
+> Si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.icons")}}
+{{Compat}}

@@ -1,14 +1,8 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Point
-  - Quadrilatère
-translation_of: Web/API/DOMPoint
 ---
+
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 Un **`DOMPoint`** représente un point 2D ou 3D dans le système de coordonnées.
@@ -44,7 +38,7 @@ _`DOMPoint` hérite des propriétés de son parent {{domxref("DOMPointReadOnly")
 
 ## Exemples
 
-Dans l' [API WebVR](/fr/docs/Web/API/WebVR_API) (_VR = réalité virtuelle_), les valeurs `DOMPoint` sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la  {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un `DOMPoint`. Notez ci-dessous l'utilisation de `position.x`, `position.y` et `position.z`.
+Dans l' [API WebVR](/fr/docs/Web/API/WebVR_API) (_VR = réalité virtuelle_), les valeurs `DOMPoint` sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un `DOMPoint`. Notez ci-dessous l'utilisation de `position.x`, `position.y` et `position.z`.
 
 ```js
 function setView() {
@@ -67,17 +61,16 @@ function setView() {
 }
 ```
 
-> **Note :** Voir notre [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) pour le code complet.
+> [!NOTE]
+> Voir notre [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) pour le code complet.
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | Dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPoint")}}
+{{Compat}}
 
 ## Voir aussi
 
