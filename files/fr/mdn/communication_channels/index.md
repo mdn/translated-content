@@ -38,7 +38,7 @@ Utilisez les discussions GitHub pour poser vos questions et proposer vos suggest
 Choisissez la [catégorie de discussion](https://github.com/mdn/mdn-community#github-discussions) appropriée lors de la création d'un fil de discussion.
 Vos questions avec réponses peuvent être très utiles pour d'autres personnes recherchant des informations similaires à l'avenir.
 
-Consultez les [lignes directrices pour les discussions](/en-US/docs/MDN/Community/Discussions) spécifiques à MDN avant de créer une nouvelle soumission.
+Consultez les [lignes directrices pour les discussions](/fr/docs/MDN/Community/Discussions) spécifiques à MDN avant de créer une nouvelle soumission.
 
 ## Réseaux sociaux
 
