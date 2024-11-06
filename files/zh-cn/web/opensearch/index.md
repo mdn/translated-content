@@ -2,7 +2,7 @@
 title: OpenSearch 描述格式
 slug: Web/OpenSearch
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
 ---
 
 {{AddonSidebar}}
