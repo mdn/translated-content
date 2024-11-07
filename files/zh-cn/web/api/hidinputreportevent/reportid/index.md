@@ -7,11 +7,11 @@ l10n:
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-{{domxref("HIDInputReportEvent")}} 接口的 **`reportId`** 属性返回此报告的单字节识别前缀，如果 HID 接口不使用报告 ID，则返回 0。
+{{domxref("HIDInputReportEvent")}} 接口的 **`reportId`** 属性返回此报告的单字节标识前缀，如果 HID 接口不使用报告 ID，则返回 0。
 
 ## 值
 
-一个单字节识别前缀。
+一个单字节标识前缀。
 
 ## 示例
 

@@ -16,11 +16,11 @@ l10n:
 _此接口从其父接口 {{domxref("Event")}} 继承属性。_
 
 - {{domxref("HIDInputReportEvent.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 包含来自于输入报告数据的 {{jsxref("DataView")}}，如果 HID 接口使用报告 ID，则排除 `reportId`。
+  - : 包含来自于输入报告数据的 {{jsxref("DataView")}}，如果 HID 接口使用报告 ID，则不包含 `reportId`。
 - {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 表示发送输入报告的 HID 接口的 {{domxref("HIDDevice")}} 实例
 - {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 此报告的单字节识别前缀，如果 HID 接口不使用报告 ID，则返回 0。
+  - : 此报告的单字节标识前缀，如果 HID 接口不使用报告 ID，则返回 0。
 
 ## 实例方法
 
@@ -28,7 +28,7 @@ _此接口从其父接口 {{domxref("Event")}} 继承方法。_
 
 ## 示例
 
-以下示例演示如何监听 `inputreport` 事件，该事件允许应用程序检测到 Joy-Con 右手柄设备上的哪个按钮被按下。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn)中看到更多示例和实时演示。
+以下示例演示如何监听 `inputreport` 事件，该事件允许应用程序检测到 Joy-Con 右手柄设备上的哪个按钮被按下。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid)中看到更多示例和实时演示。
 
 ```js
 device.addEventListener("inputreport", (event) => {
