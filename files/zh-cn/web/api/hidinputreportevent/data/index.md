@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-{{domxref("HIDInputReportEvent")}} 接口的 **`data`** 属性返回包含来自于输入报告数据的 {{jsxref("DataView")}}，如果 HID 接口使用报告 ID，则排除 `reportId`。
+{{domxref("HIDInputReportEvent")}} 接口的 **`data`** 属性返回包含来自于输入报告数据的 {{jsxref("DataView")}}，如果 HID 接口使用报告 ID，则不包含 `reportId`。
 
 ## 值
 
