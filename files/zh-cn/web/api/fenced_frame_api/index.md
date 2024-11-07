@@ -11,7 +11,7 @@ l10n:
 
 ## 概念和用法
 
-网络上[隐私](/zh-CN/docs/Web/Privacy)和[安全](/zh-CN/docs/Web/Security)问题的一个主要来源是嵌入在 {{htmlelement("iframe")}} 元素中的内容。历史上，`<iframe>`被用于设置第三方 cookie，这些 cookie 可用于跨站点共享信息和追踪用户。此外，嵌入在 `<iframe>` 中的内容可以与其嵌入文档进行通信（例如，使用 {{domxref("Window.postMessage()")}}）。
+网络上[隐私](/zh-CN/docs/Web/Privacy)和[安全](/zh-CN/docs/Web/Security)问题的一个主要来源是嵌入在 {{htmlelement("iframe")}} 元素中的内容。历史上，`<iframe>` 被用于设置第三方 cookie，这些 cookie 可用于跨站点共享信息和追踪用户。此外，嵌入在 `<iframe>` 中的内容可以与其嵌入文档进行通信（例如，使用 {{domxref("Window.postMessage()")}}）。
 
 嵌入文档还可以使用脚本从 `<iframe>` 中读取各种形式的信息，例如，通过读取 `src` 属性中的嵌入 URL，你可能会获取到重要的跟踪/指纹数据，特别是当 URL 包含 [URL 参数](/zh-CN/docs/Web/URI#query)时。`<iframe>` 还可以访问嵌入上下文的 DOM，反之亦然。
 
@@ -70,7 +70,7 @@ frame.config = frameConfig;
 
 ### 权限策略
 
-只有通过设置在 `<fencedframe>` 上的权限策略，才能启用专门设计为在其中使用的特定功能；在此上下文中，其他受策略控制的功能不可用。参见[围栏框架可用的权限策略](/zh-CN/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames)查看更多信息。
+只有通过设置在 `<fencedframe>` 上的权限策略，才能启用专门设计为在其中使用的特定功能；在此上下文中，其他受策略控制的功能不可用。参见[围栏框架可用的权限策略](/zh-CN/docs/Web/HTML/Element/fencedframe#围栏框架可用的权限策略)查看更多信息。
 
 ### HTTP 标头
 
@@ -88,7 +88,7 @@ Supports-Loading-Mode: fenced-frame
 
 围栏框架对 HTTP 标头字段的其他影响如下：
 
-- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)在封闭框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委托，这可能会被用来泄露数据。
+- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#用户代理客户端提示)在封闭框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委托，这可能会被用来泄露数据。
 - 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从封闭框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
 - 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
 - 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要使封闭框架加载，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
@@ -106,7 +106,7 @@ Supports-Loading-Mode: fenced-frame
 ## 接口
 
 - {{domxref("FencedFrameConfig")}}
-  - : 表示 {{htmlelement("fencedframe")}} 的导航配置，即该框架中将显示什么内容。`FencedFrameConfig` 由诸如[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)等来源返回，并设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
+  - : 表示 {{htmlelement("fencedframe")}} 的导航配置，即该框架中将显示什么内容。`FencedFrameConfig` 由诸如[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 等来源返回，并设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
 - {{domxref("Fence")}}
   - : 包含与围栏框架功能相关的多个函数。仅在嵌入在 `<fencedframe>` 内的文档中可用。
 - {{domxref("HTMLFencedFrameElement")}}
