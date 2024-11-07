@@ -2,7 +2,7 @@
 title: 虚拟键盘 API
 slug: Web/API/VirtualKeyboard_API
 l10n:
-  sourceCommit: 96e73ab4d1fdb714a6a6516821b3206d83909046
+  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}{{securecontext_header}}
