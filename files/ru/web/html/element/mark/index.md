@@ -7,11 +7,11 @@ slug: Web/HTML/Element/mark
 
 **HTML элемент `<mark>`** представляет текст, выделенный в справочных целях из-за своей _актуальности_ в определённом контексте. Например, он может быть использован на странице с результатом поиска, в которой выделяется каждый экземпляр искомого слова.
 
-| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Содержимое потока](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), ощутимое содержимое. |
+| [Категории содержимого](/ru/docs/Web/HTML/Content_categories) | [Содержимое потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), ощутимое содержимое. |
 | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                          |
+| Допустимое содержимое                                     | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                          |
 | Пропуск тегов                                             | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Допустимые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
+| Допустимые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                         |
 | Допустимые ARIA-роли                                      | Любые                                                                                                                                                           |
 | DOM-интерфейс                                             | {{domxref("HTMLElement")}}                                                                                                                                      |
 

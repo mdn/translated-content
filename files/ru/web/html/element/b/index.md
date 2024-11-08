@@ -7,11 +7,11 @@ slug: Web/HTML/Element/b
 
 **HTML-элемент `<b>`** является частью текста стилистически отличающейся от нормального текста, не носящий какого-либо специального значения или важности, и как правило выделен жирным шрифтом.
 
-| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.       |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content), palpable content.       |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                        |
+| Разрешённый контент                                    | [Phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                        |
 | Tag omission                                           | Нет, открывающий и закрывающий теги обязательны.                                                                                                              |
-| Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                               |
+| Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                               |
 | Permitted ARIA roles                                   | Any                                                                                                                                                           |
 | DOM interface                                          | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/ru/docs/DOM/span) interface for this element. |
 

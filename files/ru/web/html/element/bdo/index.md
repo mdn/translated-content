@@ -11,11 +11,11 @@ slug: Web/HTML/Element/bdo
 
 Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.              |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), palpable content.              |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                    |
+| Допустимый контент                                     | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                    |
 | Закрывающий тег                                        | Нет, открывающий и закрывающий теги обязательны.                                                                                                                          |
-| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                          |
+| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content),                                                                          |
 | Допустимые ARIA-роли                                   | Любые                                                                                                                                                                     |
 | DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) для этого элемента. |
 

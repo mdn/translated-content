@@ -9,11 +9,11 @@ slug: Web/HTML/Element/input
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
 
-- _[Content categories](/ru/docs/HTML/Content_categories)_ [Flow content](/ru/docs/HTML/Content_categories#Flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _[Content categories](/ru/docs/Web/HTML/Content_categories)_ [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).
   If the [`type`](/ru/docs/Web/HTML/Element/input#type) has not the `hidden` value, labellable element, palpable content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLInputElement")}}
 
 ## Атрибуты
