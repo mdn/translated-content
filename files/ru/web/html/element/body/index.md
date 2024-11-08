@@ -97,7 +97,7 @@ l10n:
 
 {{EmbedLiveSample('Example')}}
 
-## Техническое описание
+## Техническая сводка
 
 <table class="properties">
   <tbody>
