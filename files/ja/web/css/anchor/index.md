@@ -42,8 +42,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 
   - : この要素の端に相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値です。これは `<dashed-ident>` 値です。省略された場合は、その要素の**既定のアンカー**で、これはその要素の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されているもの、またはその要素に関連付けられた HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性が使用されます。
 
-    > [!NOTE]
-    > `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性が必要です。
+    > **メモ:** `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性が必要です。
 
 - `<anchor-side>`
 
