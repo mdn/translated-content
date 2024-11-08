@@ -18,7 +18,7 @@ slug: Web/HTML/Element/noscript
 
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Пример
 

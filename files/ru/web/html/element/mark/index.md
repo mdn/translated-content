@@ -17,7 +17,7 @@ slug: Web/HTML/Element/mark
 
 ## Атрибуты
 
-Этот элемент включает только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечания
 

@@ -18,7 +18,7 @@ slug: Web/HTML/Element/input
 
 ## Атрибуты
 
-Этот элемент содержит [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент содержит [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - Расширение файла, начинающееся с символа точки (U+002E). Наприм., '.jpg, .png, .doc)
 - Валидный тип MIME без расширения

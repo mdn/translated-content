@@ -17,7 +17,7 @@ slug: Web/HTML/Element/caption
 
 ## Атрибуты
 
-Этот элемент включает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 

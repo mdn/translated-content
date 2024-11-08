@@ -17,7 +17,7 @@ slug: Web/HTML/Element/b
 
 ## Атрибуты
 
-Этот элемент содержит только [global attributes](/ru/docs/HTML/Global_attributes).
+Этот элемент содержит только [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
 ## Указания по применению
 

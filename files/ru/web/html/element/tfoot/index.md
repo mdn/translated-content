@@ -18,7 +18,7 @@ HTML-элемент **`<tfoot>`** определяющий набор строк
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `align` {{ Deprecated_inline() }}
 
