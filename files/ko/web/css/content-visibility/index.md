@@ -1,8 +1,6 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
-page-type: css-property
-browser-compat: css.properties.content-visibility
 l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
