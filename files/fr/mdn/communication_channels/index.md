@@ -49,7 +49,3 @@ Vous pouvez utiliser les forums listés ci-dessous pour discuter des problèmes 
 - [Forum Discourse MDN](https://discourse.mozilla.org/c/mdn/236)
 - [Catégorie d'apprentissage du forum Discourse MDN](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Forum Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)
-
-## Canaux de localisation
-
-Chaque équipe de localisation a sa propre [méthode de communication](/fr/docs/MDN/Community/Contributing/Translated_content).
