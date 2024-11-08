@@ -29,7 +29,7 @@ onvisibilitychange = (event) => {};
 
 该事件不包括文档的更新可见性状态，但是你可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
 
-当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就以 `visibilityState` 为 `hidden`的状态触发。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
+当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就以 `visibilityState` 为 `hidden` 的状态触发。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
 
 向 `hidden` 过渡也是页面停止用户界面更新和停止用户不想在后台运行的任何任务的好时机。
 
@@ -39,7 +39,7 @@ onvisibilitychange = (event) => {};
 
 本示例在页面隐藏时暂停播放，在页面再次可见时恢复播放。
 
-有关完整示例，参见[页面可见性 API：在页面隐藏时暂停音频](/zh-CN/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide) 文档。
+有关完整示例，参见[页面可见性 API：在页面隐藏时暂停音频](/zh-CN/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide)文档。
 
 ```js
 document.addEventListener("visibilitychange", () => {
