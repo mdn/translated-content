@@ -1,6 +1,6 @@
 ---
 title: Canaux de communication
-slug: MDN/Community/Communication_channels
+slug: MDN/Community/communication_channels
 ---
 
 {{MDNSidebar}}
@@ -9,14 +9,11 @@ Il existe divers canaux de communication que la communauté peut utiliser pour c
 
 ## Salles de discussion
 
-Les salles de discussion sont un lieu pour rencontrer d'autres personnes, poser des questions et partager des informations.
-Elles sont idéales pour faire connaissance avec d'autres membres de la communauté, partager votre travail et obtenir de l'aide pour vos contributions.
+Les salles de discussion sont un lieu pour rencontrer d'autres personnes, poser des questions et partager des informations. Elles sont idéales pour faire connaissance avec d'autres membres de la communauté, partager votre travail et obtenir de l'aide pour vos contributions.
 
 ### Serveur Discord
 
-Le serveur Discord de la communauté MDN Web Docs est ouvert au public.
-Ce serveur est un excellent moyen de voir ce que le personnel et les membres de la communauté font au quotidien.
-Vous pouvez poser des questions, demander des précisions, découvrir comment vous impliquer et rejoindre des canaux spécifiques en fonction de vos domaines d'intérêt.
+Le serveur Discord de la communauté MDN Web Docs est ouvert au public. Ce serveur est un excellent moyen de voir ce que le personnel et les membres de la communauté font au quotidien. Vous pouvez poser des questions, demander des précisions, découvrir comment vous impliquer et rejoindre des canaux spécifiques en fonction de vos domaines d'intérêt.
 
 Rejoignez la communauté MDN Web Docs via notre [invitation Discord](/discord).
 
