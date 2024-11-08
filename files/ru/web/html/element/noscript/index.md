@@ -1,26 +1,19 @@
 ---
 title: <noscript> - элемент, который поможет при отключенном JS
 slug: Web/HTML/Element/noscript
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
 [HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [метаданные](/ru/docs/Web/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/HTML/Content_categories#фразовый_контент).                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | Когда выполнение JavaScript отключено и когда он вложен в элемент {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}. <br> Когда выполнение JavaScript отключено и когда он не вложен в элемент {{HTMLElement("head")}}: любой [прозрачный контент](/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента), но среди его потомков не должно быть элемента `<noscript>`. <br> В противном случае: основной поток или фразовый контент. |
-| Пропуск тега                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content) или элемент {{HTMLElement("head")}} (только для HTML-документа). Оба варианта возможны только если нет элемента-предка `<noscript>`.                                                                                                                                                                                                                                                                                                                                               |
-| Неявная ARIA-роль                                          | [нет роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Допустимые ARIA-роли                                       | нет                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-## Пример
+## Примеры
 
 ```html
 <noscript>
@@ -32,13 +25,86 @@ slug: Web/HTML/Element/noscript
 
 ### Результат с включённым JavaScript
 
-Rocks!
+Камни!
 
 ### Результат с выключенным JavaScript
 
-[External Link](http://www.mozilla.com/)
+[Внешняя ссылка](https://www.mozilla.org/)
 
-Rocks!
+Камни!
+
+## Техническая сводка
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ru/docs/Web/HTML/Content_categories"
+          >Категории контента</a
+        >
+      </th>
+      <td>
+        <a href="/ru/docs/Web/HTML/Content_categories#метаданные"
+          >Метаданные</a
+        >,
+        <a href="/ru/docs/Web/HTML/Content_categories#основной_поток"
+          >основной поток</a
+        >,
+        <a href="/ru/docs/Web/HTML/Content_categories#фразовый_контент"
+          >фразовый контент</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимый контент</th>
+      <td>
+        Если выполнение JavaScript отключено и элемент является потомком элемента
+        {{HTMLElement("head")}}: в любом порядке, ноль или более элементов
+        {{HTMLElement("link")}}, ноль или более элементов
+        {{HTMLElement("style")}}, и ноль или более элементов
+        {{HTMLElement("meta")}}.<br />Если выполнение JavaScript отключено и элемент не
+        является потомком элемента {{HTMLElement("head")}}: любой
+        <a
+          href="/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента"
+          >прозрачный контент</a
+        >, но элемент <code>&#x3C;noscript></code> не должен быть среди его
+        потомков.<br />В противном случае: основной поток или фразовый контент.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Пропуск тега</th>
+      <td>Нет, открывающий и закрывающий теги обязательны.</td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые родители</th>
+      <td>
+        Любой элемент, принимающий
+        <a href="/ru/docs/Web/HTML/Content_categories#Phrasing_content"
+          >фразовый контент</a
+        >, если среди его предков нет элемента
+        <code>&#x3C;noscript></code>, или в элементе
+        {{HTMLElement("head")}} (только для HTML-документа), также при
+        отсутствии предков <code>&#x3C;noscript></code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Неявная роль ARIA</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Нет соответствующей роли</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Допустимые ARIA-роли</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM-интерфейс</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Спецификации
 
