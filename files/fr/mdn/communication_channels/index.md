@@ -53,7 +53,3 @@ Vous pouvez utiliser les forums listés ci-dessous pour discuter des problèmes 
 ## Canaux de localisation
 
 Chaque équipe de localisation a sa propre [méthode de communication](/fr/docs/MDN/Community/Contributing/Translated_content).
-
-## Email
-
-Pour toute communication non publique, envoyez un email à [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla.com).
