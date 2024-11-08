@@ -184,7 +184,6 @@ document
 .querySelector("p[hidden]")
 .toggleAttribute("hidden", isShadowRootModeSupported);
 
-
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
 
 ### Декларативный теневой DOM с делегированием фокуса
