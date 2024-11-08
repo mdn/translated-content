@@ -2844,6 +2844,7 @@
 /ja/docs/Web/API/HTMLElement/contextMenu	/ja/docs/orphaned/Web/API/HTMLElement/contextMenu
 /ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/HTMLElement/input_event	/ja/docs/Web/API/Element/input_event
+/ja/docs/Web/API/HTMLElement/invalid_event	/ja/docs/Web/API/HTMLInputElement/invalid_event
 /ja/docs/Web/API/HTMLElement/lostpointercapture_event	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
 /ja/docs/Web/API/HTMLElement/oncut	/ja/docs/Web/API/HTMLElement/cut_event
