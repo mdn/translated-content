@@ -176,13 +176,14 @@ table td {
 </article>
 ```
 
-js
+```js
 const isShadowRootModeSupported =
 HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
 
 document
 .querySelector("p[hidden]")
 .toggleAttribute("hidden", isShadowRootModeSupported);
+```
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
 
