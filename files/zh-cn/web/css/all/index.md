@@ -103,7 +103,7 @@ blockquote {
 
 {{HTMLElement("blockquote")}} 使用浏览器默认样式，以及另外的定义的背景色与文字颜色。它是一个 block 元素：它之后的文字位于它的下方。
 
-#### B. `all: initial`
+#### B. `all: unset`
 
 ```html hidden
 <blockquote id="quote">
@@ -121,11 +121,14 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-  all: initial;
+  color: red;
+}
+blockquote {
+  all: unset;
 }
 ```
 
-{{EmbedLiveSample("B. all: initial", "200", "125")}}
+{{EmbedLiveSample("B. all: unset", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素（初始值），其 {{cssxref("background-color")}} 为 `transparent`（初始值），但其 {{cssxref("font-size")}} 仍为 `small`（继承值），其 {{cssxref("color")}} 为 `blue`（继承值）。
 
