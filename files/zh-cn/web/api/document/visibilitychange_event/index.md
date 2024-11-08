@@ -47,7 +47,6 @@ document.addEventListener("visibilitychange", () => {
     playingOnHide = !audio.paused;
     audio.pause();
   } else {
-    // Resume playing if audio was "playing on hide"
     // 如果音频处于“隐藏播放”，则恢复播放。
     if (playingOnHide) {
       audio.play();
