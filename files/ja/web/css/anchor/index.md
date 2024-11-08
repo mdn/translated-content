@@ -1,7 +1,6 @@
 ---
 title: anchor()
 slug: Web/CSS/anchor
-page-type: css-function
 l10n:
   sourceCommit: fe427ad725f3cf1add1299de3cadfbb2bb05ed14
 ---
