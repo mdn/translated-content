@@ -17,7 +17,7 @@ l10n:
 - 行を自動折り返しの場面で折り返すことができるかどうか。
 
 > [!NOTE]
-. 要素の内部で折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
+> 要素の内部で折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
 
 ## 構文
 
