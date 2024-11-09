@@ -237,7 +237,6 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 - `webauthn` {{experimental_inline}}
   - : [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) によって、条件付きの {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出し（すなわち、 `mediation: 'conditional'` を含む呼び出し）によってリクエストされた、生成されたパスキー。詳しくは [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) を参照してください。
 
-
 ## 例
 
 ```html
