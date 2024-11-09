@@ -171,7 +171,7 @@ console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 if (!Array.prototype.filter)
   Array.prototype.filter = function (func, thisArg) {
     "use strict";
-    if (!(typeof func === "Function" && this)) throw new TypeError();
+    if (!(typeof func === "function" && this)) throw new TypeError();
 
     var len = this.length >>> 0,
       res = new Array(len), // 預先配置陣列
