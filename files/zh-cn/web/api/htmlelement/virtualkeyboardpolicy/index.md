@@ -2,7 +2,7 @@
 title: HTMLElement：virtualKeyboardPolicy 属性
 slug: Web/API/HTMLElement/virtualKeyboardPolicy
 l10n:
-  sourceCommit: c7e432ec4c970b0b63741101bacce148804138e4
+  sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
@@ -41,4 +41,4 @@ element.virtualKeyboardPolicy = "manual";
 
 ## 参见
 
-- [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Global_attributes#virtualkeyboardpolicy) HTML 全局属性
+- [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) HTML 全局属性
