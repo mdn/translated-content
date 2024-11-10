@@ -84,7 +84,7 @@ container-type: unset;
 </div>
 ```
 
-コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)の格納コンテキストを作成しています。
+コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
 
 ```css
 .container {

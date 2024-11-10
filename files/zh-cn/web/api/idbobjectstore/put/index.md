@@ -17,9 +17,9 @@ put 方法是一个插入或更新对象仓库的方法。参考仅用于插入�
 
 ## 语法
 
-```
-var request = objectStore.put(item);
-var request = objectStore.put(item, key);
+```js-nolint
+put(item)
+put(item, key)
 ```
 
 ### 参数

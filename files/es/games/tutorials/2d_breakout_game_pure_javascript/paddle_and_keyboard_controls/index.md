@@ -122,7 +122,8 @@ Aquí está el código que funciona, para que lo compares con el tuyo:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","320")}}
 
-> **Nota:** haz que la paleta se mueva más deprisa o más despacio, o cambia su tamaño.
+> [!NOTE]
+> Haz que la paleta se mueva más deprisa o más despacio, o cambia su tamaño.
 
 ## Pasos siguientes
 

@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 
 Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires à celles utilisées par les sites Web pour stocker et lire les cookies. Les fonctionnalités de l'API permettent aux extensions de stocker des informations site par site. Ainsi, comme nous le verrons dans l'exemple, vous pouvez stocker des détails sur le choix de la couleur de fond d'un site pour un utilisateur. Ensuite, lorsque l'utilisateur revient sur le site, votre extension peut utiliser la capacité de l'API pour obtenir des détails sur les cookies et les lire pour récupérer le choix de l'utilisateur et l'appliquer au site Web.
 
-> **Note :** Le comportement des cookies peut être contrôlé à l'aide de la propriété {{WebExtAPIRef("privacy.websites")}} `cookieConfig`. Cette propriété contrôle si et comment les cookies sont acceptés ou si tous les cookies sont traités comme des cookies de session.
+> [!NOTE]
+> Le comportement des cookies peut être contrôlé à l'aide de la propriété {{WebExtAPIRef("privacy.websites")}} `cookieConfig`. Cette propriété contrôle si et comment les cookies sont acceptés ou si tous les cookies sont traités comme des cookies de session.
 
 ## Permissions
 

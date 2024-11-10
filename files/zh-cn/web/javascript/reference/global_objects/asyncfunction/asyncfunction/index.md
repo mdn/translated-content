@@ -31,7 +31,8 @@ AsyncFunction(arg1, arg2, functionBody)
 AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`，都可以创建一个新的 `AsyncFunction` 实例。
+> [!NOTE]
+> 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`，都可以创建一个新的 `AsyncFunction` 实例。
 
 ### 参数
 

@@ -352,7 +352,8 @@ $base-color: #c6538c;
 
 在[这篇博文](https://www.lauraleeflores.com/blog/how-to-organize-your-css-files)里面，你可以看下一个开发者是如何处理这个问题的。
 
-> **备注：** 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
+> [!NOTE]
+> 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
 
 #### 后处理以进行优化
 

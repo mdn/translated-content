@@ -74,9 +74,11 @@ Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#prefli
 - Aucun gestionnaire d'évènement n'est enregistré sur aucun des objets {{domxref("XMLHttpRequestUpload")}} utilisés pour la requête, on y accède via la propriété {{domxref("XMLHttpRequest.upload")}}.
 - Aucun objet {{domxref("ReadableStream")}} n'est utilisé dans la requête.
 
-> **Note :** Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.
+> [!NOTE]
+> Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.
 
-> **Note :** WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
+> [!NOTE]
+> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
 
 Si, par exemple, on a un contenu web situé sous le domaine `http://toto.example` qui souhaite invoquer du contenu situé sous le domaine `http://truc.autre`, on pourrait utiliser du code JavaScript semblable à ce qui suit sur `toto.example` :
 
@@ -168,7 +170,8 @@ Une requête devra être précédée d'une requête préliminaire si **une** des
 - **Ou si** un ou plusieurs gestionnaires d'évènements sont enregistrés sur l'objet {{domxref("XMLHttpRequestUpload")}} utilisé dans la requête.
 - **Ou si** un objet {{domxref("ReadableStream")}} est utilisé dans la requête.
 
-> **Note :** WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
+> [!NOTE]
+> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
 
 Voici un exemple d'une requête qui devra être précédée d'une requête préliminaire :
 
@@ -195,7 +198,8 @@ Dans le fragment de code ci-avant, à la ligne 3, on crée un corps XML envoyé 
 
 ![](preflight_correct.png)
 
-> **Note :** Comme décrit après, la vraie requête POST n'inclut pas les en-têtes `Access-Control-Request-*` qui sont uniquement nécessaires pour la requête OPTIONS.
+> [!NOTE]
+> Comme décrit après, la vraie requête POST n'inclut pas les en-têtes `Access-Control-Request-*` qui sont uniquement nécessaires pour la requête OPTIONS.
 
 Voyons ce qui se passe entre le client et le serveur. Le premier échange est la requête/réponse préliminaire :
 

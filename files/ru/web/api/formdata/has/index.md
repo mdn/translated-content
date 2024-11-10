@@ -3,11 +3,11 @@ title: FormData.has()
 slug: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.
-
-> **Примечание:** Примечание: Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -40,7 +40,7 @@ formData.append("username", "Chris");
 formData.has("username"); // Returns true
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

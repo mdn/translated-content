@@ -3,7 +3,9 @@ title: <tfoot>
 slug: Web/HTML/Element/tfoot
 ---
 
-_HTML_ элемент подвала таблицы (`<tfoot>`) определяющий набор строк суммирующих столбцы таблицы.
+{{HTMLSidebar}}
+
+HTML-элемент **`<tfoot>`** определяющий набор строк суммирующих столбцы таблицы.
 
 ## Используемый контекст
 
@@ -57,5 +59,3 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
 
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.
-
-{{HTMLSidebar}}

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。
 
-> **備註：** 這個方法會直接針對 {{jsxref("Object")}} 呼叫建構子（constructor），而不是 `Object` 型別的實例。
+> [!NOTE]
+> 這個方法會直接針對 {{jsxref("Object")}} 呼叫建構子（constructor），而不是 `Object` 型別的實例。
 
 {{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
 
@@ -338,7 +339,7 @@ Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully an
 
 ### Internet Explorer 8 specific notes
 
-Internet Explorer 8 implemented a `Object.defineProperty()` method that could [only be used on DOM objects](https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). A few things need to be noted:
+Internet Explorer 8 implemented a `Object.defineProperty()` method that could [only be used on DOM objects](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/). A few things need to be noted:
 
 - Trying to use `Object.defineProperty()` on native objects throws an error.
 - Property attributes must be set to some values. The `configurable`, `enumerable` and `writable` attributes should all be set to `true` for data descriptor and `true` for `configurable`, `false` for `enumerable` for accessor descriptor.(?) Any attempt to provide other value(?) will result in an error being thrown.

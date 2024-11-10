@@ -11,7 +11,8 @@ slug: Web/CSS/transform
 
 Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
 
-> **Предупреждение:** Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
+> [!WARNING]
+> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
 
 ## Синтаксис
 

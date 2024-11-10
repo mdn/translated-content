@@ -29,7 +29,8 @@ Only a small subset of all CSS properties can be used inside a declaration block
 
 As this list will be extended in the future, it is recommended that you not use any other properties inside the declaration block, in order to keep the CSS future-proof.
 
-> **備註：** In CSS 2, pseudo-elements were prefixed with a single colon character. As pseudo-classes were also following the same convention, they were indistinguishable. To solve this, CSS 2.1 changed the convention for pseudo-elements. Now a pseudo-element is prefixed with two colon characters, and a pseudo-class is still prefixed with a single colon.As several browsers already implemented the CSS 2 version in a release version, all browsers supporting the two-colon syntax also support the old one-colon syntax.If legacy browsers must be supported, `:first-letter` is the only viable choice; if not, `::first-letter` is preferred.
+> [!NOTE]
+> In CSS 2, pseudo-elements were prefixed with a single colon character. As pseudo-classes were also following the same convention, they were indistinguishable. To solve this, CSS 2.1 changed the convention for pseudo-elements. Now a pseudo-element is prefixed with two colon characters, and a pseudo-class is still prefixed with a single colon.As several browsers already implemented the CSS 2 version in a release version, all browsers supporting the two-colon syntax also support the old one-colon syntax.If legacy browsers must be supported, `:first-letter` is the only viable choice; if not, `::first-letter` is preferred.
 
 ## Example
 

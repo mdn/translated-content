@@ -49,7 +49,8 @@ Express 應用程序可以使用 Node 支持的任何數據庫（Express 本身�
 
 使用 ORM 的好處是，程序員可以繼續用 JavaScript 對象而不是數據庫語義來思考 — 如果你需要使用不同數據庫（在相同或不同的網站上），那麼尤其如此。他們還提供了一個明顯的地方來執行數據驗證和檢查。
 
-> **備註：** 使用 ODM / ORM 通常可以降低開發和維護成本！除非你非常熟悉本地查詢語言，或者性能對你至關重要，否則你應該強烈考慮使用 ODM。
+> [!NOTE]
+> 使用 ODM / ORM 通常可以降低開發和維護成本！除非你非常熟悉本地查詢語言，或者性能對你至關重要，否則你應該強烈考慮使用 ODM。
 
 ### 我應該使用哪個 ORM/ODM ?
 
@@ -71,7 +72,8 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 這種 ODM 和數據庫的結合在 Node 社區中非常流行，部分原因是文檔存儲和查詢系統，看起來非常像 JSON，因此對 JavaScript 開發人員來說很熟悉。
 
-> **備註：** 使用 Mongoose 時，你不需要事先了解 MongoDB，但是如果你已經熟悉 MongoDB，[Mongoose documentation](http://mongoosejs.com/docs/guide.html)文檔的一部分會更易於使用和理解。
+> [!NOTE]
+> 使用 Mongoose 時，你不需要事先了解 MongoDB，但是如果你已經熟悉 MongoDB，[Mongoose documentation](http://mongoosejs.com/docs/guide.html)文檔的一部分會更易於使用和理解。
 
 本教程的其餘部分，將介紹如何為 本地圖書館網站示例，定義和訪問 Mongoose 模式和模型。
 
@@ -91,17 +93,20 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 下圖還顯示了模型之間的關係，包括它們的多重性。多重性是圖中顯示可能存在於關係中的每個模型的數量（最大值和最小值）的數字。例如，框之間的連接線，顯示書本`Book`和種類`Genre`是相關的。靠近書本`Book`模型的數字，表明一本書必須有零個或多個種類（你想要多少都可以），而種類`Genre`旁邊一行的數字，表明它可以有零個或多個相關書籍。
 
-> **備註：** 正如我們在下面的**Mongoose 入門**中所討論的那樣，通常只需要在一個模型中定義文檔/模型之間關係的字段（通過在另一個模型中搜索相關的`_id`仍然可以找到反向關係）。下面我們選擇在書本綱要（Book schema）中定義 Book/Genre 和 Book/Author 之間的關係，以及書本實例綱要（BookInstance Schema）中 Book/BookInstance 之間的關係。這種選擇有點武斷—我們同樣可以在其他綱要中擁有該字段。
+> [!NOTE]
+> 正如我們在下面的**Mongoose 入門**中所討論的那樣，通常只需要在一個模型中定義文檔/模型之間關係的字段（通過在另一個模型中搜索相關的`_id`仍然可以找到反向關係）。下面我們選擇在書本綱要（Book schema）中定義 Book/Genre 和 Book/Author 之間的關係，以及書本實例綱要（BookInstance Schema）中 Book/BookInstance 之間的關係。這種選擇有點武斷—我們同樣可以在其他綱要中擁有該字段。
 
 ![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
-> **備註：** 下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在你閱讀它時，請想想我們將如何構建上圖中的每個模型。
+> [!NOTE]
+> 下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在你閱讀它時，請想想我們將如何構建上圖中的每個模型。
 
 ## Mongoose 入門
 
 本節概述如何將 Mongoose 連接到 MongoDB 數據庫，如何定義模型綱要和模型，以及如何進行基本查詢。
 
-> **備註：** 本入門受到 npm 上的[Mongoose 快速入門](https://www.npmjs.com/package/mongoose)和[Mongoose 官方文檔](http://mongoosejs.com/docs/guide.html)的「深度影響」。
+> [!NOTE]
+> 本入門受到 npm 上的[Mongoose 快速入門](https://www.npmjs.com/package/mongoose)和[Mongoose 官方文檔](http://mongoosejs.com/docs/guide.html)的「深度影響」。
 
 ### 安裝 Mongoose 和 MongoDB
 
@@ -113,7 +118,8 @@ npm install mongoose
 
 安裝 Mongoose 會添加所有依賴項，包括 MongoDB 數據庫驅動程序，但它不會安裝 MongoDB 。如果你想安裝一個 MongoDB 服務器，那麼你可以[從這裡下載](https://www.mongodb.com/download-center)各種操作系統的安裝程序，並在本地安裝。你還可以使用基於雲端的 MongoDB 實例。
 
-> **備註：** 對於本教程，我們將使用基於 mLab 雲的數據庫，作為服務[沙箱層](https://mlab.com/plans/pricing/)來提供數據庫。這適用於開發，也對於本教程很有意義，因為它使「安裝」與操作系統無關（數據庫即服務，也是你可能會用於生產環境數據庫的一種方法）。
+> [!NOTE]
+> 對於本教程，我們將使用基於 mLab 雲的數據庫，作為服務[沙箱層](https://mlab.com/plans/pricing/)來提供數據庫。這適用於開發，也對於本教程很有意義，因為它使「安裝」與操作系統無關（數據庫即服務，也是你可能會用於生產環境數據庫的一種方法）。
 
 ### 連接到 MongoDB
 
@@ -137,7 +143,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 你可以使用`mongoose.connection`獲取默認的`Connection`對象。一旦連接，在`Connection`實例上，將觸發打開事件。
 
-> **備註：** 如果需要創建其他連接，可以使用`mongoose.createConnection()`。這與`connect()`採用相同形式的數據庫 URI（包含主機，數據庫，端口，選項等），並返回`Connection`對象。
+> [!NOTE]
+> 如果需要創建其他連接，可以使用`mongoose.createConnection()`。這與`connect()`採用相同形式的數據庫 URI（包含主機，數據庫，端口，選項等），並返回`Connection`對象。
 
 ### 定義並創建模型
 
@@ -145,7 +152,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 然後，綱要 Schemas 被`mongoose.model()`方法「編譯」為模型。擁有模型後，你可以使用它來查找，創建，更新和刪除給定類型的對象。
 
-> **備註：** 每個模型都映射到 MongoDB 數據庫中的文檔集合。這些文檔將包含模型綱要`Schema`中定義的字段/綱要型態。
+> [!NOTE]
+> 每個模型都映射到 MongoDB 數據庫中的文檔集合。這些文檔將包含模型綱要`Schema`中定義的字段/綱要型態。
 
 #### 定義綱要 Schemas
 
@@ -185,7 +193,8 @@ var SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 
 第一個參數，是將為模型創建的集合的單數名稱（Mongoose 將為上面的 SomeModel 模型，創建數據庫集合），第二個參數，是你要在創建模型時使用的綱要 Shema。
 
-> **備註：** 定義模型類後，可以使用它們來創建，更新或刪除記錄，並運行查詢，以獲取記錄的所有記錄，或特定子集。我們將在以下「使用模型」部分，向你展示如何執行上述操作，以及當創建視圖時，如何執行此操作。
+> [!NOTE]
+> 定義模型類後，可以使用它們來創建，更新或刪除記錄，並運行查詢，以獲取記錄的所有記錄，或特定子集。我們將在以下「使用模型」部分，向你展示如何執行上述操作，以及當創建視圖時，如何執行此操作。
 
 #### 綱要型態（字段）
 
@@ -264,7 +273,8 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 
 文檔中的示例，從名字和姓氏字段構造（並解構）一個全名虛擬屬性，這比每次在模板中使用全名更簡單，更清晰。
 
-> **備註：** 我們將使用庫中的虛擬屬性，來為每個使用路徑和記錄的`_id`值的模型記錄，定義唯一的 URL。
+> [!NOTE]
+> 我們將使用庫中的虛擬屬性，來為每個使用路徑和記錄的`_id`值的模型記錄，定義唯一的 URL。
 
 欲了解更多訊息，請參閱[虛擬](http://mongoosejs.com/docs/guide.html#virtuals)（Mongoose 文檔）。
 
@@ -335,7 +345,8 @@ Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
 
 如果你指定回調，如上所示，查詢將立即執行。搜索完成後將調用回調。
 
-> **備註：** Mongoose 中的所有回調，都使用此回調模式`callback(error, result)`。如果執行查詢時發生錯誤，錯誤參數`error`將包含錯誤文檔，並且結果`result`將為 null。如果查詢成功，則`error`參數將為 null，並且結果`result` 將被填充到查詢結果。
+> [!NOTE]
+> Mongoose 中的所有回調，都使用此回調模式`callback(error, result)`。如果執行查詢時發生錯誤，錯誤參數`error`將包含錯誤文檔，並且結果`result`將為 null。如果查詢成功，則`error`參數將為 null，並且結果`result` 將被填充到查詢結果。
 
 如果你未指定回調，則 API 將返回[Query](http://mongoosejs.com/docs/api.html#query-js)類型的變量。你可以使用此查詢對象來構建查詢，然後稍後使用`exec()`方法執行（使用回調）。
 
@@ -380,7 +391,8 @@ Athlete.
 - [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne): 查找與指定條件匹配的單個文檔。
 - [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate):通過`id` 或條件查找單個文檔，並更新或刪除它。這些是用於更新和刪除記錄的有用便利功能。
 
-> **備註：** 還有一個[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count)方法，你可以使用它來獲取與條件匹配的項目數。如果你想要在不實際提取記錄的情況下執行計數，這非常有用。
+> [!NOTE]
+> 還有一個[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count)方法，你可以使用它來獲取與條件匹配的項目數。如果你想要在不實際提取記錄的情況下執行計數，這非常有用。
 
 查詢可以做更多的事情。有關更多訊息，請參閱：[查詢](http://mongoosejs.com/docs/queries.html)（Mongoose 文檔）。
 
@@ -441,7 +453,8 @@ Story.findOne({ title: "Bob goes sledding" })
   });
 ```
 
-> **備註：** 敏銳的讀者會注意到，我們在故事中添加了作者，但我們沒有做任何事情，來將我們的故事添加到作者的故事`stories`數組中。那麼我們怎樣才能得到特定作者的所有故事？
+> [!NOTE]
+> 敏銳的讀者會注意到，我們在故事中添加了作者，但我們沒有做任何事情，來將我們的故事添加到作者的故事`stories`數組中。那麼我們怎樣才能得到特定作者的所有故事？
 >
 > 一種方法，是將作者添加到故事數組中，但這會導致我們需要在兩個地方，維護與作者和故事有關的訊息。更好的方法是獲取作者的`_id`，然後使用`find()`，在所有故事的作者字段中搜索此內容。
 >
@@ -492,7 +505,8 @@ SomeModel.find(callback_function);
 
 本教程，我們將使用[mLab](https://mlab.com/welcome/)免費的雲託管的「 [沙盒](https://mlab.com/plans/pricing/) 」數據庫。這個數據庫層不適合生產環境的網站，因為它沒有冗餘設計，但它對於開發和原型設計來說非常有用。我們在這裡使用它，是因為它免費且易於設置，並且因為作為數據庫服務供應商來說，mLab 是流行的數據庫選擇之一，你可能會合理選擇你的生產環境數據庫（撰寫本文時，其他流行的選擇包括[Compose](https://www.compose.com/)、[ScaleGrid](https://scalegrid.io/pricing.html)和[MongoDB Atlas](https://www.mongodb.com/cloud/atlas)）。
 
-> **備註：** 如果你願意，可以下載並安裝[與系統相對應的二進製文件](https://www.mongodb.com/download-center)，在本地設置 MongoDb 數據庫。除了你在連接時指定的數據庫 URL 之外，本文中的其餘指令將很類似。
+> [!NOTE]
+> 如果你願意，可以下載並安裝[與系統相對應的二進製文件](https://www.mongodb.com/download-center)，在本地設置 MongoDb 數據庫。除了你在連接時指定的數據庫 URL 之外，本文中的其餘指令將很類似。
 
 你首先需要[使用 mLab 創建一個賬戶](https://mlab.com/signup/)（這是免費的，只需要輸入基本聯繫訊息，並確認其服務條款）。
 
@@ -600,7 +614,8 @@ module.exports = mongoose.model("Author", AuthorSchema);
 
 我們還為 AuthorSchema，聲明了一個名為「url」的虛擬屬性，它返回獲取模型的特定實例所需的絕對 URL — 每當我們需要獲取指向特定作者的鏈接時，我們將在模板中使用該屬性。
 
-> **備註：** 在綱要中聲明我們的 URL 是虛擬的，這是一個好主意，因為一個項目的 URL 只需要在一個地方更改。此時，使用此 URL 的鏈接將不起作用，因為我們還沒有任何路由，可以處理個別模型實例的代碼。我們將在後面的文章中介紹這些內容！
+> [!NOTE]
+> 在綱要中聲明我們的 URL 是虛擬的，這是一個好主意，因為一個項目的 URL 只需要在一個地方更改。此時，使用此 URL 的鏈接將不起作用，因為我們還沒有任何路由，可以處理個別模型實例的代碼。我們將在後面的文章中介紹這些內容！
 
 在模塊的最後，我們導出了模型。
 
@@ -691,7 +706,8 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 1. 在 express-locallibrary-tutorial 目錄下（與`package.json`處於同一級別），下載（或以其他方式創建）文件[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)。
 
-   > **備註：** 你不需要知道[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)的工作原理;它只是將示例數據添加到數據庫中。
+   > [!NOTE]
+   > 你不需要知道[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)的工作原理;它只是將示例數據添加到數據庫中。
 
 2. 在項目根目錄中，輸入以下命令，以安裝腳本所需的異步模塊（我們將在後面的教程中討論這一點）
 
@@ -707,7 +723,8 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
 
-> **備註：** 至[mLab](https://mlab.com/home)上的數據庫。你現在應該可以深入到書本籍，作者，種類和書本實例的各個集合中，並查看單個文檔。
+> [!NOTE]
+> 至[mLab](https://mlab.com/home)上的數據庫。你現在應該可以深入到書本籍，作者，種類和書本實例的各個集合中，並查看單個文檔。
 
 ## 總結
 

@@ -83,7 +83,8 @@ request.onsuccess = function(event) {
 };
 ```
 
-> **备注：** need to work out a way to retrieve a series/range of objects using an index, or just all of them. Is this possible with get, or is this a job for cursor?
+> [!NOTE]
+> need to work out a way to retrieve a series/range of objects using an index, or just all of them. Is this possible with get, or is this a job for cursor?
 
 ## Specifications
 

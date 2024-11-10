@@ -1,17 +1,16 @@
 ---
 title: "ServiceWorkerGlobalScope: notificationclose イベント"
+short-title: notificationclose
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-**`notificationclose`** イベントは、 {{domxref("ServiceWorkerRegistration.showNotification()")}} によって生成された表示中の通知をユーザーが閉じたときに発生します。
+**`notificationclose`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、{{domxref("ServiceWorkerRegistration.showNotification()")}} によって生成された表示中の通知をユーザーが閉じたときに発生します。
 
-メインスレッドや、サービスワーカー以外のワーカーが {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して生成した通知では、`Notification` オブジェクト自身が {{domxref("Notification/close_event", "close")}} イベントを受け取ります。
-
-> **メモ:** {{domxref("ServiceWorkerGlobalScope")}} 内で {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を生成しようとすると、エラーが発行されます。
+メインスレッドや、サービスワーカー以外のワーカーが {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して生成した通知では、{{domxref("Notification/close_event", "close")}} イベントを {{domxref("Notification")}} オブジェクト自身が受け取ります。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -27,13 +26,13 @@ onnotificationclose = (event) => {};
 
 ## イベント型
 
-{{domxref("NotificationEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("NotificationEvent")}} です。{{domxref("ExtendableEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("NotificationEvent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} からプロパティを継承しています_。
+_祖先である {{domxref("ExtendableEvent")}} および {{domxref("Event")}} から継承したプロパティがあります_。
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : クリックされイベントが発行された通知を表す {{domxref("Notification")}} オブジェクトを返します。

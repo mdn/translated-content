@@ -11,7 +11,7 @@ slug: Web/HTML/Element/object
 
 - `[컨텐츠 범주](/ko/docs/HTML/Content_categories)` [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content); [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content); [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content), palpable 컨텐츠; 만약 요소가 **usemap ** 속성을 가지고 있다면, [대화형 컨텐츠](/ko/docs/HTML/Content_categories#Interactive_content); [listed](/ko/docs/HTML/Content_categories#Form_listed), [submittable](/ko/docs/HTML/Content_categories#Form_submittable) [form-associated](/ko/docs/HTML/Content_categories#Form-associated_content) element.
 - `허용된 컨텐츠` 0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/HTML/Content_categories#Transparent_content_models).
-- `태그 생략` {{no_tag_omission}}
+- `태그 생략` 불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.
 - `허용된 부모 요소` [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content)를 허용하는 모든 요소
 - `DOM 인터페이스` {{domxref("HTMLObjectElement")}}
 

@@ -7,7 +7,8 @@ slug: Web/SVG/Element/ellipse
 
 L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipses basées sur un centre, et ses deux rayons x et y.
 
-> **Note :** Il est impossible de spécifier l'orientation exacte d'une ellipse (par exemple, si vous souhaitez dessiner une ellipse à un angle de 45°), mais l'ellipse peut avoir une rotation avec l'attribut {{ SVGAttr("transform") }}.
+> [!NOTE]
+> Il est impossible de spécifier l'orientation exacte d'une ellipse (par exemple, si vous souhaitez dessiner une ellipse à un angle de 45°), mais l'ellipse peut avoir une rotation avec l'attribut {{ SVGAttr("transform") }}.
 
 ```xml
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +36,8 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
   - : Cet attribut permet de spécifier la longueur totale du tracé, en unités de l'utilisateur.
     Type de valeur : **[\<number>](/fr/docs/Web/SVG/Content_type#Number)**; Valeur par défaut : `auto`; Animable : **oui**.
 
-> **Note :** À partir de SVG2, cx, cy, rx, et ry sont des _Propriétés Géomatriques_, ce qui signifie que ces attributs peuvent aussi être utilisés comme propriétés CSS pour cet élément.
+> [!NOTE]
+> À partir de SVG2, cx, cy, rx, et ry sont des _Propriétés Géomatriques_, ce qui signifie que ces attributs peuvent aussi être utilisés comme propriétés CSS pour cet élément.
 
 ### Attributs Globaux
 

@@ -28,7 +28,7 @@ new AmbientLightSensor(options)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされまし
+  - : この機能の使用が [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされまし
 
 ## 仕様書
 

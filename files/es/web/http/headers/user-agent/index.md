@@ -9,7 +9,8 @@ l10n:
 
 El **User-Agent** {{Glossary("request header")}} es una cadena característica que le permite a los servidores y servicios de red identificar la aplicación, sistema operativo, compañía, y/o la versión del {{Glossary("user agent")}} que hace la petición.
 
-> **Advertencia:** Por favor lee [Detección de navegadores usando el agente de usuario](/es/docs/Web/HTTP/Browser_detection_using_the_user_agent) para entender por qué generalmente es una mala idea servir diferentes páginas Web o servicios dependiendo del navegador.
+> [!WARNING]
+> Por favor lee [Detección de navegadores usando el agente de usuario](/es/docs/Web/HTTP/Browser_detection_using_the_user_agent) para entender por qué generalmente es una mala idea servir diferentes páginas Web o servicios dependiendo del navegador.
 
 <table class="properties">
  <tbody>

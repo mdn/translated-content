@@ -13,7 +13,8 @@ The `pattern` attribute, when specified, is a regular expression which the input
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
 
-> **Примечание:** Use the [`title`](/ru/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
+> [!NOTE]
+> Use the [`title`](/ru/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
 
 Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.
 
@@ -138,7 +139,7 @@ When a control has a `pattern` attribute, the `title` attribute, if used, must d
 
 While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -146,7 +147,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
 - [Forms: Data form validation](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)

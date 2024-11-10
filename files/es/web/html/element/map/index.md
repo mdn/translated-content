@@ -3,6 +3,8 @@ title: map
 slug: Web/HTML/Element/map
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - descripción de uno o dos párrafos
@@ -113,6 +115,7 @@ slug: Web/HTML/Element/map
 
 secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
 
-> **Nota:** Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.

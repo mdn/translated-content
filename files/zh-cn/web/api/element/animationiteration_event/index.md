@@ -9,15 +9,13 @@ slug: Web/API/Element/animationiteration_event
 
 ## 语法
 
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("animationiteration", (event) => {});
+
+onanimationiteration = (event) => {};
 ```
-var animIterationHandler = target.onanimationiteration;
-
-target.onanimationiteration = {{jsxref("Function")}}
-```
-
-### Value
-
-A {{jsxref("Function")}} to be called when an [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
 
 ## 示例
 

@@ -78,7 +78,8 @@ Les pseudo-éléments se comportent de manière similaire, même s'ils se compor
 ::pseudo-element-name;
 ```
 
-> **Note :** Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.
+> [!NOTE]
+> Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.
 
 Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément \<span> et utiliser un sélecteur d'éléments ; cependant, cela échouerait si le nombre de mots que vous avez entourés était plus long ou plus court que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiendront sur une ligne - étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change - il est impossible de le faire de manière robuste en ajoutant du HTML.
 

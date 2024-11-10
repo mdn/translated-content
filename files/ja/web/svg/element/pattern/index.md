@@ -53,7 +53,8 @@ svg {
   - : この属性は {{SVGElement("pattern")}} の内容物の座標系を定義します。
     _値の型_: `userSpaceOnUse`|`objectBoundingBox`; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 
-    > **メモ:** この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
+    > [!NOTE]
+    > この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
 
 - {{SVGAttr("patternTransform")}}
   - : この属性は、パターン座標系からターゲット座標系への任意の追加変換の定義が入ります。

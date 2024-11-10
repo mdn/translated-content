@@ -72,7 +72,8 @@ add2(10).then((v) => {
 });
 ```
 
-> **警告：** 不要誤解 `Promise.all` 的 `await`
+> [!WARNING]
+> 不要誤解 `Promise.all` 的 `await`
 >
 > 在 `add1` 裡，該執行為了第一個 `await` 而暫停了兩秒，接著為了第二個 `await` 又暫停了兩秒。在第一個計時器（timer）被觸發前，第二個計時器並不會被建立。而在 `add2` 裡，兩個計時器都被建立起來、也都執行 `await` 過了。這把它帶往了 resolve 所的 2 秒暫停、而不是 4 秒暫停。然而這兩個 `await` 呼叫都在連續運行，而非平行運行。`await` **並不是** `Promise.all` 的自動程式。如果你想讓兩個、甚至兩個以上的 `await` promises 同時執行（in parallel），你必須使用 `Promise.all`.
 
@@ -121,4 +122,4 @@ async function getProcessedData(url) {
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} 物件
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating Async Javascript Functions" on "innolitics.com"](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- ["Decorating Async Javascript Functions" on "innolitics.com"](https://innolitics.com/articles/javascript-decorators-for-promise-returning-functions/)

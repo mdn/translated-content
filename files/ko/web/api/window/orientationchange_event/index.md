@@ -3,6 +3,8 @@ title: orientationchange
 slug: Web/API/Window/orientationchange_event
 ---
 
+{{APIRef}}
+
 `orientationchange` 이벤트는 장치의 방향이 바뀔 때 호출 된다.
 
 ## General info

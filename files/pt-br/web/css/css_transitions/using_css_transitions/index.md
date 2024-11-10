@@ -17,9 +17,11 @@ Animações CSS permitem que você decida quais propriedades animar (listando-os
 
 Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita [com propriedades que podem ser transicionadas](/pt-BR/docs/Web/CSS/CSS_animated_properties).
 
-> **Nota:** A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
+> [!NOTE]
+> A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
 
-> **Nota:** O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
+> [!NOTE]
+> O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
 
 ## Definindo transições
 
@@ -1050,7 +1052,8 @@ Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando 
 
 ## Exemplos JavaScript
 
-> **Nota:** Cuidados devem ser tomados ao usar uma transição imediatamente após:
+> [!NOTE]
+> Cuidados devem ser tomados ao usar uma transição imediatamente após:
 >
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
@@ -1099,7 +1102,7 @@ p {
 }
 ```
 
-Você pode brincar um pouco aqui: <http://jsfiddle.net/9h261pzo/291/>
+Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
 
 ### Detectando o começo e a completude de uma transição
 

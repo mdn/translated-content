@@ -47,7 +47,8 @@ header {
 }
 ```
 
-> **备注：** 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
+> [!NOTE]
+> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
 
 ### 用于显示/隐藏的复选框
 
@@ -146,7 +147,8 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - 成功回调：一旦成功完成`getUserMedia`调用，此代码就会运行。
 - 错误/失败回调：如果`getUserMedia`调用由于任何原因而失败，则代码将运行。
 
-> **备注：** 下面的所有代码都放在`getUserMedia`成功回调中。
+> [!NOTE]
+> 下面的所有代码都放在`getUserMedia`成功回调中。
 
 ## 捕获媒体流
 

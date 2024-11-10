@@ -1,34 +1,37 @@
 ---
-title: URL.revokeObjectURL()
+title: URL：revokeObjectURL() 静态方法
 slug: Web/API/URL/revokeObjectURL_static
+l10n:
+  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
-{{ApiRef("URL")}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`URL.revokeObjectURL()`** 静态方法用来释放一个之前已经存在的、通过调用 {{domxref("URL.createObjectURL()")}} 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。
+{{domxref("URL")}} 接口的 **`revokeObjectURL()`** 静态方法用于释放之前通过调用 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 创建的现有对象 URL。
 
-你可以在 `sourceopen` 被处理之后的任何时候调用 `revokeObjectURL()`。这是因为 `createObjectURL()` 仅仅意味着将一个媒体元素的 `src` 属性关联到一个 {{domxref("MediaSource")}} 对象上去。调用`revokeObjectURL()` 使这个潜在的对象回到原来的地方，允许平台在合适的时机进行垃圾收集。
+当你完成对对象 URL 的使用后，请调用此方法，让浏览器知道无需再保持对文件的引用。
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> 由于 {{domxref("Blob")}} 接口的生命周期问题及潜在的内存泄漏风险，此方法在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用。
 
 ## 语法
 
-```plain
-window.URL.revokeObjectURL(objectURL);
+```js-nolint
+URL.revokeObjectURL(objectURL)
 ```
 
 ### 参数
 
 - `objectURL`
-  - : 一个 {{domxref("DOMString")}}，表示通过调用 {{domxref("URL.createObjectURL()") }} 方法产生的 URL 对象。
+  - : 表示之前通过调用 {{domxref("URL.createObjectURL_static", "createObjectURL()")}} 方法创建的对象 URL 的字符串。
 
-### Return value
+### 返回值
 
-undefined
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-查看[使用对象 URL 显示图片](/zh-CN/docs/Using_files_from_web_applications#Example.3a_Using_object_URLs_to_display_images)。
+参见[使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)。
 
 ## 规范
 
@@ -40,6 +43,6 @@ undefined
 
 ## 参见
 
-- [在 Web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)
-- [使用对象 URL 显示图像](/zh-CN/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images)
-- {{domxref("URL.createObjectURL()") }}
+- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
+- [使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

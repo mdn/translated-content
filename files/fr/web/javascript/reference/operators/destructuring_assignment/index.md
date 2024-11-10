@@ -218,7 +218,8 @@ let a, b;
 ({ a, b } = { a: 1, b: 2 });
 ```
 
-> **Note :** Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
+> [!NOTE]
+> Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
 
 ### Affecter avec un nom différent
 
@@ -294,7 +295,8 @@ dessinGrapheES2015({
 });
 ```
 
-> **Note :** Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
+> [!NOTE]
+> Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
 
 ### Décomposition imbriquée avec objets et tableaux
 

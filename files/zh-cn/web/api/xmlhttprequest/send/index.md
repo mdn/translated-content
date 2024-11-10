@@ -9,12 +9,14 @@ slug: Web/API/XMLHttpRequest/send
 
 如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 `"* / *"` 的{{HTTPHeader("Accept")}} 头部。
 
-> **备注：** 请注意不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView（有关信息请参考兼容性列表。）
+> [!NOTE]
+> 请注意不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView（有关信息请参考兼容性列表。）
 
 ## 语法
 
-```
-XMLHttpRequest.send(body)
+```js-nolint
+send()
+send(body)
 ```
 
 ### 参数
@@ -58,12 +60,12 @@ XMLHttpRequest.send(FormData data);
 
 ## 案例：GET
 
-```
+```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = function () {
-   // 请求结束后，在此处写处理代码
+  // 请求结束后，在此处写处理代码
 };
 
 xhr.send(null);
@@ -75,15 +77,15 @@ xhr.send(null);
 
 ## 案例：POST
 
-```
+```js
 var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 //发送合适的请求头信息
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhr.onload = function () {
-    // 请求结束后，在此处写处理代码
+  // 请求结束后，在此处写处理代码
 };
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send('string');

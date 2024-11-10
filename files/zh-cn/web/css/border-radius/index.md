@@ -174,11 +174,11 @@ pre#example-7 {
 
 ### 在线示例
 
-- 示例 1：<http://jsfiddle.net/Tripad/qnGKj/2/>
-- 示例 2：<http://jsfiddle.net/Tripad/qnGKj/3/>
-- 示例 3：<http://jsfiddle.net/Tripad/qnGKj/4/>
-- 示例 4：<http://jsfiddle.net/Tripad/qnGKj/5/>
-- 示例 5：<http://jsfiddle.net/Tripad/qnGKj/6/>
+- 示例 1：<https://jsfiddle.net/Tripad/qnGKj/2/>
+- 示例 2：<https://jsfiddle.net/Tripad/qnGKj/3/>
+- 示例 3：<https://jsfiddle.net/Tripad/qnGKj/4/>
+- 示例 4：<https://jsfiddle.net/Tripad/qnGKj/5/>
+- 示例 5：<https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 规范
 

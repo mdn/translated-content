@@ -3,9 +3,12 @@ title: Audio
 slug: Web/HTML/Element/audio
 ---
 
+{{HTMLSidebar}}
+
 El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5.
 
-> **Nota:** actualmente Gecko admite solamente Vorbis, en contenedores Ogg, así como formato WAV. Asimismo, el servidor debe servir el archivo mediante el tipo MIME correcto con el fin de que Gecko lo reproduzca correctamente.
+> [!NOTE]
+> Actualmente Gecko admite solamente Vorbis, en contenedores Ogg, así como formato WAV. Asimismo, el servidor debe servir el archivo mediante el tipo MIME correcto con el fin de que Gecko lo reproduzca correctamente.
 
 Puedes usar las características API de audio mejoradas - que son específicas de Gecko - para generar y manipular directamente secuencias de audio a partir de código JavaScript. Consulta [Manipular sonido a través de la API de audio mejorada](/en/Manipulating_audio_using_the_enhanced_audio_API) para tener más detalles.
 
@@ -50,7 +53,8 @@ Si no está configurado, su valor predeterminado está definido por el navegador
 
 Las compensaciones de tiempo se especifican como valores float que indican el número de segundos que se va a compensar.
 
-> **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
+> [!NOTE]
+> La definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
 
 ## Ejemplos
 

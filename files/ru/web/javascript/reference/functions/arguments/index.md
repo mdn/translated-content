@@ -7,9 +7,11 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.
 
-> **Примечание:** Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
+> [!NOTE]
+> Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
 
-> **Примечание:** "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
+> [!NOTE]
+> "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
@@ -46,7 +48,8 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-> **Предупреждение:** Использование `slice` на объекте `arguments` не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — [подробнее](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта `arguments.` Альтернативный вариант — использовать конструктор `Array` как функцию:
+> [!WARNING]
+> Использование `slice` на объекте `arguments` не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — [подробнее](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта `arguments.` Альтернативный вариант — использовать конструктор `Array` как функцию:
 >
 > ```js
 > var args =

@@ -38,12 +38,12 @@ l10n:
 ### API
 
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) で、クロスオリジンの資格情報作成をサポートしました。
-  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子のブラウジングコンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
+  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
   ([Firefox bug 1870863](https://bugzil.la/1870863))
 
 #### DOM
 
-- `IDBObjectStore.createIndex()` の [`options.locale`](/ja/docs/Web/API/IDBObjectStore/createIndex#locale) パラメーターや、`IDBIndex` の [`isAutoLocale`](/ja/docs/Web/API/IDBIndex/isAutoLocale) および [`locale`](/ja/docs/Web/API/IDBIndex/locale) プロパティといった、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のカスタムロケールのサポートが非推奨になりました。
+- `IDBObjectStore.createIndex()` の [`options.locale`](/ja/docs/Web/API/IDBObjectStore/createIndex#locale) 引数や、`IDBIndex` の [`isAutoLocale`](/ja/docs/Web/API/IDBIndex/isAutoLocale) および [`locale`](/ja/docs/Web/API/IDBIndex/locale) プロパティといった、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のカスタムロケールのサポートが非推奨になりました。
   ([Firefox bug 1872675](https://bugzil.la/1872675) および [Firefox bug 1730706](https://bugzil.la/1730706))
 
 #### Media、WebRTC、Web Audio

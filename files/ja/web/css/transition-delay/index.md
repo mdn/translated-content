@@ -2,12 +2,12 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-CSS の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
+[CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 

@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 **`NodeList`** 物件是節點的集合，可藉由 {{domxref("Node.childNodes")}} 屬性以及 {{domxref("document.querySelectorAll()")}} 方法取得。
 
-> **備註：** 雖然 `NodeList` 不是 `Array`，但仍可以使用 `forEach()` 方法來進行迭代。一些老舊瀏覽器並未實作此方法。
+> [!NOTE]
+> 雖然 `NodeList` 不是 `Array`，但仍可以使用 `forEach()` 方法來進行迭代。一些老舊瀏覽器並未實作此方法。
 
 在某些情況下，`NodeList` 為*動態集合（live collection）*，意思是 DOM 的改變會反映於集合。例如，{{domxref("Node.childNodes")}} 便是即時更新（live）的：
 

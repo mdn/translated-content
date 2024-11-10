@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 
 {{AddonSidebar}}
 
-> **メモ:** このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
+> [!NOTE]
+> このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
 
 `devtools.inspectedWindow` API によって開発ツール拡張機能では開発ツールが割当てられたウィンドウと相互作用できます。
 
@@ -27,7 +28,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 
 {{Compat}}{{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

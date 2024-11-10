@@ -95,7 +95,8 @@ Cela produit le résultat suivant :
 
 {{EmbedLiveSample('Utilisation_des_champs_pour_saisir_des_fichiers', 650, 100)}}
 
-> **Note :** Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Quel que soit le dispositif ou le système d'exploitation de l'utilisateur, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur de choisir un fichier.
 

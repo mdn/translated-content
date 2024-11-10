@@ -65,7 +65,8 @@ const myNumber = Math.random();
 
 我们都在使用*函数*！
 
-> **备注：** 如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。
+> [!NOTE]
+> 如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。
 
 JavaScript 语言中有许多内置的函数，它们可以让你无需自己编写所有的代码，就能做很多有用的事情。事实上，许多你**调用**（专业词语，意指“运行”或“执行”）浏览器内置函数时调用的代码并不能用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++ 这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
 
@@ -120,13 +121,15 @@ myFunction();
 // 调用一次该函数
 ```
 
-> **备注：** 这种创建函数的形式，也被称为*函数声明*。它总是被[提升](/zh-CN/docs/Glossary/Hoisting)的，这样你就能在函数定义之前调用该函数。
+> [!NOTE]
+> 这种创建函数的形式，也被称为*函数声明*。它总是被[提升](/zh-CN/docs/Glossary/Hoisting)的，这样你就能在函数定义之前调用该函数。
 
 ## 函数参数
 
 有些函数在调用它们时需要指定**参数**——这些值需要放在函数括号内，函数才能正确地完成其工作。
 
-> **备注：** 参数（parameter）有时称为参数（argument）、属性（property）或甚至特性（attribute）。
+> [!NOTE]
+> 参数（parameter）有时称为参数（argument）、属性（property）或甚至特性（attribute）。
 
 例如，浏览器的内置 [Math.random()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
 
@@ -141,7 +144,8 @@ const myText = "我是一个字符串";
 const newString = myText.replace("字符串", "香肠");
 ```
 
-> **备注：** 当你需要指定多个参数时，它们以逗号分隔。
+> [!NOTE]
+> 当你需要指定多个参数时，它们以逗号分隔。
 
 ### 可选参数
 
@@ -197,7 +201,8 @@ function myFunction() {
 
 这就是所谓的**匿名函数**，因为它没有名字。当一个函数希望接收另一个函数作为参数时，你经常会看到匿名函数。在这种情况下，函数参数通常作为匿名函数传递。
 
-> **备注：** 这种创建函数的形式也称为*函数表达式*。与函数声明不同，函数表达式不会被[提升](/zh-CN/docs/Glossary/Hoisting)。
+> [!NOTE]
+> 这种创建函数的形式也称为*函数表达式*。与函数声明不同，函数表达式不会被[提升](/zh-CN/docs/Glossary/Hoisting)。
 
 ### 匿名函数示例
 
@@ -274,7 +279,8 @@ textBox.addEventListener("keydown", (event) =>
 
 我们建议你使用箭头函数，因为它们可以使你的代码更简短、更易读。要了解更多信息，请参阅 [JavaScript 指南中的有关部分](/zh-CN/docs/Web/JavaScript/Guide/Functions#箭头函数)，以及我们[有关箭头函数的参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
-> **备注：** 注意：箭头函数和普通函数之间存在一些细微差别。它们超出了本入门指南的范围，并且不太可能在我们在这里讨论的案例中产生影响。要了解更多信息，请参阅[箭头函数参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+> [!NOTE]
+> 注意：箭头函数和普通函数之间存在一些细微差别。它们超出了本入门指南的范围，并且不太可能在我们在这里讨论的案例中产生影响。要了解更多信息，请参阅[箭头函数参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 ### 箭头函数实时示例
 
@@ -345,7 +351,8 @@ function greeting() {
 
 你想要调用的两个函数都被命名为 `greeting()`，但你只能访问到 `first.js` 文件中的 `greeting()` 函数（第二个函数会被忽略）。此外，（在 `second.js` 文件中）试图给 `name` 变量赋一个新值时会导致错误，因为它已经用 `const` 声明过了，所以无法重新赋值。
 
-> **备注：** 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
+> [!NOTE]
+> 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
 将部分代码锁定在函数中避免了这样的问题，并被认为是最佳实践。
 
@@ -447,9 +454,11 @@ function greeting() {
 
    这次 `a()` 和 `b()` 调用都会返回那个令人讨厌的“[ReferenceError: _variable name_ is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误——这是因为 `output()` 函数的调用和输出变量的定义不在同一个函数作用域内——变量对于这些函数调用而言是不可见的。
 
-> **备注：** 相同的作用域规则不适用于循环（例如 `for() { }`）和条件块（例如 `if() { }`）——它们看起来非常相似，但它们不一样！千万不要混淆它们。
+> [!NOTE]
+> 相同的作用域规则不适用于循环（例如 `for() { }`）和条件块（例如 `if() { }`）——它们看起来非常相似，但它们不一样！千万不要混淆它们。
 
-> **备注：** “[ReferenceError: "x" is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误将会是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该变量，请检查它的作用域。
+> [!NOTE]
+> “[ReferenceError: "x" is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误将会是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该变量，请检查它的作用域。
 
 ## 技能测试！
 

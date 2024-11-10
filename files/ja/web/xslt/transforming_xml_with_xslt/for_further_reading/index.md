@@ -1,11 +1,13 @@
 ---
-title: さらなる読みもの
+title: 参考文献
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 l10n:
-  sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
-[« Transforming XML with XSLT](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
+{{XsltSidebar}}
+
+[« XSLT による XML の変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## 印刷物
 
@@ -18,7 +20,7 @@ l10n:
   - **出版社**: Wrox; 2 edition (May 3, 2001)
   - **ISBN**: 0764543814
 
-    - Michael Kay は W3C XSL ワーキンググループのメンバーであり、オープンソース XSLT プロセッサである Saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは XSLT ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
+    - Michael Kay は W3C XSL ワーキンググループのメンバーであり、オープンソース XSLT プロセッサーである Saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは XSLT ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
 
 <https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
 
@@ -60,8 +62,8 @@ l10n:
 
 ### 記事
 
-- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) (Don R. Day)
-- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) (G. Ken Holman)
+- [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### チュートリアル/例
 
@@ -71,8 +73,8 @@ l10n:
 
 ### その他
 
-- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
+- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
-  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
-  - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
+  - **参加**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
+  - **アーカイブ**: <https://www.biglist.com/lists/xsl-list/archives/>

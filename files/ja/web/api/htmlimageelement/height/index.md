@@ -3,18 +3,18 @@ title: "HTMLImageElement: height プロパティ"
 short-title: height
 slug: Web/API/HTMLImageElement/height
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: d8a52569d8d465eb626af3d33600c8c638a7a322
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`height`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixels", "CSS ピクセル")}}で、それ以外は画像のピクセル密度補正後の高さを表します。
+**`height`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixel", "CSS ピクセル")}}で、それ以外は画像のピクセル密度補正後の高さを表します。
 
 ## 値
 
 画像の高さを表す整数値です。高さがどのように定義されるかは、画像が視覚的媒体にレンダリングされるかどうかに依存します。
 
-- 画像が画面やプリンターなどの視覚媒体にレンダリングされる場合、高さは {{Glossary("CSS pixels", "CSS ピクセル")}}で表現されます。
+- 画像が画面やプリンターなどの視覚媒体にレンダリングされる場合、高さは {{Glossary("CSS pixel", "CSS ピクセル")}}で表現されます。
 - それ以外の場合、画像の高さは、 {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} で示される表示密度用に調整された自然の（固有の）高さで表わされます。
 
 ## 例
@@ -67,3 +67,12 @@ window.addEventListener("resize", updateHeight);
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLCanvasElement.height")}}
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
+- {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLSourceElement.height")}}
+- {{domxref("HTMLVideoElement.height")}}

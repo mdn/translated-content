@@ -9,7 +9,8 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 在本文中，我们会看到如何构建自定义控件。为此，我们将使用这样一个示例：重建 {{HTMLElement("select")}} 元素。我们还将讨论如何构建、何时构建自定义控件、构建是否存在意义，以及构建控件的相关注意事项。
 
-> **备注：** 我们将专注于构建控件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知上下文下的 DOM 操作，这超过了这篇文章的范畴。
+> [!NOTE]
+> 我们将专注于构建控件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知上下文下的 DOM 操作，这超过了这篇文章的范畴。
 
 ## 设计、结构和语义
 
@@ -72,7 +73,8 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 - [UXDesign.com](https://uxdesign.com/)
 - [SmashingMagazine 用户体验设计部分](https://www.smashingmagazine.com/)
 
-> **备注：** 此外，在绝大多数系统中，还有一种方法能够打开 {{HTMLElement("select")}} 元素来观察其所有的选项（这和用鼠标点击 {{HTMLElement("select")}} 元素是一样的）。这可以通过 Windows 下的 <kbd>Alt</kbd> + <kbd>Down</kbd> 实现。这没有在我们的示例中实现，但是这样做会很方便，因为鼠标点击（`click`）事件就是由该原理实现的。
+> [!NOTE]
+> 此外，在绝大多数系统中，还有一种方法能够打开 {{HTMLElement("select")}} 元素来观察其所有的选项（这和用鼠标点击 {{HTMLElement("select")}} 元素是一样的）。这可以通过 Windows 下的 <kbd>Alt</kbd> + <kbd>Down</kbd> 实现。这没有在我们的示例中实现，但是这样做会很方便，因为鼠标点击（`click`）事件就是由该原理实现的。
 
 ### 定义语义化的 HTML 结构
 
@@ -162,7 +164,8 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-> **备注：** 我们也可以使用 `transform: scale(1, 0)` 来指定选项列表的高度为零，但宽度不变。
+> [!NOTE]
+> 我们也可以使用 `transform: scale(1, 0)` 来指定选项列表的高度为零，但宽度不变。
 
 ### 美化
 
@@ -642,7 +645,8 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 现在我们的设计和结构已经完成了。我们可以写些 JavaScript 代码来让这个控件真正生效。
 
-> **警告：** 下面的代码仅仅是教学性质的，不是生产环境的代码，并且不应该照搬使用。这种方案不具有前瞻性，而且可能在旧式浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。
+> [!WARNING]
+> 下面的代码仅仅是教学性质的，不是生产环境的代码，并且不应该照搬使用。这种方案不具有前瞻性，而且可能在旧式浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。
 
 ### 它为什么不生效？
 
@@ -906,7 +910,8 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("使用 JS",120,130)}}
 
-> **备注：** 如果你真的想让你的代码变得通用和可复用，最好不要仅仅是添加一个类选择器开关，而是通过添加一个控件类的方式来隐藏 {{HTMLElement("select")}} 元素，并且动态地在每一个 {{HTMLElement("select")}} 元素后面添加代表页面中自定义控件的 DOM 树。
+> [!NOTE]
+> 如果你真的想让你的代码变得通用和可复用，最好不要仅仅是添加一个类选择器开关，而是通过添加一个控件类的方式来隐藏 {{HTMLElement("select")}} 元素，并且动态地在每一个 {{HTMLElement("select")}} 元素后面添加代表页面中自定义控件的 DOM 树。
 
 ### 让工作变得更简单
 
@@ -1660,7 +1665,8 @@ window.addEventListener("load", () => {
 </div>
 ```
 
-> **备注：** 不需要同时包含 `role` 属性和 `class` 属性。你可以在 CSS 中使用 `[role="option"]` [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)来代替 `.option` 类。
+> [!NOTE]
+> 不需要同时包含 `role` 属性和 `class` 属性。你可以在 CSS 中使用 `[role="option"]` [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)来代替 `.option` 类。
 
 ### `aria-selected` 属性
 

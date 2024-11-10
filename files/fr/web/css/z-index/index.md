@@ -41,7 +41,7 @@ La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâc
 - `auto`
   - : La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.
 - `<integer>`
-  - : L'entier fourni (type [`&lt;integer&gt;`](/fr/docs/Web/CSS/integer)) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est `0`. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.
+  - : L'entier fourni (type [`<integer>`](/fr/docs/Web/CSS/integer)) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est `0`. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.
 
 ## Définition formelle
 

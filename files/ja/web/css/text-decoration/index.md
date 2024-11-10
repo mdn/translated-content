@@ -1,6 +1,8 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
+l10n:
+  sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
 
 {{CSSRef}}
@@ -108,7 +110,9 @@ text-decoration: unset;
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+#### 結果
+
+{{EmbedLiveSample('Examples','auto','520')}}
 
 ## 仕様書
 

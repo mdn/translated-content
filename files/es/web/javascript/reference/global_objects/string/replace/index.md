@@ -78,7 +78,8 @@ La cadena de reemplazo puede incluir los siguientes patrones de reemplazo especi
 
 Se puede especificar un función como el segundo parámetro. En este caso, la función será invocada después de haber buscado las coincidencias. El resultado de la función (valor de retorno) será usado como la cadena de reemplazo.
 
-> **Nota:** Los patrones de reemplazo especiales mencionados previamente _no_ aplican para las cadenas devueltas por una función de reemplazo.
+> [!NOTE]
+> Los patrones de reemplazo especiales mencionados previamente _no_ aplican para las cadenas devueltas por una función de reemplazo.
 
 La función tiene la siguiente firma:
 
@@ -130,7 +131,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 Esto imprime `'Twas the night before Christmas...'`.
 
-> **Nota:** Véase [la guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) para más información acerca de expresiones regulares.
+> [!NOTE]
+> Véase [la guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) para más información acerca de expresiones regulares.
 
 ### Usando los parámetros _global_ e _ignoreCase_ con replace()
 

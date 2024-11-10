@@ -43,7 +43,8 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
   - : Une chaîne {{domxref("DOMString")}} qui contient la chaîne de caractères / réponse renvoyée par le serveur HTTP. À la différence de {{domxref("XMLHttpRequest.status")}}, tout le texte du statut est inclus ("`200 OK`" plutôt que "`200`" par exemple).
 
-> **Note :** Selon la spécification HTTP/2 ([voir 8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 ne définit pas de méthode pour porter la version ou la raison/phrase incluse dans la ligne de statut HTTP/1.1.
+> [!NOTE]
+> Selon la spécification HTTP/2 ([voir 8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 ne définit pas de méthode pour porter la version ou la raison/phrase incluse dans la ligne de statut HTTP/1.1.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : Un entier `unsigned long` qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.
@@ -99,7 +100,8 @@ La plupart des navigateurs récents gère également les évènements via la mé
 - {{domxref("XMLHttpRequest.init()")}}
   - : Initialise l'objet depuis pour une utilisation depuis du code C++.
 
-> **Attention :** Cette méthode ne doit pas être appelée depuis du code JavaScript.
+> [!WARNING]
+> Cette méthode ne doit pas être appelée depuis du code JavaScript.
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
   - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open) ci-avant pour initialiser une requête de façon standard en JavaSCript.

@@ -3,6 +3,8 @@ title: font-weight
 slug: Web/SVG/Attribute/font-weight
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 `Атрибут font-weight` позволяет выбрать из шрифтового семейства начертание шрифта с указанной насыщенностью (иначе говоря, толщиной линий знаков, "жирностью") .

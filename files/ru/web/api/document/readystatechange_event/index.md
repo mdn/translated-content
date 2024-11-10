@@ -3,7 +3,7 @@ title: readystatechange
 slug: Web/API/Document/readystatechange_event
 ---
 
-{{ApiRef}}
+{{APIRef}}
 
 Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/DOM/document.readyState).
 

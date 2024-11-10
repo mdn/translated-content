@@ -69,7 +69,8 @@ const arr = [1, 2, 3];
 const max = Math.max(...arr);
 ```
 
-> **Attention :** Utiliser la décomposition ou `apply()` de cette façon pourra échouer s'il y a trop d'éléments dans le tableau (car ceux-ci seront passés en arguments). Pour plus d'informations, consulter [Utiliser `apply()` et les fonctions natives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#utiliser_apply_et_des_fonctions_natives). La méthode proposée avec `reduce()` n'a pas cette contrainte.
+> [!WARNING]
+> Utiliser la décomposition ou `apply()` de cette façon pourra échouer s'il y a trop d'éléments dans le tableau (car ceux-ci seront passés en arguments). Pour plus d'informations, consulter [Utiliser `apply()` et les fonctions natives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#utiliser_apply_et_des_fonctions_natives). La méthode proposée avec `reduce()` n'a pas cette contrainte.
 
 ## Spécifications
 

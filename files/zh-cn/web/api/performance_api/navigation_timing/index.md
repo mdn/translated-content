@@ -31,7 +31,7 @@ slug: Web/API/Performance_API/Navigation_timing
 
 以下示例显示了如何测量感知加载时间：
 
-```
+```js
 function onLoad() {
   var now = new Date().getTime();
   var page_load_time = now - performance.timing.navigationStart;
@@ -82,13 +82,13 @@ Navigation Timing API 可以用于收集客户端性能数据，然后通过 XHR
 
 计算页面加载所需的总时长：
 
-```
+```js
 var perfData = window.performance.timing;
 var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
 ```
 
 计算请求返回时长：
 
-```
+```js
 var connectTime = perfData.responseEnd - perfData.requestStart;
 ```

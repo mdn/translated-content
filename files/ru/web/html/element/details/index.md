@@ -14,7 +14,7 @@ HTML-элемент **`<details>`** используется для раскры
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), sectioning root, interactive content, palpable content. |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).      |
-| Tag omission                                               | {{no_tag_omission}}                                                                                                        |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                           |
 | Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                                |
 | Permitted ARIA roles                                       | None                                                                                                                       |
 | DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                          |
@@ -88,7 +88,7 @@ details[open] > summary::before {
 
 {{ EmbedLiveSample('Примеры_стилизации') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -96,6 +96,6 @@ details[open] > summary::before {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("summary")}}

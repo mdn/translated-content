@@ -3,7 +3,7 @@ title: Document.compatMode
 slug: Web/API/Document/compatMode
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Определяет когда документ отображается в [Quirks mode](/en/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
 
@@ -23,7 +23,8 @@ mode = document.compatMode
 - `mode`
   - : Исчислимая величина, которая может быть:
 
-> **Примечание:** все эти режимы внесены в стандарт, поэтому старые названия "standards" и "almost standards" теперь бессмысленны и не используются.
+> [!NOTE]
+> Все эти режимы внесены в стандарт, поэтому старые названия "standards" и "almost standards" теперь бессмысленны и не используются.
 
 ## Пример
 

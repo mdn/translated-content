@@ -3,7 +3,7 @@ title: Document.currentScript
 slug: Web/API/Document/currentScript
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Возвращает элемент {{HTMLElement("script")}}, который выполняется в данный момент.
 

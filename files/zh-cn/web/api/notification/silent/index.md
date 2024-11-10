@@ -2,18 +2,16 @@
 title: Notification：silent 属性
 slug: Web/API/Notification/silent
 l10n:
-  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
+  sourceCommit: e011d5695b264ced5a3f4bb822ca7904e23b7e83
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`silent`** 只读属性指定通知是否应当保持静默，即无论设备设置如何，都不发出声音或振动。该属性在{{domxref("Notification.Notification","Notification()")}} 构造函数的 `silent` 选项中指定。
 
-{{AvailableInWorkers}}
-
 ## 值
 
-一个布尔值。默认值是 `false`；设为 `true` 将使通知静音。
+布尔值或 `null`。如果为 `true`，则使通知静音；如果为 `null`，则遵循设备的默认设置。
 
 ## 示例
 

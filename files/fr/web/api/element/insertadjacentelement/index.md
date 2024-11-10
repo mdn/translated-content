@@ -50,7 +50,8 @@ L'élément inséré ou `null` si l'insertion a échouée.
 <!-- afterend -->
 ```
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.
+> [!NOTE]
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.
 
 ## Exemple
 

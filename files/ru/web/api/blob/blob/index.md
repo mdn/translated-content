@@ -36,6 +36,6 @@ var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The deprecated {{domxref("BlobBuilder")}} which this constructor replaces.

@@ -7,7 +7,8 @@ slug: Web/HTML/Global_attributes/accesskey
 
 La combinaison de touches utilisée pour le raccourci clavier dépend du navigateur et du système d'exploitation utilisés.
 
-> **Note :** La spécification WHATWG indique qu'il est possible d'indiquer des caractères séparés par plusieurs espaces, auquel cas le navigateur considèrera le premier qu'il prend en charge. Toutefois, cela ne fonctionne pas dans la plupart des navigateurs. Pour IE/Edge, c'est la première valeur prise en charge qui sera utilisée si celle-ci n'entre pas en conflit avec d'autres commandes.
+> [!NOTE]
+> La spécification WHATWG indique qu'il est possible d'indiquer des caractères séparés par plusieurs espaces, auquel cas le navigateur considèrera le premier qu'il prend en charge. Toutefois, cela ne fonctionne pas dans la plupart des navigateurs. Pour IE/Edge, c'est la première valeur prise en charge qui sera utilisée si celle-ci n'entre pas en conflit avec d'autres commandes.
 
 <table class="standard-table">
   <thead>

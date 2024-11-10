@@ -7,7 +7,8 @@ slug: Web/CSS/@media/-webkit-transition
 
 **`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
 
-> **Note :** Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
+> [!NOTE]
+> Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
 
 ## Privilégier `@supports`
 

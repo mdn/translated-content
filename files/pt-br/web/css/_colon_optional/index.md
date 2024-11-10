@@ -16,7 +16,8 @@ input:optional {
 
 Esta pseudo-classe é utilizada para estilizar campos do formulário que não são requeridos para sumissão.
 
-> **Nota:** A pseudo-classe {{cssxref(":required")}} seleciona campos do fumulário _requeridos_.
+> [!NOTE]
+> A pseudo-classe {{cssxref(":required")}} seleciona campos do fumulário _requeridos_.
 
 ## Sintaxe
 

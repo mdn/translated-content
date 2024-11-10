@@ -26,7 +26,8 @@ mySet.has(value);
 
   - : Возвращает `true`, если в коллекции `Set` существует элемент с указанным значением; в противном случае `false`.
 
-    > **Примечание:** С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) для определения наличия указанного элемента.
+    > [!NOTE]
+    > С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) для определения наличия указанного элемента.
 
 ## Примеры
 

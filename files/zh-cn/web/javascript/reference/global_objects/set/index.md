@@ -37,7 +37,7 @@ interface GPUSupportedFeatures {
 
 类 `Set` 对象是只读或可读写的（参见上面的 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`@@iterator`](#set.prototypeiterator)。
+- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`[Symbol.iterator]()`](#set.prototypesymbol.iterator)。
 - 可写的类 `Set` 对象此外还具有以下方法：[`clear()`](#set.prototype.clear)、[`delete()`](#set.prototype.delete) 和 [`add()`](#set.prototype.add)。
 
 除了对条目类型的限制外，方法和属性的行为与 `Set` 中的等效成员相同。
@@ -60,7 +60,7 @@ interface GPUSupportedFeatures {
 
 ## 静态属性
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
+- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 ## 实例属性
@@ -71,8 +71,8 @@ interface GPUSupportedFeatures {
   - : 创建示例对象的构造函数。对于 `Set` 实例，其初始值为 {{jsxref("Set/Set", "Set")}} 构造函数。
 - {{jsxref("Set.prototype.size")}}
   - : 返回 `Set` 对象中值的数量。
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Set"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `Set.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Set"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -92,7 +92,7 @@ interface GPUSupportedFeatures {
   - : {{jsxref("Set.prototype.values()")}} 的别名。
 - {{jsxref("Set.prototype.values()")}}
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
-- [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
 
 ## 示例

@@ -3,6 +3,8 @@ title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
 
+{{jsSidebar("Errors")}}
+
 ## 錯誤類型
 
 {{jsxref("TypeError")}}

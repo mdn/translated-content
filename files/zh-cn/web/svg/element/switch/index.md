@@ -9,7 +9,7 @@ slug: Web/SVG/Element/switch
 
 注意：属性`display`和属性`visibility`的值对`switch 元素处理是不起作用的。`特别是，在`switch 元素的子元素上`设置`display`为 none，对`switch` 元素的 true/false 测试处理不起作用。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

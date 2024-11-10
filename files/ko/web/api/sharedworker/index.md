@@ -62,7 +62,7 @@ myWorker.port.onmessage = function (e) {
 };
 ```
 
-워커에서 {{domxref("SharedWorkerGlobalScope.onconnect")}} 핸들러를 이용하여 위에 언급된 포트에 접속할 수 있습니다. 워커에 연관되어 있는 포트는 {{event("connect")}} 이벤트 포트 속성에 접근할 수 있습니다 — 그리고나서 {{domxref("MessagePort")}} `start()` 메서드로 포트를 시작하고, onmessage 핸들러로 메인쓰레드에서 받은 메시지를 처리합니다.
+워커에서 {{domxref("SharedWorkerGlobalScope.onconnect")}} 핸들러를 이용하여 위에 언급된 포트에 접속할 수 있습니다. 워커에 연관되어 있는 포트는 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 이벤트 포트 속성에 접근할 수 있습니다 — 그리고나서 {{domxref("MessagePort")}} `start()` 메서드로 포트를 시작하고, onmessage 핸들러로 메인쓰레드에서 받은 메시지를 처리합니다.
 
 ```js
 onconnect = function (e) {

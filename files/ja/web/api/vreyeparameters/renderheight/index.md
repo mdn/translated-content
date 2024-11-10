@@ -9,7 +9,8 @@ l10n:
 
 **`renderHeight`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、それぞれの目のビューポートの推奨レンダーターゲットの高さを、ピクセル単位で表します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 これは既にデバイスピクセル単位なので、 [Window.devicePixelRatio](/ja/docs/Web/API/Window/devicePixelRatio) を [HTMLCanvasElement.height](/ja/docs/Web/API/HTMLCanvasElement/height) に設定する前に掛け合わせる必要はありません。
 

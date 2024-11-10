@@ -57,7 +57,8 @@ No cuesta más tiempo escribir HTML semántico que (mal) marcado no semántico s
 
 Continuemos y veamos el HTML accesible en más detalle.
 
-> **Nota:** Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para más detalles.
+> [!NOTE]
+> Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para más detalles.
 
 ## Buena semántica
 
@@ -250,7 +251,8 @@ Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla,
 
 Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
 
-> **Nota:** Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
+> [!NOTE]
+> Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
 
 ### Controles de interfaz de usuario
 
@@ -262,7 +264,8 @@ Un aspecto clave de la accesibilidad de los controles de interfaz de usuario es 
 
 Después puedes pulsar <kbd>Enter</kbd> / <kbd>Return</kbd> para seguir un enlace enfocado o pulsar un botón (hemos incluido algo de JavaScript para que los botones lancen un mensaje), o comenzar a escribir para introducir texto en un campo de texto. Otros elementos de formulario tienen diferentes controles; por ejemplo, el elemento {{htmlelement ("select")}} puede mostrar sus opciones y alternar entre usar las teclas de flecha arriba y abajo.
 
-> **Nota:** Diferentes navegadores pueden tener diferentes opciones de control de teclado disponibles. Consulta [Using native keyboard accessibility](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) para obtener más detalles.
+> [!NOTE]
+> Diferentes navegadores pueden tener diferentes opciones de control de teclado disponibles. Consulta [Using native keyboard accessibility](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) para obtener más detalles.
 
 Básicamente, obtienes este comportamiento gratis, solo con el uso de los elementos apropiados. Por ejemplo:
 
@@ -379,7 +382,8 @@ y esto es un mal texto de enlace:
 </p>
 ```
 
-> **Nota:** Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> [!NOTE]
+> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
 
@@ -404,7 +408,8 @@ Con código como este, la etiqueta estará claramente asociada con la entrada; l
 
 Como ventaja adicional, en la mayoría de los navegadores asociar una etiqueta con una entrada de formulario significa que puedes hacer clic en la etiqueta para seleccionar / activar el elemento del formulario. Esto le da a la entrada un área de impacto más grande, lo que facilita la selección.
 
-> **Nota:** puedes ver algunos ejemplos de buenos y malos formularios en [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) y [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> [!NOTE]
+> Puedes ver algunos ejemplos de buenos y malos formularios en [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) y [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 ## Tablas de datos accesibles
 
@@ -444,7 +449,8 @@ Ahora echa un vistazo a nuestro [ejemplo de tabla de bandas punk](https://github
 
 Consulte nuestro artículo sobre funciones avanzadas y accesibilidad de tablas HTML para obtener más detalles sobre las tablas de datos accesibles.
 
-> **Nota:** Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad) para ver más detalles sobre tablas de datos accesibles.
+> [!NOTE]
+> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad) para ver más detalles sobre tablas de datos accesibles.
 
 ## Alternativas de texto
 
@@ -474,7 +480,8 @@ Tenemos un ejemplo simple, [access-image.html](http://mdn.github.io/learning-are
 
 La primera imagen, cuando la ve un lector de pantalla, realmente no ofrece mucha ayuda al usuario; VoiceOver, por ejemplo, lee "/dinosaur.png, imagen". Lee el nombre del archivo para intentar proporcionar ayuda. En este ejemplo, el usuario al menos sabrá que es un dinosaurio de algún tipo, pero a menudo los archivos pueden cargarse con nombres de archivo generados por la máquina (por ejemplo, de una cámara digital) y estos nombres de archivo probablemente no proporcionarían contexto al contenido de la imagen.
 
-> **Nota:** Es por eso que nunca debes incluir contenido de texto dentro de una imagen: los lectores de pantalla simplemente no pueden acceder a él. También hay otras desventajas: no puedes seleccionarlo y copiarlo / pegarlo. ¡No lo hagas!
+> [!NOTE]
+> Es por eso que nunca debes incluir contenido de texto dentro de una imagen: los lectores de pantalla simplemente no pueden acceder a él. También hay otras desventajas: no puedes seleccionarlo y copiarlo / pegarlo. ¡No lo hagas!
 
 Cuando un lector de pantalla encuentra la segunda imagen, lee el atributo alt completo: "Un tiranosaurio rex rojo: un dinosaurio de dos patas erguido como un humano, con brazos pequeños y una cabeza grande con muchos dientes afilados".
 
@@ -482,7 +489,8 @@ Esto resalta la importancia de no solo usar nombres de archivo significativos en
 
 Una cosa a considerar es si tus imágenes tienen significado dentro del contenido, o si son puramente para decoración visual, por lo que no tienen significado. Si son decorativas, es mejor incluirlas en la página como imágenes de fondo CSS.
 
-> **Nota:** Lee [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) y [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
+> [!NOTE]
+> Lee [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) y [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
 
 Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
 
@@ -538,7 +546,8 @@ Puede haber ocasiones en las que se incluya una imagen en el diseño de una pág
 
 La razón para usar un `alt` vacío en lugar de no incluirlo es porque muchos lectores de pantalla anuncian la URL completa de la imagen si no se proporciona un alt. En el ejemplo anterior, la imagen actúa como decoración visual del encabezado al que está asociada. En casos como este, y en los casos en los que una imagen es solo decoración y no tiene valor de contenido, debes poner un alt vacío en tus imágenes. Otra alternativa es usar el atributo de rol aria `role = "presentation"` - esto también evita que los lectores de pantalla lean el texto alternativo.
 
-> **Nota:** si es posible, deberías usar CSS para mostrar imágenes que son solo decoración.
+> [!NOTE]
+> Si es posible, deberías usar CSS para mostrar imágenes que son solo decoración.
 
 ## Más sobre enlaces
 

@@ -86,7 +86,7 @@ flex-shrink: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 300)}}
+{{EmbedLiveSample('フレックスアイテムの縮小係数の設定', 500, 300)}}
 
 ## 仕様書
 

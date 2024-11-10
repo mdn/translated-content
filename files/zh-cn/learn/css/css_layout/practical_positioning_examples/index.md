@@ -35,11 +35,13 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
+> [!NOTE]
+> 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
 
 你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
-> **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
+> [!NOTE]
+> 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
 在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件——[info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html)。保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
@@ -138,7 +140,8 @@ body {
 }
 ```
 
-> **备注：** 我们正在使用后代选择器，整个例子 `.info-box` 都位于链的开始——这样页面已经带有其他内容时，我们可以插入这个特征，不害怕与应用于页面其他部分的样式冲突。
+> [!NOTE]
+> 我们正在使用后代选择器，整个例子 `.info-box` 都位于链的开始——这样页面已经带有其他内容时，我们可以插入这个特征，不害怕与应用于页面其他部分的样式冲突。
 
 接下来，我们将样式化水平选项卡——列表项都要左浮动确保他们一行合起来，他们的{{cssxref("list-style-type")}}被设置为 `none` 用以去除项目符号，宽度（{{cssxref("width")}}）设置为 `150px` 以便于适应这个 info-box。链接（ {{htmlelement("a")}} ）元素设置为{{cssxref("display")}} inline-block，这样他们将在一行显示，仍然保持样式可设置，他们会被样式化合适的选项卡按钮，通过一系列的其他属性。
 
@@ -264,7 +267,8 @@ function setTabHandler(tab, tabPos) {
 
 ![](fixed-info-box.png)
 
-> **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
+> [!NOTE]
+> 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
 
 在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
 
@@ -302,7 +306,8 @@ function setTabHandler(tab, tabPos) {
 </section>
 ```
 
-> **备注：** 你可以随意更改假的内容，替换为你想要的真的内容。
+> [!NOTE]
+> 你可以随意更改假的内容，替换为你想要的真的内容。
 
 ### 更改存在的 CSS
 
@@ -345,7 +350,8 @@ function setTabHandler(tab, tabPos) {
 
 ![](hidden-sliding-panel.png)
 
-> **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
+> [!NOTE]
+> 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
 在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 
@@ -361,7 +367,8 @@ function setTabHandler(tab, tabPos) {
 
 开始，我们看到了一个 {{htmlelement("label")}} 元素和 {{htmlelement("input")}} 元素——`<label>`元素普遍用来联系文字标签和表单，目的是能更好的理解表单（允许屏幕阅读器用户查看表单元素的描述）。这里通过`for`属性绑定`id`到了`<input>`标签的 checkbox 元素。
 
-> **备注：** 我们已经设置了一个特殊的问题标记特性到我们的 HTML 中，来当作我们的信息图标——这代表着这个按钮将可以按下显示或隐藏面板。
+> [!NOTE]
+> 我们已经设置了一个特殊的问题标记特性到我们的 HTML 中，来当作我们的信息图标——这代表着这个按钮将可以按下显示或隐藏面板。
 
 现在我们将这些元素用于稍微不同的目的——另一个 `<label>` 标签有用的副作用使你能通过点击 checkbox 的 label 标签来选择这个 checkbox，就好像点击了这个 checkbox 自己一样。这就会实现有名的 [checkbox hack](https://css-tricks.com/the-checkbox-hack/) 技术，可以提供无 JavaScript 的方法来通过按钮来控制一个元素。我们将通过其他两个元素控制 {{htmlelement("aside")}} 元素。（为了简洁起见，我们已将其内容从上述代码列表中删除）。
 

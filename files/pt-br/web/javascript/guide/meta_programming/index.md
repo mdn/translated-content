@@ -30,7 +30,7 @@ Exemplos adicionais estão disponíveis na página de referência de {{jsxref("P
 
 Os seguintes termos são usados quando se fala sobre a funcionalidade de proxies.
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
+- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}}
   - : Espaço reservado de objeto que contenha traps.
 - traps
   - : Os métodos que fornecem acesso de propriedade. Isto é análogo ao conceito de traps em sistemas operacionais.
@@ -379,7 +379,7 @@ typeof proxy; // "object", typeof não desencadeia nenhuma trap
 
 ## Reflexão
 
-{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect` não é um objeto do tipo function.
+{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","",1)}}. `Reflect` não é um objeto do tipo function.
 
 `Reflect` auxilia no encaminhamento de operações padrão do handler para o target.
 

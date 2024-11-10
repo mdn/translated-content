@@ -13,7 +13,8 @@ l10n:
 
 这有助于让常用的 {{domxref("document.getElementById()", "getElementById()")}} 方法通过 `id` 的值找到对应的单个元素。另外，在使用 [CSS](/zh-CN/docs/Web/CSS) 为文档添加样式时，[ID 可作为选择器](/zh-CN/docs/Web/CSS/ID_selectors)使用。
 
-> **备注：** 虽然 ID 是区分大小写的，但是不应该同时使用仅大小写不同的 ID 值。
+> [!NOTE]
+> 虽然 ID 是区分大小写的，但是不应该同时使用仅大小写不同的 ID 值。
 
 ## 值
 

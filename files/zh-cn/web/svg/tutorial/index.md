@@ -9,8 +9,6 @@ slug: Web/SVG/Tutorial
 
 本教程旨在解释 SVG 内部的技术细节。如果你希望绘制非常漂亮的图形，你可以在 [Inkscape 的文档页面](http://inkscape.org/doc/)上获取更多有用的资源。另外还有一个比较好的 SVG 介绍：[W3C 的 SVG 入门](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)。
 
-> **备注：** 本教程还在初期阶段，如果你有能力，可以来增加扩展一两段，写一整页的话会给加分！
-
 ##### 从头开始介绍 SVG
 
 - [引言](/zh-CN/Web/SVG/Tutorial/Introduction)

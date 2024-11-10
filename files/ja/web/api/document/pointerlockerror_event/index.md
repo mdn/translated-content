@@ -1,15 +1,16 @@
 ---
 title: "Document: pointerlockerror イベント"
+short-title: pointerlockerror
 slug: Web/API/Document/pointerlockerror_event
 l10n:
-  sourceCommit: 8f91a466f5a6d1e238ed209f36f9b506fc73ee0d
+  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Lock API")}}
 
-`pointerlockerror` イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
+**`pointerlockerror`** イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
 
-このイベントはキャンセル不可です。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 

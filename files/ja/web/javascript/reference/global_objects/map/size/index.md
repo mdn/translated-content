@@ -2,12 +2,12 @@
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`size`** アクセサープロパティは、 {{jsxref("Map")}} オブジェクトにある要素の数を返します。
+**`size`** は {{jsxref("Map")}} インスタンスのアクセサープロパティで、このマップにある要素の数を返します。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 

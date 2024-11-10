@@ -28,7 +28,7 @@ slug: Web/HTTP/Headers/X-Frame-Options
 
 `X-Frame-Options` 有两个可能的值：
 
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -46,19 +46,20 @@ X-Frame-Options: SAMEORIGIN
 
 ## 示例
 
-> **备注：** 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
+> [!NOTE]
+> 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
 
 ### 配置 Apache
 
 配置 Apache 在所有页面上发送 `X-Frame-Options` 响应头，需要把下面这行添加到 'site' 的配置中：
 
-```
+```apacheconf
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
 要将 Apache 的配置 `X-Frame-Options` 设置成 `DENY`，按如下配置去设置你的站点：
 
-```
+```apacheconf
 Header set X-Frame-Options "DENY"
 ```
 
@@ -66,7 +67,7 @@ Header set X-Frame-Options "DENY"
 
 配置 Nginx 发送 `X-Frame-Options` 响应头，把下面这行添加到 'http', 'server' 或者 'location' 的配置中：
 
-```
+```nginx
 add_header X-Frame-Options SAMEORIGIN always;
 ```
 
@@ -94,13 +95,13 @@ add_header X-Frame-Options SAMEORIGIN always;
 
 配置 HAProxy 发送 `X-Frame-Options` 响应头，添加这些到你的前端、监听（listen），或者后端的配置里面：
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
 或者，在较新的版本中：
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 

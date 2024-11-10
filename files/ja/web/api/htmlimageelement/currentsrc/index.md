@@ -3,7 +3,7 @@ title: "HTMLImageElement: currentSrc プロパティ"
 short-title: currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 75d3108eaade9d64de3ece87258c946b9bf13068
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +22,7 @@ l10n:
 
 ```html
 <img
-  src="/files/16797/clock-demo-400px.png"
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
   alt="Clock"
   srcset="
     /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,

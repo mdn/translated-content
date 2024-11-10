@@ -9,15 +9,16 @@ slug: Web/API/Event/Event
 
 ## 语法
 
-```
- event = new Event(typeArg, eventInit);
+```js-nolint
+new Event(type)
+new Event(type, options)
 ```
 
 ### 参数
 
-- _typeArg_
+- `type`
   - : 是{{domxref("DOMString")}} 类型，表示所创建事件的名称。
-- _eventInit_{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : 是 `EventInit` 类型的字典，接受以下字段：
 

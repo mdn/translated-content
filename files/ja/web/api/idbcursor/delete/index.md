@@ -1,17 +1,16 @@
 ---
-title: IDBCursor.delete()
+title: "IDBCursor: delete() メソッド"
+short-title: delete()
 slug: Web/API/IDBCursor/delete
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの **`delete()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで、カーソルの位置を変えずにカーソルが指しているレコードを削除します。レコードが削除されると、カーソルの値は `null` になります。
+**`delete()`** は {{domxref("IDBCursor")}} インターフェイスのメソッドで、{{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで、カーソルの位置を変えずにカーソルが指しているレコードを削除します。レコードが削除されると、カーソルの値は `null` になります。
 
-注意点として、{{domxref("IDBIndex.openKeyCursor()")}} で取得したカーソルでは `delete()` (や {{domxref("IDBCursor.update()")}}) を呼ぶことはできません。このような用途のためには、かわりに {{domxref("IDBIndex.openCursor()")}} を使用しないといけません。
-
-{{AvailableInWorkers}}
+注意点として、`delete()` (や {{domxref("IDBCursor.update()")}}) を {{domxref("IDBIndex.openKeyCursor()")}} で取得したカーソルで呼ぶことはできません。このような用途のためには、かわりに {{domxref("IDBIndex.openCursor()")}} を使用しないといけません。
 
 ## 構文
 
@@ -21,11 +20,13 @@ delete()
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 
-この操作に関して続くイベントが発火する {{domxref("IDBRequest")}} オブジェクト。`result` 属性は `undefined` になります。
+この操作に関連する後続のイベントが発生する {{domxref("IDBRequest")}} オブジェクト。
+
+処理が成功した場合、リクエストの {{domxref("IDBRequest.result", "result")}} プロパティの値は `undefined` です。
 
 ### 例外
 
@@ -67,7 +68,7 @@ function deleteResult() {
       }
       cursor.continue();
     } else {
-      console.log("エントリーを表示しました。");
+      console.log("項目をを表示しました。");
     }
   };
 }
@@ -89,4 +90,4 @@ function deleteResult() {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

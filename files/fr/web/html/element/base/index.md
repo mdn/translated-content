@@ -67,7 +67,8 @@ Il est possible d'accéder à l'URL de base d'un document via un script en utili
 
 Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
 
-> **Attention :** Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
+> [!WARNING]
+> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
 
 - **`href`**
   - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.

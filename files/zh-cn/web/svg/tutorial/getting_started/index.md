@@ -89,7 +89,7 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-你可以利用[网络监控面板](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)或者 [websniffer.cc](https://websniffer.cc/) 之类的网站来检查服务器是否给 SVG 文件发送正确的 HTTP 标头。提交你的一个 SVG 文件的 URL，然后查看 HTTP 响应标头。如果发现服务器没有发送具有上述值的响应标头，那么你应该联系你的网站托管服务商。如果不能说服他们为 SVG 修正服务器配置，可能还有一些我们可以自行解决的办法。请阅读 w3.org 上的[服务器配置页面](https://www.w3.org/services/svg-server/)以找到一些简单的解决方案。
+你可以利用[网络监控面板](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)或者 [websniffer.com](https://websniffer.com/) 之类的网站来检查服务器是否给 SVG 文件发送正确的 HTTP 标头。提交你的一个 SVG 文件的 URL，然后查看 HTTP 响应标头。如果发现服务器没有发送具有上述值的响应标头，那么你应该联系你的网站托管服务商。如果不能说服他们为 SVG 修正服务器配置，可能还有一些我们可以自行解决的办法。请阅读 w3.org 上的[服务器配置页面](https://www.w3.org/services/svg-server/)以找到一些简单的解决方案。
 
 服务器配置错误是 SVG 加载失败的常见原因，所以一定要确保你的服务器配置正确。如果不能把服务器配置成给 SVG 文件发送正确的响应标头，这时 Firefox 很有可能把该文件的标记显示成文本或乱码，甚至会要求查看者选择打开文件的应用程序。
 

@@ -10,7 +10,8 @@ l10n:
 
 **`getAll()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内から指定されたキーに関連付けられたすべての値を返します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 

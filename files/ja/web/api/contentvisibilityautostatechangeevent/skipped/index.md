@@ -3,7 +3,7 @@ title: "ContentVisibilityAutoStateChangeEvent: skipped プロパティ"
 short-title: skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
 {{APIRef("CSS Containment")}}
@@ -52,6 +52,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS 封じ込め](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

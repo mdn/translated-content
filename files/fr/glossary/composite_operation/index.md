@@ -18,7 +18,8 @@ L'_opération composite_ est l'opération qui permet de combiner la valeur effec
 - Accumulation
   - : La valeur effective est combinée à la valeur sous-jacente.
 
-> **Note :** En CSS, l'opération composite s'applique uniquement aux opérations.
+> [!NOTE]
+> En CSS, l'opération composite s'applique uniquement aux opérations.
 
 ## Voir aussi
 

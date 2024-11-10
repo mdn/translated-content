@@ -3,7 +3,7 @@ title: 패턴
 slug: Web/SVG/Tutorial/Patterns
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## 패턴
 

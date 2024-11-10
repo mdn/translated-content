@@ -56,7 +56,8 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Quando usando `target`, adicione `rel="noreferrer noopener"` para evitar "exploit" para `window.opener` API;
+    > [!NOTE]
+    > Quando usando `target`, adicione `rel="noreferrer noopener"` para evitar "exploit" para `window.opener` API;
 
     > **Warning:** **Note:** Linking to another page with `target="_blank"` will run the new page in the same process as your page. If the new page executes JavaScript, your page's performance may suffer. This can also be avoided by using `rel="noreferrer noopener"`.
 
@@ -69,7 +70,8 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-    > **Note:** This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
+    > [!NOTE]
+    > This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
 - `coords`
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
@@ -77,7 +79,8 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
+    > [!NOTE]
+    > Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
 
 - `rev`
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -85,7 +88,8 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
   - : The shape of the hyperlink's region in an image map.
 
-    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+    > [!NOTE]
+    > Use the {{HTMLElement("area")}} element for image maps instead.
 
 ## Properties
 
@@ -226,7 +230,8 @@ a {
 <h2 id="Section_further_down">Section further down</h2>
 ```
 
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
 

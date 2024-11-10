@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 
 {{AddonSidebar}}
 
-> **備註：** Firefox 54 以後可以使用這個功能。
+> [!NOTE]
+> Firefox 54 以後可以使用這個功能。
 
 當套件提供開發者使用的工具時，可以以一個瀏覽器開發工具的新面板的形式在開發者工具裡添加一個 UI。
 

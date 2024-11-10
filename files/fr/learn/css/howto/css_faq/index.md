@@ -3,6 +3,8 @@ title: Questions fréquentes en CSS
 slug: Learn/CSS/Howto/CSS_FAQ
 ---
 
+{{LearnSidebar}}
+
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
 Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement «&nbsp;type de document&nbsp;». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.

@@ -32,7 +32,8 @@ A continuación, veamos qué estructura debería tener tu sitio de prueba. Las c
 3. Directorio **`styles`**: Este directorio contendrá el código CSS que se utiliza para aplicar estilo al contenido (por ejemplo, configurar el texto y los colores de fondo). Crea un directorio llamado `styles`, dentro de tu directorio `pruebasitio`.
 4. Directorio **`scripts`**: Este directorio contendrá todo el código JavaScript utilizado para agregar funcionalidad interactiva a tu sitio (por ejemplo, botones que cargan datos cuando se hace clic en ellos). Crea un directorio llamado `scripts`, dentro de tu directorio `pruebasitio`.
 
-> **Nota:** En las computadoras con Windows, es posible que tengas problemas para ver los nombres de los archivos, porque de manera predeterminada, Windows tiene activada una opción llamada **Ocultar extensiones para tipos de archivos conocidos**. Generalmente, la puedes desactivar yendo al Explorador de Windows, seleccionando la opción **Opciones de directorio...**, desmarcando la casilla de verificación **Ocultar extensiones para tipos de archivo conocidos** y luego haciendo clic en **Aceptar**. Para obtener información más específica sobre tu versión de Windows, puedes buscar en la web.
+> [!NOTE]
+> En las computadoras con Windows, es posible que tengas problemas para ver los nombres de los archivos, porque de manera predeterminada, Windows tiene activada una opción llamada **Ocultar extensiones para tipos de archivos conocidos**. Generalmente, la puedes desactivar yendo al Explorador de Windows, seleccionando la opción **Opciones de directorio...**, desmarcando la casilla de verificación **Ocultar extensiones para tipos de archivo conocidos** y luego haciendo clic en **Aceptar**. Para obtener información más específica sobre tu versión de Windows, puedes buscar en la web.
 
 ## Rutas de archivo
 
@@ -69,7 +70,8 @@ Algunas reglas generales para las rutas de archivo:
 
 Por ahora, esto es todo lo que necesitas saber.
 
-> **Nota:** El sistema de archivos de Windows tiende a utilizar barras invertidas, no barras diagonales, p. ej. `C:\windows`. Esto no importa en HTML, incluso si estás desarrollando tu sitio web en Windows, debes usar barras diagonales en tu código.
+> [!NOTE]
+> El sistema de archivos de Windows tiende a utilizar barras invertidas, no barras diagonales, p. ej. `C:\windows`. Esto no importa en HTML, incluso si estás desarrollando tu sitio web en Windows, debes usar barras diagonales en tu código.
 
 ## ¿Qué más se debería hacer?
 

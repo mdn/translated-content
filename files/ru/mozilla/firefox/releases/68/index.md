@@ -144,7 +144,8 @@ _Без изменений._
 - Конструктор {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} был обновлён в соответствии со спецификацией, где "first audio track" в потоке дорожка, идентификатора которой приходит первым в лексикографическом порядке ([Firefox bug 1324548](https://bugzil.la/1324548)).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопасного контекста; попытки сделать это будут сопровождаться исключением `NotAllowedError`. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему `file:///`, либо загружены из `localhost`. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы `getUserMedia()`, установив надстройку `media.getusermedia.insecure.enabled` в состояние `true` ([Firefox bug 1335740](https://bugzil.la/1335740)).
 
-  > **Примечание:** В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к {{domxref("MediaDevices")}} API. **Это уже так в Nightly сборках.**
+  > [!NOTE]
+  > В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к {{domxref("MediaDevices")}} API. **Это уже так в Nightly сборках.**
 
 #### Удалённые
 

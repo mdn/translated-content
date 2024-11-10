@@ -20,7 +20,7 @@ Para empezar, haz una copia local de nuestro archivo [oojs.html](https://github.
 Al igual que con muchas cosas en JavaScript, la creación de un objeto a menudo comienza con la definición e iniciación de una variable. Intenta ingresar lo siguiente debajo del código JavaScript que ya está en tu archivo, luego guarda y actualiza:
 
 ```js
-var persona = {};
+const persona = {};
 ```
 
 Si ingresas `persona` en tu entrada de texto y presionas el botón, debes obtener el siguiente resultado:
@@ -32,14 +32,14 @@ Si ingresas `persona` en tu entrada de texto y presionas el botón, debes obtene
 ¡Felicidades!, acabas de crear tu primer objeto. ¡Trabajo realizado! Pero este es un objeto vacío, por lo que realmente no podemos hacer mucho con él. Actualicemos nuestro objeto para que se vea así:
 
 ```js
-var persona = {
+const persona = {
   nombre: ["Bob", "Smith"],
   edad: 32,
   genero: "masculino",
   intereses: ["música", "esquí"],
   bio: function () {
     alert(
-      `${this.nombre[0]} ${this.nombre[1]} tiene ${this.edad} años. Le gusta ${this.intereses[0]} y this.intereses[1].`,
+      `${this.nombre[0]} ${this.nombre[1]} tiene ${this.edad} años. Le gusta ${this.intereses[0]} y ${this.intereses[1]}.`,
     );
   },
   saludo: function () {
@@ -61,7 +61,8 @@ persona.saludo();
 
 ¡Ahora tienes algunos datos y funcionalidades dentro de tu objeto, y ahora puedes acceder a ellos con una sintaxis simple y agradable!
 
-> **Nota:** Si tienes problemas para hacer que esto funcione, intenta comparar tu código con nuestra versión - ve [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (también [ve que se ejecuta en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). La versión en vivo te dará una pantalla en blanco, pero eso está bien. De nuevo, abre tu devtools e intenta escribir los comandos anteriores para ver la estructura del objeto.
+> [!NOTE]
+> Si tienes problemas para hacer que esto funcione, intenta comparar tu código con nuestra versión - ve [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (también [ve que se ejecuta en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). La versión en vivo te dará una pantalla en blanco, pero eso está bien. De nuevo, abre tu devtools e intenta escribir los comandos anteriores para ver la estructura del objeto.
 
 Entonces, ¿qué está pasando aquí? Bien, un objeto se compone de varios miembros, cada uno de los cuales tiene un nombre (por ejemplo, `nombre` y `edad`) y un valor (por ejemplo, `['Bob', 'Smith']` y `32`). Cada par nombre/valor debe estar separado por una coma, y el nombre y el valor en cada caso están separados por dos puntos. La sintaxis siempre sigue este patrón:
 
@@ -195,8 +196,8 @@ persona[nombrePerzonalizado] = valorPerzonalizado;
 Para probar esto, intenta agregar las siguientes líneas en tu código, justo debajo de la llave de cierre del objeto `persona`:
 
 ```js
-var nombrePerzonalizado = "altura";
-var valorPerzonalizado = "1.75m";
+const nombrePerzonalizado = "altura";
+const valorPerzonalizado = "1.75m";
 persona[nombrePerzonalizado] = valorPerzonalizado;
 ```
 
@@ -223,14 +224,14 @@ Probablemente te estés preguntando qué es `"this"`. La palabra clave `this` se
 Vamos a ilustrar lo que queremos decir con un par de objetos persona simplificados:
 
 ```js
-var persona1 = {
+const persona1 = {
   nombre: "Chris",
   saludo: function () {
     alert("¡Hola!, Soy " + this.nombre + ".");
   },
 };
 
-var persona2 = {
+const persona2 = {
   nombre: "Brian",
   saludo: function () {
     alert("¡Hola!, Soy " + this.nombre + ".");
@@ -255,8 +256,8 @@ Estabas usando un método disponible en una instancia de la clase [`String`](/es
 Cuando accediste al modelo de objetos del documento (document object model) usando líneas como esta:
 
 ```js
-var miDiv = document.createElement("div");
-var miVideo = document.querySelector("video");
+const miDiv = document.createElement("div");
+const miVideo = document.querySelector("video");
 ```
 
 Estaba usando métodos disponibles en una instancia de la clase [`Document`](/es/docs/Web/API/Document). Para cada página web cargada, se crea una instancia de `Document`, llamada `document`, que representa la estructura, el contenido y otras características de la página entera, como su URL. De nuevo, esto significa que tiene varios métodos/propiedades comunes disponibles en él.
@@ -266,12 +267,13 @@ Lo mismo puede decirse de prácticamente cualquier otro Objeto/API incorporado q
 Ten en cuenta que los Objetos/API incorporados no siempre crean instancias de objetos automáticamente. Como ejemplo, la [API de Notificaciones](/es/docs/Web/API/Notifications_API), que permite que los navegadores modernos activen las notificaciones del sistema, requiere que crees una instancia de un nuevo objeto para cada notificación que desees disparar. Intenta ingresar lo siguiente en tu consola de JavaScript:
 
 ```js
-var miNotificacion = new Notification("¡Hola!");
+const miNotificacion = new Notification("¡Hola!");
 ```
 
 De nuevo, veremos qué son los constructores en un artículo posterior.
 
-> **Nota:** Es útil pensar en la forma en que los objetos se comunican como **paso de mensajes** — cuando un objeto necesita otro objeto para realizar algún tipo de acción a menudo enviará un mensaje a otro objeto a través de uno de sus métodos, y esperará una respuesta, que conocemos como un valor de retorno.
+> [!NOTE]
+> Es útil pensar en la forma en que los objetos se comunican como **paso de mensajes** — cuando un objeto necesita otro objeto para realizar algún tipo de acción a menudo enviará un mensaje a otro objeto a través de uno de sus métodos, y esperará una respuesta, que conocemos como un valor de retorno.
 
 ## Resumen
 

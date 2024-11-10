@@ -43,8 +43,8 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 
     > **备注：** `AsyncGenerator` 对象并不会存储创建它们的异步生成器函数的引用。
 
-- `AsyncGenerator.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncGenerator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `AsyncGenerator.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncGenerator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 

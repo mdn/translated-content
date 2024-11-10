@@ -21,7 +21,8 @@ Si vous souhaitez créer une traduction d'une page qui existe en anglais, mais p
 2. Dans votre copie locale de `mdn/content`, copiez le fichier `./files/en-us/web/css/align-content/index.md`
 3. Collez ce fichier dans `./files/fr/web/css/align-content`.
 
-> **Note :** Le nom du répertoire diffère légèrement de l'intitulé de la page. En particulier, le <i lang="en">slug</i> suit la casse de la phrase, alors que le chemin sur le système de fichiers est exclusivement en minuscules.
+> [!NOTE]
+> Le nom du répertoire diffère légèrement de l'intitulé de la page. En particulier, le <i lang="en">slug</i> suit la casse de la phrase, alors que le chemin sur le système de fichiers est exclusivement en minuscules.
 
 Le fichier `index.md` d'un document doit commencer par des informations préliminaires qui définissent le `titre`, le `slug` (les autres métadonnées comme `page-type` sont réservées à la version anglaise).
 

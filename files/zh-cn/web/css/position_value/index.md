@@ -7,7 +7,8 @@ slug: Web/CSS/position_value
 
 [CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
 
-> **备注：** 由 `<position>` 值表述的最终位置并不需要位于元素的盒子中。
+> [!NOTE]
+> 由 `<position>` 值表述的最终位置并不需要位于元素的盒子中。
 
 ## 语法
 

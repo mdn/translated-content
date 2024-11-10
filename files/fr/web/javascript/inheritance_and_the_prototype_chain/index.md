@@ -19,7 +19,8 @@ Bien que cette confusion (entre classe et prototype) soit souvent avancée comme
 
 Les objets JavaScript sont des ensembles dynamiques de propriétés (les propriétés directement rattachées à un objet sont appelées **propriétés en propre (_own properties_)**). Les objets JavaScript possèdent également un lien vers un objet qui est leur prototype. Lorsqu'on tente d'accéder aux propriétés d'un objet, la propriété sera recherchée d'abord sur l'objet même, puis sur son prototype, puis sur le prototype du prototype et ainsi de suite jusqu'à ce qu'elle soit trouvée ou que la fin de la chaîne de prototype ait été atteinte.
 
-> **Note :** Dans la spécification ECMAScript, on utilise la notation `unObjet.[[Prototype]]` pour faire référence au prototype de `unObjet`. Depuis ECMAScript 2015, on peut accéder à `[[Prototype]]` grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript `__proto__` qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.
+> [!NOTE]
+> Dans la spécification ECMAScript, on utilise la notation `unObjet.[[Prototype]]` pour faire référence au prototype de `unObjet`. Depuis ECMAScript 2015, on peut accéder à `[[Prototype]]` grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript `__proto__` qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.
 >
 > Cette propriété ne devrait pas être confondue avec la propriété `func.prototype` des fonctions qui définissent le `[[Prototype]]` à affecter aux instances des objets créés par cette fonction lorsqu'elle est utilisée comme constructeur. La propriété **`Object.prototype`** représente le prototype de {{jsxref("Object")}}.
 
@@ -110,7 +111,8 @@ console.log(p.m()); // 5
 
 Regardons un peu plus en détail ce qui se déroule en arrière-plan.
 
-> **Note :** Pour tous les exemples suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
+> [!NOTE]
+> Pour tous les exemples suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
 
 En JavaScript, comme mentionné ci-dessus, les fonctions peuvent avoir des propriétés. Toutes les fonctions ont une propriété spéciale intitulée `prototype`.
 
@@ -374,7 +376,8 @@ console.log(g.__proto__.hasOwnProperty("ajoutSommet"));
 // true
 ```
 
-> **Note :** Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir `undefined`.
+> [!NOTE]
+> Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir `undefined`.
 
 ### Mauvaise pratique : étendre les prototypes natifs
 

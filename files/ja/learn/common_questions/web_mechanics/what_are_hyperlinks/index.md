@@ -2,8 +2,10 @@
 title: ハイパーリンクとは
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 l10n:
-  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
+{{QuicklinksWithSubPages("/ja/docs/Learn/Common_questions")}}
 
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。
 
@@ -16,7 +18,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>ウェブ上のリンクとその重要性について学びます。</td>
     </tr>
   </tbody>

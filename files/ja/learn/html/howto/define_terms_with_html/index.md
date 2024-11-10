@@ -50,7 +50,8 @@ HTML は、インラインであろうと構造化された用語集であろう
 <p><dfn>Firefox</dfn> は、Mozilla Foundation によって作成されたウェブブラウザーです。</p>
 ```
 
-> **メモ:** 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)があります。
+> [!NOTE]
+> 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)があります。
 
 ### 特別な場合: 略語
 
@@ -62,7 +63,8 @@ HTML は、インラインであろうと構造化された用語集であろう
 </p>
 ```
 
-> **メモ:** HTML 仕様は実際には略語を拡張するために [`title` 属性を用意しています](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element)（英語）。 ただし、これはインライン展開を提供するための許容可能な代替方法ではありません。 `title` の内容は、マウスを使用していない限り、ユーザーには完全に隠されています。 この仕様も同様に[これを認めています](https://html.spec.whatwg.org/multipage/dom.html#attr-title)（英語）。
+> [!NOTE]
+> HTML 仕様は実際には略語を拡張するために [`title` 属性を用意しています](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element)（英語）。 ただし、これはインライン展開を提供するための許容可能な代替方法ではありません。 `title` の内容は、マウスを使用していない限り、ユーザーには完全に隠されています。 この仕様も同様に[これを認めています](https://html.spec.whatwg.org/multipage/dom.html#attr-title)（英語）。
 
 ### アクセシビリティの向上
 
@@ -84,7 +86,8 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 説明リストは、用語とそれに対応する説明のリスト（例: 定義リスト、辞書の項目、よくある質問、キーと値のペア）です。
 
-> **メモ:** 説明リストは、[対話をマークアップするのには適していません](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element)（英語）。対話は話し手を直接記述しないためです。こちらに[対話をマークアップするための推奨事項](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations)（英語）があります。
+> [!NOTE]
+> 説明リストは、[対話をマークアップするのには適していません](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element)（英語）。対話は話し手を直接記述しないためです。こちらに[対話をマークアップするための推奨事項](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations)（英語）があります。
 
 説明された用語は、 {{htmlelement("dt")}} 要素内にあります。 対応する説明が直ちに続き、 1 つ以上の {{htmlelement("dd")}} 要素に含まれています。 説明リスト全体を {{htmlelement("dl")}} 要素で囲みます。
 
@@ -109,7 +112,8 @@ HTML は、インラインであろうと構造化された用語集であろう
 </dl>
 ```
 
-> **メモ:** 基本的なパターンは、ご覧の通り、 `<dt>` の用語と `<dd>` の説明を交互に並べるというものです。もし 2 つ以上の用語が続けて出てきた場合、続く説明はそれらすべての用語に適用されます。もし 2 つ以上の説明文が同列にある場合、それらはすべて最後に指定された用語に適用されます。
+> [!NOTE]
+> 基本的なパターンは、ご覧の通り、 `<dt>` の用語と `<dd>` の説明を交互に並べるというものです。もし 2 つ以上の用語が続けて出てきた場合、続く説明はそれらすべての用語に適用されます。もし 2 つ以上の説明文が同列にある場合、それらはすべて最後に指定された用語に適用されます。
 
 ### 視覚的な出力を改善する
 

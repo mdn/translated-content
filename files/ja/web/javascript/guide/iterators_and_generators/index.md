@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 - [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/for...of","for...of")}}
-- {{jsxref("Statements/function*","function*")}} と {{jsxref("Generator","ジェネレーター","","true")}}
+- {{jsxref("Statements/function*","function*")}} と {{jsxref("Generator","ジェネレーター","",1)}}
 - {{jsxref("Operators/yield","yield")}} と {{jsxref("Operators/yield*","yield*")}}
 
 ## イテレーター
@@ -70,7 +70,8 @@ while (!result.done) {
 console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **メモ:** 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
+> [!NOTE]
+> 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
 
 ## ジェネレーター関数
 

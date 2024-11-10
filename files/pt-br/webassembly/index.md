@@ -3,7 +3,7 @@ title: WebAssembly
 slug: WebAssembly
 ---
 
-{{WebAssemblySidebar}}{{SeeCompatTable}}
+{{WebAssemblySidebar}}
 
 O WebAssembly é um novo tipo de código que pode ser executado em browsers modernos — se trata de uma linguagem de baixo nível como assembly, com um formato binário compacto que executa com performance quase nativa e que fornece um novo alvo de compilação para linguagens como C/C++, para que possam ser executadas na web. Também foi projetado para executar em conjunto com o JavaScript, permitindo que ambos trabalhem juntos.
 
@@ -63,10 +63,6 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 ## Especificações
 
 {{Specifications}}
-
-## Compatibilidade do navegador
-
-{{Compat}}
 
 ## Veja também
 

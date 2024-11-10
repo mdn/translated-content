@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Operators/async_function
 
 Le mot-clé **`async function`** peut être utilisé pour définir une fonction asynchrone au sein d'une expression.
 
-> **Note :** Il est aussi possible de définir une fonction asynchrone en utilisant une [instruction `async function`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function).
+> [!NOTE]
+> Il est aussi possible de définir une fonction asynchrone en utilisant une [instruction `async function`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function).
 
 ## Syntaxe
 
@@ -26,7 +27,8 @@ async function [name]([param1[, param2[, …, paramN]]]) {
 - `instructions`
   - : Les instructions qui composent le corps de la fonction.
 
-> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour les expressions de fonction asynchrone.
+> [!NOTE]
+> À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour les expressions de fonction asynchrone.
 
 ## Description
 

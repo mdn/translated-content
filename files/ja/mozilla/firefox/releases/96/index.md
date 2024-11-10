@@ -39,7 +39,7 @@ slug: Mozilla/Firefox/Releases/96
 - {{domxref("navigator.canShare()")}} を Android でサポートしました。特定のターゲットに対して {{domxref("navigator.share()")}} が成功するかをコードから確認できます。
   この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています
   ([Firefox バグ 1666203](https://bugzil.la/1666203))。
-- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されている Web アプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
+- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されているウェブアプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
 
 #### Canvas
 
@@ -49,7 +49,7 @@ slug: Mozilla/Firefox/Releases/96
 
 #### DOM
 
-- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられたパラメーターオプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
+- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられた引数オプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
 
 #### Media、WebRTC、Web Audio
 

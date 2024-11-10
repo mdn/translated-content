@@ -3,11 +3,14 @@ title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`delete()`** de l'interface {{domxref("FormData")}} supprime une clé et sa (ses) valeur(s) d'un objet `FormData`.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 

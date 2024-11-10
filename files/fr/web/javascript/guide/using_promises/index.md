@@ -135,7 +135,8 @@ faireQqc()
   .catch(failureCallback);
 ```
 
-> **Attention :** cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les _callbacks_ ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : `() => x` est synonyme de `() => { return x; }`).
+> [!WARNING]
+> Cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les _callbacks_ ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : `() => x` est synonyme de `() => { return x; }`).
 
 ### Chaînage après un catch
 

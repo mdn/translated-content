@@ -31,7 +31,8 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 
 그 대신에, [JSBin](https://jsbin.com/) 나 [Glitch](https://glitch.com/) 같은 사이트를 이용할 수 있습니다. HTML, CSS 그리고 JavaScript를 이 온라인 에디터 중 하나에 붙여넣기할 수 있습니다. 만약 온라인 에디터가 분리된 JavaScript/CSS 패널을 가지고 있지 않다면, 자유롭게 HTML 페이지 내부의 인라인 `<script>`/`<style>` 요소에 넣으세요.
 
-> **참고:** 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
+> [!NOTE]
+> 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
 
 ## 프로젝트 개요
 

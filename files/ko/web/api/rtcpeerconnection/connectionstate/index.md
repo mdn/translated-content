@@ -54,5 +54,5 @@ var connectionState = pc.connectionState;
 
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
-- {{event("connectionstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
 - [WebRTC](/ko/docs/Web/Guide/API/WebRTC)

@@ -189,7 +189,8 @@ De la même façon, les fonctions mathématiques usuelles sont des méthodes de 
 Math.sin(1.56);
 ```
 
-> **Note :** Les méthodes trigonométriques de `Math` prennent des arguments exprimés en radians.
+> [!NOTE]
+> Les méthodes trigonométriques de `Math` prennent des arguments exprimés en radians.
 
 Le tableau suivant liste les méthodes de l'objet `Math`.
 

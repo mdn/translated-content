@@ -11,10 +11,20 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 
 ## 示例
 
-```js
-var regex = /fooBar/gi;
+### 使用 source
 
-console.log(regex.source); // "fooBar"，不包含 /.../ 和 "ig"。
+```js
+const regex = /fooBar/gi;
+
+console.log(regex.source); // “fooBar”，不包含 /.../ 和“gi”。
+```
+
+### 空正则表达式和转义
+
+```js
+new RegExp().source; // “(?:)”
+
+new RegExp("\n").source === "\\n"; // true，从 ES5 开始
 ```
 
 ## 规范

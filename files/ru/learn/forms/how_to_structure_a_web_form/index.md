@@ -51,7 +51,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **Примечание:** вы можете найти этот пример в [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([также посмотрите на результат](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> Вы можете найти этот пример в [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([также посмотрите на результат](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 Читая эту форму, экранный диктор произнесёт "Fruit juice size small" для первого элемента, "Fruit juice size medium" - для второго, "Fruit juice size large" - для третьего.
 
@@ -100,7 +101,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **Примечание:** вы можете посмотреть этот пример тут [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([также можно посмотреть код вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> Вы можете посмотреть этот пример тут [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([также можно посмотреть код вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Несколько лейблов
 
@@ -142,9 +144,11 @@ slug: Learn/Forms/How_to_structure_a_web_form
 - Второй пример немного лучше — лейбл будет прочитан вместе с текстовым полем и будет звучать как "name star name edit text", однако тексты-подсказки всё ещё разделены. Это всё ещё немного сбивает с толку, но на этот раз ситуация немного лучше, потому что с текстовое поле связано с текстом-подсказкой.
 - Третий пример — лучший, так как весь лейбл будет связан с текстовым полем и озвучен целиком, а при чтении текст будет звучать как "name star edit text".
 
-> **Примечание:** В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.
+> [!NOTE]
+> В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.
 
-> **Примечание:** вы можете найти этот пример на GitHub [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([также можно посмотреть вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!
+> [!NOTE]
+> Вы можете найти этот пример на GitHub [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([также можно посмотреть вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!
 
 ## Часто используемые с формами HTML-структуры
 
@@ -160,7 +164,7 @@ slug: Learn/Forms/How_to_structure_a_web_form
 
 ### Активное обучение: построение структуры формы
 
-Давайте применим эти идеи на практике и построим более сложноструктурируемую форму — формы оплаты. Форма будет содержать некоторые типы виджетов формы, которые вы можете пока не понять — не переживайте об этом, вы найдёте информацию в следующей статье ([Основные нативные элементы управления формами](/ru/docs/Learn/HTML/Forms/The_native_form_widgets)). А пока внимательно прочитайте описание, следуя приведённым ниже инструкциям, и начинайте формировать представление о том, какие элементы обёртки мы используем для структурирования формы и почему.
+Давайте применим эти идеи на практике и построим более сложноструктурируемую форму — формы оплаты. Форма будет содержать некоторые типы виджетов формы, которые вы можете пока не понять — не переживайте об этом, вы найдёте информацию в следующей статье ([Основные нативные элементы управления формами](/ru/docs/Learn/Forms/Basic_native_form_controls)). А пока внимательно прочитайте описание, следуя приведённым ниже инструкциям, и начинайте формировать представление о том, какие элементы обёртки мы используем для структурирования формы и почему.
 
 1. Для начала сделайте локальную копию [пустого шаблона](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) и [CSS для нашей платёжной формы](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) в новой директории на вашем компьютере.
 2. Сначала подключите CSS к HTML, добавив следующую строку кода внутрь HTML-элемента {{htmlelement("head")}}:
@@ -275,8 +279,6 @@ slug: Learn/Forms/How_to_structure_a_web_form
 
 Вы можете увидеть законченную форму в действии ниже (также её можно найти на GitHub — посмотрите [payment-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) и [живой пример](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{ EmbedLiveSample("A_payment_form","100%",660, "", "Learn/Forms/How_to_structure_a_web_form/Example") }}
-
 ## Протестируйте себя!
 
 Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn/Forms/Test_your_skills:_Form_structure).
@@ -287,25 +289,25 @@ slug: Learn/Forms/How_to_structure_a_web_form
 
 ## Смотрите также
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}
 
 ## В этом разделе
 
 - [Ваша первая HTML форма](/ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма)
-- [Как структурировать HTML-формы](/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [Как структурировать HTML-формы](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Стандартные виджеты форм](/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм)
 - [The HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/ru/docs/Learn/Forms/Other_form_controls)
-- [Стили HTML-форм](/ru/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Стили HTML-форм](/ru/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/ru/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/ru/docs/Learn/Forms/UI_pseudo-classes)
-- [Проверка данных формы](/ru/docs/Learn/HTML/Forms/Валидация_формы)
-- [Отправка данных формы](/ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы)
+- [Проверка данных формы](/ru/docs/Learn/Forms/Form_validation)
+- [Отправка данных формы](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Дополнительные темы
 
-- [Как создавать пользовательские виджеты форм](/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Как создавать пользовательские виджеты форм](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

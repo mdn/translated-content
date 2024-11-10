@@ -65,7 +65,8 @@ Neste caso, não queremos pessoas genéricas — queremos professores e alunos, 
 
 Isso é realmente útil — professores e alunos compartilham muitos recursos comuns, como nome, sexo e idade, por isso é conveniente definir apenas esses recursos uma vez. Você também pode definir o mesmo recurso separadamente em classes diferentes, já que cada definição desse recurso estará em um namespace diferente. Por exemplo, a saudação de um aluno pode estar no formato "Yo, I'm \[firstName]" (por exemplo, _Yo, I'm Sam_), enquanto um professor pode usar algo mais formal, como "Olá, meu nome é \[Prefixo \[lastName], e eu ensino \[Subject]. " (por exemplo _Olá, Meu nome é Mr Griffiths, e eu ensino Química_).
 
-> **Nota:** A palavra chique para a capacidade de múltiplos tipos de objeto de implementar a mesma funcionalidade é o **polimorfismo**. Apenas no caso de você estar se perguntando.
+> [!NOTE]
+> A palavra chique para a capacidade de múltiplos tipos de objeto de implementar a mesma funcionalidade é o **polimorfismo**. Apenas no caso de você estar se perguntando.
 
 Agora você pode criar instâncias de objetos de suas classes filhas. Por exemplo:
 
@@ -117,7 +118,8 @@ Vamos explorar a criação de classes por meio de construtores e criar instânci
 
 A função de construtor é a versão do JavaScript de uma classe. Você notará que ela tem todos os recursos que você espera em uma função, embora ela não retorne nada ou crie explicitamente um objeto — ela basicamente define propriedades e métodos. Você verá a palavra-chave `this` sendo usada aqui também — é basicamente dizer que sempre que uma dessas instâncias de objeto é criada, a propriedade `name` do objeto será igual ao valor do nome passado à chamada do construtor, e o método `greeting()` usará o valor do nome passado para a chamada do construtor também.
 
-> **Nota:** Um nome de função de construtor geralmente começa com uma letra maiúscula — essa convenção é usada para tornar as funções do construtor mais fáceis de reconhecer no código.
+> [!NOTE]
+> Um nome de função de construtor geralmente começa com uma letra maiúscula — essa convenção é usada para tornar as funções do construtor mais fáceis de reconhecer no código.
 
 Então, como podemos chamar um construtor para criar alguns objetos?
 
@@ -216,7 +218,8 @@ person1.bio()
 // etc.
 ```
 
-> **Nota:** Se você está tendo problemas para fazer isso funcionar, tente comparar seu código com a nossa versão — veja o código em [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (também [você pode ve-lo sendo executado aqui](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> [!NOTE]
+> Se você está tendo problemas para fazer isso funcionar, tente comparar seu código com a nossa versão — veja o código em [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (também [você pode ve-lo sendo executado aqui](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
 
 ### Exercícios adicionais
 
@@ -224,7 +227,8 @@ Para começar, tente adicionar mais algumas linhas de criação de objetos e ten
 
 Além disso, há alguns problemas com nosso método `bio()` — a saída sempre inclui o pronome "Ele", mesmo que sua pessoa seja do sexo feminino ou alguma outra classificação de gênero preferida. E a biografia incluirá apenas dois interesses, mesmo que mais sejam listados na matriz `interests`. Você pode descobrir como corrigir isso na definição de classe (construtor)? Você pode colocar qualquer código que você gosta dentro de um construtor (você provavelmente precisará de alguns condicionais e um loop). Pense em como as sentenças devem ser estruturadas de maneira diferente dependendo do gênero e dependendo se o número de interesses listados é 1, 2 ou mais de 2.
 
-> **Nota:** If you get stuck, we have provided an [answer inside our GitHub repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — try writing it yourself first though!
+> [!NOTE]
+> If you get stuck, we have provided an [answer inside our GitHub repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — try writing it yourself first though!
 
 ## Outras maneiras de criar instâncias de objeto
 

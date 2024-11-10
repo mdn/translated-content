@@ -3,6 +3,8 @@ title: <template>
 slug: Web/HTML/Element/template
 ---
 
+{{HTMLSidebar}}
+
 El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.
 
 Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento **`<template>`** durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.

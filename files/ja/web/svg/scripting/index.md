@@ -3,6 +3,8 @@ title: スクリプティング
 slug: Web/SVG/Scripting
 ---
 
+{{SVGRef}}
+
 ブラウザーの既定の動作を `evt.preventDefault( )` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
 
 ### イベントコードの既定の挙動を防ぐ

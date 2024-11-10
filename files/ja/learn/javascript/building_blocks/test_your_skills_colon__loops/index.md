@@ -2,14 +2,15 @@
 title: "スキルテスト: ループ"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 l10n:
-  sourceCommit: b072a7e62002e4765626c52dfdac5159071938e0
+  sourceCommit: e92c9798c78de4c341ba3fbb14eab6516e033fb6
 ---
 
 {{learnsidebar}}
 
 このスキルテストの目的は、あなたが[ループするコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)を理解したかどうかを判定することです。
 
-> **メモ:** コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
+> [!NOTE]
+> コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
 >
 > もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -23,7 +24,7 @@ l10n:
 
 最初のループの課題では、単純なループを作成して、指定された `myArray` の項目をすべて読み込み、リストアイテム（つまり、 [`<li>`](/ja/docs/Web/HTML/Element/li) 要素）として画面に出力し、指定された `list` に追加します。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops1-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -41,7 +42,7 @@ l10n:
 
 前回の課題では使用しなかった種類のループを使用しましょう。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops2-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -57,6 +58,6 @@ l10n:
 
 前回までの 2 つの課題では使用しなかった種類のループを使用しましょう。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops3-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。

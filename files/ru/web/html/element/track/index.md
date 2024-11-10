@@ -5,7 +5,7 @@ slug: Web/HTML/Element/track
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<track>` **используется как дочерний элемент медиа-элементов {{HTMLElement("audio")}} and {{HTMLElement("video")}}. Позволяет указать синхронизированные текстовые дорожки (или данные на основе времени), например, для автоматической обработки субтитров. Файлы треков используют [формат WebVTT](/ru/docs/Web/API/WebVTT_API) (`.vtt` файлы) — Web Video Text Tracks или [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
+HTML-элемент **`<track>`** используется как дочерний элемент медиа-элементов {{HTMLElement("audio")}} and {{HTMLElement("video")}}. Позволяет указать синхронизированные текстовые дорожки (или данные на основе времени), например, для автоматической обработки субтитров. Файлы треков используют [формат WebVTT](/ru/docs/Web/API/WebVTT_API) (`.vtt` файлы) — Web Video Text Tracks или [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 

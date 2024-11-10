@@ -9,7 +9,8 @@ La propriété **`width`** permet de définir la largeur de la [boîte du conten
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
-> **Note :** Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.
+> [!NOTE]
+> Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.
 
 ## Syntaxe
 

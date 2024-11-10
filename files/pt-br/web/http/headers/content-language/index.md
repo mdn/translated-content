@@ -49,7 +49,8 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("`-`", `%x2D`). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "`en`" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "`en-CA`" = variedade de Inglês como comunicado no Canadá).
 
-> **Nota:** Tags de língua são formalmente deifnidas em [RFC 5646](https://tools.ietf.org/html/rfc5646), que depende do padrão [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (muitas vezes o [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) para [language codes](https://en.wikipedia.org/wiki/Language_code) serem usados.
+> [!NOTE]
+> Tags de língua são formalmente deifnidas em [RFC 5646](https://tools.ietf.org/html/rfc5646), que depende do padrão [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (muitas vezes o [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) para [language codes](https://en.wikipedia.org/wiki/Language_code) serem usados.
 
 ## Exemplos
 

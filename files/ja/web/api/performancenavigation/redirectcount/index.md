@@ -9,7 +9,8 @@ l10n:
 
 古い **`PerformanceNavigation.redirectCount`** プロパティは読み取り専用で、ページに到達する前に行われたリダイレクトの数を表す `unsigned short` を返します。
 
-> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
+> [!WARNING]
+> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
 > 代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 ## 値

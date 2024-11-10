@@ -9,7 +9,8 @@ l10n:
 
 **`VRFieldOfView`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、中心点からの視野を示す 4 つの角度で定義される視界を表現します。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## プロパティ
 

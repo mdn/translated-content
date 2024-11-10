@@ -9,7 +9,8 @@ L'interface **`IDBDatabase`** de l'API IndexedDB fournit [une connexion à la ba
 
 {{AvailableInWorkers}}
 
-> **Note :** Tout ce qui est fait dans une base de données indexée s'inscrit dans le contexte d'une transaction qui représente un interaction avec les données dans la base. Tout les objets de l'interface IndexedDB (incluant les accès aux magasins d'objets, indexes et curseurs) sont liés à une transaction en particulier. Aussi, on ne peut pas exécuter une commande, accéder aux données ou ouvrir quoi que ce soit, en dehors d'une transaction.
+> [!NOTE]
+> Tout ce qui est fait dans une base de données indexée s'inscrit dans le contexte d'une transaction qui représente un interaction avec les données dans la base. Tout les objets de l'interface IndexedDB (incluant les accès aux magasins d'objets, indexes et curseurs) sont liés à une transaction en particulier. Aussi, on ne peut pas exécuter une commande, accéder aux données ou ouvrir quoi que ce soit, en dehors d'une transaction.
 
 ## Méthodes
 

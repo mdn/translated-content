@@ -294,7 +294,8 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **备注：** 如果反向计数的列表项数比 `start` 属性的值还要多，计数将继续到零并向负数方向增加。
+> [!NOTE]
+> 如果反向计数的列表项数比 `start` 属性的值还要多，计数将继续到零并向负数方向增加。
 
 ### value
 
@@ -315,7 +316,8 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **备注：** 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
+> [!NOTE]
+> 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
 
 ## 动手练习：为嵌套式列表添加样式
 

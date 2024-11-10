@@ -37,7 +37,8 @@ slug: Learn/Forms/Form_validation
 
 这就是**表单校验**——当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。
 
-> **备注：** 下面一段在英文原文中已经删除
+> [!NOTE]
+> 下面一段在英文原文中已经删除
 
 （事实上，没有人愿意填写表单——很多证据表明，用户对填写表单这件事情都感到很烦恼，如果他们在填写表单的过程中遇到一些自己无法理解的问题，通常都会导致他们直接离开你的 Web 应用，简而言之，[表单是一个很烦人的东西](https://www.slideshare.net/jwegesin/forms-suck/)。）
 
@@ -47,7 +48,8 @@ slug: Learn/Forms/Form_validation
 - **我们希望保护我们的用户**——强制用户输入安全的密码，有利于保护他们的账户信息。
 - **我们希望保护我们自己**——恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/learn/Server-side/First_steps/Website_security)）。
 
-> **警告：** 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
+> [!WARNING]
+> 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
 
 ### 不同类型的表单数据校验
 
@@ -191,9 +193,11 @@ input:valid {
 
 在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响你可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
-> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
+> [!NOTE]
+> 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
-> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
+> [!NOTE]
+> 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
 
 ### 限制输入的长度
 

@@ -43,7 +43,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}

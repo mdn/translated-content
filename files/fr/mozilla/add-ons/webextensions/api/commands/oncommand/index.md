@@ -64,6 +64,6 @@ browser.commands.onCommand.addListener(function (command) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).

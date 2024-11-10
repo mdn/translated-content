@@ -1,8 +1,9 @@
 ---
-title: MediaMetadata()
+title: "MediaMetadata: MediaMetadata() コンストラクター"
+short-title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+  sourceCommit: 24780b063bdfc244eb9d082b92cedeb14422bf6b
 ---
 
 {{APIRef("Media Session API")}}
@@ -20,12 +21,22 @@ new MediaMetadata(metadata)
 
 - `metadata` {{optional_inline}}
 
-  - : metadata 引数は次の通りです。
+  - : メタデータ引数は次の通りです。
 
-    - `title`: 再生されるメディアのタイトル。
-    - `artist`: 再生されるメディアのアーティスト、グループ、作者の名前。
-    - `album`: 再生されるメディアを含むアルバムまたはコレクションの名前。
-    - `artwork`: 再生するメディアに関連付けられた画像の配列。
+    - `title` {{optional_inline}}
+      - : 再生されるメディアのタイトル。既定では空文字列 (`""`) です。
+    - `artist` {{optional_inline}}
+      - : 再生されるメディアのアーティスト、グループ、作者の名前。既定では空文字列 (`""`) です。
+    - `album` {{optional_inline}}
+      - : 再生されるメディアを含むアルバムまたはコレクションの名前。既定では空文字列 (`""`) です。
+    - `artwork` {{optional_inline}}
+      - : 再生メディアに関連付けられた画像を表すオブジェクトの配列 ({{jsxref("Array")}}) で、既定値は空配列です。オブジェクトの構造は次の通りです。
+        - `src`
+          - : ユーザーエージェントが画像データを取得する URL。
+        - `sizes` {{optional_inline}}
+          - : ユーザーエージェントが単一の画像を変倍する必要がないように、リソースを複数のサイズで指定します。既定では空文字列 (`""`) です。
+        - `type` {{optional_inline}}
+          - : ユーザーエージェントが対応していない型の画像を無視するための {{Glossary("MIME type", "MIME タイプ")}}のヒント。ただし、ユーザーエージェントは画像をダウンロードした後、MIME タイプスニッフィングを使用してその型を決定することができます。既定では空文字列 (`""`) です。
 
 ## 例
 

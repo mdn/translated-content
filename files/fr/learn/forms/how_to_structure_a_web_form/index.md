@@ -36,11 +36,13 @@ L'élément {{HTMLElement("form")}} définit conventionnellement un formulaire e
 
 Nous l'avons déjà rencontré dans l'article précédent.
 
-> **Note :** Il est strictement interdit d'imbriquer un formulaire dans un autre formulaire. L'imbrication peut conduire à des comportements imprévisibles selon le navigateur utilisé.
+> [!NOTE]
+> Il est strictement interdit d'imbriquer un formulaire dans un autre formulaire. L'imbrication peut conduire à des comportements imprévisibles selon le navigateur utilisé.
 
 Notez qu'il est toujours possible d'utiliser un widget de formulaire en dehors d'un élément {{HTMLElement("form")}} mais si vous le faites, ce widget de formulaire n'a rien à voir avec un formulaire. De tels widgets peuvent être utilisés en dehors d'un formulaire, mais alors vous devriez avoir un plan spécial pour de tels widgets, puisqu'ils ne feront rien tout seuls. Vous devrez personnaliser leur comportement avec JavaScript.
 
-> **Note :** HTML5 introduit l'attribut `form` dans les éléments form du HTML. Il devrait vous permettre de lier explicitement un élément avec un formulaire même s'il n'est pas inclus dans un {{ HTMLElement("form") }}. Malheureusement, pour l'instant, l'implémentation de cette fonctionnalité dans les navigateurs n'est pas encore assez fiable.
+> [!NOTE]
+> HTML5 introduit l'attribut `form` dans les éléments form du HTML. Il devrait vous permettre de lier explicitement un élément avec un formulaire même s'il n'est pas inclus dans un {{ HTMLElement("form") }}. Malheureusement, pour l'instant, l'implémentation de cette fonctionnalité dans les navigateurs n'est pas encore assez fiable.
 
 ## Les éléments \<fieldset> et \<legend>
 
@@ -70,7 +72,8 @@ Voici un petit exemple :
 </form>
 ```
 
-> **Note :** Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 En lisant le formulaire ci-dessus, un lecteur d'écran dira «&nbsp;Taille du jus de fruit&nbsp;: petit&nbsp;» pour le premier widget, «&nbsp;Taille du jus de fruit&nbsp;: moyenne&nbsp;» pour le second, et «&nbsp;Taille du jus de fruit&nbsp;: grande&nbsp;» pour le troisième.
 
@@ -120,7 +123,8 @@ Par exemple&nbsp;:
 </form>
 ```
 
-> **Note :** Vous trouverez cet exemple dans [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> Vous trouverez cet exemple dans [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Étiquettes multiples
 
@@ -164,9 +168,11 @@ Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce do
 - Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est «&nbsp;nom astérisque nom éditer texte&nbsp;», et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
 - Le troisième exemple est meilleur — les véritables étiquettes sont toutes lues ensemble, et l'étiquette énoncée avec l'entrée est «&nbsp;nom astériquer éditer texte&nbsp;».
 
-> **Note :** Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
+> [!NOTE]
+> Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
 
-> **Note :** Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
+> [!NOTE]
+> Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
 
 ## Structures HTML courantes dans les formulaires
 

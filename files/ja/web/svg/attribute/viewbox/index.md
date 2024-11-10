@@ -1,36 +1,302 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
+l10n:
+  sourceCommit: de098c5e3faf569b461cd8d91a68c7080e42fe9f
 ---
 
-« [SVG Attribute reference home](/ja/SVG/Attribute)
+{{SVGRef}}
 
-`viewBox`属性は、特定の container 要素に合わせるためのグラフィックス stretch のセットを指定できます。
+**`viewBox`** 属性は、 SVG ビューポートのユーザースペースの位置と大きさを定義します。
 
-The value of the `viewBox` attribute is a list of four numbers `min-x`, `min-y`, `width` and `height`, separated by whitespace and/or a comma, which specify a rectangle in user space which should be mapped to the bounds of the viewport established by the given element, taking into account attribute {{ SVGAttr("preserveAspectRatio") }}.
+`viewBox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値のリストです。`min-x` と `min-y` はビューポートの左上の座標を表します。 `width` と `height` の数字は寸法を表します。これらの数値は空白やカンマで区切られ、関連する SVG 要素に設定されたビューポートの境界に割り当てられたユーザー空間の矩形を指定します（[ブラウザービューポート](/ja/docs/Glossary/Viewport)ではありません）。
 
-Negative values for `width` or `height` are not permitted and a value of zero disables rendering of the element.
+この属性は以下の SVG 要素で使用することができます。
 
-## Usage context
-
-| Categories         | None                                                                             |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | _See above_                                                                      |
-| Animatable         | Yes                                                                              |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
+- {{SVGElement("marker")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("view")}}
 
 ## 例
 
-## 要素
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  vertical-align: top;
+}
+svg:not(:root) {
+  display: inline-block;
+}
+```
 
-以下の要素が`viewBox`属性を使います。
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchanged regardless of the viewBox
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
 
-- {{ SVGElement("svg") }}
-- {{ SVGElement("symbol") }}
-- {{ SVGElement("marker") }}
-- {{ SVGElement("pattern") }}
-- {{ SVGElement("view") }}
+  <!--
+  with a large viewBox the circle looks small
+  as it is using user units for the r attribute:
+  4 resolved against 100 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
 
-## 関連情報
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchanged regardless of the viewBox
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
 
-- [SVG Getting Started: Positions](/ja/SVG/Tutorial/Positions)
+  <!--
+  with a small viewBox the circle looks large
+  as it is using user units for the r attribute:
+  4 resolved against 10 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  The point of coordinate 0,0 is now in the center of the viewport,
+  and 100% is still resolve to a width or height of 10 user units so
+  the rectangle looks shifted to the bottom/right corner of the viewport
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
+
+  <!--
+  With the point of coordinate 0,0 in the center of the viewport the
+  value 50% is resolve to 5 which means the center of the circle is
+  in the bottom/right corner of the viewport.
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", '100%', 200)}}
+
+この属性の正確な効果は {{ SVGAttr("preserveAspectRatio") }} 属性に影響されます。
+
+> **メモ:** `width` または `height` に `0` 以下の値を指定すると、要素の描画が無効になります。
+
+## marker
+
+{{SVGElement('marker')}} の場合、 `viewBox` は `<marker>` 要素のコンテンツの位置と寸法を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+## pattern
+
+{{SVGElement('pattern')}} の場合、 `viewBox` はパターンタイルのコンテンツの位置と寸法を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+## svg
+
+{{SVGElement('svg')}} の場合、 `viewBox` は `<svg>` 要素のコンテンツの位置と寸法を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+## symbol
+
+{{SVGElement('symbol')}} の場合、 `viewBox` は `<symbol>` 要素のコンテンツの位置と寸法を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+## view
+
+{{SVGElement('view')}} の場合、 `viewBox` は `<view>` 要素のコンテンツの位置と寸法を定義します。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >,?
+        <strong
+          ><a href="/ja/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
+
+## 仕様書
+
+{{Specifications}}

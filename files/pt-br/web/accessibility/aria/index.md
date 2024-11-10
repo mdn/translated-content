@@ -11,7 +11,8 @@ O ARIA é um conjunto de atributos especiais para a acessibilidade, que pode ser
 
 O conjunto ARIA pode ser implementado nos navegadores mais populares e em leitores de tela. No entanto, as implementações variam e as tecnologias mais antigas não as suportam bem. Utilize um ARIA compatível, ou solicite a alguém que o atualize para as tecnologias mais recentes.
 
-> **Nota:** Por favor, participe e torne o ARIA melhor para as pessoas! Não tem muito tempo? Envie sugestões para [acessibilidade](https://lists.mozilla.org/listinfo/accessibility) [- lista de correspondência da Mozilla](https://lists.mozilla.org/listinfo/accessibility), ou #_accessibility_ [canal IRC](https://wiki.mozilla.org/IRC)_._
+> [!NOTE]
+> Por favor, participe e torne o ARIA melhor para as pessoas! Não tem muito tempo? Envie sugestões para [acessibilidade](https://lists.mozilla.org/listinfo/accessibility) [- lista de correspondência da Mozilla](https://lists.mozilla.org/listinfo/accessibility), ou #_accessibility_ [canal IRC](https://wiki.mozilla.org/IRC)_._
 
 ### Começando em ARIA
 

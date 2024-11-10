@@ -20,7 +20,7 @@ slug: Glossary/Number
 
 <!---->
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("JavaScript")}}
   - {{Glossary("Primitive")}}

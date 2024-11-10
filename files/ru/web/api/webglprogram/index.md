@@ -51,7 +51,7 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 gl.deleteProgram(program);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

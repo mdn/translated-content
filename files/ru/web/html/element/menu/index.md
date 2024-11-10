@@ -3,14 +3,14 @@ title: <menu>
 slug: Web/HTML/Element/menu
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{HTMLSidebar}}
 
-**HTML-элемент `<menu>`** представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и [контекстные меню](/ru/docs/Web/HTML/Element/menu#Context_menu), например, такие, что могут появиться под кнопкой после нажатия.
+HTML-элемент **`<menu>`** представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и [контекстные меню](/ru/docs/Web/HTML/Element/menu#Context_menu), например, такие, что могут появиться под кнопкой после нажатия.
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content). If the element's children include at least one {{HTMLElement("li")}} element: [Palpable content](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                      | If the element is in the _list menu_ state: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), or alternatively, zero or more occurrences of {{HTMLElement("li")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}. (_list menu_ is the default state, unless the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.)If the element is in the _context menu_ state: zero or more occurrences, in any order, of {{HTMLElement("menu")}} (_context menu_ state only), {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.                                                                                                                                                                                                                                                                                                                                  |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Допустимые родители                                        | Любой элемент, который поддерживает [основной поток](/ru/docs/Web/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Неявные ARIA-роли                                          | [`list`](/ru/docs/Web/Accessibility/ARIA/Roles/List_role)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, [`listbox`](/ru/docs/Web/Accessibility/ARIA/Roles/listbox_role), <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code> или <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code> |
@@ -74,7 +74,8 @@ div {
 
 ### Menu button
 
-> **Предупреждение:** Menu buttons haven't been implemented in any known browsers yet. The [`type`](/ru/docs/Web/HTML/Element/menu#type) attribute on the `<menu>` element is now obsolete.
+> [!WARNING]
+> Menu buttons haven't been implemented in any known browsers yet. The [`type`](/ru/docs/Web/HTML/Element/menu#type) attribute on the `<menu>` element is now obsolete.
 
 > **Предупреждение:** {{HTMLElement("menuitem")}} element is obsolete.
 
@@ -98,7 +99,8 @@ div {
 
 ### Toolbar
 
-> **Предупреждение:** Toolbar menus haven't been implemented in any known browsers yet.
+> [!WARNING]
+> Toolbar menus haven't been implemented in any known browsers yet.
 
 #### HTML
 
@@ -128,7 +130,7 @@ div {
 
 {{EmbedLiveSample("Toolbar", "100%", 100)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -136,6 +138,6 @@ div {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.

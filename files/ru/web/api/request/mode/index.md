@@ -49,7 +49,7 @@ var myMode = myRequest.mode; // вернёт "cors" по умолчанию
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)

@@ -11,7 +11,8 @@ l10n:
 
 `overlay` はブラウザーによってのみ設定することができることに注意してください。作成者のスタイルは要素の `overlay` 値を変更することはできません。しかし、要素に設定する[トランジションする要素のリスト](/ja/docs/Web/CSS/transition-property)に `overlay` を追加することはできます。これにより、最上位レイヤーからの除去が延期され、すぐに消えずにアニメーションが発生するようになります。
 
-> **メモ:** オーバーレイ `overlay` のアニメーションをトランジションさせるには、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 `overlay` のアニメーションは通常の[離散アニメーション](/ja/docs/Web/CSS/CSS_animated_properties#離散)と異なり、開始状態か終了状態かに関わらず、可視状態（つまり `auto`）がトランジションの再生時間全体にわたって常に表示されます。
+> [!NOTE]
+> オーバーレイ `overlay` のアニメーションをトランジションさせるには、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 `overlay` のアニメーションは通常の[離散アニメーション](/ja/docs/Web/CSS/CSS_animated_properties#離散)と異なり、開始状態か終了状態かに関わらず、可視状態（つまり `auto`）がトランジションの再生時間全体にわたって常に表示されます。
 
 ## 構文
 
@@ -140,7 +141,8 @@ html {
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
-> **メモ:** ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、出現トランジションのたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
+> [!NOTE]
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、出現トランジションのたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 >
 > このような場合、出現時と消滅時のスタイル設定を異なるものにすることが可能です。この証明は[スタイル設定を使用する場合のデモンストレーション](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)の例を参照してください。
 

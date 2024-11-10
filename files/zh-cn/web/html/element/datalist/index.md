@@ -11,7 +11,7 @@ slug: Web/HTML/Element/datalist
 
 - _[内容范畴](/zh-CN/docs/HTML/Content_categories)_[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)，[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)。
 - *允许内容*要么 [段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
-- _遗漏标签_{{no_tag_omission}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
 - *允许父级元素*任何接受[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)的元素。
 - \_Permitted ARIA roles_None
 - _DOM 接口_{{domxref("HTMLDataListElement")}}

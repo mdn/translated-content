@@ -16,7 +16,8 @@ var source = contexteAudio.createBufferSource();
 source.detune.value = 100; // valeur en cents
 ```
 
-> **Note :** bien que l'`AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
+> [!NOTE]
+> Bien que l'`AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
 
 ### Valeur
 

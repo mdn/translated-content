@@ -191,12 +191,12 @@ window.addEventListener("load", updateCode);
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -258,13 +258,15 @@ textarea.onkeyup = function () {
 
 ## 列表
 
-现在让我们把注意力转向列表。在生活中，列表无处不在——从你的购物清单到你每天下意识地遵循的方向列表，再到你在这些教程中遵循的指令列表！在网络上，列表也无处不在，我们有三种不同的类型需要注意。
+现在让我们把注意力转向列表。在生活中，列表无处不在——从你的购物清单到你每天下意识地遵循的方向列表，再到你在这些教程中遵循的指令列表！在 Web 上，有三种类型的列表：无序列表、有序列表和描述列表。
+
+无序列表和有序列表非常常见，将在本节介绍。描述列表不太常见，将在[文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)中介绍。
 
 ### 无序列表
 
 无序列表用于标记列表项目顺序无关紧要的列表——让我们以购物清单为例。
 
-```
+```plain
 豆浆
 油条
 豆汁
@@ -384,12 +386,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -431,7 +433,7 @@ textarea.onkeyup = () => {
 
 有序列表需要按照项目的顺序列出来——让我们以一组方向为例：
 
-```
+```plain
 沿这条路走到头
 右转
 直行穿过第一个十字路口
@@ -548,12 +550,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -738,12 +740,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -871,11 +873,9 @@ textarea.onkeyup = () => {
 
 如有需要你可以将 strong 元素和 em 元素嵌套在其他的标签中：
 
-```html
+```html-nolint
 <p>
-  这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong
-    >可能<em>会死</em></strong
-  >。
+  这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong>可能<em>会死</em></strong>。
 </p>
 ```
 
@@ -969,12 +969,12 @@ window.addEventListener("load", updateCode);
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -1026,7 +1026,8 @@ HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，赋予了它们新的但有点�
 - {{HTMLElement('b')}} 被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……
 - {{HTMLElement('u')}} 被用来传达传统上用下划线表达的意义：专有名词，拼写错误……
 
-> **备注：** 人们强烈地将下划线与超链接联系起来。因此，在网页中，最好只给链接加下划线。在语义上合适的时候使用 `<u>` 元素，但要考虑使用 CSS 将默认的下划线改为在网页中更合适的东西。下面的例子说明了如何做到这一点：
+> [!NOTE]
+> 人们强烈地将下划线与超链接联系起来。因此，在网页中，最好只给链接加下划线。在语义上合适的时候使用 `<u>` 元素，但要考虑使用 CSS 将默认的下划线改为在网页中更合适的东西。下面的例子说明了如何做到这一点：
 
 ```html
 <!-- 学名 -->

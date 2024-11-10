@@ -2,14 +2,12 @@
 title: Lock：mode 属性
 slug: Web/API/Lock/mode
 l10n:
-  sourceCommit: 4bfeb6c58b4a31c03c9005ad37de40a9c9b41180
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Lock")}} 接口的 **`mode`** 只读属性返回请求锁时传递给 {{domxref('LockManager.request()')}} 的访问模式。该模式可以是 `"exclusive"`（默认值）或 `"shared"`。
-
-{{AvailableInWorkers}}
 
 ## 值
 

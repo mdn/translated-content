@@ -5,9 +5,9 @@ slug: Web/API/KeyboardEvent
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{event('keydown')}}, {{event('keypress')}} 또는 {{event('keyup')}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.
+**`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}} 또는 {{domxref("Element/keyup_event", "keyup")}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.
 
-> **참고:** `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{event("input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
+> **참고:** `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{domxref("Element/input_event", "input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
 
 {{InheritanceDiagram}}
 
@@ -99,7 +99,8 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
   - : 이벤트가 일어난 키의 물리적인 코드 값을 문자열로 반환합니다.
 
-    > **경고:** 이는 사용자의 키보드 레이아웃을 무시하므로, 사용자가 QWERTY 키보드의 "Y" 위치의 키를 누르면, 사용자가 QWERTZ 키보드(사용자는 "Y" 대신 "Z"값을 기대함) 또는 Dvorak 키보드(사용자는 "Y" 대신 "F"값을 기대함)를 사용하더라도 항상 "KeyY" 값을 리턴합니다. 만약 사용자에게 맞는 키 값을 보여주길 원한다면, {{domxref("Keyboard.getLayoutMap()")}}를 사용하세요.
+    > [!WARNING]
+    > 이는 사용자의 키보드 레이아웃을 무시하므로, 사용자가 QWERTY 키보드의 "Y" 위치의 키를 누르면, 사용자가 QWERTZ 키보드(사용자는 "Y" 대신 "Z"값을 기대함) 또는 Dvorak 키보드(사용자는 "Y" 대신 "F"값을 기대함)를 사용하더라도 항상 "KeyY" 값을 리턴합니다. 만약 사용자에게 맞는 키 값을 보여주길 원한다면, {{domxref("Keyboard.getLayoutMap()")}}를 사용하세요.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
@@ -117,7 +118,8 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
   - : 키보드가 구성된 로케일을 나타내는 로케일 문자열을 반환합니다. 브라우저나 기기가 키보드의 로케일을 알 수 없는 경우에는 빈 문자열일 수도 있습니다.
 
-    > **참고:** 이 속성은 입력되는 데이터의 로케일을 설명하지 않습니다. 사용자는 다른 언어로 텍스트를 적으면서도 하나의 키보드 레이아웃을 사용할 수 있습니다.
+    > [!NOTE]
+    > 이 속성은 입력되는 데이터의 로케일을 설명하지 않습니다. 사용자는 다른 언어로 텍스트를 적으면서도 하나의 키보드 레이아웃을 사용할 수 있습니다.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
 
@@ -156,19 +158,22 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
   - : 키의 문자 값을 나타내는 문자열을 반환합니다. 키가 인쇄 가능한 문자일 경우, 이 값은 해당 문자를 포함하는 비어 있지 않은 유니코드 값입니다. 키가 인쇄 불가능한 문자일 경우, 이 값은 빈 문자열입니다.
 
-    > **참고:** 키를 여러 문자를 삽입하는 매크로로 사용하는 경우, 이 특성의 값은 첫 번째 문자가 아니라 전체 문자열입니다.
+    > [!NOTE]
+    > 키를 여러 문자를 삽입하는 매크로로 사용하는 경우, 이 특성의 값은 첫 번째 문자가 아니라 전체 문자열입니다.
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : 키의 유니코드 숫자를 나타내는 {{jsxref("Number")}}를 리턴합니다. 이 속성은 `keypress` 이벤트에서만 사용됩니다. `char` 특성이 여러 개의 문자를 포함하고 있는 키의 경우, 이 값은 첫 번째 문자의 유니코드 값입니다. Firefox 26에서는 인쇄 가능한 문자의 코드를 반환합니다.
 
-    > **경고:** 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
+    > [!WARNING]
+    > 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
 
   - : 누른 키의 수정되지 않은 값을 식별하는 시스템 및 구현 종속 숫자 코드를 나타내는 {{jsxref("Number")}}를 반환합니다.
 
-    > **경고:** 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
+    > [!WARNING]
+    > 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : 이 속성은 비표준이고 더 이상 {{domxref("KeyboardEvent.key")}}를 위해 사용되지 않습니다. 이 속성은 이전 버전의 DOM Level 3 이벤트의 일부였습니다.
@@ -178,7 +183,8 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
   - : 누른 키의 수정되지 않은 값을 식별하는 시스템 및 구현 종속 숫자 코드를 나타내는 {{jsxref("Number")}}를 반환합니다. 보통은 `keyCode`와 같습니다.
 
-    > **경고:** 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
+    > [!WARNING]
+    > 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
 
 ## 이벤트
 
@@ -196,7 +202,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 ## 사용 일람
 
-키보드 이벤트의 타입은 {{event("keydown")}}, {{event("keypress")}}, 그리고 {{event("keyup")}}의 3가지 타입이 있습니다. 대부분의 키에서, Gecko는 다음과 같은 키 이벤트를 전송합니다.
+키보드 이벤트의 타입은 {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, 그리고 {{domxref("Element/keyup_event", "keyup")}}의 3가지 타입이 있습니다. 대부분의 키에서, Gecko는 다음과 같은 키 이벤트를 전송합니다.
 
 1. 키가 처음 눌렸을 때는, `keydown` 이벤트가 전송됩니다.
 2. 그 키가 보조 키가 아니라면, `keypress` 이벤트가 전송됩니다.
@@ -206,7 +212,8 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 일부 키는 키보드의 표시등 상태를 전환시키는 기능을 합니다. Caps Lock, Num Lock, 그리고 Scroll Lock 같은 키가 이에 해당됩니다. 윈도우와 리눅스에서는, 이 키들은 `keydown` 와 `keyup` 이벤트만을 전송합니다.
 
-> **참고:** 리눅스에서는, Firefox 12와 그 이전 버전에서는 이 키들의 `keypress` 이벤트도 전송했습니다.
+> [!NOTE]
+> 리눅스에서는, Firefox 12와 그 이전 버전에서는 이 키들의 `keypress` 이벤트도 전송했습니다.
 
 그러나, macOS의 이벤트 모델의 제한으로 인해 Caps Lock은 `keydown` 이벤트만 전송합니다. Num Lock은 일부 오래된(2007년 이전의) 노트북 모델에서는 지원되었지만, 그 이후로는 macOS에선 외부 키보드에서도 Num Lock을 지원하지 않습니다. Num Lock 키가 있는 옛 맥북에서는 Num Lock은 어떤 이벤트도 생성하지 않습니다. Gecko는 F14 키가 있는 외부 키보드가 연결되어 있다면 Scroll Lock 키를 지원합니다. Firefox의 일부 이전 버전에서는 Scroll Lock 키도 `keypress` 이벤트를 발생시켰습니다. 이 일관성 없는 동작은 [Firefox bug 602812](https://bugzil.la/602812)였습니다.
 

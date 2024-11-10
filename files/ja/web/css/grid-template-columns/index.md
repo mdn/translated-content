@@ -79,7 +79,8 @@ grid-template-columns: unset;
 
     {{cssxref("minmax", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
 
-    > **メモ:** トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
 
 - `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。

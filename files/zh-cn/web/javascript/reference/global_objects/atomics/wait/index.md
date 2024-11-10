@@ -9,7 +9,8 @@ l10n:
 
 **`Atomics.wait()`** 静态方法验证共享内存特定位置是否仍然包含给定值，如果是则休眠，直到被唤醒或超时。其返回一个内容为 `"ok"`、`"not-equal"` 或 `"timed-out"` 的字符串。
 
-> **备注：** 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图，并且在主线程中可能不可用。有关此方法的非阻塞异步版本，请参见 {{jsxref("Atomics.waitAsync()")}}。
+> [!NOTE]
+> 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图，并且在主线程中可能不可用。有关此方法的非阻塞异步版本，请参见 {{jsxref("Atomics.waitAsync()")}}。
 
 ## 语法
 

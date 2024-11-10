@@ -13,7 +13,8 @@ IndexedDB provém APIs separadas para acesso tanto síncrono quanto assíncrono.
 
 Os métodos da API assíncrona são chamados sem bloquear a thread que os chama. Para obter acesso assíncrono à database, chame [open()](/pt-BR/docs/Web/API/IDBFactory.open) no atributo [indexedDB](/pt-BR/docs/Web/API/IDBEnvironment.indexedDB) do objeto [window](/pt-BR/docs/DOM/window), que retornará um objeto {{domxref("IDBRequest")}}. Operações assíncronas comunicam-se com a aplicação que os chamam executando eventos nos objetos {{domxref("IDBRequest")}}.
 
-> **Nota:** Nota: O objeto indexedDB é prefixado em navegadores mais antigos (propriedade mozIndexedDB em Gecko < 16, webkitIndexedDb em Chrome e msIndexedDB no IE 10).
+> [!NOTE]
+> Nota: O objeto indexedDB é prefixado em navegadores mais antigos (propriedade mozIndexedDB em Gecko < 16, webkitIndexedDb em Chrome e msIndexedDB no IE 10).
 
 As interfaces da API assíncrona do IndexedDB são:
 
@@ -47,7 +48,8 @@ Uma versão anterior da especificação também define estas interfaces agora re
 - {{domxref("IDBDatabaseException")}}
   - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
 
-> **Nota:** há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).
+> [!NOTE]
+> há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).
 
 ## Limites de Armazenamento
 

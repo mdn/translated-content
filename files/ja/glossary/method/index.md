@@ -7,7 +7,8 @@ slug: Glossary/Method
 
 **メソッド**は{{glossary("object","オブジェクト")}}の{{glossary("property","プロパティ")}}である{{glossary("function", "関数")}}です。メソッドには 2 種類があります。オブジェクトインスタンスごとに内蔵されたタスクとして実行される*インスタンスメソッド*と、オブジェクトのコンストラクターで直接呼び出しを行うタスクである*{{Glossary("static method", "静的メソッド")}}*です。
 
-> **メモ:** JavaScript では、関数自身はオブジェクトです。そういう意味では、メソッドは実際には関数への{{glossary("object reference", "オブジェクト参照")}}です。
+> [!NOTE]
+> JavaScript では、関数自身はオブジェクトです。そういう意味では、メソッドは実際には関数への{{glossary("object reference", "オブジェクト参照")}}です。
 
 ## 詳細情報
 
@@ -22,7 +23,7 @@ slug: Glossary/Method
 
 <!---->
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("function", "関数")}}
   - {{Glossary("object","オブジェクト")}}

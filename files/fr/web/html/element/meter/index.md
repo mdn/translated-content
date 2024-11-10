@@ -29,7 +29,8 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 
   - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
 
-    > **Note :** il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
+    > [!NOTE]
+    > Il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
     >
     > ```html
     > Utilisation de l'espace de stockage:

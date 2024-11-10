@@ -1,11 +1,13 @@
 ---
 title: 主轴
 slug: Glossary/Main_Axis
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
 {{GlossarySidebar}}
 
-{{glossary("flexbox", "弹性盒")}}的主轴（main axis）由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
+{{glossary("flexbox", "弹性盒子")}}的主轴（main axis）由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
 
 - `row`
 - `row-reverse`
@@ -35,6 +37,7 @@ slug: Glossary/Main_Axis
 
 ### 拓展阅读
 
-- CSS 弹性盒指南：_[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 弹性盒指南：_[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS 弹性盒指南：_[控制弹性元素在主轴上的占比](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- CSS 弹性盒指南
+  - [弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [控制弹性元素在主轴上的占比](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

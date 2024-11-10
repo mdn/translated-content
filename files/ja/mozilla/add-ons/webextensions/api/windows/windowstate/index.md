@@ -32,7 +32,8 @@ macOS の互換性: macOS 10.10 から、ウィンドウの既定の最大化動
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-WindowState) API に基づいています。この記事は Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生しています。
+> [!NOTE]
+> この API は Chromium の [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-WindowState) API に基づいています。この記事は Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生しています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

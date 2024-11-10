@@ -96,7 +96,8 @@ if (shoppingDone === true) {
 
 This code as shown will always result in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
 
-> **備註：** You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> [!NOTE]
+> You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -151,7 +152,8 @@ function setWeather() {
 3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...} block`.
 4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
-> **備註：** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
@@ -161,7 +163,8 @@ Comparison operators are used to test the conditions inside our conditional stat
 - `<` and `>` — test if one value is less than or greater than another.
 - `<=` and `>=` — test if one value is less than or equal to, or greater than or equal to, another.
 
-> **備註：** Review the material at the previous link if you want to refresh your memories on these.
+> [!NOTE]
+> Review the material at the previous link if you want to refresh your memories on these.
 
 We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can simply use a variable name on its own to test whether it is `true`, or even that it exists (i.e. it is not undefined.) So for example:
 
@@ -314,7 +317,8 @@ Here we've got:
 6. As many other cases (bullets 3–5) as you like.
 7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need to `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
 
-> **備註：** You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this however, you need to include it to handle unknown cases.
+> [!NOTE]
+> You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this however, you need to include it to handle unknown cases.
 
 ### A switch example
 
@@ -367,7 +371,8 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **備註：** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
 
 ## 三元運算符
 
@@ -424,7 +429,8 @@ Here we've got a {{htmlelement('select')}} element to choose a theme (black or w
 
 Finally, we've also got an [onchange](/zh-TW/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
 
-> **備註：** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## Active learning: A simple calendar
 

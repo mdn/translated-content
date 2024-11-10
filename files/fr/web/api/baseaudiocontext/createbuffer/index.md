@@ -23,7 +23,8 @@ var tampon = baseAudioContext.createBuffer(
 
 ### Paramètres
 
-> **Note :** pour une explication en profondeur de la façon dont les tampons audio fonctionnent, ainsi que de leur signification, lire [Les concepts de base de la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) de notre guide des concepts de base.
+> [!NOTE]
+> Pour une explication en profondeur de la façon dont les tampons audio fonctionnent, ainsi que de leur signification, lire [Les concepts de base de la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) de notre guide des concepts de base.
 
 - nbDeCanaux
   - : Un nombre entier représentant le nombre de canaux que ce tampon doit avoir. Les implémentations doivent prendre en charge un minimum de 1 canal et un maximum de 32 canaux.
@@ -54,7 +55,8 @@ var tampon = ctxAudio.createBuffer(1, 22050, 22050);
 
 Si vous utilisez cet appel, vous obtiendrez un tampon mono (un canal), qui, lorsqu'il sera relu avec un `AudioContext` fonctionnant à 44100Hz, sera automatiquement \*rééchantillonné\* à 44100Hz (et produira donc 44100 trames), et durera 1,0 seconde : 44100 images / 44100Hz = 1 seconde.
 
-> **Note :** le rééchantillonnage audio est très similaire au redimensionnement d'une image : supposons que vous ayez une image 16 x 16, mais que vous vouliez qu'elle remplisse une zone 32x32: vous la redimensionnez (rééchantillonnez). Le résultat aura une qualité moindre (il pourra être flou ou bizarre, selon l'algorithme de redimensionnement), mais cela fonctionnera, et l'image redimensionnée prendra moins de place. L'audio rééchantillonné est exactement la même chose - vous économisez de l'espace, mais en pratique, vous ne pourrez pas reproduire correctement le contenu haute fréquence (les sons aigus).
+> [!NOTE]
+> Le rééchantillonnage audio est très similaire au redimensionnement d'une image : supposons que vous ayez une image 16 x 16, mais que vous vouliez qu'elle remplisse une zone 32x32: vous la redimensionnez (rééchantillonnez). Le résultat aura une qualité moindre (il pourra être flou ou bizarre, selon l'algorithme de redimensionnement), mais cela fonctionnera, et l'image redimensionnée prendra moins de place. L'audio rééchantillonné est exactement la même chose - vous économisez de l'espace, mais en pratique, vous ne pourrez pas reproduire correctement le contenu haute fréquence (les sons aigus).
 
 Examinons maintenant un exemple de `createBuffer()` plus complexe, dans lequel nous créons un tampon de deux secondes, le remplissons de bruit blanc, puis le reproduisons via {{domxref("AudioBufferSourceNode")}}. Le commentaire devrait clairement faire comprendre ce qui se passe. Vous pouvez également exécuter le code en direct ou regarder le source.
 

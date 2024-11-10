@@ -34,7 +34,8 @@ El elemento {{HTMLElement ("form")}} define formalmente un formulario y los atri
 
 Ya lo vimos en el artículo anterior.
 
-> **Advertencia:** Está estrictamente prohibido anidar un formulario dentro de otro formulario. Anidar formularios no es una buena idea porque puede ocasionar comportamientos impredecibles.
+> [!WARNING]
+> Está estrictamente prohibido anidar un formulario dentro de otro formulario. Anidar formularios no es una buena idea porque puede ocasionar comportamientos impredecibles.
 
 Siempre es posible usar controles de formulario fuera de un elemento {{HTMLElement ("form")}}. Si la haces, por defecto ese control no tiene nada que ver con ningún formulario, a menos que lo asocies a algún formulario con el atributo [`form`](/es/docs/Web/HTML/Attributes/form). Esto se introdujo para permitir vincular explícitamente un control a un formulario, incluso si este no está dentro de él.
 
@@ -68,7 +69,8 @@ Un pequeño ejemplo:
 </form>
 ```
 
-> **Nota:** Puedes encontrar este ejemplo en [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 Al leer el formulario anterior, un lector de pantalla dirá «Tamaño del zumo de fruta: pequeño» para el primer control de formulario, «Tamaño del zumo de fruta: mediano» para el segundo y «Tamaño del zumo de fruta: grande» para el tercero.
 
@@ -118,7 +120,8 @@ Por ejemplo, al hacer clic en el texto de la etiqueta «Me gustan las cerezas» 
 </form>
 ```
 
-> **Nota:** Puedes encontrar este ejemplo en [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Etiquetas múltiples
 
@@ -166,9 +169,11 @@ Las variantes anteriores aumentan en efectividad a medida que se avanza por ella
 - En el segundo ejemplo, las cosas son un poco más claras: la etiqueta que se lee junto con la entrada de texto es «Editar texto nombre estrella nombre obligatorio», pero las etiquetas aún se leen por separado. Las cosas continúan siendo un poco confusas, pero esta vez funciona algo mejor porque `<input>` tiene una etiqueta asociada.
 - El tercer ejemplo es el mejor: la etiqueta se lee en conjunto, y la etiqueta que se lee con la entrada es «Editar texto nombre requerido».
 
-> **Nota:** Es posible que obtengas resultados ligeramente diferentes dependiendo de tu lector de pantalla. Esta prueba se hizo con VoiceOver (NVDA se comporta de manera similar). Nos encantaría conocer tus experiencias.
+> [!NOTE]
+> Es posible que obtengas resultados ligeramente diferentes dependiendo de tu lector de pantalla. Esta prueba se hizo con VoiceOver (NVDA se comporta de manera similar). Nos encantaría conocer tus experiencias.
 
-> **Nota:** Puedes encontrar este ejemplo en GitHub como [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). No pruebes el ejemplo con las dos o tres versiones sin los comentarios porque los lectores de pantalla se confundirán si hay múltiples etiquetas y múltiples entradas con el mismo ID.
+> [!NOTE]
+> Puedes encontrar este ejemplo en GitHub como [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). No pruebes el ejemplo con las dos o tres versiones sin los comentarios porque los lectores de pantalla se confundirán si hay múltiples etiquetas y múltiples entradas con el mismo ID.
 
 ## Estructuras HTML comunes que se utilizan en los formularios
 

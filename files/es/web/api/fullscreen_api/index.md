@@ -7,7 +7,8 @@ slug: Web/API/Fullscreen_API
 
 La **`API Fullscreen`** provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.
 
-> **Nota:** De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#Prefijado).
+> [!NOTE]
+> De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#Prefijado).
 
 ## Activando modo de pantalla completa
 
@@ -52,7 +53,8 @@ Cuando el modo de pantalla completa sea invocado exitosamente, el documento que 
 
 No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
 
-> **Nota:** Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
+> [!NOTE]
+> Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
 
 ## Saliendo del modo de pantalla completa
 

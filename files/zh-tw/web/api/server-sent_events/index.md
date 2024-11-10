@@ -3,6 +3,8 @@ title: Server-sent events
 slug: Web/API/Server-sent_events
 ---
 
+{{DefaultAPISidebar("Server Sent Events")}}
+
 網頁一般來說是由客戶端向伺服器請求資料. 藉由 server-sent 事件, 伺服器在任何時候都可以向客戶端推送資料. 即將推送進來的訊息可以自客戶端上做 _[Events](/zh-TW/docs/DOM/event) + data_ 處理.
 
 ## 文件
@@ -16,7 +18,7 @@ slug: Web/API/Server-sent_events
 
 - Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
 - Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
 
 ## 相關主題
 
@@ -29,5 +31,4 @@ slug: Web/API/Server-sent_events
 ## 參見
 
 - A [Twitter like application](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](http://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Server-sent events using Asp.Net](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

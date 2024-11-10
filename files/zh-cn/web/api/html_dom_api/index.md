@@ -154,7 +154,6 @@ HTML DOM API 中的大多数接口，几乎一对一地映射到单个 HTML 元�
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web 应用程序和浏览器集成接口
 

@@ -40,7 +40,8 @@ document.close();
 
 ## Notas
 
-> **Nota:** Traducción pendiente para el texto que sigue
+> [!NOTE]
+> Traducción pendiente para el texto que sigue
 
 An automatic `document.open()` call happens when {{domxref("document.write()")}} is called after the page has loaded.
 

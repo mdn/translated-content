@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[/ja/docs/Learn/JavaScript/First_steps/Variables](/ja/docs/Learn/JavaScript/First_steps/Variables)の記事を理解したかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 > コードにエラーがある場合、このページの結果パネルまたは JavaScript コンソールでログ出力されます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
@@ -26,7 +27,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -38,7 +39,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -50,6 +51,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

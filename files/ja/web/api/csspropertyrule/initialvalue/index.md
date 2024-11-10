@@ -1,7 +1,6 @@
 ---
 title: "CSSPropertyRule: initialValue プロパティ"
-short-title: initialValue
-slug: Web/API/CSSPropertyRule/initialvalue
+slug: Web/API/CSSPropertyRule/initialValue
 l10n:
   sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---

@@ -11,17 +11,13 @@ slug: Web/HTTP/Status/502
 
 ## 状态
 
-```
+```http
 502 Bad Gateway
 ```
 
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 

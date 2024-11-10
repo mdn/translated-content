@@ -64,7 +64,8 @@ p {
 
 {{ EmbedLiveSample('Estilos_predeterminados', '100%', 120) }}
 
-> **Nota:** Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo `#` (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). `#` solo establece enlaces dentro de la misma página.
+> [!NOTE]
+> Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo `#` (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). `#` solo establece enlaces dentro de la misma página.
 
 A medida que explores los estilos predeterminados, observarás algunas cosas:
 
@@ -86,7 +87,8 @@ Los estilos por defecto se pueden desactivar/cambiar usando las propiedades CSS 
 - {{cssxref("cursor")}} para el estilo del cursor (no debes deshabilitar esta opción a menos que tengas una muy buena razón para hacerlo).
 - {{cssxref("outline")}} para el contorno del texto (un contorno es similar a un borde, la única diferencia es que el borde ocupa un espacio en la caja y el contorno solo se solapa sobre el fondo). El contorno es una ayuda de accesibilidad útil, así que piénsatelo bien antes de desactivar esta opción; al menos deberías plantear dos estilos para los estados de pasar el puntero por encima y de tener el foco.
 
-> **Nota:** No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!
+> [!NOTE]
+> No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!
 
 ### Dar formato a algunos enlaces
 
@@ -362,7 +364,8 @@ Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si es
 
 Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!
 
-> **Nota:** No te preocupes si aún no estás familiarizado con los [fondos](/es/docs/Learn/CSS/Building_blocks) y el [diseño web adaptativo](/es/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks), lo explicaremos en otros artículos.
+> [!NOTE]
+> No te preocupes si aún no estás familiarizado con los [fondos](/es/docs/Learn/CSS/Building_blocks) y el [diseño web adaptativo](/es/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks), lo explicaremos en otros artículos.
 
 ## Dar aspecto de botón a un enlace
 
@@ -446,7 +449,8 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
   - Ahora nos centramos en el tamaño. Queremos llenar todo el ancho del elemento de lista {{htmlelement ("ul")}} y dejar un pequeño margen entre cada botón (pero ningún hueco en el borde derecho), y queremos los 5 botones del mismo tamaño. Para hacer esto, establecemos el atributo {{cssxref ("width")}} en 19,5%, y el atributo {{cssxref ("margin-right")}} en 0,625%. Observa que el ancho completo suma 100,625%, lo que haría caer el último botón `<ul>` a la siguiente línea por desbordamiento. Sin embargo, lo restituimos al 100% con la siguiente regla, que selecciona solo el último elemento `<a>` de la lista y elimina de él el margen. ¡Hecho!
   - Las tres últimas declaraciones son bastante sencillas y tienen principalmente finalidades estéticas. Centramos el texto dentro de cada enlace, establecemos {{cssxref ("line-height")}} en 3 para dar algo de altura a los botones (lo que también presenta la ventaja de centrar verticalmente el texto), y establecemos el color del texto a negro.
 
-> **Nota:** Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en [Combatir los espacios entre elementos de bloque colocados en línea](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> [!NOTE]
+> Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en [Combatir los espacios entre elementos de bloque colocados en línea](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Resumen
 

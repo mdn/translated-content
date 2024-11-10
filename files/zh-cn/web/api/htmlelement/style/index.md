@@ -15,7 +15,8 @@ slug: Web/API/HTMLElement/style
 
 样式声明可通过设置它为 `null` 或空字符串来重置，比如 `elt.style.color = null`。
 
-> **备注：** 通过这些规则，CSS 属性名称被转换为 JavaScript 标识符：
+> [!NOTE]
+> 通过这些规则，CSS 属性名称被转换为 JavaScript 标识符：
 >
 > - 如果属性是由一个单词组成的，则保持原样：如 `height`（也保持小写）。
 > - 如果属性是由若干个单词组成的，由横线分隔，则横线被移除，并转化为*驼峰*形式：如 `background-attachment` 转换为 `backgroundAttachment`。

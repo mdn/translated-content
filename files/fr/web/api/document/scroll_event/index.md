@@ -40,7 +40,8 @@ L'évènement **`scroll`** (défilement) est émis lorsque l'on fait défiler le
   </tbody>
 </table>
 
-> **Note :** Sur iOS UIWebViews, les évènements `scroll` ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari et WKWebViews ne sont pas affectés par ce bogue.
+> [!NOTE]
+> Sur iOS UIWebViews, les évènements `scroll` ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari et WKWebViews ne sont pas affectés par ce bogue.
 
 ## Propriétés
 

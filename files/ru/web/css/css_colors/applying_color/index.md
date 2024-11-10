@@ -3,7 +3,7 @@ title: Применение цвета к HTML-элементам с помощ�
 slug: Web/CSS/CSS_colors/Applying_color
 ---
 
-{{HTMLSidebar}}
+{{CSSRef}}
 
 Использование цвета - одна из фундаментальных форм человеческого восприятия, так дети экспериментируют с цветом ещё до того, как начинают осознанно рисовать. Возможно, именно поэтому цвет - одна из первых вещей, с которой люди хотят экспериментировать, изучая разработку веб-сайтов. С помощью [CSS](/ru/docs/Web/CSS), существует множество способов присвоить цвет [HTML](/ru/docs/Web/HTML) элементам, чтобы придать им желаемый вид. Эта статья даёт базовые представления о всех способах применения цвета к HTML-элементам с помощью CSS.
 
@@ -206,7 +206,8 @@ th {
 
 {{EmbedLiveSample("hsl-swatches", 300, 260)}}
 
-> **Примечание:** Обратите внимание, что, когда вы не указываете единицу измерения оттенка (hue), то предполагается, что он указан в градусах (`deg`).
+> [!NOTE]
+> Обратите внимание, что, когда вы не указываете единицу измерения оттенка (hue), то предполагается, что он указан в градусах (`deg`).
 
 ## Использование цвета
 
@@ -322,7 +323,8 @@ Let's look at a simple example, in which the user can choose a color. As the use
 
 {{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
 
-> **Примечание:** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
+> [!NOTE]
+> On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
 
 #### HTML
 
@@ -404,7 +406,8 @@ The first step is to choose your **base color**. This is the color that in some 
 
 When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
 
-> **Примечание:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
+> [!NOTE]
+> The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
 
 #### Fleshing out the palette
 
@@ -418,7 +421,8 @@ A few examples (all free to use as of the time this list was last revised):
 
 When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
 
-> **Примечание:** Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
+> [!NOTE]
+> Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
 
 ### Color theory resources
 
@@ -433,7 +437,8 @@ There are several ways color can be an {{Glossary("accessibility")}} problem. Im
 
 You should do at least basic research into color blindness. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
 
-> **Примечание:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
+> [!NOTE]
+> The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
 
 For more information about color blindness, see the following articles:
 
@@ -471,7 +476,7 @@ Now we have our base color and our accent. On top of that, we have a few complem
 
 Once you have these colors, you will probably still need to select appropriate neutral colors. Common design practice is to try to find the sweet spot where there's just enough contrast that the text is crisp and readable but not enough contrast to become harsh for the eyes. It's easy to go too far in one way or another so be sure to get feedback on your colors once you've selected them and have examples of them in use available. If the contrast is too low, your text will tend to be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.
 
-## See also
+## Смотрите также
 
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/ru/docs/Web/Guide/Graphics)

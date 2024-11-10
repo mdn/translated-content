@@ -95,11 +95,11 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 若一个对象拥有迭代行为，比如在 {{jsxref("Statements/for...of", "for...of")}} 中会循环一些值，那么那个对象便是一个可迭代对象。一些内置类型，如 {{jsxref("Array")}} 或 {{jsxref("Map")}} 拥有默认的迭代行为，而其他类型（比如 {{jsxref("Object")}}）则没有。
 
-为了实现**可迭代**，一个对象必须实现 **@@iterator** 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
+为了实现**可迭代**，对象必须实现 `[Symbol.iterator]()` 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
 
 程序员应知道一个可迭代对象可以多次迭代，还是只能迭代一次。
 
-只能迭代一次的可迭代对象（例如 Generator）通常从它们的 **@@iterator** 方法中返回 `this`，而那些可以多次迭代的方法必须在每次调用 **@@iterator** 时返回一个新的迭代器。
+只能迭代一次的可迭代对象（例如生成器）通常从它们的 `[Symbol.iterator]()` 方法中返回 `this`，而那些可以多次迭代的方法必须在每次调用 `[Symbol.iterator]()` 时返回一个新的迭代器。
 
 ```js
 function* makeIterator() {
@@ -116,10 +116,10 @@ for (const itItem of it) {
 console.log(it[Symbol.iterator]() === it); // true
 
 // 这个例子向我们展示了生成器（迭代器）是可迭代对象，
-// 它有一个 @@iterator 方法返回 it（它自己），
+// 它有一个 [Symbol.iterator]() 方法返回 it（它自己），
 // 因此，it 对象只能迭代*一次*。
 
-// 如果我们将它的 @@iterator 方法改为一个返回新的迭代器/生成器对象的函数/生成器，
+// 如果我们将它的 [Symbol.iterator]() 方法改为一个返回新的迭代器/生成器对象的函数/生成器，
 // 它（it）就可以迭代多次了。
 
 it[Symbol.iterator] = function* () {
@@ -189,7 +189,8 @@ a; // "a"
 
 {{jsxref("Global_Objects/Generator/next", "next()")}} 方法也接受一个参数用于修改生成器内部状态。传递给 `next()` 的参数值会被 `yield` 接收。
 
-> **备注：** 传给*第一个* `next()` 的值会被忽略。
+> [!NOTE]
+> 传给*第一个* `next()` 的值会被忽略。
 
 下面的是斐波那契数列生成器，它使用了 `next(x)` 来重启序列：
 

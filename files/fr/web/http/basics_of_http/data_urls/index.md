@@ -7,7 +7,8 @@ slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 
 **Les URLs de données**, les URLs préfixées par le schéma `data:`, permettent aux créateurs de contenu d'intégrer de petits fichiers dans des documents.
 
-> **Note :** Les URLs de données sont traitées comme des origines opaques uniques par les navigateurs modernes, ainsi, contrairement aux autres objets classiques, ces URLs n'héritent pas des propriétés de l'objet ayant mené à cette URL.
+> [!NOTE]
+> Les URLs de données sont traitées comme des origines opaques uniques par les navigateurs modernes, ainsi, contrairement aux autres objets classiques, ces URLs n'héritent pas des propriétés de l'objet ayant mené à cette URL.
 
 ## Syntaxe
 

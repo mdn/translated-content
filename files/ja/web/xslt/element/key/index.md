@@ -1,15 +1,17 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
-`<xsl:key>`要素は、`key( )`関数を使用してスタイルシートの他の場所で使用できる名前付きキーを宣言します。
+`<xsl:key>` 要素は、`key( )` 関数を使用してスタイルシートの他の場所で使用できる名前付きキーを宣言します。
 
 ### 構文
 
-```
+```xml
 <xsl:key name=NAME match=EXPRESSION
   use=EXPRESSION />
 ```
@@ -27,11 +29,11 @@ slug: Web/XSLT/Element/key
 
 なし
 
-### タイプ
+### 種類
 
-最上位は `<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
+最上位で、`<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
 
-### 定義
+## 仕様書
 
 XSLT, section 12.2.
 

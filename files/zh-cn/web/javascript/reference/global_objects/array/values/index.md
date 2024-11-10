@@ -21,7 +21,7 @@ values()
 
 ## 描述
 
-`Array.prototype.values()` 是 [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) 的默认实现。
+`Array.prototype.values()` 是 [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) 的默认实现。
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
@@ -64,7 +64,8 @@ console.log(iterator.next().value); // undefined
 
 ### 重复使用可迭代对象
 
-> **警告：** 数组迭代器对象应该是一次性使用的对象。不要重复使用它。
+> [!WARNING]
+> 数组迭代器对象应该是一次性使用的对象。不要重复使用它。
 
 `values()` 返回的可迭代对象是不可重复使用的。当 `next().done = true` 或 `currentIndex > length` 时，[`for...of` 循环结束](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#语言和迭代协议之间的交互)，进一步迭代它没有任何效果。
 
@@ -159,6 +160,6 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.values()")}}
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

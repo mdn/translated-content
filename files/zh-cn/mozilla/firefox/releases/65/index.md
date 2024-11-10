@@ -57,9 +57,9 @@ _无变化。_
 #### Service workers
 
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 
-#### Media, Web Audio, 和 WebRTC
+#### Media、Web Audio 和 WebRTC
 
 - 增加了对 [WebP](/zh-CN/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
 

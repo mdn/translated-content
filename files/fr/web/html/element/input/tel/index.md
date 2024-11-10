@@ -11,7 +11,8 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 Bien que les champs de saisie de numéro de téléphone soient fonctionnellement identiques aux champs de saisie textuels (`<input type="text">`), ils permettent, notamment pour les navigateurs mobiles, de présenter un clavier optimisé pour la saisie d'un numéro de téléphone. L'utilisation d'un tel champ permet également d'appliquer une validation personnalisée de façon ciblée.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `tel` utiliseront à la place un contrôle [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `tel` utiliseront à la place un contrôle [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 ## Résumé technique
 
@@ -82,7 +83,8 @@ L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
-> **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [Utiliser un format particulier](#utiliser_un_format_particulier) pour plus de détails et un exemple.
 
@@ -92,13 +94,15 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> [!NOTE]
+> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
@@ -131,7 +135,8 @@ Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. L
 
 Les numéros de téléphone peuvent jouer un rôle important dans certains formulaires web. Un site de commerce en ligne, par exemple, peut vouloir enregistrer le numéro de téléphone d'une utilisatrice ou un utilisateur pour le contacter lors de la livraison. Toutefois, un des problèmes relatifs aux numéros de téléphone est la variété de formats qui existent à travers le monde. Il est donc difficile (voire impossible) de valider les valeurs automatiquement.
 
-> **Note :** Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. [Validation](#validation) ci-après).
+> [!NOTE]
+> Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. [Validation](#validation) ci-après).
 
 ### Claviers adaptés
 
@@ -198,7 +203,8 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 
 {{EmbedLiveSample("", 600, 40)}}
 
-> **Note :** Ces deux attributs jouent un rôle lors de la [validation](#validation). Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.
+> [!NOTE]
+> Ces deux attributs jouent un rôle lors de la [validation](#validation). Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.
 
 ### Fournir une valeur par défaut
 
@@ -235,7 +241,8 @@ Avec l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant ce
 
 Comme évoqué ci-avant, il est difficile de fournir une solution qui convienne pour l'ensemble des formats utilisés et qui permette de valider correctement les numéros de téléphone.
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ### Rendre la valeur obligatoire
 

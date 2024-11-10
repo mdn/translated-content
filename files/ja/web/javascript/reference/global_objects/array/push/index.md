@@ -55,7 +55,7 @@ console.log(total); // 4
 
 ### ２つの配列をマージする
 
-この例では{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", "1")}}を使用して、二番目の配列から最初の配列へすべての要素を挿入します。
+この例では{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}を使用して、二番目の配列から最初の配列へすべての要素を挿入します。
 
 ```js
 const vegetables = ["parsnip", "potato"];

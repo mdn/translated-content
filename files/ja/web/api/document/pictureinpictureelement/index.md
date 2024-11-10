@@ -3,12 +3,12 @@ title: "Document: pictureInPictureElement プロパティ"
 short-title: pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
 l10n:
-  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
+  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-**`Document.pictureInPictureElement`** は読み取り専用プロパティで、 この文書内のピクチャインピクチャモードで現在表示されている {{ domxref("Element") }} を返します。ピクチャインピクチャモードが現在使用されていない場合は `null` を返します。
+**`pictureInPictureElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、 この文書内のピクチャインピクチャモードで現在表示されている {{ domxref("Element") }} を返します。ピクチャインピクチャモードが現在使用されていない場合は `null` を返します。
 
 このプロパティは読み取り専用ですが、（厳格モードであっても）変更されても例外は発生しません。セッターは何もせず、無視されます。
 

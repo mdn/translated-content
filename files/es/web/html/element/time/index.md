@@ -3,6 +3,8 @@ title: time
 slug: Web/HTML/Element/time
 ---
 
+{{HTMLSidebar}}
+
 El **elemento HTML `<time>`** representa un periodo específico en el tiempo. Puede incluir el atributo `datetime` para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en los motores de búsqueda o características personalizadas como recordatorios.
 
 Puede representar uno de los contenidos siguientes:

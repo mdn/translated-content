@@ -12,7 +12,7 @@ slug: Web/HTML/Element/footer
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                          |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | [Контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), кроме `<footer>` и {{HTMLElement("header")}}.                                                                                                                                                                             |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                              |
+| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                 |
 | Допустимые родители                                              | Любой элемент, который разрешает [Контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<footer>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("header")}} или другого элемента `<footer>`. |
 | Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                               |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                       |
@@ -34,7 +34,7 @@ slug: Web/HTML/Element/footer
 </footer>
 ```
 
-## Проблемы доступности
+## Доступность
 
 У программа чтения с экрана [VoiceOver](https://help.apple.com/voiceover/info/guide/) есть проблема, при которой она не читает элемент `<footer>` (не добавляет [роль-ориентир](/ru/docs/Learn/Доступность/WAI-ARIA_basics#SignpostsLandmarks) элемента `<footer>` в список ориентиров). Чтобы решить эту проблему добавьте `role="contentinfo"` в элемент `<footer>`.
 

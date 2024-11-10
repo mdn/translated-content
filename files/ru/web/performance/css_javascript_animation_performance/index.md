@@ -3,6 +3,8 @@ title: Производительность CSS и JavaScript анимации
 slug: Web/Performance/CSS_JavaScript_animation_performance
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Анимация является критичным инструментом для улучшения пользовательского опыта во многих приложениях. Существует много путей создания анимации в web, например, основанные на CSS-свойствах {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} или на JavaScript (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). В этой статье мы проанализируем производительность CSS и JavaScript анимаций и сравним их.
 
 ## CSS transition и animation
@@ -18,7 +20,8 @@ slug: Web/Performance/CSS_JavaScript_animation_performance
 
 API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} предоставляет эффективный способ создания анимаций в JavaScript. Функция (callback), которую вы передаёте в этот метод, будет вызываться перед каждой следующей отрисовкой нового фрейма. Главное отличие от {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}} в том, что здесь вам не нужно указывать время, через которое функция запустится. `requestAnimationFrame()` работает гораздо эффективнее, учитывая частоту кадров и производительность системы. Разработчики могут создавать анимацию, просто изменяя стили элемента каждый раз, когда происходит подготовка нового кадра (или когда обновляется полотно Canvas или в других случаях).
 
-> **Примечание:** Подобно CSS transition и animation, `requestAnimationFrame()` приостанавливает работу, когда текущий таб переводится в фоновый режим (например, при смене фокуса)
+> [!NOTE]
+> Подобно CSS-анимациям, `requestAnimationFrame()` приостанавливает работу, когда текущий таб браузера переводится в фоновый режим.
 
 Для подробностей ознакомьтесь с [анимирование с JavaScript: от setinterval до requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/).
 

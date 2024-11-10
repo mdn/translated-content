@@ -71,7 +71,8 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
   </tbody>
 </table>
 
-> **Nota:** Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
+> [!NOTE]
+> Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
 >
 > ```js
 > var myIterator = {

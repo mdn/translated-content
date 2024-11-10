@@ -3,7 +3,7 @@ title: CSS 动画与 JavaScript 动画的性能
 slug: Web/Performance/CSS_JavaScript_animation_performance
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 对众多应用程序而言，动画对提供友好的用户体验有着关键的作用。我们有很多方式生成 web 动画，比如 CSS {{cssxref("transition")}} 和 {{cssxref("animation")}} 或者基于 JavaScript 的动画（使用 {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}）。在这篇文章中，我们分析 CSS 动画和 JavaScript 动画的性能差异。
 
@@ -18,9 +18,10 @@ CSS 中的 transition 和 animation 都可以用于编写动画，它们都有�
 
 ## requestAnimationFrame
 
-{{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} 提供了一种用 JavaScript 代码制作动画的高效方式。本方法的回调函数在绘制下一帧之前由浏览器调用。与需要一个延迟参数的 {{domxref("setTimeout()")}} 或 {{domxref("setInterval()")}} 相比，`requestAnimationFrame()` 效率高得多。开发人员可以在 `requestAnimationFrame()` 回调函数中通过简单地改变元素的样式（或者更新画布绘制，等等）来创建动画。
+{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 提供了一种用 JavaScript 代码制作动画的高效方式。本方法的回调函数在绘制下一帧之前由浏览器调用。与需要一个延迟参数的 {{domxref("Window.setTimeout", "setTimeout()")}} 或 {{domxref("Window.setInterval", "setInterval()")}} 相比，`requestAnimationFrame()` 效率高得多。开发人员可以在 `requestAnimationFrame()` 回调函数中通过简单地改变元素的样式（或者更新画布绘制，等等）来创建动画。
 
-> **备注：** 像 CSS transitions 和 animations 一样，当页面在后台运行时，`requestAnimationFrame()` 会暂停。
+> [!NOTE]
+> 像 CSS transitions 和 animations 一样，当页面在后台运行时，`requestAnimationFrame()` 会暂停。
 
 更多细节请阅读 [animating with JavaScript from setinterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/).
 
@@ -175,7 +176,8 @@ function animate(time) {
 
 激活之后，再次运行上面的例子。可以看到 CSS 动画的帧速率现在高多了。
 
-> **备注：** 在 Nightly 和 Developer 版本，你可能看到 OMTA 是默认激活的，所以你需要反过来测试（先测试激活 OMTA 的情况，然后是没有激活的情况）。
+> [!NOTE]
+> 在 Nightly 和 Developer 版本，你可能看到 OMTA 是默认激活的，所以你需要反过来测试（先测试激活 OMTA 的情况，然后是没有激活的情况）。
 
 ## 总结
 

@@ -88,6 +88,6 @@ slug: Web/CSS/CSS_grid_layout/Subgrid
 - На YouTube-канале Mozilla Developers смотрите видео [Laying out forms using subgrid](https://www.youtube.com/watch?v=gmQlK3kRft4) и [Don't Wait To Use Subgrid For Better Card Layouts](https://www.youtube.com/watch?v=lLnFtK1LNu4)
 - [Hello Subgrid!](https://noti.st/rachelandrew/i6gUcF/hello-subgrid) Презентация с CSSConf.eu
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}

@@ -9,8 +9,9 @@ slug: Web/API/ClipboardEvent/ClipboardEvent
 
 ## 语法
 
-```
-var clipboardEvent = new ClipboardEvent(type[, options]);
+```js-nolint
+new ClipboardEvent(type)
+new ClipboardEvent(type, options)
 ```
 
 ### 参数

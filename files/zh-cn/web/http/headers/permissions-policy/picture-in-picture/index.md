@@ -1,24 +1,28 @@
 ---
 title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP 标头 {{HTTPHeader("Permissions-Policy")}} 的 `picture-in-picture` 指令表示是否允许当前的文档通过相应的 API 以画中画模式播放视频。
+HTTP {{HTTPHeader("Permissions-Policy")}} 标头 `picture-in-picture` 指令控制是否允许当前文档以{{domxref("Picture-in-Picture API", "画中画", "", "nocode")}}模式播放视频。
+
+具体而言，如果定义的策略阻止使用此特性，则 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} 调用将抛出类型为 `SecurityError` 的 {{domxref("DOMException")}} 错误。
 
 ## 语法
 
-```
-Permissions-Policy: picture-in-picture <allowlist>;
+```http
+Permissions-Policy: picture-in-picture=<allowlist>;
 ```
 
-- \<allowlist>
-  - : 允许使用该功能的来源列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)。
+- `<allowlist>`
+  - : 允许使用该特性的来源列表。有关更多详细信息，参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)。
 
 ## 默认策略
 
-截至 2019 年 6 月，[规范草案](https://wicg.github.io/picture-in-picture/#feature-policy) 和 [Google Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17) 将允许列表默认设置为 `*`。
+`picture-in-picture` 的默认允许列表是 `*`。
 
 ## 规范
 
@@ -31,5 +35,4 @@ Permissions-Policy: picture-in-picture <allowlist>;
 ## 参见
 
 - {{HTTPHeader("Permissions-Policy")}} 标头
-- [Permission Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
-- [Using Permission Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)

@@ -56,7 +56,8 @@ La propriété `font-size` peut être définie de deux façons :
 - `<percentage>`
   - : Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.
 
-> **Note :** Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
+> [!NOTE]
+> Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
 
 ## Définition formelle
 

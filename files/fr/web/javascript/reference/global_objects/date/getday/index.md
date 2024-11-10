@@ -32,7 +32,8 @@ var jourSemaine = noel95.getDay();
 console.log(jourSemaine); //1
 ```
 
-> **Note :** Si besoin, on pourra obtenir le nom complet du jour (`"lundi"` par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre `options`. Ce faisant, il est plus simple d'internationaliser un site ou une application :
+> [!NOTE]
+> Si besoin, on pourra obtenir le nom complet du jour (`"lundi"` par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre `options`. Ce faisant, il est plus simple d'internationaliser un site ou une application :
 >
 > ```js
 > var options = { weekday: "long" };

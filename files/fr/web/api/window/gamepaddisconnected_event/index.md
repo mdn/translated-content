@@ -3,6 +3,8 @@ title: gamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
 ---
 
+{{APIRef}}
+
 L'événement `gamepaddisconnected` est déclenché lorsque le navigateur détecte le fait qu'une manette ait été débranchée.
 
 ## Informations générales

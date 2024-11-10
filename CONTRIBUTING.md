@@ -34,7 +34,7 @@ See the [Creating a pull request](#creating-a-pull-request) for more details on 
 
 If you're not certain of the changes that you want to make, [get in touch with us][]!
 
-> **Note:** You can click the **View the source on GitHub** or **Edit the page on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> **Note:** You may click the **View this page on GitHub** or **Report a problem with this content** link at the bottom of an MDN page, to either jump directly to the page source or raise an issue on GitHub.
 
 ### Forking and cloning the repository
 

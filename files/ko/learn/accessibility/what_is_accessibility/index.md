@@ -47,7 +47,8 @@ l10n:
 
 아래에는 생각해보아야 하는 장애의 주요 유형들이 설명되어 있습니다. 웹 콘텐츠에 접근하기 위해 사용하는 특별한 도구가 있다면 함께 살펴보겠습니다. 이런 도구들은 보조 기술(**assistive technologies**, 또는 **ATs**)이라고 불립니다.
 
-> **참고:** 세계 보건 기구(WHO)의 [장애 및 보건 현황 보고서](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)에 따르면 전 세계 인구의 약 15%에 해당하는 10억명 이상의 사람들이 장애를 갖고 있으며 1억 1천만명에서 1억 9천만명 사이의 성인들이 심각한 장애를 갖고 있습니다.
+> [!NOTE]
+> 세계 보건 기구(WHO)의 [장애 및 보건 현황 보고서](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)에 따르면 전 세계 인구의 약 15%에 해당하는 10억명 이상의 사람들이 장애를 갖고 있으며 1억 1천만명에서 1억 9천만명 사이의 성인들이 심각한 장애를 갖고 있습니다.
 
 ### 시각 장애가 있는 사람
 

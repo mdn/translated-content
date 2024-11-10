@@ -11,7 +11,8 @@ Le mot-clé `list-item` permet à un élément de générer un pseudo-élément 
 
 Une valeur `list-item` indiquera à l'élément de se comporter comme un élément d'une liste. Cette valeur peut être utilisée avec les propriétés {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.
 
-> **Note :** Pour les navigateurs qui prennent en charge la syntaxe avec deux valeurs, si aucune valeur pour le mode intérieur n'est indiquée, sa valeur par défaut sera `flow`. Si aucune valeur n'est fournie pour le mode extérieur, la boîte principale aura un mode extérieur `block`.
+> [!NOTE]
+> Pour les navigateurs qui prennent en charge la syntaxe avec deux valeurs, si aucune valeur pour le mode intérieur n'est indiquée, sa valeur par défaut sera `flow`. Si aucune valeur n'est fournie pour le mode extérieur, la boîte principale aura un mode extérieur `block`.
 
 ### Syntaxe formelle
 

@@ -157,7 +157,8 @@ button:active {
 
 При нажатии на кнопку первая тень становится внутренней, чтобы создать ощущение нажатия кнопки.
 
-> **Примечание:** Есть ещё одно значение `box-shadow`, которое устанавливается перед значением свойства, — **радиус разброса**. При его использовании тень становится больше оригинального контейнера. Свойство не так часто используют, но оно стоит упоминания.
+> [!NOTE]
+> Есть ещё одно значение `box-shadow`, которое устанавливается перед значением свойства, — **радиус разброса**. При его использовании тень становится больше оригинального контейнера. Свойство не так часто используют, но оно стоит упоминания.
 
 ## Фильтры
 
@@ -188,7 +189,8 @@ button:active {
 
 Вы можете найти больше примеров смешивания на странице [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (смотрите [источник](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) и на странице {{cssxref("&lt;blend-mode&gt;")}}.
 
-> **Примечание:** Смешивание относительно новое свойство, поэтому поддерживается хуже, чем фильтры. Оно совсем не поддерживается на Edge, а Safari поддерживает лишь некоторые значения свойства.
+> [!NOTE]
+> Смешивание — относительно новое свойство, поэтому поддерживается хуже, чем фильтры. Оно совсем не поддерживается на Edge, а Safari поддерживает лишь некоторые значения свойства.
 
 ### background-blend-mode
 
@@ -284,7 +286,8 @@ article div:last-child {
 
 Как видите, смешались не только фоновые изображения, но и `<div>` под ними.
 
-> **Примечание:** Не переживайте, если вы не знаете такие свойства разметки, как {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}} и т. д. Мы детально рассмотрим это в модуле [CSS Layout](/ru/docs/Learn/CSS/CSS_layout).
+> [!NOTE]
+> Не переживайте, если вы не знаете такие свойства разметки, как {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}} и т. д. Мы детально рассмотрим это в модуле [CSS Layout](/ru/docs/Learn/CSS/CSS_layout).
 
 ## CSS-фигуры
 
@@ -296,7 +299,8 @@ article div:last-child {
 
 Форма в этом примере не реагирует на содержание изображения. Вместо этого в центре изображения определяется центр окружности, как если бы мы начертили циркулем окружность, вписанную в изображение. Это та окружность, которую обтекает текст.
 
-> **Примечание:** В Firefox вы можете использовать [Инспектор фигур](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes), чтобы редактировать фигуры.
+> [!NOTE]
+> В Firefox вы можете использовать [Инспектор фигур](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes), чтобы редактировать фигуры.
 
 Значение `circle()` — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте [Обзор CSS-фигур](/ru/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) на MDN.)
 
@@ -315,7 +319,8 @@ article div:last-child {
 
 Если вы собираетесь использовать подобные опции, проверьте совместимость их с браузерами.
 
-> **Примечание:** Пример с `-webkit-background-clip: text` смотрите на [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (или [источнике](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> [!NOTE]
+> Пример с `-webkit-background-clip: text` смотрите на [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (или [источнике](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Итог
 

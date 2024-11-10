@@ -125,7 +125,8 @@ Firefox로 "about:debugging" 페이지에 들어갑니다. "임시 확장기능 
 
 {{EmbedYouTube("rxBQl2Z9IBQ")}}
 
-> **참고:** addons.mozilla.org에 들어가서 테스트 하지 마세요! Content script는 현재 이 도메인에 사용할 수 없도록 차단됩니다.
+> [!NOTE]
+> addons.mozilla.org에 들어가서 테스트 하지 마세요! Content script는 현재 이 도메인에 사용할 수 없도록 차단됩니다.
 
 좀 더 파고들어 봅시다. 테두리의 색을 변경하거나, 페이지 컨텐츠에 다른 것들을 해볼 수 있겠죠. content script를 저장하고 about:debugging 페이지에서 Reload 버튼을 눌러 확장기능 파일을 새로고침 할 수 있습니다. 그리고 나서는 곧바로 변경된 기능을 확인할 수 있죠.
 

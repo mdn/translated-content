@@ -9,7 +9,8 @@ La propiedad CSS **`text-decoration`** se usa para establecer el formato de text
 
 Las decoraciones de texto se dibujan a través de los elementos descendientes. Esto significa que no es posible deshabilitar la decoración en un descendiente si la propiedad se especifica en un elemento ancestro. Por ejemplo, en el código `<p>Este texto tiene <em>algunas palabras enfatizadas</em> en él.</p>`, la regla de estilos `p { text-decoration: underline; }` causará que el párrafo entero tenga subrayado. La regla `em { text-decoration: none; }` no causará ningún cambio; el párrafo entero seguirá subrayado. Sin embargo, la regla `em { text-decoration: overline; }` causará una segunda decoración que aparecerá sobre "algunas palabras enfatizadas".
 
-> **Nota:** El Nivel 3 de Decoraciones de Texto transformó esta propiedad en la forma reducida de las tres propiedades nuevas {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, y {{cssxref("text-decoration-style")}}. Como en cualquier otra propiedad reducida, esto significa que restaura sus valores a los predeterminados si no son definidos explícitamente en la propiedad.
+> [!NOTE]
+> El Nivel 3 de Decoraciones de Texto transformó esta propiedad en la forma reducida de las tres propiedades nuevas {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, y {{cssxref("text-decoration-style")}}. Como en cualquier otra propiedad reducida, esto significa que restaura sus valores a los predeterminados si no son definidos explícitamente en la propiedad.
 
 {{cssinfo}}
 

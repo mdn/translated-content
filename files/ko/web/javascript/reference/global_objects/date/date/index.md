@@ -26,7 +26,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds);
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
-> **참고:** 새로운 `Date<` 객체를 생성하는 방법은 {{jsxref("operators/new", "new")}} 연산자를
+> [!NOTE]
+> 새로운 `Date<` 객체를 생성하는 방법은 {{jsxref("operators/new", "new")}} 연산자를
 > 사용하는 것이 유일합니다. `now = Date()<`처럼 `Date<`를 직접 호출하면 새로운
 > `Date<` 객체가 아니라 문자열을 반환합니다.
 

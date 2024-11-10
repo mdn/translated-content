@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/getTexParameter
 
 ## 语法
 
-```
-any gl.getTexParameter(target, pname);
+```js-nolint
+getTexParameter(target, pname)
 ```
 
 ### 参数

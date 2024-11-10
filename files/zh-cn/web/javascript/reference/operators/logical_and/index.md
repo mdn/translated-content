@@ -48,7 +48,7 @@ result = "foo" && 4; // 结果被赋值为 4
 
 考虑如下伪代码。
 
-```
+```plain
 (some falsy expression) && expr
 ```
 

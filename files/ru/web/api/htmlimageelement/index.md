@@ -3,7 +3,7 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
 
-{{ApiRef}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLImageElement`** предоставляет специальные свойства и методы (расширяя обычный интерфейс {{domxref("HTMLElement")}} ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}.
 

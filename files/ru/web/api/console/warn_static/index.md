@@ -1,14 +1,14 @@
 ---
 title: Console.warn()
 slug: Web/API/console/warn_static
-original_slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}Выводит предупреждение в веб-консоль.
 
 {{AvailableInWorkers}}
 
-> **Примечание:** В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.
+> [!NOTE]
+> В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.
 
 ## Синтаксис
 
@@ -28,7 +28,7 @@ console.warn(msg [, subst1, ..., substN]);
 
 Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/Web/API/Console#Outputting_text_to_the_console) документации {{domxref("console")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

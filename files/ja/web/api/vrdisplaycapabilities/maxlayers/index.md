@@ -9,7 +9,8 @@ l10n:
 
 **`maxLayers`** は {{domxref("VRDisplayCapabilities")}} インターフェイスの読み取り専用プロパティで、その VR ディスプレイが同時に表示できる {{domxref("VRLayerInit")}} の最大値を示す数値を返します（例えば {{domxref("Display.requestPresent()")}} が受け取ることのできる配列の最大長です）。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ### 値
 

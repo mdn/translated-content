@@ -9,7 +9,8 @@ El evento **beforeunload** es disparado cuando la ventana, el documento y sus re
 
 Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo). Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.
 
-> **Nota:** Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.
+> [!NOTE]
+> Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.
 
 <table class="properties">
   <tbody>
@@ -68,7 +69,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Notas
 
-A partir del 25 de Mayo del 2011, la especificion HTML5 establece que llamadas a los metodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
+A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
 
 Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en about:config para habilitar este comportamiento.
 

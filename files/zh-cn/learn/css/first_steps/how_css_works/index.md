@@ -61,7 +61,7 @@ slug: Learn/CSS/First_steps/How_CSS_works
 
 在这个 DOM 中，`<p>`元素对应了父节点，它的子节点是一个 text 节点和三个对应了`<span>`元素的节点，`SPAN`节点同时也是他们中的 Text 节点的父节点。
 
-```
+```plain
 P
 ├─ "Let's use:"
 ├─ SPAN

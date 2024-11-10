@@ -3,7 +3,7 @@ title: substring-before
 slug: Web/XPath/Functions/substring-before
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `substring-before` 関数は、与えられた文字列内で、与えられた部分文字列よりも前にある部分の文字列を返します。
 

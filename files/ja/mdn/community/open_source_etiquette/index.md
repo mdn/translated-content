@@ -2,7 +2,7 @@
 title: オープンソースのエチケット
 slug: MDN/Community/Open_source_etiquette
 l10n:
-  sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -64,7 +64,7 @@ l10n:
 
 また、 MDN の記事を読んでいて気になった問題を解決するために、[プルリクエスト](/ja/docs/MDN/Community/Pull_requests)を作成して協力することもできます。
 
-MDN での作業の多くは、ドキュメントやコード例を書くことですが、それ以外にも協力できる方法があります。
+MDN での作業の多くは、ドキュメントやサンプルコードを書くことですが、それ以外にも協力できる方法があります。
 
 - 入ってきた問題の切り分けを手伝う。
 - 誤字の修正を手伝う。
@@ -83,7 +83,7 @@ MDN での作業の多くは、ドキュメントやコード例を書くこと�
 
 ## マニュアルを読みましょう
 
-優れた OSP は、常に協力者のドキュメントが容易に入手できるようにしています。 GitHub のプロジェクトでは、通常はリポジトリーの CONTRIBUTING.md ファイル、またはプロジェクトの README.md ファイルに記載されています。文書化プロジェクトである MDN のコンテンツには [README](https://github.com/mdn/content/blob/main/README.md) があり、サイト自体に協力者向けのドキュメントがきちんと用意されています（[MDN Web Docs への協力](/ja/docs/MDN/Contribute)を参照）。
+優れた OSP は、常に協力者のドキュメントが容易に入手できるようにしています。 GitHub のプロジェクトでは、通常はリポジトリーの CONTRIBUTING.md ファイル、またはプロジェクトの README.md ファイルに記載されています。文書化プロジェクトである MDN のコンテンツには [README](https://github.com/mdn/content/blob/main/README.md) があり、サイト自体に協力者向けのドキュメントがきちんと用意されています（[MDN Web Docs への協力](/ja/docs/MDN/Community/Contributing)を参照）。
 
 助けを求めることを恐れないで、ただし、必ず質問する前に答えを見つけようとしてください。そうすることで、プロジェクトに関する知識を深め、より自立した人間になることができ、他の協力者に不必要な負担をかけることもありません。
 

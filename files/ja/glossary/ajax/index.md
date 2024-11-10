@@ -16,7 +16,7 @@ AJAX によって、ウェブページ全体を再読み込みせずに、 {{Glo
 - [AJAX](https://ja.wikipedia.org/wiki/AJAX) (ウィキペディア)
 - [AJAX](/ja/docs/Web/Guide/AJAX)
 - [AJAX - 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
-- [用語集](/ja/docs/Glossary):
+- 関連用語:
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 

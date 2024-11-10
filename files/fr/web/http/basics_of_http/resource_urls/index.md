@@ -45,7 +45,8 @@ Auparavant, les sites web étaient capables d'accéder à n'importe quelle URI `
 
 Firefox nécessite néanmoins le chargement des ressources au sein d'un contenu web dans certains cas. Ainsi lorsque l'on souhaite accéder au code source d'une page à l'aide de "Code source de la page", un appel à `viewsource.css` via une URI `resource:` est nécessaire. Les ressources auxquelles le contenu web a besoin d'accéder ont été déplacées sous `resource://content-accessible/`, une partie isolée et ne contenant que des ressources n'étant pas confidentielles. De cette manière, il est possible d'exposer des ressources tout en réduisant la plupart des menaces.
 
-> **Note :** Il est recommandé de ne plus utiliser les URLs de type ressource lors du développement web ou de celui d'un module. Leur utilisation était peu fiable et la plupart ne fonctionnent plus.
+> [!NOTE]
+> Il est recommandé de ne plus utiliser les URLs de type ressource lors du développement web ou de celui d'un module. Leur utilisation était peu fiable et la plupart ne fonctionnent plus.
 
 ## Spécifications
 

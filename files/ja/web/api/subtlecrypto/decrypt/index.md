@@ -54,7 +54,8 @@ decrypt(algorithm, key, data)
 
 ## 例
 
-> **メモ:** GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!NOTE]
+> GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
 
 ### RSA-OAEP
 

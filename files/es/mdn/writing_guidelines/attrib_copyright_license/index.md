@@ -15,7 +15,8 @@ Esta sección cubre los tipos de contenido que proporcionamos y los derechos de 
 
 ### Documentación
 
-> **Nota:** El contenido de MDN Web Docs ha sido preparado con las contribuciones de autores tanto dentro como fuera de Mozilla. A menos que se indique lo contrario, el contenido está disponible según los términos de la [licencia Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 o cualquier versión posterior.
+> [!NOTE]
+> El contenido de MDN Web Docs ha sido preparado con las contribuciones de autores tanto dentro como fuera de Mozilla. A menos que se indique lo contrario, el contenido está disponible según los términos de la [licencia Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 o cualquier versión posterior.
 
 Su reutilización del contenido aquí se publica bajo la misma licencia que el contenido original: CC-BY-SA v2.5 o cualquier versión posterior. Al reutilizar el contenido en MDN Web Docs, debe asegurarse de que la atribución se dé al contenido original, así como a los "Colaboradores de Mozilla". Incluya un hipervínculo (en línea) o URL (impreso) a la página específica del contenido que se está obteniendo. Por ejemplo, para proporcionar la atribución de _este_ artículo, puede escribir:
 
@@ -35,7 +36,8 @@ Desde el lanzamiento de la nueva plataforma Yari de MDN el 14 de diciembre de 20
 
 Si desea contribuir a MDN Web Docs, acepta que su documentación esté disponible bajo la licencia Attribution-ShareAlike (u ocasionalmente una licencia alternativa ya especificada por la página que está editando) y que sus muestras de código estén disponibles bajo [Creative Commons CC -0](https://creativecommons.org/publicdomain/zero/1.0/) (una dedicación de dominio público).
 
-> **Advertencia:** No se pueden crear nuevas páginas utilizando licencias alternativas.
+> [!WARNING]
+> No se pueden crear nuevas páginas utilizando licencias alternativas.
 
 **Los derechos de autor de los materiales aportados permanecen con el autor a menos que el autor los asigne a otra persona.**
 
@@ -53,7 +55,8 @@ Si recibimos una solicitud de extracción y descubrimos que contiene contenido p
 
 ## Si desea reutilizar o volver a publicar contenido
 
-> **Nota:** A menos que haya una buena razón para volver a publicar el contenido, probablemente diremos "no".
+> [!NOTE]
+> A menos que haya una buena razón para volver a publicar el contenido, probablemente diremos "no".
 > La decisión del equipo de redacción de MDN es definitiva.
 
 Si alguien quiere donar un artículo a MDN que publicó previamente en su blog o tiene sentido copiar una hoja de referencia compleja a MDN, puede haber una justificación para volver a publicarlo. Para estos casos, discuta su plan con el equipo de MDN antes de eso:

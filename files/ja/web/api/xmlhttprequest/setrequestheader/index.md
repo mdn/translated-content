@@ -18,7 +18,8 @@ l10n:
 
 さらに、 HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーをリクエストに追加することができますが、そのリクエストがオリジン間でリダイレクトされたときには削除されます。
 
-> **メモ:** カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not allowed by Access-Control-Allow-Headers in preflight response**" の例外に遭遇することがあります。
+> [!NOTE]
+> カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not allowed by Access-Control-Allow-Headers in preflight response**" の例外に遭遇することがあります。
 > この場合、サーバー側でレスポンスヘッダーに {{HTTPHeader("Access-Control-Allow-Headers")}} を設定する必要があります。
 
 ## 構文

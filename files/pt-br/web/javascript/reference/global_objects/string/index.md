@@ -115,7 +115,8 @@ Um objeto `String` pode ser convertido sempre para sua contraparte primitiva com
 console.log(eval(s2.valueOf())); // retorna o número 4
 ```
 
-> **Nota:** Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView).
+> [!NOTE]
+> Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView).
 
 ## Propriedades
 

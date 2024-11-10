@@ -37,10 +37,6 @@ if (
 }
 ```
 
-## メモ
-
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

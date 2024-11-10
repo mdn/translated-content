@@ -37,7 +37,8 @@ Lorsqu'un navigateur exécutera ce code, il devra demander la permission d'autor
 
 ![](protocolregister.png)
 
-> **Note :** Le modèle d'URL fourni lors de l'enregistrement **doit** provenir de la même origine que la page web qui demande l'enregistrement, sinon celle-ci échouera. Ainsi, `http://example.com/homepage.html` pourra enregistrer un gestionnaire de protocole pour `http://example.com/handle_mailto/%s`, mais pas pour `http://example.org/handle_mailto/%s`.
+> [!NOTE]
+> Le modèle d'URL fourni lors de l'enregistrement **doit** provenir de la même origine que la page web qui demande l'enregistrement, sinon celle-ci échouera. Ainsi, `http://example.com/homepage.html` pourra enregistrer un gestionnaire de protocole pour `http://example.com/handle_mailto/%s`, mais pas pour `http://example.org/handle_mailto/%s`.
 
 Enregistrer plus d'une fois le même gestionnaire de protocole déclenchera l'apparition d'une notification différente, indiquant que le gestionnaire de protocole est déjà enregistré. Aussi, mieux vaut effectuer une vérification préalable dans le code pour voir si le gestionnaire n'est pas déjà enregistré, comme illustré dans l'exemple qui suit.
 
@@ -82,7 +83,8 @@ http://www.google.com/?uri=web+burger:cheeseburger
 
 Un code côté serveur peut extraire les paramètres de la chaîne de requête et effectuer l'action désirée.
 
-> **Note :** Le code côté serveur reçoit le contenu **entier** de l'attribut `href`. Cela signifie que le serveur doit traiter la chaîne pour retirer le protocole des données.
+> [!NOTE]
+> Le code côté serveur reçoit le contenu **entier** de l'attribut `href`. Cela signifie que le serveur doit traiter la chaîne pour retirer le protocole des données.
 
 #### Exemple
 

@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 
 ## 语法
 
-```plain
-arr.entries()
+```js-nolint
+entries()
 ```
 
 ### 返回值
@@ -53,8 +53,11 @@ console.log(eArr.next().value); // [4, 50]
 
 ## 参见
 
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [`core-js` 中 `TypedArray.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- {{jsxref("Array.prototype.entries()")}}
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

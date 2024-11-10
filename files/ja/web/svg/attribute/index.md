@@ -1,8 +1,9 @@
 ---
 title: SVG 属性リファレンス
+short-title: 属性
 slug: Web/SVG/Attribute
 l10n:
-  sourceCommit: 25da2a336322cda9adb10a85a7d037b5fede4f3b
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
 {{SVGRef}}
@@ -49,7 +50,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
@@ -74,7 +74,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -138,7 +137,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("k4")}}
 - {{SVGAttr("kernelMatrix")}}
 - {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("keyPoints")}}
 - {{SVGAttr("keySplines")}}
 - {{SVGAttr("keyTimes")}}
@@ -322,7 +320,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -338,32 +335,39 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("z")}}
 - {{SVGAttr("zoomAndPan")}}
 
-## カテゴリ別の SVG 属性
+## カテゴリー別の SVG 属性
 
 ### 一般属性
 
 - コア属性
 
-  - : [コア属性](/ja/docs/Web/SVG/Attribute/Core)
-
-    {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
-
-- スタイル属性
-
-  - : [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
-
-    {{SVGAttr("class")}}, {{SVGAttr("style")}}
+  - {{SVGAttr("id")}}
+  - {{SVGAttr("class")}}
+  - {{SVGAttr("style")}}
+  - {{SVGAttr("lang")}}
+  - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("xml:lang")}}
+  - {{SVGAttr("xml:space")}}
 
 - 条件処理属性
-  - : {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
+  - {{SVGAttr("requiredExtensions")}}
+  - {{SVGAttr("requiredFeatures")}}
+  - {{SVGAttr("systemLanguage")}}
 
 ### XLink 属性
 
-{{SVGAttr("xlink:href")}}{{deprecated_inline}} , {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:type")}}
+- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
 
 ### プレゼンテーション属性
 
-> **メモ:** すべての [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)が CSS プロパティとして使用できます。
+> [!NOTE]
+> すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -373,13 +377,12 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
+- {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
@@ -396,7 +399,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("image-rendering")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("lighting-color")}}
 - {{SVGAttr("marker-end")}}
@@ -450,32 +452,76 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 ### イベント属性
 
-- アニメーションイベント属性
-
-  - : [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#アニメーションイベント属性)
-
-    **`onbegin`**, **`onend`**, **`onrepeat`**
-
-- 文書イベント属性
-
-  - : [文書イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書イベント属性)
-
-    **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
-
-- グローバルイベント属性
-
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性)
-
-    **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
-
-- グラフィックイベント属性
-
-  - : [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
-
-    **`onactivate`**, **`onfocusin`**, **`onfocusout`**
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onresize`**
+- **`onscroll`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## 関連情報
 
 - [SVG 要素リファレンス](/ja/docs/Web/SVG/Element)
 - [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG インターフェイスリファレンス](/ja/docs/Web/API/SVG_API#インターフェイス)

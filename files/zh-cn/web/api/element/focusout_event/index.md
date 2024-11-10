@@ -3,6 +3,8 @@ title: focusout
 slug: Web/API/Element/focusout_event
 ---
 
+{{APIRef}}
+
 当元素即将失去焦点时，focusout 事件被触发。focusout 事件和 [blur](/zh-CN/docs/Web/Events/blur) 事件之间的主要区别在于后者不会冒泡。
 
 ## 基本信息

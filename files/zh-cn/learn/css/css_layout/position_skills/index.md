@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 此任务的目的是让你使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，你将通过两个小任务来复习刚才课程材料中介绍的不同元素。
 
-> **备注：** 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
+> [!NOTE]
+> 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
 >
 > 如果你遇到困难，请向我们寻求帮助 - 请参阅本页底部的 [Assessment or further help](#assessment_or_further_help) 部分
 
@@ -23,7 +24,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 作为一个额外的挑战，你能改变目标元素显示在文本下面吗？
 
-> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html)在本地编辑器或在线编辑器中编辑
+> [!NOTE]
+> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html)在本地编辑器或在线编辑器中编辑
 
 ## 定位练习二
 
@@ -35,7 +37,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
 
-> **备注：** 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html)在本地编辑器或在线编辑器中编辑
+> [!NOTE]
+> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html)在本地编辑器或在线编辑器中编辑
 
 ## Assessment or further help
 

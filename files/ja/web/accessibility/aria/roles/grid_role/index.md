@@ -68,7 +68,8 @@ slug: Web/Accessibility/ARIA/Roles/grid_role
 - [aria-readonly](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`aria-readonly` を `true` に設定するべきです。 デフォルト値は `false` です。
 
-> **メモ:** 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
+> [!NOTE]
+> 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
 
 ### キーボードインタラクション
 
@@ -576,7 +577,7 @@ document.querySelector("table").addEventListener("keydown", function (event) {
 
 [キーボードインタラクション](#keyboard_interactions)が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (`grid`) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

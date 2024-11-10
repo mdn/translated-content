@@ -12,7 +12,7 @@ Firefox 3 では、以前のバージョンの Firefox よりも改善された 
 - `foreignObject` 要素のサポート ([Firefox バグ 326966](https://bugzil.la/326966)、[仕様](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement)、[参考](https://robert.ocallahan.org/2006/06/future-is-now_20.html)
 - `pattern` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
 - `mask` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
-- SVG フィルタのサポート ([仕様](https://www.w3.org/TR/SVG11/filters.html))
+- SVG フィルターのサポート ([仕様](https://www.w3.org/TR/SVG11/filters.html))
 
   - `filter`
   - `feDistantLight`

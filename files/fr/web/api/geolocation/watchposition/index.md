@@ -58,7 +58,8 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-> **Note :** Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
+> [!NOTE]
+> Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
 
 ## Spécifications
 

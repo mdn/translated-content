@@ -80,6 +80,6 @@ console.log(p.nodeName); // всё ещё "P";
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - MSDN: [outerHTML Property](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)

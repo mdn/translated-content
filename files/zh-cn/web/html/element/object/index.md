@@ -11,7 +11,7 @@ slug: Web/HTML/Element/object
 
 - _[内容分类](/zh-CN/docs/HTML/Content_categories)_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content); [phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content); [embedded content](/zh-CN/docs/HTML/Content_categories#Embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/zh-CN/docs/HTML/Content_categories#Interactive_content); [listed](/zh-CN/docs/HTML/Content_categories#Form_listed), [submittable](/zh-CN/docs/HTML/Content_categories#Form_submittable) [form-associated](/zh-CN/docs/HTML/Content_categories#Form-associated_content) element.
 - _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/zh-CN/docs/HTML/Content_categories#Transparent_content_models).
-- _标签闭合_ {{no_tag_omission}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
 - _允许的父级元素_ Any element that accepts [embedded content](/zh-CN/docs/HTML/Content_categories#Embedded_content).
 - _DOM 接口_ {{domxref("HTMLObjectElement")}}
 

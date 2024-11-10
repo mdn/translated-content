@@ -51,7 +51,8 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
+> [!NOTE]
+> 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
 
 {{CSS_Ref}}
 
@@ -96,7 +97,7 @@ div.menu-bar li:hover > ul {
 - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`
   - : 代表不包含在 HTML 中的实体。
 
-> **标注：**
+> [!CALLOUT]
 >
 > 参见[标准 4 定义的选择器列表](https://www.w3.org/TR/selectors/#overview)。
 

@@ -3,6 +3,8 @@ title: Comprendre les noms de domaine
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.
 
 <table class="standard-table">
@@ -61,7 +63,8 @@ Il est impossible d' « acheter » un nom de domaine. Vous payez pour le droit d
 
 Très souvent, ce sont des entreprises appelées bureaux d'enregistrement qui maintiennent les registres contenant les informations techniques et administratives qui vous lient à votre nom de domaine.
 
-> **Note :** Pour certains noms de domaines, ce n'est pas un bureau d'enregistrement qui gèrera les registres. Par exemple les noms de domaines sous .fire sont gérés par Amazon.
+> [!NOTE]
+> Pour certains noms de domaines, ce n'est pas un bureau d'enregistrement qui gèrera les registres. Par exemple les noms de domaines sous .fire sont gérés par Amazon.
 
 #### Trouver un nom de domaine disponible
 
@@ -116,13 +119,15 @@ Le processus est assez simple :
 3. Il est ensuite nécessaire de remplir un formulaire avec différentes informations et détails. Assurez-vous de leur exactitude et surtout faites attention à l'orthographe choisie pour votre nom de domaine ! Une fois que vous aurez payé, il sera trop tard !
 4. Le bureau d'enregistrement vous informera dès que le nom de domaine sera enregistré et vous pourrez alors l'utiliser. Il faut parfois quelques heures pour qu'un nouveau nom de domaine soit enregistré.
 
-> **Note :** Lors de ces étapes, le bureau d'enregistrement peut vous demander votre adresse postale. Assurez-vous que la valeur saisie est valide car les bureaux d'enregistrement de certains pays peuvent fermer un domaine si l'adresse fournie est invalide.
+> [!NOTE]
+> Lors de ces étapes, le bureau d'enregistrement peut vous demander votre adresse postale. Assurez-vous que la valeur saisie est valide car les bureaux d'enregistrement de certains pays peuvent fermer un domaine si l'adresse fournie est invalide.
 
 #### Rafraîchissement du DNS
 
 Des bases de données DNS sont stockées sur chaque serveur DNS, partout dans le monde. Ces serveurs font tous référence à un serveur racine et à quelques uns appelés « serveurs faisant autorité ». Dès lors qu'un bureau d'enregistrement crée ou met à jour une information pour un domaine donné, il faut que cette information soit mise à jour pour chaque base de données DNS. Or, pour faciliter certaines tâches, chaque serveur DNS stocke les informations pour une période donnée avant que celles-ci soient considérées invalides (le serveur DNS demandera alors les informations à jour au serveur faisant autorité). Pour cette raison, la mise à jour peut prendre un certain temps pendant lequel tous les serveurs DNS concernés récupèrent des informations « rafraîchies ».
 
-> **Note :** Ce temps est parfois appelé **temps de propagation**. Cependant ce terme n'est pas précis ni correct car la mise à jour ne se « propage » pas des serveurs faisant autorité vers les différents serveurs DNS. Ce sont les serveurs DNS, interrogés par votre ordinateur, qui demandent l'information aux serveurs faisant autorité dès qu'ils ont besoin des informations pour un nom de domaine ou que celles-ci sont arrivées à expiration.
+> [!NOTE]
+> Ce temps est parfois appelé **temps de propagation**. Cependant ce terme n'est pas précis ni correct car la mise à jour ne se « propage » pas des serveurs faisant autorité vers les différents serveurs DNS. Ce sont les serveurs DNS, interrogés par votre ordinateur, qui demandent l'information aux serveurs faisant autorité dès qu'ils ont besoin des informations pour un nom de domaine ou que celles-ci sont arrivées à expiration.
 
 ### Comment fonctionne une requête DNS ?
 
@@ -135,7 +140,8 @@ Comme nous l'avons mentionné au début, quand on souhaite se rendre sur un site
 
 ![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
-> **Note :** Si c'est la première fois que quelqu'un demande l'adresse IP pour mozilla.org au serveur DNS, celui-ci ne la connaîtra pas. Il demandera alors au serveur faisant autorité qui possède l'information. Une fois l'adresse connue, il la transmettra à l'ordinateur.
+> [!NOTE]
+> Si c'est la première fois que quelqu'un demande l'adresse IP pour mozilla.org au serveur DNS, celui-ci ne la connaîtra pas. Il demandera alors au serveur faisant autorité qui possède l'information. Une fois l'adresse connue, il la transmettra à l'ordinateur.
 
 ## Étapes suivantes
 

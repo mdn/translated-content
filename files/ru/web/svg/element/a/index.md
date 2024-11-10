@@ -63,7 +63,8 @@ svg|a:active {
 
 {{EmbedLiveSample("Пример", 100, 100)}}
 
-> **Предупреждение:** Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Element/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
+> [!WARNING]
+> Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Element/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
 
 ## Атрибуты
 
@@ -95,24 +96,7 @@ svg|a:active {
   - : URL или фрагмент URL, на который указывает гиперссылка. Может понадобиться для обратной совместимости со старыми браузерами.
     _Тип_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 
-### Глобальные атрибуты
-
-- [Core Attributes](/ru/docs/Web/SVG/Attribute/Core)
-  - : Наиболее используемые: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Наиболее используемые: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
-  - : Наиболее используемые: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- XLink Attributes
-  - : Наиболее используемые: {{SVGAttr("xlink:title")}}
-- ARIA Attributes
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-
-## Примечания к использованию
+## Примечания по использованию
 
 {{svginfo}}
 

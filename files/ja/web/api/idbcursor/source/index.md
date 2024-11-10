@@ -1,15 +1,14 @@
 ---
-title: IDBCursor.source
+title: "IDBCursor: source プロパティ"
+short-title: source
 slug: Web/API/IDBCursor/source
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: ac5b7880d127dd1ff9cd69da09ebc427da6bf6f4
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティ **`source`** は、カーソルが反復している対象の {{domxref("IDBObjectStore")}} または {{domxref("IDBIndex")}} を返します。この関数は、カーソルが反復中であっても、最後まで反復した後であっても、トランザクションが実行中でなくても、`null` を返したり例外を投げたりすることはありません。
-
-{{AvailableInWorkers}}
+**`source`** は {{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティで、カーソルが反復している対象の {{domxref("IDBObjectStore")}} または {{domxref("IDBIndex")}} を返します。この関数は、カーソルが反復中であっても、最後まで反復した後であっても、トランザクションが実行中でなくても、`null` を返したり例外を投げたりすることはありません。
 
 ## 値
 
@@ -17,11 +16,7 @@ l10n:
 
 ## 例
 
-このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを使用してオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、カーソルの反復元を記録します。これにより、たとえば以下のような {{domxref("IDBobjectStore")}} オブジェクトがコンソールに記録されます。
-
-```json
-IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: DOMStringList, keyPath: "albumTitle", name: "rushAlbumList"…}
-```
+このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを使用してオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、カーソルの反復元を記録します。これにより、{{domxref("IDBObjectStore")}} オブジェクトがコンソールに記録されます。
 
 カーソルを使う場合、データをキーで選択する必要はなく、単に全部取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指している現在のレコードからデータを `cursor.value.foo` のようにして取得できます。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))
 
@@ -62,4 +57,4 @@ function displayData() {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -1,26 +1,30 @@
 ---
 title: ¿Qué contienen los diseños web comunes?
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
+l10n:
+  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
 
-Cuando diseña páginas para su sitio web es bueno tener una idea de los diseños más comunes.
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-<table>
+Cuando diseñas páginas para tú sitio web es bueno tener una idea de los diseños más comunes.
+
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prerrequisitos:</th>
       <td>
-        Asegúrese que usted ya ha pensado sobre
-        <a href="/es/docs/Learn/Common_questions/Thinking_before_coding"
-          >lo que quiere lograr</a
+        Asegúrate haber pensado
+        <a href="/es/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding"
+          >lo que quieres lograr</a
         >
-        con su proyecto web.
+        con tú proyecto web.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        Aprender dónde colocar las cosas en sus páginas web, y cómo hacerlo.
+        Aprender dónde colocar las cosas en tus páginas web, y cómo hacerlo.
       </td>
     </tr>
   </tbody>
@@ -28,9 +32,9 @@ Cuando diseña páginas para su sitio web es bueno tener una idea de los diseño
 
 ## Resumen
 
-Existe una razón para que hablemos sobre diseño web. Se comienza con una página en blanco, y se pueden tomar muchas direcciones. Si no tienes mucha experiencia, comenzar con una página en blanco pudiera ser un poco temible. Nosotros tenemos alrededor de 25 años de experiencia y te daremos algunas reglas básicas para ayudarte a diseñar tu sitio.
+Existe una razón para que hablemos sobre diseño web. Comienzas con una página en blanco, y puedes tomar muchas direcciones. Y si no tienes mucha experiencia, comenzar con una página en blanco puede ser un poco intimidante. Nosotros tenemos alrededor de 25 años de experiencia y te daremos algunas reglas básicas para ayudarte a diseñar tu sitio.
 
-Aún ahora con el nuevo enfoque de la web para móviles, la mayoría de las páginas web principales son construídas a partir de las siguientes partes:
+Aún ahora con el nuevo enfoque de la web para móviles, la mayoría de las páginas web convencionales son construídas a partir de las siguientes partes:
 
 - Encabezado
   - : Visible en la parte superior de cada página de un sitio. Contiene información relevante para todas las páginas (como el nombre del sitio o el logo) y un sistema de navegación fácil de usar.
@@ -61,11 +65,11 @@ La verdadera diversión comienza cuando empiezas a mezclarlos todos juntos.
 
 Estos son solo ejemplos y eres bastante libre de diseñar las cosas como quieras. Puedes notar que mientras el contenido se puede mover alrededor de la pantalla, siempre se mantiene el encabezado (1) en la parte superior y el pie de página (2) en la parte inferior. Además, el contenido principal (A) es lo más importante, así que dale la mayor parte del espacio.
 
-Estas son reglas del juego que puedes aprovechar. Desde luego, existen diseños complejos y excepciones. En otros artículos discutiremos cómo diseñar sitios responsivos (sitios que cambian en dependencia del tamaño de la pantalla) y sitios cuyos diseños varían entre las páginas. Por ahora, es mejor mantener tu diseño consistente en todo tu sitio.
+Estas son reglas generales que puedes aprovechar. Desde luego, existen diseños complejos y excepciones. En otros artículos discutiremos cómo diseñar sitios responsivos (sitios que cambian dependiendo del tamaño de la pantalla) y sitios cuyos diseños varían entre las páginas. Por ahora, es mejor mantener tu diseño consistente en todo tu sitio.
 
 ## Aprendizaje activo
 
-_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Getting_started)._
+_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Profundización
 
@@ -81,7 +85,7 @@ Bastante sencillo. Sólo recuerda que muchas personas navegarán por tu sitio de
 
 ### Diseño de dos columnas
 
-**[Abduzeedo](http://abduzeedo.com/typography-mania-261)**, un simple diseño de blog. Los blogs usualmente tienen dos columnas, una para el contenido principal que es más ancha y otra más estrecha para el contenido secundario (como widgets, niveles de navegación secundarios y anuncios).
+Los blogs usualmente tienen dos columnas, una para el contenido principal que es más ancha y otra más estrecha para el contenido secundario (como widgets, niveles de navegación secundarios y anuncios).
 
 ![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
@@ -89,11 +93,11 @@ En este ejemplo, mira la imagen (B1) justo debajo del encabezado. Está relacion
 
 ### Es una trampa
 
-**[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas...
+**[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas:
 
 ![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-...pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
+Pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
 
 ¿Por qué pensarías que es un diseño de tres columnas? Porque la imagen en la parte superior derecha está en forma de L, porque B1 parece una columna sosteniendo el conenido principal desplazado, y porque la "M" y la "I" del logo MICA crean una línea de fuerza vertical.
 
@@ -101,10 +105,10 @@ Este es un buen ejemplo de diseño clásico que admite cierta creatividad. Los d
 
 ### Un diseño mucho más complicado
 
-**La [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
+**La Opera de Paris**.
 
 ![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
 
-Básicamente un diseño de dos columnas, pero notarás muchos ajustes por aquí y por allá que rompen visualmente el diseño. Especialmente, el encabezado se superposiciona a la imagen del contenido principal. La manera en que la curva del menú del encabezado se une con la curva en el fondo de la imagen, hacen que el encabezado y el contenido principal parezcan un solo componente a pesar de que son técnicamente completamente distintos.
+Básicamente un diseño de dos columnas, pero notarás muchos ajustes por aquí y por allá que visualmente rompen el diseño. Especialmente, el encabezado se superposiciona a la imagen del contenido principal. La manera en que la curva del menú del encabezado se une con la curva en el fondo de la imagen, hacen que el encabezado y el contenido principal parezcan un solo componente a pesar de que son técnicamente completamente distintos. El ejemplo de la Opera parece más complejo que el de MICA, pero en realidad es más fácil de implementar (bueno, "fácil" es un concepto relativo).
 
-Como ves, puedes crear maravillosos sitios web incluso sólo con diseños básicos. Échale una mirada a tus propios sitos web favoritos y pregúntate a ti mismo, ¿dónde está el encabezado, el pie de página, el contenido principal y el contenido secundario? Esto te inspirará para tu propio diseño y te dará buenas pistas sobre para cuáles diseños funciona y para cuáles no.
+Como ves, puedes crear maravillosos sitios web incluso sólo con diseños básicos. Échale una mirada a tus sitos web favoritos y pregúntate a ti mismo, ¿dónde está el encabezado, el pie de página, el contenido principal y el contenido secundario? Esto te inspirará para tu propio diseño y te dará buenas pistas sobre para cuáles diseños funciona y para cuáles no.

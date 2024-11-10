@@ -193,7 +193,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_even
    />
    ```
 
-   > **备注：** 你还可以通过事件和 `v-bind` 属性的组合将数据与 `<input>` 值同步。事实上，这就是 `v-model` 在幕后所做的。但是，确切的事件和属性组合因输入类型而异，并且比仅使用 `v-model` 快捷方式需要更多代码。
+   > [!NOTE]
+   > 你还可以通过事件和 `v-bind` 属性的组合将数据与 `<input>` 值同步。事实上，这就是 `v-model` 在幕后所做的。但是，确切的事件和属性组合因输入类型而异，并且比仅使用 `v-model` 快捷方式需要更多代码。
 
 3. 让我们通过记录在我们的 `onSubmit()` 方法中提交的数据的值来测试我们对 `v-model` 的使用。在组件中，使用 `this` 关键字访问数据属性。所以我们使用 `this.label` 访问我们的 `label` 字段。
 

@@ -247,7 +247,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 - [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox)
   - : IE 10 이상에서 지원되는`<iframe>`의 다른 기능보다 이 특성은 상대적으로 최신 브라우저에서 작동하며 높은 보안 설정을 요구합니다. 이에 대해서는 다음 내용에서 다룰 예정입니다.
 
-> **참고:** 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
+> [!NOTE]
+> 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
 
 ### 보안 문제
 
@@ -286,13 +287,15 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox) 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
 
-> **참고:** 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
+> [!NOTE]
+> 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
 
 #### CSP 지시어를 설정하세요
 
 {{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Glossary/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
 
-> **참고:** 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
+> [!NOTE]
+> 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
 
 ## \<embed> 와 \<object> 요소
 

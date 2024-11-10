@@ -31,7 +31,8 @@ Construyes una expresión regular en una de estas dos formas:
 
 Un patrón de expresión regular se compone de caracteres simples, como `/abc/`, o una combinación de caracteres simples y especiales, como `/ab*c/` o `/Capítulo (\d)\.\d*/`. El último ejemplo incluye paréntesis, que se utilizan como dispositivos de memoria. La coincidencia realizada con esta parte del patrón se recuerda para su uso posterior, como se describe en [Uso de grupos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups).
 
-> **Nota:** Si ya estás familiarizado con las formas de una expresión regular, también puedes leer [la hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para una búsqueda rápida de un patrón/construcción específica.
+> [!NOTE]
+> Si ya estás familiarizado con las formas de una expresión regular, también puedes leer [la hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para una búsqueda rápida de un patrón/construcción específica.
 
 ### Usar patrones simples
 
@@ -284,7 +285,8 @@ La bandera `m` se utiliza para especificar que una cadena de entrada de varias l
 
 ## Ejemplos
 
-> **Nota:** También hay varios ejemplos disponibles en:
+> [!NOTE]
+> También hay varios ejemplos disponibles en:
 >
 > - Las páginas de referencia para {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
 > - Artículos de esta guía: [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)

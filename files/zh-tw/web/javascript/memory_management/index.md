@@ -195,7 +195,7 @@ The max amount of available heap memory can be increased with a flag:
 
 `node --max-old-space-size=6000 index.js`
 
-We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
+We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging):
 
 ```sh
 node --expose-gc --inspect index.js
@@ -203,6 +203,6 @@ node --expose-gc --inspect index.js
 
 ## 參見
 
-- [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
+- [IBM article on "Memory leak patterns in JavaScript" (2007)](https://developer.ibm.com/technologies/web-development/)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](<https://learn.microsoft.com/en-us/previous-versions/msdn10/ff728624(v=msdn.10)>)
 - [Performance](/zh-TW/docs/Mozilla/Performance)

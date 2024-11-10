@@ -9,9 +9,9 @@ l10n:
 
 우리의 첫 번째 JavaScript 과정에서는, 현실적인 첫 JavaScript 예제 작성에 앞서 "JavaScript란 뭘까", "JavaScript는 어떻게 생겼을까", "JavaScript는 뭘 할 수 있을까"와 같은 핵심적인 질문에 답을 하겠습니다. 그다음으로는 변수, 문자열, 숫자, 배열과 같은 핵심 개념을 자세히 논의해 보겠습니다.
 
-> **알림:**
+> [!CALLOUT]
 >
-> #### 프론트엔드 웹 개발자가 되고자 하시나요?
+> 프론트엔드 웹 개발자가 되고자 하시나요?
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
@@ -25,7 +25,8 @@ JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
 
-> **참고:** 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
+> [!NOTE]
+> 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
 
 ## 구성
 

@@ -29,7 +29,8 @@ Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"�
 1. 使用 `django-admin`工具創建工程的文件夾，基本的文件模板和工程管理腳本（**manage.py**）。
 2. 用 **manage.py** 創建一個或多個*應用*。
 
-   > **備註：** 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django 鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。
+   > [!NOTE]
+   > 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django 鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。
 
 3. 工程裡註冊新的應用。
 4. 為每個應用分配 url。
@@ -90,7 +91,8 @@ locallibrary 項目的子文件夾是整個網站的進入點：
 python3 manage.py startapp catalog
 ```
 
-> **備註：** Linux/Mac OS X 應用可以使用上面的命令。在 windows 平台下應該改為： `py -3 manage.py startapp catalog`
+> [!NOTE]
+> Linux/Mac OS X 應用可以使用上面的命令。在 windows 平台下應該改為： `py -3 manage.py startapp catalog`
 >
 > 如果你是 windows 系統，在這個部分用`py -3`替代`python3`。
 >
@@ -119,7 +121,8 @@ locallibrary/
 - 一個*migration*文件夾，用來存放 「migrations」 ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
 - **\_\_init\_\_.py** —一個空文件，Django/Python 會將這個文件作為[Python 套件包](https://docs.python.org/3/tutorial/modules.html#packages)並允許你在項目的其他部分使用它。
 
-> **備註：** 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。
+> [!NOTE]
+> 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。
 
 ## 註冊 catalog 應用
 
@@ -141,7 +144,8 @@ INSTALLED_APPS = [
 
 新的這行，詳細說明了應用配置文件在( `CatalogConfig`) **/locallibrary/catalog/apps.py** 裡，當你創建應用時就完成了這個過程。
 
-> **備註：** 注意到`INSTALLED_APPS已经有许多其他的应用了` (還有 `MIDDLEWARE`,在 settings 的下面)。這些應用為 [Django administration site](/zh-TW/docs/Learn/Server-side/Django/Admin_site) 提供了支持和許多功能(包括會話，認證系統等)。
+> [!NOTE]
+> 注意到`INSTALLED_APPS已经有许多其他的应用了` (還有 `MIDDLEWARE`,在 settings 的下面)。這些應用為 [Django administration site](/zh-TW/docs/Learn/Server-side/Django/Admin_site) 提供了支持和許多功能(包括會話，認證系統等)。
 
 ## 配置資料庫
 
@@ -254,7 +258,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **備註：** 有許多方法可以擴充`urlpatterns`列表（上面我們只是使用`+=`運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：
+> [!NOTE]
+> 有許多方法可以擴充`urlpatterns`列表（上面我們只是使用`+=`運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：
 >
 > ```python
 > urlpatterns = [
@@ -295,19 +300,22 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **警告：** 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。
+> [!WARNING]
+> 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。
 
 該**`makemigrations`**命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是 Django 專家時，你可以選擇稍微調整它們。
 
 這個 **`migrate`**命令，真正對你的資料庫實施遷移（Django 跟踪哪些已添加到當前資料庫）。
 
-> **備註：** 參見 [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django 文件) ，了解較少使用的遷移命令的其他信息。
+> [!NOTE]
+> 參見 [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django 文件) ，了解較少使用的遷移命令的其他信息。
 
 ### 運行網站
 
 在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。
 
-> **備註：** 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（`http://127.0.0.1:8000/`），但你也可以選擇其他端口。有關更多信息，查閱（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
+> [!NOTE]
+> 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（`http://127.0.0.1:8000/`），但你也可以選擇其他端口。有關更多信息，查閱（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
 通過如下`runserver`命令，運行開發網頁服務器。（同樣的要在**manage.py**的目錄）
 
@@ -329,11 +337,13 @@ python3 manage.py runserver
 
 別擔心，這個錯誤頁面是預期的結果。因為我們沒有在 `catalogs.urls`模塊中，定義任何頁面或網址（即是當我們使用一個指向根目錄的 URL 時，會被重新定向的地方）。
 
-> **備註：** 上面的頁面，演示了一個很棒的 Django 功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的 URL，與我們的任何 URL 模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。
+> [!NOTE]
+> 上面的頁面，演示了一個很棒的 Django 功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的 URL，與我們的任何 URL 模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。
 
 這個時候，我們知道 Django 正在工作！
 
-> **備註：** 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！
+> [!NOTE]
+> 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！
 
 ## 挑戰自我
 

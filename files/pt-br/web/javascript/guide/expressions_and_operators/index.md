@@ -86,7 +86,8 @@ var var2 = 4;
 | Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                 | `var1 < var2 "12" < "2"`             |
 | Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                           | `var1 <= var2 var2 <= 5`             |
 
-> **Nota:** (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
+> [!NOTE]
+> (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
 
 ### Operadores aritméticos
 
@@ -148,7 +149,8 @@ Por exemplo, a representação binária de nove é 1001 e a representação bin�
 | `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
-> **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
+> [!NOTE]
+> No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 
 #### Operadores de deslocamento bit a bit
 

@@ -9,7 +9,7 @@ l10n:
 
 [Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`Magnetometer`** インターフェイスは、デバイスのプライマリー磁気センサーで検出される磁場の情報を提供します。
 
-このセンサーを使用するには、ユーザーが [Permissions API](/ja/docs/Web/API/Permissions_API) により `'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

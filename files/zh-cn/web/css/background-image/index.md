@@ -15,7 +15,8 @@ slug: Web/CSS/background-image
 
 如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 `none`。
 
-> **备注：** 即使图像是不透明的，背景色在通常情况下并不会被显示，web 开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。
+> [!NOTE]
+> 即使图像是不透明的，背景色在通常情况下并不会被显示，web 开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。
 
 ## 语法
 
@@ -28,7 +29,8 @@ background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 0, 0.5),
     rgba(0, 0, 255, 0.5)
-  ), url("catfront.png");
+  ),
+  url("catfront.png");
 ```
 
 ### 取值
@@ -116,4 +118,4 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("image/paint", "paint()")}}
-  - {{cssxref("url", "url()")}}
+  - {{cssxref("url_value", "&lt;url&gt;")}}

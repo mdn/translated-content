@@ -28,7 +28,7 @@ _**`AbortSignal`** 接口继续它父接口 {{domxref("EventTarget")}} 的方法
 - {{domxref("AbortSignal.abort()")}}
   - : 返回一个已经被设置为中止的 **`AbortSignal`** 实例。
 - {{domxref("AbortSignal.timeout()")}}
-  - : 返回一个在指定事件后将自动终止的 **`AbortSignal`** 实例。
+  - : 返回一个在指定时间后自动终止的 **`AbortSignal`** 实例。
 
 ### 事件
 
@@ -73,7 +73,8 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当调用 `abort()` 时，`fetch()` promise 会以“`AbortError`”`DOMException` 拒绝。
+> [!NOTE]
+> 当调用 `abort()` 时，`fetch()` promise 会以“`AbortError`”`DOMException` 拒绝。
 
 你可以[在 GitHub 上找到一个完整、可运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你也可以参见[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
@@ -131,7 +132,8 @@ try {
 }
 ```
 
-> **备注：** 与使用 {{domxref("AbortSignal.timeout()")}} 不同，没有方法来判断最终中止是否由超时引起。
+> [!NOTE]
+> 与使用 {{domxref("AbortSignal.timeout()")}} 不同，没有方法来判断最终中止是否由超时引起。
 
 ## 规范
 
