@@ -15,7 +15,7 @@ l10n:
 
 - `shadowrootmode`
 
-  - : Создает [теневой корень](/en-US/docs/Glossary/Shadow_tree) для родительского элемента.
+  - : Создает [теневой корень](/ru/docs/Glossary/Shadow_tree) для родительского элемента.
     Это декларативная версия метода {{domxref("Element.attachShadow()")}} и принимает те же {{glossary("enumerated", "перечисляемые")}} значения.
 
     - `open`
@@ -36,18 +36,18 @@ l10n:
 
 - `shadowrootclonable`
 
-  - : Устанавливает значение свойства [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) для [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
+  - : Устанавливает значение свойства [`clonable`](/ru/docs/Web/API/ShadowRoot/clonable) для [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
     Если установлен, клон теневого хоста (родительского элемента этого `<template>`), созданный с помощью {{domxref("Node.cloneNode()")}} или {{domxref("Document.importNode()")}}, будет включать теневой корень в копию.
 
 - `shadowrootdelegatesfocus`
 
-  - : Устанавливает значение свойства [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) для [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
+  - : Устанавливает значение свойства [`delegatesFocus`](/ru/docs/Web/API/ShadowRoot/delegatesFocus) для [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
     Если установлен и выбран нефокусируемый элемент в теневом дереве, то фокус делегируется первому фокусируемому элементу в дереве.
     Значение по умолчанию - `false`.
 
 - `shadowrootserializable` {{experimental_inline}}
 
-  - : Устанавливает значение свойства [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) для [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
+  - : Устанавливает значение свойства [`serializable`](/ru/docs/Web/API/ShadowRoot/serializable) для [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot), созданного с использованием этого элемента, в `true`.
     Если установлено, теневой корень может быть сериализован путем вызова методов {{DOMxRef('Element.getHTML()')}} или {{DOMxRef('ShadowRoot.getHTML()')}} с параметром `options.serializableShadowRoots`, установленным в `true`.
     Значение по умолчанию - `false`.
 
@@ -178,11 +178,11 @@ table td {
 
 ```js
 const isShadowRootModeSupported =
-HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
 
 document
-.querySelector("p[hidden]")
-.toggleAttribute("hidden", isShadowRootModeSupported);
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootModeSupported);
 ```
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
@@ -344,7 +344,7 @@ container.appendChild(secondClone);
         <a
           href="/ru/docs/Web/HTML/Content_categories#элементы_поддержки_скриптов"
           >элементы поддержки скриптов</a
-        >. Также разрешено как дочерний элемент элемента {{HTMLElement("colgroup")}}, у которого <em>нет</em> атрибута <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
+        >. Также разрешено как дочерний элемент элемента {{HTMLElement("colgroup")}}, у которого <em>нет</em> атрибута <a href="/ru/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
       </td>
     </tr>
     <tr>
@@ -376,12 +376,12 @@ container.appendChild(secondClone);
 
 ## Смотрите также
 
-- HTML-атрибуты [`part`](/en-US/docs/Web/HTML/Global_attributes/part) и [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts)
+- HTML-атрибуты [`part`](/ru/docs/Web/HTML/Global_attributes/part) и [`exportparts`](/ru/docs/Web/HTML/Global_attributes/exportparts)
 - HTML-элемент {{HTMLElement("slot")}}
 - CSS-псевдоклассы {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}} и {{CSSXref(":host-context", ":host-context()")}}
 - CSS-псевдоэлементы {{CSSXref("::part")}} и {{CSSXref("::slotted")}}
-- Интерфейс [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot)
-- [Использование шаблонов и слотов](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- Модуль [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping)
-- [Декларативный теневой DOM (с использованием html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) в _Using Shadow DOM_
+- Интерфейс [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot)
+- [Использование шаблонов и слотов](/ru/docs/Web/API/Web_components/Using_templates_and_slots)
+- Модуль [CSS scoping](/ru/docs/Web/CSS/CSS_scoping)
+- [Декларативный теневой DOM (с использованием html)](/ru/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) в _Using Shadow DOM_
 - [Декларативный теневой DOM](https://web.dev/articles/declarative-shadow-dom) на web.dev (2023)
