@@ -55,6 +55,7 @@ l10n:
 - `cols`
   - : 平均的な文字幅による、テキストコントロールの外見上の幅です。この属性を指定する場合は、正の整数を与えなければなりません。指定されなかった場合の既定値は `20` です。
 - [`dirname`](/ja/docs/Web/HTML/Attributes/dirname)
+
   - : この属性は、要素の内容のテキストの書字方向を示すために使用します。
     詳しくは、 [`dirname` 属性](/ja/docs/Web/HTML/Attributes/dirname)を参照してください。
 
