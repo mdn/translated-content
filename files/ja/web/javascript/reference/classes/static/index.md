@@ -1,6 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
+l10n:
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Classes")}}
