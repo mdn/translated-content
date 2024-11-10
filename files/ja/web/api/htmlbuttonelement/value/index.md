@@ -3,7 +3,7 @@ title: "HTMLButtonElement: value プロパティ"
 short-title: value
 slug: Web/API/HTMLButtonElement/value
 l10n:
-  sourceCommit: 2b29051262aa05ce9a630d0dd2d6958f493abe19
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
 {{ APIRef("HTML DOM") }}
