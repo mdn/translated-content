@@ -96,7 +96,7 @@ function ctrz(integer) {
   if (integer === 0) {
     // このステップを飛ばすと -1 を返すことになる
     return 32;
-}
+  }
   integer &= -integer; // `int = int & (~int + 1)` と同等
   return 31 - clz(integer);
 }
