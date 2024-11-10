@@ -147,7 +147,7 @@ l10n:
       <th scope="row">Неявная ARIA-роль</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/ru/docs/Web/Accessibility/ARIA/Roles/generic_role"
             >generic</a
           ></code
         >
