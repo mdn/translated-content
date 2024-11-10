@@ -54,7 +54,7 @@ HTML-элемент **`<title>`** определяет заголовок док
 
 > [!NOTE]
 > В настоящее время динамическое обновление заголовка страницы не будет автоматически произноситься скринридерами. Если вы собираетесь обновить заголовок страницы, чтобы отразить значительные изменения состояния страницы, может потребоваться также использование
-[ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+> [ARIA Live Regions](/ru/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
