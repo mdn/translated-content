@@ -123,7 +123,7 @@ const countTrailsMethods = (function (stdlib, foreign, heap) {
     if ((integer | 0) == 0) {
       // このステップを飛ばすと -1 を返すことになる
       return 32;
-  }
+    }
     // メモ: asm.js には &= のような複合代入演算子がない
     integer = integer & -integer; // equivalent to `int = int & (~int + 1)`
     return (31 - clz(integer)) | 0;
