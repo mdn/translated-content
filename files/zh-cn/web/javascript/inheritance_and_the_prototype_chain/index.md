@@ -72,7 +72,7 @@ console.log(o.d); // undefined
 
 给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当它被 [getter 或 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter) 拦截时。
 
-同理，你可以创建更长的原型链，并在所有的原型上查找属性。
+同理，你可以创建更长的原型链，并在所有的原型链上查找属性。
 
 ```js
 const o = {
