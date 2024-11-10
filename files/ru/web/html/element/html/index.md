@@ -26,7 +26,7 @@ l10n:
 
 Добавление валидного атрибута `lang` в элемент `<html>` также гарантирует, что важные метаданные, содержащиеся в элементе {{HTMLElement("head")}}, например заголовок страницы {{HTMLElement("title")}}, также будут объявлены правильно.
 
-- [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [MDN Understanding WCAG, Guideline 3.1 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## Примеры
@@ -76,7 +76,7 @@ l10n:
     <tr>
       <th scope="row">Неявная ARIA-роль</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role">document</a>
+        <a href="/ru/docs/Web/Accessibility/ARIA/Roles/document_role">document</a>
       </td>
     </tr>
     <tr>
