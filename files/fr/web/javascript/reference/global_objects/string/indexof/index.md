@@ -9,7 +9,8 @@ La méthode **`indexOf()`** renvoie l'indice de la première occurence de la val
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **Note :** Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
+> [!NOTE]
+> Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
 
 ## Syntaxe
 

@@ -115,15 +115,15 @@ const doAjax = async () => {
 doAjax().then(console.log).catch(console.log);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)

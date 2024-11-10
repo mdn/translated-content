@@ -70,7 +70,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note :** Voir [l'exemple live sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et aussi [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!NOTE]
+> Voir [l'exemple live sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et aussi [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Spécifications
 

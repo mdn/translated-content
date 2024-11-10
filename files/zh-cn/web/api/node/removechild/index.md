@@ -1,97 +1,123 @@
 ---
-title: Node.removeChild
+title: Node：removeChild() 方法
 slug: Web/API/Node/removeChild
+l10n:
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("DOM")}}
 
-**Node.removeChild()** 方法从 DOM 中删除一个子节点。返回删除的节点。
+{{domxref("Node")}} 接口的 **`removeChild()`** 方法会从 DOM 中移除一个子节点，并返回移除的节点。
+
+> [!NOTE]
+> 只要对被移除的子节点保持引用，它仍然存在于内存中，但不再是 DOM 的一部分。在以后的代码中仍可重复使用。
+>
+> 如果不存储 `removeChild()` 的返回值，也不保留其他引用，该节点将在短时间内在内存中[自动删除](/zh-CN/docs/Web/JavaScript/Memory_management)。
+
+与 {{domxref("Node.cloneNode()")}} 不同，返回值保留了与其关联的 `EventListener` 对象。
 
 ## 语法
 
-```plain
-let oldChild = node.removeChild(child);
-
-//OR
-
-element.removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
-- `child` 是要移除的那个子节点。
-- `node` 是`child`的父节点。
-- oldChild 保存对删除的子节点的引用。`oldChild` === `child`.
+### 参数
 
-被移除的这个子节点仍然存在于内存中，只是没有添加到当前文档的 DOM 树中，因此，你还可以把这个节点重新添加回文档中，当然，实现要用另外一个变量比如`上例中的 oldChild`来保存这个节点的引用。如果使用上述语法中的第二种方法，即没有使用 oldChild 来保存对这个节点的引用，则认为被移除的节点已经是无用的，在短时间内将会被[内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)回收。
+- `child`
+  - : {{domxref("Node")}}，即要从 DOM 中删除的子节点。
 
-如果上例中的`child 节点`不是`node`节点的子节点，则该方法会抛出异常。
+### 异常
+
+- `NotFoundError` {{domxref("DOMException")}}
+  - : 如果 `child` 不是该节点的子节点，则抛出此异常。
+- {{jsxref("TypeError")}}
+  - : 如果 `child` 为 `null`，则抛出此异常。
 
 ## 示例
 
-```plain
-<!--Sample HTML code-->
-<div id="top" align="center"> </div>
+### 简单的示例
 
-<script type="text/javascript">
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
-      var garbage = top.removeChild(nested);
-      //Test Case 2: the method throws the exception (2)
-</script>
+给定以下 HTML：
 
-<!--Sample HTML code-->
-<div id="top" align="center">
- <div id="nested"></div>
-</div>
-
-<script type="text/javascript">
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
-      var garbage = top.removeChild(nested);
-      // This first call remove correctly the node
-      garbage = top.removeChild(nested);
-      // Test Case 1: the method in the second call here, throws the exception (1)
-</script>
-```
-
-```plain
-<!--示例 HTML 代码-->
-
-<div id="top" align="center">
-  <div id="nested"></div>
+```html
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
-```js
-// 先定位父节点，然后删除其子节点
-var d = document.getElementById("top");
-var d_nested = document.getElementById("nested");
-var throwawayNode = d.removeChild(d_nested);
-```
+在已知其父节点时移除指定元素：
 
 ```js
-// 无须定位父节点，通过 parentNode 属性直接删除自身
-var node = document.getElementById("nested");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const throwawayNode = parent.removeChild(child);
+```
+
+在不需要指定其父节点的情况下移除指定元素：
+
+```js
+const node = document.getElementById("child");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
 ```
 
+从元素中移除所有子元素：
+
 ```js
-// 移除一个元素节点的所有子节点
-var element = document.getElementById("top");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
 ```
 
+### 引发 TypeError
+
+```html
+<!--HTML 代码示例-->
+<div id="parent"></div>
+```
+
+```js
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+// 抛出未捕获的 TypeError
+const garbage = parent.removeChild(child);
+```
+
+### 引发 NotFoundError
+
+```html
+<!--HTML 代码示例-->
+<div id="parent">
+  <div id="child"></div>
+</div>
+```
+
+```js
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+// 第一次调用正确并移除了该节点。
+const garbage = parent.removeChild(child);
+
+// 抛出 NotFoundError
+garbage = parent.removeChild(child);
+```
+
 ## 规范
 
-- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+{{Specifications}}
 
-## 相关链接
+## 浏览器兼容性
 
-- {{domxref("Node.replaceChild")}}
+{{Compat}}
+
+## 参见
+
+- {{domxref("Node.replaceChild()")}}
 - {{domxref("Node.parentNode")}}
-- {{domxref("ChildNode.remove")}}
+- {{domxref("Element.remove()")}}
+- {{domxref("Node.cloneNode()")}}

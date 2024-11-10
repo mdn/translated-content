@@ -46,16 +46,7 @@ svg {
 - [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
   - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}
 
-### 全局属性
-
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
-  - : 最主要的有：{{SVGAttr('id')}}
-- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
-- 事件属性
-  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## 用法
+## 使用说明
 
 该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 

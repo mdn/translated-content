@@ -9,14 +9,8 @@ slug: Web/API/Document/evaluate
 
 ## 语法
 
-```
-var xpathResult = document.evaluate(
-  xpathExpression,
-  contextNode,
-  namespaceResolver,
-  resultType,
-  result
-);
+```js-nolint
+evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
 - `xpathExpression` 表示要计算的 Xpath 字符串。
@@ -99,4 +93,4 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
 - [XPath Code Snippets](/zh-CN/docs/Code_snippets/XPath)
-- [Check for browser support](http://codepen.io/johan/full/ckFgn)
+- [Check for browser support](https://codepen.io/johan/full/ckFgn)

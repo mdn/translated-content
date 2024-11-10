@@ -53,7 +53,8 @@ exportKey(format, key)
 
 ## 例
 
-> **メモ:** GitHub 上の[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)ことができます。
+> [!NOTE]
+> GitHub 上の[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)ことができます。
 
 ### Raw エクスポート
 

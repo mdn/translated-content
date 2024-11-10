@@ -44,7 +44,7 @@ ruby-align: unset;
 
 ## 例
 
-<h3 id="Ruby_aligned_at_the_start_of_the_base_text">ルビをベーステキストの先頭に揃える</h3>
+### ルビをベーステキストの先頭に揃える
 
 #### HTML
 
@@ -65,9 +65,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}
+{{EmbedLiveSample("ルビをベーステキストの先頭に揃える", 180, 40)}}
 
-<h3 id="Ruby_aligned_at_the_center_of_the_base_text">ルビをベーステキストの中央に揃える</h3>
+### ルビをベーステキストの中央に揃える
 
 #### HTML
 
@@ -88,9 +88,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}
+{{EmbedLiveSample("ルビをベーステキストの中央に揃える", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_ruby_elements">ルビ要素の範囲内にスペースを配分する</h3>
+### ルビ要素の範囲内にスペースを配分する
 
 #### HTML
 
@@ -111,9 +111,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}
+{{EmbedLiveSample("ルビ要素の範囲内にスペースを配分する", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_and_around_ruby_elements">ルビ要素内および周囲にスペースを配分する</h3>
+### ルビ要素内および周囲にスペースを配分する
 
 #### HTML
 
@@ -134,7 +134,7 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}
+{{EmbedLiveSample("ルビ要素内および周囲にスペースを配分する", 180, 40)}}
 
 ## 仕様書
 

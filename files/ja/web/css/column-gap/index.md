@@ -46,7 +46,7 @@ column-gap: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -82,7 +82,7 @@ column-gap: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("フレックスレイアウト", "auto", "120px")}}
 
 ### グリッドレイアウト
 
@@ -115,7 +115,7 @@ column-gap: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("グリッドレイアウト", "auto", "120px")}}
 
 ### 段組みレイアウト
 
@@ -139,11 +139,11 @@ column-gap: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{EmbedLiveSample("段組みレイアウト", "auto", "120px")}}
 
 ## 仕様書
 
-{{Specifications("css.properties.column-gap.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 

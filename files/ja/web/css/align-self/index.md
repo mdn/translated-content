@@ -83,11 +83,11 @@ align-self: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -123,11 +123,11 @@ div:nth-child(3) {
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('例')}}
 
 ## 仕様書
 
-{{Specifications("css.properties.align-self.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 

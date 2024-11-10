@@ -24,11 +24,11 @@ input:read-write {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [`:read-only`](/ru/docs/Web/CSS/:read-only)
 - HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable)

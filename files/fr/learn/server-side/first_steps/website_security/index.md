@@ -34,7 +34,8 @@ La sécurité efficace d'un site web nécessite un effort de conception sur l'en
 
 Le reste de cet article détaille les menaces les plus courantes qui pèsent sur les sites web et quelques étapes simples pour protèger votre site.
 
-> **Note :** ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
+> [!NOTE]
+> Ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
 
 ## Menaces visant la sécurité des sites web
 
@@ -44,12 +45,13 @@ Cette section n'énumère que quelques-unes des menaces les plus courantes visan
 
 XSS est un terme utilisé pour décrire une classe d'attaque qui permet à l'attaquant d'injecter des scripts, exécutés côté-client, _au travers_ du site web pour viser le navigateur web des autres utilisateurs. Comme le code injecté provient du site web le navigateur web le considère comme sûr, il peut de ce fait faire des choses comme transmettre le cookie d'authentification de l'utilisateur à l'attaquant. Une fois que l'attaquant obtient ce cookie il peut se connecter sur le site comme si il était l'utilisateur attaqué et peut faire tout ce que l'utilisateur pourrait faire. En fonction du site sur lequel l'attaque se produit, cela peut inclure l'accès aux détails de carte bancaire, les informations des contacts, la modification du mot de passe, etc.
 
-> **Note :** les vulnérabilités XSS ont historiquement été les plus courantes.
+> [!NOTE]
+> Les vulnérabilités XSS ont historiquement été les plus courantes.
 
 Il y a deux manières principales pour demander au site de retourner un script injecté vers un navigateur web — elles sont désignées en tant que vulnérabilités XSS _réfléchie_ et _persistante_.
 
 - Une vulnérabilité XSS réfléchie se produit quand le contenu de l'utilisateur transmis au serveur est immédiatement retourné, sans avoir été modifié, pour être affiché dans le navigateur — tout les scripts présents dans le contenu d'origine seront exécutés quand la nouvelle page sera chargée!
-  On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `http://mysite.com?q=beer<script%20src="http://sitedangereux.com/malicieux.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
+  On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `https://developer.mozilla.org?q=beer<script%20src="http://example.com/script_malveillant.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
 - Une vulnérabilité XSS _persistante_ sera celle où le script malicieux est stocké sur le site web puis affiché, sans modification, un peu plus tard par les autres utilisateurs et exécuté à leur insu.
   Par exemple, un écran de discussion qui accepte les commentaires contenant du code HTML pur peuvent stocker le script malicieux de l'attaquant. Quand les commentaires sont affichés le script est exécuté et peut ensuite transmettre à l'attaquant les informations nécessaires pour accèder au compte de l'utilisateur. Cette méthode d'attaque est extrêmement courante et efficace, parce que l'attaquant n'a pas besoin d'avoir une relation directe avec les victimes.
 
@@ -77,7 +79,8 @@ SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WH
 
 Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caractère_d%27échappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
 
-> **Note :** la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
+> [!NOTE]
+> La requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
 
 Dans la requête ci-dessous nous avons échappé le caractère '. Le SQL va donc interpréter la chaine complète (en gras) comme un nom (un nom étrange en effet, mais pas nuisible).
 
@@ -87,7 +90,8 @@ SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo W
 
 Les frameworks web se chargent bien souvent d'échapper ces caractères à votre place. Django, par exemple, s'assure que toute saisie d'un utilisateur transmise au modèle est bien échappée.
 
-> **Note :** Cette section s'inspire beaucoup des informations de [Wikipedia ici](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> Cette section s'inspire beaucoup des informations de [Wikipedia ici](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Falsification de requête inter-sites (CSRF)
 
@@ -99,7 +103,8 @@ Si un utilisateur clique sur le bouton de validation, une requête HTTP POST, co
 
 Au final tout utilisateur qui va cliquer sur le bouton de validation, alors qu'il sera connecté sur le site d'échange d'argent, va autoriser la transaction. John va devenir riche !
 
-> **Note :** l'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.
+> [!NOTE]
+> L'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.
 
 Un moyen de prévenir ce type d'attaque est que le serveur demande que chaque requête POST possède un secret généré par le serveur et spécifique à l'utilisateur (le secret serait transmis par le serveur lors de l'envoi du formulaire de transaction). Cette approche empêche John de créer son propre formulaire car il n'est pas capable de connaitre le secret que le serveur founit à l'utilisateur. Même si il venait à trouver ce secret et créer un formulaire pour un utilisateur particulier, il ne pourrait pas utiliser ce formulaire pour attaquer d'autres utilisateurs
 
@@ -121,7 +126,8 @@ Il y en a beaucoup d'autres. Pour une liste plus exhaustive vous pouvez consulte
 
 La majorité des attaques citées précédement réusissent lorsque l'application web fait confiance aux données provenant du navigateur web. Quoique vous fassiez d'autre pour améliorer la sécurité de votre site web, vous devez désinfecter toutes les saisies des utilisateurs avant de les afficher, de les utiliser dans les requêtes SQL ou de les transmettre dans les appels du système ou du système de fichier.
 
-> **Attention :** la leçon la plus importante à retenir concernant la sécurité d'un site web est de ne **jamais faire confiance aux données du navigateur web**. Cela comprend les requêtes `GET` avec la présence des paramètres dans l'URL, les données envoyées avec les `POST`, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.
+> [!WARNING]
+> La leçon la plus importante à retenir concernant la sécurité d'un site web est de ne **jamais faire confiance aux données du navigateur web**. Cela comprend les requêtes `GET` avec la présence des paramètres dans l'URL, les données envoyées avec les `POST`, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.
 
 Quelques autres points que vous pouvez mettre en place :
 

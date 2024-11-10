@@ -93,7 +93,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.:
+지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.
 
 - {{htmlelement("ul")}} 및 {{htmlelement("ol")}} 요소의 위쪽 및 아래쪽 {{cssxref("margin")}}은 `16px`(`1em`)이고 {{cssxref("padding-left")}}은 `40px`(`2.5em`)입니다.
 - 목록 항목({{htmlelement("li")}} 요소)에는 간격에 대한 기본값이 설정되어 있지 않습니다.
@@ -298,7 +298,8 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **참고:** 반전된 목록에 `start` 속성 값보다 더 많은 목록 항목이 있는 경우 개수는 계속해서 0이 된 다음 음수 값이 됩니다.
+> [!NOTE]
+> 반전된 목록에 `start` 속성 값보다 더 많은 목록 항목이 있는 경우 개수는 계속해서 0이 된 다음 음수 값이 됩니다.
 
 ### value
 
@@ -319,7 +320,8 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **참고:** 숫자가 아닌 {{cssxref("list-style-type")}}을 사용하는 경우에도 `value` 속성에 동일한 숫자 값을 사용해야 합니다.
+> [!NOTE]
+> 숫자가 아닌 {{cssxref("list-style-type")}}을 사용하는 경우에도 `value` 속성에 동일한 숫자 값을 사용해야 합니다.
 
 ## 능동적 학습: 중첩 목록 스타일 지정
 

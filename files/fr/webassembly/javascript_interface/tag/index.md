@@ -11,7 +11,8 @@ Lorsqu'on crée un objet [`WebAssembly.Exception`](/fr/docs/Web/JavaScript/Refer
 
 [Construire](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag) une instance de `Tag` crée une nouvelle balise unique. Cette balise peut ensuite être passée à un module WebAssembly pour qu'il l'importe et qui deviendra alors une balise typée, définie dans la _section des balises (<i lang="en">tag section</i>)_ du module WebAssembly. On peut aussi exporter une balise définie dans un module pour l'utiliser afin d'inspecter les exceptions déclenchées par le module.
 
-> **Note :** Il n'est pas possible d'accéder aux valeurs d'une exception avec une autre balise qui décrirait la même structure. Il faut que ce soit exactement la même balise qui soit utilisée&nbsp;! Cela permet de s'assurer que les modules WebAssembly puissent garder privées des informations sur les exceptions internes si nécessaire. Le code JavaScript peut toujours intercepter et relancer les exceptions qu'il ne peut pas inspecter.
+> [!NOTE]
+> Il n'est pas possible d'accéder aux valeurs d'une exception avec une autre balise qui décrirait la même structure. Il faut que ce soit exactement la même balise qui soit utilisée&nbsp;! Cela permet de s'assurer que les modules WebAssembly puissent garder privées des informations sur les exceptions internes si nécessaire. Le code JavaScript peut toujours intercepter et relancer les exceptions qu'il ne peut pas inspecter.
 
 ## Constructeur
 
@@ -50,7 +51,8 @@ Le module WebAssembly pourra alors importer la balise comme ceci&nbsp;:
 
 Si la balise est ensuite utilisée pour lever une exception qui atteint le code, on pourra l'utiliser pour inspecter les valeurs portées par l'exception.
 
-> **Note :** Il existe d'autres façons&nbsp;: on pourrait aussi utiliser la balise afin de créer un objet [`WebAssembly.Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) et la déclencher depuis une fonction appelée côté WebAssembly.
+> [!NOTE]
+> Il existe d'autres façons&nbsp;: on pourrait aussi utiliser la balise afin de créer un objet [`WebAssembly.Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) et la déclencher depuis une fonction appelée côté WebAssembly.
 
 ## Spécifications
 

@@ -4,11 +4,11 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}
-JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
+JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированные инструменты для создания масштабируемых и интерактивных веб-приложений. Многие современные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
 
-Начинающему разработчику веб-интерфейсов, может быть трудно понять, с чего начать изучение фреймворков - их выбор разнообразен, а новые появляются постоянно. В основном же они работают аналогичным образом, но делают некоторые вещи по-разному, также есть некоторые специфичные вещи, которые следует соблюдать при использовании фреймворков.
+Начинающему разработчику веб-интерфейсов может быть трудно понять с чего начать изучение фреймворков — их выбор разнообразен, а новые появляются постоянно. В основном же они работают аналогичным образом, но делают некоторые вещи по-разному, также есть некоторые специфичные вещи, которые следует соблюдать при использовании фреймворков.
 
-Этим набором статей мы постараемся дать вам удобную отправную точку, чтобы помочь вам начать изучать основы. Мы не стремимся научить вас всему, что вам нужно знать о React / ReactDOM, или Vue, или какой-то другой конкретной среде; Документация этих фреймворков отлично выполняют эту работу. Вместо этого мы хотим сделать шаг назад и сначала ответить на более фундаментальные вопросы, такие как:
+Этим набором статей мы постараемся дать вам удобную отправную точку, чтобы помочь вам начать изучать основы. Мы не стремимся научить вас всему, что вам нужно знать о React/ReactDOM, Vue или каком-то другом конкретном фреймворке. Документация этих фреймворков отлично выполняют эту работу. Вместо этого мы хотим сделать шаг назад и сначала ответить на более фундаментальные вопросы, такие как:
 
 - Почему я должен использовать фреймворк? Какие проблемы он решит?
 - Какие вопросы я должен задать себе при выборе определённого фреймворка?
@@ -35,7 +35,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## React tutorials
 
-> **Примечание:** React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> [!NOTE]
+> React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
 
@@ -56,7 +57,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Ember tutorials
 
-> **Примечание:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
 
@@ -75,7 +77,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Vue tutorials
 
-> **Примечание:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> [!NOTE]
+> Vue tutorials last tested in May 2020, with Vue 2.6.11.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 

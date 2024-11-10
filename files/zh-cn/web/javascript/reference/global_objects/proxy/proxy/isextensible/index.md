@@ -85,7 +85,7 @@ Object.isExtensible(p); // TypeError is thrown
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

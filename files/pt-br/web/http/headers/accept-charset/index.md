@@ -9,7 +9,8 @@ O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary(
 
 Se o servidor não pode servir nenhum codificação de caracteres vindo deste cabeçalho de requisição, ele pode teoricamente manda de volta um código de erro {{HTTPStatus("406", "406 Not Acceptable")}}. Mas para uma melhor experiência de usuário, isso raramente é feito e o cabeçalho `Accept-Charset` é ignorado.
 
-> **Nota:** Nas versões mais antigas do HTTP/1.1, a codificação de caracteres definida era: ISO-8859-1. Isto não é mais recomendado, e agora todo tipo de conteúdo tem o seu próprio padrão.
+> [!NOTE]
+> Nas versões mais antigas do HTTP/1.1, a codificação de caracteres definida era: ISO-8859-1. Isto não é mais recomendado, e agora todo tipo de conteúdo tem o seu próprio padrão.
 >
 > O UTF-8 é agora muito bem suportado e extremamente recomendado como codificação de caracteres preferida. Para [garantir melhor privacidade e através de menor entropia com base em configuração](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), todos os navegadores omitem o cabeçalho `Accept-Charset`: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ e Chrome 27+ não o enviam mais.
 

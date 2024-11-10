@@ -30,7 +30,7 @@ key( keyname, value )
 
 - [`xsl:key`](/ja/docs/Web/XSLT/Element/key) 要素は、指定された要素がキーと一致するために使用される属性を定義します
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ### 定義
 

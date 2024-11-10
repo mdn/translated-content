@@ -47,7 +47,7 @@ Retry-After: 120
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
 - {{HTTPStatus(503)}} (Service Unavailable)

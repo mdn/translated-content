@@ -7,7 +7,8 @@ slug: Web/CSS/:host
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:host`** selecciona la sombra host de [sombra DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene el CSS que se usa en el interior — es decir, esto le permite seleccionar un elemento personalizado desde su sombra DOM.
 
-> **Nota:** Esto no tiene ningún efecto cuando se usa fuera de una sombra DOM.
+> [!NOTE]
+> Esto no tiene ningún efecto cuando se usa fuera de una sombra DOM.
 
 ```css
 /* Selects a shadow root host */

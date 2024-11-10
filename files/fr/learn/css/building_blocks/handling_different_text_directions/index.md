@@ -123,7 +123,8 @@ Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit a
 
 Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que les marges sont correctement positionnées, quel que soit le mode d'écriture.
 
-> **Note :** Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
+> [!NOTE]
+> Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
 
 ### Faut-il utiliser les propriétés physiques ou logiques&nbsp;?
 

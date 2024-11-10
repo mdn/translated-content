@@ -3,7 +3,7 @@ title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Сводка
 

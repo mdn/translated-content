@@ -69,7 +69,7 @@ input {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}

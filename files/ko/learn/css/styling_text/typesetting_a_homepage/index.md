@@ -33,7 +33,8 @@ l10n:
 
 또는, [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/)와 같은 사이트를 사용하여 평가를 수행할 수도 있습니다. 이러한 온라인 편집기 중 하나에 HTML을 붙여 넣고 CSS를 입력한 다음, [이 URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png)을 사용하여 배경 이미지를 지정할 수 있습니다. 사용 중인 온라인 편집기에 별도의 CSS 패널이 없는 경우, 문서의 head 부분의 `<style>` 요소에 자유롭게 입력할 수 있습니다.
 
-> **참고:** 만약 문제가 해결되지 않으면, 이 페이지 하단의 [평가 및 추가적인 도움말](#평가_및_추가적인_도움말) 섹션을 참조하여 도움을 요청하세요.
+> [!NOTE]
+> 만약 문제가 해결되지 않으면, 이 페이지 하단의 [평가 및 추가적인 도움말](#평가_및_추가적인_도움말) 섹션을 참조하여 도움을 요청하세요.
 
 ## 프로젝트 개요
 

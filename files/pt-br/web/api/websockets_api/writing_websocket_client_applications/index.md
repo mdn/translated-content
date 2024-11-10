@@ -7,7 +7,8 @@ Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) 
 
 {{AvailableInWorkers}}
 
-> **Aviso:** O fragmento de código neste artigo foi tomado de um exemplo de chat usando WebSocket. [v](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)eja o código, então experimente o exemplo. **O exemplo atual possui um bug; ele está tentando usar WebSockets inseguro e precisa ser atualizado para usar WebSocokets seguro. Iremos arrumar isso em breve!**
+> [!WARNING]
+> O fragmento de código neste artigo foi tomado de um exemplo de chat usando WebSocket. [v](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)eja o código, então experimente o exemplo. **O exemplo atual possui um bug; ele está tentando usar WebSockets inseguro e precisa ser atualizado para usar WebSocokets seguro. Iremos arrumar isso em breve!**
 
 ## Criando um objeto WebSocket
 
@@ -73,7 +74,8 @@ exampleSocket.send(
 
 Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/JavaScript_typed_arrays/ArrayBuffer).
 
-> **Nota:** Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
+> [!NOTE]
+> Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
 
 Visto que estabelecer uma conexão funciona de forma assícrona e, consequentemente, propensa a erros, não há garantia de sucesso ao chamar o método `send()` imediatamente após criar um objeto WebSocket. Podemos, pelo menos, ter certeza de que a tentativa de envio dos dados apenas ocorre quando uma conexão é estabelecida definindo um manipulador de eventos `onopen`:
 

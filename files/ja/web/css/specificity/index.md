@@ -7,7 +7,8 @@ slug: Web/CSS/Specificity
 
 **詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn/CSS/First_steps/What_is_CSS#css_の構文)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
-> **メモ:** ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した後に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、出現順序が関連するようになります。
+> [!NOTE]
+> ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した後に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、出現順序が関連するようになります。
 
 ## 詳細度の計算方法
 
@@ -443,11 +444,11 @@ input[type="password"]:required {
   - [CSS の構文](/ja/docs/Web/CSS/Syntax)
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

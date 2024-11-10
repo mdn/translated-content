@@ -9,7 +9,8 @@ Les assertions indiquent les conditions selon lesquelles il est possible d'avoir
 
 ## Types
 
-> **Note :** Le caractère `?` peut également être utilisé comme quantificateur.
+> [!NOTE]
+> Le caractère `?` peut également être utilisé comme quantificateur.
 
 <table class="standard-table">
   <thead>

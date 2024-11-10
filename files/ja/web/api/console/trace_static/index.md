@@ -1,7 +1,6 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace_static
-original_slug: Web/API/console/trace
 ---
 
 {{APIRef("Console API")}}
@@ -22,7 +21,7 @@ trace(object1, /* …, */ objectN);
 ### 引数
 
 - `objects` {{optional_inline}}
-  - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxref("console.log()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
+  - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxref("console/log_static", "console.log()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
 
 ### 返値
 

@@ -3,7 +3,7 @@ title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Actualise un menu affiché.
 

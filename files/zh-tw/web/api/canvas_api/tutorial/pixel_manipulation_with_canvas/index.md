@@ -64,7 +64,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 這個方法會返回`ImageData`物件，它代表著在這 canvas 區域之中 pixel 的數據(data) 。從各角落的點代表著 (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`)。這些作標被設定為 canvas 的空間座標單位。
 
-> **備註：** 在`ImageData` 物件中，任何超出 canvas 外的 pixels 皆會返回透明的黑色的形式。
+> [!NOTE]
+> 在`ImageData` 物件中，任何超出 canvas 外的 pixels 皆會返回透明的黑色的形式。
 
 這個方法也被展示在[使用 canvas 操作影像](/zh-TW/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)之中。
 
@@ -130,7 +131,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ### 灰階和負片效果
 
-In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function simply subtracts each color from the max value 255. The grayscale function simply uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](http://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
+In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function simply subtracts each color from the max value 255. The grayscale function simply uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](https://zh.wikipedia.org/wiki/灰度图像) on Wikipedia for more information.
 
 ```html hidden
 <canvas id="canvas" width="300" height="227"></canvas>

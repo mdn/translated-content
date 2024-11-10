@@ -3,7 +3,7 @@ title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un gestionnaire d'événements qui sera appelé à plusieurs reprises lorsque les données de réponse sont disponibles. Le gestionnaire est passé un objet `event` qui contient une propriété de `data`, qui contient un morceau des données de réponse sous la forme d'un {{domxref("ArrayBuffer")}}.
 

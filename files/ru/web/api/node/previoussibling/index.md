@@ -34,7 +34,7 @@ alert(document.getElementById("b2").previousSibling.id); // "b1"
 
 Для навигации через список дочерних узлов в обратном порядке используйте [Node.nextSibling](/ru/docs/Web/API/Node.nextSibling).
 
-## Спецификация
+## Спецификации
 
 - [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
 - [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)

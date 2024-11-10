@@ -38,7 +38,8 @@ Dans cet exemple, on montre comment utiliser `image-set()` afin de fournir deux 
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **Note :** Dans cet exemple, la version préfixée avec `-webkit` est également utilisée pour prendre en charge Chrome et Safari. Dans Firefox 90, l'implémentation permet d'avoir `-webkit-image-set()` comme alias pour `image-set()` (afin de fournir une compatibilité si la propriété standard n'avait pas été ajoutée à la feuille de style).
+> [!NOTE]
+> Dans cet exemple, la version préfixée avec `-webkit` est également utilisée pour prendre en charge Chrome et Safari. Dans Firefox 90, l'implémentation permet d'avoir `-webkit-image-set()` comme alias pour `image-set()` (afin de fournir une compatibilité si la propriété standard n'avait pas été ajoutée à la feuille de style).
 
 ### Utiliser `image-set()` pour fournir des formats d'image alternatifs
 

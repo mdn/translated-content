@@ -17,11 +17,12 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **备注：** 上述示例使用了两个选择器来向每个除了首项 `li` 元素以外插入内容。也可以仅用一个选择器达到目标：
+> [!NOTE]
+> 上述示例使用了两个选择器来向每个除了首项 `li` 元素以外插入内容。也可以仅用一个选择器达到目标：
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {
@@ -40,10 +41,6 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 我使用了 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 和 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。详情请参见相关链接。
 
 注意通过 `content` 添加的箭头 `→` 也会暴露在屏幕阅读器或盲文显示器中。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 {{AddonSidebar}}
 
-この API はコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定した URL にマッチするページにそのスクリプトを挿入するようブラウザに指定することができます。
+この API はコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定した URL にマッチするページにそのスクリプトを挿入するようブラウザーに指定することができます。
 
 この API は`manifest.json`にある"content_scripts"キーと似ていますが、"content_scripts"ではコンテントスクリプトと URL のパターンは**インストールタイム**に固定されます。一方`content_scripts` API は、**ランタイム（実行時）**でスクリプトを登録・登録解除することが可能です。
 
@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : コンテントスクリプトを登録します。
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

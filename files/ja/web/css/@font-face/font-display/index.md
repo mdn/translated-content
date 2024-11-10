@@ -31,7 +31,8 @@ font-display: optional;
 - `optional`
   - : フォントに対して非常に短いブロック時間の後、スワップ時間を置きません。
 
-> **メモ:** Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
+> [!NOTE]
+> Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
 
 ## 解説
 
@@ -50,7 +51,7 @@ font-display: optional;
 
 {{cssinfo}}
 
-## 構文
+## 形式文法
 
 {{csssyntax}}
 

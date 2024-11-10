@@ -3,14 +3,14 @@ title: "Element: getAttributeNames() メソッド"
 short-title: getAttributeNames()
 slug: Web/API/Element/getAttributeNames
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: d93e5a0bca36d745734e46c0cd55f40cda28e221
 ---
 
 {{APIRef("DOM")}}
 
-**`getAttributeNames()`** は {{domxref("Element")}} インターフェースのメソッドで、この要素の属性名を文字列の {{jsxref("Array")}} で返します。要素に属性がない場合は、空の配列を返します。
+**`getAttributeNames()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の属性名を文字列の {{jsxref("Array")}} で返します。要素に属性がない場合は、空の配列を返します。
 
-`getAttributeNames()` を {{domxref("Element.getAttribute","getAttribute()")}} と共に使用すると、 {{domxref("Element.attributes")}} にアクセスするよりメモリ効率やパフォーマンスが良くなります。
+`getAttributeNames()` を {{domxref("Element.getAttribute","getAttribute()")}} と共に使用すると、 {{domxref("Element.attributes")}} にアクセスするよりメモリー効率やパフォーマンスが良くなります。
 
 **`getAttributeNames()`** から返される名前は*修飾*属性名です。すなわち、名前空間接頭辞がついた属性であり、名前空間接頭辞（実際の名前空間では*ない*）にコロンが続き、属性名が続きます（例えば **`xlink:href`**）。名前空間接頭辞のない属性は、そのままの名前になります（例えば **`href`**）。
 
@@ -26,7 +26,7 @@ getAttributeNames()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+文字列の配列 ({{jsxref("Array")}}) です。
 
 ## 例
 

@@ -171,7 +171,7 @@ document.addEventListener("click", function (e) {
 
 附加组件的结构最后看上去应该像下面这样：
 
-```
+```plain
 button/
     icons/
         page-16.png

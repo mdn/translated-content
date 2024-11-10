@@ -39,10 +39,6 @@ if (foo.hasAttribute("bar")) {
 })(Element.prototype);
 ```
 
-## Notas
-
-{{DOMAttributeMethods}}
-
 ## Especificaciones
 
 {{Specifications}}

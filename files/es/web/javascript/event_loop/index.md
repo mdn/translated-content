@@ -31,7 +31,7 @@ function g(x) {
 g(21);
 ```
 
-Cuando se llama a `g`, un primer frame es creado, el cual contiene `g` argumentos y variables locales. Cuando `g` llama a `f`, un segundo frame es creado y colocado encima del primero, con `f` argumentos y variables locales. Cuando `f` termina de ejecutarse, el último frame (en este caso `f`) es sacado de la pila (déjando solo el frame de `g`). Cuando `g` termina de ejecutarse, la pila está vacía.
+Cuando se llama a `g`, un primer frame es creado, el cual contiene los argumentos y variables locales de `g`. Cuando `g` llama a `f`, un segundo frame es creado y colocado encima del primero, con los argumentos y variables locales de `f`. Cuando `f` termina de ejecutarse, el último frame (en este caso `f`) es sacado de la pila (déjando solo el frame de `g`). Cuando `g` termina de ejecutarse, la pila está vacía.
 
 ### Montículo (Heap)
 

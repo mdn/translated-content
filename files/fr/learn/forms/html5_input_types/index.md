@@ -24,7 +24,8 @@ Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), n
   </tbody>
 </table>
 
-> **Note :** La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/Input).
+> [!NOTE]
+> La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/Input).
 
 L'apparence native des contrôles de formulaire HTML peut être différente de celle voulue pour un design donné. Il arrive donc que les développeuses et développeurs construisent leurs propres contrôles de formulaire sur mesure. Nous aborderons ce sujet dans un tutoriel avancé&nbsp;: [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
 
@@ -50,7 +51,8 @@ Sur certains appareils, notamment les appareils tactiles avec les claviers logic
 
 ![Clavier de Firefox pour Android pour les champs de type email avec une arobase affichée par défaut.](fx-android-email-type-keyboard.jpg)
 
-> **Note :** Vous pouvez trouver différents exemples de champs de formulaire textuels [sur cette page d'exemple](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) ([le code source correspondant est aussi disponible](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)).
+> [!NOTE]
+> Vous pouvez trouver différents exemples de champs de formulaire textuels [sur cette page d'exemple](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) ([le code source correspondant est aussi disponible](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)).
 
 Voici une autre bonne raison de privilégier ces types de champ plus récents qui permettent une meilleure ergonomie sur les différents appareils.
 
@@ -62,7 +64,8 @@ En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesu
 
 On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation).
 
-> **Note :** Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
+> [!NOTE]
+> Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
 
 ## Champ de recherche
 
@@ -112,7 +115,8 @@ Voici un exemple (tiré de Firefox pour Android)&nbsp;:
 
 ![Le clavier de saisie d'une URL pour Firefox pour Android, avec une touche pour la barre oblique.](fx-android-url-type-keyboard.jpg)
 
-> **Note :** Une URL bien formée ne veut pas nécessairement dire que l'emplacement indiqué par cette adresse existe&nbsp;!
+> [!NOTE]
+> Une URL bien formée ne veut pas nécessairement dire que l'emplacement indiqué par cette adresse existe&nbsp;!
 
 ## Champ numérique
 
@@ -186,7 +190,8 @@ price.addEventListener("input", function () {
 
 Ici, on a deux variables qui référencent le contrôle `range` et l'élément `output`. On remplit immédiatement le contenu ([`textContent`](/fr/docs/Web/API/Node/textContent)) de l'élément `<output>` avec la valeur courante (`value`) du contrôle. Enfin, on ajoute un gestionnaire d'évènement qui permet de gérer les mises à jour lorsque le curseur est déplacé&nbsp;: dans ce cas, on met à jour la valeur de `textContent` de l'élément `<output>` avec la nouvelle valeur.
 
-> **Note :** Un tutoriel couvrant ce sujet est disponible (en anglais) sur CSS Tricks&nbsp;: [L'élément `<output>`](https://css-tricks.com/the-output-element/).
+> [!NOTE]
+> Un tutoriel couvrant ce sujet est disponible (en anglais) sur CSS Tricks&nbsp;: [L'élément `<output>`](https://css-tricks.com/the-output-element/).
 
 ## Sélecteurs de date et d'heure
 

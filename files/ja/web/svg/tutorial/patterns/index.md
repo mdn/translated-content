@@ -1,7 +1,11 @@
 ---
 title: パターン
 slug: Web/SVG/Tutorial/Patterns
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
@@ -75,6 +79,6 @@ slug: Web/SVG/Tutorial/Patterns
 
 もちろん、これは後からオブジェクトのサイズを変えてもパターンのサイズは調整されないことを意味します。前出の 3 種類の例について、長方形の高さを 300px に広げたものを以下に示しましたが、これはすべてを網羅した画像ではなく、また目的に応じて利用可能なオプションが他にもあることを注記したいと思います。
 
-![](svg_pattern_comparison_of_units.png)
+![default と userSpaceOnUseのpatternUnits 値、 default と objectBoundingBox の patternContentUnits 値を示す 3 つの例。どちらも既定で設定すると、アスペクト比が維持され、白い空間が表示されます。 patternContentUnits を objectBoundingBox に設定すると、空白を除去するようアスペクト比を調整します。 patternUnits を userSpaceOnUse に設定すると、アスペクト比を維持しながら空白を除去します。](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

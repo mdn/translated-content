@@ -3,7 +3,7 @@ title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
 
-{{JSRef("Global_Objects", "WeakSet")}}
+{{JSRef}}
 
 Метод **`has()`** определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false.
 

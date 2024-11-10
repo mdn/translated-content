@@ -5,7 +5,7 @@ slug: Web/API/ImageBitmap
 
 {{APIRef("Canvas API")}}
 
-**`ImageBitmap`** 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 `ImageBitmap`提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。
+**`ImageBitmap`** 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("Window.createImageBitmap()")}} 或 {{domxref("WorkerGlobalScope.createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。`ImageBitmap` 提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。
 
 ## 属性
 
@@ -27,9 +27,10 @@ slug: Web/API/ImageBitmap
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
-- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}
+- {{domxref("OffscreenCanvas.transferToImageBitmap()")}}

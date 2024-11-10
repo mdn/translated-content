@@ -11,7 +11,8 @@ Typically, an element's `offsetHeight` is a measurement which includes the eleme
 
 For the document body object, the measurement includes total linear content height instead of the element CSS height. Floated elements extending below other linear content are ignored.
 
-> **Примечание:** This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Syntax
 
@@ -36,7 +37,7 @@ The example image above shows a scrollbar and an offsetHeight which fits on the 
 
 `offsetHeight` is a property of the DHTML object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

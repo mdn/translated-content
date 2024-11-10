@@ -7,7 +7,8 @@ slug: Web/API/Element/innerHTML
 
 Свойство интерфейса {{domxref("Element")}} **`innerHTML`** устанавливает или получает HTML или XML разметку дочерних элементов.
 
-> **Примечание:** Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
+> [!NOTE]
+> Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
 
 Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 

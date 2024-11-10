@@ -6,9 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions
 {{AddonSidebar}}
 
 [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерная система разработки дополнений браузера.
-В значительной степени эта система совместима с [Chrome Extensions API](https://developer.chrome.com/extensions), которая поддерживается в Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).
-
-Также мы намерены расширять API для поддержки нужд разработчиков дополнений, поэтому, если у вас есть идеи, то мы их с удовольствием выслушаем. Вы можете связаться с нами через [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) или [#webextensions](irc://irc.mozilla.org/webextensions) на [IRC](https://wiki.mozilla.org/IRC).
+В значительной степени эта система совместима с [Chrome Extensions API](https://developer.chrome.com/docs/extensions), которая поддерживается в Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).
 
 ### Приступая к работе
 

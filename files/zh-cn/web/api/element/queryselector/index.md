@@ -12,12 +12,12 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` 和 `baseElement` 是 {{domxref("element")}} 对象。
-- `selectors` 是一个 CSS 选择器字符串 ( [selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors) )
+- `selectors` 是一个 CSS [选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)字符串。
 
 ### 参数
 
 - `selectors`
-  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
+  - : 一组用来匹配 {{domxref("Element")}} `baseElement` 后代元素的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
 
 ### 返回值
 

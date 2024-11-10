@@ -34,7 +34,8 @@ Les fonctions suivantes sont **uniquement** disponibles pour les pour les <i lan
 
 ## Les API web disponibles pour les <i lang="en">workers</i>
 
-> **Note :** Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
+> [!NOTE]
+> Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
 
 Les API web suivantes sont disponibles pour les <i lang="en">workers</i>&nbsp;:
 

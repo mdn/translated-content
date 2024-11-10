@@ -3,7 +3,7 @@ title: contains
 slug: Web/XPath/Functions/contains
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `contains` détermine si la chaîne passée en premier argument contient la chaîne passée en second argument et retourne le booléen `true` ou `false`.
 

@@ -1,7 +1,11 @@
 ---
 title: ARIA：button 角色
 slug: Web/Accessibility/ARIA/Roles/button_role
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 `button` 角色用于可单击的元素，在用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用的 {{HTMLElement("button")}} 或者 `type="button"` 的 {{HTMLElement("input")}}。
 
@@ -21,7 +25,8 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <button type="button" id="saveChanges">保存</button>
 ```
 
-> **备注：** 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 你需要让这个元素可聚焦并定义 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}} 事件的事件处理器。这包括了对按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 的事件的处理，以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)。
+> [!NOTE]
+> 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 你需要让这个元素可聚焦并定义 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}} 事件的事件处理器。这包括了对按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 的事件的处理，以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)。
 
 除了常见的按钮部件之外，使用非按钮元素创建切换按钮和菜单按钮时，应该使用 `role="button"`。
 
@@ -62,7 +67,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 按钮始终应该有无障碍的名称。对于大多数的按钮，名称通常是和按钮内的文本、开启和闭合标签之间的内容一致的。一些情况下，比如以图标形式呈现的按钮，其无障碍名称可能是由 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 或者 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性提供的。
 
-## 切换按钮
+### 切换按钮
 
 切换按钮通常有两种状态：按下、没有按下，第三种混合状态可用于控制了其他的元素的切换按钮，例如其他的不共享同一个值的切换按钮或者复选框。还可以使用 `button` 角色（如果元素不是原生的 button 元素）加 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性来表示元素是否为切换按钮：
 
@@ -255,7 +260,7 @@ function toggleButton(element) {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample('切换按钮示例')}}
 
@@ -263,7 +268,8 @@ function toggleButton(element) {
 
 按钮本身是可交互的，因此可聚焦。如果给自身不可聚焦的元素（如 `<span>`、`<div>` 或 `<p>`）添加了 `button` 角色，那么就应该使用 `tabindex` 属性以使得按钮可聚焦。
 
-> **警告：** 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果将链接用作按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 键添加一个按键事件处理器，以与原生按钮的行为保持一致。
+> [!WARNING]
+> 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果将链接用作按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 键添加一个按键事件处理器，以与原生按钮的行为保持一致。
 
 使用了 `button` 角色时，屏幕阅读器会声明其说成是一个按钮，通常是说“单击（click）”然后是其无障碍名称。无障碍名称是元素的内容，或是 `aria-label` 的值，或是由 `aria-labelledby` 属性引用的元素的值，或是描述（如果已包括）。
 
@@ -287,12 +293,4 @@ function toggleButton(element) {
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
 - [HTML5 中强大的原生语义](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [在 HTML 中使用 ARIA 的注意事项](https://www.w3.org/TR/aria-in-html/)
-- [官方 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+- [官方 WAI-ARIA 示例代码](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)

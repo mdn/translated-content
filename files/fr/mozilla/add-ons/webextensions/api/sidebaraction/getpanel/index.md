@@ -3,7 +3,7 @@ title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
 
@@ -60,7 +60,7 @@ gettingPanel.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

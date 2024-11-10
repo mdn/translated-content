@@ -3,7 +3,7 @@ title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
 ---
 
-{{ ApiRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 ### Resumen
 

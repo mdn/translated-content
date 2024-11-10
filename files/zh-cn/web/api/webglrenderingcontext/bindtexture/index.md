@@ -65,7 +65,7 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

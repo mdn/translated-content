@@ -3,7 +3,9 @@ title: event.initMouseEvent
 slug: Web/API/MouseEvent/initMouseEvent
 ---
 
-{{ApiRef("DOM Events")}}{{deprecated_header}}
+{{Deprecated_Header}}
+
+{{APIRef("UI Events")}}
 
 > **Nota:** **No utilize este método porque está obsoleto.**
 >

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 在页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
 
@@ -83,7 +83,8 @@ browser.webNavigation.onDOMContentLoaded.addListener(
 
 {{WebExtExamples}}
 
-> **备注：** 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
+> [!NOTE]
+> 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

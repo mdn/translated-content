@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 {{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **备注：** 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，访问函数的 `caller` 属性会抛出错误——该 API 已被移除且没有替代品。这是为了防止代码能够“遍历堆栈”，这既存在安全风险，也严重限制了内联和尾调用优化等优化的可能性。如需更多解释，请阅读 [arguments.callee 的弃用原因](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee#描述)。
+> [!NOTE]
+> 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，访问函数的 `caller` 属性会抛出错误——该 API 已被移除且没有替代品。这是为了防止代码能够“遍历堆栈”，这既存在安全风险，也严重限制了内联和尾调用优化等优化的可能性。如需更多解释，请阅读 [arguments.callee 的弃用原因](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee#描述)。
 
 {{jsxref("Function")}} 实例的 **`caller`** 访问器属性返回调用该函数的函数。对于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)、箭头函数、异步函数和生成器函数来说，访问 `caller` 属性会抛出 {{jsxref("TypeError")}}。
 

@@ -13,7 +13,8 @@ Cette API permet aux sites web d'interagir avec le système de mots de passe de 
 
 Ainsi, sans cette API, un agent utilisateur pourra rencontrer certaines difficultés à gérer des fournisseurs d'identité fédérée ou d'autres mécanismes de connexion.
 
-> **Note :** Cette API est restreinte aux contextes de plus haut niveau. Les appels à `get()` et `store()` depuis une {{HTMLElement("iframe")}} seront résolus sans aucun effet.
+> [!NOTE]
+> Cette API est restreinte aux contextes de plus haut niveau. Les appels à `get()` et `store()` depuis une {{HTMLElement("iframe")}} seront résolus sans aucun effet.
 
 ### Informations d'authentification partagées entre les sous-domaines
 

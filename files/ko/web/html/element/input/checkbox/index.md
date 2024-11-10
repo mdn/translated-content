@@ -37,7 +37,8 @@ l10n:
 
 만약 `value` 특성이 생략되면, 해당 체크박스의 기본 값은 `on`입니다. 따라서 이 경우 제출된 데이터는 `subscribe=on`이 됩니다.
 
-> **참고:** 폼이 제출될 때 체크박스가 체크되어 있지 않으면, 체크되지 않은 상태를 표현하는 (이를테면 `value=unchecked`과 같은) 데이터가 서버에 전달되지는 않습니다. 값 자체가 서버에 전달되지 않습니다. 만약 체크박스가 체크되지 않은 경우 기본 값을 제출하고 싶다면, 폼 안에 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}를 Javascript 등에 의해 생성된 동일한 `name` 그리고 `value`과 함께 포함시킬 수 있습니다.
+> [!NOTE]
+> 폼이 제출될 때 체크박스가 체크되어 있지 않으면, 체크되지 않은 상태를 표현하는 (이를테면 `value=unchecked`과 같은) 데이터가 서버에 전달되지는 않습니다. 값 자체가 서버에 전달되지 않습니다. 만약 체크박스가 체크되지 않은 경우 기본 값을 제출하고 싶다면, 폼 안에 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}를 Javascript 등에 의해 생성된 동일한 `name` 그리고 `value`과 함께 포함시킬 수 있습니다.
 
 ## 추가 특성들
 
@@ -46,7 +47,8 @@ l10n:
 - `checked`
 
   - : (페이지가 로드될 때) 체크박스가 기본적으로 체크된 상태로 보여질 것인지를 지칭하는 불리언 특성입니다. 이 특성은 체크박스가 "현재 체크된 상태"인지를 나타내지 않습니다. 만약 체크박스의 상태가 변경되면, 이 특성은 그 변경을 반영하지 않습니다 (단지 {{domxref("HTMLInputElement")}} 의 `checked` IDL 특성이 변경됩니다.)
-    > **참고:** 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
+    > [!NOTE]
+    > 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
     > 다른 브라우저들과는 다르게, Firefox의 경우 기본적으로 페이지 로드에 걸쳐서 `<input>`의 [`checked` 상태를 동적으로 유지합니다.](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) 특성을 사용해야 합니다.
 
 - `value`
@@ -163,7 +165,8 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **참고:** 만약 `indeterminate` 상태의 체크박스와 함께 폼을 제출하게 되면 활성화되지 않은 체크박스를 제출하는 것과 같은 일이 발생합니다. 즉, 체크박스를 표현하는 데이터는 전달되지 않습니다.
+> [!NOTE]
+> 만약 `indeterminate` 상태의 체크박스와 함께 폼을 제출하게 되면 활성화되지 않은 체크박스를 제출하는 것과 같은 일이 발생합니다. 즉, 체크박스를 표현하는 데이터는 전달되지 않습니다.
 
 ## 유효성 검증하기
 

@@ -1,31 +1,46 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
-« [SVG Attribute reference home](/ja/SVG/Attribute)
+{{SVGRef}}
 
-`filterUnits`属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} そして {{ SVGAttr("height") }} の座標系を定義します。
+**`filterUnits`** 属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }}, {{ SVGAttr("height") }} 属性の座標系を定義します。
 
-もし`filterUnits`属性が指定されていない場合、`objectBoundingBox`が指定されているのと同じになります。
+この属性は以下の SVG 要素で使用することができます。
 
-## Usage context
+- {{SVGElement("filter")}}
 
-| Categories         | _None_                                                                                             |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                        |
-| Animatable         | Yes                                                                                                |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#FilterElementFilterUnitsAttribute) |
+## 使用上のメモ
 
-- userSpaceOnUse
-  - : {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent values in the current coordinate system that results from taking the current user coordinate system in place at the time when the {{ SVGElement("filter") }} element is referenced (i.e., the user coordinate system for the element referencing the {{ SVGElement("filter") }} element via a {{ SVGAttr("filter") }} attribute).
-- objectBoundingBox
-  - : In that case, {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent fractions or percentages of the bounding box on the referencing element.
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
 
-## Examples
+- `userSpaceOnUse`
+  - : {{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}}、{{SVGAttr("height")}} は、 {{SVGElement("filter")}} 要素が参照される時点で配置されている現在のユーザー座標系（すなわち、 {{SVGAttr("filter")}} 属性を介して {{SVGElement("filter")}} 要素を参照している要素のユーザー座標系）。
+- `objectBoundingBox`
+  - : この場合、{{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}}、{{SVGAttr("height")}} は、参照要素上の囲みボックスの割合またはパーセント値を表します。
 
-## Elements
+## 仕様書
 
-The following elements can use the `filterUnits` attribute:
+{{Specifications}}
 
-- {{ SVGElement("filter") }}
+## ブラウザーの互換性
+
+{{Compat}}

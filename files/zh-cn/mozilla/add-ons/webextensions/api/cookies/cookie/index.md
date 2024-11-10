@@ -1,50 +1,56 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
+{{WebExtAPIRef("cookies")}} API 的 `Cookie` 类型表示有关 HTTP cookie 的信息。
 
 ## 类型
 
-这玩意是一个 Object，可以包含以下的属性：
+此类型的值是对象，可以包含以下属性：
 
 - `domain`
-  - : 储存这个 cookie 对应网站的字符串 (例如 "www\.tengxun.com")。
-- `expirationDate`{{optional_inline}}
-  - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
+  - : 表示 cookie 所属域的 `string`（例如“www\.google.com”、“example.com”）。
+- `expirationDate` {{optional_inline}}
+  - : 表示 cookie 到期日期的 `number`，以 UNIX 纪元以来的秒数表示。会话 cookie 不提供此属性。
 - `firstPartyDomain`
-  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/zh-CN/Add-ons/WebExtensions/API/cookies#First-party_isolation).
+  - : 表示与 cookie 关联的第一方域的 `string`。如果在第一方隔离关闭时设置 cookie，此属性将为空字符串。参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 - `hostOnly`
-  - : A `boolean`, `true` if the cookie is a host-only cookie (i.e. the request's host must exactly match the domain of the cookie), or `false` otherwise.
+  - : 一个 `boolean`，如果 cookie 仅适用于主机（即请求的主机必须与 cookie 的域完全匹配），则为 `true`，否则为 `false`。
 - `httpOnly`
-  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or `false` otherwise.
+  - : 一个 `boolean`，如果 cookie 标记为 HttpOnly（即客户端脚本无法访问 cookie），则为 `true`，否则为 `false`。
 - `name`
-  - : A `string` representing the name of the cookie.
+  - : 表示 cookie 名称的 `string`。
+- `partitionKey` {{optional_inline}}
+  - : 一个 `object`，表示包含 cookie 的存储分区的描述。如果 cookie 不在分区存储中，则此对象省略（空值）。此对象包含以下属性：
+    - `topLevelSite`
+      - : 如果 cookie 存储在按顶级站点分区的存储中，则表示 cookie 存储分区的第一方 URL 的 `string`。
 - `path`
-  - : A `string` representing the path of the cookie.
+  - : 表示 cookie 路径的 `string`。
 - `secure`
-  - : A `boolean`, `true` if the cookie is marked as secure (i.e. its scope is limited to secure channels, typically HTTPS), or `false` otherwise.
+  - : 一个 `boolean`，如果 cookie 标记为安全（即其作用域仅限于安全通道，通常是 HTTPS）则为 `true`，否则为 `false`。
 - `session`
-  - : A `boolean`, `true` if the cookie is a session cookie, or `false` if it is a persistent cookie with an expiration date.
+  - : 一个 `boolean`，如果 cookie 是会话 cookie，则为 `true`；如果是具有到期日期的持久 cookie，则为 `false`。
 - `sameSite`
-  - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie.
+  - : 一个 {{WebExtAPIRef("cookies.SameSiteStatus")}} 值，指示 cookie 的同站（SameSite）状态。
 - `storeId`
-  - : A `string` representing the ID of the cookie store containing this cookie, as provided by {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
+  - : 表示包含此 cookie 的 cookie 存储的 ID 的 `string`，由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 提供。
 - `value`
-  - : 代表 cookie 的值的一个字符串。
+  - : 表示 cookie 值的 `string`。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## 举例
+## 示例
 
-Cookies API 中的大多数方法都将 `Cookie` 对象用作输入参数或用作返回值的一部分。例如调用 {{WebExtAPIRef("cookies.getAll()")}} 将会返回一个 `Cookie` 对象的数组。
+cookies API 中的大多数方法涉及使用 `Cookie` 对象作为输入参数或作为返回值的一部分。例如，调用 {{WebExtAPIRef("cookies.getAll()")}} 会返回一个 `Cookie` 对象数组。
 
-在下面的例子中我们将会获取所有的 cookie，然后 `console.log()` 出这些 `Cookie` 对象所对应的值。
+在下面的示例中，我们请求获取所有的 cookie，然后输出每个 `Cookie` 对象的一些值：
 
 ```js
 function logCookies(cookies) {
@@ -56,15 +62,14 @@ function logCookies(cookies) {
   }
 }
 
-var gettingAll = browser.cookies.getAll({});
+let gettingAll = browser.cookies.getAll({});
 gettingAll.then(logCookies);
 ```
 
 {{WebExtExamples}}
 
-> **备注：** 这 API 是基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API 的。这个文档来自于 Chromium code 中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#type-Cookie) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

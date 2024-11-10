@@ -58,9 +58,9 @@ article[data-columns="4"] {
 }
 ```
 
-Puede ver todo esto trabajando junto [en este ejemplo de JSBin](http://jsbin.com/ujiday/2/edit).
+Puede ver todo esto trabajando junto [en este ejemplo de JSBin](https://jsbin.com/ujiday/2/edit).
 
-Los atributos de datos también se pueden almacenar para que contengan información que cambia constantemente, como los puntajes en un juego. Usando los selectores de CSS y el acceso a JavaScript aquí, esto le permite crear algunos efectos ingeniosos sin tener que escribir sus propias rutinas de visualización. Consulte [este screencast](http://www.youtube.com/watch?v=On_WyUB1gOk) para ver un ejemplo utilizando contenido generado y transacciones CSS ([Ejemplo JSBin](http://jsbin.com/atawaz/3/edit)).
+Los atributos de datos también se pueden almacenar para que contengan información que cambia constantemente, como los puntajes en un juego. Usando los selectores de CSS y el acceso a JavaScript aquí, esto le permite crear algunos efectos ingeniosos sin tener que escribir sus propias rutinas de visualización. Consulte [este screencast](http://www.youtube.com/watch?v=On_WyUB1gOk) para ver un ejemplo utilizando contenido generado y transacciones CSS ([Ejemplo JSBin](https://jsbin.com/atawaz/3/edit)).
 
 Los valores de datos son cadenas de caracteres. Los valores numéricos deben ser citados en el selector para que el estilo surta efecto.
 

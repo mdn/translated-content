@@ -36,7 +36,7 @@ CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 �
 
 우리의 착수 파일에는 아주 간단한 HTML이 포함되어 있습니다. 그 내용은 제목과 일부 단락이 내부에 있는 `container` 클래스 래퍼입니다.
 
-컨테이너 클래스에 해당하는 {{htmlelement("div")}}는 다단 컨테이너가 될 예정입니다. {{cssxref("column-count")}} 혹은 {{cssxref("column-width")}} 속성 중의 하나를 사용해서 다단으로 전환합니다. `column-count` 속성은 당신이 부여하는 값만큼 다단을 생성하게 되며, 당신의 스타일시트에 다음과 같은 CSS를 추가하고 페이지를 새로고침하면 당신은 삼단 레이아웃을 얻게 됩니다:
+컨테이너 클래스에 해당하는 {{htmlelement("div")}}는 다단 컨테이너가 될 예정입니다. {{cssxref("column-count")}} 혹은 {{cssxref("column-width")}} 속성 중의 하나를 사용해서 다단으로 전환합니다. `column-count` 속성은 당신이 부여하는 값만큼 다단을 생성하게 되며, 당신의 스타일시트에 다음과 같은 CSS를 추가하고 페이지를 새로고침하면 당신은 삼단 레이아웃을 얻게 됩니다.
 
 ```css
 .container {
@@ -95,7 +95,7 @@ body {
 
 {{ EmbedLiveSample('다단_1', '100%', 400) }}
 
-다음과 같이 `column-width`를 사용하여 당신의 CSS를 변경하세요:
+다음과 같이 `column-width`를 사용하여 당신의 CSS를 변경하세요.
 
 ```css
 .container {
@@ -161,7 +161,7 @@ body {
 - {{cssxref("column-gap")}}를 사용해 다단 사이 간격의 크리를 변경하기.
 - {{cssxref("column-rule")}}를 가지고 다단 사이 규칙을 추가하기.
 
-상기 예제 용례에서 `column-gap` 속성을 추가해 간격의 크기를 변경하세요:
+상기 예제 용례에서 `column-gap` 속성을 추가해 간격의 크기를 변경하세요.
 
 ```css
 .container {

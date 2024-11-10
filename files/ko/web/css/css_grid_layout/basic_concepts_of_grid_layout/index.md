@@ -3,6 +3,8 @@ title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
+{{CSSRef}}
+
 [CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_Grid_Layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
@@ -578,7 +580,8 @@ Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspecto
 
 레벨 1 그리드 표준에는 *서브 그리드(subgrid)*라는 기능이 있어서 부모 요소에 있는 그리드 트랙의 정의를 중첩된 그리드에도 적용해서 생성할 수 있도록 하였습니다.
 
-> **참고:** 서브 그리드는 아직 모든 브라우저에서 구현되지 않았고 나중에 표준이 변경될 수도 있습니다.
+> [!NOTE]
+> 서브 그리드는 아직 모든 브라우저에서 구현되지 않았고 나중에 표준이 변경될 수도 있습니다.
 
 최근 작성된 표준에 따르면, 위 중첩 그리드 예시에 썼던 `display: grid` 대신 `display: subgrid`를 써주고 트랙의 정의는 제거합니다. 이렇게 하면 중첩된 그리드는 부모 요소의 그리드 트랙을 그대로 참고해서 아이템을 배치하게 됩니다.
 

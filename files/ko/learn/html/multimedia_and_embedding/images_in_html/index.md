@@ -45,7 +45,8 @@ l10n:
 
 [`alt` 속성은 아래에 설명되어 있습니다](#alternative_text).
 
-> **참고:** 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url과_path에_대한_기본_지침)을 읽어보세요.
+> [!NOTE]
+> 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url과_path에_대한_기본_지침)을 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg`이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다.
 
@@ -61,7 +62,8 @@ l10n:
 
 기타 등등.
 
-> **참고:** 검색 엔진은 이미지 파일 이름을 읽고 SEO에 포함합니다. 따라서 그 내용을 설명하는 파일 이름을 사용하세요. `img835.png` 보다는 `dinosaur.jpg`가 낫습니다.
+> [!NOTE]
+> 검색 엔진은 이미지 파일 이름을 읽고 SEO에 포함합니다. 따라서 그 내용을 설명하는 파일 이름을 사용하세요. `img835.png` 보다는 `dinosaur.jpg`가 낫습니다.
 
 절대 URL을 사용해서 이미지를 삽입할 수도 있습니다. 아래의 예시를 확인하세요.
 
@@ -73,7 +75,8 @@ l10n:
 
 이미지를 직접 만들지 않은 경우, 해당 이미지가 게시된 라이선스 조건에 따라 사용할 수 있는 권한이 있는지 확인해야 합니다. (자세한 내용은 [미디어 애셋 및 라이선스](#media_assets_and_licensing)를 참고해 주세요).
 
-> **경고:** 다른 웹사이트에 호스팅 된 이미지를 허가 없이 `src`속성으로 가리키지 마세요. 이를 "핫링크"라고 합니다. 누군가 내 페이지를 방문할 때 이미지를 전송하는 대역폭 비용을 다른 사람이 지불하게 되므로 비윤리적인 행위로 간주됩니다. 또한 이미지가 삭제되거나 부끄러운 이미지로 변경되는 것을 제어할 수 없습니다.
+> [!WARNING]
+> 다른 웹사이트에 호스팅 된 이미지를 허가 없이 `src`속성으로 가리키지 마세요. 이를 "핫링크"라고 합니다. 누군가 내 페이지를 방문할 때 이미지를 전송하는 대역폭 비용을 다른 사람이 지불하게 되므로 비윤리적인 행위로 간주됩니다. 또한 이미지가 삭제되거나 부끄러운 이미지로 변경되는 것을 제어할 수 없습니다.
 
 절대 URL 또는 상대 URL을 사용한 이전 코드는 다음과 같은 결과를 보여줄 것입니다.
 
@@ -81,7 +84,8 @@ l10n:
 
 > **참고:** {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에서 확인할 수 있습니다.
 
-> **참고:** 완성된 예제들을 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)에서 확인하실 수 있습니다. ([source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)도 참고하세요.)
+> [!NOTE]
+> 완성된 예제들을 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)에서 확인하실 수 있습니다. ([source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)도 참고하세요.)
 
 ### 대체 텍스트
 
@@ -115,7 +119,8 @@ l10n:
 
 본질적으로 핵심은 이미지를 볼 수 없는 상황에서도 사용 가능한 경험을 제공하는 것입니다. 이것은 모든 사용자들이 콘텐츠를 놓치지 않도록 합니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요. 이미지가 보이지 않는다면 대체 텍스트가 얼마나 유용한지 빨리 깨닫게 될 것입니다.
 
-> **참고:** 더 많은 정보를 원한다면, [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#대체_텍스트) 가이드를 참고하세요.
+> [!NOTE]
+> 더 많은 정보를 원한다면, [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#대체_텍스트) 가이드를 참고하세요.
 
 ### 너비와 높이
 
@@ -174,7 +179,8 @@ HTML에 이미지의 실제 사이즈를 명시했다면, `width`와 `height` �
 
 이 기능에 대한 훌륭한 기사는 [이미지에 높이와 너비를 설정하는 것은 정말 중요합니다](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)를 참고하세요.
 
-> **Note:** 그럼에도 불구하고, 우리가 말했듯이, HTML 속성을 사용하여 이미지의 실제 크기를 지정하는 것이 좋은 습관이지만, 이미지의 크기를 *조정*하는 데 사용해서는 안 됩니다.
+> [!NOTE]
+> 그럼에도 불구하고, 우리가 말했듯이, HTML 속성을 사용하여 이미지의 실제 크기를 지정하는 것이 좋은 습관이지만, 이미지의 크기를 *조정*하는 데 사용해서는 안 됩니다.
 >
 > 만약 이미지 크기를 너무 크게 설정한다면, 이미지가 거칠거나, 흐릿하거나 너무 작아 보이고, 사용자의 요구에 맞지 않는 이미지를 다운로드 하는데 많은 대역폭을 사용하게 될 것입니다. 이미지는 또한 왜곡되어 보일 수 있습니다. 만약 올바른 [종횡비](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29)를 유지하지 않는다면. 웹페이지에 올리기 전에 이미지 편집기를 사용하여 이미지를 올바른 크기로 조정해야 합니다.
 >
@@ -381,7 +387,8 @@ textarea.onkeyup = function () {
 
 적용 가능한 라이선스를 확인하여 따라야 할 구체적인 조건을 확인해야 합니다.
 
-> **참고:** "copyleft"라는 용어를 허용 라이선스의 문맥에서 만날 수 있습니다. Copyleft 라이선스 (예를 들어, [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) 또는 "Share Alike" Creative Commons 라이선스)는 2차 작업물이 원본과 동일한 라이선스 하에 공개되어야 한다고 규정합니다.
+> [!NOTE]
+> "copyleft"라는 용어를 허용 라이선스의 문맥에서 만날 수 있습니다. Copyleft 라이선스 (예를 들어, [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) 또는 "Share Alike" Creative Commons 라이선스)는 2차 작업물이 원본과 동일한 라이선스 하에 공개되어야 한다고 규정합니다.
 
 Copyleft 라이선스들은 소프트웨어 세계에서 두드러집니다. 기본적인 아이디어는 Copyleft 라이선스를 받은 프로젝트의 코드로 만들어진 새로운 프로젝트(이것은 원본 소프트웨어의 "fork"라고 불립니다)도 동일한 Copyleft 라이선스 하에 라이선스 되어야 한다는 것입니다. 이것은 새로운 프로젝트의 소스 코드가 다른 사람들이 공부하고 수정할 수 있도록 공개되어야 한다는 것을 보장합니다. 일반적으로, 소프트웨어를 위해 작성된 라이선스들은 비소프트웨어 작업물을 위해 작성되지 않았기 때문에, GPL과 같은 라이선스들은 비-소프트웨어 작업물을 위한 좋은 라이선스로 간주되지 않습니다.
 
@@ -445,7 +452,8 @@ Copyleft 라이선스들은 소프트웨어 세계에서 두드러집니다. 기
 
 {{htmlelement("figcaption")}} 요소는 브라우저와 보조 기술에게 캡션이 {{htmlelement("figure")}} 요소의 다른 컨텐츠를 설명한다고 알려줍니다.
 
-> **참고:** 접근성의 관점에서, 캡션과 [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 다른 역할을 합니다. 캡션은 이미지를 볼 수 있는 사람들에게도 도움이 되지만, [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 이미지가 없을 때와 같은 기능을 제공합니다. 따라서, 캡션과 `alt` 텍스트는 같은 것을 말해서는 안 됩니다. 왜냐하면 이미지가 없을 때 둘 다 나타나기 때문입니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요.
+> [!NOTE]
+> 접근성의 관점에서, 캡션과 [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 다른 역할을 합니다. 캡션은 이미지를 볼 수 있는 사람들에게도 도움이 되지만, [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 이미지가 없을 때와 같은 기능을 제공합니다. 따라서, 캡션과 `alt` 텍스트는 같은 것을 말해서는 안 됩니다. 왜냐하면 이미지가 없을 때 둘 다 나타나기 때문입니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요.
 
 figure는 이미지일 필요가 없습니다. figure는 다음과 같은 독립적인 컨텐츠 단위입니다.
 

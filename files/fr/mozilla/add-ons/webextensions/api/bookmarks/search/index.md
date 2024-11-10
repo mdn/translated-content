@@ -3,7 +3,7 @@ title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.
 
@@ -89,9 +89,9 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

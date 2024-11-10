@@ -3,10 +3,10 @@ title: "WritableStreamDefaultController: error() メソッド"
 short-title: error()
 slug: Web/API/WritableStreamDefaultController/error
 l10n:
-  sourceCommit: 6a852f07c0b077df0d7b82d3eff99837fc6eff36
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 {{domxref("WritableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。
 

@@ -3,6 +3,8 @@ title: copy
 slug: Web/API/Element/copy_event
 ---
 
+{{APIRef}}
+
 L'événement **copy** est déclenché lorsque l'utilisateur initie une copie par le biais de l'interface du navigateur (par exemple, Ctrl/Cmd+C ou "copier" du menu contextuel) et en réponse d'un appel de {{domxref("Document.execCommand", "document.execCommand('copy')")}} autorisé.
 
 ## Informations générales

@@ -223,7 +223,8 @@ latex`\unicode`;
 
 escape sequence 제한은 _tagged_ templates에만 적용되며 _untagged_ template literals에는 적용되지 않습니다.
 
-> **Warning:** let bad = `bad escape sequence: \unicode`;
+> [!WARNING]
+> let bad = `bad escape sequence: \unicode`;
 
 ## 명세서
 

@@ -60,7 +60,8 @@ Sur l'axe principal, la propriété `column-gap` permettra de créer des goutti�
 
 Sur l'axe secondaire, `row-gap` permettra d'espace les lignes adjacentes. Aussi, il faut que `flex-wrap` vaille `wrap` afin que `row-gap` ait un effet.
 
-> **Note :** À l'heure où ces lignes sont écrites, seul Firefox 63 prend en charge les propriétés `gap` pour les boîtes flexibles. En effet, le comportement de ces propriétés pour les dispositions flexibles est un ajout récent à la spécification.
+> [!NOTE]
+> À l'heure où ces lignes sont écrites, seul Firefox 63 prend en charge les propriétés `gap` pour les boîtes flexibles. En effet, le comportement de ces propriétés pour les dispositions flexibles est un ajout récent à la spécification.
 
 ## Référence
 

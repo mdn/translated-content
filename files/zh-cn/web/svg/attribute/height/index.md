@@ -36,7 +36,7 @@ slug: Web/SVG/Attribute/height
 - {{ SVGElement("use") }}
 - {{ SVGElement("mask") }}
 
-## 用法
+## use
 
 对于 {{SVGElement('use')}} 元素，`height` 定义了引用元素的垂直长度。
 

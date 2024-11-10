@@ -2,7 +2,7 @@
 title: <input type="range">
 slug: Web/HTML/Element/input/range
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -59,7 +59,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 この値は [`max`](/ja/docs/Web/HTML/Attributes/max) 属性の値以下でなければなりません。 HTML の [`min`](/ja/docs/Web/HTML/Attributes/min) 属性を参照してください。
 
-> **メモ:** もし `min` と `max` の値が等しかったり、`max` の値が `min` の値より低かったりすると、ユーザーはその範囲を操作することができなくなります。
+> [!NOTE]
+> もし `min` と `max` の値が等しかったり、`max` の値が `min` の値より低かったりすると、ユーザーはその範囲を操作することができなくなります。
 
 ### step
 
@@ -67,7 +68,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `step` 属性には文字列値 `any` を設定することもできます。この `step` 値は、刻み間隔を意味せず、指定した範囲内で任意の値が許されることを意味します（他にも [`min`](#min) や [`max`](#max) のような制約がある場合は除きます）。対応しているブラウザーでこのように動作するのかについては、[step を `any` に設定](#step_を_any_に設定)の例を参照してください。
 
-> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> [!NOTE]
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,… など、負の方向に -0.5, -1.5, -2.5,… などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Attributes/step)を参照してください。</p>
 
@@ -77,7 +79,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、 `vertical` が範囲を垂直に描画することを意味します。
 
-> **メモ:** input 型の属性のうち、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src` は範囲入力には適用されません。これらの属性が含まれた場合は無視されます。
+> [!NOTE]
+> input 型の属性のうち、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src` は範囲入力には適用されません。これらの属性が含まれた場合は無視されます。
 
 ## 例
 
@@ -116,7 +119,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
 
-#### step を "any" に設定
+#### step を `any` に設定
 
 小数点以下が何桁になろうと、どんな値でも受け入れたい場合は、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性に `any` という値を指定することができます。
 
@@ -171,7 +174,8 @@ input.addEventListener("input", (event) => {
 
 コードの重複を防ぐために、同じ {{HTMLElement("datalist")}} を複数の `<input type="range">` 要素や他の {{HTMLElement("input")}} 型に再利用することができます。
 
-> **メモ:** 下記の例のように[ラベルを表示する](#ラベルの追加)こともしたい場合は、それぞれの範囲の入力に対して `datalist` が必要です。
+> [!NOTE]
+> 下記の例のように[ラベルを表示する](#ラベルの追加)こともしたい場合は、それぞれの範囲の入力に対して `datalist` が必要です。
 
 #### HTML
 
@@ -352,7 +356,7 @@ input[type="range"][orient="vertical"] {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

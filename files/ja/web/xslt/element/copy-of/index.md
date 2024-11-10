@@ -1,15 +1,17 @@
 ---
 title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
-`<xsl:copy-of>` 要素は、select 属性が出力文書に指定するものすべての深いコピー (子孫ノードを含む) を作成します。
+`<xsl:copy-of>` 要素は、select 属性が出力文書に指定するものすべてのディープコピー (子孫ノードを含む) を作成します。
 
 ### 構文
 
-```
+```xml
 <xsl:copy-of select=EXPRESSION />
 ```
 
@@ -22,11 +24,11 @@ slug: Web/XSLT/Element/copy-of
 
 なし
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT, section 11.3.
 

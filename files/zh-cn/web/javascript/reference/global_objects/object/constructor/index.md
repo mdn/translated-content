@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 {{jsxref("Object")}} 实例的 **`constructor`** 数据属性返回一个引用，指向创建该实例对象的构造函数。注意，此属性的值是对*函数本身*的引用，而不是一个包含函数名称的字符串。
 
-> **备注：** 这是 JavaScript 对象的一个属性。关于类的 `constructor` 方法，请参见[其参考页面](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)。
+> [!NOTE]
+> 这是 JavaScript 对象的一个属性。关于类的 `constructor` 方法，请参见[其参考页面](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)。
 
 ## 值
 
@@ -15,7 +16,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **备注：** 这个属性默认会在每个构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性上创建，并由该构造函数创建的所有对象继承。
+> [!NOTE]
+> 这个属性默认会在每个构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性上创建，并由该构造函数创建的所有对象继承。
 
 ## 描述
 
@@ -65,7 +67,7 @@ console.log(`theTree.constructor 是 ${theTree.constructor}`);
 
 这个示例会打印以下输出：
 
-```
+```plain
 theTree.constructor 是 function Tree(name) {
   this.name = name;
 }
@@ -132,7 +134,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 由于重新赋值了 `Child.prototype`，`Child` 实例的 `constructor` 将是 `Parent`。
 
-通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
+通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
 
 然而，在某些调用使用 `constructor` 从实例中访问原始类时，确保 `Child.prototype.constructor` 总是指向 `Child` 本身非常重要。考虑这种情况：对象具有 `create()` 方法来创建自身。
 
@@ -293,7 +295,8 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 再次强调，使用 `Object.setPrototypeOf()` 可能会对性能产生不利影响，因此请确保它仅在必要时使用，并在构造函数声明后立即使用，并在创建任何实例之前使用，以避免对象被“污染”。
 
-> **备注：** 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新对其赋值。
+> [!NOTE]
+> 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新对其赋值。
 
 ## 规范
 

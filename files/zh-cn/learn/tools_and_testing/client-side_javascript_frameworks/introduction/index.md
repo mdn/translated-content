@@ -186,7 +186,8 @@ JavaScript 框架都提供了一种更具以*声明性*的方式地编写用户�
 
 由于此模块中的每个框架都有一个庞大而活跃的社区，因此每个框架的体系都提供了工具来改善开发体验。这些工具让诸如添加测试（确保你的应用表现应有的行为）和 linting（确保你的代码没有错误且排版统一）变得更加容易。
 
-> **备注：** 如果你想了解有关 Web 工具概念的更多详细信息，请阅读[客户端工具概述](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
+> [!NOTE]
+> 如果你想了解有关 Web 工具概念的更多详细信息，请阅读[客户端工具概述](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
 
 ### 组件化
 
@@ -256,7 +257,8 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 | Vue     | IE9+                                       | 基于 HTML  | 基于 HTML、JSX、Pug    |
 | Ember   | 现代的浏览器（IE9+ in Ember version 2.18） | Handlebars | Handlebars、TypeScript |
 
-> **备注：** 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
+> [!NOTE]
+> 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
 
 参考来源：
 
@@ -295,7 +297,8 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 
 本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系），给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
 
-> **备注：** 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的“官方”解决方案。
+> [!NOTE]
+> 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的“官方”解决方案。
 
 ### 静态站点生成器
 

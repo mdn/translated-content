@@ -106,7 +106,8 @@ El atributo `pattern`, cuando se especifica, es una expresión regular que el [`
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
-> **Nota:** Utiliza el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
+> [!NOTE]
+> Utiliza el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
 
 Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
 
@@ -116,13 +117,15 @@ El atributo `placeholder` es una cadena que proporciona una breve pista al usuar
 
 Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
 
-> **Nota:** Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
+> [!NOTE]
+> Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
 
 ### `readonly`
 
 Un atributo booleano que, si está presente, significa que el usuario no puede editar este campo. Su `value`, sin embargo, aún se puede cambiar mediante el código JavaScript configurando directamente la propiedad {{DOMxRef("HTMLInputElement.value")}}.
 
-> **Nota:** Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
+> [!NOTE]
+> Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
 
 ### `size`
 
@@ -167,7 +170,8 @@ Una extensión de Safari, el atributo `autocorrect` es una cadena que indica si 
 
 Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
 
-> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global [`enterkeyhint`](/es/docs/Web/HTML/Global_attributes#enterkeyhint), pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
+> [!NOTE]
+> Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global [`enterkeyhint`](/es/docs/Web/HTML/Global_attributes#enterkeyhint), pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
 
 Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegador decide, utilizando esta sugerencia, qué etiqueta poner en la tecla Intro.
 
@@ -248,7 +252,8 @@ El tamaño físico del cuadro de entrada se puede controlar mediante el atributo
 
 Los elementos {{HTMLElement("input")}} de tipo `text` no tienen validación automática aplicada (ya que una entrada de texto básica debe ser capaz de aceptar cualquier cadena arbitraria), pero hay algunas opciones de validación de lado del cliente disponibles, que verás a continuación.
 
-> **Nota:** La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
+> [!NOTE]
+> La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
 
 ### Una nota sobre estilizado
 
@@ -375,7 +380,8 @@ Esto se renderiza así:
 
 Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensaje de error apropiado (que difiere entre los navegadores). Si intentas ingresar más de 8 caracteres, el navegador no te lo permitirá.
 
-> **Nota:** Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
+> [!NOTE]
+> Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
 
 ### Especificación de un patrón
 

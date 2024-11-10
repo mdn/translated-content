@@ -3,12 +3,14 @@ title: "HTMLMediaElement: ratechange"
 slug: Web/API/HTMLMediaElement/ratechange_event
 ---
 
+{{APIRef("HTMLMediaElement")}}
+
 `ratechange` 事件將在播放速度改變時被觸發
 
 ## 基本資訊
 
 - 規格
-  - : [HTML5 Media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ratechange)
+  - : [HTML5 Media](https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange)
 - 介面
   - : 事件
 - 是否冒泡

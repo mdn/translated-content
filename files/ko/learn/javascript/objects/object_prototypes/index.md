@@ -40,7 +40,8 @@ JavaScript는 흔히 **프로토타입 기반 언어**(**prototype-based languag
 
 JavaScript에서는 객체 인스턴스와 프로토타입 간에 연결(많은 브라우저들이 생성자의 `prototype` 속성에서 파생된 `__proto__` 속성으로 객체 인스턴스에 구현하고 있습니다.)이 구성되며 이 연결을 따라 프로토타입 체인을 타고 올라가며 속성과 메소드를 탐색합니다.
 
-> **참고:** 객체의 prototype([`Object.getPrototypeOf(obj)`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)함수 또는 deprecated 된 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)속성으로 접근 가능한)과 생성자의 `prototype` 속성의 차이를 인지하는 것이 중요합니다. 전자는 개별 객체의 속성이며 후자는 생성자의 속성입니다. 이 말은 `Object.getPrototypeOf(new Foobar())`의 반환값이 `Foobar.prototype`과 동일한 객체라는 의미입니다.
+> [!NOTE]
+> 객체의 prototype([`Object.getPrototypeOf(obj)`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)함수 또는 deprecated 된 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)속성으로 접근 가능한)과 생성자의 `prototype` 속성의 차이를 인지하는 것이 중요합니다. 전자는 개별 객체의 속성이며 후자는 생성자의 속성입니다. 이 말은 `Object.getPrototypeOf(new Foobar())`의 반환값이 `Foobar.prototype`과 동일한 객체라는 의미입니다.
 
 자세히 알기 위해 예제를 하나 봅시다.
 
@@ -86,9 +87,11 @@ person1.valueOf();
 - 없으므로 `person1`의 프로토타입 객체(`Person()` 생성자의 프로토타입)에 `valueOf()` 메소드가 있는지 체크합니다.
 - 여전히 없으므로 `Person()` 생성자의 프로토타입 객체의 프로토타입 객체(`Object()` 생성자의 프로토타입)가 `valueOf()` 메소드를 가지고 있는지 체크합니다. 여기에 있으니 호출하며 끝납니다!
 
-> **참고:** 프로토타입 체인에서 한 객체의 메소드와 속성들이 다른 객체로 **복사되는 것이 아님**을 재차 언급합니다. — 위에서 보시다 시피 체인을 타고 올라가며 접근할 뿐입니다.
+> [!NOTE]
+> 프로토타입 체인에서 한 객체의 메소드와 속성들이 다른 객체로 **복사되는 것이 아님**을 재차 언급합니다. — 위에서 보시다 시피 체인을 타고 올라가며 접근할 뿐입니다.
 
-> **참고:** 특정 객체의 프로토타입 객체에 바로 접근하는 공식적인 방법은 없습니다. — Javascript 언어 표준 스펙에서`[[prototype]]`으로 표현되는 프로토타입 객체에 대한 "링크"는 내부 속성으로 정의되어 있습니다. ({{glossary("ECMAScript")}} 참조). 하지만 많은 수의 모던 브라우저들이 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (앞뒤로 언더바 2개씩) 속성을 통해 특정 객체의 프로토타입 객체에 접근할 수 있도록 구현하였습니다. 예를 들자면 `person1.__proto__` 또는 `person1.__proto__.__proto__` 코드로 체인이 어떻게 구성되어 있는지 확인해 보세요!
+> [!NOTE]
+> 특정 객체의 프로토타입 객체에 바로 접근하는 공식적인 방법은 없습니다. — Javascript 언어 표준 스펙에서`[[prototype]]`으로 표현되는 프로토타입 객체에 대한 "링크"는 내부 속성으로 정의되어 있습니다. ({{glossary("ECMAScript")}} 참조). 하지만 많은 수의 모던 브라우저들이 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (앞뒤로 언더바 2개씩) 속성을 통해 특정 객체의 프로토타입 객체에 접근할 수 있도록 구현하였습니다. 예를 들자면 `person1.__proto__` 또는 `person1.__proto__.__proto__` 코드로 체인이 어떻게 구성되어 있는지 확인해 보세요!
 >
 > ECMAScript 2015부터는 `Object.getPrototypeOf(obj)` 함수를 통해 객체의 프로토타입 객체에 **바로 접근할 수 있게** 되었습니다..
 
@@ -102,7 +105,8 @@ So [`Object.prototype.watch()`](/ko/docs/Web/JavaScript/Reference/Global_Objects
 
 [`Object.is()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)등 `prototype` 버킷에 정의되지 않은 멤버들은 상속되지 않습니다. 이 것들은 `Object()` 생성자에서만 사용할 수 있는 멤버들이죠.
 
-> **참고:** 척 보기엔 이상합니다. — 함수에 불과한 생성자에 멤버를 정의한다니요? 함수 역시 객체의 하나입니다 — 못 미더우시면 [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자 레퍼런스 페이지를 확인해 보세요.
+> [!NOTE]
+> 척 보기엔 이상합니다. — 함수에 불과한 생성자에 멤버를 정의한다니요? 함수 역시 객체의 하나입니다 — 못 미더우시면 [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자 레퍼런스 페이지를 확인해 보세요.
 
 1. prototype 속성을 직접 확인해 볼 수 있습니다. — 예제로 돌아가서 Javascript console에 아래 코드를 타이핑 해 보세요:
 
@@ -234,7 +238,8 @@ Person.prototype.farewell = function () {
 
 그런데도 person1에서 바로 farewell() 메소드를 사용할 수 있습니다 - 자동으로 업데이트 되기 때문이죠(역주:원문은 이런 뉘앙스입니다만 실제로는 프로토타입 객체는 모든 인스턴스에서 공유하기 때문에 정의하는 즉시 별도의 갱신 과정 없이 접근이 가능합니다).
 
-> **참고:** 코드가 잘 동작하지 않는다면 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 코드를 참조하세요 ([running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html) 페이지도 보시구요).
+> [!NOTE]
+> 코드가 잘 동작하지 않는다면 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 코드를 참조하세요 ([running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html) 페이지도 보시구요).
 
 prototype에 속성을 정의하는 경우는 별로 본 적이 없을겁니다. 왜냐면 별로 좋은 방법이 아니거든요. 속성을 추가할 때 아래와 같이 할 수 있습니다:
 

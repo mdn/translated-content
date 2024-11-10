@@ -146,7 +146,7 @@ attr(data-something, "default");
 
 ## 例
 
-<h3 id="content_property">content プロパティ</h3>
+### content プロパティ
 
 #### HTML
 
@@ -164,9 +164,9 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("content_property", "100%", 50)}}
+{{EmbedLiveSample("content プロパティ", "100%", 50)}}
 
-<h3 id="color_value">&lt;color&gt; 値</h3>
+### \<color> 値
 
 {{SeeCompatTable}}
 
@@ -199,7 +199,7 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("color_value", "100%", 50)}}
+{{EmbedLiveSample("color 値", "100%", 50)}}
 
 ## 仕様書
 

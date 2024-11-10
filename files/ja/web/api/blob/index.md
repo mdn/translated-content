@@ -2,12 +2,12 @@
 title: Blob
 slug: Web/API/Blob
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`Blob`** オブジェクトは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{DOMxRef("ReadableStream")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。
+**`Blob`** インターフェイスは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{DOMxRef("ReadableStream")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。
 
 Blob が表現することができるデータは必ずしも JavaScript ネイティブ形式である必要はありません。{{DOMxRef("File")}} インターフェイスは Blob をベースにしており、 Blob の機能を継承してユーザーのシステム上のファイルをサポートするように拡張しています。
 
@@ -24,20 +24,22 @@ Blob が表現することができるデータは必ずしも JavaScript ネイ
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : `Blob` オブジェクトに含まれるデータのサイズ（バイト単位）。
-- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : `Blob` に含まれるデータの MIME タイプを示す文字列。タイプが不明な場合、この文字列は空です。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : `Blob` の全内容をバイナリーデータとして含む {{jsxref("ArrayBuffer")}} で解決するプロミスを返します。
-- {{DOMxRef("Blob.prototype.slice()")}}
+- {{DOMxRef("Blob.bytes()")}}
+  - : この `Blob` の内容を含む {{jsxref("Uint8Array")}} を返すプロミスを返します。
+- {{DOMxRef("Blob.slice()")}}
   - : 呼び出された Blob の指定されたバイト数範囲のデータを含む新しい `Blob` オブジェクトを返します。
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.stream()")}}
   - : `Blob` の内容を読み込むために使用できる {{DOMxRef("ReadableStream")}} を返します。
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : UTF-8 テキストとして解釈された Blob の内容全体を含む文字列で解決するプロミスを返します。
 
 ## 例
@@ -55,7 +57,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### 型付き配列の内容を表す URL の作成
 
-次のコードは、 JavaScript の[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を作成し、型付き配列のデータを含む新しい `Blob` を作成します。次に、{{DOMxRef("URL.createObjectURL()")}} を呼び出して、Blob を {{glossary("URL")}} に変換します。
+次のコードは、 JavaScript の[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を作成し、型付き配列のデータを含む新しい `Blob` を作成します。次に、{{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} を呼び出して、Blob を {{glossary("URL")}} に変換します。
 
 #### HTML
 
@@ -71,7 +73,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 #### JavaScript
 
-このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、要素の {{HTMLElement("img")}} 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
+このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、{{HTMLElement("img")}} 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
 
 ```js
 function showViewLiveResultButton() {
@@ -134,7 +136,7 @@ reader.readAsArrayBuffer(blob);
 const text = await new Response(blob).text();
 ```
 
-または、{{DOMxRef("Blob.prototype.text()")}} を使用します。
+または、{{DOMxRef("Blob.text()")}} を使用します。
 
 ```js
 const text = await blob.text();
@@ -154,5 +156,5 @@ const text = await blob.text();
 
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("URL.createObjectURL")}}
+- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
 - [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

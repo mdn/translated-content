@@ -3,7 +3,7 @@ title: contextualIdentities.update()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour les propriétés d'une identité contextuelle, compte tenu de son ID de cookie.
 

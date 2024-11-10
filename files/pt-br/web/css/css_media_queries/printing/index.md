@@ -1,7 +1,6 @@
 ---
 title: Printing
 slug: Web/CSS/CSS_media_queries/Printing
-original_slug: Web/Guide/Printing
 ---
 
 Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:
@@ -27,7 +26,8 @@ Adicione o seguinte código dentro da tag {{HTMLElement("head")}}.
 
 Alguns navegadores (incluindo o Firefox 6 e versões mais antigas do Internet Explorer) enviam eventos `beforeprint` e `afterprint` para permitir que o conteúdo determine quando a impressão deve ocorrer. Você pode usar isto para ajustar a interface presente durante a impressão (como a exibição ou ocultação de elementos de interface do usuário durante o processo de impressão).
 
-> **Nota:** Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint) e [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint) para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
+> [!NOTE]
+> Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint) e [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint) para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
 
 ## Exemplos
 
@@ -122,7 +122,8 @@ If you want to be able to print an external page without opening it, you can uti
 </html>
 ```
 
-> **Nota:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
+> [!NOTE]
+> Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## Veja também
 

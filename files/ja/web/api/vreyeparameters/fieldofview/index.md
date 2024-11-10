@@ -9,7 +9,8 @@ l10n:
 
 **`fieldOfView`** は{{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、現在の眼の視野角を表します．この値は瞳孔間距離 (IPD) をユーザーが調整すると、それに応じて変化します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 値
 

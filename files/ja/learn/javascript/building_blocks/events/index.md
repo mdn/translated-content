@@ -2,7 +2,7 @@
 title: イベント入門
 slug: Learn/JavaScript/Building_blocks/Events
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
@@ -16,7 +16,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、基本的な HTML および CSS、
+        基本的な HTML および CSS、および
         <a href="/ja/docs/Learn/JavaScript/First_steps"
           >JavaScript の第一歩</a
         >について理解していること。
@@ -53,7 +53,8 @@ l10n:
 このようなコードのブロックが、イベントに応答して実行するように定義されている場合、**イベントハンドラーを登録**していると言います。
 なお、イベントハンドラーは時に **イベントリスナー** と呼ばれることがあります。目的からすれば言い換えてもほとんど問題ないのですが、厳密に言えば一緒に動作する別のものです。イベントリスナーはイベントの発生を待ち受けし、イベントハンドラーは発生したイベントに応答して動作するコードです。
 
-> **メモ:** ウェブのイベントは JavaScript のコア言語の一部ではありません。それらはブラウザーに組み込まれた API の一部として定義されています。
+> [!NOTE]
+> ウェブのイベントは JavaScript のコア言語の一部ではありません。それらはブラウザーに組み込まれた API の一部として定義されています。
 
 ### 例: クリックイベントの扱い
 
@@ -79,7 +80,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -102,7 +103,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -122,7 +123,7 @@ function random(number) {
 }
 
 function changeBackground() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -158,7 +159,7 @@ const controller = new AbortController();
 
 btn.addEventListener("click",
   () => {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
   { signal: controller.signal } // このハンドラーに AbortSignal を渡す
@@ -210,7 +211,7 @@ function random(number) {
 }
 
 btn.onclick = () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 };
 ```
@@ -225,7 +226,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -256,7 +257,7 @@ element.onclick = function2;
 
 ```js
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -305,7 +306,7 @@ function random(number) {
 }
 
 function bgChange(e) {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
@@ -313,15 +314,18 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **メモ:** この例の[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html)が GitHub 上にあります（また、[ライブ実行を見る](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)ことができます）。
+> [!NOTE]
+> この例の[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html)が GitHub 上にあります（また、[ライブ実行を見る](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)ことができます）。
 
 イベントオブジェクト **e** が関数に含まれていて、関数内で `e.target` — これはボタン自身 — の背景色スタイルを設定しているのがわかるでしょう。
 イベントオブジェクトの `target` プロパティは、常にイベントが生じた要素への参照となっています。
 ですから、この例ではページではなく、ボタンの背景色がランダムに変わります。
 
-> **メモ:** 下記の[イベントの移譲](#イベントの移譲)の節で、 `event.target` を使用している例があります。
+> [!NOTE]
+> 下記の[イベントの移譲](#イベントの移譲)の節で、 `event.target` を使用している例があります。
 
-> **メモ:** イベントオブジェクトには好きな名前が使えます。イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。
+> [!NOTE]
+> イベントオブジェクトには好きな名前が使えます。イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。
 > `e`/`evt`/`event` が開発者の間でとても良く使われていますが、これらが短くて覚えやすいからです。
 > 常に一貫性を保つことは良いことです。自分自身に対しても、可能であれば他の人に対しても。
 
@@ -409,7 +413,8 @@ form.addEventListener("submit", (e) => {
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
-> **メモ:** ソースコード全体については、 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) を（および[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も）ご覧ください。
+> [!NOTE]
+> ソースコード全体については、 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) を（および[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も）ご覧ください。
 
 ## イベントのバブリング
 
@@ -733,7 +738,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   return rndCol;
 }
 
@@ -748,9 +753,11 @@ container.addEventListener("click", (event) => {
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **メモ:** この例では、 `event.target` を使用して、イベントの対象となった要素（つまり、最も内側の要素）を取得しています。もし、このイベントを処理した要素（この場合はコンテナー）にアクセスしたい場合は、 `event.currentTarget` を使用することができます。
+> [!NOTE]
+> この例では、 `event.target` を使用して、イベントの対象となった要素（つまり、最も内側の要素）を取得しています。もし、このイベントを処理した要素（この場合はコンテナー）にアクセスしたい場合は、 `event.currentTarget` を使用することができます。
 
-> **メモ:** 完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) を参照してください。こちらから[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)も確認してください。
+> [!NOTE]
+> 完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) を参照してください。こちらから[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)も確認してください。
 
 ## ウェブページだけではない
 
@@ -767,9 +774,9 @@ The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) pr
 
 この段階では、他の環境について何かを理解する必要はありません。プログラミング環境が異なると、イベントが異なる可能性があることを明確にしたかっただけです。
 
-## スキルをテストしましょう
+## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？次に行く前に、この情報が身に付いたかどうか確認するには — [Test your skills: Events](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)を見てください。
 
 ## まとめ
 
@@ -778,7 +785,8 @@ The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) pr
 また、JavaScript が使用されるさまざまなコンテキストには、異なるイベントモデルがあることを理解することも重要です。ウェブ API から、ブラウザー WebExtensions や Node.js (サーバーサイド JavaScript) など、他にもさまざまな分野があります。
 これでこれらの領域をすべて理解できるとは思っていませんが、ウェブ開発者を学習していく上で、イベントの基本的なことを理解しておくことはとても役に立ちます。
 
-> **メモ:** もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 関連情報
 

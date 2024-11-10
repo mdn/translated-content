@@ -71,7 +71,7 @@ l10n:
 
 ## 関連情報
 
-- [インターネットはどのように動くのか](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [インターネットの仕組み](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)

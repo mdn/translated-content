@@ -1,11 +1,14 @@
 ---
 title: "MediaStream: addtrack イベント"
+short-title: addtrack
 slug: Web/API/MediaStream/addtrack_event
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-`addtrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) に追加されたときに発行されます。
+**`addtrack`** イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) に追加されたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -29,7 +32,7 @@ onaddtrack = (event) => {};
 
 _親インターフェイスである {{domxref("Event")}} から継承したプロパティもあります。_
 
-- `track` {{ReadOnlyInline}}
+- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
   - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームに追加されたトラックを表します。
 
 ## 例
@@ -37,7 +40,7 @@ _親インターフェイスである {{domxref("Event")}} から継承したプ
 `addEventListener()` を使用すると次にようになります。
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.addEventListener("addtrack", (event) => {
   console.log(`New ${event.track.kind} track added`);
@@ -47,7 +50,7 @@ stream.addEventListener("addtrack", (event) => {
 `onaddtrack` イベントハンドラープロパティを使用すると次にようになります。
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.onaddtrack = (event) => {
   console.log(`New ${event.track.kind} track added`);
@@ -67,5 +70,5 @@ stream.onaddtrack = (event) => {
 - 関連イベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
 - [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event)
 - [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event)
-- [メディアストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)

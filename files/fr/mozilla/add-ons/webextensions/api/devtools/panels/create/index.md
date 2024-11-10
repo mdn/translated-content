@@ -3,7 +3,7 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ajoute un nouveau panneau aux devtools.
 
@@ -63,7 +63,7 @@ browser.devtools.panels
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 >

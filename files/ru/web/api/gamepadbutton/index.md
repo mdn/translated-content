@@ -7,8 +7,6 @@ slug: Web/API/GamepadButton
 
 Объект **`GamepadButton`** возвращается путём получения любого элемента в массиве `buttons`, который является свойством интерфейса {{domxref("Gamepad")}}.
 
-> **Примечание:** Это работает только в Firefox Gecko 28 и выше; Chrome и более ранние версии Firefox по-прежнему возвращают массив чисел с плавающей точкой
-
 ## Свойства
 
 - {{domxref("GamepadButton.value")}} {{readonlyInline}}

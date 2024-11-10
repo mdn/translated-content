@@ -13,7 +13,8 @@ slug: Web/API/Response/type
 - `opaque`：对跨源资源的“no-cors”请求的响应。[严格限制](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)。
 - `opaqueredirect`：fetch 请求是通过 `redirect: "manual"` 发出的。响应的状态是 0，标头是空的，主体是 null，trailer 是空的。
 
-> **备注：** “错误”响应从来没有真正暴露于脚本：这样的响应，{{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。
+> [!NOTE]
+> “错误”响应从来没有真正暴露于脚本：这样的响应，{{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。
 
 ## 值
 

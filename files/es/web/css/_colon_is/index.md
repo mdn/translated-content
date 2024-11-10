@@ -9,7 +9,8 @@ l10n:
 
 La función [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) de [CSS](/es/docs/Web/CSS) **`:is()`** toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista. Esto es útil para escribir selectores grandes en una forma más compacta.
 
-> **Nota:** Originalmente llamado `:matches()` (y `:any()`), este selector pasó a llamarse `:is()` en [CSSWG número 3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> [!NOTE]
+> Originalmente llamado `:matches()` (y `:any()`), este selector pasó a llamarse `:is()` en [CSSWG número 3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 

@@ -142,7 +142,8 @@ slug: Web/JavaScript/Guide/Regular_expressions
   </tbody>
 </table>
 
-> **참고:** 위 문서의 일부만 발췌해 정리해놓은, [더 큰 치트 시트도 있습니다](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
+> [!NOTE]
+> 위 문서의 일부만 발췌해 정리해놓은, [더 큰 치트 시트도 있습니다](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
 
 ### 이스케이핑
 
@@ -365,7 +366,8 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 ## 예제
 
-> **참고:** 다음 문서에서도 정규 표현식의 사용 예제를 볼 수 있습니다.
+> [!NOTE]
+> 다음 문서에서도 정규 표현식의 사용 예제를 볼 수 있습니다.
 >
 > - {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}} 메서드 참조
 > - 이 안내서의 하위 문서: [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [어서션](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)

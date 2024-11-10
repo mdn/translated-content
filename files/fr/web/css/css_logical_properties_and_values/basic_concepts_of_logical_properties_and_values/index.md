@@ -51,7 +51,8 @@ Les propriétés et valeurs logiques peuvent être catégorisées selon différe
 
 On a également un groupe de propriétés qui ne possèdent pas de correspondances directes avec les propriétés physiques. Ces propriétés sont des propriétés raccourcies qui font référence aux deux extrêmités d'un axe. Ainsi {{CSSxRef("margin-block")}} sera une propriété raccourcie pour {{CSSxRef("margin-block-start")}} et {{CSSxRef("margin-block-end")}}. Ce deuxième groupe n'est actuellement pas pris en charge par les navigateurs.
 
-> **Note :** Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom `margin` pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'_issue_ GitHub [n°1282](https://github.com/w3c/csswg-drafts/issues/1282).
+> [!NOTE]
+> Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom `margin` pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'_issue_ GitHub [n°1282](https://github.com/w3c/csswg-drafts/issues/1282).
 
 ### Tester la compatibilité des navigateurs
 

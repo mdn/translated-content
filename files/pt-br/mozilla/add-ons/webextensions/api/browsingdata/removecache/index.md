@@ -3,7 +3,7 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Limpa o cache do navegador.
 
@@ -50,7 +50,8 @@ browser.browsingData.removeCache({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Nota:** Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> [!NOTE]
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
 

@@ -9,8 +9,8 @@ slug: Web/API/Range/Range
 
 ## 语法
 
-```
-range = new Range()
+```js-nolint
+new Range()
 ```
 
 ## 示例

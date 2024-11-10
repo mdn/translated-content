@@ -3,7 +3,7 @@ title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.
 
@@ -36,7 +36,7 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 
 > **Nota:** **Agradecimientos**
 >
-> Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+> Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
 >
 > Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 

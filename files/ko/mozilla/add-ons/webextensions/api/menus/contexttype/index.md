@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2c5465eab20015868a1eeca59c5623d37b105f7c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 메뉴 항목이 표시될 수 있는 컨텍스트들입니다.
 
@@ -60,7 +60,8 @@ l10n:
 
 {{WebExtExamples}}
 
-> **참고:** 이 API는 Chromium의 [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType) API를 기반으로 합니다. 이 문서는 Chromium 코드의 [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)에서 파생되었습니다.
+> [!NOTE]
+> 이 API는 Chromium의 [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-ContextType) API를 기반으로 합니다. 이 문서는 Chromium 코드의 [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)에서 파생되었습니다.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

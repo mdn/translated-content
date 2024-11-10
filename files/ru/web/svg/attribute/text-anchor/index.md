@@ -3,6 +3,8 @@ title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG Атрибутов](/en/SVG/Attribute)
 
 Атрибут `text-anchor` используется для выравнивания
@@ -83,6 +85,6 @@ _(start-, middle- или end-выравнивание)_ текстовой ст�
 
 - [Text content elements](/en/SVG/Element#Text_content_elements)
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}

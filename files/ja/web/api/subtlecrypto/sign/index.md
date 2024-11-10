@@ -82,7 +82,8 @@ HMAC アルゴリズムは、 [FIPS 198-1 標準](https://csrc.nist.gov/csrc/med
 
 ## 例
 
-> **メモ:** GitHub の[動作例](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)をご覧ください。
+> [!NOTE]
+> GitHub の[動作例](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)をご覧ください。
 
 ### RSASSA-PKCS1-v1_5
 

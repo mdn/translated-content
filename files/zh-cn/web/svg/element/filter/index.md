@@ -7,7 +7,7 @@ slug: Web/SVG/Element/filter
 
 `filter`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

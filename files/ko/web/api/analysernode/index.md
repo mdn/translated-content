@@ -59,7 +59,8 @@ _부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다_.
 
 ## 예제
 
-> **참고:** 오디오 시각화 생성하기에 대한 더 많은 정보를 보려면 [Web Audio API 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 가이드를 참고하세요.
+> [!NOTE]
+> 오디오 시각화 생성하기에 대한 더 많은 정보를 보려면 [Web Audio API 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 가이드를 참고하세요.
 
 ### 기본 사용
 

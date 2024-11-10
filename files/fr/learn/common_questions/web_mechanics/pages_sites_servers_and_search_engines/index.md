@@ -3,6 +3,8 @@ title: Quelle différence entre une page web, un site web, un serveur web et un 
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous démystifions plusieurs notions liées au Web : page web, site web, serveur web et moteur de recherche. Ces termes sont souvent une source de confusion ou utilisés incorrectement : voyons leur signification.
 
 <table class="standard-table">
@@ -70,7 +72,8 @@ Une _page web_ est un document simple qui peut être affiché par un [navigateur
 - des _scripts_ — qui ajoutent des fonctions interactives ; ou
 - du _contenu multimédia_ — images, sons, vidéos.
 
-> **Note :** Les navigateurs peuvent afficher d'autres types de documents tels que des fichiers [PDF](/fr/docs/Glossary/PDF) ou des images, mais le terme **page web** désigne spécifiquement des documents HTML. Si nous parlons d'un autre type de contenu, nous utiliserons le terme **document**.
+> [!NOTE]
+> Les navigateurs peuvent afficher d'autres types de documents tels que des fichiers [PDF](/fr/docs/Glossary/PDF) ou des images, mais le terme **page web** désigne spécifiquement des documents HTML. Si nous parlons d'un autre type de contenu, nous utiliserons le terme **document**.
 
 Toutes les pages web sont associées à une adresse unique. Pour atteindre une page, il suffit d'entrer son adresse dans la barre d'adresse du navigateur :
 

@@ -1,17 +1,20 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-超文本傳輸協定 (HTTP) **`411 Length Required`** 用戶端錯誤表示伺服器拒絕接收沒有定義 {{HTTPHeader("Content-Length")}} 頭的請求。
+HTTP **`411 Length Required`** 用戶端錯誤回應碼表示伺服器拒絕接受沒有定義 {{HTTPHeader("Content-Length")}} 標頭的請求。
 
-> **備註：** by specification, when sending data in a series of chunks, the `Content-Length` header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format. See {{HTTPHeader("Transfer-Encoding")}} for more details.
+> [!NOTE]
+> 根據規範，在以一系列塊發送數據時，會省略 `Content-Length` 標頭，而在每個塊的開頭需要以十六進制格式添加當前塊的長度。詳情請參見 {{HTTPHeader("Transfer-Encoding")}}。
 
 ## 狀態
 
-```plain
+```http
 411 Length Required
 ```
 

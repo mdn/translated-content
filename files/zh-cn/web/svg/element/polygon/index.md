@@ -7,7 +7,7 @@ slug: Web/SVG/Element/polygon
 
 **`polygon`** 元素定义了一个由一组首尾相连的直线线段构成的闭合多边形形状。最后一点连接到第一点。欲了解开放形状，请看{{SVGElement("polyline")}}元素。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

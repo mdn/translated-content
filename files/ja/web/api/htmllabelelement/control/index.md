@@ -14,7 +14,8 @@ l10n:
 
 {{domxref("HTMLElement")}} の派生オブジェクトで、この {{HTMLElement("label")}} が関連付けられているコントロールを表します。ラベルが孤立している場合は `null` になります。
 
-> **メモ:** このプロパティに値があり、 {{domxref("HTMLLabelElement.htmlFor")}} に値がある場合、 {{domxref("HTMLLabelElement.htmlFor")}} プロパティは必ず同じコントロールを参照します。
+> [!NOTE]
+> このプロパティに値があり、 {{domxref("HTMLLabelElement.htmlFor")}} に値がある場合、 {{domxref("HTMLLabelElement.htmlFor")}} プロパティは必ず同じコントロールを参照します。
 
 ## 仕様書
 

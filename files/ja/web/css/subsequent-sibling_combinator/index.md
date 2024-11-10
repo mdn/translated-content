@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **後続兄弟結合子** (subsequent-sibling combinator, `~`) は 2 個のセレクターを結びつけ、 1 つ目の要素の後に 2 つ目の要素があり（直後である必要はない）、かつ両者が同じ親要素の子であるすべてのパターンに一致します。
 

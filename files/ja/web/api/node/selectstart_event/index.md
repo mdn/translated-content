@@ -1,5 +1,6 @@
 ---
 title: "Node: selectstart イベント"
+short-title: selectstart
 slug: Web/API/Node/selectstart_event
 l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
@@ -7,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`selectstart`** は[選択 API](/ja/docs/Web/API/Selection) のイベントで、新しい選択範囲をユーザが指定した際に発行されます。
+**`selectstart`** は[選択 API](/ja/docs/Web/API/Selection) のイベントで、新しい選択範囲をユーザーが指定した際に発行されます。
 
 イベントがキャンセルされた場合、選択範囲は変更されません。
 

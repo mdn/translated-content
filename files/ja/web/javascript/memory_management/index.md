@@ -101,7 +101,8 @@ const a3 = a.concat(a2);
 
 ### 参照カウントのガベージコレクション
 
-> **メモ:** 現代のブラウザーで、ガベージコレクションに参照カウントを使用しているものはもうありません。
+> [!NOTE]
+> 現代のブラウザーで、ガベージコレクションに参照カウントを使用しているものはもうありません。
 
 これは、最も素朴なガベージコレクションアルゴリズムです。このアルゴリズムは、「あるオブジェクトが必要なくなった」ことを、「あるオブジェクトがその他のオブジェクトから参照されていない」ことと定義します。あるオブジェクトは、それに対する参照がゼロの時にガベージコレクション可能であると見なされます。
 
@@ -215,7 +216,8 @@ wm.set(key, { key });
 
 大まかなメンタルモデルとして、`WeakMap` は以下のような実装だと考えてください。
 
-> **警告:** これはポリフィルではなく、エンジンで実装されている方法（ガベージコレクション機構にフックしている）にも近いものです。
+> [!WARNING]
+> これはポリフィルではなく、エンジンで実装されている方法（ガベージコレクション機構にフックしている）にも近いものです。
 
 ```js
 class MyWeakMap {
@@ -264,7 +266,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
+[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。`FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
 
 ```js
 function cached(getter) {
@@ -297,4 +299,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 パフォーマンスとセキュリティの関係で、コールバックがいつ呼び出されるか、あるいはすべて呼び出されるかどうかは保証されていません。コールバックはクリーンアップにのみ使用すべきであり、しかも重要でないクリーンアップにのみ使用すべきです。他にも、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で常に実行される `finally` ブロックで実行するなど、より決定的にリソースを管理する方法があります。`WeakRef` と `FinalizationRegistry` は、長時間実行するプログラムのメモリー使用量を最適化するためだけに存在します。
 
-F[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。
+[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。

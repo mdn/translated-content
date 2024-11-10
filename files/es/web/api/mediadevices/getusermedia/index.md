@@ -37,7 +37,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
     { audio: true, video: true }
     ```
 
-    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mosrtar una resolución de una cámara de 1280x720.
+    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mostrar una resolución de una cámara de 1280x720.
 
     ```js
     {

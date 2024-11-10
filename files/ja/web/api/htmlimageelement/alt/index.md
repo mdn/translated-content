@@ -3,7 +3,7 @@ title: "HTMLImageElement: alt プロパティ"
 short-title: alt
 slug: Web/API/HTMLImageElement/alt
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 75d3108eaade9d64de3ece87258c946b9bf13068
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,8 +12,8 @@ l10n:
 
 画像が読み込まれないのは、エラーが発生した場合、ユーザーが画像の読み込みを無効にしている場合、または画像の読み込みがまだ終了していない場合があります。
 
-おそらく `alt` プロパティを使用する最も重要な理由は、[アクセシビリティ](/ja/docs/Web/Accessibility)に対応することです。なぜなら `alt` テキストはスクリーンリーダーや他の支援技術によって使用され、障碍のあるユーザーがコンテンツを十分に活用できるようサポートするからです。
-例えば、視覚障碍のあるユーザーをサポートするために、音声で読み上げたり、タッチ端末に送ったりします。
+おそらく `alt` プロパティを使用する最も重要な理由は、[アクセシビリティ](/ja/docs/Web/Accessibility)に対応することです。なぜなら `alt` テキストはスクリーンリーダーや他の支援技術によって使用され、障碍のある人々がコンテンツを十分に活用できるようサポートするからです。
+例えば、目の不自由なユーザーに対応するために、音読されたり、点字出力端末に送られたりします。
 
 > **このように考えてください。** 画像の `alt` 文字列を選ぶときは、ページ上に画像があることに触れずに、電話で誰かにページを読み聞かせるときのことを想像してみてください。
 
@@ -49,7 +49,7 @@ l10n:
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="" />
+    <img src="margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
     <p>
@@ -91,7 +91,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237);
+  background-color: rgb(241 240 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -107,7 +107,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235);
+  background-color: rgb(241 240 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;

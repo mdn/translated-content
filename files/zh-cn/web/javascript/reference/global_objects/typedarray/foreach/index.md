@@ -74,7 +74,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

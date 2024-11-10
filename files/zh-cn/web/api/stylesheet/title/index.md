@@ -1,23 +1,19 @@
 ---
-title: StyleSheet.title
+title: StyleSheet：title 属性
 slug: Web/API/StyleSheet/title
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("CSSOM")}}
 
-## 概述
+{{domxref("StyleSheet")}} 接口的 **`title`** 属性返回当前样式表的咨询标题。
 
-The **`title`** property of the {{domxref("StyleSheet")}} interface returns the advisory title of the current style sheet.
+标题通常在 {{domxref("StyleSheet/OwnerNode", "ownerNode")}} 中指定。
 
-The title is often specified in the {{domxref("StyleSheet/OwnerNode", "ownerNode")}}.
+## 规范
 
-## 注意
-
-The title is often specified in the {{domxref("StyleSheet/OwnerNode", "ownerNode")}}.
-
-## Specification
-
-- [title](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+{{Specifications}}
 
 ## 浏览器兼容性
 

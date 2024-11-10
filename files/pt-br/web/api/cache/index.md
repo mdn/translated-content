@@ -13,11 +13,14 @@ Você é também o responsavel por, periódicamente, limpar as entradas de cache
 
 Certifique-se de versionar seus caches por nome e usar somente os caches nas versões do script que eles podem seguramente operar. Veja também o artigo sobre [remoção de caches antigos](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches) para mais informações.
 
-> **Nota:** Implementações iniciais do Cache (tanto no Blink quando no Gecko) resolvem promises de {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, e {{domxref("Cache.put")}} somente quando o corpo completo da resposta foi armazenado. Versões mais recentes desta especificação possuem uma melhora de linguagem informando que o browser pode resolver a promise assim que a entrada é registrada no banco de dados, mesmo que o corpo da resposta ainda esteja sendo enviado.
+> [!NOTE]
+> Implementações iniciais do Cache (tanto no Blink quando no Gecko) resolvem promises de {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, e {{domxref("Cache.put")}} somente quando o corpo completo da resposta foi armazenado. Versões mais recentes desta especificação possuem uma melhora de linguagem informando que o browser pode resolver a promise assim que a entrada é registrada no banco de dados, mesmo que o corpo da resposta ainda esteja sendo enviado.
 
-> **Nota:** O algoritmo de comparação de chaves depende do [cabeçalho VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) no valor. Então, comparar uma nova chave depende tanto de olhar para o valor e para a própria chave para novas entradas no cache.
+> [!NOTE]
+> O algoritmo de comparação de chaves depende do [cabeçalho VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) no valor. Então, comparar uma nova chave depende tanto de olhar para o valor e para a própria chave para novas entradas no cache.
 
-> **Nota:** A API de cache não segue os padrões HTTP de cabeçalhos de Cache.
+> [!NOTE]
+> A API de cache não segue os padrões HTTP de cabeçalhos de Cache.
 
 ## Métodos
 
@@ -48,7 +51,8 @@ O trecho também mostra as melhores práticas de versionamento de caches utiliza
 
 No exemplo, "Caches" é um atributo dos service workers no WorkerGlobalScope. Ele contém o CacheStorage, um objeto pelo qual podemos acessar a [API de mesmo nome](/pt-BR/docs/Web/API/CacheStorage).
 
-> **Nota:** No Chrome, visite `chrome://inspect/#service-workers` e clique no link "inspect" abaixo do service worker registrado para analisar os logs das várias ações que o script "[service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)" está executando.
+> [!NOTE]
+> No Chrome, visite `chrome://inspect/#service-workers` e clique no link "inspect" abaixo do service worker registrado para analisar os logs das várias ações que o script "[service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)" está executando.
 
 ```js
 var CACHE_VERSION = 1;

@@ -3,7 +3,7 @@ title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.
 
@@ -60,9 +60,9 @@ browser.browsingData.settings().then(onGotSettings, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

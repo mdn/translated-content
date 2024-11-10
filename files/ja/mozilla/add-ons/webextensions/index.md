@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 {{AddonSidebar}}
 
-拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/extensions) と互換性があります。
+拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/docs/extensions) と互換性があります。
 
 これらのブラウザー用に書かれた拡張機能は大抵の場合、[ほんの少し変更を加えるだけで](/ja/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome) Firefox や [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) でも動かすことができます。この API は [マルチプロセス Firefox](/ja/Firefox/Multiprocess_Firefox) にも完全互換です。
 
@@ -53,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions
 ## 逆引きリファレンス
 
 - [HTTP リクエストへの介入](/ja/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
-- [web ページの変更](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
+- [ウェブページの変更](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
 - [ツールバーボタンの追加](/ja/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
 - [設定画面の実装](/ja/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
 - [クリップボードとのやりとり](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
@@ -86,7 +86,7 @@ slug: Mozilla/Add-ons/WebExtensions
 - [Extensions と Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
 - [配布方法の選択肢](/ja/docs/Mozilla/Add-ons/WebExtensions/Distribution_options)
 - [正しいパーミッションを要求する](/ja/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions)
-- [オブジェクトを Web ページのスクリプトと共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [オブジェクトをウェブページのスクリプトと共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 - [拡張機能を引退させる](/ja/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension)
 - [Tips and Tricks](/ja/docs/Mozilla/Add-ons/WebExtensions/Tips)
 - [ブラウザー拡張機能の開発ツール](/ja/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)

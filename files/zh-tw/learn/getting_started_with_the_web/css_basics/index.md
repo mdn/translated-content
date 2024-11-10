@@ -169,7 +169,8 @@ h1 {
    }
    ```
 
-   > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
+   > [!NOTE]
+   > 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
 
 4. 現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
 
@@ -280,7 +281,8 @@ img {
 
 Finally, we'll center the image to make it look better. We could use the `margin: 0 auto` trick again as we did earlier for the body, but we also need to do something else. The body element is **block level**, meaning it takes up space on the page and can have margin and other spacing values applied to it. Images, on the other hand, are **inline** elements, meaning they can't. So to apply margins to the image, we have to give the image block-level behavior using `display: block;`.
 
-> **備註：** Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/zh-TW/docs/Web/CSS/display).
+> [!NOTE]
+> Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/zh-TW/docs/Web/CSS/display).
 
 ## 結論
 

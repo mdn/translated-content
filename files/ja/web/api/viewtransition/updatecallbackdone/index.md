@@ -10,7 +10,7 @@ l10n:
 
 **`updateCallbackDone`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用のプロパティで、 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} のコールバックが返すプロミスが履行されると履行され、拒否されると拒否されるプロミス ({{jsxref("Promise")}}) です。
 
-`updateCallbackDone` は、ビュートランジションのアニメーションの成否を気にせず、 DOM が更新されたかどうか、いつ更新されたかを知りたい場合に有益です。
+`updateCallbackDone` は、ビュー遷移のアニメーションの成否を気にせず、 DOM が更新されたかどうか、いつ更新されたかを知りたい場合に有益です。
 
 ## 値
 
@@ -19,7 +19,7 @@ l10n:
 ## 例
 
 ```js
-// 新しいビュートランジションを開始
+// 新しいビュー遷移を開始
 const transition = document.startViewTransition(() => displayNewImage());
 
 transition.updateCallbackDone.then(() => {

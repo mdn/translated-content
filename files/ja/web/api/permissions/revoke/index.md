@@ -29,7 +29,8 @@ revoke(descriptor)
     - `sysex` （MIDI のみ）
       - : システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 既定値は `false` です。
 
-> **メモ:** Firefox 44 以降、[通知](/ja/docs/Web/API/Notifications_API) と[プッシュ](/ja/docs/Web/API/Push_API)の権限は統合されました。 （例えば、ユーザーによって、関連する権限のダイアログにより）権限が与えられた場合、　`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
+> [!NOTE]
+> Firefox 44 以降、[通知](/ja/docs/Web/API/Notifications_API) と[プッシュ](/ja/docs/Web/API/Push_API)の権限は統合されました。 （例えば、ユーザーによって、関連する権限のダイアログにより）権限が与えられた場合、　`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
 
 > **メモ:** `persistent-storage` 権限は、[ストレージ API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
 

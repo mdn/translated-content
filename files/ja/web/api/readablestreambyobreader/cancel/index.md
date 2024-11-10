@@ -11,7 +11,8 @@ l10n:
 **`cancel()`** は {{domxref("ReadableStreamBYOBReader")}} インターフェイスのメソッドで、ストリームがキャンセルされたときに解決するプロミス ({{jsxref("Promise")}}) を返します。
 このメソッドを呼び出すと、コンシューマーがストリームへの関心を失ったことを示します。
 
-> **メモ:** リーダーがアクティブな場合、 `cancel()` メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
+> [!NOTE]
+> リーダーがアクティブな場合、 `cancel()` メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
 
 ## 構文
 

@@ -27,7 +27,7 @@ _祖先である {{domxref("CSSRule")}} からメソッドを継承していま�
 - {{domxref("CSSKeyframesRule.appendRule()")}}
   - : 現在の CSSKeyframesRule の中に新しいキーフレームを挿入します。引数は文字列で、{{cssxref("@keyframes")}} アットルールの項目と同じ書式でキーフレームを指定します。複数のキーフレームのルールが含まれていた場合は、 {{domxref("DOMException")}} が `SYNTAX_ERR` で発生します。
 - {{domxref("CSSKeyframesRule.deleteRule()")}}
-  - : 現在の CSSKeyframesRule からキーフレームのルールを削除します。引数は削除するキーフレームの見出しで、`0%` から `100%` までの間に解決する値を表す文字列です。。
+  - : 現在の CSSKeyframesRule からキーフレームのルールを削除します。引数は削除するキーフレームの見出しで、`0%` から `100%` までの間に解決する値を表す文字列です。
 - {{domxref("CSSKeyframesRule.findRule()")}}
   - : 指定されたキーに対応するキーフレームのルールを返します。このキーは文字列で、返却するキーフレームの見出しを指定し、`0%` から `100%` までのパーセント値に解決するものです。そのキーフレームが存在しない場合は、 `findRule` は `null` を返します。
 

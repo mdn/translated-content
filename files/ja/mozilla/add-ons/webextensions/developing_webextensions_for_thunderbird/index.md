@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 {{AddonSidebar}}
 
 Thunderbird のアドイン開発は Firefox と同様の方法でコーディングすることが可能です。
-テキストエディタや、あなたの選んだコーディングツールで。
+テキストエディターや、あなたの選んだコーディングツールで。
 
 ## API の違い
 

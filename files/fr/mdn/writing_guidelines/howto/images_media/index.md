@@ -58,7 +58,8 @@ Prenons un exemple&nbsp;:
 
 Chaque image, `![]` et `<img>`, doit inclure un texte alternatif. Les attributs `alt` doivent être courts et fournir toutes les informations pertinentes que l'image transmet. Lorsque vous écrivez la description de l'image, réfléchissez aux informations précieuses de l'image et à la façon dont vous les transmettriez à quelqu'un qui peut lire le contenu de la page mais ne peut pas charger les images.
 
-> **Note :** Voir [la documentation sur l'attribut `alt` de `<img>` et notamment la façon d'écrire des textes alternatifs pertinents](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives).
+> [!NOTE]
+> Voir [la documentation sur l'attribut `alt` de `<img>` et notamment la façon d'écrire des textes alternatifs pertinents](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives).
 
 Soyez sûr que le texte alternatif de l'image est basé sur son contexte. Si la photo de Fluffy le chien est un avatar à côté d'un avis pour la nourriture pour chien Yuckymeat, `alt="Fluffy"` est approprié. Si la même photo fait partie de la page d'adoption de Fluffy, les informations transmises dans l'image sont pertinentes pour les futurs parents de chiens, telles que `alt="Fluffy, un terrier tricolore à poil très court, avec une balle de tennis dans la bouche."`. Le texte environnant indique probablement la taille et la race de Fluffy, il serait donc redondant de l'inclure. Évitez de décrire l'image avec trop de détails&nbsp;: le futur parent n'a pas besoin de savoir si le chien est à l'intérieur ou à l'extérieur, ou s'il a un collier rouge et une laisse bleue.
 
@@ -102,7 +103,8 @@ Plusieurs arguments s'opposent à l'utilisation de vidéos dans la documentation
 - La vidéo pose des problèmes d'accessibilité&nbsp;: elle est généralement plus coûteuse à produire que le texte, mais surtout à traduire ou à rendre utilisable par les utilisateurs de lecteurs d'écran.
 - Dans le prolongement du dernier point, la vidéo est beaucoup plus difficile à éditer/mettre à jour/maintenir que le contenu textuel.
 
-> **Note :** Il est utile de garder à l'esprit cette problématique, même lorsque vous réalisez des vidéos, afin d'essayer d'en atténuer certains aspects.
+> [!NOTE]
+> Il est utile de garder à l'esprit cette problématique, même lorsque vous réalisez des vidéos, afin d'essayer d'en atténuer certains aspects.
 
 Il existe de nombreux sites populaires qui fournissent de nombreux tutoriels vidéo. MDN n'est pas un site dont la majorité du contenu est de la vidéo, toutefois, il est possible d'intégrer des vidéos dans certains articles MDN selon le contexte.
 
@@ -183,7 +185,8 @@ Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cett
 
 - Planifiez les niveaux de zoom pour les portions de l'interface utilisateur que vous afficherez. Tout le monde ne pourra pas forcément consulter la vidéo en haute définition. Vous pourrez également zoomer sur certaines parties en post-production mais ça peut être une bonne idée de zoomer dès l'enregistrement.
 
-> **Note :** Ne zoomez pas au point que les éléments d'interfaces soient déformés ou semblent étranges.
+> [!NOTE]
+> Ne zoomez pas au point que les éléments d'interfaces soient déformés ou semblent étranges.
 
 #### Enregistrement
 
@@ -191,7 +194,8 @@ Lorsque vous enregistrez, avancez dans les étapes de façon calme et régulièr
 
 N'oubliez pas de faire une pause d'une ou deux secondes à la fin pour montrer le résultat final de la séquence d'actions.
 
-> **Note :** Si vous utilisez un outil simple comme QuickTime Player ou que vous ne pouvez pas effectuer de post-production, veillez à ce que la fenêtre soit de la bonne taille pour ce que vous voulez montrer.
+> [!NOTE]
+> Si vous utilisez un outil simple comme QuickTime Player ou que vous ne pouvez pas effectuer de post-production, veillez à ce que la fenêtre soit de la bonne taille pour ce que vous voulez montrer.
 
 #### Post-production
 
@@ -210,7 +214,8 @@ Si besoin, redimensionnez la vidéo aux proportions souhaitées.
 
 Actuellement, les vidéos doivent être uploadées sur YouTube afin d'être affichées sur MDN, par exemple sur la chaîne [mozhacks](https://www.youtube.com/user/mozhacks/videos). Demandez à un membre de l'équipe MDN de téléverser la vidéo si vous n'avez pas un meilleur endroit où la stocker.
 
-> **Note :** Marquez la vidéo en «&nbsp;non répertoriée&nbsp;» si celle-ci n'a pas de sens particulier en dehors du contexte de la page MDN.
+> [!NOTE]
+> Marquez la vidéo en «&nbsp;non répertoriée&nbsp;» si celle-ci n'a pas de sens particulier en dehors du contexte de la page MDN.
 
 #### Intégration
 

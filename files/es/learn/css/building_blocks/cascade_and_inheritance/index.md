@@ -81,7 +81,8 @@ Por ejemplo, si para un elemento se establece el color (`color`) y el tipo de le
 
 Algunas propiedades no se heredan. Por ejemplo, si para un elemento se establece un ancho {{cssxref("width")}} del 50%, sus descendientes no tendrán un 50% de ancho con respecto al de sus padres. Si este fuera el caso, ¡sería muy frustrante usar CSS!
 
-> **Nota:** En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/color#Especificaciones).
+> [!NOTE]
+> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/color#Especificaciones).
 
 ## Comprender cómo trabajan juntos estos conceptos
 
@@ -110,9 +111,11 @@ CSS proporciona cuatro valores de propiedad universales especiales para el contr
 - {{cssxref("unset")}}
   - : Restablece la propiedad a su valor natural, lo que significa que si la propiedad se hereda de forma natural, actúa como `inherit`, y en caso contrario como `initial`.
 
-> **Nota:** También hay un valor más reciente, {{cssxref ("revert")}}, que todavía admiten pocos navegadores.
+> [!NOTE]
+> También hay un valor más reciente, {{cssxref ("revert")}}, que todavía admiten pocos navegadores.
 
-> **Nota:** Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations) en el artículo [Introducción al concepto de cascada en CSS](/es/docs/Web/CSS/Cascade)para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
+> [!NOTE]
+> Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations) en el artículo [Introducción al concepto de cascada en CSS](/es/docs/Web/CSS/Cascade)para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
 
 A continuación veremos una lista de enlaces y exploraremos cómo funcionan los valores universales. El ejemplo en vivo de abajo te permite jugar con el CSS y ver lo que sucede cuando se hacen cambios. Jugar con el código es la mejor forma de enfrentarse al HTML y el CSS.
 
@@ -171,7 +174,8 @@ La cantidad de especificidad de un selector se mide usando cuatro valores difere
 3. **Decenas**: Se suma un punto en esta columna por cada selector de clase, de atributo o pseudoclase que estén contenidos en el selector general.
 4. **Unidades**: Se suma un punto en esta columna por cada selector o pseudoelemento que esté contenido en el selector general.
 
-> **Nota:** El selector universal (`*`), los operadores de combinación (`+`, `>`, `~`, ' ') y la pseudo-clase de negación (`:not`) no tienen ningún efecto sobre la especificidad.
+> [!NOTE]
+> El selector universal (`*`), los operadores de combinación (`+`, `>`, `~`, ' ') y la pseudo-clase de negación (`:not`) no tienen ningún efecto sobre la especificidad.
 
 La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/Selectores_CSS) de MDN.
 
@@ -193,7 +197,8 @@ Antes de continuar, vamos a ver un ejemplo:
 - El tercer y el cuarto selector compiten sobre el estilo del color del texto del enlace (el segundo gana y hace que el texto sea blanco porque, aunque tiene un selector de elemento de menos, el selector que falta se sustituye por un selector de clase, con un valor de decena en vez de un valor de unidad). Así que la especificidad es de 113 contra 104.
 - Los selectores 5-7 compiten por el estilo del borde del vínculo cuando el cursor se desplaza sobre estos. El sexto selector pierde claramente ante el quinto con una especificidad de 23 contra 24. En la cadena hay un selector de elemento de menos. El séptimo selector, sin embargo, los supera a ambos: en la cadena hay el mismo número de estos subselectores que en el quinto, pero se ha intercambiado un elemento por un selector de clase. Así que la especificidad es de 33 contra 23 y 24.
 
-> **Nota:** Esto solo es un ejemplo aproximado para facilitar la comprensión. En realidad, cada tipo de selector tiene su nivel de especificidad propio, que no pueden sobrescribir los selectores con un nivel de especificidad menor. Por ejemplo, un _millar_ de selectores de **clase** combinados no serían capaces de sobrescribir las reglas de _un_ selector **ID**.
+> [!NOTE]
+> Esto solo es un ejemplo aproximado para facilitar la comprensión. En realidad, cada tipo de selector tiene su nivel de especificidad propio, que no pueden sobrescribir los selectores con un nivel de especificidad menor. Por ejemplo, un _millar_ de selectores de **clase** combinados no serían capaces de sobrescribir las reglas de _un_ selector **ID**.
 >
 > Una forma más precisa de evaluar la especificidad sería anotar los niveles de especificidad individualmente de mayor a menor. Solo cuando hay empate entre las puntuaciones de los selectores dentro de un nivel especifico será necesario evaluar el nivel inferior siguiente; de lo contrario, puedes prescindir de los selectores de especificidad de los niveles inferiores, ya que nunca pueden sobrescribir los niveles de especificidad más altos.
 
@@ -212,7 +217,8 @@ Vamos a observarlo con detenimiento para ver qué sucede. Elimina algunas de las
 3. En ambos bloques de código hay una clase [`class`](/es/docs/Web/HTML/Global_attributes#class) con el valor `better`, pero en el segundo bloque de código hay un [`id`](/es/docs/Web/HTML/Global_attributes#id) con el valor `winning`. Puesto que los identificadores tienen una especificidad _incluso mayor_ que las clases (solo puede haber un elemento con un determinado ID en cada página, mientras que puede haber muchos elementos de la misma clase: los selectores ID son _muy específicos_ con lo que delimitan), el primer bloque de código tendría un fondo de color gris y ningún borde, según lo que especifica la clase, mientras que al segundo bloque de código se aplicarían tanto el color de fondo rojo como el borde negro de 1 píxel.
 4. El segundo elemento, en cambio, se muestra con el fondo de color rojo pero sin borde. ¿Por qué? Porque la declaración `!important` que hay en la segunda regla, después de `border: none` significa que esta declaración tendrá más valor que la regla anterior, aunque el ID de esta tenga mayor especificidad.
 
-> **Nota:** La única manera de anular la declaración `!important` sería incluir otra declaración `!important` en una declaración con la _misma especificidad_ que aparezca más adelante en el orden del código fuente, o con una especificidad superior.
+> [!NOTE]
+> La única manera de anular la declaración `!important` sería incluir otra declaración `!important` en una declaración con la _misma especificidad_ que aparezca más adelante en el orden del código fuente, o con una especificidad superior.
 
 Es útil saber que `!important` existe para que sepas qué es cuando te lo encuentres en el código de otras personas. **Sin embargo, te recomendamos encarecidamente que no lo utilices a menos que sea absolutamente necesario.** `!important` cambia el modo en que suele funcionar la cascada, por lo que puede dificultar mucho la depuración de problemas en el CSS, especialmente en una hoja de estilo grande.
 

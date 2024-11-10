@@ -3,7 +3,7 @@ title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -146,23 +146,6 @@ var countTrailsMethods = (function (stdlib, foreign, heap) {
 })(window, null, null);
 var ctrz = countTrailsMethods.a;
 var ctron = countTrailsMethods.b;
-```
-
-## Polyfill
-
-这个 polyfill 效率最高。
-
-```js
-if (!Math.clz32)
-  Math.clz32 = (function (log, LN2) {
-    return function (x) {
-      var asUint = x >>> 0; // 将 x 转换为 Uint32 类型
-      if (asUint === 0) {
-        return 32;
-      }
-      return (31 - ((log(asUint) / LN2) | 0)) | 0; // “| 0”相当于 Math.floor
-    };
-  })(Math.log, Math.LN2);
 ```
 
 ## 规范

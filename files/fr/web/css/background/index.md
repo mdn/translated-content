@@ -3,7 +3,7 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).
 
@@ -24,7 +24,8 @@ Cette propriété permet de définir une ou plusieurs valeurs pour&nbsp;:
 
 Lorsqu'on utilise la propriété raccourcie `background`, les valeurs fournies sont appliquées et pour les valeurs absentes, la propriété réinitialisera les propriétés détaillées avec leurs valeurs initiales.
 
-> **Note :** La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
+> [!NOTE]
+> La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
 
 ## Syntaxe
 

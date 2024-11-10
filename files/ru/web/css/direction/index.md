@@ -57,15 +57,15 @@ blockquote {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}

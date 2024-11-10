@@ -13,7 +13,7 @@ slug: Web/API/Web_Workers_API
 
 원하는 코드는 뭐든 워커 스레드에서 실행할 수 있으나 몇 가지 예외가 존재합니다. 예를 들어 워커에서 DOM을 직접 조작할 수 없고, {{domxref("window")}}의 일부 메서드와 속성은 사용할 수 없습니다. 그러나 [WebSocket](/ko/docs/Web/API/WebSockets_API)과 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 포함한 많은 수의 항목은 사용 가능합니다. [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)에서 더 자세히 알아보세요.
 
-워커와 메인 스레드 간의 데이터 교환은 메시지 시스템을 사용합니다. 양측 모두 postMessage() 메서드를 사용해 전송하고, `onmessage` 이벤트 처리기(메시지는 {{Event("Message")}}의 `data` 속성에 들어있습니다)를 사용해 수신합니다. 전송하는 데이터는 복사하며 공유하지 않습니다.
+워커와 메인 스레드 간의 데이터 교환은 메시지 시스템을 사용합니다. 양측 모두 postMessage() 메서드를 사용해 전송하고, `onmessage` 이벤트 처리기(메시지는 {{domxref("Worker/message_event", "message")}}의 `data` 속성에 들어있습니다)를 사용해 수신합니다. 전송하는 데이터는 복사하며 공유하지 않습니다.
 
 워커 역시 새로운 워커를 생성할 수 있습니다. 단, 생성하려는 워커가 부모 페이지와 동일한 {{glossary("origin", "출처")}}에 호스팅 되어있어야 합니다. 추가로, 워커는 {{domxref("XMLHttpRequest")}}를 사용해 네트워크 입출력을 할 수 있지만 `responseXML`과 `channel` 특성은 항상 {{jsxref("null")}}을 반환합니다.
 

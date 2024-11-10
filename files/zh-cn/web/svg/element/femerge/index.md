@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feMerge
 
 `feMerge`滤镜允许同时应用滤镜效果而不是按顺序应用滤镜效果。利用{{ SVGAttr("result") }}存储别的滤镜的输出可以实现这一点，然后在一个 {{ SVGElement("feMergeNode") }}子元素中访问它。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

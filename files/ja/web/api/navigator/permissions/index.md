@@ -3,12 +3,12 @@ title: "Navigator: permissions プロパティ"
 short-title: permissions
 slug: Web/API/Navigator/permissions
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Permissions API")}}
 
-**`Navigator.permissions`** は読み取り専用プロパティで、[権限 API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。
+**`permissions`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、[権限 API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。
 
 ## 値
 
@@ -27,7 +27,7 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

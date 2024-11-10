@@ -29,7 +29,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    \-webkit-linear-gradient()関数の第一引数に「top」が指定されている時に、他ブラウザとの互換性を維持するために[linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数を使用します。
+    \-webkit-linear-gradient()関数の第一引数に「top」が指定されている時に、他ブラウザーとの互換性を維持するために[linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数を使用します。
     その場合、第一引数には例のように「to top」を指定することで正しく表示されます。
 
     ```css
@@ -41,6 +41,6 @@ slug: orphaned/Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 
 ## メリット
 
-- プロパティを正しく使用することで各ブラウザでの表示差異がなくなります。
+- プロパティを正しく使用することで各ブラウザーでの表示差異がなくなります。
 
 [戻る](/ja/docs/Web/Compatibility_FAQ)

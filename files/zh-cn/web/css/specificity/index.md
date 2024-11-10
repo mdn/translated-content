@@ -15,7 +15,8 @@ slug: Web/CSS/Specificity
 
 当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 CSS 规则总是会接管/覆盖（take over）该元素从祖先元素继承而来的规则。
 
-> **备注：** 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
+> [!NOTE]
+> 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
 
 ### 选择器类型
 
@@ -196,9 +197,7 @@ div:not(.outer) p {
 
 ### `:where()` 例外规则
 
-{{SeeCompatTable}}
-
-The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.
+优先级调整伪类 {{CSSxRef(":where", ":where()")}} 总是会将其优先级替换为零（`0-0-0`）。它使 CSS 选择器能够非常具体地确定目标元素，而不会提升优先级。
 
 有如下 CSS 样式声明：
 

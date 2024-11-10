@@ -5,13 +5,22 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-In this article we highlight some things to think about when installing a text editor for web development.
+В этой статье мы расскажем, о чём следует подумать при установке текстового редактора для веб-разработки.
 
-| Необходимые знания: | Вы уже должны знать о [различных программах, необходимых для создания веб-сайта.](/en-US/Learn/What_software_do_I_need)         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:               | Узнать, как выбрать текстовый редактор, который наилучшим образом соответствует вашим потребностям в качестве веб-разработчика. |
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">Необходимые знания:</th>
+      <td>Вы уже должны знать о <a href="/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need">различных программах, необходимых для создания веб-сайта</a>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Цель:</th>
+      <td>Узнать, как выбрать текстовый редактор, который подойдёт лучше всего для веб-разработки.</td>
+    </tr>
+  </tbody>
+</table>
 
-## Summary
+## Резюме
 
 Веб-сайт состоит в основном из текстовых файлов, поэтому для весёлого и приятного процесса разработки вы должны выбрать свой текстовый редактор с умом.
 
@@ -28,29 +37,205 @@ In this article we highlight some things to think about when installing a text e
 
 Обратите внимание, что мы не упомянули цену. Очевидно, что это тоже важно, но стоимость продукта мало связана с его качеством или возможностями. Существует большая вероятность, что вы найдёте подходящий текстовый редактор бесплатно.
 
-Here are some popular editors:
+Вот некоторые популярные редакторы:
 
-| Редактор                                                        | Лицензия                                                                                           | Цена | ОС                  | Поддержка                                                                                                                                                                                                   | Док.                                                                                                            | Расширяемый                                                                                             |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [Atom](https://atom.io/)                                        | MIT/BSD                                                                                            | Free | Windows, Mac, Linux | [Forum](https://discuss.atom.io/categories)                                                                                                                                                                 | [Online Manual](https://atom.io/docs/latest/)                                                                   | [Yes](https://atom.io/packages)                                                                         |
-| [Brackets](http://brackets.io/)                                 | MIT/BSD                                                                                            | Free | Windows, Mac, Linux | [Forum](https://groups.google.com/forum/#!forum/brackets-dev), [IRC](http://webchat.freenode.net/?channels=brackets)                                                                                        | [GitHub Wiki](https://github.com/adobe/brackets/wiki)                                                           | [Yes](https://ingorichter.github.io/BracketsExtensionTweetBot/)                                         |
-| [Coda](https://panic.com/coda/)                                 | Closed source                                                                                      | $99  | Mac                 | [Twitter](https://twitter.com/panic), [Forum](https://panic.com/qa), [E-mail](mailto:coda@panic.com)                                                                                                        | [eBook](https://panic.com/coda/#book)                                                                           | [Yes](https://panic.com/coda/plugins.php)                                                               |
-| [CodeLobster](http://www.codelobster.com)                       | Closed source                                                                                      | Free | Windows, Mac, Linux | [Forum](http://www.codelobster.com/forum/index.php), [E-mail](mailto:support@codelobster.com)                                                                                                               | No end user doc                                                                                                 | Yes                                                                                                     |
-| [Emacs](http://www.gnu.org/software/emacs/)                     | GPL 3                                                                                              | Free | Windows, Mac, Linux | [FAQ](http://www.gnu.org/software/emacs/manual/efaq.html), [Mailing list](http://mail.gnu.org/mailman/listinfo/help-gnu-emacs), [News Group](news://gnu.emacs.help)                                         | [Online Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)                            | Yes                                                                                                     |
-| [Espresso](http://www.macrabbit.com/espresso/)                  | Closed source                                                                                      | $75  | Mac                 | [FAQ](http://www.macrabbit.com/support/), [E-mail](mailto:support@macrabbit.com)                                                                                                                            | No end user doc, but [plug-in doc](http://wiki.macrabbit.com/)                                                  | Yes                                                                                                     |
-| [Gedit](https://wiki.gnome.org/Apps/Gedit)                      | GPL                                                                                                | Free | Windows, Mac, Linux | [Mailing list](http://mail.gnome.org/mailman/listinfo/gedit-list), [IRC](irc://irc.gnome.org/%23gedit)                                                                                                      | [Online Manual](https://help.gnome.org/users/gedit/stable/)                                                     | [Yes](https://wiki.gnome.org/Apps/Gedit/PluginsLists)                                                   |
-| [Komodo Edit](http://komodoide.com/komodo-edit/)                | MPL                                                                                                | Free | Windows, Mac, Linux | [Forum](http://forum.komodoide.com/)                                                                                                                                                                        | [Online Manual](http://docs.activestate.com/komodo/8.5/)                                                        | [Yes](http://komodoide.com/resources/addons/)                                                           |
-| [Notepad++](http://www.notepad-plus-plus.org/)                  | GPL                                                                                                | Free | Windows             | [Forum](http://sourceforge.net/p/notepad-plus/discussion/)                                                                                                                                                  | [Wiki](http://npp-wiki.tuxfamily.org/index.php?title=Main_Page)                                                 | [Yes](http://npp-wiki.tuxfamily.org/index.php?title=Plugin_Central)                                     |
-| [PSPad](http://www.pspad.com/)                                  | Closed source                                                                                      | Free | Windows             | [FAQ](http://gogogadgetscott.info/pspad/dotazy.htm), [Forum](http://forum.pspad.com/)                                                                                                                       | [Online Help](http://gogogadgetscott.info/pspad/)                                                               | [Yes](http://www.pspad.com/en/pspad-extensions.php)                                                     |
-| [Sublime Text](http://www.sublimetext.com/)                     | Closed source                                                                                      | $70  | Windows, Mac, Linux | [Forum](http://www.sublimetext.com/forum/viewforum.php?f=3)                                                                                                                                                 | [Official](http://www.sublimetext.com/docs/3/), [Unofficial](http://docs.sublimetext.info/en/latest/index.html) | [Yes](https://sublime.wbond.net/)                                                                       |
-| [TextMate](http://macromates.com/)                              | Closed source                                                                                      | $50  | Mac                 | [Twitter](https://twitter.com/macromates), [IRC](http://webchat.freenode.net/?channels=textmate), [Mailing list](http://lists.macromates.com/listinfo/textmate), [E-mail](mailto:tm-support@macromates.com) | [Online Manual](http://manual.macromates.com/en/), [Wiki](http://wiki.macromates.com/Main/HomePage)             | [Yes](http://wiki.macromates.com/Main/Plugins)                                                          |
-| [TextWrangler](http://www.barebones.com/products/textwrangler/) | Closed source                                                                                      | Free | Mac                 | [FAQ](http://www.barebones.com/support/textwrangler/faqs.html), [Forum](https://groups.google.com/forum/#!forum/textwrangler)                                                                               | [PDF Manual](http://ash.barebones.com/TextWrangler_User_Manual.pdf)                                             | No                                                                                                      |
-| [Vim](http://www.vim.org/)                                      | [Specific open license](http://vimdoc.sourceforge.net/htmldoc/uganda.html#license)                 | Free | Windows, Mac, Linux | [Mailing list](http://www.vim.org/maillist.php#vim)                                                                                                                                                         | [Online Manual](http://vimdoc.sourceforge.net/)                                                                 | [Yes](http://www.vim.org/scripts/script_search_results.php?order_by=creation_date&direction=descending) |
-| [Visual Studio Code](https://code.visualstudio.com/download)    | [Open Source](https://github.com/microsoft/vscode) under MIT licence/ Specific licence for product | Free | Windows, Mac, Linux | [FAQ](https://code.visualstudio.com/docs/supporting/faq)                                                                                                                                                    | [Documentation](https://code.visualstudio.com/docs)                                                             | [Yes](https://marketplace.visualstudio.com/VSCode)                                                      |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Редактор</th>
+      <th scope="col">Лицензия</th>
+      <th scope="col">Цена</th>
+      <th scope="col">ОС</th>
+      <th scope="col">Поддержка</th>
+      <th scope="col">Документация</th>
+      <th scope="col">Расширяемый</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
+      <td>GPL 3</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td>
+        <a href="https://bfwiki.tellefsen.net/index.php/Mailinglists">Список рассылки</a>,
+        <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">Wiki</a>
+      </td>
+      <td><a href="https://bluefish.openoffice.nl/manual/">Онлайн-руководство</a></td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td><a href="https://brackets.io/" rel="external">Brackets</a></td>
+      <td>MIT/BSD</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td><a href="https://webchat.freenode.net/?channels=brackets" rel="external">IRC</a></td>
+      <td><a href="https://github.com/adobe/brackets/wiki" rel="external">GitHub Wiki</a></td>
+      <td><a href="https://ingorichter.github.io/BracketsExtensionTweetBot/" rel="external">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://nova.app/" rel="external">Nova</a></td>
+      <td>Закрытый исходный код</td>
+      <td>$99</td>
+      <td>Mac</td>
+      <td>
+        <a href="https://twitter.com/panic">Twitter</a>,
+        <a href="https://panic.com/qa" rel="external">Форум</a>,
+        <a href="https://nova.app/help/">Онлайн-помощь</a>
+      </td>
+      <td><a href="https://help.panic.com/nova/">eBook</a></td>
+      <td><a href="https://extensions.panic.com/">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
+      <td>Закрытый исходный код</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td>
+        <a href="https://www.codelobster.com/forum/index.php" rel="external">Форум</a >,
+        <a href="mailto:support@codelobster.com">Email</a>
+      </td>
+      <td><a href="https://www.codelobsteride.com/help/">Онлайн-руководство</a></td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.gnu.org/software/emacs/" rel="external">Emacs</a></td>
+      <td>GPL 3</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td>
+        <a href="https://www.gnu.org/software/emacs/manual/efaq.html" rel="external">FAQ</a>,
+        <a href="https://mail.gnu.org/mailman/listinfo/help-gnu-emacs" rel="external">Список рассылки</a>,
+        <a href="news://gnu.emacs.help" rel="external">Новостная группа</a>
+      </td>
+      <td><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">Онлайн-руководство</a></td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.espressoapp.com/">Espresso</a></td>
+      <td>Закрытый исходный код</td>
+      <td>$99</td>
+      <td>Mac</td>
+      <td><a href="mailto:hello@espressoapp.com">Email</a></td>
+      <td><a href="https://help.espressoapp.com/">Онлайн-руководство</a></td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td><a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
+      <td>GPL</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td>
+        <a href="https://discourse.gnome.org/tag/gedit" rel="external">Discourse</a>,
+        <a href="irc://irc.gnome.org/%23gedit">IRC</a>
+      </td>
+      <td><a href="https://help.gnome.org/users/gedit/stable/">Онлайн-руководство</a></td>
+      <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://kate-editor.org/">Kate</a></td>
+      <td>LGPL, GPL</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td>
+        <a href="mailto:kwrite-devel@kde.org">Список рассылки</a>,
+        <a href="irc://irc.kde.org/kate">IRC</a>
+      </td>
+      <td><a href="https://docs.kde.org/index.php?application=kate&language=en">Онлайн-руководство</a></td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.activestate.com/products/komodo-edit/" rel="external">Komodo Edit</a></td>
+      <td>MPL</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td><a href="https://community.komodoide.com/" rel="external">Форум</a></td>
+      <td><a href="https://docs.activestate.com/komodo" rel="external">Онлайн-руководство</a></td>
+      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.notepad-plus-plus.org/" rel="external">Notepad++</a></td>
+      <td>GPL</td>
+      <td>Бесплатный</td>
+      <td>Windows</td>
+      <td><a href="https://sourceforge.net/p/notepad-plus/discussion/">Форум</a></td>
+      <td><a href="https://npp-user-manual.org/" rel="external">Онлайн-руководство</a></td>
+      <td><a href="https://github.com/notepad-plus-plus/nppPluginList" rel="external">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.pspad.com/">PSPad</a></td>
+      <td>Закрытый исходный код</td>
+      <td>Бесплатный</td>
+      <td>Windows</td>
+      <td>
+        <a href="https://www.pspad.com/en/faq.htm">FAQ</a>,
+        <a href="https://forum.pspad.com/" rel="external">Форум</a>
+      </td>
+      <td><a href="https://www.pspad.com/en/helpfiles.htm">Онлайн-помощь</a></td>
+      <td><a href="https://www.pspad.com/en/pspad-extensions.php">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.sublimetext.com/" rel="external">Sublime Text</a></td>
+      <td>Закрытый исходный код</td>
+      <td>$70</td>
+      <td>Windows, Mac, Linux</td>
+      <td><a href="https://www.sublimetext.com/forum/viewforum.php?f=3" rel="external">Форум</a></td>
+      <td>
+        <a href="https://www.sublimetext.com/docs/">Официальная</a>,
+        <a href="https://docs.sublimetext.io/">Неофициальная</a>
+      </td>
+      <td><a href="https://sublime.wbond.net/">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://macromates.com/" rel="external">TextMate</a></td>
+      <td>Закрытый исходный код</td>
+      <td>$50</td>
+      <td>Mac</td>
+      <td>
+        <a href="https://twitter.com/macromates">Twitter</a>,
+        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://lists.macromates.com/listinfo/textmate" rel="external">Список рассылки</a>,
+        <a href="mailto:tm-support@macromates.com">Email</a>
+      </td>
+      <td>
+        <a href="https://manual.macromates.com/en/">Онлайн-руководство</a>,
+        <a href="https://wiki.macromates.com/Main/HomePage" rel="external">Wiki</a>
+      </td>
+      <td><a href="https://wiki.macromates.com/Main/Plugins" rel="external">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.barebones.com/products/bbedit/" rel="external">BBEdit</a></td>
+      <td>Закрытый исходный код</td>
+      <td>Бесплатный</td>
+      <td>Mac</td>
+      <td><a href="https://www.barebones.com/support/bbedit/" rel="external">FAQ</a></td>
+      <td><a href="https://www.barebones.com/products/bbedit/features.html" rel="external">Онлайн-руководство</a></td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.vim.org/" rel="external">Vim</a></td>
+      <td><a href="https://vimdoc.sourceforge.net/htmldoc/uganda.html#license" rel="external">Особая открытая лицензия</a></td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td><a href="https://www.vim.org/maillist.php#vim" rel="external">Список рассылки</a></td>
+      <td><a href="https://vimdoc.sourceforge.net/">Онлайн-руководство</a></td>
+      <td><a href="https://www.vim.org/scripts/script_search_results.php?order_by=creation_date&#x26;direction=descending" rel="external">Да</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://code.visualstudio.com/download">Visual Studio Code</a></td>
+      <td><a href="https://github.com/microsoft/vscode">Открытый исходный код</a>, MIT / Особая лицензия</td>
+      <td>Бесплатный</td>
+      <td>Windows, Mac, Linux</td>
+      <td><a href="https://code.visualstudio.com/docs/supporting/faq">FAQ</a></td>
+      <td><a href="https://code.visualstudio.com/docs">Документация</a></td>
+      <td><a href="https://marketplace.visualstudio.com/VSCode">Да</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Активное изучение
 
-_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Getting_started)._
+_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Копай глубже
 
@@ -127,8 +312,8 @@ When you install a new text editor, your OS will probably continue to open text 
 
 - Windows
 
-  - [Windows 8](http://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
-  - [Windows 7](http://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
+  - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
+  - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
   - [older systems](http://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
 
 - [Mac OS X](http://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
@@ -140,4 +325,4 @@ When you install a new text editor, your OS will probably continue to open text 
 
 ## Next steps
 
-Now that you have a good text editor, you could take some time to finalize [your basic working environment](/en-US/Learn/Set_up_a_basic_working_environment), or, if you want to play with it right away, write [your very first web page](/en-US/Learn/HTML/Write_a_simple_page_in_HTML).
+Now that you have a good text editor, you could take some time to finalize [your basic working environment](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/ru/docs/Learn/Getting_started_with_the_web).

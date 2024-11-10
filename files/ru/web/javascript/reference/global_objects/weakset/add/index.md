@@ -3,7 +3,7 @@ title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
 
-{{JSRef("Global_Objects", "WeakSet")}}
+{{JSRef}}
 
 Метод **`add()`** добавляет новый объект в конец объекта WeakSet.
 

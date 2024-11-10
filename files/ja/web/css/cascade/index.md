@@ -183,7 +183,8 @@ li {
 margin-left: 3px;
 ```
 
-> **メモ:** ユーザー CSS で定義された宣言は、より高い詳細度を持つかもしれませんが、カスケードアルゴリズムのオリジンと重要性が詳細度アルゴリズムの前に適用されるため、選択されることはありません。カスケードレイヤーで定義された宣言は、コードの後半に来るかもしれませんが、カスケードレイヤーの通常のスタイルが通常の非レイヤーのスタイルより優先順位が低いため、優先順位もありません。 出現の順序\_は、オリジン、重要度、および詳細度の両方が等しい場合にのみ重要である。
+> [!NOTE]
+> ユーザー CSS で定義された宣言は、より高い詳細度を持つかもしれませんが、カスケードアルゴリズムのオリジンと重要性が詳細度アルゴリズムの前に適用されるため、選択されることはありません。カスケードレイヤーで定義された宣言は、コードの後半に来るかもしれませんが、カスケードレイヤーの通常のスタイルが通常の非レイヤーのスタイルより優先順位が低いため、優先順位もありません。 出現の順序\_は、オリジン、重要度、および詳細度の両方が等しい場合にのみ重要である。
 
 ## 作成者スタイル: インラインスタイル、レイヤー、優先度
 
@@ -374,7 +375,8 @@ p {
 
 この例では、 `repeatedName` という名前の別個のアニメーション宣言が 3 つ存在します。 `animation: infinite 5s alternate repeatedName` が段落に適用されると、 1 つのアニメーションだけが適用されます。レイヤー化されていない CSS で定義されたキーフレームアニメーションは、オリジンとカスケードレイヤーの優先順位に基づいて、レイヤーのキーフレームアニメーション宣言より優先されます。この例では、要素のフォントサイズのみがアニメーション化されます。
 
-> **メモ:** 重要なアニメーションはありません。 {{cssxref('@keyframes')}} ブロック内のプロパティ宣言で、値の一部として `!important` を含むものは無視されるからです。
+> [!NOTE]
+> 重要なアニメーションはありません。 {{cssxref('@keyframes')}} ブロック内のプロパティ宣言で、値の一部として `!important` を含むものは無視されるからです。
 
 ## スタイルの初期化
 
@@ -394,11 +396,11 @@ p {
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

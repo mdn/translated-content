@@ -46,7 +46,7 @@ l10n:
 
 В случае, если нужно определить именно наступление событий `unload`, то событие `pagehide` как нельзя лучше подойдёт для этого.
 
-Дополнительные сведения о том, как данное событие связано с другими событиями жизненного цикла страницы, смотрите на странице [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/).
+Дополнительные сведения о том, как данное событие связано с другими событиями жизненного цикла страницы, смотрите на странице [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api).
 
 ## Примеры
 
@@ -78,13 +78,13 @@ window.onpagehide = (event) => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Событие {{domxref("Window.pageshow_event", "pageshow")}}.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) содержит рекомендуемые практики по обработке поведения жизненного цикла страницы в веб-приложениях.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) содержит рекомендуемые практики по обработке поведения жизненного цикла страницы в веб-приложениях.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): JavaScript-библиотека, которая решает несоответствия в работе жизненного цикла страница в разных браузерах.
 - [Кэш для перехода назад и вперед](https://web.dev/bfcache/) объясняет, что такое кеш "назад/вперед", и его последствия для различных событий жизненного цикла страницы.

@@ -3,6 +3,8 @@ title: align-items
 slug: Web/CSS/align-items
 ---
 
+{{CSSRef}}
+
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("Cross Axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("Grid Areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
 以下のデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
@@ -77,11 +79,11 @@ align-items: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### CSS
 
@@ -222,11 +224,11 @@ display.addEventListener("change", function (evt) {
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("例", "260px", "290px")}}
 
 ## 仕様書
 
-{{Specifications("css.properties.align-items.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -239,5 +241,3 @@ display.addEventListener("change", function (evt) {
 - CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{cssxref("align-self")}} プロパティ
-
-{{CSSRef}}

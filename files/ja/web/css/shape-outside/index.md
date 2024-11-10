@@ -49,7 +49,7 @@ shape-outside: unset;
   - : 浮動領域は影響を受けません。インラインコンテンツは通常通り、要素のマージンボックスを回り込みます。
 - `<shape-box>`
 
-  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
+  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
 
     - `margin-box`
       - : マージンの外側の縁で囲まれた形状を定義します。この形状の角の半径は、対応する {{cssxref("border-radius")}} および {{cssxref("margin")}} の値で決定されます。 `border-radius / margin` の比率が `1` 以上の場合、マージンの角の半径は `border-radius + margin` です。この比率が `1` 未満の場合、マージンの角の半径は `border-radius + (margin * (1 + (ratio-1)^3))` となります。

@@ -38,7 +38,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -18,7 +18,7 @@ parseInt(string, radix);
 ### 參數
 
 - `string`
-  - : 待轉成數字的字串。若 `string` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring) 再執行 `parseInt`）空白值會被忽略。
+  - : 待轉成數字的字串。若 `string` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`ToString`](https://262.ecma-international.org/6.0/#sec-tostring) 再執行 `parseInt`）空白值會被忽略。
 - `radix`
   - : 從 2 到 36，能代表該進位系統的數字。例如說指定 `10` 就等於指定十進位。**一定要定義這個參數**以避免他人的困惑、也好預估函式的行為。如果沒有指定 radix 的話，給出的結果會按照實做不同而異，請注意，通常預設值**不是** 10 進位。
 

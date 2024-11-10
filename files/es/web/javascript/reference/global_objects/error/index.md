@@ -103,9 +103,11 @@ Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http
 
 #### Clase `Error` personalizado en ES6
 
-> **Advertencia:** Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Nota:** Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
+> [!NOTE]
+> Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
 
 ```js
 class CustomError extends Error {

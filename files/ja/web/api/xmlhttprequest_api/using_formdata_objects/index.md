@@ -40,7 +40,7 @@ send.addEventListener("click", async () => {
 
 > **メモ:** `"avatar"` および `"webmasterfile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountnum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
 
-この例では、 `"username"`, `"accountnum"`, `"avatar"`, `"webmasterfile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("fetch()")}} を使用してフォームのデータを送信します。 `"webmasterfile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェースは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
+この例では、 `"username"`, `"accountnum"`, `"avatar"`, `"webmasterfile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("Window/fetch", "fetch()")}} を使用してフォームのデータを送信します。 `"webmasterfile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェイスは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
 
 ## HTML フォームから `FormData` オブジェクトを取り出す
 
@@ -145,9 +145,11 @@ form.addEventListener("submit", async (event) => {
 });
 ```
 
-> **メモ:** フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> [!NOTE]
+> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
 
-> **警告:** FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
+> [!WARNING]
+> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
 以下のように、直接 {{ domxref("File") }} や {{ domxref("Blob") }} を {{ domxref("FormData") }} オブジェクトへ追加することもできます。
 

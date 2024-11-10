@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_custom_elements
 
 L'un des aspects les plus importants des composants web est la possibilité de créer des éléments personnalisés qui encapsulent bien vos fonctionnalités sur une page HTML, plutôt que de devoir se contenter d'une soupe de balises définissant des fonctionnalités personnalisées. Cet article passe en revue les bases de l'utilisation d'éléments personnalisés.
 
-> **Note :** Les éléments personnalisés sont pris en charge par défaut dans Chrome et Opera. Firefox en est très proche, ils sont disponibles si vous mettez les préférences dom.webcomponents.enabled et dom.webcomponents.customelements.enabled à true, leur implémentation étant prévue pour être activée par défaut dans la version 60/61. Safari ne prend en charge que les éléments personnalisés indépendants pour l'instant, et Edge travaille de même sur une implémentation.
+> [!NOTE]
+> Les éléments personnalisés sont pris en charge par défaut dans Chrome et Opera. Firefox en est très proche, ils sont disponibles si vous mettez les préférences dom.webcomponents.enabled et dom.webcomponents.customelements.enabled à true, leur implémentation étant prévue pour être activée par défaut dans la version 60/61. Safari ne prend en charge que les éléments personnalisés indépendants pour l'instant, et Edge travaille de même sur une implémentation.
 
 ## Vue d'ensemble
 
@@ -138,7 +139,8 @@ Il est maintenant disponible pour utilisation dans notre page. Dans notre code H
   back of your card."></popup-info>
 ```
 
-> **Note :** Vous pouvez voir le [code source JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
+> [!NOTE]
+> Vous pouvez voir le [code source JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
 
 ### Eléments intégrés personnalisés
 
@@ -177,7 +179,8 @@ L'utilisation de l'élément intégré dans un document web se présente égalem
 
 Vous utilisez l'élément `<ul>` comme d'habitude, mais vous spécifiez le nom de l'élément personnalisé dans l'attribut `is`.
 
-> **Note :** à nouveau, vous pouvez voir le [code source JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
+> [!NOTE]
+> à nouveau, vous pouvez voir le [code source JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
 
 ## Utilisation des rappels de cycle de vie
 
@@ -266,4 +269,5 @@ static get observedAttributes() {return ['w', 'l']; }
 
 Dans notre exemple, cela est mis au tout début du constructeur.
 
-> **Note :** vous pouvez trouver le [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) .
+> [!NOTE]
+> Vous pouvez trouver le [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) .

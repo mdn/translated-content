@@ -9,9 +9,11 @@ Los **escapes de propiedad Unicode** en las {{JSxRef("../Guide/Regular_Expressio
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
-> **Nota:** Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.
+> [!NOTE]
+> Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.
 
-> **Nota:** Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
+> [!NOTE]
+> Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
 
 ## Sintaxis
 
@@ -43,7 +45,8 @@ Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/
 - ValorDePropiedadUnicode
   - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir `Nd`, `digit`, o `Decimal_Number`). Para la mayoría de los valores, la parte `NombreDePropiedadUnicode` y el signo igual se pueden omitir. Si se especifica un `NombreDePropiedadUnicode`, el valor debe corresponder al tipo de propiedad proporcionado.
 
-> **Nota:** Debido a que hay muchas propiedades y valores disponibles, no los describiremos exhaustivamente aquí, en su lugar proporcionaremos varios ejemplos.
+> [!NOTE]
+> Debido a que hay muchas propiedades y valores disponibles, no los describiremos exhaustivamente aquí, en su lugar proporcionaremos varios ejemplos.
 
 ## Justificación
 

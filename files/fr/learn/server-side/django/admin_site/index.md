@@ -58,7 +58,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **Note :** Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
+> [!NOTE]
+> Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
 >
 > Cela devrait être de la forme : `admin.site.register(Language)` et n'oubliez pas d'importer l'objet.
 
@@ -84,7 +85,8 @@ python3 manage.py runserver
 
 Pour vous authentifier au site, ouvrez l'URL _/admin_ du site local (concrètement, [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/)) et identifiez vous avec votre compte de super-utilisateur.
 
-> **Note :** Vous serez redirigé⋅e vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.
+> [!NOTE]
+> Vous serez redirigé⋅e vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.
 >
 > Si vous accéder au site local sans /admin, vous aurez un message d'erreur car les routages d'URL n'ont pas encore été traité. ne vous en inquiétez pas cela va venir...
 
@@ -98,7 +100,8 @@ Entrez les valeurs des champs. Pour les champs qui relèvent de relations entre 
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Note :** À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.
+> [!NOTE]
+> À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.
 
 Après avoir saisie les informations et ajouté vos livres, cliquez sur le lien **Accueil** pour revenir à la page principale du site d'administration. Cliquez sur le lien **Books** pour afficher la liste des livres enregistrés (ou sur d'autres liens pour voir les autres objets présents en base). Après avoir ajouter quelques livres, votre page devrait ressembler à celle ci-dessous. La liste des livres est affichée par titre ; c'est, en fait, la valeur délivrée par la méthode `__str__()` du modèle d'objet Book comme cela a été codé dans le précédent chapitre.
 
@@ -212,7 +215,8 @@ class BookAdmin(admin.ModelAdmin):
 
 Le champ genre représente une relation n à n (`ManyToManyField`) qui ne peut pas être prise en charge par la directive `list_display`. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(`display_genre`) qui permettra de traiter l'affichage des informations souhaitées pour le genre.
 
-> **Note :** C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
+> [!NOTE]
+> C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
 
 Ajoutez le code ci-dessous dans votre modèle d'objet `Book` (concrètement dans le fichier **locallibrary/catalog/models.py**). Cette fonction génère une chaîne de caractère contenant les trois premières valeurs de tous les genres (s'ils existent) et créer une courte destription (`short_description`) qui sera utilisé par le site d'administration avec cette méthode.
 
@@ -230,7 +234,8 @@ Après avoir sauvegardé vos fichiers models.py et admin.py, vous pouvez accéde
 
 Les champs `Genre` `Language` ne dispose que d'une seule valeur. Il n'est donc pas utile de créer une page d'affichage spélicale.
 
-> **Note :** Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt `BookInstance` !
+> [!NOTE]
+> Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt `BookInstance` !
 
 ### Ajouter des filtres
 
@@ -249,7 +254,8 @@ La page de la vue en liste des ouvrages à consultation (BookInstance) est déso
 
 La vue est agencée, par défaut, en affichant verticalement dans l'ordre de déclaration des champs de l'objet modèle. Cette règle d'affichage peut être modifiée en indiquant quels champs afficher (ou exclure) et organiser les informations en sections avec un affichage horizontal ou vertical et les widgets à utiliser.
 
-> **Note :** Les modèles de l'application _LocalLibrary_ ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.
+> [!NOTE]
+> Les modèles de l'application _LocalLibrary_ ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.
 
 #### Contrôler l'affichage et la dispostion des champs
 
@@ -267,7 +273,8 @@ La page web de votre application locale devrait ressembler à celle ci-dessous :
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [`exclude`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
+> [!NOTE]
+> Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [`exclude`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
 
 #### Organiser des sections dans votre vue de détail
 
@@ -318,7 +325,8 @@ Si vous allez consulter un livre, vous devriez pouvoir, au bas de la page, consu
 
 Dans le cas présent nous avons juste décidé d'afficher toutes les informations des copies associées à un livre. Si vous consultez sur la documentation Django les informations relatives au type [TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline) vous aurez accès à l'ensemble des éléments qui permettent de filtrer et afficher les éléments dont vous aurez besoin.
 
-> **Note :** Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut `extra` à 0 dans la définition de l'objet `BooksInstanceInline` ... essayez !
+> [!NOTE]
+> Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut `extra` à 0 dans la définition de l'objet `BooksInstanceInline` ... essayez !
 
 ## Défi
 

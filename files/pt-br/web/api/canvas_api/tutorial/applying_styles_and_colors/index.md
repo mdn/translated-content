@@ -18,7 +18,8 @@ Até agora só vimos métodos do contexto de desenho. Se quisermos aplicar cores
 
 `color` é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. Examinaremos sobre objetos de gradiente e padrão mais tarde. Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto (valor de cor no CSS é `#000000`).
 
-> **Nota:** Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
+> [!NOTE]
+> Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
 
 As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.
 
@@ -365,7 +366,7 @@ draw();
 
 Como você viu no exemplo anterior, ao unir duas linhas com a opção de esquadria, as bordas externas das duas linhas de junção são estendidas até o ponto em que elas se encontram. Para linhas com ângulos amplos entre si, esse ponto não está longe do ponto de conexão interno. No entanto, à medida que os ângulos entre cada linha diminuem, a distância (comprimento da mitra) entre esses pontos aumenta exponencialmente.
 
-A propriedade miterLimit determina a que distância o ponto de conexão externo pode ser colocado do ponto de conexão interno. Se duas linhas excederem esse valor, uma junção de chanfro será desenhada. Observe que o comprimento máximo da esquadria é o produto da largura da linha medida no sistema de coordenadas atual, pelo valor dessa propriedade miterLimit (cujo valor padrão é 10.0 no HTML {{HTMLElement ("canvas")}}}), portanto, o O miterLimit pode ser definido independentemente da escala de exibição atual ou de quaisquer transformações afins de caminhos: apenas influencia a forma efetivamente renderizada das arestas da linha.
+A propriedade miterLimit determina a que distância o ponto de conexão externo pode ser colocado do ponto de conexão interno. Se duas linhas excederem esse valor, uma junção de chanfro será desenhada. Observe que o comprimento máximo da esquadria é o produto da largura da linha medida no sistema de coordenadas atual, pelo valor dessa propriedade miterLimit (cujo valor padrão é 10.0 no HTML {{HTMLElement ("canvas")}}), portanto, o O miterLimit pode ser definido independentemente da escala de exibição atual ou de quaisquer transformações afins de caminhos: apenas influencia a forma efetivamente renderizada das arestas da linha.
 
 Mais exatamente, o limite da mitra é a proporção máxima permitida do comprimento da extensão (na tela HTML, é medida entre o canto externo das arestas unidas da linha e o ponto de extremidade comum dos segmentos de conexão especificados no caminho) pela metade do espessura da linha. Pode ser definido de maneira equivalente como a proporção máxima permitida da distância entre os pontos interno e externo da junção das arestas e a largura total da linha. Em seguida, é igual ao coecante da metade do ângulo interno mínimo dos segmentos de conexão abaixo dos quais nenhuma junção de esquadria será renderizada, mas apenas uma junção de chanfro:
 
@@ -628,7 +629,8 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Nota:** Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
+> [!NOTE]
+> Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
 
 ### A `createPattern` example
 
@@ -679,7 +681,8 @@ The `shadowBlur` property indicates the size of the blurring effect; this value 
 
 The `shadowColor` property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.
 
-> **Nota:** Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
+> [!NOTE]
+> Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
 
 ### A shadowed text example
 

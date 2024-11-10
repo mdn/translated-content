@@ -3,7 +3,7 @@ title: Селекторы атрибутов
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Обзор
 

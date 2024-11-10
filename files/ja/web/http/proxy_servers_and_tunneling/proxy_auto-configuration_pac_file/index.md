@@ -83,7 +83,7 @@ application/x-ns-proxy-autoconfig
 
 次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。
 
-> **メモ:**
+> [!NOTE]
 >
 > - JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。
 > - この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)
@@ -125,10 +125,11 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **メモ:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
+> [!NOTE]
+> 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
 >
 > - PAC ファイルは `proxy.pac` という名前です
-> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `http://www.mozilla.org` を渡します)
+> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `https://www.mozilla.org` を渡します)
 
 ### isPlainHostName()
 
@@ -318,7 +319,8 @@ myIpAddress();
 
 Firefox が動作しているマシンのサーバー IP アドレスを、ドット区切りの整数形式の文字列で返します。
 
-> **警告:** myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
+> [!WARNING]
+> myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
 
 #### 例
 
@@ -368,7 +370,8 @@ shExpMatch(str, shexp);
 
 特定のグロブ式の構文に対応しているかどうかは、ブラウザーによって異なります。 `*` （任意の数の文字に一致）と `?` （1 文字に一致）は常に対応していますが、 `[characters]` と `[^characters]` は（Firefoxを含む）いくつかの実装で追加的に対応しています。
 
-> **メモ:** クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
+> [!NOTE]
+> クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
 
 #### 例
 
@@ -385,7 +388,8 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 weekdayRange(wd1, wd2, [gmt]);
 ```
 
-> **メモ:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
+> [!NOTE]
+> （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -428,7 +432,8 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **メモ:** （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
+> [!NOTE]
+> （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -491,7 +496,8 @@ dateRange(1995, 1997);
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **メモ:** （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
+> [!NOTE]
+> （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
 
 #### 引数
 
@@ -545,7 +551,8 @@ alert("Error: shouldn't reach this clause."); // log a simple message
 
 ### ローカルホスト以外ではプロキシーを使用する
 
-> **メモ:** この後の例はすべて非常に特殊なものであるため、テストはしていません。
+> [!NOTE]
+> この後の例はすべて非常に特殊なものであるため、テストはしていません。
 
 完全修飾されていないホストや、ローカルドメインにあるホストはすべて直接接続されます。それ以外はすべて `w3proxy.mozilla.org:8080` を介して接続されます。プロキシーがダウンした場合、自動的に直接接続になります。
 
@@ -559,7 +566,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **メモ:** これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
+> [!NOTE]
+> これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
 
 ## 例 2
 
@@ -583,7 +591,8 @@ function FindProxyForURL(url, host) {
 
 上記の例では、mozilla.org ドメインのローカルホスト以外のすべてにプロキシーを使用します。さらに例外として、ホスト `www.mozilla.org` と `merchant.mozilla.org` はプロキシーを経由して接続されることになります。
 
-> **メモ:** 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
+> [!NOTE]
+> 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
 
 ## 例 3
 
@@ -695,7 +704,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **メモ:** 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
+> [!NOTE]
+> 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
 
 例:
 
@@ -705,7 +715,8 @@ if (shExpMatch(url, "http:*")) {
 }
 ```
 
-> **メモ:** autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
+> [!NOTE]
+> autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
 >
 > `isInNet()`, `isResolvable()`, `dnsResolve()` 関数の使用は、 DNS サーバーを参照する必要があるため、慎重に検討されるべきです。その他の autoconfig 関連の関数はすべて、 DNS サーバーを使用する必要のない単なる文字列一致関数である。プロキシーを使用した場合は、プロキシーが DNS ルックアップを行うため、 DNS サーバーへの影響が倍増する。ほとんどの場合、これらの関数は目的の結果を得るためには必要ない。
 

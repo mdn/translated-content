@@ -73,7 +73,7 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("X-Forwarded-For")}}
 - {{HTTPHeader("X-Forwarded-Host")}}

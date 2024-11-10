@@ -3,7 +3,7 @@ title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ---
 
-{{AddonSidebar()}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit le nom de la commande. Cela correspond au nom donnée à la commande dans une [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
+{{AddonSidebar}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit le nom de la commande. Cela correspond au nom donnée à la commande dans une [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntaxe
 
@@ -64,6 +64,6 @@ browser.commands.onCommand.addListener(function (command) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).

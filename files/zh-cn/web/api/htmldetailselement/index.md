@@ -29,6 +29,6 @@ _没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}._
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 实现此接口的 HTML 元素： {{HTMLElement("details")}}

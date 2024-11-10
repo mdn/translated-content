@@ -1,6 +1,6 @@
 ---
 title: 使用选择器定位 DOM 元素
-slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -16,7 +16,8 @@ Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_select
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : 返回一个包含节点子树内所有与之相匹配的 `Element` 节点的 {{domxref("NodeList")}}，如果没有匹配的节点，则返回一个空的 `NodeList`。
 
-> **备注：** 由 {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} 返回的 {{domxref("NodeList")}} 不是动态实时的，这意味着在 DOM 中的更改不会在该列表中反映。这和其他 DOM 查询方法返回动态实时节点列表不一样。
+> [!NOTE]
+> 由 {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} 返回的 {{domxref("NodeList")}} 不是动态实时的，这意味着在 DOM 中的更改不会在该列表中反映。这和其他 DOM 查询方法返回动态实时节点列表不一样。
 
 你可以在 {{domxref("Element.querySelector()")}} 和 {{domxref("Element.querySelectorAll()")}} 方法的文档中寻找到更多示例和细节。
 

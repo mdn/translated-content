@@ -7,7 +7,8 @@ slug: Web/API/Background_Tasks_API
 
 **后台任务协作调度 API**（Cooperative Scheduling of Background Tasks API，也叫后台任务 API，或者简单称为 `requestIdleCallback()` API）提供了由用户代理决定的，在空闲时间自动执行队列任务的能力。
 
-> **备注：** 此 API *无法*在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
+> [!NOTE]
+> 此 API *无法*在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 
 ## 概念和用法
 
@@ -24,47 +25,6 @@ slug: Web/API/Background_Tasks_API
 - **避免在空闲回调中改变 DOM**。空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局，你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。如果你的回调需要改变 DOM，它应该使用 {{domxref("Window.requestAnimationFrame()")}} 来调度它。
 - **避免运行时间无法预测的任务**。你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的 `resolve` 和 `reject`，因为这会在你的回调函数返回后立即引用 Promise 对象对 `resolve` 和 `reject` 的处理程序。
 - **在你需要的时候要用 timeout，但记得只在需要的时候才用**。使用 timeout 可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout 就会造成延迟或者动画不流畅。
-
-### 回退到 setTimeout
-
-因为后台任务 API 还是相当新的，而你的代码可能需要在那些不仍不支持此 API 的浏览器上运行。你可以把 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} 用作回调选项来做这样的事。这个并不是 {{Glossary("polyfill")}} ，因为它在功能上并不相同；`setTimeout()` 并不会让你利用空闲时段，而是使你的代码在情况允许时执行你的代码，以使我们可以尽可能地避免造成用户体验性能表现延迟的后果。
-
-```js
-window.requestIdleCallback =
-  window.requestIdleCallback ||
-  function (handler) {
-    let startTime = Date.now();
-
-    return setTimeout(function () {
-      handler({
-        didTimeout: false,
-        timeRemaining: function () {
-          return Math.max(0, 50.0 - (Date.now() - startTime));
-        },
-      });
-    }, 1);
-  };
-```
-
-如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是 undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序 {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}} 返回的值。
-
-接着，我们调用 {{domxref("WindowTimers.setTimeout", "setTimeout()")}}，并给它传一个函数，在这个函数里，我们传给 `requestIdleCallback()` 的具体实现的回调会得以执行。这个回调会接收一个和 {{domxref("IdleDeadline")}} 相符合的 object，此 object 的 {{domxref("IdleDeadline.didTimeout", "didTimeout")}} 被设定为 false，并拥有一个 {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，用来给回调函数 50 毫秒的开始时间。每次调用 `timeRemaining()`，它都会从开始的 50 毫秒中减去已逝去的时间，来确定还剩余的时间。
-
-结果是，虽然我们的填充程序不会像真正的 `requestIdleCallback()` 将自己限制在当前事件循环传递中的空闲时间内，但它至少将每次传递的运行时间限制为不超过 50 毫秒。
-
-我们 {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} 的具体实现要简单的多。
-
-```js
-window.cancelIdleCallback =
-  window.cancelIdleCallback ||
-  function (id) {
-    clearTimeout(id);
-  };
-```
-
-如果 `cancelIdleCallback()` 没有定义，它将创建一个来简单地把指定回调 ID 传递给 {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}。
-
-现在，尽管效率不高，你的代码也可以在不支持后台任务 API 的浏览器上运行了。
 
 ## 接口
 

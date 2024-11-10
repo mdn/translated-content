@@ -23,7 +23,8 @@ Sólo ciertas propiedades CSS puedes utilizarse en una regla con `::marker` como
 - La propiedad {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} y {{CSSxRef("direction")}}
 - La propiedad {{CSSxRef("content")}}
 
-> **Nota:** En la especificación se indica que en el futuro de pueden admitir propiedades CSS adicionales.
+> [!NOTE]
+> En la especificación se indica que en el futuro de pueden admitir propiedades CSS adicionales.
 
 ## Sintaxis
 

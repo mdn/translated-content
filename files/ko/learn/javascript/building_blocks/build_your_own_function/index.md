@@ -41,13 +41,15 @@ alert("This is a message");
 
 `alert` 함수는 제한적입니다: 메시지를 바꿀 수는 있지만, 색상, 아이콘 등 그 밖에 다른 것에는 쉽게 변화를 줄 수 없습니다. 우리는 더 재미있는 것을 만들 것입니다.
 
-> **참고:** 이 예제는 모든 현대적인 브라우저에서 잘 동작할 것이지만, 약간 오래된 브라우저에서는 스타일이 조금 이상하게 적용될지도 모릅니다. Firefox, Opera, 또는 Chrome같은 브라우저에서 이 연습을 진행하기를 추천합니다.
+> [!NOTE]
+> 이 예제는 모든 현대적인 브라우저에서 잘 동작할 것이지만, 약간 오래된 브라우저에서는 스타일이 조금 이상하게 적용될지도 모릅니다. Firefox, Opera, 또는 Chrome같은 브라우저에서 이 연습을 진행하기를 추천합니다.
 
 ## 기본적인 함수
 
 기본적인 함수를 만들면서 시작해 봅시다.
 
-> **참고:** 함수에 이름을 붙일 때 [변수 명명 규칙](/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules)과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.
+> [!NOTE]
+> 함수에 이름을 붙일 때 [변수 명명 규칙](/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules)과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.
 
 1. [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) 파일을 다운로드한 후 시작해 봅시다. HTML은 간단합니다 — body는 버튼 하나만을 포함하고 있습니다. 또한 커스텀 메시지 박스를 꾸밀 기본적인 CSS와, JavaScript를 넣을 빈 {{htmlelement("script")}} 요소가 제공됩니다.
 2. 다음으로, 다음을 `<script>` 요소 내부에 추가해 보세요:
@@ -232,7 +234,8 @@ btn.onclick = displayMessage();
 
 1. 우선, 이 예제를 위해 필요한 아이콘들을 GitHub에서 다운로드하세요 ([경고](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 그리고 [채팅](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)). 이것들을 HTML파일과 같은 위치에 있는 `icons` 라는 새로운 폴더에 저장하세요.
 
-   > **참고:** 경고와 채팅 아이콘은 원래 [iconfinder.com](https://www.iconfinder.com/)에서 찾아졌고, [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)
+   > [!NOTE]
+   > 경고와 채팅 아이콘은 원래 [iconfinder.com](https://www.iconfinder.com/)에서 찾아졌고, [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)
 
 2. 다음으로, HTML 파일 내부에서 CSS를 찾으세요. 우리는 아이콘이 들어갈 자리를 만들기 위해 약간의 변경을 가할 것입니다. 우선, `.msgBox` 폭을
 
@@ -285,7 +288,8 @@ btn.onclick = displayMessage();
 
    우리의 작은 (이제 그렇게 작지는 않은) 함수가 얼마나 유용해졌는지 볼 수 있습니다.
 
-> **참고:** 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)도 보세요), 우리에게 도움을 요청해 보세요.
+> [!NOTE]
+> 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)도 보세요), 우리에게 도움을 요청해 보세요.
 
 ## 실력을 평가해 보세요!
 

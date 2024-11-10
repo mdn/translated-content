@@ -22,7 +22,8 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 - `<declaración-valor>`
   - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.
 
-> **Nota:** Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
+> [!NOTE]
+> Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
 
 ### Sintaxis formal
 

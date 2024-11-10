@@ -48,7 +48,7 @@ a:hover {
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("基本的な例")}}
 
 ## 仕様書
 

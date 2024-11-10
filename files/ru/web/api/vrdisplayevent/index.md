@@ -35,14 +35,14 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebVR API](/ru/docs/Web/API/WebVR_API)

@@ -23,22 +23,43 @@ toLocaleString(locales, options)
 
 ### Параметры
 
-Проверьте раздел [Совместимость с браузерами](#Browser_compatibility), чтобы увидеть, какие браузеры поддерживают аргументы `locales` и `options`, и [Пример: проверка поддержки аргументов `locales` и `options`](#Example:_Checking_for_support_for_locales_and_options_arguments) для определения этой возможности.
+Параметры `locales` и `options` изменяют поведение функции и позволяют приложениям определять язык, правила форматирования которого, следует использовать.
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}
+В реализациях, поддерживающих [`Intl.DateTimeFormat` API](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), эти параметры соответствуют параметрам конструктора [`Intl.DateTimeFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat). Реализации без поддержки `Intl.DateTimeFormat` должны игнорировать оба параметра, используя локаль и формат возвращаемой строки определяемые самой реализацией.
 
-Значением по умолчанию для каждой компоненты даты-времени является {{jsxref("Global_Objects/undefined", "undefined")}}, однако, если все свойства `weekday`, `year`, `month`, `day`, `hour`, `minute` и `second` равны {{jsxref("Global_Objects/undefined", "undefined")}}, то их значения предполагаются равными `"numeric"`.
+- `locales` {{optional_inline}}
+
+  - : Строка с языковым тегом BCP 47 или массив таких строк. Соответствует параметру [`locales`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) конструктора `Intl.DateTimeFormat().
+
+    В реализациях без поддержки `Intl.DateTimeFormat` этот параметр игнорируется и обычно используется локаль устройства.
+
+- `options` {{optional_inline}}
+
+  - : Объект определяющий выходной формат. Соответствует параметру [`options`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) конструктора `Intl.DateTimeFormat()`. Опция `timeStyle` должна быть `undefined` или будет возникать {{jsxref("TypeError")}}. Если `weekday`, `year`, `month` и `day` одновременно равны `undefined`, то `year`, `month` и `day` будут установлены в `"numeric"`.
+
+    В реализациях без поддержки `Intl.DateTimeFormat` этот параметр игнорируется.
+
+Смотрите описание [конструктора `Intl.DateTimeFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) для подробностей использования этих параметров.
+
+### Возвращаемое значение
+
+Строка, представляющая указанную дату в соответствии с языковыми требованиями.
+
+В реализациях с поддержкой `Intl.DateTimeFormat` результат будет эквивалентным `new Intl.DateTimeFormat(locales, options).format(date)`.
+
+> [!NOTE]
+> В большинстве случаев форматирование, возвращаемое `toLocaleString()`, единообразно. Однако результат может быть разным в зависимости от времени, языка и реализации — это допускается спецификацией. Не следует сравнивать результат `toLocaleString()` со статическими значениями.
 
 ## Примеры
 
-### Использование toLocaleString()
+### Использование `toLocaleString()`
 
-При базовом использовании без указания `locale` возвращается строка, отформатированная в соответствии с локалью и настройками по умолчанию.
+При использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и настройками по умолчанию.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
-// Вывод toLocaleString() без аргументов зависит от реализации,
+// Вывод toLocaleString() без параметров зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
 console.log(date.toLocaleString());
 // "12/11/2012, 7:00:00 PM", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
@@ -60,7 +81,7 @@ function toLocaleStringSupportsLocales() {
 
 ### Использование параметра `locales`
 
-Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
+Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
@@ -100,7 +121,7 @@ console.log(date.toLocaleString(["ban", "id"]));
 
 ### Использование параметра `options`
 
-Результат, предоставляемый методом `toLocaleString()`, может быть настроен с помощью аргумента `options`:
+Результат, предоставляемый методом `toLocaleString()`, может быть настроен с помощью параметра `options`:
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
@@ -136,7 +157,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

@@ -48,14 +48,14 @@ var factorial = function (n) {
 factorial(7);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Function")}}

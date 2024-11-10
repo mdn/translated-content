@@ -3,6 +3,8 @@ title: submit
 slug: Web/API/HTMLFormElement/submit_event
 ---
 
+{{APIRef}}
+
 L'événement `submit` est émis lorsqu'un formulaire est soumis au serveur.
 
 Notez que l'événement `submit` se déclenche **uniquement** sur [l'élement form](/fr/docs/Web/HTML/Element/form), et pas sur les éléments [button](/fr/docs/Web/HTML/Element/button) ou [input submit](/fr/docs/Web/HTML/Element/Input/submit). (Les formulaires sont soumis, pas les boutons.)

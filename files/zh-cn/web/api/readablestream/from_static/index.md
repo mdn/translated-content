@@ -27,7 +27,7 @@ ReadableStream.from(anyIterable)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果传入的参数不是可迭代对象或者异步可迭代对象（未定义 `@@iterator` 或 `@@asyncIterator` 方法），则抛出。如果在迭代期间，下一步的结果不是对象或者 promise 不能兑现对象，则也会抛出。
+  - : 如果传入的参数不是可迭代对象或者异步可迭代对象（未定义 `[Symbol.iterator]()` 或 `[Symbol.asyncIterator]()` 方法），则抛出。如果在迭代期间，下一步的结果不是对象或者 promise 不能兑现对象，则也会抛出。
 
 ## 示例
 

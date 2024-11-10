@@ -56,9 +56,9 @@ article[data-columns="4"] {
 }
 ```
 
-Pode-se tudo isso em funcionamento neste [exemplo JSBin](http://jsbin.com/ujiday/2/edit).
+Pode-se tudo isso em funcionamento neste [exemplo JSBin](https://jsbin.com/ujiday/2/edit).
 
-Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](http://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](http://jsbin.com/atawaz/3/edit)).
+Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](http://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](https://jsbin.com/atawaz/3/edit)).
 
 Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.
 

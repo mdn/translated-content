@@ -2,14 +2,15 @@
 title: <font>
 slug: Web/HTML/Element/font
 l10n:
-  sourceCommit: 72fb4be8b6c25b935d0d8709dfe2cf2c58004197
+  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}
 
 **`<font>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内容のフォントサイズ、文字色、使用フォントを定義します。
 
-> **警告:** この要素を使用しないでください。 CSS の[フォント](/ja/docs/Web/CSS/CSS_fonts)のプロパティを使用してテキストにスタイル付けしてください。
+> [!WARNING]
+> この要素を使用しないでください。 CSS の[フォント](/ja/docs/Web/CSS/CSS_fonts)のプロパティを使用してテキストにスタイル設定してください。
 
 ## 属性
 
@@ -22,7 +23,7 @@ l10n:
 - `size` {{Deprecated_Inline}}
   - : フォントサイズとして、数値または相対値キーワードを指定します。数値の場合の範囲は `1` から `7` で、`1` が最小、`3` が初期値となります。 `+2`、`-3` の様に、初期値である `3` を基準とする相対値で記述することも可能です。
 
-## DOM インターフェース
+## DOM インターフェイス
 
 この要素は {{domxref("HTMLFontElement")}} インターフェイスを実装しています。
 

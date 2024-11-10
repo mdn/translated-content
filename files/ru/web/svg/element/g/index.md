@@ -1,63 +1,46 @@
 ---
 title: <g>
 slug: Web/SVG/Element/g
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
-Элемент g используется для группировки других SVG элементов. Любые преобразования применяемые к g элементу наследуются его дочерними элементами. Также g используется для группировки различных элементов, чтобы позднее можно было сослаться на них с помощью {{SVGElement("use")}}.
+[SVG](/ru/docs/Web/SVG)-элемент **`<g>`** служит контейнером для группировки других SVG-элементов.
+
+Преобразования, примененные к элементу `<g>`, выполняются над его дочерними элементами, а его атрибуты наследуются ими. Он также может группировать несколько элементов, на которые позже можно будет ссылаться с помощью элемента {{SVGElement("use")}}.
+
+## Пример
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Using g to inherit presentation attributes -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('Пример', 100, '100%')}}
 
 ## Контекст использования
 
 {{svginfo}}
 
-## Пример
-
-```html
-<svg viewBox="0 0 95 50" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="green" fill="white" stroke-width="5">
-    <circle cx="25" cy="25" r="15" />
-    <circle cx="40" cy="25" r="15" />
-    <circle cx="55" cy="25" r="15" />
-    <circle cx="70" cy="25" r="15" />
-  </g>
-</svg>
-```
-
-{{EmbedLiveSample("Пример",220,130)}}
-
-## Атрибуты
-
-### Глобальные атрибуты
-
-- [Conditional processing attributes](/ru/docs/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/ru/docs/SVG/Attribute#Core) »
-- [Graphical event attributes](/ru/docs/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/ru/docs/SVG/Attribute#Presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
-
-### Специфичные атрибуты
-
-_Нет специфичных атрибутов._
-
-## Интерфейс DOM
-
-Этот элемент реализует [`SVGGElement`](/ru/docs/DOM/SVGGElement) интерес.
-
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Смотрите также
-
-- {{SVGElement("use")}}
-- {{SVGElement("defs")}}
-- {{SVGElement("symbol")}}
-- [SVG элемент g](http://tutorials.jenkov.com/svg/g-element.html)

@@ -57,7 +57,7 @@ self.addEventListener("notificationclick", function (event) {
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

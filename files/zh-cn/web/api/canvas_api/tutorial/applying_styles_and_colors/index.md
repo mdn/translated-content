@@ -1,11 +1,13 @@
 ---
-title: 使用样式和颜色
+title: 应用样式和色彩
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-## 色彩 Colors
+在[绘制图形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+
+## 色彩
 
 到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle`。
 
@@ -16,7 +18,8 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 `color` 可以是表示 CSS 颜色值的字符串，渐变对象或者图案对象。我们迟些再回头探讨渐变和图案对象。默认情况下，线条和填充颜色都是黑色（CSS 颜色值 `#000000`）。
 
-> **备注：** 一旦你设置了 `strokeStyle` 或者 `fillStyle` 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 `fillStyle` 或 `strokeStyle` 的值。
+> [!NOTE]
+> 一旦你设置了 `strokeStyle` 或者 `fillStyle` 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 `fillStyle` 或 `strokeStyle` 的值。
 
 你输入的应该是符合 [CSS3 颜色值标准](https://www.w3.org/TR/css-color-3/) 的有效字符串。下面的例子都表示同一种颜色。
 
@@ -59,7 +62,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("fillStyle 示例", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle 示例", "", "160")}}
 
 ### `strokeStyle` 示例
 
@@ -94,9 +97,9 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("strokeStyle 示例", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("strokeStyle 示例", "", "160")}}
 
-## 透明度 Transparency
+## 透明度
 
 除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。通过设置 `globalAlpha` 属性或者使用一个半透明颜色作为轮廓或填充的样式。
 
@@ -153,7 +156,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("globalAlpha 示例", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("globalAlpha 示例", "", "160")}}
 
 ### `rgba()` 示例
 
@@ -191,9 +194,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("rgba() 示例", "180", "180", "canvas_rgba.png")}}
+{{EmbedLiveSample("rgba() 示例", "", "160")}}
 
-## 线型 Line styles
+## 线型
 
 可以通过一系列属性来设置线的样式。
 
@@ -214,7 +217,7 @@ draw();
 
 通过以下的样例可能会更加容易理解。
 
-#### `lineWidth` 属性的例子
+#### `lineWidth` 属性的示例
 
 这个属性设置当前绘线的粗细。属性值必须为正数。默认值是 1.0。
 
@@ -243,17 +246,16 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineWidth 属性的例子", "180", "180", "canvas_linewidth.png")}}
+{{EmbedLiveSample("lineWidth 属性的示例", "", "160")}}
 
 想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。
-
-![](canvas-grid.png)
 
 如果你想要绘制一条从 (3,1) 到 (3,5)，宽度是 1.0 的线条，你会得到像第二幅图一样的结果。实际填充区域（深蓝色部分）仅仅延伸至路径两旁各一半像素。而这半个像素又会以近似的方式进行渲染，这意味着那些像素只是部分着色，结果就是以实际笔触颜色一半色调的颜色来填充整个区域（浅蓝和深蓝的部分）。这就是上例中为何宽度为 1.0 的线并不准确的原因。
 
 要解决这个问题，你必须对路径施以更加精确的控制。已知粗 1.0 的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5,1) 到 (3.5,5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。
 
-> **备注：** 在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；你可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。
+> [!NOTE]
+> 在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；你可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。
 >
 > 还请注意，只有路径的起点和终点受此影响：如果一个路径是通过 closePath() 来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的 lineJoin 设置（默认为 miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。
 
@@ -261,9 +263,9 @@ draw();
 
 虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其他任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
 
-#### `lineCap` 属性的例子
+#### `lineCap` 属性的示例
 
-![](canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt`。
+属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt`。
 
 在这个例子里面，我绘制了三条直线，分别赋予不同的 `lineCap` 值。还有两条辅助线，为了可以看得更清楚它们之间的区别，三条线的起点终点都落在辅助线上。
 
@@ -304,11 +306,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineCap 属性的例子", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("lineCap 属性的示例", "", "160")}}
 
-#### `lineJoin` 属性的例子
+#### `lineJoin` 属性的示例
 
-![](canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter`。默认是 `miter`。
+`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`、`bevel` 和 `miter`。默认是 `miter`。
 
 这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter` 的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 
@@ -338,9 +340,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineJoin 属性的例子", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("lineJoin 属性的示例", "", "160")}}
 
-#### `miterLimit` 属性的演示例子
+#### `miterLimit` 属性的演示示例
 
 就如上一个例子所见的应用 `miter` 的效果，线段的外侧边缘会被延伸交汇于一点上。线段之间夹角比较大时，交点不会太远，但随着夹角变小，交点距离会呈指数级增大。
 
@@ -416,7 +418,7 @@ document.getElementById("miterLimit").value = document
 draw();
 ```
 
-{{EmbedLiveSample("miterLimit 属性的演示例子", "500", "240", "canvas_miterlimit.png")}}
+{{EmbedLiveSample("miterLimit 属性的演示示例", "", "180")}}
 
 ### 使用虚线
 
@@ -451,9 +453,9 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("使用虚线", "120", "120", "marching-ants.png")}}
+{{EmbedLiveSample("使用虚线")}}
 
-## 渐变 Gradients
+## 渐变
 
 就好像一般的绘图软件一样，我们可以用线性或者径向的渐变来填充或描边。我们用下面的方法新建一个 `canvasGradient` 对象，并且赋给图形的 `fillStyle` 或 `strokeStyle` 属性。
 
@@ -480,9 +482,7 @@ lineargradient.addColorStop(0, "white");
 lineargradient.addColorStop(1, "black");
 ```
 
-#### `createLinearGradient` 的例子
-
-![](canvas_lineargradient.png)
+#### `createLinearGradient` 的示例
 
 本例中，我弄了两种不同的渐变。第一种是背景色渐变，你会发现，我给同一位置设置了两种颜色，你也可以用这来实现突变的效果，就像这里从白色到绿色的突变。一般情况下，色标的定义是无所谓顺序的，但是色标位置重复时，顺序就变得非常重要了。所以，保持色标定义顺序和它理想的顺序一致，结果应该没什么大问题。
 
@@ -523,9 +523,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("createLinearGradient 的例子", "180", "180", "canvas_lineargradient.png")}}
+{{EmbedLiveSample("createLinearGradient 的示例", "", "160")}}
 
-### `createRadialGradient` 的例子
+### `createRadialGradient` 的示例
 
 这个例子，我定义了 4 个不同的径向渐变。由于可以控制渐变的起始与结束点，所以我们可以实现一些比（如在 Photoshop 中所见的）经典的径向渐变更为复杂的效果。（经典的径向渐变是只有一个中心点，简单地由中心点向外围的圆形扩张）
 
@@ -578,7 +578,7 @@ draw();
 
 4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)`。
 
-{{EmbedLiveSample("createRadialGradient 的例子", "180", "180", "canvas_radialgradient.png")}}
+{{EmbedLiveSample("createRadialGradient 的示例", "", "160")}}
 
 ## 图案样式 Patterns
 
@@ -587,7 +587,8 @@ draw();
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
   - : 该方法接受两个参数。Image 可以是一个 `Image` 对象的引用，或者另一个 canvas 对象。`Type` 必须是下面的字符串值之一：`repeat`，`repeat-x`，`repeat-y` 和 `no-repeat`。
 
-> **备注：** 用 canvas 对象作为 `Image` 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。
+> [!NOTE]
+> 用 canvas 对象作为 `Image` 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。
 
 图案的应用跟渐变很类似的，创建出一个 pattern 之后，赋给 `fillStyle` 或 `strokeStyle` 属性即可。
 
@@ -597,9 +598,10 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **备注：** 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
+> [!NOTE]
+> 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
 
-### `createPattern` 的例子
+### `createPattern` 的示例
 
 在最后的例子中，我创建一个图案然后赋给了 `fillStyle` 属性。唯一要注意的是，使用 Image 对象的 `onload` handler 来确保设置图案之前图像已经装载完毕。
 
@@ -629,9 +631,9 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("createPattern 的例子", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 的示例")}}
 
-## 阴影 Shadows
+## 阴影
 
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}
   - : `shadowOffsetX` 和 `shadowOffsetY` 用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 `0`。
@@ -642,7 +644,7 @@ The result looks like this:
 - {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}
   - : shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。
 
-### 文字阴影的例子
+### 文字阴影的示例
 
 这个例子绘制了带阴影效果的文字。
 
@@ -669,7 +671,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("文字阴影的例子", "180", "100", "shadowed-string.png")}}
+{{EmbedLiveSample("文字阴影的示例")}}
 
 我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。
 
@@ -704,6 +706,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas 填充规则", "110", "110", "fill-rule.png")}}
+{{EmbedLiveSample("Canvas 填充规则")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

@@ -3,7 +3,7 @@ title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 ---
 
-{{AddonSidebar()}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
+{{AddonSidebar}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
 
 Supposons que le travail d'une extension consiste à bloquer les requêtes Web par rapport à un modèle, et le scénario suivant se produit :
 
@@ -59,9 +59,9 @@ flushingCache.then(onFlushed, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

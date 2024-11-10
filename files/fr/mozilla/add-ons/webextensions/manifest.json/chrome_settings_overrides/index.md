@@ -136,7 +136,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           </dd>
           <dt><code>is_default</code></dt>
           <dd>
-            Booléen: "True" si le moteur de recherch doit être le choix par
+            Booléen: "True" si le moteur de recherche doit être le choix par
             défaut.
           </dd>
           <dt><code>alternate_urls {{optional_inline}}</code></dt>

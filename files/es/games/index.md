@@ -45,4 +45,5 @@ Jugar es una de las actividades más populares en las computadoras. Constantemen
 - [Monster Madness](https://hacks.mozilla.org/2013/12/monster-madness-creating-games-on-the-web-with-emscripten/)
   - : Un juego en línea multijugador _shooter_ basado en WebGL y asm.js, desarrollado por Nom Nom Games y Trendy entertainment.
 
-> **Nota:** Tenga en cuenta que estamos manteniendo un registro de los trabajos en curso sobre la documentación en nuesta **página** [Estado de la Documentación de Desarrollo de Videojuegos](/es/docs/Games/Doc_Status). Si quieres ayudar a contribuir para la documentación de desarrollo de videojuegos, **por favor, ¡busque en esta página para ver qué trabajo necesita hacerse!.**
+> [!NOTE]
+> Tenga en cuenta que estamos manteniendo un registro de los trabajos en curso sobre la documentación en nuesta **página** [Estado de la Documentación de Desarrollo de Videojuegos](/es/docs/Games/Doc_Status). Si quieres ayudar a contribuir para la documentación de desarrollo de videojuegos, **por favor, ¡busque en esta página para ver qué trabajo necesita hacerse!.**

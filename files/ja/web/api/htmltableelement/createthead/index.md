@@ -10,7 +10,8 @@ l10n:
 
 **`createTHead()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HTMLElement("table")}} に関連付けられた {{HTMLElement("thead")}} 要素を返します。表内にヘッダーが存在しない場合、このメソッドはそれを作成して返します。
 
-> **メモ:** ヘッダーが存在しない場合、 `createTHead()` は新しいヘッダーを表に直接挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<thead>` 要素を作成する場合とは異なり、ヘッダーを別途追加する必要はありません。
+> [!NOTE]
+> ヘッダーが存在しない場合、 `createTHead()` は新しいヘッダーを表に直接挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<thead>` 要素を作成する場合とは異なり、ヘッダーを別途追加する必要はありません。
 
 ## 構文
 

@@ -3,7 +3,7 @@ title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 

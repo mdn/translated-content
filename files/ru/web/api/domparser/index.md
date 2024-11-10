@@ -108,7 +108,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

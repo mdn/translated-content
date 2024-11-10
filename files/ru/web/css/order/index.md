@@ -74,7 +74,7 @@ main > aside {
 
 {{ EmbedLiveSample('Пример') }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

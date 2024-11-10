@@ -1,11 +1,12 @@
 ---
-title: Request.method
+title: "Request: method プロパティ"
+short-title: method
 slug: Web/API/Request/method
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`method`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストのメソッド（`GET`、`POST` など）を保持します。
 

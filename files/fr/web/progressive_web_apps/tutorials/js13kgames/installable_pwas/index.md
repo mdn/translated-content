@@ -36,7 +36,8 @@ Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.gi
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Note :** Beaucoup utilisent `manifest.json` pour les manifestes d'applications web, car le contenu est organisé dans une structure JSON. Cependant, le format de fichier `.webmanifest` est explicitement mentionné dans la spécification [W3C relative au manifeste](https://w3c.github.io/manifest/), c'est donc ce que nous utiliserons ici.
+> [!NOTE]
+> Beaucoup utilisent `manifest.json` pour les manifestes d'applications web, car le contenu est organisé dans une structure JSON. Cependant, le format de fichier `.webmanifest` est explicitement mentionné dans la spécification [W3C relative au manifeste](https://w3c.github.io/manifest/), c'est donc ce que nous utiliserons ici.
 
 Le contenu d'un manifeste ressemble à ceci&nbsp;:
 

@@ -3,13 +3,14 @@ title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 
-{{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
+{{AddonSidebar}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
 
 {{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
 
 Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-> **Note :** Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
+> [!NOTE]
+> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
 ## Syntaxe
 
@@ -92,9 +93,9 @@ browser.runtime.onMessage.addListener((request) => {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -33,7 +33,7 @@ mask-border: url("border-mask.png") 25 / 35px;
 /* source | slice | width | outset | repeat | mode */
 mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
-/* Global values */
+/* グローバル値 */
 mask-border: inherit;
 mask-border: initial;
 mask-border: revert;

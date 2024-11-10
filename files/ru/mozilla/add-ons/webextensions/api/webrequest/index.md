@@ -118,7 +118,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -126,9 +126,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 {{WebExtExamples("h2")}}
 
-> **Примечание:** Это API основано на API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> Этот API основан на Chromium API [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 
 {{JSRef}}
 
-> **경고:** 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.
+> [!WARNING]
+> 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.
 > 이 기능은 이제까지의 ECMAScript 사양에서만 사용되고 있습니다.
 > 보다 좋은 방법이 있으므로, 이 메소드는 사용하지 말아야합니다.
 

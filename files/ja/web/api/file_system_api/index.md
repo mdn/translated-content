@@ -20,11 +20,12 @@ l10n:
 以下の方法によりファイルハンドルへのアクセス権を得ることもできます。
 
 - {{domxref('HTML Drag and Drop API', 'HTML ドラッグ＆ドロップ API', '', 'nocode')}} の {{domxref('DataTransferItem.getAsFileSystemHandle()')}} メソッド
-- [ファイルハンドリング API](https://developer.chrome.com/en/articles/file-handling/)
+- [ファイルハンドリング API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling)
 
 それぞれのハンドルが自身の機能を提供し、どっちを使っているかによって少し違いがあります（詳細は、[インターフェイス](#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9)の節を参照してください）。ファイルのデータや、選択されたディレクトリーの情報（子を含む）にアクセスできます。この API により、ウェブに欠けていた潜在的な機能への道が開きます。それでも、セキュリティは API の設計時に最大限考慮するべきことであり、ファイルやディレクトリーのデータへのアクセスはユーザーが特に許可しない限り禁止されています（これは、ユーザーから見えない[オリジンプライベートファイルシステム](#オリジンプライベートファイルシステム)の場合とは異なります）。
 
-> **メモ:** API の機能を使う際に投げられる可能性がある例外は、仕様書での定義に沿って関連するページに一覧が載っています。しかし、 API と下層のオペレーティングシステムの相互作用により、状況はより複雑になります。[仕様書でエラーの対応関係を一覧にする](https://github.com/whatwg/fs/issues/57)ための提案がなされており、ここに有用な関連情報があります。
+> [!NOTE]
+> API の機能を使う際に投げられる可能性がある例外は、仕様書での定義に沿って関連するページに一覧が載っています。しかし、 API と下層のオペレーティングシステムの相互作用により、状況はより複雑になります。[仕様書でエラーの対応関係を一覧にする](https://github.com/whatwg/fs/issues/57)ための提案がなされており、ここに有用な関連情報があります。
 
 > **メモ:** {{domxref("FileSystemHandle")}} をベースとするオブジェクトは、{{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} のデータベースのインスタンスにシリアライズしたり、{{domxref("window.postMessage", "postMessage()")}} を介して転送したりできます。
 
@@ -210,7 +211,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **メモ:** 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は人間工学に反して非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は人間工学に反して非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 
@@ -222,5 +224,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/) (web.dev)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) (web.dev)
 - [The origin private file system](https://web.dev/articles/origin-private-file-system) (web.dev)

@@ -9,7 +9,8 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)
 
-> **Note :** Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
+> [!NOTE]
+> Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
 
 ### B
 
@@ -65,7 +66,8 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Anciennes propriétés spécifiques, désormais standardisées
 
-> **Note :** Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+> [!NOTE]
+> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
 
 ### A
 

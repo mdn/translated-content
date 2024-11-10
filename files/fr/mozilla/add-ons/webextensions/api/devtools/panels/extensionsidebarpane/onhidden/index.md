@@ -3,7 +3,7 @@ title: devtools.panels.ExtensionSidebarPane.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon de l'utilisateur.
 
@@ -55,6 +55,6 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).

@@ -299,7 +299,7 @@ values.addEventListener("change", function (evt) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

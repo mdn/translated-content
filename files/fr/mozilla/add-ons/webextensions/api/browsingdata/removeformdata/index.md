@@ -3,7 +3,7 @@ title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les données que le navigateur a enregistré pour les formulaires de remplissage automatique.
 
@@ -74,9 +74,9 @@ browser.browsingData.removeFormData({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

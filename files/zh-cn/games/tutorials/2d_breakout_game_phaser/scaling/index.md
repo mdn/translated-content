@@ -13,7 +13,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 
 ## Phaser 中 scale 对象
 
-Phaser 中有一个特殊的对象：`scale`，它包含一些特别的方法和属性。让我们来更改一下上一节中创建的的`preload()`函数：
+Phaser 中有一个特殊的对象：`scale`，它包含一些特别的方法和属性。让我们来更改一下上一节中创建的 `preload()` 函数：
 
 ```js
 function preload() {

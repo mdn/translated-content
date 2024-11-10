@@ -3,7 +3,7 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
@@ -65,6 +65,6 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

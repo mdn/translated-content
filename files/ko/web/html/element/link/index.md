@@ -197,7 +197,7 @@ l10n:
 
   - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
 
-    > **참고:**
+    > [!NOTE]
     >
     > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)든 사용할 수 있습니다.
     > - [CSS3 Media Queries](/ko/docs/Web/CSS/CSS_media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로 HTML 4에 정의되어 있는 제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기 바랍니다.
@@ -223,7 +223,8 @@ l10n:
     - `any`는 `image/svg+xml`와 같은 벡터 유형 그대로 어떤 크기로든 조정 가능함을 의미합니다.
     - 각각 `<width in pixels>x<height in pixels>` 혹은 `<width in pixels>X<height in pixels>` 형식으로 작성한, 공백으로 구분된 크기 목록. 목록에 명시된 크기들은 반드시 리소스에 포함되어 있어야 합니다.
 
-    > **참고:** 대부분의 아이콘 형식은 한 개의 단일 아이콘만을 저장할 수 있습니다. 따라서 대부분의 경우, [`sizes`](#sizes) 특성은 하나의 항목만 가지고 있습니다.
+    > [!NOTE]
+    > 대부분의 아이콘 형식은 한 개의 단일 아이콘만을 저장할 수 있습니다. 따라서 대부분의 경우, [`sizes`](#sizes) 특성은 하나의 항목만 가지고 있습니다.
     > MS의 ICO 형식도 그러하며, Apple의 ICNS도 마찬가지입니다. ICO는 더 보편화되어 있으므로, 브라우저 간 지원(특히 오래된 IE 버전)을 고려하는 경우 이 형식을 사용해야 합니다.
 
 - `title`
@@ -250,7 +251,8 @@ l10n:
     이 값은 {{rfc(2045)}}에 정의되어 있는 공백이나 쉼표로 구분된 문자 집합의 목록입니다.
     기본값은 `iso-8859-1` 입니다.
 
-    > **참고:** 이 폐기된 특성과 동일한 효과를 구현하려면, 링크된 리소스에서 {{HTTPHeader("Content-Type")}} HTTP 헤더를 사용하십시오.
+    > [!NOTE]
+    > 이 폐기된 특성과 동일한 효과를 구현하려면, 링크된 리소스에서 {{HTTPHeader("Content-Type")}} HTTP 헤더를 사용하십시오.
 
 - `rev` {{deprecated_inline}}
 

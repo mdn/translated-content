@@ -5,13 +5,14 @@ slug: Learn/JavaScript/Building_blocks
 
 {{LearnSidebar}}
 
-在这个模块中，我们将继续介绍 JavaScript 的关键基本特性，在这一章中我们将关注条件控制语句、循环语句、函数模块、事件等通用代码块。你可能在之前的的课程中见过这些模块，但仅仅是见过—在这篇模块中我们将明确讨论这些模块。
+在这个模块中，我们将继续介绍 JavaScript 的关键基本特性，在这一章中我们将关注条件控制语句、循环语句、函数模块、事件等通用代码块。你可能在之前的课程中见过这些模块，但仅仅是见过—在这篇模块中我们将明确讨论这些模块。
 
 ## 预备知识
 
 在开始这部分模块之前，你应该熟悉基本的 HTML 和 CSS, 并且已经看完我们之前的模块：[JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)。
 
-> **备注：** 如果你在使用无法创建自己文件的电脑/平板/其他设备，你可以试试在线编辑器，例如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/).
+> [!NOTE]
+> 如果你在使用无法创建自己文件的电脑/平板/其他设备，你可以试试在线编辑器，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/).
 
 ## 指南
 

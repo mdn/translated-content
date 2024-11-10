@@ -22,7 +22,8 @@ text-rendering: initial;
 text-rendering: unset;
 ```
 
-> **Note :** La propriété `text-rendering` est une propriété SVG qui n'est définie dans aucun standard CSS. Toutefois, les navigateurs utilisant Gecko et WebKit permettent d'appliquer cette propriété à du contenu HTML ou XML sur Windows, Mac OS X et Linux.
+> [!NOTE]
+> La propriété `text-rendering` est une propriété SVG qui n'est définie dans aucun standard CSS. Toutefois, les navigateurs utilisant Gecko et WebKit permettent d'appliquer cette propriété à du contenu HTML ou XML sur Windows, Mac OS X et Linux.
 
 Un effet très visible est : `text-rendering : optimizeLegibility;` qui active les ligatures (ff, fi, fl etc.) dans les textes en dessous de 20px pour certains polices (par exemple, _Calibri, Candara, Constantia_ et _Corbel_ de Microsoft, ou la famille _DejaVu_).
 

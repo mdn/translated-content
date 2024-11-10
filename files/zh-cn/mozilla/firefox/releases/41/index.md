@@ -3,7 +3,9 @@ title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
 ---
 
-{{FirefoxSidebar}}[To test the latest developer features of Firefox, install Firefox Developer Edition](https://nightly.mozilla.org/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+{{FirefoxSidebar}}
+
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://nightly.mozilla.org/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -157,6 +159,6 @@ _没有变化。_
 
 - [Site Compatibility for Firefox 41](/zh-CN/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
 
-## 之前版本
+## 更早期的版本
 
-{{Firefox_for_developers('40')}}
+{{Firefox_for_developers}}

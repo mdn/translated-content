@@ -291,14 +291,14 @@ These methods manage WebGL extensions:
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLCanvasElement")}}

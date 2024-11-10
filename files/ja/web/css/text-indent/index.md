@@ -22,12 +22,12 @@ text-indent: 40px;
    包含ブロックの幅に対する割合 */
 text-indent: 15%;
 
-/* Keyword values */
+/* キーワード値 */
 text-indent: 5em each-line;
 text-indent: 5em hanging;
 text-indent: 5em hanging each-line;
 
-/* Global values */
+/* グローバル値 */
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
@@ -55,7 +55,7 @@ text-indent: unset;
 
 ## 例
 
-<h2 id="Simple_indent">単純なインデントの例</h2>
+### 単純なインデントの例
 
 #### HTML
 
@@ -81,9 +81,9 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Simple_indent','100%','100%') }}
+{{ EmbedLiveSample('単純なインデントの例','100%','100%') }}
 
-<h3 id="Skipping_indentation_on_the_first_paragraph">最初の段落の字下げをスキップ</h3>
+### 最初の段落の字下げをスキップ
 
 段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
@@ -148,9 +148,9 @@ p + p {
 
 #### 結果
 
-{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}
+{{ EmbedLiveSample('最初の段落の字下げをスキップ','','500px') }}
 
-<h3 id="Percentage_indent">パーセント値の字下げ</h3>
+### パーセント値の字下げ
 
 #### HTML
 
@@ -176,7 +176,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Percentage_indent','100%','100%') }}
+{{ EmbedLiveSample('パーセント値の字下げ','100%','100%') }}
 
 ## 仕様書
 

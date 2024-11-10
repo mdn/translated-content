@@ -3,6 +3,8 @@ title: 내비게이션 타이밍(Navigation Timing)
 slug: Web/API/Performance_API/Navigation_timing
 ---
 
+{{DefaultAPISidebar("Performance API")}}
+
 **Navigation Timing API**는 웹 사이트의 성능을 측정하는 데 사용할 수 있는 데이터를 제공합니다. 같은 목적에 사용했던 다른 JavaScript 기반 메커니즘과 다르게 이 API는 더 유용하고 정확한 종단 간(end-to-end) 대기 시간(latency)을 제공할 수 있습니다.
 
 다음 예제는 지각하는(perceived) 로딩 시간을 측정하는 법을 보여줍니다.

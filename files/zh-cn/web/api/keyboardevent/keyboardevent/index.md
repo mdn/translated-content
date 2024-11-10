@@ -3,14 +3,15 @@ title: 键盘事件 KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent()`** 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。
 
 ## 语法
 
-```
- event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```js-nolint
+new KeyboardEvent(type)
+new KeyboardEvent(type, options)
 ```
 
 ### 值

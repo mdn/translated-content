@@ -99,10 +99,10 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 {{ EmbedLiveSample('用 opacity 定义透明度','240','240') }}
 
-你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为 50% 不透明度，导到双色描边的效果。
+你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为 50% 不透明度，达到双色描边的效果。
 
 ## 利用广为人知的 CSS 技术
 
-Web 开发工具箱中有一个很有用的工具是`display:none`。它虽然几无悬念，但是依然可以在 SVG 上使用该 CSS 属性，连同 CSS2 定义的`visibility`和`clip`属性。为了恢复以前设置的`display:none`，知道这一点很重要：所有的 SVG 元素的初始`display`值都是`inline`。
+Web 开发工具箱中有一个很有用的工具是 `display:none`。因此，决定将此 CSS 属性与 CSS 2 中定义的 `visibility` 和 `clip` 属性一起纳入 SVG 并不奇怪。对于恢复以前设置的 `display:none`，重要的是知道所有的 SVG 元素的初始 `display` 值都是 `inline`。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}

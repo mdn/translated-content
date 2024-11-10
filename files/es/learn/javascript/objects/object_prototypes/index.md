@@ -66,9 +66,11 @@ Este método [valueOf()](/es/docs/Web/JavaScript/Reference/Global_Objects/Object
 - Si no lo hace, entonces el navegador comprueba si el objeto prototipo del objeto person1 (el prototipo del constructor de Persona()) tiene un método valueOf() disponible en él.
 - Si tampoco lo hace, entonces el navegador comprueba si el objeto prototipo del objeto prototipo del constructor Persona() (Objeto() prototipo del objeto prototipo del constructor) tiene un método valueOf() disponible en él. Lo hace, así que es llamado, y todo funciona!
 
-> **Nota:** Queremos reiterar que los métodos y propiedades no se copian de un objeto a otro en la cadena del prototipo. Ellos son accedidos subiendo por la cadena como se ha descrito anteriormente.
+> [!NOTE]
+> Queremos reiterar que los métodos y propiedades no se copian de un objeto a otro en la cadena del prototipo. Ellos son accedidos subiendo por la cadena como se ha descrito anteriormente.
 
-> **Nota:** No existe oficialmente una forma de acceder directamente al objeto prototipo de un objeto - los "enlaces" entre los elementos de la cadena están definidos en una propiedad interna, denominada \[\[prototipo]] en la especificación del lenguaje JavaScript (ver {{glossary("ECMAScript")}}).
+> [!NOTE]
+> No existe oficialmente una forma de acceder directamente al objeto prototipo de un objeto - los "enlaces" entre los elementos de la cadena están definidos en una propiedad interna, denominada \[\[prototipo]] en la especificación del lenguaje JavaScript (ver {{glossary("ECMAScript")}}).
 >
 > La mayoría de los navegadores modernos, sin embargo, ofrecen una propiedad disponible llamada \_\_proto\_\_ (es decir, 2 subrayados en cada lado), que contiene el objeto prototipo del constructor del objeto. Por ejemplo, pruebe person1.\_\_proto\_\_ y person1.\_\_proto\_\_.\_\_proto\_\_ para ver cómo se ve la cadena en código!
 >
@@ -84,7 +86,8 @@ Así que `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., están 
 
 [`Object.is()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().
 
-> **Nota:** Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
+> [!NOTE]
+> Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
 
 1. Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
 
@@ -176,7 +179,8 @@ Intente esto, por ejemplo:
 person1.constructor.name;
 ```
 
-> **Nota:** El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
+> [!NOTE]
+> El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
 
 ## Modificando prototipos
 
@@ -216,7 +220,8 @@ Person.prototype.farewell = function() {
 
 Pero el método `farewell()` aún se encuentra disponible en la instancia `person1`, su funcionalidad disponible ha sido automáticamente actualizada incluído en método recién definido `farewell()`.
 
-> **Nota:** Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> [!NOTE]
+> Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
 
 Raramente verás propiedades definidas en la propiedad `prototype`, ya no son muy flexibles cuando son definidas de esta forma. Por ejemplo, puedes añadir una propiedad como esta:
 

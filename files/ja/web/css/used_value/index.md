@@ -9,7 +9,8 @@ slug: Web/CSS/used_value
 
 {{glossary("user agent", "ユーザーエージェント")}}が計算を終了した後、すべての CSS プロパティは使用値を持ちます。長さ ({{cssxref("width")}} や {{cssxref("line-height")}} など) の使用値はピクセル数です。一括指定プロパティ ({{cssxref("background")}} など) の使用値は、各成分 ({{cssxref("background-color")}} や {{cssxref("background-size")}} など) のプロパティに、 {{cssxref("position")}} や {{cssxref("float")}} が加味されたものと一致します。
 
-> **メモ:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
+> [!NOTE]
+> DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
 
 ## 例
 
@@ -104,11 +105,11 @@ CSS 2.0 では、プロパティの計算の最後のステップとして*計�
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

@@ -9,7 +9,8 @@ slug: Web/CSS/counter-set
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **备注：** 计数器的值可以通过 {{cssxref("counter-increment")}} CSS 属性进行递增或递减。
+> [!NOTE]
+> 计数器的值可以通过 {{cssxref("counter-increment")}} CSS 属性进行递增或递减。
 
 ## 语法
 

@@ -3,7 +3,7 @@ title: Storage Access API
 slug: Web/API/Storage_Access_API
 ---
 
-{{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
+{{DefaultAPISidebar("Storage Access API")}}
 
 The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin's _first-party_ storage). The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.
 
@@ -60,7 +60,8 @@ API методы реализованы в интерфейсе {{domxref("Docum
 - {{domxref("Document.requestStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
 
-> **Примечание:** User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
+> [!NOTE]
+> User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
 
 ## Расширение \<iframe> sandbox
 
@@ -70,9 +71,7 @@ API методы реализованы в интерфейсе {{domxref("Docum
 
 API на стадии обсуждения — стандартизация не начата. Сейчас вы можете ознакомиться с подробной спецификацией API в блоге Apple [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) и [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338).
 
-## Поддержка браузерами
-
-{{Compat}}
+## Совместимость с браузерами
 
 {{Compat}}
 

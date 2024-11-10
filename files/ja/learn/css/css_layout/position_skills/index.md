@@ -2,16 +2,17 @@
 title: "スキルテスト: 位置指定"
 slug: Learn/CSS/CSS_layout/Position_skills
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}
 
 このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
-> **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
-> 行き詰まったら、助けを求めましょう。このページの最下部の[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -29,7 +30,7 @@ l10n:
 
 - 追加課題として、 target をテキストの下に表示するように変更できますか？
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html)しましょう。
 
@@ -43,7 +44,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1300)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position2-download.html)しましょう。
 

@@ -3,7 +3,7 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 

@@ -53,7 +53,8 @@ evtSource.onmessage = function (e) {
 };
 ```
 
-> **Note :** Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> [!NOTE]
+> Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Spécifications
 

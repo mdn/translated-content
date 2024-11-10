@@ -7,7 +7,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 
 이 실력 테스트의 목적은 여러분이 우리의 [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code) 문서를 이해했는지를 평가하기 위함입니다.
 
-> **참고:** 여러분은 코드를 다운로드하고, [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)에 넣고, 그리고서 과제에 도전해 봄으로써 아래의 과제들에 대한 해답을 시도해볼 수 있습니다. 무한 루프를 만들고 평가 페이지를 멈추게 하는 위험 때문에 우리는 이 과제들에 대해 실시간으로 수정 가능한 에디터를 제공하지 않았습니다!
+> [!NOTE]
+> 여러분은 코드를 다운로드하고, [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)에 넣고, 그리고서 과제에 도전해 봄으로써 아래의 과제들에 대한 해답을 시도해볼 수 있습니다. 무한 루프를 만들고 평가 페이지를 멈추게 하는 위험 때문에 우리는 이 과제들에 대해 실시간으로 수정 가능한 에디터를 제공하지 않았습니다!
 >
 > 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
 
@@ -21,7 +22,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 
 우리의 첫 반복문 과제에서 우리는 여러분이 제공된 `myArray` 내의 모든 요소를 순회하고, 제공된 `list`에 추가될 리스트 아이템 (예: [`<li>`](/ko/docs/Web/HTML/Element/li) 요소) 내에서 화면에 그것들을 출력하는 간단한 반복문을 만듦으로써 시작하기를 원합니다.
 
-> **참고:** 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html)하세요.
+> [!NOTE]
+> 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html)하세요.
 
 ## 반복문 2
 
@@ -35,7 +37,7 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 
 여러분은 전 과제에서 사용하지 않은 유형의 반복문을 사용해야 합니다.
 
-> **참고:**
+> [!NOTE]
 >
 > 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops2-download.html)하세요.
 
@@ -51,7 +53,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 
 여러분은 이전의 두 과제에서 사용하지 않은 유형의 반복문을 사용해야 합니다.
 
-> **참고:** 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html)하세요.
+> [!NOTE]
+> 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html)하세요.
 
 ## 평가 혹은 추가적인 도움
 

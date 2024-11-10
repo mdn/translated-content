@@ -3,13 +3,13 @@ title: "AbortController: abort() メソッド"
 short-title: abort()
 slug: Web/API/AbortController/abort
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`abort()`** は {{domxref("AbortController")}} インターフェイスのメソッドで、 DOM リクエストを完了前に中止します。
-これは[フェッチリクエスト](/ja/docs/Web/API/fetch)、あらゆるレスポンス本体の消費、ストリームを中止することができます。
+**`abort()`** は {{domxref("AbortController")}} インターフェイスのメソッドで、非同期操作を完了前に中止します。
+これは[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)、あらゆるレスポンス本体の消費、ストリームを中止することができます。
 
 ## 構文
 
@@ -34,7 +34,7 @@ abort(reason)
 
 最初に {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
 
-[フェッチリクエスト](/ja/docs/Web/API/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{signal}`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
+[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{signal}`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
 
 ```js
 const controller = new AbortController();
@@ -62,7 +62,7 @@ function fetchVideo() {
 }
 ```
 
-> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` という名前の `DOMExceptoin` で拒否されます。
+> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` という名前の `DOMException` で拒否されます。
 
 [GitHub に完全に動作する例](https://github.com/mdn/dom-examples/tree/main/abort-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-examples/abort-api/)も確認してください。
 

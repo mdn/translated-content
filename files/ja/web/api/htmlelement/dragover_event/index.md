@@ -1,15 +1,16 @@
 ---
 title: "HTMLElement: dragover イベント"
+short-title: dragover
 slug: Web/API/HTMLElement/dragover_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragover` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに（数百ミリ秒間隔で）発生します。
 
-このイベントはドロップターゲットで発生します。
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -129,9 +130,3 @@ target.addEventListener("drop", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} イベント

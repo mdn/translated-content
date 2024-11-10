@@ -47,6 +47,6 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 - [Firefox 20 Aurora Release Notes](http://www.mozilla.org/zh-CN/firefox/20.0a1/nightlynotes/)
 - [Site Compatibility for Firefox 20](/zh-CN/docs/Site_Compatibility_for_Firefox_20)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('19')}}
+{{Firefox_for_developers}}

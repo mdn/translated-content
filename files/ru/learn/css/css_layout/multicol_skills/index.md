@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 
 Цель этого задания — чтобы вы поработали с CSS свойствами {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} и {{CSSxRef("column-rule")}} и со значениями которые описаны в нашем уроке [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
 
-> **Примечание:** Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) чтобы проработать задания.
+> [!NOTE]
+> Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) чтобы проработать задания.
 >
 > Если вы застрянете, попросите нас о помощи — см. раздел [Оценка и дальнейшая помощь](#оценка_и_дальнейшая_помощь) в конце страницы.
 
@@ -21,7 +22,8 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol1.html", '100%', 1000)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol1-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol1-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Multicol Два
 
@@ -35,7 +37,8 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol2.html", '100%', 1000)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol2-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol2-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Multicol Три
 
@@ -47,7 +50,8 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol3.html", '100%', 1000)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol3-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/multicol/multicol3-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Оценка и дальнейшая помощь
 

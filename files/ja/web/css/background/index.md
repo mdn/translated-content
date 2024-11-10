@@ -1,11 +1,13 @@
 ---
 title: background
 slug: Web/CSS/background
+l10n:
+  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。
+**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
 {{EmbedInteractiveExample("pages/css/background.html")}}
 
@@ -41,6 +43,7 @@ background: no-repeat center/80% url("../img/image.png");
 background: inherit;
 background: initial;
 background: revert;
+background: revert-layer;
 background: unset;
 ```
 
@@ -63,19 +66,27 @@ background: unset;
 ### 値
 
 - `<attachment>`
-  - : {{cssxref("background-attachment")}} を参照
+  - : {{cssxref("background-attachment")}} を参照。既定値は `scroll` です。
 - `<box>`
-  - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照
+  - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照。既定値はそれぞれ `border-box` および `padding-box` です。
 - `<background-color>`
-  - : {{cssxref("background-color")}} を参照
+  - : {{cssxref("background-color")}} を参照。既定値は `transparent` です。
 - `<bg-image>`
-  - : {{Cssxref("background-image")}} を参照
+  - : {{Cssxref("background-image")}} を参照。既定値は `none` です。
 - `<position>`
-  - : {{cssxref("background-position")}} を参照
+  - : {{cssxref("background-position")}} を参照。既定値は 0% 0% です。
 - `<repeat-style>`
-  - : {{cssxref("background-repeat")}} を参照
+  - : {{cssxref("background-repeat")}} を参照。既定値は `repeat` です。
 - `<bg-size>`
-  - : {{cssxref("background-size")}} を参照。
+  - : {{cssxref("background-size")}} を参照。既定値は `auto` です。
+
+以下の 3 行の CSS は等価です。
+
+```css
+background: none;
+background: transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
+```
 
 ## アクセシビリティの考慮
 
@@ -94,7 +105,7 @@ background: unset;
 
 ## 例
 
-<h3 id="Setting_backgrounds_with_color_keywords_and_images">色キーワードと画像による背景の設定</h3>
+### 色キーワードと画像による背景の設定
 
 #### HTML
 
@@ -105,6 +116,7 @@ background: unset;
   Starry sky
 </p>
 <p class="warning">Here is a paragraph</p>
+<p></p>
 ```
 
 #### CSS
@@ -134,5 +146,5 @@ background: unset;
 ## 関連情報
 
 - {{cssxref("box-decoration-break")}}
-- [グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

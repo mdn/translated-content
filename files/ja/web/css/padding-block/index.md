@@ -1,6 +1,8 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
@@ -13,8 +15,8 @@ slug: Web/CSS/padding-block
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- {{cssxref("padding-block-end")}}
 - {{cssxref("padding-block-start")}}
+- {{cssxref("padding-block-end")}}
 
 ## 構文
 
@@ -31,6 +33,7 @@ padding-block: 5% 2%; /* 直近のブロックコンテナーの幅に対する�
 padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
+padding-block: revert-layer;
 padding-block: unset;
 ```
 
@@ -54,7 +57,7 @@ padding-block: unset;
 
 ## 例
 
-<h3 id="Setting_block_padding_for_vertical_text">縦書きテキストにおけるブロック方向のパディングの設定</h3>
+### 縦書きテキストにおけるブロック方向のパディングの設定
 
 #### HTML
 
@@ -82,7 +85,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるブロック方向のパディングの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -94,5 +97,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -17,7 +17,7 @@ CSS 属性的应用值（used value）是完成所有计算后最终使用的值
 
 ## 与计算值的区别
 
-CSS 2.0 只定义了 [计算值 computed value](/zh-CN/docs/CSS/computed_value) 作为属性计算的最后一步。CSS 2.1 引进了定义明显不同的的应用值，这样当父元素的计算值为百分数时子元素可以显式地继承其高宽。对于不依赖于布局的 CSS 属性 (例如 display, font-size, line-height) 计算值与应用值一样，否则就会不一样 (引自 [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
+CSS 2.0 只定义了 [计算值 computed value](/zh-CN/docs/CSS/computed_value) 作为属性计算的最后一步。CSS 2.1 引进了定义明显不同的应用值，这样当父元素的计算值为百分数时子元素可以显式地继承其高宽。对于不依赖于布局的 CSS 属性 (例如 display, font-size, line-height) 计算值与应用值一样，否则就会不一样 (引自 [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
 
 - background-position
 - bottom, left, right, top
@@ -31,7 +31,7 @@ CSS 2.0 只定义了 [计算值 computed value](/zh-CN/docs/CSS/computed_value) 
 
 [CSS Level 2: Used Values](http://www.w3.org/TR/CSS2/cascade.html#used-value)
 
-## 另见
+## 参见
 
 - [CSS Reference](/zh-CN/docs/CSS_Reference)
 - CSS 重要概念：

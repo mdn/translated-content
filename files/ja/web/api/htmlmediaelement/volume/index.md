@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.volume
+title: "HTMLMediaElement: volume プロパティ"
+short-title: volume
 slug: Web/API/HTMLMediaElement/volume
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -31,5 +32,5 @@ obj.volume = 0.75;
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.volume` プロパティを定義しているインターフェイス
 - {{domxref("HTMLMediaElement.muted")}}

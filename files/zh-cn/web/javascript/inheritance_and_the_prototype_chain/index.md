@@ -19,7 +19,8 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。
 
-> **备注：** 遵循 ECMAScript 标准，符号 `someObject.[[Prototype]]` 用于标识 `someObject` 的原型。内部插槽 `[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 函数来访问。这个等同于 JavaScript 的非标准但被许多 JavaScript 引擎实现的属性 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器。为在保持简洁的同时避免混淆，在我们的符号中会避免使用 `obj.__proto__`，而是使用 `obj.[[Prototype]]` 作为代替。其对应于 `Object.getPrototypeOf(obj)`。
+> [!NOTE]
+> 遵循 ECMAScript 标准，符号 `someObject.[[Prototype]]` 用于标识 `someObject` 的原型。内部插槽 `[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 函数来访问。这个等同于 JavaScript 的非标准但被许多 JavaScript 引擎实现的属性 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器。为在保持简洁的同时避免混淆，在我们的符号中会避免使用 `obj.__proto__`，而是使用 `obj.[[Prototype]]` 作为代替。其对应于 `Object.getPrototypeOf(obj)`。
 >
 > 它不应与函数的 `func.prototype` 属性混淆，后者指定在给定函数被用作构造函数时分配给所有对象*实例*的 `[[Prototype]]`。我们将在[后面的小节](#构造函数)中讨论构造函数的原型属性。
 
@@ -175,7 +176,8 @@ const boxes = [new Box(1), new Box(2), new Box(3)];
 
 我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自有属性：[`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
 
-> **备注：** 如果构造函数返回非原始值，则该值将成为 `new` 表达式的结果。在这种情况下，`[[Prototype]]` 可能无法正确绑定——但在实践中应该很少发生。
+> [!NOTE]
+> 如果构造函数返回非原始值，则该值将成为 `new` 表达式的结果。在这种情况下，`[[Prototype]]` 可能无法正确绑定——但在实践中应该很少发生。
 
 上面的构造函数可以重写为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)：
 
@@ -247,9 +249,10 @@ const regexp = new RegExp("abc");
 
 例如，像 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 这样的“数组方法”只是在 `Array.prototype` 上定义的方法，而它们又自动在所有数组实例上可用，就是因为这个原因。
 
-> **警告：** 有一个常见的错误实践（misfeature）：扩展 `Object.prototype` 或其它内置原型。这种不良特性例子是，定义 `Array.prototype.myMethod = function () {...}`，然后在所有数组实例上使用 `myMethod`。
+> [!WARNING]
+> 有一个常见的错误实践（misfeature）：扩展 `Object.prototype` 或其它内置原型。这种不良特性例子是，定义 `Array.prototype.myMethod = function () {...}`，然后在所有数组实例上使用 `myMethod`。
 >
-> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.com/blog/smooshgate/) 这样的事件，并且由于 JavaScript 致力于“不破坏 web”，因此这可能会对语言的发展造成极大的麻烦。
+> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.google.cn/blog/smooshgate) 这样的事件，并且由于 JavaScript 致力于“不破坏 web”，因此这可能会对语言的发展造成极大的麻烦。
 >
 > 扩展内置原型的**唯一**理由是向后移植新的 JavaScript 引擎的特性，比如 `Array.prototype.forEach`。
 
@@ -319,7 +322,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 让我们来仔细看看幕后发生了什么。
 
-如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
+如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
 
 ```js
 function doSomething() {}
@@ -334,7 +337,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 如上所示，`doSomething()` 有一个默认的 `prototype` 属性（正如控制台所示）。运行这段代码后，控制台应该显示一个类似于下面的对象。
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -349,7 +352,8 @@ console.log(doSomethingFromArrowFunction.prototype);
 }
 ```
 
-> **备注：** Chrome 控制台使用 `[[Prototype]]` 来表示对象的原型，遵循规范的术语；Firefox 使用 `<prototype>`。为了保持一致性，我们将使用 `[[Prototype]]`。
+> [!NOTE]
+> Chrome 控制台使用 `[[Prototype]]` 来表示对象的原型，遵循规范的术语；Firefox 使用 `<prototype>`。为了保持一致性，我们将使用 `[[Prototype]]`。
 
 我们可以像下面这样，向 `doSomething()` 的原型添加属性。
 
@@ -361,7 +365,7 @@ console.log(doSomething.prototype);
 
 其结果为：
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -391,7 +395,7 @@ console.log(doSomeInstancing);
 
 这会产生类似于下面的输出：
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {

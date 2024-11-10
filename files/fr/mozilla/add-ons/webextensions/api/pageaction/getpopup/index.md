@@ -3,7 +3,7 @@ title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
 
@@ -58,7 +58,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

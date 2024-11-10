@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
 
-> **Note :** Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
@@ -74,7 +75,8 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 [12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
-> **Note :** Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+> [!NOTE]
+> Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
 
 ## Spécifications
 

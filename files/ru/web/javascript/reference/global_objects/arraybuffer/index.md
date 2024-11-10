@@ -54,11 +54,11 @@ var buffer = new ArrayBuffer(8);
 var view = new Int32Array(buffer);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Таблица совместимости
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -15,7 +15,7 @@ yMax = window.scrollMaxY;
 
 - `yMax` はピクセル数です。
 
-## Example
+## 例
 
 ```js
 // ページの下端までスクロールする

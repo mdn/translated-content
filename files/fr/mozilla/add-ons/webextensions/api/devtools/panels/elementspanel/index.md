@@ -3,7 +3,7 @@ title: devtools.panels.ElementsPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigateur. C'est ce qu'on appelle l'inspecteur de page dans Firefox et le panneau Éléments de Chrome.
 
@@ -23,7 +23,7 @@ Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigat
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

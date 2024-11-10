@@ -196,4 +196,4 @@ if (typeof Object.create !== "function") {
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)

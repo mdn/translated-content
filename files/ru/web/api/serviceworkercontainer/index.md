@@ -72,15 +72,15 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)

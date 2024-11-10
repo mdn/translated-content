@@ -157,7 +157,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Renvoie une référence à la fenêtre en cours.
 - `window[0]`, `window[1]`, etc.
-  - : Renvoie une référence à l'objet `window` dans les cadres. Voir {{domxref("Window.frames")}}} pour plus de détails.
+  - : Renvoie une référence à l'objet `window` dans les cadres. Voir {{domxref("Window.frames")}} pour plus de détails.
 
 ### Propriétés implémentées depuis ailleurs
 
@@ -309,7 +309,8 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> [!NOTE]
+> À partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 

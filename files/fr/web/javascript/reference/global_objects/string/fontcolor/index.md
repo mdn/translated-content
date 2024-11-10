@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 
 La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font")}} qui permet d'afficher la chaine de caractères dans une fonte utilisant la couleur donnée.
 
-> **Note :** L'élément \<font> a été retiré dans [HTML5](/fr/docs/Web/Guide/HTML/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
+> [!NOTE]
+> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Web/Guide/HTML/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
 
 ## Syntaxe
 

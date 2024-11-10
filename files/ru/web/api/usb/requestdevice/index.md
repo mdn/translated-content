@@ -55,6 +55,6 @@ navigator.usb
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

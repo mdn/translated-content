@@ -13,7 +13,8 @@ Um `AudioNode` tem entradas (inputs) e saídas (outputs), cada uma delas com uma
 
 Different nodes can be linked together to build a _processing graph_. Such a graph is contained in an {{domxref("AudioContext")}}. Each `AudioNode` participates in exactly one such context. In general, processing nodes inherit the properties and methods of `AudioNode`, but also define their own functionality on top. See the individual node pages for more details, as listed on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) homepage.
 
-> **Nota:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Properties
 

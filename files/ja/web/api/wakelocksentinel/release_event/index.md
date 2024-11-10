@@ -34,10 +34,10 @@ wakeLock.addEventListener("release", () => {
 });
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

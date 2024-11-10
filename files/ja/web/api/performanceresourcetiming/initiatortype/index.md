@@ -9,7 +9,8 @@ l10n:
 
 **`initiatorType`** は読み取り専用プロパティで、リソースの読み込みを開始したウェブプラットフォームの機能を表す文字列です。
 
-> **メモ:** このプロパティは、読み込まれるコンテンツの種類を表すものではありません。`.css` ファイルは {{HTMLElement("link")}} 要素を使用して読み込むことができ、 `initiatorType` が `link` となります。CSS ファイルで `background: url()` を使用して画像を読み込んだ場合、 `initiatorType` は `img` ではなく `css` になります。
+> [!NOTE]
+> このプロパティは、読み込まれるコンテンツの種類を表すものではありません。`.css` ファイルは {{HTMLElement("link")}} 要素を使用して読み込むことができ、 `initiatorType` が `link` となります。CSS ファイルで `background: url()` を使用して画像を読み込んだ場合、 `initiatorType` は `img` ではなく `css` になります。
 
 ## 値
 
@@ -28,7 +29,7 @@ l10n:
 - `embed`
   - : このリクエストが {{HTMLElement("embed")}} 要素の `src` 属性によって開始された場合。
 - `fetch`
-  - : このリクエストが {{domxref("fetch()")}} メソッドによって開始された場合。
+  - : このリクエストが {{domxref("Window/fetch", "fetch()")}} メソッドによって開始された場合。
 - `frame`
   - : このリクエストが {{HTMLElement("frame")}} 要素の読み込みによって開始された場合。
 - `iframe`

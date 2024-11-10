@@ -12,6 +12,15 @@
 [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```
 
+## 이미지 파일
+
+`translate-content` 저장소에서 더 이상 `mdn/content`의 이미지 파일들을 복사하지 않아도 됩니다.
+
+#### 참고 PR
+
+- [deleted duplicated mdn/content images/assets #4545](https://github.com/mdn/translated-content/pull/5031)
+- [Remove unused assets](https://github.com/mdn/translated-content/pull/14664)
+
 ## Inline code
 
 원문의 인라인 코드는 번역하지 않습니다.
@@ -32,57 +41,34 @@
 
 | 용어          | 번역             | 참고 링크                     |
 | ------------- | ---------------- | ----------------------------- |
-| Note          | 참고             |                               |
-| Warning       | 경고             |                               |
-| Callout       | 알림             |                               |
 | Objective     | 목표             | [링크][What_is_accessibility] |
 | Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
 
 ### 교육 과정 callout
 
 ```markdown
-> **알림:**
+> [!CALLOUT]
 >
 > #### 프론트엔드 웹 개발자가 되고자 하시나요?
 >
-> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
+> 프론트엔드 웹 개발자가 되고 싶지만 무엇을 먼저 배워야 할지 모르겠다면, MDN 커리큘럼을 참고해 학습 계획을 세우는 것을 추천합니다. 이 커리큘럼은 성공적인 프론트엔드 개발자가 되기 위한 필수 기술과 실습을 체계적으로 학습할 수 있는 경로를 제공하며, 추천 학습 자료도 함께 제공합니다.
 >
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/curriculum/)
 ```
 
-### 카드 번역
+## GFM Alerts
 
-카드는 참고, 경고 그리고 알림의 세 가지 유형이 있으며, 영어 원문에서는 다음과 같이 표시됩니다.
+`> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!CAUTION]`, `> [!WARNING]`은 새로 추가된 github markdown으로 영어 문법만 사용할 수 있습니다.
 
 ```markdown
-# 참고
+// bad
 
-> **Note:** This is a note.
-
-# 경고
-
-> **Warning:** This is a warning.
-
-# 알림
-
-> **Callout:** This is a callout.
+> [!참고]
+> ...
 ```
 
-이런 카드는 아래와 같이 번역해주시면 됩니다.
-
-```markdown
-# 참고
-
-> **참고:** 참고입니다.
-
-# 경고
-
-> **경고:** 경고입니다.
-
-# 알림
-
-> **알림:** 알림입니다.
-```
+- [[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta)](https://github.com/orgs/community/discussions/16925)
+- [Incorrect formatting for highlighted notes in GitHub flavoured Markdown](https://github.com/prettier/prettier/issues/16454)
 
 ## 역주/역자주
 
@@ -103,7 +89,7 @@
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
-`한글맞춤법-부록-문장 부호` 부분의 `: 쌍점`에 대한 규정만 존재하고, `; 쌍반점`에 대한 규정은 존재하지 않습니다. 따라서, 해당 경우가 아니면 `: 쌍점`을 `. 온점`으로 치환하는 것을 권장합니다. `; 쌍반점`의 경우는 `. 온점`으로 치환하는 것을 권장합니다.[(참고: 국립 국어원)](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=70177)
+`한글맞춤법-부록-문장 부호` 부분의 `: 쌍점`에 대한 규정만 존재하고, `; 쌍반점`에 대한 규정은 존재하지 않습니다. 따라서, 해당 경우가 아니면 `: 쌍점`을 `. 온점`으로 치환하는 것을 권장합니다. `; 쌍반점`의 경우는 `. 온점`으로 치환하는 것을 권장합니다.
 
 ```
 <한글맞춤법-부록-문장부호>
@@ -172,3 +158,49 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 ```
 
 [(참고 링크)]: https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors
+
+## 표현
+
+MDN 문서는 구어체의 격식체를 **권장**하고 있습니다. 하지만, 상황에 따른 적절한 표현이 다르기 떄문에 강제하고 있지 않습니다.
+
+아래는 구어체의 격식체와 비격식체의 차이입니다.
+
+### 구어체 - 격식체
+
+> 가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다. 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, style.css 파일에 다음 CSS 를 추가하십시오.
+
+### 구어체 - 비격식체
+
+> 가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것이에요. 기본 표 스타일은 너무 비좁아요! 이렇게 하려면, style.css 파일에 다음 CSS 를 추가하세요.
+
+## 따옴표
+
+둥근 따옴표(smart quotes)를 사용하지 않고, **일반 따옴표(normal quotes)를 사용**해야 합니다. ([ko: Replace smart quotes](https://github.com/mdn/translated-content/pull/14218) 참고)
+
+### 나쁜 예시
+
+```
+(1) 일반적으로 눈에 띄게 “Get a domain name” 이라는 글자가 있습니다.
+(2) We’re adding an event listener to...
+(3) ‘문단’이나 ‘이미지’와 같은 페이지의 부분을 정의하는 것처럼
+```
+
+### 올바른 예시
+
+```
+(1) 일반적으로 눈에 띄게 "Get a domain name" 이라는 글자가 있습니다
+(2) We're adding an event listener to...
+(3) '문단'이나 '이미지'와 같은 페이지의 부분을 정의하는 것처럼
+```
+
+## 괄호 표기 지양
+
+괄호 사용을 지양합니다. 괄호가 남용되는 사례가 너무 많았고, 남용되지 않더라도 원문에 존재하지 않은 괄호는 가독성을 저하시키고 기여자의 의견을 작성하는 용도로 많이 사용되어서 지양합니다.
+
+예외적으로 `한글(영어)` 표기는 좋은 방법은 아니지만, 필요한 경우에 리뷰어와 협의하여 사용할 수 있습니다.
+
+## 원문과 동일한 문서
+
+번역 후의 줄 수와 원문의 줄 수가 같도록 해주세요. 이는 원문과 달라진 부분을 빨리 찾을 수 있으므로 유지보수에 도움이 됩니다.
+
+관련 논의는 [Exploring Guidelines for Line Length and Newline in Markdown Documentation. #655](https://github.com/orgs/mdn/discussions/655#discussioncomment-9251708)에서 확인할 수 있습니다.

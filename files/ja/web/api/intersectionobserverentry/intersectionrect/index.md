@@ -1,13 +1,14 @@
 ---
-title: IntersectionObserverEntry.intersectionRect
+title: "IntersectionObserverEntry: intersectionRect プロパティ"
+short-title: intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`intersectionRect`** プロパティは {{domxref("DOMRectReadOnly")}} オブジェクトで、交差ルート内に現在表示されている対象要素の部分全体を含む、最小の矩形を記述したものである。
+{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`intersectionRect`** プロパティは {{domxref("DOMRectReadOnly")}} オブジェクトで、交差ルート内に現在表示されている対象要素の部分全体を含む、最小の矩形を記述したものです。
 
 ## 値
 

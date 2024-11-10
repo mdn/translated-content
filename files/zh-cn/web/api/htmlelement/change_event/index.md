@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/change_event
 
 {{APIRef}}
 
-当用户更改 {{HTMLElement("input")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 元素的值时，`change` 事件在这些元素上触发。和 {{domxref("HTMLElement/input_event", "input")}} 事件不同的是，并不是每次元素的 `value` 改变时都会触发 `change` 事件。
+当用户更改 {{HTMLElement("input")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 元素的值时，`change` 事件在这些元素上触发。和 {{domxref("Element/input_event", "input")}} 事件不同的是，并不是每次元素的 `value` 改变时都会触发 `change` 事件。
 
 基于表单元素的类型和用户对元素的操作的不同，`change` 事件触发的时机也不同：
 

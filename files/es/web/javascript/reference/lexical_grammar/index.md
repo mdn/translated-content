@@ -116,9 +116,11 @@ El comentario `hashbang` especifica la ruta a un intérprete de JavaScript espec
 console.log("Hola mundo");
 ```
 
-> **Nota:** Los comentarios `hashbang` en JavaScript imitan a los [`shebangs` en Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) utilizados para ejecutar archivos con el intérprete apropiado.
+> [!NOTE]
+> Los comentarios `hashbang` en JavaScript imitan a los [`shebangs` en Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) utilizados para ejecutar archivos con el intérprete apropiado.
 
-> **Advertencia:** Aunque [BOM](https://https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) antes de que el comentario `hashbang` funcione en un navegador, no se recomienda utilizar BOM en un script con `hashbang`. BOM no funcionará cuando intentes ejecutar el script en Unix/Linux. Por lo tanto, usa UTF-8 sin BOM si deseas ejecutar scripts directamente desde el intérprete.
+> [!WARNING]
+> Aunque [BOM](https://https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) antes de que el comentario `hashbang` funcione en un navegador, no se recomienda utilizar BOM en un script con `hashbang`. BOM no funcionará cuando intentes ejecutar el script en Unix/Linux. Por lo tanto, usa UTF-8 sin BOM si deseas ejecutar scripts directamente desde el intérprete.
 
 ¡Solo debes usar el estilo de comentario `#!` para especificar un intérprete de JavaScript. En todos los demás casos, utiliza un comentario `//` (o un comentario multilínea).
 

@@ -28,7 +28,7 @@ TypedArray.of(element0, element1, /* ... ,*/ elementN)
 
 {{jsxref("Array.of()")}} 和 `TypedArray.of()` 之间的一些细微区别：
 
-- 如果传递给 TypedArray.of 的这个值不是构造函数，TypedArray.of 将抛出一个{{jsxref("TypeError")}} ，其中 Array.of 默认创建一个新的 {{jsxref("Array")}}。
+- 如果传递给 `TypedArray.of()` 的 `this` 值不是构造函数，`TypedArray.of()` 将抛出{{jsxref("TypeError")}}，而 `Array.of()` 默认创建一个新的 {{jsxref("Array")}}。
 - `TypedArray.of` 使用 \[\[Put]] 其中 Array.of 使用 \[\[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。
 
 ## 范例

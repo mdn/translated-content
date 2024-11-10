@@ -35,11 +35,11 @@ HTML 规范也说了 {{HTMLElement("input")}} 元素可替换，因为 `"image"`
 
 CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算外边距（{{cssxref("margin")}}）和一些 `auto` 的具体值。
 
-需要注意的是，一部分（并非全部）可替换元素，其本身具有的尺寸和基线（baseline）会被一些 CSS 属性用到，加入计算之中，例如 {{cssxref("vertical-align")}}。只有可替换元素才能具有这种自带值。
+需要注意的是，一部分（并非全部）可替换元素，其本身具有的尺寸和基线（baseline）会被一些 CSS 属性（例如 {{cssxref("vertical-align")}}）加入计算之中。只有可替换元素才能具有这种自带值。
 
 ### 控制内容框中的对象位置
 
-某些 CSS 属性可用于指定 可替换元素中包含的内容对象 在该元素的盒区域内的位置或定位方式。这些属性的具体定义可以在 [CSS3 Images](https://drafts.csswg.org/css-images/) 规范中找到：
+某些 CSS 属性可用于指定可替换元素中包含的内容对象在该元素的盒区域内的位置或定位方式。这些属性的具体定义可以在 [CSS3 Images](https://drafts.csswg.org/css-images/) 规范中找到：
 
 - {{cssxref("object-fit")}}
   - : 指定可替换元素的内容对象在元素盒区域中的填充方式。（有些类似于 {{cssxref("background-size")}} ）

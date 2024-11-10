@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming_static
-original_slug: WebAssembly/JavaScript_interface/compileStreaming
 ---
 
 {{WebAssemblySidebar}}
@@ -47,7 +46,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

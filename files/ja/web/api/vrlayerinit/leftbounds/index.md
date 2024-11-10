@@ -7,9 +7,10 @@ slug: Web/API/VRLayerInit/leftBounds
 
 **`leftBounds`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの左側のテクスチャ境界を定義します。
 
-> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-## Value
+## 値
 
 4 つの浮動小数点値の配列で、 0.0–1.0 の値を取ることができます。
 

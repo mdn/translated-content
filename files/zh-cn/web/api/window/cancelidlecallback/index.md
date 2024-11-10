@@ -3,16 +3,14 @@ title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 ---
 
-{{APIRef}}{{SeeCompatTable}}
-
-## 概述
+{{APIRef}}
 
 **`window.cancelIdleCallback()`** 方法用于取消之前调用{{domxref("window.requestIdleCallback()")}} 的回调。
 
 ## 语法
 
-```plain
-window.cancelIdleCallback(handle);
+```js-nolint
+cancelIdleCallback(handle)
 ```
 
 ### 参数
@@ -22,7 +20,7 @@ window.cancelIdleCallback(handle);
 
 ### 返回值
 
-`undefined`.
+无（`undefined`）。
 
 ## 示例
 

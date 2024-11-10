@@ -3,7 +3,7 @@ title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`show()`** de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.
 
@@ -61,9 +61,9 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -15,7 +15,8 @@ slug: Web/API/Web_Audio_API/Advanced_techniques
 
 실제로는 이것은 라이브러리로 하는 것이 더 쉽습니다 — Web Audio API는 기반이 되도록 개발되었습니다. 만약 여러분이 무언가 더욱 복잡한 것의 개발에 착수하려고 한다면, [tone.js](https://tonejs.github.io/)가 시작하기 좋은 지점일 것입니다. 그러나, 학습 예제로서, 우리는 이런 데모를 기본 원칙들으로부터 어떻게 개발하는지를 보이고 싶습니다.
 
-> **참고:** 여러분은 [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) 소스 코드를 GitHub에서 찾을 수 있습니다; [step-sequencer 작동 예제](https://mdn.github.io/webaudio-examples/step-sequencer/)도 확인해 보세요.
+> [!NOTE]
+> 여러분은 [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) 소스 코드를 GitHub에서 찾을 수 있습니다; [step-sequencer 작동 예제](https://mdn.github.io/webaudio-examples/step-sequencer/)도 확인해 보세요.
 
 인터페이스는 시퀸서를 재생/정지할 수 있게 하는 주 제어 버튼, 그리고 "음악"의 속도를 올리거나 내릴 수 있게 하는 BPM (beats per minute) 조절 슬라이더로 이루어져 있습니다.
 
@@ -30,7 +31,8 @@ slug: Web/API/Web_Audio_API/Advanced_techniques
 | "노이즈"    | 무작위 노이즈 버퍼, 바이쿼드 필터 | {{domxref("AudioBuffer")}}, {{domxref("AudioBufferSourceNode")}}, {{domxref("BiquadFilterNode")}} |
 | "다이얼 음" | 재생할 사운드 샘플 로딩하기       | {{domxref("BaseAudioContext/decodeAudioData")}}, {{domxref("AudioBufferSourceNode")}}             |
 
-> **참고:** 이 악기는 좋은 소리를 내기 위해 만들어지지 않았습니다. 이것은 데모 코드를 제공하기 위해 만들어졌고 이런 악기의 **아주** 단순화된 버전을 나타냅니다. 이 소리들은 다이얼 접속 모뎀에 기반합니다. 만약 여러분이 이것이 어떤 소리인지 모른다면 [여기서 들어볼 수 있습니다.](https://soundcloud.com/john-pemberton/modem-dialup)
+> [!NOTE]
+> 이 악기는 좋은 소리를 내기 위해 만들어지지 않았습니다. 이것은 데모 코드를 제공하기 위해 만들어졌고 이런 악기의 **아주** 단순화된 버전을 나타냅니다. 이 소리들은 다이얼 접속 모뎀에 기반합니다. 만약 여러분이 이것이 어떤 소리인지 모른다면 [여기서 들어볼 수 있습니다.](https://soundcloud.com/john-pemberton/modem-dialup)
 
 ## 오디오 컨텍스트 생성하기
 
@@ -56,7 +58,8 @@ const audioCtx = new AudioContext();
 const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
 ```
 
-> **참고:** 우리의 예제에서 웨이브 테이블은 별도의 JavaScript 파일 (`wavetable.js`) 에 저장되어 있는데, 왜냐하면 **아주** 많은 값들이 있기 때문입니다. 이것은 [Google Chrome Labs으로부터의 Web Audio API 예제들](https://github.com/GoogleChromeLabs/web-audio-samples/)에서 찾을 수 있는 [웨이브 테이블 레포지토리](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables)에서 가져온 것입니다.
+> [!NOTE]
+> 우리의 예제에서 웨이브 테이블은 별도의 JavaScript 파일 (`wavetable.js`) 에 저장되어 있는데, 왜냐하면 **아주** 많은 값들이 있기 때문입니다. 이것은 [Google Chrome Labs으로부터의 Web Audio API 예제들](https://github.com/GoogleChromeLabs/web-audio-samples/)에서 찾을 수 있는 [웨이브 테이블 레포지토리](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables)에서 가져온 것입니다.
 
 ### 오실레이터
 
@@ -199,7 +202,8 @@ osc.start(time);
 osc.stop(time + pulseTime);
 ```
 
-> **참고:** 우리는 또한 우리가 생성하는 이 오실레이터 중 어느 것에 대해서도 기본 파동 유형을 사용할 필요가 없습니다 — 우리는 웨이브 테이블과 우리가 전에 한 것처럼 주기파를 사용할 수 있습니다. 최소한의 노드들로도 다수의 가능성이 있습니다.
+> [!NOTE]
+> 우리는 또한 우리가 생성하는 이 오실레이터 중 어느 것에 대해서도 기본 파동 유형을 사용할 필요가 없습니다 — 우리는 웨이브 테이블과 우리가 전에 한 것처럼 주기파를 사용할 수 있습니다. 최소한의 노드들로도 다수의 가능성이 있습니다.
 
 ### 펄스 슬라이더
 
@@ -295,7 +299,8 @@ for (let i = 0; i < bufferSize; i++) {
 }
 ```
 
-> **참고:** 왜 -1에서 1인가요? 파일이나 스피커에 사운드를 출력할 때 우리는 0db 풀 스케일을 표현하기 위해 하나의 숫자를 가질 필요가 있습니다 — 고정점 미디어나 DAC의 숫자로 나타낸 한도입니다. 부동점 오디오에서, 1은 신호에 대한 수학적 연산을 위한 "풀 스케일"을 매핑하는 편리한 숫자입니다. 그래서 오실레이터, 노이즈 생성기, 그리고 다른 음원은 보통 -1에서 1 범위에서 쌍극(bipolar) 신호를 출력합니다. 브라우저는 이 범위 바깥의 값들을 고정시킬 것입니다.
+> [!NOTE]
+> 왜 -1에서 1인가요? 파일이나 스피커에 사운드를 출력할 때 우리는 0db 풀 스케일을 표현하기 위해 하나의 숫자를 가질 필요가 있습니다 — 고정점 미디어나 DAC의 숫자로 나타낸 한도입니다. 부동점 오디오에서, 1은 신호에 대한 수학적 연산을 위한 "풀 스케일"을 매핑하는 편리한 숫자입니다. 그래서 오실레이터, 노이즈 생성기, 그리고 다른 음원은 보통 -1에서 1 범위에서 쌍극(bipolar) 신호를 출력합니다. 브라우저는 이 범위 바깥의 값들을 고정시킬 것입니다.
 
 ### 버퍼 소스 생성하기
 
@@ -319,7 +324,8 @@ noise.start();
 
 우리는 분홍색 또는 갈색 소음의 범위에 있는 무언가를 원합니다. 우리는 저 높은 주파수들과 아마 몇몇 낮은 것들을 잘라내기를 원합니다. 이 일을 위해 밴드패스 바이쿼드 필터를 도입합시다.
 
-> **참고:** Web Audio API는 두 종류의 필터 노드를 가지고 있습니다: {{domxref("BiquadFilterNode")}}와 {{domxref("IIRFilterNode")}}입니다. 대부분의 경우 바이쿼드 필터는 충분히 좋습니다 — 이것은 로우패스, 하이패스, 밴드패스와 같은 다른 종류의 필터들을 가지고 있습니다. 그러나 만약 여러분이 좀 더 맞춤형의 무언가를 찾고 있다면, IIR 필터가 좋은 옵션일 수 있습니다 — 더 많은 정보가 필요하시다면 [IIR 필터 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_IIR_filters)를 참고해 보세요.
+> [!NOTE]
+> Web Audio API는 두 종류의 필터 노드를 가지고 있습니다: {{domxref("BiquadFilterNode")}}와 {{domxref("IIRFilterNode")}}입니다. 대부분의 경우 바이쿼드 필터는 충분히 좋습니다 — 이것은 로우패스, 하이패스, 밴드패스와 같은 다른 종류의 필터들을 가지고 있습니다. 그러나 만약 여러분이 좀 더 맞춤형의 무언가를 찾고 있다면, IIR 필터가 좋은 옵션일 수 있습니다 — 더 많은 정보가 필요하시다면 [IIR 필터 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_IIR_filters)를 참고해 보세요.
 
 이것을 연결하는 것은 우리가 전에 본 것과 같습니다. 우리는 {{domxref("BiquadFilterNode")}}를 생성하고, 원하는 속성들을 설정하고 그래프를 통해 연결시킵니다. 바이쿼드 필터의 다른 유형들은 다른 속성들을 가지고 있습니다 — 예를 들자면 밴드패스 유형에 주파수를 설정하는 것은 중앙 주파수를 조정하는데, 로우패스에서 이것은 위쪽 주파수를 설정할 것입니다.
 
@@ -438,7 +444,8 @@ async function setupSample() {
 }
 ```
 
-> **참고:** 파일의 배열을 취해서 하나 이상의 샘플의 로드를 반복하기 위해 여러분은 쉽게 위의 함수를 수정할 수 있습니다. 이것은 더욱 복잡한 악기나, 게이밍에 대해 매우 유용할 것입니다.
+> [!NOTE]
+> 파일의 배열을 취해서 하나 이상의 샘플의 로드를 반복하기 위해 여러분은 쉽게 위의 함수를 수정할 수 있습니다. 이것은 더욱 복잡한 악기나, 게이밍에 대해 매우 유용할 것입니다.
 
 이제 우리는 `setupSample()`을 다음과 같이 사용할 수 있습니다:
 
@@ -465,7 +472,8 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **참고:** 우리는 {{domxref("AudioBufferSourceNode")}}의 `stop()`을 호출할 수 있지만, 이것은 샘플이 재생을 마쳤을 때 자동적으로 발생할 것입니다.
+> [!NOTE]
+> 우리는 {{domxref("AudioBufferSourceNode")}}의 `stop()`을 호출할 수 있지만, 이것은 샘플이 재생을 마쳤을 때 자동적으로 발생할 것입니다.
 
 ### 다이얼 음 슬라이더
 
@@ -510,7 +518,8 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **참고:** 이 사운드 파일의 출처는 [soundbible.com](https://soundbible.com/1573-DTMF-Tones.html)입니다.
+> [!NOTE]
+> 이 사운드 파일의 출처는 [soundbible.com](https://soundbible.com/1573-DTMF-Tones.html)입니다.
 
 ## 시간에 맞춰 오디오 재생하기
 
@@ -518,7 +527,8 @@ function playSample(audioContext, audioBuffer, time) {
 
 우리는 `for` 반복문 내에서 소리가 재생되도록 스케쥴할 수 있지만, 이것의 가장 큰 문제는 이것이 재생되는 도중에 업데이트되고, 우리는 이미 이것을 하기 위한 UI를 구현했다는 것입니다. 또한, 악기 전체의 BPM 슬라이더를 고려하는 것은 정말 좋을 것입니다. 비트에 맞춰 소리를 재생시키는 가장 좋은 방법은 우리가 노드가 언제 재생될지 내다보고 그것들을 큐에 넣는 스케쥴링 시스템을 만드는 것입니다. 우리는 currentTime 속성으로 정밀한 시간에서 이것들을 시작시킬 수 있고 또한 어떠한 변화도 고려할 수 있습니다.
 
-> **참고:** 이것은 [Chris Wilson의 A Tale Of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/) 글의 가장 기본적인 것만 남긴 버전인데, 저 글은 이 방법을 더욱 자세하게 다룹니다. 이것을 모두 여기서 반복할 필요는 없지만, 저 글을 읽고 이 방법을 사용하는 것을 대단히 추천합니다. 여기서의 대부분의 코드는 그의 [메트로놈 예제](https://github.com/cwilso/metronome/blob/master/js/metronome.js)에서 가져온 것인데, 이 예제는 그가 저 글에서 언급했습니다.
+> [!NOTE]
+> 이것은 [Chris Wilson의 A Tale Of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/) 글의 가장 기본적인 것만 남긴 버전인데, 저 글은 이 방법을 더욱 자세하게 다룹니다. 이것을 모두 여기서 반복할 필요는 없지만, 저 글을 읽고 이 방법을 사용하는 것을 대단히 추천합니다. 여기서의 대부분의 코드는 그의 [메트로놈 예제](https://github.com/cwilso/metronome/blob/master/js/metronome.js)에서 가져온 것인데, 이 예제는 그가 저 글에서 언급했습니다.
 
 또한 — 추측하셨다시피 — 유저가 또 다른 range 입력을 통해 제어할 수 있는 기본 BPM (beats per minute)을 설정하면서 시작해 봅시다.
 

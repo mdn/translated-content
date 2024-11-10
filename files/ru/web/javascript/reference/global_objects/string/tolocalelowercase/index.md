@@ -3,7 +3,7 @@ title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 

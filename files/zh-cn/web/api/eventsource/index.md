@@ -1,6 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
+l10n:
+  sourceCommit: 0f2ed7ca7c759d5bbc5402548d83f5a1cf993407
 ---
 
 {{APIRef("Server Sent Events")}}
@@ -15,7 +17,8 @@ slug: Web/API/EventSource
 
 与 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 不同的是，服务器发送事件是单向的。数据消息只能从服务端到发送到客户端（如用户的浏览器）。这使其成为不需要从客户端往服务器发送消息的情况下的最佳选择。例如，对于处理如社交媒体状态更新、消息来源（news feed）或将数据传递到[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)机制（如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 或 [web 存储](/zh-CN/docs/Web/API/Web_Storage_API)）之类的，`EventSource` 无疑是一个有效方案。
 
-> **警告：** 当**不使用 HTTP/2** 时，服务器发送事件（SSE）受到打开连接数的限制，这个限制是*对于浏览器*的，并且设置为非常低的数字（6），打开多个选项卡时可能会特别痛苦。在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中，这个问题已被标记为“不会修复”。这个限制是每个浏览器和域名的，这意味着你可以在所有标签页中打开 6 个 SSE 连接到 `www.example1.com`，以及另外 6 个 SSE 连接到 `www.example2.com`（来源：[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。当使用 HTTP/2 时，最大并发 *HTTP 流*的数量是由服务器和客户端协商的（默认为 100）。
+> [!WARNING]
+> 当**不使用 HTTP/2** 时，服务器发送事件（SSE）受到打开连接数的限制，这个限制是*对于浏览器*的，并且设置为非常低的数字（6），打开多个选项卡时可能会特别痛苦。在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中，这个问题已被标记为“不会修复”。这个限制是每个浏览器和域名的，这意味着你可以在所有标签页中打开 6 个 SSE 连接到 `www.example1.com`，以及另外 6 个 SSE 连接到 `www.example2.com`（来源：[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。当使用 HTTP/2 时，最大并发 *HTTP 流*的数量是由服务器和客户端协商的（默认为 100）。
 
 ## 构造函数
 
@@ -26,9 +29,9 @@ slug: Web/API/EventSource
 
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+- {{domxref("EventSource.readyState")}} {{ReadOnlyInline}}
   - : 一个代表连接状态的数字。可能值是 `CONNECTING`（`0`）、`OPEN`（`1`）或 `CLOSED`（`2`）。
-- {{domxref("EventSource.url")}} {{readonlyinline}}
+- {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : 一个表示事件源的 URL 字符串。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : 一个布尔值，表示 `EventSource` 对象是否使用跨源资源共享（[CORS](/zh-CN/docs/Web/HTTP/CORS)）凭据来实例化（`true`），或者不使用（`false`，即默认值）。
@@ -69,7 +72,8 @@ evtSource.onmessage = (e) => {
 
 每个接收到的事件都会导致我们的 `EventSource` 对象的 `onmessage` 事件处理程序运行。它会创建一个新的 {{HTMLElement("li")}} 元素，并将消息的数据写入其中，然后将新元素附加到文档中已有的列表元素中。
 
-> **备注：** 你可以在 Github 上找到完整的示例——[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
+> [!NOTE]
+> 你可以在 Github 上找到完整的示例——[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
 要监听具名事件，你需要为每种类型的事件添加一个监听器。
 
@@ -115,4 +119,4 @@ sse.addEventListener("message", (e) => {
 ## 参见
 
 - [服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)
-- [使用服务器发送事件](/zh-CN/Server-sent_events/Using_server-sent_events)
+- [使用服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)

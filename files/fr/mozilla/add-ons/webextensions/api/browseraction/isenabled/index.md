@@ -3,7 +3,7 @@ title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie `true` si l'action du navigateur est activée.
 

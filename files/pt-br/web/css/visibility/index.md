@@ -19,7 +19,8 @@ visibility: initial;
 visibility: unset;
 ```
 
-> **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
+> [!NOTE]
+> Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
 
 {{cssinfo}}
 

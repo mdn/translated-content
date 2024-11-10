@@ -1,11 +1,12 @@
 ---
 title: "AbortSignal: abort イベント"
+short-title: abort
 slug: Web/API/AbortSignal/abort_event
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`abort`** は {{domxref("AbortSignal")}} のイベントで、関連するリクエストが中止されたとき、つまり {{domxref("AbortController.abort()")}} を使用して中止されたときに発行されます。
 

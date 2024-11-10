@@ -36,7 +36,8 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 우리는 저번 문서에서 이미 이 내용을 다루었습니다.
 
-> **경고:** 폼을 다른 폼으로 중첩하는 것은 엄격하게 제한되어 있습니다. 그렇게 하면 사용자가 사용하는 브라우저에 따라 예측할 수 없는 방식으로 작동하므로 좋은 방법이 아닙니다.
+> [!WARNING]
+> 폼을 다른 폼으로 중첩하는 것은 엄격하게 제한되어 있습니다. 그렇게 하면 사용자가 사용하는 브라우저에 따라 예측할 수 없는 방식으로 작동하므로 좋은 방법이 아닙니다.
 
 언제든지 {{HTMLElement("form")}} 요소 바깥에서 폼 컨트롤을 사용할 수 있습니다. 이럴 경우 기본적으로 컨트롤은 [`form`](/ko/docs/Web/HTML/Element/input#form) 특성을 사용하여 연결해주지 않는한 어떤 폼과도 관련이 없습니다. 이것은 컨트롤이 폼 요소 내부에 중첩되어있지 않더라도 명시적으로 컨트롤을 명시적으로 바인딩할 수 있도록 하기위해 도입됐습니다.
 
@@ -70,7 +71,8 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 </form>
 ```
 
-> **참고:** 예제는 여기서 찾을수 있습니다. [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> 예제는 여기서 찾을수 있습니다. [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 위 예제를 스크린 리더가 읽을때 Fruit juice size small을 먼저 읽고 Fruit juice size medium을 읽은 다음 마지막으로 Fruit juice size large을 읽을 것입니다.
 
@@ -119,7 +121,8 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 </form>
 ```
 
-> **Note:** 예제는 여기서 찾을수 있습니다. [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> 예제는 여기서 찾을수 있습니다. [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### 여러개의 레이블
 
@@ -163,9 +166,11 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 - 두 번째 예시에서는 조금 더 명확해집니다. 입력필드와 함께 읽히는 레이블은 "이름 별표 이름 텍스트수정 리콰이어드"로 읽히고, 레이블들은 여전히 따로 읽힙니다. 여전히 약간 혼동스럽지만, 이번에는 `<input>` 에 레이블이 연결되어있어서 조금 더 나아진 것입니다.
 - 세 번째 예시가 가장 좋습니다. 실제 레이블이 모두 함께 읽히고, 입력필드와 함께 읽히는 레이블은 "이름 리콰이어드 텍스트 수정"으로 읽힙니다.
 
-> **참고:** 실제로 사용하는 스크린 리더에 따라 결과가 약간 다를 수 있습니다. 이 예시는 VoiceOver에서 테스트 되었으며, NVDA도 비슷하게 작동합니다. 여러분에 경험에 대해서도 듣고 싶습니다.
+> [!NOTE]
+> 실제로 사용하는 스크린 리더에 따라 결과가 약간 다를 수 있습니다. 이 예시는 VoiceOver에서 테스트 되었으며, NVDA도 비슷하게 작동합니다. 여러분에 경험에 대해서도 듣고 싶습니다.
 
-> **참고:** 이 예시는 GitHub에서 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))로 찾을 수 있습니다. 다만, 주의해야 할 점은 두개이상의 버전을 주석 해제하여 테스트하지 않아야 한다는 점입니다. 동일한 ID를 가진 여러개의 레이블과 입력 필드가 있는 경우 스크린 리더가 혼란스러워질 수 있습니다!
+> [!NOTE]
+> 이 예시는 GitHub에서 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))로 찾을 수 있습니다. 다만, 주의해야 할 점은 두개이상의 버전을 주석 해제하여 테스트하지 않아야 한다는 점입니다. 동일한 ID를 가진 여러개의 레이블과 입력 필드가 있는 경우 스크린 리더가 혼란스러워질 수 있습니다!
 
 ## 폼과 함께 사용되는 일반 HTML 구조
 
@@ -318,7 +323,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
    </form>
    ```
 
-아래에서 완성된 폼을 확인할 수 있습니다. (GitHub에서도 확인할 수 있습니다. — payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) 와 [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)를 확인 하세요):
+아래에서 완성된 폼을 확인할 수 있습니다. (GitHub에서도 확인할 수 있습니다. — payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) 와 [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)를 확인 하세요)
 
 {{EmbedLiveSample("A_payment_form","100%",620)}}
 

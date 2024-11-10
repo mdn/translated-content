@@ -143,7 +143,8 @@ def youngest(request):
 
 예를들어, Django 템플릿 시스템은 구체화된 "double-handlebars" 구조 (예를 들어 `\{{ variable_name }}`)를 사용하도록 허용하는데, 이것은 페이지가 로딩될 때 뷰 함수의 값들로 대체될 수 있습니다. 템플릿 시스템은 또한 다양한 표현식을 지원하는데 (예를 들어 : `{% expression %}`), 템플리트가 템플리트에 전달 된 목록 값을 반복하는 것과 같은 간단한 조작을 수행 할 수 있습니다.
 
-> **참고:** 다른 대부분의 템플릿 시스템들은 비슷한 문법을 사용합니다, 예: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), 등등.
+> [!NOTE]
+> 다른 대부분의 템플릿 시스템들은 비슷한 문법을 사용합니다, 예: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), 등등.
 
 아래의 코드 스니펫은 그것이 어떻게 작동 하는지 보여줍니다. 이전 섹션에 사용한 "youngest team" 예제를 다시 보겠습니다, HTML 템플릿은 뷰에서 `youngest_teams`이라고 불리는 목록 변수를 전달 받습니다. HTML 골격 내에는 `youngest_teams`이 있는지 체크하는 표현식이 있고, 있다면 `for` 루프를 통해 반복문을 만드는 것을 볼 수 있습니다. 각 반복당 템플릿은 팀리스트에 있는 `team_name`을 출력해줍니다.
 

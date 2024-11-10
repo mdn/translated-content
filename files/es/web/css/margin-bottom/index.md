@@ -3,7 +3,7 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## Summary
 

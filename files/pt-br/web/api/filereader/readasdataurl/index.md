@@ -96,7 +96,8 @@ function previewFiles() {
 }
 ```
 
-> **Nota:** O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> [!NOTE]
+> O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## Especificações
 

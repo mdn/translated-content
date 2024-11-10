@@ -1,8 +1,9 @@
 ---
 title: Adding captions and subtitles to HTML5 video
 slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-original_slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
+
+{{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
 
 > В других статьях мы рассмотрели как [создать cross browser видео плеер](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
 
@@ -12,7 +13,8 @@ original_slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **Примечание:** вы можете найти [source on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а так же [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
+> [!NOTE]
+> Вы можете найти [исходный код на Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а также [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
 
 ## HTML5 и Video Captions
 
@@ -297,49 +299,22 @@ Then this specific 'voice' will be stylable like so:
 }
 ```
 
-> **Примечание:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
+> [!NOTE]
+> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
-## Browser Compatibility
+## Совместимость с браузерами
 
-[Browser support for WebVTT and the `<track>` element](http://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
-
-### Internet Explorer
-
-Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The `default` attribute is also supported.
-
-> **Примечание:** IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
+[Browser support for WebVTT and the `<track>` element](https://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 
 ### Safari
 
-Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with the different available options, with the addition of an "Auto" option, which allows the browser to choose.
+In Safari 6.1+, subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built, along with an "Auto" option which allows the browser to choose. The `default` attribute is also supported.
 
 ### Chrome and Opera
 
 These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the `default` attribute on the `<track>` element and will instead try to match the browser's language to the subtitle's language.
 
-### Firefox
-
-Firefox's implementation was completely broken due to a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=981280), leading to Mozilla turning off WebVTT support by default (you can turn it on via the `media.webvtt.enabled` flag.) However, ~~this bug looks to have been fixed and WebVTT support re-enabled as of Gecko 31, so this will not be a problem for Firefox final release users for much longer (on Gecko 29 as of the time of this writing)~~ this has been fixed as of Firefox 31, and everything works as it should.
-
 ## Plugins
 
-If, after reading through this article you decide that you can't be bothered to do all of this and want someone else to do it for you, there are plenty of plugins out there that offer caption and subtitle support that you can use.
-
-- [playr](http://www.delphiki.com/html5/playr/)
-  - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
-- [Flowplayer](https://flowplayer.org/player/)
-  - : HTML5 player supporting WebVTT.
-- [jwplayer](http://www.jwplayer.com/)
-  - : This video player is very extensive and does a lot more than simply support video captions. It supports the WebVTT, SRT and DFXP formats.
-- [MediaElement.js](http://mediaelementjs.com/)
-  - : Another complete video player that also support video captions, albeit only in SRT format.
-- [LeanBack Player](http://www.leanbackplayer.com/)
-  - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.
-- [SublimeVideo](http://sublimevideo.net)
-  - : This player also supports captions through WebVTT and SRT files.
-- [Video.js](http://www.videojs.com/)
-  - : Supports WebVTT video subtitles.
-- [Radiant Media Player](https://www.radiantmediaplayer.com)
-  - : Supports multi-languages WebVTT closed captions
-
-> **Примечание:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](http://praegnanz.de/html5video/).
+There are also many open-source and commercial HTML video-player plugins that offer caption and subtitle support that you can use instead of rolling your own.
+You can search for those on the web using search terms like _"HTML video player plugin"_.

@@ -3,19 +3,21 @@ title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
 ハイライト:
 
-- [Storage Inspector: Web ページが保存したデータを確認できる新ツール](/ja/docs/Tools/Storage_Inspector)
+- [Storage Inspector: ウェブページが保存したデータを確認できる新ツール](/ja/docs/Tools/Storage_Inspector)
 - [Performance tool: プロファイラの UI の改良とフレームレートのタイムライン](/ja/docs/Tools/Performance)
 - [Frame switching: 開発ツールがページ内の特定の iframe を指すようにする](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html)
 - [console.table をサポート](/ja/docs/Web/API/Console.table)
-- [インスペクタで jQuery のイベントの確認が可能](/ja/docs/Tools/Page_Inspector#Examining_event_listeners)
+- [インスペクターで jQuery のイベントの確認が可能](/ja/docs/Tools/Page_Inspector#Examining_event_listeners)
 
 [Firefox 33 から Firefox 34 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176)
 
@@ -41,7 +43,7 @@ _変更なし。_
 
 ### JavaScript
 
-- ES6 の[オブジェクトリテラルにおける computed property names](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) の構文を実装しました ([Firefox バグ 924688](https://bugzil.la/924688))。
+- ES6 の[オブジェクトリテラルにおける計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名) の構文を実装しました ([Firefox バグ 924688](https://bugzil.la/924688))。
 
   - これは [getter](/ja/docs/Web/JavaScript/Reference/Functions/get) および [setter](/ja/docs/Web/JavaScript/Reference/Functions/set) のメソッド名も同様に含まれており ([Firefox バグ 1048384](https://bugzil.la/1048384))、また [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#計算されたオブジェクトのプロパティの名前と分割代入)と共に使用することもできます。
 
@@ -55,10 +57,10 @@ _変更なし。_
   - 寛容な等価性を使用するとき、`Object(sym) == sym` は `true` を返すようになりました。
 
 - 実験的な実装であった {{jsxref("TypedArray.prototype.move()")}} メソッド (以前の Nightly および Aurora チャンネルでのみ有効) を、ES6 標準の {{jsxref("TypedArray.prototype.copyWithin()")}} メソッドの実装で置き換えました ([Firefox バグ 1021379](https://bugzil.la/1021379))。
-- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、ES6 の仕様に応じて[オブジェクトリテラルでの重複するプロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Duplicate_property_names)に対して `SyntaxError` が発生しないようになりました ([Firefox バグ 1041128](https://bugzil.la/1041128))。
-- 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ([Firefox バグ 369778](https://bugzil.la/369778) および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox_固有の注意事項)を参照)。Web 互換性のため、RegExp.$N は引き続き空文字列を返します ([Firefox バグ 1053944](https://bugzil.la/1053944))。
+- [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、ES6 の仕様に応じて[オブジェクトリテラルでの重複したプロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)に対して `SyntaxError` が発生しないようになりました ([Firefox バグ 1041128](https://bugzil.la/1041128))。
+- 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ([Firefox バグ 369778](https://bugzil.la/369778) および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox_固有の注意事項)を参照)。ウェブ互換性のため、RegExp.$N は引き続き空文字列を返します ([Firefox バグ 1053944](https://bugzil.la/1053944))。
 - [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、ES6 の [Spread Operator](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)をサポートしました ([Firefox バグ 933276](https://bugzil.la/933276))。
-- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、配列のような手順に代わりイテレータの手順を使用するようになりました ([Firefox バグ 933276](https://bugzil.la/933276))。
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、配列のような手順に代わりイテレーターの手順を使用するようになりました ([Firefox バグ 933276](https://bugzil.la/933276))。
 - {{jsxref("Proxy.revocable()")}} を実装しました ([Firefox バグ 978279](https://bugzil.la/978279))。
 
 ### インターフェイス/API/DOM

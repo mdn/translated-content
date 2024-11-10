@@ -36,7 +36,7 @@ _`VideoPlaybackQuality` 对象没有实现任何特定方法，也没有继承�
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for constructing and returning this interface.
 - {{domxref("MediaSource")}}

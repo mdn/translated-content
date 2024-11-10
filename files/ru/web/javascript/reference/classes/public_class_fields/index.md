@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 
 {{JsSidebar("Classes")}}
 
-> **Примечание:** Эта страница описывает экспериментальные возможности.
+> [!NOTE]
+> Эта страница описывает экспериментальные возможности.
 >
 > Публичные и приватные поля — это [экспериментальная функция (stage
 > 3\)](https://github.com/tc39/proposal-class-fields), предложенная комитетом по стандарту JavaScript [TC39](https://tc39.es/).
@@ -266,7 +267,7 @@ console.log(instance.msg);
 
 {{Specifications("javascript.classes")}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -139,7 +139,7 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

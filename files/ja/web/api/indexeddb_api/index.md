@@ -11,7 +11,8 @@ IndexedDB は、ファイルや blob を含む大量の構造化データをク�
 
 {{AvailableInWorkers}}
 
-> **メモ:** IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#関連情報)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
+> [!NOTE]
+> IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#関連情報)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
 
 ## 主要概念と使用法
 
@@ -21,7 +22,8 @@ IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデー�
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)のガイドで、で、非同期的に IndexedDB を使用する方法を基本原理から学びます。
 - データをオフラインで保存するための IndexedDB と、資産をオフラインで保存するためのサービスワーカーを組み合わせる方法は、 [サービスワーカーにより PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)で概説しています。
 
-> **メモ:** たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
+> [!NOTE]
+> たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
 
 ### 同期と非同期
 
@@ -42,7 +44,7 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 - {{domxref("IDBOpenDBRequest")}}
   - : データベースを開くリクエストを表します。
 - {{domxref("IDBDatabase")}}
-  - : データベース接続を表します。データベースとのトランザクション処理を行うためのみに使用されます。
+  - : データベース接続を表します。データベースとのトランザクション処理を行う唯一の方法です。
 
 ### データの取り出しと変更
 
@@ -80,7 +82,7 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 
 ## 関連情報
 
-- [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB をに対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
+- [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB に対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
 - [Dexie.js](https://dexie.org/): 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。
 - [JsStore](https://jsstore.net/): SQL 風の構文による IndexedDB のラッパーです。
 - [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの mongodb で localstorage と server sync over http を元にしたもの。MiniMongo は MeteorJS で使われています。

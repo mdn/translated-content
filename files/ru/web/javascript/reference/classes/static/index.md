@@ -100,7 +100,7 @@ console.log(tp.triple());
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

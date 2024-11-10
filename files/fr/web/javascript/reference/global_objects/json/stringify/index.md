@@ -163,9 +163,11 @@ L'argument `remplaçant` est une fonction ou un tableau. Si c'est une fonction, 
 - Si la valeur renvoyée est un autre objet, cet objet sera, de façon récursive, transformé en une chaîne JSON en appelant la fonction `remplaçant` sur chaque propriété sauf si l'objet est une fonction auquel cas, rien n'est ajouté à la chaîne JSON.
 - Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.
 
-> **Note :** la fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
+> [!NOTE]
+> La fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
 
-> **Note :** Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
+> [!NOTE]
+> Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
 
 #### Exemple avec une fonction
 
@@ -290,7 +292,8 @@ var s = {
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 ```
 
-> **Note :** Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.
+> [!NOTE]
+> Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.
 
 ```js
 var a = JSON.stringify({ toto: "truc", bidule: "machin" });
@@ -304,7 +307,8 @@ console.log(a !== b); // true
 
 Dans le cas où on souhaite enregistrer un objet créé par l'utilisateur afin de le restorer plus tard (y compris après que le navigateur ait été fermé), on peut utiliser `JSON.stringify`.
 
-> **Attention :** Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().
+> [!WARNING]
+> Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().
 
 ```js
 // On crée un objet pour l'exemple

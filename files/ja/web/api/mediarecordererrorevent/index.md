@@ -13,7 +13,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-_親インタフェースである {{domxref("Event")}} からプロパティを継承します。_
+_親インターフェイスである {{domxref("Event")}} からプロパティを継承します。_
 
 - {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 発生したエラーに関する情報を含む {{domxref("DOMException")}} です。 読み取り専用です。
@@ -25,7 +25,7 @@ _親インタフェースである {{domxref("Event")}} からプロパティを
 
 ## メソッド
 
-_親インタフェースである {{domxref("Event")}} からメソッドを継承しています。_
+_親インターフェイスである {{domxref("Event")}} からメソッドを継承しています。_
 
 ## 仕様書
 

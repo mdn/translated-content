@@ -29,7 +29,8 @@ O tempo é controlado com alta precisão e baixa latência, permitindo que os de
 
 A API de áudio da Web também nos permite controlar como o áudio é _espacializado_. Utilizando um sistema baseado em um _modelo de ouvinte-fonte_, permite o controle do _modelo panorâmico_ e trata da _atenuação induzida por distância_ induzida por uma fonte em movimento (ou ouvinte em movimento).
 
-> **Observação:** você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
+> [!CALLOUT]
+> você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
 
 ## Público-alvo da API de áudio da Web
 

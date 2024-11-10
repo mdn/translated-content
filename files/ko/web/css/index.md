@@ -32,7 +32,9 @@ CSS3 이후, CSS 명세의 범위가 엄청나게 넓어짐에 따라 여러 CSS
   - : MDN의 [CSS 전체 참고서](/ko/docs/Web/CSS/Reference)는 숙련된 개발자를 위해 CSS의 모든 속성과 개념의
     설명을 제공합니다.
 
-> **알림:** #### 프런트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [!CALLOUT]
+>
+> 프런트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 자습서
 

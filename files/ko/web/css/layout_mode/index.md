@@ -14,7 +14,8 @@ slug: Web/CSS/Layout_mode
 - 신축 박스 레이아웃([_flexible box layout_](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)), 부드럽게 크기조정이 될 수 있는 복잡한 페이지 배치를 위해 설계됨. {{experimental_inline}}
 - 그리드 레이아웃(_grid layout_), 고정된 격자(grid)에 상대적인 요소 배치를 위해 설계됨. {{experimental_inline}}
 
-> **참고:** CSS 속성([CSS properties](/ko/docs/Web/CSS/CSS_Reference)) 모두가 모든 *레이아웃 모드*에 적용되지는 않습니다. 속성 대부분은 한 두 모드에 적용되고 속성이 다른 레이아웃 모드에 참여하는 요소에 설정되면 효과가 없습니다.
+> [!NOTE]
+> CSS 속성([CSS properties](/ko/docs/Web/CSS/CSS_Reference)) 모두가 모든 *레이아웃 모드*에 적용되지는 않습니다. 속성 대부분은 한 두 모드에 적용되고 속성이 다른 레이아웃 모드에 참여하는 요소에 설정되면 효과가 없습니다.
 
 ## 같이 보기
 

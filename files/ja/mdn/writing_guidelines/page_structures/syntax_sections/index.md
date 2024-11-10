@@ -2,7 +2,7 @@
 title: 構文の節
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
+  sourceCommit: 07578e7d8231894eb9eb463ac47effa83aa2bb23
 ---
 
 {{MDNSidebar}}
@@ -13,34 +13,38 @@ MDN リファレンスページの構文の節には、機能が持つ正確な�
 
 API リファレンスページの構文の節は手作業で書かれており、文書化される機能によって若干異なる場合があります。
 この節は、「構文」という見出し（通常はレベル 2 の見出し `##`）で始まり、リファレンスページの一番上（導入部分のすぐ下）に記述する必要があります。
-見出しの下にはその機能の正確な構文を示すコードブロックがあり、コードフェンス ` ``` [markup-language] ` クラスを使って区分けされています。
+見出しの下にはその機能の正確な構文を示すコードブロックがあり、コードフェンス ` ```[markup-language] ` クラスを使って区分けされています。
 
 以下の例では典型的な構文セクション（JavaScript 関数）の Markdown コードを示しています。
 
-````
+````md
 ## 構文
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
 ```
 ````
 
-### 全般的なスタイル規則
+> [!NOTE]
+> この用途で使用するマークアップ言語は `js-nolint` で、`js` は JavaScript の構文強調表示を使用することを示します。
+> JavaScript の構文の節では `-nolint` も必要です。なぜなら、構文の節は意図的に「まったく」JavaScript ではないので、リンターに「修正」してほしくないからです (返値と行末のセミコロンが省略されます)。
 
-構文ブロック内をマークアップするために従うべき規則がいくつかあります。
+### 全般的なスタイルルール
+
+構文ブロック内をマークアップするために従うべきルールがいくつかあります。
 
 - 行をセミコロン `;` で終わらせ**ない**でください。 構文の節は、実行可能なコードを表示するためのものではありません。だから、セミコロンを表示するのは意味がありません。
 - 構文ブロック内で（または MDN のコードサンプルブロック内でも） \<code> を使用し**ない**でください。一般的に役に立たないだけでなく、マークアップはこれを必要としないので、これを含むと見た目の通りにレンダリングされません。
 - 関数と引数のみを指定してください。以下、「修正」した例を示します。
 
-  ```js
-  querySelector(selector);
-  //responseStr = element.querySelector(selector);
+  ```js-nolint
+  querySelector(selector)
+  // responseStr = element.querySelector(selector)
 
-  new IntersectionObserver(callback, options);
-  // const observer = new IntersectionObserver(callback, options);
+  new IntersectionObserver(callback, options)
+  // const observer = new IntersectionObserver(callback, options)
   ```
 
 ### コンストラクターやメソッドの場合
@@ -49,56 +53,62 @@ slice(start, end)
 
 構文ブロックは、次のように始めてください（{{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} ページを参照）。
 
-```js
-new IntersectionObserver(callback, options);
+```js-nolint
+new IntersectionObserver(callback, options)
 ```
 
-または、次のようにします（{{DOMxRef("Document.hasStorageAccess")}} を参照）。
+または、次のようにします（{{DOMxRef("Document.hasStorageAccess()")}} を参照）。
 
-```js
-hasStorageAccess();
+```js-nolint
+hasStorageAccess()
 ```
 
-##### オプション引数は複数行で
+例えば {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} のようにメソッドが静的な場合は、そのインターフェイスも提供します。
+
+```js-nolint
+URL.createObjectURL(object)
+```
+
+##### 複数行/オプション引数
 
 多くの異なる方法で使用することができるメソッドは、複数の行に展開し、利用可能な変化形をすべて表示する必要があります。
 
 各オプションはそれ自身の行に記述し、各オプションのコメントと代入は省略する必要があります。例えば、 {{jsxref("Array.prototype.slice()")}} は 2 つのオプションの引数を持っており、以下のように文書化されます。
 
-```js
-slice();
-slice(begin);
-slice(begin, end);
+```js-nolint
+slice()
+slice(begin)
+slice(begin, end)
 ```
 
 同様に、 {{DOMxRef("CanvasRenderingContext2D.drawImage")}} の場合です。
 
-```js
-drawImage(image, dx, dy);
-drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```js-nolint
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 同様に、 {{jsxref("Date")}} コンストラクターの場合です。
 
-```js
-new Date();
-new Date(value);
-new Date(dateString);
-new Date(year, monthIndex);
-new Date(year, monthIndex, day);
-new Date(year, monthIndex, day, hours);
-new Date(year, monthIndex, day, hours, minutes);
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
+```js-nolint
+new Date()
+new Date(value)
+new Date(dateString)
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ##### 形式文法
 
-形式文法記法（[BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form) を使用したもの）は構文の節で使用すべきではありません。代わりに[前述](#オプション引数は複数行で)のような複数行の書式に展開したものを使用してください。
+形式文法記法（[BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form) を使用したもの）は構文の節で使用すべきではありません。代わりに[前述](#複数行/オプション引数)のような複数行の書式に展開したものを使用してください。
 
 形式的な記法により、複雑な構文を簡潔に記述することができますが、多くの開発者には馴染みがなく、特定のプログラミング言語で有効な構文と\_矛盾する可能性があります。例えば、「`[ ]`」は「オプション引数」と JavaScript の配列 ({{jsxref("Array")}}) の両方の意味があります。これは以下の {{jsxref("Array.prototype.slice()")}} の形式文法で見ることができます。
 
-```js
+```js-nolint
 arr.slice([begin[, end]])
 ```
 
@@ -106,72 +116,82 @@ arr.slice([begin[, end]])
 
 ##### 構文ブロックは簡潔に
 
-構文ブロックを簡潔にし、その機能の構文の定義の曖昧さをなくすために — 無関係な構文を含めないでください。例えば、このサイトの多くの場所で、プロミスを説明するために次のような形をよく見かけます。
+構文ブロックを簡潔にし、その機能の構文の定義の曖昧さをなくすために。無関係な構文を含めないでください。例えば、このサイトの多くの場所で、プロミスを説明するために次のような形をよく見かけます。
 
-```js
+```js-nolint
 caches.match(request, options).then(function (response) {
   // Do something with the response
-});
+})
 ```
 
 しかし、次のものははるかに簡潔で、余計な {{JSxRef("Promise.prototype.then()")}} メソッド呼び出しを含んでいません。
 
-```js
-match(request, options);
+```js-nolint
+match(request, options)
 ```
 
 ##### コールバックの構文ブロック
 
-コールバック関数を持つメソッドについては、アロー関数、関数、インライン関数の構文を示してください。
+コールバック関数を受け入れるメソッドでは、コールバックをアロー関数や `function` 式ではなく、引数として表示させます。
 
-```js
-// アロー関数
-filter((currentValue) => {
-  /* … */
-});
-filter((currentValue, index) => {
-  /* … */
-});
-filter((currentValue, index, array) => {
-  /* … */
-});
+```js-nolint
+filter(callbackFn)
+filter(callbackFn, thisArg)
+```
 
-// コールバック関数
-filter(callbackFn);
-filter(callbackFn, thisArg);
+次に、「引数」の節に、コールバック関数の引数と、その関数が返すと予想されるものを列挙します。
 
-// インラインコールバック関数
-filter(function (currentValue) {
-  /* … */
-});
-filter(function (currentValue, index) {
-  /* … */
-});
-filter(function (currentValue, index, array) {
-  /* … */
-});
-filter(function (currentValue, index, array) {
-  /* … */
-}, thisArg);
+```md
+- `callbackFn`
+  - : 配列のそれぞれの要素に対して実行する関数です。この関数は、結果の配列に要素を残す場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
+    - `element`
+      - : 配列内で現在処理中の要素です。
+    - `index`
+      - : 配列の、現在処理中の要素のインデックスです。
+    - `array`
+      - : `filter()` が呼び出された配列です。
 ```
 
 ##### 任意の数の引数を取る構文
 
 任意の数の引数を受け取るメソッドの場合、構文の節は次のように記述してください。
 
-```js
-unshift(element0);
-unshift(element0, element1);
-unshift(element0, element1, /* … ,*/ elementN);
+```js-nolint
+unshift()
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
+```
+
+1 からの番号付けを始めるには、「`unshift` は配列の先頭に N 個の要素を追加します」というような記述や、「（0 番目の要素ではなく）最初の要素」というような記述が推奨されます。
+
+なお、引数をゼロで渡す場合は、あまり意味がない場合でも常に記載します。次に、「引数」の節にこのように書きます。
+
+```md
+- `element1`, …, `elementN`
+  - : 配列の先頭に追加する要素です。
+```
+
+`\{{optional_inline}}` を追加してください。
+
+残りの引数の前にいくつかの位置指定のある別の例です。
+
+```js-nolint
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 #### 引数の項
 
 次に、「引数」の項を設置して、それぞれの引数が何であるべきかを説明リストの形で説明してください。複数のメンバーを含むことができるオブジェクトの引数は、入れ子の説明リストで記述し、その中にそれぞれのメンバーが何であるべきかを記述してください。省略可能な引数は、説明する用語の名前の隣に \{{optional_inline}} マクロでマークしてください。
 
-リスト内の各引数の名前は {{HTMLElement("code")}} ブロックの中に含めてください。
+リスト内の各引数の名前は、マークダウンコードのフェンス記法 `` ` ` `` に格納する必要があります。
 
-> **メモ:** その機能が何も引数を取らない場合は、「引数」の項を設置する必要はありませんが、中身を「なし」として設置しても構いません。
+> [!NOTE]
+> その機能が何も引数を取らない場合は、「引数」の項を設置する必要はありませんが、中身を「なし」として設置しても構いません。
 
 #### 返値の項
 
@@ -189,7 +209,8 @@ unshift(element0, element1, /* … ,*/ elementN);
 
 例外の名前と説明を説明リストに記述してください。
 
-> **メモ:** その機能で発生する例外がない場合は「例外」の項を設置する必要はありませんが、中身を「なし」として設置しても構いません。
+> [!NOTE]
+> その機能で発生する例外がない場合は「例外」の項を設置する必要はありませんが、中身を「なし」として設置しても構いません。
 
 ### プロパティの場合
 
@@ -203,7 +224,7 @@ unshift(element0, element1, /* … ,*/ elementN);
 
 ## JavaScript リファレンスの構文
 
-JavaScript の組み込みオブジェクトのリファレンスページは、 API リファレンスページと同様の基本規則に従います。例えばメソッドやプロパティについてです。多少の違いが見られることがあります。
+JavaScript の組み込みオブジェクトのリファレンスページは、 API リファレンスページと同様の基本ルールに従います。例えばメソッドやプロパティについてです。多少の違いが見られることがあります。
 
 - 組込みオブジェクトで単一のコンストラクターを持つものは、コンストラクターの構文がオブジェクトのランディングページに含まれていることが良くあります。例えば {{JSxRef("Date")}} を参照してください。（`Date` オブジェクト自身が持つ）静的メソッドは、「メソッド」の下の「Date.prototype メソッド」で記述されていることが分かるでしょう。
 - また、引数も例外もないメソッドは、 JavaScript リファレンスページにこれらの節が全く含まれていないことに気が付くでしょう。例えば {{JSxRef("Date.getDate()")}} や {{JSxRef("Date.now()")}} を参照してください。
@@ -214,7 +235,8 @@ JavaScript の組み込みオブジェクトのリファレンスページは、
 
 CSS プロパティページには「構文」の節があり、ふつうはページの先頭にありますが、次第に、機能の典型的な使用方法を示すブロックを含む節や、その機能が何を行うかを説明するライブデモ（例えば {{CSSxRef("animation")}} を参照）の下に見られるようになっています。
 
-> **メモ:** このようにしているのは、 CSS の形式文法が複雑であり、 MDN の読者の多くが必要としておらず、初心者にとってとっつきにくいからです。実際の構文と例が多くの人にとってより有用です。
+> [!NOTE]
+> このようにしているのは、 CSS の形式文法が複雑であり、 MDN の読者の多くが必要としておらず、初心者にとってとっつきにくいからです。実際の構文と例が多くの人にとってより有用です。
 
 構文の節の中には、次のような内容が見られるでしょう。
 
@@ -232,17 +254,17 @@ CSS プロパティによってはそれ自体が説明的であり、それ以�
 
 唯一の問題は、必要なデータが存在することを確認することです。 [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) ファイルに、文書化しているプロパティの項目が含まれている必要があり、 [types.json](https://github.com/mdn/data/blob/main/css/types.json) ファイルには、プロパティの値で使用されるすべての値の型の項目が含まれている必要があります。
 
-これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#データを追加する準備)。
+これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
 
 ### セレクター
 
 セレクターのリファレンスページの「構文」の節は、プロパティページよりもずっと簡潔です。ここには "Syntax Box" を使用してスタイル付けされたブロックが 1 つ入り、ここでセレクターの基本的な構文を、単純なキーワードだけ (例えば {{CSSxRef(":hover")}}) または引数を取るより複雑な関数値（例えば {{CSSxRef(":not", ":not()")}}）のどちらかで示します。引数を構文ブロックの中の別な項目で説明している場合もあります（例えば {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} を参照してください）。
 
-このブロックは、 [MDN data リポジトリー](https://github.com/mdn/data)の CSS ディレクトリにあるデータから自動的に生成されます。題名の下で `CSSSyntax` マクロ呼び出しを追加するだけで、残りのことはマクロがやってくれます。
+このブロックは、 [MDN data リポジトリー](https://github.com/mdn/data)の CSS ディレクトリーにあるデータから自動的に生成されます。題名の下で `CSSSyntax` マクロ呼び出しを追加するだけで、残りのことはマクロがやってくれます。
 
 唯一の問題は、必要なデータが存在することを確認することです。 [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) ファイルに、文書化しているセレクターの項目が含まれている必要があります。
 
-これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#データを追加する準備)。
+これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
 
 ## HTML リファレンスの構文
 
@@ -260,7 +282,7 @@ HTTP ヘッダーの構文（および Content-Security-Policy）ページ上で
 
 「構文」の節は、ヘッダーの構文がどのようなものかを、 "Syntax Box" スタイルを使用してスタイル付けされた構文ブロックを用いて、値にどのディレクティブが含まれるか、どのような順番かなどの形式文法を含めて示します。例えば、 {{HTTPHeader("If-None-Match")}} ヘッダーの構文ブロックは次のようになります。
 
-```plain
+```http
 If-None-Match: <etag_value>
 If-None-Match: <etag_value>, <etag_value>, …
 If-None-Match: *
@@ -276,7 +298,7 @@ If-None-Match: *
 
 リクエストメソッドの構文は実に単純で、構文ブロックを設置し、 "Syntax Box" スタイルを用いてスタイル付けし、どのようにメソッドの構文を構成するかを示すだけです。 [GET メソッド](/ja/docs/Web/HTTP/Methods/GET)の構文は次のようになります。
 
-```plain
+```http
 GET /index.html
 ```
 
@@ -284,7 +306,7 @@ GET /index.html
 
 HTTP レスポンスステータスコードの構文も、実に単純です。 — コードと名前を含む構文ブロックです。例えば次のようになります。
 
-```plain
+```http
 404 Not Found
 ```
 
@@ -300,4 +322,4 @@ SVG 属性のリファレンスページにも、構文の節はありません�
 
 ## 関連情報
 
-- [MDN での Markdown](/ja/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
+- [MDN での Markdown](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks)

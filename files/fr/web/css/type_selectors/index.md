@@ -3,7 +3,7 @@ title: Sélecteurs de type
 slug: Web/CSS/Type_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Les sélecteurs de type CSS ciblent des éléments en fonction du nom de leur nœud. Ainsi, lorsqu'un sélecteur de type est utilisé seul, il ciblera tous les éléments de ce type (autrement dit tous les nœuds avec ce nom) contenus dans le document.
 

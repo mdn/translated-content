@@ -9,7 +9,8 @@ slug: Web/API/WEBGL_lose_context
 
 WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方法来使用。更多信息可参阅 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中的 [使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 。
 
-> **备注：** 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 和 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} 上下文中都是可用的。
+> [!NOTE]
+> 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 和 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} 上下文中都是可用的。
 
 ## 方法
 

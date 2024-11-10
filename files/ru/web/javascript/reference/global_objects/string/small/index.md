@@ -3,7 +3,7 @@ title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 

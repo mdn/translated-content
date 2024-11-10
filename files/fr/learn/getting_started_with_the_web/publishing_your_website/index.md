@@ -48,7 +48,7 @@ Faites des essais avec certains de ces exemples et voyez lequel vous aimez le mi
 
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
-- [JSBin](http://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)
@@ -63,11 +63,13 @@ Maintenant, nous allons vous montrer comment publier facilement votre site via l
    Également, cochez _Initialize this repository with a README_, puis cliquez sur _Create repository_.![](github-create-repo.png)
 4. Ensuite, glissez-déposez le contenu du dossier de votre site Web dans votre référentiel, puis cliquez sur _Commit changes_.
 
-   > **Note :** Assurez-vous que votre dossier comporte bien un fichier _index.html._
+   > [!NOTE]
+   > Assurez-vous que votre dossier comporte bien un fichier _index.html._
 
 5. Maintenant, naviguez jusqu'à _username_.github.io pour voir votre site web en ligne. Par exemple, pour le nom d'utilisateur _chrisdavidmills_, allez à [chrisdavidmills.github.io](https://chrisdavidmills.github.io/).
 
-   > **Note :** Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
+   > [!NOTE]
+   > Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
 
 Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github/working-with-github-pages/getting-started-with-github-pages).
 

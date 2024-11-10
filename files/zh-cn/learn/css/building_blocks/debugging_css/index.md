@@ -81,7 +81,8 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
+> [!NOTE]
+> 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
 
 ## 理解盒模型
 
@@ -97,7 +98,8 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
+> [!NOTE]
+> 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
 
 ## 解决优先级问题
 

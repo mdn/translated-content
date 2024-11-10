@@ -1,8 +1,9 @@
 ---
-title: IntersectionObserver.root
+title: "IntersectionObserver: root プロパティ"
+short-title: root
 slug: Web/API/IntersectionObserver/root
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -13,7 +14,8 @@ l10n:
 
 ## 値
 
-対象要素のどの程度が見えるかを決定するために、ビューポートの境界として使用される外接ボックスを持つ {{domxref("Element")}} または {{domxref("Document")}} オブジェクト。この外接矩形と {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} コンストラクターに渡されたオプションで指定したマージンによるオフセット、対象要素の境界、対象要素に重なる全ての要素または他のオブジェクトの境界を引いたものの交差が対象要素の可視領域と見なされます。
+{{domxref("Element")}} または {{domxref("Document")}} オブジェクトで、この外接ボックスが、対象要素のどの程度が見えるかを決定するためのビューポートの境界として使用されます。
+この外接矩形が {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} コンストラクターに渡されたオプションで指定されたマージンによってオフセットされたものと、対象要素の、対象要素に重なる全ての要素または他のオブジェクトの境界を引いた交差部分が、対象要素の可視領域と見なされます。
 
 もし `root` が `null` であれば、自分の文書をルートとして使用し、そのビューポートの境界（つまり、文書の可視領域）をルート境界として使用します。
 
