@@ -2,7 +2,7 @@
 title: HTML を始めよう
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
 l10n:
-  sourceCommit: 6cecc075daf0a215d98b952982e304acdf45977d
+  sourceCommit: f20d7ae3f5f41aa6d2157246206b0f6f30756e2f
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -14,15 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基礎的なコンピューターリテラシー、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアのインストール</a
-        >、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの取り扱い</a
-        >に関する基本的な理解。
+        <a href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a>、<a href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの取り扱い</a>に関する基本的な理解。
       </td>
     </tr>
     <tr>
@@ -738,8 +730,7 @@ HTML のコメントを書くには、特別なマーカーである `<!--` と 
 
 この時点で、あなたは HTML がどのようなものか、そしてどのように動作するのか、基本的なレベルで理解できたはずです。また、いくつかの要素や属性を書くことができるようになっているはずです。このモジュールの後続の記事では、ここで紹介したトピックのいくつかをさらに詳しく説明し、また、この言語の他の概念も表示する予定です。
 
-> [!NOTE]
-> HTML を学び始めたら、[CSS](/ja/docs/Learn/CSS) の基本を学ぶことも検討してみてください。CSS は、ウェブページのスタイル設定に使用される言語です。例えば、フォントや色を変更したり、ページのレイアウトを変更したりすることができます。HTML と CSS がうまく協調しながら動作することがおわかりいただけると思います。
+- HTML を学び始めたら、[CSS](/ja/docs/Learn/CSS) の基本を学ぶことも検討してみてください。CSS は、ウェブページのスタイル設定に使用される言語です。例えば、フォントや色を変更したり、ページのレイアウトを変更したりすることができます。HTML と CSS がうまく協調しながら動作することがおわかりいただけると思います。
 
 ## 関連情報
 
