@@ -52,7 +52,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(
 对于每个通道和每个样本帧，脚本节点的 {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} 事件处理程序都会使用相关的 `audioProcessingEvent` 来循环处理输入缓冲区的每个通道和每个通道中的每个样本，并添加少量白噪声，然后将结果设置为每种情况下的输出样本。
 
 > [!NOTE]
-> 完整的示例参照 [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) github (查看源码 [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+> 完整的示例参照 GitHub 上的 [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) 仓库（查看[源代码](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)）。
 
 ```js
 const myScript = document.querySelector("script");
