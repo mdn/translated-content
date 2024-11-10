@@ -9,7 +9,8 @@ La méthode **`is()`**, rattachée au prototype d'un objet [`Exception`](/fr/doc
 
 La méthode peut être utilisée afin de tester si une balise est correcte avant de la passer à [`Exception.prototype.getArg()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg) pour obtenir les valeurs passées à l'exception. Elle peut être utilisée pour les balises créées côté JavaScript ou créées dans du code WebAssembly qui les exporte en JavaScript.
 
-> **Note :** Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
+> [!NOTE]
+> Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
 
 ## Syntaxe
 

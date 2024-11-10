@@ -1,17 +1,19 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
+l10n:
+  sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
 
 {{CSSRef}}
 
-**`text-decoration`** [简写](/zh-CN/docs/Web/CSS/Shorthand_properties) [CSS](/zh-CN/docs/Web/CSS) 属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
+**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-文本装饰会覆盖子孙文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>This text has <em>some emphasized words</em> in it.</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落被下划线划掉。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会被下划线划掉。但是，规则 `em { text-decoration: overline; }` 会导致“some emphasized words”上出现第二个装饰。
+文本装饰会覆盖子文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>这段文字中有<em>一些强调词</em>。</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落包含下划线。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会包含下划线。但是，规则 `em { text-decoration: overline; }` 会导致“一些强调词”上出现上划线。
 
-## 复合属性
+## 属性构成
 
 该属性是以下 CSS 属性的简写：
 
@@ -37,16 +39,16 @@ text-decoration: unset;
 
 `text-decoration` 属性由一个或多个用空格分隔的值组成，表示各种普通文本装饰属性。
 
-### 取值
+### 值
 
 - {{cssxref("text-decoration-line")}}
-  - : 设置使用的装饰类型，例如 `underline` 或者 `line-through`。
+  - : 设置使用的装饰类型，例如 `underline` 或 `line-through`。
 - {{cssxref("text-decoration-color")}}
   - : 设置装饰的颜色。
 - {{cssxref("text-decoration-style")}}
-  - : 设置装饰的线条的颜色，例如 `solid`、`wavy` 或者 `dashed`。
+  - : 设置装饰的线条的样式，例如 `solid`、`wavy` 或 `dashed`。
 - {{cssxref("text-decoration-thickness")}}
-  - : 设置用于装饰的线条粗细。
+  - : 设置装饰的线条粗细。
 
 ## 形式定义
 
@@ -58,7 +60,7 @@ text-decoration: unset;
 
 ## 示例
 
-### 文本装饰值的演示
+### text-decoration 值的演示
 
 ```css
 .under {
@@ -103,7 +105,7 @@ text-decoration: unset;
 <p class="blink">此文本可能会为你闪烁，具体取决于你使用的浏览器。</p>
 ```
 
-{{EmbedLiveSample('文本装饰值的演示','auto','320')}}
+{{EmbedLiveSample('text-decoration 值的演示','auto','320')}}
 
 ## 规范
 

@@ -29,7 +29,8 @@ Web Audio API 使用户可以在**音频上下文**（AudioContext）中进行�
 
 Web Audio API 也使我们能够控制音频的*空间化*。在基于*源 - 侦听器模型*的系统中，它允许控制*平移模型*和处理*距离引起的衰减*或移动源（移动侦听）引起的*多普勒效应*。
 
-> **备注：** 你可以阅读我们关于 Web Audio API 的文章来了解更多细节 [Web Audio API 背后的基本概念](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)。
+> [!NOTE]
+> 你可以阅读我们关于 Web Audio API 的文章来了解更多细节 [Web Audio API 背后的基本概念](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)。
 
 ## Web Audio API 接口
 
@@ -122,7 +123,8 @@ Web Audio API 使用的音频源接口。
 
 可以编写 JavaScript 代码来处理音频数据。当然，这需要用到下面的接口和事件。
 
-> **备注：** 这些功能在 Web Audio API 的 2014 年 8 月 9 日版本中已经标记为不推荐的，这些功能很快会被[Audio_Workers](#audio_workers)代替。
+> [!NOTE]
+> 这些功能在 Web Audio API 的 2014 年 8 月 9 日版本中已经标记为不推荐的，这些功能很快会被[Audio_Workers](#audio_workers)代替。
 
 - {{domxref("ScriptProcessorNode")}}
   - : **`ScriptProcessorNode`** 接口用于通过 JavaScript 代码生成，处理，分析音频。它是一个{{domxref("AudioNode")}}类型的音频处理模块，但是它与两个缓冲区相连接，一个缓冲区里包含当前的输入数据，另一个缓冲区里包含着输出数据。每当新的音频数据被放入输入缓冲区，就会产生一个{{domxref("AudioProcessingEvent")}}事件，当这个事件处理结束时，输出缓冲区里应该写好了新数据。

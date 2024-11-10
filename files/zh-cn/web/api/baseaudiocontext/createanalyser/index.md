@@ -10,7 +10,8 @@ slug: Web/API/BaseAudioContext/createAnalyser
 
 > **备注：** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} 构造函数是创建 {{domxref("AnalyserNode")}} 的推荐方法；请查看[创建 AudioNode](/zh-CN/docs/Web/API/AudioNode#创建_audionode)。
 
-> **备注：** 有关使用此节点的更多信息，请查看 {{domxref("AnalyserNode")}} 页面。
+> [!NOTE]
+> 有关使用此节点的更多信息，请查看 {{domxref("AnalyserNode")}} 页面。
 
 ## 语法
 

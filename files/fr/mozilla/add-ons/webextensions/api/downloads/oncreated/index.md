@@ -3,7 +3,7 @@ title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement **`onCreated()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement commence, c'est à dire lorsque quand {{WebExtAPIRef("downloads.download()")}} est appelé avec succès.
 
@@ -55,9 +55,9 @@ browser.downloads.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

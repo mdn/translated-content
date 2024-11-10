@@ -54,7 +54,8 @@ Sur certains de ces événements, vous pouvez modifier la demande. Plus précis�
 
 Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.
 
-> **Attention :** Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir le [bug Firefox 1475832](https://bugzil.la/1475832) pour plus de détails.
+> [!WARNING]
+> Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir le [bug Firefox 1475832](https://bugzil.la/1475832) pour plus de détails.
 
 ## Accéder aux informations de sécurité
 
@@ -130,9 +131,9 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

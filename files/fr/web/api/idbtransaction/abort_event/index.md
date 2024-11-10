@@ -3,6 +3,8 @@ title: abort
 slug: Web/API/IDBTransaction/abort_event
 ---
 
+{{APIRef("IndexedDB")}}
+
 Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompue.
 
 ## Informations générales

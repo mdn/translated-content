@@ -53,7 +53,7 @@ l10n:
 #### WebDriver BiDi
 
 - ユーザーがすべての WebDriver セッションを終了してブラウザーを閉じることを可能にする `browser.close` コマンドを追加しました ([Firefox bug 1829334](https://bugzil.la/1829334))。
-- ユーザーがトップレベルのブラウジングコンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
+- ユーザーがトップレベルの閲覧コンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
 - ドキュメント内のナビゲーションに対して発生する `browsingContext.fragmentNavigated` イベントを追加しました ([Firefox bug 1841039](https://bugzil.la/1841039))。
 - `browsingContext.create` コマンドの引数 `background` をサポートしました。これは、新しいコンテキストをバックグラウンドで作成することを強制します。この引数は省略可能で既定値が `false` ですので、`browsingContext.create` はデフォルトで新しいコンテキストをフォアグラウンドで開きます ([Firefox bug 1843507](https://bugzil.la/1843507))。
 - `browsingContext.captureScreenshot` コマンドの引数 `clip` をサポートしました。これは、スクリーンショットを指定した領域または要素に制限できます。要素を切り抜くとき、スクリーンショットを取得する前に要素がビューに入るようにスクロールすることができます ([Firefox bug 1840998](https://bugzil.la/1840998))。

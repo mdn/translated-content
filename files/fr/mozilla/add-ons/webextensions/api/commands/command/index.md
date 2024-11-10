@@ -3,7 +3,7 @@ title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information sur une commande. Cela contient les informations spécifiées pour la commande dans la [`commande` clef manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -26,6 +26,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).

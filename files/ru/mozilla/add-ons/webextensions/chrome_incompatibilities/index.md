@@ -7,11 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.
 
-Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддержуемых в Chrome и Опере. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.
+Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддерживаемых в Chrome. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.
 
 Эта статья перечисляет все функции и API, которые полностью поддерживаются в Firefox Developer Edition (на данный момент Firefox 47). Там где функция поддерживается частично, мы указали на проблемные места.
-
-> **Примечание:** You should assume that features and APIs not listed here at all are not yet supported.
 
 ## manifest.json функция
 
@@ -245,9 +243,9 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 We don't support the following APIs, but plan to, soon:
 
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [debugger](https://developer.chrome.com/extensions/debugger)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
+- [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
 
 This doesn't mean that these are the only additional APIs we will support, but that they are our current priorities.
 

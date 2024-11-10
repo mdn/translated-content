@@ -9,8 +9,8 @@ slug: Web/API/HTMLTableElement/createCaption
 
 ## 语法
 
-```
-HTMLTableCaptionElement = table.createCaption()
+```js-nolint
+createCaption()
 ```
 
 ## 示例

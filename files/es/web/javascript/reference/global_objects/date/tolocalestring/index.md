@@ -135,7 +135,8 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 // false in IE and Edge
 ```
 
-> **Nota:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> [!NOTE]
+> See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
 
 ## Performance
 

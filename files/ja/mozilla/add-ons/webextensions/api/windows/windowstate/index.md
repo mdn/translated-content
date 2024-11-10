@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ブラウザーウィンドウの状態です。
 
@@ -20,7 +20,7 @@ l10n:
 - `"maximized"`
   - : このウィンドウはオペレーティングシステムによって予約されている画面領域を除く画面全体を埋め尽くしています。
 - `"fullscreen"`
-  - : ウィンドウは全画面アプリケーションとして動作しているか、タブのコンテンツが[全画面 API](/ja/docs/Web/API/Fullscreen_API)を利用しています。。
+  - : ウィンドウは全画面アプリケーションとして動作しているか、タブのコンテンツが[全画面 API](/ja/docs/Web/API/Fullscreen_API)を利用しています。
 - `"docked"`
   - : ドックされたウィンドウは、同じアプリケーションで所有されている他のウィンドウとの相対的な位置が固定されます。
 
@@ -32,7 +32,8 @@ macOS の互換性: macOS 10.10 から、ウィンドウの既定の最大化動
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-WindowState) API に基づいています。この記事は Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生しています。
+> [!NOTE]
+> この API は Chromium の [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-WindowState) API に基づいています。この記事は Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生しています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

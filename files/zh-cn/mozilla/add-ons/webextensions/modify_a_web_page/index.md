@@ -41,7 +41,8 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 "content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 ([https://developer.mozilla.org/](/) )。
 
-> **备注：** 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
+> [!NOTE]
+> 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
 
 > **备注：** `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
 
@@ -59,7 +60,8 @@ document.body.appendChild(header);
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!NOTE]
+> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
 
 ## 通过程序修改页面
 
@@ -118,7 +120,8 @@ modify-page/
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!NOTE]
+> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
 
 ## 消息
 
@@ -219,7 +222,8 @@ browser.runtime.onMessage.addListener(eatPage);
 
 如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
 
-> **备注：** 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
+> [!NOTE]
+> 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
 
 ## 了解更多
 

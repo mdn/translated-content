@@ -11,7 +11,8 @@ Si cette méthode est appelée sans argument ou que le format est une chaîne de
 
 Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `Files` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
 
-> **Note :** Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
+> [!NOTE]
+> Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
 
 ## Syntaxe
 

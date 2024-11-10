@@ -3,7 +3,7 @@ title: fallback
 slug: Web/XSLT/Element/fallback
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:fallback>` indica la plantilla a usar en caso de que algun elemento extendido (o, eventualmente, una nueva versión) no esté soportado.
 

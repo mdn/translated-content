@@ -11,7 +11,7 @@ L'avantage de l'approche `proxy.onRequest` est que le code qui implémente votre
 
 En dehors de cette API, les extensions peuvent également utiliser la propriété [`browserSettings.proxyConfig`](/fr/Add-ons/WebExtensions/API/browserSettings/proxyConfig) pour configurer les paramètres proxy globaux.
 
-Google Chrome fournit [une API d'extension également appelée "proxy"](https://developer.chrome.com/extensions/proxy) qui est fonctionnellement similaire à cette API, dans la mesure où les extensions peuvent l'utiliser pour implémenter une politique de proxy. Cependant, la conception de l'API Chrome est complètement différente de cette API. Étant donné que cette API est incompatible avec l'API de `proxy` Chrome, cette API est uniquement disponible via l'espace de noms du `navigateur`.
+Google Chrome fournit [une API d'extension également appelée "proxy"](https://developer.chrome.com/docs/extensions/reference/api/proxy) qui est fonctionnellement similaire à cette API, dans la mesure où les extensions peuvent l'utiliser pour implémenter une politique de proxy. Cependant, la conception de l'API Chrome est complètement différente de cette API. Étant donné que cette API est incompatible avec l'API de `proxy` Chrome, cette API est uniquement disponible via l'espace de noms du `navigateur`.
 
 Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "proxy". De plus, lorsque vous voulez intercepter des requêtes, vous avez également besoin de la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les URL des requêtes interceptées
 

@@ -11,7 +11,8 @@ slug: Web/CSS/margin
 
 위와 아래 여백은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.
 
-> **참고:** margin은 요소의 주위에 빈 공간을 추가합니다. 반면 {{cssxref("padding")}}은 요소의 **내부**에 빈 공간을 만듭니다.
+> [!NOTE]
+> margin은 요소의 주위에 빈 공간을 추가합니다. 반면 {{cssxref("padding")}}은 요소의 **내부**에 빈 공간을 만듭니다.
 
 ## 구문
 

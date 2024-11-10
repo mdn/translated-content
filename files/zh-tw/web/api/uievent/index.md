@@ -3,7 +3,7 @@ title: UIEvent
 slug: Web/API/UIEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`UIEvent`** 介面是使用者介面的事件的基本型態。
 

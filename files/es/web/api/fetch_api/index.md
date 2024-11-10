@@ -20,7 +20,8 @@ Una vez que {{domxref("Response")}} es recuperada, hay varios métodos disponibl
 
 Puede crear una solicitud y respuesta directamente a con los constructores {{domxref("Request.Request","Request()")}} y {{domxref("Response.Response","Response()")}}, pero no es recomendable hacerlo directamente. En su lugar, es preferible que sean creados como resultado de otras acciones de la API (por ejemplo, {{domxref("FetchEvent.respondWith")}} desde los operadores de servicios).
 
-> **Nota:** Puede encontrar mas información sobre las características de la API Fetch en [Usando Fetch](/es/docs/Web/API/Fetch_API/Using_Fetch), y aprender los conceptos en [Fetch: conceptos básicos](/es/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Puede encontrar mas información sobre las características de la API Fetch en [Usando Fetch](/es/docs/Web/API/Fetch_API/Using_Fetch), y aprender los conceptos en [Fetch: conceptos básicos](/es/docs/Web/API/Fetch_API/Basic_concepts).
 
 ### Abortar una petición
 

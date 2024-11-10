@@ -29,7 +29,8 @@ El tiempo es controlado con alta precisión baja latencia, permitiendo a los des
 
 El API de Audio Web también nos permite controlar cómo el audio es _espacializado_. Usando un sistema basado en un _modelo fuente-oyente_, esto permite controlar el _modeo de paneo_ y que se ocupa de la _atenuación inducida por distancia_ o _desplazamiento doppler_ inducido por una fuente en movimiento (o un oyente en movimiento).
 
-> **Nota:** Puedes leear sobre la teoría del API de Audio Web con más detalle en nuestro artículo [Conceptos Básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Puedes leear sobre la teoría del API de Audio Web con más detalle en nuestro artículo [Conceptos Básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Interfaces del API de Audio Web
 

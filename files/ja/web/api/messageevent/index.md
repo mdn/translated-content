@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`MessageEvent`** インターフェースは対象のオブジェクトから受け取ったメッセージを表します。
+**`MessageEvent`** インターフェイスは対象のオブジェクトから受け取ったメッセージを表します。
 
 次のメッセージを表すために使用されます。
 
@@ -30,7 +30,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-_このインターフェースは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : メッセージ送信元によって送信されたデータです。
@@ -45,7 +45,7 @@ _このインターフェースは親である {{domxref("Event")}} からプロ
 
 ## インスタンスメソッド
 
-_このインターフェースは親である {{domxref("Event")}} からメソッドを継承してします。_
+_このインターフェイスは親である {{domxref("Event")}} からメソッドを継承してします。_
 
 - {{domxref("MessageEvent.initMessageEvent","initMessageEvent()")}} {{deprecated_inline}}
   - : メッセージイベントを初期化します。**これ以上このメソッドを使用しないでください。代わりに、{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} コンストラクターを使用してください。**

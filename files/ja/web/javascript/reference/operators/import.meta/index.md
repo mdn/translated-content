@@ -17,7 +17,7 @@ import.meta
 
 構文は、`import` キーワードとドット、プロパティ名の `meta` で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの `import` はオブジェクトではありません。
 
-`import.meta` オブジェクトは ECMAScript 実装によって生成され、プロトタイプは {{jsxref("null")}} です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
+`import.meta` オブジェクトは ECMAScript 実装によって生成され、プロトタイプは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
 
 ## 例
 

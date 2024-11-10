@@ -204,7 +204,8 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 ## Elementos obsoletos e descontinuados
 
-> **Aviso:** Aviso: Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
+> [!WARNING]
+> Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
 
 ### A
 

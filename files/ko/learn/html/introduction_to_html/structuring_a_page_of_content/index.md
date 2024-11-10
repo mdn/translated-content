@@ -42,7 +42,8 @@ zip 파일에는 다음이 포함되어 있습니다:
 
 로컬 컴퓨터에서 예제를 만들거나, 또는 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 도구를 사용하여 작업을 수행합니다.
 
-> **참고:** 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
+> [!NOTE]
+> 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
 
 ## 프로젝트 개요
 

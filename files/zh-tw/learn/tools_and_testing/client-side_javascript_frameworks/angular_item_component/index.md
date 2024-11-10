@@ -189,7 +189,7 @@ export class ItemComponent {
 
 `editable` 屬性有助於切換模板，讓使用者可以編輯其項目。HTML 中的 `editable` 屬性與 `*ngIf` 語句中的屬性相同， `*ngIf="editable"`。當你在模板使用此屬性時，你也必須在 class 中宣告它。
 
-`@Input()` ， `@Output()` 和 `EventEmitter` 促進兩個元件中的溝通，一個 `@Output()` 服務元件做為資料傳進的入口，然後一個 `@Output()` 是將元件資料傳到外層。`@Output()` 必須是 `EventEmitter` 的類型，資料可以透過事件分享至其他組件。
+`@Input()`、`@Output()` 和 `EventEmitter` 促進兩個元件中的溝通，一個 `@Input()` 服務元件做為資料傳進的入口，然後一個 `@Output()` 是將元件資料傳到外層。`@Output()` 必須是 `EventEmitter` 的類型，資料可以透過事件分享至其他組件。
 
 使用 `@Input()`指定外部元件要傳進之屬性的值，將 `@Output()` 與 `EventEmitter` 結合使用可將該元件指定屬性的值傳出，使得另一個元件可以接收其資料。
 

@@ -16,7 +16,8 @@ l10n:
 指定された要素の可視率がオブザーバーの可視率の閾値を通過したとき（{{domxref("IntersectionObserver.thresholds")}} を参照）、オブザーバーのコールバックが実行されます。
 このコールバックは、発生した交差の変化を表す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を受け取ります。この構成によって、 1 回のコールバック呼び出しにつき複数の要素の交差状態の変化を処理することができます。
 
-> **メモ:** オブザーバーの[コールバック](/ja/docs/Web/API/IntersectionObserver/IntersectionObserver#callback)は、 `observe()` が呼び出された後の最初のレンダリングサイクルで、ビューポートに対する監視要素の移動がなくても、常に呼び出されます。
+> [!NOTE]
+> オブザーバーの[コールバック](/ja/docs/Web/API/IntersectionObserver/IntersectionObserver#callback)は、 `observe()` が呼び出された後の最初のレンダリングサイクルで、ビューポートに対する監視要素の移動がなくても、常に呼び出されます。
 > すなわち、例えば、 `observe()` が呼び出されたときにビューポートの外側にある要素は、 1 つ以上の[項目](/ja/docs/Web/API/IntersectionObserverEntry)が、 [`intersecting`](/ja/docs/Web/API/IntersectionObserverEntry) が `false` に設定された状態でコールバックが即座に呼び出されることになります。
 > ビューポートの中にある要素については、 `intersecting` が `true` に設定された 1 つ以上の項目でコールバックが即座に呼び出されます。
 

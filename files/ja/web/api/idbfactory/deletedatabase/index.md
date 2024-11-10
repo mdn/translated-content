@@ -1,19 +1,18 @@
 ---
-title: IDBFactory.deleteDatabase()
+title: "IDBFactory: deleteDatabase() method"
+short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 **`deleteDatabase()`** は {{DOMxRef("IDBFactory")}} インターフェイスのメソッドで、データベースの削除を要求します。このメソッドは直ちに {{DOMxRef("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
 
 データベースの削除が成功した場合、このメソッドから返された `request` オブジェクトにおいて、`result` に `undefined` が設定された状態で `success` イベントが発生します。 データベースの削除中にエラーが発生した場合、このメソッドから返された `request` オブジェクトで、`error` イベントが発生します。
 
 `deleteDatabase()` が呼び出されると、この具体的なデータベースに対して開いている他の接続には [versionchange](/ja/docs/Web/API/IDBDatabase/versionchange_event) イベントが送られます。
-
-{{AvailableInWorkers}}
 
 ## 構文
 
@@ -30,7 +29,7 @@ deleteDatabase(name, options)
 
 - `name`
   - : 削除したいデータベースの名前。存在しないデータベースを削除しようとしても、例外は発生しません。これとは対照的に、 {{DOMxRef("IDBDatabase.deleteObjectStore()")}} は、指定したオブジェクトストアが存在しない場合に例外が発生します。
-- `options` {{optional_inline}} {{NonStandardBadge}}
+- `options` {{optional_inline}} {{Non-standard_Inline}}
   - : Gecko では、[バージョン 26](/ja/docs/Mozilla/Firefox/Releases/26) 以降、`permanent`（既定値）の IndexedDB を削除するか、`temporary` ストレージ （別名共有プール）の indexedDB を削除するかを指定する、非標準のオプションストレージ引数を含めることができます。
 
 ### 返値

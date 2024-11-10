@@ -31,7 +31,8 @@ GeneratorFunction(arg1, arg2, functionBody)
 GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `GeneratorFunction()`，都可以创建一个新的 `GeneratorFunction` 实例。
+> [!NOTE]
+> 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `GeneratorFunction()`，都可以创建一个新的 `GeneratorFunction` 实例。
 
 ### 参数
 

@@ -25,12 +25,10 @@ SyntaxError: for-in loop variable declaration may not have an initializer. (Chro
 
 下面这个示例会报语法错误（`SyntaxError`）：
 
-```js example-bad
-"use strict";
+```js-nolint example-bad
+const obj = { a: 1, b: 2, c: 3 };
 
-var obj = {a: 1, b: 2, c: 3 };
-
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 

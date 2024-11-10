@@ -3,7 +3,7 @@ title: value-of
 slug: Web/XSLT/Element/value-of
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaîne et écrit cette chaîne dans l'arbre de sortie.
 

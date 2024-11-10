@@ -3,6 +3,8 @@ title: Introduction
 slug: Web/SVG/Tutorial/Introduction
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
 
 SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
@@ -23,7 +25,8 @@ SVG prend en charge les dégradés, les rotations, les effets de filtre, les ani
 
 Il y a un certain nombre de logiciels de dessin disponibles qui utilisent SVG comme format natif. Certains, comme [Inkscape](http://www.inkscape.org/), sont libres et gratuits. Néanmoins, ce tutoriel se basera sur le XML et un simple éditeur de texte. Le but est d'enseigner les mécanismes de SVG à ceux qui veulent les comprendre, et la meilleure façon de le faire est de mettre les mains dans le cambouis avec un peu de balisage.
 
-> **Note :** Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
+> [!NOTE]
+> Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
 
 Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/HTML). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
 

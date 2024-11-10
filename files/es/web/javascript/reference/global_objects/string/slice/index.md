@@ -3,7 +3,7 @@ title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 

@@ -76,7 +76,8 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ::pseudo-element-name
 ```
 
-> **备注：** 一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到。现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素。
+> [!NOTE]
+> 一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到。现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素。
 
 例如，如果你想选中一段的第一行，你可以把它用一个`<span>`元素包起来，然后使用元素选择器；不过，如果包起来的单词/字符数目长于或者短于父元素的宽度，这样做会失败。由于我们一般不会知道一行能放下多少单词/字符——因为屏幕宽度或者字体大小改变的时候这也会变——通过改变 HTML 的方式来可预测地这么做是不可能的。
 
@@ -165,7 +166,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":only-child") }}        | 匹配没有兄弟元素的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":only-of-type") }}      | 匹配兄弟元素中某类型仅有的元素。                                                                                                                                                                          |
 | {{ Cssxref(":optional") }}          | 匹配不是必填的 form 元素。                                                                                                                                                                                |
-| {{ Cssxref(":out-of-range") }}      | 按区间匹配元素，当值不在区间内的的时候匹配。                                                                                                                                                              |
+| {{ Cssxref(":out-of-range") }}      | 按区间匹配元素，当值不在区间内的时候匹配。                                                                                                                                                                |
 | {{ Cssxref(":past") }}              | 匹配当前元素之前的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":placeholder-shown") }} | 匹配显示占位文字的 input 元素。                                                                                                                                                                           |
 | {{ Cssxref(":playing") }}           | 匹配代表音频、视频或者相似的能“播放”或者“暂停”的资源的，且正在“播放”的元素。                                                                                                                              |
@@ -175,7 +176,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":required") }}          | 匹配必填的 form 元素。                                                                                                                                                                                    |
 | {{ Cssxref(":right") }}             | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)中，匹配右手边的页。                                                                                                                                     |
 | {{ Cssxref(":root") }}              | 匹配文档的根元素。                                                                                                                                                                                        |
-| {{ Cssxref(":scope") }}             | 匹配任何为参考点元素的的元素。                                                                                                                                                                            |
+| {{ Cssxref(":scope") }}             | 匹配任何为参考点元素的元素。                                                                                                                                                                              |
 | {{ Cssxref(":valid") }}             | 匹配诸如`<input>`元素的处于可用状态的元素。                                                                                                                                                               |
 | {{ Cssxref(":target") }}            | 匹配当前 URL 目标的元素（例如如果它有一个匹配当前[URL 分段](https://en.wikipedia.org/wiki/Fragment_identifier)的元素）。                                                                                  |
 | {{ Cssxref(":visited") }}           | 匹配已访问链接。                                                                                                                                                                                          |

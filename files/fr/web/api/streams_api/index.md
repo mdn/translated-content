@@ -25,7 +25,8 @@ Un usage plus avancé consiste à créer son propre flux en utilisant le constru
 
 Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("WritableStream")}}.
 
-> **Note :** Vous trouverez plus de détails sur la théorie et la mise en pratique des flux dans nos articles — [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts), [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams), et [Using writable streams](/fr/docs/Web/API/Streams_API/Using_writable_streams).
+> [!NOTE]
+> Vous trouverez plus de détails sur la théorie et la mise en pratique des flux dans nos articles — [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts), [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams), et [Using writable streams](/fr/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 
@@ -63,7 +64,8 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 
 ### Interfaces liées aux flux d'octets
 
-> **Attention :** Ces méthodes ne sont pas implémentés pour le moment, des questions ont été soulevées afin de déterminer si les détails des specs sont dans état suffisamment stable pour être implémentés. Ceci pourrait changer avec le temps.
+> [!WARNING]
+> Ces méthodes ne sont pas implémentés pour le moment, des questions ont été soulevées afin de déterminer si les détails des specs sont dans état suffisamment stable pour être implémentés. Ceci pourrait changer avec le temps.
 
 - {{domxref("ReadableStreamBYOBReader")}}
   - : Correspond à un lecteur BYOB ("bring your own buffer") pouvant être utilisé pour lire des flux de données fourni par le développeur (c.a.d. un constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personalisé).

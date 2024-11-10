@@ -9,7 +9,8 @@ slug: Web/API/DataTransfer/addElement
 
 **`DataTransfer.addElement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxref("HTMLElement/drag_event", "drag")}} と {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
 
-> **メモ:** このメソッドは Firefox 固有です。
+> [!NOTE]
+> このメソッドは Firefox 固有です。
 
 ## 構文
 

@@ -164,7 +164,7 @@ This routine is pretty simplistic given the basic nature of the scene in this ex
 
 Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the `gl` object's `bufferData()` method to establish the vertices for the object.
 
-## Desenhando a cena
+## Renderizando a cena
 
 Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 

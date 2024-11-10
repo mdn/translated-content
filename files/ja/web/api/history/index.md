@@ -11,7 +11,8 @@ l10n:
 
 `history` のインスタンスは 1 つしかなく（シングルトンです）、グローバルオブジェクト {{domxref("Window.history", "history")}} を通してアクセスできます。
 
-> **メモ:** このインターフェイスはメインスレッド ({{domxref("Window")}}) でのみ利用できます。 {{domxref("Worker")}} または {{domxref("Worklet")}} コンテキストではアクセスできません。
+> [!NOTE]
+> このインターフェイスはメインスレッド ({{domxref("Window")}}) でのみ利用できます。 {{domxref("Worker")}} または {{domxref("Worklet")}} コンテキストではアクセスできません。
 
 ## インスタンスプロパティ
 

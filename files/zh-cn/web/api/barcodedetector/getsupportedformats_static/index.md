@@ -2,7 +2,7 @@
 title: BarcodeDetector：getSupportedFormats() 静态方法
 slug: Web/API/BarcodeDetector/getSupportedFormats_static
 l10n:
-  sourceCommit: 37299890c7fe7e4d92c1a86a5fa264afc13467e8
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
@@ -17,7 +17,7 @@ BarcodeDetector.getSupportedFormats()
 
 ### 参数
 
-该方法不接收任何参数。
+无。
 
 ### 返回值
 

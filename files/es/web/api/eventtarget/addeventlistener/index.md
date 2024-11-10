@@ -3,7 +3,7 @@ title: element.addEventListener
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 ## Resumen
 
@@ -26,7 +26,8 @@ target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-stand
 
   - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.
 
-    > **Nota:** For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.
+    > [!NOTE]
+    > For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.
 
     > **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
 
@@ -169,7 +170,8 @@ In the example above, the value of `this` within `modifyText()` when called from
 
 The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> [!NOTE]
+> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
 
 This is an example with and without `bind`:
 

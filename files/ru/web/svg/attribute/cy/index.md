@@ -2,7 +2,7 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: 0c3c2bd5feaedbe0ffa7fd3530c625e5b1200670
 ---
 
 {{SVGRef}}
@@ -48,11 +48,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Значение</th>
-      <td>
-        <strong><a href="/ru/docs/Web/SVG/Content_type#Length">&#x3C;длина></a></strong>
-        |
-        <strong><a href="/ru/docs/Web/SVG/Content_type#Percentage">&#x3C;проценты></a></strong>
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Значение по умолчанию</th>
@@ -65,7 +61,8 @@ svg {
   </tbody>
 </table>
 
-> **Примечание:** Начиная с SVG2, `cy` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для окружностей.
+> [!NOTE]
+> Начиная с SVG2, `cy` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для окружностей.
 
 ## ellipse
 
@@ -75,11 +72,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Значение</th>
-      <td>
-        <strong><a href="/ru/docs/Web/SVG/Content_type#Length">&#x3C;длина></a></strong>
-        |
-        <strong><a href="/ru/docs/Web/SVG/Content_type#Percentage">&#x3C;проценты></a></strong>
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Значение по умолчанию</th>
@@ -92,7 +85,8 @@ svg {
   </tbody>
 </table>
 
-> **Примечание:** Начиная с SVG2, `cy` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для для эллипсов.
+> [!NOTE]
+> Начиная с SVG2, `cy` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для для эллипсов.
 
 ## radialGradient
 
@@ -102,9 +96,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Значение</th>
-      <td>
-        <strong><a href="/ru/docs/Web/SVG/Content_type#Length">&#x3C;длина></a></strong>
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Значение по умолчанию</th>
@@ -178,3 +170,8 @@ svg {
 ## Спецификации
 
 {{Specifications}}
+
+## Смотрите также
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}

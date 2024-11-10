@@ -23,7 +23,8 @@ Un {{domxref("AudioBufferSourceNode")}}.
 
 Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bruit blanc, puis on le joue via un {{ domxref("AudioBufferSourceNode") }}. Les commentaires devraient expliquer clairement ce qui se passe.
 
-> **Note :** Vous pouvez également [exécuter le code en direct](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [voir la source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!NOTE]
+> Vous pouvez également [exécuter le code en direct](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [voir la source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

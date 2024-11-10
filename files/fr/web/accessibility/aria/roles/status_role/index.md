@@ -3,6 +3,8 @@ title: Utiliser le rôle status
 slug: Web/Accessibility/ARIA/Roles/status_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [status](http://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
@@ -25,7 +27,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran peuvent fournir une touche spécifique pour annoncer l'état actuel et ce dernier devrait présenter les contenus des états des zones live. Cela devrait être annoncé lorsque l'utilisateur est inactif, à moins que l'attribut `aria-live=”assertive”` soit défini dans quel cas l'utilisateur peut être interrompu&nbsp;;
 - Les loupes d'écran devraient agrandir l'objet d'état.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

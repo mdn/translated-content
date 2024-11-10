@@ -22,7 +22,8 @@ Effectuez les étapes suivantes :
    ![](load_device_driver.png)
 6. Entrez un nom pour le module de sécurité, tel que "_Ma Base de données Client_"
 
-   > **Attention :** il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
+   > [!WARNING]
+   > Il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
 
 7. Choisir **Parcourir...** pour trouver l'emplacement du module PKCS #11 sur votre ordinateur local, puis cliquez ou appuyez sur **OK** pour confirmer.
 
@@ -30,7 +31,8 @@ Effectuez les étapes suivantes :
 
 ## Provisionnement des modules PKCS #11
 
-> **Note :** A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
+> [!NOTE]
+> A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
 
 Il y a 2 pré-requis pour pouvoir utiliser cette API:
 

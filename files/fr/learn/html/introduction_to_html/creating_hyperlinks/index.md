@@ -30,7 +30,8 @@ Les hyperliens sont vraiment importants, ils sont ce qui fait du Web _une toile_
 
 Les hyperliens sont l'une des plus passionnantes innovations que le Web a à offrir. De fait, ils ont été une fonctionnalité du Web depuis le tout début, mais ils sont ce qui fait du Web _une toile_. Les hyperliens permettent de relier des documents à d'autres documents ou ressources, de renvoyer à des parties spécifiques de documents ou de rendre des applications disponibles à une adresse web. À peu près tout contenu web peut être converti en lien, de sorte que cliqué (ou activé autrement), il dirigera le navigateur vers une autre adresse web ([URL](/fr/docs/Glossary/URL)).
 
-> **Note :** Une URL peut pointer vers des fichiers HTML, des fichiers textes, des images, des documents texte, des fichiers vidéo ou audio et tout ce qui peut exister sur le Web. Si le navigateur web ne sait pas comment afficher ou gérer un fichier, il vous demande si vous voulez ouvrir le fichier (dans ce cas, la responsabilité de l'ouverture et de la gestion du fichier incombe à l'application native adéquate sur l'appareil) ou bien télécharger le fichier (auquel cas, vous pouvez essayer de vous en occuper plus tard).
+> [!NOTE]
+> Une URL peut pointer vers des fichiers HTML, des fichiers textes, des images, des documents texte, des fichiers vidéo ou audio et tout ce qui peut exister sur le Web. Si le navigateur web ne sait pas comment afficher ou gérer un fichier, il vous demande si vous voulez ouvrir le fichier (dans ce cas, la responsabilité de l'ouverture et de la gestion du fichier incombe à l'application native adéquate sur l'appareil) ou bien télécharger le fichier (auquel cas, vous pouvez essayer de vous en occuper plus tard).
 
 La page d'accueil de la BBC, par exemple, contient un nombre important de liens pour pointer, non seulement vers de multiples articles d'actualité, mais encore vers d'autres zones du site (fonctionnalité de navigation), des pages d'inscription/de connexion (outils utilisateur·ice) et plus encore.
 
@@ -93,7 +94,8 @@ Le logo du MDN devient donc un lien&nbsp;:
 
 {{EmbedLiveSample('', '100%', 150)}}
 
-> **Note :** Vous en saurez plus sur l'utilisation des images sur le Web dans [un prochain article](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+> [!NOTE]
+> Vous en saurez plus sur l'utilisation des images sur le Web dans [un prochain article](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
 ### Ajouter des informations avec l'attribut `title`
 
@@ -114,7 +116,8 @@ Nous obtenons le résultat suivant et le survol du lien affiche le titre sous fo
 
 {{EmbedLiveSample("", "100%", 150)}}
 
-> **Note :** le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`. Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière plus accessible, par exemple, en la mettant dans le texte normal.
+> [!NOTE]
+> Le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`. Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière plus accessible, par exemple, en la mettant dans le texte normal.
 
 ### Apprentissage actif&nbsp;: créez votre propre lien
 
@@ -164,7 +167,8 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
   </p>
   ```
 
-> **Note :** Vous pouvez combiner plusieurs instances de ces fonctionnalités dans des URL complexes si nécessaire, par ex. `../../../chemin/complexe/vers/mon/fichier.html`.
+> [!NOTE]
+> Vous pouvez combiner plusieurs instances de ces fonctionnalités dans des URL complexes si nécessaire, par ex. `../../../chemin/complexe/vers/mon/fichier.html`.
 
 ### Fragments de documents
 
@@ -296,7 +300,8 @@ L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui su
 
 ![Un exemple d'un menu de navigation HTML simple, avec les éléments page d'accueil, images, projets et menu des réseaux sociaux.](navigation-example.png)
 
-> **Note :** Si vous coincez, ou n'êtes pas sûr·e d'avoir bien compris, vous pouvez vérifier le dossier [`navigation-menu-marked-up`](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) pour voir la réponse correcte.
+> [!NOTE]
+> Si vous coincez, ou n'êtes pas sûr·e d'avoir bien compris, vous pouvez vérifier le dossier [`navigation-menu-marked-up`](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) pour voir la réponse correcte.
 
 ## Liens de courriel
 
@@ -329,7 +334,8 @@ Voici un exemple incluant `cc` (<i lang="en">carbon copy</i>, pour les destinata
 </a>
 ```
 
-> **Note :** La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères invisibles tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être échappés avec un [encodage-pourcent](https://fr.wikipedia.org/wiki/Encodage-pourcent). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Voir [la documentation de la méthode HTTP `GET`](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#la_méthode_get) pour comprendre pourquoi la notation de requête URL est habituellement utilisée.
+> [!NOTE]
+> La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères invisibles tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être échappés avec un [encodage-pourcent](https://fr.wikipedia.org/wiki/Encodage-pourcent). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Voir [la documentation de la méthode HTTP `GET`](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#la_méthode_get) pour comprendre pourquoi la notation de requête URL est habituellement utilisée.
 
 Voici quelques autres exemples d'URL `mailto`&nbsp;:
 

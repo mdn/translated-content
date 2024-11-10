@@ -3,7 +3,7 @@ title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 浏览器扩展 API 的引入为浏览器扩展的开发创造了“一次开发跨浏览器”的前景。然而，在使用扩展 API 的浏览器中 (主要是 Chrome、Firefox、Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。
 
@@ -42,7 +42,8 @@ Firefox 也支持 Chrome 浏览器的 `chrome.*` 名称空间，主要用于协�
 
 Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome [迁移](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)。然而，应该首选使用 promises（以及 `browser.*` 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。
 
-> **备注：** 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) 或者 MDN 的 [Using promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) 页面。
+> [!NOTE]
+> 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) 或者 MDN 的 [Using promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) 页面。
 
 #### 浏览器扩展 API 的垫片（Polyfill）
 
@@ -71,7 +72,8 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 
 你的目标是确保在任何其他扩展脚本执行 `browser.*` API 前执行 polyfill。
 
-> **备注：** 关于如何使用模块打包器使用 polyfill 的更多细节和信息，请参阅 [GitHub 上的项目自述文件](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)。
+> [!NOTE]
+> 关于如何使用模块打包器使用 polyfill 的更多细节和信息，请参阅 [GitHub 上的项目自述文件](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)。
 
 还有其他的 polyfill 选项，但是在撰写本文时，没有一个提供浏览器扩展 API polyfill 的覆盖范围。所以，如果你没有把 Firefox 作为你的首选，你的选择就是接受 polyfills 的限制，移植到 Firefox 并添加跨浏览器的支持，或者开发你自己的 polyfill。
 

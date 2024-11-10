@@ -3,7 +3,7 @@ title: Media queries
 slug: Web/CSS/CSS_media_queries
 ---
 
-{{CSSRef("CSS3 Media Queries")}}
+{{CSSRef}}
 
 **Медиавыражения (media queries)** являются ключевым компонентом [отзывчивого дизайна](/ru/docs/Web/Apps/Progressive/Responsive), который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} @-правило используется чтобы задать условия применения стилей к документу.
 
@@ -27,6 +27,6 @@ You can learn more about programmatically using media queries in [Testing media 
 - [Testing media queries](/ru/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}

@@ -50,7 +50,8 @@ Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/
 
 Escribirá ejemplos de código o creará demostraciones muchas veces durante el proceso de documentación de una tecnología, pero es muy útil comenzar dedicando tiempo a familiarizarse con cómo funciona la tecnología. Este es un ejercicio realmente valioso porque le brinda una buena comprensión de cuáles son los casos de uso (_por qué_ un desarrollador usaría esta tecnología) y le ayuda a crear algunos ejemplos de código al mismo tiempo.
 
-> **Nota:** Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
+> [!NOTE]
+> Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
 > Si necesita ayuda, consulte las demostraciones que haya encontrado o consulte a un contacto de ingeniería.
 
 ## Crear la lista de páginas para escribir o actualizar

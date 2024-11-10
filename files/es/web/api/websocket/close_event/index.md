@@ -3,6 +3,8 @@ title: close
 slug: Web/API/WebSocket/close_event
 ---
 
+{{APIRef("WebSockets API")}}
+
 El manejador `close` es ejecutado cuando una conexión con un websocket es cerrada.
 
 ## General info

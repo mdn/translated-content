@@ -3,7 +3,7 @@ title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 Метод **`Object.preventExtensions()`** предотвращает добавление новых свойств к объекту (то есть, предотвращает расширение этого объекта в будущем).
 

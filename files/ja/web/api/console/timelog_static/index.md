@@ -1,7 +1,6 @@
 ---
 title: console.timeLog()
-slug: Web/API/console/timelog_static
-original_slug: Web/API/console/timeLog
+slug: Web/API/console/timeLog_static
 ---
 
 {{APIRef("Console API")}}

@@ -35,7 +35,8 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 
 ## React 教程
 
-> **备注：** React 教程最后测试于 2020 年 5 月，基于 React/ReactDOM 16.13.1 和 create-react-app 3.4.1.
+> [!NOTE]
+> React 教程最后测试于 2020 年 5 月，基于 React/ReactDOM 16.13.1 和 create-react-app 3.4.1.
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在我们的[todo-react repository](https://github.com/mdn/todo-react)仓库找到 React 应用示例代码的完整版本。想要获取当前最新的版本，查看<https://mdn.github.io/todo-react-build/>.
 
@@ -56,7 +57,8 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 
 ## Ember 教程
 
-> **备注：** Ember 教程最后测试于 2020 年 5 月，基于 Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Ember 教程最后测试于 2020 年 5 月，基于 Ember/Ember CLI version 3.18.0.
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc)找到 Ember 应用示例代码的完整版本。想要获取当前最新的版本，查看<https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> （这还包含了本教程未覆盖到的一些额外的特性）。
 
@@ -75,7 +77,8 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 
 ## Vue 教程
 
-> **备注：** Vue 教程最后测试于 2020 年 5 月，基于 Vue 2.6.11.
+> [!NOTE]
+> Vue 教程最后测试于 2020 年 5 月，基于 Vue 2.6.11.
 >
 > 如果你需要确认你的代码与我们的版本区别，你可以在[todo-vue repository](https://github.com/mdn/todo-vue)找到 Vue 应用示例代码的完整版本。想要获取当前当前最新的版本，查看<https://mdn.github.io/todo-vue/dist/>.
 
@@ -109,4 +112,4 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 
 我们想在前面说一下------我们**没有**因为我们认为它们是最好的或者我们赞同它们而选择这些我们正在关注的框架。我们只是认为它们在上面这些方面评价比较高。
 
-值得一提的是我们也希望在我们的初版发布时能够包含更多框架的内容，但是我们最终决定先把初版内容发布出来随后在此基础上再慢慢添加更多框架内容，而不是延后更长的时间。如果你最喜欢的框架没有包含在这部分内容中而且你想帮助改善这个情况，请立即告诉我们！你可以通过[Matrix](https://wiki.mozilla.org/Matrix)或[Discourse](https://discourse.mozilla.org/c/mdn)联系我们或者发送邮件到我们的邮件列表[mdn-admins list](mailto:mdn-admins@mozilla.org)。
+值得一提的是我们也希望在我们的初版发布时能够包含更多框架的内容，但是我们最终决定先把初版内容发布出来随后在此基础上再慢慢添加更多框架的指南，而不是延后更长的时间。如果你最喜欢的框架没有包含在这部分内容中而且你想帮助改善这个情况，请随时[与我们讨论](/zh-CN/docs/MDN/Community/Communication_channels)！

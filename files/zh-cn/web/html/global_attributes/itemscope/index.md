@@ -9,9 +9,11 @@ slug: Web/HTML/Global_attributes/itemscope
 
 每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
 
-> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
+> [!NOTE]
+> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
 
-> **备注：** 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
+> [!NOTE]
+> 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
 
 ### 简单示例
 
@@ -238,7 +240,8 @@ Directions: <br>
   </tbody>
 </table>
 
-> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
+> [!NOTE]
+> Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
 
 ## 规范
 

@@ -3,7 +3,7 @@ title: browsingData.removeLocalStorage()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface tout le [stockage local](/fr/docs/Web/API/Window/localStorage) créé par des sites Web.
 
@@ -53,9 +53,9 @@ browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

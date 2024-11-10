@@ -50,7 +50,8 @@ var s = Boolean(maChaine); // valeur initiale à true
 
 Il ne faut pas utiliser un objet `Boolean` à la place d'une valeur primitive booléenne.
 
-> **Note :** Lorsque la propriété historique, non-standard, [`document.all`](/fr/docs/Web/API/Document#propriétés) est utilisée comme argument, le constructeur `Boolean` renvoie un objet booléen faux. Cette propriété étant non-standard, son utilisation est déconseillée.
+> [!NOTE]
+> Lorsque la propriété historique, non-standard, [`document.all`](/fr/docs/Web/API/Document#propriétés) est utilisée comme argument, le constructeur `Boolean` renvoie un objet booléen faux. Cette propriété étant non-standard, son utilisation est déconseillée.
 
 Lorsqu'on utilise l'opérateur `==` afin de comparer faiblement un objet avec une valeur primitive booléenne, il est préférable de comprendre clairement ce qui est comparé. Par exemple&nbsp;:
 

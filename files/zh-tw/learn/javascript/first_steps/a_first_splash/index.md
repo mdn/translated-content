@@ -28,7 +28,8 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 並不會要求你馬上就能仔細地了解所有程式碼 — 目前我們只是想介紹一些概觀，並向你介紹一些關於 JavaScript(以及其他程式語言)如何運作的知識。在接下來的章節你將會更仔細地瞭解這些功能！
 
-> **備註：** 你會在 JavaScript 看到許多跟其他程式語言一樣的特徵 — functions , loops 之類的 ，雖然程式語法看起來有差 ，但概念大部分都差不多 .
+> [!NOTE]
+> 你會在 JavaScript 看到許多跟其他程式語言一樣的特徵 — functions , loops 之類的 ，雖然程式語法看起來有差 ，但概念大部分都差不多 .
 
 ## 像程式工程師一樣思考
 
@@ -257,7 +258,8 @@ let resetButton;
 
 - 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
 
-> **備註：** 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
+> [!NOTE]
+> 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
 
 ### 函式
 
@@ -281,7 +283,8 @@ checkGuess();
 
 當按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 時，你會看到一個警告跳窗顯示「I am a placeholder」。我們已經在程式中定義好一個函式，只要我們調用這個函式，函式便會彈出一個警告視窗。
 
-> **備註：** 你會在後續的課程中學習到更多關於函式的事。
+> [!NOTE]
+> 你會在後續的課程中學習到更多關於函式的事。
 
 ### 運算子
 

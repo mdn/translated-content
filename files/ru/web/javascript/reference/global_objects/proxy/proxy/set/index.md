@@ -79,7 +79,7 @@ console.log("a" in p); // true
 console.log(p.a); // 10
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

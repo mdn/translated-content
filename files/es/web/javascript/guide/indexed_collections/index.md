@@ -43,7 +43,8 @@ let arr = [];
 arr.length = arrayLength;
 ```
 
-> **Nota:** En el código anterior, `arrayLength` debe ser un `Número`. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a `arr.length` devolverá `arrayLength`, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.
+> [!NOTE]
+> En el código anterior, `arrayLength` debe ser un `Número`. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a `arr.length` devolverá `arrayLength`, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.
 
 Además de una variable recién definida como se muestra arriba, los arreglos también se pueden asignar como una propiedad a un objeto nuevo o existente:
 
@@ -94,7 +95,8 @@ let myArray = ["Wind", "Rain", "Fire"];
 
 Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
 
-> **Nota:** También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
+> [!NOTE]
+> También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
 >
 > ```js
 > let arr = ["one", "two", "three"];
@@ -113,7 +115,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **Nota:** Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
+> [!NOTE]
+> Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
 >
 > ```js
 > let arr = [];

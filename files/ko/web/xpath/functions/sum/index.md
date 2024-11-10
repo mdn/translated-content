@@ -3,7 +3,7 @@ title: sum
 slug: Web/XPath/Functions/sum
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `sum` 함수는 인수로 준 노드 집합의 각 노드의 숫자값의 합을 반환합니다.
 

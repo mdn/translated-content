@@ -1,13 +1,16 @@
 ---
 title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
+l10n:
+  sourceCommit: e5a9a20bfc03a99398bbdfc0a84b737db835a854
 ---
 
 {{MDNSidebar}}
 
 MDN では、ウェブプラットフォームの機能の使い方を示すために、ページ中に数多くのコードサンプルが挿入されています。この記事では、ページにコードサンプルを追加するためのさまざまな仕組みと、どのような場合にどのような仕組みを使うべきかについて説明します。
 
-> **メモ:** もし、コードを入れる様々な方法ではなく、 MDN の記事に現れるコードのスタイルやゴミ取りについてアドバイスが欲しいなら、[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
+> [!NOTE]
+> もし、コードを入れる様々な方法ではなく、 MDN の記事に現れるコードのスタイルやゴミ取りについてアドバイスが欲しいなら、[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
 
 ## 利用できるコードサンプルの種類
 
@@ -41,7 +44,7 @@ MDN でサンプルを追加・更新する際には、上記のようなライ�
 
 ## 静的サンプル
 
-静的サンプルでは、ある機能がコードでどのように使用されるかを示す静的なコードブロックについて話しています。これらは[コード例ブロック](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#コードブロックの例)で記述されているように、 Markdown の「コードフェンス」を使ってページに配置されます。結果の例は次のようになります。
+静的サンプルでは、ある機能がコードでどのように使用されるかを示す静的なコードブロックについて話しています。これらは[サンプルコードブロック](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#コードブロックの例)で記述されているように、 Markdown の「コードフェンス」を使ってページに配置されます。結果の例は次のようになります。
 
 ```js
 // これは JS の例です
@@ -59,7 +62,7 @@ console.log(test);
 
 - インタラクティブサンプルは、特定の技術に特化しています。 — JavaScript の UI と CSS の UI は異なりますし、 1 つの技術を独立させて説明しているだけです。例えば、特定の HTML/CSS/JS 構造をどのように組み合わせるかを示したい場合には適していません。
 - インタラクティブなライブサンプルは、現在のところ CSS と JavaScript を表示するように設定されています。他の技術については、待つしかありません。
-- UIは他のコード例よりもパフォーマンスを重視していますので、適用する MDN の記事ごとに複数を置くべきではありません。
+- UIは他のサンプルコードよりもパフォーマンスを重視していますので、適用する MDN の記事ごとに複数を置くべきではありません。
 - 長いコードサンプルには適していません。 — この UI は本当に短い (10-15 行程度) サンプルでのみ利用できる固定された大きさの範囲でのみ有効です。
 
 サンプルを投稿したい場合は、 [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md) でその方法を知ることができます。
@@ -76,88 +79,6 @@ console.log(test);
 
 従来型ライブサンプルは、 [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) マクロを使ってページに挿入します。 \\{{EmbedLiveSample}} を呼び出すと、自分と同じ文書の節にあるコードブロックを動的に取得して文書に入れ、それを {{htmlelement("iframe")}} の中のページに挿入します。詳しくは[ライブサンプルガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)をご覧ください。
 
-### ライブサンプルの書式設定
-
-この「例」セクションにライブサンプルを書く場合は、このライブサンプルの例を説明する H3 見出し (`###`) を提供してください。理想的には、シナリオと何を実証することを期待しているのかを説明して、その例の短い説明を書いてください。次に、以下の H4 見出し (`####`) を付けたサブセクションを、リスト順に追加してください。
-
-- HTML
-- CSS
-- JavaScript
-- Result
-  上記のそれぞれのサブセクションにコードブロックを書きます。
-  **結果**サブセクションに、 [`EmbedLiveSample` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros)への呼び出しを追加してください。できれば、このサブセクションに、結果を記述するための文章をもう少し入れてください。
-  もし、特定の言語型を使用しない場合（例えば、 JavaScript を使用しない場合）、または非表示にしている場合は、対応する見出しを省略する必要があります。
-
-例
-
-````
-## 例
-
-### 段落のスタイル設定
-
-この例では、 `fancy` クラスが設定されている段落にスタイルを設定するために CSS を使用しています。
-
-#### HTML
-
-```html
-<p>I'm not fancy.</p>
-
-<p class="fancy">But I am!</p>
-```
-
-#### CSS
-
-```css
-p.fancy {
-  color: red;
-}
-```
-
-#### 結果
-
-\{{EmbedLiveSample("Styling a paragraph")}}
-
-`<p>` 要素のうち `class="fancy"` の付いたものだけが、 `red` のスタイルになります。
-````
-
-### 非表示のコード
-
-ページ内に表示される例に関連する静的なコードブロックを表示したいだけの場合があります。しかし、そのような例を表示するためには、HTML、CSS、JavaScript が必要です。
-
-これを実現するために、 `hidden` クラスを使って、関連性のないコードブロックを隠すことができます。
-
-上記の例を使用し、 HTML コードを非表示にすると、次のようになります。
-
-````
-## 例
-
-### 段落のスタイル設定
-
-この例では、 `fancy` クラスが設定されている段落にスタイルを設定するために CSS を使用しています。
-
-#### HTML
-
-```html hidden
-<p>I'm not fancy.</p>
-
-<p class="fancy">But I am!</p>
-```
-
-#### CSS
-
-```css
-p.fancy {
-  color: red;
-}
-```
-
-#### 結果
-
-\{{EmbedLiveSample("Styling a paragraph")}}
-
-`<p>` 要素のうち `class="fancy"` の付いたものだけが、 `red` のスタイルになります。
-````
-
 ## GitHub ライブサンプル
 
 GitHub ライブサンプルは、 [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) マクロを使ってページに挿入します。\{{EmbedGHLiveSample}} を呼び出すと、指定した URL (GitHub の mdn 組織内のものでなければなりません) の文書を動的に取得し、ページ内の {{htmlelement("iframe")}} 内に挿入します。
@@ -168,11 +89,11 @@ GitHub ライブサンプルは、 [`EmbedGHLiveSample`](https://github.com/mdn/
 
 マクロの引数は 3 つだけです。
 
-1. 埋め込む文書の URL — これは、 `https://mdn.github.io/` にある最上位のディレクトリである mdn 組織からの相対 URL です。ですから、この引数には、`my-subdirectory/example.html` のように、URL の後の部分を含める必要があります。 `index.html` の場合は、ファイル名を省略できます。
+1. 埋め込む文書の URL — これは、 `https://mdn.github.io/` にある最上位のディレクトリーである mdn 組織からの相対 URL です。ですから、この引数には、 `my-subdirectory/example.html` のように、URL の後の部分を含める必要があります。 `index.html` の場合は、ファイル名を省略できます。
 2. `<iframe>` の幅、パーセント値またはピクセル単位で表すことができます。
 3. `<iframe>` の高さ、パーセント値またはピクセル単位で表すことができます。
 
-例を見てみましょう。 [https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/) のコードを埋め込みたいとします。次のように呼び出すことができます。
+例を見てみましょう。 <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/> のコードを埋め込みたいとします。次のように呼び出すことができます。
 
 \\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
 
@@ -182,5 +103,5 @@ GitHub ライブサンプルは、 [`EmbedGHLiveSample`](https://github.com/mdn/
 
 ### GitHub ライブサンプルを使用するためのヒント
 
-- まず最初に、適切なコードサンプルを [GitHub の mdn 組織](https://github.com/mdn/)に登録する必要があります。これは Git を使って行う必要があります。 Git に慣れていない方は、 [GitHub ページの使い方](/ja/docs/Learn/Common_questions/Using_Github_pages)の記事を参照してください。もっと慣れている人は[データを追加する準備](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data)を参照してください。
+- まず最初に、適切なコードサンプルを [GitHub の mdn 組織](https://github.com/mdn/)に登録する必要があります。これは Git を使って行う必要があります。 Git に慣れていない方は、 [GitHub ページの使い方](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)の記事を参照してください。もっと慣れている人は[データを追加する準備](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)を参照してください。
 - コードサンプルは、実証しようとしていることを示すのに適したものでなければなりません。 1 つのことをうまく行う簡単なサンプルが含まれていること、不快な内容が含まれていないこと、そして MDN の[コードサンプルガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に従っている必要があります。

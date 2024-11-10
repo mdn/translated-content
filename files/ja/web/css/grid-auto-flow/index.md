@@ -1,6 +1,8 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -23,6 +25,7 @@ grid-auto-flow: column dense;
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
 grid-auto-flow: revert;
+grid-auto-flow: revert-layer;
 grid-auto-flow: unset;
 ```
 
@@ -39,9 +42,9 @@ grid-auto-flow: unset;
   - : アイテムは、各列を順番に埋めていき、必要に応じて新しい列を追加していくことで配置されます。
 - `dense`
 
-  - : 「dense」パッキングアルゴリズムは、小さいアイテムが後で出てきた場合、グリッドの早い段階で穴を埋めようとします。そのため、より大きなアイテムが残した穴を埋めるために、アイテムが順番通りに表示されないことがあります。
+  - : "dense" パッキングアルゴリズムは、小さいアイテムが後で出てきた場合、グリッドの早い段階で穴を埋めようとします。そのため、より大きなアイテムが残した穴を埋めるために、アイテムが順番通りに表示されないことがあります。
 
-    これを省略すると、「sparse」アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。
+    これを省略すると、 "sparse" アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。
 
 ## 公式定義
 
@@ -110,10 +113,10 @@ grid-auto-flow: unset;
 
 ```js hidden
 function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("direction");
+  const dense = document.getElementById("dense");
+  let gridAutoFlow = direction.value === "row" ? "row" : "column";
 
   if (dense.checked) {
     gridAutoFlow += " dense";
@@ -130,7 +133,7 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("グリッドの自動配置を設定する", "200px", "230px")}}
 
 ## 仕様書
 
@@ -144,4 +147,4 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 - 関連する CSS プロパティ: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
 - グリッドレイアウトガイド: _[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- 動画チュートリアル: _[グリッドの自動配置と順序の紹介](http://gridbyexample.com/video/series-auto-placement-order/)_
+- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

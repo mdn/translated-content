@@ -3,7 +3,7 @@ title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 リダイレクト URL として利用可能な URL を生成します。
 
@@ -39,4 +39,5 @@ var redirectURL = browser.identity.getRedirectURL();
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います
+> [!NOTE]
+> この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います

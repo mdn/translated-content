@@ -7,7 +7,8 @@ slug: Web/API/SharedWorker
 
 L'interface **`SharedWorker`** représente un type spécifique de worker qui peut être _accédé_ à partir de plusieurs contextes de navigation, tels que plusieurs fenêtres, iframes ou même workers. Ils implémentent une autre interface que les workers dédiés et ont un contexte global différent, {{domxref("SharedWorkerGlobalScope")}}.
 
-> **Note :** Si un SharedWorker peut être accédé à partir de plusieurs contextes de navigation, tous ces contextes de navigation doivent partager exactement la même origine (même protocole, hôte et port.)
+> [!NOTE]
+> Si un SharedWorker peut être accédé à partir de plusieurs contextes de navigation, tous ces contextes de navigation doivent partager exactement la même origine (même protocole, hôte et port.)
 
 ## Constructeurs
 

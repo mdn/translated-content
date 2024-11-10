@@ -3,34 +3,36 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 ## 概述
 
 `border-image-outset` 属性定义边框图像可超出边框盒的大小。
 
-{{cssinfo}}
-
 ## 语法
 
-```
-Formal syntax: {{csssyntax("border-image-outset")}}
-```
+```css
+/* <length> 值 */
+border-image-outset: 1rem;
 
-```
-/* border-image-outset: sides */
-border-image-outset: 30%;
+/* <number> 值 */
+border-image-outset: 1.5;
 
-/* border-image-outset:垂直 水平 */
-border-image-outset: 10% 30%;
+/* 上、下 | 左、右 */
+border-image-outset: 1 1.2;
 
-/* border-image-outset: 顶 水平 底 */
-border-image-outset: 30px 30% 45px;
+/* 上 | 左、右 | 下 */
+border-image-outset: 30px 2 45px;
 
-/* border-image-outset:顶 右 底 左  */
+/* 上 | 右 | 下 | 左 */
 border-image-outset: 7px 12px 14px 5px;
 
-border-image-repeat: inherit;
+/* 全局值值 */
+border-image-outset: inherit;
+border-image-outset: initial;
+border-image-outset: revert;
+border-image-outset: revert-layer;
+border-image-outset: unset;
 ```
 
 ### 值
@@ -51,6 +53,14 @@ border-image-repeat: inherit;
   - : 边框图像在左方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
 - `inherit`
   - : 四个方向的值都继承于父元素的该属性计算后值。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 规范
 

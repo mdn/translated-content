@@ -9,7 +9,7 @@ l10n:
 
 ファイルとディレクトリー項目 API の **`FileSystem`** インターフェイスは、ファイルシステムを表現するために使用されます。これらのオブジェクトは、任意のファイルシステム項目の {{domxref("FileSystemEntry.filesystem", "filesystem")}} プロパティから取得できます。ブラウザーによっては、ファイルシステムを作成・管理するための追加の API を提供しているものもあります。例えば Chrome では {{domxref("Window.requestFileSystem", "requestFileSystem()")}} メソッドなどがあります。
 
-このインターフェイスは、ユーザーのファイルシステムへのアクセスを許可しません。その代わり、ブラウザーのサンドボックス内に「仮想ドライブ」を構築します。ユーザーのファイルシステムにアクセスするには、 Chrome 拡張機能をインストールするなどしてユーザーを呼び出す必要があります。関連する Chrome API は[こちら](https://developer.chrome.com/docs/extensions/reference/fileSystem/)を参照してください。
+このインターフェイスは、ユーザーのファイルシステムへのアクセスを許可しません。その代わり、ブラウザーのサンドボックス内に「仮想ドライブ」を構築します。ユーザーのファイルシステムにアクセスするには、 Chrome 拡張機能をインストールするなどしてユーザーを呼び出す必要があります。関連する Chrome API は[こちら](https://developer.chrome.com/docs/apps/reference/fileSystem)を参照してください。
 
 ## 基本概念
 

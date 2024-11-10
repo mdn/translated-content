@@ -41,9 +41,11 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 Ключ [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) - это как мы загружаем скрипты на страницы, соответствующие URL-шаблону. В нашем случае, `content_scripts` говорит браузеру загрузить скрипт "page-eater.js" на все страницы, начинающиеся с <https://developer.mozilla.org/>.
 
-> **Примечание:** Поскольку свойство `"js"` ключа `content_scripts` это массив, вы можете использовать его, для внедрения более одного скрипта. Если вы сделаете это, страницы получат набор, как если бы эти скрипты были загружены самой страницей, они будут загружены в той же очерёдности, в которой они расположены в массиве.
+> [!NOTE]
+> Поскольку свойство `"js"` ключа `content_scripts` это массив, вы можете использовать его, для внедрения более одного скрипта. Если вы сделаете это, страницы получат набор, как если бы эти скрипты были загружены самой страницей, они будут загружены в той же очерёдности, в которой они расположены в массиве.
 
-> **Примечание:** Ключ `content_scripts` также имеет свойство `"css"`, которое вы можете использовать для вставки CSS-таблиц.
+> [!NOTE]
+> Ключ `content_scripts` также имеет свойство `"css"`, которое вы можете использовать для вставки CSS-таблиц.
 
 Далее, создадим файл "page-eater.js", внутри директории "modify-page":
 
@@ -55,11 +57,9 @@ header.textContent = "Эта страница была съедена";
 document.body.appendChild(header);
 ```
 
-Теперь [установим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), и перейдём на страницу <https://developer.mozilla.org/>:
+Теперь [установим расширение](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox) и перейдём на страницу [https://developer.mozilla.org/](/):
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
-
-> **Примечание:** Обратите внимание, несмотря на то, что в указанном видео, на странице [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) всё работает нормально, на текущий момент, для этого сайта, контентные скрипты заблокированы.
+![страница developer.mozilla.org "съедена" скриптом](eaten_page.png)
 
 ## Программная модификация страницы
 
@@ -114,11 +114,9 @@ modify-page/
     page-eater.js
 ```
 
-Теперь [перезагрузим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), откроем страницу (на этот раз любую) активируем контекстное меню и выберем "Съесть эту страницу":
+Теперь [перезагрузим расширение](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on) откроем страницу (на этот раз любую), активируем контекстное меню и выберем "Съесть эту страницу":
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
-
-> **Примечание:** Обратите внимание, несмотря на то, что в указанном видео, на странице [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) всё работает нормально, на текущий момент, для этого сайта, контентные скрипты заблокированы.
+![Пункт "Съесть страницу" в контекстном меню](eat_from_menu.png)
 
 ## Обмен сообщениями
 
@@ -180,7 +178,8 @@ browser.runtime.onMessage.addListener(eatPage);
 
 Если мы хотим отправить сообщение наоборот, из контентного скрипта в фоновый, настройка будет обратной данному примеру, за исключением того, что мы будем использовать [`runtime.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) в контентном скрипте.
 
-> **Примечание:** Все эти примеры внедряют JavaScript; вы можете программно внедрять стилевые таблицы CSS используя функцию [`tabs.insertCSS()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
+> [!NOTE]
+> Все эти примеры внедряют JavaScript; вы можете программно внедрять стилевые таблицы CSS используя функцию [`tabs.insertCSS()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
 
 ## Узнать больше
 

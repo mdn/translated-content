@@ -11,7 +11,8 @@ slug: Web/CSS/integer
 
 `<integer>` 자료형은 하나 이상의 0부터 9까지의 10진수 숫자로 구성하며, 선택적으로 `+`, `-`로 부호를 표시할 수 있습니다. 따로 연관지어야 하는 단위는 없습니다.
 
-> **참고:** 공식적으로 정해진 `<integer>` 값의 범위는 없습니다. Opera 12.1은 최대 215-1, IE는 220-1, 그 외 브라우저는 더 큰 값도 지원합니다. CSS3 Values 논의 중 최소한의 범위를 설정하자는 말이 많아서 가장 최근인 [2012년 4월 LC 단계](http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html)에서는 \[-227-1; 227-1]으로 결정했습니다. 224-1과 230-1처럼 다른 값도 [제안](http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html)됐습니다. 하지만 최신 명세는 범위를 지정하고 있지 않습니다.
+> [!NOTE]
+> 공식적으로 정해진 `<integer>` 값의 범위는 없습니다. Opera 12.1은 최대 215-1, IE는 220-1, 그 외 브라우저는 더 큰 값도 지원합니다. CSS3 Values 논의 중 최소한의 범위를 설정하자는 말이 많아서 가장 최근인 [2012년 4월 LC 단계](http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html)에서는 \[-227-1; 227-1]으로 결정했습니다. 224-1과 230-1처럼 다른 값도 [제안](http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html)됐습니다. 하지만 최신 명세는 범위를 지정하고 있지 않습니다.
 
 ## 보간
 

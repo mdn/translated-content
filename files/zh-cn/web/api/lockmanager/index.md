@@ -2,14 +2,12 @@
 title: LockManager
 slug: Web/API/LockManager
 l10n:
-  sourceCommit: 955d8d3b31be8c89efea86265b0e26a401186dbc
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`LockManager`** 接口提供了请求新的 {{domxref('Lock')}} 对象以及枚举现有的 `Lock` 对象的方法。要获取 `LockManager` 实例，请访问 {{domxref('navigator.locks')}} 属性。
-
-{{AvailableInWorkers}}
 
 ## 实例方法
 

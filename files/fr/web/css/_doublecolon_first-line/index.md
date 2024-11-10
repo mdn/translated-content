@@ -30,7 +30,8 @@ Seul un sous-ensemble de propriétés CSS peut être utilisé dans un bloc de d�
 
 Comme cette liste sera étendue dans le futur, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à ce que le CSS reste pérenne.
 
-> **Note :** Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Comme les pseudo-classes utilisaient aussi la même convention, ils n'était pas possible de les distinguer. Afin de résoudre cela, CSS 2.1 à changé la convention des pseudo-éléments. Désormais, un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe d'un seul.
+> [!NOTE]
+> Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Comme les pseudo-classes utilisaient aussi la même convention, ils n'était pas possible de les distinguer. Afin de résoudre cela, CSS 2.1 à changé la convention des pseudo-éléments. Désormais, un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe d'un seul.
 >
 > Puisque de nombreux navigateurs avaient déjà mis en place la version CSS 2 dans une version publique, tous les navigateurs supportent les deux syntaxes.
 >

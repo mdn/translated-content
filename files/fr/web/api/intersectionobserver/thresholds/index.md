@@ -21,7 +21,8 @@ Un tableau de seuils d'intersection, spécifiés lors de l'instanciation via `op
 
 Si aucune option `threshold` n'est fournie lors de l'instanciation avec `IntersectionObserver()`, la valeur par défaut de `thresholds` est définie à `[0]`.
 
-> **Attention :** Bien que l'objet d'`options` qu'on peut spécifier à la création d'un [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) possède une propriété champ nommée [`threshold`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver), cette propriété-ci s'appelle `thresholds` (avec un « s » supplémentaire donc). _Cela peut porter à confusion_. Si vous utilisez `thresholds` par erreur comme nom pour la propriété de l'objet `options`, le tableau porté par `thresholds` va se retrouver égal à `[0.0]`, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.
+> [!WARNING]
+> Bien que l'objet d'`options` qu'on peut spécifier à la création d'un [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) possède une propriété champ nommée [`threshold`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver), cette propriété-ci s'appelle `thresholds` (avec un « s » supplémentaire donc). _Cela peut porter à confusion_. Si vous utilisez `thresholds` par erreur comme nom pour la propriété de l'objet `options`, le tableau porté par `thresholds` va se retrouver égal à `[0.0]`, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.
 
 ## Spécifications
 

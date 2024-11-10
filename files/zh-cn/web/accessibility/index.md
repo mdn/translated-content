@@ -3,9 +3,7 @@ title: 无障碍
 slug: Web/Accessibility
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 **无障碍**（Accessibility，常被缩写为 **A11y**，因为它以“a”开头，后跟 11 个字母，以“y”结尾）在 web 开发中意味着使尽可能多的人能够使用网站，即使有些用户的能力在某种程度上受限。
 

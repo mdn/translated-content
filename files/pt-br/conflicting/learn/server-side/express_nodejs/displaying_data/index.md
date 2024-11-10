@@ -5,7 +5,8 @@ slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 
 O código da _Controller_, para algumas de nossas páginas dependerá dos resultados de várias solicitações assíncronas, que talvez possam ser necessárias para serem executadas em uma ordem específica ou em paralelo. Para gerenciar o controle do nosso fluxo e renderizar páginas quando tivermos todas as informações necessárias disponíveis, usaremos o popular módulo [async](https://www.npmjs.com/package/async).
 
-> **Nota:** Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
+> [!NOTE]
+> Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
 
 Async has a lot of useful methods (check out [the documentation](http://caolan.github.io/async/docs.html)). Some of the more important functions are:
 
@@ -79,7 +80,8 @@ async.series({
 );
 ```
 
-> **Nota:** The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.
+> [!NOTE]
+> The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.
 
 ```js
 async.series([

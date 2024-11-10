@@ -3,7 +3,7 @@ title: format-number
 slug: Web/XPath/Functions/format-number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `format-number` évalue un nombre et retourne une chaîne représentant le nombre dans un format donné.
 

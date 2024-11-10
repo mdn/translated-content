@@ -3,6 +3,8 @@ title: stop-color
 slug: Web/SVG/Attribute/stop-color
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `stop-color` указывает какой цвет использовать при остановке градиента. Значения `currentColor` и ICC цвета могут быть заданы так же, как в [\<paint>](/en/SVG/Content_type#Paint) спецификации для атрибутов {{ SVGAttr("fill") }} и {{ SVGAttr("stroke") }}.

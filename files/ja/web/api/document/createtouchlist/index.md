@@ -1,8 +1,9 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() メソッド"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
@@ -14,7 +15,7 @@ l10n:
 ```js-nolint
 createTouchList(touch1)
 createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* … ,*/ touchN)
+createTouchList(touch1, touch2, /* …, */ touchN)
 ```
 
 ### 引数

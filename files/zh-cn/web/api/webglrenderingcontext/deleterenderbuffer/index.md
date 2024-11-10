@@ -44,7 +44,7 @@ gl.deleteRenderbuffer(renderbuffer);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}

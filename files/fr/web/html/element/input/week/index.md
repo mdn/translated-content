@@ -97,7 +97,8 @@ Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut 
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
+> [!NOTE]
+> Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
 
 ### `step`
 
@@ -105,7 +106,8 @@ L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le 
 
 Une chaîne de caractères `any` indique qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur (sous réserve qu'elle respecte les autres contraintes potentiellement indiquées par `min` ou `max`) est valide.
 
-> **Note :** Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> [!NOTE]
+> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
 
 Pour les champs de type `week`, la valeur de l'attribut `step` est indiquée en nombre de semaine et le facteur de multiplication est 604&nbsp;800&nbsp;000 (qui correspond au nombre de millisecondes dans une semaine). Par défaut, la valeur de `step` est 1, qui indique une semaine. La base à partir de laquelle incrémenter par défaut est -259&nbsp;200&nbsp;000 qui correspond à la première semaine de 1970 (`1970-W01`).
 
@@ -220,7 +222,8 @@ Voici une capture d'écran du résultat obtenu si votre navigateur ne prend pas 
 
 ![](validation-controle-type-week-chrome.png)
 
-> **Attention :** la validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour une utilisatrice ou un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.
+> [!WARNING]
+> La validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour une utilisatrice ou un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.
 
 ## Gérer la prise en charge des navigateurs
 
@@ -352,7 +355,8 @@ function populateWeeks() {
 }
 ```
 
-> **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> [!NOTE]
+> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
 
 ## Spécifications
 

@@ -20,11 +20,11 @@ l10n:
 ### CSS
 
 - dashed および dotted スタイルのボーダーに border-radius を設定したとき、角の部分を solid スタイルではなく指定したスタイルで描画するようになりました ([Firefox バグ 382721](https://bugzil.la/382721))。
-- 非標準の {{cssxref(":-moz-full-screen-ancestor")}} 疑似クラスセレクターを削除しました ([Firefox バグ 1199529](https://bugzil.la/1199529))。
+- 非標準の {{cssxref(":-moz-full-screen-ancestor")}} 擬似クラスセレクターを削除しました ([Firefox バグ 1199529](https://bugzil.la/1199529))。
 - 仕様書から削除されたため、および実装していた主要ブラウザーが Firefox だけであったため、{{cssxref("box-sizing")}}`: padding-box` を削除しました ([Firefox バグ 1166728](https://bugzil.la/1166728))。
 - {{cssxref("unicode-bidi")}} プロパティの値 `isolate`、`isolate-override`、`plaintext` の接頭辞を削除しました ([Firefox バグ 1141895](https://bugzil.la/1141895))。
 - Quirk モードでリストのビュレットが、標準準拠モードと同様にリストのサイズを継承するようになりました ([Firefox バグ 648331](https://bugzil.la/648331))。
-- {{cssxref(":in-range")}} および {{cssxref(":out-of-range")}} 疑似クラスが、無効状態または読み取り専用の input に一致しないように動作を変更しました ([Firefox バグ 1264157](https://bugzil.la/1264157))。
+- {{cssxref(":in-range")}} および {{cssxref(":out-of-range")}} 擬似クラスが、無効状態または読み取り専用の input に一致しないように動作を変更しました ([Firefox バグ 1264157](https://bugzil.la/1264157))。
 - {{cssxref(":any-link")}} 擬似クラスの接頭辞を削除しました ([Firefox バグ 843579](https://bugzil.la/843579))。
 - {{cssxref("border-image-repeat")}} で、値 `space` を実装しました ([Firefox バグ 720531](https://bugzil.la/720531))。
 
@@ -123,7 +123,7 @@ l10n:
 
 ### バッテリー API
 
-- Firefox 43 から非推奨にしていた {{domxref("navigator.battery")}} プロパティを廃止および削除しました。代わりに、バッテリーの {{jsxref("Promise")}} を取得する {{domxref("navigator.getBattery()")}} メソッドを使用してください。これは {{domxref("BatteryManager")}} が使用可能になったときに完了します。{{domxref("BatteryManager")}} は、promise が成功した場合のハンドラに渡されます ([Firefox バグ 12593355](https://bugzil.la/12593355))。
+- Firefox 43 から非推奨にしていた {{domxref("navigator.battery")}} プロパティを廃止および削除しました。代わりに、バッテリーの {{jsxref("Promise")}} を取得する {{domxref("navigator.getBattery()")}} メソッドを使用してください。これは {{domxref("BatteryManager")}} が使用可能になったときに完了します。{{domxref("BatteryManager")}} は、promise が成功した場合のハンドラーに渡されます ([Firefox バグ 12593355](https://bugzil.la/12593355))。
 
 ### ファイルとディレクトリー
 

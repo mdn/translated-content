@@ -60,7 +60,7 @@ window.onload = function () {
 
 最后，我们监听指向 html 元素“input”的 `input` 事件，这允许我们对被改变的播放速率控制产生影响。
 
-> **备注：** [在线试用示例](http://jsbin.com/UGIxoJis/1/edit), 尝试调整播放速率控制看看效果。
+> **备注：** [在线试用示例](https://jsbin.com/UGIxoJis/1/edit), 尝试调整播放速率控制看看效果。
 
 ## defaultPlaybackRate 和 ratechange
 
@@ -94,5 +94,5 @@ window.onload = function () {
 
 ## 参见
 
-- [Hyperaudio's Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
+- [Hyperaudio's Playback Rate Test](https://hyperaud.io/lab/pbr-test/)
 - [HTMLMediaElement reference](/zh-CN/docs/Web/API/HTMLMediaElement)

@@ -1,22 +1,25 @@
 ---
-title: MediaStream.getTrackById()
+title: "MediaStream: getTrackById() メソッド"
+short-title: getTrackById()
 slug: Web/API/MediaStream/getTrackById
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStream.getTrackById()`** メソッドは、指定された ID 文字列を持つトラックを表現する {{domxref("MediaStreamTrack")}} オブジェクトを返します。指定した ID を持つトラックが存在しない場合は、 `null` を返します。
+**`getTrackById()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、指定された ID 文字列を持つトラックを表現する {{domxref("MediaStreamTrack")}} オブジェクトを返します。指定した ID を持つトラックが存在しない場合は、 `null` を返します。
 
 ## 構文
 
-```js
-var track = MediaStream.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
 ### 引数
 
 - `id`
-  - : 取得したいトラックを識別する {{domxref("DOMString")}} です。
+  - : 取得したいトラックを識別する文字列です。
 
 ### 返値
 

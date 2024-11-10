@@ -2,14 +2,15 @@
 title: "CanvasRenderingContext2D: fillStyle プロパティ"
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillStyle`** は[キャンバス 2D API](/ja/docs/Web/API/Canvas_API) のプロパティで、図形の内側を塗りつぶすために使用する色、グラデーション、またはパターンを指定します。既定値は `#000` (黒色)です。
 
-> **メモ:** 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
+> [!NOTE]
+> 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
 
 ## 値
 
@@ -60,8 +61,8 @@ const ctx = canvas.getContext("2d");
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
     ctx.fillStyle = `rgb(
-        ${Math.floor(255 - 42.5 * i)},
-        ${Math.floor(255 - 42.5 * j)},
+        ${Math.floor(255 - 42.5 * i)}
+        ${Math.floor(255 - 42.5 * j)}
         0)`;
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
@@ -70,8 +71,7 @@ for (let i = 0; i < 6; i++) {
 
 結果はこのようになります:
 
-{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160,
-  "canvas_fillstyle.png")}}
+{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", "", "160")}}
 
 ## 仕様書
 

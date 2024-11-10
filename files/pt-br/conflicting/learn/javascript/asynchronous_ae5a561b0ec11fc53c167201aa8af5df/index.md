@@ -107,7 +107,8 @@ Finalmente, se um timeout foi criado, você pode cancelá-lo antes que o tempo e
 clearTimeout(myGreeting);
 ```
 
-> **Nota:** Veja [`greeter-app.html`](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html) para uma demonstração mais desenvolvida que te permite colocar o nome da pessoa a dizer oi em um formulário, e cancelar a saudação usando um botão separado ([veja aqui o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html)).
+> [!NOTE]
+> Veja [`greeter-app.html`](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html) para uma demonstração mais desenvolvida que te permite colocar o nome da pessoa a dizer oi em um formulário, e cancelar a saudação usando um botão separado ([veja aqui o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html)).
 
 ## setInterval()
 
@@ -166,7 +167,8 @@ Here's a few hints for you:
 - To pause the stopwatch, you'll want to clear the interval. To reset it, you'll want to set the counter back to `0`, clear the interval, and then immediately update the display.
 - You probably ought to disable the start button after pressing it once, and enable it again after you've stopped/reset it. Otherwise multiple presses of the start button will apply multiple `setInterval()`s to the clock, leading to wrong behavior.
 
-> **Nota:** If you get stuck, you can [find our version here](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) also).
+> [!NOTE]
+> If you get stuck, you can [find our version here](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) also).
 
 ## Coisas para se manter em mente sobre o setTimeout() e o setInterval()
 
@@ -239,7 +241,8 @@ Ela foi criada em resposta à problemas ocorridos com `setInterval()`, que por e
 
 ([Leia mais sobre isso em CreativeJS](http://creativejs.com/resources/requestanimationframe/index.html).)
 
-> **Nota:** Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice).
+> [!NOTE]
+> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice).
 
 O método toma como argumentos uma callback a ser invocada antes da renovação. Esse é o padrão geral que você verá usado em:
 
@@ -254,7 +257,8 @@ draw();
 
 A ideia é definir uma função em que sua animação é atualizada (e.g. seus spritas se movem, a pontuação é atualizada, dados são recarregados, etc). Depois, você inicia o processo. No final do bloco da função você chama `requestAnimationFrame()` com a referência da função passada como parâmetro, e isso instrui o navegador a chamar a função de novo na próxima renovação. Isso é executado continuamente, já que o código está chamando `requestAnimationFrame()` recursivamente.
 
-> **Nota:** Se você quer realizar algum tipo de animação na DOM constantemente, [Animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations) são provavelemente mais rápidas. elas são calculadas diretamente pelo código interno do navegador, ao invés de JavaScript.
+> [!NOTE]
+> Se você quer realizar algum tipo de animação na DOM constantemente, [Animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations) são provavelemente mais rápidas. elas são calculadas diretamente pelo código interno do navegador, ao invés de JavaScript.
 >
 > Se, no entanto, você está fazendo algo mais complexo e envolvendo objetos que não são diretamente assessados da DOM (como [2D Canvas API](/pt-BR/docs/Web/API/Canvas_API) ou objetos [WebGL](/pt-BR/docs/Web/API/WebGL_API)), `requestAnimationFrame()` é a melhor opção na maioria dos casos
 
@@ -329,7 +333,8 @@ Então, você não precisa dar suporte para versões mais velhas do IE, não há
 
 Enough with the theory! Let's build your own personal `requestAnimationFrame()` example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.
 
-> **Nota:** In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate `requestAnimationFrame()` usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.
+> [!NOTE]
+> In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate `requestAnimationFrame()` usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.
 
 1. Grab a basic HTML template ([such as this one](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)).
 2. Put an empty {{htmlelement("div")}} element inside the {{htmlelement("body")}}, then add a ↻ character inside it. This is circular arrow character will act as our spinner for this example.
@@ -404,7 +409,8 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()` 
     rAF = requestAnimationFrame(draw);
     ```
 
-> **Nota:** You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html). (You can see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html), also.)
+> [!NOTE]
+> You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html). (You can see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html), also.)
 
 ### Clearing a requestAnimationFrame() call
 
@@ -425,7 +431,8 @@ Some hints:
 - A `click` event handler can be added to most elements, including the document `<body>`. It makes more sense to put it on the `<body>` element if you want to maximize the clickable area — the event bubbles up to its child elements.
 - You'll want to add a tracking variable to check whether the spinner is spinning or not, clearing the animation frame if it is, and calling it again if it isn't.
 
-> **Nota:** Try this yourself first; if you get really stuck, check out of our [live example](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html) and [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html).
+> [!NOTE]
+> Try this yourself first; if you get really stuck, check out of our [live example](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html) and [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html).
 
 ### Throttling a requestAnimationFrame() animation
 
@@ -556,7 +563,8 @@ Let's work through this:
     }
     ```
 
-    > **Nota:** You'll see this example is calling `setTimeout()` without storing the return value. (So, not `let myTimeout = setTimeout(functionName, interval)`.)
+    > [!NOTE]
+    > You'll see this example is calling `setTimeout()` without storing the return value. (So, not `let myTimeout = setTimeout(functionName, interval)`.)
     >
     > This works just fine, as long as you don't need to clear your interval/timeout at any point. If you do, you'll need to save the returned identifier!
 
@@ -604,7 +612,8 @@ Let's work through this:
 
 That's it—you're all done!
 
-> **Nota:** If you get stuck, check out [our version of the reaction game](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html) also).
+> [!NOTE]
+> If you get stuck, check out [our version of the reaction game](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html) also).
 
 ## Conclusion
 

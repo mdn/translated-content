@@ -27,7 +27,8 @@ Cette méthode est générique et peut être {{jsxref("Function.call", "appelée
 
 Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
 
-> **Note :** La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
+> [!NOTE]
+> La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
 
 ## Exemples
 

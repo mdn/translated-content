@@ -3,6 +3,8 @@ title: 使用IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
+{{DefaultAPISidebar("IndexedDB")}}
+
 IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不論是線上或線下我們的應用都可以進行資料存取。
 
 ## 關於本文
@@ -134,7 +136,8 @@ request.onupgradeneeded = function (event) {
 
 資料庫版本是 unsigned long long 的數字，所以能夠非常長。
 
-> **警告：** 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
+> [!WARNING]
+> 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2
@@ -235,7 +238,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-關於資料鍵產生器細節，請參考["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept)。
+關於資料鍵產生器細節，請參考["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept)。
 
 ## 新增和刪除資料
 
@@ -361,7 +364,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **警告：** 以下範例不是 IndexedDB 標準!
+> [!WARNING]
+> 以下範例不是 IndexedDB 標準!
 
 Mozilla 瀏覽器自己做了一個 getAll()方法來方便一次取得所有 cursor 下的資料值，這個方法相當方便，不過請小心未來它有可能會消失。以下程式碼的效果和上面的一樣:
 
@@ -1092,7 +1096,7 @@ input {
     if (typeof store == "undefined")
       store = getObjectStore(DB_STORE_NAME, "readwrite");
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1227,20 +1231,21 @@ input {
 參照
 
 - [IndexedDB API Reference](/zh-TW/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
 相關教學
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
 
-  > **備註：** 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
+  > [!NOTE]
+  > 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 相關文章
 
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 Firefox
 

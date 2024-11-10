@@ -33,8 +33,8 @@ slug: Web/API/Element/attachShadow
 
 ## 语法
 
-```
-var shadowroot = element.attachShadow(shadowRootInit);
+```js-nolint
+attachShadow(options)
 ```
 
 ### 参数
@@ -49,13 +49,15 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
         - `open` shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:
 
-        ```
+        ```js
+        element.attachShadow({ mode: "open" });
         element.shadowRoot; // 返回一个 ShadowRoot 对象
         ```
 
         - `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
 
-        ```
+        ```js
+        element.attachShadow({ mode: "closed" });
         element.shadowRoot; // 返回 null
         ```
 

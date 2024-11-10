@@ -78,13 +78,15 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> [!NOTE]
+> 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### `readonly`
 
 如果该布尔属性存在，意味着用户将不能编辑此字段。然而其 `value` 值仍然可以直接通过 JavaScript 代码设置 {{domxref("HTMLInputElement")}} 的 `value` 属性改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### `step`
 
@@ -92,7 +94,8 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 `number` 输入的默认步进值为 `1`，且只允许数字输入——*除非*步进值不是数字。
 
@@ -106,9 +109,11 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 `<input type ="number">` 元素可以帮助简化构建在表单中输入数字的用户界面和逻辑。当你使用正确的 `type` 值 `number` 创建数字输入时，会自动验证你输入的文本是否为数字，而且通常会一同设置一组用于步进数字值的向上向下按钮。
 
-> **警告：** 逻辑上，不应该向数字输入框输入数字以外的字符。某些浏览器允许这些不合法字符，另外一些浏览器不允许；请查看 [Firefox bug 1398528](https://bugzil.la/1398528)。
+> [!WARNING]
+> 逻辑上，不应该向数字输入框输入数字以外的字符。某些浏览器允许这些不合法字符，另外一些浏览器不允许；请查看 [Firefox bug 1398528](https://bugzil.la/1398528)。
 
-> **备注：** 记住，用户可以在幕后修改 HTML，因此网站*不得*使用简单的客户端验证来实现任何安全目的。你*必须*在服务器端验证所提供的值，以确保这些值没有任何安全问题。
+> [!NOTE]
+> 记住，用户可以在幕后修改 HTML，因此网站*不得*使用简单的客户端验证来实现任何安全目的。你*必须*在服务器端验证所提供的值，以确保这些值没有任何安全问题。
 
 此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。
 
@@ -125,7 +130,8 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 数字输入在为空的时候以及输入单个数字时被认为是有效的，否则是无效的。如果使用了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，则输入在空时不再被视为有效。
 
-> **备注：** 任何数字都是可接受的值，只要它是[有效的浮点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（即不是 [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 或 [Infinity](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)）。
+> [!NOTE]
+> 任何数字都是可接受的值，只要它是[有效的浮点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（即不是 [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 或 [Infinity](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)）。
 
 ### 占位符
 
@@ -279,7 +285,8 @@ input:valid + span::after {
 
 我们把它放在一个单独的 `<span>`元素上，以增加灵活性；一些浏览器在某些类型的表单输入上不能很有效地显示生成的内容（请阅读 [`<input type="date">` 验证](/zh-CN/docs/Web/HTML/Element/input/date#Validation)一节的示例以了解）。
 
-> **警告：** 客户端表单验证*不能*替代服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> 客户端表单验证*不能*替代服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ### 模式验证
 
@@ -407,7 +414,8 @@ switchBtn.addEventListener("click", () => {
 
 在声明了一些变量之后，我们为按钮添加一个事件监听器来控制切换机制。这很简单，主要是改变按钮的类别和标签，并在按钮被按下时更新两组输入的显示值。请注意，我们不是在米和英尺/英寸之间来回转换，现实生活中的网络应用可能会这么做。
 
-> **备注：** 请注意，当用户点击按钮时，我们从隐藏的输入中移除 `required` 属性，并清空 `value` 属性。这样我们就可以在两个输入组都没有填写的情况下提交表单，而不会提交那些我们不想提交的数据。如果我们不这样做，你就必须同时填入英尺/英寸**和**米来提交表单了！
+> [!NOTE]
+> 请注意，当用户点击按钮时，我们从隐藏的输入中移除 `required` 属性，并清空 `value` 属性。这样我们就可以在两个输入组都没有填写的情况下提交表单，而不会提交那些我们不想提交的数据。如果我们不这样做，你就必须同时填入英尺/英寸**和**米来提交表单了！
 
 ## 无障碍
 

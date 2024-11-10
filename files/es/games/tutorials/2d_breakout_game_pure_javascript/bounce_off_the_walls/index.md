@@ -100,7 +100,8 @@ Chequea el código acabado para esta parte con el tuyo, y juega:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
 
-> **Nota:** cambia el color de la bola a un color al azar, cada vez que golpea una pared.
+> [!NOTE]
+> Cambia el color de la bola a un color al azar, cada vez que golpea una pared.
 
 ## Siguientes pasos
 

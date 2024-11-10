@@ -3,7 +3,7 @@ title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient un tableau de tous les moteurs de recherche installés.
 

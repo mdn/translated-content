@@ -78,7 +78,8 @@ Si usa `display: table-cell` en un elemento en su HTML, toma el estilo de una ce
 
 Si luego declara `display: flex` en el elemento principal, estos cuadros anónimos no se crean y, por lo tanto, su elemento sigue siendo un elemento secundario directo y puede convertirse en un elemento flexible, perdiendo cualquiera de las funciones de visualización de la tabla.
 
-> **Nota:** algunos valores de visualización normalmente desencadenan la creación de cuadros anónimos alrededor del cuadro original. Si dicha caja es un elemento flexible, primero se bloquea y, por lo tanto, no se creará una caja anónima. Por ejemplo, dos elementos flexibles contiguos con pantalla: table-cell se convertirán en dos pantallas separadas: elementos flexibles de bloque, en lugar de estar envueltos en una sola tabla anónima. "- [4. Elementos Flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+> [!NOTE]
+> Algunos valores de visualización normalmente desencadenan la creación de cuadros anónimos alrededor del cuadro original. Si dicha caja es un elemento flexible, primero se bloquea y, por lo tanto, no se creará una caja anónima. Por ejemplo, dos elementos flexibles contiguos con pantalla: table-cell se convertirán en dos pantallas separadas: elementos flexibles de bloque, en lugar de estar envueltos en una sola tabla anónima. "- [4. Elementos Flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-items)
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
 

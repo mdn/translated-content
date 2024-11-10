@@ -46,7 +46,8 @@ Si [`overflow-y`](/fr/docs/Web/CSS/overflow-y) vaut `hidden`, `scroll` ou `auto`
 - `auto`
   - : Le contenu qui dépasse est rogné dans la boîte de contenu et on peut le faire défiler pour le faire apparaître. À la différence de `scroll`, les agents utilisateur afficheront les ascenseurs uniquement si le contenu dépasse et les masqueront par défaut. Si le contenu tient dans la boîte de remplissage de l'élément, cette valeur aura le même effet que `visible` et établira un nouveau contexte de formatage de bloc. Les navigateurs de bureau fournissent des barres de défilement si le contenu dépasse.
 
-> **Note :** La valeur `overlay` est un synonyme historique de `auto`. Avec `overlay`, les barres de défilement étaient dessinées au-dessus du contenu plutôt que de prendre de l'espace.
+> [!NOTE]
+> La valeur `overlay` est un synonyme historique de `auto`. Avec `overlay`, les barres de défilement étaient dessinées au-dessus du contenu plutôt que de prendre de l'espace.
 
 ## Définition formelle
 

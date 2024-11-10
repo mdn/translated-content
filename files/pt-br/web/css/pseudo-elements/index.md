@@ -13,7 +13,8 @@ p::first-line {
 }
 ```
 
-> **Nota:** Diferentemente dos pseudo-elementos, {{cssxref("pseudo-classes")}} podem ser utilizadas para estilizar um elemento baseado em seu _estado_.
+> [!NOTE]
+> Diferentemente dos pseudo-elementos, {{cssxref("pseudo-classes")}} podem ser utilizadas para estilizar um elemento baseado em seu _estado_.
 
 ## Sintaxe
 
@@ -25,7 +26,8 @@ seletor::pseudo-elemento {
 
 Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer depois da declaração de um elemento simples.
 
-> **Nota:** Como regra, os dois pontos devem ser usados duas vezes (`::`) ao invés de uma única vez (`:`). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
+> [!NOTE]
+> Como regra, os dois pontos devem ser usados duas vezes (`::`) ao invés de uma única vez (`:`). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
 
 ## Índice de pseudo-elementos comuns
 

@@ -13,7 +13,8 @@ Antes de iniciar este módulo você não precisa ter nenhum conhecimento de Djan
 
 Um conhecimento geral de conceitos de programação e Python é recomendado, mas não essenciais para entendimento dos conceitos principais.
 
-> **Nota:** O Python é uma das linguagens de programação mais fáceis para os iniciantes lerem e entenderem. Dito isto, se você quiser entender melhor este módulo, então existem inúmeros livros e tutoriais gratuitos disponíveis pela Internet (programadores iniciantes podem querer ver a página [Python for não programadores](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) no wiki do python.org)
+> [!NOTE]
+> O Python é uma das linguagens de programação mais fáceis para os iniciantes lerem e entenderem. Dito isto, se você quiser entender melhor este módulo, então existem inúmeros livros e tutoriais gratuitos disponíveis pela Internet (programadores iniciantes podem querer ver a página [Python for não programadores](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) no wiki do python.org)
 
 ## Como começar?
 

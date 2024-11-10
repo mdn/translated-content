@@ -184,7 +184,8 @@ memoBoucle: while (memo == true) {
 }
 ```
 
-> **Note :** Pour plus de détails sur cette instruction, voir la page de la référence JavaScript pour [`label`](/fr/docs/Web/JavaScript/Reference/Instructions/label).
+> [!NOTE]
+> Pour plus de détails sur cette instruction, voir la page de la référence JavaScript pour [`label`](/fr/docs/Web/JavaScript/Reference/Instructions/label).
 
 ## L'instruction `break`
 

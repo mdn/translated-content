@@ -3,6 +3,8 @@ title: Ejemplo 3 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 ---
 
+{{CSSRef}}
+
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
 
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
@@ -39,7 +41,8 @@ Para entender mejor la situación, esta es la jerarquía del contexto de apilami
 
 Este problema puede ser evitado al remover la superposición entre menus de diferentes niveles, o usando valores z-index individuales (y diferentes) asignados a través del selector id en lugar de un selector de clase, o aplanando la jerarquía HTML.
 
-> **Nota:** En el código fuente vas a ver que los menus de segundo y tercer nivel están hechos de varios DIVs contenidos en un contenedor con posición absoluta. Esto es útil para agrupar y posicionarlos todos a la vez.
+> [!NOTE]
+> En el código fuente vas a ver que los menus de segundo y tercer nivel están hechos de varios DIVs contenidos en un contenedor con posición absoluta. Esto es útil para agrupar y posicionarlos todos a la vez.
 
 ### Código fuente de ejemplo
 

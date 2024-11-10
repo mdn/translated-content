@@ -1,15 +1,25 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.PI`** 속성은 원의 둘레와 지름의 비율, 약 3.14159의 값을 가집니다.
+**`Math.PI`** 정적 데이터 속성은 원의 둘레와 지름의 비율, 약 3.14159의 값을 가집니다.
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
+{{EmbedInteractiveExample("pages/js/math-pi.html")}}
 
-{{EmbedInteractiveExample("pages/js/math-pi.html")}}{{js_property_attributes(0, 0, 0)}}
+## 값
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙿𝙸</mi><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{Math.PI} = \pi \approx 3.14159</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
@@ -17,7 +27,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 
 ## 예제
 
-### `Math.PI` 사용하기
+### Math.PI 사용하기
 
 다음 함수는 `Math.PI`를 사용해 주어진 원의 반지름에서 둘레를 계산합니다.
 

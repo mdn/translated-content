@@ -9,7 +9,8 @@ l10n:
 
 WebAssembly を人間が読んだり編集したりできるようにするため、 Wasm バイナリー形式にはテキスト表現が存在します。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、テキスト形式のしくみ、生の構文、および元のバイトコードの表現との関係 (と JavaScript で Wasm を表現したラッパーオブジェクト) について説明します。
 
-> **メモ:** この記事は、あなたがウェブ開発者で Wasm モジュールをページに読み込んでコード内で使用するだけなら過剰なものかもしれません ([WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)を参照)。しかし、例えば、パフォーマンスを最適化するために Wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラーを作るときには役に立ちます。
+> [!NOTE]
+> この記事は、あなたがウェブ開発者で Wasm モジュールをページに読み込んでコード内で使用するだけなら過剰なものかもしれません ([WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)を参照)。しかし、例えば、パフォーマンスを最適化するために Wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラーを作るときには役に立ちます。
 
 ## S 式
 
@@ -44,7 +45,7 @@ WebAssembly を人間が読んだり編集したりできるようにするた�
 
 はい、これは全然面白くないですね。モジュールに実行可能なコードを追加していきましょう。
 
-すべての WebAssembly モジュール内のコードは次の疑似コード構造を持つ関数にグループ化されます:
+すべての WebAssembly モジュール内のコードは次の擬似コード構造を持つ関数にグループ化されます:
 
 ```wasm
 ( func <signature> <locals> <body> )
@@ -179,7 +180,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **メモ:** この例は GitHub の [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）にあります。関数のインスタンス化についての詳細は [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) も参照してください。
+> [!NOTE]
+> この例は GitHub の [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）にあります。関数のインスタンス化についての詳細は [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) も参照してください。
 
 ## 基礎を探る
 
@@ -255,7 +257,8 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 );
 ```
 
-> **メモ:** この例は GitHub の [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)）を参照してください。
+> [!NOTE]
+> この例は GitHub の [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)）を参照してください。
 
 ### WebAssembly でのグローバルの宣言
 
@@ -290,7 +293,7 @@ JavaScript から見ると、メモリーはすべて 1 つの大きな (リサ�
 
 したがって、文字列は線形メモリー内部のどこかに存在するただのバイト列です。適切なバイト列の文字列をメモリーに書き込んだとしましょう。その文字列をどのように JavaScript に渡すのでしょうか?
 
-鍵は [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) インターフェースを使用して JavaScript から WebAssembly の線形メモリーを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス（現在は 1 モジュールごとに 1 つだけ持つことができます）にアクセスできることです。Memory インスタンスは [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) ゲッターを持ち、これは線形メモリー全体を指し示す ArrayBuffer を返します。
+鍵は [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) インターフェイスを使用して JavaScript から WebAssembly の線形メモリーを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス（現在は 1 モジュールごとに 1 つだけ持つことができます）にアクセスできることです。Memory インスタンスは [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) ゲッターを持ち、これは線形メモリー全体を指し示す ArrayBuffer を返します。
 
 Memory インスタンスは、例えば JavaScript から [`Memory.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow) メソッドを使用して拡張することもできます。拡張したとき、`ArrayBuffer` はサイズを変更することができないため、現在の `ArrayBuffer` は切り離され、新しく作成された、より大きな `ArrayBuffer` を指し示すようになります。これは、JavaScript に文字列を渡すために必要なことは、線形メモリー内での文字列のオフセットと長さを指定する方法を渡すことだけであることを意味します。
 
@@ -335,7 +338,8 @@ function consoleLogString(offset, length) {
     call $log))
 ```
 
-> **メモ:** 上記の 2 重のセミコロン構文 (`;;`) は WebAssembly ファイル内でコメントを書くためのものです。
+> [!NOTE]
+> 上記の 2 重のセミコロン構文 (`;;`) は WebAssembly ファイル内でコメントを書くためのものです。
 
 ここで、JavaScript から 1 ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます。
 
@@ -354,7 +358,8 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 );
 ```
 
-> **メモ:** 完全なソースは GitHub の [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)）を参照してください。
+> [!NOTE]
+> 完全なソースは GitHub の [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)）を参照してください。
 
 ### WebAssembly テーブル
 
@@ -394,7 +399,8 @@ WebAssembly は `anyfunc` 型 (任意のシグニチャの関数を保持でき�
 - `elem` セクションはモジュール内の関数のサブセットをリスト化することができます (任意の順で並べることができ、重複を許容します) 。これは参照された順序でテーブルに参照される関数のリストです。
 - `elem` セクション内の `(i32.const 0)` 値はオフセットです。これはセクションの先頭で宣言する必要があります。これはテーブルに関数参照を追加するインデックスの開始位置を指定します。ここでは 0 と テーブルのサイズとして 2 (上記参照) を指定していますので、2つの参照はインデックスが 0 と 1 の部分に書き込まれます。もしオフセットを 1 にして書き込みたければ、 `(i32.const 1)` と記述してテーブルのサイズを 3 にする必要があります。
 
-> **メモ:** 初期化されていない要素はデフォルトの throw-on-call 値が与えられます。
+> [!NOTE]
+> 初期化されていない要素はデフォルトの throw-on-call 値が与えられます。
 
 JavaScript で同じようなテーブルのインスタンスを作成する場合、次のようになります。
 
@@ -472,9 +478,11 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **メモ:** 例は GitHub の [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)) を参照してください。
+> [!NOTE]
+> 例は GitHub の [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)) を参照してください。
 
-> **メモ:** Memory と同じように Table も JavaScript から作成すること（[`WebAssembly.Table()`](/ja/docs/WebAssembly/JavaScript_interface/Table) を参照）、別の Wasm モジュール間でインポートすることができます。
+> [!NOTE]
+> Memory と同じように Table も JavaScript から作成すること（[`WebAssembly.Table()`](/ja/docs/WebAssembly/JavaScript_interface/Table) を参照）、別の Wasm モジュール間でインポートすることができます。
 
 ### テーブルの変更と動的リンク
 
@@ -523,7 +531,8 @@ JavaScript は関数参照にフルアクセスできるため、 Table オブ�
 4. 関数の最後では、定数値 `0` を作成し、テーブルのインデックスが 0 の位置にある関数を呼び出します。これは `shared0func` で、先に `shared0.wat` の `elem` ブロックで格納されたものです。
 5. 呼び出されたとき、`shared0func` は `shared1.wat` 内で `i32.store` コマンドを使用してメモリーに格納された 42 をロードします。
 
-> **メモ:** 上の式はスタックから値を暗黙的にポップしますが、代わりにコマンド呼び出しの中で明示的に宣言することができます。
+> [!NOTE]
+> 上の式はスタックから値を暗黙的にポップしますが、代わりにコマンド呼び出しの中で明示的に宣言することができます。
 >
 > ```wasm
 > (i32.store (i32.const 0) (i32.const 42))
@@ -550,11 +559,12 @@ Promise.all([
 
 コンパイルされた各モジュールは同じメモリーとテーブルオブジェクトをインポートし、その結果同じ線形メモリーとテーブルの「アドレス空間」を共有することができます。
 
-> **メモ:** 例は GitHub の [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)) を参照してください。
+> [!NOTE]
+> 例は GitHub の [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)) を参照してください。
 
 ## 大規模メモリー操作
 
-大規模メモリー操作は、言語へ新しく追加されたものです（例えば [Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79)）。コピーや初期化などのバルクメモリ操作のために 7 つの新しい組み込み操作が提供されており、 WebAssembly が `memcpy` や `memmove` などのネイティブ関数を、より効率的でパフォーマンスの高い方法でモデル化できるようにします。
+大規模メモリー操作は、言語へ新しく追加されたものです（例えば [Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79)）。コピーや初期化などのバルクメモリー操作のために 7 つの新しい組み込み操作が提供されており、 WebAssembly が `memcpy` や `memmove` などのネイティブ関数を、より効率的でパフォーマンスの高い方法でモデル化できるようにします。
 
 新しい操作は次の通りです。
 
@@ -566,7 +576,8 @@ Promise.all([
 - `table.copy`: テーブルの一範囲から他へコピーします。
 - `table.init`: 要素セグメントから範囲をコピーします。
 
-> **メモ:** 詳しい情報は [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) の提案にあります。
+> [!NOTE]
+> 詳しい情報は [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) の提案にあります。
 
 ## 型
 
@@ -623,7 +634,7 @@ WebAssembly スレッド ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) 以
 
 上記のように、共有の WebAssembly [`Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトを作成することが可能です。これは、 [`postMessage()`](/ja/docs/Web/API/Window/postMessage) を使用してウィンドウとワーカーのコンテキスト間で、 [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) と同じ方法で転送されるものです。
 
-JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリを作成するようになりました。
+JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリーを作成するようになりました。
 
 ```js
 const memory = new WebAssembly.Memory({
@@ -647,7 +658,8 @@ memory.buffer; // returns SharedArrayBuffer
 
 共有されていないメモリーと異なり、共有メモリーは JavaScript API のコンストラクターと Wasm のテキスト形式の両方で「最大」サイズを指定する必要があります。
 
-> **メモ:** 詳しくは、 [WebAssembly のスレッド提案](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md)にたくさん載っています。
+> [!NOTE]
+> 詳しくは、 [WebAssembly のスレッド提案](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md)にたくさん載っています。
 
 ### 不可分メモリーアクセス
 

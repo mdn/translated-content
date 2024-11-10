@@ -309,7 +309,8 @@ const values = await Promise.all([coffee, tea, description]);
 
 Для обработки ошибок мы добавили блок `.catch()` для функции `displayContent()`; Это позволило нам отловить ошибки в обоих функциях.
 
-> **Примечание:** Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!NOTE]
+> Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Недостатки async/await
 

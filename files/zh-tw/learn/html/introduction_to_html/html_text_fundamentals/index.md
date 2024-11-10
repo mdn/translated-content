@@ -269,7 +269,7 @@ Now let's turn our attention to lists. Lists are everywhere in life — from you
 
 Unordered lists are used to mark up lists of items for which the order of the items doesn't matter — let's take a shopping list as an example.
 
-```
+```plain
 milk
 eggs
 bread
@@ -434,7 +434,7 @@ textarea.onkeyup = function () {
 
 Ordered lists are lists in which the order of the items _does_ matter — let's take a set of directions as an example:
 
-```
+```plain
 Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
@@ -988,7 +988,8 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 - {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence...
 - {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: Proper name, misspelling...
 
-> **備註：** A kind warning about underline: **People strongly associate underlining with hyperlinks.** Therefore, on the Web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the Web. The example below illustrates how it can be done.
+> [!NOTE]
+> A kind warning about underline: **People strongly associate underlining with hyperlinks.** Therefore, on the Web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the Web. The example below illustrates how it can be done.
 
 ```html
 <!-- scientific names -->

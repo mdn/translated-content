@@ -99,34 +99,34 @@ l10n:
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : 브라우저가 독립 실행 모드로 실행중인지를 나타내는 불리언 값을 리턴합니다. Apple의 iOS Safari에서만 지원합니다.
 
-### Deprecated properties
+### 사용되지 않는 속성
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
+  - : 현재 {{domxref("VRDisplay.ispresenting")}}이 `true`인 모든 {{domxref("VRDisplay")}} 객체를 담고 있는 배열을 반환합니다.
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Always returns `'Mozilla'`, in any browser.
+  - : 어느 브라우저에서든 항상 `'Mozilla'`를 반환합니다.
 - {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Always returns `'Netscape'`, in any browser.
+  - : 어느 브라우저에서든 항상 `'Netscape'`를 반환합니다.
 - {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
+  - : 브라우저의 버전을 문자열로 반환합니다. 정확한 값으로 사용할 때에는 이 기능에 의존하지 마십시오.
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
+  - : 사용자의 추적 금지 설정 값을 알립니다. 이 값이 "1"인 경우, 당신의 웹사이트 또는 애플리케이션은 사용자를 추적해서는 안됩니다.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
+  - : 브라우저가 지원하는 MIME 타입들을 나열하는 {{domxref("MimeTypeArray")}}를 반환합니다.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns a string that represents the current operating system.
+  - : 현재 운영 체제를 나타내는 문자열을 반환합니다.
 - {{domxref("Navigator.platform")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.
+  - : 브라우저의 플랫폼을 나타내는 문자열을 반환합니다. 중요한 값으로 사용할 때에는 이 기능에 의존하지 마십시오.
 - {{domxref("Navigator.plugins")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.
+  - : 브라우저에 설치된 플러그인을 나열하는 {{domxref("PluginArray")}}을 반환합니다.
 - {{domxref("Navigator.product")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Always returns `'Gecko'`, in any browser.
+  - : 어느 브라우저에서든 항상 `'Gecko'`를 반환합니다.
 - {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns either the string `'20030107'`, or `'"20100101'`.
+  - : `'20030107'`과 `'20100101'` 중 하나를 문자열로 반환합니다.
 - {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns either the empty string, `'Apple Computer Inc.'`, or `'Google Inc.'`.
+  - : 빈 문자열, `'Apple Computer Inc.'`, `'Google Inc.'` 중 하나를 반환합니다.
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Always returns the empty string.
+  - : 항상 빈 문자열을 반환합니다.
 
 ## 메서드
 

@@ -128,7 +128,8 @@ O bien, emplear la siguiente técnica para hacer que la superposición funcione 
 </window>
 ```
 
-> **Nota:** Este cambio es efectivo para Firefox 3 beta 4 y la prebeta 4.
+> [!NOTE]
+> Este cambio es efectivo para Firefox 3 beta 4 y la prebeta 4.
 
 #### Otros cambios
 

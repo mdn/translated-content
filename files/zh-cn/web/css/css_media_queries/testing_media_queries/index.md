@@ -77,7 +77,7 @@ mediaQueryList.removeListener(handleOrientationChange);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Media queries](/zh-CN/docs/CSS/Media_queries)
 - {{domxref("window.matchMedia()") }}

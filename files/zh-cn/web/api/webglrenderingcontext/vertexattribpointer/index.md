@@ -10,13 +10,13 @@ The **`WebGLRenderingContext.vertexAttribPointer()`** method of the [WebGL API](
 
 WebGL API 的 **`WebGLRenderingContext.vertexAttribPointer()`** 方法绑定当前缓冲区范围到`gl.ARRAY_BUFFER`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
 
-## Syntax
+## 语法
 
-```
-void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
+```js-nolint
+vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
-### Parameters
+### 参数
 
 - `index`
   - : A {{domxref("GLuint")}} specifying the index of the vertex attribute that is to be modified.

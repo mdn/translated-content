@@ -5,14 +5,14 @@ slug: Web/HTML/Element/legend
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
+HTML-элемент **`<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                    |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
 | Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                    |
+| Пропуск тегов                                          | Нет, открывающий и закрывающий теги обязательны.                       |
 | Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}           |
 | Допустимые ARIA-роли                                   | Нет                                                                    |
 | DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                                       |

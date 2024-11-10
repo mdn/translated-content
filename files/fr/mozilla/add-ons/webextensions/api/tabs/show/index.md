@@ -3,7 +3,7 @@ title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
 

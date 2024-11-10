@@ -31,7 +31,7 @@ El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL 
 ```js
 // Verifica que opener existe y no esté cerrado
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 

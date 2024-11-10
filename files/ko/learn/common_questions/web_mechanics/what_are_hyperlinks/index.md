@@ -1,18 +1,22 @@
 ---
 title: What are hyperlinks?
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+l10n:
+  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
 
 이 글에서, 우리는 하이퍼링크가 무엇이고 왜 중요한지를 살필 것이다.
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선수지식:</th>
+      <th scope="row">선행 지식:</th>
       <td>
-        <a href="/en-US/Learn/How_the_Internet_works">인터넷이 작동하는 법</a>을
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">인터넷이 작동하는 법</a>을
         알아야 하고
-        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >웹 페이지, 웹사이트, 웹 서버 그리고 검색엔진의 차이</a
         >에 익숙해야 한다.
       </td>
@@ -28,7 +32,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 보통 링크라고 불리는 하이퍼링크는 웹에서 기본적인 개념이다. 링크가 무엇인 지 설명하기 위해, 웹의 매우 기본적인 구조로 돌아볼 필요가 있다.
 
-1989년으로 돌아가, 웹의 발명가인 Tim Berners-Lee는 웹을 대표하는 3가지 축에 대해 말하였다. :
+1989년으로 돌아가, 웹의 발명가인 Tim Berners-Lee는 웹을 대표하는 3가지 축에 대해 말하였다.
 
 1. {{Glossary("URL")}}, 웹 문서를 추적하는 주소 시스템
 2. {{Glossary("HTTP")}}, URL들이 주어졌을 때, 문서들을 찾는 전송 프로토콜

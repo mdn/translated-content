@@ -1,9 +1,11 @@
 ---
 title: Notification：timestamp 属性
 slug: Web/API/Notification/timestamp
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`timestamp`** 只读属性返回一个数字。此属性通过 {{domxref("Notification.Notification"," Notification()")}} 构造函数的 `timestamp` 选项指定。
 
@@ -11,7 +13,7 @@ slug: Web/API/Notification/timestamp
 
 ## 值
 
-一个表示时间戳的数字，以 [Unix 时间](/zh-CN/docs/Glossary/Unix_time)形式按毫秒为单位给出。
+一个表示时间戳的数字，以 {{Glossary("Unix time", "Unix 时间")}}形式按毫秒为单位给出。
 
 ## 示例
 
@@ -27,7 +29,7 @@ const options = {
 
 const n = new Notification("新的评论活动", options);
 
-console.log(n.timestamp); // 输出 timestamp
+console.log(n.timestamp); // 打印 timestamp 属性值
 ```
 
 ## 规范

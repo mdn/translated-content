@@ -80,7 +80,8 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 和 `scroll` 一样，在无论是否有多到需要 用滚动条的内容的时候，页面上都会显示一个滚动条。
 
-> **备注：** 你可以用 `overflow` 属性指定 x 轴和 y 轴方向的滚动，同时使用两个值进行传递。如果指定了两个关键字，第一个对 `overflow-x `生效而第二个对 `overflow-y` 生效。否则，`overflow-x` 和 `overflow-y` 将会被设置成同样的值。例如，`overflow: scroll hidden` 会把 `overflow-x` 设置成 `scroll`，而 `overflow-y` 则为 `hidden`。
+> [!NOTE]
+> 你可以用 `overflow` 属性指定 x 轴和 y 轴方向的滚动，同时使用两个值进行传递。如果指定了两个关键字，第一个对 `overflow-x `生效而第二个对 `overflow-y` 生效。否则，`overflow-x` 和 `overflow-y` 将会被设置成同样的值。例如，`overflow: scroll hidden` 会把 `overflow-x` 设置成 `scroll`，而 `overflow-y` 则为 `hidden`。
 
 如果你只是想让滚动条在有比盒子所能装下更多的内容的时候才显示，那么使用 `overflow: auto`。此时由浏览器决定是否显示滚动条。桌面浏览器一般仅仅会在有足以引起溢出的内容的时候这么做。
 
@@ -90,7 +91,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 ## 溢出建立了区块格式化上下文
 
-CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC）](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)的概念。现在你不用太过在意，但是你应该知道，在你使用诸如 `scroll` 或者 `auto` 的时候，你就建立了一个块级排版上下文。结果就是，你改变了 `overflow` 的值的话，对应的盒子就变成了更加小巧的状态。在容器之外的东西没法混进容器内，也没有东西可以突出盒子，进入周围的版面。激活了滚动动作，你的盒子里面所有的内容会被收纳，而且不会遮到页面上其他的物件，于是就产生了一个协调的滚动体验。
+CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC）](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的概念。现在你不用太过在意，但是你应该知道，在你使用诸如 `scroll` 或者 `auto` 的时候，你就建立了一个块级排版上下文。结果就是，你改变了 `overflow` 的值的话，对应的盒子就变成了更加小巧的状态。在容器之外的东西没法混进容器内，也没有东西可以突出盒子，进入周围的版面。激活了滚动动作，你的盒子里面所有的内容会被收纳，而且不会遮到页面上其他的物件，于是就产生了一个协调的滚动体验。
 
 ## 网页设计时不需要的溢出
 

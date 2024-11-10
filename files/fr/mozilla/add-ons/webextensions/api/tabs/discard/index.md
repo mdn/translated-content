@@ -3,7 +3,7 @@ title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Rejette un ou plusieurs onglets.
 
@@ -70,9 +70,9 @@ discarding.then(onDiscarded, onError);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript).
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

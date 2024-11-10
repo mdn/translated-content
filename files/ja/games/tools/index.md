@@ -14,11 +14,11 @@ slug: Games/Tools
 - [Firefox プロファイラー](https://profiler.firefox.com/docs/#/)
   - : Gecko プロファイラーを利用すると、パフォーマンス上の問題を引き起こしている箇所の特定が容易になります。その結果あなたのゲームは最高速で動作できます。
 - [Shumway](/ja/docs/Mozilla/Projects/Shumway)
-  - : Shumway は Adobe Flash で作成されたものを JavaScript や WebGL などを用いてレンダリングします。これを利用することで Flash とオープンな Web 標準との間の溝を埋められます。この文書では Shumway の利用方法と、バグ修正にコントリビュートする方法について解説します。
+  - : Shumway は Adobe Flash で作成されたものを JavaScript や WebGL などを用いてレンダリングします。これを利用することで Flash とオープンなウェブ標準との間の溝を埋められます。この文書では Shumway の利用方法と、バグ修正にコントリビュートする方法について解説します。
 - ゲーム開発とデバッグのためのツールチェーン
 
   - : 通常のウェブアプリのデバッグとの違いや、ツールについて解説します。多くは[開発ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)でカバーされますが、特に有用なツールチェーンのチュートリアルはこちらです。
 
     - 基本的なツールの概要
-    - [シェーダエディタ](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
+    - [シェーダエディター](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - パフォーマンスツール

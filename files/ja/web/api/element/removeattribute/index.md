@@ -29,8 +29,6 @@ removeAttribute(attrName)
 
 属性の値を直接、または {{domxref("Element.setAttribute", "setAttribute()")}} を使用して `null` に設定するのではなく、 `removeAttribute()` を使用してください。多くの属性は `null` に設定しても、期待通りの動作をしません。
 
-{{ DOMAttributeMethods() }}
-
 ## 例
 
 ```js

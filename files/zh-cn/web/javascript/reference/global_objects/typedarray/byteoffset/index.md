@@ -39,7 +39,7 @@ uint8.byteOffset; // 3 (在构造 Uint8Array 时指定)
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

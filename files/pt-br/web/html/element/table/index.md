@@ -315,7 +315,8 @@ document
 
 O exemplo a seguir adiciona um manipulador de eventos a cada elemento `<th>` de cada `<table>` no `document`; ele ordena todas as linhas do `<tbody>`, baseando a ordenação nas células `td` contidas nas linhas.
 
-> **Nota:** Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
+> [!NOTE]
+> Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
 
 ##### HTML
 

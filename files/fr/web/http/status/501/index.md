@@ -13,7 +13,7 @@ Une telle réponse peut également contenir un en-tête [`Retry-After`](/fr/docs
 
 Si le serveur connaît la méthode mais qu'il ne la prend pas en charge _intentionnellement_, le code de réponse approprié sera [`405 Method Not Allowed`](/fr/docs/Web/HTTP/Status/405).
 
-> **Note :**
+> [!NOTE]
 >
 > - Une erreur 501 ne peut pas être corrigée côté client (via son navigateur web par exemple), il faut un correctif côté serveur pour régler le problème.
 > - Une réponse avec le code 501 est mise en cache par défaut (c'est-à-dire, à moins que les en-têtes relatifs à la mise en cache fournissent d'autres instructions plus précises).

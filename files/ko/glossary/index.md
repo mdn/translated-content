@@ -11,4 +11,5 @@ l10n:
 
 사이드바에서 용어 사전의 용어를 골라볼 수 있습니다.
 
-> **참고:** 용어 사전은 끝없이 진행 중인 작업입니다. [새 항목을 작성](/ko/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)하거나 기존 항목을 개선하여 도움을 줄 수 있습니다.
+> [!NOTE]
+> 용어 사전은 끝없이 진행 중인 작업입니다. [새 항목을 작성](/ko/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)하거나 기존 항목을 개선하여 도움을 줄 수 있습니다.

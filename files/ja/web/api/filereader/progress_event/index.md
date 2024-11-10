@@ -1,13 +1,14 @@
 ---
 title: "FileReader: progress イベント"
+short-title: progress
 slug: Web/API/FileReader/progress_event
 l10n:
-  sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-`progress` イベントは、 `FileReader` がデータを読むときに定期的に発生します。
+**`progress`** は {{domxref("FileReader")}} インターフェイスのイベントで、`FileReader` がデータを読むときに定期的に発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -141,7 +142,7 @@ fileInput.addEventListener("change", handleSelected);
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+{{ EmbedLiveSample('ライブデモ', '100%', '300px') }}
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 只读属性 **`MouseEvent.relatedTarget`** 是鼠标事件的次要目标（如果存在），它包括：
 
@@ -19,13 +19,7 @@ slug: Web/API/MouseEvent/relatedTarget
 
 如果事件没有次要目标，`relatedTarget` 将返回 `null`.
 
-## 语法
-
-```
-var target = instanceOfMouseEvent.relatedTarget
-```
-
-### 返回值
+## 值
 
 {{domxref("EventTarget")}} 对象或者 `null`.
 
@@ -110,4 +104,3 @@ function overListener(event) {
 ## 参见
 
 - {{ domxref("MouseEvent") }}
-- [Comparison of Event Targets](/zh-CN/docs/DOM/event/Comparison_of_Event_Targets)

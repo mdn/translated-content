@@ -2,10 +2,10 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序以系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
@@ -14,6 +14,8 @@ l10n:
 ![桌面通知：通过 mdn.github.io 列出待办事项 嘿！你的任务“去购物”现已过期](desktop-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 编写得足够通用，足以与大多数系统通知系统兼容。
+
+{{AvailableInWorkers}}
 
 ## 示例
 
@@ -50,7 +52,7 @@ Notification.requestPermission().then((result) => {
 });
 ```
 
-这使用了该方法的基于 promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
+这使用了该方法的基于 Promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
 
 ```js
 Notification.requestPermission((result) => {
@@ -60,35 +62,30 @@ Notification.requestPermission((result) => {
 
 回调版本可以选择接受一个回调函数，一旦用户响应了显示权限的请求，就会调用该回调函数。
 
-> **备注：** 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行特性测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#浏览器兼容性)。
+> [!NOTE]
+> 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行特性测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#浏览器兼容性)。
 
 ### 示例
 
 在我们的待办事项列表演示中，我们包含一个“启用通知”按钮，按下该按钮时，会请求应用程序的通知权限。
 
 ```html
-<button id="enable">Enable notifications</button>
+<button id="enable">启用通知</button>
 ```
 
 单击此按钮将调用 `askNotificationPermission()` 函数：
 
 ```js
 function askNotificationPermission() {
-  // 实际询问权限的函数
-  function handlePermission(permission) {
-    // 根据用户的回答将按钮设置为显示或隐藏
-    notificationBtn.style.display =
-      Notification.permission === "granted" ? "none" : "block";
-  }
-
-  // 让我们检查一下浏览器是否支持通知
+  // 检查浏览器是否支持通知
   if (!("Notification" in window)) {
     console.log("此浏览器不支持通知。");
-  } else {
-    Notification.requestPermission().then((permission) => {
-      handlePermission(permission);
-    });
+    return;
   }
+  Notification.requestPermission().then((permission) => {
+    // 根据用户的回答显示或隐藏按钮
+    notificationBtn.style.display = permission === "granted" ? "none" : "block";
+  });
 }
 ```
 
@@ -96,13 +93,13 @@ function askNotificationPermission() {
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
-> **备注：** 在 Chrome 的 37 版本之前，其不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284)）。
+在传递给 `then` 的 promise 解析处理器中，我们根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
 ## 创建通知
 
 创建通知很简单，只需要用 {{domxref("Notification")}} 构造方法。这个构造方法需要一个用来显示在通知内的标题以及一些用来增强通知的选项，例如 {{domxref("Notification.icon","icon")}} 或文本 {{domxref("Notification.body","body")}}。
 
-例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（在 `createNotification()` 函数中找到）：
+例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（可以在 `createNotification()` 函数中找到）：
 
 ```js
 const img = "/to-do-notifications/img/icon-128.png";
@@ -112,7 +109,7 @@ const notification = new Notification("待办列表", { body: text, icon: img })
 
 ## 关闭通知
 
-使用 {{domxref("Notification.close","close()")}} 删除不再与用户相关的通知（例如，对于消息应用程序，用户已经阅读了网页上的通知） ，或者以下歌曲已在音乐应用程序中播放以通知歌曲更改）。大多数现代浏览器会在一段时间（大约四秒）后自动关闭通知，但这不是你通常应该关心的事情，因为它取决于用户和用户代理。删除通知也可能发生在操作系统级别，用户应该对此保持控制。旧版本的 Chrome 不会自动删除通知，因此你可以在 {{domxref("setTimeout()")}} 之后执行此操作，以免从其他浏览器的通知托盘中删除通知。
+使用 {{domxref("Notification.close","close()")}} 删除不再与用户相关的通知（例如，对于消息应用程序，用户已经阅读了网页上的通知） ，或者以下歌曲已在音乐应用程序中播放以通知歌曲更改）。大多数现代浏览器会在一段时间（大约四秒）后自动关闭通知，但这不是你通常应该关心的事情，因为它取决于用户和用户代理。删除通知也可能发生在操作系统级别，用户应该对此保持控制。旧版本的 Chrome 不会自动删除通知，因此你可以在 {{domxref("Window.setTimeout", "setTimeout()")}} 之后执行此操作，以免从其他浏览器的通知托盘中删除通知。
 
 ```js
 const n = new Notification("我的歌");
@@ -124,9 +121,11 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-> **备注：** 此 API 不应仅用于在固定延迟后（在现代浏览器上）从屏幕上删除通知，因为此方法还会从任何通知托盘中删除通知，从而阻止用户在最初显示通知后与其进行交互。
+> [!NOTE]
+> 此 API 不应仅用于在固定延迟后（在现代浏览器上）从屏幕上删除通知，因为此方法还会从任何通知托盘中删除通知，从而阻止用户在最初显示通知后与其进行交互。
 
-> **备注：** 当你收到“关闭”事件时，无法保证是用户关闭了通知。这符合规范，其中规定：当底层通知平台或用户关闭通知时，必须运行其关闭步骤。
+> [!NOTE]
+> 当你收到“关闭”事件时，无法保证是用户关闭了通知。这符合规范，其中规定：当底层通知平台或用户关闭通知时，必须运行其关闭步骤。
 
 ## 通知事件
 
@@ -154,45 +153,57 @@ document.addEventListener("visibilitychange", () => {
 假设有以下基本 HTML：
 
 ```html
-<button>提醒我！</button>
+<button id="notify">提醒我！</button>
+<section id="demo-logs"></section>
+```
+
+```css hidden
+#demo-logs {
+  width: 90%;
+  height: 100px;
+  background-color: #ddd;
+  overflow-x: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
 ```
 
 可以通过这种方式处理多个通知：
 
 ```js
-window.addEventListener("load", () => {
-  const button = document.querySelector("button");
+const demoLogs = document.querySelector("#demo-logs");
 
-  if (window.self !== window.top) {
-    // 确保如果我们的文档位于框架中，我们会让用户首先在自己的选项卡或窗口中打开它。否则，它将无法请求发送通知的权限
-    button.textContent = "查看上面示例代码的实时运行结果";
-    button.addEventListener("click", () => window.open(location.href));
-    return;
-  }
+window.addEventListener("load", () => {
+  const button = document.querySelector("#notify");
 
   button.addEventListener("click", () => {
     if (Notification?.permission === "granted") {
-      // 如果用户同意收到通知让我们尝试发送十个通知
+      demoLogs.innerText += `该网站有显示通知的权限。正在显示通知。\n`;
+      // 如果用户同意接收通知，让我们尝试发送十个通知
       let i = 0;
-      // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
+      // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
-        // 由于 tag 参数，我们应该只能看到“Hi！9”通知
-        const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
+        // 由于 tag 参数，我们应该只能看到“来自 MDN 的第 9 个你好”通知
+        const n = new Notification(`来自 MDN 的第 9 个你好。`, {
+          tag: "soManyNotification",
+        });
         if (i === 9) {
           clearInterval(interval);
         }
         i++;
       }, 200);
-    } else if (Notification && Notification.permission !== "denied") {
+    } else if (Notification?.permission !== "denied") {
+      demoLogs.innerText += "请求通知许可。\n";
       // 如果用户没有告诉他们是否想要收到通知（注意：由于 Chrome，我们不确定是否设置了权限属性），因此检查“默认”值是不安全的。
       Notification.requestPermission().then((status) => {
         // 如果用户同意
         if (status === "granted") {
+          demoLogs.innerText += "用户授予权限。正在发送通知。\n";
           let i = 0;
           // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
-            // 由于 tag 参数，我们应该只能看到“Hi！9”通知
-            const n = new Notification(`Hi! ${i}`, {
+            // 由于 tag 参数，我们应该只能看到“来自 MDN 的消息 9。”通知
+            const n = new Notification(`来自 MDN 的消息 ${i}。`, {
               tag: "soManyNotification",
             });
             if (i === 9) {
@@ -201,13 +212,13 @@ window.addEventListener("load", () => {
             i++;
           }, 200);
         } else {
-          // 否则，我们可以回退到常规模式提醒
-          alert("Hi!");
+          // 否则，我们可以回退到常规模式的提醒
+          demoLogs.innerText += `用户拒绝了权限请求。\n`;
         }
       });
     } else {
-      // 如果用户拒绝收到通知，我们可以退回到常规模式提醒
-      alert("Hi!");
+      // 如果用户拒绝收到通知，我们可以回退到常规模式的提醒
+      demoLogs.innerText += `该站点没有显示通知的权限。\n`;
     }
   });
 });
@@ -215,15 +226,9 @@ window.addEventListener("load", () => {
 
 ### 结果
 
-{{ EmbedLiveSample('标签示例', '100%', 30) }}
+{{ EmbedLiveSample('标签示例', '100%', 200) }}
 
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
+为了测试上述示例，请更改 `https://live.mdnplay.dev` 网站的[发送通知设置](https://support.mozilla.org/zh-CN/kb/页面信息窗口#w_quan-xian)。
 
 ## 参见
 

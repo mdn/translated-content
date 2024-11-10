@@ -56,7 +56,8 @@ position: unset;
 
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
 
-    > **メモ:** 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
+    > [!NOTE]
+    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
 
 ## 解説
 

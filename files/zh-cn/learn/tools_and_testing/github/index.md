@@ -18,7 +18,8 @@ slug: Learn/Tools_and_testing/GitHub
 
 版本控制系统提供了能够满足以上需求的工具。[Git](https://git-scm.com/) 是版本控制系统的典范，而 [GitHub](https://github.com/) 是一个为个人或团队操作 Git 仓库（repository）提供了 Git 服务器和一系列非常实用的工具的网站 + 基础设施。它提供了报告代码错误、检查工具以及分配任务和任务状态等项目管理工具等等。
 
-> **备注：** Git 实际上是一个分散式的版本控制系统，这意味你和其他所有人的电脑上都可以有一个这个复制了这个项目所有源代码的储存库的副本。你在自己的副本上进行了修改，然后提交给服务器，在那里将由这个项目的管理者来决定是否将你的修改添加到主本中。
+> [!NOTE]
+> Git 实际上是一个分散式的版本控制系统，这意味你和其他所有人的电脑上都可以有一个这个复制了这个项目所有源代码的储存库的副本。你在自己的副本上进行了修改，然后提交给服务器，在那里将由这个项目的管理者来决定是否将你的修改添加到主本中。
 
 ## 事先准备
 
@@ -32,7 +33,8 @@ slug: Learn/Tools_and_testing/GitHub
 
 建议你最好还能够有一些基础的命令行终端的知识，例如：切换目录、新建文件以及修改系统路径（`PATH`）。
 
-> **备注：** Github 并不是使用 Git 的唯一途径。还有很多像 [GitLab](https://about.gitlab.com/) 这样的选择值得你去尝试。你也可以尝试着去构建你自己的 Git 服务器来代替 Github 的功能。在这里我们只是将 Github 作为一种可行的途径进行介绍。
+> [!NOTE]
+> Github 并不是使用 Git 的唯一途径。还有很多像 [GitLab](https://about.gitlab.com/) 这样的选择值得你去尝试。你也可以尝试着去构建你自己的 Git 服务器来代替 Github 的功能。在这里我们只是将 Github 作为一种可行的途径进行介绍。
 
 ## 指南
 
@@ -49,7 +51,8 @@ slug: Learn/Tools_and_testing/GitHub
 - [掌握议题（来自 GitHub）](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)
   - : **议题**（issue）就像是一个关于你这个 GitHub 项目的论坛，在这里人们可以提问题和报告错误，你可以管理更新（例如给人们分配需要解决的问题、澄清问题以及告知问题已经解决）。这篇文章会让你知道所需要的一些关于问题区的知识。
 
-> **备注：** 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Git 飞行规则](https://github.com/k88hudson/git-flight-rules)和 [Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
+> [!NOTE]
+> 在 Git 和 GitHub 上面你还可以做一大堆事情，但我们认为，如果你想要有效地使用 Git，上面的这些知识是至少应该具备的。当你更深入地了解 Git 时，你将会意识到，当你开始使用更加复杂的指令时会更容易出错。但不要担心，即使是专业的网络工程师有时都会感到困惑，并通过网络检索或 [Git 飞行规则](https://github.com/k88hudson/git-flight-rules)和 [Dangit, git!](https://dangitgit.com/) 这样的网站来寻找答案。
 
 ## 参见
 

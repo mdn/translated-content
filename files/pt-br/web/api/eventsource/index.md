@@ -61,7 +61,8 @@ evtSource.onmessage = function (e) {
 
 Cada evento recebido faz com que o handler do evento `onmessage` no objeto `EventSource` seja executado. Ele, em contrapartida, cria um novo elemento {{HTMLElement("li")}} e escreve os dados da mensagem nele, e em seguida concatena o novo elemento na lista já presente no documento.
 
-> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Especificações
 

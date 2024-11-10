@@ -111,7 +111,7 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 #### declarativeContent
 
-l'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) in Firefox.
+L'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) dans Firefox.
 
 Firefox [ne supportera pas](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) l'API `declarativeContent.RequestContentScript`, qui est rarement utilisée et n'est pas disponible dans les versions stables de Chrome.
 
@@ -159,4 +159,4 @@ Dans Chrome, la clé de manifeste `allowed_extensions` s'appelle `allowed_origin
 
 ### Emplacement du fichier de manifeste d'application
 
-Chrome s'attend à trouver le manifeste de l'application dans un autre endroit. Se référer à la documentation Chrome pour [l'emplacement de l'hôte de messagerie natif](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+Chrome s'attend à trouver le manifeste de l'application dans un autre endroit. Se référer à la documentation Chrome pour [l'emplacement de l'hôte de messagerie natif](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).

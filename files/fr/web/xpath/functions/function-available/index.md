@@ -3,7 +3,7 @@ title: function-available
 slug: Web/XPath/Functions/function-available
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `function-available` détermine si une fonction donnée est disponible et retourne le booléen `true` ou `false`.
 

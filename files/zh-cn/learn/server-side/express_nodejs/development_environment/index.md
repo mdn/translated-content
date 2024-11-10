@@ -32,7 +32,8 @@ Node 和 NPM 包管理器可以用二进制包、安装程序或系统包管理�
 
 NPM 也可以安装（全局的）**Express 应用生成器**，可用于创建遵循 [MVC 模式](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 的 Express 应用框架。它不是必备的，因为无需这个工具就可以创建 Express 应用（或相同架构布局或依赖的 Express 应用）。但我们还是会使用它，因为它更容易上手，还有助于应用结构的模块化管理。
 
-> **备注：** 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！
+> [!NOTE]
+> 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！
 
 典型的开发环境中还需要一些外围工具，包括用于编写代码的 [文本编辑器](/zh-CN/docs/Learn/Common_questions/实用文本编辑器) 或 IDE，用于代码控制管理的工具（比如代码版本控制工具 [Git](https://git-scm.com/)）。这里假定你已经安装了这些工具（尤其是文本编辑器）。
 
@@ -58,7 +59,8 @@ Express 应选用最新版本。
 
 先在操作系统上安装 Node.js 和 NPM 后才可使用 Express。接下来将介绍如何最简便地在 Ubuntu 18.04、macOS Mojave 以及 Windows 10 上安装 Node.js 最新的 LTS 版本。.
 
-> **备注：** 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其他操作系统，以及更多的安装方法，可以参考 [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) (nodejs.org).
+> [!NOTE]
+> 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其他操作系统，以及更多的安装方法，可以参考 [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) (nodejs.org).
 
 ### Windows 和 macOS
 
@@ -80,7 +82,8 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **警告：** 直接从 Ubuntu 默认仓库中下载的 Node 是 8.x 版本的。
+> [!WARNING]
+> 直接从 Ubuntu 默认仓库中下载的 Node 是 8.x 版本的。
 
 ### 测试 Node.js 和 NPM 是否安装成功
 
@@ -98,7 +101,7 @@ $ npm -v
 6.7.0
 ```
 
-下面的测试也许会带来小小激动：创建一个非常基础的“纯 Node”服务器，在浏览器中访问正确的 URL 地址时将直接打印 "Hello world"：
+下面的测试也许会带来小小激动：创建一个非常基础的“纯 Node”服务器，在浏览器中访问正确的 URL 地址时将直接打印“Hello world”：
 
 1. 以下代码使用了纯 Node 的特性（与 Express 无关）和一些 ES6 的语法，把它复制到 **hellonode.js** 文件中：
 
@@ -124,24 +127,31 @@ $ npm -v
    });
    ```
 
-   代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息 "Hello World"。
+   代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息“Hello World”。
 
-   > **备注：** 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
+   > [!NOTE]
+   > 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
 
 2. 在命令行工具中进入 hellonode.js 文件所在的目录，输入“node + 文件名”并运行，服务器就启动了：
 
    ```bash
-   $ node hellonode.js
+   node hellonode.js
+   ```
+
+   服务器启动后，你将看到控制台输出，指示服务器正在运行的 IP 地址：
+
+   ```plain
    服务器运行于 http://127.0.0.1:3000/
    ```
 
-3. 在浏览器中访问这个 URL（[http://127.0.0.1:3000/](http://127.0.0.1:8000/)），如果一切正常，浏览器会直接显示出 "Hello world" 字符串。
+3. 在浏览器中访问 URL `http://127.0.0.1:3000`，如果一切正常，浏览器会直接显示出“Hello world”字符串。
 
 ## 使用 NPM
 
 构建 Node 应用过程中，[NPM](https://docs.npmjs.com/) 是除了 Node 本身之外最重要的工具。可用于获取应用开发、测试以及生产所需的所有包（JavaScript 库）。也可运行开发过程中使用的测试单元和工具。
 
-> **备注：** 以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。
+> [!NOTE]
+> 以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。
 
 可以用 NPM 手动逐个安装所需包。但通常可用 [package.json](https://docs.npmjs.com/files/package.json) 文件来管理依赖。把每个依赖以一个 JavaScript“包”的形式（其中包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 _Node_ 版本，等等）罗列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。
 
@@ -149,7 +159,8 @@ $ npm -v
 
 下面介绍用 NPM 下载包、将包保存进工程依赖树，以及在 Node 应用中调用包的方法和步骤。
 
-> **备注：** 现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其他包）使用 **Express 应用生成器**。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。
+> [!NOTE]
+> 现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其他包）使用 **Express 应用生成器**。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。
 
 1. 首先为新应用创建一个目录，并进入它：
 
@@ -186,7 +197,7 @@ $ npm -v
    npm install express
    ```
 
-   此时 **package.json** 文件的底部会出现依赖列表（"dependencies"），其中包含 Express：
+   此时 **package.json** 文件的底部会出现依赖列表（dependency），其中包含 Express：
 
    ```json
    {
@@ -210,30 +221,36 @@ $ npm -v
    ```js
    const express = require("express");
    const app = express();
+   const port = 3000;
 
    app.get("/", (req, res) => {
      res.send("Hello World!");
    });
 
-   app.listen(8000, () => {
-     console.log("示例程序正在监听 8000 端口！");
+   app.listen(port, () => {
+     console.log(`示例程序正在监听 ${port} 端口！`);
    });
    ```
 
-   以上代码展示了一个最简单的 "HelloWorld" Express 应用。它导入了 "express" 模块并用它创建了一个服务器（app）来监听 8000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送 "Hello World!"。
+   以上代码展示了一个最简单的“HelloWorld”Express 应用。它导入了“express”模块并用它创建了一个服务器（app）来监听 3000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送“Hello World!”。
 
    在 myapp 应用的根目录下新建一个 **index.js** 文件，将上述代码粘贴进来并保存。
 
-5. 在命令行输入 node + 文件名 即可启动服务器：
+5. 你可以通过在命令提示符中使用脚本调用 node 来启动服务器：
 
    ```bash
-   $ node index.js
-   示例程序正在监听 8000 端口！
+   node index.js
    ```
 
-6. 在浏览器中访问这个 URL（<http://127.0.0.1:8000/>），如果一切正常，浏览器会直接显示出 "Hello world!" 字符串。
+   你将会看到以下控制台输出：
 
-### 开发依赖（Development dependencies）
+   ```plain
+   示例程序正在监听 3000 端口！
+   ```
+
+6. 在浏览器中访问这个 URL `http://127.0.0.1:3000/`，如果一切正常，浏览器会直接显示出“Hello world!”字符串。
+
+### 开发依赖
 
 如果一个依赖只在开发过程中用到，应该将其保存为“开发依赖”（这样，包的用户便无需在生产环境中安装它们）。比如，如果要使用 [eslint](http://eslint.org/)（一款流行的 JavaScript lint 工具）可以这样调用 NPM：
 
@@ -249,7 +266,8 @@ npm install eslint --save-dev
   }
 ```
 
-> **备注：** "[lint](https://zh.wikipedia.org/wiki/Lint)" 是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。
+> [!NOTE]
+> “[lint](https://zh.wikipedia.org/wiki/Lint)”是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。
 
 ### 运行任务
 
@@ -297,15 +315,17 @@ npm install express-generator -g
 express helloworld
 ```
 
-> **备注：** 也可以指定模板库来使用其他丰富的设置。可通过 help 命令来查看所有选项：
+> [!NOTE]
+> 也可以指定模板库来使用其他丰富的设置。可通过 help 命令来查看所有选项：
 >
 > ```bash
-> $ express --help
+> express --help
 > ```
 
 NPM 将在当前位置的子目录中创建新的 Express 应用，可以在控制台看到构建的过程。在完成时，NPM 会提示你需要安装哪些 Node 依赖，以及如何开启应用。
 
-> **备注：** 新应用的根目录有一个 **package.json** 文件。可以打开它看看都安装了哪些依赖，其中可以看到 Express 和 Jade 模板库：
+> [!NOTE]
+> 新应用的根目录有一个 **package.json** 文件。可以打开它看看都安装了哪些依赖，其中可以看到 Express 和 Jade 模板库：
 >
 > ```js
 > {
@@ -349,7 +369,7 @@ DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下�
 
 ![设置 DEBUG 命令显示的日志信息](debug.png)
 
-打开浏览器并访问 <http://127.0.0.1:3000/> 将看到 Express 的默认欢迎页面。
+打开浏览器并访问 `http://127.0.0.1:3000/` 将看到 Express 的默认欢迎页面。
 
 ![生成应用的默认主页](express.png)
 

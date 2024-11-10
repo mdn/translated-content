@@ -134,7 +134,8 @@ li {
   </tbody>
 </table>
 
-> **メモ:** orientation メディアクエリーは、実際は端末の向きではなくブラウザーウィンドウ (または iframe) の向きに応じて適用されます。
+> [!NOTE]
+> orientation メディアクエリーは、実際は端末の向きではなくブラウザーウィンドウ (または iframe) の向きに応じて適用されます。
 
 ## 画面の向きを固定する
 
@@ -164,7 +165,8 @@ screen.orientation.lock();
 
 ロックに成功した後に解決される[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。
 
-> **メモ:** 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
+> [!NOTE]
+> 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
 > ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることでで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
 

@@ -51,6 +51,6 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray")}}

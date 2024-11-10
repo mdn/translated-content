@@ -3,7 +3,7 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 {{EmbedInteractiveExample("pages/js/array-map.html")}}
 

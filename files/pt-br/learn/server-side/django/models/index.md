@@ -54,7 +54,8 @@ Como acima, criamos modelos para `Book` (que contém os detalhes genéricos do l
 
 O diagrama também mostra as relações entre os modelos, incluindo suas multiplicidades. As multiplicidades são os números no diagrama que mostram as quantidades (máxima e mínima) que cada modelo pode estar presente nos relacionamentos. Por exemplo, a linha que conecta as caixas mostra que `Book` e um `Genre` estão relacionados. Os números próximos ao modelo `Genre` mostram que um livro deve ter um ou mais gêneros (ou quantos você quiser), enquanto os números do outro lado da linha, ao lado do modelo `Book` mostram que um gênero pode ter zero ou muitos livros associados.
 
-> **Nota:** A próxima seção fornece uma explicação básica sobre como os modelos são definidos e usados. Ao ler sobre isso, considere como vamos construir cada um dos modelos conforme o diagrama acima.
+> [!NOTE]
+> A próxima seção fornece uma explicação básica sobre como os modelos são definidos e usados. Ao ler sobre isso, considere como vamos construir cada um dos modelos conforme o diagrama acima.
 
 ## Model primer
 
@@ -209,7 +210,8 @@ record = MyModelName(my_field_name="Instance #1")
 record.save()
 ```
 
-> **Nota:** Se você não tiver declarado qualquer campo como primary_key, o novo registro receberá um automaticamente, com o ID do nome do campo. Você poderia consultar este campo depois de salvar o registro acima e ele teria um valor de 1.
+> [!NOTE]
+> Se você não tiver declarado qualquer campo como primary_key, o novo registro receberá um automaticamente, com o ID do nome do campo. Você poderia consultar este campo depois de salvar o registro acima e ele teria um valor de 1.
 
 Você pode acessar os campos nesse novo registro usando a sintaxe de ponto e alterar os valores. Você precisa chamar `save ()` para armazenar valores modificados no banco de dados.
 
@@ -251,7 +253,8 @@ Em alguns casos, você precisará filtrar um campo que defina um relacionamento 
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Nota:** Você pode usar sublinhados (`__`) para navegar quantos níveis de relacionamentos (`ForeignKey / ManyToManyField`) desejar. Por exemplo, um `Livro` que tinha tipos diferentes, definidos usando um relacionamento "cover" adicional, pode ter um nome de parâmetro: `type__cover__name__exact = 'hard'`.
+> [!NOTE]
+> Você pode usar sublinhados (`__`) para navegar quantos níveis de relacionamentos (`ForeignKey / ManyToManyField`) desejar. Por exemplo, um `Livro` que tinha tipos diferentes, definidos usando um relacionamento "cover" adicional, pode ter um nome de parâmetro: `type__cover__name__exact = 'hard'`.
 
 Há muito mais que você pode fazer com as consultas, incluindo pesquisas para trás de modelos relacionados, encadeando filtros, retornando um conjunto menor de valores, etc. Para obter mais informações, consulte [Fazendo consultas](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs).
 
@@ -368,7 +371,8 @@ Nós declaramos adicionalmente alguns tipos novos de campos:
 
 O model `__str__()` representa o objeto `BookInstance` usando a combinação do seu id único e o título do `Book` associado.
 
-> **Nota:** Um pouco sobre Python:
+> [!NOTE]
+> Um pouco sobre Python:
 >
 > - Começando com Python 3.6, pode ser usada a sintaxe de interpolação (também conhecida como f-strings): `f'{self.id} ({self.book.title})'`.
 > - Em versões anteriores deste tutorial, nós estávamos usando a sintaxe de [formatted string](https://www.python.org/dev/peps/pep-3101/), a qual também é uma maneira válida de formatar strings em Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).

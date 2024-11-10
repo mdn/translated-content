@@ -9,8 +9,10 @@ slug: Web/API/WebSocket/close
 
 ## 语法
 
-```
-WebSocket.close();
+```js-nolint
+close()
+close(code)
+close(code, reason)
 ```
 
 ### 参数
@@ -26,8 +28,6 @@ WebSocket.close();
   - : 一个无效的`code`
 - `SYNTAX_ERR`
   - : `reason` 字符串太长（超过 123 字节）
-
-> **备注：** 在 Gecko 8.0 之前版本的 Gecko 里，这个方法不支持传参数。
 
 ## Specifications
 

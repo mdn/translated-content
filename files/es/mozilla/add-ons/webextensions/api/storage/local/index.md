@@ -3,7 +3,7 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Representa el área de almacenamiento local. Los elementos en el almacenamiento local son locales a la máquina en la que se instaló la extensión.
 
@@ -41,7 +41,7 @@ El objeto local implementa los métodos definidos en el{{WebExtAPIRef("storage.S
 
 > **Nota:** **Agradecimientos**
 >
-> Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-local) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+> Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
 >
 > Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 

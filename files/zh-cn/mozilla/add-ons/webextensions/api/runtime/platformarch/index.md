@@ -3,7 +3,7 @@ title: 获取处理器架构 - runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 当前浏览器所在的计算机的处理器架构。
 
@@ -24,9 +24,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-PlatformArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#type-PlatformArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

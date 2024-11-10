@@ -36,7 +36,8 @@ donde
 | `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | Si el valor de este argumentoes `on`, `yes`, ó 1, la ventana de diálogo podrá ser redimensionada por el usuario; en caso controario su tamaño será fijo. El valor por defecto es `no`. |
 | `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | Si el valor de este argumento es `on`, `yes`, ó 1, la ventana de diálogo tendrá barras de desplazamiento; en caso contrario su tamaño será fijo. El valor por defecto es `no`.         |
 
-> **Nota:** Firefox no implementa los argumentos `dialogHide`, `edge`, `status`, ó `unadorned`.
+> [!NOTE]
+> Firefox no implementa los argumentos `dialogHide`, `edge`, `status`, ó `unadorned`.
 
 ## Compatibilidad con navegadores
 

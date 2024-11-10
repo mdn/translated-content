@@ -78,7 +78,8 @@ transform:  matrix(a, c, b, d, tx, ty)
 
 Específica una matriz de transformación 2D compuesta por seis valores a especificar. Esto es el equivalente a la aplicación de una transformación lineal de una matriz <math><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} </annotation></semantics></math>de un mapa coordenadas de un nuevo sistema de coordenadas en un sistema de coordenadas anterior por las siguientes igualdades de la matriz: <math><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>b</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{prevCoordSys}} \\ y*{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x*{\mathrm{newCoordSys}} + b y*{\mathrm{newCoordSys}} + \mathrm{tx} \\ c x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + \mathrm{ty} \\ 1 \end{pmatrix}</annotation></semantics></math>
 
-> **Nota:** Viejas versiones de Gecko (Firefox) aceptan un {{cssxref("&lt;length&gt;")}} valor para **tx** y **ty**. Actualmente Gecko, junto con Webkit (Safari, Chrome) y Opera, soportan valor sin unidades {{cssxref("&lt;number&gt;")}} para **tx** y **ty**.
+> [!NOTE]
+> Viejas versiones de Gecko (Firefox) aceptan un {{cssxref("&lt;length&gt;")}} valor para **tx** y **ty**. Actualmente Gecko, junto con Webkit (Safari, Chrome) y Opera, soportan valor sin unidades {{cssxref("&lt;number&gt;")}} para **tx** y **ty**.
 
 ## Ejemplos realizados
 
@@ -146,7 +147,8 @@ transform:  scale(sx[, sy]);    /* ej. scale(2.5, 4)*/
 
 Especifica una operación de escalado 2D descrita por **\[sx, sy]**.
 
-> **Nota:** Nota: Si **sy** no es especificado, se asumirá que tanto **sx** como **sy** tendrán el mismo valor
+> [!NOTE]
+> Si **sy** no es especificado, se asumirá que tanto **sx** como **sy** tendrán el mismo valor
 
 ### scaleX
 
@@ -172,7 +174,8 @@ transform:  skew(ax[, ay]);     /* ej. skew(90deg,180deg)*/
 
 Sesga el elemento a lo largo del eje X y Y por los ángulos especificados. Si no se proporciona **ay**, no se llevará a cabo el sesgo del eje Y.
 
-> **Nota:** La función skew() fue presentada en los primeros borradores. Esta ha sido removida pero sigue presente en algunas implementaciones. No debe usarse.
+> [!NOTE]
+> La función skew() fue presentada en los primeros borradores. Esta ha sido removida pero sigue presente en algunas implementaciones. No debe usarse.
 >
 > Para lograr el mismo efecto, utilice la función skewX(). Si tu estas usando skew () con un parámetro o matriz (1, tan (ay), tan (ax), 1, 0, 0). Ten en cuenta que tan() no es una función CSS y así que tu mismo tienes que precalcular tus valores.
 

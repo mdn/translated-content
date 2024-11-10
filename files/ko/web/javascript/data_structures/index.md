@@ -80,7 +80,7 @@ Undefined 타입은 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objec
 
 ### Number 타입
 
-{{jsxref("Number")}} 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)입니다. 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) 와 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) 사이의 양수 부동 소수점 뿐만 아니라, -2<sup>-1074</sup> 와 -2<sup>1024</sup> 사이의 음수 부동 소수점 숫자도 저장할 수 있지만, (2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) 와 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) 범위의 정수만 안전하게 저장할 수 있습니다. 이 범위를 벗어나면, JavaScript는 더 이상 정수를 안전하게 표시할 수 없습니다. 대신 배정밀도 부동 소수점 근사값으로 표시됩니다. {{jsxref("Number.isSafeInteger()")}}를 사용하여 숫자가 안전한 정수 범위 내에 있는지 확인할 수 있습니다.
+{{jsxref("Number")}} 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)입니다. 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) 와 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) 사이의 양수 부동 소수점 뿐만 아니라, -2<sup>-1074</sup> 와 -2<sup>1024</sup> 사이의 음수 부동 소수점 숫자도 저장할 수 있지만, -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) 와 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) 범위의 정수만 안전하게 저장할 수 있습니다. 이 범위를 벗어나면, JavaScript는 더 이상 정수를 안전하게 표시할 수 없습니다. 대신 배정밀도 부동 소수점 근사값으로 표시됩니다. {{jsxref("Number.isSafeInteger()")}}를 사용하여 숫자가 안전한 정수 범위 내에 있는지 확인할 수 있습니다.
 
 ±(2<sup>-1074</sup> to 2<sup>1024</sup>) 범위를 벗어나는 값은 자동으로 변환됩니다.
 
@@ -182,12 +182,13 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 접근자 속성은 키를 두 개의 접근자 함수(`get`, `set`) 중 하나와 연결하여 값을 가져오거나 저장합니다.
 
-> **참고:** 접근자 '메서드'가 아니라 접근자 '속성'임을 인지하는 것이 중요합니다. 함수를 값으로 사용하여 JavaScript 객체에 클래스처럼 접근자를 부여할 수 있지만, 그렇다고 그 객체가 클래스로 바뀌는 것은 아닙니다.
+> [!NOTE]
+> 접근자 '메서드'가 아니라 접근자 '속성'임을 인지하는 것이 중요합니다. 함수를 값으로 사용하여 JavaScript 객체에 클래스처럼 접근자를 부여할 수 있지만, 그렇다고 그 객체가 클래스로 바뀌는 것은 아닙니다.
 
 접근자 속성은 다음과 같은 특성을 가집니다.
 
 - `get`
-  - : 값에 대한 get 접근이 수행될 따마다 속성 값을 검색하기 위해 비어 있는 인수 목록으로 호출되는 함수입니다. [getters](/ko/docs/Web/JavaScript/Reference/Functions/get)를 참고하세요. `undefined`일 수 있습니다.
+  - : 값에 대한 get 접근이 수행될 때마다 속성 값을 검색하기 위해 비어 있는 인수 목록으로 호출되는 함수입니다. [getters](/ko/docs/Web/JavaScript/Reference/Functions/get)를 참고하세요. `undefined`일 수 있습니다.
 - `set`
   - : 할당된 값을 포함하는 인수로 호출되는 함수입니다. 지정된 속성을 변경하려고 시도할 때마다 실행됩니다. [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)도 참고하세요. `undefined`일 수 있습니다.
 - `enumerable`

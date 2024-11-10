@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 {{JSRef}}
 
-**`Object.isFrozen()`**은 객체가 {{jsxref("Object.freeze()", "동결", "", 1)}}됐는지 판별합니다.
+**`Object.isFrozen()`** 은 객체가 {{jsxref("Object.freeze()", "동결", "", 1)}}됐는지 판별합니다.
 
 {{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 

@@ -1,8 +1,9 @@
 ---
-title: MediaMetadata.album
+title: "MediaMetadata: album プロパティ"
+short-title: album
 slug: Web/API/MediaMetadata/album
 l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Session API")}}

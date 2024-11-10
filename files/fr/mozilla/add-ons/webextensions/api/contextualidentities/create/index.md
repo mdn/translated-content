@@ -3,7 +3,7 @@ title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée une nouvelle identité contextuelle. Une fois créée, l'utilisateur pourra créer de nouveaux onglets appartenant à cette identité contextuelle, tout comme ils peuvent le faire avec les identités intégrées.
 

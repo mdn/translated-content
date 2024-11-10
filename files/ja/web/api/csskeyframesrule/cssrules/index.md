@@ -1,8 +1,9 @@
 ---
 title: "CSSKeyframesRule: cssRules プロパティ"
+short-title: cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
 l10n:
-  sourceCommit: 4da6c30730190b55e9b405711fedf6cdc755972d
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSSOM") }}

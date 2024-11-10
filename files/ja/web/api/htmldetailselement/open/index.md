@@ -1,8 +1,9 @@
 ---
 title: "HTMLDetailsElement: open プロパティ"
+short-title: open
 slug: Web/API/HTMLDetailsElement/open
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}

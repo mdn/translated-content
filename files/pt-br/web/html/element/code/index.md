@@ -75,7 +75,7 @@ Um parágrafo que inlcui `<code>`:
 </p>
 ```
 
-A sainda gerada por esse trecho HTML se parece com isso:
+A saída gerada por esse trecho HTML se parece com isso:
 
 {{EmbedLiveSample("Example", 640, 70)}}
 

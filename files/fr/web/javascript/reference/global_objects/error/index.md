@@ -160,9 +160,11 @@ Voir [cette question (en anglais) sur StackOverflow](https://stackoverflow.com/q
 
 #### En utilisant les classes ES2015
 
-> **Attention :** Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Note :** Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
+> [!NOTE]
+> Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
 
 ```js
 class ErreurSpecifique extends Error {
@@ -196,7 +198,8 @@ try {
 
 #### En utilisant des objets ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
+> [!WARNING]
+> Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
 
 ```js
 function ErreurSpecifique(toto, message, fileName, lineNumber) {

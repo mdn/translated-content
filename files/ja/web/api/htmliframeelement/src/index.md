@@ -3,18 +3,20 @@ title: "HTMLIFrameElement: src プロパティ"
 short-title: src
 slug: Web/API/HTMLIFrameElement/src
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 6197320c2f25a975ee4f7df4b8d5b48bf8d01562
 ---
 
 {{APIRef}}
 
-**`HTMLIFrameElement.src`** プロパティは、この {{HTMLElement("iframe")}} 要素の HTML の [`referrerpolicy`](/ja/docs/Web/API/HTMLIFrameElement/referrerPolicy) 属性を反映し、リソースを読み取る際にどのリファラーを送信するかを定義します。
+**`HTMLIFrameElement.src`** プロパティは文字列で、HTML の [`src`](/ja/docs/Web/HTML/Element/iframe#src) 属性を反映し、埋め込まれるコンテンツのアドレスを保持します。
+
+プログラムによって `<iframe>` の src 属性が（例えば、{{domxref("Element.removeAttribute()")}} によって）除去されると、`about:blank` がフレームに読み込まれるという現象が発生します。
 
 ## 構文
 
 ```js-nolint
-refStr = iframeElt.src
-iframeElt.src= refStr
+src = iframeElt.src
+iframeElt.src= src
 ```
 
 ## 例
@@ -36,6 +38,8 @@ body.appendChild(iframe); // 完全な URL をリファラーとして使用し�
 
 ## 関連情報
 
-- {{DOMxRef("HTMLAnchorElement.src")}}
-- {{DOMxRef("HTMLAreaElement.src")}}
-- {{DOMxRef("HTMLAreaElement.src")}}.
+- {{DOMxRef("HTMLEmbedElement.src")}}
+- {{DOMxRef("HTMLImageElement.src")}}
+- {{DOMxRef("HTMLMediaElement.src")}}
+- {{DOMxRef("HTMLScriptElement.src")}}
+- {{DOMxRef("HTMLTrackElement.src")}}

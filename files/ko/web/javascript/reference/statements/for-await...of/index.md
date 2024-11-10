@@ -167,7 +167,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **참고:** 동기 제너레이터에서 거부된 프로미스 yield에 유의하세요. 이 경우 `for await...of`는 거부된 프로미스를 처리할 때 throw를 하고, 해당 제너레이터의 `finally` 블록을 **호출하지 않습니다**. 이것은 할당된 일부 리소스를 `try/finally`로 해제해야 하는 경우에 바람직하지 않을 수 있습니다.
+> [!NOTE]
+> 동기 제너레이터에서 거부된 프로미스 yield에 유의하세요. 이 경우 `for await...of`는 거부된 프로미스를 처리할 때 throw를 하고, 해당 제너레이터의 `finally` 블록을 **호출하지 않습니다**. 이것은 할당된 일부 리소스를 `try/finally`로 해제해야 하는 경우에 바람직하지 않을 수 있습니다.
 
 ```js
 function* generatorWithRejectedPromises() {

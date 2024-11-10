@@ -285,7 +285,8 @@ Estas son propiedades del objeto ventana que pueden ser fijadas para establecer 
 
 _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
-> **Nota:** Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
+> [!NOTE]
+> Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.

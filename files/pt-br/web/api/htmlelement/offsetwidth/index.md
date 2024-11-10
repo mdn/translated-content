@@ -15,7 +15,8 @@ var offsetWidth =element.offsetWidth;
 
 `offsetWidth` é uma propriedade somente leitura.
 
-> **Nota:** Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Exemplo
 

@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.loop
+title: "HTMLMediaElement: loop プロパティ"
+short-title: loop
 slug: Web/API/HTMLMediaElement/loop
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,4 +31,4 @@ obj.loop = true; // true
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.loop` プロパティを定義しているインターフェイス

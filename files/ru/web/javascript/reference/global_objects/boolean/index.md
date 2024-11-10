@@ -3,7 +3,7 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef()}}
+{{JSRef}}
 
 Объект **`Boolean`** представляет значения истинности: `true` или `false`.
 

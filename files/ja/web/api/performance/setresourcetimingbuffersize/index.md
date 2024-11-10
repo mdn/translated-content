@@ -1,48 +1,55 @@
 ---
-title: performance.setResourceTimingBufferSize()
+title: "Performance: setResourceTimingBufferSize() メソッド"
+short-title: setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`setResourceTimingBufferSize()`** メソッドは、ブラウザーのリソースタイミングバッファーサイズを、指定された数の "`resource`" の {{domxref("PerformanceEntry.entryType","パフォーマンスエントリー種別")}}のオブジェクトに設定します。
+**`setResourceTimingBufferSize()`** メソッドは、 "`resource`" パフォーマンス項目を格納するブラウザーリソースタイミングバッファーの希望するサイズを設定します。
 
-ブラウザーの推奨リソースタイミングバッファサイズは少なくとも{{domxref("PerformanceEntry","パフォーマンスエントリー")}}オブジェクト 150 件分です。
+仕様書では、リソースタイミングバッファーの初期値が 250 以上であることが要求されています。
 
-{{AvailableInWorkers}}
+ブラウザーのパフォーマンスリソースデータバッファーをクリアするには、次のメソッドを使用します。 {{domxref("Performance.clearResourceTimings()")}} メソッドを使用します。
+
+ブラウザーのリソースタイミングバッファーがいっぱいになったときに通知を取得するには、 {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを待ち受けしてください。
 
 ## 構文
 
-```js
-performance.setResourceTimingBufferSize(maxSize);
+```js-nolint
+setResourceTimingBufferSize(maxSize)
 ```
 
 ### 引数
 
-- maxSize
-  - : `number` で、ブラウザーがパフォーマンスエントリーバッファーに保持する必要がある{{domxref("PerformanceEntry","パフォーマンスエントリー")}}オブジェクトの最大数を表します。
+- `maxSize`
+  - : `number` で、ブラウザーがパフォーマンス項目バッファーに保持する必要がある{{domxref("PerformanceEntry","パフォーマンス項目")}}オブジェクトの最大数を表します。
 
 ### 返値
 
-- なし
-  - : このメソッドには返値はありません。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
+### リソースタイミングバッファーサイズを設定
+
+以下の呼び出しにより、ブラウザーのパフォーマンスタイムラインに "`resource`" パフォーマンス項目が 500 個入るようになります。
+
 ```js
-function setResourceTimingBufferSize(maxSize) {
-  if (performance === undefined) {
-    log("Browser does not support Web Performance");
-    return;
-  }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
-  if (supported) {
-    log("... Performance.setResourceTimingBufferSize() = Yes");
-    performance.setResourceTimingBufferSize(maxSize);
-  } else {
-    log("... Performance.setResourceTimingBufferSize() = NOT supported");
-  }
-}
+performance.setResourceTimingBufferSize(500);
+```
+
+バッファーサイズを現在の項目数より小さい数に設定すると、項目は除去されません。代わりに、バッファーをクリアするには {{domxref("Performance.clearResourceTimings()")}} を呼び出してください。
+
+```js
+performance.getEntriesByType("resource").length; // 20
+performance.setResourceTimingBufferSize(10);
+performance.getEntriesByType("resource").length; // 20
+
+performance.clearResourceTimings();
+performance.getEntriesByType("resource").length; // 0
 ```
 
 ## 仕様書
@@ -52,3 +59,8 @@ function setResourceTimingBufferSize(maxSize) {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Performance.clearResourceTimings()")}}
+- {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}

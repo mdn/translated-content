@@ -9,7 +9,8 @@ l10n:
 
 **`transform`** 属性定义应用于元素及其子元素的变换规则列表。
 
-> **备注：** 从 SVG2 开始，`transform` 为表现属性，这意味着它可以用作 CSS 属性。但是，请注意 CSS 属性和该属性的语法存在一些差异。有关在这种情况下使用的特定语法，请参见 CSS {{cssxref('transform')}} 属性的文档。
+> [!NOTE]
+> 从 SVG2 开始，`transform` 为表现属性，这意味着它可以用作 CSS 属性。但是，请注意 CSS 属性和该属性的语法存在一些差异。有关在这种情况下使用的特定语法，请参见 CSS {{cssxref('transform')}} 属性的文档。
 
 你可以在任何 SVG 元素上使用此属性。
 
@@ -76,7 +77,8 @@ svg {
 
 `transform` 属性的 `<transform-list>` 可以使用以下所有的变换函数
 
-> **警告：** 根据规范，你还应该能够使用 CSS [变换函数](/zh-CN/docs/Web/CSS/transform-function)。但是，这不能保证兼容性。
+> [!WARNING]
+> 根据规范，你还应该能够使用 CSS [变换函数](/zh-CN/docs/Web/CSS/transform-function)。但是，这不能保证兼容性。
 
 ### 矩阵
 

@@ -7,7 +7,8 @@ slug: WebAssembly/Understanding_the_text_format
 
 사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 JavaScript에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
 
-> **참고:** 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
+> [!NOTE]
+> 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
 
 ## S-expressions
 
@@ -178,7 +179,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **참고:** 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 {{jsxref ( "WebAssembly.instantiate ()")}}를 참조하십시오.
+> [!NOTE]
+> 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 {{jsxref ( "WebAssembly.instantiate ()")}}를 참조하십시오.
 
 ## 기본 사항 둘러보기
 
@@ -216,7 +218,8 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 });
 ```
 
-> **참고:** 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
+> [!NOTE]
+> 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
 
 ### JavaScript에 함수 가져오기
 
@@ -256,7 +259,8 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 );
 ```
 
-> **참고:** 이 예제는 GitHub에서 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)로 찾을 수 있습니다 (라이브([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))도 참조하십시오).
+> [!NOTE]
+> 이 예제는 GitHub에서 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)로 찾을 수 있습니다 (라이브([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))도 참조하십시오).
 
 ### Declaring globals in WebAssembly
 
@@ -336,7 +340,8 @@ function consoleLogString(offset, length) {
         call $log))
 ```
 
-> **참고:** 위와 같이 WebAssembly 파일의 주석을 허용하는 두 개의 세미콜론 구문 (`;;`)을 확인하십시오.
+> [!NOTE]
+> 위와 같이 WebAssembly 파일의 주석을 허용하는 두 개의 세미콜론 구문 (`;;`)을 확인하십시오.
 
 자바 스크립트에서 우리는 1 페이지 메모리를 만들고 그것을 전달할 수 있습니다. 결과적으로 "Hi"가 콘솔에 출력됩니다 :
 
@@ -352,7 +357,8 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 );
 ```
 
-> **참고:** 깃허브에서 소스 전체버전을 확인할 수 있습니다. [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> [!NOTE]
+> 깃허브에서 소스 전체버전을 확인할 수 있습니다. [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
 ### WebAssembly tables
 
@@ -391,7 +397,8 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 - `elem` 섹션은 모듈의 모든 함수 서브 세트를 순서에 상관없이 나열하며 중복을 허용 합니다. 이것은 참조되는 순서대로 테이블에서 참조 할 목록입니다.
 - `elem` 섹션 내의 `(i32.const 0)` 값은 오프셋입니다. 이것은 섹션의 시작 부분에서 선언해야하며, 테이블 함수 참조가 채워지기 시작하는 인덱스를 지정합니다. 여기서 0과 2의 크기를 지정 했으므로 (위 참조) 인덱스 0과 1에서 두 개의 참조를 채울 수 있습니다. 오프셋 1에서 참조를 쓰고 싶다면 `(i32.const 1)`이고 테이블 크기는 3이어야합니다.
 
-> **참고:** 초기화되지 않은 요소에는 기본 throw-on-call 값이 제공됩니다.
+> [!NOTE]
+> 초기화되지 않은 요소에는 기본 throw-on-call 값이 제공됩니다.
 
 자바 스크립트에서 이와 같은 테이블 인스턴스를 생성하는 호출은 다음과 같습니다.
 
@@ -471,7 +478,8 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 
 > **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **참고:** Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
+> [!NOTE]
+> Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
 
 ### Mutating tables and dynamic linking
 

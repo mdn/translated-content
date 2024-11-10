@@ -7,14 +7,6 @@ slug: Learn/MathML/First_steps
 
 MathML 是用于在网页中编写数学公式的标记语言。本单元将为你提供一个轻松的开始，帮助你掌握 MathML 的基本原理、语法和如何在 HTML 中开始使用它。
 
-> **标注：**
->
-> #### 想成为前端开发人员吗？
->
-> 我们提供了一门课程，包含了你实现此目标所需的所有基本信息。
->
-> [**开始学习**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 前提
 
 在开始本单元之前，你应具备以下知识：
@@ -23,7 +15,8 @@ MathML 是用于在网页中编写数学公式的标记语言。本单元将为�
 2. 已完成基本的工作环境设置，详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并了解如何创建和管理文件，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
 3. 熟悉 HTML 的基本知识，详见 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
 
-> **备注：** 如果你在计算机/平板电脑/其他设备上工作，但这些设备上你无法创建自己的文件，那么可以尝试在在线编程平台（如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)）中运行代码示例。
+> [!NOTE]
+> 如果你在计算机/平板电脑/其他设备上工作，但这些设备上你无法创建自己的文件，那么可以尝试在在线编程平台（如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)）中运行代码示例。
 
 ## 指南
 

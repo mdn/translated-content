@@ -3,7 +3,7 @@ title: Селектор потомков
 slug: Web/CSS/Descendant_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Описание
 

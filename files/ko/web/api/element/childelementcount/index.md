@@ -7,7 +7,8 @@ slug: Web/API/Element/childElementCount
 
 **`ParentNode.childElementCount`** 읽기 전용 속성은 주어진 요소의 자식 요소 개수를 `unsigned long` 타입으로 반환합니다.
 
-> **참고:** 이 속성은 처음에 {{domxref("ElementTraversal")}} 인터페이스에 정의되었습니다. 이 인터페이스는 자식이 있는 {{domxref("Node")}}와 자식 {{domxref("Node")}}를 위한 두 가지 고유한 속성 집합을 포함하고 있었는데, 각각 {{domxref("ParentNode")}}와 {{domxref("ChildNode")}} 개별 인터페이스로 이동되었습니다. `childElementCount`의 경우 {{domxref("ParentNode")}}로 이동했습니다. 이것은 기술적인 변화로 호환성에는 영향을 미치지 않습니다.
+> [!NOTE]
+> 이 속성은 처음에 {{domxref("ElementTraversal")}} 인터페이스에 정의되었습니다. 이 인터페이스는 자식이 있는 {{domxref("Node")}}와 자식 {{domxref("Node")}}를 위한 두 가지 고유한 속성 집합을 포함하고 있었는데, 각각 {{domxref("ParentNode")}}와 {{domxref("ChildNode")}} 개별 인터페이스로 이동되었습니다. `childElementCount`의 경우 {{domxref("ParentNode")}}로 이동했습니다. 이것은 기술적인 변화로 호환성에는 영향을 미치지 않습니다.
 
 ## 문법
 

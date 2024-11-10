@@ -13,13 +13,17 @@ slug: Web/API/Cache
 
 > **备注：** {{domxref("Cache.put")}}, {{domxref("Cache.add")}}和{{domxref("Cache.addAll")}}只能在`GET`请求下使用。
 
-> **备注：** Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
+> [!NOTE]
+> Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
 
-> **备注：** 自 Chrome 46 版本起，Cache API 只保存安全来源的请求，即那些通过 HTTPS 服务的请求。
+> [!NOTE]
+> 自 Chrome 46 版本起，Cache API 只保存安全来源的请求，即那些通过 HTTPS 服务的请求。
 
-> **备注：** The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the Cache.
+> [!NOTE]
+> The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the Cache.
 
-> **备注：** Cache API 不支持 HTTP 缓存头。
+> [!NOTE]
+> Cache API 不支持 HTTP 缓存头。
 
 ## 方法
 
@@ -40,7 +44,7 @@ slug: Web/API/Cache
 
 ## 示例
 
-此代码段来自 [service worker selective caching sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (请参阅 [selective caching live](https://googlechrome.github.io/samples/service-worker/selective-caching/)) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以`font/开始的`Content-Type 头的{{domxref("Cache")}}对象。
+此代码段来自 [service worker 选择性缓存示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)。（请参阅[选择性缓存在线示例](https://googlechrome.github.io/samples/service-worker/selective-caching/)）该代码使用 {{domxref("CacheStorage.open()")}} 打开任何具有以 `font/` 开始的 `Content-Type` 标头的 `Cache` 对象。
 
 代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
 
@@ -48,7 +52,8 @@ slug: Web/API/Cache
 
 该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。它将缓存的速记标识符映射到特定的版本化缓存名称。代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。
 
-> **备注：** 在 Chrome 中，请访问 chrome://inspect/#service-workers，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
+> [!NOTE]
+> 在 Chrome 中，请访问 chrome://inspect/#service-workers，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
 
 ```js
 var CACHE_VERSION = 1;
@@ -117,6 +122,4 @@ self.addEventListener("fetch", function (event) {
 
 - [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

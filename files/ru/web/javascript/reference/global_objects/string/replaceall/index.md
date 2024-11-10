@@ -17,7 +17,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Примечание:** Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
+> [!NOTE]
+> Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
 
 ### Parameters
 
@@ -92,7 +93,7 @@ TypeError: replaceAll must be called with a global RegExp
 ("aa..cc");
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -100,7 +101,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}

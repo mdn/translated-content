@@ -18,11 +18,11 @@ slug: Web/Tutorials
   - : 此單元，為了孰悉重要的概念和語法，思考將 HTML 轉為文字, 如何建立超連鏈接, 以及如何使用 HTML 架構建立網站做好準備。
 - **[MDN HTML 元素引用](/zh-TW/docs/HTML/Element)**
   - : HTML 元素綜合參考。以及在不同瀏覽器的支援程度。
-- **[使用 HTML 建立一個簡易網站](https://www.theblogstarter.com/html-for-beginners) (The Blog Starter)**
+- **[使用 HTML 建立一個簡易網站](https://www.theblogstarter.com/html-for-beginners/) (The Blog Starter)**
   - : 適用於 HTML 初學者的指南，其中包含常見的標籤( tag ), 其中包括利用編碼範例步驟，一步步指導建立一個基本網頁。
-- **[初學者 HTML 指南](http://bit.ly/2z9xSS2) (Website Setup)**
+- **[初學者 HTML 指南](https://websitesetup.org/html-tutorial-beginners/) (Website Setup)**
   - : 此指南將指導你如何使用 HTML 和 HTML5 標籤 (tags) 建立基礎網站。 簡易的步驟教學，以及包含可用於提升編碼技巧的圖像和資源。
-- **[HTML 挑戰](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)(Wikiversity)**
+- **[HTML 挑戰](https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges)(Wikiversity)**
   - : 使用這些挑戰來磨練你的 HTML 技能 (例如 : "Should I use an \<h2> element or a \<strong> element?"), 注意這些含有意義的標籤。
 
 ### 中級
@@ -60,7 +60,7 @@ slug: Web/Tutorials
   - : 此時，我們已看過 CSS 基礎知識，如何設置文本樣式，以及如何設置和操作內容所在的框框。 現在是時候看看如何將框框放在彼此之間相對位置上的正確位置。 我們已經涵蓋了必要的先決條件，因此現在可以深入了解 CSS 佈局，查看不同的顯示設置，包含浮動和定位的傳統佈局方法，以及 Flexbox 等新的佈局工具。
 - **[CSS 參考](/zh-TW/docs/CSS/CSS_Reference)**
   - : 完整參考 CSS，詳細介紹 Firefox 和其他瀏覽器的支援度。
-- **[流變格線框架](https://www.alistapart.com/articles/fluidgrids/) (A List Apart)**
+- **[流變格線框架](https://alistapart.com/article/fluidgrids/) (A List Apart)**
   - : 在瀏流器視窗大小調整的同時，能夠流暢地調整內容大小的設計佈局，同時使用字體排版格線。
 - **[CSS 挑戰](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (Wikiversity)**
   - : 提高你的 CSS 技能，並了解需多加練習的地方。
@@ -107,7 +107,7 @@ slug: Web/Tutorials
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
 - **[Speaking JavaScript](http://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
-- **[Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)**
+- **[Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)**
   - : An introduction to essential JavaScript design patterns.
 
 ### 高級
@@ -130,4 +130,4 @@ slug: Web/Tutorials
 ### Extension Development
 
 - [WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent the system is compatible with the [extension API](https://developer.chrome.com/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](https://wiki.mozilla.org/Firefox/multiprocess).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](https://wiki.mozilla.org/Firefox/multiprocess).

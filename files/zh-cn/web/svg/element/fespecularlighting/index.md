@@ -9,7 +9,7 @@ slug: Web/SVG/Element/feSpecularLighting
 
 该滤镜制作了一个图像，图像包含光照计算的镜面反射部分。如此一个映射是为了与纹理相结合，使用算术{{SVGElement("feComposite")}}方法的叠加。利用在应用到纹理图像前添加多个光映射，可以模拟多个光源。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

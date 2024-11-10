@@ -9,15 +9,15 @@ slug: Web/API/NodeList/keys
 
 ## 语法
 
-```
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
 ### 返回值
 
 返回 {{jsxref("Iteration_protocols","iterator")}}.
 
-## 例子
+## 示例
 
 ```js
 var node = document.createElement("div");
@@ -39,7 +39,7 @@ for (var key of list.keys()) {
 
 结果是：
 
-```
+```plain
 0
 1
 2
@@ -49,7 +49,7 @@ for (var key of list.keys()) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

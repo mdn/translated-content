@@ -3,7 +3,7 @@ title: Селектор дочерних элементов
 slug: Web/CSS/Child_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Описание
 

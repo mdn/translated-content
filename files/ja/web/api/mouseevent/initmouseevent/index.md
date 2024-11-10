@@ -10,7 +10,8 @@ l10n:
 
 **`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
 
-> **警告:** このメソッドは非推奨になったので、今後は使用しないでください。
+> [!WARNING]
+> このメソッドは非推奨になったので、今後は使用しないでください。
 >
 > 代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} など、特定のイベントのコンストラクターを使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、使用方法についての詳しい情報があります。

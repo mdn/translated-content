@@ -120,7 +120,8 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 }
 ```
 
-> **참고:** 예를 들어, 플렉스박스를 사용하여 위의 간단한 반응형 레이아웃을 만들었습니다. 화면이 커지면 중단점을 사용하여 여러 열로 전환하고 {{cssxref('max-width')}}로 메인 콘텐츠의 크기를 제한합니다. [예시](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> [!NOTE]
+> 예를 들어, 플렉스박스를 사용하여 위의 간단한 반응형 레이아웃을 만들었습니다. 화면이 커지면 중단점을 사용하여 여러 열로 전환하고 {{cssxref('max-width')}}로 메인 콘텐츠의 크기를 제한합니다. [예시](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### CSS 격자
 
@@ -133,7 +134,8 @@ CSS 그리드 레이아웃에서 `fr` 단위는 그리드 트랙에 사용 가�
 }
 ```
 
-> **참고:** 격자 레이아웃 버전은 .wrapper [예제](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)상에 열을 정의할 수 있으므로 더 간단합니다: [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> [!NOTE]
+> 격자 레이아웃 버전은 .wrapper [예제](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)상에 열을 정의할 수 있으므로 더 간단합니다: [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
 
 ## 반응형 이미지
 
@@ -191,7 +193,8 @@ h1 {
 
 ![큰 머리글이 딸린 두개의 열 레이아웃입니다.](mdn-rwd-font-desktop.png)
 
-> **참고:** 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> [!NOTE]
+> 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
 타이포그래피에 대한 이 접근 방식에서 알 수 있듯이 미디어 쿼리를 페이지 레이아웃 변경에만 제한할 필요는 없습니다. 모든 요소를 조정하여 다른 화면 크기에서 더 유용하거나 매력적으로 보이도록 하는 데 사용할 수 있습니다.
 
@@ -217,7 +220,8 @@ h1 {
 
 즉, 모바일용으로 설정하고 미디어 쿼리에서 다시 정의할 필요 없이 제목의 글꼴 크기를 한 번만 지정하면 됩니다. 그런 다음 뷰포트의 크기를 늘리면 글꼴이 점차 커집니다.
 
-> **참고:** 이에 대한 예제의 실현: [예제](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
+> [!NOTE]
+> 이에 대한 예제의 실현: [예제](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [소스 코드](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
 
 ## 뷰포트 메타 테그
 

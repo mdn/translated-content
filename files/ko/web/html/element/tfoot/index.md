@@ -84,7 +84,7 @@ slug: Web/HTML/Element/tfoot
     > **주의:**
     >
     > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
-    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](/ko/docs/Web/HTML/Element/tfoot#char)의 값을 {{cssxref("text-align")}} 속성의 {{unimplemented_inline}} 값으로 사용할 수 있습니다.
+    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](/ko/docs/Web/HTML/Element/tfoot#char)의 값을 {{cssxref("text-align")}} 속성의 값으로 사용할 수 있습니다.
 
 - `bgcolor` {{Deprecated_inline}}
   - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.

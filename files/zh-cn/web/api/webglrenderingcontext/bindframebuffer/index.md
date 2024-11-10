@@ -64,7 +64,7 @@ gl.getParameter(gl.FRAMEBUFFER_BINDING);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}

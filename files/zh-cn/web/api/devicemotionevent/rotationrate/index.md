@@ -7,13 +7,8 @@ slug: Web/API/DeviceMotionEvent/rotationRate
 
 返回设备围绕其每个轴（x、y、z）旋转的速率（单位：度/秒）。
 
-> **备注：** 如果设备无法提供此信息，则为 null
-
-## 语法
-
-```
-var rates = instanceOfDeviceMotionEvent.rotationRate;
-```
+> [!NOTE]
+> 如果设备无法提供此信息，则为 null
 
 ## 值
 

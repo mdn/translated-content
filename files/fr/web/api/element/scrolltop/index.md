@@ -11,7 +11,8 @@ La valeur `scrollTop` d'un élément correspond à la distance entre le haut de 
 
 Lorsque `scrollTop` est utilisé sur l'élément racine (c'est-à-dire l'élément `<html>`), c'est la valeur de `scrollY` pour la fenêtre qui est renvoyée. [Il s'agit d'un cas aux limites pour `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
 
-> **Attention :** Pour les systèmes qui utilisent un affichage mis à l'échelle (_display scaling_), `scrollTop` peut fournir une valeur décimale.
+> [!WARNING]
+> Pour les systèmes qui utilisent un affichage mis à l'échelle (_display scaling_), `scrollTop` peut fournir une valeur décimale.
 
 ## Syntaxe
 

@@ -15,7 +15,8 @@ slug: Web/CSS/border-radius
 
 Свойство `border-radius` не применяется к элементам таблицы, когда свойство {{Cssxref ("border-collapse")}} имеет значение `collapse`.
 
-> **Примечание:** Как и с любым другим сокращённым свойством, отдельные подсвойства не могут наследоваться. Например, как в `border-radius:0 0 inherit inherit`, что будет частично переопределять существующие определения. Вместо этого должны использоваться отдельные длинные свойства.
+> [!NOTE]
+> Как и с любым другим сокращённым свойством, отдельные подсвойства не могут наследоваться. Например, как в `border-radius:0 0 inherit inherit`, что будет частично переопределять существующие определения. Вместо этого должны использоваться отдельные длинные свойства.
 
 ## Синтаксис
 
@@ -197,11 +198,11 @@ pre#example-7 {
 
 ## Живые примеры
 
-- Пример 1: <http://jsfiddle.net/Tripad/qnGKj/2/>
-- Пример 2: <http://jsfiddle.net/Tripad/qnGKj/3/>
-- Пример 3: <http://jsfiddle.net/Tripad/qnGKj/4/>
-- Пример 4: <http://jsfiddle.net/Tripad/qnGKj/5/>
-- Пример 5: <http://jsfiddle.net/Tripad/qnGKj/6/>
+- Пример 1: <https://jsfiddle.net/Tripad/qnGKj/2/>
+- Пример 2: <https://jsfiddle.net/Tripad/qnGKj/3/>
+- Пример 3: <https://jsfiddle.net/Tripad/qnGKj/4/>
+- Пример 4: <https://jsfiddle.net/Tripad/qnGKj/5/>
+- Пример 5: <https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## Спецификации
 

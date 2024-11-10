@@ -3,7 +3,7 @@ title: Window.postMessage()
 slug: Web/API/Window/postMessage
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 **`Window.postMessage()`** - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешён доступ друг к другу только если страницы, которые их выполняли, передаются по одному протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). `window.postMessage()` предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.
 
@@ -129,7 +129,7 @@ The value of the `origin` property when the sending window contains a `javascrip
 
 `window.postMessage` is available to JavaScript running in chrome code (e.g., in extensions and privileged code), but the `source` property of the dispatched event is always `null` as a security restriction. (The other properties have their expected values.) The `targetOrigin` argument for a message sent to a window located at a `chrome:` URL is currently misinterpreted such that the only value which will result in a message being sent is `"*"`. Since this value is unsafe when the target window can be navigated elsewhere by a malicious site, it is recommended that `postMessage` not be used to communicate with `chrome:` pages for now; use a different method (such as a query string when the window is opened) to communicate with chrome windows. Lastly, posting a message to a page at a `file:` URL currently requires that the `targetOrigin` argument be `"*"`. `file://` cannot be used as a security restriction; this restriction may be modified in the future.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -137,7 +137,7 @@ The value of the `origin` property when the sending window contains a `javascrip
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Document.domain")}}
 - {{domxref("CustomEvent")}}

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 33e42e40dbcdc4a81fde5597c602a180b30453fa
 ---
 
+{{APIRef("XSLT")}}
+
 Une application courante de XSLT dans les navigateurs consiste à transformer du code XML en HTML coté client. Le second exemple va transformer un document d'entrée (`example2.xml`), qui contient des informations à propos d'un article, en un document HTML.
 
 ## Fichier `example2.xml`

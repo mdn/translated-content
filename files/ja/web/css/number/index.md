@@ -1,6 +1,8 @@
 ---
 title: <number>
 slug: Web/CSS/number
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
@@ -13,13 +15,13 @@ slug: Web/CSS/number
 
 ## 補間
 
-`<number>` データ型の値はアニメーション用に補間可能です。実数、浮動小数点数として補間されます。補間の速度は、アニメーションに関連付けられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で決められます。
+`<number>` データ型の値はアニメーション用に補間可能です。実数、浮動小数点数として補間されます。補間の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)で決められます。
 
 ## 例
 
 ### 有効な数値
 
-```css example-good
+```plain example-good
 12          生の <integer> は <number> でもある
 4.01        正の実数
 -456.8      負の実数
@@ -33,7 +35,7 @@ slug: Web/CSS/number
 
 ### 無効な数値
 
-```css example-bad
+```plain example-bad
 12.         小数点の後ろには数字が続かなくてはなりません
 +-12.2      前に置ける +/- は 1 つだけです
 12.1.1      小数点は1つしか置けません

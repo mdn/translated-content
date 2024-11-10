@@ -34,7 +34,7 @@ replace(pattern, replacement)
 
 字符串模式只会被替换一次。要执行全局搜索和替换，请使用带有 `g` 标志的正则表达式或使用 [`replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)。
 
-如果 `pattern` 是一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，传入目标字符串和 `replacement` 作为参数。它的返回值成为 `replace()` 的返回值。在这种情况下，`replace()` 的行为完全由 `@@replace` 方法定义——例如，下面的说明中提到的任何"捕获组"都实际上是由 [`RegExp.prototype[@@replace]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) 提供的功能。
+如果 `pattern` 是一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，传入目标字符串和 `replacement` 作为参数。它的返回值成为 `replace()` 的返回值。在这种情况下，`replace()` 的行为完全由 `[Symbol.replace]()` 方法定义——例如，下面的说明中提到的任何"捕获组"都实际上是由 [`RegExp.prototype[Symbol.replace]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) 提供的功能。
 
 如果 `pattern` 是一个空字符串，则替换项将被插入到字符串的开头。
 
@@ -42,7 +42,7 @@ replace(pattern, replacement)
 "xxx".replace("", "_"); // "_xxx"
 ```
 
-`replace()` 替换多次的唯一情况是传入带有 `g` 标志的正则表达式。有关正则表达式属性（特别是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replace()` 交互的更多信息，请参阅 [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。
+`replace()` 替换多次的唯一情况是传入带有 `g` 标志的正则表达式。有关正则表达式属性（特别是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replace()` 交互的更多信息，请参阅 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。
 
 ### 指定字符串作为替换项
 
@@ -74,7 +74,8 @@ replace(pattern, replacement)
 
 你可以将第二个参数指定为函数。在这种情况下，匹配完成后将调用该函数。函数的结果（返回值）将用作替换字符串。
 
-> **备注：** 上述特殊替换模式*不*适用于替换器函数返回的字符串。
+> [!NOTE]
+> 上述特殊替换模式*不*适用于替换器函数返回的字符串。
 
 该函数具有以下签名：
 
@@ -89,7 +90,7 @@ function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
 - `match`
   - : 匹配的子字符串。（对应于上面的 `$&`。）
 - `p1, p2, …, pN`
-  - : 如果 `replace()` 的第一个参数是 {{jsxref("RegExp")}} 对象，则为捕获组（包括命名捕获组）找到的第 `n` 个字符串。（对应于上面的 `$1`、`$2` 等。）例如，如果 `pattern` 是 `/(\d+)(\w+)/`，则 `p1` 是 `\a+` 的匹配项，`p2` 是 `\b+` 的匹配项。如果该组是分支的一部分（例如 `"abc".replace(/(a)|(b)/, Replacer)`），则不匹配的替代项将为 `undefined`。
+  - : 如果 `replace()` 的第一个参数是 {{jsxref("RegExp")}} 对象，则为捕获组（包括命名捕获组）找到的第 `n` 个字符串。（对应于上面的 `$1`、`$2` 等。）例如，如果 `pattern` 是 `/(\a+)(\b+)/`，则 `p1` 是 `\a+` 的匹配项，`p2` 是 `\b+` 的匹配项。如果该组是分支的一部分（例如 `"abc".replace(/(a)|(b)/, Replacer)`），则不匹配的替代项将为 `undefined`。
 - `offset`
   - : 原始字符串中匹配子字符串的偏移量。例如，如果整个字符串是 `'abcd'`，而匹配的子字符串是 `'bc'`，那么这个参数将是 `1`。
 - `string`
@@ -126,7 +127,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 这将打印 `'Twas the night before Christmas...'`。
 
-> **备注：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+> [!NOTE]
+> 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ### 在 replace() 中使用 global 和 ignoreCase 标志
 
@@ -249,4 +251,4 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
 - [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-- [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

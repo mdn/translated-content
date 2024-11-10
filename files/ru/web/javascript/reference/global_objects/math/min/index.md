@@ -3,7 +3,7 @@ title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

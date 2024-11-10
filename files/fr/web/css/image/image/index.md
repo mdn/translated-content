@@ -9,7 +9,8 @@ l10n:
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une image (type [`<image>`](/fr/docs/Web/CSS/image)) à la façon de la fonction [`url()`](/fr/docs/Web/CSS/url) mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
 
-> **Note :** Attention à ne pas confondre cette notation fonctionnelle CSS avec le constructeur du DOM [`Image()` pour `HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement/Image).
+> [!NOTE]
+> Attention à ne pas confondre cette notation fonctionnelle CSS avec le constructeur du DOM [`Image()` pour `HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement/Image).
 
 ## Syntaxe
 

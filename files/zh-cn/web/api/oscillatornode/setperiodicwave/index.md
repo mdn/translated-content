@@ -7,12 +7,13 @@ slug: Web/API/OscillatorNode/setPeriodicWave
 
 {{ domxref("OscillatorNode") }} 接口的 **`setPeriodicWave()`** 方法用来指向 {{domxref("PeriodicWave")}}，PeriodicWave 定义了一个周期性波形能够形成 oscillator 的输出，当{{domxref("OscillatorNode.type", "type")}} 是 `custom` 的时候。
 
-> **备注：** 该方法取代了废弃的 {{ domxref("OscillatorNode.setWaveTable()")}}.
+> [!NOTE]
+> 该方法取代了废弃的 {{ domxref("OscillatorNode.setWaveTable()")}}.
 
 ## 语法
 
-```
-OscillatorNode.setPeriodicWave(wave);
+```js-nolint
+setPeriodicWave(wave)
 ```
 
 ### 参数

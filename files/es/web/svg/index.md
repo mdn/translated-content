@@ -3,6 +3,8 @@ title: SVG
 slug: Web/SVG
 ---
 
+{{SVGRef}}
+
 **[Comenzando con SVG](/es/docs/SVG/Tutorial)**
 Este tutorial te ayudará a comenzar a usar SVG.
 

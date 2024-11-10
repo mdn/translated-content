@@ -51,7 +51,8 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 ## Index des mots-clés
 
-> **Note :** Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
+> [!NOTE]
+> Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
 
 {{CSS_Ref}}
 
@@ -96,7 +97,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
   - : Représente des entités qui ne sont pas incluses en HTML.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
 

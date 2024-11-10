@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/URIError
 
 **`URIError`** 对象用来表示以一种错误的方式使用全局 URI 处理函数而产生的错误。
 
-`URIError` 是 {{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{domxref("structuredClone()")}} 克隆它，或者在 [Worker](/zh-CN/docs/Web/API/Worker) 间使用 {{domxref("Worker/postMessage()", "postMessage()")}} 拷贝这个对象。
+`URIError` 是 {{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 克隆它，或者在 [Worker](/zh-CN/docs/Web/API/Worker) 间使用 {{domxref("Worker/postMessage()", "postMessage()")}} 拷贝这个对象。
 
 ## 构造函数
 

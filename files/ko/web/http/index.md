@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**하이퍼텍스트 전송 프로토콜 (HTTP)**은 HTML과 같은 하이퍼미디어 문서를 전송하기 위한 [애플리케이션 계층](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 통신을 위해 설계되었지만 다른 목적으로도 사용할 수 있습니다. HTTP는 클라이언트가 요청을 하기 위해 연결을 연 다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 서버가 두 요청 간에 어떠한 데이터(상태)도 유지하지 않습니다.
+**하이퍼텍스트 전송 프로토콜 (HTTP)** 은 HTML과 같은 하이퍼미디어 문서를 전송하기 위한 [애플리케이션 계층](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 통신을 위해 설계되었지만 다른 목적으로도 사용할 수 있습니다. HTTP는 클라이언트가 요청을 하기 위해 연결을 연 다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 서버가 두 요청 간에 어떠한 데이터(상태)도 유지하지 않습니다.
 
 ## 자습서
 

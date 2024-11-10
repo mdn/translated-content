@@ -60,7 +60,7 @@ console.log(gen.next().value); // 2
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 ### Legacy generators
 

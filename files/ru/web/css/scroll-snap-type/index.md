@@ -222,7 +222,7 @@ body,
 
 {{EmbedLiveSample("Example", "100%", "1630")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

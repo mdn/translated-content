@@ -27,7 +27,8 @@ Chaque exception a un **nom**, qui est une courte chaîne identifiant l'erreur o
 
 Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent leurs propres ensembles de noms, il ne s'agit donc pas ici nécessairement d'une liste complète.
 
-> **Note :** Parce qu'historiquement les erreurs ont été identifiées par une valeur numérique qui correspondait à une variable nommée définie pour avoir cette valeur, certaines des entrées ci-dessous indiquent la valeur de code héritée et le nom de constante qui ont été utilisés dans le passé.
+> [!NOTE]
+> Parce qu'historiquement les erreurs ont été identifiées par une valeur numérique qui correspondait à une variable nommée définie pour avoir cette valeur, certaines des entrées ci-dessous indiquent la valeur de code héritée et le nom de constante qui ont été utilisés dans le passé.
 
 - `IndexSizeError`
   - : L'index n'est pas dans la plage autorisée. Par exemple, cela peut être lancé par un objet {{ domxref("Range") }}. (Valeur de code héritée : `1` et nom de la constante héritée : `INDEX_SIZE_ERR`)

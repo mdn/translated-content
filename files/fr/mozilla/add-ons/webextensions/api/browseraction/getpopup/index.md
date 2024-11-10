@@ -3,7 +3,7 @@ title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le document HTML défini comme la popup pour cette action du navigateur.
 
@@ -56,7 +56,7 @@ gettingPopup.then(gotPopup);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

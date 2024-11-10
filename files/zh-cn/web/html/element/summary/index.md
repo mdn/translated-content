@@ -77,7 +77,8 @@ slug: Web/HTML/Element/summary
 
 目前这有一些间距问题，可以用 CSS 解决。
 
-> **警告：** 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
+> [!WARNING]
+> 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
 
 ### summary 元素中的 HTML
 

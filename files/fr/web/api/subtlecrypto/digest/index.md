@@ -38,7 +38,8 @@ Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage 
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
-> **Attention :** Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> [!WARNING]
+> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
 ### SHA-256
 
@@ -52,7 +53,8 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
 
-> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
+> [!NOTE]
+> Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
 
 ## Exemples
 

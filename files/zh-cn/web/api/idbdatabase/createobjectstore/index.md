@@ -15,9 +15,9 @@ slug: Web/API/IDBDatabase/createObjectStore
 
 ## 语法
 
-```
-var objectStore = IDBDatabase.createObjectStore(name);
-var objectStore = IDBDatabase.createObjectStore(name, options);
+```js-nolint
+createObjectStore(name)
+createObjectStore(name, options)
 ```
 
 ### 参数

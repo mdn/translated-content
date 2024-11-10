@@ -11,7 +11,8 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas de figure.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 <table class="properties">
   <tbody>
@@ -81,7 +82,8 @@ L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
-> **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour plus de détails et d'exemples.
 
@@ -89,7 +91,8 @@ Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour 
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
@@ -139,7 +142,8 @@ Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une 
 
 Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien. Seule une vérification de format est effectuée.
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ### Un simple champ
 
@@ -203,7 +207,8 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractèr
 
 {{EmbedLiveSample("", 600, 40)}}
 
-> **Note :** Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle sera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec `maxlength`.
+> [!NOTE]
+> Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle sera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec `maxlength`.
 
 ### Fournir des valeurs par défaut
 
@@ -259,7 +264,8 @@ Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Elemen
 
 Il existe deux niveaux de validation pour les contrôles de type `url`. Tout d'abord, le contrôle natif, toujours présent qui s'assure que la valeur correspond à une URL bien formée. Ensuite, on peut ajouter des options supplémentaires pour personnaliser le format de l'URL attendue.
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ### Validation simple
 
@@ -355,7 +361,8 @@ Il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attri
 
 C'est pourquoi nous avons écrit «&nbsp;L'URL doit être sur le domaine maboite&nbsp;» qui est plus détaillé.
 
-> **Note :** Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
+> [!NOTE]
+> Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
 
 ## Exemples
 

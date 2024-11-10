@@ -28,7 +28,7 @@ l10n:
 - {{jsxref("Object/constructor", "Intl.Collator.prototype.constructor")}}
   - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Intl.Collator` начальным значением является конструктор {{jsxref("Intl/Collator/Collator", "Intl.Collator")}}.
 - `Intl.Collator.prototype[@@toStringTag]`
-  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является `"Intl.Collator"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
+  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"Intl.Collator"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
 
 ## Методы экземпляра
 

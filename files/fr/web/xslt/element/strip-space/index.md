@@ -3,7 +3,7 @@ title: strip-space
 slug: Web/XSLT/Element/strip-space
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:strip-space>` définit les éléments du document source dont les noeuds descendants ne contenant que des espaces doivent être supprimés.
 

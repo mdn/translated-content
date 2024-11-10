@@ -36,5 +36,5 @@ slug: Web/API/EyeDropper_API
 
 ## 参见
 
-- [使用 EyeDropper API，可以选择屏幕上任意像素的颜色。](https://developer.chrome.com/articles/eyedropper/)
+- [使用 EyeDropper API，可以选择屏幕上任意像素的颜色。](https://developer.chrome.google.cn/docs/capabilities/web-apis/eyedropper)
 - [EyeDropper API W3C/SMPTE 联合研讨会](https://www.w3.org/2021/03/media-production-workshop/talks/patrick-brosset-eyedropper-api.html)

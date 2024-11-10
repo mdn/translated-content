@@ -3,7 +3,7 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブの ID を指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。
 
@@ -49,7 +49,8 @@ browser.tabs.onActivated.addListener(logListener);
 
 {{Compat}}
 
-> **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

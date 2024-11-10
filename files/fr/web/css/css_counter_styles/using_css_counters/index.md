@@ -27,7 +27,8 @@ La fonction `counters()` prend également deux formes : `counters(nom, chaine)` 
 
 Dans l'exemple qui suit, la feuille de style CSS préfixe chaque titre de niveau 3 avec « Section \<la valeur du compteur> : ».
 
-> **Note :** La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est `decimal`).
+> [!NOTE]
+> La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est `decimal`).
 
 #### CSS
 

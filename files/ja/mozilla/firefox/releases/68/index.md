@@ -46,7 +46,7 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 #### ネットワークモニター
 
 - ネットワークモニターの [要求リスト](/ja/docs/Tools/Network_Monitor/request_list#Filtering_requests) で、特定の URL をブロックできるようになりました ([Firefox バグ 1151368](https://bugzil.la/1151368))。
-- コンテキストメニューの [再送信](/ja/docs/Tools/Network_Monitor/request_list#Context_menu) コマンドを使用して、メソッド、URL、パラメーター、ヘッダーを編集せずにネットワーク要求を再送信できます ([Firefox バグ 1422014](https://bugzil.la/1422014))。
+- コンテキストメニューの [再送信](/ja/docs/Tools/Network_Monitor/request_list#Context_menu) コマンドを使用して、メソッド、URL、引数、ヘッダーを編集せずにネットワーク要求を再送信できます ([Firefox バグ 1422014](https://bugzil.la/1422014))。
 - ネットワークモニターの [ヘッダー](/ja/docs/Tools/Network_Monitor/request_details#Headers) タブのコンテキストメニューで、すべてあるいは一部のヘッダー情報を JSON 形式でクリップボードにコピーできるようになりました ([Firefox バグ 1442249](https://bugzil.la/1442249))。
 
 #### インスペクター
@@ -87,7 +87,7 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
   - {{CSSxRef("scroll-snap-align")}} ([Firefox バグ 1373835](https://bugzil.la/1373835))
 
 - ほかのブラウザーとの互換性のため、{{CSSxRef("-webkit-line-clamp")}} プロパティを実装しました ([Firefox バグ 866102](https://bugzil.la/866102))。
-- {{CSSxRef("::marker")}} 疑似要素 ([Firefox バグ 205202](https://bugzil.la/205202)) と、::marker のアニメーション ([Firefox バグ 1538618](https://bugzil.la/1538618)) をサポートしました。
+- {{CSSxRef("::marker")}} 擬似要素 ([Firefox バグ 205202](https://bugzil.la/205202)) と、::marker のアニメーション ([Firefox バグ 1538618](https://bugzil.la/1538618)) をサポートしました。
 - {{CSSxRef("currentColor")}} を計算値に変更しました ({{cssxref("color")}} プロパティを除く) ([Firefox バグ 760345](https://bugzil.la/760345))。
 - 長さの単位 'ch' を、仕様書に合うよう修正しました ('0' のグリフがない場合は高さにフォールバックする) ([Firefox バグ 282126](https://bugzil.la/282126))。
 - {{CSSxRef("counter-set")}} プロパティを実装しました ([Firefox バグ 1518201](https://bugzil.la/1518201))。
@@ -144,7 +144,8 @@ _変更なし。_
 - ストリームの "最初の音声トラック" の ID が辞書順で最初に来るトラックであると定義する現行の仕様書に準拠するよう、{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} コンストラクターを更新しました ([Firefox バグ 1324548](https://bugzil.la/1324548))。
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} は安全でないコンテキストから使用できなくなりました。使用を試みると `NotAllowedError` 例外が発生します。安全なコンテキストは HTTPS を使用して読み込むもの、`file:///` スキームを使用して示すもの、`localhost` から読み込むものです。今のところ、必要であれば設定項目 `media.getusermedia.insecure.enabled` を `true` に設定すると、`getUserMedia()` を安全でないコンテキストから呼び出すことを再有効化できます ([Firefox バグ 1335740](https://bugzil.la/1335740))。
 
-  > **メモ:** 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも安全でないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
+  > [!NOTE]
+  > 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも安全でないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
 
 #### 廃止
 
@@ -173,7 +174,7 @@ _変更なし。_
 
 #### その他
 
-- トップレベルのブラウザーコンテキストが突然消えてしまうことを防ぐため、メモリーが少ない状況でバックグラウンドのタブを強制的にアンロードする機能を無効化しました ([Firefox バグ 1553748](https://bugzil.la/1553748))。
+- トップレベルの閲覧コンテキストが突然消えてしまうことを防ぐため、メモリーが少ない状況でバックグラウンドのタブを強制的にアンロードする機能を無効化しました ([Firefox バグ 1553748](https://bugzil.la/1553748))。
 - 新しいタブを開いた後にウェブサイトへ移動するときに HTTP 認証ダイアログが表示されない、特権付きコンテンツプロセスを無効化しました ([Firefox バグ 1558763](https://bugzil.la/1558763))。
 
 ### プラグイン
@@ -186,7 +187,7 @@ _変更なし。_
 
 - [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) 関数が非推奨になり、Firefox 71 で削除される予定です ([Firefox バグ 1545811](https://bugzil.la/1545811))。
 - `boolean` 型の `incognito` フラグを [proxy.RequestDetails](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails) オブジェクトに追加しました。`true` を設定すると、プライベートブラウジングの要求であったことを示します ([Firefox バグ 1545163](https://bugzil.la/1545163))。
-- [webRequest.RequestFilter](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) が incognito パラメーターを持てるようになりました。これを与えると、incognito の状態 (`true` または `false`) に合致しない要求を除去できます ([Firefox バグ 1548177](https://bugzil.la/1548177))。
+- [webRequest.RequestFilter](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) が incognito 引数を持てるようになりました。これを与えると、incognito の状態 (`true` または `false`) に合致しない要求を除去できます ([Firefox バグ 1548177](https://bugzil.la/1548177))。
 - 現在のコンテキストにおける Cookie のストア ID を表す、`string` 型の `cookieStoreId` を [proxy.RequestDetails](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails) オブジェクトに追加しました ([Firefox バグ 1545420](https://bugzil.la/1545420))。
 - アドオンがブックマークフォルダーをルートフォルダーへ追加しようとしたときのエラーメッセージが、より直感的になりました ([Firefox バグ 1512171](https://bugzil.la/1512171))。
 - [`browser.tabs.duplicate()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate) が返す promise がタブが完全に読み込まれる前に、直ちに解決するようになりました ([Firefox バグ 1394376](https://bugzil.la/1394376))。

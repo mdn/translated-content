@@ -3,7 +3,7 @@ title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebExtAPIRef("history.HistoryItem")}} est transmis à l'écouteur. Cet événement se déclenche avant que la page ne soit chargée.
 
@@ -57,9 +57,9 @@ browser.history.onVisited.addListener(onVisited);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

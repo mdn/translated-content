@@ -10,7 +10,8 @@ l10n:
 
 **`delete()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトからキーとその値を削除します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 

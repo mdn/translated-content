@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelectorAll
 
 La méthode **`querySelectorAll()`** de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
 
-> **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
+> [!NOTE]
+> Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
 
 ## Syntaxe
 
@@ -20,13 +21,15 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selecteurs`
   - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
 
-> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échapper des caractères spéciaux](/fr/docs/Web/API/Document/querySelector#échapper_des_caractères_spéciaux) pour plus d'informations.
+> [!NOTE]
+> Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échapper des caractères spéciaux](/fr/docs/Web/API/Document/querySelector#échapper_des_caractères_spéciaux) pour plus d'informations.
 
 ### Valeur renvoyée
 
 Une {{domxref("NodeList")}} statique contenant un objet {{domxref("Element")}} pour chaque élément qui correspond à au-moins un des sélecteurs spécifiés ou une {{domxref("NodeList")}} vide si aucune correspondance n'est trouvée .
 
-> **Note :** Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
+> [!NOTE]
+> Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
 
 ### Exceptions
 

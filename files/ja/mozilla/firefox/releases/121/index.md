@@ -2,18 +2,18 @@
 title: Firefox 121 for developers
 slug: Mozilla/Firefox/Releases/121
 l10n:
-  sourceCommit: d0633d8d5509e827ca5421d9cee6ab5cc68444d9
+  sourceCommit: d1a9b34e50b4b9e84b51f8fadc585ae1afe75069
 ---
 
 {{FirefoxSidebar}}
 
-このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。。
+このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- `<iframes>` の [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) をサポートしました。特定の `<iframe>` が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframes>` を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
+- `<iframe>` 要素の [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) をサポートしました。特定の `<iframe>` 要素が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframe>` 要素を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
   このヒントは [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の [`loading`](/ja/docs/Web/HTML/Element/iframe#loading) 属性か、JavaScript で {{domxref("HTMLIFrameElement.loading")}} を使用して提供できます ([Firefox bug 1622090](https://bugzil.la/1622090))。
 
 ### CSS
@@ -47,6 +47,10 @@ l10n:
 
 - {{domxref("WebTransportSendStream")}} インターフェイスの {{domxref("WebTransportSendStream.sendOrder", "sendOrder")}} プロパティをサポートしました。[WebTransport API](/ja/docs/Web/API/WebTransport_API) の _双方向_ ストリームの相対的な送信優先度を、ストリームの作成後に取得および変更できます。このプロパティは一方向ストリームの優先度変更には使用できません。Firefox は一方向ストリームを {{domxref("WebTransportSendStream")}} ではなく {{domxref("WritableStream")}} として実装しているためです (詳しくは [Firefox bug 1853444](https://bugzil.la/1853444) をご覧ください)。
 
+#### DOM
+
+- Android で、{{domxref("HTMLInputElement.showPicker()")}} が [`<input type="week">`](/ja/docs/Web/HTML/Element/input/month) および [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month) 要素で動作するようになりました ([Firefox bug 1853797](https://bugzil.la/161853797))。
+
 ### WebAssembly
 
 - WebAssembly で、新たに `return_call` および `return_call_indirect` 命令が [`call`](/ja/docs/WebAssembly/Reference/Control_flow/call) 命令をを置き換えることによって末尾呼び出し最適化をサポートしました。これはパフォーマンスの向上、スタック領域使用量の削減、末尾呼び出しを使用するプログラミング言語との互換性向上をもたらします。([Firefox bug 1858855](https://bugzil.la/1846789)).
@@ -55,7 +59,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- ブラウジングコンテキストが破棄されたときに発生する [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) イベントを追加しました ([Firefox bug 1694390](https://bugzil.la/1694390))。
+- 閲覧コンテキストが破棄されたときに発生する [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) イベントを追加しました ([Firefox bug 1694390](https://bugzil.la/1694390))。
 - [`script.callFunction`](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) および [`script.evaluate`](https://w3c.github.io/webdriver-bidi/#command-script-evaluate) コマンドの引数 `userActivation` をサポートしました。ユーザーアクションをエミュレートしている間に JavaScript を評価できます ([Firefox bug 1845488](https://bugzil.la/1845488))。
 - [`browsingContext.userPromptOpened`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptOpened) イベントの `defaultValue` フィールドをサポートしました。プロンプトの既定値をユーザーが取得できます ([Firefox bug 1851761](https://bugzil.la/1851761))。
 - [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) コマンドの引数 `viewportOptions` を `boxOptions` に改名しました ([Firefox bug 1859258](https://bugzil.la/1859258))。

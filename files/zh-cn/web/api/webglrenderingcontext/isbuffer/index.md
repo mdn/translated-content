@@ -42,7 +42,7 @@ gl.isBuffer(buffer);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindBuffer()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}

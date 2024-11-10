@@ -15,9 +15,11 @@ slug: Web/CSS/overflow
 
 `overflow` 속성이 효력을 갖기 위해선 반드시 블록 레벨 컨테이너의 높이(`height` 또는 `max-height`)를 설정하거나, `white-space`를 `nowrap`으로 설정해야 합니다.
 
-> **참고:** 하나의 축을 `visible`(기본값)로 하고, 다른 축에는 다른 값을 지정할 경우 `visible`이 `auto`처럼 동작합니다.
+> [!NOTE]
+> 하나의 축을 `visible`(기본값)로 하고, 다른 축에는 다른 값을 지정할 경우 `visible`이 `auto`처럼 동작합니다.
 
-> **참고:** JavaScript {{domxref("Element.scrollTop")}} 속성을 사용하면 요소의 `overflow`가 `hidden`일 때도 스크롤할 수 있습니다.
+> [!NOTE]
+> JavaScript {{domxref("Element.scrollTop")}} 속성을 사용하면 요소의 `overflow`가 `hidden`일 때도 스크롤할 수 있습니다.
 
 ## 구문
 

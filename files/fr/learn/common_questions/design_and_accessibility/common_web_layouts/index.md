@@ -3,6 +3,8 @@ title: Conception d'une page web
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.
 
 <table class="standard-table">

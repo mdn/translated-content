@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Statements/const
 
 Las variables constantes presentan un **ámbito de bloque** ([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block) scope) tal y como lo hacen las variables definidas usando la instrucción [let](/es/docs/Web/JavaScript/Referencia/Sentencias/let), con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes **no se pueden redeclarar**.
 
-> **Advertencia:** La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+> [!WARNING]
+> La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
 ## Sintaxis
 
@@ -47,7 +48,8 @@ document.writeln("a es " + a + ".");
 
 Las siguientes instrucciones demuestra como se comporta `const`
 
-> **Advertencia:** Las instrucciones deberán ser ordenadas correctamente para conseguir la salida esperada a los ejemplos
+> [!WARNING]
+> Las instrucciones deberán ser ordenadas correctamente para conseguir la salida esperada a los ejemplos
 
 ```js
 // NOTA: Las constantes pueden ser declaradas en mayusculas o minusculaas,

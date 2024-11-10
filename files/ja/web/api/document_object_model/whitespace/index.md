@@ -2,7 +2,7 @@
 title: ホワイトスペースは HTML、 CSS、そして DOM 内でどう扱われるか
 slug: Web/API/Document_Object_Model/Whitespace
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -141,7 +141,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 ### ブロック整形コンテキストでのホワイトスペース
 
-上記では、インライン要素を含む要素と、インライン整形コンテキストについて見てきました。要素が少なくとも 1 つのブロック要素を含んでいる場合は、代わりに[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)と呼ばれるものが確立されます。
+上記では、インライン要素を含む要素と、インライン整形コンテキストについて見てきました。要素が少なくとも 1 つのブロック要素を含んでいる場合は、代わりに[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)と呼ばれるものが確立されます。
 
 このコンテキストでは、ホワイトスペースはまったく異なるように扱われます。
 

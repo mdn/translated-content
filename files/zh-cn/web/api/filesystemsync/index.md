@@ -28,7 +28,7 @@ slug: Web/API/FileSystemSync
 
 {{Compat}}
 
-## 另见
+## 参见
 
 规范：[File API: Directories and System Specification](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
 

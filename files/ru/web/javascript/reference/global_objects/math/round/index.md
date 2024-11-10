@@ -3,7 +3,7 @@ title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

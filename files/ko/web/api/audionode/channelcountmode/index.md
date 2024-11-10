@@ -57,7 +57,8 @@ slug: Web/API/AudioNode/channelCountMode
   </tbody>
 </table>
 
-> **참고:** 명세서의 구 버전에서는, {{domxref("ChannelSplitterNode")}}의 기본값은 max였습니다.
+> [!NOTE]
+> 명세서의 구 버전에서는, {{domxref("ChannelSplitterNode")}}의 기본값은 max였습니다.
 
 ## 구문
 

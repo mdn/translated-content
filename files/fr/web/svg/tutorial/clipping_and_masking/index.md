@@ -3,6 +3,8 @@ title: Découpages et masquages
 slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutoriel/Transformations_de_base", "Web/SVG/Tutoriel/Contenu_embarque_SVG") }}
 
 Effacer une partie de ce que l'on a créé précédemment peut paraître maladroit, voire totalement contradictoire. Mais cela peut se révéler très utile, par exemple quand vous essayez de dessiner un demi-cercle.

@@ -48,7 +48,7 @@ var factorial = function (n) {
 factorial(7);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -56,6 +56,6 @@ factorial(7);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Function")}}

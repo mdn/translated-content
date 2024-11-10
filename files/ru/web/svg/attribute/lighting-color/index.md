@@ -3,6 +3,8 @@ title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `lighting-color` определяет цвет источника света для примитивов фильтров {{ SVGElement("feDiffuseLighting") }} и {{ SVGElement("feSpecularLighting") }}.

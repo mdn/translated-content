@@ -3,6 +3,8 @@ title: 弱簽章演算法
 slug: Web/Security/Weak_Signature_Algorithm
 ---
 
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
+
 ### 簽章演算法的重要性
 
 在簽署憑證時，雜湊演算法的完整性是非常重要的一環。雜湊演算法的漏洞可能導致攻擊者獲取假造的憑證。隨著科技發展出現更多可行的攻擊新手法，並不建議繼續使用舊的演算法，且這些演算法最終該被移除。

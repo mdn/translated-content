@@ -3,7 +3,7 @@ title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le titre de la barre latérale.
 
@@ -64,7 +64,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

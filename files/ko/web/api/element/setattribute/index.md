@@ -72,8 +72,6 @@ button.setAttribute("disabled", "");
 - `disabled`와 같은 불리언 속성의 값을 설정하려면 아무 값으로든 설정할 수 있습니다.
   빈 문자열 또는 속성의 이름이 권장되는 값입니다. 중요한 것은 속성이 존재하는 경우 **실제 값에 관계없이** 해당 값이 참으로 간주된다는 것입니다. 속성이 없다는 것은 해당 값이 `false`임을 의미합니다. `disabled` 속성의 값을 빈 문자열(`""`)로 설정하면 `disabled`를 `true`로 설정하여 버튼이 비활성화됩니다.
 
-{{DOMAttributeMethods}}
-
 ## 명세서
 
 {{Specifications}}

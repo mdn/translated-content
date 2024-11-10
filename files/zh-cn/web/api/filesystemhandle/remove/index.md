@@ -1,11 +1,13 @@
 ---
 title: FileSystemHandle：remove() 方法
 slug: Web/API/FileSystemHandle/remove
+l10n:
+  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_header}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`remove()`** 方法用于向底层文件系统请求移除句柄所代表的的条目。
+{{domxref("FileSystemHandle")}} 接口的 **`remove()`** 方法用于向底层文件系统请求移除句柄所代表的条目。
 
 `remove()` 方法允许你用对应的句柄直接移除一个文件或一个目录。如果没有这个方法，你就必须先获取句柄的父目录，然后调用其上的 {{domxref("FileSystemDirectoryHandle.removeEntry()")}} 来移除文件或目录。
 
@@ -14,6 +16,7 @@ slug: Web/API/FileSystemHandle/remove
 ## 语法
 
 ```js-nolint
+remove()
 remove(options)
 ```
 
@@ -31,17 +34,17 @@ remove(options)
 ### 异常
 
 - `InvalidModificationError` {{domxref("DOMException")}}
-  - : 如果 `recursive` 被设为 `false` 并且要移除的条目是包含子项的目录时，会抛出此异常。
+  - : 如果 `recursive` 被设为 `false` 并且要移除的条目是包含子项的目录时，则抛出此异常。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : 如果浏览器无法获得该条目的独占锁定，则抛出此异常。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus')}} 不为 `granted`，抛出此异常。
+  - : 如果 {{domxref('PermissionStatus')}} 不为 `granted`，则抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 如果找不到该条目则抛出此异常。
+  - : 如果找不到该条目，则抛出此异常。
 
 ## 示例
 
-我们的 [FileSystemHandle.remove() 演示](https://filesystemhandle-remove.glitch.me/)（参阅[源代码](https://glitch.com/edit/#!/filesystemhandle-remove)）是个用于创建文件的应用。你可以在 {{htmlelement("textarea")}} 中输入文本然后按下“Save file” {{htmlelement("button")}}，然后应用会打开一个文件选择器以允许你将输入的文本保存到你在你的本地文件系统中选择的文件。你还可以删除你创建的文件。
+我们的 [`FileSystemHandle.remove()` 演示](https://filesystemhandle-remove.glitch.me/)（参阅[源代码](https://glitch.com/edit/#!/filesystemhandle-remove)）是个用于创建文件的应用。你可以在 {{htmlelement("textarea")}} 中输入文本然后按下“Save file” {{htmlelement("button")}}，然后应用会打开一个文件选择器以允许你将输入的文本保存到你在你的本地文件系统中选择的文件。你还可以删除你创建的文件。
 
 这个应用不能让你查看创建出的文件的内容，也无法在重载或关闭页面后仍然保持与底层文件系统同步。也就是说，如果你不在重载或关闭标签页前删除你创建的文件，那这些文件仍然会存留于你的文件系统中。
 
@@ -77,7 +80,7 @@ async function deleteFile(e) {
 
 ## 规范
 
-{{Specifications}}
+此特性不属于任何规范的一部分，但将来可能会成为标准的一部分。有关详细信息，请参阅 [_whatwg/fs#9_](https://github.com/whatwg/fs/pull/9)。
 
 ## 浏览器兼容性
 

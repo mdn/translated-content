@@ -11,14 +11,15 @@ slug: Learn/CSS/Building_blocks
 
 ## 전제 조건
 
-이 과목을 시작하기 전에 다음이 있어야 합니다:
+이 과목을 시작하기 전에 다음이 있어야 합니다.
 
 1. 컴퓨터 사용 및 수동적으로 웹을 사용하는 것(보기만 하고, 콘텐츠를 소비하는 것)에 대한 기본적인 친숙성.
 2. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에 설명 된대로 기본 작업 환경과 [파일 처리](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 설명 된대로 파일 작성 및 관리 방법에 대한 이해.
 3. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과목에서 설명한 HTML 에 대한 기본적인 친숙성.
 4. [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 과목에서 논의된 CSS 의 기본 사항에 대한 이해.
 
-> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
+> [!NOTE]
+> 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내
 
@@ -28,7 +29,7 @@ slug: Learn/CSS/Building_blocks
   - : 이번 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
 - [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
-  - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다:
+  - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다.
 
     - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)

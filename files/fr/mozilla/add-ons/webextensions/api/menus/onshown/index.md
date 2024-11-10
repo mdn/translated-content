@@ -3,7 +3,7 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur a montré un menu.
 

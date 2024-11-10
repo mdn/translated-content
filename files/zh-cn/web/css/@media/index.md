@@ -7,7 +7,8 @@ slug: Web/CSS/@media
 
 **`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
-> **备注：** 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
+> [!NOTE]
+> 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
 
@@ -48,7 +49,8 @@ _媒体类型_（media type）描述设备的一般类别。除非使用 `not` �
 - `screen`
   - : 主要用于屏幕。
 
-> **备注：** CSS2.1 和[媒体查询第 3 版](https://drafts.csswg.org/mediaqueries-3/#background)定义了一些额外的媒体类型（`tty`、`tv`、`projection`、`handheld`、`braille`、`embossed` 以及 `aural`），但是它们在[媒体查询第 4 版](https://drafts.csswg.org/mediaqueries/#media-types)中已被弃用，不应继续使用。
+> [!NOTE]
+> CSS2.1 和[媒体查询第 3 版](https://drafts.csswg.org/mediaqueries-3/#background)定义了一些额外的媒体类型（`tty`、`tv`、`projection`、`handheld`、`braille`、`embossed` 以及 `aural`），但是它们在[媒体查询第 4 版](https://drafts.csswg.org/mediaqueries/#media-types)中已被弃用，不应继续使用。
 
 ## 媒体特性
 
@@ -123,7 +125,8 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
   - : 用于否定媒体查询，如果不满足这个条件则返回 `true`，否则返回 `false`。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 `not` 运算符，则*还必须*指定媒体类型。
 
-    > **备注：** 在第 3 版中，`not` 关键字不能用于否定单个媒体特性表达式，而只能用于否定整个媒体查询。
+    > [!NOTE]
+    > 在第 3 版中，`not` 关键字不能用于否定单个媒体特性表达式，而只能用于否定整个媒体查询。
 
 - `only`
   - : 仅在整个查询匹配时才应用样式。这对于防止较老的浏览器应用所选样式很有用。当不使用 `only` 时，较老的浏览器会将 `screen and (max-width: 500px)` 简单地解释为 `screen`，忽略查询的其余部分，并将其样式应用于所有屏幕。如果使用 `only` 运算符，则*还必须*指定媒体类型。

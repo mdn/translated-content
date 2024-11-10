@@ -2,7 +2,7 @@
 title: クライアントサイドツールの概要
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -109,7 +109,7 @@ l10n:
 
    - [Sass/SCSS](https://sass-lang.com/): この CSS 拡張機能を使用すると、変数、ネストされたルール、ミックスイン、関数、およびその他の多くの機能を使用できます。その一部はネイティブ CSS （変数など）で使用でき、一部は使用できません。
    - [TypeScript](https://www.typescriptlang.org/): TypeScript は、多数の追加機能を提供する JavaScript のスーパーセットです。 TypeScript コンパイラーは、本番用にビルドするときに TypeScript コードを JavaScript に変換します。
-   - [React](https://reactjs.org/)、[Ember](https://emberjs.com/)、[Vue](https://vuejs.org/)、 [Svelte](https://svelte.jp/)、[Angular](https://angular.io/) などのフレームワーク。フレームワークは多くの機能を無料で提供し、バニラ JavaScript の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの JavaScript コードがこのカスタム構文を解釈し、最終的なウェブアプリとしてレンダリングするために懸命に働いています。
+   - [React](https://react.dev/)、[Ember](https://emberjs.com/)、[Vue](https://vuejs.org/) などのフレームワーク。フレームワークは多くの機能を無料で提供し、バニラ JavaScript の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの JavaScript コードがこのカスタム構文を解釈し、最終的なウェブアプリとしてレンダリングするために懸命に働いています。
 
 ### 開発後評価
 

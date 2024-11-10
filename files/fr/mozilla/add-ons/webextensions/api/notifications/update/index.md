@@ -3,7 +3,7 @@ title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour une notification, compte tenu de son identifiant
 
@@ -90,8 +90,8 @@ browser.browserAction.onClicked.addListener(function () {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

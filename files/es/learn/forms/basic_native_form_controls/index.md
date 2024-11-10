@@ -32,13 +32,15 @@ Ya conoces algunos elementos de formulario, incluidos {{HTMLelement ('form')}}, 
 - Los tipos de entrada comunes {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}} y {{HTMLelement('input/text', 'text')}}.
 - Algunos de los atributos que comunes para todos los controles de formulario.
 
-> **Nota:** Las características que se consideran en este artículo son compatibles con todos los navegadores, lo que no es el caso para todos los controles de formulario. En los próximos dos artículos vamos a exponer los controles de formulario que se han añadido a HTML5 más recientemente. Si quieres una referencia más avanzada, consulta nuestra [referencia a elementos de formulario HTML](/es/docs/Web/HTML/Elemento#Formularios), y en particular nuestra extensa referencia a [tipos \<input>](/es/docs/Web/HTML/Elemento/input).
+> [!NOTE]
+> Las características que se consideran en este artículo son compatibles con todos los navegadores, lo que no es el caso para todos los controles de formulario. En los próximos dos artículos vamos a exponer los controles de formulario que se han añadido a HTML5 más recientemente. Si quieres una referencia más avanzada, consulta nuestra [referencia a elementos de formulario HTML](/es/docs/Web/HTML/Elemento#Formularios), y en particular nuestra extensa referencia a [tipos \<input>](/es/docs/Web/HTML/Elemento/input).
 
 ## Campos de entrada de texto
 
 Los campos de texto {{htmlelement ("input")}} son los controles de formulario más básicos. Son un modo muy cómodo de permitir al usuario introducir cualquier tipo de datos, y ya hemos visto algunos ejemplos sencillos.
 
-> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida](/es/docs/Rich-Text_Editing_in_Mozilla) (negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
+> [!NOTE]
+> Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida](/es/docs/Rich-Text_Editing_in_Mozilla) (negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
 
 Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
@@ -47,13 +49,15 @@ Todos los controles de texto básicos comparten algunos comportamientos comunes:
 - Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
 - Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
-> **Nota:** El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
+> [!NOTE]
+> El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
 
 ### Campos de texto de una sola línea
 
 Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElement ("input")}} cuyo valor de atributo [`type`](/es/docs/Web/HTML/Element/input#type) se establece en `text`, u omitiendo por completo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (`text` es el valor predeterminado). El valor `text` de este atributo también es el valor alternativo si el navegador no reconoce el valor que has especificado para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (por ejemplo, si especificas `type="color"` y el navegador no está dotado en origen de un control de selección de colores).
 
-> **Nota:** Puedes encontrar ejemplos de todos los tipos de campo de texto de una sola línea en GitHub en [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> [!NOTE]
+> Puedes encontrar ejemplos de todos los tipos de campo de texto de una sola línea en GitHub en [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 Aquí hay un ejemplo básico de campo de texto de una sola línea:
 
@@ -67,7 +71,8 @@ _La captura de pantalla siguiente muestra los tipos de entrada de texto predeter
 
 ![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
-> **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+> [!NOTE]
+> HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
 #### Campo de contraseña
 
@@ -101,7 +106,8 @@ Los elementos de selección (o _checkable items_, en inglés) son controles cuyo
 
 Vale la pena señalar que estos controles no se comportan exactamente como otros controles de formulario. Para la mayoría de los controles de formulario, cuando se envía el formulario, se envían todos los controles que tienen un atributo [`name`](/es/docs/Web/HTML/Attributes/name), incluso si en ellos no se ha introducido ningún valor. En el caso de elementos de selección, sus valores se envían solo si están seleccionados. Si no están seleccionados, no se envía nada, ni siquiera su nombre. Si están seleccionados pero no tienen ningún valor asignado, el nombre se envía con el valor _on._
 
-> **Nota:** Puedes encontrar los ejemplos de esta sección en GitHub como [checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) ([o consultarlos en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
+> [!NOTE]
+> Puedes encontrar los ejemplos de esta sección en GitHub como [checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) ([o consultarlos en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
 Para una usabilidad/accesibilidad óptima, te recomendamos delimitar cada lista de elementos que estén relacionados entre sí dentro de un elemento {{htmlelement ("fieldset")}} con un elemento {{htmlelement ("legend")}} que proporcione una descripción general de la lista. Cada par individual de elementos {{htmlelement ("label")}}/{{htmlelement ("input")}} ha de estar contenido en un elemento de lista propio (o similar). El elemento {{htmlelement ('label')}} asociado se coloca en general inmediatamente después del botón de opción o la casilla de verificación, con las instrucciones para el grupo de botones de opción o casillas de verificación, que suelen ser el contenido del elemento {{htmlelement ("legend")}}. Observa las estructuras de ejemplo en los ejemplos asociados anteriores.
 
@@ -119,7 +125,8 @@ Las capturas de pantalla siguientes muestran casillas de verificación predeterm
 
 ![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](checkboxes.png)
 
-> **Nota:** Las casillas de verificación y los botones de opción con atributo [`checked`](/es/docs/Web/HTML/Attributes/checked) al cargarse coinciden con la pseudoclase {{cssxref ('<code>:default</code>')}}, incluso aunque ya no estén seleccionadas. Las que están seleccionadas coinciden con la pseudoclase `{{cssxref(':checked')}}`.
+> [!NOTE]
+> Las casillas de verificación y los botones de opción con atributo [`checked`](/es/docs/Web/HTML/Attributes/checked) al cargarse coinciden con la pseudoclase {{cssxref ('<code>:default</code>')}}, incluso aunque ya no estén seleccionadas. Las que están seleccionadas coinciden con la pseudoclase `{{cssxref(':checked')}}`.
 
 Debido a su naturaleza activa-inactiva, las casillas de verificación se consideran botones de conmutación, y muchos desarrolladores y diseñadores han ampliado el estilo de casilla de verificación predeterminado para crear botones que parecen interruptores de conmutación. Aquí puedes ver un [ejemplo en acción](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (observa también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html)).
 
@@ -170,9 +177,11 @@ El botón de opción no es realmente un botón, a pesar de su nombre; sigamos ad
 
 Además, el elemento {{htmlelement ("button")}} puede tomar un atributo `type` para imitar estos tres tipos de entrada. La diferencia principal entre los dos es que los elementos `<button>` propiamente admiten aplicación de estilo en mayor medida.
 
-> **Nota:** El tipo de entrada `image` también se representa como un botón. También desarrollaremos este tema más adelante.
+> [!NOTE]
+> El tipo de entrada `image` también se representa como un botón. También desarrollaremos este tema más adelante.
 
-> **Nota:** Puedes encontrar los ejemplos de esta sección en GitHub como [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) ([o consultarlos en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+> [!NOTE]
+> Puedes encontrar los ejemplos de esta sección en GitHub como [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) ([o consultarlos en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
 
 A continuación puedes encontrar ejemplos de cada tipo de botón `<input>`, junto con el tipo de botón equivalente.
 

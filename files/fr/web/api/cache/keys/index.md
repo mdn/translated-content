@@ -9,7 +9,8 @@ La méthode **`keys()`** de l'interface {{domxref("Cache")}} retourne une {{jsxr
 
 Les requêtes sont retournées dans le même ordre que l'ordre d'insertion.
 
-> **Note :** Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
+> [!NOTE]
+> Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
 
 ## Syntaxe
 

@@ -316,7 +316,8 @@ Usando `await` aqui podemos obter todos os resultados das três promises retorna
 
 Para tratamento de erros, nós incluímos um bloco `.catch()` no nossa chamada `displayContent()`; isso vai lidar com os erros que ocorrem em ambas as funções.
 
-> **Nota:** Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!NOTE]
+> Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Tratando lentidão com async/await
 

@@ -65,7 +65,8 @@ Cette spécification définit également de nouvelles propriétés logiques qui 
 - {{cssxref("inset-inline")}} — elle permet de définir les décalages sur l'axe en ligne
 - {{cssxref("inset-block")}} — elle permet de définir les décalage sur l'axe de bloc
 
-> **Note :** Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.
+> [!NOTE]
+> Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.
 
 ## Exemple de valeurs logiques pour `text-align`
 

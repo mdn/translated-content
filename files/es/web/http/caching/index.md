@@ -249,7 +249,8 @@ El servidor devolverá `304 Not modified` si el valor del header `ETag` que dete
 
 Pero si el servidor determina que el recurso solicitado ahora debería tener un valor `ETag` diferente, el servidor responderá con `200 OK` y la última versión del recurso.
 
-> **Nota:** A la hora de evaluar como usar `ETag` y `Last-Modified`, se debería considerar lo siguiente:
+> [!NOTE]
+> A la hora de evaluar como usar `ETag` y `Last-Modified`, se debería considerar lo siguiente:
 > Durante la revalidación de la caché, si `ETag` y `Last-Modified` están presentes, `ETag` toma la preferencia.
 > Por lo tanto, si solamente se está considerando el almacenamiento en caché, se puede pensar que `Last-Modified` es innecesario.
 > Sin embargo, `Last-Modified` no solo es útil para el almacenamiento en caché; en cambio, es un encabezado HTTP estándar que también utilizan los sistemas de administración de contenido (CMS) para mostrar la hora de la última modificación, los rastreadores para ajustar la frecuencia de rastreo y para otros fines diversos.
@@ -560,7 +561,8 @@ A tener en cuenta que el número '41' tiene la 'max-age' más larga (1 año), pe
 
 El valor `public` tiene el efecto de hacer que la respuesta se pueda almacenar incluso si el encabezado `Authorization` está presente.
 
-> **Nota:** La directiva `public` solo debe usarse si es necesario almacenar la respuesta cuando se establece el header `Authorization`.
+> [!NOTE]
+> La directiva `public` solo debe usarse si es necesario almacenar la respuesta cuando se establece el header `Authorization`.
 > De lo contrario, no se requiere, porque una respuesta se almacenará en el caché compartido siempre que se proporcione `max-age`.
 
 Entonces, si la respuesta está personalizada con autenticación básica, la presencia de `public` puede causar problemas. Si le preocupa eso, puede elegir el segundo valor más largo, `37` (1 mes).
@@ -603,7 +605,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 Hacer que una respuesta se pueda almacenar en caché durante un largo período de tiempo cambiando la URL cuando cambia el contenido se denomina **cache busting**. Esa técnica se puede aplicar a todos los subrecursos, como las imágenes.
 
-> **Nota:** Al evaluar el uso de `immutable` y QPACK:
+> [!NOTE]
+> Al evaluar el uso de `immutable` y QPACK:
 > Si le preocupa que `immutable` cambie el valor predefinido proporcionado por QPACK, considere que
 > en este caso, la parte `immutable` se puede codificar por separado dividiendo el valor `Cache-Control` en dos líneas, aunque esto depende del algoritmo de codificación que utilice una implementación particular de QPACK.
 

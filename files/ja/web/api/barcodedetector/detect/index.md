@@ -37,13 +37,14 @@ var detectedBarcode = BarcodeDetector.detect(ImageBitmapSource);
 この例では、 `detect()` メソッドを使用して、与えられた画像内のバーコードを検出しています。これらは繰り返し処理され、バーコードのデータはコンソールに記録されます。
 
 ```js
-barcodeDetector.detect(imageEl)
-  .then(barcodes => {
-    barcodes.forEach(barcode => console.log(barcode.rawData));
-  }
-  .catch(err => {
-    console.log(err);
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## 仕様書

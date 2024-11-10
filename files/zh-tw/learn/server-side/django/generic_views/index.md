@@ -70,7 +70,8 @@ class BookListView(generic.ListView):
 
 就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，你可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
 
-> **備註：** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
+> [!NOTE]
+> This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
 你可以添加屬性，以更改上面的某種行為。例如，如果需要使用同一模型的多個視圖，則可以指定另一個模板文件，或者如果 book_list 對於特定模板用例不直觀，則可能需要使用不同的模板變量名稱。可能最有用的變更，是更改/過濾返回的結果子集-因此，你可能會列出其他用戶閱讀的前 5 本書，而不是列出所有書本。
 
@@ -116,7 +117,8 @@ class BookListView(generic.ListView):
 - 然後添加新的內文信息。
 - 然後返回新的（更新後）內文。
 
-> **備註：** Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
+> [!NOTE]
+> Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
 
 ### Creating the List View template
 
@@ -184,7 +186,8 @@ We access the _fields_ of the associated book record using the "dot notation" (e
 
 We can also call _functions_ in the model from within our template — in this case we call `Book.get_absolute_url()` to get an URL you could use to display the associated detail record. This works provided the function does not have any arguments (there is no way to pass arguments!)
 
-> **備註：** We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!
+> [!NOTE]
+> We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!
 
 #### Update the base template
 
@@ -220,13 +223,16 @@ For the _book-detail_ path the URL pattern uses a special syntax to capture the 
 
 In this case we use `'<int:pk>'` to capture the book id, which must be an integer, and pass it to the view as a parameter named `pk` (short for primary key).
 
-> **備註：** As discussed previously, our matched URL is actually `catalog/book/<digits>` (because we are in the **catalog** application, `/catalog/` is assumed).
+> [!NOTE]
+> As discussed previously, our matched URL is actually `catalog/book/<digits>` (because we are in the **catalog** application, `/catalog/` is assumed).
 
-> **警告：** The generic class-based detail view _expects_ to be passed a parameter named **pk**. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.
+> [!WARNING]
+> The generic class-based detail view _expects_ to be passed a parameter named **pk**. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.
 
 #### Advanced path matching/regular expression primer
 
-> **備註：** You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.
+> [!NOTE]
+> You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.
 
 The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path) method.
 
@@ -317,7 +323,8 @@ Lets consider a few real examples of patterns:
 
 You can capture multiple patterns in the one match, and hence encode lots of different information in a URL.
 
-> **備註：** As a challenge, consider how you might encode an url to list all books released in a particular year, month, day, and the RE that could be used to match it.
+> [!NOTE]
+> As a challenge, consider how you might encode an url to list all books released in a particular year, month, day, and the RE that could be used to match it.
 
 #### Passing additional options in your URL maps
 
@@ -328,7 +335,8 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **備註：** Both extra options and named captured patterns are passed to the view as _named_ arguments. If you use the **same name** for both a captured pattern and an extra option then only the captured pattern value will be sent to the view (the value specified in the additional option will be dropped).
+> [!NOTE]
+> Both extra options and named captured patterns are passed to the view as _named_ arguments. If you use the **same name** for both a captured pattern and an extra option then only the captured pattern value will be sent to the view (the value specified in the additional option will be dropped).
 
 ### View (class-based)
 
@@ -364,7 +372,8 @@ def book_detail_view(request, primary_key):
 
 The view first tries to get the specific book record from the model. If this fails the view should raise an `Http404` exception to indicate that the book is "not found". The final step is then, as usual, to call `render()` with the template name and the book data in the `context` parameter (as a dictionary).
 
-> **備註：** The `get_object_or_404()` (shown commented out above) is a convenient shortcut to raise an `Http404` exception if the record is not found.
+> [!NOTE]
+> The `get_object_or_404()` (shown commented out above) is a convenient shortcut to raise an `Http404` exception if the record is not found.
 
 ### Creating the Detail View template
 
@@ -402,7 +411,8 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 {% endblock %}
 ```
 
-> **備註：** The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:
+> [!NOTE]
+> The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:
 >
 > ```python
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -425,11 +435,12 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 
 需要這方法是因為我們僅在「一」那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在「多」那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為「reverse lookup」供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
 
-> **備註：** 在這我們使用 `all()` 取得所有紀錄 (預設)，你無法直接在 template 做是因為你無法指定引數到 function，但你可用 `filter()` 方法取得一個紀錄的子集 。
+> [!NOTE]
+> 在這我們使用 `all()` 取得所有紀錄 (預設)，你無法直接在 template 做是因為你無法指定引數到 function，但你可用 `filter()` 方法取得一個紀錄的子集 。
 >
 > 順帶一提，若你不再基於類的 view 或 model 定義順序（order），開發伺服器會將會報錯類似的訊息：
 >
-> ```
+> ```plain
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
@@ -470,7 +481,8 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 
 At this point we should have created everything needed to display both the book list and book detail pages. Run the server (`python3 manage.py runserver`) and open your browser to <http://127.0.0.1:8000/>.
 
-> **警告：** Don't click any author or author detail links yet — you'll create those in the challenge!
+> [!WARNING]
+> Don't click any author or author detail links yet — you'll create those in the challenge!
 
 Click the **All books** link to display the list of books.
 
@@ -549,7 +561,7 @@ The challenge in this article is to create the author detail and list views requ
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different, but will share similar behaviour.
 
-> **備註：**
+> [!NOTE]
 >
 > - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.

@@ -3,7 +3,7 @@ title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Masque un ou plusieurs onglets.
 

@@ -3,6 +3,8 @@ title: Entendiendo la propiedad CSS z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 ---
 
+{{CSSRef}}
+
 Usualmente se puede considerar que las páginas HTML tienen dos dimensiones, porque el texto, las imágenes y otros elementos son organizados en la página sin superponerse. Hay un solo flujo de renderizado, y todos los elementos son concientes del espacio ocupado por otros. El atributo {{cssxref("z-index")}} te permite ajustar el orden de las capas de los objetos cuando el contenido está siendo renderizado.
 
 > En CSS 2.1, cada caja tiene una posición en tres dimensiones. Adicionalmente a sus posiciones horizontales y verticales, las cajas caen a lo largo de un "eje-z" y son formadas una encima de la otra. Las posiciones eje-Z son particularmente relevantes cuando las cajas se superponen visualmente.

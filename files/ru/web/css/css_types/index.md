@@ -35,6 +35,6 @@ slug: Web/CSS/CSS_Types
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}

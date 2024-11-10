@@ -1,7 +1,6 @@
 ---
 title: console.error()
 slug: Web/API/console/error_static
-original_slug: Web/API/console/error
 ---
 
 {{APIRef("Console API")}}

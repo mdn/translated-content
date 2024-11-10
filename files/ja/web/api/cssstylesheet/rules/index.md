@@ -10,7 +10,8 @@ l10n:
 **`rules`** は {{domxref("CSSStyleSheet")}} インターフェイスの非推奨の古いプロパティです。機能的には推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} プロパティと同じで、
 スタイルシートを構成する CSS ルールのライブ更新されるリストにアクセスすることができます。
 
-> **メモ:** 古いプロパティなので、`rules`は使用せず、代わりに推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} を使用しましょう。
+> [!NOTE]
+> 古いプロパティなので、`rules`は使用せず、代わりに推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} を使用しましょう。
 > `rules` がすぐに削除される可能性は低いですが、利用できる範囲はそれほど広くなく、これを使用するとサイトやアプリの互換性に問題が発生します。
 
 ## 値

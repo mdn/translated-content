@@ -74,7 +74,7 @@ console.log(uint8.find(isPrime)); // 5
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

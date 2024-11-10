@@ -50,7 +50,8 @@ HTTP2-Settings: base64EncodedSettings
 
 Aquí, `base64EncodedSettings` es una propiedad de HTTP/2 `"SETTINGS"` del contenido de la trama que se expresa en formato `base64url`, seguido de un carácter de igual, `"="`, omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.
 
-> **Nota:** El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
+> [!NOTE]
+> El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
 
 Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con `"HTTP/1.1 200 OK"` seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será: "`HTTP/1.1 101 Switching Protocols"`. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.
 
@@ -74,7 +75,8 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Nota:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!NOTE]
+> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 

@@ -3,6 +3,8 @@ title: Exemple basique
 slug: Web/API/XSLTProcessor/Basic_Example
 ---
 
+{{APIRef("XSLT")}}
+
 1. [Introduction](/fr/docs/XSLT_dans_Gecko)
 2. [Exemple basique](/fr/docs/XSLT_dans_Gecko/Exemple_basique)
 3. [Génération de HTML](/fr/docs/XSLT_dans_Gecko/Génération_de_HTML)

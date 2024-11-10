@@ -5,8 +5,6 @@ slug: Web/CSS/Replaced_element
 
 {{CSSRef}}
 
-{{CSSRef()}}
-
 ## 摘要
 
 CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所呈現的內容不在 CSS 的控制範圍之內。這類外部物件所呈現的內容均獨立於 CSS 之外。常見的置換元素包含 {{HTMLElement("img")}}、{{HTMLElement("object")}}、{{HTMLElement("video")}}，或如 {{HTMLElement("textarea")}} 與 {{HTMLElement("input")}} 的表單元素。某些元素 (像是 {{HTMLElement("audio")}} 或 {{HTMLElement("canvas")}}) 只有在特殊情況下才是置替換元素。若是透過 CSS {{cssxref("content")}} 屬性所插入的物件，則稱為「不具名置換元素 (Anonymous replaced elements)」。

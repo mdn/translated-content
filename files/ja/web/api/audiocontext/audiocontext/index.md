@@ -3,7 +3,7 @@ title: "AudioContext: AudioContext() コンストラクター"
 short-title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
 {{APIRef("Web Audio API")}}
@@ -81,10 +81,10 @@ const audioCtx = new AudioContext({
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()", "new OfflineAudioContext()")}} コンストラクター
+- {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}} コンストラクター

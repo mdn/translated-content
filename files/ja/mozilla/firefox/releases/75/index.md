@@ -36,7 +36,8 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 - [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
 - `aria-details` で複数の ID ([Firefox バグ 1608883](https://bugzil.la/1608883))
 
-> **メモ:** macOS では、はじめに Apple が Safari で Apple 方式の属性として VoiceOver へ公開するものを定義することを待っており、それらに一式に従う計画です。
+> [!NOTE]
+> macOS では、はじめに Apple が Safari で Apple 方式の属性として VoiceOver へ公開するものを定義することを待っており、それらに一式に従う計画です。
 
 ### JavaScript
 

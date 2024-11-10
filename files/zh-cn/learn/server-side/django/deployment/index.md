@@ -51,19 +51,22 @@ slug: Learn/Server-side/Django/Deployment
 - 在 Django 网站和 Web 服务器之间，传递“动态”请求的应用程序服务器。
 - 你的网站所依赖的数据库。
 
-> **备注：** 根据你的生产配置方式，你可能还有反向代理，负载均衡器等。
+> [!NOTE]
+> 根据你的生产配置方式，你可能还有反向代理，负载均衡器等。
 
 服务器计算机可以位于你的场所，并通过快速链接连接到 Internet，但使用托管“在云中”的计算机更为常见。这实际上意味着，你的代码在托管公司的数据中心的某台远程计算机（或可能是“虚拟”计算机）上运行。远程服务器通常会以特定价格，提供一些保证级别的计算资源（例如 CPU，RAM，存储器等）和互联网连接。
 
 这种可远程访问的计算/网络硬件，称为基础架构即服务（IaaS）。许多 IaaS 供应商，提供预安装特定操作系统的选项，你必须在其上安装生产环境的其他组件。其他供应商允许你选择功能更全面的环境，可能包括完整的 Django，和 Web 服务器设置。
 
-> **备注：** 预构建环境可以使你的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制你使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，当你需要升级系统的某些部分时，你就知道从哪里开始！
+> [!NOTE]
+> 预构建环境可以使你的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制你使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，当你需要升级系统的某些部分时，你就知道从哪里开始！
 
 其他托管服务提供商，支持 Django 作为平台即服务（PaaS）产品的一部分。在这种托管中，你不必担心大多数生产环境（Web 服务器，应用程序服务器，负载平衡器），因为主机平台会为你处理这些（以及为了扩展你的应用程序，而需要做的大部分工作）。这使得部署非常简单，因为你只需要专注于 Web 应用程序，而不是所有其他服务器的基础结构。
 
 相对于 PaaS，一些开发人员会选择 IaaS 所提供的更高灵活性，而其他开发人员，则欣赏 PaaS 降低的维护开销，和更轻松地扩展。当你开始使用时，在 PaaS 系统上设置你的网站，要容易得多，因此我们将在本教程中这么做。
 
-> **备注：** 如果你选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果你选择 PaaS，这就没有关系了）。例如，[Digital Ocean Django 社区文档](https://www.digitalocean.com/community/tutorials?q=django) 中的各种配置，有许多手把手指南。
+> [!NOTE]
+> 如果你选择一个 Python/Django 友好的托管服务提供商，他们应该提供有关如何使用不同配置的网络服务器，应用服务器，反向代理等设置 Django 网站的说明（如果你选择 PaaS，这就没有关系了）。例如，[Digital Ocean Django 社区文档](https://www.digitalocean.com/community/tutorials?q=django) 中的各种配置，有许多手把手指南。
 
 ## 选择托管服务提供商
 
@@ -85,13 +88,15 @@ slug: Learn/Server-side/Django/Deployment
 
 许多提供商还有“基本”层，可提供更多有用的计算能力和更少的限制。[Digital Ocean](https://www.digitalocean.com/) 和 [Python Anywhere](https://www.pythonanywhere.com/) ，就是流行的托管服务提供商的例子，提供相对便宜的基本计算等级（每月 5 美元到 10 美元不等）。
 
-> **备注：** 请记住，价格不是唯一的选择标准。如果你的网站成功，可能会发现，可扩展性是最重要的考虑因素。
+> [!NOTE]
+> 请记住，价格不是唯一的选择标准。如果你的网站成功，可能会发现，可扩展性是最重要的考虑因素。
 
 ## 让你的网站准备好发布
 
 使用 django-admin 和 manage.py 工具创建的 Django 骨架网站，是为了使开发更容易而配置的。出于安全性或性能原因，许多 Django 项目设置（在**settings.py**中指定），在生产应该是不同的。
 
-> **备注：** 通常有一个单独的 **settings.py** 文件用于生产环境，并从单独的文件或环境变量，导入敏感设置。即使其他源代码在公共存储库中可用，也应保护此文件。
+> [!NOTE]
+> 通常有一个单独的 **settings.py** 文件用于生产环境，并从单独的文件或环境变量，导入敏感设置。即使其他源代码在公共存储库中可用，也应保护此文件。
 
 你必须检查的关键设置是：
 
@@ -131,7 +136,8 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 默认情况下，`DEBUG`的值为`True`，但如果`DJANGO_DEBUG`环境变量的值，设置为空字符串，则为`False`，例如，`DJANGO_DEBUG=''`。
 
-> **备注：** 如果我们可以直接将`DJANGO_DEBUG`环境变量设置为`True`或`False`，而不是分别使用“any string”或“empty string”，那将更直观。不幸的是，环境变量值存储为 Python 字符串，计算结果为 `False` 的唯一字符串，是空字符串（例如`bool('')==False`）。
+> [!NOTE]
+> 如果我们可以直接将`DJANGO_DEBUG`环境变量设置为`True`或`False`，而不是分别使用“any string”或“empty string”，那将更直观。不幸的是，环境变量值存储为 Python 字符串，计算结果为 `False` 的唯一字符串，是空字符串（例如`bool('')==False`）。
 
 [部署清单（Django 文档）](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/)中，提供了你可能要更改的完整设置清单。你还可以使用下面的终端命令，列出其中的一些：
 
@@ -181,7 +187,8 @@ Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)
 
 完成所有操作后，我们可以设置 Heroku 帐户，获取 Heroku 客户端，并使用它来安装我们的网站。
 
-> **备注：** 以下说明反映了在撰写本书时，如何使用 Heroku。如果 Heroku 显着改变了他们的操作过程，你可能希望检查他们的设置文档：[在 Heroku 上开始使用 Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction)。
+> [!NOTE]
+> 以下说明反映了在撰写本书时，如何使用 Heroku。如果 Heroku 显着改变了他们的操作过程，你可能希望检查他们的设置文档：[在 Heroku 上开始使用 Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction)。
 
 就是你一开始所需的所有概述（请参阅 [Heroku 如何工作](https://devcenter.heroku.com/articles/how-heroku-works)，以获取更全面的指南）。
 
@@ -189,7 +196,8 @@ Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)
 
 Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/同步你对实时系统所做的任何更改。它通过添加一个名为 heroku 的新的 heroku“远程”储存库，来指向 Heroku 云上的源储存库。在开发期间，你使用 git 在“主”储存库中储存更改。如果要部署站点，请将更改同步到 Heroku 储存库。
 
-> **备注：** 如果你习惯于遵循良好的软件开发实践，那么你可能已经在使用 git，或其他一些 SCM 系统。如果你已有 git 储存库，则可以跳过此步骤。
+> [!NOTE]
+> 如果你习惯于遵循良好的软件开发实践，那么你可能已经在使用 git，或其他一些 SCM 系统。如果你已有 git 储存库，则可以跳过此步骤。
 
 有很多方法可以使用 git，但最简单的方法之一，是首先在 [Github](https://github.com/) 上建立一个帐户，在那里创建储存库，然后将它同步到本地：
 
@@ -228,7 +236,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 将你的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
 2. 打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
 
-   ```
+   ```ignore
    # Text backup files
    *.bak
 
@@ -244,7 +252,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 使用 status 命令，检查要添加的所有文件是否正确（你希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-   ```
+   ```bash
    > git status
    On branch master
    Your branch is up-to-date with 'origin/master'.
@@ -273,7 +281,8 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 完成此操作后，你应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到你的整个应用程序已经上传。使用此添加/提交/推送循环，你可以在文件更改时，继续更新储存库。
 
-> **备注：** 这是备份你的“vanilla”项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。
+> [!NOTE]
+> 这是备份你的“vanilla”项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。
 >
 > 执行此操作的最佳方法，是使用 git 来管理你的修订。使用 git，你不仅可以回到特定的旧版本，而且可以在生产变更的单独“分支”中进行维护，并选择在生产和开发分支之间移动的任何更改。[学习 Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) 非常值得，但超出了本主题的范围。
 >
@@ -287,7 +296,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 在 GitHub 储存库的根目录中，创建文件`Procfile`（无扩展名），以声明应用程序的进程类型和入口点。将以下文本复制到其中：
 
-```
+```plain
 web: gunicorn locallibrary.wsgi --log-file -
 ```
 
@@ -332,7 +341,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **备注：**
+> [!NOTE]
 >
 > - 我们仍然会在开发期间使用 SQLite，因为我们的开发计算机上不会设置`DATABASE_URL`环境变量。
 > - `conn_max_age=500`的值使连接持久，这比在每个请求周期重新创建连接更有效。但是，这是可选的，如果需要可以删除。
@@ -356,7 +365,8 @@ pip3 install psycopg2
 
 在开发过程中，我们使用 Django 和 Django 开发 Web 服务器，来提供静态文件（CSS，JavaScript 等）。在生产环境中，我们通常提供来自内容传送网络（CDN）或 Web 服务器的静态文件。
 
-> **备注：** 通过 Django/web 应用程序提供静态文件是低效的，因为请求必须通过不必要的附加代码（Django），而不是由 Web 服务器或完全独立的 CDN 直接处理。虽然这对于开发期间的本地使用无关紧要，但如果我们在生产环境中使用相同的方法，则会对性能产生重大影响。
+> [!NOTE]
+> 通过 Django/web 应用程序提供静态文件是低效的，因为请求必须通过不必要的附加代码（Django），而不是由 Web 服务器或完全独立的 CDN 直接处理。虽然这对于开发期间的本地使用无关紧要，但如果我们在生产环境中使用相同的方法，则会对性能产生重大影响。
 
 为了便于将静态文件与 Django Web 应用程序分开托管，Django 提供了 collectstatic 工具，来收集这些文件以进行部署（有一个设置变量，用于定义在运行 collectstatic 时，应该收集文件的位置）。Django 模板是指相对于设置变量（`STATIC_URL`）的静态文件的托管位置，因此如果将静态文件移动到另一个主机/服务器，则可以更改此位置。
 
@@ -389,7 +399,8 @@ STATIC_URL = '/static/'
 
 有许多方法可以在生产环境中提供静态文件（我们在前面的部分中看到了相关的 Django 设置）。Heroku 建议在生产环境中使用 [WhiteNoise](https://warehouse.python.org/project/whitenoise/) 项目，直接从 Gunicorn 提供静态资产。
 
-> **备注：** Heroku 会在上传你的应用程序后，自动调用 collectstatic 并准备静态文件，以供 WhiteNoise 使用。查看 [WhiteNoise](https://warehouse.python.org/project/whitenoise/) 文档，了解其工作原理以及实现，为什么是提供这些文件的相对有效方法。
+> [!NOTE]
+> Heroku 会在上传你的应用程序后，自动调用 collectstatic 并准备静态文件，以供 WhiteNoise 使用。查看 [WhiteNoise](https://warehouse.python.org/project/whitenoise/) 文档，了解其工作原理以及实现，为什么是提供这些文件的相对有效方法。
 
 设置 WhiteNoise 以便在项目中使用的步骤如下：
 
@@ -436,7 +447,7 @@ pip3 freeze > requirements.txt
 
 安装上面所有不同的依赖项后，你的 **requirements.txt** 文件，应至少列出这些项目（尽管版本号可能不同）。请删除下面未列出的任何其他依赖项，除非你已为此应用程序明确添加它们。
 
-```
+```plain
 dj-database-url==0.4.1
 Django==2.0
 gunicorn==19.6.0
@@ -444,17 +455,19 @@ psycopg2==2.6.2
 whitenoise==3.2.2
 ```
 
-> **备注：** 确保存在类似上面的 **psycopg2** 的那一行！即使你没有在本地安装它，你仍然应该将它添加到**requirements.txt**。
+> [!NOTE]
+> 确保存在类似上面的 **psycopg2** 的那一行！即使你没有在本地安装它，你仍然应该将它添加到**requirements.txt**。
 
 #### Runtime
 
 **runtime.txt** 文件（如果已定义）告诉 Heroku 使用哪种编程语言。在 repo 的根目录中，创建文件并添加以下文本：
 
-```
+```plain
 python-3.6.4
 ```
 
-> **备注：** Heroku 只支持少量的 [Python 运行库](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes)（在编写本文时，包括上面的那个）。Heroku 将使用受支持的运行库，而不管此文件中指定的值。
+> [!NOTE]
+> Heroku 只支持少量的 [Python 运行库](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes)（在编写本文时，包括上面的那个）。Heroku 将使用受支持的运行库，而不管此文件中指定的值。
 
 #### 将更改保存到 Github 并重新测试
 
@@ -502,7 +515,8 @@ heroku help
 heroku create
 ```
 
-> **备注：** 如果你愿意，可以通过在“创建”之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。
+> [!NOTE]
+> 如果你愿意，可以通过在“创建”之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。
 
 然后我们可以将应用程序，推送到 Heroku 储存库，如下所示。这将上传应用程序，将其打包到 dyno 中，运行 collectstatic，然后启动该站点。
 
@@ -564,7 +578,8 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 如果你回想起来**准备发布网站**的部分，我们必须为`DJANGO_SECRET_KEY` 和 `DJANGO_DEBUG`设置环境变量。我们现在就这样做。
 
-> **备注：** 密钥需要真正的保密！生成新密钥的一种方法，是创建一个新的 Django 项目（`django-admin startproject someprojectname`），然后从 **settings.py** 中，获取为你生成的密钥。
+> [!NOTE]
+> 密钥需要真正的保密！生成新密钥的一种方法，是创建一个新的 Django 项目（`django-admin startproject someprojectname`），然后从 **settings.py** 中，获取为你生成的密钥。
 
 我们使用 `config:set`命令，设置`DJANGO_SECRET_KEY`（如下所示）。记得使用自己的密钥！
 
@@ -600,7 +615,8 @@ git push origin master
 git push heroku master
 ```
 
-> **备注：** 完成 Heroku 的站点更新后，输入一个不存在的 URL（例如，**/catalog/doesnotexist/**）。以前这会显示一个详细的调试页面，但现在，你应该只看到一个简单的“未找到”页面。
+> [!NOTE]
+> 完成 Heroku 的站点更新后，输入一个不存在的 URL（例如，**/catalog/doesnotexist/**）。以前这会显示一个详细的调试页面，但现在，你应该只看到一个简单的“未找到”页面。
 
 ### 除错调试
 

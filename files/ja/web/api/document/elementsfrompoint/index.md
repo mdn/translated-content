@@ -1,8 +1,9 @@
 ---
 title: "Document: elementsFromPoint() メソッド"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef("DOM")}}

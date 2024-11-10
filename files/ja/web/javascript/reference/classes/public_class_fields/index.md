@@ -2,7 +2,7 @@
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Classes")}}
@@ -142,7 +142,8 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **メモ:** これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> [!NOTE]
+> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 クラスフィールドは [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（本質的には {{jsxref("Object.defineProperty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.field = …` を使用するのとは異なります。
 
@@ -169,7 +170,8 @@ class DerivedWithConstructor extends Base {
 const instance2 = new DerivedWithConstructor(); // Logs 1
 ```
 
-> **メモ:** クラスフィールドの仕様が最終的に `[[DefineOwnProperty]]` の意味づけで決定される以前は、 [Babel](https://babeljs.io/) や [tsc](https://www.typescriptlang.org/) を含むほとんどのトランスパイラーはクラスフィールドを `DerivedWithConstructor` 形式に変換しており、クラスフィールドが標準化された後に微妙なバグが発生していました。
+> [!NOTE]
+> クラスフィールドの仕様が最終的に `[[DefineOwnProperty]]` の意味づけで決定される以前は、 [Babel](https://babeljs.io/) や [tsc](https://www.typescriptlang.org/) を含むほとんどのトランスパイラーはクラスフィールドを `DerivedWithConstructor` 形式に変換しており、クラスフィールドが標準化された後に微妙なバグが発生していました。
 
 ## 例
 

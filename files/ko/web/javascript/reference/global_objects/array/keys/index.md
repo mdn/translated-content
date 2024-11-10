@@ -2,7 +2,7 @@
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
@@ -29,7 +29,7 @@ keys()
 
 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)에 사용되는 경우, `keys()` 메서드는 빈 슬롯의 값이 `undefined`인 것처럼 반복합니다.
 
-`key()` 메서드는 [범용 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상됩니다.
+`key()` 메서드는 [범용 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. 본 메서드는 `this` 값에 `length` 속성과 정수 키 속성만을 기대합니다.
 
 ## 예제
 
@@ -76,6 +76,6 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.keys()")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

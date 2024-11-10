@@ -9,7 +9,8 @@ La propriété **`minDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un
 
 Sa valeur par défaut est `-100`.
 
-> **Note :** Si une valeur inférieure à `AnalyserNode.minDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
+> [!NOTE]
+> Si une valeur inférieure à `AnalyserNode.minDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
 
 ## Syntaxe
 

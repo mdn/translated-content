@@ -46,7 +46,8 @@ not ( not ( transform-origin: 2px ) )
 (display: flexbox) and ( not (display: inline-grid) )
 ```
 
-> **Nota:** no hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
+> [!NOTE]
+> No hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
 
 ### El operador "`and`"
 
@@ -90,7 +91,8 @@ es equivalente a:
 (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
 ```
 
-> **Nota:** cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
+> [!NOTE]
+> Cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
 
 ### Sintaxis formal
 

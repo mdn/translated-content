@@ -26,7 +26,8 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。
 
-> **備註：** 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
+> [!NOTE]
+> 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
 
 ## 範例
 
