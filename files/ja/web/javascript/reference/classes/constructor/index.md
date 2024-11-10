@@ -2,7 +2,7 @@
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Classes")}}
@@ -63,7 +63,7 @@ constructor(...args) {
 ```
 
 > [!NOTE]
-> 上記のような明示的なコンストラクターと既定のコンストラクターの異なる点は、後者が実際には[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)を呼び出して[引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を行わないことです。
+> 上記のような明示的なコンストラクターと既定のコンストラクターの異なる点は、後者が実際には[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)を呼び出して[引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を行わないことです。
 
 それがこのようなコードを動作させることができます。
 
@@ -183,7 +183,7 @@ const person = new Person();
 person.introduce(); // こんにちは、私は名無し
 ```
 
-コンストラクターはリテラル名でなければなりません。計算されたプロパティ名はコンストラクターにはなれません。
+コンストラクターはリテラル名でなければなりません。[計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)はコンストラクターにはなれません。
 
 ```js
 class Foo {
@@ -200,7 +200,7 @@ foo.constructor(); // "called" と出力
 console.log(foo); // Foo { a: 1 }
 ```
 
-非同期メソッド、ジェネレータメソッド、アクセサ、クラスフィールドは `constructor` と名付けることは禁止されています。プライベートな名前を `#constructor` と呼び出すことはできません。 `constructor` という名前のメンバーはプレーンなメソッドでなければなりません。
+非同期メソッド、ジェネレーターメソッド、アクセサ、クラスフィールドは `constructor` と名付けることは禁止されています。プライベートな名前を `#constructor` と呼び出すことはできません。 `constructor` という名前のメンバーはプレーンなメソッドでなければなりません。
 
 ## 例
 
