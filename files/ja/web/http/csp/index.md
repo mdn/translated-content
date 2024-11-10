@@ -2,7 +2,7 @@
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/CSP
 l10n:
-  sourceCommit: 31c5401d7aa2b7f5146363cd9bf02a2221a5b20b
+  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
 
 {{HTTPSidebar}}
@@ -11,8 +11,7 @@ l10n:
 これらの攻撃はデータの窃取からサイトの改ざん、マルウェアの拡散に至るまで、様々な目的に用いられます。
 
 CSP は完全な後方互換性を保って設計されています（ただし、 CSP 2 については後方互換性がない点もあり、明示的に記述されています。詳細は[こちら](https://www.w3.org/TR/CSP2)の 1.1 章を参照してください）。
-そのため、 CSP に未対応のブラウザーでも CSP 実装済のサーバーと通信でき、逆もまた同様です。 CSP 未対応のブラウザーは単に CSP を無視し、ウェブコンテンツにはこれまで通り標準の同一オリジンポリシーを適用します。
-CSP ヘッダーを送信しないサーバーに対しても、ブラウザーは同様に標準の [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) を適用します。
+CSP に対応していないブラウザーは CSP を無視し、通常通り機能します。CSP が追加するようなさらなる制限はなく、標準の[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)の保護のみが適用されます。
 
 CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すように設定する必要があります（`X-Content-Security-Policy` ヘッダーに関する記述が時々ありますが、これは古いバージョンのものであり、今日このヘッダーを指定する必要はありません）。
 
@@ -23,6 +22,9 @@ CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content
   http-equiv="Content-Security-Policy"
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
+
+> [!NOTE]
+> 一部の機能、例えば CSP 違反レポートの送信などは HTTP ヘッダーを使用する場合にのみ利用できます。
 
 ## 脅威
 
@@ -45,7 +47,7 @@ CSP に対応したブラウザーは、サーバーから指定された許可�
 
 ## CSP の適用
 
-コンテンツセキュリティポリシーを適用するには、該当するウェブページに {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すようにし、ユーザエージェントが読み込むことのできるリソースの情報を指定します。
+コンテンツセキュリティポリシーを適用するには、該当するウェブページに {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すようにし、ユーザーエージェントが読み込むことのできるリソースの情報を指定します。
 例えば、画像のアップロードや表示を行うページの場合、画像の出元は任意の場所で構いませんが、フォームの action 属性値は特定のエンドポイントに制限する必要があります。
 コンテンツセキュリティポリシーを適切に設計すれば、クロスサイトスクリプティング攻撃に対する耐性を高めることができます。
 この記事では、適切なヘッダーの作成方法と記述例を紹介します。
@@ -92,13 +94,14 @@ Content-Security-Policy: default-src 'self' example.com *.example.com
 
 ### 例 3
 
-サイト管理者がウェブアプリのユーザーに、任意のドメインからの画像読み込みを許可したい場合。ただし、音声や動画は信頼された配信元からのものだけに制限し、すべてのスクリプトは、信頼されたコードをホストする特定のサーバーのみに制限する。
+サイト管理者がウェブアプリのユーザーに、任意のドメインからの画像読み込みを許可したい場合。
+ただし、音声や動画は信頼された配信元からのものだけに制限し、すべてのスクリプトは、信頼されたコードをホストする特定のサーバーのみに制限する。
 
 ```http
-Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscripts.example.com
+Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscript.example.com
 ```
 
-この例では、コンテンツのデフォルト設定としてドキュメント自身のホストのみを許可していますが、以下の例外を認めています。
+この例では、既定で、コンテンツはこの文書のオリジンからのみ許可されていますが、以下の例外があります。
 
 - 画像は任意の場所から読み込まれます（ワイルドカード "\*" による指定に注意）。
 - メディアは example.org と example.net のものだけが許可されます（ただしサブドメインは許可されません）。
@@ -116,13 +119,13 @@ Content-Security-Policy: default-src https://onlinebanking.example.com
 
 ### 例 5
 
-サイト管理者がウェブメールサイトについて、メール内の HTML を許可し、任意のドメインから画像の読み込みを許可するが、JavaScript や他に危険性のあるコンテンツは許可したくない場合。
+サイト管理者がウェブメールサイトについて、メール内の HTML に対して、任意のドメインから画像の読み込みを許可するが、JavaScript や他に危険性のあるコンテンツは許可したくない場合。
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-この例では、 {{CSP("script-src")}} を指定していないことに注意してください。この CSP を適用したサイトは、スクリプトに関して {{CSP("default-src")}} ディレクティブの設定を適用します。つまり、スクリプトは元のサーバーのものだけ読み込まれます。
+なお、この例では {{CSP("script-src")}} が指定されていないため、代替として、JavaScript ソースには {{CSP("default-src")}} ディレクティブが使用されます。
 
 ## ポリシーのテスト
 
@@ -137,84 +140,71 @@ Content-Security-Policy-Report-Only: policy
 同じレスポンス中に {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーと {{HTTPHeader("Content-Security-Policy")}} ヘッダーが存在した場合、どちらのポリシーも考慮されます。
 `Content-Security-Policy` ヘッダーに指定したポリシーについてはブロックが行われ、`Content-Security-Policy-Report-Only` ヘッダーに指定したポリシーは報告のみが行われます。
 
-## 報告機能の利用
+## 違反の報告
 
-既定では、違反内容は報告されません。違反内容の報告機能を有効にするには {{CSP("report-uri")}} ポリシーディレクティブを指定し、報告先の URI を 1 つ以上指定する必要があります。
+CSP 違反を報告するための推奨される方法は、[報告 API](/ja/docs/Web/API/Reporting_API) を使用し、{{HTTPHeader("Reporting-Endpoints")}} でエンドポイントを宣言し、そのうちの 1 つを CSP 報告対象として指定するものです。 `Content-Security-Policy` ヘッダーの {{CSP("report-to")}} ディレクティブを使用します。
 
-```http
-Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
-```
+> [!WARNING]
+> CSP {{CSP("report-uri")}} ディレクティブを使用して、CSP 違反レポートの送信先 URL を指定することもできます。
+> この場合、`POST` 操作により、少し異なる形式の JSON レポートが {{HTTPHeader("Content-Type")}} を `application/csp-report` として送信されます。
+> この方法は非推奨ですが、{{CSP("report-to")}} がすべてのブラウザーで対応されるまでは、両方を宣言しておく必要があります。
+> この手法の詳細については、{{CSP("report-uri")}} のトピックを参照してください。
 
-URI を指定したら報告を受け取るサーバーを立ち上げます。受信した内容は適切に感じるどんな方法でも保存・処理することができます。
-
-## 違反内容の報告の構文
-
-違反内容は以下のデータを含んだ JSON オブジェクトで送信されます。
-
-- `blocked-uri`
-  - : コンテンツセキュリティポリシーによって読み込みがブロックされたリソースの URI。
-    ブロックされた URI が `document-uri` とは異なるオリジンだった場合、ブロックされた URI はスキーム・ホスト・ポートのみを含むように切り詰められます。
-- `disposition`
-  - : `"enforce"` または `"report"` のいずれかで、 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーか `Content-Security-Policy` ヘッダーのどちらが使われているかで決まります。
-- `document-uri`
-  - : 違反が生じた文書の URI。
-- `effective-directive`
-  - : 実行により違反を起こしたディレクティブ。
-    ブラウザーによっては異なる値を提供します。例えば Chrome の場合は実際に違反が発生したディレクティブが `style-src` でも `style-src-elem`/`style-src-attr` を提供します。
-- `original-policy`
-  - : `Content-Security-Policy` HTTP ヘッダーに元々指定されていたポリシー。
-- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 違反が生じた文書のリファラー。
-- `script-sample`
-  - : 違反を起こしたインラインスクリプト、イベントハンドラー、スタイルの最初の 40 文字。 `'report-sample'` が含まれている場合に `script-src*` と `style-src*` のみに適用されます。
-- `status-code`
-  - : グローバルオブジェクトが初期化されたリソースの HTTP ステータスコード。
-- `violated-directive`
-  - : 違反したポリシーセクションの名前。
-
-## 違反報告の例
-
-`http://example.com/signup.html` というページを例に考えます。ここでは次のようなポリシーを指定しており、 `cdn.example.com` のスタイルシートのみを許可しています。
+サーバーは、HTTP の {{HTTPHeader("Reporting-Endpoints")}} レスポンスヘッダーを使用して、レポートの送信先に関する情報をクライアントに通知することができます。
+このヘッダーでは、カンマで区切られた 1 つ以上のエンドポイント URL を定義します。
+例えば、レポートを受け入れる名前付きレポートエンドポイント `csp-endpoint` を `https://example.com/csp-reports` で定義する場合、サーバーのレスポンスヘッダーは次のようになります。
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-`signup.html` の内容は次の通りです。
+異なる種類のレポートを処理する複数のエンドポイントを設定したい場合は、次のように指定します。
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    Here be content.
-  </body>
-</html>
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
-間違いがあることにお気付きでしょうか？スタイルシートの読み込みは `cdn.example.com` からのみに制限されていますが、実際には自身のドメイン (`http://example.com`) から読み込もうとしています。このドキュメントを閲覧した際には、次のような違反内容が `http://example.com/_/csp-reports` へ POST リクエストで送信されます。
+`Content-Security-Policy` ヘッダーの {{CSP("report-to")}} ディレクティブを使用して、特定の定義したエンドポイントをレポートに使用するように指定することができます。例えば、CSP 違反のレポートを `default-src` で `https://example.com/csp-reports` に送信するようにするには、次の例のようなレスポンスヘッダーを送信します。
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+CSP 違反が発生すると、ブラウザーはレポートを JSON オブジェクトとして、HTTP の `POST` 操作で、 {{HTTPHeader("Content-Type")}} を `application/reports+json` として送信します。
+レポートは、シリアライズされた {{domxref("Report")}} オブジェクトの形であり、その中の `type` プロパティの値が `"csp-violation"` で、`body` の値は {{domxref("CSPViolationReportBody")}} オブジェクトがシリアライズされた形です。
+
+よくあるオブジェクトは、次のように見えます。
 
 ```json
 {
-  "csp-report": {
-    "document-uri": "http://example.com/signup.html",
-    "referrer": "",
-    "blocked-uri": "http://example.com/css/style.css",
-    "violated-directive": "style-src cdn.example.com",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
-  }
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 }
 ```
 
-ご覧の通り、`blocked-uri` には違反の原因となったリソースのフルパスが記録されています。
-ただし、必ずフルパスが記録されるとは限りません。
-例えば、 `signup.html` が `http://anothercdn.example.com/stylesheet.css` から CSS を読み込もうとした場合、`blocked-uri` にはフルパスではなくオリジンのみ (`http://anothercdn.example.com`) が記録されます。
-この一見不思議な挙動は CSP の仕様書に [説明されています](https://www.w3.org/TR/CSP/#security-violation-reports)。
-手短に言うと、この挙動はクロスオリジンのリソースに関する機密情報の漏えいを防ぐために規定されています。
+サーバーを、指定された JSON 形式とコンテンツタイプでレポートを受信するよう設定する必要があります。
+これらのリクエストを処理するサーバーは、お客様のニーズに最適な方法で受信したレポートを格納したり処理したりすることができます。
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -229,6 +219,6 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 - HTTP の {{HTTPHeader("Content-Security-Policy")}} ヘッダー
 - HTTP の {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダー
 - [WebExtensions のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [ウェブワーカーでの CSP](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+- [ウェブワーカーでの CSP](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ワーカー内の_csp)
 - [プライバシー、許可、情報セキュリティ](/ja/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy

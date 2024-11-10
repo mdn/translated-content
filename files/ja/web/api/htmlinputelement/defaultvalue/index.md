@@ -3,7 +3,7 @@ title: "HTMLInputElement: defaultValue プロパティ"
 short-title: defaultValue
 slug: Web/API/HTMLInputElement/defaultValue
 l10n:
-  sourceCommit: e62f2b210f88e2c3e7270dcb4341e2963f9619cf
+  sourceCommit: bc141099823c9ae2e46f560ac674be2bc4118351
 ---
 
 {{ApiRef("HTML DOM")}}

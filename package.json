@@ -24,7 +24,7 @@
     "prepare": "husky || true"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20"
   },
   "dependencies": {
     "autocorrect-node": "2.13.0",
@@ -37,7 +37,7 @@
     "markdownlint-cli2": "0.14.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
-    "ora": "^8.1.0",
+    "ora": "^8.1.1",
     "prettier": "3.3.3",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
