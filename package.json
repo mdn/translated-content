@@ -24,7 +24,7 @@
     "prepare": "husky || true"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20"
   },
   "dependencies": {
     "autocorrect-node": "2.13.0",

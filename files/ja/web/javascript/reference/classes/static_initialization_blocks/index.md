@@ -2,7 +2,7 @@
 title: 静的初期化ブロック
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: 11b75916ceb7379f4ca3ba9440b032efc284fe2d
 ---
 
 {{jsSidebar("Classes")}}
@@ -41,7 +41,7 @@ MyClass.init();
 これらのブロックは、宣言された順に、静的フィールド初期化子とともに[評価](/ja/docs/Web/JavaScript/Reference/Classes#評価の順序)されます。
 スーパークラスの静的初期化は、そのサブクラスの初期化よりも先に実行されます。
 
-静的ブロックの内部で宣言された変数のスコープは、そのブロックのローカルなものです。ここには初期化ブロック内で宣言された `var`, `function`, `const`, `let` は、そのブロックのローカル変数であるため、ブロック内の `var` 宣言は巻き上げされることはありません。
+静的ブロックの内部で宣言された変数のスコープは、そのブロックのローカルなものです。ここには初期化ブロック内で宣言された `var`, `function`, `const`, `let` は、そのブロックのローカル変数であるため、 `var` 宣言は静的ブロックの外に巻き上げされることはありません。
 
 ```js
 var y = "Outer y";
@@ -49,11 +49,15 @@ var y = "Outer y";
 class A {
   static field = "Inner y";
   static {
+    // var y はブロックの中にしか巻き上げられない
+    console.log(y); // undefined <-- not 'Outer y'
+
     var y = this.field;
   }
 }
 
-// 静的ブロックで定義された var は巻き上げられない
+// 静的ブロックで定義された var y は
+// ブロックの外に巻き上げられない
 console.log(y); // 'Outer y'
 ```
 
