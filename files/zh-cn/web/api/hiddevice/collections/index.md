@@ -53,7 +53,7 @@ l10n:
 - `outputReports`
   - : 一个 `outputReport` 项数组，表示此集合中描述的各个输出报告。
 - `featureReports`
-  - : 一个 `featureReport` 项数组，表示此集合中描述的各个功能报告。
+  - : 一个 `featureReport` 项数组，表示此集合中描述的各个特性功能报告。
 
 ## 示例
 
@@ -76,7 +76,7 @@ for (const collection of device.collections) {
   }
 
   for (const featureReport of collection.featureReports) {
-    console.log(`功能报告：${featureReport.reportId}`);
+    console.log(`特性报告：${featureReport.reportId}`);
     // 遍历 featureReport.items
   }
 
