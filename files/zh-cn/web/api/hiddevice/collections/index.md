@@ -53,7 +53,7 @@ l10n:
 - `outputReports`
   - : 一个 `outputReport` 项数组，表示此集合中描述的各个输出报告。
 - `featureReports`
-  - : 一个 `featureReport` 项数组，表示此集合中描述的各个特性功能报告。
+  - : 一个 `featureReport` 项数组，表示此集合中描述的各个特性报告。
 
 ## 示例
 
@@ -61,9 +61,9 @@ l10n:
 
 ```js
 for (const collection of device.collections) {
-  // 一个 HID 集合包括用法、用法页面、报告和子集合。
-  console.log(`用法：${collection.usage}`);
-  console.log(`用法页面：${collection.usagePage}`);
+  // 一个 HID 集合包括用途、用途页面、报告和子集合。
+  console.log(`用途：${collection.usage}`);
+  console.log(`用途页面：${collection.usagePage}`);
 
   for (const inputReport of collection.inputReports) {
     console.log(`输入报告：${inputReport.reportId}`);
