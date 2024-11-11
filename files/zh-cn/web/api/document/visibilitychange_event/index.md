@@ -37,9 +37,9 @@ onvisibilitychange = (event) => {};
 
 ### 在文档转向隐藏状态时暂停音乐
 
-本示例在页面隐藏时暂停播放，在页面再次可见时恢复播放。
+本示例的音频在页面隐藏时暂停播放，在页面再次可见时恢复播放。
 
-有关完整示例，参见[页面可见性 API：在页面隐藏时暂停音频](/zh-CN/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide)文档。
+有关完整示例，参见[页面可见性 API：在页面隐藏时暂停音频](/zh-CN/docs/Web/API/Page_Visibility_API#在页面隐藏时暂停音频)文档。
 
 ```js
 document.addEventListener("visibilitychange", () => {
