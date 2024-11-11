@@ -3,7 +3,7 @@ title: 使用 dns-prefetch
 slug: Web/Performance/dns-prefetch
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 **`DNS-prefetch`** 尝试在请求资源之前解析域名。这可能是后面要加载的文件，也可能是用户尝试打开的链接目标。
 

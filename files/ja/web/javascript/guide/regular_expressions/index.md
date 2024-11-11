@@ -2,14 +2,14 @@
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_expressions
 l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。
 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp/exec", "exec()")}} および {{jsxref("RegExp/test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/replaceAll", "replaceAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドで使用できます。
-本章では、 JavaScript の正規表現について説明します。
+本章では、 JavaScript の正規表現について説明します。それぞれの構文要素の概略を提供しています。それぞれの意味づけの詳細については、[正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)のリファレンスを参照してください。
 
 ## 正規表現の作成
 
@@ -37,10 +37,7 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 
 正規表現パターンは、 `/abc/` のような単純な文字、または `/ab*c/` や `/Chapter (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。
 最後の例には記憶装置として用いられる丸括弧があります。
-パターンのこの部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups)を参照してください。
-
-> [!NOTE]
-> すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
+パターンのこの部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#グループの使用)を参照してください。
 
 ### 単純なパターンの使い方
 
@@ -57,16 +54,14 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 
 以下のページで、正規表現で使用できる特殊文字の完全なリストとその意味を詳しく説明します。
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
   - : アサーションには、行や単語の始まりと終わりを示す境界や、何らかの方法で一致する可能性を示すパターン（先読み、後追い、条件式など）が含まれます。
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
   - : 異なるタイプの文字を判別します。例えば、アルファベットと数字を判別する。
-- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
   - : グループは複数のパターンを全体としてグループ化し、キャプチャグループは正規表現パターンを使用して文字列と一致させる際に、追加のサブ一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉されたグループを参照します。
-- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
   - : 一致させる文字や式の数を示します。
-- [Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - : 大文字と小文字、数学記号、句読点など、 Unicode 文字のプロパティに基づき区別します。
 
 正規表現で利用可能なすべての特殊文字を一つの表で見たい場合は、以下を参照してください。
 
@@ -83,16 +78,18 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
   <tbody>
     <tr>
       <td>
-        <code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>,
-        <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>,
-        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
-        <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
-        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>
+        <code>[xyz]</code>, <code>[^xyz]</code>, <code>.</code>,
+        <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
+        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
+        <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
+        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
+        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >文字クラス</a
           >
         </p>
@@ -100,14 +97,14 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
     </tr>
     <tr>
       <td>
-        <code>^</code>, <code>$</code>, <code>x(?=y)</code>,
-        <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
-        <code>(?&#x3C;!y)x</code>, <code>\b</code>, <code>\B</code>
+        <code>^</code>, <code>$</code>, <code>\b</code>, <code>\B</code>,
+        <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
+        <code>(?&#x3C;!y)x</code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
             >アサーション</a
           >
         </p>
@@ -115,14 +112,13 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
     </tr>
     <tr>
       <td>
-        <code>(x)</code>, <code>(?:x)</code>, <code>(?&#x3C;Name>x)</code>,
-        <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>,
-        <code>\<em>Number</em></code>
+        <code>(<em>x</em>)</code>, <code>(?&#x3C;Name>x)</code>, <code>(?:<em>x</em>)</code>,
+        <code>\<em>n</em></code>, <code>\k&#x3C;Name></code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences"
+            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences"
             >グループと後方参照</a
           >
         </p>
@@ -130,35 +126,23 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
     </tr>
     <tr>
       <td>
-        <code>*</code>, <code>+</code>, <code>?</code>,
-        <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>,
-        <code>x{<em>n</em>,<em>m</em>}</code>
+        <code><em>x</em>*</code>, <code><em>x</em>+</code>, <code><em>x</em>?</code>,
+        <code><em>x</em>{<em>n</em>}</code>, <code><em>x</em>{<em>n</em>,}</code>,
+        <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers"
-            >数量詞</a
+            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers"
+            >数量子</a
           >
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\p{<em>UnicodeProperty</em>}</code>,
-        <code>\P{<em>UnicodeProperty</em>}</code>
-      </td>
-      <td>
-        <a
-          href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes"
-          >Unicode プロパティのエスケープ</a
-        >
       </td>
     </tr>
   </tbody>
 </table>
 
-> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (個別の記事の一部を集約しただけです)。
+> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
 
 ### エスケープ
 
@@ -169,12 +153,12 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/example\/[a-z]+/i` とします。それぞれのスラッシュ前のバックスラッシュが、スラッシュを文字として扱わせます。
 
 バックスラッシュ文字に一致させるには、バックスラッシュをエスケープする必要があります。
-例えば、 "C:\" という文字列で "C" が任意の英字になる場合は、 `/[A-Z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
+例えば、 "C:\\" という文字列で "C" が任意の英字になる場合は、 `/[A-Z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
 
 `RegExp` コンストラクターに文字列リテラルを渡して使用する場合は、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
 `/a\*b/` と `new RegExp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "\*"、その次に "b" があるものを探します。
 
-エスケープ文字がパターンに含まれていない場合は、 {{jsxref('String.prototype.replace()')}} を使用して追加することができます。
+エスケープ文字がパターンに含まれていない場合は、 {{jsxref("String.prototype.replace()")}} を使用して追加することができます。
 
 ```js
 function escapeRegExp(string) {
@@ -190,11 +174,11 @@ _なぜこれが JavaScript に組み込まれていないのでしょうか？_
 ### 括弧の使用
 
 正規表現パターンの一部を括弧で囲むことで、一致した部分文字列を記憶しておくことができます。
-いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups)で説明しています。
+いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#グループの使用)で説明しています。
 
 ## JavaScriptでの正規表現の使い方
 
-正規表現は、 {{jsxref("RegExp")}} の {{jsxref("RegExp/test", "test()")}} と {{jsxref("RegExp/exec", "exec()")}} メソッド、 {{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドとともに使用します。
+正規表現は、 {{jsxref("RegExp")}} の {{jsxref("RegExp/test", "test()")}} と {{jsxref("RegExp/exec", "exec()")}} メソッド、 {{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/replaceAll", "replaceAll()")}}, 、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドとともに使用します。
 
 | メソッド                                        | 説明                                                                                                             |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -321,15 +305,16 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 正規表現には、グローバル検索や大文字小文字を区別しない検索などの機能を実現する 6 種類のオプションフラグがあります。
 これらのフラグは、個別に使用することも一緒に使用することもでき、順序は問いません。正規表現の一部に含まれます。
 
-| フラグ | 説明                                                                                                                                                      | 対応するプロパティ                            |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `d`    | 一致した部分文字列の位置を生成します。                                                                                                                    | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
-| `g`    | グローバル検索を行います。                                                                                                                                | {{jsxref("RegExp/global", "global")}}         |
-| `i`    | 大文字・小文字を区別しない検索です。                                                                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
-| `m`    | 複数行の検索です。                                                                                                                                        | {{jsxref("RegExp/multiline", "multiline")}}   |
-| `s`    | `.` が改行文字に一致するようにします。                                                                                                                    | {{jsxref("RegExp/dotAll", "dotAll")}}         |
-| `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                                                                                   | {{jsxref("RegExp/unicode", "unicode")}}       |
-| `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 {{jsxref("RegExp.sticky", "sticky")}} を参照してください。 | {{jsxref("RegExp/sticky", "sticky")}}         |
+| フラグ | 説明                                                                                           | 対応するプロパティ                              |
+| ------ | ---------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `d`    | 一致した部分文字列の位置を生成します。                                                         | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
+| `g`    | グローバル検索を行います。                                                                     | {{jsxref("RegExp/global", "global")}}           |
+| `i`    | 大文字・小文字を区別しない検索です。                                                           | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
+| `m`    | `^` および `$` が改行文字の隣で一致するようになります。                                        | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `s`    | `.` が改行文字に一致するようにします。                                                         | {{jsxref("RegExp/dotAll", "dotAll")}}           |
+| `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                        | {{jsxref("RegExp/unicode", "unicode")}}         |
+| `v`    | Unicodeの機能がさらに追加された `u` モードへのアップグレード。                                 | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
+| `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 | {{jsxref("RegExp/sticky", "sticky")}}           |
 
 フラグを正規表現に含めるには、次のようにしてください。
 
@@ -373,6 +358,8 @@ const re = new RegExp("\\w+\\s", "g");
 `m` フラグは、複数行の入力文字列を複数行として扱うことを指定するために使用します。
 `m` フラグを使用すると、 `^` と `$` は、文字列全体ではなく、入力文字列内の任意の行の先頭または末尾に一致します。
 
+`i`, `m`, `s` フラグは、正規表現の特定の部分に対して、[修飾子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)構文を使用して有効または無効にすることができます。
+
 #### exec() におけるグローバル検索の使用
 
 {{jsxref("RegExp.prototype.exec()")}} メソッドに `g` フラグを付けると、それぞれ一致した値とその位置を繰り返し返します。
@@ -395,19 +382,11 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 #### Unicode 正規表現の使用
 
-"u" フラグは "unicode" 正規表現を作成するために使われます。つまり、 Unicode テキストに一致するように対応している正規表現です。これは主に [Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) の使用によって実現され、これは "unicode" 正規表現の中でだけ対応します。
-
-例えば、次のような正規表現を使用して、任意の Unicode の「語」と照合することができます。
+`u` フラグは "unicode" 正規表現を作成するために使われます。つまり、 Unicode テキストに一致するように対応している正規表現です。Unicode モードで有効になる重要な機能は、 [Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)です。例えば、次のような正規表現を使用して、任意の Unicode の「語」と照合することができます。
 
 ```js
 /\p{L}*/u;
 ```
-
-Unicode 正規表現と非 Unicode 正規表現との間には、他にも注意すべき違いがいくつかあります。
-
-- Unicode の正規表現はいわゆる "identity escape" に対応していません。つまり、バックスラッシュをエスケープする必要がなく、事実上無視されるパターンです。例えば、 `/\a/` は文字 'a' に一致する有効な正規表現ですが、 `/\a/u` はそうではありません。
-- 波括弧は[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)として使用されない場合は、エスケープする必要がありま す。例えば、`/{/` は中括弧 '{' に一致する有効な正規表現ですが、`/{/u` はそうではありません - 代わりに、中括弧をエスケープして `/\\{/u` を使用しなければなりません。
-- `-` の文字は文字クラスの中では異なった解釈をされます。特に、 Unicode の正規表現では、 `-` は文字クラスの先頭または末尾に現れた場合にのみ、リテラルの `-` として解釈されます（範囲指定の一部にはなりません）。例えば、 `/[\w-:]/` は単語、`-`、または `:` に一致する有効な正規表現ですが、 `/\w-:/u` は無効な正規表現です。 `\w` から `:` という範囲は文字の範囲としてきちんと定義されていないので、無効な正規表現だからです。
 
 Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.prototype.unicode`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) には、これに関するより詳しい説明があります。
 
@@ -417,7 +396,7 @@ Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.pr
 > 複数の例が次の場所にあります。
 >
 > - {{jsxref("RegExp/exec", "exec()")}}、{{jsxref("RegExp/test", "test()")}}、{{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/split", "split()")}} のリファレンスページ
-> - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)、[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)、[数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ### 特殊文字を用いた入力の確認
 
@@ -476,7 +455,7 @@ form.addEventListener("submit", (event) => {
 
 #### 結果
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input') }}
+{{EmbedLiveSample("Using_special_characters_to_verify_input")}}
 
 ## ツール
 

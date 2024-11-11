@@ -27,10 +27,6 @@ HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPHeader("Accept-Language")}}
