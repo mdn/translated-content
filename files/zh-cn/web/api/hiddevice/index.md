@@ -44,9 +44,9 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 - {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
   - : 向此 HID 设备发送一个输出报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
 - {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}
-  - : 向此 HID 设备发送一个特性报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
+  - : 向此 HID 设备发送一个特征报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
 - {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}
-  - : 从 HID 设备接收一个特性报告，以 {{jsxref("Promise")}} 的形式兑现为 {{jsxref("DataView")}}。从而允许以类型化的方式访问此消息的内容。
+  - : 从 HID 设备接收一个特征报告，以 {{jsxref("Promise")}} 的形式兑现为 {{jsxref("DataView")}}。从而允许以类型化的方式访问此消息的内容。
 
 ## 示例
 
