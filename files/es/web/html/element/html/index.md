@@ -20,8 +20,6 @@ Dado que el elemento `<html>` es el primero en un documento, aparte de los comen
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- `manifest` {{deprecated_inline}}
-  - : Especifica la dirección URL de un manifiesto de recursos que indica los recursos que deben ser almacenados en la caché local. Consulte [Uso de la cache de la aplicación](/es/docs/Web/HTML/Using_the_application_cache) para obtener más información.
 - `version` {{deprecated_inline}}
   - : Especifica la versión {{glossary("DTD", "Document Type Definition")}} de HTML del documento actual. Este atributo no es necesario, porque es redundante con la información de versión en la declaración de tipo de documento.
 - `xmlns`
