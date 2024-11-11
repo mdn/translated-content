@@ -25,7 +25,7 @@ forget()
 
 ## 示例
 
-在以下示例中，我们将连接到一个任天堂株式会社（Nintendo Switch）的 Joy-Con 右手柄 HID 设备，使其闪烁一次，然后断开与它的连接。
+在以下示例中，我们将连接到一个任天堂（Nintendo）Switch 的 Joy-Con 右手柄 HID 设备，使其闪烁一次，然后断开与它的连接。
 
 ```js
 async function blink() {

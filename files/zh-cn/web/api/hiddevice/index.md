@@ -81,7 +81,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn)中看到更多示例和实时演示。
+你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid)中看到更多示例和实时演示。
 
 ## 规范
 

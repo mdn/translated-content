@@ -11,7 +11,7 @@ l10n:
 
 ## 语法
 
-在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 之类的方法中使用事件名称，或设置一个事件处理器属性。
+在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 之类的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("inputreport", (event) => {});
@@ -38,7 +38,7 @@ _此接口也从其父接口 {{domxref("Event")}} 继承属性。_
 
 ## 示例
 
-以下示例演示如何监听 `inputreport` 事件，该事件允许应用程序检测到 Joy-Con 右手柄设备上的哪个按钮被按下。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn)中看到更多示例和实时演示。
+以下示例演示如何监听 `inputreport` 事件，该事件允许应用程序检测到 Joy-Con 右手柄设备上的哪个按钮被按下。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid)中看到更多示例和实时演示。
 
 ```js
 device.addEventListener("inputreport", (event) => {
