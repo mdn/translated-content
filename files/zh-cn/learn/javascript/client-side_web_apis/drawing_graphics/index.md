@@ -36,7 +36,7 @@ l10n:
 
 ## Web 中的图形
 
-我们来讨论 HTML 的[多媒体和嵌入式](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)模块，早先的网页只有单调的文字，后来才引入了图像，起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
+我们来讨论 HTML 的[多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)模块，早先的网页只有单调的文字，后来才引入了图像，起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
 
 然而，这还不够好。当你能够使用 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 让 SVG 矢量图（因为其由标记表示）动起来时，位图却依然没有相应的支持。同时 SVG 动画的可用工具也少得可怜。Web 仍然无法高效地创建动画、游戏、3D 场景，而其他需求则通常由底层语言（如 C++ 或 Java）来应对。
 
