@@ -39,7 +39,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(
 > [!NOTE]
 > 同时设置 `numberOfInputChannels`、`numberOfOutputChannels` 为零是无效的。
 
-### 返回
+### 返回值
 
 {{domxref("ScriptProcessorNode")}}。
 
