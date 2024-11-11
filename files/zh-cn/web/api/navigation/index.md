@@ -7,17 +7,17 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("Navigation API", "Navigation API", "", "nocode")}} 的 **`Navigation`** 接口允许在一个核心位置控制当前 `window` 的所有导航操作，包括以编程方式启动导航、检查导航历史记录条目以及在导航发生时管理导航。
+{{domxref("Navigation API", "导航 API", "", "nocode")}} 的 **`Navigation`** 接口允许在一个核心位置控制当前 `window` 的所有导航操作，包括以编程方式启动导航、检查导航历史记录条目以及在导航发生时管理导航。
 
 它是通过 {{domxref("Window.navigation")}} 属性访问的。
 
-Navigation API 仅公开在当前浏览上下文中创建的与当前页面同源的历史记录条目（例如，不是嵌入的 {{htmlelement("iframe")}} 内的导航或跨源导航），为你的应用提供所有先前历史记录条目的准确列表。与旧版 {{domxref("History API", "History API", "", "nocode")}} 相比，这使得遍历历史记录变得不那么脆弱。
+导航 API 仅公开在当前浏览上下文中创建的与当前页面同源的历史记录条目（例如，不是嵌入的 {{htmlelement("iframe")}} 内的导航或跨源导航），为你的应用提供所有先前历史记录条目的准确列表。与旧版{{domxref("History API", "历史记录 API", "", "nocode")}} 相比，这使得遍历历史记录变得不那么脆弱。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_从其父级接口 {{DOMxRef("EventTarget")}} 继承属性。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
 - {{domxref("Navigation.activation", "activation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个 {{domxref("NavigationActivation")}} 对象，其中包含有关“激活”此文档的最新跨文档导航的信息。
@@ -32,7 +32,7 @@ _从其父级接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
 ## 实例方法
 
-_从其父级接口 {{DOMxRef("EventTarget")}} 继承方法。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承方法。_
 
 - {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
   - : 在导航历史记录中向后导航一个条目。
@@ -125,6 +125,6 @@ navigation.updateCurrentEntry({ state: newState });
 
 ## 参见
 
-- [现代客户端路由：Navigation API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [Navigation API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的 [Navigation API 在线示例](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
+- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
+- Domenic Denicola 的 [导航 API 在线示例](https://gigantic-honored-octagon.glitch.me/)
