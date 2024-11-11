@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
+**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-backdrop.html", "tabbed-shorter")}}
 
@@ -21,22 +21,22 @@ l10n:
 
 ## 描述
 
-Backdrop 在一下情况会出现：
+背景遮罩（backdrop）在以下情况下会出现：
 
 - 使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 的 {{domxref("Element.requestFullscreen()")}} 方法将元素置于全屏模式时。
 - 通过 {{domxref("HTMLDialogElement.showModal()")}} 调用在顶层显示 {{HTMLElement("dialog")}} 元素。
-- 通过 {{domxref("HTMLElement.showPopover()")}} 调用在顶层显示 {{domxref("Popover API", "Popover", "", "nocode")}} 元素。
+- 通过 {{domxref("HTMLElement.showPopover()")}} 调用在顶层显示{{domxref("Popover API", "弹出框", "", "nocode")}}元素。
 
-当多个元素被置于顶层时，每个元素都有自己的 `::backdrop` 微元素。
+当多个元素被置于顶层时，每个元素都有自己的 `::backdrop` 伪元素。
 
 ```css
-/* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */
+/* 背景遮罩只有通过 dialog.showModal() 打开对话框时会被显示 */
 dialog::backdrop {
   background: rgb(255 0 0 / 25%);
 }
 ```
 
-元素被置于顶级渲染层中的一个后进先出（LIFO）栈里。`::backdrop` 微元素使得可以遮挡、样式化或完全隐藏位于顶层元素下方的所有内容。
+元素被置于顶层的一个后进先出（LIFO）栈里。`::backdrop` 伪元素使得可以遮挡、样式化或完全隐藏位于顶层元素下方的所有内容。
 
 `::backdrop` 既不继承自任何其他元素，也不会被任何其他元素继承。对于此伪元素可以应用哪些属性，没有限制。
 
@@ -95,7 +95,7 @@ const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("dialog + button");
 const closeButton = document.querySelector("dialog button");
 
-// “显示对框框”按钮会以模态打开对话框
+// “显示对话框”按钮会以模态打开对话框
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
