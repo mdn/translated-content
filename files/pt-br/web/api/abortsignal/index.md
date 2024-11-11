@@ -17,7 +17,7 @@ _A interface AbortSignal também herda propriedades de sua interface pai, {{domx
 ### Handlers de Eventos
 
 - {{domxref("AbortSignal.onabort")}}
-  - : Invocado quando um {{event("abort_(dom_abort_api)", "abort")}} evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
+  - : Invocado quando um [`abort`](/pt-BR/docs/Web/Events/abort_(dom_abort_api)) evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
 
 ## Métodos
 

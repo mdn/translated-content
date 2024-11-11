@@ -168,13 +168,13 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("Window.disableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Used to trigger an event.
 - {{domxref("Window.dump()")}}
   - : Writes a message to the console.
 - {{domxref("Window.enableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
@@ -184,7 +184,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -196,7 +196,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
@@ -224,9 +224,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.resizeTo()")}}
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.routeEvent()")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -244,7 +244,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("WindowTimers.setInterval()")}}
   - : Schedules the execution of a function each X milliseconds.
 - {{domxref("Window.setResizable")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Sets a delay for executing a function.
 - {{domxref("Window.showModalDialog()")}}
@@ -282,25 +282,25 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
 - {{domxref("Window.ondevicemotion")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : An event handler property for {{event("error")}} events raised on the window.
+  - : An event handler property for [`error`](/pt-BR/docs/Web/Events/error) events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : An event handler property for {{event("focus")}} events on the window.
+  - : An event handler property for [`focus`](/pt-BR/docs/Web/API/Element/focus_event) events on the window.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : An event handler property for {{event("keydown")}} events on the window.
+  - : An event handler property for [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event) events on the window.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : An event handler property for {{event("keypress")}} events on the window.
+  - : An event handler property for [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event) events on the window.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : An event handler property for {{event("keyup")}} events on the window.
+  - : An event handler property for [`keyup`](/pt-BR/docs/Web/Events/keyup) events on the window.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for [`languagechange`](/pt-BR/docs/Web/Events/languagechange) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An event handler property for window loading.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -343,23 +343,23 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 See also the [DOM Interfaces](/pt-BR/docs/DOM/DOM_Reference).
 
 - {{domxref("Window.DOMParser")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Image")}}
   - : Used for creating an {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Used for creating an {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Worker")}}
   - : Used for creating a [Web worker](/pt-BR/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <! TODO: add content -->
 
 ## Interfaces
 

@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference
 
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
-{{page("/pt-BR/docs/JavaScript/Reference/About")}}
+
 
 ## [Objetos Globais](/pt-BR/docs/JavaScript/Reference/Global_Objects)
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)') -->
 
 ## [Funções e escopo de função](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope)
 
@@ -18,11 +18,11 @@ slug: Web/JavaScript/Reference
 
 ## [Declarações](/pt-BR/docs/JavaScript/Reference/Statements)
 
-{{page('/pt-BR/docs/JavaScript/Reference/Statements')}}
+
 
 ## [Operadores e outras palavras-chave](/pt-BR/docs/JavaScript/Reference/Operators)
 
-{{page('/pt-BR/docs/JavaScript/Reference/Operators')}}
+
 
 ## Comentários
 

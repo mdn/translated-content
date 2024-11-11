@@ -9,7 +9,7 @@ Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma in
 
 - _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), [interactive content](/pt-BR/docs/Web/HTML/Content_categories#Interactive_content), [form-associated element](/pt-BR/docs/Web/HTML/Content_categories#Form-associated_content), palpable content.
 - _conteúdo permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), mas há elementos do rótulo descendente. Nenhum outro do que o controle rotulado elementos labelable são permitidos.
-- _Tag omissão_ {{no_tag_omission}}
+- _Tag omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pai permitidas_ Qualquer elemento que aceita [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLLabelElement")}}
 

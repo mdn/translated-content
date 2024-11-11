@@ -85,7 +85,7 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 - {{domxref("ExtendableEvent")}}
   - : Estende a vida dos eventos `install` e `activate` disparados no {{domxref("ServiceWorkerGlobalScope")}}, como parte do ciclo de vida do _service worker_. Isso garante que qualquer evento funcional (como o {{domxref("FetchEvent")}}) não seja despachado para o {{domxref("ServiceWorker")}} até que ele conclua as ações em andamento, como por exemplo: atualizar esquemas de banco de dados, apagar caches defasados, etc.
 - {{domxref("ExtendableMessageEvent")}}
-  - : O objeto de evento do {{event("message_(ServiceWorker)","message")}}, o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
+  - : O objeto de evento do [`message`](/pt-BR/docs/Web/Events/message_(ServiceWorker)), o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
 - {{domxref("FetchEvent")}}
   - : O parâmetro recebido no _handler_ {{domxref("ServiceWorkerGlobalScope.onfetch")}}. O `FetchEvent` representa uma ação de descarregamento que é despachada no {{domxref("ServiceWorkerGlobalScope")}} de um {{domxref("ServiceWorker")}}. Ele contém informações sobre a requisição e a resposta resultante, além de disponibilizar o método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, o qual nos permite devolver uma resposta customizada para a página que está sendo controlada.
 - {{domxref("InstallEvent")}}
