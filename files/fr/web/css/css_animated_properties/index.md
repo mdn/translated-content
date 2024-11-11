@@ -18,15 +18,15 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/outline"><code>-moz-outline-radius-bottomright</code></a></li>
      <li><a href="/fr/docs/Web/CSS/outline"><code>-moz-outline-radius-topleft</code></a></li>
      <li><a href="/fr/docs/Web/CSS/outline"><code>-moz-outline-radius-topright</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/grid-template-columns"><code>-ms-grid-columns</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/grid-template-rows"><code>-ms-grid-rows</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/grid-template-columns"><code>-ms-grid-columns</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/grid-template-rows"><code>-ms-grid-rows</code></a></li>
      <li><a href="/fr/docs/Web/CSS/-webkit-line-clamp"><code>-webkit-line-clamp</code></a></li>
      <li><a href="/fr/docs/Web/CSS/-webkit-text-fill-color"><code>-webkit-text-fill-color</code></a></li>
      <li><a href="/fr/docs/Web/CSS/-webkit-text-stroke"><code>-webkit-text-stroke</code></a></li>
      <li><a href="/fr/docs/Web/CSS/-webkit-text-stroke-color"><code>-webkit-text-stroke-color</code></a></li>
      <li><a href="/fr/docs/Web/CSS/accent-color"><code>accent-color</code></a></li>
      <li><a href="/fr/docs/Web/CSS/all"><code>all</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/animation-range"><code>animation-range</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/animation-range"><code>animation-range</code></a></li>
      <li><a href="/fr/docs/Web/CSS/aspect-ratio"><code>aspect-ratio</code></a></li>
      <li><a href="/fr/docs/Web/CSS/backdrop-filter"><code>backdrop-filter</code></a></li>
      <li><a href="/fr/docs/Web/CSS/background"><code>background</code></a></li>
@@ -99,23 +99,23 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/column-rule-width"><code>column-rule-width</code></a></li>
      <li><a href="/fr/docs/Web/CSS/column-width"><code>column-width</code></a></li>
      <li><a href="/fr/docs/Web/CSS/columns"><code>columns</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/contain-intrinsic-block-size"><code>contain-intrinsic-block-size</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/contain-intrinsic-height"><code>contain-intrinsic-height</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/contain-intrinsic-inline-size"><code>contain-intrinsic-inline-size</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/contain-intrinsic-block-size"><code>contain-intrinsic-block-size</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/contain-intrinsic-height"><code>contain-intrinsic-height</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/contain-intrinsic-inline-size"><code>contain-intrinsic-inline-size</code></a></li>
      <li><a href="/fr/docs/Web/CSS/contain-intrinsic-size"><code>contain-intrinsic-size</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/contain-intrinsic-width"><code>contain-intrinsic-width</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/container"><code>container</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/container-type"><code>container-type</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/contain-intrinsic-width"><code>contain-intrinsic-width</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/container"><code>container</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/container-type"><code>container-type</code></a></li>
      <li><a href="/fr/docs/Web/CSS/content-visibility"><code>content-visibility</code></a></li>
      <li><a href="/fr/docs/Web/CSS/counter-increment"><code>counter-increment</code></a></li>
      <li><a href="/fr/docs/Web/CSS/counter-reset"><code>counter-reset</code></a></li>
      <li><a href="/fr/docs/Web/CSS/counter-set"><code>counter-set</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/cx"><code>cx</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/cy"><code>cy</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/d"><code>d</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/cx"><code>cx</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/cy"><code>cy</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/d"><code>d</code></a></li>
      <li><a href="/fr/docs/Web/CSS/display"><code>display</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/fill"><code>fill</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/fill-opacity"><code>fill-opacity</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/fill"><code>fill</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/fill-opacity"><code>fill-opacity</code></a></li>
      <li><a href="/fr/docs/Web/CSS/filter"><code>filter</code></a></li>
      <li><a href="/fr/docs/Web/CSS/flex"><code>flex</code></a></li>
      <li><a href="/fr/docs/Web/CSS/flex-basis"><code>flex-basis</code></a></li>
@@ -123,7 +123,7 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/flex-grow"><code>flex-grow</code></a></li>
      <li><a href="/fr/docs/Web/CSS/flex-shrink"><code>flex-shrink</code></a></li>
      <li><a href="/fr/docs/Web/CSS/font"><code>font</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/font-palette"><code>font-palette</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/font-palette"><code>font-palette</code></a></li>
      <li><a href="/fr/docs/Web/CSS/font-size"><code>font-size</code></a></li>
      <li><a href="/fr/docs/Web/CSS/font-size-adjust"><code>font-size-adjust</code></a></li>
      <li><a href="/fr/docs/Web/CSS/font-stretch"><code>font-stretch</code></a></li>
@@ -141,7 +141,7 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/grid-template-columns"><code>grid-template-columns</code></a></li>
      <li><a href="/fr/docs/Web/CSS/grid-template-rows"><code>grid-template-rows</code></a></li>
      <li><a href="/fr/docs/Web/CSS/height"><code>height</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/hyphenate-limit-chars"><code>hyphenate-limit-chars</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/hyphenate-limit-chars"><code>hyphenate-limit-chars</code></a></li>
      <li><a href="/fr/docs/Web/CSS/initial-letter"><code>initial-letter</code></a></li>
      <li><a href="/fr/docs/Web/CSS/inline-size"><code>inline-size</code></a></li>
      <li><a class="page-not-created" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant!"><code>input-security</code></a></li>
@@ -197,7 +197,7 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/outline-offset"><code>outline-offset</code></a></li>
      <li><a href="/fr/docs/Web/CSS/outline-style"><code>outline-style</code></a></li>
      <li><a href="/fr/docs/Web/CSS/outline-width"><code>outline-width</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/overlay"><code>overlay</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/overlay"><code>overlay</code></a></li>
      <li><a href="/fr/docs/Web/CSS/padding"><code>padding</code></a></li>
      <li><a href="/fr/docs/Web/CSS/padding-block"><code>padding-block</code></a></li>
      <li><a href="/fr/docs/Web/CSS/padding-block-end"><code>padding-block-end</code></a></li>
@@ -211,15 +211,15 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/padding-top"><code>padding-top</code></a></li>
      <li><a href="/fr/docs/Web/CSS/perspective"><code>perspective</code></a></li>
      <li><a href="/fr/docs/Web/CSS/perspective-origin"><code>perspective-origin</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/position-try"><code>position-try</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/r"><code>r</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/position-try"><code>position-try</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/r"><code>r</code></a></li>
      <li><a href="/fr/docs/Web/CSS/right"><code>right</code></a></li>
      <li><a href="/fr/docs/Web/CSS/rotate"><code>rotate</code></a></li>
      <li><a href="/fr/docs/Web/CSS/row-gap"><code>row-gap</code></a></li>
      <li><a href="/fr/docs/Web/CSS/ruby-align"><code>ruby-align</code></a></li>
      <li><a class="page-not-created" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant!"><code>ruby-merge</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/rx"><code>rx</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/ry"><code>ry</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/rx"><code>rx</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/ry"><code>ry</code></a></li>
      <li><a href="/fr/docs/Web/CSS/scale"><code>scale</code></a></li>
      <li><a href="/fr/docs/Web/CSS/scroll-margin"><code>scroll-margin</code></a></li>
      <li><a href="/fr/docs/Web/CSS/scroll-margin-block"><code>scroll-margin-block</code></a></li>
@@ -251,12 +251,12 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/shape-image-threshold"><code>shape-image-threshold</code></a></li>
      <li><a href="/fr/docs/Web/CSS/shape-margin"><code>shape-margin</code></a></li>
      <li><a href="/fr/docs/Web/CSS/shape-outside"><code>shape-outside</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke"><code>stroke</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke-dasharray"><code>stroke-dasharray</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke-dashoffset"><code>stroke-dashoffset</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke-miterlimit"><code>stroke-miterlimit</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke-opacity"><code>stroke-opacity</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/stroke-width"><code>stroke-width</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke"><code>stroke</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke-dasharray"><code>stroke-dasharray</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke-dashoffset"><code>stroke-dashoffset</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke-miterlimit"><code>stroke-miterlimit</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke-opacity"><code>stroke-opacity</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/stroke-width"><code>stroke-width</code></a></li>
      <li><a href="/fr/docs/Web/CSS/tab-size"><code>tab-size</code></a></li>
      <li><a href="/fr/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></li>
      <li><a href="/fr/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a></li>
@@ -267,20 +267,20 @@ Voici la liste des propriétés qui peuvent être animées :
      <li><a href="/fr/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></li>
      <li><a href="/fr/docs/Web/CSS/text-size-adjust"><code>text-size-adjust</code></a></li>
      <li><a href="/fr/docs/Web/CSS/text-underline-offset"><code>text-underline-offset</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/text-wrap"><code>text-wrap</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/text-wrap"><code>text-wrap</code></a></li>
      <li><a href="/fr/docs/Web/CSS/top"><code>top</code></a></li>
      <li><a href="/fr/docs/Web/CSS/transform"><code>transform</code></a></li>
      <li><a href="/fr/docs/Web/CSS/transform-origin"><code>transform-origin</code></a></li>
      <li><a href="/fr/docs/Web/CSS/translate"><code>translate</code></a></li>
      <li><a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/view-timeline"><code>view-timeline</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/view-timeline-inset"><code>view-timeline-inset</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/view-timeline"><code>view-timeline</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/view-timeline-inset"><code>view-timeline-inset</code></a></li>
      <li><a href="/fr/docs/Web/CSS/visibility"><code>visibility</code></a></li>
      <li><a href="/fr/docs/Web/CSS/widows"><code>widows</code></a></li>
      <li><a href="/fr/docs/Web/CSS/width"><code>width</code></a></li>
      <li><a href="/fr/docs/Web/CSS/word-spacing"><code>word-spacing</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/x"><code>x</code></a></li>
-     <li><a class="only-in-en-us" title="Cette page est actuellement disponible uniquement en anglais" href="/en-US/docs/Web/CSS/y"><code>y</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/x"><code>x</code></a></li>
+     <li><a href="/fr/docs/Web/CSS/y"><code>y</code></a></li>
      <li><a href="/fr/docs/Web/CSS/z-index"><code>z-index</code></a></li>
   </ul>
 </div>
