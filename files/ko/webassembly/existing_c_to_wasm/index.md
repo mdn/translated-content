@@ -183,6 +183,8 @@ img.src = blobURL;
 document.body.appendChild(img);
 ```
 
-보거라! 새로운 WebP 이미지의 영광을. :) [Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Full Code](/ko/docs/)
+보세요, 새로운 WebP 이미지의 영광을. :)
 
-![DevToolsâ network panel and the generated image.](result.jpg)
+[데모](https://googlechrome.github.io/samples/webassembly/image.html) | [원문](https://web.dev/articles/emscripting-a-c-library?hl=ko)
+
+![DevTools 네트워크 패널과 생성된 이미지](result.jpg)
