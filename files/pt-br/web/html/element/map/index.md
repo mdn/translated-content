@@ -9,7 +9,7 @@ O **elemento HTML `<map>`** é usado com os elementos {{HTMLElement ("area")}} p
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conteúdo palpável.
 - _Conteúdo permitido_ Qualquer elemento [transparente](/pt-BR/docs/HTML/Content_categories#Transparent_content_model).
-- _Omissão da marcação_Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- \_Omissão da marcação_Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pai permitidos_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref ("HTMLMapElement")}}
 
