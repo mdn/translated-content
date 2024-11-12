@@ -10,7 +10,7 @@ El **Elemento HTML `<data>`** vincula un contenido dado con una traducción legi
 | [Categorías de contenido](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                         | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                  |
-| Omisión de etiqueta                                         | {{no_tag_omission}}                                                                                                                                     |
+| Omisión de etiqueta                                         | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                     |
 | Elementos permitidos                                        | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                         |
 | interfaz DOM                                                | {{domxref("HTMLDataElement")}}                                                                                                                          |
 

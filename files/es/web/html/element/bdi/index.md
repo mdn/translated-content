@@ -15,7 +15,7 @@ Es útil al embeber o incrustart texto del que se desconoce la direccionalidad, 
 | [Content categories](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content), contenido palpable. |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                    | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
-| Omisión de etiqueta                                    | {{no_tag_omission}}                                                                                                                                       |
+| Omisión de etiqueta                                    | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                       |
 | Elementos padre permitidos                             | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                           |
 | Interfaz DOM                                           | {{domxref("HTMLElement")}}                                                                                                                                |
 
