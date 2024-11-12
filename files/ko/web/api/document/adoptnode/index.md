@@ -20,7 +20,7 @@ node = document.adoptNode(externalNode);
 
 ## 예제
 
-{{todo}}
+<! TODO: add content -->
 
 ## 알아두기
 
