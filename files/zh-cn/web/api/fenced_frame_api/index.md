@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
 
-**Fenced Frame API** 为控制嵌入在 {{htmlelement("fencedframe")}} 元素中的内容提供功能。
+**围栏框架 API**（Fenced Frame API）提供了用于控制嵌入在 {{htmlelement("fencedframe")}} 元素中的内容的功能。
 
 ## 概念和用法
 
