@@ -20,8 +20,6 @@ slug: Web/JavaScript/Reference
 
 ## [Operadores e outras palavras-chave](/pt-BR/docs/JavaScript/Reference/Operators)
 
-
-
 ## Comentários
 
 - [Comentários de código](/pt-BR/docs/JavaScript/Reference/Code_comments) (`//` and `/* */`)
