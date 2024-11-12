@@ -40,22 +40,22 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.start()")}}
   - : Начинает запись медиа. В этот метод можно передать аргумент `timeslice` со значением в миллисекундах. Если он определён, то медиа будет записываться в отдельные блоки заданной продолжительности, вместо записи в один большой блок.
 - {{domxref("MediaRecorder.stop()")}}
-  - : Останавливает запись, после чего запускается событие {{event("dataavailable")}}, содержащее последний `Blob` сохранённых данных.
+  - : Останавливает запись, после чего запускается событие [`dataavailable`](/ru/docs/Web/Events/dataavailable), содержащее последний `Blob` сохранённых данных.
 
 ## Обработчики событий
 
 - {{domxref("MediaRecorder.ondataavailable")}}
-  - : Вызывает обработчик {{event("dataavailable")}} события, которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
+  - : Вызывает обработчик [`dataavailable`](/ru/docs/Web/Events/dataavailable) события, которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
 - {{domxref("MediaRecorder.onerror")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("recordingerror")}}, включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`recordingerror`](/ru/docs/Web/Events/recordingerror), включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
 - {{domxref("MediaRecorder.onpause")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("pause")}}, случившегося во время приостановки медиа.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`pause`](/ru/docs/Web/Events/pause), случившегося во время приостановки медиа.
 - {{domxref("MediaRecorder.onresume")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("resume")}}, случившегося во время возобновления записи.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`resume`](/ru/docs/Web/Events/resume), случившегося во время возобновления записи.
 - {{domxref("MediaRecorder.onstart")}}
-  - : {{event("Event_handlers", "event handler")}}вызывается для обработки события {{event("start")}}, случившегося во время начала записи.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers)вызывается для обработки события [`start`](/ru/docs/Web/Events/start), случившегося во время начала записи.
 - {{domxref("MediaRecorder.onstop")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("stop")}}, случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`stop`](/ru/docs/Web/Events/stop), случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
 
 ## Пример
 

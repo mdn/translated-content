@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/change_event
 
 {{APIRef}}
 
-Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события {{event("change")}} (Изменение чего-либо).
+Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события [`change`](/ru/docs/Web/Events/change) (Изменение чего-либо).
 
 ## Синтаксис
 
@@ -20,7 +20,7 @@ var handlerFunction = element.onchange;
 
 Почитайте страницу [DOM обработчики события](/ru/docs/Web/Guide/Events/Event_handlers) , там содержится вся информация о работе с `on...` обработчиками.
 
-Документация по событию {{event("change")}}.
+Документация по событию [`change`](/ru/docs/Web/Events/change).
 
 ## Спецификации
 

@@ -45,7 +45,7 @@ Web audio API также даёт нам возможность контроли
   - : Интерфейс AudioNode представляет собой некий обрабатывающий модуль такой как источник аудио (то есть HTML \<audio> или \<video> элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).
 - {{domxref("AudioParam")}}
   - : Интерфейс **`AudioParam`** представляет аудио-параметры связанные с {{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.
-- {{event("ended_(Web_Audio)", "ended")}} (event)
+- [`ended`](/ru/docs/Web/Events/ended_(Web_Audio)) (event)
   - : Событие **ended** генерируется тогда, когда воспроизведение остановлено по причине окончания носителя.
 
 ### Источники звука
@@ -127,7 +127,7 @@ If you want to use an external script to process your audio source, the below No
 
 - {{domxref("ScriptProcessorNode")}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/ru/docs/Web/Events/audioprocess) (event)
   - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
 - {{domxref("AudioProcessingEvent")}}
   - : The [Web Audio API](/ru/docs/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
@@ -138,10 +138,10 @@ It is possible to process/render an audio graph very quickly in the background �
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- [`complete`](/ru/docs/Web/Events/complete) (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The [`complete`](/ru/docs/Web/Events/complete) event implements this interface.
 
 ### Audio Workers
 
@@ -370,16 +370,16 @@ function voiceMute() {
    6. {{domxref("AudioListener")}}
    7. {{domxref("AudioNode")}}
    8. {{domxref("AudioParam")}}
-   9. {{event("audioprocess")}} (event)
+   9. [`audioprocess`](/ru/docs/Web/Events/audioprocess) (event)
    10. {{domxref("AudioProcessingEvent")}}
    11. {{domxref("BiquadFilterNode")}}
    12. {{domxref("ChannelMergerNode")}}
    13. {{domxref("ChannelSplitterNode")}}
-   14. {{event("complete")}} (event)
+   14. [`complete`](/ru/docs/Web/Events/complete) (event)
    15. {{domxref("ConvolverNode")}}
    16. {{domxref("DelayNode")}}
    17. {{domxref("DynamicsCompressorNode")}}
-   18. {{event("ended_(Web_Audio)", "ended")}} (event)
+   18. [`ended`](/ru/docs/Web/Events/ended_(Web_Audio)) (event)
    19. {{domxref("GainNode")}}
    20. {{domxref("MediaElementAudioSourceNode")}}
    21. {{domxref("MediaStreamAudioDestinationNode")}}
