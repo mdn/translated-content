@@ -8,7 +8,7 @@ slug: Web/HTML/Element/dt
 O elemento **HTML `<dt>`** (ou Elemento HTML de Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de {{HTMLElement("dl")}}. Geralmente seguido por um elemento {{HTMLElement("dd")}}; ou multiplos `<dt>` na mesma linha indicam vários termos sendo definidos pelo próximo element {{HTMLElement("dd")}}.
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ Vazio.
-- _Permitted content_<! TODO: add content --> [Flow content](/pt-BR/docs/HTML/Content_categories#Flowing_content), but with no {{HTMLElement("header")}}, {{HTMLElement("footer")}}, sectioning content or heading content descendants.
+- _Permitted content_<!-- TODO: add content --> [Flow content](/pt-BR/docs/HTML/Content_categories#Flowing_content), but with no {{HTMLElement("header")}}, {{HTMLElement("footer")}}, sectioning content or heading content descendants.
 - _Tag omission_ Must have a start tag. The end tag may be omitted if this element is immediately followed by another `<dd>` element, or if there is no more content in the parent element.
 - _Permitted parent elements_ Before a {{HTMLElement("dt")}} or a {{HTMLElement("dd")}} element, inside a {{HTMLElement("dl")}}.
 - _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [HTMLSpanElement](/pt-BR/docs/DOM/span) interface for this element.

@@ -45,7 +45,7 @@ var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
 ```
 
-<! TODO: add content -->
+<!-- TODO: add content -->
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 

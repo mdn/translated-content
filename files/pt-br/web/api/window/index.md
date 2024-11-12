@@ -168,13 +168,13 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("Window.disableExternalCapture()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Used to trigger an event.
 - {{domxref("Window.dump()")}}
   - : Writes a message to the console.
 - {{domxref("Window.enableExternalCapture()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
@@ -184,7 +184,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -196,7 +196,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
@@ -224,9 +224,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.resizeTo()")}}
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -244,7 +244,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("WindowTimers.setInterval()")}}
   - : Schedules the execution of a function each X milliseconds.
 - {{domxref("Window.setResizable")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Sets a delay for executing a function.
 - {{domxref("Window.showModalDialog()")}}
@@ -282,7 +282,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
 - {{domxref("Window.ondevicemotion")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
@@ -343,23 +343,23 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 See also the [DOM Interfaces](/pt-BR/docs/DOM/DOM_Reference).
 
 - {{domxref("Window.DOMParser")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Used for creating an {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Used for creating an {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
   - : Used for creating a [Web worker](/pt-BR/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 
 ## Interfaces
 
