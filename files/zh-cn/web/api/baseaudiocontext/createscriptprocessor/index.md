@@ -24,14 +24,14 @@ myScriptProcessor = audioCtx.createScriptProcessor(
 
 - `bufferSize`
 
-  - : 缓冲区大小，以样本帧为单位。具体来讲，缓冲区大小必须是下面这些值当中的某一个：256, 512, 1024, 2048, 4096, 8192, 16384。如果未提供参数，或者参数为 0，则取当前环境最合适的缓冲区大小，取值为 2 的幂次方的一个常数。该取值在该结点的整个生命周期中都不变。
+  - : 以样本帧为单位的缓冲区大小。具体来讲，缓冲区大小必须是下面这些值当中的某一个：256、512、1024、2048、4096、8192、16384。如果未提供参数，或者参数为 0，则取当前环境最合适的缓冲区大小，取值为 2 的幂次方的一个常数。该取值在该结点的整个生命周期中都不变。
 
     该取值控制着 `audioprocess` 事件被分派的频率，以及每一次调用多少样本帧被处理。较低的 `bufferSize` 将导致一定的延迟，而选取较高的 `bufferSize` 就要注意避免音频的崩溃和故障。推荐不要给定具体的缓冲区大小，让系统自己选一个好的值来平衡延迟和音频质量。
 
 - `numberOfInputChannels`
-  - : 值为整数，用于指定输入结点的声道的数量，默认值是 2，最高能取 32.
+  - : 整数，用于指定输入结点的声道的数量，默认值为 2 且最高可取 32。
 - `numberOfOutputChannels`
-  - : 值为整数，用于指定输出结点的声道的数量，默认值是 2，最高能取 32.
+  - : 整数，用于指定输出结点的声道的数量，默认值为 2 且最高可取 32。
 
 > [!WARNING]
 > Webkit（版本 31）要求调用这个方法的时候必须传入一个有效的 `bufferSize`。
@@ -47,7 +47,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(
 
 ### 使用脚本处理器添加白噪音
 
-下面的示例展示了如何使用 `ScriptProcessorNode` 获取通过 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} 加载的音轨，并对其进行处理，为输入音轨的每个音频样本添加一点白噪声，然后通过 {{domxref("AudioDestinationNode")}} 进行播放。
+下面的示例展示了如何使用 `ScriptProcessorNode` 获取通过 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} 加载的音轨并对其进行处理，为输入音轨的每个音频样本添加一点白噪声，然后通过 {{domxref("AudioDestinationNode")}} 进行播放。
 
 对于每个通道和每个样本帧，脚本节点的 {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} 事件处理程序都会使用相关的 `audioProcessingEvent` 来循环处理输入缓冲区的每个通道和每个通道中的每个样本，并添加少量白噪声，然后将结果设置为每种情况下的输出样本。
 
