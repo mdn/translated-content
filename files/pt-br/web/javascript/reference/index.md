@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference
 
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
-
-
 ## [Objetos Globais](/pt-BR/docs/JavaScript/Reference/Global_Objects)
 
 <!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)') -->
