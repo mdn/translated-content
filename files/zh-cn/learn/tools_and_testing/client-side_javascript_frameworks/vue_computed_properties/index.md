@@ -41,10 +41,9 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
 
 ```html
 <h2>
-  \<! TODO: add content --> out of
-  \<! TODO: add content --> items completed
-</h2>
-```
+  \{{ToDoItems.filter(item =&gt; item.done).length}} out of
+  \{{ToDoItems.length}} items completed
+</h2>```
 
 这个值将在每次渲染时重新计算。对于像当前这样较小的应用程序，这可能并不不会产生什么影响。但是对于更大的应用程序，或者当表达式更复杂时，这可能会导致严重的性能问题。
 
