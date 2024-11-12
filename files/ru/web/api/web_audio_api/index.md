@@ -45,7 +45,7 @@ Web audio API также даёт нам возможность контроли
   - : Интерфейс AudioNode представляет собой некий обрабатывающий модуль такой как источник аудио (то есть HTML \<audio> или \<video> элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).
 - {{domxref("AudioParam")}}
   - : Интерфейс **`AudioParam`** представляет аудио-параметры связанные с {{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.
-- [`ended`](/ru/docs/Web/Events/ended_(Web_Audio)) (event)
+- [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
   - : Событие **ended** генерируется тогда, когда воспроизведение остановлено по причине окончания носителя.
 
 ### Источники звука
@@ -379,7 +379,7 @@ function voiceMute() {
    15. {{domxref("ConvolverNode")}}
    16. {{domxref("DelayNode")}}
    17. {{domxref("DynamicsCompressorNode")}}
-   18. [`ended`](/ru/docs/Web/Events/ended_(Web_Audio)) (event)
+   18. [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
    19. {{domxref("GainNode")}}
    20. {{domxref("MediaElementAudioSourceNode")}}
    21. {{domxref("MediaStreamAudioDestinationNode")}}

@@ -86,7 +86,7 @@ Service worker'ы также предназначены для таких вещ
 - {{domxref("ExtendableEvent") }}
   - : Расширяет жизненный цикл событий `install` и `activate`, отправляемых {{domxref("ServiceWorkerGlobalScope")}} как часть жизненного цикла service worker'а. Это гарантирует, что любое функциональное событие (как {{domxref("FetchEvent")}}) не отправится в {{domxref("ServiceWorker")}}, пока он не обновит шаблон данных, удалив устаревшие данные кеша.
 - {{domxref("ExtendableMessageEvent") }}
-  - : Объект событий [`message`](/ru/docs/Web/Events/message_(ServiceWorker)) запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.
+  - : Объект событий [`message`](</ru/docs/Web/Events/message_(ServiceWorker)>) запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.
 - {{domxref("FetchEvent") }}
   - : Параметр, передающийся в обработчик {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` представляет собой событие получения, которое отправляется в {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Он содержит информацию о запросе и результирующем ответе и обеспечивает {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} метод, который позволяет отправить произвольный ответ обратно контролируемой странице.
 - {{domxref("InstallEvent") }}

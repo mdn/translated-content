@@ -14,7 +14,7 @@ slug: Web/HTML/Element/input/button
 
 | **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                     |
 | --------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Событие**                       | [`click`](/ru/docs/Web/Events/click)                                                                                |
+| **Событие**                       | [`click`](/ru/docs/Web/Events/click)                                                              |
 | **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Element/input#type) и [`value`](/ru/docs/Web/HTML/Element/input#value) |
 | **Атрибуты IDL**                  | `value`                                                                                           |
 | **Методы**                        | None                                                                                              |
