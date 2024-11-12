@@ -193,13 +193,13 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.confirm()")}}
   - : Affiche une boîte de dialogue avec un message auquel l'utilisateur doit répondre.
 - {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Utilisé pour déclencher un évènement.
 - {{domxref("Window.dump()")}} {{Non-standard_inline}}
   - : Écrit un message à la console.
 - {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Recherche la chaîne de caractères donnée dans une fenêtre.
 - {{domxref("Window.focus()")}}
@@ -209,7 +209,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Fait flasher l'icône de l'application.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Récupère un style calculé pour l'élément donné. Un style calculé indique les valeurs de toutes les propriétés CSS de l'élément.
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
@@ -221,7 +221,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.matchMedia()")}}
   - : Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.
 - {{domxref("Window.maximize()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimize la fenêtre.
 - {{domxref("Window.moveBy()")}}
@@ -249,9 +249,9 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.resizeTo()")}}
   - : Redimensionne dynamiquement la fenêtre.
 - {{domxref("Window.restore()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}} {{deprecated_inline}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Fait défiler la fenêtre à un endroit particulier dans le document.
 - {{domxref("Window.scrollBy()")}}
@@ -452,21 +452,21 @@ Voir aussi les [Interfaces DOM](/fr/docs/Web/API/Document_Object_Model).
 - {{domxref("DOMParser")}}
   - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr/docs/Web/API/Document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Used for creating an {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Used for creating an {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
   - : Used for creating a [Web worker](/fr/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 
 ## Interfaces
 
