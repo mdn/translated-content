@@ -145,5 +145,5 @@ Supports-Loading-Mode: fenced-frame
 
 ## 参见
 
-- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- [隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
