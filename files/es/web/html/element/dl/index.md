@@ -44,7 +44,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     </tr>
     <tr>
       <th scope="row">Omisión de Tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
