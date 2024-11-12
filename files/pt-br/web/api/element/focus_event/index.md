@@ -37,7 +37,7 @@ O evento `focus` é acionado assim que um elemento recebe um foco. O grande dife
 
 Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento `focusin` que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) como `true`:
 
-{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
+\{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
 
 (Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/Events/blur))
 
