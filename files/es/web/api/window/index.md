@@ -191,13 +191,13 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.confirm()")}}
   - : Muestra una ventana de comfirmación con dos únicas y posibles respuestas. **Confirmar** y **Cancelar**.
 - {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Usado para activar un evento.
 - {{domxref("Window.dump()")}}
   - : Escribe un mensaje a la consola.
 - {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Busca un string dado en una ventana.
 - {{domxref("Window.focus()")}}
@@ -207,7 +207,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -219,7 +219,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimiza la ventana.
 - {{domxref("Window.moveBy()")}}
@@ -247,9 +247,9 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.resizeTo()")}}
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}} {{deprecated_inline(24)}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -267,7 +267,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("WindowTimers.setInterval()")}}
   - : Schedules the execution of a function each X milliseconds.
 - {{domxref("Window.setResizable")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Sets a delay for executing a function.
 - {{domxref("Window.showModalDialog()")}}
@@ -305,7 +305,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
 - {{domxref("Window.ondevicemotion")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
