@@ -2,7 +2,7 @@
 title: Element：scrollWidth 属性
 slug: Web/API/Element/scrollWidth
 l10n:
-  sourceCommit: fcbe69e21d85708248ff60021b1937817844f51c
+  sourceCommit: b4778812842c207fa8bcb4b367644c61720d1f35
 ---
 
 {{APIRef("DOM")}}
