@@ -181,7 +181,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях _(sx, sy)_ с шириной sw и высотой sh.
 - {{domxref("Window.disableExternalCapture()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Используется для вызова события.
 - {{domxref("Window.dump()")}}
@@ -189,7 +189,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("fetch", "Window.fetch()")}}
   - : Начинает процесс загрузки ресурса из сети.
 - {{domxref("Window.enableExternalCapture()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Ищет необходимую строку в окне window.
 - {{domxref("Window.focus()")}}
@@ -199,7 +199,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.getAttention()")}}
   - : Заставляет мигать иконку приложения.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Получает подсчитанные стили для определённого элемента. Подсчитанные стили включают подсчитанные значения всех CSS-свойств элемента.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -211,7 +211,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.matchMedia()")}}
   - : Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.
 - {{domxref("Window.maximize()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Минимизирует окно.
 - {{domxref("Window.moveBy()")}}
@@ -241,9 +241,9 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.resizeTo()")}}
   - : Динамически меняет размер окна.
 - {{domxref("Window.restore()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -265,7 +265,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("WindowTimers.setInterval()")}}
   - : Назначает выполнение функции каждые X миллисекунд.
 - {{domxref("Window.setResizable")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Устанавливает отложенное выполнение функции.
 - {{domxref("Window.showModalDialog()")}}
@@ -398,23 +398,23 @@ _Этот интерфейс наследует методы от интерфе
 <!---->
 
 - {{domxref("Window.DOMParser")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Создаёт {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Создаёт {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
   - : Используется для создания [Web worker](/ru/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : <! TODO: add content -->
+  - : <!-- TODO: add content -->
 
 ## Интерфейс
 
