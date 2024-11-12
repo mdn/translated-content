@@ -41,8 +41,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
 
 ```html
 <h2>
-  \{{ToDoItems.filter(item =&gt; item.done).length}} out of
-  \{{ToDoItems.length}} items completed
+  \<! TODO: add content --> out of
+  \<! TODO: add content --> items completed
 </h2>
 ```
 
