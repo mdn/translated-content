@@ -107,7 +107,7 @@ button {
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
