@@ -59,18 +59,18 @@ const myScript = document.querySelector("script");
 const myPre = document.querySelector("pre");
 const playButton = document.querySelector("button");
 
-// Create AudioContext and buffer source
+// 创建 AudioContext 与缓冲源
 let audioCtx;
 
 async function init() {
   audioCtx = new AudioContext();
   const source = audioCtx.createBufferSource();
 
-  // Create a ScriptProcessorNode with a bufferSize of 4096 and
-  // a single input and output channel
+  // 创建一个缓冲区大小 bufferSize 为 4096、
+  // 单一输入和输出通道的 ScriptProcessorNode
   const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
 
-  // Load in an audio track using fetch() and decodeAudioData()
+  // 将音轨通过 fetch() 和 decodeAudioData() 加载至 AudioContext 中
   try {
     const response = await fetch("viper.ogg");
     const arrayBuffer = await response.arrayBuffer();
@@ -81,25 +81,25 @@ async function init() {
     );
   }
 
-  // Give the node a function to process audio events
+  // 向结点添加一个用于处理音频事件的函数
   scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
-    // The input buffer is the song we loaded earlier
+    // 这里的输入缓冲区即为我们前面所加载的歌曲
     let inputBuffer = audioProcessingEvent.inputBuffer;
 
-    // The output buffer contains the samples that will be modified and played
+    // 输出缓冲区则会包含将要被修改、播放的取样
     let outputBuffer = audioProcessingEvent.outputBuffer;
 
-    // Loop through the output channels (in this case there is only one)
+    // 在输出通道间循环（在本例中，输出通道仅有一个）
     for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
       let inputData = inputBuffer.getChannelData(channel);
       let outputData = outputBuffer.getChannelData(channel);
 
-      // Loop through the 4096 samples
+      // 在 4096 个取样间循环
       for (let sample = 0; sample < inputBuffer.length; sample++) {
-        // make output equal to the same as the input
+        // 让输出等同于输入
         outputData[sample] = inputData[sample];
 
-        // add noise to each output sample
+        // 再向其中加一些噪音
         outputData[sample] += (Math.random() * 2 - 1) * 0.1;
       }
     }
@@ -109,14 +109,14 @@ async function init() {
   scriptNode.connect(audioCtx.destination);
   source.start();
 
-  // When the buffer source stops playing, disconnect everything
+  // 当缓冲源停止播放的时候，断开一切的连接
   source.addEventListener("ended", () => {
     source.disconnect(scriptNode);
     scriptNode.disconnect(audioCtx.destination);
   });
 }
 
-// wire up play button
+// 连上播放按钮
 playButton.addEventListener("click", () => {
   if (!audioCtx) {
     init();
