@@ -1,5 +1,5 @@
 ---
-title: 对齐弹性容器中的弹性项目
+title: 对齐弹性容器中的项目
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
