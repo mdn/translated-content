@@ -22,7 +22,7 @@ sendFeatureReport(reportId, data)
 - `reportId`
   - : 一个 8 位的报告 ID。如果设备不使用报告 ID，则返回 `0`。
 - `data`
-  - : 字节作为 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 形式的字节序列。
 
 ### 返回值
 
@@ -35,7 +35,7 @@ sendFeatureReport(reportId, data)
 
 ## 示例
 
-以下示例演示使用 `sendFeatureReport()` 让设备闪烁。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn)中看到更多示例和实时演示。
+以下示例演示使用 `sendFeatureReport()` 让设备闪烁。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid)中看到更多示例和实时演示。
 
 ```js
 const reportId = 1;

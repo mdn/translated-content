@@ -10,7 +10,7 @@ l10n:
 {{domxref("HIDDevice")}} 接口的 **`open()`** 方法请求操作系统打开 HID 设备。
 
 > [!NOTE]
-> HID 设备不会自动打开。因此，通过 {{domxref("HID.requestDevice()")}} 返回的 {{domxref("HIDDevice")}} 可用于传输数据之前，必须使用此方法将其打开。
+> HID 设备不会自动打开。因此，在 {{domxref("HID.requestDevice()")}} 返回的 {{domxref("HIDDevice")}} 可用于传输数据之前，必须使用此方法将其打开。
 
 ## 语法
 
@@ -35,7 +35,7 @@ open()
 
 ## 示例
 
-在以下示例中，我们尝试发送或接收数据之前等待 HID 连接打开。
+在以下示例中，我们在尝试发送或接收数据之前等待 HID 连接打开。
 
 ```js
 await device.open();

@@ -42,7 +42,7 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 - {{domxref("HIDDevice.forget()")}} {{Experimental_Inline}}
   - : 关闭此 HID 设备的连接并重置访问权限，然后返回一个会在权限被重置时兑现的 {{jsxref("Promise")}}。
 - {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
-  - : 向此 HID 设备发送一个输出报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
+  - : 向此 HID 设备发送输出报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
 - {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}
   - : 向此 HID 设备发送一个特征报告，并返回一个会在报告发送成功时兑现的 {{jsxref("Promise")}}。
 - {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}

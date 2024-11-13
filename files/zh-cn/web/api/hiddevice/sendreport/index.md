@@ -22,7 +22,7 @@ sendReport(reportId, data)
 - `reportId`
   - : 一个 8 位的报告 ID。如果设备没有报告 ID，则返回 `0`。
 - `data`
-  - : 字节作为 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 形式的字节序列。
 
 ### 返回值
 
@@ -35,11 +35,11 @@ sendReport(reportId, data)
 
 ## 示例
 
-以下示例演示如何使 Joy-Con 设备振动。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn)中看到更多示例和实时演示。
+以下示例演示如何使 Joy-Con 设备振动。你可以在文章[连接到不常见的 HID 设备](https://developer.chrome.google.cn/docs/capabilities/hid)中看到更多示例和实时演示。
 
 ```js
 // 首先，发送一条命令以启用振动。
-// 神奇的字节序列来自 https://github.com/mzyy94/joycon-toolweb
+// 魔数序列来自 https://github.com/mzyy94/joycon-toolweb
 const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
 await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 

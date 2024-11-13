@@ -34,7 +34,7 @@ _此接口也从其父接口 {{domxref("Event")}} 继承属性。_
 - {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}}
   - : 表示发送输入报告的 HID 接口的 {{domxref("HIDDevice")}} 实例。
 - {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}}
-  - : 此报告的一字节识别前缀，如果 HID 接口不使用报告 ID，则为 `0`。
+  - : 此报告的单字节标识前缀，如果 HID 接口不使用报告 ID，则为 `0`。
 
 ## 示例
 
