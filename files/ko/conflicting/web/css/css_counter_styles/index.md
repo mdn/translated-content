@@ -1,6 +1,7 @@
 ---
 title: CSS Counter Styles
-slug: Web/API/CSS_Counter_Styles
+slug: conflicting/Web/CSS/CSS_counter_styles
+original_slug: Web/API/CSS_Counter_Styles
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
