@@ -2,7 +2,7 @@
 title: <meta> - элемент для описания метаданных
 slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+  sourceCommit: 4d3287f254f786fbd6a4d402828f5d5c3cf5b1f4
 ---
 
 {{HTMLSidebar}}
@@ -71,6 +71,10 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
         > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
         > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
         > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+
+- `media`
+
+  - : Атрибут `media` определяет, к каким медиа должен быть применён цвет темы, указанный в атрибуте `content`. Его значение — это [медиа-запрос](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries), который по умолчанию равен `all`, если атрибут отсутствует. Этот атрибут релевантен только когда атрибут [`name`](/ru/docs/Web/HTML/Element/meta/name) равен [`theme-color`](/ru/docs/Web/HTML/Element/meta/name/theme-color). В противном случае он не оказывает никакого эффекта и не должен быть включён.
 
 - `name`
 
