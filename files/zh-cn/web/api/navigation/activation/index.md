@@ -33,4 +33,4 @@ if (navigation.activation) {
 
 - [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
 - [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的 [导航 API 在线示例](https://gigantic-honored-octagon.glitch.me/)
+- Domenic Denicola 的[导航 API 在线示例](https://gigantic-honored-octagon.glitch.me/)
