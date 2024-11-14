@@ -2645,6 +2645,7 @@
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSSStyleValue/parse	/ja/docs/Web/API/CSSStyleValue/parse_static
 /ja/docs/Web/API/CSSStyleValue/parseAll	/ja/docs/Web/API/CSSStyleValue/parseAll_static
+/ja/docs/Web/API/CSS_Counter_Styles	/ja/docs/conflicting/Web/CSS/CSS_counter_styles
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
 /ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded

@@ -1,6 +1,7 @@
 ---
 title: CSS カウンタースタイル
-slug: Web/API/CSS_Counter_Styles
+slug: conflicting/Web/CSS/CSS_counter_styles
+original_slug: Web/API/CSS_Counter_Styles
 l10n:
   sourceCommit: 7afa94ed2abd99476f30faeec858b6b1ee5e0d0b
 ---
