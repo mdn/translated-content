@@ -11,7 +11,7 @@ l10n:
 
 可以为一个媒体元素指定多个轨道，包含不同种类的定时文本数据，或为不同区域翻译的定时文本数据。使用的数据将是已设置为默认的轨道，或者基于用户偏好的类型和语言翻译。
 
-轨道格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件）——网络视频文本轨。
+轨道格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件）——Web 视频文本轨。
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
