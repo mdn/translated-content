@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("Navigator")}} 인터페이스의 읽기 전용 속성인 **`userActivation`** 은  현재 활성화 되어있는 창의 사용자 활동 정보를 포함하는 {{domxref("UserActivation")}} 객체를 반환합니다.
+{{domxref("Navigator")}} 인터페이스의 읽기 전용 속성인 **`userActivation`** 은 현재 활성화 되어있는 창의 사용자 활동 정보를 포함하는 {{domxref("UserActivation")}} 객체를 반환합니다.
 
 ## 값
 
@@ -49,4 +49,4 @@ if (navigator.userActivation.hasBeenActive) {
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.hasBeenActive")}}
 - {{domxref("UserActivation.isActive")}}
-- [Features gated by user activation](/en-US/docs/Web/Security/User_activation)
+- [Features gated by user activation](/ko/docs/Web/Security/User_activation)
