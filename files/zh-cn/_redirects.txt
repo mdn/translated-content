@@ -1362,7 +1362,7 @@
 /zh-CN/docs/Web/API/CSS/factory_functions	/zh-CN/docs/Web/API/CSS/factory_functions_static
 /zh-CN/docs/Web/API/CSS/supports	/zh-CN/docs/Web/API/CSS/supports_static
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
-/zh-CN/docs/Web/API/CSS_Counter_Styles	/zh-CN/docs/conflicting/Web/CSS/CSS_counter_styles
+/zh-CN/docs/Web/API/CSS_Counter_Styles	/zh-CN/docs/Web/CSS/CSS_counter_styles
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
 /zh-CN/docs/Web/API/CanvasGradient.addColorStop	/zh-CN/docs/Web/API/CanvasGradient/addColorStop
