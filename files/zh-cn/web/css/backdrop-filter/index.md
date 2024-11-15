@@ -25,7 +25,7 @@ backdrop-filter: contrast(40%);
 backdrop-filter: drop-shadow(4px 4px 10px blue);
 /* 将背景转换为灰度图像，值越大越接近完全灰度 */
 backdrop-filter: grayscale(30%);
-/* 旋转背景色调，值为角度*/
+/* 旋转背景色调，值为角度 */
 backdrop-filter: hue-rotate(120deg);
 /* 反转背景颜色，值越大反转程度越高 */
 backdrop-filter: invert(70%);
