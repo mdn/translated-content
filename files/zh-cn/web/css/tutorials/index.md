@@ -29,7 +29,7 @@ CSS 2（Level 1）标准放出后，CSS 增加了很多新特性。有些特性�
 - [CSS 计数器样式](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : 对元素及页面计数对于 CSS 来讲是一项简单的事情。学习使用{{cssxref("counter-reset")}}、{{cssxref("counter-increment")}}、{{cssxref("counters", "counters()")}} 及 {{cssxref("counter", "counter()")}}。
 - [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : CSS3 动画允许你通过[关键帧](/zh-CN/docs/CSS/@keyframes)定义样式，之后在关键帧之间变换，来形成一个动画。
+  - : CSS3 动画允许你通过[关键帧](/zh-CN/docs/Web/CSS/@keyframes)定义样式，之后在关键帧之间变换，来形成一个动画。
 - [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS3 过渡可以以动画的形式来定义很多样式的过渡，也可以控制过渡的方式
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
