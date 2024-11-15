@@ -2,7 +2,7 @@
 title: 色のコントラスト
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 l10n:
-  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
