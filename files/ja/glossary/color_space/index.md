@@ -66,8 +66,7 @@ Lab は直交座標系であり、中心に明度 `L` 軸があります。 `a` 
 
 CIELab 色空間関数には、 {{CSSXref("color_value/lab", "lab()")}} （明度、 a 軸、 b 軸）および {{CSSXref("color_value/lch", "lch()")}} （明度、彩度、色相）のほか、 {{CSSXref("color_value/oklab", "oklab()")}} および {{CSSXref("color_value/oklch", "oklch()")}} があります。 明度値は同じですが、`lch()` および `oklch` は極座標、円筒座標システムであり、軸ではなく極座標 `C` （彩度）および `H` （色相）を使用します。
 
-> [!NOTE]
-> `lch()` と `oklch` における色相と明度は、 {{cssxref("color_value/hsl", "hsl()")}} やその他の sRGB 色空間における同名の値とは異なります。
+> **Note:** `lch()` と `oklch` における色相と明度は、 {{cssxref("color_value/hsl", "hsl()")}} やその他の sRGB 色空間における同名の値とは異なります。
 
 CIELab 色空間（Lab、Lch、Oklab、Oklch など）は、端末に依存しない色空間です。
 
