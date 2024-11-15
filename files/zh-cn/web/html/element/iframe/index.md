@@ -1,5 +1,5 @@
 ---
-title: <iframe>
+title: <iframe>：內嵌框架元素
 slug: Web/HTML/Element/iframe
 l10n:
   sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
@@ -22,9 +22,9 @@ l10n:
 
 - `allow`
 
-  - : 用于为`<iframe>`指定其[特征策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定`<iframe>`可以使用哪些功能（例如，访问麦克风、摄像头、电池、web-share 等）
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web-share 等）
 
-    示例请参见 `Permissions-Policy` 中的[iframes](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)
+    示例请参见 `Permissions-Policy` 中的 [iframes](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)
 
     > [!NOTE]
     > 通过 `allow` 属性指定的特征策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步的限制。它不会替换原有策略。
@@ -41,11 +41,11 @@ l10n:
   - : 设置为`true`时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
     > [!NOTE]
-    > 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
+    > 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`。
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
 
-  - : 一个布尔属性，如果存在，则指定当前用户选定的主题应该与`<iframe>`源的请求一起发送。更多信息请参见 [Using the Topics API](/zh-CN/docs/Web/API/Topics_API/Using)
+  - : 一个布尔属性，如果存在，则指定当前用户选定的主题应该与 `<iframe>` 源的请求一起发送。更多信息请参见[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)
 
 - `credentialless` {{Experimental_Inline}}
 
@@ -54,16 +54,16 @@ l10n:
 - `csp` {{experimental_inline}}
   - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - `height`
-  - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为`150`。
+  - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为 `150`。
 - `loading`
 
-  - : 表示浏览器应当何时加载 iframe:
+  - : 表示浏览器应当何时加载 iframe：
 
     - `eager`
-      - : 在页面加载时立即加载 iframe (默认值)
+      - : 在页面加载时立即加载 iframe（默认值）
     - `lazy`
 
-      - : 推迟 iframe 的加载，直到达到浏览器定义的 {{glossary("visual viewport")}} 的距离
+      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离
         目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽
         这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间
 
@@ -79,12 +79,12 @@ l10n:
 
     - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 首部。
     - `no-referrer-when-downgrade` (default): 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 首部。
-    - `origin`: referrer 首部中仅包含来源页面的源。换言之，仅包含来源页面的 [scheme](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, 以及 {{Glossary("port")}}。
+    - `origin`: referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的 [scheme](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`: 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。
     - `same-origin`: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 首部，否则不发送。
     - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 首部（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 首部（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
     - `strict-origin-when-cross-origin`: 当发起同源请求时，在 referrer 首部中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 首部中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 首部。
-    - `unsafe-url`: 始终在 referrer 首部中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**, 因为这样做会暴露受 TLS 保护的资源的源和路径信息。
+    - `unsafe-url`: 始终在 referrer 标头中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
 
 - `sandbox`
 
@@ -211,7 +211,7 @@ l10n:
 
 这个示例直接在 iframe 中渲染源代码。它可以结合 `sandbox` 属性在显示用户生成的内容时防止脚本注入。
 
-请注意在使用 `srcdoc`时，在嵌入内容中的任何相对 URL 都将会相对于嵌入该内容的页面的 URL 进行解析，如果你想要使用锚链接指向嵌入内容，你需要明确使用 `about:srcdoc` 作为基准 URL。
+请注意在使用 `srcdoc` 时，在嵌入内容中的任何相对 URL 都将会相对于嵌入该内容的页面的 URL 进行解析，如果你想要使用锚链接指向嵌入内容，你需要明确使用 `about:srcdoc` 作为基准 URL。
 
 #### HTML
 
@@ -263,7 +263,7 @@ l10n:
         >,
         <a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
           >短语内容</a
-        >, 嵌入内容, 交互内容, 可感知内容.
+        >、嵌入内容、交互内容、可感知内容。
       </td>
     </tr>
     <tr>
@@ -279,23 +279,21 @@ l10n:
       <td>接受嵌入内容的任何元素</td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+          >没有对应的角色</a
         >
       </td>
     </tr>
     <tr>
-      <th scope="row">允许的 ARIA roles</th>
+      <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
-      <th scope="row">DOM interface</th>
+      <th scope="row">DOM 接口</th>
       <td>{{domxref("HTMLIFrameElement")}}</td>
     </tr>
   </tbody>
@@ -312,4 +310,4 @@ l10n:
 ## 参见
 
 - [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-- [Privacy, permissions, and information security](/zh-CN/docs/Web/Privacy)
+- [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
