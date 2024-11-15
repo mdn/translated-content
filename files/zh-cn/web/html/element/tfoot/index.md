@@ -83,7 +83,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     - `baseline`，会使文本尽可能接近单元格底部，但并不向底部对齐，而将它们以字符[基线](https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%B7%9A)对齐。如果所有字符的大小相同，此值与`bottom`的效果相同；
     - `bottom`，设置文本向下对齐；
     - `middle`，设置文本居中对齐；
-    - and `top`，设置文本向上对齐。
+    - `top`，设置文本向上对齐。
 
     > [!NOTE]
     > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）：使用 CSS 属性{{cssxref("vertical-align")}}作为替代。
