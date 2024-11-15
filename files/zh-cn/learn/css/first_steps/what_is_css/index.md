@@ -72,7 +72,7 @@ h1 {
 - 在大括号内部将包含一个或多个**声明**，其形式为**属性**—**值**对。在冒号之前指定属性（示例中的 `color`），冒号之后指定属性的值（示例中的 `red`）。
 - 示例包含了两个声明：一个是 `color` 声明，另一个是 `font-size` 声明。每个**属性**—**值**对，都指定了所选择元素（示例中的 {{htmlelement("Heading_Elements", "h1")}}）的属性，然后是要赋予该属性的一个值。
 
-CSS {{Glossary("property/CSS","属性")}}有不同的可用值，取决于所指定的属性。在示例中，我们有个一 `color` 属性，可以接受各种[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#color)，还有一个 `font-size` 属性，它可以使用各种[尺寸单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages)作为值。
+CSS {{Glossary("property/CSS","属性")}}有不同的可用值，取决于所指定的属性。在示例中，我们有 `color` 属性，可以接受各种[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)，还有一个 `font-size` 属性，它可以使用各种[尺寸单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字、长度和百分比)作为值。
 
 一个 CSS 样式表可以包含很多个规则，一条接一条地编写。
 
