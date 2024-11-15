@@ -36,7 +36,7 @@ l10n:
     > [!NOTE]
     > 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
 
-- `allowpaymentrequest`
+- `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
   - : 设置为`true`时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
@@ -63,8 +63,8 @@ l10n:
       - : 在页面加载时立即加载 iframe（默认值）
     - `lazy`
 
-      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离
-        目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽
+      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离，
+        目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽，
         这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间
 
         > [!NOTE]
@@ -75,15 +75,15 @@ l10n:
   - : 用于定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 `target` 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 `formtarget` 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 `windowName` 参数值。
 - `referrerpolicy`
 
-  - : 表示在获取 iframe 资源时如何发送 [referrer](/zh-CN/docs/Web/API/Document/referrer) 首部：
+  - : 表示在获取 iframe 资源时如何发送 [referrer](/zh-CN/docs/Web/API/Document/referrer) 标头：
 
-    - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 首部。
-    - `no-referrer-when-downgrade` (default): 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 首部。
+    - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 标头。
+    - `no-referrer-when-downgrade` (default): 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
     - `origin`: referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的 [scheme](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`: 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。
-    - `same-origin`: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 首部，否则不发送。
-    - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 首部（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 首部（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
-    - `strict-origin-when-cross-origin`: 当发起同源请求时，在 referrer 首部中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 首部中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 首部。
+    - `same-origin`: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 标头，否则不发送。
+    - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 标头（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 标头（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
+    - `strict-origin-when-cross-origin`: 当发起同源请求时，在 referrer 标头中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 标头中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 标头。
     - `unsafe-url`: 始终在 referrer 标头中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
 
 - `sandbox`
