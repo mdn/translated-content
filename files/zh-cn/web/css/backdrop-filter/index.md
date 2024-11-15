@@ -15,15 +15,25 @@ backdrop-filter: none;
 backdrop-filter: url(commonfilters.svg#filter);
 
 /* <filter-function> 滤镜函数值 */
+/* 模糊背景，值越大越模糊 */
 backdrop-filter: blur(2px);
+/* 调整背景亮度，值越小越暗 */
 backdrop-filter: brightness(60%);
+/* 调整背景对比度，值越小对比度越低 */
 backdrop-filter: contrast(40%);
+/* 为背景添加阴影，参数分别为水平偏移、垂直偏移、模糊半径和阴影颜色 */
 backdrop-filter: drop-shadow(4px 4px 10px blue);
+/* 将背景转换为灰度图像，值越大越接近完全灰度 */
 backdrop-filter: grayscale(30%);
+/* 旋转背景色调，值为角度*/
 backdrop-filter: hue-rotate(120deg);
+/* 反转背景颜色，值越大反转程度越高 */
 backdrop-filter: invert(70%);
+/* 调整背景不透明度，值越小越透明 */
 backdrop-filter: opacity(20%);
+/* 将背景转换为棕褐色调，值越大越接近完全棕褐色 */
 backdrop-filter: sepia(90%);
+/* 调整背景饱和度，值越小饱和度越低 */
 backdrop-filter: saturate(80%);
 
 /* 多重滤镜 */
