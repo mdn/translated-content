@@ -1,6 +1,7 @@
 ---
 title: CSS 计数器样式
-slug: Web/API/CSS_Counter_Styles
+slug: conflicting/Web/CSS/CSS_counter_styles
+original_slug: Web/API/CSS_Counter_Styles
 ---
 
 {{DefaultAPISidebar("CSS Counter Styles")}}
