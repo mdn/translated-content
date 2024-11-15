@@ -7,11 +7,11 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<track>`** [HTML](/zh-CN/docs/Web/HTML) 元素作为媒体元素 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的子元素使用。每个文本轨元素允许你指定一个定时文本轨道（或基于时间的数据），可以与媒体元素并行显示，例如在视频上叠加字幕或隐藏式字幕，或与音频轨道一起显示。
+**`<track>`** [HTML](/zh-CN/docs/Web/HTML) 元素作为媒体元素 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的子元素使用。每个文本 track 元素允许你指定一个定时文本 track（或基于时间的数据），可以与媒体元素并行显示，例如在视频上叠加字幕或隐藏式字幕，或与音频 track 一起显示。
 
-可以为一个媒体元素指定多个轨道，包含不同种类的定时文本数据，或为不同区域翻译的定时文本数据。使用的数据将是已设置为默认的轨道，或者基于用户偏好的类型和语言翻译。
+可以为一个 media 元素指定多个 track，包含不同种类的定时文本数据，或为不同区域翻译的定时文本数据。使用的数据将是已设置为默认的 track，或者基于用户偏好的类型和语言翻译。
 
-轨道格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件）——Web 视频文本轨。
+track 格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件）——Web 视频文本 track。
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
@@ -20,10 +20,10 @@ l10n:
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `default`
-  - : 此属性表示应启用该轨道，除非用户的偏好表明另一个轨道更合适。每个媒体元素只能在一个 `track` 元素上使用此属性。
+  - : 此属性表示应启用该 track，除非用户的偏好表明另一个 track 更合适。每个媒体元素只能在一个 `track` 元素上使用此属性。
 - `kind`
 
-  - : 文本轨道的使用方式。如果省略，默认的类型是 `subtitles`。如果属性包含无效值，则会使用 `metadata`。允许使用以下关键字：
+  - : 文本 track 的使用方式。如果省略，默认的类型是 `subtitles`。如果属性包含无效值，则会使用 `metadata`。允许使用以下关键字：
 
     - `subtitles`
 
@@ -45,11 +45,11 @@ l10n:
     - 由脚本元素使用的轨道。对用户不可见。
 
 - `label`
-  - : 用户可读的文本轨道标题，浏览器在列出可用文本轨道时使用。
+  - : 用户可读的文本 track 标题，浏览器在列出可用文本 track 时使用。
 - `src`
-  - : 轨道的地址（`.vtt` 文件）。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的源 —— 除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
+  - : track 的地址（`.vtt` 文件）。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的源 —— 除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
 - `srclang`
-  - : 轨道文本数据的语言。它必须是一个有效的 [BCP 47](https://r12a.github.io/app-subtags/) 语言标签。如果 `kind` 属性设置为 `subtitles`，则必须定义 `srclang`。
+  - : track 文本数据的语言。它必须是一个有效的 [BCP 47](https://r12a.github.io/app-subtags/) 语言标签。如果 `kind` 属性设置为 `subtitles`，则必须定义 `srclang`。
 
 ## 使用说明
 
@@ -75,7 +75,7 @@ textTrackElem.addEventListener("cuechange", (event) => {
 
 ### 以编程方式添加文本轨
 
-表示 `<track>` 元素的 JavaScript 接口是 {{domxref("HTMLTrackElement")}}。与元素关联的文本轨可以通过 {{domxref("HTMLTrackElement.track")}} 属性获取，其类型为 {{domxref("TextTrack")}}。
+表示 `<track>` 元素的 JavaScript 接口是 {{domxref("HTMLTrackElement")}}。与元素关联的文本 track 可以通过 {{domxref("HTMLTrackElement.track")}} 属性获取，其类型为 {{domxref("TextTrack")}}。
 
 `TextTrack` 对象也可以使用 {{domxref("HTMLMediaElement.addTextTrack()")}} 方法添加到 {{domxref("HTMLVideoElement")}} 或 {{domxref("HTMLAudioElement")}}。与媒体元素关联的 `TextTrack` 对象存储在 {{domxref("TextTrackList")}} 中，可以通过 {{domxref("HTMLMediaElement.textTracks")}} 属性获取。
 
