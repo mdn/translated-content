@@ -22,23 +22,23 @@ l10n:
 
 - `allow`
 
-  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web-share 等）
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web 共享等）
 
-    示例请参见 `Permissions-Policy` 中的 [iframes](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)
+    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)
 
     > [!NOTE]
     > 通过 `allow` 属性指定的特征策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步的限制。它不会替换原有策略。
 
 - `allowfullscreen`
 
-  - : 设置为`true`时，可以通过调用 `<iframe>` 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
+  - : 设置为 `true` 时，可以通过调用 `<iframe>` 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
 
     > [!NOTE]
     > 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
-  - : 设置为`true`时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
+  - : 设置为 `true` 时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
     > [!NOTE]
     > 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`。
@@ -49,7 +49,7 @@ l10n:
 
 - `credentialless` {{Experimental_Inline}}
 
-  - : 设置为 `true` 可以将 `<iframe>` 设为无凭据模式，这意味着将内容加载到新的临时上下文中。它无法访问与其源相关的网络，cookie 和存储数据。它使用一个新的 top-level document 生命周期的本地上下文，作为补偿，可以解除 {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 嵌入规则的限制，所以设置了 COEP 的 document 可以嵌入未设置的第三方 document。更多信息请参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless)。
+  - : 设置为 `true` 可以将 `<iframe>` 设为无凭据模式，这意味着将内容加载到新的临时上下文中。它无法访问与其源相关的网络，cookie 和存储数据。它使用一个新的顶层文档的生命周期的本地上下文，作为补偿，可以解除 {{httpheader("Cross-Origin-Embedder-Policy")}}（COEP）嵌入规则的限制，所以设置了 COEP 的文档可以嵌入未设置的第三方文档。更多信息请参见 [IFrame 无凭据模式](/zh-CN/docs/Web/Security/IFrame_credentialless)。
 
 - `csp` {{experimental_inline}}
   - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
@@ -60,26 +60,23 @@ l10n:
   - : 表示浏览器应当何时加载 iframe：
 
     - `eager`
-      - : 在页面加载时立即加载 iframe（默认值）
+      - : 在页面加载时立即加载 iframe（默认值）。
     - `lazy`
 
-      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离，
-        目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽，
-        这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间
+      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离，目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽，这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间
 
         > [!NOTE]
-        > 只有当 JavaScript 启用时才会推迟加载。
-        > 这是一个反跟踪措施。
+        > 只有当 JavaScript 启用时才会推迟加载。这是一个反跟踪措施。
 
 - `name`
   - : 用于定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 `target` 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 `formtarget` 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 `windowName` 参数值。
 - `referrerpolicy`
 
-  - : 表示在获取 iframe 资源时如何发送 [referrer](/zh-CN/docs/Web/API/Document/referrer) 标头：
+  - : 表示在获取 iframe 资源时发送哪个 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
 
     - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 标头。
-    - `no-referrer-when-downgrade` (default): 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
-    - `origin`: referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的 [scheme](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
+    - `no-referrer-when-downgrade`: 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
+    - `origin`: referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`: 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。
     - `same-origin`: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 标头，否则不发送。
     - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 标头（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 标头（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
@@ -130,7 +127,7 @@ l10n:
     > 在解析任何相对 URL 时，例如锚点链接，`about:srcdoc` 页面会使用嵌入的文档的 URL 作为它的基准 URL
 
 - `width`
-  - : 以 CSS 像素格式，或以像素格式，或以百分比格式指定的 frame 的宽度。默认值是`300`。
+  - : 以 CSS 像素格式，或以像素格式，或以百分比格式指定的 frame 的宽度。默认值是 `300`。
 
 ### 不赞成使用的属性
 
@@ -309,5 +306,5 @@ l10n:
 
 ## 参见
 
-- [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP：frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
