@@ -30236,10 +30236,6 @@
     "modified": "2020-10-15T22:11:44.847Z",
     "contributors": ["silverskyvicto", "mfuji09", "fscholz"]
   },
-  "conflicting/Web/API/HTMLElement/toggle_event": {
-    "modified": "2020-10-15T22:11:43.790Z",
-    "contributors": ["mfuji09", "wbamberg", "chrisdavidmills", "silverskyvicto"]
-  },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": ["MakeNowJust"]
