@@ -9,7 +9,8 @@ La propriété **`onblur`**, rattachée au mixin [`GlobalEventHandlers`](/fr/doc
 
 L'évènement `blur` est déclenché lorsqu'un élément perd le focus.
 
-> **Note :** Le gestionnaire d'évènement opposé à `onblur` est [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers/onfocus).
+> [!NOTE]
+> Le gestionnaire d'évènement opposé à `onblur` est [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers/onfocus).
 
 ## Syntaxe
 

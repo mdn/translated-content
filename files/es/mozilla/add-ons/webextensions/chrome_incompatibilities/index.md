@@ -3,6 +3,8 @@ title: Incompatibilidades con Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 
+{{AddonSidebar}}
+
 WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.
 
 Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera. Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.
@@ -211,14 +213,14 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 
 We don't yet support the following APIs, but plan to, soon:
 
-- [commands](https://developer.chrome.com/extensions/commands)
+- [commands](https://developer.chrome.com/docs/extensions/reference/api/commands)
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [downloads](https://developer.chrome.com/extensions/downloads)
-- [history](https://developer.chrome.com/extensions/history)
-- [idle](https://developer.chrome.com/extensions/idle)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
-- [Native messaging (runtime.connectNative)](https://developer.chrome.com/extensions/runtime#method-connectNative)
+- [downloads](https://developer.chrome.com/docs/extensions/reference/api/downloads)
+- [history](https://developer.chrome.com/docs/extensions/reference/api/history)
+- [idle](https://developer.chrome.com/docs/extensions/reference/api/idle)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
+- [Native messaging (runtime.connectNative)](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative)
 
 ### CSS
 

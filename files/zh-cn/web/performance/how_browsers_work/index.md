@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f32c38c1245815c7f520730f0cdef54960e5cee1
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 在浏览网页时用户希望页面的内容能够快速加载且流畅交互。因此，开发者应力争实现这两个目标。
 

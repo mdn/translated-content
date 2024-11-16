@@ -106,7 +106,8 @@ break-before: unset;
 | `avoid`           | `avoid`      |
 | `always`          | `page`       |
 
-> **メモ:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> [!NOTE]
+> ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 

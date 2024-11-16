@@ -19,7 +19,8 @@ slug: Web/API/Attr
 | `myAttr` | `mynamespace` | _无_         | `myAttr`     | `myAttr`      |
 | `myAttr` | `mynamespace` | `myns`       | `myAttr`     | `myns:myAttr` |
 
-> **备注：** 该接口仅表示 {{domxref("Element")}} 树中存在的属性（attribute），无论是 SVG、HTML 还是 MathML 元素。它不表示与此类元素相关的接口的*属性*（property），例如 {{HTMLElement("table")}} 元素的 {{domxref("HTMLTableElement")}}。（有关元素属性（attribute）及其如何*反射*到接口属性（property）的更多信息，请参见{{Glossary("Attribute", "这篇文章")}}。）
+> [!NOTE]
+> 该接口仅表示 {{domxref("Element")}} 树中存在的属性（attribute），无论是 SVG、HTML 还是 MathML 元素。它不表示与此类元素相关的接口的*属性*（property），例如 {{HTMLElement("table")}} 元素的 {{domxref("HTMLTableElement")}}。（有关元素属性（attribute）及其如何*反射*到接口属性（property）的更多信息，请参见{{Glossary("Attribute", "这篇文章")}}。）
 
 ## 实例属性
 

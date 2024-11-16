@@ -203,7 +203,8 @@ let url = "http://xxx.dominio.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // registra 'xxx'
 ```
 
-> **Nota:** En lugar de utilizar expresiones regulares para analizar las URL, normalmente es mejor utilizar el analizador de URL integrado en los navegadores mediante la [API URL](/es/docs/Web/API/URL_API).
+> [!NOTE]
+> En lugar de utilizar expresiones regulares para analizar las URL, normalmente es mejor utilizar el analizador de URL integrado en los navegadores mediante la [API URL](/es/docs/Web/API/URL_API).
 
 ## Especificaciones
 

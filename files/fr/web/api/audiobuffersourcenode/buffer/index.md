@@ -21,7 +21,8 @@ Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données
 
 ## Exemple
 
-> **Note :** Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!NOTE]
+> Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 let AudioContext = window.AudioContext || window.webkitAudioContext;

@@ -20,7 +20,8 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 - Ação padrão
   - : Nenhuma
 
-> **Nota:** O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ([Erro do Firefox 452307](https://bugzil.la/452307)): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
+> [!NOTE]
+> O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ([Erro do Firefox 452307](https://bugzil.la/452307)): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
 
 ## Propriedades
 

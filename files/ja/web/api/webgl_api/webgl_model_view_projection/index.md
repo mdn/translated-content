@@ -9,7 +9,8 @@ l10n:
 
 この記事では、 [WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、投影行列について説明します。
 
-> **メモ:** この記事は [MDN コンテンツキット](https://github.com/gregtatum/mdn-model-view-projection)としても利用可能です。また、 `MDN` グローバルオブジェクトの下で利用可能な[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
+> [!NOTE]
+> この記事は [MDN コンテンツキット](https://github.com/gregtatum/mdn-model-view-projection)としても利用可能です。また、 `MDN` グローバルオブジェクトの下で利用可能な[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
 
 ## モデル、ビュー、投影行列
 
@@ -33,7 +34,8 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **メモ:** WebGLBox のそれぞれの例のコードは、この [GitHub リポジトリー](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons)にあり、セクションごとに整理されています。また、各セクションの一番下に JSFiddle へのリンクがあります。
+> [!NOTE]
+> WebGLBox のそれぞれの例のコードは、この [GitHub リポジトリー](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons)にあり、セクションごとに整理されています。また、各セクションの一番下に JSFiddle へのリンクがあります。
 
 #### WebGLBox コンストラクター
 
@@ -411,7 +413,8 @@ gl.uniformMatrix4fv(
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **メモ:** JavaScript で行列の乗算はカスタム関数を要求されますが、シェーダーでは単純な \* 演算子で言語に組み込まれています。
+> [!NOTE]
+> JavaScript で行列の乗算はカスタム関数を要求されますが、シェーダーでは単純な \* 演算子で言語に組み込まれています。
 
 ### 結果
 

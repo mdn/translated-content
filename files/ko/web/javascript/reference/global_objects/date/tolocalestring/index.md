@@ -153,7 +153,8 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 // IE나 Edge에서 false 입니다
 ```
 
-> **Note:** See also this
+> [!NOTE]
+> See also this
 > [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
 > for more details and examples.
 

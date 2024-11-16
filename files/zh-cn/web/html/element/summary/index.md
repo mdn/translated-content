@@ -17,7 +17,7 @@ slug: Web/HTML/Element/summary
 
 `<summary>` 元素的内容可以是任意标题内容、纯文本，或是可以在段落内使用的 HTML 代码。
 
-`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
+`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
 
 ### 默认标签文字
 
@@ -77,7 +77,8 @@ slug: Web/HTML/Element/summary
 
 目前这有一些间距问题，可以用 CSS 解决。
 
-> **警告：** 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
+> [!WARNING]
+> 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
 
 ### summary 元素中的 HTML
 

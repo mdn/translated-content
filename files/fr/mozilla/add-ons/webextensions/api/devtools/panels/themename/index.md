@@ -19,7 +19,7 @@ Il s'agit d'une chaîne dont les valeurs possibles sont :
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 >

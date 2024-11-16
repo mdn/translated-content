@@ -26,7 +26,8 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/H
 - `height`
   - : A altura do espaço em pixels CSS. O padrão é 150.
 
-> **Nota:** The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.
+> [!NOTE]
+> The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.
 
 ## Interface DOM
 

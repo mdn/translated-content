@@ -45,7 +45,8 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.
 - **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
 
-  > **Aviso:** Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
+  > [!WARNING]
+  > Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
 
 ### Diferentes tipos de validação de formulário
 
@@ -170,9 +171,11 @@ Neste exemplo, o elemento {{HTMLElement("input")}} aceita um dos dois valores po
 
 Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como você se sai! Tente torná-los relacionados a frutas sempre que possível, para que seus exemplos façam sentido!
 
-> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
+> [!NOTE]
+> Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
 
-> **Nota:** O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
+> [!NOTE]
+> O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
 
 ### Restringindo o comprimento de suas entradas
 

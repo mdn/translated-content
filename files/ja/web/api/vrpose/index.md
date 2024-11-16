@@ -9,7 +9,8 @@ l10n:
 
 **`VRPose`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、特定のタイムスタンプにおける VR センサーの状態（向き、位置、速度、加速度の情報を含みます）を示します。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このインターフェイスには、 {{domxref("VRDisplay.getPose()")}} と {{domxref("VRDisplay.getFrameData()")}} メソッドを通じてアクセスします。 {{domxref("VRDisplay.getPose()")}} は非推奨です。
 

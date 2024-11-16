@@ -15,7 +15,7 @@ slug: Web/API/HTMLElement/innerText
 - `innerText` умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как `textContent` этого не делает.
 - Метод `innerText` позволяет получить CSS, а `textContent` — нет.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

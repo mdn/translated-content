@@ -54,15 +54,15 @@ void removeListener(
 - `listener`
   - : 欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
 
+## 規範
+
+{{Specifications}}
+
 ## 瀏覽器相容性
 
 {{Compat}}
 
-## 規範標準
-
-- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
-
-## 延伸閱讀
+## 參見
 
 - [Media queries](/zh-TW/docs/CSS/Media_queries)
 - [Using media queries from code](/zh-TW/docs/CSS/Using_media_queries_from_code)

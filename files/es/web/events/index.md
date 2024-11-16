@@ -246,7 +246,8 @@ Estos eventos se definen en las especificaciones Web oficiales, y deben ser comu
 
 ## Eventos específicos de Mozilla
 
-> **Nota:** Nota: los eventos nunca están expuestos a contenidos web y sólo se pueden utilizar en el contexto de contenido de chrome.
+> [!NOTE]
+> Los eventos nunca están expuestos a contenidos web y sólo se pueden utilizar en el contexto de contenido de chrome.
 
 ### Eventos XUL
 

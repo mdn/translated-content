@@ -48,7 +48,8 @@ const myString = new String("Hello"); // Stringオブジェクト
 const s = Boolean(myString); // true
 ```
 
-> **警告:** コンストラクターとして `Boolean` を使うことは滅多にありません。
+> [!WARNING]
+> コンストラクターとして `Boolean` を使うことは滅多にありません。
 
 ### 論理値への型強制
 
@@ -62,7 +63,8 @@ const s = Boolean(myString); // true
 - [`Symbol`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) は `true` になります。
 - すべてのオブジェクトは `true` になります。
 
-> **メモ:** 非推奨のプロパティ [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に変換されると `false` になります。このプロパティはレガシーで非標準であるため、使用しないでください。
+> [!NOTE]
+> 非推奨のプロパティ [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に変換されると `false` になります。このプロパティはレガシーで非標準であるため、使用しないでください。
 
 > **注意:** [文字列への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)や[数値への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)などの他の型の変換とは異なり、論理値への型強制はオブジェクトからプリミティブに変換しようとするわけではありません。
 

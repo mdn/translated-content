@@ -83,7 +83,7 @@ function removeHint() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

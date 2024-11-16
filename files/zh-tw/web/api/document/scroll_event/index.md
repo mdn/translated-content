@@ -30,7 +30,8 @@ slug: Web/API/Document/scroll_event
   </tbody>
 </table>
 
-> **備註：** iOS 的 UIWebViews 中，`scroll`事件不會在捲動時觸發，而只在捲動結束後觸發。請參見 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 不受本 bug 影響。
+> [!NOTE]
+> iOS 的 UIWebViews 中，`scroll`事件不會在捲動時觸發，而只在捲動結束後觸發。請參見 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 不受本 bug 影響。
 
 ## 範例
 

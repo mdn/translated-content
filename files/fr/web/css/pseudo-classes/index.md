@@ -15,7 +15,8 @@ div:hover {
 
 Les pseudo-classes permettent d'appliquer un style à un élément non seulement en fonction de son contenu dans l'arbre du document mais aussi en fonction de facteurs externes (l'historique de navigation par exemple avec {{cssxref(":visited")}} ; le statut du contenu avec {{cssxref(":checked")}} ; la position de la souris {{cssxref(":hover")}}).
 
-> **Note :** À la différence des pseudo-classes, [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments) peuvent être utilisés afin d'appliquer un style sur une certaine partie d'un élément.
+> [!NOTE]
+> À la différence des pseudo-classes, [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments) peuvent être utilisés afin d'appliquer un style sur une certaine partie d'un élément.
 
 ## Syntaxe
 

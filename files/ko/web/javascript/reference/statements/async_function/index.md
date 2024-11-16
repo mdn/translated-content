@@ -34,7 +34,8 @@ slug: Web/JavaScript/Reference/Statements/async_function
 
 > **Note:** `await` 키워드는 `async` 함수에서만 유효하다는 것을 기억하십시오. `async` 함수의 본문 외부에서 사용하면 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다.
 
-> **Note:** async/await함수의 목적은 사용하는 여러 promise의 동작을 동기스럽게 사용할 수 있게 하고, 어떠한 동작을 여러 promise의 그룹에서 간단하게 동작하게 하는 것이다. promise가 구조화된 callback과 유사한 것 처럼 `async/await` 또한 제네레이터(generator)와 프로미스(promise)를 묶는것과 유사하다.
+> [!NOTE]
+> async/await함수의 목적은 사용하는 여러 promise의 동작을 동기스럽게 사용할 수 있게 하고, 어떠한 동작을 여러 promise의 그룹에서 간단하게 동작하게 하는 것이다. promise가 구조화된 callback과 유사한 것 처럼 `async/await` 또한 제네레이터(generator)와 프로미스(promise)를 묶는것과 유사하다.
 
 `async` 함수는 항상 promise를 반환합니다. 만약 `async` 함수의 반환값이 명시적으로 promise가 아니라면 암묵적으로 promise로 감싸집니다.
 

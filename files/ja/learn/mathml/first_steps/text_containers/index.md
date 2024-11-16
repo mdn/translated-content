@@ -166,7 +166,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **メモ:** 指定されたテキストコンテンツにどのトークン要素を使用するかを決めるのは難しい場合があります。実際には、間違った要素を選んでも大きな問題が発生することはありません。なぜなら、すべてのトークン要素はブラウザー実装によって一般的に同じようにレンダリングされるからです（視覚的な表示と支援技術のために）。しかし、`<mi>` 要素と `<mo>` 要素には特別な判別する機能があるので注意が必要です。それらは以下の節で説明します。
+> [!NOTE]
+> 指定されたテキストコンテンツにどのトークン要素を使用するかを決めるのは難しい場合があります。実際には、間違った要素を選んでも大きな問題が発生することはありません。なぜなら、すべてのトークン要素はブラウザー実装によって一般的に同じようにレンダリングされるからです（視覚的な表示と支援技術のために）。しかし、`<mi>` 要素と `<mo>` 要素には特別な判別する機能があるので注意が必要です。それらは以下の節で説明します。
 
 ## \<mi> の自動的なイタリック化
 
@@ -197,7 +198,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('Reverting automatic italicization of <mi>', 700, 50) }}
 
-> **メモ:** この変換を適用することができますが、通常は専用の[数学用英数字記号](https://ja.wikipedia.org/wiki/数学用英数字記号)を使用します。
+> [!NOTE]
+> この変換を適用することができますが、通常は専用の[数学用英数字記号](https://ja.wikipedia.org/wiki/数学用英数字記号)を使用します。
 
 ## \<mo> の演算子プロパティ
 
@@ -316,7 +318,8 @@ document.getElementById("showSolution").addEventListener(
 
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
-> **メモ:** 明らかな違いは、 MathML ではソースコードがより冗長になることです。このチュートリアルはこの言語を学ぶためのものですが、実際には MathML のコンテンツは一般的に手動では書かれません。詳しい情報は [MathML を書く](/ja/docs/Web/MathML/Authoring)のページを参照してください。
+> [!NOTE]
+> 明らかな違いは、 MathML ではソースコードがより冗長になることです。このチュートリアルはこの言語を学ぶためのものですが、実際には MathML のコンテンツは一般的に手動では書かれません。詳しい情報は [MathML を書く](/ja/docs/Web/MathML/Authoring)のページを参照してください。
 
 ### アクティブラーニング: 伸縮演算子
 
@@ -456,7 +459,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **警告:** 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)に頼っています。
+> [!WARNING]
+> 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)に頼っています。
 
 ## まとめ
 

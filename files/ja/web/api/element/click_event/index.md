@@ -30,7 +30,8 @@ onclick = (event) => {};
 
 {{InheritanceDiagram("PointerEvent")}}
 
-> **メモ:** この仕様書の以前のバージョンでは、このイベントのイベント型は {{domxref("MouseEvent")}} でした。 Firefox と Safari では今でもこの型で渡されます。
+> [!NOTE]
+> この仕様書の以前のバージョンでは、このイベントのイベント型は {{domxref("MouseEvent")}} でした。 Firefox と Safari では今でもこの型で渡されます。
 
 ## イベントプロパティ
 

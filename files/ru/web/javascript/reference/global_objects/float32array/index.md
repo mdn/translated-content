@@ -142,7 +142,7 @@ var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

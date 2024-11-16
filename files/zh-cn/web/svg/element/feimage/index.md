@@ -48,7 +48,7 @@ l10n:
 
 {{EmbedLiveSample("示例", 200, 200)}}
 
-## 规格
+## 规范
 
 {{Specifications}}
 

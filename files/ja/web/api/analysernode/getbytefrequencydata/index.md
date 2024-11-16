@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-**`getByteFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェースのメソッドで、渡された {{jsxref("Uint8Array")}} （符号なしバイト配列）に現在の周波数データをコピーします．
+**`getByteFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェイスのメソッドで、渡された {{jsxref("Uint8Array")}} （符号なしバイト配列）に現在の周波数データをコピーします．
 
 周波数データは、 0 から 255 まで の範囲の整数で構成されます。
 

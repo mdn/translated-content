@@ -45,7 +45,7 @@ l10n:
 
 - [`id`](/ja/docs/Web/HTML/Element/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
-- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
+- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリーのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
 
   - {{domxref("HTMLInputElement.directory")}}
   - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
@@ -60,7 +60,7 @@ l10n:
 - `Request.context` を削除しました ([Firefox バグ 1188062](https://bugzil.la/1188062))。
 - デスクトップ版 Firefox で[プッシュ API](/ja/docs/Web/API/Push_API) をデフォルトで有効にしました ([Firefox バグ 1153499](https://bugzil.la/1153499)) が、Nightly/Dev Edition/Beta チャンネルのみで有効です。コンシューマーの UX およびデバッグ機能が適切に実装されるまで、Release チャンネルではデフォルトで無効化しています ([Firefox バグ 1207875](https://bugzil.la/1207875))。なお、 `about:config` の設定項目 `dom.push.enabled` で有効化できます。
 - {{domxref("PushManager.hasPermission()")}} メソッドが仕様書で非推奨になり、{{domxref("PushManager.permissionState()")}} メソッドに置き換えられました。Firefox でこれを反映するように、実装を更新しました ([Firefox バグ 1183853](https://bugzil.la/1183853))。
-- [Notifications API](/ja/docs/Web/API/Notifications_API) で、Service Worker に関する追加実装を行いました ([Firefox バグ 1114554](https://bugzil.la/1114554))。ただし、Release 版では無効化しています。
+- [通知 API](/ja/docs/Web/API/Notifications_API) で、Service Worker に関する追加実装を行いました ([Firefox バグ 1114554](https://bugzil.la/1114554))。ただし、Release 版では無効化しています。
 
 #### ウェブアニメーション API
 
@@ -116,7 +116,7 @@ _変更なし。_
 
 ## HTTP
 
-- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な疑似ヘッダフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる疑似ヘッダフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
+- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な擬似ヘッダーフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる擬似ヘッダーフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダーは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
 
 ## ネットワーク
 

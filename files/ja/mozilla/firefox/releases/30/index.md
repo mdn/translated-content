@@ -3,6 +3,8 @@ title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 30 を搭載した Firefox 30 は、米国時間 2014 年 6 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 30 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -10,7 +12,7 @@ Gecko 30 を搭載した Firefox 30 は、米国時間 2014 年 6 月 10 日に�
 ### 開発者ツール
 
 - ボックスモデルのハイライト表示機能を実装しました ([Firefox バグ 663778](https://bugzil.la/663778))。
-- コンソールの出力に DOM ノードがあるとき、その出力にマウスポインタを載せるとノードをハイライト表示します ([Firefox バグ 757866](https://bugzil.la/757866))。同様に、すべての JS 関数やオブジェクトをコンソールの出力でハイライトします ([Firefox バグ 584733](https://bugzil.la/584733))。コンソールの改善点について、詳しくは[こちらのブログ投稿](http://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30)をご覧ください。
+- コンソールの出力に DOM ノードがあるとき、その出力にマウスポインターを載せるとノードをハイライト表示します ([Firefox バグ 757866](https://bugzil.la/757866))。同様に、すべての JS 関数やオブジェクトをコンソールの出力でハイライトします ([Firefox バグ 584733](https://bugzil.la/584733))。コンソールの改善点について、詳しくは[こちらのブログ投稿](http://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30)をご覧ください。
 - {{domxref("Console.count()")}} をサポートしました ([Firefox バグ 922208](https://bugzil.la/922208))。
 
 ### CSS

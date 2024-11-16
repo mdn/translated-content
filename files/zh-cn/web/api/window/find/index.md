@@ -7,7 +7,8 @@ l10n:
 
 {{ApiRef}}{{Non-standard_Header}}
 
-> **备注：** 未来版本的 Gecko 对 `Window.find()` 的支持可能会发生变化。参见 [Firefox bug 672395](https://bugzil.la/672395)。
+> [!NOTE]
+> 未来版本的 Gecko 对 `Window.find()` 的支持可能会发生变化。参见 [Firefox bug 672395](https://bugzil.la/672395)。
 
 **`Window.find()`** 方法在窗口中按顺序查找字符串。
 

@@ -31,7 +31,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-> **メモ:** この例は GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) ([実行例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) で見ることができます。</p>
+> [!NOTE]
+> この例は GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) ([実行例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) で見ることができます。</p>
 
 </div>
 

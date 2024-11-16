@@ -3,6 +3,8 @@ title: Utiliser l'API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base
@@ -15,7 +17,8 @@ localStorage["colorSetting"] = "#a4509b";
 localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
+> [!NOTE]
+> Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
 
 Les deux principaux mécanismes internes du Stockage Web sont :
 
@@ -89,7 +92,8 @@ Nous avons aussi fournit une [page pour l'événement émis](https://mdn.github.
 
 ![](event-output.png)
 
-> **Note :** En plus de l'affichage en temps réel des pages en utilisant les liens ci-dessus, vous pouvez aussi [regarder le code-source](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> [!NOTE]
+> En plus de l'affichage en temps réel des pages en utilisant les liens ci-dessus, vous pouvez aussi [regarder le code-source](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
 ## Tester si le stockage a déjà été rempli
 

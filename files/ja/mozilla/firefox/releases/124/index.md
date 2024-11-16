@@ -2,7 +2,7 @@
 title: Firefox 124 for developers
 slug: Mozilla/Firefox/Releases/124
 l10n:
-  sourceCommit: 4c8b53d6a760f60f7d3d7a7704d35f1c7b8f5693
+  sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
 {{FirefoxSidebar}}
@@ -11,10 +11,17 @@ l10n:
 
 ## ウェブ開発者向けの変更点一覧
 
+### HTML
+
+変更なし。
+
 ### CSS
 
-- [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
 - {{cssxref("text-wrap")}} プロパティがショートハンドプロパティに転換されて、{{cssxref("text-wrap-mode")}} および {{cssxref("text-wrap-style")}} の構成要素プロパティを包括するようになりました。([Firefox bug 1758391](https://bugzil.la/1758391))
+
+### JavaScript
+
+変更なし。
 
 ### SVG
 
@@ -40,9 +47,9 @@ l10n:
   - [browser.createUserContext](https://w3c.github.io/webdriver-bidi/#command-browser-createUserContext) は新しいユーザーコンテキストを作成して、ユーザーコンテキストの一意の ID を返します。([Firefox bug 1870848](https://bugzil.la/1870848))
   - [browser.removeUserContext](https://w3c.github.io/webdriver-bidi/#command-browser-removeUserContext) はデフォルトでないユーザーコンテキストを、一意の ID を指定することで削除できます。([Firefox bug 1870849](https://bugzil.la/1870849))
   - [browser.getUserContexts](https://w3c.github.io/webdriver-bidi/#command-browser-getUserContexts) は、デフォルトユーザーコンテキストを含むすべての使用可能なユーザーコンテキストの一覧を、クライアントが取得できます。([Firefox bug 1870847](https://bugzil.la/1870847))
-- [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) コマンドで引数 "userContext" をサポートしました。この引数は、新しいブラウジングコンテキスト (タブやウィンドウ) を特定のユーザーコンテキスト (Firefox のコンテナー) に割り当てできます。([Firefox bug 1874918](https://bugzil.la/1874918))
-- [browsingContext.Info](https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info) 型を、"userContext" フィールドを含むように更新しました。このフィールドは、ブラウジングコンテキストのタブを所有するユーザーコンテキストの一意の ID です。([Firefox bug 1874920](https://bugzil.la/1874920))
-- [script.addPreloadScript](https://w3c.github.io/webdriver-bidi/#command-script-addPreloadScript) コマンドで引数 "contexts" をサポートしました。この引数は特定のブラウジングコンテキストツリー (タブ) のトップレベルのブラウジングコンテキストを指定することで、特定のブラウジングコンテキストツリーに限ってプリロードスクリプトをクライアントが追加することを可能にします。([Firefox bug 1858458](https://bugzil.la/1858458))
+- [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) コマンドで引数 "userContext" をサポートしました。この引数は、新しい閲覧コンテキスト (タブやウィンドウ) を特定のユーザーコンテキスト (Firefox のコンテナー) に割り当てできます。([Firefox bug 1874918](https://bugzil.la/1874918))
+- [browsingContext.Info](https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info) 型を、"userContext" フィールドを含むように更新しました。このフィールドは、閲覧コンテキストのタブを所有するユーザーコンテキストの一意の ID です。([Firefox bug 1874920](https://bugzil.la/1874920))
+- [script.addPreloadScript](https://w3c.github.io/webdriver-bidi/#command-script-addPreloadScript) コマンドで引数 "contexts" をサポートしました。この引数は特定の閲覧コンテキストツリー (タブ) のトップレベルの閲覧コンテキストを指定することで、特定の閲覧コンテキストツリーに限ってプリロードスクリプトをクライアントが追加することを可能にします。([Firefox bug 1858458](https://bugzil.la/1858458))
 - [browsingContext.close](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close) が、最後のタブやウィンドウをを閉じることができない不具合を修正しました。([Firefox bug 1873948](https://bugzil.la/1873948))
 
 #### Marionette
@@ -60,7 +67,7 @@ l10n:
 - **拡張可能な `SharedArrayBuffer`:** `javascript.options.experimental.sharedarraybuffer_growable`。
 
   {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して {{jsxref("SharedArrayBuffer")}} を拡張できるようになりました。
-  バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` パラメーターで設定します。
+  バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
   {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
   ([Firefox bug 1842773](https://bugzil.la/1842773))
 

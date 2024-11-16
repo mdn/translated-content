@@ -3,6 +3,8 @@ title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -27,7 +29,7 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 - 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
 - {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
 - 画面上で、[メディアクエリー](/ja/docs/CSS/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
-- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの疑似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
+- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの擬似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
 - {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
 - {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([Firefox バグ 763689](https://bugzil.la/763689))
 
@@ -42,7 +44,7 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 - {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
 - WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
 - 非標準の {{domxref("Element.scrollTopMax")}} および {{domxref("Element.scrollLeftMax")}} 読み取り専用プロパティが追加されました ([Firefox バグ 766937](https://bugzil.la/766937))。
-- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリとして扱われるようになりました ([Firefox バグ 7691119](https://bugzil.la/7691119))。
+- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリーとして扱われるようになりました ([Firefox バグ 7691119](https://bugzil.la/7691119))。
 
 ### JavaScript
 

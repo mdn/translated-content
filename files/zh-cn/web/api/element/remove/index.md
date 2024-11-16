@@ -9,8 +9,8 @@ slug: Web/API/Element/remove
 
 ## 语法
 
-```
-node.remove();
+```js-nolint
+remove()
 ```
 
 ## 示例

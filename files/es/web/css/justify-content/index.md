@@ -11,7 +11,8 @@ La propiedad [CSS](/es/docs/CSS) **`justify-content`** define cómo el navegador
 
 El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.
 
-> **Nota:** No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](http://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
+> [!NOTE]
+> No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](http://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
 
 {{cssinfo}}
 

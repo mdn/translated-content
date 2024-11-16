@@ -68,7 +68,8 @@ Vous pouvez penser que des images vectorielles sont la solution à ces problème
 
 Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'au milieu des années 90 — à l'époque, les seuls appareils permettant de naviguer sur le web étaient les ordinateurs de bureau et les portables, de sorte que les ingénieurs et rédacteurs de spécifications pour les navigateurs ne pouvaient même pas imaginer l'existence de ces problèmes. Pour résoudre les problèmes indiqués ci-dessus, les techniques d'images adaptatives sont de mise en œuvre récente&nbsp;: elles offrent au navigateur plusieurs fichiers d'images, soit montrant tous la même chose mais avec un nombre de pixels différent (commutation de résolution), soit des images différentes selon l'espace alloué (décisions artistiques).
 
-> **Note :** Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Element/Img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Element/Img#attr-sizes)/[`<picture>`](/fr/docs/Web/HTML/Element/picture) — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
+> [!NOTE]
+> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Element/Img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Element/Img#attr-sizes)/[`<picture>`](/fr/docs/Web/HTML/Element/picture) — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
 
 ## Comment créer des images adaptatives&nbsp;?
 
@@ -115,7 +116,8 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 2. une espace,
 3. **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`480px`).
 
-> **Note :** pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.
+> [!NOTE]
+> Pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.
 
 Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:
 
@@ -126,13 +128,15 @@ Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:
 
 Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de `480px` charge la page, la condition pour le média `(max-width: 600px)` sera vraie, donc une largeur d'emplacement de `480px` sera choisie, donc le fichier `elva-fairy-480w.jpg` sera chargé, car sa largeur intrinsèque (`480w`) est celle qui est la plus proche de `480px`. L'image `800px` a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65 Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.
 
-> **Note :** lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction `document.querySelector("html").clientWidth` dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page `about:debugging` de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.
+> [!NOTE]
+> Lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction `document.querySelector("html").clientWidth` dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page `about:debugging` de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.
 >
 > Pour observer les images chargées, vous pouvez utiliser l'onglet [Moniteur réseau](/fr/docs/Tools/Network_Monitor) dans les outils de développement de Firefox.
 
 Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut [`src`](/fr/docs/Web/HTML/Element/Img#attr-src).
 
-> **Note :** dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) du document, vous trouvez la ligne `<meta name="viewport" content="width=device-width">`&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).
+> [!NOTE]
+> Dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) du document, vous trouvez la ligne `<meta name="viewport" content="width=device-width">`&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).
 
 ### Commutation de résolution&nbsp;: même taille, résolutions différentes
 
@@ -187,7 +191,8 @@ Ce code nous permet d'afficher une image adaptée à la fois sur un écran large
 
 ![Notre exemple vu sur un écran assez large : la première image est OK et on voit le détail au centre.](picture-element-wide.png)![Notre exemple vu sur un écran étroit où l'élément picture permet de passer la première image à une image en portrait, plus utile sur un écran étroit.](picture-element-narrow.png)
 
-> **Note :** vous ne devez utiliser l'attribut `media` qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez `media`, ne mettez pas de conditions pour le média avec l'attribut `sizes.`
+> [!NOTE]
+> Vous ne devez utiliser l'attribut `media` qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez `media`, ne mettez pas de conditions pour le média avec l'attribut `sizes.`
 
 ### Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?
 

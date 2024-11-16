@@ -9,7 +9,8 @@ El evento **beforeunload** es disparado cuando la ventana, el documento y sus re
 
 Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo). Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.
 
-> **Nota:** Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.
+> [!NOTE]
+> Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.
 
 <table class="properties">
   <tbody>

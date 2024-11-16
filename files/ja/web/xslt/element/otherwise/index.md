@@ -1,15 +1,17 @@
 ---
 title: <xsl:otherwise>
 slug: Web/XSLT/Element/otherwise
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:otherwise>` 要素は `<xsl:when>` 条件のいずれも適用されない場合に実行されるアクションを定義するために使用されます。他のプログラミング言語の `else` または `default` の場合と似ています。
 
 ### 構文
 
-```
+```xml
 <xsl:otherwise>
   TEMPLATE
 </xsl:otherwise>
@@ -17,17 +19,17 @@ slug: Web/XSLT/Element/otherwise
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
-なし
+なし。
 
-### タイプ
+### 種類
 
-サブ命令は `<xsl:choose>` 要素の最後の子としてテンプレート内に現れなければなりません。
+サブ命令で、 `<xsl:choose>` 要素の最後の子としてテンプレート内に現れる必要があります。
 
-### 定義
+## 仕様書
 
 XSLT, section 9.2
 

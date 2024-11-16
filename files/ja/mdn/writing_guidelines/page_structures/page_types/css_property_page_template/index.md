@@ -2,7 +2,7 @@
 title: CSS プロパティページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
+  sourceCommit: 90026d3d74fcc3b4dd81d9365b5c26752b76dd56
 ---
 
 {{MDNSidebar}}
@@ -129,7 +129,8 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
-> **メモ:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+> [!NOTE]
+> 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >

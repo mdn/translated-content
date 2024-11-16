@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Media Source Extensions")}}
 
-**`MediaSource()`** は {{domxref("MediaSource")}} インターフェイスのコンストラクターで、ソースバッファが関連付けられていない新しい `MediaSource` オブジェクトを構築して返します。
+**`MediaSource()`** は {{domxref("MediaSource")}} インターフェイスのコンストラクターで、ソースバッファーが関連付けられていない新しい `MediaSource` オブジェクトを構築して返します。
 
 ## 構文
 

@@ -1,13 +1,14 @@
 ---
-title: HTMLMediaElement.controls
+title: "HTMLMediaElement: controls プロパティ"
+short-title: controls
 slug: Web/API/HTMLMediaElement/controls
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.controls`** プロパティは、 HTML の [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性を反映し、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
+**`HTMLMediaElement.controls`** プロパティは、 HTML の [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性を反映し、メディアアイテムを再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
 
 ## 値
 
@@ -30,4 +31,4 @@ obj.controls = true;
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.controls` プロパティを定義しているインターフェイス

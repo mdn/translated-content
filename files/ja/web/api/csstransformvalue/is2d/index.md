@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue.is2D
+title: "CSSTransformValue: is2D プロパティ"
+short-title: is2D
 slug: Web/API/CSSTransformValue/is2D
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`is2D`** は {{domxref("CSSTransformValue")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2D であるか 3D であるかを返します。
 

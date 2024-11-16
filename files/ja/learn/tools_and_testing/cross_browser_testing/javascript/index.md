@@ -2,7 +2,7 @@
 title: よくある JavaScript の問題の扱い
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
-  sourceCommit: b59c2c5d26c86704c0f16e02fa5e0ec9475314c9
+  sourceCommit: 11a08e7da75bfb0b3e606eb26a9a0ad9301a1be5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -23,7 +23,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         一般的な JavaScript のブラウザー間の問題を診断し、適切なツールやテクニックを使用して修正することができること。
       </td>
@@ -66,7 +66,7 @@ if (window.XMLHttpRequest) {
 - [this](/ja/docs/Web/JavaScript/Reference/Operators/this) が、どのスコープに適用されるのか、したがってその値が意図通りなのかが混乱しています。 ["this" とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か)で軽く紹介されています。[これ](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)のような例も勉強してください。この例では、 `this` スコープを別な変数に保存し、その変数を入れ子関数で使用する典型的なパターンを示しているので、正しい `this` スコープに機能を適用していることを確認できます。
 - グローバル変数で反復処理するループ内で関数を誤って使用する（より一般的には「スコープを間違える」）。
 
-> **注目:**
+> [!CALLOUT]
 > 例えば、 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)を参照）では、 `var` で定義した変数を使って10回の反復処理をループし、そのたびに段落を作成して [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを追加しています。クリックされると、それぞれにその番号（作成した時点での `i` の値）を格納したアラートメッセージが表示されるようにします。なぜなら、 `for` ループはネストされた関数を呼び出す前にすべての反復処理を行うからです。
 >
 > 最も簡単な解決策は、反復処理変数を `var` の代わりに `let` で宣言することです。動作するバージョンについては [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)も参照）を参照してください。
@@ -105,7 +105,8 @@ npm install -g jshint
 
 これらのツールを [Gulp](https://gulpjs.com/) や [Webpack](https://webpack.github.io/) のようなタスクランナー/ビルドツールと使用して、開発中に JavaScript を自動的に検証することもできます。（後の記事で[テストツールを自動化するタスクランナーの使用](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools)を参照してください） ESLint のオプションについては [ESLint integrations](https://eslint.org/docs/user-guide/integrations) を参照してください。 JSHint は Grunt ですぐに対応しており、他にも [Webpack 用の JSHint loader](https://github.com/webpack-contrib/jshint-loader) などの統合があります。
 
-> **メモ:** ESLint は JSHint よりも設定や構成が少し面倒ですが、より強力です。
+> [!NOTE]
+> ESLint は JSHint よりも設定や構成が少し面倒ですが、より強力です。
 
 ### ブラウザーの開発者ツール
 
@@ -125,7 +126,7 @@ function showHeroes(jsonObj) {
 }
 ```
 
-すなわち、 `jsonObj` （期待通り、 [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)であるはずです）を使用しようとすると、すぐにコードが崩れてしまいます。これは、外部の `.json` ファイルから、以下の {{domxref("fetch()")}} 呼び出しを使用して取得することになっています。
+すなわち、 `jsonObj` （期待通り、 [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)であるはずです）を使用しようとすると、すぐにコードが崩れてしまいます。これは、外部の `.json` ファイルから、以下の {{domxref("Window/fetch", "fetch()")}} 呼び出しを使用して取得することになっています。
 
 ```js
 const requestURL =
@@ -179,7 +180,8 @@ fetch(requestURL).then((response) => {
 
 残念ながら、まだ同じエラーが出ています。ブラウザー開発者ツールのより洗練された機能、 Firefox でいうところの [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)を使って、この問題を調査してみましょう。
 
-> **メモ:** 他のブラウザーでも似たツールが利用できます。 Chrome の[ソースタブ](https://developer.chrome.com/docs/devtools/#sources)、 Safari の Debugger （[Safari Web Development Tools](https://developer.apple.com/safari/tools/)を参照）などです。
+> [!NOTE]
+> 他のブラウザーでも似たツールが利用できます。 Chrome の[ソースタブ](https://developer.chrome.com/docs/devtools/#sources)、 Safari の Debugger （[Safari Web Development Tools](https://developer.apple.com/safari/tools/)を参照）などです。
 
 Firefoxでは、デバッガータブは次のようになります。
 
@@ -191,7 +193,7 @@ Firefoxでは、デバッガータブは次のようになります。
 
 このようなツールの主な特徴は、コードにブレークポイントを追加できることです。ブレークポイントとは、コードの実行が停止する位置のことで、その位置で現在の状態の環境を調べ、何が起こっているかを確認することができます。
 
-さっそくやってみましょう。エラーは現在 26 行目で発生しています。中央のパネルで 26 行目をクリックし、ブレークポイントを追加してください（一番上に青い矢印が表示されます）。ページを更新してみてください (Cmd/Ctrl + R)。ブラウザーは 51 行目でコードの実行を一時停止します。この時点で右側が更新され、とても有益な情報が表示されます。
+さっそくやってみましょう。エラーは現在 26 行目で発生しています。中央のパネルで 26 行目をクリックし、ブレークポイントを追加してください（一番上に青い矢印が表示されます）。ページを更新してみてください (Cmd/Ctrl + R)。ブラウザーは 26 行目でコードの実行を一時停止します。この時点で右側が更新され、とても有益な情報が表示されます。
 
 ![ブレークポイント付き Firefox デバッガー](breakpoint.png)
 
@@ -208,7 +210,8 @@ Firefoxでは、デバッガータブは次のようになります。
 
 あなた自身でこの問題を解決してみてください。まずは {{domxref("Response")}} オブジェクトのドキュメントをご覧ください。もし行き詰まったら、 <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed> に修正されたソースコードがあります。
 
-> **メモ:** デバッガーのタブには、例えば条件付きブレークポイントやウォッチ式など、ここでは指定し ていない他にも有益な機能がたくさんあります。より多くの情報については、[デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)ページを参照してください。
+> [!NOTE]
+> デバッガーのタブには、例えば条件付きブレークポイントやウォッチ式など、ここでは指定し ていない他にも有益な機能がたくさんあります。より多くの情報については、[デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)ページを参照してください。
 
 ### パフォーマンスの問題
 
@@ -219,7 +222,8 @@ Firefoxでは、デバッガータブは次のようになります。
 - API を使用する場合、使用していないときは API 機能を必ずオフにしてください。 API 呼び出しによっては処理能力を実に高く消費することがあります。例えば、動画ストリームを表示させる場合、それが見えないときは必ずオフにしてください。 Geolocation の呼び出しを繰り返し使用して端末の位置を追跡する場合は、ユーザーが使用するのを止めたときにオフにするようにしてください。
 - アニメーションは実にパフォーマンスコストがかかります。多くの JavaScript ライブラリーは JavaScript でプログラムされたアニメーション機能を提供していますが、 JavaScript よりも [CSSアニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) (または新進の [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)) のようなブラウザーネイティブ機能でアニメーションを行う方が、はるかにコストパフォーマンスが高いです。 Brian Birtles の [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) を読むと、アニメーションにコストがかかる理由や、アニメーションのパフォーマンスを向上させるためのヒント、ウェブアニメーションAPIに関する情報など、実に有益な理論が書かれています。
 
-> **メモ:** Addy Osmani の [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) には、 JavaScript のパフォーマンスを向上させるための多くの詳細と優れたヒントが格納されています。
+> [!NOTE]
+> Addy Osmani の [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) には、 JavaScript のパフォーマンスを向上させるための多くの詳細と優れたヒントが格納されています。
 
 ## ブラウザー間の JavaScript の問題
 
@@ -232,11 +236,12 @@ Firefoxでは、デバッガータブは次のようになります。
 
 ### 最新の JavaScript/API 機能の使用
 
-[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features)では、言語の性質上、 HTML や CSS のエラーや認識できない機能を処理する方法について説明しました。しかし JavaScript は HTML や CSS ほど寛容ではありません。 JavaScript エンジンが間違いや認識されない構文に遭遇した場合、例えば対応していない新しい機能が使われた場合など、多くの場合エラーになります。
+[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)では、言語の性質上、 HTML や CSS のエラーや認識できない機能を処理する方法について説明しました。しかし JavaScript は HTML や CSS ほど寛容ではありません。 JavaScript エンジンが間違いや認識されない構文に遭遇した場合、例えば対応していない新しい機能が使われた場合など、多くの場合エラーになります。
 
 新機能への対応にはいくつか戦略がありますが、最も一般的なものを見てみましょう。
 
-> **メモ:** もちろん、必要に応じて組み合わせることもできます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルや ライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
+> [!NOTE]
+> これらの戦略は別個のものとして存在するのではなく、必要に応じて組み合わせることができます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルやライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
 
 #### 機能検出
 
@@ -258,19 +263,20 @@ CSS 機能が対応している場合にスタイルを適用したい場合は�
 
 ```css
 @supports (container-type: inline-size) {
-  /* 対応している場合はコンテナクエリーを使用します。 */
+  /* 対応している場合はコンテナークエリーを使用します。 */
 }
 ```
 
-最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[悪いブラウザー検出コードの使用](#悪いブラウザー検出コードの使用)を参照してください。
+最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[ブラウザー検出をしない](#ブラウザー検出をしない)を参照してください。
 
-> **メモ:** 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
+> [!NOTE]
+> 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
 
 #### ライブラリー
 
 JavaScript ライブラリーは基本的にサードパーティ製のコード単位で、ページに添付することができ、すぐに使用することができる豊富な既製の機能を提供します。 JavaScript ライブラリーの多くは、開発者が将来自分のプロジェクトを書くときの時刻を節約するために一般的なユーティリティ関数の設定をしていて、他の人も有益な機能を探すかもしれないので公開することにしたために決まります。
 
-JavaScript ライブラリーには、いくつかの主な種類がある傾向があります（複数の目的を果たすライブラリもあります）。
+JavaScript ライブラリーには、いくつかの主な種類がある傾向があります（複数の目的を果たすライブラリーもあります）。
 
 - ユーティリティライブラリー： ありふれた課題をより簡単に、退屈しないように管理するための関数を提供します。例えば [jQuery](https://jquery.com/) は、自分自身で指定された機能を持つセレクターと DOM 操作のライブラリーを提供し、 JavaScript で CSS セレクターを入力するような要素の選択や、 DOM の構築を簡単にします。 {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} のメソッドのような最新の機能がブラウザーを通して利用できるようになった今ではさほど重要ではなくなりましたが、古いブラウザーの対応が必要な場合にはなお利用価値があります。
 - 便利なライブラリー： 難しいことを簡単にします。例えば、 [WebGL API](/ja/docs/Web/API/WebGL_API) は実際に使用すると複雑で難しいので、 [Three.js](https://threejs.org/) ライブラリー（他にもあります）は WebGL の上に構築されており、一般的な 3D オブジェクト、ライティング、テクスチャなどを作成するための API をより簡単に提供します。
@@ -283,7 +289,8 @@ JavaScript ライブラリーには、いくつかの主な種類がある傾向
 
 基本的なレベルでのライブラリーの使い方は、ライブラリーのファイル（JavaScript、場合によっては CSS やその他の依存関係も）をダウンロードし、ページに添付する（例えば {{htmlelement("script")}} 要素で）ことです。しかし、このようなライブラリーには、 [Bower](https://bower.io/) コンポーネントとしてインストールしたり、 [Webpack](https://webpack.github.io/) モジュールバンドラーに依存関係として記載するなど、他にも多くの使用方法があります。より詳細な情報については、ライブラリーの個別のインストールページを読む必要があります。
 
-> **メモ:** JavaScript のフレームワークである [Ember](https://emberjs.com/) や [Angular](https://angularjs.org/) もウェブ上で見かけます。ライブラリーは個々の問題を解決したり、既存のウェブサイトに取り込んだりするのに多いのに対し、フレームワークは複雑なウェブアプリケーションを開発するための完全なソリューションという傾向があります。
+> [!NOTE]
+> JavaScript のフレームワークである [Ember](https://emberjs.com/) や [Angular](https://angularjs.org/) もウェブ上で見かけます。ライブラリーは個々の問題を解決したり、既存のウェブサイトに取り込んだりするのに多いのに対し、フレームワークは複雑なウェブアプリケーションを開発するための完全なソリューションという傾向があります。
 
 #### ポリフィル
 
@@ -314,12 +321,14 @@ JavaScript ライブラリーには、いくつかの主な種類がある傾向
    });
    ```
 
-5. [フェッチ](/ja/docs/Web/API/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
+5. [フェッチ](/ja/docs/Web/API/Window/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
    ![Fetch basic example という見出しと紫の花の写真](fetch-image.jpg)
 
-> **メモ:** 完成版は [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)も参照してください）。
+> [!NOTE]
+> 完成版は [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)も参照してください）。
 
-> **メモ:** 繰り返しになりますが、これから出会う様々なポリフィルを使用する方法はたくさんあります - それぞれのポリフィルのドキュメントを参照してください。
+> [!NOTE]
+> 繰り返しになりますが、これから出会う様々なポリフィルを使用する方法はたくさんあります - それぞれのポリフィルのドキュメントを参照してください。
 
 「なぜポリフィルは必要がなくても、常にコードを読み込むべきなのか」と思うかもしれません。これは良い点です。サイトが複雑になり、より多くのライブラリーやポリフィルなどを使用するようになると、多くの余分なコードを読み込むようになり、特に性能の低い端末ではパフォーマンスに影響を及ぼし始める可能性があります。必要なファイルだけを読み込むのが意味あることです。
 
@@ -337,7 +346,7 @@ function main(err) {
 }
 ```
 
-そこで最初に、関数 `browserSupportsAllFeatures()` が true を返すかどうかを調べる条件を実行します。もし true を返したら、アプリのコードをすべて格納する `main()` 関数を実行します。 `browserSupportsAllFeatures()` は次のようになります：
+そこで最初に、関数 `browserSupportsAllFeatures()` が `true` を返すかどうかを調べる条件を実行します。もし `true` を返したら、アプリのコードをすべて格納する `main()` 関数を実行します。 `browserSupportsAllFeatures()` は次のようになります。
 
 ```js
 function browserSupportsAllFeatures() {
@@ -345,7 +354,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は true を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは loadScript() と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
+ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/Window/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は `true` を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは `loadScript()` と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
 
 ```js
 function loadScript(src, done) {
@@ -363,7 +372,7 @@ function loadScript(src, done) {
 
 この関数は新しい `<script>` 要素を作成し、その `src` 属性に最初の引数で指定したパス（上のコードで呼び出したときは `'polyfills.js'`）を設定します。読み込んだら、 2 つ目の引数に指定した関数 (`main()`) を実行します。スクリプトの読み込みでエラーが発生した場合は、関数を呼び出しますが、その際、問題が発生した場合にデバッグに役立つよう、カスタムエラーを取得します。
 
-polyfills.js は基本的に使用している 2 つのポリフィルを 1 つのファイルにまとめたものです。私たちは手動でこれを行いましたが、自動的にバンドルを生成してくれる賢いソリューションもあります。 [Browserify](https://browserify.org/) を参照してください（基本的なチュートリアルは [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) を参照してください）。このように JS ファイルを 1 つにバンドルするのはよいアイディアです。 HTTP リクエストを縮小することで、サイトのパフォーマンスが向上します。
+`polyfills.js` は基本的に使用している 2 つのポリフィルを 1 つのファイルにまとめたものです。私たちは手動でこれを行いましたが、自動的にバンドルを生成してくれる賢いソリューションもあります。 [Browserify](https://browserify.org/) を参照してください（基本的なチュートリアルは [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) を参照してください）。このように JS ファイルを 1 つにバンドルするのはよいアイディアです。 HTTP リクエストを縮小することで、サイトのパフォーマンスが向上します。
 
 このコードが動作している様子は、 [fetch-polyfill-only-when-need.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) で見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)も参照）。このコードは元々 Philip Walton によって書かれたものです。元コードは Philip Walton 氏の記事 [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) を調べてください（この記事には有益な説明がたくさんあります）。
 
@@ -371,7 +380,8 @@ polyfills.js は基本的に使用している 2 つのポリフィルを 1 つ�
 
 最新の JavaScript の機能を使用したい人のために人気が出てきているもう一つのオプションは、最近の ECMAScript の機能を使用するコードを、古いブラウザーで作業するバージョンに変換することです。
 
-> **メモ:** これは「トランスパイル」と呼ばれます。（C コードで言うような）コンピューターで実行するためにコードを低レベルにコンパイルするのではなく、同じような抽象度で存在する構文に変更することで、同じように使用することができますが、状況は少し異なります（この場合、 JavaScript のある種類を別の種類に変換します）。
+> [!NOTE]
+> これは「トランスパイル」と呼ばれます。（C コードで言うような）コンピューターで実行するためにコードを低レベルにコンパイルするのではなく、同じような抽象度で存在する構文に変更することで、同じように使用することができますが、状況は少し異なります（この場合、 JavaScript のある種類を別の種類に変換します）。
 
 よく使われるトランスパイラーは [Babel.js](https://babeljs.io/) ですが、他にもあります。
 
@@ -392,7 +402,7 @@ Aaron Andersen による [History of the browser user-agent string](https://weba
 - Chrome/Opera/Safari は `webkitObject` を使用
 - Microsoft は `msObject` を使用
 
-これは [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) （[ソースコード](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) を参照）から抜粋した例で、[キャンバス API](/ja/docs/Web/API/Canvas_API) と [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を組み合わせて、楽しい（そしてうるさい）描画ツールを作っています。
+こちらは[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用する例です。
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

@@ -1,13 +1,16 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-`CustomEvent` 接口表示由程序出于某个目的而创建的事件。
+**`CustomEvent`** 接口表示由应用程序为任何目的初始化的事件。
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> 如果尝试在 Web 扩展内容脚本和网页脚本之间进行通信时，`detail` 属性的非字符串值在 Firefox 中会抛出“Permission denied to access property”的错误。为了避免这个问题，可以克隆对象。请参见[与页面脚本共享对象](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)以获取更多信息。
 
 {{InheritanceDiagram}}
 
@@ -16,19 +19,19 @@ slug: Web/API/CustomEvent
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : 创建一个新的 `CustomEvent`。
 
-## 属性
+## 实例属性
 
-_此接口从父接口 {{domxref("Event")}} 继承属性。_
+_此接口继承其父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
-  - : 返回在初始化事件时传入的任何数据。
+  - : 返回在初始化事件时传递的任何数据。
 
-## 方法
+## 实例方法
 
-_此接口从父接口 {{domxref("Event")}} 继承方法。_
+_此接口继承其父接口 {{domxref("Event")}} 的方法。_
 
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : 初始化一个 `CustomEvent` 对象。如果事件已经被触发，这个方法将不会起任何作用。
+  - : 初始化 `CustomEvent` 对象。如果事件已被派发，则此方法不会执行任何操作。
 
 ## 规范
 

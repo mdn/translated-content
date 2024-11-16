@@ -13,7 +13,8 @@ l10n:
 
 この典型的な使用例として、例えば `h1` のような子孫セレクター式を使用して、 `<h1>` の中にあるカスタム要素のインスタンスのみを選択することができます。例えば、 `<body>` に `.dark-theme` クラスが適用されたときに異なる文字色を適用するような場合です。
 
-> **メモ:** これは、シャドウ DOM の外で使用しても効果はありません。
+> [!NOTE]
+> これは、シャドウ DOM の外で使用しても効果はありません。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
 

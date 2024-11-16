@@ -86,9 +86,9 @@ transform: translateY(50%);
   </tbody>
 </table>
 
-### 语法
+### 形式语法
 
-```
+```plain
 translateY({{cssxref("&lt;length-percentage&gt;")}})
 ```
 

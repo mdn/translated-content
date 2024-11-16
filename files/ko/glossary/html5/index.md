@@ -13,7 +13,8 @@ HTML5라는 용어는 본질적으로 일련의 최신 웹 기술을 나타내�
 
 모든 최신 사이트는 [HTML doctype](/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML#doctype)을 사용해야 합니다. 이 방법은 최신 버전 HTML을 사용할 수 있게 합니다.
 
-> **참고:** 2019년까지, {{glossary("W3C")}}에서는 버전 번호와 함께 경쟁 HTML5 표준을 발표했습니다. [2019년 5월 28일](https://www.w3.org/blog/news/archives/7753) 이후, WHATWG Living Standard가 W3C에 의해 HTML의 유일한 버전으로 발표되었습니다.
+> [!NOTE]
+> 2019년까지, {{glossary("W3C")}}에서는 버전 번호와 함께 경쟁 HTML5 표준을 발표했습니다. [2019년 5월 28일](https://www.w3.org/blog/news/archives/7753) 이후, WHATWG Living Standard가 W3C에 의해 HTML의 유일한 버전으로 발표되었습니다.
 
 ## 같이 보기
 

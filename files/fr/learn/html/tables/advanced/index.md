@@ -46,7 +46,8 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 
 Le titre est placé directement sous la balise `<table>`.
 
-> **Note :** L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> [!NOTE]
+> L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 
@@ -56,7 +57,8 @@ Essayons en revisitant un exemple rencontré dans l'article précédent.
 2. Ajoutez un titre approprié pour le tableau.
 3. Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
-> **Note :** Vous pouvez trouver notre version sur GitHub — voir [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!NOTE]
+> Vous pouvez trouver notre version sur GitHub — voir [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Ajout d'une structure avec \<thead>, \<tfoot>, et \<tbody>
 
@@ -96,7 +98,8 @@ Mettons en œuvre ces nouveaux éléments.
 
 7. Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
 
-> **Note :** Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/Introduction_to_CSS) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables)).
+> [!NOTE]
+> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/Introduction_to_CSS) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables)).
 
 Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
@@ -211,7 +214,8 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
 {{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300) }}
 
-> **Note :** Vous pouvez aussi le trouver sur Github [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
+> [!NOTE]
+> Vous pouvez aussi le trouver sur Github [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
 
 ## Tableaux imbriqués
 
@@ -335,7 +339,8 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprétation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
+> [!NOTE]
+> Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 
@@ -411,7 +416,8 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 </tbody>
 ```
 
-> **Note :** Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur. L'approche `scope` est généralement suffisante pour la plupart des tableaux.
+> [!NOTE]
+> Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur. L'approche `scope` est généralement suffisante pour la plupart des tableaux.
 
 ### Apprentissage actif&nbsp;: jouer avec `scope` et `headers`
 
@@ -419,7 +425,8 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 2. Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
 3. Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
 
-> **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
+> [!NOTE]
+> Vous pouvez contrôler votre travail en le comparant à nos exemples finis — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
 > et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Résumé

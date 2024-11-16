@@ -33,7 +33,8 @@ Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son 
 
 Los hipervínculos son una de las innovaciones más interesantes que ofrece la Web. Han formado parte de esta desde el principio, pero hacen que la web sea _web_ : Los hipervínculos nos permiten vincular documentos a otros documentos o recursos, vincular a partes específicas de documentos o hacer que las aplicaciones estén disponibles en una dirección web. Prácticamente cualquier contenido web se puede convertir en un enlace que, al pulsarlo (activarlo), dirija el navegador a la dirección web a la que apunta el enlace ({{Glossary("URL")}}).
 
-> **Nota:** Una URL puede apuntar a archivos HTML, archivos de texto, imágenes, documentos de texto, archivos de audio o vídeo, y cualquier otra cosa que se pueda mostrar en la web. Si el navegador no sabe cómo manejar el archivo, te preguntará si lo quieres abrir (en cuyo caso la tarea de abrirlo y manejarlo se transferirá a la aplicación nativa instalada en el dispositivo) o si lo quieres descargar (en cuyo caso podrás ocuparte de él más tarde).
+> [!NOTE]
+> Una URL puede apuntar a archivos HTML, archivos de texto, imágenes, documentos de texto, archivos de audio o vídeo, y cualquier otra cosa que se pueda mostrar en la web. Si el navegador no sabe cómo manejar el archivo, te preguntará si lo quieres abrir (en cuyo caso la tarea de abrirlo y manejarlo se transferirá a la aplicación nativa instalada en el dispositivo) o si lo quieres descargar (en cuyo caso podrás ocuparte de él más tarde).
 
 El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que apuntan a multitud de noticias en diferentes zonas de el sitio (funcionalidad de navegación), zonas de acceso/registro (herramientas de usuario) y otras.
 
@@ -74,7 +75,8 @@ Este código producirá el siguiente resultado (el título se mostrará al pasar
 
 Crea un enlace a [la página de inicio de Mozilla](https://www.mozilla.org/es-ES/).
 
-> **Nota:** El título de un enlace solo será visible al pasar el ratón por encima, lo cual significa que los usuarios que naveguen usando los controles de sus teclados, o pantallas táctiles, tendrán dificultades para acceder a la información proporcionada por el título. Si la información del título es verdaderamente importante para el uso de la página, deberemos presentar el título de manera que sea accesible a todos los usuarios, por ejemplo incluyéndola como parte del texto del enlace.
+> [!NOTE]
+> El título de un enlace solo será visible al pasar el ratón por encima, lo cual significa que los usuarios que naveguen usando los controles de sus teclados, o pantallas táctiles, tendrán dificultades para acceder a la información proporcionada por el título. Si la información del título es verdaderamente importante para el uso de la página, deberemos presentar el título de manera que sea accesible a todos los usuarios, por ejemplo incluyéndola como parte del texto del enlace.
 
 ### Aprendizaje activo: crea tu propio ejemplo de enlace
 
@@ -96,7 +98,8 @@ Como hemos mencionado anteriormente, puedes convertir cualquier contenido en un 
 </a>
 ```
 
-> **Nota:** Encontrarás mucho más sobre el manejo de imágenes en próximos artículos en esta web.
+> [!NOTE]
+> Encontrarás mucho más sobre el manejo de imágenes en próximos artículos en esta web.
 
 ## Primer acercamiento a URLs y rutas
 
@@ -137,7 +140,8 @@ Observamos también dos directorios dentro de nuestro directorio raíz que son: 
   </p>
   ```
 
-> **Nota:** Podemos combinar más de una instancia de estas características y generar URLs más complejas, si es necesario, por ejemplo: `../../../ruta/compleja/a/mi/archivo.html`.
+> [!NOTE]
+> Podemos combinar más de una instancia de estas características y generar URLs más complejas, si es necesario, por ejemplo: `../../../ruta/compleja/a/mi/archivo.html`.
 
 ### Fragmentos de documento
 
@@ -285,7 +289,8 @@ El ejercicio terminado debería crear una página como la siguiente:
 
 ![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](navigation-example.png)
 
-> **Nota:** Si ahora encallas, o no estás seguro de haberlo conseguido, revisa el directorio [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver la respuesta correcta.
+> [!NOTE]
+> Si ahora encallas, o no estás seguro de haberlo conseguido, revisa el directorio [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver la respuesta correcta.
 
 ## Enlace a correo electrónico
 
@@ -316,7 +321,8 @@ Veamos un ejemplo que incluye estos campos:
 </a>
 ```
 
-> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
+> [!NOTE]
+> Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
 
 A continuación otros ejemplos de utilización de enlaces `mailto`:
 

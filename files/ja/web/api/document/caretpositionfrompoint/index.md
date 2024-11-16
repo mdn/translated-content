@@ -1,8 +1,9 @@
 ---
 title: "Document: caretPositionFromPoint() メソッド"
+short-title: caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: 90ba95cc125ac547dcefb72b72ff19b25882ea00
 ---
 
 {{APIRef("CSSOM View")}}

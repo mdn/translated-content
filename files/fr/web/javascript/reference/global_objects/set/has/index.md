@@ -24,7 +24,8 @@ monSet.has(valeur);
 
 Un booléen : `true` s'il existe un élément avec la valeur donnée au sein du `Set`, `false` sinon.
 
-> **Note :** L'existence d'un élément avec la valeur testée est vérifiée avec [l'algorithme d'égalité des valeurs nulles (`sameValueZero`)](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Égalité_de_valeurs_nulles).
+> [!NOTE]
+> L'existence d'un élément avec la valeur testée est vérifiée avec [l'algorithme d'égalité des valeurs nulles (`sameValueZero`)](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Égalité_de_valeurs_nulles).
 
 ## Exemples
 

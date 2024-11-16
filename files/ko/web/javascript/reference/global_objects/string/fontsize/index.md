@@ -9,7 +9,8 @@ l10n:
 
 {{jsxref("String")}} 값의 **`fontcolor()`** 메서드는 해당 문자열을 특정 글꼴 크기로 표시하게 만드는 {{HTMLElement("font")}} 요소(`<font size="...">str</font>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 
-> **참고:** 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. `fontsize()`의 경우에선 `<font>` 요소 자체는 HTML 명세서에서 제거되었기 때문에 더 이상 사용해서는 안됩니다. 웹 개발자는 반드시 대신 [CSS](/ko/docs/Web/CSS) 속성을 사용하시기 바랍니다.
+> [!NOTE]
+> 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. `fontsize()`의 경우에선 `<font>` 요소 자체는 HTML 명세서에서 제거되었기 때문에 더 이상 사용해서는 안됩니다. 웹 개발자는 반드시 대신 [CSS](/ko/docs/Web/CSS) 속성을 사용하시기 바랍니다.
 
 ## 구문
 

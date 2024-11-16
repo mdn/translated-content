@@ -24,7 +24,8 @@ WebAssembly 是在 [W3C WebAssembly Community Group](https://www.w3.org/communit
 - 具備安全性。WebAssembly 是被規範跑在一個安全的沙盒執行換進。像是其他的 Web 程式碼，他會被强制要求遵守瀏覽器的同源政策與權限政策。
 - 不會破壞 Web 既有架構。WebAssembly 是設計來與其他 Web 技術良好共存的，并且支援以前。
 
-> **備註：** WebAssembly 也有除去 Web 與 JavaScript 的用途（參見 [Non-web embedding](https://webassembly.org/docs/non-web/)）。
+> [!NOTE]
+> WebAssembly 也有除去 Web 與 JavaScript 的用途（參見 [Non-web embedding](https://webassembly.org/docs/non-web/)）。
 
 ## WebAssembly 如何融入既有 Web 平臺？
 
@@ -94,7 +95,8 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 2. Emscripten 將 clang+LLVM 編譯出來的結果轉換成 Wasm 二進制。
 3. 僅憑它自己，WebAssembly 沒有辦法直接訪問 DOM，它僅能呼叫 JavaScript，傳入整數和浮點數的原始資料形態。因此，要訪問任何的 Web API，它必須去呼叫 JavaScript，這會產生一個 Web API 呼叫。Emscripten 因此創造一個 HTML 文件與 JavaScript 膠水程式碼來達成這件事。
 
-> **備註：** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
+> [!NOTE]
+> 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
 這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://zh.wikipedia.org/wiki/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://zh.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
 
@@ -102,7 +104,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 被生成的 HTML 文件會加載 JavaScript 膠水文件並將標準輸出寫入到一個 {{htmlelement("textarea")}}。如果應用程式是 OpenGL，那它也會包含一個 {{htmlelement("canvas")}} 元素來顯示畫面。修改 Emscripten 來修改輸出並將它改造成一個你需要的 Web 應用程式是很簡單的一件事。
 
-你可以找到完整的 Emscripten 文件在 [emscripten.org](https://emscripten.org)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/zh-TW/docs/WebAssembly/C_to_Wasm)。
+你可以找到完整的 Emscripten 文件在 [emscripten.org](https://emscripten.org/)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/zh-TW/docs/WebAssembly/C_to_Wasm)。
 
 ### 直接撰寫 WebAssembly
 

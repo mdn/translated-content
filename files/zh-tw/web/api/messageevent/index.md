@@ -3,6 +3,8 @@ title: MessageEvent
 slug: Web/API/MessageEvent
 ---
 
+{{APIRef("HTML DOM")}}
+
 當伺服器傳來資料時，客戶端會收到一個 `MessageEvent`，由 `WebSocket` 物件 `onmessage` 表示的監聽器接收。
 
 ## 屬性

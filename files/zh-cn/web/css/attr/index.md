@@ -15,10 +15,23 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 
 `attr()` 表达式可以用于任何 CSS 属性。 {{ experimental_inline() }}
 
-## 用法
+## 语法
 
-```
-语法：attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```css
+/* 简单用法 */
+attr(data-count);
+attr(title);
+
+/* 带类型 */
+attr(src url);
+attr(data-count number);
+attr(data-width px);
+
+/* 带回退值 */
+attr(data-count number, 0);
+attr(src url, "");
+attr(data-width px, inherit);
+attr(data-something, "default");
 ```
 
 ### 解释

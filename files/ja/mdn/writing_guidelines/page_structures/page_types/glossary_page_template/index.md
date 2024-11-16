@@ -2,7 +2,7 @@
 title: 用語集ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 77eea2b80f7352068ed59a2c2fb03de4ed85e194
 ---
 
 {{MDNSidebar}}

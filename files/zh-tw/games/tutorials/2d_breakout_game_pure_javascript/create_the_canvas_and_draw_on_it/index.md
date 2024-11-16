@@ -105,7 +105,8 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **備註：** 練習改變物體的大小和顏色
+> [!NOTE]
+> 練習改變物體的大小和顏色
 
 ## 下一步
 

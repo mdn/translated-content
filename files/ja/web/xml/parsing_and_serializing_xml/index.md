@@ -1,7 +1,6 @@
 ---
 title: XML のパースとシリアライズ
 slug: Web/XML/Parsing_and_serializing_XML
-original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
 
 <section id="Quick_links">

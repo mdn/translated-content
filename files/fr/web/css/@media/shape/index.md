@@ -18,7 +18,8 @@ La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies
 
 ## Exemples
 
-> **Note :** Aucun navigateur n'implémente actuellement cette fonctionnalité.
+> [!NOTE]
+> Aucun navigateur n'implémente actuellement cette fonctionnalité.
 
 ### Exemple simple
 

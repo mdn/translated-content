@@ -48,7 +48,7 @@ l10n:
 - {{cssxref("background-repeat")}} で、キーワード `round` および `space` をサポートしました ([Firefox バグ 548372](https://bugzil.la/548372))。
 - {{cssxref("background-clip")}} で、キーワード `text` をデフォルトで有効化しました ([Firefox バグ 1264905](https://bugzil.la/1264905))。
 - 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
-- {{cssxref(":dir()")}} 疑似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
+- {{cssxref(":dir()")}} 擬似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
 - {{cssxref("clip-path")}} の実験的な実装 (デフォルトで有効化していません) で、複数の {{cssxref("&lt;basic-shape&gt;")}} 値の間で補間処理が可能になりました ([Firefox バグ 1110460](https://bugzil.la/1110460))。
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
@@ -70,7 +70,7 @@ l10n:
 ### JavaScript
 
 - ES2015 の {{jsxref("Proxy")}} のトラップである {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} および {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} を実装しました ([Firefox バグ 888969](https://bugzil.la/888969))。
-- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} メソッドおよび {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
+- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} メソッドおよび {{jsxref("RegExp.Symbol.species", "RegExp[Symbol.species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
 - 非推奨かつ非標準である、`String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の `flags` 引数を廃止しました ([Firefox バグ 1108382](https://bugzil.la/1108382))。
 - Google Chrome ブラウザーとの相互運用性を高めるため {{jsxref("Date.parse()")}} で、2 桁で表す年の処理を変更しました ([Firefox バグ 1265136](https://bugzil.la/1265136))。
 
@@ -121,7 +121,7 @@ l10n:
 #### サービスワーカー関連
 
 - [フェッチ API](/ja/docs/Web/API/Fetch_API) の {{domxref("Response")}} オブジェクトに、リダイレクトされたリクエストのレスポンスであるかを示す {{domxref("Response.redirected", "redirected")}} プロパティを実装しました。このプロパティを使用する前に、ドキュメントでセキュリティ関連の注意事項を確認してください ([Firefox バグ 1243792](https://bugzil.la/1243792))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
 
 #### メディアストリーム
 

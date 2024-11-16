@@ -11,7 +11,8 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `email` emploieront un élément `<input>` [`"text"`](/fr/docs/Web/HTML/Element/Input/text) à la place.
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `email` emploieront un élément `<input>` [`"text"`](/fr/docs/Web/HTML/Element/Input/text) à la place.
 
 <table class="properties">
   <tbody>
@@ -74,7 +75,8 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si 
 
 Un attribut booléen qui indique, s'il est présent, que plusieurs adresses électroniques peuvent être saisies en étant séparées par des virgules (et éventuellement des espaces). Voir la section sur [la saisie de plusieurs adresses](#gérer_plusieurs_adresses_mail) ci-après.
 
-> **Note :** Normalement, lorsque l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est indiqué, la personne remplissant le formulaire doit saisir une adresse mail valide pour que le champ soit considéré valide. Toutefois, si l'attribut `multiple` est ajouté, une liste de zéro adresses (une chaîne de caractères vide ou un texte constitué uniquement d'espaces) sera une valeur valide. Autrement dit, la personne remplissant le formulaire n'est pas obligée de saisir une adresse lorsque `multiple` est présent, quelle que soit la valeur de `required`.
+> [!NOTE]
+> Normalement, lorsque l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est indiqué, la personne remplissant le formulaire doit saisir une adresse mail valide pour que le champ soit considéré valide. Toutefois, si l'attribut `multiple` est ajouté, une liste de zéro adresses (une chaîne de caractères vide ou un texte constitué uniquement d'espaces) sera une valeur valide. Autrement dit, la personne remplissant le formulaire n'est pas obligée de saisir une adresse lorsque `multiple` est présent, quelle que soit la valeur de `required`.
 
 ### `pattern`
 
@@ -82,7 +84,8 @@ L'attribut `pattern` est une expression rationnelle que doit respecter la valeur
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
-> **Note :** L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation de cet attribut ci-après](#validation_grâce_à_une_expression_rationnelle) pour plus d'exemples.
 
@@ -92,13 +95,15 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode&nbsp;: voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir [la page sur `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir [la page sur `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 
@@ -112,7 +117,8 @@ Les adresses mails font partie des informations les plus fréquentes dans les fo
 
 On notera toutefois que le navigateur ne vérifie pas si l'adresse saisie existe réellement ou correspond à une utilisatrice existante ou un utilisateur existant du site, ou si elle respecte quelque autre critère. Autrement dit, le navigateur vérifie uniquement que l'adresse fournie est bien formée.
 
-> **Note :** Il est également important de rappeler qu'une utilisatrice ou un utilisateur peut modifier le HTML de la page grâce aux outils de développement. Votre site _ne doit pas_ reposer sur les mécanismes de validation du navigateur. Il est crucial de vérifier l'adresse électronique _côté serveur_ dès que le texte fournit est impliqué, d'une façon ou d'une autre, dans une fonctionnalité sensible (par exemple la connexion à un site, un achat, etc.).
+> [!NOTE]
+> Il est également important de rappeler qu'une utilisatrice ou un utilisateur peut modifier le HTML de la page grâce aux outils de développement. Votre site _ne doit pas_ reposer sur les mécanismes de validation du navigateur. Il est crucial de vérifier l'adresse électronique _côté serveur_ dès que le texte fournit est impliqué, d'une façon ou d'une autre, dans une fonctionnalité sensible (par exemple la connexion à un site, un achat, etc.).
 
 ### Un champ `email` simple
 
@@ -227,7 +233,8 @@ Lorsqu'on utilise l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)
 
 Il existe deux niveaux de validation pour les champs de saisie de type `email`. Tout d'abord, on a le niveau standard qui permet de vérifier automatiquement si l'adresse électronique est bien formatée. Ensuite, il est possible d'ajouter un filtre spécifique si besoin de répondre à des contraintes plus spécifiques.
 
-> **Attention :** La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.
+> [!WARNING]
+> La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.
 
 ### Validation simple
 
@@ -240,7 +247,8 @@ Les navigateurs qui implémentent le type `email` fournissent une validation aut
 
 Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) peuvent être utilisées afin de mettre en forme la valeur selon qu'elle est valide ou non — voir [Validation des données de formulaires](/fr/docs/Learn/Forms/Form_validation) pour en apprendre davantage.
 
-> **Note :** La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bug 15489 du W3C](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
+> [!NOTE]
+> La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bug 15489 du W3C](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
 
 ### Validation grâce à une expression rationnelle
 
@@ -320,7 +328,8 @@ C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir
 
 ![](adresse-electronique-mauvais-motif.png)
 
-> **Note :** Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
+> [!NOTE]
+> Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
 
 ## Exemples
 

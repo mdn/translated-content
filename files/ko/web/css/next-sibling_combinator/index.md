@@ -1,7 +1,6 @@
 ---
 title: 인접 형제 결합자
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Adjacent_sibling_combinator
 ---
 
 {{CSSRef}}

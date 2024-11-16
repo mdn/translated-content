@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feColorMatrix
 
 该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值 (一个表示为 \[红，绿，蓝，透明度] 的矢量) 都经过[矩阵乘法 (matrix multiplated](http://en.wikipedia.org/wiki/Matrix_multiplication)) 计算出的新颜色。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

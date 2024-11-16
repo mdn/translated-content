@@ -38,7 +38,8 @@ slug: Web/API/HTMLMediaElement/ended_event
   </tbody>
 </table>
 
-> **备注：** 该事件也在[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
+> [!NOTE]
+> 该事件也在[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
 
 ## 示例
 

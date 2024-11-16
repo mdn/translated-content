@@ -5,11 +5,13 @@ slug: Web/HTML/Element/big
 
 {{HTMLSidebar}}
 
-> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!WARNING]
+> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
 
 L'élément HTML **`<big>`** (gros) augmente d'une taille la police du texte de l'élément (il permet par exemple de passer de `small` à `medium`, ou de `large` à `x-large`) jusqu'à atteindre la taille maximale autorisée par le navigateur.
 
-> **Note :** Cet élément est purement stylistique. Il a été supprimé en HTML5 et ne doit plus être utilisé. Les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS) pour remplacer cet élément.
+> [!NOTE]
+> Cet élément est purement stylistique. Il a été supprimé en HTML5 et ne doit plus être utilisé. Les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS) pour remplacer cet élément.
 
 ## Attributs
 
@@ -67,7 +69,8 @@ Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size)
 
 Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
 
 ## Spécifications
 

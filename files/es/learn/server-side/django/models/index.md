@@ -46,15 +46,16 @@ Al diseñar sus modelos, tiene sentido tener modelos separados para cada "objeto
 
 También es posible que desee utilizar modelos para representar las opciones de la lista de selección (por ejemplo, como una lista desplegable de opciones), en lugar de codificar las opciones en el sitio web en sí; esto se recomienda cuando no se conocen de antemano todas las opciones posibles o éstas están sujetas a cambios. Los candidatos obvios para las modelos, en este caso, incluyen el género del libro (por ejemplo, ciencia ficción, poesía francesa, etc.) y el idioma (inglés, francés, japonés).
 
-Una vez que hayamos decidido cuáles serán nuestros modelos y sus campos, debemos pensar en la relación que existe entre ellos. Django le permite definir relaciones de uno a uno (OneToOneField), de uno a muchos (ForeignKey) y de muchos a muchos (ManyToManyField).
+Una vez que hayamos decidido cuáles serán nuestros modelos y sus campos, debemos pensar en la relación que existe entre ellos. Django le permite definir relaciones de uno a uno (`OneToOneField`), de uno a muchos (`ForeignKey`) y de muchos a muchos (`ManyToManyField`).
 
-Con esto en mente, el diagrama de asociación UML a continuación muestra los modelos que definiremos en este caso (como recuadros). Como se mencionó anteriormente, hemos creado modelos para el libro (los detalles genéricos del libro), instancia del libro (estado de copias físicas específicas del libro disponible en el sistema) y autor. También hemos decidido tener un modelo para el género, para que los valores se puedan crear/seleccionar a través de la interfaz admin. Hemos decidido no tener un modelo para el BookInstance:status, en su lugar, hemos especificado directamente, en el código, los valores (LOAN_STATUS) porque no esperamos que cambien. Dentro de cada uno de los cuadros, puede ver el nombre del modelo, los nombres y tipos de campo, y también los métodos y sus tipos de devolución.
+Con esto en mente, el diagrama de asociación UML a continuación muestra los modelos que definiremos en este caso (como recuadros). Como se mencionó anteriormente, hemos creado modelos para el libro (los detalles genéricos del libro), instancia del libro (estado de copias físicas específicas del libro disponible en el sistema) y autor. También hemos decidido tener un modelo para el género, para que los valores se puedan crear/seleccionar a través de la interfaz admin. Hemos decidido no tener un modelo para el `BookInstance:status`, en su lugar, hemos especificado directamente, en el código, los valores (`LOAN_STATUS`) porque no esperamos que cambien. Dentro de cada uno de los cuadros, puede ver el nombre del modelo, los nombres y tipos de campo, y también los métodos y sus tipos de devolución.
 
 El diagrama también muestra las relaciones entre los modelos, incluida su _cardinalidad_. La cardinalidad expresa la cantidad de instancias (máximo y mínimo) de cada modelo que pueden estar presentes en la relación. Por ejemplo, la línea de conexión entre los cuadros muestra que _Book_ y _Genre_ están relacionados. Los números cercanos al modelo _Book_ muestran que un libro debe tener uno o más _Genres_ (tantos como desee), mientras que los números al otro lado de la línea al lado de _Genre_ muestran que puede tener cero o más libros asociados.
 
 ![LocalLibrary Model UML](local_library_model_uml.svg)
 
-> **Nota:** La siguiente sección proporciona un manual básico que explica cómo se definen y utilizan los modelos. Mientras lo lees, considera cómo construiremos cada uno de los modelos en el diagrama de arriba.
+> [!NOTE]
+> La siguiente sección proporciona un manual básico que explica cómo se definen y utilizan los modelos. Mientras lo lees, considera cómo construiremos cada uno de los modelos en el diagrama de arriba.
 
 ## Cartilla del Modelo
 
@@ -197,7 +198,8 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Nota:** Asumiendo que usarás URLs tipo `/myapplication/mymodelname/2` para presentar registros individuales para tu modelo (donde "2" es el `id` de un registro en particular), necesitarás crear un mapeador URL para pasar la respuesta e id a la "vista detallada del modelo (model detail view)" (que hará el trabajo requerido para presentar el registro). La función `reverse()` de arriba es capaz de "invertir" tu mapeador url (llamado _'model-detail-view'_ en el caso de arriba) para crear una URL del formato correcto.
+> [!NOTE]
+> Asumiendo que usarás URLs tipo `/myapplication/mymodelname/2` para presentar registros individuales para tu modelo (donde "2" es el `id` de un registro en particular), necesitarás crear un mapeador URL para pasar la respuesta e id a la "vista detallada del modelo (model detail view)" (que hará el trabajo requerido para presentar el registro). La función `reverse()` de arriba es capaz de "invertir" tu mapeador url (llamado _'model-detail-view'_ en el caso de arriba) para crear una URL del formato correcto.
 >
 > Por supuesto para hacer este trabajo ¡tienes aún que escribir el mapeo URL, la vista y la plantilla!
 
@@ -219,7 +221,8 @@ a_record = MyModelName(my_field_name="Instancia #1")
 a_record.save()
 ```
 
-> **Nota:** Si no has declarado ningún campo como `primary_key`, al nuevo registro se le proporcionará una automáticamente, con el nombre de campo `id`. Puedes consultar este campo después de guardar el registro anterior y debería tener un valor de 1.
+> [!NOTE]
+> Si no has declarado ningún campo como `primary_key`, al nuevo registro se le proporcionará una automáticamente, con el nombre de campo `id`. Puedes consultar este campo después de guardar el registro anterior y debería tener un valor de 1.
 
 Puedes acceder a los campos de este nuevo registro usando la sintaxis de puntos y cambiar los valores. Tienes que llamar a `save()` para almacenar los valores modificados en la base de datos.
 
@@ -237,7 +240,8 @@ a_record.save()
 
 Puedes buscar registros que coincidan con un cierto criterio usando el atributo `objects` del modelo (proporcionado por la clase base).
 
-> **Nota:** Explicar cómo buscar registros usando un modelo y nombres de campo "abstractos" puede resultar un poco confuso. En la exposición de abajo nos referiremos a un modelo `Book` con campos `title` y `genre`, donde genre (género) es también un modelo con un solo campo `name`.
+> [!NOTE]
+> Explicar cómo buscar registros usando un modelo y nombres de campo "abstractos" puede resultar un poco confuso. En la exposición de abajo nos referiremos a un modelo `Book` con campos `title` y `genre`, donde genre (género) es también un modelo con un solo campo `name`.
 
 Podemos obtener todos los registros de un modelo como `QuerySet`, usando `objects.all()`. El `QuerySet` es un objeto iterable, significando que contiene un número de objetos por los que podemos iterar/hacer bucle.
 
@@ -260,7 +264,8 @@ En algunos casos, necesitarás filtrar por un campo que define una relación uno
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')  # Will match on: Fiction, Science fiction, non-fiction etc.
 ```
 
-> **Nota:** Puedes usar guiones bajos (\_\_) para navegar por tantos niveles de relaciones (`ForeignKey`/`ManyToManyField`) como quieras. Por ejemplo, un Book que tuviera diferentes "types", definidos usando una relación adicional "cover", podría tener un nombre de parámetro: `type__cover__name__exact='hard'.`
+> [!NOTE]
+> Puedes usar guiones bajos (\_\_) para navegar por tantos niveles de relaciones (`ForeignKey`/`ManyToManyField`) como quieras. Por ejemplo, un Book que tuviera diferentes "types", definidos usando una relación adicional "cover", podría tener un nombre de parámetro: `type__cover__name__exact='hard'.`
 
 Puedes hacer muchas más cosas con las consultas, incluyendo búsquedas hacia atrás de modelos relacionados, filtros encadenados, devolver un conjunto de valores más pequeño, etc. Para más información, puedes consultar [Elaborar consultas](https://docs.djangoproject.com/en/1.10/topics/db/queries/) (Django Docs).
 
@@ -389,7 +394,8 @@ Adicionalmente hemos declarado algunos tipos nuevos de campos:
 
 El patrón `__str__()` representa el objeto `BookInstance` usando una combinación de su id único y el título del `Book` asociado.
 
-> **Nota:** Un poco de Python:
+> [!NOTE]
+> Un poco de Python:
 >
 > El valor retornado por `__str__()` es una _cadena formateada_. Dentro de la cadena usamos `%s` para declarar "marcadores de posición". Después de la cadena ponemos `%` y después una tupla que contiene los valores que serán puestos en los marcadores de posición. Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. `'Mi valor: %s' % variable.`
 >

@@ -9,7 +9,8 @@ La méthode **`MediaDevices.getUserMedia()`** invite l'utilisateur à autoriser 
 
 Il renvoie un {{jsxref("Promise")}} qui est résolu avec succès si l'utilisateur donne son autorisation; {{domxref("MediaStream")}} est fourni à ce moment-là. Si l'utilisateur refuse ou si le média correspondant n'est pas disponible, le {{jsxref("Promise")}} est rejetée avec respectivement `PermissionDeniedError` ou `NotFoundError`.
 
-> **Note :** Il est possible que le {{jsxref("Promise")}} renvoyé ne soit _ni_ résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .
+> [!NOTE]
+> Il est possible que le {{jsxref("Promise")}} renvoyé ne soit _ni_ résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .
 
 Généralement, vous accédez à l'objet {{domxref("MediaDevices")}} avec {{domxref("navigator.mediaDevices")}} , comme ceci:
 
@@ -123,7 +124,8 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
   - : L'utilisateur a spécifié que l'instance de navigation actuelle n'a pas accès au périphérique; Ou l'utilisateur a refusé l'accès pour la session en cours; Ou l'utilisateur a refusé tout l'accès aux périphériques multimédias utilisateurs dans le monde entier.
 
-    > **Note :** Les versions plus anciennes de la spécification ont utilisé `SecurityError` pour cela à la place; `SecurityError` a pris une nouvelle signification.
+    > [!NOTE]
+    > Les versions plus anciennes de la spécification ont utilisé `SecurityError` pour cela à la place; `SecurityError` a pris une nouvelle signification.
 
 - `NotFoundError`
   - : Aucune piste multimédia du type spécifié n'a été trouvée satisfaisant les contraintes données.
@@ -133,7 +135,8 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
   - : Aucun dispositif candidat répondant aux critères demandés. L'erreur est un objet de type `OverconstrainedError` et possède une propriété de `constraint` dont la valeur de chaîne est le nom d'une contrainte impossible à honorer et une propriété `message` contenant une chaîne lisible par l'homme expliquant le problème.
 
-    > **Note :** Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.
+    > [!NOTE]
+    > Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.
 
 - `SecurityError`
   - : Le support multimédia utilisateur est désactivé sur le {{domxref("Document")}} sur lequel `getUserMedia()` été appelé. Le mécanisme par lequel le support média utilisateur est activé/désactivé est laissé à la discrétion de l'utilisateur.

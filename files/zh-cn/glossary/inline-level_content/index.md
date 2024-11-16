@@ -1,6 +1,8 @@
 ---
 title: 行级内容
 slug: Glossary/Inline-level_content
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -11,16 +13,16 @@ slug: Glossary/Inline-level_content
 
 ![行内布局](inline_layout.png)
 
-> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
+> [!NOTE]
+> HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种表现特性，现在由 CSS 来指定。
 
 ## 示例
 
 ```html
 <p>
-  This span is an <span class="highlight">inline-level element</span>; its
-  background has been colored to display both the beginning and end of the
-  element's influence. Input elements, like <input type="radio" /> and
-  <input type="checkbox" />, are also inline-level content.
+  这个 span 是一个<span class="highlight">行级元素</span
+  >；背景已经被着色以显示元素的开始和结束。输入元素，如
+  <input type="radio" /> 和 <input type="checkbox" />，也是行级内容。
 </p>
 ```
 

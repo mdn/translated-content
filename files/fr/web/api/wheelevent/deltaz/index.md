@@ -3,7 +3,7 @@ title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`WheelEvent.deltaZ`** est un `double` représentant la quantité de défilement le long de l'axe z, dans l'unité {{domxref("WheelEvent.deltaMode")}}.
 

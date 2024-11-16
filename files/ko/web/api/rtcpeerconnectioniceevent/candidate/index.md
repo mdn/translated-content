@@ -39,5 +39,5 @@ pc.onicecandidate = function (ev) {
 
 ## 참조
 
-- {{event("icecandidate")}}
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
 - {{domxref("RTCPeerConnection")}}

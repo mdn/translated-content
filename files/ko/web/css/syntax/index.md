@@ -32,7 +32,8 @@ CSS 선언 블록을 시각화하면 다음과 같습니다.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **참고:** CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
+> [!NOTE]
+> CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
 
 ## CSS 규칙집합
 
@@ -44,7 +45,8 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 
 페이지 요소는 여러 선택자로 그리고 결국 주어진 속성을 서로 다른 값으로 여러 번 포함하는 여러 규칙에 의해 일치될 수 있기에, CSS 표준은 어느 게 다른 것보다 우선하고 적용되어야 하는 지를 정의합니다: 이를 종속([cascade](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)) 알고리즘이라고 합니다.
 
-> **참고:** 비록 선택자 그룹에 의해 특징지어진 규칙집합이 규칙집합을 각각 단일 선택자로 대체하는 일종의 단축(shorthand)일지라도, 이는 규칙집합 자체의 유효성에 적용되지는 않는다는 점에 유의하는 것이 중요합니다.
+> [!NOTE]
+> 비록 선택자 그룹에 의해 특징지어진 규칙집합이 규칙집합을 각각 단일 선택자로 대체하는 일종의 단축(shorthand)일지라도, 이는 규칙집합 자체의 유효성에 적용되지는 않는다는 점에 유의하는 것이 중요합니다.
 >
 > 이는 중요한 결과로 이어집니다: 단일 기본 선택자 하나가 무효한 경우, 무명(unknown) 가상 요소(pseudo-element) 또는 가상 클래스(pseudo-class)를 사용할 때처럼, 모든 *선택자*는 무효하고 따라서 전체 규칙은 무시됩니다(유효하지도 않기에).
 

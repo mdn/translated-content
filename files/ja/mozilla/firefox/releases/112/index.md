@@ -46,10 +46,10 @@ l10n:
 
 #### WebDriver BiDi
 
-- `browsingContext.print` コマンドを実装しました。ブラウジングコンテキストをBase64 でエンコードした文字列で表した PDF 文書を、クライアントに要求できます。詳しくは [Firefox bug 1806810](https://bugzil.la/1806810) をご覧ください。
+- `browsingContext.print` コマンドを実装しました。閲覧コンテキストをBase64 でエンコードした文字列で表した PDF 文書を、クライアントに要求できます。詳しくは [Firefox bug 1806810](https://bugzil.la/1806810) をご覧ください。
 - `script.addPreloadScript` および `script.removePreloadScript` コマンドを実装しました。後に読み込まれるどのコンテンツスクリプトでも利用できることが保証された機能を、WebDriver が後でコンテキストに挿入するスクリプトより前に、テストクライアントが挿入することを可能にします。詳しくは [Firefox bug 1806420](https://bugzil.la/1806420) および [Firefox bug 1806465](https://bugzil.la/1806465) をご覧ください。
 - ノードキャッシュに保存された `Element` および `ShadowRoot` の参照が、まったく同じ一意の参照によって Marionette および WebDriver BiDi の両方で使用できるようになりました。詳しくは [Firefox bug 1770733](https://bugzil.la/1770733) をご覧ください。
-- `isRedirect` をネットワークイベントの基本パラメーターから削除しました ([Firefox bug 1819875](https://bugzil.la/1819875))。
+- `isRedirect` をネットワークイベントの基本引数から削除しました ([Firefox bug 1819875](https://bugzil.la/1819875))。
 
 #### Marionette
 

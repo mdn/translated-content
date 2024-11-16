@@ -3,7 +3,7 @@ title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_) dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
 

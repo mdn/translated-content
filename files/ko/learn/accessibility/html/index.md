@@ -56,7 +56,8 @@ HTML `<button>`은 적절한 스타일(아마 덮어쓰고 싶을지 모르지�
 
 이제 접근성 있는 HTML에 대해 더 자세하게 살펴봅시다.
 
-> **참고:** 앞으로 살펴볼 예시들을 테스트 해볼 수 있도록 로컬 컴퓨터에 스크린 리더를 설치해두는 것이 좋습니다. [스크린 리더 가이드](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers)에서 더 자세한 내용을 확인할 수 있습니다.
+> [!NOTE]
+> 앞으로 살펴볼 예시들을 테스트 해볼 수 있도록 로컬 컴퓨터에 스크린 리더를 설치해두는 것이 좋습니다. [스크린 리더 가이드](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers)에서 더 자세한 내용을 확인할 수 있습니다.
 
 ## 좋은 시맨틱
 
@@ -256,7 +257,8 @@ HTML 테이블을 사용해 페이지 레이아웃을 만들던 시절이 있습
 
 레이아웃을 생성할 때 고려할 다른 사항은 위의 예시처럼 HTML 시맨틱 요소들([콘텐츠 섹션](/ko/docs/Web/HTML/Element#콘텐츠_섹션)을 확인하세요)을 사용하는 것입니다. {{htmlelement("div")}} 요소들을 중첩해서 레이아웃을 만들 수도 있지만, 네비게이션 메뉴는 {{htmlelement("nav")}}, 푸터는 {{htmlelement("footer")}}, 반복되는 콘텐츠 단위는 {{htmlelement("article")}}로 감싸는 등 적절한 섹션 요소들을 사용하는 것이 더 좋습니다. 이것은 스크린 리더 또는 다른 도구들에 추가적인 의미를 제공함으로써 유저에게 탐색 중인 콘텐츠에 대한 단서를 추가적으로 제공합니다 (스크린 리더 지원에 대해 더 알아보고 싶다면 [스크린 리더의 HTML5 섹션 요소 지원](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)을 참고하세요).
 
-> **참고:** 좋은 시맨틱과 매력적인 레이아웃을 제공하는 것에 더불어 당신의 콘텐츠는 논리적인 순서에 따라 배치되어야 합니다. 물론 추후 CSS를 사용해 원하는 위치에 놓을 수 있지만, 스크린 리더 사용자들이 말도 안 되는 내용을 듣게 되지 않도록 처음부터 제대로 된 순서를 지켜야 합니다.
+> [!NOTE]
+> 좋은 시맨틱과 매력적인 레이아웃을 제공하는 것에 더불어 당신의 콘텐츠는 논리적인 순서에 따라 배치되어야 합니다. 물론 추후 CSS를 사용해 원하는 위치에 놓을 수 있지만, 스크린 리더 사용자들이 말도 안 되는 내용을 듣게 되지 않도록 처음부터 제대로 된 순서를 지켜야 합니다.
 
 ### UI 컨트롤
 
@@ -266,11 +268,13 @@ UI 컨트롤 접근성에 대한 핵심적인 측면 중 하나는 브라우저�
 
 !["Click me!", "Click me too!", 그리고 "And me!"라고 쓰여있는 세 개의 버튼. 세번째 버튼은 현재 탭 포커스를 드러내기 위해 둘레에 파란색 테두리가 있습니다.](button-focused-unfocused.png)
 
-> **참고:** 개발자 도구에서 페이지의 탭 순서를 보여주는 오버레이를 활성화 할 수 있습니다. 더 많은 정보는 다음 링크에서 확인하세요. [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
+> [!NOTE]
+> 개발자 도구에서 페이지의 탭 순서를 보여주는 오버레이를 활성화 할 수 있습니다. 더 많은 정보는 다음 링크에서 확인하세요. [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 그런 다음 엔터 또는 뒤로 가기 키를 눌러 포커스 된 링크로 이동하거나, 버튼을 누르거나 (예시에는 버튼을 눌렀을 때 경고 메세지가 표시되도록 하는 JavaScript가 포함되어 있습니다), 텍스트 인풋에 내용을 입력할 수 있습니다. 서로 다른 폼 요소들은 다른 컨트롤을 제공합니다. 예를 들어, {{htmlelement("select")}} 요소는 위 아래 방향키로 옵션을 보여주고 순회할 수 있도록 합니다.
 
-> **참고:** 브라우저마다 조작 옵션이 다를 수 있습니다. 자세한 내용은 [네이티브 키보드 접근성 사용하기](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)에서 확인하세요.
+> [!NOTE]
+> 브라우저마다 조작 옵션이 다를 수 있습니다. 자세한 내용은 [네이티브 키보드 접근성 사용하기](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)에서 확인하세요.
 
 적절한 요소를 사용하는 것 만으로 이런 기능을 활용할 수 있습니다. 다음 예시처럼 말이죠.
 
@@ -487,7 +491,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 첫번째 이미지는 스크린 리더로 봤을 때 사용자에게 별 도움을 주지 않습니다. 예를 들어 VoiceOver는 "/dinosaur.png, image"라고 읽어줍니다. 조금의 도움이라도 제공하기 위해 파일명을 읽어주는 것이죠. 이 예시에서는 유저가 적어도 어떤 종류의 공룡이라는 점을 알 수 있지만, 대부분의 경우 파일명은 기계(예를 들면 디지털 카메라)가 생성합니다. 아마 이미지 내용에 대한 어떤 맥락도 제공하지 않겠죠.
 
-> **참고:** 이것이 이미지 안에 텍스트 콘텐츠를 포함해서는 안되는 이유입니다. 스크린 리더는 그 정보에 접근할 수 없습니다. 다른 단점도 있습니다. 그것을 선택하거나 복사/붙여넣기 할 수 없습니다. 하지 말라면 하지마세요.
+> [!NOTE]
+> 이것이 이미지 안에 텍스트 콘텐츠를 포함해서는 안되는 이유입니다. 스크린 리더는 그 정보에 접근할 수 없습니다. 다른 단점도 있습니다. 그것을 선택하거나 복사/붙여넣기 할 수 없습니다. 하지 말라면 하지마세요.
 
 두번째 이미지에 대해서는 스크린 리더가 "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."라는 alt 속성 전부를 읽어줍니다.
 
@@ -501,7 +506,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 한 가지 고려할 부분은 이미지 내용에 의미가 포함되어 있는지, 아니면 순전히 시각적인 장식을 위한 것인지 입니다. 그저 장식 요소라면 `alt` 속성에는 빈 문자열([빈 alt 속성](#빈_alt_속성))을 확인하세요)을 작성하거나 CSS background로 페이지에 포함시키는 편이 좋습니다.
 
-> **참고:** 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)과 [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)를 읽어보세요.
+> [!NOTE]
+> 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)과 [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)를 읽어보세요.
 
 추가로 맥락 정보를 제공하고 싶다면, 이미지 주변 텍스트나 위에서 살펴본 것처럼 `title` 속성 내부에 입력하세요. 이 경우 스크린 리더는 대체 텍스트, title 속성, 그리고 파일명을 읽어줍니다. 또한 브라우저가 마우스 오버에 title 텍스트를 툴팁으로 제공할 것입니다.
 
@@ -551,7 +557,8 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 
 `alt` 속성을 아예 사용하지 않는 대신 빈 문자열을 넣는 것은 많은 스크린 리더가 `alt` 속성이 없는 경우 이미지 URL 자체를 알려주기 때문입니다. 위 예시의 이미지는 관련된 머릿말을 시각적으로 꾸미는 역할을 합니다. 이런 경우, 또는 정말로 의미있는 내용 없이 장식 요소인 경우 `img` 요소에 빈 `alt` 속성을 추가해야 합니다. 또 다른 방법으로는 aria [`role`](/ko/docs/Web/Accessibility/ARIA/Roles) 속성을 활용해 [`role="presentation"`](/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role) 설정을 할 수 있습니다. 이 역시 스크린 리더가 대체 텍스트를 읽지 않도록 합니다.
 
-> **참고:** 가능하다면 장식용 이미지는 CSS를 통해 표시하기를 권장합니다.
+> [!NOTE]
+> 가능하다면 장식용 이미지는 CSS를 통해 표시하기를 권장합니다.
 
 ## 링크 더 알아보기
 

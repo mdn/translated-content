@@ -2,18 +2,108 @@
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
 ---
 
 {{SVGRef}}
 
-**`preserveAspectRatio`** 属性は、指定されたアスペクト比を提供するビューボックスを持つ要素が、異なるアスペクト比を持つビューポートにどのように収まるべきかを示します。
+**`preserveAspectRatio`** 属性は、指定された{{glossary("aspect ratio", "アスペクト比")}}を提供するビューボックスを持つ要素が、異なるアスペクト比を持つビューポートにどのように収まるべきかを示します。
 
-SVG 画像のアスペクト比は {{SVGAttr('viewBox')}} 属性によって定義されるので、この属性が設定されていない場合、 **`preserveAspectRatio`** 属性は何の効果も持ちません（_後述する {{SVGElement('image')}} 要素は例外です_）。
+SVG 画像のアスペクト比は {{SVGAttr('viewBox')}} 属性によって定義されます。したがって、`viewBox` が設定されていない場合、`preserveAspectRatio` 属性は SVG の変倍において何の効果もありません（ただし、{{SVGElement('image')}} 要素の場合は下記のように `preserveAspectRatio` の挙動が異なります）。
+
+## 構文
+
+```plain
+preserveAspectRatio="<align> [<meet or slice>]"
+```
+
+`preserveAspectRatio` の値は、 1 つまたは 2 つのキーワードで構成されます。必須の配置値と、オプションの `meet` または `slice` キーワードです。
+
+配置値は均一な変倍を強制するかどうかを示し、もしそうなら {{ SVGAttr("viewBox") }} のアスペクト比がビューポートのアスペクト比と一致しない場合に使用する配置方法を示します。 `xMidYMid` が既定値です。配置値は以下のキーワード値のいずれかでなければなりません。
+
+- `none`
+
+  - : 均等な変倍を強制しません。指定された要素のグラフィックコンテンツを、要素の外接ボックスがビューポートの長方形に正確に一致するように、必要に応じて不均一に変倍します。なお、 `<align>` が `none` の場合、オプションの `<meetOrSlice>` の値は無視されます。
+
+- `xMinYMin`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
+
+- `xMidYMin`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
+
+- `xMaxYMin`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
+
+- `xMinYMid`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
+
+- `xMidYMid`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。 This is the default value.
+
+- `xMaxYMid`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
+
+- `xMinYMax`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
+
+- `xMidYMax`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
+
+- `xMaxYMax`
+
+  - : 均等な変倍を強制します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
+    要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
+
+以下の 2 つのキーワードは、コンテナー境界に対して SVG がどのように変倍すべきかを決定します。`meet` または `slice` 参照を指定することはオプションであり、指定する場合は 2 つのキーワードのうちいずれか 1 つだけでなければなりません。 `meet` が既定値です。
+
+- `meet`
+
+  - : 次のようにグラフィックを変倍します。
+
+    - アスペクト比を維持します。
+    - {{ SVGAttr("viewBox") }} 全体がビューポート内に表示されます。
+    - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り拡大します。
+
+    この場合、グラフィックのアスペクト比がビューポートと一致しないと、ビューポートの一部が {{ SVGAttr("viewBox") }} の境界からはみ出します（つまり、 {{ SVGAttr("viewBox") }} が描画する領域はビューポートより小さくなります）。
+
+- `slice`
+
+  - : 次のようにグラフィックを変倍します。
+
+    - アスペクト比を維持します。
+    - ビューポート全体が {{ SVGAttr("viewBox") }} に応じたものになります。
+    - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り縮小します。
+
+    この場合、 {{ SVGAttr("viewBox") }} のアスペクト比がビューポートと一致しないと、{{ SVGAttr("viewBox") }} の一部がビューポートの境界からはみ出してしまいます（つまり、{{ SVGAttr("viewBox") }} が描画する領域はビューポートよりも大きくなります）。
 
 ## 例
 
-### meet (width > height)
+### `meet` を width > height の場合に使用
 
 この例では、要素の `width` が `height` よりも大きい場合に `meet` を使用することを示しています。 3 つの配置値 `xMidYMid`、`xMinYMid`、`xMaxYMid` で 3 つのバリエーションを表示します。
 
@@ -24,7 +114,7 @@ svg {
   height: 100%;
 }
 
-/* それぞれの iframe の本文に flex 要素を配置し、様々な画面サイズに対応できるようにした */
+/* それぞれの iframe の本文にフレックス要素を配置し、様々な画面サイズに対応できるようにした */
 body {
   display: flex;
 }
@@ -102,9 +192,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('meet width height', '100%', 200)}}
+{{EmbedLiveSample('Using meet when width height', '100%', 200)}}
 
-### slice (width > height)
+### `slice` を width > height の場合に使用
 
 この例では、要素の `width` が `height` よりも大きい場合に `slice` を使用することを示しています。 3 種類の配置値 `xMidYMin`、`xMidYMid`、`xMidYMax` で 3 つのバリエーションを表示します。
 
@@ -115,7 +205,7 @@ svg {
   height: 100%;
 }
 
-/* それぞれの iframe の本文に flex 要素を配置し、様々な画面サイズに対応できるようにした */
+/* それぞれの iframe の本文にフレックス要素を配置し、様々な画面サイズに対応できるようにした */
 body {
   display: flex;
 }
@@ -193,9 +283,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('slice width height', '100%', 200)}}
+{{EmbedLiveSample('Using slice when width height', '100%', 200)}}
 
-### meet (height > width)
+### `meet` を height > width の場合に使用
 
 この例では、要素の `height` が `width` よりも大きい場合に `meet` を使用することを示しています。 3 種類の配置値 `xMidYMin`、`xMidYMid`、`xMidYMax` で 3 つのバリエーションを表示します。
 
@@ -206,7 +296,7 @@ svg {
   height: 100%;
 }
 
-/* それぞれの iframe の本文に flex 要素を配置し、様々な画面サイズに対応できるようにした */
+/* それぞれの iframe の本文にフレックス要素を配置し、様々な画面サイズに対応できるようにした */
 body {
   display: flex;
 }
@@ -284,9 +374,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('meet height width', '100%', 200)}}
+{{EmbedLiveSample('Using meet when height width', '100%', 200)}}
 
-### slice (height > width)
+### `slice` を height > width の場合に使用
 
 この例では、要素の `height` が `width` よりも大きい場合に `slice` を使用することを示しています。 3 種類の配置値 `xMinYMid`、`xMidYMid`、`xMaxYMid` で 3 つのバリエーションを表示します。
 
@@ -297,7 +387,7 @@ svg {
   height: 100%;
 }
 
-/* それぞれの iframe の本文に flex 要素を配置し、様々な画面サイズに対応できるようにした */
+/* それぞれの iframe の本文にフレックス要素を配置し、様々な画面サイズに対応できるようにした */
 body {
   display: flex;
 }
@@ -375,9 +465,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('slice height width', '100%', 200)}}
+{{EmbedLiveSample('Using slice height width', '100%', 200)}}
 
-### none
+### `none` の配置値を使用
 
 この例では配置値を `none` に設定した要素を表示させています。
 
@@ -388,7 +478,7 @@ svg {
   height: 100%;
 }
 
-/* それぞれの iframe の本文に flex 要素を配置し、様々な画面サイズに対応できるようにした */
+/* それぞれの iframe の本文にフレックス要素を配置し、様々な画面サイズに対応できるようにした */
 body {
   display: flex;
 }
@@ -437,69 +527,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('none ', '100%', 200)}}
-
-## 構文
-
-```plain
-preserveAspectRatio="<align> [<meetOrSlice>]"
-```
-
-その値は、 1 つまたは 2 つのキーワードで構成されます。必要な配置値と、下記で記述されているオプションの "meet または slice" の参照です。
-
-- 配置値
-
-  - : 配置値は、均等な変倍を強制するかどうかを示し、もしそうなら、{{ SVGAttr("viewBox") }}の縦横比がビューポートの縦横比と一致しない場合に使用する配置方法を示します。配置値は以下のいずれかのキーワードでなければなりません。
-
-    - **none**
-      均等な変倍を強制しません。指定された要素のグラフィックコンテンツを、要素の外接ボックスがビューポートの長方形に正確に一致するように、必要に応じて不均一に変倍します。 _もし `<align>` が `none` ならば、オプションの `<meetOrSlice>` の値は無視されることに注意してください_。
-    - **xMinYMin** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
-    - **xMidYMin** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
-    - **xMaxYMin** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
-    - **xMinYMid** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
-    - **xMidYMid** (the default) - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
-    - **xMaxYMid** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
-    - **xMinYMax** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
-    - **xMidYMax** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
-    - **xMaxYMax** - 均等な変倍を強制します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
-      要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
-
-- meet または slice の参照
-
-  - : meetまたはslice参照はオプションで、指定された場合は以下のキーワードのいずれかでなければなりません：
-
-    - **meet** (_the default_) - 次のようにグラフィックを変倍します。
-
-      - アスペクト比を維持されます。
-      - {{ SVGAttr("viewBox") }} 全体がビューポート内に表示されます。
-      - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り拡大します。
-
-      この場合、グラフィックのアスペクト比がビューポートと一致しないと、ビューポートの一部が {{ SVGAttr("viewBox") }} の枠からはみ出してしまいます（つまり、{{ SVGAttr("viewBox") }} が描画する領域はビューポートよりも小さくなります）。
-
-    - **slice** - 次のようにグラフィックを変倍します。
-
-      - アスペクト比を維持されます。
-      - ビューポート全体が {{ SVGAttr("viewBox") }} に応じたものになります。
-      - {{SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り縮小します。
-
-      この場合、 {{ SVGAttr("viewBox") }} のアスペクト比がビューポートと一致しないと、{{ SVGAttr("viewBox") }} の一部がビューポートの境界からはみ出してしまいます（つまり、{{ SVGAttr("viewBox") }} が描画する領域はビューポートよりも大きくなります）。
+{{EmbedLiveSample('Using the none alignment value', '100%', 200)}}
 
 ## 要素
 

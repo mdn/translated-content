@@ -14,7 +14,8 @@ p:lang(en) {
 }
 ```
 
-> **Nota:** En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
+> [!NOTE]
+> En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
 
 ## Sintaxis
 

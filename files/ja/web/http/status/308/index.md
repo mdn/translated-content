@@ -9,7 +9,8 @@ The HyperText Transfer Protocol (HTTP) **`308 Permanent Redirect`** リダイレ
 
 {{HTTPStatus("301")}} の場合は不正に {{HTTPMethod("GET")}} メソッドに変更される可能性があるのに対し、このコードの場合はリクエストメソッドと本文が変更されません。
 
-> **メモ:** ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
+> [!NOTE]
+> ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
 
 ## ステータス
 

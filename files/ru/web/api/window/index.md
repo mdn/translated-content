@@ -330,7 +330,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Свойство обработчика событий для события {{event("keyup")}} в окне.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : Свойство обработчика событий для события {{event("languagechange")}} в окне.
+  - : Свойство обработчика события {{domxref("Window.languagechange_event", "languagechange")}} в окне.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Свойство обработчика событий для загрузки окна.
 - {{domxref("WindowEventHandlers.onmessage")}}

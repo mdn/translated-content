@@ -3,7 +3,7 @@ title: Exemple d'empilement 3
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 ---
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_2","", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_2","", "Web/CSS/Comprendre_z-index")}}
 
 ## Troisième exemple
 
@@ -43,7 +43,8 @@ Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilemen
 
 On peut contourner ce problème en supprimant le chevauchement entre les différents niveaux du menu, ou en utilisant des valeurs de `z-index` individuelles (et différentes) assignées à l'aide de sélecteurs d'_id_ plutôt que des sélecteurs de classe ou encore en aplatissant la hiérarchie HTML.
 
-> **Note :** Dans le code source, vous remarquerez que les menus de deuxième et troisième niveaux sont construits à l'aide de plusieurs boîtes _DIV_ contenues dans un élément positionné en absolu. Ceci sert à les grouper et à les positionner en une seule fois.
+> [!NOTE]
+> Dans le code source, vous remarquerez que les menus de deuxième et troisième niveaux sont construits à l'aide de plusieurs boîtes _DIV_ contenues dans un élément positionné en absolu. Ceci sert à les grouper et à les positionner en une seule fois.
 
 ## Exemple
 

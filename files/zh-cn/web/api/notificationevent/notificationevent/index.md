@@ -2,10 +2,10 @@
 title: NotificationEvent：NotificationEvent() 构造函数
 slug: Web/API/NotificationEvent/NotificationEvent
 l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
 **`NotificationEvent()`** 构造函数创建一个新的 {{domxref("NotificationEvent")}} 对象。
 

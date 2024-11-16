@@ -1,8 +1,9 @@
 ---
 title: "HTMLDialogElement: showModal() メソッド"
+short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
 l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+  sourceCommit: 0900a5665090b4dc3b4936af5a48591521032bfd
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -23,7 +24,7 @@ showModal()
 
 なし ({{jsxref("undefined")}})。
 
-### Exceptions
+### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : ダイアログが既に開いている場合（すなわち、`open` 属性が既に {{htmlelement("dialog")}} 要素に設定されている場合）、またはダイアログが既に示されている[ポップオーバー](/ja/docs/Web/API/Popover_API)である場合も発生します。
@@ -32,7 +33,7 @@ showModal()
 
 ### モーダルダイアログを開く
 
-次の例は、クリックするとフォームを含むモーダル {{htmlelement("dialog")}} を {{domxref("HTMLDialogElement.showModal()")}} 関数で開くボタンを示しています。開いている間、モーダルダイアログのコンテンツ以外は不活性になります。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} 関数で）、submit ボタンによってフォームを送信したりすることができます。キャンセルボタンを選択するとダイアログが閉じられ、{{domxref("HTMLDialogElement/close_event", "close")}} イベントが作成されますが、{{domxref("HTMLDialogElement/cancel_event", "cancel")}} イベントは作成されません。
+次の例は、クリックするとフォームを含むモーダル {{htmlelement("dialog")}} を {{domxref("HTMLDialogElement.showModal()")}} 関数で開くボタンを示しています。開いている間、モーダルダイアログのコンテンツ以外は不活性になります。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} 関数で）、submit ボタンによってフォームを送信したりすることができます。キャンセルボタンを選択するとダイアログが閉じられ、{{domxref("HTMLDialogElement/close_event", "close")}} イベントが作成されますが、{{domxref("HTMLElement/cancel_event", "cancel")}} イベントは作成されません。
 
 #### HTML
 

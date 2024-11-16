@@ -9,13 +9,15 @@ l10n:
 
 **`color-interpolation-filters`** 属性は、フィルター効果で行う画像操作で用いる色空間を指定します。
 
-> **メモ:** このプロパティはフィルター操作にのみ効果があります。そのため、{{SVGElement("feOffset")}}、{{SVGElement("feImage")}}、{{SVGElement("feTile")}}、{{SVGElement("feFlood")}} などのフィルタープリミティブには効果がありません。
+> [!NOTE]
+> このプロパティはフィルター操作にのみ効果があります。そのため、{{SVGElement("feOffset")}}、{{SVGElement("feImage")}}、{{SVGElement("feTile")}}、{{SVGElement("feFlood")}} などのフィルタープリミティブには効果がありません。
 >
 > `color-interpolation-filters` のデフォルト値は、{{SVGAttr("color-interpolation")}} とは異なります。`color-interpolation-filters` のデフォルト値は `linearRGB` ですが、`color-interpolation` のデフォルト値は `sRGB` です。そのため、デフォルトでは、フィルター効果の操作は linearRGB 色空間で行われる一方、他のすべての色の補間は sRGB 色空間で行われます。
 >
 > この属性はフィルター関数には効果がなく、{{Glossary("sRGB")}} 色空間で処理を行います。
 
-> **メモ:** プレゼンテーション属性なので、`color-interpolation-filters` は CSS プロパティとして使用できます。
+> [!NOTE]
+> プレゼンテーション属性なので、`color-interpolation-filters` は CSS プロパティとして使用できます。
 
 この属性は、以下の SVG 要素で使用できます。
 

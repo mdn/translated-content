@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate_static
-original_slug: WebAssembly/JavaScript_interface/validate
 ---
 
 {{WebAssemblySidebar}}

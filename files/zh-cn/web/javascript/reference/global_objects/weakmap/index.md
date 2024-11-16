@@ -44,8 +44,8 @@ WeakMap 的键必须是可被垃圾回收的。大多数{{Glossary("Primitive", 
 
 - {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakMap` 实例，初始值是 {{jsxref("WeakMap/WeakMap", "WeakMap")}} 构造函数。
-- `WeakMap.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `WeakMap.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 

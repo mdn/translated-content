@@ -7,7 +7,8 @@ l10n:
 
 {{CSSRef}}{{Deprecated_Header}}
 
-> **Attention :** Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
+> [!WARNING]
+> Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (c'est-à-dire qui ont [`position:absolute`](/fr/docs/Web/CSS/position) ou [`position:fixed`](/fr/docs/Web/CSS/position)).
 

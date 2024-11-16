@@ -7,7 +7,8 @@ slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 
 Цель этой задачи — помочь вам проверить ваше понимание селекторов в CSS.
 
-> **Примечание:** вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/), которые можно использовать для работы над заданием, предварительно загрузив в них код.
+> [!NOTE]
+> Вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/), которые можно использовать для работы над заданием, предварительно загрузив в них код.
 >
 > Если вы зашли в тупик, обратитесь к нам за помощью — смотрите раздел [Оценка или дальнейшая помощь](/ru/docs/Learn/CSS/Building_blocks/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8#Оценка_или_дальнейшая_помощь) внизу этой страницы.
 
@@ -25,7 +26,8 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}
 
-> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
 
 ## Selectors Two
 
@@ -42,7 +44,8 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}
 
-> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
 
 ## Selectors Three
 
@@ -58,7 +61,8 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}
 
-> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
 
 ## Selectors Four
 
@@ -73,7 +77,8 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}
 
-> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
 
 ## Selectors Five
 
@@ -89,7 +94,8 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}
 
-> **Примечание:** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

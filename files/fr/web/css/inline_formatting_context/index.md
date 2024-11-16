@@ -28,7 +28,8 @@ Les marges, les bordures et le remplissage (_padding_) le long de la direction e
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **Note :** Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_Logical_Properties).
+> [!NOTE]
+> Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_Logical_Properties).
 
 ## Alignement sur la direction de bloc (_block_)
 

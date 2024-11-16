@@ -51,14 +51,16 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       图片 1：无高度、宽度及样式
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       图片 2：height="50"，width="500"，无样式
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -67,7 +69,7 @@ slug: Web/API/Document_Object_Model/Examples
       图片 3：无高度、宽度，样式中设置了“height: 50px; width: 500px;”
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -179,7 +181,7 @@ p {
 
 该脚本的输出是这样的：
 
-```
+```plain
 BODY
 P
 #LUMPY

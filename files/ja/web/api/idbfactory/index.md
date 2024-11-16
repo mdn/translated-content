@@ -2,25 +2,23 @@
 title: IDBFactory
 slug: Web/API/IDBFactory
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: dbd4ba01220a5031d3a26a3ac1490d3269210124
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の **`IDBFactory`** インターフェイスは、indexedDB への非同期アクセスを提供します。 このインターフェイスを実装するオブジェクトは、`window.indexedDB` です。このオブジェクトを使用すれば、`IDBFactory` インターフェイスに直接アクセスせずに、IndexedDB を開いたり (生成したり接続したり)、削除したりできます。
-
-{{AvailableInWorkers}}
+**`IDBFactory`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、indexedDB への非同期アクセスを提供します。 このインターフェイスを実装するオブジェクトは、`window.indexedDB` です。このオブジェクトを使用すれば、`IDBFactory` インターフェイスに直接アクセスせずに、IndexedDB を開いたり (生成したり接続したり)、削除したりできます。
 
 ## インスタンスメソッド
 
-- {{domxref("IDBFactory.open")}}
+- {{domxref("IDBFactory.open()")}}
   - : [データベースへの接続](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#データベースコネクション)を開く要求をする現在のメソッドです。
-- {{domxref("IDBFactory.deleteDatabase")}}
+- {{domxref("IDBFactory.deleteDatabase()")}}
   - : データベースの削除を要求するメソッドです。
-- {{domxref("IDBFactory.cmp")}}
+- {{domxref("IDBFactory.cmp()")}}
   - : 2 つのキーを比較して、大きいほうの値を戻り値として返すメソッドです。
-- {{domxref("IDBFactory.databases")}}
-  - : 利用可能な全てのデータベースのリストを、名前とバージョンを含めて返すメソッドです。
+- {{domxref("IDBFactory.databases()")}}
+  - : 利用できるすべてのデータベースの配列（名前とバージョンを含む）で履行されるプロミスを返します。
 
 ## 例
 

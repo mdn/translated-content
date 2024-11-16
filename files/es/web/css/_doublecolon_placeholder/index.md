@@ -16,7 +16,8 @@ El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** r
 
 Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento {{cssxref("::first-line")}} puede ser usado en una regla utilizando `::placeholder` en su selector.
 
-> **Nota:** En la mayoría de navegadores, la apariencia del texto provisional es traslúcido o un color gris claro por defecto.
+> [!NOTE]
+> En la mayoría de navegadores, la apariencia del texto provisional es traslúcido o un color gris claro por defecto.
 
 ## Sintáxis
 

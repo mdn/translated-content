@@ -46,7 +46,8 @@ La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat,
+      )
+      center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }
@@ -110,7 +111,8 @@ Prueba lo siguiente:
 
 La propiedad {{cssxref ("background-position")}} te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es `(0,0)`, y la caja se coloca sobre los ejes horizontal (`x`) y vertical (`y`).
 
-> **Nota:** El valor predeterminado de `background-position` es `(0,0)`.
+> [!NOTE]
+> El valor predeterminado de `background-position` es `(0,0)`.
 
 Los valores de `background-position` más comunes toman dos valores independientes: un valor horizontal seguido de un valor vertical.
 
@@ -176,7 +178,8 @@ También es posible poner múltiples imágenes de fondo: puedes especificar múl
 
 Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.
 
-> **Nota:** Los degradados se pueden mezclar con imágenes de fondo normales.
+> [!NOTE]
+> Los degradados se pueden mezclar con imágenes de fondo normales.
 
 Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
 
@@ -266,7 +269,8 @@ Y las no abreviadas:
 }
 ```
 
-> **Nota:** Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 **Hay una variedad de estilos que puedes usar para los bordes. En el ejemplo siguiente, hemos utilizado un estilo de borde diferente para los cuatro lados de la caja. Juega con el estilo, el ancho y el color del borde para ver cómo funcionan los bordes.**
 

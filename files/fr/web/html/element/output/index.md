@@ -73,7 +73,7 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -103,7 +103,8 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
 
 {{Compat}}
 
-> **Note :** La plupart des navigateurs implémente cet élément comme s'il avait l'attribut `aria-live` par défaut. Les outils d'assistance annonceront donc les résultats des interactions avec l'interface utilisateur qui arrivent sur cet élément sans demander à avoir passé le focus depuis un autre contrôle. Toutefois, ce comportement n'est pas précisément décrit dans les spécifications actuelles.
+> [!NOTE]
+> La plupart des navigateurs implémente cet élément comme s'il avait l'attribut `aria-live` par défaut. Les outils d'assistance annonceront donc les résultats des interactions avec l'interface utilisateur qui arrivent sur cet élément sans demander à avoir passé le focus depuis un autre contrôle. Toutefois, ce comportement n'est pas précisément décrit dans les spécifications actuelles.
 
 ## Voir aussi
 

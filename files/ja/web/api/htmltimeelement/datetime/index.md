@@ -3,7 +3,7 @@ title: "HTMLTimeElement: dateTime プロパティ"
 short-title: dateTime
 slug: Web/API/HTMLTimeElement/dateTime
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}

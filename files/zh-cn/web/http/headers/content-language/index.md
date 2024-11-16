@@ -30,7 +30,8 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : 多个语言标签需要用逗号隔开。每一个语言标签都是由一个或多个不区分大小写的子标签构成的，子标签之间用连字号 ("-", %x2D) 隔开。通常情况下，一个语言标签是由标识一个大的语言家族的主语言子标签（例如"en" = English），以及后面可选的用来缩小语言范围使更确切的一系列子标签（"en-CA" 表示在加拿大范围使用的英语的变种）构成的。
 
-> **备注：** 语言标签在 [RFC 5646](https://tools.ietf.org/html/rfc5646)中被正式定义，它使用的[语言代码](https://en.wikipedia.org/wiki/Language_code)依赖于 [ISO 639](https://en.wikipedia.org/wiki/ISO_639) 标准 (通常为 [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) 。
+> [!NOTE]
+> 语言标签在 [RFC 5646](https://tools.ietf.org/html/rfc5646)中被正式定义，它使用的[语言代码](https://en.wikipedia.org/wiki/Language_code)依赖于 [ISO 639](https://en.wikipedia.org/wiki/ISO_639) 标准 (通常为 [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) 。
 
 ## 示例
 

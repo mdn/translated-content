@@ -3,6 +3,8 @@ title: document.head
 slug: Web/API/Document/head
 ---
 
+{{APIRef("DOM")}}
+
 Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément \<head>, le premier est retourné.
 
 ## Syntaxe

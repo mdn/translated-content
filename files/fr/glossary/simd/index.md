@@ -13,5 +13,5 @@ Voir aussi {{Glossary("SISD")}} qui est une architecture séquentielle sans para
 
 ### Culture générale
 
-- {{jsxref("Objets_globaux/SIMD","SIMD en JavaScript","","true")}}
+- {{jsxref("Objets_globaux/SIMD","SIMD en JavaScript","",1)}}
 - [SIMD](https://fr.wikipedia.org/wiki/Single_instruction_multiple_data) sur Wikipédia

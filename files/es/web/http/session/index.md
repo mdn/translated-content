@@ -19,7 +19,8 @@ En un protocolo cliente servidor, es siempre el cliente el que establece la cone
 
 En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puerto 80. Se pueden usar otros puertos como el 8000 o el 8080. La URL de la página pedida contiene tanto el nombre del dominio, como el número de puerto, aunque este puede ser omitido, si se trata del puerto 80. Véase la referencia de [Identificación de recursos en la Web](/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) para más detalles.
 
-> **Nota:** El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en/WebSockets) o protocolos similares.
+> [!NOTE]
+> El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en/WebSockets) o protocolos similares.
 
 ## Mandando una petición
 

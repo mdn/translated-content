@@ -21,7 +21,8 @@ Une {{domxref ("DOMString")}} spécifiant la direction du texte. Les valeurs pos
 - `ltr`: de gauche à droite.
 - `rtl` : de droite à gauche.
 
-> **Note :** La plupart des navigateurs semblent ignorer les paramètres explicites de ltr et rtl, et utilisent simplement le paramètre à l'échelle du navigateur.
+> [!NOTE]
+> La plupart des navigateurs semblent ignorer les paramètres explicites de ltr et rtl, et utilisent simplement le paramètre à l'échelle du navigateur.
 
 ## Spécifications
 

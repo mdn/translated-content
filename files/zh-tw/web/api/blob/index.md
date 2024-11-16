@@ -11,9 +11,11 @@ slug: Web/API/Blob
 
 接受 Blob 物件的 API 可以在 {{domxref("File")}} 上找到。
 
-> **備註：** 早期 `slice()` 方法擁有第二個參數 `length` 以指定在建立新 `Blob` 物件時要複製的位元組（byte）數量。假如指定的 `start + length` 超出了來源 `Blob` 的大小，則回傳的 `Blob` 會包含自索引 `start` 至結尾的完整來源內容。
+> [!NOTE]
+> 早期 `slice()` 方法擁有第二個參數 `length` 以指定在建立新 `Blob` 物件時要複製的位元組（byte）數量。假如指定的 `start + length` 超出了來源 `Blob` 的大小，則回傳的 `Blob` 會包含自索引 `start` 至結尾的完整來源內容。
 
-> **備註：** 需注意在部分瀏覽器版本中，`slice()` 方法帶有前綴：Firefox 12 與之前的版本為 `blob.mozSlice()`，Safari 中是 `blob.webkitSlice()`。舊的、無前綴字版本的 `slice()` 方法則有不同的語意（semantics），但這是已淘汰的方法。瀏覽器對 `blob.mozSlice()` 的支援已在 Firefox 30 時中止。
+> [!NOTE]
+> 需注意在部分瀏覽器版本中，`slice()` 方法帶有前綴：Firefox 12 與之前的版本為 `blob.mozSlice()`，Safari 中是 `blob.webkitSlice()`。舊的、無前綴字版本的 `slice()` 方法則有不同的語意（semantics），但這是已淘汰的方法。瀏覽器對 `blob.mozSlice()` 的支援已在 Firefox 30 時中止。
 
 ## 建構式
 
@@ -45,7 +47,8 @@ var blob = new Blob([JSON.stringify(debug, null, 2)], {
 });
 ```
 
-> **警告：** 在 Blob 建構式出現之前，可以透過 {{domxref("BlobBuilder")}} 來建立 blob 物件（目前已不建議使用）：
+> [!WARNING]
+> 在 Blob 建構式出現之前，可以透過 {{domxref("BlobBuilder")}} 來建立 blob 物件（目前已不建議使用）：
 >
 > ```js
 > var builder = new BlobBuilder();

@@ -9,7 +9,7 @@ slug: Web/API/DOMException
 
 每个异常都有一个**名称**（name），一个采用驼峰命名法的简短字符串，用于描述识别错误或异常情况。
 
-`DOMException` 是一个{{Glossary("Serializable object","可序列化对象")}}，因此可以使用 {{domxref("structuredClone()")}} 克隆，或使用 {{domxref("Worker.postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间复制。
+`DOMException` 是一个{{Glossary("Serializable object","可序列化对象")}}，因此可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 克隆，或使用 {{domxref("Worker.postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间复制。
 
 ## 构造函数
 
@@ -35,7 +35,8 @@ slug: Web/API/DOMException
 - 遗留代码值：`6`，遗留常量名称：`NO_DATA_ALLOWED_ERR`
 - 遗留代码值：`16`，遗留常量名称：`VALIDATION_ERR`
 
-> **备注：** 由于历史上错误是通过一个数值来识别的，该数值与定义为该数值的命名变量相对应，因此下面的一些条目指出了过去使用的历史代码值和常量名称。
+> [!NOTE]
+> 由于历史上错误是通过一个数值来识别的，该数值与定义为该数值的命名变量相对应，因此下面的一些条目指出了过去使用的历史代码值和常量名称。
 
 - `IndexSizeError`
   - : 索引不在允许的范围内。例如，这可以被 {{ domxref("Range") }} 对象抛出。（遗留代码值：`1`，遗留常量名称：`INDEX_SIZE_ERR`）

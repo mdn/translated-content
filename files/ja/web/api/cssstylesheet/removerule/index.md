@@ -9,7 +9,8 @@ l10n:
 
 旧式の {{domxref("CSSStyleSheet")}} の **`removeRule()`** メソッドは、スタイルシートオブジェクトからルールを削除します。これは、標準で推奨されるメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} と機能的に同じです。
 
-> **メモ:** これは古いメソッドであり、標準のメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} によって置き換えられました。代わりにこちらを使用してください。
+> [!NOTE]
+> これは古いメソッドであり、標準のメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} によって置き換えられました。代わりにこちらを使用してください。
 
 ## 構文
 

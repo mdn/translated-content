@@ -2,7 +2,7 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 9716100b38b40f0f2ee8b3bfa2c692958868c5a6
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -194,7 +194,7 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - [WebRTC adapter.js を使用した互換性の向上](#相互運用性)
   - : WebRTC 組織は、異なるブラウザーの WebRTC 実装における互換性の問題を回避するため [adapter.js](https://github.com/webrtc/adapter/) を提供しています。このアダプターは JavaScript のはシム ({{Glossary("Shim")}}) で、あなたのコードを仕様に合わせて記述することで、WebRTC に対応しているすべてのブラウザーで「ただ動く (just work) 」ようにしてくれます。
 - [シンプルな RTCDataChannel のサンプル](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : {{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピアー間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に [WebSocket API](/ja/docs/Web/API/WebSocket_API) に似せているので、それぞれに同じプログラミングモデルを使用することができます。
+  - : {{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピアー間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に [WebSocket API](/ja/docs/Web/API/WebSockets_API) に似せているので、それぞれに同じプログラミングモデルを使用することができます。
 - [Peer.js によるインターネット接続電話の構築](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs)
   - : このチュートリアルは、 Peer.js を使用して電話を構築する方法を段階を追ってガイドします。
 

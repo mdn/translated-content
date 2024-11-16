@@ -3,7 +3,9 @@ title: Элемент <source>
 slug: Web/HTML/Element/source
 ---
 
-**HTML-элемент `<source>`** указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).
+{{HTMLSidebar}}
+
+HTML-элемент **`<source>`** указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                                                                                                               |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -62,5 +64,3 @@ For more examples, see [Using audio and video in Firefox](/ru/docs/Using_HTML5_a
 - Элемент {{HTMLElement("picture")}}
 - Элемент {{HTMLElement("audio")}}
 - Элемент {{HTMLElement("video")}}
-
-{{HTMLSidebar}}

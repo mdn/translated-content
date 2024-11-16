@@ -2,12 +2,14 @@
 title: "<pre>: 整形済みテキスト要素"
 slug: Web/HTML/Element/pre
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
 **`<pre>`** は [HTML](/ja/docs/Web/HTML) の要素で、整形済みテキスト (preformatted text) を表します。この要素内のテキストは一般的に、ファイル内でのレイアウトをそのまま反映して[等幅フォント](https://ja.wikipedia.org/wiki/等幅フォント)で表示されます。この要素内のホワイトスペース文字はそのまま表示します。
+
+既定では、 `<pre>` は[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素であり、 {{cssxref("display")}} の既定値は `block` です。
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
@@ -30,7 +32,7 @@ l10n:
 
 弱視の人やスクリーンリーダーなどの支援技術を使って閲覧している人は、整形済みテキスト文字が順番に読み上げられたときに何を表しているのか理解できないかもしれません。
 
-{{HTMLElement("figure")}} 要素と {{HTMLElement("figcaption")}} 要素の組み合わせや、`pre` 要素の [ARIA](/ja/docs/Web/Accessibility/ARIA) の `role` と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性によって補われます。整形済み ASCII アートは代替テキストを持つ画像としてアナウンスされ、`figcaption` は画像のキャプションとして機能します。
+{{HTMLElement("figure")}} 要素と {{HTMLElement("figcaption")}} 要素の組み合わせや、`pre` 要素の [ARIA](/ja/docs/Web/Accessibility/ARIA) の `role` と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性によって補われます。整形済み {{Glossary("ASCII")}} アートは代替テキストを持つ画像としてアナウンスされ、`figcaption` は画像のキャプションとして機能します。
 
 ### 例
 
@@ -117,7 +119,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -130,8 +132,10 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

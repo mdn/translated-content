@@ -1,15 +1,16 @@
 ---
 title: "AudioScheduledSourceNode: ended イベント"
+short-title: ended
 slug: Web/API/AudioScheduledSourceNode/ended_event
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
 
 `ended` は {{domxref("AudioScheduledSourceNode")}} インターフェイスのイベントで、ソースノードの再生が停止したときに発生します。
 
-このイベントは、{{domxref("AudioScheduledSourceNode")}}の再生が停止したときに発生します。理由は、所定の停止時刻に達したか、音声の全時間が再生されたか、またはバッファーの全体が再生されたかのいずれかです。
+このイベントは、{{domxref("AudioScheduledSourceNode")}} の再生が停止したときに発生します。理由は、所定の停止時刻に達したか、音声の全時間が再生されたか、またはバッファーの全体が再生されたかのいずれかです。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -29,7 +30,7 @@ onended = (event) => { }
 
 ## 例
 
-この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェースに［Start］ボタンを表示できるようにしています。
+この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェイスに［Start］ボタンを表示できるようにしています。
 
 ```js
 node.addEventListener("ended", () => {
@@ -47,11 +48,11 @@ node.onended = () => {
 
 ended イベントの使用例は、 [audio-buffer の例 (GitHub)](https://mdn.github.io/webaudio-examples/audio-buffer/) を参照してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

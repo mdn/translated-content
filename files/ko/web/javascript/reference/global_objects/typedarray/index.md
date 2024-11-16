@@ -48,9 +48,10 @@ new TypedArray(buffer, byteOffset);
 new TypedArray(buffer, byteOffset, length);
 ```
 
-여기서 _TypedArray_ 는 구체적인 유형 중 하나의 생성자입니다.
+여기서 TypedArray 는 구체적인 유형 중 하나의 생성자입니다.
 
-> **참고:** 모든 `TypedArray` 생성자는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> 모든 `TypedArray` 생성자는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ## 매개변수
 
@@ -63,6 +64,21 @@ new TypedArray(buffer, byteOffset, length);
 - `buffer`, `byteOffset`,
   `length`
   - : `buffer`와 선택적으로 전달할 수 있는 `byteOffset` 및 `length` 인수가 함께 호출되면, 지정된 {{jsxref("ArrayBuffer")}}를 보는 새로운 형식화 배열 뷰가 생성됩니다. `byteOffset` 및 `length` 매개변수는 형식화 배열 보기에 의해 노출될 메모리 범위를 지정합니다. 둘 다 생략하면 모든 버퍼가 표시되고, `length`만 생략하면 `buffer`의 나머지 부분이 표시됩니다.
+
+### 예외
+
+모든 `TypeArray` 하위 클래스 생성자는 같은 방식으로 동작합니다. 생성자는 모두 아래와 같은 예외를 발생시킵니다.
+
+- {{jsxref("TypeError")}}
+  - : 다음 상황 중 하나일 경우 발생합니다.
+    - `typedArray`가 전달되었으나, [bigint](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 유형이지만 현 생성자가 그렇지 않을 경우 혹은 그 반대의 경우입니다.
+    - `typeArray`가 전달되었으나, 바라보는 버퍼가 분리되었거나 혹은 분리된 `buffer`가 바로 전달될 경우입니다.
+- {{jsxref("RangeError")}}
+  - : 다음 상황 중 하나일 경우 발생합니다.
+    - 새로운 형식화 배열의 길이가 너무 클 경우입니다.
+    - `buffer`의 길이(`length` 매개변수가 명시되지 않을 경우) 혹은 `byteOffset`이 새로운 형식화 배열의 요소 크기의 정수 배수가 아닐 경우입니다.
+    - `byteOffset`이 유효한 배열 인덱스(0부터 2<sup>53</sup> - 1 사이의 정수)가 아닐 경우입니다.
+    - 버퍼에서 뷰를 만들 때 뷰가 버퍼를 벗어날 경우입니다. 즉, `byteOffset + length * TypedArray.BYTES_PER_ELEMENT > buffer.byteLength`입니다.
 
 ## 정적 속성
 
@@ -231,8 +247,8 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 
 ## 같이 보기
 
-- [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [`core-js`에서의 형식화 배열 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/ko/docs/Web/API/TextDecoder) — 숫자 데이터에서 문자열을 디코딩하는 헬퍼
+- {{domxref("TextDecoder")}}

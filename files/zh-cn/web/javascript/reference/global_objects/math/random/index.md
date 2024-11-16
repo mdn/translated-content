@@ -9,7 +9,7 @@ l10n:
 
 **`Math.random()`** 静态方法返回一个大于等于 0 且小于 1 的伪随机浮点数，并在该范围内近似均匀分布，然后你可以缩放到所需的范围。其实现将选择随机数生成算法的初始种子；它不能由用户选择或重置。
 
-> **备注：** `Math.random()` *不能*提供密码学安全的随机数。请不要使用它们来处理与安全相关的事情。请使用 Web Crypto API 代替，更具体地来说是 {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} 方法。
+> **备注：** `Math.random()` *不能*提供密码学安全的随机数。请不要使用它们来处理与安全相关的事情。请使用 Web Crypto API 代替，更具体地来说是 {{domxref("Crypto.getRandomValues()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
@@ -61,7 +61,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **备注：** 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
+> [!NOTE]
+> 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
 
 ### 得到一个两数之间的随机整数，包括两个数在内
 
@@ -85,4 +86,4 @@ function getRandomIntInclusive(min, max) {
 
 ## 参见
 
-- {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}
+- {{domxref("Crypto.getRandomValues()")}}

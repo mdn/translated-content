@@ -1,31 +1,34 @@
 ---
-title: Animation.cancel()
+title: "Animation: метод cancel()"
 slug: Web/API/Animation/cancel
+l10n:
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
-Метод **`cancel()`** API Web Animation интерфейса {{domxref("Animation")}} очищает все {{domxref("KeyframeEffect")}} вызванной этой анимацией и прекращает его воспроизведение.
+Метод **`cancel()`** Web Animation API интерфейса {{domxref("Animation")}} очищает все {{domxref("KeyframeEffect")}}, вызванные этой анимацией и прекращает воспроизведение.
 
-> **Примечание:** Когда анимация отменена, её {{domxref("Animation.startTime", "startTime")}} и {{domxref("Animation.currentTime", "currentTime")}} устанавливаются в `null`.
+> [!NOTE]
+> Когда анимация отменена, её {{domxref("Animation.startTime", "startTime")}} и {{domxref("Animation.currentTime", "currentTime")}} устанавливаются в `null`.
 
-## Syntax
+## Синтаксис
 
+```js-nolint
+cancel()
 ```
-Animation.cancel();
-```
 
-### Parameters
+### Параметры
 
-None.
+Нет.
 
-### Return value
+### Возвращаемое значение
 
-None.
+Нет ({{jsxref("undefined")}}).
 
-### Exceptions
+### Исключения
 
-Этот метод не выбрасывает напрямую исключения; однако, если {{domxref("Animation.playState", "playState")}} анимации во время отмены ничего кроме `"idle"`, {{domxref("Animation.finished", "current finished promise", "", 1)}} отклоняется с помощью {{domxref("DOMException")}} названным `AbortError`.
+Этот метод напрямую не выбрасывает исключения, однако, если {{domxref("Animation.playState", "playState")}} анимации во время отмены является `"idle"`, то {{domxref("Animation.finished", "промис завершения текущей анимации", "", 1)}} отклоняется с {{domxref("DOMException")}} и именем `AbortError`.
 
 ## Спецификации
 
@@ -35,10 +38,10 @@ None.
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
 - {{domxref("KeyframeEffect")}}
 - {{domxref("Animation")}}
 - {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} returns the promise this action will reject if the animation's `playState` is not `"idle"`.
+- {{domxref("Animation.finished")}} возвращает промис, который отменит это действие, если `playState` анимации не `"idle"`.

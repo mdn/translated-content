@@ -21,7 +21,8 @@ Service worker 以及 PWA，都[被限制在安全上下文中](/zh-CN/docs/Web/
 
 我们正在使用 `file://` 协议查看我们的页面。这适用于我们代码库的当前状态，并且在我们[添加 JavaScript 功能](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)之后将继续适用。然而，就像许多其他 API 一样，清单文件和 service worker（都是 PWA 的要求）需要安全连接。PWA 需要通过基于 `https` 的 web 服务器或使用 `localhost`、`127.0.0.1`（无论是否带有端口号）的本地开发环境来提供。如果我们使用 `files://` 协议查看我们完成的应用，我们的[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)将被忽略，任何我们添加的 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) 都将失败。
 
-> **备注：** 通过 `https` 提供你的应用不仅对 PWA 有益，而且对所有网站有益，因为它确保了在你的 web 服务器和用户的浏览器之间传输的信息是端到端加密的。许多 [Web API 需要安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。即使你没有创建可安装的 PWA，当你向任何 web 应用添加特性时，你都可能会遇到需要安全上下文的情况。
+> [!NOTE]
+> 通过 `https` 提供你的应用不仅对 PWA 有益，而且对所有网站有益，因为它确保了在你的 web 服务器和用户的浏览器之间传输的信息是端到端加密的。许多 [Web API 需要安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。即使你没有创建可安装的 PWA，当你向任何 web 应用添加特性时，你都可能会遇到需要安全上下文的情况。
 
 我们需要一个本地开发环境来完成教程。[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)的一部分是安全服务器。文件需要在 web 上通过安全连接提供，以获取 PWA 提供的好处，并将我们的应用程序作为 PWA 分发。
 
@@ -63,7 +64,8 @@ ws --https
 
 在上面的命令中，你可能需要在 install 前加上 `sudo`。
 
-> **备注：** 如果你正在追求隐私，请意识到你正在自己构建此 PWA，它可以从自己的开发环境中安装在自己的机器上，而无需访问互联网。这个应用程序没有跟踪。这是一个尽可能私密的应用程序。
+> [!NOTE]
+> 如果你正在追求隐私，请意识到你正在自己构建此 PWA，它可以从自己的开发环境中安装在自己的机器上，而无需访问互联网。这个应用程序没有跟踪。这是一个尽可能私密的应用程序。
 
 ## 安全的外部服务器
 

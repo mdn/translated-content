@@ -32,7 +32,7 @@ onclick = (event) => {};
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 

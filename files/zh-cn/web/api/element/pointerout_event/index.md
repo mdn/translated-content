@@ -9,8 +9,12 @@ slug: Web/API/Element/pointerout_event
 
 ## 语法
 
-```
-var outHandler = targetElement.onpointerout;
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("pointerout", (event) => {});
+
+onpointerout = (event) => {};
 ```
 
 ### 返回值
@@ -18,7 +22,7 @@ var outHandler = targetElement.onpointerout;
 - `outHandler`
   - : 元素`targetElement`的指针输出事件处理程序。
 
-## 例子
+## 示例
 
 这个例子展示了两种方式来使用 onpointerout 设置元素的 pointerout 事件处理程序。
 

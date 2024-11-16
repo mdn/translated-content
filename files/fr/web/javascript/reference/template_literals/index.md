@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Template_literals
 
 Les littéraux de gabarits sont des littéraux de chaînes de caractères permettant d'intégrer des expressions. Avec eux, on peut utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation.
 
-> **Note :** Dans les premières versions de la spécification ECMAScript 2015, cette fonctionnalité était intitulée «&nbsp;gabarits de chaîne de caractères&nbsp;». Dans la suite de cet article, les expressions «&nbsp;gabarits de texte&nbsp;», «&nbsp;gabarits de libellés&nbsp;», «&nbsp;littéraux de gabarits&nbsp;» et «&nbsp;gabarits&nbsp;» seront équivalents.
+> [!NOTE]
+> Dans les premières versions de la spécification ECMAScript 2015, cette fonctionnalité était intitulée «&nbsp;gabarits de chaîne de caractères&nbsp;». Dans la suite de cet article, les expressions «&nbsp;gabarits de texte&nbsp;», «&nbsp;gabarits de libellés&nbsp;», «&nbsp;littéraux de gabarits&nbsp;» et «&nbsp;gabarits&nbsp;» seront équivalents.
 
 ## Syntaxe
 

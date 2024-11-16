@@ -2,7 +2,7 @@
 title: all
 slug: Web/CSS/all
 l10n:
-  sourceCommit: 5f0a9e8c258072ed8146401584162c232331c77d
+  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
 ---
 
 {{CSSRef}}
@@ -185,7 +185,7 @@ blockquote {
 
 {{EmbedLiveSample("d._all_unset", "200", "125")}}
 
-`blockquote` ルールの `all` プロパティに `unset` 値を用いた場合、 {{HTMLElement("blockquote")}} 要素はブラウザー既定値のスタイル設定を使用しません。なぜなら、 [`background-color`](/ja/docs/Web/CSS/background-color#formal_definition) は継承されないプロパティであり、[`font-size`](/ja/docs/Web/CSS/font-size#formal_definition) と [`color`](/ja/docs/Web/CSS/color#formal_definition) は継承されるプロパティだからです、 `<blockquote>` 要素はこれでインライン要素（初期値）、 {{cssxref("background-color")}} は `transparent` （初期値）となりますが、 {{cssxref("font-size")}} は `small` （継承値）、 {{cssxref("color")}} は `blue` （継承値）のままです。
+`blockquote` ルールの `all` プロパティに `unset` 値を用いた場合、 {{HTMLElement("blockquote")}} 要素はブラウザー既定値のスタイル設定を使用しません。なぜなら、 [`background-color`](/ja/docs/Web/CSS/background-color#公式定義) は継承されないプロパティであり、[`font-size`](/ja/docs/Web/CSS/font-size#公式定義) と [`color`](/ja/docs/Web/CSS/color#公式定義) は継承されるプロパティだからです、 `<blockquote>` 要素はこれでインライン要素（初期値）、 {{cssxref("background-color")}} は `transparent` （初期値）となりますが、 {{cssxref("font-size")}} は `small` （継承値）、 {{cssxref("color")}} は `blue` （継承値）のままです。
 
 #### E. `all: revert`
 

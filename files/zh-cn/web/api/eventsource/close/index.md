@@ -7,23 +7,24 @@ slug: Web/API/EventSource/close
 
 {{domxref("EventSource")}} 的方法 **`close()`** 用于关闭当前的连接，如果调用了此方法，则会将{{domxref("EventSource.readyState")}}这个属性值设置为 2 (closed)
 
-> **备注：** 如果连接已经被关闭，此方法不会做任何事情
+> [!NOTE]
+> 如果连接已经被关闭，此方法不会做任何事情
 
 ## 语法
 
-```
-eventSource.close();
+```js-nolint
+close()
 ```
 
 ### 参数
 
-None.
+无。
 
 ### 返回值
 
-Void.
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
 ```js
 var button = document.querySelector("button");
@@ -35,7 +36,8 @@ button.onclick = function () {
 };
 ```
 
-> **备注：** 你可以在 Github 上查看这整个例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以在 Github 上查看这整个例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 

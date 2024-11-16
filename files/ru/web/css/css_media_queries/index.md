@@ -27,6 +27,6 @@ You can learn more about programmatically using media queries in [Testing media 
 - [Testing media queries](/ru/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}

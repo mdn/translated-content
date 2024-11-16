@@ -77,7 +77,8 @@ flex: unset;
 - `<'flex-basis'>`
   - : 플렉스 아이템의 {{cssxref("flex-basis")}}를 지정합니다. `0`을 지정하려면 `<flex-grow>` 또는 `<flex-shrink>`로 읽히지 않도록 단위를 붙여야 합니다. 생략 시 기본값은 `auto`입니다.
 
-> **참고:** 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, `<flex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://drafts.csswg.org/css-flexbox/#flex-common) 초안에서 확인할 수 있습니다.
+> [!NOTE]
+> 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, `<flex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://drafts.csswg.org/css-flexbox/#flex-common) 초안에서 확인할 수 있습니다.
 
 ### 형식 구문
 

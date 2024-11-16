@@ -3,7 +3,7 @@ title: string
 slug: Web/XPath/Functions/string
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `string` convertit l'argument passé en une chaîne.
 

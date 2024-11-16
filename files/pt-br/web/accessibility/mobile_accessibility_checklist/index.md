@@ -14,7 +14,8 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 
 - A informação transportada via cor **DEVE** ser também possível através de outros meios (textos sublinhados para links, etc.)
 
-> **Nota:** Jon Snook escreveu um útil [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) que é usado para checar o contraste de cores entre o _background_ e o _foreground_. De maneira alternativa o [Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) faz um trabalho similar, mas também sugeste melhores contrastes de cores considerando as usadas.
+> [!NOTE]
+> Jon Snook escreveu um útil [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) que é usado para checar o contraste de cores entre o _background_ e o _foreground_. De maneira alternativa o [Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) faz um trabalho similar, mas também sugeste melhores contrastes de cores considerando as usadas.
 
 ## Visibilidade
 

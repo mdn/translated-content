@@ -1,7 +1,6 @@
 ---
 title: console.error()
 slug: Web/API/console/error_static
-original_slug: Web/API/console/error
 ---
 
 {{APIRef("Console API")}}
@@ -32,7 +31,7 @@ console.exception(msg [, subst1, ..., substN]);
 
 Смотрите раздел [Вывод текста в консоль](/ru/docs/Web/API/console#Outputting_text_to_the_console) в документации {{domxref("console")}} для подробностей.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

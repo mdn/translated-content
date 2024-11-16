@@ -26,7 +26,8 @@ El almacenamiento de lado del cliente funciona con principios similares, pero ti
 
 A menudo, el almacenamiento de lado del cliente y de lado del servidor se utilizan juntos. Por ejemplo, puedes descargar un lote de archivos de música (quizás utilizados por un juego web o una aplicación de reproducción de música), almacenarlos dentro de una base de datos de lado del cliente y reproducirlos según sea necesario. El usuario solo tendría que descargar los archivos de música una vez; en las visitas posteriores, se recuperarían de la base de datos.
 
-> **Nota:** Existen límites en la cantidad de datos que puedes almacenar utilizando las APIs de almacenamiento de lado del cliente (posiblemente tanto por API individual como acumulativamente); el límite exacto varía según el navegador y posiblemente según la configuración del usuario. Consulta [límites de almacenamiento del navegador y criterios de desalojo](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obtener más información.
+> [!NOTE]
+> Existen límites en la cantidad de datos que puedes almacenar utilizando las APIs de almacenamiento de lado del cliente (posiblemente tanto por API individual como acumulativamente); el límite exacto varía según el navegador y posiblemente según la configuración del usuario. Consulta [límites de almacenamiento del navegador y criterios de desalojo](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obtener más información.
 
 ### Vieja escuela: cookies
 
@@ -216,9 +217,11 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
 
 Tu ejemplo está terminado, ¡bien hecho!; Todo lo que queda ahora es guardar tu código y probar tu página HTML en un navegador. Puedes ver nuestra [versión finalizada en vivo aquí](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
 
-> **Nota:** Hay otro ejemplo un poco más complejo para explorar en [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> Hay otro ejemplo un poco más complejo para explorar en [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Nota:** En la línea `<script src="index.js" defer></script>` del código fuente de nuestra versión final, el atributo `defer` especifica que el contenido del elemento {{htmlelement("script")}} no se ejecutará hasta que la página haya terminado de cargarse.
+> [!NOTE]
+> En la línea `<script src="index.js" defer></script>` del código fuente de nuestra versión final, el atributo `defer` especifica que el contenido del elemento {{htmlelement("script")}} no se ejecutará hasta que la página haya terminado de cargarse.
 
 ## Almacenamiento de datos complejos — `IndexedDB`
 
@@ -275,7 +278,8 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
    Para manejar esto en IndexedDB, crea un objeto de solicitud (que se puede llamar como desees; lo llamamos `request`, por lo que es obvio para qué sirve). Luego, usa controladores de eventos para ejecutar código cuando la solicitud se completa, falla, etc., que verás en uso a continuación.
 
-   > **Nota:** El número de versión es importante. Si deseas actualizar tu base de datos (por ejemplo, cambiando la estructura de la tabla), debes ejecutar tu código nuevamente con un número de versión aumentado, un esquema diferente especificado dentro del controlador `onupgradeneeded` (ve más abajo), etc. No cubriremos la actualización de bases de datos en este sencillo tutorial.
+   > [!NOTE]
+   > El número de versión es importante. Si deseas actualizar tu base de datos (por ejemplo, cambiando la estructura de la tabla), debes ejecutar tu código nuevamente con un número de versión aumentado, un esquema diferente especificado dentro del controlador `onupgradeneeded` (ve más abajo), etc. No cubriremos la actualización de bases de datos en este sencillo tutorial.
 
 4. Ahora agrega los siguientes controladores de eventos justo debajo de tu adición anterior, nuevamente dentro del controlador `window.onload`:
 
@@ -650,7 +654,8 @@ Cuando intercepta una solicitud, puede hacer lo que desees (consulta [ideas de c
 
 La API de caché es otro mecanismo de almacenamiento del lado del cliente, con una pequeña diferencia: está diseñada para guardar respuestas HTTP y, por lo tanto, funciona muy bien con el servicio _workers_.
 
-> **Nota:** El servicio _workers_ y la memoria caché ahora son compatibles con la mayoría de los navegadores modernos. Al momento de escribir este artículo, Safari todavía estaba ocupado implementándolo, pero debería estar allí pronto.
+> [!NOTE]
+> El servicio _workers_ y la memoria caché ahora son compatibles con la mayoría de los navegadores modernos. Al momento de escribir este artículo, Safari todavía estaba ocupado implementándolo, pero debería estar allí pronto.
 
 ### Un ejemplo del servicio worker
 
@@ -676,7 +681,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **Nota:** La ruta proporcionada al archivo `sw.js` es relativa al origen del sitio, no al archivo JavaScript que contiene el código. El servicio _worker_ está en `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. El origen es `https://mdn.github.io` y, por lo tanto, la ruta dada debe ser `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Si quisieras alojar este ejemplo en tu propio servidor, tendrías que cambiarlo consecuentemente. Esto es bastante confuso, pero tiene que funcionar de esta manera por razones de seguridad.
+> [!NOTE]
+> La ruta proporcionada al archivo `sw.js` es relativa al origen del sitio, no al archivo JavaScript que contiene el código. El servicio _worker_ está en `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. El origen es `https://mdn.github.io` y, por lo tanto, la ruta dada debe ser `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Si quisieras alojar este ejemplo en tu propio servidor, tendrías que cambiarlo consecuentemente. Esto es bastante confuso, pero tiene que funcionar de esta manera por razones de seguridad.
 
 #### Instalación del servicio worker
 

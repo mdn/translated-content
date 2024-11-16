@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_me
 
 Dans cet article, nous verrons comment les boîtes flexibles interagissent avec les autres modules CSS. Nous verrons quelles sont les spécifications qui décrivent les boîtes flexibles et pourquoi les boîtes flexibles sont différentes des autres modules.
 
-> **Note :** Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
+> [!NOTE]
+> Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
 
 ## Le module d'alignement des boîtes (_Box Alignment_)
 
@@ -99,7 +100,8 @@ En ajoutant `display: contents` à l'élément flexible qui contient deux élém
 
 On notera que cela ne retire que la boîte de la disposition. Les éléments fils au deuxième niveau ne deviennent pas des éléments fils directs pour d'autres notions. On peut voir dans l'exemple qu'on utilise un sélecteur sur les éléments fils directs pour gérer l'arrière-plan et les bordures : ces styles n'ont pas été appliqués aux éléments fils de deuxième rang. Ces éléments ont été disposés comme des éléments flexibles, mais ils ne récupèrent pas la mise en forme des éléments fils directs.
 
-> **Attention :** Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
+> [!WARNING]
+> Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
 
 En retirant la boîte de l'élément parent, on ne peut pas utiliser cette boîte pour, par exemple, ajouter une couleur d'arrière-plan commune aux éléments fils imbriqués. Si on retire `display: contents` dans l'exemple, on peut voir que l'arrière-plan orange rattaché à l'élément disparaît avec la boîte.
 

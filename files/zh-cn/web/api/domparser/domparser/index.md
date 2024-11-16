@@ -3,6 +3,8 @@ title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
 ---
 
+{{APIRef("DOM")}}
+
 **`DOMParser()`** 构造函数新建一个 [`DOMParser`](/zh-CN/docs/Web/API/DOMParser) 对象实例。
 
 ## 语法

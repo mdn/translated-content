@@ -90,7 +90,8 @@ weekControl.value = "2017-W45";
 
 布尔属性值，如果存在，说明此字段不能由用户编辑。然而，其 `value` 值仍然可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### step
 
@@ -98,7 +99,8 @@ weekControl.value = "2017-W45";
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `week` 输入，`step` 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。`step` 的默认值为 1，表示 1 周。默认的步进基数是 -259,200,000，这是 1970 年第一周的开始（`"1970-W01"`）。
 
@@ -213,7 +215,8 @@ input:valid + span::after {
 
 ![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
-> **警告：** HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ## 处理浏览器支持
 
@@ -348,7 +351,8 @@ function populateWeeks() {
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
+> [!NOTE]
+> 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 

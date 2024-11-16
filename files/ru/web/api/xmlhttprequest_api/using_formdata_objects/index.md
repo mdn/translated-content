@@ -1,8 +1,9 @@
 ---
 title: Использование Объектов FormData
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
-original_slug: Web/API/FormData/Using_FormData_Objects
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 Объект [`FormData`](/ru/docs/Web/API/FormData) позволяет создать набор пар ключ/значение и передать их, используя `XMLHttpRequest.` Объект [`FormData`](/ru/docs/Web/API/FormData) предназначен для передачи данных форм, однако может быть использован для передачи пар ключ/значение независимо от форм. Данные передаются в том же формате, как и данные, передаваемые методом `{{domxref("HTMLFormElement.submit","submit()")}}` формы, с установленной кодировкой `enctype="multipart/form-data"`.
 
@@ -30,7 +31,8 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Примечание:** Поля "userfile" и "webmasterfile" оба содержат файлы. Число, переданное полю "accountnum" немедленно преобразуется в строку. Преобразование осуществляется методом [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (Значение поля может быть {{ domxref("Blob") }}, {{ domxref("File") }}, или строкой: **если значение не является ни Blob, ни File, то оно автоматически преобразуется в строку).**
+> [!NOTE]
+> Поля "userfile" и "webmasterfile" оба содержат файлы. Число, переданное полю "accountnum" немедленно преобразуется в строку. Преобразование осуществляется методом [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (Значение поля может быть {{ domxref("Blob") }}, {{ domxref("File") }}, или строкой: **если значение не является ни Blob, ни File, то оно автоматически преобразуется в строку).**
 
 Данный пример показывает создание экземпляра `FormData`, содержащего поля "username", "accountnum", "userfile" и "webmasterfile". Экземпляр `FormData` затем отправляется при помощи метода [`send()`](</en/DOM/XMLHttpRequest#send()> "en/XMLHttpRequest#send()") объекта `XMLHttpRequest`. Поле "webmasterfile" является экземпляром класса `{{domxref("Blob")}}`. Объект класса `Blob` является файлом-подобным объектом, содержащим "сырые" данные. Определение данных как `Blob` не является обязательным в нативном javascript. Интерфейс`{{ domxref("File") }}`базируется на `Blob`, наследуя его функциональность и расширяя его для поддержки файлов в ОС пользователя. Для создания объектов класса `Blob` используйте `{{domxref("Blob.Blob","Blob() constructor")}}`.
 
@@ -123,7 +125,8 @@ form.addEventListener(
 );
 ```
 
-> **Примечание:** Если для формы указан атрибут `method`, то будет использован именно этот метод для отправки данных на сервер, а не метод, указанный в вызове `open()`
+> [!NOTE]
+> Если для формы указан атрибут `method`, то будет использован именно этот метод для отправки данных на сервер, а не метод, указанный в вызове `open()`
 
 Вы так же можете добавить `{{ domxref("File") }}` или `{{ domxref("Blob") }}` непосредственно к объекту `{{ domxref("FormData") }}:`
 
@@ -151,7 +154,7 @@ $.ajax({
 
 Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/AJAX) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)
 
-## See also
+## Смотрите также
 
 - [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}

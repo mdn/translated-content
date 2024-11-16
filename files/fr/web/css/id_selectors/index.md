@@ -20,7 +20,8 @@ Un sélecteur d'identifiant (_ID selector_) permet, pour un document HTML, de ci
 #valeur_identifiant { déclarations }
 ```
 
-> **Note :** Cela est équivalent à la notation suivante qui utilise un {{cssxref("Sélecteurs_d_attribut", "sélecteur d'attribut")}}:
+> [!NOTE]
+> Cela est équivalent à la notation suivante qui utilise un {{cssxref("Sélecteurs_d_attribut", "sélecteur d'attribut")}}:
 >
 > ```
 > [id=valeur_identifiant] { déclarations }

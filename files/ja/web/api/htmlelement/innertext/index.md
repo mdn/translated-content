@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: innerText プロパティ"
+short-title: innerText
 slug: Web/API/HTMLElement/innerText
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +13,7 @@ l10n:
 ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
 セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
 
-> **メモ:** `innerText` は {{domxref("Node.textContent")}} と混同しやすいのですが、両者には重要な違いがあります。基本的に `innerText` はテキストがレンダリングされる表示を意識しますが、 `textContent` はそうではありません。
+> **メモ:** `innerText` は {{domxref("Node.textContent")}} と混同しやすいのですが、両者には重要な違いがあります。基本的に `innerText` はテキストがレンダリングされる外見を意識しますが、 `textContent` はそうではありません。
 
 ## 値
 

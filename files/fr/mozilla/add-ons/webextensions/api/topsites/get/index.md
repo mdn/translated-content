@@ -96,9 +96,9 @@ gettingTopSites.then(logTopSites, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

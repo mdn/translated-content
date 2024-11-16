@@ -3,6 +3,8 @@ title: Ajouter une carte de zones cliquables sur une image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+
 Dans cet article, nous verrons comment construire une carte imagée cliquable en commençant par les inconvénients de cette méthode.
 
 <table class="standard-table">
@@ -30,7 +32,8 @@ Dans cet article, nous verrons comment construire une carte imagée cliquable en
   </tbody>
 </table>
 
-> **Attention :** Cet article n'aborde que les cartes générées côté client. Les cartes de zones générées côté serveur ne doivent pas être utilisée car elles ne sont accessibles qu'aux utilisateurs ayant des souris.
+> [!WARNING]
+> Cet article n'aborde que les cartes générées côté client. Les cartes de zones générées côté serveur ne doivent pas être utilisée car elles ne sont accessibles qu'aux utilisateurs ayant des souris.
 
 ## Les cartes imagées cliquables et leurs inconvénients
 

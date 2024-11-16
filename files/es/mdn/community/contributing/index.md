@@ -1,14 +1,14 @@
 ---
 title: Contribuir a MDN
 slug: MDN/Community/Contributing
-original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}
 
 ¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.
 
-> **Nota:** Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Contribute/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
+> [!NOTE]
+> Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Contribute/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
 
 ## ¿Que puedo hacer para ayudar?
 
@@ -151,7 +151,8 @@ Si estás interesado en las palabras _y_ el código, puede intentar lo siguiente
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
 - [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
 
-> **Nota:** Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
+> [!NOTE]
+> Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
 
 ## Otras páginas útiles
 

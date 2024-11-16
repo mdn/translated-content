@@ -11,13 +11,15 @@ L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes s
 
 Étant des éléments de bloc, les paragraphes se fermeront automatiquement si un autre élément de bloc est analysé avant la balise de fermeture `</p>` (voir Omission de balises dans le tableau qui suit).
 
-> **Note :** Pour modifier l'espacement entre les paragraphes, il faudra utiliser la propriété CSS {{cssxref("margin")}}. _Il ne faut pas insérer de paragraphes vides ou d'éléments {{HTMLElement("br")}} afin de créer un espace_.
+> [!NOTE]
+> Pour modifier l'espacement entre les paragraphes, il faudra utiliser la propriété CSS {{cssxref("margin")}}. _Il ne faut pas insérer de paragraphes vides ou d'éléments {{HTMLElement("br")}} afin de créer un espace_.
 
 ## Attributs
 
 Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-> **Note :** L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.
+> [!NOTE]
+> L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.
 
 ## Exemples
 

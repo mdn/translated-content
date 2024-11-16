@@ -54,7 +54,7 @@ resources.forEach((entry) => {
 
 ### オリジン間のレスポンスステータスコード
 
-`responseStatus` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジンの外へのレスポンスステータスコードの表示を許可するには、[CORS](/ja/docs/Web/HTTP/CORS) の HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} レスポンスヘッダを設定する必要があります。
+`responseStatus` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジンの外へのレスポンスステータスコードの表示を許可するには、[CORS](/ja/docs/Web/HTTP/CORS) の HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
 
 例えば、`https://developer.mozilla.org` にレスポンスステータスコードを取得させるためには、オリジン間リソースが送信する必要があります。
 

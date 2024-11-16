@@ -3,6 +3,8 @@ title: overflow
 slug: Web/SVG/Attribute/overflow
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `overflow` имеет те же значения, что определены для {{ cssxref("overflow","CSS-свойства overflow") }}. Но имеют место также следующие дополнительные моменты:

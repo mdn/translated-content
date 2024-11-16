@@ -18,7 +18,8 @@ slug: Learn/CSS/Building_blocks
 3. HTML 基础知识（参见 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块）。
 4. CSS 基础知识（参见[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块）。
 
-> **备注：** 如果你此刻正使用一台电脑/笔记本/其他设备，而你无法创建自己的文件，那你可以在诸如 JSBin 或 Glitch 等网络编辑程序上尝试（多数）程序案例。
+> [!NOTE]
+> 如果你此刻正使用一台电脑/笔记本/其他设备，而你无法创建自己的文件，那你可以在诸如 JSBin 或 Glitch 等网络编辑程序上尝试（多数）程序案例。
 
 ## 指南
 

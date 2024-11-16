@@ -34,9 +34,11 @@ A diferencia de los demás objetos globales, el objeto `Math` no se puede editar
 
 ## Métodos
 
-> **Nota:** Tenga en cuenta que las funciones trigonométricas (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) devuelven ángulos en radianes. Para convertir radianes a grados, divida por `(Math.PI / 180)`, y multiplique por esto para convertir a la inversa.
+> [!NOTE]
+> Tenga en cuenta que las funciones trigonométricas (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) devuelven ángulos en radianes. Para convertir radianes a grados, divida por `(Math.PI / 180)`, y multiplique por esto para convertir a la inversa.
 
-> **Nota:** Tenga en cuenta que muchas de las funciones matemáticas tienen una precisión que es dependiente de la implementación. Esto significa que los diferentes navegadores pueden dar un resultado diferente, e incluso el mismo motor de JS en un sistema operativo o arquitectura diferente puede dar resultados diferentes.
+> [!NOTE]
+> Tenga en cuenta que muchas de las funciones matemáticas tienen una precisión que es dependiente de la implementación. Esto significa que los diferentes navegadores pueden dar un resultado diferente, e incluso el mismo motor de JS en un sistema operativo o arquitectura diferente puede dar resultados diferentes.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : Devuelve el valor absoluto de un número.

@@ -25,7 +25,7 @@ range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -33,6 +33,6 @@ isCollapsed = range.collapsed;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)

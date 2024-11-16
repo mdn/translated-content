@@ -2,7 +2,7 @@
 title: Accessible description (アクセシブル説明)
 slug: Glossary/Accessible_description
 l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+  sourceCommit: 6d37e664f5981436dfbba7a67f008a30c5238e00
 ---
 
 {{GlossarySidebar}}

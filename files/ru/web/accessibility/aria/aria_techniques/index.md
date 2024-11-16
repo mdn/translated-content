@@ -3,6 +3,8 @@ title: Использование ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
+{{AccessibilitySidebar}}
+
 ## Роли
 
 ### [Роли виджета](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role)

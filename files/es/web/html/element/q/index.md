@@ -38,7 +38,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres autorizados</th>
@@ -68,7 +68,8 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   </tbody>
 </table>
 
-> **Nota:** La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
+> [!NOTE]
+> La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
 
 ## Atributos
 

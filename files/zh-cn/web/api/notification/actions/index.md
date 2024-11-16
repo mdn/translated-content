@@ -2,7 +2,7 @@
 title: Notification：actions 属性
 slug: Web/API/Notification/actions
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
@@ -11,7 +11,8 @@ l10n:
 
 使用 {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} 方法和 {{DOMxref("Notification/Notification", "Notification()")}} 构造函数的第二个参数的 `actions` 选项设置操作。
 
-> **备注：** 浏览器通常会限制它们为特定通知显示的最大的操作的数量。检测 {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} 静态属性以确定限制的操作的数量。
+> [!NOTE]
+> 浏览器通常会限制它们为特定通知显示的最大的操作的数量。检测 {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} 静态属性以确定限制的操作的数量。
 
 ## 值
 

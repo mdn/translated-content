@@ -61,7 +61,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **Nota:** Si tu aceptaste el desafío de crear un modelo que represente el Lenguaje natural de un libro ([ver el artículo tutorial de modelos](/es/docs/Learn/Server-side/Django/Models)), importalo y registralo también!
+> [!NOTE]
+> Si tu aceptaste el desafío de crear un modelo que represente el Lenguaje natural de un libro ([ver el artículo tutorial de modelos](/es/docs/Learn/Server-side/Django/Models)), importalo y registralo también!
 
 Esta es la forma más simple de registrar un modelo, o modelos, con el sitio. El sitio de administración es altamente personalizable, y hablaremos más sobre otras formas de registrar tus modelos más abajo.
 
@@ -95,7 +96,8 @@ Ingresa valores para los campos. Puede crear nuevos autores o géneros presionan
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Nota:** En este punto nos gustaría que pasaras algún tiempo añadiendo unos pocos libros, autores, y géneros (ej. Fantasía) a tu aplicación. Asegúrate de que cada autor y género incluye un par de libros diferentes (esto hará tus vistas de lista y detalle más interesantes cuando las implementemos más tarde en la serie de artículos).
+> [!NOTE]
+> En este punto nos gustaría que pasaras algún tiempo añadiendo unos pocos libros, autores, y géneros (ej. Fantasía) a tu aplicación. Asegúrate de que cada autor y género incluye un par de libros diferentes (esto hará tus vistas de lista y detalle más interesantes cuando las implementemos más tarde en la serie de artículos).
 
 Cuando hayas terminado de añadir libros, haz click en el enlace **Home** en el separador de arriba para regresar a la página principal de administración. Luego haz click en el enlace **Books** para desplegar la lista actual de libros (o en alguno de los otros enlaces para ver las listas de otros modelos). Ahora que haz añadido unos cuantos libros, la lista debería lucir similar a la captura de pantalla de abajo. Se muestra el título de cada libro; que es el valor devuelto por el método `__str__()` del modelo Book que especificamos en el artículo anterior.
 
@@ -211,7 +213,8 @@ class BookAdmin(admin.ModelAdmin):
 
 Desafortunadamente, no podemos especificar directamente el campo `genre` en `list_display` porque es un campo `ManyToManyField` (Django previene esto porque habría un alto "costo" de acceso a base de datos si lo hiciera). En lugar de eso, definiremos una función `display_genre` para obtener la información como una cadena (esta es la función que hemos llamado arriba; la definiremos más abajo).
 
-> **Nota:** Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones — por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
+> [!NOTE]
+> Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones — por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
 
 Añade el siguiente código en tu modelo `Book` (**models.py**). Esto crea una cadena con los tres primeros valores del campo `genre` (si existen) y crea una `short_description` (descripción corta) que puede ser usada en el sitio de administración por este método.
 
@@ -230,7 +233,8 @@ Después de guardar el modelo y actualizar admin, recarga el sitio y ve a la pá
 
 El modelo `Genre` (y el modelo `Language`, si lo definiste) tiene un solo campo, por lo que no tiene sentido crear un modelo adicional para el mismo para desplegar campos adicionales.
 
-> **Nota:** Vale la pena actualizar el modelo `BookInstance` para mostrar al menos el estado y fecha de devolución esperada. ¡Lo hemos añadido como un reto al final de este artículo!
+> [!NOTE]
+> Vale la pena actualizar el modelo `BookInstance` para mostrar al menos el estado y fecha de devolución esperada. ¡Lo hemos añadido como un reto al final de este artículo!
 
 ### Añadir filtros de lista
 
@@ -249,7 +253,8 @@ La vista de lista incluirá ahora un cuadro de filtrado a la derecha. Nota como 
 
 Por defecto, las vistas detalladas organizan todos los campos verticalmente, en su órden de declaración en el modelo. Puedes cambiar el orden de declaración, qué campos se despliegan (o excluyen), si se usa secciones para organizar la información, si los campos se despliegan en horizontal o vertical, e incluso qué controles de edición se usan en los formularios de administración.
 
-> **Nota:** Los modelos de la **LocalLibrary** son relativamente simples, por lo que no tenemos una gran necesidad de cambiar el diseño; sin embargo haremos algunos cambios solo para mostrarte cómo.
+> [!NOTE]
+> Los modelos de la **LocalLibrary** son relativamente simples, por lo que no tenemos una gran necesidad de cambiar el diseño; sin embargo haremos algunos cambios solo para mostrarte cómo.
 
 #### Controlando qué campos son desplegados y ordenados
 
@@ -267,7 +272,8 @@ Reinicia tu aplicación y ve a la vista de detalle de autor — ahora debería a
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Nota:** Puedes también usar el atributo `exclude` para declarar una lista de atributos que se excluirán del formulario (todos los demás atributos en el modelo se desplegarán).
+> [!NOTE]
+> Puedes también usar el atributo `exclude` para declarar una lista de atributos que se excluirán del formulario (todos los demás atributos en el modelo se desplegarán).
 
 #### Seccionando la vista de detalle
 
@@ -318,7 +324,8 @@ Prueba recargando tu aplicación y observando la vista para un libro — ahora d
 
 En este caso, todo lo que hemos hecho es declarar nuestra clase encadenada tabular, que simplemente añade todos los campos del modelo _encadenado_. Puedes especificar toda clase de información adicional para el diseño incluyendo los campos a mostrar, su órden, si son solo de lectura o no, etc. (ve [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) para más información).
 
-> **Nota:** ¡hay algunas lamentables limitaciones a esta funcionalidad! En la captura de pantalla de arriba tenemos tres instancias del libro existentes, seguidas de tres lugares para nuevas instancias del libro (¡que se ven muy similares!). Sería mejor NO tener instancias extras por defecto del libro y simplemente añadirlas mediante el enlace **Add another Book instance**, o poder simplemente listar las `BookInstances` como enlaces no legibles desde aquí. La primera opción puede hacerse estableciendo el atributo `extra` a 0 en el modelo `BookInstanceInline`, inténtalo tú mismo.
+> [!NOTE]
+> ¡Hay algunas lamentables limitaciones a esta funcionalidad! En la captura de pantalla de arriba tenemos tres instancias del libro existentes, seguidas de tres lugares para nuevas instancias del libro (¡que se ven muy similares!). Sería mejor NO tener instancias extras por defecto del libro y simplemente añadirlas mediante el enlace **Add another Book instance**, o poder simplemente listar las `BookInstances` como enlaces no legibles desde aquí. La primera opción puede hacerse estableciendo el atributo `extra` a 0 en el modelo `BookInstanceInline`, inténtalo tú mismo.
 
 ## Rétate a tí mismo
 

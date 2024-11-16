@@ -9,7 +9,7 @@ slug: Web/SVG/Attribute/begin
 
 这个属性值是一个分号分隔的数列值。SMIL 规范的["Evaluation of begin and end time lists"](http://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists)章节详细解释了开始时间数列。每个单独的值可以是下述之一：`<offset-value>`、`<syncbase-value>`、`<event-value>`、`<repeat-value>`、`<accessKey-value>`、`<wallclock-sync-value>`或者关键词`indefinite`。
 
-## 用法
+## 使用说明
 
 | 类别     | 动画定时属性                                                                  |
 | -------- | ----------------------------------------------------------------------------- |

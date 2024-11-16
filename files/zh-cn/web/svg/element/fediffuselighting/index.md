@@ -9,7 +9,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

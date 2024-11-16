@@ -59,7 +59,8 @@ class WordCount extends HTMLParagraphElement {
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-> **Nota:** Note: The CustomElementsRegistry is available through the {{domxref("Window.customElements")}} property.
+> [!NOTE]
+> Note: The CustomElementsRegistry is available through the {{domxref("Window.customElements")}} property.
 
 ## Especificações
 

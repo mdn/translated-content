@@ -1,40 +1,48 @@
 ---
-title: Range.intersectsNode()
+title: Range：intersectsNode() 方法
 slug: Web/API/Range/intersectsNode
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("DOM")}} {{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
-**`Range.intersectsNode()`** 方法返回一个布尔值，表明其给定的 {{domxref("Node")}} 节点是否与{{domxref("Range")}}的范围相交
+**`Range.intersectsNode()`** 方法返回一个指示给定的 {{domxref("Node")}} 是否与 {{domxref("Range")}} 相交的布尔值。
 
-## Syntax
+## 语法
 
-```plain
-bool = range.intersectsNode( referenceNode )
+```js-nolint
+intersectsNode(referenceNode)
 ```
 
-### Parameters
+### 参数
 
-- _referenceNode_
-  - : 与{{domxref("Range")}}做比较的{{domxref("Node")}}节点
+- `referenceNode`
+  - : 与 {{domxref("Range")}} 进行比较的 {{domxref("Node")}}。
 
-## Example
+### 返回值
+
+布尔值。
+
+## 示例
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));
+const intersectingNode = range.intersectsNode(
+  document.getElementsByTagName("p").item(0),
+);
 ```
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

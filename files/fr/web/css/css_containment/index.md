@@ -95,7 +95,8 @@ Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on po
 
 En utilisant `contain: style`, on s'assure que les propriétés {{cssxref("counter-increment")}} et {{cssxref("counter-set")}} créent de nouveaux compteurs limités à ce sous-arbre.
 
-> **Note :** La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
+> [!NOTE]
+> La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
 
 ### Valeurs spéciales
 

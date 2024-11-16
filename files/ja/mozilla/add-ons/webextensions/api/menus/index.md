@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 ブラウザーのメニューシステムに項目を追加します。
 
-この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
+この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
 
 Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザーでも動くコードを書くことできます。
 
@@ -160,7 +160,8 @@ browser.menus.create(
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -101,7 +101,8 @@ MyClass.prototype.myMethod = function () {
 })();
 ```
 
-> **メモ:** プライベートフィールドとメソッドは、クラスにおける新しい機能であり、関数コンストラクターにおける同等の機能はありません。
+> [!NOTE]
+> プライベートフィールドとメソッドは、クラスにおける新しい機能であり、関数コンストラクターにおける同等の機能はありません。
 
 ### クラスの構築
 
@@ -418,7 +419,8 @@ class Color {
 }
 ```
 
-> **メモ:** このとき、`#` は特殊な識別子構文であり、フィールド名を文字列のように使用することはできないことに留意してください。`"#values" in anotherColor` は、プライベートフィールドではなく、文字通り `"#values"` というプロパティ名を探していくことになります。
+> [!NOTE]
+> このとき、`#` は特殊な識別子構文であり、フィールド名を文字列のように使用することはできないことに留意してください。`"#values" in anotherColor` は、プライベートフィールドではなく、文字通り `"#values"` というプロパティ名を探していくことになります。
 
 プライベートプロパティを使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
 
@@ -536,7 +538,8 @@ class MyClass {
 
 `Date` の例では、現在の日付を返す [`Date.now()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) メソッドにも遭遇しています。このメソッドは Date のインスタンスに属するものではなく、クラスそのものに属するものです。しかし、Dateインスタンスを扱うときに有益なメソッドであるため、グローバルな `DateNow()` 関数として公開するのではなく、`Date` クラスに搭載しています。
 
-> **メモ:** ユーティリティメソッドの接頭辞に、そのメソッドが扱うものを付けることは「名前空間化」と呼ばれ、良い習慣とされています。例えば、JavaScript では、古い接頭辞のない [`parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt) メソッドに加え、後から、数字を扱うためのメソッドであることを示すために [`Number.parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) メソッドが追加されました。
+> [!NOTE]
+> ユーティリティメソッドの接頭辞に、そのメソッドが扱うものを付けることは「名前空間化」と呼ばれ、良い習慣とされています。例えば、JavaScript では、古い接頭辞のない [`parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt) メソッドに加え、後から、数字を扱うためのメソッドであることを示すために [`Number.parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) メソッドが追加されました。
 
 [静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)は、クラスの個々のインスタンスではなく、クラス自体に定義されるクラス機能のグループです。これらの機能には、次のようなものがあります。
 

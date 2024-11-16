@@ -2,8 +2,10 @@
 title: aria-errormessage
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
 l10n:
-  sourceCommit: e18aa8e600733ebc25443075c563fd56361dfe98
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 オブジェクトの `aria-errormessage` 属性は、そのオブジェクトのエラーメッセージを表示する要素を特定します。
 
@@ -102,8 +104,3 @@ l10n:
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-
-<section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
-{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
-</section>

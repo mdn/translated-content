@@ -1,27 +1,30 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
+l10n:
+  sourceCommit: b4862a953a358b2f08a181e3a4051433cfa86ca0
 ---
 
 {{CSSRef}}
 
-**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} など、数多くの CSS プロパティで使用することができます。
+**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は数多くの CSS プロパティや記述子で使用することができます。例えば {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} プロパティや {{cssxref("@counter-style/range", "range")}} 記述子などです。
 
 ## 構文
 
 `<integer>` データ型は 1 桁から数桁の 10 進数、 0 から 9 までを含み、任意でその前に単一の `+` または `-` の符号が付きます。整数に関連付けられた単位はありません。
 
-> **メモ:** 公式には、有効な `<integer>` 値の範囲は決められていません。 Opera では 2^15 - 1、 IE では2^20 - 1 まで、その他のブラウザーではそれ以上の値に対応しています。 CSS3 Values の策定中には対応すべき最小範囲について多くの議論がありました。 [LC 段階の 2012 年 4 月の最新の決定](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html)では、 [-2^27 - 1; 2^27 - 1] でしたが、しかし 2^24 - 1 や 2^30 - 1 のような他の値も[提案されていました](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html)。しかし、最新の仕様書では範囲を定めなくなりました。
+> [!NOTE]
+> 有効な `<integer>` の値の公式な範囲はなく、仕様書は範囲を指定していません。
 
 ## 補間
 
-アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して補間されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で決められます。
+アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して{{Glossary("interpolation", "補間")}}されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で決められます。
 
 ## 例
 
 ### 有効な整数
 
-```
+```plain example-good
 12          正の整数 (先頭の + なし)
 +123        正の整数 (先頭の + あり)
 -456        負の整数

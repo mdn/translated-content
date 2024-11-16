@@ -99,7 +99,7 @@ l10n:
 
 - {{domxref("XMLHttpRequest.responseXML")}} プロパティは、受信したデータを解析する際にパースエラーが発生した場合に、先頭に \<parsererror> ノードを置いた部分的な {{domxref("Document")}} を返さないようになりました。代わりに、正しく `null` を返します ([Firefox バグ 289714](https://bugzil.la/289714))。
 - 最新の仕様書に合わせて、{{domxref("XMLHttpRequest.setRequestHeader()", "setRequestHeader()")}} で {{HTTPHeader("Accept")}} ヘッダーを設定していない {{domxref("XMLHttpRequest")}} は、値として `*/*` を設定した Accept ヘッダーを送信するようになりました ([Firefox バグ 918752](https://bugzil.la/918752))。
-- {{domxref("XMLHttpRequest.open()")}} で、パラメーター `username` および `password` を省略した場合の既定値を、仕様書に従って `null` にするよう修正しました ([Firefox バグ 933759](https://bugzil.la/933759))。
+- {{domxref("XMLHttpRequest.open()")}} で、引数 `username` および `password` を省略した場合の既定値を、仕様書に従って `null` にするよう修正しました ([Firefox バグ 933759](https://bugzil.la/933759))。
 
 ### WebRTC
 

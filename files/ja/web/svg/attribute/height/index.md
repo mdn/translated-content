@@ -648,7 +648,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 から `height` は幾何プロパティであり、この属性は `<foreignObject>` の CSS プロパティとしても使用することができます。
+> [!NOTE]
+> SVG2 から `height` は幾何プロパティであり、この属性は `<foreignObject>` の CSS プロパティとしても使用することができます。
 
 ## image
 
@@ -682,7 +683,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 から `height` は幾何プロパティであり、この属性は画像の CSS プロパティとしても使用することができます。
+> [!NOTE]
+> SVG2 から `height` は幾何プロパティであり、この属性は画像の CSS プロパティとしても使用することができます。
 
 ## mask
 
@@ -772,13 +774,15 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 から `height` は幾何プロパティであり、この属性は矩形の CSS プロパティとしても使用することができます。
+> [!NOTE]
+> SVG2 から `height` は幾何プロパティであり、この属性は矩形の CSS プロパティとしても使用することができます。
 
 ## svg
 
 {{SVGElement('svg')}} の場合、 `height` は SVG ビューポートの描画領域の垂直方向の長さを定義します。
 
-> **メモ:** HTML 文書内の {{SVGAttr('viewBox')}} 属性と `height` 属性の両方が省略された場合、 [svg 要素は高さ `150px` で表示されます](https://svgwg.org/specs/integration/#svg-css-sizing)。
+> [!NOTE]
+> HTML 文書内の {{SVGAttr('viewBox')}} 属性と `height` 属性の両方が省略された場合、 [svg 要素は高さ `150px` で表示されます](https://svgwg.org/specs/integration/#svg-css-sizing)。
 
 <table class="properties">
   <tbody>
@@ -808,7 +812,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 から `height` は幾何プロパティであり、この属性は `<svg>` の CSS プロパティとしても使用することができます。
+> [!NOTE]
+> SVG2 から `height` は幾何プロパティであり、この属性は `<svg>` の CSS プロパティとしても使用することができます。
 
 ## use
 
@@ -842,9 +847,11 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** 参照する要素が [viewBox](/ja/docs/Web/SVG/Attribute/viewBox) を持っていない限り、 `height` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbol` 要素を参照している場合にのみ効果があります。
+> [!NOTE]
+> 参照する要素が [viewBox](/ja/docs/Web/SVG/Attribute/viewBox) を持っていない限り、 `height` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbol` 要素を参照している場合にのみ効果があります。
 
-> **メモ:** SVG2 から `height` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。
+> [!NOTE]
+> SVG2 から `height` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。
 
 ## 仕様書
 

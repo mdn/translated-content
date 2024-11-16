@@ -3,7 +3,7 @@ title: position
 slug: Web/XPath/Functions/position
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `position` 関数は、式評価コンテキストのコンテキスト位置に等しい数値を返します。
 

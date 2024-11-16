@@ -2,14 +2,15 @@
 title: NavigatorUAData：getHighEntropyValues() 方法
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 l10n:
-  sourceCommit: 825bc25e89a95f985f329521bcededf073bb42b6
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 {{domxref("NavigatorUAData")}} 接口的 **`getHighEntropyValues()`** 方法是一个 {{jsxref("Promise")}}，它使用包含用户的*高熵*值的字典对象进行解析代理返回。
 
-> **备注：** 术语*高熵*和*低熵*是指这些值揭示的有关浏览器的信息量。作为属性返回的值被视为低熵，并且不太可能被用于识别用户。`getHighEntropyValues()` 返回的值可能会揭示更多信息。因此，这些值是通过 {{jsxref("Promise")}} 检索的，从而使浏览器有时间请求用户权限或进行其他检查。
+> [!NOTE]
+> 术语*高熵*和*低熵*是指这些值揭示的有关浏览器的信息量。作为属性返回的值被视为低熵，并且不太可能被用于识别用户。`getHighEntropyValues()` 返回的值可能会揭示更多信息。因此，这些值是通过 {{jsxref("Promise")}} 检索的，从而使浏览器有时间请求用户权限或进行其他检查。
 
 ## 语法
 

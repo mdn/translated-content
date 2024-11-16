@@ -1,19 +1,19 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
+l10n:
+  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
 ---
 
 {{JSRef}}
 
-**`Math.abs()`** 関数は、数値の絶対値を返します。
-
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>></mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(z)}} = {|z|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
+**`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
 {{EmbedInteractiveExample("pages/js/math-abs.html")}}
 
 ## 構文
 
-```
+```js-nolint
 Math.abs(x)
 ```
 
@@ -24,7 +24,7 @@ Math.abs(x)
 
 ### 返値
 
-与えられた数値の絶対値。
+`x` の絶対値です。`x` が負または `-0` の場合は、その反対の数である `-x` （非負の値）を返します。それ以外の場合、`x` 自体を返します。したがって、返値は常に正の値または `0` となります。
 
 ## 解説
 
@@ -32,9 +32,20 @@ Math.abs(x)
 
 ## 例
 
+### Math.abs() の使用
+
+```js
+Math.abs(-Infinity); // 無限大
+Math.abs(-1); // 1
+Math.abs(-0); // 0
+Math.abs(0); // 0
+Math.abs(1); // 1
+Math.abs(Infinity); // 無限大
+```
+
 ### Math.abs() の動作
 
-空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 {{jsxref("null")}} を渡すと空文字列を返し、空の配列は 0 を返します。
+空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を渡すと空文字列を返し、空の配列は 0 を返します。
 
 ```js
 Math.abs("-1"); // 1

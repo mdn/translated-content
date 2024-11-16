@@ -3,6 +3,8 @@ title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -12,7 +14,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ハイライト:
 
 - [ネットワークモニタの Security パネル](/ja/docs/Tools/Network_Monitor#Security)
-- [インスペクタのアニメーションパネル](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_37)
+- [インスペクターのアニメーションパネル](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_37)
 - [WebIDE でカスタムビルドステップの実行をサポート](/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Running_a_custom_build_step)
 
 [Firefox 36 から Firefox 37 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-01-12&chfield=resolution&query_format=advanced&chfieldfrom=2014-11-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11892733)
@@ -27,7 +29,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ### HTML
 
 - リンクを新しいタブで開く場合でも、`<a rel="noreferrer">` が機能するようになりました ([Firefox バグ 1031264](https://bugzil.la/1031264))。
-- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
+- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルターします ([Firefox バグ 826176](https://bugzil.la/826176))。
 
 ### JavaScript
 
@@ -58,7 +60,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 - [Web workers](/ja/docs/Web/API/Web_Workers_API) で [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使用できるようになりました ([Firefox バグ 701634](https://bugzil.la/701634))。
 - WebGL 2.0 の実験的な実装を進めています!
 
-  - バッファオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
+  - バッファーオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
 
 - `KeyboardEvent.key` のキー名の一部を、[最新の DOM Level 3 Events 仕様](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html)に準拠するよう変更しました。[MDN で KeyboardEvent.key の値の一覧表](/ja/docs/Web/API/KeyboardEvent.key#Key_values)をご覧ください。緑色のセルが新たな値です。また、紫色の値は変更される可能性があります。これらの値を使用する場合は注意してください (キー名の変更に関するメタバグは [Firefox バグ 900372](https://bugzil.la/900372) です)。
 - {{domxref("Console")}} インターフェイスが {{domxref("ServiceWorker")}} および {{domxref("SharedWorker")}} で動作するようになりました。これらは以前から使用できましたが、動作しない状態でした ([Firefox バグ 1058644](https://bugzil.la/1058644))。
@@ -77,7 +79,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバが対応していれば使用できます。
+- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバーが対応していれば使用できます。
 
 ## セキュリティ
 

@@ -99,7 +99,8 @@ Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen
 
 ### Styles embarqués non fiables
 
-> **Note :** Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> [!NOTE]
+> Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
 
 Vous pouvez autoriser les styles embarqués en spécifiant la valeur `'unsafe-inline'`, des nonces ou des empreintes correspondant à la feuille de style.
 

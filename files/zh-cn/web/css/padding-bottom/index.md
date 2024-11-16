@@ -1,61 +1,82 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-CSS 属性 **padding-bottom** 是指一个元素在内边距区域（padding area）中下方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。
+**`padding-bottom`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了元素底部[内边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内边距区域)的高度。
 
-![The effect of the CSS padding-bottom property on the element box](/files/4109/padding-bottom.svg)
+{{EmbedInteractiveExample("pages/css/padding-bottom.html")}}
+
+内边距区域是指一个元素的内容和边框之间的区域。
+
+![CSS padding-bottom 属性对元素盒子的影响](padding-bottom.svg)
+
+> [!NOTE]
+> 通过 {{cssxref("padding")}} 属性，只需一次声明，就可以为元素的所有四边设置内边距。
+
+## 语法
 
 ```css
-/* <length> values */
+/* <length> 值 */
 padding-bottom: 0.5em;
 padding-bottom: 0;
 padding-bottom: 2cm;
 
-/* <percentage> value */
+/* <percentage> 值 */
 padding-bottom: 10%;
 
-/* Global values */
+/* 全局值 */
 padding-bottom: inherit;
 padding-bottom: initial;
+padding-bottom: revert;
+padding-bottom: revert-layer;
 padding-bottom: unset;
 ```
 
+`padding-bottom` 属性可以从下面的列表中指定一个值。与 margin 不同，padding 不允许使用负值。
+
+### 值
+
+- {{cssxref("&lt;length&gt;")}}
+  - : 作为定值的内边距尺寸。必须是非负值。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行内尺寸（水平语言中的*宽度*，由 {{cssxref("writing-mode")}} 定义）的百分比。必须是非负值。
+
+### 形式定义
+
 {{cssinfo}}
 
-## Syntax
-
-### Values
-
-- {{cssxref("length")}}
-  - : 当内边距（padding）大小是一个固定单位数值的时候，一定不能为负数。
-- {{cssxref("percentage")}}
-
-  - : 当内边距（padding）是一个百分比的时候，百分比是和本身包含的元素的宽度有关的，同样一定不能为负数。
-
-### Formal syntax
+## 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
-```
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+### 使用像素和百分比值设置下内边距
+
+```css
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [CSS Box Model](/zh-CN/CSS/box_model)
-- The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, `padding-bottom`, and {{cssxref("padding-left")}}.
+- [CSS 基本盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}、{{cssxref("padding-right")}}、{{cssxref("padding-left")}} 和简写属性 {{cssxref("padding")}}
+- 映射的逻辑属性：{{cssxref("padding-block-start")}}、{{cssxref("padding-block-end")}}、{{cssxref("padding-inline-start")}} 和 {{cssxref("padding-inline-end")}} 以及简写属性 {{cssxref("padding-block")}} 和 {{cssxref("padding-inline")}}

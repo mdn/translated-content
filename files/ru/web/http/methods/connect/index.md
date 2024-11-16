@@ -60,7 +60,7 @@ Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

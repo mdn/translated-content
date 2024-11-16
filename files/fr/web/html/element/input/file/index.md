@@ -13,7 +13,7 @@ Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`**
 
 L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
 
-> **Note :**
+> [!NOTE]
 >
 > 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Using_files_from_web_applications#getting_information_about_selected_files).
 > 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
@@ -69,7 +69,8 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que le contrôle permet de sélectionner un/des répertoires plutôt qu'un/des fichiers. Voir {{domxref("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
 
-> **Note :** Bien que cet attribut ait initialement été implémenté pour les navigateurs WebKit, `webkitdirectory` est utilisable avec Microsoft Edge et pour Firefox 50 et supérieurs. Toutefois, bien que la prise en charge soit assez vaste, cet attribut reste non-standard et ne doit pas être utilisé.
+> [!NOTE]
+> Bien que cet attribut ait initialement été implémenté pour les navigateurs WebKit, `webkitdirectory` est utilisable avec Microsoft Edge et pour Firefox 50 et supérieurs. Toutefois, bien que la prise en charge soit assez vaste, cet attribut reste non-standard et ne doit pas être utilisé.
 
 ## Identifiants de type de fichier
 
@@ -113,7 +114,8 @@ Ce fragment de code HTML produira le résultat suivant :
 
 {{EmbedLiveSample('Un_exemple_simple', 650, 60)}}
 
-> **Note :** Vous pouvez également trouver cet exemple sur GitHub — [avec le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) et [la démonstration](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> Vous pouvez également trouver cet exemple sur GitHub — [avec le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) et [la démonstration](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur, l'élément `<input type="file">` fournit un bouton qui ouvre un sélecteur de fichier permettant de choisir un fichier.
 
@@ -134,7 +136,8 @@ Chaque objet `File` contient les informations suivantes :
 - `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossaire/Type_MIME) du fichier.
 - `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Element/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
-> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
+> [!NOTE]
+> Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
 
 ### Restreindre les types de fichiers acceptés
 
@@ -175,7 +178,8 @@ Voici le résultat produit :
 
 {{EmbedLiveSample('Restreindre_les_types_de_fichiers_acceptés', 650, 60)}}
 
-> **Note :** Vous pouvez également consulter cet exemple sur GitHub — [voir le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html) et [la démonstration _live_](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!NOTE]
+> Vous pouvez également consulter cet exemple sur GitHub — [voir le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html) et [la démonstration _live_](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 Le résultat peut sembler similaire à l'exemple précédent mais lorsque vous essayer de sélectionner un fichier, vous verrez que le sélecteur ne permet de sélectionner que les fichiers du/des type(s) indiqué(s) (il peut y avoir certaines différences selons les navigateurs et les systèmes d'exploitation).
 
@@ -199,7 +203,8 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 Dans l'exemple qui suit, on présente sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
 
-> **Note :** Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
+> [!NOTE]
+> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
 
 Tout d'abord, voici le fragment de code HTML utilisé :
 
@@ -298,7 +303,8 @@ var preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Note :** La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> [!NOTE]
+> La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrirons juste après.
 

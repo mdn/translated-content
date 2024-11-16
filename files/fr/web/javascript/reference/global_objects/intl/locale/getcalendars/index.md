@@ -51,7 +51,8 @@ La propriété `calendar` renvoie un tableau de l'ensemble des calendriers pris 
   - : Calendrier de la République de Chine
 - `islamicc`
   - : Calendrier arabe civil (algorithmique)
-    > **Attention :** La clé `islamicc` a été dépréciée. Mieux vaut utiliser `islamic-civil`.
+    > [!WARNING]
+    > La clé `islamicc` a été dépréciée. Mieux vaut utiliser `islamic-civil`.
 
 ## Exemples
 

@@ -3,6 +3,8 @@ title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -11,9 +13,9 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ハイライト:
 
-- [インスペクタで ::before および ::after 疑似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
+- [インスペクターで ::before および ::after 擬似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
 - [CSS ソースマップがデフォルトで有効になりました](/ja/docs/Tools/Style_Editor#Source_map_support)。
-- [インスペクタから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
+- [インスペクターから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
 
 [Firefox 34 から Firefox 35 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176)
 
@@ -86,7 +88,7 @@ _変更なし。_
 ## ネットワークおよびセキュリティ
 
 - AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720) および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594))。
-- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
+- HTTP/2 の `alt-svc` ヘッダーをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
 - HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点

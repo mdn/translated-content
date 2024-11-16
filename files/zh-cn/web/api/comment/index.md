@@ -30,4 +30,4 @@ _该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#DOM_%E6%8E%A5%E5%8F%A3)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#dom_接口)

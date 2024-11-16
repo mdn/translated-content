@@ -9,7 +9,7 @@ slug: Web/API/Selection/anchorNode
 
 **`Selection.anchorNode`** 只读属性返回选区开始位置所属的节点（{{domxref("Node")}}）。
 
-## 用法
+## 语法
 
 ```plain
 sel.anchorNode

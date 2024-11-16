@@ -13,7 +13,8 @@ slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 
 首先，你需要找出要记录的 CSS 属性。你可能已经注意到某个页面的缺失，或者你在我们的[议题列表](https://github.com/mdn/content/issues)中看到了缺失的内容。要了解 CSS 属性的详细信息，你需要找到相关的规范（例如，[W3C 规范](https://www.w3.org/Style/CSS/)，或者用于渲染引擎（如 Gecko 或 Blink）的非标准属性的错误报告）。
 
-> **备注：** 使用 W3C 规范时，请始终使用**编辑草案**（Editor's Draft，请注意左侧的红色横幅），而不是已发布的版本（例如，工作草案）。编辑草案总是更接近最终版本！
+> [!NOTE]
+> 使用 W3C 规范时，请始终使用**编辑草案**（Editor's Draft，请注意左侧的红色横幅），而不是已发布的版本（例如，工作草案）。编辑草案总是更接近最终版本！
 
 如果实现和规范不一致，请在实现错误中提及。可能有以下几种情况：
 

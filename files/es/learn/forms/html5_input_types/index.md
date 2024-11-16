@@ -28,7 +28,8 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
   </tbody>
 </table>
 
-> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> [!NOTE]
+> La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
 
 Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_widgets).
 
@@ -54,7 +55,8 @@ En algunos dispositivos, en particular dispositivos táctiles con teclados diná
 
 ![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> **Nota:** Puedes encontrar ejemplos sobre los tipos de entrada de texto básicos en [Ejemplos input básicos](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html)).
+> [!NOTE]
+> Puedes encontrar ejemplos sobre los tipos de entrada de texto básicos en [Ejemplos input básicos](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html)).
 
 Mejorar la experiéncia del usuario para usuarios con estos dispositivos, es otra buena razón para utilizar estos tipos de input más recientes.
 
@@ -66,7 +68,8 @@ Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplic
 
 Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn/Forms/Form_validation) en un artículo posterior.
 
-> **Nota:** Si los datos introducidos no son una dirección de correo electrónico, habrá coincidéncia con la pseudo clase {{cssxref(':invalid')}}, y la propiedad {{domxref('validityState.typeMismatch')}} devolverá `true`.
+> [!NOTE]
+> Si los datos introducidos no son una dirección de correo electrónico, habrá coincidéncia con la pseudo clase {{cssxref(':invalid')}}, y la propiedad {{domxref('validityState.typeMismatch')}} devolverá `true`.
 
 ## Campo de búsqueda
 
@@ -116,7 +119,8 @@ Mira el siguiente ejemplo tomado de Firefox para Android:
 
 ![firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
-> **Nota:** Solo porque el URL esté bien formado no significa necesariamente que la dirección al que hace referéncia exista!
+> [!NOTE]
+> Solo porque el URL esté bien formado no significa necesariamente que la dirección al que hace referéncia exista!
 
 ## Campo numérico
 
@@ -144,7 +148,8 @@ El segundo crea un control numérico cuyo valor está restringido a cualquier va
 
 El tipo de input `number` tiene sentido cuando esté limitado el rango de valores válidos, por ejemplo la edad de una persona o su altura. Si el rango es demasiado grande para que los cambios de incremento tengan sentido ( por ejemplo los códigos postales de USA, cuyo rango va de `00001` a `99999`), entonces sería una mejor opción utilizar el tipo `tel`: proporciona el teclado numérico mientras que omite el componente de interfaz de usuario de los deslizadores de número.
 
-> **Nota:** En versiones inferiores a la 10 de Internet Explorer no se soportan las entradas `number`
+> [!NOTE]
+> En versiones inferiores a la 10 de Internet Explorer no se soportan las entradas `number`
 
 ## Slider controls
 

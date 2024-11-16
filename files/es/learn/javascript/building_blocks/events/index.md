@@ -54,7 +54,8 @@ Cuando uno de estos bloques de código se configura para ejecutarse en respuesta
 Nota: Los manejadores de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia a dos mecanismos que trabajan juntos.
 Los detectores de eventos están pendientes a que ocurra un evento, mientras que el manejador es el código que se ejecuta en respuesta del evento.
 
-> **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las API del navegador.
+> [!NOTE]
+> Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las API del navegador.
 
 ### Un ejemplo: manejando un evento de clic
 
@@ -321,15 +322,18 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Nota:** Puedes encontrar el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) de este ejemplo en Github (además [mira cómo se ejecuta en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!NOTE]
+> Puedes encontrar el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) de este ejemplo en Github (además [mira cómo se ejecuta en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Aquí puedes ver que estamos incluyendo un objeto evento **e** en la función, y dentro de nuestra función estamos cambiando el estilo de color de fondo sobre `e.target`, que es el botón como tal.
 La propiedad `target` del objeto evento siempre es una referencia al elemento sobre el cual ocurrió el evento.
 Por lo tanto, en este ejemplo, estamos estableciendo el color de fondo aleatorio en el botón, no la página.
 
-> **Nota:** Mira la sección de [delegación de Eventos](#event_delegation) más abajo para ver un ejemplo donde usamos `event.target`.
+> [!NOTE]
+> Mira la sección de [delegación de Eventos](#event_delegation) más abajo para ver un ejemplo donde usamos `event.target`.
 
-> **Nota:** Puedes utilizar cualquier nombre para el objeto evento, simplemente debes elegir un nombre que puedas usar para hacer referencia a él dentro de la función manejadora.
+> [!NOTE]
+> Puedes utilizar cualquier nombre para el objeto evento, simplemente debes elegir un nombre que puedas usar para hacer referencia a él dentro de la función manejadora.
 > `e`/`evt`/`event` son los nombres más comunes utilizados por desarrolladores porque son cortos y fáciles de recordar.
 > Siempre es bueno ser consistente, contigo mismo y los demás siempre que sea posible.
 
@@ -420,7 +424,8 @@ El resultado es el siguiente:
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
-> **Nota:** Para ver el código fuente completo, aquí tienes el archivo [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (también puedes [verlo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aquí).
+> [!NOTE]
+> Para ver el código fuente completo, aquí tienes el archivo [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (también puedes [verlo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aquí).
 
 ## Burbujeo de eventos
 
@@ -759,9 +764,11 @@ El resultado es de la siguiente forma (intenta hacer clic alreador):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **Nota:** En este ejemplo, estamos usando `event.target` para obtener el elemento objetivo del evento (es decir, el elemento más interno). Si queremos acceder al elemento que manejó el evento (en este caso, el contenedor), podemos usar `event.currentTarget`.
+> [!NOTE]
+> En este ejemplo, estamos usando `event.target` para obtener el elemento objetivo del evento (es decir, el elemento más interno). Si queremos acceder al elemento que manejó el evento (en este caso, el contenedor), podemos usar `event.currentTarget`.
 
-> **Nota:** Ve el archivo [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) para el código completo; además velo [ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aquí.
+> [!NOTE]
+> Ve el archivo [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) para el código completo; además velo [ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aquí.
 
 ## No es solamente en paǵinas web
 

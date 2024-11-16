@@ -85,7 +85,8 @@ console.log(o.a); // 5
 
 ### Usando un nombre de propiedad computado
 
-> **Nota:** Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
+> [!NOTE]
+> Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
 
 ```js
 const expr = "foo";

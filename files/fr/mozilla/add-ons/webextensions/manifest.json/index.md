@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 
 {{AddonSidebar}}
 
-> **Note :** Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
+> [!NOTE]
+> Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
 
 Le fichier `manifest.json` est le seul fichier que toute extension basée sur les API WebExtension doit contenir.
 
@@ -37,7 +38,8 @@ browser.runtime.getManifest().version;
 
 Le bloc qui suit illustre la syntaxe de certaines des clés les plus fréquemment utilisées.
 
-> **Note :** Il ne s'agit pas d'un exemple prêt à copier-coller. Lorsque vous développez une extension, sélectionnez avec soin les clés dont vous avez besoin.
+> [!NOTE]
+> Il ne s'agit pas d'un exemple prêt à copier-coller. Lorsque vous développez une extension, sélectionnez avec soin les clés dont vous avez besoin.
 
 Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples).
 

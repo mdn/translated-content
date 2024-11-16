@@ -42,7 +42,8 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
 
 JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할 때 아주 유용하죠. 데이터에 접근하기 위해서는 네이티브 JSON 객체로 변환될 필요가 있습니다. 별로 큰 문제는 아닌 것이 Javascript는 [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) 전역 객체를 통해 문자열과 JSON 객체의 상호변환을 지원합니다.
 
-> **참고:** 문자열에서 네이티브 객체로 변환하는 것은 파싱(Parsing)이라고 합니다. 네트워크를 통해 전달할 수 있게 객체를 문자열로 변환하는 과정은 문자열화(Stringification)이라고 합니다.
+> [!NOTE]
+> 문자열에서 네이티브 객체로 변환하는 것은 파싱(Parsing)이라고 합니다. 네트워크를 통해 전달할 수 있게 객체를 문자열로 변환하는 과정은 문자열화(Stringification)이라고 합니다.
 
 개별 JSON 객체를 `.json` 확장자를 가진 단순 텍스트 파일에 저장할 수 있습니다. {{glossary("MIME 타입")}}은 `application/json` 입니다.
 
@@ -109,7 +110,8 @@ superHeroes["members"][1]["powers"][2];
 4. 이 객체에서 `powers` 프로퍼티에 접근하려면 `["powers"]`를 입력합니다.
 5. `powers` 프로퍼티 안에는 위에서 선택한 hero의 superpower들이 있습니다. 세 번째 것을 선택해야 하므로 `[2]`.
 
-> **참고:** 위에서 볼 수 있듯 [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 예제에서 JSON 내 변수([source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html) 참고)를 만들었다. 당신 브라우저의 Javascript 콘솔을 통하여 이 코드를 로드하고 그 변수 안에 얻을 수 있는 데이터에 접근해보자.
+> [!NOTE]
+> 위에서 볼 수 있듯 [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 예제에서 JSON 내 변수([source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html) 참고)를 만들었다. 당신 브라우저의 Javascript 콘솔을 통하여 이 코드를 로드하고 그 변수 안에 얻을 수 있는 데이터에 접근해보자.
 
 ### JSON에서의 배열
 
@@ -291,9 +293,11 @@ function showHeroes(jsonObj) {
 5. 현재 히어로의 초능력을 반복 실행할 또다른 `for` 반복문을 사용합니다. 하나의 객체씩 `<li>` 를 생성하고, 그 안에 초능력을 집어 넣고, `appendChild()`를 사용하여 '`myList'` 라는 `<ul>` 안에 `listItem` 을 집어 넣습니다.
 6. 마지막으로 `<article>` (`myArticle`) 안에 `<h2>`, `<p>`, 그리고 `<ul>` 넣은 뒤, `<section>` 안에 `<article>`을 넣어 줍니다. 요소가 추가되어 지는 순서가 중요해요.왜냐하면 HTML 내에 보여질 거거든요.
 
-> **참고:** 만약 실습에 문제를 겪고 있다면, [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 코드를 참조하세요. ([running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) 또한 보세요.)
+> [!NOTE]
+> 만약 실습에 문제를 겪고 있다면, [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 코드를 참조하세요. ([running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) 또한 보세요.)
 
-> **참고:** 만약 우리가 주로 사용하는 JavaScript 객체에 접근하기 위한 점/괄호 표기법을 따르는데 문제를 겪고 있다면, 다른 탭이나 당신의 선호하는 텍스트 에디터에 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 파일을 여는 것이 도움이 될 것이다. 또한 당신은 점/괄호 표기법에 대한 다른 정보를 위해 [JavaScript object basics](/ko/docs/Learn/JavaScript/Objects/Basics) 글을 다시 확인하는 것을 권합니다.
+> [!NOTE]
+> 만약 우리가 주로 사용하는 JavaScript 객체에 접근하기 위한 점/괄호 표기법을 따르는데 문제를 겪고 있다면, 다른 탭이나 당신의 선호하는 텍스트 에디터에 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 파일을 여는 것이 도움이 될 것이다. 또한 당신은 점/괄호 표기법에 대한 다른 정보를 위해 [JavaScript object basics](/ko/docs/Learn/JavaScript/Objects/Basics) 글을 다시 확인하는 것을 권합니다.
 
 ## 객체와 문자 사이의 변환
 

@@ -53,7 +53,7 @@ JSON.stringify({ value: rawJSON });
 // {"value":12345678901234567890}
 ```
 
-この例については、[損失のない数値のシリアライズ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers)を参照してください。
+この例については、[損失のない数値のシリアライズ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#json_数値の使用)を参照してください。
 
 `JSON.rawJSON()` に文字列を渡しましたが、最終的な JSON では数値になることに注意してください。これは、文字列が JSON のテキストをそのまま表しているからです。文字列をシリアライズしたい場合は、 `JSON.rawJSON()` に引用符で囲まれた文字列値を使用してください。
 

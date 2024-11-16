@@ -3,7 +3,10 @@ title: WAI ARIA ライブリージョン/API 対応
 slug: Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 ---
 
-> **警告:** これらの注釈は、スクリーンリーダーの開発者向けです。 開発者は、[ARIA ライブリージョン開発者のドキュメント](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があります。
+{{FirefoxSidebar}}
+
+> [!WARNING]
+> これらの注釈は、スクリーンリーダーの開発者向けです。 開発者は、[ARIA ライブリージョン開発者のドキュメント](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があります。
 
 Firefox 3 には、Mozilla エンジンがドキュメントのライブ変更を公開する方法に対する重要な改善が含まれています。
 

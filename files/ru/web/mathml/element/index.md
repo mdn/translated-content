@@ -3,6 +3,8 @@ title: Справка по элементам MathML
 slug: Web/MathML/Element
 ---
 
+{{MathMLRef}}
+
 Здесь представлен алфавитный список **презентационных (presentation)** элементов MathML.
 
 Термин **презентационная разметка (presentation markup)** используется для описания разметки отображения математической системы обозначений, тогда как **разметка содержимого (content markup)** обеспечивает базовый математический смысл и не должна воспроизводиться парсером MathML (смотрите [Firefox bug 276028](https://bugzil.la/276028)). Если вы хотите узнать больше о разметке контента, вы можете изучить [Chapter 4](http://www.w3.org/TR/MathML3/chapter4.html) из [спецификации MathML 3](http://www.w3.org/TR/MathML3/).
@@ -97,7 +99,7 @@ slug: Web/MathML/Element
 - [`<annotation>`](/ru/docs/MathML/Element/semantics) (Data annotations)
 - [`<annotation-xml>`](/ru/docs/MathML/Element/semantics) (XML annotations)
 
-## See also
+## Смотрите также
 
 - [MathML](/ru/docs/Web/MathML)
 - [MathML attribute reference](/ru/docs/Web/MathML/Attribute)

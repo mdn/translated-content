@@ -62,7 +62,8 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 1. 安装 Node.js 8.11 及以上的版本。
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) 或 [yarn](https://yarnpkg.com/)。
 
-> **备注：** 如果你还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
+> [!NOTE]
+> 如果你还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
 
 安装 CLI，终端中运行以下命令：
 
@@ -90,7 +91,8 @@ yarn global add @vue/cli
 
 如果你以前从未运行过 Vue CLI，则会再有一个问题——你将被要求选择一个包管理器，它默认为 yarn。从现在开始，Vue CLI 将默认使用此包管理器。如果你此后需要使用不同的包管理器，则可以在运行 `vue create` 时传入参数 `--packageManager=<package-manager>`。因此，如果你想要使用 `npm` 创建 `moz-todo-vue` 项目，并且之前选择了 `yarn`，则应运行 `vue create moz-todo-vue --packageManager=npm`。
 
-> **备注：** 我们这里并没有列举所有的配置项，如果你想了解更多信息可以访问 [Vue 官方文档](https://cli.vuejs.org/)的 CLI 部分。
+> [!NOTE]
+> 我们这里并没有列举所有的配置项，如果你想了解更多信息可以访问 [Vue 官方文档](https://cli.vuejs.org/)的 CLI 部分。
 
 ## 项目结构
 
@@ -105,7 +107,8 @@ yarn global add @vue/cli
   - `favicon.ico`：这个是项目的图标，当前就是一个 Vue 的 logo。
   - `index.html`：这是应用的模板文件，Vue 应用会通过这个 HTML 页面来运行，也可以通过 lodash 这种模板语法在这个文件里插值。
 
-    > **备注：** 这个不是负责管理页面最终展示的模板，而是管理 Vue 应用之外的静态 HTML 文件，一般只有在用到一些高级功能的时候才会修改这个文件。
+    > [!NOTE]
+    > 这个不是负责管理页面最终展示的模板，而是管理 Vue 应用之外的静态 HTML 文件，一般只有在用到一些高级功能的时候才会修改这个文件。
 
 - `src`：这个是 Vue 应用的核心代码目录
 
@@ -114,7 +117,8 @@ yarn global add @vue/cli
   - `components`：这是用来存放自定义组件的目录，目前里面会有一个示例组件。
   - `assets`：这个目录用来存放像 CSS、图片这种静态资源，但是因为它们属于代码目录下，所以可以用 webpack 来操作和处理。意思就是你可以使用一些预处理比如 [Sass/SCSS](https://sass-lang.com/) 或者 [Stylus](https://stylus-lang.com/)。
 
-> **备注：** 根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 `views` 的文件夹）。
+> [!NOTE]
+> 根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 `views` 的文件夹）。
 
 ## .vue 文件（单文件组件）
 
@@ -132,7 +136,8 @@ yarn global add @vue/cli
 
 `<template>` 包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及一些我们接下来要讲的 Vue 特定的语法。
 
-> **备注：** 通过设置 `<template>` 标签的 `lang` 属性，例如可以通过设置 `<template lang="pug">` 就可以在使用 Pug 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是你还是值得知道这种可行的方式。
+> [!NOTE]
+> 通过设置 `<template>` 标签的 `lang` 属性，例如可以通过设置 `<template lang="pug">` 就可以在使用 Pug 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是你还是值得知道这种可行的方式。
 
 `<script>` 包含组件中所有的非显示逻辑，最重要的是，`<script>` 标签需要默认导出一个 JS 对象。该对象是你在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个包含 template 模板的对象会被处理和转换成为一个有 `render()` 函数的 Vue 组件。
 
@@ -150,11 +155,13 @@ export default {
 };
 ```
 
-> **备注：** 如果想要使用 [TypeScript](https://www.typescriptlang.org/) 语法，你应该将 `<script>` 标签的 `lang` 属性设置为 `<script lang="ts">` 来告诉编译器你要使用 TypeScript。
+> [!NOTE]
+> 如果想要使用 [TypeScript](https://www.typescriptlang.org/) 语法，你应该将 `<script>` 标签的 `lang` 属性设置为 `<script lang="ts">` 来告诉编译器你要使用 TypeScript。
 
 组件的 CSS 应该写在 `<style>` 标签里，如果你添加了 `scoped` 属性（形如 `<style scoped>`），Vue 会把样式的范围限制到单文件组件的内容里。这个是类似于 CSS-in-JS 的解决方案，只不过允许书写纯粹的 CSS。
 
-> **备注：** 如果通过 CLI 创建项目时选择了 CSS 预处理器，则可以将 `lang` 属性添加到 `<style>` 标签中，以便 Webpack 可以在构建时处理内容。例如，`<style lang ="scss">` 将允许你在样式信息中使用 SCSS 语法。
+> [!NOTE]
+> 如果通过 CLI 创建项目时选择了 CSS 预处理器，则可以将 `lang` 属性添加到 `<style>` 标签中，以便 Webpack 可以在构建时处理内容。例如，`<style lang ="scss">` 将允许你在样式信息中使用 SCSS 语法。
 
 ## 本地运行程序
 
@@ -162,7 +169,7 @@ Vue CLI 带有内置的开发服务器。这样一来，你就可以在本地运
 
 在你的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。你的终端应输出类似以下内容：
 
-```
+```plain
 INFO  Starting development server...
 98% after emitting CopyPlugin
 

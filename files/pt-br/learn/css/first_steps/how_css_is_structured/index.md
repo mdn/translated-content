@@ -204,7 +204,8 @@ h1, h2, .intro
 
 **Tente criar algumas regras CSS que usem os seletores acima e algum HTML para ser estilizado por eles. Se você não souber o que significa alguma das sintaxes acima, tente procurar no MDN!**
 
-> **Nota:** Você aprenderá muito mais sobre seletores em nossos tutoriais [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors), no próximo módulo.
+> [!NOTE]
+> Você aprenderá muito mais sobre seletores em nossos tutoriais [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors), no próximo módulo.
 
 ### Especificidade
 
@@ -403,7 +404,8 @@ Não tentaremos ensinar isso exaustivamente agora - você encontrará muitos exe
 
 **Tente adicionar as declarações acima ao seu CSS para ver como elas afetam o estilo do seu HTML. Tente experimentar com alguns valores diferentes.**
 
-> **Aviso:** Embora os atalhos geralmente permitam que você deixe de fora valores, eles então redefinem quaisquer valores que você não incluir para seus valores iniciais. Isso garante que um conjunto sensato de valores seja usado. No entanto, isso pode ser confuso se você estiver esperando que o atalho apenas mude os valores que passou.
+> [!WARNING]
+> Embora os atalhos geralmente permitam que você deixe de fora valores, eles então redefinem quaisquer valores que você não incluir para seus valores iniciais. Isso garante que um conjunto sensato de valores seja usado. No entanto, isso pode ser confuso se você estiver esperando que o atalho apenas mude os valores que passou.
 
 ## Comentários
 

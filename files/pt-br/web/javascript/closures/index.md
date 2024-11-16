@@ -25,7 +25,7 @@ init();
 
 A função `init()` cria uma variável local chamada `name`, e depois define uma função chamada `displayName()`. `displayName()` é uma função aninhada (uma _closure_) — ela é definida dentro da função `init()`, e está disponivel apenas dentro do corpo daquela função. Diferente de init(), `displayName()` não tem variáveis locais próprias, e ao invés disso reusa a variável `name` declarada na função pai.
 
-[Rode](http://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
+[Rode](https://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
 
 ## Closure
 
@@ -169,7 +169,8 @@ O ambiente compartilhado é criado no corpo de uma função anônima, da qual é
 
 Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável `privateCounter` e à função `changeBy`.
 
-> **Nota:** Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
+> [!NOTE]
+> Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
 
 ```js
 var makeCounter = function () {
@@ -203,7 +204,8 @@ alert(Counter2.value()); /* Alerts 0 */
 
 Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função `makeCounter()` é diferente a cada vez que ocorre. A variável `privateCounter` contém uma instância diferente a cada vez.
 
-> **Nota:** Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
+> [!NOTE]
+> Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
 
 ## Criando closures dentro de loops: Um erro comum
 

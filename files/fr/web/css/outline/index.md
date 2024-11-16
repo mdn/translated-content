@@ -39,7 +39,8 @@ outline: unset;
 
 La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance.
 
-> **Note :** Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
+> [!NOTE]
+> Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
 
 ### Valeurs
 

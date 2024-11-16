@@ -3,11 +3,9 @@ title: FormData.has()
 slug: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`has()`**方法会返回一个布尔值，表示该{{domxref("FormData")}}对象是否含有某个 key。
-
-> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 可用。
 
 ## 语法
 

@@ -1,5 +1,5 @@
 ---
-title: Mozilla - Быстрый старт!
+title: Начало работы с MDN Web Docs
 slug: MDN/Community/Contributing/Getting_started
 ---
 

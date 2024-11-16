@@ -3,7 +3,7 @@ title: generate-id
 slug: Web/XPath/Functions/generate-id
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `generate-id`関数は、指定されたノード集合の最初のノードの一意の ID を生成し、その ID を含む文字列を返します。
 
@@ -30,7 +30,7 @@ generate-id( [node-set] )
 
 - 生成された ID は、その後の変換では同じではない可能性があります
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ### 定義
 

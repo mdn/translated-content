@@ -62,7 +62,7 @@ l10n:
 
 - `script.getRealms` の基本的なサポートを追加しました。現在は、window レルムと sandbox レルムを含む `WindowRealmInfo` 型に限定されています ([Firefox バグ 1766240](https://bugzil.la/1766240))。
 
-- `browsingContext.load` イベントをサポートしました。これは、ブラウジングコンテキストのウィンドウの `load` イベントをきっかけにして発生します ([Firefox バグ 1756619](https://bugzil.la/1756619))。
+- `browsingContext.load` イベントをサポートしました。これは、閲覧コンテキストのウィンドウの `load` イベントをきっかけにして発生します ([Firefox バグ 1756619](https://bugzil.la/1756619))。
 
 - シリアライズしたリモートの値向けの強い参照を保持するための、オブジェクト参照ストアを追加しました ([Firefox バグ 1770736](https://bugzil.la/1770736))。
 

@@ -60,7 +60,8 @@ slug: Web/API/Request
 - {{domxref("Request.text()")}}
   - : 返回 promise，其兑现值为请求主体的文本表示形式。
 
-> **备注：** 这些请求主体上的函数只能运行一次，随后的调用将出现 TypeError 错误，表明请求主体流已被使用。
+> [!NOTE]
+> 这些请求主体上的函数只能运行一次，随后的调用将出现 TypeError 错误，表明请求主体流已被使用。
 
 ## 示例
 
@@ -98,7 +99,8 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **备注：** body 只能是一个 {{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、{{domxref("ReadableStream")}} 或 {{jsxref("String")}} 对象，也可以是一个字符串字面量，因此增加一个 JSON 对象的有效载荷则需要字符串化该对象。
+> [!NOTE]
+> body 只能是一个 {{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、{{domxref("ReadableStream")}} 或 {{jsxref("String")}} 对象，也可以是一个字符串字面量，因此增加一个 JSON 对象的有效载荷则需要字符串化该对象。
 
 然后，通过将 `Request` 对象作为参数传递给 {{domxref("fetch()")}} 调用来获取此请求，并取得响应，例如：
 

@@ -35,7 +35,8 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-> **备注：** 为了避免 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)所带来的歧义，[表达式语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Expression_statement)不能以关键字 `async function` 开头。`async function` 关键字仅在上下文中无法接受语句时，才会被视为表达式的开头。
+> [!NOTE]
+> 为了避免 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)所带来的歧义，[表达式语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Expression_statement)不能以关键字 `async function` 开头。`async function` 关键字仅在上下文中无法接受语句时，才会被视为表达式的开头。
 
 ### 参数
 

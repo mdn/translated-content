@@ -53,7 +53,8 @@ Esse elemento admite apenas os [global attributes](/pt-BR/docs/HTML/Global_attri
 
 ## Notas sobre o uso
 
-> **Note:** O elemento `<hgroup>` foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.
+> [!NOTE]
+> O elemento `<hgroup>` foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.
 > Considerando que a finalidade do elemento `<hgroup>` é a de definir a maneira como os títulos serão mostrados pelo [outline algorithm definido na especificação da HTML](/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm) e considerando ainda que o **outline algorithm da HTML não está implementado em nenhum navegador**, conclui-se que, na prática, a semântica do elemento `<hgroup>` é meramente teórica.
 > A especificação do W3C para a HTML5 fornece algumas sugestões para a marcação de [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sem que se use o elemento `<hgroup>`.
 

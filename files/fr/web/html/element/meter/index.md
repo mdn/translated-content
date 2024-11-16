@@ -29,7 +29,8 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 
   - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
 
-    > **Note :** il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
+    > [!NOTE]
+    > Il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
     >
     > ```html
     > Utilisation de l'espace de stockage:
@@ -110,7 +111,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
     </tr>
     <tr>
       <th scope="row"><dfn>Omission de balises</dfn></th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row"><dfn>Parents autorisés</dfn></th>

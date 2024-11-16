@@ -3,6 +3,8 @@ title: "HTMLMediaElement: timeupdate"
 slug: Web/API/HTMLMediaElement/timeupdate_event
 ---
 
+{{APIRef("HTMLMediaElement")}}
+
 El evento `timeupdate` es llamado cuando el tiempo indicado por el atributo `currentTime` es actualizado.
 
 La frecuencia del evento depende de la carga del sistema, pero se encuentra en un rango de 4Hz y 66Hz (asumiendo que los manejadores de eventos no toman mas de 250ms para correr). Se recomienda a los User agents variar la frecuencia del evento basados en la carga del sistema y el costo promedio de procesamiento del evento cada vez que corre, para que las actualizaciones a la UI no sean mas frecuentes que las que el user agent puede manejar confortablemente mientras se decodifica el video.

@@ -11,7 +11,8 @@ Typically, an element's `offsetHeight` is a measurement in pixels of the element
 
 For the document body object, the measurement includes total linear content height instead of the element's CSS height. Floated elements extending below other linear content are ignored.
 
-> **Nota:** This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Syntax
 

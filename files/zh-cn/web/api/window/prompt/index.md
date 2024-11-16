@@ -48,7 +48,7 @@ sign = window.prompt("你觉得很幸运吗？", "是的"); // 打开显示提�
 
 以上提示框显示如下（在 macOS 的 Chrome 浏览器上）：
 
-[![macOS 上 Chrome 中的 prompt() 对话框](prompt.png)](prompt.png)
+![macOS 上 Chrome 中的 prompt() 对话框](prompt.png)
 
 ## 注意事项
 

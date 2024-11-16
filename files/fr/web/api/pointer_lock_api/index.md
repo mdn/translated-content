@@ -113,7 +113,8 @@ function lockError(e) {
 }
 ```
 
-> **Note :** Jusqu'à Firefox 50, les événements ci-dessus étaient préfixés avec `moz`.
+> [!NOTE]
+> Jusqu'à Firefox 50, les événements ci-dessus étaient préfixés avec `moz`.
 
 ## Extensions aux événements de souris
 

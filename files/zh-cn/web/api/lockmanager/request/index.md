@@ -2,7 +2,7 @@
 title: LockManager：request() 方法
 slug: Web/API/LockManager/request
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
@@ -36,7 +36,7 @@ request(name, options, callback)
 
     - `mode` {{optional_inline}}
 
-      - : `"exclusive"` 或 `"shared"` 之一。默认值是· `"exclusive"`。
+      - : `"exclusive"` 或 `"shared"` 之一。默认值是 `"exclusive"`。
 
     - `ifAvailable` {{optional_inline}}
 
@@ -46,7 +46,8 @@ request(name, options, callback)
 
       - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队中的锁请求。默认值为 `false`。
 
-        > **警告：** 小心使用！之前在锁内运行的代码会继续运行，并且可能与现在持有锁的代码发生冲突。
+        > [!WARNING]
+        > 小心使用！之前在锁内运行的代码会继续运行，并且可能与现在持有锁的代码发生冲突。
 
     - `signal` {{optional_inline}}
       - : 一个 {{domxref("AbortSignal")}}（{{domxref("AbortController")}} 的 {{domxref("AbortController.signal", "signal")}} 属性）；如果指定并且 {{domxref("AbortController")}} 被中止，则锁请求将被丢弃（如果尚未授予）。
@@ -56,7 +57,7 @@ request(name, options, callback)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}}，在锁释放后解析（或拒绝）回调结果，或者拒绝若请求中止。
+一个 {{jsxref('Promise')}}，在锁释放后兑现（或拒绝）回调结果，或者在请求中止时拒绝。
 
 ### 异常
 
@@ -67,9 +68,9 @@ request(name, options, callback)
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果无法获取当前环境的锁管理器，则抛出该异常。
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : 如果 `name` 以连字符（`-`）开头，或选项 `steal` 和 `ifAvailable` 均为 `true`，或者选项 `signal` 存在且选项 `steal` 或 `ifAvailable` 为 `true`。
+  - : 如果 `name` 以连字符（`-`）开头且 `steal` 和 `ifAvailable` 选项均为 `true`，或选项 `signal` 存在且 `steal` 或 `ifAvailable` 选项为 `true` 时，则抛出该异常。
 - `AbortError` {{domxref("DOMException")}}
-  - : 如果选项 `signal` 存在并且被中止，则抛出该异常。
+  - : 如果 `signal` 选项存在并且被中止，则抛出该异常。
 
 ## 示例
 

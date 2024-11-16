@@ -3,7 +3,7 @@ title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 ---
 
-{{APIRef("События DOM")}}
+{{APIRef("UI Events")}}
 
 Ключ события {{domxref("KeyboardEvent")}} **`key`** доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как <kbd>Shift</kbd> , а также локаль и раскладку клавиатуры. Его значение определяется следующим образом:
 
@@ -151,7 +151,8 @@ btnClearConsole.addEventListener("click", (e) => {
 
 {{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-> **Примечание:** On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{event("beforeinput")}} and {{event("input")}} events, you may get incorrect output on those lines of the log output.
+> [!NOTE]
+> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{event("beforeinput")}} and {{event("input")}} events, you may get incorrect output on those lines of the log output.
 
 ### Case 1
 

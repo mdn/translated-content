@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.seekable
+title: "HTMLMediaElement: seekable プロパティ"
+short-title: seekable
 slug: Web/API/HTMLMediaElement/seekable
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: c3be131cfd2c33822cb36b21cb4fca78980a6b4e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -35,6 +36,6 @@ for (let count = 0; count < timeRangesObject.length; count++) {
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.seekable` プロパティを定義しているインターフェイス
 - [メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)
-- [メディアのバッファリング、シーク、時間の範囲](/ja/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [メディアのバッファリング、シーク、時間の範囲](/ja/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)

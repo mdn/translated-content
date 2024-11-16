@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)、[独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)、[関数の返値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)を理解したかどうかを判定することです。
 
-> **メモ:** コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
+> [!NOTE]
+> コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
 > エラーがある場合、ページの結果パネルまたはブラウザーの JavaScript コンソールでログ出力するので、助けになります。
 >
 > もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
@@ -28,7 +29,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions1-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -48,7 +49,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions2-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -64,7 +65,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions3-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -76,6 +77,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions4.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions4-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。

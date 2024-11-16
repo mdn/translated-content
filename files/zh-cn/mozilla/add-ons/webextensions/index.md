@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 扩展或者说是附加组件，拥有可以修改、增强浏览器的能力。用于 Firefox 的扩展，使用跨浏览器的 WebExtensions API 技术来构建。
 
-用于构建 Firefox 扩展的技术在很大程度上与被基于 Chromium 内核的浏览器（例如谷歌 Chrome 浏览器，微软 Edge 浏览器，Opera 浏览器，Vivaldi 浏览器）所支持的[扩展 API](https://developer.chrome.com/extensions) 所兼容。在大多数情况下，为基于 Chromium 内核浏览器而写的插件只需要[少许修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 中运行。
+用于构建 Firefox 扩展的技术在很大程度上与被基于 Chromium 内核的浏览器（例如谷歌 Chrome 浏览器，微软 Edge 浏览器，Opera 浏览器，Vivaldi 浏览器）所支持的[扩展 API](https://developer.chrome.google.cn/docs/extensions) 所兼容。在大多数情况下，为基于 Chromium 内核浏览器而写的插件只需要[少许修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 中运行。
 
 ## 核心资源
 
@@ -18,7 +18,8 @@ slug: Mozilla/Add-ons/WebExtensions
 - Firefox 工作流
   - : 了解如何为 Firefox 构建、发布扩展：在[扩展工作坊](https://extensionworkshop.com/)了解开发者工具，发布和移植的基本原理。
 
-> **备注：** 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
+> [!NOTE]
+> 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
 
 ## 开始
 

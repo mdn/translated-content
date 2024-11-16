@@ -39,7 +39,8 @@ l10n:
 
 `@document` 目前只在 Firefox 火狐浏览器中支持。如果你想在非 Firefox 火狐浏览器中使用此功能，你可以尝试使用由 @An-Error94 提供的 [polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill)，它使用了用户脚本、[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)和[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)的组合。
 
-> **备注：** 这个属性还有一个带有 `-moz-` 的前缀版本——`@-moz-document`。在 Firefox 火狐浏览器 59 的 Nightly 和 Beta 版本中，此版本已被限制仅在用户和 UA 样式表中使用——这是一个旨在减轻潜在的 CSS 注入攻击的实验性特性。（请参阅 [Firefox bug 1035091](https://bugzil.la/1035091)）。
+> [!NOTE]
+> 这个属性还有一个带有 `-moz-` 的前缀版本——`@-moz-document`。在 Firefox 火狐浏览器 59 的 Nightly 和 Beta 版本中，此版本已被限制仅在用户和 UA 样式表中使用——这是一个旨在减轻潜在的 CSS 注入攻击的实验性特性。（请参阅 [Firefox bug 1035091](https://bugzil.la/1035091)）。
 
 ## 形式语法
 

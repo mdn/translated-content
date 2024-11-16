@@ -2,10 +2,10 @@
 title: "後読みアサーション: (?<=...), (?<!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 **後読みアサーション**の「後読み」とは、それ以前の入力を指定されたパターンに照合しようとしますが、入力を消費することはありません。照合に成功した場合、入力の現在の位置はそのままです。パターン内のそれぞれのアトムは、逆順に照合します。
 
@@ -67,8 +67,8 @@ getPrice("10.53"); // undefined
 
 ## 関連情報
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [入力境界アサーション: `^`, `$`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [単語境界アサーション: `\b`, `\B`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [先読みアサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)

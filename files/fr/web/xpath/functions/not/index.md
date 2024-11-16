@@ -3,7 +3,7 @@ title: not
 slug: Web/XPath/Functions/not
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `not` évalue une expression booléenne et retourne la valeur opposée.
 

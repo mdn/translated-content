@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[イベント入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)の記事を理解したかどうかを判定することです。
 
-> **メモ:** コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
+> [!NOTE]
+> コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
 > エラーがある場合、ページの結果パネルまたはブラウザーの JavaScript コンソールでログ出力するので、助けになります。
 >
 > もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
@@ -30,7 +31,7 @@ HTML は変更しないでください。 JavaScript のみを変更してくだ
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events1-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -46,7 +47,7 @@ HTML は変更しないでください。 JavaScript のみを変更してくだ
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 650)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events2-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -60,6 +61,6 @@ HTML は変更しないでください。 JavaScript のみを変更してくだ
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 600)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events3-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。

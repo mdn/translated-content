@@ -23,7 +23,8 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
   - : Le nom associé au groupe.
 
-    > **Note :** L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/Legend) du `<fieldset>`.
+    > [!NOTE]
+    > L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/Legend) du `<fieldset>`.
 
 ## Mise en forme avec CSS
 

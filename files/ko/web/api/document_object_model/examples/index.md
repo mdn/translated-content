@@ -49,14 +49,16 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       이미지 1: 높이, 너비, 스타일 없음
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       이미지 2: 높이="50", 너비="500", 스타일 없음
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -64,7 +66,7 @@ slug: Web/API/Document_Object_Model/Examples
       이미지 3: 높이, 너비 없음, 스타일="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
     <div id="output"></div>

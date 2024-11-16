@@ -31,7 +31,8 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 Каждое доступное событие имеет **обработчик событий** — блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы **регистрируем обработчик событий**. Обратите внимание, что обработчики событий иногда называют слушателями событий (от англ. event listeners). Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик — это код, который запускается в ответ на событие.
 
-> **Примечание:** Важно отметить, что веб-события не являются частью основного языка JavaScript. Они определены как часть JavaScript-API, встроенных в браузер.
+> [!NOTE]
+> Важно отметить, что веб-события не являются частью основного языка JavaScript. Они определены как часть JavaScript-API, встроенных в браузер.
 
 ### Простой пример
 
@@ -142,7 +143,8 @@ function bgChange() {
 }
 ```
 
-> **Примечание:** вы можете найти [полный исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> [!NOTE]
+> Вы можете найти [полный исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 Значение атрибута — это буквально код JavaScript, который вы хотите запустить при возникновении события. В приведённом выше примере вызывается функция, определённая внутри элемента {{htmlelement ("script")}} на той же странице, но вы также можете вставить JavaScript непосредственно внутри атрибута, например:
 
@@ -176,7 +178,8 @@ buttons.forEach(function (button) {
 });
 ```
 
-> **Примечание:** Разделение логики вашей программы и вашего контента также делает ваш сайт более дружественным к поисковым системам.
+> [!NOTE]
+> Разделение логики вашей программы и вашего контента также делает ваш сайт более дружественным к поисковым системам.
 
 ### Функции addEventListener() и removeEventListener()
 
@@ -194,7 +197,8 @@ function bgChange() {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Примечание:** вы можете найти [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> [!NOTE]
+> Вы можете найти [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Внутри функции `addEventListener()` мы указываем два параметра — имя события, для которого мы хотим зарегистрировать этот обработчик, и код, содержащий функцию обработчика, которую мы хотим запустить в ответ. Обратите внимание, что будет целесообразно поместить весь код внутри функции `addEventListener()` в анонимную функцию, например:
 
@@ -249,7 +253,8 @@ element.onclick = function2;
 etc.
 ```
 
-> **Примечание:** Если вам требуется поддержка браузеров старше Internet Explorer 8 в вашем проекте, вы можете столкнуться с трудностями, так как такие старые браузеры используют старые модели событий из более новых браузеров. Но не бойтесь, большинство библиотек JavaScript (например, `jQuery`) имеют встроенные функции, которые абстрагируют различия между браузерами. Не беспокойтесь об этом слишком много на этапе вашего учебного путешествия.
+> [!NOTE]
+> Если вам требуется поддержка браузеров старше Internet Explorer 8 в вашем проекте, вы можете столкнуться с трудностями, так как такие старые браузеры используют старые модели событий из более новых браузеров. Но не бойтесь, большинство библиотек JavaScript (например, `jQuery`) имеют встроенные функции, которые абстрагируют различия между браузерами. Не беспокойтесь об этом слишком много на этапе вашего учебного путешествия.
 
 ## Другие концепции событий
 
@@ -270,11 +275,13 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Примечание:** вы можете найти [исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) для этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!NOTE]
+> Вы можете найти [исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) для этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Итак в коде выше мы включаем объект события **`e`** в функцию, а в функции — настройку стиля фона для `e.target`, который является кнопкой. Свойство объекта события `target` всегда является ссылкой на элемент, с которым только что произошло событие. Поэтому в этом примере мы устанавливаем случайный цвет фона на кнопке, а не на странице.
 
-> **Примечание:** Вместо `e`/`evt`/`event` можно использовать любое имя для объекта события, которое затем можно использовать для ссылки на него в функции обработчика событий. `e`/`evt`/`event` чаще всего используются разработчиками, потому что они короткие и легко запоминаются. И хорошо придерживаться стандарта.
+> [!NOTE]
+> Вместо `e`/`evt`/`event` можно использовать любое имя для объекта события, которое затем можно использовать для ссылки на него в функции обработчика событий. `e`/`evt`/`event` чаще всего используются разработчиками, потому что они короткие и легко запоминаются. И хорошо придерживаться стандарта.
 
 `e.target` применяют, когда нужно установить один и тот же обработчик событий на несколько элементов и, когда на них происходит событие, применить определённое действие к ним ко всем. Например, у вас может быть набор из 16 плиток, которые исчезают при нажатии. Полезно всегда иметь возможность просто указать, чтобы объект исчез, как `e.target`, вместо того, чтобы выбирать его более сложным способом. В следующем примере (см. исходный код на [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html),а как он работает можно посмотреть [здесь](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)), мы создаём 16 элементов {{htmlelement ("div")}} с использованием JavaScript. Затем мы выберем все из них, используя {{domxref ("document.querySelectorAll()")}}, и с помощью цикла `for` выберем каждый из них, добавив обработчик `onclick` к каждому так, чтобы случайный цвет применялся к каждому клику:
 
@@ -390,7 +397,8 @@ form.onsubmit = function (e) {
 
 {{ EmbedLiveSample('Предотвращение_поведения_по_умолчанию', '100%', 140) }}
 
-> **Примечание:** чтобы увидеть исходный код, откройте [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (также [запустите](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) здесь).
+> [!NOTE]
+> Чтобы увидеть исходный код, откройте [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (также [запустите](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) здесь).
 
 ### Всплытие и перехват событий
 
@@ -576,9 +584,11 @@ video.onclick = function (e) {
 
 Вы можете попробовать создать локальную копию [show-video-box.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) и попробовать его самостоятельно исправить или просмотреть исправленный результат в [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (также см. [исходный код здесь](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
 
-> **Примечание:** Зачем беспокоиться как с захватом, так и с всплыванием? Что ж, в старые добрые времена, когда браузеры были менее совместимы, чем сейчас, Netscape использовал только захват событий, а Internet Explorer использовал только всплывающие события. Когда W3C решил попытаться стандартизировать поведение и достичь консенсуса, они в итоге получили эту систему, которая включала в себя и то, и другое, что реализовано в одном из современных браузеров.
+> [!NOTE]
+> Зачем беспокоиться как с захватом, так и с всплыванием? Что ж, в старые добрые времена, когда браузеры были менее совместимы, чем сейчас, Netscape использовал только захват событий, а Internet Explorer использовал только всплывающие события. Когда W3C решил попытаться стандартизировать поведение и достичь консенсуса, они в итоге получили эту систему, которая включала в себя и то, и другое, что реализовано в одном из современных браузеров.
 
-> **Примечание:** Как упоминалось выше, по умолчанию все обработчики событий регистрируются в фазе всплытия и это имеет смысл в большинстве случаев. Если вы действительно хотите зарегистрировать событие в фазе захвата, вы можете сделать это, зарегистрировав обработчик с помощью [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) и установив для третьего дополнительного свойства значение `true`.
+> [!NOTE]
+> Как упоминалось выше, по умолчанию все обработчики событий регистрируются в фазе всплытия и это имеет смысл в большинстве случаев. Если вы действительно хотите зарегистрировать событие в фазе захвата, вы можете сделать это, зарегистрировав обработчик с помощью [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) и установив для третьего дополнительного свойства значение `true`.
 
 #### **Делегирование** события
 

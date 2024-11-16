@@ -21,7 +21,8 @@ slug: Web/HTML/Element/fieldset
   - : Этот атрибут принимает значение атрибута `id` элемента {{HTMLElement("form")}}, с которой вам нужно связать `<fieldset>`, даже если он находится вне формы.
 - `name`
   - : Имя, связанное с группой.
-    > **Примечание:** Заголовок для \<fieldset> устанавливается первым {{HTMLElement("legend")}} внутри него.
+    > [!NOTE]
+    > Заголовок для \<fieldset> устанавливается первым {{HTMLElement("legend")}} внутри него.
 
 ## Стилизация с CSS
 
@@ -76,7 +77,7 @@ slug: Web/HTML/Element/fieldset
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [корневой раздел](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document), [listed](/ru/docs/HTML/Content_categories#form_listed), [контент форм](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82_%D1%84%D0%BE%D1%80%D0%BC), явный контент. |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                  | Необязательный элемент {{HTMLElement("legend")}}, следующий в основном потоке.                                                                                                                                                                                                                                                                                                                                                              |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Пропуск тегов                                          | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                            |
 | Допустимые родители                                    | Любой элемент основного потока                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Допустимые ARIA-роли                                   | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                                                                                                                                                          |
 | DOM-интерфейс                                          | {{domxref("HTMLFieldSetElement")}}                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -89,7 +90,7 @@ slug: Web/HTML/Element/fieldset
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Другие связанные элементы:
 

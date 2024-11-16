@@ -9,7 +9,8 @@ slug: Web/API/Blob/size
 
 Renvoie la taille du fichier en octets.
 
-> **Note :** Cette propriété est dépréciée. Utilisez {{domxref("Blob.size")}} à la place.
+> [!NOTE]
+> Cette propriété est dépréciée. Utilisez {{domxref("Blob.size")}} à la place.
 
 ## Syntaxe
 

@@ -82,7 +82,8 @@ slug: Learn/Server-side/First_steps/Introduction
 
 再者，儘管用戶端與伺服端程式碼都使用框架，但會因為非常不同的域，而使得框架也不同。用戶端網頁框架簡化佈局與呈現的任務，而伺服端網頁框架則提供大量＂通用＂的網頁伺服器功能，否則你可能必須要自己實現（例如：對 sessions 的支援、對使用者認證的支援、簡易資料庫存取、樣板庫等）。
 
-> **備註：** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.
+> [!NOTE]
+> Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.
 >
 > In contrast, you would almost never consider writing the server-side component of a web app without a framework — implementing a vital feature like an HTTP server is really hard to do from scratch in say Python, but Python web frameworks like Django provide one out of the box, along with other very useful tools.
 
@@ -106,7 +107,8 @@ slug: Learn/Server-side/First_steps/Introduction
 
 由於資訊存在於資料庫中，它可以輕易地與其他商業系統進行分享與更新（例如：當產品在線上或在店家中售完，店家可能會更新該產品的庫存資料庫）。
 
-> **備註：** Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:
+> [!NOTE]
+> Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:
 >
 > 1. Go to [Amazon](https://www.amazon.com) or some other e-commerce site.
 > 2. Search for a number of keywords and note how the page structure doesn't change, even though the results do.
@@ -139,7 +141,8 @@ slug: Learn/Server-side/First_steps/Introduction
 - 社交網路如 Facebook 允許使用者全權控制他們自己的資料，但是只有允許他們的朋友檢視或評論資料。該使用者決定誰能看到他們的資料，並推廣到他們的動態中會呈現誰的資料 — 授權是使用者體驗的核心部分！
 - 你正所在的網站控制內容的存取：文章可被任何人看見，但是只有使用者登入才能編輯該內容。若要試試看，點擊本頁面上方的**編輯**按鈕 — 如果你已登入，你將會顯示編輯視窗；如果你沒有登入，你將會被導到註冊頁面。
 
-> **備註：** Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
+> [!NOTE]
+> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
 
 ### 儲存 session/state 資訊
 
@@ -147,7 +150,8 @@ slug: Learn/Server-side/First_steps/Introduction
 
 例如，這允許網站了解一個使用者先前已登入過，以及將訂購歷史紀錄在他們的電子郵件中顯示連結，或者也許會儲存一個基本的遊戲狀態，讓使用者能再次回到網站的同時，拿回他們留在網站的資訊。
 
-> **備註：** Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. [The Age](http://www.theage.com.au/)). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.
+> [!NOTE]
+> Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. [The Age](http://www.theage.com.au/)). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.
 
 ### 提醒與溝通
 
@@ -159,7 +163,8 @@ slug: Learn/Server-side/First_steps/Introduction
 - Amazon 定期發送產品電子郵件來提供相近於曾經已購買或你可能有興趣瀏覽的產品。
 - 一個網頁伺服器可能會發送警告訊息給網站管理員，以警示伺服器的記憶體過低或有嫌疑的使用者型為。
 
-> **備註：** The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.
+> [!NOTE]
+> The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.
 
 ### 資料分析
 
@@ -167,7 +172,8 @@ slug: Learn/Server-side/First_steps/Introduction
 
 例如，Amazon 與 Google 都根據過往搜尋（與購買）紀錄來廣告產品。
 
-> **備註：** If you're a Facebook user, go to your main feed and look at the stream of posts. Note how some of the posts are out of numerical order - in particular, posts with more "likes" are often higher on the list than more recent posts.
+> [!NOTE]
+> If you're a Facebook user, go to your main feed and look at the stream of posts. Note how some of the posts are out of numerical order - in particular, posts with more "likes" are often higher on the list than more recent posts.
 >
 > Also look at what kind of ads you are being shown — you might see ads for things you looked at on other sites. Facebook's algorithm for highlighting content and advertising can be a bit of a mystery, but it is clear that it does depend on your likes and viewing habits!
 

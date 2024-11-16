@@ -31,7 +31,8 @@ Agora você poderá aprender um pouco sobre a Teoria do Javascript e o que você
 
 Nós não esperamos que você entenda todo o código imediatamente - Apenas queremos ensinar-lhe os melhores conceitos por enquanto e dar a você uma idéia de como o JavaScript (e outras linguagens de programação) funcionam. Em artigos posteriores você vai rever todos esses recursos com muito mais detalhes!
 
-> **Nota:** Muitos dos recursos de código que você verá no JavaScript são iguais aos de outra linguagem de programação - funções, loops, etc. A sintaxe do código parece diferente, mas os conceitos ainda são praticamente os mesmos.
+> [!NOTE]
+> Muitos dos recursos de código que você verá no JavaScript são iguais aos de outra linguagem de programação - funções, loops, etc. A sintaxe do código parece diferente, mas os conceitos ainda são praticamente os mesmos.
 
 ## Pensando como um Programador
 
@@ -250,7 +251,8 @@ No nosso exemplo:
 
 - As últimas duas variáveis (contagemPalpites e botaoReinicio) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).
 
-> **Nota:** Você irá aprender muito mais sobre variáveis a partir do [próximo artigo](/pt-BR/docs/user:chrisdavidmills/variables).
+> [!NOTE]
+> Você irá aprender muito mais sobre variáveis a partir do [próximo artigo](/pt-BR/docs/user:chrisdavidmills/variables).
 
 ### Funções
 
@@ -276,7 +278,8 @@ conferirPalpite();
 
 Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós definimos uma função em nosso código que cria um alerta a qualquer hora em que a chamarmos.
 
-> **Nota:** Você irá aprender muito mais sobre funções mais tarde no curso.
+> [!NOTE]
+> Você irá aprender muito mais sobre funções mais tarde no curso.
 
 ### Operadores
 

@@ -50,7 +50,8 @@ El elemento insertado o `null`, si la inserción falla.
 <!-- afterend -->
 ```
 
-> **Nota:** Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
+> [!NOTE]
+> Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
 
 ## Ejemplo
 

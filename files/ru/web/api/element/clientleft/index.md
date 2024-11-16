@@ -11,7 +11,8 @@ slug: Web/API/Element/clientLeft
 
 Когда [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
 
-> **Примечание:** Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Syntax
 

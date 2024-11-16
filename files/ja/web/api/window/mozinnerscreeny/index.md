@@ -7,7 +7,8 @@ slug: Web/API/Window/mozInnerScreenY
 
 `mozInnerScreenY` は {{domxref("Window")}} のプロパティで、ウィンドウのビューポートにおける左上隅の Y 座標をスクリーン座標で返します。
 
-> **メモ:** この座標は CSS ピクセルで報告され、ハードウェアピクセルではありません。
+> [!NOTE]
+> この座標は CSS ピクセルで報告され、ハードウェアピクセルではありません。
 
 ## 値
 

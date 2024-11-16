@@ -300,7 +300,8 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
 
 3. Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !
 
-> **Note :** Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Résumé
 

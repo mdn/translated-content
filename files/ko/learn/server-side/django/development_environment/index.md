@@ -259,7 +259,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 이 코드들은 우분트에서도 같은 코드이지만, startup 파일은 당신의 홈 디렉토리에 위치하며 다른 이름 **.bash_profile**을 가진 숨겨진 파일입니다.
 
-> **참고:** 파인더(finder)에서**.bash-profile** 파일을 찾을 수 없다면, 터미널에서 nano를 이용해 이 파일을 열 수 있습니다.
+> [!NOTE]
+> 파인더(finder)에서**.bash-profile** 파일을 찾을 수 없다면, 터미널에서 nano를 이용해 이 파일을 열 수 있습니다.
 >
 > 터미널 명령은 대체로 아래와 같습니다 :
 >

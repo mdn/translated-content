@@ -7,9 +7,11 @@ slug: Web/API/WheelEvent
 
 **`WheelEvent`** 接口表示用户滚动鼠标滚轮或类似的输入设备时触发的事件。
 
-> **备注：** 该事件为标准规定的滚轮事件接口。早期的浏览器实现过 `MouseWheelEvent` 和 {{DOMxRef("MouseScrollEvent")}} 两种滚轮事件接口，但这两种接口皆非标准，加之各浏览器间对其兼容性极差。因而开发者应使用该标准事件接口取代这两个非标准接口。
+> [!NOTE]
+> 该事件为标准规定的滚轮事件接口。早期的浏览器实现过 `MouseWheelEvent` 和 {{DOMxRef("MouseScrollEvent")}} 两种滚轮事件接口，但这两种接口皆非标准，加之各浏览器间对其兼容性极差。因而开发者应使用该标准事件接口取代这两个非标准接口。
 
-> **备注：** 不要混淆 {{domxref("Element/wheel_event", "wheel")}} 事件和 {{domxref("Element/scroll_event", "scroll")}} 事件。`wheel` 事件的默认动作取决于浏览器实现。因此 `wheel` 事件不一定会触发 `scroll` 事件。即便 `wheel` 事件引发了文档内容的滚动行为，也不表示 `wheel` 事件中的 `delta*` 值恰好反映文档内容的滚动方向。因此，不要依赖 `delta*` 属性获知文档内容的滚动方向。而应该在 `scroll` 事件中监听目标的 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 的变化以推断滚动方向。
+> [!NOTE]
+> 不要混淆 {{domxref("Element/wheel_event", "wheel")}} 事件和 {{domxref("Element/scroll_event", "scroll")}} 事件。`wheel` 事件的默认动作取决于浏览器实现。因此 `wheel` 事件不一定会触发 `scroll` 事件。即便 `wheel` 事件引发了文档内容的滚动行为，也不表示 `wheel` 事件中的 `delta*` 值恰好反映文档内容的滚动方向。因此，不要依赖 `delta*` 属性获知文档内容的滚动方向。而应该在 `scroll` 事件中监听目标的 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 的变化以推断滚动方向。
 
 {{InheritanceDiagram}}
 

@@ -30,7 +30,8 @@ getContext(contextType, contextAttributes)
     - `"webgpu"`: これは、WebGPU レンダーパイプライン用の 3 次元レンダリングコンテキストを表す {{domxref("GPUCanvasContext")}} オブジェクトを作成するものです。このコンテキストは、[WebGPU API](/ja/docs/Web/API/WebGPU_API) を実装しているブラウザーでのみ利用できます。
     - `"bitmaprenderer"`: 指定された{{domxref("ImageBitmapRenderingContext")}}でキャンバスのコンテンツを置き換える機能のみを提供します。
 
-    > **メモ:** 識別子 `"experimental-webgl"` は、WebGL の新しい実装で使用されます。これらの実装は、テストスイート適合性に達していないか、プラットフォームのグラフィックドライバーがまだ安定していないかのいずれかです。[Khronos Group](https://www.khronos.org/) が、一定の[適合性ルール](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)のもと、WebGL 実装を認証しています。
+    > [!NOTE]
+    > 識別子 `"experimental-webgl"` は、WebGL の新しい実装で使用されます。これらの実装は、テストスイート適合性に達していないか、プラットフォームのグラフィックドライバーがまだ安定していないかのいずれかです。[Khronos Group](https://www.khronos.org/) が、一定の[適合性ルール](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)のもと、WebGL 実装を認証しています。
 
 - `contextAttributes` {{optional_inline}}
 
@@ -88,7 +89,8 @@ getContext(contextType, contextAttributes)
     - `xrCompatible`
       - : 論理値で、[没入型 XR 機器](/ja/docs/Web/API/WebXR_Device_API)に対応したグラフィックアダプターを使用するよう、ユーザーエージェントに示唆します。コンテキスト生成時にこの同期フラグを設定することは推奨されません。XR セッションを始めるには、非同期の {{domxref("WebGLRenderingContext.makeXRCompatible()")}} メソッドを呼び出す必要があります。
 
-    > **メモ:** WebGPU 仕様書では、`getContext()` に固有のコンテキスト属性を定義していません。その代わりに、{{domxref("GPUCanvasContext.configure()")}} メソッドで構成オプションを提供しています。
+    > [!NOTE]
+    > WebGPU 仕様書では、`getContext()` に固有のコンテキスト属性を定義していません。その代わりに、{{domxref("GPUCanvasContext.configure()")}} メソッドで構成オプションを提供しています。
 
 ### 返値
 

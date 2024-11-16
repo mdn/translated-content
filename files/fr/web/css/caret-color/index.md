@@ -9,7 +9,8 @@ La propriété CSS **`caret-color`** définit la couleur du curseur visible à l
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-> **Note :** Les agents utilisateurs peuvent considérer que d'autres objets doivent être impactés par cette propriété : par exemple le curseur de navigation, qui ressemble au curseur de saisie et qui peut être déplacé sur un texte non-éditable. En revanche, bien que l'icône du curseur de la souris puisse ressembler à un curseur de saisie lorsque {{cssxref("cursor")}} vaut `auto` ou `text` ou `vertical-text`, celle-ci n'est pas modifiée par cette propriété. Pour certains navigateurs qui ne prennent pas en charge cette propriété, la couleur du curseur de saisie n'est pas associée à la couleur de la police.
+> [!NOTE]
+> Les agents utilisateurs peuvent considérer que d'autres objets doivent être impactés par cette propriété : par exemple le curseur de navigation, qui ressemble au curseur de saisie et qui peut être déplacé sur un texte non-éditable. En revanche, bien que l'icône du curseur de la souris puisse ressembler à un curseur de saisie lorsque {{cssxref("cursor")}} vaut `auto` ou `text` ou `vertical-text`, celle-ci n'est pas modifiée par cette propriété. Pour certains navigateurs qui ne prennent pas en charge cette propriété, la couleur du curseur de saisie n'est pas associée à la couleur de la police.
 
 ## Syntaxe
 
@@ -33,7 +34,8 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 
   - : L'agent utilisateur doit utiliser `currentcolor` mais peut ajuster la couleur du curseur afin d'améliorer la visibilité et le contraste avec le contenu environnant (l'arrière-plan, les ombres, etc.).
 
-    > **Note :** Bien que l'agent utilisateur puisse utiliser `currentcolor` pour la valeur `auto`, cette dernière ne sera pas interpolée lors des animations/transitions (à la différence de la valeur `currentcolor`).
+    > [!NOTE]
+    > Bien que l'agent utilisateur puisse utiliser `currentcolor` pour la valeur `auto`, cette dernière ne sera pas interpolée lors des animations/transitions (à la différence de la valeur `currentcolor`).
 
 - \<color>
   - : L'agent utilisateur utilise la couleur ({{cssxref("&lt;color&gt;")}}) indiquée comme couleur pour le curseur de saisie.

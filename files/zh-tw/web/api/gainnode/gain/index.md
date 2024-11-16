@@ -19,7 +19,8 @@ gainNode.gain.value = 0.5;
 
 一個 {{domxref("AudioParam")}}.
 
-> **備註：** 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
+> [!NOTE]
+> 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
 
 ## 範例
 

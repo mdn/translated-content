@@ -1,15 +1,15 @@
 ---
 title: URL：hash 属性
 slug: Web/API/URL/hash
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ APIRef("URL API") }}
+{{ APIRef("URL API") }} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`hash`** 属性是一个包含 URL 标识中的 `'#'` 和片段（fragment）标识符的字符串。
+{{domxref("URL")}} 接口的 **`hash`** 属性是一个包含以 `'#'` 开头的 URL 片段标识符的字符串。
 
 片段不会经过 [URL 解码](https://zh.wikipedia.org/wiki/百分号编码)。如果某个 URL 没有片段，该属性会包含一个空字符串——`""`。
-
-{{AvailableInWorkers}}
 
 ## 值
 

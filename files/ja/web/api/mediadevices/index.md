@@ -2,12 +2,12 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: b2875dbaa70efb5850084b9802803b439db325f5
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-**`MediaDevices`** インターフェイスは、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
+**`MediaDevices`** は{{domxref("Media Capture and Streams API", "メディアキャプチャとストリーム API", "", "nocode")}} のインターフェイスで、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
 
 {{InheritanceDiagram}}
 
@@ -19,13 +19,13 @@ _親インターフェイスである {{domxref("EventTarget")}} のプロパテ
 
 _親インターフェイスである {{domxref("EventTarget")}} のメソッドを継承しています。_
 
-- {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
+- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
   - : システム上で使用できる入出力メディア機器についての情報を持つ配列を取得します。
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
   - : {{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、[メディアストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints) を参照してください。
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : 共有または録画の目的で {{domxref("MediaStream")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 `MediaStream` で解決する Promise を返します。
-- {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
   - : ユーザーの許可に基づいて、システム上のカメラや画面共有機能、マイクを起動して、入力と共に映像トラックや音声トラックを含む {{domxref("MediaStream")}} を提供します。
 - {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
   - : ユーザーに対して、固有の音声出力機器を選択するよう尋ねます。
@@ -57,11 +57,11 @@ navigator.mediaDevices
     video.srcObject = stream;
   })
   .catch((error) => {
-    if (error.name === "ConstraintNotSatisfiedError") {
+    if (error.name === "OverconstrainedError") {
       console.error(
         `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`,
       );
-    } else if (error.name === "PermissionDeniedError") {
+    } else if (error.name === "NotAllowedError") {
       console.error(
         "You need to grant this page permission to access your camera and microphone.",
       );

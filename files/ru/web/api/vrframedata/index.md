@@ -9,7 +9,8 @@ l10n:
 
 Интерфейс **`VRFrameData`** из [WebVR API](/ru/docs/Web/API/WebVR_API) предоставляет всю необходимую информацию для отображения одного кадра VR-сцены, создаётся с помощью {{domxref("VRDisplay.getFrameData()")}}.
 
-> **Примечание:** Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Конструктор
 

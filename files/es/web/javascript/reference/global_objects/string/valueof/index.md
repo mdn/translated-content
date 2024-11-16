@@ -12,7 +12,7 @@ The **`valueOf()`** método devuelve el valor primitivo de un objeto String.
 ## Sintaxis
 
 ```
-caneda.valueOf()
+cadena.valueOf()
 ```
 
 ## Descripción

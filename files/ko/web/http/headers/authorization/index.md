@@ -42,7 +42,8 @@ Authorization: <type> <credentials>
     - 사용자명과 비밀번호가 콜론을 이용하여 합쳐집니다(`aladdin:opensesame`).
     - 그 결과에 대한 문자열을 [base64](/ko/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) 로 인코딩합니다 (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-    > **참고:** Base64 인코딩은 암호화나 해싱을 의미하지 않습니다! 이 방법은 인증에 대해서 문자를 그대로 보내는 것과 동일하다고 할 수 있습니다 (base64인코딩은 복호화 가능). Basic 인증을 하는 경우 HTTPS로 접속하는 것을 권장합니다.
+    > [!NOTE]
+    > Base64 인코딩은 암호화나 해싱을 의미하지 않습니다! 이 방법은 인증에 대해서 문자를 그대로 보내는 것과 동일하다고 할 수 있습니다 (base64인코딩은 복호화 가능). Basic 인증을 하는 경우 HTTPS로 접속하는 것을 권장합니다.
 
 ## 예제
 

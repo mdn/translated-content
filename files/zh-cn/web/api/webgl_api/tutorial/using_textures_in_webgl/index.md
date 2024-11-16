@@ -11,9 +11,11 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的 6 个面上，但是同样的方法可以用来加载任意数量的纹理贴图。
 
-> **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-CN/docs/Web/HTTP/CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
+> [!NOTE]
+> 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-CN/docs/Web/HTTP/CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
 
-> **备注：** 在你的“webgl-demo.js”脚本中添加下面的两个函数：
+> [!NOTE]
+> 在你的“webgl-demo.js”脚本中添加下面的两个函数：
 
 ```js
 //
@@ -112,7 +114,8 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 所以为了防止渲染时图像纹理方向错误，我们还需要调用 `pixelStorei()` 并将 `gl.UNPACK_FLIP_Y_WEBGL` 参数设置为 `true`，以调整像素顺序，使其翻转成 WebGL 需要的自下而上顺序。
 
-> **备注：** 添加下面的代码到 `main()` 函数，紧跟在 `initBuffers()` 调用之后：
+> [!NOTE]
+> 添加下面的代码到 `main()` 函数，紧跟在 `initBuffers()` 调用之后：
 
 ```js
 // Load texture
@@ -121,13 +124,15 @@ const texture = loadTexture(gl, "cubetexture.png");
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
-> **备注：** 最后，将 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) 下载到与 JavaScript 文件相同的本地目录。
+> [!NOTE]
+> 最后，将 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) 下载到与 JavaScript 文件相同的本地目录。
 
 ## 映射纹理到面
 
 现在，纹理已加载并准备就绪。但在我们使用它之前，我们需要建立纹理坐标到立方体上的面的顶点的映射。这将取代 `initBuffers()` 中为设置每个立方体面颜色而存在的所有先前的代码。
 
-> **备注：** 添加这个函数到“init-buffer.js”模块：
+> [!NOTE]
+> 添加这个函数到“init-buffer.js”模块：
 
 ```js
 function initTextureBuffer(gl) {
@@ -169,13 +174,15 @@ function initTextureBuffer(gl) {
 
 接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区代替颜色缓冲区。
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
+> [!NOTE]
+> 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
 
 ```js
 const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
+> [!NOTE]
+> 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
 
 ```js
 return {
@@ -193,7 +200,8 @@ return {
 
 我们需要更改顶点着色器，使其不再获取颜色数据，而是获取纹理坐标数据。
 
-> **备注：** 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
+> [!NOTE]
+> 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
 
 ```js
 const vsSource = `
@@ -236,7 +244,8 @@ const fsSource = `
 
 因为我们修改了 attribute 并添加了 uniform，所以我们需要查找它们的位置。
 
-> **备注：** 在你的 `main()` 函数中，像这样更新 `programInfo` 的定义：
+> [!NOTE]
+> 在你的 `main()` 函数中，像这样更新 `programInfo` 的定义：
 
 ```js
 const programInfo = {
@@ -257,7 +266,8 @@ const programInfo = {
 
 对 `drawScene()` 函数的更改很简单。
 
-> **备注：** 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
+> [!NOTE]
+> 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
 
 ```js
 // 告诉 WebGL 如何从缓冲区中提取纹理坐标
@@ -280,7 +290,8 @@ function setTextureAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **备注：** 在你的“draw-scene.js”模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
+> [!NOTE]
+> 在你的“draw-scene.js”模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
 
 ```js
 setTextureAttribute(gl, buffers, programInfo);
@@ -288,7 +299,8 @@ setTextureAttribute(gl, buffers, programInfo);
 
 然后添加代码来指定要映射到面的纹理。
 
-> **备注：** 在你的 `drawScene()` 函数中，就在对 `gl.uniformMatrix4fv()` 的两次调用之后，添加以下代码：
+> [!NOTE]
+> 在你的 `drawScene()` 函数中，就在对 `gl.uniformMatrix4fv()` 的两次调用之后，添加以下代码：
 
 ```js
 // Tell WebGL we want to affect texture unit 0
@@ -305,13 +317,15 @@ WebGL 提供了至少 8 个纹理单元，`gl.TEXTURE0` 是第一个。若我们
 
 最后，在 `drawScene()` 函数中添加 `texture` 作为参数，包括它被定义和被调用的地方。
 
-> **备注：** 更新你的 `drawScene()` 函数的定义以添加新的参数：
+> [!NOTE]
+> 更新你的 `drawScene()` 函数的定义以添加新的参数：
 
 ```js-nolint
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
 ```
 
-> **备注：** 更新你的 `main()` 函数中调用 `drawScene()` 的地方：
+> [!NOTE]
+> 更新你的 `main()` 函数中调用 `drawScene()` 的地方：
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);

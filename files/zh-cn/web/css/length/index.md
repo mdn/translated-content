@@ -7,7 +7,8 @@ slug: Web/CSS/length
 
 长度 **`<length>`** 是用于表示距离尺寸的 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("font-size")}}、{{Cssxref("border-width")}} 和 {{Cssxref("text-shadow")}}。
 
-> **备注：** 虽然 {{cssxref("&lt;percentage&gt;")}} 值也是 CSS 维度，并且可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅{{cssxref("&lt;length-percentage&gt;")}}。
+> [!NOTE]
+> 虽然 {{cssxref("&lt;percentage&gt;")}} 值也是 CSS 维度，并且可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅{{cssxref("&lt;length-percentage&gt;")}}。
 
 ## 语法
 
@@ -25,7 +26,8 @@ slug: Web/CSS/length
 
 字体的相对长度指的是根据一个特定字符的大小或当前字符所在元素的父元素所定义的字符大小来定义长度值。
 
-> **备注：** 这些相对单位，尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中
+> [!NOTE]
+> 这些相对单位，尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中
 
 - `cap` {{experimental_inline}}
   - : 表示元素字体 {{Cssxref("font")}} 的“上限高度”（cap height，大写字母的标称高度（nominal height））。
@@ -70,7 +72,8 @@ slug: Web/CSS/length
 
 对于高 dpi 设备，英寸（in）、厘米（cm）和毫米（mm）与物理设备相同。因此，px 单位是相对于它们定义的（1/96 of 1 inch）。
 
-> **备注：** 很多用户选择增加用户代理 {{glossary("user agent")}} 的字体大小以提高文本可读性。因为绝对长度是固定值，无法根据用户的设置进行缩放，因此会降低页面友好性，因此在设置字体大小 `font-size` 相关的长度值时，最好优先选择使用相对长度单位，比如 `em` 或 `rem`。
+> [!NOTE]
+> 很多用户选择增加用户代理 {{glossary("user agent")}} 的字体大小以提高文本可读性。因为绝对长度是固定值，无法根据用户的设置进行缩放，因此会降低页面友好性，因此在设置字体大小 `font-size` 相关的长度值时，最好优先选择使用相对长度单位，比如 `em` 或 `rem`。
 >
 > **译者注：** 一些浏览器还支持设置最低字体大小。常见的最低字体大小限制为 9px 到 12px，
 

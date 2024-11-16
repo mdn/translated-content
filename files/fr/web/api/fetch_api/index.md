@@ -21,7 +21,8 @@ Une fois que la {{domxref("Response")}} a été retournée, il y a un ensemble d
 
 Vous pourriez créer une requête et une réponse directement en utilisant les constructeurs {{domxref("Request.Request","Request()")}} et {{domxref("Response.Response","Response()")}}, même s'il est improbable que vous procédiez ainsi. Il est plus probable cependant que leur création résulte des actions d'une autre API (par exemple, {{domxref("FetchEvent.respondWith")}} des _service workers_).
 
-> **Note :** Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/fr/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/fr/docs/Web/API/Fetch_API/Basic_concepts).
 
 ### Interrompre un fetch
 

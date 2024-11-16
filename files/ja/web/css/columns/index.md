@@ -78,7 +78,7 @@ columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
+{{EmbedLiveSample('3 つの等しい段の設定', 'auto', 120)}}
 
 ## 仕様書
 

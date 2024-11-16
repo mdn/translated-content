@@ -50,7 +50,8 @@ Vous vous en rendrez compte (notamment en jetant un coup d'œil à la section MD
 
 Chaque événement disponible a un **gestionnaire d'événement**, qui est un bloc de code (généralement une fonction JavaScript définie par l'utilisateur) qui sera exécuté lorsque l'événement se déclenchera. Lorsqu'un tel bloc de code est défini pour être exécuté en réponse à un déclenchement d'événement, nous disons que nous **enregistrons un gestionnaire d'événements**. Notez que les gestionnaires d'événements sont parfois appelés **écouteurs d'événements** - ils sont à peu près interchangeables pour ce qui nous concerne, même si à la rigueur, ils fonctionnent ensemble. L'écouteur écoute l'événement qui se produit et le gestionnaire est le code qui est exécuté en réponse à ce qui se passe.
 
-> **Note :** il est important de noter que les événements web ne font pas partie du langage du noyau JavaScript — ils sont définis comme faisant partie des APIs JavaScript intégrées du navigateur
+> [!NOTE]
+> Il est important de noter que les événements web ne font pas partie du langage du noyau JavaScript — ils sont définis comme faisant partie des APIs JavaScript intégrées du navigateur
 
 ### Un exemple simple
 
@@ -159,7 +160,8 @@ function bgChange() {
 }
 ```
 
-> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> [!NOTE]
+> Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 La première méthode d'enregistrement des gestionnaires d'événements trouvés sur le Web impliquait des **attributs HTML du gestionnaire d'événement** (c'est-à-dire **les gestionnaires d'événements en ligne**) comme celui présenté ci-dessus — la valeur de l'attribut est littéralement le code JavaScript que vous souhaitez exécuter lorsque l'événement survient. L'exemple ci-dessus appelle une fonction définie dans un élément {{htmlelement("script")}} sur la même page, mais vous pouvez également insérer du JavaScript directement dans l'attribut comme par exemple :
 
@@ -183,7 +185,8 @@ for (var i = 0; i < buttons.length; i++) {
 }
 ```
 
-> **Note :** Séparer votre logique de programmation de votre contenu rend également votre site plus convivial pour les moteurs de recherche.
+> [!NOTE]
+> Séparer votre logique de programmation de votre contenu rend également votre site plus convivial pour les moteurs de recherche.
 
 ### addEventListener() et removeEventListener()
 
@@ -201,7 +204,8 @@ function bgChange() {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> [!NOTE]
+> Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) , nous spécifions deux paramètres - le nom de l'événement pour lequel nous voulons enregistrer ce gestionnaire, et le code qui comprend la fonction du gestionnaire que nous voulons exécuter en réponse. Notez qu'il est parfaitement approprié de placer tout le code dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), dans une fonction anonyme, comme ceci:
 
@@ -256,7 +260,8 @@ element.onclick = function2;
 etc.
 ```
 
-> **Note :** Si vous êtes appelé à prendre en charge des navigateurs plus anciens qu'Internet Explorer 8 dans votre travail, vous risquez de rencontrer des difficultés, car ces anciens navigateurs utilisent des modèles d'événements différents des nouveaux navigateurs. Mais n'ayez crainte, la plupart des bibliothèques JavaScript (par exemple `jQuery`) ont des fonctions intégrées qui permettent d'éliminer les différences entre navigateurs. Ne vous en faites pas trop à ce stade de votre parcours d'apprentissage.
+> [!NOTE]
+> Si vous êtes appelé à prendre en charge des navigateurs plus anciens qu'Internet Explorer 8 dans votre travail, vous risquez de rencontrer des difficultés, car ces anciens navigateurs utilisent des modèles d'événements différents des nouveaux navigateurs. Mais n'ayez crainte, la plupart des bibliothèques JavaScript (par exemple `jQuery`) ont des fonctions intégrées qui permettent d'éliminer les différences entre navigateurs. Ne vous en faites pas trop à ce stade de votre parcours d'apprentissage.
 
 ## D'autres concepts liés aux événements
 
@@ -277,11 +282,13 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Note :** Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!NOTE]
+> Vous trouverez le [code source complet](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) de cet exemple sur GitHub (également [le voir s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Ici, vous pouvez voir que nous incluons un objet événement, **e**, dans la fonction, et dans la fonction définissant un style de couleur d'arrière-plan sur `e.target` - qui est le bouton lui-même. La propriété `target` de l'objet événement est toujours une référence à l'élément sur lequel l'événement vient de se produire. Donc, dans cet exemple, nous définissons une couleur d'arrière-plan aléatoire sur le bouton, pas sur la page.
 
-> **Note :** Vous pouvez utiliser n'importe quel nom pour l'objet d'événement - il vous suffit de choisir un nom que vous pouvez ensuite utiliser pour le référencer dans la fonction du gestionnaire d'événements. `e`/`evt`/`event` sont les plus couramment utilisés par les développeurs car ils sont courts et faciles à retenir. C'est toujours bon de s'en tenir à une norme.
+> [!NOTE]
+> Vous pouvez utiliser n'importe quel nom pour l'objet d'événement - il vous suffit de choisir un nom que vous pouvez ensuite utiliser pour le référencer dans la fonction du gestionnaire d'événements. `e`/`evt`/`event` sont les plus couramment utilisés par les développeurs car ils sont courts et faciles à retenir. C'est toujours bon de s'en tenir à une norme.
 
 `e.target`est incroyablement utile lorsque vous voulez définir le même gestionnaire d'événements sur plusieurs éléments et affecter une action à chacun d'entre eux quand un événement se produit sur eux. Vous pourriez, par exemple, avoir un ensemble de 16 tuiles qui disparaissent quand on clique dessus. Il est utile de toujours pouvoir affecter une action à `e.target`, plutôt que de devoir la sélectionner de manière plus difficile. Dans l'exemple suivant (voir [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) pour le code source ; et ici pour le voir [s'exécuter](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)), nous avons créé 16 éléments {{htmlelement("div")}} avec JavaScript. Quand nous les sélectionnons tous en utilisant {{domxref("document.querySelectorAll()")}}, puis que nous faisons une boucle sur chacun d'eux, en ajoutant un gestionnaire `onclick` à chacun de sorte qu'une couleur aléatoire est appliquée lorsque l'élément est cliqué&nbsp;:
 
@@ -399,7 +406,8 @@ form.onsubmit = function (e) {
 
 {{ EmbedLiveSample('Éviter_le_comportement_par_défaut', '100%', 140) }}
 
-> **Note :** pour le code source, voir [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (et le voir s'exécuter [ici](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html).)
+> [!NOTE]
+> Pour le code source, voir [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (et le voir s'exécuter [ici](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html).)
 
 ### Le bouillonnement et la capture
 
@@ -565,9 +573,11 @@ video.onclick = function (e) {
 
 Vous pouvez faire une copie locale du [code source show-video-box.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) et le modifier vous-même ou regarder le résultat ici : [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (ou voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
 
-> **Note :** Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.
+> [!NOTE]
+> Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.
 
-> **Note :** Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), et en positionnant la troisième propriété, qui est optionnelle, sur `true`.
+> [!NOTE]
+> Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), et en positionnant la troisième propriété, qui est optionnelle, sur `true`.
 
 #### Délégation d'événement
 

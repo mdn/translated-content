@@ -60,7 +60,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `allow-scripts`: Allows the embedded browsing context to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-pointer-lock`: Allows the embedded browsing context to use the [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock).
 
-    > **Note:**
+    > [!NOTE]
+    >
+    > >
     >
     > - When the embedded document has the same origin as the main page, it is strongly discouraged to use both `allow-scripts` and `allow-same-origin` at the same time, as that allows the embedded document to programmatically remove the `sandbox` attribute. Although it is accepted, this case is no more secure than not using the `sandbox` attribute.
     > - Sandboxing in general is only of minimal help if the attacker can arrange for the potentially hostile content to be displayed in the user's browser outside a sandboxed `iframe`. It is recommended that such content should be served from a _separate dedicated domain_, to limit the potential damage.
@@ -123,11 +125,12 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ## Resultado
 
-[Live example](http://jsfiddle.net/pablofiumara/mCfAe/)
+[Live example](https://jsfiddle.net/pablofiumara/mCfAe/)
 
 ## Notas
 
-> **Note:** Starting in Gecko 6.0, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.
+> [!NOTE]
+> Starting in Gecko 6.0, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.
 
 ## Especificações
 

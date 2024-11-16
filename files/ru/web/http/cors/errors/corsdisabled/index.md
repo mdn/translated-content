@@ -3,6 +3,8 @@ title: "Ошибка: CORS disabled"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
+{{HTTPSidebar}}
+
 ## Ошибка
 
 ```

@@ -56,7 +56,8 @@ background: conic-gradient(
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
-> **メモ:** 英語ではなぜ "conic" (円錐) グラデーションと呼ばれるのか。色経由点が一方よりもう一方が明るい場合、上から見た円錐のように見えるからです。
+> [!NOTE]
+> 英語ではなぜ "conic" (円錐) グラデーションと呼ばれるのか。色経由点が一方よりもう一方が明るい場合、上から見た円錐のように見えるからです。
 
 ### 扇型グラデーションの構成
 
@@ -202,7 +203,8 @@ div {
       #000 0.25turn 0.5turn,
       #fff 0.5turn 0.75turn,
       #000 0.75turn
-    ) top left / 25% 25% repeat;
+    )
+    top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

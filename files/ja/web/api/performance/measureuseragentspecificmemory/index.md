@@ -3,7 +3,7 @@ title: "Performance: measureUserAgentSpecificMemory() メソッド"
 short-title: measureUserAgentSpecificMemory()
 slug: Web/API/Performance/measureUserAgentSpecificMemory
 l10n:
-  sourceCommit: 6539cd8d3ea65b2755ef5d5c7da202f53636f51f
+  sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
 {{APIRef("Performance API")}} {{SeeCompatTable}}
@@ -111,7 +111,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-オリジン間の分離が成功したかどうかを調べるには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`](/ja/docs/Web/API/crossOriginIsolated) プロパティをテストします。
+オリジン間の分離が成功したかどうかを調べるには、ウィンドウとワーカーのコンテキストで利用可能な {{domxref("Window.crossOriginIsolated")}} プロパティまたは {{domxref("WorkerGlobalScope.crossOriginIsolated")}} プロパティをテストします。
 
 ```js
 if (crossOriginIsolated) {
@@ -121,7 +121,7 @@ if (crossOriginIsolated) {
 
 ## 例
 
-### メモリの使用状況を監視
+### メモリーの使用状況を監視
 
 以下のコードは、[指数分布](https://en.wikipedia.org/wiki/Exponential_distribution#Random_variate_generation)を使用して、 5 分に 1 回、ランダムな間隔で `measureUserAgentSpecificMemory()` メソッドを呼び出す方法を示しています。
 

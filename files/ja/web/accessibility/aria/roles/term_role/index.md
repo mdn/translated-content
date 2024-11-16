@@ -15,7 +15,8 @@ l10n:
 
 `role="term"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) は使用しないでください。
 
-> **警告:** アクセシブル名は用語そのものでなければなりませんので、`aria-label` や `aria-labelledby` は使用しないでください。
+> [!WARNING]
+> アクセシブル名は用語そのものでなければなりませんので、`aria-label` や `aria-labelledby` は使用しないでください。
 
 ### 関連付けられる WAI-ARIA ロール、ステート、プロパティ
 

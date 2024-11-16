@@ -50,7 +50,8 @@ function name(param0, param1, /* …, */ paramN) {
 
 ### 块级作用域的函数声明
 
-> **警告：** 在[非严格模式下](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，块级作用域的函数声明行为会变得很奇怪。只有在严格模式下才应该在块级作用域中声明函数。
+> [!WARNING]
+> 在[非严格模式下](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，块级作用域的函数声明行为会变得很奇怪。只有在严格模式下才应该在块级作用域中声明函数。
 
 函数可以被条件性地声明——也就是说，函数声明可以嵌套在一个 [`if`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句中。然而，在非严格模式下，不同的实现结果可能不一致。
 

@@ -3,11 +3,9 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
-
-> **备注：** 该功能在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
 ## 语法
 
@@ -54,7 +52,8 @@ formData.append("username", "Chris");
 </form>
 ```
 
-> **备注：** 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
+> [!NOTE]
+> 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
 
 ```js
 var myForm = document.getElementById("myForm");

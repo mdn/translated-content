@@ -7,7 +7,8 @@ slug: Web/HTML/Element/big
 
 **`<big>`** [HTML](/zh-TW/docs/Web/HTML) 廢棄的元素會將所包含的文字呈現為比周圍文字大一個級別的字體大小（例如 `medium` 變為 `large`）。該大小限制在瀏覽器允許的最大字體大小之內。
 
-> **警告：** 這個元素已從規範中刪除，不應再使用。請使用 CSS {{cssxref("font-size")}} 屬性來調整字體大小。
+> [!WARNING]
+> 這個元素已從規範中刪除，不應再使用。請使用 CSS {{cssxref("font-size")}} 屬性來調整字體大小。
 
 ## 屬性
 

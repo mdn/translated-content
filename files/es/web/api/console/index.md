@@ -60,7 +60,7 @@ Esta página documenta los [Métodos](#métodos) disponibles en el objeto `conso
 - {{domxref("console.timeLog()")}}
   - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
+  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/performance/reference) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
 - {{domxref("console.trace()")}}
   - : Muestra una [traza de pila](#trazas_de_pila).
 - {{domxref("console.warn()")}}
@@ -118,7 +118,8 @@ Cuando se pasa una cadena a uno de los métodos del objeto `console` que la acep
 - `%f`
   - : Muestra un valor de punto flotante. El formateo está soportado, por ejemplo `console.log("Foo %.2f", 1.1)` mostrará el número con dos decimales: `Foo 1.10`.
 
-> **Nota:** El formateo de precisión no funciona en Chrome.
+> [!NOTE]
+> El formateo de precisión no funciona en Chrome.
 
 Cada uno de ellos trae el siguiente argumento posterior a la cadena de la lista de parámetros. Por ejemplo:
 
@@ -185,7 +186,8 @@ Las propiedadas utilizables junto con la directiva `%c` son las siguientes (al m
 - {{cssxref("word-spacing")}} y {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **Nota:** Los mensajes de consola se comportan como un elemento en línea por defecto. Para ver los efectos de `padding`, `margin`, etc. debes establecerlo como por ejemplo `display: inline-block`.
+> [!NOTE]
+> Los mensajes de consola se comportan como un elemento en línea por defecto. Para ver los efectos de `padding`, `margin`, etc. debes establecerlo como por ejemplo `display: inline-block`.
 
 ### Usando grupos en la consola
 
@@ -230,7 +232,8 @@ Registrará el tiempo necesitado por el usuario para descartar el cuadro de aler
 
 Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador es iniciado como cuando es detenido.
 
-> **Nota:** Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
+> [!NOTE]
+> Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
 > Si en cambio tienes el registro de cuerpo (`response body logging`) habilitado, el tiempo listado para la respuesta de la cabecera y el cuerpo combinados debiera coincidir con lo que ves en la salida de la consola.
 
 ### Trazas de pila

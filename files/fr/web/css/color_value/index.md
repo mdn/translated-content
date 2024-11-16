@@ -19,13 +19,15 @@ Une valeur de type `<color>` peut être définie de l'une des façons suivantes&
 - En utilisant [le système de coordonnées Lab](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976), avec la notation fonctionnelle [`lab()`](/fr/docs/Web/CSS/color_value/lab). Cela permet de représenter n'importe quelle couleur visible.
 - En utilisant la notation fonctionnelle [`color()`](/fr/docs/Web/CSS/color_value/color) pour indiquer une couleur dans un espace de couleur prédéfini ou personnalisé.
 
-> **Note :** Cet article décrit le type de données `<color>`. Si vous souhaitez en savoir plus sur l'utilisation des couleurs CSS avec HTML, voyez [Appliquer des couleurs aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
+> [!NOTE]
+> Cet article décrit le type de données `<color>`. Si vous souhaitez en savoir plus sur l'utilisation des couleurs CSS avec HTML, voyez [Appliquer des couleurs aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
 
 ## Syntaxe
 
 On peut fournir une valeur de type `<color>` en utilisant l'une des syntaxes décrites ci-après.
 
-> **Note :** Bien que les valeurs `<color>` soient précisément définies, l'apparence réelle peut varier (parfois significativement) d'un appareil à l'autre. Cela se produit pour la plupart des appareils qui ne sont pas calibrés ou lorsque les navigateurs ne prennent pas en charge [les profils de couleur](https://en.wikipedia.org/wiki/ICC_profile) de l'appareil de sortie.
+> [!NOTE]
+> Bien que les valeurs `<color>` soient précisément définies, l'apparence réelle peut varier (parfois significativement) d'un appareil à l'autre. Cela se produit pour la plupart des appareils qui ne sont pas calibrés ou lorsque les navigateurs ne prennent pas en charge [les profils de couleur](https://en.wikipedia.org/wiki/ICC_profile) de l'appareil de sortie.
 
 ### Couleurs nommées
 
@@ -82,11 +84,13 @@ Similaire au modèle de couleurs HSL, le modèle de couleurs HWB définit une co
 
 Comme avec le modèle HSL, il peut être plus intuitif de travailler avec le modèle HWB qu'avec le modèle RGB. La teinte est indiquée de la même façon, mais est ici suivie de la quantité de blancheur et de noirceur respectives, exprimées en pourcentages. Cette fonction permet également d'indiquer une valeur pour la composante alpha.
 
-> **Note :** Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
+> [!NOTE]
+> Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
 
 Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnelle `hwb()`.
 
-> **Note :** La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
+> [!NOTE]
+> La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
 
 - [`hwb()`](/fr/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
@@ -102,7 +106,8 @@ En _mode de couleurs forcé_ (détectable avec la caractéristique média [`forc
 
 Les mots-clés de cette liste sont définis dans le module de spécification <i lang="en">CSS Color</i> de niveau 4&nbsp;: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
 
-> **Note :** Ces mots-clés sont _insensibles à la casse_, mais sont écrits ici en <i lang="en">camel case</i> à des fins de lisibilité.
+> [!NOTE]
+> Ces mots-clés sont _insensibles à la casse_, mais sont écrits ici en <i lang="en">camel case</i> à des fins de lisibilité.
 
 ### Modèle de couleurs Lab
 
@@ -119,7 +124,8 @@ LCH est la forme polaire de Lab et est souvent plus pratique à utiliser, car le
 
 Aussi, LCH peut être utilisé afin de créer des palettes de couleurs différentes, avec des résultats prévisibles.
 
-> **Note :** La teinte LCH n'est pas la même que la teinte HSL et que la chroma LCH ne correspond pas à la saturation HSL, même si elles partagent certaines similarités conceptuelles.
+> [!NOTE]
+> La teinte LCH n'est pas la même que la teinte HSL et que la chroma LCH ne correspond pas à la saturation HSL, même si elles partagent certaines similarités conceptuelles.
 
 ### `color()`
 

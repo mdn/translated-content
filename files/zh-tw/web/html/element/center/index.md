@@ -52,7 +52,8 @@ slug: Web/HTML/Element/center
 
 {{EmbedLiveSample("範例 3（CSS 替代方案）")}}
 
-> **備註：** 將 {{Cssxref("text-align")}}`:center` 應用於 {{HTMLElement("div")}} 或 {{HTMLElement("p")}} 元素會將這些元素的*內容*置中，同時保持它們的整體尺寸不變。
+> [!NOTE]
+> 將 {{Cssxref("text-align")}}`:center` 應用於 {{HTMLElement("div")}} 或 {{HTMLElement("p")}} 元素會將這些元素的*內容*置中，同時保持它們的整體尺寸不變。
 
 ## 規範
 

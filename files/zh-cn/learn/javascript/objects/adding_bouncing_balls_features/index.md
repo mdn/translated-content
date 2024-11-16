@@ -24,7 +24,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 请先下载 [index.html](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html)、[style.css](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css) 和 [main.js](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) 三个文件。
 
-> **备注：** 也可以使用 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
+> [!NOTE]
+> 也可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
 
 ## 项目简介
 
@@ -376,9 +377,11 @@ window.onkeydown = (e) => {
 
 所以当一个按键按下时，事件对象的 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性 就可以请求到按下的按键值。如果是代码中那四个指定的键值之一，那么恶魔圈将会左右上下的移动。
 
-> **警告：** 英文页面中使用了事件对象的 [keyCode](/zh-CN/docs/Web/API/KeyboardEvent/keyCode) 属性，不推荐在新代码中使用该属性，应使用标准 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性代替。（详见介绍页面）
+> [!WARNING]
+> 英文页面中使用了事件对象的 [keyCode](/zh-CN/docs/Web/API/KeyboardEvent/keyCode) 属性，不推荐在新代码中使用该属性，应使用标准 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性代替。（详见介绍页面）
 
-> **备注：** 这里的 `window.onkeydown` 用一个 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 代替了英文页面中的匿名函数，从而无需 `var _this = this`。
+> [!NOTE]
+> 这里的 `window.onkeydown` 用一个 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 代替了英文页面中的匿名函数，从而无需 `var _this = this`。
 
 #### `collisionDetect()`
 

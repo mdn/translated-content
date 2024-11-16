@@ -13,17 +13,6 @@ slug: Web/SVG/Element/radialGradient
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Основные атрибуты](/ru/docs/Web/SVG/Attribute#Core_attributes) »
-- [Атрибуты презентации](/ru/docs/Web/SVG/Attribute#Presentation_attributes) »
-- [Атрибуты Xlink](/ru/docs/Web/SVG/Attribute#XLink_attributes) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-
-### Специфические атрибуты
-
 - {{SVGAttr("gradientUnits")}}
 - {{SVGAttr("gradientTransform")}}
 - {{SVGAttr("cx")}}

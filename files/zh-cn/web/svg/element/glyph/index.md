@@ -7,7 +7,7 @@ slug: Web/SVG/Element/glyph
 
 一个`glyph`元素定义了 SVG 字体中的一个独立的字形。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

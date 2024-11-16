@@ -15,7 +15,8 @@ En esta evaluación, se espera que use la demo de bouncing balls del artículo a
 
 Para iniciar esta evaluación, haz una copia local de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de nuestro último artículo en un nuevo directorio en tu ordenador.
 
-> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
+> [!NOTE]
+> Alternativamente, puede usar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
 
 ## Resumen del proyecto
 
@@ -51,16 +52,15 @@ En este punto, intente volver a cargar el código; debería funcionar igual que 
 
 Ahora es el momento de conocer al chico malo: ¡el `EvilCircle()`! Nuestro juego solo involucrará un círculo malvado, pero lo vamos a seguir definiendo usando un constructor que hereda de `Shape()` para que tengas algo de práctica. Es posible que desee agregar otro círculo a la aplicación más adelante que pueda ser controlado por otro jugador o tener varios círculos malvados controlados por computadora. Probablemente no vas a dominar el mundo con un solo círculo maligno, pero servirá para esta evaluación.
 
-El constructor `EvilCircle()` debe heredar `x`, `y`, `velX`, `velY`, y `exists` from `Shape()`, pero `velX` y `velY` debe ser igual a 20.
-
-Debería hacer algo como `Shape.call(this, x, y, 20, 20, exists);`
+#### El constructor EvilCircle
 
 Debe definir también sus propias propiedades, como las siguientes:
 
-- `color` — `'white'`
-- `size` — `10`
+- Pasarle solo `x`, `y` como argumentos
+- Pase los argumentos `x`, `y` a la superclase `Shape` junto con los valores para `velX` y `velY` iguales a 20. Debe hacer esto con código como `super(x, y, 20, 20);`
+- Debe establecer `color` en `'white'` y `size` en `10`
 
-Otra vez, recuerda definir tus propiedades heredadas como parámetros en el constructor, y configura las propiedades `prototype` y `constructor` properties correc.tamente
+Otra vez, recuerda definir tus propiedades heredadas como parámetros en el constructor, y configura las propiedades `prototype` y `constructor` properties correctamente
 
 ### Definiendo los métodos de EvilCircle()
 

@@ -1,8 +1,9 @@
 ---
 title: "HTML 属性: rel"
+short-title: rel
 slug: Web/HTML/Attributes/rel
 l10n:
-  sourceCommit: 89d0e930e25328214a68291b2b01fa10a6b00dc5
+  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
 {{HTMLSidebar}}
@@ -21,6 +22,7 @@ l10n:
 | [`canonical`](#canonical)                                         | 現在の文書の推奨 URL。                                                                                                                                                                                              | リンク                    | 不許可                                                  | 不許可                    |
 | [`dns-prefetch`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 宛先リソースのオリジンに対する DNS 解決を先取りして行うようブラウザーに指示する                                                                                                                                     | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`external`](#external)                                           | 参照先の文書は、現在の文書と同じサイトの一部ではありません。                                                                                                                                                        | 不許可                    | 注釈                                                    | 注釈                      |
+| [`expect`](#expect)                                               | 文書内の主要部分が解釈できるまでページを[レンダリングブロック](/ja/docs/Glossary/Render_blocking)し、一貫したレンダリングを実現します。                                                                             | リンク                    | 不許可                                                  | 不許可                    |
 | [`help`](#help)                                                   | コンテンツに応じたヘルプにリンクします。                                                                                                                                                                            | リンク                    | リンク                                                  | リンク                    |
 | [`icon`](#icon)                                                   | 現在の文書を表すアイコンです。                                                                                                                                                                                      | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`license`](#license)                                             | 現在の文書のメインコンテンツが、参照先の文書で説明されている著作権ライセンスによってカバーされていることを示す。                                                                                                    | リンク                    | リンク                                                  | リンク                    |
@@ -30,7 +32,7 @@ l10n:
 | [`next`](#next)                                                   | 現在の文書が一連の文書の一部であり、その中の次の文書が参照先の文書であることを示します。                                                                                                                            | リンク                    | リンク                                                  | リンク                    |
 | [`nofollow`](#nofollow)                                           | 現在の文書の原著者または発行者が、参照先の文書を支持していないことを示します。                                                                                                                                      | 不許可                    | 注釈                                                    | 注釈                      |
 | [`noopener`](/ja/docs/Web/HTML/Attributes/rel/noopener)           | ハイパーリンクが補助的な閲覧コンテキストのいずれかを生成する (つまり、適切な `target` 属性値を持つ) 場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを生成します。                                    | 不許可                    | 注釈                                                    | 注釈                      |
-| [`noreferrer`](#noreferrer)                                       | `Referer` ヘッダーを含めません。さらに、 `noopener` と同じ効果もあります。                                                                                                                                          | 不許可                    | 注釈                                                    | 注釈                      |
+| [`noreferrer`](/ja/docs/Web/HTML/Attributes/rel/noreferrer)       | `Referer` ヘッダーを含めません。さらに、 `noopener` と同じ効果もあります。                                                                                                                                          | 不許可                    | 注釈                                                    | 注釈                      |
 | [`opener`](#opener)                                               | ハイパーリンクによって、補助閲覧コンテキストではない最上位の閲覧コンテキストが生成される場合 (すなわち、 `target` 属性の値が "`_blank`" である場合)、補助閲覧コンテキストを生成します。                             | 不許可                    | 注釈                                                    | 注釈                      |
 | [`pingback`](#pingback)                                           | 現在の文書へのピンバックを処理するピンバックサーバーのアドレスを指定します。                                                                                                                                        | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`preconnect`](/ja/docs/Web/HTML/Attributes/rel/preconnect)       | ユーザーエージェントが対象となるリソースのオリジンへの接続を先読みすることを指定します。                                                                                                                            | 外部リソース              | 不許可                                                  | 不許可                    |
@@ -107,7 +109,8 @@ l10n:
 
     {{htmlelement('link')}} では、文書全体の作者を表します。
 
-    > **メモ:** 歴史的な理由から、廃止された属性値 `rev="made"` は `rel="author"` として扱われます。
+    > [!NOTE]
+    > 歴史的な理由から、廃止された属性値 `rev="made"` は `rel="author"` として扱われます。
 
 - `bookmark`
   - : {{htmlelement('a')}} および {{htmlelement('area')}} 属性の `rel` 属性の値として使用されます。最も近い祖先 {{htmlelement('article')}} 要素がある場合、そのパーマリンクを与えます。祖先となる `<article>` 要素がない場合、リンクしている要素が最も近いとされるセクションのパーマリンクを与えます。
@@ -133,7 +136,8 @@ l10n:
 
     > **メモ:** [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
-    > **メモ:** Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を使用していません。
+    > [!NOTE]
+    > Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を使用していません。
     > 代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 
     > **メモ:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
@@ -146,7 +150,8 @@ l10n:
     <link rel="license" href="#license" />
     ```
 
-    > **メモ:** 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
+    > [!NOTE]
+    > 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
 
 - `manifest` {{Experimental_Inline}}
   - : [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。

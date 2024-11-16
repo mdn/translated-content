@@ -61,7 +61,8 @@ Emscripten SDK を取得します。以下の指示に従ってください。<h
 
 WebAssembly に対応しているブラウザーで `hello.html` を読み込むだけです。既定で有効なのは Firefox 52, Chrome 57, Opera 44 以降です。
 
-> **メモ:** 生成された HTML ファイル (`hello.html`) をローカルのハードドライブから直接開こうとすると（例: `file://your_path/hello.html`）、 \_`both async and sync fetching of the wasm failed` という複数行のエラーメッセージが表示されます。 HTML ファイルを HTTP サーバー (`http://`) で実行する必要があります。詳しくは [ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) を参照してください。
+> [!NOTE]
+> 生成された HTML ファイル (`hello.html`) をローカルのハードドライブから直接開こうとすると（例: `file://your_path/hello.html`）、 \_`both async and sync fetching of the wasm failed` という複数行のエラーメッセージが表示されます。 HTML ファイルを HTTP サーバー (`http://`) で実行する必要があります。詳しくは [ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) を参照してください。
 
 全てが計画通りに機能していれば、ウェブページ上の Emscripten コンソールに "Hello world" の出力が表示されるはずです。おめでとうございます、ようやく C を WebAssembly にコンパイルしてブラウザーで実行することができました。
 ![image](helloworld.png)
@@ -96,7 +97,8 @@ WebAssembly に対応しているブラウザーで `hello.html` を読み込む
 
 4. この例を実行してみましょう。上記のコマンドで hello2.html が生成されます。これは生成された Wasm コードに対してロード、実行などを行うグルーコードを含むテンプレートと同じ内容を持ちます。ブラウザーを開いて最後の例と同じ出力であることを確認してください。
 
-> **メモ:** HTML ファイルの代わりに .js ファイルを `-o` フラグで指定することで、完全な HTML ではなく、 JavaScript の「グルー」ファイル*だけ*を出力するように指定することができます。例えば `emcc -o hello2.js hello2.c -O3` とします。そうすると、完全にスクラッチでカスタム HTML を作成することができますが、これは高度なアプローチであり、通常は提供されている HTML テンプレートを使用する方が簡単です。
+> [!NOTE]
+> HTML ファイルの代わりに .js ファイルを `-o` フラグで指定することで、完全な HTML ではなく、 JavaScript の「グルー」ファイル*だけ*を出力するように指定することができます。例えば `emcc -o hello2.js hello2.c -O3` とします。そうすると、完全にスクラッチでカスタム HTML を作成することができますが、これは高度なアプローチであり、通常は提供されている HTML テンプレートを使用する方が簡単です。
 >
 > Emscripten は、メモリー割り当て、メモリーリーク、その他多くの問題を処理するために、多種多様な JavaScript の「グルー」コードを必要とします。
 

@@ -9,7 +9,8 @@ l10n:
 
 {{jsxref("String")}} 값의 **`sub()`** 메서드는 이 문자열을 {{HTMLElement("sub")}} 요소(`<sub>str</sub>`)에 포함하는 문자열을 생성하여 이 문자열이 아래 첨자로 표시되도록 합니다.
 
-> **참고:** 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. 대신 [`document.createElement()`](/ko/docs/Web/API/Document_Object_Model)와 같은 [DOM API](/ko/docs/Web/API/Document/createElement)를 사용하시기 바랍니다.
+> [!NOTE]
+> 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. 대신 [`document.createElement()`](/ko/docs/Web/API/Document_Object_Model)와 같은 [DOM API](/ko/docs/Web/API/Document/createElement)를 사용하시기 바랍니다.
 
 ## 구문
 

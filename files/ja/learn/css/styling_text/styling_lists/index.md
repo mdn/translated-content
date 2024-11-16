@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
+[リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
 
 | 前提知識: | 基本的なコンピューターリテラシー、HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ)、 CSS の基本 ([CSS 入門](/ja/docs/Learn/CSS/First_steps)を学ぶ)、[CSS のテキストとフォントの基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -275,7 +275,8 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **メモ:** 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
+> [!NOTE]
+> 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
 
 ### 値
 
@@ -296,7 +297,8 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **メモ:** 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
+> [!NOTE]
+> 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
 
 ## アクティブラーニング: ネストしたリストの装飾
 

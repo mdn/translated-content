@@ -16,7 +16,7 @@
 마찬가지로 추가하려는 일반 안내서에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 안내서 원칙의 주요 내용입니다.
 
 > 어떻게 시작해야 할지 어려우신가요?
-> [MDN Discord #korean 채널](https://discord.com/channels/1009925603572600863/1070064829466939503) 혹은 [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)에 오셔서 이야기해주세요!
+> [MDN Discord #korean 채널](https://discord.com/channels/1009925603572600863/1070064829466939503) 혹은 [Google Groups (yari-content-ko)](https://groups.google.com/g/yari-content-ko)으로 어려운 사항들 이야기해주세요!
 
 ## 첫 기여자들을 위한 안내서
 

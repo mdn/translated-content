@@ -3,6 +3,8 @@ title: ¿Qué es una URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué son y cómo se estructuran.
 
 <table>
@@ -73,7 +75,8 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.
 
-> **Nota:** Existen [algunas partes extras y reglas extras](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme) con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
+> [!NOTE]
+> Existen [algunas partes extras y reglas extras](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme) con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
 
 Puede pensar en una URL como una dirección de correo postal normal: el protocolo representa el servicio postal que desea utilizar, el nombre de dominio es la ciudad o el pueblo y el puerto es como el código postal; la ruta representa el edificio donde se debe entregar su correo; los parámetros representan información adicional como el número de apartamento en el edificio; y, finalmente, el ancla representa a la persona real a la que ha dirigido su correo.
 
@@ -88,7 +91,8 @@ El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/
 - para mostrar recursos como imágenes (con el elemento {{HTMLElement("img")}}), videos (con el elemento {{HTMLElement("video")}}), sonido y música (con el elemento {{HTMLElement("audio")}} ), etc.;
 - para mostrar otros documentos HTML con el elemento {{HTMLElement ("iframe")}}.
 
-> **Nota:** Al especificar URL para cargar recursos como parte de una página (como cuando se usa \<script>, \<audio>, \<img>, \<video> y similares), solo debe usar URL HTTP y HTTPS. El uso de FTP, por ejemplo, no es particularmente seguro y muchos navegadores ya no lo admiten.
+> [!NOTE]
+> Al especificar URL para cargar recursos como parte de una página (como cuando se usa \<script>, \<audio>, \<img>, \<video> y similares), solo debe usar URL HTTP y HTTPS. El uso de FTP, por ejemplo, no es particularmente seguro y muchos navegadores ya no lo admiten.
 
 Otras tecnologías, como {{Glossary("CSS")}} o {{Glossary("JavaScript")}}, usan URLs ampliamente, y estos son realmente el corazón de la Web.
 

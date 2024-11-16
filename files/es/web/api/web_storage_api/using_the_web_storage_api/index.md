@@ -19,7 +19,8 @@ localStorage["colorSetting"] = "#a4509b";
 localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **Nota:** Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
+> [!NOTE]
+> Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
 
 Los dos mecanismos en el almacenamiento web son los siguientes:
 
@@ -36,7 +37,8 @@ Para poder usar localStorage, debemos de verificar que tiene soporte y que está
 
 ### Probar la disponibilidad
 
-> **Nota:** Nota: esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.
+> [!NOTE]
+> Esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.
 
 Los buscadores que soportan localStorage tienen una propiedad en el objeto window que se llama localStorage. Sin embargo, por varias razones, el sólo asegurarse de que la propiedad existe puede arrojar excepciones. El que localStorage exista no es garantía suficiente de que en verdad esté disponible, puesto que varios buscadores ofrecen configuraciones que lo inhabilitan. Así que un buscador puede _soportar_ localStorage, pero puede no hacerlo _disponible_ para los scripts en la página. Un ejemplo de esto es Safari, que en el modo de búsqueda privada ofrece un objeto localStorage vacío con un cupo de 0, por lo que es inutilizable. Sin embargo, es posible que aún así obtengamos un QuotaExceededError legítimo, lo que significa que ya usamos todo el espacio de almacenamiento disponible, aunque el almacenamiento esté, de hecho, _disponible_. Nuestra detección de la característica debe de tomar en cuenta estos escenarios.
 
@@ -93,7 +95,8 @@ También creamos una [página de salida del evento](https://mdn.github.io/dom-ex
 
 ![](event-output.png)
 
-> **Nota:** Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
+> [!NOTE]
+> Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
 
 ### Probar si la memoria tiene valores
 

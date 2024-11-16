@@ -9,7 +9,8 @@ slug: conflicting/Web/API/CustomElementRegistry/define
 
 O método **`document.registerElement()`** registra um novo [elemento personalizado](/pt-BR/docs/Web/Web_Components/Custom_Elements) no browser e retorna um construtor para o novo elemento.
 
-> **Nota:** Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja [Habilitando componentes web no Firefox.](/pt-BR/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)
+> [!NOTE]
+> Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja [Habilitando componentes web no Firefox.](/pt-BR/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)
 
 ## Sintaxe
 

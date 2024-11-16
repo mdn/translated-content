@@ -18,9 +18,10 @@ slug: Learn/Tools_and_testing/GitHub
 
 版本控制系統提供了能夠滿足以上需求的工具。 [Git](https://git-scm.com/) 是版本控制系統的範例，而[GitHub](https://github.com/)是一個為個人或團隊操作 Git 儲存庫( Git Repositories) 提供了 Git 伺服器和一系列非常實用的工具的網站+基礎設施。它提供了回報程式碼錯誤、檢查工具以及分配任務和任務狀態等項目管理工具等等。
 
-> **備註：** Git 實際上是一個*分散式*版本控制系統，這意味著包含程式碼庫的儲存庫的完整副本是在你的電腦上（以及其他所有人）上創建的。 你可以對自己的副本進行更改，然後將這些更改推送回伺服器，管理員將決定是否將你的更改與主副本合併到主幹上。
+> [!NOTE]
+> Git 實際上是一個*分散式*版本控制系統，這意味著包含程式碼庫的儲存庫的完整副本是在你的電腦上（以及其他所有人）上創建的。 你可以對自己的副本進行更改，然後將這些更改推送回伺服器，管理員將決定是否將你的更改與主副本合併到主幹上。
 
-> **標註：**
+> [!CALLOUT]
 >
 > **嘗試成為一位前端網頁程式開發者?**
 >
@@ -40,7 +41,8 @@ slug: Learn/Tools_and_testing/GitHub
 
 最好還具有一些基本的終端機知識，例如在目錄之間移動，創立文件以及修改系統的 `PATH`。
 
-> **備註：** Github 不是唯一網站/工具集讓你使用 Git。 你可以嘗試其它替代方法，例如 [GitLab](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
+> [!NOTE]
+> Github 不是唯一網站/工具集讓你使用 Git。 你可以嘗試其它替代方法，例如 [GitLab](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
 
 ## 其它指南
 
@@ -57,7 +59,8 @@ slug: Learn/Tools_and_testing/GitHub
 - [掌握問題（來自 GitHub）](https://guides.github.com/features/issues/)
   - : 問題就像是 GitHub 項目的論壇，人們可以在其中提出問題和報告問題，還可以管理更新（例如，分配人員來解決問題，澄清問題，讓人們知道問題已解決）。本文將提供你有關問題的必備知識。
 
-> **備註：** 你還可以用 Git 跟 GitHub 來完成更多的事情，但我們認為，如果你想要有效地使用 Git，上面的這些知識是至少應該具備的。當你更深入地了解 Git 時，你將會意識到，當你開始使用更加複雜的指令時會更容易出錯。但不要擔心，即使是專業的網路工程師有時都會感到困惑，並通過網路檢索或[Flight rules for Git](https://github.com/k88hudson/git-flight-rules)和 [Dangit, git!](https://dangitgit.com/) 這樣的網站來尋找答案。
+> [!NOTE]
+> 你還可以用 Git 跟 GitHub 來完成更多的事情，但我們認為，如果你想要有效地使用 Git，上面的這些知識是至少應該具備的。當你更深入地了解 Git 時，你將會意識到，當你開始使用更加複雜的指令時會更容易出錯。但不要擔心，即使是專業的網路工程師有時都會感到困惑，並通過網路檢索或[Flight rules for Git](https://github.com/k88hudson/git-flight-rules)和 [Dangit, git!](https://dangitgit.com/) 這樣的網站來尋找答案。
 
 ## 也可以參考以下
 

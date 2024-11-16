@@ -17,11 +17,13 @@ JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisati
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Attention :** L'attribut `tabindex` ne doit pas être utilisé sur l'élément `<dialog>`.
+> [!WARNING]
+> L'attribut `tabindex` ne doit pas être utilisé sur l'élément `<dialog>`.
 
 - `open`
   - : Cet attribut indique que la boîte de dialogue est active et peut être utilisée de façon interactive. Si l'attribut n'est pas renseigné, la boîte de dialogue ne doit pas être affichée. Il est recommandé d'utiliser les méthodes `.show()` ou `.showModal()` afin d'afficher les boîtes de dialogue, plutôt que l'attribut `open`. Si un élément `<dialog>` est ouvert à l'aide de l'attribut `open`, il s'agira d'une boîte non-modale.
-    > **Note :** Bien qu'il soit possible de basculer entre l'état ouvert et l'état fermé des boîtes de dialogue ne bloquant pas l'interraction en modifiant la présence de l'attribut `open`, cette approche n'est pas recommandée.
+    > [!NOTE]
+    > Bien qu'il soit possible de basculer entre l'état ouvert et l'état fermé des boîtes de dialogue ne bloquant pas l'interraction en modifiant la présence de l'attribut `open`, cette approche n'est pas recommandée.
 
 ## Notes d'utilisation
 

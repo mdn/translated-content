@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 El método `animate()` de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
 
-> **Nota:** Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
+> [!NOTE]
+> Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
 > lista de las animaciones que afectan a un elemento llamando a {{domxref("Element.getAnimations()")}}.
 
 ## Síntaxis

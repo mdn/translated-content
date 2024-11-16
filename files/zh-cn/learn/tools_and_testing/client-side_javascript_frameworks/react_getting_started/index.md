@@ -75,7 +75,8 @@ const header = (
 );
 ```
 
-> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
+> [!NOTE]
+> 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
 > ```jsx-nolint
 > const header = <header>
@@ -138,7 +139,8 @@ npx create-react-app moz-todo-react
 - 创建一系列结构化的子文件夹和文件，奠定应用程序的基础架构；
 - 如果你的电脑上安装了 git 的话，顺便帮你把 git 仓库也建好。
 
-> **备注：** 如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 `--use-npm` **:**
+> [!NOTE]
+> 如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 `--use-npm` **:**
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -154,7 +156,7 @@ npx create-react-app moz-todo-react
 
 create-react-app 提供了开发 React 应用所需的工具。它的初始文件结构如下：
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -232,11 +234,13 @@ import "./App.css";
 
 第二句代码引入了 `'./logo.svg'`。注意文件路径以 `./` 开头、由 `.svg` 尾——表明这是一个本地文件，并且它不是 JavaScript 文件。
 
-> **备注：** 我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 `package.json` 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。
+> [!NOTE]
+> 我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 `package.json` 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。
 
 第三行引入了我们的组件所需的 CSS 文件。与上面两句不同，这里没有将引入的内容赋给任何变量、也没有用到 `from` 指令。请注意这种特殊的语法并非原生 JS 的语法——它源自前端资源打包工具 webpack，而 create-react-app 正是基于 webpack 配置而来的。
 
-> **备注：** 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。
+> [!NOTE]
+> 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。
 >
 > 详情参见 webpack 官方和社区，截止目前 (2020 年下旬)，webpack 仍是现代前端工作中必不可少的技能之一。
 
@@ -321,7 +325,8 @@ serviceWorker.unregister();
 
 上述所有都告诉 React 我们想把 `App` 组件作为 root 或者第一个组件来渲染我们的 React App。
 
-> **备注：** 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
+> [!NOTE]
+> 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
 
 [Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，你可以删除第 5 行和第 9 到 12 行。
 

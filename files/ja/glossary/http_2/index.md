@@ -14,7 +14,7 @@ HTTP/2 は HTTP のアプリケーション的な意味を何も変更してい�
    1. [HTTP on MDN](/ja/docs/Web/HTTP)
    2. Wikipedia の [HTTP/2](https://ja.wikipedia.org/wiki/HTTP/2)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{glossary("HTTP")}}
    2. {{glossary("Latency")}}
