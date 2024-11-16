@@ -56,7 +56,7 @@ overflow-block: unset;
 
 ### HTML
 
-```html
+```html-nolint
 <ul>
   <li>
     <code>overflow-block: hidden</code> （ボックスの外側のテキストを隠す）
