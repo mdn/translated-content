@@ -10040,10 +10040,6 @@
     "modified": "2020-10-15T22:17:42.543Z",
     "contributors": ["Codexiaowu", "chrisdavidmills"]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:31:37.680Z",
-    "contributors": ["qq2009"]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2019-03-23T22:39:22.796Z",
     "contributors": ["lcw0622"]
@@ -10265,6 +10261,10 @@
   "Web/API/HTMLElement/title": {
     "modified": "2020-01-21T18:29:28.077Z",
     "contributors": ["yinsang", "liuhe", "teoli", "AlexChao"]
+  },
+  "Web/API/HTMLElement/toggle_event": {
+    "modified": "2020-10-15T22:31:37.680Z",
+    "contributors": ["qq2009"]
   },
   "Web/API/HTMLFieldSetElement": {
     "modified": "2019-03-23T23:39:02.321Z",
