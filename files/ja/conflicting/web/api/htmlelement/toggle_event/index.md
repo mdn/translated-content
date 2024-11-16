@@ -1,6 +1,7 @@
 ---
 title: "HTMLDetailsElement: toggle イベント"
-slug: Web/API/HTMLDetailsElement/toggle_event
+slug: conflicting/Web/API/HTMLElement/toggle_event
+original_slug: Web/API/HTMLDetailsElement/toggle_event
 l10n:
   sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
 ---
