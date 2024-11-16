@@ -480,7 +480,7 @@ console.log(a.length); // 101
 console.log(a); // ['狗', '猫', '母鸡', empty × 97, '狐狸']
 ```
 
-上面的数组称作[*稀疏数组*](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，因为中间有空的槽，这会导致引擎将数组负优化为哈希表。确保数组是紧密排列的！
+上面的数组称作[_稀疏数组_](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，因为中间有空的槽，这会导致引擎将数组负优化为哈希表。确保数组是紧密排列的！
 
 越界索引不会抛出异常。如果你查询的是不存在数组索引，你得到的返回值是 `undefined`：
 
