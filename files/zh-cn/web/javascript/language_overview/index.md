@@ -781,7 +781,7 @@ async function readFile(filename) {
 
 核心语言并没有指定任何的异步编程特性，但在与外部环境交互时，这个特性非常重要——从[询问用户权限](/zh-CN/docs/Web/API/Permissions_API)、[获取数据](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)，到[读取文件](https://nodejs.org/api/fs.html)。保持潜在地长时间运行的操作异步能确保这个操作等待期间其他进程仍然能运行——例如，在等待用户点击按钮授予权限期间，浏览器不会冻结。
 
-如果你有一个异步的值，同步地得到这个值是不可能的。例如，如果你有一个 promise，你只能通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法访问最终的结果。同样地，{{jsxref("Operators/await", "await")}} 只能被用于异步上下文中，异步上下文通常是异步函数或模块。promise *永不阻塞*——只是依赖于 promise 的结果的逻辑会被延迟；在此期间，其余部分继续执行。如果你是函数式编程者，你可以将 promise 当作[单子](<https://zh.wikipedia.org/wiki/单子 (函数式编程)>)，可以用 `then()` 映射 promise（然而，promise 不是*严格意义上的*单子，它们会自动战平；例如，你不能有 `Promise<Promise<T>>`）。
+如果你有一个异步的值，同步地得到这个值是不可能的。例如，如果你有一个 promise，你只能通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法访问最终的结果。同样地，{{jsxref("Operators/await", "await")}} 只能被用于异步上下文中，异步上下文通常是异步函数或模块。promise _永不阻塞_——只是依赖于 promise 的结果的逻辑会被延迟；在此期间，其余部分继续执行。如果你是函数式编程者，你可以将 promise 当作[单子](<https://zh.wikipedia.org/wiki/单子 (函数式编程)>)，可以用 `then()` 映射 promise（然而，promise 不是*严格意义上的*单子，它们会自动战平；例如，你不能有 `Promise<Promise<T>>`）。
 
 实际上，单线程模型让 Node.js 成为服务器端编程的热门选择，因为它非阻塞的 IO，使得处理大量的数据库或文件系统请求非常高效。然而，纯 JavaScript 的 CPU 密集型（计算密集型）任务仍会阻塞主线程。为了实现真正的并行，你需要使用 [worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)。
 
