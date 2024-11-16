@@ -1,6 +1,7 @@
 ---
 title: "HTMLDetailsElement: toggle event"
-slug: Web/API/HTMLDetailsElement/toggle_event
+slug: Web/API/HTMLElement/toggle_event
+original_slug: Web/API/HTMLDetailsElement/toggle_event
 ---
 
 {{APIRef}}

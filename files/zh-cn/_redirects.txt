@@ -1594,6 +1594,7 @@
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
 /zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/Web/API/HTMLSlotElement
+/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event	/zh-CN/docs/Web/API/HTMLElement/toggle_event
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
@@ -2295,7 +2296,7 @@
 /zh-CN/docs/Web/Events/storage	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/Events/timeout	/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event
 /zh-CN/docs/Web/Events/timeupdate	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
-/zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event
+/zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLElement/toggle_event
 /zh-CN/docs/Web/Events/touchcancel	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/Events/touchend	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/Web/API/Element/touchmove_event
