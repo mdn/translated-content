@@ -2,14 +2,14 @@
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
 ---
 
 {{JSRef}}
 
 **`Promise.allSettled()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のすべてのプロミスが決定したとき（空の反復可能オブジェクトが渡された場合を含む）に履行され、各プロミスの結果を記述するオブジェクトの配列が返されます。
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
+{{EmbedInteractiveExample("pages/js/promise-allsettled.html", "taller")}}
 
 ## 構文
 
@@ -78,7 +78,7 @@ Promise.allSettled([
 ## 関連情報
 
 - [`Promise.allSettled` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
-- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
+- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
 - [プロミスを使った行儀のよい非同期のプログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

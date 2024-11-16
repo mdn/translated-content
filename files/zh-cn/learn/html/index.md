@@ -11,7 +11,7 @@ l10n:
 
 ## 前提
 
-在开始本主题之前，你应该至少熟悉如何使用电脑，如何被动地使用 Web（例如，只是浏览和消费内容）。你应该按照[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中的详细内容搭建基本的工作环境，以及按照[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中的内容理解如何创建和管理文件——这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)纯新手模块的一部分。
+在开始本主题之前，你应该至少熟悉如何使用电脑，如何被动地使用 Web（例如，只是浏览和消费内容）。你应该按照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中的详细内容搭建基本的工作环境，以及按照[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中的内容理解如何创建和管理文件——这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)纯新手模块的一部分。
 
 在开始本主题之前，还是建议你先学习 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)。不过，这并不是绝对必要的；[HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)这篇文章中涉及的大部分内容在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块中也有所涉及，而且更详细。
 

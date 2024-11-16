@@ -147,7 +147,7 @@ _変更なし。_
 新しい定数が `nsIContentPolicy` に追加され、Gecko 内部とアドオンコードが異なる型のリクエストをより良く区別することができるようになりました。これらは次の通りです。
 
 - `TYPE_FETCH`
-  - : {{domxref("fetch()")}} メソッドによって開始された、コンテンツの読み込みリクエストを示す。
+  - : {{domxref("Window/fetch", "fetch()")}} メソッドによって開始された、コンテンツの読み込みリクエストを示す。
 - `TYPE_IMAGESET`
   - : {{HTMLElement("img")}} ([`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性または {{HTMLElement("picture")}} 要素を読み込むリクエストを示す。
 

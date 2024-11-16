@@ -1,6 +1,8 @@
 ---
 title: What are hyperlinks?
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+l10n:
+  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -10,11 +12,11 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선수지식:</th>
+      <th scope="row">선행 지식:</th>
       <td>
-        <a href="/en-US/Learn/How_the_Internet_works">인터넷이 작동하는 법</a>을
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">인터넷이 작동하는 법</a>을
         알아야 하고
-        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >웹 페이지, 웹사이트, 웹 서버 그리고 검색엔진의 차이</a
         >에 익숙해야 한다.
       </td>

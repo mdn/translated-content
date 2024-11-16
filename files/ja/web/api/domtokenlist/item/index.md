@@ -11,7 +11,7 @@ l10n:
 **`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
 > [!NOTE]
-> このメソッドは[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット表記法)と等価です。
+> このメソッドは[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)と等価です。
 > したがって、 `aList.item(i)` は `aList[i]` と同じです。
 
 ## 構文

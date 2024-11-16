@@ -1,8 +1,8 @@
 ---
-title: WebSocket クライアントアプリケーションの記述
+title: WebSocket クライアントアプリケーションを書く
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 l10n:
-  sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
+  sourceCommit: 4bd2e8957a40a8f31484f9aea3725bdfe78a921a
 ---
 
 {{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
@@ -26,7 +26,8 @@ webSocket = new WebSocket(url, protocols);
 - `url`
   - : 接続先 URL。これは、 WebSocket サーバーが応答する URL である必要があります。
     これは URL スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
-- `protocols` {{ optional_inline() }}
+    相対 URL 値と `https://` および `http://` スキームも、[ほとんどのブラウザーの最新バージョン](/ja/docs/Web/API/WebSocket/WebSocket#ブラウザーの互換性)で許可されています。
+- `protocols` {{optional_inline}}
   - : 単一のプロトコル文字列または一連のプロトコル文字列。
     これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の WebSocket サブプロトコルを実装できます（たとえば、特定の `protocol` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。
     プロトコル文字列を指定しない場合、空文字列であると仮定されます。
@@ -36,7 +37,7 @@ webSocket = new WebSocket(url, protocols);
 
 ### 接続エラー
 
-接続中にエラーが発生した場合、最初に `error` という名前の単純なイベントが {{domxref("WebSocket")}} オブジェクトに送信され（その結果、その {{domxref("WebSocket/error_event", "onerror")}} ハンドラーが呼び出されます）、次に {{domxref("CloseEvent")}} が `WebSocket` オブジェクトに送信され（{{domxref("WebSocket/close_event", "onclose")}} ハンドラーが呼び出されます）接続の終了の理由を示します。
+接続を試行中にエラーが発生した場合、最初の [`error` イベント](/ja/docs/Web/API/WebSocket/error_event)が {{domxref("WebSocket")}} オブジェクトに送信され（これにより、すべてのハンドラーが呼び出されます）、接続が閉じられた理由を示す [`close` イベント](/ja/docs/Web/API/WebSocket/close_event)が続きます。
 
 ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4)で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
 
@@ -52,7 +53,8 @@ const exampleSocket = new WebSocket(
 );
 ```
 
-返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。 `readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
+返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。
+`readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
 
 接続を開き、サポートしているプロトコルについて柔軟に対応したい場合は、プロトコルの配列を指定することができます。
 
@@ -89,7 +91,8 @@ exampleSocket.onopen = (event) => {
 
 ### JSON を使用したオブジェクトの送信
 
-サーバーに複雑なデータを合理的に送信するのに手軽な方法の一つとして、 {{glossary("JSON")}} を使用する方法があります。たとえば、チャットプログラムがサーバーとやり取りするのに、 JSON でカプセル化されたデータのパケットを使用して実装されたプロトコルを使用することができます。
+サーバーに複雑なデータを合理的に送信するのに手軽な方法の一つとして、{{glossary("JSON")}} を使用する方法があります。
+たとえば、チャットプログラムがサーバーとやり取りするのに、 JSON でカプセル化されたデータのパケットを使用して実装されたプロトコルを使用することができます。
 
 ```js
 // Send text to all users through the server
@@ -153,7 +156,7 @@ exampleSocket.onmessage = (event) => {
       text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
+      document.getElementById("userlistbox").innerText = msg.users.join("\n");
       break;
   }
 

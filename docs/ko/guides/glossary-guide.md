@@ -87,6 +87,7 @@
 | Instruction         | 지침             | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Naming              | 이름 지정        |                                                                                        |
 | Parameters          | 매개변수         | [링크][AudioWorkletNode]                                                               |
+| Prerequisites       | 선행 지식        |                                                                                        |
 | Requirements        | 요구 사항        |                                                                                        |
 | Value               | 값               | [링크][target]                                                                         |
 

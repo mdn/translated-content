@@ -40,11 +40,7 @@ operated by the People's Front of Judea.</p>
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 相关内容
+## 参见
 
 - [Wikipedia: HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
 - [Wikipedia: Fahrenheit 451](https://zh.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)

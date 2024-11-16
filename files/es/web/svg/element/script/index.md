@@ -43,7 +43,7 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
     </tr>
     <tr>
       <th scope="row">Omision de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padre permitidos</th>

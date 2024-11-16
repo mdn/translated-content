@@ -147,7 +147,7 @@ JavaScript는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인
 
 ### CSS 애니메이션 예제
 
-예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)와 [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)를 참고하세요.
+예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)와 [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)를 참고하세요.
 
 ## 명세서
 
@@ -162,5 +162,5 @@ JavaScript는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인
 - {{cssxref("animation-range")}}
 - [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)
 - [CSS 애니메이션 사용하기](/ko/docs/CSS/Tutorials/Using_CSS_animations)
-- [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)
+- [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

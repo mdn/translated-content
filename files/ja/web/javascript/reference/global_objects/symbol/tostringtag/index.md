@@ -2,7 +2,7 @@
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 l10n:
-  sourceCommit: 808b7d39103c946ca1b7dd5edbe7afd203c92efd
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}

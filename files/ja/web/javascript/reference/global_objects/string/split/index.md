@@ -2,12 +2,12 @@
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 l10n:
-  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`split()`** メソッドは、パターンを受け取り、{{jsxref("String")}} をパターン検索によって部分文字列の順序付きリストに分割し、これらの部分文字列を配列に入れ、その配列を返します。
+**`split()`** は {{jsxref("String")}} 値のメソッドで、パターンを受け取り、この文字列をパターン検索によって部分文字列の順序付きリストに分割し、これらの部分文字列を配列に入れ、その配列を返します。
 
 {{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
 
@@ -21,7 +21,7 @@ split(separator, limit)
 ### 引数
 
 - `separator`
-  - : 各分割がどこで行われるかを表すパターンです。`undefined`、文字列、または [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトを指定することができます。典型的な例は{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}です。`separator` を省略したり `undefined` を渡したりすると、`split()` は呼び出し元の文字列を 1 つの要素とする配列を返します。`undefined` でない値、または `@@split` メソッドを持つオブジェクトはすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。
+  - : 各分割がどこで行われるかを表すパターンです。`undefined`、文字列、または [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトを指定することができます。典型的な例は{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}です。`separator` を省略したり `undefined` を渡したりすると、`split()` は呼び出し元の文字列を 1 つの要素とする配列を返します。`undefined` でない値、または `[Symbol.split]()` メソッドを持つオブジェクトはすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。
 - `limit` {{optional_inline}}
   - : 配列に含める部分文字列の数の制限を指定する非負の整数。指定した場合は、指定した `separator` が出現するたびに文字列を分割しますが、`limit` 個の項目が配列に格納された時点で分割を終了します。残った文字列は配列に格納されません。
     - 制限数に達する以前に文字列の末尾に達した場合は、配列の要素が `limit` よりも少なくなることがあります。
@@ -41,7 +41,7 @@ split(separator, limit)
 > したがって、`"".split("")` は `separator` として文字列を渡され、`limit` が `0` でないときに空の配列を生成する唯一の方法です。
 
 > [!WARNING]
-> 区切り文字として空文字列 (`""`) が用いられた場合、文字列はユーザが認識する文字（[書記素クラスタ](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）や Unicode 文字（コードポイント）ではなく、UTF-16 コード単位で分割されます。 これは[サロゲートペア](https://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。[StackOverflow の "How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402) を参照してください。
+> 区切り文字として空文字列 (`""`) が用いられた場合、文字列はユーザーが認識する文字（[書記素クラスタ](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）や Unicode 文字（コードポイント）ではなく、UTF-16 コード単位で分割されます。 これは[サロゲートペア](https://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。[StackOverflow の "How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402) を参照してください。
 
 `separator` が空文字列に一致する正規表現である場合、一致する文字列が UTF-16 コード単位で分割されるか、Unicode コード点で分割されるかは、正規表現が [Unicode-aware](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) かどうかに依存します。
 
@@ -288,4 +288,4 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド

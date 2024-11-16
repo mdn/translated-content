@@ -4,10 +4,6 @@ slug: Learn/JavaScript/Building_blocks/Event_bubbling
 original_slug: Web/API/Event/Comparison_of_Event_Targets
 ---
 
-{{ ApiRef() }}
-
-### Event targets
-
 Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.
 
 Существуют 5 целей для рассмотрения:

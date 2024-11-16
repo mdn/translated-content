@@ -26,7 +26,7 @@ Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'A
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy).
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

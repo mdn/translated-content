@@ -2,7 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 l10n:
-  sourceCommit: f15b8d5828c480af144a9b8f88b2724e2997f571
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -145,7 +145,7 @@ JavaScript には `null` プロトタイプオブジェクトを生成する組�
 
 - {{jsxref("Object.groupBy()")}} の返値
 - {{jsxref("RegExp.prototype.exec()")}} の返値の `groups` および `indices.groups` プロパティ
-- [`Array.prototype[@@unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) （すべての `@@unscopables` オブジェクトはプロトタイプが `null` である）
+- [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) （すべての `[Symbol.unscopables]` オブジェクトはプロトタイプが `null` である）
 - [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta)
 - モジュールの名前空間オブジェクト。 [`import * as ns from "module";`](/ja/docs/Web/JavaScript/Reference/Statements/import#namespace_import) または [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) から取得したもの。
 
