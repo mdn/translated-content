@@ -63,7 +63,7 @@ overflow-y: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <ul>
   <li>
     <code>overflow-y:hidden</code> — ボックスの外側のテキストを隠す
