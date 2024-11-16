@@ -812,7 +812,7 @@ export const a = 1;
 
 JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
 
-运行时、或者宿主，将数据反馈给 JavaScript 引擎（解释器）、提供额外的全局属性、为引擎提供钩子与外部世界交互。模块解析、读取数据、打印消息、发送网络请求等都是运行时级别的操作。自诞生以来，JavaScript 已被各种环境所采用。，例如，浏览器（其提供诸如  [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 这样的 API），Node.js（其提供诸如 [文件系统访问](https://nodejs.org/api/fs.html)这样的 API），等。JavaScript 已经成功整合到 Web（其为 JavaScript 的主要用途）、移动应用、桌面应用、服务器端应用、无服务、嵌入式系统，等等。在学习 JavaScript 核心特性的同时，了解宿主提供的特性也很重要，以便将知识付诸实践。例如，你可以阅读所有的 [Web 平台 API](/zh-CN/docs/Web/API)，其由浏览器实现，有时非浏览器宿主也会实现。
+运行时、或者宿主，将数据反馈给 JavaScript 引擎（解释器）、提供额外的全局属性、为引擎提供钩子与外部世界交互。模块解析、读取数据、打印消息、发送网络请求等都是运行时级别的操作。自诞生以来，JavaScript 已被各种环境所采用。，例如，浏览器（其提供诸如 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 这样的 API），Node.js（其提供诸如 [文件系统访问](https://nodejs.org/api/fs.html)这样的 API），等。JavaScript 已经成功整合到 Web（其为 JavaScript 的主要用途）、移动应用、桌面应用、服务器端应用、无服务、嵌入式系统，等等。在学习 JavaScript 核心特性的同时，了解宿主提供的特性也很重要，以便将知识付诸实践。例如，你可以阅读所有的 [Web 平台 API](/zh-CN/docs/Web/API)，其由浏览器实现，有时非浏览器宿主也会实现。
 
 ## 继续探索
 
