@@ -3,6 +3,8 @@ title: <tfoot>
 slug: Web/HTML/Element/tfoot
 ---
 
+{{HTMLSidebar}}
+
 HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 <table class="properties">
@@ -78,15 +80,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 - `valign` {{Deprecated_inline}}
 
-  - : 此属性指定表头（译者注：英文原文为 table header，疑似错误）中每一行内的文本的垂直对齐方式。此属性的可选值为：
-
-    - `baseline`，会使文本尽可能接近单元格底部，但并不向底部对齐，而将它们以字符[基线](https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%B7%9A)对齐。如果所有字符的大小相同，此值与`bottom`的效果相同；
-    - `bottom`，设置文本向下对齐；
-    - `middle`，设置文本居中对齐；
-    - `top`，设置文本向上对齐。
-
-    > [!NOTE]
-    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）：使用 CSS 属性{{cssxref("vertical-align")}}作为替代。
+  - : 指定每个表脚单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有：`baseline`、`bottom`、`middle` 和 `top`。此属性已被弃用，请使用 CSS 属性 {{cssxref("vertical-align")}} 代替。
 
 ## 示例
 
@@ -107,5 +101,3 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
   - {{cssxref(":nth-child")}}伪类：设置列内元素的对齐方式；
   - {{cssxref("text-align")}}属性：可设置单元格内容与同一字符对齐，例如'.'。
-
-{{HTMLSidebar}}
