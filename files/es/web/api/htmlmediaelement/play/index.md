@@ -21,7 +21,8 @@ Ninguno.
 
 Es una promesa({{jsxref("Promise")}}) que se resuelve cuando se inicia la reproducción, o se rechaza si por algún motivo no se puede iniciar la reproducción.
 
-> **Nota:** Los navegadores más antiguos pueden no devolver un valor de `play()`.
+> [!NOTE]
+> Los navegadores más antiguos pueden no devolver un valor de `play()`.
 
 ### Excepciones
 
@@ -40,7 +41,8 @@ Aunque generalmente se considera que el término "reproducción automática" se 
 
 Si el {{Glossary("user agent")}} está configurado para no permitir la reproducción automática o iniciada por script de medios, llamando el método `play()` hara que la promesa devuelta sea rechazada inmediatamente con un `NotAllowedError`. Los sitios web deben estar preparados para manejar esta situación. Por ejemplo, un sitio no debe presentar una interfaz de usuario que suponga que la reproducción ha comenzado automáticamenta, sino que debe actualizar su interfaz de usuario en función de si la promesa devuelta se resulve o se rechaza. Mira el [Ejemplo](#example) abajo para más información.
 
-> **Nota:** El método `play()` puede hacer que se le pida al usuario que otorgue permiso para reproducir medios, lo que puede ocacionar un posible retraso antes de que se resuelva la promesa devuelta. Asegúrese de que su código no espere una respuesta inmediata.
+> [!NOTE]
+> El método `play()` puede hacer que se le pida al usuario que otorgue permiso para reproducir medios, lo que puede ocacionar un posible retraso antes de que se resuelva la promesa devuelta. Asegúrese de que su código no espere una respuesta inmediata.
 
 Para obtener información más detallada sobre la reproducción automática y el bloqueo de reproducción automática, consulte nuestro artículo [Guía de reproducción automática para medios y API de audio web](/es/docs/Web/Media/Autoplay_guide).
 

@@ -1,13 +1,14 @@
 ---
-title: IDBDatabase.transaction()
+title: "IDBDatabase: transaction() メソッド"
+short-title: transaction()
 slug: Web/API/IDBDatabase/transaction
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 88241bf466f1025d3c2f4ce2752586dd85d1ae13
 ---
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`transaction`** メソッドは、オブジェクトストアへのアクセスに利用できる {{domxref("IDBTransaction.objectStore")}} メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}}) を即座に返します。
+**`transaction`** は {{domxref("IDBDatabase")}} インターフェイスのメソッドで、オブジェクトストアへのアクセスに利用できる {{domxref("IDBTransaction.objectStore")}} メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}}) を即座に返します。
 
 {{AvailableInWorkers}}
 
@@ -50,7 +51,8 @@ transaction(storeNames, mode, options)
 
     Firefox 40 以降、IndexedDB のトランザクションはパフォーマンスを向上させるために永続性を緩めています。([Firefox バグ 1112702](https://bugzil.la/1112702) を参照) これは IndexedDB に対応した他のブラウザーと同様の挙動です。以前は、`readwrite` トランザクションでは {{domxref("IDBTransaction.complete_event", "complete")}} イベントはすべてのデータが確実にディスクに書き込まれてからのみ発火していました。Firefox 40 以降では、`complete` イベントは OS にデータを書き込む指示を出した後に発火し、データはまだ実際にディスクに書き込まれていない可能性があります。そのため、`complete` イベントは以前より早く伝わることがありますが、データがディスクに書き込まれる前に OS がクラッシュしたりシステム電源が喪失したりすると、トランザクション全体が失われる可能性が少しあります。そのような最悪の事象はほとんどないため、ほとんどの利用者は気にしなくていいでしょう。
 
-    > **メモ:** Firefox では、何らかの理由で永続性を保証したい場合 (例えば、後で再計算できない重要なデータを保存する場合)、実験的な (非標準の) `readwriteflush` モードを用いてトランザクションを開始することで、`complete` イベントを伝える前にトランザクションをディスクに書き込むことを強制できます。({{domxref("IDBDatabase.transaction")}} を参照) これは現在実験的であり、`about:config` で `dom.indexedDB.experimental` を `true` に設定している場合のみ利用できます。
+    > [!NOTE]
+    > Firefox では、何らかの理由で永続性を保証したい場合 (例えば、後で再計算できない重要なデータを保存する場合)、実験的な (非標準の) `readwriteflush` モードを用いてトランザクションを開始することで、`complete` イベントを伝える前にトランザクションをディスクに書き込むことを強制できます。({{domxref("IDBDatabase.transaction")}} を参照) これは現在実験的であり、`about:config` で `dom.indexedDB.experimental` を `true` に設定している場合のみ利用できます。
 
 - `options` {{optional_inline}}
 
@@ -81,7 +83,7 @@ transaction(storeNames, mode, options)
 ```js
 let db;
 
-// 我々のデータベースを開きましょう
+// データベースを開く
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {

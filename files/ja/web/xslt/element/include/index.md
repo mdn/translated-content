@@ -1,15 +1,17 @@
 ---
 title: <xsl:include>
 slug: Web/XSLT/Element/include
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:include>` 要素はあるスタイルシートの内容を別のスタイルシートにマージします。`<xsl:import>` の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。
 
 ### 構文
 
-```
+```xml
 <xsl:include href=URI />
 ```
 
@@ -20,13 +22,13 @@ slug: Web/XSLT/Element/include
 
 ### 任意属性
 
-なし
+なし。
 
-### タイプ
+### 種類
 
-トップレベルは `<xsl:stylesheet>` または `<xsl:transform>` の子として任意の順序で表示されます。
+最上位で、`<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
 
-### 定義
+## 仕様書
 
 XSLT, section 2.6.1.
 

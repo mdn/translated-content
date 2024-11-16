@@ -3,6 +3,8 @@ title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
+{{CSSRef}}
+
 ### Наложения без Z-индекса
 
 Когда элементы не имеют z-индекса, они накладываются в таком порядке(снизу вверх):
@@ -107,7 +109,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-ind
 
 {{ EmbedLiveSample('Пример') }}
 
-### Так же посмотрите
+## Смотрите также
 
 - [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
 - [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking

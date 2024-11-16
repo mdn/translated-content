@@ -115,7 +115,7 @@ margin-left: 5px;
 margin: 10px 5px 10px 5px;
 ```
 
-## See also
+## Смотрите также
 
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)

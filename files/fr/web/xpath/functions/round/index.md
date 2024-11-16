@@ -3,7 +3,7 @@ title: round
 slug: Web/XPath/Functions/round
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `round` retourne le nombre entier le plus proche d'un nombre donné.
 

@@ -15,9 +15,7 @@ slug: Glossary/Character_encoding
 
 這使我們可以在 HTML 檔案中使用幾乎所有人類使用的語言，並且會正常顯示。
 
-## 學習更多
+## 參見
 
-### 基本知識
-
-- [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) (維基百科)
+- [W3C 上的字元編碼](https://www.w3.org/International/articles/definitions-characters/)
+- 維基百科上的[字元編碼](https://zh.wikipedia.org/wiki/字符编码)

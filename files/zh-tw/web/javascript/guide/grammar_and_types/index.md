@@ -348,7 +348,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **備註：** An array literal is a type of object initializer. See [Using Object Initializers](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
+> [!NOTE]
+> An array literal is a type of object initializer. See [Using Object Initializers](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
 
@@ -366,7 +367,8 @@ This array has two elements with values and one empty element (`fish[0]` is "Lio
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored. In the following example, the length of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
 
-> **備註：** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
+> [!NOTE]
+> Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
 var myList = ["home", , "school"];
@@ -548,7 +550,7 @@ console.log("John's cat".length);
 // In this case, 10.
 ```
 
-In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](http://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
 
 ```js
 // Basic literal string creation

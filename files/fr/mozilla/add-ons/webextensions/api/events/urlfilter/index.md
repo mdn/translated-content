@@ -3,7 +3,7 @@ title: events.UrlFilter
 slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Décrit différents critères de filtrage des URL. Si tous les critères spécifiés dans les propriétés du filtre correspondent à l'URL, le filtre correspond. Les filtres sont souvent fournis aux méthodes API dans un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'UrlFilters. Par exemple, les écouteurs [webNavigation](/fr/Add-ons/WebExtensions/API/webNavigation) peuvent être ajoutés avec un filtre qui est un objet avec une seule propriété url qui est un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) de UrlFilters, par exemple `{url:[UrlFilter,UrlFilter,...]}`. Si un filtre dans le tableau de UrlFilters correspond, il est considéré comme une correspondance pour le tableau. En effet, les critères spécifiés dans un seul filtre sont associés ensemble, alors que tous les filtres individuels dans un tableau sont où.
 
@@ -70,7 +70,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
 - `urlSuffix`{{optional_inline}}
   - : `string`. Correspond si l'URL (sans l'identificateur de fragment) se termine par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut. Notez qu'un slash "/" implicite est ajoutée après l'hôte, donc `"com/"` correspond "https\://example.com", mais pas `"com"`.
-- `schemas`{{optional_inline}}
+- `schemes`{{optional_inline}}
 
   - : `array` of `string`. Correspond si le schéma de l'URL est identique à l'un des schémas spécifiés dans le tableau. Comme les schémas sont toujours convertis en minuscules, ils doivent toujours être en minuscules ou ne correspondent jamais.
 
@@ -88,9 +88,9 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/extensions/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -188,7 +188,8 @@ Une fois que cela est fait, nous créons un tableau JavaScript contenant la posi
 
 Une fois que les shaders sont définis, que les emplacements sont retrouvés, et que les positions des sommets du carré 2D sont stockées dans le tampon, nous pouvons faire effectivement le rendu de la scène. Puisque nous n'animons rien dans cet exemple, notre fonction `drawScene()` est très simple. Elle utilise quelques routines utilitaires que nous décrirons sous peu.
 
-> **Note :** Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
+> [!NOTE]
+> Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
 
 ```js
 function drawScene(gl, programInfo, buffers) {

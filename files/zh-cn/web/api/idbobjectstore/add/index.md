@@ -15,9 +15,9 @@ slug: Web/API/IDBObjectStore/add
 
 ## 语法
 
-```
-var request = objectStore.add(value);
-var request = objectStore.add(value, key);
+```js-nolint
+add(value)
+add(value, key)
 ```
 
 ### 参数
@@ -149,15 +149,15 @@ function addData() {
 }
 ```
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}

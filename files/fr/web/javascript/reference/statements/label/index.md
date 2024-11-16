@@ -9,7 +9,8 @@ Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **Note :** Les boucles ou les blocs étiquetés sont très rares et on peut généralement utiliser des appels de fonction plutôt que des sauts de boucle.
+> [!NOTE]
+> Les boucles ou les blocs étiquetés sont très rares et on peut généralement utiliser des appels de fonction plutôt que des sauts de boucle.
 
 ## Syntaxe
 

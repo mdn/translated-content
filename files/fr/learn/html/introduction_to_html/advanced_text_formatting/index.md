@@ -325,7 +325,7 @@ Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` pour la citation de Confucius,
-- `http://www.affirmationsforpositivethinking.com/index.html` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- `http://example.com/affirmationsforpositivethinking` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 
@@ -406,7 +406,7 @@ solution.addEventListener("click", function () {
 });
 
 var htmlSolution =
-  '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps&nbsp;:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://www.affirmationsforpositivethinking.com/index.htm"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+  '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps&nbsp;:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://example.com/affirmationsforpositivethinking"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);
@@ -462,7 +462,7 @@ textarea.onkeyup = function () {
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)}. Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)). Voyons quelques exemples :
 
 ```html
 <p>
@@ -484,7 +484,8 @@ Nous utilisons l'HTML pour structurer nos documents web.
 
 Je pense que le R. Green l'a fait dans la cuisine avec une tronçonneuse.
 
-> **Note :** Il existe un autre élément, {{htmlelement("acronym")}}, faisant fondamentalement la même chose que `<abbr>`, destiné spécifiquement aux acronymes plutôt qu'aux abréviations. Il est cependant tombé en désuétude — il n'était pas aussi bien pris en charge dans les navigateurs que \<abbr> et sa fonction était si ressemblante qu'on a considéré inutile d'avoir les deux. Il suffit d'utiliser \<abbr> à la place.
+> [!NOTE]
+> Il existe un autre élément, {{htmlelement("acronym")}}, faisant fondamentalement la même chose que `<abbr>`, destiné spécifiquement aux acronymes plutôt qu'aux abréviations. Il est cependant tombé en désuétude — il n'était pas aussi bien pris en charge dans les navigateurs que \<abbr> et sa fonction était si ressemblante qu'on a considéré inutile d'avoir les deux. Il suffit d'utiliser \<abbr> à la place.
 
 ### Apprentissage actif&nbsp;: marquer une abréviation
 
@@ -703,7 +704,7 @@ Ce code se présente ainsi&nbsp;:
 
 ## Balisage des heures et dates
 
-HTML fournit également l'élément {{htmlelement("time")}}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :
+HTML fournit également l'élément {{htmlelement("time")}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :
 
 ```html
 <time datetime="2016-01-20">20 janvier 2016</time>
@@ -721,7 +722,7 @@ En quoi est-ce utile ? Eh bien, il y a beaucoup de façons différentes dont les
 - 2016 年 1 月 20 日
 - etc.
 
-Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier ? L'élément {{htmlelement("time")}}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.
+Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier ? L'élément {{htmlelement("time")}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.
 
 L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, mais il y a beaucoup d'autres options possibles, par exemple :
 

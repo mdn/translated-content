@@ -1,11 +1,13 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
+l10n:
+  sourceCommit: 1a07a1f7f623d94a8454414d1a4df9add04ddd5e
 ---
 
 {{CSSRef}}
 
-**`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き (通常または逆方向) を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
+**`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
@@ -30,6 +32,7 @@ flex-direction: column-reverse;
 flex-direction: inherit;
 flex-direction: initial;
 flex-direction: revert;
+flex-direction: revert-layer;
 flex-direction: unset;
 ```
 
@@ -65,18 +68,18 @@ flex-direction: unset;
 
 ## 例
 
-<h3 id="Reversing_flex_container_columns_and_rows">フレックスコンテナーの列と行の反転</h3>
+### フレックスコンテナーの列と行の反転
 
 #### HTML
 
 ```html
-<h4>This is a Column-Reverse</h4>
+<h4>これは Column-Reverse です</h4>
 <div id="col-rev" class="content">
   <div class="box red">A</div>
   <div class="box lightblue">B</div>
   <div class="box yellow">C</div>
 </div>
-<h4>This is a Row-Reverse</h4>
+<h4>これは Row-Reverse です</h4>
 <div id="row-rev" class="content">
   <div class="box red">A</div>
   <div class="box lightblue">B</div>
@@ -122,7 +125,7 @@ flex-direction: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Reversing_flex_container_columns_and_rows', '', '550')}}
+{{EmbedLiveSample('フレックスコンテナーの列と行の反転', '', '550')}}
 
 ## 仕様書
 
@@ -134,5 +137,6 @@ flex-direction: unset;
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- {{CSSXRef("flex-flow")}} は `flex-direction` および {{CSSXRef("flex-wrap")}} プロパティの一括指定プロパティです。
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_

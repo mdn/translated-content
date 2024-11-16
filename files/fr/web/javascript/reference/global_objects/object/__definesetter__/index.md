@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 
 {{JSRef}}
 
-> **Attention :** Cette fonctionnalité est dépréciée et il est préférable d'utiliser l'API {{jsxref("Object.defineProperty()")}} et [la syntaxe d'initialisation d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet). Toutefois, `__defineGetter__` est largement utilisée sur le Web et est implémentée. Il est donc peu probable que les navigateurs retirent cette méthode.
+> [!WARNING]
+> Cette fonctionnalité est dépréciée et il est préférable d'utiliser l'API {{jsxref("Object.defineProperty()")}} et [la syntaxe d'initialisation d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet). Toutefois, `__defineGetter__` est largement utilisée sur le Web et est implémentée. Il est donc peu probable que les navigateurs retirent cette méthode.
 
 La méthode **`__defineSetter__`** permet de lier une propriété d'un objet à une fonction qui sera exécutée pour toute tentative de définition/changement de cette propriété.
 

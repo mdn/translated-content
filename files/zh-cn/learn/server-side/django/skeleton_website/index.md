@@ -37,7 +37,8 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
 2. 用**manage.py** 创建一个或多个应用。
 
-   > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
+   > [!NOTE]
+   > 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
 
 3. 在工程里注册新的应用。
 4. 为每个应用分配 url。
@@ -96,7 +97,8 @@ locallibrary 项目的子文件夹是整个网站的进入点：
 python3 manage.py startapp catalog
 ```
 
-> **备注：** Linux/Mac OS X 应用可以使用上面的命令。在 windows 平台下应该改为： `py -3 manage.py startapp catalog`
+> [!NOTE]
+> Linux/Mac OS X 应用可以使用上面的命令。在 windows 平台下应该改为： `py -3 manage.py startapp catalog`
 >
 > 如果你是 windows 系统，在这个部分用`py -3` 替代`python3`。
 
@@ -123,7 +125,8 @@ locallibrary/
 - 一个*migration*文件夹，用来存储“migrations”——当你修改你的数据模型时，这个文件会自动升级你的数据库。
 - **\_\_init\_\_.py** — 一个空文件，Django/Python 会将这个文件作为[Python 包](https://docs.python.org/3/tutorial/modules.html#packages)并允许你在项目的其他部分使用它。
 
-> **备注：** 你注意到上面的文件里有些缺失嘛？尽管有 views 和 models 文件，可是 url 映射，网站模板，静态文件在哪里呢？我们会在接下来的部分展示如何创建它们（并不是每个网站都需要，不过这个例子需要）
+> [!NOTE]
+> 你注意到上面的文件里有些缺失嘛？尽管有 views 和 models 文件，可是 url 映射，网站模板，静态文件在哪里呢？我们会在接下来的部分展示如何创建它们（并不是每个网站都需要，不过这个例子需要）
 
 ## 注册 catalog 应用
 
@@ -145,7 +148,8 @@ INSTALLED_APPS = [
 
 新的这行详细说明了应用配置文件在 (`CatalogConfig`) **/locallibrary/catalog/apps.py** 里，当你创建应用时就完成了这个过程。
 
-> **备注：** 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
+> [!NOTE]
+> 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
 
 ## 配置数据库
 
@@ -209,7 +213,8 @@ urlpatterns = [
 
 URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的“base URL”). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
 
-> **备注：** path() 中的路由是一个字符串，用于定义要匹配的 URL 模式。该字符串可能包括一个命名变量（尖括号中）
+> [!NOTE]
+> path() 中的路由是一个字符串，用于定义要匹配的 URL 模式。该字符串可能包括一个命名变量（尖括号中）
 >
 > 例：`'catalog/<id>/'`。此模式将匹配如 **/catalog/_any_chars_/** 的 URL，并将 any_chars 作为具有参数名称 `id` 的字符串传递给视图。我们将在后面的主题中进一步讨论路径方法和路由模式
 
@@ -239,7 +244,7 @@ urlpatterns += [
 
 将路径函数的第一个参数留空以表示'/'。如果你将第一个参数写为'/'，Django 会在你启动服务器时给出以下警告：
 
-```
+```plain
 System check identified some issues:
 
 WARNINGS:
@@ -260,7 +265,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **备注：** 有很多方法扩展`urlpatterns` 列表 (在上面的代码里我们通过 `+=` 运算符来区分新旧代码)。我们同样可以用原先列表的定义：
+> [!NOTE]
+> 有很多方法扩展`urlpatterns` 列表 (在上面的代码里我们通过 `+=` 运算符来区分新旧代码)。我们同样可以用原先列表的定义：
 >
 > ```python
 > urlpatterns = [
@@ -300,19 +306,22 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **警告：** 每次模型改变，都需要运行以上命令，来影响需要存储的数据结构（包括添加和删除整个模型和单个字段）。
+> [!WARNING]
+> 每次模型改变，都需要运行以上命令，来影响需要存储的数据结构（包括添加和删除整个模型和单个字段）。
 
 该 **`makemigrations`** 命令创建（但不适用）项目中安装的所有应用程序的迁移（你可以指定应用程序名称，也可以为单个项目运行迁移）。这让你有机会在应用这些迁移之前检查这些迁移代码—当你是 Django 专家时，你可以选择稍微调整它们。
 
 这 **`migrate`** 命令 明确应用迁移你的数据库（Django 跟踪哪些已添加到当前数据库）。
 
-> **备注：** 看 [Migrations](https://docs.djangoproject.com/en/1.10/topics/migrations/) (Django docs) ，了解较少使用的迁移命令的其他信息。
+> [!NOTE]
+> 看 [Migrations](https://docs.djangoproject.com/en/1.10/topics/migrations/) (Django docs) ，了解较少使用的迁移命令的其他信息。
 
 ### 运行网站
 
 在开发期间，你首先要使用开发网络服务器和浏览你本机的浏览器，来测试你的网站。
 
-> **备注：** 这个开发网络服务器并不够强大以及不足以用于生产使用，但是它能非常容易得使你在开发期间，获得你的 Django 网站和运行它，以此来进行快速测试。
+> [!NOTE]
+> 这个开发网络服务器并不够强大以及不足以用于生产使用，但是它能非常容易得使你在开发期间，获得你的 Django 网站和运行它，以此来进行快速测试。
 > 默认情况下，服务器会开通（`http://127.0.0.1:8000/`),但你也可以选择其他端口。有关更多信息，查阅（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
 通过调用 `runserver` 命令运行 Web 服务器（与**manage.py**位于同一目录下）：
@@ -335,11 +344,13 @@ python3 manage.py runserver
 
 别担心，这个错误页面是预期结果。因为我们没有在 `catalogs.urls` 模块中定义任何页面/网址。**（留意**：当我们导航网站根目录 URL 时，我们被重定向到了**／catalog 。）**
 
-> **备注：** 上面的页面展示了一个重要的 Django 功能—自动调试日志记录。每当找不到页面，或者代码引发任何错误，就会显示错误页面，其中会提供有用的信息。在这种情况下，你可以看到我们提供的 URL 与我们任何 URL 模式都不匹配（像列出的那样）。生产环境中，日志功能将被关闭（当我们将网站存放在网络上时），这种情况下，将提供的信息量更少，但用户友好的页面。
+> [!NOTE]
+> 上面的页面展示了一个重要的 Django 功能—自动调试日志记录。每当找不到页面，或者代码引发任何错误，就会显示错误页面，其中会提供有用的信息。在这种情况下，你可以看到我们提供的 URL 与我们任何 URL 模式都不匹配（像列出的那样）。生产环境中，日志功能将被关闭（当我们将网站存放在网络上时），这种情况下，将提供的信息量更少，但用户友好的页面。
 
 这个时候，我们知道 Django 正在工作。
 
-> **备注：** 每当进行重大更改时，都应重新运行迁移并重新测试站点。这并不需要很长时间。
+> [!NOTE]
+> 每当进行重大更改时，都应重新运行迁移并重新测试站点。这并不需要很长时间。
 
 ## 挑战自我
 

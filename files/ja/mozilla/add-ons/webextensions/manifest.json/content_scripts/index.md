@@ -31,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   </tbody>
 </table>
 
-与えられたパターンに URL がマッチしているページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードすることをブラウザに教えます。
+与えられたパターンに URL がマッチしているページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードすることをブラウザーに教えます。
 
 このキーは配列です。それぞれのアイテムは以下の条件を満たすオブジェクトです:
 

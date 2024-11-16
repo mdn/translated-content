@@ -2,14 +2,12 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` (XHR) オブジェクトは、サーバーと対話するために使用されます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。
-
-`XMLHttpRequest` は [AJAX](/ja/docs/Web/Guide/AJAX) プログラミングで頻繁に使用されます。
 
 {{InheritanceDiagram}}
 
@@ -46,7 +44,8 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 
   - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（"`OK`" のような）レスポンスメッセージの完全な文が含まれています。
 
-    > **メモ:** HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
+    > [!NOTE]
+    > HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : リクエストを自動的に終了するまでの時間をミリ秒単位で表します。
@@ -121,11 +120,5 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 ## 関連情報
 
 - {{domxref("XMLSerializer")}}: DOM ツリーの XML へのシリアライズ
-- `XMLHttpRequest` に関連する MDN の記事
-
-  - [Ajax — 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
-  - [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/ja/docs/Web/API/Fetch_API)
-
-- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [フェッチ API](/ja/docs/Web/API/Fetch_API)

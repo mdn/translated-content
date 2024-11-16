@@ -48,7 +48,7 @@ L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/e
 
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

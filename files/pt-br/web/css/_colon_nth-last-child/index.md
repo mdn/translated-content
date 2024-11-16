@@ -16,7 +16,8 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 }
 ```
 
-> **Nota:** Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
+> [!NOTE]
+> Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
 
 ## Sintaxe
 

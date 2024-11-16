@@ -40,15 +40,18 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-> **备注：** 看一下这个简单的流式布局：[示例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。
+> [!NOTE]
+> 看一下这个简单的流式布局：[示例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。
 
 固定宽度站点的一个可能的后果是，在比站点更窄的屏幕上会出现一个水平滚动条（如下所示），在大屏幕上的设计边缘还会有许多空白。
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
-> **备注：** 看下这个简单的固定宽度布局：[示例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)，重新观察一下你调整浏览器窗口大小后的结果。
+> [!NOTE]
+> 看下这个简单的固定宽度布局：[示例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)，重新观察一下你调整浏览器窗口大小后的结果。
 
-> **备注：** 上面的截屏是在火狐开发者工具的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode)中截取的。
+> [!NOTE]
+> 上面的截屏是在火狐开发者工具的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode)中截取的。
 
 随着移动 Web 在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像*m.example.com*或者*example.mobi*这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。
 
@@ -122,7 +125,8 @@ target / context = result
 
 ![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
-> **备注：** 你可以在 GitHub 上找到此示例的[实时示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)和[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)。
+> [!NOTE]
+> 你可以在 GitHub 上找到此示例的[实时示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)和[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)。
 
 ## 现代布局技术
 
@@ -162,7 +166,8 @@ target / context = result
 }
 ```
 
-> **备注：** 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
+> [!NOTE]
+> 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
 
 ### CSS 网格
 
@@ -175,7 +180,8 @@ target / context = result
 }
 ```
 
-> **备注：** 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列[：示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
+> [!NOTE]
+> 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列[：示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
 
 ## 响应式图像
 
@@ -227,7 +233,8 @@ h1 {
 
 ![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
-> **备注：** 查看这个编排好的示例：[示例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
+> [!NOTE]
+> 查看这个编排好的示例：[示例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
 
 正如这种排版方式展示的这样，你不需要让媒介查询只能改变页面的布局。它们也能用来调节每个元素，让它们在别的大小的屏幕上更加可用或者更具吸引力。
 
@@ -253,7 +260,8 @@ h1 {
 
 这就是说，我们只需要指定标题的字体大小一次，而不是为移动端设定它，然后再在媒介查询中重新定义它。字体会在你增加视口大小的时候逐渐增大。
 
-> **备注：** 查看这种情况的一个编排好的示例： [示例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html)。
+> [!NOTE]
+> 查看这种情况的一个编排好的示例： [示例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html)。
 
 ## 视口元标签
 

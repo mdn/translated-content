@@ -2,16 +2,17 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`NavigatorUAData`** は{{domxref('User-Agent Client Hints API', 'ユーザーエージェントクライアントヒント API', "", 1)}} のインターフェイスで、ユーザーのブラウザーとオペレーティングシステムに関する情報を返します。
+**`NavigatorUAData`** は{{domxref("User-Agent Client Hints API", "ユーザーエージェントクライアントヒント API", "", "nocode")}} のインターフェイスで、ユーザーのブラウザーとオペレーティングシステムに関する情報を返します。
 
-このオブジェクトのインスタンスは {{domxref("Navigator.userAgentData")}} を呼び出すことによって返されます。そのため、このインターフェイスにはコンストラクターはありません。
+このオブジェクトのインスタンスは {{domxref("Navigator.userAgentData")}} または {{domxref("WorkerNavigator.userAgentData")}} を呼び出すことによって返されます。そのため、このインターフェイスにはコンストラクターはありません。
 
-> **メモ:** 「高エントロピー」と「低エントロピー」という用語は、これらの値がブラウザーについて明らかにする情報の量を参照しています。プロパティとして返される値は、低エントロピーであり、ユーザーを特定する可能性が低いと判断されます。 {{domxref("NavigatorUAData.getHighEntropyValues()")}} によって返される値は、より多くの情報を明らかにする可能性があります。そのため、これらの値は {{jsxref("Promise")}} によって取得され、ブラウザーがユーザーの許可を要求したり、他のチェックを行ったりするための時間を確保することができます。
+> [!NOTE]
+> 「高エントロピー」と「低エントロピー」という用語は、これらの値がブラウザーについて明らかにする情報の量を参照しています。プロパティとして返される値は、低エントロピーであり、ユーザーを特定する可能性が低いと判断されます。 {{domxref("NavigatorUAData.getHighEntropyValues()")}} によって返される値は、より多くの情報を明らかにする可能性があります。そのため、これらの値は {{jsxref("Promise")}} によって取得され、ブラウザーがユーザーの許可を要求したり、他のチェックを行ったりするための時間を確保することができます。
 
 ## インスタンスプロパティ
 
@@ -67,4 +68,4 @@ navigator.userAgentData
 
 ## 関連情報
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)

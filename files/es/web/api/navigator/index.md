@@ -13,7 +13,7 @@ Un objeto `Navigator` puede ser obtenido usando la propiedad de sólo lectura {{
 
 ## Propiedades de instancia
 
-_No hereda ninguna propiedad_
+_No hereda ninguna propiedad._
 
 ### Propiedadedes estandard
 
@@ -120,7 +120,7 @@ _No hereda ninguna propiedad_
 
 ## Metodos de instancia
 
-_No hereda ningun metodo_
+_No hereda ningun metodo._
 
 - {{domxref("Navigator.canShare()")}}
   - : Devuelve `verdadero` si una llamada a `Navigator.share()` tiene éxito.

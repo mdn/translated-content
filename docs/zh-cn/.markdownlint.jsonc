@@ -1,3 +1,3 @@
 {
-  "extends": "../../files/zh-cn/.markdownlint.jsonc"
+  "extends": "../../files/zh-cn/.markdownlint.jsonc",
 }

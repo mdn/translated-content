@@ -33,7 +33,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padre permitidos</th>

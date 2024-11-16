@@ -3,7 +3,7 @@ title: sort
 slug: Web/XSLT/Element/sort
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:sort>` 요소는 `<xsl:apply-templates>`나 `<xsl:for-each>`가 선택한 노드에 정렬키를 정의하고 노드를 처리할 순서를 결정합니다.
 

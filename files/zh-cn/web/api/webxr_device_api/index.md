@@ -3,6 +3,8 @@ title: WebXR 设备 接口参考
 slug: Web/API/WebXR_Device_API
 ---
 
+{{DefaultAPISidebar("WebXR Device API")}}
+
 **WebXR** 是一组支持将渲染 3D 场景用来呈现虚拟世界（虚拟现实，也称作 VR）或将图形图像添加到现实世界（增强现实，也称作 AR）的标准。 **WebXR 设备 API** 实现了 WebXR 功能集的核心，管理输出设备的选择，以适当的帧速率将 3D 场景呈现给所选设备，并管理使用输入控制器创建的运动矢量。
 
 WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框架覆盖在真实世界场景之上的眼镜，以及手持移动电话，它们通过用摄像机捕捉世界来增强现实，并通过计算机生成的图像增强场景。
@@ -91,7 +93,8 @@ WebXR Device API 受到一系列许可与安全性的控制。这些控制不涉
 - 如果发起请求的文档不可信任，该请求会被驳回且 Promise 返回 `false`。一个可信任文档指的是该文档是活跃的、负责任的且有重点的；
 - 如果设备无法明确用户开启内联模式的意图，该请求将会被驳回。对[用户的目的](#用户意图)的理解可以是隐性或者显性的。
 
-> **备注：** 当调用 `requestSession()` 时，根据选择对象需要指定的特性不同，将会执行额外的请求。
+> [!NOTE]
+> 当调用 `requestSession()` 时，根据选择对象需要指定的特性不同，将会执行额外的请求。
 
 #### 用户意图
 
@@ -118,7 +121,7 @@ Be sure to read the readme carefully; the polyfill comes in several versions dep
 
 #### WebXR API Emulator extension
 
-The [Mozilla WebXR team](https://mixedreality.mozilla.org/) has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
+The Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 

@@ -13,6 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 Object.getPrototypeOf(function* () {}).constructor;
 ```
 
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
+
 ## 構文
 
 ```

@@ -3,7 +3,7 @@ title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Restaure un onglet ou une fenêtre fermée. La restauration ne réouvre pas seulement l'onglet ou la fenêtre : elle rétablit également l'historique de navigation de l'onglet afin que les boutons arrière/avant fonctionnent. La restauration d'une fenêtre restaurera tous les onglets que la fenêtre contenait lors de sa fermeture.
 
@@ -62,9 +62,9 @@ browser.browserAction.onClicked.addListener(function () {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

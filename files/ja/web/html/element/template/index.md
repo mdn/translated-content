@@ -2,24 +2,79 @@
 title: "<template>: コンテンツテンプレート要素"
 slug: Web/HTML/Element/template
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 5618052b7314a29552ff9e4331dd3da13dc19f5e
 ---
 
 {{HTMLSidebar}}
 
-**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、ページが読み込まれたときにすぐにレンダリングされるのではなく、実行時に JavaScript を使って後からインスタンス化することができる {{Glossary("HTML")}} を保持するためのメカニズムです。
-
-テンプレートは、文書内に格納されたコンテンツの断片として考えてください。ページの読み込み時にパーサーが **`<template>`** 要素の内容を処理している間、その内容の有効性のみが検証されます。しかし、要素の内容は描画されません。
+**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} フラグメントを保持し、後で JavaScript を使用して使用したり、シャドウ DOM の中に即座に生成したりするためのメカニズムとして機能します。
 
 ## 属性
 
-`<template>` 要素が対応している標準的な属性は、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみです。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-Chromium ベースのブラウザーでは、`<template>` 要素は標準外の [`shadowrootmode` 属性](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax) にも、実験的な ["Declarative Shadow DOM"](https://developer.chrome.com/articles/declarative-shadow-dom/) 提案の一部として対応しています。対応しているブラウザーでは、`<template>` 要素が `shadowrootmode` 属性を持っていることが HTML パーサーによって検出され、直ちに親要素のシャドウルートとして適用されます。`shadowrootmode` は `open` と `closed` のどちらかの値を取ります。これらは {{domxref("Element.attachShadow()")}} の `mode` オプションの `open` と `closed` の値に相当します。
+- `shadowrootmode`
 
-また、対応する {{domxref("HTMLTemplateElement")}} インターフェイスは標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを持ち（同等のコンテンツ/マークアップ属性はなく）、読み取り専用の {{domxref("DocumentFragment")}} で、テンプレートが表現する DOM サブツリーを保持しています。なお、{{domxref("HTMLTemplateElement.content", "content")}} プロパティの値を直接使用すると予想外の動作につながる可能性があります。詳しくは、下記の [DocumentFragment の落とし穴の回避](#documentfragment_の落とし穴の回避)の節を参照してください。
+  - : 親要素の[シャドウルート](/ja/docs/Glossary/Shadow_tree)を生成します。
+    これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ {{glossary("enumerated")}} 値を受け入れます。
+
+    - `open`
+
+      - : 内部シャドウルート DOM を JavaScript に公開します（ほとんどの用途で推奨）。
+
+    - `closed`
+
+      - : 内部シャドウルート DOM を JavaScript から隠します。
+
+    > [!NOTE]
+    > HTML パーサーは、この属性が設定されているノードの最初の `<template>` に対して、DOM に {{domxref("ShadowRoot")}} オブジェクトを作成します。
+    > この属性が設定されていない場合、または許可された値が設定されていない場合、あるいは `ShadowRoot` が既に同じ親に宣言的に作成されている場合は、{{domxref("HTMLTemplateElement")}} が作成されます。
+    > {{domxref("HTMLTemplateElement")}} は、{{domxref("HTMLTemplateElement.shadowRootMode")}} を設定したりすることで、解釈後にシャドウルートに変更することはできません。
+
+    > [!NOTE]
+    > 古いチュートリアルや例では、Chrome 90-110 で対応していた非標準の `shadowroot` 属性が見つかるかもしれません。この属性は削除され、標準の `shadowrootmode` 属性に置き換えられています。
+
+- `shadowrootclonable`
+
+  - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティの値を `true` に設定します。
+    設定されている場合、シャドウホスト（この `<template>` の親要素）の複製を {{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で作成すると、コピーにシャドウルートが含まれます。
+
+- `shadowrootdelegatesfocus`
+
+  - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`delegatesFocus`](/ja/docs/Web/API/ShadowRoot/delegatesFocus) プロパティの値を `true` に設定します。
+    これが設定されていて、シャドウツリー内のフォーカス可能でない要素が選択されている場合、フォーカスはツリー内の最初のフォーカス可能な要素に譲られます。
+    この値は `false` が既定値です。
+
+- `shadowrootserializable` {{experimental_inline}}
+
+  - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`serializable`](/ja/docs/Web/API/ShadowRoot/serializable) プロパティの値を `true` に設定します。
+    設定されている場合、シャドウルートは {{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを、`options.serializableShadowRoots` 引数を `true` に設定して呼び出すことでシリアライズされます。
+    この値は `false` が既定値です。
+
+## 使用上のメモ
+
+`<template>` 要素の主な用途は 2 つあります。
+
+### テンプレート文書フラグメント
+
+既定では、要素のコンテンツはレンダリングされません。
+対応する {{domxref("HTMLTemplateElement")}} インターフェイスは標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを含みます（同等の content/markup 属性はありません）。この `content` プロパティは読み取り専用で、テンプレートが表す DOM サブツリーを格納する {{domxref("DocumentFragment")}} を保持します。
+このフラグメントは {{domxref("Node.cloneNode", "cloneNode")}} メソッドで複製し、DOM に挿入することができます。
+
+`content` プロパティを使用するときは、返値の `DocumentFragment` が予期せぬ挙動を示すことがあることに注意が必要です。
+詳細は下記の [DocumentFragment の落とし穴を避ける](#documentfragment_の落とし穴を避ける)節を参照してください。
+
+### 宣言的シャドウ DOM
+
+もし `<template>` 要素が [`shadowrootmode`](#shadowrootmode) 属性の値 `open` または `closed` を格納すると、HTML パーサーは直ちにシャドウ DOM を生成します。その要素は {{domxref("ShadowRoot")}} でラップされたコンテンツによって DOM 内で置き換えられ、親要素に装着されます。
+これは {{domxref("Element.attachShadow()")}} を呼び出して要素にシャドウルートを付けるのと宣言的に等価です。
+
+要素が `shadowrootmode` に他の値を示す場合、または `shadowrootmode` 属性を持たない場合、パーサは {{domxref("HTMLTemplateElement")}} を生成します。
+同様に、宣言的シャドウルートが複数ある場合、最初のシャドウルートのみが {{domxref("ShadowRoot")}} で置き換えられ、それ以降は {{domxref("HTMLTemplateElement")}} オブジェクトとして解釈できます。
 
 ## 例
+
+### 表の行を生成
 
 まず、HTML 部分の例から始めましょう。
 
@@ -89,11 +144,121 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Examples", 500, 120)}}
+{{EmbedLiveSample("Generating table rows", 500, 120)}}
+
+### 宣言的シャドウ DOM の実装
+
+この例では、マークアップの始めに非表示で対応する警告を記載しています。この警告は後でブラウザーの `shadowrootmode` 属性に対応していない場合に JavaScript で表示するように設定します。次の記事には 2 つの {{HTMLElement("article")}} 要素があり、それぞれ異なる振る舞いをする {{HTMLElement("style")}} 要素を含んでいます。最初の `<style>` 要素は文書全体に対してグローバルです。2 つ目は `shadowrootmode` 属性が存在するため、`<template>` 要素の代わりに生成されたシャドウルートにスコープされます。
+
+```html
+<p hidden>
+  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+</p>
+<article>
+  <style>
+    p {
+      padding: 8px;
+      background-color: wheat;
+    }
+  </style>
+  <p>I'm in the DOM.</p>
+</article>
+<article>
+  <template shadowrootmode="open">
+    <style>
+      p {
+        padding: 8px;
+        background-color: plum;
+      }
+    </style>
+    <p>I'm in the shadow DOM.</p>
+  </template>
+</article>
+```
+
+```js
+const isShadowRootModeSupported =
+  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootModeSupported);
+```
+
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
+
+### フォーカスを譲渡を伴う宣言的シャドウ DOM
+
+この例では、`shadowrootdelegatesfocus` を宣言的に作成したシャドウルートに適用し、フォーカスにどのような効果があるかを示します。
+
+このコードでは、最初に `<template>` 要素に `shadowrootmode` 属性を用いて、`<div>` 要素の中にシャドウルートを宣言します。
+これにより、テキストを格納したフォーカスできない `<div>` と、フォーカスできる `<input>` 要素の両方が表示されます。
+また、[`:focus`](/ja/docs/Web/CSS/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
+
+```html
+<div>
+  <template shadowrootmode="open">
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+2 つ目のコードブロックは、`shadowrootdelegatesfocus` 属性を設定している以外は同じです。この属性は、ツリー内のフォーカス可能でない要素が選択された場合に、ツリー内の最初のフォーカス可能な要素にフォーカスを譲ったものです。
+
+```html
+<div>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+最後に、以下の CSS を使用して、親要素である `<div>` にフォーカスがあるときに緑黄色の枠線を適用します。
+
+```css
+div:focus {
+  border: 2px solid red;
+}
+```
+
+その結果を下記に示します。
+HTML は最初にレンダリングされるとき、最初の画像に示すように要素にはスタイル設定がありません。
+`shadowrootdelegatesfocus` が設定されていないシャドウルートでは、`<input>` 以外の場所をクリックしてもフォーカスは変わりません（`<input>` 要素を選択すると 2 つ目の画像のようになります）。
+
+![フォーカスが設定されていないコードの画面ショット](template_with_no_focus.png)
+
+`shadowrootdelegatesfocus` を設定したシャドウルートでは、テキスト（フォーカスできない）をクリックすると、`<input>` 要素が選択されます。
+これは下記に示すように親要素もフォーカスされます。
+
+![要素にフォーカスがあるコードの画面ショット](template_with_focus.png)
 
 ## DocumentFragment の落とし穴の回避
 
-{{domxref("DocumentFragment")}} は様々なイベントのために有効なターゲットではないので、その中の要素を複製したり、参照したりすることが好ましいことがよくあります。
+{{domxref("DocumentFragment")}} の値が渡されると、{{domxref("Node.appendChild")}} や同様のメソッドはその値の子ノードだけを対象とするノードに移動させます。したがって、イベントハンドラーは `DocumentFragment` 自体ではなく、`DocumentFragment` の子ノードに設定することが推奨されます。
 
 以下の HTML および JavaScript を考えてみてください。
 
@@ -121,14 +286,14 @@ const firstClone = template.content.cloneNode(true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.firstElementChild.cloneNode(true);
-secondClone.addEventListener("click", clickHandler);
+const secondClone = template.content.cloneNode(true);
+secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
 
 ### 結果
 
-`firstClone` は DocumentFragment のインスタンスなので、期待通りにコンテナー内に追加されますが、クリックしてもクリックイベントは発生しません。 `secondClone` は {{domxref("HTMLDivElement")}} のインスタンスなので、クリックすると期待通りに動作します。
+`firstClone` は `DocumentFragment` なので、`appendChild` が呼び出されたときに `container` に追加されるのはその子ノードだけで、`firstClone` のイベントハンドラーはコピーされません。一方、`secondClone` は最初の子ノードにイベントハンドラーが追加されているため、`appendChild` が呼び出されるとイベントハンドラーがコピーされ、クリックすると期待通りに動作します。
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
@@ -153,7 +318,7 @@ container.appendChild(secondClone);
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -191,5 +356,12 @@ container.appendChild(secondClone);
 
 ## 関連情報
 
-- ウェブコンポーネント: {{HTMLElement("slot")}} （および過去の `<shadow>`）
+- [`part`](/ja/docs/Web/HTML/Global_attributes#part) および [`exportparts`](/ja/docs/Web/HTML/Global_attributes#exportparts) 属性
+- {{HTMLElement("slot")}} 要素
+- {{CSSXref(":host")}}、{{CSSXref(":host_function", ":host()")}}、{{CSSXref(":host-context", ":host-context()")}} 擬似クラス
+- {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
+- [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
+- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
+- [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)

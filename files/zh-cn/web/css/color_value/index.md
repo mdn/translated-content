@@ -7,7 +7,8 @@ slug: Web/CSS/color_value
 
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color>`** 表示一个颜色。颜色可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
 
-> **备注：** 尽管 CSS 颜色值（`<color>`）被精确定义，但在不同的输出设备上仍然有可能表现不一致（甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
+> [!NOTE]
+> 尽管 CSS 颜色值（`<color>`）被精确定义，但在不同的输出设备上仍然有可能表现不一致（甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
 
 ## 语法
 
@@ -109,7 +110,8 @@ color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
 color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
-> **备注：** 如果两个颜色都缺失这个成分，那么这个成分在插值后也是缺失的。
+> [!NOTE]
+> 如果两个颜色都缺失这个成分，那么这个成分在插值后也是缺失的。
 
 #### 在不同空间内插值：相似成分
 

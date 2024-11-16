@@ -47,7 +47,7 @@ Date.parse("foo-bar 2014"); // NaN
 new Date("05 October 2011 14:48 UTC");
 ```
 
-## 另见
+## 参见
 
 - {{jsxref("Date")}}
 - {{jsxref("Date.prototype.parse()")}}

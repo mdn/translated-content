@@ -70,7 +70,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 | ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

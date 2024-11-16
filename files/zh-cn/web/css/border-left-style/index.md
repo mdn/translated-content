@@ -9,7 +9,8 @@ The **`border-left-style`** [CSS](/zh-CN/docs/CSS) property sets the line style 
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **备注：** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 

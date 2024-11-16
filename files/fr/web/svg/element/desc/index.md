@@ -23,7 +23,7 @@ Quand l'élément contenant une description apparaît à l'utilisateur sous form
 
 ### Attributs spécifiques
 
-_(Aucun)_
+_Aucun._
 
 ## Interface DOM
 

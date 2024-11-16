@@ -126,7 +126,8 @@ Dans l'exemple ci-dessous, le premier sélecteur cible les valeurs commençant p
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **Note :** Dans des contextes normalement insensibles à la casse, on peut forcer la sensibilité avec la valeur `s` nouvellement introduite, mais sa prise en charge par les navigateurs est inégale ; elle n'est pas très utile dans un contexte HTML.
+> [!NOTE]
+> Dans des contextes normalement insensibles à la casse, on peut forcer la sensibilité avec la valeur `s` nouvellement introduite, mais sa prise en charge par les navigateurs est inégale ; elle n'est pas très utile dans un contexte HTML.
 
 ## Pas suivants
 

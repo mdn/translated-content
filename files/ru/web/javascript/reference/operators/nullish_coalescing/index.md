@@ -134,7 +134,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "нет значения"); // "н
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

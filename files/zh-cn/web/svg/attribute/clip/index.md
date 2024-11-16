@@ -37,7 +37,7 @@ svg {
 
 {{EmbedLiveSample('示例', '100%', 150)}}
 
-## 用法
+## 使用说明
 
 **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 

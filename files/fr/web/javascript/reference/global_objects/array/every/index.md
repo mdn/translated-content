@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 
 La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
 
-> **Note :** Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 
@@ -67,7 +68,7 @@ function estAssezGrand(element, index, array) {
 
 ### Utiliser les fonctions fléchées avec `every`
 
-{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","",1)}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
 
 ```js
 [12, 5, 8, 130, 44].every((elem) => elem >= 10); // false

@@ -78,15 +78,15 @@ p {
 
 TBD
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}

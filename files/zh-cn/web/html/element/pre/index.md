@@ -9,7 +9,8 @@ slug: Web/HTML/Element/pre
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-> **备注：** 你需要将该元素里的 '<' 字符转义为 '\&lt;' 以保证代码里的关闭代码不被浏览器解释为标签。
+> [!NOTE]
+> 你需要将该元素里的 '<' 字符转义为 '\&lt;' 以保证代码里的关闭代码不被浏览器解释为标签。
 
 <table class="properties">
  <tbody>
@@ -22,8 +23,8 @@ slug: Web/HTML/Element/pre
    <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">省略标签</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的 父元素</th>

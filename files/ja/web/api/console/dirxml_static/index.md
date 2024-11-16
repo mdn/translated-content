@@ -1,7 +1,6 @@
 ---
 title: console.dirxml()
 slug: Web/API/console/dirxml_static
-original_slug: Web/API/console/dirxml
 ---
 
 {{APIRef("Console API")}}

@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 
 La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).
 
-> **Note :** L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
+> [!NOTE]
+> L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
 
 La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis que [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
 
@@ -39,7 +40,8 @@ navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 });
 ```
 
-> **Note :** La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
+> [!NOTE]
+> La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
 
 La fonction qui suit prend en argument une chaîne de caractères et l'écrit dans le presse-papier&nbsp;:
 

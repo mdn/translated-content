@@ -7,7 +7,8 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 La méthode {{domxref ("WebGLRenderingContext")}} **`enableVertexAttribArray()` -** qui fait partie de l'API WebGL - active le tableau générique des attributs de sommet à l'indice spécifié dans la liste des tableaux d'attributs.
 
-> **Note :** Vous pouvez désactiver le tableau d'attributs en appelant {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
+> [!NOTE]
+> Vous pouvez désactiver le tableau d'attributs en appelant {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 Dans WebGL, les valeurs s'appliquant à un sommet particulier sont stockées dans des attributs. Ceux-ci ne sont disponibles que pour le code JavaScript et le shader de sommet. Les attributs sont référencés par un numéro d'indice dans la liste des attributs gérés par la GPU. Certains indices d'attributs de sommet peuvent avoir des buts prédéfinis, suivant la plate-forme et/ou la GPU. D'autres sont affectés par la couche WebGL lorsque vous créez les attributs.
 
@@ -57,7 +58,8 @@ gl.vertexAttribPointer(
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-> **Note :** Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
+> [!NOTE]
+> Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
 
 Ce code définit le tampon des sommets qui sera utilisé pour dessiner les triangles de la forme en appelant {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Ensuite, l'indice de l'attribut de position des sommets est obtenu à partir du programme shader en appelant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 

@@ -175,7 +175,8 @@ Você pode acessar itens individuais em uma array usando a notação de colchete
    // shopping vai retornar agora [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **Nota:** Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
+   > [!NOTE]
+   > Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
 
 3. Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array `random` (veja a seção anterior), nós podemos fazer algo tipo isto:
 
@@ -217,7 +218,8 @@ Nesta seção vamos ver alguns métodos relacionados a array úteis que nos perm
 
 Frequentemente você vai se deparar com alguns dados contidos em uma grande e longa string, e você pode querer separar os itens em uma forma mais útil e então manipular eles, como mostrar em uma tabela. Para fazer isto, nós podemos usar o método {{jsxref("String.prototype.split()","split()")}}. Nesta forma mais simples, ela pega um parâmetro solitário, o caracter que você deseja separar da string e retorna o restante antes e depois do item separado na array.
 
-> **Nota:** Ok, isto é tecnicamente um método de string, não um método de array, mas nós podemos colocar em arrays já que cai bem.
+> [!NOTE]
+> Ok, isto é tecnicamente um método de string, não um método de array, mas nós podemos colocar em arrays já que cai bem.
 
 1. Vamos brincar com isto para ver como funciona. Primeiro, crie uma string no seu console:
 
@@ -494,7 +496,8 @@ Um bom uso para os métodos de array como {{jsxref("Array.prototype.push()","pus
 
 Neste exemplo nós vamos mostrar um uso bem mais simples — aqui nós estamos dando a você um falso site de busca, com uma caixa de busca. A idéia é que quando termos são digitados na caixa de busca, os 5 principais termos de busca anterior sejam mostrados na lista. Quando o número de termos passar de 5, o último termo começa sendo deletado. A cada vez um novo termo é adicionado ao topo, então os 5 termos anteriores são sempre mostrados.
 
-> **Nota:** Em um aplicativo de busca real, você seria, provavelmente, habilitado a clicar nos termos anteriores para retornar às pesquisas, e isto iria mostrar o reusltado atual! Nós estamos só mantendo simples, por agora.
+> [!NOTE]
+> Em um aplicativo de busca real, você seria, provavelmente, habilitado a clicar nos termos anteriores para retornar às pesquisas, e isto iria mostrar o reusltado atual! Nós estamos só mantendo simples, por agora.
 
 Para completar o aplicativo, nós precisamos que você:
 

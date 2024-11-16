@@ -37,7 +37,7 @@ Float64Array.BYTES_PER_ELEMENT; // 8
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

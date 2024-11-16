@@ -15,7 +15,8 @@ slug: Web/CSS/background-image
 
 如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 `none`。
 
-> **备注：** 即使图像是不透明的，背景色在通常情况下并不会被显示，web 开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。
+> [!NOTE]
+> 即使图像是不透明的，背景色在通常情况下并不会被显示，web 开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。
 
 ## 语法
 
@@ -28,7 +29,8 @@ background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 0, 0.5),
     rgba(0, 0, 255, 0.5)
-  ), url("catfront.png");
+  ),
+  url("catfront.png");
 ```
 
 ### 取值
@@ -98,13 +100,22 @@ div {
 
 {{Compat}}
 
-\[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
-
-\[2] 当前的 iOS Safari 版本 (5.0) CSS 背景属性对 SVG 的支持并不完善。iOS Safari (5.0) 之前的版本亦是如此。
-
 ## 参见
 
-- [Implementing image sprites in CSS](/zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites)
+- [在 CSS 中实现图像合并](/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - {{HTMLElement("img")}}
-- 与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
-- 与图像相关的函数：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}, {{cssxref("_image", "image()")}}, {{cssxref("image-set")}}, {{cssxref("url", "url()")}}
+- 与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}、{{cssxref("&lt;gradient&gt;")}}
+- 与图像相关的函数：
+
+  - {{cssxref("cross-fade", "cross-fade()")}}
+  - {{cssxref("element", "element()")}}
+  - {{cssxref("image/image", "image()")}}
+  - {{cssxref("image/image-set", "image-set()")}}
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("image/paint", "paint()")}}
+  - {{cssxref("url_value", "&lt;url&gt;")}}

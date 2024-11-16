@@ -3,14 +3,15 @@ title: "FormData: values() メソッド"
 short-title: values()
 slug: Web/API/FormData/values
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.values()`** メソッドは、この {{domxref("FormData")}} に含まれるすべての値を走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値は文字列または {{domxref("Blob")}} オブジェクトです。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -41,7 +42,7 @@ for (const value of formData.values()) {
 
 結果は次のとおりです。
 
-```
+```plain
 value1
 value2
 ```
@@ -56,5 +57,5 @@ value2
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

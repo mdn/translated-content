@@ -83,7 +83,7 @@ xhr.send("foo=bar&lorem=ipsum");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

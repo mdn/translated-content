@@ -69,7 +69,7 @@ slug: Mozilla/Firefox/Releases/104
 #### WebDriver BiDi
 
 - `log.entryAdded` イベントで `source` をサポートしました ([Firefox バグ 1770792](https://bugzil.la/1770792))。
-- 新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ([Firefox バグ 1775141](https://bugzil.la/1775141))。
+- 新たに開いた閲覧コンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ([Firefox バグ 1775141](https://bugzil.la/1775141))。
 
 #### Marionette
 

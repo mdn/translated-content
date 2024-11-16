@@ -62,7 +62,7 @@ gl.getParameter(gl.VIEWPORT);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.scissor()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}

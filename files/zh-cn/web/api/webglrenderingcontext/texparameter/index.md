@@ -9,9 +9,9 @@ slug: Web/API/WebGLRenderingContext/texParameter
 
 ## 语法
 
-```
-void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
-void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+```js-nolint
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### 参数
@@ -159,7 +159,7 @@ gl.texParameteri(
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}

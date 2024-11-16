@@ -51,7 +51,7 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 

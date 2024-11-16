@@ -1,57 +1,88 @@
 ---
-title: element.oncopy
+title: HTMLElement：copy 事件
 slug: Web/API/HTMLElement/copy_event
+l10n:
+  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
 
-{{ ApiRef() }}
+{{ APIRef("HTML DOM") }}
 
-### 概述
+**`copy`** 事件在用户通过浏览器的用户界面开始复制操作时触发。
 
-**oncopy**属性用来获取或设置当前元素的`copy`事件的事件处理函数。
+## 语法
 
-### 语法
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
-```plain
-element.oncopy = functionRef;
+```js
+addEventListener("copy", (event) => {});
+
+oncopy = (event) => {};
 ```
 
-_functionRef_ 是一个函数名或者函数表达式。
+## 事件类型
 
-### 例子
+{{domxref("ClipboardEvent")}}。继承自 {{domxref("Event")}}。
 
-```plain
-<html>
-<head>
-<title>oncopy 示例演示</title>
+{{InheritanceDiagram("ClipboardEvent")}}
 
-<script>
-  function log(txt)
-  {
-    document.getElementById("log").appendChild(document.createTextNode(txt + "\n"));
-  }
-</script>
-</head>
+## 事件属性
 
-<body>
-<div oncopy="log('复制被阻止！'); return false;">试着复制这句话！</div>
+_也从其父接口 {{domxref("Event")}} 继承属性。_
 
-<h3>Log</h3>
-<textarea rows="15" cols="80" id="log" readonly="true"></textarea>
-</body>
-</html>
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : 一个 {{domxref("DataTransfer")}} 对象，其包含用户发起的 {{domxref("HTMLElement/cut_event", "cut")}}、`copy` 或 {{domxref("HTMLElement/paste_event", "paste")}} 操作所影响的数据，以及它的 MIME 类型。
+
+## 示例
+
+此示例阻止每一次对 {{htmlElement("textarea")}} 的复制和粘贴的尝试。
+
+### HTML
+
+```html
+<h3>试一下这个文本区域：</h3>
+<textarea id="editor" rows="3">
+尝试对该字段复制和粘贴文本！
+</textarea>
+
+<h3>日志：</h3>
+<p id="log"></p>
 ```
 
-上例演示了如何禁止复制浏览器中的一段话。
+### JavaScript
 
-### 备注
+```js
+const log = document.getElementById("log");
 
-当用户尝试复制选中元素或文本时会触发`copy`事件。
+function logCopy(event) {
+  log.innerText = `已阻止复制！\n${log.innerText}`;
+  event.preventDefault();
+}
 
-### 规范
+function logPaste(event) {
+  log.innerText = `已阻止粘贴！\n${log.innerText}`;
+  event.preventDefault();
+}
 
-不属于任何公开的规范。
+const editor = document.getElementById("editor");
 
-### 相关链接
+editor.oncopy = logCopy;
+editor.onpaste = logPaste;
+```
 
-- [`oncut`](/zh-CN/DOM/element.oncut)
-- [`onpaste`](/zh-CN/DOM/element.onpaste)
+### 结果
+
+{{EmbedLiveSample("示例", 700, 300)}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- 相关事件
+  - {{domxref("HTMLElement.cut_event")}}
+  - {{domxref("HTMLElement.paste_event")}}

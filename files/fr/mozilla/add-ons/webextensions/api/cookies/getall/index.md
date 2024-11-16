@@ -3,7 +3,7 @@ title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`getAll()`** de l'API {{WebExtAPIRef("cookies")}} récupère tous les cookies d'un seul cookie store qui correspondent aux informations fournies.
 
@@ -67,9 +67,9 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

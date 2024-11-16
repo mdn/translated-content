@@ -1,8 +1,11 @@
 ---
 title: 同期と非同期のリクエスト
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
-original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+l10n:
+  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 {{domxref('XMLHttpRequest')}} は同期と非同期通信の両方に対応しています。しかし、一般的には性能上の理由により、同期リクエストより非同期リクエストを選択すべきです。
 
@@ -129,7 +132,8 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ## 同期リクエスト
 
-> **警告:** 同期 XHR リクエストは、特にネットワークの状態が悪かったり、リモートサーバの応答が遅かったりしたときに、しばしばウェブ上でハングアップの原因となります。同期 XHR は非推奨であり、使用しないようにして、代わりに非同期リクエストを使用してください。
+> [!WARNING]
+> 同期 XHR リクエストは、特にネットワークの状態が悪かったり、リモートサーバの応答が遅かったりしたときに、しばしばウェブ上でハングアップの原因となります。同期 XHR は非推奨であり、使用しないようにして、代わりに非同期リクエストを使用してください。
 
 `timeout` や `abort` 等の XHR の新機能は同期 XHR では許可されていません。実行すると `InvalidAccessError` が発生するでしょう。
 
@@ -181,7 +185,7 @@ if (request.status === 200) {
 
 **`myFile.txt`** ({{domxref('XMLHttpRequest')}} 同期呼出しの対象):
 
-```
+```plain
 Hello World!!
 ```
 
@@ -233,6 +237,5 @@ function logData() {
 
 ## 関連情報
 
-- [`XMLHttpRequest` の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [AJAX](/ja/docs/Web/Guide/AJAX)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [`navigator.sendBeacon`](/ja/docs/Web/API/Navigator/sendBeacon)

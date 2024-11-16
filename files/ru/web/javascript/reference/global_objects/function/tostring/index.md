@@ -3,7 +3,7 @@ title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Сводка
 

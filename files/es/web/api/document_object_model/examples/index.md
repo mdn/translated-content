@@ -3,6 +3,8 @@ title: Ejemplos
 slug: Web/API/Document_Object_Model/Examples
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 En este capítulo se brindan ejemplos relativamente extensos que ilustran el uso del DOM para el desarrollo web y XML. Siempre que sea posible, usaremos las APIs, trucos y patrones comunes en JavaScript para la manipulación del objeto `document`.
 
 ### Ejemplo 1: Altos y anchos
@@ -46,13 +48,13 @@ El ejemplo siguiente muestra el uso de las propiedades de alto (`height`) y anch
       La 1ª imagen: - alto (height): no - ancho (width): no - estilo (style): no
       <img
         id="imagen1"
-        src="http://www.mozilla.org/images/mozilla-banner.gif" />
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
     <p>
       La 2ª imagen: - height="50" - width="500" - style: no
       <img
         id="imagen2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -61,7 +63,7 @@ El ejemplo siguiente muestra el uso de las propiedades de alto (`height`) y anch
       sí
       <img
         id="imagen3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 

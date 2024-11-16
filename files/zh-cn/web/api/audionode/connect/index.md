@@ -9,10 +9,10 @@ slug: Web/API/AudioNode/connect
 
 ## 语法
 
-```
-var destinationNode = AudioNode.connect(destination, outputIndex, inputIndex);
-
-AudioNode.connect(destination, outputIndex);
+```js-nolint
+connect(destination)
+connect(destination, outputIndex)
+connect(destination, outputIndex, inputIndex)
 ```
 
 ### 属性

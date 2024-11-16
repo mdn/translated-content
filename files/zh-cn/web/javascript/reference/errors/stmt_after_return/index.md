@@ -1,15 +1,17 @@
 ---
 title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
+l10n:
+  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
 {{jsSidebar("Errors")}}
 
 当在 {{jsxref("Statements/return", "return")}} 语句之后使用别的语句，或在无分号返回语句之后直接在后面跟随表达式，会出现 JavaScript 警告“unreachable code after return statement”。
 
-## 信息
+## 错误信息
 
-```
+```plain
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -39,35 +41,35 @@ Warning: unreachable code after return statement (Firefox)
 
 ### 无效的例子
 
-```js example-bad
+```js-nolint example-bad
 function f() {
   let x = 3;
   x += 4;
-  return x; // return 语句立即退出当前方法
-  x -= 3; // 因而该语句从不会执行，即该语句为不可达语句
+  return x;   // return 立刻退出函数
+  x -= 3;     // 因此这一行永远不会执行；它是不可到达的代码。
 }
 
-function f() {
-  return; // 这条语句被视作 `return;`
-  3 + 4; // 因而此处该函数已经返回，该语句永不会执行
+function g() {
+  return     // 这被视为 `return;`
+    3 + 4;   // 因此函数返回，这行永不执行。
 }
 ```
 
 ### 有效的例子
 
-```js example-good
+```js-nolint example-good
 function f() {
   let x = 3;
   x += 4;
   x -= 3;
-  return x; // OK: 执行完成所有语句之后返回
+  return x; // OK：在所有其他语句之后返回。
 }
 
-function f() {
-  return 3 + 4; // OK: 省略分号的 return 语句与执行的表达式在同一行
+function g() {
+  return 3 + 4 // OK：在同一行上，无需分号的返回表达式。
 }
 ```
 
 ## 参见
 
-- {{jsxref("Statements/return", "自动插入分号", "#自动插入分号", 1)}}
+- [自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)

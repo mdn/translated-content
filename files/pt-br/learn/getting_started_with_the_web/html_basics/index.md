@@ -46,7 +46,8 @@ Um atributo sempre deve ter:
 2. O nome do atributo, seguido por um sinal de igual.
 3. Aspas de abertura e fechamento, envolvendo todo o valor do atributo.
 
-> **Nota:** Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
+> [!NOTE]
+> Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
 
 ### Aninhando elementos
 
@@ -122,7 +123,8 @@ As palavras-chave para o texto alternativo são "texto descritivo". O texto alte
 
 Tente criar um texto alternativo melhor para sua imagem agora.
 
-> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Accessibility)
+> [!NOTE]
+> Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Accessibility)
 
 ## Marcando o texto
 
@@ -140,11 +142,13 @@ Os elementos de cabeçalhos permitem especificar que certas partes do seu conte�
 <h4>Meu segundo subtítulo</h4>
 ```
 
-> **Nota:** Qualquer coisa em HTML entre `<!--` e `-->` é um **comentário HTML**. O navegador ignora comentários enquanto renderiza o código. Em outras palavras, eles não são visíveis na página – apenas no código. Os comentários HTML são uma forma de escrever notas úteis sobre seu código ou lógica.
+> [!NOTE]
+> Qualquer coisa em HTML entre `<!--` e `-->` é um **comentário HTML**. O navegador ignora comentários enquanto renderiza o código. Em outras palavras, eles não são visíveis na página – apenas no código. Os comentários HTML são uma forma de escrever notas úteis sobre seu código ou lógica.
 
 Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
-> **Nota:** você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
+> [!NOTE]
+> você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
 
 ### Parágrafo
 

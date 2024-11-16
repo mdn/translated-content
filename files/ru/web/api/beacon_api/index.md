@@ -31,7 +31,7 @@ slug: Web/API/Beacon_API
 
 ## Совместимость с браузерами
 
-The {{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}} table indicates that method has relatively broad implementation.
+{{Compat}}
 
 ## Смотрите также
 

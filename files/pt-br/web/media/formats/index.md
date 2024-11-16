@@ -65,7 +65,8 @@ O contêiner Ogg pode também conter um áudio codificado usando o [codec FLAC](
 
 O formato MP4 com o codec de vídeo H.264 e codec de áudio AAC tem suporte nativo para Internet Explorer, Safari e Chrome no desktop e dispositivos móveis, o Opera não possui suporte para este formato. IE e Chrome também possuem suporte para codec de áudio MP3 no container MP4, mas o Safari não tem suporte para isso. Firefox/Firefox para hardware do dispositivo pode manipular o perfil utilizado para codificar o MP4.
 
-> **Nota:** Codificação MP4 com um perfil elevado não será executado em um hardware inferior, como o Firefox OS.
+> [!NOTE]
+> Codificação MP4 com um perfil elevado não será executado em um hardware inferior, como o Firefox OS.
 
 O formato de mídia MPEG é coberto por patentes, do qual não é livremente licenciado. Todas as licenças necessárias podem ser compradas da MPEG LA. Desde H.264 o formato não é livre de direitos autorais, é impróprio para a internet aberta, de acordo com a Mozilla \[[1](http://shaver.off.net/diary/2010/01/23/html5-video-and-codecs/), [2](http://robert.ocallahan.org/2010/01/video-freedom-and-mozilla_23.html)], Google \[[1](http://blog.chromium.org/2011/01/html-video-codec-support-in-chrome.html), [2](http://blog.chromium.org/2011/01/more-about-chrome-html-video-codec.html)] e Opera. Contudo, desde que os formatos de direitos livres não são suportados pelo Internet Explorer e Safari, a [Mozilla decidiu dar suporte para o formato](https://hacks.mozilla.org/2012/03/video-mobile-and-the-open-web/), e a Google nunca cumpriu sua promessa de remover o suporte para o Chrome.
 
@@ -92,7 +93,8 @@ Gecko reconhece os seguintes tipos MIME em arquivos de áudio WAVE:
 
 Por exemplo, [você pode implementar MPEG-DASH usando JavaScript durante carregamento da decodificação para MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **Nota:** Time Shifting é o processo de consumo de uma transmissão ao vivo, algum tempo após ter acontecido.
+> [!NOTE]
+> Time Shifting é o processo de consumo de uma transmissão ao vivo, algum tempo após ter acontecido.
 
 ## Veja também
 

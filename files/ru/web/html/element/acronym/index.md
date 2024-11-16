@@ -3,6 +3,8 @@ title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
 
+{{HTMLSidebar}}
+
 ## Аннотация
 
 Элемент акронима (`<acronym>)` позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой.
@@ -42,12 +44,10 @@ slug: Web/HTML/Element/acronym
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{HTMLElement("abbr")}}
-
-{{HTMLSidebar}}

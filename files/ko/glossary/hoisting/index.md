@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-JavaScript **호이스팅**은 인터프리터가 코드를 실행하기 전에 함수, 변수, 클래스 또는 임포트(import)의 선언문을 해당 범위의 맨 위로 이동시키는 과정을 말합니다.
+JavaScript **호이스팅**은 인터프리터가 코드를 실행하기 전에 함수, 변수, 클래스 또는 임포트(import)의 선언문을 해당 범위의 맨 위로 끌어올리는 것처럼 보이는 현상을 뜻합니다.
 
 호이스팅은 ECMAScript 사양에서 규범적으로 정의된 용어가 아닙니다. 사양에서는 선언 그룹을 [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)로 정의되어 있지만, 여기에는 [`function`](/ko/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/ko/docs/Web/JavaScript/Reference/Statements/function*) 만 포함되어 있습니다, [`async 함수`](/ko/docs/Web/JavaScript/Reference/Statements/async_function), [`async 함수`](/ko/docs/Web/JavaScript/Reference/Satements/async_function*) 선언을 사용하세요. 호이스팅은 다른 방식이긴 하지만 종종 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var) 선언의 기능으로 간주되기도 합니다. 구어체 용어로는 다음과 같은 동작을 호이스팅으로 간주할 수 있습니다.
 
@@ -41,7 +41,7 @@ console.log(x); // 1
 
 여기에는 "선언 전 접근"이 없는데, 이는 단순히 `var` 선언이 블록으로 범위가 지정되지 않았기 때문입니다.
 
-호이스팅에 대한 자세한 내용은 다음을 참조하십시오:
+호이스팅에 대한 자세한 내용은 다음을 참조하십시오.
 
 - `var`/`let`/`const` 호이스팅 - [문법 및 유형 가이드](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
 - `함수` 호이스팅 - [함수 가이드](/ko/docs/Web/JavaScript/Guide/Functions#function_hoisting)

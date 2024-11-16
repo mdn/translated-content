@@ -66,10 +66,10 @@ drawLives();
 
 ## 用 requestAnimationFrame() 优化渲染
 
-现在让我们处理一些与游戏机制无关，但与画面渲染相关的东西。和我们目前使用{{domxref("windowTimers.setInterval()", "setInterval()")}} 实现的固定帧率渲染相比，{{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} 能让浏览器更好地渲染画面。让我们把下面这行代码：
+现在让我们处理一些与游戏机制无关，但与画面渲染相关的东西。和我们目前使用 {{domxref("Window.setInterval", "setInterval()")}} 实现的固定帧率渲染相比，{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 能让浏览器更好地渲染画面。让我们把下面这行代码：
 
 ```js
-var interval = setInterval(draw, 10);
+interval = setInterval(draw, 10);
 ```
 
 替换为：
@@ -98,7 +98,8 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **备注：** 试着改变生命的数目和球从球板上反弹的角度。
+> [!NOTE]
+> 试着改变生命的数目和球从球板上反弹的角度。
 
 ## 游戏结束——暂时看来！
 

@@ -19,11 +19,11 @@ instanceOfElement.requestPointerLock();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{ domxref("Document.pointerLockElement") }}
 - {{ domxref("Document.exitPointerLock()") }}

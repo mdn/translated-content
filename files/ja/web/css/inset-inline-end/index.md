@@ -1,11 +1,17 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行末からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{EmbedInteractiveExample("pages/css/inset-inline-end.html")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -22,12 +28,11 @@ inset-inline-end: auto;
 inset-inline-end: inherit;
 inset-inline-end: initial;
 inset-inline-end: revert;
+inset-inline-end: revert-layer;
 inset-inline-end: unset;
 ```
 
 {{cssxref("inset-inline-start")}} と `inset-inline-end` の一括指定は {{cssxref("inset-inline")}} です。
-
-## 構文
 
 ### 値
 
@@ -43,7 +48,7 @@ inset-inline-end: unset;
 
 ## 例
 
-<h3 id="Setting_inline_end_offset">インライン方向の末尾のオフセットの設定</h3>
+### インライン方向の末尾のオフセットの設定
 
 #### HTML
 
@@ -72,7 +77,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_end_offset", 140, 140)}}
+{{EmbedLiveSample("インライン方向の末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

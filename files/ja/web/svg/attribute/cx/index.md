@@ -1,13 +1,21 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
 
 **`cx`** 属性は中心の x-座標を定義します。
 
-3 つの要素がこの属性を用います: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("radialGradient")}}
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
+
+## 例
 
 ```css hidden
 html,
@@ -30,18 +38,31 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', 100, 100)}}
+{{EmbedLiveSample("Example", 100, 100)}}
 
 ## circle
 
 {{SVGElement('circle')}}に対して、`cx`は、図形の x-軸の中心を定義します。
 
-| 値                 | {{cssxref("length-percentage")}} |
-| ------------------ | -------------------------------- |
-| 既定値             | `0`                              |
-| アニメーション可否 | はい                             |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
+> [!NOTE]
+> SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
 ## ellipse
 
@@ -54,17 +75,18 @@ svg {
       <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
-      <th scope="row">Default value</th>
+      <th scope="row">既定値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
-      <th scope="row">Animatable</th>
+      <th scope="row">アニメーション</th>
       <td>はい</td>
     </tr>
   </tbody>
 </table>
 
-> **メモ:** SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が楕円への CSS プロパティとしても利用可能であることを意味します。
+> [!NOTE]
+> SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が楕円への CSS プロパティとしても利用可能であることを意味します。
 
 ## radialGradient
 
@@ -74,20 +96,20 @@ svg {
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td>{{cssxref("length")}}</td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
       <td><code>50%</code></td>
     </tr>
     <tr>
-      <th scope="row">アニメーション可否</th>
+      <th scope="row">アニメーション</th>
       <td>はい</td>
     </tr>
   </tbody>
 </table>
 
-#### 例
+### 例
 
 ```css hidden
 html,
@@ -145,11 +167,11 @@ svg {
 
 {{EmbedLiveSample('radialGradient', 150, '100%')}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## 関連情報
 
-- [cy](/ja/docs/Web/SVG/Attribute/cy)
-- [r](/ja/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}

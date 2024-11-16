@@ -3,6 +3,8 @@ title: Le fonctionnement des liens sur le Web
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importants pour la structure du Web.
 
 <table class="standard-table">

@@ -3,7 +3,7 @@ title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
@@ -98,8 +98,8 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

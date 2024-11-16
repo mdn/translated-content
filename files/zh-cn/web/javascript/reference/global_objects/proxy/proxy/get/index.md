@@ -95,7 +95,7 @@ p.a; //会抛出 TypeError
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 
 Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.
 
-> **Note :** Les fonctionnalités décrites dans cet article ne sont pas aussi bien prises en charge que celles décrites dans les deux articles précédents. Pour plus d'informations, nous vous invitons à vous référer aux tableaux de compatibilité à la fin des pages décrivant chacune des propriétés.
+> [!NOTE]
+> Les fonctionnalités décrites dans cet article ne sont pas aussi bien prises en charge que celles décrites dans les deux articles précédents. Pour plus d'informations, nous vous invitons à vous référer aux tableaux de compatibilité à la fin des pages décrivant chacune des propriétés.
 
 ## Étendre sur plusieurs colonnes
 

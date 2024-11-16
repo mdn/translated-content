@@ -67,7 +67,8 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
 - `"prerender"` {{optional_inline}}
   - : 関連文書が完全にダウンロードされ、レンダリングされ、不可視のタブに読み込まれるべき、将来起こりうるナビゲーションのルール。これには、すべてのサブリソースを読み込むこと、すべての JavaScript を実行すること、さらにはサブリソースを読み込んで JavaScript によって開始されるデータ フェッチを実行することが含まれます。これらの文書に移動すると、移動は即座に行われ、大幅なパフォーマンスの向上につながります。
 
-> **メモ:** 先読みと先読みを効果的に使用する方法の詳細については[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) のメインページを参照してください。
+> [!NOTE]
+> 先読みと先読みを効果的に使用する方法の詳細については[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) のメインページを参照してください。
 
 各アクションフィールドは配列を格納し、配列は 1 つ以上のオブジェクトを格納します。各オブジェクトには、URL と関連の引数の集合を定義する単一のルールが格納されます。
 
@@ -83,7 +84,8 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
 
   - : ルールを解釈するブラウザーが持つ機能を表す文字列の配列で、 指定した URL にルールを適用する場合に利用できます。
 
-    > **警告:** 指定した条件を満たせないブラウザーでは、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) に対応していても、先読みは自動的に失敗します。
+    > [!WARNING]
+    > 指定した条件を満たせないブラウザーでは、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) に対応していても、先読みは自動的に失敗します。
 
     取りうる値は次の通りです。
 
@@ -97,7 +99,8 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
 - `"referrer_policy"` {{optional_inline}}
   - : ルールで指定された URL をリクエストするときに使用する特定のリファラーポリシー文字列を表します - 使用可能な値については [`Referrer-Policy`](/ja/docs/Web/HTTP/Headers/Referrer-Policy) を参照してください。この目的は、参照するページが（既定で、または `Referrer-Policy` を使用して）既に保有しているポリシーよりも、投機的リクエストに特定の厳しいポリシーを設定することを許可することです。投機ルールで設定された緩いポリシーは、参照するページで設定された厳しいポリシーを上書きすることはありません。
 
-> **メモ:** 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
+> [!NOTE]
+> 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
 
 ### さらなる例
 
@@ -207,6 +210,6 @@ if (
 
 ## 関連情報
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
 - [投機的な読み込み](/ja/docs/Web/Performance/Speculative_loading)
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: loadstart イベント"
+short-title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`loadstart`** イベントは、リクエストがデータを読み込み始めたときに発行されます。
 
@@ -111,15 +112,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg");
+  runXHR("example-image.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://somewhere.org/i-dont-exist");
+  runXHR("https://example.com/notfound.jpg");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg").abort();
+  runXHR("example-image.jpg").abort();
 });
 ```
 
@@ -138,4 +139,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)

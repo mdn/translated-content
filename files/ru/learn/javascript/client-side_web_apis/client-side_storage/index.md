@@ -28,7 +28,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Пользователь должен будет загрузить музыкальные файлы только один раз - при последующих посещениях они будут извлечены из локальной базы данных.
 
-> **Примечание:** Существуют ограничения на объем данных, которые вы можете хранить с помощью API-интерфейсов на стороне клиента (возможно, как для отдельных API, так и в совокупности). Точный лимит варьируется в зависимости от браузера и, возможно, в зависимости от пользовательских настроек. Смотри [Ограничения хранилища браузера и критерии переполнения](/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) для большей информации.
+> [!NOTE]
+> Существуют ограничения на объем данных, которые вы можете хранить с помощью API-интерфейсов на стороне клиента (возможно, как для отдельных API, так и в совокупности). Точный лимит варьируется в зависимости от браузера и, возможно, в зависимости от пользовательских настроек. Смотри [Ограничения хранилища браузера и критерии переполнения](/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) для большей информации.
 
 ### Старый подход: куки
 
@@ -42,7 +43,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Единственным преимуществом файлов cookie является то, что они поддерживаются очень старыми браузерами, поэтому, если ваш проект требует, чтобы вы поддерживали устаревшие браузеры (например, Internet Explorer 8 или более ранние версии), файлы cookie могут по-прежнему быть полезными, но для большинства проектов вы не нужно больше прибегать к ним.
 
-> **Примечание:** Почему по-прежнему создаются новые сайты с использованием файлов cookie? Это происходит главным образом из-за привычек разработчиков, использования старых библиотек, которые всё ещё используют куки-файлы, и наличия множества веб-сайтов, предоставляющих устаревшие справочные и учебные материалы для обучения хранению данных.
+> [!NOTE]
+> Почему по-прежнему создаются новые сайты с использованием файлов cookie? Это происходит главным образом из-за привычек разработчиков, использования старых библиотек, которые всё ещё используют куки-файлы, и наличия множества веб-сайтов, предоставляющих устаревшие справочные и учебные материалы для обучения хранению данных.
 
 ### Новый подход: Web Storage и IndexedDB
 
@@ -226,7 +228,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Ваш пример закончен — отличная работа! Всё что теперь осталось это сохранить ваш код и протестировать вашу HTML страницу в браузере. Вы можете посмотреть нашу [завершённую версию работающую здесь](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
 
-> **Примечание:** Есть и другой, немного более комплексный пример описываемый в [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> Есть и другой, немного более комплексный пример описываемый в [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
 ## Храним более сложную информацию в IndexedDB
 
@@ -581,7 +584,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
    }
    ```
 
-3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
+3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
 
    We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and is itself promise-based.
 
@@ -662,7 +665,8 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 [Cache API](/ru/docs/Web/API/Cache) это ещё один механизм хранения данных на клиенте с небольшим отличием — он разработан для хранения HTTP ответов, и прекрасно работает с сервис-воркерами.
 
-> **Примечание:** Service workers и Cache доступны в большинстве современных браузеров. В момент написания статьи, Safari ещё не имел реализации, но скоро должна быть.
+> [!NOTE]
+> Service workers и Cache доступны в большинстве современных браузеров. В момент написания статьи, Safari ещё не имел реализации, но скоро должна быть.
 
 ### Пример сервис воркера
 
@@ -688,7 +692,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **Примечание:** Путь к файлу `sw.js` указан относительно корня сайта, а не JavaScript файла, содержащего основной код. Полный путь - `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Корень - `https://mdn.github.io`, и следовательно указываемый путь должен быть `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Если вы хотите использовать данный пример на своём сервере, вы также должны изменить путь к скрипту. Это довольно запутанно, но обязано так работать по причинам безопасности.
+> [!NOTE]
+> Путь к файлу `sw.js` указан относительно корня сайта, а не JavaScript файла, содержащего основной код. Полный путь - `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Корень - `https://mdn.github.io`, и следовательно указываемый путь должен быть `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Если вы хотите использовать данный пример на своём сервере, вы также должны изменить путь к скрипту. Это довольно запутанно, но обязано так работать по причинам безопасности.
 
 #### Устанавливаем сервис воркер
 
@@ -727,7 +732,7 @@ self.addEventListener("install", function (e) {
 
 Внутри блока мы используем {{domxref("CacheStorage.match()")}} чтобы проверить, можно ли найти соответствующий запрос (т.е. совпадение по URL) в кеше. Промис возвращает найденный ответ или `undefined`, если ничего не нашлось.
 
-Если совпадение нашлось, то просто возвращаем его как особый ответ. В противном случае, используем [fetch()](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) для запроса ресурса из сети.
+Если совпадение нашлось, то просто возвращаем его как особый ответ. В противном случае, используем [fetch()](/ru/docs/Web/API/fetch) для запроса ресурса из сети.
 
 ```js
 self.addEventListener("fetch", function (e) {
@@ -756,7 +761,7 @@ self.addEventListener("fetch", function (e) {
 
 Это всё, пока что. Мы надеемся наш краткий обзор `client-side storage` окажется полезным для вас.
 
-## Также стоит почитать
+## Смотрите также
 
 - [Web storage API](/ru/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/ru/docs/Web/API/IndexedDB_API)

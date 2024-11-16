@@ -3,7 +3,7 @@ title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Demandez l'ensemble des permissions répertoriées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 
@@ -73,10 +73,10 @@ document
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Actuellement un [bug avec la demande d'origines](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) et la [demande des permissions sur la page about:addons](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -1,17 +1,29 @@
 ---
-title: Метод EventTarget.removeEventListener()
+title: "EventTarget: метод removeEventListener()"
 slug: Web/API/EventTarget/removeEventListener
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
-Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.
+Метод **`removeEventListener()`** интерфейса {{domxref("EventTarget")}} удаляет слушателя событий, зарегистрированного с помощью {{domxref("EventTarget.addEventListener()")}}. Удаляемый слушатель событий [определяется комбинацией](#определение-слушателя-событий-для-удаления) типа события, функцией обработчика и дополнительными параметрами, влияющими на процесс обработки.
+
+Вызов `removeEventListener()` с аргументами, которые не определяют зарегистрированного на `EventTarget` [слушателя событий](/ru/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback), не имеет эффекта.
+
+Если слушатель событий удаляется в то время, когда другой слушатель обрабатывает событие, он не будет вызван. Однако его можно зарегистрировать повторно.
+
+> [!WARNING]
+> Если слушатель зарегистрирован дважды, с флагом _capture_ и без него, то необходимо удалять каждого слушателя по отдельности. Удаление слушателя захвата события не повлияет на слушателя всплытия этого события, и наоборот.
+
+Слушатели событий также можно удалить передачей сигнала {{domxref("AbortSignal")}} в {{domxref("EventTarget/addEventListener()", "addEventListener()")}} и последующим вызовом {{domxref("AbortController/abort()", "abort()")}} на контроллере, владеющем сигналом.
 
 ## Синтаксис
 
-```
-target.removeEventListener(type, listener[, options]);
-target.removeEventListener(type, listener[, useCapture]);
+```js-nolint
+removeEventListener(type, listener)
+removeEventListener(type, listener, options)
+removeEventListener(type, listener, useCapture)
 ```
 
 ### Параметры
@@ -19,166 +31,96 @@ target.removeEventListener(type, listener[, useCapture]);
 - `type`
   - : Строка, описывающая тип события, которое нужно удалить.
 - `listener`
-  - : {{ domxref("EventListener") }} функция, которую нужно удалить с элемента.
-- options {{optional_inline}}
+  - : Функция обработчика события для удаления.
+- `options` {{optional_inline}}
 
-  - : Объект опций, описывающий характеристики обработчика события. Доступные опции:
-
-    - `capture`: {{jsxref("Boolean")}}. Указывает на то, что события этого типа отправляются данному обработчику до того, как происходит их передача любым `EventTarget`, находящимся ниже него в дереве DOM.
-    - `passive`: {{jsxref("Boolean")}}. Указывает на то, что `listener` никогда не будет вызывать `preventDefault()`. В противном случае (если `listener` вызовет `preventDefault()` ), user agent проигнорирует вызов и сгенерирует предупреждение в консоли.
+  - : Объект настроек, описывающий характеристики обработчика события:
+    - `capture`: Логическое значение, определяющее зарегистрирован ли удаляемый слушатель событий на фазу захвата или нет. Если этот параметр опущен, то применяется значение по умолчанию `false`.
 
 - `useCapture` {{optional_inline}}
-
-  - : Указывает, был ли удаляемый {{domxref("EventListener")}} зарегистрирован как перехватывающий обработчик, или нет. Если этот параметр отсутствует, предполагается значение по умолчанию: `false`.
-
-    Если обработчик был зарегистрирован дважды, один раз с перехватом (с `capture`) и один - без, каждый из них должен быть удалён по отдельности. Удаление перехватывающего обработчика никак не затрагивает неперехватывающую версию этого же обработчика, и наоборот.
-
-> **Примечание:** `useCapture` требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр `useCapture`.
+  - : Логическое значение, определяющее зарегистрирован ли удаляемый слушатель событий на фазу захвата или нет. Если этот параметр опущен, то применяется значение по умолчанию `false`.
 
 ### Возвращаемое значение
 
-`undefined`.
+Нет.
 
-### Поиск обработчика при удалении
+### Определение слушателя событий для удаления
 
-В большинстве браузеров помимо типа события и функции важно лишь совпадение значений параметра `useCapture` / `options.capture`, но так как это поведение не закреплено стандартом, наилучшим способом будет указание для `removeEventListener()` в точности тех же параметров, что были переданы в `addEventListener()`.
+Иногда возникает необходимость удалить зарегистрированного с помощью {{domxref("EventTarget.addEventListener", "addEventListener()")}} слушателя событий.
 
-## Примечания
+Очевидно, что для `removeEventListener()` нужно указать те же параметры `type` и `listener`. Но что делать с параметрами `options` или `useCapture`?
 
-Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} в процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
+`addEventListener()` позволяет добавить одного и того же слушателя для одного типа событий более одного раза если отличаются настройки. При удалении слушателя `removeEventListener()` проверяет только флаг `capture`/`useCapture`. Его значение должно совпасть, а другие настройки не учитываются.
 
-Вызов `removeEventListener()` с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в `EventTarget`, не имеет никакого эффекта.
+Например, представим такой вызов `addEventListener()`:
+
+```js
+element.addEventListener("mousedown", handleMouseDown, true);
+```
+
+Теперь рассмотрим каждый из двух вызовов `removeEventListener()`:
+
+```js
+element.removeEventListener("mousedown", handleMouseDown, false); // Не сработает
+element.removeEventListener("mousedown", handleMouseDown, true); // Выполнится успешно
+```
+
+Первый вызов не сработает потому, что значение `useCapture` не совпадает. Второй вызов будет успешен, потому что значение `useCapture` совпадает.
+
+Теперь рассмотрим такой случай:
+
+```js
+element.addEventListener("mousedown", handleMouseDown, { passive: true });
+```
+
+Здесь мы задаём объект `options`, в котором значение `passive` установлено в `true`, а другие настройки не указаны, то есть будут иметь значение по умолчанию `false`.
+
+Теперь рассмотрим вызовы `removeEventListener()` с разными параметрами. Те из них, в которых `capture` или `useCapture` установлены в `true`, не сработают, остальные выполнятся успешно.
+
+Только настройка `capture` имеет значение при вызове `removeEventListener()`.
+
+```js
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Выполнится успешно
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Выполнится успешно
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Не сработает
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Выполнится успешно
+element.removeEventListener("mousedown", handleMouseDown, false); // Выполнится успешно
+element.removeEventListener("mousedown", handleMouseDown, true); // Не сработает
+```
+
+Стоит отметить, что некоторые версии браузеров ведут себя противоречиво, поэтому если нет особых причин для иного, при вызове `removeEventListener()` лучше использовать те же параметры, которые использовались для вызова `addEventListener()`.
 
 ## Пример
 
-Это пример добавления и последующего удаления обработчика событий.
+В этом примере показано как можно добавить слушателя событий `mouseover`, который будет удалять слушателя событий `click`.
 
 ```js
-var div = document.getElementById("div");
-var listener = function (event) {
-  /* do something here */
-};
-div.addEventListener("click", listener, false);
-div.removeEventListener("click", listener, false);
+const body = document.querySelector("body");
+const clickTarget = document.getElementById("click-target");
+const mouseOverTarget = document.getElementById("mouse-over-target");
+
+let toggle = false;
+function makeBackgroundYellow() {
+  body.style.backgroundColor = toggle ? "white" : "yellow";
+
+  toggle = !toggle;
+}
+
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
+
+mouseOverTarget.addEventListener("mouseover", () => {
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+});
 ```
 
-## Совместимость браузеров
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-### Gecko примечания
-
-- В версиях Firefox младше версии 6 браузер бросает исключение, если параметр `useCapture` не был явно указан как false. В Gecko младше 9.0, `addEventListener()` бросает исключение, если параметр `listener` равен `null`; в настоящее время метод отрабатывает без ошибки, но при этом не производит никаких действий.
-
-### Opera примечания
-
-- В Opera 12.00 параметр `useCapture` - опциональный ([source](http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition)).
-
-### WebKit примечания
-
-- Несмотря на то, что WebKit явно добавил "`[optional]`" к параметру `useCapture` в Safari 5.1 и Chrome 13, это работало и до изменений.
-
-### Спецификация
-
-- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
-
-## Полифилы для поддержки старых браузеров
-
-`addEventListener()` и `removeEventListener()` отсутствуют в старых браузерах. Это ограничение можно обойти, вставив следующий код в начале ваших скриптов, что позволяет использовать `addEventListener()` и `removeEventListener()` в версиях, не поддерживающих эти методы нативно. Тем не менее, этот метод не работает в Internet Explorer версии 7 и ниже, так как расширение Element.prototype не поддерживалось в более ранних версиях Internet Explorer ранее 8.
-
-```js
-if (!Element.prototype.addEventListener) {
-  var oListeners = {};
-  function runListeners(oEvent) {
-    if (!oEvent) {
-      oEvent = window.event;
-    }
-    for (
-      var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type];
-      iElId < oEvtListeners.aEls.length;
-      iElId++
-    ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
-          oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
-        }
-        break;
-      }
-    }
-  }
-  Element.prototype.addEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
-  ) {
-    if (oListeners.hasOwnProperty(sEventType)) {
-      var oEvtListeners = oListeners[sEventType];
-      for (
-        var nElIdx = -1, iElId = 0;
-        iElId < oEvtListeners.aEls.length;
-        iElId++
-      ) {
-        if (oEvtListeners.aEls[iElId] === this) {
-          nElIdx = iElId;
-          break;
-        }
-      }
-      if (nElIdx === -1) {
-        oEvtListeners.aEls.push(this);
-        oEvtListeners.aEvts.push([fListener]);
-        this["on" + sEventType] = runListeners;
-      } else {
-        var aElListeners = oEvtListeners.aEvts[nElIdx];
-        if (this["on" + sEventType] !== runListeners) {
-          aElListeners.splice(0);
-          this["on" + sEventType] = runListeners;
-        }
-        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
-          if (aElListeners[iLstId] === fListener) {
-            return;
-          }
-        }
-        aElListeners.push(fListener);
-      }
-    } else {
-      oListeners[sEventType] = { aEls: [this], aEvts: [[fListener]] };
-      this["on" + sEventType] = runListeners;
-    }
-  };
-  Element.prototype.removeEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
-  ) {
-    if (!oListeners.hasOwnProperty(sEventType)) {
-      return;
-    }
-    var oEvtListeners = oListeners[sEventType];
-    for (
-      var nElIdx = -1, iElId = 0;
-      iElId < oEvtListeners.aEls.length;
-      iElId++
-    ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        nElIdx = iElId;
-        break;
-      }
-    }
-    if (nElIdx === -1) {
-      return;
-    }
-    for (
-      var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx];
-      iLstId < aElListeners.length;
-      iLstId++
-    ) {
-      if (aElListeners[iLstId] === fListener) {
-        aElListeners.splice(iLstId, 1);
-      }
-    }
-  };
-}
-```
-
 ## Смотрите также
 
-- {{domxref("EventTarget.addEventListener()")}}.
-- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.
+- {{domxref("EventTarget.addEventListener()")}}

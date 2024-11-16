@@ -106,7 +106,7 @@ _Без изменений._
 ### JavaScript
 
 - Реализована поддержка {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} ([Firefox bug 1504334](https://bugzil.la/1504334)).
-- Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет `2^30 - 2` (\~1 ГБ) вместо `2^28 - 1` (\~256 МБ) ([Firefox bug 1509542](https://bugzil.la/1509542)).
+- Максимально допустимое значение {{jsxref("String/length","length","",1)}} у строк отныне составляет `2^30 - 2` (\~1 ГБ) вместо `2^28 - 1` (\~256 МБ) ([Firefox bug 1509542](https://bugzil.la/1509542)).
 - Добавлена поддержка свойства [`globalThis`](https://github.com/tc39/proposal-global) ([Firefox bug 1317422](https://bugzil.la/1317422)).
 
 ### API
@@ -121,7 +121,7 @@ _Без изменений._
 - {{domxref("Performance.toJSON()")}} доступен {{domxref("Web_Workers_API", "веб-воркерам", "", "1")}} ([Firefox bug 1504958](https://bugzil.la/1504958)).
 - Запросы {{domxref("XMLHttpRequest")}} будут выбрасывать `NetworkError`, если запрошено содержимое типа `Blob`, а метод запроса отличен от `GET` ([Firefox bug 1502599](https://bugzil.la/1502599)).
 - Многие функции {{domxref("Fullscreen API", "", "", "1")}} с префиксом `-moz-` объявлены устаревшими и выдают предупреждение в консоль JavaScript ([Firefox bug 1504946](https://bugzil.la/1504946)).
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap", "createImageBitmap()")}} отныне поддерживает изображения SVG ({{domxref("SVGImageElement")}}) в качестве источника ([Firefox bug 1500768](https://bugzil.la/1500768)).
+- {{domxref("createImageBitmap()")}} отныне поддерживает изображения SVG ({{domxref("SVGImageElement")}}) в качестве источника ([Firefox bug 1500768](https://bugzil.la/1500768)).
 
 #### События DOM
 
@@ -230,7 +230,7 @@ _Без изменений._
 
 ### Прочее
 
-- Версия для Android теперь поддерживает свойства `headerURL`/`theme_frame` для [тем Webextension](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) ([Firefox bug 1429488](https://bugzil.la/1429488)).
+- Версия для Android теперь поддерживает свойства `headerURL`/`theme_frame` для [тем расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) ([Firefox bug 1429488](https://bugzil.la/1429488)).
 
 ## Предыдущие версии
 

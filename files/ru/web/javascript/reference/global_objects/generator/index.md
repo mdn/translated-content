@@ -56,11 +56,11 @@ console.log(gen.next().value); // 2
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 ### Legacy generators
 

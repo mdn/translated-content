@@ -13,7 +13,8 @@ Read-only свойство **`name`** глобального объекта {{js
 
 {{js_property_attributes(0,0,1)}}
 
-> **Примечание:** Заметьте, что в нестандартном, pre-ES2015 релизе `configurable` свойство было `false`
+> [!NOTE]
+> Заметьте, что в нестандартном, pre-ES2015 релизе `configurable` свойство было `false`
 
 ## Примеры
 
@@ -123,7 +124,8 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 
-> **Предупреждение:** Интерпретатор объявит встроенное `Function.name` свойство только если функция не имеет своего собственного свойства _name_ (см. [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Однако, в ES2015 статичные методы перезаписывают OwnProperty конструкторов класса-функции (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> [!WARNING]
+> Интерпретатор объявит встроенное `Function.name` свойство только если функция не имеет своего собственного свойства _name_ (см. [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Однако, в ES2015 статичные методы перезаписывают OwnProperty конструкторов класса-функции (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
 Таким образом, нельзя получить доступ к `name` любого класса со статичным свойством `name():`
 
@@ -176,7 +178,8 @@ o[sym2].name; // ""
 
 ## JavaScript минифицированный
 
-> **Предупреждение:** Будьте осторожны, используя `Function.name` и изменения source кода с помощью JavaScript compressors (minifiers) или обфускаторов. Эти инструменты часто используются, как встроенные в JavaScript build pipeline, чтобы сократить размер билда перед деплоем в production. Такие трансформации часто изменяют имена функций.
+> [!WARNING]
+> Будьте осторожны, используя `Function.name` и изменения source кода с помощью JavaScript compressors (minifiers) или обфускаторов. Эти инструменты часто используются, как встроенные в JavaScript build pipeline, чтобы сократить размер билда перед деплоем в production. Такие трансформации часто изменяют имена функций.
 
 Такой source code:
 

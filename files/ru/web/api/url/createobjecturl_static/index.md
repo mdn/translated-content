@@ -3,7 +3,7 @@ title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL_static
 ---
 
-{{ApiRef("URL")}}{{SeeCompatTable}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 ## Определение
 
@@ -34,7 +34,7 @@ objectURL = URL.createObjectURL(blob);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

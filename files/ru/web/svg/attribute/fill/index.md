@@ -3,6 +3,8 @@ title: fill
 slug: Web/SVG/Attribute/fill
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `fill` имеет два значения в зависимости от используемого контекста.

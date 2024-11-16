@@ -15,7 +15,7 @@ The following elements can use the `repeatCount` attribute
 
 - [Animation elements](/zh-CN/SVG/Element#Animation) »
 
-## 用法
+## 使用说明
 
 <table class="properties">
   <tbody>

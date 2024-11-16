@@ -17,7 +17,8 @@ La signification exacte d'un identifiant global est déterminée par la spécifi
 itemid="URN"
 ```
 
-> **Note :** Selon la définition du WHATWG, un `itemid` doit être une URL. Dans l'exemple qui suit, on utilise plutôt une URN, plus appropriée pour définir un identifiant unique comme `itemid`. Cette incohérence reflète l'état actuellement incomplet de la spécification sur les microdonnées.
+> [!NOTE]
+> Selon la définition du WHATWG, un `itemid` doit être une URL. Dans l'exemple qui suit, on utilise plutôt une URN, plus appropriée pour définir un identifiant unique comme `itemid`. Cette incohérence reflète l'état actuellement incomplet de la spécification sur les microdonnées.
 
 ## Exemple
 

@@ -3,7 +3,7 @@ title: bookmarks.BookmarkTreeNodeUnmodifiable
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer la raison pour laquelle un nœud de l'arborescence de signets (où chaque nœud est un signet ou un dossier de signets) ne peut pas être modifié. Ceci est utilisé comme valeur du champ {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} sur les nœuds de signets.
 
@@ -17,9 +17,9 @@ Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer 
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

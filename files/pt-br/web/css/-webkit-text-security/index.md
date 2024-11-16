@@ -5,7 +5,7 @@ slug: Web/CSS/-webkit-text-security
 
 {{ CSSRef() }} {{ Non-standard_header() }}
 
-**`-webkit-text-security`** é uma propriedade CSS não padronizada que ofusca caracteres em um campo {{HtmlElement ("form")}} (como {{HtmlElement ("input")}}} ou {{HtmlElement ("textarea")}}) substituindo eles com uma forma. Afeta apenas campos que não são `type=password`.
+**`-webkit-text-security`** é uma propriedade CSS não padronizada que ofusca caracteres em um campo {{HtmlElement ("form")}} (como {{HtmlElement ("input")}} ou {{HtmlElement ("textarea")}}) substituindo eles com uma forma. Afeta apenas campos que não são `type=password`.
 
 ## Sintaxe
 

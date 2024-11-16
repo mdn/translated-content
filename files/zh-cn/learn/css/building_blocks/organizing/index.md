@@ -45,7 +45,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 如果你在和一个小组共同协作完成一个已有的项目，需要检查的第一件事是这一项目是否已经有了 CSS 的代码风格规范。小组的代码风格规范应当总是优先于的个人喜好。做事情很多时候没有对错之分，但是统一是很重要的。
 
-例如你可以看下[MDN 的 CSS 代码规范的示例。](/zh-CN/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS).
+例如你可以看下 [MDN 的 CSS 代码规范的示例](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)。
 
 ### 保持统一
 
@@ -215,7 +215,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 
 ### CSS 方法论
 
-不必需要自己制定编写 CSS 的规则，你可以选择接纳一个已经已经由社群设计、经由诸多项目检验的方法，并从中获益。这些方法论都是有着结构化的编写和组织 CSS 途径的 CSS 代码指南。典型地，与你为你的项目编写和优化每个选择器为自己定义的规则组相比，它们会倾向于产生更多的多余代码。
+不必需要自己制定编写 CSS 的规则，你可以选择接纳一个已经由社群设计、经由诸多项目检验的方法，并从中获益。这些方法论都是有着结构化的编写和组织 CSS 途径的 CSS 代码指南。典型地，与你为你的项目编写和优化每个选择器为自己定义的规则组相比，它们会倾向于产生更多的多余代码。
 
 但是，在接纳了一个方法以后，你的代码会更有条理，而且因为这些体系许多都是被很广泛使用的，其他的开发者更有可能理解你在使用的方式，会以相同的方式编写他们自己的代码，而不需要从头接纳你自己的个人方法论。
 
@@ -352,7 +352,8 @@ $base-color: #c6538c;
 
 在[这篇博文](https://www.lauraleeflores.com/blog/how-to-organize-your-css-files)里面，你可以看下一个开发者是如何处理这个问题的。
 
-> **备注：** 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
+> [!NOTE]
+> 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
 
 #### 后处理以进行优化
 

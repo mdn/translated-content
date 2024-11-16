@@ -5,11 +5,12 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 {{AddonSidebar}}
 
-В целях иллюстрации разработки расширений, мы поддерживаем репозиторий простых демонстрационных расширений по адресу <https://github.com/mdn/webextensions-examples>. Данная статья описывает, как использовать эти примеры, и перечисляет их вместе с API Веб-расширений (WebExtensions API), которые они демонстрируют.
+В целях иллюстрации разработки расширений, мы поддерживаем репозиторий простых демонстрационных расширений по адресу <https://github.com/mdn/webextensions-examples>. Данная статья описывает, как использовать эти примеры, и перечисляет их вместе с WebExtension API, которые они демонстрируют.
 
 Эти примеры работают в Firefox Nightly: большинство из них работает и в более ранних версиях Firefox, но, чтобы удостовериться, проверьте поле [strict_min_version](/en-US/Add-ons/WebExtensions/manifest.json/applications) в файле manifest.json.
 
-> **Предупреждение:** Некоторые примеры работают только на специальных доменах или страницах. Подробности о всех ограничениях представлены в файле readme каждого примера. По умолчанию ни один из примеров не работает в приватных окнах браузера, подробности смотрите в [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows).
+> [!WARNING]
+> Некоторые примеры работают только на специальных доменах или страницах. Подробности о всех ограничениях представлены в файле readme каждого примера. По умолчанию ни один из примеров не работает в приватных окнах браузера, подробности смотрите в [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows).
 
 Если вы хотите попробовать эти примеры, клонируйте репозиторий, а после этого совершите одно из следующих действий:
 

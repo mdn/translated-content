@@ -194,13 +194,10 @@ Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callb
 
 Cuando una `promesa` es rechazada, uno de los dos eventos se envía al ámbito global (generalmente, éste es el {{domxref("window")}}, o, si se utiliza en un trabajador web, es el {{domxref("Worker")}} u otra interfaz basada en un trabajador). Los dos eventos son:
 
-**{{domxref("Window.rejectionhandled_event", "rejectionhandled")}}**
-
-Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
-
-**{{domxref("Window.unhandledrejection_event", "unhandledrejection")}}**
-
-Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
+  - : Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
+- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
+  - : Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
 
 En ambos casos, el evento (del tipo {{domxref("PromiseRejectionEvent")}}) tiene como miembros una propiedad {{domxref("PromiseRejectionEvent.promise", "promise")}} que indica que la promesa fue rechazada, y una propiedad {{domxref("PromiseRejectionEvent.reason", "reason")}} que proporciona el motivo por el cuál se rechaza la promesa.
 

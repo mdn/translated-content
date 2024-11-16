@@ -64,7 +64,7 @@ function myFunc() {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

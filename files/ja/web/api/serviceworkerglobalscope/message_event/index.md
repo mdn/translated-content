@@ -1,13 +1,14 @@
 ---
 title: "ServiceWorkerGlobalScope: message イベント"
+short-title: message
 slug: Web/API/ServiceWorkerGlobalScope/message_event
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-**`message`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、着信メッセージを受信したときに発生します。 制御されたページは、 {{domxref("Worker.postMessage()", "ServiceWorker.postMessage()")}} メソッドを使用して、サービスワーカーにメッセージを送信することができます。
+**`message`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、着信メッセージを受信したときに発生します。 制御されたページは、{{domxref("ServiceWorker.postMessage()")}} メソッドを使用して、サービスワーカーにメッセージを送信することができます。
 サービスワーカーは、任意で、制御されたページに対応する {{domxref("Client.postMessage()")}} を介して返信することができます。
 
 このイベントはキャンセル不可で、バブリングしません。
@@ -33,11 +34,11 @@ onmessage = (event) => {};
 _親である {{domxref("ExtendableEvent")}} からプロパティを継承しています_。
 
 - {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
-  - : イベントのデータを返します。任意のデータ型にすることができます。
+  - : イベントのデータを返します。任意のデータ型にすることができます。`messageerror` イベントで配信された場合、プロパティは `null` になります。
 - {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
   - : メッセージを送信した {{domxref("Client")}} のオリジンを返します。
 - {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)において、イベントソースの最後のイベント ID を表します。これは空文字列です。
+  - : [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)において、イベントソースの最後のイベント ID を表します。
 - {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
   - : メッセージを送信した {{domxref("Client")}} オブジェクトへの参照を返します。
 - {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
@@ -99,5 +100,4 @@ self.onmessage = (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

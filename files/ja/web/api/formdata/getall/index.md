@@ -3,14 +3,15 @@ title: "FormData: getAll() メソッド"
 short-title: getAll()
 slug: Web/API/FormData/getAll
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`getAll()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内から指定されたキーに関連付けられたすべての値を返します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -52,5 +53,5 @@ formData.getAll("username"); // Returns ["Chris", "Bob"]
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

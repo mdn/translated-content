@@ -9,7 +9,8 @@ l10n:
 
 **`display`** は {{domxref("VRDisplayEvent")}} インターフェイスの読み取り専用プロパティで、このイベントに関連付けられた {{domxref("VRDisplay")}} を返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 値
 
@@ -37,5 +38,4 @@ window.addEventListener("vrdisplaypresentchange", (e) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

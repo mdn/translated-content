@@ -51,11 +51,6 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 - [优化和性能](/zh-CN/docs/Web/Performance)
   - : 在开发现代网络站点及应用时，使内容加载迅速高效很重要。这篇文章将会帮助你在桌面系统和手持设备上都可以提高效率。
 
-## 移动 Web 开发
-
-- [移动网络开发](/zh-CN/docs/Web/Guide/Mobile)
-  - : 本页提供对于设计移动端网站所需要的主要技术的概览。
-
 ## 字体
 
 - [可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)

@@ -211,7 +211,8 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
    Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
 
-> **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
+> [!NOTE]
+> Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
 
 ### Changer la casse
 
@@ -322,7 +323,8 @@ Dans cet exercice, nous avons des noms des villes du Royaume-Uni, mais les majus
 3. En utilisant la dernière variable comme une sous-chaîne, remplacez la première lettre de la chaîne en minuscules par la première lettre de la chaîne en minuscules transformé en majuscules. Stockez le résultat de cette procédure de remplacement dans une autre nouvelle variable.
 4. Changez la valeur de la variable `result` afin qu'elle soit égale au résultat final plutôt qu'à `input`.
 
-> **Note :** Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.
+> [!NOTE]
+> Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">

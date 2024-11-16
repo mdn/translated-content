@@ -16,7 +16,7 @@ text-justify: inter-word;
 text-justify: inter-character;
 text-justify: distribute; /* 非推奨の値 */
 
-/* Global values */
+/* グローバル値 */
 text-justify: inherit;
 text-justify: initial;
 text-justify: revert;

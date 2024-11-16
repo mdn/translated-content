@@ -3,6 +3,8 @@ title: MDN en 10
 slug: MDN/At_ten
 ---
 
+{{MDNSidebar}}
+
 ## La historia de MDN (Mozilla Developers Network)
 
 Celebra 10 años documentando tu Web.

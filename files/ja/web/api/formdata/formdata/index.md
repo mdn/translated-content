@@ -3,14 +3,15 @@ title: "FormData: FormData() コンストラクター"
 short-title: FormData()
 slug: Web/API/FormData/FormData
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -54,7 +55,8 @@ formData.append("username", "Chris");
 
 オプションで `form` と `submitter` を指定すると、`FormData` オブジェクトを作成する際に、指定したフォームの値を事前入力することができます。
 
-> **メモ:** FormData オブジェクトに含まれるのは、正常なフォームコントロールのみです。つまり、名前を持ち、無効状態でないものです。
+> [!NOTE]
+> FormData オブジェクトに含まれるのは、正常なフォームコントロールのみです。つまり、名前を持ち、無効状態でないものです。
 
 #### HTML
 
@@ -112,5 +114,5 @@ for (const [key, value] of formData) {
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

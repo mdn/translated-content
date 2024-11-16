@@ -19,7 +19,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.
 
-    > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
+    > [!WARNING]
+    > Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
 
 - `type`{{Deprecated_inline}}
 
@@ -31,7 +32,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
     Un quatrième type a été défini dans l'interface WebTV : `triangle` mais tous les navigateurs ne l'implémentent pas.
 
-    > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > [!WARNING]
+    > Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Notes d'utilisation
 
@@ -149,7 +151,7 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

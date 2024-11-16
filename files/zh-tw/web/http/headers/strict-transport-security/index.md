@@ -1,83 +1,107 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
+l10n:
+  sourceCommit: f0f30c318c2a318552a753759fa0a09f6690f2a5
 ---
 
 {{HTTPSidebar}}
 
-**HTTP `Strict-Transport-Security`** 回應標頭（簡稱為 {{Glossary("HSTS")}}）告知瀏覽器應強制使用 HTTPS 以取代 HTTP。
+HTTP **`Strict-Transport-Security`** 回應標頭（通常縮寫為 {{Glossary("HSTS")}}）告知瀏覽器該站點應僅使用 HTTPS 訪問，並且所有將來的 HTTP 訪問應自動轉換為 HTTPS。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+> [!NOTE]
+> 這比簡單地在伺服器上配置 HTTP 到 HTTPS 的重定向（301）更安全，因為初始的 HTTP 連接仍然易受中間人攻擊。
 
-## Syntax
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">標頭類型</th>
+      <td>{{Glossary("Response header", "回應標頭")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
-```plain
+## 語法
+
+```http
 Strict-Transport-Security: max-age=<expire-time>
 Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-Strict-Transport-Security: max-age=<expire-time>; preload
+Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 ```
 
-## Directives
+## 指令
 
 - `max-age=<expire-time>`
-  - : 以秒計算的時間，告知瀏覽器應該保持強制 HTTPS 存取的時間有多長。
+  - : 瀏覽器應記住該站點僅能使用 HTTPS 訪問的時間，以秒為單位。
 - `includeSubDomains` {{optional_inline}}
-  - : 若該標頭被聲明，則瀏覽器應該將強制使用 HTTPS 的狀態套用至該域名的所有子域。
-- `preload` {{optional_inline}}
-  - : 參考 [Preloading Strict Transport Security](#preloading_strict_transport_security)。 此非規範的一部份。
+  - : 如果指定了這個可選參數，該規則也適用於所有子域。
+- `preload` {{optional_inline}} {{non-standard_inline}}
+  - : 請參見[預加載嚴格傳輸安全性](#預加載嚴格傳輸安全性)的詳細訊息。當使用 `preload` 時，`max-age` 指令必須至少為 `31536000`（1 年），並且必須包含 `includeSubDomains` 指令。這不是規範的一部分。
 
-## Description
+## 描述
 
-若是網站在被訪問時經由 HTTP 被重定向至 HTTPS，則訪客將在受到 HTTPS 保護前與該網站的非加密版本通信。例如若使用者輸入 `http://www.foo.com/` 或是 foo.com 時，未加密的首次連線為中間人留下了機會。他們可以使用中間人攻擊將使用者定向至惡意網站而非使用者預期的網站的安全版本。
+如果網站接受通過 HTTP 的連接並重定向到 HTTPS，訪問者可能會在被重定向之前先與未加密版本的網站進行通信，例如，如果訪問者輸入 `http://www.foo.com/` 或僅輸入 foo.com。這給中間人攻擊創造了機會。重定向可能會被利用，將訪問者引導到惡意網站，而不是原站點的安全版本。
 
-HTTP Strict Transport Security 標頭明確告知瀏覽器在有效期間費不應該使用 HTTP 與該網站進行通訊，並且應該將所有的 HTTP 請求自動轉換成 HTTPS。
+HTTP Strict Transport Security 標頭告知瀏覽器不應使用 HTTP 加載站點，應自動將所有嘗試使用 HTTP 訪問站點的請求轉換為 HTTPS。
 
-> **備註：** 瀏覽器將會忽略 HTTP 站點所回應的 `Strict-Transport-Security` 標頭，因為在 HTTP 連線下，該標頭可能是被惡意添加或是竄改的。瀏覽器僅會在使用 HTTPS 連線且該連線由合法的證書保護時回應該標頭的要求，唯有在這種情況下瀏覽器方能確定該站點有正確的 HTTPS 配置且標頭的確由該站點所要求。
+> [!NOTE]
+> 當你的站點僅通過 HTTP 訪問時，瀏覽器會*忽略* `Strict-Transport-Security` 標頭。一旦你的站點通過 HTTPS 訪問且沒有憑證錯誤，瀏覽器會知道你的站點支持 HTTPS，並會尊重 `Strict-Transport-Security` 標頭。瀏覽器這樣做是因為攻擊者可能會攔截到站點的 HTTP 連接並注入或刪除標頭。
 
-### 一個範例情境
+### 範例場景
 
-你連接到機場提供的免費 WIFI 並且登入你的網路銀行以察看可用餘額並支付帳單，不幸的是，你連上的無線網路實際上是黑客偽造的筆記型電腦。當你嘗試連上網路銀行時，實際上你連結的是黑客所偽造的網路銀行介面，現在，你的帳號密碼已經洩漏了。
+你在機場登錄到免費 Wi-Fi 接入點並開始上網，訪問你的在線銀行服務以查看餘額和支付一些帳單。不幸的是，你使用的接入點實際上是駭客的筆記本電腦，他們攔截了你的原始 HTTP 請求並將你重定向到一個仿冒的銀行網站，而不是實際的網站。現在，你的私人數據暴露在駭客面前。
 
-HSTS 可以處理這項問題，你只要曾經在安全的環境下連結到你的網路銀行，且該銀行啟用了 HSTS ，那你的瀏覽器將會知道僅使用 HTTPS 進行通訊，而不會接受黑客的重定向請求，HSTS 從中間人手上保護了你的安全。
+嚴格傳輸安全性解決了這個問題；只要你曾經使用 HTTPS 訪問過你的銀行網站，並且銀行網站使用嚴格傳輸安全性，你的瀏覽器就會知道自動僅使用 HTTPS，這可以防止駭客執行此類中間人攻擊。
 
-### 瀏覽器如何處理它
+### 瀏覽器處理方式
 
-當你首次經由 HTTPS 存取使用 HSTS 的網站時，你的瀏覽器將會記憶此一要求，在未來你存取該網站時將會自動將 HTTP 轉為 HTTPS。
+第一次使用 HTTPS 訪問你的站點並返回 `Strict-Transport-Security` 標頭時，瀏覽器會記錄此訊息，以便將來嘗試加載該站點時自動使用 HTTPS。
 
-在 HSTS 標頭所指定的時間過期後，瀏覽器將不會自動將 HTTP 轉為 HTTPS。
+當 `Strict-Transport-Security` 標頭指定的到期時間過期後，再次嘗試通過 HTTP 加載站點將按正常方式進行，而不是自動使用 HTTPS。
 
-無論何時將 Strict-Transport-Security 標頭傳遞到瀏覽器，它都會更新該網站的到期時間，因此網站可以更新此一訊息並防止該聲明到期。 如果有必要停用嚴格傳輸安全性，則將 max-age 設置為 0（使用 HTTPS 連接）將立即使 Strict-Transport-Security 標頭過期，從而允許使用 HTTP 訪問。
+每當瀏覽器接收到 Strict-Transport-Security 標頭時，它會更新該站點的到期時間，以便站點可以刷新此訊息並防止超時過期。如果需要禁用嚴格傳輸安全性，將 `max-age` 設置為 0（通過 https 連接）會立即使 `Strict-Transport-Security` 標頭過期，允許通過 http 訪問。
 
-## Preloading Strict Transport Security
+## 預加載嚴格傳輸安全性
 
-Google maintains [an HSTS preload service](https://hstspreload.org/). By following the guidelines and successfully submitting your domain, browsers will never connect to your domain using an insecure connection. While the service is hosted by Google, all browsers have stated an intent to use (or actually started using) the preload list. However, it is not part of the HSTS specification and should not be treated as official.
+Google 維護[一個 HSTS 預加載服務](https://hstspreload.org/)。通過遵循指南並成功提交你的域，你可以確保瀏覽器僅通過安全連接訪問你的域。儘管服務由 Google 託管，但所有瀏覽器都在使用這個預加載列表。然而，它不是 HSTS 規範的一部分，不應被視為官方的。
 
-- Information regarding the HSTS preload list in Chrome : <https://www.chromium.org/hsts>
-- Consultation of the Firefox HSTS preload list : [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- 有關 Chrome 中 HSTS 預加載列表的訊息：<https://www.chromium.org/hsts>
+- 查閱 Firefox 的 HSTS 預加載列表：[nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
 
-## Examples
+## 範例
 
-All present and future subdomains will be HTTPS for a max-age of 1 year. This blocks access to pages or sub domains that can only be served over HTTP.
+所有當前和未來的子域在 `max-age` 為 1 年的時間內都將使用 HTTPS。
+這會阻止僅能通過 HTTP 提供的頁面或子域的訪問。
 
-```plain
+```http
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-## Specifications
+儘管對於域來說，1 年的 `max-age` 是可以接受的，但建議值是 2 年，如 <https://hstspreload.org> 所解釋。
+
+在下面的範例中，`max-age` 設置為 2 年，並加上 `preload`，這是包含在所有主要網頁瀏覽器的 HSTS 預加載列表（如 Chromium、Edge 和 Firefox）中的必要條件。
+
+```http
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+```
+
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- Blog post: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Blog post: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
-- OWASP Article: [HTTP Strict Transport Security](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.md)
-- Wikipedia: [HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
-- [Features restricted to secure contexts](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- 部落格文章：[HTTP Strict Transport Security 已經上線！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
+- 部落格文章：[HTTP Strict Transport Security（強制使用 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- OWASP 文章：[HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+- 維基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP严格传输安全)
+- [HSTS 預加載服務](https://hstspreload.org/)
+- [僅限安全上下文的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

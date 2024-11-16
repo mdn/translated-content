@@ -1,9 +1,11 @@
 ---
 title: Notification：icon 属性
 slug: Web/API/Notification/icon
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`icon`** 只读属性包含将作为通知的一部分显示的图标的 URL，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `icon` 选项中指定。
 

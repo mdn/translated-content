@@ -39,7 +39,8 @@ Les propriétés sont appliquées à l'intégralité des indications textuelles 
 
 ## Exemples
 
-> **Note :** Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
+> [!NOTE]
+> Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
 
 ## Spécifications
 

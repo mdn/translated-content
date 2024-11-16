@@ -50,10 +50,10 @@ padding-right: unset;
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

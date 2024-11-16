@@ -85,10 +85,6 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 
 {{Specifications}}
 
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 바깥 고리
 
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)

@@ -77,7 +77,7 @@ var doubles = numbers.map(function (num) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("Array.prototype.map()")}}

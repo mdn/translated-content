@@ -280,17 +280,11 @@ console.table(nonEnglishText.match(regexpBMPWord));
 ["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
-## Совместимость с браузерами
-
-Для информации о совместимости с браузерами, посмотрите [основную таблицу совместимости Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
-
-## Смотрите по теме
+## Смотрите также
 
 - [Руководство по Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
-
   - [Assertions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
   - [Quantifiers](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - [Unicode property escapes](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
   - [Groups and ranges](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
-
 - [Конструктор `RegExp()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

@@ -9,7 +9,8 @@ slug: Web/API/ServiceWorkerRegistration/active
 
 클라이언트들의 URL이 등록 scope 내에 있을 경우 active 워커는 {{domxref("ServiceWorkerClient")}} 를 제어한다. ({{domxref("ServiceWorkerContainer.register")}} 가 처음으로 호출될 때 그 `scope` 옵션은 정의된다.)
 
-> **참고:** 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
+> [!NOTE]
+> 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
 
 ## Syntax
 

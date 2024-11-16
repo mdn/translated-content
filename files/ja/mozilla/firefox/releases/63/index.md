@@ -30,17 +30,17 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 
 ### CSS
 
-- {{Cssxref(":defined")}} 疑似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
+- {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
 - [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS Flexible Box レイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
 - [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
 - [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 
@@ -109,7 +109,7 @@ _変更なし。_
 - アクティブなストリームのコーデックを変更できる、{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
 - {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{domxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
 - また {{domxref("AudioParam.setValueCurveAtTime()")}} が、`values` の配列に有限ではない値が存在する場合に、`TypeError` を正しく返すようになりました ([Firefox バグ 1472095](https://bugzil.la/1472095))。
-- さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従ってパラメーターが終了したとき、パラメーターの値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
+- さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従って引数が終了したとき、引数の値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
 - ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを {{domxref("RTCRtpStreamStats")}} に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
 - `RTCRtpStreamStats` ディクショナリーの {{domxref("RTCRtpStreamStats.kind", "kind")}} プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
 - {{domxref("RTCRtpStreamStats")}} ディクショナリーの {{domxref("RTCRtpStreamStats.isRemote", "isRemote")}} プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。

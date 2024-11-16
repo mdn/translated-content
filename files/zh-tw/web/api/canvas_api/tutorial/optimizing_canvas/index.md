@@ -15,6 +15,6 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 - 對於複雜需求可以利用多個畫布分層構成
 - 盡量不要用 shadowBlur 屬性
 - 使用{{domxref("window.requestAnimationFrame()")}}
-- 用[JSPerf](http://jsperf.com)測試效能
+- 用[JSPerf](https://jsperf.com/)測試效能
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}

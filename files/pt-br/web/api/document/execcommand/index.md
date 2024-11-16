@@ -19,7 +19,8 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou está desabilitado.
 
-> **Nota:** Retorna `true` se for parte da interação do usuário. Não tente utilizar o retorno para verificar o suporte do browser antes de chamar o comando.
+> [!NOTE]
+> Retorna `true` se for parte da interação do usuário. Não tente utilizar o retorno para verificar o suporte do browser antes de chamar o comando.
 
 ### Parâmetros
 

@@ -38,6 +38,6 @@ if ("serviceWorker" in navigator) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

@@ -3,7 +3,7 @@ title: count
 slug: Web/XPath/Functions/count
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `count` compte le nombre de nœuds dans un ensemble de nœuds et retourne un entier.
 

@@ -37,7 +37,7 @@ console.log(url.hash); // Выведет: '#Examples'
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

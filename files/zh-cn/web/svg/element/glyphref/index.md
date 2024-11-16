@@ -7,7 +7,7 @@ slug: Web/SVG/Element/glyphRef
 
 `glyphRef` 元素为引用的 `<altGlyph>` 替代物提供了一个唯一可能的字形。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

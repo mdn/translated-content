@@ -39,7 +39,8 @@ _Hereda las propiedades de su padre, {{domxref("StyleSheet")}}._
 
   - : Devuelve un {{domxref("CSSRuleList")}} activo que mantiene una lista actualizada de los objetos {{domxref("CSSRuleList")}} que componen la hoja de estilo.
 
-    > **Nota:** En algunos navegadores, si se carga una hoja de estilo desde un dominio diferente, acceder a `cssRules` genera un `SecurityError`.
+    > [!NOTE]
+    > En algunos navegadores, si se carga una hoja de estilo desde un dominio diferente, acceder a `cssRules` genera un `SecurityError`.
 
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : Si esta hoja de estilo se importa al documento mediante una regla {{cssxref("@import")}}, la propiedad `ownerRule` devuelve la correspondiente {{domxref("CSSImportRule")}}; de lo contrario, el valor de esta propiedad es `null`.

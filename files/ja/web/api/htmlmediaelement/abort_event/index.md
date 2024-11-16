@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: abort イベント"
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}

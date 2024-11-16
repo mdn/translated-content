@@ -11,4 +11,4 @@ slug: Web/API/HTMLDocument
 
 ## 規範
 
-- [http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)
+- [http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)

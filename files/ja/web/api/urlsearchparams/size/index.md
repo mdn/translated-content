@@ -3,22 +3,22 @@ title: "URLSearchParams: size プロパティ"
 short-title: size
 slug: Web/API/URLSearchParams/size
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
-**`URLSearchParams.size`** は読み取り専用のプロパティで、検索パラメーターの項目の総数を示します。
+**`URLSearchParams.size`** は {{domxref("URLSearchParams")}} インターフェイスの読み取り専用のプロパティで、検索引数項目の総数を示します。
 
 ## 値
 
-数値で、{{domxref("URLSearchParams")}} オブジェクト内の検索パラメーターの項目の総数を示します。
+数値で、{{domxref("URLSearchParams")}} オブジェクト内の検索引数項目の総数を示します。
 
 ## 例
 
-### 検索パラメーターの項目数の取得
+### 検索引数項目数の取得
 
-検索パラメーターの項目の総数を取得するには、次のようにします。
+検索引数項目の総数を取得するには、次のようにします。
 
 ```js
 const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
@@ -31,9 +31,9 @@ searchParams.size; // 4
 [...new Set(searchParams.keys())].length; // 3
 ```
 
-### 検索パラメーターが存在するかどうかをチェック
+### 検索引数が存在するかどうかをチェック
 
-size` プロパティは、検索パラメーターがあるかどうかをチェックするのに便利です。
+size` プロパティは、検索引数があるかどうかをチェックするのに便利です。
 
 ```js
 const url = new URL("https://example.com?foo=1&bar=2");

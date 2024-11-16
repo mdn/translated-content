@@ -16,7 +16,8 @@ p:nth-last-of-type(4n) {
 }
 ```
 
-> **Nota:** Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
+> [!NOTE]
+> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
 
 ## Sintaxis
 

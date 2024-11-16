@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 
 {{JSRef}} {{SeeCompatTable}}
 
-> **备注：** 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.group()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
+> [!NOTE]
+> 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.group()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
 
 **`Object.groupBy()`** 静态方法根据提供的回调函数返回的字符串值对给定可迭代对象中的元素进行分组。返回的对象具有每个组的单独属性，其中包含组中的元素的数组。
 

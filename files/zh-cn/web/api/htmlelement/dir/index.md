@@ -15,7 +15,8 @@ slug: Web/API/HTMLElement/dir
 
 当一个元素的 dir 设置为“`auto`”时，该元素的方向是根据其第一个强方向性字符决定的，或者默认为其父元素的方向性。
 
-> **备注：** 浏览器可能允许用户改变 {{ HTMLElement("input") }} 和 {{ HTMLElement("textarea") }} 的方向性，以协助编写内容。Chrome 和 Safari 在输入字段的上下文菜单中提供方向性选项，而 Internet Explorer 和 Edge 使用组合键 <kbd>Ctrl</kbd> + 左 <kbd>Shift</kbd> 和 <kbd>Ctrl</kbd> + 右 <kbd>Shift</kbd>。Firefox 使用组合键 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>，但不更新 **`dir`** 属性值。
+> [!NOTE]
+> 浏览器可能允许用户改变 {{ HTMLElement("input") }} 和 {{ HTMLElement("textarea") }} 的方向性，以协助编写内容。Chrome 和 Safari 在输入字段的上下文菜单中提供方向性选项，而 Internet Explorer 和 Edge 使用组合键 <kbd>Ctrl</kbd> + 左 <kbd>Shift</kbd> 和 <kbd>Ctrl</kbd> + 右 <kbd>Shift</kbd>。Firefox 使用组合键 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>，但不更新 **`dir`** 属性值。
 
 ## 值
 

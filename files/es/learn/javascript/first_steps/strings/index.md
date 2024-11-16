@@ -230,7 +230,8 @@ Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma,
    response;
    ```
 
-> **Nota:** Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
+> [!NOTE]
+> Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
 
 ### La concatenación en contexto
 

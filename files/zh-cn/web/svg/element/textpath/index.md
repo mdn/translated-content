@@ -7,7 +7,7 @@ slug: Web/SVG/Element/textPath
 
 除了笔直地绘制一行文字以外，SVG 也可以根据 {{ SVGElement("path") }} 元素的形状来放置文字。只要在`textPath`元素内部放置文本，并通过其`xlink:href`属性值引用{{ SVGElement("path") }}元素，我们就可以让文字块呈现在{{ SVGElement("path") }}元素给定的路径上了。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

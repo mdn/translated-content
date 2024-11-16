@@ -26,7 +26,8 @@ Apenas certas propriedades podem ser usadas com o `::selection`:
 - {{CSSxRef("text-emphasis-color")}}
 - {{CSSxRef("text-shadow")}}
 
-> **Warning:** Em particular, {{CSSxRef("background-image")}} é ignorada.
+> [!WARNING]
+> Em particular, {{CSSxRef("background-image")}} é ignorada.
 
 ## Sintaxe
 

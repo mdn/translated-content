@@ -13,7 +13,7 @@ slug: Glossary/Key
 
    1. ウィキペディアの[ケルクホフスの原理](https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AB%E3%82%AF%E3%83%9B%E3%83%95%E3%82%B9%E3%81%AE%E5%8E%9F%E7%90%86)の記事
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
    2. {{Glossary("Cipher", "サイファー")}}

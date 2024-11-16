@@ -3,7 +3,7 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 テキストによるタブ内の検索をします。
 
@@ -34,7 +34,7 @@ browser.find.find(
 );
 ```
 
-### Parameters
+### 引数
 
 - `queryphrase`
   - : `string`. 検索語。
@@ -53,7 +53,7 @@ browser.find.find(
     - `includeRectData`
       - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
@@ -91,7 +91,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
         - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
         - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
-        例えば Web ページ上で:
+        例えばウェブページ上で:
 
         ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
@@ -103,11 +103,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
     - `text`
       - : マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## Examples
+## 例
 
 ### Basic examples
 

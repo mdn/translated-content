@@ -1,12 +1,11 @@
 ---
 title: 次兄弟結合子
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Next-sibling_combinator
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **次兄弟結合子** (next-sibling combinator, `+`) は 2 つのセレクターを接続し、 2 つ目の要素が 1 つ目の要素の _直後_ にあって、両者が同じ親{{DOMxRef("element", "要素")}}の子同士である場合に一致します。
 

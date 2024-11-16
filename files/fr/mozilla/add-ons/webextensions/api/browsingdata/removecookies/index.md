@@ -3,7 +3,7 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les cookies du navigateur
 
@@ -61,7 +61,7 @@ browser.browsingData
 
 Supprime tous les cookies :
 
-> **Attention :**
+> [!WARNING]
 >
 > L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).
 >
@@ -81,9 +81,9 @@ browser.browsingData.removeCookies({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -22,6 +22,8 @@ break-inside: revert;
 break-inside: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/break-inside.html")}}
+
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の {{cssxref("break-before")}} の値、包含要素の `break-inside` の値です。
 
 区切られるかどうかを判断するために、以下の規則が適用されます。

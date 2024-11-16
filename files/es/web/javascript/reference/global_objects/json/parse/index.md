@@ -3,7 +3,7 @@ title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 
-{{JSRef("Global_Objects", "JSON")}}
+{{JSRef}}
 
 ## Resumen
 

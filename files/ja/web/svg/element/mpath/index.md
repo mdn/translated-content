@@ -1,19 +1,29 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
 {{SVGRef}}
 
-## 概要
+**`<mpath>`** は {{SVGElement("animateMotion")}} 要素のサブ要素で、モーションパスの定義として外部の {{SVGElement("path")}} 要素を参照する機能を提供します。
 
-{{ SVGElement("animateMotion") }}要素の mpath サブ要素は、外部の {{ SVGElement("path") }}要素をモーションパスの定義として参照する機能を提供します。
-
-## 利用可能な場所
+## 使用可能な場所
 
 {{svginfo}}
 
+## 属性
+
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGMPathElement")}} インターフェイスを実装しています。
+
 ## 例
+
+### SVG
 
 ```html
 <svg
@@ -53,40 +63,24 @@ slug: Web/SVG/Element/mpath
     stroke-width="7.06">
     <!-- Define the motion path animation -->
     <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#path1" />
+      <mpath href="#path1" />
     </animateMotion>
   </path>
 </svg>
 ```
 
-出力結果:
+### 結果
 
-{{EmbedLiveSample("Example",250,165)}}
+{{EmbedLiveSample("Example", 250, 400)}}
 
-## 属性
-
-### グローバル属性
-
-- [Core attributes](/ja/SVG/Attribute#Core) »
-- [Xlink attributes](/ja/SVG/Attribute#XLink) »
-- {{ SVGAttr("externalResourcesRequired") }}
-
-### 専用属性
-
-- {{ SVGAttr("xlink:href") }}
-
-## DOM インターフェイス
-
-この要素は [`SVGMPathElement`](/ja/DOM/SVGMPathElement) インターフェイスを提供します。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- {{ SVGElement("animateMotion") }}
+- {{SVGElement("animateMotion")}}

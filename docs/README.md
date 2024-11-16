@@ -11,7 +11,8 @@ For guidelines relating to specific locales, we have locale-specific docs in sub
 - [Japanese translation guide / 日本語翻訳ガイド](ja/README.md)
 - [Korean translation guide / 한국 번역 지침](ko/README.md)
 
-> **Note:** If you want to add a guide to document some specific guidelines for your locale and it does not already appear here, you are welcome to add one, or [talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams) about it.
+> [!NOTE]
+> If you want to add a guide to document some specific guidelines for your locale and it does not already appear here, you are welcome to add one, or [talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams) about it.
 
 ## Do not copy all front matter properties from English pages
 

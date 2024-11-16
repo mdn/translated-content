@@ -26,17 +26,7 @@ _Нет._
 
 {{Specifications}}
 
-## Поддержка браузерами
-
-### `color` property
-
-{{Compat}}
-
-### `color-adjust` property
-
-{{Compat}}
-
-### `opacity` property
+## Совместимость с браузерами
 
 {{Compat}}
 

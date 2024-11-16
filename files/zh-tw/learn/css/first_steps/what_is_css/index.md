@@ -49,7 +49,8 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 所謂的**呈現**文件，指的是將文件轉換為你的讀者可用的形式。像是 {{Glossary("Mozilla Firefox","Firefox")}} 、 {{Glossary("Google Chrome","Chrome")}} 或 {{Glossary("Microsoft Edge","Edge")}} 這類的{{Glossary("browser","瀏灠器")}}，是設計來將文件視覺化，再呈現電腦螢幕、投影機上或是由列表機列印出來。
 
-> **備註：** 瀏覽器有時候被稱為 {{Glossary("User agent","user agent")}}（用戶終端），它基本上泛指電腦裡安裝的應用軟體。雖然並不是唯一，當我們在討論 CSS 的時候，用戶終端主要指的是瀏覽器。至於其它的用戶終端，有些能夠將 HTML 和 CSS 轉換為 PDF 再列印出來。
+> [!NOTE]
+> 瀏覽器有時候被稱為 {{Glossary("User agent","user agent")}}（用戶終端），它基本上泛指電腦裡安裝的應用軟體。雖然並不是唯一，當我們在討論 CSS 的時候，用戶終端主要指的是瀏覽器。至於其它的用戶終端，有些能夠將 HTML 和 CSS 轉換為 PDF 再列印出來。
 
 CSS 可以用在很基本文字樣式上頭，像是改變標題和連結的[顏色](/zh-TW/docs/Web/CSS/color_value)及[尺寸](/zh-TW/docs/Web/CSS/font-size)。它可以用在建立布局，像是[將原本單欄的文字內容加入布局](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts)，劃分出主要的內容以及包含相關資訊的側邊欄。它甚至可以用在建立[動畫](/zh-TW/docs/Web/CSS/CSS_animations)效果。點進上面的連結，看看相關的例子。
 
@@ -87,7 +88,8 @@ p {
 
 你將會發些有些值很容易學會，而另一些則需要查資料確認。MDN 上有各個屬性的獨立頁面讓你能查到屬性及其可使用的值，在你忘記了或是想知道其它可能用法的時候提供一個快速的路徑。
 
-> **備註：** 你可以在 MDN 的 [CSS 參考資源](/zh-TW/docs/Web/CSS/Reference)找到所有的 CSS 屬性（以及其它 CSS 特性）頁面的連結。 另外，當你需要得到某個 CSS 特性的更多資訊，應該去習慣使用「mdn _特性名稱_」的方式在你喜歡搜尋引擊上搜尋。舉例來說，嘗試以「mdn color」和「mdn font-size」作關鍵字搜尋！
+> [!NOTE]
+> 你可以在 MDN 的 [CSS 參考資源](/zh-TW/docs/Web/CSS/Reference)找到所有的 CSS 屬性（以及其它 CSS 特性）頁面的連結。 另外，當你需要得到某個 CSS 特性的更多資訊，應該去習慣使用「mdn _特性名稱_」的方式在你喜歡搜尋引擊上搜尋。舉例來說，嘗試以「mdn color」和「mdn font-size」作關鍵字搜尋！
 
 ## CSS 的各個主題（單元）
 

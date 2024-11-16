@@ -13,7 +13,8 @@ La [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) de [CSS](/es/doc
 
 El área de relleno de un elemento es el espacio entre su contenido y su borde.
 
-> **Nota:** El relleno crea espacio adicional dentro de un elemento. Por el contrario, {{cssxref("margin")}} crea espacio extra _alrededor_ de un elemento.
+> [!NOTE]
+> El relleno crea espacio adicional dentro de un elemento. Por el contrario, {{cssxref("margin")}} crea espacio extra _alrededor_ de un elemento.
 
 ## Propiedades constituyentes
 

@@ -9,7 +9,8 @@ l10n:
 
 **History API** 通过 {{DOMxRef("Window.history","history")}} 全局对象提供了对浏览器会话的历史记录（不要与 [WebExtensions 的 history](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history) 混淆）的访问功能。它暴露了很多有用的方法和属性，使你可以在用户的历史记录中来回导航，而且可以操作历史记录栈中的内容。
 
-> **备注：** 该 API 仅在主线程（{{domxref("Window")}}）中可用。无法在 {{domxref("Worker")}} 或 {{domxref("Worklet")}} 上下文中访问它。
+> [!NOTE]
+> 该 API 仅在主线程（{{domxref("Window")}}）中可用。无法在 {{domxref("Worker")}} 或 {{domxref("Worklet")}} 上下文中访问它。
 
 ## 概念和用法
 

@@ -3,7 +3,7 @@ title: border-image
 slug: Web/CSS/border-image
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 ## Resumen
 

@@ -25,6 +25,8 @@ tab-size: revert;
 tab-size: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+
 ### 値
 
 - {{CSSxRef("&lt;integer&gt;")}}

@@ -9,7 +9,8 @@ slug: WebAssembly/JavaScript_interface/Table
 
 이것은 자바 스크립트 래퍼 객체로, 함수 참조를 저장하는 WebAssembly 테이블을 나타내는 배열과 같은 구조입니다. JavaScript 또는 WebAssembly 코드로 작성된 테이블은 JavaScript 및 WebAssembly에서 액세스 및 변경할 수 있습니다.
 
-> **참고:** 테이블은 현재 function references만 저장할 수 있지만 나중에 확장 될 수 있습니다.
+> [!NOTE]
+> 테이블은 현재 function references만 저장할 수 있지만 나중에 확장 될 수 있습니다.
 
 ## Syntax
 

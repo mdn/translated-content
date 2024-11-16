@@ -26,8 +26,10 @@ slug: Web/CSS/::cue
 
 ## 语法
 
-```
-::cue | ::cue( <selector> )
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
 ```
 
 ## 示例

@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.pause()
+title: "HTMLMediaElement: pause() メソッド"
+short-title: pause()
 slug: Web/API/HTMLMediaElement/pause
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}

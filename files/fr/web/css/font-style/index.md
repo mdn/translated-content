@@ -51,7 +51,8 @@ Les polices variables permettent d'obtenir un contrôle fin sur la pente appliqu
 
 Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir [`font-variation-settings`](/fr/docs/Web/CSS/font-variation-settings).
 
-> **Note :** Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle. Le code de démarrage utilise `font-style: oblique 23deg;` — modifiez la valeur `<angle>` pour changer la pente du texte.
+> [!NOTE]
+> Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle. Le code de démarrage utilise `font-style: oblique 23deg;` — modifiez la valeur `<angle>` pour changer la pente du texte.
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 

@@ -33,7 +33,8 @@ _从它的父类{{domxref("ExtendableEvent")}}继承方法。_
 
 该代码片段也展示了服务工作线程使用的缓存版本控制的最佳实践。虽然此示例只有一个缓存，但你可以将此方法用于多个缓存。代码将缓存的速记标识映射到特定的版本化缓存名称。
 
-> **备注：** service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。
+> [!NOTE]
+> service worker 的注册日志记录在 Chrome 浏览器中可以通过访问 chrome://serviceworker-internals 查看。
 
 ```js
 var CACHE_VERSION = 1;

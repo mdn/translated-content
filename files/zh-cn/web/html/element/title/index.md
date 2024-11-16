@@ -75,16 +75,14 @@ slug: Web/HTML/Element/title
 
 ### 示例
 
-```plain
-<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```html
+<title>菜单 - 蓝屋中餐 - FoodYum：今日可送达的在线外卖！</title>
 ```
 
 为了帮助用户，更新页面标题值以反映重大的页面状态更改（例如表单验证问题）。
 
-### 示例
-
-```plain
-<title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```html
+<title>2 个异常 - 你的订单 - 海鲜店铺 - Food：今日可送达的在线外卖！</title>
 ```
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)

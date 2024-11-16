@@ -18,6 +18,8 @@ p:read-only {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

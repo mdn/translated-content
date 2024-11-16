@@ -3,6 +3,8 @@ title: Utilisation du rôle checkbox
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [checkbox](http://www.w3.org/TR/wai-aria/roles#checkbox).
@@ -28,7 +30,8 @@ Les technologies d'assistance doivent faire la chose suivante&nbsp;:
 
 - Les lecteurs d'écran devraient annoncer l'élément comme une case à cocher, et, éventuellement, fournir des instructions sur les façons de l'activer.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

@@ -56,7 +56,8 @@ function fetchVideo() {
 }
 ```
 
-> **備註：** 當 `abort()` 被呼叫的時候，`fetch()` 回傳的 Promise 會被以 `AbortError` 拒絕。
+> [!NOTE]
+> 當 `abort()` 被呼叫的時候，`fetch()` 回傳的 Promise 會被以 `AbortError` 拒絕。
 
 在 GitHub 有個完整的範例可供參考 — 請參見 [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api)（[或是也可以實際體驗看看](https://mdn.github.io/dom-examples/abort-api/)）。
 

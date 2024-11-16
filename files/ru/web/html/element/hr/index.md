@@ -57,14 +57,14 @@ This element's attributes include the [global attributes](/ru/docs/Web/HTML/Glob
 
 {{EmbedLiveSample("Example")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement('p')}}

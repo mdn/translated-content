@@ -1,11 +1,15 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
 {{CSSRef}}
 
-**`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で変形関数を指定する実際の順序を覚えておく手間を軽減します。
+**`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で座標変換関数を指定する実際の順序を覚えておく手間を軽減します。
+
+{{EmbedInteractiveExample("pages/css/rotate.html")}}
 
 ## 構文
 
@@ -30,8 +34,11 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
+rotate: revert-layer;
 rotate: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/rotate.html")}}
 
 ### 値
 
@@ -54,55 +61,48 @@ rotate: unset;
 
 ## 例
 
-<h3 id="Rotate_an_element_on_hover">ホバー時に要素を回転</h3>
+### ホバー時に要素を回転
+
+次の例は、 `rotate` プロパティを使用して、ホバー時に要素を様々な軸にで回転させる方法を示しています。
+1 つ目のボックスはホバー時に Z 軸で 90 度回転し、 2 つ目はホバー時に Y 軸で 180 度回転し、 3 つ目はホバー時に座標を定義したベクトルを中心に 360 度回転します。
 
 #### HTML
 
 ```html
-<div>
-  <p class="rotate">Rotation</p>
-</div>
+<div class="box" id="box1">rotate Z</div>
+<div class="box" id="box2">rotate Y</div>
+<div class="box" id="box3">vector & angle</div>
 ```
 
 #### CSS
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-```
-
 ```css
-.rotate {
-  transition: rotate 1s;
+.box {
+  display: inline-block;
+  margin: 1em;
+  min-width: 6.5em;
+  line-height: 6.5em;
+  text-align: center;
+  transition: 1s ease-in-out;
+  border: 0.25em dotted;
 }
 
-div:hover .rotate {
-  rotate: 1 -0.5 1 180deg;
+#box1:hover {
+  rotate: 90deg;
+}
+
+#box2:hover {
+  rotate: y 180deg;
+}
+
+#box3:hover {
+  rotate: 1 2 1 360deg;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Rotate_an_element_on_hover")}}
+{{EmbedLiveSample("Rotating_an_element_on_hover", "100%", 150)}}
 
 ## 仕様書
 

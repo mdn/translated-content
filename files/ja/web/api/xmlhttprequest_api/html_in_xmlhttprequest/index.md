@@ -1,14 +1,15 @@
 ---
 title: XMLHttpRequest における HTML の扱い
 slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
-W3C の {{domxref("XMLHttpRequest")}} 仕様書では、もともと {{Glossary("XML")}} の解析しか対応していなかった {{domxref("XMLHttpRequest")}} に [HTML](/ja/docs/Web/HTML) の解析を追加しています。この機能によって、ウェブアプリは `XMLHttpRequest` を使って HTML を解析済の {{Glossary("DOM")}} として取得することができます。
+W3C の {{domxref("XMLHttpRequest")}} 仕様書では、もともと {{Glossary("XML")}} の解釈しか対応していなかった {{domxref("XMLHttpRequest")}} に [HTML](/ja/docs/Web/HTML) の解釈を追加しています。この機能によって、ウェブアプリは `XMLHttpRequest` を使って HTML を解釈済の {{Glossary("DOM")}} として取得することができます。
 
-一般的な `XMLHttpRequest` の使い方についての概要は、 [XMLHttpRequest の利用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)をお読みください。
+一般的な `XMLHttpRequest` の使い方についての概要は、 [XMLHttpRequest の利用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)をお読みください。
 
 ## 制限
 
@@ -19,9 +20,9 @@ W3C の {{domxref("XMLHttpRequest")}} 仕様書では、もともと {{Glossary(
 {{domxref("XMLHttpRequest")}} を使って HTML リソースを DOM として取得することは、 `XMLHttpRequest` を使って XML リソースを DOM として取得するのと似ていますが、同期モードを使用することはできず、 `XMLHttpRequest` オブジェクトの {{domxref("XMLHttpRequest.open", "open()")}} を呼び出した後、 {{domxref("XMLHttpRequest.send", "send()")}} を呼び出す前に、 {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティに文字列 `"document"` 代入して、明示的に文書を要求する必要があるという点が異なります。
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.onload = function () {
-  console.log(this.responseXML.title);
+const xhr = new XMLHttpRequest();
+xhr.onload = () => {
+  console.log(xhr.responseXML.title);
 };
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
@@ -36,8 +37,10 @@ xhr.send();
 
 ```js
 function HTMLinXHR() {
-  if (!window.XMLHttpRequest) return false;
-  var req = new window.XMLHttpRequest();
+  if (!window.XMLHttpRequest) {
+    return false;
+  }
+  const req = new window.XMLHttpRequest();
   req.open("GET", window.location.href, false);
   try {
     req.responseType = "document";
@@ -54,11 +57,11 @@ function HTMLinXHR() {
 
 ### 方法 2
 
-ブラウザーが {{domxref("XMLHttpRequest")}} で HTML の解析処理に対応しているかどうかを確実に検出するには、二つの課題があります。まず、 HTML 対応が非同期モードでしか有効でないことから、検出結果は非同期で受け取られることになります。第二に、 `data:` URL を使用すると同時に `data:` URL の対応にも依存することになるため、実際に HTTP を通じて文書を取得しなければならないことです。
+ブラウザーが {{domxref("XMLHttpRequest")}} で HTML の解釈処理に対応しているかどうかを確実に検出するには、二つの課題があります。まず、 HTML 対応が非同期モードでしか有効でないことから、検出結果は非同期で受け取られることになります。第二に、 `data:` URL を使用すると同時に `data:` URL の対応にも依存することになるため、実際に HTTP を通じて文書を取得しなければならないことです。
 
 つまり、 HTML 対応を検出するには、サーバ上にテスト用の HTML 文書が必要になります。このテストファイルは小さく、整形式の XML ではないものです。
 
-```js
+```html
 <title>&amp;&<</title>
 ```
 
@@ -67,26 +70,27 @@ function HTMLinXHR() {
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function () {
+    setTimeout(function () {
       callback(false);
     }, 0);
+
     return;
   }
-  var done = false;
-  var xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (this.readyState == 4 && !done) {
+  let done = false;
+  const xhr = new window.XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4 && !done) {
       done = true;
       callback(
         !!(
-          this.responseXML &&
-          this.responseXML.title &&
-          this.responseXML.title == "&&<"
+          xhr.responseXML &&
+          xhr.responseXML.title &&
+          xhr.responseXML.title === "&&<"
         ),
       );
     }
   };
-  xhr.onabort = xhr.onerror = function () {
+  xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
@@ -97,7 +101,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function () {
+    setTimeout(function () {
       if (!done) {
         done = true;
         callback(false);
@@ -115,58 +119,15 @@ function detectHtmlInXhr(callback) {
 
 HTTP の {{HTTPHeader("Content-Type")}} ヘッダーで文字エンコーディングが宣言されている場合は、そのエンコーディングが使用されます。そうでない場合、もしバイトオーダーマークがある場合は、そのバイトオーダーマークが示すエンコーディングを使用します。そうでない場合、もしファイルの先頭 1024 バイト以内にエンコーディングを宣言する {{HTMLElement("meta")}} 要素がある場合は、そのエンコーディングが使用されます。それもない場合、ファイルは UTF-8 としてデコードされます。
 
-## 古いブラウザーでの HTML の扱い
-
-`XMLHttpRequest` はもともと、 XML の解析のみ対応していました。 HTML の解析は最近追加されたものです。古いブラウザーでも、 {{domxref("XMLHttpRequest.responseText")}} プロパティと[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)の組み合わせで、例えば、指定された ID の HTML 要素のソースコードを取得することができます。
-
-```js
-function getHTML(oXHR, sTargetId) {
-  var rOpen = new RegExp(
-      "<(?!!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"']" + sTargetId + "[\"'][^>]*>",
-      "i",
-    ),
-    sSrc = oXHR.responseText,
-    aExec = rOpen.exec(sSrc);
-
-  return aExec
-    ? new RegExp(
-        "(?:(?:.(?!<\\s*" +
-          aExec[1] +
-          "[^>]*[>]))*.?<\\s*" +
-          aExec[1] +
-          "[^>]*[>](?:.(?!<\\s*/\\s*" +
-          aExec[1] +
-          "\\s*>))*.?<\\s*/\\s*" +
-          aExec[1] +
-          "\\s*>)*(?:.(?!<\\s*/\\s*" +
-          aExec[1] +
-          "\\s*>))*.?",
-        "i",
-      ).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || ""
-    : "";
-}
-
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "yourPage.html", true);
-oReq.onload = function () {
-  console.log(getHTML(this, "intro"));
-};
-oReq.send(null);
-```
-
-> **メモ:** この方法はインタープリターにとってとても重いものです。**本当に必要なときのみ使用してください**。
-
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
-
-### `XMLHttpRequest` インターフェイス
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
 - {{domxref("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

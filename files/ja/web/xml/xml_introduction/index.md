@@ -1,48 +1,50 @@
 ---
-title: XML のイントロダクション
+title: XML 入門
 slug: Web/XML/XML_introduction
+l10n:
+  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
 ---
 
-概要: この記事は、'eXtensible Markup Language' (XML、拡張可能マークアップ言語) を紹介し、その使い道について XML は HTML に似たマークアップ言語です。 これは Extensible Markup Language の略で、汎用マークアップ言語として [W3C が推奨する](https://www.w3.org/TR/xml/)仕様です。つまり、他のマークアップ言語とは異なり、XML は事前定義されていないため、独自のタグを定義する必要があります。この言語の主な目的は、インターネットなどのさまざまなシステム間でデータを共有することです。
+{{QuickLinksWithSubpages("/ja/docs/Web/XML")}}
 
-XML に基づいた言語はたくさんあります。[XHTML](/ja/docs/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[XUL](/ja/docs/Mozilla/Tech/XUL)、[XBL](/ja/docs/XBL)、[RSS](/ja/docs/Archive/RSS)、[RDF](/ja/docs/RDF) などがあります。 あなた自身のものを作ることもできます。
+XML (Extensible Markup Language) は {{Glossary("HTML")}} に似たマークアップ言語ですが、使用するタグがあらかじめ定義されていません。代わりに、ニーズに応じて自分自身でタグを定義します。これは、格納、検索、共有が可能な形式でデータを格納するための強力な方法です。最も重要なことは、XML の基本形式が標準化されているため、ローカルまたはインターネットを介して、システムやプラットフォーム間で XML を共有または送信する場合でも、標準化された XML 構文により、受信者はデータを解釈できるということです。
+
+XML に基づいた言語はたくさんあります。[XHTML](/ja/docs/Glossary/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[RSS](/ja/docs/Glossary/RSS)、[RDF](/ja/docs/Glossary/RDF) などがあります。独自のものを定義することもできます。
 
 ## XML 文書構造
 
-> **警告:** このサブ記事は執筆中です...
-
-XML および XML ベースの言語の全体の構造は {{Glossary("tag")}} に基づいています。
+XML および XML ベースの言語の全体の構造は{{Glossary("tag", "タグ")}}に基づいて構築されています。
 
 ### XML 宣言
 
-XML 宣言はタグではありません。文書の送信メタデータに使用しました。
+XML 宣言はタグではありません。文書のメタデータを伝えるために使用します。
 
-```
+```html
 <?xml version="1.0" encoding="UTF-8"?>
 ```
 
 #### 属性
 
-- version :
+- `version`
   - : この文書で使用されている XML のバージョン
-- encoding :
+- `encoding`
   - : この文書で使用されているエンコーディング。
 
 ### コメント
 
-```
-<!-- Comment -->
+```html
+<!-- コメント -->
 ```
 
-## "正しい" XML (妥当であり、整形式であること)
+## 「正しい」XML (妥当であり、整形式であること)
 
 ### 正しいデザインルール
 
 XML 文書を正しくするには、次の条件を満たす必要があります。
 
 - 文書は整形式でなければなりません。
-- 文書はすべての XML 構文規則に準拠している必要があります。
-- 文書は、通常 XML スキーマまたは DTD ([文書型定義](/ja/docs/Glossary/DTD)) で設定されているセマンティックルールに準拠する必要があります。
+- 文書はすべての XML 構文ルールに準拠している必要があります。
+- 文書は、通常 XML スキーマまたは DTD ([文書型定義](/ja/docs/Glossary/Doctype)) で設定されている意味付けルールに準拠する必要があります。
 
 ### 例
 
@@ -68,23 +70,23 @@ XML 文書を正しくするには、次の条件を満たす必要がありま�
 
 未定義のタグを含む文書は無効です。たとえば、`<warning>` タグを定義しなかった場合、上記の文書は無効になります。
 
-> **メモ:** ほとんどのブラウザは、形式が不適切な XML 文書を識別できるデバッガを提供しています。
+ほとんどのブラウザーは、形式が不適切な XML 文書を識別できるデバッガーを提供しています。
 
-## エンティティ
+## 文字参照
 
-HTML と同様に、XML には特別な予約文字 (タグに使用される大なり記号など) を参照するための (エンティティと呼ばれる) メソッドがあります。知っておくべきこれらの文字は 5 つあります。
+HTMLと同様に、XML はいくつかの特別な予約文字（タグに使用する大なり記号など）を参照するための{{glossary("character reference", "文字参照")}}を提供しています。知っておくべき文字は 5 つあります。
 
 | エンティティ | 文字 | 説明                                    |
 | ------------ | ---- | --------------------------------------- |
-| \&lt;        | <    | 小なり記号                              |
-| \&gt;        | >    | 大なり記号                              |
-| \&amp;       | &    | アンパサンド                            |
-| \&quot;      | "    | 二重引用符                              |
-| \&apos;      | '    | 1 つのアポストロフィ (または単一引用符) |
+| &amp;lt;     | <    | 小なり記号                              |
+| &amp;gt;     | >    | 大なり記号                              |
+| &amp;amp;    | &    | アンパサンド                            |
+| &amp;quot;   | "    | 1 つの二重引用符                        |
+| &amp;apos;   | '    | 1 つのアポストロフィ (または単一引用符) |
 
-宣言されたエンティティは 5 つしかありませんが、ドキュメントの [Document Type Definition](/ja/docs/Glossary/DTD) を使用して追加することができます。たとえば、新しい `&warning;` エンティティを作成する場合。このようにして行うことができます：
+宣言されたエンティティは 5 つしかありませんが、文書の[文書型宣言](/ja/docs/Glossary/Doctype) を使用して追加することができます。たとえば、新しい `&warning;` エンティティを作成するには、次のようにします。
 
-```html
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE body [
   <!ENTITY warning "Warning: Something bad happened... please refresh and try again.">
@@ -94,35 +96,32 @@ HTML と同様に、XML には特別な予約文字 (タグに使用される大
 </body>
 ```
 
-数字参照を使用して特殊文字を指定することもできます。 たとえば、\&#xA9; は "©" 記号です。
+数字の文字参照を使用して特殊文字を指定することもできます。 たとえば、\&#xA9; は "©" 記号です。
 
 ## XML の表示
 
-XML は説明のためにたいてい用いられますが、XML データを表示するための方法があります。その方法を定義しなければ、生の XML コードがブラウザに表示されます。
+XML はふつう、記述のために用いられますが、XML データを表示するための方法があります。その方法を定義しなければ、生の XML コードがブラウザーに表示されます。
 
 XML ページに見た目を持たせる方法の一つは、`xml-stylesheet` 宣言で [CSS](/ja/docs/Web/CSS) を用いることです。
 
-```
+```xml
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
 XML を表示するもう 1 つのより強力な方法もあります。XSL を HTML などの他の言語に変換するために使用できる Extensible Stylesheet Language Transformation ([XSLT](/ja/docs/Web/XSLT)) です。 これにより、XML は非常に用途が広くなります。
 
-```
+```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 ```
 
-## 推奨
+## 推奨事項
 
-この記事は、XML の概要についてごく簡単に紹介したもので、始めるためのいくつかの小さな例と参照が含まれています。XML の詳細については、Web でもっと詳細な記事を調べてください。
+この記事は、XMLとは何かについて、取り掛かるためのいくつかの例とリファレンスを、とても簡単に紹介したに過ぎないことは明らかです。XMLの詳細については、ウェブでより詳細な記事を見ていってください。
 
 ハイパーテキストマークアップ言語 ([HTML](/ja/docs/Web/HTML)) を学ぶと、XML をよりよく理解するのに役立ちます。
 
-## あわせて参照
+## 関連情報
 
-- [XML.com](http://www.xml.com/)
+- [XML.com](https://www.xml.com/)
 - [Extensible Markup Language (XML) @ W3.org](https://www.w3.org/XML/)
-- [XML Example: A List Apart](http://www.alistapart.com/d/usingxml/xml_uses_a.html)
-- [Using XML: A List Apart](http://www.alistapart.com/articles/usingxml/)
-
-上記の [Using XML](http://www.alistapart.com/articles/usingxml/) の記事は、あなた自身の言語を変換したり作成したりするための情報に関する素晴らしいリソースです。
+- [Using XML: A List Apart](https://alistapart.com/article/usingxml/)

@@ -3,7 +3,7 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 El método **`split()`** divide un objeto de tipo `String` en un array (vector) de cadenas mediante la separación de la cadena en subcadenas.
 
@@ -31,7 +31,8 @@ Cuando se encuentra, el `separador` es eliminado de la cadena y las subcadenas o
 
 Si el `separador` es una expresión regular que contiene paréntesis de captura, entonces cada vez que el `separador` concuerda, los resultados (incluído cualquier resultado indefinido) de los paréntesis de captura son divididos en el array resultante. Sin embargo no todos los navegadores soportan esta característica.
 
-> **Nota:** Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
+> [!NOTE]
+> Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
 
 ## Ejemplos
 

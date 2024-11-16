@@ -3,7 +3,7 @@ title: URLSearchParams
 slug: Web/API/URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 **`URLSearchParams`** интерфейс определяет служебные методы для работы со строкой запроса URL.
 
@@ -77,7 +77,7 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

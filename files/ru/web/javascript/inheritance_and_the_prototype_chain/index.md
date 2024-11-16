@@ -62,13 +62,13 @@ console.log(o.d); // undefined
 // свойство не найдено, возвращаем undefined
 ```
 
-При добавлении к объекту нового свойства, создаётся новое собственное свойство (own property). Единственным исключением из этого правила являются наследуемые свойства, имеющие [getter или setter](/ru/docs/JavaScript/Guide/Working_with_Objects?redirectlocale=en-US&redirectslug=Core_JavaScript_1.5_Guide%2FWorking_with_Objects#Defining_getters_and_setters).
+При добавлении к объекту нового свойства, создаётся новое собственное свойство. Единственным исключением из этого правила являются наследуемые свойства, имеющие [getter или setter](/ru/docs/Web/JavaScript/Guide/Working_with_objects#определение_геттеров_и_сеттеров).
 
 ### Наследование "методов"
 
 JavaScript не имеет "методов" в смысле, принятом в классической модели ООП. В JavaScript любая функция может быть добавлена к объекту в виде его свойства. Унаследованная функция ведёт себя точно так же, как любое другое свойство объекта, в том числе и в плане "затенения свойств" (property shadowing), как показано в примере выше (в данном конкретном случае это форма _переопределения метода - method overriding_).
 
-В области видимости унаследованной функции ссылка [`this`](/en/JavaScript/Reference/Operators/this) указывает на наследующий объект (на наследника), а не на прототип, в котором данная функция является собственным свойством.
+При выполнении унаследованной функции значение `this`(/ru/docs/Web/JavaScript/Reference/Operators/this) указывает на объект-потомок, а не на прототип, в котором функция является собственным свойством.
 
 ```js
 var o = {
@@ -82,7 +82,7 @@ console.log(o.m()); // 3
 // в этом случае при вызове 'o.m' this указывает на 'o'
 
 var p = Object.create(o);
-// 'p' - наследник 'o'
+// 'p' - потомок 'o'
 
 p.a = 12; // создаст собственное свойство 'a' объекта 'p'
 console.log(p.m()); // 13
@@ -123,7 +123,7 @@ function f() {
 
 ### Создание объектов с помощью конструктора
 
-В JavaScript "конструктор" — это "просто" функция, вызываемая с оператором [new](/en/JavaScript/Reference/Operators/new).
+В JavaScript "конструктор" — это "просто" функция, вызываемая с оператором [new](/ru/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 function Graph() {
@@ -144,7 +144,7 @@ var g = new Graph();
 
 ### Object.create
 
-В ECMAScript 5 представлен новый метод создания объектов: [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create). Прототип создаваемого объекта указывается в первом аргументе этого метода:
+В ECMAScript 5 представлен новый метод создания объектов: [Object.create](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Прототип создаваемого объекта указывается в первом аргументе этого метода:
 
 ```js
 var a = { a: 1 };
@@ -199,11 +199,12 @@ var square = new Square(2);
 
 Кроме того, при циклическом переборе свойств объекта будет обработано каждое свойство, присутствующее в цепочке прототипов.
 
-Если вам необходимо проверить, определено ли свойство у _самого объекта_, а не где-то в его цепочке прототипов, вы можете использовать метод [`hasOwnProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), который все объекты наследуют от `Object.prototype`.
+Если вам необходимо проверить, определено ли свойство у _самого объекта_, а не где-то в его цепочке прототипов, вы можете использовать метод [`hasOwnProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty), который все объекты наследуют от `Object.prototype`.
 
-[`hasOwnProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) — единственная существующая в JavaScript возможность работать со свойствами, не затрагивая цепочку прототипов.
+[`hasOwnProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) — единственная существующая в JavaScript возможность работать со свойствами, не затрагивая цепочку прототипов.
 
-> **Примечание:** Примечание: Для проверки существования свойства недостаточно проверять, эквивалентно ли оно [`undefined`](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined). Свойство может вполне себе существовать, но при этом ему может быть присвоено значение `undefined`.
+> [!NOTE]
+> Для проверки существования свойства недостаточно проверять, эквивалентно ли оно [`undefined`](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined). Свойство может вполне себе существовать, но при этом ему может быть присвоено значение `undefined`.
 
 ### Плохая практика: расширение базовых прототипов
 

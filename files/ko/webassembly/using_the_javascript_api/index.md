@@ -7,13 +7,15 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 [Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
 
-> **참고:** 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)를 먼저 읽어보세요.
+> [!NOTE]
+> 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)를 먼저 읽어보세요.
 
 ## 몇가지 간단한 예제
 
 WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm 모듈을 로드하는 방법을 설명하는 몇 가지 예제를 실행 해 보겠습니다.
 
-> **참고:** 샘플 코드는 [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo에서 찾을 수 있습니다.
+> [!NOTE]
+> 샘플 코드는 [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo에서 찾을 수 있습니다.
 
 ### 예제 준비하기
 
@@ -54,7 +56,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 그 결과, 내 보낸 WebAssembly 함수 인 `export_func`를 호출합니다.이 함수는 가져온 JavaScript 함수 `imported_func`를 호출합니다.이 함수는 WebAssembly 인스턴스 (42) 내부에 제공된 값을 콘솔에 기록합니다. 지금 예제 코드를 저장하고 WebAssembly를 지원하는 브라우저에 로드하면 이를 실제로 볼 수 있습니다!
 
-> **참고:** 이것은 매우 난해하고, 길고 지루한 예이지만 웹 응용프로그램에서 JavaScript와 함께 WebAssembly 코드를 사용하여 가능한 것을 설명하는 데 도움이 됩니다. 우리가 다른 곳에서 언급했듯이, WebAssembly는 JavaScript를 대체하려는 것이 아니라, 그 두 개가 상호 작용하여 서로의 강점을 이끌어 낼수 있습니다.
+> [!NOTE]
+> 이것은 매우 난해하고, 길고 지루한 예이지만 웹 응용프로그램에서 JavaScript와 함께 WebAssembly 코드를 사용하여 가능한 것을 설명하는 데 도움이 됩니다. 우리가 다른 곳에서 언급했듯이, WebAssembly는 JavaScript를 대체하려는 것이 아니라, 그 두 개가 상호 작용하여 서로의 강점을 이끌어 낼수 있습니다.
 
 ### 스트리밍하지 않고 웹어셈블리 모듈 로드
 
@@ -209,7 +212,8 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 이 코드는 테이블에 저장된 각 함수 참조를 차례로 액세스하고 인스턴스화하여 가지고 있는 값을 콘솔에 출력합니다. [`Table.prototype.get()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 호출로 각 함수 참조를 검색 한 다음 추가 세트를 추가합니다 실제로 함수를 호출하려면 끝에 괄호를 사용하십시오.
 
-> **참고:** 우리의 완전한 데모는 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)에서 찾을 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html))
+> [!NOTE]
+> 우리의 완전한 데모는 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)에서 찾을 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html))
 
 ## Globals
 

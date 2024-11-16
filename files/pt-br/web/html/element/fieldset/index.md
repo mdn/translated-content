@@ -54,7 +54,8 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
   </tbody>
 </table>
 
-> **Note:** diferente de quase todo outro elemento, a especificação do WHATWG HTML Rendering sugere `{{cssxref("min-width")}}: min-content` como parte do padrão de estilo para {{HTMLElement("fieldset")}}, e muitos navegadores implementam tal estilização (ou algo que se aproxima disto).
+> [!NOTE]
+> diferente de quase todo outro elemento, a especificação do WHATWG HTML Rendering sugere `{{cssxref("min-width")}}: min-content` como parte do padrão de estilo para {{HTMLElement("fieldset")}}, e muitos navegadores implementam tal estilização (ou algo que se aproxima disto).
 
 ## Atributos
 
@@ -68,7 +69,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : O nome associado com o grupo.
 
-    > **Note:** O label para o fieldset é dado pelo primeiro elemento {{HTMLElement("legend")}} que é um filho do fieldset.
+    > [!NOTE]
+    > O label para o fieldset é dado pelo primeiro elemento {{HTMLElement("legend")}} que é um filho do fieldset.
 
 ## Exemplos
 

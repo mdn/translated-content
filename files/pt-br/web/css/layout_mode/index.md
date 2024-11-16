@@ -12,4 +12,5 @@ O modelo de layout [CSS](/pt-BR/docs/Web/CSS), às vezes abreviado por _layout_,
 - [_Flexible box layout_](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout), designed for laying out complex pages that can be resized smoothly.
 - [_Grid layout_](/pt-BR/docs/Web/CSS/CSS_Grid_Layout), designed for laying out elements relative to a fixed grid.
 
-> **Nota:** Not all [CSS properties](/pt-BR/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
+> [!NOTE]
+> Not all [CSS properties](/pt-BR/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.

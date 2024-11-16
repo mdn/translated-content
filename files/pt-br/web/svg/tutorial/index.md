@@ -7,7 +7,8 @@ Scalable Vector Graphics (Gráficos vetoriais escaláveis), [SVG](/pt-BR/Web/SVG
 
 Este tutorial tem como objetivo explicar as partes internas de SVG acompanhada de detalhes técnicos. Se você quiser usá-la apenas para desenhar belas imagens, você pode encontrar informações mais uteis na [Página de documentação do Inkscape](http://inkscape.org/doc/). Outra boa introdução ao SVG é fornecida pelo W3C' [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
 
-> **Nota:** O tutorial está em um estágio inicial de desenvolvimento.Se puder, por favor ajude escrevendo um parágrafo ou dois. Pontos extras para quem escrever uma página inteira!
+> [!NOTE]
+> O tutorial está em um estágio inicial de desenvolvimento.Se puder, por favor ajude escrevendo um parágrafo ou dois. Pontos extras para quem escrever uma página inteira!
 
 ##### Apresentando SVG com Scratch
 

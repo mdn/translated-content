@@ -65,9 +65,11 @@ Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width`
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
-> **Nota:** Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
+> [!NOTE]
+> Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
 
-> **Nota:** Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
+> [!NOTE]
+> Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
 
 ## Definición formal
 

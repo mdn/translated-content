@@ -3,7 +3,7 @@ title: substring
 slug: Web/XPath/Functions/substring
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `substring` 関数は与えられた文字列の一部を返します。
 

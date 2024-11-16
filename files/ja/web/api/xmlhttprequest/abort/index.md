@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.abort()
+title: "XMLHttpRequest: abort() メソッド"
+short-title: abort()
 slug: Web/API/XMLHttpRequest/abort
 l10n:
-  sourceCommit: 8e294a76bdebc9583d418ee14b42422eb4a8f4a5
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.abort()`** メソッドは、すでに送信されたリクエストを中止します。リクエストが中止されたら、 {{domxref("XMLHttpRequest.readyState", "readyState")}} が `XMLHttpRequest.UNSENT` (0) に変化し、リクエストの {{domxref("XMLHttpRequest.status", "status")}} コードが 0 に設定されます。
 
@@ -50,4 +51,4 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

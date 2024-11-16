@@ -74,7 +74,8 @@ However, this approach has some limitations. To build more complex apps, you'll 
 1. Node.js 8.11+ installed.
 2. npm or yarn.
 
-> **Nota:** If you don't have the above installed, find out [more about installing npm and Node.js](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
+> [!NOTE]
+> If you don't have the above installed, find out [more about installing npm and Node.js](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
 
 To install the CLI, run the following command in your terminal:
 
@@ -141,7 +142,8 @@ The CLI will now begin scaffolding out your project, and installing all of your 
 
 If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
 
-> **Nota:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
+> [!NOTE]
+> We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
 ## Project structure
 
@@ -155,7 +157,8 @@ If everything went successfully, the CLI should have created a series of files a
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
   - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
 
-    > **Nota:** this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
+    > [!NOTE]
+    > this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
 
 - `src`: This directory contains the core of your Vue app.
 
@@ -164,7 +167,8 @@ If everything went successfully, the CLI should have created a series of files a
   - `components`: this directory is where you keep your components. Currently it just has one example component.
   - `assets`: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
 
-> **Nota:** Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
+> [!NOTE]
+> Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
 
 ## .vue files (single file components)
 
@@ -182,7 +186,8 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 
 `<template>` contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.
 
-> **Nota:** By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
+> [!NOTE]
+> By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
 
 `<script>` contains all of the non-display logic of your component. Most importantly, your `<script>` tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a `render()` function.
 
@@ -200,11 +205,13 @@ export default {
 };
 ```
 
-> **Nota:** If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
+> [!NOTE]
+> If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
 
 `<style>` is where you write your CSS for the component. If you add a `scoped` attribute — `<style scoped>` — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.
 
-> **Nota:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
+> [!NOTE]
+> If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
 
 ## Running the app locally
 

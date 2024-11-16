@@ -14,6 +14,8 @@ input:invalid {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
+
 この擬似クラスは、フィールドのエラーをユーザーに強調表示するのに便利です。
 
 ## 構文

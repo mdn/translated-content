@@ -1,19 +1,19 @@
 ---
-title: 組積レイアウト
+title: メイソンリーレイアウト
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
+l10n:
+  sourceCommit: 57e2ca7a291bd2e90cb208b1bf8b2cd3ae2a8a81
 ---
 
-{{CSSRef}}
+{{CSSRef}} {{SeeCompatTable}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)仕様書の Level 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、組積 (masonry) レイアウトとは何か、どのように使用するかについて詳しく説明します。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)仕様書の Level 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、メイソンリー（組積）レイアウトとは何か、どのように使用するかについて詳しく説明します。
 
-> **警告:** この機能は Firefox でのみ実装されており、テストやフィードバックを可能にするために、 `about:config` でフラグ `layout.css.grid-template-masonry-value.enabled` を `true` に設定することで有効になります。
+メイソンリーレイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸がメイソンリーレイアウトを使用するレイアウト方法です。メイソンリーレイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
 
-組積レイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸が組積レイアウトを使用するレイアウト方法です。組積レイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
+## メイソンリーレイアウトの作成
 
-## 組積レイアウトの作成
-
-最も一般的な組積レイアウトを作成するには、列がグリッドの軸、行が組積の軸になります。このレイアウトは `grid-template-columns` と `grid-template-rows` で定義します。
+最も一般的なメイソンリーレイアウトを作成するには、列がグリッドの軸、行が組積の軸になります。このレイアウトは `grid-template-columns` と `grid-template-rows` で定義します。
 
 ```css
 .container {
@@ -28,7 +28,7 @@ slug: Web/CSS/CSS_grid_layout/Masonry_layout
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/block-axis.html", '100%', 800)}}
 
-また、アイテムを列にして読み込む組積レイアウトも可能です。
+また、アイテムを列にして読み込むメイソンリーレイアウトも可能です。
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/inline-axis.html", '100%', 1000)}}
 
@@ -36,13 +36,13 @@ slug: Web/CSS/CSS_grid_layout/Masonry_layout
 
 グリッド軸では、グリッドレイアウトで期待した通りに動作します。キーワード `span` を使えば、自動配置を維持したまま、アイテムを複数のトラックにまたがって配置することができます。また、線ベースの位置指定を使ってアイテムを配置することもできます。
 
-### アイテムをまたがらせる組積レイアウト
+### アイテムをまたがらせるメイソンリーレイアウト
 
 この例では、 2 つのアイテムが 2 本のトラックにまたがり、組積アイテムがそれを取り囲むように配置されています。
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/spanners.html", '100%', 800)}}
 
-この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、組積レイアウトが行われる前に配置されます。
+この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
 
@@ -72,7 +72,11 @@ slug: Web/CSS/CSS_grid_layout/Masonry_layout
 
 ## 代替
 
-組積に対応していないブラウザーでは、代わりに通常のグリッドの自動配置が使用されます。
+[組積に対応していない](#ブラウザーの互換性)ブラウザーでは、代わりに通常のグリッドの自動配置が使用されます。
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

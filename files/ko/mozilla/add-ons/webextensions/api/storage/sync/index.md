@@ -3,7 +3,7 @@ title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 `sync` 저장 공간을 의미합니다. `sync` 저장 공간에 있는 데이터는 브라우저 사이에서 동기화되며 서로 다른 기기 간에 사용자가 브라우저에 로그인 한 경우 언제든지 접근 가능합니다.
 
@@ -32,7 +32,7 @@ Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖�
 
 {{WebExtExamples}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

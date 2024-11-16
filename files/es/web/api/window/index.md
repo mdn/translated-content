@@ -191,13 +191,13 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.confirm()")}}
   - : Muestra una ventana de comfirmación con dos únicas y posibles respuestas. **Confirmar** y **Cancelar**.
 - {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Usado para activar un evento.
 - {{domxref("Window.dump()")}}
   - : Escribe un mensaje a la consola.
 - {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Busca un string dado en una ventana.
 - {{domxref("Window.focus()")}}
@@ -207,7 +207,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -219,7 +219,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimiza la ventana.
 - {{domxref("Window.moveBy()")}}
@@ -247,9 +247,9 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.resizeTo()")}}
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}} {{deprecated_inline(24)}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -267,7 +267,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("WindowTimers.setInterval()")}}
   - : Schedules the execution of a function each X milliseconds.
 - {{domxref("Window.setResizable")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Sets a delay for executing a function.
 - {{domxref("Window.showModalDialog()")}}
@@ -285,7 +285,8 @@ Estas son propiedades del objeto ventana que pueden ser fijadas para establecer 
 
 _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
-> **Nota:** Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
+> [!NOTE]
+> Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.
@@ -304,7 +305,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
 - {{domxref("Window.ondevicemotion")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
@@ -360,32 +361,9 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 - {{domxref("Window.onuserproximity")}}
   - : An event handler property for user proximity events
 
-## Constructores
-
-See also the [DOM Interfaces](/es/docs/DOM/DOM_Reference).
-
-- {{domxref("Window.DOMParser")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Image")}}
-  - : Used for creating an {{domxref("HTMLImageElement")}}.
-- {{domxref("Option")}}
-  - : Used for creating an {{domxref("HTMLOptionElement")}}
-- {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/es/docs/DOM/Using_web_workers)
-- {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
-
 ## Interfaces
 
-Ver [DOM Reference](/es/docs/DOM/DOM_Reference)
+Ver [DOM Reference](/es/docs/Web/API/Document_Object_Model)
 
 ## Ver Tambien
 

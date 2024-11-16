@@ -3,6 +3,8 @@ title: HTML 5 ビデオ用の DASH アダプティブストリーミング
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
+{{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
+
 Dynamic Adaptive Streaming over HTTP (DASH) は、アダプティブストリーミングプロトコルです。これは動画の再生を維持するためにネットワークパフォーマンスに応じてビデオストリームのビットレートを切り替えることを可能にします。
 
 ## ブラウザーの対応
@@ -15,7 +17,7 @@ Firefox 23 では HTML5 WebM のための DASH は削除されました。これ
 
 まず、 WebM ビデオをさまざまなビットレートのビデオファイルとともに DASH マニフェストに変換する必要があります。 まず、 ffmpeg.org の ffpmeg プログラム、 libvpx と libvorbis の WebM ビデオとオーディオ、少なくともバージョン 2.5 (おそらく、これは 3.2.5 でテスト済みです) を必要とします。
 
-### 1. すでに存在する WebM ファイルを使って一つの音声と複数の動画ファイルを作成する。
+### 1. すでに存在する WebM ファイルを使って一つの音声と複数の動画ファイルを作成する
 
 たとえば:
 

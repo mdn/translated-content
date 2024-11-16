@@ -3,7 +3,7 @@ title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
@@ -51,7 +51,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

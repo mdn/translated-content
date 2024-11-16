@@ -1,6 +1,8 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
+l10n:
+  sourceCommit: eeabc0774ceb0b7447febce6f9743b903815b95b
 ---
 
 {{CSSRef}}
@@ -22,10 +24,6 @@ text-align: justify;
 text-align: justify-all;
 text-align: match-parent;
 
-/* 在表格列内基于字符的对齐 */
-text-align: ".";
-text-align: "." center;
-
 /* 块对齐值（非标准语法） */
 text-align: -moz-center;
 text-align: -webkit-center;
@@ -38,11 +36,7 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-`text-align` 属性可以按照以下方式之一来指定：
-
-- 使用关键字值 `start`、`end`、`left`、`right`、`center`、`justify`、`justify-all` 或 `match-parent`。
-- 仅使用单个 `<string>` 值，此时另外一个值默认为 `right`。
-- 同时使用关键字值和 [`<string>`](#string) 值。
+`text-align` 属性指定为下面列表中的单个关键字。
 
 ### 值
 
@@ -57,15 +51,13 @@ text-align: unset;
 - `center`
   - : 行内内容居中。
 - `justify`
-  - : 文字向两侧对齐，对最后一行无效。
-- `justify-all` {{experimental_inline}}
+  - : 文字向两侧对齐，将内容隔开，使其左右边缘与行框的左右边缘对齐，对最后一行无效。
+- `justify-all`
   - : 和 `justify` 一致，但是强制使最后一行两端对齐。
 - `match-parent`
   - : 和 `inherit` 类似，区别在于 `start` 和 `end` 的值根据父元素的 {{cssxref("direction")}} 确定，并被替换为恰当的 `left` 或 `right` 值。
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : 应用在单元格时，指定单元格内容相对于哪个字符对齐。
 
-## 无障碍考虑
+## 无障碍
 
 对于有阅读障碍等认知问题的人来说，对齐的文本产生的单词之间的间距不一致可能会出现问题。
 
@@ -156,6 +148,82 @@ text-align: unset;
 #### 结果
 
 {{EmbedLiveSample('使用“justify”的示例',"100%","100%")}}
+
+### 表格对齐
+
+此示例演示在 {{htmlelement("table")}} 元素上使用 `text-align`：
+
+- {{htmlelement("caption")}} 设置为右对齐。
+- 前两个 {{htmlelement("th")}} 元素继承 {{htmlelement("thead")}} 元素上设置的 `text-align: left` 左对齐，而第三个元素设置为右对齐。
+- 在 {{htmlelement("tbody")}} 元素内部，第一行设置为右对齐，第二行设置为居中对齐，第三行使用默认（左）对齐。
+- 在每一行中，一些单元格（c12、c31）设置为覆盖行的对齐。
+
+#### HTML
+
+```html
+<table>
+  <caption>
+    示例表格
+  </caption>
+  <thead>
+    <tr>
+      <th>列 1</th>
+      <th>列 2</th>
+      <th class="right">列 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+
+thead {
+  text-align: left;
+}
+
+td,
+th {
+  border: solid 1px black;
+}
+
+.center {
+  text-align: center;
+}
+
+.right,
+caption {
+  text-align: right;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('表格对齐', "100%", "200")}}
 
 ## 规范
 

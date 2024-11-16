@@ -72,9 +72,11 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **Note :** Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
+    > [!NOTE]
+    > Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
 
-    > **Note :** Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
+    > [!NOTE]
+    > Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
 
 ## Définition formelle
 

@@ -32,7 +32,7 @@ slug: Web/API/KeyframeEffect/KeyframeEffect
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

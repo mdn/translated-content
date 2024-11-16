@@ -102,6 +102,6 @@ _无变化。_
 
 - Firefox 59 的站点兼容性
 
-## 历史版本
+## 更早期的版本
 
-{{Firefox_for_developers(58)}}
+{{Firefox_for_developers}}

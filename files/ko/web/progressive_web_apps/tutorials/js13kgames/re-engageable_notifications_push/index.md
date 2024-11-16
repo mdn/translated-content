@@ -3,7 +3,7 @@ title: 알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 ---
 
-{{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 
 앱을 오프라인에서 동작하도록 컨텐츠를 캐싱하는 능력은 훌륭한 기능입니다. 사용자가 홈 화면에 웹 앱을 설치하도록 허용하는 것은 더 좋습니다. 하지만, 사용자의 동작에 의존하는 대신 푸시 메시지와 알림을 사용해 새로운 컨텐츠가 있을때 이를 전달하여 사용자를 자동으로 다시 참여하도록 할 수 있습니다.
 
@@ -77,7 +77,7 @@ registration.pushManager.getSubscription().then(/* ... */);
 
 서버사이드에서는 보안적인 이유로 전체 프로세스를 공개키와 비공개키를 사용하여 암호화해야 합니다. 모든 사람들이 앱을 사용하여 안전하지 않은 푸시 메시지를 보내도록 허용하는 것은 끔찍할 것입니다. 서버는 사용자가 구독했을 때 받은 모든 정보를 저장하므로 이 후 필요할 때 메시지를 보낼 수 있습니다.
 
-푸시 메시지를 수신하려면, Service Worker 파일에서 {{event("push")}}이벤트를 사용하면됩니다.
+푸시 메시지를 수신하려면, Service Worker 파일에서 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 이벤트를 사용하면됩니다.
 
 ```js
 self.addEventListener("push", function (e) {
@@ -262,7 +262,7 @@ self.addEventListener("push", function (event) {
 });
 ```
 
-이 모든 것은 {{event("push")}} 이벤트에 리스너를 추가하고, 데이터로부터 받은 텍스트로 구성된 payload 변수를 생성한 후(또는 데이터가 비어있을 경우 사용할 문자열을 생성), 사용자에게 보여줄 알림을 보여줄 때까지 기다립니다.
+이 모든 것은 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 이벤트에 리스너를 추가하고, 데이터로부터 받은 텍스트로 구성된 payload 변수를 생성한 후(또는 데이터가 비어있을 경우 사용할 문자열을 생성), 사용자에게 보여줄 알림을 보여줄 때까지 기다립니다.
 
 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 예제의 나머지 부분의 동작 방법도 자유롭게 살펴보시기 바랍니다. [전체 소스 코드는 GitHub에서 사용 가능합니다](https://github.com/mozilla/serviceworker-cookbook/). 일반적인 사용과 웹 푸시, 캐싱 전략, 성능, 오프라인 동작 등을 보여주는 동작 예제가 많이 있습니다.
 

@@ -11,11 +11,9 @@ slug: Web/API/Element/clientLeft
 
 当 [_layout.scrollbar.side_ preference](http://kb.mozillazine.org/Layout.scrollbar.side) （译注：这个属性好像是只在火狐浏览器中才有）被设为 1 或 3，且文本方向被设为从右到左（RTL），则垂直滚动条位于左边，这会影响到 `clientLeft` 属性值的计算。
 
-## 语法
+## 值
 
-```
-var left = element.clientLeft;
-```
+一个数字。
 
 ## 示例
 

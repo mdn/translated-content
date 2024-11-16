@@ -11,7 +11,8 @@ Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccou
 
 Cette propriété est une propriété raccourcie qui permet de définir {{cssxref("column-rule-width")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-color")}} (plutôt que d'avoir à les définir une par une, ce qui est plus laborieux).
 
-> **Note :** Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.
+> [!NOTE]
+> Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.
 
 ## Syntaxe
 

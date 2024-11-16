@@ -7,7 +7,8 @@ slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and
 
 本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建、访问、控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里提供的演示在任何现代浏览器中都能正常工作。
 
-> **备注：** 这里介绍的 DOM 方法是文档对象模型 1 级规范核心的一部分。DOM 1 级既包括通用的文档访问和操作的方法（DOM 1 核心），也包括专门针对 HTML 文档的方法（DOM 1 HTML）。
+> [!NOTE]
+> 这里介绍的 DOM 方法是文档对象模型 1 级规范核心的一部分。DOM 1 级既包括通用的文档访问和操作的方法（DOM 1 核心），也包括专门针对 HTML 文档的方法（DOM 1 HTML）。
 
 ## 动态创建 HTML 表格
 
@@ -266,7 +267,8 @@ sample1.html 中创建表格的基本步骤是：
 - 创建所有元素。
 - 最后，根据表格结构（上面图中所示）将每一个孩子节点拼接起来。下面的一段源码是经过修改的 sample1.html
 
-> **备注：** 在 `start` 函数的最后，有一行新的代码。该表的 `border` 属性是用另一个 DOM 方法 `setAttribute()` 设置的。`setAttribute()` 有两个参数：属性名和属性值。你可以使用 `setAttribute` 方法设置任何元素的任何属性。
+> [!NOTE]
+> 在 `start` 函数的最后，有一行新的代码。该表的 `border` 属性是用另一个 DOM 方法 `setAttribute()` 设置的。`setAttribute()` 有两个参数：属性名和属性值。你可以使用 `setAttribute` 方法设置任何元素的任何属性。
 
 ```html
 <html lang="zh-CN">
@@ -327,7 +329,8 @@ sample1.html 中创建表格的基本步骤是：
 
 然后，为了显示本例中的结果，它创建了一个新的文本节点，其内容是 `myCellText` 的数据，并将其作为 `<body>` 元素的一个子节点进行附加。
 
-> **备注：** 如果你的对象是一个文字节点，你可以使用 data 属性来获取节点的文字内容。
+> [!NOTE]
+> 如果你的对象是一个文字节点，你可以使用 data 属性来获取节点的文字内容。
 
 ```js
 myBody = document.getElementsByTagName("body")[0];

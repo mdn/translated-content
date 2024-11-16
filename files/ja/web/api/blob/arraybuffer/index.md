@@ -1,13 +1,14 @@
 ---
-title: Blob.arrayBuffer()
+title: "Blob: arrayBuffer() メソッド"
+short-title: arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`arrayBuffer()`** は {{domxref("Blob")}} インターフェイスのメソッドで、 {{jsxref("ArrayBuffer")}} 内のバイナリーデータとした Blob の内容を解決する {{jsxref("Promise")}} を返します。
+**`arrayBuffer()`** は {{domxref("Blob")}} インターフェイスのメソッドで、 Blob の内容を {{jsxref("ArrayBuffer")}} 内のバイナリーデータとした解決するプロミス ({{jsxref("Promise")}}) を返します。
 
 ## 構文
 
@@ -25,7 +26,7 @@ Blob のデータをバイナリー形式で含む {{jsxref("ArrayBuffer")}} で
 
 ### 例外
 
-このメソッドでは例外が発生しませんが、プロミスを拒否することがあります。例えば、Blob のデータを取得するために使用されたリーダーで例外が発生した場合などです。データの取得中に発生した例外はすべて拒否に変換されます。
+このメソッドでは例外が発生しませんが、プロミスが拒否されることがあります。例えば、Blob のデータを取得するために使用されたリーダーで例外が発生した場合などです。データの取得中に発生した例外はすべて拒否に変換されます。
 
 ## 使用上のメモ
 

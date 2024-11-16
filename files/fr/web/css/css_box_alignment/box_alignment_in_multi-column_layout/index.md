@@ -9,7 +9,8 @@ Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
 
 Pour une disposition en colonne, le conteneur d'alignement est le conteneur de colonnes. Le sujet d'alignement correspond à la boîte de colonne. Les propriétés qui s'appliquent pour ce type de disposition sont détaillées ci-après.
 
-> **Note :** Le module de spécification de la disposition en colonnes (_Multi-Column Layout_) précède celui pour l'alignement des boîtes. Aussi, certaines des propriétés décrites ici, bien que spécifiées afin de fonctionner pour ce mode de disposition, peuvent ne pas encore être prises en charge par les navigateurs.
+> [!NOTE]
+> Le module de spécification de la disposition en colonnes (_Multi-Column Layout_) précède celui pour l'alignement des boîtes. Aussi, certaines des propriétés décrites ici, bien que spécifiées afin de fonctionner pour ce mode de disposition, peuvent ne pas encore être prises en charge par les navigateurs.
 
 ## `align-content` et `justify-content`
 

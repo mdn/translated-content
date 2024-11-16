@@ -23,4 +23,5 @@ Tenemos [documentación sobre WebRTC](/es/docs/WebRTC). Este artículo, sin emba
 
 Una biblioteca que puede usar es la biblioteca [p2p](https://github.com/js-platform/p2p). Esta biblioteca proporciona una API simple para crear conexiones entre puntos y configurar transmisiones y canales de datos. También hay un componente de servidor intermediario y un agente hospedado que puedes usar en lugar de tener que configurar uno.
 
-> **Nota:** Continuaremos agregando contenido aquí pronto; hay algunos problemas de organización por resolver.
+> [!NOTE]
+> Continuaremos agregando contenido aquí pronto; hay algunos problemas de organización por resolver.

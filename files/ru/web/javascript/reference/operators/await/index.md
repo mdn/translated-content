@@ -80,11 +80,11 @@ var response = await promisedFunction().catch((err) => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("Operators/async_function", "async function expression")}}

@@ -27,7 +27,8 @@ Para empezar, regresemos a nuestro juego de adivinan el número — excepto que 
 1. Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.
 2. Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!
 
-> **Nota:** ¡Posiblemente tengas tu propia versión del ejemplo del juego que no funciona, y quizás la quieras arreglar! Aún así nos gustaría que en el artículo trabajes con nuestra versión, para que puedas aprender las técnicas que estamos enseñando. Después puedes tratar de arreglar tu ejemplo.
+> [!NOTE]
+> ¡Posiblemente tengas tu propia versión del ejemplo del juego que no funciona, y quizás la quieras arreglar! Aún así nos gustaría que en el artículo trabajes con nuestra versión, para que puedas aprender las técnicas que estamos enseñando. Después puedes tratar de arreglar tu ejemplo.
 
 En este punto, consultemos la consola del desarrollador para ver si podemos ver algún informe de error de sintaxis y luego tratar de solucionarlo. Abajo aprenderás cómo.
 
@@ -53,7 +54,8 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 4. El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
 5. Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
 
-> **Nota:** Échale un vistazo a nuestra página de referencia [TypeError: "x" no es una función](/es/docs/Web/JavaScript/Reference/Errors/Not_a_function) para obtener más detalles sobre este error.
+> [!NOTE]
+> Échale un vistazo a nuestra página de referencia [TypeError: "x" no es una función](/es/docs/Web/JavaScript/Reference/Errors/Not_a_function) para obtener más detalles sobre este error.
 
 ### Errores sintácticos, segunda ronda
 
@@ -63,7 +65,8 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
    > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
-   > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
+   > [!NOTE]
+   > Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
 
 4. Échale un vistazo a la línea 78 y verás el siguiente código:
 
@@ -95,7 +98,8 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 9. Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
 10. Ahora guarda y refresca nuevamente, y tu declaración `console.log()` debería devolver el elemento `<p>` que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea `console.log()`, o mantenerla como referencia más adelante — tu elección.
 
-> **Nota:** Consulta nuestra página de referencia [TypeError: "x" (no) es "y"](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para obtener más detalles sobre este error.
+> [!NOTE]
+> Consulta nuestra página de referencia [TypeError: "x" (no) es "y"](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para obtener más detalles sobre este error.
 
 ### Errores sintácticos, tercera ronda
 
@@ -177,7 +181,8 @@ var userGuess === Number(guessField.value);
 
 Lanza este error porque cree que estás intentando hacer algo diferente. Debes asegurarte de no confundir el operador de asignación (`=`), que establece una variable para que sea igual a un valor — con el operador de igualdad estricta (`===`), que prueba si un valor es igual a otro y devuelve un resultado `true`/`false`.
 
-> **Nota:** Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ; antes de la declaración](/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement).
+> [!NOTE]
+> Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ; antes de la declaración](/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement).
 
 ### El programa siempre dice que has ganado, independientemente de lo que hayas ingresado
 
@@ -199,7 +204,8 @@ la prueba siempre devolvería `true`, haciendo que el programa informe que se ga
 
 Este es bastante simple — generalmente significa que olvidaste colocar el paréntesis de cierre al final de una llamada a una función/método.
 
-> **Nota:** Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ) después de la lista de argumentos](/es/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list).
+> [!NOTE]
+> Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ) después de la lista de argumentos](/es/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list).
 
 ### SyntaxError: `falta : después de la propiedad id`
 
@@ -227,7 +233,8 @@ Estos errores generalmente significan que has omitido las comillas de apertura o
 
 Para todos estos errores, piensa en cómo abordamos los ejemplos que vimos en el tutorial. Cuando surge un error, mira el número de línea que te dan, ve a esa línea y revísala para detectar lo que está mal. Ten en cuenta que el error no necesariamente estará en esa línea, y también que el error podría no ser causado por el mismo problema que mencionamos anteriormente.
 
-> **Nota:** Obtén más detalles sobre estos errores en nuestras páginas de referencia [SyntaxError: símbolo inesperado](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token) y [SyntaxError: cadena literal sin terminar](/es/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal).
+> [!NOTE]
+> Obtén más detalles sobre estos errores en nuestras páginas de referencia [SyntaxError: símbolo inesperado](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token) y [SyntaxError: cadena literal sin terminar](/es/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal).
 
 ## Resumen
 

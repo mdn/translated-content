@@ -3,7 +3,7 @@ title: "PerformanceObserver: takeRecords() メソッド"
 short-title: takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{APIRef("Performance API")}}

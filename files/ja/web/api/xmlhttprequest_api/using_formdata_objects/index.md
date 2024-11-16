@@ -1,46 +1,52 @@
 ---
 title: FormData オブジェクトの使用
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
-original_slug: Web/API/FormData/Using_FormData_Objects
+l10n:
+  sourceCommit: 56dbf87640f2c91ec0ca3b95a8291fe7e362b9a8
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
-[`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが `multipart/form-data` に設定されている場合に、{{domxref("HTMLFormElement.submit","submit()")}} メソッドで送信する際に使用するデータと同じ形式です。
+[`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、[フェッチ](/ja/docs/Web/API/Fetch_API)または [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) API を使用して送信するためのキーと値のペアの集合をコンパイルできます。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが `multipart/form-data` に設定されている場合に、{{domxref("HTMLFormElement.submit","submit()")}} メソッドで送信する際に使用するデータと同じ形式です。
 
-## ゼロから FormData オブジェクトを作成する
+## ゼロから `FormData` オブジェクトを作成する
 
-以下のように `FormData` オブジェクトはあなた自身で作成でき、インスタンス化したら {{domxref("FormData.append","append()")}} メソッドを呼び出すことでフィールドに付加します:
+以下のように `FormData` オブジェクトはあなた自身で作成でき、インスタンス化したら {{domxref("FormData.append","append()")}} メソッドを呼び出すことでフィールドに付加します。
 
 ```js
-const formData = new FormData();
+const send = document.querySelector("#send");
 
-formData.append("username", "Groucho");
-formData.append("accountnum", 123456); // 数値 123456 は直ちに文字列 "123456" へ変換されます
+send.addEventListener("click", async () => {
+  const formData = new FormData();
+  formData.append("username", "Groucho");
+  formData.append("accountnum", 123456);
 
-// HTML の file input でユーザーが選択したファイル
-formData.append("userfile", fileInputElement.files[0]);
+  // file 型の <input> 要素
+  const avatar = document.querySelector("#avatar");
+  formData.append("avatar", avatar.files[0]);
 
-// ファイルのような JavaScript オブジェクト
-const content = '<q id="a"><span id="b">hey!</span></q>'; // 新しいファイルの本体…
-const blob = new Blob([content], { type: "text/xml" });
+  // JavaScript のファイル風オブジェクト
+  const content = '<q id="a"><span id="b">hey!</span></q>';
+  const blob = new Blob([content], { type: "text/xml" });
+  formData.append("webmasterfile", blob);
 
-formData.append("webmasterfile", blob);
-
-const request = new XMLHttpRequest();
-request.open("POST", "http://foo.com/submitform.php");
-request.send(formData);
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
-> **メモ:** フィールド "userfile" および "webmasterfile" はどちらも、ファイルを含んでいます。フィールド "accountnum" に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます (フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、または文字列をとることができます。**値が Blob でもファイルでもない場合は、文字列に変換されます**)。
+> **メモ:** `"avatar"` および `"webmasterfile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountnum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
 
-この例では、 "username", "accountnum", "userfile", "webmasterfile" というフィールドの値を含む `FormData` インスタンスを構築し、 `XMLHttpRequest` のメソッド [`send()`](/ja/docs/Web/API/XMLHttpRequest/send) を使用してフォームのデータを送信します。 "webmasterfile" というフィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェースは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 {{domxref("Blob.Blob","Blob() constructor")}} コンストラクターを呼び出します。
+この例では、 `"username"`, `"accountnum"`, `"avatar"`, `"webmasterfile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("Window/fetch", "fetch()")}} を使用してフォームのデータを送信します。 `"webmasterfile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェイスは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
 
-## HTML フォームから FormData オブジェクトを取り出す
+## HTML フォームから `FormData` オブジェクトを取り出す
 
 既存の {{ HTMLElement("form") }} のデータを含む `FormData` オブジェクトを構築するには、 `FormData` オブジェクトの作成時にその form 要素を指定します。
 
-> **メモ:** FormData は name 属性を使用する入力フィールドのみを使用します。
+> **メモ:** `FormData` は `name` 属性を使用する入力フィールドのみを使用します。
 
 ```js
 const formData = new FormData(someFormElement);
@@ -49,21 +55,37 @@ const formData = new FormData(someFormElement);
 例:
 
 ```js
-const formElement = document.querySelector("form");
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-request.send(new FormData(formElement));
+const send = document.querySelector("#send");
+
+send.addEventListener("click", async () => {
+  // <form> 要素
+  const userInfo = document.querySelector("#user-info");
+  const formData = new FormData(userInfo);
+
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
 以下のように、`FormData` オブジェクトをフォームより取得してから送信するまでの間に、追加のデータを付加することもできます。
 
 ```js
-const formElement = document.querySelector("form");
-const formData = new FormData(formElement);
-const request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-formData.append("serialnumber", serialNumber++);
-request.send(formData);
+const send = document.querySelector("#send");
+
+send.addEventListener("click", async () => {
+  const userInfo = document.querySelector("#user-info");
+  const formData = new FormData(userInfo);
+  formData.append("serialnumber", 12345);
+
+  const response = await fetch("http://example.org/post", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(await response.json());
+});
 ```
 
 これにより、必ずしもユーザーが編集可能である必要がない追加情報を含めるために、送信前にフォームデータを拡張することができます。
@@ -73,7 +95,7 @@ request.send(formData);
 `FormData` を使用してファイルを送信することもできます。type が "file" である {{HTMLElement("input")}} 要素を、{{htmlelement("form")}} に含めます。
 
 ```html
-<form enctype="multipart/form-data" method="post" name="fileinfo">
+<form enctype="multipart/form-data" method="post" name="fileinfo" id="fileinfo">
   <p>
     <label
       >Your email address:
@@ -103,40 +125,31 @@ request.send(formData);
     <input type="submit" value="Stash the file!" />
   </p>
 </form>
-<div id="output"></div>
 ```
 
 そして、以下のようなコードを使用して送信できます。
 
 ```js
-const form = document.forms.namedItem("fileinfo");
-form.addEventListener(
-  "submit",
-  (event) => {
-    const output = document.querySelector("#output");
-    const formData = new FormData(form);
+const form = document.querySelector("#fileinfo");
 
-    formData.append("CustomField", "This is some extra data");
+form.addEventListener("submit", async (event) => {
+  const formData = new FormData(form);
 
-    const request = new XMLHttpRequest();
-    request.open("POST", "stash.php", true);
-    request.onload = (progress) => {
-      output.innerHTML =
-        request.status === 200
-          ? "Uploaded!"
-          : `Error ${request.status} occurred when trying to upload your file.<br />`;
-    };
+  formData.append("CustomField", "This is some extra data");
 
-    request.send(formData);
-    event.preventDefault();
-  },
-  false,
-);
+  const response = await fetch("stash.php", {
+    method: "POST",
+    body: formData,
+  });
+  event.preventDefault();
+});
 ```
 
-> **メモ:** フォームへの参照を渡した場合は、 open() の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> [!NOTE]
+> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
 
-> **警告:** FormData を使用して、{{ domxref("XMLHttpRequest") }} または {{ domxref("Fetch_API") }} を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合 (Files や Blob をサーバーにアップロードする場合など)、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
+> [!WARNING]
+> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
 以下のように、直接 {{ domxref("File") }} や {{ domxref("Blob") }} を {{ domxref("FormData") }} オブジェクトへ追加することもできます。
 
@@ -144,7 +157,7 @@ form.addEventListener(
 data.append("myfile", myBlob, "filename.txt");
 ```
 
-{{domxref("FormData.append","append()")}} メソッドを使用する際は、オプションの第 3 引数を使用して、`Content-Disposition` ヘッダーに含めるファイル名を渡すことができます。これはサーバーへ送信されます。ファイル名を指定しない (あるいは引数がサポートされない) 場合は、 "blob" という名前が使用されます。
+{{domxref("FormData.append","append()")}} メソッドを使用する際は、オプションの第 3 引数を使用して、`Content-Disposition` ヘッダーに含めるファイル名を渡すことができます。これはサーバーへ送信されます。ファイル名を指定しない（あるいは引数がサポートされない）場合は、 "blob" という名前が使用されます。
 
 ## formdata イベントの使用
 
@@ -152,7 +165,7 @@ data.append("myfile", myBlob, "filename.txt");
 
 これにより、 {{domxref("FormData")}} オブジェクトを `formdata` イベントの発行を受けてすばやく取得することができるようになり、自分でまとめる必要がなくなります。
 
-一般的には、[シンプルな formdata イベントのデモ](https://long-impatiens.glitch.me/)のように、 JavaScript でフォームを参照して使用します。
+例えば、 JavaScript では次のようにフォームを参照できます。
 
 ```js
 const formElem = document.querySelector("form");
@@ -162,38 +175,33 @@ const formElem = document.querySelector("form");
 
 ```js
 formElem.addEventListener("submit", (e) => {
-  // on form submission, prevent default
+  // フォーム送信時に既定の動作を抑止
   e.preventDefault();
 
-  // construct a FormData object, which fires the formdata event
+  // FormData オブジェクトを作成し、 formdata イベントを発行
   new FormData(formElem);
 });
 ```
 
-`formdata` イベントが発行されると、 {{domxref("FormDataEvent.formData")}} を使って {{domxref("FormData")}} オブジェクトにアクセスし、必要な処理を行うことができます (以下では、 {{domxref("XMLHttpRequest")}} を使ってサーバーに送信しています)。
+`formdata` イベントが発行されると、 {{domxref("FormData")}} オブジェクトに {{domxref("FormDataEvent.formData")}} を使ってアクセスし、必要な処理を行うことができます（以下では、 {{domxref("XMLHttpRequest")}} を使ってサーバーに送信しています）。
 
 ```js
 formElem.addEventListener("formdata", (e) => {
   console.log("formdata fired");
 
-  // Get the form data from the event object
+  // イベントオブジェクトから形式データを取得します。
   const data = e.formData;
   for (const value of data.values()) {
     console.log(value);
   }
 
-  // submit the data via XHR
-  const request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // fetch() でデータを送信
+  fetch("/formHandler", {
+    method: "POST",
+    body: data,
+  });
 });
 ```
-
-> **メモ:** `formdata` イベントと {{domxref("FormDataEvent")}} オブジェクトは、 Chrome ではバージョン 77 (および同等の Chromium) から、 Firefox ではバージョン 72 から利用可能です (Firefox 71 で `dom.formdata.event.enabled` を設定することで初めて利用可能になりました)。
-
-## `FormData` オブジェクトを使用せずに AJAX でフォームやファイルを送信する
-
-FormData オブジェクトを使用せずに、[AJAX](/ja/docs/Web/Guide/AJAX) でシリアライズしたり送信したりする方法を知りたい場合は、 [こちらの節](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#フォームの送信とファイルのアップロード)を参照してください。
 
 ## 分かりましたか
 
@@ -201,7 +209,7 @@ FormData オブジェクトを使用せずに、[AJAX](/ja/docs/Web/Guide/AJAX) 
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [フェッチ API の使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)

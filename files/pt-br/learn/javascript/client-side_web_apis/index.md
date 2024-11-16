@@ -13,7 +13,7 @@ Para tirar o máximo proveito deste módulo, é recomendável a leitura dos mód
 
 Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS) serão utéis.
 
-> **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

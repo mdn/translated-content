@@ -268,7 +268,7 @@ affixScriptToHead("myScript2.js", function () {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

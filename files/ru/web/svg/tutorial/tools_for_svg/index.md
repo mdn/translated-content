@@ -3,13 +3,11 @@ title: Работа с SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 Теперь, когда мы рассмотрели основы SVG, мы рассмотрим некоторые инструменты для работы с SVG файлами.
-
-### Поддержка браузерами
-
-As of Internet Explorer 9, all major browsers support SVG: IE 9, Mozilla Firefox, Safari, Google Chrome and Opera. Mobile devices with Webkit-based browsers also support SVG. On older or smaller devices, chances are that SVG Tiny is supported.
 
 ## Inkscape
 

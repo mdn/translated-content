@@ -7,7 +7,8 @@ slug: Learn/CSS/Building_blocks/Images_tasks
 
 该任务的目的是帮助你检查对我们在本课程[Images, Media and Form elements](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)(图像，媒体及表格元素）中了解的一些值和单位的理解。
 
-> **备注：** 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
+> [!NOTE]
+> 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
 >
 > 如果你遇到困难，联系我们获得帮助 — 参见页面底部的[评价以及更多帮助](#评价以及更多帮助)
 
@@ -21,7 +22,8 @@ slug: Learn/CSS/Building_blocks/Images_tasks
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/images/object-fit.html", '100%', 1000)}}
 
-> **备注：** 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/object-fit-download.html)，以便在你自己的编辑器或在线编辑器中工作。
+> [!NOTE]
+> 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/object-fit-download.html)，以便在你自己的编辑器或在线编辑器中工作。
 
 ## 任务二
 
@@ -38,7 +40,8 @@ slug: Learn/CSS/Building_blocks/Images_tasks
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
 
-> **备注：** 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/form-download.html)，以便在你自己的编辑器或在线编辑器中工作。
+> [!NOTE]
+> 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/form-download.html)，以便在你自己的编辑器或在线编辑器中工作。
 
 ## 评价以及更多帮助
 

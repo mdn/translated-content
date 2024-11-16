@@ -10,7 +10,8 @@ l10n:
 
 **`registrations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。
 
-> **メモ:** このメソッドは {{domxref("PushManager.getSubscription()")}} メソッドに置き換えられました。
+> [!NOTE]
+> このメソッドは {{domxref("PushManager.getSubscription()")}} メソッドに置き換えられました。
 
 ## 構文
 

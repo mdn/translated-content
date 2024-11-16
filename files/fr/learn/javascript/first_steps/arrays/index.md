@@ -178,7 +178,8 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
    // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
    ```
 
-   > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
+   > [!NOTE]
+   > Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
 
 3. Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
 
@@ -220,7 +221,8 @@ Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître
 
 Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref ("String. prototype. prototype. split ()","split ()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
 
-> **Note :** D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
+> [!NOTE]
+> D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
 
 1. Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
 
@@ -412,7 +414,8 @@ Une bonne utilisation des méthodes de tableaux comme {{jsxref("Array.prototype.
 
 Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté&nbsp;; ainsi, le 5 termes précédents sont toujours affichés.
 
-> **Note :** Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats&nbsp;! Mais pour le moment nous en resterons à quelque chose de simple.
+> [!NOTE]
+> Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats&nbsp;! Mais pour le moment nous en resterons à quelque chose de simple.
 
 Pour terminer l'application, il vous faut&nbsp;:
 

@@ -1,37 +1,39 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
+l10n:
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{jsSidebar("Intermediate")}}
 
-Una clausura o _closure_ es una función que guarda referencias del estado adyacente (**ámbito léxico**). En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las clausuras se crean cada vez que una función es creada.
+Un **closure** es la combinación de una función agrupada (dentro de otra) con referencias a su estado adyacente (el **entorno léxico**). En otras palabras, un _closure_ te da acceso al alcance de una función externa desde una función interna. En JavaScript, los _closure_ se crean cada vez que se crea una función, en el momento de la creación de la función.
 
 ## Ámbito léxico
 
-Consideremos el siguiente ejemplo:
+Considere el siguiente ejemplo:
 
 ```js
-function iniciar() {
-  var nombre = "Mozilla"; // La variable nombre es una variable local creada por iniciar.
-  function mostrarNombre() {
-    // La función mostrarNombre es una función interna, una clausura.
-    alert(nombre); // Usa una variable declarada en la función externa.
+function init() {
+  var name = "Mozilla"; // name es una variable local creada por init
+  function displayName() {
+    // displayName() es la función interna que forma el closure
+    console.log(name); // usar la variable declarada en la función padre
   }
-  mostrarNombre();
+  displayName();
 }
-iniciar();
+init();
 ```
 
-La función `iniciar()` crea una variable local llamada `nombre` y una función interna llamada `mostrarNombre()`. Por ser una función interna, esta última solo está disponible dentro del cuerpo de `iniciar()`. Notemos a su vez que `mostrarNombre()` no tiene ninguna variable propia; pero, dado que las funciones internas tienen acceso a las variables de las funciones externas, `mostrarNombre()` puede acceder a la variable `nombre` declarada en la función `iniciar()`.
+`init()` crea una variable local llamada `name` y una función llamada `displayName()`. La función `displayName()` es una función interna que se define dentro de `init()` y está disponible solo dentro del cuerpo de la función `init()`. Tenga en cuenta que la función `displayName()` no tiene variables locales propias. Sin embargo, dado que las funciones internas tienen acceso a las variables de las funciones externas, `displayName()` puede acceder a la variable `name` declarada en la función principal, `init()`.
 
-Ejecuta el código usando [este enlace de JSFiddle](http://jsfiddle.net/xAFs9/3/) y observa que la sentencia `alert()`, dentro de `mostrarNombre()`, muestra con éxito el valor de la variable `nombre`, la cual fue declarada en la función externa. Este es un ejemplo de _ámbito léxico_, el cual describe cómo un analizador sintáctico resuelve los nombres de las variables cuando hay funciones anidadas. La palabra _léxico_ hace referencia al hecho de que el ámbito léxico se basa en el lugar donde una variable fue declarada para determinar dónde esta variable estará disponible. Las funciones anidadas tienen acceso a las variables declaradas en su ámbito exterior.
+Ejecute el código utilizando [este enlace de JSFiddle](https://jsfiddle.net/3dxck52m/) y observe que la instrucción `console.log()` dentro de la función `displayName()` muestra con éxito el valor de la variable `name`, que se declara en su función principal. Este es un ejemplo de _ámbito léxico_, que describe cómo un analizador resuelve los nombres de variables cuando las funciones están anidadas. La palabra _léxico_ se refiere al hecho de que el ámbito léxico utiliza la ubicación donde se declara una variable dentro del código fuente para determinar dónde está disponible esa variable. Las funciones anidadas tienen acceso a variables declaradas en su ámbito externo.
 
-En este ejemplo en particular, el ámbito se llama _ámbito de la función_, porque la variable es accesible solo dentro del cuerpo de la función donde se declara.
+En este ejemplo particular, el ámbito se denomina _ámbito de función_ o _alcance de la función_, porque la variable es accesible y solo es accesible dentro del cuerpo de la función donde se declara.
 
 ### Alcance con let y const
 
-Tradicionalmente (antes de ES6), JavaScript sólo tenía dos tipos de ámbitos: _ámbito de función_ y _ámbito global_. Las variables declaradas con `var` tienen ámbito de función o ámbito global, dependiendo de si se declaran dentro o fuera de una función. Esto puede ser complicado, porque los bloques con llaves no crean ámbitos:
+Tradicionalmente (antes de ES6), JavaScript solo tenía dos tipos de ámbitos: _ámbito de la función_ y _ámbito global_. Las variables declaradas con `var` tienen un alcance de función o un alcance global, dependiendo de si se declaran dentro de una función o fuera de una función. Esto puede ser complicado, porque los bloques con llaves rizadas no crean ámbitos:
 
 ```js
 if (Math.random() > 0.5) {
@@ -39,12 +41,12 @@ if (Math.random() > 0.5) {
 } else {
   var x = 2;
 }
-console.log(x); // 2
+console.log(x);
 ```
 
-Para los desarrolladores de otros lenguajes (por ejemplo, C, Java) donde los bloques crean ámbitos, el código anterior debería arrojar un error en la línea `console.log`, porque estamos fuera del ámbito de `x` en cualquiera de los bloques. Sin embargo, dado que los bloques no crean ámbitos para `var`, las sentencias `var` aquí crean realmente una variable global. También hay [un ejemplo práctico](#creating_closures_in_loops_a_common_mistake) introducido a continuación que ilustra cómo esto puede causar errores reales cuando se combina con _closures_.
+Para personas de otros lenguajes (por ejemplo, C, Java) donde los bloques crean ámbitos, el código anterior debería arrojar un error en la línea `console.log`, porque estamos fuera del alcance de `x` en cualquiera de los bloques. Sin embargo, debido a que los bloques no crean ámbitos para `var`, las instrucciones `var` aquí en realidad crean una variable global. También se presenta a continuación [un ejemplo práctico](#creating_closures_in_loops_a_common_mistake) que ilustra cómo esto puede causar errores reales cuando se combina con _closures_.
 
-En ES6, JavaScript introdujo las declaraciones `let` y `const`, que, entre otras cosas, como [zonas muertas temporales](/es/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), permiten crear variables con alcance de bloque.
+En ES6, JavaScript introdujo las declaraciones `let` y `const`, que, entre otras cosas, como [zonas muertas temporales](/es/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), le permiten crear variables de alcance de bloque.
 
 ```js
 if (Math.random() > 0.5) {
@@ -52,14 +54,14 @@ if (Math.random() > 0.5) {
 } else {
   const x = 2;
 }
-console.log(x); // ReferenceError: x is not defined
+console.log(x); //ReferenceError: x no está definido
 ```
 
-En esencia, los bloques se tratan finalmente como ámbitos en ES6, pero sólo si se declaran variables con `let` o `const`. Además, ES6 introdujo [modules](/es/docs/Web/JavaScript/Guide/Modules), que introdujo otro tipo de ámbito. Los _closures_ son capaces de capturar variables en todos estos ámbitos, que introduciremos más adelante.
+En esencia, los bloques finalmente se tratan como ámbitos en ES6, pero solo si declaras variables con `let` o `const`. Además, ES6 introdujo [módulos](/es/docs/Web/JavaScript/Guide/Modules), que introdujo otro tipo de alcance. Los _closure_ son capaces de capturar variables en todos estos ámbitos, que introduciremos más adelante.
 
 ## Closure
 
-Considera el siguiente ejemplo:
+Considere el siguiente ejemplo:
 
 ```js
 function makeFunc() {
@@ -74,13 +76,13 @@ const myFunc = makeFunc();
 myFunc();
 ```
 
-Si se ejecuta este código tendrá exactamente el mismo efecto que el ejemplo anterior: se mostrará el texto "Mozilla" en un cuadro de alerta de Javascript. Lo que lo hace diferente (e interesante) es que la función externa nos ha devuelto la función interna `muestraNombre()` antes de ejecutarla.
+Ejecutar este código tiene exactamente el mismo efecto que el ejemplo anterior de la función `init()` anterior. Lo que es diferente (e interesante) es que la función interna `displayName()` se devuelve desde la función externa _antes de ejecutarse_.
 
-Puede parecer poco intuitivo que este código funcione. Normalmente, las variables locales dentro de una función sólo existen mientras dura la ejecución de dicha función. Una vez que `creaFunc()` haya terminado de ejecutarse, es razonable suponer que no se pueda ya acceder a la variable `nombre`. Dado que el código funciona como se esperaba, esto obviamente no es el caso.
+A primera vista, puede parecer poco intuitivo que este código siga funcionando. En algunos lenguajes de programación, las variables locales dentro de una función existen solo durante la ejecución de esa función. Una vez que `makeFunc()` termine de ejecutarse, es de esperar que la variable `name` ya no sea accesible. Sin embargo, debido a que el código sigue funcionando como se esperaba, este obviamente no es el caso en JavaScript.
 
-La solución a este rompecabezas es que `miFunc` se ha convertido en un _closure_. Un _closure_ es un tipo especial de objeto que combina dos cosas: una función, y el entorno en que se creó esa función. El entorno está formado por las variables locales que estaban dentro del alcance en el momento que se creó el closure. En este caso, `miFunc` es un closure que incorpora tanto la función `muestraNombre` como el string "Mozilla" que existían cuando se creó el closure.
+La razón es que las funciones en JavaScript forman _closures_. Un _closure_ es la combinación de una función y el entorno léxico dentro del cual se declaró esa función. Este entorno consiste en cualquier variable local que estuviera dentro del alcance en el momento en que se creó el _closure_. En este caso, `myFunc` es una referencia a la instancia de la función `displayName` que se crea cuando se ejecuta `makeFunc`. La instancia de `displayName` mantiene una referencia a su entorno léxico, dentro del cual existe la variable `name`. Por esta razón, cuando se invoca `myFunc`, la variable `name` permanece disponible para su uso, y 'Mozilla' se pasa a `console.log`.
 
-Este es un ejemplo un poco más interesante: una función `makeAdder`:
+Aquí hay un ejemplo un poco más interesante: una función `makeAdder`:
 
 ```js
 function makeAdder(x) {
@@ -92,25 +94,25 @@ function makeAdder(x) {
 const add5 = makeAdder(5);
 const add10 = makeAdder(10);
 
-console.log(add5(2)); // muestra 7
-console.log(add10(2)); // muestra 12
+console.log(add5(2)); // 7
+console.log(add10(2)); // 12
 ```
 
-En este ejemplo, hemos definido una función `makeAdder(x)` que toma un argumento único `x` y devuelve una nueva función. Esa nueva función toma un único argumento `y`, devolviendo la suma de `x` + `y`.
+En este ejemplo, hemos definido una función `makeAdder(x)`, que toma un solo argumento `x` y devuelve una nueva función. La función que devuelve toma un solo argumento `y` y devuelve la suma de la variable `x` y la variable `y`.
 
-En esencia, `makeAdder` es una fábrica de función: crea funciones que pueden sumar un valor específico a su argumento. En el ejemplo anterior utilizamos nuestra fábrica de función para crear dos nuevas funciones: una que agrega 5 a su argumento y otra que agrega 10.
+En esencia, `makeAdder` es una fábrica de funciones. Crea funciones que pueden añadir un valor específico a su argumento. En el ejemplo anterior, la fábrica de funciones crea dos nuevas funciones: una que suma cinco a su argumento y otra que suma 10.
 
-`add5` y `add10` son ambos _closures_. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos. En el entorno `add5`, `x` es 5. En lo que respecta a `add10`, `x` es 10.
+`add5` y `add10` forman _closures_. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos léxicos. En el entorno léxico de `add5`, `x` es 5, mientras que en el entorno léxico de `add10`, `x` es 10.
 
-## Closures prácticos
+## Closure prácticos
 
-Hasta aquí hemos visto teoría, pero ¿son los _closures_ realmente útiles? Vamos a considerar sus implicaciones prácticas. Un closure permite asociar algunos datos (el entorno) con una función que opera sobre esos datos. Esto tiene evidentes paralelismos con la programación orientada a objetos, en la que los objetos nos permiten asociar algunos datos (las propiedades del objeto) con uno o más métodos.
+Los _closure_ son útiles porque te permiten asociar datos (el entorno léxico) con una función que opera sobre esos datos. Esto tiene paralelismos obvios con la programación orientada a objetos, donde los objetos le permiten asociar datos (las propiedades del objeto) con uno o más métodos.
 
-En consecuencia, puede utilizar un closure en cualquier lugar en el que normalmente pondría un objeto con un solo método.
+En consecuencia, puede usar un _closure_ en cualquier lugar donde normalmente pueda usar un objeto con un solo método.
 
-En la web hay situaciones habituales en las que aplicarlos. Gran parte del código JavaScript para web está basado en eventos: definimos un comportamiento y lo conectamos a un evento que es activado por el usuario (como un click o pulsación de una tecla). Nuestro código generalmente se adjunta como una devolución de llamada (callback): que es una función que se ejecuta en respuesta al evento.
+Las situaciones en las que es posible que desee hacer esto son particularmente comunes en la web. Gran parte del código escrito en JavaScript para _front-end_ está basado en eventos. Defina algún comportamiento y luego adjúntelo a un evento activado por el usuario (como un clic o una pulsación de tecla). El código se adjunta como una devolución de llamada (una sola función que se ejecuta en respuesta al evento).
 
-Aquí está un ejemplo práctico: Supongamos que queremos añadir algunos botones a una página para ajustar el tamaño del texto. Una manera de hacer esto es especificar el tamaño de fuente del elemento `body` en píxeles y, a continuación, ajustar el tamaño de los demás elementos de la página (como los encabezados) utilizando la unidad relativa `em`:
+Por ejemplo, supongamos que queremos añadir botones a una página para ajustar el tamaño del texto. Una forma de hacerlo es especificar el tamaño de fuente del elemento `body` (en píxeles) y luego establecer el tamaño de los otros elementos de la página (como los encabezados) utilizando la unidad `em` relativa:
 
 ```css
 body {
@@ -121,12 +123,13 @@ body {
 h1 {
   font-size: 1.5em;
 }
+
 h2 {
   font-size: 1.2em;
 }
 ```
 
-Nuestros botones interactivos de tamaño de texto pueden cambiar la propiedad `font-size` del elemento `body`, y los ajustes serán aplicados por los otros elementos de la página gracias a las unidades relativas.
+Dichos botones interactivos de tamaño de texto pueden cambiar la propiedad `font-size` del elemento `body`, y los ajustes son recogidos por otros elementos de la página gracias a las unidades relativas.
 
 Aquí está el código JavaScript:
 
@@ -142,7 +145,7 @@ const size14 = makeSizer(14);
 const size16 = makeSizer(16);
 ```
 
-`size12`, `size14` y `size16` ahora son funciones que cambian el tamaño del texto de `body` a 12, 14 y 16 pixels, respectivamente. Podemos conectarlos a botones (en este caso enlaces) de la siguiente forma:
+`size12`, `size14` y `size16` son ahora funciones que cambian el tamaño del texto del cuerpo a 12, 14 y 16 píxeles, respectivamente. Puede adjuntarlos a los botones como se muestra en el siguiente ejemplo de código.
 
 ```js
 document.getElementById("size-12").onclick = size12;
@@ -151,20 +154,20 @@ document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
 ```
 
-Ejecute el código utilizando [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
+Ejecuta el código usando [JSFiddle](https://jsfiddle.net/hotae160/).
 
-## Emulando métodos privados con closures
+## Emular métodos privados con _closures_
 
-Lenguajes como Java ofrecen la posibilidad de declarar métodos privados, es decir, que sólo pueden ser llamados por otros métodos en la misma clase.
+Los lenguajes como Java le permiten declarar métodos como privados, lo que significa que solo pueden ser llamados por otros métodos de la misma clase.
 
-JavaScript no proporciona una forma nativa de hacer esto, pero es posible emular métodos privados utilizando _closures_. Los métodos privados no son sólo útiles para restringir el acceso al código: también proporcionan una poderosa manera de administrar tu espacio de nombres global, evitando que los métodos no esenciales embrollen la interfaz pública de tu código.
+JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
 
-Aquí vemos cómo definir algunas funciones públicas que pueden acceder a variables y funciones privadas utilizando _closures_. A esto se le conoce también como el [patrón módulo](http://www.google.com/search?q=javascript+patron+modulo):
+El siguiente código ilustra cómo usar _closures_ para definir funciones públicas que pueden acceder a funciones y variables privadas. Tenga en cuenta que estos _closures_ siguen el [Patrón de diseño de módulo](https://www.google.com/search?q=javascript+module+pattern).
 
 ```js
 const counter = (function () {
@@ -198,11 +201,11 @@ counter.decrement();
 console.log(counter.value()); // 1.
 ```
 
-En los ejemplos anteriores cada closure ha tenido su propio entorno; aquí creamos un único entorno compartido por tres funciones: `counter.increment`, `counter.decrement` y `counter.value`.
+En ejemplos anteriores, cada _closure_ tenía su propio entorno léxico. Aquí, sin embargo, hay un único entorno léxico que es compartido por las tres funciones: `counter.increment`, `counter.decrement` y `counter.value`.
 
-El entorno compartido se crea en el cuerpo de una función anónima, que se ejecuta en el momento que se define. El entorno contiene dos elementos privados: una variable llamada `privateCounter` y una función llamada `changeBy`. No se puede acceder a ninguno de estos elementos privados directamente desde fuera de la función anónima. Se accede a ellos por las tres funciones públicas que se devuelven desde el contenedor anónimo.
+El entorno léxico compartido se crea en el cuerpo de una función anónima, _que se ejecuta tan pronto como se ha definido_ (también conocida como [IIFE](/es/docs/Glossary/IIFE)). El entorno léxico contiene dos elementos privados: una variable llamada `privateCounter` y una función llamada `changeBy`. No puedes acceder a ninguno de estos miembros privados desde fuera de la función anónima. En su lugar, puede acceder a ellos utilizando las tres funciones públicas que se devuelven desde el contenedor anónimo.
 
-Esas tres funciones públicas son _closures_ que comparten el mismo entorno. Gracias al ámbito léxico de Javascript, cada uno de ellas tienen acceso a la variable `privateCounter` y a la función `changeBy.`
+Esas tres funciones públicas forman _closures_ que comparten un mismo entorno léxico. Gracias al alcance léxico de JavaScript, cada uno tiene acceso a la variable `privateCounter` y a la función `changeBy`.
 
 ```js
 const makeCounter = function () {
@@ -224,6 +227,7 @@ const makeCounter = function () {
     },
   };
 };
+
 const counter1 = makeCounter();
 const counter2 = makeCounter();
 
@@ -238,28 +242,28 @@ console.log(counter1.value()); // 1.
 console.log(counter2.value()); // 0.
 ```
 
-Ten en cuenta que cada uno de los dos contadores mantiene su independencia del otro. Su entorno durante la llamada de la función `makeCounter()` es diferente cada vez. La variable del closure llamada `privateCounter` contiene una instancia diferente cada vez.
+Observa cómo los dos contadores mantienen su independencia el uno del otro. Cada _closure_ hace referencia a una versión diferente de la variable `privateCounter` a través de su propio _closure_. Cada vez que se llama a uno de los contadores, su entorno léxico cambia cambiando el valor de esta variable. Los cambios en el valor de la variable en un _closure_ no afectan el valor en el otro _closure_.
 
-> **Nota:** Utilizar _closures_ de este modo proporciona una serie de beneficios que se asocian normalmente con la programación orientada a objectos, en particular la encapsulación y la ocultación de datos.
+> [!NOTE]
+> El uso de _closures_ de esta manera proporciona beneficios que normalmente se asocian con la programación orientada a objetos. En particular, _ocultación de datos_ y _encapsulación_.
 
-## Cadena de alcance del closure
+## Cadena de alcance de closure
 
-Cada closure tiene tres ambitos:
+Cada _closure_ tiene tres alcances:
 
-- Ámbito local (Ámbito propio)
-- Ámbito encapsulado (puede ser un bloque, funcion o módulo)
-- Ámbito global
+- Alcance local (Ámbito propio)
+- Alcance envolvente (puede ser alcance de bloque, función o módulo)
+- Alcance global
 
-Un error común es no darse cuenta de que en el caso de que la función externa sea a su vez una función anidada, el acceso al ámbito de la función externa incluye el ámbito de la función externa, creando así una cadena de ámbitos de funciones. Para demostrarlo, considere el siguiente ejemplo.
+Un error común es no darse cuenta de que en el caso de que la función externa sea en sí misma una función anidada, el acceso al alcance de la función externa incluye el alcance circundante de la función externa, creando efectivamente una cadena de alcances de función. Para demostrarlo, considere el siguiente código de ejemplo.
 
 ```js
 // ámbito global
 const e = 10;
-
 function sum(a) {
   return function (b) {
     return function (c) {
-      // ámbito de funciones externas
+      // ámbito de funciones exteriores
       return function (d) {
         // ámbito local
         return a + b + c + d + e;
@@ -271,16 +275,15 @@ function sum(a) {
 console.log(sum(1)(2)(3)(4)); // 20
 ```
 
-También puedes escribir sin funciones anónimas:
+También puede escribir sin funciones anónimas:
 
 ```js
 // ámbito global
 const e = 10;
-
 function sum(a) {
   return function sum2(b) {
     return function sum3(c) {
-      // ámbito de funciones externas
+      // ámbito de funciones exteriores
       return function sum4(d) {
         // ámbito local
         return a + b + c + d + e;
@@ -296,24 +299,25 @@ const result = sum4(4);
 console.log(result); // 20
 ```
 
-En el ejemplo anterior, hay una serie de funciones anidadas, las cuales tienen acceso al ámbito de las funciones externas. En este contexto, podemos decir que los _closures_ tienen acceso a _todos_ los ámbitos de las funciones externas.
+En el ejemplo anterior, hay una serie de funciones anidadas, todas las cuales tienen acceso al ámbito de las funciones externas. En este contexto, podemos decir que los _closures_ tienen acceso a _todos_ los ámbitos de función externos.
 
-Los _closures_ pueden capturar variables en ámbitos de bloque y de módulo también. Por ejemplo, lo siguiente crea un cierre sobre la variable de ámbito de bloque `y`:
+Los _closure_ también pueden capturar variables en ámbitos de bloque y ámbitos de módulo. Por ejemplo, lo siguiente crea un _closure_ sobre la variable de ámbito de bloque `y`:
 
 ```js
 function outer() {
-  const x = 5;
-
-  if (Math.random() > 0.5) {
+  let getY;
+  {
     const y = 6;
-    return () => console.log(x, y);
+    getY = () => y;
   }
+  console.log(typeof y); // undefined
+  console.log(getY()); // 6
 }
 
-outer()(); // Muestra 5 6
+outer();
 ```
 
-Los _closures_ sobre módulos pueden ser aún más interesantes.
+Los _closure_ sobre los módulos pueden ser más interesantes.
 
 ```js
 // myModule.js
@@ -324,7 +328,7 @@ export const setX = (val) => {
 };
 ```
 
-En este ejemplo, el módulo exporta un par de funciones _getter-setter_, que se cierran sobre la variable `x` del módulo. Incluso cuando `x` no es directamente accesible desde otros módulos, se puede leer y escribir con las funciones.
+Aquí, el módulo exporta un par de funciones _getter-setter_ (para asignar y obtener), que se cierran sobre la variable de alcance del módulo `x`. Incluso cuando `x` no es directamente accesible desde otros módulos, se puede leer y escribir con las funciones.
 
 ```js
 import { getX, setX } from "./myModule.js";
@@ -334,7 +338,7 @@ setX(6);
 console.log(getX()); // 6
 ```
 
-Los _closures_ también pueden cerrarse sobre valores importados, que se consideran _enlaces vivos_, porque cuando el valor original cambia, el importado cambia en consecuencia.
+Los _closure_ también pueden cerrar sobre valores importados, que se consideran como _{{Glossary("binding", "enlazadas")}}_ en vivo, porque cuando el valor original cambia, el importado cambia en consecuencia.
 
 ```js
 // myModule.js
@@ -348,7 +352,7 @@ export const setX = (val) => {
 // closureCreator.js
 import { x } from "./myModule.js";
 
-export const getX = () => x; // Cierre sobre un enlace vivo importado
+export const getX = () => x; // Cerrar sobre un enlace en vivo importado
 ```
 
 ```js
@@ -360,13 +364,13 @@ setX(2);
 console.log(getX()); // 2
 ```
 
-## Creando closures en bucle: Un error común
+## Crear closures en bucles: un error común
 
-Antes de la introducción de la palabra clave [`let`](/es/docs/JavaScript/Reference/Statements/let) en JavaScript 1.7, un problema común con _closures_ ocurría cuando se creaban dentro de un bucle 'loop'. Veamos el siguiente ejemplo:
+Antes de la introducción de la palabra clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let), se producía un problema común con los _closure_ cuando los creabas dentro de un bucle. Para demostrarlo, considere el siguiente código de ejemplo.
 
 ```html
 <p id="help">Aquí aparecerán notas útiles</p>
-<p>Correo: <input type="text" id="email" name="email" /></p>
+<p>Correo electrónico: <input type="text" id="email" name="email" /></p>
 <p>Nombre: <input type="text" id="name" name="name" /></p>
 <p>Edad: <input type="text" id="age" name="age" /></p>
 ```
@@ -378,12 +382,13 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "email", help: "Tu dirección de correo electrónico" },
     { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
+    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
+    // La razón es el uso de `var` en esta línea
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
@@ -394,15 +399,15 @@ function setupHelp() {
 setupHelp();
 ```
 
-[Ver en el JSFiddle](https://jsfiddle.net/v7gjv)
+Intenta ejecutar el código en [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
 
-El array `helpText` define tres avisos de ayuda, cada uno asociado con el ID de un campo de entrada en el documento. El bucle recorre estas definiciones, enlazando un evento onfocus a cada uno que muestra el método de ayuda asociada.
+La matriz `helpText` define tres consejos útiles, cada uno asociado con el ID de un campo de entrada en el documento. El bucle recorre estas definiciones, conectando un evento `onfocus` a cada uno que muestra el método de ayuda asociado.
 
-Si pruebas este código, verás que no funciona como esperabas. Independientemente del campo en el que se haga foco, siempre se mostrará el mensaje de ayuda relativo a la edad.
+Si pruebas este código, verás que no funciona como esperabas. No importa en qué campo se centre, se mostrará el mensaje sobre su edad.
 
-La razón de esto es que las funciones asignadas a onfocus son _closures_; que constan de la definición de la función y del entorno abarcado desde el ámbito de la función `setupHelp`. Se han creado tres _closures_, pero todos comparten el mismo entorno. En el momento en que se ejecutan las funciones callback de onfocus, el bucle ya ha finalizado y la variable `item` (compartida por los tres _closures_) ha quedado apuntando a la última entrada en la lista de `helpText.`
+La razón de esto es que las funciones asignadas a `onfocus` forman _closures_; consisten en la definición de la función y el entorno capturado desde el alcance de la función `setupHelp`. El bucle ha creado tres _closure_, pero cada uno comparte el mismo entorno léxico único, que tiene una variable con valores cambiantes (`item`). Esto se debe a que la variable `item` se declara con `var` y, por lo tanto, tiene un alcance de función debido a la elevación. El valor de `item.help' se determina cuando se ejecutan las devoluciones de llamada `onfocus`. Debido a que el bucle ya ha seguido su curso en ese momento, el objeto variable `item`(compartido por los tres _closure_) se ha dejado apuntando a la última entrada en la lista`helpText`.
 
-En este caso, una solución es utilizar más _closures_: concretamente añadiendo una fábrica de función como se ha descrito anteriormente:
+Una solución en este caso es usar más _closure_: en particular, usar una fábrica de funciones como se describió anteriormente:
 
 ```js
 function showHelp(help) {
@@ -417,9 +422,9 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "email", help: "Tu dirección de correo electrónico" },
     { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
+    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -431,11 +436,11 @@ function setupHelp() {
 setupHelp();
 ```
 
-[Ver en el JSFiddle](https://jsfiddle.net/v7gjv/1)
+Ejecuta el código usando [este enlace de JSFiddle](https://jsfiddle.net/v7gjv/9573/).
 
-Esto funciona como se esperaba. En lugar de los tres callbacks compartiendo el mismo entorno, la función `makeHelpCallback` crea un nuevo entorno para cada uno en el que `help` se refiere a la cadena correspondiente del array `helpText`.
+Esto funciona como se esperaba. En lugar de que todas las devoluciones de llamada compartan un único entorno léxico, la función `makeHelpCallback` crea _un nuevo entorno léxico_ para cada devolución de llamada, en el que `help` se refiere a la cadena correspondiente de la matriz `helpText`.
 
-Otra forma de escribir lo anterior es utilizando _closures_ anónimos:
+Otra forma de escribir lo anterior utilizando cierres anónimos es:
 
 ```js
 function showHelp(help) {
@@ -444,9 +449,9 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "email", help: "Tu dirección de correo electrónico" },
     { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
+    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -455,14 +460,14 @@ function setupHelp() {
       document.getElementById(item.id).onfocus = function () {
         showHelp(item.help);
       };
-    })(); // Inmediatamente el detector de eventos adjunta el valor actual del item (conservado hasta la iteración)
+    })(); //Adjunto del detector de eventos inmediatos con el valor actual del elemento (conservado hasta la iteración).
   }
 }
 
 setupHelp();
 ```
 
-Si no quires usar más _closures_, puedes optar por usar la palabra clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) o [`const`](/es/docs/Web/JavaScript/Reference/Statements/const):
+Si no desea utilizar más _closure_, puede utilizar la palabra clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) o [`const`](/es/docs/Web/JavaScript/Reference/Statements/const):
 
 ```js
 function showHelp(help) {
@@ -471,9 +476,9 @@ function showHelp(help) {
 
 function setupHelp() {
   const helpText = [
-    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "email", help: "Tu dirección de correo electrónico" },
     { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
+    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -487,9 +492,9 @@ function setupHelp() {
 setupHelp();
 ```
 
-En este ejemplo se usa `const` en lugar de `var`, por lo que cada cierre vincula la variable de ámbito de bloque, lo que significa que no se requieren cierres adicionales.
+Este ejemplo usa `const` en lugar de `var`, por lo que cada _closure_ vincula la variable de alcance de bloque, lo que significa que no se requieren _closure_ adicionales.
 
-Otra alternativa podría ser utilizar `forEach()` para iterar sobre el array `helpText` y adjuntar un evento a cada [`<input>`](/es/docs/Web/HTML/Element/input), como se muestra:
+Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Element/input), como se muestra:
 
 ```js
 function showHelp(help) {
@@ -498,9 +503,9 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Tu dirección de correo electronico" },
+    { id: "email", help: "Tu dirección de correo electrónico" },
     { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debe ser mayor de 16)" },
+    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
   ];
 
   helpText.forEach(function (text) {
@@ -515,11 +520,11 @@ setupHelp();
 
 ## Consideraciones de rendimiento
 
-No es aconsejable crear innecesariamente funciones dentro de otras funciones si no se necesitan los _closures_ para una tarea particular ya que afectará negativamente el rendimiento del script tanto en consumo de memoria como en velocidad de procesamiento.
+Como se mencionó anteriormente, cada instancia de función gestiona su propio alcance y cierre. Por lo tanto, no es prudente crear funciones innecesariamente dentro de otras funciones si no se necesitan _closures_ para una tarea en particular, ya que afectará negativamente el rendimiento del script tanto en términos de velocidad de procesamiento como de consumo de memoria.
 
-Por ejemplo, cuando se crea un nuevo objeto/clase, los métodos normalmente deberían asociarse al prototipo del objeto en vez de definirse en el constructor del objeto. La razón es que con este último sistema, cada vez que se llama al constructor (cada vez que se crea un objeto) se tienen que reasignar los métodos.
+Por ejemplo, al crear un nuevo objeto/clase, los métodos normalmente deben asociarse al prototipo del objeto en lugar de definirse en el constructor del objeto. La razón es que cada vez que se llama al constructor, los métodos se reasignan (es decir, para cada creación de objetos).
 
-Veamos el siguente caso, que no es práctico pero sí demostrativo:
+Observemos el siguiente caso:
 
 ```js
 function MyObject(name, message) {
@@ -535,7 +540,7 @@ function MyObject(name, message) {
 }
 ```
 
-El código anterior no aprovecha los beneficios de los _closures_. Podríamos modificarlo de la siguiente manera:
+Debido a que el código anterior no aprovecha los beneficios de usar _closures_ en esta instancia en particular, podríamos reescribirlo para evitar usar _closures_ de la siguiente manera:
 
 ```js
 function MyObject(name, message) {
@@ -552,7 +557,7 @@ MyObject.prototype = {
 };
 ```
 
-Sin embargo, no se recomienda redefinir el prototipo, así que el siguiente ejemplo es aún mejor que el anterior, porque lo que hace es añadir funcionalidad al prototipo existente:
+Sin embargo, no se recomienda redefinir el prototipo. En su lugar, el siguiente ejemplo se adjunta al prototipo existente:
 
 ```js
 function MyObject(name, message) {
@@ -567,4 +572,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-En los dos ejemplos anteriores, todos los objetos comparten el prototipo heredado y no se van a definir los métodos cada vez que se crean de objetos. Ver [Detalles del Modelo de Objetos](/es/docs/Web/JavaScript/Guide/Details_of_the_Object_Model) para más información.
+En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para obtener más información.

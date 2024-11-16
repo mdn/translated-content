@@ -65,7 +65,8 @@ Ainsi, si on définit des valeurs pour les propriétés `color` et `font-family`
 
 L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
 
-> **Note :** Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/color#définition_formelle) comme exemple.
+> [!NOTE]
+> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/color#définition_formelle) comme exemple.
 
 ## Comprendre l'héritage
 
@@ -94,7 +95,8 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
 - [`unset`](/fr/docs/Web/CSS/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
-> **Note :** Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Cascade#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
+> [!NOTE]
+> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Cascade#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
 
 Utilisons un exemple avec une liste de liens pour observer comment ces valeurs fonctionnent. Dans l'éditeur qui suit, vous pouvez éditer le CSS et voir l'effet de vos changements. Utilisez cette interactivité pour mieux comprendre le comportement de HTML et de CSS.
 
@@ -158,7 +160,8 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
 - Élément
   - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
 
-> **Note :** Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> [!NOTE]
+> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
 
 Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
@@ -182,7 +185,8 @@ Que se passe-t-il ici&nbsp;? Pour commencer, nous ne nous intéressons qu'aux se
 - Les troisième et quatrième sélecteurs sont en compétition pour la couleur du texte du lien. C'est le quatrième qui l'emporte et qui donne un texte blanc. En effet, bien qu'il ait un sélecteur d'élément en moins, celui-ci est remplacé par un sélecteur de classe, qui possède une spécificité plus élevée que n'importe quelle combinaison de sélecteurs d'élément. La spécificité 1-1-3 l'emporte sur la spécificité 1-0-4.
 - Les trois derniers sélecteurs portent sur la mise en forme de la bordure du lien au survol. Le sixième sélecteur cède la place au cinquième (avec des spécificités respectives de 0-2-3 et 0-2-4), car il a un sélecteur d'élément en moins. Le septième sélecteur l'emporte sur ces deux autres, car il a le même nombre de sous-sélecteurs que le cinquième et qu'un sélecteur d'élément a été remplacé par un sélecteur de classe. La spécificité 0-3-3 l'emporte donc sur les spécificités 0-2-3 et 0-2-4.
 
-> **Note :** Chaque type de sélecteur possède son propre niveau de spécificité et il n'est pas possible de renverser cette hiérarchie de type. Par exemple, l'assemblage d'un _million_ de sélecteurs de **classe** ne l'emporterait toujours pas sur la spécificité d'_un seul_ sélecteur d'**identifiant**.
+> [!NOTE]
+> Chaque type de sélecteur possède son propre niveau de spécificité et il n'est pas possible de renverser cette hiérarchie de type. Par exemple, l'assemblage d'un _million_ de sélecteurs de **classe** ne l'emporterait toujours pas sur la spécificité d'_un seul_ sélecteur d'**identifiant**.
 >
 > La meilleure façon pour évaluer la spécificité est de calculer les scores des composantes individuelles en commençant par la catégorie la plus élevée et en allant vers les plus faibles si nécessaire. En effet, il est uniquement nécessaire de calculer la spécificité d'une catégorie inférieure lorsqu'il y a égalité au niveau supérieur.
 
@@ -194,7 +198,8 @@ Les styles en incise du document (c'est-à-dire les déclarations de style prés
 
 Il existe une méthode permettant de passer outre toutes ces règles, y compris les styles en incise&nbsp;: `!important`. Toutefois, il faut faire preuve de prudence en l'utilisant. Ce marqueur permet de rendre une paire de propriété/valeur la plus spécifique, outrepassant les règles normales de la cascade, y compris pour les styles indiqués dans le document.
 
-> **Attention :** Il est utile de savoir que le marqueur `!important` existe afin de comprendre son effet lorsqu'on le voit dans des bases de code. **Toutefois, il est fortement recommandé de ne pas l'utiliser sauf en cas d'extrême nécessité.** Le marqueur `!important` change la façon dont la cascade fonctionne et peut largement complexifier le débogage de problèmes CSS, notamment pour les grandes feuilles de style.
+> [!WARNING]
+> Il est utile de savoir que le marqueur `!important` existe afin de comprendre son effet lorsqu'on le voit dans des bases de code. **Toutefois, il est fortement recommandé de ne pas l'utiliser sauf en cas d'extrême nécessité.** Le marqueur `!important` change la façon dont la cascade fonctionne et peut largement complexifier le débogage de problèmes CSS, notamment pour les grandes feuilles de style.
 
 Prenons un exemple où nous avons deux paragraphes, dont un qui porte un identifiant.
 
@@ -207,7 +212,8 @@ Voyons ce qui se passe ici (vous pouvez retirer certaines des propriétés et ob
 3. Les deux éléments ont une [classe](/fr/docs/Web/HTML/Global_attributes#class) `better`, et le second porte en plus [l'identifiant](/fr/docs/Web/HTML/Global_attributes#id) `winning`. Comme les identifiants ont une spécificité _toujours supérieure_ à celle des classes (on peut uniquement avoir un seul élément avec un identifiant donné sur une page, mais de nombreux éléments peuvent se partager une même classe), l'arrière-plan rouge et la bordure noire de 1 pixel devraient s'appliquer au second élément et le premier devrait avoir un arrière-plan gris sans bordure, tel qu'indiqué par la classe.
 4. En réalité, le second élément récupère bien l'arrière-plan rouge, mais pas la bordure&nbsp;? Pourquoi&nbsp;? C'est l'effet du marqueur `!important` dans la deuxième règle. Ajouter `!important` après `border: none` signifie que cette déclaration l'emportera sur toutes les valeurs de `border` des règles précédentes, même si le sélecteur d'identifiant possède une spécificité supérieure.
 
-> **Note :** La seule façon de surcharger une déclaration importante est d'inclure une autre déclaration importante avec _la même spécificité_ plus tard dans le code source, ou d'en placer une avec une spécificité supérieure, ou d'inclure une déclaration importante dans une couche de cascade antérieure (nous n'avons pas encore abordé le sujet des couches de cascade).
+> [!NOTE]
+> La seule façon de surcharger une déclaration importante est d'inclure une autre déclaration importante avec _la même spécificité_ plus tard dans le code source, ou d'en placer une avec une spécificité supérieure, ou d'inclure une déclaration importante dans une couche de cascade antérieure (nous n'avons pas encore abordé le sujet des couches de cascade).
 
 Un scénario où on peut justifier l'utilisation du marqueur `!important` est le travail dans un outil de gestion de contenu où il n'est pas possible d'éditer le CSS sous-jacent et qu'on souhaite malgré tout surcharger la mise en forme avec un style en incise ou une déclaration importante et qu'on ne peut pas faire autrement. Ceci étant dit, il est toujours préférable d'éviter `!important` quand on peut.
 
@@ -230,7 +236,8 @@ Les déclarations conflictuelles seront appliquées dans l'ordre suivant. Celles
 5. Les déclarations importantes des feuilles de styles de l'utilisatrice ou de l'utilisateur.
 6. Les déclarations importantes des feuilles de style du navigateur.
 
-> **Note :** L'ordre de précédence est inversé pour les styles marqués avec `!important`. En effet, les équipes de développement web pourraient vouloir surcharger les feuilles de styles des personnes afin de s'assurer qu'un <i lang="en">design</i> fonctionne correctement. Toutefois, les personnes peuvent avoir de bonnes raisons de surcharger ces styles provenant du site et peuvent le faire à l'aide de `!important` dans leurs règles.
+> [!NOTE]
+> L'ordre de précédence est inversé pour les styles marqués avec `!important`. En effet, les équipes de développement web pourraient vouloir surcharger les feuilles de styles des personnes afin de s'assurer qu'un <i lang="en">design</i> fonctionne correctement. Toutefois, les personnes peuvent avoir de bonnes raisons de surcharger ces styles provenant du site et peuvent le faire à l'aide de `!important` dans leurs règles.
 
 ### Ordre des couches de cascade
 

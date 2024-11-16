@@ -20,11 +20,12 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
 
-> **メモ:** この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
+> [!NOTE]
+> この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
 
 ## 行った選択
 
@@ -60,4 +61,4 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 ## MDN の関連資料
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

@@ -102,13 +102,13 @@ z-index: unset;
 
 #### Результат
 
-{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
+{{ EmbedLiveSample('Визуальное наложение элементов', '550', '200', '') }}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

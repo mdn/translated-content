@@ -86,23 +86,14 @@ align-self: unset;
 
 ## Спецификации
 
-{{Specifications("css.properties.align-self.grid_context")}}
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-### Support in Flex layout
-
 {{Compat}}
-
-### Support in Grid layout
-
-{{Compat}}
-
-{{CSSRef}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_

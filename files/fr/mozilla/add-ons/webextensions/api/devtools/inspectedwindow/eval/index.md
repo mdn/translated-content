@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 
@@ -161,7 +161,7 @@ inspectButton.addEventListener("click", () => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
 >

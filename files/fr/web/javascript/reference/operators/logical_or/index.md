@@ -84,7 +84,8 @@ o9 = false || ""; // f || f renvoie ""
 o10 = false || varObject; // f || object renvoie varObject
 ```
 
-> **Note :** Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> [!NOTE]
+> Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
 
 ### Règles de conversion booléennes
 

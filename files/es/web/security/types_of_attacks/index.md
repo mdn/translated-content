@@ -3,6 +3,8 @@ title: Tipos de ataques
 slug: Web/Security/Types_of_attacks
 ---
 
+{{QuickLinksWithSubpages("/es/docs/Web/Security")}}
+
 Este artículo describe varios tipos de ataques de seguridad y técnicas para mitigarlos.
 
 ## Click-jacking

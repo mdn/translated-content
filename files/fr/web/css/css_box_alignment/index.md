@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_box_alignment
 
 Le module de spécification _CSS Box Alignment_ (alignement des boîtes en CSS) décrit les fonctionnalités relatives à l'alignement des boîtes pour les différents modes de disposition CSS : disposition en bloc, en tableau, disposition flexible et disposition en grille. L'objectif de ce module est d'obtenir des méthodes d'alignement cohérentes pour tout CSS. Dans ce guide, nous verrons les différents concepts utilisés par cette spécification.
 
-> **Note :** La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
+> [!NOTE]
+> La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
 
 ## Anciennes méthodes d'alignement
 

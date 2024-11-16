@@ -79,7 +79,8 @@ Par exemple :
 
 ### Propriétés Microsoft Edge
 
-> **Attention :** L'ajout de propriétés spécifiques à Edge au manifeste a causé une erreur avant Firefox 69 qui peut empêcher l'extension de s'installer.
+> [!WARNING]
+> L'ajout de propriétés spécifiques à Edge au manifeste a causé une erreur avant Firefox 69 qui peut empêcher l'extension de s'installer.
 
 Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé `edge`, qui possède les propriétés suivantes :
 

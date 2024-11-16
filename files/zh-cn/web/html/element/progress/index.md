@@ -41,7 +41,7 @@ slug: Web/HTML/Element/progress
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -75,7 +75,8 @@ slug: Web/HTML/Element/progress
 - `value`
   - : 该属性用来指定该进度条已完成的工作量。如果没有`value 属性`,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).
 
-> **备注：** 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。
+> [!NOTE]
+> 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。
 
 ## DOM 接口
 

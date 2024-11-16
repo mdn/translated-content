@@ -26,7 +26,8 @@ A propriedade **XMLHttpRequest.readyState** retorna o estado de um XMLHttpReques
 - DONE
   - : A Operação de busca está completa. Isso pode significar que a trasferência foi concluída com êxito ou que falhou.
 
-> **Nota:** Os nomes de estado são diferentes no Internet Explorer. Ao invés de `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` e `DONE`, os nomes usados são: `READYSTATE_UNINITIALIZED`(0), `READYSTATE_LOADING`(1), `READYSTATE_LOADED`(2), `READYSTATE_INTERACTIVE`(3) e `READYSTATE_COMPLETE` (4).
+> [!NOTE]
+> Os nomes de estado são diferentes no Internet Explorer. Ao invés de `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` e `DONE`, os nomes usados são: `READYSTATE_UNINITIALIZED`(0), `READYSTATE_LOADING`(1), `READYSTATE_LOADED`(2), `READYSTATE_INTERACTIVE`(3) e `READYSTATE_COMPLETE` (4).
 
 ## Exemplo
 

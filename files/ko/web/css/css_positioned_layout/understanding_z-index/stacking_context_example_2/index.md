@@ -3,6 +3,8 @@ title: 쌓임 맥락 예제2
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
 ---
 
+{{CSSRef}}
+
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### 쌓임 맥락 예제2
@@ -22,7 +24,8 @@ z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 �
 
     - DIV #4 (z-index 10)
 
-> **참고:** 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
+> [!NOTE]
+> 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
 
 ## 예제
 

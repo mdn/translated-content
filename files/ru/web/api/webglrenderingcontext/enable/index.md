@@ -54,15 +54,15 @@ gl.isEnabled(gl.DITHER);
 // true
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("WebGLRenderingContext.disable()")}}
 - {{domxref("WebGLRenderingContext.isEnabled()")}}

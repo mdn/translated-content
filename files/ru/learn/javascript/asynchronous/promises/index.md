@@ -3,7 +3,7 @@ title: Делаем асинхронное программирование бо
 slug: Learn/JavaScript/Asynchronous/Promises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 В ECMAScript версии 2017 появились [async functions](/ru/docs/Web/JavaScript/Reference/Statements/async_function) и ключевое слово [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) ([ECMAScript Next support in Mozilla](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)). На самом деле, эти функции есть ничего иное как синтаксический сахар над Promises и Generator functions ([ts39](https://tc39.es/ecmascript-asyncawait/)). С их помощью легче писать и читать асинхронный код, ведь они позволяют использовать привычный синхронный стиль написания. В этой статье мы на базовом уровне разберёмся в их устройстве.
 
@@ -309,7 +309,8 @@ const values = await Promise.all([coffee, tea, description]);
 
 Для обработки ошибок мы добавили блок `.catch()` для функции `displayContent()`; Это позволило нам отловить ошибки в обоих функциях.
 
-> **Примечание:** Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!NOTE]
+> Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Недостатки async/await
 
@@ -321,7 +322,7 @@ const values = await Promise.all([coffee, tea, description]);
 
 Есть подход, который позволяет обойти эту проблему — сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.
 
-Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
+Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/ru/docs/Web/API/setTimeout):
 
 ```js
 function timeoutPromise(interval) {
@@ -432,4 +433,4 @@ han.greeting().then(console.log);
 
 Вот пожалуй и все — `async`/`await` позволяют писать асинхронный код, который легче читать и поддерживать. Даже учитывая, что поддержка со стороны браузеров несколько хуже, чем у `promise.then`, всё же стоит обратить на него внимание.
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}

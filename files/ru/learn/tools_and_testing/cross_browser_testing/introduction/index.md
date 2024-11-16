@@ -21,15 +21,11 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 Поймите, что вы - не ваши пользователи — если ваш сайт работает на Macbook Pro или Galaxy Nexus, это не значит, что он будет работать так для всех пользователей — нужно сделать много тестов!
 
-> **Примечание:** Статья [сделаем веб доступным для всех](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) предоставляет более полезную информацию о различных браузерах, которые используют люди, их доле рынка и связанных с этим проблемах совместимости браузеров.
-
 Мы должны поговорить немного о терминологии. Для начала, когда мы говорим о сайтах, "работающих кросс-браузерной", на самом деле мы говорим о том, что они должны обеспечивать приемлемое удобство использования в разных браузерах. Это нормально, если сайт выглядит немного по-разному в разных браузерах, главное он должен обеспечивать полную функциональность.В современных браузерах вы можете сделать что-то анимированным или использовать 3D, тогда как в старых браузерах вы можете лишь показать плоскую картинку, предоставляющую ту же информацию. Если владелец сайта доволен, вы сделали своё дело.
 
 С другой стороны, плохо, когда сайт полноценно работает для обычных людей, но может быть совершенно недоступен для людей, имеющих проблемы со зрением, т.к. их приложения для чтения экрана не могут распознать информацию на сайте.
 
 Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
-
-> **Примечание:** Мы разберём defensive coding позже в этом модуле.
 
 ## Почему возникают кросс-браузерные проблемы?
 
@@ -69,7 +65,8 @@ Now you know your target testing platforms, you should go back and review the re
 
 You should compile a list of the potential problem areas.
 
-> **Примечание:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
+> [!NOTE]
+> You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 

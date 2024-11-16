@@ -3,7 +3,7 @@ title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `namespace-uri` 関数は、指定されたノード集合内の最初のノードの名前空間 URI を表す文字列を返します。
 

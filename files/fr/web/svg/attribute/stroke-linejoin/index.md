@@ -122,7 +122,8 @@ svg {
 
 ### arcs
 
-> **Note :** La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> [!NOTE]
+> La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
 
 La valeur `arcs` indique qu'un arc est utilisé pour joindre les segments du chemin. L'arc est formé en prolongeant les bords extérieurs du trait au point de liaison, avec la même courbe que ce bord.
 
@@ -206,7 +207,8 @@ svg {
 
 La valeur `miter` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
 
-> **Note :** Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type `bevel` est utilisé à la place.
+> [!NOTE]
+> Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type `bevel` est utilisé à la place.
 
 #### Exemple
 
@@ -269,7 +271,8 @@ svg {
 
 ### miter-clip
 
-> **Note :** La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> [!NOTE]
+> La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
 
 La valeur `miter-clip` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
 

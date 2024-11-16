@@ -2,7 +2,7 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
@@ -109,6 +109,6 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.entries()")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

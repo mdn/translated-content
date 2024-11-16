@@ -1,21 +1,20 @@
 ---
-title: IDBCursor.continuePrimaryKey()
+title: "IDBCursor: continuePrimaryKey() メソッド"
+short-title: continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの **`continuePrimaryKey()`** メソッドは、カーソルを、キーが引数として指定するキーと一致し、かつ主キーが引数として指定する主キーと一致するアイテムに進めます。
+**`continuePrimaryKey()`** は {{domxref("IDBCursor")}} インターフェイスのメソッドで、カーソルを、キーが引数として指定するキーと一致し、かつ主キーが引数として指定する主キーと一致するアイテムに進めます。
 
 典型的な使用例は、キーを 1 個ずつ比較することなく、前に使用したカーソルが閉じた場所から反復を再開することです。
 
-新しいカーソルのデータを読み込む前にこのメソッドを複数回呼び出す (たとえば、同じ `onsuccess` ハンドラーで `continuePrimaryKey()` を 2 回呼び出す) と、カーソルの値を得たフラグがクリアされているため、2 回目の呼び出しで `InvalidStateError` 例外が投げられます。
+新しいカーソルのデータを読み込む前にこのメソッドを複数回呼び出す (たとえば、同じ `onsuccess` ハンドラーで `continuePrimaryKey()` を 2 回呼び出す) と、カーソルの値を得たフラグがクリアされているため、2 回目の呼び出しで `InvalidStateError` 例外が発生します。
 
-このメソッドは、インデックスを対象とするカーソルでのみ有効です。オブジェクトストアを対象とするカーソルで使うと、エラーが投げられます。
-
-{{AvailableInWorkers}}
+このメソッドは、インデックスを対象とするカーソルでのみ有効です。オブジェクトストアを対象とするカーソルで使うと、エラーが発生します。
 
 ## 構文
 
@@ -32,7 +31,7 @@ continuePrimaryKey(key, primaryKey)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -94,4 +93,4 @@ request.onsuccess = (event) => {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -1,7 +1,6 @@
 ---
 title: Ajax
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-original_slug: Web/Guide/AJAX
 ---
 
 <section id="Quick_links">
@@ -24,7 +23,8 @@ original_slug: Web/Guide/AJAX
 const httpRequest = new XMLHttpRequest();
 ```
 
-> **備註：** 出於解說上的需要，上述代碼使用最簡方式建立 XMLHTTP 的實體。較貼近實際運用的範例，見第三步。
+> [!NOTE]
+> 出於解說上的需要，上述代碼使用最簡方式建立 XMLHTTP 的實體。較貼近實際運用的範例，見第三步。
 
 接下來是要決定伺服器傳回資料後的處理方式，此時你只要以 `onreadystatechange` 這個屬性指明要處理傳回值的 JavaScript 函式名稱即可，例如：
 
@@ -163,11 +163,14 @@ if (httpRequest.status === 200) {
 
 你可以[由此測試本例](https://www.w3clubs.com/mozdev/httprequest_test.html)，也可以參考[測試檔案](https://www.w3clubs.com/mozdev/test.html)。
 
-> **備註：** 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個 「Object Expected」 的錯誤。
+> [!NOTE]
+> 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個 「Object Expected」 的錯誤。
 
-> **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[避開快取](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#避開快取)）
+> [!NOTE]
+> 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[避開快取](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#避開快取)）
 
-> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
+> [!NOTE]
+> If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 

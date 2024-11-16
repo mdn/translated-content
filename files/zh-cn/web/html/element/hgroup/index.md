@@ -17,7 +17,7 @@ slug: Web/HTML/Element/hgroup
 
 `<hgroup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgroup>` 中，这些类型的内容也表示为 `<p>` 元素。
 
-`<hgroup>` 本身对网页的的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
+`<hgroup>` 本身对网页的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
 
 ## 示例
 
@@ -69,8 +69,8 @@ slug: Web/HTML/Element/hgroup
       </td>
     </tr>
     <tr>
-      <th scope="row">省略标签</th>
-      <td>{{no_tag_omission}}</td>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>

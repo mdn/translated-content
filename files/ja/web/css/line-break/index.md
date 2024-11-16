@@ -22,6 +22,8 @@ line-break: revert;
 line-break: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/line-break.html")}}
+
 ## 構文
 
 ### 値

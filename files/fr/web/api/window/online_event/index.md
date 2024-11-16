@@ -7,7 +7,8 @@ slug: Web/API/Window/online_event
 
 L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
 
-> **Note :** Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
+> [!NOTE]
+> Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
 
 <table class="properties">
   <tbody>

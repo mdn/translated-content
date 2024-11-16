@@ -52,7 +52,8 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **备注：** Firefox 26 之前的版本没有在 add/remove/toggle 实现使用多个参数。参见 <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Firefox 26 之前的版本没有在 add/remove/toggle 实现使用多个参数。参见 <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## 规范
 

@@ -7,7 +7,8 @@ slug: Web/API/VRDisplay/submitFrame
 
 **`submitFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` 内に現在表示中の {{domxref("VRLayerInit")}} の現在の状態をキャプチャします。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 その後、 {{domxref("VRPose")}} と {{domxref("getFrameData()")}} の最後の呼び出しによって提供された行列を使用してフレームがレンダリングされる必要があります。
 
@@ -88,7 +89,8 @@ function drawVRScene() {
 }
 ```
 
-> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 
@@ -102,5 +104,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

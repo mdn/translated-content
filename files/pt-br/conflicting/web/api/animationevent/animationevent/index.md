@@ -11,7 +11,8 @@ O **`AnimationEvent.initAnimationEvent()`** é um método iniciado com o evento 
 
 `AnimationEvent` criado desse modo não é confiável.
 
-> **Nota:** Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
+> [!NOTE]
+> Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
 
 ## Syntax
 

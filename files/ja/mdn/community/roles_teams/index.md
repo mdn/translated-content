@@ -2,15 +2,15 @@
 title: MDN Web Docs の役割とチーム
 slug: MDN/Community/Roles_teams
 l10n:
-  sourceCommit: a39969c5da99bba153effea2de0c33cfeb2f5bd0
+  sourceCommit: 5963448346ef9c37aba716f785901dd007f862ea
 ---
 
 {{MDNSidebar}}
 
-MDN Web Docs プロジェクトの成功と発展は、大部分において、私たちの協力者コミュニティによるものです。協力者の中には、MDN Web Docs を実行するための日々の作業を支援するために、自分の時間の一部を割いてくれている方もいます。メンテナンス作業を含むサイトの変更は、社員、請負業者、パートナーのネットワークによって行われますが、彼らはすべて MDN Web Docs の健全性、成長、メンテナンスに専念しています。プロジェクトは、これらの異なる形のグループからの変更を管理し取り入れるために、[GitHub の MDN の組織](https://github.com/mdn) の [役割](#役割) と [チーム](#チーム) に強く依存しています。この組織メンバーのリストは [ここに掲載されています](https://github.com/orgs/mdn/people)。
+MDN Web Docs プロジェクトの成功と発展は、大部分において、私たちの協力者コミュニティによるものです。協力者の中には、 MDN Web Docs を実行するための日々の作業を支援するために、自分の時間の一部を割いてくれていzる方もいます。メンテナンス作業を含むサイトの変更は、社員、請負業者、パートナーのネットワークによって行われますが、彼らはすべて MDN Web Docs の健全性、成長、メンテナンスに専念しています。プロジェクトは、これらの異なる形のグループからの変更を管理し取り入れるために、[GitHub の MDN の組織](https://github.com/mdn) の [役割](#役割) と [チーム](#チーム) に強く依存しています。この組織メンバーのリストは [ここに掲載されています](https://github.com/orgs/mdn/people)。
 
 コミュニティの貢献は、このオープンソースプロジェクトに大いに役立っています。
-協力者は、MDN Web Docs での作業によって、文章力、技術力、協調性、そして多様な背景を持つ人々と一緒に作業する能力を示すことができます。この章では、MDN Web Docs プロジェクトでボランティアとして参加する際に、あなたが担うことのできる役割について記述します。
+協力者は、 MDN Web Docs での作業によって、文章力、技術力、協調性、そして多様な背景を持つ人々と一緒に作業する能力を示すことができます。この章では、 MDN Web Docs プロジェクトでボランティアとして参加する際に、あなたが担うことのできる役割について記述します。
 
 ## 役割
 
@@ -48,8 +48,8 @@ MDN Web Docs プロジェクトでは、[協力者](#協力者)、[組織メン�
 
 協力者になるには、以下に従ってください。
 
-- [Mozilla の行動規範](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
-- [MDN の協力ガイドライン](https://github.com/mdn/mdn-community/blob/main/CONTRIBUTING.md)
+- [Mozilla の行動規範](https://www.mozilla.org/en-US/about/governance/policies/participation/)
+- 協力ガイドライン（各リポジトリーの `CONTRIBUTING.md` ファイルを調べてください。例えば、これは `mdn/content` リポジトリーの [協力ガイドライン](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) です）。
 
 **権限:**
 
@@ -81,7 +81,7 @@ MDN Web Docs プロジェクトでは、[協力者](#協力者)、[組織メン�
 
 ### メンテナー
 
-メンテナーは、MDNで1つまたは複数のプロジェクトに責任を持つ確立された[協力者](#協力者)です。
+メンテナーは、MDNで 1 つまたは複数のプロジェクトに責任を持つ確立された[協力者](#協力者)です。
 自分のプロジェクトの方針と優先順位の決定に参加することが期待されています。誰かをメンテナーに推薦する[プロセス](#メンテナーを推薦)をご覧ください。
 
 メンテナーとして、以下のような活動を行います。
@@ -95,7 +95,7 @@ MDN Web Docs プロジェクトでは、[協力者](#協力者)、[組織メン�
   - プロセスの改善
 
 <!--
-TODO: Compare with https://developer.mozilla.org/ja/docs/MDN/Community/Users_teams#volunteer_and_partner_maintainers.
+TODO: Compare with https://developer.mozilla.org/en-US/docs/MDN/Community/Roles_teams#volunteer_and_partner_maintainers.
 What info needs to be retained? Should we use the term 'partner maintainer' or is 'maintainer' good enough?
 -->
 
@@ -110,7 +110,8 @@ What info needs to be retained? Should we use the term 'partner maintainer' or i
 - 自分のプロジェクトに月 16 時間以上作業することに同意していること。
 - 2 ヶ月に 1 度開催されるコミュニティミーティングに参加している。
 
-> **メモ:** この役割にふさわしいと思う人がいれば、[メンテナーを推薦](#メンテナーを推薦)することができます。
+> [!NOTE]
+> この役割にふさわしいと思う人がいれば、[メンテナーを推薦](#メンテナーを推薦)することができます。
 
 **権限:**
 
@@ -121,7 +122,8 @@ What info needs to be retained? Should we use the term 'partner maintainer' or i
 オーナーは、ユーザーと [GitHub チーム](https://github.com/orgs/mdn/teams)の管理、[MDN 組織](https://github.com/mdn)内のリポジトリーへのアクセスの管理、リポジトリー設定の管理、本番環境への展開など、幅広い権限を持ちます。
 オーナーは、他の協力者ロールのすべての要件に拘束されます。
 
-> **メモ:** オーナーの役割は、現在は Mozilla スタッフに限定されています。
+> [!NOTE]
+> オーナーの役割は、現在は Mozilla スタッフに限定されています。
 
 **要件:**
 
@@ -201,7 +203,7 @@ What info needs to be retained? Should we use the term 'partner maintainer' or i
 コミュニティ管理者は、多くの点で明確な役割があります。
 コミュニティ管理者は、[メンテナー](#メンテナー)と同じ責任の多くを共有します。さらに、コミュニティ管理者には以下のような責任があります。
 
-- [Mozilla の行動規範](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)に対する違反の報告に対処し、適切な措置を決定すること。
+- [Mozilla のコミュニティ参加ガイドライン](https://www.mozilla.org/en-US/about/governance/policies/participation/) である[行動規範](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)違反の報告に対処し、適切な措置を決定すること。
 - コミュニティイベントの企画・運営。
 - コミュニティに関するプロジェクトに関連する会議の開催。
 - MDN プロジェクトを推進するためのメディア戦略の決定。
@@ -239,6 +241,7 @@ TODO: Edit the section after updating the links
 ### スポットライト協力者の推薦
 
 誰が[スポットライト協力者](#スポットライト協力者)になれるかを確認してください。
+
 誰かをメンテナーに推薦するには、次にように GitHub で課題を開いてください。
 
 1. `mdn/mdn` リポジトリーの `Issues` タブで、右側の [**New issue**](https://github.com/mdn/mdn/issues/new/choose) ボタンをクリックします。

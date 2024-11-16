@@ -7,7 +7,7 @@ slug: Web/SVG/Element/linearGradient
 
 `linearGradient`元素用来定义线性渐变，用于图形元素的填充或描边。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

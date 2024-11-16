@@ -9,7 +9,8 @@ slug: Web/CSS/overflow-wrap
 
 A propriedade [CSS](/pt-BR/CSS) `word-wrap` é utilizada para especificar se o navegador pode ou não quebrar linhas dentro das palavras, afim de prevenir o vazamento quando do contrário uma sequencia de caracteres é muito longa para caber na caixa que o contém.
 
-> **Nota:** Originalmente uma extensão proprietária da Microsoft (não prefixada), a propriedade `word-wrap` foi renomeada para `overflow-wrap` no rascunho atual do texto de especificações do CSS3. Compilações estáveis do Google Chrome e do Opera têm suporte a nova sintaxe.
+> [!NOTE]
+> Originalmente uma extensão proprietária da Microsoft (não prefixada), a propriedade `word-wrap` foi renomeada para `overflow-wrap` no rascunho atual do texto de especificações do CSS3. Compilações estáveis do Google Chrome e do Opera têm suporte a nova sintaxe.
 
 {{cssinfo}}
 

@@ -1,11 +1,12 @@
 ---
-title: Response()
+title: "Response: Response() コンストラクター"
+short-title: Response()
 slug: Web/API/Response/Response
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: 80d24962385aac4afc9a170a709e97c49aae41c7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`Response()`** コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。
 
@@ -38,11 +39,14 @@ new Response(body, options)
   - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
 
     - `status`
-      - : このレスポンスのステータスコードです。（例: `200`）
+      - : このレスポンスのステータスコードです。
+        既定値は `200` です。
     - `statusText`
-      - : ステータスコードに関連付けられたステータスメッセージです（例: `OK`など)
+      - : ステータスコードに関連付けられた、`OK` などのステータスメッセージです。
+        既定値は `""` です。
     - `headers`
       - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)をご覧ください）。
+        既定値は空です。
 
 ## 例
 

@@ -10,7 +10,8 @@ l10n:
 
 **`subscriptionId`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、このプッシュサブスクリプションに関連するサブスクリプション ID が入った文字列を返します。
 
-> **警告:** この機能の代わりに、同じインターフェイスの {{domxref("PushSubscription.endPoint")}} プロパティを使用してください。
+> [!WARNING]
+> この機能の代わりに、同じインターフェイスの {{domxref("PushSubscription.endPoint")}} プロパティを使用してください。
 
 ## 値
 

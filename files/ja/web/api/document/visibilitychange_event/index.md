@@ -1,8 +1,9 @@
 ---
 title: "Document: visibilitychange イベント"
+short-title: visibilitychange
 slug: Web/API/Document/visibilitychange_event
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 14a752ccdcaa736e8e368156c48bca61a3c1e5ed
 ---
 
 {{APIRef}}
@@ -37,14 +38,19 @@ onvisibilitychange = (event) => {};
 
 ### 非表示に遷移した際に音楽を一時停止
 
-この例では、文書が表示状態になった時に音楽を再生し、文書が非表示になった時に音楽を停止します。
+この例は、ページが非表示になると音声再生を一時停止し、ページが再び表示されると再生を再開します。
+完全な例については、[Page Visibility API: Pausing audio on page hide](/ja/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide) ドキュメントを参照してください。
 
 ```js
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
-    backgroundMusic.play();
+  if (document.hidden) {
+    playingOnHide = !audio.paused;
+    audio.pause();
   } else {
-    backgroundMusic.pause();
+    // 音声が "playing on hide" であった場合は復旧する
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
@@ -73,5 +79,6 @@ document.onvisibilitychange = () => {
 
 - [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) は、なぜ `beforeunload`/`unload` ではなく、`visibilitychange` を使用しなければならないのか、その理由を詳しく説明しています。
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) は、ウェブアプリケーションでページのライフサイクルの動作を処理する際の最善の手法を解説しています。
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) は、ウェブアプリケーションでページのライフサイクルの動作を処理する際の最善の手法を解説しています。

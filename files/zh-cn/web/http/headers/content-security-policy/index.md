@@ -27,7 +27,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : **child-src**：为 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 和其他内嵌浏览器内容（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）定义合法的源地址。
 
-    > **警告：** 如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用 {{CSP("frame-src")}} 和 {{CSP("worker-src")}} 指令，来相对的取代 **`child-src`**。
+    > [!WARNING]
+    > 如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用 {{CSP("frame-src")}} 和 {{CSP("worker-src")}} 指令，来相对的取代 **`child-src`**。
 
 - {{CSP("connect-src")}}
   - : **connect-src**：限制能通过脚本接口加载的 URL。
@@ -46,7 +47,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("object-src")}}
   - : **object-src**：限制 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 标签的源地址。
 
-> **备注：** 被 `object-src` 控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如 `<iframe>` 中的安全属性 `sandbox` 和 `allow`）。因此**建议**限制该指令的使用（比如，如果可行，将 `object-src` 显式设置为 `'none'`）。
+> [!NOTE]
+> 被 `object-src` 控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如 `<iframe>` 中的安全属性 `sandbox` 和 `allow`）。因此**建议**限制该指令的使用（比如，如果可行，将 `object-src` 显式设置为 `'none'`）。
 
 - {{CSP("prefetch-src")}}
   - : 指定预加载或预渲染的允许源地址。

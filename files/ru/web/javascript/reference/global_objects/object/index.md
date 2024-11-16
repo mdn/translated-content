@@ -3,7 +3,7 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 Тип **`Object`** представляет один из [типов данных JavaScript](/ru/docs/Web/JavaScript/Data_structures). Он используется для хранения различных коллекций с ключами и более сложных сущностей. Объекты могут быть созданы с использованием конструктора {{jsxref("Object/Object", "Object()")}} или [синтаксиса инициализатора / литерала объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
@@ -102,7 +102,7 @@ new Object([value])
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-  - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
+  - : Возвращает логическое значение, указывающее, входит ли объект, у которого вызван метод, в цепочку прототипов другого объекта.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Возвращает логическое значение, указывающее, является ли указанное свойство свойством объекта [enumerable own](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
 - {{jsxref("Object.prototype.toLocaleString()")}}

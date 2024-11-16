@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 
 {{JSRef}}
 
-**`Number.MIN_VALUE`** 静态数据属性表示在 JavaScript 中可表示的最大数值。
+**`Number.MAX_VALUE`** 静态数据属性表示在 JavaScript 中可表示的最大数值。
 
 {{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}
 

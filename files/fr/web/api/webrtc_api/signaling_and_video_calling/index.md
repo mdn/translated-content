@@ -3,6 +3,8 @@ title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
+{{DefaultAPISidebar("WebRTC")}}
+
 Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
 
 ## Contenu semi-ancien, à partir de RTCPeerConnection
@@ -38,7 +40,7 @@ function error(err) {
 }
 ```
 
-**Initialiser un appel**
+### Initialiser un appel
 
 l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
 
@@ -63,7 +65,7 @@ navigator.getUserMedia({ video: true }, function (stream) {
 });
 ```
 
-**Répondre à un appel**
+### Répondre à un appel
 
 sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
@@ -93,7 +95,7 @@ navigator.getUserMedia({ video: true }, function (stream) {
 });
 ```
 
-**Gestion de la réponse**
+### Gestion de la réponse
 
 retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
 
@@ -111,7 +113,8 @@ pc.setRemoteDescription(
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> [!NOTE]
+> Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 

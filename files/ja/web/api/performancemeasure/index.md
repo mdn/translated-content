@@ -1,26 +1,33 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-**`PerformanceMeasure`** は、"`measure`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。このタイプのエントリは、{{domxref("Performance.measure","performance.measure()")}} を呼び出して、ブラウザーのパフォーマンスタイムラインの 2 つのマークの間に*名前付き* {{domxref("DOMHighResTimeStamp")}} (_measure_) を追加することによって作成されます。
+**`PerformanceMeasure`** は、{{domxref("PerformanceEntry")}} オブジェクトのうち {{domxref("PerformanceEntry.entryType","entryType")}} が "`measure`" であるものの抽象インターフェイスです。この型の項目は、{{domxref("Performance.measure","performance.measure()")}} を呼び出して、ブラウザーのパフォーマンスタイムラインの 2 つのマークの間の*名前付き* {{domxref("DOMHighResTimeStamp")}} (_範囲_) を追加することによって作成されます。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
+
+このインターフェイスは次のものを定義しています。
+
+- {{domxref("PerformanceMeasure.detail")}}
+  - : この範囲に関する任意のメタデータを格納します。
 
 このインターフェイスはプロパティを持ちませんが、以下のようにプロパティを修飾/制約することで以下の {{domxref("PerformanceEntry")}} プロパティを拡張します。
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : "`measure`" を返します。
 - {{domxref("PerformanceEntry.name")}}
-  - : メジャーが{{domxref("Performance.measure()","performance.measure()")}}の呼び出しで作成されたときにメジャーに付けられた名前を返します。
+  - : 範囲が {{domxref("Performance.measure()","performance.measure()")}} の呼び出しで作成されたときに範囲に付けられた名前を返します。
 - {{domxref("PerformanceEntry.startTime")}}
-  - : {{domxref("Performance.measure()","performance.measure()")}} が呼び出されたときにメジャーに与えられた{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+  - : {{domxref("Performance.measure()","performance.measure()")}} が呼び出されたときに範囲に与えられた{{domxref("DOMHighResTimeStamp","タイムスタンプ","",1)}}を返します。
 - {{domxref("PerformanceEntry.duration")}}
-  - : 小節の長さである {{domxref("DOMHighResTimeStamp")}} を返します (通常、小節の終了マークのタイムスタンプから開始マークのタイムスタンプを引いたもの)。
+  - : 範囲の長さである {{domxref("DOMHighResTimeStamp")}} を返します（通常、範囲の終了マークのタイムスタンプから開始マークのタイムスタンプを引いたもの）。
 
 ## メソッド
 
@@ -28,7 +35,7 @@ slug: Web/API/PerformanceMeasure
 
 ## 例
 
-[ユーザータイミング API の使用](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)の例を参照してください。
+[ユーザータイミング API の使用](/ja/docs/Web/API/Performance_API/User_timing)の例を参照してください。
 
 ## 仕様書
 
@@ -38,7 +45,7 @@ slug: Web/API/PerformanceMeasure
 
 {{Compat}}
 
-## あわせて参照
+## 関連情報
 
-- [User Timing (Overview)](/ja/docs/Web/API/User_Timing_API)
-- [Using the User Timing API](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [ユーザータイミング（概要）](/ja/docs/Web/API/Performance_API/User_timing)
+- [ユーザータイミング API の使用](/ja/docs/Web/API/Performance_API/User_timing)

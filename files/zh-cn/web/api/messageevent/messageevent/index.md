@@ -43,6 +43,6 @@ var myMessage = new MessageEvent("worker", {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("ExtendableMessageEvent")}} — 类似于此接口，但用于需要为作者提供更多灵活性的接口。

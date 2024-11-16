@@ -133,7 +133,8 @@ Pour un usage général\*, vous pouvez utiliser les fonctionnalités ES6 courant
 
 Cependant, nous ne recommandons pas encore l'utilisation générale des nouvelles fonctionnalités ES telles que [async](/fr/docs/Web/JavaScript/Reference/Statements/async_function)/[await](/fr/docs/Web/JavaScript/Reference/Operators/await), les virgules de fin sur les listes d'arguments, etc. Nous préférerions que vous ne les utilisiez pas, sauf si cela est strictement nécessaire, et si vous les utilisez, incluez une explication dans votre exemple pour dire ce qu'ils font, avec un lien vers le matériel de référence approprié.
 
-> **Note :** Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !
+> [!NOTE]
+> Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !
 
 ## Variables
 
@@ -157,7 +158,8 @@ let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 let s = d / t;
 ```
 
-> **Note :** The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
+> [!NOTE]
+> The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
 
 ### Déclaration des variables
 
@@ -377,7 +379,8 @@ function notVeryObviousName() {
 }
 ```
 
-> **Note :** Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de `i`, `j`, etc. pour les itérateurs de boucle.
+> [!NOTE]
+> Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de `i`, `j`, etc. pour les itérateurs de boucle.
 
 ### Définition des fonctions
 

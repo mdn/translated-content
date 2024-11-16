@@ -1,34 +1,46 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-请求首部 **`From`** 中包含一个电子邮箱地址，这个电子邮箱地址属于发送请求的用户代理的实际掌控者的人类用户。
+**`From`** 请求标头包含控制发起请求的用户代理的人类用户的互联网电子邮件地址。
 
-如果你在运行一个机器人代理程序（比如爬虫），那么 Form 首部应该随请求一起发送，这样的话，在服务器遇到问题的时候，例如机器人代理发送了过量的、不希望收到的或者不合法的请求，站点管理员可以联系到你。
+如果运行的是机器人用户代理（如爬虫），则必须发送 `From` 标头，以便在服务器出现问题（例如机器人发送过多、不希望收到或无效的请求）时与你联系。
 
-> **警告：** 不可以将 From 首部用于访问控制或者身份验证。
+> [!WARNING]
+> 不可以将 `From` 标头用于访问控制或身份验证。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 From: <email>
 ```
 
 ## 指令
 
 - \<email>
-  - : 一个机器可识别的电子邮箱地址。
+  - : 机器可识别的电子邮箱地址。
 
 ## 示例
 
-```plain
+```http
 From: webmaster@example.org
 ```
 
@@ -40,6 +52,6 @@ From: webmaster@example.org
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Host")}}

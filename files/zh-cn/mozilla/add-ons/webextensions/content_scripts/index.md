@@ -13,7 +13,8 @@ Content script 是你扩展的一部分，运行于一个特定的网页环境�
 
 Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它们可以使用通信系统与后台脚本进行通信，从而间接的访问 WebExtension APIS。
 
-> **备注：** content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。
+> [!NOTE]
+> content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。
 
 ## 加载 Content scripts
 
@@ -330,7 +331,8 @@ window.addEventListener("message", function (event) {
 
 完整的例子请访问该链接，[visit the demo page on GitHub](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) 并且观看以下介绍。
 
-> **警告：** 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。WebExtensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。
+> [!WARNING]
+> 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。WebExtensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。
 >
 > 做一个微小的示范，假定有如下 content script 代码：
 >
@@ -352,9 +354,11 @@ window.addEventListener("message", function (event) {
 
 ## 与页面脚本共享对象
 
-> **备注：** 这个部分的技术描述只适用于 49 版本后的 Firefox
+> [!NOTE]
+> 这个部分的技术描述只适用于 49 版本后的 Firefox
 
-> **警告：** 作为一个插件开发者你必须考虑脚本运行在任何伺机偷取用户个人隐私，破坏他们的电脑，或者使用其他方式攻击的网页上。
+> [!WARNING]
+> 作为一个插件开发者你必须考虑脚本运行在任何伺机偷取用户个人隐私，破坏他们的电脑，或者使用其他方式攻击的网页上。
 >
 > 隔离 content script 和 页面脚本 便是为了使恶意网页的攻击变得更加困难。
 >
@@ -596,22 +600,25 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-上述内容同样适用于 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout), [`setInterval()`](/zh-CN/docs/Web/API/setInterval), and [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function).
+上述内容同样适用于 {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}} 和 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 
-当在页面的上下文中运行代码时，适用于上面所提到的"[Sharing content script objects with page scripts](/zh-CN/Add-ons/WebExtensions/Content_scripts#Sharing_objects_with_page_scripts)" 这一部分的警告：页面的环境可能会被恶意的网页所控制，这可能会导致你所交互的对象会有意想不到的行为：
-
-```js
-// page.js redefines console.log
-
-var original = console.log;
-
-console.log = function () {
-  original(true);
-};
-```
-
-```js
-// content-script.js calls the redefined version
-
-window.eval("console.log(false)");
-```
+> [!WARNING]
+> 在页面的上下文中运行代码时要非常小心！
+>
+> 页面的环境由潜在的恶意网页控制，这些网页可以重新定义与你交互的对象，使其以意想不到的方式运行：
+>
+> ```js example-bad
+> // page.js 重新定义 console.log
+>
+> let original = console.log;
+>
+> console.log = () => {
+>   original(true);
+> };
+> ```
+>
+> ```js example-bad
+> // content-script.js 调用了重新定义的版本
+>
+> window.eval("console.log(false)");
+> ```

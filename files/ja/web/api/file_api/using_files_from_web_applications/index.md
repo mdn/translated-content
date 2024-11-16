@@ -286,7 +286,7 @@ function handleFiles(files) {
 
 各画像には CSS クラス `obj` が追加されており、DOM ツリーで簡単に見つけることができます。また、各画像に `file` 属性を追加し、画像の {{DOMxRef("File")}} を指定しています。これにより、後で実際にアップロードする画像を取得することができます。{{DOMxRef("Node.appendChild()")}} を使用して、文書のプレビュー領域に新しいサムネイルを追加します。
 
-次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{DOMxRef("FileReader")}} を確立します。新しい `FileReader` オブジェクトを作成した後、その `onload` 関数を設定し、`readAsDataURL()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` URL に変換され、`onload` コールバックに渡されます。このルーチンの実装では、`img` 要素の `src` 属性が読み込まれた画像に設定され、その結果、画像がユーザの画面のサムネイルに表示されます。
+次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{DOMxRef("FileReader")}} を確立します。新しい `FileReader` オブジェクトを作成した後、その `onload` 関数を設定し、`readAsDataURL()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` URL に変換され、`onload` コールバックに渡されます。このルーチンの実装では、`img` 要素の `src` 属性が読み込まれた画像に設定され、その結果、画像がユーザーの画面のサムネイルに表示されます。
 
 ## オブジェクト URL を利用する
 
@@ -308,7 +308,7 @@ URL.revokeObjectURL(objectURL);
 
 この例では、オブジェクト URL を使用して画像のサムネイルを表示しています。さらに、ファイル名やサイズなどの他のファイル情報も表示します。
 
-インターフェースとなる HTML は次のようになります。
+インターフェイスとなる HTML は次のようになります。
 
 ```html
 <input
@@ -390,13 +390,13 @@ function handleFiles() {
 
 {{EmbedLiveSample('Example_Using_object_URLs_to_display_images', '100%', '300px')}}
 
-## 例: ユーザが選択したファイルを送信
+## 例: ユーザーが選択したファイルを送信
 
 もう１つは、ユーザーが選択したファイルやファイル (先ほどの例で選択した画像など) をサーバーにアップロードできるようにすることです。これは非常に簡単に非同期で行うことができます。
 
 ### アップロードタスクの生成
 
-前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
+前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
 
 ```js
 function sendFiles() {
@@ -408,7 +408,7 @@ function sendFiles() {
 }
 ```
 
-2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
+2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
 
 ### ファイルのアップロード処理を行う
 
@@ -444,7 +444,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -588,4 +588,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

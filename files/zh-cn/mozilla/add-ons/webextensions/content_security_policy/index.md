@@ -48,7 +48,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 对插件的默认内容安全策略如下：
 
-```
+```plain
 "script-src 'self'; object-src 'self';"
 ```
 

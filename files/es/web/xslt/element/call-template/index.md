@@ -3,7 +3,7 @@ title: call-template
 slug: Web/XSLT/Element/call-template
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:call-template>` invoca una plantilla con nombre.
 

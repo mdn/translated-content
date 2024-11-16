@@ -2,7 +2,7 @@
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 7c54c3925fd50b03ea55d36b4aa383a0b7ca7493
 ---
 
 {{CSSRef}}
@@ -79,20 +79,17 @@ grid-template-columns: unset;
 
     {{cssxref("minmax", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
 
-    > **メモ:** トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
 
 - `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout){{Experimental_Inline}}
+- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [subgrid](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
-
-> **警告:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
->
-> サブグリッドの値はグリッド仕様書のレベル 2 にあり、現在のところ Firefox 71 以降でのみ実装されています。
 
 ## 公式定義
 
@@ -135,7 +132,7 @@ grid-template-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_column_sizes", "100%", "20px")}}
+{{EmbedLiveSample("グリッド列の寸法の指定", "100%", "20px")}}
 
 ## 仕様書
 
@@ -149,5 +146,5 @@ grid-template-columns: unset;
 
 - 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
 - [グリッドレイアウトガイド: グリッドレイアウトの基本概念 - グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
-- 動画チュートリアル: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
+- 動画チュートリアル: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
 - [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)

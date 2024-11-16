@@ -2,7 +2,7 @@
 title: Document：fullscreen 属性
 slug: Web/API/Document/fullscreen
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
@@ -11,7 +11,8 @@ l10n:
 
 尽管这个属性是只读的，但如果修改它，即使在严格模式下也不会抛出错误；它的 `setter` 方法是空操作将被忽略。
 
-> **备注：** 由于该属性已被弃用，你可以通过检查 {{DOMxRef("Document.fullscreenElement")}} 是否不为 `null` 来确定页面是否处于全屏模式。
+> [!NOTE]
+> 由于该属性已被弃用，你可以通过检查 {{DOMxRef("Document.fullscreenElement")}} 是否不为 `null` 来确定页面是否处于全屏模式。
 
 ## 值
 

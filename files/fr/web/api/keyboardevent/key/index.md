@@ -3,7 +3,7 @@ title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d'une ou plusieurs touches pressées par l'utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l'une des valeurs suivantes :
 
@@ -152,7 +152,8 @@ btnClearConsole.addEventListener("click", (e) => {
 
 {{EmbedLiveSample('Exemple_de_séquence_KeyboardEvent')}}
 
-> **Note :** Sur les navigateurs qui n'implémentent pas complètement l'interface {{domxref("InputEvent")}} qui est utilisée pour les événements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}}, vous pouvez obtenir une réponse incorrecte sur ces lignes du journal de sortie.
+> [!NOTE]
+> Sur les navigateurs qui n'implémentent pas complètement l'interface {{domxref("InputEvent")}} qui est utilisée pour les événements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}}, vous pouvez obtenir une réponse incorrecte sur ces lignes du journal de sortie.
 
 ### Cas 1
 

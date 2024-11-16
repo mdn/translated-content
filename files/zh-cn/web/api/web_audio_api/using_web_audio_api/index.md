@@ -3,6 +3,8 @@ title: Web Audio API 的运用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 让我们来看看 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 入门。我们将简要介绍一些概念，然后学习一个简单的允许我们加载音轨，播放暂停，改变音量和立体声声像的音箱例子。
 
 Web Audio API 并不会取代\<audio>音频元素，倒不如说它是\<audio>的补充更好，就好比如\<canvas>与\<img>共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，\<audio>或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API 提供了更多的优势以及控制。
@@ -44,7 +46,8 @@ const audioContext = new AudioContext();
 
 所以当我们这样做时会发生什么？为我们自动创建一个 {{domxref("BaseAudioContext")}} 并自动扩展到在线音频上下文。我们希望如此，因为我们想要播放在线声音。
 
-> **备注：** 如果你只是想处理音频数据，举个例子，缓存和流式传输而不播放它，你可能想要考虑创建一个 {{domxref("OfflineAudioContext")}}。
+> [!NOTE]
+> 如果你只是想处理音频数据，举个例子，缓存和流式传输而不播放它，你可能想要考虑创建一个 {{domxref("OfflineAudioContext")}}。
 
 ## 加载声音
 
@@ -54,7 +57,8 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **备注：** 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> [!NOTE]
+> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -66,7 +70,8 @@ const audioElement = document.querySelector("audio");
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **备注：** 上面的 `<audio>` 元素在 DOM 中代表了一个{{domxref("HTMLMediaElement")}} 类型的对象，拥有其自身的一组功能。这一切都将保持不变。我们只是让 Web Audio API 能够访问到声音。
+> [!NOTE]
+> 上面的 `<audio>` 元素在 DOM 中代表了一个{{domxref("HTMLMediaElement")}} 类型的对象，拥有其自身的一组功能。这一切都将保持不变。我们只是让 Web Audio API 能够访问到声音。
 
 ## 控制声音
 
@@ -141,7 +146,8 @@ Firefox 有一个名为 [Web Audio editor](/zh-CN/docs/Tools/Web_Audio_Editor) �
 
 ![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](web-audio-editor.png)
 
-> **备注：** Web Audio 编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中 Default Developer Tools 部分中的 Web Audio 复选框来显示它。
+> [!NOTE]
+> Web Audio 编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中 Default Developer Tools 部分中的 Web Audio 复选框来显示它。
 
 ## 修改声音
 
@@ -171,7 +177,8 @@ track.connect(gainNode).connect(audioContext.destination);
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
 ```
 
-> **备注：** 范围输入 (Range Input) 是更新音频节点值非常方便的输入类型。你可以指定特定的范围值同时直接将它们作为音频参数一起使用。
+> [!NOTE]
+> 范围输入 (Range Input) 是更新音频节点值非常方便的输入类型。你可以指定特定的范围值同时直接将它们作为音频参数一起使用。
 
 所以当用户更改输入节点值时，获取此输入值并更新增益值：
 
@@ -187,7 +194,8 @@ volumeControl.addEventListener(
 );
 ```
 
-> **备注：** 节点对象的值（例如， `GainNode.gain` ）不是简单值；它们实际上是 {{domxref("AudioParam")}} 类型对象 — 这些被称为参数。这也是为什么我们需要设置 `GainNode.gain` 的 `value` 属性，而不是直接设置 `gain` 的值。这使得它们更加的灵活，允许传入一系列特定的值以在例如一段时间内改变。
+> [!NOTE]
+> 节点对象的值（例如， `GainNode.gain` ）不是简单值；它们实际上是 {{domxref("AudioParam")}} 类型对象 — 这些被称为参数。这也是为什么我们需要设置 `GainNode.gain` 的 `value` 属性，而不是直接设置 `gain` 的值。这使得它们更加的灵活，允许传入一系列特定的值以在例如一段时间内改变。
 
 好的，现在用户可以更新音频的音量！如果你要增加静音功能，增益节点是可使用的完美节点。
 
@@ -210,7 +218,8 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **备注：** 目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。
+> [!NOTE]
+> 目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。
 
 这里我们的范围从 -1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
 
@@ -264,7 +273,8 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 ## 基础概念
 
-> **备注：** 很多的代码碎片来自于这个例子 [Violent Theremin example](https://github.com/mdn/violent-theremin).
+> [!NOTE]
+> 很多的代码碎片来自于这个例子 [Violent Theremin example](https://github.com/mdn/violent-theremin).
 
 Web Audio API 包含在音频上下文的处理音频操作，以及已被设计允许模块化路由。基本音频操作可通过音频节点进行，这些节点连接在一起，组成一个音频的路由表。多个音源——带有不同类型的频道配置——甚至可以被一个上下文支持。这个模块设计提供了创造带有动态效果的复杂音频功能的灵活性。
 
@@ -288,7 +298,8 @@ Web Audio API 包含在音频上下文的处理音频操作，以及已被设计
 var audioCtx = new AudioContext();
 ```
 
-> **备注：** 同样一个文档是可以存在多个 audioContext 对象的，但是比较浪费。
+> [!NOTE]
+> 同样一个文档是可以存在多个 audioContext 对象的，但是比较浪费。
 
 然而，提供一个版本前缀对于 webkit/Blink 浏览器是很重要的，对于 Firefox(桌面版/手机版/OS 版) 是不需要的。如下：
 
@@ -296,7 +307,8 @@ var audioCtx = new AudioContext();
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 ```
 
-> **备注：** 当创建一个新的 conText 对象时，如果你不提示 window 对象，Safari 会无效。
+> [!NOTE]
+> 当创建一个新的 conText 对象时，如果你不提示 window 对象，Safari 会无效。
 
 ### 创建 AudioSource
 
@@ -314,9 +326,11 @@ var oscillator = audioCtx.createOscillator();
 var gainNode = audioCtx.createGain();
 ```
 
-> **备注：** 为了直接播放一个音乐文件，你通常通过 XHR 来加载文件，通过 Buffer 来解码，创建 BufferSource. 看这个 [例子来自于 Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68).
+> [!NOTE]
+> 为了直接播放一个音乐文件，你通常通过 XHR 来加载文件，通过 Buffer 来解码，创建 BufferSource. 看这个 [例子来自于 Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68).
 
-> **备注：** Scott Michaud 已经写了一个有用的库来加载和解码一个或多个音频实例，被称为 [AudioSampleLoader](https://github.com/ScottMichaud/AudioSampleLoader). 这个可以帮助简化 XHR/buffering 的处理操作。
+> [!NOTE]
+> Scott Michaud 已经写了一个有用的库来加载和解码一个或多个音频实例，被称为 [AudioSampleLoader](https://github.com/ScottMichaud/AudioSampleLoader). 这个可以帮助简化 XHR/buffering 的处理操作。
 
 ### 连接输入输出
 
@@ -344,8 +358,6 @@ gainNode.connect(audioCtx.destination);
 这个将会创造一个如下音频节点图：
 
 ![](voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
-
-> **备注：** Firefox32 以上版本已有完整的 firefox 开发者工具包括 [Web Audio Editor](/zh-CN/docs/Tools/Web_Audio_Editor), 一个对测试 web audio 表的 bug 非常有用的东西。
 
 ### 播放音乐及设置音调
 

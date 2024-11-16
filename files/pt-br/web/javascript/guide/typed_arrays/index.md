@@ -121,7 +121,8 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 Então você pode acessar, por exemplo, o devido valor com `amountDueView[0]`.
 
-> **Nota:** O [alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
+> [!NOTE]
+> O [alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
 
 ### Conversão para arrays normais
 

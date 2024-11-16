@@ -90,7 +90,8 @@ L'attribut `pattern` est une expression rationnelle que doit respecter la valeur
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
-> **Note :** L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation d'un motif de validation](#utiliser_un_motif_de_validation) pour plus de détails et un exemple.
 
@@ -100,13 +101,15 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Element/Input) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript qui définirait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 
@@ -227,7 +230,8 @@ La taille physique du champ de saisie peut être adaptée grâce à l'attribut [
 
 Les éléments `<input>` de type `text` ne possède pas de mécanisme de validation automatique. En revanche, il est possible d'ajouter certaines contraintes qui seront vérifiées côté client et que nous allons voir ici.
 
-> **Note :** La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
+> [!NOTE]
+> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
 
 ### Un aparté sur la mise en forme
 
@@ -354,7 +358,8 @@ Voici le résultat qui est alors obtenu&nbsp;:
 
 Si vous essayez d'envoyer le formulaire avec un nom d'utilisateur plus court (que 4 caractères), le navigateur affichera un message d'erreur. De plus le navigateur empêchera de saisir une valeur plus longue que 8 caractères.
 
-> **Note :** Si on indique `minlength` mais pas `required`, la valeur saisie est considérée comme valide car l'utilisatrice ou l'utilisateur peut ne pas saisir de valeur.
+> [!NOTE]
+> Si on indique `minlength` mais pas `required`, la valeur saisie est considérée comme valide car l'utilisatrice ou l'utilisateur peut ne pas saisir de valeur.
 
 ### Utiliser un motif de validation
 

@@ -47,7 +47,7 @@ Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, i
 
 Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :
 
-**manifest.json**
+**manifest.json:**
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une pa
 }
 ```
 
-**background-page.html**
+**background-page.html:**
 
 ```html
 <!doctype html>
@@ -75,7 +75,8 @@ Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une pa
 
 Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une [`fenêtre`](/fr/docs/Web/API/Window) globale, ainsi que toutes les API DOM standard fournies par cet objet.
 
-> **Attention :** Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm), ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
+> [!WARNING]
+> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm), ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
 
 #### APIs des WebExtensions
 

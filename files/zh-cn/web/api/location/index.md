@@ -74,6 +74,6 @@ console.log(url.origin); // https://developer.mozilla.org
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - Two methods creating such an object: {{domxref("Window.location")}} and {{domxref("Document.location")}}.

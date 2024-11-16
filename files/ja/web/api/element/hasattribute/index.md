@@ -21,7 +21,7 @@ hasAttribute(name)
 - `name`
   - : 属性の名前を示す文字列です。
 
-### 引数
+### 返値
 
 論理値です。
 
@@ -33,10 +33,6 @@ if (foo.hasAttribute("bar")) {
   // do something
 }
 ```
-
-## メモ
-
-{{DOMAttributeMethods}}
 
 ## 仕様書
 

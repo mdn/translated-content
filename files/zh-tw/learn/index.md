@@ -11,7 +11,8 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 如果你是完全的新手，那 Web 開發過程可能頗有難度。我們希望能帶領你輕鬆學習，另提供相關細節以培養你的正確觀念。不論你是要學習 Web 開發（自學或參與課程）的學生、尋找教材的老師、純粹興趣使然的業餘工程師，甚至只是想進一步了解 Web 技術的人，都希望你在這裡就像在家裡一樣自在。
 
-> **警告：** 此學習專區將定期新增更多資訊。如果你希望能納入其他自己感興趣的主題，或覺得某個地方尚有缺漏，請到下方的[聯絡我們](#聯絡我們)尋找相關資訊並取得聯繫。
+> [!WARNING]
+> 此學習專區將定期新增更多資訊。如果你希望能納入其他自己感興趣的主題，或覺得某個地方尚有缺漏，請到下方的[聯絡我們](#聯絡我們)尋找相關資訊並取得聯繫。
 
 ## 入門
 
@@ -20,7 +21,8 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 - 基礎以外：如果你已經具備基本知識，則下一步就是了解 {{glossary("HTML")}} 與 {{glossary("CSS")}} 的細節。可從[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)模組著手，再進到[CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)。
 - 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn/JavaScript/First_steps)與[伺服器端程式設計起步走](/zh-TW/docs/Learn/Server-side/First_steps)開始吧。
 
-> **備註：** 我們的[字彙庫](/zh-TW/docs/Glossary)另提供專有名詞的定義。
+> [!NOTE]
+> 我們的[字彙庫](/zh-TW/docs/Glossary)另提供專有名詞的定義。
 
 ## 涵蓋主題
 
@@ -75,7 +77,7 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 如果你想向我們詢問任何事情，最快的方式就是透過[學習專區討論串](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [IRC 頻道](/zh-TW/docs/MDN/Community/Conversations#Chat_in_IRC)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
 
-如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Contribute)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
+如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Community/Contributing)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
 
 ## 另可參閱
 

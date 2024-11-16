@@ -3,7 +3,7 @@ title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
 
@@ -92,9 +92,9 @@ browser.downloads.onChanged.addListener(handleChanged);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onChanged) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

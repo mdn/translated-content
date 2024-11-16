@@ -1,15 +1,17 @@
 ---
-title: IntersectionObserver.takeRecords()
+title: "IntersectionObserver: takeRecords() メソッド"
+short-title: takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは、対象となる要素のうち、前回交差状態がチェックされた、すなわち明示的にこのメソッドが呼び出されたか、自動的にオブザーバーのコールバックが呼び出された以降に交差状態が変化した要素を、要素ごとに 1 つの {{domxref("IntersectionObserverEntry")}} オブジェクトとした配列を返します。
+{{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。それぞれのオブジェクトは、前回明示的にこのメソッドが呼び出されるか、暗黙的にオブザーバーのコールバックが自動的に呼び出されて交差状態がチェックされたときから変更されたそれぞれの対象要素を表します。
 
-> **メモ:** コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
+> [!NOTE]
+> コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
 
 ## 構文
 
@@ -23,7 +25,7 @@ takeRecords()
 
 ### 返値
 
-ルートとの交差状態が最後に調べられた時点以降に変更された対象要素ごとに 1 つの {{domxref("IntersectionObserverEntry")}} オブジェクトとした配列。
+ルートとの交差状態が最後に調べられた時点以降に変更された対象要素ごとに 1 つずつ {{domxref("IntersectionObserverEntry")}} オブジェクトが入った配列。
 
 ## 仕様書
 

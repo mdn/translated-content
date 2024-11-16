@@ -23,8 +23,10 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 下面的例子允许拖拽一个段落的内容：
 
-```
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+```html
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -33,14 +35,17 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性可在任意元素上设置，包括图像和链接。然而，对于后两者，该属性的默认值是 `true`，所以你只会在禁用这二者的拖拽时使用到 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性，将其设置为 `false`。
 
-> **备注：** 当一个元素被设置成可拖拽时，元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。
+> [!NOTE]
+> 当一个元素被设置成可拖拽时，元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。
 
 ## 开始拖拽操作
 
 这个例子使用 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性为 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件添加监听程序。
 
-```
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+```html
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -230,7 +235,8 @@ function doDragOver(event) {
 
 在这个例子中，当带有 `droparea` 类的元素是一个有效的放置目标时，即在该元素的 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法时，元素会出现一个 1 像素的黑色轮廓。
 
-> **备注：** 要使这个伪类生效，你必须在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件（译者注：即在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做“-moz-drag-over”）。
+> [!NOTE]
+> 要使这个伪类生效，你必须在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件（译者注：即在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做“-moz-drag-over”）。
 
 对于更复杂的视觉效果，你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中执行其他操作。例如在放置位置插入一个元素，这样的元素可以表示一个插入标记，或表示被拖拽的元素移动到了新位置。为此你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中创建一个新元素，然后将其插入到文档中。
 
@@ -248,7 +254,7 @@ function doDragOver(event) {
 
 在所有拖拽操作相关的事件中，事件的 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
 
-```
+```js
 function onDrop(event) {
   const data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
@@ -264,16 +270,17 @@ function onDrop(event) {
 
 你可以取回其他类型的数据。如果数据是一个链接，其类型应为 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。你可以将链接插入到内容中。
 
-```
+```js
 function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
-  lines.filter(line => !line.startsWith("#"))
-    .forEach(line => {
+  lines
+    .filter((line) => !line.startsWith("#"))
+    .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
       event.target.appendChild(link);
-    })
+    });
   event.preventDefault();
 }
 ```
@@ -294,10 +301,16 @@ var link = event.dataTransfer.getData("URL");
 
 下面的例子返回格式支持最佳的数据：
 
-```
+```js
 function doDrop(event) {
-  const supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  const types = event.dataTransfer.types.filter(type => supportedTypes.includes(type));
+  const supportedTypes = [
+    "application/x-moz-file",
+    "text/uri-list",
+    "text/plain",
+  ];
+  const types = event.dataTransfer.types.filter((type) =>
+    supportedTypes.includes(type),
+  );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
   }

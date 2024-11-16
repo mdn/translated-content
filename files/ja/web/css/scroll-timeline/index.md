@@ -1,102 +1,62 @@
 ---
-title: "@scroll-timeline"
+title: scroll-timeline
 slug: Web/CSS/scroll-timeline
+l10n:
+  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
-**`@scroll-timeline`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、分や秒ではなく、スクロールコンテナー内のスクロールの進行状況によって時間値を決定する [`AnimationTimeline`](/ja/docs/Web/API/AnimationTimeline) を定義するものです。アニメーションタイムラインは [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) と `animation-timeline` プロパティによってと関連付けられます。
+**`scroll-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインを定義するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。スクロール開始位置は 0% の進行を表し、スクロール終了位置は 100% の進行を表します。 0% の位置と 100% の位置が一致する場合（つまり、スクロールコンテナーがスクロールするオーバーフローがない場合）、タイムラインは非アクティブになります。
+
+`scroll-timeline` には 2 つのコンテナー値、名前付きスクロール進行タイムラインの名前と、オプションのスクロール軸の値を指定することができます。
+
+この名前は、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
+
+> [!NOTE]
+> スクローラーが軸方向の寸法でコンテナーをオーバーフローしない場合、またはオーバーフローが非表示またはクリッピングされている場合、タイムラインは作成されません。
+
+## 構成要素のプロパティ
+
+このプロパティは以下の CSS プロパティの一括指定です。
+
+- [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis)
 
 ## 構文
 
 ```css
-@scroll-timeline moveTimeline {
-  source: auto;
-  orientation: vertical;
-  scroll-offsets: 0px, 500px;
-}
+/* 2 つの値: それぞれ scroll-timeline-name と scroll-timeline-axis が 1 つずつ */
+scroll-timeline: --custom_name_for_timeline block;
+scroll-timeline: --custom_name_for_timeline inline;
+scroll-timeline: --custom_name_for_timeline y;
+scroll-timeline: --custom_name_for_timeline x;
+scroll-timeline: none block;
+scroll-timeline: none inline;
+scroll-timeline: none y;
+scroll-timeline: none x;
+
+/* 1 つの値: scroll-timeline-name */
+scroll-timeline: none;
+scroll-timeline: --custom_name_for_timeline;
 ```
+
+`scroll-timeline` 一括指定プロパティは `<scroll-timeline-name>` と `<scroll-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、`<scroll-timeline-name>` 値の後に `<scroll-timeline-axis>` 値が続くようにしなければなりません。
+
+> **メモ:** `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
 
 ### 値
 
-- {{cssxref("custom-ident")}}
+- `<scroll-timeline-name>`
 
-  - : スクロールタイムラインを識別する名前です。この名前はスクロールタイムラインを [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで指定する際に使用されます。
+  - : [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name) を参照してください。
 
-- `source`
+- `<scroll-timeline-axis>`
+  - : [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis) を参照してください。既定値は `block` です。
 
-  - : スクロール可能な要素で、そのスクロール位置がタイムラインの進捗を駆動します。以下のいずれかになります。
+## 公式定義
 
-    - `auto`
-
-      - : 現在のグローバル [Window オブジェクト](/ja/docs/Web/API/Window) に関連付けられた `Document` です。
-
-    - `selector("id-selector")`
-
-      - : 要素の id で識別されるスクロールコンテナーです。
-
-    - `none`
-      - : スクロールコンテナーが指定されていません。
-
-- `orientation`
-
-  - : スクロールタイムラインの向きです。
-
-    - `auto`
-
-      - : 既定の `vertical` となります。
-
-    - `block`
-
-      - : 書字方向に応じて、ブロック軸に沿ったスクロール位置を使用します。
-
-    - `inline`
-
-      - : 書字方向に応じて、インライン軸に沿ったスクロール位置を使用します。
-
-    - `horizontal`
-
-      - : 書字方向に関係なく、水平スクロール位置を使用します。
-
-    - `vertical`
-      - : 書字方向に関係なく、垂直スクロール位置を使用します。
-
-- `scroll-offsets`
-
-  - : スクロールタイムラインのスクロールオフセットを指定します。
-
-    - `none`
-      - : スクロールオフセットを指定しません。
-    - `<length-percentage>`
-      - : カンマで区切った [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) 値のリストです。
-    - `<element-offset>`
-      - : スクロールオフセットを定める要素の位置です。offset.
-
-## 解説
-
-スクロールタイムラインを使用するには、 `@scroll-timeline` ルールを作成します。これは {{cssxref("animation-timeline")}} プロパティによって、アニメーションのタイムラインをそのタイムライン宣言と照合するために使われます。
-
-それぞれの `@scroll-timeline` ルールには、スクロールタイムラインのソース、方向、スクロールオフセットを決定するためのプロパティが含まれています。
-
-### スクロールオフセット
-
-`scroll-offset` プロパティは、スクロールの中でアニメーションが発生する場所を決定します。これは、 3 つの方法のうちの 1 つで設定することができます。
-
-1. CSS のキーワード `none` を使用します。これは `scroll-offset` が指定されないことを意味します。
-
-2. [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) の値のカンマ区切りのリストで決定します。それぞれの値は {{cssxref('animation-duration')}} に対して対応付けされます。例えば、 `animation-duration` が `2s` で、スクロールオフセットが `0px, 30px, 100px` に設定されている場合、 1s ではスクロールオフセットは 30px となります。通常、スムーズなスクロールアニメーションのためには、ここで `0px, 100px` のような 2 つの値を使用します。
-
-3. スクロールオフセットを決定する 3 つ目の方法は、要素のオフセットを使用することです。これは、ページ内の要素を指定し、その位置によってスクロールタイムラインを決定し、その要素のどの端を使用するかを決定することを意味します。要素の指定は `selector()` 関数で行い、関数は要素の id を受け取ります。エッジはキーワード `start` または `end` によって決定されます。オプションで `0–1` の間の閾値を指定することができます。これは、 `source` に表示される要素のうち、どの程度の割合で表示されるかを表します。
-
-```css
-@scroll-timeline element-move {
-  source: auto;
-  orientation: vertical;
-  scroll-offsets:
-    selector(#myElement) start 0,
-    selector(#myElement) end 0;
-}
-```
+{{cssinfo}}
 
 ## 形式文法
 
@@ -104,59 +64,79 @@ slug: Web/CSS/scroll-timeline
 
 ## 例
 
-### 単純な例
+### 名前付きスクロール進行タイムラインのアニメーションの作成
 
-この例では、コンテナーが垂直方向にスクロールされると回転する正方形を表示します。スクロールできるように、高さが固定された要素 (`#container`) を作成します。これが `source` 要素です。
-
-このコンテナーの中に、別の要素 (`#square`) を作成します。この要素は正方形のように見えるように適切なスタイルが設定されています。この要素には、 {{cssxref('@keyframes')}} ルールと `animation-name` プロパティを使用して、回転アニメーションを適用しています。
-
-`@scroll-timeline` を `squareTimeline` という名前で作成し、`source` をコンテナー、`orientation` を `vertical` 、`scroll-offset` を `0px` から `300px` （コンテナーの高さ）までに設定しています。そして、`scroll-timeline` プロパティを使用して、これを正方形に適用します。
+この例では、`--squareTimeline` という名前のスクロールタイムラインを `container` という ID の要素に `scroll-timeline-name` プロパティを使用して定義しています。
+これを `#square` 要素のアニメーションに適用するには、 `animation-timeline: --squareTimeline` を使用します。
 
 #### HTML
+
+この例の HTML は次の通りです。
 
 ```html
 <div id="container">
   <div id="square"></div>
+  <div id="stretcher"></div>
 </div>
 ```
 
 #### CSS
 
+コンテナー用の CSS では、`--squareTimeline` という名前のスクロールタイムラインのソースとして、`scroll-timeline-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/Web/CSS/scroll-timeline-axis)は定義しません。
+
+コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stretcher` 要素の CSS `height` ルールはコンテンツをコンテナーからはみ出させます）。
+
 ```css
 #container {
   height: 300px;
+  overflow-y: scroll;
+  scroll-timeline: --squareTimeline y;
+  /* Firefox supports the older "vertical" syntax */
+  scroll-timeline: --squareTimeline vertical;
+  position: relative;
 }
+```
 
+下記の CSS は `animation-timeline` プロパティで指定されたタイムラインに従って回転する正方形を定義しています（このプロパティは上記の `--squareTimeline` タイムラインに設定されています）。
+
+```css
 #square {
   background-color: deeppink;
   width: 100px;
   height: 100px;
-  margin-top: 100px;
   animation-name: rotateAnimation;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-timeline: squareTimeline;
+  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
+  animation-timeline: --squareTimeline;
+  position: absolute;
+  bottom: 0;
 }
 
-@scroll-timeline squareTimeline {
-  source: selector("#container");
-  orientation: "vertical";
-  scroll-offsets: 0px, 300px;
+#stretcher {
+  height: 600px;
+  background: #dedede;
 }
 
 @keyframes rotateAnimation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 ```
 
+`stretcher` の CSS ルールでは、ブロックの高さを `600px` に設定します。これにより、コンテナー要素をはみ出すコンテンツが作成され、スクロールバーが作成されます。
+この要素がなければ、コンテナーからコンテンツがはみ出さないので、スクロールバーが存在せず、したがってアニメーションタイムラインに関連付けるスクロールタイムラインも存在しません。
+
 #### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+垂直バーをスクロールすると、正方形がアニメーションします。
+
+{{EmbedLiveSample("Creating_a_named_scroll_progress_timeline_animation", "100%", "320px")}}
+
+正方形はスクロールに合わせてアニメーションし、 `scroll-timeline` を使用した場合のアニメーション時間はスクロール速度に依存します（それにもかかわらず、 `animation-duration` プロパティが定義されているので、スクロール駆動アニメーションを確認することができます）。
 
 ## 仕様書
 
@@ -168,5 +148,7 @@ slug: Web/CSS/scroll-timeline
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [Practical use cases for scroll-linked animations in CSS with scroll timelines](https://css-tricks.com/practical-use-cases-for-scroll-linked-animations-in-css-with-scroll-timelines/)
+- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- {{cssxref("timeline-scope")}}
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

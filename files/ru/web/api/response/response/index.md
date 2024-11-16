@@ -48,7 +48,7 @@ var myResponse = new Response(myBlob, init);
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

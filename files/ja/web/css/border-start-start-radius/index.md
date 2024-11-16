@@ -23,6 +23,8 @@ border-start-start-radius: revert;
 border-start-start-radius: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
+
 このプロパティは、要素の block-start と inline-start の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-left-radius")}} プロパティに対応します。
 
 ## 構文

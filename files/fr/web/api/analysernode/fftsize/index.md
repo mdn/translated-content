@@ -9,7 +9,8 @@ La propriété `fftSize` de l'objet {{ domxref("AnalyserNode") }} est un nombre 
 
 La valeur de la propriété `fftSize` property's doit être une puissance de 2 non nulle située dans l'intervalle compris entre `32` et 32768 ; sa valeur par défaut est `2048`.
 
-> **Note :** Si la valeur n'est pas une puissance de 2, ou si elle ne se trouve pas dans l'intervalle spécifiée, l'exception `INDEX_SIZE_ERR` est levée.
+> [!NOTE]
+> Si la valeur n'est pas une puissance de 2, ou si elle ne se trouve pas dans l'intervalle spécifiée, l'exception `INDEX_SIZE_ERR` est levée.
 
 ## Syntaxe
 

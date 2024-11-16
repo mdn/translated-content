@@ -478,7 +478,8 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 600) }}
 
-> **참고:** 마지막 열 또는 행 라인을 상대로 `-1` 값을 사용할 수 있으며, 음수값을 사용하여 끝에서 안쪽으로 카운트할 수도 있습니다. 줄은 항상 [implicit grid](/ko/docs/Glossary/Grid)가 아닌 명시적 격자의 가장자리부터 계산된다는 점에 유의하세요.
+> [!NOTE]
+> 마지막 열 또는 행 라인을 상대로 `-1` 값을 사용할 수 있으며, 음수값을 사용하여 끝에서 안쪽으로 카운트할 수도 있습니다. 줄은 항상 [implicit grid](/ko/docs/Glossary/Grid)가 아닌 명시적 격자의 가장자리부터 계산된다는 점에 유의하세요.
 
 ## grid-template-areas로 위치잡기
 

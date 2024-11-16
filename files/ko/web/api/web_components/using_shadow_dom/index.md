@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_shadow_DOM
 
 웹 컴포넌트의 중요한 측면은 캡슐화입니다. 캡슐화를 통해 마크업 구조, 스타일, 동작을 숨기고 페이지의 다른 코드로부터의 분리하여 각기 다른 부분들이 충돌하지 않게 하고, 코드가 깔끔하게 유지될 수 있게 합니다. Shadow DOM API는 캡슐화의 핵심 파트이며, 숨겨진 분리된 DOM을 요소에 부착하는 방법을 제공합니다. 이 문서는 Shadow DOM 사용의 기본을 다룹니다.
 
-> **참고:** Shadow DOM은 Firefox (63 이상), Chrome, Opera, Safari에서 기본으로 지원됩니다. 새로운 Chromium 기반의 Edge (79 이상) 또한 Shadow DOM을 지원하나 구버전 Edge는 그렇지 않습니다.
+> [!NOTE]
+> Shadow DOM은 Firefox (63 이상), Chrome, Opera, Safari에서 기본으로 지원됩니다. 새로운 Chromium 기반의 Edge (79 이상) 또한 Shadow DOM을 지원하나 구버전 Edge는 그렇지 않습니다.
 
 ## 중요 내용 보기
 

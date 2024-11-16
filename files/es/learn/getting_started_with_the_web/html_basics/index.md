@@ -50,7 +50,8 @@ Un atributo debe tener siempre:
 
 Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.
 
-> **Nota:** el atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres `"` `'` `` ` `` `=` `<` `>`) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.
+> [!NOTE]
+> El atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres `"` `'` `` ` `` `=` `<` `>`) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.
 
 ### Anidar elementos
 
@@ -125,7 +126,8 @@ La frase clave acerca del texto alt de arriba es «texto que debería describir 
 
 Prueba a dar con mejores textos alt para tu imagen.
 
-> **Nota:** Descubre más acerca de la accesibilidad en el [módulo de aprendizaje sobre la accesibilidad](/es/docs/Web/Accessibility).
+> [!NOTE]
+> Descubre más acerca de la accesibilidad en el [módulo de aprendizaje sobre la accesibilidad](/es/docs/Web/Accessibility).
 
 ## Marcado de texto
 
@@ -144,7 +146,8 @@ Los elementos de encabezado permiten especificar que ciertas partes del contenid
 
 Intenta ahora añadir un título apropiado para tu página HTML, antes de tu elemento {{htmlelement("img")}}.
 
-> **Nota:** verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn/Accessibility/HTML#Contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#¿Por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
+> [!NOTE]
+> Verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn/Accessibility/HTML#Contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#¿Por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
 
 ### Párrafos
 

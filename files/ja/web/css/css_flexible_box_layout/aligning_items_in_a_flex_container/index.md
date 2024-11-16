@@ -1,13 +1,15 @@
 ---
 title: フレックスコンテナー内のアイテムの配置
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+l10n:
+  sourceCommit: 3c7e928f332191b153c40a6ade88fb5815c92b99
 ---
 
 {{CSSRef}}
 
-フレックスボックスがウェブ開発者の関心を急速に集めた理由の一つに、ウェブコンテンツで適切な位置合わせができる初めての機能であってことが挙げられます。正しい縦の位置合わせが可能になったことで、ついにボックスの中央寄せを簡単にできるようになりました。このガイドでは、フレックスボックスにおいて位置合わせや行端揃えのプロパティがどのように働くかを詳しくみていきます。
+フレックスボックスがウェブ開発者の関心を急速に集めた理由の一つに、ウェブコンテンツで適切な配置ができる初めての機能であってことが挙げられます。正しい垂直方向の配置が可能になったことで、ついにボックスの中央寄せを簡単にできるようになりました。このガイドでは、フレックスボックスにおいて配置や行端揃えのプロパティがどのように働くかを詳しくみていきます。
 
-ボックスを中央寄せするには、`align-items` プロパティを使って交差軸上 (今回の場合は縦軸上) の位置合わせをし、`justify-content` プロパティで主軸上 (今回の場合は横軸上) の位置合わせをします。
+ボックスを中央寄せするには、`align-items` プロパティを使って交差軸上（今回の場合は縦軸上）の配置をし、`justify-content` プロパティで主軸上（今回の場合は横軸上）の配置をします。
 
 ![内部に中央寄せされたボックスを持つコンテナー要素](align1.png)
 
@@ -19,19 +21,19 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 本ガイドで扱うプロパティは以下のとおりです。
 
-- {{cssxref("justify-content")}} — 全アイテムの主軸上の配置を制御する。
-- {{cssxref("align-items")}} — 全アイテムの交差軸上の配置を制御する。
-- {{cssxref("align-self")}} — 個別のフレックスアイテムごとに交差軸上の配置を制御する
-- {{cssxref("align-content")}} — 仕様では「フレックス行のパッキング (packing flex lines)」と説明されている。交差軸上でのフレックス行間の余白を制御する。
-- {{cssxref("gap")}}, {{cssxref("column-gap")}}, {{cssxref("row-gap")}} — フレックスアイテム間に間隔または溝を生成するために使用する。
+- {{cssxref("justify-content")}} — 全アイテムの主軸上の配置を制御します。
+- {{cssxref("align-items")}} — 全アイテムの交差軸上の配置を制御します。
+- {{cssxref("align-self")}} — 個別のフレックスアイテムごとに交差軸上の配置を制御します。
+- {{cssxref("align-content")}} — 仕様では「フレックス行のパッキング (packing flex lines)」と説明されている。交差軸上でのフレックス行間の余白を制御します。
+- {{cssxref("gap")}}, {{cssxref("column-gap")}}, {{cssxref("row-gap")}} — フレックスアイテム間にすき間または溝を生成するために使用します。
 
-また、auto マージンがフレックスボックスでの位置合わせにどのように使えるかについても触れます。
+また、auto マージンがフレックスボックスでの配置にどのように使えるかについても触れます。
 
 ## 交差軸
 
-`align-items` プロパティと `align-self` プロパティは、交差軸 (cross axis: `flex-direction` が `row` のときは列に沿った、または `flex-direction` が `column` のときは行に沿った軸) 上でのフレックスアイテムの配置を制御します。
+`align-items` プロパティと `align-self` プロパティは、交差軸 (cross axis) 上のフレックスアイテムの位置を制御します。 `flex-direction` が `row` のときは列を下り、 `flex-direction` が `column` のときは行方向です。
 
-もっとも単純なフレックスの例で、交差軸上の位置合わせを試してみましょう。`display: flex` をコンテナーに設定すると、子要素はすべてフレックスアイテムになり、一行に配置されます。このフレックスアイテムはすべて、最も高さのあるアイテムと同じ高さになるように伸張しますので、最も高さのあるアイテムが交差軸上のアイテムの高さを定義することになります。フレックスコンテナーに高さが設定されている場合は、アイテム内のコンテンツの大きさにかかわらず、コンテナーの高さまでアイテムが伸張します。
+もっとも単純なフレックスの例で、交差軸上の配置を試してみましょう。`display: flex` をコンテナーに設定すると、子要素はすべてフレックスアイテムになり、一行に配置されます。このフレックスアイテムはすべて、最も高さのあるアイテムと同じ高さになるように引き伸ばされますので、最も高さのあるアイテムが交差軸のアイテムの高さを定義することになります。フレックスコンテナーに高さが設定されている場合は、アイテム内のコンテンツの大きさにかかわらず、コンテナーの高さまでアイテムが引き伸ばされます。
 
 ![3 つのアイテムがあり、うち 1 つのアイテムには他よりも高くなる要因となる追加のテキストがある。](align2.png)
 
@@ -51,11 +53,11 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
 
-### `align-self` で個別のアイテムを位置合わせ
+### `align-self` で個別のアイテムを配置
 
-`align-items` プロパティはすべてのアイテムの `align-self` プロパティをまとめて設定します。つまり、`align-self` プロパティでは 1 つずつ個別のアイテムを対象として指定できます。`align-self` プロパティには、`align-items` プロパティに使えるすべての値と、それに加えてフレックスコンテナーで定義した値にリセットするための `auto` を使うことができます。
+`align-items` プロパティは、すべてのアイテムの `align-self` プロパティをまとめて設定します。つまり、 `align-self` プロパティでは 1 つずつ個別のアイテムを対象として指定できます。 `align-self` プロパティには、 `align-items` プロパティに使えるすべての値と、それに加えてフレックスコンテナーで定義した値にリセットするための `auto` を使うことができます。
 
-次の例では、フレックスコンテナーには `align-items: flex-start` を設定していて、これはアイテムを交差軸上の始点に揃えます。`first-child` セレクターを使って最初のアイテムを対象として、 `align-self: stretch` を設定しており、また別のアイテムを `selected` クラスで選択して `align-self: center` を設定してます。 `align-items` の値を変更したり、個別のアイテムの `align-self` の値を変更して、どのように動作するかを試してみてください。
+次の例では、フレックスコンテナーには `align-items: flex-start` を設定していて、これはアイテムを交差軸上の始点に揃えます。`first-child` セレクターを使って最初のアイテムを対象として、 `align-self: stretch` を設定しており、また別のアイテムを `selected` クラスで選択して `align-self: center` を設定しています。 `align-items` の値を変更したり、個別のアイテムの `align-self` の値を変更して、どのように動作するかを試してみてください。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 
@@ -65,7 +67,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 ![3 つのアイテムがあり、1 つ目は flex-start、2 つ目は center、3 つ目は flex-end に配置されている。垂直軸上で配置されている。](align4.png)
 
-`flex-direction` を `column` に変更した場合、`align-items` と `align-self` はアイテムの左右方向での位置合わせを行うようになります。
+`flex-direction` を `column` に変更した場合、`align-items` と `align-self` はアイテムの左右方向での配置を行うようになります。
 
 ![3 つのアイテムがあり、1 つ目は flex-start、2 つ目は center、3 つ目は flex-end に配置されている。水平軸上で配置されている。](align5.png)
 
@@ -73,11 +75,11 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
 
-## 交差軸上の位置合わせ — align-content プロパティ
+## 交差軸上の配置 — align-content プロパティ
 
-ここまで、フレックスコンテナーによって定義される領域の中で、アイテム全体またはアイテム個別の位置合わせをしてきました。折り返しのある複数行のフレックスコンテナーがある場合、`align-content` プロパティを使えば行間でのスペース分配を制御できます。仕様では、これは「[フレックス行のパッキング (packing flex lines)](https://drafts.csswg.org/css-flexbox/#align-content-property)」として説明されています。
+ここまで、フレックスコンテナーによって定義される領域の中で、アイテム全体またはアイテム個別の配置をしてきました。折り返しのある複数行のフレックスコンテナーがある場合、 `align-content` プロパティを使えば行間でのスペース分配を制御できます。仕様では、これは「[フレックス行のパッキング (packing flex lines)](https://drafts.csswg.org/css-flexbox/#align-content-property)」として説明されています。
 
-`align-content` が有効に動作するためには、アイテムを表示するのに必要な高さよりもフレックスコンテナーの方が高い必要があります。このプロパティはすべてのアイテムを１つのセットとして扱い、あまりのスペースの扱いと、セットに含まれるアイテムの配置について指示します。
+`align-content` が有効に動作するためには、アイテムを表示するのに必要な高さよりもフレックスコンテナーの方が高くする必要があります。このプロパティはすべてのアイテムを 1 つのセットとして扱い、余白の扱いと、セットに含まれるアイテムの配置について指示します。
 
 `align-content` プロパティには以下の値を設定できます。
 
@@ -87,7 +89,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 - `align-content: space-between`
 - `align-content: space-around`
 - `align-content: stretch`
-- `align-content: space-evenly` (フレックスボックス仕様には含まれていない)
+- `align-content: space-evenly` （フレックスボックス仕様には含まれていない）
 
 以下の例では、フレックスコンテナーは 400 ピクセルの高さで、アイテムを表示するのに必要な高さよりも高くなっています。 `align-content` の値は `space-between` で、この場合は残る分配可能な余白 (available space) はフレックス行の*間に*分配され、フレックス行自体はコンテナーの交差軸上の始点と末尾に密着して配置されます。
 
@@ -95,17 +97,15 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
 
-列に沿った軸の時にこのプロパティの効果がどのように変わるか、`flex-direction` を `column` に変更した場合について確認してください。変更前と同様に、すべてのアイテムを表示した上で、十分に余っているスペースが交差軸上に必要です。
+列に沿った軸の時にこのプロパティの効果がどのように変わるか、 `flex-direction` を `column` に変更した場合について確認してください。変更前と同様に、すべてのアイテムを表示した上で、十分な余白が交差軸上に必要です。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
 > **メモ:** `space-evenly` はフレックスボックス仕様書では定義されておらず、あとからボックス配置仕様書に追加されたものです。この値に対するブラウザーの対応は、フレックスボックス仕様書に定義されている他の値より遅れています。
 
-上述の値についての詳細とブラウザーの対応状況については [MDN の `justify-content` のページ](/ja/docs/Web/CSS/justify-content)を参照してください。
+## 主軸上での配置
 
-## 主軸上での位置合わせ
-
-ここまで交差軸上での位置合わせがどのように動くかを見てきましたが、ここでは主軸上での位置合わせについて見ていきます。使えるプロパティは `justify-content` の一つだけです。アイテムは主軸上ではグループとしてのみ扱われるため、プロパティも一種類となります。 `justify-content` では、アイテムを表示するのに必要な分よりも大きい空間がある場合の分配可能な余白の扱いを制御できます。
+ここまで交差軸上での配置がどのように動くかを見てきましたが、ここでは主軸上での配置について見ていきます。使えるプロパティは `justify-content` の一つだけです。アイテムは主軸上ではグループとしてのみ扱われるため、プロパティも一種類となります。 `justify-content` では、アイテムを表示するのに必要な分よりも大きい空間がある場合の分配可能な余白の扱いを制御できます。
 
 コンテナーに `display: flex` を設定した最初の例では、アイテムはコンテナーの始点に一行に整列して表示されます。これは `justify-content` の初期値が `flex-start` であるためです。すべての分配可能な余白はアイテムの後ろに置かれます。
 
@@ -158,15 +158,15 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 ![上から始まり下で終わることを示す図](align10.png)
 
-`flex-direction`を逆方向の値のいずれかに変更すると、軸の末尾側から文書の言語において単語が書かれる方向と逆方向にレイアウトされます。`flex-start` はその軸の末尾側、つまりインライン方向では行を折り返す側、ブロック方向では最後の文が終わる側を示すことになります。
+`flex-direction` を逆方向の値のいずれかに変更すると、軸の末尾側から文書の言語において単語が書かれる方向と逆方向にレイアウトされます。 `flex-start` はその軸の末尾側、つまりインライン方向では行を折り返す側、ブロック方向では最後の文が終わる側を示すことになります。
 
 ![右から始まり左で終わることを示す図](align9.png)
 
 ![下から始まり上で終わることを示す図](align11.png)
 
-## 主軸上での位置合わせのための auto マージンの使用
+## auto マージンを使用した主軸上での配置
 
-主軸上ではアイテムは一つのグループとして扱われるため、`justify-items` プロパティや `justify-self` プロパティに相当するものはありません。しかし、フレックスボックスと併せて auto マージンを使ってアイテム毎の位置合わせをすれば、個別のアイテムまたは一部アイテムのグループを他のアイテムから分離して配置することができます。
+主軸上ではアイテムは一つのグループとして扱われるため、`justify-items` プロパティや `justify-self` プロパティに相当するものはありません。しかし、フレックスボックスと併せて auto マージンを使ってアイテム毎の配置をすれば、個別のアイテムまたは一部アイテムのグループを他のアイテムから分離して配置することができます。
 
 よくあるパターンは、ナビゲーションバーでいくつかのキーアイテムが右に配置され、メイングループは左に配置されるようなものです。このようなケースは `justify-self` プロパティの使いどころだと思われるでしょうが、以下の図について考えてみましょう。3 つのアイテムが片方にあり、もう一方に 2 つのアイテムがあります。もし仮に `justify-self` をアイテム _d_ に対して使うことができたとすると、意図したものであってもそうでなくても、それに続くアイテム _e_ の配置も変わってしまうでしょう。
 
@@ -178,14 +178,14 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
 
-## アイテム間に間隔を作成
+## アイテム間にすき間を作成
 
-フレックスのアイテム間に間隔を作るには、{{cssxref("gap")}}、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}の各プロパティを使用します。{{cssxref("column-gap")}} プロパティは、主軸のアイテム間に間隔を作成します。{{cssxref("row-gap")}} プロパティは、{{cssxref("flex-wrap")}} が `wrap` に設定されている場合、フレックス行間に間隔を作成します。{{cssxref("gap")}} プロパティは、両方を一緒に設定する一括指定です。
+フレックスのアイテム間にすき間を作るには、{{cssxref("gap")}}、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}の各プロパティを使用します。{{cssxref("column-gap")}} プロパティは、行内のアイテム間にすき間を作成します。{{cssxref("row-gap")}} プロパティは、{{cssxref("flex-wrap")}} が `wrap` に設定されている場合、フレックス行間にすき間を作成します。{{cssxref("gap")}} プロパティは、両方を一緒に設定する一括指定です。
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 
 ## 関連情報
 
-- [ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

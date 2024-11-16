@@ -11,6 +11,7 @@ slug: Web/API/HTMLElement/contentEditable
 
 - `"true"` 表明该元素可编辑。
 - `"false"` 表明该元素不可编辑。
+- `"plaintext-only"` 表明该元素可以纯文本格式编辑，富文本格式会被禁用。
 - `"inherit"` 表明该元素继承了其父元素的可编辑状态。
 
 ## 语法

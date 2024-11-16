@@ -7,13 +7,13 @@ slug: Web/API/Touch/Touch
 
 **`Touch()`** 构造器创建一个新的 {{domxref("Touch")}} 对象。
 
-## Syntax
+## 语法
 
-```
- touch = new Touch(touchInit);
+```js-nolint
+new Touch(options)
 ```
 
-### Arguments
+### 参数
 
 - _touchInit_
 
@@ -32,14 +32,14 @@ slug: Web/API/Touch/Touch
     - `"rotationAngle"`, 可选，默认为 0，为浮点数类型。表示由 radiusX 和 radiusY 决定的椭圆在顺时针方向相对其中心偏转的角度。这个值介于 0 到 90 度之间。如果由 radiusX 和 radiusY 决定的椭圆是一个标准圆形，则 rotationAngle 没有任何效用。用户设备可能用 0 表示这种标准圆形的情况，或者用其他符合要求范围的值来表示（比如，用户设备可能用上一次的触摸事件 rotationAngle 值，来避免突然变动）。
     - `"force"`,可选，默认为 0，为浮点数类型。表示触摸体对触摸面的压力值。范围为从 0 到 1:0 表示压力为零，1 表示设备能承受的最大压力敏感值。对压力的敏感值变动范围根据不同环境变动比较大。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("TouchEvent")}}, the interface of the objects it constructs.
+- 其构造的对象的接口：{{domxref("TouchEvent")}}。

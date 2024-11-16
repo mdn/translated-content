@@ -2,7 +2,7 @@
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
 l10n:
-  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
+  sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
 {{FirefoxSidebar}}
@@ -40,8 +40,8 @@ _変更なし。_
 
 ### CSS
 
-- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Global_attributes/part) や [`::part` 疑似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
-- [CSS モーションパス](/ja/docs/Web/CSS/CSS_Motion_Path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
+- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
+- [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
 
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
@@ -65,8 +65,8 @@ _変更なし。_
 
 #### 新規 API
 
-- {{domxref("FormDataEvent")}} および [イベントに基づくフォームへの関与](/ja/docs/Web/API/FormData/Using_FormData_Objects#formdata_イベントの使用)を既定で有効にしました ([Firefox バグ 1594708](https://bugzil.la/1594708))。
-- {{domxref("crossOriginIsolated")}} プロパティに対応しました ([Firefox バグ 1591892](https://bugzil.la/1591892))。
+- {{domxref("FormDataEvent")}} および [イベントに基づくフォームへの関与](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects#formdata_イベントの使用)を既定で有効にしました ([Firefox バグ 1594708](https://bugzil.la/1594708))。
+- {{domxref("Window.crossOriginIsolated")}} プロパティおよび {{domxref("WorkerGlobalScope.crossOriginIsolated")}} プロパティに対応しました ([Firefox バグ 1591892](https://bugzil.la/1591892))。
 
 #### DOM
 
@@ -83,16 +83,16 @@ _変更なし。_
   - {{domxref("Location.href")}}
   - {{domxref("MediaList.mediaText")}}
   - {{domxref("URL.href")}}
-  - {{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}
+  - {{domxref("WorkerLocation.href")}}
 
 #### DOM イベント
 
-- {{domxref("Notification.requestPermission()")}} および {{domxref("PushManager.subscribe()")}} が、[`click`](/ja/docs/Web/API/Element/click_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([Firefox バグ 1593644](https://bugzil.la/1593644))。
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} および {{domxref("PushManager.subscribe()")}} が、[`click`](/ja/docs/Web/API/Element/click_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([Firefox バグ 1593644](https://bugzil.la/1593644))。
 
 #### メディア、Web Audio、WebRTC
 
 - {{domxref("MediaDevices.getDisplayMedia()")}} メソッドが、[`click`](/ja/docs/Web/API/Element/click_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([Firefox バグ 1580944](https://bugzil.la/1580944))。
-- {{domxref("RTCRtpContributingSource")}} 辞書が {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} プロパティを持てるようになりました。これはパケットのメディアが生成またはサンプリングされた時点の source-generated time です ([Firefox バグ 1583867](https://bugzil.la/1583867))。
+- `RTCRtpContributingSource` 辞書が `rtpTimestamp` プロパティを持てるようになりました。これはパケットのメディアが生成またはサンプリングされた時点の source-generated time です ([Firefox バグ 1583867](https://bugzil.la/1583867))。
 
 #### 廃止
 
@@ -135,4 +135,4 @@ _変更なし。_
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(71)}}
+{{Firefox_for_developers}}

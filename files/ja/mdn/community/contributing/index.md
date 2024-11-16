@@ -2,7 +2,7 @@
 title: MDN Web Docs への協力
 slug: MDN/Community/Contributing
 l10n:
-  sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}

@@ -106,7 +106,8 @@ drawBricks();
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 
-> **참고:** 연습하기: 행과 열의 수를 바꿔서 벽돌의 수를 변경해보거나, 위치를 변경해봅시다.
+> [!NOTE]
+> 행과 열의 수를 바꿔서 벽돌의 수를 변경해보거나, 위치를 변경해봅시다.
 
 ## 다음 단계
 

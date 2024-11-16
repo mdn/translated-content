@@ -3,7 +3,7 @@ title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
 
@@ -40,7 +40,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

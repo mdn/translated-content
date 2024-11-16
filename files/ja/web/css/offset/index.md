@@ -7,7 +7,10 @@ slug: Web/CSS/offset
 
 **`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
 
-> **メモ:** 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
+> [!NOTE]
+> 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
+
+{{EmbedInteractiveExample("pages/css/offset.html")}}
 
 ## 構成要素のプロパティ
 

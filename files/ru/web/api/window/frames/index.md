@@ -28,10 +28,10 @@ for (var i = 0; i < frames.length; i++) {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

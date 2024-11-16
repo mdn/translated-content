@@ -3,7 +3,7 @@ title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Changez la description ou le raccourci clavier pour la commande donnée.
 

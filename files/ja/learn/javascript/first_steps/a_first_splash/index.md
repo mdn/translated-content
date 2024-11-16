@@ -2,7 +2,7 @@
 title: JavaScript の最初の一歩
 slug: Learn/JavaScript/First_steps/A_first_splash
 l10n:
-  sourceCommit: eab7a9c4c0d4251829e19500fa94865f9b5f56c7
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
@@ -14,11 +14,11 @@ JavaScript の理論や何ができるかを学んだところで、実践的な
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、 HTML と CSS の基本的な理解、 JavaScript とは何かを理解していること。
+        HTML と CSS の基本的な理解、 JavaScript とは何かを理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>
         JavaScript を書く最初の経験をし、少なくとも JavaScript プログラムを書くことの基本的な理解を得ること。
       </td>
@@ -28,7 +28,8 @@ JavaScript の理論や何ができるかを学んだところで、実践的な
 
 ここでは実に明確な目標を設定したいと思います。この記事の終わりまでに JavaScript を習得することや、あなたに依頼するコードをすべて理解することは期待されていません。その代わりに、 JavaScript の機能がどのように連携して動作するのか、 JavaScript を書くことがどのような感じなのか、そのイメージをつかんでもらいたいと思います。この後の記事で、ここで示した機能をすべてさらに詳しく説明しますので、すぐに理解できなくても心配しないでください。
 
-> **メモ:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、概念は大体同じです。
+> [!NOTE]
+> JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、概念は大体同じです。
 
 ## プログラマーのように考える
 
@@ -140,7 +141,8 @@ let resetButton;
 
 - 最後の 2 つの変数は、プレイヤーが予想した回数を記録するため 1 を（プレイヤーが何回予想したかの回数を追跡します）、そしてまだ存在していない（あとで追加する）リセットボタンへの参照を保持します。
 
-> **メモ:** 変数や定数についてはこのコースの間、[次の記事](/ja/docs/Learn/JavaScript/First_steps/Variables)を始めとして何度も出てきます。
+> [!NOTE]
+> 変数や定数についてはこのコースの間、[必要な情報を保管する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)を始めとして何度も出てきます。
 
 ### 関数
 
@@ -164,7 +166,8 @@ checkGuess();
 
 <kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
 
-> **メモ:** 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
+> [!NOTE]
+> 関数については後の記事、[関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)で詳しく学びます。
 
 ### 演算子
 
@@ -323,13 +326,13 @@ function checkGuess() {
   guessCount === 1;
   ```
 
-  もしそうなら、guesses の段落（{{htmlelement("p")}} 要素）の内容を `Previous guesses:` に変更します。違うなら、何もしません。
+  もしそうなら、guesses の段落のテキストの内容を `Previous guesses:` に変更します。違うなら、何もしません。
 
 - 次に、テンプレートリテラルを使用して、現在の `userGuess` 変数の値を空白と共に `guesses` の段落の末尾に追加しています。
 - 次の部分には、確認すべきことがいくつかあります。
 
   - 最初の `if(){ }` は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した `randomNumber` 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する `setGameOver()` 関数を実行します。
-  - 今度は `else if(){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
+  - 今度は `else if(){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザーの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
   - このコードに連なる最後のブロック (`else { }`) は、前の二つの条件がどちらも真とならなかった場合にのみ実行されます。(つまり、プレイヤーは間違えてはいるものの、予想回数が残っている場合です。) この場合、プレイヤーに予想が間違っていることを伝え、入力された数字が大きいか小さいかを伝えるため、さらなる条件の確認を行います。
 
 - 最後の 3 行 (26 行目～ 28 行目) は、次の予想の入力を受け取るための準備です。`guessCount` 変数に 1 を加算して、プレイヤーの予想回数を数えます。(`++` はインクリメント演算子で、1 だけインクリメント(増加)します。) そして、入力フォームのテキストフィールドを空にしてからフォーカスを当て、プレイヤーの次の入力に備えます。
@@ -460,7 +463,7 @@ guessField.focus();
 const guessField = document.querySelector(".guessField");
 ```
 
-この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクタ](/ja/docs/Learn/CSS/Building_blocks/Selectors)) を受け取ります。
+この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)) を受け取ります。
 
 `guessField` に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ（基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります）とメソッド（基本的にはオブジェクトの内部に保持されている関数のこと）にアクセスできるようになりました。ようやく input 要素のメソッドの一つである `focus()` メソッドを使ってテキストフィールドにフォーカスを当てられます。
 
@@ -485,7 +488,7 @@ guessField.focus();
 
    `value` プロパティは今のテキストフィールドに入力された値を表しています。コマンドを入力したら、テキストフィールドの値が変わりましたね！
 
-5. さらに続けて `guesses` と入力してリターンを押してみてください。コンソールには {{htmlelement("p")}} 要素を含む変数が表示されますね。
+5. さらに続けて `guesses` と入力して <kbd>Enter</kbd> （またはキーボードによっては <kbd>Return</kbd>）を押してみてください。コンソールには {{htmlelement("p")}} 要素を含む変数が表示されますね。
 6. そして次のコードを入力します。
 
    ```js

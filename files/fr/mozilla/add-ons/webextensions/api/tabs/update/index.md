@@ -3,7 +3,7 @@ title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 
@@ -120,9 +120,9 @@ querying.then(updateFirstTab, onError);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

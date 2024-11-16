@@ -7,6 +7,8 @@ slug: Web/CSS/gradient/repeating-conic-gradient
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 ([単一のグラデーション](<conic-gradient()>)ではなく) 繰り返しのグラデーションからなる、色の遷移が (中心から[放射状に広がるのではなく](<repeating-radial-gradient()>)) 中心点の周りを回転する画像を生成します。
 
+{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
+
 ## 構文
 
 ```css
@@ -44,7 +46,8 @@ background: repeating-conic-gradient(
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
-> **メモ:** 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
+> [!NOTE]
+> 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
 
 ### 反復扇形グラデーションの理解
 

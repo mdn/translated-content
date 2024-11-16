@@ -3,6 +3,8 @@ title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 この記事では、アプリを経由した音声伝達方法の設計をする際に、十分な情報に基づいた決断をする助けとなるよう、 Web Audio API の特徴がいかに働いているか、その背後にある音声理論について説明します。この記事はあなたを熟練のサウンドエンジニアにさせることはできないものの、Web Audio API が動く理由を理解するための十分な背景を提供します。
 
 ## オーディオグラフ
@@ -17,9 +19,8 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 4. 例えばあなたのシステムのスピーカーなど、音声の最終的な行き先の選択。
 5. 音声効果を（あるのならば）かけた後、最後に選択した行き先へ届いて終了する、音声源からの接続の確立。
 
-**チャンネルの記法**
-
-信号上で利用できるオーディオチャンネルの数字は、2.0 や 5.1 のように、しばしば、数値の形式で表現されます。これは[channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)と呼ばれます。最初の数値は、該当の信号が含んでいるオーディオチャンネルの数です。ピリオドの後にある数値は、低音増強用出力として確保されているチャンネルの数を示しています。それらはしばしば**サブウーファー**とも称されます。
+> [!NOTE]
+> 信号上で利用できるオーディオチャンネルの数字は、2.0 や 5.1 のように、しばしば、数値の形式で表現されます。これは[channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)と呼ばれます。最初の数値は、該当の信号が含んでいるオーディオチャンネルの数です。ピリオドの後にある数値は、低音増強用出力として確保されているチャンネルの数を示しています。それらはしばしば**サブウーファー**とも称されます。
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioAPI_en.svg)
 
@@ -57,7 +58,8 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 バッファが再生されると、最も左のサンプルフレームが聞こえ、次にそのサンプルフレームのすぐ隣のサンプルフレームが続いてゆきます。ステレオの場合、両方のチャンネルから同時に聴こえます。サンプルフレームは、チャンネルの数とは独立しているため非常に便利であり、正確に音声を取り扱う有効な手段として、時間を表現してくれます。
 
-> **メモ:** フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
+> [!NOTE]
+> フレーム数から秒数を得るためには、フレーム数をサンプルレートで単に除算するだけです。サンプル数からフレーム数を得るためには、チャンネル数で単に除算するだけです。
 
 以下はいくつかの単純なサンプルです:
 
@@ -81,7 +83,8 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 この呼び出しをする場合、モノラルバッファーをチャンネル数 1 で取得し、AudioContext 上で 44100Hz にて再生される際に自動で 44100Hz へ*再サンプリングされ*(したがって 44100 フレームとなり)、1 秒間続きます: 44100 フレーム/44100Hz = 1 秒。
 
-> **メモ:** オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
+> [!NOTE]
+> オーディオの再サンプリングは、画像のサイズ変更と非常に似たものです。例えば 16x16 の画像があり、32x32 のスペースを満たしたいとします。サイズ変更(あるいは再サンプリング)を行い、結果として(サイズ変更アルゴリズムの違いに依存して、ぼやけたりエッジができたりと)画質の低下を伴いますが、スペースを減らすサイズ変更済み画像が作れます。再サンプリングされたオーディオもまったく同じです。スペースを保てるものの、実際には高音域のコンテンツや高音を適切に再現することはできません。
 
 ### バッファーセクションの平面性対交差性
 
@@ -174,7 +177,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
       <td><code>2</code> <em>(Stereo)</em></td>
       <td><code>1</code> <em>(Mono)</em></td>
       <td>
-        <em>モノラルからステレオへのダウンミックス。</em><br />(<code>L</code>
+        <em>ステレオからモノラルへのダウンミックス。</em><br />(<code>L</code>
         と
         <code>R</code>
         の)両入力チャンネルは等しく結合され、単一出力チャンネル(<code>M</code>)になります。<br /><code
@@ -363,7 +366,8 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 現在の波形データまたはタイムドメインデータを渡された{{domxref("Uint8Array")}}型配列(符号なしバイト配列)にコピーします。
 
-> **メモ:** より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
+> [!NOTE]
+> より詳しい情報は、Web Audio API 記事中の [Visualizations with Web Audio API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) を参照してください。
 
 ## 立体化
 
@@ -377,7 +381,8 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 
 ![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](WebAudioListenerReduced.png)
 
-> **メモ:** より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
+> [!NOTE]
+> より詳しい情報は、[Web audio spatialization basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) を参照してください。
 
 ## ファンインとファンアウト
 

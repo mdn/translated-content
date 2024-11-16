@@ -3,7 +3,7 @@ title: last
 slug: Web/XPath/Functions/last
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
 

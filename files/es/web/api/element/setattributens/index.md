@@ -24,10 +24,6 @@ var d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 ```
 
-## Notas
-
-{{ DOMAttributeMethods() }}
-
 ## Especificaciones
 
 {{Specifications}}

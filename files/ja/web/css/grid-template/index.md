@@ -61,7 +61,8 @@ grid-template: unset;
 
   - : {{cssxref("grid-template-areas")}} にリストの文字列を設定し、{{cssxref("grid-template-rows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxref("grid-template-columns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
 
-    > **メモ:** これらのトラックリストに {{cssxref("repeat", "repeat()")}} 関数を使うことはできません。トラックは「ASCII アート」内の行列と一対一の関係で視覚的に並んでいるためです。
+    > [!NOTE]
+    > これらのトラックリストに {{cssxref("repeat", "repeat()")}} 関数を使うことはできません。トラックは「ASCII アート」内の行列と一対一の関係で視覚的に並んでいるためです。
 
 > **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`grid-template` ではなく） `grid` を使用してください。
 
@@ -125,7 +126,7 @@ footer {
 
 #### 結果
 
-{{EmbedLiveSample("Defining_a_grid_template", "100%", "200px")}}
+{{EmbedLiveSample("グリッドテンプレートの定義", "100%", "200px")}}
 
 ## 仕様書
 
@@ -138,6 +139,6 @@ footer {
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- グリッドレイアウトガイド: [CSS グリッドにおける線に基づく配置](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
 - 動画チュートリアル: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

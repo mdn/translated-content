@@ -2,20 +2,20 @@
 title: MDN を始めよう
 slug: MDN/Community/Contributing/Getting_started
 l10n:
-  sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
 
 私たちは開発者のオープンなコミュニティであり、ブランドやブラウザー、プラットフォームを問わず、ウェブをより良くするリソースを構築しています。誰でも協力でき、それによってコミュニティはより強固なものとなります。ともに協力することで、ウェブをより良いものへ革新していく後押しを継続できます。ここから、あなたと始まります。
 
-[参加しましょう!](https://github.com/mdn/mdn-community/)
+[参加しましょう!](/ja/docs/MDN/Community/Communication_channels)
 
 ## 私にできることは？
 
 MDN に協力する方法は、あなたのスキル設定や興味によって複数あります。そのため、それぞれのタスクに簡単な説明と、それぞれの種類のタスクが通常要するおおよその時刻を指定して提供しています。
 
-> どうしたらいいか分からないときは、いつでも[助けを求める](https://github.com/mdn/mdn-community/)ことを歓迎しています。
+> どうすればよいかわからない場合は、常に[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに尋ねてください。
 > また、私たちの小さいながらも強力な docs チームがこのリポジトリーを管理しているので、帯域幅を維持するために、トピックに関係ない会話は閉じられることに注意してください。
 
 ## 主な協力の種類
@@ -49,4 +49,4 @@ MDN に協力する方法は、あなたのスキル設定や興味によって�
 
 寄稿する場合、あなたは寄稿物を [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/) ライセンス（または、あなたが編集しているページですでに指定されている代替ライセンス）の下で利用できるようにすることに同意するものとします。また、コードサンプルは [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) （パブリックドメイン献呈）の下で利用することができます。
 
-> ここで説明されていることについて、質問や懸念がある場合は、[ディスカッション](https://github.com/mdn/mdn-community/discussions/categories/content)を開いて私たちに知らせてください。
+> ここで議論されている何らかの質問や懸念がある場合は、[お問い合わせください](/ja/docs/MDN/Community/Communication_channels)。

@@ -148,7 +148,8 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 
 {{EmbedLiveSample("Ajouter_un_raccourci_clavier", 650, 100)}}
 
-> **Note :** Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
+> [!NOTE]
+> Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
 
 ### Activer et désactiver un bouton d'envoi
 
@@ -160,9 +161,11 @@ Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen un
 
 Pour activer / désactiver le bouton dynamiquement, on pourra manipuler l'attribut DOM `disabled` avec la valeur `true` ou `false` en JavaScript (avec une instruction similaire à `btn.disabled = true`).
 
-> **Note :** Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
+> [!NOTE]
+> Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> [!NOTE]
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 

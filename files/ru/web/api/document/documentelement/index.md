@@ -3,7 +3,7 @@ title: Document.documentElement
 slug: Web/API/Document/documentElement
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 **`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/DOM/element) , который является коренным элементом документа [`document`](/ru/docs/DOM/document) (например элемент `<html>` для HTML документов).
 

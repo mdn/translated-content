@@ -2,7 +2,7 @@
 title: "HTML 属性: accept"
 slug: Web/HTML/Attributes/accept
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +13,7 @@ l10n:
 
 ## 概要
 
-accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。
+accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 {{HTMLElement("input/file", "file")}} に置き換えられて削除されました。
 
 与えられたファイル種別は複数の方法で識別される可能性があるため、特定の種別のファイルが必要な場合には、型指定子の完全なセットを提供したり、ワイルドカードを使用して任意の形式の型が許容されることを示したりすると便利です。
 
@@ -103,7 +103,8 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> [!NOTE]
+> この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 
@@ -111,7 +112,7 @@ div {
 
 ### 受け付けるファイル種別の制限
 
-多くの場合は、ユーザーが任意の種別のファイルを選択できるようにするのではなく、特定の種別のファイルを選択できるようにしたいものです。例えば、ファイル入力でユーザーがプロフィール画像をアップロードできる場合、 {{Glossary("JPEG")}} や {{Glossary("PNG")}} などのウェブ互換の画像形式を選択させたいと思うでしょう。/p>
+多くの場合は、ユーザーが任意の種別のファイルを選択できるようにするのではなく、特定の種別のファイルを選択できるようにしたいものです。例えば、ファイル入力でユーザーがプロフィール画像をアップロードできる場合、 {{Glossary("JPEG")}} や {{Glossary("PNG")}} などのウェブ互換の画像形式を選択させたいと思うでしょう。
 
 許容されるファイル種別は、 [`accept`](/ja/docs/Web/HTML/Element/input/file#accept) 属性で許容されるファイル拡張子や MIME タイプのカンマ区切りのリストを取ることで指定することができます。いくつかの例を示します。
 

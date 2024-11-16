@@ -3,6 +3,8 @@ title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `letter-spacing` контролирует расстояние между текстовыми символами, в дополнении к любому расстоянию атрибута {{ SVGAttr("kerning") }} .
@@ -31,6 +33,6 @@ slug: Web/SVG/Attribute/letter-spacing
 
 - {{ cssxref("letter-spacing","CSS letter-spacing") }}
 
-## Примечание об использовании
+## Примечания по использованию
 
 Атрибут `letter-spacing` плохо поддерживается в работе с SVG. По состоянию на май 2016 года Firefox делает текст без использования `letter-spacing`. Chrome делает текст с уже буквенным интервалом, но неправильно вычисляет длину текста; `textNode.getComputedTextLength()` возвращает точно такую же длину, `letter-spacing` установлен или нет, что приводит к грубо неправильным результатам при разнесении букв.

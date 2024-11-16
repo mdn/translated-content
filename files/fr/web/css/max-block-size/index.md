@@ -67,9 +67,11 @@ La valeur de `writing-mode` détermine la propriété physique correspondant à 
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | [`max-height`](/fr/docs/Web/CSS/max-height)       |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)         |
 
-> **Note :** Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
+> [!NOTE]
+> Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
 
-> **Note :** Les modes d'écriture `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisés pour les contextes [HTML](/fr/docs/Glossary/HTML) et peuvent uniquement être utilisés dans des contextes [SVG](/fr/docs/Glossary/SVG) 1.x.
+> [!NOTE]
+> Les modes d'écriture `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisés pour les contextes [HTML](/fr/docs/Glossary/HTML) et peuvent uniquement être utilisés dans des contextes [SVG](/fr/docs/Glossary/SVG) 1.x.
 
 ## Définition formelle
 

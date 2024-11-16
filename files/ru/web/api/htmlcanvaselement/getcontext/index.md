@@ -52,7 +52,7 @@ canvas.getContext(contextType, contextAttributes);
 
 ### Возвращаемое значение
 
-{{domxref("RenderingContext")}}, который представляет собой
+Контекст рендеринга, который представляет собой
 
 - {{domxref("CanvasRenderingContext2D")}} для `"2d"`,
 - {{domxref("WebGLRenderingContext")}} для `"webgl"` и `"experimental-webgl"`,

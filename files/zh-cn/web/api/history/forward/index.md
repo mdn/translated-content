@@ -3,6 +3,8 @@ title: forward()
 slug: Web/API/History/forward
 ---
 
+{{APIRef("History API")}}
+
 在会话历史中向前移动一页。它与使用`delta`参数为 1 时调用 `history.go(delta)`的效果相同。
 
 ## 语法

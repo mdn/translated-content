@@ -5,7 +5,11 @@ slug: Web/CSS/mask-size
 
 {{CSSRef}}
 
-**`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスク画像の寸法を指定します。画像の寸法は、その本質的な比率を維持するために、完全または部分的に制約を受けることがあります。
+**`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスク画像の寸法を指定します。内在的な比率を維持するために、画像のサイズは完全または部分的に制約されることがあります。
+
+> **メモ:** `mask-size` の後に要素に {{cssxref("mask")}} 一括指定プロパティが指定され、このプロパティの値が設定されていない場合、このプロパティの値は、一括指定プロパティによって初期値にリセットされます。
+
+## 構文
 
 ```css
 /* キーワード構文 */
@@ -36,12 +40,9 @@ mask-size: 6px, auto, contain;
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
+mask-size: revert-layer;
 mask-size: unset;
 ```
-
-> **メモ:** `mask-size` の後に要素に {{cssxref("mask")}} 一括指定プロパティが指定され、このプロパティの値が設定されていない場合、このプロパティの値は、一括指定プロパティによって初期値にリセットされます。
-
-## 構文
 
 1 つ以上の `<bg-size>` 値で、カンマ区切りです。
 

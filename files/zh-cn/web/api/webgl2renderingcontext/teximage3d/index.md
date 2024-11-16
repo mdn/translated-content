@@ -9,16 +9,11 @@ slug: Web/API/WebGL2RenderingContext/texImage3D
 
 ## 语法
 
-```
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, GLintptr offset);
-
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLCanvasElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLImageElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLVideoElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageBitmap source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageData source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView? srcData);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView srcData, srcOffset);
+```js-nolint
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData, srcOffset)
 ```
 
 ### 参数
@@ -139,7 +134,7 @@ gl.texImage3D(
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}

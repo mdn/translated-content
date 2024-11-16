@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-aria-labelledby` プロパティによって、アクセシブル名を定義するためにページ上の他の要素を参照することができます。これは、アクセシブル名を提供する要素の関連付けにネイティブ対応していない要素を使用する場合に有益です。
+`aria-labelledby` プロパティによって、アクセシブル名を定義するためにページ上の他の要素を参照することができます。これは、アクセシブル名を提供する要素の関連付けにネイティブ対応していない要素を使用する場合に有益です。
 
 要素によっては、その[アクセシブル名](https://w3c.github.io/accname/#dfn-accessible-name)を内部コンテンツから取得するものがあります。例えば、{{HTMLElement('button')}}、{{HTMLElement('a')}}、{{HTMLElement('td')}} のアクセシブル名は開始タグと終了タグの間のテキストから決まります。他にも、フォームの {{HTMLElement('textarea')}}、{{HTMLElement('fieldset')}}、{{HTMLElement('table')}} などの要素は、関連する要素のコンテンツからアクセシブル名を取得します。これらの要素では、アクセシブル名はそれぞれ `for` 属性を持つ {{HTMLElement('label')}}、{{HTMLElement('legend')}}、{{HTMLElement('caption')}} から取得します。
 
@@ -21,7 +21,8 @@ aria-labelledby` プロパティによって、アクセシブル名を定義す
 
 `aria-labelledby` および [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性は、どちらも代替テキストを計算するために他の要素を参照します。 `aria-labelledby` は要素にアクセシブル名を提供する短いテキストを参照します。 `aria-describedby` は説明を提供する詳しいコンテンツを参照するために使用します。インタラクティブ要素のアクセシブル名に適切な短いラベル付けを提供する要素が DOM にない場合、 `aria-label` を使用してインタラクティブ要素のアクセシブル名を定義します。
 
-> **メモ:** アメリカ英語では、この属性は "labeledby" と綴られるとみなされますが、 "labelledby" という綴りが確立されており、アクセシビリティ API で使用されています。
+> [!NOTE]
+> アメリカ英語では、この属性は "labeledby" と綴られるとみなされますが、 "labelledby" という綴りが確立されており、アクセシビリティ API で使用されています。
 
 次の例では `aria-labelledby` を用いて、兄弟要素のテキストコンテンツを使用してチェックボックス入力にアクセシブル名を提供しています。
 

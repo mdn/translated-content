@@ -71,11 +71,11 @@ writing-mode: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - SVG [`writing-mode`](/ru/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}

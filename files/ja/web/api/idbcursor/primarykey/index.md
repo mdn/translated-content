@@ -1,15 +1,14 @@
 ---
-title: IDBCursor.primaryKey
+title: "IDBCursor: primaryKey プロパティ"
+short-title: primaryKey
 slug: Web/API/IDBCursor/primaryKey
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: ac5b7880d127dd1ff9cd69da09ebc427da6bf6f4
 ---
 
-{{APIRef("IDBCursor")}}
+{{APIRef("IDBCursor")}} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティ **`primaryKey`** は、カーソルの現在の実効キーを返します。カーソルが現在反復中であったり、範囲外まで反復した場合は、`undefined` になります。カーソルの主キーは任意のデータ型になり得ます。
-
-{{AvailableInWorkers}}
+**`primaryKey`** は {{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティで、カーソルの現在の実効キーを返します。カーソルが現在反復処理中であったり、範囲外まで反復した場合は、`undefined` になります。カーソルの主キーは任意のデータ型になり得ます。
 
 ## 値
 
@@ -17,11 +16,7 @@ l10n:
 
 ## 例
 
-このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを用いてオブジェクトストア内の全レコードを走査します。それぞれの繰り返しでは、たとえば以下のような、カーソルの主キーをコンソールに記録します。(主キーである、アルバムのタイトルです)
-
-```
-Hemispheres
-```
+このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを用いてオブジェクトストア内の全レコードを走査します。それぞれの繰り返しでは、カーソルの主キーをコンソールに記録します。
 
 カーソルを用いる場合、データをキーで選択する必要はなく、単に全て取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指している現在のレコードのデータを `cursor.value.foo` のようにして取得できます。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))
 
@@ -62,4 +57,4 @@ function displayData() {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

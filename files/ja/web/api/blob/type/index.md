@@ -1,13 +1,20 @@
 ---
-title: Blob.type
+title: "Blob: type プロパティ"
+short-title: type
 slug: Web/API/Blob/type
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`type`** は {{domxref("Blob")}} オブジェクトのプロパティで、ファイルの {{Glossary("MIME type", "MIME タイプ")}}を返します。
+**`type`** は {{domxref("Blob")}} インターフェイスの読み取り専用プロパティで、このファイルの {{Glossary("MIME type", "MIME タイプ")}}を返します。
+
+> [!NOTE]
+> 現在の実装に基づくと、ブラウザーはファイルのバイトストリームを実際に読み込んで、そのメディア形式を決定するわけではありません。
+> ファイル拡張子に基づいて推測されます。PNG 画像ファイルの拡張子を .txt に変更すると、"_text/plain_" となり、"_image/png_" とはなりません。さらに、`blob.type` で信頼性が高いのは、画像、HTML 文書、音声、動画などの一般的なファイル形式のみです。
+> 一般的ではないファイル拡張子は空文字列を返します。
+> クライアント構成（例えば、Windows レジストリー）は、一般的な形式であっても予期しない値になる可能性があります。 **開発者は、このプロパティを唯一の検証手段として使用しないよう注意してください。**
 
 ### 値
 

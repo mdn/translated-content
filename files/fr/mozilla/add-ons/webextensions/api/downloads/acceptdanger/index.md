@@ -3,7 +3,7 @@ title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`acceptDanger()`** de l'API {{WebExtAPIRef("downloads")}} invite l'utilisateur à accepter ou à annuler un téléchargement potentiellement dangereux.
 
@@ -34,9 +34,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsq
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

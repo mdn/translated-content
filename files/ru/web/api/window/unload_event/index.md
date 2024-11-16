@@ -29,6 +29,6 @@ You _can_ and _should_ handle this event through {{domxref("EventTarget.addEvent
 
 {{Specifications}}
 
-### Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

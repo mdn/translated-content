@@ -3,7 +3,7 @@ title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 El método **`EventTarget.removeEventListener()`** remueve del {{domxref("EventTarget")}} un detector de evento previamente registrado con {{domxref("EventTarget.addEventListener")}}. El detector de evento a ser removido es identificado usando una combinación de tipos de eventos, la misma funcion del detector de eventos, y muchas opciones adicionales que pueden afectar
 
@@ -25,7 +25,6 @@ target.removeEventListener(tipo, listener[, useCapture])
   - : Un objeto que especifíca diversas características acerca del detector de eventos. Las opciones disponibles son:
 
     - `capture`: Un {{jsxref("Boolean")}} que indica que eventos de este tipo serán enviados al `listener` antes de ser enviado a cualquier `EventTarget` debado de éste en el DOM.
-    - {{non-standard_inline}} `mozSystemGroup`: Sólo disponible ejecutando XBL o Firefox' chrome, es un {{jsxref("Boolean")}} que define si el detector es añadido al grupo del sistema.
 
 - `useCapture` {{optional_inline}}
 

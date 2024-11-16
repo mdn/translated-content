@@ -21,11 +21,7 @@ HTTP **`302 Found`** 重定向状态码表明请求的资源被暂时的移动�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 更多可见
+## 参见
 
 - {{HTTPStatus("307")}} `Temporary Redirect`, the equivalent of this status code, but that never changes the method used.
 - {{HTTPStatus("303")}} `See Also`, a temporary redirect that changes the method used to {{HTTPMethod("GET")}}.

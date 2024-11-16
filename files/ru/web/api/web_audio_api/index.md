@@ -3,6 +3,8 @@ title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 Web audio API - мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице, что даёт возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты (такие как panning), визуализировать их и многое другое.
 
 ## Общие концепции и использование Web Audio
@@ -26,7 +28,8 @@ Web audio API позволяет обрабатывать операции на�
 Web audio API также даёт нам возможность контролировать то, каким аудио является в пространстве. Используя особую систему, что базируется
 на модели source-listener, он позволяет контролировать модель панорамирования и обходиться без дистанционно-вызванного ослабления (distance-induced attenuation) или duppler shift, вызванного сдвигом источника (или сдвигом слушателя).
 
-> **Примечание:** Помните: вы можете прочитать более детальный теоретический материал о Web audio API в нашей статье [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Вы можете прочитать более детальный теоретический материал о Web audio API в нашей статье [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Web Audio API интерфейсы
 
@@ -119,7 +122,8 @@ These interfaces allow you to add audio spatialization panning effects to your a
 
 If you want to use an external script to process your audio source, the below Node and events make it possible.
 
-> **Примечание:** As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by [Audio_Workers](#audio_workers).
+> [!NOTE]
+> As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by [Audio_Workers](#audio_workers).
 
 - {{domxref("ScriptProcessorNode")}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.

@@ -7,7 +7,8 @@ slug: Web/API/Document/write
 
 Écrit une chaîne de texte dans un document ouvert par [document.open()](/fr/docs/Web/API/Document/open).
 
-> **Note :** comme `document.write` écrit dans le flux de documents, appeler `document.write` sur un document fermé (chargé) appelle automatiquement `document.open`, ce qui efface le document.
+> [!NOTE]
+> Comme `document.write` écrit dans le flux de documents, appeler `document.write` sur un document fermé (chargé) appelle automatiquement `document.open`, ce qui efface le document.
 
 ## Syntaxe
 
@@ -61,9 +62,11 @@ Si l'appel à `document.write()` est intégré directement dans le code HTML, il
 
 > **Note :** `document.write` dans les scripts [deferred (_différé_)](/fr/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous (_asynchrone_)](/fr/docs/Web/HTML/Element/script#attr-async) sera ignoré et vous recevrez un message comme "A call to `document.write()` from an asynchronously-loaded external script was ignored" dans la console d'erreurs.
 
-> **Note :** Dans Edge seulement, appeler plusieurs fois `document.write` dans un "iframe" déclenche une erreur "SCRIPT70: Permission denied." _(autorisation refusée)_.
+> [!NOTE]
+> Dans Edge seulement, appeler plusieurs fois `document.write` dans un "iframe" déclenche une erreur "SCRIPT70: Permission denied." _(autorisation refusée)_.
 
-> **Note :** À partir de la version 55, Chrome n'exécute pas les éléments `<script>` injectés via `document.write()` en cas d'échec de cache HTTP pour les utilisateurs sur une connexion 2G.
+> [!NOTE]
+> À partir de la version 55, Chrome n'exécute pas les éléments `<script>` injectés via `document.write()` en cas d'échec de cache HTTP pour les utilisateurs sur une connexion 2G.
 
 ## Spécification
 

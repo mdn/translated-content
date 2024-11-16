@@ -20,8 +20,10 @@ h1:has(+ p) {
 
 ## 语法
 
-```
-:has( <forgiving-relative-selector-list> )
+```css-nolint
+:has(<relative-selector-list>) {
+  /* ... */
+}
 ```
 
 相对选择器列表参数是[可容错](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)的。通常在 CSS 中，选择器列表中的某个选择器无效时，那么整个列表则被视为无效。当 `:has()` 选择器列表中的一个选择器无法解析时，不正确或不受支持的选择器将被忽略，而其他的则将被正常使用。

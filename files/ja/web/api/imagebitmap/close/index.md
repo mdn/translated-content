@@ -1,8 +1,9 @@
 ---
-title: ImageBitmap.close()
+title: "ImageBitmap: close() メソッド"
+short-title: close()
 slug: Web/API/ImageBitmap/close
 l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Canvas API")}}

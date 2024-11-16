@@ -44,7 +44,8 @@ slug: Web/HTTP/Content_negotiation
 
 ### Заголовок `Accept-CH` {{experimental_inline}}
 
-> **Примечание:** Перед вами **экспериментальная** технология под названием _Client Hints (Подсказки Клиента)_, реализуемая на данный момент только в Chrome 46 и более поздних версиях
+> [!NOTE]
+> Это **экспериментальная** технология под названием _Подсказки Клиента_ (_Client Hints_),, которую поддерживает только Chrome 46 и более поздние версии.
 
 Экспериментальный заголовок {{HTTPHeader("Accept-CH")}} перечисляет конфигурацию клиента, которая может быть использована сервером для выбора подходящего ответа. Определённые значения:
 
@@ -77,7 +78,8 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### Заголовок `User-Agent`
 
-> **Примечание:** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 

@@ -3,7 +3,7 @@ title: string-length
 slug: Web/XPath/Functions/string-length
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `string-length` 関数は、与えられた文字列の文字数に等しい数値を返します。
 

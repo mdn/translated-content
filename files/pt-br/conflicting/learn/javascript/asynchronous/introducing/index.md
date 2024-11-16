@@ -63,7 +63,8 @@ btn.addEventListener('click', () => {
 
 Quando o exemplo for executado, abra seu console JavaScript e depois clique no botão — você verá qua o parágrafo não aparece até que o programa termine de calcular as datas e imprimir a última no console. O código é executado na ordem em que ele aparece na fonte, e a operação seguinte só é executada depois que a primeira for terminada.
 
-> **Nota:** O exemplo anterior não é muito realistico. Você nunca calcularia 10 milhões de datas em um aplicativo real! Mas isso serve par te dar um apoio sobre o assunto.
+> [!NOTE]
+> O exemplo anterior não é muito realistico. Você nunca calcularia 10 milhões de datas em um aplicativo real! Mas isso serve par te dar um apoio sobre o assunto.
 
 No nosso segundo exemplo [simple-sync-ui-blocking.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html)), nós simulamos algo mais realistico que você pode encontrar em uma página real. Nós bloqueamos a interatividade do usuário na renderização da UI. Neste exemplo, nós temos dois botões:
 
@@ -89,7 +90,8 @@ alertBtn.addEventListener('click', () =>
 
 Se você clicar no primeiro botão e imediatamente no segundo, você verá que a mensagem de alerta não aparece até que os círculos sejam totalmente renderizados. A primeira operação bloqueia a segunda até a sua finalização.
 
-> **Nota:** OK, no nosso caso, isso é ruim e estamos bloqueando o código de propósito, mas isso é um problema comum que desenvolvedores de aplicativos reais sempre tentam resolver.
+> [!NOTE]
+> OK, no nosso caso, isso é ruim e estamos bloqueando o código de propósito, mas isso é um problema comum que desenvolvedores de aplicativos reais sempre tentam resolver.
 
 E por quê isso acontece? A resposta é que o JavaScript é **single threaded**. E é neste ponto que precisamos introduzir a você o conceito de **threads**.
 

@@ -5,7 +5,8 @@ slug: Web/CSS/page-break-after
 
 {{CSSRef}}
 
-> **警告:** このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。
+> [!WARNING]
+> このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。
 
 **`page-break-after`** は CSS のプロパティで、現在の要素の*後で*改ページが行われるように調整します。
 
@@ -25,6 +26,8 @@ page-break-after: initial;
 page-break-after: revert;
 page-break-after: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/page-break-after.html")}}
 
 このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{HTMLElement("div")}} には適用されません。
 

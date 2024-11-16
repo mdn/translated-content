@@ -72,7 +72,8 @@ AES-KW 规定于 [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394) 中�
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)。
 
 ### Raw 包装
 

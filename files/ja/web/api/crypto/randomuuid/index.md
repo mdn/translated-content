@@ -1,13 +1,14 @@
 ---
-title: Crypto.randomUUID()
+title: "Crypto: randomUUID() メソッド"
+short-title: randomUUID()
 slug: Web/API/Crypto/randomUUID
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("Crypto")}} インターフェイスの **`randomUUID()`** メソッドは、暗号強度の強い乱数生成器を用いて v4 {{Glossary("UUID")}} を生成するのに用いられます。
+**`randomUUID()`** は {{domxref("Crypto")}} インターフェイスのメソッドで、暗号強度の強い乱数生成器を用いて v4 {{Glossary("UUID")}} を生成するのに用いられます。
 
 ## 構文
 
@@ -45,5 +46,5 @@ console.log(uuid); // 例えば "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ## 関連情報
 
 - {{domxref("Web Crypto API")}}
-- {{domxref("Crypto")}} オブジェクトを取得する {{domxref("Window.crypto")}}。
+- {{domxref("Crypto")}} オブジェクトを取得する {{ domxref("crypto_property", "crypto") }}。
 - {{domxref("Crypto.getRandomValues")}} 任意の量の安全なランダムバイト列の生成源。

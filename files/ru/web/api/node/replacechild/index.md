@@ -3,7 +3,7 @@ title: Node.replaceChild
 slug: Web/API/Node/replaceChild
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
 ## Аннотация
 

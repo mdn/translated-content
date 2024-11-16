@@ -31,7 +31,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### 值
 
 - `<side-or-corner>`
-  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
+  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和最多两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
     `to top`、`to bottom`、`to left` 和 `to right` 分别等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
 - {{CSSxRef("&lt;angle&gt;")}}
   - : 渐变线的方向的角度。`0deg` 等价于 `to top`，增加值相当于顺时针旋转。

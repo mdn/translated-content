@@ -3,11 +3,14 @@ title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O método **`FormData.entries()`** retorna um {{jsxref("Iteration_protocols",'iterator')}} permitindo percorrer todos os valores de chave/valor contidos nesse objeto. A chave de cada par é um objeto {{domxref("USVString")}}; o valor é {{domxref("USVString")}}, ou um {{domxref("Blob")}}.
 
-> **Nota:** This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 

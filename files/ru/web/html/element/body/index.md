@@ -149,7 +149,7 @@ slug: Web/HTML/Element/body
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -2,7 +2,7 @@
 title: "<a>: アンカー要素"
 slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
+  sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
 ---
 
 {{HTMLSidebar}}
@@ -17,6 +17,29 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
+- `attributionsrc` {{experimental_inline}}
+
+  - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
+
+    ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納されます。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+
+    この属性には設定することができる 2 つのバージョンがあります：
+
+    - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーでアトリビューションソースの登録を処理している場合は、これで問題ありません。
+    - 1 つ以上の URL を格納する値。例えば、以下のようなものです。
+
+      ```html
+      attributionsrc="https://a.example/register-source
+      https://b.example/register-source"
+      ```
+
+      これは、リクエストされたリソースが制御するサーバーにない場合や、属性ソースを別のサーバーに登録する処理だけをしたい場合に有益です。この場合、`attributionsrc` の値として 1 つ以上の URL を指定します。リソースリクエストが発生すると、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーはリソース元に加えて `attributionsrc` を指定したURLにも送信されます。これらの URL は {{httpheader("Attribution-Reporting-Register-Source")}} で応答し、登録を完了することができます。
+
+      > [!NOTE]
+      > 複数のURLを指定するということは、同じ機能に複数の属性ソースを登録できるということを意味しています。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータで異なるレポートを生成する必要があるかもしれません。
+
+    `<a>` 要素はアトリビューショントリガーとして使用することはできず、ソースとしてのみです。
+
 - `download`
 
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。`filename` 値があってもなくても構いません。
@@ -25,11 +48,11 @@ l10n:
 
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
+      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
@@ -41,12 +64,17 @@ l10n:
 
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
 
-    - ページの節を示すフラグメント URL
-    - [テキストフラグメント](/ja/docs/Web/Text_fragments)で指定されたテキストの部分
-    - メディアファイルの一部を示すメディアフラグメント
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
+    - SMS テキストメッセージを示す `sms:` URL
+    - [`javascript:` URL](/ja/docs/Web/URI/Schemes/javascript) による実行可能なコード
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
+
+    他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
+
+    - ページの節を示すフラグメント URL
+    - [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)で指定されたテキストの部分
+    - メディアファイルの一部を示すメディアフラグメント
 
 - `hreflang`
   - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Global_attributes/lang)と同じです。
@@ -65,7 +93,7 @@ l10n:
     - `strict-origin-when-cross-origin` (default): 同一オリジンへのリクエストを行う際には URL 全体が送信され、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) はオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信されません。
     - `unsafe-url`: リファラーにはオリジン*および*パスが含まれます（ただし[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含まれません）。**この値は安全ではありません**。オリジンとパスを TLS で保護されたリソースから安全ではないオリジンに漏洩させるからです。
 
-- `rel`
+- [`rel`](/ja/docs/Web/HTML/Attributes/rel)
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
 
@@ -75,6 +103,7 @@ l10n:
     - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
     - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
+    - `_unfencedTop`: 埋め込まれた[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)が最上位のフレームを移動できるようにします (つまり、他の予約された移動先とは異なり、フェンスフレームのルートを越えて移動します)。これがフェンスフレームのコンテキスト外で使用されてもナビゲーションは成功しますが、予約語のようには動作しないことに注意してください。
 
     > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
 
@@ -87,7 +116,8 @@ l10n:
 
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
-    > **メモ:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > [!NOTE]
+    > この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - `coords` {{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
@@ -95,7 +125,8 @@ l10n:
 
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
-    > **メモ:** 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
+    > [!NOTE]
+    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
 
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -103,7 +134,154 @@ l10n:
 
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
-    > **メモ:** イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
+    > [!NOTE]
+    > イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
+
+## アクセシビリティ
+
+### 強力なリンクテキスト
+
+リンクの内容は、文脈から外れたとしても、**リンクの行き先を示すべきです**。
+
+#### アクセシビリティに対応していない貧弱なリンクテキスト
+
+よくある残念な間違いは、「ここをクリック」や「こちら」のみにリンクを設定していることです。
+
+```html example-bad
+<p>私たちの製品については<a href="/products">こちら</a>をご覧ください。</p>
+```
+
+##### 結果
+
+{{EmbedLiveSample('Inaccessible, weak link text')}}
+
+#### 強力なリンクテキスト
+
+幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。
+
+```html example-good
+<p><a href="/products">私たちの製品について</a>、詳しくご覧ください。</p>
+```
+
+##### 結果
+
+{{EmbedLiveSample('Strong link text')}}
+
+支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。
+
+### onclick イベント
+
+よく見られる誤った使い方として、擬似的なボタンを作成するためにアンカー要素を使用し、`href` を `#` または `javascript:void(0)` に設定してページの再読み込みを防ぎ、`click` を待ち受けするようにするというものがあります。
+
+これらの偽の `href` 値は、リンクをコピーまたはドラッグしたり、新しいやウィンドウでリンクを開いたり、ブックマークしたり、JavaScript の読み込み中、エラー状態、無効状態の場合などに予期しない動作を引き起こします。また、読み上げソフトなどの支援技術に対して誤った意味を伝えることもあります。
+
+代わりに {{HTMLElement("button")}} を使用してください。通常、**アンカーは適切な URL を使用して移動するためだけに使用するべきです**。
+
+### 外部リンクおよび HTML 以外のリソースへのリンク
+
+リンクを新しいタブやウィンドウで開くために `target="_blank"` を使用したり、ダウンロード元を指したりする場合は、リンクを起動したときに何が起こるかを示すようにしてください。
+
+弱視で読み上げ技術の支援の下に操作を行っている人や、認知に問題がある人は、予期せず新しいタブ、ウィンドウ、アプリケーションが開いたときに混乱するかもしれません。古いバージョンの読み上げソフトウェアは、この動作をアナウンスしません。
+
+#### 新しいタブやウィンドウを開くリンク
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia (新しいウィンドウで開きます)
+</a>
+```
+
+##### 結果
+
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
+#### HTML 以外のリソースへのリンク
+
+```html
+<a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
+```
+
+リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia
+  <img alt="(新しいタブで開く)" src="newtab.svg" />
+</a>
+
+<a href="2017-annual-report.ppt">
+  2017 年次レポート
+  <img alt="(PowerPoint ファイル)" src="ppt-icon.svg" />
+</a>
+```
+
+##### 結果
+
+{{EmbedLiveSample('Link to a non-HTML resource')}}
+
+- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
+### スキップリンク
+
+**スキップリンク**は {{HTMLElement("body")}} コンテンツのできるだけ先頭に近い場所に配置されるリンクであり、ページのメインコンテンツの先頭にリンクします。通常、CSS はスキップリンクがフォーカスを受けるまでは画面外へ隠します。
+
+```html
+<body>
+  <a href="#content" class="skip-link">メインコンテンツへスキップ</a>
+
+  <header>…</header>
+
+  <!-- スキップリンクがたどり着く位置 -->
+  <main id="content"></main>
+</body>
+```
+
+```css
+.skip-link {
+  position: absolute;
+  top: -3em;
+  background: #fff;
+}
+.skip-link:focus {
+  top: 0;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Skip links')}}
+
+スキップリンクは、キーボードの利用者がヘッダーナビゲーションのような複数のページを通して繰り返されるコンテンツを回避できるようにするものです。
+
+スキップリンクは、スイッチ制御、音声コマンド、またはマウススティック/ヘッドワンドなどの補助技術を使用して操作する人にとって、反復的にリンクを移動する操作が煩わしい場合に特に便利です。
+
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
+- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+
+### 大きさと近接性
+
+#### 大きさ
+
+リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)の大きさであることが推奨されています。
+
+散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。
+
+- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
+
+#### 近接性
+
+リンクのような対話的要素が互いに視覚的に近接して配置される場合は、それらを隔てる間隔を置いてください。間隔を空けることで、運動制御に問題のある人が誤って間違った対話的コンテンツを操作してしまうことを防ぐことができます。
+
+間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。
+
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## 例
 
@@ -112,7 +290,7 @@ l10n:
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### 結果
@@ -231,6 +409,7 @@ a {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 c.fillStyle = "hotpink";
+let isDrawing;
 
 function draw(x, y) {
   if (isDrawing) {
@@ -264,152 +443,6 @@ document
 `<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
 
 `target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなりますが、新しい版のブラウザーでは `target="_blank"` を設定すると、`rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
-
-## アクセシビリティ
-
-### 強力なリンクテキスト
-
-リンクの内容は、文脈から外れたとしても、**リンクの行き先を示すべきです**。
-
-#### アクセシビリティに対応していない貧弱なリンクテキスト
-
-よくある残念な間違いは、「ここをクリック」や「こちら」のみにリンクを設定していることです。
-
-```html example-bad
-<p>私たちの製品については<a href="/products">こちら</a>をご覧ください。</p>
-```
-
-##### 結果
-
-{{EmbedLiveSample('Inaccessible, weak link text')}}
-
-#### 強力なリンクテキスト
-
-幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。
-
-```html example-good
-<p><a href="/products">私たちの製品について</a>、詳しくご覧ください。</p>
-```
-
-##### 結果
-
-{{EmbedLiveSample('Strong link text')}}
-
-支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。
-
-### onclick イベント
-
-よく見られる誤った使い方として、擬似的なボタンを作成するためにアンカー要素を使用し、`href` を `#` または `javascript:void(0)` に設定してページの再読み込みを防ぎ、`click` を待ち受けするようにするというものがあります。
-
-これらの偽の `href` 値は、リンクをコピーまたはドラッグしたり、新しいやウィンドウでリンクを開いたり、ブックマークしたり、JavaScript の読み込み中、エラー状態、無効状態の場合などに予期しない動作を引き起こします。また、読み上げソフトなどの支援技術に対して誤った意味を伝えることもあります。
-
-代わりに {{HTMLElement("button")}} を使用してください。通常、**アンカーは適切な URL を使用して移動するためだけに使用するべきです**。
-
-### 外部リンクおよび HTML 以外のリソースへのリンク
-
-リンクを新しいタブやウィンドウで開くために `target="_blank"` を使用したり、ダウンロード元を指したりする場合は、リンクを起動したときに何が起こるかを示すようにしてください。
-
-弱視で読み上げ技術の支援の下に操作を行っている人や、認知に問題がある人は、予期せず新しいタブ、ウィンドウ、アプリケーションが開いたときに混乱するかもしれません。古いバージョンの読み上げソフトウェアは、この動作をアナウンスしません。
-
-#### 新しいタブやウィンドウを開くリンク
-
-```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia (新しいウィンドウで開きます)
-</a>
-```
-
-##### 結果
-
-{{EmbedLiveSample('Link that opens a new tab/window')}}
-
-#### HTML 以外のリソースへのリンク
-
-```html
-<a href="2017-annual-report.ppt"> 2017 年次レポート (PowerPoint) </a>
-```
-
-リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
-
-```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(新しいタブで開く)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 年次レポート
-  <img alt="(PowerPoint ファイル)" src="ppt-icon.svg" />
-</a>
-```
-
-##### 結果
-
-{{EmbedLiveSample('Link to a non-HTML resource')}}
-
-- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
-
-### スキップリンク
-
-**スキップリンク**は {{HTMLElement("body")}} コンテンツのできるだけ先頭に近い場所に配置されるリンクであり、ページのメインコンテンツの先頭にリンクします。通常、CSS はスキップリンクがフォーカスを受けるまでは画面外へ隠します。
-
-```html
-<body>
-  <a href="#content" class="skip-link">メインコンテンツへスキップ</a>
-
-  <header>…</header>
-
-  <main id="content"></main>
-  <!-- スキップリンクがたどり着く位置 -->
-</body>
-```
-
-```css
-.skip-link {
-  position: absolute;
-  top: -3em;
-  background: #fff;
-}
-.skip-link:focus {
-  top: 0;
-}
-```
-
-#### 結果
-
-{{EmbedLiveSample('Skip links')}}
-
-スキップリンクは、キーボードの利用者がヘッダーナビゲーションのような複数のページを通して繰り返されるコンテンツを回避できるようにするものです。
-
-スキップリンクは、スイッチ制御、音声コマンド、またはマウススティック/ヘッドワンドなどの補助技術を使用して操作する人にとって、反復的にリンクを移動する操作が煩わしい場合に特に便利です。
-
-- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-
-### 大きさと近接性
-
-#### 大きさ
-
-リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)の大きさであることが推奨されています。
-
-散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。
-
-- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
-
-#### 近接性
-
-リンクのような対話的要素が互いに視覚的に近接して配置される場合は、それらを隔てる間隔を置いてください。間隔を空けることで、運動制御に問題のある人が誤って間違った対話的コンテンツを操作してしまうことを防ぐことができます。
-
-間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。
-
-- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## 技術的概要
 
@@ -445,10 +478,7 @@ document
           href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         > または
-        <a
-          href="/ja/docs/Web/HTML/Element/a"
-          >a</a
-        > 要素をがないもの、および
+        <code>&lt;a&gt;</code> 要素がないもの、および
         <a
           href="/ja/docs/Web/HTML/Global_attributes/tabindex"
           >tabindex</a
@@ -457,17 +487,14 @@ document
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素、または
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
+        >を受け入れるすべての要素、ただし他の <code>&lt;a&gt;</code> 要素でないもの。
       </td>
     </tr>
     <tr>
@@ -475,8 +502,7 @@ document
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
         それ以外は
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a
-        >
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
@@ -522,4 +548,4 @@ document
 - {{CSSxRef(":link")}} は CSS の擬似クラスで、 `<a>` 要素に有効な `href` 属性がついている場合に一致します。
 - {{CSSxRef(":visited")}} は CSS の擬似クラスで、`<a>` 要素の `href` 属性が、過去にユーザーが訪問したことのある URL である場合に一致します。
 - {{CSSxRef(":any-link")}} は CSS の擬似クラスで、`<a>` 要素に `href` 属性がある場合に一致します。
-- [テキストフラグメント](/ja/docs/Web/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。
+- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。

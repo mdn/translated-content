@@ -9,14 +9,15 @@ slug: Web/API/SVGGraphicsElement
 
 {{InheritanceDiagram(600, 120)}}
 
-> **备注：** 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。
+> [!NOTE]
+> 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。
 
 ## 属性
 
 此接口还从其父接口{{domxref("SVGElement")}}继承属性
 
 - {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}}属性。
+  - : 一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}属性。
 
 ## 方法
 

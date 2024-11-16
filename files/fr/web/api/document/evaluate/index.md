@@ -171,4 +171,4 @@ Les résultats des types `NODE_SNAPSHOT` sont des instantanés, qui sont essenti
 
 - [DOM : document.createExpression](/fr/docs/Web/API/Document/createExpression)
 - [XPath Code Snippets](/fr/Add-ons/Code_snippets/XPath)
-- [Vérifier le support du navigateur](http://codepen.io/johan/full/ckFgn)
+- [Vérifier le support du navigateur](https://codepen.io/johan/full/ckFgn)

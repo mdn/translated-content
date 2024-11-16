@@ -102,7 +102,7 @@ a[href="http://example.com"]
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

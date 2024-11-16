@@ -250,7 +250,7 @@ Removemos o sublinhado do nosso link ao passar o mouse. Pode-se remover os subli
 >
 > Seu visitante pode muito bem estar em um computador com um mouse defeituoso, ou um dispositivo móvel com uma tela sensível ao toque. Ou eles podem estar usando um leitor de tela, que lê o conteúdo do documento, ou podem precisar de muito texto grande, ou estar navegando no site apenas usando o teclado.
 >
-> Um documento HTML simples é geralmente acessível a todos — Ao começar a estilizar esse documento, é importante que você não o rone menos acessível.
+> Um documento HTML simples é geralmente acessível a todos — Ao começar a estilizar esse documento, é importante que você não o torne menos acessível.
 
 ## Combinando seletores e combinadores
 

@@ -3,7 +3,7 @@ title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 
@@ -55,9 +55,9 @@ browser.history.deleteRange({
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

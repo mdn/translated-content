@@ -3,7 +3,7 @@ title: Event.target
 slug: Web/API/Event/target
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 Свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.
 
@@ -46,21 +46,9 @@ ul.addEventListener('click', hide, false);
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Примечания
-
-В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо `target` свойства, но по смыслу оно идентично `event.target`.
-
-```js
-function hide(e) {
-  // Поддержка IE 6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = "hidden";
-}
-```
 
 ## Смотрите также
 
