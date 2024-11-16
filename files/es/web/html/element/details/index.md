@@ -36,7 +36,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
     </tr>
     <tr>
       <th scope="row">Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padres permitidos</th>

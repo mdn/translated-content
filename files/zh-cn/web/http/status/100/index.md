@@ -19,10 +19,6 @@ HTTP **`100 Continue`** 信息型状态响应码表示目前为止一切正常�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPHeader("Expect")}}

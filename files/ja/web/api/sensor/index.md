@@ -2,14 +2,14 @@
 title: Sensor
 slug: Web/API/Sensor
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`Sensor`** インターフェイスは、ほかのすべてのセンサーインターフェイスのベースクラスです。このインターフェイスを直接使うことはできません。ですが、このインターフェイスは継承するインターフェイスがアクセスするプロパティ・イベントハンドラー・メソッドを提供します。
+**`Sensor`** は[センサー API 群](/ja/docs/Web/API/Sensor_APIs)のインターフェイスで、ほかのすべてのセンサーインターフェイスのベースクラスです。このインターフェイスを直接使うことはできません。ですが、このインターフェイスは継承するインターフェイスがアクセスするプロパティ・イベントハンドラー・メソッドを提供します。
 
-この機能はサーバーで設定された [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

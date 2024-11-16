@@ -3,7 +3,7 @@ title: "HTMLElement: attributeStyleMap プロパティ"
 short-title: attributeStyleMap
 slug: Web/API/HTMLElement/attributeStyleMap
 l10n:
-  sourceCommit: bba05bf24a714715f3517cf1296274dd41d6e811
+  sourceCommit: 2eacf352ffb5d8a3233c13e4bf5949578b847759
 ---
 
 {{APIRef("CSSOM")}}

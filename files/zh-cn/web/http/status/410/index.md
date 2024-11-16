@@ -20,10 +20,6 @@ HTTP **`410 Gone`** 说明请求的目标资源在原服务器上不存在了，
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPStatus(404)}}

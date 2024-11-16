@@ -422,7 +422,7 @@ Em seguida, vamos alterar o título da página para uma mensagem de boas-vindas 
      setUserName();
    } else {
      const storedName = localStorage.getItem("name");
-     myHeading.textContent = `Mozilla é legal, ${storedName`;
+     myHeading.textContent = `Mozilla é legal, ${storedName}`;
    }
    ```
 

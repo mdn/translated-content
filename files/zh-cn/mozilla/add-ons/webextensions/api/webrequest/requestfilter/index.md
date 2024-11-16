@@ -27,9 +27,7 @@ webRequest 事件参数
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-RequestFilter) API. 该文档来源于 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) 。
->
-> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License 下。
+> 该 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#type-RequestFilter) API. 该文档来源于 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) 。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

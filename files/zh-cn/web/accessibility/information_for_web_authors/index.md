@@ -29,7 +29,7 @@ l10n:
 
 - [HTML CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/)
 - [aXe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
-- [Lighthouse Accessibility Audit](https://developer.chrome.com/docs/lighthouse/overview/)
+- [Lighthouse Accessibility Audit](https://developer.chrome.google.cn/docs/lighthouse/overview)
 - [Accessibility Insights](https://accessibilityinsights.io/)
 - [<abbr>WAVE</abbr>](https://wave.webaim.org/extension/)
 

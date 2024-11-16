@@ -9,7 +9,7 @@ El **Elemento HTML `<label>`** representa una etiqueta para un elemento en una i
 
 - _[Categorias](/es/docs/Web/HTML/Content_categories)_ [Contenido de flujo](/es/docs/Web/HTML/Content_categories#Flow_content), [contenido de fraseo](/es/docs/Web/HTML/Content_categories#Phrasing_content), [contenido interactivo](/es/docs/Web/HTML/Content_categories#Interactive_content), [elemento de formulario asociado](/es/docs/Web/HTML/Content_categories#Form-associated_content), contenido palpable.
 - _Contenido permitido_ [Contenido de fraseo](/es/docs/Web/HTML/Content_categories#Phrasing_content), pero no otros componentes `label` ni otros elementos etiquetables a parte del de control ya etiquetado.
-- _Omision del Tag_ {{no_tag_omission}}
+- _Omision del Tag_ Ninguna, tanto la etiqueta inicial como la final son obligatorias.
 - _Elementos padre permitidos_ Cualquier elemento que acepte el [contenido de fraseo](/es/docs/Web/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLLabelElement")}}
 

@@ -21,7 +21,3 @@ HTTP **`501 Not Implemented`** 服务器错误响应码表示请求的方法不�
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}

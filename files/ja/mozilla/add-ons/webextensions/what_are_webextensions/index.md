@@ -41,7 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 例: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
-Firefox 用の拡張機能は [WebExtensions APIs](/ja/Add-ons/WebExtensions) を使って作成され、この API はクロスブラウザーで動作可能な拡張機能を開発するための技術です。この API の大半は、Google Chrome や Opera でサポートされている [extension API](https://developer.chrome.com/extensions) と互換性があります。これらのブラウザー向けに書かれた拡張機能のほとんどは、少し[変更を加えるだけで](/ja/Add-ons/WebExtensions/Porting_from_Google_Chrome) Firefox や Microsoft Edge でも動かせるようになります。この API は完全に[マルチプロセス Firefox](/ja/Firefox/Multiprocess_Firefox) にも対応しています。
+Firefox 用の拡張機能は [WebExtensions APIs](/ja/Add-ons/WebExtensions) を使って作成され、この API はクロスブラウザーで動作可能な拡張機能を開発するための技術です。この API の大半は、Google Chrome や Opera でサポートされている [extension API](https://developer.chrome.com/docs/extensions) と互換性があります。これらのブラウザー向けに書かれた拡張機能のほとんどは、少し[変更を加えるだけで](/ja/Add-ons/WebExtensions/Porting_from_Google_Chrome) Firefox や Microsoft Edge でも動かせるようになります。この API は完全に[マルチプロセス Firefox](/ja/Firefox/Multiprocess_Firefox) にも対応しています。
 
 何かアイデアがあったり、レガシーアドオンを WebExtensions API に移植する手助けが必要な場合、ご連絡は [dev-addons メーリングリスト](https://mail.mozilla.org/listinfo/dev-addons) や [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) や [Matrix](https://wiki.mozilla.org/Matrix) までお願いします。英語のサポートです。
 

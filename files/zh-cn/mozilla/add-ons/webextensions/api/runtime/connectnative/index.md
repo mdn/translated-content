@@ -59,9 +59,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 是基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connectNative) API。本文档采自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
->
-> Microsoft Edge 的兼容性数据由微软公司提供，并被列入以下许可证 Creative Commons Attribution 3.0 United States License.
+> 该 API 是基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-connectNative) API。本文档采自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

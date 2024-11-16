@@ -43,4 +43,4 @@ try {
 
 ## 参见
 
-- [使用屏幕唤醒锁 API 阻止息屏](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
+- [使用屏幕唤醒锁 API 阻止息屏](https://developer.chrome.google.cn/docs/capabilities/web-apis/wake-lock)

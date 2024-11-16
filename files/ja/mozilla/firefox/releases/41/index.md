@@ -51,7 +51,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 - {{jsxref("Date.prototype")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ([Firefox バグ 861219](https://bugzil.la/861219))。
 - {{jsxref("Date.prototype.toString")}} は、ジェネリックなメソッドになりました ([Firefox バグ 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} を追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
-- {{jsxref("Map.@@species", "Map[@@species]")}} および {{jsxref("Set.@@species", "Set[@@species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
+- {{jsxref("Map.Symbol.species", "Map[Symbol.species]")}} および {{jsxref("Set.Symbol.species", "Set[Symbol.species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
 - 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ([Firefox バグ 1023609](https://bugzil.la/1023609))。
 - {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割された引数", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
 - ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。

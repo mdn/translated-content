@@ -1,16 +1,15 @@
 ---
-title: Map.prototype[@@iterator]()
+title: Map.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`@@iterator`** は `Map` オブジェクトのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装します。これにより、マップが反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループなどで使用できるようになります。マップのキーと値のペアを返すイテレーターを返します。
+**`[Symbol.iterator]()`** は `Map` オブジェクトのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装します。これにより、`Map` オブジェクトが反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなどで使用できるようになります。マップのキーと値のペアを挿入順に返す[イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-初期値は、 {{jsxref("Map.prototype.entries()", "entries")}} メソッドの初期値と同じ関数オブジェクトです。
+初期値は、 {{jsxref("Map.prototype.entries")}} メソッドの初期値と同じ関数オブジェクトです。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
@@ -20,15 +19,19 @@ l10n:
 map[Symbol.iterator]()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-返値は {{jsxref("Map.prototype.entries()")}} と同じ、マップのキーと値のペアを生成する新しい反復可能なイテレーターオブジェクトを返します。
+返値は {{jsxref("Map.prototype.entries()")}} と同じ、マップのキーと値のペアを生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 ## 例
 
-### for..of を使用した反復処理
+### for...of を使用した反復処理
 
-このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`iterator` メソッドが存在することで `Map` オブジェクトを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にし、 `for...of` ループなどの反復処理構文が、自動的にこのメソッドを呼び出してループのためのイテレータを取得することができます。
+このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`[Symbol.iterator]()` メソッドが存在することで `Map` オブジェクトを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にし、 `for...of` ループなどの反復処理構文が、自動的にこのメソッドを呼び出してループのためのイテレーターを取得することができます。
 
 ```js
 const myMap = new Map();
@@ -78,6 +81,9 @@ console.log(mapIter.next().value); // [Object, "baz"]
 
 ## 関連情報
 
+- {{jsxref("Map")}}
 - {{jsxref("Map.prototype.entries()")}}
 - {{jsxref("Map.prototype.keys()")}}
 - {{jsxref("Map.prototype.values()")}}
+- {{jsxref("Symbol.iterator")}}
+- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

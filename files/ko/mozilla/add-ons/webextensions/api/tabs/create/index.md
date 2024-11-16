@@ -104,7 +104,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 이 API는 Chromium의 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-create) API를 기반으로 합니다. 이 문서는 Chromium 코드의 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)에서 파생되었습니다.
+> 이 API는 Chromium의 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-create) API를 기반으로 합니다. 이 문서는 Chromium 코드의 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)에서 파생되었습니다.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

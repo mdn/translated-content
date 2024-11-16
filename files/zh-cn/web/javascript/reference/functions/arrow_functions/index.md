@@ -424,7 +424,7 @@ const boundAdd = add.bind(obj);
 console.log(boundAdd(1, 2, 3)); // 48
 ```
 
-使用箭头函数的最大好处可能是在使用 {{domxref("setTimeout()")}} 和 {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} 等方法时，这些方法通常需要某种闭包、`call()`、`apply()` 或 `bind()`，以确保函数在适当的作用域中执行。
+使用箭头函数的最大好处可能是在使用 {{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("EventTarget.addEventListener()", "EventTarget.prototype.addEventListener()")}} 等方法时，这些方法通常需要某种闭包、`call()`、`apply()` 或 `bind()`，以确保函数在适当的作用域中执行。
 
 对于传统的函数表达式，类似这样的代码并不能像预期的那样工作：
 

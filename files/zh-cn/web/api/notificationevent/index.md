@@ -2,10 +2,10 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 l10n:
-  sourceCommit: 17abe1c7a64248b77998643433cb3285ae937c6e
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
 {{domxref("Notifications API", "", "", "nocode")}} 的 **`NotificationEvent`** 接口表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上触发的通知事件。
 

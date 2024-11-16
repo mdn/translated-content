@@ -65,7 +65,7 @@ Dans cette page, nous verrons [les méthodes](#méthodes) disponibles sur l'obje
 - [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
   - : Affiche la valeur du [chronomètre](#chronomètres) indiqué dans la console.
 - [`console.timeStamp()`](/fr/docs/Web/API/console/timestamp_static) {{Non-standard_inline}}
-  - : Ajoute un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)).
+  - : Ajoute un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)).
 - [`console.trace()`](/fr/docs/Web/API/console/trace_static)
   - : Affiche la [trace de la pile d'appels](#trace_de_piles_dappels).
 - [`console.warn()`](/fr/docs/Web/API/console/warn_static)

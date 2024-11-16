@@ -2,7 +2,7 @@
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Classes")}}

@@ -18,7 +18,7 @@ Par la suite, l'extension pourra échanger des messages en JSON avec l'applicati
 Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :
 
 - La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
-- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).
 
 Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt «&nbsp;webextensions‐examples&nbsp;» sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
 

@@ -13,7 +13,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-配置は長さや auto マージンが適用された後に行われますので、[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)で {{cssxref("flex-grow")}} が `0` ではないフレックス要素が 1 つ移譲ある場合は利用可能な空間がなくなりますので、このプロパティの効果はなくなります。
+配置は長さや auto マージンが適用された後に行われますので、[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)で {{cssxref("flex-grow")}} が `0` ではないフレックス要素が 1 つ以上ある場合は利用可能な空間がなくなりますので、このプロパティの効果はなくなります。
 
 ## 構文
 

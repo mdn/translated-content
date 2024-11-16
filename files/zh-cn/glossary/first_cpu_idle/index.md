@@ -13,4 +13,4 @@ l10n:
 
 - 替代首次 CPU 闲置的指标：
   - [可交互时间](/zh-CN/docs/Glossary/Time_to_interactive)
-  - [总阻塞时间](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)
+  - [总阻塞时间](https://developer.chrome.google.cn/docs/lighthouse/performance/lighthouse-total-blocking-time)

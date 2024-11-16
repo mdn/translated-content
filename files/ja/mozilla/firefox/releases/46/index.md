@@ -44,7 +44,7 @@ slug: Mozilla/Firefox/Releases/46
 - ES2015 の、{{jsxref("RegExp.prototype.unicode", "RegExp の unicode (u) フラグ", "", 1)}}を実装しました ([Firefox バグ 1135377](https://bugzil.la/1135377))。
 - ES2015 のブロックレベル関数を実装しました ([Firefox バグ 1071646](https://bugzil.la/1071646))。
 - ES2015 の {{jsxref("TypedArray.prototype.sort()")}} メソッドを実装しました ([Firefox バグ 1121937](https://bugzil.la/1121937))。
-- ES2015 の {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}} を実装しました ([Firefox バグ 1067049](https://bugzil.la/1067049))。
+- ES2015 の {{jsxref("Functions/arguments/Symbol.iterator", "arguments[Symbol.iterator]")}} を実装しました ([Firefox バグ 1067049](https://bugzil.la/1067049))。
 - [EcmaScript Shared Memory API](https://web.archive.org/web/20220124015148/https://tc39.es/ecmascript_sharedmem/shmem.html) を実験的に実装しました。{{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをご覧ください。この実験的な API を使用するには、about:config で `javascript.options.shared_memory` に `true` を設定します。
 - ECMAScript 仕様に従い、`[let](/ja/docs/Web/JavaScript/Reference/Statements/let)` および `[const](/ja/docs/Web/JavaScript/Reference/Statements/const)` によって変数を再宣言すると {{jsxref("TypeError")}} ではなく {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1198833](https://bugzil.la/1198833))。
 - [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)において、{{Glossary("primitive", "プリミティブ")}}値にプロパティを設定すると {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 603201](https://bugzil.la/603201))。

@@ -134,7 +134,7 @@ PWA は、既定ではブラウザーが提供するUIに頼っていますが�
 
 - 自分自身で「インストール」ボタンを追加することができます。
 - `beforeinstallprompt` イベントを待ち受けすることができます。
-- イベtのの既定の動作を [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) を呼び出すことでキャンセルします。
+- イベントの既定の動作を [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) を呼び出すことでキャンセルします。
 - 自分自身で「インストール」ボタンのイベントハンドラーで、 [`prompt()`](/ja/docs/Web/API/BeforeInstallPromptEvent/prompt) を呼び出します。
 
 これは iOS では対応していません。

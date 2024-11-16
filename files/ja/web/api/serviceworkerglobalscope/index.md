@@ -23,8 +23,6 @@ l10n:
 
 _このインターフェイスには {{domxref("WorkerGlobalScope")}} インターフェイス、およびその親である {{domxref("EventTarget")}} から継承したプロパティがあります。_
 
-- {{domxref("caches")}} {{ReadOnlyInline}}
-  - : サービスワーカーに関連づけられた {{domxref("CacheStorage")}} オブジェクトを保持します。
 - {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : サービスワーカーに関連付けられた {{domxref("Clients")}} オブジェクトを保持します。
 - {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -50,7 +48,7 @@ _このインターフェイスには {{domxref("WorkerGlobalScope")}} インタ
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} {{Experimental_Inline}}
   - : ユーザーまたはアプリによって[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)処理が中止された場合に発生します。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} {{Experimental_Inline}}
-  - : ユーザーがUIをクリックして[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)処理を実行したときに発生します。
+  - : ユーザーが UI をクリックして[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)処理を実行したときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} {{Experimental_Inline}}
   - : [バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)処理で、リクエストの少なくとも 1 つが失敗したときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}

@@ -239,7 +239,7 @@ async function main() {
 
 对于关键的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种通过 JavaScript 直接连接到 CSS 动画的方式）。直接使用浏览器执行 DOM 动画而不是使用 JavaScript 操纵内联样式表的效率更高。另请参阅 [CSS 性能优化 > 处理动画](/zh-CN/docs/Learn/Performance/CSS#处理动画)。
 
-对于无法在 JavaScript 中处理的动画，例如在 HTML {{htmlelement("canvas")}} 上创建动画，建议使用 {{domxref("Window.requestAnimationFrame()")}} 而不是旧的选项，例如 {{domxref("setInterval()")}}。`requestAnimationFrame()` 方法专门设计用于高效、一致地处理动画帧，以获得流畅的用户体验。基本模式如下所示：
+对于无法在 JavaScript 中处理的动画，例如在 HTML {{htmlelement("canvas")}} 上创建动画，建议使用 {{domxref("Window.requestAnimationFrame()")}} 而不是旧的选项，例如 {{domxref("Window.setInterval()")}}。`requestAnimationFrame()` 方法专门设计用于高效、一致地处理动画帧，以获得流畅的用户体验。基本模式如下所示：
 
 ```js
 function loop() {

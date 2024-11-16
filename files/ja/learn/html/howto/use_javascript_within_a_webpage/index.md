@@ -69,7 +69,7 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 
 アクセシビリティは、あらゆるソフトウェア開発において大きな課題です。 JavaScript を賢く使用すればウェブサイトをよりアクセシビリティの高いものにできますし、スクリプトを無頓着に使用すれば大惨事になることもあります。 JavaScript が意図通りに動くようにするには、JavaScript を追加するための最善の手法について知っておく価値があります。
 
-- **すべてのコンテンツを（構造化された）テキストとして利用できるようにしましょう。** コンテンツは可能な限り HTML に頼ってください。例えば、 JavaScript で素敵な進捗バーを実装した場合、HTML 内で一致するテキストのパーセント表示で補完するようにしてください。同様に、ドロップダウンメニューは[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)の[順序なしリスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)として構造化すべきです。
+- **すべてのコンテンツを（構造化された）テキストとして利用できるようにしましょう。** コンテンツは可能な限り HTML に頼ってください。例えば、 JavaScript で素敵な進捗バーを実装した場合、HTML 内で一致するテキストのパーセント表示で補完するようにしてください。同様に、ドロップダウンメニューは[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)の[順序なしリスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)として構造化すべきです。
 - **すべての機能をキーボードからアクセスできるようにしましょう。**
 
   - ユーザーがすべてのコントロール（リンクやフォーム入力など）を合理的な順序で移動できるようにしましょう。
