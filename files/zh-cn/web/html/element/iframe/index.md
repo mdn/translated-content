@@ -14,7 +14,7 @@ l10n:
 每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为*父级浏览上下文*。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
 > [!WARNING]
-> 页面上的每个`<iframe>`都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
+> 页面上的每个 `<iframe>` 都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的 `<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
 
 ## 属性
 
@@ -22,9 +22,9 @@ l10n:
 
 - `allow`
 
-  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web 共享等）
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web 共享等）。
 
-    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)
+    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)。
 
     > [!NOTE]
     > 通过 `allow` 属性指定的特征策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步的限制。它不会替换原有策略。
@@ -45,7 +45,7 @@ l10n:
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
 
-  - : 一个布尔属性，如果存在，则指定当前用户选定的主题应该与 `<iframe>` 源的请求一起发送。更多信息请参见[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)
+  - : 一个布尔属性，如果存在，则指定当前用户选定的主题应该与 `<iframe>` 源的请求一起发送。更多信息请参见[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)。
 
 - `credentialless` {{Experimental_Inline}}
 
@@ -54,7 +54,7 @@ l10n:
 - `csp` {{experimental_inline}}
   - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - `height`
-  - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为 `150`。
+  - : 以 CSS 像素格式指定框架的高度。默认值为 `150`。
 - `loading`
 
   - : 表示浏览器应当何时加载 iframe：
@@ -63,7 +63,7 @@ l10n:
       - : 在页面加载时立即加载 iframe（默认值）。
     - `lazy`
 
-      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离，目的是在浏览器确定需要它前，避免占用获取 frame 所需的网络和存储带宽，这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间
+      - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的距离，目的是在浏览器确定需要它前，避免占用获取框架所需的网络和存储带宽，这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间。
 
         > [!NOTE]
         > 只有当 JavaScript 启用时才会推迟加载。这是一个反跟踪措施。
@@ -74,14 +74,22 @@ l10n:
 
   - : 表示在获取 iframe 资源时发送哪个 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
 
-    - `no-referrer`: 不发送 {{HTTPHeader("Referer")}} 标头。
-    - `no-referrer-when-downgrade`: 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
-    - `origin`: referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
-    - `origin-when-cross-origin`: 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。
-    - `same-origin`: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 标头，否则不发送。
-    - `strict-origin`: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 标头（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 标头（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
-    - `strict-origin-when-cross-origin`: 当发起同源请求时，在 referrer 标头中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 标头中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 标头。
-    - `unsafe-url`: 始终在 referrer 标头中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
+    - `no-referrer`
+      - : 不发送 {{HTTPHeader("Referer")}} 标头。
+    - `no-referrer-when-downgrade`
+      - : 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
+    - `origin`
+      - : referrer 标头中仅包含来源页面的源。换言之，仅包含来源页面的[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，{{Glossary("host", "主机")}}以及 {{Glossary("port", "端口")}}。
+    - `origin-when-cross-origin`
+      - : 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。
+    - `same-origin`
+      - : 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 标头，否则不发送。
+    - `strict-origin`
+      - : 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 标头（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 标头（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。
+    - `strict-origin-when-cross-origin`（默认值）
+      - : 当发起同源请求时，在 referrer 标头中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 标头中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 标头。
+    - `unsafe-url`
+      - : 始终在 referrer 标头中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
 
 - `sandbox`
 
@@ -89,29 +97,40 @@ l10n:
 
     - `allow-downloads`
       - : 允许通过带有 [download](/zh-CN/docs/Web/HTML/Element/a#download) 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素或者通过导航来下载文件，无论是用户通过点击链接触发，还是在用户没有交互的情况下通过 JS 代码触发。
-    - `allow-forms`: 允许嵌入的浏览上下文提交表单。如果没有使用该关键字，表单会正常显示，但是无法校验输入内容，提交表单到服务器或是关闭对话框。
-    - `allow-modals`: 允许页面通过 {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} 和 {{domxref("Window.prompt()")}}打开模态窗口，无论有无该关键字，打开{{HTMLElement("dialog")}} 是被允许的，它同样允许页面接收 {{domxref("BeforeUnloadEvent")}} 事件。
-    - `allow-orientation-lock`: 请查看[lock the screen orientation](/zh-CN/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: 允许嵌入的浏览上下文使用 [Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API).
-    - `allow-popups`: 允许弹窗 (例如 window\.open, target="\_blank", `showModalDialog`)。如果没有使用该关键字，相应的功能将自动被禁用。
-    - `allow-popups-to-escape-sandbox`: 允许沙箱化的文档打开新窗口，并且新窗口不会继承沙箱标记。例如，安全地沙箱化一个广告页面，而不会在广告链接到的新页面中启用相同的限制条件。
-    - `allow-presentation`: 允许嵌入的浏览上下文开始一个 [presentation session](/zh-CN/docs/Web/API/PresentationRequest)。
-    - `allow-same-origin`: 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 {{Glossary("same-origin policy")}} 同源检查失败。(可以防御对 [data storage/cookies](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) 潜在访问，以及一些 JavaScript API).
-    - `allow-scripts`: 允许嵌入的浏览上下文运行脚本（但不能创建弹窗）。如果没有使用该关键字，就无法运行脚本。
-    - `allow-storage-access-by-user-activation` {{experimental_inline}}: 允许嵌入的浏览上下文通过 [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API) 使用父级浏览上下文的存储功能。
-    - `allow-top-navigation`: 允许嵌入的浏览上下文导航（加载）内容到顶级的浏览上下文。
-    - `allow-top-navigation-by-user-activation`: 允许嵌入的浏览上下文在经过用户允许后导航（加载）内容到顶级的浏览上下文。
+    - `allow-forms`
+      - : 允许嵌入的浏览上下文提交表单。如果没有使用该关键字，表单会正常显示，但是无法校验输入内容，提交表单到服务器或是关闭对话框。
+    - `allow-modals`
+      - : 允许页面通过 {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} 和 {{domxref("Window.prompt()")}}打开模态窗口，无论有无该关键字，打开{{HTMLElement("dialog")}} 是被允许的，它同样允许页面接收 {{domxref("BeforeUnloadEvent")}} 事件。
+    - `allow-orientation-lock`
+      - : 请查看[锁定屏幕方向](/zh-CN/docs/Web/API/Screen/lockOrientation)。
+    - `allow-pointer-lock`
+      - : 允许嵌入的浏览上下文使用[指针锁定 API](/zh-CN/docs/Web/API/Pointer_Lock_API)。
+    - `allow-popups`
+      - : 允许弹窗 (例如 {{domxref("Window.open()")}}，`target="_blank"`，{{domxref("Window.showModalDialog()")}})。如果没有使用该关键字，相应的功能将自动被禁用。
+    - `allow-popups-to-escape-sandbox`
+      - : 允许沙箱化的文档打开新窗口，并且新窗口不会继承沙箱标记。例如，安全地沙箱化一个广告页面，而不会在广告链接到的新页面中启用相同的限制条件。
+    - `allow-presentation`
+      - : 允许嵌入的浏览上下文开始一个[演示请求](/zh-CN/docs/Web/API/PresentationRequest)。
+    - `allow-same-origin`
+      - : 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 {{Glossary("same-origin policy")}} 同源检查失败。（可以防御对 [数据存储/ cookie](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) 潜在访问，以及一些 JavaScript API）。
+    - `allow-scripts`
+      - : 允许嵌入的浏览上下文运行脚本（但不能创建弹窗）。如果没有使用该关键字，就无法运行脚本。
+    - `allow-storage-access-by-user-activation` {{experimental_inline}}
+      - : 允许嵌入的浏览上下文通过[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 使用父级浏览上下文的存储功能。
+    - `allow-top-navigation`
+      - : 允许嵌入的浏览上下文导航（加载）内容到顶级的浏览上下文。
+    - `allow-top-navigation-by-user-activation`
+      - : 允许嵌入的浏览上下文在经过用户允许后导航（加载）内容到顶级的浏览上下文。
     - `allow-top-navigation-to-custom-protocols`
-      - : 允许导航到浏览器内置的或[registered by a website](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)的 非`http` 协议页面，此功能也可以同 `allow-popups` 或 `allow-top-navigation` 关键词激活。
+      - : 允许导航到浏览器内置的或[由网站注册](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)的非 `http` 协议页面，此功能也可以同 `allow-popups` 或 `allow-top-navigation` 关键词激活。
 
     > [!NOTE]
-    > 当被嵌入的文档与主页面同源时，强烈建议不要同时使用 `allow-scripts` 和 `allow-same-origin`。如果同时使用，嵌入的文档就可以通过代码删除 `sandbox` 属性，如此，就安全性而言还不如不用`sandbox`。
     >
-    > - 如果攻击者可以在沙箱化的 `iframe` 之外展示内容，例如用户在新标签页中打开内联框架，那么沙箱化也就没有意义了。建议把这种内容放置到独立的专用域中，以减小可能的损失。
-    > - 沙箱属性 (sandbox) 在 Internet Explorer 9 及更早的版本上不被支持。
+    > - 当被嵌入的文档与主页面同源时，强烈建议不要同时使用 `allow-scripts` 和 `allow-same-origin`。如果同时使用，嵌入的文档就可以通过代码删除 `sandbox` 属性，如此，就安全性而言还不如不用`sandbox`。
+    > - 如果攻击者可以在沙箱化的 `iframe` 之外展示内容，例如用户在新标签页中打开内联框架，那么沙箱化也就没有意义了。建议把这种内容放置到 _独立的专用域_ 中，以减小可能的损失。
 
     > [!NOTE]
-    > 在 带有 `sandbox` 属性的`<iframe>` 嵌入的页面中，当用户被重定向，打开一个弹出式窗口或者打开一个新标签页时，新的浏览上下文同样受到 `sandbox` 的限制。这可能会产生问题 — 例如，如果一个页面被嵌入到没有设置 `sandbox="allow-forms"` 或 `sandbox="allow-popups-to-escape-sandbox"` 属性的`<iframe>`时，当这个页面在独立的标签页中打开一个新站点，这个页面的表单提交将会失败。
+    > 在 带有 `sandbox` 属性的 `<iframe>` 嵌入的页面中，当用户被重定向，打开一个弹出式窗口或者打开一个新标签页时，新的浏览上下文同样受到 `sandbox` 的限制。这可能会产生问题 — 例如，如果一个页面被嵌入到没有设置 `sandbox="allow-forms"` 或 `sandbox="allow-popups-to-escape-sandbox"` 属性的 `<iframe>` 时，当这个页面在独立的标签页中打开一个新站点，这个页面的表单提交将会失败。
 
 - `src`
 
@@ -124,10 +143,10 @@ l10n:
 
   - : 该属性是一段 HTML 代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 `srcdoc` 属性，则会渲染 `src` 属性表示的内容。
   - > [!NOTE]
-    > 在解析任何相对 URL 时，例如锚点链接，`about:srcdoc` 页面会使用嵌入的文档的 URL 作为它的基准 URL
+    > 在解析任何相对 URL 时，例如锚点链接，`about:srcdoc` 页面会使用嵌入的文档的 URL 作为它的基准 URL。
 
 - `width`
-  - : 以 CSS 像素格式，或以像素格式，或以百分比格式指定的 frame 的宽度。默认值是 `300`。
+  - : 以 CSS 像素格式指定的框架的宽度。默认值是 `300`。
 
 ### 不赞成使用的属性
 
@@ -147,15 +166,18 @@ l10n:
 
   - : 这个属性控制是否要在框架内显示滚动条，允许的值包括：
 
-    - `auto`: 仅当框架的内容超出框架的范围时显示滚动条。
-    - `yes`: 始终显示滚动条。
-    - `no`: 从不显示滚动条。
+    - `auto`
+      - : 仅当框架的内容超出框架的范围时显示滚动条。
+    - `yes`
+      - : 始终显示滚动条。
+    - `no`
+      - : 从不显示滚动条。
 
 ## 脚本
 
 内联的框架，就像 {{HTMLElement("frame")}} 元素一样，会被包含在 {{domxref("window.frames")}} 伪数组（类数组的对象）中。
 
-有了 DOM {{domxref("HTMLIFrameElement")}} 对象，脚本可以通过 {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} 访问内联框架的 {{domxref("window")}} 对象。 {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} 属性则引用了 `<iframe>` 内部的 `document` 元素，(等同于使用 contentWindow\.document），但 IE8-不支持。
+有了 DOM {{domxref("HTMLIFrameElement")}} 对象，脚本可以通过 {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} 访问内联框架的 {{domxref("window")}} 对象。 {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} 属性则引用了 `<iframe>` 内部的 `document` 元素，（等同于使用 `contentWindow.document`）。
 
 在框架内部，脚本可以通过 {{domxref("window.parent")}} 引用父窗口对象。
 
@@ -173,7 +195,7 @@ l10n:
 
 ## 无障碍环境
 
-使用 `iframe` 的 [title](/zh-CN/docs/Web/HTML/Global_attributes/title) 属性来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：
+使用 `iframe` 的 [`title` 属性](/zh-CN/docs/Web/HTML/Global_attributes/title)来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：
 
 ```html
 <iframe
@@ -187,7 +209,7 @@ l10n:
 
 ### 一个简单的 \<iframe>
 
-这个示例将页面 <https://example.org> 嵌入了一个 iframe 中。这是一个常见的 iframes 使用案例：嵌入来自另一个网站的内容。例如，下面的这个示例本身和页面顶部的[尝试一下](#尝试一下), 都是 MDN 通过使用 `<iframe>` 嵌入了其他地方的内容。
+这个示例将页面 <https://example.org> 嵌入了一个 iframe 中。这是一个常见的 iframe 使用案例：嵌入来自另一个网站的内容。例如，下面的这个示例本身和页面顶部的[尝试一下](#尝试一下), 都是 MDN 通过使用 `<iframe>` 嵌入了其他地方的内容。
 
 #### HTML
 
