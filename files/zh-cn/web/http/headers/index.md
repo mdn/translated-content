@@ -13,7 +13,7 @@ slug: Web/HTTP/Headers
 
 - {{Glossary("Request header", "请求标头")}}包含有关要获取的资源或客户端或请求资源的客户端的更多信息。
 - {{Glossary("Response header", "响应标头")}}包含有关响应的额外信息，例如响应的位置或者提供响应的服务器。
-- {{Glossary("Representation header", "表示标头")}}包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)或者应用的编码/压缩方案。
+- {{Glossary("Representation header", "表示标头")}}包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","有效负荷标头")}}包含有关有效载荷数据表示的单独信息，包括内容长度和用于传输的编码。
 
 标头也可以根据{{Glossary("Proxy_server", "代理")}}处理它们的方式进行分组：

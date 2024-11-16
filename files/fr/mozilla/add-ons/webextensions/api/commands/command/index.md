@@ -28,4 +28,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).

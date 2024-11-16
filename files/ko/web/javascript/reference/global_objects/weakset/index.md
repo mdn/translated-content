@@ -99,7 +99,7 @@ ws.has(foo); // true
 ws.has(bar); // true
 
 ws.delete(foo); // set에서 foo를 제거
-ws.has(foo); // false, foo 는 이미 제거has been removed
+ws.has(foo); // false, foo 는 이미 제거
 ws.has(bar); // true, bar 는 유지 됨
 ```
 

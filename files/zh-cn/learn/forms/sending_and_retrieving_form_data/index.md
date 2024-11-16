@@ -7,7 +7,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
@@ -16,7 +16,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
           基本计算机素养，对<a
             href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 的理解</a
-          >，对<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> 和<a
+          >，对<a href="/zh-CN/docs/Web/HTTP">HTTP</a> 和<a
             href="/zh-CN/docs/Learn/Server-side/First_steps"
             >服务器端编程</a
           >的基础知识。

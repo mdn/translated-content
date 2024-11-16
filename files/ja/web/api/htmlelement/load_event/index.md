@@ -3,7 +3,7 @@ title: "HTMLElement: load イベント"
 short-title: load
 slug: Web/API/HTMLElement/load_event
 l10n:
-  sourceCommit: c781603ee230aee6ab7293e2a42df78fc5768c51
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef}}
@@ -45,7 +45,8 @@ elt.onload = (event) => { ... };
 ```js
 const image = document.getElementById("image");
 image.onload = () => {
-  document.body.innerHTML += "<div>loaded!</div>";
+  document.body.appendChild(document.createElement("div")).textContent =
+    "loaded!";
 };
 
 function reload() {

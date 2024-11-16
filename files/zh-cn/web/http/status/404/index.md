@@ -32,10 +32,6 @@ ErrorDocument 404 /notfound.html
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPStatus("410")}}

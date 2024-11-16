@@ -209,17 +209,17 @@ var tNow = window.performance.now();
 
 一种常见的技术是以恒定的频率更新模拟，然后绘制尽可能多的（或尽可能少的）实际帧。更新方法可以继续循环，而不用考虑用户看到的内容。绘图方法可以查看最后的更新以及发生的时间。由于绘制知道何时表示，以及上次更新的模拟时间，它可以预测为用户绘制一个合理的框架。这是否比官方更新循环更频繁（甚至更不频繁）无关紧要。更新方法设置检查点，并且像系统允许的那样频繁地，渲染方法画出周围的时间。在 Web 标准中分离更新方法有很多种方法：
 
-- 绘制 `requestAnimationFrame` 并更新 {{domxref("setInterval()")}} 或 {{domxref("setTimeout()")}}。
+- 在 `requestAnimationFrame()` 中绘制，并在 {{domxref("Window.setInterval", "setInterval()")}} 或 {{domxref("Window.setTimeout", "setTimeout()")}} 中更新。
 
   - 即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。
 
-- 绘制 `requestAnimationFrame` 并在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 的 `setInterval` 或 `setTimeout` 中对其进行更新。
+- 在 `requestAnimationFrame()` 中绘制，并在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 的 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} 或 {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 中对其进行更新。
 
   - 这与上述相同，除了更新不会使主线程（主线程也没有）。这是一个更复杂的解决方案，并且对于简单更新可能会有太多的开销。
 
-- 绘制 `requestAnimationFrame` 并使用它来戳一个包含更新方法的 Web Worker，其中包含要计算的刻度数（如果有的话）。
+- 在 `requestAnimationFrame()` 中绘制，并使用它来戳一个包含更新方法的 Web Worker，其中包含要计算的刻度数（如果有的话）。
 
-  - 这个睡眠直到 `requestAnimationFrame` 被调用并且不会污染主线程，加上你不依赖于老式的方法。再次，这比以前的两个选项更复杂一些，并且*开始*每个更新将被阻止，直到浏览器决定启动 rAF 回调。
+  - 这个睡眠直到 `requestAnimationFrame()` 被调用并且不会污染主线程，加上你不依赖于老式的方法。再次，这比以前的两个选项更复杂一些，并且*开始*每个更新将被阻止，直到浏览器决定启动 rAF 回调。
 
 这些方法中的每一种都有类似的权衡：
 

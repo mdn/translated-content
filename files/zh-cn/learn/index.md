@@ -13,7 +13,7 @@ l10n:
 
 ## 学习起点
 
-你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始学习。除此之外，你应该从下面的专题开始学习。
+你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始学习。除此之外，你应该从下面的主题开始学习。
 
 - HTML 和 CSS
   - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
@@ -33,30 +33,30 @@ l10n:
 >
 > [**现在开始**](/en-US/curriculum/)
 
-## 涵盖的专题
+## 涵盖的主题
 
-下面列表包含 MDN 学习区全部的专题。
+下面列表包含 MDN 学习区全部的主题。
 
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
   - : 为纯新手提供实用的 Web 开发介绍。
 - [HTML——为 Web 提供结构](/zh-CN/docs/Learn/HTML)
-  - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该专题将详细讲解 HTML。
+  - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该主题将详细讲解 HTML。
 - [CSS——为 Web 提供样式](/zh-CN/docs/Learn/CSS)
-  - : CSS 是用于为 Web 内容添加样式、对 Web 内容进行布局、添加诸如动画的行为的语言。该专题对 CSS 做了全面的覆盖。
+  - : CSS 是用于为 Web 内容添加样式、对 Web 内容进行布局、添加诸如动画的行为的语言。该主题对 CSS 做了全面的覆盖。
 - [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
-  - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
+  - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该主题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
 - [Web 表单——操作用户数据](/zh-CN/docs/Learn/Forms)
-  - : Web 表单是用于和用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题涵盖 Web 表单的结构、样式和交互相关的全部要点。
+  - : Web 表单是用于和用户交互的强大工具——其常用于收集用户数据和控制用户界面。该主题涵盖 Web 表单的结构、样式和交互相关的全部要点。
 - [无障碍——让每个人都能使用 Web](/zh-CN/docs/Learn/Accessibility)
-  - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该专题包含一切所需了解的信息。
+  - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该主题包含一切所需了解的信息。
 - [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
 - [MathML](/zh-CN/docs/Learn/MathML)
-  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该专题讲解 MathML。
+  - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该主题讲解 MathML。
 - [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
-  - : 该专题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
+  - : 该主题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
 - [服务器端网站编程](/zh-CN/docs/Learn/Server-side)
-  - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该专题对服务器端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
+  - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该主题对服务器端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
 
 ## 任务和评估
 
@@ -116,7 +116,7 @@ l10n:
 - [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 课程合作伙伴_</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业道路*教授成为合格的前端 Web 开发者所需的知识，这里有有趣的交互式课程和挑战、有学识的老师以及提供帮助的社区。让你从零到获得第一份前端工作！许多课程有单独的免费版本。
 - [学习 JavaScript](https://learnjavascript.online/)
-  - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中学习 JavaScript，包含简短的课程和自动评估的交互式测试。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
+  - : 为有进取心的 Web 开发人员准备的优秀资源——在交互式环境中通过自动评估引导的短课程和交互式测试学习 JavaScript。前 40 节课为免费课程，而完整的课程仅需一次性支付少量费用。
 - [Codecademy](https://www.codecademy.com/)
   - : 优秀的交互式网站——从零学习编程语言。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)

@@ -1,6 +1,8 @@
 ---
 title: 인터넷은 어떻게 동작하는가?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
+l10n:
+  sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -10,7 +12,7 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선행지식:</th>
+      <th scope="row">선행 지식:</th>
       <td>
         선행지식은 필요없습니다. 하지만 '프로젝트의 목표 설정에 대한 글(<a
           href="/ko/docs/Learn/Thinking_before_coding"
@@ -40,6 +42,7 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ## 활동적으로 배우기
 
 - [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc): Aaron Titus의 인터넷에 대한 기초를 이해하기 위한 5분짜리 동영상
+- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) 잘 시각화된 9분짜리 상세한 영상입니다.
 
 ## 깊게 들어가기
 

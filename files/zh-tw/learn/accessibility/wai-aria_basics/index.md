@@ -205,7 +205,7 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 </section>
 ```
 
-我們的 JavaScript 透過含有一系列的隨機引言與其作者的 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) `載入一個`JSON 檔案。一旦這些完成，我們就開始 [`setInterval()`](/zh-TW/docs/Web/API/WindowTimers/setInterval) 迴圈每 10 秒載入新的隨機引言到引言框之中。
+我們的 JavaScript 透過含有一系列的隨機引言與其作者的 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) `載入一個`JSON 檔案。一旦這些完成，我們就開始 {{domxref("Window.setInterval", "setInterval()")}} 迴圈每 10 秒載入新的隨機引言到引言框之中。
 
 ```js
 var intervalID = window.setInterval(showQuote, 10000);

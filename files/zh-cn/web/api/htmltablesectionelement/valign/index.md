@@ -29,7 +29,7 @@ l10n:
 
 ## 示例
 
-使用 CSS {{cssxref("vertical-align")}} 替代，它的优先级更高，如[垂直对齐表格单元格](/zh-CN/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell)示例所示。
+使用 CSS {{cssxref("vertical-align")}} 替代，它的优先级更高，如[垂直对齐表格单元格](/zh-CN/docs/Web/CSS/vertical-align#表格单元格中的垂直对齐)示例所示。
 
 ## 规范
 

@@ -3,7 +3,7 @@ title: "HTMLElement: offsetHeight プロパティ"
 short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 l10n:
-  sourceCommit: 8ac73df2fbe2c88d8649fcb006dcde098616c723
+  sourceCommit: f2088b8912ef205a737551441d54b73507bd3ac6
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -41,4 +41,3 @@ l10n:
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
 - [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN 要素の寸法と位置の測定](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)（英語）

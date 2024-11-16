@@ -1,15 +1,16 @@
 ---
 title: "HTMLElement: dragenter イベント"
+short-title: dragenter
 slug: Web/API/HTMLElement/dragenter_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
-`dragenter` イベントは、ドラッグ中のイベントやテキストの選択範囲が、妥当なドロップターゲットに入ったときに発生します。
+`dragenter` イベントは、ドラッグ中のイベントやテキストの選択範囲が、有効なドロップターゲットに入ったときに発生します。ターゲットオブジェクトは、ユーザーが直接選択した要素（ドロップ対象としてユーザーが直接示した要素）、または {{HTMLElement("body")}} 要素です。
 
-ターゲットのオブジェクトは*ユーザーによる直接の選択範囲*（ドロップターゲットとしてユーザーによって直接示された要素）、または {{HTMLElement("body")}} 要素です。
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -42,7 +43,7 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 ドラッグ可能な要素がコンテナーの上にある間、 `dragenter` イベントを待ち受けて、他のコンテナーの背景を紫色にし、ドラッグ可能な要素がコンテナーにドロップされることを知らせます。
 
-ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+しかし、この例ではドロップは実装していません。ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
 #### HTML
 
@@ -120,9 +121,3 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragenter_event", "dragenter")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragenter_event", "dragenter")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragenter_event", "dragenter")}} イベント

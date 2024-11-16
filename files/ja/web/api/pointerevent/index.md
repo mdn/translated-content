@@ -2,7 +2,7 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 l10n:
-  sourceCommit: ba77b09c606b1b5fdea532e84b980cd0e79f226d
+  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -24,9 +24,9 @@ l10n:
 
 _このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
 
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}}
   - : トランスデューサー（ポインターまたはスタイラス）の軸と機器の画面の X-Y 平面のなす角度を表します。
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
   - : Y-Z 平面と、トランスデューサー（ポインターまたはスタイラス）の軸と Y 軸の両方を格納する平面との間の角度を表します。
 - {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : `PointerEvent` を生成するポインティングデバイス用の固有の識別子。

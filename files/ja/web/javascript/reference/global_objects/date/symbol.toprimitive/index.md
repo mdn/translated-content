@@ -1,53 +1,56 @@
 ---
-title: Date.prototype[@@toPrimitive]
+title: Date.prototype[Symbol.toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`[@@toPrimitive]()`** メソッドは、 `Date` オブジェクトをプリミティブ値に変換します。
+**`[Symbol.toPrimitive]()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付を表すプリミティブ値を返します。返される値は、指定されたヒントに応じて文字列または数値となります。
 
 {{EmbedInteractiveExample("pages/js/date-toprimitive.html")}}
 
 ## 構文
 
 ```js-nolint
-Date()[Symbol.toPrimitive](hint)
+date[Symbol.toPrimitive](hint)
 ```
+
+### 引数
+
+- `hint`
+  - : 文字列で、返すプリミティブ値の型を表します。以下の値が有効です。
+    - `"string"` または `"default"`: このメソッドは文字列を返さなければなりません。
+    - `"number"`: このメソッドは数値を返さなければなりません。
 
 ### 返値
 
-与えられた {{jsxref("Date")}} オブジェクトのプリミティブ値です。引数に応じて、このメソッドは文字列と数値のどちらかを返します。
+`hint` が `"string"` または `"default"` の場合、このメソッドは、[`this` 値を文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)して文字列を返します（最初に `toString()` を、次に `valueOf()` を試します）。
+
+`hint` が `"number"` の場合、このメソッドは、[`this` 値を数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値返還)して数値を返します（最初に `valueOf()` を試み、次に `toString()` を試みます）。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : `hint` 引数が有効な値の 3 つのうちのどれでもない場合に発生します。
 
 ## 解説
 
-{{jsxref("Date")}} オブジェクトの `[@@toPrimitive]()` メソッドは、プリミティブ値を返します。これは、数値型または文字列型です。
+`[Symbol.toPrimitive]()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Data_structures#型変換)の一部です。JavaScript は、オブジェクトをプリミティブ値に変換する際に、常に `[Symbol.toPrimitive]()` メソッドを優先的に呼び出します。`[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要があることはほとんどありません。JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した際に、自動的にこのメソッドを呼び出します。
 
-`hint` が `string` または `default` の場合、`[@@toPrimitive]()` は {{jsxref("Object.prototype.toString()", "toString")}} メソッドを呼び出そうとします。 `toString` メソッドが存在しなければ、 {{jsxref("Object.prototype.valueOf()", "valueOf")}} メソッドを呼び出そうとします。 `valueOf` メソッドも存在しなければ、 `[@@toPrimitive]()` は {{jsxref("TypeError")}} を発生させます。
-
-`hint` が `number` の場合、 `[@@toPrimitive]()` は初めに `valueOf` メソッドを呼び出そうとします。これが失敗した場合は、 `toString` メソッドを呼び出します。
-
-JavaScript は、 `[@@toPrimitive]()` メソッドを呼び出してオブジェクトをプリミティブ値に変換します。 `[@@toPrimitive]()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した時、自動的にこれを呼び出します。
+{{jsxref("Date")}} オブジェクトの `[Symbol.toPrimitive]()` メソッドは、{{jsxref("Date/valueOf", "this.valueOf()")}} を呼び出して数値を返すか、または {{jsxref("Date/toString", "this.toString()")}} を呼び出して文字列を返すことで、プリミティブ値を返します。これは、既定のプリミティブ変換処理を上書きして、数値ではなく文字列を返すために存在します。既定では、プリミティブ変換は {{jsxref("Date/valueOf", "valueOf()")}} を {{jsxref("Date/toString", "toString()")}} の前に呼び出します。独自の `[Symbol.toPrimitive]()` により、`new Date(0) + 1` は `1`（数値）ではなく `"Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)1"`（文字列）を返します。
 
 ## 例
 
-### 日付プリミティブの返却
+### \[Symbol.toPrimitive]() の使用
 
 ```js
-const testDate = new Date(1590757517834);
-// "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+const d = new Date(0); // 1970-01-01T00:00:00.000Z
 
-testDate[Symbol.toPrimitive]("string");
-// "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)" を返す
-
-testDate[Symbol.toPrimitive]("number");
-// "1590757517834" を返す
-
-testDate[Symbol.toPrimitive]("default");
-// "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)" を返す
+d[Symbol.toPrimitive]("string"); // "Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)"
+d[Symbol.toPrimitive]("number"); // 0
+d[Symbol.toPrimitive]("default"); // "Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)"
 ```
 
 ## 仕様書

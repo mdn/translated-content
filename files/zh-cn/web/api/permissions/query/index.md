@@ -2,12 +2,16 @@
 title: Permissions：query() 方法
 slug: Web/API/Permissions/query
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
 {{domxref("Permissions")}} 接口的 **`query()`** 方法会返回全局作用域中用户权限的状态。
+
+用户权限名称在每个功能的各自规范中定义。不同浏览器版本支持的权限在 [`Permissions` 接口的兼容性数据](/zh-CN/docs/Web/API/Permissions#浏览器兼容性)中列出（另请参阅 [Firefox 值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)和 [WebKit 值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)的相关源代码）。
+
+每个权限所控制的 API 在[权限 API](/zh-CN/docs/Web/API/Permissions_API) 概述主题中的[权限相关的 API](/zh-CN/docs/Web/API/Permissions_API#权限相关的_api) 中列出。
 
 ## 语法
 
@@ -19,23 +23,24 @@ query(permissionDescriptor)
 
 - `permissionDescriptor`
 
-  - : 一个为 `query` 操作设置选项的对象，由一个以逗号分隔的键——值对列表组成。可用的选项有：
+  - : 设置 `query` 操作选项的对象。此描述符的可用选项取决于权限类型。所有权限都有一个名称：
 
     - `name`
-      - : 要查询权限的 API 名称。每个浏览器支持不同的值集。Firefox 的值在[这里](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)，Chromium 的值在[这里](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)，WebKit 的值在[这里](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)。
-    - `userVisibleOnly`
-      - : （仅推送，不被 Firefox 所支持——请参阅下面的“浏览器兼容性”部分）表示是否希望为每条消息显示通知或发送静默推送通知。默认为 `false`。
-    - `sysex`（仅限 MIDI）
-      - : 表示是否需要接收系统专有信息。默认为 `false`。
+      - : 包含要查询其权限的 API 名称的字符串，例如 `camera`、`bluetooth`、`camera`、`geolocation`（有关更完整的列表，请参阅 [`Permissions`](/zh-CN/docs/Web/API/Permissions#浏览器兼容性)）。如果浏览器不支持权限名称，则返回的 {{jsxref("Promise")}} 将使用 {{jsxref("TypeError")}} 拒绝。
 
-> [!NOTE]
-> 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API) 和 [Push](/zh-CN/docs/Web/API/Push_API) 的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true`。
+    对于 `push` 权限，你还可以指定：
 
-> **备注：** `persistent-storage`权限允许根据 [Storage API](https://storage.spec.whatwg.org/) 使用持久盒（即[持久存储](https://storage.spec.whatwg.org/#persistence)）来进行存储。
+    - `userVisibleOnly` {{optional_inline}}
+      - : （仅推送，Firefox 不支持——请参阅下面的浏览器支持部分）表示你是否要为每条消息显示通知或能够发送静默推送通知。默认值为 `false`。
+
+    对于 `midi` 权限，你还可以指定：
+
+    - `sysex` {{optional_inline}}
+      - : 指示是否需要接收系统独有消息。默认值为 `false`。
 
 ### 返回值
 
-一个会兑现为 {{domxref("PermissionStatus")}} 对象的 {{jsxref("Promise")}}。
+一个兑现为 {{domxref("PermissionStatus")}} 对象的 {{jsxref("Promise")}}。
 
 ### 异常
 

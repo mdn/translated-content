@@ -60,7 +60,7 @@ Esta página documenta los [Métodos](#métodos) disponibles en el objeto `conso
 - {{domxref("console.timeLog()")}}
   - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
+  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/performance/reference) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
 - {{domxref("console.trace()")}}
   - : Muestra una [traza de pila](#trazas_de_pila).
 - {{domxref("console.warn()")}}

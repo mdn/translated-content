@@ -46,7 +46,7 @@ l10n:
 
 ## 같이 보기
 
-- [즉각적인 페이지 탐색을 위해 Chrome에서 페이지를 미리 렌더링](https://developer.chrome.com/blog/prerender-pages/#prerendering-from-the-address-bar) (developer.chrome.com)
+- [즉각적인 페이지 탐색을 위해 Chrome에서 페이지를 미리 렌더링](https://developer.chrome.com/docs/web-platform/prerender-pages#prerendering-from-the-address-bar) (developer.chrome.com)
 - {{Glossary("prerender")}}
 - [프리로드](/ko/docs/Web/HTML/Attributes/rel/preload)
 - [dns 프리페치](/ko/docs/Web/HTML/Attributes/rel/dns-prefetch)

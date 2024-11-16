@@ -1,11 +1,11 @@
 ---
-title: Java による WebSocket サーバーの記述
+title: Java で WebSocket サーバーを書く
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。
 

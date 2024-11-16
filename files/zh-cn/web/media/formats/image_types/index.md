@@ -42,7 +42,7 @@ slug: Web/Media/Formats/Image_types
       <td>
         <p>
           由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应包含浏览器支持更好的回退格式（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> 元素）。<br />
-          <strong>以下浏览器支持</strong>：Chrome、Firefox（只支持静态图，动态图尚未实现）、Opera、Safari。
+          <strong>以下浏览器支持</strong>：Chrome、Firefox、Opera、Safari。
         </p>
       </td>
     </tr>
