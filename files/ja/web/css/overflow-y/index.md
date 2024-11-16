@@ -89,7 +89,7 @@ overflow-y: unset;
 
   <li>
     <code>overflow-y:visible</code> — 必要に応じてテキストをボックスの外に表示
-  <div id="div3">
+    <div id="div3">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
