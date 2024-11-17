@@ -290,5 +290,5 @@ display.addEventListener("change", (evt) => {
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
-- [CSS フレックスボックスレイアウト](/en-US/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/en-US/docs/Web/CSS/CSS_grid_layout)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
