@@ -85,7 +85,7 @@ JavaScript 文档描述语言的角度适合于 JavaScript 程序员。
 打开控制台的准确步骤因浏览器不同而不同：
 
 - [打开 Firefox 中的控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
-- [打开 Chrome 中的控制台](https://developer.chrome.com/docs/devtools/open)
+- [打开 Chrome 中的控制台](https://developer.chrome.google.cn/docs/devtools/open)
 - [打开 Microsoft Edge 中的控制台](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/)
 
 ### 输入并运行 JavaScript
