@@ -1,11 +1,11 @@
 ---
-title: 语法和数据类型
+title: 语法和类型
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
-本章讨论 JavaScript 的基本语法、变量声明、数据类型和字面量（literal）。
+本章讨论 JavaScript 的基本语法、变量声明、数据类型和字面量。
 
 ## 基础
 
@@ -84,60 +84,7 @@ JavaScript 有三种声明方式。
 
 你也可以直接给属性赋值。像这样 `x = 42`。这种声明方式将会创建一个[未声明全局变量](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#描述)。这样做还会产生 JavaScript 警告。因为未声明的全局变量常常导致预期之外的行为，所以不建议使用。
 
-### 变量求值
-
-用 `var` 或 `let` 语句声明的变量，如果没有赋初始值，则其值为 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
-
-如果访问一个未声明的变量会导致抛出 [`ReferenceError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) 异常：
-
-```js
-var a;
-console.log("The value of a is " + a); // a 的值是 undefined
-
-console.log("The value of b is " + b); // b 的值是 undefined
-var b;
-// 在你阅读下面的‘变量声明提升’前你可能会疑惑
-
-console.log("The value of c is " + c); // 未捕获的引用错误：c 未被定义
-
-let x;
-console.log("The value of x is " + x); // x 的值是 undefined
-
-console.log("The value of y is " + y); // 未捕获的引用错误：y 未被定义
-let y;
-```
-
-你可以使用 `undefined` 来判断一个变量是否已赋值。在以下的代码中，变量`input`未被赋值，因此 [`if`](/zh-CN/docs/JavaScript/Reference/Statements/if...else) 条件语句的求值结果是 `true`。
-
-```js
-var input;
-if (input === undefined) {
-  doThis();
-} else {
-  doThat();
-}
-```
-
-`undefined` 值在布尔类型环境中会被当作 `false` 。例如，下面的代码将会执行函数 `myFunction`，因为数组 `myArray` 中的元素未被赋值：
-
-```js
-var myArray = [];
-if (!myArray[0]) myFunction();
-```
-
-数值类型环境中 `undefined` 值会被转换为 `NaN`。
-
-```js
-var a;
-a + 2; // 计算为 NaN
-```
-
-当你对一个 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) 变量求值时，空值 `null` 在数值类型环境中会被当作 0 来对待，而布尔类型环境中会被当作 `false`。例如：
-
-```js
-var n = null;
-console.log(n * 32); // 在控制台中会显示 0
-```
+### 声明和初始化
 
 ### 变量的作用域
 
@@ -213,28 +160,6 @@ var myvar = "my value";
 ```js
 console.log(x); // ReferenceError
 let x = 3;
-```
-
-### 函数提升
-
-对于函数来说，只有函数声明会被提升到顶部，而函数表达式不会被提升。
-
-```js
-/* 函数声明 */
-
-foo(); // "bar"
-
-function foo() {
-  console.log("bar");
-}
-
-/* 函数表达式 */
-
-baz(); // 类型错误：baz 不是一个函数
-
-var baz = function () {
-  console.log("bar2");
-};
 ```
 
 ### 全局变量
@@ -322,7 +247,7 @@ answer = "Thanks for all the fish...";
 
 因为 JavaScript 是动态类型的，这种赋值方式并不会提示出错。
 
-### 数字转换为字符串
+### 数字和“+”运算符
 
 在包含的数字和字符串的表达式中使用加法运算符（+），JavaScript 会把数字转换成字符串。例如，观察以下语句：
 
@@ -389,7 +314,7 @@ console.log(a[0]); // 3
 
 数组字面值同时也是数组对象。有关数组对象的详情请参见 {{jsxref("Array")}}。
 
-#### 数组字面值中的多余逗号
+#### 数组字面量中的多余逗号
 
 你不必列举数组字面值中的所有元素。若你在同一行中连写两个逗号（,），数组中就会产生一个没有被指定的元素，其初始值是 `undefined`。以下示例创建了一个名为 `fish` 的数组：
 
