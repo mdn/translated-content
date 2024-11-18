@@ -65,5 +65,5 @@ function inputFocus() {
 
 ## Смотрите также
 
-- [`blur`](/ru/docs/Web/API/Element/blur_event) event
+- Событие [`blur`](/ru/docs/Web/API/Element/blur_event)
 - Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}
