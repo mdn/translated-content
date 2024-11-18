@@ -7,11 +7,11 @@ l10n:
 
 {{HTMLSidebar}}
 
-**HTML 内联框架元素 (`<iframe>`)** 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
+**[HTML](/zh-CN/docs/Web/HTML) 内联框架元素 (`<iframe>`)** 表示嵌套的 {{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为*父级浏览上下文*。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
+每个嵌入的浏览上下文都有自己的 [document](/zh-CN/docs/Web/API/Document) 并允许并且允许 URL 导航。每个嵌入式浏览上下文的导航都会被线性化到 _顶级_ 浏览上下文的[会话历史记录](/zh-CN/docs/Web/API/History)中。包含嵌入内容的浏览上下文称为*父级浏览上下文*。_顶级_ 浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
 > [!WARNING]
 > 页面上的每个 `<iframe>` 都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的 `<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
@@ -38,7 +38,7 @@ l10n:
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
-  - : 设置为 `true` 时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
+  - : 设置为 `true` 时，跨域的 `<iframe>` 就可以调用[支付请求接口](/zh-CN/docs/Web/API/Payment_Request_API)。
 
     > [!NOTE]
     > 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`。
@@ -89,7 +89,7 @@ l10n:
     - `strict-origin-when-cross-origin`（默认值）
       - : 当发起同源请求时，在 referrer 标头中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 标头中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 标头。
     - `unsafe-url`
-      - : 始终在 referrer 标头中包含源以及路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
+      - : 始终在 referrer 标头中包含源 _以及_ 路径（但不包括 [fragment](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)，[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)，或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会暴露受 TLS 保护的资源的源和路径信息。
 
 - `sandbox`
 
@@ -100,7 +100,7 @@ l10n:
     - `allow-forms`
       - : 允许嵌入的浏览上下文提交表单。如果没有使用该关键字，表单会正常显示，但是无法校验输入内容，提交表单到服务器或是关闭对话框。
     - `allow-modals`
-      - : 允许页面通过 {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} 和 {{domxref("Window.prompt()")}}打开模态窗口，无论有无该关键字，打开{{HTMLElement("dialog")}} 是被允许的，它同样允许页面接收 {{domxref("BeforeUnloadEvent")}} 事件。
+      - : 允许页面通过 {{domxref("Window.alert()")}}，{{domxref("Window.confirm()")}}，{{domxref("Window.print()")}} 和 {{domxref("Window.prompt()")}}打开模态窗口，无论有无该关键字，打开{{HTMLElement("dialog")}} 是被允许的，它同样允许页面接收 {{domxref("BeforeUnloadEvent")}} 事件。
     - `allow-orientation-lock`
       - : 请查看[锁定屏幕方向](/zh-CN/docs/Web/API/Screen/lockOrientation)。
     - `allow-pointer-lock`
@@ -108,15 +108,15 @@ l10n:
     - `allow-popups`
       - : 允许弹窗 (例如 {{domxref("Window.open()")}}，`target="_blank"`，{{domxref("Window.showModalDialog()")}})。如果没有使用该关键字，相应的功能将自动被禁用。
     - `allow-popups-to-escape-sandbox`
-      - : 允许沙箱化的文档打开新窗口，并且新窗口不会继承沙箱标记。例如，安全地沙箱化一个广告页面，而不会在广告链接到的新页面中启用相同的限制条件。
+      - : 允许沙箱化的文档打开新浏览上下文，并且新浏览上下文不会继承沙箱标记。例如，安全地沙箱化一个第三方的广告页面，而不会在广告链接到的新页面中启用相同的限制条件。如果不包含这个标记，重定向的页面、弹出窗口或新标签页将受到与源 `<iframe>` 相同的沙盒限制。
     - `allow-presentation`
       - : 允许嵌入的浏览上下文开始一个[演示请求](/zh-CN/docs/Web/API/PresentationRequest)。
     - `allow-same-origin`
-      - : 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 {{Glossary("same-origin policy")}} 同源检查失败。（可以防御对 [数据存储/ cookie](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) 潜在访问，以及一些 JavaScript API）。
+      - : 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 {{Glossary("same-origin policy")}} 同源检查失败。（可以防御对[数据存储/ cookie](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) 潜在访问，以及一些 JavaScript API）。
     - `allow-scripts`
       - : 允许嵌入的浏览上下文运行脚本（但不能创建弹窗）。如果没有使用该关键字，就无法运行脚本。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
-      - : 允许嵌入的浏览上下文通过[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 使用父级浏览上下文的存储功能。
+      - : 允许 `<iframe>` 中的文档通过{{domxref("Storage Access API", "储存访问 API", "", "nocode")}} 请求访问非分区 Cookie。
     - `allow-top-navigation`
       - : 允许嵌入的浏览上下文导航（加载）内容到顶级的浏览上下文。
     - `allow-top-navigation-by-user-activation`
@@ -156,7 +156,7 @@ l10n:
 - `align` {{Deprecated_Inline}}
   - : 此元素相对于周围元素的对齐方式。
 - `frameborder` {{Deprecated_Inline}}
-  - : 值为`1`（默认值）时，显示此框架的边框。值为`0`时移除边框。此属性已不赞成使用，请使用 CSS 属性 {{cssxref("border")}} 代替。
+  - : 值为`1`（默认值）时，显示此框架的边框。值为`0`时移除边框。此属性已不赞成使用，请使用 CSS 属性 {{cssxref("border")}} 来控制 `<iframe>` 的边框。
 - `longdesc` {{Deprecated_Inline}}
   - : 表示框架内容的长描述的 URL。由于广泛的误用，该属性对于无图形界面的浏览器不起作用。
 - `marginheight` {{Deprecated_Inline}}
@@ -192,7 +192,7 @@ l10n:
 
 ## `error` 和 `load` 事件行为
 
-`<iframe>` 上触发的 `error` 和 `load` 事件常用于检测本地网络中 HTTP 服务器的 URL. 因此，作为保护措施，浏览器不会触发 `<iframe>` 上的 [error](/zh-CN/docs/Web/API/HTMLElement/error_event) 事件，而 [load](/zh-CN/docs/Web/API/HTMLElement/load_event) 事件总是被触发，即使 `<iframe>` 的内容加载失败。
+`<iframe>` 上触发的 `error` 和 `load` 事件常用于检测本地网络中 HTTP 服务器的 URL。因此，作为保护措施，浏览器不会触发 `<iframe>` 上的 [error](/zh-CN/docs/Web/API/HTMLElement/error_event) 事件，而 [load](/zh-CN/docs/Web/API/HTMLElement/load_event) 事件总是被触发，即使 `<iframe>` 的内容加载失败。
 
 ## 无障碍环境
 
@@ -210,7 +210,7 @@ l10n:
 
 ### 一个简单的 \<iframe>
 
-这个示例将页面 <https://example.org> 嵌入了一个 iframe 中。这是一个常见的 iframe 使用案例：嵌入来自另一个网站的内容。例如，下面的这个示例本身和页面顶部的[尝试一下](#尝试一下), 都是 MDN 通过使用 `<iframe>` 嵌入了其他地方的内容。
+这个示例将页面 <https://example.org> 嵌入了一个 iframe 中。这是一个常见的 iframe 使用案例：嵌入来自另一个网站的内容。例如，下面的这个示例本身和页面顶部的[尝试一下](#尝试一下)，都是 MDN 通过使用 `<iframe>` 嵌入了其他地方的内容。
 
 #### HTML
 
@@ -225,7 +225,7 @@ l10n:
 
 #### 结果
 
-{{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+{{ EmbedLiveSample('一个简单的 iframe', 640,400)}}
 
 ### 在 \<iframe> 嵌入源代码
 
@@ -259,13 +259,13 @@ l10n:
 
 在使用 `srcdoc` 时，如何进行转义：
 
-- 首先，编写 HTML 内容，想正常 HTML 一样转义需要转义的字符 (例如 `<`, `>`, `&`等).
-- 在 `srcdoc` 属性中 `&lt;` 和 `<` 代表相同的字符。因此，在 HTML 中要将它们修改为实际需要的转义序列，将所有的 `&` 替换为 `&amp;`。例如 `&lt;` 修改为 `&amp;lt;`, `&amp;` 修改为 `&amp;amp;`。
-- 替换所有的双引号 (`"`) 为 `&quot;`以防止 `srcdoc` 属性被提前终止。(如果你使用 `'`, 那么你应该将 `'` 替换为 `&apos;`). 这个步骤在上一个步骤后执行，所以 `&quot;` 不会变成 `&amp;quot;`.
+- 首先，编写 HTML 内容，想正常 HTML 一样转义需要转义的字符（例如 `<`，`>`，`&` 等）。
+- 在 `srcdoc` 属性中 `&lt;` 和 `<` 代表相同的字符。因此，在 HTML 中要将它们修改为实际需要的转义序列，将所有的 `&` 替换为 `&amp;`。例如 `&lt;` 修改为 `&amp;lt;`，`&amp;` 修改为 `&amp;amp;`。
+- 替换所有的双引号（`"`）为 `&quot;`以防止 `srcdoc` 属性被提前终止。（如果你使用 `'`，那么你应该将 `'` 替换为 `&apos;`）。这个步骤在上一个步骤后执行，所以 `&quot;` 不会变成 `&amp;quot;`。
 
 #### 结果
 
-{{ EmbedLiveSample('Embedding_source_code_in_an_iframe', 640, 300)}}
+{{ EmbedLiveSample('在 iframe 嵌入源代码', 640, 300)}}
 
 ## 技术概要
 
