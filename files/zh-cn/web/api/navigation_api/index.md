@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Navigation API")}}
 
-**导航 API**（Navigation API）提供了启动、拦截和管理浏览器导航操作的功能。它还可以检查应用程序的历史记录条目。这是对之前 Web 平台功能（例如{{domxref("History API", "历史记录 API", "", "nocode")}} 和 {{domxref("window.location")}} 的继承并解决了它们的缺点，且专门针对{{glossary("SPA", "单页应用程序（SPA）")}}的需求。
+**导航 API**（Navigation API）提供了启动、拦截和管理浏览器导航操作的功能。它还可以检查应用程序的历史记录条目。这是对之前 Web 平台特性（例如{{domxref("History API", "历史记录 API", "", "nocode")}} 和 {{domxref("window.location")}} 的继承并解决了它们的缺点，且专门针对{{glossary("SPA", "单页应用程序（SPA）")}}的需求。
 
 ## 概念和用法
 
@@ -21,7 +21,7 @@ API 可通过 {{domxref("Window.navigation")}} 属性访问，该属性返回对
 
 `NavigationEvent` 对象还提供两种方法：
 
-- {{domxref("NavigateEvent.intercept", "intercept()")}} 将返回承诺的回调处理器函数作为参数。它允许你控制启动导航时发生的情况。例如，在 SPA 的情况下，它可用于根据导航到的 URL 的路径将相关的新内容加载到 UI 中。
+- {{domxref("NavigateEvent.intercept", "intercept()")}} 将返回 promise 的回调处理器函数作为参数。它允许你控制启动导航时发生的情况。例如，在 SPA 的情况下，它可用于根据导航到的 URL 的路径将相关的新内容加载到 UI 中。
 - {{domxref("NavigateEvent.scroll", "scroll()")}} 允许你手动启动浏览器的滚动行为（例如，到 URL 中的片段标识符），如果它对你的代码有意义，而不是等待浏览器自动处理它。
 
 一旦启动导航并调用你的 `intercept()` 处理器，就会创建一个 {{domxref("NavigationTransition")}} 对象实例（可通过 {{domxref("Navigation.transition")}} 访问），可用于跟踪正在进行的导航的过程。
@@ -53,21 +53,21 @@ API 可通过 {{domxref("Window.navigation")}} 属性访问，该属性返回对
 - {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
   - : 如果可能的话，导航到上一个导航历史记录条目。
 - {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
-  - : 如果可能的话，导航到下一个导航历史条目。
+  - : 如果可能的话，导航到下一个导航历史记录条目。
 - {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
   - : 导航到由其键值标识的特定导航历史记录条目，该键值是通过相关条目的 {{domxref("NavigationHistoryEntry.key")}} 属性获得的。
 
-上述每个方法都返回一个包含两个 promise 的对象——`{committed, finish}`。这允许调用函数等待采取进一步的操作，直到：
+上述每个方法都返回一个包含两个 promise（`{committed, finish}`）的对象。这允许调用函数等待采取进一步的操作，直到：
 
 - `committed` 兑现，意味着可见的 URL 已经改变，并且创建了一个新的 {{domxref("NavigationHistoryEntry")}}。
-- `finished` 兑现，这意味着你的 `intercept()` 处理器返回的所有承诺均已实现。这相当于当 {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} 事件触发时，{{domxref("NavigationTransition.finished")}} promise 已兑现，如前所述。
-- 上述任何一个 promise 都被拒绝，这意味着导航由于某种原因失败了。
+- `finished` 兑现，这意味着你的 `intercept()` 处理器返回的所有 promise 均已兑现。这相当于当 {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} 事件触发时，{{domxref("NavigationTransition.finished")}} promise 已兑现，如前所述。
+- 上述任意一个 promise 被拒绝，这意味着导航由于某种原因失败了。
 
 ### 状态
 
 导航 API 允许你存储每个历史记录条目的状态。这是开发人员定义的信息——可以是任何你喜欢的内容。例如，你可能希望存储一个 `visitCount` 属性来记录某个视图被访问的次数，或者存储一个包含多个与 UI 状态相关的属性的对象，以便当用户返回该视图时可以恢复该状态。
 
-### Limitations
+### 限制
 
 导航 API 存在一些明显的限制：
 
@@ -100,7 +100,7 @@ API 可通过 {{domxref("Window.navigation")}} 属性访问，该属性返回对
 ## 示例
 
 > [!NOTE]
-> 查看 Domenic Denicola 的[导航 API 现场演示](https://gigantic-honored-octagon.glitch.me/)。
+> 查看 Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)。
 
 ### 使用 `intercept()` 处理导航
 
