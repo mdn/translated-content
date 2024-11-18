@@ -36,7 +36,7 @@ forward(options)
 ### 异常
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or {{domxref("Navigation.entries", "navigation.entries().length - 1")}}, i.e. either the current {{domxref("Document")}} is not yet active, or the current history entry is the last one in the history, meaning that forwards navigation is not possible, or if the current {{domxref("Document")}} is unloading. 如果 {{domxref("Navigation.currentEntry")}} 的 {{domxref("NavigationHistoryEntry.index")}} 值为 -1 或 {{domxref("Navigation.entries", "navigation.entries().length - 1")}}，即当前 {{domxref("Document")}} 尚未激活，或者当前历史记录条目是历史记录中的最后一条，即无法向前导航，或者当前 {{domxref("Document")}} 正在卸载时，抛出此异常。
+  - : 如果 {{domxref("Navigation.currentEntry")}} 的 {{domxref("NavigationHistoryEntry.index")}} 值为 -1 或 {{domxref("Navigation.entries", "navigation.entries().length - 1")}}，即当前 {{domxref("Document")}} 尚未激活，或者当前历史记录条目是历史记录中的最后一条，即无法向前导航，或者当前 {{domxref("Document")}} 正在卸载时，抛出此异常。
 
 ## 示例
 
