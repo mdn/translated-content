@@ -19,7 +19,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 Для перетаскивания других HTML-элементов, должны быть выполнены три пункта :
 
 1. Установить `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)="true"` на элемент, который вы хотите сделать перетаскиваемым.
-2. Добавить обработчик события `[`dragstart`](/ru/docs/Web/Events/dragstart)`.
+2. Добавить обработчик события [`dragstart`](/ru/docs/Web/Events/dragstart).
 3. [Установить данные перетаскивания](/ru/docs/Web/API/DataTransfer/setData) в обработчик выше.
 
 Вот пример, который позволяет перетаскивать часть содержимого.
