@@ -11,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 
 ## Отслеживание движений мыши
 
-Отслеживание движений мыши ещё проще, чем обработка нажатий клавиш. Все, что нам нужно, это следить за событиями {{event("mousemove")}}. Добавьте следующую строку в том же месте, как и для других событий, чуть ниже `keyup event`:
+Отслеживание движений мыши ещё проще, чем обработка нажатий клавиш. Все, что нам нужно, это следить за событиями [`mousemove`](/ru/docs/Web/Events/mousemove). Добавьте следующую строку в том же месте, как и для других событий, чуть ниже `keyup event`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
