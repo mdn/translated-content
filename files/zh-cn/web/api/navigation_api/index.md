@@ -67,6 +67,12 @@ API 可通过 {{domxref("Window.navigation")}} 属性访问，该属性返回对
 
 导航 API 允许你存储每个历史记录条目的状态。这是开发人员定义的信息——可以是任何你喜欢的内容。例如，你可能希望存储一个 `visitCount` 属性来记录某个视图被访问的次数，或者存储一个包含多个与 UI 状态相关的属性的对象，以便当用户返回该视图时可以恢复该状态。
 
+要获取 {{domxref("NavigationHistoryEntry")}} 的状态，请调用其 {{domxref("NavigationHistoryEntry.getState", "getState()")}} 方法。该方法最初返回 `undefined`，但当在条目上设置状态信息时，它将返回先前设置的状态信息。
+
+设置状态有点微妙。你无法检索状态值然后直接更新它——存储在条目上的副本不会更改。相反，你可以在执行 {{domxref("Navigation.navigate", "navigate()")}} 方法或 {{domxref("Navigation.reload", "reload()")}} 方法时更新它——其中每个都可选地接受 options 对象参数，其中包括一个 `state` 属性，其中包含要在历史记录条目上设置的新状态。当这些导航提交时，状态更改将自动应用。
+
+但是在某些情况下，状态更改将独立于导航或重新加载——例如，当页面包含可展开/可折叠的 {{htmlelement("details")}} 元素时。在这种情况下，你可能希望将展开/折叠状态存储在历史记录条目中，以便在用户返回页面或重新启动浏览器时恢复它。使用 {{domxref("Navigation.updateCurrentEntry()")}} 处理此类情况。当前条目更改完成后，将触发 {{domxref("Navigation/currententrychange_event", "currententrychange")}}。
+
 ### 限制
 
 导航 API 存在一些明显的限制：
