@@ -326,7 +326,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## 参见
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

@@ -1,5 +1,5 @@
 ---
-title: 流程控制与错误处理
+title: 控制流与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
@@ -11,7 +11,7 @@ JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以
 
 在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)这一章节。
 
-## 语句块
+## 块语句
 
 最基本的语句是用于组合语句的语句块。该块由一对大括号界定：
 

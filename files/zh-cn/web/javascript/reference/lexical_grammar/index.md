@@ -1,5 +1,5 @@
 ---
-title: 词法文法
+title: 词法语法
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
 
@@ -124,6 +124,8 @@ JavaScript 的解释器会把它视为普通注释——只有当脚本直接在
 > 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://zh.wikipedia.org/wiki/端序記號) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM 就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell 就不会识别该注释。
 
 你只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
+
+## 标识符
 
 ## 关键字
 
@@ -256,7 +258,7 @@ true
 false
 ```
 
-### 数值字面量
+### 数字字面量
 
 #### 十进制
 
@@ -265,7 +267,7 @@ false
 42
 ```
 
-请注意，十进制数值字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 [Firefox bug 957513](https://bugzil.la/957513) 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+请注意，十进制数字字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 [Firefox bug 957513](https://bugzil.la/957513) 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二进制
 
@@ -298,7 +300,7 @@ false
 
 #### 数值分隔符
 
-可以使用下划线（`_`，`U+005F`）作为分隔符以增强数值字面量的可读性：
+可以使用下划线（`_`，`U+005F`）作为分隔符以增强数字字面量的可读性：
 
 ```js-nolint
 1_000_000_000_000
@@ -315,7 +317,7 @@ false
 // 不允许连续出现多个下划线
 100__000; // SyntaxError
 
-// 不允许使用下划线作为数值字面量的结尾
+// 不允许使用下划线作为数字字面量的结尾
 100_; // SyntaxError
 
 // 不允许在前导零之后使用下划线
