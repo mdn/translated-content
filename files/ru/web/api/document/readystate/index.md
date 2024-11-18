@@ -7,7 +7,7 @@ slug: Web/API/Document/readyState
 
 Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
 
-Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event).
+Когда значение этого свойства изменяется, в объекте {{domxref("document")}} возникает событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event).
 
 ## Синтаксис
 

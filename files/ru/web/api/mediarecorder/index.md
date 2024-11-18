@@ -45,7 +45,7 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 ## Обработчики событий
 
 - {{domxref("MediaRecorder.ondataavailable")}}
-  - : Вызывает обработчик [`dataavailable`](/ru/docs/Web/Events/dataavailable) события, которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
+  - : Вызывает обработчик события [`dataavailable`](/ru/docs/Web/Events/dataavailable), которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
 - {{domxref("MediaRecorder.onerror")}}
   - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`recordingerror`](/ru/docs/Web/Events/recordingerror), включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
 - {{domxref("MediaRecorder.onpause")}}

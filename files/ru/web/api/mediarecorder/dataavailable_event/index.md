@@ -5,7 +5,7 @@ slug: Web/API/MediaRecorder/dataavailable_event
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.ondataavailable`** обработчик события (часть [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)) обрабатывает [`dataavailable`](/ru/docs/Web/Events/dataavailable) событие, позволяет выполнить код, когда тип данных {{domxref("Blob")}}, представляющий обработанные данные становиться доступным для использования.
+**`MediaRecorder.ondataavailable`** обработчик события (часть [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)) обрабатывает событие [`dataavailable`](/ru/docs/Web/Events/dataavailable), позволяет выполнить код, когда тип данных {{domxref("Blob")}}, представляющий обработанные данные становиться доступным для использования.
 
 Событие `dataavailable` вызывается когда MediaRecorder доставляет медиа данные в ваше приложение для использования. Они представляются в виде объекта типа {{domxref("Blob")}}, содержащего данные. Это происходит в четырёх ситуациях:
 

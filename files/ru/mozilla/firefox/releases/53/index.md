@@ -51,11 +51,11 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### Мероприятия
 
-- CSS Transitions: The [`transitionstart`](/ru/docs/Web/Events/transitionstart), [`transitionrun`](/ru/docs/Web/Events/transitionrun) и [`transitioncancel`](/ru/docs/Web/Events/transitioncancel) события были реализованы (см [Firefox bug 1264125](https://bugzil.la/1264125) и [Firefox bug 1287983](https://bugzil.la/1287983)).
+- CSS Transitions: реализованы события [`transitionstart`](/ru/docs/Web/Events/transitionstart), [`transitionrun`](/ru/docs/Web/Events/transitionrun) и [`transitioncancel`](/ru/docs/Web/Events/transitioncancel) ([Firefox bug 1264125](https://bugzil.la/1264125) и [Firefox bug 1287983](https://bugzil.la/1287983)).
 - {{Domxref ( "CompositionEvent.CompositionEvent", "CompositionEvent")}} Конструктор был реализован (см [Firefox bug 1002256](https://bugzil.la/1002256)).
 - {{Domxref ( "MouseEvent.x")}} и {{domxref ( "MouseEvent.y")}} псевдонимами {{domxref ( "MouseEvent.clientX")}} / {{domxref ( "MouseEvent.clientY" )}} были реализованы (см [Firefox bug 424390](https://bugzil.la/424390)).
-- [`auxclick`](/ru/docs/Web/Events/auxclick) событие и соответствующий {{domxref ( "GlobalEventHandlers.onauxclick")}} был реализован обработчик (см [Firefox bug 1304044](https://bugzil.la/1304044)).
-- [`transitioncancel`](/ru/docs/Web/Events/transitioncancel) событие теперь уволен после [перехода](/ru/docs/Web/CSS/CSS_Transitions) отменяется. См {{domxref ( "GlobalEventHandlers.ontransitioncancel")}} для получения более подробной информации и пример ([Firefox bug 1264125](https://bugzil.la/1264125)).
+- реализованы событие [`auxclick`](/ru/docs/Web/Events/auxclick) и соответствующий обработчик {{domxref ( "GlobalEventHandlers.onauxclick")}} ([Firefox bug 1304044](https://bugzil.la/1304044)).
+- событие [`transitioncancel`](/ru/docs/Web/Events/transitioncancel) теперь возникает после отмены [перехода](/ru/docs/Web/CSS/CSS_Transitions).
 
 ### DOM
 

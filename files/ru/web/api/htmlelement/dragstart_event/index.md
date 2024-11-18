@@ -20,7 +20,7 @@ var dragstartHandler = targetElement.ondragstart;
 
 ## Пример
 
-Этот пример демонстрирует использование {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} атрибута обработчика для установки обработчика событий элемента [`dragstart`](/ru/docs/Web/Events/dragstart).
+Этот пример демонстрирует использование атрибута {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} для установки обработчика событий [`dragstart`](/ru/docs/Web/Events/dragstart).
 
 ```js
 <!DOCTYPE html>

@@ -87,9 +87,9 @@ _Наследует свойства от родительского узла {{
 ### Обработчики событий
 
 - {{ domxref("Element.ongotpointercapture") }}
-  - : Возвращает обработчик событий для событий типа [`gotpointercapture`](/ru/docs/Web/Events/gotpointercapture).
+  - : Возвращает обработчик событий для событий [`gotpointercapture`](/ru/docs/Web/Events/gotpointercapture).
 - {{ domxref("Element.onlostpointercapture") }}
-  - : Возвращает обработчик событий для событий типа [`lostpointercapture`](/ru/docs/Web/Events/lostpointercapture).
+  - : Возвращает обработчик событий для событий [`lostpointercapture`](/ru/docs/Web/Events/lostpointercapture).
 
 #### Устаревшие обработчики событий
 
