@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示了距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
+**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
 
 > [!NOTE]
 > 虽然 {{cssxref("&lt;percentage&gt;")}} 值可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅 {{cssxref("&lt;length-percentage&gt;")}}。
@@ -38,13 +38,13 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 > 这些相对单位，尤其是 `em` 和相对于根的 `rem`，通常用于创建可扩展的布局，即使用户改变字体大小，也能保持页面的垂直节奏。
 
 - `cap`
-  - : 表示元素字体 {{Cssxref("font")}} 的“上限高度”（即大写字母的标称高度）。
+  - : 表示元素字体（{{Cssxref("font")}}）的“大写字高”（即大写字母的标称高度）。
 - `ch`
-  - : 表示元素字体 {{Cssxref("font")}} 中 `0` 这一字形的宽度（“0”，Unicode 字符 U+0030），更准确地说，是“0”这一字形的{{Glossary("advance measure", "步进尺寸")}}。如果无法确定 `0` 字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
+  - : 表示元素字体（{{Cssxref("font")}}）中 `0` 这一字形的宽度（“0”，Unicode 字符 U+0030），更准确地说，是“0”这一字形的{{Glossary("advance measure", "步进尺寸")}}。如果无法确定 `0` 字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
 - `em`
   - : 相对长度单位，这个单位表示元素的 {{Cssxref("font-size")}} 的计算值。如果用在 {{Cssxref("font-size")}} 属性本身，它则表示元素*继承*的 `font-size` 值。
 - `ex`
-  - : 这个单位表示元素 {{Cssxref("font")}} 的 [x-字高](https://zh.wikipedia.org/wiki/x字高)。在含有 `x` 字母的字体中，它是该字体的小写字母的高度；对于很多字体来说，`1ex ≈ 0.5em`。
+  - : 这个单位表示元素字体（{{Cssxref("font")}}）的 [x-字高](https://zh.wikipedia.org/wiki/x字高)。在含有 `x` 字母的字体中，它是该字体的小写字母的高度；对于很多字体来说，`1ex ≈ 0.5em`。
 - `ic` {{experimental_inline}}
   - : 等于在用于渲染的字体中找到的“水”（CJK 表意文字“水”，U + 6C34）字形的{{Glossary("advance measure", "步进尺寸")}}。
 - `lh` {{experimental_inline}}
@@ -55,13 +55,13 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
 
 - `rcap`
-  - : 表示根元素字体 {{Cssxref("font")}} 的“上限高度”（即大写字母的标称高度）。
+  - : 表示根元素字体（{{Cssxref("font")}}）的“大写字高”（即大写字母的标称高度）。
 - `rch`
-  - : 表示根元素字体 {{Cssxref("font")}} 中 `0` 这一字形的宽度（“0”，Unicode 字符 U+0030），更准确地说，是“0”这一字形的{{Glossary("advance measure", "步进尺寸")}}。
+  - : 表示根元素字体（{{Cssxref("font")}}）中 `0` 这一字形的宽度（“0”，Unicode 字符 U+0030），更准确地说，是“0”这一字形的{{Glossary("advance measure", "步进尺寸")}}。
 - `rem`
   - : 相对长度单位，这个单位表示根元素的（通常是 {{HTMLElement("html")}}）{{Cssxref("font-size")}} 的计算值。在根元素 {{Cssxref("font-size")}} 中使用时，它代表初始值。常见的浏览器默认值为 `16px`，但用户自定义的偏好设置可能会对此进行修改。
 - `rex`
-  - : 代表根元素 {{Cssxref("font")}} 的 x-字高。
+  - : 代表根元素字体（{{Cssxref("font")}}）的 x-字高。
 - `ric`
   - : 等同于根元素字体的 [`ic`](#ic) 值。
 - `rlh` {{experimental_inline}}
@@ -111,22 +111,26 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 - `vh`
 
   - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)高度的百分比。`1vh` 是视口高度的 1%。例如，如果视口高度为 `300px`，那么属性上的 `70vh` 值就是 `210px`。
+
     对于小、大和动态视口尺寸，视口百分比单位分别是 `svh`、`lvh` 和 `dvh`。`vh` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
 - `vw`
 
   - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)宽度的百分比。`1vw` 是视口宽度的 1%。例如，如果视口宽度为 `800px`，那么属性上的 `50vw` 值就是 `400px`。
+
     对于小、大和动态视口尺寸，视口百分比单位分别是 `svw`、`lvw` 和 `dvw`。`vw` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
 - `vmax`
 
   - : 以百分比表示 `vw` 和 `vh` 的最大值。
 
+
     对于小、大和动态视口尺寸，相应的视口百分比单位分别是 `svmax`、`lvmax` 和 `dvmax`。`vmax` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
 - `vmin`
 
   - : 以百分比表示 `vw` 和 `vh` 的最小值。
+
 
     对于小、大和动态视口尺寸，相应的视口百分比单位分别是 `svmin`、`lvmin` 和 `dvmin`。`vmin` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
@@ -194,11 +198,11 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 - `pc`
   - : 一派卡（pica）。`1pc` = `12pt` = `1in / 6`。
 - `pt`
-  - : 一点（point）。`1pt` = `1in / 72`。
+  - : 一磅（point）。`1pt` = `1in / 72`。
 
 ## 插值
 
-当包含动画效果时，动画中 `<length>` 的值是由计算出的值使用插值法得出的浮点实数。插值的速度由动画的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。
+当包含动画效果时，动画中 `<length>` 的值是由计算出的值应用{{glossary("interpolation", "插值")}}后得出的浮点实数。插值的速度由动画的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。
 
 ## 示例
 
@@ -315,6 +319,6 @@ inputElem.addEventListener("change", () => {
 
 ## 参见
 
-- [CSS 属性值与单位教程](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [CSS 属性值与单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
+- [CSS 值和单位教程](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)
