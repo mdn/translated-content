@@ -21,8 +21,8 @@ Promise.try(func, arg1, arg2, /* …, */ argN)
 ### 参数
 
 - `func`
-  - ：使用提供的参数（`arg1`，`arg2`，...，`argN`）同步调用的函数。它可以做任何事情——要么返回一个值、要么抛出一个错误或者返回一个承诺。
-- `arg1`, `arg2`, …, `argN`
+  - ：使用提供的参数（`arg1`、`arg2`、...、`argN`）同步调用的函数。它可以做任何事情——要么返回一个值、抛出一个错误或者返回一个 promise。
+- `arg1`、`arg2`、…、`argN`
   - : 传入给 `func` 的参数。
 
 ### 返回值
@@ -35,7 +35,7 @@ Promise.try(func, arg1, arg2, /* …, */ argN)
 
 ## 描述
 
-你可能有一个接受一个回调函数的 API，这个回调函数可能是同步的，也可能是异步的。你希望将结果封装成一个 promise，统一处理。最直接的方法可能是 {{jsxref("Promise/resolve", "Promise.resolve(func())")}}。问题是，如果 `func()` 同步地抛出一个错误，这个错误不会被捕获，并变成一个被拒绝的 promise。
+你可能有一个接受回调函数的 API，这个回调函数可能是同步的，也可能是异步的。你希望将结果封装成一个 promise，统一处理。最直接的方法可能是 {{jsxref("Promise/resolve", "Promise.resolve(func())")}}。问题是，如果 `func()` 同步地抛出一个错误，这个错误不会被捕获，并变成一个被拒绝的 promise。
 
 常见的做法（将函数调用结果提升为已履行或拒绝的 promise）通常看起来是这样的：
 
@@ -49,7 +49,7 @@ new Promise((resolve) => resolve(func()));
 Promise.try(func);
 ```
 
-对于内置的 `Promise()` 构造函数，如果执行器函数抛出错误，它会自动捕获并将其转换为拒绝的 只是 `Promise.try()` 更简洁易读。
+对于内置的 `Promise()` 构造函数，如果执行器函数抛出错误，它会自动捕获并将其转换为拒绝状态，因此这两种方法基本等同，只是 `Promise.try()` 更简洁易读。
 
 请注意，`Promise.try()` 与下面代码并*不*完全等价，尽管它们非常相似：
 
@@ -57,11 +57,11 @@ Promise.try(func);
 Promise.resolve().then(func);
 ```
 
-它们的区别在于，传入给 `then()` 的回调总是异步调用的，而 `Promise()` 构造函数的执行器函数总是同步调用的。`Promise.try()` 也会同步调用函数，并立即解析 promise，如果可以的话。
+它们的区别在于，传入给 {{jsxref("Promise/then", "then()")}} 的回调总是异步调用的，而 `Promise()` 构造函数的执行器函数总是同步调用的。`Promise.try()` 也会同步调用函数，并尽可能立即解决 promise。
 
 `Promise.try()` 与 {{jsxref("Promise/catch", "catch()")}} 和 {{jsxref("Promise/finally", "finally()")}} 结合使用，可以用来在单个链中处理同步和异步错误，并使处理 promise 错误看起来像处理同步错误。
 
-类似 {{domxref("Window/setTimeout", "setTimeout()")}}， `Promise.try()` 接受额外的参数，这些参数将传递给回调。这意味着，不要这样做：
+类似 {{domxref("Window/setTimeout", "setTimeout()")}}，`Promise.try()` 接受额外的参数，这些参数将传递给回调。这意味着，不要这样做：
 
 ```js
 Promise.try(() => func(arg1, arg2));
@@ -171,6 +171,6 @@ const p2 = Promise.try.call(NotPromise, () => {
 ## 参见
 
 - [`core-js` 中 `Promise.try` 的 polyfill](https://github.com/zloirock/core-js#promisetry)
-- [使用 promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) guide
+- [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) 指南
 - {{jsxref("Promise")}}
 - [`Promise()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
