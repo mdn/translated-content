@@ -106,7 +106,7 @@ console.log("Hello"[1] === "e"); // true
 
 字符串有操作字符串和访问字符串信息的[实用方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#实例方法)。因为所有的原始值设计为不可变的，因此这些方法都是返回新字符串。
 
-字符串重载了 `+` 运算符：当操作数之一是字符串时，执行的是字符串拼接而不是数字加法。特殊的[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)语法能用嵌入式表达式更简洁地书写字符串。和 Python 的 f-string 或 c# 的插值字符串不同，模板字面量实用反引号（不是单引号，也不是双引号）。
+字符串重载了 `+` 运算符：当操作数之一是字符串时，执行的是字符串拼接而不是数字加法。特殊的[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)语法能用嵌入式表达式更简洁地书写字符串。和 Python 的 f-string 或 c# 的插值字符串不同，模板字面量使用反引号（不是单引号，也不是双引号）。
 
 ```js
 const age = 25;
@@ -120,7 +120,7 @@ JavaScript 区分 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)�
 
 - 没有返回值的 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句（`return;`）会隐式地返回 `undefined`。
 - 访问[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)上不存在的属性（`obj.iDontExist`）会返回 `undefined`。
-- 变量声明时未初始化（`let x;`）将变量隐式地初始化为 `undefined`。
+- 变量声明时未初始化（`let x;`）会将变量隐式地初始化为 `undefined`。
 
 JavaScript 有布尔类型，可能的值为 `true` 和 `false`——两个都是关键字。值都能根据下列的规则转换为布尔：
 
@@ -456,7 +456,7 @@ me.x = 1;
 console.log(stillMe.x); // 1
 ```
 
-想要了解关于对象和原型的更多知识，参见 [`Object` 参考页](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)。想要了解关于对象初始化器语法的更多信息，参见[参考页](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
+想要了解关于对象和原型的更多知识，参见 [`Object` 参考页](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)。想要了解关于对象初始化器语法的更多信息，参见其[参考页](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
 
 本文忽略了有关对象原型和继承的全部细节，因为你通常使用[类](#类)实现继承，不需要接触到底层机制（你可能听说底层机制很深奥）。想要学习底层机制，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
@@ -587,7 +587,7 @@ avg(1, 2); // 1，而不是 NaN
 
 ### 匿名函数
 
-JavaScript 能让你创建匿名函数——也就是没有名字的函数。在实践中，匿名函数一般用作其他函数的参数、立即被赋值给用于激活函数的变量，或者作为另一个函数的返回值。
+JavaScript 能让你创建匿名函数——也就是没有名字的函数。在实践中，匿名函数一般用作其他函数的参数、立即被赋值给用于激活函数的变量、或者作为另一个函数的返回值。
 
 ```js
 // 注意，圆括号前面没有函数名
@@ -779,9 +779,9 @@ async function readFile(filename) {
 }
 ```
 
-核心语言并没有指定任何的异步编程特性，但在与外部环境交互时，这个特性非常重要——从[询问用户权限](/zh-CN/docs/Web/API/Permissions_API)、[获取数据](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)，到[读取文件](https://nodejs.org/api/fs.html)。保持潜在地长时间运行的操作异步能确保这个操作等待期间其他进程仍然能运行——例如，在等待用户点击按钮授予权限期间，浏览器不会冻结。
+核心语言并没有指定任何的异步编程特性，但在与外部环境交互时，这个特性非常重要——从[询问用户权限](/zh-CN/docs/Web/API/Permissions_API)，[获取数据](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)，到[读取文件](https://nodejs.org/api/fs.html)。保持潜在地长时间运行的操作异步能确保这个操作等待期间其他进程仍然能运行——例如，在等待用户点击按钮授予权限期间，浏览器不会冻结。
 
-如果你有一个异步的值，同步地得到这个值是不可能的。例如，如果你有一个 promise，你只能通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法访问最终的结果。同样地，{{jsxref("Operators/await", "await")}} 只能被用于异步上下文中，异步上下文通常是异步函数或模块。promise _永不阻塞_——只是依赖于 promise 的结果的逻辑会被延迟；在此期间，其余部分继续执行。如果你是函数式编程者，你可以将 promise 当作[单子](<https://zh.wikipedia.org/wiki/单子 (函数式编程)>)，可以用 `then()` 映射 promise（然而，promise 不是*严格意义上的*单子，它们会自动战平；例如，你不能有 `Promise<Promise<T>>`）。
+如果你有一个异步的值，同步地得到这个值是不可能的。例如，如果你有一个 promise，你只能通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法访问最终的结果。同样地，{{jsxref("Operators/await", "await")}} 只能被用于异步上下文中，异步上下文通常是异步函数或模块。promise _永不阻塞_——只是依赖于 promise 的结果的逻辑会被延迟；在此期间，其余部分继续执行。如果你是函数式编程者，你可以将 promise 当作[单子](<https://zh.wikipedia.org/wiki/单子 (函数式编程)>)，可以用 `then()` 映射 promise（然而，promise 不是*严格意义上的*单子，它们会自动展平；例如，你不能有 `Promise<Promise<T>>`）。
 
 实际上，单线程模型让 Node.js 成为服务器端编程的热门选择，因为它非阻塞的 IO，使得处理大量的数据库或文件系统请求非常高效。然而，纯 JavaScript 的 CPU 密集型（计算密集型）任务仍会阻塞主线程。为了实现真正的并行，你需要使用 [worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)。
 
@@ -812,7 +812,7 @@ export const a = 1;
 
 JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
 
-运行时、或者宿主，将数据反馈给 JavaScript 引擎（解释器）、提供额外的全局属性、为引擎提供钩子与外部世界交互。模块解析、读取数据、打印消息、发送网络请求等都是运行时级别的操作。自诞生以来，JavaScript 已被各种环境所采用。，例如，浏览器（其提供诸如 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 这样的 API），Node.js（其提供诸如 [文件系统访问](https://nodejs.org/api/fs.html)这样的 API），等。JavaScript 已经成功整合到 Web（其为 JavaScript 的主要用途）、移动应用、桌面应用、服务器端应用、无服务、嵌入式系统，等等。在学习 JavaScript 核心特性的同时，了解宿主提供的特性也很重要，以便将知识付诸实践。例如，你可以阅读所有的 [Web 平台 API](/zh-CN/docs/Web/API)，其由浏览器实现，有时非浏览器宿主也会实现。
+运行时或者宿主将数据反馈给 JavaScript 引擎（解释器）、提供额外的全局属性、为引擎提供钩子与外部世界交互。模块解析、读取数据、打印消息、发送网络请求等都是运行时级别的操作。自诞生以来，JavaScript 已被各种环境所采用。例如，浏览器（其提供诸如 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 这样的 API），Node.js（其提供诸如[文件系统访问](https://nodejs.org/api/fs.html)这样的 API）等。JavaScript 已经成功整合到 Web（其为 JavaScript 的主要用途）、移动应用、桌面应用、服务器端应用、无服务、嵌入式系统等等。在学习 JavaScript 核心特性的同时，了解宿主提供的特性也很重要，以便将知识付诸实践。例如，你可以阅读所有的 [Web 平台 API](/zh-CN/docs/Web/API)，其由浏览器实现，有时非浏览器宿主也会实现。
 
 ## 继续探索
 
