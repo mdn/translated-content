@@ -75,9 +75,9 @@ La propiedad `border-radius` se especifica como:
       <td><em>radio</em></td>
       <td><img alt="Un rectángulo azul claro con un borde gris claro. Las 4 esquinas están redondeadas." src="all-corner.png" /></td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica un radio a usar 
-        para el borde en cada esquina. Se usa solo en la 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica un radio a usar
+        para el borde en cada esquina. Se usa solo en la
         sintaxis de un valor.
       </td>
     </tr>
@@ -87,11 +87,11 @@ La propiedad `border-radius` se especifica como:
         <img alt="Un rectángulo azul claro con un borde gris claro. Las 2 esquinas en la parte superior izquierda y la inferior derecha están redondeadas." src="top-left-bottom-right.png" />
       </td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica 
-        un radio a usar para el borde en las esquinas 
-        superior izquierda e inferior derecha del 
-        cuadro del elemento. Se usa solo en la 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica
+        un radio a usar para el borde en las esquinas
+        superior izquierda e inferior derecha del
+        cuadro del elemento. Se usa solo en la
         sintaxis de dos valores.
       </td>
     </tr>
@@ -101,10 +101,10 @@ La propiedad `border-radius` se especifica como:
         <img alt="Un rectángulo azul claro con un borde gris claro. Las 2 esquinas en la parte superior derecha y la inferior izquierda están redondeadas." src="top-right-bottom-left.png" />
       </td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica un radio 
-        a usar para el borde en las esquinas superior derecha 
-        e inferior izquierda del cuadro del elemento. 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica un radio
+        a usar para el borde en las esquinas superior derecha
+        e inferior izquierda del cuadro del elemento.
         Se usa solo en las sintaxis de dos y tres valores.
       </td>
     </tr>
@@ -112,10 +112,10 @@ La propiedad `border-radius` se especifica como:
       <td><em>esquina-superior-izquierda</em></td>
       <td><img alt="Un rectángulo azul claro con un borde gris claro. La esquina superior izquierda está redondeada." src="top-left.png" /></td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica un radio 
-        a usar para el borde en la esquina superior 
-        izquierda del cuadro del elemento. Se usa solo 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica un radio
+        a usar para el borde en la esquina superior
+        izquierda del cuadro del elemento. Se usa solo
         en las sintaxis de tres y cuatro valores.
       </td>
     </tr>
@@ -123,10 +123,10 @@ La propiedad `border-radius` se especifica como:
       <td><em>esquina-superior-derecha</em></td>
       <td><img alt="Un rectángulo azul claro con un borde gris claro. La esquina superior derecha está redondeada." src="top-right.png" /></td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica un 
-        radio a usar para el borde en la esquina superior 
-        derecha del cuadro del elemento. Se usa solo 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica un
+        radio a usar para el borde en la esquina superior
+        derecha del cuadro del elemento. Se usa solo
         en la sintaxis de cuatro valores.
       </td>
     </tr>
@@ -134,11 +134,11 @@ La propiedad `border-radius` se especifica como:
       <td><em>esquina-inferior-derecha</em></td>
       <td><img alt="Un rectángulo azul claro con un borde gris claro. La esquina inferior derecha está redondeada." src="bottom-right.png" /></td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que 
-        indica un radio a usar para el borde en 
-        la esquina inferior derecha del cuadro 
-        del elemento. Se usa solo en las sintaxis 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que
+        indica un radio a usar para el borde en
+        la esquina inferior derecha del cuadro
+        del elemento. Se usa solo en las sintaxis
         de tres y cuatro valores.
       </td>
     </tr>
@@ -146,10 +146,10 @@ La propiedad `border-radius` se especifica como:
       <td><em>esquina-inferior-izquierda</em></td>
       <td><img alt="Un rectángulo azul claro con un borde gris claro. La esquina inferior izquierda está redondeada." src="bottom-left.png" /></td>
       <td>
-        Es un {{cssxref("&lt;length&gt;")}} o un 
-        {{cssxref("&lt;percentage&gt;")}} que indica 
-        un radio a usar para el borde en la esquina 
-        inferior izquierda del cuadro del elemento. 
+        Es un {{cssxref("&lt;length&gt;")}} o un
+        {{cssxref("&lt;percentage&gt;")}} que indica
+        un radio a usar para el borde en la esquina
+        inferior izquierda del cuadro del elemento.
         Se usa solo en la sintaxis de cuatro valores.
       </td>
     </tr>
