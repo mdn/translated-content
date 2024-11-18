@@ -22,9 +22,9 @@ l10n:
 
 - `allow`
 
-  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些功能（例如，访问麦克风、摄像头、电池、web 共享等）。
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
 
-    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframes)。
+    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframe)。
 
     > [!NOTE]
     > 通过 `allow` 属性指定的特征策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步的限制。它不会替换原有策略。
@@ -142,7 +142,8 @@ l10n:
 - `srcdoc`
 
   - : 该属性是一段 HTML 代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 `srcdoc` 属性，则会渲染 `src` 属性表示的内容。
-  - > [!NOTE]
+
+    > [!NOTE]
     > 在解析任何相对 URL 时，例如锚点链接，`about:srcdoc` 页面会使用嵌入的文档的 URL 作为它的基准 URL。
 
 - `width`
