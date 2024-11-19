@@ -670,7 +670,7 @@ const charsInBody = (function counter(elm) {
 
 ### 函数是头等对象
 
-JavaScript 函数是第一类对象。这意味着它们可以被赋值给变量、作为参数被传递给其他函数、作为其他函数的返回值。此外，JavaScript 支持开箱即用不需要显式捕获的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，让你能方便地应用函数式编程风格。
+JavaScript 函数是头等对象。这意味着它们可以被赋值给变量、作为参数被传递给其他函数、作为其他函数的返回值。此外，JavaScript 支持开箱即用不需要显式捕获的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，让你能方便地应用函数式编程风格。
 
 ```js
 // 返回函数的函数
