@@ -66,7 +66,7 @@ console.log(5.03e2); // 503
 console.log(-3n / 2n); // -1n
 ```
 
-它支持标准的[算数运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#算数运算符)，例如，加、减、取余运算等等。BigInt 和 number 在算数运算中不能混用。
+它支持标准的[算术运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#算术运算符)，例如，加、减、取余运算等等。BigInt 和 number 在算术运算中不能混用。
 
 {{jsxref("Math")}} 对象提供了标准的数学函数和常量。
 
