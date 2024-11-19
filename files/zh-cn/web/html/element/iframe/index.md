@@ -223,7 +223,7 @@ l10n:
 
 {{EmbedLiveSample('一个简单的 iframe', 640,400)}}
 
-### 在 \<iframe> 嵌入源代码
+### 在 \<iframe> 中嵌入源代码
 
 这个示例直接在 iframe 中渲染源代码。它可以结合 `sandbox` 属性在显示用户生成的内容时防止脚本注入。
 
@@ -261,7 +261,7 @@ l10n:
 
 #### 结果
 
-{{EmbedLiveSample('在 iframe 嵌入源代码', 640, 300)}}
+{{EmbedLiveSample('在 iframe 中嵌入源代码', 640, 300)}}
 
 ## 技术概要
 
