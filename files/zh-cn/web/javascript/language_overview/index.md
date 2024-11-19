@@ -134,7 +134,7 @@ Boolean(""); // false
 Boolean(234); // true
 ```
 
-然而，几乎没有必要这样做，因为 JavaScript 在期待布尔时会静默地执行这个转换，例如在 `if` 语句中（参见[控制结构](#控制结构)）。鉴于这个原因，我们有时候讲“[真值](/zh-CN/docs/Glossary/Truthy)”和“[假值](/zh-CN/docs/Glossary/Falsy)”，在布尔上下文中，表明分别能转换成 `true` 和 `false` 的值。
+然而，几乎没有必要这样做，因为 JavaScript 在期望使用布尔值时会静默地执行这个转换，例如在 `if` 语句中（参见[控制结构](#控制结构)）。鉴于这个原因，我们有时候讲“[真值](/zh-CN/docs/Glossary/Truthy)”和“[假值](/zh-CN/docs/Glossary/Falsy)”，在布尔上下文中，表明分别能转换成 `true` 和 `false` 的值。
 
 支持布尔运算，如：`&&`（逻辑*与*）、`||`（逻辑*或*）、`!`（逻辑*非*）；参见[运算符](#运算符)。
 
