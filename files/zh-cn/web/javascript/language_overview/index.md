@@ -429,7 +429,7 @@ const userName = prompt("你的键是什么？");
 obj[userName] = prompt("键的值是什么？");
 ```
 
-可以将属性访问链接起来：
+可以链式使用属性访问：
 
 ```js
 obj.details.color; // 橙色
