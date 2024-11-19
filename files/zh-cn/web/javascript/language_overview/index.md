@@ -15,7 +15,7 @@ JavaScript 是一门多范式的动态语言，它包含类型、运算符、标
 
 我们从任何编程语言都不可缺少的构建块开始：类型。JavaScript 程序操作值，这些值都有各自的类型。JavaScript 提供了 7 种*原始类型*：
 
-- [Number](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)：表示除了*非常*大的整数之外的所有数字值（整数和浮点数）。
+- [Number](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)：表示除了*非常*大的整数之外的所有数值（整数和浮点数）。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Data_structures#bigint_类型)：表示任意大整数。
 - [String](/zh-CN/docs/Web/JavaScript/Data_structures#string_类型)：用于存储文本。
 - [Boolean](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)：`true` 和 `false`——通常用于条件逻辑。
