@@ -33,7 +33,7 @@ JavaScript 是一门多范式的动态语言，它包含类型、运算符、标
 
 在 JavaScript 中，函数不是特殊的数据结构——它们只是特殊的、能被调用的对象类型。
 
-## 数字
+### 数值
 
 JavaScript 有两种内置的数字类型：Number 和 BigInt。
 
