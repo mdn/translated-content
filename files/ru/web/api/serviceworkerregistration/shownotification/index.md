@@ -31,7 +31,7 @@ A {{jsxref('Promise')}} that resolves to a {{domxref('NotificationEvent')}}.
       - title: A {{domxref("DOMString")}} containing action text to be shown to the user.
       - icon: A {{domxref("USVString")}} containg the URL of an icon to display with the action.
 
-      Appropriate responses are built using `event.action` within the {{event("notificationclick")}} event.
+      Appropriate responses are built using `event.action` within the [`notificationclick`](/ru/docs/Web/Events/notificationclick) event.
 
     - `badge`: The URL of an image to represent the notification when there is not enough space to display the notification itself such as, for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.
     - `body`: Строка с дополнительным контентом уведомления.

@@ -8945,10 +8945,6 @@
     "modified": "2020-10-15T22:17:45.231Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:43.790Z",
-    "contributors": ["mfuji09", "wbamberg", "chrisdavidmills", "silverskyvicto"]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:40:06.130Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
