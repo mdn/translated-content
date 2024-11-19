@@ -2,7 +2,7 @@
 title: font-weight
 slug: Web/CSS/font-weight
 l10n:
-  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
+  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
 {{CSSRef}}
@@ -146,7 +146,7 @@ font-weight: unset;
 
 ### 一般的な太さ名との対応
 
-`100` から `900` の数値は、おおよそ以下の太さ名に対応します ([OpenType 仕様書](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)を参照してください)。
+`100` から `900` の数値は、おおよそ以下の太さ名に対応します ([OpenType 仕様書](https://learn.microsoft.com/ja/typography/opentype/spec/os2#usweightclass)を参照してください)。
 
 | 値  | 太さ名                                                                                                                             |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -159,7 +159,7 @@ font-weight: unset;
 | 700 | Bold                                                                                                                               |
 | 800 | Extra Bold (Ultra Bold)                                                                                                            |
 | 900 | Black (Heavy)                                                                                                                      |
-| 950 | [Extra Black (Ultra Black)](https://learn.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| 950 | [Extra Black (Ultra Black)](https://learn.microsoft.com/ja/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### 可変フォント
 
@@ -167,9 +167,33 @@ font-weight: unset;
 
 TrueType や OpenType の可変フォントでは、 "wght" バリエーションが様々な幅を実装するために使用されます。
 
-このデモでは、`font-weight: 500;` を設定して読み込みます。 `font-weight` プロパティの値を変更すると、テキストの太さが変わります。
+このデモでは、`font-weight: 500;` を設定して読み込みます。 `.sample` セレクター内にある `font-weight` プロパティの値を変更すると、テキストの太さが変わります（200、700、など）。下記のコードブロック内の "Play" をクリックするとこの例を MDN Playground で編集できます。
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
+```html live-sample___font-weight-example
+<p class="sample">
+  ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+  waddling like an elephantine lizard up Holborn Hill.
+</p>
+```
+
+```css live-sample___font-weight-example
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/MutatorSans.ttf");
+  font-family: "MutatorSans";
+  font-style: normal;
+  font-weight: 1 1000;
+}
+
+.sample {
+  text-transform: uppercase;
+  font-weight: 500;
+  font:
+    1.5rem "MutatorSans",
+    sans-serif;
+}
+```
+
+{{EmbedLiveSample("font-weight-example", "", "200px")}}
 
 ## アクセシビリティ
 
@@ -188,7 +212,7 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 ## 例
 
-<h3 id="Setting_font_weights">フォントの太さの設定</h3>
+### フォントの太さの設定
 
 #### HTML
 
