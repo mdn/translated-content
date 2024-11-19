@@ -271,7 +271,7 @@ const name = cachedName || (cachedName = getName());
 
 JavaScript 语法和 C 家族非常相似。有几点值得提及：
 
-- [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)可以是 Unicode 字符，但不能是[保留单词](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)之一。
+- [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)可以是 Unicode 字符，但不能是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)之一。
 - [注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)通常是 `//` 或 `/* */`，然而许多其他脚本语言（如 Perl、Python 和 Bash）使用 `#`。
 - 分号在 JavaScript 中是可选的——JavaScript 在必要时会[自动插入分号](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号插入)。然而，有需要注意的特定警告，因为和 Python 不一样，分号仍然是语法的一部分。
 
