@@ -148,17 +148,17 @@ font-weight: unset;
 
 `100` から `900` の数値は、おおよそ以下の太さ名に対応します ([OpenType 仕様書](https://learn.microsoft.com/ja/typography/opentype/spec/os2#usweightclass)を参照してください)。
 
-| 値  | 太さ名                                                                                                                             |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 100 | Thin (Hairline)                                                                                                                    |
-| 200 | Extra Light (Ultra Light)                                                                                                          |
-| 300 | Light                                                                                                                              |
-| 400 | Normal (Regular)                                                                                                                   |
-| 500 | Medium                                                                                                                             |
-| 600 | Semi Bold (Demi Bold)                                                                                                              |
-| 700 | Bold                                                                                                                               |
-| 800 | Extra Bold (Ultra Bold)                                                                                                            |
-| 900 | Black (Heavy)                                                                                                                      |
+| 値  | 太さ名                                                                                                                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 100 | Thin (Hairline)                                                                                                                 |
+| 200 | Extra Light (Ultra Light)                                                                                                       |
+| 300 | Light                                                                                                                           |
+| 400 | Normal (Regular)                                                                                                                |
+| 500 | Medium                                                                                                                          |
+| 600 | Semi Bold (Demi Bold)                                                                                                           |
+| 700 | Bold                                                                                                                            |
+| 800 | Extra Bold (Ultra Bold)                                                                                                         |
+| 900 | Black (Heavy)                                                                                                                   |
 | 950 | [Extra Black (Ultra Black)](https://learn.microsoft.com/ja/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### 可変フォント
