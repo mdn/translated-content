@@ -575,7 +575,7 @@ function area({ width, height }) {
 console.log(area({ width: 2, height: 3 }));
 ```
 
-也有 [_默认参数_](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)语法，它允许被忽略的参数（或值为 `undefined` 的参数）有默认值。
+[*默认参数*](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)语法允许被忽略的参数（或值为 `undefined` 的参数）有默认值。
 
 ```js
 function avg(firstValue, secondValue, thirdValue = 0) {
