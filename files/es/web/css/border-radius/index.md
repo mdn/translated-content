@@ -1,6 +1,8 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
