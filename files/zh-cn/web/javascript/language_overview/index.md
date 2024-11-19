@@ -106,7 +106,7 @@ console.log("Hello"[1] === "e"); // true
 
 字符串有操作字符串和访问字符串信息的[实用方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#实例方法)。因为所有的原始值设计为不可变的，因此这些方法都是返回新字符串。
 
-字符串重载了 `+` 运算符：当操作数之一是字符串时，执行的是字符串拼接而不是数字加法。特殊的[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)语法能用嵌入式表达式更简洁地书写字符串。和 Python 的 f-string 或 c# 的插值字符串不同，模板字面量使用反引号（不是单引号，也不是双引号）。
+字符串重载了 `+` 运算符：当操作数之一是字符串时，执行的是字符串拼接而不是数字加法。特殊的[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)语法能用嵌入式表达式更简洁地书写字符串。和 Python 的 f-string 或 C# 的插值字符串不同，模板字面量使用反引号（不是单引号，也不是双引号）。
 
 ```js
 const age = 25;
