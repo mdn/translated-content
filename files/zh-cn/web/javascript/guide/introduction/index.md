@@ -115,7 +115,7 @@ console.log(eval("3 + 5"));
   "use strict";
   /* 代码开始 */
   function greetMe(yourName) {
-    alert(`你好 ${yourName}`);
+    alert(`你好${yourName}`);
   }
 
   greetMe("世界");
