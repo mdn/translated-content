@@ -666,7 +666,7 @@ const charsInBody = (function counter(elm) {
 
 上面的示例中给函数表达式提供的名字仅在函数的自有作用域中可用。这能让引擎执行更多的优化并生成更可读的代码。名字也能在调试器和一些栈追踪中显示，能节省调试时间。
 
-如果你习惯函数式编程，注意 JavaScript 中递归的性能影响。虽然语言规范规定了[尾递归优化](https://en.wikipedia.org/wiki/Tail_call)，但由于恢复栈追踪和调试的困难，只有 JavaScriptCore（用于 Safari）实现了它。对于深递归，考虑使用迭代作为替代，避免栈溢出。
+如果你习惯函数式编程，注意 JavaScript 中递归的性能影响。虽然语言规范规定了[尾递归优化](https://zh.wikipedia.org/wiki/尾调用)，但由于恢复栈追踪和调试的困难，只有 JavaScriptCore（用于 Safari）实现了它。对于深递归，考虑使用迭代作为替代，避免栈溢出。
 
 ### 函数是头等对象
 
