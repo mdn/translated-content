@@ -26,7 +26,7 @@ const Früh = "foobar";
 如果一条语句独占一行的话，那么分号是可以省略的。但如果一行中有多条语句，那么这些语句*必须*用分号进行分隔。
 
 > [!NOTE]
-> ECMAScript 规定了在语句的末尾自动插入分号（[ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)）。（想要了解更多信息，参见有关 JavaScript 的[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)的详细参考 。）
+> ECMAScript 规定了在语句的末尾自动插入分号（[ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)）。（想要了解更多信息，参见有关 JavaScript 的[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)的详细参考。）
 
 然而，在一条语句的末尾总是加上分号被认为是最佳实践，即使是在非严格需要的时候。这个习惯可以大大减少代码出问题的可能性。
 
