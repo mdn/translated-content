@@ -1,5 +1,5 @@
 ---
-title: 语法和类型
+title: 语法与类型
 slug: Web/JavaScript/Guide/Grammar_and_types
 l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec

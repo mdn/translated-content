@@ -54,4 +54,4 @@ const foo = life1;
 ## 参见
 
 - [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [语法和类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南
+- [语法与类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南
