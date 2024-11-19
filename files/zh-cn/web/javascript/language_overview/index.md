@@ -395,7 +395,7 @@ try {
 - Python 中的字典。
 - Perl 和 Ruby 中的哈希。
 - C 和 C++ 中的哈希表。
-- Java 中的哈希映射。
+- Java 中的 HashMap。
 - PHP 中的关联数组。
 
 JavaScript 对象是哈希。与静态类型语言中的对象不同，JavaScript 中的对象没有固定的形状——可以随时添加、删除、重新排序、修改或动态查询属性。对象键总是[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)——即便是通常被认为是整数的数组索引，但在底层实际上是字符串。
