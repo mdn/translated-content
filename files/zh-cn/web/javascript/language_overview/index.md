@@ -249,8 +249,8 @@ JavaScript 中的[比较](/zh-CN/docs/Web/JavaScript/Reference/Operators#关系�
 JavaScript 也有[位运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)和[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#二元逻辑运算符)。值得注意的是，逻辑运算符不仅只处理布尔值——它们处理值的“真假”。
 
 ```js
-const a = 0 && "Hello"; // 0 因为 0 是“假值”
-const b = "Hello" || "world"; // "Hello" 因为 "Hello" 和 "world" 是“真值”
+const a = 0 && "Hello"; // 0，因为 0 是“假值”
+const b = "Hello" || "world"; // "Hello"，因为 "Hello" 和 "world" 都是“真值”
 ```
 
 `&&` 和 `||` 运算符使用短路逻辑，这意味着它们是否执行第二个操作数取决于第一个操作数。这对于访问对象的属性之前检查其是否是 null 对象很有用：
