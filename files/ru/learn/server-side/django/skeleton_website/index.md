@@ -334,7 +334,7 @@ python3 manage.py runserver
 
 Теперь скелет [Сайта местной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) сделан и запущен, теперь самое время начать писать код, который научит сайт делать то, что он должен делать.
 
-## Также посмотрите эти статьи
+## Смотрите также
 
 - [Пишем своё первое приложение на Django - часть 1](https://docs.djangoproject.com/en/2.2/intro/tutorial01/) (документация Django)
 - [Приложения](https://docs.djangoproject.com/en/2.2/ref/applications/) (документация Django). содержит информацию о настройке приложений.

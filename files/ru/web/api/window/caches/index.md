@@ -50,7 +50,7 @@ this.addEventListener("install", (event) => {
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
 - [Service Workers](/ru/docs/Web/API/ServiceWorker_API)
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
