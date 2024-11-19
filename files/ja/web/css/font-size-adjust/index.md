@@ -2,7 +2,7 @@
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 l10n:
-  sourceCommit: 9380313d8884045dbb31d390a7104d5dbeac2e20
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
