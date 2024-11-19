@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat16
 
 {{JSRef}}
 
-**`getFloat16()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 16-bit 浮点数 (单精度浮点数，2 个字节).
+**`getFloat16()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 16-bit 浮点数 (半精度浮点数，2 个字节).
 
 {{EmbedInteractiveExample("pages/js/dataview-getfloat16.html")}}
 
