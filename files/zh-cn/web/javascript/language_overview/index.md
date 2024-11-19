@@ -37,7 +37,7 @@ JavaScript 是一门多范式的动态语言，它包含类型、运算符、标
 
 JavaScript 有两种内置的数字类型：Number 和 BigInt。
 
-Number 类型是[基于 IEEE 754 规范的 64 位双精度浮点值](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)，这意味着整数只能在 [-(2<sup>53</sup> − 1)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) 和 [2<sup>53</sup> − 1](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) 之间无精度损失、安全的表示，以及浮点数只能存储到 [1.79 × 10<sup>308</sup>](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE)。在 number 中，JavaScript 无法区分浮点数和整数。
+Number 类型是[基于 IEEE 754 规范的 64 位双精度浮点值](https://zh.wikipedia.org/wiki/双精度浮点数)，这意味着整数只能在 [-(2<sup>53</sup> − 1)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) 和 [2<sup>53</sup> − 1](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) 之间无精度损失、安全的表示，以及浮点数只能存储到 [1.79 × 10<sup>308</sup>](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE)。在 number 中，JavaScript 无法区分浮点数和整数。
 
 ```js
 console.log(3 / 2); // 1.5，而不是 1
