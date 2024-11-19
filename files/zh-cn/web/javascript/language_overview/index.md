@@ -127,7 +127,7 @@ JavaScript 有布尔类型，可能的值为 `true` 和 `false`——两个都�
 1. `false`、`0`、空字符串（`""`）、`NaN`、`null` 和 `undefined` 都转换成 `false`。
 2. 所有其他的值都转换成 `true`。
 
-你可以使用 [`Boolean()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean) 函数显示地执行这个转换：
+你可以使用 [`Boolean()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean) 函数显式执行这个转换：
 
 ```js
 Boolean(""); // false
