@@ -16,7 +16,7 @@ l10n:
 
 ## Концепция и применение
 
-Чтобы научиться использовать server-sent events, обратитесь к статье [Использование отправляемых сервером событий](/ru/docs/Web/API/Server-sent_events/Using_server-sent_events).
+Для обучения обратитесь к нашей статье [Использование отправляемых сервером событий](/ru/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
 ## Интерфейсы
 
