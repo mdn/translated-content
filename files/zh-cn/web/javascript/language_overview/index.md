@@ -804,6 +804,8 @@ export const a = 1;
 
 然而，JavaScript 语言没有提供标准的库模块——所有的核心功能由全局变量（例如，[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math) 和 [`Intl`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl)）驱动。由于 JavaScript 长期缺乏模块系统，导致选择使用模块系统需要改变一些运行时设置。
 
+不同的运行时可能使用不同的模块系统。例如，[Node.js](https://nodejs.org/zh-cn) 使用 [npm](https://www.npmjs.com/) 包管理器以及主要是基于文件系统的，然而 [Deno](https://deno.com/) 和浏览器是完全基于 URL 的，可以从 HTTP URL 解析模块。
+
 想要了解更多信息，参见[模块指南页](/zh-CN/docs/Web/JavaScript/Guide/Modules)。
 
 ## 语言和运行时
