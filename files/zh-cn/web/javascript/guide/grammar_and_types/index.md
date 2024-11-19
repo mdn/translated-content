@@ -605,12 +605,7 @@ const print = (segments, ...args) => {
   console.log(message);
 };
 
-const todos = [
-  "学习 JavaScript",
-  "学习 Web API",
-  "构建网站",
-  "利润！",
-];
+const todos = ["学习 JavaScript", "学习 Web API", "构建网站", "利润！"];
 
 const progress = { javascript: 20, html: 50, css: 10 };
 
