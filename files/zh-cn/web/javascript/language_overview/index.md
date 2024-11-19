@@ -668,7 +668,7 @@ const charsInBody = (function counter(elm) {
 
 如果你习惯函数式编程，注意 JavaScript 中递归的性能影响。虽然语言规范规定了[尾递归优化](https://en.wikipedia.org/wiki/Tail_call)，但由于恢复栈追踪和调试的困难，只有 JavaScriptCore（用于 Safari）实现了它。对于深递归，考虑使用迭代作为替代，避免栈溢出。
 
-### 函数是第一类对象
+### 函数是头等对象
 
 JavaScript 函数是第一类对象。这意味着它们可以被赋值给变量、作为参数被传递给其他函数、作为其他函数的返回值。此外，JavaScript 支持开箱即用不需要显式捕获的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，让你能方便地应用函数式编程风格。
 
