@@ -123,7 +123,7 @@ console.log(eval("3 + 5"));
 })();
 ```
 
-按下 <kbd>Enter</kbd>，在浏览器中看其展开！
+按下 <kbd>Enter</kbd>，在浏览器中看其结果！
 
 ## 接下来
 
