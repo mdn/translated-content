@@ -1,11 +1,6 @@
 ---
 title: Web Share API
 slug: Web/API/Web_Share_API
-page-type: web-api-overview
-browser-compat:
-  - api.Navigator.share
-  - api.Navigator.canShare
-spec-urls: https://w3c.github.io/web-share/
 l10n:
   sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
