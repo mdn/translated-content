@@ -20,9 +20,7 @@ track 格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件�
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `default`
-
   - : 此属性表示应启用该 track，除非用户的偏好表明另一个 track 更合适。每个媒体元素只能在一个 `track` 元素上使用此属性。
-
 - `kind`
 
   - : 文本 track 的使用方式。如果省略，默认的类型是 `subtitles`。如果属性包含无效值，则会使用 `metadata`。允许使用以下关键字：
@@ -47,15 +45,10 @@ track 格式为 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API)（`.vtt` 文件�
     - 由脚本元素使用的轨道。对用户不可见。
 
 - `label`
-
   - : 用户可读的文本 track 标题，浏览器在列出可用文本 track 时使用。
-
 - `src`
-
   - : track 的地址（`.vtt` 文件）。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的源 —— 除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
-
 - `srclang`
-
   - : track 文本数据的语言。它必须是一个有效的 [BCP 47](https://r12a.github.io/app-subtags/) 语言标签。如果 `kind` 属性设置为 `subtitles`，则必须定义 `srclang`。
 
 ## 使用说明
