@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
-[游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API) 的 **`GamepadPose`** 接口表示 [WebVR](/zh-CN/docs/Web/API/WebVR_API) 控制器在某个给定时间戳的姿势（包括方向、位置、速率、加速度信息）。
+[游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API) 的 **`GamepadPose`** 接口表示 [WebVR](/zh-CN/docs/Web/API/WebVR_API) 控制器在某个给定时间戳的姿态（包括方向、位置、速率、加速度信息）。
 
 这个接口可通过 {{domxref("Gamepad.pose")}} 属性访问。
 
