@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Math.E`** 静态数据属性表示欧拉常数，即自然对数的底数 e，其值约为 2.718。
+**`Math.E`** 静态数据属性表示欧拉数，即自然对数的底数 e，其值约为 2.718。
 
 {{EmbedInteractiveExample("pages/js/math-e.html")}}
 
