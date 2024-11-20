@@ -38,7 +38,7 @@ font-language-override: unset;
 - `normal`
   - : `lang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
 - {{cssxref("string")}}
-  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://learn.microsoft.com/en-us/typography/opentype/spec/languagetags) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
+  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://learn.microsoft.com/typography/opentype/spec/languagetags) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
 
 ## 公式定義
 
