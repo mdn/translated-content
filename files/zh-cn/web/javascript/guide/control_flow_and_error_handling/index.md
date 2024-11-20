@@ -101,7 +101,7 @@ if (condition) {
   // condition 为真时的语句
   // …
 } else {
-  // condition 为假时的语句 
+  // condition 为假时的语句
   // …
 }
 ```
