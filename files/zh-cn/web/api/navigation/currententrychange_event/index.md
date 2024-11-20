@@ -31,7 +31,7 @@ oncurrententrychange = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("NavigationCurrentEntryChangeEvent")}}。继承自 {{domxref("Event")}}。
+{{domxref("NavigationCurrentEntryChangeEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("NavigationCurrentEntryChangeEvent")}}
 
