@@ -1,35 +1,34 @@
 ---
-title: 流程控制与错误处理
+title: 控制流与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
+l10n:
+  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于 JavaScript 语句的一些概览。
 
-这一章中的语句，在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
+在本章中涉及的语句，[JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements)包含更为详尽的细节。在 JavaScript 代码中，分号（`;`）字符被用来分割语句。
 
-在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)这一章节。
+任何 JavaScript 表达式也是一条语句。想要了解有关表达式的完整信息，参见[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)。
 
-## 语句块
+## 块语句
 
-最基本的语句是用于组合语句的语句块。该块由一对大括号界定：
+最基本的语句是用于组合语句的*块语句*。块由一对花括号界定：
 
-```plain
+```js
 {
-   statement_1;
-   statement_2;
-   statement_3;
-   .
-   .
-   .
-   statement_n;
+  statement1;
+  statement2;
+  // …
+  statementN;
 }
 ```
 
 ### 示例
 
-语句块通常用于流程控制，如`if`，`for`，`while`等等。
+块语句通常用于控制流语句（`if`、`for`、`while`）。
 
 ```js
 while (x < 10) {
@@ -37,85 +36,86 @@ while (x < 10) {
 }
 ```
 
-这里`{ x++; }`就是语句块。
+这里，`{ x++; }`就是块语句。
 
-**重要**：在 ECMAScript 6 标准之前，Javascript 没有块作用域。在一个块中引入的变量的作用域是包含函数或脚本，并且设置它们的效果会延续到块之外。换句话说，块语句不定义范围。JavaScript 中的“独立”块会产生与 C 或 Java 中完全不同的结果。示例：
-
-```js
-var x = 1;
-{
-  var x = 2;
-}
-alert(x); // 输出的结果为 2
-```
-
-这段代码的输出是**2**，这是因为块级作用域中的 var x 变量声明与之前的声明在同一个作用域内。在 C 语言或是 Java 语言中，同样的代码输出的结果是 1。
-
-从 ECMAScript 2015 开始，使用 `let` 和`const`变量是块作用域的。更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。
+> **重要**：用 [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) 声明的变量不是块级作用域的，而是受限于函数或脚本，以及设置它们的效果会持续到块本身之外。例如：
+>
+> ```js
+> var x = 1;
+> {
+>   var x = 2;
+> }
+> console.log(x); // 2
+> ```
+>
+> 会输出 `2`，因为块中 `var x` 语句和块前面的 `var x` 语句的作用域是一样的。（在 C 或 Java 中，一样的代码会输出 `1`。）
+>
+> 使用 {{jsxref("Statements/let", "let")}} 或 {{jsxref("Statements/const", "const")}} 会消除这个作用域效果。
 
 ## 条件判断语句
 
-条件判断语句指的是根据指定的条件所返回的结果（真或假或其他预定义的），来执行特定的语句。JavaScript 支持两种条件判断语句：`if...else`和`switch`。
+条件语句的一组指令会在指定的条件为真时执行。JavaScript 支持两种条件判断语句：`if...else`和`switch`。
 
-### `if...else` 语句
+### if...else 语句
 
-当一个逻辑条件为真，用 if 语句执行一个语句。当这个条件为假，使用可选择的 else 从句来执行这个语句。if 语句如下所示：
+使用 `if` 语句在逻辑条件为 `true` 时执行语句。使用可选的 `else` 从句在条件为 `false` 时执行语句。
+
+`if` 语句看起来像这样：
 
 ```js
 if (condition) {
-  statement_1;
+  statement1;
 } else {
-  statement_2;
-} //推荐使用严格的语句块模式，语句 else 可选
+  statement2;
+}
 ```
 
-条件可以是任何返回结果被计算为 true 或 false 的表达式。如果条件表达式返回的是 true，statement_1 语句会被执行；否则，statement_2 被执行。statement_1 和 statement_2 可以是任何语句，甚至你可以将另一个 if 语句嵌套其中。
+这里，`condition` 可以是任何能求值为 `true` 或 `false` 的表达式。（想要了解求值为 `true` 和 `false` 的解释，参见 [Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#描述)。）
 
-你也可以组合语句通过使用 `else if` 来测试连续多种条件判断，就像下面一样：
+如果 `condition` 求值为 `true`，执行 `statement_1`。否则，执行 `statement_2`。`statement_1` 和
+`statement_2` 可以是任何的语句，包括继续嵌套的 `if` 语句。
+
+你也可以使用 `else if` 组合语句按顺序测试多个条件，就像下面一样：
 
 ```js
-if (condition_1) {
-  statement_1;
-} else if (condition_2) {
-  statement_2;
-} else if (condition_n_1) {
-  statement_n;
+if (condition1) {
+  statement1;
+} else if (condition2) {
+  statement2;
+} else if (conditionN) {
+  statementN;
 } else {
-  statement_last;
+  statementLast;
 }
 ```
 
-要执行多个语句，可以使用语句块 ({ ... }) 来分组这些语句。通常，总是使用语句块是一个好的习惯，特别是在代码涉及比较多的 if 语句时：
+在多个条件的例子中，只有第一个求值为 `true` 的逻辑条件才会被执行。想要执行多个语句，将其组合在一个块语句中（`{ /* … */ }`）。
+
+#### 最佳实践
+
+一般而言，总是使用块语句是最佳实践——*特别是*嵌套 `if` 语句的时候：
 
 ```js
-if (条件) {
-  当条件为真的时候，执行语句 1;
-  当条件为真的时候，执行语句 2;
+if (condition) {
+  // condition 为真时的语句
+  // …
 } else {
-  当条件为假的时候，执行语句 3;
-  当条件为假的时候，执行语句 4;
+  // condition 为假时的语句 
+  // …
 }
 ```
 
-不建议在条件表达式中使用赋值语句，因为在快速查阅代码时容易把它看成等值比较。例如，不要使用下面的代码：
+一般而言，`if...else` 不将赋值（例如，`x = y`）作为条件是最佳实践：
 
-> [!WARNING]
->
-> ```js-nolint
-> if (x = y) {
->   /*  语句  */
-> }
-> ```
-
-如果你需要在条件表达式中使用赋值，通常在赋值语句前后额外添加一对括号。例如：
-
-```js-nolint
-if ((x = y)) {
-  /* statements here */
+```js-nolint example-bad
+if (x = y) {
+  // 这里的语句
 }
 ```
 
-#### 错误的值
+然而，在极少数情况下，你会发现你自己想要这么做，
+
+#### 假值
 
 下面这些值将被计算出 false (also known as {{Glossary("Falsy")}} values):
 
@@ -155,7 +155,7 @@ function checkData() {
 }
 ```
 
-### `switch` 语句
+### switch 语句
 
 `switch` 语句允许一个程序求一个表达式的值并且尝试去匹配表达式的值到一个 `case` 标签。如果匹配成功，这个程序执行相关的语句。`switch` 语句如下所示：
 
@@ -205,6 +205,10 @@ switch (fruittype) {
 document.write("Is there anything else you'd like?<br>");
 ```
 
+#### break 语句
+
+#### 示例
+
 ## 异常处理语句
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
@@ -219,7 +223,7 @@ JavaScript 可以抛出任意对象。然而，不是所有对象能产生相同
 - [ECMAScript exceptions](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
-### `throw` 语句
+### throw 语句
 
 使用`throw`语句抛出一个异常。当你抛出异常，你规定一个含有值的表达式要被抛出。
 
@@ -260,7 +264,7 @@ UserException.prototype.toString = function () {
 throw new UserException("Value too high");
 ```
 
-### `try...catch` 语句
+### try...catch 语句
 
 `try...catch` 语句标记一块待尝试的语句，并规定一个以上的响应应该有一个异常被抛出。如果我们抛出一个异常，`try...catch`语句就捕获它。
 
@@ -301,7 +305,7 @@ try {
 }
 ```
 
-#### `catch` 块
+#### catch 块
 
 你可以使用`catch`块来处理所有可能在`try`块中产生的异常。
 
@@ -324,7 +328,7 @@ try {
 }
 ```
 
-#### `finally`块
+#### finally 块
 
 `finally`块包含了在 try 和 catch 块完成后、下面接着 try...catch 的语句之前执行的语句。`finally`块无论是否抛出异常都会执行。如果抛出了一个异常，就算没有异常处理，`finally`块里的语句也会执行。
 
@@ -397,7 +401,7 @@ try {
 
 你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
 
-### 使用`Error`对象
+### 使用 Error 对象
 
 根据错误类型，你也许可以用'name'和'message'获取更精炼的信息。'name'提供了常规的错误类（如 'DOMException' 或 'Error'），而'message'通常提供了一条从错误对象转换成字符串的简明信息。
 
