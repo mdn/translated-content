@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-{{domxref("EditContext")}} インターフェイスの  **`EditContext.updateControlBounds()`** メソッドは、オペレーティングシステムに `EditContext` オブジェクトの編集可能なテキスト領域の位置と大きさを知らせるために使われます。
+{{domxref("EditContext")}} インターフェイスの **`EditContext.updateControlBounds()`** メソッドは、オペレーティングシステムに `EditContext` オブジェクトの編集可能なテキスト領域の位置と大きさを知らせるために使われます。
 
 オペレーティングシステムに現在の編集可能な領域の境界を知らせるため、このメソッドを呼びます。`EditContext` を初期化する時と、ウェブページがリサイズされた時など編集可能な領域の境界が変わった時に毎回、このメソッドを呼ぶべきです。この境界は、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウなどのプラットフォーム固有の編集関係の UI を配置するために使用されます。
 
