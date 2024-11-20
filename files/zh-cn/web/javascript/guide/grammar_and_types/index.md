@@ -30,7 +30,7 @@ const Früh = "foobar";
 
 然而，在一条语句的末尾总是加上分号被认为是最佳实践，即使是在非严格需要的时候。这个习惯可以大大减少代码出问题的可能性。
 
-从左往右扫描 JavaScript 脚本的源文本并将其转换为输入元素（_token_、_控制字符_、_行终止符_、*注释*和 {{Glossary("whitespace")}}，空白字符指的是空格、制表符和换行符等）序列。
+从左往右扫描 JavaScript 脚本的源文本并将其转换为输入元素（_token_、_控制字符_、_行终止符_、*注释*和{{Glossary("whitespace", "空白字符")}}，空白字符指的是空格、制表符和换行符等）序列。
 
 ## 注释
 
@@ -118,7 +118,7 @@ const x; // SyntaxError: Missing initializer in const declaration
 
 - 全局作用域：在脚本模式中运行的所有代码的默认作用域。
 - 模块作用域：在模块模式中运行的代码的作用域。
-- 函数作用域：由 {{Glossary("function")}} 创建的作用域。
+- 函数作用域：由{{Glossary("function", "函数")}}创建的作用域。
 
 此外，用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 声明的变量属于另一个作用域：
 
