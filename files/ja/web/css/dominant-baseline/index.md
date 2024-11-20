@@ -19,8 +19,7 @@ l10n:
 
 `dominant-baseline` の値によっては、 3 つの値すべてを再決定します。他のものは、ベースライン表のフォントサイズのみを再設定します。初期値の `auto` が望ましくない結果をもたらす場合、このプロパティを使用して、望ましい変倍ベースライン表を明示的に設定することができます。
 
-> [!NOTE]
-> `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
+> **メモ:** `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
 
 ## 構文
 
