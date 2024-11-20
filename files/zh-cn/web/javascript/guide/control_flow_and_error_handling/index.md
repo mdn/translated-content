@@ -132,7 +132,7 @@ if (x = y) {
 > [!NOTE]
 > 请不要混淆原始布尔值 `true` 和 `false` 与 {{jsxref("Boolean")}} 对象的真和假！
 >
->例如：
+> 例如：
 >
 > ```js
 > const b = new Boolean(false);
