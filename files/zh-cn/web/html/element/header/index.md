@@ -1,5 +1,5 @@
 ---
-title: <header>：头部元素
+title: <header>：标题元素
 slug: Web/HTML/Element/header
 l10n:
   sourceCommit: 6336af7a3880c350919e5b29f83b938fb1594362
@@ -7,167 +7,149 @@ l10n:
 
 {{HTMLSidebar}}
 
-The **`<header>`** [HTML](/zh-CN/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+**`<header>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示介绍性内容，通常是一组介绍性或导航性辅助内容。它可能包含一些标题元素，也可能包含徽标、搜索表单、作者姓名和其他元素。
 
 {{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
 ## 使用说明
 
-The `<header>` element has an identical meaning to the site-wide [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。然而，`<header>` 元素就不是一个地标。
 
-The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+`<header>` 元素可以定义一个全局站点标题，在无障碍树中描述为 `banner`。它通常包括一个徽标、公司名称、搜索功能，以及可能的全局导航或标语。它通常位于页面的顶端。
 
-Otherwise, it is a `section` in the accessibility tree, and usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+否则，它是在无障碍树中的一个 `section`，通常包含周围部分的标题（`h1` – `h6` 元素）和可选的副标题，但这并**不是**必要的。
 
 ### 历史说明
 
-The `<header>` element originally existed at the very beginning of HTML for headings. 
-
-It is seen in [the very first website](https://info.cern.ch/). 
-
-At some point, headings became [`<h1>` through `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
+`<header>` 元素最初在 HTML 的早期用于标题。在[第一个网站](https://info.cern.ch/)中可以看到。在某些时候，标题变成了 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，使 `<header>` 可以自由地扮演不同的角色。
 
 ## 属性
 
-This element only includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## Accessibility
+## 无障碍考虑
 
-The `<header>` element defines a [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
 
 ## 示例
 
-### Page Header
+### 页面标题
 
 ```html
 <header>
-  <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo" />
+  <h1>主页面标题</h1>
+  <img src="mdn-logo-sm.png" alt="MDN 徽标" />
 </header>
 ```
 
 #### 结果
 
-{{EmbedLiveSample('Page Header')}}
+{{EmbedLiveSample('页面标题')}}
 
-### Article Header
+### 文章标题
 
 ```html
 <article>
   <header>
-    <h2>The Planet Earth</h2>
+    <h2>行星地球</h2>
     <p>
-      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
-      Jane Smith
+      发布日期，<time datetime="2017-10-04">2017 年 10 月 4 日</time>
+      作者：Jane Smith
     </p>
   </header>
-  <p>
-    We live on a planet that's blue and green, with so many things still unseen.
-  </p>
-  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
+  <p>我们生活在一个蓝绿相间的星球上，有许多东西还未曾见过。</p>
+  <p><a href="https://example.com/the-planet-earth/">继续阅读...</a></p>
 </article>
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Article Header')}}
+{{EmbedLiveSample('文章标题')}}
 
-## Technical summary
+## 技术概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
         <a href="/zh-CN/docs/Web/HTML/Content_categories"
-          >Content categories</a
+          >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#palpable_content"
-          >palpable content</a
-        >.
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >。
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted content</th>
+      <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but with no <code>&#x3C;header></code> or
-        {{HTMLElement("footer")}} descendant.
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >，但没有 <code>&#x3C;header></code> 或 {{HTMLElement("footer")}} 后代。
       </td>
     </tr>
     <tr>
-      <th scope="row">Tag omission</th>
-      <td>None, both the starting and ending tag are mandatory.</td>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
-      <th scope="row">Permitted parents</th>
+      <th scope="row">允许的父元素</th>
       <td>
-        Any element that accepts
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >. Note that a <code>&#x3C;header></code> element must not be a
-        descendant of an {{HTMLElement("address")}},
-        {{HTMLElement("footer")}} or another
-        <code>&lt;header&gt;</code> element.
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
+          >流式内容</a
+        >的元素。请注意，<code>&#x3C;header></code> 元素不得是 {{HTMLElement("address")}}、{{HTMLElement("footer")}} 或另一个 <code>&lt;header&gt;</code> 元素的后代。
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a
-        >, or
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
-          >generic</a
-        >
-        if a descendant of an
+        如果是
         <code><a href="/zh-CN/docs/Web/HTML/Element/article">article</a></code
-        >, <code><a href="/zh-CN/docs/Web/HTML/Element/aside">aside</a></code
-        >, <code><a href="/zh-CN/docs/Web/HTML/Element/main">main</a></code
-        >, <code><a href="/zh-CN/docs/Web/HTML/Element/nav">nav</a></code> or
+        >、<code><a href="/zh-CN/docs/Web/HTML/Element/aside">aside</a></code
+        >、<code><a href="/zh-CN/docs/Web/HTML/Element/main">main</a></code
+        >、<code><a href="/zh-CN/docs/Web/HTML/Element/nav">nav</a></code> 或
         <code><a href="/zh-CN/docs/Web/HTML/Element/section">section</a></code>
-        element, or an element with
+        元素的后代，或者具有
         <code
           >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/article_role"
             >article</a
           ></code
-        >,
-        <code
+        >、<code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/complementary_role"
             >complementary</a
           ></code
-        >,
-        <code
+        >、<code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/main_role"
             >main</a
           ></code
-        >,
-        <code
+        >、<code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/navigation_role"
             >navigation</a
           ></code
         >
-        or
+        或
         <code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"
             >region</a
           ></code
-        >
+        >元素。则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a
+        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          >generic</a
+        >。
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted ARIA roles</th>
+      <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>
-      <th scope="row">DOM interface</th>
+      <th scope="row">DOM 接口</th>
       <td>{{domxref("HTMLElement")}}</td>
     </tr>
   </tbody>
@@ -183,4 +165,4 @@ The `<header>` element defines a [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/R
 
 ## 参见
 
-- Other section-related elements: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}。
+- 其他与章节相关的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}。
