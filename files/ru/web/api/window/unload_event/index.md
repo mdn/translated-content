@@ -23,7 +23,7 @@ Using this event handler in your page prevents Firefox 1.5 from caching the page
 
 Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода `window.open()` внутри функции обработчика события `onunload`.
 
-You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("unload")}} event. More documentation is available there.
+You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the [`unload`](/ru/docs/Web/Events/unload) event. More documentation is available there.
 
 ## Спецификации
 

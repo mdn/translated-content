@@ -34,7 +34,7 @@ slug: Web/API/Window/gamepaddisconnected_event
 
 ## Связанные события
 
-- {{event("gamepadconnected")}}
+- [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event)
 
 ## Смотрите также
 
