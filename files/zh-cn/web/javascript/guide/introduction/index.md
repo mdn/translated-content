@@ -29,7 +29,7 @@ MDN 上的 JavaScript 文档包括以下内容：
 
 ## 什么是 JavaScript?
 
-JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如，拥有复杂的动画、可点击的按钮、弹出菜单等）。还有一些更高级的服务器端 JavaScript 版本，如 Node.js，它们允许你为网站添加除下载文件之外的功能（例如，多台计算机之间的实时协作）。在宿主环境（例如 Web 浏览器）中，可以将 JavaScript 和宿主环境的对象连接起来，并以编程的方式控制这些对象。
+JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如，拥有复杂的动画、可点击的按钮、弹出菜单等）。还有一些更高级的服务器端 JavaScript 版本，如 Node.js，它们允许你为网站添加添加更多功能，而不仅仅是下载文件（例如，多台计算机之间的实时协作）。在宿主环境（例如 Web 浏览器）中，可以将 JavaScript 和宿主环境的对象连接起来，并以编程的方式控制这些对象。
 
 JavaScript 包含一个对象标准库（例如，`Array`、`Date` 和 `Math`）和一套核心语言元素（例如，运算符、控制结构和语句）。可以通过用额外的对象实现各种目的对核心 JavaScript 进行扩展；例如：
 
@@ -53,20 +53,20 @@ Java 是基于类的编程语言，设计的初衷就是为了确保快速执行
 | JavaScript                                                                       | Java                                                                                     |
 | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | 面向对象。不区分对象类型。继承通过原型机制实现，可以向对象动态地添加属性和方法。 | 基于类。对象分为类和实例，所有的继承通过类层级实现。不能向类和实例动态地添加属性或方法。 |
-| 不需要声明变量数据类型 (动态类型，松散类型)。                                    | 必须声明变量数据类型 (静态类型，强类型)。                                                |
+| 不需要声明变量数据类型（动态类型，松散类型）。                                   | 必须声明变量数据类型（静态类型，强类型）。                                               |
 | 不能自动写入硬盘。                                                               | 可以自动写入硬盘。                                                                       |
 
 ## JavaScript 和 ECMAScript 规范
 
-JavaScript 的标准化组织是 [Ecma International](https://ecma-international.org/)——这个欧洲标准化信息与通信系统协会提供基于 Javascript 的标准化、国际化编程语言（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这个名为 ECMAScript 的 JavaScript 标准化版本，在所有支持该标准的应用程序中以相同的方式工作。公司可以使用开放标准语言来开发其 JavaScript 实现。ECMAScript 标准的文档位于 ECMA－262 规范中。
+JavaScript 的标准化组织是 [Ecma 国际](https://ecma-international.org/)——这个欧洲标准化信息与通信系统协会提供基于 Javascript 的标准化、国际化编程语言（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这个名为 ECMAScript 的 JavaScript 标准化版本，在所有支持该标准的应用程序中以相同的方式工作。公司可以使用开放标准语言来开发其 JavaScript 实现。ECMAScript 标准的文档位于 ECMA-262 规范中。
 
-ECMA-262 标准也由 [ISO](https://www.iso.org/home.html)（国际标准化组织）批准为 ISO-16262。你也可以在 [Ecma International 网站](https://ecma-international.org/publications-and-standards/standards/ecma-262/)找到该规范文件。ECMAScript 规范并没有描述文档对象模型（DOM），该模型由[万维网联盟（W3C）](https://www.w3.org/)和/或 [WHATWG（Web 超文本应用程序技术工作组）](https://whatwg.org/)标准化。DOM 定义了脚本访问 HTML 文档对象的方式。为了更清楚地了解当使用 JavaScript 编程时用到的不同技术，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+ECMA-262 标准也由 [ISO](https://www.iso.org/home.html)（国际标准化组织）批准为 ISO-16262。你也可以在 [Ecma 国际网站](https://ecma-international.org/publications-and-standards/standards/ecma-262/)找到该规范文件。ECMAScript 规范并没有描述文档对象模型（DOM），该模型由[万维网联盟（W3C）](https://www.w3.org/)和/或 [WHATWG（Web 超文本应用技术工作组）](https://whatwg.org/)标准化。DOM 定义了脚本访问 HTML 文档对象的方式。为了更清楚地了解当使用 JavaScript 编程时用到的不同技术，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
 
-### JavaScript 文档 和 ECMAScript 规范
+### JavaScript 文档和 ECMAScript 规范
 
-ECMAScript 规范是一组用于实现 ECMAScript 的要求。如果你想在 ECMAScript 实现或引擎 (如 Firefox 中的 SpiderMonkey 或 Chrome 中的 V8) 中实现兼容标准的语言特性，那么它是非常有用的。
+ECMAScript 规范是一组用于实现 ECMAScript 的要求。如果你想在 ECMAScript 实现或引擎（如 Firefox 中的 SpiderMonkey 或 Chrome 中的 V8）中实现兼容标准的语言特性，那么它是非常有用的。
 
-ECMAScript 文档*不*是用来帮助脚本程序员的。编写脚本时参考 JavaScript 文档信息。
+ECMAScript 文档*不*是用来帮助脚本程序员的。有关编写脚本的信息请参考 JavaScript 文档。
 
 JavaScript 程序员可能对 ECMAScript 规范使用的术语和语法不熟悉。尽管语言的描述在 ECMAScript 中可能有所不同，但语言本身保持不变。JavaScript 支持 ECMAScript 规范中列出的所有功能。
 
@@ -74,11 +74,11 @@ JavaScript 文档描述语言的角度适合于 JavaScript 程序员。
 
 ## JavaScript 入门
 
-想要开始使用 JavaScript，你只需要一个现代 Web 浏览器。最新的 [Firefox](https://www.mozilla.org/en-CA/firefox/new/)、[Chrome](https://www.google.com/chrome/index.html)、[Microsoft Edge](https://www.microsoft.com/en-us/edge) 和 [Safari](https://www.apple.com/safari/) 都支持本指南中涉及的特性。
+想要开始使用 JavaScript，你只需要一个现代 Web 浏览器。最新的 [Firefox](https://www.mozilla.org/zh-CN/firefox/new/)、[Chrome](https://www.google.cn/chrome/index.html)、[Microsoft Edge](https://www.microsoft.com/zh-cn/edge) 和 [Safari](https://www.apple.com/safari/) 都支持本指南中涉及的特性。
 
 探索 JavaScript 的一个非常有用的工具就是 JavaScript 控制台（有时也称作 Web 控制台，或就是控制台）：这个工具让你能在当前页面输入并运行 JavaScript。
 
-这张截图展示的是 [Firefox Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/)，但是所有的现代浏览器搭载的控制台都以相同的方式工作。
+这里的截图展示的是 [Firefox Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/)，但是所有的现代浏览器搭载的控制台都以相同的方式工作。
 
 ### 打开控制台
 
@@ -86,7 +86,7 @@ JavaScript 文档描述语言的角度适合于 JavaScript 程序员。
 
 - [打开 Firefox 中的控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
 - [打开 Chrome 中的控制台](https://developer.chrome.google.cn/docs/devtools/open)
-- [打开 Microsoft Edge 中的控制台](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/)
+- [打开 Microsoft Edge 中的控制台](https://learn.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/console/)
 
 ### 输入并运行 JavaScript
 
@@ -100,13 +100,13 @@ JavaScript 文档描述语言的角度适合于 JavaScript 程序员。
 console.log(eval("3 + 5"));
 ```
 
-### 多行模式
+### 控制台的多行输入模式
 
-默认情况下，在输入一行代码后，如果你按下 <kbd>Enter</kbd>（或者 <kbd>Return</kbd>，取决于你的键盘），然后会执行你输入的字符串。进入多行模式：
+默认情况下，在输入一行代码后，如果你按下 <kbd>Enter</kbd>（或者 <kbd>Return</kbd>，取决于你的键盘），然后会执行你输入的字符串。进入多行输入模式：
 
 - 如果你输入的字符串不完整（例如，你输入的是 `function foo() {`），然后控制台会将 <kbd>Enter</kbd> 当作换行，这样你就能输入另一行。
 - 如果你在按下 <kbd>Enter</kbd> 的同时按下 <kbd>Shift</kbd>，然后控制台会将其当作换行，这样你就能输入另一行。
-- 仅在 Firefox 中，你可以激活[多行模式](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)，在多行模式中，你可以在一个迷你编辑器中输入多行，然后在你准备好时运行全部代码。
+- 仅在 Firefox 中，你可以激活[多行输入模式](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)，在这个模式中，你可以在一个迷你编辑器中输入多行，然后在你准备好时运行全部代码。
 
 想要开始书写 JavaScript，打开控制台，复制下列代码，并将其粘贴到提示符处：
 
@@ -129,7 +129,7 @@ console.log(eval("3 + 5"));
 
 在接下来的章节里，本指南将向你介绍 JavaScript 语法以及语言特性，届时你将可以使用它编写更加复杂的程序。
 
-但是现在请记住，始终将 `(function(){"use strict";` 添加到你的代码之前，始终将`})();`添加到你的代码之后。[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和 [IIFE](/zh-CN/docs/Glossary/IIFE) 这两篇文章详细解释了它们的作用，但现在关于它们的作用你只要知道以下两点：
+但是现在请记住，始终将 `(function(){"use strict";` 添加到你的代码之前，始终将 `})();` 添加到你的代码之后。[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和[立即调用函数表达式](/zh-CN/docs/Glossary/IIFE)这两篇文章详细解释了它们的作用，但现在关于它们的作用你只要知道以下两点：
 
 1. 防止 JavaScript 的语义影响初学者。
 2. 防止控制台中的代码片段之间发生意料之外的交互（例如，在一个控制台执行中创建的用于不同的控制台执行）。
