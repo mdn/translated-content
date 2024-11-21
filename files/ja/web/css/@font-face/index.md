@@ -119,9 +119,9 @@ l10n:
   src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
 }
 
-      body {
-        font-family: "Bitstream Vera Serif Bold", serif;
-      }
+body {
+  font-family: "Bitstream Vera Serif Bold", serif;
+}
 ```
 
 {{EmbedLiveSample("web-font-example", "", "100px")}}
