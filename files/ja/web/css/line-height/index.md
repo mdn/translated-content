@@ -86,7 +86,7 @@ div {
   font-size: 10pt;
 }
 
-  /* パーセント値 */
+/* パーセント値 */
 div {
   line-height: 120%;
   font-size: 10pt;
