@@ -346,11 +346,11 @@ function f() {
     console.log(1);
     // 这个 return 语句会被挂起直到 finally 块结束
     return true;
-    console.log(2); // 无法抵达
+    console.log(2); // 不可达
   } finally {
     console.log(3);
     return false; // 覆盖前面的“return”
-    console.log(4); // 无法抵达
+    console.log(4); // 不可达
   }
   // 现在执行“return false”
   console.log(5); // 不可达
