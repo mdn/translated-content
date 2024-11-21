@@ -23,10 +23,10 @@ _TypedArray_ 是[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Glo
 const buffer = new ArrayBuffer(8);
 
 const uint8array1 = new Uint8Array(buffer);
-uint8array1.byteOffset; // 0 （未指定偏移量）
+uint8array1.byteOffset; // 0（未指定偏移量）
 
 const uint8array2 = new Uint8Array(buffer, 3);
-uint8array2.byteOffset; // 3 （在构造 Uint8Array 时指定）
+uint8array2.byteOffset; // 3（在构造 Uint8Array 时指定）
 ```
 
 ## 规范
