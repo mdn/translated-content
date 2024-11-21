@@ -15934,10 +15934,6 @@
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
   },
-  "conflicting/Web/HTTP": {
-    "modified": "2020-07-14T17:05:38.093Z",
-    "contributors": ["vladimir.i.kuropatka", "enonotugh", "cissoid"]
-  },
   "conflicting/Web/HTTP/Headers": {
     "modified": "2020-10-15T22:14:29.517Z",
     "contributors": ["Reddok", "J4CKVVH173"]
