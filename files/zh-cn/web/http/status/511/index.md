@@ -21,10 +21,7 @@ HTTP **`511 Network Authentication Required`** [服务端错误响应](/zh-CN/do
 
 ### GET 请求的 511 响应
 
-In the following example, a client tries to access a resource on a network.
-The request is not authenticated, and a proxy sends a `511` status code to prompt the visitor to log in.
-The `511` ensures that non-browser clients will not interpret the response as being from the origin server.
-Browsers are redirected automatically via the {{HTMLelement("meta")}} tag after 10 seconds, or by clicking the link in the response body:
+在以下示例中，客户端尝试访问网络上的某个资源。该请求未经身份验证，代理服务器返回 `511` 状态码，提示访问者进行登录。`511` 状态码确保非浏览器客户端不会将该响应误解为来自源服务器的响应。浏览器会在 10 秒后通过 {{HTMLelement("meta")}} 标签自动重定向，或者通过点击响应正文中的链接进行跳转：
 
 ```http
 GET /document HTTP/1.1
@@ -41,7 +38,7 @@ Content-Type: text/html
     <meta http-equiv="refresh" content="10; url=https://login.example.net/">
   </head>
   <body>
-      <p>你需要通过 <a href="https://login.example.net/">本地网络认证</a> 才能获得访问权限。</p>
+      <p>你需要通过<a href="https://login.example.net/">本地网络认证</a>才能获得访问权限。</p>
   </body>
 </html>
 ```
