@@ -454,7 +454,7 @@ function setUserName() {
 
 ![ヘッダー、中央の大きなロゴ、内容、ボタンなどの要素を作成した後の HTML ページの最終的な外観](website-screen-scripted.png)
 
-行き詰まったら、自分の作業を [Github 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)と比べてみてください。
+行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)と比べてみてください。
 
 私たちは JavaScript に少し触れただけです。楽しく遊んだり、もっと上達したい場合は、[JavaScript の学習トピック](/ja/docs/Learn/JavaScript)に進んでください。
 

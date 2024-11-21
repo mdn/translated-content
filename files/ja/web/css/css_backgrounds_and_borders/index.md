@@ -2,7 +2,7 @@
 title: CSS 背景と境界
 slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: ef75fee56d11bb7bef44240627abb97cd388b5be
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -38,10 +38,10 @@ l10n:
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 - {{cssxref("background")}} 一括指定
-- {{cssxref("background-position-x")}} {{experimental_inline}}
-- {{cssxref("background-position-y")}} {{experimental_inline}}
-- {{cssxref("background-position-inline")}} {{experimental_inline}}
-- {{cssxref("background-position-block")}} {{experimental_inline}}
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -116,13 +116,13 @@ l10n:
 - {{cssxref("border-start-start-radius")}} プロパティ
 - {{cssxref("border-start-end-radius")}} プロパティ
 - {{cssxref("border-end-start-radius")}} プロパティ
-- {{cssxref("border-end-end-radius ")}} プロパティ
+- {{cssxref("border-end-end-radius")}} プロパティ
 
 - {{cssxref("box-sizing")}} プロパティ
 - {{cssxref("box-decoration-break")}} プロパティ
 - {{cssxref("text-shadow")}} プロパティ
 
-- {{cssxref("url", "url()")}} CSS 関数
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型
 - [`<color>`](/ja/docs/Web/CSS/color) データ型
 - [`<image>`](/ja/docs/Web/CSS/image) データ型
 - [`<position>`](/ja/docs/Web/CSS/position) データ型
@@ -140,4 +140,4 @@ l10n:
   - [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
   - [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)で、境界を含みます。
-- [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) は入力画像にドロップシャドウ効果を適用するフィルタ関数です。この関数は {{cssxref("filter")}} と {{cssxref("backdrop-filter")}} プロパティで使用します。
+- [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) は入力画像にドロップシャドウ効果を適用するフィルター関数です。この関数は {{cssxref("filter")}} と {{cssxref("backdrop-filter")}} プロパティで使用します。

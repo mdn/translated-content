@@ -9,7 +9,7 @@ O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica qu
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content), raiz selecionamento, conteúdo palpável.
 - _Conteúdo permitido_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content).
-- _Tag Omissão_ {{no_tag_omission}}
+- _Tag Omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos permitidos_ Qualquer elemento que aceita o [fluxo de conteúdo.](/pt-BR/docs/HTML/Content_categories#Flow_content)
 - _Papéis ARIA permitidos_ Qualquer
 - _Interface DOM_ {{domxref("HTMLQuoteElement")}}

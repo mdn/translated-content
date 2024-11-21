@@ -10,7 +10,7 @@ _HTML texto preformatado_ (**\<pre>**) é a tag utilizada para representar texto
 _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), palpable content.
 
 - _Conteúdo permitido_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pai permitidos_ Any element that accepts [flow content](/pt-BR/docs/HTML/Content_categories#flow_content).
 - _interface DOM_ {{domxref("HTMLPreElement")}}
 

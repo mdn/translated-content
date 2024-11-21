@@ -682,11 +682,11 @@ O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods') -->
 
 ## Exemplos
 

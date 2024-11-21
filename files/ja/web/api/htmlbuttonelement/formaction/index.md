@@ -3,7 +3,7 @@ title: "HTMLButtonElement: formAction プロパティ"
 short-title: formAction
 slug: Web/API/HTMLButtonElement/formAction
 l10n:
-  sourceCommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
+  sourceCommit: 1c31c8e99de843940027ec4d17e128850ded7a71
 ---
 
 {{APIRef("HTML DOM")}}
