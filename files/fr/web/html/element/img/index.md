@@ -2,7 +2,7 @@
 title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
+  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +14,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image d
 L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 
 - L'attribut `src` est **obligatoire**, et contient le chemin vers l'image qu'on veut intégrer.
-- L'attribut `alt` contient une description textuelle de l'image, ce qui n'est pas obligatoire mais **extrêmement utile** pour l'accessibilité. En effet, les outils de lecture d'écran utilisent cette description pour la lire afin que les personnes sachent ce que l'image représente. Ce texte alternatif sera également affiché sur la page si l'image ne peut pas être chargée (par exemple s'il y a des erreurs réseau, du blocage de contenu ou un lien périmé).
+- L'attribut `alt` est obligatoire et contient une description textuelle de l'image, ce qui est **extrêmement utile**. En effet, les outils de lecture d'écran utilisent cette description pour la lire afin que les personnes sachent ce que l'image représente. Ce texte alternatif sera également affiché sur la page si l'image ne peut pas être chargée (par exemple s'il y a des erreurs réseau, du blocage de contenu ou un lien périmé).
 
 Il existe de nombreux autres attributs&nbsp;:
 
@@ -26,7 +26,7 @@ Il existe de nombreux autres attributs&nbsp;:
 
 Le standard HTML n'indique pas les formats d'image qui doivent être pris en charge, les agents utilisateurs peuvent prendre en charge différents formats.
 
-> **Note :** [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
+> [!NOTE] > [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
 
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
@@ -44,7 +44,7 @@ SVG reste le format recommandé pour les images qui doivent être dessinées ave
 
 ## Erreur de chargement d'une image
 
-Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement [`onerror`](/fr/docs/Web/HTML/Global_attributes#onerror) a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
+Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
 
 - L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
 - L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
@@ -69,9 +69,38 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     >
     > Dans ces situations, le navigateur peut remplacer l'image avec le texte fourni par cet attribut. Aussi, il est grandement préférable de fournir une valeur utile pour `alt` dès que possible.
 
-    L'absence totale d'attribut `alt` indique que l'image n'est pas importante pour le contenu et qu'aucun équivalent textuel n'est disponible. Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masqueront l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
+    Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masqueront l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
 
     Cet attribut est également utilisé pour copier/coller l'image vers du texte ou pour enregistrer un marque-page avec l'image associée.
+
+- `attributionsrc` {{experimental_inline}}
+
+  - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
+
+    Côté serveur, cela sert à déclencher l'envoi d'un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
+
+    La source ou le déclencheur correspondant est éteint lorsque le navigateur reçoit la réponse contenant le fichier image.
+
+    > [!NOTE]
+    > Voir [l'API sur les rapports d'attribution](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+
+    Il existe deux versions de cet attribut&nbsp;:
+
+    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
+    - Une valeur contenant une ou plusieurs URL, comme&nbsp;:
+
+    ```html
+    <img
+      src="image-file.png"
+      alt="Ma description d'image"
+      attributionsrc="https://a.example/register-source
+                         https://b.example/register-source" />
+    ```
+
+    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) sera envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL pourront ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
+
+    > [!NOTE]
+    > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
 
 - `crossorigin`
 
@@ -101,20 +130,22 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `auto`
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
-- `elementtiming`
+- [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming)
 
   - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming).
 
 - `fetchpriority`
 
-  - : Fournit une indication de la priorité relative à utiliser poua la récupération de l'image. Les valeurs autorisées sont&nbsp;:
+  - : Fournit une indication de la priorité relative à utiliser pour la récupération de l'image. Les valeurs autorisées sont&nbsp;:
 
     - `high`
-      - : Indique une priorité plus élevée que les autres images pour la récupération de la ressource.
+      - : L'image est récupérée avec une priorité plus élevée que les autres images.
     - `low`
-      - : Indique une priorité plus faible que les autres images pour la récupération de la ressource.
+      - : L'image est récupérée avec une priorité plus faible que les autres images.
     - `auto`
-      - : La valeur par défaut. Le navigateur utilise une heuristique pour déterminer automatiquement la priorité.
+      - : La valeur par défaut. Il n'y a pas de préférence pour la priorité.
+
+    Voir [`HTMLImageElement.fetchPriority`](/fr/docs/Web/API/HTMLImageElement/fetchPriority) pour plus d'informations.
 
 - `height`
 
@@ -251,7 +282,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 `<img>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element). Sa propriété [`display`](/fr/docs/Web/CSS/display) par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), et [`height`](/fr/docs/Web/CSS/height) sur une image.
 
-`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)`: baseline`, le bas de l'image sera placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align: baseline`](/fr/docs/Web/CSS/vertical-align), le bas de l'image sera placé sur la ligne de base du texte.
 
 La propriété [`object-position`](/fr/docs/Web/CSS/object-position) peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
@@ -326,6 +357,10 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 ```html example-good
 <img alt="Un manchot Rockhopper sur une plage." src="pingouin.jpg" />
 ```
+
+Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le contenu texte précédent afin de voir si cela fournit les mêmes informations que l'image. Ainsi, si l'image était précédée de la phrase «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;:&nbsp;». Dans l'exemple de la mauvaise pratique, cela aurait donné «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. Avec la bonne pratique et cet exemple, on aurait obtenu «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: Un manchot Rockhopper sur une plage.&nbsp;», ce qui est plus parlant.
+
+Pour les images déclenchant une action, par exemple celles incluses dans un lien [`<a>`](/fr/docs/Web/HTML/Element/a) ou un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), il faut penser à décrire l'action déclenchée dans `alt`. On peut ainsi écrire `alt="page suivante"` plutôt que `alt="flèche droite"`. Vous pouvez inclure une description complémentaire dans l'attribut `title`, qui pourra être lu par les lecteurs d'écrans si l'utilisatrice ou l'utilisateur en fait la demande.
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.
 
