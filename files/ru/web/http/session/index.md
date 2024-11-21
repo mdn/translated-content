@@ -141,7 +141,7 @@ Content-Type: text/html
 
 ## Смотрите также
 
-- [Определение ресурсов в Интернете](/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Определение ресурсов в Интернете](/ru/docs/Web/URI)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Заголовки)
 - [Методы HTTP запроса](/ru/docs/Web/HTTP/Methods)
 - [Коды ответа HTTP](/ru/docs/Web/HTTP/Status)
