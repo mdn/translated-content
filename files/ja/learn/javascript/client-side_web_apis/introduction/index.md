@@ -2,7 +2,7 @@
 title: Web API の紹介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 l10n:
-  sourceCommit: aad04866a932d9b01c4048334e7ddebcf60206b7
+  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
