@@ -13,11 +13,11 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 复杂的项目需要一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://zh.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)、[Webpack](https://webpack.js.org/) 和 [Babel](https://babeljs.io/)）。
 
-目前现代流浏览器都已经不需要额外转译就原生支持了模块化特性。这是件好事——浏览器可以优化模块加载，这比使用一个单独的库进行额外的客户端处理和额外的网络开销更高效。不过，这并不会使像 Webpack 这类的打包工具过时——打包工具仍然在将代码划分为合理大小的分块方面表现出色，并且能够进行其他优化，如极简化、消除无用代码和摇树优化。
+目前现代浏览器已原生支持模块化特性，无需额外转译。这是件好事——浏览器可以优化模块加载，这比使用一个单独的库进行额外的客户端处理和额外的网络开销更高效。不过，这并不会使像 Webpack 这类的打包工具过时——打包工具仍然在将代码划分为合理大小的分块方面表现出色，并且能够进行其他优化，如极简化、消除无用代码和摇树优化。
 
 ## 介绍一个例子
 
-为了演示模块的使用，我们创建了[一系列简单的示例](https://github.com/mdn/js-examples/tree/main/module-examples) ，你可以在 GitHub 上找到。这个例子演示了一个简单的模块的集合用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。
+为了演示模块的使用，我们创建了[一系列简单的示例](https://github.com/mdn/js-examples/tree/main/module-examples) ，你可以在 GitHub 上找到。这个例子演示了一个简单的模块的集合，用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。
 
 这的确有点简单，但是保持足够简单能够清晰地演示模块。
 
@@ -37,14 +37,14 @@ modules/
 ```
 
 > [!NOTE]
-> 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
+> 在这个指南中所有示例都具有基本相同的结构；上述内容应该已经很熟悉了。
 
 modules 目录下的两个模块的描述如下：
 
 - `canvas.js` — 包含与设置画布相关的功能：
 
   - `create()` — 在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
-  - `createReportList()` — 创建一个附加在指定包装器元素内的无序列表，该列表可用于将报告数据输出到。返回列表的 ID。
+  - `createReportList()` — 创建一个附加在指定包装器元素内的无序列表，该列表可用于将报告数据输出到返回列表的 ID。
 
 - `square.js` — 包含：
 
@@ -63,7 +63,7 @@ modules 目录下的两个模块的描述如下：
 - 比较清晰，这可以指出哪些文件是模块，哪些是常规的 JavaScript。
 - 这能保证你的模块可以被运行时环境和构建工具识别，比如 [Node.js](https://nodejs.org/api/esm.html#esm_enabling) 和 [Babel](https://babeljs.io/docs/en/options#sourcetype)。
 
-但是我们决定继续使用 `.js` 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 `Content-Type` 头，其应该包含 JavaScript 的 MIME 类型 `text/javascript`。如果没有这么做，你可能会得到 一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type（服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 `.js` 文件的类型，但是 `.mjs` 还不行。已经可以正常响应 `.mjs` 的服务器有 [GitHub 页面](https://pages.github.com/) 和 Node.js 的 [`http-server`](https://github.com/http-party/http-server#readme)。
+但是我们决定继续使用 `.js` 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 `Content-Type` 头，其应该包含 JavaScript 的 MIME 类型 `text/javascript`。如果没有这么做，你可能会得到一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type（服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 `.js` 文件的类型，但是 `.mjs` 还不行。已经可以正常响应 `.mjs` 的服务器有 [GitHub 页面](https://pages.github.com/) 和 Node.js 的 [`http-server`](https://github.com/http-party/http-server#readme)。
 
 如果你已经在使用相应的环境了，那么一切正常。或者如果你还没有，但你知道你在做什么（比如你可以配置服务器以为 `.mjs` 设置正确的 `Content-Type`）。但如果你不能控制提供服务，或者用于公开文件发布的服务器，这可能会导致混乱。
 
@@ -78,7 +78,7 @@ modules 目录下的两个模块的描述如下：
 
 ## 导出模块的功能
 
-为了获得模块的功能要做的第一件事是把它们导出来。使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
+为了获得模块的功能，要做的第一件事就是把它们导出来，使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
 
 最简单的方法是把它（指上面的 export 语句）放到你想要导出的项前面，比如：
 
@@ -100,7 +100,7 @@ export function draw(ctx, length, x, y, color) {
 
 你能够导出函数，`var`，`let`，`const`, 和等会会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
 
-一个更方便的方法导出所有你想要导出的模块的方法是在模块文件的末尾使用一个 export 语句，语句是用花括号括起来的用逗号分割的列表。比如：
+更方便的导出模块的方法是，在模块文件末尾使用一个 export 语句，以花括号括起来并用逗号分隔的形式列出所有需导出的内容。比如：
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
@@ -108,13 +108,13 @@ export { name, draw, reportArea, reportPerimeter };
 
 ## 导入功能到你的脚本
 
-你想在模块外面使用一些功能，那你就需要导入他们才能使用。最简单的就像下面这样的：
+你想使用模块的一些功能，那你就需要导入他们才能使用。最简单的就像下面这样的：
 
 ```plain
 import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/basic-modules/modules/square.js';
 ```
 
-使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
+首先使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 关键字，然后列出用花括号括起的功能列表，再加上关键字 from，最后指定模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
 
 当然，我们写的路径有一点不同——我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植——如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
@@ -135,7 +135,7 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 > [!NOTE]
 > 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
 
-因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 `main.js` 中的 import 语句下面的内容。
+由于已将这些功能导入到脚本文件，你可以像使用同一文件中定义的功能一样调用它们。以下是 `main.js` 中 import 语句后的内容示例。
 
 ```js
 let myCanvas = create("myCanvas", document.body, 480, 320);
@@ -168,15 +168,15 @@ reportPerimeter(square1.length, reportList);
 - 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
 - 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用严格模式。
 - 加载一个模块脚本时不需要使用 `defer` 属性 (see [`<script>` attributes](/zh-CN/docs/Web/HTML/Element/script#Attributes)) 模块会自动延迟加载。
-- 最后一个但不是不重要，你需要明白模块功能导入到单独的脚本文件的范围——他们无法在全局获得。因此，你只能在导入这些功能的脚本文件中使用他们，你也无法通过 JavaScript console 中获取到他们，比如，在 DevTools 中你仍然能够获取到语法错误，但是你可能无法像你想的那样使用一些 debug 技术。
+- 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在 DevTools 中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
 ## 默认导出 versus 命名导出
 
-到目前为止我们导出的功能都是由 **named exports** 组成 —- 每个项目（无论是函数，常量等）在导出时都由其名称引用，并且该名称也用于在导入时引用它。
+到目前为止，我们导出的功能都是使用 **named exports** —— 每个项（如函数或常量）在导出时通过名称引用，导入时也需使用相同的名称引用。
 
 还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
 
-看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，你可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
+来看一个例子了解其工作方式。在基本模块 `square.js` 中，有一个名为 `randomSquare()` 的函数，用于创建一个随机颜色、大小和位置的正方形。我们希望将其作为默认导出，因此在文件底部这样编写：
 
 ```js
 export default randomSquare;
@@ -192,7 +192,7 @@ export default function(ctx) {
 }
 ```
 
-在我们的 `main.js` 文件中，我们使用以下行导入默认函数：
+在我们的 `main.js` 文件中，我们通过以下代码导入默认函数：
 
 ```js
 import randomSquare from "./modules/square.js";
@@ -209,13 +209,13 @@ import { default as randomSquare } from "./modules/square.js";
 
 ## 避免命名冲突
 
-到目前为止，我们的 canvas 图形绘制模块看起来工作的很好。但是如果我们添加一个绘制其他形状的比如圆形或者矩形的模块会发生什么？这些形状可能会有相关的函数比如 `draw()`、`reportArea()`，等等；如果我们用相同的名字导入不同的函数到顶级模块文件中，我们会收到冲突和错误。
+到目前为止，我们的 canvas 图形绘制模块运行良好。但如果添加用于绘制其他形状（如圆形或矩形）的模块会怎样？这些形状可能会有类似 `draw()` 和 `reportArea()` 的相关函数。如果在顶级模块文件中使用相同名称导入不同函数，就会导致冲突和错误。
 
 幸运的是，有很多方法来避免。我们将会在下一个节看到。
 
 ## 重命名导出与导入
 
-在你的 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字跟一个新的名字，来改变你在顶级模块中将要使用的功能的标识名字。因此，例如，以下两者都会做同样的工作，尽管方式略有不同：
+在 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字为功能指定新名称，从而更改在顶级模块中使用的标识名称。例如，以下两种方式功能相同，但实现略有不同：
 
 ```js
 // inside module.js
@@ -305,7 +305,7 @@ import {
 
 ## 创建模块对象
 
-上面的方法工作的挺好，但是有一点点混乱、亢长。一个更好的解决方是，导入每一个模块功能到一个模块功能对象上。可以使用以下语法形式：
+上述方法虽然有效，但有些冗长和混乱。一个更好的解决方案是，将每一个模块功能导入到一个模块功能对象中。可以使用以下语法形式：
 
 ```js
 import * as Module from "/modules/module.js";
