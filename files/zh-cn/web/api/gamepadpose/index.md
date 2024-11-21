@@ -16,7 +16,7 @@ l10n:
 - {{domxref("GamepadPose.hasOrientation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个表示游戏手柄是否能够返回方向信息的布尔值，能则返回 `true`，否则为 `false`。
 - {{domxref("GamepadPose.hasPosition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个表示游戏手柄能够返回位置信息的布尔值，能则返回 `true`，否则为 `false`。
+  - : 返回一个表示游戏手柄是否能够返回位置信息的布尔值，能则返回 `true`，否则为 `false`。
 - {{domxref("GamepadPose.position")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回以 3D 向量的形式表示的 {{domxref("Gamepad")}} 的位置。
 - {{domxref("GamepadPose.linearVelocity")}} {{ReadOnlyInline}} {{Experimental_Inline}}
