@@ -14,7 +14,7 @@ _As mesmas propriedades de {{domxref("EventTarget")}}._
 ### Manipuladores de Evento
 
 - {{ domxref("MediaDevices.ondevicechange") }}
-  - : O manipulador de evento para o evento {{event("devicechange")}}. Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
+  - : O manipulador de evento para o evento [`devicechange`](/pt-BR/docs/Web/Events/devicechange). Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
 
 ## Métodos
 
