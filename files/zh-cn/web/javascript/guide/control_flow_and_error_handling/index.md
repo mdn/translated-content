@@ -36,10 +36,10 @@ while (x < 10) {
 }
 ```
 
-这里，`{ x++; }`就是块语句。
+这里，`{ x++; }` 就是块语句。
 
 > [!NOTE]
-> 用 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量不是块级作用域的，而是函数作用域或脚本作用域的，以及设置它们的效果会持续到块本身之外。例如：
+> 用 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量不是块级作用域的，而是函数作用域或脚本作用域的，且设置它们的效果会超越到块本身之外。例如：
 >
 > ```js
 > var x = 1;
@@ -49,13 +49,13 @@ while (x < 10) {
 > console.log(x); // 2
 > ```
 >
-> 会输出 `2`，因为块中 `var x` 语句和块前面的 `var x` 语句的作用域是一样的。（在 C 或 Java 中，一样的代码会输出 `1`。）
+> 会输出 `2`，因为块中 `var x` 语句和块前面的 `var x` 语句的作用域是一样的。（在 C 或 Java 中，等效的代码会输出 `1`。）
 >
 > 使用 {{jsxref("Statements/let", "let")}} 或 {{jsxref("Statements/const", "const")}} 会消除这个作用域效果。
 
-## 条件判断语句
+## 条件语句
 
-条件判断语句的一组指令会在指定的条件为真时执行。JavaScript 支持两种条件判断语句：`if...else` 和 `switch`。
+条件语句是一组会在指定的条件为真时执行的指令。JavaScript 支持两种条件判断语句：`if...else` 和 `switch`。
 
 ### if...else 语句
 
@@ -71,10 +71,9 @@ if (condition) {
 }
 ```
 
-这里，`condition` 可以是任何能求值为 `true` 或 `false` 的表达式。（想要了解求值为 `true` 和 `false` 的解释，参见 [Boolean](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#描述)。）
+这里，`condition` 可以是任何能求值为 `true` 或 `false` 的表达式。（想要了解求值为 `true` 和 `false` 的解释，参见[布尔值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#描述)。）
 
-如果 `condition` 求值为 `true`，执行 `statement_1`。否则，执行 `statement_2`。`statement_1` 和
-`statement_2` 可以是任何的语句，包括继续嵌套的 `if` 语句。
+如果 `condition` 求值为 `true`，执行 `statement1`。否则，执行 `statement2`。`statement1` 和 `statement2` 可以是任何的语句，包括继续嵌套的 `if` 语句。
 
 你也可以使用 `else if` 组合语句按顺序测试多个条件，就像下面一样：
 
@@ -90,7 +89,7 @@ if (condition1) {
 }
 ```
 
-在多个条件的例子中，只有第一个求值为 `true` 的逻辑条件才会被执行。想要执行多个语句，将其组合在一个块语句中（`{ /* … */ }`）。
+在多个条件的情况下，只有第一个求值为 `true` 的逻辑条件才会被执行。想要执行多个语句，将其组合在一个块语句中（`{ /* … */ }`）。
 
 #### 最佳实践
 
@@ -106,11 +105,11 @@ if (condition) {
 }
 ```
 
-一般而言，`if...else` 不将赋值（例如，`x = y`）作为条件是最佳实践：
+一般而言，最好不要将赋值（例如，`x = y`）作为 `if...else` 的条件：
 
 ```js-nolint example-bad
 if (x = y) {
-  // 这里的语句
+  // 在这里添加语句
 }
 ```
 
@@ -193,7 +192,7 @@ JavaScript 求值上面的 switch 语句的过程如下：
 
 #### 示例
 
-在下列示例中，如果 `fruitType` 等于 `"Bananas"`，程序匹配到对应 `"Bananas"` 的 `case` 语句，并执行相关语句。当执行到 `break` 时，程序结束了 `switch` 并执行 `switch` 后面的语句。如果不写 `break` ，那么程序将会执行 `case "Cherries"` 下的语句。
+在下列示例中，如果 `fruitType` 等于 `"Bananas"`，程序将该值与 `case "Bananas"` 匹配，并执行相关语句。当执行到 `break` 时，程序结束 `switch` 并执行 `switch` 后面的语句。如果不写 `break` ，那么程序将会执行 `case "Cherries"` 下的语句。
 
 ```js
 switch (fruitType) {
@@ -230,7 +229,7 @@ console.log("Is there anything else you'd like?");
 
 ### 异常类型
 
-JavaScript 可以抛出任意对象。然而，并非所有抛出的对象都是相同的。尽管抛出数字或者字符串作为错误信息十分常见，但是用下列其中一种专门为这个目的而创建的异常类型通常更为高效：
+JavaScript 可以抛出任意对象。然而，并非所有抛出的对象都是生而平等的。尽管抛出数字或者字符串作为错误信息十分常见，但是用下列其中一种专门为这个目的而创建的异常类型通常更为高效：
 
 - [ECMAScript 异常](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#错误类型)
 - [`DOMException`](/zh-CN/docs/Web/API/DOMException)
@@ -323,7 +322,7 @@ try {
 
 你可以用 `finally` 块来令你的脚本在异常发生时优雅地退出。举个例子，你可能需要释放脚本绑定的资源。
 
-下列的示例打开一个文件，然后执行使用这个文件是语句。（服务器端 JavaScript 允许你访问文件。）如果在文件打开时抛出异常，`finally` 块会在脚本失败之前关闭文件。在这使用 `finally` 能*确保*文件永远不会是打开状态，即使发生了错误。
+下列的示例打开一个文件，然后执行使用这个文件的语句。（服务器端 JavaScript 允许你访问文件。）如果在文件打开时抛出异常，`finally` 块会在脚本失败之前关闭文件。在这使用 `finally` 能*确保*文件永远不会是打开状态，即使发生了错误。
 
 ```js
 openMyFile();
@@ -354,7 +353,7 @@ function f() {
     console.log(4); // 无法抵达
   }
   // 现在执行“return false”
-  console.log(5); // 无法抵达
+  console.log(5); // 不可达
 }
 console.log(f()); // 0、1、3、false
 ```
@@ -366,7 +365,7 @@ function f() {
   try {
     throw "bogus";
   } catch (e) {
-    console.log('捕获内部的 "bogus"');
+    console.log("捕获内部的“bogus”");
     // 这个 return 语句会被挂起直到 finally 块结束
     throw e;
   } finally {
@@ -380,11 +379,11 @@ try {
 } catch (e) {
   // 这永远不会抵达！
   // f() 执行时，`finally` 块返回 false，而这会覆盖上面的 `catch` 中的 `throw`
-  console.log('捕获外部的 "bogus"');
+  console.log("捕获外部的“bogus”");
 }
 
 // 日志：
-// 捕获内部的 "bogus"
+// 捕获内部的“bogus”
 // false
 ```
 
@@ -397,7 +396,7 @@ try {
 1. 它*必须*有一个 `finally` 块，以及
 2. 包围的 `try...catch` 语句的 `catch` 块会被检查是否能处理该异常。
 
-想要了解更多信息，参见 [try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 参考页上的[嵌套 try 块](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#嵌套_try_块)。
+想要了解更多信息，参见 [`try... catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 参考页上的[嵌套 try 块](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#嵌套_try_块)。
 
 ### 使用 Error 对象
 
