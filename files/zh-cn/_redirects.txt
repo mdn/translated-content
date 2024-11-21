@@ -2446,7 +2446,7 @@
 /zh-CN/docs/Web/HTTP/HTTP请求方法	/zh-CN/docs/Web/HTTP/Methods
 /zh-CN/docs/Web/HTTP/HTTP请求方法/GET	/zh-CN/docs/Web/HTTP/Methods/GET
 /zh-CN/docs/Web/HTTP/HTTP请求方法/POST	/zh-CN/docs/Web/HTTP/Methods/POST
-/zh-CN/docs/Web/HTTP/Headers/Accept-Charset	/zh-CN/docs/conflicting/Web/HTTP/Headers
+/zh-CN/docs/Web/HTTP/Headers/Accept-Charset	/zh-CN/docs/Web/HTTP/Headers
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/base-uri	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri

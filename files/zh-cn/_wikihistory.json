@@ -32530,9 +32530,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/HTTP/Headers": {
-    "modified": "2020-10-15T21:50:53.082Z",
-    "contributors": ["shinken008", "Dorllen", "WayneCui", "xgqfrms-GitHub"]
   }
 }
