@@ -22640,10 +22640,6 @@
     "modified": "2020-10-15T22:24:12.153Z",
     "contributors": ["xuhui98"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:50:53.082Z",
-    "contributors": ["shinken008", "Dorllen", "WayneCui", "xgqfrms-GitHub"]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-10-15T21:53:10.909Z",
     "contributors": [
