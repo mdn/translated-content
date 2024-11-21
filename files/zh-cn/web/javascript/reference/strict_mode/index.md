@@ -63,14 +63,19 @@ function notStrict() {
 
 #### 给未声明的变量赋值
 
-第一，严格模式下无法再意外创建全局变量。在普通的 JavaScript 里面给一个错误命名的变量名赋值会使全局对象新增一个属性并继续“工作”（尽管将来可能会失败：在现代的 JavaScript 中有可能）。严格模式中意外创建全局变量被抛出错误替代：
+严格模式下无法再意外创建全局变量。在非严格模式下，在赋值中错误拼写的变量会在全局对象上创建一个新属性并继续“工作”。在严格模式下，意外创建全局变量的赋值会抛出错误：
+
+<!-- cSpell:ignore mistypeVarible -->
 
 ```js
 "use strict";
-// 假如有一个全局变量叫做 mistypedVariable
-mistypedVaraible = 17; // 因为变量名拼写错误
-// 这一行代码就会抛出 ReferenceError
+let mistypeVariable;
+
+// 假设全局变量 mistypeVarible 不存在，由于“mistypeVariable”拼写错误（缺少“a”），这行会抛出 ReferenceError
+mistypeVarible = 17;
 ```
+
+#### 给属性赋值会失败
 
 第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 ([non-extensible](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) 的新属性赋值) 都会抛出异常：
 
