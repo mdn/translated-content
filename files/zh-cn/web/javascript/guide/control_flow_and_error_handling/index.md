@@ -55,11 +55,11 @@ while (x < 10) {
 
 ## 条件语句
 
-条件语句是一组会在指定的条件为真时执行的指令。JavaScript 支持两种条件判断语句：`if...else` 和 `switch`。
+条件语句是一组会在指定的条件为真时执行的指令。JavaScript 支持两种条件语句：`if...else` 和 `switch`。
 
 ### if...else 语句
 
-使用 `if` 语句在逻辑条件为 `true` 时执行语句。使用可选的 `else` 从句在条件为 `false` 时执行语句。
+使用 `if` 语句在逻辑条件为 `true` 时执行语句。使用可选的 `else` 子句在条件为 `false` 时执行语句。
 
 `if` 语句看起来像这样：
 
@@ -180,15 +180,15 @@ switch (expression) {
 
 JavaScript 求值上面的 switch 语句的过程如下：
 
-- 程序首先查找一个与 expression 的值匹配的 `case` 语句标签，然后将控制权转移到该从句，执行相关的语句。
-- 如果没有匹配的标签，程序会去找可选的 `default` 从句：
-  - 如果找到了 `default` 从句，程序会将控制权转移到该从句，执行相关的语句。
-  - 如果没有找到 `default` 从句，程序会继续执行 `switch` 语句后面的语句。
-  - （`default` 语句通常是最后一个从句，当然这不是必须的。）
+- 程序首先查找一个与 expression 的值匹配的 `case` 子句标签，然后将控制权转移到该子句，执行相关的语句。
+- 如果没有匹配的标签，程序会去找可选的 `default` 子句：
+  - 如果找到了 `default` 子句，程序会将控制权转移到该子句，执行相关的语句。
+  - 如果没有找到 `default` 子句，程序会继续执行 `switch` 语句后面的语句。
+  - （`default` 子句通常是最后一个子句，当然这不是必须的。）
 
 #### break 语句
 
-每个 `case` 从句会关联一个可选的 `break` 语句，它能保证在匹配的语句被执行后程序可以跳出 `switch` 并且继续执行 `switch` 后面的语句。如果 `break` 被忽略，程序会在 `switch` 语句内继续执行（将会执行下一个 `case` 的语句，依此类推）。
+每个 `case` 子句会关联一个可选的 `break` 语句，它能保证在匹配的语句被执行后程序可以跳出 `switch` 并且继续执行 `switch` 后面的语句。如果 `break` 被忽略，程序会在 `switch` 语句内继续执行（将会执行下一个 `case` 的语句，依此类推）。
 
 #### 示例
 
@@ -197,27 +197,27 @@ JavaScript 求值上面的 switch 语句的过程如下：
 ```js
 switch (fruitType) {
   case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
+    console.log("橙子是 $0.59 一磅");
     break;
   case "Apples":
-    console.log("Apples are $0.32 a pound.");
+    console.log("苹果是 $0.32 一磅");
     break;
   case "Bananas":
-    console.log("Bananas are $0.48 a pound.");
+    console.log("香蕉是 $0.48 一磅");
     break;
   case "Cherries":
-    console.log("Cherries are $3.00 a pound.");
+    console.log("樱桃是 $3.00 一磅");
     break;
   case "Mangoes":
-    console.log("Mangoes are $0.56 a pound.");
+    console.log("芒果是 $0.56 一磅。");
     break;
   case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
+    console.log("木瓜是 $2.79 一磅。");
     break;
   default:
-    console.log(`Sorry, we are out of ${fruitType}.`);
+    console.log(`对不起，${fruitType}卖完了。`);
 }
-console.log("Is there anything else you'd like?");
+console.log("还有其他什么是你喜欢的吗？");
 ```
 
 ## 异常处理语句
