@@ -127,6 +127,49 @@ JavaScript 的解释器会把它视为普通注释——只有当脚本直接在
 
 ## 标识符
 
+*标识符*用于将值与名字进行连接。标识符可以用于各种场合：
+
+```js
+const decl = 1; // 变量声明（也可能是 `let` 或 `var`）
+function fn() {} // 函数声明
+const obj = { key: "value" }; // 对象键
+// 类声明
+class C {
+  #priv = "value"; // 私有属性
+}
+lbl: console.log(1); // 标签
+```
+
+在 JavaScript 中，标识符通常由字母数字字符、下划线（`_`）和美元符号（`$`）组成。标识符不允许以数字开头。然而，JavaScript 标识符不只限于 {{Glossary("ASCII")}}——许多 Unicode 代码点也是被允许的。也就是说：
+
+- 起始字符可以是 [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) 类别加 `_` 和 `$` 中的任意字符。
+- 在第一个字符之后，你可以使用 [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) 类别加 U+200C（ZWNJ）和 U+200D（ZWJ）中的任意字符。
+
+> [!NOTE]
+> 如果，出于某些原因，你需要自己解析一些 JavaScript 源，不要假设所有的标识符遵循 `/[A-Za-z_$][\w$]*/` 模式（例如，仅 ASCII）！标识符的范围可以由正则表达式 `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u`（不包含 unicode 转义序列）描述。
+
+此外，JavaScript 允许在标识符中以 `\u0000` 或 `\u{000000}`的形式使用 [Unicode 转义序列](#unicode-转义序列)，而这会将相同的字符串值编码为实际的 Unicode 字符。例如，`你好` 和 `\u4f60\u597d` 是一样的标识符：
+
+```js-nolint
+const 你好 = "你好";
+console.log(\u4f60\u597d); // 你好
+```
+
+不是所有的场合都接受全部可能的标识符。特定的语法（例如，函数声明、函数表达式和变量声明）要求使用的标识符名字不能是[保留字](#保留字)。
+
+```js-nolint example-bad
+function import() {} // 非法：import 是保留字。
+```
+
+特别的，私有属性和对象属性允许是保留字。
+
+```js
+const obj = { import: "value" }; // 合法的，尽管 `import` 是保留字
+class C {
+  #import = "value";
+}
+```
+
 ## 关键字
 
 *关键字*是 JavaScript 中看起来像标识符但又具有特殊含义的标记。例如，在函数声明之前的 [`async`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 关键字表示该函数是异步的。
