@@ -114,8 +114,8 @@ l10n:
 ```
 
 ```css live-sample___web-font-example
-      @font-face {
-        font-family: "Bitstream Vera Serif Bold";
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
   src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
 }
 
