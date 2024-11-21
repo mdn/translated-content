@@ -65,7 +65,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 
 ### 高级
 
-- [继承和原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : 解释被广泛误解与低估的基于原型的继承。
 - [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
   - : JavaScript 的内存生命周期和垃圾回收。

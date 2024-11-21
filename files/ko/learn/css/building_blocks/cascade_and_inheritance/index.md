@@ -57,7 +57,20 @@ CSS 는 **Cascading Style Sheets** 의 약자이며, CSS 라는 단어를 이해
 
 아래 예에서는, `h1` 에 적용할 수 있는 두 가지 규칙이 있습니다. `h1` 은 파란색으로 표시됩니다 — 이러한 규칙에는 동일한 선택자가 있고 동일한 고유성을 가지므로, 소스 순서의 마지막 규칙이 우선합니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}}
+```html live-sample___cascade-simple
+<h1>This is my heading.</h1>
+```
+
+```css live-sample___cascade-simple
+h1 {
+  color: red;
+}
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("cascade-simple")}}
 
 ### 우선 순위 (Specificity)
 
@@ -68,7 +81,21 @@ CSS 는 **Cascading Style Sheets** 의 약자이며, CSS 라는 단어를 이해
 
 시간 예제! 아래에는 `h1` 에 적용할 수 있는 두 가지 규칙이 다시 있습니다. 아래 `h1` 은 빨간색으로 표시 됩니다 — class 선택자는 규칙에 더 높은 우선 순위를 부여하므로 요소 선택자가 있는 규칙은 소스 순서에서 더 아래에 표시 되더라도 적용됩니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 500)}}
+```html live-sample___specificity-simple
+<h1 class="main-heading">This is my heading.</h1>
+```
+
+```css live-sample___specificity-simple
+.main-heading {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("specificity-simple")}}
 
 우선 순위 점수 및 기타 사항에 대해서는 나중에 설명하겠습니다.
 
@@ -78,7 +105,28 @@ CSS 는 **Cascading Style Sheets** 의 약자이며, CSS 라는 단어를 이해
 
 예를 들어, 요소에 `color` 및 `font-family` 를 설정하면, 다른 색상 및 글꼴 값을 직접 적용하지 않는 한, 해당 요소 내부의 모든 요소에도 해당 색상 및 글꼴로 스타일이 지정됩니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}}
+```html live-sample___inheritance-simple
+<p>
+  As the body has been set to have a color of blue this is inherited through the
+  descendants.
+</p>
+<p>
+  We can change the color by targeting the element with a selector, such as this
+  <span>span</span>.
+</p>
+```
+
+```css live-sample___inheritance-simple
+body {
+  color: blue;
+}
+
+span {
+  color: black;
+}
+```
+
+{{EmbedLiveSample("inheritance-simple")}}
 
 일부 속성은 상속되지 않습니다 — 예를 들어 요소에 {{cssxref("width")}} 를 50% 로 설정하면, 모든 하위 항목의 너비가 부모 너비의 50% 가 되지 않습니다. 이 경우, CSS 는 사용하기가 매우 어려울 것입니다!
 
@@ -95,7 +143,46 @@ CSS 는 **Cascading Style Sheets** 의 약자이며, CSS 라는 단어를 이해
 
 색상은 직접 자식 항목 뿐만 아니라 간접 자식 항목 (직접 자식 `<li>`) 및 첫 번째 중첩 목록에 있는 자식 항목에도 적용됩니다. 그런 다음 두 번째 중첩 목록에 `special` class 를 추가하고 다른 색상을 적용했습니다. 그런 다음 자식을 통해 상속됩니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 700)}}
+```html live-sample___inheritance
+<ul class="main">
+  <li>Item One</li>
+  <li>
+    Item Two
+    <ul>
+      <li>2.1</li>
+      <li>2.2</li>
+    </ul>
+  </li>
+  <li>
+    Item Three
+    <ul class="special">
+      <li>
+        3.1
+        <ul>
+          <li>3.1.1</li>
+          <li>3.1.2</li>
+        </ul>
+      </li>
+      <li>3.2</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css live-sample___inheritance
+.main {
+  color: rebeccapurple;
+  border: 2px solid #ccc;
+  padding: 1em;
+}
+
+.special {
+  color: black;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("inheritance", "", "280px")}}
 
 너비 (위에서 언급 한 것처럼), 마진, 패딩 및 테두리와 같은 것은 상속되지 않습니다. 만약 우리 목록의 자식들이 테두리를 물려 받았다면, 모든 단일 목록과 목록 항목은 테두리를 얻게 될 것입니다 — 아마도 우리가 원하는 효과는 아닙니다!
 
@@ -126,7 +213,34 @@ CSS 는 상속을 제어하기 위한 4 가지 특수 범용 속성 값을 제�
 2. 왜 세 번째 와 네 번째 링크가 그 색깔인지 이해합니까? 그렇치 않은 경우 위의 값에 대한 설명을 확인하십시오.
 3. `<a>` 요소에 대해 — 예를 들어 `a { color: red; }` 와 같은 새 색상을 정의하는 경우 어떤 링크가 색상이 변경됩니까?
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
+```html live-sample___keywords
+<ul>
+  <li>Default <a href="#">link</a> color</li>
+  <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+  <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+  <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+</ul>
+```
+
+```css live-sample___keywords
+body {
+  color: green;
+}
+
+.my-class-1 a {
+  color: inherit;
+}
+
+.my-class-2 a {
+  color: initial;
+}
+
+.my-class-3 a {
+  color: unset;
+}
+```
+
+{{EmbedLiveSample("keywords")}}
 
 ### 모든 속성 값 재설정
 
@@ -134,7 +248,28 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 아래 예제에는 두 개의 인용문이 있습니다. 첫 번째는 인용문 자체에 스타일을 적용하고 두 번째는 `all` 값을 `unset` 하도록 인용문에 적용된 class 를 갖습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 700)}}
+```html live-sample___all
+<blockquote>
+  <p>This blockquote is styled</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>This blockquote is not styled</p>
+</blockquote>
+```
+
+```css live-sample___all
+blockquote {
+  background-color: orange;
+  border: 2px solid blue;
+}
+
+.fix-this {
+  all: unset;
+}
+```
+
+{{EmbedLiveSample("all")}}
 
 `all` 의 값을 사용 가능한 다른 값 중 일부로 설정하고 차이가 무엇인지 관찰하십시오.
 
@@ -164,7 +299,29 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 이 동작은 CSS 에서 반복을 피하는 데 도움이 됩니다. 일반적인 방법은 기본 요소의 일반 스타일을 정의한 다음, 다른 요소에 대한 class 를 작성하는 것입니다. 예를 들어, 아래 스타일 시트에서 h2 제목에 대한 일반 스타일을 정의한 다음, 일부 속성과 값만 변경하는 class 를 만들었습니다. 처음에 정의된 값은 모든 표제에 적용되며, 보다 구체적인 값은 class 가 있는 표제에 적용됩니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 700)}}
+```html live-sample___mixing-rules
+<h2>Heading with no class</h2>
+<h2 class="small">Heading with class of small</h2>
+<h2 class="bright">Heading with class of bright</h2>
+```
+
+```css live-sample___mixing-rules
+h2 {
+  font-size: 2em;
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.small {
+  font-size: 1em;
+}
+
+.bright {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("mixing-rules", "", "240px")}}
 
 이제 브라우저가 우선 순위 (specificity) 를 계산하는 방법을 살펴보겠습니다. 우리는 이미 요소 선택자가 우선 순위가 낮으며 class 가 덮어 쓸 수 있음을 알고 있습니다. 기본적으로 포인트 단위의 가치가 다른 유형의 선택자에 부여되며, 이를 합산하면 특정 선택자의 가중치가 부여되며, 이는 다른 잠재적 일치 항목에 대해 평가할 수 있습니다.
 
@@ -190,7 +347,73 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 계속 진행하기 전에, 실제 사례를 살펴보겠습니다.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}}
+```html live-sample___specificity-boxes
+<div class="container" id="outer">
+  <div class="container" id="inner">
+    <ul>
+      <li class="nav"><a href="#">One</a></li>
+      <li class="nav"><a href="#">Two</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+```css live-sample___specificity-boxes
+/* 1. specificity: 1-0-1 */
+#outer a {
+  background-color: red;
+}
+
+/* 2. specificity: 2-0-1 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* 3. specificity: 1-0-4 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* 4. specificity: 1-1-3 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* 5. specificity: 0-2-4 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* 6. specificity: 0-2-3 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* 7. specificity: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+```
+
+{{EmbedLiveSample("specificity-boxes")}}
 
 우선, 우리는 이 예제의 처음 7개 규칙에만 관심이 있으며, 앞으로 알 수 있듯이 각 규칙 앞에 주석에 우선 순위 값을 포함 시켰습니다.
 
@@ -209,7 +432,30 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 두 개의 단락이 있고, 하나에 ID 가 있는 이 예를 살펴보십시오.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 700)}}
+```html live-sample___important
+<p class="better">This is a paragraph.</p>
+<p class="better" id="winning">One selector to rule them all!</p>
+```
+
+```css live-sample___important
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("important")}}
 
 이 과정을 통해 어떤 일이 일어나고 있는지 살펴보겠습니다 — 이해하기 어려운 경우 어떤 일이 발생하는지 확인하려면 일부 속성을 제거해 보십시오.
 
@@ -247,7 +493,46 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 실수한 경우 언제든지 _재설정_ 버튼을 사용하여 재설정 할 수 있습니다. 정말로 막힌다면, [여기에서 해결책을 살펴 보십시오](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-cascade).
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/task.html", '100%', 700)}}
+```html live-sample___cascade-layers
+<p id="addSpecificity">A paragraph with a border and background</p>
+```
+
+```css live-sample___cascade-layers
+@layer firstLayer, secondLayer;
+
+p {
+  /* 0-0-1 */
+  background-color: red;
+  color: grey !important;
+  border: 5px inset purple;
+}
+p#addSpecificity {
+  /* 1-0-1 */
+  border-style: solid !important;
+}
+
+@layer firstLayer {
+  #addSpecificity {
+    /* 1-0-0 */
+    background-color: blue;
+    color: white !important;
+    border-width: 5px;
+    border-style: dashed !important;
+  }
+}
+
+@layer secondLayer {
+  p#addSpecificity {
+    /* 1-0-1 */
+    background-color: green;
+    color: orange !important;
+    border-width: 10px;
+    border-style: dotted !important;
+  }
+}
+```
+
+{{EmbedLiveSample("cascade-layers")}}
 
 ## 다음은 뭐죠
 
@@ -257,4 +542,4 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 스타일이 예상대로 적용되지 않는 이상한 문제가 발생하면 여기를 다시 참조 하십시오. 우선 순위 문제일 수 있습니다.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}

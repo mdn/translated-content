@@ -38,7 +38,7 @@ var p = new Proxy(target, handler);
 
 O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods')  -->
 
 ## Exemplos
 

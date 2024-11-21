@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`willValidate`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("input")}} 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象となる候補であるかどうかを示します。制約の検証を禁止する条件のいずれかに該当する場合、`false` となります。条件には次のようなものがあります。
+**`willValidate`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("input")}} 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象であるかどうかを示します。制約の検証を禁止する条件のいずれかに該当する場合、`false` となります。条件には次のようなものがあります。
 
 - {{domxref("HTMLInputElement.type", "type")}} が `hidden`、`reset`、`button` のいずれかである
 - 祖先に {{HTMLElement("datalist")}} がある

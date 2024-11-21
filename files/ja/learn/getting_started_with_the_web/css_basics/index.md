@@ -144,7 +144,7 @@ h1 {
 
 CSS の基本をいくつか勉強しましたので、`style.css` ファイルにいくつかのルールと情報を追加して、この例を見栄え良くしましょう。
 
-1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか（{{HTMLElement("head")}} タグと `</head>` タグの間）に追加します。それは次のようなものです。
+1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#フォント)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか（{{HTMLElement("head")}} タグと `</head>` タグの間）に追加します。それは次のようなものです。
 
    ```html
    <link

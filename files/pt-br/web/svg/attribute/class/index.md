@@ -22,7 +22,7 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
 | Animável            | Sim                                                                                            |
 | Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
-{{ page("/pt-BR/SVG/Content_type","List-of-Ts") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/SVG/Content_type","List-of-Ts")  -->
 
 ## Exemplo
 

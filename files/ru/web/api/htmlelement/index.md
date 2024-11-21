@@ -81,17 +81,17 @@ Most events properties, of the form `onXYZ`, are defined on the {{domxref("Globa
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `paste` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
+  - : Returns the event handling code for the [`touchstart`](/ru/docs/Web/Events/touchstart) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
+  - : Returns the event handling code for the [`touchend`](/ru/docs/Web/Events/touchend) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
+  - : Returns the event handling code for the [`touchmove`](/ru/docs/Web/Events/touchmove) event.
 - {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
+  - : Returns the event handling code for the [`touchenter`](/ru/docs/Web/Events/touchenter) event.
 - {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
+  - : Returns the event handling code for the [`touchleave`](/ru/docs/Web/Events/touchleave) event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+  - : Returns the event handling code for the [`touchcancel`](/ru/docs/Web/Events/touchcancel) event.
 
 ## Methods
 
