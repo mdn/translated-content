@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<track>`** [HTML](/zh-CN/docs/Web/HTML) 元素作为媒体元素 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的子元素使用。每个文本 track 元素允许你指定一个定时文本 track（或基于时间的数据），可以与媒体元素并行显示，例如在视频上叠加字幕或隐藏式字幕，或与音频 track 一起显示。
+**`<track>`** [HTML](/zh-CN/docs/Web/HTML) 元素作为媒体元素 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的子元素使用。每个文本轨元素允许你指定一个定时文本轨（或基于时间的数据），可以与媒体元素并行显示，例如在视频上叠加字幕或隐藏式字幕，或与音频轨一起显示。
 
 可以为一个媒体元素指定多个轨道，包含不同种类的定时文本数据，或为不同区域翻译的定时文本数据。使用的数据将是已设置为默认的轨道，或者基于用户偏好的类型和语言翻译。
 
@@ -23,7 +23,7 @@ l10n:
   - : 此属性表示应启用该轨道，除非用户的偏好表明另一个轨道更合适。每个媒体元素只能在一个 `track` 元素上使用此属性。
 - `kind`
 
-  - : 文本轨道的使用方式。如果省略，默认的类型是 `subtitles`。如果属性包含无效值，则会使用 `metadata`。允许使用以下关键字：
+  - : 文本轨的使用方式。如果省略，默认的类型是 `subtitles`。如果属性包含无效值，则会使用 `metadata`。允许使用以下关键字：
 
     - `subtitles`
 
@@ -47,7 +47,7 @@ l10n:
 - `label`
   - : 用户可读的文本轨标题，浏览器在列出可用文本轨时使用。
 - `src`
-  - : 轨道的地址（`.vtt` 文件）。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的源 —— 除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
+  - : 轨道（`.vtt` 文件）的地址。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的来源——除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
 - `srclang`
   - : 轨道文本数据的语言。它必须是一个有效的 [BCP 47](https://r12a.github.io/app-subtags/) 语言标签。如果 `kind` 属性设置为 `subtitles`，则必须定义 `srclang`。
 
@@ -59,9 +59,9 @@ l10n:
 
 一个媒体元素不能有多个具有相同 `kind`、`srclang` 和 `label` 的 `track`。
 
-### 检测字幕提示变化
+### 检测提示的变化
 
-每当显示的字幕提示发生变化时，由 {{domxref("HTMLTrackElement.track", "track")}} 属性表示的底层 {{domxref("TextTrack")}} 都会接收到一个 `cuechange` 事件。即使轨道未关联媒体元素，也会发生这种情况。
+每当显示的提示（cue）发生变化时，由 {{domxref("HTMLTrackElement.track", "track")}} 属性表示的底层 {{domxref("TextTrack")}} 都会接收到一个 `cuechange` 事件。即使轨道未关联媒体元素，也会发生这种情况。
 
 如果轨道*与*媒体元素关联，并且 `<track>` 元素作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的子元素使用，则 `cuechange` 事件也会发送到 {{domxref("HTMLTrackElement")}}。
 
@@ -85,15 +85,15 @@ textTrackElem.addEventListener("cuechange", (event) => {
 <video controls poster="/images/sample.gif">
   <source src="sample.mp4" type="video/mp4" />
   <source src="sample.ogv" type="video/ogv" />
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="zh" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="zh" />
   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="第 1 阶段" />
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="第 2 阶段" />
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="第 3 阶段" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="zh" label="第 1 阶段" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="zh" label="第 2 阶段" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="zh" label="第 3 阶段" />
   <!-- 回退 -->
   …
 </video>
