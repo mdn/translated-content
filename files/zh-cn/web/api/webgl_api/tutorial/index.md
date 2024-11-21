@@ -11,14 +11,14 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 开始之前
 
-使用 `<canvas>` 元素并不困难，但你需要基本的 [HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 知识。一些老浏览器不支持`<canvas>` 元素和 WebGL，但所有最近的主流浏览器都支持它们.。为了能在 canvas 中绘制图形，我们使用 Javascript 的上下文环境（context）对象，此对象可以动态创建图形。
+使用 `<canvas>` 元素并不困难，但你需要基本的 [HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 知识。一些老浏览器不支持`<canvas>` 元素和 WebGL，但所有最近的主流浏览器都支持它们。为了能在 canvas 中绘制图形，我们使用 Javascript 的上下文环境（context）对象，此对象可以动态创建图形。
 
 ## 在本教程中
 
 - [开始 WebGL](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
   - : 如何设置 WebGL 上下文环境。
 - [给 WebGL 的上下文环境添加 2D 内容](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-  - : 如何用 WebGl 渲染简单的平面化图形。
+  - : 如何用 WebGL 渲染简单的平面化图形。
 - [在 WebGL 中使用着色器 (shader) 去赋予颜色](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL)
   - : 演示如何使用着色器给图形添加颜色。
 - [用 WebGL 让对象动起来](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL)

@@ -33,7 +33,7 @@ El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro compo
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parent elements</th>

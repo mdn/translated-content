@@ -30,7 +30,7 @@ slug: Web/HTML/Element/q
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Parents permitidos</th>

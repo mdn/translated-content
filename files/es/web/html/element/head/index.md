@@ -19,7 +19,7 @@ El **elemento HTML `<head>`** provee información general (metadatos) acerca del
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `profile` {{deprecated_inline}}
-  - : Los URIs de uno o más perfiles de metadatos, separados por un espacio en blanco.
+  - : Los {{glossary("URI")}}s de uno o más perfiles de metadatos, separados por un espacio en blanco.
 
 ## Ejemplo
 

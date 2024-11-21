@@ -24,7 +24,7 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 
 Содержимым элемента `<summary>` может быть любой заголовок, простой текст или HTML, которые можно использовать в абзаце.
 
-Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда {{event("toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggle`](/ru/docs/Web/Events/toggle) event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
 ### Default label text
 

@@ -38,6 +38,6 @@ slug: Web/API/Element/focusout_event
 
 ## Related Events
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
+- [`focus`](/ru/docs/Web/Events/focus)
+- [`blur`](/ru/docs/Web/API/Element/blur_event)
+- [`focusin`](/ru/docs/Web/API/Element/focusin_event)

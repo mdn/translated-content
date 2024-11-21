@@ -35,7 +35,7 @@ API Gamepad - это простой и последовательный спос
 #### События окна
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Представляет собой обработчик событий, который будет выполняться при подключении геймпада (когда срабатывает событие {{event('gamepadconnected')}}).
+  - : Представляет собой обработчик событий, который будет выполняться при подключении геймпада (когда срабатывает событие [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event)).
 - {{domxref("Window.ongamepaddisconnected")}}
   - : Представляет собой обработчик событий, который будет выполняться при отключении геймпада (когда срабатывает событие {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}).
 

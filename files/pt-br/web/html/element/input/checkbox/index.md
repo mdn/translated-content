@@ -24,7 +24,7 @@ slug: Web/HTML/Element/input/checkbox
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event ("change")}} e {{event ("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>

@@ -135,6 +135,6 @@ slug: Web/HTML/Element/dialog
 
 ## Смотрите также
 
-- Событие {{event("close")}}
-- Событие {{event("cancel")}}
+- Событие [`close`](/ru/docs/Web/Events/close)
+- Событие [`cancel`](/ru/docs/Web/Events/cancel)
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).

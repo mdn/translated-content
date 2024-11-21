@@ -42,7 +42,7 @@ var intOuterFramesetHeight = top.innerHeight;
 // retournera la hauteur de la partie visible du frameset le plus éloigné
 ```
 
-{{todo("ajouter ici un lien vers une démo interactive")}}
+<!-- TODO: add content -->
 
 - Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
 - Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
