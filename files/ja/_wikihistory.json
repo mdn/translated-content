@@ -21551,10 +21551,6 @@
     "modified": "2020-10-15T22:28:37.603Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T22:09:31.974Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:45.155Z",
     "contributors": ["mfuji09", "minoki"]
@@ -30283,6 +30279,10 @@
   "conflicting/Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
+  },
+  "conflicting/Web/HTTP/Headers": {
+    "modified": "2020-10-15T22:09:31.974Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",
