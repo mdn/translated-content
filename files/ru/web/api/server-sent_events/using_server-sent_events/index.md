@@ -119,7 +119,7 @@ while (true) {
 Цикл будет продолжать работать независимо от состояния соединения, поэтому добавлена проверка, чтобы прервать цикл, если соединение было закрыто (например, при закрытии страницы).
 
 > [!NOTE]
-> Вы можете найти полный код этого примера на GitHub — смотрите [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
+> Полный код этого примера можно найти на GitHub, смотрите [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Обработка ошибок
 
