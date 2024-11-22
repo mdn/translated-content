@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Navigator")}} 接口的 **`deprecatedReplaceInURN()`** 方法用于替换给定不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性所对应的映射 URL 中的指定字符串。
 
-`FencedFrameConfig` 或不透明 URN 是从诸如 [受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 的 `runAdAuction()` 方法等来源返回的，然后设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。浏览器内部会将与 `FencedFrameConfig` 或不透明 URN 相关联的内容 URL 映射到它，并且无法通过 JavaScript 访问该 URL。
+`FencedFrameConfig` 或不透明 URN 是从诸如[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 的 `runAdAuction()` 方法等来源返回的，然后设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。浏览器内部会将与 `FencedFrameConfig` 或不透明 URN 相关联的内容 URL 映射到它，并且无法通过 JavaScript 访问该 URL。
 
 然而，你可能希望替换该内部 URL 的部分内容。这是一种常见的将运行时数据传递到广告创意中以用于渲染的方法。`deprecatedReplaceInURN()` 作为一项临时措施被提供，以便能够对围栏框架 URL 进行这种替换，从而帮助广告技术提供商将现有实现迁移到[隐私沙盒](https://developers.google.com/privacy-sandbox) API。
 
