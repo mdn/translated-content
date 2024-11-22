@@ -229,10 +229,10 @@ Iniciando com o Gecko 25, uma chamada para o método `preventDefault()` do event
 
 ## Eventos Relacionados
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
+- [`keyup`](/pt-BR/docs/Web/Events/keyup)
+- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)
 
 ## Exemplo
 
