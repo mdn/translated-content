@@ -13,7 +13,7 @@ l10n:
 
 ## 使用说明
 
-`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。然而，`<header>` 元素就不是一个地标。
+`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。在这种情况下，`<header>` 元素不再是地标。
 
 `<header>` 元素可以定义一个全局站点标题，在无障碍树中描述为 `banner`。它通常包括一个徽标、公司名称、搜索功能，以及可能的全局导航或标语。它通常位于页面的顶端。
 
