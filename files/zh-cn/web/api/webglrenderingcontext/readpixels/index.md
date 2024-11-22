@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.readPixels()`** 方法从当前的颜色帧缓冲（framebuffer）中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象中。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.readPixels()`** 方法从当前的颜色帧缓冲（framebuffer）中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
 
 ## 语法
 
