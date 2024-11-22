@@ -2,7 +2,7 @@
 title: 控制流与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: f0d7ee3bc3a398612c75063fe227a5dcc515f40b
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
