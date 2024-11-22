@@ -215,7 +215,7 @@ switch (fruitType) {
     console.log("木瓜是 $2.79 一磅。");
     break;
   default:
-    console.log(`对不起，${fruitType}卖完了。`);
+    console.log(`对不起，${fruitType} 卖完了。`);
 }
 console.log("还有其他什么是你喜欢的吗？");
 ```
