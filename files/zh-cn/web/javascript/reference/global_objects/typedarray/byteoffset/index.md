@@ -7,13 +7,11 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("TypedArray")}} 实例的 **`byteOffset`** 访问器属性返回该类型化数组相对于其 {{jsxref("ArrayBuffer")}} 或 {{jsxref("SharedArrayBuffer")}} 开始位置的（以字节为单位）偏移量。
+{{jsxref("TypedArray")}} 实例的 **`byteOffset`** 访问器属性返回该类型化数组相对于其 {{jsxref("ArrayBuffer")}} 或 {{jsxref("SharedArrayBuffer")}} 开始位置的偏移量（以字节为单位）。
 
 ## 描述
 
-`byteOffset` 属性是一个访问器属性，其设置函数为 `undefined`，意味着该属性只能读取。该值在构造 _TypedArray_ 时确定，并且不能被更改。
-
-_TypedArray_ 是[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
+`byteOffset` 属性是一个访问器属性，其设置访问器函数为 `undefined`，意味着该属性只能读取。该值在构造 _TypedArray_ 时确定，并且不能被更改。_TypedArray_ 是[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 示例
 
