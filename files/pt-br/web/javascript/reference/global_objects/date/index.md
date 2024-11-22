@@ -91,7 +91,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods")  -->
 
 ## Exemplos
 

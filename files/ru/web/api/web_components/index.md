@@ -122,7 +122,7 @@ slug: Web/API/Web_components
 
     - {{cssxref("::slotted")}}: Соответствует любому содержимому, вставленному в слот.
 
-- Событие {{event("slotchange")}}
+- Событие [`slotchange`](/ru/docs/Web/Events/slotchange)
   - : Вызывается для экземпляра {{domxref("HTMLSlotElement")}} (элемент {{htmlelement("slot")}}) при изменении узла(-ов), содержащихся в этом слоте.
 
 ## Примеры

@@ -694,11 +694,12 @@
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ru/docs/Web/HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Feature_Policy	/ru/docs/Web/HTTP/Permissions_Policy
+/ru/docs/Web/HTTP/Headers/Accept-Charset	/ru/docs/conflicting/Web/HTTP/Headers
 /ru/docs/Web/HTTP/Response_codes	/ru/docs/Web/HTTP/Status
 /ru/docs/Web/HTTP/Авторизация	/ru/docs/Web/HTTP/Authentication
 /ru/docs/Web/HTTP/Заголовки	/ru/docs/Web/HTTP/Headers
 /ru/docs/Web/HTTP/Заголовки/Accept	/ru/docs/Web/HTTP/Headers/Accept
-/ru/docs/Web/HTTP/Заголовки/Accept-Charset	/ru/docs/Web/HTTP/Headers/Accept-Charset
+/ru/docs/Web/HTTP/Заголовки/Accept-Charset	/ru/docs/conflicting/Web/HTTP/Headers
 /ru/docs/Web/HTTP/Заголовки/Accept-Language	/ru/docs/Web/HTTP/Headers/Accept-Language
 /ru/docs/Web/HTTP/Заголовки/Accept-Patch	/ru/docs/Web/HTTP/Headers/Accept-Patch
 /ru/docs/Web/HTTP/Заголовки/Accept-Ranges	/ru/docs/Web/HTTP/Headers/Accept-Ranges
