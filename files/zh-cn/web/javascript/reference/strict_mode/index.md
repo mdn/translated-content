@@ -166,7 +166,7 @@ with (obj) {
 
 一种取代 `with`的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。
 
-第二，[`严格模式下的 eval 不再为上层范围（surrounding scope，注：包围 eval 代码块的范围）引入新变量`](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)。在正常模式下，代码 `eval("var x;")` 会给上层函数 （surrounding function）或者全局引入一个新的变量 `x`。这意味着，一般情况下，在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义（因为 `eval` 可能引入的新变量会覆盖它的外层变量）。在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
+第二，[`严格模式下的 eval 不再为上层范围（surrounding scope，注：包围 eval 代码块的范围）引入新变量`](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)。在正常模式下，代码 `eval("var x;")` 会给上层函数（surrounding function）或者全局引入一个新的变量 `x`。这意味着，一般情况下，在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义（因为 `eval` 可能引入的新变量会覆盖它的外层变量）。在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
 
 ```js
 var x = 17;
