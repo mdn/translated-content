@@ -132,7 +132,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 这个值本身并不太有用，因为它与一个相当无趣的事件相关，但它可以从另一个时间戳中减去，以便准确准确地确定这两个点之间的时间间隔。要获得这些时间戳中的一个，你可以调用 `window.performance.now()` 并将结果存储为一个变量。
 
 ```js
-var tNow = window.performance.now();
+const tNow = window.performance.now();
 ```
 
 回到主循环的主题。你将经常想知道何时调用主函数。因为这是常见的，`window.requestAnimationFrame()` 总是提供一个 `DOMHighResTimeStamp` 执行时回调函数作为参数。这将导致我们之前的主循环的另一个增强。
