@@ -103,7 +103,7 @@ font-variant-caps: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}
+{{ EmbedLiveSample('スモールキャップのフォント変化形の設定') }}
 
 ## 仕様書
 
