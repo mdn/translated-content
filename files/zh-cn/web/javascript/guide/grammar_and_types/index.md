@@ -568,16 +568,16 @@ console.log("John 的猫".length); // 结果为：7
 
 ```js-nolint
 // 创建基本的字符串字面量
-`In JavaScript '\n' is a line-feed.`
+`在 JavaScript 中，“\n” 是换行符。`
 
 // 多行字符串
-`In JavaScript, template strings can run
- over multiple lines, but double and single
- quoted strings cannot.`
+`在 JavaScript 中，模板字符串可以
+ 跨越行，但是由双引号和单引号
+ 包裹的字符串不行。`
 
 // 字符串插值
 const name = 'Lev', time = 'today';
-`Hello ${name}, how are you ${time}?`
+`你好 ${name}，${time} 过得怎么样？`
 ```
 
 [带标签的模板](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板)是用于指定模板字面量并调用“标签”函数解析模板字面量的紧凑语法。带标签的模板激活函数处理字符串和一组相关的值的方式只是更简洁、更语义化。模板标签函数的名字在模板字面量的前面——就像下面的示例中那样，模板标签函数的名字是 `print`。`print` 函数会插入参数，并对接收到的对象或数组进行序列化，以避免讨厌的 `[object Object]`。
