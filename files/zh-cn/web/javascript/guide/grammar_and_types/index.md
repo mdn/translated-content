@@ -53,13 +53,13 @@ const Früh = "foobar";
 在这个例子中，你需要破坏 `*/` 模式。例如，插入反斜杠：
 
 ```js
-/* You can /* nest comments *\/ by escaping slashes */
+/* 你可以通过转义正斜杠 /* 嵌套注释 *\/ */
 ```
 
-注释就像空格，在脚本执行过程中会被忽略。
+注释的行为类似于空白字符，在脚本执行过程中会被忽略。
 
 > [!NOTE]
-> 你可能也会在一些 JavaScript 文件的开头见到像这样 `#!/usr/bin/env node` 的第三种注释。
+> 你可能也会在一些 JavaScript 文件的开头见到像 `#!/usr/bin/env node` 这样的第三种注释。
 >
 > 它叫做 **hashbang 注释**语法，是一种用于指定执行脚本的特定 Javascript 引擎路径的特殊注释。想要了解更多细节，参见 [Hashbang 注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_注释)。
 
@@ -68,9 +68,9 @@ const Früh = "foobar";
 JavaScript 有三种变量声明方式。
 
 - {{jsxref("Statements/var", "var")}}
-  - : 声明一个变量，初始化值是可选的。
+  - : 声明一个变量，可选择将其初始化为一个值。
 - {{jsxref("Statements/let", "let")}}
-  - : 声明一个块级作用域的局部变量，初始化值是可选的。
+  - : 声明一个块级作用域的局部变量，可选择将其初始化为一个值。
 - {{jsxref("Statements/const", "const")}}
   - : 声明一个块级作用域的只读命名常量。
 
@@ -176,7 +176,7 @@ x = 3;
 
 由于存在变量提升，一个函数中所有的 `var` 语句应尽可能地放在接近函数顶部的地方。这个最佳实践会提升代码的清晰度。
 
-`let` 和 `const` 是否被提升是个定义争论。在变量声明之前引用块中的变量，将总是抛出 {{jsxref("ReferenceError")}}，因为该变量位于从块的开始到声明所在的"[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)"中。
+`let` 和 `const` 是否被提升是个定义争论。在变量声明之前引用块中的变量，将总是抛出 {{jsxref("ReferenceError")}}，因为该变量位于从块的开始到声明所在的“[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)”中。
 
 ```js
 console.log(x); // ReferenceError
@@ -223,8 +223,8 @@ function f() {
 然而，`const` 仅阻止*重新赋值*，而不阻止*修改*。被赋值为常量的对象的属性是不受保护的，所以下面的语句执行时不会产生错误。
 
 ```js
-const MY_OBJECT = { key: "value" };
-MY_OBJECT.key = "otherValue";
+const MY_OBJECT = { key: "值" };
+MY_OBJECT.key = "其他值";
 ```
 
 同样的，数组的元素也是不受保护的，所以下面的语句执行时也不会产生错误。
@@ -249,7 +249,7 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
   4. {{Glossary("Number")}}。整数或浮点数。例如，`42` 或 `3.14159`。
   5. {{Glossary("BigInt")}}。任意精度的整数。例如，`9007199254740992n`。
   6. {{Glossary("String")}}。表示文本值的字符序列。例如，`"Howdy"`。
-  7. [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。实例是唯一且不可变的数据类型。
+  7. [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。其实例是唯一且不可变的数据类型。
 
 - 以及 {{Glossary("Object")}}
 
@@ -327,9 +327,9 @@ parseInt("101", 2); // 5
 
 ### 数组字面量
 
-数组字面量是由一对方括号 (`[]`) 括起来的包含零个或多个表达式的列表，其中每个表达式代表一个数组元素。当你使用数组字面量创建数组时，该数组将会以指定的值作为其元素进行初始化，而其 `length` 被设定为指定的参数的个数。
+数组字面量是由一对方括号（`[]`）括起来的包含零个或多个表达式的列表，其中每个表达式代表一个数组元素。当你使用数组字面量创建数组时，该数组将会以指定的值作为其元素进行初始化，而其 `length` 被设定为指定的参数的个数。
 
-下面的示例用 3 个元素创建了 `coffees` 数组，它的长度是 3。
+下面的示例创建了含有 3 个元素的 `coffees` 数组，它的长度是 3。
 
 ```js
 const coffees = ["French Roast", "Colombian", "Kona"];
@@ -392,7 +392,7 @@ const myList = ["home", , "school", ,];
 然而，你在书写代码时，应该显式地将缺失的元素声明为 `undefined`，或者至少插入一个注释以突出元素缺失。这样做能提高代码的清晰度和维护性。
 
 ```js-nolint
-const myList = ["家", /* 空 */, "学校", /* 空 */, ];
+const myList = ["home", /* 空 */, "school", /* 空 */, ];
 ```
 
 ### 布尔字面量
@@ -464,7 +464,7 @@ JavaScript 数字字面量包括多种基数的整数字面量和以 10 为基�
 > [!WARNING]
 > 你不能在一条语句的开头就使用对象字面量！这将导致错误（或产生超出预料的行为），因为此时 `{` 会被认为是一个语句块的起始符号。
 
-以下是一个对象字面量的例子。`car` 对象的第一个元素定义了属性 `myCar`，被赋值为一个新字符串；第二个元素，属性 `getCar`，立即被赋值为函数调用 `(carTypes("Honda"))` 的结果；第三个元素，属性 `special`，使用了一个已有的变量（`sales`）。
+以下是一个对象字面量的例子。`car` 对象的第一个元素定义了属性 `myCar`，被赋值为一个新字符串（`"Saturn"`）；第二个元素，属性 `getCar`，立即被赋值为函数调用 `(carTypes("Honda"))` 的结果；第三个元素，属性 `special`，使用了一个已有的变量（`sales`）。
 
 ```js
 const sales = "Toyota";
@@ -489,7 +489,7 @@ console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
 ```
 
-对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的 javascript {{Glossary("Identifier", "标识符")}}或数字，它必须用引号包裹。
+对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的 JavaScript {{Glossary("Identifier", "标识符")}}或数字，它必须用引号包裹。
 
 属性的名字不合法，那么便不能用点（`.`）访问属性值。
 
@@ -655,13 +655,13 @@ console.log("我需要做：\n%o\n当前进度为：%o\n", todos, progress);
 | `\r`        | 回车符                                                                                                                                                                               |
 | `\t`        | 制表符                                                                                                                                                                               |
 | `\v`        | 垂直制表符                                                                                                                                                                           |
-| `\'`        | 单引号                                                                                                                                                                               |
+| `\'`        | 撇号或单引号                                                                                                                                                                            |
 | `\"`        | 双引号                                                                                                                                                                               |
 | `\\`        | 反斜杠字符                                                                                                                                                                           |
 | `\XXX`      | 由从 `0` 到 `377` 最多三位八进制数 `XXX` 表示的 Latin-1 字符。例如，`\251` 是版权符号的八进制序列。                                                                                  |
 | `\xXX`      | 由从 `00` 和 `FF` 的两位十六进制数字 `XX` 表示的 Latin-1 字符。例如，`\xA9` 是版权符号的十六进制序列。                                                                               |
 | `\uXXXX`    | 由四位十六进制数字 `XXXX` 表示的 Unicode 字符。例如，`\ u00A9` 是版权符号的 Unicode 序列。见 [Unicode 转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字符串字面量)。 |
-| `\u{XXXXX}` | Unicode 代码点转义。例如，`\u{2F804}` 相当于 Unicode 转义 `\uD87E\uDC04`。                                                                                                           |
+| `\u{XXXXX}` | Unicode 码位转义。例如，`\u{2F804}` 相当于 Unicode 转义 `\uD87E\uDC04`。                                                                                                          |
 
 #### 转义字符
 
@@ -706,6 +706,6 @@ console.log(str); // this string is broken across multiple lines.
 - [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
 - [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)指南
 
-在下一章中，我们将会学习控制流结构与错误处理
+在下一章中，我们将会学习控制流结构与错误处理。
 
 {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
