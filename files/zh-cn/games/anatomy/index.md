@@ -7,7 +7,7 @@ l10n:
 
 {{GamesSidebar}}
 
-本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及像 JavaScript 这样的 Web 标准如何变为用于开发游戏的工具的。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从本文中受益。
+本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及理解像 JavaScript 这样的 Web 标准是如何成为可用于开发游戏的工具的。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从本文中受益。
 
 ## 呈现、接收、解释、计算、重复
 
@@ -33,14 +33,14 @@ JavaScript 能很好的处理事件和回调函数。现代浏览器努力在需
 window.main = () => {
   window.requestAnimationFrame(main);
 
-  // 无论你的主循环需要做什么
+  // 你的主循环可以做你想要做的任何事情
 };
 
-main(); // 开始循环
+main(); // 开始主循环
 ```
 
 > [!NOTE]
-> 在这里讨论的每个 `main()` 方法中，在执行循环内容之前，我们会递归调用一个新的 `requestAnimationFrame`。这不是随意的：这样做被认为是最佳实践。如果你的当前帧错过了它的垂直同步窗口的周期，你也在下一个帧通过 `requestAnimationFrame` 尽早的调用 `main()`，从而确保浏览器能够及时地执行。
+> 在这里讨论的每个 `main()` 方法中，在执行循环内容之前，我们会递归调用一个新的 `requestAnimationFrame`。这不是毫无根据而写的：这样做被认为是最佳实践。如果你的当前帧错过了它的垂直同步窗口的周期，你也在下一个帧通过 `requestAnimationFrame` 尽早的调用 `main()`，从而确保浏览器能够及时地执行。
 
 上面的代码块有两个语句。第一个语句创建一个名为 `main()` 中的全局变量的函数。这个函数会执行一些操作，同时告诉浏览器在下一帧通过 `window.requestAnimationFrame()` 调用本身。第二个语句调用第一个语句中定义的 `main()` 函数。因为 `main()`中在第二个语句中被调用一次，而每次调用都将自身又放置到下一个帧的执行队列中，因此 `main()` 的调用与你的帧率同步。
 
@@ -58,7 +58,7 @@ main(); // 开始循环
 ```js
 /*
 * 以分号开头是为了以防此示例上方的代码行依赖于自动分号插入（ASI）。 
-* 浏览器可能会意外地认为整个示例从上一行继续。
+* 浏览器可能会意外地认为整个示例会从上一行继续。
 * 如果前一行不为空或终止，则前面的分号标志着新行的开始。
 */
 
@@ -85,7 +85,7 @@ main(); // 开始循环
 ```js
 /*
 * 以分号开头是为了以防此示例上方的代码行依赖于自动分号插入（ASI）。 
-* 浏览器可能会意外地认为整个示例从上一行继续。
+* 浏览器可能会意外地认为整个示例会从上一行继续。
 * 如果前一行不为空或终止，则前面的分号标志着新行的开始。
 *
 * 让我们假设 MyGame 是之前定义的。
@@ -115,19 +115,19 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 的 requestAnimationFrame 规范](https://www.w3.org/TR/animation-timing/)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
-现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片段的开始时*尝试*将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程*看起来*就像下面这样：
+现代版的 Firefox 和 Google Chrome（可能还有其他浏览器）都尝试图在框架的时间片段的开始时*尝试*将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程*看起来*就像下面这样：
 
 1. 启动一个新帧（而之前的帧由显示处理）。
 2. 遍历 `requestAnimationFrame` 回调并调用它们。
 3. 当上面的回调停止控制主线程时，执行垃圾收集和其他帧任务。
 4. 睡眠（除非事件打断了浏览器的小睡），直到显示器准备好你的图像（[VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)）并重复。
 
-你可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每 16 毫秒内进行一次，以保持 60 赫兹的显示效果。浏览器会尽可能早地调用你的代码，从而给它最大的计算时间。你的主线程通常会启动一些甚至不在主线程上的工作负载（如 WebGL 的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在 Web Worker 或 GPU 上执行长时间的计算。
+你可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每 16 毫秒内进行一次，以保持 60Hz 的显示效果。浏览器会尽可能早地调用你的代码，从而给它最大的计算时间。你的主线程通常会启动一些甚至不在主线程上的工作负载（如 WebGL 的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在 Web Worker 或 GPU 上执行长时间的计算。
 
 当我们讨论预算时，许多 Web 浏览器都有一个称为*高分辨率时间*的工具。{{jsxref("Date")}} 对象不再是计时事件的识别方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高分辨率的时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为{{ domxref("DOMHighResTimeStamp") }}，但是，无论出于什么目的和目的，都认为它是一个浮点数。
 
 > [!NOTE]
-> 系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度的最小值然而，如果他们能够做到这一点，他们就应该提供 0.001 毫秒的准确性。
+> 系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度作为一个最小的要求。不过，如果他们能够达到微妙的精度，那就应该提供这一精度。
 
 这个值本身并不太有用，因为它与一个相当无趣的事件相关，但它可以从另一个时间戳中减去，以便准确准确地确定这两个点之间的时间间隔。要获得这些时间戳中的一个，你可以调用 `window.performance.now()` 并将结果存储为一个变量。
 
@@ -141,7 +141,7 @@ var tNow = window.performance.now();
 ```js
 /*
 * 以分号开头是为了以防此示例上方的代码行依赖于自动分号插入（ASI）。 
-* 浏览器可能会意外地认为整个示例从上一行继续。
+* 浏览器可能会意外地认为整个示例会从上一行继续。
 * 如果前一行不为空或终止，则前面的分号标志着新行的开始。
 *
 * 我们还假设 MyGame 是以前定义的。
@@ -152,7 +152,7 @@ var tNow = window.performance.now();
     MyGame.stopMain = window.requestAnimationFrame(main);
 
     // 你的主循环内容
-    // tFrame，来自"function main(tFrame)"，现在是由 rAF 提供的 DOMHighResTimeStamp。
+    // tFrame，来源于“function main(tFrame)”，现在变为是由 rAF 提供的 DOMHighResTimeStamp。
   }
 
   main(); // 开始循环
@@ -234,7 +234,7 @@ var tNow = window.performance.now();
 单独的更新和绘图方法可能类似于下面的示例。为了演示，该示例基于第三个项目符号，只是不使用 Web Worker 进行可读性（而且我们诚实地说可写性）。
 
 > [!WARNING]
-> 这个例子，具体来说，需要进行技术审查。
+> 这个例子单独而言需要进行技术审查。
 
 <!-- prettier-ignore-start -->
 ```js
@@ -275,7 +275,7 @@ var tNow = window.performance.now();
     // 如果 tFrame < nextTick，则需要更新 0 个 ticks（对于 numTicks，默认为 0）。
     // 如果 tFrame = nextTick，则需要更新 1 tick（等等）。
     // 备注：正如我们在总结中提到的那样，你应该跟踪 numTicks 的大小。
-    // 如果它很大，那么你的游戏是睡着了，或者机器无法跟上。
+    // 如果它很大，要么你的游戏是卡住了，要么机器无法跟上。
     if (tFrame > nextTick) {
       const timeSinceTick = tFrame - MyGame.lastTick;
       numTicks = Math.floor(timeSinceTick / MyGame.tickLength);
@@ -288,7 +288,7 @@ var tNow = window.performance.now();
 
   function queueUpdates(numTicks) {
     for (let i = 0; i < numTicks; i++) {
-      MyGame.lastTick += MyGame.tickLength; // 现在 lastTick 是这个刻度。
+      MyGame.lastTick += MyGame.tickLength; // 现在 lastTick 应是这一时间。
       update(MyGame.lastTick);
     }
   }
