@@ -342,7 +342,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 また、 `<audio>` 要素に対応していないブラウザーを使用している閲覧者向けのフォールバックとしていくらかのコンテンツ (直接ダウンロードするリンクなど) を提供するのは良い習慣です。
 
-```html
+```html-nolint
 <audio controls>
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
@@ -378,7 +378,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 この例では、埋め込まれる音声トラックを、 `<audio>` 要素の直接の `src` 属性ではなく、内部の `<source>` 要素のものを使用して指定しています。これは `type` 属性の中でファイルの MIME タイプを含めることで、ブラウザーがそのファイルを再生できるかどうかを知ることができ、そのファイル再生できないときに時間を浪費しません。
 
-```html
+```html-nolint
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
   <a href="foo.wav">WAV 音声をダウンロード</a>。
@@ -389,7 +389,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 この例には複数の `<source>` 要素があります。ブラウザーは、最初の source 要素 (Opus) が再生可能であればそれを読み込もうとし、そうでなければ 2 つ目 (Vorbis) に、最後に MP3 にフォールバックします。
 
-```html
+```html-nolint
 <audio controls>
   <source src="foo.opus" type="audio/ogg; codecs=opus" />
   <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
