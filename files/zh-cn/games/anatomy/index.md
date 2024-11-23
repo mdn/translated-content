@@ -269,8 +269,8 @@ var tNow = window.performance.now();
 ;(function(){
   function main(tFrame){
     MyGame.stopMain = window.requestAnimationFrame(main);
-    var nextTick = MyGame.lastTick + MyGame.tickLength;
-    var numTicks = 0;
+    const nextTick = MyGame.lastTick + MyGame.tickLength;
+    let numTicks = 0;
 
     // 如果 tFrame < nextTick，则需要更新 0 个 ticks（对于 numTicks，默认为 0）。
     // 如果 tFrame = nextTick，则需要更新 1 tick（等等）。
