@@ -15,7 +15,7 @@ l10n:
 
 基本ユーザーインターフェイスプロパティが UI 機能の外観をどのように変化させるかを見るには、この例の要素を操作してください。なお、このサンプルの機能の中には、使い勝手を向上させるものもあれば、ユーザー体験を損なうものもあります。
 
-```html hidden live-sample___basicUI
+```html-nolint hidden live-sample___basicUI
 <div><span contenteditable>このテキストを編集</span></div>
 <fieldset>
   <legend>これらのフォームコントロールを操作してみましょう</legend>
