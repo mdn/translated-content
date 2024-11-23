@@ -655,13 +655,13 @@ console.log("我需要做：\n%o\n当前进度为：%o\n", todos, progress);
 | `\r`        | 回车符                                                                                                                                                                               |
 | `\t`        | 制表符                                                                                                                                                                               |
 | `\v`        | 垂直制表符                                                                                                                                                                           |
-| `\'`        | 撇号或单引号                                                                                                                                                                            |
+| `\'`        | 撇号或单引号                                                                                                                                                                         |
 | `\"`        | 双引号                                                                                                                                                                               |
 | `\\`        | 反斜杠字符                                                                                                                                                                           |
 | `\XXX`      | 由从 `0` 到 `377` 最多三位八进制数 `XXX` 表示的 Latin-1 字符。例如，`\251` 是版权符号的八进制序列。                                                                                  |
 | `\xXX`      | 由从 `00` 和 `FF` 的两位十六进制数字 `XX` 表示的 Latin-1 字符。例如，`\xA9` 是版权符号的十六进制序列。                                                                               |
 | `\uXXXX`    | 由四位十六进制数字 `XXXX` 表示的 Unicode 字符。例如，`\ u00A9` 是版权符号的 Unicode 序列。见 [Unicode 转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字符串字面量)。 |
-| `\u{XXXXX}` | Unicode 码位转义。例如，`\u{2F804}` 相当于 Unicode 转义 `\uD87E\uDC04`。                                                                                                          |
+| `\u{XXXXX}` | Unicode 码位转义。例如，`\u{2F804}` 相当于 Unicode 转义 `\uD87E\uDC04`。                                                                                                             |
 
 #### 转义字符
 
