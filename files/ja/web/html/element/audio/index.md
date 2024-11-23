@@ -365,7 +365,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 以下の例は `<audio>` 要素で OGG ファイルを再生する単純な例を示しています。ページで許可されていれば、 `autoplay` 属性によって自動再生され、代替コンテンツも含んでいます。
 
-```html
+```html-nolint
 <!-- シンプルな音声再生 -->
 <audio src="AudioTest.ogg" autoplay>
   <a href="AudioTest.ogg">OGG 音声をダウンロード</a>。
