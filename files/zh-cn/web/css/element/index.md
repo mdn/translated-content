@@ -13,7 +13,7 @@ slug: Web/CSS/element
 
 ## 语法
 
-```
+```css
 element(id)
 ```
 

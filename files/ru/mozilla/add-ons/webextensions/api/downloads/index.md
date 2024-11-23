@@ -79,7 +79,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> Этот API основан на Chromium API [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Этот API основан на Chromium API [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -16,7 +16,7 @@ slug: Web/CSS/transform-function/rotate3d
 
 ## 语法
 
-```
+```css
 rotate3d(x, y, z, a)
 ```
 

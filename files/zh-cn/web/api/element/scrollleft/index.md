@@ -12,19 +12,7 @@ slug: Web/API/Element/scrollLeft
 > [!WARNING]
 > 在使用显示比例缩放的系统上，`scrollLeft` 可能会是一个小数。
 
-## 语法
-
-```
-//获取滚动条到元素左边的距离
-var sLeft = element.scrollLeft;
-```
-
-`sLeft`是一个整数，代表元素滚动条距离元素左边多少像素。
-
-```
-//设置滚动条滚动了多少像素
-element.scrollLeft = 10;
-```
+## 值
 
 `scrollLeft` 可以是任意整数，然而：
 

@@ -2,7 +2,7 @@
 title: レスポンシブ画像
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 l10n:
-  sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
+  sourceCommit: 76c1e86a6bf1fd58aa6b0e627842a3c1161add28
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -105,8 +105,7 @@ l10n:
 2. 空白
 3. メディア条件が成立したときに埋める**スロットの幅** (`480px`)
 
-> [!NOTE]
-> スロットの幅は、絶対幅（例: `480px`）ではなく、ビューポートからの相対幅（例: `50vw`）を提供することができます。ただし、パーセント値は指定できません。最後のスロットの幅にはメディア条件がないことにお気づきでしょうか （これは、どのメディア条件も真でない場合に選択される既定値です）。ブラウザーは最初の一致する条件以降を無視するので、メディア条件をどのように並べるか注意してください。
+> **メモ:** `sizes` においては、任意の[長さの値](/ja/docs/Web/CSS/length)を使うことができます。例えば、絶対幅（例: `480px`）の代わりに、ビューポートに対する相対幅（例: `50vw`）を提供することができます。ただし、スロット幅としてパーセント値を用いることはできません。最後のスロットの幅にはメディア条件がないことにお気づきでしょうか （これは、どのメディア条件も真でない場合に選択される既定値です）。ブラウザーは最初に一致した条件よりも後を無視するので、メディア条件をどのように並べるか注意してください。
 
 したがって、これらの属性を使用すると、ブラウザーは次のようになります。
 
@@ -129,7 +128,9 @@ l10n:
 
 ### 解像度の切り替え: 同じサイズ、異なる解像度
 
-複数の画面解像度をサポートしていても、誰もが画面上で同じ実世界サイズで画像を見る場合は、`sizes` を指定せずに x 記述子を指定した `srcset` を使用してブラウザーに適切な解像度の画像を選択させることができます — やや簡単な構文です！ これは [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) のようなものです([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)も参照してください)。
+さまざまな解像度のディスプレイに同じ実寸で表示される画像があるとします。高解像度のディスプレイでは、より高解像度の画像を提供することで、より優れたユーザー体験を提供することができます。
+
+こうするためには、`srcset` で x 記述子を指定し、`sizes` を指定しないことで、ブラウザーに適切な解像度の画像を選択させることができます。やや簡単な構文です。これは [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) のようなものです([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)も参照してください)。
 
 ```html
 <img
@@ -138,7 +139,11 @@ l10n:
   alt="妖精の衣装を着たエルバ" />
 ```
 
-![古いカメラのフィルム効果が画像に適用されている、妖精の衣装を着た小さな女の子の絵](resolution-example.png)この例では、次の CSS が画像に適用され、画面上に 320 ピクセルの幅が設定されます（CSS ピクセルとも呼ばれます）。
+画像は常に同じサイズで表示されますが、高解像度のディスプレイではより多くの詳細を確認できることに注意してください。
+
+![古いカメラのフィルム効果が画像に適用されている、妖精の衣装を着た小さな女の子の絵](resolution-example.png)
+
+この例では、次の CSS が画像に適用され、画面上に 320 ピクセルの幅が設定されます（CSS ピクセルとも呼ばれます）。
 
 ```css
 img {
@@ -203,7 +208,7 @@ img {
 
 ## 関連情報
 
-- [Jason Grigsby のレスポンシブ画像の優れた紹介](http://blog.cloudfour.com/responsive-images-101-definitions)(英語)
+- [Jason Grigsby のレスポンシブ画像の優れた紹介](https://cloudfour.com/thinks/responsive-images-101-definitions/) (英語)
 - [レスポンシブ画像: 解像度を変更するだけの場合は、srcset を使う](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — ブラウザーがどの画像を使用するかの詳細な説明が含まれています(英語)
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}

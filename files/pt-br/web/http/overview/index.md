@@ -17,7 +17,7 @@ Projetado no início da década de 1990, o protocolo HTTP é extensível e evolu
 
 ## Componentes de sistemas baseados em HTTP
 
-O HTTP é um protocolo cliente-servidor: as requisições são enviados por uma entidade, o agente-usuário (ou um _proxy_ em nome dele). A maior parte do tempo, o agente-usuário é um navegador da Web, mas pode ser qualquer coisa, como por exemplo um robô que varre a Web para preencher e manter um índice de mecanismo de pesquisa e coletar informações.
+O HTTP é um protocolo cliente-servidor: as requisições são enviadas por uma entidade, o agente-usuário (ou um _proxy_ em nome dele). A maior parte do tempo, o agente-usuário é um navegador da Web, mas pode ser qualquer coisa, como por exemplo um robô que varre a Web para preencher e manter um índice de mecanismo de pesquisa e coletar informações.
 
 Cada requisição individual é enviada para um servidor, que irá lidar com isso e fornecer um resultado, chamado de _resposta_. Entre a solicitação e a resposta existem várias entidades, designadas coletivamente como {{glossary("Proxy_server", "proxies")}}, que executam operações diferentes e atuam como _gateways_ (intermediários) ou {{glossary("Cache", "caches")}}, por exemplo.
 
@@ -43,7 +43,7 @@ Um servidor não é necessáriamente apenas uma máquina, mas vários servidores
 
 ### Proxies (ou representantes)
 
-Entre o navegador Web e o servidor, vários computadores e máquinas transmitem as mensagens HTTP. Devido a estrutura em camadas da pilha Web, a maioria dessas máquinas operam em alguma das camadas: de transporte, de rede ou física, sendo transparente na camada da aplicação HTTP, e potencialmente exercendo um grande impacto na performance. Essas máquinas que operam na camada de aplicação são normalmente conhecidas como **_proxies_ **(ou representantes, ou procuradores, etc). Eles podem ser transparentes ou não (alterações nas requisições não passam por eles), e podem desempenhar várias funções:
+Entre o navegador Web e o servidor, vários computadores e máquinas transmitem as mensagens HTTP. Devido a estrutura em camadas da pilha Web, a maioria dessas máquinas operam em alguma das camadas: de transporte, de rede ou física, sendo transparente na camada da aplicação HTTP, e potencialmente exercendo um grande impacto na performance. Essas máquinas que operam na camada de aplicação são normalmente conhecidas como **_proxies_** (ou representantes, ou procuradores, etc). Eles podem ser transparentes ou não (alterações nas requisições não passam por eles), e podem desempenhar várias funções:
 
 - cacheamento (o _cache_ pode ser público ou privado, como o _cache_ dos navegadores)
 - filtragem (como um _scanner_ de antivírus, controle de acesso, etc)

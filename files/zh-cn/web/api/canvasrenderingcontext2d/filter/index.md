@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D：filter 属性
 slug: Web/API/CanvasRenderingContext2D/filter
 l10n:
-  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
+  sourceCommit: 592bea250bec05a3b641b0372cb7eddfd24616fb
 ---
 
 {{APIRef}}
@@ -13,8 +13,8 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模
 
 `filter` 属性接受字符串形式的值，可以是 `"none"`，或者是以下一个或多个滤镜函数。
 
-- [`url()`](/zh-CN/docs/Web/CSS/url)
-  - : 一个 CSS {{cssxref("url", "url()")}}。接受一个指向 SVG 滤镜元素（可以被嵌入在外部的 XML 文件中）的 IRI。
+- [`url()`](/zh-CN/docs/Web/CSS/url_function)
+  - : 一个 CSS {{cssxref("url_function", "url()")}}。接受任意一个可以解析为 SVG 滤镜元素的 URL。其可以是元素的 ID、外部 XML 文件的路径，甚至是一个数据 URL 编码的 SVG 值。
 - [`blur()`](/zh-CN/docs/Web/CSS/filter-function/blur)
   - : 一个 CSS {{cssxref("&lt;length&gt;")}}。将高斯模糊应用于绘图。它定义了高斯函数的标准偏差值，即屏幕上多少像素混合在一起；因此，较大的值会产生更模糊的效果。值为 `0` 时保持输入不变。
 - [`brightness()`](/zh-CN/docs/Web/CSS/filter-function/brightness)

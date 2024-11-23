@@ -98,7 +98,7 @@ _変更なし。_
 - [Fetch API](/ja/docs/Web/API/Fetch_API) の {{domxref("Request.credentials")}} プロパティの既定値が、最新版の仕様書に応じて `"same-origin"` になりました ([Firefox バグ 1394399](https://bugzil.la/1394399))。
 - {{domxref("Request.destination")}} プロパティを実装しました ([Firefox バグ 1402892](https://bugzil.la/1402892))。
 - {{domxref("MutationObserver")}} のオプションディクショナリーである {{domxref("MutationObserverInit")}} で、すべての Boolean 型プロパティが既定値として `false` を持たなくなりました。`childList` および `subtree` だけが既定値 (依然として `false`) を持ちます。ほかのプロパティは既定値がありません ([Firefox バグ 973638](https://bugzil.la/973638))。
-- [Payment Request API](/ja/docs/Web/API/Payment_Request_API) の {{domxref("PaymentRequest.show()")}} メソッドで、クライアントサイドのコードが支払いインターフェイスを活性化する前に更新された支払いの詳細情報を提供できるようにするため、{{jsxref("Promise")}} の使用をサポートしました ([Firefox バグ 1441709](https://bugzil.la/1441709))。
+- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の {{domxref("PaymentRequest.show()")}} メソッドで、クライアントサイドのコードが支払いインターフェイスを活性化する前に更新された支払いの詳細情報を提供できるようにするため、{{jsxref("Promise")}} の使用をサポートしました ([Firefox バグ 1441709](https://bugzil.la/1441709))。
 
 #### DOM イベント
 

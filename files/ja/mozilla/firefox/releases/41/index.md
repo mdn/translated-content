@@ -51,7 +51,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 - {{jsxref("Date.prototype")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ([Firefox バグ 861219](https://bugzil.la/861219))。
 - {{jsxref("Date.prototype.toString")}} は、ジェネリックなメソッドになりました ([Firefox バグ 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} を追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
-- {{jsxref("Map.@@species", "Map[@@species]")}} および {{jsxref("Set.@@species", "Set[@@species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
+- {{jsxref("Map.Symbol.species", "Map[Symbol.species]")}} および {{jsxref("Set.Symbol.species", "Set[Symbol.species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
 - 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ([Firefox バグ 1023609](https://bugzil.la/1023609))。
 - {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割された引数", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
 - ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。
@@ -105,7 +105,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 - OS X および Windows で、{{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} はネットワーク接続の状態に応じて変化するようになりました (以前は "オフライン作業" モードを選択しなければ常に `true` を返していました) ([Firefox バグ 654579](https://bugzil.la/654579))。
 - {{domxref("MessagePort")}} および {{domxref("MessageChannel")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました。また、デフォルトですべての状況で有効になりました ([Firefox バグ 952139](https://bugzil.la/952139) および [Firefox バグ 911972](https://bugzil.la/911972))。
 - User Timing API が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 1155761](https://bugzil.la/1155761))。
-- [Notifications API](/ja/docs/Web/API/Notifications_API) が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 916893](https://bugzil.la/916893))。
+- [通知 API](/ja/docs/Web/API/Notifications_API) が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 916893](https://bugzil.la/916893))。
 - {{domxref("DOMRequest")}} および {{domxref("DOMCursor")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 1167650](https://bugzil.la/1167650))。
 - [CSS Font Loading API](/ja/docs/Web/API/CSSFontLoading_API) を全面的に実装して、デフォルトで有効にしました ([Firefox バグ 1149381](https://bugzil.la/1149381))。
 - Shared workers が、プライベートドキュメント (すなわち、プライベートウィンドウで開いているドキュメント) と非プライベートドキュメントとの間で共有されないようになりました ([Firefox バグ 1177621](https://bugzil.la/1177621))。

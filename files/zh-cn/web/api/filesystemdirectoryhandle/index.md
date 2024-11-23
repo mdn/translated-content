@@ -2,7 +2,7 @@
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
 l10n:
-  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
+  sourceCommit: e92950d09467164afc9dfd8b35be9c909b63a8ab
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
@@ -119,4 +119,4 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

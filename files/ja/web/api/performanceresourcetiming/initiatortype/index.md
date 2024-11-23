@@ -29,7 +29,7 @@ l10n:
 - `embed`
   - : このリクエストが {{HTMLElement("embed")}} 要素の `src` 属性によって開始された場合。
 - `fetch`
-  - : このリクエストが {{domxref("fetch()")}} メソッドによって開始された場合。
+  - : このリクエストが {{domxref("Window/fetch", "fetch()")}} メソッドによって開始された場合。
 - `frame`
   - : このリクエストが {{HTMLElement("frame")}} 要素の読み込みによって開始された場合。
 - `iframe`

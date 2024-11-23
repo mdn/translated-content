@@ -17,7 +17,7 @@ As APIs que aceitam objetos `Blob` também são listados na documentação {{dom
 > O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
 
 > [!NOTE]
-> Esteja ciente que o método `slice()` possui prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice()` para Firefox 12 e anteriores, e `blob.webkitSlice()` para Safari. Uma versão antiga do método `slice()`, sem prefixos de fornecedor, tem semântica diferente, e portanto é obsoleta. O suporta para `blob.mozSlice()` foi descontinuado a partir do Firefox 30.
+> Esteja ciente que o método `slice()` possui prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice()` para Firefox 12 e anteriores, e `blob.webkitSlice()` para Safari. Uma versão antiga do método `slice()`, sem prefixos de fornecedor, tem semântica diferente, e portanto é obsoleta. O suporte para `blob.mozSlice()` foi descontinuado a partir do Firefox 30.
 
 ## Construtor
 

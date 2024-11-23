@@ -36,7 +36,7 @@ slug: Web/HTTP/Headers/Expect-CT
 
 ## 语法
 
-```
+```http
 Expect-CT: report-uri="<uri>",
            enforce,
            max-age=<age>
@@ -66,7 +66,7 @@ Expect-CT: report-uri="<uri>",
 
 以下示例指定在 24 小时内遵守证书透明度政策，并向 `foo.example.com` 报告违规行为。
 
-```
+```http
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example.com/report"
 ```
 

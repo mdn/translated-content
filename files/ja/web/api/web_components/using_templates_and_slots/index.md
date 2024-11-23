@@ -2,7 +2,7 @@
 title: テンプレートとスロットの使用
 slug: Web/API/Web_components/Using_templates_and_slots
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -18,7 +18,7 @@ l10n:
 簡単な例を見てみましょう。
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <p>My paragraph</p>
 </template>
 ```
@@ -26,7 +26,7 @@ l10n:
 これはページ上に表示されず、以下のようなコードで JavaScript で参照を取得し、 DOM に追加することで表示されます。
 
 ```js
-let template = document.getElementById("my-paragraph");
+let template = document.getElementById("custom-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -45,7 +45,7 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("my-paragraph");
+      let template = document.getElementById("custom-paragraph");
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({ mode: "open" });
@@ -63,7 +63,7 @@ customElements.define(
 したがって、例えば次のようにすると、
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <style>
     p {
       color: white;

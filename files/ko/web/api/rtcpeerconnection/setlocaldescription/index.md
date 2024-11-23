@@ -71,7 +71,7 @@ myPeerConnection.createOffer().then(myPeerConnection.setLocalDescription);
 
 ## 예시
 
-아래의 예시에서는, {{event("negotiationneeded")}} 이벤트에 대한 핸들러를 구현하였습니다:
+아래의 예시에서는, {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트에 대한 핸들러를 구현하였습니다:
 
 ```js
 function handleNegotiationNeededEvent() {

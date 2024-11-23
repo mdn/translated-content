@@ -31,11 +31,10 @@ slug: Web/CSS/::selection
 
 ## 语法
 
-```
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```css
+::selection {
+  /* ... */
+}
 ```
 
 ## 示例

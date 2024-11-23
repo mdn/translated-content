@@ -143,7 +143,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 #### スキーマの定義
 
-以下のコードは、単純なスキーマを定義する方法を示しています。最初に mongoose を `require()` し、次に Schema コンストラクタを使用して新しいスキーマインスタンスを作成し、コンストラクタの object 引数で内部のさまざまなフィールドを定義します。
+以下のコードは、単純なスキーマを定義する方法を示しています。最初に mongoose を `require()` し、次に Schema コンストラクターを使用して新しいスキーマインスタンスを作成し、コンストラクターの object 引数で内部のさまざまなフィールドを定義します。
 
 ```js
 //Require Mongoose

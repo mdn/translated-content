@@ -29,7 +29,7 @@ WebSocket 服务器在这里被解释得非常底层。WebSocket 服务器通常
 
 即使你正在构建服务器，客户端仍然必须启动 WebSocket 握手过程。所以你必须知道如何解释客户的请求。客户端将发送一个相当标准的 HTTP 请求，看起来像这样（HTTP 版本必须是 1.1 或更高，方法必须是`GET`）：
 
-```
+```http
 GET /chat HTTP/1.1
 Host: example.com:8000
 Upgrade: websocket
@@ -54,7 +54,7 @@ Sec-WebSocket-Version: 13
 
 当**服务器**收到握手请求时，它应该发回一个特殊的响应，表明协议将从 HTTP 变为 WebSocket。看起来像这样（记住每个请求头以 `\r\n`结尾，并在最后一个之后放置一个额外的 `\r\n`）：
 
-```
+```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -83,7 +83,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 每个数据帧（从客户端到服务器，反之亦然）遵循相同的格式：
 
-```
+```bash
 Frame format:
 
       0                   1                   2                   3
@@ -126,10 +126,10 @@ FIN 位告诉我们这是不是系列的最后一条消息。如果是 0，那�
 
 如果设置了掩码位 (对于客户机到服务器的消息应该是这样)，则读取接下来的 4 个字节 (32 位);这是掩蔽键。一旦有效负载长度和掩蔽键被解码，你就可以继续从套接字读取字节数。让我们调用已编码的数据和密钥掩码。要获得解码，可以通过编码的八位元 (字节，即文本数据的字符) 和 XOR 八位元 (i 模 4) 掩码的第四个八位元进行循环。在伪代码中 (恰好是有效的 JavaScript):
 
-```
+```js
 var DECODED = "";
 for (var i = 0; i < ENCODED.length; i++) {
-    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+  DECODED[i] = ENCODED[i] ^ MASK[i % 4];
 }
 ```
 
@@ -141,7 +141,7 @@ FIN 和操作码字段一起工作，以发送分裂为独立帧的消息。这�
 
 回想一下，操作码告诉了帧应该做什么。如果是 0x1，有效载荷就是文本。如果是 0x2，有效载荷就是二进制数据。但是，如果是 0x0，则该帧是一个延续帧。这意味着服务器应该将帧的有效负载连接到从该客户机接收到的最后一个帧。下面是一个粗略的示意图，其中服务器对发送文本消息的客户机做出反应。第一个消息在单个帧中发送，而第二个消息跨三个帧发送。FIN 和操作码的详细信息只显示给客户：
 
-```
+```plain
 Client: FIN=1, opcode=0x1, msg="hello"
 Server: (process complete message immediately) Hi.
 Client: FIN=0, opcode=0x1, msg="and a"
@@ -195,7 +195,7 @@ WebSocket 子协议就是像这样的东西。它们不作任何假设实现，�
 
 如果客户端需要指定子协议，需要发送如下消息头**作为握手信息的一部分**：
 
-```
+```http
 GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
@@ -203,7 +203,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
 等价于：
 
-```
+```http
 ...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
@@ -211,7 +211,7 @@ Sec-WebSocket-Protocol: wamp
 
 现在，服务端需要选择一个客户端建议且服务端支持的子协议。如果有多于一个的话使用客户端发送的第一个。如果我们的服务端可以支持`soap`和`wamp`，则在握手回复时，它会发送：
 
-```
+```http
 Sec-WebSocket-Protocol: soap
 ```
 

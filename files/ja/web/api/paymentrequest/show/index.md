@@ -1,8 +1,9 @@
 ---
 title: "PaymentRequest: show() メソッド"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+  sourceCommit: 245715b48674c1729cb63417e4a27628e30ae28c
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}
@@ -22,14 +23,14 @@ l10n:
 
 ```js-nolint
 show()
-show(detailsPromise)
+show(details)
 ```
 
 ### 引数
 
-- `detailsPromise` {{optional_inline}}
+- `details` {{optional_inline}}
 
-  - : オプションの {{jsxref("Promise")}} で、決済リクエストをインスタンス化してからユーザーが対話を始めるまでの間に、決済リクエストの詳細を更新する必要があることをアーキテクチャがリクエストされた場合に提供することができます。プロミスは、更新された情報を格納したオブジェクトで解決する必要があります。
+  - : オブジェクトまたはオブジェクトに解決するプロミス ({{jsxref("Promise")}}) のどちらかです。アーキテクチャにより、決済インターフェイスのインスタンス化とユーザーによる操作開始の間に決済リクエストの詳細を更新する必要がある場合は、これを指定してください。オブジェクトには更新された情報を含める必要があります。
 
     - `displayItems` {{optional_inline}}
 
@@ -46,14 +47,29 @@ show(detailsPromise)
         - `pending`
           - : 指定した `amount` がまだ確定していない場合に `true` となる論理値を指定します。これは、配送先住所や配送オプションなどの選択に依存する送料や税金の金額などの項目を示すために使用することができます。ユーザーエージェントはこの情報を示すことができますが、そうする必要はありません。
 
-    - `error` {{optional_inline}} {{deprecated_inline}}
-      - : ユーザーに表示するエラーメッセージを指定します。{{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} を呼び出すとき、更新データに `error` を記載すると、{{Glossary("user agent", "ユーザーエージェント")}}に一般的なエラーメッセージとしてテキストを表示するようにします。アドレスフィールド固有のエラーについては、`shippingAddressErrors` を使用してください。
+    - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+
+      - : 文字列で、ユーザーに表示するエラーメッセージを指定します。{{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} を呼び出すとき、更新データに `error` を記載すると、{{Glossary("user agent", "ユーザーエージェント")}}に一般的なエラーメッセージとしてテキストを表示するようにします。アドレスフィールド固有のエラーについては、`shippingAddressErrors` フィールドを使用してください。
+
     - `modifiers` {{optional_inline}}
-      - : {{domxref("PaymentDetailsModifier")}} オブジェクトの配列で、それぞれ具体的な決済手段の識別子に対する変更点を記述しています。例えば、選択された決済手段に基づいて総支払額を調整するために使用することができます（「5% の現金割引！」）。
-    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
-      - : 配送先住所の各プロパティで検証できなかったエラーメッセージを含めることができる {{domxref("AddressErrors")}} オブジェクト。
-    - `shippingOptions` {{optional_inline}}
-      - : {{domxref("PaymentShippingOption")}} オブジェクトの配列。各オブジェクトは、ユーザーが選ぶことができる利用できる配送オプションの 1 つを記述します。
+
+      - : オブジェクトの配列で、それぞれが具体的な決済手段識別子用の修飾子を表しており、それぞれに以下のプロパティがあります。
+
+        - `supportedMethods`
+          - : 決済手段識別子を表す文字列です。決済手段の識別子は、ユーザーがこの決済手段を選択した場合のみ適用されます。
+        - `total` {{optional_inline}}
+          - : ユーザーがこの決済手段を選択した場合に、`detailsPromise` パラメーターの `total` プロパティを上書きするオブジェクト。このプロパティは、`detailsPromise` パラメーターの `total` プロパティと同じ入力値を取ります。
+        - `additionalDisplayItems` {{optional_inline}}
+          - : オブジェクトの配列 ({{jsxref("Array")}}) は、ユーザーがこの決済手段を選択した場合に、`detailsPromise` パラメーターの `displayItems` プロパティに追加される表示項目を指定します。 このプロパティは、ユーザーエージェントが表示する選択された決済手段の合計金額が異なる理由を示す割引または追加料金の行項目を追加するために一般的に使用されます。 このプロパティは、`detailsPromise` パラメーターの `displayItems` プロパティと同じ入力を受け取ります。
+        - `data` {{optional_inline}}
+          - : 対応している決済手段で必要となる可能性があるオプション情報を提供する、シリアライズ可能なオブジェクト。
+
+        例えば、選択した決済手段に基づく支払合計額を調整するために、これを使用することができます（「5% の現金割引!」）。
+
+    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : 配送先住所の各プロパティで検証できなかったエラーメッセージを含めることができるオブジェクト。
+    - `shippingOptions` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : オブジェクトの配列。それぞれのオブジェクトは、ユーザーが選ぶことができる利用できる配送オプションの 1 つを記述します。
     - `total` {{optional_inline}}
       - : `displayItems` のオブジェクトと同じプロパティを持つオブジェクトで、決済のための更新された合計を提供します。これが `displayItems` のすべてのアイテムの合計と等しいことを確認してください。これは自動的に計算されるものではありません。決済の合計金額が変わるたびに、この値を自分で更新する必要があります。これにより、税金や割引、その他の請求金額の合計を調整するようなことを処理するための柔軟性を持つことができます。
 
@@ -181,7 +197,7 @@ function validateResponse(response) {
 
 ## 例
 
-次の例では、`show()` メソッドが呼び出される前に `PaymentRequest` オブジェクトがインスタンス化されています。このメソッドは、ユーザーから決済情報を取得するためのユーザーエージェントの組み込み処理を発生させます。`show()` メソッドは、ユーザーとの対話が完了すると {{jsxref('Promise')}} を返して {{domxref("PaymentResponse")}} オブジェクトに解決する。その後、開発者は `PaymentResponse` オブジェクトの情報を使用して、決済データを形式化してサーバーに送信します。決済情報を非同期にサーバに送信して、{{domxref("paymentResponse.complete()")}} の最後の呼び出しで決済の成功・失敗を示すことができるようにする必要があります。
+次の例では、`show()` メソッドが呼び出される前に `PaymentRequest` オブジェクトがインスタンス化されています。このメソッドは、ユーザーから決済情報を取得するためのユーザーエージェントの組み込み処理を発生させます。`show()` メソッドは、ユーザーとの対話が完了すると {{jsxref('Promise')}} を返して {{domxref("PaymentResponse")}} オブジェクトに解決する。その後、開発者は `PaymentResponse` オブジェクトの情報を使用して、決済データを形式化してサーバーに送信します。決済情報を非同期にサーバーに送信して、{{domxref("paymentResponse.complete()")}} の最後の呼び出しで決済の成功・失敗を示すことができるようにする必要があります。
 
 ```js
 button.onclick = async function handlePurchase() {
@@ -244,6 +260,6 @@ document.getElementById("buyButton").onclick = requestPayment;
 - [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
 - [決済リクエスト API の使用](/ja/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref('PaymentRequest.abort()')}}
-- {{domxref("PaymentRequest.retry()")}}
-- {{domxref("PaymentRequest.complete()")}}
 - {{domxref("PaymentResponse")}}
+- {{domxref("PaymentResponse.retry()")}}
+- {{domxref("PaymentResponse.complete()")}}

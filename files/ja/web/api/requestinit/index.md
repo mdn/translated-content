@@ -225,7 +225,7 @@ async function post() {
 
 ### `Request()` コンストラクターにオプションを渡す
 
-この例では {{domxref("Request")}} を作成し、そのコンストラクタに同じオプション設定をして `fetch()` にリクエストを渡します。
+この例では {{domxref("Request")}} を作成し、そのコンストラクターに同じオプション設定をして `fetch()` にリクエストを渡します。
 
 ```js
 async function post() {
@@ -245,7 +245,7 @@ async function post() {
 
 ### `Request()` と `fetch()` の両方にオプションを渡す
 
-この例では {{domxref("Request")}} を作成し、 `method`、`headers`、`body` オプションをコンストラクタに渡します。そして、`body` と `referrer` オプションとともに `fetch()` にリクエストを渡します。
+この例では {{domxref("Request")}} を作成し、 `method`、`headers`、`body` オプションをコンストラクターに渡します。そして、`body` と `referrer` オプションとともに `fetch()` にリクエストを渡します。
 
 ```js
 async function post() {

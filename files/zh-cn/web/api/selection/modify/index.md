@@ -9,8 +9,8 @@ slug: Web/API/Selection/modify
 
 ## 语法
 
-```
-sel.modify(alter, direction, granularity)
+```js-nolint
+modify(alter, direction, granularity)
 ```
 
 ### 参数
@@ -28,11 +28,11 @@ sel.modify(alter, direction, granularity)
 > [!NOTE]
 > 从 Gecko 5.0 开始，不管是不是浏览器的默认行为，`"word"` 颗粒度不再包括单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。
 
-## 例子
+## 示例
 
 使当前选区往语言书写方向扩大一个单词（word）的选择范围
 
-```
+```js
 var selection = window.getSelection();
 selection.modify("extend", "forward", "word");
 ```
@@ -45,6 +45,6 @@ _无。_
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}，本方法所属的接口。
+- 此方法所属的接口：{{domxref("Selection")}}。

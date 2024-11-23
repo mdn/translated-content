@@ -87,7 +87,7 @@ _変更なし。_
 - {{domxref("Cache.add()")}} および {{domxref("Cache.addAll()")}} で、レスポンスステータスが `200` 番台ではない場合に `TypeError` 例外が発生するようになりました ([Firefox バグ 1244764](https://bugzil.la/1244764))。
 - [アプリのインストールと管理の API](/ja/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs) (`navigator.mozApps.*`) を、Firefox OS 以外のプラットフォームでは公開しないようになりました ([Firefox バグ 1238576](https://bugzil.la/1238576))。
 - [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) のメソッドで、RSA-PSS 暗号化アルゴリズムが使用可能になりました ([Firefox バグ 1191936](https://bugzil.la/1191936))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.revoke()")}} メソッドを追加しました ([Firefox バグ 1197461](https://bugzil.la/1197461))。
+- [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.revoke()")}} メソッドを追加しました ([Firefox バグ 1197461](https://bugzil.la/1197461))。
 - HTML を使用してウェブコンテンツを表示するフレームを作成できるようにするため {{htmlelement("iframe")}} の機能を拡張する、[Browser API](/ja/docs/Web/API/Browser_API) (以前は Firefox OS のみサポートしていました) が、デスクトップ版の chrome コードでも使用可能になりました ([Firefox バグ 1238160](https://bugzil.la/1238160))。
 - [Notification API](/ja/docs/Web/API/notification) の {{domxref("Notification.requestPermission()","requestPermission()")}} メソッドを、コールバックベースの構文から Promise ベースの構文に更新しました ([Firefox バグ 1241278](https://bugzil.la/1241278))。
 - [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) を最新の仕様に合わせて更新して、接頭辞を削除しました。一部のメソッドは改名および大文字・小文字を変更しました ([Firefox バグ 743198](https://bugzil.la/743198))。これは設定項目 `full-screen-api.unprefix.enabled` で制御されており、デフォルトで無効化していることに注意してください ([Firefox バグ 1268749](https://bugzil.la/1268749))。

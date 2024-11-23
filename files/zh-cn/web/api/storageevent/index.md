@@ -11,27 +11,14 @@ slug: Web/API/StorageEvent
 
 {{InheritanceDiagram}}
 
-> [!NOTE]
-> 尽管这个事件已经早在 Gecko 2.0 时就已存在，但是并不符合规范。老的事件模型直到 `nsIDOMStorageEventObsolete` 确定才被表现出来。
+## 构造函数
 
-## 方法描述
+- {{domxref("StorageEvent.StorageEvent()", "StorageEvent()")}}
+  - : 返回新构造的 `StorageEvent` 对象。
 
-```
-void initStorageEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in DOMString keyArg,
-  in DOMString oldValueArg,
-  in DOMString newValueArg,
-  in DOMString urlArg,
-  in nsIDOMStorage storageAreaArg
-);
-```
+## 实例属性
 
-## 属性
-
-_除了下面列出的属性以外，`StorageEvent` 还继承了父接口 {{domxref("Event")}} 的属性。_
+_除了下面列出的属性以外，此接口还继承了其父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : 被修改的键名。当被 `clear()` 方法清除后该属性值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
@@ -44,50 +31,21 @@ _除了下面列出的属性以外，`StorageEvent` 还继承了父接口 {{domx
 - {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
   - : `key` 发生改变的对象所在文档的 URL 地址。
 
-## 方法
+## 实例方法
 
-### initStorageEvent()
+_除了下面列出的方法以外，此接口还继承了其父接口 {{domxref("Event")}} 的方法。_
 
-类似 DOM 中的初始化事件，即初始化新创建的 Storage 对象的属性。
-
-```
-void initStorageEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in DOMString keyArg,
-  in DOMString oldValueArg,
-  in DOMString newValueArg,
-  in DOMString urlArg,
-  in nsIDOMStorage storageAreaArg
-);
-```
-
-- 参数：
-
-  `typeArg`
-
-  - : 事件名
-
-- `canBubbleArg`
-  - : 布尔值，代表是否可以通过 dom 冒泡
-- `cancelableArg`
-  - : 布尔值，代表是否可以注销事件
-- `keyArg`
-  - : 事件结果时被改变的值对应的属性名称
-- `oldValueArg`
-  - : 旧值
-- `newValueArg`
-  - : 新值
-- `urlArg`
-  - : 事件初始化时页面的 url
-- `storageAreaArg`
-  - : 发生在哪个 storage 对象上
+- {{domxref("StorageEvent.initStorageEvent", "initStorageEvent()")}} {{deprecated_inline}}
+  - : 以类似于 DOM 事件接口中名称相似的 {{domxref("Event.initEvent", "initEvent()")}} 方法的方式初始化事件。请改用构造函数。
 
 ## 规范
 
 {{Specifications}}
 
-## 参阅
+## 浏览器兼容性
 
-- [Specification](http://dev.w3.org/html5/webstorage/#the-storage-event)
+{{Compat}}
+
+## 参见
+
+- {{domxref("Web Storage API", "Web 存储 API", "", "nocode")}}

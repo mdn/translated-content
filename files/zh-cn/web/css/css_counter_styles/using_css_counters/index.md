@@ -58,7 +58,7 @@ h3::before {
 
 当不需要包含父级上下文的编号，而仅需要嵌套内容的编号时，应使用 {{cssxref("counter", "counter()")}} 函数。例如，以下示例的每一个嵌套内容的计数都从 1 开始：
 
-```
+```plain
 1 One
   1 Nested one
   2 Nested two
@@ -71,7 +71,7 @@ h3::before {
 
 当需要同时包含父级上下文和嵌套内容的编号时，应使用 {{cssxref("counters", "counters()")}} 函数。例如，以下示例的每一个嵌套内容会包含父级编号：
 
-```
+```plain
 1 One
   1.1 Nested one
   1.2 Nested two

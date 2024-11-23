@@ -21,7 +21,7 @@ l10n:
 
 ## 예제
 
-다음 예제는 사용자가 청구 주소 입력 칸을 켜거나 끌 수 있는 기능을 [JavaScript](/ko/docs/Web/JavaScript) {{event("change")}} 이벤트를 통해 구현한 기본적인 배송 양식입니다.
+다음 예제는 사용자가 청구 주소 입력 칸을 켜거나 끌 수 있는 기능을 [JavaScript](/ko/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} 이벤트를 통해 구현한 기본적인 배송 양식입니다.
 
 ### HTML
 

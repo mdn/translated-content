@@ -2,7 +2,7 @@
 title: FileReaderSync：readAsBinaryString() 方法
 slug: Web/API/FileReaderSync/readAsBinaryString
 l10n:
-  sourceCommit: 502e8c3f0be95c6f42afe6a72113b029b290b9e8
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers("worker_except_service")}}

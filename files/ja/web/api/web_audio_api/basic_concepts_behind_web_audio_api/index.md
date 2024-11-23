@@ -177,7 +177,7 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
       <td><code>2</code> <em>(Stereo)</em></td>
       <td><code>1</code> <em>(Mono)</em></td>
       <td>
-        <em>モノラルからステレオへのダウンミックス。</em><br />(<code>L</code>
+        <em>ステレオからモノラルへのダウンミックス。</em><br />(<code>L</code>
         と
         <code>R</code>
         の)両入力チャンネルは等しく結合され、単一出力チャンネル(<code>M</code>)になります。<br /><code

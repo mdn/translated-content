@@ -205,7 +205,7 @@ if (posState.hasOrientation) {
 
 Next, we use a similar process to update the scene according to the HMD's orientation — check that valid orientation data is available using {{domxref("VRPositionState.hasOrientation")}}, display orientation data in the UI for informational purposes, and then set the `xOrient`, `yOrient`, and `zOrient` values relative to the orientation information stored in {{domxref("VRPositionState.orientation")}}.
 
-```
+```js
   timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
 }
 ```
@@ -237,8 +237,8 @@ We then {{domxref("CanvasRenderingContext2D.beginPath","begin a path")}}, {{domx
 
 Note that the `rect()` has to be drawn starting from minus a quarter of the width and minus half the height, because of the translation applied earlier.
 
-```
-  ctx.clip();
+```js
+ctx.clip();
 ```
 
 Now we {{domxref("CanvasRenderingContext2D.clip","clip()")}} the canvas. Because we called this just after the `rect()` was drawn, anything else that we do on the canvas will be constrained inside the `rect()`, with any overflow hidden until a `restore()` call is made (see later on.) This ensures that the whole left eye view will remain separate from the right eye view.

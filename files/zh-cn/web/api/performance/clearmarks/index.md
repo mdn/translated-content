@@ -9,9 +9,9 @@ slug: Web/API/Performance/clearMarks
 
 ## 语法
 
-```
-performance.clearMarks();
-performance.clearMarks(name);
+```js-nolint
+clearMarks()
+clearMarks(name)
 ```
 
 ### 参数
@@ -23,7 +23,7 @@ performance.clearMarks(name);
 
 无
 
-## 例子
+## 示例
 
 下面的例子演示 `clearMarks()` 的两种用法。
 

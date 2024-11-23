@@ -2,7 +2,7 @@
 title: FileReader：readAsDataURL() 方法
 slug: Web/API/FileReader/readAsDataURL
 l10n:
-  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}

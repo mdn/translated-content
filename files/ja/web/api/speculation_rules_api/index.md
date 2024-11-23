@@ -61,7 +61,7 @@ l10n:
 > [!NOTE]
 > 将来的には {{httpheader("Supports-Loading-Mode")}} ヘッダーでオプトインが提供される予定ですが、執筆時点では実装されていません。
 
-投機ルールの先読みに対応しているブラウザーでは、古い先読み機構、すなわち [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) や {{domxref("fetch()")}} に `priority: "low"` オプションを設定します。なぜなら、投機ルールの先読みはナビゲーションのためのものであり、一般的なリソースの先読みではないからです。
+投機ルールの先読みに対応しているブラウザーでは、古い先読み機構、すなわち [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) や {{domxref("Window/fetch", "fetch()")}} に `priority: "low"` オプションを設定します。なぜなら、投機ルールの先読みはナビゲーションのためのものであり、一般的なリソースの先読みではないからです。
 
 - サイト間でのナビゲーションに使用することができます。 `<link rel="prefetch">` は使用できません。
 - {{httpheader("Cache-Control")}} ヘッダーでブロックされません。 `<link rel="prefetch">` はブロックされることがよくあります。
@@ -253,7 +253,7 @@ if (document.prerendering) {
 - リクエストされたサーバー上で {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} ヘッダーを監視し、問題を起こす機能を延期するための固有のコードを実行します。
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} イベントを使用して、事前レンダリングされたページが実際にアクティブになったタイミングを検出し、その結果としてコードを実行します。これは 2 つの用途で有益です。
   - ページが表示される前に実行すると問題を起こす可能性のあるコードを延期する場合。例えば、クライアント側のストレージを更新したり、 JavaScript を使用してサーバー側の状態を変更したりするのは、アクティブ化の後まで待つとよいでしょう。これによって、例えばユーザーがアイテムを追加したにもかかわらず、ショッピングカートにアイテムが表示されないなど、 UI とアプリケーションの状態が同期しなくなる状況を避けることができます。
-  - 上記の方法が不可能な場合、ページがアクティブになった後にコードを再実行することで、アプリを再び最新の状態にすることができます。例えば、極めて動的なフラッシュセールのページでは、サードパーティのライブラリーから送られてくるコンテンツの更新に頼っているかもしれません。更新を遅らせることができない場合、ユーザーがページを表示した後に常に更新するようにします。事前レンダリングされたページは、[ブロードキャストチャンネル API](/ja/docs/Web/API/Broadcast_Channel_API) や、{{domxref("fetch()")}} や {{domxref("WebSocket")}} のような別のメカニズムを使用して、リアルタイムで更新することができます。これにより、事前レンダリングされたアクティブ化後の最新のコンテンツがユーザーに表示されることが保証されます。
+  - 上記の方法が不可能な場合、ページがアクティブになった後にコードを再実行することで、アプリを再び最新の状態にすることができます。例えば、極めて動的なフラッシュセールのページでは、サードパーティのライブラリーから送られてくるコンテンツの更新に頼っているかもしれません。更新を遅らせることができない場合、ユーザーがページを表示した後に常に更新するようにします。事前レンダリングされたページは、[ブロードキャストチャンネル API](/ja/docs/Web/API/Broadcast_Channel_API) や、{{domxref("Window/fetch", "fetch()")}} や {{domxref("WebSocket")}} のような別のメカニズムを使用して、リアルタイムで更新することができます。これにより、事前レンダリングされたアクティブ化後の最新のコンテンツがユーザーに表示されることが保証されます。
 - サードパーティ製のアナリティクススクリプトを注意深く管理する。可能な場合は、 Google Analytics や NewRelic のような事前レンダリングされたページを認識するスクリプト（例えば、 {{domxref("Document.prerendering")}} プロパティを使用して、事前レンダリングされたページで実行するのを延期する）を使用します。
   - オリジン間 {{htmlelement("iframe")}} の読み込みは事前レンダリング中は延期されるため、広告技術 (ad tech) などの他のほとんどのサードパーティ製ウィジェットは、実際には事前レンダリング中に使用しても安全であることに注意してください。
   - 事前レンダリングされないサードパーティ製スクリプトの場合は、前述のように {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} イベントを使用してアクティブ化するまで読み込むのを避けてください。
@@ -278,7 +278,7 @@ if (document.prerendering) {
 - ユーザーが `https://site.example.com/cart` へのリンクをクリックすると、事前レンダリングされたページがアクティブになります。
 - ユーザーには、たとえ何かを追加した直後であっても、空のカートが表示されます。
 
-このような場合、そして実際にコンテンツがサーバーと同期しなくなるような場合の最善の緩和策は、必要に応じてページを更新することです。例えば、サーバーは[ブロードキャストチャンネル API](/ja/docs/Web/API/Broadcast_Channel_API) や {{domxref("fetch()")}} や {{domxref("WebSocket")}} のような別のメカニズムを使用するかもしれません。ページは、まだアクティブになっていない投機的に読み込まれたページを含め、適切に更新することができます。
+このような場合、そして実際にコンテンツがサーバーと同期しなくなるような場合の最善の緩和策は、必要に応じてページを更新することです。例えば、サーバーは[ブロードキャストチャンネル API](/ja/docs/Web/API/Broadcast_Channel_API) や {{domxref("Window/fetch", "fetch()")}} や {{domxref("WebSocket")}} のような別のメカニズムを使用するかもしれません。ページは、まだアクティブになっていない投機的に読み込まれたページを含め、適切に更新することができます。
 
 ## 事前レンダリングされた文書のセッション履歴の動作
 
@@ -412,5 +412,5 @@ if (document.prerendering) {
 
 ## 関連情報
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) (developer.chrome.com, 2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) (developer.chrome.com, 2023)
 - [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、投機ルールとその他の同様のパフォーマンス改善機能を比較しています。

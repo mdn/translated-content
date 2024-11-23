@@ -16,7 +16,7 @@ _`History` 인터페이스는 어떤 속성도 상속하지 않습니다._
 - {{domxref("History.scrollRestoration")}}
   - : 기록 탐색 시 스크롤 위치 복원 여부를 명시할 수 있습니다. 가능한 값은 `auto`와 `manual`입니다.
 - {{domxref("History.state")}} {{readOnlyInline}}
-  - : 기록 스택 최상단의 스테이트를 나타내는 값을 반환합니다. {{event("popstate")}} 이벤트를 기다리지 않고 현재 기록의 스테이트를 볼 수 있는 방법입니다.
+  - : 기록 스택 최상단의 스테이트를 나타내는 값을 반환합니다. {{domxref("Window/popstate_event", "popstate")}} 이벤트를 기다리지 않고 현재 기록의 스테이트를 볼 수 있는 방법입니다.
 
 ## 메서드
 

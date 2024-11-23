@@ -22,9 +22,9 @@
 
 ## 용어 안내서 `참고 링크` 우선 순위
 
-- 1. 해당 단어에 대한 의견을 나눈 PR 링크
-- 2. 적절한 ko MDN 문서 링크
-- 3. 적절한 en-us MDN 문서 링크
+1. 해당 단어에 대한 의견을 나눈 PR 링크
+2. 적절한 ko MDN 문서 링크
+3. 적절한 en-us MDN 문서 링크
 
 ## Section Title
 
@@ -87,6 +87,7 @@
 | Instruction         | 지침             | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Naming              | 이름 지정        |                                                                                        |
 | Parameters          | 매개변수         | [링크][AudioWorkletNode]                                                               |
+| Prerequisites       | 선행 지식        |                                                                                        |
 | Requirements        | 요구 사항        |                                                                                        |
 | Value               | 값               | [링크][target]                                                                         |
 

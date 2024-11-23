@@ -9,13 +9,7 @@ slug: Web/API/Window/innerHeight
 
 浏览器窗口的视口（viewport）高度（以像素为单位）；如果有水平滚动条，也包括滚动条高度。
 
-## 语法
-
-```
-var intViewportHeight = window.innerHeight;
-```
-
-### 值
+## 值
 
 `intViewportHeight` 为浏览器窗口的视口的高度。
 
@@ -43,8 +37,6 @@ var intFramesetHeight = parent.innerHeight;
 var intOuterFramesetHeight = top.innerHeight;
 // 返回最外部 frameset 的视口的高度
 ```
-
-{{todo("link to an interactive demo here")}}
 
 改变一个窗口的大小，可以查看 {{domxref("window.resizeBy()")}} 和 {{domxref("window.resizeTo()")}}。
 

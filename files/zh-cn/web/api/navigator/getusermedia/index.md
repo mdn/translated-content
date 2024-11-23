@@ -12,8 +12,8 @@ slug: Web/API/Navigator/getUserMedia
 
 ## 语法
 
-```
-navigator.getUserMedia ( constraints, successCallback, errorCallback );
+```js-nolint
+getUserMedia(constraints, successCallback, errorCallback)
 ```
 
 ### 参数
@@ -78,7 +78,7 @@ if (navigator.getUserMedia) {
 
 在一个可以安装的 app（比如，Firefox OS app）中使用 getUserMedia()，你需要在你的 manifest 文件中指定一个或者多个以下条目：
 
-```
+```json
 "permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"

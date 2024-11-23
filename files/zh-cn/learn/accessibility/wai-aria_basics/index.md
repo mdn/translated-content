@@ -7,7 +7,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 紧接上文继续，有时候，我们制作涉及非语义 HTML 和动态的 JavaScript 内容更新的复杂 UI 控件可能很困难。**WAI-ARIA** 是一项技术，它可以通过浏览器和一些辅助技术来帮助我们进一步地识别以及实现语义化，这样一来能帮助我们解决问题，也让用户可以了解发生了什么。接下来我们将展示如何运用它来优化无障碍体验：
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提要求：</th>
@@ -36,7 +36,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 当 Web 应用开始变得越来越复杂和动态化，一堆全新的无障碍访问问题和特性接踵而至。
 
-例如，HTML5 提出了几种语义化标签用于定义常规页面的特性 (例如 nav, footer 等等) 。在这些标签可用之前，我们一般简单地用 div 带上 ID 抑或是 class 来解决问题，例如：`<div class="nav">`。但是这种实践是问题丛生的，因为没有简单的方法可以轻松地用可编程的方法找到特定页面功能，例如主导航。
+例如，HTML5 提出了几种语义化标签用于定义常规页面的特性（例如 nav、footer 等等）。在这些标签可用之前，我们一般简单地用 div 带上 ID 抑或是 class 来解决问题，例如：`<div class="nav">`。但是这种实践是问题丛生的，因为没有简单的方法可以轻松地用可编程的方法找到特定页面功能，例如主导航。
 
 最早的解决方案是加一个或者多个隐藏的链接来跳转到我们想要的位置，例如（这里用导航举例）：
 
@@ -214,20 +214,20 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 </section>
 ```
 
-我们的 JavaScript 从 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 加载一个 JSON 文件里头包含了一系列的名人名言，一旦完成我们就开始用一个 [`setInterval()`](/zh-CN/docs/Web/API/WindowTimers/setInterval) 循环以十秒一次的频率显示出来。
+我们的 JavaScript 使用 {{domxref("Window.fetch", "fetch()")}} API 加载一个 JSON 文件（里头包含了一系列的名人名言），一旦完成我们就开始用一个 {{domxref("Window.setInterval", "setInterval()")}} 循环以十秒一次的频率显示出来。
 
 ```js
-var intervalID = window.setInterval(showQuote, 10000);
+const intervalID = setInterval(showQuote, 10000);
 ```
 
 这当然是可行的，但是对于无障碍可不友善——这种内容变化是不会被屏幕阅读器察觉到的，所以用户不会发现发生了什么。这是一个简单的例子，但你可以想象一下：如果你开发的一个复杂 UI 而且内容频繁变化的应用，例如聊天室，或者一个策略游戏的界面，或者一个实时更新的购物车展示。如果没有某种方式提示用户有内容更新，那就不可能以任何有效的方式来使用应用。
 
 幸运的是，WAI-ARIA 提供了一种有效的机制来发起提示——[`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live)。将此应用于元素会让屏幕阅读器读出更新的内容。读取内容的紧急程度取决于属性值：
 
-- `off`: 默认值，更新不会提醒。
-- `polite`: 只有用户空闲的情况下提醒。
-- `assertive`: 尽快提醒。
-- `rude`: 会以打断用户操作的方式直接提醒。
+- `off`：默认值，更新不会提醒。
+- `polite`：只有用户空闲的情况下提醒。
+- `assertive`：尽快提醒。
+- `rude`：会以打断用户操作的方式直接提醒。
 
 通常来说 `assertive` 设置足以让你的更新在显示时按时序读出，因此，如果改变多次，那么他只会念出最后一个改变。除非紧急程度高到需要覆盖其他的更新才选择使用 `rude` 。
 
@@ -333,7 +333,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ```js
 function toggleMusician(bool) {
-  var instruItem = formItems[formItems.length - 1];
+  const instruItem = formItems[formItems.length - 1];
   if (bool) {
     instruItem.input.disabled = false;
     instruItem.label.style.color = "#000";

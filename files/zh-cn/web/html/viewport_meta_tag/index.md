@@ -92,4 +92,4 @@ slug: Web/HTML/Viewport_meta_tag
 
 ## 参见
 
-- 文章：[为 Android 版 Chrome 做好视口大小调整行为变更的准备](https://developer.chrome.com/blog/viewport-resize-behavior/)
+- 文章：[为 Android 版 Chrome 做好视口大小调整行为变更的准备](https://developer.chrome.google.cn/blog/viewport-resize-behavior)

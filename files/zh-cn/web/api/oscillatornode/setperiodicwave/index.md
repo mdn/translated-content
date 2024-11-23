@@ -12,8 +12,8 @@ slug: Web/API/OscillatorNode/setPeriodicWave
 
 ## 语法
 
-```
-OscillatorNode.setPeriodicWave(wave);
+```js-nolint
+setPeriodicWave(wave)
 ```
 
 ### 参数

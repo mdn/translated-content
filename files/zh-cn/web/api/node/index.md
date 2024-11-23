@@ -182,12 +182,6 @@ function eachNode(rootNode, callback) {
 }
 ```
 
-#### 语法
-
-```
-eachNode(rootNode, callback);
-```
-
 #### 描述
 
 使用递归的方式对 `rootNode` 的所有后代节点执行回调函数（包括 `rootNode` 自身）

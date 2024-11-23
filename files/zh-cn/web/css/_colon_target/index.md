@@ -16,7 +16,7 @@ slug: Web/CSS/:target
 
 例如，以下 URL 具有一个片段（由 # 符号表示），指向名为 `section2` 的元素：
 
-```
+```url
 http://www.example.com/index.html#section2
 ```
 

@@ -3,10 +3,10 @@ title: "HTMLVideoElement: requestPictureInPicture() メソッド"
 short-title: requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Picture-in-Picture API")}}
 
 **{{domxref("HTMLVideoElement")}}** の **`requestPictureInPicture()`** メソッドは、動画をピクチャインピクチャモードで表示するための非同期のリクエストを発行します。
 
@@ -28,8 +28,14 @@ requestPictureInPicture()
 
 ### 例外
 
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Tこの機能に対応してない場合（ユーザー設定で無効になっている場合や、プラットフォームの制限により無効になっている場合など）に発生します。
 - `SecurityError` {{domxref("DOMException")}}
   - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされた場合。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : video 要素の `readState` が `HAVE_NOTHING` の場合、video 要素に動画トラックが存在しない場合、または video 要素の `disablePictureInPicture` 属性が `true` の場合に発生します。
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : `document.pictureInPictureElement` が `null` で、かつ文書の{{Glossary("transient activation", "一時的な有効化")}}がない場合に発生します。
 
 ## セキュリティ
 

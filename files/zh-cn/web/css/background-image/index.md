@@ -118,4 +118,4 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("image/paint", "paint()")}}
-  - {{cssxref("url", "url()")}}
+  - {{cssxref("url_value", "&lt;url&gt;")}}

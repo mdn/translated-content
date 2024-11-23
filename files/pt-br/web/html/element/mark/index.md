@@ -16,7 +16,7 @@ O **Elemento HMTL `<mark>` **representa um trecho de destaque em um texto, por e
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de Fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
 - _Conteúdo Permitido_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de Tag_ {{no_tag_omission}}
+- _Omissão de Tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos parent permitidos_ Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 

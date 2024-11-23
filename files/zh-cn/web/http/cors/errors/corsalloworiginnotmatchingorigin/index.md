@@ -22,13 +22,13 @@ slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 > [!WARNING]
 > 你必须将 HTTPS 或 HTTP 协议作为源的一部分。
 
-```
+```apacheconf
 Header set Access-Control-Allow-Origin 'origin'
 ```
 
 在 Nginx 中，对应的配置为：
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'origin'
 ```
 

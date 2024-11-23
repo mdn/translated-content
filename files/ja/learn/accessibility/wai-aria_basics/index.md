@@ -219,7 +219,7 @@ DOM に読み込まれたコンテンツは、テキストコンテンツから�
 </section>
 ```
 
-JavaScript が {{domxref("fetch()")}} API を使用して JSON ファイルを読み込みます。 この JSON ファイルには、複数のランダムな引用文とその著者が含まれています。 読み込みの完了後に [`setInterval()`](/ja/docs/Web/API/setInterval) ループを開始し、引用文の表示を 10 秒ごとに新しいものに切り替えます。
+JavaScript が {{domxref("Window/fetch", "fetch()")}} API を使用して JSON ファイルを読み込みます。 この JSON ファイルには、複数のランダムな引用文とその著者が含まれています。 読み込みの完了後に [`setInterval()`](/ja/docs/Web/API/setInterval) ループを開始し、引用文の表示を 10 秒ごとに新しいものに切り替えます。
 
 ```js
 const intervalID = setInterval(showQuote, 10000);

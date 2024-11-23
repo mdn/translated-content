@@ -28,8 +28,8 @@ slug: Web/CSS/clear
 
 ## 语法
 
-```
-/* Keyword values */
+```css
+/* 关键字值 */
 clear: none;
 clear: left;
 clear: right;
@@ -37,9 +37,11 @@ clear: both;
 clear: inline-start;
 clear: inline-end;
 
-/* Global values */
+/* 全局值 */
 clear: inherit;
 clear: initial;
+clear: revert;
+clear: revert-layer;
 clear: unset;
 ```
 

@@ -36,14 +36,14 @@ Access-Control-Allow-Origin: *
 
 设置标头的命令取决于你的 Web 服务器。例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf` 文件中（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或者位于 `.htaccess` 文件中。
 
-```
-Header set Access-Control-Allow-Origin 'origin-list'
+```apacheconf
+Header set Access-Control-Allow-Origin 'https://example.com'
 ```
 
 对于 Nginx，设置此标头的命令是：
 
-```
-add_header 'Access-Control-Allow-Origin' 'origin-list';
+```nginx
+add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ```
 
 ## 参见

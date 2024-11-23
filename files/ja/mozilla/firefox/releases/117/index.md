@@ -19,7 +19,7 @@ l10n:
 
 - [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
-- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#values) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
+- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
 - [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
   これはグリッドや段組みのレイアウトで、要素を高さ 0px の代わりに、内容物がないかのようにレイアウトすることに役立ちます ([Firefox bug 1835813](https://bugzil.la/1835813))。

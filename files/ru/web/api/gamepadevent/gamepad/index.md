@@ -5,7 +5,7 @@ slug: Web/API/GamepadEvent/gamepad
 
 {{APIRef("Gamepad API")}}
 
-Свойство **`GamepadEvent.gamepad`**, интерфейса **{{domxref("GamepadEvent")}},** возвращает объект {{domxref("Gamepad")}}, предоставляющий доступ к данным геймпада для событий [`gamepadconnected`](/ru/docs/Web/Events/gamepadconnected) и [`gamepaddisconnected`](/ru/docs/Web/Events/gamepaddisconnected).
+Свойство **`GamepadEvent.gamepad`**, интерфейса **{{domxref("GamepadEvent")}},** возвращает объект {{domxref("Gamepad")}}, предоставляющий доступ к данным геймпада для событий [`gamepadconnected`](/ru/docs/Web/Events/gamepadconnected) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
 
 > [!NOTE]
 > Эти события не возникают Chrome, только в Firefox. В Chrome вы должны использовать {{domxref("Navigator.getGamepads")}} для доступа к объекту {{domxref("Gamepad")}}.

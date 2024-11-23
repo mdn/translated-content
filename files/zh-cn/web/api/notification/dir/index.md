@@ -2,7 +2,7 @@
 title: Notification：dir 属性
 slug: Web/API/Notification/dir
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}

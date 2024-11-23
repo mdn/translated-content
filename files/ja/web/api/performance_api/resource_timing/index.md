@@ -1,68 +1,111 @@
 ---
-title: Resource Timing API
+title: リソースタイミング
 slug: Web/API/Performance_API/Resource_timing
+l10n:
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{DefaultAPISidebar("Resource Timing API")}}
+{{DefaultAPISidebar("Performance API")}}
 
-**`Resource Timing`** インターフェイスは、アプリケーションの*リソース*のロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG element")}}、画像、スクリプトなど特定のリソースをロードするのにかかる時間を決定できます。
+リソースタイミングはパフォーマンス API の一部であり、アプリケーションのリソースを読み込む際のネットワークタイミングの詳細データの取得と分析を可能にします。アプリケーションはタイミング指標を使用することで、例えば、{{domxref("Window/fetch", "fetch()")}} API を使用するなどして、JavaScript から明示的に、またはページ読み込みの一部として暗黙的に、特定のリソース（画像やスクリプトなど）を読み込むのにかかる時間を特定することができます。
 
-インターフェイスのプロパティは、リダイレクトの開始時間と終了時間、DNS ルックアップの開始時間と終了時間、リクエストの開始時間、レスポンスの開始時間と終了時間などネットワークイベントに対して {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} のリソースロードタイムラインを作成します。このインタフェースには、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供するその他のプロパティも含まれています。
+文書上のすべてのリソースは、{{domxref("PerformanceResourceTiming")}}（{{domxref("PerformanceEntry")}} インターフェイスを拡張したもの）の項目のうち、{{domxref("PerformanceEntry.entryType","entryType")}} が `"resource"` であるもので表されます。
 
-このドキュメントでは、`Resource Timing` インターフェイスの概要を説明します。例を含むインターフェイスの詳細については、各インターフェイスのリファレンスページ、[リソースタイミング API の使用](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)、および [あわせて参照](#あわせて参照) セクションの参照を参照してください。リソースタイミング処理モデルのグラフィック表示については、[リソースタイミングフェーズ](https://w3c.github.io/resource-timing/#process)の図を参照してください。
+それぞれの `PerformanceResourceTiming` 項目には、リソース読み込みのタイムラインが記録され、リダイレクトの開始と終了時間、DNS ルックアップの開始と終了時間、リクエストの開始、応答の開始と終了時間など、ネットワークイベントの{{domxref("DOMHighResTimeStamp","高解像度タイムスタンプ", "", 1)}}が記載されます。タイムスタンプの他にも、リソースに関する情報が指定されたプロパティが記載されます。例えば、取得したリソースのサイズや、フェッチを開始したリソースの種類などです。
 
-> [!NOTE]
-> The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntry")}} for {{domxref("PerformanceEntry","performance entries", "", 1)}} which have an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`".
+## リソース読み込みタイムスタンプ
 
-## High-resolution タイムスタンプ
+![文書内のタイムスタンプが、取得した順番に列挙されているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
+図 1 リソース読み込みタイムスタンプ（[引用元](https://w3c.github.io/resource-timing/#attribute-descriptions)）
 
-Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a `{{domxref("DOMHighResTimeStamp")}}` type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
+アプリケーションは、リソースを読み込む際に使用するさまざまな段階のタイムスタンプを取得することができます。この API が提供するタイムスタンプは以下の通りです。
 
-The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 µs (because, for example, due to hardware or software constraints), the browser can represent a the value as a time in milliseconds accurate to a millisecond.
-
-## リソースロードタイムスタンプ
-
-An application can get timestamps for the various stages used to load a resource. The first property in the processing model is {{domxref("PerformanceEntry.startTime","startTime")}} which returns the timestamp immediately before the resource loading process begins. The {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} timestamps follows and redirect processing (if applicable) and preceeds DNS lookup. The next stages are {{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}} which are the timestamps immediately before and after connecting to the server, respectively. The last three timestamps are, in order: {{domxref('PerformanceResourceTiming.requestStart','requestStart')}} - the timestamp before the browser starts requesting the resource from the server; {{domxref('PerformanceResourceTiming.responseStart','responseStart')}} - the timestamp after the browser receives the first byte of the response from the server; and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}} - the timestamp after the browser receives the last byte of the resource. If the resource is loaded via a secure connection a {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}} timestamp will be available between the connection start and end events.
-
-> [!NOTE]
-> When {{Glossary("CORS")}} is in effect, many of these values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the `Timing-Allow-Origin` HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
->
-> The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
-
-The `{{domxref("PerformanceResourceTiming")}}` interface also includes several network timing properties. The {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for redirect start and end times, respectively. Likewise, the The {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for DNS lookup start and end times, respectively.
-
-_This would be a nice place to have a diagram showing the relationships between these segments of the resource loading time._
+1. {{domxref("PerformanceEntry.startTime","startTime")}}: リソース読み込み処理を開始した直前のタイムスタンプ。
+2. {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}}: リダイレクトを開始したフェッチのタイムスタンプ。
+3. {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}}: 最後のリダイレクトに対するレスポンスの最後のバイトを受信した直後のタイムスタンプ。
+4. {{domxref('PerformanceResourceTiming.workerStart','workerStart')}}: サービスワーカーのスレッドを起動した直前のタイムスタンプ。
+5. {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}}: ブラウザーがリソースの取得を始める直前のタイムスタンプ。
+6. {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}}: ブラウザーがリソースのドメイン名検索を始める直前のタイムスタンプ。
+7. {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}: ブラウザーがリソースのドメイン名検索を完了した直後のタイムスタンプ。
+8. {{domxref('PerformanceResourceTiming.connectStart','connectStart')}}: ユーザーエージェントがリソースを取得するためにサーバーへの接続を確立し始める直前のタイムスタンプ。
+9. {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}}: リソースが安全な接続で読み込まれた場合、ブラウザーが現在の接続を安全にするためにハンドシェイクプロセスを開始した直前のタイムスタンプ。
+10. {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}: ブラウザーがサーバーへの接続を完了してリソースを取得した直後のタイムスタンプ。
+11. {{domxref('PerformanceResourceTiming.requestStart','requestStart')}}: ブラウザーがサーバー、キャッシュ、ローカルリソースからリソースをリクエストし始める直前の時点のタイムスタンプ。
+12. {{domxref('PerformanceResourceTiming.responseStart','responseStart')}}: ブラウザーがサーバー、キャッシュ、ローカルリソースからレスポンスの最初のバイトを受信した直後のタイムスタンプ。
+13. {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}: ブラウザーがリソースの最後のバイトを受信した直後、またはトランスポート接続が閉じられた直前にタイムスタンプが記録されます。どちらが最初のイベントになるかは決まっていません。
 
 ## リソースサイズ
 
-The {{domxref("PerformanceResourceTiming")}} interface has three properties that can be used to obtain size data about a resource. The {{domxref('PerformanceResourceTiming.transferSize','transferSize')}} property returns the size (in octets) of the fetched resource including the response header fields plus the response payload body.
+{{domxref("PerformanceResourceTiming")}} インターフェイスには、リソースのサイズデータを取得するために使用できる 3 つのプロパティがあります。{{domxref('PerformanceResourceTiming.transferSize','transferSize')}} プロパティは、取得したリソースのサイズをバイト単位で返します。このサイズには、レスポンスヘッダーフィールドに加え、レスポンス内容本体も含みます。
 
-The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} property returns the size (in octets) received from the fetch (HTTP or cache), of the _payload body_, **before** removing any applied content-codings. {{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} returns the size (in octets) received from the fetch (HTTP or cache) of the _message body_, **after** removing any applied content-codings.
+{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツエンコーディングが除去される**前**の、HTTP またはキャッシュから取得した内容本体のサイズをオクテット単位でを返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツエンコーディングが除去された**後**の、HTTP またはキャッシュから取得したメッセージ本体のサイズをオクテット単位で返します。
 
 ## その他のプロパティ
 
-The {{domxref('PerformanceResourceTiming.nextHopProtocol','nextHopProtocol')}} property returns the _network protocol_ used to fetch the resource.
+{{domxref("PerformanceResourceTiming")}} インターフェイスは、[追加のリソース情報](/ja/docs/Web/API/PerformanceResourceTiming#追加のリソース情報)を提供します。プロパティの全リストについては、リファレンスドキュメントを参照してください。
 
-The {{domxref('PerformanceResourceTiming.initiatorType','initiatorType')}} property returns the _type_ of resource that initiated the performance entry such as "`css`" for a CSS resource, "`xmlhttprequest`" for an XMLHttpRequest and "`img`" for an image (such as a JPEG).
+## よくあるリソースタイミング指標
 
-If the current context is a {{domxref("Worker","worker")}}, the {{domxref('PerformanceResourceTiming.workerStart','workerStart')}} property can be used to obtain a {{domxref("DOMHighResTimeStamp")}} when the worker was started.
+`PerformanceResourceTiming` 項目が提供する情報は、以下のような計算によく使用されます。
 
-## メソッド
+- TCP ハンドシェイク時間の測定 (`connectEnd` - `connectStart`)
+- DNS ルックアップ時間の測定 (`domainLookupEnd` - `domainLookupStart`)
+- リダイレクト時間の測定 (`redirectEnd` - `redirectStart`)
+- リクエスト時間の測定 (`responseStart` - `requestStart`)
+- TLS ネゴシエーション時間の測定 (`requestStart` - `secureConnectionStart`)
+- フェッチに要する時間（リダイレクトなし）の測定 (`responseEnd` - `fetchStart`)
+- サービスワーカーの処理時間の測定 (`fetchStart` - `workerStart`)
+- コンテンツが圧縮されているかどうかの確認 (`decodedBodySize` が `encodedBodySize` ではない)
+- ローカルキャッシュがヒットしたかどうかの確認 (`transferSize` が `0` である)
+- 最新の高速プロトコルが使用されているかどうかの確認 (`nextHopProtocol` が HTTP/2 または HTTP/3)
+- 正しいリソースがレンダリングをブロックしているかどうかの確認 (`renderBlockingStatus`)
 
-The Resource Timing API includes two methods that extend the {{domxref("Performance")}} interface. The {{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} method removes all "`resource`" type performance entries from the browser's _resource_ performance entry buffer. The {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} method sets the resource performance entry buffer size to the specified number of resource {{domxref("PerformanceEntry","performance entries")}}.
+{{domxref("PerformanceResourceTiming")}} のリファレンスページには、これらすべての指標を測定するためのサンプルコードが格納されています。 通常、これらの指標を測定するためのコードは、例えば以下のようなものです。
 
-The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceResourceTiming.toJSON","toJSON()")}} method returns a JSON serialization of a "`resource`" type {{domxref("PerformanceEntry","performance entry")}}.
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const request = entry.responseStart - entry.requestStart;
+    if (request > 0) {
+      console.log(`${entry.name}: Request time: ${request}ms`);
+    }
+  });
+});
 
-## 実装状況
+observer.observe({ type: "resource", buffered: true });
+```
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+## オリジン間のタイミング情報
 
-To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
+{{Glossary("CORS")}} が有効な場合、サーバーのアクセスポリシーがこれらの値の共有を許可しない限り、タイミングプロパティの値の多くはゼロとして返されます。このため、リソースを指定されたサーバーは、制限付きのタイムスタンプ値を取得することが許可されたオリジンの値を指定した、HTTP の {{httpheader("Timing-Allow-Origin")}} レスポンスヘッダーを送信する必要があります。
 
-## あわせて参照
+ウェブページ自体のオリジン以外からリソースを読み込む際に、既定では 0 を返すプロパティとあしては、`redirectStart`、`redirectEnd`、`domainLookupStart`、`domainLookupEnd`、`connectStart`、`connectEnd`、`secureConnectionStart`、`requestStart`、`responseStart` があります。
 
-- [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
-- [CanIUse data](http://caniuse.com/#search=resource-timing)
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
-- [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft
+例えば、`https://developer.mozilla.org` がリソースのタイミング情報を確認できるようにするには、オリジン間リソースが送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+## リソースバッファーサイズの管理
+
+ウェブサイトまたはアプリケーションで 250 以上のリソースを取得し、250 以上の {{domxref("PerformanceResourceTiming")}} 項目を記録したい場合は、リソースタイミングバッファーのサイズを大きくする必要があります。
+
+ブラウザーのパフォーマンスリソースデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用し、ブラウザーのパフォーマンスリソースデータバッファーをクリアするには、{{domxref("Performance.clearResourceTimings()")}} メソッドを使用します。
+
+ブラウザーのリソースタイミングバッファーが満杯になったことを通知してもらうには、 {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを待ち受けしてください。
+
+次の呼び出しでは、ブラウザーのパフォーマンスタイムラインに 500 件の `"resource"` パフォーマンス項目が追加されます。
+
+```js
+performance.setResourceTimingBufferSize(500);
+```
+
+詳しくは、[バッファーサイズの管理](/ja/docs/Web/API/Performance_API/Performance_data#managing_buffer_sizes)も参照してください。
+
+## 関連情報
+
+- {{domxref("PerformanceResourceTiming")}}
+- {{httpheader("Timing-Allow-Origin")}}
+- {{domxref("Performance.setResourceTimingBufferSize()")}}
+- {{domxref("Performance.clearResourceTimings()")}}

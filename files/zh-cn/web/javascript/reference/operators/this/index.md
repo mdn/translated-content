@@ -386,7 +386,7 @@ const fn2 = obj.getThisGetter;
 console.log(fn2()() === globalThis); // 在非严格模式下为 true
 ```
 
-这种行为在定义回调时非常有用。通常，每个函数表达式都创建自己的 `this` 绑定，这会遮蔽上层作用域的 `this` 值。现在，如果你不关心 `this` 值，你可以将函数定义为箭头函数，并且只在你需要的地方创建 `this` 绑定（例如，在类方法中）。参见 [`setTimeout()` 的示例](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply)。
+这种行为在定义回调时非常有用。通常，每个函数表达式都创建自己的 `this` 绑定，这会遮蔽上层作用域的 `this` 值。现在，如果你不关心 `this` 值，你可以将函数定义为箭头函数，并且只在你需要的地方创建 `this` 绑定（例如，在类方法中）。参见 [`setTimeout()` 的示例](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#使用_call、bind_和_apply)。
 
 ### getter 或 setter 中的 this
 

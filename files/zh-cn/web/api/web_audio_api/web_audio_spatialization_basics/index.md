@@ -107,7 +107,7 @@ const refDistance = 1;
 
 然后就是 roll-off 因子 ([`rolloffFactor`](/zh-CN/docs/Web/API/PannerNode/rolloffFactor)) — 描述随着 panner 远离收听者，音量减小的速度有多快。默认值为 1；让我们使其大一些以放大我们的动作。
 
-```
+```js
 const rollOff = 10;
 ```
 

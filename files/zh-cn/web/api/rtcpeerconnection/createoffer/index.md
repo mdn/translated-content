@@ -5,15 +5,17 @@ slug: Web/API/RTCPeerConnection/createOffer
 
 {{APIRef("WebRTC")}}{{domxref("RTCPeerConnection")}}接口的 createOffer() 方法启动创建一个{{Glossary("SDP")}} offer，目的是启动一个新的 WebRTC 去连接远程端点。SDP offer 包含有关已附加到 WebRTC 会话，浏览器支持的编解码器和选项的所有{{domxref("MediaStreamTrack")}}s 信息，以及{{Glossary("ICE")}} 代理，目的是通过信令信道发送给潜在远程端点，以请求连接或更新现有连接的配置。返回值是一个{{domxref("Promise")}}，创建 offer 后，将使用包含新创建的要约的{{domxref("RTCSessionDescription")}}对象来解析该返回值。
 
-## Syntax
+## 语法
 
+```js-nolint
+createOffer()
+createOffer(options)
+
+createOffer(successCallback, failureCallback) // 已弃用
+createOffer(successCallback, failureCallback, options) // 已弃用
 ```
-aPromise = myPeerConnection.createOffer([options]);
 
-myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{deprecated_inline}}
-```
-
-### Parameters
+### 参数
 
 - 选项 {{optional_inline}}
   - : [`RTCOfferOptions`](#RTCOfferOptions_dictionary) 词典提供要约所要求的选项。

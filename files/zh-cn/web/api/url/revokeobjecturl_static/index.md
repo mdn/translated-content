@@ -2,7 +2,7 @@
 title: URL：revokeObjectURL() 静态方法
 slug: Web/API/URL/revokeObjectURL_static
 l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
 {{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}

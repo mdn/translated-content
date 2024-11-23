@@ -1,11 +1,11 @@
 ---
-title: C# による WebSocket サーバーの記述
+title: C# で WebSocket サーバーを書く
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 1fc3cc69ee229c7677883b45f5d1a71095f8a4c4
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 WebSocket API を使用したい場合は、サーバーを所有していると便利です。この記事では、C# で記述する方法を説明します。どんなサーバーサイドの言語でも行うことができますが、わかりやすく理解しやすいように、 Microsoft の言語を選択しました。
 
@@ -13,7 +13,7 @@ WebSocket API を使用したい場合は、サーバーを所有していると
 
 ## 最初のステップ
 
-WebSocket は [TCP (伝送制御プロトコル)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 接続を介して通信します。幸いにも、C# には [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) クラスがあり、その名前が示すようにします。これは System.Net.Sockets 名前空間にあります。
+WebSocket は [TCP (伝送制御プロトコル)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 接続を介して通信します。幸いにも、C# には [TcpListener](https://learn.microsoft.com/ja/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) クラスがあり、その名前が示すようにします。これは System.Net.Sockets 名前空間にあります。
 
 > [!NOTE]
 > 書く量を減らすために名前空間を `using` キーワードに含めることをお勧めします。毎回完全な名前空間を入力することなく、名前空間のクラスを使用できます。
@@ -140,7 +140,7 @@ if (Regex.IsMatch(data, "^GET")) {
 1. 先行または後続空白なしで "Sec-WebSocket-Key" リクエストヘッダーの値を取得します
 2. それを "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (RFC 6455 で指定された特別な GUID)
 3. 新しい値の SHA-1 および Base64 ハッシュを計算します
-4. HTTP レスポンスの "Sec-WebSocket-Accept" レスポンスヘッダーの値としてハッシュを書き戻します
+4. HTTP レスポンスの {{httpheader("Sec-WebSocket-Accept")}} レスポンスヘッダーの値としてハッシュを書き戻します
 
 ```cs
 if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
@@ -280,9 +280,9 @@ class Server {
             } else {
                 bool fin = (bytes[0] & 0b10000000) != 0,
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
-                int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
-                    offset = 2;
-                ulong msglen = bytes[1] & 0b01111111;
+                int opcode = bytes[0] & 0b00001111; // expecting 1 - text message
+                ulong offset = 2,
+                      msglen = bytes[1] & (ulong)0b01111111;
 
                 if (msglen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas

@@ -19,10 +19,6 @@ slug: Web/HTTP/Status/201
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

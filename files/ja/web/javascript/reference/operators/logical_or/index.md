@@ -58,9 +58,9 @@ console.log(B() || A());
 
 以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
-```js
-true || (false && false); // true を返す。 && が先に実行されるため
-(true || false) && false; // false を返す。演算子の優先順位が適用されないため
+```js-nolint
+true || false && false; // true を返す。 && が先に実行されるため
+(true || false) && false; // false を返す。グループ化の優先順位が最も高いため
 ```
 
 ## 例
@@ -127,8 +127,8 @@ bCondition1 && (bCondition2 || bCondition3);
 
 常に以下のものと等しくなります。
 
-```js
-!(!bCondition1 || (!bCondition2 && !bCondition3));
+```js-nolint
+!(!bCondition1 || !bCondition2 && !bCondition3);
 ```
 
 ## 仕様書

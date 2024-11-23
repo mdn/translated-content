@@ -616,7 +616,7 @@ function closeVideoCall() {
 
 #### Dealing with state changes
 
-다양한 상태 변화를 너의 코드에 알리기 위해 listener를 세팅할 수 있는 다양한 이벤트들이 있다. 그 중에 다음 3가지를 사용하겠다.: {{event("iceconnectionstatechange")}}, {{event("icegatheringstatechange")}}, and {{event("signalingstatechange")}}.
+다양한 상태 변화를 너의 코드에 알리기 위해 listener를 세팅할 수 있는 다양한 이벤트들이 있다. 그 중에 다음 3가지를 사용하겠다.: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
 ##### ICE connection state
 
@@ -652,7 +652,7 @@ myPeerConnection.onsignalingstatechange = function (event) {
 
 ##### ICE gathering state
 
-{{event("icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but we're implementing it for logging, observing via the console log how the whole process works.
+{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but we're implementing it for logging, observing via the console log how the whole process works.
 
 ```js
 function handleICEGatheringStateChangeEvent(event) {

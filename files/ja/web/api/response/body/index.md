@@ -3,7 +3,7 @@ title: "Response: body プロパティ"
 short-title: body
 slug: Web/API/Response/body
 l10n:
-  sourceCommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
 {{APIRef("Fetch API")}}

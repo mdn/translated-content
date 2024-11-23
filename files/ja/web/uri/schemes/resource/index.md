@@ -1,34 +1,35 @@
 ---
 title: リソース URL
 slug: Web/URI/Schemes/resource
-original_slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+l10n:
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
-{{HTTPSidebar}}{{non-standard_header}}
+{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}{{non-standard_header}}
 
 `resource:` というスキームのプレフィックスが付いたリソース URL は、Firefox と Firefox のブラウザー拡張機能によってリソースを内部的に読み込むために使用されますが、情報の一部はブラウザーが接続するサイトでも利用できます。
 
 ## 構文
 
-リソース URL は、接頭辞 (`resource:`) とロードするリソースを指す URL の 2 つの部分で構成されます。
+リソース URL は、接頭辞 (`resource:`) と読み込むするリソースを指す URL の 2 つの部分で構成されます。
 
-```
-resource://<url>
+```url
+resource://<path>
 ```
 
 例
 
-```
+```url
 resource://gre/res/svg.css
 ```
 
 リソース URL ('->') に矢印がある場合は、最初のファイルが次のファイルにロードされたことを意味します。
 
-```
+```url
 resource://<File-loader> -> <File-loaded>
 ```
 
-より一般的な詳細については、[ウェブ上のリソースの識別](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)を参照してください。
+より一般的な詳細については、[ウェブ上のリソースの識別](/ja/docs/Web/URI)を参照してください。
 
 この記事では、組み込みのリソースを指すために Firefox が内部的に使用するリソース URI に焦点を当てます。
 
@@ -36,11 +37,11 @@ resource://<File-loader> -> <File-loaded>
 
 `resource:` URL によって共有される情報の一部はウェブサイトで利用できるため、ウェブページは内部スクリプトを実行し、デフォルトの設定を含む Firefox の内部リソースを調べることができます。
 
-たとえば、[Browserleaks のスクリプト](https://www.browserleaks.com/firefox)は、サイトで実行されている簡単なスクリプトでクエリが実行されたときに Firefox が表示する内容を強調表示します (コードは <https://browserleaks.com/firefox#more> にあります)。
+たとえば、[Browserleaks のスクリプト](https://browserleaks.com/resource-urls)は、サイトで実行されている簡単なスクリプトでクエリーが実行されたときに Firefox が表示する内容を強調表示します（コードは <https://browserleaks.com/resource-urls#more> にあります）。
 
 ファイル firefox.js は、プリファレンス名と値を pref() 関数に渡します。 例えば、
 
-```
+```url
 http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
 ```
 
@@ -59,7 +60,7 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 > [!NOTE]
 > ウェブと拡張機能の開発者がリソース URL をもう使用しようとしないことをお勧めします。彼らの使い方はうまくいきませんでした。そしてほとんどの使用法はこれ以上動作しません。
 
-## 仕様
+## 仕様書
 
 resource: はどの仕様書にも定義されていません。
 
@@ -69,6 +70,6 @@ resource: は Firefox のみ対応
 
 ## 関連情報
 
-- [ウェブ上のリソースの識別](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [URL とは何か](/ja/docs/Learn/Common_questions/What_is_a_URL)
+- [ウェブ上のリソースの識別](/ja/docs/Web/URI)
+- [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))

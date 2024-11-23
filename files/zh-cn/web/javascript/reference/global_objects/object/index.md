@@ -45,7 +45,7 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true；预期的结�
 
 ### null 原型对象
 
-几乎所有的 JavaScript 对象最终都继承自 `Object.prototype`（参见[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。然而，你可以使用 [`Object.create(null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 或定义了 `__proto__: null` 的[对象字面量语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)（注意：对象字面量中的 `__proto__` 键不同于已弃用的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 属性）来创建 `null` 原型对象。你还可以通过调用 [`Object.setPrototypeOf(obj, null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 将现有对象的原型更改为 `null`。
+几乎所有的 JavaScript 对象最终都继承自 `Object.prototype`（参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。然而，你可以使用 [`Object.create(null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 或定义了 `__proto__: null` 的[对象字面量语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)（注意：对象字面量中的 `__proto__` 键不同于已弃用的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 属性）来创建 `null` 原型对象。你还可以通过调用 [`Object.setPrototypeOf(obj, null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 将现有对象的原型更改为 `null`。
 
 ```js
 const obj = Object.create(null);

@@ -16,19 +16,17 @@ CSS 属性 **`image-orientation`** 用来修正某些图片的预设方向。
 
 ## 语法
 
-```
-语法形式: {{csssyntax("image-orientation")}}
-```
+```css
+/* 关键字值 */
+image-orientation: none;
+image-orientation: from-image; /* 使用图片的 EXIF 数据 */
 
-```
-image-orientation: 0deg
-image-orientation: 6.4deg     /* 非 90 度的整数倍，所以会被四舍五入到 0 度 */
-image-orientation: -90deg     /* 相当于 270deg */
-image-orientation: from-image /* 使用图片的 EXIF 数据 */
-image-orientation: 90deg flip /* 旋转 90deg, 再水平翻转 */
-image-orientation: flip       /* 不旋转，只进行水平翻转 */
-
-image-orientation: inherit
+/* 全局值 */
+image-orientation: inherit;
+image-orientation: initial;
+image-orientation: revert;
+image-orientation: revert-layer;
+image-orientation: unset;
 ```
 
 ### 属性值
@@ -39,6 +37,14 @@ image-orientation: inherit
   - : 图片旋转值 {{cssxref("&lt;angle&gt;")}} , 会被自动四舍五入到 `90deg` (`0.25turn`) 的整数倍。
 - `flip`
   - : 对图片进行水平翻转，先进行第二个参数执行的旋转，再进行此次翻转。
+
+## 形式语法
+
+{{cssinfo}}
+
+## 形式定义
+
+{{csssyntax}}
 
 ## 示例
 

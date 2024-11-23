@@ -34,7 +34,7 @@ window.addEventListener("gamepadconnected", function (e) {
 
 ## Отключение геймпада
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", function (e) {
@@ -46,7 +46,7 @@ window.addEventListener("gamepaddisconnected", function (e) {
 });
 ```
 
-The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The `index` property also functions as the index into the {{jsxref("Array")}} returned by {{ domxref("Navigator.getGamepads()") }}.
+The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The `index` property also functions as the index into the {{jsxref("Array")}} returned by {{domxref("Navigator.getGamepads()")}}.
 
 ```js
 var gamepads = {};

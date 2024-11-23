@@ -9,8 +9,8 @@ slug: Web/API/MutationObserver/takeRecords
 
 ## 语法
 
-```
-mutationRecords = mutationObserver.takeRecords()
+```js-nolint
+takeRecords()
 ```
 
 ### 参数

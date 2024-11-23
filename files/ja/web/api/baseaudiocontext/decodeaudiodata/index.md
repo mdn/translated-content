@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-`decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、{{jsxref("ArrayBuffer")}} は {{domxref("fetch()")}}、{{domxref("XMLHttpRequest")}}、{{domxref("FileReader")}} などから読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
+`decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、{{jsxref("ArrayBuffer")}} は {{domxref("Window/fetch", "fetch()")}}、{{domxref("XMLHttpRequest")}}、{{domxref("FileReader")}} などから読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
 
 この方法は、オーディオトラックからウェブオーディオ API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
 
@@ -28,7 +28,7 @@ decodeAudioData(arrayBuffer, successCallback, errorCallback)
 ### 引数
 
 - `arrayBuffer`
-  - : デコードする音声データが入った ArrayBuffer です。通常は {{domxref("fetch()")}}、{{domxref("XMLHttpRequest")}}、{{domxref("FileReader")}} から取得します。
+  - : デコードする音声データが入った ArrayBuffer です。通常は {{domxref("Window/fetch", "fetch()")}}、{{domxref("XMLHttpRequest")}}、{{domxref("FileReader")}} から取得します。
 - `successCallback` {{optional_inline}}
   - : デコードが完了すると呼び出されるコールバック関数です。このコールバックの引数は 1 つで、 {{domxref("AudioBuffer")}} であり _decodedData_ （デコードされた PCM 音声データ）を表します。通常は、デコードされたデータを {{domxref("AudioBufferSourceNode")}} に入れて、そこから再生したり、好きなように操作したりすることができます。
 - `errorCallback` {{optional_inline}}
@@ -44,7 +44,7 @@ _decodedData_ で履行される {{jsxref("Promise") }} オブジェクトです
 
 ### プロミスベースの構文
 
-この例では、 `loadAudio()` は {{domxref("fetch()")}} を使用して音声ファイルを取得し、それを {{domxref("AudioBuffer")}} にデコードします。そして、後で再生できるように `audioBuffer` をグローバル変数 `buffer` にキャッシュします。
+この例では、 `loadAudio()` は {{domxref("Window/fetch", "fetch()")}} を使用して音声ファイルを取得し、それを {{domxref("AudioBuffer")}} にデコードします。そして、後で再生できるように `audioBuffer` をグローバル変数 `buffer` にキャッシュします。
 
 > **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/)したりすることができます。
 
@@ -67,7 +67,7 @@ async function loadAudio() {
 
 ### コールバックの構文
 
-この例では `loadAudio()` は {{domxref("fetch()")}} を用いて音声ファイルを取得し、コールバックベースの `decodeAudioData()` を用いて {{domxref("AudioBuffer")}} にデコードします。コールバックでは、デコードしたバッファーが再生されます。
+この例では `loadAudio()` は {{domxref("Window/fetch", "fetch()")}} を用いて音声ファイルを取得し、コールバックベースの `decodeAudioData()` を用いて {{domxref("AudioBuffer")}} にデコードします。コールバックでは、デコードしたバッファーが再生されます。
 
 > **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/callback/)したりすることができます。
 

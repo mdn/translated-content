@@ -98,7 +98,7 @@ SVG 除了前面描述的以外还有其他优点：
 
 ### 快捷方式：`img` 元素
 
-要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的宽高比，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
+要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的{{glossary("aspect ratio","宽高比")}}，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
 
 ```html
 <img src="equilateral.svg" alt="等边三角形" height="87px" width="100px" />
@@ -274,12 +274,12 @@ window.addEventListener("load", updateCode);
 // 转而使其在当前光标位置插入一个制表符
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

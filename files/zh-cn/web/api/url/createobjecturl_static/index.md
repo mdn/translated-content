@@ -2,7 +2,7 @@
 title: URL：createObjectURL() 静态方法
 slug: Web/API/URL/createObjectURL_static
 l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+  sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
 {{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -48,7 +48,7 @@ URL.createObjectURL(object)
 在较早版本的媒体源规范中，需要为 {{domxref("MediaStream")}} 创建一个对象 URL 才能将流附加到 {{HTMLElement("video")}} 元素。这已不再必要，浏览器正在逐步取消对此的支持。
 
 > [!WARNING]
-> 如果你还有依赖于 {{domxref("URL.createObjectURL_static", "createObjectURL()")}} 将流附加到媒体元素的代码，你需要更新代码并将 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 设置为 `MediaStream`。
+> 如果你还有依赖于 `createObjectURL()` 将流附加到媒体元素的代码，你需要更新代码并将 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 设置为 `MediaStream`。
 
 ## 规范
 

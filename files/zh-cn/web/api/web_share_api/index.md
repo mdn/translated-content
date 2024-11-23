@@ -2,7 +2,7 @@
 title: Web 共享 API
 slug: Web/API/Web_Share_API
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
 {{DefaultAPISidebar("Web Share API")}}{{securecontext_header}}

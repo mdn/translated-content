@@ -12,11 +12,8 @@ slug: Web/API/Response/formData
 
 ## 语法
 
-```
-response.formData()
-.then(function(formdata) {
-  // do something with your formdata
-});
+```js-nolint
+formData()
 ```
 
 ### 参数
@@ -27,7 +24,7 @@ response.formData()
 
 生成 {{domxref("FormData")}}对象的{{domxref("Promise")}} 对象。
 
-## 样例
+## 示例
 
 待定。
 
@@ -35,11 +32,11 @@ response.formData()
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)

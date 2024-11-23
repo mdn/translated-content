@@ -9,10 +9,10 @@ slug: Web/API/MediaStreamTrack/getConstraints
 
 约束条件可以用来确保媒体符合你喜欢的某些指导方针。例如，你可能更喜欢高清视频，但要求帧率略低，以帮助保持足够低的数据速率而不会使网络负担过重。约束还可以指定理想和/或可接受的尺寸或尺寸范围。有关如何使用可约束属性的详细信息[，](/zh-CN/docs/Web/API/Media_Streams_API/Constraints)请参阅[能力，约束和设置](/zh-CN/docs/Web/API/Media_Streams_API/Constraints)。
 
-## 句法
+## 语法
 
-```
-var constraints = MediaStreamTrack.getConstraints();
+```js-nolint
+getConstraints()
 ```
 
 ### 参数

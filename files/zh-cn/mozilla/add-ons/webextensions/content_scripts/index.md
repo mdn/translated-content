@@ -600,22 +600,25 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-上述内容同样适用于 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout), [`setInterval()`](/zh-CN/docs/Web/API/setInterval), and [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function).
+上述内容同样适用于 {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}} 和 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 
-当在页面的上下文中运行代码时，适用于上面所提到的"[Sharing content script objects with page scripts](/zh-CN/Add-ons/WebExtensions/Content_scripts#Sharing_objects_with_page_scripts)" 这一部分的警告：页面的环境可能会被恶意的网页所控制，这可能会导致你所交互的对象会有意想不到的行为：
-
-```js
-// page.js redefines console.log
-
-var original = console.log;
-
-console.log = function () {
-  original(true);
-};
-```
-
-```js
-// content-script.js calls the redefined version
-
-window.eval("console.log(false)");
-```
+> [!WARNING]
+> 在页面的上下文中运行代码时要非常小心！
+>
+> 页面的环境由潜在的恶意网页控制，这些网页可以重新定义与你交互的对象，使其以意想不到的方式运行：
+>
+> ```js example-bad
+> // page.js 重新定义 console.log
+>
+> let original = console.log;
+>
+> console.log = () => {
+>   original(true);
+> };
+> ```
+>
+> ```js example-bad
+> // content-script.js 调用了重新定义的版本
+>
+> window.eval("console.log(false)");
+> ```

@@ -152,6 +152,6 @@ border-image: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} 函数
+- {{cssxref("url_value", "&lt;url&gt;")}} 类型
 - 渐变函数：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}、{{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}、{{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}、{{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - MDN 博客（2023）[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)

@@ -257,9 +257,9 @@ function ongoingTouchIndexById(idToFind) {
 
 #### 显示后台操作记录
 
-```
+```js
 function log(msg) {
-  const p = document.getElementById('log');
+  const p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```

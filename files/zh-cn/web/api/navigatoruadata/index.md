@@ -2,7 +2,7 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
@@ -68,4 +68,4 @@ navigator.userAgentData
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)

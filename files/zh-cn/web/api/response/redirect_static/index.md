@@ -12,8 +12,9 @@ slug: Web/API/Response/redirect_static
 
 ## 语法
 
-```
-var response = Response.redirect(url, status);
+```js-nolint
+Response.redirect(url)
+Response.redirect(url, status)
 ```
 
 ### 参数

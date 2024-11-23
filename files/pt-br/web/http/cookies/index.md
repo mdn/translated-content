@@ -36,11 +36,7 @@ Set-Cookie: <cookie-name>=<cookie-value>
 Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 
 > [!NOTE]
-> Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:- [PHP](https://secure.php.net/manual/en/function.setcookie.php)
->
-> - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
-> - [Python](https://docs.python.org/3/library/http.cookies.html)
-> - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
+> Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor: [PHP](https://secure.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
 
 ```
 HTTP/1.0 200 OK
@@ -117,11 +113,11 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 - `None`
   - : O navegador irá enviar os cookies tanto para as requisições _cross-site_ quanto _same-site_.
 - `Strict`
-  - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo`Strict` será incluído.
+  - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo `Strict` será incluído.
 - `Lax`
-  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, mas serão enviadas quando um usuário navegar para o URL de um site externo.
+  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, e também quando o usuário navegar para o URL de um site externo através de métodos "seguros" (ex.: [GET](/pt-BR/docs/Web/HTTP/Methods/GET) ou [HEAD](/pt-BR/docs/Web/HTTP/Methods/GET)) como cliques em links, mas não serão enviados em requisições "não seguras" como [POST](/pt-BR/docs/Web/HTTP/Methods/POST).
 
-O comportamento padrão se a flag não estiver setada ou sem suporte do navegador é incluir os cookies em qualquer solicitação, incluindo solicitações cross-origin.
+Se a flag não estiver setada, o atributo recebe o valor `Lax` por padrão.
 
 ### Acesso via JavaScript usando `Document.cookie`
 

@@ -32,11 +32,11 @@ slug: Web/HTML/Element/slot
     </tr>
     <tr>
       <th scope="row">이벤트</th>
-      <td>{{event("slotchange")}}</td>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>

@@ -28,7 +28,7 @@ slug: Web/CSS/time
 
 ### 有效时间
 
-```
+```plain example-good
 12s         正整数
 -456ms      负整数
 4.3ms       非整数

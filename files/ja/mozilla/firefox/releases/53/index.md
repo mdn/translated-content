@@ -68,7 +68,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - 非推奨の {{domxref("Node.rootNode")}} プロパティを置き換える、{{domxref("Node.getRootNode()")}} を実装しました ([Firefox バグ 1269155](https://bugzil.la/1269155))。
 - {{domxref("Plugin")}} および {{domxref("PluginArray")}} オブジェクト特有のプロパティが、enumerable ではなくなりました ([Firefox バグ 1270366](https://bugzil.la/1270366))。
 - {{domxref("MimeTypeArray")}} オブジェクトの名前付きプロパティが、enumerable ではなくなりました ([Firefox バグ 1270364](https://bugzil.la/1270364))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
+- [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
 
 ### ワーカーおよびサービスワーカー
 

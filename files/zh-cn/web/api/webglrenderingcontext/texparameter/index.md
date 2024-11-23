@@ -9,9 +9,9 @@ slug: Web/API/WebGLRenderingContext/texParameter
 
 ## 语法
 
-```
-void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
-void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+```js-nolint
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### 参数

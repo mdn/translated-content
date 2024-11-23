@@ -12,7 +12,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 - 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用[CSS](/zh-CN/docs/Web/CSS) 装饰样式。
 - 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
 
-```
+```html
 <link rel="stylesheet" src="styles.css" media="screen" />
 <link rel="stylesheet" src="styles.css" media="print" />
 ```

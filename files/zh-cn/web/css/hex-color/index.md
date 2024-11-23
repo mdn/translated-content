@@ -11,7 +11,7 @@ slug: Web/CSS/hex-color
 
 ## 语法
 
-```
+```plain
 #RGB        // 三值语法
 #RGBA       // 四值语法
 #RRGGBB     // 六值语法

@@ -11,8 +11,9 @@ slug: Web/API/Window/getComputedStyle
 
 ## 语法
 
-```
-let style = window.getComputedStyle(element, [pseudoElt]);
+```js-nolint
+getComputedStyle(element)
+getComputedStyle(element, pseudoElt)
 ```
 
 - element

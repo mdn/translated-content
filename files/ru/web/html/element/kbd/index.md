@@ -12,7 +12,7 @@ HTML-элемент **`<kbd>`** указывает на то, что текст 
 | [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                      | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                  |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                     |
+| Tag omission                                           | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
 | Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
 | Permitted ARIA roles                                   | Any                                                                                                                                                     |
 | DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                              |

@@ -250,7 +250,7 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 Web Audio API についてもっと学ぶことができる他の例があります。
 
-[Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) は、楽しい音声加工および音の視覚化を行うウェブアプリで、様々な効果や視覚化を選択することができます。このアプリケーションはかなり初歩的ですが、 Web Audio API の複数の機能を同時に使用する例を示しています。 ([Voice-change-O-matic をライブで実行](https://mdn.github.io/voice-change-o-matic/))
+[Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) は、楽しい音声加工および音の視覚化を行うウェブアプリで、様々な効果や視覚化を選択することができます。このアプリケーションはかなり初歩的ですが、 Web Audio API の複数の機能を同時に使用する例を示しています。 ([Voice-change-O-matic をライブで実行](https://mdn.github.io/webaudio-examples/voice-change-o-matic/))
 
 ![音の波が表示され、音声効果や視覚化を選択することができるユーザーインターフェイス。](voice-change-o-matic.png)
 

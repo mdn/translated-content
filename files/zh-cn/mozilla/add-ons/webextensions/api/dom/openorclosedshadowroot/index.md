@@ -38,4 +38,4 @@ let shadowRoot = browser.dom.openOrClosedShadowRoot(
 ## 参见
 
 - {{DOMxRef("Element.shadowRoot")}}
-- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.com/docs/extensions/reference/dom/#method-openOrClosedShadowRoot)
+- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.google.cn/docs/extensions/reference/api/dom#method-openOrClosedShadowRoot)

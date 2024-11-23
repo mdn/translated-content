@@ -1,19 +1,21 @@
 ---
 title: BroadcastChannel：message 事件
 slug: Web/API/BroadcastChannel/message_event
+l10n:
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-当频道收到一条消息时，会在关联的 {{domxref('BroadcastChannel')}} 对象上触发 `message` 事件。
+{{domxref("BroadcastChannel")}} 接口的 **`message`** 事件在频道收到一条消息时触发。
 
 ## 语法
 
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js
-addEventListener("message", (event) => {});
-onmessage = (event) => {};
+```js-nolint
+addEventListener("message", (event) => { })
+onmessage = (event) => { }
 ```
 
 ## 事件类型
@@ -26,20 +28,20 @@ onmessage = (event) => {};
 
 _除了下面列出的属性之外，还可以使用父接口 {{domxref("Event")}} 的属性。_
 
-- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
   - : 由消息发送者发送的数据。
-- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : 一个表示消息发送者来源的字符串。
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
   - : 一个表示事件唯一 ID 的字符串。
-- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象。
-- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
   - : 一个与发送消息（通过频道发送消息或向 SharedWorker 发送消息）的频道相关联的 {{domxref("MessagePort")}} 对象的数组。
 
 ## 示例
 
-在这个示例中，有一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 作为发送者，当用户点击按钮之后，会广播 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 中的内容。同时，有两个 `iframe` 作为接收者，会监听广播的消息，并将结果写入 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 元素。
+在这个示例中，有一个 {{HTMLElement("iframe")}} 作为发送者，当用户点击按钮之后，会广播 {{HTMLElement("textarea")}} 中的内容。同时，有两个 `iframe` 作为接收者，会监听广播的消息，并将结果写入 {{HTMLElement("div")}} 元素。
 
 ### 发送者
 
@@ -168,4 +170,4 @@ channel.addEventListener("message", (event) => {
 
 ## 参见
 
-- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event)。
+- 相关事件：{{domxref("BroadcastChannel/messageerror_event", "messageerror")}}。
