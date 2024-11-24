@@ -31,7 +31,7 @@ l10n:
 
 ```html
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <!-- … -->
   </head>
