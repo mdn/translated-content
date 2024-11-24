@@ -47,6 +47,6 @@ if (navigator.userActivation.hasBeenActive) {
 ## 같이 보기
 
 - [사용자 활성화](/ko/docs/Web/API/UserActivation)
-- {{domxref("UserActivation.hasBeenActive")}}
-- {{domxref("UserActivation.isActive")}}
+- [`UserActivation.hasBeenActive`](/ko/docs/Web/API/UserActivation/hasBeenActive)
+- [`UserActivation.isActive`](/ko/docs/Web/API/UserActivation/isActive)
 - [사용자 활성화로 제어되는 기능](/ko/docs/Web/Security/User_activation)
