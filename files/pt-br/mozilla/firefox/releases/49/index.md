@@ -111,7 +111,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 #### WebGL
 
 - A extensão {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} foi implementada ([Erro do Firefox 1129332](https://bugzil.la/1129332)).
-- O evento {{Event("webglcontextcreationerror")}}, que é criando quando a tentativa de criação de contexto do WebGL falha, foi implementado ([Erro do Firefox 1271478](https://bugzil.la/1271478)). Use isso para ajudar a entender melhor, tanto para depuração quanto para o processamento de errros de produção.
+- O evento [`webglcontextcreationerror`](/pt-BR/docs/Web/Events/webglcontextcreationerror), que é criando quando a tentativa de criação de contexto do WebGL falha, foi implementado ([Erro do Firefox 1271478](https://bugzil.la/1271478)). Use isso para ajudar a entender melhor, tanto para depuração quanto para o processamento de errros de produção.
 
 #### IndexedDB
 
@@ -149,7 +149,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Para especificações correspondentes, a propriedade {{domxref("VTTCue.positionAlign")}} agora retorna um `PositionAlign` enum em vez de `Align` enum ([Erro do Firefox 1276129](https://bugzil.la/1276129)).
 - A parte de síntese da [API Web Speech](/pt-BR/docs/Web/API/Web_Speech_API#Speech_synthesis) agora é ativo por padrão ([Erro do Firefox 1268633](https://bugzil.la/1268633)).
 - A [API Timeline de performace](/pt-BR/docs/Web/API/Performance_Timeline) agora está disponível de padrão no Nightly (embrora não no Aurora, Beta ou Release).
-- O evento {{event("install")}}, e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por [Web Manifests](/pt-BR/docs/Web/Manifest) ([Erro do Firefox 1265279](https://bugzil.la/1265279)).
+- O evento [`install`](/pt-BR/docs/Web/Events/install), e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por [Web Manifests](/pt-BR/docs/Web/Manifest) ([Erro do Firefox 1265279](https://bugzil.la/1265279)).
 - Quando usar o metodo {{domxref("AudioContext.createPeriodicWave()")}} de [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), você pode específicar se a onda periódica resultante deve ser normalizada incluindo um objeto de dicionário como o terceiro parâmetro, que inclui um único parâmetro — `{disableNormalization: true}` ([Erro do Firefox 1265405](https://bugzil.la/1265405)).
 - Na APIWebVTT, {{domxref("VTTCue.positionAlign")}} retorna corretamente um `PositionAlignSetting` enum conforme a especificação; anteriormente ele retornava um `AlignSetting` enum ([Erro do Firefox 1276129](https://bugzil.la/1276129)).
 - A parte de síntese de fala da API Web Speech agora é habilitado por padrão em todos os navegadores desktop ([Erro do Firefox 1268633](https://bugzil.la/1268633)).

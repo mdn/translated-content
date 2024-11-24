@@ -57,7 +57,7 @@ if (
 }
 ```
 
-The {{domxref("Document.exitPointerLock")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events, which you'll see more about below.
+The {{domxref("Document.exitPointerLock")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the [`pointerlockchange`](/ru/docs/Web/Events/pointerlockchange) and [`pointerlockerror`](/ru/docs/Web/Events/pointerlockerror) events, which you'll see more about below.
 
 ```js
 document.exitPointerLock =
@@ -71,7 +71,7 @@ document.exitPointerLock();
 
 ## pointerlockchange event
 
-When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock")}}, {{domxref("Document.exitPointerLock","exitPointerLock")}}, the user pressing the ESC key, etc.—the {{event("pointerlockchange")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock")}}, {{domxref("Document.exitPointerLock","exitPointerLock")}}, the user pressing the ESC key, etc.—the [`pointerlockchange`](/ru/docs/Web/Events/pointerlockchange) event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 if ("onpointerlockchange" in document) {
@@ -99,7 +99,7 @@ function lockChangeAlert() {
 
 ## pointerlockerror event
 
-When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock")}} or {{domxref("Document.exitPointerLock","exitPointerLock")}}, the {{event("pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock")}} or {{domxref("Document.exitPointerLock","exitPointerLock")}}, the [`pointerlockerror`](/ru/docs/Web/Events/pointerlockerror) event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 document.addEventListener("pointerlockerror", lockError, false);
@@ -128,7 +128,7 @@ partial interface MouseEvent {
 > [!NOTE]
 > The movement attributes are currently prefixed as `.mozMovementX` and `.mozMovementY` in Firefox, and`.webkitMovementX` and `.webkitMovementY` in Chrome.
 
-Two new parameters to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{event("mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
+Two new parameters to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent [`mousemove`](/ru/docs/Web/Events/mousemove) events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### Locked state
 

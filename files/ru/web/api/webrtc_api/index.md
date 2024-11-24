@@ -40,7 +40,7 @@ WebRTC является многоцелевым и вместе с [Media Captu
 - {{domxref("RTCIceTransport")}}
   - : Представляет информацию о средстве подключения к Интернету (ICE).
 - {{domxref("RTCPeerConnectionIceEvent")}}
-  - : Представляет события, которые происходят в отношении кандидатов ICE, обычно {{domxref ("RTCPeerConnection")}}. Один тип передаётся данному объекту события: {{event ("icecandidate")}}.
+  - : Представляет события, которые происходят в отношении кандидатов ICE, обычно {{domxref ("RTCPeerConnection")}}. Один тип передаётся данному объекту события: [`icecandidate`](/ru/docs/Web/Events/icecandidate).
 - {{domxref("RTCRtpSender")}}
   - : Управляет кодированием и передачей данных через объект типа {{domxref("MediaStreamTrack")}} для объекта типа {{domxref("RTCPeerConnection")}}.
 - {{domxref("RTCRtpReceiver")}}
@@ -52,7 +52,7 @@ WebRTC является многоцелевым и вместе с [Media Captu
 - {{domxref("RTCDataChannel")}}
   - : Представляет двунаправленный канал данных между двумя узлами соединения.
 - {{domxref("RTCDataChannelEvent")}}
-  - : Представляет события, которые возникают при присоединении объекта типа {{domxref("RTCDataChannel")}} к объекту типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("datachannel")}}.
+  - : Представляет события, которые возникают при присоединении объекта типа {{domxref("RTCDataChannel")}} к объекту типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию [`datachannel`](/ru/docs/Web/Events/datachannel).
 - {{domxref("RTCDTMFSender")}}
   - : Управляет кодированием и передачей двухтональной мультичастотной (DTMF) сигнализацией для объекта типа {{domxref("RTCPeerConnection")}}.
 - {{domxref("RTCDTMFToneChangeEvent")}}
@@ -66,9 +66,9 @@ WebRTC является многоцелевым и вместе с [Media Captu
 - {{domxref("RTCIdentityAssertion")}}
   - : Представляет идентификатор удалённого узла текущего соединения. Если узел ещё не установлен и подтверждён, ссылка на интерфейс вернёт `null`. После установки не изменяется.
 - {{domxref("RTCIdentityEvent")}}
-  - : Представляет объект события объявление идентификатора провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("identityresult")}}.
+  - : Представляет объект события объявление идентификатора провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию [`identityresult`](/ru/docs/Web/Events/identityresult).
 - {{domxref("RTCIdentityErrorEvent")}}
-  - : Представляет объект события ошибки, связанной с провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Два типа ошибки передаются этому событию : {{event("idpassertionerror")}} и {{event("idpvalidationerror")}}.
+  - : Представляет объект события ошибки, связанной с провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Два типа ошибки передаются этому событию : [`idpassertionerror`](/ru/docs/Web/Events/idpassertionerror) и [`idpvalidationerror`](/ru/docs/Web/Events/idpvalidationerror).
 
 ## Руководства
 

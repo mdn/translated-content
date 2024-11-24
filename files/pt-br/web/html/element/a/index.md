@@ -132,7 +132,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
