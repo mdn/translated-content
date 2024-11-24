@@ -35,11 +35,11 @@ O global `EvalError` não contém métodos próprios, no entando, ele irá herda
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods') -->
 
 ## Exemplos
 

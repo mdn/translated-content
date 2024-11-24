@@ -28,7 +28,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row"><br />Elementos-pai permitidos</th>

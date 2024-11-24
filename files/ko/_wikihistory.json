@@ -6931,10 +6931,6 @@
     "modified": "2020-10-15T21:49:15.874Z",
     "contributors": ["devcken"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:49:17.720Z",
-    "contributors": ["jkpark", "devcken"]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-10-15T21:49:19.087Z",
     "contributors": ["jkpark", "devcken"]
@@ -10782,6 +10778,10 @@
   "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
     "modified": "2019-03-18T21:43:18.320Z",
     "contributors": ["jkpark"]
+  },
+  "conflicting/Web/HTTP/Headers": {
+    "modified": "2020-10-15T21:49:17.720Z",
+    "contributors": ["jkpark", "devcken"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",

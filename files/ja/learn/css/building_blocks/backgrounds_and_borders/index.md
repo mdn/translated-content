@@ -2,7 +2,7 @@
 title: 背景と境界線
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+  sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
@@ -45,7 +45,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
         rgb(51 56 57 / 100%) 96%
       )
       center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
+    url(image.png) center no-repeat,
     rebeccapurple;
 }
 ```
@@ -57,20 +57,71 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な [`<color>`](/ja/docs/Web/CSS/color_value) 値を受け入れます。 `background-color` は、要素のコンテンツおよびパディングボックスの下に広がります。
 
 次の例では、さまざまな色の値を使用して、ボックス、見出し、 {{htmlelement("span")}} 要素に背景色を指定しています。
+あなた自身で、利用可能な [`<color>`](/ja/docs/Web/CSS/color_value) を使ってみましょう。
 
-**利用可能な [\<color>](/ja/docs/Web/CSS/color_value) を使ってみましょう。**
+```html live-sample___color
+<div class="box">
+  <h2>背景色</h2>
+  <p>背景の<span>色</span>を変更してみてください。</p>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
+```css live-sample___color
+.box {
+  padding: 0.3em;
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgb(255 255 255 / 50%);
+}
+```
+
+{{EmbedLiveSample("color")}}
 
 ### 背景画像
 
-{{cssxref("background-image")}} プロパティにより、要素の背景に画像を表示することができます。下記の例では、 2 種類のボックスがあります。 1 つはボックスよりも大きな背景画像 ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)) があり、もう一方は単一の星の小さな画像 ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)) があります。
+{{cssxref("background-image")}} プロパティにより、要素の背景に画像を表示することができます。下記の例では、 2 種類のボックスがあります。 1 つはボックスよりも大きな背景画像 ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)) があり、もう一方は単一の星の小さな画像 ([star.png](https://mdn.github.io/shared-assets/images/examples/star.png)) があります。
 
 この例は、背景画像に関する 2 つのことを示しています。既定では、大きな画像はボックスに収まるように縮小されず、一部分のみが表示されます。いっぽう、小さな画像はボックスの内側いっぱいまで繰り返されます。この場合、実際の画像は星 1 個のみです。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
+```html live-sample___background-image
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
 
-**背景画像と背景色を同時に指定すると、背景色より手前に背景画像が表示されます。上記の例に `background-color` プロパティを追加して、動作を確認してみましょう。**
+```css live-sample___background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+}
+
+.b {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+}
+```
+
+{{EmbedLiveSample("background-image")}}
+
+背景画像と背景色を同時に指定すると、背景色より手前に背景画像が表示されます。
+上記の例に `background-color` プロパティを追加して、動作を確認してみましょう。
 
 #### 背景画像の繰り返しの指定
 
@@ -80,23 +131,45 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 - `repeat-x` — 水平方向に繰り返します。
 - `repeat-y` — 垂直方向に繰り返します。
 - `repeat` — 既定値です。両方の方向に繰り返します。
+- `space` — 可能な限り何度も繰り返し、利用できる空間があれば、画像と画像の間に空間を加えます。
+- `round` — `space` に似ていますが、余分な空間を埋めるように画像を伸ばします。
 
-**以下の例でこれらの値を試してみましょう。値を`no-repeat`に設定したため、星が 1 つだけ表示されます。異なる値(`repeat-x`や`repeat-y`)に変えてみて、その効果を確認してみましょう。**
+以下の例でこれらの値を試してみましょう。値を `no-repeat` に設定したため、星が 1 つだけ表示されます。異なる値（`repeat-x` や `repeat-y`）に変えてみて、その効果を確認してみましょう。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
+```html live-sample___repeat
+<div class="box"></div>
+```
+
+```css hidden live-sample___repeat
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
+```css live-sample___repeat
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("repeat")}}
 
 #### 背景画像のサイズ指定
 
-先ほどの例では、背景を設定したい要素より画像のほうが大きいため画像の一部しか表示されませんでした。 {{cssxref("background-size")}} プロパティを使用して、背景内に収まるように画像のサイズを調整できます。 `background-size` プロパティは、 {{cssxref("length")}} または {{cssxref("percentage")}} の値をとることができます。
+最初の背景画像の例で使用した _balloons.jpg_ の画像は、背景となる要素よりも大きいためにトリミングされた大きな画像です。この用途では、 {{cssxref("background-size")}} プロパティを使用することができます。このプロパティは、 {{cssxref("length")}} または {{cssxref("percentage")}} 値を導くことができ、背景内に収まるように画像のサイズを調整します。
 
 また、次のキーワードを使うこともできます。
 
-- `cover` —ブラウザーは、アスペクト比を維持したままボックスの領域を完全に覆うように画像の大きさを調整します。
+- `cover` — ブラウザーは、{{glossary("aspect ratio","アスペクト比")}}を維持したままボックスの領域を完全に覆うように画像の大きさを調整します。
   この場合、画像の一部が箱の外に出る可能性があります。
-- `contain` —ブラウザーは、画像がボックス内にちょうど収まるように画像の大きさを調整します。
-  この場合、画像とボックスのアスペクト比が異なる場合、画像の左右または上下に隙間ができる可能性があります。
+- `contain` — ブラウザーは、画像がボックス内にちょうど収まるように画像の大きさを調整します。この場合、画像とボックスのアスペクト比が異なる場合、画像の左右または上下に隙間ができる可能性があります。
 
-下記の例では、 _balloons.jpg_ の画像を長さ単位と共に使用して、ボックス内のサイズにしました。これにより、画像が歪んでいるのがわかります。
+下記の例では、 _balloons.jpg_ の画像を長さの単位と共に使用して、ボックス内に収まるサイズにしました。これにより、画像が歪んでいるのがわかります。
 
 以下を試してみましょう。
 
@@ -104,7 +177,29 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 - 長さの単位を削除し、 `background-size: cover` や `background-size: contain` を使うとどうなるかを確認しましょう。
 - 画像がボックスより小さい場合は、 `background-repeat` の値を変更すると画像を繰り返すことができます。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+```html live-sample___size
+<div class="box"></div>
+```
+
+```css hidden live-sample___size
+.box {
+  width: 500px;
+  height: 100px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+```
+
+```css live-sample___size
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-repeat: no-repeat;
+  background-size: 80px 10em;
+}
+```
+
+{{EmbedLiveSample("size")}}
 
 #### 背景画像の位置の指定
 
@@ -119,7 +214,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -129,7 +224,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -139,7 +234,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px top;
 }
@@ -149,27 +244,88 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
 ```
 
-**次の例を使い、プロパティの値を変えてボックス内で星を動かしてみましょう。**
+次の例を使い、プロパティの値を変えてボックス内で星を動かしてみましょう。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-> **メモ:** `background-position` は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。
+```css hidden live-sample___position
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
 
-### グラデーション背景
+```css live-sample___position
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+  background-position: 120px 1em;
+}
+```
+
+{{EmbedLiveSample("position")}}
+
+> [!NOTE]
+> 一括指定の `background-position` を {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の代わりに使用して、それぞれの座標軸の方向の位置を個別に設定することができます。
+
+### グラデーションの背景
 
 グラデーション (gradient) は、背景に使用する場合には画像と同じようにふるまいます。グラデーションは {{cssxref("background-image")}} プロパティを使用して設定されます。
 
-[`<gradient>`](/ja/docs/Web/CSS/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば[これ](https://cssgradient.io/)を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
+[`<gradient>`](/ja/docs/Web/CSS/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば [CSSGradient.io](https://cssgradient.io/) を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
 
 以下の例でいろいろなグラデーションを試してみましょう。 1 つめのボックスには、ボックス全体に広がる線形グラデーション (linear gradient) を指定しています。2 つめのボックスには、サイズを設定して（そのため繰り返されている）放射グラデーション (radial gradient) を指定しています。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
+```html live-sample___gradients
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+```css live-sample___gradients
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 400px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: linear-gradient(
+    105deg,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+}
+
+.b {
+  background-image: radial-gradient(
+    circle,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+  background-size: 100px 50px;
+}
+```
+
+{{EmbedLiveSample("gradients")}}
 
 ### 複数の背景画像
 
@@ -191,11 +347,36 @@ background-position:
   top right;
 ```
 
-プロパティに指定した複数のプロパティ値は、他のプロパティの同じ位置にある値と対応します。上の例で、`image1`の`background-repeat`値は`no-repeat`です。では、プロパティごとに値の個数が異なるとどうなるでしょうか？答えは、個数が少ない値が繰り返し使われる、ということです。上の例では、4 つの背景画像がありますが、2 つの `background-position` の値しかありません。最初の 2 つの位置の値は対応する位置の画像に適用され、その後は繰り返されます。つまり、`image3`には 1 番目、`image4`には 2 番目の値がふたたび使われます。
+プロパティに指定した複数のプロパティ値は、他のプロパティの同じ位置にある値と対応します。上の例で、`image1` の `background-repeat` 値は `no-repeat` です。では、プロパティごとに値の個数が異なるとどうなるでしょうか？答えは、個数が少ない値が繰り返し使われる、ということです。上の例では、 4 つの背景画像がありますが、 2 つの `background-position` の値しかありません。最初の 2 つの位置の値は対応する位置の画像に適用され、その後は繰り返されます。つまり、 `image3` には 1 番目、`image4`には 2 番目の値がふたたび使われます。
 
-**実際に試してみましょう。以下の例には 2 つの画像があります。重ね合わせの順序を確かめるために、どの背景画像を先にするかを変えてみてください。また、他のプロパティを操作して、位置、サイズ、繰り返し方法を変えてみてください。**
+実際に試してみましょう。以下の例には 2 つの背景画像があります。重ね合わせの順序を確かめるために、どの背景画像を先にするかを変えてみてください。また、他のプロパティを操作して、位置、サイズ、繰り返し方法を変えてみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
+```html live-sample___multiple-background-image
+<div class="wrapper">
+  <div class="box"></div>
+</div>
+```
+
+```css live-sample___multiple-background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+}
+```
+
+{{EmbedLiveSample("multiple-background-image")}}
 
 ### スクロール時の背景画像の固定
 
@@ -221,18 +402,40 @@ background-position:
 
 すべての注意点を確認するには、 {{cssxref("background")}} の MDN ページをご覧ください。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 900)}}
+```html live-sample___background
+<div class="box"></div>
+```
+
+```css live-sample___background
+.box {
+  width: 500px;
+  height: 300px;
+  padding: 0.5em;
+  background:
+    linear-gradient(
+        105deg,
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
+      no-repeat,
+    rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("background", "", "320px")}}
 
 ### 背景についてのアクセシビリティの考慮
 
-テキストを背景画像や背景色の上に配置する際には、閲覧者がテキストを読み取れるだけの十分なコントラストを確保するよう注意する必要があります。画像の上にテキストを配置する場合は、画像が読み込まれない場合でもテキストが読み取れるような背景色も指定する必要があります。
+テキストを背景画像や背景色の上に配置する際には、閲覧者がテキストを読み取れるだけの十分な[コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)を確保するよう注意する必要があります。画像の上にテキストを配置する場合は、画像が読み込まれない場合でもテキストが読み取れるような背景色も指定する必要があります。
 
 スクリーンリーダーは背景画像を解釈できないため、画像は装飾としての役割のみを担うべきです。重要なコンテンツはすべて HTML ページの中で表現するべきで、背景画像の中に含めるべきではありません。
 
 ## 境界線
 
 ボックスモデルについて学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。
-通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、スタイルを指定する一括指定プロパティを使います。
+通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/line-style)を指定する一括指定プロパティを使います。
 
 {{cssxref("border")}} を使用して、ボックスの 4 辺すべてに境界線を設定できます。
 
@@ -250,7 +453,7 @@ background-position:
 }
 ```
 
-一括指定で指定した個々のプロパティは次のとおりです。
+個々のプロパティには一括指定の {{cssxref("border-width")}}、{{cssxref("border-style")}}、{{cssxref("border-color")}} プロパティがあります。
 
 ```css
 .box {
@@ -260,7 +463,7 @@ background-position:
 }
 ```
 
-一辺ごとの個別指定については次のようになります。
+4 つの辺それぞれに幅、スタイル、色の個別指定プロパティがあります。
 
 ```css
 .box {
@@ -271,11 +474,36 @@ background-position:
 ```
 
 > [!NOTE]
-> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた*論理*プロパティ (_logical_ property) が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)に応じたこれらの方法を探ります。
+> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)に応じたこれらの方法を探ります。
 
 境界線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる境界線スタイルを使用しています。境界線の色、幅、スタイルを試して、境界線の動作を確認しましょう。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
+```html live-sample___borders
+<div class="box">
+  <h2>境界線</h2>
+  <p>境界線を変更してみましょう。</p>
+</div>
+```
+
+```css live-sample___borders
+* {
+  padding: 0.2em;
+}
+.box {
+  width: 500px;
+  background-color: #567895;
+  border: 5px solid #0b385f;
+  border-bottom-style: dashed;
+  color: #fff;
+}
+
+h2 {
+  border-top: 2px dotted rebeccapurple;
+  border-bottom: 1em double rgb(24 163 78);
+}
+```
+
+{{EmbedLiveSample("borders", "", "200px")}}
 
 ### 角の丸め
 
@@ -289,7 +517,7 @@ background-position:
 }
 ```
 
-または、右上角の水平方向の半径を 1em、垂直方向の半径を 10% にするには次のようにします。
+または、右上角の水平方向の半径を `1em`、垂直方向の半径を 10% にするには次のようにします。
 
 ```css
 .box {
@@ -297,9 +525,30 @@ background-position:
 }
 ```
 
-以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。
+> [!NOTE]
+> 上記の境界線プロパティと同様に、これらの border-radius プロパティも割り当てられた[論理的 border-radius プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)もあります。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
+以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。[境界角丸ジェネレーター](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)を使用して、角丸値を出力することができます。
+
+```html live-sample___corners
+<div class="box">
+  <h2>境界線</h2>
+  <p>境界線を変更してみましょう。</p>
+</div>
+```
+
+```css live-sample___corners
+.box {
+  width: 500px;
+  height: 110px;
+  padding: 0.5em;
+  border: 10px solid rebeccapurple;
+  border-radius: 1em;
+  border-top-right-radius: 10% 30%;
+}
+```
+
+{{EmbedLiveSample("corners")}}
 
 ## スキルテスト
 
@@ -307,7 +556,7 @@ background-position:
 
 ## まとめ
 
-このレッスンではかなり多くのことを説明してきましたが、そのなかで背景や境界線をボックスに追加する方法がたくさんあることがわかりました。これまでに説明した機能について詳しく知りたくなったら、各プロパティの MDN ページに目を通してみましょう。これらのページには知識を活用したり強化したりするための使用例が書かれています。
+ここでかなり多くのことを取り上げましたが、ボックスに背景や境界線を追加するにはかなり多くのことがあることがお分かりいただけたと思います。ここで説明した機能についてもっと知りたければ、さまざまなプロパティのページを探してみてください。 MDN でほとんどすべてのページに、知識を深めるために試してみる例があります。
 
 次のレッスンでは、文書の書字方向が CSS とどのように相互作用するかを説明します。テキストが左から右以外の方向に流れる場合に何が起こるのでしょうか？
 
