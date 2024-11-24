@@ -123,7 +123,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
     - {{cssxref("::slotted")}}: Corresponde a qualquer conteúdo inserido naquele slot.
 
-- O evento {{event("slotchange")}}
+- O evento [`slotchange`](/pt-BR/docs/Web/Events/slotchange)
   - : Disparado em uma instância {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) quando há mudança no nó(s) contido naquele slot.
 
 ## Exemplos

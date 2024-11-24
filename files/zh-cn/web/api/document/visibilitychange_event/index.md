@@ -1,6 +1,8 @@
 ---
 title: Document：visibilitychange 事件
 slug: Web/API/Document/visibilitychange_event
+l10n:
+  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
 {{APIRef}}
@@ -25,9 +27,9 @@ onvisibilitychange = (event) => {};
 
 ## 使用说明
 
-该事件不包括文档的更新的可见性状态，但是你可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
+该事件不包括文档的更新可见性状态，但是你可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
 
-当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就会触发，其 `visibilityState` 为 `hidden`。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
+当用户导航到新页面、切换标签页、关闭标签页、最小化或关闭浏览器，或者在移动设备上从浏览器切换到不同的应用程序时，该事件就以 `visibilityState` 为 `hidden` 的状态触发。过渡到 `hidden` 是页面能可靠观察到的最后一个事件，因此开发人员应将其视为用户会话的可能结束（例如，用于[发送分析数据](/zh-CN/docs/Web/API/Navigator/sendBeacon)）。
 
 向 `hidden` 过渡也是页面停止用户界面更新和停止用户不想在后台运行的任何任务的好时机。
 
@@ -35,14 +37,20 @@ onvisibilitychange = (event) => {};
 
 ### 在文档转向隐藏状态时暂停音乐
 
-本示例在文档可见时开始播放音乐曲目，在文档不再可见时暂停音乐。
+本示例的音频在页面隐藏时暂停播放，在页面再次可见时恢复播放。
+
+有关完整示例，参见[页面可见性 API：在页面隐藏时暂停音频](/zh-CN/docs/Web/API/Page_Visibility_API#在页面隐藏时暂停音频)文档。
 
 ```js
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
-    backgroundMusic.play();
+  if (document.hidden) {
+    playingOnHide = !audio.paused;
+    audio.pause();
   } else {
-    backgroundMusic.pause();
+    // 如果音频处于“隐藏播放”，则恢复播放。
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
@@ -71,5 +79,6 @@ document.onvisibilitychange = () => {
 
 - [页面可见性 API](/zh-CN/docs/Web/API/Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
 - [使用页面可见性，不丢失用户和应用程序状态](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)详细解释了为什么应该使用 `visibilitychange`，而不是 `beforeunload`/`unload`。
 - [页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指导。

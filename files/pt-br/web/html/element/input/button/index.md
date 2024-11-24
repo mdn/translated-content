@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input/button
 
 {{HTMLSidebar}}
 
-Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
+Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento [`click`](/pt-BR/docs/Web/API/Element/click_event)).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
@@ -24,7 +24,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("click")}}</td>
+      <td>[`click`](/pt-BR/docs/Web/API/Element/click_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
@@ -68,7 +68,7 @@ Elementos `<input type="button">` não possuem comportamento padrão (seu primos
 
 ### Um simples botão
 
-Nós iremos começar criando um simples botão com um evento {{event("click")}} que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
+Nós iremos começar criando um simples botão com um evento [`click`](/pt-BR/docs/Web/API/Element/click_event) que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
 
 ```html
 <form>
@@ -94,7 +94,7 @@ function updateButton() {
 }
 ```
 
-O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento {{event("click")}} for executado no botão.
+O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) for executado no botão.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 

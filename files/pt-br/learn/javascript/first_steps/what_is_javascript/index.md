@@ -89,7 +89,7 @@ O núcleo da linguagem JavaScript consiste em alguns benefícios comuns da progr
 
 - Armazenar conteúdo útil em variáveis. No exemplo acima, a propósito, nós pedimos que um novo nome seja inserido e armazenamos o nome em uma variável chamada `nome`.
 - Operações com pedaços de texto (conhecidos como "strings" em programação). No exemplo acima, nós pegamos a string "Jogador 1: " e concatenamos (juntamos) com a variável `nome` para criar o texto completo "Jogador 1: Chris".
-- Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o {{Event("click")}} no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.
+- Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o [`click`](/pt-BR/docs/Web/API/Element/click_event) no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.
 - E muito mais!
 
 O que é ainda mais empolgante é a funcionalidade construída no topo do núcleo da linguagem JavaScript. As APIs (Application Programming Interfaces - Interface de Programação de Aplicativos) proveem a você superpoderes extras para usar no seu código JavaScript.

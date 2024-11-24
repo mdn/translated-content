@@ -289,7 +289,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    window.onload = function () {};
    ```
 
-   We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's {{event("load")}} event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
+   We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's [`load`](/pt-BR/docs/Web/API/Window/load_event) event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
 
 3. Inside the `window.onload` handler, add the following:
 

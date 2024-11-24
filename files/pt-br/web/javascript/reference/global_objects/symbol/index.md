@@ -104,11 +104,11 @@ Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
 
 ### Propriedades
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties') -->
 
 ### Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods') -->
 
 ## Exemplos
 

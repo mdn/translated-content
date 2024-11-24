@@ -2,7 +2,7 @@
 title: ヘッド部には何が入る? HTML のメタデータ
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
-  sourceCommit: ec8d5627e822d866f350d9d8c06f0df58948015e
+  sourceCommit: 27a7cd721d227deb47b8b6837d8eba0a0ae06ffb
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -186,7 +186,7 @@ and HTML Apps." />
 
 ![MDN ホームページのオープングラフプロトコルデータを facebook で表示し、画像、タイトル、説明文を表示しています。](facebook-output.png)
 
-## サイトに自分の好きなアイコンをつける
+## サイトに自分の好きなアイコンを追加
 
 もっとサイトデザインを豊かにするために、メタデータにカスタムアイコンを追加して、特定のコンテキストで表示されるようにすることができます。このうち最もよく使われるものが **ファビコン** （ブラウザーの「お気に入り」や「ブックマーク」の一覧を指すために使われる "favorites icon" の略）です。
 
