@@ -25,7 +25,7 @@ l10n:
 
 ## Примеры
 
-- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+- [Простое демо на языке PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Спецификации
 
@@ -40,8 +40,8 @@ l10n:
 - [EventSource polyfill для Node.js](https://github.com/EventSource/eventsource)
 - [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js) от Remy Sharp
 - [EventSource polyfill](https://github.com/Yaffle/EventSource) от Yaffle
-- [jquery plugin](https://github.com/rwaldron/jquery.eventsource) от Rick Waldron
-- intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
+- [Плагин для jQuery](https://github.com/rwaldron/jquery.eventsource) от Rick Waldron
+- intercooler.js [поддержка декларативных SSE](https://intercoolerjs.org/docs.html#sse)
 
 ### Связанные темы
 
