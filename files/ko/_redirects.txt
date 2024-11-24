@@ -711,6 +711,7 @@
 /ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ko/docs/Web/HTTP/MIME_types/Common_types
 /ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ko/docs/Web/HTTP/MIME_types/Common_types
 /ko/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/ko/docs/Web/URI/Schemes/resource
+/ko/docs/Web/HTTP/Headers/Accept-Charset	/ko/docs/conflicting/Web/HTTP/Headers
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
 /ko/docs/Web/HTTP/Resources_and_URIs	/ko/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
