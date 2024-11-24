@@ -27,7 +27,7 @@ El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado
     </tr>
     <tr>
       <th>Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th>Elementos padre permitidos</th>

@@ -32,7 +32,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         <code><a href="/zh-CN/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>支持的字符集列表。</td>
+      <td>字符集，必须为 <code>"UTF-8"</code>（如果提供）。</td>
     </tr>
     <tr>
       <td>

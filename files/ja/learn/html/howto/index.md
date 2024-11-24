@@ -73,7 +73,7 @@ HTMLは文書構造を設定するだけです。表示に関する課題を解�
 
 ### データ表現
 
-- 数値とコード値を HTML で表現する方法 - [上付き文字と下付き文字](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting##上付きと下付き)、および[コンピューターのコードの表現](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#コンピューターのコードを表現する)を参照してください
+- 数値とコード値を HTML で表現する方法 - [上付き文字と下付き文字](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#上付きと下付き)、および[コンピューターのコードの表現](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#コンピューターのコードを表現する)を参照してください
 - [データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
 
 ### 上級のテキスト意味づけ

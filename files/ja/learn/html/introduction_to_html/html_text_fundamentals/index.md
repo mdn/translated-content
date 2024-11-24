@@ -2,7 +2,7 @@
 title: HTML テキストの基礎
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 l10n:
-  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
+  sourceCommit: baac7f2a43813a7930ff97b11d9c38b413f97c78
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -198,12 +198,12 @@ window.addEventListener("load", updateCode);
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -265,13 +265,15 @@ textarea.onkeyup = function () {
 
 ## リスト
 
-さて、リストに目を向けてみましょう。リストは生活のあらゆる場所にあります。買い物のリストから、自分の家にたどり着くために意識することなく毎日従っている経路のリスト、このチュートリアルであなたが見ている説明のリストまであります。ウェブ上にもリストはどこにでもあり、気にかけるものに応じて、3 種類が用意されています。
+さて、リストに目を向けてみましょう。リストは生活のあらゆる場所にあります。買い物のリストから、自分の家にたどり着くために意識することなく毎日従っている経路のリスト、このチュートリアルであなたが見ている説明のリストまであります。ウェブでは、リストの種類が 3 つあります。順序なしリスト、順序付きリスト、説明リストです。
+
+順序なしリストと順序つきリストはよく使われるもので、この章で説明します。説明リストはさほど一般的に使われるものではないため、[高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)の章で説明します。
 
 ### 順序なし
 
 順序なしリストは、買い物リストに使うときのように、項目の並びに関係がないものについてマークアップするときに使います。
 
-```
+```plain
 milk
 eggs
 bread
@@ -392,12 +394,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -439,7 +441,7 @@ textarea.onkeyup = () => {
 
 順序付きリストは、以下のような一連の指示のように、項目に順序があるリストのことです。
 
-```
+```plain
 Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
@@ -552,12 +554,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -715,12 +717,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -838,6 +840,8 @@ HTML では、このようなインスタンスをマークアップするため
 <p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
 ```
 
+{{EmbedLiveSample('Strong importance')}}
+
 ### アクティブラーニング: 重要性を付け加えましょう
 
 このアクティブラーニングセクションでは、編集可能な例を示しました。その中で、それらを必要としていると思う言葉に強調と強い重要性を付け加えてみてください。
@@ -933,12 +937,12 @@ window.addEventListener("load", updateCode);
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -978,7 +982,7 @@ textarea.onkeyup = () => {
 
 ### イタリック、太字、下線
 
-これまで説明してきた要素には、明確な意味があります。{{htmlelement("b")}}、{{htmlelement("i")}}、{{htmlelement("u")}} の状況はやや複雑です。CSS がまだ十分に対応されていないか、まったく対応されていなかった時代に、太字、斜体、下線付きのテキストを書くことができるように作られたものです。このような要素は表示にのみ影響を与え、意味には影響を与えない**表示要素**として知られていますが、もはや使用するべきではありません。これまで見てきたように、セマンティクスはアクセシビリティ、SEO などにとって非常に重要だからです。
+これまで説明してきた要素には、明確に関連付けられた意味があります。{{htmlelement("b")}}、{{htmlelement("i")}}、{{htmlelement("u")}} の状況はやや複雑です。CSS がまだ十分に対応されていないか、まったく対応されていなかった時代に、太字、斜体、下線付きのテキストを書くことができるように作られたものです。このような要素は表示にのみ影響を与え、意味には影響を与えない**表示要素**として知られていますが、もはや使用するべきではありません。これまで見てきたように、セマンティクスはアクセシビリティ、SEO などにとって非常に重要だからです。
 
 HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味的な役割で再定義されました。
 
@@ -992,6 +996,8 @@ HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味
 
 > [!NOTE]
 > 人々は下線をハイパーリンクと強く関連付けています。したがって、ウェブ上では、リンクのみに下線を引くのが最善です。ウェブ上では、意味的に適切な場合は `<u>` 要素を使用しますが、 CSS を使用して既定の下線をより適切なものに変更することを検討してください。以下の例はその方法を示しています。
+
+<!-- cSpell:ignore spel -->
 
 ```html
 <!-- scientific names -->
@@ -1019,12 +1025,14 @@ HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味
 </dl>
 ```
 
-## スキルをテストしましょう
+{{EmbedLiveSample('Italic, bold, underline…','100%','270')}}
+
+## スキルテスト
 
 この記事の最後にたどり着きましたが、最も重要な情報を覚えていますか？次に移動する前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります - [スキルのテスト: HTML テキストの基本](/ja/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics) をご覧ください。
 
 ## まとめ
 
-今回はここまでです。この記事で、 HTML でテキストをマークアップし始めるためのよい考えが得られ、この領域で最も重要な要素のいくつかを保有するようになったはずです。この領域には、さらに多くの意味的要素があり、このコースの後半にある[高度な書式化](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)の記事で、さらに多くのことを見ていきます。次の記事では、おそらくウェブで最も重要な要素である[ハイパーリンクを作成する](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)方法について詳しく見ていくことにします。
+今回はここまでです。この記事では、 HTML でテキストのマークアップを始めるにはどうすればよいか、よい考えが得られたはずですし、この分野で最も重要な要素のいくつかをご紹介しました。この領域には、さらに多くの意味的要素があり、このコースの後半にある[高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)の記事で、さらに多くのことを見ていきます。次の記事では、おそらくウェブで最も重要な要素である[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)方法について詳しく見ていくことにします。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
