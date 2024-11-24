@@ -37,9 +37,9 @@ l10n:
 
 - [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks/)
 - [Transmit: a native opinionated Server-Sent-Event (SSE) module built for AdonisJS](https://docs.adonisjs.com/guides/digging-deeper/transmit)
-- [EventSource polyfill для Node.js](https://github.com/EventSource/eventsource)
-- [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js) от Remy Sharp
-- [EventSource polyfill](https://github.com/Yaffle/EventSource) от Yaffle
+- [Полифил EventSource для Node.js](https://github.com/EventSource/eventsource)
+- [Полифил EventSource](https://github.com/remy/polyfills/blob/master/EventSource.js) от Remy Sharp
+- [Полифил EventSource](https://github.com/Yaffle/EventSource) от Yaffle
 - [Плагин для jQuery](https://github.com/rwaldron/jquery.eventsource) от Rick Waldron
 - intercooler.js [поддержка декларативных SSE](https://intercoolerjs.org/docs.html#sse)
 
