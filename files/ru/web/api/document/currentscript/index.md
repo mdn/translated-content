@@ -7,10 +7,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-Свойство **`Document.currentScript`** возвращает элемент {{HTMLElement("script")}} код которого в данный момент выполняется и [не является модулем JavaScript](https://github.com/whatwg/html/issues/997).
+Свойство **`Document.currentScript`** возвращает элемент {{HTMLElement("script")}}, код которого в данный момент выполняется и [не является модулем JavaScript](https://github.com/whatwg/html/issues/997).
 Для модулей необходимо использовать [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta).
 
-Важно отметить, что ссылка на элемент {{HTMLElement("script")}} будет присутствовать только во время первоначального исполнения скрипта. Иными словами, если код в скрипте вызывается как колбэк или обработчик события, то `Document.currentScript` будет равен `null`.
+Важно отметить, что ссылка на элемент {{HTMLElement("script")}} будет присутствовать только во время первоначального исполнения скрипта. Иными словами, если код в скрипте вызывается как функция обратного вызова или обработчик события, то `Document.currentScript` будет равен `null`.
 
 ## Значение
 
