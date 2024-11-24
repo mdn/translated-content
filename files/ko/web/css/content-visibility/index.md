@@ -111,16 +111,14 @@ section {
 
 ```html
 <div class="hidden">
-  <button class="toggle">Show</button>
+  <button class="toggle">보이기</button>
   <p>
-    This content is initially hidden and can be shown by clicking the button.
+    이 콘텐츠는 처음에는 숨겨진 상태이며 버튼을 클릭하여 표시할 수 있습니다.
   </p>
 </div>
 <div class="visible">
-  <button class="toggle">Hide</button>
-  <p>
-    This content is initially visible and can be hidden by clicking the button.
-  </p>
+  <button class="toggle">숨기기</button>
+  <p>이 콘텐츠는 처음에는 보이는 상태이며 버튼을 클릭하여 숨길 수 있습니다.</p>
 </div>
 ```
 
@@ -173,15 +171,15 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 ```html
 <p>
-  Click anywhere on the screen or press any key to toggle the
-  <code>&lt;div&gt;</code> content between hidden and showing.
+  화면의 아무 곳이나 클릭하거나 아무 키나 눌러
+  <code>&lt;div&gt;</code> 콘텐츠를 숨기거나 표시합니다.
 </p>
 
 <div>
-  This is a <code>&lt;div&gt;</code> element that animates between
-  <code>content-visibility: hidden;</code>and
-  <code>content-visibility: visible;</code>. We've also animated the text color
-  to create a smooth animation effect.
+  이것은 <code>&lt;div&gt;</code> 요소로,
+  <code>content-visibility: hidden;</code>과
+  <code>content-visibility: visible;</code> 사이를 애니메이션합니다. 또한
+  부드러운 애니메이션 효과를 위해 텍스트 색상에도 애니메이션을 적용했습니다.
 </div>
 ```
 
@@ -278,4 +276,4 @@ function showHide() {
 - [CSS Containment](/ko/docs/Web/CSS/CSS_containment)
 - [`contain-intrinsic-size`](/ko/docs/Web/CSS/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)
+- [콘텐츠 가시성: 렌더링 성능을 향상시키는 새로운 CSS 속성](https://web.dev/articles/content-visibility?hl=ko) (web.dev)
