@@ -1,16 +1,13 @@
 ---
-title: Идентификация ресурсов в Вебе
-slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+title: URI
+slug: Web/URI
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/ru/docs/Web/URI")}}
 
-"Объект" (или "цель") HTTP-запроса называется "ресурс", чья природа может быть разной: фото, документ, или что-либо ещё. Каждый ресурс идентифицируется с помощью унифицированного идентификатора ресурса ({{Glossary("URI")}}) используемого повсюду в HTTP для идентификации ресурсов.
+**Uniform Resource Identifiers (URI)** используются для идентификации «ресурсов» в Интернете. Обычно они используются в качестве целей запросов [HTTP](/ru/docs/Web/HTTP), в таком случае URI представляет местоположение физического ресурса, такого как документ, фотография, двоичные данные и т.д. URI также могут использоваться для других действий, например, открытия почтового клиента, отправки текстовых сообщений или выполнение JavaScript, при использовании в других местах, таких как атрибут [`href`](/ru/docs/Web/HTML/Element/a#href) HTML-ссылки `<a>`.
 
-Обычно чтобы описать конкретный ресурс (его имя) и его местоположение в Вебе, используется всего один URL (Uniform Resource Locator - Унифицированный локатор ресурса, вид URI, его ещё называют _веб-адресом_). Можно добавить, что иногда с помощью специального заголовка {{HTTPHeader("Alt-Svc")}} в ответе на запрос можно попросить клиента перезапросить ресурс с другой локации.
-
-## URLы и URNы
+## URL и URN
 
 ### URL
 
@@ -53,7 +50,7 @@ urn:ietf:rfc:7230
 
 | Схема       | Описание                                                                   |
 | ----------- | -------------------------------------------------------------------------- |
-| data        | [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)                    |
+| data        | [Data URIs](/ru/docs/Web/URI/Schemes/data)                                 |
 | file        | Доступ к файлам на локальном компьютере                                    |
 | ftp         | [File Transfer Protocol](/ru/docs/Glossary/FTP) (протокол передачи файлов) |
 | http/https  | [Hyper text transfer protocol (Secure)](/ru/docs/Glossary/HTTP)            |
@@ -114,5 +111,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## Читайте также
 
-- [Что такое URL?](/ru/docs/Learn/Common_questions/What_is_a_URL)
-- [Список URI-схем IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Что такое URL?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Список URI-схем IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
