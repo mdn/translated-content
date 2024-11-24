@@ -26,7 +26,7 @@ Il existe de nombreux autres attributs&nbsp;:
 
 Le standard HTML n'indique pas les formats d'image qui doivent être pris en charge, les agents utilisateurs peuvent prendre en charge différents formats.
 
-> [!NOTE] > [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
+> [!NOTE] [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
 
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
