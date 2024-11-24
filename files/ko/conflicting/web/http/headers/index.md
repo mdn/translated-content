@@ -1,6 +1,7 @@
 ---
 title: Accept-Charset
-slug: Web/HTTP/Headers/Accept-Charset
+slug: conflicting/Web/HTTP/Headers
+original_slug: Web/HTTP/Headers/Accept-Charset
 ---
 
 {{HTTPSidebar}}
