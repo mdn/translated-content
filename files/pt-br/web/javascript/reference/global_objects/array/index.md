@@ -157,21 +157,21 @@ Todas as instâncias de `Array` herdam de [`Array.prototype`](/pt-BR/docs/JavaSc
 
 ### Propriedades
 
-{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties') }}
+<!-- TODO: page macro not supported:  page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties')  -->
 
 ### Métodos
 
 #### Métodos modificadores
 
-{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods') }}
+<!-- TODO: page macro not supported:  page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods')  -->
 
 #### Métodos de acesso
 
-{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods') }}
+<!-- TODO: page macro not supported:  page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods')  -->
 
 #### Métodos de iteração
 
-{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods') }}
+<!-- TODO: page macro not supported:  page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods')  -->
 
 ## Métodos genéricos de `Array`
 

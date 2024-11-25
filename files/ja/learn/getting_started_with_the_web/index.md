@@ -2,12 +2,12 @@
 title: ウェブ入門
 slug: Learn/Getting_started_with_the_web
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
 
 {{LearnSidebar}}
 
-*ウェブ入門*は、ウェブ開発の実用性を紹介する簡潔なシリーズです。簡単なウェブページを構築するために必要なツールをセットアップし、簡単なコードを書いたら、実際にウェブに公開します。
+「ウェブ入門」は、ウェブ開発の実用性を紹介する簡潔なシリーズです。簡単なウェブページを構築するために必要なツールをセットアップし、簡単なコードを書いたら、実際にウェブに公開します。
 
 ## 最初のウェブサイトの物語
 
@@ -50,5 +50,9 @@ l10n:
 
 ## 関連情報
 
-- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): ウェブの基本を説明した素晴らしい動画のシリーズで、完全な初心者がウェブ開発できるようにするためのものです。 [Jérémie Patonnier](https://twitter.com/JeremiePat) 作。
-- [ウェブとウェブ標準](/ja/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): この記事では、ウェブの役立つ背景 — どうやってできたのか、ウェブ標準技術とはなにか、どう連携させるか、「ウェブ開発者」がなぜ素晴らしいキャリアであるか、この過程を通じてどんなベストプラクティスが学習できるか — を提供します。
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) のフロントエンド開発者キャリアパスは、楽しい対話型のレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを教えてくれます。ゼロから最初のフロントエンドの仕事に就くまで。このコースの多くの部分は、無料版として単独で利用できます。
+- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
+  - : ウェブの基本を説明した素晴らしい動画のシリーズで、完全な初心者がウェブ開発できるようにするためのものです。 [Jérémie Patonnier](https://twitter.com/JeremiePat) 作。
+- [ウェブとウェブ標準](/ja/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards)
+  - : この記事では、ウェブの役立つ背景 — どうやってできたのか、ウェブ標準技術とはなにか、どう連携させるか、「ウェブ開発者」がなぜ素晴らしいキャリアであるか、この過程を通じてどんなベストプラクティスが学習できるか — を提供します。

@@ -245,7 +245,7 @@ O Chrome não dispara o `keypress`evento para atalhos de teclado conhecidos ( [r
 
 ## Eventos Relacionados
 
-- {{event ("keydown")}}
-- {{event ("keyup")}}
-- {{event ("keypress")}}
-- {{event ("input")}}
+- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
+- [`keyup`](/pt-BR/docs/Web/Events/keyup)
+- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)

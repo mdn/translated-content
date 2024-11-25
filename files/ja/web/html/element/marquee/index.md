@@ -2,12 +2,14 @@
 title: "<marquee>: マーキー要素"
 slug: Web/HTML/Element/marquee
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 1ebd589beda22afac79cde3cb8601061d1ce3798
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}
 
 **`<marquee>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。
+
+HTML の `<marquee>` 要素は非推奨であり、使用は極力避けるべきです。 テキストや連続する要素をスクロールさせる必要がある場合は、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)と組み合わせて `<marquee>` 要素の代わりに使用すると、コンテンツをスムーズにアニメーションできますので、こちらを検討してください。さらに、 CSS の {{cssxref("@media")}} で [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) クエリーを含めることで、ユーザーの好みに応じてアニメーションを停止できるようにすると、使いやすさとアクセシビリティの改善につながります。
 
 ## 属性
 
@@ -33,22 +35,6 @@ l10n:
   - : 垂直方向のマージンをピクセル値かパーセント値で指定します。
 - `width` {{Deprecated_Inline}}
   - : スクロール範囲の幅をピクセル値かパーセント値で指定します。
-
-## イベントハンドラー
-
-- `onbounce`
-  - : マーキーがスクロール位置の末端に達したときに発行されます。 behavior 属性の値に `alternate` が指定されている場合のみ発行されます。
-- `onfinish`
-  - : loop 属性で指定された回数のループが終了した時に発行されます。 loop 属性に 1 以上の値が指定されている場合にのみ発行されます。
-- `onstart`
-  - : marquee がスクロールを開始した時に発行されます。
-
-## メソッド
-
-- `start()`
-  - : marquee のスクロールの開始
-- `stop()`
-  - : marquee のスクロールの停止
 
 ## 例
 
@@ -92,4 +78,8 @@ l10n:
 
 ## 関連情報
 
+- CSS の {{cssxref("transform")}} プロパティ
+- CSS の {{cssxref("translate")}} プロパティ
+- [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
 - {{DOMxRef("HTMLMarqueeElement")}}

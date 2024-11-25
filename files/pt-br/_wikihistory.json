@@ -6283,10 +6283,6 @@
     "modified": "2020-10-15T22:26:08.419Z",
     "contributors": ["FernandoKGA"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T22:26:09.572Z",
-    "contributors": ["FernandoKGA"]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-10-15T22:26:26.705Z",
     "contributors": ["FernandoKGA"]
@@ -10638,6 +10634,10 @@
   "conflicting/Web/HTTP/CORS": {
     "modified": "2020-04-19T11:26:06.291Z",
     "contributors": ["marcio1002"]
+  },
+  "conflicting/Web/HTTP/Headers": {
+    "modified": "2020-10-15T22:26:09.572Z",
+    "contributors": ["FernandoKGA"]
   },
   "conflicting/Web/HTTP/Headers/Cookie": {
     "modified": "2020-10-15T22:29:27.166Z",
