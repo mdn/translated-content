@@ -1,13 +1,14 @@
 ---
 title: "HTML 属性: multiple"
+short-title: multiple
 slug: Web/HTML/Attributes/multiple
 l10n:
-  sourceCommit: 85c7c66c835d8bf2f766e408e723db6364fbd0c6
+  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
 {{HTMLSidebar}}
 
-論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効で、ユーザーが複数の値を選択する方法はフォームコントロールに依存します。
+論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。この属性は {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効です。ユーザーが複数の値を選択する方法は、フォームコントロールに依存します。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
 
@@ -184,6 +185,10 @@ select[multiple]:active {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

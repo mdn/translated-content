@@ -100,20 +100,20 @@ _Данный интерфейс наследует свойства своих 
 
 Важно отметить, что во многих случаях происходят и события касаний, и события мыши (чтобы код, не использующий касания, мог продолжать взаимодействовать с пользователем). Если вы используете события касания, вам следует вызывать {{domxref("Event.preventDefault","preventDefault()")}} для предотвращения отправки событий мыши.
 
-Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true` и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции `passive` равным `false` как показано в примере ниже. Это изменение запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем. Демонстрация этого доступна на сайте [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners).
+Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для [`touchstart`](/ru/docs/Web/Events/touchstart) и [`touchmove`](/ru/docs/Web/Events/touchmove) равно `true` и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции `passive` равным `false` как показано в примере ниже. Это изменение запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем. Демонстрация этого доступна на сайте [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners).
 
 ## GlobalEventHandlers
 
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchstart")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchstart`](/ru/docs/Web/Events/touchstart).
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchend")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchend`](/ru/docs/Web/Events/touchend).
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchmove")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchmove`](/ru/docs/Web/Events/touchmove).
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchcancel")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchcancel`](/ru/docs/Web/Events/touchcancel).
 
 ## Пример
 

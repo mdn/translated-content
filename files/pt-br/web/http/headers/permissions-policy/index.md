@@ -34,7 +34,7 @@ Feature-Policy: <directive> <allowlist>
 - `<directive>`
   - : A diretiva Feature Policy que irá aplicar a `allowlist`. Veja [Diretivas](#diretivas) abaixo para a lista de nomes de diretivas.
 - `<allowlist>`
-  - : {{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}
+  - : <!-- TODO: page macro not supported: page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist") -->
 
 ## Diretivas
 
