@@ -97,7 +97,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">Допустимые ARIA-роли</th>
-      <td>Нет</td>
+      <td>Атрибут <code>role</code> не допускается</td>
     </tr>
     <tr>
       <th scope="row">DOM-интерфейс</th>
