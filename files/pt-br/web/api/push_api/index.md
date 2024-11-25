@@ -46,9 +46,9 @@ As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/We
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.
 - {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : Um manipulador de eventos disparado sempre que um evento {{Event("push")}} ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.
+  - : Um manipulador de eventos disparado sempre que um evento [`push`](/pt-BR/docs/Web/Events/push) ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.
 - {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : Um manipulador de eventos disparado sempre que um evento {{Event("pushsubscriptionchange")}} ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)
+  - : Um manipulador de eventos disparado sempre que um evento [`pushsubscriptionchange`](/pt-BR/docs/Web/Events/pushsubscriptionchange) ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)
 
 ## Especificações
 

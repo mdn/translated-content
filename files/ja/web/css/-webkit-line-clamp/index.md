@@ -1,20 +1,22 @@
 ---
 title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
+l10n:
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
 {{CSSRef}}
 
-**`-webkit-line-clamp`** は CSS のプロパティで、{{Glossary("block container", "ブロックコンテナー")}}の内容を指定した行数に制限することができます。
+**`-webkit-line-clamp`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{Glossary("block", "ブロック")}}のコンテンツを指定した行数に制限することができます。
 
-{{cssxref("display")}} プロパティに `-webkit-box` もしくは `-webkit-inline-box` が設定されており、かつ {{cssxref("box-orient")}} プロパティに `vertical` が設定されている組み合わせのときのみ使用できます。
+{{cssxref("display")}} プロパティに `-webkit-box` もしくは `-webkit-inline-box` が設定されており、かつ {{cssxref("box-orient", "-webkit-box-orient")}} プロパティに `vertical` が設定されている組み合わせのときのみ使用できます。 これらは非推奨のプロパティですが、これら3つのプロパティの共依存性は完全に仕様化された動作であり、今後も対応していきます。
 
 ほとんどの場合、 {{cssxref("overflow")}} に `hidden` を設定できます。そうしなければ内容は切り取られませんが、省略記号は指定した行数の後に表示されます。
 
 アンカー要素に適用すると、切り捨てがテキストの途中で行われる場合があるかもしれませんが、必ずしも末尾で切り捨てが行われるとは限りません。
 
 > [!NOTE]
-> このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
+> このプロパティはもともと WebKit で実装されたもので、他の 2 種類の古いプロパティに依存しているなどの課題を持っています。古いブラウザーへの対応のため、 [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) で標準化されました。CSS Overflow Module Level 4 では {{cssxref("line-clamp")}} プロパティも定義しており、このプロパティを置き換えて問題を避けることを意味しています。ただし、`line-clamp` に対応しているすべてのブラウザーは、互換性のために `-webkit-line-clamp` にも対応します。
 
 ## 構文
 
@@ -29,13 +31,17 @@ slug: Web/CSS/-webkit-line-clamp
 /* グローバル値 */
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
+-webkit-line-clamp: revert;
+-webkit-line-clamp: revert-layer;
 -webkit-line-clamp: unset;
 ```
 
+### 値
+
 - `none`
-  - : コンテンツの行数を制限しません。
+  - : この値は、コンテンツの行数が制限されないことを指定します。
 - {{cssxref("integer")}}
-  - : コンテンツを制限する行数を指定します。 0 より大きい値でなければなりません。
+  - : この値は、コンテンツの制限される行数を指定します。 0 より大きな値でなければなりません。
 
 ## 公式定義
 
@@ -73,7 +79,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}
+{{EmbedLiveSample("Truncating_a_paragraph", "100%", "130")}}
 
 ## 仕様書
 

@@ -39,9 +39,9 @@ O evento `input` do DOM é disparado sincronicamente quando o valor de um elemen
 
 ## Veja também
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
+- [`keyup`](/pt-BR/docs/Web/Events/keyup)
+- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)
 
 O evento de [`change`](/pt-BR/docs/Web/Reference/Events/change) é relacionado. `change` dispara com menos frequência que o `input` – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.

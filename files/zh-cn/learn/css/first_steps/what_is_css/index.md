@@ -37,6 +37,10 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 如果所有网站都像上图那样，互联网就会非常枯燥。但是使用 CSS 就可以完全控制浏览器如何显示 HTML 元素，从而充分展示你喜欢的设计样式。
 
+有关浏览器/默认样式的更多信息，请观看以下视频：
+
+{{EmbedYouTube("spK_S0HfzFw")}}
+
 ## CSS 用来干什么？
 
 前文提到过，CSS 是用来指定文档如何展示给用户的一门语言——如网页的样式、布局、等等。
@@ -52,9 +56,9 @@ CSS 可以用于给文档添加样式——比如改变标题和链接的[颜色
 
 ## CSS 语法
 
-CSS 是一门基于规则的语言——你能定义用于你的网页中特定元素样式的一组规则。比如“我希望页面中的主标题是红色的大字”
+CSS 是一门基于规则的语言，可以通过指定应用于网页上特定元素或元素组的样式组，来定义规则。
 
-下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果：
+例如，你可以决定将页面上的主标题显示大字号红色文本。下面的代码显示了非常简单的 CSS 规则，可以实现上述样式：
 
 ```css
 h1 {
@@ -63,13 +67,14 @@ h1 {
 }
 ```
 
-语法由一个 {{Glossary("CSS Selector", "选择器（selector）")}}起头。它*选择*了我们将要用来添加样式的 HTML 元素。在这个例子中我们为一级标题（主标题{{htmlelement("h1")}}）添加样式。
+- 上面的示例中，CSS 规则由一个{{Glossary("CSS Selector", "选择器")}}开始，选择要添加样式的 HTML 元素。在这个例子中，我们要为一级标题（{{htmlelement("Heading_Elements", "h1")}}）添加样式。
+- 然后就是一组大括号 `{ }`。
+- 在大括号内部将包含一个或多个**声明**，其形式为**属性**—**值**对。在冒号之前指定属性（示例中的 `color`），冒号之后指定属性的值（示例中的 `red`）。
+- 示例包含了两个声明：一个是 `color` 声明，另一个是 `font-size` 声明。每个**属性**—**值**对，都指定了所选择元素（示例中的 {{htmlelement("Heading_Elements", "h1")}}）的属性，然后是要赋予该属性的一个值。
 
-接着输入一对大括号 `{ }`。在大括号内部定义一个或多个形式为**属性**（property）—**值**（value）对的**声明**。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。
+CSS {{Glossary("property/CSS","属性")}}有不同的可用值，取决于所指定的属性。在示例中，我们有 `color` 属性，可以接受各种[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)，还有一个 `font-size` 属性，它可以使用各种[尺寸单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字、长度和百分比)作为值。
 
-冒号之前是属性，冒号之后是值。不同的 CSS {{Glossary("property/CSS","属性")}}对应不同的合法值。在这个例子中，我们指定了 `color` 属性，它可以接受许多[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)；还有 `font-size` 属性，它可以接收许多 [size unit](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字，长度和百分比) 值。
-
-一个 CSS 样式表可以包含很多个规则。
+一个 CSS 样式表可以包含很多个规则，一条接一条地编写。
 
 ```css
 h1 {
@@ -107,10 +112,14 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 ## 浏览器支持
 
-当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
+在 CSS 特性成为规范后，只有当一个或多个浏览器实现了该特性时，我们在开发网页时才会用到它。这意味着我们编写的代码可以将 CSS 文件中的指令转化为可以输出到屏幕上的内容。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。
 
-## 下一步
+浏览器支持状态显示在每个 MDN CSS 属性页面上名为“浏览器兼容性”的表格中。查询该表格中信息，来检查你的网页是否可以使用该属性。例如，请参阅 [CSS 属性 `font-family` 的浏览器兼容性表格](/zh-CN/docs/Web/CSS/font-family#浏览器兼容性)。
 
-现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的学习，你将可以自己写一些 CSS 代码了。
+基于你的需求，使用浏览器兼容性表来检查不同浏览器对该属性的支持情况，或者检查特定的浏览器和版本是否支持该属性，或者浏览器和版本是否有如何注意事项。
+
+## 总结
+
+你已经读到了文章的结尾！现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的学习，你将可以自己写一些 CSS 代码了。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

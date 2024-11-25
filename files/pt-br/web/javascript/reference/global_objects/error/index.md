@@ -58,15 +58,15 @@ O objeto `Error` global não contém métodos próprios, entretanto, ele herda a
 
 ## `Instâncias de Error`
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description') -->
 
 ### Propriedades
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods') -->
 
 ## Exemplos
 
