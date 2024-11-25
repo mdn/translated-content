@@ -78,4 +78,4 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 - HTTP [согласование контента](/ru/docs/Web/HTTP/Content_negotiation)
 - Заголовок с результатами согласования контента: {{HTTPHeader("Content-Type")}}
-- Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
+- Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}

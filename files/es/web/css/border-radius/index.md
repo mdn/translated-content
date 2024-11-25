@@ -159,9 +159,9 @@ La propiedad `border-radius` se especifica como:
 </table>
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Indica el tamaño del radio del círculo o de los ejes mayor y menor de la elipse, utilizando valores de longitud. Los valores negativos no son válidos.
+  - : Indica el tamaño del radio del círculo o de los semiejes mayor y menor de la elipse, utilizando valores de longitud. Los valores negativos no son válidos.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Indica el tamaño del radio del círculo o de los ejes mayor y menor de la elipse, utilizando valores porcentuales. Los porcentajes para el eje horizontal se refieren al ancho del cuadro; los porcentajes para el eje vertical se refieren a la altura del cuadro. Los valores negativos no son válidos.
+  - : Indica el tamaño del radio del círculo o de los semiejes mayor y menor de la elipse, utilizando valores porcentuales. Los porcentajes para el eje horizontal se refieren al ancho del cuadro; los porcentajes para el eje vertical se refieren a la altura del cuadro. Los valores negativos no son válidos.
 
 Por ejemplo:
 
