@@ -2,7 +2,7 @@
 title: Promise.try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 l10n:
-  sourceCommit: 37300118615fafd93673b658e9bf9762f309897b
+  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---
 
 {{JSRef}}
