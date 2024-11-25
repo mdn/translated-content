@@ -168,7 +168,7 @@ l10n:
 
 この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
 
-```html live-sample___positioned
+```html-nolint live-sample___positioned
 <div class="grid">
   <div class="item" style="block-size: 2em;"></div>
   <div class="item" style="block-size: 3em;"></div>
