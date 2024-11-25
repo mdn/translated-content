@@ -79,7 +79,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 Una cookie segura sólo se envía al servidor con una petición cifrada sobre el protocolo HTTPS. Incluso con `Secure`, no debería almacenarse _nunca_ información sensible en la cookies, ya que son inherentemente inseguras y este flag no puede ofrecer protección real. A partir de Chrome 52 y Firefox 52, los sitios inseguros (`http:`) no pueden establecer cookies con la directiva `Secure`.
 
-Para prevenir ataques cross-site scripting ({{Glossary("XSS")}}), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
+Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
 
 ```
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
@@ -142,7 +142,7 @@ Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad]
 
 ### Secuestro de session y XSS
 
-Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad {{Glossary("XSS")}} de la aplicación.
+Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) de la aplicación.
 
 ```js
 new Image().src =
@@ -180,7 +180,7 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 
   - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
 
-- Al igual que con {{Glosario ("XSS")}}, el filtrado de entrada es importante.
+- Al igual que con [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
 - Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
 - Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 - Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).

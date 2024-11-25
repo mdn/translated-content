@@ -59,11 +59,11 @@ All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer.prototype")}}.
 
 ### Properties
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties') -->
 
 ### Methods
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods') -->
 
 - {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
   - : Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.

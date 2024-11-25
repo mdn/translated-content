@@ -216,7 +216,7 @@ function checkGuess( {
 
 浏览器会认为我们试图将函数的内容当作参数传回函数。写圆括号时要小心！
 
-### SystaxError: missing } after function body
+### SyntaxError: missing } after function body
 
 这个简单。通常意味着函数或条件结构中丢失了一个花括号。如果我们将 `checkGuess()` 函数末尾的花括号删除，就会得到这个错误。
 
