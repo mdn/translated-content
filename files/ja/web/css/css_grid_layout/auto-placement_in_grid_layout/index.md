@@ -137,7 +137,7 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <div>One</div>
   <div>Two</div>
