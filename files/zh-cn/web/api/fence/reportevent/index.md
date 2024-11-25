@@ -28,10 +28,10 @@ reportEvent(event)
         - : 表示要发送的数据的字符串。
       - `destination`
         - : 包含一个或多个枚举值的数组，这些值代表目标类型。这些是将接收数据到其注册 URL（即通过 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}}）的涉及方。可能的值包括：
-          - `"buyer"`：广告拍卖中的出价方。
-          - `"seller"`：运行广告拍卖的顶级卖方。
-          - `"component-seller"`：多级拍卖中的组件拍卖的卖方。
-          - `"direct-seller"`：买家投标的拍卖的直接运行方。如果广告是单级拍卖，则使用的值为 `"seller"`。如果广告是多级拍卖，则使用的值为 `"component-seller"`。
+          - `"buyer"`：广告竞价中的出价方。
+          - `"seller"`：运行广告竞价的顶级卖方。
+          - `"component-seller"`：多级竞价中组件竞价的卖方。
+          - `"direct-seller"`：直接运行买家投标竞价的卖方。如果广告是单级竞价，则使用的值为 `"seller"`。如果广告是多级竞价，则使用的值为 `"component-seller"`。
           - `"shared-storage-select-url"`：[共享存储 API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) 存储位置，如在 {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} 方法调用中所定义。
     - 字符串值表示一个 `eventType`，例如 `"click"`（参见前面 `eventType` 的定义）。当将 `eventType` 字符串作为 `reportEvent()` 的值传递时，它会触发所有基于该事件类型（例如通过 {{domxref("PrivateAggregation.contributeToHistogramOnEvent()")}}）做出的隐私聚合贡献的发送。
 
