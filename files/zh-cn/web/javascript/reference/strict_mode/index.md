@@ -22,40 +22,35 @@ slug: Web/JavaScript/Reference/Strict_mode
 
 ### 为脚本开启严格模式
 
-为整个脚本文件开启严格模式，需要在所有语句之前放一个特定语句 `"use strict";` （或 `'use strict';`）
+为整个脚本文件开启严格模式，需要在所有语句之前放一个*特定*语句 `"use strict";`（或 `'use strict';`）。
 
 ```js
 // 整个脚本都开启严格模式的语法
 "use strict";
-var v = "Hi!  I'm a strict mode script!";
+const v = "你好！我是一个严格模式的脚本！";
 ```
-
-这种语法存在陷阱，有一个[大型网站](https://bugzilla.mozilla.org/show_bug.cgi?id=627531)已经被它[坑倒](https://bugzilla.mozilla.org/show_bug.cgi?id=579119)了：不能盲目地合并冲突代码。试想合并一个严格模式的脚本和一个非严格模式的脚本：合并后的脚本代码看起来是严格模式。反之亦然：非严格合并严格看起来是非严格的。合并均为严格模式的脚本或均为非严格模式的都没问题，只有在合并严格模式与非严格模式有可能有问题。建议按一个个函数去开启严格模式（至少在学习的过渡期要这样做）。
-
-你也可以将整个脚本的内容用一个函数包括起来，然后在这个外部函数中使用严格模式。这样做就可以消除合并的问题，但是这就意味着你必须要在函数作用域外声明一个全局变量。
 
 ### 为函数开启严格模式
 
-同样地，要给某个函数开启严格模式，得把 `"use strict";`（或 `'use strict';`）声明*一字不漏地*放在函数体所有语句之前。
+同样地，要给某个函数开启严格模式，得把*特定*语句 `"use strict";`（或 `'use strict';`）放在函数体所有语句之前。
 
 ```js
-function strict() {
+function myStrictFunction() {
   // 函数级别严格模式语法
   "use strict";
   function nested() {
-    return "And so am I!";
+    return "我也一样！";
   }
-  return "Hi!  I'm a strict mode function!  " + nested();
+  return `你好！我是严格模式的函数！${nested()}`;
 }
-
-function notStrict() {
-  return "I'm not strict.";
+function myNotStrictFunction() {
+  return "我不是严格模式的函数。";
 }
 ```
 
 ## 严格模式中的变化
 
-严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误），简化了如何为给定名称的特定变量计算，简化了 `eval` 以及 `arguments`，将写"安全“JavaScript 的步骤变得更简单，以及改变了预测未来 ECMAScript 行为的方式。
+严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误），简化了如何为给定名称的特定变量计算，简化了 `eval` 以及 `arguments`，将写“安全”JavaScript 的步骤变得更简单，以及改变了预测未来 ECMAScript 行为的方式。
 
 ### 将过失错误转成异常
 
@@ -70,7 +65,7 @@ mistypedVaraible = 17; // 因为变量名拼写错误
 // 这一行代码就会抛出 ReferenceError
 ```
 
-第二，严格模式会使引起静默失败（silently fail，注：不报错也没有任何效果）的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作（给不可写属性赋值，给只读属性（getter-only）赋值，给不可扩展对象（[non-extensible](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions) object）的新属性赋值）都会抛出异常：
+第二，严格模式会使引起静默失败（silently fail，注：不报错也没有任何效果）的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作（给不可写属性赋值，给只读属性（getter-only）赋值，给[不可扩展对象](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions)的新属性赋值）都会抛出异常：
 
 ```js
 "use strict";
@@ -121,7 +116,7 @@ function sum(a, a, c) {
 }
 ```
 
-第六，严格模式禁止八进制数字语法。ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零（`0`）开头的八进制语法：`0644 === 420` 还有 `"\045" === "%"`。在 ECMAScript 6 中支持为一个数字加“`0o`”的前缀来表示八进制数。
+第六，严格模式禁止八进制数字语法。ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零（`0`）开头的八进制语法：`0644 === 420` 还有 `"\045" === "%"`。在 ECMAScript 6 中支持为一个数字加 `0o` 的前缀来表示八进制数。
 
 ```js
 var a = 0o10; // ES6: 八进制
@@ -137,7 +132,7 @@ var sum =
   142;
 ```
 
-第七，ECMAScript 6 中的严格模式禁止设置{{Glossary("primitive")}}值的属性。不采用严格模式，设置属性将会简单忽略（no-op）,采用严格模式，将抛出{{jsxref("TypeError")}}错误
+第七，严格模式禁止设置{{Glossary("primitive", "原始")}}值的属性。不采用严格模式，设置属性将会简单忽略（no-op），采用严格模式，将抛出 {{jsxref("TypeError")}} 错误
 
 ```js
 "use strict";
@@ -166,7 +161,7 @@ with (obj) {
 
 一种取代 `with`的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。
 
-第二，[`严格模式下的 eval 不再为上层范围（surrounding scope，注：包围 eval 代码块的范围）引入新变量`](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)。在正常模式下，代码 `eval("var x;")` 会给上层函数（surrounding function）或者全局引入一个新的变量 `x`。这意味着，一般情况下，在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义（因为 `eval` 可能引入的新变量会覆盖它的外层变量）。在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
+第二，严格模式下 [`eval` 不再为周围的作用域引入新变量](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)。在正常模式下，代码 `eval("var x;")` 会给上层函数（surrounding function）或者全局引入一个新的变量 `x`。这意味着，一般情况下，在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义（因为 `eval` 可能引入的新变量会覆盖它的外层变量）。在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
 
 ```js
 var x = 17;
@@ -216,7 +211,7 @@ eval("var y; delete y;"); // !!! 语法错误
 
 严格模式让 `arguments` 和 `eval` 少了一些奇怪的行为。两者在通常的代码中都包含了很多奇怪的行为：`eval` 会添加删除绑定，改变绑定好的值，还会通过用它索引过的属性给形参取别名的方式修改形参。虽然在未来的 ECMAScript 版本解决这个问题之前，是不会有补丁来完全修复这个问题，但严格模式下将 eval 和 arguments 作为关键字对于此问题的解决是很有帮助的。
 
-第一，名称 `eval` 和 `arguments` 不能通过程序语法被绑定（be bound）或赋值。以下的所有尝试将引起语法错误：
+第一，名称 `eval` 和 `arguments` 不能通过程序语法被绑定或赋值。以下的所有尝试将引起语法错误：
 
 ```js
 "use strict";
@@ -260,7 +255,7 @@ f(); // 抛出类型错误
 
 严格模式下更容易写出“安全”的 JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的 JavaScript 代码。在浏览器环境下，JavaScript 能够获取用户的隐私信息，因此这类 Javascript 必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript 的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的 JavaScript 开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。
 
-第一，在严格模式下通过`this`传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，`this`总会是一个对象：不管调用时`this`它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的`this`；还是使用`undefined`或者`null`调用函数式`this`代表的全局对象（使用[`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)，[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)或者[`bind`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)方法来指定一个确定的`this`）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的`this`不再被封装为对象，而且如果没有指定`this`的话它值是`undefined`：
+第一，在严格模式下通过 `this` 传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，`this` 总会是一个对象：不管调用时 `this` 它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的 `this`；还是使用 `undefined` 或者 `null` 调用函数式 `this` 代表的全局对象（使用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 或 [`bind`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法来指定一个确定的 `this`）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的 `this` 不再被封装为对象，而且如果没有指定 `this` 的话它值是 `undefined`：
 
 ```js
 "use strict";
@@ -306,7 +301,7 @@ fun(1, 2); // 不会暴露 v（或者 a，或者 b）
 
 未来版本的 ECMAScript 很有可能会引入新语法，ECMAScript5 中的严格模式就提早设置了一些限制来减轻之后版本改变产生的影响。如果提早使用了严格模式中的保护机制，那么做出改变就会变得更容易。
 
-第一，在严格模式中一部分字符变成了保留的关键字。这些字符包括`implements`、`interface`、`let`、`package`、`private`、`protected`、`public`、`static`和`yield`。在严格模式下，你不能再用这些名字作为变量名或者形参名。
+第一，在严格模式中一部分字符变成了保留的关键字。这些字符包括 `implements`、`interface`、`let`、`package`、`private`、`protected`、`public`、`static` 和 `yield`。在严格模式下，你不能再用这些名字作为变量名或者形参名。
 
 ```js-nolint
 function package(protected) { // !!!
