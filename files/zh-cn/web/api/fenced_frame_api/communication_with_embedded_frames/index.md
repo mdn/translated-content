@@ -48,7 +48,7 @@ const fencedFrameConfig = await window.sharedStorage.selectURL(
 
 fencedFrameConfig.setSharedStorageContext("some-data");
 
-// 导航至配置所指定的封闭框架。
+// 导航至配置所指定的围栏框架。
 document.getElementById("my-fenced-frame").config = fencedFrameConfig;
 ```
 
