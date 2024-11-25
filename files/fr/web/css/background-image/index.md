@@ -33,7 +33,7 @@ background-image: linear-gradient(
     rgba(255, 255, 0, 0.5),
     rgba(0, 0, 255, 0.5)
   ),
-  url("catfront.png");
+  url("cat-front.png");
 
 /* Valeur avec un mot-clé */
 background-image: none;
@@ -103,7 +103,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```
