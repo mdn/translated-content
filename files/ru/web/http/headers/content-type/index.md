@@ -92,7 +92,7 @@ Content-Type: text/plain
 
 ## Смотрите также
 
-- {{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Content-Disposition")}}
 - {{HTTPStatus("206")}} Partial Content
 - {{HTTPHeader("X-Content-Type-Options")}}
