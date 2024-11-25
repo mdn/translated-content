@@ -2,7 +2,7 @@
 title: "TextUpdateEvent: selectionStart プロパティ"
 slug: Web/API/TextUpdateEvent/selectionStart
 l10n:
-  sourceCommit: ee846961725e36cf7bb407afe7a2df82d2860658
+  sourceCommit: 76f2007d4bd30314202820d96bba09f1e31dff33
 ---
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
