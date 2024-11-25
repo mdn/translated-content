@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 37300118615fafd93673b658e9bf9762f309897b
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 **`Promise.try()`** 는 반환값이나 예외 발생, 동기나 비동기에 관계 없이 모든 종류의 콜백을 가지고, 그 결과를 {{jsxref("Promise")}} 내부에서 감싸는 정적 메서드입니다.
 
