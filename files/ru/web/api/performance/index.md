@@ -22,7 +22,7 @@ _Интерфейс `Performance` не наследует никаких дру�
 <!---->
 
 - {{domxref("Performance.onresourcetimingbufferfull")}}
-  - : Колбэк-функция, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события {{event("resourcetimingbufferfull")}}.
+  - : Колбэк-функция, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события [`resourcetimingbufferfull`](/ru/docs/Web/Events/resourcetimingbufferfull).
 
 <!---->
 

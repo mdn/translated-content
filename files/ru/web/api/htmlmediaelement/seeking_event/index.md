@@ -33,21 +33,21 @@ slug: Web/API/HTMLMediaElement/seeking_event
 
 ## Related Events
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/ru/docs/Web/Events/playing)
+- [`waiting`](/ru/docs/Web/Events/waiting)
+- [`seeking`](/ru/docs/Web/Events/seeking)
+- [`seeked`](/ru/docs/Web/Events/seeked)
+- [`ended`](/ru/docs/Web/Events/ended)
+- [`loadedmetadata`](/ru/docs/Web/Events/loadedmetadata)
+- [`loadeddata`](/ru/docs/Web/Events/loadeddata)
+- [`canplay`](/ru/docs/Web/Events/canplay)
+- [`canplaythrough`](/ru/docs/Web/Events/canplaythrough)
+- [`durationchange`](/ru/docs/Web/Events/durationchange)
+- [`timeupdate`](/ru/docs/Web/Events/timeupdate)
+- [`play`](/ru/docs/Web/Events/play)
+- [`pause`](/ru/docs/Web/Events/pause)
+- [`ratechange`](/ru/docs/Web/Events/ratechange)
+- [`volumechange`](/ru/docs/Web/Events/volumechange)
+- [`suspend`](/ru/docs/Web/Events/suspend)
+- [`emptied`](/ru/docs/Web/Events/emptied)
+- [`stalled`](/ru/docs/Web/Events/stalled)

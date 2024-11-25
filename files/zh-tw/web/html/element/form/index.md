@@ -19,11 +19,11 @@ slug: Web/HTML/Element/form
 
   - : 伺服器接受的逗號分隔的[內容類型](/zh-TW/docs/Web/SVG/Content_type)。
 
-    > **備註：** **此屬性已被廢棄，不應再使用。** 請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Element/input#accept) 屬性。
+    > **備註：** **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Element/input#accept) 屬性。
 
 - `accept-charset`
 
-  - : 伺服器接受的空格分隔的{{Glossary("character encoding", "字元編碼")}}。瀏覽器將按照列出的順序使用它們。默認值表示[與頁面相同的編碼](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding)。（在 HTML 的之前版本中，字符編碼也可以用逗號分隔。）
+  - : 伺服器接受的{{Glossary("character encoding", "字元編碼")}}。該規範允許使用單一不區分大小寫的值——`"UTF-8"`，反映了這種編碼的普遍性（歷史上，可以以逗號分隔或空格分隔的清單指定多個字元編碼）。
 
 - `autocapitalize`
 

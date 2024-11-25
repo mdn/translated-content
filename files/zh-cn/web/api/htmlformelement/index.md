@@ -2,7 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 l10n:
-  sourceCommit: c99afd3cafe73c93831bd73ad1dac285c3c713b1
+  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,7 +30,7 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLFormElement.encoding")}} 或 {{domxref("HTMLFormElement.enctype")}}
   - : 反映表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) HTML 属性值的字符串，表示用于将表单传输到服务器的内容类型。只能设置特定的值。这两个属性是同义词。
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : 反映表单的 [`accept-charset`](/zh-CN/docs/Web/HTML/Element/form#accept-charset) HTML 属性值的字符串，表示服务器接受的字符编码。
+  - : 反映表单的 [`accept-charset`](/zh-CN/docs/Web/HTML/Element/form#accept-charset) HTML 属性值的字符串。
 - {{domxref("HTMLFormElement.autocomplete")}}
   - : 反映表单的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) HTML 属性值的字符串，表示此表单中的控件是否可以由浏览器自动填充其值。
 - {{domxref("HTMLFormElement.noValidate")}}
@@ -91,13 +91,13 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 例如：
 
-- `<input name="id">` 会优先于 `<form id="…">`。这意味着 `form.id` 不会引用表单的 id，而是引用名称为“`id`”的元素。这也适用于其他表单属性，例如 `<input name="action">` 或 `<input name="post">`。
+- `<input name="id">` 会优先于 `<form id="…">`。这意味着 `form.id` 不会引用表单的 id，而是引用名称为 `"id"` 的元素。这也适用于其他表单属性，例如 `<input name="action">` 或 `<input name="post">`。
 - `<input name="elements">` 会使表单的 `elements` 集合无法访问。引用 `form.elements` 现在将引用单个元素。
 
 要避免这些元素名称的问题，你应该：
 
 - *始终*使用 `elements` 集合来避免元素名称和表单属性之间的歧义。
-- *切勿*将“`elements`”作为元素名称。
+- *切勿*将 `"elements"` 作为元素名称。
 
 如果你不使用 JavaScript，这不会造成问题。
 
@@ -187,10 +187,10 @@ f.submit(); // 调用表单的 submit() 方法
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>名字：<input type="text" name="firstname" /></label>
+        <label>名字：<input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>姓氏：<input type="text" name="lastname" /></label>
+        <label>姓氏：<input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>

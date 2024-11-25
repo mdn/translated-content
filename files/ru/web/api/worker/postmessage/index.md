@@ -31,7 +31,7 @@ Void.
 
 ## Пример
 
-В следующем фрагменте кода показано создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}. При изменении значений одного из двух полей формы (`first` и `second`) событием {{event("change")}} вызывается функция `postMessage()` для отправки значений полей текущему worker.
+В следующем фрагменте кода показано создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}. При изменении значений одного из двух полей формы (`first` и `second`) событием [`change`](/ru/docs/Web/Events/change) вызывается функция `postMessage()` для отправки значений полей текущему worker.
 
 ```js
 var myWorker = new Worker("worker.js");

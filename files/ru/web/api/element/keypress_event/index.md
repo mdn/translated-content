@@ -234,10 +234,10 @@ Chrome не запускает событие `keypress` для известны
 
 ## Связанные события
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/ru/docs/Web/Events/keydown)
+- [`keyup`](/ru/docs/Web/Events/keyup)
+- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
+- [`input`](/ru/docs/Web/Events/input)
 
 ## Пример
 

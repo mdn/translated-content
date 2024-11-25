@@ -11,11 +11,11 @@ slug: Web/CSS/-webkit-mask-box-image
 
 `-webkit-mask-box-image` establece la imagen de máscara para la caja del borde de un elemento.
 
-- {{ Xref_cssinitial() }}: none
+- [Valor inicial](/es/docs/Web/CSS/initial_value): none
 - Se aplica a : Todos los elementos
-- {{ Xref_cssinherited() }}: no
+- [Heredable](/es/docs/Web/CSS/inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
-- {{ Xref_csscomputed() }}: tal y como se especfica
+- [Valor calculado](/es/docs/Web/CSS/computed_value): tal y como se especfica
 
 ## Síntaxis
 

@@ -96,7 +96,7 @@ log("Регистрация событий мыши внутри этого ко
 
 Функция `log()` создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя строку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом `"log"`.
 
-Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):
+Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, [`mousedown`](/ru/docs/Web/API/Element/mousedown_event), [`click`](/ru/docs/Web/Events/click), и [`mouseenter`](/ru/docs/Web/Events/mouseenter)):
 
 ```js
 function logEvent(event) {

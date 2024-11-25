@@ -1,5 +1,5 @@
 ---
-title: HTML attribute reference
+title: HTML 屬性參考
 slug: Web/HTML/Attributes
 ---
 
