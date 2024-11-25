@@ -28,7 +28,7 @@ setSharedStorageContext(context)
 
 ### 通过 `setSharedStorageContext()` 传递上下文数据
 
-你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储工作线程。
+你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储工作线程。
 
 在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)中。
 
