@@ -55,7 +55,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>

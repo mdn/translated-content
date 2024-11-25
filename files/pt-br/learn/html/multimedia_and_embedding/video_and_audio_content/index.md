@@ -226,7 +226,7 @@ mediaElem.load();
 
 ### Detectando adição e remoção de faixas
 
-Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento {{event ("addtrack")}} ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
+Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento [`addtrack`](/pt-BR/docs/Web/Events/addtrack) ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
 
 ```
 const mediaElem = document.querySelector("video");

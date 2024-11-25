@@ -9,7 +9,7 @@ O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opciona
 
 - _[As categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content) , [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) .
 - _Permitida conteúdo_ vazio; este é um elemento vazio.
-- _Tag omissão_ {{no_tag_omission}}
+- _Tag omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
 - _Interface DOM_ {{domxref ("HTMLAreaElement")}}
 

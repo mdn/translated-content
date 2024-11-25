@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/connectionState
 
 Только для чтения свойство **`connectionState`** интерфейса {{domxref("RTCPeerConnection")}} указывает на текущее состояние соединения, возвращая одно из строковых значений, определяемых в перечислении [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-Когда значение свойство изменяется, возникает событие {{event("connectionstatechange")}} на объекте интерфейса {{domxref("RTCPeerConnection")}} .
+Когда значение свойство изменяется, возникает событие [`connectionstatechange`](/ru/docs/Web/Events/connectionstatechange) на объекте интерфейса {{domxref("RTCPeerConnection")}} .
 
 ## Синтаксис
 
@@ -41,5 +41,5 @@ var connectionState = pc.connectionState;
 
 - [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
-- {{event("connectionstatechange")}}
+- [`connectionstatechange`](/ru/docs/Web/Events/connectionstatechange)
 - [WebRTC](/ru/docs/Web/Guide/API/WebRTC)

@@ -7,7 +7,7 @@ O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) repres
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
 - _Permitted content_ Special, see prose
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitted parent elements_ Any element that accepts embedded content.
 - _DOM interface_ {{domxref("HTMLIFrameElement")}}
 
