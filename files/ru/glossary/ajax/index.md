@@ -22,4 +22,4 @@ Ajax можно использовать для создания {{Glossary("SPA
 - Related glossary terms:
   - {{Glossary("SPA", "Одностраничное приложение")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [AJAX](https://ru.wikipedia.org/wiki/AJAX) на Википедии
+- [AJAX](https://ru.wikipedia.org/wiki/AJAX) в Википедии
