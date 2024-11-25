@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-HTML-элемент **`<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
+HTML-элемент **`<meta>`** представляет такие {{Glossary("Metadata", "метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
 
 Тип метаданных, предоставляемых элементом `<meta>`, может быть одним из следующих:
 
@@ -18,10 +18,10 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
-> Атрибут [`name`](/ru/docs/Web/HTML/Element/meta#name) имеет особое значение для элемента `<meta>` и атрибут [`itemprop`](/ru/docs/Web/HTML/Global_attributes/itemprop) не должен быть задан в `<meta>` элементе в котором уже определены какие-либо [`name`](/ru/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибуты.
+> Атрибут [`name`](/ru/docs/Web/HTML/Element/meta#name) имеет особое значение для элемента `<meta>`. Атрибут [`itemprop`](/ru/docs/Web/HTML/Global_attributes/itemprop) не должен быть задан в элементе `<meta>`, в котором уже определены какие-либо атрибуты [`name`](/ru/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset).
 
 - `charset`
   - : Этот атрибут объявляет кодировку символов документа. Если атрибут присутствует, его значение должно совпадать с строкой `"utf-8"` без учета регистра, поскольку UTF-8 является единственной допустимой кодировкой для документов HTML5. Элементы `<meta>`, которые объявляют кодировку символов, должны находиться полностью в пределах первых 1024 байтов документа.
