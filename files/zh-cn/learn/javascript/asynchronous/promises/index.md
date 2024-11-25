@@ -334,7 +334,7 @@ fetchProducts();
 
 我们甚至可以使用 `try...catch` 块来处理错误，就像我们在写同步代码时一样。
 
-但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Pomise，所以你不能做这样的事情：
+但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Promise，所以你不能做这样的事情：
 
 ```js example-bad
 async function fetchProducts() {

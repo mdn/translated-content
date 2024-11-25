@@ -15937,13 +15937,5 @@
   "conflicting/Web/HTTP": {
     "modified": "2020-07-14T17:05:38.093Z",
     "contributors": ["vladimir.i.kuropatka", "enonotugh", "cissoid"]
-  },
-  "conflicting/Web/HTTP/Headers": {
-    "modified": "2020-10-15T22:14:29.517Z",
-    "contributors": ["Reddok", "J4CKVVH173"]
-  },
-  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2020-01-09T21:04:16.499Z",
-    "contributors": ["rshmelev"]
   }
 }
