@@ -17,7 +17,7 @@ _AbortSignal также наследует свойства от своего р
 ### Обработчики событий
 
 - {{domxref("AbortSignal.onabort")}}
-  - : Вызывается когда происходит событие {{event("abort_(dom_abort_api)", "abort")}}, т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.
+  - : Вызывается когда происходит событие [`abort`](/ru/docs/Web/API/AbortSignal/abort_event), т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.
 
 ## Методы
 
@@ -55,9 +55,11 @@ function fetchVideo() {
 }
 ```
 
-> **Примечание:** Когда `abort()` вызывается, `fetch()` промис отклоняется с `AbortError`.
+> [!NOTE]
+> Когда `abort()` вызывается, `fetch()` промис отклоняется с `AbortError`.
 
-> **Предупреждение:** Текущая версия Firefox отклоняет промис с `DOMException`
+> [!WARNING]
+> Текущая версия Firefox отклоняет промис с `DOMException`
 
 Вы можете найти полный рабочий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([см. как он работает в живую](https://mdn.github.io/dom-examples/abort-api/)).
 

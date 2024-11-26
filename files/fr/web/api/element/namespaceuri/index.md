@@ -7,7 +7,8 @@ slug: Web/API/Element/namespaceURI
 
 La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espace de noms de l'élément ou `null` si l'élément n'est pas dans un espace de nom.
 
-> **Note :** Avant DOM4, cet API était définie dans l'interface {{domxref("Node")}}.
+> [!NOTE]
+> Avant DOM4, cet API était définie dans l'interface {{domxref("Node")}}.
 
 ## Syntaxe
 

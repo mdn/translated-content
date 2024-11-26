@@ -51,9 +51,9 @@ Web Audio API 亦可控制音訊的空間定位 (Spatialized) 作業：透過 so
 ## 線上教學
 
 - 使用 Web Audio API
-- [Getting Started with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/intro/) (僅說明 WebKit-only 的非標準建置)
-- [混合定位音訊 (Positional Audio) 與 WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [以 Web Audio API 開發遊戲音訊](http://www.html5rocks.com/tutorials/webaudio/games/)
+- [Getting Started with the Web Audio API](https://web.dev/articles/webaudio-intro) (僅說明 WebKit-only 的非標準建置)
+- [混合定位音訊 (Positional Audio) 與 WebGL](https://web.dev/articles/webaudio-positional-audio)
+- [以 Web Audio API 開發遊戲音訊](https://web.dev/articles/webaudio-games)
 - [將 webkitAudioContext 程式碼移植為標準的 AudioContext](/zh-TW/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 
 ## 規格

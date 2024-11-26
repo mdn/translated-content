@@ -19,7 +19,7 @@ O {{jsxref("ArrayBuffer")}} é um tipo de dado que é utilizado para representar
 
 As views de arrays tipados possuem nomes auto descritivos e fornecem exibições para todos os tipos numéricos habituais, como `Int8`, `Uint32`, `Float64` e assim por diante. Há uma view de array tipado especial, a view `Uint8ClampedArray`. Ela comporta os valores entre `0` e `255`. Isto é útil no [processamento de dados do Canvas](/pt-BR/docs/Web/API/ImageData), por exemplo.
 
-{{page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects") -->
 
 ### DataView
 
@@ -121,7 +121,8 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 Então você pode acessar, por exemplo, o devido valor com `amountDueView[0]`.
 
-> **Nota:** O [alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
+> [!NOTE]
+> O [alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment) em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.
 
 ### Conversão para arrays normais
 

@@ -99,7 +99,8 @@ Considere fornecer um mecanismo para pausar ou desabilitar a animação, bem com
 
 ## Exemplos
 
-> **Nota:** A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_Box_Model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
+> [!NOTE]
+> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_Box_Model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
 
 ### Nascer do Sol
 

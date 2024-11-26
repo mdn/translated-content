@@ -22,7 +22,7 @@ from(object)
 
 ### 返回值
 
-如果 `object` 是一个可迭代对象，则会调用其 `@@iterator` 以获取迭代器。否则，`object` 将被视为一个迭代器。如果该迭代器的 `{{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}}` 结果为真（这意味着它在原型链中有 `Iterator.prototype`），则直接返回它。否则，创建一个包装了原始迭代器的新 {{jsxref("Iterator")}} 对象。
+如果 `object` 是一个可迭代对象，则会调用其 `[Symbol.iterator]()` 以获取迭代器。否则，`object` 将被视为一个迭代器。如果该迭代器的 `{{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}}` 结果为真（这意味着它在原型链中有 `Iterator.prototype`），则直接返回它。否则，创建一个包装了原始迭代器的新 {{jsxref("Iterator")}} 对象。
 
 ## 描述
 
@@ -37,7 +37,7 @@ from(object)
 
 ### 将可迭代对象转换为恰当的迭代器
 
-因为 `obj` 已经是一个可迭代对象，并且其 `@@iterator` 方法返回了一个恰当的迭代器，所以 `Iterator.from(obj)` 返回的迭代器与 `obj` 相同。
+因为 `obj` 已经是一个可迭代对象，并且其 `[Symbol.iterator]()` 方法返回了一个恰当的迭代器，所以 `Iterator.from(obj)` 返回的迭代器与 `obj` 相同。
 
 ```js
 const iterator = (function* () {
@@ -56,7 +56,7 @@ const iterator2 = Iterator.from(obj);
 console.log(iterator2 === iterator); // true
 ```
 
-因为 `obj2` 是一个可迭代对象，其 `@@iterator` 方法返回了一个非恰当的迭代器，所以 `Iterator.from(obj2)` 返回一个包装了原始迭代器的新迭代器。
+因为 `obj2` 是一个可迭代对象，其 `[Symbol.iterator]()` 方法返回了一个非恰当的迭代器，所以 `Iterator.from(obj2)` 返回一个包装了原始迭代器的新迭代器。
 
 ```js
 const iterator = {

@@ -13,7 +13,7 @@ Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
 - _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 

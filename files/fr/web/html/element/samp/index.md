@@ -67,7 +67,8 @@ samp {
 }
 ```
 
-> **Note :** S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
+> [!NOTE]
+> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
 
 ## Exemples
 

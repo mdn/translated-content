@@ -21,7 +21,8 @@ Los lectores de pantalla deben anunciar el campo como requerido.
 
 Nota que este atributo no cambiará automáticamente la presentación del campo.
 
-> **Nota:** Las opiniones pueden diferir en cuanto a cómo esta técnica debería ser manejada por la tecnología asistente. La información prevista arribaes una de esas opciones y por lo tanto no es normativa.
+> [!NOTE]
+> Las opiniones pueden diferir en cuanto a cómo esta técnica debería ser manejada por la tecnología asistente. La información prevista arribaes una de esas opciones y por lo tanto no es normativa.
 
 ### Ejemplos
 

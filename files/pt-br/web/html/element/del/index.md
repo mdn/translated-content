@@ -9,7 +9,7 @@ O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) repr
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent).
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLModElement")}}
 

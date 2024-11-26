@@ -47,7 +47,8 @@ toLocaleString(locales, options)
 
 `Intl.NumberFormat`를 구현한 구현체에서는 이는 `new Intl.NumberFormat(locales, options).format(number)`과 동일합니다.
 
-> **참고:** 대부분의 경우 `toLocaleString()`이 반환하는 형식은 일관적입니다. 그러나 출력은 시간, 언어 및 구현에 따라 달라질 수 있으며, 출력 변형은 명세서에 의해 설계되고 허용됩니다. `toLocaleString()`의 결과를 정적 값과 비교해서는 안 됩니다.
+> [!NOTE]
+> 대부분의 경우 `toLocaleString()`이 반환하는 형식은 일관적입니다. 그러나 출력은 시간, 언어 및 구현에 따라 달라질 수 있으며, 출력 변형은 명세서에 의해 설계되고 허용됩니다. `toLocaleString()`의 결과를 정적 값과 비교해서는 안 됩니다.
 
 ## 예제
 

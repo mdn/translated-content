@@ -87,7 +87,8 @@ En un modo de escritura horizontal este CSS aplicaría un margen de 5px arriba d
 }
 ```
 
-> **Nota:** Las propiedades abreviadas `margin-inline` y `margin-block` se enviaron en Firefox 66. Como hay nuevas propiedades, mira el soporte en el navegador antes de usarlas.
+> [!NOTE]
+> Las propiedades abreviadas `margin-inline` y `margin-block` se enviaron en Firefox 66. Como hay nuevas propiedades, mira el soporte en el navegador antes de usarlas.
 
 ## Ejemplos para rellenos (Paddings)
 
@@ -113,7 +114,8 @@ En un modo de escritura horizontal este CSS aplicaría un relleno de 5px arriba 
 }
 ```
 
-> **Nota:** Las abreviaciones de las propiedades `padding-inline` y `padding-block` se enviaron en Firefox 66. Como hay nuevas propiedades, mira el soporte en el navegador antes de usarlas.
+> [!NOTE]
+> Las abreviaciones de las propiedades `padding-inline` y `padding-block` se enviaron en Firefox 66. Como hay nuevas propiedades, mira el soporte en el navegador antes de usarlas.
 
 ## Ejemplos para bordes
 
@@ -136,7 +138,8 @@ Hay valores abreviados de dos valores para establecer el ancho, el estilo y el c
 }
 ```
 
-> **Nota:** Estas dos abreviaciones fueron enviadas en Firefox 66, mira el soporte en los navegadores antes de usar estas propiedades ya que puede que en otros navegadores aún no estén implementadas.
+> [!NOTE]
+> Estas dos abreviaciones fueron enviadas en Firefox 66, mira el soporte en los navegadores antes de usar estas propiedades ya que puede que en otros navegadores aún no estén implementadas.
 
 ### Flujo de propiedades relativas del border-radius
 

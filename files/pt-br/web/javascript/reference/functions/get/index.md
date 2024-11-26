@@ -76,7 +76,8 @@ console.log(o.b); // Executa o getter, que retornará a + 1 (que é 1)
 
 ### Usando uma propriedade com nome computado
 
-> **Nota:** Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um `SyntaxError em ambientes sem suporte.`
+> [!NOTE]
+> Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um `SyntaxError em ambientes sem suporte.`
 
 ```js
 var expr = "foo";

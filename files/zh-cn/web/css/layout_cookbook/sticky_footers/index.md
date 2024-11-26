@@ -20,11 +20,12 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载此示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 
-> **备注：** 在这个示例和接下来的示例中，我们使用一个设置为 `min-height: 100%` 的 wrapper，以便我们的实时示例工作。你也可以通过在 {{htmlelement("body")}} 上设置 {{cssxref("min-height")}} 为 `100vh`，然后将其用作网格容器来实现全页面的效果。
+> [!NOTE]
+> 在这个示例和接下来的示例中，我们使用一个设置为 `min-height: 100%` 的 wrapper，以便我们的实时示例工作。你也可以通过在 {{htmlelement("body")}} 上设置 {{cssxref("min-height")}} 为 `100vh`，然后将其用作网格容器来实现全页面的效果。
 
 ## 做出选择
 

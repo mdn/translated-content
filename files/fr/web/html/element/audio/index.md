@@ -21,7 +21,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
 
-    > **Note :** Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
+    > [!NOTE]
+    > Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
 
 - **`controls`**
   - : Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.
@@ -40,7 +41,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir [cette proposition de spécification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
 
-    > **Note :** Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
+    > [!NOTE]
+    > Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
 
 - **`loop`**
   - : Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.
@@ -57,7 +59,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     La valeur par défaut peut varier d'un navigateur à l'autre. Les spécifications recommandent la valeur `metadata`.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est spécifié, le navigateur devrait évidemment commencer à télécharger l'audio pour le lire.
     > - La spécification n'oblige pas le navigateur à suivre la valeur de cet attribut ; il s'agit d'une simple indication.
@@ -139,7 +141,8 @@ Il est aussi possible de détecter lorsque des pistes sont ajoutées et supprim�
 - [`HTMLMediaElement.textTracks`](/fr/docs/Web/API/HTMLMediaElement/textTracks)
   - : Un écouteur `addtrack` peut être ajouté à cet objet [`TextTrackList`](/fr/docs/Web/API/TextTrackList) afin d'alerter lorsque de nouvelles pistes de texte sont ajoutées à l'élément.
 
-> **Note :** Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
+> [!NOTE]
+> Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
 
 Ainsi, on pourra utiliser un fragment de code analogue à celui qui suit pour détecter si de nouvelles pistes sont ajoutées ou supprimées d'un élément `<audio>` :
 

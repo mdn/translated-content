@@ -60,7 +60,8 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 
   - : Describe la(s) URL(s) a emplear para la búsqueda. El atributo `method` indica si se debe emplear una petición `GET` o `POST` para obtener los resultados.
 
-    > **Nota:** Internet Explorer 7 no admite peticiones `POST`.
+    > [!NOTE]
+    > Internet Explorer 7 no admite peticiones `POST`.
 
     Firefox admite dos tipos de URL en el campo `type`:
 
@@ -77,13 +78,15 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 
   - : Los parámetros que es necesario suministrar junto con la consulta, en la forma de pares clave/valor. En los valores es posible emplear las plantillas dinámicas presentadas anteriormente; por ejemplo, se puede usar `{searchTerms}` para insertar los términos de búsqueda que el usuario introdujo en la barra de búsquedas.
 
-    > **Nota:** Internet Explorer 7 no admite este elemento.
+    > [!NOTE]
+    > Internet Explorer 7 no admite este elemento.
 
 - **SearchForm**
 
   - : La URL donde se encuentra la página de búsquedas del sitio al que hace referencia el complemento que estamos desarrollando. Esto permite al usuario acceder directamente al sitio web en cuestión.
 
-    > **Nota:** Dado que este elemento es específico de Firefox y no forma parte de la especificación OpenSearch, en el ejemplo anterior, usamos el prefijo "`moz:`" en el espacio de nombres XML para asegurarnos que otros agentes de usuario que no admiten este elemento puedan ignoralo de forma segura.
+    > [!NOTE]
+    > Dado que este elemento es específico de Firefox y no forma parte de la especificación OpenSearch, en el ejemplo anterior, usamos el prefijo "`moz:`" en el espacio de nombres XML para asegurarnos que otros agentes de usuario que no admiten este elemento puedan ignoralo de forma segura.
 
 ## Detección automática de complementos de búsqueda
 

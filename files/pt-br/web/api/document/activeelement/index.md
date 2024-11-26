@@ -9,7 +9,8 @@ Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o el
 
 Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades `selectionStart` e `selectionEnd`. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo `button`, `checkbox` ou `radio`.
 
-> **Nota:** No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.
+> [!NOTE]
+> No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.
 
 Normalmente o usuário pode navegar entre os elementos que pode receber foco na página com o uso da tecla `tab` e ativar estes elementos com a tecla `espaço` (apertar um botão ou selecionar uma opção).
 
@@ -17,7 +18,8 @@ Não confunda foco com uma seleção de texto no documento, que consiste em sua 
 
 Quando não há nada selecionado, o `activeElement` da página é o {{ HTMLElement("body") }} ou `null`.
 
-> **Nota:** Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.
+> [!NOTE]
+> Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.
 
 ## Sintaxe
 
@@ -91,7 +93,7 @@ Originalmente apresentada como extensão DOM proprietária no Internet Explorer 
 
 ## Eventos relacionados
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
+- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
+- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
+- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)

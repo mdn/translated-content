@@ -32,14 +32,16 @@ slug: Learn/CSS/Styling_text/Fundamentals
 
 正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 {{htmlelement("br")}} 元素。
 
-> **备注：** 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 [Box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model) 文件，复习盒模型的理论。
+> [!NOTE]
+> 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 [Box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model) 文件，复习盒模型的理论。
 
 用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。
 
 - **字体样式**: 作用于字体的属性，会直接应用到文本中，比如使用哪种字体，字体的大小是怎样的，字体是粗体还是斜体，等等。
 - **文本布局风格**: 作用于文本的间距以及其他布局功能的属性，比如，允许操纵行与字之间的空间，以及在内容框中，文本如何对齐。
 
-> **备注：** 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/::selection) (当前光标双击选中的文本)
+> [!NOTE]
+> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/::selection) (当前光标双击选中的文本)
 
 ## 字体
 
@@ -165,9 +167,11 @@ p {
   </tbody>
 </table>
 
-> **备注：** 在各种资源中，[cssfontstack.com](http://www.cssfontstack.com/) 网站维护了一个可用在 Windows 和 Mac 操作系统上使用的网页安全字体的列表，这可以帮助决策网站的安全性。
+> [!NOTE]
+> 在各种资源中，[cssfontstack.com](http://www.cssfontstack.com/) 网站维护了一个可用在 Windows 和 Mac 操作系统上使用的网页安全字体的列表，这可以帮助决策网站的安全性。
 
-> **备注：** 有一个可以下载来自一个网页的自定义字体的方法，允许你通过任何你想要的方法来定制你使用的字体：**网页字体**。这个有一点复杂，我们将在这个模块中的另一篇文章中讨论这一点。
+> [!NOTE]
+> 有一个可以下载来自一个网页的自定义字体的方法，允许你通过任何你想要的方法来定制你使用的字体：**网页字体**。这个有一点复杂，我们将在这个模块中的另一篇文章中讨论这一点。
 
 #### 默认字体
 
@@ -274,7 +278,8 @@ p {
 
 在字体栈的最后提供一个合适的通用的字体名称是个不错的办法，这样的话，即使列出的字体都无法使用，浏览器至少可以提供一个还算合适的选择。为了强调这一点，如果没有其他选项可用，那么段落将被赋予浏览器的默认衬线字体 - 通常是 Time New Roman - 这对于 sans-serif 字体是不利的！
 
-> **备注：** 有一些字体名称不止一个单词，比如`Trebuchet MS` ，那么就需要用引号包裹。
+> [!NOTE]
+> 有一些字体名称不止一个单词，比如`Trebuchet MS` ，那么就需要用引号包裹。
 
 #### 一个使用 font-family 的例子
 
@@ -452,7 +457,8 @@ text-shadow: 4px 4px 5px red;
 3. 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
 4. 阴影的基础颜色，可以使用大多数的 CSS 颜色单位 [CSS color unit](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). 如果没有指定，默认为 `black`.
 
-> **备注：** 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 `-1px -1px`.
+> [!NOTE]
+> 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 `-1px -1px`.
 
 #### 多种阴影
 
@@ -510,7 +516,8 @@ p {
 
 {{ EmbedLiveSample('多种阴影', '100%', 260) }}
 
-> **备注：** 你可以看到更多有趣的关于 `text-shadow` 使用的示例在 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [!NOTE]
+> 你可以看到更多有趣的关于 `text-shadow` 使用的示例在 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## 文本布局
 

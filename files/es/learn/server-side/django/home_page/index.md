@@ -67,7 +67,8 @@ La tres primeras URLs son usadas para listar el índice, los libros y autores. E
 
 En contraste las 2 URLs finales son usadas para mostrar información detallada sobre un libro o autor específico — estas codifican la identidad de los ítemes a mostrar en la URL (mostrado arriba como `<id>`). El mapeador URL puede extraer la información codificada y pasársela a la vista, donde se detarminará que información extraer de la base de datos. Al codificar la información en nuestra URL solo necesitamos un mapeador de URL, una vista, y un plantilla para manejar cada libro (o autor).
 
-> **Nota:** Django te permite construir tus URLs de cualquier forma que quieras — puedes codificar información en el cuerpo de la URL como se muestra arriba o usando la obtención de parámetros `GET` de la URL(e.j. `/book/?id=6`). Culquier enfoque que uses, las URLs deben mantenerse limpias, lógicas y legibles ([observa el consejo del W3C aquí](https://www.w3.org/Provider/Style/URI)).
+> [!NOTE]
+> Django te permite construir tus URLs de cualquier forma que quieras — puedes codificar información en el cuerpo de la URL como se muestra arriba o usando la obtención de parámetros `GET` de la URL(e.j. `/book/?id=6`). Culquier enfoque que uses, las URLs deben mantenerse limpias, lógicas y legibles ([observa el consejo del W3C aquí](https://www.w3.org/Provider/Style/URI)).
 >
 > La documentación Django tiende a recomendar la codificación de información en el cuerpo de la URL, una práctica que ellos creen que promueve mejores diseños de URL.
 
@@ -77,7 +78,8 @@ Como discutimos en la introducción, el resto de este articulo describe como con
 
 La primera página que crearemos será la página index (`catalog/`). Esto desplegará un pequeño HTML estático, junto con algunos "contadores" calculados de diferentes registros en la base de datos. Para hacer este trabajo tendremos que crear un mapeador URL, una vista y una plantilla.
 
-> **Nota:** Vale la pena prestar un poco de atención extra en esta sección. La mayoría del contenido es común para todas las páginas.
+> [!NOTE]
+> Vale la pena prestar un poco de atención extra en esta sección. La mayoría del contenido es común para todas las páginas.
 
 ### Mapeador URL
 
@@ -93,7 +95,8 @@ urlpatterns = [
 
 Esta función `path()` define una cadena vacía (`''`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). Hablaremos un poco más sobre los patrones URL más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en un patron de `''` coincidirá con una cadena vacía.
 
-> **Nota:** Nota que en **/locallibrary/locallibrary/urls.py**
+> [!NOTE]
+> Nota que en **/locallibrary/locallibrary/urls.py**
 >
 > ```py
 > urlpatterns += [
@@ -111,7 +114,8 @@ La función `path()` también especifica un parámetro `name`, que identifica de
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **Nota:** Por su puesto podemos codificar a fuerza bruta el link anterior (e.j. `<a href="/catalog/">Home</a>`), pero entonces si cambiamos el patrón para nuestra página de inicio (e.j. a `/catalog/index`) la plantilla no podrá seguir enlazando correctamente. Usar un mapeador de url es mucho más flexible y robusto!
+> [!NOTE]
+> Por su puesto podemos codificar a fuerza bruta el link anterior (e.j. `<a href="/catalog/">Home</a>`), pero entonces si cambiamos el patrón para nuestra página de inicio (e.j. a `/catalog/index`) la plantilla no podrá seguir enlazando correctamente. Usar un mapeador de url es mucho más flexible y robusto!
 
 ### Vista (basada-en-funciones)
 
@@ -159,7 +163,8 @@ Hablaremos más sobre la plantilla y la variable de contexto en la siguiente sec
 
 Una plantilla es un archivo de texto que determina la estructura o diseño de un archivo (como una página HTML), con marcadores usados para representar el contenido real. Django automaticamente buscará plantillas en un directorio llamado '**templates**' de su aplicación. Así por ejemplo, en la vista índice que acabamos de agregar, la función `render()` esperará poder encontrar el archivo **/locallibrary/catalog/templates/_index.html_**, y entregará un error si el archivo no puede ser encontrado. Puede ver esto si guarda los cambios anteriores y vuelve a su navegador — accediendo a `127.0.0.1:8000` ahora le entregará un mensaje de error bastante intuitivo "TemplateDoesNotExist at /catalog/", más otros detalles.
 
-> **Nota:** Django buscará en una serie de lugares por plantillas, basandose en su archivo de configuraciones de proyectos (buscar en su aplicación instalada es una configuración por defecto!). Puede encontrar más sobre como Django encuentra plantillas y qué formatos de plantillas soporta [Templates](https://docs.djangoproject.com/en/1.10/topics/templates/) (Django docs).
+> [!NOTE]
+> Django buscará en una serie de lugares por plantillas, basandose en su archivo de configuraciones de proyectos (buscar en su aplicación instalada es una configuración por defecto!). Puede encontrar más sobre como Django encuentra plantillas y qué formatos de plantillas soporta [Templates](https://docs.djangoproject.com/en/1.10/topics/templates/) (Django docs).
 
 #### Plantillas extendidas
 
@@ -167,7 +172,8 @@ La plantilla índice va a necesitar marcado HTML estándar para la cabecera y el
 
 Por ejemplo, un plantilla base **base_generic.html** podría verse como el texto de abajo. Como puedes ver, este contiene algo de HTML "común" y secciones para el título, barra lateral, y contendio marcados usando las etiquetas de plantillas llamadas `block` y `endblock` (mostradas en negrita). Los bloques pueden estar vacíos, o tener contenido que será usado "por defecto" para páginas derivadas.
 
-> **Nota:** Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista) y usar _filtros de plantilla_, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).
+> [!NOTE]
+> Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista) y usar _filtros de plantilla_, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).
 
 ```django
 <!DOCTYPE html>
@@ -200,7 +206,8 @@ Por ejemplo, el fragmento de código que sigue muestra como usar la etiqueta de 
 
 La plantilla base que pensamos usar para el siito web _LocalLibrary_ se muestra abajo. Como puedes ver, contiene algo de HTML y bloques definidos para `title`, `sidebar` y `content`. Tenemos un título por defecto (que podríamos querer cambiar) y una barra lateral por defecto con enlaces a listas de todos los libros y autores (que probablemente no querramos cambiar, pero hemos dejado abierta la posibilidad de hacerlo si es necesario, poniéndolo en un bloque).
 
-> **Nota:** También introducimos dos etiquetas de plantilla adicionales: `url` y `load static`. Se discute sobre ellas en secciones posteriores.
+> [!NOTE]
+> También introducimos dos etiquetas de plantilla adicionales: `url` y `load static`. Se discute sobre ellas en secciones posteriores.
 
 Crea un nuevo archivo — **/locallibrary/catalog/templates/_base_generic.html_** — y pon en él el siguiente contenido:
 
@@ -284,7 +291,8 @@ Crea el archivo HTML **/locallibrary/catalog/templates/_index.html_** y pon en �
 
 En la sección _Dynamic content_ hemos declarado marcadores de posición (_variables de plantilla_) para la información que quisimos incluir desde la vista. Las variables se marcan usando la sintaxis de "doble corchete" o "llaves" (ver lo que está en negrita arriba).
 
-> **Nota:** Puedes reconocer fácilmente si estás trabajando con variables de plantilla o con etiquetas de plantilla (funciones) porque las variables tienen llaves dobles (`\{{ num_books }}`) mientras que las etiquetas están encerradas entre llaves simples con signos de porcentaje (`{% extends "base_generic.html" %}`).
+> [!NOTE]
+> Puedes reconocer fácilmente si estás trabajando con variables de plantilla o con etiquetas de plantilla (funciones) porque las variables tienen llaves dobles (`\{{ num_books }}`) mientras que las etiquetas están encerradas entre llaves simples con signos de porcentaje (`{% extends "base_generic.html" %}`).
 
 Lo importante de todo esto es que estas variables se nombran con las claves que enviamos dentro del diccionario `context` en la función `render()` de nuestra vista (mira abajo); estas variables serán reemplazadas por sus valores asociados cuando la plantilla sea renderizada.
 
@@ -315,7 +323,8 @@ Si quisieras podrías añadir una imagen a la página de forma similar. Por ejem
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
 ```
 
-> **Nota:** Los cambios de arriba especifican dónde se localizan los archivos, pero Django no los sirve por defecto. Si bien habilitamos este servicio para el servidor web de desarrollo en el mapeador URL global (**/locallibrary/locallibrary/urls.py**) cuando [creamos el esqueleto del sitio web](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiq2o-V3PXbAhVM0FMKHcNzAkcQFggnMAA&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fes%2Fdocs%2FLearn%2FServer-side%2FDjango%2Fskeleton_website&usg=AOvVaw2VIIkwGelK5OnECR-4u4sU), aún necesitarás configurar este servicio para producción. Hablaramos de esto más tarde.
+> [!NOTE]
+> Los cambios de arriba especifican dónde se localizan los archivos, pero Django no los sirve por defecto. Si bien habilitamos este servicio para el servidor web de desarrollo en el mapeador URL global (**/locallibrary/locallibrary/urls.py**) cuando [creamos el esqueleto del sitio web](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiq2o-V3PXbAhVM0FMKHcNzAkcQFggnMAA&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fes%2Fdocs%2FLearn%2FServer-side%2FDjango%2Fskeleton_website&usg=AOvVaw2VIIkwGelK5OnECR-4u4sU), aún necesitarás configurar este servicio para producción. Hablaramos de esto más tarde.
 
 Para mayor información sobre el trabajo con archivos estáticos revisa [Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
 
@@ -359,7 +368,8 @@ En este punto deberíamos haber creado todo lo necesario para desplegar la pági
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **Nota:** Aún no podrás usar los enlaces **All books** y **All authors** porque las URLs, vistas y plantillas para dichas páginas no se han definido (al momento solo hemos insertado marcadores de posición para esos enlaces en la plantilla `base_generic.html`).
+> [!NOTE]
+> Aún no podrás usar los enlaces **All books** y **All authors** porque las URLs, vistas y plantillas para dichas páginas no se han definido (al momento solo hemos insertado marcadores de posición para esos enlaces en la plantilla `base_generic.html`).
 
 ## Rétate a tí mismo
 

@@ -2,7 +2,7 @@
 title: レスポンシブ画像
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 l10n:
-  sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
+  sourceCommit: 76c1e86a6bf1fd58aa6b0e627842a3c1161add28
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -57,7 +57,8 @@ l10n:
 
 この種の問題は、ウェブが最初に登場したとき、90 年代前半から中期の頃には存在しませんでした。 — ウェブをブラウズする唯一の端末はデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。 *レスポンシブ画像技術*は上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像（解像度の切り替え）、異なる領域の取り方が異なる様々な画像（アートディレクション）を含めることができます。
 
-> **メモ:** この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — は、現行のデスクトップおよびモバイルブラウザーのすべてが対応しています。
+> [!NOTE]
+> この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — は、現行のデスクトップおよびモバイルブラウザーのすべてが対応しています。
 
 ## レスポンシブ画像の作り方
 
@@ -104,7 +105,7 @@ l10n:
 2. 空白
 3. メディア条件が成立したときに埋める**スロットの幅** (`480px`)
 
-> **メモ:** スロットの幅は、絶対幅（例: `480px`）ではなく、ビューポートからの相対幅（例: `50vw`）を提供することができます。ただし、パーセント値は指定できません。最後のスロットの幅にはメディア条件がないことにお気づきでしょうか （これは、どのメディア条件も真でない場合に選択される既定値です）。ブラウザーは最初の一致する条件以降を無視するので、メディア条件をどのように並べるか注意してください。
+> **メモ:** `sizes` においては、任意の[長さの値](/ja/docs/Web/CSS/length)を使うことができます。例えば、絶対幅（例: `480px`）の代わりに、ビューポートに対する相対幅（例: `50vw`）を提供することができます。ただし、スロット幅としてパーセント値を用いることはできません。最後のスロットの幅にはメディア条件がないことにお気づきでしょうか （これは、どのメディア条件も真でない場合に選択される既定値です）。ブラウザーは最初に一致した条件よりも後を無視するので、メディア条件をどのように並べるか注意してください。
 
 したがって、これらの属性を使用すると、ブラウザーは次のようになります。
 
@@ -115,17 +116,21 @@ l10n:
 
 以上です！ この時点で、480px のビューポート幅を持つ対応しているブラウザーがこのページを読み込むと、`(max-width: 600px)` メディア条件が真となるため、ブラウザーは `480px` のスロットを選択します。`elva-fairy-480w.jpg` の固有幅 (`480w`) が最も近いため、これが読み込まれます。 800px の画像は 128KB ですが、480px の画像は 63KB で 65KB の節約になります。 今、これが多くの写真があるページだったと想像してみてください。 この技術を使用することで、モバイルユーザーは多くの帯域幅を節約できます。
 
-> **メモ:** デスクトップのブラウザーでテストする場合、ブラウザーでウィンドウ幅を最も狭く設定したときに狭い画像を読み込むことができない場合は、ビューポートの値を確認してください（ブラウザー の JavaScript コンソールに移動して `document.querySelector('html').clientWidth` と入力すると、おおよその値を確認することができます）。さまざまなブラウザーでのウィンドウ幅の最小値が保有されており、それは思ったよりも広いかもしれません。モバイルブラウザーでテストする場合、 Firefox の `about:debugging` ページのようなツールを使用して、デスクトップの開発者ツールを使用してモバイルに読み込まれたページを検査することができます。
+> [!NOTE]
+> デスクトップのブラウザーでテストする場合、ブラウザーでウィンドウ幅を最も狭く設定したときに狭い画像を読み込むことができない場合は、ビューポートの値を確認してください（ブラウザー の JavaScript コンソールに移動して `document.querySelector('html').clientWidth` と入力すると、おおよその値を確認することができます）。さまざまなブラウザーでのウィンドウ幅の最小値が保有されており、それは思ったよりも広いかもしれません。モバイルブラウザーでテストする場合、 Firefox の `about:debugging` ページのようなツールを使用して、デスクトップの開発者ツールを使用してモバイルに読み込まれたページを検査することができます。
 >
 > どの画像が読み込まれたかを確認するには、 Firefox の開発者ツールの[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)タブや、Chrome の開発者ツールの[ネットワーク](https://developer.chrome.com/docs/devtools/network/)パネルを使用することができます。Chrome では、既にダウンロードされた画像を拾わないように、[キャッシュを無効](https://stackoverflow.com/a/7000899/13725861)にすることができます。
 
 これらの機能に対応していない古いブラウザーはこれらを無視し、 [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で参照されている画像を通常の方法で読み込みます。
 
-> **メモ:** 文書の {{htmlelement("head")}} には、 `<meta name="viewport" content="width=device-width">` という行があります。 これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。（一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。 これについては、今後のモジュールで詳しく説明します。）
+> [!NOTE]
+> 文書の {{htmlelement("head")}} には、 `<meta name="viewport" content="width=device-width">` という行があります。 これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。（一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。 これについては、今後のモジュールで詳しく説明します。）
 
 ### 解像度の切り替え: 同じサイズ、異なる解像度
 
-複数の画面解像度をサポートしていても、誰もが画面上で同じ実世界サイズで画像を見る場合は、`sizes` を指定せずに x 記述子を指定した `srcset` を使用してブラウザーに適切な解像度の画像を選択させることができます — やや簡単な構文です！ これは [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) のようなものです([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)も参照してください)。
+さまざまな解像度のディスプレイに同じ実寸で表示される画像があるとします。高解像度のディスプレイでは、より高解像度の画像を提供することで、より優れたユーザー体験を提供することができます。
+
+こうするためには、`srcset` で x 記述子を指定し、`sizes` を指定しないことで、ブラウザーに適切な解像度の画像を選択させることができます。やや簡単な構文です。これは [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) のようなものです([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)も参照してください)。
 
 ```html
 <img
@@ -134,7 +139,11 @@ l10n:
   alt="妖精の衣装を着たエルバ" />
 ```
 
-![古いカメラのフィルム効果が画像に適用されている、妖精の衣装を着た小さな女の子の絵](resolution-example.png)この例では、次の CSS が画像に適用され、画面上に 320 ピクセルの幅が設定されます（CSS ピクセルとも呼ばれます）。
+画像は常に同じサイズで表示されますが、高解像度のディスプレイではより多くの詳細を確認できることに注意してください。
+
+![古いカメラのフィルム効果が画像に適用されている、妖精の衣装を着た小さな女の子の絵](resolution-example.png)
+
+この例では、次の CSS が画像に適用され、画面上に 320 ピクセルの幅が設定されます（CSS ピクセルとも呼ばれます）。
 
 ```css
 img {
@@ -199,7 +208,7 @@ img {
 
 ## 関連情報
 
-- [Jason Grigsby のレスポンシブ画像の優れた紹介](http://blog.cloudfour.com/responsive-images-101-definitions)(英語)
+- [Jason Grigsby のレスポンシブ画像の優れた紹介](https://cloudfour.com/thinks/responsive-images-101-definitions/) (英語)
 - [レスポンシブ画像: 解像度を変更するだけの場合は、srcset を使う](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — ブラウザーがどの画像を使用するかの詳細な説明が含まれています(英語)
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}

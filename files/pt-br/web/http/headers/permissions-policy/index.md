@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 O cabeçalho HTTP **`Feature-Policy`** provê um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
 
-> **Nota:** Este cabeçalho ainda está em estado experimental, e é sujeito a mudança a qualquer momento. Tenha cautela quando implementando isso no seu site. O cabeçalho agora foi renomeado para `Permissions-Policy` na especificação, e este artigo irá eventualmente ser atualizado para refletir estas atualizações.
+> [!NOTE]
+> Este cabeçalho ainda está em estado experimental, e é sujeito a mudança a qualquer momento. Tenha cautela quando implementando isso no seu site. O cabeçalho agora foi renomeado para `Permissions-Policy` na especificação, e este artigo irá eventualmente ser atualizado para refletir estas atualizações.
 
 Para mais informação, veja o artigo principal [Policy Feature](/docs/Web/HTTP/Feature_Policy).
 
@@ -33,7 +34,7 @@ Feature-Policy: <directive> <allowlist>
 - `<directive>`
   - : A diretiva Feature Policy que irá aplicar a `allowlist`. Veja [Diretivas](#diretivas) abaixo para a lista de nomes de diretivas.
 - `<allowlist>`
-  - : {{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}
+  - : <!-- TODO: page macro not supported: page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist") -->
 
 ## Diretivas
 

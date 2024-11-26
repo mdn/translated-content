@@ -1,6 +1,8 @@
 ---
 title: Используемые по умолчанию значения заголовка Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
+l10n:
+  sourceCommit: e843500803b73cbf179b84864cd9c159c7d4d81c
 ---
 
 {{HTTPSidebar}}
@@ -9,71 +11,85 @@ slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 
 ## Значения по умолчанию
 
-Здесь приведены значения, которые отправляются, когда нет никакой уточняющей информации. Обратите внимание, что все браузеры добавляют MIME-тип `*/*`, чтобы были охвачены все возможные варианты. Обычно значения имеют такой вид, когда запросы выполняются через адресную строку или через HTML-элемент {{HTMLElement("a")}}.
+Здесь приведены значения, которые отправляются, когда нет никакой уточняющей информации. Обратите внимание, что все браузеры добавляют MIME-тип `*/*`, чтобы были охвачены все возможные варианты. Обычно значения имеют такой вид, когда запросы выполняются через адресную строку или с помощью HTML-элемента {{HTMLElement("a")}}.
 
-| Агент пользователя  | Значение                                                                                                                                                                                                                                                                        | Комментарий                                                                                                                                                                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8` (начиная с Firefox 66) `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8` (в Firefox 65) `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8` (в более ранних версиях) | В Firefox до версии 65 включительно значение можно изменить с помощью параметра [`network.http.accept.default`](http://kb.mozillazine.org/Network.http.accept.default) (см. [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l1750)). |
-| Safari, Chrome      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                                                                                                                                                                         | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#24)                                                                                                                                                                  |
-| Safari 5            | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                                                                                                                               | Значение улучшено по сравнению с прежними вариантами заголовка `Accept`: MIME-тип `image/png` уже не указывается как более приоритетный, чем `text/html`.                                                                                                                       |
-| Internet Explorer 8 | `image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*`                                                                                                         | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                                                                                                              |
-| Edge                | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                 |
-| Opera               | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1`                                                                                                                                             |                                                                                                                                                                                                                                                                                 |
+| Агент пользователя         | Значение                                                                                                                            |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox 128 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
+| Firefox 92 to 127 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
+| Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
+| Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
+| Firefox 64 and earlier [2] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Safari, Chrome             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                             |
+| Safari 5 [3]               | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                  |
+| Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |
+
+\[1] В качестве значения может быть установлена произвольная строка с помощью настройки `network.http.accept` (`about:config`).
+
+\[2] В качестве значения может быть установлена произвольная строка с помощью настройки [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) (`about:config`).
+
+\[3] Улучшение более ранних версий заголовков `Accept`, которое не располагает `image/png` выше `text/html`.
 
 ## Значения для изображений
 
-Если запрашивается изображение, например через HTML-элемент {{HTMLElement("img")}}, агент пользователя часто задаёт уточнённый список подходящих MIME-типов.
+При запросе изображения, например с помощью HTML-элемента {{HTMLElement("img")}}, агент пользователя часто указывает уточнённый список подходящих медиа-типов.
 
-| Агент пользователя                         | Значение                                                                                                                          | Комментарий                                                                                                                                                                                   |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox                                    | `image/webp,*/*` (начиная с Firefox 65) `*/*` (начиная с Firefox 47) `image/png,image/*;q=0.8,*/*;q=0.5` (в более ранних версиях) | Значение можно изменить с помощью параметра `image.http.accept`. [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l4735)                            |
-| Safari                                     | `*/*`                                                                                                                             |                                                                                                                                                                                               |
-| Chrome                                     | `image/webp,image/apng,image/*,*/*;q=0.8`                                                                                         | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#99)                                                                 |
-| Internet Explorer до версии 8 включительно | `*/*`                                                                                                                             | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
-| Internet Explorer 9                        | `image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5`                                                                                | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
+| Агент пользователя             | Значение                                                                   |
+| ------------------------------ | -------------------------------------------------------------------------- |
+| Firefox 128 and later [1]      | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
+| Firefox 92 to 127 [1]          | `image/avif,image/webp,*/*`                                                |
+| Firefox 65 to 91 [1]           | `image/webp,*/*`                                                           |
+| Firefox 47 to 63 [1]           | `*/*`                                                                      |
+| Firefox prior to 47 [1]        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
+| Safari (since Mac OS Big Sur)  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
+| Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
+| Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
+
+\[1] В качестве значения может быть установлена произвольная строка с помощью параметра `image.http.accept` (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
 
 ## Значения для видео
 
-Если запрашивается видео через HTML-элемент {{HTMLElement("video")}}, в большинстве браузеров используется уточнённое значение.
+При запросе видео через HTML-элемент {{HTMLElement("video")}} большинство браузеров используют специфичные значения.
 
-| Агент пользователя                         | Значение                                                                           | Комментарий                                                                                                                                                                           |
-| ------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox до версии 3.6                      | _Не поддерживается для элемента {{HTMLElement("video")}}._                         |                                                                                                                                                                                       |
-| Firefox начиная с версии 3.6               | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136) |
-| Chrome                                     | `*/*`                                                                              | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                        |
-| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("video")}}_.                         |                                                                                                                                                                                       |
+| Агент пользователя       | Значение                                                                           |
+| ------------------------ | ---------------------------------------------------------------------------------- |
+| Firefox 3.6 and later    | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` |
+| Firefox earlier than 3.6 | _no support for {{HTMLElement("video")}}_                                          |
+| Chrome                   | `*/*`                                                                              |
 
-## Значения для аудиофайлов
+## Значения для аудио
 
-Если запрашивается аудиофайл, например через HTML-элемент {{HTMLElement("audio")}}, в большинстве браузеров используется уточнённое значение.
+При запросе аудиофайла, например с помощью HTML-элемента {{HTMLElement("audio")}}, некоторые браузеры используют специфичные значения.
 
-| Агент пользователя                         | Значение                                                                                     | Комментарий                                                                                                                                                                          |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Firefox начиная с версии 3.6               | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81) |
-| Safari, Chrome                             | `*/*`                                                                                        | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                       |
-| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("audio")}}._                                   |                                                                                                                                                                                      |
-| Internet Explorer 9                        | ?                                                                                            |                                                                                                                                                                                      |
+| Агент пользователя        | Значение                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------- |
+| Firefox 3.6 and later [1] | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` |
+| Safari, Chrome            | `*/*`                                                                                        |
+
+\[1] Смотрите [ошибку 489071](https://bugzil.la/489071).
 
 ## Значения для скриптов
 
-Если запрашивается скрипт, например через HTML-элемент {{HTMLElement("script")}}, в некоторых браузерах используется уточнённое значение.
+При запросе скрипта, например с помощью HTML-элемента {{HTMLElement("script")}}, некоторые браузеры используют специфичные значения.
 
-| Агент пользователя                         | Значение                            | Комментарий                                                                                                                                                                                   |
-| ------------------------------------------ | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox                                    | `*/*`                               | См. [страницу ошибки 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789).                                                                                                            |
-| Safari, Chrome                             | `*/*`                               | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                                |
-| Internet Explorer до версии 8 включительно | `*/*`                               | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
-| Internet Explorer 9                        | `application/javascript, */*;q=0.8` | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
+| Агент пользователя | Значение |
+| ------------------ | -------- |
+| Firefox [1]        | `*/*`    |
+| Safari, Chrome     | `*/*`    |
+
+\[1] Смотрите [ошибку 170789](https://bugzil.la/170789).
 
 ## Значения для таблиц стилей CSS
 
-Если запрашивается таблица стилей CSS через HTML-элемент `<link rel="stylesheet">`, в большинстве браузеров используется уточнённое значение.
+При запросе таблицы стилей CSS с помощью HTML-элемента `<link rel="stylesheet">` большинство браузеров используют специфичные значения.
 
-| Агент пользователя                         | Значение                                                                                                                            | Комментарий                                                                                                                                                                                   |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 4                                  | `text/css,*/*;q=0.1`                                                                                                                | См. [страницу ошибки 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/layout/style/Loader.cpp#l1548)              |
-| Internet Explorer до версии 8 включительно | `*/*`                                                                                                                               | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
-| Internet Explorer 9                        | `text/css`                                                                                                                          | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
-| Safari, Chrome                             | `text/css,*/*;q=0.1`                                                                                                                | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#98)                                                                 |
-| Opera 11.10                                | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |                                                                                                                                                                                               |
-| Konqueror 4.6                              | `text/css,*/*;q=0.1`                                                                                                                |                                                                                                                                                                                               |
+| Агент пользователя | Значение                                                                                                                            |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox 4 [1]      | `text/css,*/*;q=0.1`                                                                                                                |
+| Safari, Chrome     | `text/css,*/*;q=0.1`                                                                                                                |
+| Opera 11.10        | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |
+| Konqueror 4.6      | `text/css,*/*;q=0.1`                                                                                                                |
+
+\[1] Смотрите [ошибку 170789](https://bugzil.la/170789).

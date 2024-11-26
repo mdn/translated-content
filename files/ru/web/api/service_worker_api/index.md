@@ -15,9 +15,11 @@ Service worker запускается в контексте воркеров, п
 
 Из соображений безопасности service worker'ы работают только по HTTPS (либо, в целях разработки, на `localhost`). Давать сторонним людям возможность изменять сетевые запросы крайне опасно. Кроме того, Service Worker API недоступен в [режиме приватного просмотра](https://support.mozilla.org/ru/kb/privatnyj-prosmotr-prosmotr-veb-stranic-bez-sohran) браузера Firefox.
 
-> **Примечание:** Service Worker'ы выигрывают у предыдущих решений, таких как [AppCache,](http://alistapart.com/article/application-cache-is-a-douchebag) потому что не делают предположений о том, что вы пытаетесь сделать, и не ломаются, в случаях если их предположения не оказываются верными; вы имеете полный контроль над всем.
+> [!NOTE]
+> Service Worker'ы выигрывают у предыдущих решений, таких как [AppCache,](http://alistapart.com/article/application-cache-is-a-douchebag) потому что не делают предположений о том, что вы пытаетесь сделать, и не ломаются, в случаях если их предположения не оказываются верными; вы имеете полный контроль над всем.
 
-> **Примечание:** Service worker'ы широко используют промисы ([Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подходит идеально.
+> [!NOTE]
+> Service worker'ы широко используют промисы ([Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подходит идеально.
 
 ### Регистрация
 
@@ -47,7 +49,8 @@ Service Worker будет следовать следующему жизненн
 
 Service worker может отвечать на запросы, используя событие {{domxref("FetchEvent")}}. Вы можете изменять ответ на эти запросы на своё усмотрение используя метод {{domxref("FetchEvent.respondWith") }}.
 
-> **Примечание:** Так как выполнение `oninstall`/`onactivate` может занять время, спецификация service worker предоставляет метод `waitUntil`, который возвращает промис, когда вызывается `oninstall` или `onactivate`. Функциональные события не отправляются service worker, пока промис не завершится успешно.
+> [!NOTE]
+> Так как выполнение `oninstall`/`onactivate` может занять время, спецификация service worker предоставляет метод `waitUntil`, который возвращает промис, когда вызывается `oninstall` или `onactivate`. Функциональные события не отправляются service worker, пока промис не завершится успешно.
 
 Для полного руководства по созданию рабочего примера читайте [Использование Service Worker](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers).
 
@@ -83,7 +86,7 @@ Service worker'ы также предназначены для таких вещ
 - {{domxref("ExtendableEvent") }}
   - : Расширяет жизненный цикл событий `install` и `activate`, отправляемых {{domxref("ServiceWorkerGlobalScope")}} как часть жизненного цикла service worker'а. Это гарантирует, что любое функциональное событие (как {{domxref("FetchEvent")}}) не отправится в {{domxref("ServiceWorker")}}, пока он не обновит шаблон данных, удалив устаревшие данные кеша.
 - {{domxref("ExtendableMessageEvent") }}
-  - : Объект событий {{event("message_(ServiceWorker)","message")}} запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.
+  - : Объект событий [`message`](</ru/docs/Web/Events/message_(ServiceWorker)>) запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.
 - {{domxref("FetchEvent") }}
   - : Параметр, передающийся в обработчик {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` представляет собой событие получения, которое отправляется в {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Он содержит информацию о запросе и результирующем ответе и обеспечивает {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} метод, который позволяет отправить произвольный ответ обратно контролируемой странице.
 - {{domxref("InstallEvent") }}

@@ -16,7 +16,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}} {{Experimental_Inline}}
-  - : 新規に `BackgroundFetchEvent` オブジェクトを作成します。通常、このコンストラクタが使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
+  - : 新規に `BackgroundFetchEvent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## プロパティ
 

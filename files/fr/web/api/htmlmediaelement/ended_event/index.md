@@ -32,7 +32,8 @@ L'événement se produit dans deux contextes liés mais unique:
 - Action par défaut
   - : Aucune
 
-> **Note :** Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
+> [!NOTE]
+> Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
 
 ## Propriétés
 

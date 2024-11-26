@@ -24,7 +24,7 @@ l10n:
   </tbody>
 </table>
 
-> **备注：**
+> [!NOTE]
 >
 > - 客户端提示仅在安全来源（通过 TLS）上可用。
 > - 服务器必须通过发送 {{HTTPHeader("Accept-CH")}} 响应标头，才能接收来自客户端的 `Device-Memory` 标头。
@@ -67,7 +67,7 @@ Device-Memory: 1
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)（developer.chrome.com）
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - {{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}

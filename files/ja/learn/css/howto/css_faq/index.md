@@ -64,7 +64,8 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 - class を使用すると、複数の要素のスタイルを設定できるため、id セレクターを使用する複数のルールで同じスタイル設定情報を書き出す必要がなくなり、より短いスタイルシートを作成できます。より短いスタイルシートはより高性能です
 - class セレクターは id セレクターよりも[詳細度](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#詳細度)が低いため、必要に応じてオーバーライドする方が簡単です
 
-> **メモ:** 詳しくは[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)もご覧ください。
+> [!NOTE]
+> 詳しくは[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)もご覧ください。
 
 ## プロパティを既定値に戻すには
 
@@ -265,9 +266,11 @@ div {
 text-stroke: 4px navy;
 ```
 
-> **メモ:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS 接頭辞の処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes)を参照してください。
+> [!NOTE]
+> 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS 接頭辞の処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes)を参照してください。
 
-> **メモ:** ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) を参照してください。
+> [!NOTE]
+> ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) を参照してください。
 
 ## z-index は位置指定へどのように関係するのか?
 
@@ -275,4 +278,5 @@ z-index プロパティは、要素を積み重ねる順序を指定します。
 
 z-index/stack の順序が高い要素は、常に z-index/stack の順序が低い要素の前に表示されます。z-index は指定された位置 (`position:absolute`、`position:relative`、または `position:fixed`) を持つ要素に対してのみ機能します。
 
-> **メモ:** 詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#z-index_の紹介)の節を参照してください。
+> [!NOTE]
+> 詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#z-index_の紹介)の節を参照してください。

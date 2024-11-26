@@ -30,7 +30,8 @@ l10n:
 
 ## 使用 fetch() API
 
-> **备注：** 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
+> [!NOTE]
+> 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
 >
 > 1. 在浏览器中打开一个新标签页并访问 <https://example.org>。
 > 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的 JavaScript 控制台
@@ -333,7 +334,7 @@ fetchProducts();
 
 我们甚至可以使用 `try...catch` 块来处理错误，就像我们在写同步代码时一样。
 
-但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Pomise，所以你不能做这样的事情：
+但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Promise，所以你不能做这样的事情：
 
 ```js example-bad
 async function fetchProducts() {

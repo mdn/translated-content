@@ -11,11 +11,13 @@ l10n:
 
 ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les widgets JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.
 
-> **Attention :** La plupart de ces widgets ont été intégrés au sein d'HTML5 et **mieux vaudra donc utiliser les éléments sémantiques** HTML lorsqu'ils sont disponibles. Ainsi, les éléments natifs disposent de fonctionnalités [de navigation au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), de rôles et d'états définis en standard. Toutefois, lorsque vous choisissez d'utiliser ARIA, il vous revient de recoder les fonctionnalités équivalentes dans vos scripts.
+> [!WARNING]
+> La plupart de ces widgets ont été intégrés au sein d'HTML5 et **mieux vaudra donc utiliser les éléments sémantiques** HTML lorsqu'ils sont disponibles. Ainsi, les éléments natifs disposent de fonctionnalités [de navigation au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), de rôles et d'états définis en standard. Toutefois, lorsque vous choisissez d'utiliser ARIA, il vous revient de recoder les fonctionnalités équivalentes dans vos scripts.
 
 [La première règle d'ARIA](https://www.w3.org/TR/using-aria/#rule1) s'énonce ainsi&nbsp;: «&nbsp;Si vous pouvez utiliser un élément natif HTML ou un attribut avec la sémantique et le comportement voulu qui existe nativement, faites-le plutôt que d'utiliser un autre élément en lui ajoutant un rôle, un état ou une propriété ARIA afin de le rendre accessible.&nbsp;».
 
-> **Note :** On peut parfois lire l'expression «&nbsp;Mieux vaut ne pas utiliser ARIA que de l'utiliser incorrectement&nbsp;». Lors [d'un sondage WebAIM sur plus d'un million de pages d'accueil de sites](https://webaim.org/projects/million/#aria), il a été observé que les pages utilisant ARIA avaient 41% d'erreurs supplémentaires détectées par rapport aux pages sans ARIA. Bien qu'ARIA soit conçu pour rendre les pages web plus accessibles, lorsqu'il est utilisé incorrectement, il fait plus de mal que de bien.
+> [!NOTE]
+> On peut parfois lire l'expression «&nbsp;Mieux vaut ne pas utiliser ARIA que de l'utiliser incorrectement&nbsp;». Lors [d'un sondage WebAIM sur plus d'un million de pages d'accueil de sites](https://webaim.org/projects/million/#aria), il a été observé que les pages utilisant ARIA avaient 41% d'erreurs supplémentaires détectées par rapport aux pages sans ARIA. Bien qu'ARIA soit conçu pour rendre les pages web plus accessibles, lorsqu'il est utilisé incorrectement, il fait plus de mal que de bien.
 
 Voici un widget utilisé pour une barre de progression&nbsp;:
 
@@ -59,9 +61,11 @@ Tout le contenu qui est disponible pour les personnes qui n'utilisent pas d'outi
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **Note :** L'attribut `min` n'est pas autorisé pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress), sa valeur minimale est toujours `0`.
+> [!NOTE]
+> L'attribut `min` n'est pas autorisé pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress), sa valeur minimale est toujours `0`.
 
-> **Note :** Les éléments qui sont des points de repère dans la navigation du document ([`<main>`](/fr/docs/Web/HTML/Element/main), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<nav>`](/fr/docs/Web/HTML/Element/nav), etc.) ont des rôles ARIA implicites natifs, il n'est pas nécessaire de les dupliquer.
+> [!NOTE]
+> Les éléments qui sont des points de repère dans la navigation du document ([`<main>`](/fr/docs/Web/HTML/Element/main), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<nav>`](/fr/docs/Web/HTML/Element/nav), etc.) ont des rôles ARIA implicites natifs, il n'est pas nécessaire de les dupliquer.
 
 ## Prise en charge
 

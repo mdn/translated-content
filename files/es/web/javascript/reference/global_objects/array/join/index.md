@@ -28,7 +28,8 @@ Una cadena con todos los elementos de la matriz unidos. Si `arr.length` es `0`, 
 
 Las conversiones de cadena de todos los elementos de la matriz se unen en una cadena.
 
-> **Advertencia:** Si un elemento `no está definido` o es `nulo`, se convierte en la cadena vacía.
+> [!WARNING]
+> Si un elemento `no está definido` o es `nulo`, se convierte en la cadena vacía.
 
 ## Ejemplos
 

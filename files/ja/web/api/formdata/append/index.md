@@ -12,7 +12,8 @@ l10n:
 
 {{domxref("FormData.set", "set()")}} と `append()` の違いは、指定されたキーが既に存在する場合、`set()` は既存のすべての値を新しい値で上書きすることです。 一方、`append()` は、既存の値のセットの最後に新しい値を追加します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 

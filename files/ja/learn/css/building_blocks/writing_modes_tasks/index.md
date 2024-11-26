@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、 [CSS の書字方向と論理的プロパティを使用した様々なテキストの方向を扱う](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)方法を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/writing-mode.html", '100%', 800)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/writing-mode-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -41,7 +42,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/logical-width-height.html", '100%', 1100)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/logical-width-height-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -57,6 +58,6 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/logical-mbp.html", '100%', 1100)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/logical-mbp-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

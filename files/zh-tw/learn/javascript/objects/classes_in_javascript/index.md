@@ -81,7 +81,8 @@ function Teacher(first, last, age, gender, interests, subject) {
 
 這看起來和 Person 建構子有許多地方類似，但比較奇怪的就是之前沒看過的 [`call()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 函式。此函式基本上可讓你呼叫在其他地方定義的函數，而非目前內文 (context) 中定義的函式。當執行函式時，第一個參數用來指定你要使用 `this` 值，其他參數則指定應該傳送到該函式的參數。
 
-> **備註：** 我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數 (在建立物件時，你可能獲得設定為隨意值的屬性)。
+> [!NOTE]
+> 我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數 (在建立物件時，你可能獲得設定為隨意值的屬性)。
 
 所以這裡可在 `Teacher()` 建構子函式之內有效執行 `Person()` 建構子函式 (如上述)，藉以在 `Teacher()` 之內定義相同的屬性，但使用的是傳送到 `Teacher()` 的屬性值，而非 `Person()` 的屬性值 (我們將 `this` 值設為簡單的「`this」並`傳送到 `call()`，代表這個 `this` 是 `Teacher()` 的函式)。
 
@@ -199,7 +200,8 @@ teacher1.greeting();
 
 這樣應該運作無虞。前 3 行的存取成員即繼承自一般 `Person()` 建構子 (類別)。最後 2 行的存取成員只能用於特定的 `Teacher()` 建構子 (類別) 之上。
 
-> **備註：** 如果你無法進行到現有進度，可比較自己與[完整版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)的情形) 的程式碼。
+> [!NOTE]
+> 如果你無法進行到現有進度，可比較自己與[完整版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)的情形) 的程式碼。
 
 這裡所提的技巧，當然不是在 JavaScript 建立繼承類別的唯一方法，但足以堪用。並可讓你了解應如何於 JavaScript 實作繼承。
 
@@ -211,7 +213,8 @@ teacher1.greeting();
 
 在[〈OOP 理論〉段落](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
 
-> **備註：** 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。
+> [!NOTE]
+> 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。
 
 ## 物件成員摘要
 
@@ -231,7 +234,8 @@ teacher1.greeting();
 
 在自己的程式碼裡，特別是剛接觸或小型專案時，你用繼承的頻率可能沒那麼高。若沒真正需要，只是「為使用而使用」繼承，老實說只是浪費時間。但隨著程式碼規模越來越大，你就會找到使用的時間。如果你發現自己開始建立類似功能的多個物件時，就可先建立通用的物件類型，來概括所有共用的功能，並在特定物件類型中繼承這些功能，既方便又有效率。
 
-> **備註：** 基於 JavaScript 運作的方式 (如原型鍊等)，物件之間的功能共享一般稱為「委託 (Delegation)」，即特定物件將功能委託至通用物件類型。「委託」其實比繼承更精確一點。因為「所繼承的功能」並不會複製到「進行繼承的物件」之上，卻是保留在通用物件之中。
+> [!NOTE]
+> 基於 JavaScript 運作的方式 (如原型鍊等)，物件之間的功能共享一般稱為「委託 (Delegation)」，即特定物件將功能委託至通用物件類型。「委託」其實比繼承更精確一點。因為「所繼承的功能」並不會複製到「進行繼承的物件」之上，卻是保留在通用物件之中。
 
 當使用繼承時，建議你不要設定太多層的繼承關係，並時時留意你所定義的函式與屬性。在開始寫程式碼時，你可能會暫時修改內建瀏覽器物件的原型，除非你真的需要，否則儘量別這麼做。太多繼承可能連你自己都搞混，而且一旦需要除錯就會痛苦萬分。
 

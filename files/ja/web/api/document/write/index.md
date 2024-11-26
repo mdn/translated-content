@@ -76,9 +76,11 @@ write(markup)
 
 > **メモ:** `document.write` は [deferred](/ja/docs/Web/HTML/Element/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Element/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
 
-> **メモ:** Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。
+> [!NOTE]
+> Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。
 
-> **メモ:** Chrome 55 からは、キャッシュされていない HTTP の場合、`document.write()` を通じて挿入された `<script>` 要素は実行されなくなります。これが成立するのに必要な条件の一覧については、[document.write() に対する介入](https://developer.chrome.com/blog/removing-document-write/)をご覧ください。
+> [!NOTE]
+> Chrome 55 からは、キャッシュされていない HTTP の場合、`document.write()` を通じて挿入された `<script>` 要素は実行されなくなります。これが成立するのに必要な条件の一覧については、[document.write() に対する介入](https://developer.chrome.com/blog/removing-document-write/)をご覧ください。
 
 ## 仕様書
 

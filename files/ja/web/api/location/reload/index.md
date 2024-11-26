@@ -21,7 +21,8 @@ reload()
 
 なし。
 
-> **メモ:** Firefox は標準外の[論理値の `forceGet` 引数](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) を `location.reload()` で対応しており、 Firefox にキャッシュをバイパスして現在の文書を強制的に再読み込みするように指示することができます。しかし、他のすべてのブラウザーでは、`location.reload()` の呼び出しで指定した引数は無視され、いかなる効果も持ちません。
+> [!NOTE]
+> Firefox は標準外の[論理値の `forceGet` 引数](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) を `location.reload()` で対応しており、 Firefox にキャッシュをバイパスして現在の文書を強制的に再読み込みするように指示することができます。しかし、他のすべてのブラウザーでは、`location.reload()` の呼び出しで指定した引数は無視され、いかなる効果も持ちません。
 
 しかし、すべてのブラウザーで強制再読み込みの効果が発生することを前提に書かれた既存のコードで `location.reload(true)` のインスタンスに出会うことがあるかもしれません。 GitHub で "`location.reload(true)`" を検索すると、[数十万件の結果](https://github.com/search?q=%22location.reload%28true%29%22&type=code)が得られます。ということは、既存のコードの中にもそれがあるものがたくさんあるのです。
 

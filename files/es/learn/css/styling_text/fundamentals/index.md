@@ -34,14 +34,16 @@ En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de esti
 
 Como ya habrás experimentado en tu trabajo con el HTML y el CSS, el texto incluido en un elemento se dispone dentro de la caja de contenido del elemento. Esta empieza en la parte superior izquierda del área de contenido (o en la esquina superior derecha, en el caso del contenido de los lenguajes RTL, o right-to-left, que se escriben de derecha a izquierda) y fluye hacia el final de la línea. Una vez que llega al final, baja a la línea siguiente y sigue, y luego continúa a la línea siguiente, hasta que todo el contenido se ha ubicado en la caja. El contenido de texto se comporta efectivamente como una serie de elementos en línea, distribuidos en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se llega al final de la línea, a menos que se fuerce un salto de línea manual con el elemento {{htmlelement("br")}}.
 
-> **Nota:** Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model) antes de continuar.
+> [!NOTE]
+> Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model) antes de continuar.
 
 Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse generalmente en dos categorías, que veremos por separado en este artículo:
 
 - **Estilos del tipo de letra**: Propiedades que afectan al texto (qué tipo de letra se usa, su tamaño, si es negrita, itálica, etc.).
 - **Estilos de disposición del texto**: Propiedades que afectan al espaciado y otras características relativas a la disposición del texto, lo que permite la elección de, por ejemplo, el espacio entre líneas y letras, y el modo como el texto se alinea dentro de la caja contenedora.
 
-> **Nota:** Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como [::first-letter](/es/docs/Web/CSS/::first-letter) (selecciona la primera letra del texto de un elemento), [::first-line](/es/docs/Web/CSS/::first-line) (selecciona la primera línea del texto de un elemento), o [::selection](/es/docs/Web/CSS/::selection) (selecciona el texto que está resaltado por el cursor).
+> [!NOTE]
+> Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como [::first-letter](/es/docs/Web/CSS/::first-letter) (selecciona la primera letra del texto de un elemento), [::first-line](/es/docs/Web/CSS/::first-line) (selecciona la primera línea del texto de un elemento), o [::selection](/es/docs/Web/CSS/::selection) (selecciona el texto que está resaltado por el cursor).
 
 ## Tipos de letra
 
@@ -124,9 +126,11 @@ La lista de los tipos de letra seguros para la web cambia al ir evolucionando lo
 | Trebuchet MS    | sans-serif             | Hay que tener cuidado al usar este tipo de letra porque no está ampliamente disponible en los sistemas operativos móviles.                                                                                                                             |
 | Verdana         | sans-serif             |                                                                                                                                                                                                                                                        |
 
-> **Nota:** Entre otros recursos, el sitio [cssfontstack.com](http://www.cssfontstack.com/) mantiene una lista de tipos de letra seguros disponibles en los sistemas operativos para Windows y Mac, que puede ayudarte en la toma de decisiones acerca de lo que consideras seguro para tus propósitos.
+> [!NOTE]
+> Entre otros recursos, el sitio [cssfontstack.com](http://www.cssfontstack.com/) mantiene una lista de tipos de letra seguros disponibles en los sistemas operativos para Windows y Mac, que puede ayudarte en la toma de decisiones acerca de lo que consideras seguro para tus propósitos.
 
-> **Nota:** Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn/CSS/Styling_text/Web_fonts) del módulo.
+> [!NOTE]
+> Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn/CSS/Styling_text/Web_fonts) del módulo.
 
 #### Fuentes predeterminadas
 
@@ -186,7 +190,8 @@ En tal caso, el navegador comienza al principio de la lista y busca si el primer
 
 Es una buena idea proporcionar un nombre de tipo de letra genérico al final de la lista para que el navegador pueda al menos proporcionar algo aproximadamente adecuado en el caso de que ninguno de los tipos de letra que deseas esté disponible. Para ilustrar este punto: los navegadores asignan a los párrafos el tipo de letra _serif_ por defecto, que normalmente es Times New Roman, si no hay ninguna otra opción disponible, pero esto no resulta conveniente cuando se espera un tipo de letra _sans-serif_!
 
-> **Nota:** Los nombres de los tipos de letra que están constituidos por más de una palabra (como `Trebuchet MS` ) han de ponerse entre comillas, por ejemplo `"Trebuchet MS"`.
+> [!NOTE]
+> Los nombres de los tipos de letra que están constituidos por más de una palabra (como `Trebuchet MS` ) han de ponerse entre comillas, por ejemplo `"Trebuchet MS"`.
 
 #### Un ejemplo con font-family
 
@@ -368,7 +373,8 @@ Las cuatro propiedades son las siguientes:
 3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de que dispone el CSS.
 4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units). Si no se incluye este valor, el valor predeterminado es `negro`.
 
-> **Nota:** Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
+> [!NOTE]
+> Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
 
 #### Sombras múltiples
 
@@ -427,7 +433,8 @@ p {
 
 {{ EmbedLiveSample('Sombras_múltiples', '100%', 220) }}
 
-> **Nota:** Puedes ver más ejemplos interesantes del uso de `text-shadow` en el artículo de _Sitepoint_ [Dominando la sombra de texto con CSS](https://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [!NOTE]
+> Puedes ver más ejemplos interesantes del uso de `text-shadow` en el artículo de _Sitepoint_ [Dominando la sombra de texto con CSS](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## Diseño del texto
 

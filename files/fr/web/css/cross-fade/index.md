@@ -10,7 +10,8 @@ On peut l'utiliser pour de nombreuses manipulations d'image&nbsp;: teinter une i
 
 ## Syntaxe
 
-> **Attention :** À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
+> [!WARNING]
+> À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
 
 ### Syntaxe de la spécification
 

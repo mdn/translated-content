@@ -77,7 +77,8 @@ El verdadero problema con todos estos controles es que tienen una estructura muy
 
 Si desea personalizar a fondo esos controles, realmente tiene que crear los suyos usando HTML, CSS y JavaScript. Esto está más allá del alcance de los artículos de formularios principales, pero lo analizamos en un artículo avanzado [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-> **Nota:** Hay algunos pseudoelementos CSS propietarios disponibles que le permiten diseñar componentes internos de estos controles de formulario, como {{cssxref('::-moz-range-track')}}, pero estos no son consistentes entre los navegadores , por lo que no se puede confiar. También los mencionaremos más adelante.
+> [!NOTE]
+> Hay algunos pseudoelementos CSS propietarios disponibles que le permiten diseñar componentes internos de estos controles de formulario, como {{cssxref('::-moz-range-track')}}, pero estos no son consistentes entre los navegadores , por lo que no se puede confiar. También los mencionaremos más adelante.
 
 ## Lo bueno
 
@@ -161,7 +162,8 @@ El `<fieldset>` también debe posicionarse, de modo que `<legend>` se posicione 
 
 El elemento {{HTMLElement("legend")}} es muy importante para la accesibilidad; las tecnologías de asistencia lo hablarán como parte de la etiqueta de cada elemento de formulario dentro del conjunto de campos, pero usar una técnica como la anterior está bien. El contenido de la leyenda aún se pronunciará de la misma manera; es sólo la posición visual la que ha cambiado.
 
-> **Nota:** También puede usar la propiedad {{cssxref("transform")}} para ayudar a posicionar su `<legend>`. Sin embargo, cuando lo coloca, por ejemplo, con un `transform: translateY();`, se mueve pero deja un feo espacio en el borde del `<fieldset>`, del que no es fácil deshacerse.
+> [!NOTE]
+> También puede usar la propiedad {{cssxref("transform")}} para ayudar a posicionar su `<legend>`. Sin embargo, cuando lo coloca, por ejemplo, con un `transform: translateY();`, se mueve pero deja un feo espacio en el borde del `<fieldset>`, del que no es fácil deshacerse.
 
 ## Un ejemplo de estilo específico
 
@@ -380,7 +382,8 @@ button:focus {
 
 ![](updated-form-screenshot.jpg)
 
-> **Nota:** Si su ejemplo no funciona como esperaba y desea compararlo con nuestra versión, puede encontrarlo en GitHub; [verlo en vivo](https://mdn.github.io/learning-area/html/forms/postcard-example/) (ver también el [código fuente](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> [!NOTE]
+> Si su ejemplo no funciona como esperaba y desea compararlo con nuestra versión, puede encontrarlo en GitHub; [verlo en vivo](https://mdn.github.io/learning-area/html/forms/postcard-example/) (ver también el [código fuente](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
 
 ## ¡Pon a prueba tus habilidades!
 

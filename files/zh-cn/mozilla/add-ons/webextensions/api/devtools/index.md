@@ -26,7 +26,8 @@ l10n:
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.devtools`](https://developer.chrome.google.cn/docs/extensions/mv2/devtools) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

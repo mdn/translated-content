@@ -11,7 +11,8 @@ l10n:
 
 結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーは先読みをブロックする可能性があります（`no-cache` や `no-store` など）。
 
-> **メモ:** このような制限があるため、対応している場合には、代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を文書の先読みに使用することをお勧めします。
+> [!NOTE]
+> このような制限があるため、対応している場合には、代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を文書の先読みに使用することをお勧めします。
 
 `<link rel="prefetch">` は、機能的には `fetch()` を `priority: "low"` オプション付きで呼び出すのと同等ですが、前者は一般的に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) ヘッダーが設定されます。一般的にブラウザーは、先読みするリソースには事前読み込みリソース（`<link rel="preload">` でリクエストされたものなど）よりも低い優先度を与えることに注意してください。現在のページは次のページよりも重要です。
 
@@ -39,7 +40,7 @@ l10n:
 
 ### キャッシュ分割の効果
 
-多くのブラウザーが何らかの形で[キャッシュ分割](https://developer.chrome.com/en/blog/http-cache-partitioning/) を実装するようになり、異なる最上位のサイトで使用することを意図したリソースでは `<link rel="prefetch">` が役に立たなくなりました。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読みを考えてください。
+多くのブラウザーが何らかの形で[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning) を実装するようになり、異なる最上位のサイトで使用することを意図したリソースでは `<link rel="prefetch">` が役に立たなくなりました。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読みを考えてください。
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />

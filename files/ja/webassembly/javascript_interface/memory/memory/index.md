@@ -28,7 +28,8 @@ new WebAssembly.Memory(memoryDescriptor);
     - shared _{{optional_inline}}_
       - : 論理値で、このメモリーを共有メモリーにするかどうかを定義します。 `true` に設定すると、共有メモリーになります。既定値は `false` です。
 
-> **メモ:** WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
+> [!NOTE]
+> WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
 
 ### 例外
 

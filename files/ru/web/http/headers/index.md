@@ -98,26 +98,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
     </tr>
     <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            >Accept-Charset</a
-          ></code
-        >
-      </td>
-      <td>Список кодировок, которые ожидает клиент.</td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
       <td><code>Accept-Features</code></td>
       <td></td>
       <td>
@@ -1365,7 +1345,8 @@ HTTP-заголовки сопровождают обмен данными по 
 
 ## Примечание
 
-> **Примечание:** The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
+> [!NOTE]
+> The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
 
 ## Смотрите также
 

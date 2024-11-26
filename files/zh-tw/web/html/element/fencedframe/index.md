@@ -37,7 +37,7 @@ l10n:
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
-- [受保護的受眾 API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- [受保護的受眾 API](https://developers.google.com/privacy-sandbox/relevance/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -64,7 +64,7 @@ l10n:
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developer.chrome.com/docs/privacy-sandbox/fledge/)或[共享存儲](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)）生成一個 {{domxref("FencedFrameConfig")}} 對象，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developers.google.com/privacy-sandbox/relevance/protected-audience)或[共享存儲](https://developers.google.com/privacy-sandbox/relevance/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 對象，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
 
 以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
 
@@ -82,7 +82,8 @@ const frame = document.querySelector("fencedframe");
 frame.config = frameConfig;
 ```
 
-> **備註：** 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 對象。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
+> [!NOTE]
+> 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 對象。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
 
 ## 無障礙議題
 
@@ -168,5 +169,5 @@ frame.config = frameConfig;
 ## 參見
 
 - [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developer.chrome.com 上的圍欄頁框](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/)
-- [隱私沙箱](https://developer.chrome.com/docs/privacy-sandbox/) 在 developer.chrome.com 上
+- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/relevance/fenced-frame)
+- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)

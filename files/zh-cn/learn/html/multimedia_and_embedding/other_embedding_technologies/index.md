@@ -47,7 +47,8 @@ l10n:
 
 ## 动手练习：典型嵌入的使用
 
-> **备注：** 考虑到中国大陆学习者可能无法访问英文原文的某些示例网站，下文的部分示例已经替换为更易于访问和实践的网站。
+> [!NOTE]
+> 考虑到中国大陆学习者可能无法访问英文原文的某些示例网站，下文的部分示例已经替换为更易于访问和实践的网站。
 
 在这篇文章中，我们将直接进入动手练习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉 [Bilibili](https://www.bilibili.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看如何借助 {{htmlelement("iframe")}}，将 Bilibili 上的视频嵌入到页面中。
 
@@ -244,7 +245,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 - [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)
   - : 该属性比起支持其他 `<iframe>` 特性，需要更新的浏览器才能工作（例如 IE 10 及更高版本），该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
 
-> **备注：** 要想提高速度，最好在主内容完成加载后，再使用 JavaScript 设置 iframe 的 `src` 属性。这使你的页面可以更快可用，并减少你的官方页面加载时间（它是一个重要的 {{glossary("SEO")}} 指标）。
+> [!NOTE]
+> 要想提高速度，最好在主内容完成加载后，再使用 JavaScript 设置 iframe 的 `src` 属性。这使你的页面可以更快可用，并减少你的官方页面加载时间（它是一个重要的 {{glossary("SEO")}} 指标）。
 
 ### 安全隐患
 
@@ -283,13 +285,15 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
 
-> **备注：** 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
+> [!NOTE]
+> 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
 
 #### 配置 CSP 指令
 
 {{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
 
-> **备注：** 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。
+> [!NOTE]
+> 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。
 
 ## \<embed> 和 \<object> 元素
 

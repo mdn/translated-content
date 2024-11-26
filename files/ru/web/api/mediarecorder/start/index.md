@@ -17,7 +17,8 @@ When the `start()` method is invoked, the UA queues a task that runs the followi
 6. Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.
 7. Raise a {{domxref("MediaRecorder.stop")}} event.
 
-> **Примечание:** If the browser is unable to start recording or continue recording, it _will_ raise a {{domxref("DOMError")}} event, followed by a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob it has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
+> [!NOTE]
+> If the browser is unable to start recording or continue recording, it _will_ raise a {{domxref("DOMError")}} event, followed by a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob it has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
 
 ## Синтаксис
 

@@ -87,7 +87,8 @@ PBKDF2 は [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898) で定義�
 
 ## 例
 
-> **メモ:** GitHub の[動作例を試してみる](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html)ことができます。
+> [!NOTE]
+> GitHub の[動作例を試してみる](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html)ことができます。
 
 ### ECDH
 

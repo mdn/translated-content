@@ -79,7 +79,8 @@ l10n:
 
 {{EmbedLiveSample('Web 应用搜索')}}
 
-> **备注：** 请记住，有些用户没有 JavaScript，而在 JavaScript 成功下载、解析和执行之前，你的用户都不会运行 JavaScript，因此请确保你的用户在禁用 JavaScript 的情况下也能访问网站内容。
+> [!NOTE]
+> 请记住，有些用户没有 JavaScript，而在 JavaScript 成功下载、解析和执行之前，你的用户都不会运行 JavaScript，因此请确保你的用户在禁用 JavaScript 的情况下也能访问网站内容。
 
 ### 多重搜索
 

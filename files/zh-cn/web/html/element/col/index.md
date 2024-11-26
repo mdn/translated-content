@@ -26,7 +26,8 @@ l10n:
 
   - : 指定每列单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align)。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<col>` 元素上设置 `text-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上设置 `text-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { text-align: right; }` 来右对齐第二列单元格。
     >
@@ -48,7 +49,8 @@ l10n:
 
   - : 指定每列单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`valign`](/zh-CN/docs/Web/HTML/Element/colgroup#valign)。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { vertical-align: middle; }` 将第二列单元格垂直居中。
     >

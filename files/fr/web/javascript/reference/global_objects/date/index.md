@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date
 
 Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle [UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonné).
 
-> **Note :** TC39 travaille actuellement sur [Temporal](https://tc39.es/proposal-temporal/docs/index.html), une nouvelle API pour la gestion des dates, heures et données temporelles.
+> [!NOTE]
+> TC39 travaille actuellement sur [Temporal](https://tc39.es/proposal-temporal/docs/index.html), une nouvelle API pour la gestion des dates, heures et données temporelles.
 > Pour en savoir plus, consultez le [blog d'Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/) et n'hésitez pas à répondre [au sondage](https://forms.gle/iL9iZg7Y9LvH41Nv8). Les retours concrets de développeurs web sont importants pour affiner cette API. Attention, elle n'est pas encore prête à être utilisée en production !
 
 ## Description
@@ -16,7 +17,8 @@ Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du te
 
 D'un point de vue technique, une date JavaScript correspond au nombre de millisecondes écoulées depuis le premier janvier 1970, minuit UTC. Cette date et cette heure sont les mêmes que **l'[epoch](https://fr.wikipedia.org/wiki/Epoch) UNIX**, qui est l'instant de référence principalement utilisé pour manipuler les dates/heures dans les systèmes informatiques.
 
-> **Note :** Bien que les valeurs temporelles des objets dates soient relatives à UTC, certaines des méthodes simples pour obtenir les composantes d'une date/heure fonctionnent relativement au fuseau horaire du système.
+> [!NOTE]
+> Bien que les valeurs temporelles des objets dates soient relatives à UTC, certaines des méthodes simples pour obtenir les composantes d'une date/heure fonctionnent relativement au fuseau horaire du système.
 
 On notera également que la représentation maximale d'un objet `Date` n'est pas la même que le plus grand entier représentable en JavaScript (`Number.MAX_SAFE_INTEGER` vaut 9,007,199,254,740,991). En effet, ECMA-262 définit un maximum de ±100 000 000 (cent millions) jours relatifs au premier janvier 1970 UTC (ce qui correspond au 20 avril 271 821 avant notre ètre d'une part et au 13 septembre 275 760 de notre ère) pouvant être représentés par un objet `Date` standard (soit un intervalle de ±8 640 000 000 000 000 millisecondes).
 
@@ -39,7 +41,8 @@ Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différen
 
   - : Analyse la représentation textuelle d'une date et renvoie le nombre de millisecondes écoulées entre cette date et le premier janvier 1970, 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
 
-    > **Note :** L'analyse de chaînes de caractères à l'aide de `Date.parse` est fortement déconseillée en raison des incohérences qui existent entre les navigateurs.
+    > [!NOTE]
+    > L'analyse de chaînes de caractères à l'aide de `Date.parse` est fortement déconseillée en raison des incohérences qui existent entre les navigateurs.
 
 - {{jsxref("Date.UTC()")}}
   - : Accepte les mêmes paramètres que la forme longue du constructeur (c'est-à-dire entre 2 et 7) et renvoie le nombre de millisecondes entre cette date et le premier janvier 1970, 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
@@ -147,7 +150,8 @@ Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différen
 
 Les exemples qui suivent illustrent différentes méthodes permettant de créer des dates JavaScript :
 
-> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
+> [!NOTE]
+> L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
 
 ```js
 let aujourdhui = new Date();
@@ -210,7 +214,8 @@ function afficheDureeEcoulee(fTest) {
 let valeurDeRetour = afficheDureeEcoulee(maFonctionATester);
 ```
 
-> **Note :** Pour les navigateurs qui prennent en charge l'{{domxref("Window.performance", "API Web Performance", "", 1)}}, la méthode {{domxref("Performance.now()")}} peut fournir un outil de mesure des durées écoulées plus fiable et précis que {{jsxref("Date.now()")}}.
+> [!NOTE]
+> Pour les navigateurs qui prennent en charge l'{{domxref("Window.performance", "API Web Performance", "", 1)}}, la méthode {{domxref("Performance.now()")}} peut fournir un outil de mesure des durées écoulées plus fiable et précis que {{jsxref("Date.now()")}}.
 
 ### Obtenir le nombre de secondes écoulées depuis l'epoch ECMAScript
 

@@ -35,7 +35,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## React 教學
 
-> **備註：** 最近一次測試成功的 React 教學在 2020 年五月。版本為 React/ReactDOM 16.13.1 與 create-react-app 3.4.1。
+> [!NOTE]
+> 最近一次測試成功的 React 教學在 2020 年五月。版本為 React/ReactDOM 16.13.1 與 create-react-app 3.4.1。
 >
 > 如果想看看最新的程式，可以從我們的 [todo-react repository](https://github.com/mdn/todo-react) 或互動性的 <https://mdn.github.io/todo-react-build/> 看。
 
@@ -56,7 +57,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Ember 教學
 
-> **備註：** 最近一次測試成功的 Ember 教學在 2020 年五月。版本為 Ember/Ember CLI 3.18.0。
+> [!NOTE]
+> 最近一次測試成功的 Ember 教學在 2020 年五月。版本為 Ember/Ember CLI 3.18.0。
 >
 > 如果想看看最新的程式，可以從我們的 [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) 或互動性的 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> 看。注意：部分功能沒有放在教學裡面。
 
@@ -75,7 +77,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Vue 教學
 
-> **備註：** 最近一次測試成功的 Vue 教學在 2020 年五月。版本為 Vue 2.6.11。
+> [!NOTE]
+> 最近一次測試成功的 Vue 教學在 2020 年五月。版本為 Vue 2.6.11。
 >
 > 如果想看看最新的程式，可以從我們的 [todo-vue repository](https://github.com/mdn/todo-vue) 或互動性的 <https://mdn.github.io/todo-vue/dist/> 看。
 
@@ -100,7 +103,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Svelte 教學
 
-> **備註：** Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
+> [!NOTE]
+> Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Svelte app code as it should be after each article, in our [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo. For a running live version, see our Svelte REPL at <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
@@ -123,7 +127,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Angular 教學
 
-> **備註：** Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
+> [!NOTE]
+> Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
 >
 > 如果你需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
 

@@ -36,7 +36,8 @@ Accede a las diferentes imágenes en la carpeta de [originals](https://github.co
 
 También puedes usar una herramienta en línea como [Glitch](https://glitch.com/) para crear tu ejemplo. Esto puede ser útil si quieres evaluarlo o pedir ayuda — consulta la sección [Assessment or further help](#assessment_or_further_help) al final de esta página.
 
-> **Nota:** El archivo HTML de ejemplo contiene bastante CSS para dar estilo a la página. No necesitas tocar el CSS, solo el HTML dentro del elemento {{htmlelement("body")}}, mientras que insertes el marcado correctamente, el estilo se mantendrá.
+> [!NOTE]
+> El archivo HTML de ejemplo contiene bastante CSS para dar estilo a la página. No necesitas tocar el CSS, solo el HTML dentro del elemento {{htmlelement("body")}}, mientras que insertes el marcado correctamente, el estilo se mantendrá.
 
 ## Resumen del proyecto
 
@@ -56,7 +57,8 @@ Junto con `mdn.svg`, estas imágenes serán tus iconos para vincular a otros rec
 
 A continuación, crea una versión horizontal de 1200px de `red-panda.jpg`, y una versión vertical de 600px que muestre al panda en una toma de primer plano. Una vez más, ponle un nombre para que puedas identificarlos fácilmente. Guarda una copia de ambos en la misma carpeta que `index.html`.
 
-> **Nota:** Debes optimizar las imágenes JPG y PNG para que sean lo más pequeñas posible, viéndose bien. [tinypng.com](https://tinypng.com/) es un gran servicio para hacerlo fácilmente.
+> [!NOTE]
+> Debes optimizar las imágenes JPG y PNG para que sean lo más pequeñas posible, viéndose bien. [tinypng.com](https://tinypng.com/) es un gran servicio para hacerlo fácilmente.
 
 ### Añadir logo al encabezado
 
@@ -74,7 +76,8 @@ En cada caso, (excepto uno que es inherentemente receptivo) queremos que el nave
 
 ¡Asegúrate de hacer coincidir las imágenes correctas con los enlaces correctos!
 
-> **Nota:** para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn/Common_questions/Using_Github_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](/es/docs/Tools/Network_Monitor).
+> [!NOTE]
+> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn/Common_questions/Using_Github_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](/es/docs/Tools/Network_Monitor).
 
 ### Un "red-panda" con arte dirigido
 

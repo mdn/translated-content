@@ -24,7 +24,7 @@ MDN 学習領域へようこそ。この一連の記事は、ウェブ開発の�
 
 > **メモ:** [用語集](/ja/docs/Glossary)には、用語の定義が記載されています。また、ウェブ開発に関する特定の質問がある場合は、[よくある質問](/ja/docs/Learn/Common_questions)の節で解決できることがあるかもしれません。
 
-> **注目:**
+> [!CALLOUT]
 >
 > #### フロントエンドのウェブ開発者を目指している方へ
 >
@@ -70,7 +70,8 @@ MDN のウェブ開発の学習セクションには、自己完結型の課題�
 - 上記リンクの**スキルテスト**課題には、採点ガイドと資料が <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals> にあります。
 - 上記リンクの**評価試験**には、採点ガイドと資料が <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery> にあります。
 
-> **メモ:** 課題と評価のための採点ガイドと他のリソースのほとんどは [`mdn/learning-area`](https://github.com/mdn/learning-area/) で利用できますが、一部は [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn) にあります。
+> [!NOTE]
+> 課題と評価のための採点ガイドと他のリソースのほとんどは [`mdn/learning-area`](https://github.com/mdn/learning-area/) で利用できますが、一部は [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn) にあります。
 
 ## サンプルコードの入手
 

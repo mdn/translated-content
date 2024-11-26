@@ -15,7 +15,7 @@ slug: Web/CSS/Layout_cookbook/Grid_wrapper
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
 

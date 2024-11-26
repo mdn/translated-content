@@ -20,7 +20,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - リモートでボックスモデルのハイライト表示が動作
 - [プロファイラの "呼び出しツリーを反転" オプション](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html#inverting-the-call-tree)
 - [コンソールで DOM Promise を調査](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#type-specific-rich-output)
-- [インスペクタで "貼り付け" 方法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
+- [インスペクターで "貼り付け" 方法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
 
 [Firefox 35 から Firefox 36 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-11-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-10-13&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11736454)
 
@@ -42,7 +42,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 ### HTML
 
 - [`<meta name="referrer">`](/ja/docs/Web/HTML/Element/meta) をサポートしました ([Firefox バグ 704320](https://bugzil.la/704320))。
-- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルタが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
+- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルターが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
 
 ### JavaScript
 
@@ -147,7 +147,7 @@ _変更なし。_
 新しい定数が `nsIContentPolicy` に追加され、Gecko 内部とアドオンコードが異なる型のリクエストをより良く区別することができるようになりました。これらは次の通りです。
 
 - `TYPE_FETCH`
-  - : {{domxref("fetch()")}} メソッドによって開始された、コンテンツの読み込みリクエストを示す。
+  - : {{domxref("Window/fetch", "fetch()")}} メソッドによって開始された、コンテンツの読み込みリクエストを示す。
 - `TYPE_IMAGESET`
   - : {{HTMLElement("img")}} ([`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性または {{HTMLElement("picture")}} 要素を読み込むリクエストを示す。
 

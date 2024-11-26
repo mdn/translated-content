@@ -27,7 +27,8 @@ No futuro, todas essas interfaces irão ser divididas na interface `Document`.
 
 ## Propriedades
 
-> **Nota:** A interface `Document` também herda das interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}.
+> [!NOTE]
+> A interface `Document` também herda das interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Da acesso a todos os elementos do documento.È uma interface legada não padrão, voce deve usar o método {{domxref("Document.getElementById()")}} como alternativa.
@@ -80,7 +81,7 @@ No futuro, todas essas interfaces irão ser divididas na interface `Document`.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-{{page("/pt-BR/docs/Web/API/ParentNode","Properties")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/ParentNode","Properties") -->
 
 ### Extension for HTML documents
 
@@ -148,15 +149,16 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 ### Event handlers
 
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockchange")}} event.
+  - : Returns the event handling code for the [`pointerlockchange`](/pt-BR/docs/Web/Events/pointerlockchange) event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockerror")}} event.
+  - : Returns the event handling code for the [`pointerlockerror`](/pt-BR/docs/Web/Events/pointerlockerror) event.
 - {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 
 ## Methods
 
-> **Nota:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.

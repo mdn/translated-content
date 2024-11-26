@@ -41,7 +41,8 @@ La mejor manera de subir tu código a Github es mediante la linea de comandos �
 
 ![](command-line.png)
 
-> **Nota:** Tú también podrías considerar una [interfaz gráfica de usuario de Git](http://git-scm.com/downloads/guis) para hacer el mismo trabajo, si te sientes incómodo con la linea de comandos.
+> [!NOTE]
+> Tú también podrías considerar una [interfaz gráfica de usuario de Git](http://git-scm.com/downloads/guis) para hacer el mismo trabajo, si te sientes incómodo con la linea de comandos.
 
 Cada sistema operativo viene con una herramienta de línea de comandos:
 
@@ -85,7 +86,8 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
 
 5. Navega tu dirección web de GitHub pages en un nuevo ta del navegador, y tu deberias ver tu sitio en linea! Mandalo por correo electrónico a tus amigos y muestra tu dominio.
 
-> **Nota:** Si te atascas, la [página de inicio de GitHub Pages](https://pages.github.com/) también es muy útil.
+> [!NOTE]
+> Si te atascas, la [página de inicio de GitHub Pages](https://pages.github.com/) también es muy útil.
 
 ### Un mayor conocimiento de GitHub
 

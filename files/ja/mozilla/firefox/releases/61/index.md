@@ -64,7 +64,7 @@ _変更なし。_
 - `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティを {{cssxref("gap")}}、{{cssxref("row-gap")}}、{{cssxref("column-gap")}} に改名しました。これらはグリッド固有のプロパティではなくなりました ([Firefox バグ 1398482](https://bugzil.la/1398482))。詳しくは [Box alignment; Gaps between boxes](/ja/docs/Web/CSS/CSS_Box_Alignment#Gaps_between_boxes) をご覧ください。ウェブ互換性のために、古い名称を別名として維持しています。
 - {{cssxref("flex-basis")}} の値 `content` をサポートしました ([Firefox バグ 1105111](https://bugzil.la/1105111))。
 - {{cssxref("column-gap")}} のパーセンテージ値を、[CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_Columns) でサポートしました ([Firefox バグ 1398537](https://bugzil.la/1398537))。
-- CSS の {{cssxref(":host")}} 疑似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
+- CSS の {{cssxref(":host")}} 擬似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
 - {{cssxref("overflow")}} が 2 値構文を受け入れるようになりました ([Firefox バグ 1453148](https://bugzil.la/1453148))。
 - 内容物によってサイズが決まる Flex アイテムは、`fit-content` ではなく `max-content` を使用してサイズが決まるようになりました ([Firefox バグ 1282821](https://bugzil.la/1282821))。これらの値について、詳しくは [`width` の値の定義](/ja/docs/Web/CSS/width#Values) をご覧ください。
 - {{cssxref("font-weight")}}、{{cssxref("font-stretch")}}、{{cssxref("font-style")}} で、[CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) で定義された追加の値をサポートしました ([Firefox バグ 1436048](https://bugzil.la/1436048)):
@@ -98,7 +98,7 @@ _変更なし。_
 - [Fetch API](/ja/docs/Web/API/Fetch_API) の {{domxref("Request.credentials")}} プロパティの既定値が、最新版の仕様書に応じて `"same-origin"` になりました ([Firefox バグ 1394399](https://bugzil.la/1394399))。
 - {{domxref("Request.destination")}} プロパティを実装しました ([Firefox バグ 1402892](https://bugzil.la/1402892))。
 - {{domxref("MutationObserver")}} のオプションディクショナリーである {{domxref("MutationObserverInit")}} で、すべての Boolean 型プロパティが既定値として `false` を持たなくなりました。`childList` および `subtree` だけが既定値 (依然として `false`) を持ちます。ほかのプロパティは既定値がありません ([Firefox バグ 973638](https://bugzil.la/973638))。
-- [Payment Request API](/ja/docs/Web/API/Payment_Request_API) の {{domxref("PaymentRequest.show()")}} メソッドで、クライアントサイドのコードが支払いインターフェイスを活性化する前に更新された支払いの詳細情報を提供できるようにするため、{{jsxref("Promise")}} の使用をサポートしました ([Firefox バグ 1441709](https://bugzil.la/1441709))。
+- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の {{domxref("PaymentRequest.show()")}} メソッドで、クライアントサイドのコードが支払いインターフェイスを活性化する前に更新された支払いの詳細情報を提供できるようにするため、{{jsxref("Promise")}} の使用をサポートしました ([Firefox バグ 1441709](https://bugzil.la/1441709))。
 
 #### DOM イベント
 

@@ -84,7 +84,8 @@ Voilà la marche à suivre :
 
 5. Par défaut, il affiche la liste des fichiers du dossier sur un serveur de développement, sur le port 8000. Vous pouvez aller à ce serveur en saisissant l'URL `localhost:8000` dans votre navigateur web. Vous verrez le listing du dossier dans lequel le serveur tourne — cliquer le fichier HTML que vous voulez exécuter.
 
-> **Note :** Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
+> [!NOTE]
+> Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
 
 ## Faire fonctionner localement des langages serveur
 

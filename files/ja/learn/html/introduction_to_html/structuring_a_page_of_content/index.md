@@ -43,7 +43,8 @@ zip ファイルには以下のものが含まれています。
 
 例はローカルコンピューターで作成するか、あるいは [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのサイトを使用して作業してください。
 
-> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクト概要
 

@@ -9,7 +9,8 @@ slug: Web/CSS/flex-basis
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **Примечание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
+> [!NOTE]
+> В случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
 
 {{cssinfo}}
 
@@ -46,9 +47,10 @@ flex-basis: unset;
 
   - : Автоматический задаёт размер на основе содержимого элемента flex.
 
-    > **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
+    > [!NOTE]
+    > Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
 
-    > **Примечание:**
+    > [!NOTE]
     >
     > - Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
     > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).

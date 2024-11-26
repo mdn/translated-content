@@ -1,15 +1,17 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:decimal-format>` 要素は、`format-number( )` 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
 
 ### 構文
 
-```
+```xml
 <xsl:decimal-format
   name=NAME
   decimal-separator=CHARACTER
@@ -18,7 +20,7 @@ slug: Web/XSLT/Element/decimal-format
   minus-sign=CHARACTER
   NaN=STRING
   percent=CHARACTER
-  per-mille=CHARATER
+  per-mille=CHARACTER
   zero-digit=CHARACTER
   digit=CHARACTER
   pattern-separator=CHARACTER />
@@ -26,68 +28,38 @@ slug: Web/XSLT/Element/decimal-format
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
 - `name`
   - : この形式の名前を指定します。
-
-<!---->
-
 - `decimal-separator`
-  - : 小数点文字を指定します。デフォルトは (`.`) です。
-
-<!---->
-
+  - : 小数点文字を指定します。既定値は (`.`) です。
 - `grouping-separator`
-  - : 桁区切り文字を指定します。 デフォルトは (`,`) です。
-
-<!---->
-
+  - : 桁区切り文字を指定します。 既定値は (`,`) です。
 - `infinity`
-  - : 無限を表すために使用される文字列を指定します。デフォルトは文字列 "`Infinity`"です。
-
-<!---->
-
+  - : 無限を表すために使用される文字列を指定します。既定値は文字列 "`Infinity`"です。
 - `minus-sign`
-  - : マイナス記号文字を指定します。デフォルトはハイフン (`-`) です。
-
-<!---->
-
+  - : マイナス記号文字を指定します。既定値はハイフン (`-`) です。
 - `NaN`
-  - : 値が数値でない場合に使用される文字列を指定します。デフォルトは文字列 "`NaN`" です。
-
-<!---->
-
+  - : 値が数値でない場合に使用される文字列を指定します。既定値は文字列 "`NaN`" です。
 - `percent`
-  - : パーセント符号文字を指定します。デフォルトは (`%`) です。
-
-<!---->
-
+  - : パーセント符号文字を指定します。既定値は (`%`) です。
 - `per-mille`
-  - : 1000 文字ごとに指定します。デフォルトは (`‰`) です。
-
-<!---->
-
+  - : 1000 文字ごとに指定します。既定値は (`‰`) です。
 - `zero-digit`
-  - : 数字のゼロ文字を指定します。 デフォルトは (`0`) です。
-
-<!---->
-
+  - : 数字のゼロ文字を指定します。 既定値は (`0`) です。
 - `digit`
-  - : 数字を表すためにフォーマットパターンで使用される文字を指定します。デフォルトは (`#`) です。
-
-<!---->
-
+  - : 数字を表すためにフォーマットパターンで使用される文字を指定します。既定値は (`#`) です。
 - `pattern-separator`
-  - : 正と負のサブパターンをフォーマットパターンで区切る文字を指定します。デフォルトはセミコロン (`;`) です。
+  - : 正と負のサブパターンをフォーマットパターンで区切る文字を指定します。既定値はセミコロン (`;`) です。
 
-### タイプ
+### 種類
 
-最上位は `<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
+最上位で、`<xsl:stylesheet>` または `<xsl:transform>` の子である必要があります。
 
-### 定義
+## 仕様書
 
 XSLT, section 12.3.
 

@@ -80,7 +80,8 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 
 Pour des conseils utiles sur la mise à jour des extensions pour Firefox 5, voir [Updating add-ons for Firefox 5](/fr/docs/Firefox/Updating_add-ons_for_Firefox_5).
 
-> **Note :** Firefox 5 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
+> [!NOTE]
+> Firefox 5 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
 ### Changements dans les modules de code JavaScript
 

@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 **`Keep-Alive`** 是一个通用消息头，允许消息发送者暗示连接的状态，还可以用来设置超时时长和最大请求数。
 
-> **备注：** 需要将 The {{HTTPHeader("Connection")}} 首部的值设置为 "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}} 是被忽略的；在其中采用其他机制来进行连接管理。
+> [!NOTE]
+> 需要将 The {{HTTPHeader("Connection")}} 首部的值设置为 "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}} 是被忽略的；在其中采用其他机制来进行连接管理。
 
 | Header type                           | {{Glossary("General header")}} |
 | ------------------------------------- | ------------------------------ |

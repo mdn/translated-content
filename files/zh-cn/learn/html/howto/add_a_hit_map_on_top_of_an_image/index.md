@@ -28,7 +28,8 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
   </tbody>
 </table>
 
-> **警告：** 本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。
+> [!WARNING]
+> 本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。
 
 ## 图像映射和它的缺点
 

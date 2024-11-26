@@ -33,7 +33,8 @@ O `substr()` extrai caracteres de comprimento de uma `str`, contando a partir do
 - Se o `start` for um número positivo, o índice começa a contar no início da string. Seu valor é limitado ao tamanho da string (`str.length`).
 - Se o `start` for um número negativo, o índice começa a contar a partir do final da string. Seu valor é limitado ao tamanho da string (`-str.length`).
 
-> **Nota:** No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
+> [!NOTE]
+> No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
 
 - Se `length` for omitido, `substr()` extrairá caracteres até o final da string.
 - Se `length` for {{jsxref("undefined")}}, `substr()` extrai os caracteres até o final da string.

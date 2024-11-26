@@ -43,7 +43,8 @@ Void.
 | `SyntaxError`       | O nome fornecido não é um [nome de elemento personalizado válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                         |
 | `TypeError`         | O constructor referenciado não é um constructor                                                                                                                                                                                                   |
 
-> **Nota:** Exceções são frequentemente obtidas `NotSupportedError`s quando o método `define()` está falhando, mas é realmente um problema relacionado a
+> [!NOTE]
+> Exceções são frequentemente obtidas `NotSupportedError`s quando o método `define()` está falhando, mas é realmente um problema relacionado a
 > {{domxref("Element.attachShadow()")}}.
 
 ## Exemplos
@@ -139,7 +140,8 @@ customElements.define("popup-info", PopUpInfo);
   text="O código de validação do seu cartão (CVC) é um recurso segurança extra - consiste em 3 ou 4 números no verso do seu cartão."></popup-info>
 ```
 
-> **Nota:** Construtores de elementos personalizados autocontidos devem estender {{domxref("HTMLElement")}}.
+> [!NOTE]
+> Construtores de elementos personalizados autocontidos devem estender {{domxref("HTMLElement")}}.
 
 ### Elemento personalizado pré-construído
 

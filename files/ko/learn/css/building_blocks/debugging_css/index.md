@@ -97,7 +97,8 @@ HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)
 
 ![개발자 도구 패널, 규칙에 새 속성을 추가하고, 폰트 자동 완성을 열고 있습니다.](inspecting3-font-size.png)
 
-> **참고:** 규칙 보기에는 다른 유용한 기능도 있습니다. 예를 들어 유효하지 않은 값이 있는 선언에는 줄이 그어 표시됩니다. 자세한 내용은 [CSS 검사 및 수정](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)에서 확인할 수 있습니다.
+> [!NOTE]
+> 규칙 보기에는 다른 유용한 기능도 있습니다. 예를 들어 유효하지 않은 값이 있는 선언에는 줄이 그어 표시됩니다. 자세한 내용은 [CSS 검사 및 수정](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)에서 확인할 수 있습니다.
 
 ## 박스 모델 이해
 

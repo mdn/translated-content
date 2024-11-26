@@ -1,17 +1,19 @@
 ---
 title: "HTMLCanvasElement: captureStream() メソッド"
+short-title: captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 7fb6ccccf88b71712c1b603bed7092dbb622b698
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-{{domxref("HTMLCanvasElement")}} の **`captureStream()`** メソッドは、 {{domxref("MediaStream")}} を返します。これは {{domxref("CanvasCaptureMediaStreamTrack")}} を含んでおり、このキャンバスの内容をリアルタイムに動画キャプチャします。
+**`captureStream()`** は {{domxref("HTMLCanvasElement")}} インターフェイスのメソッドで、{{domxref("MediaStream")}} を返します。これは {{domxref("CanvasCaptureMediaStreamTrack")}} を含んでおり、このキャンバスの内容をリアルタイムに動画キャプチャします。
 
 ## 構文
 
 ```js-nolint
+captureStream()
 captureStream(frameRate)
 ```
 
@@ -45,7 +47,7 @@ const canvasElt = document.querySelector("canvas");
 const stream = canvasElt.captureStream(25); // 25 FPS
 
 // 取得したストリームに対して何らかの処理を行う
-// 例：RTCPeerConnection を使って別のコンピュータに送信
+// 例：RTCPeerConnection を使って別のコンピューターに送信
 // ここで pc は既に生成された RTCPeerConnection オブジェクト
 stream.getTracks().forEach((track) => pc.addTrack(track, stream));
 ```

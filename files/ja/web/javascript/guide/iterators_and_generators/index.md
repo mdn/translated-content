@@ -70,7 +70,8 @@ while (!result.done) {
 console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **メモ:** 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
+> [!NOTE]
+> 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
 
 ## ジェネレーター関数
 

@@ -19,7 +19,8 @@ selector {
 
 函数可以接受多个参数，这些参数的格式与 CSS 属性值类似。允许有空白字符，但在括号内是可选的。在一些函数符号中，多个参数用逗号隔开，而其他参数则使用空格。
 
-> **备注：** CSS 值函数是作为属性值使用的，不应该与伪类相混淆。[函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)、[语言伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#语言的伪类)和几种[树状结构伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#树结构的伪类)都需要参数值，但它们不是值函数。[条件 @ 规则](/zh-CN/docs/Web/CSS/At-rule#条件规则组)也不是值函数；括号是用来分组的。
+> [!NOTE]
+> CSS 值函数是作为属性值使用的，不应该与伪类相混淆。[函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)、[语言伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#语言的伪类)和几种[树状结构伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#树结构的伪类)都需要参数值，但它们不是值函数。[条件 @ 规则](/zh-CN/docs/Web/CSS/At-rule#条件规则组)也不是值函数；括号是用来分组的。
 
 ## 转换函数
 
@@ -223,7 +224,7 @@ selector {
 ### 图像函数
 
 - {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
-  - : 定义一个 {{CSSxRef("&lt;image&gt;")}}，与 {{CSSxRef("url", "url()")}} 函数类似，但增加了一些功能，包括指定图片的方向性和首选图片不被支持时的后备图片。
+  - : 定义一个 {{CSSxRef("&lt;image&gt;")}}，与 {{CSSxRef("url_value", "&lt;url&gt;")}} 类型类似，但增加了一些功能，包括指定图片的方向性和首选图片不被支持时的后备图片。
 - {{CSSxRef("image/image-set","image-set()")}}
   - : 从一组给定的 CSS 图片中挑选最合适的图片，主要用于高像素密度的屏幕。
 - {{CSSxRef("cross-fade", "cross-fade()")}}
@@ -267,7 +268,7 @@ CSS 计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过�
   - : 使用定义在 HTML 元素上的属性值。
 - {{CSSxRef("env", "env()")}}
   - : 使用用户代理定义的环境变量。
-- {{CSSxRef("url", "url()")}}
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : 使用指定 URL 定义的文件。
 - {{CSSxRef("var", "var()")}}
   - : 使用自定义属性值，而不是其他属性值的任何部分。

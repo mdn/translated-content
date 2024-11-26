@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **警告：** 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
+> [!WARNING]
+> 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
 
 向指定标签页中的内容脚本发送单个请求，并可选择性地指定一个回调函数，用于在接收到响应时执行。当前扩展中运行的每个内容脚本都会触发 {{WebExtAPIRef('extension.onRequest')}} 事件。
 
@@ -37,7 +38,8 @@ let sending = browser.tabs.sendRequest(
 
 {{Compat}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-sendRequest) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendRequest) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

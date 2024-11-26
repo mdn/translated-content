@@ -60,7 +60,8 @@ slug: Learn/Server-side/Django/Home_page
 
 相比之下，最後兩個 URL 用於顯示有關特定書籍或作者的詳細信息-這些 URL 編碼要顯示在 URL 中的項目的標識（如上顯示為\<id>）。 URL 映射器可以提取編碼信息並將其傳遞給視圖，然後將動態確定從數據庫中獲取哪些信息。 通過在我們的 URL 中編碼信息，我們只需要一個 URL 映射，視圖和模板即可處理每本書（或作者）。
 
-> **備註：** Django 允許你以自己喜歡的任何方式來構造 URL-你可以如上所示在 URL 主體中編碼信息或使用 URL `GET` 參數（例如`/book/?id=6`）。 無論使用哪種方法，都應保持 URL 的整潔，邏輯和可讀性([在此處查看 W3C 建議](https://www.w3.org/Provider/Style/URI)).
+> [!NOTE]
+> Django 允許你以自己喜歡的任何方式來構造 URL-你可以如上所示在 URL 主體中編碼信息或使用 URL `GET` 參數（例如`/book/?id=6`）。 無論使用哪種方法，都應保持 URL 的整潔，邏輯和可讀性([在此處查看 W3C 建議](https://www.w3.org/Provider/Style/URI)).
 >
 > Django 文檔傾向於建議在 URL 正文中編碼信息，他們認為這種做法鼓勵更好的 URL 設計。
 
@@ -70,7 +71,8 @@ slug: Learn/Server-side/Django/Home_page
 
 我們將創建的第一頁是索引頁 (`catalog/`)。 這將顯示一些靜態 HTML，以及數據庫中不同記錄的一些計算出的「計數」。 為了完成這項工作，我們必須創建一個 URL 映射，視圖和模板。
 
-> **備註：** 值得在本節中多加註意。大多數材料是所有頁面共有的。
+> [!NOTE]
+> 值得在本節中多加註意。大多數材料是所有頁面共有的。
 
 ### URL mapping
 
@@ -84,7 +86,8 @@ urlpatterns += [
 ]
 ```
 
-> **備註：** 每當 Django 遇到導入函數 [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include)時，它都會在指定的結束字符處分割 URL 字符串，並將剩餘的子字符串發送到所包含的*URLconf* 模塊以進行進一步處理。
+> [!NOTE]
+> 每當 Django 遇到導入函數 [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include)時，它都會在指定的結束字符處分割 URL 字符串，並將剩餘的子字符串發送到所包含的*URLconf* 模塊以進行進一步處理。
 
 我們還為*URLConf* 模塊創建了一個佔位符文件，名為 **/catalog/urls.py**。 將以下行添加到該文件：
 
@@ -105,7 +108,8 @@ urlpatterns = [
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **備註：** 我們可以對上面的鏈接進行硬編碼 (例如`<a href="/catalog/">Home</a>`), 但是如果我們更改主頁的模式 (例如更改為 `/catalog/index`) 則模板將不再 正確鏈接。 使用反向 URL 映射更加靈活和健壯！
+> [!NOTE]
+> 我們可以對上面的鏈接進行硬編碼 (例如`<a href="/catalog/">Home</a>`), 但是如果我們更改主頁的模式 (例如更改為 `/catalog/index`) 則模板將不再 正確鏈接。 使用反向 URL 映射更加靈活和健壯！
 
 ### View (function-based)
 
@@ -158,7 +162,8 @@ def index(request):
 
 模板是一個文本文件，用於定義文件（例如 HTML 頁面）的結構或佈局，並使用佔位符表示實際內容。 Django 會在你的應用程序名為'**templates**'的目錄中自動查找模板。 因此，例如，在我們剛剛添加的索引視圖中， `render()` 函數將有望能夠找到文件 **/locallibrary/catalog/templates/_index.html_**，如果找不到該文件，則會引發錯誤。 如果你保存以前的更改並返回瀏覽器，則可以看到此信息-訪問`127.0.0.1:8000`現在將為你提供一個相當直觀的錯誤消息"`TemplateDoesNotExist at /catalog/`"以及其他詳細信息。
 
-> **備註：** Django 將根據項目的設置文件在許多位置查找模板（搜索已安裝的應用程序是默認設置！）。 你可以在 [Templates](https://docs.djangoproject.com/en/2.0/topics/templates/) （Django docs）中找到有關 Django 如何查找模板及其支持的模板格式的更多信息。
+> [!NOTE]
+> Django 將根據項目的設置文件在許多位置查找模板（搜索已安裝的應用程序是默認設置！）。 你可以在 [Templates](https://docs.djangoproject.com/en/2.0/topics/templates/) （Django docs）中找到有關 Django 如何查找模板及其支持的模板格式的更多信息。
 
 #### Extending templates
 
@@ -166,7 +171,8 @@ def index(request):
 
 例如，基本模板 **base_generic.html** 可能類似於以下文本。 如你所見，其中包含一些"通用" HTML 以及標題，側邊欄和內容的部分，這些部分使用命名的`block` 和`endblock` 模板標記進行了標記（以粗體顯示）。 區塊可以為空，或包含將在默認情況下用於派生頁面的內容。
 
-> **備註：** 模板*tags* 類似於可以在模板中使用的功能，可以在模板中循環使用列表，基於變量的值執行條件操作等。除了模板標記之外，模板語法還允許你引用模板變量（傳遞給 模板），並使用*template filters*，該過濾器可重新格式化變量（例如，將字符串設置為小寫）。
+> [!NOTE]
+> 模板*tags* 類似於可以在模板中使用的功能，可以在模板中循環使用列表，基於變量的值執行條件操作等。除了模板標記之外，模板語法還允許你引用模板變量（傳遞給 模板），並使用*template filters*，該過濾器可重新格式化變量（例如，將字符串設置為小寫）。
 
 ```django
 <!DOCTYPE html>
@@ -207,7 +213,8 @@ def index(request):
 
 下面列出了我們計劃用於 _LocalLibrary_ 網站的基本模板。 如你所見，其中包含一些 HTML 以及 `title`、`sidebar` 和 `content`。 我們有一個默認標題（我們可能想要更改）和一個默認側邊欄，其中帶有指向所有書籍和作者列表的鏈接（我們可能不想更改，但是如果需要的話，我們允許範圍通過將其放在一個區塊中）。
 
-> **備註：** 我們還引入了兩個附加的模板標籤：`url` 和`load static`。這些將在以下各節中討論。
+> [!NOTE]
+> 我們還引入了兩個附加的模板標籤：`url` 和`load static`。這些將在以下各節中討論。
 
 創建一個新文件 **/locallibrary/catalog/templates/_base_generic.html_**，並為其提供以下內容：
 
@@ -287,7 +294,8 @@ def index(request):
 
 在 _Dynamic content_ 部分中，我們聲明了要從視圖中包含的信息的佔位符（_template variables_）。 變量使用「雙括號」或「把手」語法標記（請參見上面的粗體）。
 
-> **備註：** 因為變量具有雙括號 (`\{{ num_books }}`)，而標籤則用百分號括在單括號中擴展為 (`{% extends "base_generic.html" %}`)，所以你可以輕鬆識別是要處理模板變量還是模板標籤（函數）。
+> [!NOTE]
+> 因為變量具有雙括號 (`\{{ num_books }}`)，而標籤則用百分號括在單括號中擴展為 (`{% extends "base_generic.html" %}`)，所以你可以輕鬆識別是要處理模板變量還是模板標籤（函數）。
 
 這裡要注意的重要一點是，這些變量是使用我們在視圖的`render()` 函數中傳遞給`context` 字典的鍵命名的（請參見下文）; 呈現模板時，這些將被其*values* 替換。
 
@@ -324,7 +332,8 @@ return render(request, 'index.html', context=context)
   style="width:555px;height:540px;" />
 ```
 
-> **備註：** 上面的更改指定了文件的位置，但是 Django 默認不提供文件。創建網站框架時 ([created the website skeleton](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))，雖然我們在全局 URL 映射器(**/locallibrary/locallibrary/urls.py**)中啟用了由開發 Web 服務器提供的服務，但你仍需要安排它們在生產中提供。 我們待會再看。
+> [!NOTE]
+> 上面的更改指定了文件的位置，但是 Django 默認不提供文件。創建網站框架時 ([created the website skeleton](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))，雖然我們在全局 URL 映射器(**/locallibrary/locallibrary/urls.py**)中啟用了由開發 Web 服務器提供的服務，但你仍需要安排它們在生產中提供。 我們待會再看。
 
 有關使用靜態文件的更多信息，請參閱管理靜態文件 [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) (Django docs)。
 
@@ -344,7 +353,8 @@ return render(request, 'index.html', context=context)
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **備註：** 你將無法使用**All books**和**All authors**鏈接，因為尚未定義這些頁面的路徑，視圖和模板（當前我們僅在`base_generic.html` html 模板中插入了這些鏈接的佔位符）。
+> [!NOTE]
+> 你將無法使用**All books**和**All authors**鏈接，因為尚未定義這些頁面的路徑，視圖和模板（當前我們僅在`base_generic.html` html 模板中插入了這些鏈接的佔位符）。
 
 ## Challenge yourself
 

@@ -189,7 +189,8 @@ On regarde donc _l'ordre d'apparence_. C'est la seconde, la dernière parmi les 
 margin-left: 3px;
 ```
 
-> **Note :** La déclaration définie dans la feuille de style de l'utilisatrice ou de l'utilisateur a beau avoir une spécificité supérieure, elle n'est pas choisie, car l'étape sur _l'origine et l'importance_ de l'algorithme de la cascade est appliqué avant l'algorithme de _la spécificité_. La déclaration définie dans une couche de la cascade, bien qu'elle arrive ensuite dans le code, n'aura pas la précédence non plus, car les couches de la cascade ont une précédence moindre que les styles qui ne sont pas rattachés à une couche. _L'ordre d'apparence_ fonctionne uniquement lorsque l'origine, l'importance et la spécificité sont égales.
+> [!NOTE]
+> La déclaration définie dans la feuille de style de l'utilisatrice ou de l'utilisateur a beau avoir une spécificité supérieure, elle n'est pas choisie, car l'étape sur _l'origine et l'importance_ de l'algorithme de la cascade est appliqué avant l'algorithme de _la spécificité_. La déclaration définie dans une couche de la cascade, bien qu'elle arrive ensuite dans le code, n'aura pas la précédence non plus, car les couches de la cascade ont une précédence moindre que les styles qui ne sont pas rattachés à une couche. _L'ordre d'apparence_ fonctionne uniquement lorsque l'origine, l'importance et la spécificité sont égales.
 
 ## Styles du site&nbsp;: styles en incise HTML, couches, et précédence
 
@@ -447,7 +448,8 @@ p {
 
 Dans cet exemple, on a trois déclarations d'animation intitulées `nomRepete`. Lorsque `animation: infinite 5s alternate nomRepete` est appliquée au paragraphe, seule une animation s'applique&nbsp;: l'animation définie dans la règle en dehors des couches prend la précédence sur les règles ajoutées aux couches A et B d'après l'ordre de précédence basé sur l'origine et les couches de la cascade. Dans cet exemple, seule la taille de la police de l'élément sera animé.
 
-> **Note :** Il n'existe pas d'animations importantes, car les déclarations des propriétés d'un bloc [`@keyframes`](/fr/docs/Web/CSS/@keyframes) qui contiennent `!important` dans leur valeur sont ignorées.
+> [!NOTE]
+> Il n'existe pas d'animations importantes, car les déclarations des propriétés d'un bloc [`@keyframes`](/fr/docs/Web/CSS/@keyframes) qui contiennent `!important` dans leur valeur sont ignorées.
 
 ## Réinitialiser les styles
 

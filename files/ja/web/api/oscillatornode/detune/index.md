@@ -9,7 +9,8 @@ l10n:
 
 `detune` は {{ domxref("OscillatorNode") }} インターフェイスのプロパティで、 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、発振器の離調を[セント](<https://ja.wikipedia.org/wiki/セント_(音楽)>)で表します。
 
-> **メモ:** 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
+> [!NOTE]
+> 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
 
 ## 値
 

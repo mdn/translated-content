@@ -3,13 +3,12 @@ title: "HTMLIFrameElement: referrerPolicy プロパティ"
 short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の
-{{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
+**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
 ## 値
 
@@ -32,8 +31,9 @@ l10n:
 
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
 
-  > **メモ:** このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します
-  > この設定の影響を慎重に検討してください。
+    > [!NOTE]
+    > このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
+    > この設定の影響を慎重に検討してください。
 
 ## 例
 

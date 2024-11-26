@@ -11,7 +11,7 @@ l10n:
 
 画像はエンコードされた画像を格納した [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) として指定されます。 JPEG と PNG 形式に対応しています。
 
-この API は Chrome の [`clipboard.setImageData()`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API をベースにしていますが、いくつかの違いがあります。
+この API は Chrome の [`clipboard.setImageData()`](https://developer.chrome.com/docs/apps/reference/clipboard) API をベースにしていますが、いくつかの違いがあります。
 
 - Chrome API はアプリ専用で、拡張機能用ではありません。
 - この API では `"clipboardWrite"` 権限のみが要求されますが、 Chrome 版では `"clipboard"` 権限も要求されます。
@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API をベースにしています。
+> [!NOTE]
+> この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API をベースにしています。

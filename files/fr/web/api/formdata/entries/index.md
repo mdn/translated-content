@@ -10,7 +10,8 @@ slug: Web/API/FormData/entries
 La methode **FormData.entries()** retourne un {{jsxref("Les_protocoles_iteration",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
 La clef de chaque paire est une {{domxref("USVString")}}. De la même manière, la valeur peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}}.
 
-> **Note :** Cette methode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette methode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 

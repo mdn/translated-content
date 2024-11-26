@@ -48,13 +48,13 @@ slug: Web/API/Element/mousedown_event
 
 ## Связанные события
 
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [`mousedown`](/ru/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/ru/docs/Web/Events/mouseup)
+- [`mousemove`](/ru/docs/Web/Events/mousemove)
+- [`click`](/ru/docs/Web/Events/click)
+- [`dblclick`](/ru/docs/Web/Events/dblclick)
+- [`mouseover`](/ru/docs/Web/Events/mouseover)
+- [`mouseout`](/ru/docs/Web/Events/mouseout)
+- [`mouseenter`](/ru/docs/Web/Events/mouseenter)
+- [`mouseleave`](/ru/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/ru/docs/Web/Events/contextmenu)

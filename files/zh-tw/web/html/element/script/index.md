@@ -23,7 +23,8 @@ slug: Web/HTML/Element/script
 
   - : 這個布林屬性告訴瀏覽器說：如果可以，就以非同步的方法執行腳本。
 
-    > **警告：** 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。
+    > [!WARNING]
+    > 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。
 
 - `async`
 
@@ -39,7 +40,8 @@ slug: Web/HTML/Element/script
 
   - : 設置此 Boolean attribute 是為了指示瀏覽器，腳本應在 document 解析後，但在觸發 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的腳本將阻止觸發 `DOMContentLoaded` 事件，直到腳本 load 完成並且 finished evaluating。
 
-    > **警告：** 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。The `defer` attribute has no effect on [module script](/zh-TW/docs/Web/JavaScript/Guide/Modules) — they defer by default.
+    > [!WARNING]
+    > 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。The `defer` attribute has no effect on [module script](/zh-TW/docs/Web/JavaScript/Guide/Modules) — they defer by default.
 
 - `fetchpriority`
   - : Scripts with the `defer` attribute will execute in the order in which they appear in the document.This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
@@ -53,7 +55,8 @@ slug: Web/HTML/Element/script
 
   - : 此屬性指定外部程式的 URI，可以用來取代直接在文件內中嵌入腳本。
 
-    > **警告：** 如果 `script` 元素有指定 `src` 屬性的話，標籤內就不能有嵌入的腳本。
+    > [!WARNING]
+    > 如果 `script` 元素有指定 `src` 屬性的話，標籤內就不能有嵌入的腳本。
 
 - `text`
   - : Like the `textContent` attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
@@ -64,7 +67,8 @@ slug: Web/HTML/Element/script
     - **`module`**：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 `charset` 與 `defer` 屬性影響。針對 `module` 的資訊，請參閱 [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)。在使用 `module` 關鍵字時，程式碼的行為會有所不同。
     - **其他值**：嵌入的內容會被當成一段不給瀏覽器執行的資料塊（data block）。開發者應當使用非 JavaScript 的有效 MIME 類型，以標明資料塊。`src` 屬性也將被忽略。
 
-    > **備註：** 在 Firefox 你可以在 `<script>` 元素的 `type` 屬性，透過標明非標準參數 `version`，指定要使用的 JavaScript 版本：例如說 `type="application/javascript;version=1.8"`。這個功能在 Firefox 59 移除了（請參見 [Firefox bug 1428745](https://bugzil.la/1428745)）。
+    > [!NOTE]
+    > 在 Firefox 你可以在 `<script>` 元素的 `type` 屬性，透過標明非標準參數 `version`，指定要使用的 JavaScript 版本：例如說 `type="application/javascript;version=1.8"`。這個功能在 Firefox 59 移除了（請參見 [Firefox bug 1428745](https://bugzil.la/1428745)）。
 
 ### 棄用屬性
 
@@ -114,7 +118,8 @@ In older browsers that don't support the `async` attribute, parser-inserted scri
 
 To request script-inserted external scripts be executed in the insertion order in browsers where the `document.createElement("script").async` evaluates to `true` (such as Firefox 4), set `.async=false` on the scripts you want to maintain order.
 
-> **警告：** Never call `document.write()` from an async script. In Firefox 3.6, calling `document.write()` has an unpredictable effect. In Firefox 4, calling `document.write()` from an async script has no effect (other than printing a warning to the error console).
+> [!WARNING]
+> Never call `document.write()` from an async script. In Firefox 3.6, calling `document.write()` has an unpredictable effect. In Firefox 4, calling `document.write()` from an async script has no effect (other than printing a warning to the error console).
 
 ## 參見
 

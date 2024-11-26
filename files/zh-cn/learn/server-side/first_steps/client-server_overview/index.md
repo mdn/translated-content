@@ -11,13 +11,12 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
   <tbody>
     <tr>
       <th scope="row">前提：</th>
-      <td>基本电脑素养、对于什么是网络服务器的基本了解</td>
+      <td>基本电脑素养、对于什么是 Web 服务器的基本了解。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
       <td>
-        理解在动态网站中的客户端 -
-        服务器端交互过程，尤其是服务器端代码需要承担的工作
+        理解在动态网站中的客户端与服务器端的交互过程，尤其是服务器端代码需要承担的工作。
       </td>
     </tr>
   </tbody>
@@ -25,9 +24,9 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 到目前为止的讨论中还没有真正的代码，因为我们还没有选择一个 web 框架来写我们的代码呢！然而这个讨论仍旧十分重要，因为我们描述的行为必须通过你的服务器端代码来实现，不管你选择什么编程语言和 web 框架。
 
-## 网络服务器和 HTTP（入门）
+## Web 服务器和 HTTP（入门）
 
-网络浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与网络服务器（[web servers](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)）。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
+Web 浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与 [Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
 
 这个请求包含：
 
@@ -36,7 +35,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
   - `GET`：获取一份指定（比如一个包含了一个产品或者一系列产品相关信息的 HTML 文档）。
   - `POST`：创建一份新的资源（比如给 wiki 增加一片新的文章、给数据库增加一个新的节点）。
-  - `HEAD`: 获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，你可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。
+  - `HEAD`：获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，你可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。
   - `PUT`：更新一份已经存在的资源（或者在该资源不存在的情况下创建一份新的）。
   - `DELETE`：删除指定的资源。
   - `TRACE`、`OPTIONS`、`CONNECT、PATCH`：这些动作是为一些不常见任务设计的，因此我们在这里的讲解不会涉及到它们。
@@ -45,11 +44,11 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
   - URL 参数：GET 请求通过在 URL 末尾增加的键值对，来编码包含在发送给服务器的 URL 中的数据——比如，`http://mysite.com?name=Fred&age=11`，你经常会用到问号（？）来将 URL 剩余的部分和 URL 参数分隔开来，一个赋值符号（=）将名称和与之相关的值分隔开来，然后一个“&”符号分割不同的键值对。当他们被用户改变然后提交时，URL 参数具有与生俱来地“不安全性”。因此，一个 URL 参数或者 GET 请求是不会用来在服务器上更新数据的。
   - POST 数据：POST 请求会增加新的资源，这些数据将会在请求体中编码。
-  - 客户端 cookie：cookies 包含与客户相关的会话数据，服务器可以用这些数据来判断用户的登录状态以及用户是否有访问资源的权限。
+  - 客户端 cookie：cookie 包含与客户相关的会话数据，服务器可以用这些数据来判断用户的登录状态以及用户是否有访问资源的权限。
 
-网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（[HTTP Response status code](/zh-CN/docs/Web/HTTP/Status)）来暗示请求是否成功 (比如 "`200 OK`" 连接成功， "`404 Not Found`" 资源没有找到，"`403 Forbidden`" 用户没有被授权查看资源，等等). 一个成功的响应主体，会包含 GET 请求所请求的资源。
+Web 服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)来暗示请求是否成功（比如 {{HTTPStatus("200", "200 OK")}} 连接成功，{{HTTPStatus("404", "404 Not Found")}} 资源没有找到，{{HTTPStatus("403", "403 Forbidden")}} 用户没有被授权查看资源，等等）。一个成功的响应主体，会包含 GET 请求所请求的资源。
 
-当一个 HTML 页面被返时，页面会被网络浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。
+当一个 HTML 页面被返时，页面会被 Web 浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。
 
 静态网站和动态网站（在接下来的部分讨论到的）正是使用同一种通信协议/模式
 
@@ -57,15 +56,15 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 你可以通过点击一个链接或者在网站进行一次搜索（比如搜索引擎的首页）做出一次简单的 GET 请求。比如，当你在 MDN 上进行一次对“客户端概览”词条的搜索时，HTTP 请求就被发送出去了，你将会看到正如下面一样被展示出来的文本信息（展示出来的信息不一定是相同的，因为其中一部分信息还取决于你的浏览器）。
 
-> **备注：** HTTP 消息的格式是在“网络标准”（[RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)）中定义的。你不需要知道这个标准的细节，但是现在你至少得知道所有这些是来自哪儿的！
+> [!NOTE]
+> HTTP 消息的格式是在“Web 标准”（[RFC9110](https://httpwg.org/specs/rfc9110.html#messages)）中定义的。你不需要知道这个标准的细节，但是现在你至少得知道所有这些是来自哪儿的！
 
 #### 请求
 
-每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
+每一行请求都包含着相关信息。第一部分被称为**标头**（header），并且包含着关于这个请求的有用信息，同样地，[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) 包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
 
 ```plain
-GET https://developer.mozilla.org/en-
-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
+GET /zh-CN/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Pragma: no-cache
@@ -73,40 +72,39 @@ Cache-Control: no-cache
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/
+Referer: https://developer.mozilla.org/zh-CN/
 Accept-Encoding: gzip, deflate, sdch, br
-Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
-Accept-Language: en-US,en;q=0.8,es;q=0.6
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.7,en;q=0.6
 Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
 ```
 
 第一行和第二行包含了我们在上面讨论过的大部分信息
 
 - 请求类型（GET）。
-- 目标资源的 URL（`/en-US/search`）。
+- 目标资源的 URL（`/zh-CN/search`）。
 - URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev`）。
 - 目标网站（developer.mozilla.org）。
 - 第一行的末尾也包含了一个简短的包含了标识协议版本的字符串（`HTTP/1.1`）。
 
-最后一行包括一些关于客户端 cookies 的信息——你可以看到在这种情况下 cookies 包含一个为处理远程会话准备的 ID（`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`）。
+最后一行包括一些关于客户端 cookie 的信息——你可以看到在这种情况下 cookie 包含一个为处理远程会话准备的 ID（`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`）。
 
 剩余几行包含着所使用的浏览器以及浏览器所能处理的回应类型等信息。比如，你可以在下面看到这些相关信息：
 
-- 我的浏览器上 (`User-Agent`) 是火狐 (`Mozilla/5.0`).
-- 它可以接收 gzip 压缩信息 (`Accept-Encoding: gzip`).
-- 它可以接收的具体编码类型 (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) 和语言 (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
-- The `Referer` line 提示包含资源链接的网络地址 (或者说请求的来源是 `https://developer.mozilla.org/en-US/`).
+- 我的浏览器上（`User-Agent`）是火狐（`Mozilla/5.0`）。
+- 它可以接收 gzip 压缩信息（`Accept-Encoding: gzip`）。
+- 它可以接收的具体语言（`Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.7,en;q=0.6`）。
+- `Referer` 这一行提示包含资源链接的网页地址（或者说请求的来源是 `https://developer.mozilla.org/zh-CN/`）。
 
 请求也可以有一个请求体，不过在这个例子中请求的请求体是空的。
 
 #### 回应
 
-针对这个请求的回应的第一部分内容展示如下。The header 包含了如下信息：
+针对这个请求的回应的第一部分内容展示如下。标头包含了如下信息：
 
 - 第一行包括了回应状态码 200 OK，这告诉我们请求是成功的。
 - 我们可以看到回应是文本 `html` 格式的（`Content-Type`）。
-- 我们也可以看到它使用的是 UTF-8 字符集 (`Content-Type: text/html; charset=utf-8`).
-- The head 也告诉我们它有多大 (`Content-Length: 41823`).
+- 我们也可以看到它使用的是 UTF-8 字符集（`Content-Type: text/html; charset=utf-8`）。
+- head 也告诉我们它有多大（`Content-Length: 41823`）。
 
 在消息的末尾我们可以看到**主体**内容——包含了针对请求返回的真实的 HTML。
 
@@ -133,7 +131,7 @@ Content-Length: 41823
   ...
 ```
 
-header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如， `X-Frame-Options: DENY` 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素{{htmlelement("iframe")}}上。
+header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如，`X-Frame-Options: DENY` 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素 {{htmlelement("iframe")}} 上。
 
 ### POST 请求/响应举例
 
@@ -144,7 +142,7 @@ header 的剩余部分还包括一些回应的其他信息（比如回应在什�
 下面的文本展示了当用户在网站上提交新的文件的时候，生成的一个 HTTP 请求的格式和之前展示的 GET 请求是非常相似的，只是第一行标识这个请求为 POST。
 
 ```http
-POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
+POST /zh-CN/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -155,19 +153,19 @@ Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/profiles/hamishwillee/edit
+Referer: https://developer.mozilla.org/zh-CN/profiles/hamishwillee/edit
 Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.8,es;q=0.6
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.7,en;q=0.6
 Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _ga=GA1.2.1688886003.1471911953; ffo=true
 
-csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&user-fullname=Hamish+Willee&user-title=&user-organization=&user-location=Australia&user-locale=en-US&user-timezone=Australia%2FMelbourne&user-irc_nickname=&user-interests=&user-expertise=&user-twitter_url=&user-stackoverflow_url=&user-linkedin_url=&user-mozillians_url=&user-facebook_url=
+csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&user-fullname=Hamish+Willee&user-title=&user-organization=&user-location=Australia&user-locale=zh-CN&user-timezone=Australia%2FMelbourne&user-irc_nickname=&user-interests=&user-expertise=&user-twitter_url=&user-stackoverflow_url=&user-linkedin_url=&user-mozillians_url=&user-facebook_url=
 ```
 
-最主要的不同在于 URL 不再包含任何参数。正如你所见，表单提交的信息被编码后放入消息主体中了。(比如：使用以下命令设置新的用户全名：`&user-fullname=Hamish+Willee`)
+最主要的不同在于 URL 不再包含任何参数。正如你所见，表单提交的信息被编码后放入消息主体中了（比如：使用以下命令设置新的用户全名：`&user-fullname=Hamish+Willee`）。
 
 #### 响应
 
-请求的响应如下。状态码"302 FOUND"告知浏览器，服务端已收到它提交的 post 请求，它必须再发出第二个 HTTP 请求来加载`Location`字段中指定的页面。对于其他方面的信息含义，则与`GET`请求的响应信息类似。
+请求的响应如下。状态码 `302 FOUND` 告知浏览器，服务端已收到它提交的 post 请求，它必须再发出第二个 HTTP 请求来加载 `Location` 字段中指定的页面。对于其他方面的信息含义，则与 `GET` 请求的响应信息类似。
 
 ```http
 HTTP/1.1 302 FOUND
@@ -177,7 +175,7 @@ Vary: Cookie
 Vary: Accept-Encoding
 Content-Type: text/html; charset=utf-8
 Date: Wed, 07 Sep 2016 00:38:13 GMT
-Location: https://developer.mozilla.org/en-US/profiles/hamishwillee
+Location: https://developer.mozilla.org/zh-CN/profiles/hamishwillee
 Keep-Alive: timeout=5, max=1000
 Connection: Keep-Alive
 X-Frame-Options: DENY
@@ -185,13 +183,15 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **备注：** 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) 工具)。
+> [!NOTE]
+> 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) 工具)。
 
 ## 静态网站
 
-静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果你在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果你添加另一个类似的产品到你的网站，你将需要添加另一个页面（例如 `myproduct2.html` ）等。这可能开始变得非常低效：当你访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
+静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果你在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果你添加另一个类似的产品到你的网站，你将需要添加另一个页面（例如 `myproduct2.html`）等。这可能开始变得非常低效：当你访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
 
-> **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择，然而随着页面数量的增加，它们的维护成本也会很高。
+> [!NOTE]
+> 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择，然而随着页面数量的增加，它们的维护成本也会很高。
 
 让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。
 
@@ -268,7 +268,8 @@ urlpatterns = [
 ]
 ```
 
-> **备注：** 在`url()`函数中的第一个参数可能看起来有点古怪 (比如`r'^junior/$`) 因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”。
+> [!NOTE]
+> 在`url()`函数中的第一个参数可能看起来有点古怪 (比如`r'^junior/$`) 因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”。
 
 Web 框架还可以轻松地使用查看函数，从数据库获取信息。我们的数据结构是在模型中定义的，模型是定义要存储在底层数据库中的字段的 Python 类。如果我们有一个名为 Team 的模型，其中有一个“_team_type_”字段，那么我们可以使用一个简单的查询语法来取回所有具有特定类型的球队。
 

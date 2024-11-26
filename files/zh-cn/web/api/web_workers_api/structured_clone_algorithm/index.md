@@ -47,7 +47,8 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 - [HTML 规范：安全地传递结构化数据](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - [可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("Window.structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone()")}}
 - {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}
 - [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)

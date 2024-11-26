@@ -55,8 +55,8 @@ l10n:
 
 #### 使用浏览器扩展
 
-- [Gif Blocker](https://chrome.google.com/webstore/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl)：适用于 Chrome，Gif Blocker 是一个应用商店提供的扩展。
-- [Gif Scrubber](https://chrome.google.com/webstore/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp)：Gif Scrubber 是一个 Chrome 扩展，允许你像视频播放器一样控制 GIF。它在 **<https://github.com/0ui/gif-scrubber>** 上有一个 GitHub 存储库。
+- [Gif Blocker](https://chromewebstore.google.com/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl)：适用于 Chrome，Gif Blocker 是一个应用商店提供的扩展。
+- [Gif Scrubber](https://chromewebstore.google.com/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp)：Gif Scrubber 是一个 Chrome 扩展，允许你像视频播放器一样控制 GIF。它在 **<https://github.com/0ui/gif-scrubber>** 上有一个 GitHub 存储库。
 - [Beeline Reader](https://www.beelinereader.com/)：Beeline Reader 有一个浏览器扩展，可以设置为灰度和 Dyslexi 字体，等等。
 
 ![显示了 Beeline Reader 在浏览器中用户可以调整的模式的屏幕截图](beelinereader.png)

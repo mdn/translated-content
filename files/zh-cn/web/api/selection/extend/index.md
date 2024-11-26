@@ -9,8 +9,9 @@ slug: Web/API/Selection/extend
 
 ## 语法
 
-```
-sel.extend(node, offset)
+```js-nolint
+extend(node)
+extend(node, offset)
 ```
 
 ### 参数
@@ -28,6 +29,6 @@ sel.extend(node, offset)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}, 此方法所属接口。
+- 此方法所属的接口：{{domxref("Selection")}}。

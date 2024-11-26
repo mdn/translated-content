@@ -11,9 +11,11 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 ## 解説
 
-> **メモ:** ES6 互換のコードを書く場合は、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が推奨されます。
+> [!NOTE]
+> ES6 互換のコードを書く場合は、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が推奨されます。
 
-> **メモ:** 「配列風」とは、 `arguments` が {{jsxref("Functions/arguments/length", "length")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{JSxRef("Array")}} の組込みメソッド、例えば {{jsxref("Array.forEach", "forEach()")}} や {{jsxref("Array.map", "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
+> [!NOTE]
+> 「配列風」とは、 `arguments` が {{jsxref("Functions/arguments/length", "length")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{JSxRef("Array")}} の組込みメソッド、例えば {{jsxref("Array.forEach", "forEach()")}} や {{jsxref("Array.map", "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
 
 `arguments` オブジェクトはすべての（[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)ではない）関数内で利用可能なローカル変数です。`arguments` オブジェクトを使うことにより、関数内で関数の引数を参照できます。このオブジェクトは、関数に渡された各引数に対する入力を含みます。最初の入力の添字は 0 から始まります。
 

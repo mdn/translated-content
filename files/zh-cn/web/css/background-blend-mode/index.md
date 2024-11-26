@@ -15,19 +15,18 @@ slug: Web/CSS/background-blend-mode
 
 ## 语法
 
-```
-Formal syntax:  {{csssyntax("background-blend-mode")}}
-```
-
-```
+```css
 /* 单值 */
 background-blend-mode: normal;
 
-/* 双值，每个背景一个值 */
+/* 双值，一个值对应一个背景 */
 background-blend-mode: darken, luminosity;
 
-background-blend-mode: initial;
+/* 全局值 */
 background-blend-mode: inherit;
+background-blend-mode: initial;
+background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
@@ -35,6 +34,14 @@ background-blend-mode: unset;
 
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : 一个定义混合的模式，可以有多个值，用逗号间隔。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 

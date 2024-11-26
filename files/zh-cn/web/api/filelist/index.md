@@ -2,7 +2,7 @@
 title: FileList
 slug: Web/API/FileList
 l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+  sourceCommit: cfa628aedb53a83b315943ef19fa6c73298fb7d5
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -21,7 +21,9 @@ l10n:
 const file = document.getElementById("fileItem").files[0];
 ```
 
-> **备注：** 此接口的出现是[对创建不可修改列表的一次尝试](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)，并且仅是出于避免破坏已经在使用它的代码而继续受到支持。现代 API 使用围绕 ECMAScript 数组类型的类型，因此你可以像 ECMAScript 数组一样对待它们，同时对其使用施加额外的语义（例如使其项目只读）。
+此接口[试图创建不可修改的列表](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)，为了不破坏已经使用该接口的代码，才继续支持该接口。现代 API 使用基于 JavaScript [数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的类型来表示列表结构，从而提供许多数组方法，同时对其使用施加额外的语义（例如使其项目为只读）。
+
+这些历史原因并不意味着你作为开发人员应该避免使用 `FileList`。你不会自己创建 `FileList` 对象，而是从诸如 {{domxref("HTMLInputElement.files")}} 之类的 API 获取它们，并且这些 API 并未弃用。但是，请注意与真实数组的语义差异。
 
 ## 实例属性
 

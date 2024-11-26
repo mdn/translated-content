@@ -9,7 +9,8 @@ l10n:
 
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
 
-> **备注：** 在你运行下面的例子之前，打开我们在 [Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)系列文章中建立的[初学者示例网站](http://mdn.github.io/beginner-html-site-scripted/)。你应该按照下面的步骤打开。
+> [!NOTE]
+> 在你运行下面的例子之前，打开我们在 [Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)系列文章中建立的[初学者示例网站](http://mdn.github.io/beginner-html-site-scripted/)。你应该按照下面的步骤打开。
 
 ## 如何在浏览器中打开开发者工具
 
@@ -89,7 +90,7 @@ l10n:
 了解更多 Inspector 在不同的浏览器中的细节：
 
 - [Firefox 页面检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM 检查器](https://developer.chrome.com/docs/devtools/dom/)（Opera 的 inspector 和它一样）
+- [Chrome DOM 检查器](https://developer.chrome.google.cn/docs/devtools/dom)（Opera 的 inspector 和它一样）
 - [Safari DOM 检查器和样式浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## JavaScript 调试器
@@ -204,7 +205,7 @@ document.querySelector("h1").appendChild(loginImage);
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
 - [Firefox Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript 控制台](https://developer.chrome.com/docs/devtools/console/)（Opera 与它相同）
+- [Chrome JavaScript 控制台](https://developer.chrome.google.cn/docs/devtools/console)（Opera 与它相同）
 - [Safari 控制台](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## 参见

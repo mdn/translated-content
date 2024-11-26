@@ -28,7 +28,7 @@ l10n:
 ## 例
 
 下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示しています。
-CSS は `@container` の例、[名前付き格納コンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
+CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
 
 ```html hidden
 <div id="log">
@@ -112,6 +112,6 @@ log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container")}} 一括指定プロパティ
-- [CSS 封じ込めモジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

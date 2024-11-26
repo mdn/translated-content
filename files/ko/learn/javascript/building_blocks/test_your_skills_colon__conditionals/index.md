@@ -9,11 +9,13 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 .
 
-> **참고:** 여러분은 정답을 아래의 인터랙티브 에디터에서 시도해 볼 수 있지만, 과제를 수행하기 위해 코드를 다운로드해서 다음과 같은 온라인 툴을 이용하는 것 또한 도움이 될 지도 모릅니다: [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/)
+> [!NOTE]
+> 여러분은 정답을 아래의 인터랙티브 에디터에서 시도해 볼 수 있지만, 과제를 수행하기 위해 코드를 다운로드해서 다음과 같은 온라인 툴을 이용하는 것 또한 도움이 될 지도 모릅니다: [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/)
 >
 > 정말로 막히면, 도움을 요청해 보세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 확인해 보세요.
 
-> **참고:** 아래의 예제들에서, 만약 여러분의 코드에 오류가 있다면, 답을 알아내려고 시도하는 것을 돕기 위해 페이지의 결과 패널에 (혹은 다운로드 버전의 경우, 브라우저의 JavaScript 콘솔에) 오류가 출력될 것입니다.
+> [!NOTE]
+> 아래의 예제들에서, 만약 여러분의 코드에 오류가 있다면, 답을 알아내려고 시도하는 것을 돕기 위해 페이지의 결과 패널에 (혹은 다운로드 버전의 경우, 브라우저의 JavaScript 콘솔에) 오류가 출력될 것입니다.
 
 ## 조건문 1
 
@@ -30,7 +32,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals1.html", '100%', 400)}}
 
-> **참고:** 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals1-download.html)
+> [!NOTE]
+> 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals1-download.html)
 
 ## 조건문 2
 
@@ -55,7 +58,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals2.html", '100%', 400)}}
 
-> **참고:** 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals2-download.html)
+> [!NOTE]
+> 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals2-download.html)
 
 ## 조건문 3
 
@@ -65,7 +69,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
 
-> **참고:** 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals3-download.html)
+> [!NOTE]
+> 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals3-download.html)
 
 ## 조건문 4
 
@@ -84,7 +89,8 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals4.html", '100%', 400)}}
 
-> **참고:** 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals4-download.html)
+> [!NOTE]
+> 다른 (온라인) 에디터에서 작업하기 위해 [이 과제에 대한 시작점을 다운로드하세요.](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals4-download.html)
 
 ## 평가 혹은 추가적인 도움
 

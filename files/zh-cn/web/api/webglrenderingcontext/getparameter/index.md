@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/getParameter
 
 ## 语法
 
-```
-any gl.getParameter(pname);
+```js-nolint
+getParameter(pname)
 ```
 
 ### 参数

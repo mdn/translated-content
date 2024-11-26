@@ -453,9 +453,11 @@ Maintenant, ajoutez ces mêmes lignes une fois de plus, au début de la fonction
 
 À ce stade, vous pouvez supprimer les lignes équivalentes des fonctions `windBackward()` et `windForward()`, puisqu'elles ont été ajoutées à la fonction `stopMedia()` à la place.
 
-> **Note :** Vous pouvez améliorer votre code en créant une fonction séparée qui exécute ces lignes, et l'appeler aux endroits où vous en avez besoin plutôt que de répéter ces lignes à de multiples endroits du code. Mais nous vous laissons vous en occuper.
+> [!NOTE]
+> Vous pouvez améliorer votre code en créant une fonction séparée qui exécute ces lignes, et l'appeler aux endroits où vous en avez besoin plutôt que de répéter ces lignes à de multiples endroits du code. Mais nous vous laissons vous en occuper.
 
-> **Note :** Le [code terminé](https://github.com/mdn/learning-area/tree/master/javascript/apis/video-audio/finished) est disponible sur Github (le [voir en direct](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/)).
+> [!NOTE]
+> Le [code terminé](https://github.com/mdn/learning-area/tree/master/javascript/apis/video-audio/finished) est disponible sur Github (le [voir en direct](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/)).
 
 ## Sommaire
 

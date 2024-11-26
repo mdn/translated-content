@@ -2,7 +2,7 @@
 title: StorageManager：getDirectory() 方法
 slug: Web/API/StorageManager/getDirectory
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}} {{AvailableInWorkers}}
@@ -69,7 +69,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范的早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地指定为异步方法，并且某些较旧版本的浏览器以这种方式实现它们。然而，当前所有支持这些方法的浏览器都将它们实现为同步方法。
+> [!NOTE]
+> 在规范的早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地指定为异步方法，并且某些较旧版本的浏览器以这种方式实现它们。然而，当前所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 规范
 

@@ -121,7 +121,8 @@ Passons à la manipulation :
 
 {{EmbedLiveSample('Les_arrière-plans', '100%', '200')}}
 
-> **Note :** Les gradients peuvent être utilisés pour créer une myriade d'effets. Vous pouvez par exemple consulter [les excellents motifs CSS de Lea Verou](https://lea.verou.me/css3patterns/). Attention cependant, en termes de performance, les gradients peuvent avoir un impact non négligeable. Si vous souhaitez explorer les gradients, n'hésitez pas à lire [notre article dédié](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> [!NOTE]
+> Les gradients peuvent être utilisés pour créer une myriade d'effets. Vous pouvez par exemple consulter [les excellents motifs CSS de Lea Verou](https://lea.verou.me/css3patterns/). Attention cependant, en termes de performance, les gradients peuvent avoir un impact non négligeable. Si vous souhaitez explorer les gradients, n'hésitez pas à lire [notre article dédié](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 ## Les pseudo-éléments
 

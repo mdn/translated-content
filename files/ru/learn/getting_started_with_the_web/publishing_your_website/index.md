@@ -78,7 +78,8 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 ![](command-line.png)
 
-> **Примечание:** вы также можете использовать графический пользовательский интерфейс [Git](http://git-scm.com/downloads/guis) для этих же целей, если вам не удобно работать с командной строкой.
+> [!NOTE]
+> Вы также можете использовать графический пользовательский интерфейс [Git](http://git-scm.com/downloads/guis) для этих же целей, если вам не удобно работать с командной строкой.
 
 У всех операционных систем есть командная строка:
 
@@ -121,7 +122,8 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 6. Теперь, когда вы перейдёте по веб-адресу, созданному в GitHub, в новом окне браузера (_username.github.io_), вы увидите ваш сайт онлайн! Разошлите ссылку вашим друзьям, пусть оценят ваше мастерство.
 
-> **Примечание:** Если вы застряли, [GitHub Pages homepage](https://pages.github.com/) будет очень полезна для вас.
+> [!NOTE]
+> Если вы застряли, [GitHub Pages homepage](https://pages.github.com/) будет очень полезна для вас.
 
 ### Дальнейшее изучение GitHub
 

@@ -73,7 +73,8 @@ Ce comportement s'avère utile lorsqu'on souhaite cibler certains éléments fle
 
 Dans l'exemple qui suit, on a un conteneur flexible sans passage à la ligne. Le troisième élément possède plus de contenu que les autres mais est paramétré avec `visibility: collapse` et le conteneur flexible conserve donc une toise pour la hauteur nécessaire à l'affichage de cet élément. Si on retire `visibility: collapse` ou qu'on modifie la valeur de `visible`, on pourra voir l'élément disparaître et l'espace être redistribué entre les éléments qui ne sont pas repliés. La hauteur du conteneur flexible ne devrait pas changer.
 
-> **Note :** Il est nécessaire d'utiliser Firefox pour les deux exemples présentés ensuite, car Chrome et Safari considèrent `collapse` comme équivalent à `hidden`.
+> [!NOTE]
+> Il est nécessaire d'utiliser Firefox pour les deux exemples présentés ensuite, car Chrome et Safari considèrent `collapse` comme équivalent à `hidden`.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 

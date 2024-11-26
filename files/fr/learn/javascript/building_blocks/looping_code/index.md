@@ -223,7 +223,8 @@ Cela nous donne la sortie suivante&nbsp;:
 
 {{EmbedLiveSample('', '100%', 60)}}
 
-> **Note :** Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html) (et [le voir tourner en live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> [!NOTE]
+> Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html) (et [le voir tourner en live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici&nbsp;:
 
@@ -237,9 +238,11 @@ Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et
 
 4. Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code après la boucle.
 
-> **Note :** Nous avons fait sortir la condition `i < cats.length`, et pas `i <= cats.length`, parce que les ordinateurs comptent à partir de 0, pas 1 — nous avons démarré `i` à `0`, et allons allers jusqu'à `i = 4` (l'index du dernier item de la table/tableau). `cats.length` retourne 5, comme il y a 5 items dans la table, nous n'allons pas itérer jusqu'à `i = 5`, cela retournerait `undefined` pour le dernier item (il n'y a pas d'élément de tableau avec un index de 5). Par conséquent, nous voulons aller de 1 à moins que `cats.length` (`i <`), ce n'est pas la même chose que `cats.length` (`i <=`).
+> [!NOTE]
+> Nous avons fait sortir la condition `i < cats.length`, et pas `i <= cats.length`, parce que les ordinateurs comptent à partir de 0, pas 1 — nous avons démarré `i` à `0`, et allons allers jusqu'à `i = 4` (l'index du dernier item de la table/tableau). `cats.length` retourne 5, comme il y a 5 items dans la table, nous n'allons pas itérer jusqu'à `i = 5`, cela retournerait `undefined` pour le dernier item (il n'y a pas d'élément de tableau avec un index de 5). Par conséquent, nous voulons aller de 1 à moins que `cats.length` (`i <`), ce n'est pas la même chose que `cats.length` (`i <=`).
 
-> **Note :** Une erreur commune avec les conditions de sortie est de les faire utiliser "égal à" plutôt que de dire "inférieur ou égal à". Si nous voulions faire tourner notre boucle jusqu'à i = 5, la condition de sortie aurait besoin d'être i <= cats.length / Si nous la mettons à i = cats.length, la boucle ne fonctionnerait pas du tout parce que i n'est pas égal à 5 sur la première itération de la boucle, de sorte que cela s'arrête immédiatement.
+> [!NOTE]
+> Une erreur commune avec les conditions de sortie est de les faire utiliser "égal à" plutôt que de dire "inférieur ou égal à". Si nous voulions faire tourner notre boucle jusqu'à i = 5, la condition de sortie aurait besoin d'être i <= cats.length / Si nous la mettons à i = cats.length, la boucle ne fonctionnerait pas du tout parce que i n'est pas égal à 5 sur la première itération de la boucle, de sorte que cela s'arrête immédiatement.
 
 Un petit problème est que nous avons laissé la phrase de sortie mal formée&nbsp;:
 
@@ -257,9 +260,11 @@ for (let i = 0; i < cats.length; i++) {
 }
 ```
 
-> **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html) (et aussi le [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> [!NOTE]
+> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html) (et aussi le [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **Attention :** Avec for — comme avec toutes les boucles — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> [!WARNING]
+> Avec for — comme avec toutes les boucles — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
 
 ## Quitter une boucle avec break
 
@@ -369,7 +374,8 @@ bouton.addEventListener("click", function () {
 
 5. Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
 
-> **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Passer des itérations avec continue
 
@@ -437,7 +443,8 @@ Ici la sortie :
 3. Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
 4. Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
 
-> **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while et do…while
 
@@ -474,7 +481,8 @@ while (i < cats.length) {
 }
 ```
 
-> **Note :** Cela fonctionne toujours comme prévu regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html) le code complet).
+> [!NOTE]
+> Cela fonctionne toujours comme prévu regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html) le code complet).
 
 La boucle [`do…while`](/fr/docs/Web/JavaScript/Reference/Instructions/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while&nbsp;:
 
@@ -507,9 +515,11 @@ do {
 } while (i < cats.length);
 ```
 
-> **Note :** Encore, cela fonctionne toujours comme prévu — regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html) le code complet).
+> [!NOTE]
+> Encore, cela fonctionne toujours comme prévu — regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html) le code complet).
 
-> **Attention :** Avec `while` et `do…while`, comme avec toutes les boucles, vous devez vous assurer que l'initialiseur est itéré pour qu'il atteigne finalement la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> [!WARNING]
+> Avec `while` et `do…while`, comme avec toutes les boucles, vous devez vous assurer que l'initialiseur est itéré pour qu'il atteigne finalement la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
 
 ## Apprentissage actif&nbsp;: lancer le compte à rebours
 
@@ -834,7 +844,8 @@ do {
 
 Nous recommandons `for`, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer&nbsp;: l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.
 
-> **Note :** Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération).
+> [!NOTE]
+> Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération).
 
 ## Conclusion
 

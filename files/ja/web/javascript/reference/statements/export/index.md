@@ -2,7 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 l10n:
-  sourceCommit: 3bf2463d6d13f1f4b388ff2a0daaea9da5e545eb
+  sourceCommit: eb7cf694c19b31ee8826f22eaac6c12e808b1e50
 ---
 
 {{jsSidebar("Statements")}}
@@ -44,6 +44,7 @@ export * as name1 from "module-name";
 export { name1, /* …, */ nameN } from "module-name";
 export { import1 as name1, import2 as name2, /* …, */ nameN } from "module-name";
 export { default, /* …, */ } from "module-name";
+export { default as name1 } from "module-name";
 ```
 
 - `nameN`
@@ -91,7 +92,8 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
-> **メモ:** エクスポート宣言の名前は、互いに異なるものでなければなりません。重複した名前でエクスポートを実施したり、`default` のエクスポートを複数使用すると {{jsxref("SyntaxError")}} が発生し、モジュールが評価されなくなります。
+> [!NOTE]
+> エクスポート宣言の名前は、互いに異なるものでなければなりません。重複した名前でエクスポートを実施したり、`default` のエクスポートを複数使用すると {{jsxref("SyntaxError")}} が発生し、モジュールが評価されなくなります。
 
 `export default` 構文ではあらゆる式が許可されます。
 
@@ -193,7 +195,7 @@ import { a } from "./barrel.js";
 
 以下は、import に対応するものですが、構文的には無効です。
 
-```js example-bad
+```js-nolint example-bad
 export DefaultExport from "bar.js"; // Invalid
 ```
 
@@ -207,6 +209,12 @@ export from" 構文では、`as` トークンを省略することができま�
 
 ```js
 export { default, function2 } from "bar.js";
+```
+
+`export from` は `import` が対応しているすべての機能に対応しています。例えば[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)などです。
+
+```js
+export { default } from "./data.json" with { type: "json" };
 ```
 
 ## 例
@@ -246,14 +254,14 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // "From graph draw function" と記録
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```
 
 以下の点に注意することが重要です。
 
-- このスクリプトを HTML の {{htmlelement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
+- このスクリプトを HTML の {{HTMLElement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
 - `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
 
 ### デフォルトエクスポートの使用
@@ -332,7 +340,7 @@ import { myFunction, myVariable, MyClass } from "parentModule.js";
 ## 関連情報
 
 - {{jsxref("Statements/import", "import")}}
-- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) Jason Orendorff のブログ記事
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) Lin Clark のブログ記事
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)ガイド
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) (hacks.mozilla.org, 2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) (hacks.mozilla.org, 2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) (Dr. Axel Rauschmayer)

@@ -32,4 +32,4 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 ## 関連情報
 
-- 本インターフェースを実装する HTML 要素: {{HTMLElement("data")}}.
+- 本インターフェイスを実装する HTML 要素: {{HTMLElement("data")}}.

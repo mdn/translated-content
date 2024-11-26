@@ -78,7 +78,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
     Usa este atributo solo si esta presente el atributo [`href`](#href).
 
-    > **Nota:** Si se ajusta `target="_blank"` en el elemento `<area>` implicitamente provoca el mismo comportamiento `rel` que si se ocupara [`rel="noopener"`](/es/docs/Web/HTML/Attributes/rel/noopener) que no establece `window.opener`. Véase también [Compatibilidad con navegadores](#browser_compatibility).
+    > [!NOTE]
+    > Si se ajusta `target="_blank"` en el elemento `<area>` implicitamente provoca el mismo comportamiento `rel` que si se ocupara [`rel="noopener"`](/es/docs/Web/HTML/Attributes/rel/noopener) que no establece `window.opener`. Véase también [Compatibilidad con navegadores](#browser_compatibility).
 
 ## Ejemplos
 

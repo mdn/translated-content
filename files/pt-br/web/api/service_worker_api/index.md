@@ -15,9 +15,11 @@ Assim como outros tipos de _worker_, um _service worker_ é executado em um cont
 
 Por questões de segurança, _service workers_ funcionam apenas em sites servidos via HTTPS. A possibilidade de modificar requisições em um domínio desprotegido contra ataques do tipo [man-in-the-middle](/pt-BR/docs/Glossary/MitM) seria desastrosa. No Firefox, é vetado o acesso à API de _service workers_ para sites abertos no [Modo de navegação privativa](https://support.mozilla.org/pt-BR/kb/navegacao-privativa-use-firefox-sem-historico).
 
-> **Nota:** Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
+> [!NOTE]
+> Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
 
-> **Nota:** Service workers fazem uso intenso de [promessas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), uma vez que eles têm de esperar por respostas assíncronas para, após retornadas, poderem executar a ação apropriada (de sucesso ou erro). A arquitetura de promessas é ideal para esse tipo de cenário.
+> [!NOTE]
+> Service workers fazem uso intenso de [promessas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), uma vez que eles têm de esperar por respostas assíncronas para, após retornadas, poderem executar a ação apropriada (de sucesso ou erro). A arquitetura de promessas é ideal para esse tipo de cenário.
 
 ### Registrando
 
@@ -83,7 +85,7 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 - {{domxref("ExtendableEvent")}}
   - : Estende a vida dos eventos `install` e `activate` disparados no {{domxref("ServiceWorkerGlobalScope")}}, como parte do ciclo de vida do _service worker_. Isso garante que qualquer evento funcional (como o {{domxref("FetchEvent")}}) não seja despachado para o {{domxref("ServiceWorker")}} até que ele conclua as ações em andamento, como por exemplo: atualizar esquemas de banco de dados, apagar caches defasados, etc.
 - {{domxref("ExtendableMessageEvent")}}
-  - : O objeto de evento do {{event("message_(ServiceWorker)","message")}}, o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
+  - : O objeto de evento do [`message`](</pt-BR/docs/Web/Events/message_(ServiceWorker)>), o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
 - {{domxref("FetchEvent")}}
   - : O parâmetro recebido no _handler_ {{domxref("ServiceWorkerGlobalScope.onfetch")}}. O `FetchEvent` representa uma ação de descarregamento que é despachada no {{domxref("ServiceWorkerGlobalScope")}} de um {{domxref("ServiceWorker")}}. Ele contém informações sobre a requisição e a resposta resultante, além de disponibilizar o método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, o qual nos permite devolver uma resposta customizada para a página que está sendo controlada.
 - {{domxref("InstallEvent")}}

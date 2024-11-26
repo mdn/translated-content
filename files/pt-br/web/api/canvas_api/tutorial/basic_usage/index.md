@@ -15,7 +15,8 @@ Vamos começar esse tutorial olhando o elemento {{HTMLElement("canvas")}} em si.
 
 Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width** e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
 
-> **Nota:** Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
+> [!NOTE]
+> Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
 
 O atributo `id` não é específico do elemento `<canvas>` mas um dos atributos padrão do HTML que pode ser aplicado em (quase) todos os elementos HTML (como o _`class`_ por exemplo). É sempre uma boa ideia inserir um `id` pois fica muito mais fácil de capturar o elemento no seu _script._
 
@@ -43,7 +44,8 @@ Por exemplo, podemos prover um texto descritivo do canvas ou uma imagem estátic
 
 Ao contrário do elemento {{HTMLElement("img")}}, o elemento {{HTMLElement("canvas")}} a tag de fechamento (`</canvas>`) é necessária.
 
-> **Nota:** Embora as primeiras versões do navegador Safari da Apple não exijam a tag de fechamento, a especificação indica que ela é necessária para que haja maior compatibilidade, portanto não se esqueça de incluí-la. Essas versões do Safari (antes da versão 2.0) irão processar o conteúdo do alternativo, além da própria tela, a menos que você use o CSS para mascará-lo. Felizmente, os usuários dessas versões do Safari são raros hoje em dia.
+> [!NOTE]
+> Embora as primeiras versões do navegador Safari da Apple não exijam a tag de fechamento, a especificação indica que ela é necessária para que haja maior compatibilidade, portanto não se esqueça de incluí-la. Essas versões do Safari (antes da versão 2.0) irão processar o conteúdo do alternativo, além da própria tela, a menos que você use o CSS para mascará-lo. Felizmente, os usuários dessas versões do Safari são raros hoje em dia.
 
 Se o conteúdo alternativo não for necessário, um simples `<canvas id="foo" ...></canvas>` é totalmente compatível com todos os navegadores que suportam canvas.
 
@@ -79,7 +81,8 @@ if (canvas.getContext) {
 
 Aqui, um modelo minimalista, que vamos usar como ponto de partida para os exemplos posteriores:
 
-> **Nota:** não é uma boa prática incorporar um script dentro do HTML. Nós fazemos isso aqui para manter o exemplo conciso.
+> [!NOTE]
+> não é uma boa prática incorporar um script dentro do HTML. Nós fazemos isso aqui para manter o exemplo conciso.
 
 ```html
 <html>

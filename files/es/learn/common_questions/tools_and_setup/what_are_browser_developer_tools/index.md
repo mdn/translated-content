@@ -7,7 +7,8 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
-> **Nota:** Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](http://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
+> [!NOTE]
+> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](http://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
 
 ## Cómo abrir devtools en tu navegador
 
@@ -226,7 +227,7 @@ Obtén más información sobre la consola de JavaScript en diferentes navegadore
 
 - [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
 - [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
-- [Consola JavaScript de Chrome.](https://developer.chrome.com/devtools/docs/console) (el inspector de Opera funciona de la misma manera)
+- [Consola JavaScript de Chrome.](https://developer.chrome.com/docs/devtools/console/) (el inspector de Opera funciona de la misma manera)
 - [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## Ve también

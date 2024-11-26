@@ -17,7 +17,8 @@ counter(nomcompteur, upper-roman)
 
 Un [compteur](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) CSS n'a aucun effet visible en lui-même. C'est la fonction `counter()` (ainsi que `counters()`) qui permet d'utiliser la chaîne de caractère ou l'image résultante.
 
-> **Note :** La fonction `counter()` peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.
+> [!NOTE]
+> La fonction `counter()` peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.
 >
 > Veillez à consulter [le tableau de compatibilité des navigateurs](#browser_compatibility) avant d'utiliser ces fonctionnalités en production.
 

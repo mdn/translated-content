@@ -20,7 +20,8 @@ slug: WebAssembly/C_to_Wasm
 - 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
 - Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
 
-> **备注：** 在 Windows 下你可能需要 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
+> [!NOTE]
+> 在 Windows 下你可能需要 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
 
 ### 编译 Emscripten
 
@@ -50,9 +51,11 @@ emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
 
 安装过程可以会花上一点时间，是时候去休息一下。安装程序会设置所有 Emscripten 运行所需要的环境变量。
 
-> **备注：** global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果你仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。
+> [!NOTE]
+> global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果你仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。
 
-> **备注：** 每当你想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保你使用的 Emscripten 一直保持最新。
+> [!NOTE]
+> 每当你想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保你使用的 Emscripten 一直保持最新。
 
 现在让我们进入 emsdk 文件夹，输入以下命令来让你进入接下来的流程，编译一个样例 C 程序到 asm.js 或者 wasm。
 
@@ -108,7 +111,8 @@ emsdk_env.bat
 
 现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html`。自从 Firefox 版本 52、Chrome 版本 57 和 Opera 版本 44 开始，已经默认启用了 WebAssembly。
 
-> **备注：** 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
+> [!NOTE]
+> 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
 
 如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到“Hello World”的输出。
 
@@ -148,7 +152,8 @@ emsdk_env.bat
 
 4. 下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。在浏览器中打开它，你会看到与上一个例子相同的输出。
 
-> **备注：** 通过用.js 取代.htm(l) 作为文件后缀名，你就可以得到只有 JavaScript 的输出文件，而不再是完整的 HTML 文件。例如：`emcc -o hello2.js hello2.c -O3 -s WASM=1`. 你可以完全从零开始创建你自己的 HTML 文件。尽管如此，不推荐这样做。因为 Emscripten 需要大量的 JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。
+> [!NOTE]
+> 通过用.js 取代.htm(l) 作为文件后缀名，你就可以得到只有 JavaScript 的输出文件，而不再是完整的 HTML 文件。例如：`emcc -o hello2.js hello2.c -O3 -s WASM=1`. 你可以完全从零开始创建你自己的 HTML 文件。尽管如此，不推荐这样做。因为 Emscripten 需要大量的 JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。
 
 ## 调用一个定义在 C 中的自定义方法
 
@@ -181,7 +186,8 @@ emsdk_env.bat
 
    默认情况下，Emscripten 生成的代码只会调用 `main()` 函数，其他的函数将被视为无用代码。在一个函数名之前添加 `EMSCRIPTEN_KEEPALIVE` 能够防止这样的事情发生。你需要导入 `emscripten.h` 库来使用 `EMSCRIPTEN_KEEPALIVE`。
 
-   > **备注：** 为了保证万一你想在 C++ 代码中引用这些代码时代码可以正常工作，我们添加了 `#ifdef` 代码块。由于 C 与 C++ 中名字修饰规则的差异，添加的代码块有可能产生问题，但目前我们设置了这一额外的代码块以保证你使用 C++ 时，这些代码会被视为外部 C 语言函数。
+   > [!NOTE]
+   > 为了保证万一你想在 C++ 代码中引用这些代码时代码可以正常工作，我们添加了 `#ifdef` 代码块。由于 C 与 C++ 中名字修饰规则的差异，添加的代码块有可能产生问题，但目前我们设置了这一额外的代码块以保证你使用 C++ 时，这些代码会被视为外部 C 语言函数。
 
 2. 为了方便起见，现在将 `html_template/shell_minimal.html` 也添加到这一目录（但在实际开发环境中你肯定需要将其放到某一特定位置）。
 3. 运行以下命令编译：(注意由于使用 ccall 函数，需要添加指定参数)

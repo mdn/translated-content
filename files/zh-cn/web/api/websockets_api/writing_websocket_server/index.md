@@ -15,7 +15,8 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。它位于 _System.Net.Sockets_ 的命名空间。
 
-> **备注：** 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
+> [!NOTE]
+> 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
 
 ### TcpListener
 
@@ -27,7 +28,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` 是监听地址， `port` 是监听端口。
 
-> **备注：** 如果字符串创建 `IPAddress` 对象，请使用 Parse 静态方法。
+> [!NOTE]
+> 如果字符串创建 `IPAddress` 对象，请使用 Parse 静态方法。
 
 方法：
 
@@ -186,7 +188,8 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 - MASK 位：定义了是否"Payload data"进行了掩码计算。如果值设置为 1，那么在 Masking-Key 字段中会有一个掩码密钥，并且它可以用来进行"Payload data"的去掩码计算。所有从客户端发到服务器的消息中此位都会被置 1。
 - Payload Length：如果这个值在 0 与 125 之间，那么这个值就是消息的长度。如果这个值是 126，那么接下来的 2 个字节（16 位无符号整数）是消息长度。如果这个值是 127，那么接下来的 8 个字节（64 位无符号整数）是消息长度。
 
-> **备注：** 因为在客户端到服务器的消息中第一位总是 1，所以你可以将这个字节减去 128 去除 MASK 位。
+> [!NOTE]
+> 因为在客户端到服务器的消息中第一位总是 1，所以你可以将这个字节减去 128 去除 MASK 位。
 
 需要注意的是 MASK 位在我们的消息中被置为 1。这意味着接下来的 4 个字节 (61, 84, 35, 6) 是用于解码消息的掩码字节。这些字节在每个消息中都不是固定不变的。
 

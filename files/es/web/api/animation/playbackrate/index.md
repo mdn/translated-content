@@ -21,7 +21,8 @@ Animation.playbackRate = newRate;
 
 Toma un número que puede ser 0, negativo o positivo. Los valores negativos invierten la animación. El valor es un factor de escala, por lo que, por ejemplo, un valor de 2 duplicaría la velocidad de reproducción.
 
-> **Nota:** si establecemos el `playbackRate` a `0` pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en `paused`).
+> [!NOTE]
+> Si establecemos el `playbackRate` a `0` pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en `paused`).
 
 ## Ejemplos
 

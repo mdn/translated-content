@@ -48,7 +48,8 @@ slug: Learn/Forms
 | {{HTMLElement("select")}}   | {{domxref("HTMLSelectElement")}}   | 在`選擇`元素代表呈現一個選項菜單的控制。                                                                                                              |
 | {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | 該 `textarea` 的元素代表多行純文本編輯控制。                                                                                                          |
 
-> **備註：** 所有的表單元素，因為所有的 HTML 元素，支持 {{domxref("HTMLElement")}} DOM 接口。
+> [!NOTE]
+> 所有的表單元素，因為所有的 HTML 元素，支持 {{domxref("HTMLElement")}} DOM 接口。
 
 ### HTML 屬性
 
@@ -71,7 +72,7 @@ slug: Learn/Forms
     <tr>
       <td style="white-space: nowrap">accept-charset</td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>支持的字符集列表。</td>
+      <td>字符集，必須指定為 <code>"UTF-8"</code>（若提供）。</td>
     </tr>
     <tr>
       <td>action</td>
@@ -81,7 +82,7 @@ slug: Learn/Forms
     <tr>
       <td>autocomplete</td>
       <td>
-        {{ HTMLElement("form") }}, {{ HTMLElement("input") }}
+        {{ HTMLElement("form") }}、{{ HTMLElement("input") }}
       </td>
       <td>指示是否在這個表單控件可以在默認情況下有其值由瀏覽器自動完成。</td>
     </tr>

@@ -9,7 +9,8 @@ l10n:
 
 **`bookmarks.removeTree()`** 方法递归删除一个书签文件夹及其所有内容。
 
-> **警告：** 如果你的扩展尝试从书签树根节点中删除书签树，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被删除。
+> [!WARNING]
+> 如果你的扩展尝试从书签树根节点中删除书签树，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被删除。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -62,7 +63,8 @@ searchingBookmarks.then(removeMDN, onRejected);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-removeTree) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-removeTree) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

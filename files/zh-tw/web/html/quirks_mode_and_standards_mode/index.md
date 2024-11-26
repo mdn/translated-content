@@ -30,7 +30,7 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 在 HTML5，DOCTYPE 唯一的作用是啟用標準模式。更早期的 HTML 標準會附加其他意義，但沒有任何瀏覽器會用 DOCTYPE 去做模式間互換以外的用途。
 
-另請參閱[不同的瀏覽器選擇不同模式](https://hsivonen.iki.fi/doctype/)的詳細說明。
+另請參閱[不同的瀏覽器選擇不同模式](https://hsivonen.fi/doctype/)的詳細說明。
 
 ### XHTML
 

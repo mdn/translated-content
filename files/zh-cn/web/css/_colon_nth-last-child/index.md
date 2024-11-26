@@ -15,7 +15,8 @@ slug: Web/CSS/:nth-last-child
 }
 ```
 
-> **备注：** 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
+> [!NOTE]
+> 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
 
 ## 语法
 

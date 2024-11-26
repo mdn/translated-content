@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **备注：** 此特性已弃用，建议使用[对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)或 {{jsxref("Object.defineProperty()")}} API 来定义 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。该方法的行为只针对 Web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。
+> [!NOTE]
+> 此特性已弃用，建议使用[对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)或 {{jsxref("Object.defineProperty()")}} API 来定义 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。该方法的行为只针对 Web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。
 
 **`__defineSetter__()`** 方法将一个对象的属性绑定到一个函数上，当该属性被赋值时，该函数将被调用。
 

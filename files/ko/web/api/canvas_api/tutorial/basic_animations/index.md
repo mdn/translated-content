@@ -32,7 +32,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 정해진 시간마다 특정 함수를 부를 때 사용할 수 있는 {{domxref("window.setInterval()")}}과 {{domxref("window.setTimeout()")}} 함수가 있습니다.
 
-> **참고:** 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
+> [!NOTE]
+> 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
 
 - `setInterval(function, delay)`
   - : `delay` 밀리세컨드(1,000분의 1초)마다 `function` 함수 반복 실행을 시작합니다.

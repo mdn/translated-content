@@ -46,7 +46,7 @@ svg {
 - [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
   - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}
 
-## 用法
+## 使用说明
 
 该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 

@@ -55,7 +55,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Nota:** Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
+> [!NOTE]
+> Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
 
 ### Gerando um número inteiro aleatório entre dois valores, inclusive
 

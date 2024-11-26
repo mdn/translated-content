@@ -15,7 +15,8 @@ input:required {
 }
 ```
 
-> **Note :** La pseudo-classe {{cssxref(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
+> [!NOTE]
+> La pseudo-classe {{cssxref(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
 
 ## Syntaxe
 

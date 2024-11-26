@@ -26,7 +26,8 @@ l10n:
 - `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 分数上的分子对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
 
-> **备注：** 对于 `linethickness` 属性，一些浏览器可能还接受不推荐使用的值 `medium`、`thin` 和 `thick`（其确切解释留给实现者）或[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `linethickness` 属性，一些浏览器可能还接受不推荐使用的值 `medium`、`thin` 和 `thick`（其确切解释留给实现者）或[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

@@ -218,7 +218,8 @@ slug: Web/API/Pointer_events
 | 鼠标 X2（后退）                                    | 4      | 16      |
 | 压感笔橡皮擦按钮被按压                             | 5      | 32      |
 
-> **备注：** The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
+> [!NOTE]
+> The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
 
 ## 指针捕捉
 

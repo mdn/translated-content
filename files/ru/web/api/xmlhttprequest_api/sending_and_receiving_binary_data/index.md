@@ -134,7 +134,8 @@ xhr.send(myArray);
 
 Здесь создаётся и отправляется 512-ти байтовый массив из 8-битных целых чисел, н, разумеется, можно использовать любые двоичные данные.
 
-> **Примечание:** Поддержка передачи объектов [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer) с помощью XMLHttpRequest появилась в Gecko 9.0. **Add information about other browsers' support here.**
+> [!NOTE]
+> Поддержка передачи объектов [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer) с помощью XMLHttpRequest появилась в Gecko 9.0. **Add information about other browsers' support here.**
 
 ## Отправка форм и загрузка файлов
 
@@ -156,7 +157,8 @@ req.sendAsBinary(aBody);
 
 В строке 5 метод `sendAsBinary()` начинает запрос.
 
-> **Примечание:** Нестандартный метод `sendAsBinary` начиная с Gecko 31 считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод `send(Blob data)`.
+> [!NOTE]
+> Нестандартный метод `sendAsBinary` начиная с Gecko 31 считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод `send(Blob data)`.
 
 Кроме того, чтобы отправить бинарные данные можно передать экземпляр `nsIFileInputStream` в метод [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()"). В этом случае заголовок `Content-Length` заполнять явно необязательно, поскольку информация получается из потока автоматически:
 

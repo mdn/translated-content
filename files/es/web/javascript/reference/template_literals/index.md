@@ -40,7 +40,7 @@ En caso de querer escapar una comilla o tilde invertida en una plantilla literal
 
 Los caracteres de fin de línea encontrados forman parte de la plantilla literal.
 
-Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxes para producir cadenas de más de una línea:
+Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxis para producir cadenas de más de una línea:
 
 ```js
 console.log("línea 1 de cadena de texto\n" + "línea 2 de cadena de texto");

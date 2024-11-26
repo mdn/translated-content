@@ -9,7 +9,8 @@ La propriété **`white-space`** est utilisée pour décrire la façon dont les 
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **Note :** Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
+> [!NOTE]
+> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
 
 ## Syntaxe
 

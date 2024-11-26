@@ -34,7 +34,8 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 </svg>
 ```
 
-> **Примечание:** Атрибуты `stroke`, `stroke-width` и `fill` описываются в руководстве далее.
+> [!NOTE]
+> Атрибуты `stroke`, `stroke-width` и `fill` описываются в руководстве далее.
 
 ### Прямоугольники
 

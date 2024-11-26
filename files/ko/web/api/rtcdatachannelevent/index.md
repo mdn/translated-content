@@ -54,4 +54,4 @@ pc.ondatachannel = function (event) {
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.ondatachannel")}}
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-- {{domxref("RTCPeerConnection")}} (the target interface for {{event("datachannel")}} events)
+- {{domxref("RTCPeerConnection")}} (the target interface for {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} events)

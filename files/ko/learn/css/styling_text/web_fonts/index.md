@@ -98,7 +98,8 @@ html {
 
 두 개의 폰트 패키지의 압축을 해제합니다. (웹 폰트는 일반적으로 폰트 파일과 라이센스 정보가 포함된 ZIP 파일로 배포됩니다) 패키지에는 여러 개의 폰트 파일이 있을 수 있습니다. 일부 폰트는 얇은 폰트, 중간 폰트, 굵은 폰트, 이탤릭 폰트, 얇은 이탤릭 등등 다양한 변형이 있는 형태로 배포됩니다. 이 예시에서는 각 선택에 대해 하나의 폰트 파일만 신경 쓰세요.
 
-> **참고:** Font Squirrel에서 오른쪽 열에 있는 "폰트 찾기" 섹션에서 다양한 태그와 분류를 클릭하여 표시된 선택 항목들을 필터링할 수 있습니다.
+> [!NOTE]
+> Font Squirrel에서 오른쪽 열에 있는 "폰트 찾기" 섹션에서 다양한 태그와 분류를 클릭하여 표시된 선택 항목들을 필터링할 수 있습니다.
 
 ### 필요한 코드 생성하기
 
@@ -155,7 +156,8 @@ html {
 
 ![The finished design of a Web font active learning exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
 
-> **참고:** 작동하는데 문제가 있는 경우 완성된 파일과 비교해 보세요. [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 및 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css)을 확인해 보세요. 또한 [Github에서 코드를 다운로드](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) 받거나 [완성된 예제를 실행시킬 수 있습니다](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
+> [!NOTE]
+> 작동하는데 문제가 있는 경우 완성된 파일과 비교해 보세요. [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 및 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css)을 확인해 보세요. 또한 [Github에서 코드를 다운로드](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) 받거나 [완성된 예제를 실행시킬 수 있습니다](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
 
 ## 온라인 폰트 서비스 이용하기
 
@@ -170,7 +172,8 @@ html {
 5. 결과 화면에서 먼저 표시된 HTML 코드를 복사하여 HTML 파일의 head에 붙여 넣습니다. 기존 {{htmlelement("link")}} 요소 위에 붙여 넣어 폰트를 가져온 다음 CSS에서 폰트를 사용하도록 합니다.
 6. 그런 다음 사용자 정의 폰트를 HTML에 적용하려면 나열된 CSS 선언을 적절하게 CSS에 복사해야 합니다.
 
-> **참고:** 완성된 버전을 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) 및 [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)에서 확인할 수 있습니다. 작업물을 비교하려면 ([라이브 확인하기](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html))를 사용하세요.
+> [!NOTE]
+> 완성된 버전을 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) 및 [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)에서 확인할 수 있습니다. 작업물을 비교하려면 ([라이브 확인하기](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html))를 사용하세요.
 
 ## @font-face 자세히 알아보기
 
@@ -193,7 +196,8 @@ Fontsquirrel에서 생성한 `@font-face` 구문을 살펴봅시다. 다음은 �
 - `src`: 이 줄은 CSS로 가져올 폰트 파일의 경로 (`url` 부분)와 각 폰트 파일의 형식(`format` 부분)을 지정합니다. 각 경우에 후자는 선택 사항이지만, 브라우저에서 사용할 수 있는 폰트를 더 빨리 결정할 수 있기에 선언하는 것이 좋습니다. 쉼표로 구분하여 여러 개의 선언을 나열할 수 있습니다. 브라우저는 캐스케이드 규칙에 따라 검색하므로 WOFF2와 같이 선호하는 형식을 앞에 선언하는 것이 가장 좋습니다.
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: 이 줄은 폰트의 가중치와 이탤릭체 여부를 지정합니다. 동일한 폰트의 가중치를 여러 개 가져오는 경우, 폰트 패밀리의 모든 다른 구성원을 다른 이름으로 호출할 필요 없이, 폰트 가중치/스타일을 선택한 다음 {{cssxref("font-weight")}}/{{cssxref("font-style")}}의 다른 값을 사용하여 폰트 중에 선택할 수 있습니다. [@font-face 팁: 폰트 가중치와 폰트 스타일을 정의하여 CSS를 단순하게 유지하는 방법](https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/)에 대한 자세한 내용은 Roger Johansson의 글에서 확인할 수 있습니다.
 
-> **참고:** 웹 폰트에 {{cssxref("font-variant")}} 및 {{cssxref("font-stretch")}} 값을 지정할 수 있습니다. 최신 브라우저에서는 웹 폰트에서 사용할 특정 문자 범위인 {{cssxref("@font-face/unicode-range", "unicode-range")}} 값을 지정할 수도 있습니다. 지원 브라우저에서는 지정된 문자만 다운로드 되므로 불필요한 다운로드를 줄일 수 있습니다. Drew McLellan가 작성한 유니코드 범위를 사용하여 [Unicode-Range를 사용하여 사용자 정의 폰트 스택 만들기](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)에서 이 기능을 활용하는 방법에 대한 좋은 아이디어를 확인할 수 있습니다.
+> [!NOTE]
+> 웹 폰트에 {{cssxref("font-variant")}} 및 {{cssxref("font-stretch")}} 값을 지정할 수 있습니다. 최신 브라우저에서는 웹 폰트에서 사용할 특정 문자 범위인 {{cssxref("@font-face/unicode-range", "unicode-range")}} 값을 지정할 수도 있습니다. 지원 브라우저에서는 지정된 문자만 다운로드 되므로 불필요한 다운로드를 줄일 수 있습니다. Drew McLellan가 작성한 유니코드 범위를 사용하여 [Unicode-Range를 사용하여 사용자 정의 폰트 스택 만들기](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)에서 이 기능을 활용하는 방법에 대한 좋은 아이디어를 확인할 수 있습니다.
 
 ## 가변 폰트
 

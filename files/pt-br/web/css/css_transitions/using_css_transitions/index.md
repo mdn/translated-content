@@ -17,9 +17,11 @@ Animações CSS permitem que você decida quais propriedades animar (listando-os
 
 Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita [com propriedades que podem ser transicionadas](/pt-BR/docs/Web/CSS/CSS_animated_properties).
 
-> **Nota:** A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
+> [!NOTE]
+> A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
 
-> **Nota:** O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
+> [!NOTE]
+> O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
 
 ## Definindo transições
 
@@ -1050,7 +1052,8 @@ Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando 
 
 ## Exemplos JavaScript
 
-> **Nota:** Cuidados devem ser tomados ao usar uma transição imediatamente após:
+> [!NOTE]
+> Cuidados devem ser tomados ao usar uma transição imediatamente após:
 >
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
@@ -1103,7 +1106,7 @@ Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
 
 ### Detectando o começo e a completude de uma transição
 
-Você pode usar o evento {{event("transitionend")}} para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
+Você pode usar o evento [`transitionend`](/pt-BR/docs/Web/Events/transitionend) para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
@@ -1116,7 +1119,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-Você detecta o começo de uma transição usando {{event("transitionrun")}} (antes do delay) e {{event("transitionstart")}} (depois do delay):
+Você detecta o começo de uma transição usando [`transitionrun`](/pt-BR/docs/Web/Events/transitionrun) (antes do delay) e [`transitionstart`](/pt-BR/docs/Web/Events/transitionstart) (depois do delay):
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -1131,5 +1134,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Veja Também
 
-- The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.
+- The {{domxref("TransitionEvent")}} interface and the [`transitionend`](/pt-BR/docs/Web/Events/transitionend) event.
 - [Utilizando animações css](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

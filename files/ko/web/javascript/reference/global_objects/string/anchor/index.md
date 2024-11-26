@@ -9,7 +9,8 @@ l10n:
 
 {{jsxref("String")}} 값의 **`anchor()`** 메서드는 name(`<a name="...">str</a>`)이 있는 {{HTMLElement("a")}} 요소 안에 해당 문자열을 집어넣은 문자열을 생성합니다.
 
-> **참고:** 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. 대신 [`document.createElement()`](/ko/docs/Web/API/Document_Object_Model)와 같은 [DOM API](/ko/docs/Web/API/Document/createElement)를 사용하시기 바랍니다.
+> [!NOTE]
+> 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다. 대신 [`document.createElement()`](/ko/docs/Web/API/Document_Object_Model)와 같은 [DOM API](/ko/docs/Web/API/Document/createElement)를 사용하시기 바랍니다.
 >
 > HTML 명세서는 더 이상 {{HTMLElement("a")}} 요소가 `name` 특성을 가지는걸 허용하지 않기 때문에 이 메서드는 유효한 마크업을 생성할 수 없습니다.
 

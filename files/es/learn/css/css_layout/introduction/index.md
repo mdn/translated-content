@@ -67,7 +67,8 @@ Observa aquí cómo se muestra el HTML en el orden exacto en que aparece en el c
 
 Los elementos que aparecen uno debajo del otro se describen como _elementos de bloque_, en contraposición con los _elementos de línea_, que aparecen uno al lado del otro, como las palabras de un párrafo.
 
-> **Nota:** La dirección en la que se presentan los contenidos de un elemento de bloque se describe como dirección de los bloques. La dirección de los bloques va de arriba a abajo en un idioma como el español, cuyo modo de escritura es horizontal. Sería horizontal en cualquier idioma con un modo de escritura vertical, como el japonés. Correspondientemente, la dirección de línea es la dirección en la que los contenidos de línea (por ejemplo, una frase) se disponen.
+> [!NOTE]
+> La dirección en la que se presentan los contenidos de un elemento de bloque se describe como dirección de los bloques. La dirección de los bloques va de arriba a abajo en un idioma como el español, cuyo modo de escritura es horizontal. Sería horizontal en cualquier idioma con un modo de escritura vertical, como el japonés. Correspondientemente, la dirección de línea es la dirección en la que los contenidos de línea (por ejemplo, una frase) se disponen.
 
 Cuando usas CSS para crear un diseño de página web, alejas los elementos del flujo normal, pero para muchos de los elementos de tu página, el flujo normal proporciona exactamente el diseño que necesitas. Por esta razón resulta tan importante comenzar con un documento HTML bien estructurado, porque te permite trabajar ya con la forma en que las cosas se presentan por defecto, en lugar de tener que luchar contra ello.
 
@@ -163,7 +164,8 @@ Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")
 
 {{ EmbedLiveSample('Establecer la propiedad flex', '300', '200') }}
 
-> **Nota:** Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
+> [!NOTE]
+> Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
 
 ## Diseño de cuadrícula
 
@@ -257,7 +259,8 @@ Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explíc
 
 {{ EmbedLiveSample('Colocar elementos en la cuadrícula', '300', '330') }}
 
-> **Nota:** Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn/CSS/CSS_layout/Grids).
+> [!NOTE]
+> Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn/CSS/CSS_layout/Grids).
 
 El resto de esta guía expone otros métodos de diseño de páginas web que son menos importantes para las estructuras principales de diseño de tu página web, pero que pueden serte de ayuda para tareas específicas. Si entiendes la naturaleza de cada una de las tareas de diseño de una página web, vas a descubrir enseguida que a menudo vas a ser capaz de discernir qué tipo de diseño se adapta mejor a cada componente de tu diseño particular.
 
@@ -323,7 +326,8 @@ p {
 
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
-> **Nota:** El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn/CSS/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!NOTE]
+> El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn/CSS/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Técnicas de posicionamiento
 
@@ -606,7 +610,8 @@ body {
 
 {{ EmbedLiveSample('Posicionamiento pegajoso', '100%', 200) }}
 
-> **Nota:** para obtener más información sobre el posicionamiento, consulta nuestro artículo [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
+> [!NOTE]
+> Para obtener más información sobre el posicionamiento, consulta nuestro artículo [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
 
 ## Diseño de tablas
 

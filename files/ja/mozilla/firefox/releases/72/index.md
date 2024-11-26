@@ -40,7 +40,7 @@ _変更なし。_
 
 ### CSS
 
-- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Global_attributes/part) や [`::part` 疑似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
+- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
 - [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
 
   - {{cssxref("offset")}}

@@ -30,7 +30,8 @@ l10n:
   </tbody>
 </table>
 
-> **备注：** 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在 web 页面中添加它。
+> [!NOTE]
+> 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在 web 页面中添加它。
 
 ## 什么是矢量图形？
 
@@ -47,7 +48,8 @@ l10n:
 
 ![两个星星图像被放大，一个清晰而另一个模糊](raster-vector-zoomed.png)
 
-> **备注：** 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
+> [!NOTE]
+> 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
 
 此外，相较于同样的位图，矢量图形通常体积更小，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
 
@@ -87,7 +89,8 @@ SVG 除了前面描述的以外还有其他优点：
 
 由于上述原因，像照片那样复杂精密的图像更适合使用位图。
 
-> **备注：** 在 Inkscape 中，可以将文件保存为纯 SVG 以节省空间。另请参阅[如何为 Web 准备 SVG](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)。
+> [!NOTE]
+> 在 Inkscape 中，可以将文件保存为纯 SVG 以节省空间。另请参阅[如何为 Web 准备 SVG](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)。
 
 ## 将 SVG 添加到页面
 
@@ -95,7 +98,7 @@ SVG 除了前面描述的以外还有其他优点：
 
 ### 快捷方式：`img` 元素
 
-要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的宽高比，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
+要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的{{glossary("aspect ratio","宽高比")}}，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
 
 ```html
 <img src="equilateral.svg" alt="等边三角形" height="87px" width="100px" />
@@ -271,12 +274,12 @@ window.addEventListener("load", updateCode);
 // 转而使其在当前光标位置插入一个制表符
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

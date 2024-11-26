@@ -126,7 +126,8 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 然而，在涉及到无障碍性的地方，标准和指南目前主要是使用 sRGB 颜色空间，尤其是在涉及颜色对比度比率时。
 
-> **备注：** 几乎所有今天用于查看 Web 内容的系统都假定使用 sRGB 编码。除非已知将使用其他颜色空间来处理和显示内容，否则作者应评估使用 sRGB 颜色空间。如果使用其他颜色空间，请应用[最小对比度比率](https://webaim.org/articles/contrast/#sc143)的原则。
+> [!NOTE]
+> 几乎所有今天用于查看 Web 内容的系统都假定使用 sRGB 编码。除非已知将使用其他颜色空间来处理和显示内容，否则作者应评估使用 sRGB 颜色空间。如果使用其他颜色空间，请应用[最小对比度比率](https://webaim.org/articles/contrast/#sc143)的原则。
 
 ### 查询颜色值
 
@@ -178,7 +179,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 在人类感知中，亮度差异比颜色差异更为重要。这一点很重要，因为亮度对比可以使即使是色盲者也能看到的内容得以开发。有了这样的理解，可以通过调整亮度来改善因亮度较低而难以看清的颜色，将这些颜色与具有对比亮度的另一种颜色放在一起。例如，NASA 对蓝色的一项有趣研究指出，这种低亮度的颜色可以通过*注意确保足够的亮度对比*而变得清晰可见（来源：[与蓝色设计](https://colorusage.arc.nasa.gov/blue_2.php)）。
 
-相对亮度的计算不是随意的。幸运的是，有[在线亮度和对比度检查工具](https://contrast-ratio.com/)可用，甚至有关于计算[相对亮度](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance)的说明。
+相对亮度的计算不是随意的。幸运的是，有[在线亮度和对比度检查工具](https://www.siegemedia.com/contrast-ratio)可用，甚至有关于计算[相对亮度](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance)的说明。
 
 ## 感知颜色
 
@@ -309,7 +310,7 @@ _不止一个“红色”可以被认为是“饱和”的红色_。例如，颜
 - **蓝色还会显著影响亮度和眩光**：[蓝色、眩光和亮度](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **红色色调的眼镜可以增加快乐或喜悦感**：[透过”玫瑰色“眼镜看世界：眼镜颜色对视觉情感加工的影响](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **红色众所周知会对我们的行为产生显著影响**：[红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/)，《科学美国人》，S. Martinez-Conde，Stephen L. Macknik
-- **红色环境**：研究表明，对于那些患有创伤性脑损伤的人，[在红色环境中认知功能降低](https://www.ncbi.nlm.nih.gov/pubmed/20649469)。
+- **红色环境**：研究表明，对于那些患有创伤性脑损伤的人，[在红色环境中认知功能降低](https://pubmed.ncbi.nlm.nih.gov/20649469/)。
 
 ## 参见
 

@@ -13,7 +13,8 @@ slug: Games
 
 我们同样提供了参考部分，因此你可以轻易地找到有关游戏开发所有常用的 API。
 
-> **备注：** 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习区](/zh-CN/docs/Learn)开始这些基础知识的学习。
+> [!NOTE]
+> 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习区](/zh-CN/docs/Learn)开始这些基础知识的学习。
 
 ## 将本地游戏移植到 web
 

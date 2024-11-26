@@ -7,11 +7,11 @@ slug: Web/JavaScript/Language_overview
 
 ## 介紹
 
-為何需要重新介紹？因為 [JavaScript](/zh_tw/JavaScript) 堪稱是[全世界最被人誤解的程式語言](http://javascript.crockford.com/javascript.html)。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。
+為何需要重新介紹？因為 [JavaScript](/zh_tw/JavaScript) 堪稱是[全世界最被人誤解的程式語言](https://crockford.com/javascript/javascript.html)。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。
 
 先從該語言的歷史說起。1995 年，Brendan Eich，一位 Netscape （網景）的工程師，創造了 JavaScript。1996 年初，JavaScript 隨著 Netscape 2 首次推出。它原本要被命名為 LiveScript，結果因為行銷策略為了強調昇陽的 Java 程式語言的普遍性，而不幸的被改名 — 即便兩者之間沒有太大的關係。從此之後，這便成為了混淆的元兇。
 
-Microsoft 在幾個月後隨著 IE 3 推出了跟該語言大致上相容的 JScript。Netscape 在 1997 年將該語言送交 [ECMA International](http://www.ecma-international.org/)，一個歐洲標準化組織，而在 1997 年的時候產生了初版的 [ECMAScript](/zh_tw/ECMAScript)。該標準在 1999 年的時候以 [ECMAScript 第三版](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的形式推出了更新，從此之後大致上都相當穩定，不過近期有在研發第四版。
+Microsoft 在幾個月後隨著 IE 3 推出了跟該語言大致上相容的 JScript。Netscape 在 1997 年將該語言送交 [ECMA International](https://ecma-international.org/)，一個歐洲標準化組織，而在 1997 年的時候產生了初版的 [ECMAScript](/zh_tw/ECMAScript)。該標準在 1999 年的時候以 [ECMAScript 第三版](https://ecma-international.org/publications-and-standards/standards/ecma-262/)的形式推出了更新，從此之後大致上都相當穩定，不過近期有在研發第四版。
 
 這個穩定性對開發者來說是相當好的事情，因為它讓不少實作 (implementation) 有時間慢慢趕上。我會把重點放在第三版的語法。為了避免混淆，我會繼續使用 JavaScript 這個名稱。
 

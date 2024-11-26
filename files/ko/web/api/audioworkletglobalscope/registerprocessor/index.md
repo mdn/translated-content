@@ -20,7 +20,8 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 - `processorCtor`
   - : {{domxref("AudioWorkletProcessor")}}로부터 파생된 클래스의 생성자.
 
-> **참고:** 프로세서가 한 번 등록되고 나면
+> [!NOTE]
+> 프로세서가 한 번 등록되고 나면
 > {{domxref("AudioWorkletGlobalScope")}}에서
 > 키-값 쌍 `{ name: constructor }` 가 내부적으로 저장됩니다.
 > _name_ 은 등록된 프로세서를 기반으로 한 {{domxref("AudioWorkletNode")}}를 생성할 때 참조됩니다.

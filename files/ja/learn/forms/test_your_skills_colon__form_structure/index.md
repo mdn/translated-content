@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の記事を理解したかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -23,6 +24,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/form-structure/form-structure1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-structure/form-structure1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

@@ -28,7 +28,8 @@ l10n:
 
 この評価を開始するには、ローカルコンピューターの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
-> **メモ:** 代わりとして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) のようなサイトを使って評価することもできます。
+> [!NOTE]
+> 代わりとして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) のようなサイトを使って評価することもできます。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -40,7 +41,7 @@ l10n:
 
 次の手順では、表の例を完成させるために必要な作業について説明します。必要なすべてのデータは `planets-data.txt` ファイルに含まれています。データをうまく視覚化できない場合は、上記の実際の例を見てみるか、図を描いてみてください。
 
-1. `blank-template.html` のコピーを開き、外部コンテナ、テーブルヘッダー、およびテーブル本体を指定してテーブルを作成します。この例ではテーブルフッターは必要ありません。
+1. `blank-template.html` のコピーを開き、外部コンテナー、テーブルヘッダー、およびテーブル本体を指定してテーブルを作成します。この例ではテーブルフッターは必要ありません。
 2. 提供されたキャプションを自分のテーブルに追加します。
 3. すべての列ヘッダーを含む行をテーブルヘッダーに追加します。
 4. すべての行見出しを意味的に見出しにすることを忘れずに、テーブル本体内にすべてのコンテンツ行を作成します。

@@ -74,7 +74,8 @@ const header = (
 );
 ```
 
-> **備註：** 前面程式碼中的括號`(`、`)`不是 JSX 獨有的，這對你的應用程式沒有任何影響。它們會向你（和你的電腦）發出訊號，表示括號其中的多行程式碼是同個表達式的一部分。你也可以像這樣編寫表達式：
+> [!NOTE]
+> 前面程式碼中的括號`(`、`)`不是 JSX 獨有的，這對你的應用程式沒有任何影響。它們會向你（和你的電腦）發出訊號，表示括號其中的多行程式碼是同個表達式的一部分。你也可以像這樣編寫表達式：
 >
 > ```js
 > const header = (
@@ -139,7 +140,8 @@ npx create-react-app moz-todo-react
 - 建立定義基本應用程式架構的文件和目錄結構。
 - 如果你的電腦已有安裝 git 版控，則將該資料夾目錄初始化為 git 存儲庫。
 
-> **備註：** 如果你已有安裝 yarn 套件管理器，`create-react-app`默認將使用它而不是使用 npm。如果你已安裝 yarn 和 npm 兩個套件管理器並且堅持繼續使用 npm，當你要執行`create-react-app`指令時，你可以添加指令`--use-npm`
+> [!NOTE]
+> 如果你已有安裝 yarn 套件管理器，`create-react-app`默認將使用它而不是使用 npm。如果你已安裝 yarn 和 npm 兩個套件管理器並且堅持繼續使用 npm，當你要執行`create-react-app`指令時，你可以添加指令`--use-npm`
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -323,7 +325,8 @@ Line 7 calls React's `ReactDOM.render()` function with two arguments:
 
 All of this tells React that we want to render our React application with the `App` component as the root, or first component.
 
-> **備註：** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
+> [!NOTE]
+> In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
 [Service workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they're not in scope for this article. You can delete line 5, as well as most of the code below it.
 

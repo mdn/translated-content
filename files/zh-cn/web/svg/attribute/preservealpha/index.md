@@ -11,7 +11,7 @@ slug: Web/SVG/Attribute/preserveAlpha
 
 取值为 `true` 表示 feConvolveMatrix 仅应用在颜色通道。
 
-## 用法
+## 使用说明
 
 | 类别   | None              |
 | ------ | ----------------- |

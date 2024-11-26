@@ -159,4 +159,4 @@ Dans Chrome, la clé de manifeste `allowed_extensions` s'appelle `allowed_origin
 
 ### Emplacement du fichier de manifeste d'application
 
-Chrome s'attend à trouver le manifeste de l'application dans un autre endroit. Se référer à la documentation Chrome pour [l'emplacement de l'hôte de messagerie natif](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+Chrome s'attend à trouver le manifeste de l'application dans un autre endroit. Se référer à la documentation Chrome pour [l'emplacement de l'hôte de messagerie natif](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).

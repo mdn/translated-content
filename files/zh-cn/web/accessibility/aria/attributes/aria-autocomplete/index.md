@@ -63,5 +63,5 @@ l10n:
 - [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性
 - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 属性
 - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性
-- [带有内联和列表自动填充的可编辑组合框示例](https://www.w3.org/TR/wai-aria-practices-1.2/examples/combobox/combobox-autocomplete-both.html)
+- [带有内联和列表自动填充的可编辑组合框示例](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-both/)
 - [Event.ariaAutoComplete](/zh-CN/docs/Web/API/Element/ariaAutoComplete)

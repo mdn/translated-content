@@ -1,13 +1,16 @@
 ---
 title: "HTMLElement: dragstart イベント"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。
+
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -40,7 +43,7 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 `dragstart` イベントを待ち受けすることで、ドラッグしている間、要素を半透明にします。
 
-ドラッグ＆ドロップのより完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
 #### HTML
 
@@ -113,9 +116,3 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} イベント

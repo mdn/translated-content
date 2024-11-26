@@ -58,7 +58,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : Este atributo contiene una breve descripción del contenido de las celdas. Algunos agentes de usuario (e.g., a speech reader) pueden presentar esta descripción antes que el propio contenido.
 
-    > **Nota:** No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
+    > [!NOTE]
+    > No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
 
 - `align` {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
 
@@ -72,7 +73,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     El valor por defecto cuando no se especifica este atributo es `left`.
 
-    > **Nota:** No usar este atributo, ya que está obsoleto en el último estándar.
+    > [!NOTE]
+    > No usar este atributo, ya que está obsoleto en el último estándar.
     >
     > - Para lograr el mismo efecto que con los valores `left`, `center`, `right` o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
     > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para [`char`](/es/docs/Web/HTML/Element/th#char).
@@ -81,7 +83,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : Este atributo contiene una lista de cadenas separadas por espacios. Cada cadena es el `id` de un grupo de celdas a las que se les aplica esta cabecera.
 
-    > **Nota:** Este atributo está obsoleto en el último estándar y no debe usarse. Puedes sustituirlo por [`scope`](/es/docs/Web/HTML/Element/th#scope).
+    > [!NOTE]
+    > Este atributo está obsoleto en el último estándar y no debe usarse. Puedes sustituirlo por [`scope`](/es/docs/Web/HTML/Element/th#scope).
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -97,7 +100,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
     |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
 
-    > **Nota:** No usar este atributo, ya que no es un estándar y sólo esta implementado en algunas versiones de Microsoft Internet Explorer. El elemento {{HTMLElement("th")}} debe estilizarse usando [CSS](/es/docs/CSS). Para crear un efecto similar usa la propiedad {{cssxref("background-color")}}.
+    > [!NOTE]
+    > No usar este atributo, ya que no es un estándar y sólo esta implementado en algunas versiones de Microsoft Internet Explorer. El elemento {{HTMLElement("th")}} debe estilizarse usando [CSS](/es/docs/CSS). Para crear un efecto similar usa la propiedad {{cssxref("background-color")}}.
 
 <!---->
 
@@ -105,7 +109,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : El contenido de la celda se alinea con un caracter en el elemento `<th>`. Los valores típicos incluyen un punto (.) para alinear números o valores monetarios. Si no se establece [`align`](/es/docs/Web/HTML/Element/th#align) como char, el atributo es ignorado.
 
-    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}.
+    > [!NOTE]
+    > No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}.
 
 <!---->
 
@@ -113,7 +118,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
 
-    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar.
+    > [!NOTE]
+    > No usar este atributo, ya que no está soportado por el último estándar.
 
 <!---->
 
@@ -142,13 +148,15 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `middle`: Centers the text in the cell.
     - and `top`: Positions the text near the top of the cell.
 
-    > **Nota:** Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+    > [!NOTE]
+    > Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
 
 - `width` {{Deprecated_inline}} in HTML4.01
 
   - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/es/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/es/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 
-    > **Nota:** Do not use this attribute in the latest standard: use the CSS {{cssxref("width")}} property instead.
+    > [!NOTE]
+    > Do not use this attribute in the latest standard: use the CSS {{cssxref("width")}} property instead.
 
 ## Examples
 

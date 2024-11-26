@@ -9,8 +9,9 @@ slug: Web/API/Path2D/addPath
 
 ## 语法
 
-```
-void path.addPath(path [, transform]);
+```js-nolint
+addPath(path)
+addPath(path, transform)
 ```
 
 ### 参数

@@ -19,7 +19,8 @@ El server-sent event API está contenido en la interfaz [`EventSource`](/en/Serv
 var evtSource = new EventSource("ssedemo.php");
 ```
 
-> **Nota:** Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.
+> [!NOTE]
+> Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.
 
 Una vez que ha instanciado el origen del evento, puede comenzar a escuchar los mensajes:
 
@@ -112,7 +113,8 @@ evtSource.close();
 
 El flujo de eventos es una corriente sencilla de datos de texto, que deben ser codificados usando UTF-8. Los mensajes en el flujo de eventos están separados por un par de caracteres de salto de línea. Si hay un símbolo de dos puntos como primer caracter de una línea, se entiende que es un comentario y es ignorado.
 
-> **Nota:** La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.
+> [!NOTE]
+> La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.
 
 Cada mensaje consiste en una o más líneas de texto que enumeran los campos para ese mensaje. Cada campo está representado por el nombre del campo, seguido por los datos de texto para el valor de ese campo.
 
@@ -138,7 +140,8 @@ Los siguientes nombres de campo son definidos por la especificación:
 
 Se omiten todos los demas nombres de campo.
 
-> **Nota:** Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.
+> [!NOTE]
+> Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.
 
 ### Ejemplos
 

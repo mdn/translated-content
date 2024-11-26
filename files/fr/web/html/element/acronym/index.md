@@ -5,11 +5,13 @@ slug: Web/HTML/Element/acronym
 
 {{HTMLSidebar}}
 
-> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!WARNING]
+> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
 
 L'élément HTML **`<acronym>`**, pour les acronymes, permet aux auteurs de pages d'indiquer une suite de caractères composant un acronyme ou l'abréviation d'un mot.
 
-> **Note :** Cet élément n'existe plus en HTML5 et ne devrait plus être utilisé. **Les développeuses et développeurs web devraient utiliser l'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) à la place**.
+> [!NOTE]
+> Cet élément n'existe plus en HTML5 et ne devrait plus être utilisé. **Les développeuses et développeurs web devraient utiliser l'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) à la place**.
 
 ## Attributs
 
@@ -19,7 +21,8 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
-> **Note :** Jusqu'à Gecko 1.9.2 (inclus), Firefox implémente l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 (inclus), Firefox implémente l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
 
 ## Exemples
 

@@ -7,13 +7,20 @@ slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
 
 El objetivo de esta prueba de habilidad es evaluar si has comprendido el artículo [Fundamentos de texto en HTML](/es/docs/Learn/HTML/Introduccion_a_HTML/texto).
 
-> **Nota:** Puedes intentar resolverlo en los editores interactivos de más abajo, sin embargo puede ser muy úytil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!NOTE]
+> Puedes intentar resolverlo en los editores interactivos de más abajo, sin embargo puede ser muy úytil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
 > Si te atascas, entonces pídenos ayuda — busca en la sección [Assessment or further help](#assessment_or_further_help) al final de esta página.
 
 ## Texto básico HTML 1
 
-En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo. Intenta actualizando el código más abajo para recrear el ejemplo terminado:
+En esta tarea queremos que etiquetes el HTML entregado utilizando elementos semánticos de encabezado y párrafo.
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
+
+Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
@@ -22,6 +29,10 @@ En esta tarea queremos que etiquetes el HTML entregado utilizando elementos sem�
 ## Texto básico HTML 2
 
 En esta tarea necesitamos que cambies la primera lista no marcada en una lista no ordenada, y la segunda en una lista ordenada.
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
 
 Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
@@ -32,6 +43,10 @@ Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 ## Texto básico HTML 3
 
 En esta tarea se te entrega un párrafo, y tu objetivo es usar algunos elementos en línea para marcar algunas palabras con importancia, y otras con énfasis
+
+El ejemplo terminado debería de tener este aspecto:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
 
 Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 

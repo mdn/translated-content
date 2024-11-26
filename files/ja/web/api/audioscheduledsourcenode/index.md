@@ -2,7 +2,7 @@
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 l10n:
-  sourceCommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
+  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
 {{APIRef("Web Audio API")}}
@@ -34,7 +34,7 @@ _親インターフェイスである {{domxref("AudioNode")}} からメソッ�
 これらのイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイス `onイベント名` プロパティにイベントリスナーを代入することで待ち受けすることができます。
 
 - [`ended`](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)
-  - : ソースノードが、所定の停止時間に達した、音声の全時間が演奏された、あるいはバッファの全体が演奏されたなどの理由で、再生を停止したときに発行されます。
+  - : ソースノードが、所定の停止時間に達した、音声の全時間が演奏された、あるいはバッファーの全体が演奏されたなどの理由で、再生を停止したときに発行されます。
 
 ## 仕様書
 

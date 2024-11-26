@@ -9,7 +9,8 @@ L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation 
 
 {{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
 
-> **Note :** La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
+> [!NOTE]
+> La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
 
 ## Attributs
 
@@ -71,7 +72,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

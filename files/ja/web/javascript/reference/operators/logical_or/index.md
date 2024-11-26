@@ -58,9 +58,9 @@ console.log(B() || A());
 
 以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
-```js
-true || (false && false); // true を返す。 && が先に実行されるため
-(true || false) && false; // false を返す。演算子の優先順位が適用されないため
+```js-nolint
+true || false && false; // true を返す。 && が先に実行されるため
+(true || false) && false; // false を返す。グループ化の優先順位が最も高いため
 ```
 
 ## 例
@@ -82,7 +82,8 @@ o9 = false || ""; // f || f は "" を返す
 o10 = false || varObject; // f || オブジェクトは varObject を返す
 ```
 
-> **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
+> [!NOTE]
+> この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
 
 ### 論理型の変換規則
 
@@ -126,8 +127,8 @@ bCondition1 && (bCondition2 || bCondition3);
 
 常に以下のものと等しくなります。
 
-```js
-!(!bCondition1 || (!bCondition2 && !bCondition3));
+```js-nolint
+!(!bCondition1 || !bCondition2 && !bCondition3);
 ```
 
 ## 仕様書

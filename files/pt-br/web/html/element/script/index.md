@@ -31,7 +31,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -64,7 +64,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
-    > **Warning:** Esse atributo não deve ser utilizado se o atributo `src` estiver ausente (ex. scripts embutidos). Se incluído, nesse caso, ele não terá nenhum efeito.
+    > [!WARNING]
+    > Esse atributo não deve ser utilizado se o atributo `src` estiver ausente (ex. scripts embutidos). Se incluído, nesse caso, ele não terá nenhum efeito.
 
     Scripts inseridos dinamicamente (usando `document.createElement`) são executados assincronamente por padrão, então para torná-lo uma execução síncrona (ex. executar scripts na ordem que eles foram carregados) atribua `async=false`.
 
@@ -74,11 +75,12 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
   - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/HTTP_access_control). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/CORS_settings_attributes) para uma explicação mais detalhada dos argumentos válidos.
 - `defer`
 
-  - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}
+  - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
 
     Scripts com o atributo `defer` vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser _avaliado_.
 
-    > **Warning:** Esse atributo não deve ser usado se o atibuto `src` estiver ausente (ex. scripts inline), nesse caso ele não vai ter efeito.
+    > [!WARNING]
+    > Esse atributo não deve ser usado se o atibuto `src` estiver ausente (ex. scripts inline), nesse caso ele não vai ter efeito.
 
     Para conseguir um efeito similar para scripts inseridos dinamicamente use `async=false`. Scripts com o atributo `defer` vão ser executados na ordem em que aparecem no `document`.
 
@@ -113,7 +115,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 Scripts without `async` or `defer` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio (`audio/*`) type, or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("success")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio (`audio/*`) type, or `text/csv`. If the script is blocked, an [`error`](/pt-BR/docs/Web/Events/error) is sent to the element, if not a [`success`](/pt-BR/docs/Web/Events/success) event is sent.
 
 ## Exemplos
 

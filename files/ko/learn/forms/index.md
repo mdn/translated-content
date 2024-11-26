@@ -48,7 +48,8 @@ slug: Learn/Forms
 | {{HTMLElement("select")}}   | {{domxref("HTMLSelectElement")}}   | `select` 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.                                                                                                                   |
 | {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | `textarea` 요소는 다중 라인 일반 텍스트 편집 컨트롤을 나타냅니다.                                                                                                           |
 
-> **참고:** 모든 폼 요소들이나 모든 HTML요소들은 {{domxref("HTMLElement")}} 돔 인터페이스를 지원합니다.
+> [!NOTE]
+> 모든 폼 요소들이나 모든 HTML요소들은 {{domxref("HTMLElement")}} 돔 인터페이스를 지원합니다.
 
 ### HTML 속성
 

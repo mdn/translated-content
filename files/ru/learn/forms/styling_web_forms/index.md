@@ -9,13 +9,13 @@ slug: Learn/Forms/Styling_web_forms
 
 ## Почему так сложно стилизовать виджеты форм с помощью CSS?
 
-На заре Интернета, примерно в 1995 году, в [HTML 2](http://www.ietf.org/rfc/rfc1866.txt) были добавлены элементы управления формой. Из-за сложности виджетов форм разработчики решили полагаться на базовую операционную систему для управления ими и их рендеринга.
+На заре Интернета, примерно в 1995 году, в [HTML 2](https://www.ietf.org/rfc/rfc1866.txt) были добавлены элементы управления формой. Из-за сложности виджетов форм разработчики решили полагаться на базовую операционную систему для управления ими и их рендеринга.
 
 Несколько лет спустя был создан CSS, и то, что было технической необходимостью, то есть использование собственных виджетов для реализации элементов управления формой, стало требованием к стилю. В первые дни CSS, стилизация элементов управления формы не была приоритетом.
 
 Поскольку пользователи привыкли к внешнему виду своих соответствующих платформ, поставщики браузеров неохотно делают элементы управления формами стилевыми; и по сей день все ещё чрезвычайно трудно перестроить все элементы управления, чтобы сделать их стилизованными.
 
-Даже сегодня ни один браузер полностью не реализует CSS 2.1. Однако со временем поставщики браузеров улучшили свою поддержку CSS для элементов формы, и, несмотря на плохую репутацию в отношении удобства использования, теперь вы можете использовать CSS для стилизации [HTML форм](/ru/docs/HTML/Forms).
+Даже сегодня ни один браузер полностью не реализует CSS 2.1. Однако со временем поставщики браузеров улучшили свою поддержку CSS для элементов формы, и, несмотря на плохую репутацию в отношении удобства использования, теперь вы можете использовать CSS для стилизации [HTML форм](/ru/docs/Learn/Forms).
 
 ### Не все виджеты созданы равными, когда задействован CSS
 
@@ -38,21 +38,21 @@ slug: Learn/Forms/Styling_web_forms
 
 Они включают в себя элемент {{HTMLElement ("legend")}}, но его нельзя правильно расположить на всех платформах. Флажки и переключатели также не могут быть стилизованы напрямую, однако, благодаря CSS3 вы можете обойти это. Контент [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder) не может быть стилизован каким-либо стандартным способом, однако все браузеры, которые его реализуют, также реализуют собственные псевдо-элементы CSS или псевдоклассы, которые позволяют его стилизовать.
 
-Мы опишем, как обрабатывать эти более конкретные случаи, в статье [«Расширенные стили для HTML-форм».](/ru/docs/Advanced_styling_for_HTML_forms)
+Мы опишем, как обрабатывать эти более конкретные случаи, в статье [«Расширенные стили для HTML-форм».](/ru/docs/Learn/Forms/Advanced_form_styling)
 
 #### The ugly
 
 Some elements simply can't be styled using CSS. These include: all advanced user interface widgets, such as range, color, or date controls; and all the dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}} elements. The file picker widget is also known not to be stylable at all. The new {{HTMLElement("progress")}} and {{HTMLElement("meter")}} elements also fall in this category.
 
-The main issue with all these widgets, comes from the fact that they have a very complex structure, and CSS is not currently expressive enough to style all the subtle parts of those widgets. If you want to customize those widgets, you have to rely on JavaScript to build a DOM tree you'll be able to style. We explore how to do this in the article [How to build custom form widgets](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets).
+The main issue with all these widgets, comes from the fact that they have a very complex structure, and CSS is not currently expressive enough to style all the subtle parts of those widgets. If you want to customize those widgets, you have to rely on JavaScript to build a DOM tree you'll be able to style. We explore how to do this in the article [How to build custom form widgets](/ru/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Basic styling
 
-To style [elements that are easy to style](/ru/docs/HTML/Forms/Styling_HTML_forms#The_good) with CSS, you shouldn't face any difficulties, since they mostly behave like any other HTML element. However, the user-agent style sheet of every browser can be a little inconsistent, so there are a few tricks that can help you style them in an easier way.
+To style [elements that are easy to style](/ru/docs/Learn/Forms/Styling_web_forms#the_good) with CSS, you shouldn't face any difficulties, since they mostly behave like any other HTML element. However, the user-agent style sheet of every browser can be a little inconsistent, so there are a few tricks that can help you style them in an easier way.
 
 ### Search fields
 
-Search boxes are the only kind of text fields that can be a little tricky to style. On WebKit based browsers (Chrome, Safari, etc.), you'll have to tweak it with the `-webkit-appearance` proprietary property. We discuss this property further in the article: [Advanced styling for HTML forms](/ru/docs/Advanced_styling_for_HTML_forms).
+Search boxes are the only kind of text fields that can be a little tricky to style. On WebKit based browsers (Chrome, Safari, etc.), you'll have to tweak it with the `-webkit-appearance` proprietary property. We discuss this property further in the article: [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling).
 
 #### Example
 
@@ -168,7 +168,7 @@ If you want to follow along with this example, make a local copy of our [postcar
 
 ### The HTML
 
-The HTML is only slightly more involved than the example we used in [the first article of this guide](/ru/docs/HTML/Forms/My_first_HTML_form); it just has a few extra IDs and a title.
+The HTML is only slightly more involved than the example we used in [the first article of this guide](/ru/docs/Learn/Forms/Your_first_form); it just has a few extra IDs and a title.
 
 ```html
 <form>
@@ -202,8 +202,8 @@ Add the above code into the body of your HTML.
 This is where the fun begins! Before we start coding, we need three additional assets:
 
 1. The postcard [background](/files/4151/background.jpg) — download this image and save it in the same directory as your working HTML file.
-2. A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
-3. A handdrawn font: [The "Journal" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
+2. A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
+3. A handdrawn font: [The "Journal" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
@@ -355,7 +355,7 @@ textarea {
 }
 ```
 
-The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/Web/CSS/Pseudo-elements):
 
 ```css
 button {
@@ -393,26 +393,27 @@ button:focus {
 
 And voila!
 
-> **Примечание:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> [!NOTE]
+> If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
 
 ## Conclusion
 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. If you want to know more of the little CSS tricks that can make your life easier when working with form widgets, take a look at the form part of [the normalize.css project](http://necolas.github.com/normalize.css).
 
-[In the next article](/ru/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
+[In the next article](/ru/docs/Learn/Forms/Advanced_form_styling), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
 
 ## In this module
 
-- [Your first HTML form](/ru/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/ru/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/ru/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/ru/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/ru/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/ru/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/ru/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form)
+- [How to structure an HTML form](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/ru/docs/Learn/Forms/Basic_native_form_controls)
+- [Sending form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/ru/docs/Learn/Forms/Form_validation)
+- [How to build custom form widgets](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/ru/docs/Learn/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
+- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

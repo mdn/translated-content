@@ -108,7 +108,8 @@ b64EncodeUnicode("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
 
 ### Solución 2 – reescribir `atob()` y `btoa()` usando `TypedArray`s y UTF-8
 
-> **Nota:** El siguiente código también es útil para obtener un [ArrayBuffer](/es/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/es/docs/Web/JavaScript/Typed_arrays/StringView)**.
+> [!NOTE]
+> El siguiente código también es útil para obtener un [ArrayBuffer](/es/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/es/docs/Web/JavaScript/Typed_arrays/StringView)**.
 
 ```js
 "use strict";
@@ -357,7 +358,8 @@ var myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **Nota:** La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/es/docs/Web/JavaScript/Typed_arrays/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/es/docs/Web/API/DOMString/Binary) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
+> [!NOTE]
+> La función `base64DecToArr(sBase64[, nBlocksSize])` devuelve un [`uint8Array`](/es/docs/Web/JavaScript/Typed_arrays/Uint8Array) de bytes. Si tu objetivo es construir un búfer de datos crudos de 16, 32 o 64 bits, usa el argumento `nBlocksSize`, que es el número de bytes de los que la propiedad `uint8Array.buffer.bytesLength` debe devolver un múltiplo (1 u omitido para ASCII, [cadenas binarias](/es/docs/Web/API/DOMString/Binary) o cadenas UTF-8 codificacas, 2 para cadenas UTF-16, 4 para cadenas UTF-32).
 
 Para una librería más completa, véase [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView).
 

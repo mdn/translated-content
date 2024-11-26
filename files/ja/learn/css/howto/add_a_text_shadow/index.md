@@ -24,4 +24,5 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/howto/text-shadow.html", '100%', 500)}}
 
-> **メモ:** テキストシャドウを使用すると、簡単にテキストを読みづらくなる場合があります。低コントラストのテキストを読むことが困難な閲覧者のために、選択した色が読みやすく、十分な[色コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)になっていることを確認しておいてください。
+> [!NOTE]
+> テキストシャドウを使用すると、簡単にテキストを読みづらくなる場合があります。低コントラストのテキストを読むことが困難な閲覧者のために、選択した色が読みやすく、十分な[色コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)になっていることを確認しておいてください。

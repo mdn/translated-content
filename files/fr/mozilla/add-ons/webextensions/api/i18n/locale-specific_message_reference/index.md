@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 
 Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.
 
-> **Note :** Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/Add-ons/WebExtensions/WebExtension_i18n).
+> [!NOTE]
+> Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/Add-ons/WebExtensions/WebExtension_i18n).
 
 ## Exemple messages.json
 
@@ -63,7 +64,8 @@ Le nom peut inclure les caractères suivants :
 - \_ (underscore)
 - @
 
-> **Note :** Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/Add-ons/WebExtensions/Internationalization#Predefined_messages).
+> [!NOTE]
+> Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/Add-ons/WebExtensions/Internationalization#Predefined_messages).
 
 ### message
 

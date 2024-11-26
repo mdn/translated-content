@@ -11,7 +11,8 @@ URIs with fragment identifiers link to a certain element within the document, kn
 `http://example.com/folder/document.html#section2`
 The _anchor_ can be any element with an`id`attribute, e.g. `<h1 id="section2">` in our example. The _target element_ `h1` can be represented by the `:target` pseudo-class.
 
-> **備註：** The`id`attribute was new in HTML 4 (December 1997). In old-style HTML `<a>` is a target element. The`:target`pseudo-class applies to those targets as well.
+> [!NOTE]
+> The`id`attribute was new in HTML 4 (December 1997). In old-style HTML `<a>` is a target element. The`:target`pseudo-class applies to those targets as well.
 
 ## 範例
 

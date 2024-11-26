@@ -8,7 +8,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date
 JavaScript **`Date`** 객체는 시간의 한 점을 플랫폼에 종속되지 않는 형태로 나타냅니다.
 `Date` 객체는 1970년 1월 1일 UTC(협정 세계시) 자정과의 시간 차이를 밀리초로 나타내는 정수 값을 담습니다.
 
-> **참고:** TC39에서 새로운 날짜/시간 API인 [Temporal](https://tc39.es/proposal-temporal/docs/index.html)을 작업 중입니다. [Igalia 블로그](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/)에서 더 알아보세요. 아직 프로덕션에는 적합하지 않습니다!
+> [!NOTE]
+> TC39에서 새로운 날짜/시간 API인 [Temporal](https://tc39.es/proposal-temporal/docs/index.html)을 작업 중입니다. [Igalia 블로그](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/)에서 더 알아보세요. 아직 프로덕션에는 적합하지 않습니다!
 
 ## 설명
 

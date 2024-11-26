@@ -7,7 +7,8 @@ slug: Web/CSS/@media
 
 La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Media_Queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
-> **Note :** Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
+> [!NOTE]
+> Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
 
 ## Syntaxe
 
@@ -46,7 +47,8 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
 - `screen`
   - : Destiné principalement aux écrans.
 
-> **Note :** CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
+> [!NOTE]
+> CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
 
 ### Caractéristiques de média
 
@@ -123,7 +125,8 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 
   - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
-    > **Note :** Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
+    > [!NOTE]
+    > Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
 
 - `only`
   - : Applique la mise en forme uniquement si toute la requête correspond. Ce mot-clé est utile pour empêcher les anciens navigateurs d'appliquer les styles en question. Sans utiliser `only`, les anciens navigateurs interpréteraient la requête `screen and (max-width: 500px)` comme `screen`, en ignorant le reste et en appliquant donc le style à tous les écrans. Si l'opérateur `only` est utilisé, il _est nécessaire_ d'indiquer un type de média.

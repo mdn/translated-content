@@ -69,11 +69,11 @@ WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。�
   </tbody>
 </table>
 
-## 參見
-
-- [WebSocket API Specification](http://dev.w3.org/html5/websockets/)
-- [Server-Sent Events](/zh-TW/Server-sent_events)
-
-## 瀏覽器兼容
+## 瀏覽器相容性
 
 {{Compat}}
+
+## 參見
+
+- [WebSocket API Specification](https://websockets.spec.whatwg.org/)
+- [Server-Sent Events](/zh-TW/docs/Web/API/Server-sent_events)

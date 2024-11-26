@@ -11,7 +11,8 @@ Las propiedades que no son descendientes de un elemento con el atributo `itemsco
 
 El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .
 
-> **Nota:** el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
+> [!NOTE]
+> El atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
 
 ## Ejemplo
 

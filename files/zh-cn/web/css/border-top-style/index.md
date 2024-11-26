@@ -9,7 +9,8 @@ slug: Web/CSS/border-top-style
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-> **备注：** 此规范并未定义不同样式的边框边角处如何连接。
+> [!NOTE]
+> 此规范并未定义不同样式的边框边角处如何连接。
 
 ## 语法
 

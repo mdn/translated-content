@@ -64,7 +64,7 @@ const records = observer.takeRecords();
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
 - {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}

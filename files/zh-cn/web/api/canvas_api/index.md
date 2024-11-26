@@ -87,7 +87,8 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 - [ZIM](https://zimjs.com)：为在 canvas 上进行创意代码编写提供便利性以及相关组件和控件的框架，包括无障碍和数百个色彩缤纷的教程。
 - [Sprig](https://github.com/hackclub/sprig)：使用 Canvas 实现的基于图块的游戏的开发库，适合初学者并且开源。
 
-> **备注：** 与 WebGL 有关的 2D 和 3D 的库请参见 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。
+> [!NOTE]
+> 与 WebGL 有关的 2D 和 3D 的库请参见 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。
 
 ## 规范
 

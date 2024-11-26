@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 
-## 用法
+## 语法
 
 ```js-nolint
 subarray()

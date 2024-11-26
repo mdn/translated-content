@@ -21,7 +21,7 @@ The first part of this article, [Stacking without the z-index property](/en/CSS/
 - ...
 - top layer _(closest to the observer)_
 
-> **Примечание:**
+> [!NOTE]
 >
 > - When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
 > - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) apply.

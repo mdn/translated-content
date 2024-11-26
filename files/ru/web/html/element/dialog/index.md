@@ -12,7 +12,7 @@ slug: Web/HTML/Element/dialog
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент) |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённый контент                                              | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                                                      |
-| Опускание тегов                                                  | {{no_tag_omission}}                                                                                                                                              |
+| Опускание тегов                                                  | Нет, открывающий и закрывающий теги обязательны.                                                                                                                 |
 | Разрешённые родительские элементы                                | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                    |
 | DOM-интерфейс                                                    | {{domxref("HTMLDialogElement")}}                                                                                                                                 |
 
@@ -135,6 +135,6 @@ slug: Web/HTML/Element/dialog
 
 ## Смотрите также
 
-- Событие {{event("close")}}
-- Событие {{event("cancel")}}
+- Событие [`close`](/ru/docs/Web/Events/close)
+- Событие [`cancel`](/ru/docs/Web/Events/cancel)
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).

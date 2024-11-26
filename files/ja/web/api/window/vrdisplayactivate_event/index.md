@@ -9,7 +9,8 @@ l10n:
 
 **`vrdisplayactivate`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、 VR ディスプレイが表示可能になったときに発生します。例えば、 HMD がスタンバイ状態から移行した場合、あるいは装着されて起動した場合など、表示することが可能な状態になったときです。
 
-> **メモ:** このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このイベントはキャンセル不可で、バブリングしません。
 

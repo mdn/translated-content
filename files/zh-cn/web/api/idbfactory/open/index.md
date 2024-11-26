@@ -23,38 +23,14 @@ slug: Web/API/IDBFactory/open
 
 If an error occurs while the database connection is being opened, then an [error event](/zh-CN/docs/IndexedDB/IDBErrorEvent) is fired on the request object returned from this method.
 
-## Syntax
+## 语法
 
-For the current standard:
-
-```
- IDBOpenDBRequest open (DOMString name, [EnforceRange] optional unsigned long long version);
-```
-
-For the experimental version with `options` (see below):
-
-```
-IDBOpenDBRequest open (DOMString name, optional IDBOpenDBOptions options);
+```js-nolint
+open(name)
+open(name, version)
 ```
 
-## 示例
-
-For the current standard:
-
-```js
-var request = window.indexedDB.open("toDoList", 4);
-```
-
-For the experimental version with `options` (see below):
-
-```js
-var request = window.indexedDB.open("toDoList", {
-  version: 4,
-  storage: "temporary",
-});
-```
-
-## 参数
+### 参数
 
 - name
   - : 数据库名称
@@ -63,7 +39,8 @@ var request = window.indexedDB.open("toDoList", {
 - options (version and storage) {{ NonStandardBadge() }}
   - : In Gecko, since [version 26](/zh-CN/Firefox/Releases/26), you can include an `options` object as a parameter of {{ domxref("IDBFactory.open") }} that contains the `version` number of the database, plus a storage value that specifies whether you want to use `permanent` (the default value) storage for the IndexedDB, or `temporary` storage (aka shared pool.) See [Firefox bug 785884](https://bugzil.la/785884) for more details. This is a non-standard feature that we are looking to standardise sometime in the future.
 
-> **备注：** Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see [Firefox bug 968272](https://bugzil.la/968272)). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requets that would exceed the group limit are just rejected.
+> [!NOTE]
+> Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see [Firefox bug 968272](https://bugzil.la/968272)). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requets that would exceed the group limit are just rejected.
 
 ## 返回
 
@@ -77,6 +54,38 @@ This method may raise a {{domxref("DOMException")}} with a [DOMError](/zh-CN/doc
 | Exception   | 描述                                                               |
 | ----------- | ------------------------------------------------------------------ |
 | `TypeError` | The value of version is zero or a negative number or not a number. |
+
+## 示例
+
+使用当前规范的 `version` 参数调用 `open` 的示例：
+
+```js
+const request = window.indexedDB.open("toDoList", 4);
+```
+
+带有 `options` 的实验性版本（见下文）：
+
+```js
+const note = document.querySelector("ul");
+
+// 打开数据库的第四个版本
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+
+// 这两个事件处理器处理数据库成功打开或失败的情况
+DBOpenRequest.onerror = (event) => {
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
+};
+
+DBOpenRequest.onsuccess = (event) => {
+  note.appendChild(document.createElement("li")).textContent =
+    "Database 已初始化。";
+
+  // 将打开数据库的结果存储到 db 变量中。
+  // 这在后面的打开事务等操作中经常使用。
+  db = DBOpenRequest.result;
+};
+```
 
 ## 规范
 

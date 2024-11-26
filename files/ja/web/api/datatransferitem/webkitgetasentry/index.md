@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("DataTransferItem")}} で記述された項目がファイルの場合、 `webkitGetAsEntry()` はそれを表す {{domxref("FileSystemFileEntry")}} または {{domxref("FileSystemDirectoryEntry")}} を返します。ファイルでない場合は `null` を返します。
 
-> **メモ:** この関数は、現時点では Firefox を含む非 WebKit ブラウザーでは `webkitGetAsEntry()` として実装されています。将来的には `getAsEntry()` に改名される可能性があるので、両方の関数を探して防御的なコードを記述すべきです。
+> [!NOTE]
+> この関数は、現時点では Firefox を含む非 WebKit ブラウザーでは `webkitGetAsEntry()` として実装されています。将来的には `getAsEntry()` に改名される可能性があるので、両方の関数を探して防御的なコードを記述すべきです。
 
 ## 構文
 
@@ -86,7 +87,8 @@ body {
 最初に、再帰的な関数である `scanFiles()` を見ていきましょう。
 この関数は、スキャンして処理するファイルシステムの項目を表す {{domxref("FileSystemEntry")}} を入力として受け取り（`item` 引数）、その内容のリストを格納する要素（`container` 引数）を受け取ります。
 
-> **メモ:** ディレクトリー内のすべてのファイルを読み込むには、空の配列を返すまで `readEntries` を繰り返し呼び出す必要があります。
+> [!NOTE]
+> ディレクトリー内のすべてのファイルを読み込むには、空の配列を返すまで `readEntries` を繰り返し呼び出す必要があります。
 > Chromium ベースのブラウザーでは、以下の例では最大 100 件までしか返しません。
 
 ```js

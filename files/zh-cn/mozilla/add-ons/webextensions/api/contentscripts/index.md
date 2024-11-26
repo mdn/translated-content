@@ -9,7 +9,8 @@ l10n:
 
 使用此 API 注册内容脚本。注册内容脚本会指示浏览器将给定的内容脚本插入到与给定 URL 模式匹配的页面中。
 
-> **备注：** 使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册脚本。
+> [!NOTE]
+> 使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册脚本。
 
 此 API 与 [`"content_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 键非常相似，不同之处在于，使用 `"content_scripts"` 时，内容脚本和相关模式集自拓展安装之后就是固定的。而使用 `contentScripts` API，扩展程序可以在运行时注册和取消注册脚本。
 

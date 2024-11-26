@@ -27,7 +27,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran devraient annoncer le label et le rôle de la boîte liste lorsqu'elle obtient le focus. Si un élément de la liste obtient le focus, il devrait être annoncé après, suivi par une indication de la position de l'élément dans la liste si le lecteur d'écran prend en charge cette fonction. Lorsque le focus se déplace dans la liste, le lecteur d'écran devrait annoncer les éléments de la liste appropriés.
 - Les loupes d'écran devraient agrandir la boîte liste.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

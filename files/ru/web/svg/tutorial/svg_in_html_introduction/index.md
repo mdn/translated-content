@@ -88,7 +88,8 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - С помощью JavaScript можно управлять как HTML так и SVG
 - Это полностью валидный документ, основанный на стандартах.
 
-> **Примечание:** Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
+> [!NOTE]
+> Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
 >
 > ```js
 > var img = document.createElementNS("http://www.w3.org/2000/svg", "image");

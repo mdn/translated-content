@@ -9,7 +9,8 @@ slug: Web/API/console/warn_static
 
 {{AvailableInWorkers}}
 
-> **참고:** Firefox에서는 웹 콘솔의 경고 옆에 작은 느낌표 아이콘이 나타납니다.
+> [!NOTE]
+> Firefox에서는 웹 콘솔의 경고 옆에 작은 느낌표 아이콘이 나타납니다.
 
 ## 구문
 

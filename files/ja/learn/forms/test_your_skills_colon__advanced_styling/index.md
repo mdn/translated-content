@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)および [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)の記事を理解したかどうかを評価することです。.
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -30,7 +31,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/advanced-styling/advanced-styling1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -49,7 +50,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/advanced-styling/advanced-styling2.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -62,6 +63,6 @@ l10n:
 1. まずすべて、どの入力が入力されなければならないかを視覚的に示すために、固有のスタイル設定を提供してください。
 2. 2 つ目は、各入力に指定されたデータが有効かどうかを視覚的に示す有益なインジケーターを提供することです。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

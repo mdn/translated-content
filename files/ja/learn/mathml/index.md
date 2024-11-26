@@ -9,9 +9,10 @@ l10n:
 
 Mathematical Markup Language、または {{glossary("MathML")}} は、分数、上付き/下付き、基数、行列、積分、級数などを用いてウェブページに数式を書くために使用するマークアップ言語です。元々は独立した XML 言語として設計されましたが、MathML は一般的に {{Glossary('HTML')}} 文書内に埋め込まれ、HTML の拡張として見ることができます。
 
-> **警告:** 実際には、 MathML コンテンツは[軽量マークアップ言語](https://ja.wikipedia.org/wiki/軽量マークアップ言語)（[LaTeX](https://ja.wikipedia.org/wiki/LaTeX) など）や[グラフィカルユーザーインターフェイス](https://ja.wikipedia.org/wiki/グラフィカルユーザインタフェース)を使用して生成されます。ウェブページに数式を統合するだけであれば、 [MathML の記述](/ja/docs/Web/MathML/Authoring)のページのヒントで十分です。
+> [!WARNING]
+> 実際には、 MathML コンテンツは[軽量マークアップ言語](https://ja.wikipedia.org/wiki/軽量マークアップ言語)（[LaTeX](https://ja.wikipedia.org/wiki/LaTeX) など）や[グラフィカルユーザーインターフェイス](https://ja.wikipedia.org/wiki/グラフィカルユーザインタフェース)を使用して生成されます。ウェブページに数式を統合するだけであれば、 [MathML の記述](/ja/docs/Web/MathML/Authoring)のページのヒントで十分です。
 
-> **注目:**
+> [!CALLOUT]
 >
 > #### フロントエンドのウェブ開発者を目指している方へ
 >

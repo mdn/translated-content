@@ -1,18 +1,20 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}}
 
-**`Symbol.for(key)`** メソッドは、引数で与えられたキーでランタイム全体のシンボルレジストリ内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリ内に生成されます。
+**`Symbol.for()`** は静的メソッドで、引数で与えられたキーでランタイム全体のシンボルレジストリー内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリー内に生成されます。
 
 {{EmbedInteractiveExample("pages/js/symbol-for.html")}}
 
 ## 構文
 
-```
-Symbol.for(key);
+```js-nolint
+Symbol.for(key)
 ```
 
 ### 引数
@@ -26,35 +28,26 @@ Symbol.for(key);
 
 ## 解説
 
-`Symbol()` と対照的に、`Symbol.for()` 関数はグローバルシンボルレジストリリスト内で利用可能なシンボルを生成します。`Symbol.for()` は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた `key` をもつシンボルがレジストリ内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、`Symbol.for()` は新しいグローバルシンボルを生成します。
-
-### グローバルシンボルレジストリ
-
-グローバルシンボルレジストリは次のレコード構造をもつリストで、値は空で初期化されます:
-
-| フィールド名 | 値                                   |
-| ------------ | ------------------------------------ |
-| \[\[key]]    | シンボルを識別するための文字列キー。 |
-| \[\[symbol]] | グローバルに格納されているシンボル。 |
+`Symbol()` と対照的に、`Symbol.for()` 関数は[グローバルシンボルレジストリー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)リスト内で利用可能なシンボルを生成します。`Symbol.for()` は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた `key` をもつシンボルがレジストリー内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、`Symbol.for()` は新しいグローバルシンボルを生成します。
 
 ## 例
 
 ### Symbol.for() の使用
 
 ```js
-Symbol.for("foo"); // create a new global symbol
-Symbol.for("foo"); // retrieve the already created symbol
+Symbol.for("foo"); // 新しいグローバルシンボルを作成
+Symbol.for("foo"); // 既存のシンボルを受け取る
 
-// Same global symbol, but not locally
+// 同じグローバルシンボルだが、ローカルのもの
 Symbol.for("bar") === Symbol.for("bar"); // true
 Symbol("bar") === Symbol("bar"); // false
 
-// The key is also used as the description
-var sym = Symbol.for("mario");
+// キーは説明としても使用される
+const sym = Symbol.for("mario");
 sym.toString(); // "Symbol(mario)"
 ```
 
-グローバルシンボルキーや他の (ライブラリコードの) グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。
+グローバルシンボルキーや他の（ライブラリーコードの）グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。
 
 ```js
 Symbol.for("mdn.foo");

@@ -1,15 +1,16 @@
 ---
-title: PointerEvent.tiltX
+title: "PointerEvent: tiltX プロパティ"
+short-title: tiltX
 slug: Web/API/PointerEvent/tiltX
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
 
 **`tiltX`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、ポインターの *Y-Z 平面*と画面との間の角度（度単位）です。 このプロパティは通常、ペン/スタイラス型のポインターにのみ役立ちます。
 
-このプロパティの説明については、[仕様の図 2](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx) を参照してください。
+このプロパティの説明については、[仕様書の図 2](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx) を参照してください。
 
 ## 値
 

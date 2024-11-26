@@ -52,7 +52,8 @@ slug: Learn/Accessibility/HTML
 
 让我们来继续学习 HTML 语义化实现细则。
 
-> **备注：** 在本地计算机上设置屏幕阅读器是一个不错的主意，因此你可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
+> [!NOTE]
+> 在本地计算机上设置屏幕阅读器是一个不错的主意，因此你可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
 
 ## 良好的语义
 
@@ -247,7 +248,8 @@ the last one.
 
 创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹你的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)，了解屏幕阅读器的支持是什么样的原理）。
 
-> **备注：** 除了你的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 你可以随时将它放在你想要使用 CSS 的位置，但是你应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
+> [!NOTE]
+> 除了你的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 你可以随时将它放在你想要使用 CSS 的位置，但是你应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
 ### UI 控制
 
@@ -259,7 +261,8 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如 {{htmlelement("select")}} 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
 
-> **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#使用键盘)获取更多详细信息。
+> [!NOTE]
+> 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#使用键盘)获取更多详细信息。
 
 实际上，你只需使用适当的元素即可免费获得此功能，例如，
 
@@ -348,7 +351,8 @@ document.onkeydown = function (e) {
 
 我们使用`document.activeElement.onclick（）`运行存储在按钮的 onclick 处理函数中的函数。 `activeElement` 为我们提供了当前关注页面的元素。
 
-> **备注：** 你应该记住，只有通过事件处理程序属性（例如 onclick）设置原始事件处理程序，此技巧才会起作用。 `addEventListener` 将不起作用。
+> [!NOTE]
+> 你应该记住，只有通过事件处理程序属性（例如 onclick）设置原始事件处理程序，此技巧才会起作用。 `addEventListener` 将不起作用。
 
 这对于重新构建功能而言是一个额外的麻烦。而且这肯定会带来其他问题。使用正确的元素处理正确的工作是非常重要的。
 
@@ -378,7 +382,8 @@ document.onkeydown = function (e) {
 </p>
 ```
 
-> **备注：** 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
+> [!NOTE]
+> 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
 
 表单标签也很重要，可以让你了解你需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
@@ -403,7 +408,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 作为额外的好处，在大多数将标签与表单输入相关联的浏览器中，你可以单击标签来 选择/激活 表单元素。这给输入一个更大的可选中区域，使其更容易选择。
 
-> **备注：** 你可以在 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中看到一些好的和不好的表单示例。
+> [!NOTE]
+> 你可以在 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中看到一些好的和不好的表单示例。
 
 ## 无障碍数据表格
 
@@ -441,7 +447,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 - 表头使用 `{{htmlelement("th")}}` 元素定义 - 你还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
 
-> **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
+> [!NOTE]
+> 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
 
 ## 替代文本
 
@@ -471,7 +478,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 第一张图片，当用屏幕阅读器查看时，并不真正为用户提供很多帮助 - 例如 VoiceOver 会读出“/dinosaur.png，image” 。它读出文件名以尝试提供一些帮助。在这个例子中，用户至少知道它是某种恐龙，但通常文件可以用机器生成的文件名（例如来自数码相机）上传，这些文件名可能不会提供图像内容的信息。
 
-> **备注：** 这就是为什么你不应该在图像中包含文本内容 - 屏幕阅读器根本无法访问它。还有其他的缺点 - 你不能选择它并复制/粘贴它。不要这样做！
+> [!NOTE]
+> 这就是为什么你不应该在图像中包含文本内容 - 屏幕阅读器根本无法访问它。还有其他的缺点 - 你不能选择它并复制/粘贴它。不要这样做！
 
 当屏幕阅读器遇到第二张图像时，它会读出完整的 `alt` 属性 - “红色霸王龙雷克斯：一只像人一样直立的双腿恐龙，手臂小，头部大而锋利。”
 
@@ -479,7 +487,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 需要考虑的一件事是，你的图片是否在你的内容中有意义，或者它们纯粹是为了视觉装饰，所以没有意义。如果它们是装饰性的，最好将它们包含在页面中作为 CSS 背景图像。
 
-> **备注：** 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
+> [!NOTE]
+> 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
 如果你确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
@@ -495,7 +504,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 在这种情况下，我们不使用“alt”属性——相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的——这是使用“`alt`”不可能实现的。
 
-> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
+> [!NOTE]
+> “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 
 ### 其他文字替代机制
 
@@ -534,7 +544,8 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 
 使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，你应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
 
-> **备注：** 如果可能的话，你应该使用 CSS 来显示只有装饰的图像。
+> [!NOTE]
+> 如果可能的话，你应该使用 CSS 来显示只有装饰的图像。
 
 ## 总结
 

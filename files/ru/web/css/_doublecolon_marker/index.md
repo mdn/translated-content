@@ -25,7 +25,8 @@ slug: Web/CSS/::marker
 - Свойство {{CSSxRef("content")}}
 - Все [animation](/ru/docs/Web/CSS/CSS_Animations#CSS_Properties) и [transition](/ru/docs/Web/CSS/CSS_Transitions#Properties) свойства
 
-> **Примечание:** The specification states that additional CSS properties may be supported in future.
+> [!NOTE]
+> The specification states that additional CSS properties may be supported in future.
 
 ## Syntax
 

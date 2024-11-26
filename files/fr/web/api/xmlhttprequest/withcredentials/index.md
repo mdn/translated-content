@@ -11,9 +11,11 @@ Cette propriété est également utilisée afin d'indiquer lorsque les cookies d
 
 Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de respecter la règle de même origine et ne peuvent donc pas être manipulés en script via [`document.cookie`](/fr/docs/Web/API/Document/cookie) ou depuis les en-têtes de la réponse.
 
-> **Note :** Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.
+> [!NOTE]
+> Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.
 
-> **Note :** Les réponses `XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir `withCredentials` à `true` avant l'envoi de la requête (quelle que soit la valeur de l'en-tête `Access-Control-`).
+> [!NOTE]
+> Les réponses `XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir `withCredentials` à `true` avant l'envoi de la requête (quelle que soit la valeur de l'en-tête `Access-Control-`).
 
 ## Exemples
 

@@ -19,7 +19,8 @@ La différence avec les boîtes de dialogues classiques réside dans le fait que
 
 Du fait de sa nature urgente, les boîtes de dialogues d'alertes doivent toujours être modales.
 
-> **Note :** ce rôle ne devrait être utilisé que pour des messages d'alertes associés à des contrôles interactifs. Si une boîte de dialogue d'alerte ne comporte que du contenu statique et qu'elle ne possède absolument aucun contrôle interactif, `alertdialog` n'est probablement pas le rôle le plus judicieux à utiliser. Le rôle `alert` est plus adapté pour ce cas (comme décrit dans l'article sur la technique d'[utilisation du rôle `alert`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)).
+> [!NOTE]
+> Ce rôle ne devrait être utilisé que pour des messages d'alertes associés à des contrôles interactifs. Si une boîte de dialogue d'alerte ne comporte que du contenu statique et qu'elle ne possède absolument aucun contrôle interactif, `alertdialog` n'est probablement pas le rôle le plus judicieux à utiliser. Le rôle `alert` est plus adapté pour ce cas (comme décrit dans l'article sur la technique d'[utilisation du rôle `alert`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)).
 
 ### Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
@@ -32,7 +33,8 @@ Lorsque la boîte de dialogue de l'alerte apparaît, les lecteurs d'écran devra
 
 Lorsque la boîte de dialogue est correctement labélisée et que le focus se place sur un contrôle qu'elle contient, les lecteurs d'écran devraient annoncer le rôle accessible de la boîte de dialogue, son nom et éventuellement sa description, avant d'annoncer l'élément qui a reçu le focus.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

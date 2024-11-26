@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[Client-side form validation](/ja/docs/Learn/Forms/Form_validation)の記事を理解したかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -23,7 +24,7 @@ l10n:
 
 フォームを送信してみてください。上記の制約が続くまで送信されず、適切なエラーメッセージが表示されるはずです。フォームフィールドが有効か不正かを表示させる単純な CSS を追加することを検討してください。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -35,11 +36,12 @@ l10n:
 2. ユーザーのメールアドレスはすべて、1 文字以上の英字（小文字または大文字）または数字の後に "@bigcorp.eu" が続きます。
 3. 電話番号フィールドに長さの検証が存在する場合は、それを除去し、10 桁を受け入れられるように設定します。10 桁を連続して入力するか、3 桁、3 桁、4 桁のパターンをスペース、ダッシュ、ドットのいずれかで区切って入力してください。
 
-> **メモ:** 正規表現は実に難しいものですが、絶望しないでください。助けを求めることは恥ずかしいことではありません。[正規表現リファレンス](/ja/docs/Web/JavaScript/Guide/Regular_expressions)や、[Stack Overflow](https://stackoverflow.com/) で検索すれば、これらの質問に答えるのに必要なものはすべて見つかります。
+> [!NOTE]
+> 正規表現は実に難しいものですが、絶望しないでください。助けを求めることは恥ずかしいことではありません。[正規表現リファレンス](/ja/docs/Web/JavaScript/Guide/Regular_expressions)や、[Stack Overflow](https://stackoverflow.com/) で検索すれば、これらの質問に答えるのに必要なものはすべて見つかります。
 
 この場合も、フォームフィールドが有効か無効かを表示させる単純な CSS を追加することを検討するとよいでしょう。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -50,6 +52,6 @@ l10n:
 1. 入力必須とし、最小 10 文字とします。
 2. 入力された値がメールアドレスであるかどうか、十分な長さであるかどうかを調べるイベントリスナーを追加してください。メールアドレスに見えないか、短すぎる場合は、適切なカスタムエラーメッセージをユーザーに提供してください。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

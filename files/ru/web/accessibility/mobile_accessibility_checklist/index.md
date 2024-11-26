@@ -63,4 +63,4 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - Обработчики сенсорных событий **ДОЛЖНЫ** запускаться только при соответствующих событиях.
 - Области нажатия **ДОЛЖНЫ** быть достаточно большими, чтобы пользователь мог взаимодействовать с ними (см. статью [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) с полезными рекомендациями по размеру области нажатия для сенсорного объекта).
 
-> **Примечание:** The [original version of this document](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) was written by [Yura Zenevich](http://yzen.github.io/).
+> [!NOTE] > [Исходную версию этого документа](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) написал [Юра Зеневич](http://yzen.github.io/).

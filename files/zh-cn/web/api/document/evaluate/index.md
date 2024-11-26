@@ -9,14 +9,8 @@ slug: Web/API/Document/evaluate
 
 ## 语法
 
-```
-var xpathResult = document.evaluate(
-  xpathExpression,
-  contextNode,
-  namespaceResolver,
-  resultType,
-  result
-);
+```js-nolint
+evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
 - `xpathExpression` 表示要计算的 Xpath 字符串。

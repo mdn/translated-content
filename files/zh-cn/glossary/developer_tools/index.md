@@ -16,6 +16,6 @@ l10n:
 - 维基百科上的 [Web 开发者工具](https://zh.wikipedia.org/wiki/Web开发工具)
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Firebug](https://getfirebug.com/)（Firefox 开发者工具的前身）
-- chrome.com 上的 [Chrome 开发者工具](https://developer.chrome.com/devtools)
+- chrome.com 上的 [Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools)
 - apple.com.cn 上的 [Safari 开发者工具](https://support.apple.com/zh-cn/guide/safari-developer/dev073038698/mac)
 - microsoft.com 上的 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)

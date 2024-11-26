@@ -2,7 +2,7 @@
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 2cba64f68aab9e233fecfc2bab8bea4118716c14
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -41,7 +41,8 @@ OPFS 提供了页面所属源私有的、对用户不可见的、底层的逐字
 
 在主线程中访问 OPFS 时，你要使用基于 {{jsxref("Promise")}} 的异步 API。你可以调用代表 OPFS 根目录（以及其中被创建的子目录）的 {{domxref("FileSystemDirectoryHandle")}} 对象上的 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 和 {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} 方法来分别访问文件（{{domxref("FileSystemFileHandle")}}）和目录（{{domxref("FileSystemDirectoryHandle")}}）。
 
-> **备注：** 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
+> [!NOTE]
+> 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
 
 ```js
 // 创建层级结构的文件和文件夹
@@ -101,7 +102,7 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### 列出文件夹中的内容
 
-{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await…of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
+{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
 
 例如：
 
@@ -122,7 +123,8 @@ Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用
 
 你可以通过在常规的 {{domxref("FileSystemFileHandle")}} 上调用 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} 来同步地处理文件：
 
-> **备注：** 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
+> [!NOTE]
+> 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -177,7 +179,7 @@ size = accessHandle.getSize();
 const dataView = new DataView(new ArrayBuffer(size));
 
 // 将整个文件读取到数据视图。
-accessHandle.read(dataView);
+accessHandle.read(dataView, { at: 0 });
 // 打印 `"Some textMore content"`。
 console.log(textDecoder.decode(dataView));
 

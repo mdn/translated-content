@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/strike
 
 {{jsxref("String")}} 值的 **`strike()`** 方法创建一个 {{HTMLElement("strike")}} 元素字符串，其中嵌入了调用的字符串（`<strike>str</strike>`），从而使该字符串以删除线的形式显示。
 
-> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
+> [!NOTE]
+> 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
 ## 语法
 

@@ -27,7 +27,8 @@ let re = new RegExp("ab+c");
 
 Usando o construtor, a compilação da expressão regular é realizada em tempo de execução. Use o construtor quando souber que o padrão da expressão regular irá mudar ou quando o padrão for desconhecido, oriundo de outra fonte, uma entrada de usuário por exemplo.
 
-> **Nota:** Nota: Se você já está familiarizado com as formas de uma expressão regular, também pode ler o [resumo](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para uma rápida pesquisa de um padrão específico.
+> [!NOTE]
+> Se você já está familiarizado com as formas de uma expressão regular, também pode ler o [resumo](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para uma rápida pesquisa de um padrão específico.
 
 ## Escrevendo um padrão de expressão regular
 

@@ -1233,7 +1233,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
           If you wish to identify which specific dead key was pressed (in cases
           where more than one exists), you can do so by examining the
           {{domxref("KeyboardEvent")}}'s associated
-          {{event("compositionupdate")}} event's
+          [`compositionupdate`](/ru/docs/Web/Events/compositionupdate) event's
           {{domxref("CompositionEvent.data", "data")}} property.
         </p>
       </td>
@@ -1651,7 +1651,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/ru/docs/Web/Events/compositionupdate) event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 
@@ -2824,7 +2824,8 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 - [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **Примечание:** Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.
+> [!NOTE]
+> Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.
 
 <table class="standard-table">
   <thead>
@@ -4334,7 +4335,8 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 
 Эти клавиши находятся на цифровой панели клавиатуры. Однако не все они присутствуют на каждой клавиатуре. Хотя типичные цифровые панели имеют цифровые клавиши от <kbd>0</kbd> до <kbd>9</kbd> (кодируются как `"0"` - `"9"`), некоторые мультимедийные клавиатуры включают дополнительные цифровые клавиши для более высоких чисел.
 
-> **Примечание:** Клавиша <kbd>10</kbd>, если она присутствует, генерирует события со значением ключа `"0"`.
+> [!NOTE]
+> Клавиша <kbd>10</kbd>, если она присутствует, генерирует события со значением ключа `"0"`.
 
 <table class="standard-table">
   <thead>

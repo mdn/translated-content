@@ -76,11 +76,13 @@ Esta no es la única manera, pero sí la que te permite poner manos a la obra in
 7. Da clic en _Create repository_ (Crear repositorio).
 8. Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
 
-   > **Nota:** cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
+   > [!NOTE]
+   > Cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
 
 9. En tu navegador desplázate a <kbd>username.github.io</kbd> para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario Bob Smith, escribe <kbd>bobsmith.github.io</kbd>.
 
-   > **Nota:** puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
+   > [!NOTE]
+   > Puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
 
 ### Subir tus archivos a GitHub a través de la línea de comandos
 
@@ -96,7 +98,8 @@ En este punto ya estarás listo para poder utilizar la línea de comandos para s
 
 ![](command-line.png)
 
-> **Nota:** si no te sientes cómodo utilizando la línea de comandos, podrías considerar usar [Git graphical user interface](http://git-scm.com/downloads/guis) para realizar la misma tarea.
+> [!NOTE]
+> Si no te sientes cómodo utilizando la línea de comandos, podrías considerar usar [Git graphical user interface](http://git-scm.com/downloads/guis) para realizar la misma tarea.
 
 Todos los sistemas operativos vienen con una herramienta de línea de comandos:
 
@@ -145,7 +148,8 @@ Aunque este procedimiento pueda parecer un poco aterrador al principio no te pre
 
 6. Ahora cuando vayas a la direccion de red de tu página GitHub (_usuario.github.io_) en una nueva pestaña del navegador ¡deberías ver tu sitio en línea! Envíala por correo-e a tus amigos y presume de tu maestría.
 
-> **Nota:** has tocado apenas la superficie de Git. Si te quedas atascado la [ayuda de GitHub en español](https://help.github.com/es/github/working-with-github-pages/getting-started-with-github-pages) te será de gran apoyo.
+> [!NOTE]
+> Has tocado apenas la superficie de Git. Si te quedas atascado la [ayuda de GitHub en español](https://help.github.com/es/github/working-with-github-pages/getting-started-with-github-pages) te será de gran apoyo.
 
 ### Conocer más de GitHub
 

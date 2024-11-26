@@ -129,7 +129,8 @@ Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans
 }
 ```
 
-> **Note :** Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> [!NOTE]
+> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### Grilles CSS
 
@@ -144,7 +145,8 @@ Pour en savoir plus sur cette approche utilisant les grilles, voir [les grilles 
 }
 ```
 
-> **Note :** La version de notre exemple avec les grilles CSS est encore plus simple, car on définit les colonnes sur le conteneur `.wrapper`. Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
+> [!NOTE]
+> La version de notre exemple avec les grilles CSS est encore plus simple, car on définit les colonnes sur le conteneur `.wrapper`. Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
 
 ## Images/média <i lang="en">responsive</i>
 
@@ -206,7 +208,8 @@ Sur ordinateur, on voit un titre plus grand&nbsp;:
 
 ![Une disposition sur deux colonnes avec un grand titre.](mdn-rwd-font-desktop.png)
 
-> **Note :** Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html).
+> [!NOTE]
+> Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html).
 
 Comme on peut le voir ici, les requêtes média ne se limitent pas au changement de la disposition, on peut les utiliser afin d'adapter tout élément qui concourt à l'attractivité de la page sur les différents écrans.
 
@@ -232,7 +235,8 @@ h1 {
 
 Avec cette approche, on peut définir à un seul endroit la taille de la police du titre plutôt que de la définir d'une part pour les mobiles et d'autre part dans d'autres requêtes média. Définie ainsi, la taille de la police augmente graduellement avec la taille de la zone d'affichage.
 
-> **Note :** Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
+> [!NOTE]
+> Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
 
 ## La balise méta `viewport`
 

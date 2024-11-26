@@ -305,7 +305,8 @@ switch (式) {
 6. `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
 7. 上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` 文が必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
 
-> **メモ:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
+> [!NOTE]
+> 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
 
 ### switch の例
 
@@ -415,7 +416,8 @@ select.addEventListener("change", () =>
 
 さらに、三項演算子を含む [onchange](/ja/docs/Web/API/HTMLElement/change_event) イベントリスナーがあります。`select.value === 'black'` という条件式で始まっています。この式が `true` であるならば、`update()` 関数を引数に `'black'`、`'white'` を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が `false` であるならば、`update()` 関数を引数に `'white'`、`'black'` を指定して実行します (つまり、背景色を逆にします)。
 
-> **メモ:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html)。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)でも確認できます。）
+> [!NOTE]
+> この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html)。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)でも確認できます。）
 
 ## アクティブラーニング: 単純なカレンダー
 

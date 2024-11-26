@@ -136,7 +136,8 @@ customElements.define("popup-info", PopUpInfo);
                                     numbers on the back of your card."></popup-info>
 ```
 
-> **メモ:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
+> [!NOTE]
+> 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
 
 ### カスタム組み込み要素
 

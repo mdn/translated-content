@@ -7,7 +7,8 @@ slug: Web/API/ServiceWorkerRegistration/unregister
 
 {{domxref("ServiceWorkerRegistration")}} 接口的 **`unregister`** 方法用于取消对 service worker 的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 `false`，否则，不论取消成功与否都返回 `true` （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。
 
-> **备注：** 这一特性同样适用于 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)。
+> [!NOTE]
+> 这一特性同样适用于 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ## 语法
 

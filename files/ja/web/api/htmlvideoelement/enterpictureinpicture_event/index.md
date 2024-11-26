@@ -3,10 +3,10 @@ title: "HTMLVideoElement: enterpictureinpicture イベント"
 short-title: enterpictureinpicture
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("HTMLVideoElement")}}
+{{APIRef("Picture-in-Picture API")}}
 
 `enterpictureinpicture` イベントは、{{DOMxRef("HTMLVideoElement")}} がピクチャインピクチャモードに入ることに成功した場合に発行されます。
 
@@ -81,4 +81,4 @@ button.onclick = () => {
 ## 関連情報
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API", "Picture-in-Picture API")}}
+- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API)

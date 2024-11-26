@@ -9,7 +9,8 @@ slug: Web/API/CanvasRenderingContext2D/miterLimit
 
 Длина среза это расстояние между внутренним и внешнем углом, образованным пересечением двух линий.
 
-> **Примечание:** For more info about miters, see [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> For more info about miters, see [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
 ## Синтаксис
 

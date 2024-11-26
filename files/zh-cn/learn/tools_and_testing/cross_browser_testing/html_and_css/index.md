@@ -51,7 +51,8 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
-> **备注：** CSS 与 HTML 之间的一个常见挑战是 CSS 规则之间的冲突。当引入第三方代码时，这些问题可能变得很棘手。比如，你可能在使用某个 CSS 框架时，发现它的某个类名与你已经在其他地方使用的类名产生了冲突。或者，你可能会注意到，某些第三方 API（如用于生成广告横幅的脚本）生成的 HTML 中包含了与你在其他地方使用的类名或 ID 相同的名称。为了避免这种情况，你需要先研究你所使用的工具，并在设计代码时考虑如何与它们协作或避开它们。给 CSS 添加“命名空间”也是一个不错的做法，例如，如果你有一个小组件，确保它有一个唯一的类名，并使用这个类名来选择组件内的元素，这样可以减少冲突的可能性。例如，使用 `.audio-player ul a`。
+> [!NOTE]
+> CSS 与 HTML 之间的一个常见挑战是 CSS 规则之间的冲突。当引入第三方代码时，这些问题可能变得很棘手。比如，你可能在使用某个 CSS 框架时，发现它的某个类名与你已经在其他地方使用的类名产生了冲突。或者，你可能会注意到，某些第三方 API（如用于生成广告横幅的脚本）生成的 HTML 中包含了与你在其他地方使用的类名或 ID 相同的名称。为了避免这种情况，你需要先研究你所使用的工具，并在设计代码时考虑如何与它们协作或避开它们。给 CSS 添加“命名空间”也是一个不错的做法，例如，如果你有一个小组件，确保它有一个唯一的类名，并使用这个类名来选择组件内的元素，这样可以减少冲突的可能性。例如，使用 `.audio-player ul a`。
 
 ### 验证
 
@@ -81,7 +82,8 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 大多数浏览器中内置的开发者工具也提供了有用的工具来查找错误，主要是针对 CSS 的。
 
-> **备注：** 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的[验证](#验证)。
+> [!NOTE]
+> 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的[验证](#验证)。
 
 例如，在 Firefox 中，CSS 检查器将显示未应用的 CSS 声明，并带有警告三角形。悬停在警告三角上，其将提供描述性的错误信息：
 
@@ -147,7 +149,8 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果你查看示例，当你尝试输入数据时，UI 特性会发挥作用。在具有动态键盘的设备上，将显示特定于类型的输入面板（keypad）。在不支持新特性的浏览器上，输入框将默认为普通文本输入框，使得用户仍然可以输入正确的信息。
 
@@ -159,7 +162,8 @@ CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不�
 
 ![具有圆角、内阴影和投影效果的红色按钮](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -191,7 +195,8 @@ button:active {
 
 为了解决这个问题，我们添加了第二个 `background-color` 声明，指定了一个十六进制颜色——这在非常老旧的浏览器中也得到支持，可以作为现代炫酷特性的后备方案。浏览器在访问此页面时，首先会应用第一个 `background-color` 值；当遇到第二个 `background-color` 声明时，如果浏览器支持 RGB 颜色，就会用这个值覆盖之前的值。如果不支持，它就会忽略整个声明，继续执行后续样式。
 
-> **备注：** 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
+> [!NOTE]
+> 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
 
 ### 选择器支持
 

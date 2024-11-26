@@ -42,7 +42,7 @@ jobs:
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
-          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
           # filter out files that are not markdown files
@@ -112,23 +112,23 @@ jobs:
 
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          mkdir -p ${{ env.BUILD_OUT_ROOT }}
+          mkdir -p ${BUILD_OUT_ROOT}
 
           # Don't use `yarn build` (from mdn/content) because that one hardcodes
           # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
-          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
+          node node_modules/@mdn/yari/build/cli.js ${GIT_DIFF_CONTENT}
 
           echo "Disk usage size of build"
-          du -sh ${{ env.BUILD_OUT_ROOT }}
+          du -sh ${BUILD_OUT_ROOT}
 
           # Save the PR number into the build
-          echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
+          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
 
           # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
           # Set the output variable so the next job could skip if there are no assets
           echo "has_assets=true" >> "$GITHUB_OUTPUT"
@@ -137,9 +137,9 @@ jobs:
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ ${{ env.BUILD_OUT_ROOT }}
+          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ ${BUILD_OUT_ROOT}
           # Show the final disk usage size of the build.
-          du -sh ${{ env.BUILD_OUT_ROOT }}
+          du -sh ${BUILD_OUT_ROOT}
 
       - uses: actions/upload-artifact@v4
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -154,9 +154,9 @@ jobs:
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          echo ${{ env.GIT_DIFF_FILES }}
+          echo ${GIT_DIFF_FILES}
 
-          yarn filecheck ${{ env.GIT_DIFF_FILES }}
+          yarn filecheck ${GIT_DIFF_FILES}
 
   review:
     needs: tests

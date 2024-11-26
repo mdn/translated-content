@@ -7,7 +7,8 @@ slug: Learn/JavaScript/Objects
 
 JavaScript에서는 배열과같은 기능부터 JavaScript 위에 구축된 브라우저 {{Glossary("API", "APIs")}}에 이르기까지 대부분의 것들이 객체입니다. 사용자는 관련된 함수들과 변수들을 효율적인 패키지로 추상화하거나 편리한 데이터 컨테이너로 작동하는 객체를 만들 수 있습니다. 언어에 대한 지식을 가지고 더 멀리 나아고자 한다면 JavaScript의 객체 기반의 본질을 이해하는 것이 중요하므로, 여러분을 돕기위해 이 모듈을 제공하였습니다. 여기에서는 객체 이론과 구문을 자세히 가르쳐드리며, 사용자 정의 객체를 만드는 방법도 알아볼 것입니다.
 
-> **알림:** #### 프론트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [!CALLOUT]
+> 프론트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 사전 지식
 
@@ -15,7 +16,8 @@ JavaScript에서는 배열과같은 기능부터 JavaScript 위에 구축된 브
 
 JavaScript 객체에 대해 자세히 알아보려면, 기본 문법에 대해 어느 정도 능숙해야 합니다. 이 장을 읽기 전에 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과 [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)를 먼저 읽어보시기를 바랍니다.
 
-> **참고:** 컴퓨터/태블릿/혹은 다른 디바이스 상에서 스스로 파일을 만들수 없는 환경이라면, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 과 같은 온라인 코딩 프로그램을 이용하여 (거의 모든) 예제 코드를 테스트해 보실 수 있습니다.
+> [!NOTE]
+> 컴퓨터/태블릿/혹은 다른 디바이스 상에서 스스로 파일을 만들수 없는 환경이라면, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 과 같은 온라인 코딩 프로그램을 이용하여 (거의 모든) 예제 코드를 테스트해 보실 수 있습니다.
 
 ## 가이드
 

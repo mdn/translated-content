@@ -13,7 +13,8 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ## Localizaciones activas
 
-> **Nota:** Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> [!NOTE]
+> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Portugués brasileño (pt-BR)
 
@@ -47,10 +48,11 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Español (es)
 
-- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](/discord)
+- Discusiones: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson).
 
-> **Nota:** Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
+> [!NOTE]
+> Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
 
 ## Véase también
 

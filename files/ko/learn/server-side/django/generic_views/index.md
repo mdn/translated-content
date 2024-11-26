@@ -72,7 +72,8 @@ class BookListView(generic.ListView):
 
 이게 전부입니다! Generic view는 명시된 모델(Book)의 모든 레코드를 가져오기 위해 데이터베이스를 쿼리할 것이고, **/locallibrary/catalog/templates/catalog/book_list.html**(아래에서 만들 예정)경로에 있는 템플릿을 렌더링합니다. 템플릿 안에서 우리는 `object_list`나 `book_list`라는 템플릿 변수를 사용해 도서 목록에 접근할 수 있습니다. (일반적으로 "`the_model_name_list`").
 
-> **참고:** 이 어색한 템플릿 경로는 오타가 아닙니다. Generic views는 `/application_name/the_model_name_list.html`(지금 상황에서는 `catalog/book_list.html`)에서 템플릿을 찾습니다. 이 경로는 애플리캐이션의 `/application_name/templates/` 디렉토리 안에 있습니다(`/catalog/templates/)`.
+> [!NOTE]
+> 이 어색한 템플릿 경로는 오타가 아닙니다. Generic views는 `/application_name/the_model_name_list.html`(지금 상황에서는 `catalog/book_list.html`)에서 템플릿을 찾습니다. 이 경로는 애플리캐이션의 `/application_name/templates/` 디렉토리 안에 있습니다(`/catalog/templates/)`.
 
 속성이나 디폴트 동작을 추가할 수도 있습니다. 예를 들어, 같은 모델을 사용하지만 여러 개의 뷰를 사용해야 되는 경우 다른 템플릿 파일을 명시할 수 있습니다. 혹은 `book_list` 템플릿 변수명이 직관적이지 않다고 생각해 다른 템플릿 변수명을 사용하고 싶을지도 모릅니다. 아마 가장 유용한 바리에이션은 리턴 값의 결과를 바꾸거나 필터링하는 것입니다. 따라서 모든 책을 나열하는 대신, 유저가 읽은 순으로 5개의 책을 나열할 수도 있습니다.
 
@@ -185,7 +186,8 @@ class BookListView(generic.ListView):
 
 우리는 템플릿 안에 모델에서 정의한 함수를 불러올 수도 있습니다. 이 경우, 우리는 `Book.get_absolute_url()` 함수를 호출해 연관된 세부 레코드를 표시하는 URL을 가져옵니다. 이 작업은 함수가 아무 인자를 가지지 않을 때 제공됩니다 (여기에는 인자를 넘길 방법이 없습니다!).
 
-> **참고:** 우리는 템플릿 내에서 함수를 호출할 때 발생하는 부작용을 조금 조심해야 합니다. 여기서 우리는 그저 표시하기 위해 URL을 얻었지만, 함수는 그보다 더한 작업도 할 수 있습니다 — (예를 들면) 우리는 그냥 템플릿을 렌더링한다고 해서 우리의 데이터베이스를 삭제하고 싶지 않을 것입니다.
+> [!NOTE]
+> 우리는 템플릿 내에서 함수를 호출할 때 발생하는 부작용을 조금 조심해야 합니다. 여기서 우리는 그저 표시하기 위해 URL을 얻었지만, 함수는 그보다 더한 작업도 할 수 있습니다 — (예를 들면) 우리는 그냥 템플릿을 렌더링한다고 해서 우리의 데이터베이스를 삭제하고 싶지 않을 것입니다.
 
 #### 베이스 템플릿 업데이트
 
@@ -223,13 +225,15 @@ _book-detail URL 패턴은 우리가 원하는 책의 id를 캡처하기 위해 
 
 (번역 봉사자 주: uuid를 읽지 못한다면\[NoReverseMatch] \<int:pk>로 해보십시오.)
 
-> **참고:** 앞에서 언급했듯이, 관련된 URL 은 실제로는 `catalog/book/<digits>` 입니다.(우리가 **catalog** application 에 있기때문에, `/catalog/` 를 가정합니다).
+> [!NOTE]
+> 앞에서 언급했듯이, 관련된 URL 은 실제로는 `catalog/book/<digits>` 입니다.(우리가 **catalog** application 에 있기때문에, `/catalog/` 를 가정합니다).
 
 > **경고:** **명심**: 통상 class-based detail view 는 **pk** 라는 이름을 가진 파라미터로 전달됩니다. 만일 자체적으로 function view 를 만든다면 어떤 이름이라도 사용 가능합니다. 혹은 이름이 없는 argument 에 정보를 넣어 전달 할 수도 있습니다.
 
 #### Regular expression 을 이용한 고급 path matching
 
-> **참고:** 튜터리얼과는 관련 없습니다. 하지만 향후 Django 스타일로 개발하기 위해선 매우 유용한 팁입니다.
+> [!NOTE]
+> 튜터리얼과는 관련 없습니다. 하지만 향후 Django 스타일로 개발하기 위해선 매우 유용한 팁입니다.
 
 `path()` 를 이용한 패턴 검색은 간단하고 일반적인 경우 - 예를 들어 단지 특정 문자열이나 숫자가 있는지 - 매우 유용합니다. 만일 좀더 세밀한 조건 - 예를 들어 특정 문자열 길이를 갖는 문자열 검색 - 으로 검색 하고자 한다면 . [re_path()](https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path) 를 사용하길 권고 드립니다.
 
@@ -269,7 +273,8 @@ _Regular expressions_ 은 정말로 파워풀한 매핑 툴 입니다. 하지만
 
 당신은 다양한 패턴들을 한번의 매칭을 통해 변환시킬 수 있습니다. 그러므로 다양한 정보들을 URL안에 인코딩할 수 있습니다.
 
-> **참고:** 추가적으로, 특정 날짜에 출간된 책 목록을 URL에 인코딩할 수 있을지 생각해보세요. 그리고 어떤 Regular Expression이 해당 URL을 매칭할 수 있을까요?
+> [!NOTE]
+> 추가적으로, 특정 날짜에 출간된 책 목록을 URL에 인코딩할 수 있을지 생각해보세요. 그리고 어떤 Regular Expression이 해당 URL을 매칭할 수 있을까요?
 
 #### Passing additional options in your URL maps
 
@@ -280,7 +285,8 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **참고:** 추가된 options 과 변환된 패턴들 중 명명된 것들은 view 에 명명된 arguments로 전달됩니다. 만약 당신이 **동일한 이름을** 변환된 패턴들과 추가적인 option에 사용한다면, 오직 변환된 패턴들만이 view에 보내지게 됩니다. ( 추가된 option들에 있는 값들은 모두 버려집니다).
+> [!NOTE]
+> 추가된 options 과 변환된 패턴들 중 명명된 것들은 view 에 명명된 arguments로 전달됩니다. 만약 당신이 **동일한 이름을** 변환된 패턴들과 추가적인 option에 사용한다면, 오직 변환된 패턴들만이 view에 보내지게 됩니다. ( 추가된 option들에 있는 값들은 모두 버려집니다).
 
 ### 뷰 (클래스 기반)
 
@@ -355,7 +361,8 @@ def book_detail_view(request, primary_key):
 {% endblock %}
 ```
 
-> **참고:** 이 템플릿의 작가 링크는 비어있는 URL입니다. 왜냐면 우리는 아직 작가 상세 페이지를 만들지 않았기 때문이죠. 만약 페이지가 존재한다면, URL을 아래와 같이 업데이트 해야합니다.
+> [!NOTE]
+> 이 템플릿의 작가 링크는 비어있는 URL입니다. 왜냐면 우리는 아직 작가 상세 페이지를 만들지 않았기 때문이죠. 만약 페이지가 존재한다면, URL을 아래와 같이 업데이트 해야합니다.
 >
 > ```
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -378,7 +385,8 @@ def book_detail_view(request, primary_key):
 
 이 메소드는 관계의 한쪽("one")에만 `ForeignKey`(one-to many) 필드를 선언했기 때문에 필요합니다. 다른("many") 모델에서 아무것도 선언하지 않았기 때문에 관련 레코드 집합을 가져올 필드가 없습니다. 이 문제를 해결하기 위해, Django는 지금 우리가 사용하고 있는 "reverse lookup"이라는 적당한 이름의 함수를 만들었습니다. 이 함수의 이름은 `ForeignKey`가 선언되어있는 모델 이름을 소문자로 만들고, 그 뒤에 `_set`을 붙이면 됩니다. (따라서 `Book`에서 만든 함수는 `bookinstance_set()`가 되겠죠.)
 
-> **참고:** 여기서 우리는 모든 레코드를 가져오기 위해 `all()` 을 사용했습니다(기본값이죠). 반대로 당신은 `filter()` 메서드를 사용해서 레코드의 부분 집합을 가져올 수 있지만, 당신은 template에서 이걸 직접할 수는 없어요. 왜냐하면 함수의 arguments를 정할 수 없으니까요.
+> [!NOTE]
+> 여기서 우리는 모든 레코드를 가져오기 위해 `all()` 을 사용했습니다(기본값이죠). 반대로 당신은 `filter()` 메서드를 사용해서 레코드의 부분 집합을 가져올 수 있지만, 당신은 template에서 이걸 직접할 수는 없어요. 왜냐하면 함수의 arguments를 정할 수 없으니까요.
 >
 > 만약 순서를 정의하지 않는다면 (클래스 기반 view 또는 model에서), 당신은 개발 서버로 부터 다음과 같은 에러를 받게 될 거라는 것 또한 알아두세요.
 >
@@ -502,7 +510,7 @@ next/previous 링크와 함께 보이는 밑에 pagination 링크는 당신이 �
 
 URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서 만들었던 `Book` 목록과 세부 사항 view들과 동일해야 합니다. template들은 다르겠지만, 비슷한 동작을 가지고 있을 겁니다.
 
-> **참고:**
+> [!NOTE]
 >
 > - 작가 목록 페이지를 위한 URL mapper를 만들고나면, **All authors** base template에 있는 **All authors** 링크 또한 업데이트 해야될 필요를 느끼게 될 겁니다. 우리가 **All books** 링크 업데이트 때 했던, [수행 과정](#Update_the_base_template)을 따라해주세요.
 > - 작가 세부 사항 페이지에 대한 URL mapper를 만들고나면, 당신은 [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) 또한 업데이트 해야 합니다. 그래야 작가 링크가 당신이 새로 만든 작가 세부 사항 페이지를 가리키거든요. (비어 있는 URL로 있기 보다는 말이죠). 굵게 되어 있는 부분을 template 내의 태그에 넣어주세요.

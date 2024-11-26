@@ -278,7 +278,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
   - : Una pista para el usuario sobre lo que puede introducir en el control. El texto no debe contener saltos de línea.
 
-    > **Nota:** No se debe usar el atributo `placeholder` en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo `placeholder` es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo `placeholder` no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.
+    > [!NOTE]
+    > No se debe usar el atributo `placeholder` en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo `placeholder` es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo `placeholder` no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.
 
 - `readonly`
   - : Este atributo indica que el usuario no puede modificar el valor del control. El valor del atributo es irrelevante. De ser necesario el acceso lectura-escritura al valor, _no_ se debe agregar el atributo "**readonly**". Es ignorado si el atributo **type** es `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, o de tipo botón (como `button` o `submit`).
@@ -318,7 +319,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ### Introducción de archivos
 
-> **Nota:** A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
+> [!NOTE]
+> A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
 
 No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:
 

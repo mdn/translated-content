@@ -9,7 +9,8 @@ slug: Web/SVG/Tutorial
 
 Ce tutoriel a pour but d'expliquer les mécanismes internes de SVG et regorge de détails techniques. Si vous souhaitez juste dessiner de belles images, vous trouverez plus facilement votre bonheur sur la [page de documentation d'Inkscape](https://inkscape.org/doc/). Le W3C fournit également une [bonne introduction au format SVG](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html), en anglais.
 
-> **Note :** Le tutoriel en est encore à un stade précoce de développement. Si vous le pouvez, aidez-nous en rédigeant un paragraphe ou deux. Des points supplémentaires pour l'écriture d'une page entière !
+> [!NOTE]
+> Le tutoriel en est encore à un stade précoce de développement. Si vous le pouvez, aidez-nous en rédigeant un paragraphe ou deux. Des points supplémentaires pour l'écriture d'une page entière !
 
 ## Introduction à « SVG from Scratch »
 

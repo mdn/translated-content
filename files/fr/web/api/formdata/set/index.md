@@ -11,7 +11,8 @@ La méthode `set()` de l'interface {{domxref("FormData")}} définit une nouvelle
 
 La différence entre `set()` et {{domxref("FormData.append")}} est que si la clé spécifiée existe déjà, `set()` écrasera toutes les valeurs existantes avec la nouvelle, tandis que {{domxref("FormData.append")}} ajoutera la nouvelle valeur à la fin de l'ensemble de valeurs existant.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -31,7 +32,8 @@ formData.set(name, value, filename);
 - `filename` {{optional_inline}}
   - : Le nom de fichier communiqué au serveur (un {{domxref("USVString")}}), lorsqu'un {{domxref("Blob")}} ou un {{domxref("File")}} est passée comme deuxième paramètre. Le nom de fichier par défaut pour les objets {{domxref("Blob")}} est "blob". Le nom de fichier par défaut pour les objets {{domxref("File")}} est le nom du fichier.
 
-> **Note :** Si vous spécifiez un {{domxref("Blob")}} comme donnée à ajouter à l'objet FormData, le nom du fichier qui sera rapporté au serveur dans l'en-tête "Content-Disposition" utilisé pour varier d'un navigateur à l'autre.
+> [!NOTE]
+> Si vous spécifiez un {{domxref("Blob")}} comme donnée à ajouter à l'objet FormData, le nom du fichier qui sera rapporté au serveur dans l'en-tête "Content-Disposition" utilisé pour varier d'un navigateur à l'autre.
 
 ## Exemple
 

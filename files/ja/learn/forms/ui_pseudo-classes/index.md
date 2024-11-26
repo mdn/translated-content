@@ -2,7 +2,7 @@
 title: UI 擬似クラス
 slug: Learn/Forms/UI_pseudo-classes
 l10n:
-  sourceCommit: 4664d2cc40f16780f1b7538f8dd6aa3ccadde825
+  sourceCommit: b9f3d089aaf999b287db9a917788633755fe5f93
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -58,7 +58,8 @@ l10n:
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
 
-> **メモ:** ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
+> [!NOTE]
+> ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
 
 ## 入力が必須か否かによるスタイル設定
 
@@ -113,9 +114,11 @@ input:optional {
 
 次の節では、 `:required` を使用して必須項目を示すより良い例を見ていきます。これは、生成コンテンツを使用することについても掘り下げます。
 
-> **メモ:** おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
+> [!NOTE]
+> おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
 
-> **メモ:** 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性が設定されている場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
+> [!NOTE]
+> 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性が設定されている場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
 
 ## 擬似クラスでコンテンツを生成する
 
@@ -145,9 +148,11 @@ input[type="radio"]:checked::before {
 }
 ```
 
-これは実に有用です。スクリーンリーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
+これは実に有用です。スクリーンリーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからです。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
 
-先ほどの必須/オプションの例に戻りますが、今回は入力自体の外観は変更しません。生成コンテンツを使用して、指示するラベルを追加します（[こちらでライブで確認](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)するか、[こちらでソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)を確認するかしてください。
+すべての `<input>` 型が生成コンテンツを保有することに対応しているわけではありません。動的テキストを入力する `text`、`password`、`button` などの入力型は、すべて生成コンテンツを表示しません。他にも `range`、`color`、`checkbox` などがあり、これらは生成コンテンツを表示します。
+
+先ほどの必須/オプションの例に戻りますが、今回は入力フィールド自体の外観は変更しません。生成コンテンツを使用して、指示するラベルを追加します（[こちらでライブで確認](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)するか、[こちらでソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)を確認するかしてください。
 
 まず最初に、フォームの一番上に、何を求めているのか、という段落を追加します。
 
@@ -157,7 +162,7 @@ input[type="radio"]:checked::before {
 
 スクリーンリーダーには、 "required" が追加情報として読み上げられ、目の見えるユーザーには、このラベルが表示されます。
 
-フォーム入力は生成コンテンツを直接保持しないので（生成コンテンツは要素のフォーマットボックスに相対的に配置されますが、フォーム入力は置換された要素のように動作するので、フォーマットボックスを持たないからです）、空の [`<span>`](/ja/docs/Web/HTML/Element/span) を追加して生成コンテンツをそこに置くことにしましょう。
+前に述べたように、テキスト入力フィールドは生成コンテンツに対応していないので、生成コンテンツをぶら下げるために空の [`<span>`](/ja/docs/Web/HTML/Element/span) を追加します。
 
 ```html
 <div>
@@ -167,7 +172,7 @@ input[type="radio"]:checked::before {
 </div>
 ```
 
-この場合、入力とラベルの両方が `width: 100%` に設定されているため、span が入力の下の新しい行にドロップされてしまうという問題がありました。これを修正するために、親の `<div>` をフレックスコンテナーにするスタイルを設定し、さらにコンテンツが長くなりすぎた場合は新しい行に折り返すように指示します。
+この場合、入力フィールドとラベルの両方が `width: 100%` に設定されているため、span が入力フィールドの下の新しい行にドロップされてしまうという問題がありました。これを修正するために、親の `<div>` をフレックスコンテナーにするスタイルを設定し、さらにコンテンツが長くなりすぎた場合は新しい行に折り返すように指示します。
 
 ```css
 fieldset > div {
@@ -177,7 +182,7 @@ fieldset > div {
 }
 ```
 
-この効果として、ラベルと入力はどちらも `width: 100%` なので別個の行に表示されますが、 `<span>` は width が `0` なので、入力欄と同じ行に表示されます。
+この効果として、ラベルと入力フィールドはどちらも `width: 100%` なので別個の行に表示されますが、 `<span>` は width が `0` なので、入力フィールドと同じ行に表示されます。
 
 次に、生成コンテンツについて説明します。この CSS を使用してコンテンツを作成します。
 
@@ -258,27 +263,29 @@ input:valid + span::before {
 }
 ```
 
-先ほどと同様に、`<span>` を `position: relative` に設定し、生成されるコンテンツを相対的に配置できるようにします。そして、フォームのデータが有効か無効かによって、それぞれ緑色のチェックと赤色のクロスで、異なる生成コンテンツを絶対に配置するようにします。無効なデータに少し緊急性を追加するために、無効なときに入力に太い赤のボーダーを指定しました。
+先ほどと同様に、`<span>` を `position: relative` に設定し、生成されるコンテンツを相対的に配置できるようにします。そして、フォームのデータが有効か無効かによって、それぞれ緑色のチェックと赤色のクロスで、異なる生成コンテンツを絶対に配置するようにします。無効なデータに少し緊急性を追加するために、無効なときに入力フィールドに太い赤のボーダーを指定しました。
 
-> **メモ:** ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
+> [!NOTE]
+> ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
 
 次のもので試してみてください。
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
 
-必須のテキスト入力は、空の状態では無効ですが、何か記入されている状態では有効であることに注目してください。一方、 email の入力欄は、必須でないため空の状態では有効ですが、適切なメールアドレスでないものが含まれていると無効となります。
+必須のテキスト入力フィールドは、空の状態では無効ですが、何か記入されている状態では有効であることに注目してください。一方、 email の入力フィールドは、必須でないため空の状態では有効ですが、適切なメールアドレスでないものが含まれていると無効となります。
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力フィールドに対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
-> **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
+> [!NOTE]
+> 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 
-注目すべきは、データが範囲内にある入力欄は `:valid` 擬似クラスに一致し、データが範囲外である入力欄は `:invalid` 擬似クラスに一致することです。では、なぜこの 2 つが存在するのでしょうか？実に意味論上の問題です。範囲外であるということは無効であることを伝えるためのより具体的なものなので、入力が範囲外であるというと、単に「無効」と言うよりユーザーに役立つ可能性があります。両方を提供することもできます。
+注目すべきは、データが範囲内にある入力フィールドは `:valid` 擬似クラスに一致し、データが範囲外である入力フィールドは `:invalid` 擬似クラスに一致することです。では、なぜこの 2 つが存在するのでしょうか？実に意味論上の問題です。範囲外であるということは無効であることを伝えるためのより具体的なものなので、入力が範囲外であるというと、単に「無効」と言うよりユーザーに役立つ可能性があります。両方を提供することもできます。
 
-まさにこれを行う例を見てみましょう。この [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) デモ（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html) も参照）は、前の例の上に構築されており、数値入力に対して範囲外である場合のメッセージと、それが必要であるかどうかを示しています。
+まさにこれを行う例を見てみましょう。この [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) デモ（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html) も参照）は、前の例の上に構築されており、数値入力フィールドに対して範囲外である場合のメッセージと、それが必要であるかどうかを示しています。
 
-数値入力欄はこのようになります。
+数値入力フィールドはこのようになります。
 
 ```html
 <div>
@@ -322,19 +329,20 @@ input:out-of-range + span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-数値の入力が必須であると同時に範囲外である可能性もありますが、その場合はどうなるのでしょうか？ `:out-of-range` のルールは `:required` のルールよりもソースコード上の後で現れるため、[カスケードルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#カスケードを理解する)が作用して、範囲外のメッセージが表示されます。
+数値の入力フィールドが必須であると同時に範囲外である可能性もありますが、その場合はどうなるのでしょうか？ `:out-of-range` のルールは `:required` のルールよりもソースコード上の後で現れるため、[カスケードルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#カスケードを理解する)が作用して、範囲外のメッセージが表示されます。
 
-これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力欄は有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
+これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力フィールドは有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
 
-> **メモ:** 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
+> [!NOTE]
+> 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
 
-## 有効/無効や読み取り専用/読み書き可能の入力をスタイル設定する
+## 有効/無効や読み取り専用/読み書き可能の入力フィールドをスタイル設定する
 
 有効な要素とは、選択、クリック、入力などが可能な、アクティブにできる要素のことです。一方、無効な要素はどのような方法でも操作することができず、そのデータがサーバーに送信されることもありません。
 
-この 2 つの状態は {{cssxref(":enabled")}} と {{cssxref(":disabled")}} を使用して対象化することができます。無効化された入力はなぜ有用なのでしょうか？あるデータが特定のユーザーに適用されない場合、そのユーザーがフォームを送信するときにそのデータを送信したくないことがあります。請求先と配送先に同じ住所を使用するかどうか尋ねられることがよくありますが、その場合は単一の住所をサーバーに送信すればよく、請求先フィールドを使用しないようにすることもできます。
+この 2 つの状態は {{cssxref(":enabled")}} と {{cssxref(":disabled")}} を使用して対象化することができます。無効化された入力フィールドはなぜ有用なのでしょうか？あるデータが特定のユーザーに適用されない場合、そのユーザーがフォームを送信するときにそのデータを送信したくないことがあります。請求先と配送先に同じ住所を使用するかどうか尋ねられることがよくありますが、その場合は単一の住所をサーバーに送信すればよく、請求先フィールドを使用しないようにすることもできます。
 
-このような例を見てみましょう。まず最初の HTML は、テキスト入力と、請求先住所の無効化をオン・オフするためのチェックボックスを含むシンプルなフォームです。請求先住所フィールドは既定値で無効になっています。
+このような例を見てみましょう。まず最初の HTML は、テキスト入力フィールドと、請求先住所の無効化をオン・オフするためのチェックボックスを含むシンプルなフォームです。請求先住所フィールドは既定値で無効になっています。
 
 ```html
 <form>
@@ -394,7 +402,7 @@ input[type="text"]:disabled {
 }
 ```
 
-無効にしたい入力欄を、 `input[type="text"]:disabled` を使用して直接選択しましたが、対応するテキストラベルも灰色で表示したいと思います。これらは選択するのがそれほど簡単ではないので、スタイル設定を提供するためにクラスを使用しました。
+無効にしたい入力フィールドを、 `input[type="text"]:disabled` を使用して直接選択しましたが、対応するテキストラベルも灰色で表示したいと思います。これらは選択するのがそれほど簡単ではないので、スタイル設定を提供するためにクラスを使用しました。
 
 最後に、請求先住所フィールドの無効化を切り替えるために、いくらかの JavaScript を使用しました。
 
@@ -440,9 +448,9 @@ function toggleBilling() {
 
 ### read-only と read-write
 
-disabled`と`:enabled`と同様に、`:read-only`および`:read-write` 擬似クラスは、フォーム入力が切り替えられる 2 つの状態を対象としています。 read-only は値をサーバーに送信しますが、ユーザーが編集することはできません。一方、 read-write は編集可能な状態、つまり既定の状態です。
+disabled`と`:enabled`と同様に、`:read-only`および`:read-write` 擬似クラスは、フォーム入力フィールドが切り替えられる 2 つの状態を対象としています。 read-only は値をサーバーに送信しますが、ユーザーが編集することはできません。一方、 read-write は編集可能な状態、つまり既定の状態です。
 
-入力は `readonly` 属性を使用して読み取り専用に設定されます。例として、開発者が前のページで入力された内容をこのページに送り、ユーザーに一箇所で確認してもらい、必要なデータを追加し、送信して注文を確定させることを目的とした確認ページを想像してください。この点で、すべての最終的なフォームデータを一度にサーバーに送信することができます。
+入力フィールドは `readonly` 属性を使用して読み取り専用に設定されます。例として、開発者が前のページで入力された内容をこのページに送り、ユーザーに一箇所で確認してもらい、必要なデータを追加し、送信して注文を確定させることを目的とした確認ページを想像してください。この点で、すべての最終的なフォームデータを一度にサーバーに送信することができます。
 
 フォームがどのようなものか見てみましょう（ライブサンプルは [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) を参照してください。また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)も参照してください）。
 
@@ -475,7 +483,8 @@ textarea:read-write {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **メモ:** また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
+> [!NOTE]
+> また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
 
 ## ラジオボタンとチェックボックスの状態 — チェック済み、既定、不定
 
@@ -524,13 +533,13 @@ input[type="radio"]:checked::before {
 
 また、上記のラジオボタン/チェックボックスは、チェックでも解除でもない状態にあるとき、 {{cssxref(":indeterminate")}} 擬似クラスに一致します。しかし、これはどういう意味でしょうか？ indeterminate になる要素には、以下のようなものが記載されています。
 
-- {{HTMLElement("input/radio")}} 入力で、同じ名前のグループ内のすべてのラジオボタンのチェックが外れている場合
-- {{HTMLElement("input/checkbox")}} 入力の `indeterminate` プロパティが、JavaScript によって `true` に設定された場合。
+- {{HTMLElement("input/radio")}} 入力フィールドで、同じ名前のグループ内のすべてのラジオボタンのチェックが外れている場合
+- {{HTMLElement("input/checkbox")}} 入力フィールドの `indeterminate` プロパティが、JavaScript によって `true` に設定された場合。
 - {{HTMLElement("progress")}} の要素に値がない場合。
 
 これは、あまり頻繁に使用するものではないでしょう。 1 つの用途は、ユーザーが次に移動する前に、必ずラジオボタンを選択する必要があることを指示するためのものです。
 
-前の例を修正して、既定値が何であるかをユーザーに知らせる版と、不確定な場合にラジオボタンのラベルのスタイルを設定する版を見てみましょう。これらは両方とも、入力に以下のような HTML 構造を有しています。
+前の例を修正して、既定値が何であるかをユーザーに知らせる版と、不確定な場合にラジオボタンのラベルのスタイルを設定する版を見てみましょう。これらは両方とも、入力フィールドに以下のような HTML 構造を有しています。
 
 ```html
 <p>
@@ -540,7 +549,7 @@ input[type="radio"]:checked::before {
 </p>
 ```
 
-`:default` の例では、中央のラジオボタン入力に `checked` 属性を追加して、読み込んだときに既定で選択されるようにしました。そして、以下の CSS でスタイルを設定しています。
+`:default` の例では、中央のラジオボタン入力フィールドに `checked` 属性を追加して、読み込んだときに既定で選択されるようにしました。そして、以下の CSS でスタイルを設定しています。
 
 ```css
 input ~ span {
@@ -565,7 +574,8 @@ input:default ~ span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **メモ:** この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
+> [!NOTE]
+> この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
 
 `:indeterminate` の例では、既定値で選択されたラジオボタンがありません。これは重要なことで、もしあれば、スタイル設定する不定値の状態は存在しません。不確定なラジオボタンには以下の CSS でスタイルを設定しています。
 
@@ -592,7 +602,8 @@ input[type="radio"]:indeterminate {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **メモ:** この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
+> [!NOTE]
+> この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
 > **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
@@ -600,14 +611,14 @@ input[type="radio"]:indeterminate {
 
 他にも興味のある擬似クラスはたくさんありますが、ここでそのすべてを詳しく書くスペースはありません。ここでは、時間をかけて調査する必要があるいくつかのものについて説明します。
 
-- {{cssxref(":focus-within")}} 擬似クラスは、フォーカスを保有する要素、あるいはフォーカスを保有する要素を 含む\_ 要素に一致します。これは、フォーム内の入力にフォーカスが当たったとき、フォーム全体を何らかの方法でハイライトさせたい場合に有用です。
+- {{cssxref(":focus-within")}} 擬似クラスは、フォーカスを保有する要素、あるいはフォーカスを保有する要素を 含む\_ 要素に一致します。これは、フォーム内の入力フィールドにフォーカスが当たったとき、フォーム全体を何らかの方法でハイライトさせたい場合に有用です。
 - {{cssxref(":focus-visible")}} 擬似クラスは、（タッチやマウスではなく）キーボード操作によってフォーカスを受けた要素に一致します。マウス（または他の）フォーカスとは異なるスタイルをキーボードフォーカスのために使用したい場合、有用です。
 - {{cssxref(":placeholder-shown")}} 擬似クラスは、{{htmlelement('input')}} と {{htmlelement('textarea')}} 要素の値が空であるため、そのプレースホルダーを表示している（すなわち [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性の内容を示している）要素に一致します。
 
 以下のものも興味深いですが、まだブラウザーの対応が十分でありません。
 
 - {{cssxref(":blank")}} 擬似クラスは、空のフォームコントロールを選択します。 {{cssxref(":empty")}} も {{HTMLElement("input")}} のように子を持たない要素に一致しますが、より一般化されており、他の{{glossary("void element", "空要素")}}、例えば {{HTMLElement("br")}} や {{HTMLElement("hr")}} などにも一致します。 `:empty` はそれなりにブラウザーが対応しています。`:blank` 擬似クラスの仕様書はまだ完成していないので、どのブラウザーも対応しているわけではありません。
-- [`:user-invalid`](/ja/docs/Web/CSS/:user-invalid) 疑似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力する際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
+- [`:user-invalid`](/ja/docs/Web/CSS/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
 
 ## スキルテスト
 

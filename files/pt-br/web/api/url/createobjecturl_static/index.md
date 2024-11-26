@@ -15,7 +15,8 @@ Para anular um objeto URL, execute o método {{domxref("URL.revokeObjectURL", "r
 
 {{AvailableInWorkers}}
 
-> **Nota:** Esta funcionalidade não está disponível em [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
+> [!NOTE]
+> Esta funcionalidade não está disponível em [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
 
 ## Sintaxe
 
@@ -48,7 +49,8 @@ Os navegadores vão limpar objetos URLs automaticamente quando o documento for d
 
 Em versões antigas da especificação Media Source, anexar stream a um elemento {{HTMLElement("video")}} é obrigatório criar um objeto URL para o {{domxref("MediaStream")}}. Isto não é mais necessário, e os navegadores estão removendo o suporte para isso.
 
-> **Warning:** Se você ainda tem código com
+> [!WARNING]
+> Se você ainda tem código com
 > {{domxref("URL.createObjectURL", "createObjectURL()")}} para anexar streams em elementos
 > de media, você precisa atualizar seu código para {{domxref("HTMLMediaElement.srcObject","srcObject")}} to the `MediaStream` directly.
 

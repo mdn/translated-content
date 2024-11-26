@@ -101,7 +101,8 @@ Este elemento simplemente especifica la codificación de caracteres del document
 
 ![una página web que contiene caracteres en inglés y japonés, con la codificación de caracteres configurada en latín. Los caracteres japoneses no se muestran correctamente](bad-encoding.png)
 
-> **Nota:** Algunos navegadores (Chrome, por ejemplo) automáticamente arreglan la codificación de caracteres incorrecta, de modo que según el navegador que uses, puede que no te topes con este problema. Aun así, deberías incluir una codificación de caracteres `utf-8` en tu página web para evitar que se presenten potenciales problemas con otros navegadores.
+> [!NOTE]
+> Algunos navegadores (Chrome, por ejemplo) automáticamente arreglan la codificación de caracteres incorrecta, de modo que según el navegador que uses, puede que no te topes con este problema. Aun así, deberías incluir una codificación de caracteres `utf-8` en tu página web para evitar que se presenten potenciales problemas con otros navegadores.
 
 ### Aprendizaje activo: Experimenta con la codificación de caracteres
 
@@ -159,9 +160,11 @@ La descripción también se usa en las páginas de resultados del motor de búsq
 
    ![Resultado de búsqueda en Yahoo para "Mozilla Developer Network"](mdn-search-result.png)
 
-> **Nota:** En Google verás algunas subpáginas relevantes de MDN enumeradas debajo del enlace principal a la página principal de MDN (se trata de los llamados **sitelinks** y se pueden configurar con las [Herramientas de administrador de Google](http://www.google.com/webmasters/tools/)), una forma de mejorar los resultados para tu sitio con el motor de búsqueda de Google.
+> [!NOTE]
+> En Google verás algunas subpáginas relevantes de MDN enumeradas debajo del enlace principal a la página principal de MDN (se trata de los llamados **sitelinks** y se pueden configurar con las [Herramientas de administrador de Google](http://www.google.com/webmasters/tools/)), una forma de mejorar los resultados para tu sitio con el motor de búsqueda de Google.
 
-> **Nota:** Muchas características `<meta>` ya no se usan. Por ejemplo, los motores de búsqueda ignoran el elemento `<meta>` (`<meta name="keywords" content="pon, tus, palabras clave, aquí">`), que se supone que facilita palabras clave para motores de búsqueda de forma que se determine la relevancia de esa página según diferentes términos de búsqueda, porque los **spammers** rellenaban la lista de palabras clave con cientos de palabras clave que sesgaban los resultados.
+> [!NOTE]
+> Muchas características `<meta>` ya no se usan. Por ejemplo, los motores de búsqueda ignoran el elemento `<meta>` (`<meta name="keywords" content="pon, tus, palabras clave, aquí">`), que se supone que facilita palabras clave para motores de búsqueda de forma que se determine la relevancia de esa página según diferentes términos de búsqueda, porque los **spammers** rellenaban la lista de palabras clave con cientos de palabras clave que sesgaban los resultados.
 
 ### Otros tipos de metadatos
 
@@ -242,7 +245,8 @@ Los comentarios explican para qué se usa cada icono (estos elementos abarcan si
 
 No te preocupes demasiado sobre la implementación de todos estos tipos de iconos por el momento; se trata de una característica bastante avanzada y no se espera que tengas conocimientos de ello para avanzar en el curso. El propósito principal aquí es darte a conocer estos elementos por si te los encuentras mientras examinas el código fuente de otros sitios web.
 
-> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/es/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
+> [!NOTE]
+> Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/es/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
 
 ## Aplicar CSS y JavaScript a HTML
 
@@ -260,7 +264,8 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
   <script src="my-js-file.js"></script>
   ```
 
-  > **Nota:** El elemento `<script>` puede parecer un elemento vacío pero no lo es, y por lo tanto necesita una etiqueta de cierre. En vez de apuntar a un archivo de `script` externo, también puedes colocar tu código dentro del elemento `<script>`.
+  > [!NOTE]
+  > El elemento `<script>` puede parecer un elemento vacío pero no lo es, y por lo tanto necesita una etiqueta de cierre. En vez de apuntar a un archivo de `script` externo, también puedes colocar tu código dentro del elemento `<script>`.
 
 ### Aprendizaje activo: aplicar CSS y JavaScript a una página
 
@@ -275,7 +280,8 @@ Si lo has hecho correctamente, al guardar tu HTML y actualizar tu navegador, deb
 - El JavaScript ha añadido una lista vacía a la página. Ahora, cuando haces clic en cualquier sitio de la lista, aparece un cuadro de diálogo que te solicita que introduzcas el texto para un nuevo elemento de la lista. Cuando pulsas el botón OK, se añade a la lista el elemento con el texto nuevo. Cuando haces clic a un elemento de la lista aparece un cuadro de diálogo que te permite cambiar el texto del elemento.
 - El CSS ha pintado el fondo de verde y ha agrandado el texto. También ha aplicado estilo a algún contenido que el JavaScript ha añadido a la página (la barra roja con el borde negro es el estilo que el CSS ha aplicado a la lista generada con JavaScript).
 
-> **Nota:** Si te encallas en este ejercicio y no logras ejecutar los archivos CSS/JS, comprueba tu página de ejemplo [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
+> [!NOTE]
+> Si te encallas en este ejercicio y no logras ejecutar los archivos CSS/JS, comprueba tu página de ejemplo [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
 
 ## Establecer el idioma principal del documento
 

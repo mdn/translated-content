@@ -17,7 +17,8 @@ l10n:
 2. [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS) 과정에서 논의한 대로 CSS 기본 사항에 대해 익숙해야 합니다.
 3. [박스 스타일 지정](/ko/docs/Learn/CSS/Styling_boxes) 방법에 대한 이해가 있어야 합니다.
 
-> **참고:** 직접 파일을 생성할 수 없는 컴퓨터/태블릿/기타 장치에서 작업하고 있는 경우, [JSBin](https://jsbin.com/)나 [Glitch](https://glitch.com/)과 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
+> [!NOTE]
+> 직접 파일을 생성할 수 없는 컴퓨터/태블릿/기타 장치에서 작업하고 있는 경우, [JSBin](https://jsbin.com/)나 [Glitch](https://glitch.com/)과 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내서
 

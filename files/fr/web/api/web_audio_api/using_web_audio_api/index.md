@@ -21,7 +21,8 @@ Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-cha
 
 ## Concepts de base
 
-> **Note :** la plupart des extraits de code dans cette section viennent de l'exemple [Violent Theremin](https://github.com/mdn/violent-theremin).
+> [!NOTE]
+> La plupart des extraits de code dans cette section viennent de l'exemple [Violent Theremin](https://github.com/mdn/violent-theremin).
 
 La Web Audio API impliqe de réaliser les opérations de traitement audio dans un **contexte audio**, et elle a été conçue pour permettre le **routage modulaire**. Les opérations de traitement de base sont réalisées par des **noeuds audio**, qui sont reliés entre eux pour former un **graphe de routage audio**. Plusieurs sources — avec différentes configuration de canaux — peuvent cohabiter dans un seul contexte. Ce design modulaire offre la flexibilité nécessaire pour créer des fonctions complexes avec des effets dynamiques.
 
@@ -41,7 +42,8 @@ Commencez par créer une instance de [`AudioContext`](/fr/docs/Web/API/AudioCont
 var contexteAudio = new AudioContext();
 ```
 
-> **Note :** On peut créer plusieurs contextes audio dans le même document, bien que ce soit probablement superflu dans la plupart des cas.
+> [!NOTE]
+> On peut créer plusieurs contextes audio dans le même document, bien que ce soit probablement superflu dans la plupart des cas.
 
 Il faut rajouter une version préfixée pour les navigateurs Webkit/Blink browsers, tout en conservant la version non préfixée pour Firefox (desktop/mobile/OS). Ce qui donne :
 
@@ -49,7 +51,8 @@ Il faut rajouter une version préfixée pour les navigateurs Webkit/Blink browse
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 ```
 
-> **Note :** Safari risque de planter si l'objet `window` n'est pas explicitement mentionné lors de la création d'un contexte audio
+> [!NOTE]
+> Safari risque de planter si l'objet `window` n'est pas explicitement mentionné lors de la création d'un contexte audio
 
 ### Création d'une source audio
 
@@ -67,9 +70,11 @@ var oscillateur = contexteAudio.createOscillator();
 var noeudGain = contexteAudio.createGain();
 ```
 
-> **Note :** Pour jouer un fichier audio directement, il faut charger le fichier en XHR, le décoder en mémoire tampon, puis associer le tampon à une source. Voir l'exemple [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68).
+> [!NOTE]
+> Pour jouer un fichier audio directement, il faut charger le fichier en XHR, le décoder en mémoire tampon, puis associer le tampon à une source. Voir l'exemple [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68).
 
-> **Note :** Scott Michaud a écrit la librairie [AudioSampleLoader](https://github.com/ScottMichaud/AudioSampleLoader), très pratique pour charger et décoder un ou plusieurs extraits audio. Elle peut aider à simplifier le processus de chargement XHR / mémoire tampon décrit dans la note précédente.
+> [!NOTE]
+> Scott Michaud a écrit la librairie [AudioSampleLoader](https://github.com/ScottMichaud/AudioSampleLoader), très pratique pour charger et décoder un ou plusieurs extraits audio. Elle peut aider à simplifier le processus de chargement XHR / mémoire tampon décrit dans la note précédente.
 
 ### Lien entre les noeuds source et destination
 
@@ -100,7 +105,8 @@ Ce code créerait le graphe audio suivant :
 
 Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.
 
-> **Note :** Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor), très utile pour débugger les graphes audio.
+> [!NOTE]
+> Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor), très utile pour débugger les graphes audio.
 
 ### Lecture du son et définition du pitch
 

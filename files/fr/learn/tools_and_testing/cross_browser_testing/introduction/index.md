@@ -46,7 +46,8 @@ D'un autre côté, ce n'est pas ok qu'un site soit fonctionnel pour les personne
 
 De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir [Gotta test 'em all?](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.
 
-> **Note :** Nous traiterons également du code préventif dans ce module.
+> [!NOTE]
+> Nous traiterons également du code préventif dans ce module.
 
 ## Pourquoi y'a-t-il des problèmes en navigateur croisé?
 
@@ -86,7 +87,8 @@ Maintenant que vous connaissez votre plate-forme de test cible, vous devriez rev
 
 Vous devriez mettre en place une liste des différents champs de problèmes potentiels.
 
-> **Note :** Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter [caniuse.com](http://caniuse.com/), pour d'autres détails utiles.
+> [!NOTE]
+> Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter [caniuse.com](http://caniuse.com/), pour d'autres détails utiles.
 
 Une fois que vous êtes d'accord sur ces détails, vous pouvez continuer et démarrer le développement du site.
 

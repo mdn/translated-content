@@ -9,9 +9,11 @@ L'événement **`beforeunload`** est déclenché quand la fênetre, ou le docume
 
 Lorsqu'une chaîne de caractères est assignée à la propriété `returnValue` de {{domxref("Event")}}, une boîte de dialogue apparaît demandant confirmation avant de quitter la page (voir exemple plus bas). Certains navigateurs affichent la valeur retournée, alors que d'autres affichent leur propre message. Si aucune valeur n'est fournie, l'événement est traité silencieusement.
 
-> **Note :** Afin d'éviter les "pop-ups" indésirables, les navigateurs peuvent ne pas afficher les alertes créées dans les gestionnaires `beforeunload`.
+> [!NOTE]
+> Afin d'éviter les "pop-ups" indésirables, les navigateurs peuvent ne pas afficher les alertes créées dans les gestionnaires `beforeunload`.
 
-> **Attention :** Attacher un gestionnaire d'événement `beforeunload` à `window` ou à `document` empêche les navigateurs d'utiliser leur mémoire cache ; consulter [Utilisation du cache de Firefox 1.5](/fr/docs/Utilisation_du_cache_de_Firefox_1.5) ou [WebKit's Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/) (en anglais).
+> [!WARNING]
+> Attacher un gestionnaire d'événement `beforeunload` à `window` ou à `document` empêche les navigateurs d'utiliser leur mémoire cache ; consulter [Utilisation du cache de Firefox 1.5](/fr/docs/Utilisation_du_cache_de_Firefox_1.5) ou [WebKit's Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/) (en anglais).
 
 <table class="properties">
   <tbody>

@@ -37,7 +37,8 @@ Ahora veamos una versión correcta del mismo documento:
 
 Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/DTD)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
 
-> **Nota:** La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
+> [!NOTE]
+> La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
 
 ## Entidades
 

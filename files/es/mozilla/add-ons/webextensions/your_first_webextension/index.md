@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 {{AddonSidebar}}
 
-> **Nota:** Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a [cómo se ponen juntos los archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Entonces, usa la [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions#Reference) para empezar a construir tu extensión. Visita el [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.
+> [!NOTE]
+> Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a [cómo se ponen juntos los archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Entonces, usa la [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions#Reference) para empezar a construir tu extensión. Visita el [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.
 
 En este artículo abordaremos la creación de una extensión para Firefox, desde el comienzo hasta el final. La extensión solo agrega un borde rojo a cualquiera de las páginas cargadas desde "mozilla.org" o cualquiera de sus subdominios.
 
@@ -125,7 +126,8 @@ Ahora pruebe visitando una página bajo "mozilla.org", y usted verá el borde ro
 
 {{EmbedYouTube("rxBQl2Z9IBQ")}}
 
-> **Nota:** No lo intentes en addons.mozilla.org! Los scripts de contenido están actualmente bloqueados en ese dominio.
+> [!NOTE]
+> No lo intentes en addons.mozilla.org! Los scripts de contenido están actualmente bloqueados en ese dominio.
 
 Experimenta un poco. Edita el contenido del script para cambiar el color del borde, o haz algo más en el contenido de la página. Si actualizas el script de contenido, recarga los archivos de la extensión haciendo clic en el botón "Recargar" en about:debugging. Podrás ver los cambios en el momento:
 

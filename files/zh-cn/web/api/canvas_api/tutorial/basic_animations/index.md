@@ -30,18 +30,19 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 ### 有安排地更新画布
 
-首先，可以用{{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}},和{{domxref("window.requestAnimationFrame()")}}来设定定期执行一个指定函数。
+首先，可以用 {{domxref("Window.setInterval", "setInterval()")}}、{{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 来设定定期执行一个指定函数。
 
-- {{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : 当设定好间隔时间后，function 会定期执行。
-- {{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : 在设定好的时间之后执行函数
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : 告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。
 
-如果你并不需要与用户互动，你可以使用 setInterval() 方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上 setTimeout() 方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。
+如果你并不需要与用户互动，你可以使用 `setInterval()` 方法，它就可以定期执行指定代码。如果我们需要做一个游戏，我们可以使用键盘或者鼠标事件配合上 `setTimeout()` 方法来实现。通过设置事件监听，我们可以捕捉用户的交互，并执行相应的动作。
 
-> **备注：** 下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行 60 次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在[Game development zone](/zh-CN/docs/Games) 参考这篇文章 [Anatomy of a video game](/zh-CN/docs/Games/Anatomy)。
+> [!NOTE]
+> 下面的例子，采用 {{domxref("window.requestAnimationFrame()")}}实现动画效果。这个方法提供了更加平缓并更加有效率的方式来执行动画，当系统准备好了重绘条件的时候，才调用绘制动画帧。一般每秒钟回调函数执行 60 次，也有可能会被降低。想要了解更多关于动画循环的信息，尤其是游戏，可以在[Game development zone](/zh-CN/docs/Games) 参考这篇文章 [Anatomy of a video game](/zh-CN/docs/Games/Anatomy)。
 
 ## 太阳系的动画
 
@@ -237,7 +238,8 @@ window.requestAnimationFrame(clock);
 
 ### 结果
 
-> **备注：** 尽管时钟每秒只更新一次，但动画图像每秒更新 60 次（或者以你的 Web 浏览器的显示刷新率）。要使用扫描式的时钟，请将上面的 `const sec` 定义替换为已注释的版本。
+> [!NOTE]
+> 尽管时钟每秒只更新一次，但动画图像每秒更新 60 次（或者以你的 Web 浏览器的显示刷新率）。要使用扫描式的时钟，请将上面的 `const sec` 定义替换为已注释的版本。
 
 {{EmbedLiveSample("动画时钟", "180", "200")}}
 
@@ -339,7 +341,7 @@ function draw() {
 
 下方就是是图片在其中滑动的 {{HTMLElement("canvas")}}。需要注意的是这里定义的 width 和 height 必须与 JavaScript 代码中的变量值`CanvasXZSize`和`CanvasYSize`保持一致。
 
-```
+```html
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 

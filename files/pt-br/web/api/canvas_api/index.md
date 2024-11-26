@@ -52,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Nota:** As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/WebGL).
+> [!NOTE]
+> As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/WebGL).
 
 {{domxref("CanvasCaptureMediaStream")}} é uma interface relacionada.
 
@@ -89,7 +90,8 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 - [Scrawl-canvas](http://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
 - O framework [ZIM](http://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
 
-> **Nota:** Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
+> [!NOTE]
+> Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
 
 ## Especificações
 

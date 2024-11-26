@@ -123,7 +123,8 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 Voir [Updating add-ons for Firefox 8](/fr/docs/Firefox/Updating_add-ons_for_Firefox_8) pour vous guidez dans les modifications que vous êtes susceptibles d'avoir à faire pour rendre vos extensions compatibles avec Firefox 8.
 
-> **Note :** Firefox 8 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
+> [!NOTE]
+> Firefox 8 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
 ### XPCOM
 

@@ -13,6 +13,6 @@ slug: Glossary/POP
 - [RFC 1734](https://tools.ietf.org/html/rfc1734) (POP3 認証機構の仕様)
 - [RFC 1939](https://tools.ietf.org/html/rfc1939) (POP3 の仕様)
 - [RFC 2449](https://tools.ietf.org/html/rfc2449) (POP3 拡張機構の仕様)
-- [MDN Web Docs 用語集](/ja/docs/Glossary):
+- 関連用語:
 
   - {{Glossary("IMAP4")}}

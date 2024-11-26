@@ -41,12 +41,12 @@ addr.username = myUsername;
 
 `URL` 的 {{domxref("URL.search", "search")}} 属性包含 URL 的查询字符串部分。例如，如果 URL 是 `https://example.com/login?user=someguy&page=news`，那么 `search` 属性的值是 `?user=someguy&page=news`。你还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：
 
-```
+```js
 let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```

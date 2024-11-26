@@ -9,7 +9,8 @@ La propriété **`font-feature-settings`** permet de contrôler les fonctionnali
 
 {{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
 
-> **Note :** Lorsque c'est possible, les auteurs devraient utiliser la propriété raccourcie {{cssxref("font-variant")}} ou l'une des propriétés détaillées correspondantes parmi {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
+> [!NOTE]
+> Lorsque c'est possible, les auteurs devraient utiliser la propriété raccourcie {{cssxref("font-variant")}} ou l'une des propriétés détaillées correspondantes parmi {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
 >
 > Cette propriété est une fonctionnalité bas-niveau permettant de gérer des cas particuliers où il n'y a aucun moyen d'accéder à une fonctionnalité OpenType donnée. Cette propriété CSS ne devrait notamment pas être utilisée pour activer les petites majuscules.
 

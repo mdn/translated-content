@@ -155,7 +155,7 @@ _Без изменений._
 - Удалено нестандартное свойство `currentTime` {{domxref("MediaStream")}} ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - Удалены настройки `dom.webcomponents.shadowdom.enabled` и `dom.webcomponents.customelements.enabled` — больше нельзя отключить поддержку Shadow DOM и Custom Elements через `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - Удалено нестандартное событие DOM `text`, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- Событие {{event("keypress")}} больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
+- Событие [`keypress`](/ru/docs/Web/API/Element/keypress_event) больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
 
   <kbd>Enter</kbd>
 

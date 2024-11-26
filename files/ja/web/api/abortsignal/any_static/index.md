@@ -1,13 +1,14 @@
 ---
 title: "AbortSignal: any() 静的メソッド"
+short-title: any()
 slug: Web/API/AbortSignal/any_static
 l10n:
-  sourceCommit: 32f666e453bdb8c93d305075453b6e304cae94de
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-静的メソッド **`AbortSignal.any()`** は、中止シグナルが入った反復可能オブジェクトを受け取り、{{domxref("AbortSignal")}} を返します。返される中止シグナルは、渡された反復可能オブジェクト内の中止シグナルのいずれかが中止された時中止されます。{{domxref("AbortSignal.reason", "中止の理由","","true")}}は、中止された最初のシグナルの理由に設定されます。渡された中止シグナルのいずれかが既に中止されている場合は、既に中止と設定されている {{domxref("AbortSignal")}} を返します。
+**`AbortSignal.any()`** は静的メソッドで、中止シグナルが入った反復可能オブジェクトを受け取り、{{domxref("AbortSignal")}} を返します。返される中止シグナルは、渡された反復可能オブジェクト内の中止シグナルのいずれかが中止された時中止されます。{{domxref("AbortSignal.reason", "中止の理由","","true")}}は、中止された最初のシグナルの理由に設定されます。渡された中止シグナルのいずれかが既に中止されている場合は、既に中止と設定されている {{domxref("AbortSignal")}} を返します。
 
 ## 構文
 

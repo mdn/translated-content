@@ -387,7 +387,7 @@ function dump_props(obj, obj_name) {
 
 对于一个拥有 `make` 和 `model` 属性的 `car` 对象来说，执行结果 `result` 是：
 
-```
+```plain
 car.make = Ford
 car.model = Mustang
 ```

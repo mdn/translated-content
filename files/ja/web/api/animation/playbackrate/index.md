@@ -16,7 +16,8 @@ l10n:
 
 0、負、正の値を取ります。負の値ではアニメーションが反転します。この値は変倍率で、例えば 2 の値を指定すると再生速度が 2 倍になります。
 
-> **メモ:** アニメーションの `playbackRate` を `0` に設定すると、アニメーションは一時停止します（ただし、{{domxref("Animation.playstate", "playstate")}} は必ずしも `paused` にはなりません）。
+> [!NOTE]
+> アニメーションの `playbackRate` を `0` に設定すると、アニメーションは一時停止します（ただし、{{domxref("Animation.playstate", "playstate")}} は必ずしも `paused` にはなりません）。
 
 ## 例
 

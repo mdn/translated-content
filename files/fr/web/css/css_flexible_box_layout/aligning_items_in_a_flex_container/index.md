@@ -106,7 +106,8 @@ Là encore, on peut passer avec `flex-direction: column` afin de voir comment le
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Note :** La valeur `space-evenly` n'est pas définie dans la spécification relative aux boîtes flexibles et a été dernièrement ajoutée à la spécification sur l'alignement des boîtes. La prise en charge par les navigateurs de cette valeur n'est pas aussi bonne que celle des valeurs définies dans la spécification flexbox.
+> [!NOTE]
+> La valeur `space-evenly` n'est pas définie dans la spécification relative aux boîtes flexibles et a été dernièrement ajoutée à la spécification sur l'alignement des boîtes. La prise en charge par les navigateurs de cette valeur n'est pas aussi bonne que celle des valeurs définies dans la spécification flexbox.
 
 ## Aligner le contenu sur l'axe principal
 

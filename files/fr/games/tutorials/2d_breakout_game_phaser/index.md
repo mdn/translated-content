@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
-Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Breakout** écrit en JavaScript, en utilisant le framework [Phaser](http://phaser.io/).
+Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Breakout** écrit en JavaScript, en utilisant le framework [Phaser](https://phaser.io/).
 
 Chaque étape a des échantillons modifiables, disponibles pour jouer avec, de sorte que vous pouvez voir à quoi devraient ressembler les étapes intermédiaires. Vous apprendrez les bases de l'utilisation du framework Phaser pour implémenter les mécanismes fondamentaux du jeu comme le rendu et le mouvement des images, la détection des collisions, les mécanismes de contrôle, les fonctions d'aide spécifiques aux cadres, les animations et les interpolations, les états gagnants et perdants.
 
@@ -40,7 +40,8 @@ Comme note sur les parcours d'apprentissage — en commençant par le JavaScript
 
 Après cela, vous pouvez choisir n'importe quel framework que vous voulez et l'utiliser pour vos projets ; nous avons choisi Phaser car c'est un bon framework solide, avec un bon support et une communauté disponible, et un bon ensemble de plugins. Les cadres accélèrent le temps de développement et aident à prendre soin des parties ennuyeuses, vous permettant ainsi de vous concentrer sur les choses amusantes. Cependant, les frameworks ne sont pas toujours parfaits, donc si quelque chose d'inattendu se produit ou si vous voulez écrire des fonctionnalités que le framework ne fournit pas, vous aurez besoin de connaissances en JavaScript pur.
 
-> **Note :** Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser la fonction [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basé sur ce tutoriel si vous voulez donner une conférence sur le développement d'un jeu avec Phaser.
+> [!NOTE]
+> Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser la fonction [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basé sur ce tutoriel si vous voulez donner une conférence sur le développement d'un jeu avec Phaser.
 
 ## Prochaines étapes
 
