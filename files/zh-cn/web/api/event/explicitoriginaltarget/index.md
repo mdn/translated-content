@@ -25,7 +25,7 @@ l10n:
 
 ```js
 function myCommand(ev) {
-  alert(ev.explicitOriginalTarget.nodeName); // 返回 “menuitem”
+  alert(ev.explicitOriginalTarget.nodeName); // 返回“menuitem”
 }
 ```
 
