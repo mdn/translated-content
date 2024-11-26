@@ -78,7 +78,7 @@ modules 目录下的两个模块的描述如下：
 
 ## 导出模块的功能
 
-为了获得模块的功能，要做的第一件事就是把它们导出来，使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
+为了获得模块的功能，要做的第一件事就是把它们导出来。这可以使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
 
 最简单的方法是把它（指上面的 export 语句）放到你想要导出的项前面，比如：
 
