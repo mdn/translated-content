@@ -114,7 +114,7 @@ export { name, draw, reportArea, reportPerimeter };
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-首先使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 关键字，然后列出用花括号括起的功能列表，再加上关键字 from，最后指定模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
+首先使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后列出用花括号括起的功能列表，再加上关键字 `from`，并跟随*模块标识符*。
 
 当然，我们写的路径有一点不同——我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植——如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
