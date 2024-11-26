@@ -174,7 +174,7 @@ reportPerimeter(square1.length, reportList);
 
 到目前为止，我们导出的功能都是使用**具名导出**（named export）——每一项（如函数或常量）在导出时通过名称引用，导入时也需使用相同的名称引用。
 
-还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
+还有一种导出类型叫做**默认导出**（default export）——这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 Jason Orendorff 的[深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)中所解释的那样；搜索“Default exports”）。
 
 来看一个例子了解其工作方式。在基本模块 `square.js` 中，有一个名为 `randomSquare()` 的函数，用于创建一个随机颜色、大小和位置的正方形。我们希望将其作为默认导出，因此在文件底部这样编写：
 
