@@ -53,7 +53,9 @@ l10n:
   <header>
     <h2>行星地球</h2>
     <p>
-      作者：Jane Smith，发布日期：<time datetime="2017-10-04">2017 年 10 月 4 日</time>
+      作者：Jane Smith，发布日期：<time datetime="2017-10-04"
+        >2017 年 10 月 4 日</time
+      >
     </p>
   </header>
   <p>我们生活在一个蓝绿相间的星球上，有许多东西还未曾见过。</p>
