@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLLinkElement`** 接口表示外部资源的引用信息以及这些资源与文档之间的关系（对应于 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素；不要与 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 混淆，后者由 [`HTMLAnchorElement`](/zh-CN/docs/Web/API/HTMLAnchorElement) 表示）。此对象继承 {{domref("HTMLElement")}} 接口的所有属性和方法。
+**`HTMLLinkElement`** 接口表示外部资源的来源地址以及这些资源与文档之间的关系（对应于 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素；不要与 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 混淆，后者由 [`HTMLAnchorElement`](/zh-CN/docs/Web/API/HTMLAnchorElement) 表示）。此对象继承 {{domref("HTMLElement")}} 接口的所有属性和方法。
 
 {{InheritanceDiagram}}
 
