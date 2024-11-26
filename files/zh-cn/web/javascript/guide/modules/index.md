@@ -17,7 +17,7 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 ## 介绍一个例子
 
-为了演示模块的使用，我们创建了[一系列简单的示例](https://github.com/mdn/js-examples/tree/main/module-examples) ，你可以在 GitHub 上找到。这个例子演示了一个简单的模块的集合，用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。
+为了演示模块的使用，我们创建了[一系列简单的示例](https://github.com/mdn/js-examples/tree/main/module-examples)，你可以在 GitHub 上找到。这个例子演示了一个简单的模块集合，用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制（并记录有关的信息）不同形状。
 
 这的确有点简单，但是保持足够简单能够清晰地演示模块。
 
