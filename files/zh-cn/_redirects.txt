@@ -2462,6 +2462,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
+/zh-CN/docs/Web/HTTP/Headers/Digest	/zh-CN/docs/Web/HTTP/Headers/Content-Digest
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/camera	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/camera
