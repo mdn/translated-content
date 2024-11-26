@@ -53,7 +53,7 @@ encrypt(algorithm, key, data)
 
 これらのアルゴリズムの 1 つである RSA-OAEP は{{Glossary("public-key cryptography", "公開鍵暗号システム")}}です。
 
-ここにある他の3つの暗号化アルゴリズムはすべて{{Glossary("Symmetric-key cryptography", "対象か偽アルゴリズム")}}で、すべて同じ基盤である AES (Advanced Encryption Standard) をベースにしています。
+ここにある他の3つの暗号化アルゴリズムはすべて{{Glossary("Symmetric-key cryptography", "共通鍵暗号アルゴリズム")}}で、すべて同じ基盤である AES (Advanced Encryption Standard) をベースにしています。
 これらの違いは{{Glossary("Block cipher mode of operation", "モード")}}です。
 ウェブ暗号 API は 3 つの異なる AES モードに対応しています。
 
