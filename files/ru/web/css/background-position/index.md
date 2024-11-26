@@ -91,7 +91,7 @@ div {
   background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("star-transparent.gif") #ffee99 3em 50% no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
