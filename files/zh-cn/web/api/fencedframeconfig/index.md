@@ -30,7 +30,7 @@ l10n:
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // 拍卖配置
+  // 竞价配置
   resolveToConfig: true,
 });
 
@@ -43,7 +43,7 @@ frame.config = frameConfig;
 
 ### 通过 `setSharedStorageContext()` 传递上下文数据
 
-你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储工作线程。
+你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
 
 在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)中。
 
@@ -52,14 +52,14 @@ frame.config = frameConfig;
 ```js
 const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
 
-// 你想要从嵌入器传递给共享存储工作线程的数据
+// 你想要从嵌入器传递给共享存储 worklet 的数据
 frameConfig.setSharedStorageContext("some-event-id");
 
 const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-在围栏框架内，我们使用 {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}} 添加工作线程模块，然后使用 {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} 将事件级数据发送到共享存储工作线程中（这与来自嵌入文档的上下文数据无关）：
+在围栏框架内，我们使用 {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}} 添加 worklet 模块，然后使用 {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} 将事件级数据发送到共享存储 worklet 中（这与来自嵌入文档的上下文数据无关）：
 
 ```js
 const frameData = {
@@ -75,7 +75,7 @@ await window.sharedStorage.run("send-report", {
 });
 ```
 
-在 `reporting-worklet.js` 工作线程中，我们从 `sharedStorage.context` 中读取嵌入文档的事件 ID，并从数据对象中读取框架的事件级数据，然后通过[隐私聚合](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)进行报告：
+在 `reporting-worklet.js` worklet 中，我们从 `sharedStorage.context` 中读取嵌入文档的事件 ID，并从数据对象中读取框架的事件级数据，然后通过[隐私聚合](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)进行报告：
 
 ```js
 class ReportingOperation {
