@@ -2,7 +2,7 @@
 title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: db9ccd6c2746b3f34b0951d8e59ea1c581312d9d
 ---
 
 {{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
@@ -52,7 +52,7 @@ img {
 {{EmbedLiveSample('示例','125','125')}}
 
 > [!NOTE]
-> 除非图像指定了高度和宽度，否则损坏的图像图标不会显示；但如果将 `-moz-force-broken-image-icon` 设置为 `1`，alt 属性也会被隐藏。
+> 除非图像指定了高度和宽度，否则即使将 `-moz-force-broken-image-icon` 设置为 `1`，alt 属性也不会显示。
 
 ## 备注
 
