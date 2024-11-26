@@ -110,9 +110,9 @@ l10n:
         <code><a href="/zh-CN/docs/Web/HTML/Element/article">article</a></code
         >、<code><a href="/zh-CN/docs/Web/HTML/Element/aside">aside</a></code
         >、<code><a href="/zh-CN/docs/Web/HTML/Element/main">main</a></code
-        >、<code><a href="/zh-CN/docs/Web/HTML/Element/nav">nav</a></code> 或
+        >、<code><a href="/zh-CN/docs/Web/HTML/Element/nav">nav</a></code> 或是
         <code><a href="/zh-CN/docs/Web/HTML/Element/section">section</a></code>
-        元素的后代，或者具有
+        元素的后代，或者是带有
         <code
           >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/article_role"
             >article</a
@@ -135,10 +135,7 @@ l10n:
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"
             >region</a
           ></code
-        >元素。则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a
-        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
-          >generic</a
-        >。
+        > 属性的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>；否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a>。
       </td>
     </tr>
     <tr>
