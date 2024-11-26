@@ -32,7 +32,7 @@ l10n:
 const el = document.getElementById("el");
 console.log(el.disabled); // 输出：true
 
-// 设置 disabled 属性为 true 以启动样式表
+// 设置 disabled 属性为 false 以启用样式表
 
 el.disabled = false;
 console.log(el.disabled); // 输出：false
