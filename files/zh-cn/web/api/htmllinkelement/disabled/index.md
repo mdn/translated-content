@@ -49,4 +49,4 @@ console.log(el.disabled); // 输出：false
 ## 参见
 
 - {{domxref("HTMLScriptElement.integrity")}}
-- [Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)
+- [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)

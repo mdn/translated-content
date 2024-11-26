@@ -23,7 +23,7 @@ l10n:
   href="www.example.com/fr/html"
   hreflang="fr"
   type="text/html"
-  title="French HTML" />
+  title="法语 HTML 页面" />
 <p class="tag"></p>
 ```
 

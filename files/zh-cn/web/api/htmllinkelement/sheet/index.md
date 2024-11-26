@@ -26,7 +26,7 @@ l10n:
 </html>
 ```
 
-`HTMLLinkElement` 对象的 `sheet` 属性将返回描述 `styles.css` 的 {{domxref("StyleSheet")}} 对象。
+`HTMLLinkElement` 对象的 `sheet` 属性将返回描述为 `styles.css` 的 {{domxref("StyleSheet")}} 对象。
 
 ## 规范
 

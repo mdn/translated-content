@@ -34,7 +34,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLLinkElement.media")}}
   - : 一个字符串，表示资源适用的一个或多个媒体格式列表。它反映 {{HTMLElement("link")}} 元素的 `media` 属性。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : 一个字符串，反映 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/link#referrerpolicy) HTM L 属性，用于指示应使用哪个引用来源。
+  - : 一个字符串，反映 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/link#referrerpolicy) HTML 属性，用于指示应使用哪个来源地址。
 - {{domxref("HTMLLinkElement.rel")}}
   - : 一个字符串，表示从文档到链接资源的前向关系。
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
@@ -49,7 +49,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 ### 已废弃属性
 
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
-  - : 表示目标资源字符编码的字符串。
+  - : 一个字符串，表示目标资源的字符编码。
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
 
   - : 一个字符串，表示从资源到文档的反向链接关系。
