@@ -97,8 +97,8 @@ li {
 }
 div {
   background-image: url(star-solid.gif);
-  width: 144px;
-  height: 84px;
+  width: 160px;
+  height: 70px;
 }
 
 /* 因为 space 和 round 当前没有被广泛支持的，所以没有添加*/
