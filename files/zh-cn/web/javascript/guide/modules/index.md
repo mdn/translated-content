@@ -44,7 +44,7 @@ modules 目录下的两个模块的描述如下：
 - `canvas.js` — 包含与设置画布相关的功能：
 
   - `create()` — 在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
-  - `createReportList()`——创建一个附加在指定包装器元素内的无序列表，该列表可用于输出报告数据。其返回列表的 ID。
+  - `createReportList()`——创建一个无序列表，并将其添加到指定的包装元素内，该列表可用于输出报告数据。返回列表的 ID。
 
 - `square.js` — 包含：
 
