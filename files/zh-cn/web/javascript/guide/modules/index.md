@@ -215,7 +215,9 @@ import { default as randomSquare } from "./modules/square.js";
 
 ## 重命名导出与导入
 
-在 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字为功能指定新名称，从而更改在顶级模块中使用的标识名称。例如，以下两种方式功能相同，但实现略有不同：
+在 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字为功能指定新名称，从而更改在顶级模块中使用的标识名称。
+
+例如，以下方法虽然方式略有不同，但可以完成相同的工作：
 
 ```js
 // inside module.js
