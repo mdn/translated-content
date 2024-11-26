@@ -100,7 +100,7 @@ export function draw(ctx, length, x, y, color) {
 
 你能够导出函数，`var`，`let`，`const`, 和等会会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
 
-更方便的导出模块的方法是，在模块文件末尾使用一个 export 语句，以花括号括起来并用逗号分隔的形式列出所有需导出的内容。比如：
+更方便的导出模块的方法是，在模块文件末尾使用一个 export 语句，以花括号括起来并用逗号分隔的形式列出所有需导出的功能。比如：
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
