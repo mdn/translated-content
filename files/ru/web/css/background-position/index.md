@@ -100,7 +100,7 @@ div {
   background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
-    center;
+    right 3em bottom 2em;
 }
 ```
 
