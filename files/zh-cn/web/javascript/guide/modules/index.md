@@ -170,7 +170,7 @@ reportPerimeter(square1.length, reportList);
 - 加载一个模块脚本时不需要使用 `defer` 属性 (see [`<script>` attributes](/zh-CN/docs/Web/HTML/Element/script#Attributes)) 模块会自动延迟加载。
 - 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在开发者工具中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
-## 默认导出 versus 命名导出
+## 默认导出和具名导出
 
 到目前为止，我们导出的功能都是使用**具名导出**（named export）——每一项（如函数或常量）在导出时通过名称引用，导入时也需使用相同的名称引用。
 
