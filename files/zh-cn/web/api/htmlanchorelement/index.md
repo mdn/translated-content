@@ -42,7 +42,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLAnchorElement.protocol")}}
   - : 一个字符串，表示引用 URL 中的协议组件，包括尾随的冒号（`:`）。
 - {{domxref("HTMLAnchorElement.referrerPolicy")}}
-  - : 一个字符串，反映 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/a#referrerpolicy) HTML 属性，指示应使用哪个引用来源。
+  - : 一个字符串，反映 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/a#referrerpolicy) HTML 属性，指示应使用哪个来源地址。
 - {{domxref("HTMLAnchorElement.rel")}}
   - : 一个字符串，反映 [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML 属性，指定目标对象与链接对象的关系。
 - {{domxref("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
