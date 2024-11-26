@@ -19,15 +19,15 @@ l10n:
 
 否则，它是在无障碍树中的一个 `section`，通常包含周围部分的标题（`h1` – `h6` 元素）和可选的副标题，但这并**不是**必要的。
 
-### 历史说明
+### 历史用法
 
-`<header>` 元素最初在 HTML 的早期用于标题。在[第一个网站](https://info.cern.ch/)中可以看到。在某些时候，标题变成了 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，使 `<header>` 可以自由地扮演不同的角色。
+`<header>` 元素最初在 HTML 的早期用于标题。在[第一个网站](https://info.cern.ch/)中可以看到。在某个时间点，标题变成了 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，使 `<header>` 可以自由地扮演一个不一样的角色。
 
 ## 属性
 
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 无障碍考虑
+## 无障碍
 
 当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
 
@@ -37,7 +37,7 @@ l10n:
 
 ```html
 <header>
-  <h1>主页面标题</h1>
+  <h1>主页标题</h1>
   <img src="mdn-logo-sm.png" alt="MDN 徽标" />
 </header>
 ```
@@ -53,12 +53,11 @@ l10n:
   <header>
     <h2>行星地球</h2>
     <p>
-      发布日期，<time datetime="2017-10-04">2017 年 10 月 4 日</time>
-      作者：Jane Smith
+      作者：Jane Smith，发布日期：<time datetime="2017-10-04">2017 年 10 月 4 日</time>
     </p>
   </header>
   <p>我们生活在一个蓝绿相间的星球上，有许多东西还未曾见过。</p>
-  <p><a href="https://example.com/the-planet-earth/">继续阅读...</a></p>
+  <p><a href="https://example.com/the-planet-earth/">继续阅读……</a></p>
 </article>
 ```
 
