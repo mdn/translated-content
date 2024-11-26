@@ -110,8 +110,8 @@ export { name, draw, reportArea, reportPerimeter };
 
 你想使用模块的一些功能，那你就需要导入他们才能使用。最简单的就像下面这样的：
 
-```plain
-import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/basic-modules/modules/square.js';
+```js
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
 首先使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 关键字，然后列出用花括号括起的功能列表，再加上关键字 from，最后指定模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
