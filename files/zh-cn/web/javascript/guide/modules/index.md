@@ -135,7 +135,7 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 > [!NOTE]
 > 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
 
-由于已将这些功能导入到脚本文件，你可以像使用同一文件中定义的功能一样调用它们。以下是 `main.js` 中 import 语句后的内容示例。
+由于已将这些功能导入到脚本文件，你可以像使用同一文件中定义的功能一样使用它们。以下是 `main.js` 中 import 语句后的内容示例。
 
 ```js
 let myCanvas = create("myCanvas", document.body, 480, 320);
