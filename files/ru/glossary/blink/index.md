@@ -12,5 +12,5 @@ Blink - это браузерный движок с открытым исход�
 ### Основная информация
 
 - [Домашняя страница](http://www.chromium.org/blink) проекта Blink
-- [Blink](http://en.wikipedia.org/wiki/Blink_%28layout_engine%29) на Википедии
+- [Blink](<https://ru.wikipedia.org/wiki/Blink_(движок)>) в Википедии
 - [FAQ](http://www.chromium.org/blink/developer-faq) по Blink
