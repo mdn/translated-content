@@ -427,7 +427,7 @@ export default randomSquare;
 我们可以把 `export default` 放到函数前面，定义它为一个匿名函数，像这样：
 
 ```js
-export default function(ctx) {
+export default function (ctx) {
   // ...
 }
 ```
