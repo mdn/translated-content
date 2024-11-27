@@ -61,7 +61,7 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
 
 Сама колбэк-функция имеет те же параметры и возвращаемое значение что и метод `handleEvent()`; То есть колбэк принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.
 
-Например, колбэк обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:
+Например, колбэк обработчика событий, который может использоваться для обработки [`fullscreenchange`](/ru/docs/Web/Events/fullscreenchange) и [`fullscreenerror`](/ru/docs/Web/Events/fullscreenerror) может выглядеть так:
 
 ```js
 function eventHandler(event) {
@@ -109,7 +109,7 @@ someElement.addEventListener(
 );
 ```
 
-Здесь мы добавляем обработчик события {{event ("mouseup")}} элемента `someElement`. Для третьего параметра, если `passiveSupported` имеет значение `true`, мы указываем объект `options` с `passive: true`; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаём `false` как значение параметра `useCapture`.
+Здесь мы добавляем обработчик события [`mouseup`](/ru/docs/Web/Events/mouseup) элемента `someElement`. Для третьего параметра, если `passiveSupported` имеет значение `true`, мы указываем объект `options` с `passive: true`; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаём `false` как значение параметра `useCapture`.
 
 Вы можете использовать стороннюю библиотеку, такую как [Modernizr](https://modernizr.com/docs) или [Detect It](https://github.com/rafrex/detect-it), чтобы проверить поддержку необходимого свойства.
 
@@ -487,7 +487,7 @@ for (i = 0; i < els.length; i++) {
 
 ### Улучшение производительности прокрутки с помощью `passive: true`
 
-Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
+Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для [`touchstart`](/ru/docs/Web/Events/touchstart) и [`touchmove`](/ru/docs/Web/Events/touchmove) равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
 
 ```js
 /* Не позволяем обработчику блокировать показ страницы */
@@ -515,7 +515,7 @@ elem.addEventListener(
 );
 ```
 
-Установка `passive` не имеет значения для основного события {{event ("scroll")}}, поскольку его нельзя отменить, поэтому его обработчик в любом случае не может блокировать показ страницы.
+Установка `passive` не имеет значения для основного события [`scroll`](/ru/docs/Web/API/Document/scroll_event), поскольку его нельзя отменить, поэтому его обработчик в любом случае не может блокировать показ страницы.
 
 ## Спецификации
 

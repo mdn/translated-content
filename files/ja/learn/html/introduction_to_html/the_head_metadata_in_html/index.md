@@ -2,7 +2,7 @@
 title: ヘッド部には何が入る? HTML のメタデータ
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
-  sourceCommit: e63f0df8d70b3f889f92c9f4d56c998686450cf3
+  sourceCommit: 27a7cd721d227deb47b8b6837d8eba0a0ae06ffb
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}

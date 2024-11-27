@@ -11,7 +11,6 @@ slug: Glossary/Forbidden_header_name
 
 Запрещённые имена заголовков начинаются с `Proxy-` или `Sec-`, или содержат следующие имена:
 
-- `Accept-Charset`
 - `Accept-Encoding`
 - `Access-Control-Request-Headers`
 - `Access-Control-Request-Method`

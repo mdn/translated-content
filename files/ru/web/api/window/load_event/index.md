@@ -45,8 +45,8 @@ slug: Web/API/Window/load_event
 
 ## Связанные события
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded)
+- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
+- [`load`](/ru/docs/Web/API/Window/load_event)
+- [`beforeunload`](/ru/docs/Web/Events/beforeunload)
+- [`unload`](/ru/docs/Web/Events/unload)
