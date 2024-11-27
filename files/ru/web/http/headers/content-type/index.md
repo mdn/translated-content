@@ -40,7 +40,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Директивы
 
 - `media-type`
-  - : [MIME тип](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types) ресурса или данных.
+  - : [MIME тип](/ru/docs/Web/HTTP/MIME_types) ресурса или данных.
 - charset
   - : Используемая кодировка.
 - boundary
