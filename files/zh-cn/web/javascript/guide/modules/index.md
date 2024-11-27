@@ -847,7 +847,7 @@ import { b } from "./b.js";
 // -- b.js --
 import { a } from "./a.js";
 
-// 循环:
+// 循环：
 // a.js ───> b.js
 //  ^         │
 //  └─────────┘
