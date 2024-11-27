@@ -1,35 +1,34 @@
 ---
-title: "Location: hash"
+title: Location：hash 属性
 slug: Web/API/Location/hash
+l10n:
+  sourceCommit: a2847ff3788f224ffb4cdf05cb0139e07fde7533
 ---
 
 {{ APIRef("Location") }}
 
-{{domxref("Location")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 后面 URL 片段标识符。
+{{domxref("Location")}} 接口的 **`hash`** 属性返回一个字符串，其中包含一个 `'#'`，后跟 URL 的片段标识符——URL 试图指向的页面上的 ID。
 
-这里 fragment 不会经过[百分比编码](/zh-CN/docs/Glossary/percent-encoding)（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串，`""`
+该片段不是{{Glossary("Percent-encoding", "百分号编码")}}。如果 URL 没有片段标识符，则此属性的值为空字符串 `""`。
 
-## Syntax
+## 值
 
-```plain
-string = object.hash;
-object.hash = string;
-```
+字符串。
 
-## Examples
+## 示例
 
 ```html
-<a id="myAnchor" href="/zh-CN/docs/Location.href#Examples">Examples</a>
+<a id="myAnchor" href="/zh-CN/docs/Location.href#示例">示例</a>
 <script>
-  var anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // 返回'#Examples'
+  const anchor = document.getElementById("myAnchor");
+  console.log(anchor.hash); // '#示例'
 </script>
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
