@@ -18,7 +18,7 @@ l10n:
 `event.target` 属性可以用于实现**事件委托**。
 
 ```js
-// 列出列表
+// 创建列表
 const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
@@ -28,7 +28,7 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(evt) {
-  // evt.target 指向被点击 <li> 元素
+  // evt.target 指向被点击的 <li> 元素
   // 这与 evt.currentTarget 不同，后者在这个上下文中将指向父级 <ul>
   evt.target.style.visibility = "hidden";
 }
