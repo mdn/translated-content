@@ -2168,6 +2168,7 @@
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /zh-CN/docs/Web/CSS/calc()	/zh-CN/docs/Web/CSS/calc
 /zh-CN/docs/Web/CSS/clamp()	/zh-CN/docs/Web/CSS/clamp
+/zh-CN/docs/Web/CSS/color_value/color-contrast	/zh-CN/docs/Web/CSS/color_value
 /zh-CN/docs/Web/CSS/counter()	/zh-CN/docs/Web/CSS/counter
 /zh-CN/docs/Web/CSS/counters()	/zh-CN/docs/Web/CSS/counters
 /zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/cursor

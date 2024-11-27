@@ -935,6 +935,6 @@ arr2.find((elem, index, arr) => {
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
