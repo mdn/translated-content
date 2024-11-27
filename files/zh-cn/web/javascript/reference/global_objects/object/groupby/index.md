@@ -120,7 +120,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## 参见
 
 - [`core-js` 中 `Object.groupBy` 的 polyfill](https://github.com/zloirock/core-js#array-grouping)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}
 - {{jsxref("Map.groupBy()")}}

@@ -73,13 +73,13 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 As instâncias de `NumberFormat` herdam as seguntes propriedades de seu protótipo:
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Propriedades')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Propriedades') -->
 
 ### Methods
 
 As instâncias de `NumberFormat` herdam os seguintes métodos de seu protótipo:
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Métodos')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Métodos') -->
 
 ## Exemplos
 
@@ -165,4 +165,4 @@ console.log(
 
 ## Veja também
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'Veja_tambem')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'Veja_tambem') -->

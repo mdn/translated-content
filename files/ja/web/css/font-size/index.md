@@ -93,7 +93,7 @@ font-size: unset;
 
 `em` の値を使用すると、動的または計算されたフォントサイズが作成されます (歴史的には、`em` の単位は、ある書体の大文字の "M" の幅に由来していました)。この数値は、それが使われている要素の `font-size` プロパティの乗数として機能します。この例を見てください。
 
-```css
+```css live-sample___ems
 p {
   font-size: 2em;
 }
@@ -115,7 +115,7 @@ em = 要素に設定したい pixel 値 / 親要素のピクセル単位での�
 
 em 値が複合的であるということは、覚えておくべき重要な事実です。以下の HTML と CSS をご覧ください。
 
-```css
+```css live-sample___ems
 html {
   font-size: 100%;
 }
@@ -124,7 +124,7 @@ span {
 }
 ```
 
-```html
+```html live-sample___ems
 <div>
   <span>Outer <span>inner</span> outer</span>
 </div>
@@ -132,7 +132,7 @@ span {
 
 結果は以下のようになります。
 
-{{EmbedLiveSample("em", 400, 100)}}
+{{EmbedLiveSample("Ems", 400, 100)}}
 
 ブラウザーの既定の `font-size` が 16px と仮定すると、単語 "outer" は 25.6px で描画されますが、単語 "inner" は 40.96px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
 
@@ -142,7 +142,7 @@ span {
 
 以下の CSS は、先ほどの例とほぼ同じです。唯一の違いは、単位を `rem` に変更したことです。
 
-```css
+```css live-sample___rems
 html {
   font-size: 100%;
 }
@@ -153,11 +153,11 @@ span {
 
 この CSS を同じ HTML に適用すると、以下のようになります。
 
-```html
+```html live-sample___rems
 <span>Outer <span>inner</span> outer</span>
 ```
 
-{{EmbedLiveSample("rem", 400, 100)}}
+{{EmbedLiveSample("Rems", 400, 100)}}
 
 この例では、単語 "outer inner outer" はすべて 25.6px で表示されます（ブラウザーの `font-size` は既定値が 16px のままであるとした場合）。
 

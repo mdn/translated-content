@@ -13,8 +13,8 @@ l10n:
 
 vertical-align は、2 つの場面で使用することができます。
 
-- 包含する行ボックスの中で、インラインレベル要素のボックスの垂直方向の配置を決める場合。例えば、[テキストの行の中で画像の垂直位置を決める](#vertical_alignment_in_a_line_box)ために使用することができます。
-- [表のセルの内容](#vertical_alignment_in_a_table_cell)の垂直方向の配置を決める場合。
+- その中の行ボックスの中で、インラインレベル要素のボックスの垂直方向の配置を決める場合。例えば、[テキストの行の中で画像の垂直位置を決める](#行ボックス内での垂直方向の配置)ために使用することができます。
+- [表のセルの内容](#表のセル内での垂直方向の配置)の垂直方向の配置を決める場合。
 
 `vertical-align` はインライン要素、インラインブロック要素、表のセル要素だけに適用されることに注意してください。つまり、[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)の垂直方向の配置には使用できません。
 
@@ -46,7 +46,7 @@ vertical-align: revert-layer;
 vertical-align: unset;
 ```
 
-`vertical-align` プロパティは、以下の値のうち一つで指定します。
+`vertical-align` プロパティは、以下の値のうち 1 つで指定します。
 
 ### インライン要素用の値
 
@@ -65,7 +65,7 @@ vertical-align: unset;
 - `text-bottom`
   - : 要素の下端を親要素のフォントの下端に揃えます。
 - `middle`
-  - : 要素の中央を親要素の `baseline + x-height の半分` に揃えます。
+  - : 要素の中央を親要素のベースラインに x-height の半分を加えた位置に揃えます。
 - {{cssxref("&lt;length&gt;")}}
   - : 要素のベースラインを、親要素のベースラインの指定値分上に揃えます。負の値を使えます。
 - {{cssxref("&lt;percentage&gt;")}}
@@ -84,7 +84,7 @@ vertical-align: unset;
 
 ### 表のセル用の値
 
-- `baseline` (および `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
+- `baseline` （および `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`）
   - : セルのベースラインを、行内でベースライン揃えにされた他のすべてのセルのベースラインに揃えます。
 - `top`
   - : セルの上端のパディング辺を行の上端に揃えます。
@@ -109,31 +109,24 @@ vertical-align: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___basic_example
 <div>
-  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
-  a default alignment.
+  画像 <img src="frame_image.svg" alt="link" width="32" height="32" /> に既定の配置を設定しています。
 </div>
 <div>
-  An
-  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a text-top alignment.
+  画像 <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> に text-top の配置を設定しています。
 </div>
 <div>
-  An
-  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a text-bottom alignment.
+  画像 <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> に text-bottom の配置を設定しています。
 </div>
 <div>
-  An
-  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
-  image with a middle alignment.
+  画像 <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> に middle の配置を設定しています。
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___basic_example
 img.top {
   vertical-align: text-top;
 }
@@ -147,13 +140,13 @@ img.middle {
 
 #### 結果
 
-{{EmbedLiveSample("基本的な例")}}
+{{EmbedLiveSample("Basic_example")}}
 
 ### 行ボックス内での垂直方向の配置
 
 #### HTML
 
-```html-nolint
+```html-nolint live-sample___vertical_alignment_in_a_line_box
 <p>
 top:         <img style="vertical-align: top" src="star.png" alt="star"/>
 middle:      <img style="vertical-align: middle" src="star.png" alt="star"/>
@@ -172,7 +165,7 @@ text-bottom: <img style="vertical-align: text-bottom" src="star.png" alt="star"/
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___vertical_alignment_in_a_line_box
 #* {
   box-sizing: border-box;
 }
@@ -194,7 +187,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("行ボックス内での垂直方向の配置", 1200, 160)}}
+{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '100%', 160, "", "")}}
 
 ### 表のセル内での垂直方向の配置
 
@@ -207,7 +200,7 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___vertical_alignment_in_a_table_cell
 <table>
   <tr class="bottom">
     <td class="baseline">baseline</td>
@@ -225,7 +218,7 @@ p {
 
 #### CSS
 
-```css
+```css live-sample___vertical_alignment_in_a_table_cell
 table {
   margin-left: auto;
   margin-right: auto;
@@ -262,7 +255,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample("表のセル内での垂直方向の配置", 1200, 230)}}
+{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}
 
 ## 仕様書
 
@@ -274,7 +267,7 @@ td {
 
 ## 関連情報
 
-- [フレックスボックスの典型的な使用例の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
+- [フレックスボックスの典型的な用途の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#アイテムの中央揃え)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

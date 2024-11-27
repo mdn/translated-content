@@ -22,7 +22,7 @@ l10n:
 
 ### 用語集の用語
 
-- {{glossary("baseline/typography", "baseline")}}
+- {{glossary("baseline/typography", "ベースライン")}}
 
 ## 関連概念
 
