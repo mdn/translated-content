@@ -124,7 +124,7 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - [`TypedArray`：`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
 - [`String`: `length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)
