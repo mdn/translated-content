@@ -670,7 +670,7 @@ console.log("我需要做：\n%o\n当前进度为：%o\n", todos, progress);
 通过在引号前加上反斜杠，可以在字符串中插入引号，这就是*引号转义*。例如：
 
 ```js-nolint
-var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+const quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
 
