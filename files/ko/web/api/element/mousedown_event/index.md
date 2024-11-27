@@ -50,7 +50,7 @@ onmousedown = (event) => {};
   - : 이벤트의 세로축 좌표를 현재 레이어에 상대적인 값으로 반환합니다.
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : 마우스 이벤트 발생 시점에 <kbd>meta</kbd>가 눌려있었으면 `true`를 반환합니다.
-- {{domxref("MouseEvent.movementX")}} {{ReadOlyInline}}
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
   - : 가장 최근 {{domxref("Element/mousemove_event", "mousemove")}} 이벤트에 상대적인 마우스 포인터의 X 좌표입니다.
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
   - : 가장 최근 {{domxref("Element/mousemove_event", "mousemove")}} 이벤트에 상대적인 마우스 포인터의 Y 좌표입니다.

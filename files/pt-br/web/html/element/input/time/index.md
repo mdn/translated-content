@@ -43,7 +43,7 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}.</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event).</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
@@ -109,7 +109,7 @@ Mas antes, vamos dar uma conferida no HTML. Ele é bem simpless, contando com la
 </form>
 ```
 
-No código JavaScript, chamamos um método que monitora o evento {{event("input")}}, que é disparado sempre que o conteúdo de um elemento `<input>` muda. Toda vez que ele dispara, o conteúdo do `<span>` é substituído pelo novo valor do campo de horário.
+No código JavaScript, chamamos um método que monitora o evento [`input`](/pt-BR/docs/Web/API/Element/input_event), que é disparado sempre que o conteúdo de um elemento `<input>` muda. Toda vez que ele dispara, o conteúdo do `<span>` é substituído pelo novo valor do campo de horário.
 
 ```js
 var horaInicio = document.getElementById("horaInicio");

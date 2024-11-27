@@ -47,7 +47,7 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 ### 客户端 JavaScript 中的 API
 
-客户端 JavaScript 中有很多可用的 API。它们本身并属于 JavaScript 语言，却建立在核心 JavaScript 语言之上，为使用 JavaScript 代码提供额外的超强能力。它们通常分为两类：
+客户端 JavaScript 中有很多可用的 API。它们本身并不属于 JavaScript 语言，却建立在核心 JavaScript 语言之上，为使用 JavaScript 代码提供额外的超强能力。它们通常分为两类：
 
 - **浏览器 API** 内置于 Web 浏览器中，能从浏览器和电脑周边环境中提取数据，并用来做有用的复杂的事情。例如，[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 为在浏览器中处理音频提供了 JavaScript 结构——获取音轨、改变音量、应用特效等。在后台，浏览器实际上使用了一些复杂的低级代码（如 C++ 或 Rust）来进行实际的音频处理。但同样，这种复杂性已被应用程序接口抽象化。
 - **第三方 API** 缺省情况下不会内置于浏览器中，通常必须在 Web 中的某个地方获取代码和信息。例如，[Google Maps API](https://developers.google.com/maps/documentation/javascript) 使你能够执行诸如在网站上显示办公室的交互式地图之类的操作。它提供一系列特殊的结构，可以用来查询 Google 地图服务并返回特定信息。

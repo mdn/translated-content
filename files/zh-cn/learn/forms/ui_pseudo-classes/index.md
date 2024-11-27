@@ -454,11 +454,11 @@ HTML 的一个片段如下，注意其中的 readonly 属性：
 
 ```css
 :is(
-    input:read-only,
-    input:-moz-read-only,
-    textarea:-moz-read-only,
-    textarea:read-only
-  ) {
+  input:read-only,
+  input:-moz-read-only,
+  textarea:-moz-read-only,
+  textarea:read-only
+) {
   border: 0;
   box-shadow: none;
   background-color: white;

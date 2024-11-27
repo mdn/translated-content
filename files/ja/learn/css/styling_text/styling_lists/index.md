@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
+[リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
 
 | 前提知識: | 基本的なコンピューターリテラシー、HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ)、 CSS の基本 ([CSS 入門](/ja/docs/Learn/CSS/First_steps)を学ぶ)、[CSS のテキストとフォントの基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

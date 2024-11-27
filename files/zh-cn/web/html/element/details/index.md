@@ -34,7 +34,7 @@ slug: Web/HTML/Element/details
 
 ## 事件
 
-除了 HTML 元素支持的常规事件外，`<details>` 元素还支持 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，当 `<details>` 元素的状态在打开和关闭之间变化时，该事件会被派发到该元素。该事件是在状态发生变化*后*发送的，不过如果状态在浏览器派发该事件之前发生了多次变化，那么这些事件就会被合并，从而只发送一个。
+除了 HTML 元素支持的常规事件外，`<details>` 元素还支持 {{domxref("HTMLElement/toggle_event", "toggle")}} 事件，当 `<details>` 元素的状态在打开和关闭之间变化时，该事件会被派发到该元素。该事件是在状态发生变化*后*发送的，不过如果状态在浏览器派发该事件之前发生了多次变化，那么这些事件就会被合并，从而只发送一个。
 
 你可以为 `toggle` 事件使用一个事件监听器来检测小组件何时改变状态：
 
