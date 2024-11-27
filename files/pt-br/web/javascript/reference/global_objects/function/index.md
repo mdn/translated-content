@@ -41,11 +41,11 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 ### Propriedades
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods') -->
 
 ## `Function` instances
 

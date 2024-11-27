@@ -2,7 +2,7 @@
 title: cursor
 slug: Web/CSS/cursor
 l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
 {{CSSRef}}
@@ -58,14 +58,14 @@ cursor: unset;
 ### 値
 
 - `<url>` {{optional_inline}}
-  - : `url()` またはカンマ区切りのリスト `url(), url(), …` で画像の URL を指定します。複数の {{cssxref("url", "url()")}} は、一部のカーソル画像形式に対応していなかった場合の代替として設定できます。
+  - : `url()` またはカンマ区切りのリスト `url(), url(), …` で画像の URL を指定します。複数の {{cssxref("url_value", "&lt;url&gt;")}} は、一部のカーソル画像形式に対応していなかった場合の代替として設定できます。
     代替リストの最後には、キーワード値のいずれか 1 つ以上を指定*しなければなりません*。
 - `<x>`, `<y>` {{optional_inline}}
 
   - : 任意でホットスポットの x 座標と y 座標を指定します。これはカーソルが指している先の詳細な位置です。
 
     数値は画像ピクセル単位です。
-    これらは画像の左上隅（"`0 0`"に相当）からの相対座標であり、カーソル画像の境界でクランプされます。
+    これらは画像の左上隅（`0 0` に相当）からの相対座標であり、カーソル画像の境界でクランプされます。
     これらの値が指定されていない場合、ファイル自体から読み込まれることがあり、そうでない場合は画像の左上隅が既定値となります。
 
 - `keyword`
@@ -180,7 +180,7 @@ cursor: unset;
             <img src="no-drop.gif" alt="ポインターアイコンと不許可アイコン" />
           </td>
           <td>
-            現在の位置にアイテムがドロップできないことを示します。<br />[Firefox バグ 275173](https://bugzil.la/275173): Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
+            現在の位置にアイテムがドロップできないことを示します。<br /><a href="https://bugzil.la/275173">Firefox バグ 275173</a>: Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -205,7 +205,7 @@ cursor: unset;
           <td><code>all-scroll</code></td>
           <td><img alt="中くらいのドットとそれを囲む 4 つの三角形のアイコン" src="all-scroll.gif" /></td>
           <td>
-            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />[Firefox バグ 275174](https://bugzil.la/275174): Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
+            何かが任意の方向にスクロール (パン) 可能であることを示します。<br /><a href="https://bugzil.la/275174">Firefox バグ 275174</a>: Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
           </td>
         </tr>
         <tr style="cursor: col-resize">
@@ -389,4 +389,4 @@ iPadOS はトラックパッドやマウスなどのポインター機器に対�
 ## 関連情報
 
 - {{cssxref("pointer-events")}}
-- {{cssxref("url", "url()")}} 関数
+- {{cssxref("url_value", "&lt;url&gt;")}} 型

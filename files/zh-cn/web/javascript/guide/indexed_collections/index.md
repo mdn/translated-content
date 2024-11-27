@@ -1,5 +1,5 @@
 ---
-title: 索引集合类
+title: 索引集合
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 

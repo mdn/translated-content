@@ -23,7 +23,7 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", {
 });
 ```
 
-Как только вы создали экземпляр `EventSource`, вы можете начать получать сообщения с сервера, добавив обработчик события {{event("message")}} :
+Как только вы создали экземпляр `EventSource`, вы можете начать получать сообщения с сервера, добавив обработчик события [`message`](/ru/docs/Web/Events/message) :
 
 ```js
 evtSource.onmessage = function (event) {

@@ -576,7 +576,7 @@ GIF は単純な画像やアニメーションに適していますが、フル�
 ### ICO (Microsoft Windows icon)
 
 ICO (Microsoft Windows icon) ファイル形式は、 Windows システムのデスクトップアイコン用に Microsoft が設計しました。
-しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
+しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
 
 ICO ファイルには、複数のアイコンを含むことができ、それぞれの詳細が記載されたディレクトリーから始まります。
 ディレクトリーの後に、アイコンのデータが続きます。

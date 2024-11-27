@@ -34,7 +34,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

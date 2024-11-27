@@ -2,7 +2,7 @@
 title: ボックスモデル
 slug: Learn/CSS/Building_blocks/The_box_model
 l10n:
-  sourceCommit: cafb94fe8b20ea9f38db7910b7da1b13e29354b5
+  sourceCommit: 033285c99a8e1bc05b646ff19b70d2e8b86dff46
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -85,9 +85,47 @@ CSS のレイアウトのより詳しい学習をする段階では、 [`flex`](
 
 - ブロックレベルの段落があり、その中に 2 つの `<span>` 要素があります。通常、これらの要素は `inline` ですが、要素の 1 つに "block" のクラスがあり、`display: block` に設定しました。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1100)}}
+```html-nolint live-sample___block
+<p>これは段落です。短いものです。</p>
+<ul>
+  <li>アイテム 1</li>
+  <li>アイテム 2</li>
+  <li>アイテム 3</li>
+</ul>
+<p>
+  別の段落です。一部の<span class="block">単語</span>は <span>span 要素</span>で折り返されています。
+</p>
+```
 
-この次の例では、`inline` 要素の動作を確認できます。
+```css live-sample___block
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+  padding: 0.2em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: 0.2em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
+```
+
+{{EmbedLiveSample("block", "", "220px")}}
+
+次の例では、`inline` 要素の動作を確認できます。
 
 - 最初の段落の `<span>` は既定ではインラインのため、強制的に改行しません。
 
@@ -95,9 +133,47 @@ CSS のレイアウトのより詳しい学習をする段階では、 [`flex`](
 
 - `display: inline` に設定された 2 つの段落があります。インラインフレックスコンテナーと段落はすべて、（ブロックレベル要素として表示されるように）新しい行に分割されるのではなく、横に 1 行に並びます。
 
-**この例では、`display: inline` を `display: block` に、または`display: inline-flex` を `display: flex` に変更して、これらの表示モードの間を切り替えられます。**
+この例では、 `display: inline` を `display: block` に、または `display: inline-flex` を `display: flex` に変更して、これらの表示モードの間を切り替えられます。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1100)}}
+```html-nolint live-sample___inline
+<p>
+  これは段落です。一部の<span class="block">単語</span>は <span>span 要素</span>で折り返されています。
+</p>
+<ul>
+  <li>アイテム 1</li>
+  <li>アイテム 2</li>
+  <li>アイテム 3</li>
+</ul>
+<p class="inline">これは段落です。短いものです。</p>
+<p class="inline">これは他の段落です。これも短いものです。</p>
+```
+
+```css live-sample___inline
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+}
+
+span,
+li {
+  border: 2px solid blue;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.inline {
+  display: inline;
+}
+```
+
+{{EmbedLiveSample("inline")}}
 
 現時点で覚えておくべき重要な点は、`display` プロパティの値を変更すると、ボックスの外側の表示型がブロックかインラインかを変更できるため、レイアウト内の他の要素と一緒に表示する方法が変わることです。
 
@@ -192,10 +268,29 @@ html {
 ## ボックスモデルを試してみる
 
 以下の例では、2 つのボックスを見ることができます。両方とも `.box` のクラスを持ち、同じ `width`、`height`、`margin`、`border`、`padding` を提供します。唯一の違いは、2 番目のボックスが代替ボックスモデルを使用するように設定されていることです。
+2 番目のボックスのサイズを変更 (`.alternate` クラスに CSS を追加) して、幅と高さを最初のボックスに一致させることはできますか？
 
-**2 番目のボックスのサイズを変更 (`.alternate` クラスに CSS を追加) して、幅と高さを最初のボックスに一致させることはできますか？**
+```html-nolint live-sample___box-models
+<div class="box">これは標準ボックスモデルを使用しています。</div>
+<div class="box alternate">これは代替ボックスモデルを使用しています。</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
+```css live-sample___box-models
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+.alternate {
+  box-sizing: border-box;
+}
+```
+
+{{EmbedLiveSample("box-models", "", "400px")}}
 
 > **メモ:** [ここ](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
 
@@ -222,9 +317,34 @@ html {
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
 
-**下記の例では、マージンの値を変更してみて、マージンによってこの要素と格納する要素との間に空間が作成されたり除去されたり（負のマージンの場合）して、ボックスがどのように押しやられるかを確認してください。**
+下記の例では、マージンの値を変更してみて、マージンによってこの要素と格納する要素との間に空間が作成されたり除去されたり（負のマージンの場合）して、ボックスがどのように押しやられるかを確認してください。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 800)}}
+```html-nolint live-sample___margin
+<div class="container">
+  <div class="box">マージンを変更してみてください。</div>
+</div>
+```
+
+```css live-sample___margin
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+  height: 100px;
+  /* margin プロパティを変更してみてください */
+  margin-top: -40px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 4em;
+}
+```
+
+{{EmbedLiveSample("margin", "", "220px")}}
 
 #### マージンの相殺
 
@@ -236,9 +356,36 @@ html {
 
 以下の例には、2 つの段落があります。 上の段落には、50 ピクセルの `margin-bottom` があります。2 番目の段落の `margin-top` は 30 ピクセルです。マージンは一緒に折りたたまれているため、ボックス間の実際のマージンは 50 ピクセルであり、2 つのマージンの合計ではありません。
 
-**これをテストするには、第二段落の `margin-top` を 0 に設定します。2 つの段落間のマージンは変更されません。第一段落の `margin-bottom` に設定された 50 ピクセルを保持します。-10px に設定すると、全体のマージンが 40px になることがわかります。50px から差し引かれます。**
+これをテストするには、第 2 段落の `margin-top` を `0` に設定します。2 つの段落間のマージンは変更されません。第 1 段落の `margin-bottom` に設定された 50 ピクセルを保持します。 `-10px` に設定すると、全体のマージンが `40px` になることがわかります。 `50px` から差し引かれます。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
+```html-nolint live-sample___margin-collapse
+<div class="container">
+  <p class="one">これは段落 1 です。</p>
+  <p class="two">これは段落 2 です。</p>
+</div>
+```
+
+```css live-sample___margin-collapse
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+p {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+}
+.one {
+  margin-bottom: 50px;
+}
+
+.two {
+  margin-top: 30px;
+}
+```
+
+{{EmbedLiveSample("margin-collapse", "", "280px")}}
 
 マージンが相殺される場合と相殺されない場合を規定する多くのルールがあります。 詳細については、[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)に関する詳細ページをご覧ください。覚えておくべき主なことは、マージンの相殺は、マージンで空間を作成しているときに、期待した空間が得られなかった場合に起こることだということです。
 
@@ -280,7 +427,35 @@ html {
 
 下記の例では、様々な一括指定や個別指定を用いて境界線を作成しています。それらがどのように動作するのかを理解するために、様々なプロパティを試してみてください。境界のプロパティの MDN ページには、利用できる様々な境界のスタイル設定についての情報があります。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
+```html-nolint live-sample___border
+<div class="container">
+  <div class="box">境界線を変更してみてください。</div>
+</div>
+```
+
+```css live-sample___border
+body {
+  font-family: sans-serif;
+}
+.container {
+  margin: 40px;
+  padding: 20px;
+  border-top: 5px dotted green;
+  border-right: 1px solid black;
+  border-bottom: 20px double rgb(23 45 145);
+}
+
+.box {
+  padding: 20px;
+  background-color: lightgray;
+  border: 1px solid #333333;
+  border-top-style: dotted;
+  border-right-width: 20px;
+  border-bottom-color: hotpink;
+}
+```
+
+{{EmbedLiveSample("border", "", "220px")}}
 
 ### パディング
 
@@ -295,7 +470,33 @@ html {
 
 以下の例で `.box` クラスのパディングの値を変更すると、ボックスからみたテキストの開始位置が変わることがわかります。 `.container` クラスのパディングを変更することもできます。これにより、コンテナーとボックスの間に空間ができます。要素のパディングを変更することで、要素の境界線と要素の内部にあるものとの間に空間を作成することができます。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 700)}}
+```html-nolint live-sample___padding
+<div class="container">
+  <div class="box">パディングを変更してみてください。</div>
+</div>
+```
+
+```css live-sample___padding
+body {
+  font-family: sans-serif;
+}
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-left: 4em;
+}
+
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("padding", "", "220px")}}
 
 ## ボックスモデルとインラインボックス
 
@@ -303,7 +504,31 @@ html {
 
 以下の例では、段落内に `<span>` があり、`width`、`height`、`margin`、`border`、`padding` が適用されています。幅と高さが無視されていることがわかります。上下のマージン、パディング、境界は尊重されますが、他のコンテンツとインラインボックスとの位置関係は変わりません。パディングと境界は、段落内の他の語句に重なります。左右のパディング、マージン、境界は、他のコンテンツをボックスから遠ざけます。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
+```html-nolint live-sample___inline-box-model
+<p>
+  これは段落で、ここに段落内の <span>span</span> があります。 span はインライン要素で、 width と height を使用しません。
+</p>
+```
+
+```css live-sample___inline-box-model
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 200px;
+}
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 150px;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+```
+
+{{EmbedLiveSample("inline-box-model")}}
 
 ## display: inline-block を使用する
 
@@ -316,17 +541,78 @@ html {
 
 ただし、新しい行に分割されることはなく、コンテンツより大きくなるのは `width` および `height` プロパティを明示的に追加した場合のみです。
 
-**次の例では、`<span>` 要素に `display: inline-block` を追加しています。これを `display: block` 変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。**
+次の例では、`<span>` 要素に `display: inline-block` を追加しています。これを `display: block` 変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
+```html-nolint live-sample___inline-block
+<p>
+  これは段落で、ここに段落内の <span>span</span> があります。 span はインライン要素で、 width と height を使用しません。
+</p>
+```
+
+```css live-sample___inline-block
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 300px;
+}
+
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: lightblue;
+  border: 2px solid blue;
+  display: inline-block;
+}
+```
+
+{{EmbedLiveSample("inline-block", "", "240px")}}
 
 これが役立つのは、 `padding` を追加して、リンクのヒット領域を大きくしたい場合です。 `<a>` は `<span>` のようなインライン要素です。 `display: inline-block` を使用してパディングを設定できるようにし、ユーザーがリンクをクリックしやすくします。
 
 これはナビゲーションバーでとてもよく見られます。下記のナビゲーションはフレックスボックスを使って一列に表示されていますが、 `<a>` 要素にパディングを追加しています。パディングは `<ul>` 要素の境界線に重なって現れます。これは `<a>` がインライン要素だからです。
 
-**`display: inline-block` を `.links-list a` セレクターを使用してルールに追加すると、他の要素でパディングが尊重されるようになり、この課題が修正されたことがわかります。**
+`display: inline-block` を `.links-list a` セレクターを使用してルールに追加すると、他の要素でパディングが尊重されるようになり、この課題が修正されたことがわかります。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 700)}}
+```html-nolint live-sample___inline-block-nav
+<nav>
+  <ul class="links-list">
+    <li><a href="">リンク 1</a></li>
+    <li><a href="">リンク 2</a></li>
+    <li><a href="">リンク 3</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___inline-block-nav
+ul {
+  font-family: sans-serif;
+  display: flex;
+  list-style: none;
+  border: 1px solid #000;
+}
+
+li {
+  margin: 5px;
+}
+
+.links-list a {
+  background-color: rgb(179 57 81);
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.links-list a:hover {
+  background-color: rgb(66 28 40);
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("inline-block-nav")}}
 
 ## スキルテスト
 
