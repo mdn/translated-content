@@ -157,7 +157,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 [导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap) 允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如：下面导入映射中的 `imports` 键定义了一个 “模块路径映射” JSON 对象，其中属性名称可以用作模块路径，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的 [基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如：下面导入映射中的 `imports` 键定义了一个“模块路径映射”JSON 对象，其中属性名称可以用作模块路径，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的 [基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
