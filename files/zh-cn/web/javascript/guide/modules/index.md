@@ -975,6 +975,6 @@ export const b = 1;
 - [JavaScript 模块](https://v8.dev/features/modules) 在 v8.dev (2018)
 - [ES 模块：漫画版深度解析](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) 在 hacks.mozilla.org (2018)
 - [深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 在 hacks.mozilla.org (2015)
-- [探索 JS，第16章：模块](https://exploringjs.com/es6/ch_modules.html) 作者 Dr. Axel Rauschmayer
+- [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html) 作者 Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}
