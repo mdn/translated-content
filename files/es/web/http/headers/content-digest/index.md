@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.digest()
-slug: Web/HTTP/Headers/Digest
+slug: Web/HTTP/Headers/Content-Digest
+original_slug: Web/HTTP/Headers/Digest
 ---
 
 {{APIRef("Web Crypto API")}}
