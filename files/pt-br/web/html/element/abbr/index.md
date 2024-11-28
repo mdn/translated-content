@@ -34,7 +34,7 @@ Certamente não é necessário que todas as abreviações sejam marcadas usando 
 
 ### Considerações gramaticais
 
-Em idiomas com [número gramatical](https://pt.wikipedia.org/wiki/N%C3%BAmero_(gram%C3%A1tica)) (ou seja, idiomas em que o número de itens afeta a gramática de uma sentença), use o mesmo número gramatical no seu atributo `title` assim como no seu elemento `<abbr>`. Isso é especialmente importante em idiomas com mais de dois números, como o árabe, mas também é relevante em inglês.
+Em idiomas com [número gramatical](<https://pt.wikipedia.org/wiki/N%C3%BAmero_(gram%C3%A1tica)>) (ou seja, idiomas em que o número de itens afeta a gramática de uma sentença), use o mesmo número gramatical no seu atributo `title` assim como no seu elemento `<abbr>`. Isso é especialmente importante em idiomas com mais de dois números, como o árabe, mas também é relevante em inglês.
 
 ## Estilo padrão
 
