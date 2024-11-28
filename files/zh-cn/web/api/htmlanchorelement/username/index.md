@@ -20,7 +20,7 @@ l10n:
 ```js
 // 假设文档中含有这样的元素：<a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLAnchorElement">
 const anchor = document.getElementByID("myAnchor");
-anchor.username; // 返回 'anonymous'
+anchor.username; // 返回“anonymous”
 ```
 
 ## 规范
