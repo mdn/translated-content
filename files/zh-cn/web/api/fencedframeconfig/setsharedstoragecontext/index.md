@@ -2,7 +2,7 @@
 title: FencedFrameConfig：setSharedStorageContext() 方法
 slug: Web/API/FencedFrameConfig/setSharedStorageContext
 l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+  sourceCommit: 801556b40e45c735bf7f74e6db7d10864173e44a
 ---
 
 {{APIRef("Fenced Frame API")}}{{SeeCompatTable}}
@@ -18,7 +18,7 @@ setSharedStorageContext(context)
 ### 参数
 
 - `context`
-  - : 一个表示要传递到共享存储中的上下文数据的字符串。一旦设置，它将被存储在[内部配置](/zh-CN/docs/Web/API/FencedFrameConfig#internal_config)的 `storageContext` 属性中。
+  - : 一个表示要传递到共享存储中的上下文数据的字符串。一旦设置，它将被存储在 {{domxref("FencedFrameConfig")}} 实例的内部配置中。
 
 ### 返回值
 
