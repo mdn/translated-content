@@ -2,7 +2,7 @@
 title: HTMLLinkElement：disabled 属性
 slug: Web/API/HTMLLinkElement/disabled
 l10n:
-  sourceCommit: 3b5e12e7abd1204735c35aa760294c907e4159cb
+  sourceCommit: 7c68e9bbf680784817e6415336c7dde5ae96360a
 ---
 
 {{APIRef("HTML DOM")}}
@@ -33,7 +33,6 @@ const el = document.getElementById("el");
 console.log(el.disabled); // 输出：true
 
 // 设置 disabled 属性为 false 以启用样式表
-
 el.disabled = false;
 console.log(el.disabled); // 输出：false
 ```
