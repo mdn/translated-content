@@ -2,7 +2,7 @@
 title: Request：clone() 方法
 slug: Web/API/Request/clone
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 5045ba92ac9503b2a00ec85efae4b7d613a64b58
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
