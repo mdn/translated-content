@@ -47,7 +47,7 @@ Diseñar formularios es un paso importante cuando creas un sitio web o una aplic
 
 En este artículo, vamos a crear un formulario de contacto sencillo. Hagamos un esbozo.
 
-![Esbozo aproximado del formulario que vamos a construir](/files/4579/form-sketch-low.jpg)
+![Esbozo aproximado del formulario que vamos a construir](form-sketch-low.jpg)
 
 Nuestro formulario va a tener tres campos de texto y un botón. Le pedimos al usuario su nombre, su correo electrónico y el mensaje que desea enviar. Al pulsar el botón sus datos se enviarán a un servidor web.
 
