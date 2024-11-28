@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Request")}} 接口的 **`clone()`** 方法创建当前 `Request` 对象的副本。
 
-与底层 {{domxref("ReadableStream.tee")}} API 类似，`Response` 克隆的 {{domxref("Request.body", "body")}} 会以两个主体中*较快*的速率发出背压信号，而未读取的数据会在消费较慢的主体内部排队，并且不会受到任何限制或背压控制。从数据流中构造一个 `Request` 并将其 `clone` 时要小心。
+与底层 {{domxref("ReadableStream.tee")}} API 类似，克隆的 `Response` 的 {{domxref("Request.body", "body")}} 会根据两个主体中消费速度更快的消费者来触发背压，且未读取的数据会被内部排队到消费速度较慢的主体中，而不会设置任何限制或背压。从数据流中构造一个 `Request` 并将其 `clone` 时要小心。
 
 如果请求体已被使用，`clone()` 就会抛出 {{jsxref("TypeError")}}。实际上，`clone()` 存在的主要原因是允许主体对象的多次使用（当它们只能使用一次时）。
 
@@ -27,7 +27,7 @@ clone()
 
 ### 返回值
 
-{{domxref("Request")}} 对象，它是调用了 `clone()` 的 `Request` 的精确副本。
+{{domxref("Request")}} 对象，它是调用了 `clone()` 的 `Request` 的完整副本。
 
 ## 示例
 
