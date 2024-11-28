@@ -22,7 +22,7 @@ l10n:
 给定 HTML
 
 ```html
-<a id="myAnchor" href="/zh-CN/docs/Web/API/HTMLAnchorElement/hash#examples">
+<a id="myAnchor" href="/zh-CN/docs/Web/API/HTMLAnchorElement/hash#示例">
   示例
 </a>
 ```
@@ -31,7 +31,7 @@ l10n:
 
 ```js
 const anchor = document.getElementById("myAnchor");
-anchor.hash; // “#examples”
+anchor.hash; // “#%E7%A4%BA%E4%BE%8B”
 ```
 
 ## 规范

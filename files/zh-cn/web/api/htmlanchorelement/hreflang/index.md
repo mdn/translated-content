@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-{{domref("HTMLAnchorElement")}} 接口的 **`hreflang`** 属性是一个字符串，表示链接资源的语言。
+{{domxref("HTMLAnchorElement")}} 接口的 **`hreflang`** 属性是一个表示链接资源的语言的字符串。
 
 它反映 {{HTMLElement("a")}} 元素的 `hreflang` 属性，如果没有 `hreflang` 属性，则为空字符串（`""`）。
 
