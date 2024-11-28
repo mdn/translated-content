@@ -23,7 +23,7 @@ reportEvent(event)
   - : 表示要发送的数据的对象或字符串。
     - 对象值定义一个你想要发送的特定报告事件。必需属性如下：
       - `eventType`
-        - : 表示正在报告的事件类型的字符串 — 例如，你可能想要了解广告被点击的次数。这个字符串可以是任何相关的事件名称（例如 [`click`](/zh-CN/docs/Web/API/Element/click_event)）。这需要与[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 工作线程中关联的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 调用中指定的事件类型相匹配。
+        - : 表示正在报告的事件类型的字符串——例如，你可能想要了解广告被点击的次数。这个字符串可以是任何相关的事件名称（例如 [`click`](/zh-CN/docs/Web/API/Element/click_event)）。这需要与[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 工作线程中关联的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 调用中指定的事件类型相匹配。
       - `eventData`
         - : 表示要发送的数据的字符串。
       - `destination`
