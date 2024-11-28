@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-`DOMQuad` 是由四个 `DOMPoint` 组成的集合，用于定义一个任意四边形的四个角。返回 `DOMQuad` 使得 `getBoxQuads()` 即使在存在任意 2D 或 3D 变换的情况下也能返回准确的信息。它有一个方便的 `bounds` 属性，返回一个 `DOMRectReadOnly`，适用于那些只需要轴对齐的边界矩形的情况。
+`DOMQuad` 是由四个（定义了任意四边形的角的） `DOMPoint` 组成的集合。返回 `DOMQuad` 使得 `getBoxQuads()` 在存在任意 2D 或 3D 变换时，依然能返回准确的信息。它还具有一个方便的 `bounds` 属性来返回 `DOMRectReadOnly`，适用于那些只需要轴对齐的边界矩形的情况。
 
 ## 构造函数
 
@@ -17,13 +17,13 @@ l10n:
 ## 实例属性
 
 - {{domxref("DOMQuad.p1")}} {{ReadOnlyInline}}
-  - : 表示 `DOMQuad` 的边角的 {{domxref("DOMPoint")}}。
+  - : 表示 `DOMQuad` 的拐角的 {{domxref("DOMPoint")}}。
 - {{domxref("DOMQuad.p2")}} {{ReadOnlyInline}}
-  - : 表示 `DOMQuad` 的边角的 {{domxref("DOMPoint")}}。
+  - : 表示 `DOMQuad` 的拐角的 {{domxref("DOMPoint")}}。
 - {{domxref("DOMQuad.p3")}} {{ReadOnlyInline}}
-  - : 表示 `DOMQuad` 的边角的 {{domxref("DOMPoint")}}。
+  - : 表示 `DOMQuad` 的拐角的 {{domxref("DOMPoint")}}。
 - {{domxref("DOMQuad.p4")}} {{ReadOnlyInline}}
-  - : 表示 `DOMQuad` 的边角的 {{domxref("DOMPoint")}}。
+  - : 表示 `DOMQuad` 的拐角的 {{domxref("DOMPoint")}}。
 
 ## 实例方法
 
