@@ -23,7 +23,7 @@ anchor.host === "developer.mozilla.org";
 
 anchor.href = "https://developer.mozilla.org:443/zh-CN/HTMLAnchorElement";
 anchor.host === "developer.mozilla.org";
-// 不包含端口号，因为 443 是该协议（https）的默认端口。
+// 不包含端口号，因为 443 是该方案的默认端口
 
 anchor.href = "https://developer.mozilla.org:4097/zh-CN/HTMLAnchorElement";
 anchor.host === "developer.mozilla.org:4097";

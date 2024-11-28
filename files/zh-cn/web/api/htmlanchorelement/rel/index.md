@@ -18,7 +18,7 @@ l10n:
 ```js
 const anchors = document.getElementsByTagName("a");
 for (const anchor of anchors) {
-  alert(`Rel：${anchor.rel}`);
+  alert(`关系：${anchor.rel}`);
 }
 ```
 

@@ -13,7 +13,7 @@ l10n:
 
 参见 [归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API) 获取更多详细信息。
 
-> [!NOTE] > `<a>` 元素不能用作归因触发器，只能用作归因来源。
+> **备注：** `<a>` 元素不能用作归因触发器，只能用作归因来源。
 
 ## 值
 
@@ -71,4 +71,4 @@ aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 
 ## 参见
 
-- [Attribution Reporting API](/zh-CN/docs/Web/API/Attribution_Reporting_API).
+- [归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)

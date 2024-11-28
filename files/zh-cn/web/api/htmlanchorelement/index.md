@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement`** 接口表示超链接元素，并为操控此类元素的布局和呈现提供特殊的属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。此接口对应于 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 元素；不要与由 [`HTMLLinkElement`](/zh-CN/docs/Web/API/HTMLLinkElement) 表示的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素相混淆。
+**`HTMLAnchorElement`** 接口表示超链接元素，并为操控此类元素的布局和表现提供特殊的属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。此接口对应于 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 元素；不要与由 [`HTMLLinkElement`](/zh-CN/docs/Web/API/HTMLLinkElement) 表示的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素相混淆。
 
 {{InheritanceDiagram}}
 
@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
-  - : 以编程方式获取和设置 {{htmlelement("a")}} 元素上的 [`attributionsrc`](/zh-CN/docs/Web/HTML/Element/a#attributionsrc) 属性，反映该属性的值。`attributionsrc` 指定你希望浏览器发送一个 {{httpheader("Attribution-Reporting-Eligible")}} 标头。在服务器端，这用于触发在响应中发送一个 {{httpheader("Attribution-Reporting-Register-Source")}} 标头，以注册一个基于导航的归因来源。
+  - : 以编程方式获取和设置 {{htmlelement("a")}} 元素上的 [`attributionsrc`](/zh-CN/docs/Web/HTML/Element/a#attributionsrc) 属性，反映该属性的值。`attributionsrc` 指定你希望浏览器发送一个 {{httpheader("Attribution-Reporting-Eligible")}} 标头。在服务器端，这用于触发在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 标头，以注册基于导航的归因来源。
 - {{domxref("HTMLAnchorElement.download")}}
   - : 一个字符串，指示链接资源旨在被下载而不是在浏览器中显示。该值表示建议的文件名。如果名称不是底层操作系统的有效文件名，浏览器将对其进行适应调整。
 - {{domxref("HTMLAnchorElement.hash")}}
@@ -50,7 +50,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLAnchorElement.search")}}
   - : 一个字符串，表示引用 URL 中的搜索元素，如果存在，则包括前导问号 `?`。
 - {{domxref("HTMLAnchorElement.target")}}
-  - : 一个字符串，反映[`target`](/zh-CN/docs/Web/HTML/Element/a#target) HTML 属性，指示链接资源应在哪里显示。
+  - : 一个字符串，反映 [`target`](/zh-CN/docs/Web/HTML/Element/a#target) HTML 属性，指示链接资源应在哪里显示。
 - {{domxref("HTMLAnchorElement.text")}}
   - : 一个字符串，是 {{domxref("Node.textContent")}} 属性的同义词。
 - {{domxref("HTMLAnchorElement.type")}}

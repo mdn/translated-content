@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.origin`** 只读属性是一个字符串，包含所表示 URL 的源的 Unicode 序列化形式。
+**`HTMLAnchorElement.origin`** 只读属性是一个字符串，包含所表示 URL 的来源的 Unicode 序列化形式。
 
 即：
 

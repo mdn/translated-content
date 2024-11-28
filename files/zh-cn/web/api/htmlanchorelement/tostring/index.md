@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}}
 
-**`HTMLAnchorElement.toString()`** {{Glossary("序列化器")}} 方法返回一个包含完整 URL 的字符串。它是 {{domxref("HTMLAnchorElement.href")}} 的只读版本。
+**`HTMLAnchorElement.toString()`** {{Glossary("stringifier", "字符串化器")}}方法返回一个包含完整 URL 的字符串。它是 {{domxref("HTMLAnchorElement.href")}} 的只读版本。
 
 ## 语法
 

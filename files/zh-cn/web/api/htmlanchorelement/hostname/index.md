@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.hostname`** 属性是一个字符串，包含 URL 的域名。
+**`HTMLAnchorElement.hostname`** 属性是一个包含 URL 域名的字符串。
 
 ## 值
 
