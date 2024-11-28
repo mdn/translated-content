@@ -46,7 +46,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLAnchorElement.rel")}}
   - : 一个字符串，反映 [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML 属性，指定目标对象与链接对象的关系。
 - {{domxref("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domref("DOMTokenList")}}，反映 [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML 属性，作为令牌列表。
+  - : 返回一个 {{domxref("DOMTokenList")}}（以标记列表的形式），反映 [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML 属性。
 - {{domxref("HTMLAnchorElement.search")}}
   - : 一个字符串，表示引用 URL 中的搜索元素，如果存在，则包括前导问号 `?`。
 - {{domxref("HTMLAnchorElement.target")}}

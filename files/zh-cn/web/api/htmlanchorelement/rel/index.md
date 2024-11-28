@@ -32,5 +32,5 @@ for (const anchor of anchors) {
 
 ## 参见
 
-- 在 {{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上对应的属性是 {{domxref("HTMLAreaElement.rel")}} 和 {{domref("HTMLLinkElement.rel")}}。
-- 相同的列表，但以标记形式表示：{{domref("HTMLAnchorElement.relList")}}
+- 在 {{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上对应的属性是 {{domxref("HTMLAreaElement.rel")}} 和 {{domxref("HTMLLinkElement.rel")}}。
+- 相同的列表，但以标记形式表示：{{domxref("HTMLAnchorElement.relList")}}

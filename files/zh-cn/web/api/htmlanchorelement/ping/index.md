@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-{{domref("HTMLAnchorElement")}} 接口的 **`ping`** 属性是一个由空格分隔的 URL 列表。当链接被点击时，浏览器将向这些 URL 发送带有 PING 正文的 {{HTTPMethod("POST")}} 请求。
+{{domxref("HTMLAnchorElement")}} 接口的 **`ping`** 属性是一个由空格分隔的 URL 列表。当链接被点击时，浏览器将向这些 URL 发送带有 PING 正文的 {{HTTPMethod("POST")}} 请求。
 
 它反映 {{HTMLElement("a")}} 元素的 `ping` 属性。
 
