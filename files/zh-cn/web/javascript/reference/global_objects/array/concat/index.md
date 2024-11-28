@@ -142,7 +142,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## 参见
 
 - [在 `core-js` 中实现 `Array.prototype.concat` 的 Polyfill，修复其中的问题并实现新特性，例如支持 `Symbol.isConcatSpreadable`](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.unshift()")}}

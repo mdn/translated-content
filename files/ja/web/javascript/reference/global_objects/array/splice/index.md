@@ -97,7 +97,7 @@ const removed = myFish.splice(0, 0, "angel");
 // アイテムは削除されない
 ```
 
-### 0（ゼロ）個の要素を末尾の位置から削除っして、"sturgeon" を挿入
+### 0（ゼロ）個の要素を末尾の位置から削除して、"sturgeon" を挿入
 
 `splice(array.length, 0, ...elements)` は、{{jsxref("Array/push", "push()")}} のように配列の末尾に要素を挿入します。
 

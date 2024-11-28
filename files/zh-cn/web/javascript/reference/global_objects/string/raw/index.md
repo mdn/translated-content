@@ -126,4 +126,4 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 - [`core-js` 中 `String.raw` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [模版字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

@@ -22,8 +22,7 @@ slug: Web/HTML/Element/form
     > **备注：** **此属性已在 HTML5 中被移除并且不再被使用**。作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性。
 
 - `accept-charset`
-  - : 一个空格分隔或逗号分隔的列表，此列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串 `"UNKNOWN"`。此字符串指的是，和包含此表单元素的文档相同的编码。
-    在之前版本的 HTML 中，不同的字符编码可以用空格或逗号分隔。在 HTML5 中，只有空格可以允许作为分隔符。
+  - : 服务器接受的{{Glossary("character encoding", "字符编码")}}。规范允许使用单个不区分大小写的值——`"UTF-8"`，反应了这种编码的普遍性（历史上，可以以逗号分隔列表或空格分隔列表的形式指定多个字符编码）。
 - `autocapitalize` {{non-standard_inline}}
 
   - : 这是一个被 iOS Safari 使用的非标准属性。当用户在一些表单的文本后代控件中，输入/编辑一些文本值时，此属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。如果 `autocapitalize` 属性在某个单独的表单后代控件被指定的话，那么此单独的设定会覆盖原来表单范围内的 `autocapitalize` 设定。默认值为 `sentences`。可以选择的值如下：

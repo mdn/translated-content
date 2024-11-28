@@ -65,7 +65,7 @@ You are probably reading these words inside a web browser in this very moment (u
 
 ### HTTP
 
-Hypertext Transfer Protocol, or [HTTP](/ru/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
+Hypertext Transfer Protocol, or [HTTP](/ru/docs/Web/HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
 
 ```
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?

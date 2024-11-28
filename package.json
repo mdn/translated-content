@@ -31,14 +31,14 @@
     "cld": "^2.10.0",
     "fdir": "^6.4.2",
     "front-matter": "^4.0.2",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "lint-staged": "15.2.10",
     "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.14.0",
+    "markdownlint-cli2": "0.15.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
     "ora": "^8.1.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
   }

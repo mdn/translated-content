@@ -1362,6 +1362,7 @@
 /zh-CN/docs/Web/API/CSS/factory_functions	/zh-CN/docs/Web/API/CSS/factory_functions_static
 /zh-CN/docs/Web/API/CSS/supports	/zh-CN/docs/Web/API/CSS/supports_static
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
+/zh-CN/docs/Web/API/CSS_Counter_Styles	/zh-CN/docs/Web/CSS/CSS_counter_styles
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
 /zh-CN/docs/Web/API/CanvasGradient.addColorStop	/zh-CN/docs/Web/API/CanvasGradient/addColorStop
@@ -1593,6 +1594,7 @@
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
 /zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/Web/API/HTMLSlotElement
+/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event	/zh-CN/docs/Web/API/HTMLElement/toggle_event
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
@@ -2166,6 +2168,7 @@
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /zh-CN/docs/Web/CSS/calc()	/zh-CN/docs/Web/CSS/calc
 /zh-CN/docs/Web/CSS/clamp()	/zh-CN/docs/Web/CSS/clamp
+/zh-CN/docs/Web/CSS/color_value/color-contrast	/zh-CN/docs/Web/CSS/color_value
 /zh-CN/docs/Web/CSS/counter()	/zh-CN/docs/Web/CSS/counter
 /zh-CN/docs/Web/CSS/counters()	/zh-CN/docs/Web/CSS/counters
 /zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/cursor
@@ -2294,7 +2297,7 @@
 /zh-CN/docs/Web/Events/storage	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/Events/timeout	/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event
 /zh-CN/docs/Web/Events/timeupdate	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
-/zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event
+/zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLElement/toggle_event
 /zh-CN/docs/Web/Events/touchcancel	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/Events/touchend	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/Web/API/Element/touchmove_event
@@ -2444,6 +2447,7 @@
 /zh-CN/docs/Web/HTTP/HTTP请求方法	/zh-CN/docs/Web/HTTP/Methods
 /zh-CN/docs/Web/HTTP/HTTP请求方法/GET	/zh-CN/docs/Web/HTTP/Methods/GET
 /zh-CN/docs/Web/HTTP/HTTP请求方法/POST	/zh-CN/docs/Web/HTTP/Methods/POST
+/zh-CN/docs/Web/HTTP/Headers/Accept-Charset	/zh-CN/docs/Web/HTTP/Headers
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/base-uri	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri
@@ -2459,6 +2463,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
+/zh-CN/docs/Web/HTTP/Headers/Digest	/zh-CN/docs/Web/HTTP/Headers/Content-Digest
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/camera	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/camera
