@@ -33,18 +33,18 @@ outline-width: revert-layer;
 outline-width: unset;
 ```
 
-`outline-width` 属性的值可以是以下列出的任意一个。
+`outline-width` 属性的值可以是以下列表的任意一项。
 
 ### 值
 
 - {{cssxref("&lt;length&gt;")}}
   - : 轮廓的宽度指定为 `<length>`.
 - `thin`
-  - : 取决于用户代理。通常在桌面浏览器中等同于 `1px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `1px`（包括 Firefox）。
 - `medium`
-  - : 取决于用户代理。通常在桌面浏览器中等同于 `3px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `3px`（包括 Firefox）。
 - `thick`
-  - : 取决于用户代理。通常在桌面浏览器中等同于 `5px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `5px`（包括 Firefox）。
 
 ## 形式定义
 
