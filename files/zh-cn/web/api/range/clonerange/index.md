@@ -2,7 +2,7 @@
 title: Range：cloneRange() 方法
 slug: Web/API/Range/cloneRange
 l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+  sourceCommit: f9a4c8569397cb1c4f74026b385f07ff365bf64d
 ---
 
 {{ APIRef("DOM") }}
