@@ -1710,7 +1710,7 @@
 /es/docs/Web/API/PositionOptions	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/PushManager/supportedContentEncodings	/es/docs/Web/API/PushManager/supportedContentEncodings_static
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
-/es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
+/es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Content-Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/Web/API/URL/createObjectURL	/es/docs/Web/API/URL/createObjectURL_static
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -2216,6 +2216,7 @@
 /es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/es/docs/Web/HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x
+/es/docs/Web/HTTP/Headers/Digest	/es/docs/Web/HTTP/Headers/Content-Digest
 /es/docs/Web/HTTP/Peticiones_condicionales	/es/docs/Web/HTTP/Conditional_requests
 /es/docs/Web/HTTP/Sesión	/es/docs/Web/HTTP/Session
 /es/docs/Web/HTTP/Status/8080	/es/docs/Web/HTTP/Status/413

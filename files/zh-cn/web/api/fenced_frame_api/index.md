@@ -41,7 +41,7 @@ Web 上[隐私](/zh-CN/docs/Web/Privacy)和[安全](/zh-CN/docs/Web/Security)问
 
 如上所述，你不能通过常规脚本直接控制嵌入在 {{htmlelement("fencedframe")}} 中的内容。
 
-要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一个 {{domxref("FencedFrameConfig")}} 对象，然后通过 Javascript 将该对象设置为 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config")}} 属性
+要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一个 {{domxref("FencedFrameConfig")}} 对象，然后通过 Javascript 将该对象设置为 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config")}} 属性。
 
 以下示例从受保护的受众 API 的广告拍卖中获取一个 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示获胜的广告：
 

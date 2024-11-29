@@ -2,7 +2,7 @@
 title: Scroll container (スクロールコンテナー)
 slug: Glossary/Scroll_container
 l10n:
-  sourceCommit: 802d3ce8b2c6266a82fbfa09171ea3fecad2893f
+  sourceCommit: 2b112aef57df0649462db5d9f47d782a7aa1f25c
 ---
 
 {{GlossarySidebar}}

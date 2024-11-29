@@ -1,6 +1,8 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -44,6 +46,7 @@ border-bottom-left-radius: 0.5em 1em;
 border-bottom-left-radius: inherit;
 border-bottom-left-radius: initial;
 border-bottom-left-radius: revert;
+border-bottom-left-radius: revert-layer;
 border-bottom-left-radius: unset;
 ```
 
@@ -71,7 +74,7 @@ border-bottom-left-radius: unset;
 
 ## 例
 
-<h3 id="Arc_of_a_circle">円弧</h3>
+### 円弧
 
 単一の `<length>` 値は円弧を生成します。
 
@@ -111,7 +114,7 @@ div {
 
 {{EmbedLiveSample("Arc_of_an_ellipse")}}
 
-<h3 id="Square_element_with_percentage_radius">正方形の要素にパーセント値の半径</h3>
+### 正方形の要素にパーセント値の半径
 
 正方形の要素に単一の `<percentage>` 値を指定すると、円弧を生成します。
 
@@ -131,7 +134,7 @@ div {
 
 {{EmbedLiveSample("Square_element_with_percentage_radius")}}
 
-<h3 id="Non-square_element_with_percentage_radius">長方形の要素にパーセント値の半径</h3>
+### 長方形の要素にパーセント値の半径
 
 正方形ではない要素に単一の `<percentage>` 値を指定すると、楕円弧を生成します。
 

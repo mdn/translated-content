@@ -1,6 +1,8 @@
 ---
 title: font
 slug: Web/CSS/font
+l10n:
+  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
 {{CSSRef}}
@@ -24,6 +26,23 @@ slug: Web/CSS/font
 - {{cssxref("line-height")}}
 
 ## 構文
+
+```css-nolint
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
+
+/* font-size/line-height font-family */
+font: 1.2em/2 "Fira Sans", sans-serif;
+
+/* font-style font-weight font-size font-family */
+font: italic bold 1.2em "Fira Sans", sans-serif;
+
+/* font-stretch font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+/* システムフォント */
+font: caption;
+```
 
 `font` プロパティはシステムフォントを選択するための単一のキーワード、又は様々なフォント関連プロパティの一括指定のどちらかで指定することができます。
 
@@ -94,7 +113,7 @@ slug: Web/CSS/font
 
 ## 例
 
-<h3 id="Setting_font_properties">フォントのプロパティの設定</h3>
+### フォントのプロパティの設定
 
 ```css
 /* フォントの大きさを 12px に設定し、行の高さを 14px にする。
@@ -124,7 +143,7 @@ p {
 }
 ```
 
-<h3 id="Live_sample">ライブ例</h3>
+### ライブサンプル
 
 ```html hidden
 <p>
@@ -408,13 +427,13 @@ input {
   border-bottom-color: red;
 }
 
-.cf:before,
-.cf:after {
+.cf::before,
+.cf::after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.cf::after {
   clear: both;
 }
 
@@ -428,57 +447,45 @@ input {
 ```
 
 ```js hidden
-var textAreas = document.getElementsByClassName("curCss"),
-  shortText = "",
-  getCheckedValue,
-  setCss,
-  getProperties,
-  injectCss;
+const textAreas = document.getElementsByClassName("curCss");
 
-getProperties = function () {
-  shortText =
-    getCheckedValue("font_style") +
-    " " +
-    getCheckedValue("font_variant") +
-    " " +
-    getCheckedValue("font_weight") +
-    " " +
-    getCheckedValue("font_size") +
-    getCheckedValue("line_height") +
-    " " +
-    getCheckedValue("font_family");
+function getProperties() {
+  return (
+    `${getCheckedValue("font_style")} ` +
+    `${getCheckedValue("font_variant")} ` +
+    `${getCheckedValue("font_weight")} ` +
+    `${getCheckedValue("font_size")}` +
+    `${getCheckedValue("line_height")} ` +
+    `${getCheckedValue("font_family")}`
+  );
+}
 
-  return shortText;
-};
+function getCheckedValue(radioName) {
+  const radios = document.forms[0].elements[radioName];
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      const curElemName = `input_${radioName}`;
+      const curElem = document.getElementById(curElemName);
+      curElem.value = radios[i].value;
 
-getCheckedValue = function (radio_name) {
-  oRadio = document.forms[0].elements[radio_name];
-  for (var i = 0; i < oRadio.length; i++) {
-    if (oRadio[i].checked) {
-      var propInput = "input_" + radio_name,
-        curElemName = "input_" + radio_name,
-        curElem = document.getElementById(curElemName);
-      curElem.value = oRadio[i].value;
-
-      return oRadio[i].value;
+      return radios[i].value;
     }
   }
-};
+}
 
-setCss = function () {
-  getProperties();
-  injectCss(shortText);
-};
+function setCss() {
+  injectCss(getProperties());
+}
 
-injectCss = function (cssFragment) {
-  old = document.body.getElementsByTagName("style");
+function injectCss(cssFragment) {
+  const old = document.body.getElementsByTagName("style");
   if (old.length > 1) {
     old[1].parentElement.removeChild(old[1]);
   }
   css = document.createElement("style");
-  css.innerHTML = ".fontShortHand{font: " + cssFragment + "}";
+  css.textContent = `.fontShortHand{font: ${cssFragment}}`;
   document.body.appendChild(css);
-};
+}
 
 setCss();
 ```

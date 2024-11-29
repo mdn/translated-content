@@ -28,7 +28,7 @@ var animation = element.animate(keyframes, options);
 
       - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
 
-        {{Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+        <!-- TODO: page macro not supported: Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties") -->
 
 #### Opções Futuras
 

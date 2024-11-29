@@ -1,11 +1,13 @@
 ---
-title: HTMLAnchorElement.href
+title: HTMLAnchorElement：href 属性
 slug: Web/API/HTMLAnchorElement/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.href`** 属性是一个返回包含整个 URL 的字符串的 {{Glossary("stringifier")}}，且允许 href 被更新。
+**`HTMLAnchorElement.href`** 属性是一个{{Glossary("stringifier", "字符串化器")}}，它返回一个包含完整 URL 的字符串，并且允许更新 `href` 属性。
 
 ## 值
 
@@ -14,9 +16,9 @@ slug: Web/API/HTMLAnchorElement/href
 ## 示例
 
 ```js
-// 假设 <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 元素在文档内
+// 文档中有一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素
 const anchor = document.getElementById("myAnchor");
-anchor.href; // 返回 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
+anchor.href; // 返回“https://developer.mozilla.org/zh-CN/HTMLAnchorElement”
 ```
 
 ## 规范
@@ -29,4 +31,4 @@ anchor.href; // 返回 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
 
 ## 参见
 
-- 所属的 {{domxref("HTMLAnchorElement")}} 接口。
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

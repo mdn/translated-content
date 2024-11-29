@@ -14651,10 +14651,6 @@
     "modified": "2020-10-15T22:11:48.537Z",
     "contributors": ["mfuji09", "wbamberg", "silverskyvicto"]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2019-03-23T23:51:36.690Z",
-    "contributors": ["fscholz", "khalid32", "ethertank", "Potappo"]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2020-10-15T22:34:55.507Z",
     "contributors": ["Masaooooo"]
@@ -21550,10 +21546,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:28:37.603Z",
     "contributors": ["mfuji09", "tamura4278"]
-  },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T22:09:31.974Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:45.155Z",

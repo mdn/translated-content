@@ -5,7 +5,7 @@ slug: Web/API/Element/lostpointercapture_event
 
 {{ApiRef("HTML DOM")}}
 
-A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma {{event("Event_handlers", "event handler")}} que processa eventos {{event("lostpointercapture")}}.
+A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processa eventos [`lostpointercapture`](/pt-BR/docs/Web/Events/lostpointercapture).
 
 ## Sintaxe
 

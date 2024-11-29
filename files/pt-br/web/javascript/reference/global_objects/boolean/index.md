@@ -77,11 +77,11 @@ Todas instâncias `Boolean` herdam de {{jsxref("Boolean.prototype")}}. Assim com
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods') -->
 
 ## Exemplos
 

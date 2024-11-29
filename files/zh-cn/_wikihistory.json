@@ -15846,10 +15846,6 @@
       "jtyjty99999"
     ]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2020-10-15T22:09:40.955Z",
-    "contributors": ["usernameisMan"]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2019-03-18T21:36:53.168Z",
     "contributors": ["eiddie"]
@@ -22640,10 +22636,6 @@
     "modified": "2020-10-15T22:24:12.153Z",
     "contributors": ["xuhui98"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:50:53.082Z",
-    "contributors": ["shinken008", "Dorllen", "WayneCui", "xgqfrms-GitHub"]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-10-15T21:53:10.909Z",
     "contributors": [
@@ -22755,6 +22747,10 @@
   "Web/HTTP/Headers/Connection": {
     "modified": "2020-10-15T21:51:42.086Z",
     "contributors": ["zhuguibiao", "ujsxn", "shinyoo"]
+  },
+  "Web/HTTP/Headers/Content-Digest": {
+    "modified": "2020-10-15T22:22:30.332Z",
+    "contributors": ["Mulan"]
   },
   "Web/HTTP/Headers/Content-Disposition": {
     "modified": "2020-11-15T00:23:13.412Z",
@@ -22905,10 +22901,6 @@
   "Web/HTTP/Headers/Device-Memory": {
     "modified": "2020-10-15T22:27:14.967Z",
     "contributors": ["csliubo"]
-  },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:22:30.332Z",
-    "contributors": ["Mulan"]
   },
   "Web/HTTP/Headers/ETag": {
     "modified": "2020-10-15T21:54:16.091Z",
