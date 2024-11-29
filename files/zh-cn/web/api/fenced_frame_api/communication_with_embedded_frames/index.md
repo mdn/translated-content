@@ -19,7 +19,7 @@ l10n:
 
 ## 如何在嵌入器与 `<fencedframe>` 之间进行通信
 
-围栏框架（Fenced frames）旨在用于诸如通过[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 和 {{domxref("WindowSharedStorage.selectURL()")}} 选择并展示定向广告等场景。页面上的 `<fencedframe>` 与 `<fencedframe>` 外部的其他页面之间的通信是故意受到限制的，但存在一种嵌入器与共享存储工作线程之间的通信方法——{{domxref("FencedFrameConfig.setSharedStorageContext()")}}。
+围栏框架（Fenced frames）旨在用于诸如通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 和 {{domxref("WindowSharedStorage.selectURL()")}} 选择并展示定向广告等场景。页面上的 `<fencedframe>` 与 `<fencedframe>` 外部的其他页面之间的通信是故意受到限制的，但存在一种嵌入器与共享存储工作线程之间的通信方法——{{domxref("FencedFrameConfig.setSharedStorageContext()")}}。
 
 > [!NOTE]
 > 在同一个 `<fencedframe>` 树结构中，允许各框架之间进行通信。例如，根 `<fencedframe>` 可以向其自己树结构中的一个子 `<iframe>` 发送消息，而一个子 `<iframe>` 也可以向父 `<fencedframe>` 发送消息。
