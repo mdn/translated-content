@@ -1,6 +1,7 @@
 ---
 title: Window.updateCommands()
-slug: Web/API/Window/updateCommands
+slug: conflicting/Web/API/Window
+original_slug: Web/API/Window/updateCommands
 ---
 
 {{ ApiRef() }}{{Non-standard_header}}
