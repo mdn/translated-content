@@ -26,7 +26,7 @@ slug: Web/HTML/Element/dt
     <tr>
       <th scope="row">
         <a
-          href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC"
+          href="/ko/docs/Web/HTML/Content_categories"
           >콘텐츠 카테고리</a
         >
       </th>
@@ -35,11 +35,11 @@ slug: Web/HTML/Element/dt
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >. 단, {{htmlelement("header")}},
         {{htmlelement("footer")}}, 구획 콘텐츠, 제목 콘텐츠 자손은
-        불가능합니다.
+        불가능.
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/dt
       <td>
         여는 태그는 필수입니다. 바로 다음 요소가 {{htmlelement("dd")}}
         또는 <code>&#x3C;dt></code>거나, 자신이 부모의 마지막 자식이라면 닫는
-        태그는 생략할 수 있습니다.
+        태그 생략 가능.
       </td>
     </tr>
     <tr>
@@ -61,15 +61,15 @@ slug: Web/HTML/Element/dt
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/term_role'><code>term</code></a></td>
+      <td><a href='https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role'>해당 역할 없음</a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>없음</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"><code>listitem</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{domxref("HTMLElement")}} Gecko 1.9.2(Firefox 4)부터 Firefox는 이 요소에 대한 HTMLSpanElement 인터페이스를 구현함.</td>
     </tr>
   </tbody>
 </table>
