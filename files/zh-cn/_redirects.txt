@@ -1884,6 +1884,7 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
+/zh-CN/docs/Web/API/Window/updateCommands	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/Window/btoa
