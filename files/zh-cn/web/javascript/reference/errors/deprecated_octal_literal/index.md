@@ -51,4 +51,4 @@ SyntaxError: Decimal integer literals with a leading zero are forbidden in stric
 
 ## 参见
 
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#八进制)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#八进制)

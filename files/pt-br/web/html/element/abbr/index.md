@@ -12,7 +12,7 @@ O _Elemento HTML `<abbr>`_ (ou Elemento de Abreviação HTML) representa uma abr
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conteúdo palpável
 - _Conteúdo permitido_[Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de tag_ {{no_tag_omission}}
+- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos-pai permitidos_ Qualquer elemento que aceite como filho [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref("HTMLElement")}} Após o Gecko 1.9.2 (Firefox 3.6) (e incluindo ele), o Firefox implementou a interface {{domxref("HTMLSpanElement")}} para este elemento.
 

@@ -73,7 +73,7 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Exemplo
 
-{{page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example") -->
 
 ## Especificações
 

@@ -17,7 +17,7 @@ O **elemento HTML \<b>** representa um intervalo de texto estilísticamente dife
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
 - _Permitted content_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/pt-BR/docs/DOM/span) interface for
 

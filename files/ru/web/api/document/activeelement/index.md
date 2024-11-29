@@ -61,7 +61,7 @@ var curElement = document.activeElement;
   </head>
   <body onload="init()">
     <div>Выделите текст в одном из текстовых полей ниже:</div>
-    <form id="frm-example" action="#" accept-charset="utf-8">
+    <form>
       <textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
 Это текстовое поле 1:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
