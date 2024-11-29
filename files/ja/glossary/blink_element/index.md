@@ -11,9 +11,9 @@ l10n:
 
 ## 略史
 
-ウェブの黎明期（90年代前半から半ば）には、ウェブページをスタイリングするための機能はあまりありませんでした。[CSS](/ja/docs/Web/CSS) の仕様（バージョン1）が最初にリリースされたのは 1996 年で、一貫してブラウザーに採用されたのはずっと後のことでした。CSSが採用される以前、ブラウザーは特定のテキスト部分を目立たせ、ユーザーの注意を引くためにいくつかの機能を実験的に使っていました。`<blink>` もその一つで、初期バージョンの [Netscape Navigator](/ja/docs/Glossary/Netscape_Navigator) に導入されました。また、初期バージョンの [Internet Explorer's](/ja/docs/Glossary/Microsoft_Internet_Explorer) では {{htmlelement("marquee")}} という別のタグがありました。
+ウェブの黎明期（90 年代前半から半ば）には、ウェブページをスタイリングするための機能はあまりありませんでした。[CSS](/ja/docs/Web/CSS) の仕様（バージョン 1）が最初にリリースされたのは 1996 年で、一貫してブラウザーに採用されたのはずっと後のことでした。CSS が採用される以前、ブラウザーは特定のテキスト部分を目立たせ、ユーザーの注意を引くためにいくつかの機能を実験的に使っていました。`<blink>` もその一つで、初期バージョンの [Netscape Navigator](/ja/docs/Glossary/Netscape_Navigator) に導入されました。また、初期バージョンの [Internet Explorer's](/ja/docs/Glossary/Microsoft_Internet_Explorer) では {{htmlelement("marquee")}} という別のタグがありました。
 
-`<blink>` は、Netscapeのエンジニアである [Lou Montulli](https://ja.wikipedia.org/wiki/ルー・モントゥリ) と同僚たちがマウンテンビューのバーでしていた会話がきっかけで生まれたようです。彼が翌朝オフィスに出社すると、同僚のひとりが徹夜でその機能を実装していたことに気づきました（[詳しい話はこちら](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)）。
+`<blink>` は、 Netscape のエンジニアである [Lou Montulli](https://ja.wikipedia.org/wiki/ルー・モントゥリ) と同僚たちがマウンテンビューのバーでしていた会話がきっかけで生まれたようです。彼が翌朝オフィスに出社すると、同僚のひとりが徹夜でその機能を実装していたことに気づきました（[詳しい話はこちら](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)）。
 
 当初は人気を集めた `<blink>` ですが、乱用された結果、多くの人がこれを不快だと感じ、多くの批判を受けるようになりました。さらに重要なことは、可読性を低下させ、視覚障害者やてんかん、ADHD のような[認知障害](/ja/docs/Web/Accessibility/Cognitive_accessibility)のあるユーザーにとって特に問題となる可能性があることです。`<blink>` は、混乱を起こしたり、最悪の場合、[発作を引き起こす](/ja/docs/Web/Accessibility/Seizure_disorders)こともあります。
 
