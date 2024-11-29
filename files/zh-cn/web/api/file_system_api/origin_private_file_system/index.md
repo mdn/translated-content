@@ -194,4 +194,4 @@ accessHandle.truncate(4);
 
 ## 参见
 
-- web.dev 上的[源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)
+- web.developers.google.cn 上的[源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

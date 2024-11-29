@@ -143,6 +143,6 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 ## 参见
 
 - [W3C 介绍的同源策略](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [web.dev 介绍的同源策略](https://web.developers.google.cn/articles/same-origin-policy)
+- [web.developers.google.cn 介绍的同源策略](https://web.developers.google.cn/articles/same-origin-policy)
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}

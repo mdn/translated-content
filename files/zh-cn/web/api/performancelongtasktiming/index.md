@@ -7,7 +7,7 @@ slug: Web/API/PerformanceLongTaskTiming
 
 ## 目的
 
-*Long Tasks，*这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。
+_Long Tasks_，这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。
 
 阻塞主线程达 50 毫秒或以上的任务会导致以下问题：
 
