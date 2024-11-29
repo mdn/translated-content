@@ -30240,10 +30240,6 @@
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-03-23T23:51:36.690Z",
-    "contributors": ["fscholz", "khalid32", "ethertank", "Potappo"]
-  },
   "conflicting/Web/API/console": {
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": ["yumemi-kuwahara"]
