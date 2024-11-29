@@ -21,9 +21,9 @@ l10n:
 - {{domxref("Fence.getNestedConfigs", "getNestedConfigs()")}} {{Experimental_Inline}}
   - : 返回加载到当前 `<fencedframe>` 内部嵌入的 `<fencedframe>` 中的 {{domxref("FencedFrameConfig")}} 配置。
 - {{domxref("Fence.reportEvent", "reportEvent()")}} {{Experimental_Inline}}
-  - : 通过[信标](/zh-CN/docs/Web/API/Beacon_API)触发报告数据的提交，将数据发送到通过[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告的竞价结果。
+  - : 通过[信标](/zh-CN/docs/Web/API/Beacon_API)触发报告数据的提交，将数据发送到通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告的竞价结果。
 - {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} {{Experimental_Inline}}
-  - : 指定在 `<fencedframe>` 内部发生导航时将发送的事件数据。这些数据将通过自动信标发送到通过[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告竞价结果的报告数据。
+  - : 指定在 `<fencedframe>` 内部发生导航时将发送的事件数据。这些数据将通过自动信标发送到通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告竞价结果的报告数据。
 
 ## 示例
 
@@ -45,5 +45,5 @@ window.fence.reportEvent({
 
 ## 参见
 
-- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)

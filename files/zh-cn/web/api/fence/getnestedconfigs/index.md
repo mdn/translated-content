@@ -23,7 +23,7 @@ getNestedConfigs()
 
 `getNestedConfigs()` 有两个可能的返回值：
 
-- 如果当前 `<fencedframe>` 的配置是通过支持嵌套配置的 API（例如[受保护的受众](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)）创建的，则为一个包含 20 个 {{domxref("FencedFrameConfig")}} 对象的数组。在这 20 个配置中，前 N 个配置是通过 API 注册的，其余的是将导航到 `about:blank` 的填充配置，以便隐藏配置的数量并防止任何信息泄露。
+- 如果当前 `<fencedframe>` 的配置是通过支持嵌套配置的 API（例如[受保护的受众](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）创建的，则为一个包含 20 个 {{domxref("FencedFrameConfig")}} 对象的数组。在这 20 个配置中，前 N 个配置是通过 API 注册的，其余的是将导航到 `about:blank` 的填充配置，以便隐藏配置的数量并防止任何信息泄露。
 - 如果当前 `<fencedframe>` 的配置是通过不支持嵌套配置的 API（例如[共享存储](/zh-CN/docs/Web/API/Shared_Storage_API)）创建的，则为 `null`。
 
 ## 示例
@@ -49,5 +49,5 @@ frame.config = configs[0];
 
 ## 参见
 
-- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)
