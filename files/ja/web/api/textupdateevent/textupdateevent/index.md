@@ -2,7 +2,7 @@
 title: "TextUpdateEvent: TextUpdateEvent() コンストラクター"
 slug: Web/API/TextUpdateEvent/TextUpdateEvent
 l10n:
-  sourceCommit: a6f2a5b313727d983c369dec91c4c7418b1b4f74
+  sourceCommit: d03a0af8b255b1afb8a29ca38e3f136a0155eb00
 ---
 
 {{APIRef("TextUpdateEvent API")}}{{SeeCompatTable}}
