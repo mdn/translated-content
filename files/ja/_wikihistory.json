@@ -14651,10 +14651,6 @@
     "modified": "2020-10-15T22:11:48.537Z",
     "contributors": ["mfuji09", "wbamberg", "silverskyvicto"]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2019-03-23T23:51:36.690Z",
-    "contributors": ["fscholz", "khalid32", "ethertank", "Potappo"]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2020-10-15T22:34:55.507Z",
     "contributors": ["Masaooooo"]
@@ -30243,6 +30239,10 @@
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
+  },
+  "conflicting/Web/API/Window": {
+    "modified": "2019-03-23T23:51:36.690Z",
+    "contributors": ["fscholz", "khalid32", "ethertank", "Potappo"]
   },
   "conflicting/Web/API/console": {
     "modified": "2020-10-15T22:05:58.801Z",
