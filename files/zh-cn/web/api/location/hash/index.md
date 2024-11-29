@@ -21,7 +21,7 @@ l10n:
 <a id="myAnchor" href="/zh-CN/docs/Location.href#示例">示例</a>
 <script>
   const anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // '#示例'
+  console.log(anchor.hash); // '#%E7%A4%BA%E4%BE%8B'
 </script>
 ```
 
