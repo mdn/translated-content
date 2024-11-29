@@ -11,7 +11,7 @@ l10n:
 
 当链接元素的 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 时，`as` 属性必须有一个值，否则资源将不会被获取。它也可以应用于 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 的链接元素，但如果省略，将默认为 `script`。对于其他类型的链接元素，如 `rel="prefetch"`，则不应设置此属性。
 
-此属性反映 HTML [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素的 [`as` 属性](/zh-CN/docs/Web/HTML/Element/link#as) 的值。
+此属性反映 HTML [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素的 [`as` 属性](/zh-CN/docs/Web/HTML/Element/link#as)的值。
 
 ## 值
 
