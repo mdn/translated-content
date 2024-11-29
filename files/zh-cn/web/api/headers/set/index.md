@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Headers")}} 接口的 **`set()`** 方法为 `Headers` 对象中已存在的标头设置新值，或在标头不存在的情况下添加该标头。
 
-`set()` 和 {{domxref("Headers.append")}} 不同的是如果指定的标头已经存在且其可以接受多个值，`set()` 会使用新值覆盖已存在的值，而 {{domxref("Headers.append")}} 将新值追加到值集的末尾。
+`set()` 和 {{domxref("Headers.append")}} 的不同之初在于：如果指定的标头已经存在且其可以接受多个值，`set()` 会使用新值覆盖已存在的值，而 {{domxref("Headers.append")}} 将新值追加到值集的末尾。
 
 由于安全因素，某些标头只能被用户代理控制。这类标头包括{{Glossary("Forbidden_header_name", "禁止修改的标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
@@ -53,7 +53,7 @@ myHeaders.set("Accept-Encoding", "gzip");
 myHeaders.get("Accept-Encoding"); // 返回“gzip”
 ```
 
-如果你想要将新值追加到已有的值中（而部署覆盖它），那么你需要使用 {{domxref("Headers.append")}} 方法。
+如果你想要将新值追加到已有的值中（而不是覆盖它），那么你需要使用 {{domxref("Headers.append")}} 方法。
 
 ## 规范
 
