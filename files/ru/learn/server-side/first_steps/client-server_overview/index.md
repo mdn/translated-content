@@ -81,7 +81,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 - Мой браузер (`User-Agent`) — Mozilla Firefox (`Mozilla/5.0`).
 - Он может принимать информацию, упакованную в gzip (`Accept-Encoding: gzip`).
-- Он может принимать указанные кодировки (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) и языков (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
+- Он может принимать указанные языки (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
 - Строка `Referer` идентифицирует адрес веб-страницы, содержащей ссылку на этот ресурс (то есть источник оригинального запроса, `https://developer.mozilla.org/en-US/`).
 
 HTTP-запрос может также содержать body, но в данном случае этого нет.
