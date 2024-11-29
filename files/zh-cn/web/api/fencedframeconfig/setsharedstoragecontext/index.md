@@ -37,7 +37,7 @@ setSharedStorageContext(context)
 ```js
 const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
 
-// 你想要从嵌入器传递给共享存储 worklet 的数据
+// 你想要从嵌入方传递给共享存储 worklet 的数据
 frameConfig.setSharedStorageContext("some-event-id");
 
 const frame = document.createElement("fencedframe");
@@ -68,7 +68,7 @@ class ReportingOperation {
   convertEventPayloadToValue(info) { ... }
 
   async run(data) {
-    // 来自于嵌入器的数据
+    // 来自于嵌入方的数据
     const eventId = sharedStorage.context;
 
     // 来自于围栏框架的数据

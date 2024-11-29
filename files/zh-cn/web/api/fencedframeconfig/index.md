@@ -9,7 +9,7 @@ l10n:
 
 **`FencedFrameConfig`** 接口表示 {{htmlelement("fencedframe")}} 的导航，即其中将显示什么内容。
 
-`FencedFrameConfig` 对象无法通过 JavaScript 手动构造。它们由诸如 [受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 之类的来源返回，并被设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
+`FencedFrameConfig` 对象无法通过 JavaScript 手动构造。它们由诸如[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 之类的来源返回，并被设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
 
 `FencedFrameConfig` 对象实例具有一个公开的方法，但它也映射到包含无法从 JavaScript 访问的不透明属性的内部配置信息。这包括诸如加载内容的来源和用于广告目的的兴趣组等信息。这是围栏框架如何在尊重用户隐私的同时实现关键用例的关键所在。
 
@@ -26,7 +26,7 @@ l10n:
 
 要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一个 `FencedFrameConfig` 对象，然后设置为 `<fencedframe>` 的 `config` 属性值。
 
-以下示例从受保护的受众 API 的广告拍卖中获取一个 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示获胜的广告：
+以下示例从受保护的受众 API 的广告竞价中获取 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示竞价成功的广告：
 
 ```js
 const frameConfig = await navigator.runAdAuction({
@@ -39,11 +39,11 @@ frame.config = frameConfig;
 ```
 
 > [!NOTE]
-> 在调用 `runAdAuction()` 时，必须传入 `resolveToConfig: true` 以获得 `FencedFrameConfig` 对象。如果没有设置，则所得的 {{jsxref("Promise")}} 将兑现为一个 URN，该 URN 只能在 {{htmlelement("iframe")}} 中使用。
+> 在调用 `runAdAuction()` 时，必须传入 `resolveToConfig: true` 以获得 `FencedFrameConfig` 对象。如果没有设置，则所得的 {{jsxref("Promise")}} 将兑现为一个只能在 {{htmlelement("iframe")}} 中使用的 URN。
 
 ### 通过 `setSharedStorageContext()` 传递上下文数据
 
-你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation)来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
+你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入器传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
 
 在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)中。
 
@@ -52,7 +52,7 @@ frame.config = frameConfig;
 ```js
 const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
 
-// 你想要从嵌入器传递给共享存储 worklet 的数据
+// 你想要从嵌入方传递给共享存储 worklet 的数据
 frameConfig.setSharedStorageContext("some-event-id");
 
 const frame = document.createElement("fencedframe");
@@ -83,7 +83,7 @@ class ReportingOperation {
   convertEventPayloadToValue(info) { ... }
 
   async run(data) {
-    // 来自于嵌入器的数据
+    // 来自于嵌入方的数据
     const eventId = sharedStorage.context;
 
     // 来自于围栏框架的数据
