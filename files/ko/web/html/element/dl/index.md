@@ -152,7 +152,6 @@ HTML에서는 `<dl>` 요소의 각 이름-값 그룹을 `<div>` 요소로 감쌀
 
 용어의 들여쓰기를 수정하려면 [CSS](/ko/docs/Web/CSS) {{cssxref("margin")}} 속성을 사용하세요.
 
-
 ## 기술 요약
 
 <table class="properties">
