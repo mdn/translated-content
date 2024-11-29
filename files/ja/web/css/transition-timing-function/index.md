@@ -2,7 +2,7 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 2c49a844f820f191f98b13130e0075bbeed530f3
 ---
 
 {{CSSRef}}
@@ -15,7 +15,7 @@ l10n:
 
 この加速曲線は、トランジションが行われるプロパティごとに 1 つの {{cssxref("&lt;easing-function&gt;")}} を用いて定義されます。
 
-複数のタイミング関数を指定することができます。それぞれのタイミング関数は、 {{ cssxref("transition-property") }} で指定されたように対応するプロパティに適用され、 `transition-property` のリストとして振るまいます。指定されたタイミング関数が `transition-property` のリストより少ない場合は、ユーザーエージェントはリスト内の値をそれぞれのトランジションプロパティのうちの値になるまで繰り返してどの値が使用されるかを計算します。関数の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、 CSS の宣言として妥当です。
+複数のイージング関数を指定することができます。それぞれのイージング関数は、 {{ cssxref("transition-property") }} で指定されたように対応するプロパティに適用され、 `transition-property` のリストとして振るまいます。指定されたイージング関数が `transition-property` のリストより少ない場合は、ユーザーエージェントはリスト内の値をそれぞれのトランジションプロパティのうちの値になるまで繰り返してどの値が使用されるかを計算します。関数の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、 CSS の宣言として妥当です。
 
 ## 構文
 
@@ -41,7 +41,7 @@ transition-timing-function: steps(5, jump-both);
 transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
-/* 複数のタイミング関数 */
+/* 複数のイージング関数 */
 transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* グローバル値 */
