@@ -26,7 +26,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 ## 示例
 
-要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)）生成一个 `FencedFrameConfig` 对象，然后设置为 `<fencedframe>` 的 `config` 属性值。
+要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)）生成一个 `FencedFrameConfig` 对象，然后将其设置为 `<fencedframe>` 的 `config` 属性值。
 
 以下示例从受保护的受众 API 的广告拍卖中获取一个 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示获胜的广告：
 
