@@ -502,9 +502,9 @@ squareBtn.addEventListener("click", () => {
 
 ## 参见
 
-- [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- v8.dev 上的 [JavaScript 模块](https://v8.dev/features/modules)（2018）
+- hacks.mozilla.org 上的 [ES 模块：卡通化的深度探索](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)（2018）
+- hacks.mozilla.org 上的[深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)（2015）
+- [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html)，Axel Rauschmayer 博士
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

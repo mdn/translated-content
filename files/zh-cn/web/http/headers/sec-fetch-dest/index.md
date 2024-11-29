@@ -130,5 +130,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/articles/fetch-metadata) (web.dev)
-- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
+- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.developers.google.cn）
+- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/)（secmetadata.appspot.com）

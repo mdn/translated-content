@@ -229,4 +229,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [SameSite Cookie 说明](https://web.dev/articles/samesite-cookies-explained)（web.dev 博客）
+- [SameSite Cookie 说明](https://web.developers.google.cn/articles/samesite-cookies-explained)（web.developers.google.cn 博客）

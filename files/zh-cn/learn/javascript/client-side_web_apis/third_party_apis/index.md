@@ -34,7 +34,7 @@ l10n:
 
 ## 什么是第三方 API?
 
-第三方 API 是由第三方（通常是 Facebook、Twitter 或 Google 等公司）提供的 API，允许你通过 JavaScript 访问其功能，并在你自己的站点上使用它。最显著的一个示例就是运用 [Google 地图 API](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
+第三方 API 是由第三方（通常是 Facebook、Twitter 或 Google 等公司）提供的 API，允许你通过 JavaScript 访问其功能，并在你自己的站点上使用它。最显著的一个示例就是运用 [Google 地图 API](https://developers.google.cn/maps/) 在你的网页上展示自定义地图。
 
 让我们再来看看这个[简单的 Mapquest API 示例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)，并用它来说明第三方 API 接口与浏览器 API 接口的区别。
 
@@ -379,8 +379,8 @@ function displayResults(json) {
 
 我们还为你构建了另一个示例供你学习——请参阅我们的 [YouTube 视频搜索示例](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/)。这个示例使用了两个相关的 API：
 
-- [YouTube Data API](https://developers.google.com/youtube/v3/docs/) 搜索 YouTube 视频并返回结果。
-- [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) 在 IFrame 视频播放器中显示返回的视频示例，以便你可以观看它们。
+- [YouTube Data API](https://developers.google.cn/youtube/v3/docs/) 搜索 YouTube 视频并返回结果。
+- [YouTube IFrame Player API](https://developers.google.cn/youtube/iframe_api_reference) 在 IFrame 视频播放器中显示返回的视频示例，以便你可以观看它们。
 
 这个示例很有趣，因为它展示了两个相关的第三方 API 被一起使用来构建一个应用程序。第一个是一个 RESTful API，而第二个是一个更像 Mapquest 的 API（带有 API 相关的方法等）。值得一提的是，这两个 API 都需要将 JavaScript 库应用到页面中。RESTful API 有可用的函数来处理 HTTP 请求并返回结果。
 
@@ -388,7 +388,7 @@ function displayResults(json) {
 
 要运行它，你需要：
 
-- 阅读 [YouTube Data API 概述](https://developers.google.com/youtube/v3/getting-started)文档。
+- 阅读 [YouTube Data API 概述](https://developers.google.cn/youtube/v3/getting-started)文档。
 - 访问[启用的 API](https://console.cloud.google.com/apis/enabled)页面，并在 API 列表中确保 YouTube Data API v3 的状态为 ON。
 - 从 [Google Cloud](https://cloud.google.com/) 获取 API 密钥。
 - 在源代码中找到字符串 `ENTER-API-KEY-HERE`，并用你的 API 密钥替换它。

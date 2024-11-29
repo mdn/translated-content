@@ -445,5 +445,5 @@ async function registerPeriodicSync() {
 - web.dev 上的[介绍后台同步](https://developer.chrome.google.cn/blog/background-sync)（2017）
 - web.dev 上的[介绍后台获取](https://developer.chrome.google.cn/blog/background-fetch)（2022）
 - web.dev 上的[周期性后台同步 API](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)（2020）
-- web.dev 上的[通知](https://web.dev/explore/notifications)
-- web.dev 上的[具有离线流媒体的 PWA](https://web.dev/articles/pwa-with-offline-streaming)（2021）
+- web.dev 上的[通知](https://web.developers.google.cn/explore/notifications)
+- web.dev 上的[具有离线流媒体的 PWA](https://web.developers.google.cn/articles/pwa-with-offline-streaming)（2021）

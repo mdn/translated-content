@@ -85,4 +85,4 @@ navigator.userAgentData
 ## 参见
 
 - [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)
-- [迁移到用户代理客户端提示](https://web.dev/articles/migrate-to-ua-ch)
+- [迁移到用户代理客户端提示](https://web.developers.google.cn/articles/migrate-to-ua-ch)
