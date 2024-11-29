@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Fenced Frame API")}}{{SeeCompatTable}}
 
-{{domxref("FencedFrameConfig")}} 接口的 **`setSharedStorageContext()`** 方法用于将嵌入文档中的上下文数据传递到 `<fencedframe>` [共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)中。
+{{domxref("FencedFrameConfig")}} 接口的 **`setSharedStorageContext()`** 方法用于将嵌入文档中的上下文数据传递到 `<fencedframe>` [共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)中。
 
 ## 语法
 
@@ -28,9 +28,9 @@ setSharedStorageContext(context)
 
 ### 通过 `setSharedStorageContext()` 传递上下文数据
 
-你可以使用[隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入方传递的上下文数据传递给由[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
+你可以使用[隐私聚合 API](https://developers.google.cn/privacy-sandbox/private-advertising/private-aggregation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入方传递的上下文数据传递给由[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
 
-在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)中。
+在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)中。
 
 在嵌入页面中，我们将使用 `setSharedStorageContext()` 设置一个模拟事件 ID 作为共享存储上下文：
 
@@ -94,5 +94,5 @@ register('send-report', ReportingOperation);
 
 ## 参见
 
-- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)
