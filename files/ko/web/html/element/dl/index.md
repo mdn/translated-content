@@ -208,7 +208,6 @@ HTML에서는 `<dl>` 요소의 각 이름-값 그룹을 `<div>` 요소로 감쌀
   </tbody>
 </table>
 
-
 ## 명세
 
 {{Specifications}}
