@@ -43,27 +43,24 @@ modules/
 
 modules 目录下的两个模块的描述如下：
 
-- `canvas.js` — 包含与设置画布相关的功能：
+- `canvas.js`——包含与设置画布相关的功能：
 
-  - `create()` — 在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
+  - `create()`——在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
   - `createReportList()`——创建一个无序列表，并将其添加到指定的包装元素内，该列表可用于输出报告数据。返回列表的 ID。
 
-- `square.js` — 包含：
+- `square.js`——包含：
 
-  - `name` — 包含字符串 'square' 的常量。
-  - `draw()` — 在指定画布上绘制一个正方形，具有指定的大小，位置和颜色。返回包含正方形大小，位置和颜色的对象。
-  - `reportArea()` — 在给定长度的情况下，将正方形区域写入特定报告列表。
-  - `reportPerimeter()` — 在给定长度的情况下，将正方形的周长写入特定的报告列表。
-
-> [!NOTE]
-> 在原生 JavaScript 模块中，扩展名 `.mjs` 非常重要，因为使用 MIME-type 为 `javascript/esm` 来导入文件（其他的 JavaScript 兼容 MIME-type 像 `application/javascript` 也可以），它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type"。除此之外，`.mjs` 的扩展名很明了（比如这个就是一个模块，而不是一个传统 JavaScript 文件），还能够和其他工具互相适用。看这个 [Google's note for further details](https://v8.dev/features/modules#mjs)。
+  - `name`——包含字符串“square”的常量。
+  - `draw()`——在指定画布上绘制一个正方形，具有指定的大小，位置和颜色。返回包含正方形大小，位置和颜色的对象。
+  - `reportArea()`——在给定长度的情况下，将正方形区域写入特定报告列表。
+  - `reportPerimeter()`——在给定长度的情况下，将正方形的周长写入特定的报告列表。
 
 ### `.mjs` 与 `.js`
 
 纵观此文，我们使用 `.js` 扩展名的模块文件，但在其他一些文章中，你可能会看到 `.mjs` 扩展名的使用。[V8 推荐了这样的做法](https://v8.dev/features/modules#mjs)，比如有下列理由：
 
 - 比较清晰，这可以指出哪些文件是模块，哪些是常规的 JavaScript。
-- 这能保证你的模块可以被运行时环境和构建工具识别，比如 [Node.js](https://nodejs.org/api/esm.html#esm_enabling) 和 [Babel](https://babeljs.io/docs/en/options#sourcetype)。
+- 这能保证你的模块可以被运行时环境和构建工具识别，比如 [Node.js](https://nodejs.org/api/esm.html#esm_enabling) 和 [Babel](https://babeljs.io/docs/options#sourcetype)。
 
 但是我们决定继续使用 `.js` 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 `Content-Type` 标头，其应该包含 JavaScript 的 MIME 类型 `text/javascript`。如果没有这么做，你可能会得到一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type（服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 `.js` 文件的类型，但是 `.mjs` 还不行。已经可以正常响应 `.mjs` 的服务器有 [GitHub Pages](https://pages.github.com/) 和 Node.js 的 [`http-server`](https://github.com/http-party/http-server#readme)。
 
@@ -73,16 +70,16 @@ modules 目录下的两个模块的描述如下：
 
 如果你认为使用 `.mjs` 仅用于模块带来的清晰性非常重要，但不想引入上面描述的相应问题，你可以仅在开发过程中使用 `.mjs`，而在构建过程中将其转换为 `.js`。
 
-另注意：
+还值得注意的是：
 
-- 一些工具不支持 `.mjs`，比如 [TypeScript](https://www.typescriptlang.org/)。
+- 一些工具可能不支持 `.mjs`。
 - `<script type="module">` 属性用于指示引入的模块，你会在下面看到。
 
 ## 导出模块的功能
 
 为了获得模块的功能，要做的第一件事就是把它们导出来。这可以使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
 
-最简单的方法是把它（指上面的 export 语句）放到你想要导出的项前面，比如：
+最简单的方法是把 export 放到你想要导出的项前面，比如：
 
 ```js
 export const name = "square";
@@ -95,7 +92,7 @@ export function draw(ctx, length, x, y, color) {
 }
 ```
 
-你能够导出函数，`var`，`let`，`const`, 和等会会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
+你能够导出函数、`var`、`let`、`const` 和等会会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
 
 更方便的导出模块的方法是，在模块文件末尾使用一个 export 语句，以花括号括起来并用逗号分隔的形式列出所有需导出的功能。比如：
 
@@ -130,7 +127,7 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 你可以在 [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/basic-modules/main.js) 中看到这些。
 
 > [!NOTE]
-> 在某些模块系统中，模块的路径不是相对或绝对路径，并且没有文件扩展名，比如 `modules/square`。如果你定义了 [导入映射](#使用导入映射导入模块)，则可以在浏览器环境中使用这种语法。
+> 在某些模块系统中，模块的路径不是相对或绝对路径，并且没有文件扩展名，比如 `modules/square`。如果你定义了[导入映射](#使用导入映射导入模块)，则可以在浏览器环境中使用这种语法。
 
 因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中一样去使用它。下面展示的是在 `main.js` 中的 import 语句下面的内容：
 
@@ -144,20 +141,20 @@ reportPerimeter(square1.length, reportList);
 ```
 
 > [!NOTE]
-> 导入的值是被导出的功能的只读视图。类似于 `const` 变量，你不能重新分配导入的变量，但你仍然可以修改对象值的属性。只有模块导出它才能重新分配值。查看 [`import` 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改) 了解更多信息。
+> 导入的值是被导出的功能的只读视图。类似于 `const` 变量，你不能重新分配导入的变量，但你仍然可以修改对象值的属性。只有模块导出它才能重新分配值。查看 [`import` 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)了解更多信息。
 
 ## 使用导入映射导入模块
 
-上面我们看到浏览器如何使用模块路径导入模块，这个路径可以是绝对 URL，或者是使用文档的 [基础 URL](/zh-CN/docs/Web/HTML/Element/base) 解析的相对 URL：
+上面我们看到浏览器如何使用模块路径导入模块，这个路径可以是绝对 URL，或者是使用文档的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 解析的相对 URL：
 
 ```js
 import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap) 允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
+[导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如：下面导入映射中的 `imports` 键定义了一个“模块路径映射”JSON 对象，其中属性名称可以用作模块路径，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的 [基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如：下面导入映射中的 `imports` 键定义了一个“模块路径映射”JSON 对象，其中属性名称可以用作模块路径，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
@@ -173,7 +170,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在工作线程或工作集上下文中应用导入映射。<!-- https://github.com/WICG/import-maps/issues/2 -->
+导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在工作线程或工作集上下文中应用导入映射。
 
 通过这个映射，你现在可以使用上面的属性名称作为模块路径。如果模块路径上没有尾部斜杠，那么整个模块路径将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
 
@@ -199,7 +196,7 @@ import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/
 
 以下章节详细介绍了上述的各种功能。
 
-### 功能检测
+### 特性检测
 
 你可以使用 [`HTMLScriptElement.supports()`](/zh-CN/docs/Web/API/HTMLScriptElement/supports_static) 静态方法（它本身也得到了广泛支持）来检查是否支持导入映射：
 
@@ -211,7 +208,7 @@ if (HTMLScriptElement.supports?.("importmap")) {
 
 ### 以裸名称导入模块
 
-在一些 JavaScript 环境中，例如 Node.js，你可以使用裸名称作为模块路径。这是因为环境可以将模块名称解析到文件系统中的标准位置。例如，你可以使用以下语法来导入 "square" 模块。
+在一些 JavaScript 环境中，例如 Node.js，你可以使用裸名称作为模块路径。这是因为环境可以将模块名称解析到文件系统中的标准位置。例如，你可以使用以下语法来导入“square”模块。
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "square";
@@ -239,7 +236,7 @@ import { name as squareName, draw } from "square";
 
 ### 重映射模块路径
 
-模块路径映射条目，其中说明符键和其关联值都带有尾部斜杠 (`/`)，可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟 "包和模块"，例如你在 Node 生态系统中可能看到的那样。
+模块路径映射条目，其中说明符键和其关联值都带有尾部斜杠（`/`），可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟 "包和模块"，例如你在 Node 生态系统中可能看到的那样。
 
 > [!NOTE]
 > 尾部 `/` 表示模块路径键可以作为模块路径的一部分进行替换。如果没有这个，浏览器将只匹配（并替换）整个模块路径键。
@@ -257,7 +254,7 @@ import { name as squareName, draw } from "square";
 }
 ```
 
-有了这个映射，你可以使用裸名称导入整个 "包"，并使用路径映射导入其中的模块：
+有了这个映射，你可以使用裸名称导入整个“包”，并使用路径映射导入其中的模块：
 
 ```js
 import _ from "lodash";
@@ -379,7 +376,7 @@ document.adoptedStyleSheets = [styles];
 
 - 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
 - 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用严格模式。
-- 加载一个模块脚本时不需要使用 `defer` 属性 (see [`<script>` attributes](/zh-CN/docs/Web/HTML/Element/script#Attributes)) 模块会自动延迟加载。
+- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Element/script#Attributes)）模块会自动延迟加载。
 - 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在开发者工具中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
 模块定义的变量是模块范围内的，除非明确附加到全局对象。另一方面，全局定义的变量在模块内是可用的。例如，给定以下代码：
