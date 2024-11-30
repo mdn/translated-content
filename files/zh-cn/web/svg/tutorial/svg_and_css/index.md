@@ -408,7 +408,6 @@ svg {
     fill: pink;
     stroke: none;
   }
-
 </details>
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
