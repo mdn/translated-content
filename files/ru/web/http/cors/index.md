@@ -36,7 +36,7 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 
 ## Обзор функциональности
 
-Стандарт Cross-Origin Resource Sharing работает с помощью добавления новых [HTTP-заголовков](/ru/docs/Web/HTTP/Headers), которые позволяют серверам описывать набор источников, которым разрешено читать информацию, запрашиваемую web-браузером. В частности, для методов HTTP-запросов, которые могут привести к побочным эффектам над данными сервера (в частности, для HTTP методов, отличных от {{HTTPMethod("GET")}} или для {{HTTPMethod("POST")}} запросов, использующих определённые [MIME-](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)типы), спецификация требует, чтобы браузеры "предпроверяли" запрос, запрашивая поддерживающие методы с сервера с помощью метода HTTP-запроса {{HTTPMethod("OPTIONS")}} и затем, поверх "подтверждения" с сервера, отсылали фактический запрос с фактическим методом HTTP-запроса. Сервера также могут оповещать клиентов должны ли "полномочия" (включая [Cookies](/ru/docs/Web/HTTP/Cookies) и HTTP Authentication данные) быть отправлены с запросом.
+Стандарт Cross-Origin Resource Sharing работает с помощью добавления новых [HTTP-заголовков](/ru/docs/Web/HTTP/Headers), которые позволяют серверам описывать набор источников, которым разрешено читать информацию, запрашиваемую web-браузером. В частности, для методов HTTP-запросов, которые могут привести к побочным эффектам над данными сервера (в частности, для HTTP методов, отличных от {{HTTPMethod("GET")}} или для {{HTTPMethod("POST")}} запросов, использующих определённые [MIME-](/ru/docs/Web/HTTP/MIME_types)типы), спецификация требует, чтобы браузеры "предпроверяли" запрос, запрашивая поддерживающие методы с сервера с помощью метода HTTP-запроса {{HTTPMethod("OPTIONS")}} и затем, поверх "подтверждения" с сервера, отсылали фактический запрос с фактическим методом HTTP-запроса. Сервера также могут оповещать клиентов должны ли "полномочия" (включая [Cookies](/ru/docs/Web/HTTP/Cookies) и HTTP Authentication данные) быть отправлены с запросом.
 
 Следующая секция описывает сценарии, а также предоставляет анализ использования HTTP-заголовков.
 
@@ -106,7 +106,6 @@ User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 Referer: http://foo.example/examples/access-control/simpleXSInvocation.html
 Origin: http://foo.example
@@ -205,7 +204,6 @@ User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 Origin: http://foo.example
 Access-Control-Request-Method: POST
@@ -236,7 +234,6 @@ User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 X-PINGOTHER: pingpong
 Content-Type: text/xml; charset=UTF-8
@@ -342,7 +339,6 @@ User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 Referer: http://foo.example/examples/credential.html
 Origin: http://foo.example

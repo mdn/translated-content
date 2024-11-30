@@ -1884,6 +1884,7 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
+/zh-CN/docs/Web/API/Window/updateCommands	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/Window/btoa
@@ -2168,6 +2169,7 @@
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /zh-CN/docs/Web/CSS/calc()	/zh-CN/docs/Web/CSS/calc
 /zh-CN/docs/Web/CSS/clamp()	/zh-CN/docs/Web/CSS/clamp
+/zh-CN/docs/Web/CSS/color_value/color-contrast	/zh-CN/docs/Web/CSS/color_value
 /zh-CN/docs/Web/CSS/counter()	/zh-CN/docs/Web/CSS/counter
 /zh-CN/docs/Web/CSS/counters()	/zh-CN/docs/Web/CSS/counters
 /zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/cursor
@@ -2462,6 +2464,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
+/zh-CN/docs/Web/HTTP/Headers/Digest	/zh-CN/docs/Web/HTTP/Headers/Content-Digest
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/camera	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/camera

@@ -2,7 +2,7 @@
 title: グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 l10n:
-  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
+  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
 ---
 
 {{CSSRef}}
@@ -14,6 +14,9 @@ l10n:
 アイテムに配置情報を与えない場合は、アイテムはグリッド上に配置され、各グリッドセルに 1 つずつ配置されます。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -51,7 +54,7 @@ l10n:
 </div>
 ```
 
-{{ EmbedLiveSample('Default_placement', '500', '230') }}
+{{EmbedLiveSample('Default_placement')}}
 
 ## 自動配置の既定のルール
 
@@ -64,6 +67,9 @@ l10n:
 しかし、`grid-auto-rows` プロパティを使用することで、これらの行の大きさを制御することができます。例えば、すべての作成された行を 100 ピクセルの高さにするには、次のように使います。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -102,13 +108,16 @@ l10n:
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}
+{{EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '230')}}
 
 ### minmax() を使用した行の大きさの指定
 
 {{cssxref("minmax","minmax()")}} を {{cssxref("grid-auto-rows")}} の値に使用すると、最小サイズでありながら、コンテンツの高さに合わせて成長する行を作成することができます。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -128,14 +137,13 @@ l10n:
 }
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>
   <div>
-    Four <br />This cell <br />Has extra <br />content. <br />Max is auto
-    <br />so the row expands.
+    Four <br />このセルには追加のコンテンツがあります。<br />最大値は auto なので、行が広がります。
   </div>
   <div>Five</div>
 </div>
@@ -150,13 +158,16 @@ l10n:
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}
+{{EmbedLiveSample('Sizing_rows_using_minmax', '500', '330')}}
 
 ### トラックリストを使用した行の高さの指定
 
 また、トラックリストを渡すこともでき、これは繰り返されます。次のトラックリストでは、最初の暗黙の行トラックを 100 ピクセル、2 番目を `200px` として作成します。これは、暗黙のグリッドに内容物が追加される限り、継続されます。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -198,7 +209,7 @@ l10n:
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}
+{{EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450')}}
 
 ### 列ごとの自動配置
 
@@ -217,6 +228,9 @@ l10n:
 ```
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -249,7 +263,7 @@ l10n:
 </div>
 ```
 
-{{ EmbedLiveSample('Auto-placement_by_column', '500', '700') }}
+{{EmbedLiveSample('Auto-placement_by_column', '500', '650')}}
 
 ## 自動配置アイテムの順序
 
@@ -264,6 +278,9 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 グリッドはまず、位置を指定したアイテムを配置します。以下の例では、 12 個のグリッドアイテムがあります。アイテム 2 とアイテム 5 は、グリッド上にラインベースで配置されています。これらのアイテムが配置されると、他のアイテムが自動的にスペースに配置されるのがわかります。自動配置されたアイテムは、 DOM順に配置されたアイテムの前に配置され、前に配置されたアイテムの位置より後に開始されることはありません。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -317,7 +334,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 }
 ```
 
-{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}
+{{EmbedLiveSample('Items_with_placement_properties', '500', '500')}}
 
 ### 複数のトラックにまたがるアイテムの扱い
 
@@ -326,6 +343,9 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 グリッドに隙間ができると、自動配置されたアイテムがトラックに入らない場合、アイテムが入るスペースが見つかるまで次の行に移動するのがわかります。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -383,7 +403,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 }
 ```
 
-{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}
+{{EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800')}}
 
 ### 溝を埋める
 
@@ -394,6 +414,9 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 こうしておくと、グリッドは隙間を埋め戻します。グリッド内を移動すると、以前と同じように隙間を残しますが、前の隙間に入るアイテムが見つかると、それをピックアップして DOM 順から外して隙間に入れます。グリッドの他の並べ替えと同様に、これは論理的な順序を変更するものではありません。例えば、タブの順序は文書の順序に従います。グリッドレイアウトのアクセシビリティの問題については[グリッドレイアウトとアクセシビリティガイド](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)を参照してください。
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -452,7 +475,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 }
 ```
 
-{{ EmbedLiveSample('Filling_in_the_gaps', '500', '730') }}
+{{EmbedLiveSample('Filling_in_the_gaps', '500', '730')}}
 
 ### 無名のグリッドアイテム
 
@@ -474,11 +497,88 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 
 この `grid-auto-flow: dense` の行を削除してみると、内容が並べなおされてレイアウトに隙間ができるのがわかります。
 
-{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
+```html live-sample___autoplacement
+<ul class="wrapper">
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+</ul>
+```
+
+```css hidden live-sample___autoplacement
+body {
+  font: 1.2em sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  list-style: none;
+  margin: 1em auto;
+  padding: 0;
+  max-width: 800px;
+}
+.wrapper li {
+  border: 1px solid #ccc;
+}
+
+.wrapper li img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+```
+
+```css live-sample___autoplacement
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.wrapper li.landscape {
+  grid-column-end: span 2;
+}
+```
+
+{{EmbedLiveSample("autoplacement", "", "500px")}}
 
 自動配置は、論理的な順序を持つインターフェイスアイテムを配置する際にも役立ちます。その例が次の例の定義リストです。定義リストはスタイル付けするのに興味深い課題です。平坦であり、 `dt` と `dd` のアイテムのグループを包むものが何もないためです。この例では、自動配置でアイテムを配置していますが、列 1 では `dt`、列 2 では `dd` で始まるクラスを用意しています。これにより、用語がいくつあっても、片方に用語、片方に定義を配置することができます。
 
-```css hidden
+```css hidden live-sample___use-cases-for-auto-placement
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -490,7 +590,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 }
 ```
 
-```html
+```html live-sample___use-cases-for-auto-placement
 <div class="wrapper">
   <dl>
     <dt>哺乳類</dt>
@@ -506,7 +606,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 </div>
 ```
 
-```css
+```css live-sample___use-cases-for-auto-placement
 dl {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -523,10 +623,10 @@ dd {
 }
 ```
 
-{{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
+{{EmbedLiveSample('use-cases-for-auto-placement', '500', '230')}}
 
 ## auto-placement では（まだ）できないこと
 
-よく質問として出てくることがいくつかあります。現在のところ、グリッドのすべてのセルをアイテムでターゲットするようなことはできません。グリッド上の名前付きラインに関する前回のガイドに従った場合、関連する問題がすでに思い浮かぶかもしれません。それは、「"n" という名前の次の行に対してアイテムを自動配置し、グリッドは他の行をスキップする」というルールを定義することです。 CSSWG の GitHub リポジトリに[これに関する問題提起](https://github.com/w3c/csswg-drafts/issues/796)がありますので、自分の用途を追加してみてはいかがでしょうか。
+よく質問として出てくることがいくつかあります。現在のところ、グリッドのすべてのセルをアイテムでターゲットするようなことはできません。グリッド上の名前付きラインに関する前回のガイドに従った場合、関連する問題がすでに思い浮かぶかもしれません。それは、「"n" という名前の次の行に対してアイテムを自動配置し、グリッドは他の行をスキップする」というルールを定義することです。 CSSWG の GitHub リポジトリーに[これに関する問題提起](https://github.com/w3c/csswg-drafts/issues/796)がありますので、自分の用途を追加してみてはいかがでしょうか。
 
 自動配置やグリッドレイアウトの他の部分について、独自の用途を思いつくかもしれません。そのような場合には、用途を解決するための課題として提起するか、既存の課題に追加してください。これにより、将来のバージョンの仕様をより良いものにすることができます。
