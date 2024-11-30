@@ -810,7 +810,7 @@ export const a = 1;
 
 ## 语言和运行时
 
-在本文中，我们不断提及某个特性是*语言级别的*，相对于其他则是*运行时级别的*。
+在本文中，我们不断提及某个特性是*语言级别的*，而其他的则是*运行时级别的*。
 
 JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
 
