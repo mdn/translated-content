@@ -88,7 +88,7 @@ XML 方言不仅定义了自己的标记，而且还定义了自己的属性。�
 
 名称空间不仅影响标记，还影响脚本。如果你为有命名空间的 XML（如 SVG）编写脚本，请继续阅读。
 
-[DOM  Level  1](http://www.w3.org/TR/REC-DOM-Level-1/) 推荐标准是在 [原始 XML 命名空间](http://www.w3.org/TR/REC-xml-names/) 推荐标准发布之前创建的；因此，DOM1 不感知命名空间。这给有命名空间的 XML（如 SVG）带来了问题。为了解决这些问题，[DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 为所有适用的 DOM Level 1 方法添加了感知命名空间的等效方法。在编写 SVG 脚本时 ，[重要的是使用感知名称空间的方法](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)。下表列出了不应该在 SVG 中使用的 DOM1 方法，以及应该使用的等价 DOM2 方法。
+[DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) 推荐标准是在 [原始 XML 命名空间](http://www.w3.org/TR/REC-xml-names/) 推荐标准发布之前创建的；因此，DOM1 不感知命名空间。这给有命名空间的 XML（如 SVG）带来了问题。为了解决这些问题，[DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 为所有适用的 DOM Level 1 方法添加了感知命名空间的等效方法。在编写 SVG 脚本时，[重要的是使用感知名称空间的方法](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)。下表列出了不应该在 SVG 中使用的 DOM1 方法，以及应该使用的等价 DOM2 方法。
 
 | DOM1 (请勿使用)                                                                                              | DOM2 (使用这些替代！)                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
