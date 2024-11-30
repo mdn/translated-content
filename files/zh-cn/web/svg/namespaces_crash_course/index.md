@@ -123,7 +123,7 @@ rect.getAttributeNS(null, 'x');
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 ```
 
-对于设置有命名空间的属性，建议（但不是必需的）在第二个参数中也包括它们的前缀，以便将来可以更容易地将 DOM 转换成 XML（例如你想将其发送回服务器）。例如:
+对于设置有命名空间的属性，建议（但不是必需的）在第二个参数中也包括它们的前缀，以便将来可以更容易地将 DOM 转换成 XML（例如你想将其发送回服务器）。例如：
 
 ```plain
 elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
