@@ -105,7 +105,7 @@ XML 方言不仅定义了自己的标记，而且还定义了自己的属性。�
 | [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
 | [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-所有 DOM2 命名空间感知方法的第一个参数必须是所述元素或属性的命名空间名称（也称为命名空间 URI）。对于 SVG **元素** ，应是 `http://www.w3.org/2000/svg`。但是，请注意：[XML 1.1 中的命名空间](http://www.w3.org/TR/xml-names11/#defaulting) 建议规范指出，没有前缀的属性的命名空间名称没有值。换句话说，虽然属性属于标签的命名空间，但你不使用标签的命名空间名称。相反，**你必须使用 null 作为非限定（无前缀）属性的命名空间名称**。因此，要使用 `document.createElementNS()` 创建一个 SVG `rect` _element_ ，你必须这样写：
+所有 DOM2 命名空间感知方法的第一个参数必须是所述元素或属性的命名空间名称（也称为命名空间 URI）。对于 SVG **元素** ，应是 `http://www.w3.org/2000/svg`。但是，请注意：[XML 1.1 中的命名空间](http://www.w3.org/TR/xml-names11/#defaulting) 建议规范指出，没有前缀的属性的命名空间名称没有值。换句话说，虽然属性属于标签的命名空间，但你不使用标签的命名空间名称。相反，**你必须使用 null 作为非限定（无前缀）属性的命名空间名称**。因此，要使用 `document.createElementNS()` 创建一个 SVG `rect` _element_，你必须这样写：
 
 ```plain
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
