@@ -38,7 +38,7 @@ outline-width: unset;
 ### 值
 
 - {{cssxref("&lt;length&gt;")}}
-  - : 轮廓的宽度指定为 `<length>`.
+  - : 轮廓的宽度指定为 `<length>`。
 - `thin`
   - : 取决于用户代理。通常等同于桌面浏览器的 `1px`（包括 Firefox）。
 - `medium`
