@@ -116,7 +116,11 @@ jobs:
 
           # Don't use `yarn build` (from mdn/content) because that one hardcodes
           # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
-          node node_modules/@mdn/yari/build/cli.js ${GIT_DIFF_CONTENT}
+          CLI_DIR='node_modules/@mdn/yari/build'
+          node "${CLI_DIR}/cli.js -n ${GIT_DIFF_CONTENT}
+
+          # render all the pages
+          node "${CLI_DIR}/ssr-cli.js"
 
           echo "Disk usage size of build"
           du -sh ${BUILD_OUT_ROOT}
