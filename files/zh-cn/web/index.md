@@ -68,8 +68,6 @@ l10n:
   - : 可扩展样式表语言转换是一种基于 [XML](/zh-CN/docs/Web/XML/XML_introduction) 的语言，和专门的处理软件一起使用，用于 XML 文档转换。
 - [XPath](/zh-CN/docs/Web/XPath)
   - : XPath 使用非 XML 语法来提供一种灵活地定位（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分的方法。它也可以用于检查文档中某个定位节点是否与某个模式（pattern）匹配。
-- [EXSLT](/zh-CN/docs/Web/EXSLT)
-  - : EXSLT 是一组 [XSLT](/zh-CN/docs/Web/XSLT) 的扩展。
 
 ## 开发者工具文档
 
