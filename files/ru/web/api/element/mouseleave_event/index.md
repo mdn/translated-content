@@ -7,7 +7,7 @@ slug: Web/API/Element/mouseleave_event
 
 Событие `mouseleave` срабатывает, когда курсор манипулятора (обычно мыши) перемещается за границы элемента.
 
-`mouseleave` и {{event('mouseout')}} схожи, но отличаются тем, что `mouseleave` не всплывает, а `mouseout` всплывает.
+`mouseleave` и [`mouseout`](/ru/docs/Web/Events/mouseout) схожи, но отличаются тем, что `mouseleave` не всплывает, а `mouseout` всплывает.
 Это значит, что `mouseleave` срабатывает, когда курсор выходит за границы элемента _и_ всех его дочерних элементов, в то время как `mouseout` срабатывает, когда курсор покидает границы элемента _или_ одного из его дочерних элементов (даже если курсор все ещё находится в пределах элемента).
 
 | ![Диаграмма поведения mouseleave](mouseleave.png)                                                                                                                                                                                                                                 | ![Диаграмма поведения mouseout](mouseout.png)                                                                                                                                                 |
@@ -139,13 +139,13 @@ The following example illustrates how to use `mouseout`, to simulate the princip
 
 ## Смотрите также
 
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/ru/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/ru/docs/Web/Events/mouseup)
+- [`mousemove`](/ru/docs/Web/Events/mousemove)
+- [`click`](/ru/docs/Web/Events/click)
+- [`dblclick`](/ru/docs/Web/Events/dblclick)
+- [`mouseover`](/ru/docs/Web/Events/mouseover)
+- [`mouseout`](/ru/docs/Web/Events/mouseout)
+- [`mouseenter`](/ru/docs/Web/Events/mouseenter)
+- [`mouseleave`](/ru/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/ru/docs/Web/Events/contextmenu)

@@ -1,6 +1,6 @@
 ---
 title: "console : méthode statique timeEnd()"
-slug: Web/API/console/timeend_static
+slug: Web/API/console/timeEnd_static
 l10n:
   sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---

@@ -148,7 +148,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## 参见
 
 - [`core-js` 中 `Array.prototype.slice` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

@@ -48,8 +48,8 @@ Este evento tem sido suportado pelo Internet Explorer há várias versões, e po
 
 ## Eventos Relacionados
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
+- [`load`](/pt-BR/docs/Web/API/Window/load_event)
+- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/pt-BR/docs/Web/Events/unload)

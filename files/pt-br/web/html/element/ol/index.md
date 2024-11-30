@@ -14,7 +14,7 @@ Não há limitação para a profundidade e a imbricação das listas definidas c
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_[Flutuante](/pt-BR/docs/HTML/Content_categories#Flow_content) e no caso dos elementos filhos de `<ol>` incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.
 - _Conteúdo permitido_ Zero ou mais elementos {{HTMLElement("li")}}
-- _Omissão de etiqueta (Tag)_ {{no_tag_omission}}
+- _Omissão de etiqueta (Tag)_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo flutuante](/pt-BR/docs/HTML/Content_categories#flow_content).
 - _Interface DOM_ {{domxref("HTMLOListElement")}}
 

@@ -206,7 +206,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
   The second line.
   ```
 
-- Метод: `POST`; тип кодирования: [`multipart/form-data`](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
+- Метод: `POST`; тип кодирования: [`multipart/form-data`](/ru/docs/Web/HTTP/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
