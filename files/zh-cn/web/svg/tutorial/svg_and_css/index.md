@@ -398,17 +398,18 @@ svg {
 
 - 将 :hover 伪类的位置从特定花瓣移动到所有花瓣
 
-  ```css
-  #inner-petals {
-    --segment-fill-fill-hover: pink;
-  }
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
 
-  /* 一些旧版浏览器的非标准方法 */
-  #inner-petals:hover .segment-fill {
-    fill: pink;
-    stroke: none;
-  }
-  ```
+/* 一些旧版浏览器的非标准方法 */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
 </details>
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
