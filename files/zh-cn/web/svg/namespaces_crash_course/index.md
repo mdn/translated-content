@@ -1,5 +1,5 @@
 ---
-title: Namespaces Crash Course
+title: 命名空间速成
 slug: Web/SVG/Namespaces_Crash_Course
 ---
 
@@ -51,9 +51,9 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 
 看到没，命名空间其实没有那么难以理解。
 
-#### Declaring namespace prefixes
+#### 声明命名空间前缀
 
-XML dialects not only define their own tags, but also their own attributes. By default, attributes don't have a namespace at all, and are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define attributes so that they can be reused on many different elements and still be considered to be the same attribute, independently of the element with which they are used. A very good example of this is the `href` attribute defined by the XLink specification. This attribute is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the attribute belongs to, in this case XLink? Consider the following example.
+XML 方言不仅定义了自己的标记，而且还定义了自己的属性。默认情况下，属性根本没有命名空间，属性只有出现在本身就有唯一名称的元素上，才知道是唯一的。然而，有时有必要定义属性，以便它们可以在许多不同的元素上重用，并且仍然被认为是相同的属性，与使用它们的元素无关。XLink 规范定义的 `href` 属性就是一个很好的例子。这个属性通常被其他 XML 方言用作链接外部资源的手段。但是如何告诉用户代理该属性属于哪种方言，在本例中是 XLink？考虑下面的例子。
 
 ```plain
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -62,13 +62,13 @@ XML dialects not only define their own tags, but also their own attributes. By d
 </svg>
 ```
 
-This example has the rather unusual looking attribute `xmlns:xlink`. As you may guess from the first 'xmlns' part, this is another namespace declaration. However, instead of setting the default namespace, this namespace declaration sets the namespace for something called a "namespace prefix". In this case, we have chosen to use the prefix `xlink` (the second part) since the prefix will be used to tell the user agent about attributes that belong to XLink.
+这个例子有一个看起来相当不寻常的属性 `xmlns:xlink`。看到第一部分 `xmlns` 你可能已经猜到了，这是另一个命名空间声明。然而，这个命名空间声明并没有设置默认命名空间，而是为所谓的“命名空间前缀”设置了命名空间。在本例中，我们选择使用前缀 `xlink` （第二部分），因为该前缀将用于告诉用户代理属于 XLink 的属性。
 
-As their name suggests, namespace prefixes are used to prefix attribute names and tag names. This is done by putting the namespace prefix and a colon before the attribute name as shown on the `<script>` tag in the example above. This tells the user agent that that particular attribute belongs to the namespace assigned to the namespace prefix (XLink), and is an attribute that can be used with the same meaning on other tags.
+顾名思义，命名空间前缀用于为属性名称和标签名称添加前缀。这是通过将命名空间前缀和冒号放在属性名称之前来实现的，如上面示例中的 `<script>` 标签所示。这告诉用户代理该特定属性属于分配给名称空间前缀（XLink）的名称空间，并且该属性可以在其他标记上以相同的含义使用。
 
-Note that it is an XML error to use a prefix that hasn't been bound to a namespace name. The binding created by the `xmlns:xlink` attribute in the example above is absolutely essential if the `xlink:href` attribute isn't to cause an error. This XLink attribute is also frequently used in SVG on the `<a>`, `<use>` and `<image>` tags among others, so it's a good idea to always include the XLink declaration in your documents.
+注意，使用没有绑定到命名空间名称的前缀是一个 XML 错误。如果要避免 `xlink:href` 属性导致错误，上面示例中的 `xmlns:xlink` 属性创建的绑定是绝对必要的。这个 XLink 属性也经常在 SVG 中的 `<a>`、`<use>` 和 `<image>` 等标签上使用，因此在文档中始终包含 XLink 声明是个好主意。
 
-As an aside, it's useful to know that namespace prefixes can also be used for tag names. This tells the user agent that that particular tag (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like that in the following example:
+顺便说一句，知道命名空间前缀也可以用于标签名称是很有用的。这告诉用户代理，这个特定的标记（但这次不是它的子标记！）属于分配给前缀的命名空间。如果你在下面的例子中遇到这样的标记，知道这一点将为你减少一些困惑：
 
 ```plain
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -82,21 +82,21 @@ As an aside, it's useful to know that namespace prefixes can also be used for ta
 </html>
 ```
 
-Note that because a namespace prefix is used for the `<svg:svg>` tag and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general though it is better to redeclare the default namespace rather than prefix lots of tags in this way.
+注意，因为 `<svg:svg>` 标签和它的子标签 `<svg:circle>` 使用了命名空间前缀，所以没有必要重新声明默认命名空间。一般来说，重新声明默认命名空间要比以这种方式为大量标签添加前缀要好。
 
-### Scripting in namespaced XML
+### 有命名空间的 XML 中的脚本
 
-Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.
+名称空间不仅影响标记，还影响脚本。如果您为有命名空间的 XML（如 SVG）编写脚本，请继续阅读。
 
-The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, [it is important to use the namespace aware methods](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
+[DOM  Level  1](http://www.w3.org/TR/REC-DOM-Level-1/) 推荐标准是在 [原始 XML 命名空间](http://www.w3.org/TR/REC-xml-names/) 推荐标准发布之前创建的；因此，DOM1 不感知命名空间。这给有命名空间的 XML（如 SVG）带来了问题。为了解决这些问题，[DOM  Level  2  Core](http://www.w3.org/TR/DOM-Level-2-Core/) 为所有适用的 DOM Level 1 方法添加了感知命名空间的等效方法。在编写 SVG 脚本时 ，[重要的是使用感知名称空间的方法](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)。下表列出了不应该在 SVG 中使用的 DOM1 方法，以及应该使用的等价 DOM2 方法。
 
-| DOM1 (don't use)                                                                                             | DOM2 (use these instead!)                                                                                                                                                      |
+| DOM1 (请勿使用)                                                                                             | DOM2 (使用这些替代！)                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [createAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                            |
 | [createElement](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                |
 | [getAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                         |
 | [getAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                               |
-| [getElementsByTagName](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (also [added to Element](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
+| [getElementsByTagName](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (同样 [added to Element](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
 | [getNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                            |
 | [hasAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                               |
 | [removeAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                              |
@@ -105,31 +105,31 @@ The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was crea
 | [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
 | [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+所有 DOM2 命名空间感知方法的第一个参数必须是所述元素或属性的命名空间名称（也称为命名空间 URI）。对于 SVG **元素** ，应是 `http://www.w3.org/2000/svg`。但是，请注意：[XML 1.1 中的命名空间](http://www.w3.org/TR/xml-names11/#defaulting) 建议规范指出，没有前缀的属性的命名空间名称没有值。换句话说，虽然属性属于标签的命名空间，但您不使用标签的命名空间名称。相反，**你必须使用 null 作为非限定（无前缀）属性的命名空间名称**。因此，要使用 `document.createElementNS()` 创建一个 SVG `rect` _element_ ，你必须这样写：
 
 ```plain
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 ```
 
-But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you must write:
+但是要检索 SVG `rect` 元素上的 `x` _attribute_ 的值，您必须写成：
 
 ```plain
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
+注意，对于 _with_ 命名空间前缀的属性（与标签不属于同一种 XML 方言的属性），情况并非如此。 像 `xlink:href` 这样的属性需要指定给该前缀的命名空间名称（xlink 为 `http://www.w3.org/1999/xlink`）。因此，要在 SVG 中获取 `<a>` 元素的 `xlink:href` 属性的值， 你可以这样写：
 
 ```plain
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 ```
 
-For setting attributes that have a namespace, it is recommended (but not required) that you also include their prefix in the second argument so that the DOM can later be more easily converted back to XML (if for instance you want to send it back to the server). For example:
+对于设置有命名空间的属性，建议（但不是必需的）在第二个参数中也包括它们的前缀，以便将来可以更容易地将 DOM 转换成 XML（例如你想将其发送回服务器）。例如:
 
 ```plain
 elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
 ```
 
-As a final example, here's a demonstration of how you should dynamically create an `<image>` element using script:
+作为最后一个例子，下面是一个使用脚本动态创建 `<image>` 元素的示范：
 
 ```plain
 var SVG_NS = 'http://www.w3.org/2000/svg';
@@ -140,9 +140,9 @@ image.setAttributeNS(null, 'height', '100');
 image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 ```
 
-### Conclusion
+### 结论
 
-Make sure you always declare the namespaces you use in your XML files. If you don't, user agents such as Firefox won't recognize your content and will simply show the XML markup or inform the user that there's an error in the XML. It's a good idea to use a template that includes all the commonly used namespace declarations when creating new SVG files. If you don't already have one, make one up starting with the following code:
+确保你总是声明你在 XML 文件中使用的命名空间。如果你不这样做，像 Firefox 这样的用户代理将无法识别你的内容，并将简单地显示 XML 标记或通知用户 XML 中有错误。在创建新的 SVG 文件时，使用一个包含所有常用命名空间声明的模板是一个好主意。如果你还没有，可以用下面的代码创建一个：
 
 ```plain
 <svg version="1.1"
@@ -153,8 +153,8 @@ Make sure you always declare the namespaces you use in your XML files. If you do
 </svg>
 ```
 
-Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.
+即使在特定文档中不使用所有的这些命名空间，包含命名空间声明也没有什么坏处。如果你以后添加未使用的命名空间中的内容，它可能会让你避免一些烦人的错误。
 
-### A full example
+### 完整的示例
 
-For a full example see [SVG: Namespaces Crash Course: Example](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example).
+完整的示例参见 [SVG：名称空间速成：示例](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example)。
