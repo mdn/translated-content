@@ -117,7 +117,7 @@ document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 rect.getAttributeNS(null, 'x');
 ```
 
-注意，对于 _with_ 命名空间前缀的属性（与标签不属于同一种 XML 方言的属性），情况并非如此。 像 `xlink:href` 这样的属性需要指定给该前缀的命名空间名称（xlink 为 `http://www.w3.org/1999/xlink`）。因此，要在 SVG 中获取 `<a>` 元素的 `xlink:href` 属性的值， 你可以这样写：
+注意，对于 _with_ 命名空间前缀的属性（与标签不属于同一种 XML 方言的属性），情况并非如此。像 `xlink:href` 这样的属性需要指定给该前缀的命名空间名称（xlink 为 `http://www.w3.org/1999/xlink`）。因此，要在 SVG 中获取 `<a>` 元素的 `xlink:href` 属性的值，你可以这样写：
 
 ```plain
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
