@@ -1,6 +1,8 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
@@ -28,6 +30,7 @@ text-underline-offset: 20%;
 text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: revert;
+text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
@@ -50,31 +53,31 @@ text-underline-offset: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### text-underline-offset のデモ
 
-```html
-<p class="oneline">Here's some text with an offset wavy red underline!</p>
+```html-nolint live-sample___examples
+<p class="one-line">こちらはテキストと、オフセットさせた赤い下線です。</p>
 <br />
-<p class="twolines">
-  This text has lines both above and below it. Only the bottom one is offset.
+<p class="two-lines">
+  このテキストには、上線と下線の両方があります。下線のみがオフセットされています。
 </p>
 ```
 
-```css
+```css live-sample___examples
 p {
   text-decoration: underline wavy red;
   text-underline-offset: 1em;
 }
 
-.twolines {
+.two-lines {
   text-decoration-color: purple;
   text-decoration-line: underline overline;
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

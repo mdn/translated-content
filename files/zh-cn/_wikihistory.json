@@ -15846,10 +15846,6 @@
       "jtyjty99999"
     ]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2020-10-15T22:09:40.955Z",
-    "contributors": ["usernameisMan"]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2019-03-18T21:36:53.168Z",
     "contributors": ["eiddie"]
