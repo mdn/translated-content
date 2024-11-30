@@ -31,8 +31,8 @@ l10n:
 
 ### API
 
-- {{domxref('WorkerNavigator.permissions')}} プロパティをサポートしました。メインウィンドウのスレッドと同様に、[workers](/ja/docs/Web/API/Web_Workers_API) でも [Permissions API](/ja/docs/Web/API/Permissions_API) を使用できます ([Firefox bug 1193373](https://bugzil.la/1193373))。
-- [server-sent events](/ja/docs/Web/API/Server-sent_events) を処理する {{domxref("EventSource")}} インターフェイスを、[service workers](/ja/docs/Web/API/Service_Worker_API) でサポートしました ([Firefox bug 1681218](https://bugzil.la/1681218))。
+- {{domxref('WorkerNavigator.permissions')}} プロパティをサポートしました。メインウィンドウのスレッドと同様に、[ワーカー](/ja/docs/Web/API/Web_Workers_API) でも [Permissions API](/ja/docs/Web/API/Permissions_API) を使用できます ([Firefox bug 1193373](https://bugzil.la/1193373))。
+- [server-sent events](/ja/docs/Web/API/Server-sent_events) を処理する {{domxref("EventSource")}} インターフェイスを、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でサポートしました ([Firefox bug 1681218](https://bugzil.la/1681218))。
 - [WebCodecs API](/ja/docs/Web/API/WebCodecs_API) の {{domxref("ImageDecoder")}}、{{domxref("ImageTrackList")}}、{{domxref("ImageTrack")}} インターフェイスをサポートしました。メインスレッドやワーカースレッドから画像をデコードできます ([Firefox bug 1923755](https://bugzil.la/1923755))。
 - {{domxref("HTMLElement")}} インターフェイスの [`beforetoggle`](/ja/docs/Web/API/HTMLElement/beforetoggle_event) および [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event) イベントが、それぞれ {{HTMLElement("dialog")}} 要素が表示される直前および隠された直後に発生するようになりました。たとえば `beforetoggle` は、ダイアログのアニメーションを制御するクラスを適用や削除したり、ダイアログフォームを表示する前にフォームの状態をリセットしたりするために使用できます。`toggle` イベントはダイアログを開いた状態で変更通知を受けるために使用できます (ほかの方法は {{domxref("MutationObserver")}} が必要です) ([Firefox bug 1876762](https://bugzil.la/1876762))。
 - {{domxref('Window.fetch','fetch()')}} グローバルメソッドおよび [`Request()` コンストラクター](/ja/docs/Web/API/Request/Request#options) で [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) 初期化オプションをサポートしました。また、{{domxref("Request.keepalive")}} プロパティもサポートしました。`keepalive` を `true` に設定すると、リクエストが完了する前にリクエストを開始したページがアンロードされても、ブラウザーが関連するリクエストを中止することを防げます。
