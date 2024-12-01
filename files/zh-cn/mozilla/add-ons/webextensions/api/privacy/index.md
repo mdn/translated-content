@@ -9,7 +9,7 @@ l10n:
 
 访问并修改多个与隐私相关的浏览器设置。
 
-要使用隐私 API，你必须预先取得“privacy” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_权限)。
+要使用隐私 API，你必须预先取得“privacy” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 ## 属性
 
