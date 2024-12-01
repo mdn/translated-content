@@ -15,6 +15,7 @@ l10n:
 
 - `networkPredictionEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为真，则浏览器将尝试通过预解析 DNS 条目、预渲染站点（例如使用 `<link rel='prefetch' …>`）以及预先打开到服务器的 TCP 和 TLS 连接来提升网页浏览速度。
+- `peerConnectionEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为假，则 [`RTCPeerConnection`](/zh-CN/docs/Web/API/RTCPeerConnection) 接口将被禁用。请注意，[`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 不受此设置影响。
 - `webRTCIPHandlingPolicy`
 
