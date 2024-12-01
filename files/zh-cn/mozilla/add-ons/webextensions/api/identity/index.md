@@ -14,11 +14,11 @@ l10n:
 - [Google](https://developers.google.cn/identity/protocols/oauth2/javascript-implicit-flow)
 - [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 
-身份 API 提供了 {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 函数。此函数将对用户进行身份验证（如果需要），并要求用户授权扩展访问数据（如果需要）。在函数完成后，将会返回一个访问令牌或授权码（具体取决于服务提供商）。
+身份 API 提供了 {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 函数。此函数将对用户进行身份验证（如果需要），并要求用户授权扩展访问数据（如果需要）。函数完成后将会返回一个访问令牌或授权码（具体取决于服务提供商）。
 
-然后，扩展需要完成剩余的 OAuth2 流程以获取经过验证的访问令牌，然后就使用该令牌根据用户的授权通过 HTTPS 请求访问用户的数据。
+之后扩展需要完成剩余的 OAuth2 流程以获取经过验证的访问令牌，然后就使用该令牌根据用户的授权通过 HTTPS 请求访问用户的数据。
 
-要使用此 API，你的拓展必须预先取得“identity” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+要使用此 API，你的拓展必须预先取得“identity” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_权限)。
 
 ## 设置
 
@@ -28,9 +28,9 @@ l10n:
 
 [重定向 URL](https://www.oauth.com/oauth2-servers/redirect-uris/) 代表着 {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 的终点，即将会传递给拓展包含访问令牌或授权码的那一个 URL。浏览器会从重定向 URL 中直接提取获得结果，而不会加载其响应。
 
-你可以调用 {{WebExtAPIRef("identity.getRedirectURL()")}} 来获取重定向 URL。此函数从扩展的 ID 派生出一个重定向 URL。为了简化测试，你应该使用 [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式设置扩展的 ID（否则每次你[临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)时都会得到一个不同的重定向 URL）。
+你可以调用 {{WebExtAPIRef("identity.getRedirectURL()")}} 来获取重定向 URL。此函数从扩展的 ID 派生出一个重定向 URL。为了简化测试，你应该使用 [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式地设置扩展的 ID（否则每次你[临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)时都会得到一个不同的重定向 URL）。
 
-{{WebExtAPIRef("identity.getRedirectURL()")}} 会返回一个 URL（其域名固定，而子域名将从扩展的 ID 派生而来）。一些 OAuth 服务器（例如 Google）只接受具有验证所有权的域名作为重定向 URL。由于虚拟域名无法由扩展开发人员控制，因此默认域名并不总是可用。
+{{WebExtAPIRef("identity.getRedirectURL()")}} 会返回一个 URL（其域名固定，而其子域名将从扩展的 ID 派生而来）。一些 OAuth 服务器（例如 Google）只接受具有验证所有权的域名作为重定向 URL。由于虚拟域名无法由编写扩展的开发者控制，因此默认域名并不总是可用。
 
 不过，环回地址也是一个可以接受的替代方案，它也不需要进行域名验证（基于 [RFC 8252，第 7.3 节](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3)）。从 Firefox 86 开始，允许格式为 `http://127.0.0.1/mozoauth2/[从 identity.getRedirectURL() 返回的 URL 的子域名]` 的环回地址作为重定向 URL 的值。
 
@@ -42,13 +42,13 @@ l10n:
 你将在以下两个地方中用上这一重定向 URL：
 
 - 在将扩展注册为 OAuth2 客户端时提供它。
-- 将其作为 `url` 实参的 URL 形参传递给 `identity.launchWebAuthFlow()` 时。
+- 将其作为 `url` 实参对应的的 URL 形参传递给 `identity.launchWebAuthFlow()` 时。
 
 ### 注册你的拓展
 
 在使用 OAuth2 与服务提供商一起使用之前，你必须将扩展注册为服务提供商的 OAuth2 客户端。
 
-这通常是特定于服务提供商的，但通常意味着在提供商的网站上为你的拓展创建一个条目。在此过程中，你需要提供你的重定向 URL，并获得一个客户端 ID（有时也可能是一个密钥）。你需要将这两者都传递给 {{WebExtAPIRef("identity.launchWebAuthFlow()")}}。
+这通常是特定于服务提供商的，但通常意味着在提供商的网站上为你的拓展创建一个条目。在此过程中，你需要提供你的重定向 URL 并获得一个客户端 ID（有时也可能是一个密钥）。你需要将这两者都传递给 {{WebExtAPIRef("identity.launchWebAuthFlow()")}}。
 
 ## 函数
 
