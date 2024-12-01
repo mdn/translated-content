@@ -36,7 +36,7 @@ l10n:
 
     若为 `true`，则 `firstPartyIsolate` 偏好将浏览器将所有第三方域名的数据（包括 cookies、HSTS 数据、缓存的图像等）与地址栏中的域关联起来。这可以防止第三方跟踪器使用直接存储的信息来识别用户跨不同的网站，但可能会破坏用户使用第三方帐户（如 Facebook 或 Google 帐户）登录的网站。
 
-     默认取值为 `false`。
+    默认取值为 `false`。
 
 - `hyperlinkAuditingEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为真，则当网站使用 `ping` 属性请求时，浏览器会发送审计 ping。
