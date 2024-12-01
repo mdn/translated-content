@@ -11,7 +11,7 @@ l10n:
 
 这一 URL 将派生自你的扩展 ID，因此如果你使用此函数，你应该使用 [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式设置扩展的 ID（否则每次你[临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)时都会得到不同的重定向 URL）。
 
-见 [获取重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_URL) 以获取更多关于重定向 URL 的信息。
+参见[获取重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_URL) 一节以获取更多关于重定向 URL 的信息。
 
 ## 语法
 
