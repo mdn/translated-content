@@ -173,6 +173,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
       > [!NOTE]
       > Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+
       > [!NOTE]
       > Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
 
@@ -298,7 +299,7 @@ Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert
 <img src="favicon144.png" alt="Logo de MDN" />
 ```
 
-{{EmbedLiveSample('', '100%', '160')}}
+{{EmbedLiveSample('fournir_un_texte_alternatif', '100%', '160')}}
 
 ### Créer un lien avec une image
 
@@ -310,7 +311,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 </a>
 ```
 
-{{EmbedLiveSample('', '100%', '160')}}
+{{EmbedLiveSample('créer_un_lien_avec_une_image', '100%', '160')}}
 
 ### Utiliser l'attribut `srcset`
 
@@ -320,7 +321,7 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
 <img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x" />
 ```
 
-{{EmbedLiveSample("", "100%", "160")}}
+{{EmbedLiveSample("utiliser_lattribut_srcset", "100%", "160")}}
 
 ### Utiliser les attributs `srcset` et `sizes`
 
@@ -334,7 +335,7 @@ L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en char
   sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
-{{EmbedLiveSample("", "100%", 350)}}
+{{EmbedLiveSample("#utiliser_les_attributs_srcset_et_sizes", "100%", 350)}}
 
 ## Sécurité et vie privée
 
