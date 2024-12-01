@@ -27,7 +27,7 @@ l10n:
 - 重定向 URL 与为此客户端注册的任何重定向 URL 不匹配
 - 用户未成功进行身份验证
 - 用户未授权扩展
-- `interactive` 参数被省略或被设置为假 ，但流程中需要用户交互来授权扩展。
+- `interactive` 参数被省略或被设置为假，但流程中需要用户交互来授权扩展。
 
 ## 语法
 
@@ -50,9 +50,9 @@ let authorizing = browser.identity.launchWebAuthFlow(
     - `interactive` {{optional_inline}}
 
       - : `boolean`，如果被省略或被设为 `false`，则将强制流程在无用户交互的情况下静默完成。
-      
+
         如果用户已经登录并已经授权扩展访问，那么 `launchWebAuthFlow()` 可以在没有任何用户交互的情况下完成。否则（如果服务提供商需要用户登录或授权扩展）， `launchWebAuthFlow()` 将提示用户：也就是说，此时流程将会是交互式的。
-      
+
         拓展不应该在没有用户操作的情况下启动交互式流程。然而，有时拓展仍然希望在没有直接用户操作的情况下访问用户的数据（例如，想象一下一个希望在浏览器启动时访问数据的拓展）。
 
         这就是 `interactive` 的目的：如果省略 `interactive` 或将其设置为 `false`，则流程将被强制静默地完成；此时，如果服务提供商需要与用户交互，流程将会直接失败。因此，作为一个一般性的规则：如果你是在响应用户操作时启动流程，请将 `interactive` 设置为 `true`，否则省略它。
@@ -99,4 +99,4 @@ function getAccessToken() {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API。
+> 该 API 基于 Chromium 的 [`identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
