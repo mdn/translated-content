@@ -27,7 +27,7 @@ let redirectURL = browser.identity.getRedirectURL()
 
 包含重定向 URL 值的字符串。
 
-### 浏览器兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
