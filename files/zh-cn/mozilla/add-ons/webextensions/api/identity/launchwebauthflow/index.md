@@ -61,7 +61,7 @@ let authorizing = browser.identity.launchWebAuthFlow(
 
 返回值是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果身份验证和授权成功，这一 Promise 将会被兑现，其中包含一个重定向 URL，其中包含一些 URL 参数。根据特定服务提供商的 OAuth2 流程，扩展将需要进一步的步骤来获取有效的访问令牌，然后可以使用该访问令牌来访问用户的数据。
 
-### 浏览器兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
