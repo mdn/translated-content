@@ -9,7 +9,7 @@ l10n:
 
 执行 [OAuth2](https://oauth.net/2/) 流程的第一部分，包括用户身份验证和客户端授权。
 
-此函数的唯一必需参数是服务提供商的授权 URL，其中这一 URL 必须包含一些特定 URL 参数：[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_URL) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的拓展)。然后服务提供商将：
+此函数的唯一必需参数是服务提供商的授权 URL，其中这一 URL 必须包含一些特定 URL 参数：[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的拓展)。然后服务提供商将：
 
 - 对用户进行身份验证（如果需要，也即此时用户尚未登录）
 - 要求用户授权扩展访问请求的数据（如果需要，也即此时用户尚未授权扩展）
@@ -44,9 +44,9 @@ let authorizing = browser.identity.launchWebAuthFlow(
   - : `object`，对验证流程而言，可选的包含如下属性的对象：
 
     - `url`
-      - : `string`，OAuth2 服务提供商提供的获取访问令牌的 URL。这个 URL 的详细信息应该在服务提供商的文档中给出，但 URL 参数应该始终包括[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_URL) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的拓展)。
+      - : `string`，OAuth2 服务提供商提供的获取访问令牌的 URL。这个 URL 的详细信息应该在服务提供商的文档中给出，但 URL 参数应该始终包括[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的拓展)。
     - `redirect_uri` {{optional_inline}}
-      - : `string`，代表流程完成时扩展被重定向到的 URI。如果与生成的重定向 URL 匹配，则并不需要提供这一属性供浏览器端的验证流程使用。参见[获取重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_URL)。
+      - : `string`，代表流程完成时扩展被重定向到的 URI。如果与生成的重定向 URL 匹配，则并不需要提供这一属性供浏览器端的验证流程使用。参见[获取重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url)。
     - `interactive` {{optional_inline}}
 
       - : `boolean`，如果被省略或被设为 `false`，则将强制流程在无用户交互的情况下静默完成。
