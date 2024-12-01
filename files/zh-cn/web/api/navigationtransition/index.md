@@ -16,7 +16,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("NavigationTransition.finished", "finished")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个 {{jsxref("Promise")}}，其在 {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} 事件触发时同时兑现，或 {{domxref("Navigation/navigateerror_event", "navigateerror")}} 事件触发时同时拒绝。
+  - : 返回一个 {{jsxref("Promise")}}，其在 {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} 事件触发的同时兑现，或 {{domxref("Navigation/navigateerror_event", "navigateerror")}} 事件触发的同时拒绝。
 - {{domxref("NavigationTransition.from", "from")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回导航过渡来源的 {{domxref("NavigationHistoryEntry")}}。
 - {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
