@@ -72,7 +72,7 @@ slug: Learn/Forms
     <tr>
       <td style="white-space: nowrap">accept-charset</td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>支持的字符集列表。</td>
+      <td>字符集，必須指定為 <code>"UTF-8"</code>（若提供）。</td>
     </tr>
     <tr>
       <td>action</td>
@@ -82,7 +82,7 @@ slug: Learn/Forms
     <tr>
       <td>autocomplete</td>
       <td>
-        {{ HTMLElement("form") }}, {{ HTMLElement("input") }}
+        {{ HTMLElement("form") }}、{{ HTMLElement("input") }}
       </td>
       <td>指示是否在這個表單控件可以在默認情況下有其值由瀏覽器自動完成。</td>
     </tr>

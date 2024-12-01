@@ -2,12 +2,12 @@
 title: outline-color
 slug: Web/CSS/outline-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
 {{CSSRef}}
 
-**`outline-color`** は CSS のプロパティで、要素の輪郭線の色を設定します。
+**`outline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線の色を設定します。
 
 {{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
@@ -18,9 +18,6 @@ l10n:
 outline-color: #f92525;
 outline-color: rgb(30 222 121);
 outline-color: blue;
-
-/* キーワード値 */
-outline-color: auto;
 
 /* グローバル値 */
 outline-color: inherit;
@@ -35,9 +32,9 @@ outline-color: unset;
 ### 値
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 輪郭線の色で、`<color>` で指定します。
-- `auto` {{Experimental_Inline}}
-  - : [`outline-style`](/ja/docs/Web/CSS/outline-style) が `auto` でない限り [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) に、さらに[アクセントカラー](/ja/docs/Web/CSS/accent-color)に計算されます。
+  - : 輪郭線の色であり、`<color>` で指定します。
+
+仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/accent-color)に計算されます。
 
 ## 解説
 
@@ -45,7 +42,7 @@ outline-color: unset;
 
 輪郭線の表示方法を定義する際は、一括指定プロパティの {{cssxref("outline")}} を使用したほうが普通は便利です。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 独自の[フォーカススタイル](/ja/docs/Web/CSS/:focus)を作成するときに、ふつう {{cssxref("outline")}} プロパティを調整します。輪郭線の色を変更するのであれば、輪郭線と、それが配置される部分の背景のコントラスト比が、弱視の人でも知覚できるよう高くなっているか確認することが重要です。
 
@@ -69,13 +66,13 @@ outline-color: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_a_solid_blue_outline
 <p>見ての通り、輪郭線は青です。</p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_solid_blue_outline
 p {
   outline: 2px solid; /* 輪郭線の幅と種類 */
   outline-color: #0000ff; /* 輪郭線を青にする */
@@ -85,7 +82,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('青い実線の輪郭線の設定') }}
+{{ EmbedLiveSample('Setting_a_solid_blue_outline') }}
 
 ## 仕様書
 
@@ -98,9 +95,7 @@ p {
 ## 関連情報
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
 - {{cssxref("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- [CSS を使用した HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
