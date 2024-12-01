@@ -57,7 +57,7 @@ l10n:
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : 启动 Web 认证流。
 
-### 浏览器兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
