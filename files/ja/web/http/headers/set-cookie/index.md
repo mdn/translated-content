@@ -154,7 +154,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
         ```
 
-        > [!NOTE]
+        > **メモ:**
         > [`Secure`](#secure) のクッキーは、 HTTPS プロトコルで暗号化されたリクエストでのみサーバーに送られます。なお、安全でないサイト (`http:`) では、 `Secure` ディレクティブでクッキーを設定することができないため、 `SameSite=None` を使用することができません。
 
         > [!WARNING]
