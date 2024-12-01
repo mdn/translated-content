@@ -154,11 +154,9 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
         ```
 
-        > **メモ:**
-        > [`Secure`](#secure) のクッキーは、 HTTPS プロトコルで暗号化されたリクエストでのみサーバーに送られます。なお、安全でないサイト (`http:`) では、 `Secure` ディレクティブでクッキーを設定することができないため、 `SameSite=None` を使用することができません。
+        > **メモ:** [`Secure`](#secure) のクッキーは、 HTTPS プロトコルで暗号化されたリクエストでのみサーバーに送られます。なお、安全でないサイト (`http:`) では、 `Secure` ディレクティブでクッキーを設定することができないため、 `SameSite=None` を使用することができません。
 
-        > [!WARNING]
-        > `SameSite=None; Secure` で、 [`Partitioned`](#partitioned) 属性のないクッキーは、将来のブラウザーバージョンではサイト間をまたがる場合にブロックされる可能性があります。この動作により、ユーザーデータはクロスサイトトラッキングから保護されます。[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)と[サードパーティークッキー](/ja/docs/Web/Privacy/Third-party_cookies)を参照してください。
+        > **警告:** `SameSite=None; Secure` で、 [`Partitioned`](#partitioned) 属性のないクッキーは、将来のブラウザーバージョンではサイト間をまたがる場合にブロックされる可能性があります。この動作により、ユーザーデータはクロスサイトトラッキングから保護されます。[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)と[サードパーティークッキー](/ja/docs/Web/Privacy/Third-party_cookies)を参照してください。
 
 - `Secure` {{optional_inline}}
 
