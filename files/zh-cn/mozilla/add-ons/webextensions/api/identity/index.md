@@ -36,7 +36,7 @@ l10n:
 
 > [!NOTE]
 > 从 Firefox 75 开始，你必须使用 {{WebExtAPIRef("identity.getRedirectURL()")}} 返回的重定向 URL。早期版本允许你提供任何重定向 URL。
-> 
+>
 > 从 Firefox 86 开始，上述特殊的环回地址也可以使用。
 
 你将在以下两个地方中用上这一重定向 URL：
@@ -64,7 +64,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API。
+> 该 API 基于 Chromium 的 [`chrome.identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
