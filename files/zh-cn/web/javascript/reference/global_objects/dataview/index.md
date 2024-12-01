@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView
 
 {{JSRef}}
 
-**`DataView`** 视图是一个可以从二进制 {{jsxref("ArrayBuffer")}} 对象中读写多种数值类型的底层接口，使用它时，不用考虑不同平台的[字节序（endianness）](/zh-CN/docs/Glossary/Endianness)问题。
+**`DataView`** 视图是一个可以从二进制 {{jsxref("ArrayBuffer")}} 对象中读写多种数值类型的底层接口，使用它时，不用考虑不同平台的[字节序](/zh-CN/docs/Glossary/Endianness)问题。
 
 ## 描述
 
@@ -83,50 +83,50 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## 实例方法
 
-- {{jsxref("DataView.prototype.getInt8()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 1 个字节，并将其解释为 8 位有符号整数。
-- {{jsxref("DataView.prototype.getUint8()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 1 个字节，并将其解释为 8 位无符号整数。
-- {{jsxref("DataView.prototype.getInt16()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位有符号整数。
-- {{jsxref("DataView.prototype.getUint16()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位无符号整数。
-- {{jsxref("DataView.prototype.getInt32()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位有符号整数。
-- {{jsxref("DataView.prototype.getUint32()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位无符号整数。
-- {{jsxref("DataView.prototype.getFloat16()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位浮点数。
-- {{jsxref("DataView.prototype.getFloat32()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位浮点数。
-- {{jsxref("DataView.prototype.getFloat64()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位浮点数。
 - {{jsxref("DataView.prototype.getBigInt64()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位有符号整数。
+  - : 从当前 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位有符号整数。
 - {{jsxref("DataView.prototype.getBigUint64()")}}
-  - : 从该 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位无符号整数。
-- {{jsxref("DataView.prototype.setInt8()")}}
-  - : 指定一个数字，并将其作为 8 位有符号整数存储在该 `DataView` 的指定字节偏移处的 1 个字节中。
-- {{jsxref("DataView.prototype.setUint8()")}}
-  - : 指定一个数字，并将其作为 8 位无符号整数存储在该 `DataView` 的指定字节偏移处的 1 个字节中。
-- {{jsxref("DataView.prototype.setInt16()")}}
-  - : 指定一个数字，并将其作为 16 位有符号整数存储在该 `DataView` 的指定字节偏移处的 2 个字节中。
-- {{jsxref("DataView.prototype.setUint16()")}}
-  - : 指定一个数字，并将其作为 16 位无符号整数存储在该 `DataView` 的指定字节偏移处的 2 个字节中。
-- {{jsxref("DataView.prototype.setInt32()")}}
-  - : 指定一个数字，并将其作为 32 位有符号整数存储在该 `DataView` 的指定字节偏移处的 4 个字节中。
-- {{jsxref("DataView.prototype.setUint32()")}}
-  - : 指定一个数字，并将其作为 32 位无符号整数存储在该 `DataView` 的指定字节偏移处的 4 个字节中。
-- {{jsxref("DataView.prototype.setFloat16()")}}
-  - : 指定一个数字，并将其作为 16 位浮点数存储在该 `DataView` 的指定字节偏移处的 2 个字节中。
-- {{jsxref("DataView.prototype.setFloat32()")}}
-  - : 指定一个数字，并将其作为 32 位浮点数存储在该 `DataView` 的指定字节偏移处的 4 个字节中。
-- {{jsxref("DataView.prototype.setFloat64()")}}
-  - : 指定一个数字，并将其作为 64 位浮点数存储在该 `DataView` 的指定字节偏移处的 8 个字节中。
+  - : 从当前 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位无符号整数。
+- {{jsxref("DataView.prototype.getFloat16()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位浮点数。
+- {{jsxref("DataView.prototype.getFloat32()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位浮点数。
+- {{jsxref("DataView.prototype.getFloat64()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 8 个字节，并将其解释为 64 位浮点数。
+- {{jsxref("DataView.prototype.getInt16()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位有符号整数。
+- {{jsxref("DataView.prototype.getInt32()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位有符号整数。
+- {{jsxref("DataView.prototype.getInt8()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 1 个字节，并将其解释为 8 位有符号整数。
+- {{jsxref("DataView.prototype.getUint16()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 2 个字节，并将其解释为 16 位无符号整数。
+- {{jsxref("DataView.prototype.getUint32()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 4 个字节，并将其解释为 32 位无符号整数。
+- {{jsxref("DataView.prototype.getUint8()")}}
+  - : 从当前 `DataView` 的指定字节偏移处读取 1 个字节，并将其解释为 8 位无符号整数。
 - {{jsxref("DataView.prototype.setBigInt64()")}}
-  - : 指定一个数字，并将其作为 64 位有符号整数存储在该 `DataView` 的指定字节偏移处的 8 个字节中。
+  - : 指定一个数字，并将其作为 64 位有符号整数存储在当前 `DataView` 的指定字节偏移处的 8 个字节中。
 - {{jsxref("DataView.prototype.setBigUint64()")}}
-  - : 指定一个数字，并将其作为 64 位无符号整数存储在该 `DataView` 的指定字节偏移处的 8 个字节中。
+  - : 指定一个数字，并将其作为 64 位无符号整数存储在当前 `DataView` 的指定字节偏移处的 8 个字节中。
+- {{jsxref("DataView.prototype.setFloat16()")}}
+  - : 指定一个数字，并将其作为 16 位浮点数存储在当前 `DataView` 的指定字节偏移处的 2 个字节中。
+- {{jsxref("DataView.prototype.setFloat32()")}}
+  - : 指定一个数字，并将其作为 32 位浮点数存储在当前 `DataView` 的指定字节偏移处的 4 个字节中。
+- {{jsxref("DataView.prototype.setFloat64()")}}
+  - : 指定一个数字，并将其作为 64 位浮点数存储在当前 `DataView` 的指定字节偏移处的 8 个字节中。
+- {{jsxref("DataView.prototype.setInt16()")}}
+  - : 指定一个数字，并将其作为 16 位有符号整数存储在当前 `DataView` 的指定字节偏移处的 2 个字节中。
+- {{jsxref("DataView.prototype.setInt32()")}}
+  - : 指定一个数字，并将其作为 32 位有符号整数存储在当前 `DataView` 的指定字节偏移处的 4 个字节中。
+- {{jsxref("DataView.prototype.setInt8()")}}
+  - : 指定一个数字，并将其作为 8 位有符号整数存储在当前 `DataView` 的指定字节偏移处的 1 个字节中。
+- {{jsxref("DataView.prototype.setUint16()")}}
+  - : 指定一个数字，并将其作为 16 位无符号整数存储在当前 `DataView` 的指定字节偏移处的 2 个字节中。
+- {{jsxref("DataView.prototype.setUint32()")}}
+  - : 指定一个数字，并将其作为 32 位无符号整数存储在当前 `DataView` 的指定字节偏移处的 4 个字节中。
+- {{jsxref("DataView.prototype.setUint8()")}}
+  - : 指定一个数字，并将其作为 8 位无符号整数存储在当前 `DataView` 的指定字节偏移处的 1 个字节中。
 
 ## 示例
 

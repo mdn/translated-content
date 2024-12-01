@@ -1,46 +1,47 @@
 ---
 title: DataView.prototype.getFloat16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat16
+l10n:
+  sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
 ---
 
 {{JSRef}}
 
-**`getFloat16()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 16-bit 浮点数 (半精度浮点数，2 个字节).
+{{jsxref("DataView")}} 实例的 **`getFloat16()`** 方法从相对于当前 `DataView` 的起始位置偏移指定个字节处读取 2 个字节，并将其解释为 16 位浮点数。如果没有对齐约束；则可以从边界内的任意偏移位置处获取多字节值。
 
 {{EmbedInteractiveExample("pages/js/dataview-getfloat16.html")}}
 
 ## 语法
 
-```plain
-dataview.getFloat16(byteOffset [, littleEndian])
+```js-nolint
+getFloat16(byteOffset)
+getFloat16(byteOffset, littleEndian)
 ```
 
 ### 参数
 
-- byteOffset
-  - : 偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。
-- littleEndian
-  - : {{optional_inline}} 表示这个 16 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。
+- `byteOffset`
+  - : 从视图的开始位置到读取数值的位置的偏移量，以字节为单位。
+- `littleEndian` {{optional_inline}}
+  - : 指示数据是否以[小端或大端序](/zh-CN/docs/Glossary/Endianness)格式存储。如果为 `false` 或 `undefined`，则以大端序读取数值。
 
-### 返回
+### 返回值
 
-一个带符号的 16 位浮点数。
+从 `-65504` 到 `65504` 之间的浮点数。
 
-### 抛出错误
+### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。
-
-## 说明
-
-没有对齐约束; 多字节值可以从任何偏移处获取。
+  - : 如果设置的 `byteOffset` 会导致读取超出视图的末尾，则抛出此异常。
 
 ## 示例
 
+### 使用 getFloat16()
+
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat16(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getFloat16(1)); // 0.00001537799835205078
 ```
 
 ## 规范
@@ -53,5 +54,8 @@ dataview.getFloat16(1); // 0
 
 ## 参见
 
+- [`core-js` 中 `DataView.prototype.getFloat16` 的 polyfill](https://github.com/zloirock/core-js#float16-methods)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Float16Array")}}
