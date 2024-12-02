@@ -2,7 +2,7 @@
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
 {{CSSRef}}
