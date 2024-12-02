@@ -7,18 +7,18 @@ l10n:
 
 {{AddonSidebar}}
 
-访问并修改多个与隐私相关的浏览器设置。
+访问和修改多个与隐私相关的浏览器设置。
 
 要使用隐私 API，你必须预先取得“privacy”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 ## 属性
 
 - {{WebExtAPIRef("privacy.network")}}
-  - : 访问并修改与网络相关的隐私设置。
+  - : 访问和修改与网络相关的隐私设置。
 - {{WebExtAPIRef("privacy.services")}}
-  - : 访问并修改与浏览器或第三方提供的服务相关的隐私设置。
+  - : 访问和修改与浏览器或第三方提供的服务相关的隐私设置。
 - {{WebExtAPIRef("privacy.websites")}}
-  - : 访问并修改与网站行为相关的隐私设置。
+  - : 访问和修改与网站行为相关的隐私设置。
 
 ## 浏览器兼容性
 
