@@ -300,6 +300,32 @@ Le type {{jsxref("BigInt")}} est un type numérique primitif de JavaScript qui p
 
 Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_BigInt).
 
+#### Séparateurs numériques
+
+Pour améliorer la lisibilité des littéraux numériques, des underscores (`_`, `U+005F`) peuvent être utilisés comme séparateurs:
+
+```js-nolint
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+```
+
+Ils ont quelques limitations:
+
+```js-nolint example-bad
+// Il ne peut pas y avoir plus d'un underscore consécutif
+100__000; // SyntaxError
+
+// Ils ne sont pas autorisés à la fin d'un litéral numérique
+100_; // SyntaxError
+
+// Ils ne sont pas autorisés après un zéro qui débute un littéral
+0_1; // SyntaxError
+```
+
 ### Littéraux objets
 
 Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Opérateurs/Initialisateur_objet","Initialisateur d'objet","",1)}} pour plus d'informations.
