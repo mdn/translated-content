@@ -17,15 +17,15 @@ l10n:
 
 ## 图标类型
 
-你的扩展应该在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest 键中指定侧边栏的图标。这被称为<i>“manifest 图标”</i>。
+你的扩展应该在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest 键中指定侧边栏的图标。这被称为“_manifest 图标_”。
 
-如果你没有在 `sidebar_action` 键中指定图标，你将得到浏览器的默认图标。这被称为<i>“默认图标”</i>。
+如果你没有在 `sidebar_action` 键中指定图标，你将得到浏览器的默认图标。这被称为“_默认图标_”。
 
-如果你使用 `setIcon()` 设置一个新图标，并包含 `tabId` 选项，那么图标仅为给定的标签设置。这个图标称为<i>“标签特定图标”</i>。
+如果你使用 `setIcon()` 设置一个新图标，并包含 `tabId` 选项，那么图标仅为给定的标签设置。这个图标称为“_标签特定图标_”。
 
-如果你使用 `setIcon()` 设置一个新图标，并包含 `windowId` 选项，那么图标仅为给定的窗口设置。这个图标称为<i>“窗口特定图标”</i>，并将出现在该窗口的所有没有设置标签特定图标的标签中。
+如果你使用 `setIcon()` 设置一个新图标，并包含 `windowId` 选项，那么图标仅为给定的窗口设置。这个图标称为“窗口特定图标_”，并将出现在该窗口的所有没有设置标签特定图标的标签中。
 
-如果你使用 `setIcon()` 设置一个新图标，并省略 `tabId` 和 `windowId` 选项，那么这将设置<i>“全局图标”</i>。全局图标将出现在所有没有设置标签特定图标的标签中，且其窗口没有设置窗口特定图标的标签中。
+如果你使用 `setIcon()` 设置一个新图标，并省略 `tabId` 和 `windowId` 选项，那么这将设置“_全局图标_”。全局图标将出现在所有没有设置标签特定图标的标签中，且其窗口没有设置窗口特定图标的标签中。
 
 ## 语法
 
