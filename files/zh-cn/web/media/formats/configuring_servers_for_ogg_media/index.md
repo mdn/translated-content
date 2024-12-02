@@ -1,6 +1,8 @@
 ---
 title: 为 Ogg 媒体配置服务器
 slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
+l10n:
+  sourceCommit: 4d12b3e4f9afb311f2656641260e42c0b6f8f4c6
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
@@ -9,9 +11,10 @@ HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安
 
 ## 为媒体提供正确的 MIME 类型
 
-`*.ogg` 和 `*.ogv` 文件包含了视频（也可能带有音频），应该和 `video/ogg` MIME 类型一起提供。 `*.oga` 和 `*.ogg` 只含音频的文件应该与 `audio/ogg` MIME 类型一起提供。
+如果不确定 Ogg 文件是否包含音频或视频，可以使用 MIME 类型 `application/ogg` 提供，浏览器会将其视为视频文件。
 
-如果不确定 Ogg 文件是否包含音频或视频，可以和 MIME 类型 `application/ogg`一起提供，浏览器会将其视为视频文件。
+- 包含视频轨的 `*.ogg` 和 `*.ogv` 文件（通常也会包含音频轨），应当使用 MIME 类型 `video/ogg`。
+- 只包含音频轨的 `*.oga` 和 `*.ogg` 文件应当使用 MIME 类型 `audio/ogg`。
 
 默认情况下，大多数服务器不为 Ogg 媒体提供正确的 MIME 类型，因此可能需要为此添加适当的配置。
 
@@ -25,67 +28,68 @@ AddType application/ogg .ogg
 
 在配置服务器以正确托管媒体时，[媒体容器格式](/zh-CN/docs/Web/Media/Formats/Containers)这篇文章尤其有帮助。
 
-## Handle range requests correctly
+## 正确处理范围请求
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
+为了支持搜索和播放尚未下载的媒体区域，你可以使用[范围请求](/zh-CN/docs/Web/HTTP/Range_requests)从搜索目标位置检索媒体。此外，它还会使用字节范围请求寻址到媒体的末尾（假设提供了 {{HTTPHeader("Content-Length")}} 标头），以确定媒体的时长。
 
-Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
+如果服务器可以接受范围请求，则应接受 {{HTTPHeader("Accept-Ranges")}} 标头。它必须向所有范围请求返回 {{HTTPStatus("206", "206 Partial Content")}}，否则浏览器无法判断服务器是否支持范围请求。服务器也必须为请求 `Range: bytes=0-` 返回 `206: Partial Content`。
 
-Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
+参见[范围请求](/zh-CN/docs/Web/HTTP/Range_requests)以了解更多信息。
 
-## Include regular key frames
+## 包含常规关键帧
 
-When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
+当浏览器搜索 Ogg 媒体到指定时间时，它必须搜索到目标前最近的关键帧，然后从那里下载并解码视频，直到要求的目标时间。关键帧之间的距离越远，所需的时间就越长，因此在固定的时间间隔内加入关键帧会很有帮助。
 
-By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+默认情况下，[`ffmpeg2theora`](https://gitlab.xiph.org/xiph/ffmpeg2theora) 每 64 帧（或以每秒 30 帧计算，约每 2 秒）使用一个关键帧，效果相当不错。
 
 > [!NOTE]
-> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
+> 当然，使用的关键帧越多，视频文件就越大，因此您可能需要进行一些试验，才能在文件大小和搜索性能之间取得适当的平衡。
 
-## Consider using the preload attribute
+## 考虑使用 preload 属性
 
-The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
+HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素提供了 `preload` 属性，它告诉浏览器在页面加载时尝试下载整个媒体。如果没有 `preload` 属性，浏览器将下载足够显示第一个视频帧的媒体，并确定媒体的时长。
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+- 默认情况下，`preload` 是关闭的，因此如果进入视频是网页的重点，在视频元素中加入 `preload` 可能会更受用户喜爱。
+- 使用 `preload="metadata"` 会预载媒体文件的元数据，可能还会预载视频的前几帧。将 `payload` 设置为 `auto`，浏览器就会在页面加载完成后自动开始下载媒体文件，前提是用户会播放该文件。
 
-## Don't use HTTP compression for Ogg media
+## 不要对 Ogg 媒体使用 HTTP 压缩
 
-One common way to reduce the load on a web server is to use [gzip or deflate compression](http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/) when serving to a supporting web browser.
+减少 web 服务器负载的一个常用方法是在向支持的 web 浏览器提供服务时使用 [gzip 或 deflate 压缩](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/)。
 
-Although it's unlikely, it's possible the browser may advertise that it supports HTTP compression (gzip/deflate) using the `Accept-Encoding: gzip,deflate` header when requesting media files. Your server should be configured to not do so. The data in media files is already compressed, so you won't get any real benefit from compression, and the use of compression makes it impossible for the browser to properly seek the video or determine its duration.
+虽然可能性不大，但浏览器可能会在请求媒体文件时使用 `Accept-Encoding: gzip,deflate` 标头宣称其支持 HTTP 压缩（gzip/deflate）。服务器不应该配置如此；媒体文件中的数据已被压缩，因此你不会从压缩中获得任何真正的好处，而且使用压缩会使浏览器无法正确搜索视频或确定其持续时间。
 
-Another probelm with allowing HTTP compression for media streaming: Apache servers don't send the {{HTTPHeader("Content-Length")}} response header if gzip encoding is used.
+允许对媒体流进行 HTTP 压缩的另一个问题：如果使用 gzip 编码，Apache 服务器不会发送 {{HTTPHeader("Content-Length")}} 响应标头。
 
-## Getting the duration of Ogg media
+## 获取 Ogg 媒体的时长
 
-You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](http://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
+你可以使用 `oggz-info` 工具来获取媒体时长；这个工具包含在 [`oggz-tools`](https://www.xiph.org/oggz/) 软件包中。`oggz-info` 的输出如下：
 
 ```bash
- $ oggz-info /g/media/bruce_vs_ironman.ogv
- Content-Duration: 00:01:00.046
+$ oggz-info /g/media/bruce_vs_ironman.ogv
+Content-Duration: 00:01:00.046
 
- Skeleton: serialno 1976223438
-         4 packets in 3 pages, 1.3 packets/page, 27.508% Ogg overhead
-         Presentation-Time: 0.000
-         Basetime: 0.000
+Skeleton: serialno 1976223438
+        4 packets in 3 pages, 1.3 packets/page, 27.508% Ogg overhead
+        Presentation-Time: 0.000
+        Basetime: 0.000
 
- Theora: serialno 0170995062
-         1790 packets in 1068 pages, 1.7 packets/page, 1.049% Ogg overhead
-         Video-Framerate: 29.983 fps
-         Video-Width: 640
-         Video-Height: 360
+Theora: serialno 0170995062
+        1790 packets in 1068 pages, 1.7 packets/page, 1.049% Ogg overhead
+        Video-Framerate: 29.983 fps
+        Video-Width: 640
+        Video-Height: 360
 
- Vorbis: serialno 0708996688
-         4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
-         Audio-Samplerate: 44100 Hz
-         Audio-Channels: 2
+Vorbis: serialno 0708996688
+        4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
+        Audio-Samplerate: 44100 Hz
+        Audio-Channels: 2
 ```
 
-Note that you can't simply serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
+请注意，你不能直接使用由 `oggz-info` 报告的 Content-Duration 行，因为它是以 `HH:MM:SS` 格式报告的。需要将其转换为秒，然后将其作为 `X-Content-Duration` 值提供。为此，可以解析 `HH`、`MM` 和 `SS` 段，然后转换为 `(HH * 3600) + (MM * 60) + SS` 作为应该报告的值。
 
-It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
+值得注意的是，`oggz-info` 似乎会对媒体进行一次读取以计算其时长，因此存储时长是个好主意，这样可以避免在每次对 Ogg 媒体进行 HTTP 请求时都要计算时长而造成长时间的延迟。
 
-## See also
+## 参见
 
-- [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [The "codecs" parameter in common media types](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
+- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [常用媒体类型的编解码器](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
