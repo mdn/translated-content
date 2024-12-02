@@ -18,7 +18,7 @@ l10n:
 
 之后扩展需要完成剩余的 OAuth2 流程以获取经过验证的访问令牌，然后就使用该令牌根据用户的授权通过 HTTPS 请求访问用户的数据。
 
-要使用此 API，你的拓展必须预先取得“identity” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_权限)。
+要使用此 API，你的拓展必须预先取得“identity”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_权限)。
 
 ## 设置
 
