@@ -1,7 +1,6 @@
 ---
 title: 挑战的参考答案
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
-page-type: guide
 ---
 
 ## SVG 和 CSS

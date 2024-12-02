@@ -33,7 +33,7 @@ slug: Web/SVG/Namespaces_Crash_Course
 
 #### 重新定义默认命名空间
 
-如果根节点的所有子节点也被定义为默认命名空间，那么你如何混合使用另一种命名空间呢？为了在 HTML 中引入SVG 命名空间，你应当引入 `<svg>`。在 XML 中，你应当声明一个命名空间。这里是一个简单的例子。
+如果根节点的所有子节点也被定义为默认命名空间，那么你如何混合使用另一种命名空间呢？为了在 HTML 中引入 SVG 命名空间，你应当引入 `<svg>`。在 XML 中，你应当声明一个命名空间。这里是一个简单的例子。
 
 ```xml
 <report xmlns="https://www.acme.org/reports">
@@ -101,158 +101,158 @@ XML 方言不仅定义了自己的标记，而且还定义了自己的属性。
 <table class="fullwidth-table">
   <tbody>
     <tr>
-      <th>DOM1 （请勿使用）</th>
-      <th>DOM2 （使用这些替代！）</th>
+      <th>DOM1（请勿使用）</th>
+      <th>DOM2（使用这些替代！）</th>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/createAttribute"
+          href="/zh-CN/docs/Web/API/Document/createAttribute"
           ><code>createAttribute()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/createAttributeNS"><code>createAttributeNS()</code></a
+          href="/zh-CN/docs/Web/API/Document/createAttributeNS"><code>createAttributeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/createElement"
+          href="/zh-CN/docs/Web/API/Document/createElement"
           ><code>createElement()</code></a
         >
       </td>
       <td>
-        <a href="/en-US/docs/Web/API/Document/createElementNS"><code>createElementNS()</code></a
+        <a href="/zh-CN/docs/Web/API/Document/createElementNS"><code>createElementNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/getAttributeNode"
+          href="/zh-CN/docs/Web/API/Element/getAttributeNode"
           ><code>getAttributeNode()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/getAttributeNodeNS"><code>getAttributeNodeNS()</code></a
+          href="/zh-CN/docs/Web/API/Element/getAttributeNodeNS"><code>getAttributeNodeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/getAttribute"
+          href="/zh-CN/docs/Web/API/Element/getAttribute"
           ><code>getAttribute()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/getAttributeNS"><code>getAttributeNS()</code></a
+          href="/zh-CN/docs/Web/API/Element/getAttributeNS"><code>getAttributeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/getElementsByTagName"
+          href="/zh-CN/docs/Web/API/Document/getElementsByTagName"
           ><code>getElementsByTagName()</code></a
         >
       </td>
       <td>
-        <a href="/en-US/docs/Web/API/Document/getElementsByTagNameNS"><code>getElementsByTagNameNS()</code></a
+        <a href="/zh-CN/docs/Web/API/Document/getElementsByTagNameNS"><code>getElementsByTagNameNS()</code></a
         >
-        （同样 <a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS">添加到元素</a>）
+        （同样 <a href="/zh-CN/docs/Web/API/Element/getElementsByTagNameNS">添加到元素</a>）
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/getNamedItem"
+          href="/zh-CN/docs/Web/API/NamedNodeMap/getNamedItem"
           ><code>getNamedItem()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/getNamedItemNS"><code>getNamedItemNS()</code></a
+          href="/zh-CN/docs/Web/API/NamedNodeMap/getNamedItemNS"><code>getNamedItemNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/API/Element/hasAttribute"><code>hasAttribute()</code></a
+        <a href="/zh-CN/docs/Web/API/Element/hasAttribute"><code>hasAttribute()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/hasAttributeNS"><code>hasAttributeNS()</code></a
+          href="/zh-CN/docs/Web/API/Element/hasAttributeNS"><code>hasAttributeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/removeAttribute"
+          href="/zh-CN/docs/Web/API/Element/removeAttribute"
           ><code>removeAttribute()</code></a
         >
       </td>
       <td>
-        <a href="/en-US/docs/Web/API/Element/removeAttributeNS"><code>removeAttributeNS()</code></a
+        <a href="/zh-CN/docs/Web/API/Element/removeAttributeNS"><code>removeAttributeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/removeNamedItem"
+          href="/zh-CN/docs/Web/API/NamedNodeMap/removeNamedItem"
           ><code>removeNamedItem()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/removeNamedItemNS"><code>removeNamedItemNS()</code></a
+          href="/zh-CN/docs/Web/API/NamedNodeMap/removeNamedItemNS"><code>removeNamedItemNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/setAttribute"
+          href="/zh-CN/docs/Web/API/Element/setAttribute"
           ><code>setAttribute()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/setAttributeNS"><code>setAttributeNS()</code></a
+          href="/zh-CN/docs/Web/API/Element/setAttributeNS"><code>setAttributeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/setAttributeNode"
+          href="/zh-CN/docs/Web/API/Element/setAttributeNode"
           ><code>setAttributeNode()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Element/setAttributeNodeNS"><code>setAttributeNodeNS()</code></a
+          href="/zh-CN/docs/Web/API/Element/setAttributeNodeNS"><code>setAttributeNodeNS()</code></a
         >
       </td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/setNamedItem"
+          href="/zh-CN/docs/Web/API/NamedNodeMap/setNamedItem"
           ><code>setNamedItem()</code></a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/API/NamedNodeMap/setNamedItemNS"><code>setNamedItemNS()</code></a
+          href="/zh-CN/docs/Web/API/NamedNodeMap/setNamedItemNS"><code>setNamedItemNS()</code></a
         >
       </td>
     </tr>
