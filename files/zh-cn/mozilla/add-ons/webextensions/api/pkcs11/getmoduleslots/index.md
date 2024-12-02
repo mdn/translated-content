@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在模块中枚举插槽。此函数返回一个数组，其中包含所有插槽的条目，且各条目中包含插槽的名称以及令牌的相关信息（如果插槽包含令牌）。
+在模块中枚举插槽。此函数返回包含所有插槽条目的数组，且各条目中包含插槽的名称，以及令牌的相关信息（如果插槽包含令牌）。
 
 你只能为已安装在 Firefox 中的模块调用此函数。
 
@@ -31,7 +31,7 @@ let getting = browser.pkcs11.getModuleSlots(
 将被兑现为一个对象数组，每个对象代表模块提供访问的插槽之一的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。每个对象有两个属性：
 
 - `name`：插槽的名称
-- `token`：如果此插槽中存在令牌，则为 `Token` 对象。如果此插槽中不存在令牌，则此属性为 `null`。
+- `token`：如果此插槽中存在令牌，则为 `Token` 对象，否则该属性将为 `null`。
 
 `Token` 对象具有以下属性：
 
@@ -40,9 +40,9 @@ let getting = browser.pkcs11.getModuleSlots(
 - `manufacturer`
   - : `string`。令牌的制造商名称。
 - `HWVersion`
-  - : `string`。硬件版本，作为 PKCS #11 版本号（两个用点分隔的 32 位整数，如“1.0”）。
+  - : `string`。作为 PKCS #11 版本号的硬件版本（两个用点分隔的 32 位整数，如“1.0”）。
 - `FWVersion`
-  - : `string`。固件版本，作为 PKCS #11 版本号（两个用点分隔的 32 位整数，如“1.0”）。
+  - : `string`。作为 PKCS #11 版本号的固件版本（两个用点分隔的 32 位整数，如“1.0”）。
 - `serial`
   - : `string`。序列号，其格式由令牌规范定义。
 - `isLoggedIn`
