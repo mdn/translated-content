@@ -9,7 +9,7 @@ l10n:
 
 如果侧边栏是扩展自己的侧边栏，则关闭活动窗口中的侧边栏。
 
-你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序中调用此函数。
+你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序内部调用此函数。
 
 这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -25,7 +25,7 @@ browser.sidebarAction.close()
 
 ### 返回值
 
-将会不使用任何参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个不以任何参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 ## 浏览器兼容性
 
