@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-`pkcs11` API 允许扩展枚举 [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) 安全模块，并将它们作为密钥和证书的来源提供给浏览器。
+`pkcs11` API 允许扩展枚举 [PKCS #11](https://zh.wikipedia.org/wiki/PKCS11) 安全模块，并将它们作为密钥和证书的来源提供给浏览器。
 
 要使用此 API，你需要预先取得“pkcs11”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
