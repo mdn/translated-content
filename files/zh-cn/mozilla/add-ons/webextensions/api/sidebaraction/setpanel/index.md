@@ -11,13 +11,13 @@ l10n:
 
 ## 面板类型
 
-侧边栏总是有一个<i>“清单面板”</i>，即在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中定义的面板。
+侧边栏总是有一个“_清单面板_”，即在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中定义的面板。
 
-如果使用 `setPanel()` 设置新面板，并包含 `tabId` 选项，则该面板仅为给定的标签页设置。这个面板称为<i>“标签特定面板”</i>。
+如果使用 `setPanel()` 设置新面板，并包含 `tabId` 选项，则该面板仅为给定的标签页设置。这个面板称为“_标签特定面板_”。
 
-如果使用 `setPanel()` 设置新面板，并包含 `windowId` 选项，则该面板仅为给定的窗口设置。这个面板称为<i>“窗口特定面板”</i>，并将出现在该窗口的所有没有设置标签特定面板的标签中。
+如果使用 `setPanel()` 设置新面板，并包含 `windowId` 选项，则该面板仅为给定的窗口设置。这个面板称为“_窗口特定面板_”，并将出现在该窗口的所有没有设置标签特定面板的标签中。
 
-如果使用 `setPanel()` 设置新面板，并省略 `tabId` 和 `windowId` 选项，则这将设置<i>“全局面板”</i>。全局面板将出现在所有没有设置标签特定面板的标签中，且其窗口没有设置窗口特定面板的标签中。
+如果使用 `setPanel()` 设置新面板，并省略 `tabId` 和 `windowId` 选项，则这将设置“_全局面板_”。全局面板将出现在所有没有设置标签特定面板的标签中，且其窗口没有设置窗口特定面板的标签中。
 
 ## 语法
 
