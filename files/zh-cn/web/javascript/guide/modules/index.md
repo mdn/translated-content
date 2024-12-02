@@ -409,9 +409,9 @@ document.getElementById("main").innerText = text;
 
 ## 默认导出与具名导出
 
-到目前为止，我们导出的功能都是由 **具名导出** 组成——每个项目（无论是函数，常量等）在导出时都由其名称引用，并且该名称也用于在导入时引用它。
+到目前为止，我们导出的功能都是由**具名导出**组成——每个项目（无论是函数，常量等）在导出时都由其名称引用，并且该名称也用于在导入时引用它。
 
-还有一种导出类型叫做 **默认导出** ——这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 作者 Jason Orendorff 所解释的那样；搜索“Default exports”）。
+还有一种导出类型叫做**默认导出**——这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 作者 Jason Orendorff 所解释的那样；搜索“Default exports”）。
 
 来看一个例子了解其工作方式。在基本模块 `square.js` 中，你可以找到一个名为 `randomSquare()` 的函数，用于创建一个随机颜色、大小和位置的正方形。我们希望将其作为默认导出，因此在文件底部这样编写：
 
