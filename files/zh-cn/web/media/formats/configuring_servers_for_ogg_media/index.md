@@ -1,16 +1,15 @@
 ---
-title: Configuring servers for Ogg media
+title: 为 Ogg 媒体配置服务器
 slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
-original_slug: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。
 
 ## 为媒体提供正确的 MIME 类型
 
-`*.ogg` 和 `*.ogv` 文件包含了视频 (也可能带有音频)，应该和 `video/ogg` MIME 类型一起提供。 `*.oga` 和 `*.ogg` 只含音频的文件应该与 `audio/ogg` MIME 类型一起提供。
+`*.ogg` 和 `*.ogv` 文件包含了视频（也可能带有音频），应该和 `video/ogg` MIME 类型一起提供。 `*.oga` 和 `*.ogg` 只含音频的文件应该与 `audio/ogg` MIME 类型一起提供。
 
 如果不确定 Ogg 文件是否包含音频或视频，可以和 MIME 类型 `application/ogg`一起提供，浏览器会将其视为视频文件。
 
@@ -18,15 +17,15 @@ HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安
 
 对于 Apache，可添加如下配置：
 
-```plain
+```apacheconf
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
 ```
 
-你可以在 [guide to media types and formats on the web](/zh-CN/docs/Web/Media/Formats) 找到有关可能的媒体文件类型以及其中使用的编解码器的特定信息。特别是，关于配置媒体服务器正确托管媒体 [media container formats](/zh-CN/docs/Web/Media/Formats/Containers) 特别有用。
+在配置服务器以正确托管媒体时，[媒体容器格式](/zh-CN/docs/Web/Media/Formats/Containers)这篇文章尤其有帮助。
 
-## Handle HTTP 1.1 byte range requests correctly
+## Handle range requests correctly
 
 In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
@@ -49,28 +48,7 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 `preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
-## Configuration for older Firefox versions
-
-### Serve X-Content-Duration headers
-
-> [!NOTE]
-> As of [Firefox 41](/zh-CN/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox bug 1160695](https://bugzil.la/1160695) for more details.
-
-The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
-
-There are two ways Gecko can do this. The best way is to offer an `X-Content-Duration` header when serving Ogg media files. This header provides the duration of the video in seconds (**not** in HH:MM:SS format) as a floating-point value.
-
-For example, if the video is 1 minute and 32.6 seconds long, this header would be:
-
-```plain
-X-Content-Duration: 92.6
-```
-
-If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
-
-As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.
-
-### Don't use HTTP compression for media files
+## Don't use HTTP compression for Ogg media
 
 One common way to reduce the load on a web server is to use [gzip or deflate compression](http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/) when serving to a supporting web browser.
 
@@ -78,11 +56,11 @@ Although it's unlikely, it's possible the browser may advertise that it supports
 
 Another probelm with allowing HTTP compression for media streaming: Apache servers don't send the {{HTTPHeader("Content-Length")}} response header if gzip encoding is used.
 
-### Getting the duration of Ogg media
+## Getting the duration of Ogg media
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](http://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-```plain
+```bash
  $ oggz-info /g/media/bruce_vs_ironman.ogv
  Content-Duration: 00:01:00.046
 
@@ -109,6 +87,5 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 ## See also
 
-- [Guide to media types and formats on the web](/zh-CN/docs/Web/Media/Formats)
 - [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [The "codecs" parameter in common media types](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
