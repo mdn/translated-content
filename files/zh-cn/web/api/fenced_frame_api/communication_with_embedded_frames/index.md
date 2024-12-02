@@ -1,5 +1,5 @@
 ---
-title: 与嵌入框架的通信
+title: 与嵌入框架进行通信
 slug: Web/API/Fenced_frame_API/Communication_with_embedded_frames
 l10n:
   sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
