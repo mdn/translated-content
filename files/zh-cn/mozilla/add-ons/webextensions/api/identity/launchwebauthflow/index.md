@@ -2,7 +2,7 @@
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: b8ed4ae6a9a60693920043935d2531921ae9e483
 ---
 
 {{AddonSidebar}}
