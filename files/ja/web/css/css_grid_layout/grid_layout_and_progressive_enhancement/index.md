@@ -2,7 +2,7 @@
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+  sourceCommit: b692821c494fd3a25dd883b6fe14998fa2621f7b
 ---
 
 {{CSSRef}}
@@ -66,7 +66,7 @@ img {
 ```html
 <div class="media">
   <div class="image">
-    <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+    <img src="https://dummyimage.com/150x150" alt="placeholder" />
   </div>
   <div class="text">
     これは、メディアオブジェクトの例です。古いブラウザーには浮動、新しいブラウザーにはグリッドを使用しています。
@@ -76,7 +76,7 @@ img {
 
 {{ EmbedLiveSample('Floats', '500', '200') }}
 
-下の画像は、左が非対応のブラウザ、右が対応しているブラウザーでメディアオブジェクトを表示したものです。
+下の画像は、左が非対応のブラウザー、右が対応しているブラウザーでメディアオブジェクトを表示したものです。
 
 ![グリッドを使って浮動レイアウトを上書きする簡単な例です。どちらも画像は左に配置されています。テキストは、浮動要素の例では上部に、グリッドの例では下部に垂直に配置されています。](10-float-simple-override.png)
 
@@ -86,7 +86,7 @@ img {
 
 #### もっと複雑な例
 
-次の例では、浮動させたカードを用意しました。カードに{{cssxref("width")}}を与え、{{cssxref("float")}}としています。カードの間に隙間を作るために、アイテムに{{cssxref("margin")}}を使用し、コンテナには負のマージンを使用しています。
+次の例では、浮動させたカードを用意しました。カードに{{cssxref("width")}}を与え、{{cssxref("float")}}としています。カードの間に隙間を作るために、アイテムに{{cssxref("margin")}}を使用し、コンテナーには負のマージンを使用しています。
 
 ```css hidden
 * {
@@ -379,13 +379,8 @@ CSS グリッドレイアウト仕様書では、グリッドアイテムにな�
 
 ### 垂直方向の配置
 
-配置プロパティ {{cssxref("vertical-align")}} は、グリッドアイテムには影響を与えません。 `display: inline-block` や `display: table` を使ったレイアウトでは、 vertical-align プロパティを使って基本的な整列を行うことができます。グリッドレイアウトには、より強力なボックス配置プロパティがあります。
+配置プロパティ {{cssxref("vertical-align")}} は、グリッドアイテムには影響を与えません。 `display: inline-block` や `display: table` を使ったレイアウトでは、 `vertical-align` プロパティを使って基本的な整列を行うことができます。グリッドレイアウトには、より強力なボックス配置プロパティがあります。
 
 ### 段組みレイアウト
 
 `column-*` プロパティはグリッドコンテナーには適用されないので、古いブラウザーの計画通りに段組みレイアウトを使用することもできます。
-
-## 参考資料
-
-- 機能クエリーの優れた説明と、その上手な使い方については、 [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) を参照してください。
-- [CSS Grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)

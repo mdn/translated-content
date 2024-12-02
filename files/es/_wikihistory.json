@@ -9562,6 +9562,10 @@
     "modified": "2020-10-28T14:39:35.644Z",
     "contributors": ["noksenberg", "IsraelFloresDGA", "ervin_santos"]
   },
+  "Web/HTTP/Headers/Content-Digest": {
+    "modified": "2020-10-15T22:27:29.781Z",
+    "contributors": ["joseluisq"]
+  },
   "Web/HTTP/Headers/Content-Disposition": {
     "modified": "2020-10-15T21:58:39.489Z",
     "contributors": ["kbono", "lagwy"]
@@ -9593,10 +9597,6 @@
   "Web/HTTP/Headers/Cross-Origin-Resource-Policy": {
     "modified": "2020-10-15T22:29:00.325Z",
     "contributors": ["IsraelFloresDGA"]
-  },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:27:29.781Z",
-    "contributors": ["joseluisq"]
   },
   "Web/HTTP/Headers/ETag": {
     "modified": "2020-10-15T21:57:09.273Z",
