@@ -2,7 +2,7 @@
 title: HTMLLinkElement：as 属性
 slug: Web/API/HTMLLinkElement/as
 l10n:
-  sourceCommit: c30827dea447e33d0d875cb3e7e1632b56148e5f
+  sourceCommit: 782dea39dbc29c19c82fef8fd8a1222db3c248ab
 ---
 
 {{APIRef("HTML DOM")}}
