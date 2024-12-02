@@ -13,7 +13,7 @@ l10n:
 
 JavaScript 程序本来很小——在早期，它们大多被用来执行独立的脚本任务，在你的 web 页面需要的地方提供一定交互，所以一般不需要多大的脚本。过了几年，我们现在有了运行大量 JavaScript 脚本的复杂程序，还有一些被用在其他环境（例如 [Node.js](/zh-CN/docs/Glossary/Node.js)）。
 
-复杂的项目需要一种将 JavaScript 程序拆分为可按需导入的单独模块的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://zh.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)、[webpack](https://webpack.js.org/) 和 [Babel](https://babeljs.io/)）。
+复杂的项目需要一种将 JavaScript 程序拆分为可按需导入的单独模块的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://zh.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统，如 [RequireJS](https://requirejs.org/)、[webpack](https://webpack.js.org/) 和 [Babel](https://babeljs.io/)）。
 
 所有现代浏览器都原生支持模块特性，无需转译。这是一件好事——浏览器可以优化模块的加载，使其比使用库进行所有额外的客户端处理和额外的网络开销更高效。不过，这并不意味着像 webpack 这样的打包工具就过时了——打包工具仍然在将代码分割成合理大小的块方面做得很好，并且能够进行其他优化，如极简化、无用代码消除和摇树优化。
 
