@@ -393,24 +393,7 @@ svg {
 | 修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。 |
 | ------------------------------------------------------------------------------------------------ |
 
-<details>
-<summary>点击查看参考答案</summary>
-
-- 将 :hover 伪类的位置从特定花瓣移动到所有花瓣
-
-```css
-#inner-petals {
-  --segment-fill-fill-hover: pink;
-}
-
-/* 一些旧版浏览器的非标准方法 */
-#inner-petals:hover .segment-fill {
-  fill: pink;
-  stroke: none;
-}
-```
-
-</details>
+[查看挑战的参考答案](/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_和_css)
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
