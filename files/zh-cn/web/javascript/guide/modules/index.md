@@ -92,7 +92,7 @@ export function draw(ctx, length, x, y, color) {
 }
 ```
 
-你能够导出函数、`var`、`let`、`const` 和等会会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
+你能够导出函数 `var`、`let`、`const` 和等会看到的类。export 要放在最外层；比如你不能够在函数内使用 `export`。
 
 更方便的导出模块的方法是，在模块文件末尾使用一个 export 语句，以花括号括起来并用逗号分隔的形式列出所有需导出的功能。比如：
 
@@ -145,7 +145,7 @@ reportPerimeter(square1.length, reportList);
 
 ## 使用导入映射导入模块
 
-上面我们看到浏览器如何使用模块路径导入模块，这个路径可以是绝对 URL，或者是使用文档的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 解析的相对 URL：
+上面我们看到浏览器如何使用模块标识符导入模块，这个路径可以是绝对 URL，或者是使用文档的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 解析的相对 URL：
 
 ```js
 import { name as squareName, draw } from "./shapes/square.js";
@@ -154,7 +154,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 [导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如：下面导入映射中的 `imports` 键定义了一个“模块路径映射”JSON 对象，其中属性名称可以用作模块路径，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如：下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
@@ -172,10 +172,10 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在工作线程或工作集上下文中应用导入映射。
 
-通过这个映射，你现在可以使用上面的属性名称作为模块路径。如果模块路径上没有尾部斜杠，那么整个模块路径将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
+通过这个映射，你现在可以使用上面的属性名称作为模块标识符。如果模块标识符尾部没有斜杠，那么整个模块标识符将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
 
 ```js
-// 裸模块名称作为模块路径
+// 裸模块名称作为模块标识符
 import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
@@ -183,14 +183,14 @@ import { name as squareNameTwo } from "shapes/square";
 import { name as squareNameThree } from "https://example.com/shapes/square.js";
 ```
 
-如果模块路径有一个尾部斜杠，那么值也必须有一个，键将被匹配为“路径前缀”。这允许重新映射整个 URL 的类别。
+如果模块标识符尾部有一个斜杠，那么值也必须有一个，键将被匹配为“路径前缀”。这允许重新映射整个 URL 的类别。
 
 ```js
 // 重新映射一个 URL 作为前缀 ( https://example.com/shapes/)
 import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
-在导入映射中，可能有多个键可以匹配一个模块路径。例如，模块路径 `shapes/circle/` 可以匹配模块路径键 `shapes/` 和 `shapes/circle/`。在这种情况下，浏览器将选择最具体（最长）的匹配模块路径键。
+在导入映射中，可能有多个键可以匹配一个模块标识符。例如，模块标识符 `shapes/circle/` 可以匹配模块标识符键 `shapes/` 和 `shapes/circle/`。在这种情况下，浏览器将选择最具体（最长）的匹配模块标识符键。
 
 导入映射允许使用裸模块名称（如在 Node.js 中）导入模块，还可以模拟从包中导入模块，无论是否带有文件扩展名。虽然上面没有显示，但它们还允许根据导入模块的脚本路径导入特定版本的库。通常，它们使开发人员能够编写更符合人体工程学的导入代码，并更容易管理站点使用的模块的不同版本和依赖关系。这可以减少在浏览器和服务器中使用相同 JavaScript 库所需的工作量。
 
@@ -208,15 +208,15 @@ if (HTMLScriptElement.supports?.("importmap")) {
 
 ### 以裸名称导入模块
 
-在一些 JavaScript 环境中，例如 Node.js，你可以使用裸名称作为模块路径。这是因为环境可以将模块名称解析到文件系统中的标准位置。例如，你可以使用以下语法来导入“square”模块。
+在一些 JavaScript 环境中，例如 Node.js，你可以使用裸名称作为模块标识符。这是因为环境可以将模块名称解析到文件系统中的标准位置。例如，你可以使用以下语法来导入“square”模块。
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "square";
 ```
 
-要在浏览器中使用裸名称，你需要一个导入映射，它提供了浏览器解析模块路径到 URL 所需的信息（如果 JavaScript 尝试导入无法解析到模块位置的模块路径，将抛出 `TypeError`）。
+要在浏览器中使用裸名称，你需要一个导入映射，它提供了浏览器解析模块标识符到 URL 所需的信息（如果 JavaScript 尝试导入无法解析到模块位置的模块标识符，将抛出 `TypeError`）。
 
-下面你可以看到一个定义了 `square` 模块路径键的映射，在这种情况下，它映射到一个相对地址值。
+下面你可以看到一个定义了 `square` 模块标识符键的映射，在这种情况下，它映射到一个相对地址值。
 
 ```html
 <script type="importmap">
@@ -236,14 +236,14 @@ import { name as squareName, draw } from "square";
 
 ### 重映射模块路径
 
-模块路径映射条目，其中说明符键和其关联值都带有尾部斜杠（`/`），可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟 "包和模块"，例如你在 Node 生态系统中可能看到的那样。
+模块标识符映射条目，其中说明符键和其关联值都带有尾部斜杠（`/`），可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟 "包和模块"，例如你在 Node 生态系统中可能看到的那样。
 
 > [!NOTE]
-> 尾部 `/` 表示模块路径键可以作为模块路径的一部分进行替换。如果没有这个，浏览器将只匹配（并替换）整个模块路径键。
+> 尾部 `/` 表示模块标识符键可以作为模块标识符的一部分进行替换。如果没有这个，浏览器将只匹配（并替换）整个模块标识符键。
 
 #### 模块包
 
-以下 JSON 导入映射定义将 `lodash` 作为裸名称，并将模块路径前缀 `lodash/` 映射到路径 `/node_modules/lodash-es/`（解析为文档基础 URL）：
+以下 JSON 导入映射定义将 `lodash` 作为裸名称，并将模块标识符前缀 `lodash/` 映射到路径 `/node_modules/lodash-es/`（解析为文档基础 URL）：
 
 ```json
 {
@@ -282,7 +282,7 @@ import fp from "lodash/fp.js";
 > [!NOTE]
 > 你也可以使用相对路径实现版本管理，但这并不理想，因为这会强制你的项目采用特定的结构，并且阻止你使用裸模块名称。
 
-导入映射同样允许你在应用程序中拥有多个版本的依赖项，并使用相同的模块路径引用它们。你可以通过 `scopes` 键实现这一点，它允许你根据执行导入的脚本路径提供模块路径映射。下面的示例演示了这一点。
+导入映射同样允许你在应用程序中拥有多个版本的依赖项，并使用相同的模块标识符引用它们。你可以通过 `scopes` 键实现这一点，它允许你根据执行导入的脚本路径提供模块标识符映射。下面的示例演示了这一点。
 
 ```json
 {
@@ -301,7 +301,7 @@ import fp from "lodash/fp.js";
 
 请注意，用于选择作用域的路径不会影响地址的解析。映射路径中的值不必与作用域路径匹配，且相对路径仍然解析为包含导入映射的脚本的基础 URL。
 
-与模块路径映射一样，你可以有多个作用域键，并且这些键可能包含重叠的路径。如果多个作用域匹配引用 URL，则首先检查最具体的作用域路径（最长的作用域键）以查找匹配的说明符。如果没有匹配的说明符，浏览器将回退到下一个最具体的匹配作用域路径，依此类推。如果在任何匹配的作用域中都没有匹配的说明符，浏览器会检查 `imports` 键中的模块路径映射以查找匹配项。
+与模块标识符映射一样，你可以有多个作用域键，并且这些键可能包含重叠的路径。如果多个作用域匹配引用 URL，则首先检查最具体的作用域路径（最长的作用域键）以查找匹配的说明符。如果没有匹配的说明符，浏览器将回退到下一个最具体的匹配作用域路径，依此类推。如果在任何匹配的作用域中都没有匹配的说明符，浏览器会检查 `imports` 键中的模块标识符映射以查找匹配项。
 
 ### 通过映射去除哈希文件名以改进缓存
 
