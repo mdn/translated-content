@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} 实例的 **`controlsList`** 属性返回一个 DOMTokenList，其用于帮助用户代理在显示自有的一组控件时，决定应在媒体元素上显示哪些控件。DOMTokenList 接受三个可能的值中的一个或多个：`nodownload`、`nofullscreen` 和 `noremoteplayback`。
+{{domxref("HTMLMediaElement")}} 接口的 **`controlsList`** 属性返回一个 DOMTokenList，其用于帮助用户代理在显示自有的一组控件时，决定应在媒体元素上显示哪些控件。DOMTokenList 接受三个可能的值中的一个或多个：`nodownload`、`nofullscreen` 和 `noremoteplayback`。
 
 ## 值
 
