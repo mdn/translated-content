@@ -11,13 +11,13 @@ l10n:
 
 ## 标题类型
 
-你的扩展应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest 键中指定侧边栏的标题（这被称为<i>“manifest 标题”</i>）。如果你没有指定 manifest 标题，它将使用默认值即扩展名。
+你的扩展应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest 键中指定侧边栏的标题（这被称为“_manifest 标题_”）。如果你没有指定 manifest 标题，它将使用默认值即扩展名。
 
-如果你使用 `setTitle()` 设置新标题，并包含 `tabId` 选项，那么标题仅为给定的标签设置。这个标题称为<i>“标签特定标题”</i>。
+如果你使用 `setTitle()` 设置新标题，并包含 `tabId` 选项，那么标题仅为给定的标签设置。这个标题称为“_标签特定标题_”。
 
-如果你使用 `setTitle()` 设置新标题，并包含 `windowId` 选项，那么标题仅为给定的窗口设置。这个标题称为<i>“窗口特定标题”</i>，并将出现在该窗口的所有标签中，这些标签没有设置标签特定标题。
+如果你使用 `setTitle()` 设置新标题，并包含 `windowId` 选项，那么标题仅为给定的窗口设置。这个标题称为“_窗口特定标题_”，并将出现在该窗口的所有标签中，这些标签没有设置标签特定标题。
 
-如果你使用 `setTitle()` 设置新标题，并省略 `tabId` 和 `windowId` 选项，那么这将设置<i>“全局标题”</i>。全局标题将出现在所有没有设置标签特定标题的标签中，且其窗口没有设置窗口特定标题的标签中。
+如果你使用 `setTitle()` 设置新标题，并省略 `tabId` 和 `windowId` 选项，那么这将设置“_全局标题_”。全局标题将出现在所有没有设置标签特定标题的标签中，且其窗口没有设置窗口特定标题的标签中。
 
 ## 语法
 
