@@ -12,6 +12,7 @@ l10n:
 你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序内部调用此函数。
 
 这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+
 ## 语法
 
 ```js-nolint
