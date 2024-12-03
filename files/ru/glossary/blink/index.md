@@ -1,16 +1,22 @@
 ---
 title: Blink
 slug: Glossary/Blink
+l10n:
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
 
-Blink - это браузерный движок с открытым исходным кодом разработанный Google как часть Chromium (и следовательно как часть Chrome). Конкретней, Blink - это ответвление WebCore библиотеки {{glossary("WebKit")}}, поддерживающей макет, рендеринг, и {{Glossary("DOM")}}.
+Blink — это браузерный движок с открытым исходным кодом, разработанный компанией Google как часть Chromium (и, следовательно, часть {{glossary("Google Chrome", "Chrome")}}). Blink начинался как ответвление библиотеки WebCore для обработки вёрстки, отображения и {{Glossary("DOM")}} из {{glossary("WebKit")}}, а теперь является самостоятельным {{Glossary("Engine/Rendering", "движком для отображения веб-страниц")}}.
 
-## Узнать больше
+## Смотрите также
 
-### Основная информация
-
-- [Домашняя страница](http://www.chromium.org/blink) проекта Blink
-- [Blink](http://en.wikipedia.org/wiki/Blink_%28layout_engine%29) на Википедии
-- [FAQ](http://www.chromium.org/blink/developer-faq) по Blink
+- [Blink (Rendering Engine)](https://www.chromium.org/blink/)
+- [Blink (движок)](<https://ru.wikipedia.org/wiki/Blink_(движок)>) в Википедии
+- [Часто задаваемые вопросы](https://www.chromium.org/blink/developer-faq/) (англ.) на сайте Blink
+- Связанные термины:
+  - {{glossary("Google Chrome")}}
+  - {{glossary("Gecko")}}
+  - {{glossary("Trident")}}
+  - {{glossary("WebKit")}}
+  - {{Glossary("Engine/Rendering", "Движок для отображения веб-страниц")}}
