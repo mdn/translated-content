@@ -101,6 +101,6 @@ document.addEventListener("visibilitychange", function logData() {
 - {{domxref("Beacon_API","Beacon API", "" , "true")}} 概述。
 - [Don't
   lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) 解释了为什么你应该使用 `visibilitychange` 而不是 `beforeunload`/`unload`。
-- [网页生命周期 API](https://developers.google.cn/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) 提供了有关在 Web 应用程序中处理网页生命周期行为的最佳实践。
+- [网页生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api#developer_recommendations_for_each_state) 提供了有关在 Web 应用程序中处理网页生命周期行为的最佳实践。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)：处理跨浏览器网页生命周期行为不一致的 JavaScript 库。
 - [Back/forward cache](https://web.developers.google.cn/articles/bfcache) 解释了什么是往返缓存，以及它对各种网页生命周期事件的影响。

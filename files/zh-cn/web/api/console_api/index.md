@@ -11,7 +11,7 @@ Console API 提供了允许开发人员执行调试任务的功能，例如在�
 
 Console API 最初是一个专有的 API，不同的浏览器以自己的实现方式来实现它。[Console API](https://console.spec.whatwg.org/) 规范统一了这个 API 的行为，并且所有现代浏览器最终都决定实现这种行为 — 尽管一些实现仍然有自己的附加专有功能。了解这些请查看：
 
-- [Google Chrome 开发者工具实现](https://developer.chrome.google.cn/docs/devtools/console/api
+- [Google Chrome 开发者工具实现](https://developer.chrome.google.cn/docs/devtools/console/api)
 - [Safari 开发者工具实现](https://webkit.org/web-inspector/console-object-api/)
 
 用法非常简单 — {{domxref("console")}} 对象 — 可以通过{{domxref("window.console")}}获取到，在 workers 里面使用{{domxref("WorkerGlobalScope.console")}}获取，`console` — 包含许多方法，你可以调用它们来执行基本的调试任务，通常专注于将各种值记录到浏览器中 [WEB 控制台](/zh-CN/docs/Tools/Web_Console).
