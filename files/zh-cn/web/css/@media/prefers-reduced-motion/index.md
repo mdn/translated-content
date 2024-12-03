@@ -5,7 +5,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
+[CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
 
@@ -24,12 +24,11 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 - 在 Windows 10 中：设置 > 轻松获取 > 显示 > 在 Windows 中显示动画。
 - 在 Windows 11 中：设置 > 辅助功能 > 视觉效果 > 动画效果。
-- 在 Windows 7 中：控制面板 > 轻松获取 > ?是计算机更易于查看 > 关闭不必要动画。
 - 在 MacOS 中：系统偏好 > 辅助使用 > 显示 > 减少运动。
 - 在 iOS 上：设置 > 通用 > 辅助性 > 减少运动。
 - 在 Android 9+ 上：设置 > 辅助性 > 移除动画。
 
-## 例子
+## 示例
 
 下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的“减少运动”后就能看到动画减弱的效果了。
 
