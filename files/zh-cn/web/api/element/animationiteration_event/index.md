@@ -5,7 +5,7 @@ slug: Web/API/Element/animationiteration_event
 
 {{APIRef("CSS3 Animations")}}
 
-[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_animations) 运动到最后一帧时触发。An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
+当一个[CSS Animation](/zh-CN/docs/Web/CSS/CSS_animations)的迭代结束，另一个开始时，会触发[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件。此事件不会与[`animationend_event`](/zh-CN/docs/Web/API/Element/animationend_event)事件同时发生，因此对于动画迭代计数为1的动画不会发生。
 
 ## 语法
 
