@@ -108,9 +108,9 @@ export { name, draw, reportArea, reportPerimeter };
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-你可以使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后用花括号括起来的用逗号分割的功能列表，然后是关键字 `from`，然后是模块文件的路径。
+你可以使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后用花括号括起来的用逗号分割的功能列表，然后是关键字 `from`，然后是*模块标识符*（module specifier）。
 
-模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 示例来说是 `/js-examples/module-examples/basic-modules`。但是，这里我们使用点（`.`）语法来表示“当前位置”，然后紧跟着我们想要找的文件的相对路径。这比每次都要写下整个绝对路径要好得多，因为相对路径更短，并且使 URL 可移植——如果你将其移动站点目录中的其他位置，该示例仍然有效。
+模块标识符提供一个 JavaScript 环境可以解析为模块文件路径的字符串。在浏览器中，它可以是一个相对于站点根目录的路径，对于我们的 `basic-modules` 示例来说是 `/js-examples/module-examples/basic-modules`。但是，这里我们使用点（`.`）语法来表示“当前位置”，然后紧跟着我们想要找的文件的相对路径。这比每次都要写下整个绝对路径要好得多，因为相对路径更短，并且使 URL 可移植——如果你将其移动站点目录中的其他位置，该示例仍然有效。
 
 例如：
 
@@ -145,7 +145,7 @@ reportPerimeter(square1.length, reportList);
 
 ## 使用导入映射导入模块
 
-上面我们看到浏览器如何使用模块标识符导入模块，这个路径可以是绝对 URL，或者是使用文档的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 解析的相对 URL：
+上面我们看到浏览器如何使用模块标识符（可以为绝对 URL，或使用文档的基础 URL 解析的相对 URL）导入模块：
 
 ```js
 import { name as squareName, draw } from "./shapes/square.js";
@@ -154,7 +154,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 [导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如：下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如，下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
@@ -170,7 +170,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在工作线程或工作集上下文中应用导入映射。
+导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在 worker 或 worklet 上下文中应用导入映射。
 
 通过这个映射，你现在可以使用上面的属性名称作为模块标识符。如果模块标识符尾部没有斜杠，那么整个模块标识符将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
 
@@ -236,7 +236,7 @@ import { name as squareName, draw } from "square";
 
 ### 重映射模块路径
 
-模块标识符映射条目，其中说明符键和其关联值都带有尾部斜杠（`/`），可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟“包和模块”，例如你在 Node 生态系统中可能看到的那样。
+模块标识符映射条目，其中标识符键和其关联值都带有尾部斜杠（`/`），可以用作路径前缀。这允许将一整组导入 URL 从一个位置重映射到另一个位置。它还可以用于模拟“包和模块”，例如你在 Node 生态系统中可能看到的那样。
 
 > [!NOTE]
 > 尾部 `/` 表示模块标识符键可以作为模块标识符的一部分进行替换。如果没有这个，浏览器将只匹配（并替换）整个模块标识符键。
@@ -261,11 +261,11 @@ import _ from "lodash";
 import fp from "lodash/fp.js";
 ```
 
-可以在上面导入 fp 而不使用 .js 文件扩展名，但你需要为该文件创建一个裸模块说明符键，例如 lodash/fp，而不是使用路径。如果你只想导入一个模块，这可能是合理的，但如果你希望导入许多模块，这种方法的扩展性较差。
+可以在上面导入 `fp` 而不使用 `.js` 文件扩展名，但你需要为该文件创建一个裸模块标识符键，例如 `lodash/fp`，而不是使用路径。如果你只想导入一个模块，这可能是合理的，但如果你希望导入许多模块，这种方法的扩展性较差。
 
 #### 通用 URL 重映射
 
-模块说明符键不一定是路径——它也可以是绝对 URL（或类似 URL 的相对路径，如 `./`、`../`、`/`）。如果你想将具有绝对路径的模块重映射到你自己的本地资源，这可能会很有用。
+模块标识符键不一定是路径——它也可以是绝对 URL（或类似 URL 的相对路径，如 `./`、`../`、`/`）。如果你想将具有绝对路径的模块重映射到你自己的本地资源，这可能会很有用。
 
 ```json
 {
@@ -275,7 +275,7 @@ import fp from "lodash/fp.js";
 }
 ```
 
-### 用于版本管理的作用域模块
+### 用于版本管理的域限模块
 
 像 Node 这样的生态系统使用 npm 等包管理器来管理模块及其依赖项。包管理器确保每个模块与其他模块及其依赖项分开。因此，虽然一个复杂的应用程序可能在模块图的不同部分多次包含相同的模块，但用户不需要考虑这种复杂性。
 
@@ -297,11 +297,11 @@ import fp from "lodash/fp.js";
 }
 ```
 
-有了这个映射，如果一个 URL 包含 `/node_modules/dependency/` 的脚本导入 `cool-module`，将使用 `/node_modules/some/other/location/cool-module/index.js` 中的版本。如果没有匹配的作用域，或者匹配的作用域中没有匹配的说明符，则使用 `imports` 中的映射作为回退。
+有了这个映射，如果一个 URL 包含 `/node_modules/dependency/` 的脚本导入 `cool-module`，将使用 `/node_modules/some/other/location/cool-module/index.js` 中的版本。如果域限映射中没有匹配的作用域，或者匹配的作用域中没有匹配的标识符，则使用 `imports` 中的映射作为回退。例如，如果 `cool-module` 是在不匹配作用域路径的脚本中导入的，则会使用 `imports` 中的模块标识符，映射到 `/node_modules/cool-module/index.js` 中的版本。
 
 请注意，用于选择作用域的路径不会影响地址的解析。映射路径中的值不必与作用域路径匹配，且相对路径仍然解析为包含导入映射的脚本的基础 URL。
 
-与模块标识符映射一样，你可以有多个作用域键，并且这些键可能包含重叠的路径。如果多个作用域匹配引用 URL，则首先检查最具体的作用域路径（最长的作用域键）以查找匹配的说明符。如果没有匹配的说明符，浏览器将回退到下一个最具体的匹配作用域路径，依此类推。如果在任何匹配的作用域中都没有匹配的说明符，浏览器会检查 `imports` 键中的模块标识符映射以查找匹配项。
+与模块标识符映射一样，你可以有多个作用域键，并且这些键可能包含重叠的路径。如果多个作用域匹配引用 URL，则首先检查最具体的作用域路径（最长的作用域键）以查找匹配的标识符。如果没有匹配的标识符，浏览器将回退到下一个最具体的匹配作用域路径，依此类推。如果在任何匹配的作用域中都没有匹配的标识符，浏览器会检查 `imports` 键中的模块标识符映射以查找匹配项。
 
 ### 通过映射去除哈希文件名以改进缓存
 
@@ -318,13 +318,13 @@ import fp from "lodash/fp.js";
 }
 ```
 
-如果 `dependency_script` 发生变化，那么其文件名中的哈希也会发生变化。在这种情况下，我们只需要更新导入映射以反映模块名称的变化。我们不需要更新任何依赖它的 JavaScript 代码的源代码，因为导入语句中的说明符不会改变。
+如果 `dependency_script` 发生变化，那么其文件名中的哈希也会发生变化。在这种情况下，我们只需要更新导入映射以反映模块名称的变化。我们不需要更新任何依赖它的 JavaScript 代码的源代码，因为导入语句中的标识符不会改变。
 
 ## 加载非 JavaScript 资源
 
 统一模块架构带来的一个令人兴奋的功能是能够将非 JavaScript 资源作为模块加载。例如，你可以将 JSON 作为 JavaScript 对象导入，或将 CSS 作为 {{domxref("CSSStyleSheet")}} 对象导入。
 
-你必须明确声明你正在导入哪种资源。默认情况下，浏览器假定资源是 JavaScript，如果解析的资源是其他类型，将抛出错误。要导入 JSON、CSS 或其他类型的资源，请使用 [import attributes](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/with) 语法：
+你必须明确声明你正在导入哪种资源。默认情况下，浏览器假定资源是 JavaScript，如果解析的资源是其他类型，将抛出错误。要导入 JSON、CSS 或其他类型的资源，请使用[导入属性](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/with)语法：
 
 ```js
 import colors from "./colors.json" with { type: "json" };
@@ -372,11 +372,11 @@ document.adoptedStyleSheets = [styles];
 > [!NOTE]
 > 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 来预加载模块及其依赖项。这可以显著减少使用模块时的加载时间。
 
-## 其他模块与标准脚本的不同
+## 模块与经典脚本的其他不同
 
 - 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
-- 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用严格模式。
-- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Element/script#Attributes)）模块会自动延迟加载。
+- 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用{{jsxref("Strict_mode", "严格模式", "", 1)}}。
+- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Element/script#属性)）模块会自动延迟加载。
 - 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在开发者工具中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
 模块定义的变量是模块范围内的，除非明确附加到全局对象。另一方面，全局定义的变量在模块内是可用的。例如，给定以下代码：
@@ -411,7 +411,7 @@ document.getElementById("main").innerText = text;
 
 到目前为止，我们导出的功能都是由**具名导出**组成——每个项目（无论是函数，常量等）在导出时都由其名称引用，并且该名称也用于在导入时引用它。
 
-还有一种导出类型叫做**默认导出**——这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 作者 Jason Orendorff 所解释的那样；搜索“Default exports”）。
+还有一种导出类型叫做**默认导出**——这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如由 Jason Orendorff 编写的[深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)所解释的那样；搜索“Default exports”）。
 
 来看一个例子了解其工作方式。在基本模块 `square.js` 中，你可以找到一个名为 `randomSquare()` 的函数，用于创建一个随机颜色、大小和位置的正方形。我们希望将其作为默认导出，因此在文件底部这样编写：
 
@@ -442,7 +442,7 @@ import { default as randomSquare } from "./modules/square.js";
 ```
 
 > [!NOTE]
-> 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
+> 重命名导出项的 as 语法在下面的[重命名导入与导出](#重命名导入与导出)部分中进行了说明。
 
 ## 避免命名冲突
 
@@ -450,7 +450,7 @@ import { default as randomSquare } from "./modules/square.js";
 
 幸运的是，有很多方法来避免。我们将会在下一个节看到。
 
-## 重命名导出与导入
+## 重命名导入与导出
 
 在 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字为功能指定新名称，从而更改在顶级模块中使用的标识名称。
 
@@ -537,7 +537,7 @@ import {
   drawSquare,
   reportSquareArea,
   reportSquarePerimeter,
-} from "/js-examples/modules/renaming/modules/square.js";
+} from "./modules/square.js";
 ```
 
 它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当你从没有任何控制权的第三方模块导入时，这尤其有意义。
@@ -583,9 +583,9 @@ Square.reportPerimeter(square1.length, reportList);
 
 因此，你现在可以像以前一样编写代码（只要你在需要时包含对象名称），并且导入更加整洁。
 
-## 模块与类（class）
+## 模块与类
 
-正如我们之前提到的那样，你还可以导出和导入类；这是避免代码冲突的另一种选择，如果你已经以面向对象的方式编写了模块代码，那么它尤其有用。
+正如我们之前提到的那样，你还可以导出和导入类（class）；这是避免代码冲突的另一种选择，如果你已经以面向对象的方式编写了模块代码，那么它尤其有用。
 
 你可以在我们的 [classes](https://github.com/mdn/js-examples/tree/main/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
 
@@ -626,17 +626,14 @@ square1.reportPerimeter();
 
 ## 合并模块
 
-有时你会想要将模块聚合在一起。你可能有多个级别的依赖项，你希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
+有时你会想要将模块聚合在一起。你可能有多个级别的依赖项，你希望简化事物，将多个子模块组合到一个父模块中。这可以在父模块中用以下形式的导出语法：
 
 ```js
 export * from "x.js";
 export { name } from "x.js";
 ```
 
-> [!NOTE]
-> 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
-
-有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`，`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
+有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`、`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到 `modules` 目录的名为 `shapes` 的子目录中。所以模块结构现在是这样的：
 
 ```plain
 modules/
@@ -657,15 +654,12 @@ export { Square };
 接下来是聚合部分。在 [`shapes.js`](https://github.com/mdn/js-examples/blob/main/module-examples/module-aggregation/modules/shapes.js) 里面，我们包括以下几行：
 
 ```js
-export { Square } from "/js-examples/modules/module-aggregation/modules/shapes/square.js";
-export { Triangle } from "/js-examples/modules/module-aggregation/modules/shapes/triangle.js";
-export { Circle } from "/js-examples/modules/module-aggregation/modules/shapes/circle.js";
+export { Square } from "./shapes/square.js";
+export { Triangle } from "./shapes/triangle.js";
+export { Circle } from "./shapes/circle.js";
 ```
 
 它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
-
-> [!NOTE]
-> 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
 > **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 
@@ -685,15 +679,18 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 ## 动态加载模块
 
-浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许你仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
+最近加入的 JavaScript 模块功能是动态模块加载。这允许你仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
 
-这个新功能允许你将 `import()` 作为函数调用，将模块的路径作为参数传递。它返回一个 {{jsxref("Promise")}}，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
+这个新功能允许你将 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 作为函数调用，将模块的路径作为参数传入。它返回一个 {{jsxref("Promise")}}，会兑现为一个可以让你访问其导出的模块对象（参见[创建模块对象](#创建模块对象)）。例如
 
 ```js
 import("/modules/mymodule.js").then((module) => {
   // 使用模块做一些事情。
 });
 ```
+
+> [!NOTE]
+> 仅允许在浏览器主线程、共享/专用 worker 中使用动态导入。如果在 service worker 或 worklet 中调用 `import()`，则会抛出异常。
 
 我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮——“圆形”、“方形”和“三角形”——按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
 
@@ -725,7 +722,7 @@ squareBtn.addEventListener("click", () => {
 });
 ```
 
-请注意，由于 promise 履行会返回一个模块对象，因此该类成为对象的子特征，因此我们现在需要使用 `Module` 访问构造函数。在它之前，例如 `Module.Square( /* … */ )`。
+请注意，由于 promise 兑现会返回一个模块对象，因此该类成为对象的子特征，因此我们现在需要在构造函数之前追加 `Module.` 来访问构造函数，例如 `Module.Square( /* … */ )`。
 
 另一个动态导入的优点是它们始终可用，即使在脚本环境中也是如此。因此，如果你在 HTML 中有一个现有的 `<script>` 标签没有 `type="module"`，你仍然可以通过动态导入重用作为模块分发的代码。
 
@@ -741,7 +738,7 @@ squareBtn.addEventListener("click", () => {
 
 ## 顶层 await
 
-顶层 await 是模块中可用的一个功能。这意味着可以使用 `await` 关键字。它允许模块像大[异步函数](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)一样运行，这意味着代码可以在父模块中使用之前进行评估，但不会阻止兄弟模块的加载。
+顶层 await 是模块中可用的一个特性。这意味着可以使用 `await` 关键字。它允许模块像大[异步函数](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)一样运行，这意味着代码可以在父模块中使用之前进行评估，但不会阻止兄弟模块的加载。
 
 让我们看一个例子。你可以在 [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) 目录中找到本节中描述的所有文件和代码，这些文件和代码是从前面的示例扩展而来的。
 
@@ -833,7 +830,7 @@ myCanvas.createReportList();
 
 ## 循环导入
 
-模块可以导入其他模块，而这些模块可以导入其他模块，依此类推。这形成了一个称为“依赖图”的[有向图](https://zh.wikipedia.org/wiki/有向图)。在理想情况下，这个图是[无环的](https://zh.wikipedia.org/wiki/有向无环图)。在这种情况下，可以使用深度优先遍历来评估图。
+模块可以导入其他模块，而这些模块可以导入其他模块，依此类推。这形成了一个称为“依赖图”的[有向图](https://zh.wikipedia.org/wiki/有向图)。在理想情况下，这个图是[无环的](https://zh.wikipedia.org/wiki/有向无环图)。在这种情况下，可以使用深度优先遍历来执行图。
 
 然而，循环通常是不可避免的。如果模块 `a` 导入模块 `b`，但 `b` 直接或间接依赖于 `a`，则会出现循环导入。例如：
 
@@ -872,9 +869,9 @@ setTimeout(() => {
 export const b = 1;
 ```
 
-在这个例子中，`a` 和 `b` 都是异步使用的。因此，在模块评估时，`b` 和 `a` 都没有被实际读取，所以其余代码正常执行，并且两个 `export` 声明生成 `a` 和 `b` 的值。然后，在超时之后，`a` 和 `b` 都可用，因此两个 `console.log` 语句也正常执行。
+在这个例子中，`a` 和 `b` 都是异步使用的。因此，在模块执行时，`b` 和 `a` 都没有被实际读取，所以其余代码正常执行，并且两个 `export` 声明生成 `a` 和 `b` 的值。然后，在超时之后，`a` 和 `b` 都可用，因此两个 `console.log` 语句也正常执行。
 
-如果你将代码更改为同步使用 `a`，模块评估将失败：
+如果你将代码更改为同步使用 `a`，模块执行将失败：
 
 ```js
 // -- a.js (入口模块) --
@@ -889,9 +886,9 @@ console.log(a); // ReferenceError: Cannot access 'a' before initialization
 export const b = 1;
 ```
 
-这是因为当 JavaScript 评估 `a.js` 时，它需要首先评估 `b.js`，即 `a.js` 的依赖项。然而，`b.js` 使用 `a`，而 `a` 尚不可用。
+这是因为当 JavaScript 执行 `a.js` 时，它需要首先执行 `b.js`，即 `a.js` 的依赖项。然而，`b.js` 使用 `a`，而 `a` 尚不可用。
 
-另一方面，如果你将代码更改为同步使用 `b` 但异步使用 `a`，模块评估将成功：
+另一方面，如果你将代码更改为同步使用 `b` 但异步使用 `a`，模块执行将成功：
 
 ```js
 // -- a.js (入口模块) --
@@ -909,7 +906,7 @@ setTimeout(() => {
 export const b = 1;
 ```
 
-这是因为 `b.js` 的评估正常完成，因此在评估 `a.js` 时 `b` 的值是可用的。
+这是因为 `b.js` 的执行正常完成，因此在执行 `a.js` 时 `b` 的值是可用的。
 
 在项目中通常应避免循环导入，因为它们会使代码更容易出错。一些常见的消除循环的方法是：
 
@@ -944,7 +941,7 @@ export const b = 1;
 
   如果两个分支实际上最终具有相同的行为（“同构”），这是更可取的。如果无法提供相同的功能，或者这样做涉及加载大量代码而大部分仍未使用，最好使用不同的“绑定”。
 
-- 使用 polyfill 提供缺失功能的回退。例如，如果你想使用 [`fetch`](/zh-CN/docs/Web/API/Fetch_API) 函数，它仅在 Node.js v18 及更高版本中支持，你可以使用类似的 API，如 [`node-fetch`](https://www.npmjs.com/package/node-fetch) 提供的 API。你可以通过动态导入有条件地进行：
+- 使用 polyfill 提供缺失特性的回退。例如，如果你想使用 [`fetch`](/zh-CN/docs/Web/API/Fetch_API) 函数，它仅在 Node.js v18 及更高版本中支持，你可以使用类似的 API，如 [`node-fetch`](https://www.npmjs.com/package/node-fetch) 提供的 API。你可以通过动态导入有条件地进行：
 
   ```js
   // myModule.js
@@ -963,15 +960,15 @@ export const b = 1;
 
 如果为了你的模块有问题，这里有一些提示有可能帮助到你。如果你发现更多的内容欢迎添加进来！
 
-- 我们之前提到过这一点，但还是重申一下：`.mjs` 后缀的文件需要以 MIME-type 为 `text/javascript` 来加载 (或者其他的 JavaScript 兼容的 MIME-type，但建议使用 `text/javascript` 加载), 否则，你会得到严格的 MIME 类型检查错误，例如 "The server responded with a non-JavaScript MIME type".
-- 如果你尝试用本地文件加载 HTML 文件 (i.e. with a `file://` URL)，由于 JavaScript 模块的安全性要求，你会遇到 CORS 错误。你需要通过服务器来做你的测试。GitHub pages is ideal as it also serves `.mjs` files with the correct MIME type.
-- 因为 `.mjs` 是非标准的文件扩展名，因此一些操作系统可能无法识别，或者尝试把它替换成其他文件。比如，我们发现 macOS 悄悄地在我们的 `.mjs` 后缀的文件后面添加上 `.js` 然后自动隐藏这个后缀。所以我们的文件实际上都是 `x.mjs.js`。当我们关闭自动隐藏文件扩展名，让它去接受认可 `.mjs` 就好了。
+- 我们之前提到过这一点，但还是重申一下：`.mjs` 后缀的文件需要以 `text/javascript` MIME 类型来加载（或者其他的 JavaScript 兼容的 MIME 类型，但建议使用 `text/javascript` 加载），否则，你会得到严格的 MIME 类型检查错误，例如“The server responded with a non-JavaScript MIME type”。
+- 如果你尝试用本地文件加载 HTML 文件（即，具有 `file://` 的 URL），由于 JavaScript 模块的安全性要求，你会遇到 CORS 错误。你需要通过服务器来做你的测试。GitHub pages 非常理想，因为它在提供 `.mjs` 文件时具有正确的 MIME 类型。
+- 因为 `.mjs` 是非标准的文件扩展名，因此一些操作系统可能无法识别，或者尝试把它替换成其他文件。比如，我们发现 macOS 悄悄地在我们的 `.mjs` 后缀的文件后面添加上 `.js` 然后自动隐藏这个后缀。所以我们的文件实际上都是 `x.mjs.js`。当我们关闭自动隐藏文件扩展名，让它去接受 `.mjs` 就好了。
 
 ## 参见
 
-- [JavaScript 模块](https://v8.dev/features/modules) 在 v8.dev (2018)
-- [ES 模块：漫画版深度解析](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) 在 hacks.mozilla.org (2018)
-- [深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 在 hacks.mozilla.org (2015)
-- [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html) 作者 Dr. Axel Rauschmayer
+- v8.dev 上的 [JavaScript 模块](https://v8.dev/features/modules)（2018）
+- hacks.mozilla.org 上的 [ES 模块：漫画版深度解析](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)（2018）
+- hacks.mozilla.org 上的[深入 ES6：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)（2015）
+- [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html)，来自 Axel Rauschmayer 博士
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}
