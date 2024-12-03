@@ -24,5 +24,5 @@ l10n:
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.style")}}
