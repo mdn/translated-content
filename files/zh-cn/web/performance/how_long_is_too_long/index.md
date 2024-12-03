@@ -2,7 +2,7 @@
 title: Web 性能时间指标推荐：多久才算太久？
 slug: Web/Performance/How_long_is_too_long
 l10n:
-  sourceCommit: fff37e54dad8353fc89f6c61f5ec408094bcebd8
+  sourceCommit: 4a5b85ef295cf8f663bc23dad6918bb9bcc49dce
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
