@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在拓展被禁用时触发。
+在附加组件被禁用时触发。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -37,7 +37,7 @@ browser.management.onDisabled.hasListener(listener)
   - : 在此事件发生时调用的函数。此函数接收以下参数：
 
     - `info`
-      - : [`ExtensionInfo`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo)，关于已安装的拓展的信息。
+      - : [`ExtensionInfo`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo)，关于已安装的附加组件的信息。
 
 ## 浏览器兼容性
 
@@ -45,7 +45,7 @@ browser.management.onDisabled.hasListener(listener)
 
 ## 示例
 
-记录被禁用的拓展的名称：
+记录被禁用的附加组件的名称：
 
 ```js
 browser.management.onDisabled.addListener((info) => {
