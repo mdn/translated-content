@@ -50,7 +50,7 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 客户端 JavaScript 中有很多可用的 API。它们本身并不属于 JavaScript 语言，却建立在核心 JavaScript 语言之上，为使用 JavaScript 代码提供额外的超强能力。它们通常分为两类：
 
 - **浏览器 API** 内置于 Web 浏览器中，能从浏览器和电脑周边环境中提取数据，并用来做有用的复杂的事情。例如，[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 为在浏览器中处理音频提供了 JavaScript 结构——获取音轨、改变音量、应用特效等。在后台，浏览器实际上使用了一些复杂的低级代码（如 C++ 或 Rust）来进行实际的音频处理。但同样，这种复杂性已被应用程序接口抽象化。
-- **第三方 API** 缺省情况下不会内置于浏览器中，通常必须在 Web 中的某个地方获取代码和信息。例如，[Google Maps API](https://developers.google.com/maps/documentation/javascript) 使你能够执行诸如在网站上显示办公室的交互式地图之类的操作。它提供一系列特殊的结构，可以用来查询 Google 地图服务并返回特定信息。
+- **第三方 API** 缺省情况下不会内置于浏览器中，通常必须在 Web 中的某个地方获取代码和信息。例如，[Google Maps API](https://developers.google.cn/maps/documentation/javascript) 使你能够执行诸如在网站上显示办公室的交互式地图之类的操作。它提供一系列特殊的结构，可以用来查询 Google 地图服务并返回特定信息。
 
 ![打开 Firefox 浏览器主页时的浏览器截图。默认情况下，浏览器内置了应用程序接口。第三方应用程序接口并非默认内置在浏览器中。要使用它们，必须从网络上的某个地方获取它们的代码和信息。](browser.png)
 
@@ -83,10 +83,10 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 第三方 API 种类繁多; 下列是一些比较流行的你可能迟早会用到的第三方 API:
 
-- 地图 API（例如 [Mapquest](https://developer.mapquest.com/) 和 [Google Maps API](https://developers.google.com/maps/)），允许你在网页上对地图执行多种操作。
+- 地图 API（例如 [Mapquest](https://developer.mapquest.com/) 和 [Google Maps API](https://developers.google.cn/maps/)），允许你在网页上对地图执行多种操作。
 - [Facebook API 套件](https://developers.facebook.com/docs/)，允许你将 Facebook 生态系统中的各个部分应用到你的应用并使之受益，比如说它提供了通过 Facebook 账户登录、接受应用内支付、推送有针对性的广告活动等功能。
 - [Telegram API](https://core.telegram.org/api)，允许你在网站中潜入来自 Telegram 频道的内容，此外还提供了对机器人的支持。
-- [YouTube API](https://developers.google.com/youtube/)，允许你将 Youtube 上的视频嵌入到网站中去，同时提供搜索 Youtube、创建播放列表等众多功能。
+- [YouTube API](https://developers.google.cn/youtube/)，允许你将 Youtube 上的视频嵌入到网站中去，同时提供搜索 Youtube、创建播放列表等众多功能。
 - [Pinterest API](https://developers.pinterest.com/)，提供了管理 Pinterest 图板和图钉的工具，以便将它们纳入你的网站。
 - [Twilio API](https://www.twilio.com/docs)，为你的应用提供了针对语音通话和视频聊天的框架，以及从你的 app 发送短信息或多媒体信息等诸多功能。
 - [Disqus API](https://disqus.com/api/docs/)，提供了一个可集成到网站中的评论平台。

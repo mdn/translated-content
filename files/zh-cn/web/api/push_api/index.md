@@ -3,7 +3,7 @@ title: Push API
 slug: Web/API/Push_API
 ---
 
-{{ApiRef("Push API")}}
+{{DefaultAPISidebar("Push API")}}{{AvailableInWorkers}}
 
 **Push API** 给与了 Web 应用程序接收从服务器发出的推送消息的能力，无论 Web 应用程序是否在用户设备前台，甚至刚加载完成。这样，开发人员就可以向用户投放异步通知和更新，从而让用户能更及时地获取新内容。
 
@@ -64,7 +64,5 @@ Mozilla 的 [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbo
 ## 参见
 
 - [通过 Mozilla 推送服务发送具有 VAPID 标识的 WebPush 通知](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [推送通知概述](https://web.dev/articles/push-notifications-overview)
+- [推送通知概述](https://web.developers.google.cn/articles/push-notifications-overview)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-
-{{DefaultAPISidebar("Push API")}}

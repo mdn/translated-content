@@ -144,8 +144,7 @@ Firefox 的 JavaScript 调试器有三个面板。
 了解不同浏览器中的 JavaScript 调试器：
 
 - [Firefox JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
-- [Microsoft Edge 调试器](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
-- [Chrome 调试器](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+- [Chrome 调试器](https://developer.chrome.google.cn/docs/devtools/javascript/)
 - [Safari 调试器](https://developer.apple.com/safari/tools/)
 
 ## JavaScript 控制台
