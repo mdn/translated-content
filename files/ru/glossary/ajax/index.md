@@ -21,4 +21,4 @@ Ajax можно использовать для создания {{Glossary("SPA
 - {{DOMxRef("Fetch API")}}
 - {{Glossary("SPA", "Single-page application")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [AJAX](https://en.wikipedia.org/wiki/AJAX) на Википедии
+- [AJAX](https://ru.wikipedia.org/wiki/AJAX) в Википедии
