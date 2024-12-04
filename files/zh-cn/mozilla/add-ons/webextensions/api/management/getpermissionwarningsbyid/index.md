@@ -2,7 +2,7 @@
 title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 l10n:
-  sourceCommit: 
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -26,7 +26,7 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 ### 参数
 
 - `id`
-  - : `string`，要获取其权限警告的拓展的 ID。
+  - : `string`，要获取其权限警告的附加组件的 ID。
 
 ### 返回值
 
@@ -38,7 +38,7 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 
 ## 示例
 
-Log the permission warnings for the add-on whose ID is "my-add-on":
+记录名为“my-add-on”的附加组件的权限警告信息。
 
 ```js
 let id = "my-add-on";
