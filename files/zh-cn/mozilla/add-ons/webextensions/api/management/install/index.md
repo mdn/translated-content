@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-安装并启用给定 URL 的主题扩展。
+安装并启用给定 URL 的主题附加组件。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，并且只能用于已签名的主题。
 
@@ -26,7 +26,7 @@ browser.management.install(options)
 
 ### 返回值
 
-A [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object, containing the `ExtensionID` defined for the theme in manifest.json.
+[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用包含对应主题在其 manifest.json 中定义的 `ExtensionID` 的对象兑现。
 
 ## 浏览器兼容性
 
@@ -34,7 +34,7 @@ A [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wi
 
 ## 示例
 
-Cycle through a list of themes:
+遍历一系列的主题：
 
 ```js
 "use strict";
@@ -52,9 +52,9 @@ async function install(url) {
   try {
     current = url;
     const { id } = await browser.management.install({ url });
-    console.log(`Theme installed: ${id}`);
+    console.log(`安装了如下的主题：${id}`);
   } catch (e) {
-    console.error(`Installation failed: ${e}`);
+    console.error(`主题安装失败：${e}`);
   }
 }
 
