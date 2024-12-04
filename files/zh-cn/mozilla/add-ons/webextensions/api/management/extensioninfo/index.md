@@ -2,75 +2,74 @@
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 l10n:
-  sourceCommit: 
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-An `ExtensionInfo` object contains information about an add-on.
+包含附加组件信息的 `ExtensionInfo` 对象。
 
 ## 类型
 
-It is an object with the following properties:
+它是包含下述属性的对象：
 
 - `description`
-  - : `string`. The add-on's description, taken from the manifest.json [description](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) key.
+  - ：`string`。从 manifest.json 的 [description](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 键中获取的该拓展的描述。
 - `disabledReason`
-  - : `string`. If the add-on is disabled, the reason it was disabled. One of "unknown" or "permissions_increase".
+  - ：`string`。如果拓展被禁用，禁用原因。可能是“unknown”、“permissions_increase”中的其中之一。
 - `enabled`
-  - : `boolean`. Whether or not the add-on is currently enabled.
+  - ：`boolean`。拓展当前是否已启用。
 - `homepageUrl`
-  - : `string`. The add-on's homepage URL, taken from the manifest.json [homepage_url](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) key.
+  - ：`string`。从 manifest.json 的 [homepage_url](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 键中获取的该拓展的主页 URL。
 - `hostPermissions`
-  - : `array` of `string`. The add-on's [host permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+  - ：`string` 数组。拓展的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 - `icons`
 
-  - : `array` of `object`. Information about the add-on's icons. An array of objects, one for each icon. Each object contains two properties:
+  - ：`object` 数组。关于拓展图标的信息。一个对象数组，每个对象包含两个属性：
 
-    - `size`: an integer representing the icon's width and height in pixels.
-    - `url`: a string containing a relative URL to the icon, starting at the add-on's root.
+    - `size`：表示图标的宽度和高度（以像素为单位）的整型。
+    - `url`：包含从拓展的根目录开始到图标的相对 URL 的字符串。
 
 - `id`
-  - : `string`. The add-on's ID.
+  - ：`string`。拓展的 ID。
 - `installType`
 
-  - : `string`. String describing how the add-on was installed. One of the following:
+  - ：`string`。描述拓展如何安装的字符串。可能是以下之一：
 
-    - "admin": the add-on was installed because of an administrative policy.
-    - "development": the add-on was installed unpacked from disk.
-    - "normal": the add-on was installed normally from an install package.
-    - "sideload": the add-on was installed by some other software on the user's computer.
-    - "other": the add-on was installed in some other way.
+    - “admin”：拓展是因为管理策略而安装的。
+    - “development”：拓展是从磁盘上解压安装的。
+    - “normal”：拓展是从安装包正常安装的。
+    - “sideload”：拓展是由用户计算机上的其他软件安装的。
+    - “other”：拓展是以其他方式安装的。
 
 - `mayDisable`
-  - : `boolean`. Whether this add-on can be disabled or uninstalled by the user.
+  - ：`boolean`。用户是否可以禁用或卸载此拓展。
 - `name`
-  - : `string`. The add-on's name, taken from the manifest.json [name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) key.
+  - ：`string`。从 manifest.json 的 [name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) 键中获取的该拓展的名称。
 - `offlineEnabled`
-  - : `boolean`. Whether the add-on claims to support offline.
+  - ：`boolean`。拓展是否支持离线使用。
 - `optionsUrl`
-  - : `string`. URL for the item's [options page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), if it has one. This is a relative URL, starting at the add-on's root.
+  - ：`string`。如果有的话，拓展的[选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)的 URL。这是一个从拓展的根目录开始的相对 URL。
 - `permissions`
-  - : `array` of `string`. The add-on's [API permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+  - ：`string` 数组。拓展的 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 - `shortName`
-  - : `string`. A short version of the add-on's name, taken from the manifest.json [short_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) key.
+  - ：`string`。从 manifest.json 的 [short_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) 键中获取的拓展名称的简短版本。
 - `type`
 
-  - : `string`. String describing the type of add-on. This is used to distinguish extensions from apps and themes. It may take any of the following values:
+  - ：`string`。描述拓展类型的字符串。用于区分扩展、应用和主题。可能取以下任一值：
 
-    - "extension": most common type of add-on.
-    - "hosted_app"
-    - "packaged_app"
-    - "legacy_packaged_app"
-    - "theme"
+    - “extension”：最常见的拓展类型。
+    - “hosted_app”
+    - “packaged_app”
+    - “legacy_packaged_app”
+    - “theme”
 
 - `updateUrl`
-  - : `string`. URL for updates to this add-on, taken from the manifest.json [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
+  - ：`string`。从 manifest.json 的 [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键中获取的用于此拓展的更新的 URL。
 - `version`
-  - : `string`. Version of this add-on, taken from the manifest.json [version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key.
+  - ：`string`。从 manifest.json 的 [version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 键中获取的该拓展的版本。
 - `versionName`
-  - : `string`. Descriptive name for this add-on's version, taken from the manifest.json [version_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key.
-
+  - ：`string`。从 manifest.json 的 [version_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) 键中获取的该拓展版本的描述性名称。
 ## 浏览器兼容性
 
 {{Compat}}
