@@ -16,7 +16,7 @@ l10n:
 - `description`
   - : `string`，从 manifest.json 的 [description](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 键中获取的该附加组件的描述。
 - `disabledReason`
-  - : `string`，如果附加组件被禁用，禁用原因。可能是“unknown”、“permissions_increase”中的其中之一。
+  - : `string`，附加组件被禁用的原因（如果它被禁用了）。可能是“unknown”、“permissions_increase”中的其中之一。
 - `enabled`
   - : `boolean`，附加组件当前是否已启用。
 - `homepageUrl`
@@ -25,16 +25,16 @@ l10n:
   - : `string` 数组。附加组件的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 - `icons`
 
-  - : `object` 数组。关于附加组件图标的信息。一个对象数组，每个对象包含两个属性：
+  - : `object` 数组，关于附加组件图标的信息。一个对象数组，每个对象包含两个属性：
 
-    - `size`：表示图标的宽度和高度（以像素为单位）的整型。
+    - `size`：表示图标的宽度和高度（以像素为单位）的整数值。
     - `url`：包含从附加组件的根目录开始到图标的相对 URL 的字符串。
 
 - `id`
   - : `string`，附加组件的 ID。
 - `installType`
 
-  - : `string`，描述附加组件如何安装的字符串。可能是以下之一：
+  - : `string`，描述附加组件是如何被安装的字符串。可能是以下之一：
 
     - “admin”：附加组件是因为管理策略而安装的。
     - “development”：附加组件是从磁盘上解压安装的。
@@ -49,14 +49,14 @@ l10n:
 - `offlineEnabled`
   - : `boolean`，附加组件是否支持离线使用。
 - `optionsUrl`
-  - : `string`，如果有的话，附加组件的[选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)的 URL。这是一个从附加组件的根目录开始的相对 URL。
+  - : `string`，附加组件的[选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)的 URL（如果它有选项页）。这是一个从附加组件的根目录开始的相对 URL。
 - `permissions`
   - : `string` 数组，包含附加组件的 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 - `shortName`
   - : `string`，从 manifest.json 的 [short_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) 键中获取的附加组件名称的简短版本。
 - `type`
 
-  - : `string`，描述附加组件类型的字符串。用于区分扩展、应用和主题。可能取以下任一值：
+  - : `string`，描述附加组件类型的字符串，用于区分扩展、应用和主题。可能取以下任一值：
 
     - “extension”：最常见的附加组件类型。
     - “hosted_app”
