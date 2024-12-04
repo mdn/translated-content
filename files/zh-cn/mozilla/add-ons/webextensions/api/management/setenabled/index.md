@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-启用或禁用给定的拓展。
+启用或禁用给定的附加组件。
 
 通常需要在用户操作的上下文中调用此函数，例如按钮的点击处理程序。浏览器可能还会要求用户确认更改。
 
@@ -27,13 +27,13 @@ let settingEnabled = browser.management.setEnabled(
 ### 参数
 
 - `id`
-  - : `string`，要启用/禁用的拓展的 ID。
+  - : `string`，要启用/禁用的附加组件的 ID。
 - `enabled`
   - : `boolean`，要启用还是禁用。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当拓展已被禁用或启用时将不带参数地兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当附加组件已被禁用或启用时将不带参数地兑现。
 
 ## 浏览器兼容性
 
@@ -41,7 +41,7 @@ let settingEnabled = browser.management.setEnabled(
 
 ## 示例
 
-切换 ID 为 "my-add-on" 的拓展的启用/禁用状态：
+切换 ID 为“my-add-on”的附加组件的启用/禁用状态：
 
 ```js
 let id = "my-add-on";
