@@ -113,4 +113,4 @@ browser.browserAction.onClicked.addListener(toggle);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 是基于 Opera 的 [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
+> 此 API 基于 Opera 的 [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API。
