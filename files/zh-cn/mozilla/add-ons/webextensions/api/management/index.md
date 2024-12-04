@@ -7,54 +7,54 @@ l10n:
 
 {{AddonSidebar}}
 
-获取关于已经安装的拓展的相关信息。
+获取关于已经安装的附加组件的相关信息。
 
 使用 `management` API，你可以：
 
-- 获取已经安装的拓展的相关信息
-- 启用/禁用拓展
-- 卸载拓展
-- 查找特定拓展或清单的权限警告
-- 获取拓展被安装、卸载、启用或禁用的通知。
+- 获取已经安装的附加组件的相关信息
+- 启用/禁用附加组件
+- 卸载附加组件
+- 查找特定附加组件或清单的权限警告
+- 获取附加组件被安装、卸载、启用或禁用的通知。
 
-大多数操作需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。不提供对其他拓展的访问的操作不需要此权限。
+大多数操作需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。不提供对其他附加组件的访问的操作则并不需要此权限。
 
 ## 类型
 
 - {{WebExtAPIRef("management.ExtensionInfo")}}
-  - : 包含已安装的拓展的相关信息的对象。
+  - : 包含已安装的附加组件的相关信息的对象。
 
 ### 函数
 
 - {{WebExtAPIRef("management.getAll()")}}
-  - : 返回所有已安装的拓展的相关信息。
+  - : 返回所有已安装的附加组件的相关信息。
 - {{WebExtAPIRef("management.get()")}}
-  - : 返回特定拓展的相关信息（通过提供其 ID）。
+  - : 返回给定 ID 的附加组件的相关信息。
 - {{WebExtAPIRef("management.getSelf()")}}
-  - : 返回调用拓展的相关信息。
+  - : 返回调用附加组件的相关信息。
 - {{WebExtAPIRef("management.install()")}}
-  - : 安装特定主题（通过提供其在 [addons.mozilla.org](https://addons.mozilla.org) 上的 URL）。
+  - : 安装特定主题（需要提供其在 [addons.mozilla.org](https://addons.mozilla.org) 上的 URL）。
 - {{WebExtAPIRef("management.uninstall()")}}
-  - : 卸载特定拓展（通过提供其 ID）。
+  - : 卸载给定 ID 的附加组件。
 - {{WebExtAPIRef("management.uninstallSelf()")}}
-  - : 卸载正在调用该方法的拓展。
+  - : 卸载正在调用该方法的附加组件。
 - {{WebExtAPIRef("management.getPermissionWarningsById()")}}
-  - : 获取特定拓展的权限警告集合（通过提供其 ID）。
+  - : 获取给定 ID 的附加组件的权限警告集合。
 - {{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}
   - : 获取给定清单字符串的权限警告集合。
 - {{WebExtAPIRef("management.setEnabled()")}}
-  - : 启用/禁用特定拓展（通过提供其 ID）。
+  - : 启用/禁用给定 ID 的附加组件。
 
 ## 事件
 
 - {{WebExtAPIRef("management.onInstalled")}}
-  - : 当拓展被安装时触发。
+  - : 当附加组件被安装时触发。
 - {{WebExtAPIRef("management.onUninstalled")}}
-  - : 当拓展被卸载时触发。
+  - : 当附加组件被卸载时触发。
 - {{WebExtAPIRef("management.onEnabled")}}
-  - : 当拓展被启用时触发。
+  - : 当附加组件被启用时触发。
 - {{WebExtAPIRef("management.onDisabled")}}
-  - : 当拓展被禁用时触发。
+  - : 当附加组件被禁用时触发。
 
 ## 浏览器兼容性
 
