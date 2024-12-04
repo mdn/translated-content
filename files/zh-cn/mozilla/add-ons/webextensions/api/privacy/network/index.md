@@ -29,7 +29,7 @@ l10n:
 
 - `httpsOnlyMode`
 
-  - : 这一设置允许你的附加组件程序确定用户是否启用了 [HTTPS-Only 模式](https://support.mozilla.org/zh-CN/kb/https-only-prefs)。该属性在所有平台上都是只读的。其底层值是一个字符串，可能取以下三个值之一：
+  - : 这一设置允许你的扩展程序确定用户是否启用了 [HTTPS-Only 模式](https://support.mozilla.org/zh-CN/kb/https-only-prefs)。该属性在所有平台上都是只读的。其底层值是一个字符串，可能取以下三个值之一：
 
     - `"always"`：HTTPS-Only 模式已启用。
     - `"never"`：HTTPS-Only 模式已关闭。
@@ -37,7 +37,7 @@ l10n:
 
 - `globalPrivacyControl`
 
-  - : 这一设置允许你的附加组件程序确定用户是否启用了[全局隐私控制](/zh-CN/docs/Web/API/Navigator/globalPrivacyControl)。该属性在所有平台上都是只读的。其底层值是一个布尔值，其中 `true` 表示浏览器发送全局隐私控制信号，`false` 表示浏览器不发送这些信号。
+  - : 这一设置允许你的扩展程序确定用户是否启用了[全局隐私控制](/zh-CN/docs/Web/API/Navigator/globalPrivacyControl)。该属性在所有平台上都是只读的。其底层值是一个布尔值，其中 `true` 表示浏览器发送全局隐私控制信号，`false` 表示浏览器不发送这些信号。
 
 ## 浏览器兼容性
 
