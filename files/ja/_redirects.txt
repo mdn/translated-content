@@ -4164,6 +4164,7 @@
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ja/docs/Web/HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/ja/docs/Web/URI/Schemes/resource
+/ja/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/ja/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy
 /ja/docs/Web/HTTP/Feature_Policy	/ja/docs/Web/HTTP/Permissions_Policy
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox
