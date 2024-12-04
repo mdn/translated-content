@@ -33,11 +33,11 @@ let gettingSelf = browser.management.getSelf()
 
 ## 示例
 
-记录拓展的名称：
+记录附加组件的名称：
 
 ```js
 function gotSelf(info) {
-  console.log(`拓展名：${info.name}`);
+  console.log(`附加组件名：${info.name}`);
 }
 
 const gettingSelf = browser.management.getSelf();
