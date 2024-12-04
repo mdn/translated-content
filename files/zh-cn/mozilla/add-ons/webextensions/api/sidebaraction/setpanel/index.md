@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/fcb1483f-17eb-49ff-bb78-03861c10a9a9)---
+---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 l10n:
