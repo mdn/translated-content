@@ -24,12 +24,11 @@ let gettingInfo = browser.management.get(
 ### 参数
 
 - `id`
-  - : `string`，要获取其信息的拓展的 ID。
+  - : `string`，要获取其信息的附加组件的 ID。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用一个 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现，其中包含有关拓展的信息。如果没有安装具有给定 ID 的拓展，或者拓展不允许调用者访问，则该 Promise 将被拒绝。
-
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用一个 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现，其中包含有关附加组件的信息。如果没有安装具有给定 ID 的附加组件，或者附加组件不允许调用者访问，则该 Promise 将被拒绝。
 
 ## 浏览器兼容性
 
@@ -37,7 +36,7 @@ let gettingInfo = browser.management.get(
 
 ## 示例
 
-记录名为“my-add-on”的拓展的名称：
+记录名为“my-add-on”的附加组件的名称：
 
 ```js
 let id = "my-add-on";
