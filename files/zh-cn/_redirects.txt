@@ -1884,6 +1884,7 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
+/zh-CN/docs/Web/API/Window/updateCommands	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/Window/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/Window/btoa
@@ -2168,6 +2169,7 @@
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /zh-CN/docs/Web/CSS/calc()	/zh-CN/docs/Web/CSS/calc
 /zh-CN/docs/Web/CSS/clamp()	/zh-CN/docs/Web/CSS/clamp
+/zh-CN/docs/Web/CSS/color_value/color-contrast	/zh-CN/docs/Web/CSS/color_value
 /zh-CN/docs/Web/CSS/counter()	/zh-CN/docs/Web/CSS/counter
 /zh-CN/docs/Web/CSS/counters()	/zh-CN/docs/Web/CSS/counters
 /zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/cursor
@@ -2440,6 +2442,7 @@
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/选择_www_或非_www_URL_作为域名	/zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 /zh-CN/docs/Web/HTTP/Caching_FAQ	/zh-CN/docs/Web/HTTP/Caching
+/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/zh-CN/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /zh-CN/docs/Web/HTTP/Content_negotiation/Accept_默认值	/zh-CN/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values
 /zh-CN/docs/Web/HTTP/Feature_Policy	/zh-CN/docs/Web/HTTP/Permissions_Policy
 /zh-CN/docs/Web/HTTP/HTTP_Strict_Transport_Security	/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security

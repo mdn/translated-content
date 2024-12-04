@@ -15,7 +15,7 @@ l10n:
 
 次の例では、最小値 100 ピクセル、最大値 auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
 
-```css hidden
+```css hidden live-sample___basic_example
 * {
   box-sizing: border-box;
 }
@@ -35,7 +35,7 @@ l10n:
 
 ### HTML
 
-```html
+```html live-sample___basic_example
 <div class="wrapper">
   <div class="one">One</div>
   <div class="two">Two</div>
@@ -48,7 +48,7 @@ l10n:
 
 ### CSS
 
-```css
+```css live-sample___basic_example
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,7 +81,7 @@ l10n:
 }
 ```
 
-{{EmbedLiveSample("基本的な例", "100%", "460")}}
+{{EmbedLiveSample("Basic_example", "100%", "460")}}
 
 ## リファレンス
 

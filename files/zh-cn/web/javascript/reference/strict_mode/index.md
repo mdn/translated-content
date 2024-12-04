@@ -56,37 +56,48 @@ function myNotStrictFunction() {
 
 在严格模式下，某些先前被接受的过失错误将会被认为是异常。JavaScript 被设计为能使新人开发者更易于上手，所以有时候会给本来错误操作赋予新的不报错误的语义（non-error semantics）。有时候这可以解决当前的问题，但有时候却会给以后留下更大的问题。严格模式则把这些失误当成错误，以便可以发现并立即将其改正。
 
-第一，严格模式下无法再意外创建全局变量。在普通的 JavaScript 里面给一个错误命名的变量名赋值会使全局对象新增一个属性并继续“工作”（尽管将来可能会失败：在现代的 JavaScript 中有可能）。严格模式中意外创建全局变量被抛出错误替代：
+#### 给未声明的变量赋值
+
+严格模式下无法再意外创建全局变量。在非严格模式下，在赋值中错误拼写的变量会在全局对象上创建一个新属性并继续“工作”。在严格模式下，意外创建全局变量的赋值会抛出错误：
+
+<!-- cSpell:ignore mistypeVarible -->
 
 ```js
 "use strict";
-// 假如有一个全局变量叫做 mistypedVariable
-mistypedVaraible = 17; // 因为变量名拼写错误
-// 这一行代码就会抛出 ReferenceError
+let mistypeVariable;
+
+// 假设全局变量 mistypeVarible 不存在，由于“mistypeVariable”拼写错误（缺少“a”），这行会抛出 ReferenceError
+mistypeVarible = 17;
 ```
+
+#### 给对象属性赋值会失败
 
 第二，严格模式会使引起静默失败（silently fail，注：不报错也没有任何效果）的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作（给不可写属性赋值，给只读属性（getter-only）赋值，给[不可扩展对象](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions)的新属性赋值）都会抛出异常：
 
 ```js
 "use strict";
 
+// 给不可写全局变量赋值
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
+
 // 给不可写属性赋值
-var obj1 = {};
+const obj1 = {};
 Object.defineProperty(obj1, "x", { value: 42, writable: false });
-obj1.x = 9; // 抛出 TypeError 错误
+obj1.x = 9; // TypeError
 
 // 给只读属性赋值
-var obj2 = {
+const obj2 = {
   get x() {
     return 17;
   },
 };
-obj2.x = 5; // 抛出 TypeError 错误
+obj2.x = 5; // TypeError
 
 // 给不可扩展对象的新属性赋值
-var fixed = {};
+const fixed = {};
 Object.preventExtensions(fixed);
-fixed.newProp = "ohai"; // 抛出 TypeError 错误
+fixed.newProp = "ohai"; // TypeError
 ```
 
 第三，在严格模式下，试图删除不可删除的属性时会抛出异常（之前这种操作不会产生任何效果）：

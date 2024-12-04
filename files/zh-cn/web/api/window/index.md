@@ -151,22 +151,18 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
-- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : 为 window 上的特定事件类型注册一个事件处理器。
 - {{domxref("Window.atob()")}}
   - : 解码一个使用 base-64 编码的数据字符串。
 - {{domxref("Window.alert()")}}
   - : 显示一个警告对话框。
-- {{domxref("Window.blur()")}}
+- {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : 将焦点从窗口上移开。
-- {{domxref("btoa", "Window.btoa()")}}
+- {{domxref("Window.btoa()")}}
   - : 从一串二进制数据中创建一个 base-64 编码的 ASCII 字符串。
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : 取消之前使用 {{domxref("Window.requestAnimationFrame")}} 安排的回调。
 - {{domxref("Window.cancelIdleCallback()")}}
   - : 取消之前使用 {{domxref("Window.requestIdleCallback")}} 安排的回调。
-- {{domxref("Window.clearImmediate()")}}
-  - : 取消使用 `setImmediate()` 设置的重复执行任务。
 - {{domxref("Window.clearInterval()")}}
   - : 取消使用 {{domxref("Window.setInterval()")}} 设置的重复执行任务。
 - {{domxref("Window.clearTimeout()")}}
@@ -177,8 +173,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 显示一个带有用户需要回应的信息对话框。
 - {{domxref("Window.createImageBitmap()")}}
   - : 接受各种不同的图像源，并返回一个 {{jsxref("Promise")}}，经兑现可得到 {{domxref("ImageBitmap")}}。可以选择将图片源裁剪成以 _(sx, sy)_ 为起点的像素矩形，宽度为 sw，高度为 sh。
-- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : 用于触发事件。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : 向控制台中写一条消息。
 - {{domxref("Window.fetch()")}}
@@ -207,10 +201,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 打开“打印”对话框，打印当前文档。
 - {{domxref("Window.prompt()")}}
   - : 返回用户在提示对话框中输入的文本。
-- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
+- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 返回 {{jsxref("Promise")}}，经兑现可得到包含一个代表本地可用字体的 {{domxref("FontData")}} 对象数组。
-- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : 从 window 上移除一个事件监听器。
 - {{domxref("reportError", "Window.reportError()")}}
   - : 报告一个脚本中的错误，模拟一个未处理的异常。
 - {{domxref("Window.requestAnimationFrame()")}}
@@ -231,12 +223,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 按给定的页数滚动文档。
 - {{domxref("Window.scrollTo()")}}
   - : 将文档滚动至特定坐标。
-- {{domxref("Window.setImmediate()")}}
-  - : 在浏览器完成其他繁重的任务后执行一个函数。
 - {{domxref("Window.setInterval()")}}
   - : 安排一个函数，在给定的毫秒数过去后执行。
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : 切换用户调整窗口大小的能力。
 - {{domxref("Window.setTimeout()")}}
   - : 安排函数在给定的时间内执行。
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
@@ -249,8 +237,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 显示一个目录选择器，允许用户选择一个目录。
 - {{domxref("Window.stop()")}}
   - : 该方法停止了窗口的加载。
-- {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : 更新当前 chrome 窗口（用户界面）的命令状态。
 
 ### 已弃用的方法
 
@@ -258,12 +244,24 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : 注册窗口以捕获所有指定类型的事件。
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 取消使用 `setImmediate()` 设置的重复执行任务。
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 在窗口历史中前进一步。该方法已被废弃，应该使用 {{domxref("History.forward", "history.forward()")}} 代替。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : 解除窗口对特定类型事件的捕获。
+- {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 允许网站或应用访问沙盒文件系统以供自己使用。
+- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 在浏览器完成其他繁重的任务后执行一个函数。
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
+  - : 不执行操作（no-op）。保持对 Netscape 4.x 的向后兼容性。
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 显示一个对话框。
+  - : 显示一个模态对话框。
+- {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 将 {{domxref("WebKitPoint")}} 从节点坐标系转换到页面坐标系。
+- {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 将 {{domxref("WebKitPoint")}} 从页面坐标系转换到节点坐标系。
 
 ## 事件
 
