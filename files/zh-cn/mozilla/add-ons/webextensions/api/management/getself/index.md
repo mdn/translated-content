@@ -25,7 +25,7 @@ let gettingSelf = browser.management.getSelf()
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用包含有关插件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用包含有关附加组件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现。
 
 ## 浏览器兼容性
 
