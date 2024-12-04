@@ -50,4 +50,4 @@ document.head.appendChild(preloadLink);
 - {{domxref("HTMLImageElement.fetchPriority")}}
 - {{domxref("HTMLScriptElement.fetchPriority")}}
 - HTTP {{httpheader("Link")}} 标头
-- [使用 Fetch Priority API 优化资源加载](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority)一文讲述了该 API 如何影响 Chrome 中的优先级。
+- [使用 Fetch Priority API 优化资源加载](https://web.developers.google.cn/articles/fetch-priority#browser_priority_and_fetchpriority)一文讲述了该 API 如何影响 Chrome 中的优先级。
