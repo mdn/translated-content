@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-设置侧边栏的标题。标题显示在浏览器列出可用侧边栏的任何地方。例如，Firefox 会在“查看 > 侧边栏”菜单中显示它。当侧边栏打开时，它还会显示在侧边栏的顶部。
+设置侧边栏的标题。标题显示在浏览器列出可用侧边栏的任何地方。例如，Firefox 会在“查看 > 侧栏”菜单中显示它。当侧边栏打开时，它还会显示在侧边栏的顶部。
 
 ## 标题类型
 
-你的附加组件应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest 键中指定侧边栏的标题（这被称为“_manifest 标题_”）。如果你没有指定 manifest 标题，它将使用默认值即附加组件名。
+你的附加组件应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)“manifest”键中指定侧边栏的标题（这被称为“_manifest 标题_”）。如果你没有指定“manifest”标题，它将使用默认值即附加组件名。
 
 如果你使用 `setTitle()` 设置新标题，并包含 `tabId` 选项，那么标题仅为给定的标签设置。这个标题称为“_标签特定标题_”。
 
