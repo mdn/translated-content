@@ -11,7 +11,7 @@ l10n:
 
 ## 面板类型
 
-侧边栏总是有一个“_清单面板_”，即在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中定义的面板。
+侧边栏总是有一个“_清单面板_”，即在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)“manifest”键中定义的面板。
 
 如果使用 `setPanel()` 设置新面板，并包含 `tabId` 选项，则该面板仅为给定的标签页设置。这个面板称为“_标签特定面板_”。
 
