@@ -19,4 +19,4 @@ TTI 是通过利用[长任务 API](/zh-CN/docs/Web/API/PerformanceLongTaskTiming
 
 - Web 孵化器社区组关于 [TTI 的定义](https://github.com/WICG/time-to-interactive)
 - Radimir Bitsov 写的[可交互时间——以人为本的单位](https://calibreapp.com/blog/time-to-interactive)
-- [计算 TTI](https://web.dev/articles/user-centric-performance-metrics#tracking_tti)
+- [计算 TTI](https://web.developers.google.cn/articles/user-centric-performance-metrics)

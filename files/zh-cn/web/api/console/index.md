@@ -245,18 +245,11 @@ foo();
 
 {{Compat}}
 
-## 注意
+## 参见
 
-- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其他浏览器可能也是。
-
-## 相关文档
-
-- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) - Firefox 浏览器控制台如何处理 console API 的调用
-- [Remote debugging](https://profiler.firefox.com/docs/) - 如何在调试移动设备时查看控制台输出。
-
-### 其他实现
-
-- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console/console-api)
-- [Safari Web Inspector](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)——Firefox Web 控制台如何处理控制台 API 的调用
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html)——如何在调试移动设备时查看控制台输出
+- [Google Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools/console/api/)
+- [Microsoft Edge 开发者工具](https://learn.microsoft.com/zh-cn/archive/microsoft-edge/legacy/developer/)
+- [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
