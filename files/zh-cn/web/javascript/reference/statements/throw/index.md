@@ -22,7 +22,7 @@ throw expression;
 
 ## 描述
 
-`throw` 语句在任何可以使用语句的上下文中都有效。它的执行会产生一个在调用堆栈传播的异常。有关错误冒泡和处理的更多信息，请参阅[流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
+`throw` 语句在任何可以使用语句的上下文中都有效。它的执行会产生一个在调用堆栈传播的异常。有关错误冒泡和处理的更多信息，请参阅[控制流与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
 
 `throw` 关键字后面可以跟任何类型的表达式，例如：
 

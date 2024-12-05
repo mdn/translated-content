@@ -92,21 +92,20 @@ text-decoration: unset;
 }
 ```
 
-```html
-<p class="under">This text has a line underneath it.</p>
-<p class="over">This text has a line over it.</p>
-<p class="line">This text has a line going through it.</p>
+```html-nolint
+<p class="under">このテキストには下付近に 1 本の線があります。</p>
+<p class="over">このテキストの上に線があります。</p>
+<p class="line">このテキストには取り消し線があります。</p>
 <p>
-  This <a class="plain" href="#">link will not be underlined</a>, as links
-  generally are by default. Be careful when removing the text decoration on
-  anchors since users often depend on the underline to denote hyperlinks.
+  この<a class="plain" href="#">リンクには下線が引かれていません</a
+  >が、リンクは一般的には既定で下線があります。ユーザーはハイパーリンクを示すアンダーラインを頼りにしていることが多いので、アンカーの文字装飾を削除する場合は注意が必要です。
 </p>
-<p class="underover">This text has lines above <em>and</em> below it.</p>
+<p class="underover">このテキストには上<em>と</em>下に線があります。</p>
 <p class="thick">
-  This text has a really thick purple underline in supporting browsers.
+  対応しているブラウザーでは、このテキストは実に太い紫色の下線があります。
 </p>
 <p class="blink">
-  This text might blink for you, depending on the browser you use.
+  使用しているブラウザーによっては、このテキストは点滅しているかもしれません。
 </p>
 ```
 

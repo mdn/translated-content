@@ -29,7 +29,7 @@ l10n:
 - 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因来源)，默认报告窗口在来源的 `"expiry"` 到期时结束，该值在 `Attribution-Reporting-Register-Source` 的 [`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) 字段中设置。如果未显式设置，则默认为注册后 30 天。
 - 对于[基于导航的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)，默认报告窗口分别为 2 天、7 天和来源的 `"expiry"`。
 
-有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
+有关详细信息，请参阅[自定义报告窗口](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
 
 一旦事件级报告到达相应的端点，数据如何处理、存储和显示完全取决于开发者。一个典型的事件级报告可能如下所示：
 
@@ -70,11 +70,11 @@ l10n:
 
 ## 汇总报告
 
-汇总报告是从收到的多个可汇总报告创建的，并随后[批处理](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching)以准备由[汇总服务](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service)处理。此后，数据如何处理、存储和显示完全取决于开发者。
+汇总报告是从收到的多个可汇总报告创建的，并随后[批处理](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching)以准备由[汇总服务](https://developers.google.cn/privacy-sandbox/private-advertising/aggregation-service)处理。此后，数据如何处理、存储和显示完全取决于开发者。
 
 默认情况下，可汇总报告是在触发器交互后生成并计划发送的，带有随机延迟以帮助模糊时序并提高隐私性。对于给定的已注册归因来源，从注册到来源过期期间会记录归因来源事件——这称为**报告窗口**。
 
-到期时间由关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 `expiry` 值定义，如果未明确设置，则默认为注册后 30 天。请注意，可以通过在 `Attribution-Reporting-Register-Source` 标头中设置 `aggregatable_report_window` 值来进一步修改报告窗口的长度。有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
+到期时间由关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 `expiry` 值定义，如果未明确设置，则默认为注册后 30 天。请注意，可以通过在 `Attribution-Reporting-Register-Source` 标头中设置 `aggregatable_report_window` 值来进一步修改报告窗口的长度。有关详细信息，请参阅[自定义报告窗口](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
 
 > [!NOTE]
 > 为了进一步保护用户隐私，每个归因来源相关的汇总报告值具有有限的总值——这称为**贡献预算**。此值可能因 API 的不同实现而有所不同；在 Chrome 中为 65,536。任何会生成报告从而导致的总值超出此限制的转化将不被记录。请确保跟踪预算并在你尝试测量的不同指标之间共享它。
@@ -151,9 +151,9 @@ l10n:
 
 关于归因报告中噪声的工作原理，请参见：
 
-- [理解汇总报告中的噪声](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise)
+- [理解汇总报告中的噪声](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise)
 - [数据限制和噪声](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [处理噪声](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
+- [处理噪声](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
 
 ## 报告优先级和限制
 
@@ -303,6 +303,6 @@ l10n:
 
 有关更多信息和示例，请参见：
 
-- developers.google.com 上的[调试报告介绍](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/)（2023）
-- developers.google.com 上的[设置调试报告](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/)（2023）
-- developers.google.com 上的[调试宝典](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/)（2023）
+- developers.google.cn 上的[调试报告介绍](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/)（2023）
+- developers.google.cn 上的[设置调试报告](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/)（2023）
+- developers.google.cn 上的[调试宝典](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/)（2023）

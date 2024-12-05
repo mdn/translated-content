@@ -26,7 +26,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 - `autocapitalize` {{non-standard_inline}}
 
-  - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles spour iOS 5 et les versions supérieures sont :
+  - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles pour iOS 5 et les versions supérieures sont :
 
     - `none` : la mise en majuscules est complètement désactivée
     - `sentences` : la première lettre des phrases est automatiquement mise en majuscule
@@ -209,7 +209,7 @@ Je suis en lecture seule</textarea
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

@@ -134,7 +134,7 @@ The implementation status of pointer events in browsers is [relatively low](http
 The following documents describe how to use touch events and include example code:
 
 - {{domxref("Touch_events","Touch Events Overview")}}
-- [Implement Custom Gestures](https://developers.google.com/web/fundamentals/design-and-ui/input/touch/touch-events)
+- [Implement Custom Gestures](https://web.developers.google.cn/articles/add-touch-to-your-site)
 - [Introduction to Touch events in JavaScript](http://www.javascriptkit.com/javatutors/touchevents.shtml)
 - [Add touch screen support to your website (The easy way)](http://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 

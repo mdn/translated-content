@@ -24,7 +24,7 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 - [基本语法与注释](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#基础)
 - [声明](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#声明)
-- [变量作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)
+- [变量作用域](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量作用域)
 - [变量提升](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量提升)
 - [数据结构和类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数据结构和类型)
 - [字面量](</zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#字面量_(Literals)>)

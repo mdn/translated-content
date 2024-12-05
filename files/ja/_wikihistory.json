@@ -8945,10 +8945,6 @@
     "modified": "2020-10-15T22:17:45.231Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:43.790Z",
-    "contributors": ["mfuji09", "wbamberg", "chrisdavidmills", "silverskyvicto"]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:40:06.130Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
@@ -14654,10 +14650,6 @@
   "Web/API/Window/unload_event": {
     "modified": "2020-10-15T22:11:48.537Z",
     "contributors": ["mfuji09", "wbamberg", "silverskyvicto"]
-  },
-  "Web/API/Window/updateCommands": {
-    "modified": "2019-03-23T23:51:36.690Z",
-    "contributors": ["fscholz", "khalid32", "ethertank", "Potappo"]
   },
   "Web/API/Window/visualViewport": {
     "modified": "2020-10-15T22:34:55.507Z",
@@ -21498,10 +21490,6 @@
     "modified": "2019-03-23T22:24:48.101Z",
     "contributors": ["mfuji09", "kachick", "SphinxKnight", "yyss"]
   },
-  "Web/HTTP/Configuring_servers_for_Ogg_media": {
-    "modified": "2019-03-18T21:25:34.436Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/HTTP/Connection_management_in_HTTP_1.x": {
     "modified": "2020-09-27T09:47:29.485Z",
     "contributors": [
@@ -21554,10 +21542,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:28:37.603Z",
     "contributors": ["mfuji09", "tamura4278"]
-  },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T22:09:31.974Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:45.155Z",
@@ -28818,6 +28802,10 @@
   "Web/Media/Formats": {
     "modified": "2020-09-03T13:27:24.598Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/Media/Formats/Configuring_servers_for_Ogg_media": {
+    "modified": "2019-03-18T21:25:34.436Z",
+    "contributors": ["silverskyvicto"]
   },
   "Web/Media/Formats/Image_types": {
     "modified": "2020-11-09T23:53:41.374Z",

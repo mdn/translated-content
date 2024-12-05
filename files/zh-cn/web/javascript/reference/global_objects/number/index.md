@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 
 ## 描述
 
-数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
+数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
 
 ```js
 255; // 二百五十五

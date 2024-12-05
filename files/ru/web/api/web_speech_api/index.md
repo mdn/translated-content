@@ -27,7 +27,7 @@ Web Speech API позволяет веб приложениям управлят
 - {{domxref("SpeechRecognitionError")}}
   - : Представляет сообщения об ошибках из службы распознавания.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+  - : The event object for the [`result`](/ru/docs/Web/Events/result) and [`nomatch`](/ru/docs/Web/Events/nomatch) events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechGrammar")}}
   - : Слова или шаблоны слов которые мы хотим чтобы служба распознавания распознала.
 - {{domxref("SpeechGrammarList")}}
