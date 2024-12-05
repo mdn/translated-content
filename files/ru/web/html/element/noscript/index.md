@@ -1,5 +1,5 @@
 ---
-title: <noscript> - элемент, который поможет при отключенном JS
+title: <noscript> - элемент, который поможет при отключенных скриптах
 slug: Web/HTML/Element/noscript
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
+[HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка скриптов.
 
 ## Атрибуты
 
@@ -23,11 +23,11 @@ l10n:
 <p>Камни!</p>
 ```
 
-### Результат с включённым JavaScript
+### Результат с включёнными скриптами
 
 Камни!
 
-### Результат с выключенным JavaScript
+### Результат с выключенным скриптами
 
 [Внешняя ссылка](https://www.mozilla.org/)
 
@@ -39,35 +39,25 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/HTML/Content_categories"
-          >Категории контента</a
-        >
+        <a href="/ru/docs/Web/HTML/Content_categories">Категории контента</a>
       </th>
       <td>
-        <a href="/ru/docs/Web/HTML/Content_categories#метаданные"
-          >Метаданные</a
-        >,
-        <a href="/ru/docs/Web/HTML/Content_categories#основной_поток"
-          >основной поток</a
-        >,
-        <a href="/ru/docs/Web/HTML/Content_categories#фразовый_контент"
-          >фразовый контент</a
-        >.
+        <a href="/ru/docs/Web/HTML/Content_categories#метаданные">Метаданные</a>,
+        <a href="/ru/docs/Web/HTML/Content_categories#основной_поток">основной поток</a>,
+        <a href="/ru/docs/Web/HTML/Content_categories#фразовый_контент">фразовый контент</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Допустимый контент</th>
       <td>
-        Если выполнение JavaScript отключено и элемент является потомком элемента
+        Если выполнение скриптов отключено и элемент является потомком элемента
         {{HTMLElement("head")}}: в любом порядке, ноль или более элементов
         {{HTMLElement("link")}}, ноль или более элементов
         {{HTMLElement("style")}}, и ноль или более элементов
-        {{HTMLElement("meta")}}.<br />Если выполнение JavaScript отключено и элемент не
+        {{HTMLElement("meta")}}.<br />Если выполнение скриптов отключено и элемент не
         является потомком элемента {{HTMLElement("head")}}: любой
-        <a
-          href="/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента"
-          >прозрачный контент</a
-        >, но элемент <code>&#x3C;noscript></code> не должен быть среди его
+        <a href="/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента">прозрачный контент</a>,
+        но элемент <code>&#x3C;noscript></code> не должен быть среди его
         потомков.<br />В противном случае: основной поток или фразовый контент.
       </td>
     </tr>
@@ -79,9 +69,8 @@ l10n:
       <th scope="row">Допустимые родители</th>
       <td>
         Любой элемент, принимающий
-        <a href="/ru/docs/Web/HTML/Content_categories#Phrasing_content"
-          >фразовый контент</a
-        >, если среди его предков нет элемента
+        <a href="/ru/docs/Web/HTML/Content_categories#фразовый_контент">фразовый контент</a>,
+        если среди его предков нет элемента
         <code>&#x3C;noscript></code>, или в элементе
         {{HTMLElement("head")}} (только для HTML-документа), также при
         отсутствии предков <code>&#x3C;noscript></code>.
@@ -90,9 +79,7 @@ l10n:
     <tr>
       <th scope="row">Неявная роль ARIA</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Нет соответствующей роли</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a>
       </td>
     </tr>
     <tr>
