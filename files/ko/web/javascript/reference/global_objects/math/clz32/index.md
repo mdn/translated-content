@@ -17,12 +17,12 @@ l10n:
 Math.clz32(x)
 ```
 
-### 파라미터
+### 매개변수
 
 - `x`
   - : 숫자입니다.
 
-### 반환값
+### 반환 값
 
 32비트 이진 표현에서 `x` 의 선행 0 비트 수를 반환합니다.
 
@@ -71,11 +71,11 @@ Math.clz32(3.5); // 30
 다음 32비트 예제를 살펴보세요.
 
 ```js
-const a = 32776; // 00000000000000001000000000001000 (16 leading zeros)
+const a = 32776; // 00000000000000001000000000001000 (16개의 선행 0이 있음)
 Math.clz32(a); // 16
 
-const b = ~32776; // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
-Math.clz32(b); // 0 (this is equal to how many leading one's there are in a)
+const b = ~32776; // 11111111111111110111111111110111 (32776 반전, 0개의 선행 0이 있음)
+Math.clz32(b); // 0 (이는 a에서 얼마나 많은 선행 값이 있는지와 동일한 값입니다.)
 ```
 
 이 로직을 사용하면 `clon` 함수는 다음과 같이 생성됩니다.
@@ -92,12 +92,12 @@ function clon(integer) {
 
 ```js
 function ctrz(integer) {
-  integer >>>= 0; // coerce to Uint32
+  integer >>>= 0; // Uint32로 변환
   if (integer === 0) {
-    // skipping this step would make it return -1
+    // 이 구문을 스킵하면 -1이 반환될 수 있습니다.
     return 32;
   }
-  integer &= -integer; // equivalent to `int = int & (~int + 1)`
+  integer &= -integer; // 다음 연산과 동일합니다. `int = int & (~int + 1)`
   return 31 - clz(integer);
 }
 ```
@@ -117,25 +117,25 @@ const countTrailsMethods = (function (stdlib, foreign, heap) {
   "use asm";
   const clz = stdlib.Math.clz32;
 
-  // count trailing zeros
+  // 후행 0 세기
   function ctrz(integer) {
-    integer = integer | 0; // coerce to an integer
+    integer = integer | 0; // 정수로 변환
     if ((integer | 0) == 0) {
-      // skipping this step would make it return -1
+      // 이 구문을 스킵하면 -1이 반환될 수 있습니다.
       return 32;
     }
-    // Note: asm.js doesn't have compound assignment operators such as &=
-    integer = integer & -integer; // equivalent to `int = int & (~int + 1)`
+    // Note: asm.js는 &=와 같은 복합 할당 연산자를 가지고 있지 않습니다.
+    integer = integer & -integer; // 다음 연산과 동일합니다. `int = int & (~int + 1)`
     return (31 - clz(integer)) | 0;
   }
 
-  // count trailing ones
+  // 후행 갯수 세기
   function ctron(integer) {
-    integer = integer | 0; // coerce to an integer
+    integer = integer | 0; // 정수로 변환
     return ctrz(~integer) | 0;
   }
 
-  // asm.js demands plain objects:
+  // asm.js는 순수 객체를 필요로 합니다.
   return { ctrz: ctrz, ctron: ctron };
 })(window, null, null);
 
