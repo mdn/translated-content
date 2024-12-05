@@ -146,4 +146,4 @@ try {
 ## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [可取消的 Fetch](https://developer.chrome.google.cn/blog/abortable-fetch/)，来自 Jake Archibald

@@ -169,7 +169,7 @@ say=Hi&to=Mom
 
 #### 查看 HTTP 请求
 
-HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要使用诸如[Firefox Network Monitor](/zh-CN/docs/Tools/Network_Monitor)或[Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)之类的工具)。例如，你的表单数据将显示在 Chrome 网络选项卡中：
+HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要使用诸如 [Firefox 网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)或 [Chrome 开发者工具](https://developer.chrome.google.cn/docs/devtools/)之类的工具)。例如，你的表单数据将显示在 Chrome 网络选项卡中：
 
 1. 按下 F12
 2. 选择 "Network"
