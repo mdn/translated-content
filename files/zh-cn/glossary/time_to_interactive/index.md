@@ -13,7 +13,7 @@ TTI 由 Web 孵化器社区组于 2018 年提出，旨在提供一项描述页�
 
 #### 注意
 
-TTI 是通过利用[长任务 API](/zh-CN/docs/Web/API/PerformanceLongTaskTiming) 中的信息推导出来的。尽管某些性能监控工具中提供了 TTI，TTI 并不是属于任何官方 Web 规范。
+TTI 是通过利用[长任务 API](/zh-CN/docs/Web/API/PerformanceLongTaskTiming) 中的信息推导出来的。尽管某些性能监控工具中提供了 TTI，但其并不属于任何官方 Web 规范。
 
 ## 参见
 
