@@ -1,6 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
+l10n:
+  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
 {{CSSRef}}
@@ -11,7 +13,7 @@ slug: Web/CSS/basic-shape
 
 ## 语法
 
-`<basic-shape>` 数据类型用于创建基本形状，包括通过[容器内边距](#通过容器内边距定义矩形的语法)、通过[坐标距离](#通过距离定义矩形的语法)，或通过[设定尺寸](#具有尺寸的矩形语法)、[圆形](#圆形语法)、[椭圆形](#椭圆形语法)、[多边形](#多边形语法)、[路径](#路径语法)以及[作者创建的形状](#形状语法)。这些基本形状是使用一个 `<basic_shape>` CSS 函数来定义的，每个值都需要一个符合该形状函数特定语法的参数。
+`<basic-shape>` 数据类型用于创建基本形状，包括通过[容器 inset](#通过容器 inset 定义矩形的语法)、通过[坐标距离](#通过距离定义矩形的语法)，或通过[设定尺寸](#具有尺寸的矩形语法)、[圆形](#圆形语法)、[椭圆形](#椭圆形语法)、[多边形](#多边形语法)、[路径](#路径语法)以及[作者创建的形状](#形状语法)。这些基本形状是使用一个 `<basic_shape>` CSS 函数来定义的，每个值都需要一个符合该形状函数特定语法的参数。
 
 ### 公共参数
 
@@ -19,7 +21,7 @@ slug: Web/CSS/basic-shape
 
 - `round <'border-radius'>`
 
-  - : 为[通过容器内边距定义的矩形](#通过容器内边距定义矩形的语法)、[通过距离定义的矩形](#通过距离定义矩形的语法)以及[具有尺寸的矩形](#具有尺寸的矩形语法)定义圆角，使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 缩写属性相同的语法。
+  - : 为[通过容器 inset 定义的矩形](#通过容器 inset 定义矩形的语法)、[通过距离定义的矩形](#通过距离定义矩形的语法)以及[具有尺寸的矩形](#具有尺寸的矩形语法)定义圆角，使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 缩写属性相同的语法。
 
 - `<shape-radius>`
 
@@ -38,7 +40,7 @@ slug: Web/CSS/basic-shape
     > [!NOTE]
     > 在 {{cssxref("offset-path")}} 中不支持 `<fill-rule>`，使用它会使属性无效。
 
-### 通过容器内边距定义矩形的语法
+### 通过容器 inset 定义矩形的语法
 
 {{cssxref("basic-shape/inset","inset()")}} 函数创建一个内嵌矩形，其大小由容器四边向内偏移的距离定义，并且可以选择是否带有圆角。
 
@@ -46,9 +48,9 @@ slug: Web/CSS/basic-shape
 inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
 ```
 
-当提供全部四个参数时，它们分别代表从参考框向内偏移的顶部、右侧、底部和左侧距离，这些距离定义了内嵌矩形的边缘位置。这些参数遵循 {{cssxref("margin")}} 缩写语法的规则，允许你使用一个、两个、三个或四个值来设置所有四个内边距。
+当提供全部四个参数时，它们分别代表从参考框向内偏移的顶部、右侧、底部和左侧距离，这些距离定义了内嵌矩形的边缘位置。这些参数遵循 {{cssxref("margin")}} 缩写语法的规则，允许你使用一个、两个、三个或四个值来设置所有四个 inset。
 
-如果某个尺寸的两个内边距之和超过了该尺寸的 100%，则这两个值会按比例减小，使它们的和等于 100%。例如，值 `inset(90% 10% 60% 10%)` 中，顶部内边距为 `90%`，底部内边距为 `60%`。这些值会按比例减小为 `inset(60% 10% 40% 10%)`。像这样的形状，如果不包围任何区域并且没有 {{cssxref("shape-margin")}}，则不会影响换行。
+如果某个尺寸的两个 inset 之和超过了该尺寸的 100%，则这两个值会按比例减小，使它们的和等于 100%。例如，值 `inset(90% 10% 60% 10%)` 中，顶部 inset 为 `90%`，底部 inset 为 `60%`。这些值会按比例减小为 `inset(60% 10% 40% 10%)`。像这样的形状，如果不包围任何区域并且没有 {{cssxref("shape-margin")}}，则不会影响换行。
 
 ### 通过距离定义矩形的语法
 
@@ -137,7 +139,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 在两个 `<basic-shape>` 函数之间进行动画处理时，遵循以下{{Glossary("interpolation", "插值")}}规则。每个 `<basic-shape>` 函数的参数值构成一个列表。为了在两个形状之间进行插值，这两个形状必须使用相同的参考框，并且两个 `<basic-shape>` 列表中的值的数量和类型必须匹配。
 
-在两个 `<basic-shape>` 函数的列表中，每个值都基于其计算值进行插值，计算值可能是 {{cssxref("number")}}、{{cssxref("length")}}、{{cssxref("percentage")}}、{{cssxref("angle")}} 或可能为 {{cssxref("calc", "calc()")}}。如果值不是这些数据类型之一，但在两个进行插值的基本形状函数中相同，例如 `nonzero`，则仍然可以进行插值。
+在两个 `<basic-shape>` 函数的列表中，每个值都尽可能的基于其计算值进行插值，计算值是 {{cssxref("number")}}、{{cssxref("length")}}、{{cssxref("percentage")}}、{{cssxref("angle")}} 或 {{cssxref("calc", "calc()")}}。如果值不是这些数据类型之一，但在两个进行插值的基本形状函数中相同，例如 `nonzero`，则仍然可以进行插值。
 
 - **两个形状均为 `ellipse()` 类型或 `circle()` 类型**：如果它们的半径指定为 {{cssxref("length")}} 或 {{cssxref("percentage")}}（而不是 `closest-side` 或 `farthest-side` 等关键字），则对每个相应的值应用插值。
 
