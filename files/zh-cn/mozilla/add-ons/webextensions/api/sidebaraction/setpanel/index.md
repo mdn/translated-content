@@ -37,7 +37,7 @@ browser.sidebarAction.setPanel(
 
       - : `string` 或 `null`：要加载到侧边栏中的面板，指定为指向 HTML 文档的 URL，或 `null`，或空字符串。
 
-        这可以指向附加组件内部打包的文件（例如使用 {{WebExtAPIRef("runtime.getURL")}} 创建的文件）或远程文档（例如 `https://example.org/`）。它必须是有效的 URL。
+        这可以指向扩展内部打包的文件（例如使用 {{WebExtAPIRef("runtime.getURL")}} 创建的文件）或远程文档（例如 `https://example.org/`）。它必须是有效的 URL。
 
         如果 `panel` 是 `null` 或 `""`，则将删除先前设置的面板，以便：
 
