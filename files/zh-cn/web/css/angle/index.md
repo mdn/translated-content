@@ -7,15 +7,15 @@ l10n:
 
 {{CSSRef}}
 
-**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中使用。
+**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中被使用。
 
 {{EmbedInteractiveExample("pages/css/type-angle.html")}}
 
 ## 语法
 
-`<angle>` 数据类型由 {{cssxref("&lt;number&gt;")}} 后跟以下列出的其中一个单位组成。与所有尺寸一样，数字与单位之间没有空格。数字 `0` 后的单位是可选的。
+`<angle>` 数据类型由 {{cssxref("&lt;number&gt;")}} 后跟以下列出的单位之一组成。与所有尺寸一样，数字与单位之间没有空格。数字 `0` 后的单位是可选的。
 
-此外，它前面可以加上一个 `+` 或 `-` 号。正数表示顺时针角度，而负数表示逆时针角度。对于给定单位的静态属性，任何角度都可以用各种等价值来表示。例如，`90deg` 等于 `-270deg`，`1turn` 等于 `4turn`。对于动态属性，比如应用 {{cssxref("animation")}} 或 {{cssxref("transition")}} 时，效果会有所不同。
+此外，它前面可以加上一个 `+` 或 `-` 号。正数表示顺时针角度，而负数表示逆时针角度。对于给定单位的静态属性，任何角度都可以用各种等价值来表示。例如，`90deg` 等于 `-270deg`，`1turn` 等于 `4turn`。对于动态属性，比如应用 {{cssxref("animation")}} 或 {{cssxref("transition")}} 时，效果却会有所不同。
 
 ### 单位
 
