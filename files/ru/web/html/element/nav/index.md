@@ -17,7 +17,7 @@ slug: Web/HTML/Element/nav
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечание
 

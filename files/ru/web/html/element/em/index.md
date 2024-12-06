@@ -17,7 +17,7 @@ slug: Web/HTML/Element/em
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечания по использованию
 
