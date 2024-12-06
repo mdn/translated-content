@@ -17,7 +17,7 @@ l10n:
 
 ## 图标类型
 
-你的附加组件应该在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中指定侧边栏的图标。这被称为“_清单图标_”。
+你的扩展应该在 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中指定侧边栏的图标。这被称为“_清单图标_”。
 
 如果你没有在 `sidebar_action` 键中指定图标，你将得到浏览器的默认图标。这被称为“_默认图标_”。
 
