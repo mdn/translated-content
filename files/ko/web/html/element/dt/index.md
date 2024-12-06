@@ -20,6 +20,7 @@ slug: Web/HTML/Element/dt
 [\<dl> 요소의 예제](/ko/docs/Web/HTML/Element/dl#예제)를 확인하세요.
 
 ## 기술 요약
+
 <table class="properties">
   <tbody>
     <tr>
