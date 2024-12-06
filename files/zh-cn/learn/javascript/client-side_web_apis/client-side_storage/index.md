@@ -735,7 +735,7 @@ self.addEventListener("fetch", (e) => {
 });
 ```
 
-这就是我们的 service worker。你可以使用它们处理更多的负载——有关详细信息，请参阅 [service worker 手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 的[为你的 Web 应用程序添加 service worker 和离线浏览](https://developers.google.com/web/fundamentals/codelabs/offline/)一文给予这一简单示例的启发。
+这就是我们的 service worker。你可以使用它们处理更多的负载——有关详细信息，请参阅 [service worker 手册](https://github.com/mdn/serviceworker-cookbook/)。感谢 Paul Kinlan 的[为你的 Web 应用程序添加 service worker 和离线浏览](https://developers.google.cn/codelabs/pwa-training/pwa03--going-offline#0)一文给予这一简单示例的启发。
 
 #### 测试离线示例
 
