@@ -12,7 +12,7 @@ l10n:
 ## 属性
 
 - `passwordSavingEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为真，则浏览器的密码管理器在用户输入密码时会提供存储密码的选项。默认为 `true`。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。如果为 `true`，则浏览器的密码管理器在用户输入密码时会提供保存密码的选项。默认为 `true`。
 
 ## 浏览器兼容性
 
