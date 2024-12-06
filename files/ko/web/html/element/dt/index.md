@@ -65,7 +65,7 @@ slug: Web/HTML/Element/dt
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"><code>listitem</code></a></td>
+      <td><a href="/ko/docs/Web/Accessibility/ARIA/Roles/listitem_role"><code>listitem</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
