@@ -18,7 +18,7 @@ slug: Web/HTML/Element/canvas
 
 ## Атрибуты
 
-Этот элемент включает [global attributes](/ru/docs/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `height`
   - : Высота в координатном пространстве в CSS пикселях. По умолчанию 150.

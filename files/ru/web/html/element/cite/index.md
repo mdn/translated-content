@@ -24,7 +24,7 @@ slug: Web/HTML/Element/cite
 
 ## Атрибуты
 
-Для данного элемента доступны только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Пример
 

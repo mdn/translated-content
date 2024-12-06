@@ -18,7 +18,7 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 
 ## Атрибуты
 
-Этот элемент включает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечания
 

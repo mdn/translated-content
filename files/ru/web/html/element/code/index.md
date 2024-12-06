@@ -20,7 +20,7 @@ slug: Web/HTML/Element/code
 
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/Web/HTML/Global_attributes).
 
 ## Пример
 
