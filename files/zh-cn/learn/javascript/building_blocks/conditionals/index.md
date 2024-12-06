@@ -2,7 +2,7 @@
 title: 在代码中做决定——条件语句
 slug: Learn/JavaScript/Building_blocks/conditionals
 l10n:
-  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
+  sourceCommit: 94982f79dc1b95025700c48170a5b48d5f3a2a64
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
@@ -600,7 +600,7 @@ h2 {
   </head>
   <body>
     ${outputBody}
-    <script>${code}</script>
+    <script>${code}<${"/"}script>
   </body>
 </html>`;
 }
@@ -786,7 +786,7 @@ function outputDocument(code) {
   </head>
   <body>
     ${outputBody}
-    <script>${code}</script>
+    <script>${code}<${"/"}script>
   </body>
 </html>`;
 }
