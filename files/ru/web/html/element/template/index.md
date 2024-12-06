@@ -11,7 +11,7 @@ l10n:
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `shadowrootmode`
 
