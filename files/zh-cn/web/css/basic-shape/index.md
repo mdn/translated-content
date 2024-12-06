@@ -11,7 +11,7 @@ slug: Web/CSS/basic-shape
 
 ## 语法
 
-`<basic-shape>` 数据类型用于创建基本形状，包括通过[容器内边距](#通过容器内边距定义矩形的语法)、通过[坐标距离](#通过距离定义矩形的语法)、或通过[设定尺寸](#具有尺寸的矩形语法)、[圆形](#圆形语法)、[椭圆形](#椭圆形语法)、[多边形](#多边形语法)、[路径](#路径语法)以及[作者创建的形状](#形状语法)。这些基本形状是使用一个 `<basic_shape>` CSS 函数来定义的，每个值都需要一个符合该形状函数特定语法的参数。
+`<basic-shape>` 数据类型用于创建基本形状，包括通过[容器内边距](#通过容器内边距定义矩形的语法)、通过[坐标距离](#通过距离定义矩形的语法)，或通过[设定尺寸](#具有尺寸的矩形语法)、[圆形](#圆形语法)、[椭圆形](#椭圆形语法)、[多边形](#多边形语法)、[路径](#路径语法)以及[作者创建的形状](#形状语法)。这些基本形状是使用一个 `<basic_shape>` CSS 函数来定义的，每个值都需要一个符合该形状函数特定语法的参数。
 
 ### 公共参数
 
@@ -128,7 +128,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 在 `<basic-shape>` 函数中的值按照指定方式计算，考虑以下附加因素：
 
-- 对于任何遗漏值（omitted values），将使用其默认值。
+- 对于任何省略值，将使用其默认值。
 - `circle()` 或 `ellipse()` 中的 {{cssxref("position_value", "&lt;position&gt;")}} 值计算为从参考框左上角开始的一对偏移量：第一个偏移量是水平方向的，第二个偏移量是垂直方向的。每个偏移量都被指定为 {{cssxref("length-percentage")}} 值。
 - `inset()` 中的 [`<border-radius>`](/zh-CN/docs/Web/CSS/border-radius) 值被扩展为一个包含八个值的列表，每个值要么是 {{cssxref("length")}}，要么是 {{cssxref("percentage")}}。
 - {{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/rect","rect()")}} 和 {{cssxref("basic-shape/xywh","xywh()")}} 函数计算为等效的 `inset()` 函数。
@@ -145,9 +145,9 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 - **两个形状均为 `polygon()` 类型**：如果它们使用相同的 `<fill-rule>` 并且具有相同数量的逗号分隔的坐标对，则对每个相应的值应用插值。
 
-- **两个形状均为 `path()` 类型**：如果两个形状中的路径字符串匹配[路径数据命令](/zh-CN/docs/Web/SVG/Attribute/d#path_commands)的数量、类型和顺序，则对每个参数作为 {{cssxref("&lt;number&gt;")}} 应用插值。
+- **两个形状均为 `path()` 类型**：如果两个形状中的路径字符串匹配[路径数据命令](/zh-CN/docs/Web/SVG/Attribute/d#path_commands)的数量、类型和顺序，则将每个参数作为 {{cssxref("&lt;number&gt;")}} 应用插值。
 
-- **两个形状均为 `shape()` 类型**：如果它们具有相同的命令关键字并且使用相同的 `<by-to>` 关键字，则对每个相应的值应用插值。如果 `shape()` 用于 {{cssxref("clip-path")}} 属性，则当它们还具有相同的 `<fill-rule>` 时，这两个形状进行插值。
+- **两个形状均为 `shape()` 类型**：如果它们具有相同的命令关键字并且使用相同的 `<by-to>` 关键字，则对每个相应的值应用插值。如果 `shape()` 用于 {{cssxref("clip-path")}} 属性，则当它们还具有相同的 `<fill-rule>` 时，对这两个形状进行插值。
 
   - 如果它们使用 `<curve-command>` 或 `<smooth-command>`，则控制点的数量必须匹配才能进行插值。
   - 如果它们使用不同 `<arc-sweep>` 方向的 `<arc-command>`，则插值结果按顺时针方向（`cw`）进行。如果它们使用不同的 `<arc-size>` 关键字，则使用 `large` 值对大小进行插值。
