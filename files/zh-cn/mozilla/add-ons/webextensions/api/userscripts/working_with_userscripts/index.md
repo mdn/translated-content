@@ -96,7 +96,7 @@ async function registerScript() {
 
 一旦脚本被注册，导航到域名以 .org 结尾的页面，你将看到类似于下面的内容：
 
-![网站以 .org 结尾的页面被吃掉的状态消息：“此页面已被吃掉。{"OldStoredValue:" "website address", "NewStoredValue:" "website address"}"](user_script_in_action.png)
+![以 .org 结尾的网站页面被“吃掉”时显示的状态消息：“此页面已被吃掉。{"OldStoredValue:" "website address", "NewStoredValue:" "website address"}"](user_script_in_action.png)
 
 ## 参见
 
