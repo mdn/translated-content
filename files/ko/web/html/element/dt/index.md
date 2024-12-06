@@ -74,7 +74,6 @@ slug: Web/HTML/Element/dt
   </tbody>
 </table>
 
-
 ## 명세
 
 {{Specifications}}
