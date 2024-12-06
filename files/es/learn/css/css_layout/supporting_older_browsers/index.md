@@ -209,7 +209,7 @@ La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web
 
 ## Pruebas con navegadores antiguos
 
-Dado que la mayoría de los navegadores ya son compatibles con Flexbox y Grid, puede resultar en efecto difícil hacer pruebas con navegadores más antiguos. Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
+Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
 
 ## Resumen
 
