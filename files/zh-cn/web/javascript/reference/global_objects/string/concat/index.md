@@ -1,17 +1,20 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
+l10n:
+  sourceCommit: 04e4faf5cbd0307b3b1e122c436110f1d197193a
 ---
 
 {{JSRef}}
 
-**`concat()`** 方法将字符串参数连接到调用的字符串，并返回一个新的字符串。
+{{jsxref("String")}} 值的 **`concat()`** 方法将字符串参数连接到调用的字符串上，并返回一个新的字符串。
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
 ## 语法
 
 ```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -19,7 +22,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### 参数
 
-- `strN`
+- `str1`, …, `strN`
   - : 要连接到 `str` 的一个或多个字符串。
 
 ### 返回值
@@ -28,7 +31,7 @@ concat(str1, str2, /* …, */ strN)
 
 ## 描述
 
-`concat()` 函数将字符串参数连接到调用的字符串并返回一个新字符串。对原字符串或返回的字符串所做的更改不会影响另一个字符串。
+`concat()` 函数将字符串参数连接到调用的字符串并返回一个新字符串。
 
 如果参数不是字符串类型，它们在连接之前将会被转换成字符串。
 

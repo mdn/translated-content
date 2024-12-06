@@ -1,11 +1,13 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
+l10n:
+  sourceCommit: 04e4faf5cbd0307b3b1e122c436110f1d197193a
 ---
 
 {{JSRef}}
 
-**`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+{{jsxref("Array")}} 实例的 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
 {{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
 
@@ -20,7 +22,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ### 参数
 
-- `valueN` {{optional_inline}}
+- `value1`, …, `valueN` {{optional_inline}}
   - : 数组和/或值，将被合并到一个新的数组中。如果省略了所有 `valueN` 参数，则 `concat` 会返回调用此方法的现存数组的一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。详情请参阅下文描述。
 
 ### 返回值
@@ -29,7 +31,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ## 描述
 
-`concat` 方法创建一个新数组。该数组将首先由调用它的对象中的元素填充。然后，对于每个参数，它的值将被连接到数组中——对于普通对象或基元，参数本身将成为最终数组的一个元素；对于属性[`Symbol.isConcatSpreadable`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable)设置为真的数组或类数组对象，参数的每个元素都将是独立地添加到最终数组中。`concat` 方法不会递归到嵌套数组参数中。
+`concat` 方法创建一个新数组。该数组将首先由调用它的对象中的元素填充。然后，对于每个参数，它的值将被连接到数组中——对于普通对象或基元，参数本身将成为最终数组的一个元素；对于属性 [`Symbol.isConcatSpreadable`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) 设置为真的数组或类数组对象，参数的每个元素都将是独立地添加到最终数组中。`concat` 方法不会递归到嵌套数组参数中。
 
 `concat()` 方法是一种[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会更改 `this` 或作为参数提供的任何数组，而是返回包含与原始数组中的元素相同的元素的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。
 
@@ -127,7 +129,13 @@ console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
 ```js
 console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
 console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
-const arrayLike = { [Symbol.isConcatSpreadable]: true, length: 2, 0: 1, 1: 2 };
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // ignored by concat() since length is 2
+};
 console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ```
 
