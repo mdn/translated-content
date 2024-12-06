@@ -9,7 +9,7 @@ l10n:
 
 `RegisteredUserScript` 对象是通过调用 {{WebExtAPIRef("userScripts.register","userScripts.register()")}} 返回的，表示在该调用中注册的用户脚本。
 
-该对象定义了 {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} 方法用于注销用户脚本。
+该对象定义了用于注销用户脚本的 {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} 方法。
 
 > [!NOTE]
 > 如果此对象被销毁（例如因为超出作用域），则相关脚本将自动注销，因此你应该保留对此对象的引用，以便用户脚本保持注册的时间。
