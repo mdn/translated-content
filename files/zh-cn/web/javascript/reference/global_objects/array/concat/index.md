@@ -2,7 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 04e4faf5cbd0307b3b1e122c436110f1d197193a
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
@@ -22,7 +22,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ### 参数
 
-- `value1`, …, `valueN` {{optional_inline}}
+- `value1`、……、`valueN` {{optional_inline}}
   - : 数组和/或值，将被合并到一个新的数组中。如果省略了所有 `valueN` 参数，则 `concat` 会返回调用此方法的现存数组的一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。详情请参阅下文描述。
 
 ### 返回值
@@ -51,7 +51,7 @@ const numbers = [1, 2, 3];
 
 const alphaNumeric = letters.concat(numbers);
 console.log(alphaNumeric);
-// results in ['a', 'b', 'c', 1, 2, 3]
+// 输出 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 连接三个数组
@@ -66,7 +66,7 @@ const num3 = [7, 8, 9];
 const numbers = num1.concat(num2, num3);
 
 console.log(numbers);
-// results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 输出 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### 将值连接到数组
@@ -79,7 +79,7 @@ const letters = ["a", "b", "c"];
 const alphaNumeric = letters.concat(1, [2, 3]);
 
 console.log(alphaNumeric);
-// results in ['a', 'b', 'c', 1, 2, 3]
+// 输出 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 合并嵌套数组
@@ -134,7 +134,7 @@ const arrayLike = {
   length: 2,
   0: 1,
   1: 2,
-  2: 99, // ignored by concat() since length is 2
+  2: 99, // 会被 concat() 所忽略，因为长度（length）为 2
 };
 console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ```
