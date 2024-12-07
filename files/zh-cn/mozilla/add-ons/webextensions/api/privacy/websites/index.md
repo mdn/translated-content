@@ -19,22 +19,22 @@ l10n:
 
     该对象包含两个属性：
 
-    - `behavior`：可能取如下值的字符串：
+    - `behavior`：可以取以下值的字符串：
 
-      - “allow_all”：接受所有 cookies。
-      - “reject_all”: 拒绝所有 cookies。
-      - “reject_third_party”：拒绝所有第三方 cookies。
+      - “allow_all”：接受所有 cookie。
+      - “reject_all”: 拒绝所有 cookie。
+      - “reject_third_party”：拒绝所有第三方 cookie。
       - “allow_visited”：仅在 cookie 的顶级域名已经有至少一个 cookie 时才接受第三方 cookie。
-      - “reject_trackers”：拒绝跟踪 cookies。
-      - “reject_trackers_and_partition_foreign”：拒绝跟踪和分区的第三方 cookies。
+      - “reject_trackers”：拒绝跟踪 cookie。
+      - “reject_trackers_and_partition_foreign”：拒绝跟踪和分区的第三方 cookie。
 
-    - `nonPersistentCookies` {{deprecated_inline}}：布尔值，若为真，则所有 cookies 都将被视作会话 cookies。
+    - `nonPersistentCookies` {{deprecated_inline}}：布尔值，若为真，则所有 cookies 都将被视作会话 cookie。
 
 - `firstPartyIsolate`
 
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
 
-    若为 `true`，则 `firstPartyIsolate` 偏好将浏览器将所有第三方域名的数据（包括 cookies、HSTS 数据、缓存的图像等）与地址栏中的域关联起来。这可以防止第三方跟踪器使用直接存储的信息来识别用户跨不同的网站，但可能会破坏用户使用第三方帐户（如 Facebook 或 Google 帐户）登录的网站。
+    若为 `true`，则 `firstPartyIsolate` 偏好将浏览器将所有第三方域名的数据（包括 cookie、HSTS 数据、缓存的图像等）与地址栏中的域关联起来。这可以防止第三方跟踪器使用直接存储的信息来识别用户跨不同的网站，但可能会破坏用户使用第三方帐户（如 Facebook 或 Google 帐户）登录的网站。
 
     默认取值为 `false`。
 
