@@ -7,15 +7,15 @@ l10n:
 
 {{AddonSidebar}}
 
-`privacy.websites` 属性包含了控制浏览器与网站交互的隐私相关设置。每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
+`privacy.websites` 属性包含了控制浏览器与网站交互的隐私相关设置，其中的每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
 
-下述属性的默认值在不同的浏览器中可能有所不同。
+在不同的浏览器中，下述属性的默认值可能有所不同。
 
 ## 属性
 
 - `cookieConfig`
 
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是对象。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是一个对象。
 
     该对象包含两个属性：
 
@@ -28,7 +28,7 @@ l10n:
       - “reject_trackers”：拒绝跟踪 cookie。
       - “reject_trackers_and_partition_foreign”：拒绝跟踪和分区的第三方 cookie。
 
-    - `nonPersistentCookies` {{deprecated_inline}}：布尔值，若为真，则所有 cookies 都将被视作会话 cookie。
+    - `nonPersistentCookies` {{deprecated_inline}}：布尔值，若为 `true`，则所有的 cookie 都将被视作会话 cookie。
 
 - `firstPartyIsolate`
 
@@ -39,26 +39,26 @@ l10n:
     默认取值为 `false`。
 
 - `hyperlinkAuditingEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为真，则当网站使用 `ping` 属性请求时，浏览器会发送审计 ping。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `true`，则当网站使用 `ping` 属性请求时，浏览器会发送审计 ping。
 - `protectedContentEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为真，则浏览器将为插件提供一个唯一的 ID 以运行受保护的内容。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为 `true`，则浏览器将为插件提供一个唯一的 ID 以运行受保护的内容。
 - `referrersEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为真，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `true`，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头。
 - `resistFingerprinting`
 
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
 
-    浏览器指纹识别是一种网站使用 Web API 收集与浏览器或运行在其上的设备相关的状态或配置数据的做法。通过这样做，它们可以建立一个数字指纹，用于识别和跟踪特定用户。
+    浏览器指纹识别是一种网站使用 Web API 收集与浏览器或运行在其上的设备相关的状态或配置数据的做法。通过这样做，网站可以对应地建立一个数字指纹，用于识别和跟踪特定用户。
 
-    若为 `true`，`resistFingerprinting` 偏好会使浏览器报告用于指纹识别的常用数据的通用伪造信息。这些数据包括 CPU 核心数量、JavaScript 计时器的精度和本地时区。它还会禁用其他用于指纹识别的功能，例如 GamePad 支持以及 WebSpeech 和 Navigator API。
+    若为 `true`，`resistFingerprinting` 偏好会使浏览器报告用于指纹识别的常用数据的通用伪造信息。这些数据包括 CPU 核心数量、JavaScript 计时器的精度和本地时区。它还会禁用其他用于指纹识别的功能，例如 GamePad 支持、WebSpeech 和 Navigator API。
 
     默认取值为 `false`。
 
 - `thirdPartyCookiesAllowed`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为假，则浏览器会阻止 [第三方 cookies](/zh-CN/docs/Web/Privacy/Third-party_cookies)。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止 [第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)。
 - `trackingProtectionMode`
 
-  - : “跟踪保护”浏览器功能会阻止向已知从事跨站点跟踪用户的域名发出的请求。最常见跟踪用户的站点通常是第三方广告和分析站点。该设置是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象，用于确定浏览器是否应启用跟踪保护。其底层值是一个字符串，可能取如下的三个值之一：
+  - : 浏览器的“跟踪保护”功能会阻止向已知会跨站点跟踪用户的域名发出的请求。最常见跟踪用户的站点通常是第三方广告和分析站点。该设置是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象，用于确定浏览器是否应启用跟踪保护。其底层值是一个字符串，可能取如下的三个值之一：
 
     - `"always"`：跟踪保护已启用。
     - `"never"`：跟踪保护已关闭。
