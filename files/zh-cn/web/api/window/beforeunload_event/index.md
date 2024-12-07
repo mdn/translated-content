@@ -70,6 +70,10 @@ window.addEventListener("beforeunload", (event) => {
 
 ## 参见
 
-- 相关事件：{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/load_event", "load")}}、{{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
-- [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs)
+- {{domxref("BeforeUnloadEvent")}} 接口
+- 相关事件：
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Window/load_event", "load")}}
+  - {{domxref("Window/unload_event", "unload")}}
+- [页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) 为处理 Web 应用程序中的页面生命周期的处理提供了更多有用的指导。
