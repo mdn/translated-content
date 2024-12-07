@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-安装指定的 PKCS #11 模块，使其对 Firefox 可用。
+安装指定的 PKCS #11 模块，使其可用于 Firefox。
 
 这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -29,9 +29,9 @@ let installing = browser.pkcs11.installModule(
 
 ### 返回值
 
-当模块安装完成后，会返回一个没有参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+当模块安装完成后，会返回一个不以任何参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-若无法找到模块或发生其他错误，该 Promise 将被拒绝并返回一个错误消息。
+若无法找到模块或发生其他错误，该 Promise 将以一个错误消息拒绝。
 
 ## 浏览器兼容性
 
