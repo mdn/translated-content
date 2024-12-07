@@ -7,14 +7,14 @@ l10n:
 
 {{AddonSidebar}}
 
-`MostVisitedURL` 类型包含两个属性：页面的标题和其 URL。
+`MostVisitedURL` 类型包含两个属性：页面的标题及其 URL。
 
 ## 类型
 
-该类型的取值是对象，包含以下属性：
+该类型的值是对象，包含以下属性：
 
 - `favicon` {{optional_inline}}
-  - : `String`。包含页面的 favicon 的 data: URL（如果在 {{WebExtAPIRef("topSites.get()")}} 中给出了 `includeFavicon` 并且 favicon 可用）。
+  - : `String`。包含页面的 favicon 的 data: URL（如果在使用 {{WebExtAPIRef("topSites.get()")}} 时提供了 `includeFavicon` 参数并且 favicon 可用）。
 - `title`
   - : `String`。页面的标题。
 - `url`
