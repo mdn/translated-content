@@ -22,7 +22,7 @@ concat(str1, str2, /* …, */ strN)
 ### 参数
 
 - `str1`、……、`strN`
-  - : 要连接到 `str` 的一个或多个字符串。尽管技术上允许，但不带参数地调用 `String.prototype.concat()` 毫无意义，因为它不会（像 {{jsxref("Array.prototype.concat()")}}）返回浅拷贝——字符串是不可变的。仅当你将一个字符串数组作为参数[展开](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，并且该数组恰好为空时，才会发生这种情况。
+  - : 要连接到 `str` 的一个或多个字符串。尽管技术上允许，但不带参数地调用 `String.prototype.concat()` 毫无意义，因为它不会（像 {{jsxref("Array.prototype.concat()")}}）返回可观察的拷贝——字符串是不可变的。仅当你将一个字符串数组作为参数[展开](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，并且该数组恰好为空时，才应该发生这种情况。
 
 ### 返回值
 
