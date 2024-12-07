@@ -9,11 +9,11 @@ l10n:
 
 获取和设置扩展的侧边栏的属性。
 
-[侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是显示在浏览器窗口左侧或右侧紧挨着网页部分的面板。浏览器提供了相应的用户界面，让用户可以查看当前可用的侧边栏，并选择要显示的侧边栏。使用 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json 键，扩展可以定义自己的侧边栏。使用此处描述的 `sidebarAction` API，扩展可以获取和设置侧边栏的属性。
+[侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是显示在浏览器窗口左侧或右侧紧挨着网页部分的面板。浏览器提供了相应的用户界面，让用户可以查看当前可用的侧边栏，并选择要显示的侧边栏。使用 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json 键，扩展可以定义自己的侧边栏。使用这里描述的 `sidebarAction` API，扩展可以获取和设置侧边栏的属性。
 
 `sidebarAction` API 与 {{WebExtAPIRef("browserAction")}} API 非常相似。
 
-sidebarAction API 是基于 Opera 的 [sidebarAction API](https://help.opera.com/en/extensions/sidebar-action-api/)。但是请注意，以下功能尚不支持：`setBadgeText()`、`getBadgeText()`、`setBadgeBackgroundColor()`、`getBadgeBackgroundColor()`、`onFocus`、`onBlur`。
+sidebarAction API 是基于 Opera 的 [sidebarAction API](https://help.opera.com/en/extensions/sidebar-action-api/)。但是请注意，以下特性尚不支持：`setBadgeText()`、`getBadgeText()`、`setBadgeBackgroundColor()`、`getBadgeBackgroundColor()`、`onFocus`、`onBlur`。
 
 ## 类型
 
@@ -39,13 +39,13 @@ sidebarAction API 是基于 Opera 的 [sidebarAction API](https://help.opera.com
 - {{WebExtAPIRef("sidebarAction.setTitle()")}}
   - : 设置侧边栏的标题。这将在浏览器提供的任何 UI 中显示出来用以列出所有的侧边栏，例如在菜单之中。
 - {{WebExtAPIRef("sidebarAction.toggle()")}}
-  - : 切换侧边栏的可见与否。
+  - : 切换侧边栏的可见性。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 示例拓展
+## 示例附加组件
 
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page)
 
