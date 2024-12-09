@@ -43,8 +43,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 需注意的是，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共用相同的 ID 池，並且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技術上可以互換使用。但為了程式碼的清晰性，應儘量匹配使用，以免維護時造成混淆。
 
-> [!備註]
-> `delay` 參數會被轉換為有號 32 位整數。
+> [!備註] > `delay` 參數會被轉換為有號 32 位整數。
 > 這實際上將 `delay` 限制在 2147483647 毫秒（大約 24.8 天）以內，因為在 IDL 中它被指定為有號整數。
 
 ## 範例
@@ -96,7 +95,7 @@ function myCallback(a, b) {
 let intervalId;
 
 function changeColor() {
-  // 檢查 interval 是否已經設置 
+  // 檢查 interval 是否已經設置
   if (!intervalId) {
     intervalId = setInterval(flashText, 1000);
   }
@@ -147,10 +146,10 @@ setTimeout(myArray.myMethod, 1500, "1"); // 1.5 秒後輸出 "undefined"
 // 事實上，這會導致錯誤，因為 setTimeout 的程式碼預期 this 是 window 物件：
 setTimeout.call(myArray, myArray.myMethod, 2000); // 錯誤: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 相同的錯誤
-myArray.myMethod(); // 
-myArray.myMethod(1); // 
-setTimeout(myArray.myMethod, 1000); // 
-setTimeout(myArray.myMethod, 1500, "1"); // 
+myArray.myMethod(); //
+myArray.myMethod(1); //
+setTimeout(myArray.myMethod, 1000); //
+setTimeout(myArray.myMethod, 1500, "1"); //
 ```
 
 如你所見，在舊版 JavaScript 中沒有辦法將 `this` 物件傳遞給回調函數。
