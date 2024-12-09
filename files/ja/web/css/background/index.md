@@ -127,13 +127,13 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 }
 
 .topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_backgrounds_with_color_keywords_and_images")}}
+{{EmbedLiveSample("色キーワードと画像による背景の設定")}}
 
 ## 仕様書
 

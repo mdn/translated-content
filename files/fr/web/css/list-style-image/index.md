@@ -21,7 +21,7 @@ On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/We
 list-style-image: none;
 
 /*  Valeurs pointant vers une image */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* Valeurs avec une image */
 list-style-image: linear-gradient(to left bottom, red, blue);
@@ -65,13 +65,13 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('Utiliser_une_URL')}}
 
 ### Utiliser un dégradé
 
@@ -95,7 +95,7 @@ ul {
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('Utiliser_un_dégradé')}}
 
 ## Spécifications
 
