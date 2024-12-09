@@ -45,7 +45,7 @@ browser.management.onDisabled.hasListener(listener)
 
 ## 示例
 
-记录被禁用的附加组件的名称：
+打印被禁用的附加组件的名称：
 
 ```js
 browser.management.onDisabled.addListener((info) => {
