@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-卸载给定 ID 的拓展。
+卸载给定 ID 的附加组件。
 
 该 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -25,14 +25,14 @@ let uninstalling = browser.management.uninstall(
 ### 参数
 
 - `id`
-  - : `string`，要卸载的拓展的 ID。
+  - : `string`，要卸载的附加组件的 ID。
 - `options` {{optional_inline}}
-  - : `object`，可能包含一个属性 `showConfirmDialog` 的对象。如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该拓展。
+  - : `object`，可能包含单一属性 `showConfirmDialog` 的对象。如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该附加组件。
 
 <!---->
 
-- 如果 `id` 是调用该方法的拓展的 ID，`showConfirmDialog` 默认为 `false`。
-- 如果 `id` 是其他拓展的 ID，则 `showConfirmDialog` 选项将被忽略，并且确认对话框总是会显示。
+- 如果 `id` 是调用该方法的附加组件的 ID，`showConfirmDialog` 默认为 `false`。
+- 如果 `id` 是其他附加组件的 ID，则 `showConfirmDialog` 选项将被忽略，并且确认对话框总是会显示。
 
 ### 返回值
 
@@ -44,7 +44,7 @@ let uninstalling = browser.management.uninstall(
 
 ## 示例
 
-卸载 ID 为“addon-id”的拓展并询问用户确认。在回调中检查用户是否取消了卸载，以及拓展的卸载是否成功。
+卸载 ID 为“addon-id”的附加组件并询问用户确认。在回调中检查用户是否取消了卸载，以及附加组件的卸载是否成功。
 
 ```js
 let id = "addon-id";
@@ -54,7 +54,7 @@ function onCanceled(error) {
 }
 
 function onUninstalled() {
-  console.log("拓展已卸载");
+  console.log("附加组件已被卸载");
 }
 
 let uninstalling = browser.management.uninstall(id);
