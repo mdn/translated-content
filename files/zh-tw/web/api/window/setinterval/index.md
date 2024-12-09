@@ -43,8 +43,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 需注意的是，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共用相同的 ID 池，並且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技術上可以互換使用。但為了程式碼的清晰性，應儘量匹配使用，以免維護時造成混淆。
 
-> [!NOTE]
-> `delay` 參數會被轉換為有號 32 位整數。這實際上將 `delay` 限制在 2147483647 毫秒（大約 24.8 天）以內，因為在 IDL 中它被指定為有號整數。
+> [!NOTE] `delay` 參數會被轉換為有號 32 位整數。這實際上將 `delay` 限制在 2147483647 毫秒（大約 24.8 天）以內，因為在 IDL 中它被指定為有號整數。
 
 ## 範例
 
