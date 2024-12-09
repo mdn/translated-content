@@ -9,11 +9,13 @@ l10n:
 
 启用或禁用给定的附加组件。
 
-通常需要在用户操作的上下文中调用此函数，例如按钮的点击处理程序。浏览器可能还会要求用户确认更改。
+该函数必须需要在用户操作的上下文中调用此函数，例如按钮的点击处理程序。浏览器可能还会要求用户确认更改。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+
+该函数支持启用或禁用主题附加组件，但如果用于启用或禁用其它类型的 Web 扩展，将会返回错误。
 
 ## 语法
 
@@ -33,7 +35,7 @@ let settingEnabled = browser.management.setEnabled(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当附加组件已被禁用或启用时将不带参数地兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当附加组件已被禁用或启用时将不以任何参数兑现。
 
 ## 浏览器兼容性
 
