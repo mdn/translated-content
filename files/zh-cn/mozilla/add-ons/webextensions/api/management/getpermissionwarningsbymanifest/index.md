@@ -9,7 +9,7 @@ l10n:
 
 当用户安装或升级附加组件时，浏览器可能会警告用户有关附加组件请求的任何特别强大的[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。并非所有权限都会导致警告，而且此行为在各个浏览器中并不标准化。
 
-给定 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件的文本，此函数以字符串数组形式返回生成的附加组件的权限警告。
+给定 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件的文本，该函数会以字符串数组的形式返回生成的关于该附加组件的权限警告。
 
 此 API *不*需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -26,7 +26,7 @@ let gettingWarnings = browser.management.getPermissionWarningsByManifest(
 ### 参数
 
 - `manifestString`
-  - : `string`，包含清单文件的字符串。这必须是有效的清单：比如说它必须包含所有强制性的清单键。
+  - : `string`，包含清单文件的字符串。这必须是有效的清单，例如说它必须包含所有强制性的清单键。
 
 ### 返回值
 
@@ -38,7 +38,7 @@ let gettingWarnings = browser.management.getPermissionWarningsByManifest(
 
 ## 示例
 
-记录给定清单文件的权限警告：
+打印给定清单文件的权限警告：
 
 ```js
 let manifest = {
