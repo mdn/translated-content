@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-卸载调用此方法的拓展。
+卸载调用此方法的附加组件。
 
 该 API *不*需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -28,7 +28,7 @@ let uninstallingSelf = browser.management.uninstallSelf(
   - : `object`，可能包含两个可选属性的对象：
 
     - `showConfirmDialog` {{optional_inline}}
-      - : 布尔值，如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该拓展。默认为 `false`。
+      - : 布尔值，如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该附加组件。默认为 `false`。
     - `dialogMessage` {{optional_inline}}
       - : 字符串，将在确认对话框中显示的额外消息。
 
@@ -42,7 +42,7 @@ let uninstallingSelf = browser.management.uninstallSelf(
 
 ## 示例
 
-卸载拓展，提示用户确认。在回调中检查用户是否取消了卸载。
+卸载附加组件，提示用户确认，并在回调中检查用户是否取消了卸载。
 
 需要注意的是，我们没有传入一个成功的处理函数，因为如果卸载成功，附加组件将不存在，也就无法处理该回调。
 
@@ -58,7 +58,7 @@ let uninstalling = browser.management.uninstallSelf({
 uninstalling.then(null, onCanceled);
 ```
 
-一样的功能，但是我们向对话框中添加了一条自定义的信息：
+实现一样的功能，但是我们向对话框中添加了一条自定义的信息：
 
 ```js
 function onCanceled(error) {
