@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当有一个附加组件被安装时触发。
+当有附加组件被安装时触发。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -45,7 +45,7 @@ browser.management.onInstalled.hasListener(listener)
 
 ## 示例
 
-记录被安装的附加组件的名称：
+打印被安装的附加组件的名称：
 
 ```js
 browser.management.onInstalled.addListener((info) => {
