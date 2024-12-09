@@ -9,7 +9,7 @@ l10n:
 
 在模块中枚举插槽。此函数返回包含所有插槽条目的数组，且各条目中包含插槽的名称，以及令牌的相关信息（如果插槽包含令牌）。
 
-你只能为已安装在 Firefox 中的模块调用此函数。
+你只能对已在 Firefox 中安装的模块调用此函数。
 
 这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -28,7 +28,7 @@ let getting = browser.pkcs11.getModuleSlots(
 
 ### 返回值
 
-将被兑现为一个对象数组，每个对象代表模块提供访问的插槽之一的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。每个对象有两个属性：
+将被兑现为一个对象数组，且每个对象代表模块提供访问的插槽之一的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。每个对象有两个属性：
 
 - `name`：插槽的名称
 - `token`：如果此插槽中存在令牌，则为 `Token` 对象，否则该属性将为 `null`。
@@ -48,7 +48,7 @@ let getting = browser.pkcs11.getModuleSlots(
 - `isLoggedIn`
   - : `boolean`：如果令牌已登录，则为 `true`，否则为 `false`。
 
-如果无法找到模块或发生其他错误，`Promise` 将被拒绝并返回一个错误消息。
+如果无法找到模块或发生其他错误，`Promise` 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
