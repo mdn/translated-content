@@ -45,7 +45,7 @@ browser.management.onEnabled.hasListener(listener)
 
 ## 示例
 
-记录被启用的附加组件的名称：
+打印被启用的附加组件的名称：
 
 ```js
 browser.management.onEnabled.addListener((info) => {
