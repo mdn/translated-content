@@ -28,13 +28,13 @@ let uninstallingSelf = browser.management.uninstallSelf(
   - : `object`，可能包含两个可选属性的对象：
 
     - `showConfirmDialog` {{optional_inline}}
-      - : `Boolean`，如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该拓展。默认为 `false`。
+      - : 布尔值，如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该拓展。默认为 `false`。
     - `dialogMessage` {{optional_inline}}
-      - : `String`，将在确认对话框中显示的额外消息。
+      - : 字符串，将在确认对话框中显示的额外消息。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果用户取消卸载，则 Promise 会被拒绝并返回一个错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果用户取消卸载，则 Promise 会以一个错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -42,9 +42,9 @@ let uninstallingSelf = browser.management.uninstallSelf(
 
 ## 示例
 
-卸载拓展，询问用户确认。在回调中检查用户是否取消了卸载。
+卸载拓展，提示用户确认。在回调中检查用户是否取消了卸载。
 
-需要注意的是我们没有传递一个完成处理程序，因为如果卸载成功，拓展已经不在了。
+需要注意的是，我们没有传入一个成功的处理函数，因为如果卸载成功，附加组件将不存在，也就无法处理该回调。
 
 ```js
 function onCanceled(error) {
@@ -58,7 +58,7 @@ let uninstalling = browser.management.uninstallSelf({
 uninstalling.then(null, onCanceled);
 ```
 
-一样的功能，但是我们向对话框中加入了一条自定义的信息：
+一样的功能，但是我们向对话框中添加了一条自定义的信息：
 
 ```js
 function onCanceled(error) {
