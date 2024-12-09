@@ -13,9 +13,9 @@ l10n:
 
 要确定哪些页面出现在列表中，以及它们出现的顺序，浏览器会结合“频率”（用户访问页面的频率）和“最近性”（用户最近访问页面的时间）。
 
-然后，浏览器可能会在将此列表呈现给用户之前对其进行进一步过滤。例如，在 Firefox 中，“新标签”页仅列出每个域中的一个页面，用户可以阻止页面出现在列表中。
+然后，浏览器可能会在将此列表呈现给用户之前对其进行进一步过滤。例如，在 Firefox 中，“新标签”页仅列出每个域名中的一个页面，用户也可以阻止某些页面出现在列表中。
 
-`topSites.get()` API 允许扩展获取访问此列表的权限。如果没有任何选项调用，它将提供过滤后的页面列表 - 即出现在“新标签”页中的列表。但是，通过提供各种选项，扩展可以获取未过滤的页面列表。
+`topSites.get()` API 允许扩展获取访问此列表的权限。如果不使用任何选项地调用，它将提供过滤后的页面列表——即出现在“新标签”页中的列表。但是，扩展也可以通过提供各种选项获取未经过滤的页面列表。
 
 这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -36,23 +36,23 @@ let gettingTopSites = browser.topSites.get(
   - : `object`，用于修改返回页面列表的选项，可能包含如下属性：
 
     - `includeBlocked` {{optional_inline}}
-      - : `Boolean`。包含用户已从“新标签”页中移除的页面。默认为 `false`。
+      - : `Boolean`。包含用户已从“新标签页”页面中移除的页面。默认为 `false`。
     - `includeFavicon` {{optional_inline}}
-      - : `Boolean`。包含结果中的站点图标（对于有可用 favicon 的页面）。默认为 `false`。
+      - : `Boolean`。包含结果中的 favicon（对于有可用 favicon 的页面）。默认为 `false`。
     - `includePinned` {{optional_inline}}
       - : `Boolean`。包含用户已固定到 Firefox 新标签页的站点。默认为 `false`。
     - `includeSearchShortcuts` {{optional_inline}}
       - : `Boolean`。包含在 Firefox 新标签页上显示的搜索快捷方式。默认为 `false`。
     - `limit` {{optional_inline}}
-      - : `Integer`。要返回的页面数。这必须是介于 1 和 100 之间的数字，包括 1 和 100。默认为 12。
+      - : `Integer`。要返回的页面数。这必须是介于 1 和 100 之间的数字（包括 1 和 100）。默认值为 12。
     - `newtab` {{optional_inline}}
       - : `Boolean`。如果包含，该方法将返回用户打开新标签页时返回的页面列表。如果包含并设置为 `true`，该方法将忽略除 `limit` 和 `includeFavicon` 之外的所有其他参数。默认为 `false`。
     - `onePerDomain` {{optional_inline}}
-      - : `Boolean`。仅包含每个域中的一个页面。默认为 `true`。
+      - : `Boolean`。仅包含每个域名中的一个页面。默认为 `true`。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。这将被兑现为包含若干个 {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} 对象的数组，且各对象代表浏览器的“新标签”页中列出的一个页面。如果发生错误，`Promise` 将被拒绝并返回一个错误消息。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。这将被兑现为包含若干个 {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} 对象的数组，且各对象代表浏览器的“新标签”页中列出的一个页面。如果发生错误，`Promise` 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -76,7 +76,7 @@ function onError(error) {
 browser.topSites.get().then(logTopSites, onError);
 ```
 
-下面的代码则记录所有最常访问页面的标题和 URL，包括用户已阻止的页面，可能包括同一域中的多个页面：
+下面的代码则记录所有最常访问页面的标题和 URL，包括用户已阻止的页面，可能包括同一域名中的多个页面：
 
 ```js
 function logTopSites(topSitesArray) {
