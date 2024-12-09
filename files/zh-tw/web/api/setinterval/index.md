@@ -1,5 +1,5 @@
 ---
-title: "Window: setInterval() 方法"
+title: Window：setInterval() 方法
 short-title: setInterval()
 l10n:
   sourceCommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
