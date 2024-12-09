@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-安装并启用给定 URL 的主题附加组件。
+安装并启用给定 URL 的主题扩展。
 
-此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，并且只能用于已签名的主题。
+此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，并且只能用于安装已签名的主题。
 
 这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -22,7 +22,7 @@ browser.management.install(options)
 ### 参数
 
 - options
-  - : 包含 [addons.mozilla.org](https://addons.mozilla.org) 上的主题 XPI 文件的 URL 和可选的 XPI 文件哈希的对象（使用 sha256 或更强的哈希算法）。
+  - : 包含 [addons.mozilla.org](https://addons.mozilla.org) 上的主题 XPI 文件的 URL 和可选的 XPI 文件散列值（使用 sha256 或更强的散列算法）的对象。
 
 ### 返回值
 
