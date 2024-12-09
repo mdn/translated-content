@@ -2,20 +2,20 @@
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 l10n:
-  sourceCommit: 427e8d03276b4915c08c5f0541452fb1c830c295
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
-**`Symbol.match`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol##잘_알려진_심볼) `@@match`를 나타냅니다. {{jsxref("String.prototype.match()")}} 메서드는 입력 문자열을 현재 객체와 일치시키는 데 사용되는 메서드의 첫 번째 인수에서 이 심볼을 조회합니다. 이 심볼은 객체를 [정규 표현식으로 처리](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)해야 하는지 여부를 결정하는 데도 사용됩니다.
+**`Symbol.match`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol##잘_알려진_심볼) `Symbol.match`를 나타냅니다. {{jsxref("String.prototype.match()")}} 메서드는 입력 문자열을 현재 객체와 일치시키는 데 사용되는 메서드의 첫 번째 인수에서 이 심볼을 조회합니다. 이 심볼은 객체를 [정규 표현식으로 처리](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)해야 하는지 여부를 결정하는 데도 사용됩니다.
 
-좀 더 많은 정보를 알고 싶으시면 [`RegExp.prototype[@@match]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)와 {{jsxref("String.prototype.match()")}}를 참고하시기 바랍니다.
+좀 더 많은 정보를 알고 싶으시면 [`RegExp.prototype[Symbol.match]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)와 {{jsxref("String.prototype.match()")}}를 참고하시기 바랍니다.
 
 {{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
 
 ## 값
 
-잘 알려진 심볼 `@@match`.
+잘 알려진 심볼 `Symbol.match`.
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -61,4 +61,4 @@ re[Symbol.match] = false;
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("String.prototype.match()")}}
-- [`RegExp.prototype[@@match]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[Symbol.match]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
