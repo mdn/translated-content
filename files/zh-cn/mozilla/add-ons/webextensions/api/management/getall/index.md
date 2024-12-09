@@ -9,7 +9,7 @@ l10n:
 
 获取 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象数组，其中各对象都对应一个已安装的附加组件。
 
-需要注意，Google Chrome 会检索应用程序和附加组件。在 Chrome 中，你可以使用 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 的 `type` 属性来区分应用程序和附加组件。
+需要注意，Google Chrome 会获取应用程序和附加组件。在 Chrome 中，你可以使用 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 的 `type` 属性来区分应用程序和附加组件。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -35,7 +35,7 @@ let gettingAll = browser.management.getAll()
 
 ## 示例
 
-记录所有已安装的附加组件的名称：
+打印所有已安装的附加组件的名称：
 
 ```js
 function gotAll(infoArray) {
