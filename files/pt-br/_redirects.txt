@@ -833,6 +833,7 @@
 /pt-BR/docs/Web/HTTP/Headers/Accept-Charset	/pt-BR/docs/conflicting/Web/HTTP/Headers
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
 /pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
+/pt-BR/docs/Web/HTTP/Headers/Digest	/pt-BR/docs/Web/HTTP/Headers/Content-Digest
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
 /pt-BR/docs/Web/HTTP/Headers/Feature-Policy	/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy
 /pt-BR/docs/Web/HTTP/Headers/Large-Allocation	/pt-BR/docs/orphaned/Web/HTTP/Headers/Large-Allocation
@@ -840,6 +841,7 @@
 /pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT
 /pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
 /pt-BR/docs/Web/HTTP/Headers/Set-Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Set-Cookie
+/pt-BR/docs/Web/HTTP/Headers/Want-Digest	/pt-BR/docs/Web/HTTP/Headers/Want-Content-Digest
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections
 /pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/Language_overview

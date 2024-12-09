@@ -6359,6 +6359,10 @@
     "modified": "2020-10-15T22:08:10.001Z",
     "contributors": ["FernandoKGA", "duduindo", "mrseoliveira"]
   },
+  "Web/HTTP/Headers/Content-Digest": {
+    "modified": "2020-10-15T22:31:16.637Z",
+    "contributors": ["FernandoKGA"]
+  },
   "Web/HTTP/Headers/Content-Disposition": {
     "modified": "2020-10-15T22:27:55.693Z",
     "contributors": ["eduardocruz", "FernandoKGA"]
@@ -6417,10 +6421,6 @@
   },
   "Web/HTTP/Headers/Device-Memory": {
     "modified": "2020-10-15T22:31:19.616Z",
-    "contributors": ["FernandoKGA"]
-  },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:31:16.637Z",
     "contributors": ["FernandoKGA"]
   },
   "Web/HTTP/Headers/ETag": {
@@ -6591,7 +6591,7 @@
     "modified": "2020-10-15T22:07:55.835Z",
     "contributors": ["FernandoKGA", "bmansur"]
   },
-  "Web/HTTP/Headers/Want-Digest": {
+  "Web/HTTP/Headers/Want-Content-Digest": {
     "modified": "2020-10-15T22:31:40.550Z",
     "contributors": ["FernandoKGA"]
   },
