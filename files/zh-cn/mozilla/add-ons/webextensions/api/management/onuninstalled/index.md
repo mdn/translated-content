@@ -45,7 +45,7 @@ browser.management.onUninstalled.hasListener(listener)
 
 ## 示例
 
-记录被卸载的附加组件的名称：
+打印被卸载的附加组件的名称：
 
 ```js
 browser.management.onUninstalled.addListener((info) => {
