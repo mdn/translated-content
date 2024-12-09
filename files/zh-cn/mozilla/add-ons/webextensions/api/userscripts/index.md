@@ -16,7 +16,7 @@ l10n:
 
 - 在隔离的沙箱中执行：每个用户脚本都在网页内容进程中的隔离沙箱中运行，避免脚本之间的意外或故意干扰。
 - 访问与附加了用户脚本的网页相关的 `window` 和 `document` 全局值。
-- 不可访问 WebExtension API 以及授予扩展的相关权限：API 脚本继承扩展的权限，可以向注册的用户脚本提供打包的 WebExtension API。API 脚本需要在扩展的清单文件中通过 "user_scripts" 键声明。
+- 不可访问 WebExtension API 以及授予扩展的相关权限：API 脚本继承扩展的权限，可以向注册的用户脚本提供打包的 WebExtension API。API 脚本需要在扩展的清单文件中通过“user_scripts”键声明。
 
 > [!WARNING]
 > 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含“user_scripts”键。例如：`user_scripts: {}`。
@@ -34,12 +34,12 @@ l10n:
 ## 方法
 
 - {{WebExtAPIRef("userScripts.register()")}}
-  - : 注册用户脚本
+  - : 注册用户脚本。
 
 ## 事件
 
 - {{WebExtAPIRef("userScripts.onBeforeScript")}}
-  - : 在 [`"user_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 中注册，并将在一个用户脚本执行前执行的对 API 可用的事件。该事件可用来触发 API 脚本提供的附加 API 的导出，以便用户脚本访问这些 API。
+  - : 可用于 API 脚本的事件，在 [`"user_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 中注册，并将在用户脚本执行前执行。该事件可用来触发 API 脚本提供的附加 API 的导出，以便用户脚本访问这些 API。
 
 ## 浏览器兼容性
 
