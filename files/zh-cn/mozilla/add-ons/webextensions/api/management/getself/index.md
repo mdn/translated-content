@@ -33,7 +33,7 @@ let gettingSelf = browser.management.getSelf()
 
 ## 示例
 
-记录附加组件的名称：
+打印附加组件的名称：
 
 ```js
 function gotSelf(info) {
