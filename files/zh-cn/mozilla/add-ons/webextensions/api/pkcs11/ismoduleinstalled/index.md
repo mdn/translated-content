@@ -26,9 +26,9 @@ let checking = browser.pkcs11.isModuleInstalled(
 
 ### 返回值
 
-`Promise`，将用布尔值 `true` 代表已安装、`false` 代表未安装进行兑现。
+`Promise`，使用布尔值进行兑现，其中 `true` 代表已安装而 `false` 代表未安装。
 
-如果模块发生错误，`Promise` 将被拒绝并返回一个错误消息。
+如果模块发生错误，`Promise` 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -36,7 +36,7 @@ let checking = browser.pkcs11.isModuleInstalled(
 
 ## 示例
 
-检查名为 "pkcs11_module" 的模块是否已安装：
+检查名为“pkcs11_module”的模块是否已安装：
 
 ```js
 function logIsInstalled(isInstalled) {
