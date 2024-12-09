@@ -33,7 +33,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
     由於與使用 {{jsxref("Global_Objects/eval", "eval()")}} 帶來的安全風險相同，*不建議*使用此語法。
 - `delay` {{optional_inline}}
   - : 定時器在每次執行指定函式或程式碼之間應延遲的時間，以毫秒（千分之一秒）為單位。如果未指定，默認為 0。
-    詳情請參考下方的[延遲限制](#延遲限制)。
+    詳情請見下方的[延遲限制](#延遲限制)。
 - `arg1`, …, `argN` {{optional_inline}}
   - : 額外的參數。當定時器到期時，這些參數將傳遞給 _func_ 指定的函式。
 
@@ -123,7 +123,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 ## "this" 問題
 
-當你將一個方法傳遞給 `setInterval()` 或其他任何函數時，它會以錯誤的 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) 值被調用。這個問題在 [JavaScript 參考資料](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks) 中有詳細說明。
+當你將一個方法傳遞給 `setInterval()` 或其他任何函數時，它會以錯誤的 [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) 值被調用。這個問題在 [JavaScript 參考資料](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#回傳)中有詳細說明。
 
 ### 解釋
 
@@ -157,9 +157,9 @@ setTimeout(myArray.myMethod, 1500, "1"); //
 
 ### 可能的解決方案
 
-所有現代 JavaScript 執行環境（包括瀏覽器等）都支持 [箭頭函數](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，其具有詞法作用域的 `this`——使我們可以在 `myArray` 方法內寫 `setInterval(() => this.myMethod())`。
+所有現代 JavaScript 執行環境（包括瀏覽器等）都支持 [箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，其具有詞法作用域的 `this`——使我們可以在 `myArray` 方法內寫 `setInterval(() => this.myMethod())`。
 
-如果需要支持 IE，可以使用 [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，該方法讓你為所有對某個函數的調用指定應該作為 `this` 的值。這使你能夠輕鬆繞過由於函數的調用上下文不明確而導致的 `this` 問題。
+如果需要支持 IE，可以使用 [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，該方法讓你為所有對某個函數的調用指定應該作為 `this` 的值。這使你能夠輕鬆繞過由於函數的調用上下文不明確而導致的 `this` 問題。
 
 ## 使用筆記
 
@@ -171,7 +171,7 @@ setTimeout(myArray.myMethod, 1500, "1"); //
 
 間隔可以是巢狀的。也就是說 `setInterval()` 的回調函數可以再次調用 `setInterval()` 來啟動另一個間隔，即使第一個間隔仍在運行。為了減輕這對性能的潛在影響，當間隔巢狀超過五層時，瀏覽器會自動強制間隔的最小值為 4 毫秒。在深度巢狀的 `setInterval()` 調用中，嘗試指定小於 4 毫秒的值將被固定為 4 毫秒。
 
-在某些情況下，瀏覽器可能會強制執行更嚴格的最小間隔值，儘管這不應該是常見情況。還需要注意的是，回調函數之間實際經過的時間可能會長於指定的 `delay`；有關更長延遲的原因，請參見[延遲長於指定的原因](/en-US/docs/Web/API/Window/setTimeout#延遲長於指定的原因)的範例。
+在某些情況下，瀏覽器可能會強制執行更嚴格的最小間隔值，儘管這不應該是常見情況。還需要注意的是，回調函數之間實際經過的時間可能會長於指定的 `delay`；有關更長延遲的原因，請參見[延遲長於指定的原因](/zh-TW/docs/Web/API/Window/setTimeout#延遲長於指定的原因)的範例。
 
 ### 確保執行時間短於間隔頻率
 
