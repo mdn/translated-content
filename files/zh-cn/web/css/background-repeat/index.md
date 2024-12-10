@@ -96,9 +96,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
-  width: 144px;
-  height: 84px;
+  background-image: url(star-solid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* 因为 space 和 round 当前没有被广泛支持的，所以没有添加*/
@@ -117,7 +117,7 @@ div {
 
 /* Multiple images */
 .five {
-  background-image: url(starsolid.gif), url(favicon32.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
