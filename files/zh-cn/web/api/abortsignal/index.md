@@ -125,9 +125,7 @@ try {
   if (err.name === "TimeoutError") {
     console.error("超时：获取结果的事件超过了 5 秒！");
   } else if (err.name === "AbortError") {
-    console.error(
-      "Fetch 操作被用户中止（如浏览器停止按钮、关闭标签等）",
-    );
+    console.error("Fetch 操作被用户中止（如浏览器停止按钮、关闭标签等）");
   } else {
     // 网络错误，或其他问题
     console.error(`错误：类型：${err.name}，消息：${err.message}`);
