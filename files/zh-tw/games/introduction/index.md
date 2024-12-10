@@ -86,7 +86,7 @@ l10n:
   - : 用來從網頁伺服器發送和接收各種數據，例如下載新遊戲關卡和美術素材，或傳輸非即時的遊戲狀態資訊。
 - [Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API)
   - : 這個簡單的 API 讓你的遊戲可以全螢幕顯示，從而讓玩家更加沉浸於遊戲體驗中。
-- [Gamepad API](/zh-TW/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)  
+- [Gamepad API](/zh-TW/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : 如果你希望玩家能使用遊戲把手或其他遊戲設備進行遊戲，這是必要的 API。
 - [HTML](/zh-TW/docs/Web/HTML) 和 [CSS](/zh-TW/docs/Web/CSS)
   - : 這兩項技術可以幫助你構建、設計和佈局遊戲的用戶界面。其中 HTML 的 {{HTMLElement("canvas")}} 元素是進行 2D 圖形處理的一種方法。
