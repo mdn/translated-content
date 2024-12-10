@@ -7,7 +7,7 @@ slug: Web/API/Element/keydown_event
 
 Событие **`keydown`** срабатывает, когда клавиша была нажата.
 
-В отличии от события {{Event("keypress")}}, событие keydown срабатывает на всех клавишах, независимо от того, есть ли у них значение.
+В отличии от события [`keypress`](/ru/docs/Web/API/Element/keypress_event), событие keydown срабатывает на всех клавишах, независимо от того, есть ли у них значение.
 
 <table class="properties">
   <thead></thead>

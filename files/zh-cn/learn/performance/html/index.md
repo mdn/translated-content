@@ -139,7 +139,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 <img src="800w.jpg" alt="家庭合照" loading="lazy" />
 ```
 
-详细信息请参见 web.dev 上的[浏览器级 web 图像懒加载](https://web.dev/articles/browser-level-image-lazy-loading)。
+详细信息请参见 web.dev 上的[浏览器级 web 图像懒加载](https://web.developers.google.cn/articles/browser-level-image-lazy-loading)。
 
 你还可以使用 `preload` 属性来对视频内容进行延迟加载。例如：
 
@@ -152,7 +152,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 将 `preload` 的值设置为 `none` 告诉浏览器在用户决定播放视频之前不要预加载任何视频数据，这对性能显然是有益的。相反，它只会显示由 `poster` 属性指示的图像。不同的浏览器具有不同的默认视频加载行为，因此最好明确指定。
 
-详细信息请参见 web.dev 上的[视频懒加载](https://web.dev/articles/lazy-loading-video)。
+详细信息请参见 web.dev 上的[视频懒加载](https://web.developers.google.cn/articles/lazy-loading-video)。
 
 ## 处理嵌入内容
 
@@ -185,7 +185,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 </iframe>
 ```
 
-详情请参阅[是时候延迟加载屏外 iframe 了！](https://web.dev/articles/iframe-lazy-loading)。
+详情请参阅[是时候延迟加载屏外 iframe 了！](https://web.developers.google.cn/articles/iframe-lazy-loading)。
 
 ## 处理资源加载顺序
 
@@ -260,7 +260,7 @@ pElem.addEventListener("click", () => {
 有关使用 `rel="preload"` 的详细信息，请参阅以下文章：
 
 - [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload)
-- [预加载关键资源以提高加载速度](https://web.dev/articles/preload-critical-assets) web.dev（2020）
+- [预加载关键资源以提高加载速度](https://web.developers.google.cn/articles/preload-critical-assets) web.developers.google.cn（2020）
 
 > [!NOTE]
 > 你还可以使用 `rel="preload"` 预加载 CSS 和 JavaScript 文件。

@@ -35,7 +35,7 @@ l10n:
 
 ### キーワード値の比較
 
-```html
+```html live-sample___comparing_the_keyword_values
 <ul>
   <li class="smaller">font-size: smaller;</li>
   <li>font-size が指定されていない</li>
@@ -43,7 +43,7 @@ l10n:
 </ul>
 ```
 
-```css
+```css live-sample___comparing_the_keyword_values
 li {
   margin-bottom: 0.3em;
 }
@@ -57,7 +57,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample('キーワード値の比較', '100%', 100)}}
+{{EmbedLiveSample('Comparing the keyword values', '100%', 100)}}
 
 ## 仕様書
 

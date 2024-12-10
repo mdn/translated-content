@@ -36,7 +36,7 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
     </tr>
     <tr>
       <th scope="row">Omissão deTag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pai permitidos</th>

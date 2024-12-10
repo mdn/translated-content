@@ -19,7 +19,7 @@ slug: Glossary/User_agent
 
 ### Общие сведения
 
-- [User agent](https://ru.wikipedia.org/wiki/User_agent) на Википедии
+- [User agent](https://ru.wikipedia.org/wiki/User_agent) в Википедии
 
 ### Техническая справка
 

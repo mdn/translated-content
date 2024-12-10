@@ -98,13 +98,13 @@ Safari Mobile considers the following elements to be typically interactive (and 
 
 ## See also
 
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/pt-BR/docs/Web/Events/mouseup)
+- [`mousemove`](/pt-BR/docs/Web/Events/mousemove)
+- [`click`](/pt-BR/docs/Web/API/Element/click_event)
+- [`dblclick`](/pt-BR/docs/Web/Events/dblclick)
+- [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/pt-BR/docs/Web/Events/mouseout)
+- [`mouseenter`](/pt-BR/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/pt-BR/docs/Web/Events/mouseleave)
+- [`contextmenu`](/pt-BR/docs/Web/Events/contextmenu)

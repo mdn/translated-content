@@ -1,15 +1,25 @@
 ---
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.LN2`** プロパティは 2 の自然対数、およそ 0.693 を表します。
+**`Math.LN2`** は静的データプロパティで、 2 の自然対数、およそ 0.693 を表します。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
+{{EmbedInteractiveExample("pages/js/math-ln2.html", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/math-ln2.html")}}{{js_property_attributes(0, 0, 0)}}
+## 値
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟸</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN2} = \ln(2) \approx 0.693</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 

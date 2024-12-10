@@ -46,7 +46,7 @@ slug: Web/CSS/At-rule
 
 {{Specifications}}
 
-## Читайте также
+## Смотрите также
 
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)

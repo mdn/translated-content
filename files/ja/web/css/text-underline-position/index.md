@@ -1,6 +1,8 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
+l10n:
+  sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
 {{CSSRef}}
@@ -26,6 +28,7 @@ text-underline-position: right under;
 text-underline-position: inherit;
 text-underline-position: initial;
 text-underline-position: revert;
+text-underline-position: revert-layer;
 text-underline-position: unset;
 ```
 
@@ -38,15 +41,9 @@ text-underline-position: unset;
 - `under`
   - : 文字のベースラインの下、ディセンダーを越えない位置に強制的に傍線を設定します。これは、下付き文字が多用される化学式や数式の読みやすさを確保するのに便利です。
 - `left`
-  - : 縦書きモードでは、このキーワードは強制的に傍線をテキストの*左*端に配置します。横書きモードでは、`under` と同じです。
+  - : 縦書きモードでは、このキーワードは強制的に傍線をテキストの*左*端に配置します。横書きモードでは、`auto` と同じです。
 - `right`
-  - : 縦書きモードでは、このキーワードは強制的に傍線をテキストの*右*側に配置します。横書きモードでは、`under` と同じです。
-- `auto-pos` {{non-standard_inline}}
-  - : `auto` と同じですので、代わりにそちらを使用してください。
-- `above` {{non-standard_inline}}
-  - : 強制的に傍線をテキストの上部に配置します。東アジアのテキストで使用すると、`auto` キーワードが同様の効果になります。
-- `below` {{non-standard_inline}}
-  - : 強制的に傍線をテキストの下部に配置します。アルファベットのテキストで使用すると、`auto` キーワードが同様の効果になります。
+  - : 縦書きモードでは、このキーワードは強制的に傍線をテキストの*右*側に配置します。横書きモードでは、`auto` と同じです。
 
 ## 公式定義
 
@@ -58,7 +55,7 @@ text-underline-position: unset;
 
 ## 例
 
-<h3 id="A_simple_example">単純な例</h3>
+### 単純な例
 
 2 つの段落の例を見てみましょう。
 
@@ -102,7 +99,7 @@ p {
 
 ライブサンプルはこのようになります。
 
-{{EmbedLiveSample('A_simple_example', '100%', 600)}}
+{{EmbedLiveSample('A_basic_example', '100%', 600)}}
 
 ### グローバルに text-underline-position を設定する
 
@@ -125,4 +122,3 @@ p {
 ## 関連情報
 
 - {{cssxref("text-decoration")}} プロパティは、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} など、ほとんどのテキスト装飾プロパティを設定します。しかし、 `text-underline-position` は設定しません。
-- Microsoft [non-standard values documentation](https://msdn.microsoft.com/en-us/library/ie/ms531176%28v=vs.85%29.aspx)

@@ -1,6 +1,8 @@
 ---
 title: CSS での画像スプライトの実装
 slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+l10n:
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
@@ -12,10 +14,10 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 
 ## 実装
 
-例えば、 `toolbtn` クラスを持つすべてのアイテムに画像が与えられたとします。
+例えば、 `tool-btn` クラスを持つすべてのアイテムに画像が与えられたとします。
 
 ```css
-.toolbtn {
+.tool-btn {
   background: url(myfile.png);
   display: inline-block;
   height: 20px;
@@ -23,7 +25,7 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 }
 ```
 
-背景の位置は、 background の中で {{cssxref("url()")}} の後に x と y の 2 つの値として、または {{cssxref("background-position")}} として追加できます。
+背景の位置は、 background の中で {{cssxref("url_value", "&lt;url&gt;")}} の後に x と y の 2 つの値として、または {{cssxref("background-position")}} として追加できます。
 
 ```css
 #btn1 {
@@ -35,7 +37,7 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 }
 ```
 
-これは ID が 'btn1' の要素を左に20ピクセル、 ID が 'btn2' の要素を左に40ピクセル移動します (これらの要素には `toolbtn` クラスが割り当てられており、上記の画像ルールの影響を受けているとします)。
+これは ID が `btn1` の要素を左に 20 ピクセル、 ID が `btn2` の要素を左に 40 ピクセル移動します（これらの要素には `toolbtn` クラスが割り当てられており、上記の画像ルールの影響を受けているとします）。
 
 同様に、ホバー状態にすることもできます。
 

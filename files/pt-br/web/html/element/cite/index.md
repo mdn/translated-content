@@ -30,7 +30,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

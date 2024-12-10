@@ -3,7 +3,7 @@ title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: bf671984cfef2f7c6419571d834a146c5424ac10
+  sourceCommit: f30dffedcab86e62919265f08238ed712434a817
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -145,7 +145,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         画像ファイルの URL を指定します。
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> ブラウザーや電子メールクライアントはまだこの属性に対応していますが、廃止済みです。代わりに CSS の {{ Cssxref("background-image") }} を使用してください。
           </p>
@@ -165,7 +165,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         <p>要素の背景色です。</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("background-color") }} プロパティを使用してください。
           </p>
@@ -180,7 +180,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         <p>境界線の幅です。</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("border") }} プロパティを使用してください。
           </p>
@@ -243,7 +243,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           この属性は色名または16進数の #RRGGBB 形式を用いて文字色を設定します。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("color") }} プロパティを使用して下さい。
           </p>
@@ -444,8 +444,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
-        {{experimental_inline}}
+        <code><a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
@@ -568,7 +567,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           ここに挙げた要素の高さを指定します。他の要素では、 {{cssxref("height")}} プロパティを使用してください。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> {{ HTMLElement("div") }} など一部の要素では、これは古い属性であり、代わりに CSS の {{ Cssxref("height") }} プロパティを使用してください。
           </p>
@@ -717,7 +716,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>要素で使用しているスクリプト言語を定義します。</td>
     </tr>
     <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
+      <td><code>loading</code></td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
       </td>
@@ -1283,7 +1282,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           ここに挙げられた要素に対して、要素の幅を指定します。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> {{ HTMLElement("div") }} をはじめとする他の要素については、これは古い属性であり、代わりに CSS の {{ Cssxref("width") }} プロパティを使用してください。
           </p>
@@ -1329,14 +1328,14 @@ HTML では、論理属性に許されている値の制約を定義していま
 </div>
 ```
 
-明確にするために、 "`true`" および "`false`" という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
+明確にするために、 `"true"` および `"false"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
 
 ## イベントハンドラー属性
 
 > [!WARNING]
 > イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
 
-上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#using_onevent_properties)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](##コンテンツ属性と_idl_属性)として指定することができます。
+上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
 
 すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
 

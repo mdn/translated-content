@@ -296,7 +296,7 @@ Browsers including Internet Explorer, Chrome, Safari, and Firefox store the dela
 
 {{Compat}}
 
-## Также интересно
+## Смотрите также
 
 - [JavaScript timers](/ru/docs/JavaScript/Timers)
 - [Timer.jsm](/ru/docs/Mozilla/JavaScript_code_modules/Timer.jsm)

@@ -7,7 +7,7 @@ slug: Web/API/PerformanceLongTaskTiming
 
 ## 目的
 
-*Long Tasks，*这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。50 毫秒这个阈值标准来源于《[RAIL Model](https://developers.google.com/web/fundamentals/performance/rail)》中 ["Response: process events in under 50ms"](https://developers.google.com/web/fundamentals/performance/rail#response) 章节。
+_Long Tasks_，这是一个实验性 API，它可以直观地告诉我们哪些任务执行耗费了 50 毫秒或更多时间。
 
 阻塞主线程达 50 毫秒或以上的任务会导致以下问题：
 

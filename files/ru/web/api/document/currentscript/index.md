@@ -1,35 +1,34 @@
 ---
-title: Document.currentScript
+title: "Document: свойство currentScript"
 slug: Web/API/Document/currentScript
+l10n:
+  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
 {{APIRef("DOM")}}
 
-Возвращает элемент {{HTMLElement("script")}}, который выполняется в данный момент.
+Свойство **`Document.currentScript`** возвращает элемент {{HTMLElement("script")}}, код которого в данный момент выполняется и [не является модулем JavaScript](https://github.com/whatwg/html/issues/997).
+Для модулей необходимо использовать [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta).
 
-## Синтаксис
+Важно отметить, что ссылка на элемент {{HTMLElement("script")}} будет присутствовать только во время первоначального исполнения скрипта. Иными словами, если код в скрипте вызывается как функция обратного вызова или обработчик события, то `Document.currentScript` будет равен `null`.
 
-```
-var curScriptElement = document.currentScript;
-```
+## Значение
 
-## Пример
+{{domxref("HTMLScriptElement")}} или null.
 
-Этот пример проверяет, выполняется ли текущий скрипт асинхронно:
+## Примеры
+
+Этот пример проверяет, выполняется ли скрипт асинхронно:
 
 ```js
 if (document.currentScript.async) {
-  console.log("Executing asynchronously");
+  console.log("Выполняется асинхронно");
 } else {
-  console.log("Executing synchronously");
+  console.log("Выполняется синхронно");
 }
 ```
 
-[Посмотреть живые примеры](/samples/html/currentScript.html)
-
-## Notes
-
-Важно заметить, что элемент {{HTMLElement("script")}} не будет соответствовать текущему, если он выполняется внутри callback'a или event handler'a; он будет соответствовать элементу только при начальном выполнении скрипта.
+[Посмотреть живые примеры](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Спецификации
 
@@ -41,6 +40,7 @@ if (document.currentScript.async) {
 
 ## Смотрите также
 
+- [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta)
 - {{HTMLElement("script")}}
-- {{domxref("element.onafterscriptexecute")}}
-- {{domxref("element.onbeforescriptexecute")}}
+- Событие {{DOMxRef("document.afterscriptexecute_event", "afterscriptexecute")}} интерфейса `Document`
+- Событие {{DOMxRef("document.beforescriptexecute_event", "beforescriptexecute")}} интерфейса `Document`
