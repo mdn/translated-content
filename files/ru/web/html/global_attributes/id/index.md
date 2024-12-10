@@ -26,5 +26,5 @@ slug: Web/HTML/Global_attributes/id
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - {{domxref("Element.id")}} отражает этот атрибут.

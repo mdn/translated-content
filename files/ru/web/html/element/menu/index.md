@@ -18,7 +18,7 @@ HTML-элемент **`<menu>`** представляет группу кома�
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `label` {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.

@@ -20,7 +20,7 @@ slug: Web/HTML/Element/template
 
 ## Атрибуты
 
-Элемент может иметь [общие атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 Однако у `{{domxref("HTMLTemplateElement")}}` есть свойство `{{domxref("HTMLTemplateElement.content", "content")}}`, которое возвращает доступный только для чтения `{{domxref("DocumentFragment")}}`, содержащий DOM-поддерево шаблона. Обратите внимание, что прямое использование значения `{{domxref("HTMLTemplateElement.content", "content")}}` может привести к непредсказуемому поведению, см. раздел [ловушка `DocumentFragment`](#avoiding_documentfragment_pitfall) ниже.
 
