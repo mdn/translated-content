@@ -15,7 +15,7 @@ JSON может представлять числа, булевы значени
 
 ### Общие знания
 
-- [JSON](https://ru.wikipedia.org/wiki/JSON) на Википедии
+- [JSON](https://ru.wikipedia.org/wiki/JSON) в Википедии
 
 ### Техническая информация
 
