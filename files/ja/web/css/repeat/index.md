@@ -2,7 +2,7 @@
 title: repeat()
 slug: Web/CSS/repeat
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
@@ -124,7 +124,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### HTML
 
-```html
+```html live-sample___specifying_grid_columns_using_repeat
 <div id="container">
   <div>このアイテムの幅は 50 ピクセルです。</div>
   <div>幅が自由なアイテムです。</div>
@@ -136,7 +136,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### CSS
 
-```css
+```css live-sample___specifying_grid_columns_using_repeat
 #container {
   display: grid;
   grid-template-columns: repeat(2, 50px 1fr) 100px;
@@ -156,7 +156,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### 結果
 
-{{EmbedLiveSample("repeat_を使用したグリッド列の指定", "100%", 200)}}
+{{EmbedLiveSample("Specifying_grid_columns_using_repeat", "100%", 200)}}
 
 ## 仕様書
 
@@ -168,6 +168,12 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

@@ -98,26 +98,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
     </tr>
     <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            >Accept-Charset</a
-          ></code
-        >
-      </td>
-      <td>Список кодировок, которые ожидает клиент.</td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
       <td><code>Accept-Features</code></td>
       <td></td>
       <td>

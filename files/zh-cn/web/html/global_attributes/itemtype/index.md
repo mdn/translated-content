@@ -205,7 +205,7 @@ Google 和其他主流搜索引擎支持 [schema.org](http://schema.org/) 结构
 </table>
 
 > [!NOTE]
-> 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的 [结构化数据测试工具](https://developers.google.com/structured-data/testing-tool/)。在上面展示的 HTML 上尝试吧。
+> 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。在上面展示的 HTML 上尝试吧。
 
 ## 规范
 

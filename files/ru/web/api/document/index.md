@@ -144,9 +144,9 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 ### Event handlers
 
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockchange")}} event.
+  - : Returns the event handling code for the [`pointerlockchange`](/ru/docs/Web/Events/pointerlockchange) event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockerror")}} event.
+  - : Returns the event handling code for the [`pointerlockerror`](/ru/docs/Web/Events/pointerlockerror) event.
 - {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 

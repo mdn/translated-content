@@ -29,4 +29,4 @@ l10n:
 
 - engineering.fb.com 上的 [Facebook 在 2019 年对浏览器 API 的首次贡献](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/)（2019）
 - developer.chrome.google.cn 上的[使用 isInputPending() 改善 JS 调度](https://developer.chrome.google.cn/docs/capabilities/web-apis/isinputpending)（2020）
-- web.dev 上的[优化耗时较长的任务](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary)（2022）
+- web.developers.google.cn 上的[优化耗时较长的任务](https://web.developers.google.cn/articles/optimize-long-tasks)（2022）
