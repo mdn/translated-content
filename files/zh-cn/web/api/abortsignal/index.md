@@ -1,7 +1,7 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-l10n: 
+l10n:
   sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
 ---
 
