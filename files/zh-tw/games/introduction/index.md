@@ -98,7 +98,7 @@ l10n:
   - : JavaScript 是網頁上的程式語言，現代瀏覽器中其速度非常快，並且還在不斷提升。你可以利用其強大功能來編寫遊戲代碼，或者使用 [Emscripten](https://github.com/emscripten-core/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/) 技術輕鬆移植現有遊戲。
 - [Pointer Lock API](/zh-TW/docs/Web/API/Pointer_Lock_API)
   - : 該 API 讓你可以鎖定鼠標或其他指標設備，使其在遊戲界面內運作，從而提供精確的操作，並防止用戶意外將輸入導向其他地方。
-- [SVG](/zh-TW/docs/Web/SVG) (可縮放向量圖形)
+- [SVG](/zh-TW/docs/Web/SVG)（可縮放向量圖形）
   - : 讓你構建的向量圖形可以根據顯示器的大小或解析度平滑縮放。
 - [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 型別化陣列讓你能在 JavaScript 中直接處理二進制數據，這適用於操作 GL 紋理、遊戲數據或其他非原生 JavaScript 格式的數據。
