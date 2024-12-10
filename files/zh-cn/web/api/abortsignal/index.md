@@ -45,7 +45,7 @@ _也继承其父接口 {{domxref("EventTarget")}} 的事件。_
 使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 或将事件监听器分配给该接口的 `oneventname` 属性。
 
 - {{domxref("AbortSignal/abort_event", "abort")}}
-  - : 当与信号通信的异步操作中止时调用。也可以通过 `onabort` 属性调用。
+  - : 当与信号通信的异步操作终止时调用。也可以通过 `onabort` 属性调用。
 
 ## 示例
 
@@ -89,7 +89,7 @@ async function fetchVideo() {
 }
 ```
 
-如果在执行 `fetch()` 调用后但在读取响应体之前中止了请求，那么尝试读取响应体时将出现 `AbortError` 异常。
+如果在执行 `fetch()` 调用后但在读取响应体之前终止了请求，那么尝试读取响应体时将出现 `AbortError` 异常。
 
 ```js
 async function get() {
@@ -167,7 +167,7 @@ try {
 
 需要支持终止的 API 可以接受一个 `AbortSignal` 对象，并在需要时使用其状态来触发终止信号处理。
 
-基于 {{jsxref("Promise")}} 的 API 应对终止信号做出响应，拒绝任何未确定的承诺，并使用 `AbortSignal` 终止 {{domxref("AbortSignal.reason", "reason")}}。例如，请看下面的 `myCoolPromiseAPI`，它接收一个信号并返回一个 promise。如果信号已被中止，或检测到中止事件，则会立即拒绝该 promise。否则，它将正常完成，然后兑现 promise。
+基于 {{jsxref("Promise")}} 的 API 应对终止信号做出响应，拒绝任何未确定的承诺，并使用 `AbortSignal` 终止 {{domxref("AbortSignal.reason", "reason")}}。例如，请看下面的 `myCoolPromiseAPI`，它接收一个信号并返回一个 promise。如果信号已被中止，或检测到终止事件，则会立即拒绝该 promise。否则，它将正常完成，然后兑现 promise。
 
 ```js
 function myCoolPromiseAPI(/* …, */ { signal }) {
