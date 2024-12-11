@@ -41,7 +41,7 @@ Temos até mesmo diferentes tipos de sistemas numéricos! O decimal tem por base
 
 - **Binário** — A linguagem de menor level dos computadores; 0s e 1s.
 - **Octal** — Base 8, usa um caractere entre 0–7 em cada coluna.
-- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS/Valores_e_unidades#Valores_hexadecimais).
+- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#valores_hexadecimais).
 
 **Antes de se preocupar com seu cérebro estar derretendo, pare agora mesmo!** Para um começo, vamos nos ater aos números decimais no decorrer desse curso; você raramente irá se deparar com a necessidade de começar a pensar sobre os outros tipos, se é que vai precisar algum dia.
 
@@ -49,7 +49,7 @@ A segunda boa notícia é que, diferentemente de outras linguagens de programaç
 
 ### Tudo é número para mim
 
-Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador), ou use o console simples incorporado abaixo, se preferir.
+Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou use o console simples incorporado abaixo, se preferir.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/variables/index.html", '100%', 300)}}
 
@@ -89,7 +89,7 @@ São os operadores que utilizamos para fazer as operações aritiméticas básic
 > [!NOTE]
 > Você verá algumas vezes números envolvidos em aritimética chamados de {{Glossary("Operando", "operandos")}}.
 
-Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
+Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
 
 1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
@@ -141,7 +141,7 @@ Se você quiser substituir a precedência do operador, poderá colocar parêntes
 Tente fazer e veja como fica.
 
 > [!NOTE]
-> Uma lista completa de todos os operadores JavaScript e suas precedências pode ser vista em [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> Uma lista completa de todos os operadores JavaScript e suas precedências pode ser vista em [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operator_precedence).
 
 ## Operadores de incremento e decremento
 
@@ -152,7 +152,7 @@ contagemPalpites++;
 ```
 
 > [!NOTE]
-> Eles são mais comumente usado em [Laços e iterações](/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes), que será visto no curso mais tarde. Por exemplo, digamos que você queira passar por uma lista de preços e adicionar imposto sobre vendas a cada um deles. Você usaria um loop para passar por cada valor e fazer o cálculo necessário para adicionar o imposto sobre vendas em cada caso. O incrementador é usado para mover para o próximo valor quando necessário. Na verdade, fornecemos um exemplo simples mostrando como isso é feito - [verifique ao vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html) e observe o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) para ver se consegue identificar os incrementadores! Veremos os _loops_ detalhadamente mais adiante no curso.
+> Eles são mais comumente usado em [Laços e iterações](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration), que será visto no curso mais tarde. Por exemplo, digamos que você queira passar por uma lista de preços e adicionar imposto sobre vendas a cada um deles. Você usaria um loop para passar por cada valor e fazer o cálculo necessário para adicionar o imposto sobre vendas em cada caso. O incrementador é usado para mover para o próximo valor quando necessário. Na verdade, fornecemos um exemplo simples mostrando como isso é feito - [verifique ao vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html) e observe o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) para ver se consegue identificar os incrementadores! Veremos os _loops_ detalhadamente mais adiante no curso.
 
 Vamos tentar brincar com eles no seu console. Para começar, note que você não pode aplicá-las diretamente a um número, o que pode parecer estranho, mas estamos atribuindo a variável um novo valor atualizado, não operando no próprio valor. O seguinte retornará um erro:
 
@@ -214,7 +214,7 @@ x *= y; // x agora contém o valor 12
 ```
 
 > [!NOTE]
-> Existem muitos [outros operadores de atribuição disponíveis](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_atribuicao), mas estes são os básicos que você deve aprender agora.
+> Existem muitos [outros operadores de atribuição disponíveis](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operador_atribuicao), mas estes são os básicos que você deve aprender agora.
 
 ## Aprendizado ativo: dimensionando uma canvas box
 
@@ -298,6 +298,6 @@ Neste artigo, cobrimos as informações fundamentais que você precisa saber sob
 No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manipulá-lo.
 
 > [!NOTE]
-> Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numeros_e_datas) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) .
+> Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) .
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

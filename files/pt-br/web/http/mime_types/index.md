@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Basics_of_HTTP/MIME_types
 
 O **MIME type** é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o _MIME-type_ correto seja transmitido com cada documento. Os navegadores costumam usar o _MIME-type_ para determinar qual ação usar como padrão para fazer quando um recurso é obtido.
 
-Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)_._
+Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/MIME_types/Common_types)_._
 
 _MIME types_ não são a única maneira de transmitir as informações do tipo de documento:
 
@@ -63,7 +63,7 @@ multipart/form-data
 multipart/byteranges
 ```
 
-_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados em relação de [formularios HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
+_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados em relação de [formularios HTML](/pt-BR/docs/Learn/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
 
 ## Importantes _MIME types_ para desenvolvedores Web
 
@@ -106,7 +106,7 @@ Em particular, as imagens do ICO são suportadas neste contexto com o tipo MIME 
 
 ### Audio and video types
 
-Como as imagens, o HTML não define um conjunto de tipos suportados para usar com os elementos {{HTMLElement("audio")}} e {{HTMLElement("video")}} , de modo que apenas um grupo relativamente pequeno deles pode ser Usado na Web. Os [formatos de mídia suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/HTML/Supported_media_formats) explicam os codecs e formatos de contêiner que podem ser usados.
+Como as imagens, o HTML não define um conjunto de tipos suportados para usar com os elementos {{HTMLElement("audio")}} e {{HTMLElement("video")}} , de modo que apenas um grupo relativamente pequeno deles pode ser Usado na Web. Os [formatos de mídia suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/Media/Formats) explicam os codecs e formatos de contêiner que podem ser usados.
 
 O tipo MIME de tais arquivos principalmente representam os formatos de contêiner e os mais comuns em um contexto da Web são:
 
@@ -121,7 +121,7 @@ O tipo MIME de tais arquivos principalmente representam os formatos de contêine
 
 ### `multipart/form-data`
 
-O tipo `multipart/form-data` pode ser usado ao enviar o conteúdo de um [formulario HTML](/pt-BR/docs/Web/Guide/HTML/Forms) preenchido do navegador para o servidor. Como um documento multipart formal, consiste em partes diferentes, delimitado por um limite (uma seqüência de caracteres começando com um traço duplo '--'). Cada parte é uma entidade por si só, com seus próprios cabeçalhos HTTP, {{HTTPHeader("Content-Disposition")}}, e {{HTTPHeader("Content-Type")}} Para os campos de upload de arquivos, e os mais comuns ({{HTTPHeader("Content-Length")}} É ignorada como a linha de limite é usada como o delimitador).
+O tipo `multipart/form-data` pode ser usado ao enviar o conteúdo de um [formulario HTML](/pt-BR/docs/Learn/Forms) preenchido do navegador para o servidor. Como um documento multipart formal, consiste em partes diferentes, delimitado por um limite (uma seqüência de caracteres começando com um traço duplo '--'). Cada parte é uma entidade por si só, com seus próprios cabeçalhos HTTP, {{HTTPHeader("Content-Disposition")}}, e {{HTTPHeader("Content-Type")}} Para os campos de upload de arquivos, e os mais comuns ({{HTTPHeader("Content-Length")}} É ignorada como a linha de limite é usada como o delimitador).
 
 ```
 Content-Type: multipart/form-data; boundary=aBoundaryString
@@ -214,7 +214,7 @@ Content-Range: bytes 300-400/1270
 A maioria dos servidores web envia recursos de tipo desconhecido usando o tipo MIME de application/octet-stream padrão. Por razões de segurança, a maioria dos navegadores não permite definir uma ação padrão personalizada para esses recursos, forçando o usuário a armazená-lo no disco para usá-lo. Algumas configurações de servidor incorretamente exibidas ocorrem com os seguintes tipos de arquivo:
 
 - Arquivos RAR-codificados. Neste caso, o ideal seria definir o verdadeiro tipo de arquivos codificados; Isso muitas vezes não é possível (como pode não ser conhecido para o servidor e esses arquivos podem conter vários recursos de tipos diferentes). Nesse caso, configure o servidor para enviar o tipo MIME `application/x-rar-compressed`.
-- Arquivos de áudio e vídeo. Somente recursos com o Tipo MIME correto serão reconhecidos e reproduzidos em elementos {{HTMLElement("video")}} ou {{HTMLElement("áudio")}}. Certifique-se [de usar o tipo correto para áudio e vídeo](/En/Media_formats_supported_by_the_audio_and_video_elements).
+- Arquivos de áudio e vídeo. Somente recursos com o Tipo MIME correto serão reconhecidos e reproduzidos em elementos {{HTMLElement("video")}} ou {{HTMLElement("áudio")}}. Certifique-se [de usar o tipo correto para áudio e vídeo](/en-US/Media_formats_supported_by_the_audio_and_video_elements).
 - Tipos de arquivos proprietários. Preste especial atenção ao servir um tipo de arquivo proprietário. Evite usar o `application/octet-stream` como manipulação especial não será possível: a maioria dos navegadores não permitem definir um comportamento padrão (como "Abertura no Word") para este tipo MIME genérico.
 
 ## MIME sniffing
@@ -224,5 +224,5 @@ Como alguns tipos MIME representam conteúdo executável e outros não. Os servi
 
 ## See also
 
-- [Properly configuring server MIME types](/pt-BR/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types)
-- [Media formats supported by the HTML audio and video elements](/pt-BR/docs/Web/HTML/Supported_media_formats)
+- [Properly configuring server MIME types](/pt-BR/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Media formats supported by the HTML audio and video elements](/pt-BR/docs/Web/Media/Formats)

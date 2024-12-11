@@ -96,7 +96,7 @@ Outra coisa que vale mencionar a esse ponto é que eventos não são exclusivos 
 
 Por exemplo, [Node.js](/pt-BR/docs/Learn/Server-side/Express_Nodejs) é um interpretador de código JavaScript muito popular que permite desenvolvedores a usarem JavaScript para construir aplicações de rede e do lado do servidor. O [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) depende dos ouvintes para escutar eventos e emissores para emitir eventos periodicamente. — não parece tão diferente, mas o código é bem diferente, fazendo uso de funções como `on()` para registrar um ouvinte de evento e `once()` para registrar um ouvinte de evento que cancela o registro depois de ter sido executado uma vez. Os [Documentos do evento de conexão HTTP](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) fornecem um bom exemplo de uso.
 
-Como outro exemplo, agora você também pode usar o JavaScript para criar complementos entre navegadores — aprimoramentos da funcionalidade do navegador — usando uma tecnologia chamada [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions). O modelo de eventos é semelhante ao modelo de eventos da Web, mas um pouco diferente — as propriedades dos event listeners são camel-cased, onde cada palavra é iniciada com maiúsculas e unidas sem espaços (por exemplo, `onMessage` em vez de `onmessage`), e precisam ser combinadas com a função `addListener`. Veja a página [runtime.onMessage](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples) para um exemplo.
+Como outro exemplo, agora você também pode usar o JavaScript para criar complementos entre navegadores — aprimoramentos da funcionalidade do navegador — usando uma tecnologia chamada [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions). O modelo de eventos é semelhante ao modelo de eventos da Web, mas um pouco diferente — as propriedades dos event listeners são camel-cased, onde cada palavra é iniciada com maiúsculas e unidas sem espaços (por exemplo, `onMessage` em vez de `onmessage`), e precisam ser combinadas com a função `addListener`. Veja a página [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para um exemplo.
 
 Você não precisa entender nada sobre outros ambientes nesse estágio do aprendizado; nós só queríamos deixar claro que os eventos podem diferir em diferentes ambientes de programação.
 
@@ -118,7 +118,7 @@ btn.onclick = function () {
 };
 ```
 
-A propriedade [`onclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/onclick) é a propriedade do manipulador de eventos que está sendo usada nesta situação. É essencialmente uma propriedade como qualquer outra disponível no botão (por exemplo, [`btn.textContent`](/pt-BR/docs/Web/API/Node/textContent), ou [`btn.style`](/pt-BR/docs/Web/API/HTMLElement/style)), mas é um tipo especial — quando você configura para ser igual a algum código, esse código será executado quando o evento é acionado no botão.
+A propriedade [`onclick`](/pt-BR/docs/conflicting/Web/API/Element/click_event) é a propriedade do manipulador de eventos que está sendo usada nesta situação. É essencialmente uma propriedade como qualquer outra disponível no botão (por exemplo, [`btn.textContent`](/pt-BR/docs/Web/API/Node/textContent), ou [`btn.style`](/pt-BR/docs/Web/API/HTMLElement/style)), mas é um tipo especial — quando você configura para ser igual a algum código, esse código será executado quando o evento é acionado no botão.
 
 Você também pode definir a propriedade handler para ser igual a um nome de função nomeado (como vimos em [Construa sua própria função](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)). O seguinte funcionaria da mesma forma:
 
@@ -138,12 +138,12 @@ Há muitas propriedades diferentes de manipulador de eventos disponíveis. Vamos
 
 Primeiro de tudo, faça uma cópia local do [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html), e abra-o no seu navegador. É apenas uma cópia do exemplo de cor aleatória simples com o qual já estamos jogando neste artigo. Agora tente alterar `btn.onclick` para os seguintes valores diferentes, por sua vez, e observando os resultados no exemplo:
 
-- [`btn.onfocus`](/pt-BR/docs/Web/API/GlobalEventHandlers/onfocus) e [`btn.onblur`](/pt-BR/docs/Web/API/GlobalEventHandlers/onblur) — A cor mudará quando o botão estiver focado e fora de foco (tente pressionar a guia para aba no botão e desligar novamente). Eles geralmente são usados para exibir informações sobre como preencher campos de formulário quando eles estão focalizados ou exibir uma mensagem de erro se um campo de formulário tiver acabado de ser preenchido com um valor incorreto.
-- [`btn.ondblclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/ondblclick) — A cor só será alterada quando for clicada duas vezes.
-- [`window.onkeypress`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup) — A cor mudará quando uma tecla for pressionada no teclado. `keypress` refere-se a um pressionamento geral (botão para baixo e depois para cima), enquanto `keydown` e `keyup` refere-se apenas a parte do pressionamento da tecla para baixo e de soltar a tecla para cima, respectivamente. Note que não funciona se você tentar registrar este manipulador de eventos no próprio botão — nós tivemos que registrá-lo no objeto [window](/pt-BR/docs/Web/API/Window), que representa toda a janela do navegador.
-- [`btn.onmouseover`](/pt-BR/docs/Web/API/GlobalEventHandlers/onmouseover) e [`btn.onmouseout`](/pt-BR/docs/Web/API/GlobalEventHandlers/onmouseout) — A cor mudará quando o ponteiro do mouse for movido, de modo que comece a passar o mouse sobre o botão, ou quando parar de passar o mouse sobre o botão e sair dele, respectivamente.
+- [`btn.onfocus`](/pt-BR/docs/Web/API/Window/focus_event) e [`btn.onblur`](/pt-BR/docs/Web/API/Window/blur_event) — A cor mudará quando o botão estiver focado e fora de foco (tente pressionar a guia para aba no botão e desligar novamente). Eles geralmente são usados para exibir informações sobre como preencher campos de formulário quando eles estão focalizados ou exibir uma mensagem de erro se um campo de formulário tiver acabado de ser preenchido com um valor incorreto.
+- [`btn.ondblclick`](/pt-BR/docs/Web/API/Element/dblclick_event) — A cor só será alterada quando for clicada duas vezes.
+- [`window.onkeypress`](/pt-BR/docs/Web/API/Element/keypress_event), [`window.onkeydown`](/pt-BR/docs/Web/API/Element/keydown_event), [`window.onkeyup`](/pt-BR/docs/conflicting/Web/API/Element/keyup_event) — A cor mudará quando uma tecla for pressionada no teclado. `keypress` refere-se a um pressionamento geral (botão para baixo e depois para cima), enquanto `keydown` e `keyup` refere-se apenas a parte do pressionamento da tecla para baixo e de soltar a tecla para cima, respectivamente. Note que não funciona se você tentar registrar este manipulador de eventos no próprio botão — nós tivemos que registrá-lo no objeto [window](/pt-BR/docs/Web/API/Window), que representa toda a janela do navegador.
+- [`btn.onmouseover`](/pt-BR/docs/Web/API/Element/mouseover_event) e [`btn.onmouseout`](/pt-BR/docs/Web/API/Element/mouseout_event) — A cor mudará quando o ponteiro do mouse for movido, de modo que comece a passar o mouse sobre o botão, ou quando parar de passar o mouse sobre o botão e sair dele, respectivamente.
 
-Alguns eventos são muito gerais e estão disponíveis praticamente em qualquer lugar (por exemplo, um manipulador `onclick` pode ser registrado em quase qualquer elemento), enquanto alguns são mais específicos e úteis apenas em certas situações (por exemplo, faz sentido usar [onplay](/pt-BR/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) apenas em elementos específicos, como {{htmlelement("video")}}).
+Alguns eventos são muito gerais e estão disponíveis praticamente em qualquer lugar (por exemplo, um manipulador `onclick` pode ser registrado em quase qualquer elemento), enquanto alguns são mais específicos e úteis apenas em certas situações (por exemplo, faz sentido usar [onplay](/pt-BR/docs/Web/API/HTMLMediaElement/play_event) apenas em elementos específicos, como {{htmlelement("video")}}).
 
 ### Manipuladores de eventos in-line - não use esses
 
@@ -162,7 +162,7 @@ function bgChange() {
 ```
 
 > [!NOTE]
-> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) para este exemplo no GitHub (também [veja isso executando em tempo real](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 O método mais antigo de registrar manipuladores de eventos encontrados na Web envolveu **atributos HTML de manipulador de eventos** (também conhecidos como **manipuladores de eventos inline**) como o mostrado acima — o valor do atributo é literalmente o código JavaScript que você deseja executar quando o evento ocorre. O exemplo acima chama uma função definida dentro de um elemento {{htmlelement("script")}} na mesma página, mas você também pode inserir JavaScript diretamente dentro do atributo, por exemplo:
 
@@ -206,7 +206,7 @@ btn.addEventListener("click", bgChange);
 ```
 
 > [!NOTE]
-> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) para este exemplo no GitHub (também [veja isso executando em tempo real](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Dentro da função `addEventListener()`, especificamos dois parâmetros — o nome do evento para o qual queremos registrar esse manipulador, e o código que compreende a função do manipulador que queremos executar em resposta a ele. Note que é perfeitamente apropriado colocar todo o código dentro da função `addEventListener()`, em uma função anônima, assim:
 
@@ -284,14 +284,14 @@ btn.addEventListener("click", bgChange);
 ```
 
 > [!NOTE]
-> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) para este exemplo no GitHub (também [veja isso executando em tempo real](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Aqui você pode ver que estamos incluindo um objeto de evento, **e**, na função, e na função definindo um estilo de cor de fundo em `e.target` — que é o próprio botão. A propriedade `target` do objeto de evento é sempre uma referência ao elemento em que o evento acabou de ocorrer. Portanto, neste exemplo, estamos definindo uma cor de fundo aleatória no botão, não na página.
 
 > [!NOTE]
 > Você pode usar qualquer nome que desejar para o objeto de evento — você só precisa escolher um nome que possa ser usado para referenciá-lo dentro da função de manipulador de eventos. `e`/`evt`/`event` são mais comumente usados pelos desenvolvedores porque são curtos e fáceis de lembrar. É sempre bom manter um padrão.
 
-`e.target` é incrivelmente útil quando você deseja definir o mesmo manipulador de eventos em vários elementos e fazer algo com todos eles quando ocorre um evento neles. Você pode, por exemplo, ter um conjunto de 16 blocos que desaparecem quando são clicados. É útil poder sempre apenas definir a coisa para desaparecer como `e.target`, ao invés de ter que selecioná-lo de alguma forma mais difícil. No exemplo a seguir (veja [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) para o código-fonte completo; veja também a [execução ao vivo](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aqui), criamos 16 elementos {{htmlelement("div")}} usando JavaScript. Em seguida, selecionamos todos eles usando {{domxref("document.querySelectorAll()")}} e, em seguida, percorremos cada um deles, adicionando um manipulador onclick a cada um, de modo que uma cor aleatória seja aplicada a cada um deles quando clicados:
+`e.target` é incrivelmente útil quando você deseja definir o mesmo manipulador de eventos em vários elementos e fazer algo com todos eles quando ocorre um evento neles. Você pode, por exemplo, ter um conjunto de 16 blocos que desaparecem quando são clicados. É útil poder sempre apenas definir a coisa para desaparecer como `e.target`, ao invés de ter que selecioná-lo de alguma forma mais difícil. No exemplo a seguir (veja [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) para o código-fonte completo; veja também a [execução ao vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aqui), criamos 16 elementos {{htmlelement("div")}} usando JavaScript. Em seguida, selecionamos todos eles usando {{domxref("document.querySelectorAll()")}} e, em seguida, percorremos cada um deles, adicionando um manipulador onclick a cada um, de modo que uma cor aleatória seja aplicada a cada um deles quando clicados:
 
 ```js
 var divs = document.querySelectorAll("div");
@@ -351,7 +351,7 @@ A saída é a seguinte (tente clicar em cima — divirta-se):
 
 {{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}
 
-A maioria dos manipuladores de eventos que você encontrará apenas tem um conjunto padrão de propriedades e funções (métodos) disponíveis no objeto de evento (consulte a referência de objeto {{domxref("Event")}} para obter uma lista completa). Alguns manipuladores mais avançados, no entanto, adicionam propriedades especializadas contendo dados extras que precisam para funcionar. A [Media Recorder API](/pt-BR/docs/Web/API/MediaRecorder_API), por exemplo, tem um evento `dataavailable` que é acionado quando algum áudio ou vídeo é gravado e está disponível para fazer algo com (por exemplo, salvá-lo ou reproduzi-lo). O objeto de evento do manipulador correspondente [ondataavailable](/pt-BR/docs/Web/API/MediaRecorder/ondataavailable) tem uma propriedade de dados disponível contendo os dados de áudio ou vídeo gravados para permitir que você acesse e faça algo com ele.
+A maioria dos manipuladores de eventos que você encontrará apenas tem um conjunto padrão de propriedades e funções (métodos) disponíveis no objeto de evento (consulte a referência de objeto {{domxref("Event")}} para obter uma lista completa). Alguns manipuladores mais avançados, no entanto, adicionam propriedades especializadas contendo dados extras que precisam para funcionar. A [Media Recorder API](/pt-BR/docs/Web/API/MediaStream_Recording_API), por exemplo, tem um evento `dataavailable` que é acionado quando algum áudio ou vídeo é gravado e está disponível para fazer algo com (por exemplo, salvá-lo ou reproduzi-lo). O objeto de evento do manipulador correspondente [ondataavailable](/pt-BR/docs/Web/API/MediaRecorder/dataavailable_event) tem uma propriedade de dados disponível contendo os dados de áudio ou vídeo gravados para permitir que você acesse e faça algo com ele.
 
 ### Evitando o comportamento padrão
 
@@ -406,7 +406,7 @@ Obviamente, isso é uma validação de forma bastante fraca — ela não impedir
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> para o código fonte completo, veja [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (também veja isso [executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aqui.)
+> para o código fonte completo, veja [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (também veja isso [executando em tempo real](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aqui.)
 
 ### Borbulhamento e captura de eventos
 
@@ -571,7 +571,7 @@ video.onclick = function (e) {
 };
 ```
 
-Você pode tentar fazer uma cópia local do código-fonte [show-video-box.html source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) e tentar corrigi-lo sozinho, ou observar o resultado corrigido em [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html) aqui).
+Você pode tentar fazer uma cópia local do código-fonte [show-video-box.html source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) e tentar corrigi-lo sozinho, ou observar o resultado corrigido em [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html) aqui).
 
 > [!NOTE]
 > Por que se preocupar em capturar e borbulhar? Bem, nos velhos tempos em que os navegadores eram muito menos compatíveis entre si do que são agora, o Netscape usava apenas captura de eventos, e o Internet Explorer usava apenas borbulhamento de eventos. Quando o W3C decidiu tentar padronizar o comportamento e chegar a um consenso, eles acabaram com esse sistema que incluía ambos, que é o único navegador moderno implementado.
@@ -593,12 +593,12 @@ Agora você deve saber tudo o que precisa saber sobre os eventos da Web nesse es
 
 Além disso, é importante entender que os diferentes contextos nos quais o JavaScript é usado tendem a ter diferentes modelos de evento — de APIs da Web a outras áreas, como WebExtensions de navegador e Node.js (JavaScript do lado do servidor). Não esperamos que você entenda todas essas áreas agora, mas certamente ajuda a entender os fundamentos dos eventos à medida que você avança no aprendizado do desenvolvimento da web.
 
-Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente, ou [entre em contato conosco](/en-US/Learn#Contact_us) para pedir ajuda.
+Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente, ou [entre em contato conosco](/en-US/docs/Learn#contact_us) para pedir ajuda.
 
 ## Veja também
 
-- [Event order](http://www.quirksmode.org/js/events_order.html) (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.
-- [Event accessing](http://www.quirksmode.org/js/events_access.html) (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.
+- [Event order](https://www.quirksmode.org/js/events_order.html) (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.
+- [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.
 - [Event reference](/pt-BR/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

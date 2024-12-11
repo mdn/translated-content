@@ -31,7 +31,7 @@ Outro conceito essencial em código é função, que permitem que você armazene
 
 Em JavaScript, você encontrará funções em todos os lugares, de fato, nós vamos usar funções ao longo de todo o curso; nós só não falaremos sobre elas em damasia. Agora está na hora, contudo, para falarmos sobre funções explicitamente, e realmente explorar sua sintaxe.
 
-Praticamente sempre que você faz uso de um uma estrutura JavaScript em que tem um par de parenteses — `()` — e você **não** está usando uma estrutura embutida da linguagem como um [for loop](/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while or do...while loop](/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), ou [if...else statement](/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), você está fazendo uso de uma função.
+Praticamente sempre que você faz uso de um uma estrutura JavaScript em que tem um par de parenteses — `()` — e você **não** está usando uma estrutura embutida da linguagem como um [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), ou [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), você está fazendo uso de uma função.
 
 ## Funções embutidas do navegador
 
@@ -73,7 +73,7 @@ var myNumber = Math.random();
 
 A linguagem JavaScript tem muitas funções embutidas que o permitem fazer coisas úteis sem que você mesmo tenha que escrever aquele código. De fato, alguns dos códigos que você está chamando quando você **invoca** (uma palavra rebuscada para rodar, ou executar) uma função embutida de navegador não poderia ser escrita em JavaScript — muitas dessa funções são chamadas a partes de código base do navegador, que é escrita grandemente em linguages de sistema de baixo nível como C++, não linguagem Web como JavaScript.
 
-Tenha em mente que algumas funções embutidas de navegador não são parte do core da linguagem JavaScript — algumas são definidas como partes de APIs do navegador, que são construídas no topo da linguagem padão para prover ainda mais funcionalidades (recorra a [esta seção inicial de nosso curso](/en-US/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do) para mais descrições). Nós olharemos o uso de APIs de navegador em mais detalhes em um módulo posterior.
+Tenha em mente que algumas funções embutidas de navegador não são parte do core da linguagem JavaScript — algumas são definidas como partes de APIs do navegador, que são construídas no topo da linguagem padão para prover ainda mais funcionalidades (recorra a [esta seção inicial de nosso curso](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#so_what_can_it_really_do) para mais descrições). Nós olharemos o uso de APIs de navegador em mais detalhes em um módulo posterior.
 
 ## Funções versus métodos
 
@@ -85,7 +85,7 @@ Você não precisa aprender sobre o funcionamento interno de objetos estruturado
 
 ## Funções personalizadas
 
-Nós vimos também várias funções personalizadas no curso até agora — funções definidas em seu código, não dentro do navegador. Sempre que você viu um nome personalizado com parênteses logo após ele, você estava usando funções personalizadas. em nosso exemplo [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) completo) de nosso [loops article](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code), nós incluimos a função personalizada `draw()` que era semelhante a essa:
+Nós vimos também várias funções personalizadas no curso até agora — funções definidas em seu código, não dentro do navegador. Sempre que você viu um nome personalizado com parênteses logo após ele, você estava usando funções personalizadas. em nosso exemplo [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) completo) de nosso [loops article](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code), nós incluimos a função personalizada `draw()` que era semelhante a essa:
 
 ```js
 function draw() {
@@ -278,7 +278,7 @@ function greeting() {
 Ambas as funções que você quer chamar são chamadas `greeting()`, mas você só pode acessar o arquivo `second.js` da função `greeting()` — Ele é aplicado no HTML depois no código fonte, então suas variáveis e funções sobrescrevem as de `first.js`.
 
 > [!NOTE]
-> Você pode ver este exemplo [rodando no GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> Você pode ver este exemplo [rodando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
 Manter parte de seus código trancada em funções evita tais problemas, e é considerado boa prática.
 

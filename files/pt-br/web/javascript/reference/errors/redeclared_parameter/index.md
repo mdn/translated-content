@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: redeclaration of formal parameter "x"'
+title: "SyntaxError: redeclaration of formal parameter \"x\""
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
@@ -54,4 +54,4 @@ function f(arg) {
 - [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
-- [Declaring variables](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Declaring variables](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)

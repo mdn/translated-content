@@ -14,7 +14,7 @@ Em JavaScript, a maioria das coisas são objetos, desde os principais recursos d
 > Reunimos um curso que inclui todas as informações essenciais que você precisa para
 > trabalhe em direção ao seu objetivo.
 >
-> [**Primeiros passos**](/pt-BR/docs/Learn/Front-end_web_developer)
+> [**Primeiros passos**](/pt-BR/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Pré-requisitos
 

@@ -5,7 +5,7 @@ slug: Web/API/MutationObserver
 
 {{APIRef("DOM")}}
 
-MutationObserver fornece aos desenvolvedores uma maneira de reagir a mudanças em um [DOM](/pt-BR/docs/DOM). Ele é concebido como um substituto para [Mutation Events](/pt-BR/docs/DOM/Mutation_events) definido na especificação de eventos DOM nível 3.
+MutationObserver fornece aos desenvolvedores uma maneira de reagir a mudanças em um [DOM](/pt-BR/docs/Web/API/Document_Object_Model). Ele é concebido como um substituto para [Mutation Events](/pt-BR/docs/DOM/Mutation_events) definido na especificação de eventos DOM nível 3.
 
 ## Constructor
 
@@ -22,7 +22,7 @@ MutationObserver(
 ###### Parâmetros
 
 - `callback`
-  - : A função que será chamada em cada mutação do DOM. O observador irá chamar esta função com dois argumentos. O primeiro é um array de objetos, cada um do tipo [`MutationRecord`](#MutationRecord). O segundo é a essa instância MutationObserver.
+  - : A função que será chamada em cada mutação do DOM. O observador irá chamar esta função com dois argumentos. O primeiro é um array de objetos, cada um do tipo [`MutationRecord`](#mutationrecord). O segundo é a essa instância MutationObserver.
 
 ## Métodos da instância
 
@@ -47,7 +47,7 @@ void observe(
 - `target`
   - : O {{domxref("Node")}} no qual é observadas as mutações do DOM.
 - `options`
-  - : Um objeto [`MutationObserverInit`](#MutationObserverInit) especifica quais mutações DOM devem ser reportadas.
+  - : Um objeto [`MutationObserverInit`](#mutationobserverinit) especifica quais mutações DOM devem ser reportadas.
 
 > [!NOTE]
 > NOTA: Adicionar um observador para um elemento é como utilizar o addEventListener, se você observar o elemento várias vezes não faz diferença. Ou seja, se você observar um elemento duas vezes, o callback do observador não disparará duas vezes, nem você deverá executar duas vezes o disconnect(). Em outras palavras, uma vez que um elemento é observado, observá-lo novamento com a mesma instância do observador não fará nada. No entanto, se o objeto callback for diferente, ele, é claro, adicionará outro observador para isso.
@@ -70,7 +70,7 @@ Array takeRecords();
 
 ###### Valor de retorno
 
-Retorna um Array de [`MutationRecord`s](#MutationRecord).
+Retorna um Array de [`MutationRecord`s](#mutationrecord).
 
 ## `MutationObserverInit`
 
@@ -107,7 +107,7 @@ Retorna um Array de [`MutationRecord`s](#MutationRecord).
 
 ## Exemplo de uso
 
-O exemplo a seguir foi retirado [deste post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+O exemplo a seguir foi retirado [deste post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // seleciona o nó alvo
@@ -133,10 +133,10 @@ observer.disconnect();
 ## Leitura adicional
 
 - [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
-- [The mutation summary library](http://code.google.com/p/mutation-summary/)
-- [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
+- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](https://code.google.com/p/mutation-summary/)
+- [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
 
 ## Especificações
 

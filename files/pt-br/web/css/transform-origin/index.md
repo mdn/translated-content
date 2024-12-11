@@ -317,5 +317,5 @@ transform-origin: 100% -30%;
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>
