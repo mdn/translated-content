@@ -319,7 +319,7 @@ BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，�
   <input
     class="form__submit form__submit--disabled"
     type="submit"
-    value="Submit" />
+    value="提交" />
 </form>
 ```
 
@@ -331,7 +331,7 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 #### 其他常见体系
 
-应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的 [CSS 的可扩展模块化架构（SMACSS）](https://smacss.com/)、Harry Roberts 的[ITCSS](https://itcss.io/)以及原本由 Yahoo! 创造的[原子 CSS（ACSS）](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
+应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的 [CSS 的可扩展模块化架构（SMACSS）](https://smacss.com/)、Harry Roberts 的 [ITCSS](https://itcss.io/) 以及原本由 Yahoo! 创造的[原子 CSS（ACSS）](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
 
 使用这样的体系的缺点是，它们会看起来过于复杂，尤其是对于小项目。
 
@@ -384,6 +384,6 @@ $base-color: #c6538c;
 
 欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)这节课。
 
-你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的布局模式，在诸如 [CSS 栅格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的一些更加专门的指导里阅读更多。
+你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)等更加专门的指南。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
