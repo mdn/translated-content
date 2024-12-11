@@ -2,7 +2,7 @@
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 l10n:
-  sourceCommit: 44c93b0fb4940a9b9b9942a0a6ca28305c62078f
+  sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
 {{AddonSidebar}}

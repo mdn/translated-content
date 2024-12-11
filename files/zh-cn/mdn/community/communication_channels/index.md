@@ -2,7 +2,7 @@
 title: 沟通渠道
 slug: MDN/Community/Communication_channels
 l10n:
-  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
+  sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
 {{MDNSidebar}}
