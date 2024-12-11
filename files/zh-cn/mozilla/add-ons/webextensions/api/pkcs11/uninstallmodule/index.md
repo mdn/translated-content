@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-卸载 Firefox 中的指定 PKCS #11 模块。
+卸载 Firefox 中的指定名称的 PKCS #11 模块。
 
 这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -26,7 +26,7 @@ let uninstalling = browser.pkcs11.uninstallModule(
 
 ### 返回值
 
-当模块被卸载后，会返回一个不以任何参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当模块被卸载后将不以任何参数兑现。
 
 若无法找到模块或发生其他错误，该 Promise 将以错误消息拒绝。
 
