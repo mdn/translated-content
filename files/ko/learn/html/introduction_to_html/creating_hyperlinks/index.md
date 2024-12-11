@@ -62,7 +62,7 @@ l10n:
 
 ### Block level 링크들
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">

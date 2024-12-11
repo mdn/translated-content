@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
+title: "SyntaxError: \"x\" is a reserved identifier"
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
 
@@ -74,4 +74,4 @@ class DocArchiver {}
 
 ## 같이 보기
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)

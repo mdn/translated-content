@@ -1,9 +1,9 @@
 ---
 title: "AnimationEvent: elapsedTime 속성"
-short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+short-title: elapsedTime
 ---
 
 {{APIRef("Web Animations")}}
@@ -24,7 +24,7 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - 애니메이션 관련 CSS 속성과 @규칙: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

@@ -53,7 +53,7 @@ l10n:
 
 ### 나를 위한 숫자들
 
-우리가 필요한 기본 구문을 다시 익히기 위해 몇 가지 숫자를 빠르게 생각해 봅시다. [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 들어가서 아래의 나열된 명령어를 입력해주세요.
+우리가 필요한 기본 구문을 다시 익히기 위해 몇 가지 숫자를 빠르게 생각해 봅시다. [developer tools JavaScript console](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 에 들어가서 아래의 나열된 명령어를 입력해주세요.
 
 1. 먼저, 두 개의 변수를 선언합니다. 그리고 두 개의 변수를 정수와 실수로 초기화해줍니다. 각각 변수명을 콘솔 창에 입력해주세요. 그리고 어떤 값이 나오는지 확인해주세요.
 
@@ -133,7 +133,7 @@ myNumber = Number(myNumber) + 3;
 > [!NOTE]
 > 지수를 계산할 때 {{jsxref("Math.pow()")}} 메서드를 사용할 수도 있고 `**`와 매우 비슷한 동작을 합니다. 예를 들어, `Math.pow(7, 3)`의 경우 `7`은 밑, `3`은 지수이므로 `343`을 반환합니다. 이 결과는 `7 ** 3`과 같습니다.
 
-아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
+아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 에 입력해주세요.
 
 1. 아래의 명령어를 콘솔창에 입력해주세요.
 
@@ -189,7 +189,7 @@ num2 + num1 / 8 + 2;
 
 ## 증감 연산자
 
-가끔은 반복해서 숫자 변수의 값을 1 씩 더하거나 빼고 싶을 때가 있습니다. 이럴 때는 증가(`++`) 연산자와 감소(`--`) 연산자를 사용하면 편리합니다. 우리는 [JavaScript 첫 입문](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) 문서에서 `guessCount` 변수에 1을 추가하여 매 턴마다 사용자의 남은 추측 횟수를 추적할 때 ++를 사용했습니다.
+가끔은 반복해서 숫자 변수의 값을 1 씩 더하거나 빼고 싶을 때가 있습니다. 이럴 때는 증가(`++`) 연산자와 감소(`--`) 연산자를 사용하면 편리합니다. 우리는 [JavaScript 첫 입문](/ko/docs/Learn/JavaScript/First_steps/A_first_splash) 문서에서 `guessCount` 변수에 1을 추가하여 매 턴마다 사용자의 남은 추측 횟수를 추적할 때 ++를 사용했습니다.
 
 ```js
 guessCount++;
@@ -255,7 +255,7 @@ x *= y; // 이제 x의 값은 12입니다.
 ```
 
 > [!NOTE]
-> 더 많은 [연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)가 있지만, 지금은 이것만 시용해도 충분합니다.
+> 더 많은 [연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)가 있지만, 지금은 이것만 시용해도 충분합니다.
 
 ## 실전 예제: 캔버스 크기 바꾸기
 
@@ -343,6 +343,6 @@ function updateBtn() {
 다음 글에서는 텍스트와 JavaScript에서 텍스트를 조작하는 방법에 대해 알아보겠습니다.
 
 > [!NOTE]
-> 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) 문서에서 시작하기 좋습니다.
+> 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators) 문서에서 시작하기 좋습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

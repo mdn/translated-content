@@ -100,7 +100,7 @@ input {
 
 ### CSS 변수와 중첩 `calc()`
 
-[CSS 변수](/ko/docs/Web/CSS/CSS_Variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
+[CSS 변수](/ko/docs/Web/CSS/CSS_cascading_variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
 
 ```css
 .foo {

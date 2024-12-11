@@ -15,7 +15,7 @@ l10n:
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 필요한 사전 지식
 
@@ -23,7 +23,7 @@ JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 
 
 - [Web과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web) (아주 기본적인 [JavaScript 소개](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics)도 포함)
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
+- [CSS 소개](/en-US/docs/Learn/CSS/First_steps)
 
 > [!NOTE]
 > 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.

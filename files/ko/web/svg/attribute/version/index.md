@@ -13,6 +13,6 @@ slug: Web/SVG/Attribute/version
 
 | Categories         | None                                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| Value              | [\<number>](/en/SVG/Content_type#Number)                                                                      |
+| Value              | [\<number>](/en-US/SVG/Content_type#number)                                                                      |
 | Animatable         | No                                                                                                            |
-| Normative document | [SVG 1.1 (2nd Edition): version attribute](http://www.w3.org/TR/SVG11/struct.html#SVGElementVersionAttribute) |
+| Normative document | [SVG 1.1 (2nd Edition): version attribute](https://www.w3.org/TR/SVG11/struct.html#SVGElementVersionAttribute) |

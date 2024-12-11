@@ -39,4 +39,4 @@ function potentiallyBuggyCode() {
 ## 같이 보기
 
 - [JavaScript 디버깅](/ko/docs/Mozilla/Debugging/Debugging_JavaScript)
-- [Firefox 개발자 도구의 디버거](/ko/docs/도구들/Debugger)
+- [Firefox 개발자 도구의 디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

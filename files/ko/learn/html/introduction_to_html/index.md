@@ -22,7 +22,7 @@ l10n:
 >
 > 목표를 위해 노력하는 데 필요한 모든 필수 정보를 포함하는 코스를 구성했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 안내서
 

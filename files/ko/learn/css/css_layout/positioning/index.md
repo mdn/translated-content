@@ -27,7 +27,7 @@ slug: Learn/CSS/CSS_layout/Positioning
   </tbody>
 </table>
 
-가능하면 우리 깃허브 저장소에 있는 [`0_basic-flow.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) 파일의 사본을 가지고 당신의 컴퓨터상에서 해당 연습을 함께 따라해보시길 바랍니다. ([여기 소스 코드](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/0_basic-flow.html))가 있으니 그걸 착수 파일로 이용하십시요.
+가능하면 우리 깃허브 저장소에 있는 [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) 파일의 사본을 가지고 당신의 컴퓨터상에서 해당 연습을 함께 따라해보시길 바랍니다. ([여기 소스 코드](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/0_basic-flow.html))가 있으니 그걸 착수 파일로 이용하십시요.
 
 ## 위치잡기 소개
 
@@ -56,7 +56,7 @@ HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존�
 
 이제 저장하고 새로고침하면 두 번째 단락의 배경 색깔이 업데이트된 것을 제외하고 다른 차이가 없다는 것이 확인될 것입니다. 아무 문제없습니다. 앞에서 얘기했듯이 정적 위치잡기는 기본값으로 주어진 동작입니다!
 
-> **참고:** **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
+> **참고:** **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
 ## 상대 위치잡기
 
@@ -78,7 +78,7 @@ left: 30px;
 ```
 
 > [!NOTE]
-> 이러한 속성의 값은 당신이 논리적으로 예상할 수 있는 모든 [단위](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)를 취할 수 있습니다. 예로 pixels, mm, rems, % 등이 해당한다.
+> 이러한 속성의 값은 당신이 논리적으로 예상할 수 있는 모든 [단위](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)를 취할 수 있습니다. 예로 pixels, mm, rems, % 등이 해당한다.
 
 이제 저장하고 새로고침하면 다음과 같은 내용의 결과를 얻을 것입니다.
 
@@ -143,7 +143,7 @@ span {
 근사하죠, 그쵸? 좋습니다. 그러나 이것은 아마도 여러분이 기대했던 것이 아니었을 것입니다. 우리가 좌측 상단을 지정했는데 왜 우측 하단으로 이동했을까요? 처음에는 비논리적으로 들릴지 모르지만, 이것은 상대적 위치잡기가 작용하는 방식일 뿐입니다. 즉, 위치가 지정된 상자의 특정 측면을 밀어서 반대 방향으로 움직이는 보이지 않는 힘이 있다고 생각할 필요가 있습니다. 예를 들어, `top: 30px;`를 지정하면 힘은 상자 상단을 밀어서 30px 아래로 이동하게 만듭니다.
 
 > [!NOTE]
-> 이 시점에 예제의 실제 구현 장면을 [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html)에서 확인할 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
+> 이 시점에 예제의 실제 구현 장면을 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html)에서 확인할 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
 
 ## 절대 위치잡기
 
@@ -223,11 +223,11 @@ span {
 > **참고:** **주석**: 그렇습니다. 여백이 위치잡기한 요소에 여전히 영향을 미칩니다. 그러나 마진 축소 영향은 업습니다.
 
 > [!NOTE]
-> 당신은 [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html)에서 예제를 확인할 수 있습니다([소스 코드를 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
+> 당신은 [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html)에서 예제를 확인할 수 있습니다([소스 코드를 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### 위치잡기 상황
 
-어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/Containing_block#Identifying_the_containing_block)).
+어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
 
 조상 요소가 명시적으로 정의된 위치 속성을 가지고 있지 않으면 초깃값으로 모든 조상 요소에 정적 위치가 부여됩니다. 그에 따른 결과, 절대적 위치잡기한 요소는 **initial containing block**에 포함되게 됩니다. 초기 콘테이너 블록은 브라우저 뷰포트 크기의 용적을 가지며, 자신도 {{htmlelement("html")}} 요소를 포함하는 블록입니다. 간단히 말해서, 절대적 위치잡기한 요소는 {{htmlelement("html")}} 요소의 외부에 포함되어 초기 뷰포트 기준과 비례한 곳에 위치하게 됩니다.
 
@@ -301,7 +301,7 @@ span {
 위치잡기한 요소는 이제 기준이 되는 {{htmlelement("body")}} 요소와 비례한 위치에 놓이게 된다.
 
 > [!NOTE]
-> 당신은 이 시점에 예제의 실제 구현 장면을 [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html)에서 볼 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
+> 당신은 이 시점에 예제의 실제 구현 장면을 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html)에서 볼 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
 
 ### z-인덱스 소개
 
@@ -402,7 +402,7 @@ p:nth-of-type(1) {
 z-인덱스는 단위가 없는 인덱스 값만 허용한다는 점에 유의하자; 하나의 요소가 Z축 위로 23픽셀이 되도록 지정할 수 없습니다. 그런 식으론 작동하지 않습니다. 높은 값의 요소는 낮은 값 요소의 위로 간니다. 그러니 당신이 어떤 값을 사용할 지에 달려있습니다. 2와 3을 사용하면 300과 40000과 같은 효과를 얻을 수 있습니다.
 
 > [!NOTE]
-> 이 시점에 예제의 실제 구현 장면을 [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html)에서 볼 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
+> 이 시점에 예제의 실제 구현 장면을 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html)에서 볼 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
 
 ## 고정 위치잡기
 
@@ -508,7 +508,7 @@ p:nth-of-type(1) {
 {{ EmbedLiveSample('고정_위치잡기', '100%', 400) }}
 
 > [!NOTE]
-> 당신은 이 시점에 예제의 실제 구현 장면을 [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html)에서 볼 수 있습니다 ([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> 당신은 이 시점에 예제의 실제 구현 장면을 [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html)에서 볼 수 있습니다 ([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ## 흡착 위치잡기
 
@@ -676,7 +676,7 @@ body {
 {{ EmbedLiveSample('색인_스크롤링', '100%', 200) }}
 
 > [!NOTE]
-> 당신은 이 시점에 예제의 실제 구현 장면을 [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html)에서 볼 수 있습니다([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
+> 당신은 이 시점에 예제의 실제 구현 장면을 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html)에서 볼 수 있습니다([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
 
 ## 요약정리
 

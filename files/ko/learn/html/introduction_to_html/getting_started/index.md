@@ -227,17 +227,17 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 <p>sixth</p>
 ```
 
-{{htmlelement("em")}} 은 인라인 요소(inline element) 이므로, 밑에서 보실 수 있듯이, 처음 세 개의 요소는 서로 같은 줄에, 사이에 공백이 없이 위치합니다. 한편, {{htmlelement("p")}} 는 블록 레벨 요소이므로, 각 요소들은 새로운 줄에 나타나며, 위와 아래에 여백이 있습니다 (여백은 브라우저가 문단에 적용하는 기본 [CSS styling](/ko/docs/Learn/CSS/Introduction_to_CSS) 때문에 적용됩니다).
+{{htmlelement("em")}} 은 인라인 요소(inline element) 이므로, 밑에서 보실 수 있듯이, 처음 세 개의 요소는 서로 같은 줄에, 사이에 공백이 없이 위치합니다. 한편, {{htmlelement("p")}} 는 블록 레벨 요소이므로, 각 요소들은 새로운 줄에 나타나며, 위와 아래에 여백이 있습니다 (여백은 브라우저가 문단에 적용하는 기본 [CSS styling](/en-US/docs/Learn/CSS/First_steps) 때문에 적용됩니다).
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
 > [!NOTE]
-> HTML5에서 요소 분류를 재정의 했습니다: [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). 이러한 정의는 이전의 정의보다 더 정확하고 덜 모호하지만, "블록"과 "인라인"보다 이해하기 훨씬 더 복잡하기 때문에, 이 주제 내내 이 정의들을 고수할 것입니다.
+> HTML5에서 요소 분류를 재정의 했습니다: [Element content categories](https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). 이러한 정의는 이전의 정의보다 더 정확하고 덜 모호하지만, "블록"과 "인라인"보다 이해하기 훨씬 더 복잡하기 때문에, 이 주제 내내 이 정의들을 고수할 것입니다.
 
 > [!NOTE]
-> 이 주제에서 사용되는 "블럭(block)"과 "인라인(inline)"의 뜻은 [the types of CSS boxes](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)에서 사용하고 있는 같은 단어와 혼돈하면 안 됩니다. 기본적으로는 상관관계가 있지만 CSS 표시 유형을 변경해도 요소의 범주는 변경되지 않으며 요소가 포함할 수 있는 요소와 요소가 포함될 수 있는 요소에는 영향을 주지 않는다. HTML5가 이러한 용어들을 삭제했던 이유 중 하나는 이러한 다소 흔한 혼란을 막기 위해서였다.
+> 이 주제에서 사용되는 "블럭(block)"과 "인라인(inline)"의 뜻은 [the types of CSS boxes](/ko/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes)에서 사용하고 있는 같은 단어와 혼돈하면 안 됩니다. 기본적으로는 상관관계가 있지만 CSS 표시 유형을 변경해도 요소의 범주는 변경되지 않으며 요소가 포함할 수 있는 요소와 요소가 포함될 수 있는 요소에는 영향을 주지 않는다. HTML5가 이러한 용어들을 삭제했던 이유 중 하나는 이러한 다소 흔한 혼란을 막기 위해서였다.
 
-> **참고:** [Block-level elements](/ko/docs/Web/HTML/Block-level_elements)문서와 [Inline elements](/ko/docs/Web/HTML/Inline_elements)문서를 참고하면 블럭과 인라인 요소에 대한 유용한 내용을 찾을 수 있습니다.
+> **참고:** [Block-level elements](/ko/docs/Glossary/Block-level_content)문서와 [Inline elements](/ko/docs/Glossary/Inline-level_content)문서를 참고하면 블럭과 인라인 요소에 대한 유용한 내용을 찾을 수 있습니다.
 
 ### 빈 요소(Empty elements)
 
@@ -476,7 +476,7 @@ textarea.onkeyup = function () {
 >
 ```
 
-하지만 만약 당신이 따옴표 안에 같은 따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든) 따옴표를 표시하기 위해서 [HTML entities](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML)를 사용하세요. 예를 들어 이렇게 하면 잘못됩니다.
+하지만 만약 당신이 따옴표 안에 같은 따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든) 따옴표를 표시하기 위해서 [HTML entities](#Entity_references_Including_special_characters_in_HTML)를 사용하세요. 예를 들어 이렇게 하면 잘못됩니다.
 
 ```html-nolint example-bad
 <a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
@@ -540,8 +540,8 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 - {{htmlelement ( "body")}} 요소의 시작 태그 바로 아래에 문서의 기본 제목을 추가하십시오. `<h1>` 여는 태그와 `</h1>` 닫는 태그 안에 싸야합니다.
 - 관심있는 주제에 대한 텍스트를 포함하도록 단락 컨텐츠를 편집하십시오.
 - 중요한 단어는 `<strong>` 여는 태그와 `</ strong>` 닫는 태그 안에 넣어 굵게 표시하십시오.
-- [이 글의 앞부분에서 설명](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)한대로 단락에 대한 링크를 추가하십시오.
-- 문서에 이미지를 추가하십시오. [이 글의 앞부분에서 설명](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)한대로 단락 아래에 배치하십시오. 다른 이미지 (컴퓨터의 로컬 또는 웹의 다른 위치)에 연결하면 보너스 포인트를 얻을 수 있습니다.
+- [이 글의 앞부분에서 설명](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element)한대로 단락에 대한 링크를 추가하십시오.
+- 문서에 이미지를 추가하십시오. [이 글의 앞부분에서 설명](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#empty_elements)한대로 단락 아래에 배치하십시오. 다른 이미지 (컴퓨터의 로컬 또는 웹의 다른 위치)에 연결하면 보너스 포인트를 얻을 수 있습니다.
 
 만약 실수한 경우 언제든지 _Reset_ 버튼을 사용하여 초기화 할 수 있습니다. 문제가 발생하면 _Show solution_ 단추를 눌러 답변을 확인하십시오.
 
@@ -727,7 +727,7 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
+> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
 
 ## HTML 주석
 

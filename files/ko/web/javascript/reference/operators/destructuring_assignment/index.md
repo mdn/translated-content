@@ -366,7 +366,7 @@ whois(user); // "jdoe is John"
 
 ### 계산된 속성 이름과 구조 분해
 
-계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
+계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
 
 ```js
 let key = "z";
@@ -407,5 +407,5 @@ console.log(fizzBuzz); // "true"
 
 ## 같이 보기
 
-- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

@@ -28,4 +28,4 @@ Firefox 67 이전 버전에서 `file:///` URI를 사용하는 페이지를 열�
 - [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
 - [CORS 소개](/ko/docs/Web/HTTP/CORS)
-- [URL이 무엇인가?](/ko/docs/Learn/Common_questions/What_is_a_URL)
+- [URL이 무엇인가?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
