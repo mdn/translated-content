@@ -11,7 +11,7 @@ l10n:
 
 ## 标题类型
 
-你的拓展应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中指定侧边栏的标题（这被称为“_清单标题_”）。如果你没有指定清单标题，则将默认使用拓展名作为标题。
+你的扩展应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中指定侧边栏的标题（这被称为“_清单标题_”）。如果你没有指定清单标题，则将默认使用扩展名作为标题。
 
 如果你使用 `setTitle()` 设置新标题，并包含了 `tabId` 选项，那么标题仅为给定的标签设置。这个标题称为“_标签特定标题_”。
 
@@ -37,7 +37,7 @@ browser.sidebarAction.setTitle(
 
       - : `string` 或 `null`，侧边栏的新标题。
 
-        如果 `title` 是空字符串，则使用拓展名作为标题，但 {{WebExtAPIRef("sidebarAction.getTitle")}} 仍会提供空字符串。
+        如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("sidebarAction.getTitle")}} 仍会提供空字符串。
 
         如果 `title` 为 `null`，那么之前设置的标题将会被移除，并且：
 
