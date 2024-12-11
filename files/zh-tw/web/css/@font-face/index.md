@@ -85,7 +85,6 @@ l10n:
 - 網頁字型受相同的域名限制（字型檔案必須與使用它們的頁面在同一域名），除非使用 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
 - `@font-face` 不能宣告於 CSS 選擇器內。例如，下列範例將無效：
 
-
   ```css example-bad
   .className {
     @font-face {
