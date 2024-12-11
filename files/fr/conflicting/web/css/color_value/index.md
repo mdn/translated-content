@@ -1,6 +1,7 @@
 ---
 title: color-contrast()
-slug: Web/CSS/color_value/color-contrast
+slug: conflicting/Web/CSS/color_value
+original_slug: Web/CSS/color_value/color-contrast
 l10n:
   sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
