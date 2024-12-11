@@ -10,9 +10,7 @@ l10n:
 
 **`Window.screenX`** 읽기 전용 속성은 사용자의 브라우저 뷰포트의 왼쪽 테두리에서 화면 왼편까지의 수평 거리를 CSS 픽셀 단위로 반환합니다.
 
-> [!NOTE]
-> An alias of `screenX` was implemented across modern
-> `screenX` 의 별칭은 최신 브라우저에
+> [!NOTE] > `screenX` 의 별칭은 최신 브라우저에
 > {{domxref("Window.screenLeft")}}로 구현되었습니다.
 > 이는 원래 IE 브라우저에만 지원이 되었으나 인지도 덕분에 어느 곳에서나 소개되었습니다.
 
