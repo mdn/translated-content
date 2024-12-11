@@ -1,6 +1,7 @@
 ---
 title: Want-Digest
-slug: Web/HTTP/Headers/Want-Digest
+slug: Web/HTTP/Headers/Want-Content-Digest
+original_slug: Web/HTTP/Headers/Want-Digest
 ---
 
 {{HTTPSidebar}}
