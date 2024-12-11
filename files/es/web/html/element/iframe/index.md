@@ -69,7 +69,7 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
 
 ## Atributos
 
-Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
 - En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
@@ -78,7 +78,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 <!---->
 
 - `allow`
-  - : Especifíca una [política de características](/es/docs/Web/HTTP/Feature_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
+  - : Especifíca una [política de características](/es/docs/Web/HTTP/Permissions_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
 - `allowfullscreen`
 
   - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
@@ -124,7 +124,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
     - `strict-origin-when-cross-origin`: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLHyperlinkElementUtils/hash), [password](/es/docs/Web/API/HTMLHyperlinkElementUtils/password), or [username](/es/docs/Web/API/HTMLHyperlinkElementUtils/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), or [username](/es/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sandbox`
 
@@ -133,7 +133,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `allow-forms`: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.
     - `allow-modals`: Lets the resource [open modal windows](https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag).
     - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/es/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock).
+    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API).
     - `allow-popups`: Allows popups (such as `window.open()`, `target="_blank"`, or `showModalDialog()`). If this keyword is not used, the popup will silently fail to open.
     - `allow-popups-to-escape-sandbox`: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.
     - `allow-presentation`: Lets the resource start a [presentation session](/es/docs/Web/API/PresentationRequest).
@@ -197,7 +197,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 - `webkitallowfullscreen` {{ non-standard_inline() }}
   - : In Chrome 17 or later (and maybe earlier), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.webkitRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
 - `mozapp` {{ non-standard_inline() }}
-  - : For frames hosting an [open web app](/en/Apps), this specifies the URL of the [app manifest](/en/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
+  - : For frames hosting an [open web app](/en-US/Apps), this specifies the URL of the [app manifest](/en-US/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en-US/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
 - `remote` {{ non-standard_inline() }}
   - : Load the frame's page in a separate content process.
 

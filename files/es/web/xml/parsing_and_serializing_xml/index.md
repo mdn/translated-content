@@ -7,10 +7,10 @@ slug: Web/XML/Parsing_and_serializing_XML
 
 La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
 
-- [XMLSerializer](/en/XMLSerializer) para convertir a tipo string el arbol del DOM
-- [XPath](/en/XPath) para apuntar a diferentes partes de un documento **[XML](/en/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
-- [DOMParser](/en/DOM/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
-- [XMLHttpRequest](/en/nsIXMLHttpRequest) para convertit recursos URL direccionables **en arboles del DOM**
+- [XMLSerializer](/en-US/XMLSerializer) para convertir a tipo string el arbol del DOM
+- [XPath](/en-US/XPath) para apuntar a diferentes partes de un documento **[XML](/en-US/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
+- [DOMParser](/en-US/DOM/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
+- [XMLHttpRequest](/en-US/nsIXMLHttpRequest) para convertit recursos URL direccionables **en arboles del DOM**
 
 ## Parte 1: Como crear un documento XML
 
@@ -32,7 +32,7 @@ dump(
 
 ### Creando un documento XML empezando desde un árbol de Objetos JavaScript (JXON)
 
-Por favor vea JXON[algoritmos](/en/JXON#Reverse_Algorithms)de reversa.
+Por favor vea JXON[algoritmos](/en-US/JXON#reverse_algorithms)de reversa.
 
 ### Codificando rexursos de URL direccionables en árboles del DOM
 
@@ -61,7 +61,7 @@ Use the following approaches to serialize the contents of the XML document you c
 
 ### Serializing DOM trees to strings
 
-First, create a DOM tree as described in [How to Create a DOM tree](/en/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
+First, create a DOM tree as described in [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
 
 Now, let's serialize `doc` — the DOM tree — to a string:
 
@@ -70,7 +70,7 @@ var oSerializer = new XMLSerializer();
 var sXML = oSerializer.serializeToString(doc);
 ```
 
-The `new XMLSerializer()` constructor is not available from within a JS XPCOM component (or a [JS module](/en/JavaScript_code_modules)). Instead, write:
+The `new XMLSerializer()` constructor is not available from within a JS XPCOM component (or a [JS module](/en-US/JavaScript_code_modules)). Instead, write:
 
 ```js
 var oSerializer = Components.classes[
@@ -81,7 +81,7 @@ var sXML = oSerializer.serializeToString(doc);
 
 #### "Pretty" serialization of DOM trees to strings
 
-You can [pretty print](http://en.wikipedia.org/wiki/Pretty-print) a DOM tree using [`XMLSerializer`](/en/XMLSerializer) and [E4X](/en/E4X). First, create a DOM tree as described in the [How to Create a DOM tree](/en/How_to_create_a_DOM_tree) article. Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}. The `doc` variable contains the DOM tree.
+You can [pretty print](http://en.wikipedia.org/wiki/Pretty-print) a DOM tree using [`XMLSerializer`](/en-US/XMLSerializer) and [E4X](/en-US/E4X). First, create a DOM tree as described in the [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree) article. Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}. The `doc` variable contains the DOM tree.
 
 ```js
 var oSerializer = new XMLSerializer();
@@ -105,13 +105,13 @@ Becomes
 
 ### Serializing DOM trees to Javascript Object trees (JXON)
 
-[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation) is a way to represent JavaScript Objects using XML. To address only parts of an XML document, use [XPath](/en/XPath) instead of converting the whole document into JSON! Otherwise, read the [article about JXON](/en/JXON).
+[JXON](/en-US/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation) is a way to represent JavaScript Objects using XML. To address only parts of an XML document, use [XPath](/en-US/XPath) instead of converting the whole document into JSON! Otherwise, read the [article about JXON](/en-US/JXON).
 
 ### Serializing DOM trees to files
 
-First, create a DOM tree as described in the [How to Create a DOM tree](/en/How_to_create_a_DOM_tree) article. If you already have a DOM tree from using {{ domxref("XMLHttpRequest") }}, skip to the end of this section.
+First, create a DOM tree as described in the [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree) article. If you already have a DOM tree from using {{ domxref("XMLHttpRequest") }}, skip to the end of this section.
 
-Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en/Code_snippets/File_I//O)):
+Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en/Code_snippets/File_I_O)):
 
 ```js
 var oFOStream = Components.classes[
@@ -144,6 +144,6 @@ var serialized = document.documentElement.innerHTML;
 
 ## See also
 
-- [XPath](/en/XPath)
-- [XMLHttpRequest](/en/nsIXMLHttpRequest)
-- [JXO](/en/JXON)
+- [XPath](/en-US/XPath)
+- [XMLHttpRequest](/en-US/nsIXMLHttpRequest)
+- [JXO](/en-US/JXON)

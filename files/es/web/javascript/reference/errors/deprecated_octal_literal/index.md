@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
+title: "SyntaxError: \"x\" is not a legal ECMA-262 octal constant"
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
@@ -45,4 +45,4 @@ Utilice el cero inicialmente seguido de la letra "o";
 
 ## Ver Tambien
 
-- [Gramatica lexica](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
+- [Gramatica lexica](/es/docs/Web/JavaScript/Reference/Lexical_grammar#octal)

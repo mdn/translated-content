@@ -9,7 +9,7 @@ Una tarea muy común en HTML es la estructuración de datos, y para esto hay mú
 
 ## Requisitos previos
 
-Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
+Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
 
 > [!NOTE]
 > Si estas trabjando en un ordenador/tableta/otro dispositivo en el que no puedes crear tus propios archivos, puedes probar la mayoría de ejemplos online en webs como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).

@@ -19,7 +19,7 @@ Las URLs también se pueden utilizar para la transferencia de archivos ({{Glossa
 
 ### Aprende sobre esto
 
-- [Comprender las URLs y su estructura](/es/Learn/Understanding_URLs)
+- [Comprender las URLs y su estructura](/es/docs/Learn/Understanding_URLs)
 
 ### Especificación
 

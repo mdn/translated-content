@@ -17,7 +17,7 @@ El método `CONNECT` es un método de salto entre servidores.
 | {{Glossary("Safe")}}                                      | No  |
 | {{Glossary("Idempotent")}}                                | No  |
 | {{Glossary("Cacheable")}}                                 | No  |
-| Permitido en [formas HTML](/es/docs/Web/Guide/HTML/Forms) | No  |
+| Permitido en [formas HTML](/es/docs/Learn/Forms) | No  |
 
 ## Sintaxis
 

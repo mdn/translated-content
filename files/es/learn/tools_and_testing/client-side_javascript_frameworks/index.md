@@ -38,7 +38,7 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 > [!NOTE]
 > Los tutoriales de React se probaron por última vez en mayo de 2020, con React/ReactDOM 16.13.1 y create-react-app 3.4.1.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación React en nuestro [repositorio todo-react](https://github.com/mdn/todo-react). Para una versión en vivo, consulta <https://mdn.github.io/todo-react-build/>.
 
-- [1. Primeros pasos en React](/es/docs/Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started)
+- [1. Primeros pasos en React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : En este artículo conoceremos React. Descubriremos algunos detalles sobre su trasfondo y casos de uso, configuraremos una cadena básica de herramientas para React en nuestra computadora local, crearemos y jugaremos con una aplicación inicial sencilla, mientras aprendemos —durante el proceso— un poco acerca de cómo funciona React.
 - [2. Comenzando con nuestra lista de tareas de React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Digamos que se nos ha encomendado la tarea de crear una prueba de concepto (Proof of Concept — PoC) en React: una aplicación que permita a los usuarios agregar, editar y eliminar tareas en las que se quiera trabajar, pero que también permita marcar las tareas como completadas sin eliminarlas. Este artículo te guiará en la organización de la estructura y los estilos básicos del componente App, de manera que esté listo para la definición e interactividad de componentes individuales, los cuales agregaremos más adelante.

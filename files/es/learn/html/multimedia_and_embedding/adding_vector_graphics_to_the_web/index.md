@@ -141,7 +141,7 @@ background-size: contain;
 
 Al igual que el método `<img>` descrito anteriormente, la inserción de SVG con imágenes de fondo CSS significa que el SVG no se puede manipular con JavaScript y también está sujeto a las mismas limitaciones de CSS.
 
-Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers).
+Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
 
 ### Cómo incluir código SVG dentro de su HTML
 

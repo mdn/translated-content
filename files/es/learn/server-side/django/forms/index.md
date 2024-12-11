@@ -33,7 +33,7 @@ En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y
 
 ## Visión General
 
-Un [Formulario HTML](/es/docs/Web/Guide/HTML/Forms) es un conjunto de uno o más campos/widgets en una página web, que pueden ser usados para recolectar información de los usuarios para el envío a un servidor. Los formularios son un mecanismo flexible para recolectar datos de entrada porque son widgets adecuados para ingresar diferentes tipos de datos, incluyendo campos de texto, checkboxes, radio buttons, selector de fechas, etc. Los formularios son también una forma relativamente segura de compartir datos con el servidor, ya que permiten enviar información en peticiones `POST` con protección de falsificación de solicitud entre sitios.
+Un [Formulario HTML](/es/docs/Learn/Forms) es un conjunto de uno o más campos/widgets en una página web, que pueden ser usados para recolectar información de los usuarios para el envío a un servidor. Los formularios son un mecanismo flexible para recolectar datos de entrada porque son widgets adecuados para ingresar diferentes tipos de datos, incluyendo campos de texto, checkboxes, radio buttons, selector de fechas, etc. Los formularios son también una forma relativamente segura de compartir datos con el servidor, ya que permiten enviar información en peticiones `POST` con protección de falsificación de solicitud entre sitios.
 
 Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla de abajo muestra un formulario para editar uno de nuestros modelos de [Libro](/es/docs/Learn/Server-side/Django/Models), compuesto de un número de listas de selección y editores de texto.
 
@@ -45,7 +45,7 @@ En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con
 
 ## Formularios HTML
 
-Primero, una breve revisión de [Formularios HTML](/es/docs/Learn/HTML/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
+Primero, una breve revisión de [Formularios HTML](/es/docs/Learn/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -303,7 +303,7 @@ Si el formulario es válido, entonces podemos comenzar a usar los datos, accedie
 > [!WARNING]
 > Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo `request.POST['renewal_date']` o `request.GET['renewal_date']` (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.
 
-El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos `HttpResponseRedirect` y `reverse()` para redirigir a la vista llamada `'all-borrowed'`(esto fue creado como el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself)).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').
+El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos `HttpResponseRedirect` y `reverse()` para redirigir a la vista llamada `'all-borrowed'`(esto fue creado como el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/Authentication#challenge_yourself)).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').
 
 Eso es todo lo necesario para el manejo del formulario en sí, pero aún debemos restringir el acceso a la vista a los bibliotecarios. Probablemente deberíamos crear un nuevo permiso en `BookInstance` ("`can_renew`"),pero para simplificar las cosas aquí solo usamos la funcion decorator `@permission_required` con nuestro existente permiso `can_mark_returned`.
 
@@ -374,7 +374,7 @@ Crea la plantilla html referenciada en la vista dentro del directorio (**/catalo
 
 La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia `\{{bookinst}}` (y sus variables) porque se pasó al objeto de contexto en la funci'on `render()`,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.
 
-El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action` como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
+El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#html_forms) resumen en la parte superior de la página, un espacio vacío `action` como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
 
 > [!NOTE]
 > Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.
@@ -441,7 +441,7 @@ Para obtener más ejemplos de cómo reproducir manualmente los formularios en pl
 
 ### Probando la página
 
-Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
+Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/Authentication#challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
 
 ```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}

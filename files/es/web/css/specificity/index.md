@@ -5,11 +5,11 @@ slug: Web/CSS/Specificity
 
 {{CSSRef}}
 
-La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/CSS/CSS_Reference#Selectors).
+La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/docs/CSS/CSS_Reference#selectors).
 
 ## ¿Cómo se calcula?
 
-La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada [tipo de selector](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores). Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una [declaración directa](/es/docs/Web/CSS/Especificidad#Elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados), esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
+La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada [tipo de selector](/es/docs/Web/CSS/Specificity#tipos_de_selectores). Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una [declaración directa](/es/docs/Web/CSS/Specificity#elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados), esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
 
 > [!NOTE]
 > La **proximidad de elementos** en el árbol del documento no tiene efecto en la especificidad.
@@ -24,7 +24,7 @@ La siguiente lista de tipos de selectores incrementa en función de la especific
 
 El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [`␣`](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
 
-Para más información, visita ["Especificidad" en "Cascada y herencia"](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia#Especificidad), también puedes visitar: [https://specifishity.com](https://specifishity.com/)
+Para más información, visita ["Especificidad" en "Cascada y herencia"](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#especificidad), también puedes visitar: [https://specifishity.com](https://specifishity.com/)
 
 Los estilos _inline_ añadidos a un elemento (p.e., `style="font-weight:bold"`) siempre sobrescriben a cualquier estilo escrito en hojas de estilo externas, por lo que se puede decir que tienen la mayor especificidad.
 
@@ -128,7 +128,7 @@ C) O reescribe la regla original para evitar el uso de `!important`.
 
 ### La excepción `:not`
 
-La pseudo-clase negación `:not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores).
+La pseudo-clase negación `:not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Specificity#tipos_de_selectores).
 
 Aquí tienes un pedazo de CSS:
 
@@ -245,4 +245,4 @@ Porque el selector `h1` selecciona el objetivo de manera específica, pero el co
 
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - CSS3 Selectors Specificity - <http://www.w3.org/TR/selectors/#specificity>
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

@@ -11,11 +11,11 @@ En este módulo, continuamos nuestra cobertura de todas las características cla
 
 Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 
-[Empieza aquí](/es/docs/Learn/Front-end_web_developer)
+[Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Pre-requisitos
 
-Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/es/docs/Learn/CSS/Introduction_to_CSS), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
+Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/en-US/docs/Learn/CSS/First_steps), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
 
 > [!NOTE]
 > Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
@@ -24,11 +24,11 @@ Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo bá
 
 - [Tomando decisiones en tu código — condicionales](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
   - : En cualquier lenguaje de programación, el código necesita tomar decisiones y efectuar acciones consiguientemente dependiendo de las diferentes ordenes ingresadas. Por ejemplo, en un juego, si el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si esta siendo vista por la mañana, muestra un gráfico del amanecer; muestra estrellas y una luna si es de noche. En este artículo exploraremos como los condicionales estructuran el trabajo en Javascript.
-- [Bucles de código](/es/docs/Learn/JavaScript/Building_blocks/Bucle_codigo)
+- [Bucles de código](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
   - : A veces necesitas que una tarea se haga más de una vez. Por ejemplo, revisar toda una lista de nombres. En programación, los bucles ('_loops'_ en inglés) hacen este trabajo muy bien. Aca veremos la estructura de loops en Javascript.
 - [Funciones — bloques de código reusables](/es/docs/Learn/JavaScript/Building_blocks/Functions)
   - : Otro concepto fundamental en código es **funciones. Funciones** te permite almacenar una pieza de código que ejecuta una sola tarea dentro de un bloque definido, y después llamar ese código cuando lo necesitas usando un comando corto en lugar de tener que escribir el mismo código varias veces. En este articulo exploraremos conceptos fundamentales detrás de las funciones tales como sintaxis básica, cómo invocar y definir funciones, ámbito o alcance (scope), y parámetros.
-- [Crea tu propia función](/es/docs/Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion)
+- [Crea tu propia función](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
   - : Con la información presentada en el artículo anterior, este artículo, pretende demostrar una parte práctica. Se podrá desarrollar una función propia, y durante el desarrollo se presentarán algunos consejos prácticos y útiles para trabajar con funciones.
 - [Una función devuelve valores](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
   - : Un concepto fundamental que ha de tenerse en cuenta, es que las funciones pueden devolver valores al finalizar su ejecución, aunque algunas funciones también pueden no devolver ningún valor. Es importante entender como son esos valores, qué tipos pueden tener y cómo aprovechar el valor devuelto por la función en el programa.

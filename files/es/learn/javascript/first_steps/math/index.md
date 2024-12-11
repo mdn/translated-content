@@ -29,7 +29,7 @@ En programación, incluso el simple sistema numérico decimal que todos conocemo
 
 - **Binario** — El lenguaje de computadora de nivel más bajo; 0s y 1s.
 - **Octal** — De base 8, utiliza de 0–7 en cada columna.
-- **Hexadecimal** — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas [colores en CSS](/es/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values).
+- **Hexadecimal** — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas [colores en CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
 
 **Antes de que comiences a preouparte de que tu cerebro se derrita, ¡detente un momento!** Para empezar, sólo vamos a apegarnos a los números decimales durante todo este curso; pocas veces te verás en la necesidad de comenzar a pensar sobre los otros tipos, si es que lo haces.
 
@@ -40,7 +40,7 @@ La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes 
 
 ### Para mí, todo son números
 
-Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
+Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
 
 **[Abrir en una ventana nueva](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
@@ -78,7 +78,7 @@ Los operadores aritméticos son operadores básicos que usamos para hacer sumas:
 > [!NOTE]
 > A veces verás números involucrados en sumas referidas como {{Glossary("Operand", "operands")}}.
 
-Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.
+Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.
 
 1. Primero, trata entrando un ejemplo simple por tu cuenta, como
 
@@ -130,11 +130,11 @@ Si quieres alterar la precedencia de operación, puedes colocar paréntesis alre
 Pruébalo y verás.
 
 > [!NOTE]
-> Una completa lista de todos los operadores de JavaScript y sus precedencias pueden encontrarse en [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> Una completa lista de todos los operadores de JavaScript y sus precedencias pueden encontrarse en [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#operator_precedence).
 
 ## Operadores de incremento y decremento
 
-Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (`++`) y decremento (`--`). Usamos `++` en nuestro juego "Adivina el número" en nuestro artículo [Un primer acercamiento a JavaScrip](/es/docs/Learn/JavaScript/First_steps/A_first_splash)[t](/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash), cuando agregamos 1 a nuestra variable `guessCount` para mantener una pista de cuantas respuestas le quedan al usuario por turno.
+Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (`++`) y decremento (`--`). Usamos `++` en nuestro juego "Adivina el número" en nuestro artículo [Un primer acercamiento a JavaScrip](/es/docs/Learn/JavaScript/First_steps/A_first_splash)[t](/es/docs/Learn/JavaScript/First_steps/A_first_splash), cuando agregamos 1 a nuestra variable `guessCount` para mantener una pista de cuantas respuestas le quedan al usuario por turno.
 
 ```js
 guessCount++;
@@ -203,7 +203,7 @@ x *= y; // x ahora contiene el valor 12
 ```
 
 > [!NOTE]
-> Hay una cantidad de [otros operadores de asignación disponibles](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), pero estos son los básicos que debes aprender por ahora.
+> Hay una cantidad de [otros operadores de asignación disponibles](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), pero estos son los básicos que debes aprender por ahora.
 
 ## Aprendizaje activo: dimensionando una caja canvas
 
@@ -291,6 +291,6 @@ En este artículo hemos cubierto la información fundamental que necesitas saber
 En el siguiente artículo, exploraremos el texto y cómo JavaScript nos permite manipularlo.
 
 > [!NOTE]
-> Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre [Numero y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_dates) y [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+> Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre [Numero y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_dates) y [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

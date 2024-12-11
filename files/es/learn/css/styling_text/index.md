@@ -9,7 +9,7 @@ Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS 
 
 ## Requisitos previos
 
-Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
+Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/en-US/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
 > Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).
@@ -31,5 +31,5 @@ Este módulo contiene los siguientes artículos, los cuales le enseñarán todos
 
 Las siguientes evaluaciones pondrán a prueba su comprensión de las técnicas del diseño de texto cubiertas en las guías anteriores.
 
-- [Escribiendo una página de inicio para la comunidad de la escuela](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribiendo una página de inicio para la comunidad de la escuela](/es/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : En esta evaluación, pondremos a prueba su comprensión del estilo del texto haciendo que redacte el texto de la página principal de la escuela comunitaria.

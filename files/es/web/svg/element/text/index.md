@@ -67,10 +67,10 @@ SVG text también puede ser estilizado
 
 ### Atributos globales
 
-- [Atributos de procesamiento condicional »](/en/SVG/Attribute#ConditionalProccessing)
-- [Atributos base »](/en/SVG/Attribute#Core)
-- [Atributos de eventos gráficos »](/en/SVG/Attribute#GraphicalEvent)
-- [Atributos de presentación](/en/SVG/Attribute#Presentation) »
+- [Atributos de procesamiento condicional »](/en-US/SVG/Attribute#conditionalproccessing)
+- [Atributos base »](/en-US/SVG/Attribute#core)
+- [Atributos de eventos gráficos »](/en-US/SVG/Attribute#graphicalevent)
+- [Atributos de presentación](/en-US/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -89,7 +89,7 @@ SVG text también puede ser estilizado
 
 ## Interfaz DOM
 
-Este elemento hereda la interfaz de [`SVGTextElement`](/en/DOM/SVGTextElement).
+Este elemento hereda la interfaz de [`SVGTextElement`](/en-US/DOM/SVGTextElement).
 
 ## Especificaciones
 

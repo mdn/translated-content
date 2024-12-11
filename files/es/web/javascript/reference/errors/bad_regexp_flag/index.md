@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: indicador de expresión regular no válido "x"'
+title: "SyntaxError: indicador de expresión regular no válido \"x\""
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
@@ -85,4 +85,4 @@ Consulta la tabla anterior para ver las seis marcas de expresiones regulares vá
 ## Ve también
 
 - {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}}
-- [Indicadores de RegEx](http://xregexp.com/flags/) – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (`n`, `s`, `x`, `A`)
+- [Indicadores de RegEx](https://xregexp.com/flags/) – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (`n`, `s`, `x`, `A`)

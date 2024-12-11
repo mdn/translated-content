@@ -29,7 +29,7 @@ document.bgColor = "#ff00ff";
 
 El valor por defecto de esta propiedad en Mozilla Firefox es blanco (`#ffffff` en hexadecimal).
 
-`document.bgColor` está desaprobado en [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). La alternativa recomendada es el uso del estilo [background-color](/es/CSS/background-color) de CSS el cual puede ser accesado a través del DOM con `document.body.style.backgroundColor`. Otra alternativa es `document.body.bgColor`, sin embargo, ésta última también está desaprobada en HTML 4.01 a favor de la alternativa CSS.
+`document.bgColor` está desaprobado en [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). La alternativa recomendada es el uso del estilo [background-color](/es/docs/Web/CSS/background-color) de CSS el cual puede ser accesado a través del DOM con `document.body.style.backgroundColor`. Otra alternativa es `document.body.bgColor`, sin embargo, ésta última también está desaprobada en HTML 4.01 a favor de la alternativa CSS.
 
 ## Especificaciones
 

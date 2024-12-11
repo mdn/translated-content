@@ -61,7 +61,7 @@ Puedes usar cualquiera de ellos, ya que tienen funciones similares, aunque algun
 
 Si desea incluir video o audio en su sitio web, puede incrustar servicios online (por ejemplo YouTube, Vimeo, or Dailymotion), o incluir sus propios videos (ver más abajo los costos de ancho de banda).
 
-Para archivos de audio, puede encontrar software gratuito([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)), o pagar hasta unos poco cientos de dólares ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](http://www.adobe.com/products/audition.html)). Sin embargo, el software de edición de vídeo puede ser gratis ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/mac/imovie/) for Mac), menos de $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), o varios cientos de dólares ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). El software recibido con tu cámara digital puede cubrir todas tus necesidades.
+Para archivos de audio, puede encontrar software gratuito([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)), o pagar hasta unos poco cientos de dólares ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Sin embargo, el software de edición de vídeo puede ser gratis ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/mac/imovie/) for Mac), menos de $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), o varios cientos de dólares ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). El software recibido con tu cámara digital puede cubrir todas tus necesidades.
 
 ### Herramientas de publicación
 
@@ -149,7 +149,7 @@ En dependencia de cómo responda estas preguntas, su sitio pudiera costar miles 
 
 ## Próximos pasos
 
-Ahora que entiende que cantidad de dinero su sitio puede costarle, es tiempo de comenzar a diseñar un sitio web y [preparar su entorno de trabajo](/es/docs/Learn/Set_up_a_basic_working_environment).
+Ahora que entiende que cantidad de dinero su sitio puede costarle, es tiempo de comenzar a diseñar un sitio web y [preparar su entorno de trabajo](/es/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
-- Lea sobre [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Choose,_Install_and_set_up_a_text_editor).
-- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/es/Learn/Anatomy_of_a_web_page).
+- Lea sobre [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
+- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/es/docs/Learn/Anatomy_of_a_web_page).

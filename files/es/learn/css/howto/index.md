@@ -11,37 +11,37 @@ Los siguientes enlaces apuntan a soluciones comunes a los problemas cotidianos q
 
 ### Básicos
 
-- [Cómo aplicar CSS al HTML](/es/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_to_apply_your_CSS_to_your_HTML)
-- [How to use whitespace in CSS](/es/Learn/CSS/Introduction_to_CSS/Syntax#White_space)
-- [Cómo escribir comentarios en CSS](/es/Learn/CSS/Introduction_to_CSS/Syntax#Comments)
-- [Cómo seleccionar elementos mediante nombre del elemento, clase o ID](/es/Learn/CSS/Introduction_to_CSS/Selectors#Simple_selectors)
-- [Cómo seleccionar elementos mediante nombre del atributo y contenido](/es/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors)
-- [Cómo usar pseudo-clases](/es/Learn/CSS/Introduction_to_CSS/Selectors#Pseudo-classes)
-- [Cómo usar pseudo-elementos](/es/Learn/CSS/Introduction_to_CSS/Selectors#Pseudo-elements)
-- [Cómo aplicar múltiples selectores a la misma regla](/es/Learn/CSS/Introduction_to_CSS/Selectors#Multiple_selectors_on_one_rule)
-- [Cómo especificar colores en CSS](/es/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)
-- [Cómo depurar CSS en el navegador](/es/Learn/CSS/Introduction_to_CSS/Debugging_CSS#Inspecting_the_DOM_and_CSS)
+- [Cómo aplicar CSS al HTML](/es/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [How to use whitespace in CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Syntax#white_space)
+- [Cómo escribir comentarios en CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Syntax#comments)
+- [Cómo seleccionar elementos mediante nombre del elemento, clase o ID](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors#simple_selectors)
+- [Cómo seleccionar elementos mediante nombre del atributo y contenido](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors#attribute_selectors)
+- [Cómo usar pseudo-clases](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors#pseudo-classes)
+- [Cómo usar pseudo-elementos](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors#pseudo-elements)
+- [Cómo aplicar múltiples selectores a la misma regla](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors#multiple_selectors_on_one_rule)
+- [Cómo especificar colores en CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#colors)
+- [Cómo depurar CSS en el navegador](/es/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS#inspecting_the_dom_and_css)
 
 ### CSS y texto
 
 - [Cómo dar estilo al texto](/es/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Cómo personalizar una lista de elementos](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Cómo dar estilo a links](/es/Learn/CSS/Styling_text/Styling_links)
-- [Cómo agregar sombras al texto](/es/Learn/CSS/Styling_text/Fundamentals#Text_drop_shadows)
+- [Cómo dar estilo a links](/es/docs/Learn/CSS/Styling_text/Styling_links)
+- [Cómo agregar sombras al texto](/es/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows)
 
 ### Cajas y diseños
 
-- [Cómo redimensionar cajas CSS](/es/Learn/CSS/Introduction_to_CSS/Box_model#Box_properties)
-- [Cómo controlar el contenido que desborda](/es/Learn/CSS/Introduction_to_CSS/Box_model#Overflow)
-- [Cómo controlar la parte de una caja CSS en la que se dibuja el fondo](/es/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip)
-- [Cómo defino un elemento inline, block o inline-block?](/es/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)
-- [Cómo crear cajas elegantes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (ver también el módulo [Cajas de estilo](/es/docs/Learn/CSS/Styling_boxes), en general).
-- [Cómo usar `background-clip` para controlar qué parte del cuadro cubre la imagen de fondo](/es/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip).
-- [Cómo cambiar completamente el modelo de la caja usando `box-sizing`](/es/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)
-- [Cómo controlar los fondos](/es/Learn/CSS/Styling_boxes/Backgrounds)
-- [Cómo controlar los bordes](/es/Learn/CSS/Styling_boxes/Borders)
-- [Cómo diseñar una tabla HTML](/es/Learn/CSS/Styling_boxes/Styling_tables)
-- [Cómo agregar sombras a las cajas](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Box_shadows)
+- [Cómo redimensionar cajas CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties)
+- [Cómo controlar el contenido que desborda](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#overflow)
+- [Cómo controlar la parte de una caja CSS en la que se dibuja el fondo](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#background_clip)
+- [Cómo defino un elemento inline, block o inline-block?](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#types_of_css_boxes)
+- [Cómo crear cajas elegantes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (ver también el módulo [Cajas de estilo](/en-US/docs/Learn/CSS/Building_blocks), en general).
+- [Cómo usar `background-clip` para controlar qué parte del cuadro cubre la imagen de fondo](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#background_clip).
+- [Cómo cambiar completamente el modelo de la caja usando `box-sizing`](/es/docs/Learn/CSS/Styling_boxes/Box_model_recap#changing_the_box_model_completely)
+- [Cómo controlar los fondos](/es/docs/Learn/CSS/Styling_boxes/Backgrounds)
+- [Cómo controlar los bordes](/es/docs/Learn/CSS/Styling_boxes/Borders)
+- [Cómo diseñar una tabla HTML](/es/docs/Learn/CSS/Styling_boxes/Styling_tables)
+- [Cómo agregar sombras a las cajas](/es/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#box_shadows)
 
 ## Técnicas poco comunes o avanzadas
 
@@ -49,15 +49,15 @@ Más allá de lo básico, CSS permite técnicas de diseño muy avanzadas. Estos 
 
 ### General
 
-- [Cómo calcular la especificidad de un selector CSS](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity)
-- [Cómo controlar la herencia en CSS](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Controlling_inheritance)
+- [Cómo calcular la especificidad de un selector CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#specificity)
+- [Cómo controlar la herencia en CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#controlling_inheritance)
 
 ### Efectos avanzados
 
-- [Cómo usar filtros en CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Filters)
-- [Cómo usar los modos de fusión en CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Blend_modes)
+- [Cómo usar filtros en CSS](/es/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#filters)
+- [Cómo usar los modos de fusión en CSS](/es/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#blend_modes)
 
 ### Diseño
 
-- [Usar cajas flexibles en CSS](/es/docs/Web/Guide/CSS/Flexible_boxes)
-- [Uso de diseños de varias columnas en CSS](/es/docs/Web/Guide/CSS/Using_multi-column_layouts)
+- [Usar cajas flexibles en CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Uso de diseños de varias columnas en CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)

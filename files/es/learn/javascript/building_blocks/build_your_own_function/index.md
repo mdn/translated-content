@@ -31,7 +31,7 @@ La función `alert` es limitada: pueder cambiar el mensaje, pero no puedes cambi
 Para empezar, vamos a poner juntos una función básica.
 
 > [!NOTE]
-> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
+> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
 
 1. Comience accediendo al archivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) y haciendo una copia local. Verás que el HTML es simple — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.
 2. Luego añade lo siguiente dentro del elemento `<script>`:
@@ -268,7 +268,7 @@ En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo confi
    Puedes ver cuán útil se está volviendo nuestra (ahora no tan) poca función.
 
 > [!NOTE]
-> Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) también), o pídenos ayuda.
+> Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) también), o pídenos ayuda.
 
 ## Conclusión
 

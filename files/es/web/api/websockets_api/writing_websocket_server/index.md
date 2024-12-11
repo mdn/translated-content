@@ -9,7 +9,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 Si deseas utilizar la API WebSocket, es conveniente si tienes un servidor. En este artículo te mostraré como puedes escribir uno en C#. Tú puedes hacer esto en cualquier lenguaje del lado del servidor, pero para mantener las cosas simples y más comprensibles, elegí el lenguaje de Microsoft.
 
-Este servidor se ajusta a [RFC 6455](http://tools.ietf.org/html/rfc6455) por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.
+Este servidor se ajusta a [RFC 6455](https://tools.ietf.org/html/rfc6455) por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.
 
 ## Primeros pasos
 
@@ -177,7 +177,7 @@ Si nosotros enviamos "MDN", obtendremos estos bytes:
 | 1                              | 0    | 0    | 0    | 0x1=0001 |
 
 FIN: Puedes enviar tu mensaje en marcos, pero ahora debe mantener las cosas simples.
-Opcode _0x1_ significa que es un texto. [Lista completa de Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2)
+Opcode _0x1_ significa que es un texto. [Lista completa de Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2)
 
 \- 131:
 
@@ -208,4 +208,4 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## Relacionado
 
-- [Escribiendo servidores WebSocket](/es/docs/WebSockets/Writing_WebSocket_servers)
+- [Escribiendo servidores WebSocket](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

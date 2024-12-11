@@ -5,7 +5,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
-Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/HTML/Forms/The_native_form_widgets) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Advanced_styling_for_HTML_forms) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
+Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/Learn/Forms/Basic_native_form_controls) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Learn/Forms/Advanced_form_styling) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
 
 En este aartículo, veremos cómo construir dicho widget. Para ello, trabajaremos con un ejemplo: Reconstruir el elemento {{HTMLElement("select")}}.
 
@@ -922,10 +922,10 @@ The features we plan to use are the following (ordered from the riskiest to the 
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
+3. [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
 4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
+Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -1279,7 +1279,7 @@ window.addEventListener("load", () => {
 | Live example                                                                                |
 | ------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("",120,130)}}                                                             |
-| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
+| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
 
 ### Handling the widget's value
 
@@ -1638,7 +1638,7 @@ window.addEventListener("load", () => {
 | Live example                                                                                |
 | ------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("",120,130)}}                                                             |
-| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
+| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
 
 But wait a second, are we really done?
 
@@ -1646,15 +1646,15 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/es/docs/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
+Fortunately, there is a solution and it's called [ARIA](/es/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/es/docs/Accessibility/ARIA) is the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/es/docs/Web/Accessibility/ARIA) is the [`role`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
 It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our widget will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-To support the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role, we just have to update our HTML like this:
+To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
 
 ```html
 <!-- We add the role="listbox" attribute to our top element -->
@@ -1673,11 +1673,11 @@ To support the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/CSS/Attribute_selectors).
+> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Attribute_selectors).
 
 ### The `aria-selected` attribute
 
-Using the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/es/docs/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+Using the [`role`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/es/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
 
 The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
 
@@ -1957,7 +1957,7 @@ window.addEventListener("load", () => {
 | Live example                                                                                      |
 | ------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("",120,130)}}                                                                   |
-| [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
+| [Check out the final source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
 
 ## Conclusion
 

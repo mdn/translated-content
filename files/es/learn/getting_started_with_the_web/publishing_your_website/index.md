@@ -17,12 +17,12 @@ Publicar un sitio no es un tema sencillo, principalmente porque hay muchas maner
 
 Si deseas un control total sobre tu sitio web publicado, probablemente necesitarás gastar dinero para comprar:
 
-- _Alojamiento_ (_Hosting_) — espacio de almacenamiento alquilado en el [servidor web](/es/docs/Learn/Common_questions/Que_es_un_servidor_WEB) de una compañia de alojamientos. Pones los archivos de tu sitio web en este espacio, y el servidor web suministra el contenido a los usuarios que lo solicitan.
-- Un [nombre de dominio](/es/docs/Learn/Common_questions/What_is_a_domain_name) — dirección única mediante la cual la gente puede encontrar tu sitio web, como `https://www.mozilla.org`, o `https://es.wikipedia.org/`. Puedes tomar en alquiler el nombre de tu dominio durante algunos años en un **registrador de dominio**.
+- _Alojamiento_ (_Hosting_) — espacio de almacenamiento alquilado en el [servidor web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) de una compañia de alojamientos. Pones los archivos de tu sitio web en este espacio, y el servidor web suministra el contenido a los usuarios que lo solicitan.
+- Un [nombre de dominio](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) — dirección única mediante la cual la gente puede encontrar tu sitio web, como `https://www.mozilla.org`, o `https://es.wikipedia.org/`. Puedes tomar en alquiler el nombre de tu dominio durante algunos años en un **registrador de dominio**.
 
 Muchos sitios web profesionales toman esta opción.
 
-Además, necesitarás un programa de [protocolo de transferencia de archivo](/es/docs/Glossary/FTP) (_File Transfer Protocol_, FTP) para transferir los archivos que conforman tu sitio web al servidor (mira más detalles de [cuánto puede costar: software](/es/docs/Learn/Common_questions/Cuanto_cuesta#Software)). Los programas FTP varían ampliamente, pero en general tienes que conectarte a tu servidor web contratado mediante detalles proporcionados por tu empresa de alojamiento (por ejemplo: nombre de usuario, contraseña, nombre del _host_). Una vez conectado con el servidor web el programa te mostrará tus archivos locales y los archivos del servidor web en dos ventanas y te proporcionará una forma de transferir los archivos de un lado a otro.
+Además, necesitarás un programa de [protocolo de transferencia de archivo](/es/docs/Glossary/FTP) (_File Transfer Protocol_, FTP) para transferir los archivos que conforman tu sitio web al servidor (mira más detalles de [cuánto puede costar: software](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software)). Los programas FTP varían ampliamente, pero en general tienes que conectarte a tu servidor web contratado mediante detalles proporcionados por tu empresa de alojamiento (por ejemplo: nombre de usuario, contraseña, nombre del _host_). Una vez conectado con el servidor web el programa te mostrará tus archivos locales y los archivos del servidor web en dos ventanas y te proporcionará una forma de transferir los archivos de un lado a otro.
 
 ![](ftp.jpg)
 
@@ -40,7 +40,7 @@ Algunas herramientas te permiten publicar tu sitio en línea:
 
 - [GitHub](https://github.com/) es un sitio de «codificación social». Te permite cargar repositorios de código para almacenarlos en el **sistema de control de versiónes** de [Git](http://git-scm.com/). De esta manera puedes colaborar en proyectos de código pues por defecto el sistema es de código abierto, lo que significa que cualquier persona en el mundo puede encontrar tu código en GitHub, usarlo, aprender de él y mejorarlo. ¡Puedes hacer esto con el código de otra persona también! Git es un [sistema de control de versiones](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones) muy popular y GitHub es una comunidad muy importante y útil por lo que la mayor parte de empresas de tecnología ahora lo usan en su proceso laboral. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com), que te permite exponer el código de tu sitio web en vivo en la web.
 - [Dropbox](https://www.dropbox.com/) es un sistema de almacenamiento de archivos que te permite guardar los archivos en la web y tenerlos disponibles desde cualquier ordenador. Cualquier persona con una conexión a Internet puede acceder a cualquier carpeta de Dropbox que esté accesible al público. Si esa carpeta contiene los archivos del sitio web, estos serán visualizados como un sitio web de forma automática.
-- [Google App Engine](https://cloud.google.com/appengine/) es una poderosa plataforma que permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de varios niveles desde cero o alojar un sitio web estático. Para obtener más información consulta [¿Cómo se aloja un sitio web en Google App Engine?](/es/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) (en inglés).
+- [Google App Engine](https://cloud.google.com/appengine/) es una poderosa plataforma que permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de varios niveles desde cero o alojar un sitio web estático. Para obtener más información consulta [¿Cómo se aloja un sitio web en Google App Engine?](/es/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) (en inglés).
 
 A diferencia de la mayoría de alojamientos (servicios de _hosting_), tales herramientas son por lo general libres de utilizar, pero solo permiten un conjunto de funciones limitadas.
 
@@ -71,7 +71,7 @@ Esta no es la única manera, pero sí la que te permite poner manos a la obra in
 4. En esta página, en la casilla _Repository name_ (Nombre del repositorio), ingresa <kbd><em>usuario</em>.github.io</kbd>, donde _usuario_ es tu nombre de usuario. Así por ejemplo, nuestro amigo Bob Smith ingresaría _<kbd>bobsmith.github.io</kbd>_. ![](github-create-repo.png)
 
 5. Opcionalmente escribe una corta descripción de tu sitio web en el campo _Description_ para que recuerdes cuál es la temática que tratarás en él y selecciona la casilla de verificación _Public_ (Público) si quieres que cualquier persona pueda ver los resultados de las ediciones que haces al sitio web que estás creando.
-6. Marca la casilla de verificación _Initialize this repository with a README_ (Inicializar este repositorio con un README (LÉAME)). Esto te permitirá clonar inmediatamente el repositorio a tu equipo. ¡Si vas a transferir tus archivos desde tu equipo al servidor de GitHub a través de un cliente de FTP (como se explica en la sección _[Subir tus archivos a GitHub a través de la línea de comandos](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#Subir_tus_archivos_a_Github_a_través_de_la_línea_de_comandos)_, a continuación), **no debes realizar este paso**!
+6. Marca la casilla de verificación _Initialize this repository with a README_ (Inicializar este repositorio con un README (LÉAME)). Esto te permitirá clonar inmediatamente el repositorio a tu equipo. ¡Si vas a transferir tus archivos desde tu equipo al servidor de GitHub a través de un cliente de FTP (como se explica en la sección _[Subir tus archivos a GitHub a través de la línea de comandos](#Subir_tus_archivos_a_Github_a_través_de_la_línea_de_comandos)_, a continuación), **no debes realizar este paso**!
 
 7. Da clic en _Create repository_ (Crear repositorio).
 8. Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
@@ -171,9 +171,9 @@ En este punto, deberías tener tu página web de ejemplo disponible en una direc
 
 ### Ver también
 
-- [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/Que_es_un_servidor_WEB)
-- [¿Qué es un nombre de dominio?](/es/docs/Learn/Common_questions/What_is_a_domain_name)
-- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/Common_questions/Cuanto_cuesta)
+- [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [¿Qué es un nombre de dominio?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) (Alojamiento web estático barato o gratuito) _de Scott Murray_ tiene algunas ideas útiles sobre servicios disponibles aunque el sitio ya está algo desactualizado (en inglés).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works","Learn/Getting_started_with_the_web")}}
