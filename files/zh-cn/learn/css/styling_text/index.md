@@ -9,7 +9,7 @@ slug: Learn/CSS/Styling_text
 
 ## 前提
 
-在开始这一模块之前，你应当像 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中所探讨的，已经熟悉了基本的 HTML，以及像 [CSS 介绍](/zh-CN/docs/Learn/CSS/Introduction_to_CSS) 中所详述的，对自己的 CSS 基础感觉还满意。
+在开始这一模块之前，你应当像 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中所探讨的，已经熟悉了基本的 HTML，以及像 [CSS 介绍](/en-US/docs/Learn/CSS/First_steps) 中所详述的，对自己的 CSS 基础感觉还满意。
 
 > [!NOTE]
 > 如果你所使用的是不能创建自己的文件的电脑、平板电脑或其他设备的话，你可以在一个在线编码程序 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 中尝试（大部分的）代码例子。
@@ -31,5 +31,5 @@ slug: Learn/CSS/Styling_text
 
 以下的评估将会评测你对以上导引所涵盖的为文本添加样式的技术的理解。
 
-- [对一个社区学校的主页进行排版](/zh-CN/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [对一个社区学校的主页进行排版](/zh-CN/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : 在这个评估中，我们通过让你为一个社区学校的主页添加文本样式来测试你对文本样式的理解程度。

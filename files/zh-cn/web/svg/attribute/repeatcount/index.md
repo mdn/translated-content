@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/repeatCount
 
 The following elements can use the `repeatCount` attribute
 
-- [Animation elements](/zh-CN/SVG/Element#Animation) »
+- [Animation elements](/zh-CN/docs/Web/SVG/Element#animation) »
 
 ## 使用说明
 

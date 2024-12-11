@@ -19,7 +19,7 @@ counters(countername, '.', upper-roman)
 
 > **备注：** `counter()` 函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
-> 在使用此功能之前，请仔细检查[浏览器兼容性表](/zh-CN/docs/Web/CSS/counter#Browser_compatibility) 。
+> 在使用此功能之前，请仔细检查[浏览器兼容性表](/zh-CN/docs/Web/CSS/counter#browser_compatibility) 。
 
 ## 语法
 
@@ -165,5 +165,5 @@ li::before {
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS [`counter()`](/zh-CN/docs/Web/CSS/counter_function) function
+- CSS [`counter()`](/zh-CN/docs/Web/CSS/counter) function
 - {{cssxref("::marker")}}

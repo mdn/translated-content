@@ -27,7 +27,7 @@ l10n:
 
 - [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role) 角色
   - : 需要一个或多个嵌套的 `option`。所有被选择的选项都含有 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 且值为 `true`。所有未选中的选项都含有 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 且值为 `false`。如果某个选项不可选择，[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 会被忽略。
-- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role) 角色
+- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 角色
   - : 包含 `listitem` 元素的部分。
 
 #### 状态和属性
@@ -211,7 +211,7 @@ l10n:
 - HTML {{HTMLElement("option")}} 元素
 - [ARIA：`combobox` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA：`option` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
+- [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [ARIA 最佳实践 – Listbox](https://www.w3.org/WAI/ARIA/apg/#Listbox)
 - [ARIA 角色模型 – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)

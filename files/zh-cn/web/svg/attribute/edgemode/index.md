@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/edgeMode
 | -------- | --------------------------------------------------------------------------------------------------------- |
 | 值       | **duplicate** \| wrap \| none                                                                             |
 | 可变性   | Yes                                                                                                       |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementEdgeModeAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementEdgeModeAttribute) |
 
 - duplicate
   - : 它指示输入图像沿着每条边扩展，复制输入图像的给定边缘上的颜色值。

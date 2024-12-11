@@ -67,7 +67,7 @@ var obj = {
 [生成器方法](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)也可以用这种简写语法定义。使用它们时，
 
 - 简写语法中的星号（\*）必须出现在生成器名前，也就是说`* g(){}`可以正常工作，而`g *(){}`不行。
-- 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
+- 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
 
 ```js
 // 用有属性名的语法定义方法（ES6 之前）：

@@ -5,7 +5,7 @@ slug: Web/CSS/perspective-origin
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 

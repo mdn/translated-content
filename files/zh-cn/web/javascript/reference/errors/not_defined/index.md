@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: "x" is not defined'
+title: "ReferenceError: \"x\" is not defined"
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
@@ -67,5 +67,5 @@ console.log(num1); // 2
 ## 相关页面
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Function scope in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数作用域)

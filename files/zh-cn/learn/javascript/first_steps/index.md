@@ -13,7 +13,7 @@ slug: Learn/JavaScript/First_steps
 
 - [开始使用 Web](/zh-CN/docs/Learn/Getting_started_with_the_web)（包括 [JavaScript 基础简介](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)）。
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
-- [CSS 简介](/zh-CN/docs/Learn/CSS/Introduction_to_CSS)。
+- [CSS 简介](/en-US/docs/Learn/CSS/First_steps)。
 
 > [!NOTE]
 > 如果你无法在你使用的电脑/平板/其他设备上创建自己的文件，尝试使用在线编程应用来运行（大部分）代码示例，例如 [JSBin](https://jsbin.com/) 和 [Glitch](https://glitch.com/)。

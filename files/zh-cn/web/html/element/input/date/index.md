@@ -9,7 +9,7 @@ slug: Web/HTML/Element/input/date
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
-通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 输入框。
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 输入框。
 
 <table class="properties">
  <tbody>
@@ -72,13 +72,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 ### max
 
-所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
+所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**晚于或等于** `min` 属性指定的日期值。
 
 ### min
 
-所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
+所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**早于或等于** `max` 属性指定的日期值。
 

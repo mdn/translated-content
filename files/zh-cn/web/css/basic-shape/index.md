@@ -79,7 +79,7 @@ slug: Web/CSS/basic-shape
 
     可选的 `<fill-rule>` 表示 {{SVGAttr("fill-rule")}} 填充规则。可选 `nonzero`（非零环绕规则）和 `evenodd`（奇偶规则）。如果省略，则默认是 `nonzero`。
 
-    参数 \<string> 是用引号包含的 [SVG Path](/zh-CN/docs/SVG/Attribute/d) 字符串
+    参数 \<string> 是用引号包含的 [SVG Path](/zh-CN/docs/Web/SVG/Attribute/d) 字符串
 
 上文未曾解释的参数如下：
 
@@ -187,4 +187,4 @@ div {
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Edit Shape Paths in CSS — Firefox Developer Tools](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

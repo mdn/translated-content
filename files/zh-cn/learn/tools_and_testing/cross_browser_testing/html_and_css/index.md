@@ -45,9 +45,9 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ## 首先：解决一般问题
 
-在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
+在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
-在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
+在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
@@ -163,7 +163,7 @@ CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不�
 ![具有圆角、内阴影和投影效果的红色按钮](blingy-button.png)
 
 > [!NOTE]
-> 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -274,7 +274,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 - 带有客户端 web 技术浏览器支持信息的参考资料，例如 [\<video> 参考页面](/zh-CN/docs/Web/HTML/Element/video)。
 - 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
-- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
+- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅 <https://caniuse.com/#search=video>（你只需在文本框中输入要搜索的特性）。
 

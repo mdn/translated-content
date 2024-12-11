@@ -44,7 +44,7 @@ slug: Web/HTML/Element/ol
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
@@ -193,6 +193,6 @@ slug: Web/HTML/Element/ol
 - 对 `<ol>` 元素常用的 CSS 属性：
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
-  - [CSS 计数器](/zh-CN/docs/CSS_Counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ol#compact) 属性；
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), 用于处理复杂的嵌套列表，
+  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
   - {{cssxref("margin")}} 属性，用来控制列表的缩进。

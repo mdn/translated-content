@@ -17,9 +17,9 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -29,7 +29,7 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ## DOM 接口
 
-该元素实现了 [`SVGFEComponentTransferElement`](/zh-CN/DOM/SVGFEComponentTransferElement) 接口。
+该元素实现了 [`SVGFEComponentTransferElement`](/zh-CN/docs/DOM/SVGFEComponentTransferElement) 接口。
 
 ## 示例
 
@@ -152,4 +152,4 @@ rect {
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

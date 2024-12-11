@@ -5,7 +5,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
-本文是对[Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)一文的译文。
+本文是对[Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)一文的译文。
 
 文件系统 API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。
 
@@ -15,13 +15,13 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 [关键概念](#concepts). 它也描述了一些[限制](#restrictions)，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看[定义](#definitions)部分。
 
-关于文件系统 API 的引用文献部分，查看[引用](/zh-CN/DOM/File_API/File_System_API/FileSystem) 的登陆页及其子页。
+关于文件系统 API 的引用文献部分，查看[引用](/zh-CN/docs/DOM/File_API/File_System_API/FileSystem) 的登陆页及其子页。
 
 该规范仍然在定义中并可能会变更。
 
 ## 概要
 
-文件系统 API 包括[异步](/zh-CN/DOM/File_API/File_System_API#Asynchronous_APIs)和[同步](/zh-CN/DOM/File_API/File_System_API#Synchronous_APIs)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和[WebWorkers 一起使用](/En/Using_web_workers).
+文件系统 API 包括[异步](/zh-CN/docs/DOM/File_API/File_System_API#asynchronous_apis)和[同步](/zh-CN/docs/DOM/File_API/File_System_API#synchronous_apis)两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和[WebWorkers 一起使用](/en-US/Using_web_workers).
 
 ### 该 API 的用途
 
@@ -40,7 +40,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 - 文件系统 API 提供客户端存储以应对不在数据库中存储的应用场景。如果你需要大型可变的数据块，比数据库而言它就是一种更有效率的存储解决方案。
 - 尽 管 Firefox 支持 IndexedDB 的 blob 存储，但是目前 Chrome 并非如此（Chrome 仍然在对 IndexedDB 的 blob 存储做实现支 持开发中）。如果你的应用面向 Chrome 并且你需要存储 blobs, 那么文件系统 API 和 App Cache 将是你唯一的选择。然而，AppCache 存储并不是本地可变的，并且不支持细粒度的客户端管理。
-- 在 Chrome 中，你可以使用文件系统 API 和配额管理 API [Quota Management API](http://code.google.com/chrome/whitepapers/storage.html), 后者允许你请求更多的存储以及管理你的存储配额。
+- 在 Chrome 中，你可以使用文件系统 API 和配额管理 API [Quota Management API](https://code.google.com/chrome/whitepapers/storage.html), 后者允许你请求更多的存储以及管理你的存储配额。
 
 ### 示例使用场景
 
@@ -98,13 +98,13 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 为了防止一个网络应用占用整个磁盘，浏览器可能会给每一个应用限定配额并分配存储。
 
-存储空间如何分配以及你可以如何管理存储是浏览器的特性，因此你需要查阅浏览器各自的文档。例如，Google Chrome 在规范中允许超过 5MB 的临时存储并支持配额管理 API. 了解更多关于 Chrome 的实现，查看[管理 HTML5 线下存储](http://code.google.com/chrome/whitepapers/storage.html).
+存储空间如何分配以及你可以如何管理存储是浏览器的特性，因此你需要查阅浏览器各自的文档。例如，Google Chrome 在规范中允许超过 5MB 的临时存储并支持配额管理 API. 了解更多关于 Chrome 的实现，查看[管理 HTML5 线下存储](https://code.google.com/chrome/whitepapers/storage.html).
 
 ### 文件系统 API 拥有异步和同步两种版本
 
 文件系统 API 拥有异步和同步两种版本。两种版本的 API 提供相同的功能和特性。事实上，它们基本相同，除了几个不同点以外。
 
-- **WebWorkers.** 异步的 API 可以在文档或[WebWorkers](/En/Using_web_workers) 上下文中使用，而同步 API 只能用于 WebWorkers.
+- **WebWorkers.** 异步的 API 可以在文档或[WebWorkers](/en-US/Using_web_workers) 上下文中使用，而同步 API 只能用于 WebWorkers.
 - **Callbacks**. 异步 API 不会将数据作为返回值；作为替代，你需要传递一个回调函数。你在操作中发送请求，并在回调时得到通知。相反，同步 API 不使用回调函数，因为 API 方法返回值。
 - **异步和同步 API 的全局方法**. 异步 API 拥有这些全局方法：`requestFileSystem()` 和 `resolveLocalFileSystemURL()`. 这些方法同时是 window 对象和 worker 全局作用域的成员。另一方面，同步 API 使用如下方法：`requestFileSystemSync()` 和 `resolveLocalFileSystemSyncURL()`. 这些同步方法只是 worker 全局作用域的成员，而非 window 对象的。
 
@@ -173,9 +173,9 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 规范：<http://dev.w3.org/2009/dap/file-system/pub/FileSystem/>
 
-引用：[File System API Reference](/zh-CN/DOM/File_API/File_System_API)
+引用：[File System API Reference](/zh-CN/docs/DOM/File_API/File_System_API)
 
 ## 参见
 
-- [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/)
-- [The Synchronous FileSystem API for Workers](http://www.html5rocks.com/en/tutorials/file/filesystem-sync/)
+- [Exploring the FileSystem APIs](https://www.html5rocks.com/en/tutorials/file/filesystem/)
+- [The Synchronous FileSystem API for Workers](https://www.html5rocks.com/en/tutorials/file/filesystem-sync/)

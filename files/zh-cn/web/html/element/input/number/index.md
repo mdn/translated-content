@@ -62,13 +62,13 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### `max`
 
-允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。
 
 ### `min`
 
-允许值范围内的最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -283,7 +283,7 @@ input:valid + span::after {
 
 我们使用了 {{cssxref(":invalid")}} 和 {{cssxref(":valid")}} 伪类，在相邻的 {{htmlelement("span")}} 元素上显示一个适当的无效或有效图标作为生成内容，作为有效性的视觉指标。
 
-我们把它放在一个单独的 `<span>`元素上，以增加灵活性；一些浏览器在某些类型的表单输入上不能很有效地显示生成的内容（请阅读 [`<input type="date">` 验证](/zh-CN/docs/Web/HTML/Element/input/date#Validation)一节的示例以了解）。
+我们把它放在一个单独的 `<span>`元素上，以增加灵活性；一些浏览器在某些类型的表单输入上不能很有效地显示生成的内容（请阅读 [`<input type="date">` 验证](/zh-CN/docs/Web/HTML/Element/input/date#validation)一节的示例以了解）。
 
 > [!WARNING]
 > 客户端表单验证*不能*替代服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。

@@ -26,7 +26,7 @@ WebSocket.send("Hello server!");
     - {{domxref("Blob")}}
       - : `Blob` 类型将队列 blob 中的原始数据以二进制中传输。 `bufferedAmount` 将加上原始数据的字节数的值。
     - {{domxref("ArrayBufferView")}}
-      - : 你可以以二进制帧的形式发送任何 [JavaScript 类数组对象](/zh-CN/docs/Web/JavaScript/Typed_arrays) ；其二进制数据内容将被队列于缓冲区中。值 `bufferedAmount` 将加上必要字节数的值。
+      - : 你可以以二进制帧的形式发送任何 [JavaScript 类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays) ；其二进制数据内容将被队列于缓冲区中。值 `bufferedAmount` 将加上必要字节数的值。
 
 ### 异常
 

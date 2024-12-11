@@ -134,7 +134,7 @@ l10n:
 - [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome 每日构建版](https://www.google.cn/chrome/canary/)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 如果你的网站使用了非常新的技术，并且你希望对最新的实现进行测试，或者如果你在最新版本的浏览器中遇到了错误，并且你想知道浏览器的开发人员是否在未来的版本中修复了该错误，那么这一点尤为重要。
 
@@ -146,7 +146,7 @@ l10n:
 
 那可能不是你的错误——如果是浏览器的程序错误，那就希望开发商尽快修复它。也许它已经修复了——例如若某个程序错误存在于 Firefox 版本 49，但 Firefox Nightly（版本 52）中已经不存在了，那么他们已经修复了这个错误。如果还未修复，你可能需要提交一个程序错误报告（参见下面的[报告程序错误](#报告程序错误)）。
 
-如果是你的错误，那么你需要修复它！查出导致该程序错误的原因（再次，查阅[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)、[调试 CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS) 和[哪里出错了？调试 JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。一旦你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 JavaScript 特性检测代码来检测问题特性不运行的情况，并运行一些在那些情况下生效的代码。
+如果是你的错误，那么你需要修复它！查出导致该程序错误的原因（再次，查阅[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)、[调试 CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) 和[哪里出错了？调试 JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。一旦你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 JavaScript 特性检测代码来检测问题特性不运行的情况，并运行一些在那些情况下生效的代码。
 
 一旦完成修复，你应该重新测试来确保你的修复工作有效，并且没有导致网站在其他地方或其他浏览器中出问题。
 

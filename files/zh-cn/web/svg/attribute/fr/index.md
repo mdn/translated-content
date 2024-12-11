@@ -11,9 +11,9 @@ slug: Web/SVG/Attribute/fr
 
 | 类别     | 无                                                                                                                           |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)                                                                         |
+| 值       | [\<length>](/zh-CN/docs/Web/SVG/Content_type#length)                                                                         |
 | 可变性   | 非                                                                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](https://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 
 ## 示例
 

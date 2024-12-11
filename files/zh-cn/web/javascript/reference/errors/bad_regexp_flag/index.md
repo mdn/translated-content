@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
+title: "SyntaxError: invalid regular expression flag \"x\""
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
@@ -81,4 +81,4 @@ let obj = {
 ## 相关页面
 
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-- [XRegEx flags](http://xregexp.com/flags/) – 正则表达式库提供新的四个标记 (`n`, `s`, `x`, `A`)
+- [XRegEx flags](https://xregexp.com/flags/) – 正则表达式库提供新的四个标记 (`n`, `s`, `x`, `A`)

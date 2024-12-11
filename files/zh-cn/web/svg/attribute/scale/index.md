@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/scale
 
 | 类别   | _无_                                        |
 | ------ | ------------------------------------------- |
-| 值     | [\<number>](/zh-CN/SVG/Content_type#Number) |
+| 值     | [\<number>](/zh-CN/docs/SVG/Content_type#number) |
 | 可变性 | Yes                                         |
 
 ## 示例

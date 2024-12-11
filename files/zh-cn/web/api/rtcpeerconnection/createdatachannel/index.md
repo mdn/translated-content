@@ -21,7 +21,7 @@ createDataChannel(label, options)
 - `label`
   - : 一个便于理解的通道名。该字符串不能长于 65,535 _字节_.
 - `options` {{optional_inline}}
-  - : 提供 data channel 设置的一个 [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)
+  - : 提供 data channel 设置的一个 [`RTCDataChannelInit` dictionary](#rtcdatachannelinit_dictionary)
 
 ### RTCDataChannelInit dictionary
 

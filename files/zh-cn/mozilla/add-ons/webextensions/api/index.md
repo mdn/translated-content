@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API
 
 {{AddonSidebar}}
 
-WebExtension JavaScript API 可以在附加组件的[后台脚本](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)和附加组件定义的任何[浏览器动作](/zh-CN/Add-ons/WebExtensions/User_interface_components#Browser_actions)或[页面动作](/zh-CN/Add-ons/WebExtensions/User_interface_components#Page_actions)中使用。这里的部分 API 也可以通过附加组件的[内容脚本](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)访问（见[内容脚本指南列表](/zh-CN/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)）。
+WebExtension JavaScript API 可以在附加组件的[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)和附加组件定义的任何[浏览器动作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#browser_actions)或[页面动作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#page_actions)中使用。这里的部分 API 也可以通过附加组件的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)访问（见[内容脚本指南列表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)）。
 
-要使用更强大的 API，你需要在你的 manifest.json 中[申请权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用更强大的 API，你需要在你的 manifest.json 中[申请权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 你可以使用 `browser` 命名空间访问这些 API。
 

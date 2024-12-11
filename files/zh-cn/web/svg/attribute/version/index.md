@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/version
 
 | 类别     | None                                        |
 | -------- | ------------------------------------------- |
-| 值       | [\<number>](/zh-CN/SVG/Content_type#Number) |
+| 值       | [\<number>](/zh-CN/docs/SVG/Content_type#number) |
 | 动画属性 | No                                          |
 
 ## 规范
