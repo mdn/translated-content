@@ -28,8 +28,8 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 | `cancelable` {{ReadOnlyInline}} | `boolean`                                          | Peut-il être annulé?                                                                             |
 | `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}                         | {{domxref("Document.defaultView")}} (fenêtre du document).                                       |
 | `detail` {{ReadOnlyInline}}     | `long` (`float`)                                   | 0.                                                                                               |
-| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
-| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
+| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
+| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
 
 ## Spécifications
 

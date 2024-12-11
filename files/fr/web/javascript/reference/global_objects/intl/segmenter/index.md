@@ -24,7 +24,7 @@ L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : Renvoie un nouvel objet dont les propriétés reflètent la locale et la granularité calculées lors de l'initialisation de cet objet `Intl.Segmenter`.
 - [`Intl.Segmenter.prototype.segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Renvoie une nouvelle instance [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) itérable qui représente les segments de la chaîne de caractères selon la locale et la granularité portées par cette instance `Intl.Segmenter`.
+  - : Renvoie une nouvelle instance [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) itérable qui représente les segments de la chaîne de caractères selon la locale et la granularité portées par cette instance `Intl.Segmenter`.
 
 ## Exemples
 

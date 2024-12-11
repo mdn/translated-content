@@ -9,7 +9,7 @@ Le mode de disposition en grille a été conçu afin de pouvoir fonctionner avec
 
 ## Les grilles et les boîtes flexibles (_flexbox_)
 
-La différence fondamentale, entre les grilles et [les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), est que les boîtes flexibles permettent d'organiser du contenu sur une dimension (sur une ligne ou sur une colonne). Les grilles ont été conçues pour une organisation bi-dimensionnelle. Les deux spécifications partagent cependant quelques points communs et si vous savez utiliser les boîtes flexibles, vous retrouverez quelques concepts qui vous aideront à appréhender les grilles CSS.
+La différence fondamentale, entre les grilles et [les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout), est que les boîtes flexibles permettent d'organiser du contenu sur une dimension (sur une ligne ou sur une colonne). Les grilles ont été conçues pour une organisation bi-dimensionnelle. Les deux spécifications partagent cependant quelques points communs et si vous savez utiliser les boîtes flexibles, vous retrouverez quelques concepts qui vous aideront à appréhender les grilles CSS.
 
 ### Disposition sur une dimension ou sur deux dimensions
 
@@ -596,4 +596,4 @@ Comme on a pu le voir dans cet article, la disposition avec les grilles CSS n'es
 ## Voir aussi
 
 - [Guides sur _Flexbox_](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Guides sur la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns)
+- [Guides sur la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)

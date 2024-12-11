@@ -24,7 +24,7 @@ Le code utilise une affectation (`=`) là où on attendrait un test d'égalité 
 
 ### Des affectations utilisées au sein d'expressions conditionnelles
 
-Il est conseillé de ne pas utiliser d'affectations simples dans des expressions conditionnelles (comme le test effectué avec [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)) car on peut confondre les deux à la lecture du code. Ainsi, on n'utilisera pas la forme suivante :
+Il est conseillé de ne pas utiliser d'affectations simples dans des expressions conditionnelles (comme le test effectué avec [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)) car on peut confondre les deux à la lecture du code. Ainsi, on n'utilisera pas la forme suivante :
 
 ```js-nolint example-bad
 if (x = y) {
@@ -50,5 +50,5 @@ if (x == y) {
 
 ## Voir aussi
 
-- [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
-- [Les opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison)
+- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Les opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators)

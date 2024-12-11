@@ -9,7 +9,7 @@ Supprime toutes les visites de l'historique du navigateur.
 
 Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec `allHistory` défini sur `true` et un argument `urls` vide.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -23,7 +23,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque tout l'historique a été supprimé.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque tout l'historique a été supprimé.
 
 ## Compatibilité des navigateurs
 

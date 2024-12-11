@@ -77,7 +77,7 @@ Dans tous les cas (sauf un — lequel serait naturellement adaptatif ?) nous vou
 Assurez-vous de faire correspondre les bonnes images avec les liens corrects !
 
 > [!NOTE]
-> Pour tester correctement les exemples `srcset`/`sizes`, vous devez charger votre site sur un serveur (utiliser [Github pages](/fr/docs/Learn/Common_questions/Using_Github_pages) est une solution simple et gratuite), ensuite vous pouvez tester si tout se déroule correctement en utilisant des outils de développeur, comme expliqué dans [Responsive images: useful developer tools](/fr/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools).
+> Pour tester correctement les exemples `srcset`/`sizes`, vous devez charger votre site sur un serveur (utiliser [Github pages](/fr/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) est une solution simple et gratuite), ensuite vous pouvez tester si tout se déroule correctement en utilisant des outils de développeur, comme expliqué dans [Responsive images: useful developer tools](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#useful_developer_tools).
 
 ### Un panda rouge créatif
 

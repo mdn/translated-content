@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
+title: "SyntaxError: invalid regular expression flag \"x\""
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
@@ -81,5 +81,5 @@ Voir le tableau ci-avant pour la liste des marqueurs autorisés pour manipuler l
 
 ## Voir aussi
 
-- [Les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières)
-- [XRegEx](http://xregexp.com/flags/) – une bibliothèque relative aux expressions rationnelles qui fournit quatre nouveaux marqueurs (_flags_) (`n`, `s`, `x`, `A`)
+- [Les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- [XRegEx](https://xregexp.com/flags/) – une bibliothèque relative aux expressions rationnelles qui fournit quatre nouveaux marqueurs (_flags_) (`n`, `s`, `x`, `A`)

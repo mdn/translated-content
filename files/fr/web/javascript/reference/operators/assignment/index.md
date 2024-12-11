@@ -42,4 +42,4 @@ x = y = z;
 
 ## Voir aussi
 
-- [Assignment operators in the JS guide](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)
+- [Assignment operators in the JS guide](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators)

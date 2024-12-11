@@ -18,11 +18,11 @@ Ces trois opérations sont associées à quatre algorithmes d'égalité (depuis 
 
   - Utilisée par {{jsxref("Array.indexOf")}} et {{jsxref("Array.lastIndexOf")}} et la sensibilité à la casse
 
-- [_SameValueZero_ (l'égalité de valeurs nulles)](#SameValueZero)
+- [_SameValueZero_ (l'égalité de valeurs nulles)](#samevaluezero)
 
   - Utilisée par les constructeurs {{jsxref("TypedArray")}} et {{jsxref("ArrayBuffer")}} et par les opérations associées à {{jsxref("Map")}} et {{jsxref("Set")}}. Depuis ES2016, cet algorithme est également utilisé par {{jsxref("String.includes")}} et {{jsxref("Array.includes")}}
 
-- [_SameValue_ (l'égalité de valeurs)](#sameValue)
+- [_SameValue_ (l'égalité de valeurs)](#samevalue)
 
   - Utilisée partout ailleurs
 
@@ -241,7 +241,7 @@ En plus de la façon dont {{jsxref("Object.is")}} traite `NaN`, la spécificité
 
 Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuvent entraîner l'apparition des valeurs `-0` et `+0` dans le code :
 
-- [`-` (négation unaire)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Négation_unaire)
+- [`-` (négation unaire)](/fr/docs/Web/JavaScript/Reference/Operators#négation_unaire)
 
   - : Si on prend l'opposé de `0`, on aura, bien entendu, `-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
 
@@ -255,7 +255,7 @@ Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuve
   - : Ces méthodes peuvent introduire `-0` dans une expression lors de leur évaluation, même si `-0` ne faisait pas partie des paramètres. Par exemple, si on utilise `Math.pow()` pour élever {{jsxref("Infinity", "-Infinity")}} à une puissance négative, on obtiendra `-0` pour une puissance impaire. Pour plus de détails, voir la documentation de chaque méthode.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : Ces méthodes peuvent renvoyer `-0` dans certains cas où `-0` est passé en paramètre. Par exemple, `Math.min(-0, +0)` fournira `-0`. Pour plus de détails, voir la documentation de chaque méthode.
-- [`~`](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.7E_.28NON_binaire.29), [`<<`](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3C.3C_.28d.C3.A9calage_.C3.A0_gauche.29), [`>>`](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3E.3E_.28d.C3.A9calage_.C3.A0_droite_avec_propagation_du_signe.29)
+- [`~`](/fr/docs/Web/JavaScript/Reference/Operators#.7e_.28non_binaire.29), [`<<`](/fr/docs/Web/JavaScript/Reference/Operators#.3c.3c_.28d.c3.a9calage_.c3.a0_gauche.29), [`>>`](/fr/docs/Web/JavaScript/Reference/Operators#.3e.3e_.28d.c3.a9calage_.c3.a0_droite_avec_propagation_du_signe.29)
   - : Chacun de ces opérateurs utilise l'algorithme ToInt32 interne au moteur JavaScript. Étant donné qu'il n'y a qu'une seule représentation pour 0 sur les entiers exprimés avec le type interne sur 32 bits, `-0` ne sera pas invariant pour deux opérations symétriques : `Object.is(~~(-0), -0)` et `Object.is(-0 << 2 >> 2, -0)` renverront tous les deux `false`.
 
 Si on utilise {{jsxref("Object.is")}} et qu'on ne souhaite pas gérer les cas aux limites autour de zéro, cela peut avoir des effet indésirés. En revanche, si on souhaite effectivement comparer `-0` et `+0`, c'est la méthode à adopter.

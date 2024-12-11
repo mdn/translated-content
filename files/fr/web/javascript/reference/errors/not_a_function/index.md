@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: "x" is not a function'
+title: "TypeError: \"x\" is not a function"
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 ---
 
@@ -154,4 +154,4 @@ import helpers from "./helpers";
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

@@ -23,4 +23,4 @@ connexionInfo = navigator.connection;
 
 ## Voir aussi
 
-- [Évènements online et offline](/fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events)
+- [Évènements online et offline](/fr/docs/Web/API/Navigator/onLine)

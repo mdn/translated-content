@@ -32,7 +32,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
     Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ([bug Firefox 707624](https://bugzil.la/707624)). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
 
-    Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
+    Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 
 - `requestHeaders`{{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .

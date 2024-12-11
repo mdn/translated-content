@@ -124,7 +124,7 @@ Les arrêts de couleurs sont positionnés selon une ligne virtuelle qui part du 
 
 ### D'autres exemples
 
-Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -136,7 +136,7 @@ Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

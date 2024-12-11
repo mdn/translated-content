@@ -27,7 +27,7 @@ Toutes les fonctions `browsingData.remove[X]()` prennent un objet {{WebExtAPIRef
 
 Enfin, cette API vous donne une fonction {{WebExtAPIRef("browsingData.settings()")}} qui vous donne la valeur actuelle des paramètres de la fonction "Effacer l'historique" du navigateur.
 
-Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "browseData".
+Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "browseData".
 
 ## Types
 
