@@ -43,7 +43,7 @@ http://www.example.com/index.html#section2
 
 ### 目錄表
 
-`:target` 偽類可以用於高亮顯示從目錄表中鏈接到的頁面部分。
+`:target` 偽類可以用於高亮顯示從目錄表中連結到的頁面部分。
 
 #### HTML
 
