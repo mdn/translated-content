@@ -13,7 +13,7 @@ El primer artículo de nuestra serie te proporciona una primera experiencia de c
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">lenguaje HTML</a>.
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">lenguaje HTML</a>.
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ El primer artículo de nuestra serie te proporciona una primera experiencia de c
 
 ## ¿Qué son los formularios web?
 
-Los **formularios web** son uno de los principales puntos de interacción entre un usuario y un sitio web o aplicación. Los formularios permiten a los usuarios la introducción de datos, que generalmente se envían a un servidor web para su procesamiento y almacenamiento (consulta [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) más adelante en el módulo), o se usan en el lado del cliente para provocar de alguna manera una actualización inmediata de la interfaz (por ejemplo, se añade otro elemento a una lista, o se muestra u oculta una función de interfaz de usuario).
+Los **formularios web** son uno de los principales puntos de interacción entre un usuario y un sitio web o aplicación. Los formularios permiten a los usuarios la introducción de datos, que generalmente se envían a un servidor web para su procesamiento y almacenamiento (consulta [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) más adelante en el módulo), o se usan en el lado del cliente para provocar de alguna manera una actualización inmediata de la interfaz (por ejemplo, se añade otro elemento a una lista, o se muestra u oculta una función de interfaz de usuario).
 
 El HTML de un **formulario web** está compuesto por uno o más **controles de formulario** (a veces llamados **widgets**), además de algunos elementos adicionales que ayudan a estructurar el formulario general; a menudo se los conoce como **formularios HTML**. Los controles pueden ser campos de texto de una o varias líneas, cajas desplegables, botones, casillas de verificación o botones de opción, y se crean principalmente con el elemento {{htmlelement("input")}}, aunque hay algunos otros elementos que también hay que conocer.
 
@@ -46,7 +46,7 @@ Diseñar formularios es un paso importante cuando creas un sitio web o una aplic
 
 En este artículo, vamos a crear un formulario de contacto sencillo. Hagamos un esbozo.
 
-![Esbozo aproximado del formulario que vamos a construir](/files/4579/form-sketch-low.jpg)
+![Esbozo aproximado del formulario que vamos a construir](form-sketch-low.jpg)
 
 Nuestro formulario va a tener tres campos de texto y un botón. Le pedimos al usuario su nombre, su correo electrónico y el mensaje que desea enviar. Al pulsar el botón sus datos se enviarán a un servidor web.
 
@@ -56,7 +56,7 @@ De acuerdo, intentemos crear el HTML para nuestro formulario. Vamos a utilizar l
 
 Antes de continuar, haz una copia local de nuestra [plantilla HTML simple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html): introduce aquí tu formulario HTML.
 
-### El elemento {{HTMLelement("form")}}
+### El elemento `form`
 
 Todos los formularios comienzan con un elemento {{HTMLelement("form")}}, como este:
 
@@ -64,17 +64,17 @@ Todos los formularios comienzan con un elemento {{HTMLelement("form")}}, como es
 <form action="/my-handling-form-page" method="post"></form>
 ```
 
-Este elemento define formalmente un formulario. Es un elemento contenedor, como un elemento {{HTMLelement("section")}} o {{HTMLelement("footer")}}, pero específico para contener formularios; también admite algunos atributos específicos para la configuración de la forma en que se comporta el formulario. Todos sus atributos son opcionales, pero es una práctica estándar establecer siempre al menos los atributos [`action`](/es/docs/Web/HTML/Attributes/action) y [`method`](/es/docs/Web/HTML/Attributes/method):
+Este elemento define formalmente un formulario. Es un elemento contenedor, como un elemento {{HTMLelement("section")}} o {{HTMLelement("footer")}}, pero específico para contener formularios; también admite algunos atributos específicos para la configuración de la forma en que se comporta el formulario. Todos sus atributos son opcionales, pero es una práctica estándar establecer siempre al menos los atributos [`action`](/es/docs/Web/HTML/Element/form#action) y [`method`](/es/docs/Web/HTML/Element/form#method):
 
 - El atributo `action` define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan.
 - El atributo `method` define con qué método HTTP se envían los datos (generalmente `get` o `post`).
 
 > [!NOTE]
-> Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
+> Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
 
 Por ahora, añade el elemento {{htmlelement("form")}} anterior a tu elemento HTML {{htmlelement("body")}}.
 
-### Los elementos {{HTMLelement("label")}}, {{HTMLelement("input")}} y {{HTMLelement("textarea")}}
+### Los elementos `<label>`, `<input>` y `<textarea>`
 
 Nuestro formulario de contacto no es complejo: la parte para la entrada de datos contiene tres campos de texto, cada uno con su elemento {{HTMLelement("label")}} correspondiente:
 
@@ -105,16 +105,16 @@ En términos de código HTML, para implementar estos controles de formulario nec
 
 Actualiza el código de tu formulario para que se vea como el anterior.
 
-Los elementos {{HTMLelement("li")}} están ahí para estructurar nuestro código convenientemente y facilitar la aplicación de estilo (ver más adelante en el artículo). Por motivos de usabilidad y accesibilidad incluimos una etiqueta explícita para cada control de formulario. Ten en cuenta el uso del atributo [`for`](/es/docs/Web/HTML/Attributes/for) en todos los elementos {{HTMLelement("label")}}, que toma como valor el [`id`](/es/docs/Web/HTML/Attributes/id) del control de formulario con el que está asociado; así es como asocias un formulario con su etiqueta.
+Los elementos {{HTMLelement("li")}} están ahí para estructurar nuestro código convenientemente y facilitar la aplicación de estilo (ver más adelante en el artículo). Por motivos de usabilidad y accesibilidad incluimos una etiqueta explícita para cada control de formulario. Ten en cuenta el uso del atributo [`for`](/es/docs/Web/HTML/Attributes/for) en todos los elementos {{HTMLelement("label")}}, que toma como valor el [`id`](/es/docs/Web/HTML/Global_attributes/id) del control de formulario con el que está asociado; así es como asocias un formulario con su etiqueta.
 
-Hacer esto presenta muchas ventajas porque la etiqueta está asociada al control del formulario y permite que los usuarios con ratón, panel táctil y dispositivos táctiles hagan clic en la etiqueta para activar el control correspondiente, y también proporciona accesibilidad con un nombre que los lectores de pantalla leen a sus usuarios. Encontrarás más detalles sobre las etiquetas de los formularios en [Cómo estructurar un formulario web](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form).
+Hacer esto presenta muchas ventajas porque la etiqueta está asociada al control del formulario y permite que los usuarios con ratón, panel táctil y dispositivos táctiles hagan clic en la etiqueta para activar el control correspondiente, y también proporciona accesibilidad con un nombre que los lectores de pantalla leen a sus usuarios. Encontrarás más detalles sobre las etiquetas de los formularios en [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form).
 
-En el elemento {{HTMLelement("input")}}, el atributo más importante es `type`. Este atributo es muy importante porque define la forma en que el elemento {{HTMLelement("input")}} aparece y se comporta. Encontrarás más información sobre esto en el artículo sobre [Controles de formularios nativos básicos](/es/docs/Learn/HTML/Forms/The_native_form_widgets) más adelante.
+En el elemento {{HTMLelement("input")}}, el atributo más importante es `type`. Este atributo es muy importante porque define la forma en que el elemento {{HTMLelement("input")}} aparece y se comporta. Encontrarás más información sobre esto en el artículo sobre [Controles de formularios nativos básicos](/es/docs/Learn/Forms/Basic_native_form_controls) más adelante.
 
 - En nuestro ejemplo sencillo, usamos el valor {{HTMLelement("input/text")}} para la primera entrada, el valor predeterminado para este atributo. Representa un campo de texto básico de una sola línea que acepta cualquier tipo de entrada de texto.
-- Para la segunda entrada, usamos el valor {{HTMLelement("input/email")}}, que define un campo de texto de una sola línea que solo acepta una dirección de correo electrónico. Esto convierte un campo de texto básico en una especie de campo «inteligente» que efectúa algunas comprobaciones de validación de los datos que el usuario escribe. También hace que aparezca un diseño de teclado más apropiado para introducir direcciones de correo electrónico (por ejemplo, con un símbolo @ por defecto) en dispositivos con teclados dinámicos, como teléfonos inteligentes. Encontrarás más información sobre la validación de formularios en el artículo de [Validación de formularios por parte del cliente](/es/docs/Learn/HTML/Forms/Validacion_formulario_datos) más adelante.
+- Para la segunda entrada, usamos el valor {{HTMLelement("input/email")}}, que define un campo de texto de una sola línea que solo acepta una dirección de correo electrónico. Esto convierte un campo de texto básico en una especie de campo «inteligente» que efectúa algunas comprobaciones de validación de los datos que el usuario escribe. También hace que aparezca un diseño de teclado más apropiado para introducir direcciones de correo electrónico (por ejemplo, con un símbolo @ por defecto) en dispositivos con teclados dinámicos, como teléfonos inteligentes. Encontrarás más información sobre la validación de formularios en el artículo de [Validación de formularios por parte del cliente](/es/docs/Learn/Forms/Form_validation) más adelante.
 
-Por último, pero no por ello menos importante, ten en cuenta la sintaxis de `<input>` en contraposición con la de `<textarea></textarea>`. Esta es una de las rarezas del HTML. La etiqueta `<input>` es un elemento vacío, lo que significa que no necesita una etiqueta de cierre. El elemento {{HTMLElement("textarea")}} no es un elemento vacío, lo que significa que debe cerrarse con la etiqueta de cierre adecuada. Esto tiene un impacto en una característica específica de los formularios: el modo en que defines el valor predeterminado. Para definir el valor predeterminado de un elemento {{HTMLElement("input")}}, debes usar el atributo [`value`](/es/docs/Web/HTML/Attributes/value) de esta manera:
+Por último, pero no por ello menos importante, ten en cuenta la sintaxis de `<input>` en contraposición con la de `<textarea></textarea>`. Esta es una de las rarezas del HTML. La etiqueta `<input>` es un elemento vacío, lo que significa que no necesita una etiqueta de cierre. El elemento {{HTMLElement("textarea")}} no es un elemento vacío, lo que significa que debe cerrarse con la etiqueta de cierre adecuada. Esto tiene un impacto en una característica específica de los formularios: el modo en que defines el valor predeterminado. Para definir el valor predeterminado de un elemento {{HTMLElement("input")}}, debes usar el atributo [`value`](/es/docs/Web/HTML/Element/input#value) de esta manera:
 
 ```html
 <input type="text" value="por defecto este elemento se llena con este texto" />
@@ -128,7 +128,7 @@ Por defecto, este elemento contiene este texto
 </textarea>
 ```
 
-### El elemento {{HTMLelement("button")}}
+### El elemento `button`
 
 El marcado de nuestro formulario está casi completo; solo necesitamos añadir un botón para permitir que el usuario envíe sus datos una vez que haya completado el formulario. Esto se hace con el elemento {{HTMLelement("button")}}; añade lo siguiente justo encima de la etiqueta de cierre `</form>`:
 
@@ -239,9 +239,9 @@ Guarda y vuelve a cargar, y observa que tu formulario presenta un aspecto mucho 
 
 ## Enviar los datos del formulario a un servidor web
 
-La última parte, y quizás la más complicada, es manejar los datos del formulario en el lado del servidor. El elemento {{HTMLelement("form")}} define dónde y cómo enviar los datos gracias a los atributos [`action`](/es/docs/Web/HTML/Attributes/action) y [`method`](/es/docs/Web/HTML/Attributes/method).
+La última parte, y quizás la más complicada, es manejar los datos del formulario en el lado del servidor. El elemento {{HTMLelement("form")}} define dónde y cómo enviar los datos gracias a los atributos [`action`](/es/docs/Web/HTML/Element/form#action) y [`method`](/es/docs/Web/HTML/Element/form#method).
 
-Proporcionamos un nombre ([`name`](/es/docs/Web/HTML/Attributes/name)) a cada control de formulario. Los nombres son importantes tanto en el lado del cliente como del servidor; le dicen al navegador qué nombre debe dar a cada dato y, en el lado del servidor, dejan que el servidor maneje cada dato por su nombre. Los datos del formulario se envían al servidor como pares de nombre/valor.
+Proporcionamos un nombre (`name`) a cada control de formulario. Los nombres son importantes tanto en el lado del cliente como del servidor; le dicen al navegador qué nombre debe dar a cada dato y, en el lado del servidor, dejan que el servidor maneje cada dato por su nombre. Los datos del formulario se envían al servidor como pares de nombre/valor.
 
 Para poner nombre a los diversos datos que se introducen en un formulario, debes usar el atributo `name` en cada control de formulario que recopila un dato específico. Veamos de nuevo algunos de nuestros códigos de formulario:
 
@@ -268,7 +268,7 @@ Para poner nombre a los diversos datos que se introducen en un formulario, debes
 
 En nuestro ejemplo, el formulario envía tres datos denominados «`user_name`», «`user_email`» y «`user_message`». Esos datos se envían a la URL «`/my-handling-form-page`» utilizando el método [`post` de HTTP](/es/docs/Web/HTTP/Methods/POST).
 
-En el lado del servidor, la secuencia de comandos de la URL «`/my-handling-form-page`» recibe los datos como una lista de tres elementos clave/valor contenidos en la solicitud HTTP. La forma en que este script maneja esos datos depende de ti. Cada lenguaje de servidor (PHP, Python, Ruby, Java, C#, etc.) tiene su propio mecanismo de manipulación de datos de formulario. No profundizaremos sobre el tema en esta guía, pero si deseas obtener más información, proporcionamos algunos ejemplos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
+En el lado del servidor, la secuencia de comandos de la URL «`/my-handling-form-page`» recibe los datos como una lista de tres elementos clave/valor contenidos en la solicitud HTTP. La forma en que este script maneja esos datos depende de ti. Cada lenguaje de servidor (PHP, Python, Ruby, Java, C#, etc.) tiene su propio mecanismo de manipulación de datos de formulario. No profundizaremos sobre el tema en esta guía, pero si deseas obtener más información, proporcionamos algunos ejemplos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
 
 ## Resumen
 
@@ -360,4 +360,4 @@ Pero esto es solo el comienzo: ahora ha llegado el momento de profundizar en el 
 
 - [Cómo construir controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Enviar formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tabla de compatibilidad para las propiedades de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)
+- [Tabla de compatibilidad para las propiedades de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
