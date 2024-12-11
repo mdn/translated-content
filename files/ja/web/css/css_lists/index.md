@@ -18,9 +18,9 @@ slug: Web/CSS/CSS_lists
 
 ## ガイド
 
-- [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
+- [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
   - : 異なるブラウザー同士でも一貫したリストのインデントを実現する方法を説明します。
-- [CSS カウンターの使用](/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : リストのカウンターを制御するために CSS カウンタープロパティを使用する方法を説明します。
 
 ## 仕様書

@@ -1,9 +1,9 @@
 ---
 title: "MouseEvent: relatedTarget プロパティ"
-short-title: relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+short-title: relatedTarget
 ---
 
 {{APIRef("UI Events")}}
@@ -168,4 +168,4 @@ function overListener(event) {
 ## 関連情報
 
 - {{ domxref("MouseEvent") }}
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [イベントターゲットの比較](/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

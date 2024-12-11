@@ -19,7 +19,7 @@ slug: Learn/Tools_and_testing
 > #### フロントエンドのウェブ開発者を目指している方へ
 >
 > ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> [**始めましょう**](https://developer.mozilla.org/ja/curriculum/)
 
 ## 前提条件
 

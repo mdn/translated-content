@@ -89,7 +89,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 ## 関連情報
 
-- [Firefox での prefers-color-scheme のシミュレーション](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
+- [Firefox での prefers-color-scheme のシミュレーション](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view_media_rules_for_prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
 - 色スキームの変更: [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/)、[macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/)、[Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019)、[その他のプラットフォーム](https://support.mozilla.org/en-US/questions/1271928)

@@ -15,7 +15,7 @@ slug: Web/API/SVGTextElement
 | ------------------ | ----------------------------------------------------------------------------------- |
 | メソッド           | _無し_                                                                              |
 | プロパティ         | _無し_                                                                              |
-| 標準文書           | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/text.html#InterfaceSVGTextElement) |
+| 標準文書           | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/text.html#InterfaceSVGTextElement) |
 
 ## プロパティ
 

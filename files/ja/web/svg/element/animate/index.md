@@ -35,23 +35,23 @@ svg {
 
 ### アニメーション属性
 
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#animation_timing_attributes)
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [アニメーション値属性](/ja/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+- [アニメーション値属性](/ja/docs/Web/SVG/Attribute#animation_value_attributes)
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [その他のアニメーション属性](/ja/docs/Web/SVG/Attribute#Animation_Attributes)
+- [その他のアニメーション属性](/ja/docs/Web/SVG/Attribute#animation_attributes)
   - : 特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#アニメーションイベント属性)
+- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#アニメーションイベント属性)
   - : 特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 特に重要なもの: {{SVGAttr('id')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書要素イベント属性)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute#文書要素イベント属性)
 
 ## 使用上の注意
 

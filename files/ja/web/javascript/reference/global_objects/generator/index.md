@@ -66,4 +66,4 @@ console.log(generator.next().value); // 2
 - {{JSxRef("Statements/function*", "function*")}}
 - {{JSxRef("Operators/function*", '<code>function*</code> 式', "", 1)}}
 - {{JSxRef("GeneratorFunction")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

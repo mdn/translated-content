@@ -23,7 +23,7 @@ string unparsed-entity-url(string)
 
 ### 定義
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-unparsed-entity-uri)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-unparsed-entity-uri)
 
 ### Gecko の対応状況
 

@@ -65,4 +65,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Decoreation_Shown.html
 - 他のブラウザーでも互換性を維持することができます。
   - 追記のみの対応のため改修が容易です。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

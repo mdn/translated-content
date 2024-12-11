@@ -155,7 +155,7 @@ self.addEventListener("fetch", (event) => {
 
 ## セキュリティとプライバシー
 
-PWA は、インストールされている場合のみウェブ共有先として振る舞うことができます。[PWA をインストール可能にするには](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)も参照してください。
+PWA は、インストールされている場合のみウェブ共有先として振る舞うことができます。[PWA をインストール可能にするには](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)も参照してください。
 
 HTML フォームから送信された場合と同様に、共有先としてアプリケーションに送られたデータは注意して扱うべきです。使う前に必ず入力データを検証してください。
 

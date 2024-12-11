@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
+title: "SyntaxError: invalid regular expression flag \"x\""
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
@@ -84,5 +84,5 @@ JavaScript で使用できる 6 つの正規表現フラグについては、上
 
 ## 関連情報
 
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
 - [XRegEx flags](https://xregexp.com/flags/) – regular expression library that provides four new flags (`n`, `s`, `x`, `A`)

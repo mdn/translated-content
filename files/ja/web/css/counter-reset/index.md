@@ -5,7 +5,7 @@ slug: Web/CSS/counter-reset
 
 {{CSSRef}}
 
-**`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値で初期化します。
+**`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値で初期化します。
 このプロパティは新しいカウンターや逆行カウンターを、指定された要素の指定された名前で生成します。
 
 通常のカウンターは、初期値が 0 になっています。
@@ -78,7 +78,7 @@ counter-reset: unset;
 
 以下の例はカウンターの初期化方法を紹介していますが、増加、減少、表示の方法は示していません。
 
-もっと完全な例は、 [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を参照してください。
+もっと完全な例は、 [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を参照してください。
 
 ### 名前付きカウンターの初期化
 
@@ -111,7 +111,7 @@ h1 {
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

@@ -102,5 +102,5 @@ h2 {
 
 ## 関連情報
 
-- [インライン要素](/ja/docs/Web/HTML/Inline_elements)
+- [インライン要素](/ja/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

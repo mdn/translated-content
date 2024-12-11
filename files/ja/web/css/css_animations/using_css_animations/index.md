@@ -386,5 +386,5 @@ function listener(event) {
 ## 関連情報
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS アニメーションの対応の検出](/ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS アニメーションの対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

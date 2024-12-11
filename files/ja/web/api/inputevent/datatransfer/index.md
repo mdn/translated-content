@@ -1,9 +1,9 @@
 ---
 title: "InputEvent: dataTransfer プロパティ"
-short-title: dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+short-title: dataTransfer
 ---
 
 {{APIRef("UI Events")}}
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-次の単純な例では、[input](/ja/docs/Web/API/HTMLElement/input_event) イベントにイベントリスナーを設定して、コンテンツが contenteditable の {{htmlelement("p")}} 要素に貼り付けられると、その HTML ソースを [`InputEvent.dataTransfer.getData()`](/ja/docs/Web/API/DataTransfer/getData) メソッドを介して取得して入力欄の下に続く段落で報告するようにしています。
+次の単純な例では、[input](/ja/docs/Web/API/Element/input_event) イベントにイベントリスナーを設定して、コンテンツが contenteditable の {{htmlelement("p")}} 要素に貼り付けられると、その HTML ソースを [`InputEvent.dataTransfer.getData()`](/ja/docs/Web/API/DataTransfer/getData) メソッドを介して取得して入力欄の下に続く段落で報告するようにしています。
 
 指定されたコンテンツの一部をコピー＆ペーストして、その効果を確かめてみてください。
 

@@ -9,7 +9,7 @@ topSites API を使うと、ユーザーがよく訪れるページをを含む�
 
 ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
 
-topSites API を使うには "topSites" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)必要です。
+topSites API を使うには "topSites" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)必要です。
 
 ## 型
 
