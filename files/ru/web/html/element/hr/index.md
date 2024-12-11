@@ -22,7 +22,7 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 ## Attributes
 
-This element's attributes include the [global attributes](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `align` {{deprecated_inline}}
   - : Задаёт правило выравнивания.По умолчанию значение выставлено как **left**

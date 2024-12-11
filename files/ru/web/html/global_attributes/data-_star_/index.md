@@ -42,6 +42,6 @@ The **data-\*** Глобальные атрибуты образуют клас�
 
 ## Смотрите также
 
-- All [global attributes](/ru/docs/Web/HTML/Global_attributes).
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
 - [Using data attributes](/ru/docs/Learn/HTML/Howto/Use_data_attributes)

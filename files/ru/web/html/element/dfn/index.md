@@ -19,7 +19,7 @@ slug: Web/HTML/Element/dfn
 
 ## Атрибуты
 
-Атрибуты этого элемента включают [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 В HTML5 [`title`](/ru/docs/Web/HTML/Global_attributes#title) атрибут имеет особое значение, как указано ниже.
 

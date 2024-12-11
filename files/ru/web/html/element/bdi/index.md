@@ -23,7 +23,7 @@ slug: Web/HTML/Element/bdi
 
 ## Attributes
 
-Like all other HTML elements, this element has the [global attributes](/ru/docs/HTML/Global_attributes), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
+Like all other HTML elements, this element has the [global attributes](/ru/docs/Web/HTML/Global_attributes), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
 
 ## Example
 

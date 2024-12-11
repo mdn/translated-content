@@ -16,7 +16,7 @@ slug: Web/HTML/Element/br
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 

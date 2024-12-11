@@ -21,7 +21,7 @@ slug: Web/HTML/Element/div
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
 > Атрибут `align` устарел и вышел из употребления; не используйте его больше. Вместо этого, вам следует использовать свойства {{glossary("CSS")}} или методы, такие как [CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout) или [CSS Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox) для выравнивания и изменения положения элементов `<div>` на странице.
