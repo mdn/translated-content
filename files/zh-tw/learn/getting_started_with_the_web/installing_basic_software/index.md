@@ -44,6 +44,6 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 ### 安裝伺服器軟體
 
-有些例子需要使用伺服器軟體。你可以在 [How do you set up a local testing server?](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server) 找到作法。
+有些例子需要使用伺服器軟體。你可以在 [How do you set up a local testing server?](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) 找到作法。
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

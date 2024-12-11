@@ -9,7 +9,7 @@ slug: Web/HTML/Element/template
 
 你可以把 template 想成文件裡面，被儲存以待稍後使用的內容片段。在頁面載入時，解析器雖然會處理 `<template>` 元件的內容，但元素本身並不會被渲染。
 
-| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Phrasing_content)、支援腳本的元素 |
+| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元內容](/zh-TW/docs/Web/HTML/Content_categories#metadata_content)、[流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)、支援腳本的元素 |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許內容                                            | 沒有限制                                                                                                                                                                                                                               |
 | 標籤省略                                            | 不允許，開始和結束標籤都是必須的。                                                                                                                                                                                                     |

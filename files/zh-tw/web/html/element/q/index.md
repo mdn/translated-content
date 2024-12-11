@@ -7,11 +7,11 @@ slug: Web/HTML/Element/q
 
 _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引文。這個元素適用於不須換行的短引文，針對長引文，請使用 {{HTMLElement("blockquote")}} 元素。
 
-| [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)、捫及內容。 |
+| [內容類別](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[段落式內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)、捫及內容。 |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 允許內容                                        | [段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)                                                                         |
+| 允許內容                                        | [段落式內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                                                         |
 | 標籤省略                                        | 不允許，開始和結束標籤都是必須的。                                                                                                         |
-| 允許父元素                                      | 任何允許[段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素                                                           |
+| 允許父元素                                      | 任何允許[段落式內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)的元素                                                           |
 | DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                                                                            |
 
 > [!NOTE]
@@ -19,7 +19,7 @@ _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引�
 
 ## 屬性
 
-這個元素包含 [全域屬性](/zh-TW/docs/HTML/Global_attributes)。
+這個元素包含 [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `cite`
   - : 這個屬性值為可以指定引用文件、或信息來源的 URL。這個屬性預期導向信息說明的上下文、或是引文參照。
