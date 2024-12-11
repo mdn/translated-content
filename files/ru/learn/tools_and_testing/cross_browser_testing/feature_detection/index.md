@@ -15,7 +15,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 Идея обнаружения функции заключается в том, что вы можете запустить тест, чтобы определить, поддерживается ли функция в текущем браузере, а затем условно запустить код, чтобы обеспечить приемлемый опыт как в браузерах, которые поддерживают функцию, так и в браузере, который не поддерживает. Если вы этого не сделаете, браузеры, которые не поддерживают функции, которые вы используете в своём коде, не будут отображать ваши сайты должным образом и просто не сработают, создавая плохой опыт пользователя.
 
-Давайте подведём итоги и посмотрим на пример, который мы затронули в нашем документе [Решение самых распространённых проблем JavaScript](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection)— [Использование геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation) (который предоставляет доступные данные о местоположении для устройства, на котором работает веб-браузер) есть основная точка входа для его использования, свойство `geolocation,` доступное на глобальном объекте [Navigator](/ru/docs/Web/API/Navigator). Следовательно, вы можете определить, поддерживает ли браузер геолокацию или нет, используя что-то вроде следующего:
+Давайте подведём итоги и посмотрим на пример, который мы затронули в нашем документе [Решение самых распространённых проблем JavaScript](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection)— [Использование геолокации](/ru/docs/Web/API/Geolocation_API) (который предоставляет доступные данные о местоположении для устройства, на котором работает веб-браузер) есть основная точка входа для его использования, свойство `geolocation,` доступное на глобальном объекте [Navigator](/ru/docs/Web/API/Navigator). Следовательно, вы можете определить, поддерживает ли браузер геолокацию или нет, используя что-то вроде следующего:
 
 ```js
 if ("geolocation" in navigator) {
@@ -71,7 +71,7 @@ if ("geolocation" in navigator) {
 Здесь мы берём ссылку на второй элемент `<link>` и создаём элемент `<div>` как часть нашего теста. В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.
 
 > [!NOTE]
-> Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
+> Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
 
 Когда вы сохраните все и опробуете свой пример, вы должны увидеть макет flexbox, применённый к странице, если браузер поддерживает современный flexbox, и макет float, если нет.
 
@@ -80,7 +80,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/Media_Queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
+Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/CSS_media_queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
 
 Например, мы могли бы переписать наш предыдущий пример для использования `@supports` — см. [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Если вы посмотрите на последнее, вы увидите пару блоков `@supports` например:
 

@@ -70,7 +70,7 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 ### Подготовка
 
-В начале этого урока, мы хотели бы, чтобы вы создали локальную копию файла [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ([см. здесь](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Откройте его как в текстовом редакторе, так и в веб-браузере. На данный момент вы увидите простой заголовок, абзац с инструкцией и форму для ввода предположения, но форма в настоящее время ничего не сделает.
+В начале этого урока, мы хотели бы, чтобы вы создали локальную копию файла [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ([см. здесь](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Откройте его как в текстовом редакторе, так и в веб-браузере. На данный момент вы увидите простой заголовок, абзац с инструкцией и форму для ввода предположения, но форма в настоящее время ничего не сделает.
 
 Место, где мы будем добавлять весь наш код, находится внутри элемента {{htmlelement("script")}} в нижней части HTML:
 
@@ -140,7 +140,7 @@ function checkGuess() {
 
 Сейчас попробуйте сохранить код и обновить его в браузере.
 
-Перейдите к [консоли JavaScript в инструментах разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), и введите следующую строку:
+Перейдите к [консоли JavaScript в инструментах разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), и введите следующую строку:
 
 ```js
 checkGuess();
@@ -155,7 +155,7 @@ checkGuess();
 
 Операторы JavaScript позволяют нам проводить проверки, математические расчёты, объединять строки вместе и выполнять другие подобные действия.
 
-Сохраните наш код и обновите страницу показанную в браузере. Откройте [консоль JavaScript](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), если вы ещё её не открыли, чтобы попробовать ввести текст из приведённых ниже примеров — введите каждую строчку из столбца "Пример", нажимая Enter после каждого из них, и посмотрите какие результаты они возвращают. Если у вас нет доступа к инструментам разработчика в браузере, вы всегда можете использовать простую встроенную консоль, показанную ниже:
+Сохраните наш код и обновите страницу показанную в браузере. Откройте [консоль JavaScript](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), если вы ещё её не открыли, чтобы попробовать ввести текст из приведённых ниже примеров — введите каждую строчку из столбца "Пример", нажимая Enter после каждого из них, и посмотрите какие результаты они возвращают. Если у вас нет доступа к инструментам разработчика в браузере, вы всегда можете использовать простую встроенную консоль, показанную ниже:
 
 ```html hidden
 <!doctype html>
@@ -473,7 +473,7 @@ guessField.focus();
 var guessField = document.querySelector(".guessField");
 ```
 
-Чтобы получить это значение, мы использовали метод {{domxref("document.querySelector", "querySelector()")}} объекта {{domxref("document")}}. `querySelector()` "берет" одну часть информации - [CSS selector](/ru/docs/Learn/CSS/Introduction_to_CSS/Selectors), который выбирает нужный элемент*.*
+Чтобы получить это значение, мы использовали метод {{domxref("document.querySelector", "querySelector()")}} объекта {{domxref("document")}}. `querySelector()` "берет" одну часть информации - [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors), который выбирает нужный элемент*.*
 
 Поскольку `guessField` теперь содержит ссылку на элемент {{htmlelement("input")}}, теперь он будет иметь доступ к ряду свойств (в основном к переменным, хранящимся внутри объектов, некоторые значения которых нельзя изменять) и методы (в основном функции, хранящиеся внутри объектов). Одним из методов, доступных для ввода элементов, является focus (), поэтому мы можем теперь использовать эту строку для фокусировки ввода текста:
 
@@ -488,7 +488,7 @@ guessField.focus();
 Давайте немного поиграем с некоторыми объектами браузера.
 
 1. Для начала запустите свою программу в браузере.
-2. Далее, откройте [инструменты разработчика в вашем браузере](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), и убедитесь, что вы перешли во вкладку с консолью JavaScript.
+2. Далее, откройте [инструменты разработчика в вашем браузере](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), и убедитесь, что вы перешли во вкладку с консолью JavaScript.
 3. Введите `guessField` и консоль покажет, что переменная содержит элемент {{htmlelement("input")}}. Вы также можете заметить, что консоль автоматически заполняет имена объектов, которые существуют внутри исполняющей среды, включая ваши переменные!
 4. Теперь введите следующее:
 
@@ -526,6 +526,6 @@ guessField.focus();
 
 ## Теперь можно отдохнуть
 
-Итак, на этом пример закончился - отлично, вы добрались до конца! Попробуйте свой финальный код или [поиграйте с нашей готовой версией здесь](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Если вы не можете запустить этот пример, сверьтесь с [исходным кодом.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)
+Итак, на этом пример закончился - отлично, вы добрались до конца! Попробуйте свой финальный код или [поиграйте с нашей готовой версией здесь](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Если вы не можете запустить этот пример, сверьтесь с [исходным кодом.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)
 
 {{PreviousMenuNext("Learn/JavaScript/Первые_шаги/What_is_JavaScript", "Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги")}}

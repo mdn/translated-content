@@ -7,7 +7,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 
 В предыдущих статьях мы рассмотрели всю существенную теорию объектов JavaScript и детали синтаксиса, давая вам прочную основу для начала. В этой статье мы погружаемся в практическое упражнение, давая вам больше практики в создании пользовательских объектов JavaScript, с весёлым и красочным результатом.
 
-| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (see [First steps](/ru/docs/Learn/JavaScript/First_steps) and [Building blocks](/ru/docs/Learn/JavaScript/Building_blocks)) и основами OOJS (см. [Introduction to objects](/ru/docs/Learn/JavaScript/Object-oriented/Introduction)). |
+| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (see [First steps](/ru/docs/Learn/JavaScript/First_steps) and [Building blocks](/ru/docs/Learn/JavaScript/Building_blocks)) и основами OOJS (см. [Introduction to objects](/ru/docs/Learn/JavaScript/Objects/Basics)). |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:               | Получение некоторой практики в использовании объектов и объектно-ориентированных методов в реальном мире.                                                                                                                                                                                                                          |
 
@@ -17,7 +17,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 
 ![](bouncing-balls.png)
 
-В этом примере будет использоваться [Canvas API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) для рисования шаров на экране и API [requestAnimationFrame](/ru/docs/Web/API/window/requestAnimationFrame) для анимации всего экрана - вам не нужно иметь никаких предыдущих знаний об этих API, и мы надеемся, что к тому моменту, когда вы закончите эту статью, вам будет интересно изучить их больше. По пути мы воспользуемся некоторыми изящными объектами и покажем вам пару хороших приёмов, таких как отскоки шаров от стен и проверка того, попали ли они друг в друга (иначе известный как **обнаружение столкновения**).
+В этом примере будет использоваться [Canvas API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) для рисования шаров на экране и API [requestAnimationFrame](/ru/docs/Web/API/Window/requestAnimationFrame) для анимации всего экрана - вам не нужно иметь никаких предыдущих знаний об этих API, и мы надеемся, что к тому моменту, когда вы закончите эту статью, вам будет интересно изучить их больше. По пути мы воспользуемся некоторыми изящными объектами и покажем вам пару хороших приёмов, таких как отскоки шаров от стен и проверка того, попали ли они друг в друга (иначе известный как **обнаружение столкновения**).
 
 ## Начало работы
 
@@ -284,7 +284,7 @@ Ball.prototype.update = function () {
 ## Смотрите также
 
 - [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial) — руководство для новичков по использованию 2D-холста.
-- [requestAnimationFrame()](/ru/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/ru/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/ru/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/ru/docs/Games/Techniques/3D_collision_detection)
 - [2D breakout game using pure JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.

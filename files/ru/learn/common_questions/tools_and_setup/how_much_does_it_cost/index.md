@@ -7,7 +7,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 Веб-разработка обходится не так дёшево, как вам может показаться. В этой статье мы обсудим, как много вам потребуется потратить и почему.
 
-| Прежде чем приступить: | Вам следует уже иметь представление о том, [какое программное обеспечение вам нужно](/en-US/Learn/What_software_do_I_need), различия между веб-страницей, веб-сайтом, и тд, а также о том, [что из себя представляет доменное имя](/en-US/Learn/Understanding_domain_names). |
+| Прежде чем приступить: | Вам следует уже иметь представление о том, [какое программное обеспечение вам нужно](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need), различия между веб-страницей, веб-сайтом, и тд, а также о том, [что из себя представляет доменное имя](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name). |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:                  | Рассмотреть весь процесс создания веб-сайта и оценить расходы на каждом шаге.                                                                                                                                                                                                |
 
@@ -39,7 +39,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 Если вы хотите встроить видео или аудио в ваш веб-сайт, то вы можете встроить онлайн сервисы (например, YouTube, Vimeo, или Dailymotion), или встроить ваши собственные видео (см. ниже расходы на пропускную способность).
 
-Для аудиофайлов, вы можете найти бесплатное программное обеспечение ([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)), либо заплатить пару сотен долларов ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](http://www.adobe.com/products/audition.html)). Подобным образом, видеоредакторы могут быть бесплатными ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) для Linux, [iMovie](https://www.apple.com/mac/imovie/) для Mac), менее чем $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), либо иметь стоимость в пару сотен долларов ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). Программное обеспечение, поставляемое с вашей цифровой камерой может, также, удовлетворить все ваши нужды.
+Для аудиофайлов, вы можете найти бесплатное программное обеспечение ([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)), либо заплатить пару сотен долларов ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Подобным образом, видеоредакторы могут быть бесплатными ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) для Linux, [iMovie](https://www.apple.com/mac/imovie/) для Mac), менее чем $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), либо иметь стоимость в пару сотен долларов ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). Программное обеспечение, поставляемое с вашей цифровой камерой может, также, удовлетворить все ваши нужды.
 
 ### Инструменты публикации
 
@@ -127,7 +127,7 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 ## Следующие шаги
 
-На данный момент у вас есть понимание того, во сколько вам может обойтись ваш сайт, так что настало время проектирования веб-сайта и [настройки вашего рабочего пространства.](/ru/docs/Learn/Set_up_a_basic_working_environment)
+На данный момент у вас есть понимание того, во сколько вам может обойтись ваш сайт, так что настало время проектирования веб-сайта и [настройки вашего рабочего пространства.](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
-- Прочитайте о том, [как выбрать и установить текстовый редактор](/ru/docs/Learn/Choose,_Install_and_set_up_a_text_editor).
-- Если вы больше сфокусированы на проектировании, взгляните на [анатомию веб-страницы](/en-US/Learn/Anatomy_of_a_web_page).
+- Прочитайте о том, [как выбрать и установить текстовый редактор](/ru/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
+- Если вы больше сфокусированы на проектировании, взгляните на [анатомию веб-страницы](/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).

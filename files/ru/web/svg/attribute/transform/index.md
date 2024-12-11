@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/transform
 | ---------------- | -------------------------------------------------------------------------------- |
 | Значение         | **\<transform-list>**                                                            |
 | Анимация         | Да                                                                               |
-| Нормативная база | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
+| Нормативная база | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
 
 ### Типы преобразований
 
@@ -146,4 +146,4 @@ SVG:
 - {{ SVGElement("g") }}
 - {{ SVGElement("switch") }}
 - {{ SVGElement("use") }}
-- [Графические элементы](/en/SVG/Element#Graphics) »
+- [Графические элементы](/en-US/SVG/Element#graphics) »

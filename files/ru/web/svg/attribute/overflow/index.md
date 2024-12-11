@@ -25,7 +25,7 @@ slug: Web/SVG/Attribute/overflow
 | -------------------- | --------------------------------------------------------------------------------- |
 | Значение             | visible \| hidden \| scroll \| auto \| inherit                                    |
 | Анимируемый          | Да                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/masking.html#OverflowProperty) |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/masking.html#OverflowProperty) |
 
 ## Пример
 

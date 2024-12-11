@@ -63,7 +63,7 @@ y &&= 0; // 0
 ## Смотрите также
 
 - [Логическое И (&&)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Присваивание побитового И (`&=`)](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}

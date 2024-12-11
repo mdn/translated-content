@@ -13,10 +13,10 @@ slug: Web/SVG/Attribute/lighting-color
 
 | Категория            | Атрибут представления                                                                                             |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Значение             | currentColor \| [\<color>](/en/SVG/Content_type#Color) \| [\<icccolor>](/en/SVG/Content_type#ICCColor) \| inherit |
+| Значение             | currentColor \| [\<color>](/en-US/SVG/Content_type#color) \| [\<icccolor>](/en-US/SVG/Content_type#icccolor) \| inherit |
 | Начальное значение   | white                                                                                                             |
 | Анимация             | Да                                                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty)                            |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#LightingColorProperty)                            |
 
 ## Примеры
 

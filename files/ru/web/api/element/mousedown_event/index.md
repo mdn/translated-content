@@ -10,7 +10,7 @@ slug: Web/API/Element/mousedown_event
 ## Общая информация
 
 - Спецификация
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
 - Интерфейс
   - : {{domxref("MouseEvent")}}
 - Всплывающее
@@ -28,8 +28,8 @@ slug: Web/API/Element/mousedown_event
 | ---------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}        | [`EventTarget`](/ru/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                                                                                                                               |
 | `type` {{readonlyInline}}          | [`DOMString`](/ru/docs/Web/API/DOMString)     | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/ru/docs/Web/API/Boolean)         | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/API/Boolean)         | Whether the event is cancellable or not?                                                                                                                                                                                                                                                                                                                                                                             |
+| `bubbles` {{readonlyInline}}       | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                            |
+| `cancelable` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event is cancellable or not?                                                                                                                                                                                                                                                                                                                                                                             |
 | `view` {{readonlyInline}}          | [`WindowProxy`](/ru/docs/Web/API/WindowProxy) | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
 | `detail` {{readonlyInline}}        | `long` (`float`)                              | A count of consecutive clicks that happened in a short amount of time, incremented by one.                                                                                                                                                                                                                                                                                                                           |
 | `currentTarget` {{readonlyInline}} | EventTarget                                   | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                       |
@@ -49,12 +49,12 @@ slug: Web/API/Element/mousedown_event
 ## Связанные события
 
 - [`mousedown`](/ru/docs/Web/API/Element/mousedown_event)
-- [`mouseup`](/ru/docs/Web/Events/mouseup)
-- [`mousemove`](/ru/docs/Web/Events/mousemove)
-- [`click`](/ru/docs/Web/Events/click)
-- [`dblclick`](/ru/docs/Web/Events/dblclick)
-- [`mouseover`](/ru/docs/Web/Events/mouseover)
-- [`mouseout`](/ru/docs/Web/Events/mouseout)
-- [`mouseenter`](/ru/docs/Web/Events/mouseenter)
+- [`mouseup`](/ru/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/ru/docs/Web/API/Element/mousemove_event)
+- [`click`](/ru/docs/Web/API/Element/click_event)
+- [`dblclick`](/ru/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/ru/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/ru/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/ru/docs/Web/API/Element/mouseenter_event)
 - [`mouseleave`](/ru/docs/Web/API/Element/mouseleave_event)
-- [`contextmenu`](/ru/docs/Web/Events/contextmenu)
+- [`contextmenu`](/ru/docs/Web/API/Element/contextmenu_event)

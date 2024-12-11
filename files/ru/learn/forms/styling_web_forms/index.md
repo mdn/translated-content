@@ -48,7 +48,7 @@ The main issue with all these widgets, comes from the fact that they have a very
 
 ## Basic styling
 
-To style [elements that are easy to style](/ru/docs/Learn/Forms/Styling_web_forms#the_good) with CSS, you shouldn't face any difficulties, since they mostly behave like any other HTML element. However, the user-agent style sheet of every browser can be a little inconsistent, so there are a few tricks that can help you style them in an easier way.
+To style [elements that are easy to style](#the_good) with CSS, you shouldn't face any difficulties, since they mostly behave like any other HTML element. However, the user-agent style sheet of every browser can be a little inconsistent, so there are a few tricks that can help you style them in an easier way.
 
 ### Search fields
 

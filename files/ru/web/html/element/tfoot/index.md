@@ -9,7 +9,7 @@ HTML-элемент **`<tfoot>`** определяющий набор строк
 
 ## Используемый контекст
 
-| [Content categories](/en-US/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [Content categories](/en-US/docs/Web/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержание                                | Ноль или более {{ HTMLElement("tr") }} элементов.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Tag omission                                         | The start tag is mandatory. The end tag may be omitted if the {{ HTMLElement("tbody") }} element is immediately followed by an, eventually implicitly-defined, {{ HTMLElement("tbody") }}, or if there is no more content in the parent {{ HTMLElement("table") }} element.                                                                                                                                                                                                                               |
@@ -18,7 +18,7 @@ HTML-элемент **`<tfoot>`** определяющий набор строк
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `align` {{ Deprecated_inline() }}
 

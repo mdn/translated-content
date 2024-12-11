@@ -29,4 +29,4 @@ SDP is never used alone, but by protocols like {{Glossary("RTP")}} and {{Glossar
 
 ### General knowledge
 
-- [WebRTC protocols](/ru/docs/Web/API/WebRTC_API/Architecture/Protocols)
+- [WebRTC protocols](/ru/docs/Web/API/WebRTC_API/Protocols)

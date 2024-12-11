@@ -7,7 +7,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 В данной статье мы узнаем, что такое ссылки и почему они важны.
 
-| Предварительно: | Вы должны знать [как работает интернет](/en-US/Learn/How_the_Internet_works) и иметь представление о [разнице между веб-страницей, веб-сайтом, веб-сервером и поисковой системой.](/ru/docs/Learn/page_vs_site_vs_server_vs_search_engine) |
+| Предварительно: | Вы должны знать [как работает интернет](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) и иметь представление о [разнице между веб-страницей, веб-сайтом, веб-сервером и поисковой системой.](/ru/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines) |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Цель:           | Изучить, что такое веб-ссылки и почему они важны.                                                                                                                                                                                          |
 
@@ -33,7 +33,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 ## Активно изучаем
 
-_В данном разделе нет контента. [Please, consider contributing](/ru/docs/MDN/Getting_started)._
+_В данном разделе нет контента. [Please, consider contributing](/ru/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Глубокое погружение
 
@@ -74,6 +74,6 @@ _В данном разделе нет контента. [Please, consider contr
 
 Так что теперь, конечно, вы захотите создать несколько веб-страниц со ссылками!
 
-- Чтобы получить более теоретическое обоснование, узнайте об [URL-адресах и их структуре](/ru/docs/Learn/Understanding_URLs), поскольку каждая ссылка указывает на URL-адрес.
+- Чтобы получить более теоретическое обоснование, узнайте об [URL-адресах и их структуре](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), поскольку каждая ссылка указывает на URL-адрес.
 - Хотите что-нибудь более практичное? В статье [Создание гиперссылок](/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) нашего модуля [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML) подробно объясняется, как реализовывать ссылки.
-- Приступите к изучению HTML. Научитесь [создавать HTML-документы и связывать их между собой.](/ru/docs/Learn/HTML/Write_a_simple_page_in_HTML)
+- Приступите к изучению HTML. Научитесь [создавать HTML-документы и связывать их между собой.](/ru/docs/Learn/Getting_started_with_the_web)

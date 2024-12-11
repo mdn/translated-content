@@ -38,7 +38,7 @@ if (condition) {
 Что мы имеем:
 
 1. Ключевое слово `if` расположено перед круглыми скобками.
-2. Условие для проверки (condition), расположено внутри круглых скобок (например "это значение больше другого значения?", или "это значение существует?"). Это условие использует операторы сравнения ([comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)), которые мы изучим позже, и возвратит нам `true` или `false`.
+2. Условие для проверки (condition), расположено внутри круглых скобок (например "это значение больше другого значения?", или "это значение существует?"). Это условие использует операторы сравнения ([comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators)), которые мы изучим позже, и возвратит нам `true` или `false`.
 3. Внутри скобок { } расположен код, который будет выполняться только в том случае, если условие (condition) верно (`true)`.
 4. Ключевое слово `else (иначе)`.
 5. Ещё скобки { }, код внутри которых выполнится, только если условие не верно (не `true)`.
@@ -83,7 +83,7 @@ if (shoppingDone === true) {
 В этом коде, как показано, всегда будет `shoppingDone` равный `false`, что означает разочарование для нашего бедного ребёнка. Мы должны предоставить механизм для родителя, чтобы установить для переменной `shoppingDone` значение `true` , если ребёнок помог с покупками.
 
 > [!NOTE]
-> Вы можете увидеть больше в [полной версии этого примера на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (также посмотреть как он [работает вживую](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> Вы можете увидеть больше в [полной версии этого примера на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (также посмотреть как он [работает вживую](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -139,11 +139,11 @@ function setWeather() {
 4. Последний выбор, внутри `else {...}` блока, в основном является «последним средством» — код внутри него будет запущен, если ни одно из условий не будет `true`. В этом случае он служит для удаления текста из абзаца, если ничего не выбрано, например, если пользователь решает повторно выбрать опцию "--Сделайте выбор--" которая указана в начале.
 
 > [!NOTE]
-> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (также [увидеть как он работает](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html))
+> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (также [увидеть как он работает](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html))
 
 ### Примечание об операторах сравнения
 
-Операторы сравнения используют для проверки условий внутри наших условных операторов. Сначала мы посмотрели на операторы сравнения в нашей статье [Базовая математика в JavaScript — цифры и операторы](/ru/docs/Learn/JavaScript/Первые_шаги/Math#Comparison_operators) . Наш выбор это:
+Операторы сравнения используют для проверки условий внутри наших условных операторов. Сначала мы посмотрели на операторы сравнения в нашей статье [Базовая математика в JavaScript — цифры и операторы](/ru/docs/Learn/JavaScript/First_steps/Math#comparison_operators) . Наш выбор это:
 
 - `===` и `!==` — проверяет одно значение идентично или не идентично другому.
 - `<` и `>` — проверяет одно значение меньше или больше, чем другое.
@@ -201,7 +201,7 @@ if (choice === "sunny") {
 
 ### Логические операторы: И, ИЛИ и НЕ
 
-Если вы хотите проверить несколько условий без записи вложенных `if...else` условий, [логические операторы](/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators) помогут вам. При использовании в условиях, первые два оператора делают следующее:
+Если вы хотите проверить несколько условий без записи вложенных `if...else` условий, [логические операторы](/ru/docs/Web/JavaScript/Reference/Operators) помогут вам. При использовании в условиях, первые два оператора делают следующее:
 
 - `&&` — И; позволяет объединить два или более выражения так, что каждое из них отдельно должно иметь значение `true` , чтобы в итоге общее выражение имело значение `true`.
 - `||` — ИЛИ; позволяет объединить два или более выражения так, что одно или несколько из них должно иметь значение `true` , чтобы в итоге общее выражение имело значение `true`.
@@ -359,11 +359,11 @@ function setWeather() {
 {{ EmbedLiveSample('Пример_оператора_switch', '100%', 100) }}
 
 > [!NOTE]
-> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (также увидеть [как он работает](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
+> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (также увидеть [как он работает](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
 
 ## Тернарный оператор
 
-Это последний теоретический раздел данной статьи и мы перейдём к практическим упражнениям. [Тернарный или условный оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) имеет простой синтаксис: он проверяет условие и возвращает одно значение или выражение, если условие является `true`, и другое значение/выражение, если условие является `false`. Часто это очень удобная альтернатива блоку `if...else`, позволяющая затрачивать меньшие усилия на написание кода, когда имеется всего лишь два варианта, выбираемых на основе условия `true`/`false`. Общая схема оператора:
+Это последний теоретический раздел данной статьи и мы перейдём к практическим упражнениям. [Тернарный или условный оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator) имеет простой синтаксис: он проверяет условие и возвращает одно значение или выражение, если условие является `true`, и другое значение/выражение, если условие является `false`. Часто это очень удобная альтернатива блоку `if...else`, позволяющая затрачивать меньшие усилия на написание кода, когда имеется всего лишь два варианта, выбираемых на основе условия `true`/`false`. Общая схема оператора:
 
 ```
 ( условие) ? выполнить этот код : выполнить этот код вместо первого
@@ -414,10 +414,10 @@ select.onchange = function () {
 
 Мы используем элемент {{htmlelement('select')}} для выбора темы (чёрная или белая), а также простой {{htmlelement('h1')}} для отображения заголовка веб-сайта. Кроме того, у нас есть функция `update()`, принимающая в качестве параметров (входных данных) два цвета. В качестве фона используется первый переданный цвет, а в качестве цвета текста – второй переданный цвет.
 
-Наконец, у нас есть обработчик событий [onchange](/ru/docs/Web/API/GlobalEventHandlers/onchange) , использующийся для запуска функции, содержащей тернарный оператор. Сначала она проверяет условие — `select.value === 'black'`. Если возвращается `true`, мы запускаем функцию `update()` с параметрами чёрного и белого, в результате чего получаем чёрный цвет фона и белый цвет текста. Если возвращается `false`, мы запускаем функцию `update()` с параметрами белого и чёрного, в результате чего цвета веб-сайта меняются на противоположные.
+Наконец, у нас есть обработчик событий [onchange](/ru/docs/Web/API/HTMLElement/change_event) , использующийся для запуска функции, содержащей тернарный оператор. Сначала она проверяет условие — `select.value === 'black'`. Если возвращается `true`, мы запускаем функцию `update()` с параметрами чёрного и белого, в результате чего получаем чёрный цвет фона и белый цвет текста. Если возвращается `false`, мы запускаем функцию `update()` с параметрами белого и чёрного, в результате чего цвета веб-сайта меняются на противоположные.
 
 > [!NOTE]
-> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (также увидеть [как он работает](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
+> Вы можете [найти этот пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (также увидеть [как он работает](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
 
 ## Практическое упражнение: простой календарь
 
@@ -762,13 +762,13 @@ textarea.onkeyup = function () {
 
 ## Заключение
 
-Это все, что вам нужно знать на данный момент об условных логических структурах! Уверены, вы хорошо разобрались в теоретическом материале и с лёгкостью справились с предложенными упражнениями. Если же что-то осталось для вас непонятным, перечитайте статью ещё раз или [свяжитесь с нами](/en-US/Learn#Contact_us).
+Это все, что вам нужно знать на данный момент об условных логических структурах! Уверены, вы хорошо разобрались в теоретическом материале и с лёгкостью справились с предложенными упражнениями. Если же что-то осталось для вас непонятным, перечитайте статью ещё раз или [свяжитесь с нами](/en-US/docs/Learn#contact_us).
 
 ## Смотрите также
 
-- [Comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
-- [Conditional statements in detail](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [Comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Conditional statements in detail](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Conditional (ternary) operator reference](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional (ternary) operator reference](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

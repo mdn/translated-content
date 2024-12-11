@@ -21,7 +21,7 @@ slug: Web/SVG/Attribute/fill
 | -------------------- | ---------------------------------------------------------------------------- |
 | Значение             | **remove** \| freeze                                                         |
 | Анимация             | Нет                                                                          |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FillAttribute) |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FillAttribute) |
 
 - remove (default)
   - : Эффект анимации удаляется (больше не применяется) при завершении активной продолжительности анимации. После активного конца анимации анимация больше не влияет на конечный объект (если анимация не перезапущена).
@@ -32,9 +32,9 @@ slug: Web/SVG/Attribute/fill
 
 | Категория            | Атрибут представления                                                        |
 | -------------------- | ---------------------------------------------------------------------------- |
-| Значение             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke`     |
+| Значение             | [\<paint>](/en-US/SVG/Content_type#paint), `context-fill`, `context-stroke`     |
 | Анимация             | Да                                                                           |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
 ## Примеры
 
@@ -58,6 +58,6 @@ slug: Web/SVG/Attribute/fill
 
 Следующие элементы могут использовать атрибут `fill`
 
-- [Animation elements](/en/SVG/Element#Animation_elements)
-- [Shape elements](/en/SVG/Element#Shape)
-- [Text content elements](/en/SVG/Element#TextContent)
+- [Animation elements](/en-US/SVG/Element#animation_elements)
+- [Shape elements](/en-US/SVG/Element#shape)
+- [Text content elements](/en-US/SVG/Element#textcontent)

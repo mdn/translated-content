@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/attributeType
 | -------------------- | ------------------------------------------------------------------------------------- |
 | Значение             | CSS \| XML \| **auto**                                                                |
 | Анимируемый          | Нет                                                                                   |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
 
 Этот атрибут может принимать одно из следующих значений:
 
