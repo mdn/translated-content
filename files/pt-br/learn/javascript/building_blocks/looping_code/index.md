@@ -870,7 +870,7 @@ Nós recomendamos o uso do `for`, pelo menos no começo, já que ele é provavel
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/pt-BR/docs/Learn#contact_us) to ask for help.
 
 ## See also
 

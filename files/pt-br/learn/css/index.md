@@ -9,21 +9,21 @@ Cascading Stylesheets — ou {{glossary("CSS")}} — é a primeira tecnologia qu
 
 Você deveria aprender o básico de HTML antes de tentar algo com CSS. Nós recomendamos que você comece através da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).Neste módulo você irá aprender sobre:
 
-- CSS, começando com a [introdução ao CSS](/en-US/docs/Learn/CSS/First_steps)
-- [Módulos HTML](/en-US/docs/Learn/HTML#modules) mais avançados
+- CSS, começando com a [introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
+- [Módulos HTML](/pt-BR/docs/Learn/HTML#modules) mais avançados
 - [JavaScript](/pt-BR/docs/Learn/JavaScript), e como utiliza-lo para adicionar funcionalidade dinâmica as páginas da web
 
 Uma vez que voce entendeu os Fundamentos do HTML, Nós recomendamos que você aprenda HTML e CSS ao mesmo tempo, movendo-se para trás e para frente entre os dois temas. Isso por que HTML é muito mais interessante com CSS e você não pode aprender realmente CSS sem conhecer HTML.
 
 Antes de iniciar este tópico, você também deve ter ao menos familiaridade com o uso de computadores, e utilizar a Web passivamente (isto é, apenas navegando e consumindo conteúdo.) Você deve ter uma configuração básica de ambiente de trabalho, conforme detalhado no [Instalando o software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software), e entender como criar e gerenciar arquivos, conforme detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — ambos são partes do nosso [Como começar com a web](/pt-BR/docs/Learn/Getting_started_with_the_web) módulo completo de iniciante.
 
-É recomendável que você trabalhe através do [Como começar com a web](/pt-BR/docs/Learn/Getting_started_with_the_web) antes de começar este tema. Contudo, não é absolutamente necessário; ja que muito do que é abordado no artigo básico de CSS também é coberto em nossa [introdução ao CSS](/en-US/docs/Learn/CSS/First_steps), embora com muito mais detalhes.
+É recomendável que você trabalhe através do [Como começar com a web](/pt-BR/docs/Learn/Getting_started_with_the_web) antes de começar este tema. Contudo, não é absolutamente necessário; ja que muito do que é abordado no artigo básico de CSS também é coberto em nossa [introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps), embora com muito mais detalhes.
 
 ## Módulos
 
 Este tópico contém os seguintes módulos em uma ordem sugerida para trabalhar através deles. Você deve definitivamente começar com o primeiro.
 
-- [Introdução ao CSS](/en-US/docs/Learn/CSS/First_steps)
+- [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
   - : Este módulo é uma introdução com as noções básicas de como CSS funciona, incluindo seletores e propriedades, escrever regras CSS, aplicando CSS para HTML, como especificar comprimento, cor e outras unidades em CSS, controlar cascatas e heranças, noções básicas de box model e depuração CSS.
 - [Estilo de texto](/pt-BR/docs/Learn/CSS/Styling_text)
   - : Aqui nós olhamos os fundamentos do estilos de texto, incluindo a configuração da fonte, negrito, itálico, linha e espaçamento das letras, além de sombras e outros componentes de texto. Nós usamos este módulo para personalizar fontes para sua página, e estilizar listas e links.

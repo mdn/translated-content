@@ -25,14 +25,14 @@ dependentes terminaram de carregar.
 
 ## Propriedades
 
-| Property                        | Type                                             | Description                                                                                   |
-| ------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)     | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy) | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
+| Property                        | Type                                                                                  | Description                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                            |
 
 ## Exemplo
 

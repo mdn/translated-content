@@ -18,7 +18,7 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
 
 | Categorias          | Nenhuma                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
-| Valor               | [\<list-of-class-names>](/pt-BR/docs/SVG/Content_type#list-of-ts)                                   |
+| Valor               | [\<list-of-class-names>](/pt-BR/docs/SVG/Content_type#list-of-ts)                              |
 | Animável            | Sim                                                                                            |
 | Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 

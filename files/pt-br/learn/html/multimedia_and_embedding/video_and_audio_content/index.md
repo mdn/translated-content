@@ -295,7 +295,7 @@ Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
+Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 
 > [!NOTE]
 > As faixas de texto também ajudam você com o {{glossary ("SEO")}}, pois os mecanismos de pesquisa prosperam especialmente no texto. As trilhas de texto permitem até que os mecanismos de pesquisa sejam vinculados diretamente a um ponto no meio do vídeo.
@@ -325,7 +325,7 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 - Os elementos de mídia HTML: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}.
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media).
 - [Guia para tipos e formatos de mídia na Web](/pt-BR/docs/Web/Media/Formats).
-- [Adicionando legendas e legendas ao vídeo HTML5](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
+- [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
 - [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
 - [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
 - Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)

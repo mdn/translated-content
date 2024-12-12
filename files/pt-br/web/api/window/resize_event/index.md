@@ -28,14 +28,14 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 
 ## Properties
 
-| Property                        | Type                                             | Description                                                                                |
-| ------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget) | O evento alto (o primeiro alvo na árvore DOM).                                             |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)     | O tipo de evento.                                                                          |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Se o evento normalmente bubbles ou não.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Se o evento é cancelado ou não.                                                            |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy) | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                         |
+| Property                        | Type                                                                                  | Description                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | O evento alto (o primeiro alvo na árvore DOM).                                             |
+| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | O tipo de evento.                                                                          |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento normalmente bubbles ou não.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento é cancelado ou não.                                                            |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                         |
 
 ## Examples
 

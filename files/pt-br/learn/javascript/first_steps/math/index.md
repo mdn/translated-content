@@ -41,7 +41,7 @@ Temos até mesmo diferentes tipos de sistemas numéricos! O decimal tem por base
 
 - **Binário** — A linguagem de menor level dos computadores; 0s e 1s.
 - **Octal** — Base 8, usa um caractere entre 0–7 em cada coluna.
-- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#valores_hexadecimais).
+- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units#valores_hexadecimais).
 
 **Antes de se preocupar com seu cérebro estar derretendo, pare agora mesmo!** Para um começo, vamos nos ater aos números decimais no decorrer desse curso; você raramente irá se deparar com a necessidade de começar a pensar sobre os outros tipos, se é que vai precisar algum dia.
 

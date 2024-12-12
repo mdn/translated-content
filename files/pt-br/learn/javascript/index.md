@@ -13,7 +13,7 @@ O JavaScript não é tão fácil de aprender como outras linguagens, como [HTML]
 
 - [Começando na Web](/pt-BR/docs/Learn/Getting_started_with_the_web)
 - [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
-- [Introdução ao CSS](/en-US/docs/Learn/CSS/First_steps)
+- [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
 
 Possuir experiência em outras linguagens de programação pode também ser útil.
 

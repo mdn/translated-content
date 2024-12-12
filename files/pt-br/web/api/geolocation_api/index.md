@@ -110,11 +110,11 @@ O `PositionError` tem a seguinte estrutura de campos:
 ## Compatibilidade com navegadores
 
 | Navegador                  | Suporte Básico  | [Geolocation Level 2](https://dev.w3.org/geo/api/spec-source-v2.html) |
-| -------------------------- | --------------- | -------------------------------------------------------------------- |
-| Internet Explorer          | IE9 RC          | ---                                                                  |
-| Firefox (Gecko)            | **3.5** (1.9.1) | ---                                                                  |
-| Opera                      | **10.60**       | ---                                                                  |
-| Safari \| Chrome \| WebKit | 5 \| 5 \| 533   | ---                                                                  |
+| -------------------------- | --------------- | --------------------------------------------------------------------- |
+| Internet Explorer          | IE9 RC          | ---                                                                   |
+| Firefox (Gecko)            | **3.5** (1.9.1) | ---                                                                   |
+| Opera                      | **10.60**       | ---                                                                   |
+| Safari \| Chrome \| WebKit | 5 \| 5 \| 533   | ---                                                                   |
 
 ## Solicitando permissão
 

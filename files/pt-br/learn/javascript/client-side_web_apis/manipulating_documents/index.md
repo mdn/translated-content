@@ -25,7 +25,7 @@ Há três formas de fazer isso:
 - Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
 
 | Para mais informações sobre JavaScript, veja a página [JavaScript](/pt-BR/docs/Web/JavaScript) nesta wiki. |
-| ------------------------------------------------------------------------------------------------- |
+| ---------------------------------------------------------------------------------------------------------- |
 
 ### Ação: Uma demonstração de JavaScript
 

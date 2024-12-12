@@ -31,5 +31,5 @@ Este módulo contém os seguintes artigos que ensinarão você todos os fundamen
 
 A seguinte avaliação testará seu entendimento das técnicas de estilização de texto cobertas pelo guia acima.
 
-- [Estilizando a homepage de um escola comunitária](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Estilizando a homepage de um escola comunitária](/pt-BR/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : Nesta avaliação nos testeremos seu entendimento de estilização de texto fazendo com que você estilize a homepage de uma escola comunitária.

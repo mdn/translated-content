@@ -70,7 +70,7 @@ Técnicamente, você pode servir todos esses arquivos em seu próprio computador
 - tem o mesmo endereço IP sempre (nem todos {{Glossary("ISP", "ISPs")}} fornecem um endereço IP fixo para linhas domésticas)
 - é mantido por um provedor de terceiros
 
-Por todas essas razões, encontrar um bom provedor de servidores é a chave para criar seu próprio _website_. Pesquise pelos vários serviços oferecidos e escolha aquele que melhor se alinha às suas necessidades e ao bolso (os serviçoes variam em uma faixa desde zero até milhares de dólares por mês). Você pode encontrar mais detalhes [nesse artigo](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting).
+Por todas essas razões, encontrar um bom provedor de servidores é a chave para criar seu próprio _website_. Pesquise pelos vários serviços oferecidos e escolha aquele que melhor se alinha às suas necessidades e ao bolso (os serviçoes variam em uma faixa desde zero até milhares de dólares por mês). Você pode encontrar mais detalhes [nesse artigo](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting).
 
 Uma vez que você escolheu uma solução de servidores web, você só precisa [fazer o _upload_ dos seus arquivos para o servidor _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 

@@ -1,5 +1,5 @@
 ---
-title: "Canvas: Contexto de Renderização em \"2D\""
+title: 'Canvas: Contexto de Renderização em "2D"'
 slug: Web/API/CanvasRenderingContext2D
 ---
 

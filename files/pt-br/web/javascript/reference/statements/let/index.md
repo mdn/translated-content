@@ -29,10 +29,10 @@ let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) statement;
 
 ### Parâmetros
 
-| Parameter                       | Description                                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                        |
-| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                   |
+| Parameter                       | Description                                                                                          |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                            |
+| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                       |
 | `expression`                    | Qualquer [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#expressions) válida. |
 | `statement`                     | Qualquer [instrução](/pt-BR/docs/Web/JavaScript/Reference/Statements) válida.                        |
 

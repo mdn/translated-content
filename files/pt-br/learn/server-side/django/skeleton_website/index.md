@@ -1,5 +1,5 @@
 ---
-title: "Django Tutorial Parte 2: Criando o \"esqueleto\" de um site"
+title: 'Django Tutorial Parte 2: Criando o "esqueleto" de um site'
 slug: Learn/Server-side/Django/skeleton_website
 ---
 

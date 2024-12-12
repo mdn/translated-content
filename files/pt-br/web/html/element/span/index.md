@@ -9,11 +9,11 @@ O elemento **HTML `<span>` é um conteiner generico em linha para conteúdo fras
 
 ## Contexto de Uso
 
-| Categorias de conteúdo   | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                              |
+| Categorias de conteúdo   | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                      |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                                                                                                |
+| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                                                                                            |
 | Omissão de Tag           | Nenhum, deve ter tanto tag de início quanto tag final.                                                                                                                                  |
-| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), ou [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).             |
+| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), ou [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).     |
 | Padrões de documento     | [HTML5, section 4.6.24](https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element); [HTML 4.01, section 7.5.4](https://www.w3.org/TR/html401/struct/global.html#edef-SPAN) |
 
 ## Atributos

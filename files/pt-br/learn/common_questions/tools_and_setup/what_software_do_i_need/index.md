@@ -6,8 +6,8 @@ slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
 
 | Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines) |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                                               |
 
 ## Sumário
 

@@ -77,7 +77,7 @@ h1 {
 }
 ```
 
-Isso mudou com CSS 2; a diretiva [initial](/es/docs/Web/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
+Isso mudou com CSS 2; a diretiva [initial](/pt-BR/docs/Web/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
 
 ```css
 /* A cor padrão do cabeçalho é preta */

@@ -9,11 +9,11 @@ O elemento HTML Variable (`<var>`) representa uma variável em uma expressão ma
 
 ## Contexto de utilização
 
-| Permitted content         | Phrasing content                                                                                   |
-| ------------------------- | -------------------------------------------------------------------------------------------------- |
-| Tag omission              | Both start and end tags are required                                                               |
+| Permitted content         | Phrasing content                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Tag omission              | Both start and end tags are required                                                                   |
 | Permitted parent elements | Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content). |
-| Normative document        | [HTML, "The `var` element"](https://www.whatwg.org/html/#the-var-element)                           |
+| Normative document        | [HTML, "The `var` element"](https://www.whatwg.org/html/#the-var-element)                              |
 
 ## Atributos
 

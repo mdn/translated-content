@@ -1,5 +1,5 @@
 ---
-title: "ReferenceError: \"x\" não está definido"
+title: 'ReferenceError: "x" não está definido'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
 

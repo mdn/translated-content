@@ -37,7 +37,7 @@ A seguir, vamos ver qual estrutura seu site teste deve ter. As coisas mais comun
 
 ## Caminhos de arquivo
 
-Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de arquivo entre eles — basicamente uma rota para que um arquivo saiba onde o outro está. Para demonstrar isso, nós vamos inserir um pouco de HTML no nosso arquivo `index.html`, e fazer mostrar a imagem que você escolheu no artigo ["](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)[Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)["](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de arquivo entre eles — basicamente uma rota para que um arquivo saiba onde o outro está. Para demonstrar isso, nós vamos inserir um pouco de HTML no nosso arquivo `index.html`, e fazer mostrar a imagem que você escolheu no artigo ["](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)[Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)["](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 
 1. Copie a imagem que você escolheu antes para sua pasta `imagens`.
 2. Abra seu arquivo `index.html` e insira o seguinte código exatamente como está escrito. Não se preocupe com o significado — nós vamos olhar com mais detalhes essa estrutura posteriormente.

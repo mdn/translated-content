@@ -96,7 +96,7 @@ Outra coisa que vale mencionar a esse ponto é que eventos não são exclusivos 
 
 Por exemplo, [Node.js](/pt-BR/docs/Learn/Server-side/Express_Nodejs) é um interpretador de código JavaScript muito popular que permite desenvolvedores a usarem JavaScript para construir aplicações de rede e do lado do servidor. O [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) depende dos ouvintes para escutar eventos e emissores para emitir eventos periodicamente. — não parece tão diferente, mas o código é bem diferente, fazendo uso de funções como `on()` para registrar um ouvinte de evento e `once()` para registrar um ouvinte de evento que cancela o registro depois de ter sido executado uma vez. Os [Documentos do evento de conexão HTTP](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) fornecem um bom exemplo de uso.
 
-Como outro exemplo, agora você também pode usar o JavaScript para criar complementos entre navegadores — aprimoramentos da funcionalidade do navegador — usando uma tecnologia chamada [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions). O modelo de eventos é semelhante ao modelo de eventos da Web, mas um pouco diferente — as propriedades dos event listeners são camel-cased, onde cada palavra é iniciada com maiúsculas e unidas sem espaços (por exemplo, `onMessage` em vez de `onmessage`), e precisam ser combinadas com a função `addListener`. Veja a página [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para um exemplo.
+Como outro exemplo, agora você também pode usar o JavaScript para criar complementos entre navegadores — aprimoramentos da funcionalidade do navegador — usando uma tecnologia chamada [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions). O modelo de eventos é semelhante ao modelo de eventos da Web, mas um pouco diferente — as propriedades dos event listeners são camel-cased, onde cada palavra é iniciada com maiúsculas e unidas sem espaços (por exemplo, `onMessage` em vez de `onmessage`), e precisam ser combinadas com a função `addListener`. Veja a página [runtime.onMessage](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para um exemplo.
 
 Você não precisa entender nada sobre outros ambientes nesse estágio do aprendizado; nós só queríamos deixar claro que os eventos podem diferir em diferentes ambientes de programação.
 
@@ -593,7 +593,7 @@ Agora você deve saber tudo o que precisa saber sobre os eventos da Web nesse es
 
 Além disso, é importante entender que os diferentes contextos nos quais o JavaScript é usado tendem a ter diferentes modelos de evento — de APIs da Web a outras áreas, como WebExtensions de navegador e Node.js (JavaScript do lado do servidor). Não esperamos que você entenda todas essas áreas agora, mas certamente ajuda a entender os fundamentos dos eventos à medida que você avança no aprendizado do desenvolvimento da web.
 
-Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente, ou [entre em contato conosco](/en-US/docs/Learn#contact_us) para pedir ajuda.
+Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente, ou [entre em contato conosco](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
 
 ## Veja também
 

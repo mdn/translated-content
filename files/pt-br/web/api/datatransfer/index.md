@@ -11,16 +11,16 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 
 ## Visão geral das propriedades
 
-| Propriedades                                                      | Tipo                                                               |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Propriedades                                                      | Tipo                                                                   |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
 | [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
-| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                              |
 | [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
-| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
-| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
-| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Boolean)    |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)               |
+| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                        |
+| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                  |
+| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Boolean)   |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)                   |
 
 ## Visão geral dos métodos
 

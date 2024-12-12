@@ -88,7 +88,7 @@ Há muitos tipos diferentes de seletores. Abaixo, nós mostramos apenas os **sel
 | Seletor de atributo                                            | O(s) elemento(s) na página com o atributo especificado.                                                                                                                                                             | `img[src]` Seleciona `<img src="myimage.png">` mas não `<img>`              |
 | Seletor de pseudo-classe                                       | O(s) elemento(s) específicado(s), mas somente quando estiver no estado especificado. Ex.: com o mouse sobre ele.                                                                                                    | `a:hover` Seleciona `<a>`, mas somente quando o mouse está em cima do link. |
 
-Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Fontes e texto
 

@@ -13,12 +13,12 @@ O valor pode ser negativo.
 
 ## Contexto de uso
 
-| Categorias          | Atributo de Apresentação                                                                                      |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Categorias          | Atributo de Apresentação                                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Value               | [\<percentage>](/pt-BR/docs/SVG/Content_type#percentage) \| [\<length>](/pt-BR/docs/SVG/Content_type#length) \| inherit |
-| Valor inicial       | 0                                                                                                             |
-| Animação            | Sim                                                                                                           |
-| Documento Normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                   |
+| Valor inicial       | 0                                                                                                                       |
+| Animação            | Sim                                                                                                                     |
+| Documento Normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                             |
 
 ## Elementos
 

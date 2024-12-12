@@ -16,11 +16,11 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 ## Contexto de uso
 
 | [Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories) | [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Permitted content                                             | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), but no descendant `time` elements.                               |
-| Tag omission                                                  | None, both the start tag and the end tag are mandatory.                                                                                    |
-| Permitted parent elements                                     | Any element that accepts phrasing content.                                                                                                 |
-| Normative document                                            | [HTML5, section 4.6.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)            |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                 | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), but no descendant `time` elements.                                   |
+| Tag omission                                                      | None, both the start tag and the end tag are mandatory.                                                                                            |
+| Permitted parent elements                                         | Any element that accepts phrasing content.                                                                                                         |
+| Normative document                                                | [HTML5, section 4.6.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                   |
 
 ## Atributos
 
