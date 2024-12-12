@@ -19,12 +19,12 @@ Vous pouvez utiliser ce modèle pour communiquer entre:
 
 Vous devez utiliser différentes API de connexion pour différents types de connexions, comme indiqué dans le tableau ci-dessous.
 
-| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                             |
-| ------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
-| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
+| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                                          |
+| ------------------------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
+| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
 | Extension à l'application native           | {{WebExtAPIRef("runtime.connectNative()")}} | N'est pas applicable (voir [Native messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)). |
-| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                               |
+| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                                            |
 
 ## Type
 

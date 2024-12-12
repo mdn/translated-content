@@ -9,7 +9,7 @@ Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités cle
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/Learn/HTML/Introduction_to_HTML) et du [CSS](/en-US/docs/Learn/CSS/First_steps) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn/JavaScript/First_steps)
+Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/Learn/HTML/Introduction_to_HTML) et du [CSS](/fr/docs/Learn/CSS/First_steps) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn/JavaScript/First_steps)
 
 > [!NOTE]
 > Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, ce n'est pas un problème, vous pourrez essayer la plupart des exemples en lignes grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

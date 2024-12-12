@@ -12,7 +12,7 @@ La **valeur réelle** d'une propriété CSS est la valeur utilisée par le moteu
 La valeur réelle est la valeur finale obtenue lors de la détermination d'une propriété, qui passe par les étapes suivantes :
 
 1. [La valeur initiale](/fr/docs/Web/CSS/initial_value) (indiquée par la spécification).
-2. [La valeur définie](/fr/docs/Web/CSS/specified_value) qui résulte de [l'héritage et de la cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+2. [La valeur définie](/fr/docs/Web/CSS/specified_value) qui résulte de [l'héritage et de la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 3. [La valeur calculée](/fr/docs/Web/CSS/computed_value) est calculée selon la spécification.
 4. La disposition est calculée, fournissant ainsi [la valeur utilisée](/fr/docs/Web/CSS/used_value).
 5. _La valeur réelle_

@@ -33,13 +33,13 @@ Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navig
 
 En complément des attributs pris en charge par l'ensemble des éléments {{HTMLElement("input")}}, les boutons `"submit"` permettent d'utiliser les attributs suivants :
 
-| Attribut                            | Description                                                                                                                                                                                                               |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire s'il est défini.                                             |
-| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                                        |
-| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                                  |
+| Attribut                            | Description                                                                                                                                                                                                   |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire s'il est défini.                                 |
+| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                            |
+| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                      |
 | [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/HTML/Constraint_validation) avant l'envoi des données au serveur. |
-| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                                    |
+| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                        |
 
 ### `formaction`
 

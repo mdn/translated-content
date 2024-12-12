@@ -17,7 +17,7 @@ JavaScript ne doit pas être confondu avec le [langage de programmation Java](ht
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](https://developer.mozilla.org/fr/curriculum/)
+> [Commencer](/fr/curriculum/)
 
 ## Tutoriels
 

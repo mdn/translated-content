@@ -97,4 +97,4 @@ On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [Valeurs et unités en CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

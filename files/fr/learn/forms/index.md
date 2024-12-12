@@ -15,7 +15,7 @@ Ce module contient un ensemble d'article pour acquérir les notions fondamentale
 >
 > Nous avons construit un module qui contient toutes les informations essentielles pour parvenir à cet objectif.
 >
-> [**Commencez ici**](https://developer.mozilla.org/fr/curriculum/)
+> [**Commencez ici**](/fr/curriculum/)
 
 ## Prérequis
 

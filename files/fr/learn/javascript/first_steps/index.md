@@ -13,7 +13,7 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 
 - [Commencer avec le Web](/fr/docs/Learn/HTML/Introduction_to_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [Introduction au langage HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
-- [Introduction au langage CSS](/en-US/docs/Learn/CSS/First_steps).
+- [Introduction au langage CSS](/fr/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
 > Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

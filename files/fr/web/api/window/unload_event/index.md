@@ -51,14 +51,14 @@ Veuiller noter que l'événement `unload` suit l'ordre du document : le cadre pa
 
 ## Propriétés
 
-| Propriété                       | Type                                          | Description                                                                             |
-| ------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget) | La cible de l'événement (la cible de plus haut niveau dans le DOM).                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)     | Le type d'événement.                                                                    |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Si l'événement remonte ou non.                                                          |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Si l'événement est annulable ou non.                                                    |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy) | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`fenêtre` du document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                      |
+| Propriété                       | Type                                                                   | Description                                                                             |
+| ------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | La cible de l'événement (la cible de plus haut niveau dans le DOM).                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Le type d'événement.                                                                    |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Si l'événement remonte ou non.                                                          |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Si l'événement est annulable ou non.                                                    |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`fenêtre` du document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                      |
 
 ## Exemple
 

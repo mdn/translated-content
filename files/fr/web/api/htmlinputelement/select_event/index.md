@@ -24,14 +24,14 @@ L'évènement `select` est déclenché quand du texte est sélectionné. L'évè
 
 ## Propriétés
 
-| Property                        | Type                                          | Description                                                                                |
-| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)     | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy) | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                         |
+| Property                        | Type                                                                   | Description                                                                                |
+| ------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The event target (the topmost target in the DOM tree).                                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not.                                                 |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not.                                                   |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                         |
 
 ## Exemple
 

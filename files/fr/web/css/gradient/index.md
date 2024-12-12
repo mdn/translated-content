@@ -167,4 +167,4 @@ div {
 - {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
 - [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les unités et les valeurs](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction à CSS : les unités et les valeurs](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

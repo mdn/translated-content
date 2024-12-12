@@ -27,7 +27,7 @@ Les systèmes de contrôle des versions fournissent des outils pour répondre à
 >
 > Nous avons mis ensemble un cours incluant toutes les informations nécessaires dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](https://developer.mozilla.org/fr/curriculum/)
+> [Commencer](/fr/curriculum/)
 
 ## Prérequis
 

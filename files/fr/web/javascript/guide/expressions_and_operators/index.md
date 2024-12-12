@@ -79,7 +79,7 @@ Il existe également des opérateurs d'affectation composites qui sont des racco
 | [Affectation après OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                            | `x \|= f()`   | `x = x \| f()`     |
 | [Affectation après ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                           | `x &&= f()`   | `x && (x = f())`   |
 | [Affectation après OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                            | `x \|\|= f()` | `x \|\| (x = f())` |
-| [Affectation après coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)             | `x ??= f()`   | `x ?? (x = f())`   |
+| [Affectation après coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### Affectation aux propriétés
 

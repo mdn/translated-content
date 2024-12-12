@@ -127,7 +127,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 

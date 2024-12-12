@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
 ### Syntaxe des règles @
 

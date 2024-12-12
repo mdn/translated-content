@@ -97,4 +97,4 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [Valeurs CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

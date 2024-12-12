@@ -112,4 +112,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-h
 - {{cssxref("height")}}
 - {{cssxref("min-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)

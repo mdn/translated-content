@@ -46,7 +46,7 @@ Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
 
 ### Boîtes de référence
 
-Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et utiliser les valeurs :
+Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et utiliser les valeurs :
 
 - `border-box`
 - `padding-box`

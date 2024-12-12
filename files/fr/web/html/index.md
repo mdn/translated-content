@@ -30,7 +30,7 @@ Les articles suivants fournissent des éléments de référence utiles au dével
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](https://developer.mozilla.org/fr/curriculum/)
+> [Commencer](/fr/curriculum/)
 
 ## Tutoriels pour les débutants
 

@@ -15,7 +15,7 @@ En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils provie
 >
 > Nous avons construit un cursus contenant toutes les informations essentielles pour parvenir à cet objectif.
 >
-> [**Commencer**](https://developer.mozilla.org/fr/curriculum/)
+> [**Commencer**](/fr/curriculum/)
 
 ## Prérequis
 

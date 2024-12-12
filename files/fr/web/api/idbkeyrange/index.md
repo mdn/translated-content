@@ -9,8 +9,8 @@ L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/IndexedDB_AP
 
 Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :
 
-| Intervalle                         | Code                                                                         |
-| ---------------------------------- | ---------------------------------------------------------------------------- |
+| Intervalle                         | Code                                                                                |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
 | Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)       |
 | Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)  |
 | Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static)       |

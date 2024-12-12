@@ -13,7 +13,7 @@ Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [as
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [**Commencer**](https://developer.mozilla.org/fr/curriculum/)
+> [**Commencer**](/fr/curriculum/)
 
 ## Prérequis
 

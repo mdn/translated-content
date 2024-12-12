@@ -606,7 +606,7 @@ Dans ce cas particulier, nous avons d'abord créé une variable `guessField` qui
 let guessField = document.querySelector(".guessField");
 ```
 
-Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/en-US/docs/Learn/CSS/Building_blocks/Selectors) qui sélectionne l'élément auquel vous voulez faire référence.
+Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors) qui sélectionne l'élément auquel vous voulez faire référence.
 
 Parce que `guessField` contient maintenant une référence à un élément {{htmlelement ("input")}}, il aura maintenant accès à un certain nombre de propriétés (essentiellement des variables stockées dans des objets, dont certaines ne peuvent pas être modifiées) et des méthodes (essentiellement des fonctions stockées dans des objets). Une méthode disponible pour entrer des éléments est `focus()`, donc nous pouvons maintenant utiliser cette ligne pour focaliser l'entrée de texte :
 

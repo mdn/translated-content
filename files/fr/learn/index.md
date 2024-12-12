@@ -19,7 +19,7 @@ Si vous débutez complètement, le développement web peut être un réel défi&
 >
 > Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](https://developer.mozilla.org/fr/curriculum/)
+> [Commencer](/fr/curriculum/)
 
 ## Par où commencer&nbsp;?
 

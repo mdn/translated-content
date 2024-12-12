@@ -61,7 +61,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ### Utiliser plusieurs éléments `<style>`
 
-Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les déclarations en conflit sont gérées : c'est le deuxième élément qui a la priorité si les [spécificités](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité) sont égales car les feuilles sont appliquées dans l'ordre.
+Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les déclarations en conflit sont gérées : c'est le deuxième élément qui a la priorité si les [spécificités](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité) sont égales car les feuilles sont appliquées dans l'ordre.
 
 #### HTML
 

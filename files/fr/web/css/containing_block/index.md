@@ -17,7 +17,7 @@ Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document,
 ![Diagram of the box model](box-model.png)
 
 > [!NOTE]
-> Voir [cet article pour découvrir le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) en CSS.
+> Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) en CSS.
 
 On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
 

@@ -87,5 +87,5 @@ if (!Element.prototype.matches) {
 
 ## Voir aussi
 
-- [La syntaxe des sélecteurs](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [La syntaxe des sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 - autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.
