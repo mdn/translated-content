@@ -1,6 +1,5 @@
 ---
 title: "MDN Web Docs 用語集: ウェブ関連用語の定義"
-slug: Glossary
 short-title: MDN Web Docs 用語集
 ---
 
