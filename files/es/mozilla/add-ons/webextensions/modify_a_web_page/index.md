@@ -53,7 +53,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-Ahora, [instala la extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y visita <https://developer.mozilla.org/>:
+Ahora, [instala la extensión](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y visita <https://developer.mozilla.org/>:
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -102,7 +102,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-En esta script estamos creando un [item del menu de contexto](/es/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create) y dándole una ID y un título específico (el texto que se estará expuesto en el menu de contexto). Después configuramos un evento de escucha para que cuando el usuario haga click en uno de los items del menu podamos comprobar si se trata de nuestro item `eat-page` . En caso afirmativo, inyectaremos "page-eater.js" a la lengüeta actual usando la API [`tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Alternativamente, esta API puede tomar como argumento una ID. En este caso la hemos omitido lo cual quiere decir que la script es inyectada en la lengüeta que está actualmente abierta.
+En esta script estamos creando un [item del menu de contexto](/es/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) y dándole una ID y un título específico (el texto que se estará expuesto en el menu de contexto). Después configuramos un evento de escucha para que cuando el usuario haga click en uno de los items del menu podamos comprobar si se trata de nuestro item `eat-page` . En caso afirmativo, inyectaremos "page-eater.js" a la lengüeta actual usando la API [`tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Alternativamente, esta API puede tomar como argumento una ID. En este caso la hemos omitido lo cual quiere decir que la script es inyectada en la lengüeta que está actualmente abierta.
 
 Ahora mismo la extensión debería ser algo como esto:
 
@@ -113,7 +113,7 @@ modify-page/
     page-eater.js
 ```
 
-Ahora [recarga la extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
+Ahora [recarga la extensión](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 

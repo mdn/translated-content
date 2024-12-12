@@ -28,29 +28,29 @@ event.initMouseEvent(type,canBubble,cancelable,view,detail,screenX,screenY,clien
 - `cancelable`
   - : si la acción inicial del evento puede o no ser cancelada. Pone el valor de [event.cancelable](/es/docs/Web/API/Event/cancelable).
 - `view`
-  - : el valor AbstractView del evento. Aquí debes pasar el objeto [window](/es/docs/Web/API/Window). Pone el valor de [event.view](/es/docs/DOM/event.view).
+  - : el valor AbstractView del evento. Aquí debes pasar el objeto [window](/es/docs/Web/API/Window). Pone el valor de [event.view](/es/docs/Web/API/UIEvent/view).
 - `detail`
-  - : el contador de clic del evento. Pone el valor de [event.detail](/es/docs/DOM/event.detail).
+  - : el contador de clic del evento. Pone el valor de [event.detail](/es/docs/Web/API/UIEvent/detail).
 - `screenX`
-  - : la coordenada x en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenX](/es/docs/DOM/event.screenX).
+  - : la coordenada x en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenX](/es/docs/Web/API/MouseEvent/screenX).
 - `screenY`
-  - : la coordenada y en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenY](/es/docs/DOM/event.screenY).
+  - : la coordenada y en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenY](/es/docs/Web/API/MouseEvent/screenY).
 - `clientX`
-  - : la coordenada client x donde ha ocurrido el evento. Pone el valor de [event.clientX](/es/docs/DOM/event.clientX).
+  - : la coordenada client x donde ha ocurrido el evento. Pone el valor de [event.clientX](/es/docs/Web/API/MouseEvent/clientX).
 - `clientY`
-  - : la coordenada client y donde ha ocurrido el evento. Pone el valor de [event.clientY](/es/docs/DOM/event.clientY).
+  - : la coordenada client y donde ha ocurrido el evento. Pone el valor de [event.clientY](/es/docs/Web/API/MouseEvent/clientY).
 - `ctrlKey`
-  - : si se ha pulsado o no la tecla Control mientras ha ocurrido el evento. Pone el valor de [event.ctrlKey](/es/docs/DOM/event.ctrlKey).
+  - : si se ha pulsado o no la tecla Control mientras ha ocurrido el evento. Pone el valor de [event.ctrlKey](/es/docs/Web/API/MouseEvent/ctrlKey).
 - `altKey`
-  - : si se ha pulsado o no la tecla Alt mientras ha ocurrido el evento. Pone el valor de [event.altKey](/es/docs/DOM/event.altKey).
+  - : si se ha pulsado o no la tecla Alt mientras ha ocurrido el evento. Pone el valor de [event.altKey](/es/docs/Web/API/MouseEvent/altKey).
 - `shiftKey`
-  - : si se ha pulsado o no la tecla Mayúsculas mientras ha ocurrido el evento. Pone el valor de [event.shiftKey](/es/docs/DOM/event.shiftKey).
+  - : si se ha pulsado o no la tecla Mayúsculas mientras ha ocurrido el evento. Pone el valor de [event.shiftKey](/es/docs/Web/API/MouseEvent/shiftKey).
 - `metaKey`
-  - : si se ha pulsado o no una meta tecla mientras ha ocurrido el evento. Pone el valor de [event.metaKey](/es/docs/DOM/event.metaKey).
+  - : si se ha pulsado o no una meta tecla mientras ha ocurrido el evento. Pone el valor de [event.metaKey](/es/docs/Web/API/MouseEvent/metaKey).
 - `button`
-  - : el ratón del evento [event.button](/es/docs/DOM/event.button).
+  - : el ratón del evento [event.button](/es/docs/Web/API/MouseEvent/button).
 - `relatedTarget`
-  - : el destino del evento [related EventTarget](/es/docs/DOM/event.relatedTarget). Sólo se usa con algún tipo de evento (ejemplo: `mouseover` y `mouseout`). En otros casos, devuelve `null`.
+  - : el destino del evento [related EventTarget](/es/docs/Web/API/MouseEvent/relatedTarget). Sólo se usa con algún tipo de evento (ejemplo: `mouseover` y `mouseout`). En otros casos, devuelve `null`.
 
 ### Especificación
 

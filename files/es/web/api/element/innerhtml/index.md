@@ -93,7 +93,7 @@ const name = "<img src='x' onerror='alert(1)'>";
 el.innerHTML = name; // con peligro, la alerta ahora si es mostrada
 ```
 
-Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/en-US/DOM/Node.textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
+Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/es/docs/Web/API/Node/textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
 
 ## Ejemplo
 

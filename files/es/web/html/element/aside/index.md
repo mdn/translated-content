@@ -14,7 +14,7 @@ El **elemento HTML `<aside>`** representa una sección de una página que consis
 
 ### Contexto de uso
 
-| Contenido permitido            | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content)                                                                                                  |
+| Contenido permitido            | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content)                                                                                            |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial y la etiqueta de cierre son obligatorias                                                                                        |
 | Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico. Ten en cuenta que un elemento \<aside> no debe ser un descendiente de un elemento {{ HTMLElement ("address") }}. |
@@ -22,11 +22,11 @@ El **elemento HTML `<aside>`** representa una sección de una página que consis
 
 ### Atributos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/en-US/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
 
 ### Interfaz DOM
 
-Este elemento implementa la interfaz [`HTMLElement`](/en-US/DOM/element).
+Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
 
 ### Consulta también
 

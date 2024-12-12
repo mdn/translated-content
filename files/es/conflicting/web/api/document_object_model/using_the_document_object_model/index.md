@@ -131,7 +131,7 @@ Se puede automatizar la creación de un DOM tree usando el [JXON reverse algorit
 
 ### ¿Ahora qué?
 
-Los DOM trees pueden ser [invocados usando expresiones XPath](/en-US/Using_XPath), convertidos a cadenas de texto, salvados a un archivo local o remoto usando [XMLSerializer](/en-US/Parsing_and_serializing_XML) (sin tener que convertirlo primero a una cadena de texto), Enviados mediante [POST a un servidor web](/en-US/DOM/XMLHttpRequest) (via `XMLHttpRequest`), transformados usando [XSLT](/en-US/XSLT), [XLink](/en-US/XLink), convertidos a un objeto JavaScript a tráves del [algoritmo](/en-US/JXON)[JXON](/en-US/JXON), etc.
+Los DOM trees pueden ser [invocados usando expresiones XPath](/en-US/Using_XPath), convertidos a cadenas de texto, salvados a un archivo local o remoto usando [XMLSerializer](/en-US/Parsing_and_serializing_XML) (sin tener que convertirlo primero a una cadena de texto), Enviados mediante [POST a un servidor web](/es/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformados usando [XSLT](/en-US/XSLT), [XLink](/en-US/XLink), convertidos a un objeto JavaScript a tráves del [algoritmo](/en-US/JXON)[JXON](/en-US/JXON), etc.
 
 Adicionalmente se puede hacer uso de los DOM trees para modelar los datos que no estén bien formados para RDF (o si sólo no prefieres usar RDF). Otra aplicación que puedes darle, se relaciona a XUL (que es XML), la UI (interfaz) de tu aplicación puede ser manipulada dinámicamente, descargada, subida, guardada, cargada, convertida, o transformada fácilmente.
 
@@ -142,4 +142,4 @@ Adicionalmente se puede hacer uso de los DOM trees para modelar los datos que no
 - [XPath](/en-US/XPath)
 - [E4X (ECMAScript for XML)](/en-US/E4X)
 - [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en-US/DOM/XMLHttpRequest)
+- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)

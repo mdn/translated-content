@@ -85,7 +85,7 @@ function escapeRegExp(string) {
 }
 ```
 
-La "g" después de la expresión regular es una opción o indicador que realiza una búsqueda global, buscando en toda la cadena y devolviendo todas las coincidencias. Se explica en detalle a continuación en [Búsqueda avanzada con indicadores](#Advanced_searching_with_flags).
+La "g" después de la expresión regular es una opción o indicador que realiza una búsqueda global, buscando en toda la cadena y devolviendo todas las coincidencias. Se explica en detalle a continuación en [Búsqueda avanzada con indicadores](#advanced_searching_with_flags).
 
 _¿Por qué no está integrada en JavaScript?_ Existe una propuesta para agregar esta función a RegExp, pero fue [rechazada por TC39.](https://github.com/benjamingr/RegExp.escape/issues/37)
 

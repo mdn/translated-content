@@ -49,7 +49,7 @@ Para crear sitios web que funcionen aceptablemente en diferentes navegadores mó
 
 Por ejemplo, si establece un gradiente como fondo para cierto texto usando una propiedad prefijada por el proveedor (_vendor-prefixed_) como `-webkit-linear-gradient`, es mejor incluir las otras versiones prefijadas de la propiedad [linear-gradient](/es/docs/Web/CSS/gradient/linear-gradient) (gradiente linear). Si no lo hace, asegúrese al menos de que el fondo por defecto contrasta con el texto. Así, la página será al menos usable en un navegador al que no esté dirigida su regla `linear-gradient`.
 
-Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Mozilla_Extensions), esta lista de [propiedades específicas para WebKit](/en-US/CSS/CSS_Reference/Webkit_Extensions) y la [tabla de propiedades específicas de proveedores (_vendor-specific_)](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo.
+Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Mozilla_Extensions), esta lista de [propiedades específicas para WebKit](/es/docs/Web/CSS/WebKit_Extensions) y la [tabla de propiedades específicas de proveedores (_vendor-specific_)](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo.
 
 Usar herramientas como [CSS Lint](http://csslint.net/) puede ayudar a encontrar problemas como este en el código y preprocesadores como [SASS](https://sass-lang.com/) y [LESS](https://lesscss.org/) pueden ser de ayuda para crear código compatible con diferentes navegadores.
 

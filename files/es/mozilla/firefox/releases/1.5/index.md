@@ -106,7 +106,7 @@ Firefox es lider de la industria en el soporte a los estandares Web con constant
 
 - Lenguaje para el Formato de HiperTextos ([HTML](/es/docs/Web/HTML)) y lenguaje extensible de marcado de hipertexto ([XHTML](/es/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) y [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
 - Hojas de Estilo en Cascada ([CSS](/es/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1), [CSS Level 2](https://www.w3.org/TR/REC-CSS2) y partes de [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
-- Modelo de Objetos de Documento ([DOM](/es/docs/DOM)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Modelo de Objetos de Documento ([DOM](/es/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
 - Lenguaje Extensible de Marcas ([XML](/es/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
 - XSL Transformations ([XSLT](/es/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)

@@ -55,7 +55,7 @@ document.body.style.border = "10px solid blue";
 
 Esto solo añade un borde azul a la página.
 
-Ahora [instala WebExtension](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y comprueba — abre cualquier página web que te guste:
+Ahora [instala WebExtension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y comprueba — abre cualquier página web que te guste:
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -168,7 +168,7 @@ settings/
 
 Ahora:
 
-- [recarga WebExtension.](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
+- [recarga WebExtension.](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - carga una página web.
 - abre la página de configuración y cambia el color del borde.
 - recarga la página web para ver la diferencia.

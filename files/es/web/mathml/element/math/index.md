@@ -31,7 +31,7 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
     De no estar presente, toma `inline` por defecto.
 
 - mode {{deprecated_inline}}
-  - : Deprecado a favor del [atributo display](/es/docs/Web/MathML/Element/math#attr-display).
+  - : Deprecado a favor del [atributo display](#attr-display).
     Sus valores posibles son: `display` (que tiene el mismo efecto que `display="block"`) e `inline`.
 - overflow
   - : Especifica el comportamiento de una expresión si es demasiado larga para caber en el ancho asignado.

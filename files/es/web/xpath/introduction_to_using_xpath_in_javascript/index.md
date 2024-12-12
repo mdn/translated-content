@@ -7,11 +7,11 @@ slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 
 Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
-La interfaz principal a usar con XPath es la función [evaluate](/en-US/DOM/document.evaluate) del objeto [document](/en-US/DOM/document).
+La interfaz principal a usar con XPath es la función [evaluate](/es/docs/DOM/document.evaluate) del objeto [document](/es/docs/Web/API/Document).
 
 ## document.evaluate
 
-Este método evalúa expresiones [XPath](/en-US/XPath) contra un documento basado en [XML](/en-US/XML) (incluyendo documentos HTML), y regresa un objeto [`XPathResult`](/en-US/XPathResult), el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en [document.evaluate](/en-US/DOM/document.evaluate), pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.
+Este método evalúa expresiones [XPath](/en-US/XPath) contra un documento basado en [XML](/en-US/XML) (incluyendo documentos HTML), y regresa un objeto [`XPathResult`](/en-US/XPathResult), el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en [document.evaluate](/es/docs/DOM/document.evaluate), pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.
 
 ```js
 var xpathResult = document.evaluate(
@@ -25,13 +25,13 @@ var xpathResult = document.evaluate(
 
 ### Parámetros
 
-La función [evaluate](/en-US/DOM/document.evaluate) toma un total de 5 parámetros:
+La función [evaluate](/es/docs/DOM/document.evaluate) toma un total de 5 parámetros:
 
 - `xpathExpression`: Una cadena que contiene la expresión XPath a evaluar.
-- `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/en-US/DOM/document) es el usado más comúnmente.
+- `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/es/docs/Web/API/Document) es el usado más comúnmente.
 - `namespaceResolver`: Una función que pasará cualquier prefijo de namespace contenido en una `xpathExpression` la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
 
-  - Creada usando el metodo [`createNSResolver`](/en-US/DOM/document.createNSResolver) de un objeto [`XPathEvaluator`](/en-US/XPathEvaluator). Deberías usar este virtualmente todo el tiempo.
+  - Creada usando el metodo [`createNSResolver`](/es/docs/Web/API/Document/createNSResolver) de un objeto [`XPathEvaluator`](/en-US/XPathEvaluator). Deberías usar este virtualmente todo el tiempo.
   - `null`, el cúal puede ser usado para documentos HTML o cuando no son usados prefijos de namespace. Note que, si la expresión XPath contiene un prefijo de namespace, esto resultará en una `DOMException` siendo arrojada con el código `NAMESPACE_ERR`.
   - Una función definida por el usuario. Mira la sección [Usar un Solucionador de Namespace definido por el usuario](#implementing_a_user_defined_namespace_resolver) en el apéndice para detalles.
 
@@ -44,7 +44,7 @@ Regresa `xpathResult`, que es un objeto `XPathResult` del tipo especificado en e
 
 ### Implementando un Solucionador de Namespace predefinido
 
-Nosotros creamos un solucionador de namespace usando el método `createNSResolver` del objeto [document](/en-US/DOM/document).
+Nosotros creamos un solucionador de namespace usando el método `createNSResolver` del objeto [document](/es/docs/Web/API/Document).
 
 ```js
 var nsResolver = document.createNSResolver(
@@ -254,7 +254,7 @@ var headings = document.evaluate(
 
 Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
 
-Since we wish to search over the entire document for the headings, we have used the [document](/en-US/DOM/document) object itself as the `contextNode`.
+Since we wish to search over the entire document for the headings, we have used the [document](/es/docs/Web/API/Document) object itself as the `contextNode`.
 
 The result of this expression is an `XPathResult` object. If we wish to know the type of result returned, we may evaluate the `resultType` property of the returned object. In this case, that will evaluate to `4`, an `UNORDERED_NODE_ITERATOR_TYPE`. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the `iterateNext()` method of the returned object:
 
@@ -291,7 +291,7 @@ The following uses an XML document located at chrome://yourextension/content/peo
 </people>
 ```
 
-To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/en-US/XMLHttpRequest) object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en-US/XMLDocument) object against which we can use the `evaluate` method
+To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en-US/XMLDocument) object against which we can use the `evaluate` method
 
 JavaScript used in the extensions xul/js documents.
 

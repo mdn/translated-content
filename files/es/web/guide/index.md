@@ -39,7 +39,7 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
 - [El Web Open Font Format (WOFF)](/es/docs/Web/CSS/CSS_fonts/WOFF)
   - : **WOFF** ( **Web Open Font Format**) es un formato de tipografías para páginas web desarrollado por Mozilla en conjunto con Type Supply, LettError y otras organizaciones.
 - [Utilizar FormData Objects](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : [`FormData`](/en-US/DOM/XMLHttpRequest/FormData) te permite compilar un conjunto de pares clave/valor para enviarlos utilizando XMLHttpRequest. En un principio se pensó como manera de enviar información de formularios, pero puede utilizarse independientemente de los formularios para transmitir datos. La información trasmitida está en el mismo formato que se utiliza mediante el método `submit()` de los formularios para enviarla si el tipo de codificación del formulario fuese "multipart/form-data".
+  - : [`FormData`](/es/docs/Web/API/FormData) te permite compilar un conjunto de pares clave/valor para enviarlos utilizando XMLHttpRequest. En un principio se pensó como manera de enviar información de formularios, pero puede utilizarse independientemente de los formularios para transmitir datos. La información trasmitida está en el mismo formato que se utiliza mediante el método `submit()` de los formularios para enviarla si el tipo de codificación del formulario fuese "multipart/form-data".
 - [Glosario](/es/docs/Glossary)
   - : Define gran cantidad de términos técnicos relativos a las páginas Web e Internet.
 

@@ -5,7 +5,7 @@ slug: Web/CSS/:visited
 
 {{ CSSRef }}
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:visited`** de [CSS](/es/docs/Web/CSS) representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:visited`** de [CSS](/es/docs/Web/CSS) representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.
 
 ```css
 /* Selecciona cualquier <a> que ha sido visitado */

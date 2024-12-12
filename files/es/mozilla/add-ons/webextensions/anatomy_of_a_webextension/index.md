@@ -7,15 +7,15 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Una extensión se compone de una colección de archivos, empaquetados para su distribución e instalación. En este artículo vamos a repasar rápidamente los archivos que deben estar presentes en una extensión.
 
-Toda extensión debe contener un archivo llamado ["manifest.json"](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Este puede tener enlaces a otros tipos de archivos:
+Toda extensión debe contener un archivo llamado ["manifest.json"](#manifest.json). Este puede tener enlaces a otros tipos de archivos:
 
-- [Páginas en segundo plano](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
-- [Scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
-- [Archivos de acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
-- [Archivos de acción de la página:](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#acciones_de_las_páginas)Implementan botones en la barra de direcciones.
-- [Páginas de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
+- [Páginas en segundo plano](#scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
+- [Scripts de contenido](#scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
+- [Archivos de acción del navegador](#acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
+- [Archivos de acción de la página:](#acciones_de_las_páginas)Implementan botones en la barra de direcciones.
+- [Páginas de opciones](#opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
 - [archivos de la barra lateral](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars): Agregue una barra lateral al navegador.
-- [Recursos Web accesibles](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
+- [Recursos Web accesibles](#recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
 
 ![](webextension-anatomy.png)
 

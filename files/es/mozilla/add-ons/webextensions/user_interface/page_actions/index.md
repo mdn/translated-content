@@ -49,7 +49,7 @@ You define the page action's properties using the [`page_action`](/es/docs/Mozil
 
 The only mandatory key is `default_icon`.
 
-There are two ways to specify a page action: with or without a [popup](/es/docs/Mozilla/Add-ons/WebExtensions/Popups).
+There are two ways to specify a page action: with or without a [popup](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
 - **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
 
@@ -57,7 +57,7 @@ There are two ways to specify a page action: with or without a [popup](/es/docs/
   browser.pageAction.onClicked.addListener(handleClick);
   ```
 
-- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/es/docs/Mozilla/Add-ons/WebExtensions/Popups)article for more details on creating and managing popups.
+- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)article for more details on creating and managing popups.
 
 Note that your extension can have one-page action only.
 

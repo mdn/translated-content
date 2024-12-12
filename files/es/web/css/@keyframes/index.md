@@ -95,7 +95,7 @@ En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y tod
 
 ## Ejemplos
 
-Mira los ejemplos del [CSS animations](/en-US/CSS/CSS_animations).
+Mira los ejemplos del [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Especificaciones
 

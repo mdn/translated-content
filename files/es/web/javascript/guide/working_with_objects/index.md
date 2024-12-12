@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](#Object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
+El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](#object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
 
 ```js
 var myCar = {

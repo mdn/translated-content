@@ -9,26 +9,26 @@ slug: Web/HTML/Element/form
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
 
-Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/CSS/%3Avalid) e [`:invalid`](/es/docs/Web/CSS/:invalid) para darle estilos a un elemento form.
+Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/:valid) e [`:invalid`](/es/docs/Web/CSS/:invalid) para darle estilos a un elemento form.
 
 ## Contexto de uso
 
-| Categorías de contenido | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content)                                                                                                                       |
+| Categorías de contenido | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content)                                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido     | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                                 |
+| Contenido permitido     | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                           |
 | Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                  |
 | Normative document      | [HTML5, section 4.10.3](https://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
 
 ## Atributos
 
-Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/en-US/HTML/Global_attributes)
+Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/es/docs/Web/HTML/Global_attributes)
 
 - `accept` {{deprecated_inline}}
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
     > [!NOTE]
-    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/docs/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/docs/Web/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - `accept-charset`
 
@@ -85,7 +85,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`HTMLFormElement`](/es/docs/DOM/HTMLFormElement).
+Este elemento implementa la interfaz [`HTMLFormElement`](/es/docs/Web/API/HTMLFormElement).
 
 ## Ejemplos
 

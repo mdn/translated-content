@@ -84,7 +84,7 @@ Sent when a touch point has been disrupted in some way. There are several possib
 
 ## Ejemplo
 
-See the [example on the main Touch events article](/en-US/DOM/Touch_events#example).
+See the [example on the main Touch events article](/es/docs/Web/API/Touch_events#example).
 
 ## Especificaciones
 

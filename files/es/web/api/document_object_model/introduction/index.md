@@ -5,7 +5,7 @@ slug: Web/API/Document_Object_Model/Introduction
 
 {{DefaultAPISidebar("DOM")}}
 
-Ésta sección da una breve introducción conceptual del [DOM](/es/docs/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](/es/docs/Web/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
+Ésta sección da una breve introducción conceptual del [DOM](/es/docs/Web/API/Document_Object_Model): qué es, cómo proporciona la estructura para los documentos [HTML](/es/docs/Web/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
 
 ## ¿Qué es el DOM?
 
@@ -48,7 +48,7 @@ p_list = doc.getElementsByTagName("para");
 
 No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.
 
-Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/docs/Web/API/Document) o [`window`](/es/docs/Web/API/Window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/docs/DOM/window.alert) desde el objeto [`window`](/es/docs/Web/API/Window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
+Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/docs/Web/API/Document) o [`window`](/es/docs/Web/API/Window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/docs/Web/API/Window/alert) desde el objeto [`window`](/es/docs/Web/API/Window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
 
 ```html
 <body onload="window.alert('Bienvenido a mi página!');"></body>
@@ -149,10 +149,10 @@ Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La ide
 - `element.setAttribute`
 - `element.element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/es/docs/DOM/window.content)
+- [`window.content`](/es/docs/Web/API/Window)
 - [`window.onload`](/es/docs/conflicting/Web/API/Window/load_event)
-- [`window.dump`](/es/docs/DOM/window.dump)
-- [`window.scrollTo`](/es/docs/DOM/window.scrollTo)
+- [`window.dump`](/es/docs/Web/API/Window/dump)
+- [`window.scrollTo`](/es/docs/Web/API/Window/scrollTo)
 
 ## Probando el API del DOM
 

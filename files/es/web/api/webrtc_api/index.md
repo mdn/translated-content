@@ -34,14 +34,14 @@ WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos p
   - : Este artículo presenta los protocolos sobre los cuales se construye la API WebRTC.
 - [Conectividad de WebRTC](/es/docs/Web/API/WebRTC_API/Connectivity)
   - : Este artículo describe cómo los diversos protocolos relacionados con WebRTC interactúan entre sí para crear una conexión y transferir datos y / o medios entre pares.
-- [Nociones sobre la API WebRTC](/es/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage)
+- [Nociones sobre la API WebRTC](#WebRTC_concepts_and_usage)
   - : WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos para admitir el intercambio de datos y medios entre dos o más pares. Este artículo proporciona una breve descripción de cada una de estas API y para qué sirve.
 - [Duración de una sesión de WebRTC](/es/docs/Web/API/WebRTC_API/Session_lifetime)
   - : WebRTC le permite construir una comunicación punto a punto de datos arbitrarios, audio o video, o cualquier combinación de los mismos, en una aplicación de navegador. En este artículo, veremos la duración de una sesión de WebRTC, desde establecer la conexión hasta cerrarla cuando ya no sea necesaria.
 
 ## Tutoriales
 
-- [Improving compatibility using WebRTC adapter.js](/es/docs/Web/API/WebRTC_API#interoperability)
+- [Improving compatibility using WebRTC adapter.js](#interoperability)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
 - [Taking still photos with WebRTC](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
   - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.

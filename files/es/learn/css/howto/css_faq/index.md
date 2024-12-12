@@ -36,7 +36,7 @@ Utiliza un estilo específico de `id` cuando desees restringir las reglas de est
 
 Usa un estilo específico de `class` cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
 
-Consulta [Selectores CSS](/en-US/CSS/Getting_Started/Selectors)
+Consulta [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
 #### Restaurar el valor de la propiedad predeterminado
 

@@ -48,7 +48,7 @@ Preguntas relacionadas con las herramientas/software que puedes usar para hacer 
   - : Este artículo muestra cómo publicar su sitio en línea con herramientas FTP, una de las formas más comunes de obtener un sitio web en línea para que otros puedan acceder a él desde sus computadoras.
 - [¿Cómo uso las páginas de](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)[GitHub?](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)
   - : Este artículo proporciona una guía básica para publicar contenido utilizando la función gh-pages de GitHub.
-- [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
+- [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
   - : ¿Buscas un lugar donde alojar tu sitio web? Aquí hay una guía paso a paso para alojar tu sitio web en Google App Engine.
 - [¿Qué herramientas están disponibles para depurar y mejorar el rendimiento del sitio web?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : Este conjunto de artículos le muestra cómo utilizar las herramientas de desarrollo en Firefox para depurar y mejorar el rendimiento de su sitio web, utilizando las herramientas para comprobar el uso de la memoria, el árbol de nodos de JavaScript, la cantidad de nodos que se renderizan en el DOM y más.

@@ -20,12 +20,12 @@ Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usa
 | Contenido permitido        | Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}) |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                   |
-| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/en-US/HTML/Content_categories#flow_content).                                                                                               |
+| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                         |
 | Documento nomativo         | [HTML5, section 4.4.7](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                          |
 
 ### Atributos
 
-Este elemento no tiene más atributos que los [atributos globales](/en-US/HTML/Global_attributes), común a todos los elementos.
+Este elemento no tiene más atributos que los [atributos globales](/es/docs/Web/HTML/Global_attributes), común a todos los elementos.
 
 ## Notas de uso
 

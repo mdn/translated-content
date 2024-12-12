@@ -77,7 +77,7 @@ button/
     manifest.json
 ```
 
-Ahora [instala la extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y da click en el botón:
+Ahora [instala la extensión](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y da click en el botón:
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 

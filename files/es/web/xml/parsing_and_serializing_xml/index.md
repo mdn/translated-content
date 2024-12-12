@@ -9,7 +9,7 @@ La plataforma web proveé Los siguientes objetos para hacer parsing (convertir u
 
 - [XMLSerializer](/en-US/XMLSerializer) para convertir a tipo string el arbol del DOM
 - [XPath](/en-US/XPath) para apuntar a diferentes partes de un documento **[XML](/en-US/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
-- [DOMParser](/en-US/DOM/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
+- [DOMParser](/es/docs/Web/API/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
 - [XMLHttpRequest](/en-US/nsIXMLHttpRequest) para convertit recursos URL direccionables **en arboles del DOM**
 
 ## Parte 1: Como crear un documento XML
@@ -111,7 +111,7 @@ Becomes
 
 First, create a DOM tree as described in the [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree) article. If you already have a DOM tree from using {{ domxref("XMLHttpRequest") }}, skip to the end of this section.
 
-Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en/Code_snippets/File_I_O)):
+Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en-US/Code_snippets/File_I_O)):
 
 ```js
 var oFOStream = Components.classes[

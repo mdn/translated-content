@@ -65,4 +65,4 @@ Por determinar: Agregar información de soporte para combinaciones comunes de pr
 
 - [Especificación WAI-ARIA para `aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
 - [WAI-ARIA Authoring Practices for forms](https://www.w3.org/TR/wai-aria-practices/#ariaform)
-- [Constraint validation](/en-US/HTML/HTML5/Constraint_validation) in HTML5
+- [Constraint validation](/es/docs/Web/HTML/Constraint_validation) in HTML5

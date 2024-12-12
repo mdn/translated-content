@@ -7,7 +7,7 @@ slug: Web/CSS/animation-fill-mode
 
 ## Definición
 
-La propiedad [CSS](/en-US/CSS) `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
+La propiedad [CSS](/es/docs/Web/CSS) `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
 
 {{cssinfo}}
 

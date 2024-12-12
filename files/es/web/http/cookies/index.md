@@ -133,7 +133,7 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#Security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
+Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
 
 ## Seguridad
 

@@ -83,7 +83,7 @@ Para obtener el contexto WebGL de un canvas, pedimo el contexto llamado "webgl" 
 
 En este punto, tienes suficiente código para que el contexto WebGL, inicialice exitosamente, y deberias terminar con una gran cuadro negro y vacio, listo y esperando a recibir contenido .
 
-[Prueba este ejemplo](http://mdn.github.io/webgl-examples/tutorial/sample1/index.html) si estas usando un navegador compatible con WebGL.
+[Prueba este ejemplo](https://mdn.github.io/webgl-examples/tutorial/sample1/index.html) si estas usando un navegador compatible con WebGL.
 
 ### Cambiando el tamaño del contexto WebGL
 

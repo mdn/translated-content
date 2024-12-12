@@ -436,7 +436,7 @@ Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y 
 
 ## Desarrollo desde la línea de comandos
 
-Puede automatizar el paso de instalación temporal mediante la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext). Pruebe esto:
+Puede automatizar el paso de instalación temporal mediante la herramienta [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). Pruebe esto:
 
 ```bash
 cd beastify

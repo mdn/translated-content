@@ -17,13 +17,13 @@ Un rango puede ser creado usando el método [`createRange`](/es/docs/Web/API/Doc
   - : Devuelve un valor booleano indicando si los puntos de inicio y fin están en la misma posición.
 - [commonAncestorContainer](/es/docs/Web/API/Range/commonAncestorContainer)
   - : Devuelve el nodo más profundo que contiene los nodos **startContainer** y **endContainer**.
-- [endContainer](/es/docs/DOM/range.endContainer)
+- [endContainer](/es/docs/Web/API/range/endContainer)
   - : Devuelve el nodo dentro del cual termina el rango.
-- [endOffset](/es/docs/DOM/range.endOffset)
+- [endOffset](/es/docs/Web/API/range/endOffset)
   - : Devuelve un número representando donde termina el `Range` en el `endContainer`.
-- [startContainer](/es/docs/DOM/range.startContainer)
+- [startContainer](/es/docs/Web/API/range/startContainer)
   - : Devuelve el nodo dentro del cual comienza el rango.
-- [startOffset](/es/docs/DOM/range.startOffset)
+- [startOffset](/es/docs/Web/API/range/startOffset)
   - : Devuelve un número representando donde empieza el `Range` en el `endContainer`.
 
 ### Métodos
@@ -32,62 +32,62 @@ Un rango puede ser creado usando el método [`createRange`](/es/docs/Web/API/Doc
 
 Estos métodos definen el punto de inicio y fin de un rango.
 
-- [setStart](/es/docs/DOM/range.setStart)
+- [setStart](/es/docs/Web/API/range/setStart)
   - : Define la posición inicial de un rango.
-- [setEnd](/es/docs/DOM/range.setEnd)
+- [setEnd](/es/docs/Web/API/range/setEnd)
   - : Define la posición final de un rango.
-- [setStartBefore](/es/docs/DOM/range.setStartBefore)
+- [setStartBefore](/es/docs/Web/API/range/setStartBefore)
   - : Define la posición inicial de un rango relativa a otro nodo.
-- [setStartAfter](/es/docs/DOM/range.setStartAfter)
+- [setStartAfter](/es/docs/Web/API/range/setStartAfter)
   - : Define la posición inicial de un rango relativa a otro nodo.
-- [setEndBefore](/es/docs/DOM/range.setEndBefore)
+- [setEndBefore](/es/docs/Web/API/range/setEndBefore)
   - : Define la posición final de un rango relativa a otro nodo.
-- [setEndAfter](/es/docs/DOM/range.setEndAfter)
+- [setEndAfter](/es/docs/Web/API/range/setEndAfter)
   - : Define la posición final de un rango relativa a otro nodo.
-- [selectNode](/es/docs/DOM/range.selectNode)
+- [selectNode](/es/docs/Web/API/range/selectNode)
   - : Define el rango a contener el nodo y sus contenidos.
-- [selectNodeContents](/es/docs/DOM/range.selectNodeContents)
+- [selectNodeContents](/es/docs/Web/API/range/selectNodeContents)
   - : Define el rango a contener los contenidos de un nodo.
-- [collapse](/es/docs/DOM/range.collapse)
+- [collapse](/es/docs/Web/API/range/collapse)
   - : Pliega el Rango a uno de sus puntos límite.
 
 #### Editando métodos
 
 Estos métodos recuperan nodos de un rango y modifican los contenidos de un rango.
 
-- [cloneContents](/es/docs/DOM/range.cloneContents)
+- [cloneContents](/es/docs/Web/API/range/cloneContents)
   - : Devuelve un fragmento de documento copiando los nodos de un rango.
-- [deleteContents](/es/docs/DOM/range.deleteContents)
+- [deleteContents](/es/docs/Web/API/range/deleteContents)
   - : Elimina del documento los contenidos de un rango.
-- [extractContents](/es/docs/DOM/range.extractContents)
+- [extractContents](/es/docs/Web/API/range/extractContents)
   - : Mueve los contenidos de un rango del árbol de documento a un fragmento del documento.
-- [insertNode](/es/docs/DOM/range.insertNode)
+- [insertNode](/es/docs/Web/API/range/insertNode)
   - : Inserta un nodo al comienzo de un rango.
-- [surroundContents](/es/docs/DOM/range.surroundContents)
+- [surroundContents](/es/docs/Web/API/range/surroundContents)
   - : Mueve el contenido de un rango a un nodo nuevo.
 
 #### Otros métodos
 
-- [compareBoundaryPoints](/es/docs/DOM/range.compareBoundaryPoints)
+- [compareBoundaryPoints](/es/docs/Web/API/range/compareBoundaryPoints)
   - : Compara los puntos límite de dos rangos.
-- [cloneRange](/es/docs/DOM/range.cloneRange)
+- [cloneRange](/es/docs/Web/API/range/cloneRange)
   - : Devuelve un objeto rango con puntos límites idénticos al rango clonado.
-- [detach](/es/docs/DOM/range.detach)
+- [detach](/es/docs/Web/API/range/detach)
   - : Libera el Rango desde el uso para mejorar el rendimiento.
-- [toString](/es/docs/DOM/range.toString)
+- [toString](/es/docs/Web/API/range/toString)
   - : Devuelve el texto del rango.
 
 #### Métodos de Gecko
 
 Esta sección describe métodos de `Range` que son particulares a Mozilla y no son parte de las especificaciones DOM W3C.
 
-- [compareNode](/es/docs/DOM/range.compareNode) {{deprecated_inline}}
+- [compareNode](/es/docs/Web/API/range/compareNode) {{deprecated_inline}}
   - : Devuelve una constante representando si el nodo está antes, después, dentro o alrededor del rango.
-- [comparePoint](/es/docs/DOM/range.comparePoint)
+- [comparePoint](/es/docs/Web/API/range/comparePoint)
   - : Devuelve -1, 0, or 1 indicando si el punto ocurre antes, dentro o después del rango.
-- [createContextualFragment](/es/docs/DOM/range.createContextualFragment)
+- [createContextualFragment](/es/docs/Web/API/range/createContextualFragment)
   - : Devuelve un fragmenteo de documento creado de un texto de código.
-- [intersectsNode](/es/docs/DOM/range.intersectsNode) {{deprecated_inline}}
+- [intersectsNode](/es/docs/Web/API/range/intersectsNode) {{deprecated_inline}}
   - : Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.
-- [isPointInRange](/es/docs/DOM/range.isPointInRange)
+- [isPointInRange](/es/docs/Web/API/range/isPointInRange)
   - : Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.

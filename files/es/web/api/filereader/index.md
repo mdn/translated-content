@@ -76,6 +76,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 
 ## See also
 
-- [Usando archivos desde aplicaciónes web](/en-US/Using_files_from_web_applications)
+- [Usando archivos desde aplicaciónes web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

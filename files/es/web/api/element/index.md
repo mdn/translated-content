@@ -19,55 +19,55 @@ Mientras que estas interfaces son generalmente compartidas por la mayoría de lo
 
 ## Propiedades
 
-| Nombre                                                    | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`attributes`](/es/docs/DOM/element.attributes)           | Todos los atributos asociados a un elemento.                                                                        | [`NamedNodeMap`](/es/docs/DOM/NamedNodeMap)                            | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`childNodes`](/es/docs/DOM/element.childNodes)           | Todos los nodos hijos de un elemento.                                                                               | [`Listado de nudo`](/es/docs/DOM/NodeList)                             | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`className`](/es/docs/DOM/element.className)             | La clase del elemento.                                                                                              | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
-| [`clientHeight`](/es/docs/DOM/element.clientHeight)       | El alto interior del elemento.                                                                                      | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`clientWidth`](/es/docs/DOM/element.clientWidth)         | El ancho interior del elemento.                                                                                     | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`dir`](/es/docs/DOM/element.dir)                         | La direccionalidad del elemento.                                                                                    | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
-| [`firstChild`](/es/docs/DOM/element.firstChild)           | El primer hijo directo del elemento, `null` si no hay.                                                              | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`id`](/es/docs/DOM/element.id)                           | La identificación del elemento.                                                                                     | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
-| [`innerHTML`](/es/docs/Web/API/Element/innerHTML)         | El contenido y el código que hay dentro del elemento.                                                               | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
-| [`lang`](/es/docs/DOM/element.lang)                       | El lenguaje de los atributos, texto y contenidos del elemento.                                                      | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
-| [`lastChild`](/es/docs/DOM/element.lastChild)             | El último hijo directo del elemento, `null` si no hay.                                                              | [`Node`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`localName`](/es/docs/DOM/element.localName)             | La parte local del nombre cualificado del elemento.                                                                 | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| Nombre                                                    | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
-| [`name`](/es/docs/DOM/element.name)                       | El nombre del elemento.                                                                                             | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
-| [`namespaceURI`](/es/docs/DOM/element.namespaceURI)       | El URI del espacio de nombre de ese nodo, `null` si no está especificado.                                           | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`nextSibling`](/es/docs/DOM/element.nextSibling)         | El nodo inmediatamente posterior al primero dado en el árbol, `null` si no hay.                                     | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`nodeName`](/es/docs/Web/API/Node/nodeName)              | El nombre del nodo de ese elemento.                                                                                 | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`nodeType`](/es/docs/DOM/element.nodeType)               | Un número que representa el tipo del nodo. Lo mismo que `1` para los elementos DOM.                                 | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`nodeValue`](/es/docs/DOM/element.nodeValue)             | El valor del nodo. Lo mismo que `null` para los elementos DOM.                                                      | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`offsetHeight`](/es/docs/DOM/element.offsetHeight)       | El alto de un elemento, tal cual está escrito en la composición.                                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`offsetLeft`](/es/docs/DOM/element.offsetLeft)           | La distancia que hay desde el borde izquierdo del elemento al de su `offsetParent`.                                 | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`offsetParent`](/es/docs/DOM/element.offsetParent)       | El elemento del cual todos los cálculos de distancia son actualmente computados.                                    | [`Elemento`](/es/docs/Web/API/Element)                                 | para [HTML](/es/docs/Web/HTML)                       |
-| [`offsetTop`](/es/docs/DOM/element.offsetTop)             | La distancia desde el borde superior del elemento hasta el de su `offsetParent`.                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`offsetWidth`](/es/docs/DOM/element.offsetWidth)         | El ancho de un elemento, tal cual está escrito en la composición.                                                   | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`ownerDocument`](/es/docs/DOM/element.ownerDocument)     | El documento en el cual está ese nodo, `null` si no hay.                                                            | [`Documento`](/es/docs/Web/API/Document)                               | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| Nombre                                                    | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
-| [`parentNode`](/es/docs/DOM/element.parentNode)           | El elemento original(padre) de ese nodo, `null` si no hay dentro del [documento de DOM](/es/docs/Web/API/Document). | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`prefix`](/es/docs/DOM/element.prefix)                   | El prefijo del espacio de nombre del nodo, `null` si no está especificado.                                          | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`previousSibling`](/es/docs/DOM/element.previousSibling) | El nodo inmediatamente anterior al primero dado en el árbol , `null` si no hay.                                     | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`scrollHeight`](/es/docs/DOM/element.scrollHeight)       | Muestra la altura de deslizamiento del elemento.                                                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`scrollLeft`](/es/docs/DOM/element.scrollLeft)           | Obtiene/establece el offset de scroll izquierdo de un elemento.                                                     | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`scrollTop`](/es/docs/DOM/element.scrollTop)             | Obtiene/establece el offset de scroll superior de un elemento.                                                      | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`scrollWidth`](/es/docs/DOM/element.scrollWidth)         | Muestra el ancho de deslizamiento de un elemento.                                                                   | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`style`](/es/docs/DOM/Element.style)                     | Un objeto representando las declaraciones de los atributos de estilo del elemento.                                  | [`Estilo CSS`](/es/docs/DOM/CSSStyleDeclaration)                       | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
-| [`tabIndex`](/es/docs/DOM/element.tabIndex)               | Obtiene/establece la posición del elemento en el órden de tabulación.                                               | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
-| [`tagName`](/es/docs/Web/API/Element/tagName)             | El nombre de la etiqueta para el elemento dado.                                                                     | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
-| [`textContent`](/es/docs/DOM/element.textContent)         | Obtiene/establece los contenidos textuales de un elemento y todos sus descendentes.                                 | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| Nombre                                                      | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| [`attributes`](/es/docs/Web/API/Element/attributes)         | Todos los atributos asociados a un elemento.                                                                        | [`NamedNodeMap`](/es/docs/Web/API/NamedNodeMap)                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`childNodes`](/es/docs/Web/API/Node/childNodes)            | Todos los nodos hijos de un elemento.                                                                               | [`Listado de nudo`](/es/docs/Web/API/NodeList)                         | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`className`](/es/docs/Web/API/Element/className)           | La clase del elemento.                                                                                              | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
+| [`clientHeight`](/es/docs/Web/API/Element/clientHeight)     | El alto interior del elemento.                                                                                      | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`clientWidth`](/es/docs/Web/API/Element/clientWidth)       | El ancho interior del elemento.                                                                                     | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`dir`](/es/docs/Web/API/HTMLElement/dir)                   | La direccionalidad del elemento.                                                                                    | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
+| [`firstChild`](/es/docs/Web/API/Node/firstChild)            | El primer hijo directo del elemento, `null` si no hay.                                                              | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`id`](/es/docs/Web/API/Element/id)                         | La identificación del elemento.                                                                                     | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
+| [`innerHTML`](/es/docs/Web/API/Element/innerHTML)           | El contenido y el código que hay dentro del elemento.                                                               | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
+| [`lang`](/es/docs/Web/API/HTMLElement/lang)                 | El lenguaje de los atributos, texto y contenidos del elemento.                                                      | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
+| [`lastChild`](/es/docs/Web/API/Node/lastChild)              | El último hijo directo del elemento, `null` si no hay.                                                              | [`Node`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`localName`](/es/docs/Web/API/Element/localName)           | La parte local del nombre cualificado del elemento.                                                                 | [`Secuencia`](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| Nombre                                                      | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
+| [`name`](/es/docs/Web/API)                                  | El nombre del elemento.                                                                                             | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [HTML](/es/docs/Web/HTML)                       |
+| [`namespaceURI`](/es/docs/Web/API/Element/namespaceURI)     | El URI del espacio de nombre de ese nodo, `null` si no está especificado.                                           | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`nextSibling`](/es/docs/Web/API/Node/nextSibling)          | El nodo inmediatamente posterior al primero dado en el árbol, `null` si no hay.                                     | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`nodeName`](/es/docs/Web/API/Node/nodeName)                | El nombre del nodo de ese elemento.                                                                                 | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`nodeType`](/es/docs/Web/API/Node/nodeType)                | Un número que representa el tipo del nodo. Lo mismo que `1` para los elementos DOM.                                 | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`nodeValue`](/es/docs/Web/API/Node/nodeValue)              | El valor del nodo. Lo mismo que `null` para los elementos DOM.                                                      | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`offsetHeight`](/es/docs/Web/API/HTMLElement/offsetHeight) | El alto de un elemento, tal cual está escrito en la composición.                                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`offsetLeft`](/es/docs/Web/API/HTMLElement/offsetLeft)     | La distancia que hay desde el borde izquierdo del elemento al de su `offsetParent`.                                 | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`offsetParent`](/es/docs/Web/API/HTMLElement/offsetParent) | El elemento del cual todos los cálculos de distancia son actualmente computados.                                    | [`Elemento`](/es/docs/Web/API/Element)                                 | para [HTML](/es/docs/Web/HTML)                       |
+| [`offsetTop`](/es/docs/DOM/element.offsetTop)               | La distancia desde el borde superior del elemento hasta el de su `offsetParent`.                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`offsetWidth`](/es/docs/Web/API/HTMLElement/offsetWidth)   | El ancho de un elemento, tal cual está escrito en la composición.                                                   | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`ownerDocument`](/es/docs/Web/API/Node/ownerDocument)      | El documento en el cual está ese nodo, `null` si no hay.                                                            | [`Documento`](/es/docs/Web/API/Document)                               | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| Nombre                                                      | Descripción                                                                                                         | Tipo                                                                   | Disponibilidad                                       |
+| [`parentNode`](/es/docs/Web/API/Node/parentNode)            | El elemento original(padre) de ese nodo, `null` si no hay dentro del [documento de DOM](/es/docs/Web/API/Document). | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`prefix`](/es/docs/Web/API/Element/prefix)                 | El prefijo del espacio de nombre del nodo, `null` si no está especificado.                                          | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`previousSibling`](/es/docs/Web/API/Node/previousSibling)  | El nodo inmediatamente anterior al primero dado en el árbol , `null` si no hay.                                     | [`Nudo`](/es/docs/Web/API/Node)                                        | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`scrollHeight`](/es/docs/DOM/element.scrollHeight)         | Muestra la altura de deslizamiento del elemento.                                                                    | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`scrollLeft`](/es/docs/Web/API/Element/scrollLeft)         | Obtiene/establece el offset de scroll izquierdo de un elemento.                                                     | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`scrollTop`](/es/docs/Web/API/Element/scrollTop)           | Obtiene/establece el offset de scroll superior de un elemento.                                                      | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`scrollWidth`](/es/docs/Web/API/Element/scrollWidth)       | Muestra el ancho de deslizamiento de un elemento.                                                                   | [`Número`](/es/Core_JavaScript_1.5_Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`style`](/es/docs/Web/API/HTMLElement/style)               | Un objeto representando las declaraciones de los atributos de estilo del elemento.                                  | [`Estilo CSS`](/es/docs/Web/API/CSSStyleDeclaration)                   | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
+| [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex)         | Obtiene/establece la posición del elemento en el órden de tabulación.                                               | [`Número`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number)    | para [HTML](/es/docs/Web/HTML)                       |
+| [`tagName`](/es/docs/Web/API/Element/tagName)               | El nombre de la etiqueta para el elemento dado.                                                                     | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
+| [`textContent`](/es/docs/Web/API/Node/textContent)          | Obtiene/establece los contenidos textuales de un elemento y todos sus descendentes.                                 | [`Secuencia`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) | para [todos](/es/docs/Web/API/Document_Object_Model) |
 
 ## Métodos
 
 | Nombre y Descripción                                                                                                                                                                                                                                                                                                                                                            | Devuelve                                                            | Disponible                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) ( [type](/es/docs/Web/JavaScript/Reference/Global_Objects/String), [handler](/es/docs/JavaScript/Reference/Global_Objects/Function), [bubble](/es/docs/JavaScript/Reference/Global_Objects/Boolean)) <br>Registra un controlador de evento para un tipo de evento específico en un elemento.                | -                                                                   | [Todos](/es/docs/Web/API/Event)                      |
+| [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) ( [type](/es/docs/Web/JavaScript/Reference/Global_Objects/String), [handler](/es/docs/Web/JavaScript/Reference/Global_Objects/Function), [bubble](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)) <br>Registra un controlador de evento para un tipo de evento específico en un elemento.        | -                                                                   | [Todos](/es/docs/Web/API/Event)                      |
 | [`appendChild`](/es/docs/Web/API/Node/appendChild)( [appendedNode](/es/docs/Web/API/Node) ) <br>Inserta un nodo así como el último nodo hijo de este elemento.                                                                                                                                                                                                                  | [Node](/es/docs/Web/API/Node)                                       | [Todos](/es/docs/Web/API/Document_Object_Model)      |
 | [`blur`](/es/docs/Web/API/HTMLElement/blur)() <br>Quita el foco del teclado del elemento actual.                                                                                                                                                                                                                                                                                | -                                                                   | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
 | [`click`](/es/docs/Web/API/HTMLElement/click)() <br>Simula un clic sobre el elemento actual.                                                                                                                                                                                                                                                                                    | -                                                                   | para [HTML](/es/docs/Web/HTML), [XUL](/es/XUL)       |
-| [`cloneNode`](/es/docs/Web/API/Node/cloneNode)( [deep](/es/docs/JavaScript/Reference/Global_Objects/Boolean)) <br>Hace copia de un nudo, y opcionalmente, de todo sus contenidos                                                                                                                                                                                                | [Node](/es/docs/Web/API/Node)                                       | para [Todos](/es/docs/Web/API/Document_Object_Model) |
+| [`cloneNode`](/es/docs/Web/API/Node/cloneNode)( [deep](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)) <br>Hace copia de un nudo, y opcionalmente, de todo sus contenidos                                                                                                                                                                                            | [Node](/es/docs/Web/API/Node)                                       | para [Todos](/es/docs/Web/API/Document_Object_Model) |
 | [`dispatchEvent`](/es/docs/Web/API/EventTarget/dispatchEvent)( [event](/es/docs/Web/API/Event) ) <br>Envía un evento a este nodo en el DOM.                                                                                                                                                                                                                                     | [Boolean](/es/Core_JavaScript_1.5_Reference/Global_Objects/Boolean) | [Todos](/es/docs/Web/API/Document_Object_Model)      |
 | [`getAttribute`](/es/docs/Web/API/Element/getAttribute)( [name](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) ) <br>Devuelve el valor de un atributo nombrado desde el nodo actual.                                                                                                                                                                                  | [Object](/es/Core_JavaScript_1.5_Reference/Global_Objects/Object)   | [Todos](/es/docs/Web/API/Document_Object_Model)      |
 | [`getAttributeNS`](/es/docs/Web/API/Element/getAttributeNS)( [namespace](/es/Core_JavaScript_1.5_Reference/Global_Objects/String), [name](/es/Core_JavaScript_1.5_Reference/Global_Objects/String) ) <br>Devuelve el valor del atributo con el nombre especificado, desde el nodo actual.                                                                                       | [Object](/es/Core_JavaScript_1.5_Reference/Global_Objects/Object)   | [Todos](/es/docs/Web/API/Document_Object_Model)      |
@@ -115,57 +115,57 @@ function onclick(event) {
 
 El objeto [event](/es/docs/Web/API/Event) es pasado al parámetro `event` de esta función envolvente.
 
-- [onblur](/es/docs/DOM/element.onblur) - (al quitar el foco)
+- [onblur](/es/docs/Web/API/Window/blur_event) - (al quitar el foco)
   - : Devuelve el código de manejo de evento para el evento `blur`.
 
 <!---->
 
-- [onchange](/es/docs/DOM/element.onchange) - (al modificar)
+- [onchange](/es/docs/Web/API/HTMLElement/change_event) - (al modificar)
   - : Devuelve el código de manejo de evento para el evento `change`.
 
 <!---->
 
-- [onclick](/es/docs/DOM/element.onclick) - (al hacer clic)
+- [onclick](/es/docs/Web/API/Element/click_event) - (al hacer clic)
   - : Devuelve el código de manejo de evento para el evento `onclick`.
 
 <!---->
 
-- [ondblclick](/es/docs/DOM/element.ondblclick) - (al hacer doble clic)
+- [ondblclick](/es/docs/Web/API/Element/dblclick_event) - (al hacer doble clic)
   - : Devuelve el código de manejo de evento para el evento `ondblclick`.
 
 <!---->
 
-- [onfocus](/es/docs/DOM/element.onfocus) - (al poner el foco)
+- [onfocus](/es/docs/Web/API/Window/focus_event) - (al poner el foco)
   - : Devuelve el código de manejo de evento para el evento `onfocus`.
 
 <!---->
 
-- [onkeydown](/es/docs/DOM/element.onkeydown) - (al tener una tecla apretada)
+- [onkeydown](/es/docs/Web/API/Element/keydown_event) - (al tener una tecla apretada)
   - : Devuelve el código de manejo de evento para el evento `onkeydown`.
 
 <!---->
 
-- [onkeypress](/es/docs/DOM/element.onkeypress) - (al apretar una tecla)
+- [onkeypress](/es/docs/Web/API/Element/keypress_event) - (al apretar una tecla)
   - : Devuelve el código de manejo de evento para el evento `onkeypress`.
 
 <!---->
 
-- [onkeyup](/es/docs/DOM/element.onkeyup) - (al soltar una tecla)
+- [onkeyup](/es/docs/Web/API/Element/keyup_event) - (al soltar una tecla)
   - : Devuelve el código de manejo de evento para el evento `onkeyup`.
 
 <!---->
 
-- [onmousedown](/es/docs/DOM/element.onmousedown) - (al tener el botón del ratón apretado)
+- [onmousedown](/es/docs/Web/API/Element/mousedown_event) - (al tener el botón del ratón apretado)
   - : Devuelve el código de manejo de evento para el evento `onmousedown`.
 
 <!---->
 
-- [onmousemove](/es/docs/DOM/element.onmousemove) - (al mover el ratón)
+- [onmousemove](/es/docs/Web/API/Element/mousemove_event) - (al mover el ratón)
   - : Devuelve el código de manejo de evento para el evento `onmousemove`.
 
 <!---->
 
-- [onmouseout](/es/docs/DOM/element.onmouseout) - (al quitar el puntero del ratón)
+- [onmouseout](/es/docs/Web/API/Element/mouseout_event) - (al quitar el puntero del ratón)
   - : Devuelve el código de manejo de evento para el evento `onmouseout`.
 
 <!---->
@@ -175,12 +175,12 @@ El objeto [event](/es/docs/Web/API/Event) es pasado al parámetro `event` de est
 
 <!---->
 
-- [onmouseup](/es/docs/DOM/element.onmouseup) - (al soltar el botón del ratón)
+- [onmouseup](/es/docs/Web/API/Element/mouseup_event) - (al soltar el botón del ratón)
   - : Devuelve el código de manejo de evento para el evento `onmouseup`.
 
 <!---->
 
-- [onresize](/es/docs/DOM/element.onresize) - (al re-dimensionar la pantalla)
+- [onresize](/es/docs/Web/API/Window/resize_event) - (al re-dimensionar la pantalla)
   - : Devuelve el código de manejo de evento para el evento `onresize`.
 
 ## Especificaciones

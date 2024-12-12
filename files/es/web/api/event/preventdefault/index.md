@@ -89,7 +89,7 @@ Llamar a `preventDefault` en cualquier momento durante la ejecución, cancela el
 
 Puedes usar [event.cancelable](/es/docs/Web/API/Event/cancelable) para comprobar si el evento es cancelable o no. Llamar a `preventDefault` para un evento no cancelable, no tiene ningún efecto.
 
-`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](/es/docs/DOM/event.stopPropagation) para ese propósito.
+`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](/es/docs/Web/API/Event/stopPropagation) para ese propósito.
 
 ### Especificación
 

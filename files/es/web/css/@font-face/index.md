@@ -27,9 +27,9 @@ slug: Web/CSS/@font-face
 - \<origen>
   - : Dirección URL para la ubicación remota del archivo de fuente, o el nombre de una fuente en la computadora del usuario en la forma `local("Nombre de Fuente")`.
 - \<peso>
-  - : Un valor de [peso/grosor de fuente](/en-US/CSS/font-weight).
+  - : Un valor de [peso/grosor de fuente](/es/docs/Web/CSS/font-weight).
 - \<estilo>
-  - : Un valor de [estilo de fuente](/en-US/CSS/font-style).
+  - : Un valor de [estilo de fuente](/es/docs/Web/CSS/font-style).
 
 Puede especificar una fuente por nombre en la computadora local del usuario utilizando la sintaxis `local()`. Si esa fuente no es encontrada, se intentarán otros orígenes hasta encontrar una fuente.
 

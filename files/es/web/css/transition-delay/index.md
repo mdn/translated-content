@@ -7,7 +7,7 @@ slug: Web/CSS/transition-delay
 
 ## Resumen
 
-La propiedad [CSS](/en-US/CSS) `transition-delay` especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion ([transition effect](/en-US/CSS/CSS_transitions)).
+La propiedad [CSS](/es/docs/Web/CSS) `transition-delay` especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion ([transition effect](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)).
 
 Un valor de `0s`, o `0ms`, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.
 

@@ -87,7 +87,7 @@ Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor.
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer).
+Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 > [!NOTE]
 > Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
@@ -189,7 +189,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-Se usa [`JSON.parse()`](/en-US/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
+Se usa [`JSON.parse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
 
 ### Formato de texto de los datos
 

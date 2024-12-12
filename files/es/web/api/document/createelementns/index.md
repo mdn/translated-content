@@ -18,7 +18,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### Parámetros
 
 - `namespaceURI`
-  - : _String_ que especifica el [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/Web/API/Element/namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](#Valid_Namespace_URI's).
+  - : _String_ que especifica el [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/Web/API/Element/namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](#valid_namespace_uri's).
 - `qualifiedName`
   - : _String_ que especifica el tipo del elemento a ser creado. La propiedad [nodeName](/es/docs/Web/API/Node/nodeName) del elemento creado es inicializada con el valor `qualifiedName`.
 - `options`{{optional_inline}}

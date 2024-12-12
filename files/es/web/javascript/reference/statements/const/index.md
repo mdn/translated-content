@@ -114,4 +114,4 @@ MY_ARRAY = ['B']
 
 - {{jsxref("Sentencias/var", "var")}}
 - {{jsxref("Sentencias/let", "let")}}
-- [Constants in JavaScript Guide](/en-US/JavaScript/Guide/Values,_Variables,_and_Literals#constants)
+- [Constants in JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

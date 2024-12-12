@@ -186,7 +186,7 @@ p
 
 Este ejemplo muestra de una forma muy simple como los eventos se inician y son gestionados en el DOM. Cuando el cuerpo (_body_ ) de ese documento HTML se carga,_un evento listener es registrado con la columna superior de la TABLA. El evento listener maneja el evento ejecutando la función stopEvent, que cambia el valor en el final de la celda de la tabla._
 
-Sin embargo, stopEvent también llama a un método del objeto evento, [event.stopPropagation](/es/docs/DOM/event.stopPropagation), que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento [onclick](/es/docs/DOM/element.onclick) que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.
+Sin embargo, stopEvent también llama a un método del objeto evento, [event.stopPropagation](/es/docs/Web/API/Event/stopPropagation), que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento [onclick](/es/docs/Web/API/Element/click_event) que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.
 
 ```html
 <html>
@@ -234,7 +234,7 @@ Sin embargo, stopEvent también llama a un método del objeto evento, [event.sto
 
 ### Ejemplo 6: Conseguir el estilo computado (getComputedStyle)
 
-Este ejemplo demuestra como el método [window.getComputedStyle](/es/docs/Web/API/Window/getComputedStyle) puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo `style` o con JavaScript (por ejemplo, **`element.style.backgroundColor="rgb(173, 216, 230)"`**). Estos últimos tipos de estilos se pueden recuperar con el atributo [element.style](/es/docs/DOM/element.style), las propiedades del cual están en la [lista de propiedades de CSS](/es/docs/Web/CSS) del DOM.
+Este ejemplo demuestra como el método [window.getComputedStyle](/es/docs/Web/API/Window/getComputedStyle) puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo `style` o con JavaScript (por ejemplo, **`element.style.backgroundColor="rgb(173, 216, 230)"`**). Estos últimos tipos de estilos se pueden recuperar con el atributo [element.style](/es/docs/Web/API/HTMLElement/style), las propiedades del cual están en la [lista de propiedades de CSS](/es/docs/Web/CSS) del DOM.
 
 `getComputedStyle()` devuelve un objeto `ComputedCSSStyleDeclaration`, cuyas propiedades de estilo individuales pueden ser referenciadas con este método del objeto `getPropertyValue()`, el siguiente documento de ejemplo lo muestra.
 
@@ -370,7 +370,7 @@ El siguiente código colocado dentro de un nuevo archivo de texto y cargado en u
 
 ### Ejemplo 8: Utilización del interfaz de tabla del DOM
 
-La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son [`table.insertRow`](/es/docs/DOM/table.insertRow) y [`row.insertCell`](/es/docs/DOM/table/row.insertCell).
+La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son [`table.insertRow`](/es/docs/Web/API/HTMLTableElement/insertRow) y [`row.insertCell`](/es/docs/DOM/table/row.insertCell).
 
 Para agregar una columna y algunas celdas a una tabla existente:
 
@@ -397,5 +397,5 @@ Para agregar una columna y algunas celdas a una tabla existente:
 #### Notas
 
 - Una propiedad [`innerHTML`](/es/docs/Web/API/Element/innerHTML) de la tabla nunca debería ser utilizada para modificar una tabla, aunque puede utilizarla para escribir una tabla entera o el contenido de una celda.
-- Si los métodos Core del DOM[`document.createElement`](/es/docs/DOM/document.createElement) y [`element.appendChild`](/es/docs/DOM/element.appendChild) son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).
+- Si los métodos Core del DOM[`document.createElement`](/es/docs/Web/API/Document/createElement) y [`element.appendChild`](/es/docs/Web/API/Node/appendChild) son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).
 - Hay un número de otros métodos de conveniencia pertenecientes a la [interfaz de tabla](/es/docs/Web/API/HTMLTableElement#m.c3.a9todos) que pueden ser utilizados para crear y modificar tablas.

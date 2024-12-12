@@ -291,7 +291,7 @@ let greeting = "¡" + name + hello;
 greeting;
 ```
 
-También disponemos de algunos atajos de operadores, llamados [operadores de asignación](/es/docs/Web/JavaScript/Reference/Operators#Assignment_operators) mejorada. Por ejemplo, si quieres simplemente agregar una nueva cadena de texto a una existente y devolver el resultado, puedes hacer esto:
+También disponemos de algunos atajos de operadores, llamados [operadores de asignación](/es/docs/Web/JavaScript/Reference/Operators#assignment_operators) mejorada. Por ejemplo, si quieres simplemente agregar una nueva cadena de texto a una existente y devolver el resultado, puedes hacer esto:
 
 ```js
 name += " dice hola!";

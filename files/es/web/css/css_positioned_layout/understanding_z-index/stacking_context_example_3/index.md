@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 {{CSSRef}}
 
-« [CSS](/en-US/CSS) « [Understanding CSS z-index](/en-US/CSS/Understanding_z-index)
+« [CSS](/es/docs/Web/CSS) « [Understanding CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
 

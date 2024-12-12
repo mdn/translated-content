@@ -50,7 +50,7 @@ La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 
 
 ## Pasando datos
 
-Los datos pasan entre la página principal y los workers son **copiados**, no compartidos. Los objetos se serializan a medida que se entregan al worker, y posteriormente, se deserializan en el otro extremo. La página y el worker **no comparten la misma instancia**, por lo que el resultado final es que un duplicado es creado en cada extremo. La mayoría de los navegadores implementan esta característica como [structured cloning](/en-US/DOM/The_structured_clone_algorithm).
+Los datos pasan entre la página principal y los workers son **copiados**, no compartidos. Los objetos se serializan a medida que se entregan al worker, y posteriormente, se deserializan en el otro extremo. La página y el worker **no comparten la misma instancia**, por lo que el resultado final es que un duplicado es creado en cada extremo. La mayoría de los navegadores implementan esta característica como [structured cloning](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 Antes de continuar, vamos a crear con fines didácticos una función llamada `emulateMessage()` que simulará el comportamiento de un valor el cual es clonado y no compartido durante el paso desde un _worker_ a la página principal o viceversa:
 
@@ -450,7 +450,7 @@ The embedded worker is now nested into a new custom `document.worker` property.
 
 Los trabajadores pueden usar tiempos fuera e intervalos de la misma forma que el "hilo principal". Esto puede ser útil, por ejemplo, si quieres tener a tu hilo trabajador corriendo codigo periodicamente en lugar de sin parar.
 
-Ver [`setTimeout()`](/en-US/DOM/window.setTimeout), [`clearTimeout()`](/en-US/DOM/window.clearTimeout), [`setInterval()`](/en-US/DOM/window.setInterval), y [`clearInterval()`](/en-US/DOM/window.clearInterval)para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
+Ver [`setTimeout()`](/es/docs/Web/API/Window/setTimeout), [`clearTimeout()`](/es/docs/Web/API/Window/clearTimeout), [`setInterval()`](/es/docs/Web/API/Window/setInterval), y [`clearInterval()`](/es/docs/Web/API/Window/clearInterval)para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
 
 ## Terminating a worker
 
@@ -470,7 +470,7 @@ self.close();
 
 ## Manejo de errores
 
-When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/en-US/DOM/event.preventDefault)method.
+When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/es/docs/DOM/event.preventDefault)method.
 
 The error event has the following three fields that are of interest:
 
@@ -604,8 +604,8 @@ The Fibonacci example shown previously demonstrates that workers can in fact [sp
 ## See also
 
 - [File API Specification: Web Workers](https://dev.w3.org/html5/workers/)
-- [`Worker`](/en-US/DOM/Worker) interface
-- [`SharedWorker`](/en-US/DOM/SharedWorker) interface
-- [Functions available to workers](/en-US/DOM/Worker/Functions_available_to_workers)
+- [`Worker`](/es/docs/Web/API/Worker) interface
+- [`SharedWorker`](/es/docs/Web/API/SharedWorker) interface
+- [Functions available to workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - [HTML5Rocks - The Basics of Web Workers](https://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers)
 - [Chrome has problems when using too many worker](https://code.google.com/p/chromium/issues/detail?id=127990)

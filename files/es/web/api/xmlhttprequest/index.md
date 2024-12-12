@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest
 
 {{APIRef("XMLHttpRequest API")}}
 
-`XMLHttpRequest` es un objeto [JavaScript](/en-US/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](https://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
+`XMLHttpRequest` es un objeto [JavaScript](/es/docs/Web/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](https://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
 A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en-US/HTTP) (incluyendo `file` y `ftp`).
 
@@ -45,7 +45,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/es/docs/JavaScript_typed_arrays/ArrayBuffer)
+  : [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
 
@@ -271,7 +271,7 @@ void send(
 ###### Parameters
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/en-US/XMLHttpRequest/FormData) object.
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/es/docs/Web/API/FormData) object.
 
 ###### Notes
 
@@ -321,9 +321,9 @@ void setRequestHeader(
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/XMLHttpRequest/Using_XMLHttpRequest)
-- [`FormData`](/en-US/XMLHttpRequest/FormData)
-- [MDC AJAX introduction](/en-US/AJAX/Getting_Started)
+- [Using XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [`FormData`](/es/docs/Web/API/FormData)
+- [MDC AJAX introduction](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
 - [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)

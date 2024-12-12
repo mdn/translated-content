@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la [API de extensión](https://developer.chrome.com/docs/extensions) soportada por Google Chrome, Opera y el [borrador del grupo de la comunidad del W3C](https://browserext.github.io/browserext/).
 
-Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) con sólo [unos pocos cambios](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome). La API también es totalmente compatible con [multiprocesos de Firefox](/es/docs/Mozilla/Firefox/Multiprocess_Firefox).
+Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) con sólo [unos pocos cambios](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). La API también es totalmente compatible con [multiprocesos de Firefox](/es/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
 Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de un complemento heredado al uso de las APIs de WebExtension, puede ponerse en contacto con nosotros a través del [Discourse de Add-ons](https://discourse.mozilla.org/c/add-ons/35) o en el canal [#webextensions](irc://irc.mozilla.org/webextensions) de [IRC](https://wiki.mozilla.org/IRC).
 
@@ -31,7 +31,7 @@ Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de 
 - [Política de seguridad de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Mensajería nativa](/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 - [Utilización de las APIs de devtools](/es/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Buenas prácticas para la experiencia de usuario](/es/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
+- [Buenas prácticas para la experiencia de usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
 - [Manifestaciones nativas](/es/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
 - [Acciones de los usuarios](/es/docs/Mozilla/Add-ons/WebExtensions/User_actions)
 
@@ -66,29 +66,29 @@ Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de 
 
 ## Portado
 
-- [Portar una extensión de Google Chrome](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome)
+- [Portar una extensión de Google Chrome](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
 - [Portar un complemento heredado de Firefox](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)
-- [Desarrollo para Firefox para Android](/es/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
+- [Desarrollo para Firefox para Android](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)
 - [WebExtensions integradas](/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
 - [Comparación con el complemento SDK](https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/)
 - [Comparación con las extensiones XUL/XPCOM](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
 - [Incompatibilidades con Chrome](/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [Diferencias entre el escritorio y Android](/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
+- [Diferencias entre el escritorio y Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)
 - [Diferencias entre implementaciones de API](/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
 
 ## Flujo de trabajo de Firefox
 
-- [Experiencia de usuario](/es/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
-- [Instalación](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [Depuración](/es/docs/Mozilla/Add-ons/WebExtensions/Debugging)
-- [Prueba de funciones persistentes y de reinicio](/es/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features)
+- [Experiencia de usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
+- [Instalación](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [Depuración](https://extensionworkshop.com/documentation/develop/debugging/)
+- [Prueba de funciones persistentes y de reinicio](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/)
 - [Primeros pasos con web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - [Referencia del comando web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
 - [Extensiones y el ID del complemento](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [Opciones alternativas de distribución](/es/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options)
+- [Opciones alternativas de distribución](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
 - [Solicite los permisos correctos](/es/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 - [Compartir objetos con guiones de página](/es/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [Retirando su extensión](/es/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension)
+- [Retirando su extensión](https://extensionworkshop.com/documentation/manage/retiring-your-extension/)
 - [Consejos y trucos](/es/docs/Mozilla/Add-ons/WebExtensions)
 - [Herramientas de desarrollo para las extensiones del navegador](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 

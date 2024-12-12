@@ -47,7 +47,7 @@ Todos los controles de texto básicos comparten algunos comportamientos comunes:
 - Se pueden marcar como [`readonly`](/es/docs/Web/HTML/Element/input#readonly) (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o [`disabled`](/es/docs/Web/HTML/Element/input#disabled) (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
 - Pueden tener un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder); se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
 - Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
-- Admiten [corrección ortográfica](/es/docs/Web/HTML/Element/Input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
+- Admiten [corrección ortográfica](/es/docs/Web/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
 > [!NOTE]
 > El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.

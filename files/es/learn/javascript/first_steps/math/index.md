@@ -29,7 +29,7 @@ En programación, incluso el simple sistema numérico decimal que todos conocemo
 
 - **Binario** — El lenguaje de computadora de nivel más bajo; 0s y 1s.
 - **Octal** — De base 8, utiliza de 0–7 en cada columna.
-- **Hexadecimal** — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas [colores en CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
+- **Hexadecimal** — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas [colores en CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values).
 
 **Antes de que comiences a preouparte de que tu cerebro se derrita, ¡detente un momento!** Para empezar, sólo vamos a apegarnos a los números decimales durante todo este curso; pocas veces te verás en la necesidad de comenzar a pensar sobre los otros tipos, si es que lo haces.
 

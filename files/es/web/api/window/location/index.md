@@ -381,7 +381,7 @@ La siguiente URL con "?Some%20data" anexa es enviada al servidor (Si no hay ning
 ```
 
 > [!NOTE]
-> La función showNode es también un ejemplo del uso del ciclo [`for`](/en-US/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
+> La función showNode es también un ejemplo del uso del ciclo [`for`](/es/docs/Web/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
 
 …De igual manera pero con un scroll animado:
 

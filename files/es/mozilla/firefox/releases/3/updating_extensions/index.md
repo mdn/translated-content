@@ -47,7 +47,7 @@ Muchas APIs han sido modificadas de forma significativa. Los cambios más import
 
 #### DOM
 
-Los nodos de documentos externos deberán copiarse idénticamente usando [`importNode()`](/en-US/DOM/document.importNode) (o adoptarlos usando [`adoptNode()`](/en-US/DOM/document.adoptNode)) antes de poder insertarlos en el documento actual. Para más información acerca de cuestiones relacionadas con [`ownerDocument`](/en-US/DOM/element.ownerDocument), visita [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
+Los nodos de documentos externos deberán copiarse idénticamente usando [`importNode()`](/es/docs/Web/API/Document/importNode) (o adoptarlos usando [`adoptNode()`](/es/docs/DOM/document.adoptNode)) antes de poder insertarlos en el documento actual. Para más información acerca de cuestiones relacionadas con [`ownerDocument`](/es/docs/Web/API/Node/ownerDocument), visita [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 Actualmente, Firefox no exige hacerlo aunque sí lo hizo durante algún tiempo, durante el desarrollo de Firefox 3. Lo que ocurrió fue que muchos sitios sufrían averías cuando esta política era obligatoria. Nuestra recomendación para los desarrolladores web es que corrijan su código para cumplir con esta regla y así lograr una mejor compatibilidad a futuro.
 
@@ -141,11 +141,11 @@ _Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensi�
 - Es necesario documentar los cambios en [nsISupports proxies](/es/NsISupports_proxies) [\[1\]](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&rnum=1#939240fc3f5123a8) y posiblemente, también aquellos relacionados con el procesamiento de interfaces.
 - Si utilizas instrucciones de proceso XML, como por ejemplo `<?xml-stylesheet ?>` en tus archivos XUL, ten en cuenta los cambios descriptos en el [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654) :
 
-  1. Se han añadido los XML PIs al DOM del documento XUL. Esto significa que no se garantiza que [`document.firstChild`](/en-US/DOM/document.firstChild) sea el elemento raíz. Si necesitas hacer referencia al documento raíz en tu script, usa [`document.documentElement`](/en-US/DOM/document.documentElement) en su lugar.
+  1. Se han añadido los XML PIs al DOM del documento XUL. Esto significa que no se garantiza que [`document.firstChild`](/es/docs/Web/API/Node/firstChild) sea el elemento raíz. Si necesitas hacer referencia al documento raíz en tu script, usa [`document.documentElement`](/es/docs/Web/API/document/documentElement) en su lugar.
   2. Las instrucciones de procesamiento `<?xml-stylesheet ?>` y `<?xul-overlay ?>` ahora no tienen efecto fuera del prólogo del documento.
 
 - Cuando se carga contenido web (es decir, se carga la página en el navegador) no se inicia `window.addEventListener("load", myFunc, true)`. Esto ocurre debido a que el [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) cambia la forma de comunicación entre las ventanas internas y externas. Para corregir esto en forma sencilla, emplea `gBrowser.addEventListener("load", myFunc, true)`, según se describe [aquí](/es/Code_snippets/Tabbed_browser#Detecting_page_load). Además, funciona también para Firefox 2.
 - `content.window.getSelection()` ofrece un objeto (que puede ser convertido en cadena con `toString()`). Se desaconseja el uso de `content.document.getSelection()` que devuelve una cadena.
-- A partir de Firefox 2, se desaconsejó el uso de `event.preventBubble()` y actualmente, ha desaparecido en Firefox 3. En su lugar, usa [`event.stopPropagation()`](/es/docs/DOM/event.stopPropagation), que también funciona en Firefox 2.
+- A partir de Firefox 2, se desaconsejó el uso de `event.preventBubble()` y actualmente, ha desaparecido en Firefox 3. En su lugar, usa [`event.stopPropagation()`](/es/docs/Web/API/Event/stopPropagation), que también funciona en Firefox 2.
 - Los contadores de tiempo que se inician usando `setTimeout()` ahora están bloqueados por las ventanas en modo 'modal' gracias a la corrección hecha en el [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209) . En su lugar, podrías usar `nsITimer`.
 - Si en tu extensión necesitas permitir una fuente no fiable (un sitio web, por ejemplo) para acceder al chrome de la extensión, debes usar el nuevo flag [`contentaccessible` flag](/es/Chrome_Registration#contentaccessible).

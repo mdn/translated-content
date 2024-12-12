@@ -77,28 +77,28 @@ Además, el siguiente documento HTML muestra como se puede extraer información 
 
 ### Propiedades
 
-- [form.elements](/es/docs/DOM/form.elements) (todos los elementos del formulario)
+- [form.elements](/es/docs/Web/API/HTMLFormElement/elements) (todos los elementos del formulario)
   - : `.elements` devuelve una colección de todos los controles que hay en el formulario `FORM`.
-- [form.length](/es/docs/DOM/form.length)
+- [form.length](/es/docs/Web/API/HTMLFormElement/length)
   - : `.length` devuelve la cantidad de controles que hay en el formulario
-- [form.name](/es/docs/DOM/form.name)
+- [form.name](/es/docs/Web/API/HTMLFormElement/name)
   - : `.name` devuelve el nombre del formulario actual en forma de cadena.
-- [form.acceptCharset](/es/docs/DOM/form.acceptCharset)
+- [form.acceptCharset](/es/docs/Web/API/HTMLFormElement/acceptCharset)
   - : `.acceptCharset` devuelve una lista del conjunto de caracteres soportados para el actual elemento `FORM`.
-- [form.action](/es/docs/DOM/form.action)
+- [form.action](/es/docs/Web/API/HTMLFormElement/action)
   - : `.action` obtiene/configura la acción del elemento `FORM`.
-- [form.enctype](/es/docs/DOM/form.enctype)
+- [form.enctype](/es/docs/Web/API/HTMLFormElement/enctype)
   - : `.enctype` gets/sets the content type of the `FORM` element.
-- [form.encoding](/es/docs/DOM/form.encoding)
+- [form.encoding](/es/docs/Web/API/HTMLFormElement/encoding)
   - : `.encoding` gets/sets the content type of the `FORM` element.
-- [form.method](/es/docs/DOM/form.method)
+- [form.method](/es/docs/Web/API/HTMLFormElement/method)
   - : `.method` obtiene/configura el método HTTP utilizado para enviar el formulario.
-- [form.target](/es/docs/DOM/form.target)
+- [form.target](/es/docs/Web/API/HTMLFormElement/target)
   - : `.target` obtiene/configura el objetivo de la acción (i.e., the frame to render its output in).
 
 ### Métodos
 
-- [form.submit](/es/docs/DOM/form.submit)
+- [form.submit](/es/docs/Web/API/HTMLFormElement/submit)
   - : submit() manda el formulario.
-- [form.reset](/es/docs/DOM/form.reset)
+- [form.reset](/es/docs/Web/API/HTMLFormElement/reset)
   - : reset() restaura el formulario, lo devuelve al estado inicial.

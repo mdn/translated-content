@@ -60,7 +60,7 @@ El contenido de este elemento es estático y no [editable](/es/docs/Web/HTML/Glo
 
 El siguiente ejemplo muestra como simular una lista con opciones editables, pero ten cuidado ya que algunos lectores de pantallas y dispositivos de ayuda no lo interpretarán de forma correcta; este ejemplo sería html inválido si usas los elementos correctos:
 
-[This is an example](/files/4563/editable_select.html) de un select editable mediante un {{HTMLElement("fieldset")}} de [radioboxes](/es/docs/Web/HTML/Element/Input) y [textboxes](/es/docs/Web/HTML/Element/Input) (**escrito en CSS puro**, sin JavaScript),
+[This is an example](/files/4563/editable_select.html) de un select editable mediante un {{HTMLElement("fieldset")}} de [radioboxes](/es/docs/Web/HTML/Element/input) y [textboxes](/es/docs/Web/HTML/Element/input) (**escrito en CSS puro**, sin JavaScript),
 
 ## Especificaciones
 

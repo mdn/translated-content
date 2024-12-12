@@ -27,7 +27,7 @@ La mayoría de las APIs de WebExtensions estarán también disponibles para Fire
 
 ### Migrar un complemento ya existente
 
-Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/).
 
 Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communication) en una página wiki para proporcionar soporte a los desarrolladores mediante la transición. Para empezar, utilice la herramienta de compatibilidad [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) para ver si su herramienta será afectada.
 
@@ -37,7 +37,7 @@ Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communic
 
 No es requerido que tu registres tu complemento en AMO, pero tu complemento será firmado por Mozilla o los usuarios no podrán instalarlos.
 
-Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](/es/docs/Mozilla/Add-ons/Distribution).
+Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon).
 
 ## Otros tipos de complementos
 

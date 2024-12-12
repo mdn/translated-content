@@ -21,7 +21,7 @@ rule = stylesheet.ownerRule
 
 ### Notas
 
-Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/es/docs/DOM/element.style) actual es NULL, el valor **ownerRule** devolverá !!TODO!! y viceversa.
+Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/es/docs/Web/API/HTMLElement/style) actual es NULL, el valor **ownerRule** devolverá !!TODO!! y viceversa.
 
 ### Specification
 

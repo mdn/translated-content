@@ -8,7 +8,7 @@ slug: Web/HTML/Element/img
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 > [!NOTE]
-> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Element/img#supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
+> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](#supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
 
 <table class="properties">
   <tbody>
@@ -65,7 +65,7 @@ Este elemento incluye atributos globales.
   - : Alineamiento de la texto respecto al contexto que la rodea.
 - `alt`
 
-  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Element/img#supported_image_formats) o si la imagen aún no se ha descargado.
+  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](#supported_image_formats) o si la imagen aún no se ha descargado.
 
     > [!NOTE]
     > Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.

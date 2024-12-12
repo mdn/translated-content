@@ -5,11 +5,11 @@ slug: Web/CSS/Specificity
 
 {{CSSRef}}
 
-La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/docs/CSS/CSS_Reference#selectors).
+La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/docs/Web/CSS/Reference#selectors).
 
 ## ¿Cómo se calcula?
 
-La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada [tipo de selector](/es/docs/Web/CSS/Specificity#tipos_de_selectores). Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una [declaración directa](/es/docs/Web/CSS/Specificity#elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados), esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
+La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada [tipo de selector](#tipos_de_selectores). Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una [declaración directa](#elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados), esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
 
 > [!NOTE]
 > La **proximidad de elementos** en el árbol del documento no tiene efecto en la especificidad.
@@ -128,7 +128,7 @@ C) O reescribe la regla original para evitar el uso de `!important`.
 
 ### La excepción `:not`
 
-La pseudo-clase negación `:not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Specificity#tipos_de_selectores).
+La pseudo-clase negación `:not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](#tipos_de_selectores).
 
 Aquí tienes un pedazo de CSS:
 

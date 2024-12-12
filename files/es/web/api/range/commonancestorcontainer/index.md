@@ -7,7 +7,7 @@ slug: Web/API/Range/commonAncestorContainer
 
 ### Resumen
 
-Devuelve el nodo más profundo que contienen los nodos [startContainer](/es/docs/DOM/range.startContainer) y [endContainer](/es/docs/DOM/range.endContainer).
+Devuelve el nodo más profundo que contienen los nodos [startContainer](/es/docs/Web/API/range/startContainer) y [endContainer](/es/docs/Web/API/range/endContainer).
 
 ### Sintaxis
 
@@ -26,7 +26,7 @@ rangeAncestor = range.commonAncestorContainer;
 
 ### Notas
 
-Devuelve el último nodo, o el más lejano a lo largo del árbol del documento, que contienen los nodos [startContainer](/es/docs/DOM/range.startContainer) y [endContainer](/es/docs/DOM/range.endContainer). Ya que un rango no necesita ser contínuo y puede seleccionar nodos parcialmente, ésta es una forma conveniente para encontrar un nodo que encierra un rango.
+Devuelve el último nodo, o el más lejano a lo largo del árbol del documento, que contienen los nodos [startContainer](/es/docs/Web/API/range/startContainer) y [endContainer](/es/docs/Web/API/range/endContainer). Ya que un rango no necesita ser contínuo y puede seleccionar nodos parcialmente, ésta es una forma conveniente para encontrar un nodo que encierra un rango.
 
 Esta propiedad es de sólo lectura. Para cambiar el contenedor ancestro de un nodo, considere usar varios métodos para definir las posiciones iniciales y finales de el rango.
 

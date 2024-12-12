@@ -26,13 +26,13 @@ Puedes definir las propiedades de la acción de navegador utilizando la llave [`
 
 El único campo obligatorio es `default_icon`.
 
-Existen dos formas de especificar una acción de navegador: con o sin una [ventana emergente](/es/docs/Mozilla/Add-ons/WebExtensions/Popups). Si no especificas una ventana emergente, se le entregará un evento a la extensión cada vez que el usuario haga click en el botón. El evento es escuchable usando [`browserAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
+Existen dos formas de especificar una acción de navegador: con o sin una [ventana emergente](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). Si no especificas una ventana emergente, se le entregará un evento a la extensión cada vez que el usuario haga click en el botón. El evento es escuchable usando [`browserAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-En cambio, si especificas una ventana emergente, el evento de click no es despachado al hacer click en el botón: en su lugar, la ventana emergente es mostrada. El usuario podrá interactuar con la ventana emergente, la cual se cerrará automáticamente cada vez que el usuario haga click fuera de ella. Te recomendamos revisar el artículo de [ventanas emergentes](/es/docs/Mozilla/Add-ons/WebExtensions/Popups) para conocer más detalles sobre la creación y administración de éstas.
+En cambio, si especificas una ventana emergente, el evento de click no es despachado al hacer click en el botón: en su lugar, la ventana emergente es mostrada. El usuario podrá interactuar con la ventana emergente, la cual se cerrará automáticamente cada vez que el usuario haga click fuera de ella. Te recomendamos revisar el artículo de [ventanas emergentes](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) para conocer más detalles sobre la creación y administración de éstas.
 
 Cabe destacar que tu extensión puede tener solamente una acción de navegador.
 

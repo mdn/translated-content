@@ -200,4 +200,4 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 
 ## Ver también
 
-- [Usando la pseudoclase :target en selectores](/es/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Usando la pseudoclase :target en selectores](/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

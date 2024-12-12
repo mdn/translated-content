@@ -113,65 +113,65 @@ El parámetro predefinido del objeto `event` permite pasar tantos parámetros de
 
 ### Propiedades
 
-- [event.altKey](/es/docs/DOM/event.altKey)
+- [event.altKey](/es/docs/Web/API/MouseEvent/altKey)
   - : Devuelve un valor indicando si la tecla `<alt>` fue pulsada durante el evento.
 - [event.bubbles](/es/docs/Web/API/Event/bubbles)
   - : Devuelve un valor que indica si el evento se propaga hacia arriba a través del DOM o no.
-- [event.button](/es/docs/DOM/event.button)
+- [event.button](/es/docs/Web/API/MouseEvent/button)
   - : Devuelve el botón del ratón.
 - [event.cancelBubble](/es/docs/DOM/event.cancelBubble) {{deprecated_inline}}
   - : Devuelve un valor que indica si la propagación hacia arriba fue cancelada o no.
 - [event.cancelable](/es/docs/Web/API/Event/cancelable)
   - : Devuelve un valor que indica si el evento se puede cancelar.
-- [event.charCode](/es/docs/DOM/event.charCode)
+- [event.charCode](/es/docs/Web/API/KeyboardEvent/charCode)
   - : Devuelve el valor Unicode de una tecla de carácter que fue apretada como parte de un evento [keypress](/es/docs/DOM/event/keypress).
-- [event.clientX](/es/docs/DOM/event.clientX)
+- [event.clientX](/es/docs/Web/API/MouseEvent/clientX)
   - : Devuelve la posición horizontal del evento.
-- [event.clientY](/es/docs/DOM/event.clientY)
+- [event.clientY](/es/docs/Web/API/MouseEvent/clientY)
   - : Devuelve la posición vertical del evento.
-- [event.ctrlKey](/es/docs/DOM/event.ctrlKey)
+- [event.ctrlKey](/es/docs/Web/API/MouseEvent/ctrlKey)
   - : Devuelve un valor que indica si la tecla `<Ctrl>` fue apretada durante el evento.
-- [event.currentTarget](/es/docs/DOM/event.currentTarget)
+- [event.currentTarget](/es/docs/Web/API/Event/currentTarget)
   - : Devuelve una referencia al objetivo actual registrado para el evento.
-- [event.detail](/es/docs/DOM/event.detail)
+- [event.detail](/es/docs/Web/API/UIEvent/detail)
   - : Devuelve detalles sobre el evento, dependiendo del tipo de evento.
-- [event.eventPhase](/es/docs/DOM/event.eventPhase)
+- [event.eventPhase](/es/docs/Web/API/Event/eventPhase)
   - : Utilizado para indicar qué fase del flujo del evento es actualmente en proceso de evaluación.
-- [event.explicitOriginalTarget](/es/docs/DOM/event.explicitOriginalTarget)
+- [event.explicitOriginalTarget](/es/docs/Web/API/Event/explicitOriginalTarget)
   - : El objetivo del evento (específico a Mozilla).
 - [event.isChar](/es/docs/DOM/event.isChar)
   - : Devuelve un valor que indica si el evento produce o no una tecla de carácter.
-- [event.keyCode](/es/docs/DOM/event.keyCode)
+- [event.keyCode](/es/docs/Web/API/KeyboardEvent/keyCode)
   - : Devuelve el valor Unicode de una tecla que no es caracter en un evento [keypress](/es/docs/DOM/event/keypress) o cualquier tecla en cualquier otro tipo de evento de teclado.
-- [event.layerX](/es/docs/DOM/event.layerX)
+- [event.layerX](/es/docs/Web/API/MouseEvent/layerX)
   - : Devuelve la coordenada horizontal del evento relativo a la capa actual.
-- [event.layerY](/es/docs/DOM/event.layerY)
+- [event.layerY](/es/docs/Web/API/MouseEvent/layerY)
   - : Devuelve la coordenada vertical del evento relativo a la capa actual.
-- [event.metaKey](/es/docs/DOM/event.metaKey)
+- [event.metaKey](/es/docs/Web/API/MouseEvent/metaKey)
   - : Devuelve un valor booleano indicando si la `meta` tecla fue presionada durante un evento.
-- [event.originalTarget](/es/docs/DOM/event.originalTarget)
+- [event.originalTarget](/es/docs/Web/API/Event/originalTarget)
   - : El objetivo principal de un evento, antes de cualquier reapunte (Especifiación Mozilla).
 - [event.pageX](/es/docs/Web/API/MouseEvent/pageX)
   - : Devuelve la coordenada horizontal del evento, relativo al documento completo.
-- [event.pageY](/es/docs/DOM/event.pageY)
+- [event.pageY](/es/docs/Web/API/MouseEvent/pageY)
   - : Devuelve la coordenada vertical del evento, relativo al documento completo.
-- [event.relatedTarget](/es/docs/DOM/event.relatedTarget)
+- [event.relatedTarget](/es/docs/Web/API/MouseEvent/relatedTarget)
   - : Identifica un objetivo secundario para el evento.
-- [event.screenX](/es/docs/DOM/event.screenX)
+- [event.screenX](/es/docs/Web/API/MouseEvent/screenX)
   - : Devuelve la coordenada horizontal del evento en la pantalla.
-- [event.screenY](/es/docs/DOM/event.screenY)
+- [event.screenY](/es/docs/Web/API/MouseEvent/screenY)
   - : Devuelve la coordenada vertical del evento en la pantalla.
-- [event.shiftKey](/es/docs/DOM/event.shiftKey)
+- [event.shiftKey](/es/docs/Web/API/MouseEvent/shiftKey)
   - : Devuelve un valor booleano indicando si la tecla `<shift>` fue presionada cuando el evento fue disparado.
-- [event.target](/es/docs/DOM/event.target)
+- [event.target](/es/docs/Web/API/Event/target)
   - : Devuelve una referencia al objetivo en la cual el evento fue originalmente enviado.
-- [event.timeStamp](/es/docs/DOM/event.timeStamp)
+- [event.timeStamp](/es/docs/Web/API/Event/timeStamp)
   - : Devuelve el momento de creación del evento.
 - [event.type](/es/docs/Web/API/Event/type)
   - : Devuelve el nombre del evento (distingue mayúsculas y minúsculas).
-- [event.view](/es/docs/DOM/event.view)
+- [event.view](/es/docs/Web/API/UIEvent/view)
   - : El atributo vista identifica la `AbstractView` del cual el evento fue generado.
-- [event.which](/es/docs/DOM/event.which)
+- [event.which](/es/docs/Web/API/UIEvent/which)
   - : Devuelve el valor Unicode de la tecla en un evento del teclado, sin importar el tipo de tecla que se presionó.
 
 ### Métodos
@@ -182,13 +182,13 @@ El parámetro predefinido del objeto `event` permite pasar tantos parámetros de
   - : Inicia un evento del teclado. (Específico de Gecko).
 - [event.initMouseEvent](/es/docs/Web/API/MouseEvent/initMouseEvent)
   - : Inicia un evento del ratón una vez que se ha creado.
-- [event.initUIEvent](/es/docs/DOM/event.initUIEvent)
+- [event.initUIEvent](/es/docs/Web/API/UIEvent/initUIEvent)
   - : Inicia un evento de la interfaz de usuario (_UI_) una vez que se ha creado.
 - [event.preventBubble](/es/docs/DOM/event.preventBubble) {{deprecated_inline}}
-  - : Previene la expansión del evento. Este método es desaconsejado en favor del estándar [stopPropagation](/es/docs/DOM/event.stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
+  - : Previene la expansión del evento. Este método es desaconsejado en favor del estándar [stopPropagation](/es/docs/Web/API/Event/stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
 - [event.preventCapture](/es/docs/DOM/event.preventCapture) {{deprecated_inline}}
-  - : Este método es desaconsejado en favor del estándar [stopPropagation](/es/docs/DOM/event.stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
+  - : Este método es desaconsejado en favor del estándar [stopPropagation](/es/docs/Web/API/Event/stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
 - [event.preventDefault](/es/docs/Web/API/Event/preventDefault)
   - : Cancela el evento (si éste es anulable).
-- [event.stopPropagation](/es/docs/DOM/event.stopPropagation)
+- [event.stopPropagation](/es/docs/Web/API/Event/stopPropagation)
   - : Para la propagación de los eventos más allá en el DOM.
