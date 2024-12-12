@@ -802,7 +802,7 @@ textarea.addEventListener("input", update);
 reset.addEventListener("click", () => {
   textarea.value = initialCode;
   userEntry = textarea.value;
-  solution.value = "Show solution";
+  solution.value = "查看解答";
   update();
 });
 
