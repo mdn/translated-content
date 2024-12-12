@@ -1,5 +1,6 @@
 ---
 title: "AnimationEvent: pseudoElement 속성"
+short-title: pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
 l10n:
   sourceCommit: 26a4b252b196202c9923eeb11cca0cad2663005d
