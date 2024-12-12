@@ -82,14 +82,14 @@ async function fetchVideo() {
   try {
     const response = await fetch(url, { signal });
     console.log("下载完毕", response);
-    // process response further
+    // 进一步处理请求
   } catch (err) {
     console.error(`下载出现错误：${err.message}`);
   }
 }
 ```
 
-如果在执行 `fetch()` 调用后但在读取响应体之前中止了请求，那么尝试读取响应体时将出现 `AbortError` 异常。
+如果在 `fetch()` 调用兑现后但在读取响应体之前中止了请求，那么尝试读取响应体时将出现 `AbortError` 异常。
 
 ```js
 async function get() {
@@ -207,7 +207,7 @@ myCoolPromiseAPI({ /* …, */ signal })
 controller.abort();
 ```
 
-不返回 promise 的 API 接口可能会以类似的方式做出反应。在某些情况下，吸收信号可能是有意义的。
+不返回 promise 的 API 接口可能会以类似的方式做出反应。在某些情况下，接收信号可能是有意义的。
 
 ## 规范
 
