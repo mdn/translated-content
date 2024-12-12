@@ -1,5 +1,6 @@
 ---
 title: "AnimationEvent: AnimationEvent() 생성자"
+short-title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
