@@ -1,6 +1,8 @@
 ---
 title: Robots.txt
 slug: Glossary/Robots.txt
+l10n:
+  sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
 ---
 
 {{GlossarySidebar}}
