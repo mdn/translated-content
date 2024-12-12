@@ -18,10 +18,10 @@ slug: Web/SVG/Attribute/class
 
 ## Контекст использования
 
-| Категория            | None                                                                                               |
-| -------------------- | -------------------------------------------------------------------------------------------------- |
-| Значение             | [\<list-of-class-names>](/en-US/SVG/Content_type#list-of-ts)                                          |
-| Возможна анимация    | Yes                                                                                                |
+| Категория            | None                                                                                                |
+| -------------------- | --------------------------------------------------------------------------------------------------- |
+| Значение             | [\<list-of-class-names>](/en-US/SVG/Content_type#list-of-ts)                                        |
+| Возможна анимация    | Yes                                                                                                 |
 | Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
 ## Example

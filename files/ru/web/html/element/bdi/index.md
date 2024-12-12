@@ -15,11 +15,11 @@ slug: Web/HTML/Element/bdi
 > Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
 
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                      | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                  |
-| Tag omission                                           | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
-| Permitted parent elements                              | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                         |
-| DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                              |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
+| Permitted parent elements                                  | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
+| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
 
 ## Attributes
 

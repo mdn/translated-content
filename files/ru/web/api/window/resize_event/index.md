@@ -26,14 +26,14 @@ slug: Web/API/Window/resize_event
 - Действие по умолчанию
   - : Нет
 
-| Property                        | Type                                          | Description                                                                                |
-| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)     | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy) | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                         |
+| Property                        | Type                                                                  | Description                                                                                |
+| ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | The event target (the topmost target in the DOM tree).                                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | The type of event.                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event normally bubbles or not.                                                 |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event is cancellable or not.                                                   |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                         |
 
 ## Примеры
 

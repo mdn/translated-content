@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 Чтобы сделать сайт доступным для установки, ему необходимы следующие вещи:
 
-- Веб-манифест с [правильно заполненными полями](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest)
+- Веб-манифест с [правильно заполненными полями](/ru/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest)
 - Сайт должен использовать защищённый (HTTPS) домен
 - Иконка для предоставления приложения на устройстве
 - Зарегистрированный service worker, чтобы приложение работало в off-line режиме (на данный момент требуется только для Chrome на Android)

@@ -99,12 +99,12 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [Новое в JavaScript 1.8.1](/en-US/New_in_JavaScript_1.8.1)
   - : Обзор всех изменений в JavaScript 1.8.1.
-- [`Object.getPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
+- [`Object.getPrototypeOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
   - : Новый метод, возвращающий прототип указанного объекта.
 - [Использование встроенного JSON](/en-US/Using_native_JSON)
   - : Firefox 3.5 имеет встроенную поддержку [JSON](/en-US/JSON).
 - Новые методы обрезки строк в объекте `String`
-  - : Объект [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) теперь имеет методы [`trim()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim), [`trimLeft()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart) и [`trimRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd).
+  - : Объект [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String) теперь имеет методы [`trim()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trim), [`trimLeft()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart) и [`trimRight()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd).
 
 #### Networking
 

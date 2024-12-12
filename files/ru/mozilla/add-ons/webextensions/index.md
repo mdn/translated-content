@@ -61,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 ### Рабочий процесс (workflow) Firefox
 
-- [Установка](/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [Установка](/ru/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 - [Отладка](/ru/docs/Mozilla/Add-ons/WebExtensions/Debugging)
 - [Начало работы с инструментом Web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - [Справочник команд Web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)

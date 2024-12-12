@@ -14,10 +14,10 @@ SVG supports the standard XML attribute `xml:space` to specify the handling of w
 
 ## Usage context
 
-| Categories         | _None_                                                                   |
-| ------------------ | ------------------------------------------------------------------------ |
-| Value              | **`default`** \| `preserve`                                              |
-| Animatable         | No                                                                       |
+| Categories         | _None_                                                                    |
+| ------------------ | ------------------------------------------------------------------------- |
+| Value              | **`default`** \| `preserve`                                               |
+| Animatable         | No                                                                        |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#WhiteSpace) |
 
 - default

@@ -10,11 +10,11 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 {{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
 | Permitted content    | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content) or one element of [Heading content](/ru/docs/Web/HTML/Content_categories#heading_content) |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                                         |
-| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                                         |
-| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                             |
-| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                             |
+| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                             |
+| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                 |
+| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                          |
 
 ## Атрибуты
 

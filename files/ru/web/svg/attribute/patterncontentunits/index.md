@@ -15,10 +15,10 @@ slug: Web/SVG/Attribute/patternContentUnits
 
 ## Контекст использования
 
-| Categories         | _None_                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                                  |
-| Animatable         | Yes                                                                                                          |
+| Categories         | _None_                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                                   |
+| Animatable         | Yes                                                                                                           |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/pservers.html#PatternElementPatternContentUnitsAttribute) |
 
 - userSpaceOnUse

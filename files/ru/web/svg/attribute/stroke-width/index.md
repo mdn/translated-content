@@ -13,11 +13,11 @@ slug: Web/SVG/Attribute/stroke-width
 
 ## Usage context
 
-| **Категория**        | Атрибут представления                                                                                   |
-| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Категория**        | Атрибут представления                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Значения**         | [\<length>](/en-US/SVG/Content_type#length) \| [\<percentage>](/en-US/SVG/Content_type#percentage) \| inherit |
-| **Анимируемый**      | Да                                                                                                      |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                     |
+| **Анимируемый**      | Да                                                                                                            |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                          |
 
 ## Example
 

@@ -24,14 +24,14 @@ slug: Web/API/HTMLElement/error_event
 
 ## Свойства
 
-| Property                        | Type                                          | Description                                                                                          |
-| ------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget) | Цель события (наиболее верхлежащий элемент в DOM дереве).                                            |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)     | Тип события.                                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Является ли событие вплывающим в стандартных условиях или нет.                                       |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | Является ли событие отменяемым или нет.                                                              |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy) | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (свойство `window` объекта document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                                   |
+| Property                        | Type                                                                  | Description                                                                                          |
+| ------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | Цель события (наиболее верхлежащий элемент в DOM дереве).                                            |
+| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | Тип события.                                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Является ли событие вплывающим в стандартных условиях или нет.                                       |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Является ли событие отменяемым или нет.                                                              |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (свойство `window` объекта document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                                   |
 
 ### Для MediaStream Recording событий
 

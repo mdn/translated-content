@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/shape-rendering
 
 ## Контекст использования
 
-| Категория            | Атрибут представления                                                                    |
-| -------------------- | ---------------------------------------------------------------------------------------- |
-| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                 |
-| Анимация             | Да                                                                                       |
+| Категория            | Атрибут представления                                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                  |
+| Анимация             | Да                                                                                        |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty) |
 
 - auto

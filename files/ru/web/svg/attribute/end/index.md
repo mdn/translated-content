@@ -13,10 +13,10 @@ slug: Web/SVG/Attribute/end
 
 ## Usage context
 
-| Categories         | Animation timing attribute                                                  |
-| ------------------ | --------------------------------------------------------------------------- |
-| Value              | \<End-value-list>                                                           |
-| Animatable         | No                                                                          |
+| Categories         | Animation timing attribute                                                   |
+| ------------------ | ---------------------------------------------------------------------------- |
+| Value              | \<End-value-list>                                                            |
+| Animatable         | No                                                                           |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
 Для типов значений, разрешённых в, `<end-value-list>` см. {{ SVGAttr("begin") }} атрибут.

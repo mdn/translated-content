@@ -71,7 +71,7 @@ slug: Learn/Common_questions
 
   - : В этой статье представлено базовое руководство по публикации контента с использованием функции **gh-pages** сайта GitHub.
 
-- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
+- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/ru/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
 
   - : Ищете место для размещения вашего сайта? Здесь представлено пошаговое руководство по размещению вашего сайта с помощью платформы Google App Engine.
 

@@ -157,7 +157,7 @@ screen.lockOrientation("landscape");
 
 ## Firefox OS и Android: блокирование ориентации через манифест
 
-Для Firefox OS и Firefox Android (скоро заработает и в десктопном Firefox) существует более специфичный способ: в файле манифеста вашего приложения можно указать [ориентацию](/en-US/docs/Web/Apps/Build/Manifest#orientation):
+Для Firefox OS и Firefox Android (скоро заработает и в десктопном Firefox) существует более специфичный способ: в файле манифеста вашего приложения можно указать [ориентацию](/ru/docs/Web/Apps/Build/Manifest#orientation):
 
 ```json
 "orientation": "portrait"

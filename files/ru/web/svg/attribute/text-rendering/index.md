@@ -13,10 +13,10 @@ slug: Web/SVG/Attribute/text-rendering
 
 ## Usage context
 
-| Категория          | Presentation attribute                                                                |
-| ------------------ | ------------------------------------------------------------------------------------- |
-| Значение           | **auto** \| optimizeSpeed \| optimizeLegibility \| geometricPrecision \| inherit      |
-| Animatable         | Yes                                                                                   |
+| Категория          | Presentation attribute                                                                 |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Значение           | **auto** \| optimizeSpeed \| optimizeLegibility \| geometricPrecision \| inherit       |
+| Animatable         | Yes                                                                                    |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#TextRenderingProperty) |
 
 - auto

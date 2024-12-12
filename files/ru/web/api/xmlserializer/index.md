@@ -43,5 +43,5 @@ document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ## Смотрите также
 
 - [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)
+- [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
 - [DOMParser](/en-US/DOMParser)

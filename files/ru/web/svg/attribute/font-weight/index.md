@@ -17,7 +17,7 @@ slug: Web/SVG/Attribute/font-weight
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Значения             | **normal** \| bold \| bolder \| lighter \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| inherit |
 | Анимируемость        | Да                                                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontWeightProperty)                                  |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontWeightProperty)                                 |
 
 ## Значение ключевых слов
 

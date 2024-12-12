@@ -5,7 +5,7 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
 
-> В других статьях мы рассмотрели как [создать cross browser видео плеер](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
+> В других статьях мы рассмотрели как [создать cross browser видео плеер](/ru/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/ru/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
 
 ## Пример видео с подписями
 

@@ -146,7 +146,7 @@ console.log(bar); // true
 
 ### Загрузка модулей
 
-Деструктурирующее присваивание помогает загружать специфичные наборы модулей, как в [Add-on SDK](/en-US/docs/Mozilla/Add-ons/SDK):
+Деструктурирующее присваивание помогает загружать специфичные наборы модулей, как в [Add-on SDK](/ru/docs/Mozilla/Add-ons/SDK):
 
 ```js
 const { Loader, main } = require("toolkit/loader");

@@ -149,7 +149,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 Усовершенствованные API:
 
 - [`storage.sync`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) в[`contextMenus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
+- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) в[`contextMenus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [`webRequest.onBeforeRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) теперь поддерживает `requestBody`
 - [`tabs.insertCSS`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)теперь поддерживает `cssOrigin`, что позволяет вставлять таблицы стилей пользователя.
 

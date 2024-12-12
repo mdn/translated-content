@@ -62,7 +62,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## Разрешения
 
-Что бы использовать метод `enumerateDevices()` в устанавливаемом приложении (к примеру в [Firefox OS приложение](/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), необходимо указать оба поля внутри файла манифеста приложения:
+Что бы использовать метод `enumerateDevices()` в устанавливаемом приложении (к примеру в [Firefox OS приложение](/ru/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), необходимо указать оба поля внутри файла манифеста приложения:
 
 ```js
 "permissions": {
@@ -75,7 +75,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 }
 ```
 
-Смотрите также : [разрешение: аудио захват](/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture) and [разрешение : видео захват](/en-US/docs/Web/Apps/Developing/App_permissions#video-capture) в продолжение темы.
+Смотрите также : [разрешение: аудио захват](/ru/docs/Web/Apps/Developing/App_permissions#audio-capture) and [разрешение : видео захват](/ru/docs/Web/Apps/Developing/App_permissions#video-capture) в продолжение темы.
 
 ## Спецификации
 

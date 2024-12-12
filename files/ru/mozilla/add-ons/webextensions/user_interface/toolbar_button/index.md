@@ -32,13 +32,13 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 
 Расширение может иметь только одну кнопку для панели инструментов.
 
-Возможны два способа реакции на нажатие кнопки: отображение [всплывающего окна](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) (описано в отдельном разделе) или отправка события в background script расширения. В таком случае реакция на нажатие обеспечивают обработчики событий, подключённые к [`browserAction.onClicked`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
+Возможны два способа реакции на нажатие кнопки: отображение [всплывающего окна](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) (описано в отдельном разделе) или отправка события в background script расширения. В таком случае реакция на нажатие обеспечивают обработчики событий, подключённые к [`browserAction.onClicked`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-Если же указать в качестве реакции на нажатие всплывающее окно, то событие передано не будет. Вместо этого около кнопки отобразится всплывающее окно - отдельная маленькая страница, дальнейшее взаимодействие с пользователем берёт на себя она. Подробнее этот сценарий описан на отдельной странице, посвящённой [всплывающим окнам](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
+Если же указать в качестве реакции на нажатие всплывающее окно, то событие передано не будет. Вместо этого около кнопки отобразится всплывающее окно - отдельная маленькая страница, дальнейшее взаимодействие с пользователем берёт на себя она. Подробнее этот сценарий описан на отдельной странице, посвящённой [всплывающим окнам](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
 Все свойства кнопки на панели инструментов можно изменить программно через API [`browserAction`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 

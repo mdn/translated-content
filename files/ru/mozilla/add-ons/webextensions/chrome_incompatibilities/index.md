@@ -15,16 +15,16 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 ### Полностью поддерживаемые ключи
 
-- [`applications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`default_locale`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
-- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
-- [`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`default_locale`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Частично поддерживаемые ключи
 

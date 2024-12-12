@@ -28,18 +28,18 @@ slug: Web/SVG/Attribute/values
 
 ### For animation elements
 
-| Categories         | Animation value attribute                                                        |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | \<list>                                                                          |
-| Animatable         | No                                                                               |
+| Categories         | Animation value attribute                                                         |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | \<list>                                                                           |
+| Animatable         | No                                                                                |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/animate.html#ValuesAttribute) |
 
 ### For the {{ SVGElement("feColorMatrix") }} element
 
-| Categories         | _None_                                                                                        |
-| ------------------ | --------------------------------------------------------------------------------------------- |
-| Value              | \<list> \| [\<number>](/en-US/SVG/Content_type#number)                                           |
-| Animatable         | Yes                                                                                           |
+| Categories         | _None_                                                                                         |
+| ------------------ | ---------------------------------------------------------------------------------------------- |
+| Value              | \<list> \| [\<number>](/en-US/SVG/Content_type#number)                                         |
+| Animatable         | Yes                                                                                            |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 
 ## Example

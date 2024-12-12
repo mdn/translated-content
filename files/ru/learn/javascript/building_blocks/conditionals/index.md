@@ -38,7 +38,7 @@ if (condition) {
 Что мы имеем:
 
 1. Ключевое слово `if` расположено перед круглыми скобками.
-2. Условие для проверки (condition), расположено внутри круглых скобок (например "это значение больше другого значения?", или "это значение существует?"). Это условие использует операторы сравнения ([comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators)), которые мы изучим позже, и возвратит нам `true` или `false`.
+2. Условие для проверки (condition), расположено внутри круглых скобок (например "это значение больше другого значения?", или "это значение существует?"). Это условие использует операторы сравнения ([comparison operators](/ru/docs/Learn/JavaScript/First_steps/Math#comparison_operators)), которые мы изучим позже, и возвратит нам `true` или `false`.
 3. Внутри скобок { } расположен код, который будет выполняться только в том случае, если условие (condition) верно (`true)`.
 4. Ключевое слово `else (иначе)`.
 5. Ещё скобки { }, код внутри которых выполнится, только если условие не верно (не `true)`.
@@ -762,11 +762,11 @@ textarea.onkeyup = function () {
 
 ## Заключение
 
-Это все, что вам нужно знать на данный момент об условных логических структурах! Уверены, вы хорошо разобрались в теоретическом материале и с лёгкостью справились с предложенными упражнениями. Если же что-то осталось для вас непонятным, перечитайте статью ещё раз или [свяжитесь с нами](/en-US/docs/Learn#contact_us).
+Это все, что вам нужно знать на данный момент об условных логических структурах! Уверены, вы хорошо разобрались в теоретическом материале и с лёгкостью справились с предложенными упражнениями. Если же что-то осталось для вас непонятным, перечитайте статью ещё раз или [свяжитесь с нами](/ru/docs/Learn#contact_us).
 
 ## Смотрите также
 
-- [Comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Comparison operators](/ru/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
 - [Conditional statements in detail](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

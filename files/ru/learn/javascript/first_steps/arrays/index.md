@@ -41,7 +41,7 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 ### Получение и изменение элементов массива
 
-Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Введите следующее в вашу консоль:
 

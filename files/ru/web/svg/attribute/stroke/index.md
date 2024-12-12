@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/stroke
 
 ## Контекст использования
 
-| Категория            | Presentation attribute                                                         |
-| -------------------- | ------------------------------------------------------------------------------ |
-| Значения             | [\<paint>](/en-US/SVG/Content_type#paint), `context-fill`, `context-stroke`       |
-| Анимируемый          | Да                                                                             |
+| Категория            | Presentation attribute                                                          |
+| -------------------- | ------------------------------------------------------------------------------- |
+| Значения             | [\<paint>](/en-US/SVG/Content_type#paint), `context-fill`, `context-stroke`     |
+| Анимируемый          | Да                                                                              |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#StrokeProperty) |
 
 ## Примеры

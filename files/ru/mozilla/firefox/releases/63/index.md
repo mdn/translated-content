@@ -212,7 +212,7 @@ _Без изменений._
 - {{WebExtAPIRef("menus.create()")}} теперь позволяет создавать невидимые пункты меню, {{WebExtAPIRef("menus.update()")}} позволяет переключать видимость пунктов меню ([Firefox bug 1482529](https://bugzil.la/1482529)).
 - Элементы, созданные с помощью API {{WebExtAPIRef("menus")}}, обзавелись поддержкой клавиш доступа ([Firefox bug 1320462](https://bugzil.la/1320462)).
 - Параметр {{WebExtApiRef("menus.create()")}} и {{WebExtApiRef("menus.update()")}} `targetUrlPatterns` теперь поддерживает любые схемы URL-адресов, даже те, которые обычно не допускаются в шаблоне соответствия ([Firefox bug 1280370](https://bugzil.la/1280370)).
-- При нажатии на элемент контекстного меню вкладки, [разрешение "activeTab"](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) будет дано этой вкладке, даже если она не является активной ([Firefox bug 1446956](https://bugzil.la/1446956)).
+- При нажатии на элемент контекстного меню вкладки, [разрешение "activeTab"](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) будет дано этой вкладке, даже если она не является активной ([Firefox bug 1446956](https://bugzil.la/1446956)).
 
 #### Прочее
 

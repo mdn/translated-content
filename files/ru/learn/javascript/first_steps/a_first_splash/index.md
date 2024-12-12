@@ -473,7 +473,7 @@ guessField.focus();
 var guessField = document.querySelector(".guessField");
 ```
 
-Чтобы получить это значение, мы использовали метод {{domxref("document.querySelector", "querySelector()")}} объекта {{domxref("document")}}. `querySelector()` "берет" одну часть информации - [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors), который выбирает нужный элемент*.*
+Чтобы получить это значение, мы использовали метод {{domxref("document.querySelector", "querySelector()")}} объекта {{domxref("document")}}. `querySelector()` "берет" одну часть информации - [CSS selector](/ru/docs/Learn/CSS/Building_blocks/Selectors), который выбирает нужный элемент*.*
 
 Поскольку `guessField` теперь содержит ссылку на элемент {{htmlelement("input")}}, теперь он будет иметь доступ к ряду свойств (в основном к переменным, хранящимся внутри объектов, некоторые значения которых нельзя изменять) и методы (в основном функции, хранящиеся внутри объектов). Одним из методов, доступных для ввода элементов, является focus (), поэтому мы можем теперь использовать эту строку для фокусировки ввода текста:
 

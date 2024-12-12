@@ -73,7 +73,7 @@ _Без изменений._
 
 - Добавлено свойство [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) в `PageMod`.
 - Добавлено свойство [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) в `Request`.
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
+- [Add-on Debugger](/ru/docs/Mozilla/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
 
 #### Подробнее
 

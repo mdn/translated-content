@@ -16,11 +16,11 @@ slug: Web/HTML/Element/cite
 > - Используйте атрибут [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite) элемента {{HTMLElement("blockquote")}} или элемента {{HTMLElement("q")}} для ссылки на интернет-ресурс источника.
 
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                      | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                  |
-| Tag omission                                           | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
-| Permitted parent elements                              | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                         |
-| DOM interface                                          | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.   |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
+| Permitted parent elements                                  | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
+| DOM interface                                              | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.           |
 
 ## Атрибуты
 
