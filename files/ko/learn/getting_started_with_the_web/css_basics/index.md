@@ -19,7 +19,7 @@ p {
 
 한 번 해봅시다. 텍스트 에디터의 새 파일에 위의 CSS 3줄을 복사해 붙여넣으세요. 그다음에 `styles` 디렉토리에 `style.css`로 파일을 저장하세요.
 
-아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
+아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
 
 1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
@@ -168,7 +168,7 @@ html {
 }
 ```
 
-이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
+이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
 
 ### body 외부 정렬하기
 
@@ -239,6 +239,6 @@ img {
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/docs/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

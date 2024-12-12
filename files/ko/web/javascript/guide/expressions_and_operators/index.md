@@ -71,7 +71,7 @@ JavaScript는 이항 연산자와 단항 연산자를 모두 포함하며, 유�
 | [비트 OR 할당](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                           | `x \|= y`   | `x = x \| y`     |
 | [논리 AND 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                         | `x &&= y`   | `x && (x = y)`   |
 | [논리 OR 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                           | `x \|\|= y` | `x \|\| (x = y)` |
-| [널 병합 할당](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)                      | `x ??= y`   | `x ?? (x = y)`   |
+| [널 병합 할당](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)                   | `x ??= y`   | `x ?? (x = y)`   |
 
 #### 속성 할당
 

@@ -89,7 +89,7 @@ bottom top
 ## 같이 보기
 
 - [CSS 값과 단위](/ko/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 값과 단위 소개](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("radial-gradient()")}}
 - {{cssxref("conic-gradient()")}}

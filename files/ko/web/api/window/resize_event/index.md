@@ -30,14 +30,14 @@ slug: Web/API/Window/resize_event
 
 ## Properties
 
-| Property                        | Type                                          | Description                                                                       |
-| ------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget) | 이벤트 타겟(DOM 트리의 최상위 타겟).                                              |
-| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)     | 이벤트의 타입.                                                                    |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | 이벤트가 정상적으로 버블이 발생하는지 여부.                                       |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)         | 이벤트 취소 가능 여부.                                                            |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy) | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView) (문서의 `window`) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                |
+| Property                        | Type                                                                   | Description                                                                       |
+| ------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget)                          | 이벤트 타겟(DOM 트리의 최상위 타겟).                                              |
+| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String) | 이벤트의 타입.                                                                    |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | 이벤트가 정상적으로 버블이 발생하는지 여부.                                       |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | 이벤트 취소 가능 여부.                                                            |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView) (문서의 `window`) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                |
 
 ## Examples
 

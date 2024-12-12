@@ -46,16 +46,16 @@ cd borderify
 }
 ```
 
-- [`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), 이 세가지 키는 반드시 필요합니다. 확장의 기본 메타 데이터를 담고 있습니다.
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)은 없어도 괜찮지만 포함하는 게 좋습니다. 확장 관리자 화면에서 볼 수 있습니다.
-- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)은 없어도 괜찮지만 역시 포함하는 편이 좋습니다. 이는 확장의 아이콘을 결정하며 확장 관리자 화면에서 볼 수 있습니다.
+- [`manifest_version`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), [`version`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), 이 세가지 키는 반드시 필요합니다. 확장의 기본 메타 데이터를 담고 있습니다.
+- [`description`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)은 없어도 괜찮지만 포함하는 게 좋습니다. 확장 관리자 화면에서 볼 수 있습니다.
+- [`icons`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)은 없어도 괜찮지만 역시 포함하는 편이 좋습니다. 이는 확장의 아이콘을 결정하며 확장 관리자 화면에서 볼 수 있습니다.
 
-가장 재밌는 키는 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 입니다. 이 키는 URL이 패턴과 일치하는 페이지에 스크립트를 주입하도록 Firefox에 요청하는 역할을 합니다. 이 예제의 경우, "mozilla.org"와 그 하위 도메인에서 제공되는 모든 HTTP와 HTTPS 페이지에 "borderify.js" 스크립트를 주입하도록 Firefox에 요청합니다.
+가장 재밌는 키는 [`content_scripts`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 입니다. 이 키는 URL이 패턴과 일치하는 페이지에 스크립트를 주입하도록 Firefox에 요청하는 역할을 합니다. 이 예제의 경우, "mozilla.org"와 그 하위 도메인에서 제공되는 모든 HTTP와 HTTPS 페이지에 "borderify.js" 스크립트를 주입하도록 Firefox에 요청합니다.
 
-- [content scripts에 대해 더 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [match patterns에 대해 더 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- [content scripts에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [match patterns에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **경고:** [확장에 ID를 지정해야 할 수도 있습니다](/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). 애드온 ID를 지정해야 한다면, `manifest.json` 파일에 `application` 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.```json
+> **경고:** [확장에 ID를 지정해야 할 수도 있습니다](/ko/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). 애드온 ID를 지정해야 한다면, `manifest.json` 파일에 `application` 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.```json
 > "applications": {
 > "gecko": {
 > "id": "borderify@example.com"
@@ -83,7 +83,7 @@ borderify 디렉토리 안에 icons 디렉토리를 만들고, "border-48.png"�
 
 대신 SVG 파일을 사용할 수도 있습니다. 그러면 자동으로 딱 맞게 조절되어 적용됩니다. (만약 SVG에 텍스트가 포함되어 있다면 사용하는 툴에서 "패스로 변환하기" 기능을 사용해 텍스트를 패스로 변경해주세요. 그래야 원하는 위치와 크기로 확대/축소가 이뤄집니다.)
 
-- [아이콘을 지정하는 방법에 대해 더 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [아이콘을 지정하는 방법에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 
@@ -95,7 +95,7 @@ document.body.style.border = "5px solid red";
 
 이 스크립트는 manifest.json의 `content_scripts`키로 주어진 패턴에 매칭 될 때 페이지에 삽입됩니다. 스크립트는 원래 페이지에 포함되어 있던 스크립트처럼, 문서 자체에 직접 접근할 수 있게 됩니다.
 
-- [content scripts에 대해 더 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [content scripts에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## 사용해보기
 
@@ -132,7 +132,7 @@ Firefox로 "about:debugging" 페이지에 들어갑니다. "임시 확장기능 
 
 {{EmbedYouTube("NuajE60jfGY")}}
 
-- [확장기능을 불러오는 것에 대해 더 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [확장기능을 불러오는 것에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
 ## 패키징과 배포
 
@@ -142,6 +142,6 @@ Firefox로 "about:debugging" 페이지에 들어갑니다. "임시 확장기능 
 
 이제 어떻게 Firefox용 WebExtension을 개발해야 하는지 알게 되었습니다. 다음 글들을 읽고 시도해 보세요.
 
-- [확장기능의 구조에 대해 더 자세히 알아보기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [좀 더 복잡한 확장기능을 만들기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [확장기능에서 사용할 수 있는 JavaScript API 문서](/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
+- [확장기능의 구조에 대해 더 자세히 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [좀 더 복잡한 확장기능을 만들기](/ko/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
+- [확장기능에서 사용할 수 있는 JavaScript API 문서](/ko/docs/Mozilla/Add-ons/WebExtensions/API)

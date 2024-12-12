@@ -227,7 +227,7 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 <p>sixth</p>
 ```
 
-{{htmlelement("em")}} 은 인라인 요소(inline element) 이므로, 밑에서 보실 수 있듯이, 처음 세 개의 요소는 서로 같은 줄에, 사이에 공백이 없이 위치합니다. 한편, {{htmlelement("p")}} 는 블록 레벨 요소이므로, 각 요소들은 새로운 줄에 나타나며, 위와 아래에 여백이 있습니다 (여백은 브라우저가 문단에 적용하는 기본 [CSS styling](/en-US/docs/Learn/CSS/First_steps) 때문에 적용됩니다).
+{{htmlelement("em")}} 은 인라인 요소(inline element) 이므로, 밑에서 보실 수 있듯이, 처음 세 개의 요소는 서로 같은 줄에, 사이에 공백이 없이 위치합니다. 한편, {{htmlelement("p")}} 는 블록 레벨 요소이므로, 각 요소들은 새로운 줄에 나타나며, 위와 아래에 여백이 있습니다 (여백은 브라우저가 문단에 적용하는 기본 [CSS styling](/ko/docs/Learn/CSS/First_steps) 때문에 적용됩니다).
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
@@ -540,8 +540,8 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 - {{htmlelement ( "body")}} 요소의 시작 태그 바로 아래에 문서의 기본 제목을 추가하십시오. `<h1>` 여는 태그와 `</h1>` 닫는 태그 안에 싸야합니다.
 - 관심있는 주제에 대한 텍스트를 포함하도록 단락 컨텐츠를 편집하십시오.
 - 중요한 단어는 `<strong>` 여는 태그와 `</ strong>` 닫는 태그 안에 넣어 굵게 표시하십시오.
-- [이 글의 앞부분에서 설명](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element)한대로 단락에 대한 링크를 추가하십시오.
-- 문서에 이미지를 추가하십시오. [이 글의 앞부분에서 설명](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#empty_elements)한대로 단락 아래에 배치하십시오. 다른 이미지 (컴퓨터의 로컬 또는 웹의 다른 위치)에 연결하면 보너스 포인트를 얻을 수 있습니다.
+- [이 글의 앞부분에서 설명](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element)한대로 단락에 대한 링크를 추가하십시오.
+- 문서에 이미지를 추가하십시오. [이 글의 앞부분에서 설명](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#empty_elements)한대로 단락 아래에 배치하십시오. 다른 이미지 (컴퓨터의 로컬 또는 웹의 다른 위치)에 연결하면 보너스 포인트를 얻을 수 있습니다.
 
 만약 실수한 경우 언제든지 _Reset_ 버튼을 사용하여 초기화 할 수 있습니다. 문제가 발생하면 _Show solution_ 단추를 눌러 답변을 확인하십시오.
 

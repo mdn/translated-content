@@ -5,7 +5,7 @@ slug: Web/SVG/Tutorial/Paths
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-[`<path>`](/en-US/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
+[`<path>`](/ko/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
 
 패스는 여러 개의 직선과 곡선을 합쳐서 복잡한 도형을 그릴 수 있게 해준다. 직선으로만 이루어진 복잡한 도형은 [polylines](/ko/docs/Web/SVG/Tutorial/Basic_Shapes#polyline)으로도 그릴 수 있지만, 곡선을 묘사할 때 polylines은 패스로 그린 도형에 비해 더 많은 직선이 필요에 확대가 잘 되지 않을 수 있다. 그렇기에 SVG를 그릴 때 패스에 대해 이해하는 것은 매우 중요하다고 할 수 있다. 복잡한 패스를 XML 편집기 또는 일반적인 텍스트 에디터로 그리는 것은 권장하지 않지만, SVG가 표시될 때 문제점을 찾고 고치는 데는 충분히 도움이 될 것이다.
 

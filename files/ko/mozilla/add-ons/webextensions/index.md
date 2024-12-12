@@ -5,32 +5,32 @@ slug: Mozilla/Add-ons/WebExtensions
 
 {{AddonSidebar}}
 
-Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정할 수 있습니다. Firefox 를 위한 확장기능은 확장 기능 개발을 위한 크로스 브라우저 시스템인 WebExtension API를 이용하여 만들어졌습니다. 이 시스템은 Google Chrome, Opera 및 [W3C Draft Community Group](https://browserext.github.io/browserext/)에서 지원하는 [extension API](https://developer.chrome.com/docs/extensions) 와 대부분 호환됩니다. 그러므로 Google Chrome과 Opera를 대상으로 만들어진 확장기능은 [조금만 수정](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)하면 대부분 Firefox나 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)에서도 동작합니다. 또한 extension API는 [멀티프로세스 Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
+Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정할 수 있습니다. Firefox 를 위한 확장기능은 확장 기능 개발을 위한 크로스 브라우저 시스템인 WebExtension API를 이용하여 만들어졌습니다. 이 시스템은 Google Chrome, Opera 및 [W3C Draft Community Group](https://browserext.github.io/browserext/)에서 지원하는 [extension API](https://developer.chrome.com/docs/extensions) 와 대부분 호환됩니다. 그러므로 Google Chrome과 Opera를 대상으로 만들어진 확장기능은 [조금만 수정](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)하면 대부분 Firefox나 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)에서도 동작합니다. 또한 extension API는 [멀티프로세스 Firefox](/ko/docs/Mozilla/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
 
 질문 혹은 아이디어가 있거나, 기존 Extension을 WebExtensions API로 마이그레이션 할 때 도움이 필요하다면 [dev-addons 메일링 리스트](https://mail.mozilla.org/listinfo/dev-addons)나 [IRC](https://wiki.mozilla.org/IRC)의 [#webextensions](irc://irc.mozilla.org/webextensions)를 통해 알려주세요.
 
 ## 시작하기
 
-- [확장기능이란 무엇인가?](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
-- [첫번째 확장기능](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [두번째 확장기능](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [확장기능의 구조](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [확장기능이란 무엇인가?](/ko/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
+- [첫번째 확장기능](/ko/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
+- [두번째 확장기능](/ko/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
+- [확장기능의 구조](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Firefox 개발 로드맵](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)
-- [확장기능의 예시](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [확장기능의 예시](/ko/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [그 다음은?](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next)
 
 ## 개념
 
 - [JavaScript API 일람](/ko/docs/Mozilla/Add-ons/WebExtensions/API)
-- [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [주소패턴](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- [Content scripts](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [주소패턴](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - [파일과 상호작용하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
 - [여러 언어로 제공하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
 - [보안 유의사항들](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/)
 - [보안 정책](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [다른 프로그램과 상호작용하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 - [개발자 도구 API 사용하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [상호작용 명세 만들기](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
+- [상호작용 명세 만들기](/ko/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
 - [사용자와 상호작용하기](/ko/docs/Mozilla/애드온들/WebExtensions/User_actions)
 - [확장기능의 생애주기](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/)
 
@@ -82,8 +82,8 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 ## Firefox 생애주기
 
 - [사용자 경험](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [설치](/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [디버깅](/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging)
+- [설치](/ko/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [디버깅](/ko/docs/Mozilla/Add-ons/WebExtensions/Debugging)
 - [지속적인 테스트와 특성](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/)
 - [web-ext 와 작업하기](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - [web-ext 명령어 일람](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
@@ -100,7 +100,7 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 ### JavaScript APIs
 
 - [JavaScript API 일람](/ko/docs/Mozilla/Add-ons/WebExtensions/API)
-- [JavaScript API 브라우저 호환성](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [JavaScript API 브라우저 호환성](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 
 {{ ListSubpages ("/en-US/Add-ons/WebExtensions/API") }}
 

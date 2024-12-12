@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/calcMode
 
 ## Usage context
 
-| Categories         | Animation value attribute                                                        |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | discrete \| linear \| paced \| spline                                            |
-| Animatable         | No                                                                               |
+| Categories         | Animation value attribute                                                         |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | discrete \| linear \| paced \| spline                                             |
+| Animatable         | No                                                                                |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#CalcModeAttribute) |
 
 - discrete

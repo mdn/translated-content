@@ -12,7 +12,7 @@ JavaScript에서는 배열과같은 기능부터 JavaScript 위에 구축된 브
 
 ## 사전 지식
 
-이 장을 읽기 전에, 여러분은 {{Glossary("HTML")}} 과 {{Glossary("CSS")}} 를 어느 정도 알고 있어야 합니다. 그렇지 않다면 [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)와 [CSS 소개](/en-US/docs/Learn/CSS/First_steps)를 먼저 읽고 오시기 바랍니다.
+이 장을 읽기 전에, 여러분은 {{Glossary("HTML")}} 과 {{Glossary("CSS")}} 를 어느 정도 알고 있어야 합니다. 그렇지 않다면 [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)와 [CSS 소개](/ko/docs/Learn/CSS/First_steps)를 먼저 읽고 오시기 바랍니다.
 
 JavaScript 객체에 대해 자세히 알아보려면, 기본 문법에 대해 어느 정도 능숙해야 합니다. 이 장을 읽기 전에 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과 [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)를 먼저 읽어보시기를 바랍니다.
 

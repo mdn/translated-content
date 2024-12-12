@@ -19,7 +19,7 @@ JavaScript 는 [HTML](/ko/docs/Learn/HTML) 이나 [CSS](/ko/docs/Learn/CSS) 와 
 
 - [Web과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web)
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 소개](/en-US/docs/Learn/CSS/First_steps)
+- [CSS 소개](/ko/docs/Learn/CSS/First_steps)
 
 다른 프로그래밍 언어를 배웠던 경험이 있다면 도움이 될 수도 있습니다.
 

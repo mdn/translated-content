@@ -15,10 +15,10 @@ slug: Web/SVG/Attribute/viewBox
 
 ## Usage context
 
-| Categories         | None                                                                             |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | _See above_                                                                      |
-| Animatable         | Yes                                                                              |
+| Categories         | None                                                                              |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | _See above_                                                                       |
+| Animatable         | Yes                                                                               |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
 
 ## Example
