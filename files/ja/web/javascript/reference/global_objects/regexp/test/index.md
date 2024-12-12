@@ -2,7 +2,7 @@
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
 {{JSRef}}
@@ -22,7 +22,7 @@ test(str)
 ### 引数
 
 - `str`
-  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
+  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
 
 ### 返値
 
@@ -40,7 +40,7 @@ test(str)
 
 ### test() の使用
 
-"`hello`" が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
+`"hello"` が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
 
 ```js
 const str = "hello world!";
@@ -53,8 +53,8 @@ console.log(result); // true
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 
