@@ -1,11 +1,11 @@
 ---
-title: GlobalEventHandlers.onanimationiteration
+title: Element：animationiteration 事件
 slug: Web/API/Element/animationiteration_event
 ---
 
-{{APIRef("CSS3 Animations")}}
+{{APIRef}}
 
-当一个[CSS Animation](/zh-CN/docs/Web/CSS/CSS_animations)的迭代结束，另一个开始时，会触发[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件。此事件不会与[`animationend_event`](/zh-CN/docs/Web/API/Element/animationend_event)事件同时发生，因此对于动画迭代计数为 1 的动画不会发生。
+**`animationiteration`** 事件会在一次 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)迭代的结束和另一次迭代的开始时触发。此事件不会与 {{domxref("Element/animationend_event", "animationend")}} 事件同时发生，因此其不会发生在 `animation-iteration-count` 为 1 的动画上。
 
 ## 语法
 
