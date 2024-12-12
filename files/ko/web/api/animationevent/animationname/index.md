@@ -4,7 +4,6 @@ short-title: animationName
 slug: Web/API/AnimationEvent/animationName
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
-short-title: animationName
 ---
 
 {{APIRef("Web Animations")}}
