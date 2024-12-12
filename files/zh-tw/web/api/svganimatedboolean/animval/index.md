@@ -1,6 +1,8 @@
 ---
 title: SVGAnimatedBoolean：animVal 屬性
 slug: Web/API/SVGAnimatedBoolean/animVal
+l10n:
+  sourceCommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
 ---
 
 {{APIRef("SVG")}}
