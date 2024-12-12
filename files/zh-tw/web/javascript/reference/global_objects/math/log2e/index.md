@@ -1,6 +1,8 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+l10n:
+  sourceCommit: 2ec170b6264d51a15be498ac99b8a30b3dadec15
 ---
 
 {{JSRef}}
