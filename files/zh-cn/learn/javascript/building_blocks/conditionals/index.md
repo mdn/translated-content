@@ -100,7 +100,7 @@ if (shoppingDone === true) {
 这段代码显示的结果是变量 `shoppingDone` 总是返回 `false`，意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
 
 > [!NOTE]
-> 你可以[在 Github 上找到更加完整的示例](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)）
+> 你可以[在 Github 上找到更加完整的示例](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)。）
 
 ### else if
 
@@ -807,14 +807,14 @@ reset.addEventListener("click", () => {
 });
 
 solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
+  if (solution.value === "查看解答") {
     // 记住用户代码的状态，以便我们可以进行恢复
     userCode = textarea.value;
     textarea.value = solutionCode;
-    solution.value = "Hide solution";
+    solution.value = "隐藏解答";
   } else {
     textarea.value = userCode;
-    solution.value = "Show solution";
+    solution.value = "查看解答";
   }
   update();
 });
