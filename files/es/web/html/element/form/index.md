@@ -13,10 +13,10 @@ Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/CSS/%3Avalid) e [`
 
 ## Contexto de uso
 
-| Categorías de contenido | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content)                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido     | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                                  |
-| Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                |
+| Categorías de contenido | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content)                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido     | [Contenido dinámico](/en-US/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                                 |
+| Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                  |
 | Normative document      | [HTML5, section 4.10.3](https://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
 
 ## Atributos

@@ -13,7 +13,7 @@ La presentación del elemento puede variar considerablamente entre navegadores y
 
 | **[Value](#value)**             | Una {{domxref("DOMString")}} de siete caracteres que especifica un {{cssxref("&lt;color&gt;")}} en notación hexadecimal en minúsculas |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sucesos**                     | [`change`](/es/docs/Web/API/HTMLElement/change_event) e [`input`](/es/docs/Web/API/Element/input_event)                                     |
+| **Sucesos**                     | [`change`](/es/docs/Web/API/HTMLElement/change_event) e [`input`](/es/docs/Web/API/Element/input_event)                               |
 | **Atributos comunes admitidos** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) y [`list`](/es/docs/Web/HTML/Element/input#list)                       |
 | **Atributos IDL**               | `list` y `value`                                                                                                                      |
 | **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                    |

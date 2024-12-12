@@ -124,10 +124,10 @@ Ahora [recarga la extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_I
 
 Scripts de contenido y scripts de fondo no pueden acceder directamente al estado del otro. Sin embargo, pueden comunicarse mediante el uso de mensajes. Una terminal configura un escuchador de mensajes y la otra terminal puede mandarle un mensaje. La siguente tabla resume las APIs involucradas en cada parte:
 
-|                    | En el script de contenido                                                                   | En el script de fondo                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+|                    | En el script de contenido                                                                   | En el script de fondo                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Mandar un mensaje  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| Recibir un mensaje | [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)              | [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
+| Recibir un mensaje | [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
 
 Actualicemos nuestro ejemplo para ilustrar como mandar un mensaje desde una script de fondo.
 

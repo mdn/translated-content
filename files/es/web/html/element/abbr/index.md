@@ -13,11 +13,11 @@ El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una
 
 El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/docs/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable) es una guía para aprender a usar `<abbr>` y elementos relacionados.
 
-| Interfaz DOM                                                               | {{domxref("HTMLElement")}}                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                             |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto), contenido palpable |
-| Conteido permitido                                                         | [Contenido de estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                                                            |
-| Elementos padre permitidos                                                 | Cualquier elemento que acepte [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                                 |
+| Conteido permitido                                              | [Contenido de estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                                                 |
+| Elementos padre permitidos                                      | Cualquier elemento que acepte [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                      |
 
 ## Atributos
 

@@ -1276,9 +1276,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                |
-| ------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                             |
+| Live example                                                                                  |
+| --------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                               |
 | [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
 
 ### Handling the widget's value
@@ -1635,9 +1635,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                |
-| ------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                             |
+| Live example                                                                                  |
+| --------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                               |
 | [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
 
 But wait a second, are we really done?
@@ -1954,9 +1954,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                      |
-| ------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                                   |
+| Live example                                                                                        |
+| --------------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                                     |
 | [Check out the final source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
 
 ## Conclusion

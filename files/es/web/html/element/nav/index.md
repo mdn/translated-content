@@ -8,12 +8,12 @@ slug: Web/HTML/Element/nav
 El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
 
 | [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [sectioning content](/es/docs/Web/HTML/Content_categories#sectioning_content), palpable content. |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                   | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                              |
-| Omisión de etiquetas                                                  | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                          |
-| Elementos padres permitidos                                           | Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                |
-| Roles ARIA permitidos                                                 | Ninguno                                                                                                                                                     |
-| Interfaz DOM                                                          | {{domxref("HTMLElement")}}                                                                                                                                  |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                        | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                                  |
+| Omisión de etiquetas                                       | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                  |
+| Elementos padres permitidos                                | Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                    |
+| Roles ARIA permitidos                                      | Ninguno                                                                                                                                                             |
+| Interfaz DOM                                               | {{domxref("HTMLElement")}}                                                                                                                                          |
 
 ## Atributos
 

@@ -11,10 +11,10 @@ El atributo `transform` exhibe una lista de definiciones de transformación que 
 
 ## Contexto de uso
 
-| Categorias          | None                                                                             |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Valor               | **`<transform-list>`**                                                           |
-| Animable            | Yes                                                                              |
+| Categorias          | None                                                                              |
+| ------------------- | --------------------------------------------------------------------------------- |
+| Valor               | **`<transform-list>`**                                                            |
+| Animable            | Yes                                                                               |
 | Documento normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
 
 ### Tipos de definiciones de transformación

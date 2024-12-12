@@ -18,11 +18,11 @@ El _Elemento_ _HTML Footer_ (`<footer>`) representa un pie de página para el co
 
 [![Editar sección](/skins/common/icons/icon-trans.gif)](/es/HTML/Elemento/footer#)
 
-| Contenido Permitido            | [Contenido de flujo](/en-US/HTML/Content_categories#flow_content), pero sin descendientes \<footer> o [`<header>`](/es/docs/HTML/Element/header).                                                                                                                                                |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de Etiqueta            | Ninguna, tanto la etiqueta de inicio como la de cierre son obligatorias.                                                                                                                                                                                                                 |
+| Contenido Permitido            | [Contenido de flujo](/en-US/HTML/Content_categories#flow_content), pero sin descendientes \<footer> o [`<header>`](/es/docs/HTML/Element/header).                                                                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de Etiqueta            | Ninguna, tanto la etiqueta de inicio como la de cierre son obligatorias.                                                                                                                                                                                                                              |
 | Elementos ancestros permitidos | Cualquier elemento que acepte [contenido de flujo](/en-US/HTML/Content_categories#flow_content). Note que un elemento `<footer>` no debe ser un descendiente de los elementos [`<address>`](/es/docs/HTML/Element/address), [`<header>`](/es/docs/HTML/Element/header) o de otro elemento `<footer>`. |
-| Documento normativo            | [HTML5, sección 4.4.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                     |
+| Documento normativo            | [HTML5, sección 4.4.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                                 |
 
 ### Atributos
 

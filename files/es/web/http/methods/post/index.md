@@ -23,12 +23,12 @@ Cuando la solicitud `POST` es enviada por otro método distinto a un formulario 
 - Proveer un conjunto de datos, como resultado del envío de un formulario, a un proceso data-handling.
 - Extender una base de datos a través de una operación de concatenación.
 
-| Pedir como cuerpo                                        | Sí                                |
-| -------------------------------------------------------- | --------------------------------- |
-| Respuesta válida como cuerpo                             | Sí                                |
-| {{Glossary("Seguro")}}                                   | No                                |
-| {{Glossary("Idempotente")}}                              | No                                |
-| {{Glossary("Cacheable")}}                                | Sólo si incluye nueva información |
+| Pedir como cuerpo                               | Sí                                |
+| ----------------------------------------------- | --------------------------------- |
+| Respuesta válida como cuerpo                    | Sí                                |
+| {{Glossary("Seguro")}}                          | No                                |
+| {{Glossary("Idempotente")}}                     | No                                |
+| {{Glossary("Cacheable")}}                       | Sólo si incluye nueva información |
 | Permitido en [HTML forms](/es/docs/Learn/Forms) | Sí                                |
 
 ## Sintaxis

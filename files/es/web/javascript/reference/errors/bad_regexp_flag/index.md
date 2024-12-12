@@ -1,5 +1,5 @@
 ---
-title: "SyntaxError: indicador de expresión regular no válido \"x\""
+title: 'SyntaxError: indicador de expresión regular no válido "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 

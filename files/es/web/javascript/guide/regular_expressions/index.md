@@ -57,12 +57,12 @@ Las siguientes páginas proporcionan listas de los diferentes caracteres especia
 
 Si deseas ver todos los caracteres especiales que se pueden usar en expresiones regulares en una sola tabla, consulta lo siguiente:
 
-| Caracteres/construcciones                                                                                                    | Artículo correspondiente                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `\`, `.`, `\cX`, `\d`, `\D`, `\f`, `\n`, `\r`, `\s`, `\S`, `\t`, `\v`, `\w`, `\W`, `\0`, `\xhh`, `\uhhhh`, `\uhhhhh`, `[\b]` | [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)                  |
-| `^`, `$`, `x(?=y)`, `x(?!y)`, `(?<=y)x`, `(?<!y)x`, `\b`, `\B`                                                               | [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)                                   |
-| `(x)`, `(?:x)`, `(?<Name>x)`, `x\|y`, `[xyz]`, `[^xyz]`, `\Number`                                                           | [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)                       |
-| `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)                             |
+| Caracteres/construcciones                                                                                                    | Artículo correspondiente                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `\`, `.`, `\cX`, `\d`, `\D`, `\f`, `\n`, `\r`, `\s`, `\S`, `\t`, `\v`, `\w`, `\W`, `\0`, `\xhh`, `\uhhhh`, `\uhhhhh`, `[\b]` | [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)                            |
+| `^`, `$`, `x(?=y)`, `x(?!y)`, `(?<=y)x`, `(?<!y)x`, `\b`, `\B`                                                               | [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)                                             |
+| `(x)`, `(?:x)`, `(?<Name>x)`, `x\|y`, `[xyz]`, `[^xyz]`, `\Number`                                                           | [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)                         |
+| `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)                                       |
 | `\p{UnicodeProperty}`, `\P{UnicodeProperty}`                                                                                 | [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) |
 
 > **Nota:** [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).

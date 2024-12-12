@@ -11,12 +11,12 @@ El atributo `stop-color` indica que color usar en el stop del gradiente. La keyw
 
 ## Usage context
 
-| Categorías          | Presentation attribute                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Categorías          | Presentation attribute                                                                                                  |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Valor               | currentColor \| [\<color>](/en-US/SVG/Content_type#color) \| [\<icccolor>](/en-US/SVG/Content_type#icccolor) \| inherit |
-| Valor inicial       | negro                                                                                                             |
-| Animatable          | Sí                                                                                                                |
-| Documento normativo | [SVG 1.1 (2.ª edición)](https://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                               |
+| Valor inicial       | negro                                                                                                                   |
+| Animatable          | Sí                                                                                                                      |
+| Documento normativo | [SVG 1.1 (2.ª edición)](https://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                                    |
 
 ## Ejemplos
 
