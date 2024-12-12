@@ -289,11 +289,11 @@ CSS のプロパティと値は大文字と小文字を区別しません。そ�
 
 例として、CSS 内で単純な計算を行うことができる `calc()` 関数が挙げられます。
 
-```html
+```html live-sample___the_calc_function
 <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
 ```
 
-```css
+```css live-sample___the_calc_function
 .outer {
   border: 5px solid black;
 }
@@ -316,11 +316,11 @@ CSS のプロパティと値は大文字と小文字を区別しません。そ�
 
 他の例としては、 {{cssxref("transform")}} のさまざまな値、たとえば `rotate()` などがあります。
 
-```html
+```html live-sample___transform_functions
 <div class="box"></div>
 ```
 
-```css
+```css live-sample___transform_functions
 .box {
   margin: 30px;
   width: 100px;
