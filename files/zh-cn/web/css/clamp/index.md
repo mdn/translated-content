@@ -116,4 +116,4 @@ p {
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)

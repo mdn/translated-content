@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/filter
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                        |
-| -------- | ------------------------------------------------------------------------------- |
-| 值       | [\<funciri>](/zh-CN/docs/SVG/Content_type#funciri) \| **none** \| inherit            |
-| 可变性   | Yes                                                                             |
+| 类别     | 外观属性                                                                         |
+| -------- | -------------------------------------------------------------------------------- |
+| 值       | [\<funciri>](/zh-CN/docs/SVG/Content_type#funciri) \| **none** \| inherit        |
+| 可变性   | Yes                                                                              |
 | 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#FilterProperty) |
 
 - [\<funciri>](/zh-CN/docs/SVG/Content_type#funciri)

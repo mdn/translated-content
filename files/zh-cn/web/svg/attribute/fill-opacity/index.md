@@ -9,11 +9,11 @@ slug: Web/SVG/Attribute/fill-opacity
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                            |
-| -------- | ----------------------------------------------------------------------------------- |
-| 值       | [\<opacity-value>](/zh-CN/docs/SVG/Content_type#opacity_value) \| inherit                |
-| 初始值   | 1                                                                                   |
-| 可变性   | Yes                                                                                 |
+| 类别     | 外观属性                                                                             |
+| -------- | ------------------------------------------------------------------------------------ |
+| 值       | [\<opacity-value>](/zh-CN/docs/SVG/Content_type#opacity_value) \| inherit            |
+| 初始值   | 1                                                                                    |
+| 可变性   | Yes                                                                                  |
 | 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
 
 ## 示例

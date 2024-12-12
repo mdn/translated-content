@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/font-family
 | ----------------- | ------------------------------------------------------------------------------------------- |
 | 值                | [[\<family-name> \| \<generic-family>],]\* [\<family-name> \| \<generic-family>] \| inherit |
 | 可动画 Animatable | Yes                                                                                         |
-| 规范文档          | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontFamilyProperty)            |
+| 规范文档          | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontFamilyProperty)           |
 
 ## 例子
 

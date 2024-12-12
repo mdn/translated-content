@@ -9,10 +9,10 @@ slug: Web/SVG/Attribute/kernelMatrix
 
 ## Usage context
 
-| Categories | None                                                                             |
-| ---------- | -------------------------------------------------------------------------------- |
+| Categories | None                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------- |
 | Value      | [T<.2Fvar>s">\<list of number>](/zh-CN/docs/SVG/Content_type#list-of-<var>t<.2fvar>s) |
-| Animatable | Yes                                                                              |
+| Animatable | Yes                                                                                   |
 
 ## Example
 

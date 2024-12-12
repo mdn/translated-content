@@ -28,10 +28,10 @@ createObjectStore(name, options)
 
   - : 可选的对象，它的属性是此方法的可选参数，其中包括以下的属性：
 
-    | Attribute       | Description                                                                                                                                                                                                                                                                                                                          |
-    | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | Attribute       | Description                                                                                                                                                                                                                                                                                              |
+    | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | `keyPath`       | [key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) 被用在新的 object store 上。如果为空或未指定，object store 创建时将没有 key path，而是使用 [out-of-line keys](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_outofline_key) 。你也能传一个数组作为 `keyPath` 。 |
-    | `autoIncrement` | 如果为 `true`, object store 有一个 [key generator](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator). 默认为 `false`。                                                                                                                                                                           |
+    | `autoIncrement` | 如果为 `true`, object store 有一个 [key generator](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator). 默认为 `false`。                                                                                                                                                             |
 
     未知参数将被忽略。
 

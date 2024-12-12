@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/edgeMode
 
 ## 使用说明
 
-| 类别     | 无                                                                                                        |
-| -------- | --------------------------------------------------------------------------------------------------------- |
-| 值       | **duplicate** \| wrap \| none                                                                             |
-| 可变性   | Yes                                                                                                       |
+| 类别     | 无                                                                                                         |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| 值       | **duplicate** \| wrap \| none                                                                              |
+| 可变性   | Yes                                                                                                        |
 | 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementEdgeModeAttribute) |
 
 - duplicate

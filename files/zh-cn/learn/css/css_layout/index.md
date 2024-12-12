@@ -12,7 +12,7 @@ slug: Learn/CSS/CSS_layout
 在开始前，你应该已经具备：
 
 1. 对 HTML 的基础了解，在[Introduction to HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)部分讨论过的。
-2. 一定的 CSS 基础，在[Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)部分讨论过的。
+2. 一定的 CSS 基础，在[Introduction to CSS](/zh-CN/docs/Learn/CSS/First_steps)部分讨论过的。
 3. 了解如何[样式化盒子模型](/zh-CN/docs/Learn/CSS/Building_blocks).
 
 > [!NOTE]

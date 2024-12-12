@@ -9,10 +9,10 @@ slug: Web/SVG/Attribute/dur
 
 ## 使用说明
 
-| 类别     | 动画定时属性                                                                |
-| -------- | --------------------------------------------------------------------------- |
-| 值       | [\<clock-value>](/zh-CN/docs/SVG/Content_type#clock-value) \| **indefinite**     |
-| 可变性   | No                                                                          |
+| 类别     | 动画定时属性                                                                 |
+| -------- | ---------------------------------------------------------------------------- |
+| 值       | [\<clock-value>](/zh-CN/docs/SVG/Content_type#clock-value) \| **indefinite** |
+| 可变性   | No                                                                           |
 | 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#DurAttribute) |
 
 - [\<clock-value>](/zh-CN/docs/SVG/Content_type#clock-value)

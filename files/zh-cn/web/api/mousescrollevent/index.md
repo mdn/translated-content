@@ -54,9 +54,9 @@ void initMouseScrollEvent(
 
 ## 滚轮相关事件对比
 
-| 事件类型                                                             | 事件对象                                             | 是否标准                                                                  | 兼容性              |
-| -------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------- | ------------------- |
-| [mousewheel](/zh-CN/docs/Web/API/Element/mousewheel_event)         | [MouseWheelEvent](/zh-CN/docs/Web/API/WheelEvent)   | 非标准                                                                    | 只有 Firefox 不支持 |
+| 事件类型                                                           | 事件对象                                                 | 是否标准                                                                  | 兼容性              |
+| ------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------- |
+| [mousewheel](/zh-CN/docs/Web/API/Element/mousewheel_event)         | [MouseWheelEvent](/zh-CN/docs/Web/API/WheelEvent)        | 非标准                                                                    | 只有 Firefox 不支持 |
 | [DOMMouseScroll](/zh-CN/docs/Web/API/Element/DOMMouseScroll_event) | [MouseScrollEvent](/zh-CN/docs/Web/API/MouseScrollEvent) | 非标准                                                                    | 只有 Firefox 支持   |
 | [wheel](/zh-CN/docs/Web/API/Element/wheel_event)                   | [WheelEvent](/zh-CN/docs/Web/API/WheelEvent)             | [DOM Level 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel) | Firefox 17+ ie9+    |
 

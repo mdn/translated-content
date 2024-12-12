@@ -11,9 +11,9 @@ slug: Web/SVG/Attribute/color
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                     |
-| -------- | ---------------------------------------------------------------------------- |
-| 值       | [\<color>](/zh-CN/docs/SVG/Content_type#color) \| inherit                         |
+| 类别     | 外观属性                                                                      |
+| -------- | ----------------------------------------------------------------------------- |
+| 值       | [\<color>](/zh-CN/docs/SVG/Content_type#color) \| inherit                     |
 | 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/color.html#ColorProperty) |
 
 ## 示例

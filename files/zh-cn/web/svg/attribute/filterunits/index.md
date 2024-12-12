@@ -11,10 +11,10 @@ filterUnits 属性定义 {{ SVGAttr("x") }}、{{ SVGAttr("y") }}、{{ SVGAttr("w
 
 ## Usage context
 
-| Categories         | _None_                                                                                             |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                        |
-| Animatable         | Yes                                                                                                |
+| Categories         | _None_                                                                                              |
+| ------------------ | --------------------------------------------------------------------------------------------------- |
+| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                         |
+| Animatable         | Yes                                                                                                 |
 | Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#FilterElementFilterUnitsAttribute) |
 
 - userSpaceOnUse

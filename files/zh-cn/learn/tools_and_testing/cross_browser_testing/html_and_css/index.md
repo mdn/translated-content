@@ -47,7 +47,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
-在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
+在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
