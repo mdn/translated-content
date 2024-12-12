@@ -1,5 +1,6 @@
 ---
 title: "console: log() static method"
+short-title: log()
 slug: Web/API/console/log_static
 l10n:
   sourceCommit: 4d184a8203ba39cb283e153882d343125a3e56d9
