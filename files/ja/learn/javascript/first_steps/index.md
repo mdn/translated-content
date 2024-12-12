@@ -15,7 +15,7 @@ l10n:
 >
 > 目標に向かって取り組むために必要なすべての重要な情報を含むコースをまとめました。
 >
-> [**始めましょう**](https://developer.mozilla.org/ja/curriculum/)
+> [**始めましょう**](/ja/curriculum/)
 
 ## 前提条件
 

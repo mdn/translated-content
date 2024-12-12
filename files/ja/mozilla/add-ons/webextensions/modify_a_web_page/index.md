@@ -126,10 +126,10 @@ modify-page/
 
 コンテンツスクリプトとバックグラウンドスクリプトはお互いの状態に直接アクセスすることはできません。しかし、メッセージを送ることによる対話をすることができます。一方のエンドはメッセージリスナーを設定し、もう一方のエンドはメッセージを送信します。 次の表は、各側面に関連する API をまとめたものです。
 
-|                | コンテンツスクリプト内                                                                   | バックグラウンドスクリプト内                                                   |
-| -------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| メッセージ受信 | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
+|                | コンテンツスクリプト内                                                                      | バックグラウンドスクリプト内                                                                |
+| -------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>)    | [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
+| メッセージ受信 | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
 
 > [!NOTE]
 > このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
