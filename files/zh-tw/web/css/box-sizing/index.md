@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/box-sizing.html")}}
 
-在[CSS 盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)中，預設情況下，你為元素指定的 `width` 和 `height` 只應用於元素的內容區域。如果元素有邊框或內邊距，這些會加到 `width` 和 `height` 上，從而得出畫面上呈現的盒子大小。這意味著當你設定 `width` 和 `height` 時，必須調整你給的值以考慮邊框或內邊距。例如，如果你有四個設為 `width: 25%;` 的盒子，若其中任何一個有左右內邊距或左右邊框，預設情況下它們將無法在父容器的限制內排成一行。
+在 [CSS 盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)中，預設情況下，你為元素指定的 `width` 和 `height` 只應用於元素的內容區域。如果元素有邊框或內邊距，這些會加到 `width` 和 `height` 上，從而得出畫面上呈現的盒子大小。這意味著當你設定 `width` 和 `height` 時，必須調整你給的值以考慮邊框或內邊距。例如，如果你有四個設為 `width: 25%;` 的盒子，若其中任何一個有左右內邊距或左右邊框，預設情況下它們將無法在父容器的限制內排成一行。
 
 `box-sizing` 屬性可用來調整此行為：
 
