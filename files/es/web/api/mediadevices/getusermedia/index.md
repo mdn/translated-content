@@ -211,7 +211,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## Permisos
 
-Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
+Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/es/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
 
 ```js
 "permissions": {
@@ -224,7 +224,7 @@ Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS a
 }
 ```
 
-Ver [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/en-US/docs/Web/Apps/Developing/App_permissions#video-capture) para más información.
+Ver [permission: audio-capture](/es/docs/Web/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/es/docs/Web/Apps/Developing/App_permissions#video-capture) para más información.
 
 ## Especificaciones
 

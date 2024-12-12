@@ -21,7 +21,7 @@ Antes de comenzar este módulo, no necesitas ningún conocimiento previo de Java
 
 - [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web) (que incluye una [introducción básica a JavaScript](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics).
 - [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
-- [Introducción a CSS](/en-US/docs/Learn/CSS/First_steps).
+- [Introducción a CSS](/es/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
 > Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).

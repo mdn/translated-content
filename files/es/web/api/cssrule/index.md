@@ -25,7 +25,7 @@ Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades
   - : Devuelve la representación en forma de texto, de la regla. Ejem.: "h1,h2 { font-size: 16pt }".
 - [parentRule](/es/docs/DOM/cssRule.parentRule)
   - : Devuelve la regla contenedora, si existe. Ejem.: una regla de estilo dentro de un bloque @media.
-- [parentStyleSheet](/Es/docs/DOM/CssRule.parentStyleSheet)
+- [parentStyleSheet](/es/docs/DOM/CssRule.parentStyleSheet)
   - : Devuelve el objeto [stylesheet](/es/docs/Web/API/StyleSheet) del que esta regla es parte.
 - [type](/es/docs/DOM/cssRule.type)
   - : El tipo de regla. ejem.: `CSSRule.CHARSET_RULE` o `CSSRule.IMPORT_RULE`.
@@ -34,7 +34,7 @@ Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades
 
 - [selectorText](/es/docs/Web/API/CSSStyleRule/selectorText)
   - : Recoje/Establece la representación en forma de texto, del selector de la regle. Ejem.: "h1,h2".
-- [style](/Es/docs/DOM/CssRule.style)
+- [style](/es/docs/DOM/CssRule.style)
   - : Devuelve el objeto [CSSStyleDeclaration](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration) para el bloque [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) de la regla.
 
 ### CSSMediaRule

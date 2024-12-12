@@ -12,8 +12,8 @@ Llegados a este punto, hemos examinado los fundamentos básicos de CSS: cómo da
 Antes de comenzar este módulo, ya deberías:
 
 1. Estar familiarizado con HTML, como se expone en el módulo [Introduction to HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
-2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
-3. Entender como diseñar cajas [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
+2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/es/docs/Learn/CSS/First_steps).
+3. Entender como diseñar cajas [style boxes](/es/docs/Learn/CSS/Building_blocks).
 
 > [!NOTE]
 > Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).

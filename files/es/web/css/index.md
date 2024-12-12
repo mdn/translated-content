@@ -27,14 +27,14 @@ Desde CSS3, el alcance de las especificaciones se incrementó de forma significa
 
 Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módulos que enseñan CSS desde cero — no se requieren conocimientos previos.
 
-- [Primeros pasos en CSS](/en-US/docs/Learn/CSS/First_steps)
+- [Primeros pasos en CSS](/es/docs/Learn/CSS/First_steps)
   - : CSS es utilizado para diseñar y dar estilo a las páginas web, por ejemplo, alterando la fuente, color, tamaño y espaciado del contenido, dividirlo en múltiples columnas o agregar animaciones y otras características decorativas. Este módulo proporciona un suave comienzo hacia el dominio de CSS con los conceptos básicos acerca de su funcionamiento, la sintaxis y la manera en que puedes comenzar a utilizarlo para agregar estilos al HTML.
 
 <!---->
 
 - [Bloques de construcción CSS.](/es/docs/Learn/CSS/Building_blocks)
 
-  - : Este módulo continúa a partir de donde dejó el módulo de [primeros pasos de CSS](/en-US/docs/Learn/CSS/First_steps). Ahora que has adquirido familiaridad con el lenguaje y su sintaxis, y has ganado cierta experiencia básica con su uso, es hora de profundizar un poco más. Este módulo analiza la cascada y la herencia, todos los tipos de selectores que tenemos disponibles, unidades, tamaño, estilo de fondos y bordes, depuración (_debugging_) y mucho más.
+  - : Este módulo continúa a partir de donde dejó el módulo de [primeros pasos de CSS](/es/docs/Learn/CSS/First_steps). Ahora que has adquirido familiaridad con el lenguaje y su sintaxis, y has ganado cierta experiencia básica con su uso, es hora de profundizar un poco más. Este módulo analiza la cascada y la herencia, todos los tipos de selectores que tenemos disponibles, unidades, tamaño, estilo de fondos y bordes, depuración (_debugging_) y mucho más.
 
     El propósito de este módulo es proporcionarte un set de herramientas para escribir CSS competente y ayudarte a entender todas la teoría esencial antes de avanzar hacia cuestiones más específicas como [estilo de textos](/es/docs/Learn/CSS/Styling_text) y [diseño CSS](/es/docs/Learn/CSS/CSS_layout).
 

@@ -9,7 +9,7 @@ Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS 
 
 ## Requisitos previos
 
-Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/en-US/docs/Learn/CSS/First_steps).
+Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
 > Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).

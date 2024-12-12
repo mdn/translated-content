@@ -35,7 +35,7 @@ Los siguientes enlaces apuntan a soluciones comunes a los problemas cotidianos q
 - [Cómo controlar el contenido que desborda](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#overflow)
 - [Cómo controlar la parte de una caja CSS en la que se dibuja el fondo](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#background_clip)
 - [Cómo defino un elemento inline, block o inline-block?](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#types_of_css_boxes)
-- [Cómo crear cajas elegantes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (ver también el módulo [Cajas de estilo](/en-US/docs/Learn/CSS/Building_blocks), en general).
+- [Cómo crear cajas elegantes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (ver también el módulo [Cajas de estilo](/es/docs/Learn/CSS/Building_blocks), en general).
 - [Cómo usar `background-clip` para controlar qué parte del cuadro cubre la imagen de fondo](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#background_clip).
 - [Cómo cambiar completamente el modelo de la caja usando `box-sizing`](/es/docs/Learn/CSS/Styling_boxes/Box_model_recap#changing_the_box_model_completely)
 - [Cómo controlar los fondos](/es/docs/Learn/CSS/Styling_boxes/Backgrounds)

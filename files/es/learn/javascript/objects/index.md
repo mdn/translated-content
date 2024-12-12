@@ -15,7 +15,7 @@ Hemos puesto un curso que incluye toda la información esencial que necesitas pa
 
 ## Prerrequisitos
 
-Antes de empezar este módulo deberías estar familiarizado con {{Glossary("HTML")}} and {{Glossary("CSS")}}. Te aconsejamos trabajar los módulos [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [Introducción a CSS](/en-US/docs/Learn/CSS/First_steps) antes de empezar con JavaScript.
+Antes de empezar este módulo deberías estar familiarizado con {{Glossary("HTML")}} and {{Glossary("CSS")}}. Te aconsejamos trabajar los módulos [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [Introducción a CSS](/es/docs/Learn/CSS/First_steps) antes de empezar con JavaScript.
 
 También deberías conocer lo básico de Javascript antes de entrar en detalle en los objetos de Javascript. Antes de empezar este módulo, revisa [Primeros pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Elementos básicos de JavaScript](/es/docs/Learn/JavaScript/Building_blocks).
 

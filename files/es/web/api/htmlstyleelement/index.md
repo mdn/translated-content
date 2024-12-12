@@ -9,7 +9,7 @@ slug: Web/API/HTMLStyleElement
 
 Vea las siguientes páginas para información sobre alguno de los objetos utilizados para manipular propiedades CSS especificadas utilizando el DOM:
 
-- [Objeto DOM element.style](/Es/docs/DOM/Element.style)
+- [Objeto DOM element.style](/es/docs/DOM/Element.style)
 - [Objeto DOM stylesheet](/es/docs/Web/API/StyleSheet)
 - [Objeto DOM cssRule](/es/docs/Web/API/CSSRule)
 - [Lista de Propiedades DOM CSS](/es/docs/Web/CSS)

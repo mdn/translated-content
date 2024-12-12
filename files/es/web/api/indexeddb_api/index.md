@@ -47,7 +47,7 @@ No existe un límite de tamaño para un elemento simple de la base de datos. Sin
 
 ## Ejemplo
 
-Un claro ejemplo para lo que IndexedDB puede ser utilizado en la web, es el ejemplo de Marco Castelluccio, ganador del DevDerby IndexedDB Mozilla. La demostración ganadora fue [eLibri](/en-US/docs/Web/Demos_of_open_web_technologies), una biblioteca y una aplicación de lectura de libros electrónicos.
+Un claro ejemplo para lo que IndexedDB puede ser utilizado en la web, es el ejemplo de Marco Castelluccio, ganador del DevDerby IndexedDB Mozilla. La demostración ganadora fue [eLibri](/es/docs/Web/Demos_of_open_web_technologies), una biblioteca y una aplicación de lectura de libros electrónicos.
 
 ## Ver también
 

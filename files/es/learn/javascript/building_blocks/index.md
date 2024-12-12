@@ -15,7 +15,7 @@ Hemos reunido un curso que incluye toda la información esencial que necesitas p
 
 ## Pre-requisitos
 
-Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/en-US/docs/Learn/CSS/First_steps), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
+Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/es/docs/Learn/CSS/First_steps), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
 
 > [!NOTE]
 > Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).

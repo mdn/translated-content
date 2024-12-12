@@ -21,7 +21,7 @@ Se puede decir que JavaScript es más difícil de aprender que tecnologías rela
 
 - [Comenzando con la Web](/es/docs/Learn/Getting_started_with_the_web)
 - [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML)
-- [Introducción a CSS](/en-US/docs/Learn/CSS/First_steps)
+- [Introducción a CSS](/es/docs/Learn/CSS/First_steps)
 
 Tener experiencia previa con otros lenguajes de programación también puede ayudar.
 
