@@ -619,7 +619,7 @@ guessField.focus();
 var guessField = document.querySelector(".guessField");
 ```
 
-我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數 — 一個 [CSS 選擇器](/en-US/docs/Learn/CSS/Building_blocks/Selectors)， 會回傳你想要的元素參照。
+我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數 — 一個 [CSS 選擇器](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)， 會回傳你想要的元素參照。
 
 因為現在 `guessField` 中存著一個指向 {{htmlelement("input")}} 元素的參照，它現在可以存取這個元素的屬性（基本上就是存在物件中的變數，其中有一些可能會是常數）和方法（基本上就是存在物件中的函式）了。文字輸入欄的其中一個方法便是 `focus()`，我們便可以透過呼叫這個方法來給予其焦點：
 

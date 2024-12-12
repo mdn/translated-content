@@ -5,7 +5,7 @@ slug: Web/API/MutationObserver
 
 {{APIRef("DOM")}}
 
-`MutationObserver` 提供開發人員一個方法，來對 [DOM](/en-US/docs/Web/API/Document_Object_Model) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
+`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
 
 ## 建構式
 

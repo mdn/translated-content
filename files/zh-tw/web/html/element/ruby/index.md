@@ -13,7 +13,7 @@ slug: Web/HTML/Element/ruby
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 允許內容                                            | [段落型內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                                                           |
 | 標籤省略                                            | 不允許，開始和結束標籤都是必須的。                                                                                                               |
-| 允許父元素                                          | Any element that accepts [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                                |
+| 允許父元素                                          | Any element that accepts [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                            |
 | DOM 介面                                            | {{domxref("HTMLElement")}}                                                                                                                       |
 
 ## 屬性

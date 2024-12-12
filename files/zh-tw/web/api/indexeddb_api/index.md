@@ -7,7 +7,7 @@ slug: Web/API/IndexedDB_API
 
 IndexedDB 為用戶端的儲存用 API，可用於大量的結構化資料，並透過索引功能而高效率搜尋資料。[DOM Storage](/zh-TW/docs/Web/API/Web_Storage_API) 適合儲存較少量的資料；IndexedDB 則適合大量結構化資料的儲存方案。
 
-本篇文章僅為 API 物件的入門技術說明。若需進一步了解，則請參閱 [IndexedDB 基本概念](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology)。更多細節則可參閱[使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
+本篇文章僅為 API 物件的入門技術說明。若需進一步了解，則請參閱 [IndexedDB 基本概念](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。更多細節則可參閱[使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
 
 IndexedDB 提供不同 APIs 用於同步與非同步的存取作業。同步 API 僅能用於[Web Workers](/zh-TW/docs/Web/API/Worker) 之中，但尚未有瀏覽器支援同步 API。非同步 API 則用於 Web Workers 內外均可，但 Firefox 目前尚未建構。
 
@@ -51,7 +51,7 @@ Web 上的 IndexedDB 使用範例，是由 Marco Castelluccio 所提供。Marco 
 
 ## 另可參閱
 
-- [IndexedDB 基本概念](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology)
+- [IndexedDB 基本概念](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)
 - [使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - [在 IndexedDB 中儲存影像與檔案](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 - [Indexed Database API 規格](https://www.w3.org/TR/IndexedDB/)

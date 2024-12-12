@@ -11,11 +11,11 @@ slug: Web/HTML/Element/time
 > 此 element 不適合用在「不確定正確時間」和「時間為西元前（日期的計算會出現錯誤）」的情況。
 
 | [內容分類](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許之內容                                          | [Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content).                                                                                         |
-| 省略標籤                                            | 不可。起始標籤和結束標籤是強制必要的                                                                                                                              |
-| 可接受的副 elements                                 | 任何接受 phrasing content 的 element。                                                                                                                            |
-| DOM interface                                       | {{domxref("HTMLTimeElement")}}                                                                                                                                    |
+| 省略標籤                                            | 不可。起始標籤和結束標籤是強制必要的                                                                                                                                  |
+| 可接受的副 elements                                 | 任何接受 phrasing content 的 element。                                                                                                                                |
+| DOM interface                                       | {{domxref("HTMLTimeElement")}}                                                                                                                                        |
 
 ## Attributes
 

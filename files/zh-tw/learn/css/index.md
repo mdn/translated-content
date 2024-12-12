@@ -11,7 +11,7 @@ slug: Learn/CSS
 
 我們整理了一門課程，包含了你實現目標需要的所有基礎知識。
 
-[開始](https://developer.mozilla.org/zh-TW/curriculum/)
+[開始](/zh-TW/curriculum/)
 
 ## 先備知識
 

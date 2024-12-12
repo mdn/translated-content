@@ -9,7 +9,7 @@ IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不�
 
 ## 關於本文
 
-本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology)。
+本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。
 
 ## 基本操作步驟
 

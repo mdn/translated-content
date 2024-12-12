@@ -27,7 +27,7 @@ slug: Learn/Tools_and_testing/GitHub
 >
 > 我們準備了一系列的課程當中包括核心的資訊，讓你往你的目標(成為一位前端網頁程式開發者)邁進。
 >
-> [**開始學習**](https://developer.mozilla.org/zh-TW/curriculum/)
+> [**開始學習**](/zh-TW/curriculum/)
 
 ## 事前準備
 

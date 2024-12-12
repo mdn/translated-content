@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Asynchronous
 >
 > 我們已為你準備一門實現你目標所需要具備的所有基礎知識課程
 >
-> [**立即開始**](https://developer.mozilla.org/zh-TW/curriculum/)
+> [**立即開始**](/zh-TW/curriculum/)
 
 ## 事前準備
 
