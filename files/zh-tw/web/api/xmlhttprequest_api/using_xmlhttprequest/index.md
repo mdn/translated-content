@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
-要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/docs/Web/HTTP/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
+要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
 
 ```js
 function reqListener() {
@@ -46,7 +46,7 @@ oReq.send();
 若透過 `XMLHttpRequest` 來取得一個遠端的 HTML 網頁內容，則 `responseText` 屬性（{{Glossary("property/JavaScript", "property")}}）會是「一串（soup）」包含所有 HTML 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 HTML 字串的方式：
 
 1. 利用 `XMLHttpRequest.responseXML` 屬性。
-2. 將內容透過 `fragment.body.innerHTML` 注入[文件片段（document fragment）](/docs/Web/API/DocumentFragment)之 `body` 中，並遍歷（traverse）文件片段的 DOM。
+2. 將內容透過 `fragment.body.innerHTML` 注入[文件片段（document fragment）](/zh-TW/docs/Web/API/DocumentFragment)之 `body` 中，並遍歷（traverse）文件片段的 DOM。
 3. 如果事先知道 HTML 之 `responseText` 內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 HTML 程式碼稍有變動，此方式就可能會失敗。
 
 ## 處理二進位資料
@@ -842,7 +842,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨網域 XMLHttpRequest
 
-現代瀏覽器支援跨網域（cross-site）請求並實作了網路應用程式工作小組（Web Applications (WebApps) Working Group）提出的[跨網域請求存取控制](/docs/Web/HTTP/Access_control_CORS)標準。只要伺服器被設定為允許來自你的網路應用程式來源（origin）網域之請求，`XMLHttpRequest` 便能正常運作。否則，將會拋出一個 `INVALID_ACCESS_ERR` 例外。
+現代瀏覽器支援跨網域（cross-site）請求並實作了網路應用程式工作小組（Web Applications (WebApps) Working Group）提出的[跨網域請求存取控制](/zh-TW/docs/Web/HTTP/CORS)標準。只要伺服器被設定為允許來自你的網路應用程式來源（origin）網域之請求，`XMLHttpRequest` 便能正常運作。否則，將會拋出一個 `INVALID_ACCESS_ERR` 例外。
 
 ## 避開快取
 

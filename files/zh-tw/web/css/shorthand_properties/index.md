@@ -146,5 +146,5 @@ margin: 10px 5px 10px 5px;
 
 ## 相關連結
 
-- [CSS Reference](/zh-TW/docs/CSS/CSS_Reference)
+- [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
 - Shorthand properties: {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.

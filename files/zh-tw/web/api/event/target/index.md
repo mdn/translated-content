@@ -60,4 +60,4 @@ function hide(e) {
 
 ## 參見
 
-- [Comparison of Event Targets](/zh-TW/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-TW/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

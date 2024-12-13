@@ -32,7 +32,7 @@ Django 使你輕鬆設置自己的電腦，以便開始開發網絡應用。這�
 
 Django 本身提供的主要工具，是一組用於創建和使用 Django 項目的 Python 腳本，以及可用於在你的計算機的瀏覽器上，測試本地（即，你的計算機，而不是外部 Web 服務器）Django 網絡應用程序的簡單開發網路服務器 。
 
-還有其他外部工具, 它們構成了開發環境的一部分, 我們將不再贅述。這些包括 文本編輯器 [text editor](/zh-TW/docs/Learn/Common_questions/Available_text_editors) 或編輯代碼的 IDE，以及像 [Git](https://git-scm.com/) 這樣的源代碼控制管理工具，用於安全地管理不同版本的代碼。我們假設你已經安裝了一個文本編輯器。
+還有其他外部工具, 它們構成了開發環境的一部分, 我們將不再贅述。這些包括 文本編輯器 [text editor](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) 或編輯代碼的 IDE，以及像 [Git](https://git-scm.com/) 這樣的源代碼控制管理工具，用於安全地管理不同版本的代碼。我們假設你已經安裝了一個文本編輯器。
 
 ### 什麼是 Django 設置選項?
 
@@ -180,7 +180,7 @@ pip3 list
 
 ## 在 Python 虛擬環境中使用 Django
 
-我們將用於創建虛擬環境的庫是 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 和 macOS X）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) （Windows），後者又使用 [virtualenv](/zh-TW/docs/Python/Virtualenv)工具。包裝工具為所有平台上的接口管理創建了一致的界面。
+我們將用於創建虛擬環境的庫是 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 和 macOS X）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) （Windows），後者又使用 [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv)工具。包裝工具為所有平台上的接口管理創建了一致的界面。
 
 ### 安裝虛擬環境軟體
 

@@ -616,6 +616,6 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 ## 參見
 
-- [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/HTML/Applying_color)
+- [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

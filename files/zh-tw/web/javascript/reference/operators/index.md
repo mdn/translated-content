@@ -228,4 +228,4 @@ slug: Web/JavaScript/Reference/Operators
 
 ## 相關文獻
 
-- [Operator precedence](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

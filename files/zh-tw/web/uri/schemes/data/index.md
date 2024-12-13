@@ -14,17 +14,17 @@ l10n:
 
 ## 語法
 
-Data URL 由四個部分組成：前綴（`data:`）、指示數據類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)、如果非文本則可選的 `base64` 標記，以及數據本身：
+Data URL 由四個部分組成：前綴（`data:`）、指示數據類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)、如果非文本則可選的 `base64` 標記，以及數據本身：
 
 ```plain
 data:[<mediatype>][;base64],<data>
 ```
 
-`mediatype` 是一個 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)字串，例如 `'image/jpeg'` 表示 JPEG 圖像文件。如果省略，默認為 `text/plain;charset=US-ASCII`。
+`mediatype` 是一個 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)字串，例如 `'image/jpeg'` 表示 JPEG 圖像文件。如果省略，默認為 `text/plain;charset=US-ASCII`。
 
 如果數據包含 [RFC 3986 定義的保留字元](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)或包含空格字元、換行字元或其他不可打印字元，這些字元必須 [URL 編碼](https://zh.wikipedia.org/wiki/百分号编码)。
 
-如果數據是文本，可以嵌入文本（使用適當的實體或根據包含文件的類型進行轉義）。否則，可以指定 `base64` 來嵌入 base64 編碼的二進制數據。你可以在[這裡](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和[這裡](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)找到有關 MIME 類型的更多訊息。
+如果數據是文本，可以嵌入文本（使用適當的實體或根據包含文件的類型進行轉義）。否則，可以指定 `base64` 來嵌入 base64 編碼的二進制數據。你可以在[這裡](/zh-TW/docs/Web/HTTP/MIME_types)和[這裡](/zh-TW/docs/Web/HTTP/MIME_types/Common_types)找到有關 MIME 類型的更多訊息。
 
 幾個範例：
 
@@ -119,5 +119,5 @@ lots of text…
 - [URL 編碼](https://zh.wikipedia.org/wiki/百分号编码)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
-- [CSS `url()`](/zh-TW/docs/Web/CSS/url)
+- [CSS `url()`](/zh-TW/docs/Web/CSS/url_value)
 - [URI](/zh-TW/docs/Glossary/URI)

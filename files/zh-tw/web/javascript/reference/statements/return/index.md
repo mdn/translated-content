@@ -44,7 +44,7 @@ return x + y / 3;
 
 ### 自動插入分號
 
-`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
+`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
 return;
@@ -127,5 +127,5 @@ answer(1337); // 56154
 
 ## 參見
 
-- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
 - [閉包](/zh-TW/docs/Web/JavaScript/Closures)
