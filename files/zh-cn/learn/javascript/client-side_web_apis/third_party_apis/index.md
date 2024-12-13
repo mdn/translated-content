@@ -34,7 +34,7 @@ l10n:
 
 ## 什么是第三方 API?
 
-第三方 API 是由第三方（通常是 Facebook、Twitter 或 Google 等公司）提供的 API，允许你通过 JavaScript 访问其功能，并在你自己的站点上使用它。最显著的一个示例就是运用 [Google 地图 API](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
+第三方 API 是由第三方（通常是 Facebook、Twitter 或 Google 等公司）提供的 API，允许你通过 JavaScript 访问其功能，并在你自己的站点上使用它。最显著的一个示例就是运用 [Google 地图 API](https://developers.google.cn/maps/) 在你的网页上展示自定义地图。
 
 让我们再来看看这个[简单的 Mapquest API 示例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)，并用它来说明第三方 API 接口与浏览器 API 接口的区别。
 
@@ -80,7 +80,7 @@ const map = L.mapquest.map("map", {
 以上就是用 Mapquest API 建立一个简单地图所需要的所有信息。所有复杂的工作，包括展示正确地理位置的地图块等，都将由你所连接的服务器处理。
 
 > [!NOTE]
-> 一些 API 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求以获取特定的数据。这些被称为 [RESTful API（稍后我们将在文章中展示这个示例）](#RESTful_API——纽约时报)。
+> 一些 API 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求以获取特定的数据。这些被称为 [RESTful API（稍后我们将在文章中展示这个示例）](#restful_api——纽约时报)。
 
 ### 它们通常需要 API 密钥
 
@@ -269,7 +269,7 @@ fetch(url)
   .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
-这里我们通过将 `url` 变量传递给 [`fetch()`](/zh-CN/docs/Web/API/fetch) 来运行请求，使用 [`json()`](/zh-CN/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
+这里我们通过将 `url` 变量传递给 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 来运行请求，使用 [`json()`](/zh-CN/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
 
 ### 显示数据
 
@@ -379,8 +379,8 @@ function displayResults(json) {
 
 我们还为你构建了另一个示例供你学习——请参阅我们的 [YouTube 视频搜索示例](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/)。这个示例使用了两个相关的 API：
 
-- [YouTube Data API](https://developers.google.com/youtube/v3/docs/) 搜索 YouTube 视频并返回结果。
-- [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) 在 IFrame 视频播放器中显示返回的视频示例，以便你可以观看它们。
+- [YouTube Data API](https://developers.google.cn/youtube/v3/docs/) 搜索 YouTube 视频并返回结果。
+- [YouTube IFrame Player API](https://developers.google.cn/youtube/iframe_api_reference) 在 IFrame 视频播放器中显示返回的视频示例，以便你可以观看它们。
 
 这个示例很有趣，因为它展示了两个相关的第三方 API 被一起使用来构建一个应用程序。第一个是一个 RESTful API，而第二个是一个更像 Mapquest 的 API（带有 API 相关的方法等）。值得一提的是，这两个 API 都需要将 JavaScript 库应用到页面中。RESTful API 有可用的函数来处理 HTTP 请求并返回结果。
 
@@ -388,7 +388,7 @@ function displayResults(json) {
 
 要运行它，你需要：
 
-- 阅读 [YouTube Data API 概述](https://developers.google.com/youtube/v3/getting-started)文档。
+- 阅读 [YouTube Data API 概述](https://developers.google.cn/youtube/v3/getting-started)文档。
 - 访问[启用的 API](https://console.cloud.google.com/apis/enabled)页面，并在 API 列表中确保 YouTube Data API v3 的状态为 ON。
 - 从 [Google Cloud](https://cloud.google.com/) 获取 API 密钥。
 - 在源代码中找到字符串 `ENTER-API-KEY-HERE`，并用你的 API 密钥替换它。

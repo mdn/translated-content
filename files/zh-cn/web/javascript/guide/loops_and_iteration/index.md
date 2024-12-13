@@ -398,7 +398,7 @@ car.model = Mustang
 
 ## `for...of` 语句
 
-{{jsxref("statements/for...of","for...of")}} 语句在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。
+{{jsxref("statements/for...of","for...of")}} 语句在[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。
 
 ```plain
 for (variable of object) {

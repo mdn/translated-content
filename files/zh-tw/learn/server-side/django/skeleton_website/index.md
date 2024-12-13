@@ -48,7 +48,7 @@ locallibrary/         # Website folder
 
 ## 創建專案項目
 
-首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
+首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
 
 ```bash
 mkdir locallibrary

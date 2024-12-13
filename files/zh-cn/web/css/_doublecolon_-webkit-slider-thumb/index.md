@@ -33,5 +33,5 @@ l10n:
   - {{cssxref("::-moz-range-thumb")}}
 
 - [使用 CSS 样式跨浏览器兼容的范围输入](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [滑动条的样式和脚本](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [滑动条的样式和脚本](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
 - [需要注意的几个问题](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)

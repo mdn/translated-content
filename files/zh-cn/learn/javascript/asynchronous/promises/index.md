@@ -34,7 +34,7 @@ l10n:
 > 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
 >
 > 1. 在浏览器中打开一个新标签页并访问 <https://example.org>。
-> 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的 JavaScript 控制台
+> 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的 JavaScript 控制台
 > 3. 把我们展示的代码示例复制到控制台中运行。值得注意的是，你必须在每次输入新的示例之前重新加载页面，否则控制台会报错“重新定义了 `fetchPromise`”。
 
 在这个例子中，我们将从 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> 下载 JSON 文件，并打印一些相关信息。

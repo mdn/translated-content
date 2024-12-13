@@ -316,7 +316,7 @@ Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到�
    });
    ```
 
-5. 即使你在不支持 [Fetch](/zh-CN/docs/Web/API/fetch) 的浏览器中加载它，你仍然能够看到花的图像——这不是很酷吗？
+5. 即使你在不支持 [Fetch](/zh-CN/docs/Web/API/Window/fetch) 的浏览器中加载它，你仍然能够看到花的图像——这不是很酷吗？
    ![一个 fetch 基本示例的标题，配一张紫色花朵的照片](fetch-image.jpg)
 
 > [!NOTE]
@@ -349,7 +349,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-在这段代码中，我们检测浏览器是否支持 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象和 [`fetch()`](/zh-CN/docs/Web/API/fetch) 函数。如果浏览器支持这两者，函数就会返回 `true`。如果函数返回 `false`，我们将执行条件语句的第二部分，调用名为 `loadScript()` 的函数来将 polyfill 加载到页面，然后执行 `main()` 函数。`loadScript()` 函数的实现可能是这样的：
+在这段代码中，我们检测浏览器是否支持 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象和 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 函数。如果浏览器支持这两者，函数就会返回 `true`。如果函数返回 `false`，我们将执行条件语句的第二部分，调用名为 `loadScript()` 的函数来将 polyfill 加载到页面，然后执行 `main()` 函数。`loadScript()` 函数的实现可能是这样的：
 
 ```js
 function loadScript(src, done) {

@@ -184,7 +184,7 @@ Content-Length: 0
 ```
 
 > [!NOTE]
-> 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) 工具)。
+> 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 工具)。
 
 ## 静态网站
 

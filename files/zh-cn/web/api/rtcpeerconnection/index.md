@@ -145,5 +145,5 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 ## 参见
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [WebRTC 入门](https://web.dev/articles/webrtc-basics)
+- [WebRTC 入门](https://web.developers.google.cn/articles/webrtc-basics)
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom)：Node.js HTML 视频捕获，点对点视频和文件共享应用（[GitHub 上的源代码](https://github.com/chrisjohndigital/TutorRoom)）

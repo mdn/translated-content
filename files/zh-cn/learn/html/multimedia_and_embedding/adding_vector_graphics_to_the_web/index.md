@@ -40,7 +40,7 @@ l10n:
 - **位图**使用像素网格来定义——位图文件精确包含每个像素的位置和它的色彩信息。流行的 web 位图格式包括 Bitmap（`.bmp`）、PNG（`.png`）、JPEG（`.jpg`），以及 GIF（`.gif`）。
 - **矢量图**使用算法来定义——矢量图文件包含了图形和路径的定义，电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。借助 {{glossary("SVG")}} 格式，我们可以创造用于 Web 的精彩矢量图形。
 
-为了让你清楚的认识到两者的区别，我们来一个例子。你可以在我们的 Github 仓库中在线查看这个例子：[vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html)——它并排展示了两个看起来一致的图像，两个图像都是一个红色的五角星以及黑色的阴影。不同的是，左边的是 PNG，而右边的是 SVG 图像。
+为了让你清楚的认识到两者的区别，我们来一个例子。你可以在我们的 Github 仓库中在线查看这个例子：[vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html)——它并排展示了两个看起来一致的图像，两个图像都是一个红色的五角星以及黑色的阴影。不同的是，左边的是 PNG，而右边的是 SVG 图像。
 
 如果你放大网页，区别就会变得明显起来——随着你的放大，PNG 图片显现出了像素块，因为它存储是每个像素的颜色和位置信息。当它放大时，每个像素就被放大然后填满屏幕上更多的像素，所以图像就会开始变得像马赛克。然而矢量图像看起来仍然效果很好且清晰，因为无论它的尺寸如何，系统都使用算法来计算出图像的形状，仅仅是根据放大的倍数来调整算法中的值。
 
@@ -49,7 +49,7 @@ l10n:
 ![两个星星图像被放大，一个清晰而另一个模糊](raster-vector-zoomed.png)
 
 > [!NOTE]
-> 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
+> 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
 
 此外，相较于同样的位图，矢量图形通常体积更小，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
 
@@ -149,7 +149,7 @@ background-size: contain;
 #### 优点
 
 - 将 SVG 内联会减少 HTTP 请求，可以减少加载时间。
-- 你可以为 SVG 元素分配 `class` 和 `id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，你可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation_attributes) 作为 CSS 属性。
+- 你可以为 SVG 元素分配 `class` 和 `id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，你可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation_attributes) 作为 CSS 属性。
 - 内联 SVG 是唯一可以让你在 SVG 图像上使用 CSS 交互（如 `:focus`）和 CSS 动画的方法（即使在常规样式表中）。
 - 你可以通过将 SVG 标记包在 {{htmlelement("a")}} 元素中，使其成为超链接。
 
@@ -328,7 +328,7 @@ textarea.onkeyup = function () {
 
 - MDN [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started)
 - [Sara Soueidan 的响应式 SVG 图像教程](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [SVG 在无障碍方面的好处](http://www.w3.org/TR/SVG-access/)
+- [SVG 在无障碍方面的好处](https://www.w3.org/TR/SVG-access/)
 - [如何缩放 SVG](https://css-tricks.com/scale-svg/)（它不像位图那么简单！）
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

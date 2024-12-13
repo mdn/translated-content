@@ -77,5 +77,5 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 ## 参见
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- 一个[垫片](http://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
+- 一个[垫片](https://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
 - [Node.js 从 v11.0.0 开始支持全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)

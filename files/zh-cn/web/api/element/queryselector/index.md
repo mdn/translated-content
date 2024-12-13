@@ -95,7 +95,7 @@ document.getElementById("output").innerHTML =
 
 ## 参见
 
-- [`element.querySelectorAll`](/zh-CN/docs/DOM/Element.querySelectorAll)
-- [`document.querySelector`](/zh-CN/docs/DOM/Document.querySelector)
-- [`document.querySelectorAll`](/zh-CN/docs/DOM/Document.querySelectorAll)
+- [`element.querySelectorAll`](/zh-CN/docs/Web/API/Element/querySelectorAll)
+- [`document.querySelector`](/zh-CN/docs/Web/API/Document/querySelector)
+- [`document.querySelectorAll`](/zh-CN/docs/Web/API/Document/querySelectorAll)
 - [Code snippets for querySelector](/zh-CN/docs/Code_snippets/QuerySelector)

@@ -170,7 +170,7 @@ if (httpRequest.status === 200) {
 > 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[避開快取](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#避開快取)）
 
 > [!NOTE]
-> If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
+> If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 
@@ -298,13 +298,13 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/zh-
     - [監視請求進度](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#監視進度)
     - [提交表單與上傳二進制檔案](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表單與上傳檔案)——使用*單純的* Ajax，或使用 [`FormData`](/zh-TW/docs/Web/API/FormData) 物件
     - 在 [Web worker](/zh-TW/docs/Web/API/Worker) 中使用 Ajax
-- [_Pure-Ajax_ navigation example](/zh-TW/docs/Web/API/History_API/Example)
+- [_Pure-Ajax_ navigation example](/zh-TW/docs/Web/API/History_API/Working_with_the_History_API)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
 - [Sending and Receiving Binary Data](/zh-TW/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
   - : The `responseType` property of the `XMLHttpRequest` object can be set to change the expected response type from the server. Possible values are the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This article will show some Ajax I/O techniques.
 - [XML](/zh-TW/docs/Web/XML)
   - : 可擴展標記語言（Extensible Markup Language，XML）是 W3C 推薦的用於創建特殊用途標記語言的通用標記語言。它是 SGML 的簡化子集，能夠描述許多不同類型的數據。其主要目的是促進不同系統間的數據共享，特別是通過網際網路連接的系統。
-- [解析和序列化 XML](/zh-TW/docs/Web/Guide/Parsing_and_serializing_XML)
+- [解析和序列化 XML](/zh-TW/docs/Web/XML/Parsing_and_serializing_XML)
   - : 如何從一串字串，一個檔案中透過 Javascript 解析一個 XML 文件 ，以及如何將 XML 檔案序列化成字串、Javascript 物件樹(JXON) 或檔案。
 - [XPath](/zh-TW/docs/Web/XPath)
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/zh-TW/docs/Web/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.

@@ -149,7 +149,7 @@ verseChoose.value = "Verse 1";
 
 如果只是使用本地文件运行示例，现代浏览器将不会执行 HTTP 请求。这是因为安全限制（更多关于 Web 安全性的限制，请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
 
-为了解决这个问题，我们需要通过在本地 Web 服务器上运行它来测试这个示例。要了解如何实现这一点，请阅读[我们的设置本地测试服务器指南](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)。
+为了解决这个问题，我们需要通过在本地 Web 服务器上运行它来测试这个示例。要了解如何实现这一点，请阅读[我们的设置本地测试服务器指南](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。
 
 ### 罐头商店
 

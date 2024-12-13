@@ -97,28 +97,28 @@ application/x-ns-proxy-autoconfig
 
 - 基于主机名的判断函数
 
-  - [`isPlainHostName()`](#isPlainHostName)
-  - [`dnsDomainIs()`](#dnsDomainIs)
-  - [`localHostOrDomainIs()`](#localHostOrDomainIs)
-  - [`isResolvable()`](#isResolvable)
-  - [`isInNet()`](#isInNet)
+  - [`isPlainHostName()`](#isplainhostname)
+  - [`dnsDomainIs()`](#dnsdomainis)
+  - [`localHostOrDomainIs()`](#localhostordomainis)
+  - [`isResolvable()`](#isresolvable)
+  - [`isInNet()`](#isinnet)
 
 - 和代理相关的功能函数
 
-  - [`dnsResolve()`](#dnsResolve)
+  - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
-  - [`myIpAddress()`](#myIpAddress)
-  - [`dnsDomainLevels()`](#dnsDomainLevels)
+  - [`myIpAddress()`](#myipaddress)
+  - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - 基于 URL 或主机名的判断函数
 
-  - [`shExpMatch()`](#shExpMatchstr_shexp)
+  - [`shExpMatch()`](#shexpmatchstr_shexp)
 
 - 基于时间的判断函数
 
-  - [`weekdayRange()`](#weekdayRange)
-  - [`dateRange()`](#dateRange)
-  - [`timeRange()`](#timeRange)
+  - [`weekdayRange()`](#weekdayrange)
+  - [`dateRange()`](#daterange)
+  - [`timeRange()`](#timerange)
 
 - 日志记录功能函数
 

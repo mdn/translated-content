@@ -52,7 +52,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
 // etc. etc.
 ```
 
-这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## 规范
 

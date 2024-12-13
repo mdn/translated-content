@@ -209,9 +209,7 @@ La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web
 
 ## Pruebas con navegadores antiguos
 
-Dado que la mayoría de los navegadores ya son compatibles con Flexbox y Grid, puede resultar en efecto difícil hacer pruebas con navegadores más antiguos. Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
-
-También puedes descargar e instalar máquinas virtuales y ejecutar versiones anteriores de navegadores en un entorno de tu propio ordenador. Tener acceso a versiones anteriores de Internet Explorer es particularmente útil, y para ese propósito, Microsoft ha puesto a disposición de los usuarios una [variedad de máquinas virtuales de descarga gratuita](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Están disponibles para los sistemas operativos Mac, Windows y Linux, por lo que resultan una manera excelente de hacer pruebas con los navegadores Windows antiguos y modernos, incluso si no utilizas una computadora con sistema Windows.
+Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
 
 ## Resumen
 

@@ -16,7 +16,7 @@ l10n:
 
 ## Смотрите также
 
-- [TLS](https://ru.wikipedia.org/wiki/TLS) (Википедия)
+- [TLS](https://ru.wikipedia.org/wiki/TLS) в Википедии
 - [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) (The Transport Layer Security Protocol, Version 1.3)
 - [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 - [Transport Layer Security](/ru/docs/Web/Security/Transport_Layer_Security)

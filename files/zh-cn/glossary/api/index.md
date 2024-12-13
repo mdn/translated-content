@@ -14,7 +14,7 @@ l10n:
 例如：
 
 - [getUserMedia API](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 能被用于从用户的摄像头采集音视频。接下来开发者可以任意使用这些音视频，例如记录视频和音频、在视频会议中向其他用户广播，或者从视频中截图。
-- [Geolocation API](/zh-CN/docs/Web/API/Geolocation) 能被用于从用户的可用的任意定位设备（如 GPS）获取位置信息，然后可以再用 [Google 地图 API](https://developers.google.com/maps/) 将这些位置信息用于在一个自定义的地图上标记出用户的位置和展示用户所在地区的旅游景点。
+- [Geolocation API](/zh-CN/docs/Web/API/Geolocation) 能被用于从用户的可用的任意定位设备（如 GPS）获取位置信息，然后可以再用 [Google 地图 API](https://developers.google.cn/maps/) 将这些位置信息用于在一个自定义的地图上标记出用户的位置和展示用户所在地区的旅游景点。
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 能被用于制作一个网页中的动画，例如让网页中的图片移动或旋转。
 
 ## 参见
