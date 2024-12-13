@@ -30,7 +30,7 @@ A referência ao arquivo pode ser salva quando o formulário é submetido enquan
 
 A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
-{{page("/pt-BR/docs/Web/API/Blob","Properties")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/Blob","Properties") -->
 
 ## Métodos
 

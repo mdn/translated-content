@@ -198,17 +198,17 @@ O seguinte é uma implementação para fornecer suporte a navegadores sem suport
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades') -->
 
 ### Métodos
 
 #### Métodos não relacionados ao HTML
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML') -->
 
 #### Métodos de envoltório HTML
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML') -->
 
 ## Exemplos
 

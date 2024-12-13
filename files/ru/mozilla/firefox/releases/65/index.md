@@ -135,7 +135,7 @@ _Без изменений._
 #### Fetch и сервис-воркеры
 
 - Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает `TypeError`, если в качестве первого параметра указан невалидный URL ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ([Firefox bug 1399446](https://bugzil.la/1399446)).
 - Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ([Firefox bug 1508661](https://bugzil.la/1508661)).
@@ -155,7 +155,7 @@ _Без изменений._
 - Удалено нестандартное свойство `currentTime` {{domxref("MediaStream")}} ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - Удалены настройки `dom.webcomponents.shadowdom.enabled` и `dom.webcomponents.customelements.enabled` — больше нельзя отключить поддержку Shadow DOM и Custom Elements через `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - Удалено нестандартное событие DOM `text`, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- Событие {{event("keypress")}} больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
+- Событие [`keypress`](/ru/docs/Web/API/Element/keypress_event) больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
 
   <kbd>Enter</kbd>
 

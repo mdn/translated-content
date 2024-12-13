@@ -306,7 +306,7 @@ l10n:
             href="/ja/docs/Learn/Accessibility/HTML#意味の通るテキストラベル"
             >意味の通るテキストラベル</a
           >、<a
-            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基本_見出しと段落"
             >見出しと段落の基本</a
           >、<a
             href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#the_%3clabel%3e_element"
@@ -362,7 +362,7 @@ l10n:
       <td>
         <p>
           <a
-            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基本_見出しと段落"
             >見出しと段落の基本</a
           >を参照してください。
         </p>

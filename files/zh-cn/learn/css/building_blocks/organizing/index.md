@@ -57,14 +57,9 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 你可以看到很多 CSS 格式化的方式，一些开发者将所有的规则放在一行里面，像是这样：
 
-```css
-.box {
-  background-color: #567895;
-}
-h2 {
-  background-color: black;
-  color: white;
-}
+```css-nolint
+.box {background-color: #567895; }
+h2 {background-color: black; color: white; }
 ```
 
 还有的开发者更喜欢将所有的东西放在新的一行：
@@ -94,17 +89,17 @@ CSS 不会管你使用哪种方式来进行格式化，我们自己的看法是�
 在你的样式表里面的逻辑段落之间，加入一块注释，是个好技巧。在你快速掠过的时候，这些注释可以帮你快速定位不同的段落，甚至给了你搜索或者跳转到那段 CSS 的关键词。如果你使用了一个不存在于代码里面的字符串，你可以从段落到段落间跳转，只需要搜索一下，下面我们用的是`||`。
 
 ```css
-/* || General styles */
+/* || 通用样式 */
 
-...
+/* … */
 
-/* || Typography */
+/* || 排版 */
 
-...
+/* … */
 
-/* || Header and Main Navigation */
+/* || 头部和主要导航 */
 
-...
+/* … */
 ```
 
 你不必在你的 CSS 中给每个东西都加上注释，因为它们很多都是自解释的。你应该加上注释的是那些你因为某些原因做的特殊决定。
@@ -113,7 +108,7 @@ CSS 不会管你使用哪种方式来进行格式化，我们自己的看法是�
 
 ```css
 .box {
-  background-color: red; /* fallback for older browsers that don't support gradients */
+  background-color: red; /* 对不支持渐变的较老浏览器的回落 */
   background-image: linear-gradient(to right, #ff0000, #aa0000);
 }
 ```
@@ -126,57 +121,76 @@ CSS 不会管你使用哪种方式来进行格式化，我们自己的看法是�
 
 - `body`
 - `p`
-- `h1`, `h2`, `h3`, `h4`, `h5`
-- `ul`和`ol`
-- `table`属性
+- `h1`、`h2`、`h3`、`h4`、`h5`
+- `ul` 和 `ol`
+- `table` 属性
 - 链接
 
 在这段样式表里面，我们提供了用于站点类型的默认样式，为数据表格、列表等设立了一份默认的样式。
 
 ```css
-/* || GENERAL STYLES */
+/* || 通用样式 */
 
-body { ... }
+body {
+  /* … */
+}
 
-h1, h2, h3, h4 { ... }
+h1,
+h2,
+h3,
+h4 {
+  /* … */
+}
 
-ul { ... }
+ul {
+  /* … */
+}
 
-blockquote { ... }
+blockquote {
+  /* … */
+}
 ```
 
 在这段之后，我们可以定义一些实用类，例如一个用来移除默认列表样式的类，我们打算将其展示为灵活样式或者其他样式。如果你知道你想要在许多不同的元素上应用的东西，那么你可以把它们加到这里。
 
 ```css
-/* || UTILITIES */
+/* || 实用类 */
 
-.nobullets {
+.no-bullets {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-...
+/* … */
 ```
 
 然后我们可以加上在整个站点都会用到的所有东西，这可能是像基础页面布局、抬头或者导航栏样式之类的东西。
 
 ```css
-/* || SITEWIDE */
+/* || 全站 */
 
-.main-nav { ... }
+.main-nav {
+  /* … */
+}
 
-.logo { ... }
+.logo {
+  /* … */
+}
 ```
 
 最后我们可以在 CSS 里面加上特指的东西，将它们分成上下文、页面甚至它们使用的组件。
 
 ```css
-/* || STORE PAGES */
+/* || 商店页面 */
 
-.product-listing { ... }
+.product-listing {
+  /* … */
+}
 
-.product-box { ... }
+.product-box {
+  /* … */
+}
 ```
 
 通过使用这种方式排布代码，我们至少能大致了解，我们能在样式表的哪个部分寻找想要更改的东西。
@@ -215,7 +229,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 
 ### CSS 方法论
 
-不必需要自己制定编写 CSS 的规则，你可以选择接纳一个已经已经由社群设计、经由诸多项目检验的方法，并从中获益。这些方法论都是有着结构化的编写和组织 CSS 途径的 CSS 代码指南。典型地，与你为你的项目编写和优化每个选择器为自己定义的规则组相比，它们会倾向于产生更多的多余代码。
+不必需要自己制定编写 CSS 的规则，你可以选择接纳一个已经由社群设计、经由诸多项目检验的方法，并从中获益。这些方法论都是有着结构化的编写和组织 CSS 途径的 CSS 代码指南。典型地，与你为你的项目编写和优化每个选择器为自己定义的规则组相比，它们会倾向于产生更多的多余代码。
 
 但是，在接纳了一个方法以后，你的代码会更有条理，而且因为这些体系许多都是被很广泛使用的，其他的开发者更有可能理解你在使用的方式，会以相同的方式编写他们自己的代码，而不需要从头接纳你自己的个人方法论。
 
@@ -250,7 +264,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 ```
 
-在 OOCSS 中，你可以建立一个叫作`media`的排布，里面包含所有的两种排布所共有的 CSS——一个大致用于媒体对象的形状之类的基础类。然后我们再额外加入一个类，处理那些微小的区别，这样特定地扩展基础样式。
+在 OOCSS 中，你可以建立一个叫作 `media` 的模式，里面包含所有的两种模式所共有的 CSS——一个大致用于媒体对象的形状之类的基础类。然后我们再额外加入一个类，处理那些微小的区别，这样特定地扩展基础样式。
 
 ```css
 .media {
@@ -271,21 +285,21 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 ```
 
-在你的 HTML 里面，评论需要同时应用`media`和`comment`类：
+在你的 HTML 里面，评论需要同时应用 `media` 和 `comment` 类：
 
 ```html
 <div class="media comment">
-  <img />
+  <img src="" alt="" />
   <div class="content"></div>
 </div>
 ```
 
-列表项应用了`media`和`list-item`：
+列表项应用了 `media` 和 `list-item`：
 
 ```html
 <ul>
   <li class="media list-item">
-    <img />
+    <img src="" alt="" />
     <div class="content"></div>
   </li>
 </ul>
@@ -295,12 +309,17 @@ Nicole Sullivan 在描述这种方式和推广上所做的工作导致，即使�
 
 #### BEM
 
-BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，一个块，例如一个按钮、菜单或者标志，就是独立的实体。一个元素就像一个列表项或者标题一样，被绑定到它所在的块。修饰字符是标记到一个块或者元素的标识，能够改变样式或者行为。你能认出使用 BEM 的代码，因为代码中在 CSS 的类里使用了多余的一个下划线和连字符。例如看看这个来自关于[BEM 命名常规](http://getbem.com/naming/)的页面里面的 HTML 所应用的类：
+BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，一个块，例如一个按钮、菜单或者标志，就是独立的实体。一个元素就像一个列表项或者标题一样，被绑定到它所在的块。修饰字符是标记到一个块或者元素的标识，能够改变样式或者行为。你能认出使用 BEM 的代码，因为代码中在 CSS 的类里使用了多余的一个下划线和连字符。例如看看这个来自关于 [BEM 命名常规](http://getbem.com/naming/)的页面里面的 HTML 所应用的类：
 
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
-  <input class="form__submit form__submit--disabled" type="submit" />
+  <label class="label form__label" for="inputId"></label>
+  <input class="form__input" type="text" id="inputId" />
+
+  <input
+    class="form__submit form__submit--disabled"
+    type="submit"
+    value="提交" />
 </form>
 ```
 
@@ -308,11 +327,11 @@ BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，�
 
 BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他们的 CSS。你可能会在没有提及为何 CSS 如此布局的时候，遇到 BEM 语法的例子，甚至是在教程中
 
-阅读[BEM 101](https://css-tricks.com/bem-101/) 中关于 CSS Tricks 的段落以了解更多和这个系统相关的信息。
+阅读 [BEM 101](https://css-tricks.com/bem-101/) 中关于 CSS Tricks 的段落以了解更多和这个系统相关的信息。
 
 #### 其他常见体系
 
-应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的[Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/)、Harry Roberts 的[ITCSS](https://itcss.io/)以及原本由 Yahoo! 创造的[Atomic CSS (ACSS)](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
+应用中，有很多这样的体系。其他流行的方式包括 Jonathan Snook 创造的 [CSS 的可扩展模块化架构（SMACSS）](https://smacss.com/)、Harry Roberts 的 [ITCSS](https://itcss.io/) 以及原本由 Yahoo! 创造的[原子 CSS（ACSS）](https://acss.io/)。如果你遇到了使用这几种方式之一的项目，那么好处就是你可以搜索到许多文章和指导，帮你理解如何以同种方式写代码。
 
 使用这样的体系的缺点是，它们会看起来过于复杂，尤其是对于小项目。
 
@@ -322,13 +341,13 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 使用这些工具的任何一部分都需要你的开发环境能运行进行处理工作的脚本。许多代码编辑器能为你做这项工作，或者你也可以安装一个命令行工具来辅助工作。
 
-最为流行的预处理工具是[Sass](https://sass-lang.com/)，这里不是 Sass 的教程，所以我只会简要地解释一些 Sass 能做的事情，在组织的时候真的会帮到你，即使你没有用到 Sass 的任何其他的独特功能。
+最为流行的预处理工具是 [Sass](https://sass-lang.com/)，这里不是 Sass 的教程，所以我只会简要地解释一些 Sass 能做的事情，在组织的时候真的会帮到你，即使你没有用到 Sass 的任何其他的独特功能。
 
 #### 定义变量
 
 CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
 
-如果我们创建了在下面的第一行里面叫做`$base-color`的变量，我们之后可以在样式表的任何需要这一颜色的地方使用它。
+如果我们创建了在下面的第一行里面叫做 `$base-color` 的变量，我们之后可以在样式表的任何需要这一颜色的地方使用它。
 
 ```css
 $base-color: #c6538c;
@@ -357,7 +376,7 @@ $base-color: #c6538c;
 
 #### 后处理以进行优化
 
-如果你对加入例如许多额外的注释和空格，增大你的样式表大小有所关心的话，那么后处理会通过在生产版本中略去任何不必要的东西的方式，优化 CSS。后处理解决方案中，通过这种方式实现的一个例子是[cssnano](https://cssnano.co/)。
+如果你对加入例如许多额外的注释和空格，增大你的样式表大小有所关心的话，那么后处理会通过在生产版本中略去任何不必要的东西的方式，优化 CSS。后处理解决方案中，通过这种方式实现的一个例子是 [cssnano](https://cssnano.github.io/cssnano/)。
 
 ## 结语
 
@@ -365,6 +384,6 @@ $base-color: #c6538c;
 
 欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)这节课。
 
-你应该也有了探索[MDN CSS](/zh-CN/docs/Web/CSS)学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的[CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的排布，在诸如[Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)的一些更加专门的指导里阅读更多。.
+你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)等更加专门的指南。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

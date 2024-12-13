@@ -2,12 +2,12 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 l10n:
-  sourceCommit: b72abe9565faba1aaa9230fb857f4c6211dc4434
+  sourceCommit: 2c49a844f820f191f98b13130e0075bbeed530f3
 ---
 
 {{CSSRef}}
 
-**`transition-timing-function`** は CSS のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
+**`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
 {{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
@@ -15,7 +15,7 @@ l10n:
 
 この加速曲線は、トランジションが行われるプロパティごとに 1 つの {{cssxref("&lt;easing-function&gt;")}} を用いて定義されます。
 
-複数のタイミング関数を指定することができます。それぞれのタイミング関数は、 {{ cssxref("transition-property") }} で指定されたように対応するプロパティに適用され、 `transition-property` のリストとして振るまいます。指定されたタイミング関数が `transition-property` のリストより少ない場合は、ユーザーエージェントはリスト内の値をそれぞれのトランジションプロパティのうちの値になるまで繰り返してどの値が使用されるかを計算します。関数の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、 CSS の宣言として妥当です。
+複数のイージング関数を指定することができます。それぞれのイージング関数は、 {{ cssxref("transition-property") }} で指定されたように対応するプロパティに適用され、 `transition-property` のリストとして振るまいます。指定されたイージング関数が `transition-property` のリストより少ない場合は、ユーザーエージェントはリスト内の値をそれぞれのトランジションプロパティのうちの値になるまで繰り返してどの値が使用されるかを計算します。関数の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、 CSS の宣言として妥当です。
 
 ## 構文
 
@@ -41,7 +41,7 @@ transition-timing-function: steps(5, jump-both);
 transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
-/* 複数のタイミング関数 */
+/* 複数のイージング関数 */
 transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* グローバル値 */
@@ -72,7 +72,7 @@ transition-timing-function: unset;
       - : `cubic-bezier(0.42, 0, 0.58, 1.0)` と同等であり、トランジションをゆっくり開始し、速度を上げた後、再び速度を遅くします。
     - `cubic-bezier(p1, p2, p3, p4)`
       - : 作者が定義する三次ベジェ曲線です。p1 と p3 の値は 0 から 1 の範囲でなければなりません。
-    - `steps( n, <jumpterm>)`
+    - `steps(n, <jump-term>)`
 
       - : トランジションは _n_ 個の停止点を辿って表示され、それぞれの停止点の表示時間は均等な長さになります。例えば、_n_ が 5 の場合、5 つのステップがあることになります。一時的に停止する点が 0%, 20%, 40%, 60%, 80% であるのか、20%, 40%, 60%, 80%, 100% であるのか、トランジションに沿って 0% と 100% の中間で 5 回停止するのか、それとも 0% と 100% の位置を含めて 5 回 (0%, 25%, 50%, 75%, 100%) 停止するのかについては、以下のジャンプ用語のどれを使うかで決まります。
 
@@ -94,7 +94,7 @@ transition-timing-function: unset;
     - `step-end`
       - : `steps(1, jump-end)` と同じです。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 アニメーションは、ユーザーがどのようなアクションを期待されているのかを理解するためのガイド、ユーザーインターフェイス内の関係性の表示、どのようなアクションが発生したのかをユーザーに通知するなど、役に立つことがあります。アニメーションは、認知的な負荷を軽減し、変化に気づかないことを防ぎ、空間的な関係をよりよく思い出すことに役立ちます。しかし、アニメーションの中には、注意欠陥多動性障害 (ADHD) の人の認知に問題が発生するものや、前庭障害、てんかん、片頭痛、スコトープ過敏症の引き金となるような動きをするものもあります。
 
@@ -115,9 +115,9 @@ transition-timing-function: unset;
 ```html hidden
 <div class="parent">
   <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
+  <div class="ease-in">ease-in</div>
+  <div class="ease-out">ease-out</div>
+  <div class="ease-in-out">ease-in-out</div>
   <div class="linear">linear</div>
   <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
 </div>
@@ -162,13 +162,13 @@ const intervalID = setInterval(updateTransition, 10000);
 .ease {
   transition-timing-function: ease;
 }
-.easein {
+.ease-in {
   transition-timing-function: ease-in;
 }
-.easeout {
+.ease-out {
   transition-timing-function: ease-out;
 }
-.easeinout {
+.ease-in-out {
   transition-timing-function: ease-in-out;
 }
 .linear {

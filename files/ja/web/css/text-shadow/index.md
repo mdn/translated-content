@@ -2,12 +2,12 @@
 title: text-shadow
 slug: Web/CSS/text-shadow
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
 {{CSSRef}}
 
-**`text-shadow`** は CSS のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
+**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
 {{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
@@ -65,7 +65,7 @@ text-shadow: unset;
 
 ## 例
 
-### 単純な影
+### 基本的な影
 
 ```css
 .red-text-shadow {
@@ -80,7 +80,7 @@ text-shadow: unset;
 </p>
 ```
 
-{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
+{{EmbedLiveSample('Basic_shadow', '660px', '90px')}}
 
 ### 複数の影
 
@@ -117,7 +117,5 @@ text-shadow: unset;
 ## 関連情報
 
 - {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するため）
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [Applying color to HTML elements using CSS](/ja/docs/Web/CSS/CSS_colors/Applying_color)

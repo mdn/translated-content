@@ -11,7 +11,7 @@ A API Battery Status API estende {{domxref("Window.navigator")}} com uma proprie
 
 ## Exemplo
 
-Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos {{event("chargingchange")}} e {{event("levelchange")}}, respectivamente.
+Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange) e [`levelchange`](/pt-BR/docs/Web/Events/levelchange), respectivamente.
 
 ```js
 var battery =

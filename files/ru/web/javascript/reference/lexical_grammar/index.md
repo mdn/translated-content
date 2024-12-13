@@ -23,14 +23,14 @@ ECMAScript также определяет ключевые слова и лит
 
 Пробельные символы улучшают читабельность исходного текста и разделяет токены друг от друга. Пробельные символы обычно не обязательны для функционирования кода. [Утилиты для уменьшения объёма кода](http://en.wikipedia.org/wiki/Minification_%28programming%29) часто удаляют пробельные символы, чтобы уменьшить объем кода.
 
-| Code point | Name                           | Abbreviation | Description                                                                                                     | Escape sequence |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                                        | \t              |
-| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                                          | \v              |
-| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))               | \f              |
-| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                                  |                 |
-| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                                            |                 |
-| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Юникоде на Википедии](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| Code point | Name                           | Abbreviation | Description                                                                                       | Escape sequence |
+| ---------- | ------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                          | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                            | \v              |
+| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)) | \f              |
+| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                    |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                              |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Википедии](https://ru.wikipedia.org/wiki/Пробел)                                |                 |
 
 ## Окончание строк
 

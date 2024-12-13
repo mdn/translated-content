@@ -89,7 +89,7 @@ shadow.adoptedStyleSheets = [sheet];
 
 ## 参见
 
-- [可构建样式表](https://web.dev/articles/constructable-stylesheets)（web.dev）
+- [可构建样式表](https://web.developers.google.cn/articles/constructable-stylesheets)（web.developers.google.cn）
 - [使用影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}

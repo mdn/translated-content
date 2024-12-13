@@ -239,4 +239,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
-- [源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- [源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

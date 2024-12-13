@@ -1,11 +1,13 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
+l10n:
+  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
 {{CSSRef}}
 
-**`ascent-override`** は CSS の記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
+**`ascent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
 
 ## 構文
 
@@ -64,10 +66,9 @@ ascent-override: 90%;
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子

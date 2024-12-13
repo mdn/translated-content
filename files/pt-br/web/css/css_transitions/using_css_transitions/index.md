@@ -1106,7 +1106,7 @@ Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
 
 ### Detectando o começo e a completude de uma transição
 
-Você pode usar o evento {{event("transitionend")}} para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
+Você pode usar o evento [`transitionend`](/pt-BR/docs/Web/Events/transitionend) para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
@@ -1119,7 +1119,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-Você detecta o começo de uma transição usando {{event("transitionrun")}} (antes do delay) e {{event("transitionstart")}} (depois do delay):
+Você detecta o começo de uma transição usando [`transitionrun`](/pt-BR/docs/Web/Events/transitionrun) (antes do delay) e [`transitionstart`](/pt-BR/docs/Web/Events/transitionstart) (depois do delay):
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -1134,5 +1134,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Veja Também
 
-- The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.
+- The {{domxref("TransitionEvent")}} interface and the [`transitionend`](/pt-BR/docs/Web/Events/transitionend) event.
 - [Utilizando animações css](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

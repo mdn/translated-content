@@ -699,7 +699,7 @@ textarea.onkeyup = function () {
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> Таблица всех доступных в HTML символов-мнемоников — в Википедии: [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
+> Таблица доступных в HTML символов-мнемоников в Википедии: [Мнемоники в HTML](https://ru.wikipedia.org/wiki/Мнемоники_в_HTML).
 
 ## HTML комментарии
 
