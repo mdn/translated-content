@@ -88,5 +88,5 @@ div.footnotes {
 
 ## See also
 
-- [`page-break-before`](/zh-CN/CSS/page-break-before), [`page-break-inside`](/zh-CN/CSS/page-break-inside)
-- [`orphans`](/zh-CN/CSS/orphans), [`widows`](/zh-CN/CSS/widows)
+- [`page-break-before`](/zh-CN/docs/CSS/page-break-before), [`page-break-inside`](/zh-CN/docs/CSS/page-break-inside)
+- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)

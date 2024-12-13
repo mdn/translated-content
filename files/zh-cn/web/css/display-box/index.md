@@ -80,10 +80,10 @@ p.secret {
 
 ## Accessibility concerns
 
-目前在大多数浏览器中的实现，是会从删除 [accessibility tree](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 删除 `display` 属性值为 `contents` 的元素。这会引起该元素（在部分浏览器版本中）和其子项不读出来。这不符合 [CSSWG specification](https://drafts.csswg.org/css-display/#the-display-properties)的行为要求。
+目前在大多数浏览器中的实现，是会从删除 [accessibility tree](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) 删除 `display` 属性值为 `contents` 的元素。这会引起该元素（在部分浏览器版本中）和其子项不读出来。这不符合 [CSSWG specification](https://drafts.csswg.org/css-display/#the-display-properties)的行为要求。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ## 浏览器兼容性
 
@@ -99,5 +99,5 @@ p.secret {
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 - [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)

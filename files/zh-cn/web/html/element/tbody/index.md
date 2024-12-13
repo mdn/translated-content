@@ -72,7 +72,7 @@ slug: Web/HTML/Element/tbody
     - `center`，表格内容居中对齐
     - `right`，表格内容右对齐
     - `justify`，在文本内容中插入空格，使内容在单元格中对齐。
-    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 [`char`](/zh-CN/docs/Web/HTML/Element/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff) 属性定义。
+    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 [`char`](#char) 和 [`charoff`](#charoff) 属性定义。
 
     如果没有设定该属性，则假定使用 `left` 值。
 
@@ -87,7 +87,7 @@ slug: Web/HTML/Element/tbody
     由于该属性已经废弃，请使用 CSS {{cssxref("background-color")}} 属性作为替代。
 
 - `char` {{deprecated_inline}}
-  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 [`align`](/zh-CN/docs/Web/HTML/Element/tbody#align) 没有设置为 `char`，这个属性就会被忽略。
+  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 [`align`](#align) 没有设置为 `char`，这个属性就会被忽略。
 - `charoff` {{deprecated_inline}}
   - : 这个属性用来表示从 `char` 属性指定的对齐字符中偏移列数据的字符数。
 - `valign` {{deprecated_inline}}
