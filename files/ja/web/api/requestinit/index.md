@@ -39,7 +39,7 @@ l10n:
     - {{jsxref("TypedArray")}}
     - {{domxref("URLSearchParams")}}
 
-    詳しくは[本体の設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#setting_a_body)を参照してください。
+    詳しくは[本体の設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#本体の設定)を参照してください。
 
 - `browsingTopics` {{optional_inline}} {{experimental_inline}}
 
@@ -99,7 +99,7 @@ l10n:
 
     オリジン間のリクエストに資格情報を含めると、{{glossary("CSRF")}} 攻撃を受けやすくなる可能性があります。そのため、`credentials` が `include` に設定されていても、{{httpheader("Access-Control-Allow-Credentials")}} をレスポンスに含めることで、サーバーも資格情報を含めることに同意する必要があります。さらに、この状況ではサーバーは{{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーでクライアントのオリジンのサーバーを明示的に指定しなければなりません（つまり、`*` は許可されません）。
 
-    詳しくは[資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#including_credentials)を参照してください。
+    詳しくは[資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#資格情報を含める)を参照してください。
 
     既定値は `same-origin` です。
 
@@ -155,7 +155,7 @@ l10n:
     - `websocket`
       - : [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続を確立するときのみ使用します。
 
-    詳しくは、[オリジン間リクエストを行う](/ja/docs/Web/API/Fetch_API/Using_Fetch#making_cross-origin_requests)を参照してください。
+    詳しくは、[オリジン間リクエストを行う](/ja/docs/Web/API/Fetch_API/Using_Fetch#オリジン間リクエストを行う)を参照してください。
 
     既定値は `cors` です。
 
