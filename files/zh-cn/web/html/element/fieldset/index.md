@@ -13,7 +13,7 @@ slug: Web/HTML/Element/fieldset
 
 ## 属性
 
-这个元素包含[所有全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素包含[所有全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `disabled`
   - : 如果设置了这个 bool 值属性，`<fieldset>` 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。

@@ -67,7 +67,7 @@ Al llamar [`setTimeout`](/es/docs/Web/API/setTimeout) se añadirá un mensaje a 
 
 ### Cero retraso
 
-Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervado dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.
+Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervalo dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.
 
 ```js
 (function () {

@@ -1,11 +1,13 @@
 ---
 title: HTMLAnchorElement：protocol 属性
 slug: Web/API/HTMLAnchorElement/protocol
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.protocol`** 属性是一个表示 URL 协议方案的字符串，包含结尾的 `':'`。
+**`HTMLAnchorElement.protocol`** 属性是一个字符串，表示 URL 的协议方案，包括末尾的 `':'`。
 
 ## 值
 
@@ -13,12 +15,12 @@ slug: Web/API/HTMLAnchorElement/protocol
 
 ## 示例
 
-### 从锚点元素的链接中获取协议
+### 获取锚点链接的协议
 
 ```js
 // 文档中有一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素
 const anchor = document.getElementById("myAnchor");
-anchor.protocol; // 返回 'https:'
+anchor.protocol; // 返回“https:”
 ```
 
 ## 规范
@@ -31,4 +33,4 @@ anchor.protocol; // 返回 'https:'
 
 ## 参见
 
-- 所属的 {{domxref("HTMLAnchorElement")}} 接口。
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

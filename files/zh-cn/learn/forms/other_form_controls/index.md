@@ -236,7 +236,7 @@ slug: Learn/Forms/Other_form_controls
 
 例如，在支持在 `{{htmlelement("datalist")}}` 上使用 `range` 输入类型的浏览器中，在每个 datalist 的 `{{htmlelement("option")}}` 值上会显示一个小勾。你可以在 [`<input type="range">` 参考页面上看到一种实现](/zh-CN/docs/Web/HTML/Element/input/range#添加井号和标签)。
 
-支持 {{htmlelement('datalist')}} 和 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/Input/color) 的浏览器上应该显示一个自定义颜色调色板作为默认值，同时仍然提供完整的颜色调色板。
+支持 {{htmlelement('datalist')}} 和 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) 的浏览器上应该显示一个自定义颜色调色板作为默认值，同时仍然提供完整的颜色调色板。
 
 在这种情况下，不同的浏览器在不同的情况下表现不同，所以要把这种使用视为渐进式增强，并确保它们优雅地降级。
 

@@ -62,11 +62,11 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 当拖拽发生时，数据必须与被拖拽的项目相关联。例如，当在文本框中拖拽选定的文本时，与拖拽数据项相关联的数据就是文本本身。类似地，当在 Web 页面上拖拽链接时，拖拽数据项就是链接的 URL。
 
-{{domxref("DataTransfer")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
+{{domxref("DataTransfer")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
 
-{{domxref("DataTransfer")}} 的 {{domxref("DataTransfer.types","types")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 或 [`image/jpeg`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 中。
+{{domxref("DataTransfer")}} 的 {{domxref("DataTransfer.types","types")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) 或 [`image/jpeg`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 中。
 
-一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 类型的普通文本数据，即一些简单的文本表示。
+一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) 类型的普通文本数据，即一些简单的文本表示。
 
 要在 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 中设置拖拽数据项，使用 {{domxref("DataTransfer.setData","setData()")}} 方法。这个方法接收两个参数，即数据类型和数据值。例如：
 
@@ -74,7 +74,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-在这个例子中，数据值是“Text to drag”，数据类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 格式。
+在这个例子中，数据值是“Text to drag”，数据类型是 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) 格式。
 
 你可以提供多种格式的数据。要做到这一点，可以用不同的格式多次调用 {{domxref("DataTransfer.setData","setData()")}} 方法。你应该传入尽量具体的格式。
 
@@ -89,7 +89,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 通过提供其他类型的数据，我们还可使用不那么具体的形式支持拖拽到其他应用程序。`application/x.bookmark` 类型可以提供更多的数据，以便在应用程序中使用，而另两个类型则只包含一个 URL 或文本版本。
 
-注意，在本例中，[`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link) 和 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 包含相同的数据。这通常是正确的，但不一定要这么做。
+注意，在本例中，[`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 和 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) 包含相同的数据。这通常是正确的，但不一定要这么做。
 
 如果你试图以相同的格式添加两次数据，那么新的数据将替换旧的数据。你可以使用 {{domxref("DataTransfer.clearData","clearData()")}} 方法清除这些数据，该方法接收一个参数，即要删除的数据类型。
 
@@ -217,7 +217,7 @@ function doDragOver(event) {
 }
 ```
 
-在本例中，我们使用 `includes` 方法来检查 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link) 是否出现在类型列表中。如果出现了，我们将取消这个事件以允许放置。如果拖拽数据不包含链接，则不取消事件，此位置也不允许放置。
+在本例中，我们使用 `includes` 方法来检查 [`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 是否出现在类型列表中。如果出现了，我们将取消这个事件以允许放置。如果拖拽数据不包含链接，则不取消事件，此位置也不允许放置。
 
 如果你希望更具体地限制操作类型，你可能还需要设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 或 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，或者两者都设置。当然，如果你不取消这个事件，改变这两个属性不会有任何效果。
 
@@ -268,7 +268,7 @@ function onDrop(event) {
 
 在一个网页中，如果你想接收一个放置，不想让浏览器的默认处理程序处理放置数据，你应该调用事件的 {{domxref("Event.preventDefault","preventDefault()")}} 方法。例如，当拖拽一个链接到网页时，Firefox 会打开这个链接。而你可以通过取消事件来阻止这样的行为。
 
-你可以取回其他类型的数据。如果数据是一个链接，其类型应为 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。你可以将链接插入到内容中。
+你可以取回其他类型的数据。如果数据是一个链接，其类型应为 [`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link)。你可以将链接插入到内容中。
 
 ```js
 function doDrop(event) {
@@ -285,7 +285,7 @@ function doDrop(event) {
 }
 ```
 
-这个例子使用拖拽数据插入链接。顾名思义，[`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link) 类型可包含一个 URL 列表，每行一个 URL。在上述代码中，我们使用 [split](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split) 方法将字符串按行分割，然后迭代列表的每一行，将每一个链接都插入到文档中。注意到我们跳过了井号（#）开头的链接，因为那些只是注释。
+这个例子使用拖拽数据插入链接。顾名思义，[`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 类型可包含一个 URL 列表，每行一个 URL。在上述代码中，我们使用 [split](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 方法将字符串按行分割，然后迭代列表的每一行，将每一个链接都插入到文档中。注意到我们跳过了井号（#）开头的链接，因为那些只是注释。
 
 在简单的情况中，你可以使用一个特别的类型 `URL` 来取回列表中第一个有效的 URL。例如：
 
@@ -333,5 +333,5 @@ function doDrop(event) {
 ## 参见
 
 - [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Recommended Drag Types](/zh-CN/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [Recommended Drag Types](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

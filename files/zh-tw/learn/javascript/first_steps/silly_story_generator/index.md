@@ -46,7 +46,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 ![](screen_shot_2018-09-19_at_10.01.38_am.png)
 
-點擊右方連結可以參考與測試完成品： [have a look at the finished example](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) （請不要偷看原始碼喔！）
+點擊右方連結可以參考與測試完成品： [have a look at the finished example](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) （請不要偷看原始碼喔！）
 
 ## 任務開始
 

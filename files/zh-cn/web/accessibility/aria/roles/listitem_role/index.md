@@ -28,7 +28,7 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
-- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role)
   - : 项目列表。角色为 `list` 的元素必须有一个或多个角色为 `listitem` 的元素作为子元素，一个或多个角色为 `group` 的元素具有一个或多个具有 `listitem` 角色的元素作为子元素。
 - [`group`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : 相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。

@@ -11,12 +11,12 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 概述：[介绍](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 
-- [关于这份指南](/zh-CN/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript.3F)
-- [关于 JavaScript](/zh-CN/docs/Web/JavaScript/Guide/Introduction#什么是_JavaScript)
-- [JavaScript 与 Java](/zh-CN/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java)
-- [ECMAScript](/zh-CN/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_the_ECMAScript_Specification)
-- [工具](/zh-CN/docs/Web/JavaScript/Guide/Introduction#Getting_started_with_JavaScript)
-- [Hello World](/zh-CN/docs/Web/JavaScript/Guide/Introduction#Hello_world)
+- [关于这份指南](/zh-CN/docs/Web/JavaScript/Guide/Introduction#what_is_javascript.3f)
+- [关于 JavaScript](/zh-CN/docs/Web/JavaScript/Guide/Introduction#什么是_javascript)
+- [JavaScript 与 Java](/zh-CN/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
+- [ECMAScript](/zh-CN/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
+- [工具](/zh-CN/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
+- [Hello World](/zh-CN/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
 ## 语法与数据类型
 
@@ -36,7 +36,7 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 - [`if...else`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_语句)
 - [`switch`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_语句)
 - [`try`/`catch`/`throw`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#异常处理语句)
-- [Error 对象](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#使用Error对象)
+- [Error 对象](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#使用error对象)
 
 ## 循环与迭代
 
@@ -64,8 +64,8 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 概述：[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [赋值](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)
-- [比较](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)
+- [赋值](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [比较](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
 - [算术运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#算术运算符)
 - [位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [逻辑运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#逻辑运算符)
@@ -77,7 +77,7 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 - [`Number` 字面量](/zh-CN/docs/WJavaScript/概述：Guide/Numbers_and_dates#数字)
 - [`Number` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#数字对象)
-- [`Math` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#数学对象（Math）)
+- [`Math` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#数学对象（math）)
 - [`Date` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#日期对象)
 
 ## 文本格式化
@@ -101,10 +101,10 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 概述：[带键集合](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections)
 
-- [`Map`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#Map对象)
-- [`WeakMap`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap对象)
-- [`Set`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#Set对象)
-- [`WeakSet`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#WeakSet对象)
+- [`Map`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#map对象)
+- [`WeakMap`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakmap对象)
+- [`Set`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#set对象)
+- [`WeakSet`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakset对象)
 
 ## 处理对象
 
@@ -117,9 +117,9 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 ## 对象模型的细节
 
-概述：[对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+概述：[对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-- [基于原型的面向对象编程](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs_prototype-based_languages)
+- [基于原型的面向对象编程](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs_prototype-based_languages)
 - [创建对象层次结构](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#%E5%88%9B%E5%BB%BA%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84)
 - [继承](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7)
 
@@ -154,11 +154,11 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 概述：[JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)
 
-- [导出模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#Exporting_module_features)
-- [导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#Importing_features_into_your_script)
-- [默认导出](/zh-CN/docs/Web/JavaScript/Guide/Modules#Default_exports_versus_named_exports)
-- [重命名模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports)
-- [合并模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#Aggregating_modules)
-- [动态加载模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#Dynamic_module_loading)
+- [导出模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
+- [导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
+- [默认导出](/zh-CN/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
+- [重命名模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
+- [合并模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+- [动态加载模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

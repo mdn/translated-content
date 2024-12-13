@@ -59,6 +59,6 @@ mediaRecorder.ondataavailable = (e) => {
 ## 参见
 
 - [使用 MediaStream 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)
-- [Web](http://mdn.github.io/web-dictaphone/) Dictaphone：[Chris Mills 提供的](https://twitter.com/chrisdavidmills) MediaRecorder + getUserMedia + Web Audio API 可视化演示 ([在 Github 上提供](https://github.com/mdn/web-dictaphone/))。
-- [simpl.info MediaStream 录制演示](http://simpl.info/mediarecorder/)，作者[Sam Dutton](https://twitter.com/sw12)。
+- [Web](https://mdn.github.io/web-dictaphone/) Dictaphone：[Chris Mills 提供的](https://twitter.com/chrisdavidmills) MediaRecorder + getUserMedia + Web Audio API 可视化演示 ([在 Github 上提供](https://github.com/mdn/web-dictaphone/))。
+- [simpl.info MediaStream 录制演示](https://simpl.info/mediarecorder/)，作者[Sam Dutton](https://twitter.com/sw12)。
 - {{domxref("Navigator.getUserMedia")}}

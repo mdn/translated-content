@@ -31,7 +31,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 
 ## 功能概述
 
-跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookie](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
+跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookie](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
 
 CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息對 JavaScript 是不可用的。代碼只知道發生了錯誤。確定具體錯誤的唯一方法是查看瀏覽器的控制台以獲取詳細訊息。
 

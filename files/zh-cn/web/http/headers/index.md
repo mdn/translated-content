@@ -391,7 +391,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("X-Requested-With")}}
   - : 待定
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP 标头用于指示网页如何在公共搜索引擎结果中编入索引。标头实际上等同于 `<meta name="robots" content="...">`。
+  - : [`X-Robots-Tag`](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag) HTTP 标头用于指示网页如何在公共搜索引擎结果中编入索引。标头实际上等同于 `<meta name="robots" content="...">`。
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : 由 Internet Explorer 用来指示要使用的文档模式。
 
@@ -401,6 +401,6 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 
 ## 参见
 
-- [维基百科中的 HTTP 标头列表](https://zh.wikipedia.org/wiki/HTTP%E5%A4%B4%E5%AD%97%E6%AE%B5)
+- [维基百科中的 HTTP 标头列表](https://zh.wikipedia.org/wiki/HTTP头字段)
 - [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)
 - [HTTP 工作组](https://httpwg.org/specs/)

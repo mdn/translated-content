@@ -24,7 +24,7 @@ myStorage = localStorage;
 ### 异常
 
 - `SecurityError`
-  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
+  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
 
 ## 示例
 
@@ -67,7 +67,7 @@ localStorage.clear();
 ## 参见
 
 - [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage（Window.localStorage）](/zh-CN/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage（Window.localStorage）](/zh-CN/docs/Web/API/Window/localStorage)
 - {{domxref("LocalStorage")}}
 - {{domxref("SessionStorage")}}
 - {{domxref("Window.sessionStorage")}}

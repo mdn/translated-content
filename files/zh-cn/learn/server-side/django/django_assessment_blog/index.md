@@ -264,7 +264,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 
    - 在表单验证后，你需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，你需要覆盖 `get_success_url()`，并为原来的博客“反转”URL。你可以使用`self.kwargs`属性，获取所需的博客 ID，如上面的 `form_valid()` 方法所示。
 
-我们简要地讨论了在[Django 教程 6：通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views)主题中，在基于类的视图中，将上下文传递给模板。要执行此操作，你需要覆盖`get_context_data()`（首先，获取现有上下文，使用要传递给模板的任何其他变量，更新它，然后返回更新的上下文）。例如，下面的代码片段，显示了如何根据`BlogAuthor` id，将 blogger 对象添加到上下文中。
+我们简要地讨论了在[Django 教程 6：通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views)主题中，在基于类的视图中，将上下文传递给模板。要执行此操作，你需要覆盖`get_context_data()`（首先，获取现有上下文，使用要传递给模板的任何其他变量，更新它，然后返回更新的上下文）。例如，下面的代码片段，显示了如何根据`BlogAuthor` id，将 blogger 对象添加到上下文中。
 
 ```python
 class SomeView(generic.ListView):

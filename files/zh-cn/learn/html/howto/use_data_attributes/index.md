@@ -78,4 +78,4 @@ IE 的支持度及显示效果是最主要讨论的问题。IE11+ 支持这个�
 
 - 该文章源自 [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - 在 SVG 2 中也同样支持自定义 data 属性; 请参看{{domxref("SVGElement.dataset")}} 和{{SVGAttr("data-*")}}.
-- [How to use HTML5 data attributes](http://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [How to use HTML5 data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

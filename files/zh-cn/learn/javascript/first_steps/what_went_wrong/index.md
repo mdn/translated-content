@@ -43,7 +43,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修复语法错误
 
-以前的课程中，你学会了在 [开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 中输入一些简单的 JavaScript 命令。（如果你忘记了如何在浏览器中打开它，可以直接打开上面的链接）。更实用的是，当 JavaScript 代码进入浏览器的 JavaScript 引擎时，如果存在语法错误，控制台会提供出错信息。现在我们去看一看。
+以前的课程中，你学会了在 [开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 中输入一些简单的 JavaScript 命令。（如果你忘记了如何在浏览器中打开它，可以直接打开上面的链接）。更实用的是，当 JavaScript 代码进入浏览器的 JavaScript 引擎时，如果存在语法错误，控制台会提供出错信息。现在我们去看一看。
 
 1. 打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
 
@@ -98,7 +98,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
    console.log(lowOrHi);
    ```
 
-   > **备注：** [`console.log()`](/zh-CN/docs/Web/API/Console/log) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
+   > **备注：** [`console.log()`](/zh-CN/docs/Web/API/console/log_static) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
 
 7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](屏幕快照_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
 8. 我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：

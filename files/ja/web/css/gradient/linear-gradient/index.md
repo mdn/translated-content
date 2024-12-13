@@ -1,6 +1,8 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -14,27 +16,37 @@ slug: Web/CSS/gradient/linear-gradient
 ```css
 /* 45度に傾いたグラデーションで、
    青から始まり赤で終わる */
-linear-gradient(45deg, blue, red);
+linear-gradient(45deg, blue, red)
 
 /* 右下から左上に向かうグラデーションで、
    青から始まり赤で終わる */
-linear-gradient(to left top, blue, red);
+linear-gradient(to left top, blue, red)
+
+/* 直交色空間での補間 */
+linear-gradient(in oklab, blue, red)
+
+/* 円筒色空間での補間 */
+linear-gradient(in hsl, blue, red)
+
+/* 円筒色区間での補間で、
+  色相の補間方法に longer を指定 */
+linear-gradient(in hsl longer hue, blue, red)
 
 /* 色経由点: 下から上に向かうグラデーションで、
    青から始まり、長さの 40% のところで緑になり、
    赤で終わる */
-linear-gradient(0deg, blue, green 40%, red);
+linear-gradient(0deg, blue, green 40%, red)
 
 /* 色ヒント: 左から右に向かうグラデーションで、
    赤から始まり、グラデーションの長さ全体の
    10% に中間点が来て、残りの 90% の長さをかけて
    青色に変わる */
-linear-gradient(.25turn, red, 10%, blue);
+linear-gradient(.25turn, red, 10%, blue)
 
 /* 複数位置の色経由点: 45 度傾いたグラデーションで、
    左下半分が赤で右上半分が青、
    赤から青への変化は明確な線 */
-linear-gradient(45deg, red 0 50%, blue 50% 100%);
+linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ```
 
 ### 値
@@ -46,21 +58,19 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
 
 - {{CSSxRef("&lt;angle&gt;")}}
-  - : グラデーション軸の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。</dd>
+  - : グラデーション軸の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。
 - `<linear-color-stop>`
-  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} の値であり、任意でその後に停止位置を指定します (グラデーションの軸に沿った {{CSSxRef("&lt;percentage&gt;")}} または {{CSSxRef("&lt;length&gt;")}} の位置)。</dd>
+  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} の値であり、任意でその後に停止位置を指定します (グラデーションの軸に沿った {{CSSxRef("&lt;percentage&gt;")}} または {{CSSxRef("&lt;length&gt;")}} の位置)。
 - `<color-hint>`
-  - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する補間のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
+  - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する{{glossary("interpolation","補間")}}のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
->
-> なお、上記の最初の例は、 Mozilla Firefox (特にバージョン 80.0b3) では、正確には図のようには表示されません。描かれているように表示するには、 html の height プロパティを 100% または 100vh に設定する必要があります。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じルールに従います。
 
 ## 解説
 
-他のグラデーションと同様、線形グラデーションは[自身の寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、画像本来の寸法や、推奨される縦横比を持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
+他のグラデーションと同様、線形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#解説)。つまり、画像本来の寸法や、推奨される縦横比を持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
 
-繰り返して領域を埋め尽くす線形グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} 関数を使用してください。
+繰り返して領域を埋め尽くす線形グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 関数を使用してください。
 
 `<gradient>` は CSS の `<image>` データ型に所属しますので、 `<image>` が使用できるところでのみ使用できます。このため、 `linear-gradient` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} を要求するプロパティでは動作しません。
 
@@ -107,18 +117,22 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
 
 既定では、 0% の経由点に色がない場合、宣言されている最初の色がその場所の色になります。同様に、最後の色経由点に位置が宣言されていない場合は、最後の色が 100% の位置まで続くか、 100% の位置の色になります。
 
+## 公式定義
+
+{{csssyntax}}
+
 ## 例
 
-<h3 id="Gradient_at_a_45-degree_angle">45 度 のグラデーション</h3>
+### 45 度 のグラデーション
 
-```css hidden
+```css hidden live-sample___gradient_at_a_45-degree_angle
 body {
   width: 100vw;
   height: 100vh;
 }
 ```
 
-```css
+```css live-sample___gradient_at_a_45-degree_angle
 body {
   background: linear-gradient(45deg, red, blue);
 }
@@ -126,16 +140,16 @@ body {
 
 {{EmbedLiveSample("Gradient_at_a_45-degree_angle", 120, 120)}}
 
-<h3 id="Gradient_that_starts_at_60_of_the_gradient_line">グラデーション軸の 60% から始まるグラデーション</h3>
+### グラデーション軸の 60% から始まるグラデーション
 
-```css hidden
+```css hidden live-sample___gradient_that_starts_at_60_of_the_gradient_line
 body {
   width: 100vw;
   height: 100vh;
 }
 ```
 
-```css
+```css live-sample___gradient_that_starts_at_60_of_the_gradient_line
 body {
   background: linear-gradient(135deg, orange 60%, cyan);
 }
@@ -143,7 +157,55 @@ body {
 
 {{EmbedLiveSample("Gradient_that_starts_at_60_of_the_gradient_line", 120, 120)}}
 
-<h3 id="Gradient_with_multi-position_color_stops">複数の位置の色経由点があるグラデーション</h3>
+### 直交色空間での補間
+
+```css hidden live-sample___interpolation_in_rectangular_color_space
+body {
+  width: 100vw;
+  height: 100vh;
+}
+```
+
+```css live-sample___interpolation_in_rectangular_color_space
+body {
+  background: linear-gradient(90deg in oklab, blue, red);
+}
+```
+
+{{EmbedLiveSample("Interpolation in rectangular color space", 120, 120)}}
+
+### 色相の補間
+
+```html hidden live-sample___interpolating_with_hue
+<div class="shorter">shorter hue</div>
+<div class="longer">longer hue</div>
+```
+
+```css hidden live-sample___interpolating_with_hue
+div {
+  height: 50vh;
+  color: white;
+  font-weight: bolder;
+}
+```
+
+この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系が使用され、[色相](/ja/docs/Web/CSS/hue)が補間されています。
+
+```css live-sample___interpolating_with_hue
+.shorter {
+  background: linear-gradient(90deg in hsl shorter hue, red, blue);
+}
+
+.longer {
+  background: linear-gradient(90deg in hsl longer hue, red, blue);
+}
+```
+
+上のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使って、赤から青に直接色が変化することを意味しています。下のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、緑、黄、オレンジを読みながら、長い円弧を使って赤から青に色が変化することを意味しています。
+
+{{EmbedLiveSample("Interpolating with hue", 120, 120)}}
+
+### 複数の位置の色経由点があるグラデーション
 
 この例は複数の位置の色経由点を使用しており、隣り合う色に同じ色経由値があるため、縞模様の効果になります。
 
@@ -169,9 +231,9 @@ body {
 
 {{EmbedLiveSample("Gradient_with_multi-position_color_stops", 120, 120)}}
 
-<h3 id="More_linear-gradient_examples">その他のグラデーションの例</h3>
+### その他のグラデーションの例
 
-他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を参照してください。
+他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を参照してください。
 
 ## 仕様書
 
@@ -183,10 +245,9 @@ body {
 
 ## 関連情報
 
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- 他のグラデーション関数: {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- 他のグラデーション関数: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("image/image()","image()")}}
-- {{cssxref("image/image-set()","image-set()")}}
-- {{cssxref("cross-fade()")}}
+- [CSS 画像モジュール](/ja/docs/Web/CSS/CSS_images)

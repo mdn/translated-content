@@ -26,7 +26,7 @@ slug: Web/Media
 
 - [媒体功能 API](/zh-CN/docs/Web/API/Media_Capabilities_API)
   - : 媒体功能 API 可以确定运行你的应用程序或网站的设备的编码和解码能力，让你实时决定使用的格式以及时机。
-- [媒体捕获和流媒体 API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕获和流媒体 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
   - : 使得串流、播放和控制本地和网络媒体成为可能的 API 参考文献。包括使用本地摄像头与麦克风来抓取视频、音频和静止图片。
 - [媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API)
   - : 媒体会话 API 提供了一种定制媒体通知的方法。它通过提供元数据，让用户代理显示你的网络应用程序正在播放的媒体。它还提供了行动处理程序，浏览器可以用来访问平台媒体键，如键盘、耳机、遥控器上的硬件键，以及通知区和移动设备锁屏上的软件键。

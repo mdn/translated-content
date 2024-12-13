@@ -155,7 +155,7 @@ slug: Web/CSS/@font-face
 
 ## 參見
 
-- [關於 WOFF](/zh-TW/docs/WOFF)
+- [關於 WOFF](/zh-TW/docs/Web/CSS/CSS_fonts/WOFF)
 - [FontSquirrel @font-face 生成器](https://www.fontsquirrel.com/tools/webfont-generator)
 - [使用 @font-face 的漂亮字型](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

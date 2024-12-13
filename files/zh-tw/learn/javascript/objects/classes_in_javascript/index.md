@@ -40,7 +40,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 ## 入門
 
-首先將 [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) 檔案 (亦可參考[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)) 複製到本端磁碟。可在裡面找到本課程一直沿用的 `Person()` 建構子範例，但這裡有些許不同，也就是該建構子只定義了屬性：
+首先將 [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) 檔案 (亦可參考[實際執行](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)) 複製到本端磁碟。可在裡面找到本課程一直沿用的 `Person()` 建構子範例，但這裡有些許不同，也就是該建構子只定義了屬性：
 
 ```js
 function Person(first, last, age, gender, interests) {
@@ -201,20 +201,20 @@ teacher1.greeting();
 這樣應該運作無虞。前 3 行的存取成員即繼承自一般 `Person()` 建構子 (類別)。最後 2 行的存取成員只能用於特定的 `Teacher()` 建構子 (類別) 之上。
 
 > [!NOTE]
-> 如果你無法進行到現有進度，可比較自己與[完整版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)的情形) 的程式碼。
+> 如果你無法進行到現有進度，可比較自己與[完整版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (亦可看[實際執行](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)的情形) 的程式碼。
 
 這裡所提的技巧，當然不是在 JavaScript 建立繼承類別的唯一方法，但足以堪用。並可讓你了解應如何於 JavaScript 實作繼承。
 
 你可能也想看看某些新的 {{glossary("ECMAScript")}} 功能，可更簡潔的在 JavaScript 中繼承 (參閱 [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes))。但由於這些功能尚未廣泛支援其他瀏覽器，這裡先略過不提。本系列文章中提到的其他程式碼，均可回溯支援到 IE9 或更早版本。當然還是有辦法支援更舊的版本。
 
-一般方法就是使用 JavaScript 函式庫，且最常見的就是簡單集結可用的功能，更快、更輕鬆的完成繼承。例如 [CoffeeScript](http://coffeescript.org/#classes) 即提供了 `class`、`extends` 等等。
+一般方法就是使用 JavaScript 函式庫，且最常見的就是簡單集結可用的功能，更快、更輕鬆的完成繼承。例如 [CoffeeScript](https://coffeescript.org/#classes) 即提供了 `class`、`extends` 等等。
 
 ## 進階習題
 
-在[〈OOP 理論〉段落](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
+在[〈OOP 理論〉段落](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
 
 > [!NOTE]
-> 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。
+> 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。
 
 ## 物件成員摘要
 
