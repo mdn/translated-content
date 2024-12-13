@@ -24,20 +24,20 @@ l10n:
 - {{WebExtAPIRef("management.ExtensionInfo")}}
   - : 包含已安装的附加组件的相关信息的对象。
 
-### 函数
+## 函数
 
 - {{WebExtAPIRef("management.getAll()")}}
   - : 返回所有已安装的附加组件的相关信息。
 - {{WebExtAPIRef("management.get()")}}
   - : 返回给定 ID 的附加组件的相关信息。
 - {{WebExtAPIRef("management.getSelf()")}}
-  - : 返回调用附加组件的相关信息。
+  - : 返回正在调用该函数的附加组件的相关信息。
 - {{WebExtAPIRef("management.install()")}}
   - : 安装特定主题（需要提供其在 [addons.mozilla.org](https://addons.mozilla.org) 上的 URL）。
 - {{WebExtAPIRef("management.uninstall()")}}
   - : 卸载给定 ID 的附加组件。
 - {{WebExtAPIRef("management.uninstallSelf()")}}
-  - : 卸载正在调用该方法的附加组件。
+  - : 卸载正在调用该函数的附加组件。
 - {{WebExtAPIRef("management.getPermissionWarningsById()")}}
   - : 获取给定 ID 的附加组件的权限警告集合。
 - {{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}
