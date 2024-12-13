@@ -162,7 +162,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 ### 动画多边形
 
-在这个示例中，我们使用了[@keyframes](/zh-CN/docs/Web/CSS/@keyframes) {{cssxref("At-rule", "at 规则")}}为两个多边形之间的裁剪路径创建动画效果。请注意，这两个多边形必须具有相同数量的顶点，这是此类动画能够正常工作的必要条件。
+在这个示例中，我们使用了[@keyframes](/zh-CN/docs/Web/CSS/@keyframes) at 规则为两个多边形之间的裁剪路径创建动画效果。请注意，这两个多边形必须具有相同数量的顶点，这是此类动画能够正常工作的必要条件。
 
 #### HTML
 
