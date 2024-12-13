@@ -19,7 +19,7 @@ Cookie 主要用于以下三个方面：
 Cookie 曾一度用于客户端数据的存储，因当时并没有其他合适的存储办法而作为唯一的存储手段，但现在推荐使用现代存储 API。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 [Web storage API](/zh-CN/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 。
 
 > [!NOTE]
-> 要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用存储查看器（[Storage Inspector](/zh-CN/docs/Tools/Storage_Inspector)）功能，并在存储树上选中 Cookie。
+> 要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用存储查看器（[Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)）功能，并在存储树上选中 Cookie。
 
 ## 创建 Cookie
 
@@ -76,7 +76,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 > [!NOTE]
 > 当 Cookie 的过期时间（ `Expires`）被设定时，设定的日期和时间只与客户端相关，而不是服务端。
 
-如果你的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止[会话固定攻击（session fixation attacks）](/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation)，在该攻击中第三方可以重用用户的会话。
+如果你的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止[会话固定攻击（session fixation attacks）](/zh-CN/docs/Web/Security/Types_of_attacks#session_fixation)，在该攻击中第三方可以重用用户的会话。
 
 ### 限制访问 Cookie
 
@@ -142,7 +142,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 
 cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。
 
-子域上的易受攻击的应用程序可以使用 `Domain` 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。*会话劫持*攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（session fixation）](/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation)。
+子域上的易受攻击的应用程序可以使用 `Domain` 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。*会话劫持*攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（session fixation）](/zh-CN/docs/Web/Security/Types_of_attacks#session_fixation)。
 
 但是，作为[深度防御措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，可以使用 *cookie 前缀*来断言有关 cookie 的特定事实。有两个前缀可用：
 
@@ -156,7 +156,7 @@ cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置�
 > [!NOTE]
 > 在应用程序服务器上，Web 应用程序**必须**检查完整的 cookie 名称。用户代理程序在将其发送到请求的 {{HTTPHeader("Cookie")}} 标头之前，**不会**从 cookie 中剥离前缀。
 
-有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅[Set-Cookie 参考文章的前缀部分](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_前缀)。
+有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅[Set-Cookie 参考文章的前缀部分](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#cookie_前缀)。
 
 #### JavaScript 通过 Document.cookie 访问 Cookie
 
@@ -181,7 +181,7 @@ console.log(document.cookie);
 缓解涉及 Cookie 的攻击的方法：
 
 - 使用 `HttpOnly` 属性可防止通过 JavaScript 访问 cookie 值。
-- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为 `Strict` 或 `Lax`。（请参见上方的 [SameSite 属性](#samesite_属性)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility)中，这样做的作用是确保不与跨站点请求一起发送身份验证 cookie。因此，这种请求实际上不会向应用服务器进行身份验证。
+- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为 `Strict` 或 `Lax`。（请参见上方的 [SameSite 属性](#samesite_属性)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility)中，这样做的作用是确保不与跨站点请求一起发送身份验证 cookie。因此，这种请求实际上不会向应用服务器进行身份验证。
 
 ## 跟踪和隐私
 

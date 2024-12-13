@@ -301,8 +301,8 @@ log("Main program exiting");
 - {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}
 - [Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
 
-  - [General asynchronous programming concepts](/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts)
+  - [General asynchronous programming concepts](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
   - [Introducing asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-CN/docs/Learn/JavaScript/Asynchronous)
   - [Graceful asynchronous programming with Promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+  - [Choosing the right approach](/zh-CN/docs/Learn/JavaScript/Asynchronous)

@@ -9,7 +9,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
-所有这些自定义数据属性都可以通过所属元素的 {{domxref("HTMLElement")}} 接口来访问。 {{domxref("HTMLElement.dataset")}} 属性可以访问它们。 `*` 可以使用遵循 [xml 名称生产规则](http://www.w3.org/TR/REC-xml/#NT-Name) 的任何名称来被替换，并具有以下限制：
+所有这些自定义数据属性都可以通过所属元素的 {{domxref("HTMLElement")}} 接口来访问。 {{domxref("HTMLElement.dataset")}} 属性可以访问它们。 `*` 可以使用遵循 [xml 名称生产规则](https://www.w3.org/TR/REC-xml/#NT-Name) 的任何名称来被替换，并具有以下限制：
 
 - 该名称不能以`xml`开头，无论这些字母是大写还是小写；
 - 该名称不能包含任何分号 (`U+003A`)；

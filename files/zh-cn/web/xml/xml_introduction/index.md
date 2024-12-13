@@ -82,7 +82,7 @@ XML——声明并非是一种标签，其用于传输文档的元数据。
 | &amp;quot; | "    | 一个双引号 |
 | &amp;apos; | '    | 一个单引号 |
 
-这里只有五个声明的实体，更多的方法可以借助[文档类型定义](/zh-CN/docs/Glossary/DTD)引入。例如，为了创建一个 `&warning;` 实体，你可以这样做：
+这里只有五个声明的实体，更多的方法可以借助[文档类型定义](/zh-CN/docs/Glossary/Doctype)引入。例如，为了创建一个 `&warning;` 实体，你可以这样做：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

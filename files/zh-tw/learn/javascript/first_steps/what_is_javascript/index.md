@@ -100,7 +100,7 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 - {{domxref("Document_Object_Model","DOM （文件物件模型） API")}} 讓你能操作 HTML 和 CSS，像是建立、移除或改變 HTML 元素，或動態地將新樣式套用到頁面…等等。每當你看到彈出視窗，或有新的內容出現在畫面上（就像上面的範例所展示的），那就是 DOM 在動作。
 - {{domxref("Geolocation","Geolocations（地理位置） API")}} 可以取得位置資訊。這就是 [Google Maps](https://www.google.com/maps) 取得你的位置並標示在地圖上所透過的方式。
 - {{domxref("Canvas_API","Canvas")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以讓你在網頁創造 2D 動畫及 3D 圖像。人們正使用這些技術來作一些令人驚奇的事，參見 [Chrome Experiments](https://www.chromeexperiments.com/) 及 [webglsamples](https://webglsamples.org/).
-- [Audio 和 Video API](/zh-TW/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
+- [Audio 和 Video API](/zh-TW/docs/Web/Media/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
 
 > [!NOTE]
 > 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
@@ -149,7 +149,7 @@ function updateName() {
 
 這裡我們選擇了一個文字段落（第 1 行），然後加上事件偵聽器，所以當段落被點擊的時候，`updateName()` 程式區塊（5 到 8 行 ）會被執行。`updateName()` 程式區塊（這種可以重複使用的程式區塊被稱為「函數 function」）會向使用者要一個新的名字，然後將插到段落中，更新顯示的內容。
 
-如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
+如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
 
 > [!NOTE]
 > 這是一個很常見的錯誤，在你嘗試對物件進行操作之前，你需要注意它們已經存在。
@@ -407,6 +407,6 @@ for (var i = 0; i < buttons.length; i++) {
 
 所以你已經踏出在 JavaScript 世界中的第一步。我們從理論開始，逐漸熟悉使用 JavaScript 的原因，以及你可以用它做些什麼。過程中你看到了一些程式碼範例，學到如何將 JavaScript 與你網站的其它東西放在一起。
 
-JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
+JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

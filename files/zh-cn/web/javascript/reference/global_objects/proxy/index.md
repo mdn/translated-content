@@ -67,7 +67,7 @@ const p = new Proxy(target, handler)
 - {{JSxRef("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
   - : {{JSxRef("Operators/new", "new")}} 操作符的捕捉器。
 
-一些不标准的捕捉器已经被[废弃并且移除](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy)了。
+一些不标准的捕捉器已经被[废弃并且移除](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy)了。
 
 ## 示例
 
@@ -143,7 +143,7 @@ person.age = 300;
 
 ### 扩展构造函数
 
-方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了[`construct`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)和[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply)。
+方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了[`construct`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)和[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply)。
 
 ```js
 function extend(sup, base) {
@@ -275,7 +275,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### 通过属性查找数组中的特定对象
 
-以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 [`table.rows`](/zh-CN/docs/DOM/table.rows)。
+以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 [`table.rows`](/zh-CN/docs/Web/API/HTMLTableElement/rows)。
 
 ```js
 let products = new Proxy(
@@ -408,7 +408,7 @@ console.log(docCookies.myCookie1);
 
 ## 参考
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
 - [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) and [ECMAScript Harmony proxy semantics page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
 - [Tutorial on proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
 - [SpiderMonkey specific Old Proxy API](/zh-CN/docs/JavaScript/Old_Proxy_API)
@@ -416,4 +416,4 @@ console.log(docCookies.myCookie1);
 
 ## 版权声明
 
-一些内容（如文本、例子）是复制自或修改自[ECMAScript wiki](http://wiki.ecmascript.org/doku.php)（版权声明 [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)）。
+一些内容（如文本、例子）是复制自或修改自[ECMAScript wiki](http://wiki.ecmascript.org/doku.php)（版权声明 [CC 2.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/2.0/)）。

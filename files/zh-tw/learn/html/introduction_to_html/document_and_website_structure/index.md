@@ -193,7 +193,7 @@ It's good to understand the overall meaning of all the HTML sectioning elements 
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
 - {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
+- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
 - {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
 - {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title)).
 - {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
@@ -313,6 +313,6 @@ At this point you should have a better idea about how to structure a web page/si
 
 ## See also
 
-- [Using HTML sections and outlines](/zh-TW/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [Using HTML sections and outlines](/zh-TW/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

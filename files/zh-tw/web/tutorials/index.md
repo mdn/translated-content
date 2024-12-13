@@ -16,7 +16,7 @@ slug: Web/Tutorials
 
 - [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)
   - : 此單元，為了孰悉重要的概念和語法，思考將 HTML 轉為文字, 如何建立超連鏈接, 以及如何使用 HTML 架構建立網站做好準備。
-- **[MDN HTML 元素引用](/zh-TW/docs/HTML/Element)**
+- **[MDN HTML 元素引用](/zh-TW/docs/Web/HTML/Element)**
   - : HTML 元素綜合參考。以及在不同瀏覽器的支援程度。
 - **[使用 HTML 建立一個簡易網站](https://www.theblogstarter.com/html-for-beginners/) (The Blog Starter)**
   - : 適用於 HTML 初學者的指南，其中包含常見的標籤( tag ), 其中包括利用編碼範例步驟，一步步指導建立一個基本網頁。
@@ -36,7 +36,7 @@ slug: Web/Tutorials
 
 - [HTML 表單](/zh-TW/docs/Learn/Forms)
   - : 表單是網際網路一個非常重要的部分 - 這些涵蓋了網站互動所需的大部分功能，例如 : 註冊、登入、發送回饋，購買產品等。本文將幫助你開始創建客戶回饋表單。
-- **[給程式創作者快速載入 HTML 網頁的提示](/zh-TW/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)**
+- **[給程式創作者快速載入 HTML 網頁的提示](/zh-TW/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)**
   - : 優化網頁，為使用者提供響應式網站，減少 web 服務器和 Internet 連線的負擔。
 
 ## CSS 教學
@@ -51,14 +51,14 @@ slug: Web/Tutorials
   - : 接下來，我們來看看樣式框，這是建立網頁的基本步驟之一。 在本單元中，我們回顧一下框框模組，通過設置邊框和邊距，自定義背景顏色，圖像和其它以及酷炫的功能（如陰影和框上的濾鏡）來查看樣式框佈局。
 - [樣式文本](/zh-TW/docs/Learn/CSS/Styling_text)
   - : 在此，我們看看文本樣式基礎，包括設置字體，粗體和斜體，線條和字母間距以及陰影和其他文本功能。 我們通過查看將自定義字體應用於頁面以及樣式列表和鏈接來完善模組。
-- **[常見的 CSS 問題](/zh-TW/docs/Common_CSS_Questions)**
+- **[常見的 CSS 問題](/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ)**
   - : 初學者的常見問題及解答。
 
 ### 中級
 
 - [CSS 布局](/zh-TW/docs/Learn/CSS/CSS_layout)
   - : 此時，我們已看過 CSS 基礎知識，如何設置文本樣式，以及如何設置和操作內容所在的框框。 現在是時候看看如何將框框放在彼此之間相對位置上的正確位置。 我們已經涵蓋了必要的先決條件，因此現在可以深入了解 CSS 佈局，查看不同的顯示設置，包含浮動和定位的傳統佈局方法，以及 Flexbox 等新的佈局工具。
-- **[CSS 參考](/zh-TW/docs/CSS/CSS_Reference)**
+- **[CSS 參考](/zh-TW/docs/Web/CSS/Reference)**
   - : 完整參考 CSS，詳細介紹 Firefox 和其他瀏覽器的支援度。
 - **[流變格線框架](https://alistapart.com/article/fluidgrids/) (A List Apart)**
   - : 在瀏流器視窗大小調整的同時，能夠流暢地調整內容大小的設計佈局，同時使用字體排版格線。
@@ -69,7 +69,7 @@ slug: Web/Tutorials
 
 - **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)**
   - : Apply rotation, skewing, scaling, and translation using CSS.
-- **[CSS transitions](/zh-TW/docs/CSS/CSS_transitions)**
+- **[CSS transitions](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)**
   - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - **[Quick Guide to Implement Web Fonts with @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)**
   - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
@@ -101,7 +101,7 @@ slug: Web/Tutorials
   - : In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.
 - [Client-side web APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)
   - : When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
-- **[A re-Introduction to JavaScript](/zh-TW/docs/A_re-introduction_to_JavaScript)**
+- **[A re-Introduction to JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)**
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - **[Eloquent JavaScript](https://eloquentjavascript.net/)**
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
