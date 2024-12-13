@@ -2,7 +2,7 @@
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 665b94c45d49c71009c3e6c9a9e0f601b6af0d82
 ---
 
 {{AddonSidebar}}
@@ -13,11 +13,11 @@ l10n:
 
 你的扩展应该在 [sidebar_action](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 清单键中指定侧边栏的标题（这被称为“_清单标题_”）。如果你没有指定清单标题，则将默认使用扩展名作为标题。
 
-如果你使用 `setTitle()` 设置新标题，并包含了 `tabId` 选项，那么标题仅为给定的标签设置。这个标题称为“_标签特定标题_”。
+如果你使用 `setTitle()` 设置新标题，并包含了 `tabId` 选项，那么标题仅为给定的标签页设置。这个标题称为“_标签页特定标题_”。
 
-如果你使用 `setTitle()` 设置新标题，并包含了 `windowId` 选项，那么标题仅为给定的窗口设置。这个标题称为“_窗口特定标题_”，并将出现在该窗口的所有标签中，这些标签没有设置标签特定标题。
+如果你使用 `setTitle()` 设置新标题，并包含了 `windowId` 选项，那么标题仅为给定的窗口设置。这个标题称为“_窗口特定标题_”，并将出现在该窗口的所有没有设置标签页特定标题的标签页中。
 
-如果你使用 `setTitle()` 设置新标题，并省略了 `tabId` 和 `windowId` 选项，那么这将设置“_全局标题_”。全局标题将出现在所有没有设置标签特定标题的标签中，且其窗口没有设置窗口特定标题的标签中。
+如果你使用 `setTitle()` 设置新标题，并省略了 `tabId` 和 `windowId` 选项，那么这将设置“_全局标题_”。全局标题将出现在所有没有设置标签页特定标题的标签中，且其窗口没有设置窗口特定标题的标签页中。
 
 ## 语法
 
@@ -41,7 +41,7 @@ browser.sidebarAction.setTitle(
 
         如果 `title` 为 `null`，那么之前设置的标题将会被移除，并且：
 
-        - 如果指定了 `tabId`，并且该标签页设置了特定的标签页标题，则该标签页将继承其所属窗口的标题。
+        - 如果指定了 `tabId`，并且该标签页设置了标签页特定的标题，则该标签页将继承其所属窗口的标题。
         - 如果指定了 `windowId`，并且该窗口设置了特定的窗口标题，则该窗口将继承全局标题。
         - 否则，全局标题将被重置为清单标题。
 
