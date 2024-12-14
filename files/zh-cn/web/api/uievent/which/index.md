@@ -30,7 +30,7 @@ slug: Web/API/UIEvent/which
 > [!NOTE]
 > 新代码请考虑使用 {{domxref("MouseEvent.button")}}。
 
-## 例子
+## 示例
 
 ```html
 <html>
@@ -84,7 +84,7 @@ slug: Web/API/UIEvent/which
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("KeyboardEvent")}}
 - {{domxref("MouseEvent")}}
