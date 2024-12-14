@@ -17,6 +17,7 @@ slug: Web/API/UIEvent/which
 > 新代码请考虑KeyboardEvent.key或KeyboardEvent.code。
 
 ### 鼠标事件的值 {{Non-standard_Inline}}
+
 对于鼠标事件，`event.which` 表示给定按钮的数字：
 
 - `0`：无按钮
