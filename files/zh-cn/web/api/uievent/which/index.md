@@ -14,7 +14,7 @@ slug: Web/API/UIEvent/which
 对于{{domxref("KeyboardEvent")}}, `event.which` 包含特定按键按下的数字代码，具体取决于是否按下了字母数字键或非字母数字键。有关更多详细信息，请参阅已弃用的{{domxref("KeyboardEvent.charCode")}}和{{domxref("KeyboardEvent.keyCode")}}。
 
 > [!NOTE]
-> 新代码请考虑KeyboardEvent.key或KeyboardEvent.code。
+> 新代码请考虑 KeyboardEvent.key 或 KeyboardEvent.code。
 
 ### 鼠标事件的值 {{Non-standard_Inline}}
 
