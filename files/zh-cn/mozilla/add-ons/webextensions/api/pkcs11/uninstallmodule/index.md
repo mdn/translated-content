@@ -26,7 +26,7 @@ let uninstalling = browser.pkcs11.uninstallModule(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当模块被卸载后将不以任何参数兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当模块被卸载后将不带任何参数兑现。
 
 若无法找到模块或发生其他错误，该 Promise 将以错误消息拒绝。
 
