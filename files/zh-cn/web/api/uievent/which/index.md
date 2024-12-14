@@ -1,6 +1,8 @@
 ---
 title: UIEvent：which 属性
 slug: Web/API/UIEvent/which
+l10n:
+  sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
 {{APIRef("UI Events")}}{{Deprecated_Header}}
@@ -11,7 +13,7 @@ slug: Web/API/UIEvent/which
 
 ### KeyboardEvent 的值 {{Non-standard_Inline}}
 
-对于 {{domxref("KeyboardEvent")}}, `event.which` 包含按下的特定按键的数字代码，具体取决于是否按下了字母数字键或非字母数字键。有关更多详细信息，请参阅已弃用的{{domxref("KeyboardEvent.charCode")}} 和 {{domxref("KeyboardEvent.keyCode")}}。
+对于 {{domxref("KeyboardEvent")}}，`event.which` 包含按下的特定按键的数字代码，具体取决于是否按下了字母数字键或非字母数字键。有关更多详细信息，请参阅已弃用的{{domxref("KeyboardEvent.charCode")}} 和 {{domxref("KeyboardEvent.keyCode")}}。
 
 > [!NOTE]
 > 新代码请考虑使用 {{domxref("KeyboardEvent.key")}} 或 {{domxref("KeyboardEvent.code")}}。
@@ -33,45 +35,33 @@ slug: Web/API/UIEvent/which
 ## 示例
 
 ```html
-<html>
+<html lang="zh">
   <head>
-    <title>charCode/keyCode/which example</title>
+    <title>charCode/keyCode/which 示例</title>
 
-    <script type="text/javascript">
+    <script>
       function showKeyPress(evt) {
         alert(
-          "onkeypress handler: \n" +
-            "keyCode property: " +
-            evt.keyCode +
-            "\n" +
-            "which property: " +
-            evt.which +
-            "\n" +
-            "charCode property: " +
-            evt.charCode +
-            "\n" +
-            "Character Key Pressed: " +
-            String.fromCharCode(evt.charCode) +
-            "\n",
+          `onkeypress 处理器：\n` +
+            `keyCode 属性：${evt.keyCode}\n` +
+            `which 属性：${evt.which}\n` +
+            `charCode 属性：${evt.charCode}\n` +
+            `按下的字符键：${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
       function keyDown(evt) {
         alert(
-          "onkeydown handler: \n" +
-            "keyCode property: " +
-            evt.keyCode +
-            "\n" +
-            "which property: " +
-            evt.which +
-            "\n",
+          `onkeydown 处理器：\n` +
+            `keyCode 属性：${evt.keyCode}\n` +
+            `which 属性：${evt.which}\n`,
         );
       }
     </script>
   </head>
 
   <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
-    <p>Please press any key.</p>
+    <p>请按任意键。</p>
   </body>
 </html>
 ```
