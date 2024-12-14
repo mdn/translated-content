@@ -18,7 +18,7 @@ slug: Web/API/UIEvent/which
 
 ### MouseEvent 的值 {{Non-standard_Inline}}
 
-对于鼠标事件，`event.which` 表示给定按钮的数字：
+对于 {{domxref("MouseEvent")}}，`event.which` 是表示给定按钮的数字：
 
 - `0`：无按钮
 - `1`：左键
