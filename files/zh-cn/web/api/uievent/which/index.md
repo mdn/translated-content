@@ -1,5 +1,5 @@
 ---
-title: UIEvent.which 属性
+title: UIEvent：which 属性
 slug: Web/API/UIEvent/which
 ---
 
@@ -9,25 +9,26 @@ slug: Web/API/UIEvent/which
 
 ## 值
 
-### 键盘事件的值 {{Non-standard_Inline}}
+### KeyboardEvent 的值 {{Non-standard_Inline}}
 
-对于{{domxref("KeyboardEvent")}}, `event.which` 包含特定按键按下的数字代码，具体取决于是否按下了字母数字键或非字母数字键。有关更多详细信息，请参阅已弃用的{{domxref("KeyboardEvent.charCode")}}和{{domxref("KeyboardEvent.keyCode")}}。
+对于 {{domxref("KeyboardEvent")}}, `event.which` 包含按下的特定按键的数字代码，具体取决于是否按下了字母数字键或非字母数字键。有关更多详细信息，请参阅已弃用的{{domxref("KeyboardEvent.charCode")}} 和 {{domxref("KeyboardEvent.keyCode")}}。
 
 > [!NOTE]
-> 新代码请考虑 KeyboardEvent.key 或 KeyboardEvent.code。
+> 新代码请考虑使用 {{domxref("KeyboardEvent.key")}} 或 {{domxref("KeyboardEvent.code")}}。
 
-### 鼠标事件的值 {{Non-standard_Inline}}
+### MouseEvent 的值 {{Non-standard_Inline}}
 
 对于鼠标事件，`event.which` 表示给定按钮的数字：
 
 - `0`：无按钮
 - `1`：左键
-- `2`：中间按钮（如果有）
+- `2`：中键（如果有）
 - `3`：右键
-  对于配置为左撇子使用的鼠标，按钮操作是相反的。在这种情况下，从右到左读取值。
+
+对于配置为左利手使用的鼠标，按钮操作是相反的。在这种情况下，从右到左读取值。
 
 > [!NOTE]
-> 在新代码中可以考虑使用{{domxref("MouseEvent.button")}}。
+> 新代码请考虑使用 {{domxref("MouseEvent.button")}}。
 
 ## 例子
 
