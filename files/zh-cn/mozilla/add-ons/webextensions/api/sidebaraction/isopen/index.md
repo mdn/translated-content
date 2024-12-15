@@ -14,7 +14,7 @@ l10n:
 - 如果提供了 `windowId`，则函数将检查给定的浏览器窗口。
 - 如果省略了 `windowId`，则函数将检查最顶层的浏览器窗口。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -28,10 +28,10 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
 
 - `details`
 
-  - : `object`，包含可选的 `windowId` 属性用以检查的对象：
+  - : `object`。一个对象，可选地包含要检查的 `windowId` 属性。
 
     - `windowId` {{optional_inline}}
-      - : `integer`，要检查的浏览器窗口的 ID。如果省略，则默认为 {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}，它引用最顶层的浏览器窗口。
+      - : `integer`。要检查的浏览器窗口的 ID。如果省略，则默认为 {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}，它引用最顶层的浏览器窗口。
 
 ### 返回值
 
