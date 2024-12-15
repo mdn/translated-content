@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-**`omnibox.OnInputEnteredDisposition`** 类型描述了扩展应如何处理用户在地址栏的下拉菜单中的推荐中选择的那一推荐。
+**`omnibox.OnInputEnteredDisposition`** 类型描述了扩展应如何处理用户在地址栏的下拉菜单中的推荐中选择的推荐。
 
-它与选择本身一起传递到 {{WebExtAPIRef("omnibox.onInputEntered")}} 事件监听器中。
+它将与选择本身一起传递给 {{WebExtAPIRef("omnibox.onInputEntered")}} 事件监听器中。
 
 ## 类型
 
@@ -20,7 +20,7 @@ l10n:
 - "newForegroundTab"
   - : 在新标签页中打开选择的内容，并将新标签页置于前台。
 - "newBackgroundTab"
-  - : 在新后台标签页中打开选择的内容，保持当前标签页在前台。
+  - : 在新后台标签页中打开选择的内容，并保持当前标签页在前台。
 
 ## 浏览器兼容性
 
