@@ -2,7 +2,7 @@
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 l10n:
-  sourceCommit: 
+  sourceCommit: 1c0dda60cb2b680a753264b538e2c46776ecd837
 ---
 
 {{AddonSidebar}}
