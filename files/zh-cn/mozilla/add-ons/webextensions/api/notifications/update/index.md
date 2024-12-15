@@ -2,7 +2,7 @@
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
 l10n:
-  sourceCommit: 
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
