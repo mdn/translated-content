@@ -25,7 +25,7 @@ l10n:
 - `title`
   - : `string`，通知的标题。
 - `iconUrl` {{optional_inline}}
-  - : `string`，指向通知中显示的图标的 URL。URL 可以是：data URL、blob URL、http 或 https URL，或者是扩展内的文件的[相对 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls)。使用 SVG 图像时，请确保图像包含高度和宽度属性，例如 `<svg width="96" height="96"…`。否则，图像可能无法显示。
+  - : `string`，指向通知中显示的图标的 URL。URL 可以是：data URL、blob URL、http 或 https URL，或者是扩展内的文件的[相对 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#相对_url)。使用 SVG 图像时，请确保图像包含高度和宽度属性，例如 `<svg width="96" height="96"…`。否则，图像可能无法显示。
 - `contextMessage` {{optional_inline}}
   - : `string`，要显示的补充性内容。
 - `priority` {{optional_inline}}
