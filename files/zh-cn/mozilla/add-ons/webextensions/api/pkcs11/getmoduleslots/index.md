@@ -11,7 +11,7 @@ l10n:
 
 你只能对已在 Firefox 中安装的模块调用此函数。
 
-这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
