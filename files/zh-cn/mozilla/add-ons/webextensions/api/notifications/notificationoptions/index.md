@@ -45,7 +45,7 @@ l10n:
 
   - : `string`，指向通知中显示的图像的 URL。URL 可以是：data URL、blob URL、http 或 https URL，或者是扩展内的文件的[相对 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls)。使用 SVG 图像时，请确保图像包含高度和宽度属性，例如 `<svg width="96" height="96"…`。否则，图像可能无法显示。
 
-    _该属性仅在 `type` 为 `"image"` 时可用。在这种情况下，如果 `NotificationOptions` 用于 {{WebExtAPIRef("notifications.create()")}}，则它是必需的；如果用于 {{WebExtAPIRef("notifications.update()}}，则它是可选的。_
+    _该属性仅在 `type` 为 `"image"` 时可用。在这种情况下，如果 `NotificationOptions` 用于 {{WebExtAPIRef("notifications.create()")}}，则它是必需的；如果用于 {{WebExtAPIRef("notifications.update()"}}，则它是可选的。_
 
 - `items`
 
