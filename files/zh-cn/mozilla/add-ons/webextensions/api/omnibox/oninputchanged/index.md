@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-在用户在地址栏中输入了扩展的关键词以及一个空格，与你的扩展已经开始交互的情况下，当用户的输入变化时触发。
+与你的扩展已经开始交互（在用户在地址栏中输入了扩展的关键词以及一个空格）的情况下，当用户的输入变化时触发。
 
-这是你会向地址栏的下拉菜单中填充推荐的事件。事件监听器会传递：
+这是你会向地址栏的下拉菜单中填入推荐的事件。事件监听器会传递：
 
 - 当前的用户输入（不包含关键词以及其后的空格）
 - 一个函数，监听器可以调用这个函数传递一个数组。数组中包含一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象，且每个对象代表一个推荐内容。只有前六个推荐会被显示。
@@ -21,7 +21,6 @@ browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)
 ```
-
 
 事件有三个函数：
 
@@ -49,9 +48,9 @@ browser.omnibox.onInputChanged.hasListener(listener)
 
 ## 示例
 
-本示例将用户输入的内容解释为 CSS 属性名称，并为每个与输入内容匹配的 CSS 属性在下拉列表中填充一个 {{WebExtAPIRef(“omnibox.SuggestResult”)}} 对象。`SuggestResult` 的 `description` 属性将为该属性的全名，而 `content` 将是该属性的 MDN 页面。
+本示例将用户输入的内容解释为 CSS 属性名称，并为每个与输入内容匹配的 CSS 属性在下拉列表中填充一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象。`SuggestResult` 的 `description` 属性将为该属性的全名，而 `content` 将是该属性的 MDN 页面。
 
-本示例还会监听 {{WebExtAPIRef(“omnibox.onInputEntered”)}} 并根据 {{WebExtAPIRef(“omnibox.OnInputEnteredDisposition”)}} 参数打开与选择相对应的 MDN 页面。
+本示例还会监听 {{WebExtAPIRef("omnibox.onInputEntered")}} 并根据 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} 参数打开与选择相对应的 MDN 页面。
 
 ```js
 browser.omnibox.setDefaultSuggestion({
