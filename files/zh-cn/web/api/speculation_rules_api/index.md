@@ -1,16 +1,6 @@
 ---
 title: Speculation Rules API
 slug: Web/API/Speculation_Rules_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat:
-  - api.Document.prerendering
-  - api.Document.prerenderingchange_event
-  - html.elements.script.type.speculationrules
-spec-urls:
-  - https://wicg.github.io/nav-speculation/speculation-rules.html
-  - https://wicg.github.io/nav-speculation/prerendering.html
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
