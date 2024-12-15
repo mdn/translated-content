@@ -2,7 +2,7 @@
 title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 l10n:
-  sourceCommit: 
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -24,12 +24,12 @@ l10n:
   - 最多两个按钮（`NotificationOptions.buttons`）{{optional_inline}}
 
 - `"image"`：包括 `"basic"` 中的所有内容，以及：
-  
-    - 图像（`NotificationOptions.imageUrl`）
+
+  - 图像（`NotificationOptions.imageUrl`）
 
 - `"list"`：包括 `"basic"` 中的所有内容，以及：
-  
-    - 项目列表（`NotificationOptions.items`）
+
+  - 项目列表（`NotificationOptions.items`）
 
 - `"progress"`：包括 `"basic"` 中的所有内容，以及：
 
