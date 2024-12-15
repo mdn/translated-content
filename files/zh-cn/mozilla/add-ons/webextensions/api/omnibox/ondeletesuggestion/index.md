@@ -17,7 +17,6 @@ browser.omnibox.onDeleteSuggestion.removeListener(listener)
 browser.omnibox.onDeleteSuggestion.hasListener(listener)
 ```
 
-
 事件有三个函数：
 
 - `addListener(listener)`
