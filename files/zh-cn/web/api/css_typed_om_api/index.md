@@ -113,7 +113,6 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 
 ## 参见
 
-- [CSS  API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [使用 CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)
-
