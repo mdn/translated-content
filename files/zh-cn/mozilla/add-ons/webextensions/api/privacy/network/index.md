@@ -14,9 +14,9 @@ l10n:
 ## 属性
 
 - `networkPredictionEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为真，则浏览器将尝试通过预解析 DNS 条目、预渲染站点（例如使用 `<link rel='prefetch' …>`）以及预先打开到服务器的 TCP 和 TLS 连接来提升网页浏览速度。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `true`，则浏览器将尝试通过预解析 DNS 条目、预渲染站点（例如使用 `<link rel='prefetch' …>`）以及预先打开到服务器的 TCP 和 TLS 连接来提升 Web 浏览速度。
 - `peerConnectionEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为假，则 [`RTCPeerConnection`](/zh-CN/docs/Web/API/RTCPeerConnection) 接口将被禁用。请注意，[`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 不受此设置影响。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则 [`RTCPeerConnection`](/zh-CN/docs/Web/API/RTCPeerConnection) 接口将被禁用。请注意，[`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) *不*受此设置影响。
 - `webRTCIPHandlingPolicy`
 
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是字符串。这一设置将允许用户指定影响 WebRTC 流量路由方式以及暴露多少本地地址信息的媒体性能/隐私权衡。它可以取以下任一值，从最不私密到最私密：
@@ -25,11 +25,11 @@ l10n:
     - `default_public_and_private_interfaces`
     - `default_public_interface_only`
     - `disable_non_proxied_udp`
-    - `proxy_only`（仅允许通过代理的 TCP 连接上的 TURN 连接）
+    - `proxy_only`（仅允许基于代理的 TCP 连接的 TURN 连接）
 
 - `httpsOnlyMode`
 
-  - : 这一设置允许你的扩展程序确定用户是否启用了 [HTTPS-Only 模式](https://support.mozilla.org/zh-CN/kb/https-only-prefs)。该属性在所有平台上都是只读的。其底层值是一个字符串，可能取以下三个值之一：
+  - : 这一设置允许你的扩展程序确定用户是否启用了 [HTTPS-Only 模式](https://support.mozilla.org/zh-CN/kb/firefox-https)。该属性在所有平台上都是只读的。其底层值是一个字符串，可以取以下三个值之一：
 
     - `"always"`：HTTPS-Only 模式已启用。
     - `"never"`：HTTPS-Only 模式已关闭。
