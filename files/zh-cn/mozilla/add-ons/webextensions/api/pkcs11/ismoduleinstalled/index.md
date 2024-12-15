@@ -9,7 +9,7 @@ l10n:
 
 检查 Firefox 中当前是否安装了指定的 PKCS #11 模块。
 
-这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -26,9 +26,9 @@ let checking = browser.pkcs11.isModuleInstalled(
 
 ### 返回值
 
-`Promise`，使用布尔值进行兑现，其中 `true` 代表已安装而 `false` 代表未安装。
+`Promise`，如果模块已安装，则兑现 `true`，否则兑现 `false`。
 
-如果模块发生错误，`Promise` 将以错误消息拒绝。
+如果模块发生错误，promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
