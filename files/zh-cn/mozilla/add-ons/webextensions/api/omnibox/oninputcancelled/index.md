@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当用户取消与扩展交互时（比如点击地址栏之外的地方）触发。
+当用户取消与扩展交互（比如点击地址栏之外的地方）时触发。
 
 ## 语法
 
@@ -16,7 +16,6 @@ browser.omnibox.onInputCancelled.addListener(listener)
 browser.omnibox.onInputCancelled.removeListener(listener)
 browser.omnibox.onInputCancelled.hasListener(listener)
 ```
-
 
 事件有三个函数：
 
