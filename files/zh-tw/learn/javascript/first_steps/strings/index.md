@@ -30,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!doctype html>
@@ -210,7 +210,7 @@ let bigmouth = "I've got no right to take my place...";
 bigmouth;
 ```
 
-這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) 。
+這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) 。
 
 ## 連接字串（Concatenating strings）
 

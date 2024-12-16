@@ -33,7 +33,7 @@ slug: Web/HTML/Element/form
 
   - : 指示瀏覽器是否可以默認情況下自動完成輸入元素的值。表單元素上的 `autocomplete` 屬性會覆蓋 `<form>` 上的它。可能的值：
 
-    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見[自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
+    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見[自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
     - `on`：瀏覽器可能會自動完成輸入。
 
 - `name`

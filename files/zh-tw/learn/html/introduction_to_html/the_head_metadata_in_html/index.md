@@ -54,7 +54,7 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 </head>
 ```
 
-假如換作是較大型的網頁，head 裡面可能就會有非常多東西了。現在你可以先到幾個你常去的網站，並利用[開發者工具](/zh-TW/docs/Learn/Discover_browser_developer_tools)來檢視它們的 head。我們在這裡並不打算要向你展示所有能放在 head 中的東西，而是教你使用一些常用的元素，讓你熟悉熟悉它們。總而言之，讓我們開始吧！
+假如換作是較大型的網頁，head 裡面可能就會有非常多東西了。現在你可以先到幾個你常去的網站，並利用[開發者工具](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)來檢視它們的 head。我們在這裡並不打算要向你展示所有能放在 head 中的東西，而是教你使用一些常用的元素，讓你熟悉熟悉它們。總而言之，讓我們開始吧！
 
 ## 加入標題(title)
 

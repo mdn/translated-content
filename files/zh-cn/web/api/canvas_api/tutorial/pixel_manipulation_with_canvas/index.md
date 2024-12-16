@@ -356,7 +356,7 @@ function draw(img) {
 
 ## 保存图片
 
-{{domxref("HTMLCanvasElement")}} 提供一个 `toDataURL()` 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/HTTP/data_URIs)。返回的图片分辨率是 96 dpi。
+{{domxref("HTMLCanvasElement")}} 提供一个 `toDataURL()` 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/URI/Schemes/data)。返回的图片分辨率是 96 dpi。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : 默认设定。创建一个 PNG 图片。

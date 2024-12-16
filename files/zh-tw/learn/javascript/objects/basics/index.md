@@ -90,7 +90,7 @@ person.greeting();
 現在你的物件裡面已經有了某些資料與功能，而且能透過某些簡易語法存取之。
 
 > [!NOTE]
-> 如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (或觀看 [實際執行](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。
+> 如果你無法完成上述步驟，可先和我們的版本比較一下。參閱 [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (或觀看 [實際執行](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。你最容易犯下的錯誤是在物件中的最後一個成員 (member)末端加上逗號，如此就會造成錯誤。
 
 目前為止發生了什麼事呢？現在這個物件是由多個成員所構成，各個成員均有 1 個名稱 (如上述的 `name` 與 `age`) 以及 1 組數值 (如 `['Bob', 'Smith']` 與 `32`)。由名稱與數值構成的組合均以逗號區隔，而名稱與數值之間則以冒號隔開。語法應如下所示：
 
@@ -247,7 +247,7 @@ greeting: function() {
 }
 ```
 
-你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this` 就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
+你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this` 就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
 
 先用簡化的一對 person 物件說明：
 

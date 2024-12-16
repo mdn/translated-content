@@ -61,7 +61,7 @@ var downloading = browser.downloads.download(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise). 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 `id` 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。
 
-如果你使用 [URL.createObjectURL()](/zh-CN/docs/Web/API/URL/createObjectURL) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/zh-CN/docs/Web/API/URL/revokeObjectURL)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
+如果你使用 [URL.createObjectURL()](/zh-CN/docs/Web/API/URL/createObjectURL_static) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/zh-CN/docs/Web/API/URL/revokeObjectURL_static)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
 
 ## 浏览器兼容性
 

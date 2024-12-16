@@ -9,7 +9,7 @@ slug: Learn/JavaScript/Objects
 
 ## 必備條件
 
-在開始閱讀本文之前，你應該已經對 HTML 與 CSS 有一定程度的認識。建議你先看過〈[HTML 介紹](/zh-TW/docs/Web/Guide/HTML/Introduction)〉以及〈[CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)〉，再開始了解 JavaScript。
+在開始閱讀本文之前，你應該已經對 HTML 與 CSS 有一定程度的認識。建議你先看過〈[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)〉以及〈[CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)〉，再開始了解 JavaScript。
 
 你也應該已經初步了解過 JavaScript 基本概念，再進一步閱讀 JavaScript 物件。所以另請先看過〈[JavaScript 的第一步](/zh-TW/docs/Learn/JavaScript/First_steps)〉與〈[JavaScript 基礎要件](/zh-TW/docs/Learn/JavaScript/Building_blocks)〉。
 

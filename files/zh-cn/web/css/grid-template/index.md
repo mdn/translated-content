@@ -129,4 +129,4 @@ footer {
   - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
   - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#网格定义的简写规则)_
 
-- 视频教程：_ [Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
+- 视频教程：_ [Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_
