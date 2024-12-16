@@ -24,7 +24,7 @@ myStorage = window.localStorage;
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
 
 ## Example
 
@@ -67,5 +67,5 @@ localStorage.clear();
 ## See also
 
 - [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Window/localStorage)
 - {{DOMxRef("Window.sessionStorage")}}

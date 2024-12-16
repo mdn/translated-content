@@ -53,7 +53,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 ## 书写模式、块级布局和内联布局
 
-我们已经讨论了块级布局和内联布局（[block and inline layout](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
+我们已经讨论了块级布局和内联布局（[block and inline layout](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
 
 用一个例子可以更清楚地说明这一点。下一个例子中有两个盒子，分别包含一个标题和一个段落。第一个盒子应用的是`writing-mode: horizontal-tb`，这是一个从上到下的横向的书写模式。第二个盒子应用的是`writing-mode: vertical-rl`，这是一个从右到左的纵向的书写模式。
 
@@ -121,7 +121,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 之类，我们同样使用逻辑边距值来保证在任何书写模式下边距的位置都是对的。
 
-> **备注：** [`float`](/zh-CN/docs/CSS/float)的逻辑值暂时只有 Firefox 和 Firefox for Android 支持，上面的例子可能无法生效。
+> **备注：** [`float`](/zh-CN/docs/Web/CSS/float)的逻辑值暂时只有 Firefox 和 Firefox for Android 支持，上面的例子可能无法生效。
 
 ### 应该使用物理属性还是逻辑属性呢？
 

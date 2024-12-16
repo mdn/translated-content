@@ -161,7 +161,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 > [!NOTE]
 > 當然你也可以跑很多其他的測試。但是我們會希望你至少實作以上列出的測試項目。
 
-下一區塊顯示符合以上需求的網頁[截圖](#Screenshots)。
+下一區塊顯示符合以上需求的網頁[截圖](#screenshots)。
 
 ## 截圖
 
@@ -260,7 +260,7 @@ Some general hints:
 
    - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
 
-We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
+We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
 
 ```python
 class SomeView(generic.ListView):

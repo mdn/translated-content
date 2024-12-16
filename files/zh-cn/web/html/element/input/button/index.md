@@ -15,7 +15,7 @@ slug: Web/HTML/Element/input/button
 
 ### 含有值的按钮
 
-`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/Input#值) 属性包含用作按钮标签的字符串。
+`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#%e5%80%bc) 属性包含用作按钮标签的字符串。
 
 ```html
 <input type="button" value="点我" />
@@ -35,7 +35,7 @@ slug: Web/HTML/Element/input/button
 
 ## 使用按钮
 
-`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/Input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
+`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
 
 ### 简单的按钮
 

@@ -154,7 +154,7 @@ table-layout: fixed;
 
 ### 尽可能使用 async 和 defer
 
-确保 JavaScript 脚本兼容 [async](/zh-CN/docs/HTML/Element/script#属性) 和 [defer](/zh-CN/docs/HTML/Element/script#属性)，任何时候都要尽可能使用 [async](/zh-CN/docs/HTML/Element/script#属性)，特别是当你有较多的 script 标签时。
+确保 JavaScript 脚本兼容 [async](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7) 和 [defer](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7)，任何时候都要尽可能使用 [async](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7)，特别是当你有较多的 script 标签时。
 
 这样在加载 JavaScript 的过程中页面就不会重新绘制，否则，浏览器在不具有这些特性的 script 标签后就不会重绘任何东西。
 

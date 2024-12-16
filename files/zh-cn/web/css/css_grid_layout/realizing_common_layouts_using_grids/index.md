@@ -224,7 +224,7 @@ nav ul {
 
 正如命名行指南中所述，我们使用命名行来放置项目。因为我们有 12 行名称相同，所以我们使用名称，然后是行索引。如果你喜欢并完全避免使用命名行，也可以使用行索引本身。
 
-我没有设置结束行号，而是选择使用 span 关键字表示这个元素应该跨多少个轨道。我喜欢这种方法，因为在使用多列布局系统时，我们通常根据网格的轨迹数量来考虑块，并根据不同的断点进行调整。要查看块如何与轨道对齐，请使用 [Firefox Grid Inspector](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). 。它清楚地展示了我们的项目是如何放置的。
+我没有设置结束行号，而是选择使用 span 关键字表示这个元素应该跨多少个轨道。我喜欢这种方法，因为在使用多列布局系统时，我们通常根据网格的轨迹数量来考虑块，并根据不同的断点进行调整。要查看块如何与轨道对齐，请使用 [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). 。它清楚地展示了我们的项目是如何放置的。
 
 ![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
@@ -587,5 +587,5 @@ h2 {
 
 学习使用网格布局的最佳方法是继续构建我们在这里介绍的示例。选择一些你通常使用选择的框架构建的东西，或者使用浮动构建的东西，看看是否可以使用 grid 构建它。不要忘记寻找用当前方法无法构建的示例。这可能意味着从杂志或其他非网络资源中获取灵感。网格布局提供了我们以前没有过的可能性，我们不需要绑定到相同的旧布局来使用它。
 
-- 有关灵感，请参阅 [Layout Labs from Jen Simmons](http://labs.jensimmons.com/), 她一直在创建基于一系列资源的布局。
-- 有关其他常见布局模式，请参见 [Grid by Example](http://gridbyexample.com), 这里有许多网格布局的小例子，也有一些较大的 UI 模式和完整的页面布局。
+- 有关灵感，请参阅 [Layout Labs from Jen Simmons](https://labs.jensimmons.com/), 她一直在创建基于一系列资源的布局。
+- 有关其他常见布局模式，请参见 [Grid by Example](https://gridbyexample.com), 这里有许多网格布局的小例子，也有一些较大的 UI 模式和完整的页面布局。

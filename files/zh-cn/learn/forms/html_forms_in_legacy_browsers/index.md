@@ -118,7 +118,7 @@ HTML 表单的一个大问题是用 CSS 对表单小部件进行样式化。表�
 
 不改变表单控件的默认外观往往是个好主意，因为改变某个 CSS 属性值可以改变一些 input 类型，却不能改变另一些类型。例如，如果你声明了 `input { font-size: 2rem; }`，它会影响到 `number`、`date` 和 `text`，却不会影响 `color` 和 `range`。如果你改变了一个属性，会在不可预知的情况下影响到组件的外观。例如，`[value] { background-color: #ccc; }` 可能会用于改变所有含有 `value` 属性的 {{HTMLElement("input")}} 元素，但改变 {{HTMLElement("meter")}} 的 border radius 值可能会在不同浏览器中引起无法预期的显示。你可以声明 {{cssxref('appearance', 'appearance: none;')}} 来移除浏览器默认样式，但这通常会违背目的：因为你失去了所有的样式，删除了你的访问者所习惯的默认外观和感受。
 
-总而言之，当涉及到表单控件小部件的样式时，用 CSS 为它们设计样式的副作用可能是不可预测的。所以不要这样做。正如从这篇[表单控件的 CSS 属性兼容性表格](/zh-CN/docs/Property_compatibility_table_for_form_widgets)中所看到的复杂性那样，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如[使用 JavaScript 重建组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
+总而言之，当涉及到表单控件小部件的样式时，用 CSS 为它们设计样式的副作用可能是不可预测的。所以不要这样做。正如从这篇[表单控件的 CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)中所看到的复杂性那样，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如[使用 JavaScript 重建组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
 
 ## 特性检测和 polyfill
 

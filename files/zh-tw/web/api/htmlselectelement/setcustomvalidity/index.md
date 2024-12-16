@@ -27,4 +27,4 @@ selectElt.setCustomValidity(string);
 
 ## 參見
 
-- [表單驗證](/zh-TW/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [表單驗證](/zh-TW/docs/Web/HTML/Constraint_validation)

@@ -14,7 +14,7 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 > [!NOTE]
 > 这个网站有很多有用的资源用来学习 JavaScript 做客户端开发： [JavaScript](/zh-CN/docs/Web/JavaScript), [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide), [JavaScript Basics](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/zh-CN/docs/Learn/JavaScript) (learning). 核心的 JavaScript 语言和概念用 Nodejs 服务端开发是相同的，也是相关的。Node.js 提供 [额外的 API](https://nodejs.org/dist/latest-v6.x/docs/api/) 用于支持在无浏览器环境中有用的功能，例如，创建 HTTP 服务器并访问文件系统，但不支持 JavaScript API 以使用浏览器和 DOM。
 >
-> 这篇指南将会提供一些 Node.js 和 Express 的信息，并且有很多优秀的网络资源和书籍。一些链接 比如[How do I get started with Node.js](http://stackoverflow.com/a/5511507/894359) (StackOverflow) 和 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
+> 这篇指南将会提供一些 Node.js 和 Express 的信息，并且有很多优秀的网络资源和书籍。一些链接 比如[How do I get started with Node.js](https://stackoverflow.com/a/5511507/894359) (StackOverflow) 和 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
 
 ## 指南
 

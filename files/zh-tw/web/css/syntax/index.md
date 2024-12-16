@@ -41,7 +41,7 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 ![css syntax - ruleset.png](ruleset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) algorithm.
+As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
 
 > [!NOTE]
 > It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
@@ -73,7 +73,7 @@ There is another group of statements - the **nested statements**. These are stat
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/inheritance)
+  - [繼承](/zh-TW/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)

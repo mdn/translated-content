@@ -51,7 +51,7 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 ### WebAssembly 关键概念
 
-为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念在 [WebAssembly JavaScript API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) 中都存在一一映射。
+为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念在 [WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/JavaScript_interface) 中都存在一一映射。
 
 - **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（`Blob`）一样在 Window 和 Worker 之间进行共享（通过 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 函数）。一个模块能够像一个 ES 的模块一样声明导入和导出。
 - **内存**：一个可变长的 ArrayBuffer。本质上是连续的字节数组，WebAssembly 的低级内存存取指令可以对它进行读写操作。
@@ -105,7 +105,7 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 生成的 HTML 文档加载 JavaScript 胶水文件，并且将 stdout 输出到 {{htmlelement("textarea")}}。如果应用程序使用了 OpenGL，HTML 文档还会包含一个用来渲染目标的 {{htmlelement("canvas")}} 标签。修改 Emscripten 的输出文件并将其转换为需要的 Web App 是很容易的。
 
-你可以在 [emscripten.org](http://emscripten.org) 找到关于 Emscripten 的完整文档以及在[将 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm) 找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
+你可以在 [emscripten.org](http://emscripten.org) 找到关于 Emscripten 的完整文档以及在[将 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm) 找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
 
 ### 直接编写 WebAssembly 代码
 
@@ -113,7 +113,7 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 就像真实的汇编语言一样，WebAssembly 的二进制格式也有文本表示——两者之间 1:1 对应。你可以手工书写或者生成这种格式然后使用这些工具（[WebAssembly 文本转化为二进制工具](http://webassembly.org/getting-started/advanced-tools/)）中的任何一个把它转换为二进制格式。
 
-有关如何完成此操作的简单指南，请参阅我们的[转换 WebAssembly 文本格式为 Wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm) 指南。
+有关如何完成此操作的简单指南，请参阅我们的[转换 WebAssembly 文本格式为 Wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm) 指南。
 
 ### 编写以 WebAssembly 为目标的 Rust 代码
 

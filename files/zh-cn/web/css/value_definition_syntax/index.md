@@ -108,7 +108,7 @@ bold && <length>
 
 ### “或”组合符：||
 
-*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/CSS/Shorthand_properties)中的各部分。
+*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/Web/CSS/Shorthand_properties)中的各部分。
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -384,7 +384,7 @@ bold smaller#
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

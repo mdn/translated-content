@@ -43,7 +43,7 @@ l10n:
 
 由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其他类型的文件均进行压缩。
 
-Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
+Apache 服务器支持数据压缩，有 [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
 
 ## 逐跳压缩技术
 

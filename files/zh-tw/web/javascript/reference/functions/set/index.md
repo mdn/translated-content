@@ -32,7 +32,7 @@ JavaScript 的 setter 能在嘗試修改指定屬性時，執行給定函式。S
 使用 `set` 語法時，請注意以下情況：
 
 - 可以擁有一個以數字或字串為代表的標示符；
-- 最少要有一個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）；
+- 最少要有一個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）；
 - 不能以有另一個 `set` 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 `{ set x(v) { }, set x(v) { } }` and `{ x: ..., set x(v) { } }`）
 
 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 操作符可移除 setter。

@@ -85,14 +85,14 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
 ## 參見
 
-- [CSS Reference](/zh-TW/docs/Web/CSS/CSS_Reference)
+- [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
   - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/inheritance)
+  - [繼承](/zh-TW/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)

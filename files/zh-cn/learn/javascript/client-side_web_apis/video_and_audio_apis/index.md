@@ -382,7 +382,7 @@ button:before {
 
 #### 更新已用时间
 
-我们要实现的媒体播放器的最后一块是显示的时间。为此，我们将执行一个函数，这样每次在 `<video>` 元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event) 事件时更新时间显示。此该事件触发的频率取决于你的浏览器，CPU 电源等（[详见这个 StackOverflow 帖文](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实现的媒体播放器的最后一块是显示的时间。为此，我们将执行一个函数，这样每次在 `<video>` 元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event) 事件时更新时间显示。此该事件触发的频率取决于你的浏览器，CPU 电源等（[详见这个 StackOverflow 帖文](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加 `addEventListener()`：
 

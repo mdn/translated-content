@@ -196,7 +196,7 @@ console.log(document.cookie);
 減少涉及 Cookie 的攻擊的方法：
 
 - 使用 `HttpOnly` 屬性防止通過 JavaScript 訪問 Cookie 值。
-- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#SameSite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
+- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#samesite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
 
 ## 追蹤和隱私
 
@@ -212,7 +212,7 @@ Cookie 與特定域和方案（如 `http` 或 `https`）相關，如果 {{HTTPHe
 第三方 Cookie 的典型用例包括共享用戶檔案訊息或在不同相關域上收集分析數據。它們也經常用於廣告和跟蹤用戶在網路上的活動。
 
 > [!NOTE]
-> 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_Cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/cookies#types-of-cookies)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
+> 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/cookies#types-of-cookies)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
 
 第三方伺服器可以根據同一瀏覽器在訪問多個站點時發送給它的 Cookie，創建用戶的瀏覽歷史和習慣檔案。默認情況下，Firefox 阻止已知包含跟蹤器的第三方 Cookie。第三方 Cookie（或僅為跟蹤而設置的 Cookie）也可能被其他瀏覽器設置或擴展阻止。Cookie 阻止可能導致一些第三方組件（例如社交媒體軟體部件）無法正常工作。
 
