@@ -306,7 +306,8 @@ h2 {
       alt="星星"
       src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
     <p>
-      该盒子使用了逻辑属性。星星图像以 inline-start 形式浮动，在 inline-end 和 block-end 方向也有内边距。
+      该盒子使用了逻辑属性。星星图像以 inline-start 形式浮动，在 inline-end 和
+      block-end 方向也有内边距。
     </p>
   </div>
 </div>
@@ -342,7 +343,7 @@ img {
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证您是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks)。
 
 ## 总结
 
