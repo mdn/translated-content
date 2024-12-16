@@ -1,63 +1,59 @@
 ---
-title: 附加元件
-slug: Mozilla/Add-ons
+title: 瀏覽器擴充功能
+slug: Mozilla/Add-ons/WebExtensions
+l10n:
+  sourceCommit: 668b38a4f6cd96609b9a969fe4653b46aec4e712
 ---
 
 {{AddonSidebar}}
 
-附加元件允許開發者擴充並訂製 Firefox 的功能。它們使用標準的 Web 技術－－JavaScript、HTML、CSS、還有一些專門的 JavaScript API－－寫成。另外，附加元件還能：
+擴充功能或附加元件可以修改並增強瀏覽器的功能。適用於 Firefox 的擴充功能是使用 WebExtensions API 跨瀏覽器技術建構的。
 
-- 更改特定網站的外觀與內容
-- 訂製 Firefox 用戶介面
-- 增加 Firefox 的新功能
+Firefox 的擴充功能技術在很大程度上與由 Chromium 為基礎的瀏覽器（如 Google Chrome、Microsoft Edge、Opera、Vivaldi）支援的[擴充功能 API](https://developer.chrome.com/docs/extensions/reference/)相容。大多數情況下，為 Chromium 瀏覽器撰寫的擴充功能只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 中執行。
 
-## 開發附加元件
+## 關鍵資源
 
-目前有許多開發 Firefox 附加元件的工具，但 [WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 會在 2017 年末成為標準。其他的工具如傳統附加元件、免重啟附加元件、附加元件 SDK 等，屆時皆預期棄用。
+- 指南
+  - : 無論你是剛開始還是尋求更進階的建議，都可以從我們廣泛的[教程與指南](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)中了解擴充功能的運作方式及如何使用 WebExtensions API。
+- 參考資料
+  - : 獲取關於 [WebExtensions APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)的方法、屬性、類型和事件的詳細資訊，以及 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資料。
+- Firefox 工作流程
+  - : 瞭解如何為 Firefox 建構和發布擴充功能：包括開發工具、發布與分發以及在 [Extension Workshop](https://extensionworkshop.com/) 上的移植流程。
 
-[深入理解 WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
+> [!NOTE]
+> 如果你有想法、疑問或需要幫助，可以加入[社群論壇](https://discourse.mozilla.org/c/add-ons/35)或透過 [Matrix](https://wiki.mozilla.org/Matrix) 加入 [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)。
 
-如果要寫新的附加元件，推薦使用 WebExtension 撰寫。
+## 開始使用
 
-WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebExtensions 通常只要在一點點的改變下，就能在 Chrome、Edge、Opera 運行。它們也能與多行程 Firefox 完全相容。
+在建構[你的第一個擴充功能](zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先了解[擴充功能能做什麼](zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。瞭解[擴充功能的結構](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)以及 [Firefox 擴充功能開發與發布工作流程概覽](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)。通過一系列可直接在 Firefox 中執行的[範例擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)進一步探索。
 
-[請參見目前在 Firefox 和其他瀏覽器所支援的 API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。我們正持續設計與導入新的 API，以回應開發者所需。
+## 概念
 
-多數 WebExtensions API 也能在 Firefox for Android 運行。
+詳細了解支撐擴充功能的概念，包括[JavaScript API 概述](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)、[內容腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)、[匹配模式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)、[檔案處理](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)、[國際化](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Internationalization)、[內容安全政策](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)、[本機訊息傳遞](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)、[使用開發者工具 API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)、以及[本機清單](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)等進階主題。
 
-## 與現有附加元件合併
+## 使用者介面
 
-如果你正在維護過時的附加元件如 XUL overlay、bootstrapped、附加元件 SDK 等，我們建議把它移植到 WebExtension。MDN 有一些[移植指引](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)。
+探索擴充功能中可用的所有[使用者介面元件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface)，包括程式碼範例和提示。
 
-我們在 wiki page 上收集了一些[資源](https://wiki.mozilla.org/Add-ons/developer/communication)以助開發者完成移植。要開始的話，請使用 [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) 來檢查你的附加元件有無受影響。
+## 操作指南
 
-## 發佈附加元件
+無論是你經常使用的模式（如[使用 Tabs API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) 和[在工具列添加按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)），還是更進階的主題（如[攔截 HTTP 請求](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)和[處理情境識別](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)），都可以找到相關教程幫助你快速上手。
 
-[Addons.mozilla.org](https://addons.mozilla.org)，也俗稱「AMO」，是 Mozilla 給開發者們陳列附加元件的官方網站，用戶們也可以在那邊找到所需。當你把附加元件上傳到 AMO 時，你可以參與我們的用戶和創作者社區、並找到你附加元件的擁躉們。
+## Firefox 工作流程
 
-你不用把附加元件上傳到 AMO，但你的附加元件需要給 Mozilla 簽署。否則，用戶將無法安裝。
+當你準備為 Firefox 建立擴充功能或移植你的 Chrome 擴充功能時，請造訪 [Extension Workshop](https://extensionworkshop.com/)。其中包含以下內容的詳細資訊：
 
-要找到發佈附加元件的過程概觀，請參見[簽署並發布你的附加元件](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon)。
+- Firefox 工作流程，如[在開發期間暫時安裝擴充功能](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)、[調試](https://extensionworkshop.com/documentation/develop/debugging/)、[請求正確的權限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)等。
+- [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 開發工具。
+- [移植 Google Chrome 擴充功能](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、[桌面與 Android 之間的差異](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)等。
+- [發布與分發概覽](https://extensionworkshop.com/documentation/publish/)、[宣傳你的擴充功能](https://extensionworkshop.com/documentation/publish/promoting-your-extension/)、[擴充功能生命週期最佳實踐](https://extensionworkshop.com/documentation/manage/)等。
 
-## 其他種類的附加元件
+## 參考資料
 
-通常，當大家在講「附加元件」時候，他們是指套件（extension）。但也有其他類型的附加元件，允許用戶訂製 Firefox。包含：
+### JavaScript APIs
 
-- [用戶字典](https://support.mozilla.org/kb/how-do-i-use-firefox-spell-checker)能讓你在不同語言內檢查拼字。
-- [語言包](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack)能讓你的 Firefox 用戶介面支援多語言。
+獲取關於所有 [JavaScript APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API) 的方法、屬性、類型和事件的詳細資訊。每個參考頁面還包括程式碼範例及使用該 API 的擴充功能範例的連結。
 
-## 聯絡我們
+### Manifest 鍵
 
-你可以透過以下連結取得協助、獲取附加元件的新聞、還有得到回饋。
-
-### 附加元件論壇
-
-使用[附加元件討論論壇](https://discourse.mozilla-community.org/c/add-ons)討論附加元件方面的開發並取得協助。
-
-### IRC
-
-如果你喜歡用 IRC，你可以在這裡聯繫：
-
-- [#addons](irc://irc.mozilla.org/addons)（討論附加元件生態圈）
-- [#extdev](irc://irc.mozilla.org/extdev)（附加元件開發的一般交流）
-- [#webextensions](irc://irc.mozilla.org/webextensions) （專門討論 WebExtensions）
+獲取關於 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資訊，包括其所有屬性和設定。也可以瞭解每個鍵在主要瀏覽器中的[相容性](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)的詳細資料。
