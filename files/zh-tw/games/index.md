@@ -7,20 +7,20 @@ l10n:
 
 {{GamesSidebar}}
 
-遊戲是最受歡迎的電腦活動之一。隨著新技術的不斷出現，我們可以開發出更優秀且功能更強大的遊戲，並能在任何符合標準的網頁瀏覽器上運行。
+遊戲是最受歡迎的電腦活動之一。隨著新技術的不斷出現，我們可以開發出更優秀且功能更強大的遊戲，並能在任何符合標準的 Web 瀏覽器上運行。
 
-## 開發網頁遊戲
+## 開發 Web 遊戲
 
-歡迎來到 MDN 遊戲開發中心！在本網站的這個區域，我們為想要開發遊戲的網頁開發者提供了資源。在左側的主選單中，你會找到許多實用的教學和技術文章，請隨意探索。
+歡迎來到 MDN 遊戲開發中心！在本網站的這個區域，我們為想要開發遊戲的 Web 開發者提供了資源。在左側的主選單中，你會找到許多實用的教學和技術文章，請隨意探索。
 
 我們還包含了一個參考區域，讓你能輕鬆找到有關遊戲開發中常用 API 的資訊。
 
 > [!NOTE]
-> 在網頁上創建遊戲需要使用多種核心網頁技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習區域](/zh-TW/docs/Learn)，了解基礎知識。
+> 在 Web 上創建遊戲需要使用多種核心 Web 技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習區域](/zh-TW/docs/Learn)，了解基礎知識。
 
-## 將原生遊戲移植到網頁
+## 將原生遊戲移植到 Web
 
-如果你是一位原生遊戲開發者（例如使用 C++ 編寫遊戲），並且有興趣將你的遊戲移植到網頁上，可以了解更多關於我們的 [Emscripten](https://emscripten.org/index.html) 工具。這是一個 LLVM 到 JavaScript 的編譯器，可以將 LLVM 位元碼（例如由 Clang 或其他語言生成）編譯為 [asm.js](/zh-TW/docs/Games/Tools/asm.js)，並在網頁上運行。
+如果你是一位原生遊戲開發者（例如使用 C++ 編寫遊戲），並且有興趣將你的遊戲移植到 Web 上，可以了解更多關於我們的 [Emscripten](https://emscripten.org/index.html) 工具。這是一個 LLVM 到 JavaScript 的編譯器，可以將 LLVM 位元碼（例如由 Clang 從 C／C++ 或其他語言生成）編譯為 [asm.js](/zh-TW/docs/Games/Tools/asm.js)，並在 Web 上運行。
 
 入門指南如下：
 
@@ -30,12 +30,12 @@ l10n:
 
 ## 範例
 
-如需網頁遊戲範例列表，請參考我們的[教學列表](/zh-TW/docs/Games/Tutorials)。
+如需 Web 遊戲範例列表，請參考我們的[教學列表](/zh-TW/docs/Games/Tutorials)。
 
 ## 參見
 
 - [Build New Games](http://buildnewgames.com/)
-  - : 一個協作網站，包含大量開放網頁遊戲開發的教學。最近不太活躍，但仍有一些不錯的資源。
+  - : 一個協作網站，包含大量開放 Web 遊戲開發的教學。最近不太活躍，但仍有一些不錯的資源。
 - [Creative JS](http://creativejs.com/)
   - : 一些令人印象深刻的 JavaScript 技術和實驗的集合，雖然不是專門針對遊戲，但仍然非常有幫助。最近不太活躍，但仍有一些不錯的資源。
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
