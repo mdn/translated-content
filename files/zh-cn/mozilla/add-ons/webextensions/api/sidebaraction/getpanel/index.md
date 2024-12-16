@@ -9,7 +9,7 @@ l10n:
 
 获取定义侧边栏内容的 HTML 文档的 URL。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -23,7 +23,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 
 - `details`
 
-  - : `object`，包含下列属性的对象：
+  - : `object`。包含下列属性的对象：
 
     - `tabId` {{optional_inline}}
       - : `integer`。获取特定于给定标签页的侧边栏的面板。
@@ -32,7 +32,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 
 <!---->
 
-- 如果同时提供了 `windowId` 和 `tabId`，函数将失败且返回的 Promise 将被拒绝。
+- 如果同时提供了 `windowId` 和 `tabId`，函数将失败且返回的 promise 将被拒绝。
 - 如果同时省略 `windowId` 和 `tabId`，则返回全局面板。
 
 ### 返回值
@@ -49,7 +49,7 @@ moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 
 ## 示例
 
-以下代码获取面板的 URL：
+获取面板的 URL：
 
 ```js
 function onGot(sidebarUrl) {
