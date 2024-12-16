@@ -38,7 +38,7 @@ slug: Learn/Performance/Perceived_performance
   - : 第一次绘制运算开始的时间。请注意，这种变化可能是不可见的；它可以是简单的背景颜色更新，也可以是更不那么显眼的内容。
 - [首次有内容绘制](/zh-CN/docs/Glossary/First_contentful_paint)（FCP）
   - : 第一次重要渲染（例如文本、前景或背景图像、画布或 SVG 等）开始的时间。注意，这些内容不一定是有用或有意义的。
-- [首次有意义绘制](/zh-CN/docs/Glossary/first_meaningful_paint)（FMP）
+- [首次有意义绘制](/zh-CN/docs/Glossary/First_meaningful_paint)（FMP）
   - : 有用的内容渲染到屏幕上的时间。
 - [最大内容绘制](https://wicg.github.io/largest-contentful-paint/)（LCP）
   - : 视口中可见的最大内容元素的渲染时间。

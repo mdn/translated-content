@@ -36,7 +36,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ![](tabbed-info-box.png)
 
 > [!NOTE]
-> 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
+> 你能看完整的示例，可运行在 [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
 
 你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
@@ -268,7 +268,7 @@ function setTabHandler(tab, tabPos) {
 ![](fixed-info-box.png)
 
 > [!NOTE]
-> 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
+> 你可以点击[蓝字](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
 
 在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
 
@@ -351,7 +351,7 @@ function setTabHandler(tab, tabPos) {
 ![](hidden-sliding-panel.png)
 
 > [!NOTE]
-> 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
+> 你可以点击[蓝字](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
 在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 

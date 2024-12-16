@@ -80,7 +80,7 @@ const map = L.mapquest.map("map", {
 以上就是用 Mapquest API 建立一个简单地图所需要的所有信息。所有复杂的工作，包括展示正确地理位置的地图块等，都将由你所连接的服务器处理。
 
 > [!NOTE]
-> 一些 API 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求以获取特定的数据。这些被称为 [RESTful API（稍后我们将在文章中展示这个示例）](#RESTful_API——纽约时报)。
+> 一些 API 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求以获取特定的数据。这些被称为 [RESTful API（稍后我们将在文章中展示这个示例）](#restful_api——纽约时报)。
 
 ### 它们通常需要 API 密钥
 
@@ -269,7 +269,7 @@ fetch(url)
   .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
-这里我们通过将 `url` 变量传递给 [`fetch()`](/zh-CN/docs/Web/API/fetch) 来运行请求，使用 [`json()`](/zh-CN/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
+这里我们通过将 `url` 变量传递给 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 来运行请求，使用 [`json()`](/zh-CN/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
 
 ### 显示数据
 

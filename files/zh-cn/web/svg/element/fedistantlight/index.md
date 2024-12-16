@@ -17,7 +17,7 @@ slug: Web/SVG/Element/feDistantLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
 
 ### 专有属性
 
@@ -26,7 +26,7 @@ slug: Web/SVG/Element/feDistantLight
 
 ## DOM 接口
 
-该元素实现了 [`SVGFEDistantLightElement`](/zh-CN/DOM/SVGFEDistantLightElement) 接口。
+该元素实现了 [`SVGFEDistantLightElement`](/zh-CN/docs/DOM/SVGFEDistantLightElement) 接口。
 
 ## 参见
 
@@ -37,4 +37,4 @@ slug: Web/SVG/Element/feDistantLight
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("fePointLight") }}
 - {{ SVGElement("feSpotLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

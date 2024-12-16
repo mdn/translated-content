@@ -42,7 +42,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 一个简单的例子
 
-在本文中，我们将通过一系列练习来帮助你了解弹性盒子的工作原理。开始前，你应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox 或 Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
+在本文中，我们将通过一系列练习来帮助你了解弹性盒子的工作原理。开始前，你应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox 或 Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
 
 ![显示 Flexbox 教程开始的图像](bih741v.png)
 
@@ -137,7 +137,7 @@ flex-flow: row wrap;
 
 ## flex 项的动态尺寸
 
-现在让我们回到第一个例子，看看是如何控制 flex 项占用空间的比例的。打开你本地的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html)，或者拷贝 [弹性盒子 1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) 作为新的开始（[查看线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)）。
+现在让我们回到第一个例子，看看是如何控制 flex 项占用空间的比例的。打开你本地的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html)，或者拷贝 [弹性盒子 1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) 作为新的开始（[查看线上](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)）。
 
 第一步，将以下规则添加到 CSS 的底部：
 
@@ -189,7 +189,7 @@ article:nth-of-type(3) {
 
 ## 水平和垂直对齐
 
-还可以使用弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。让我们一起看一下新例子——[flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）——我们将会有一个整洁，灵活的按钮/工具栏。此时，你看到了一个水平菜单栏，其中一些按钮卡在左上角，就像下面这样：
+还可以使用弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。让我们一起看一下新例子——[flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html)（[在线浏览](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）——我们将会有一个整洁，灵活的按钮/工具栏。此时，你看到了一个水平菜单栏，其中一些按钮卡在左上角，就像下面这样：
 
 ![带有 Smile、Laugh、Wink、Shrug & Blush 标签的五个按钮排列在一个弹性容器中。按钮卡在左上角，看起来不整洁。](flexbox-example5.png)
 
@@ -266,7 +266,7 @@ button:last-child {
 
 ## flex 嵌套
 
-弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项，那么他同样成为一个 flex 容器，它的孩子（直接子节点）也表现为弹性盒子。看一下 [复杂弹性盒子.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
+弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项，那么他同样成为一个 flex 容器，它的孩子（直接子节点）也表现为弹性盒子。看一下 [复杂弹性盒子.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html)（[在线浏览](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
 
 ![简单 Flexbox 示例，连续列出三个 flex 项的子元素。前两个宽度相同，第三个略宽。第三个 flex 项也是一个弹性容器。它有一组两行的按钮，后跟文本。第一行按钮有 4 个按钮，排列成一排；按钮的宽度相同，占据了容器的全部宽度。第二行只有一个按钮，可以单独占据该行的整个宽度。这是复杂的布局，很少有 flex 项继续被视为弹性容器。](flexbox-example7.png)
 
