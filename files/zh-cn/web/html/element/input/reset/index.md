@@ -10,7 +10,7 @@ slug: Web/HTML/Element/input/reset
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
 > [!NOTE]
-> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/Input/submit)按钮时）。
+> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/input/submit)按钮时）。
 
 <table class="properties">
  <tbody>
@@ -65,7 +65,7 @@ slug: Web/HTML/Element/input/reset
 
 ## 使用重置按钮
 
-`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/Input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
+`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
 
 ### 一个简单的重置按钮
 

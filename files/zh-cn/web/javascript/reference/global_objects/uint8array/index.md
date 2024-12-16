@@ -17,7 +17,7 @@ new Uint8Array(object);
 new Uint8Array(buffer [, byteOffset [, length]]);
 ```
 
-构造语法和参数的更多信息请参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+构造语法和参数的更多信息请参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## 静态属性
 
@@ -109,6 +109,6 @@ var dv = new Uint8Array([1, 2, 3]);
 
 ## 相关内容
 
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

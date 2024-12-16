@@ -23,5 +23,5 @@ msg = positionError.message
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
 - 屬於 {{domxref("PositionError")}}。

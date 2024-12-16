@@ -11,7 +11,7 @@ slug: Web/API/CSSConditionRule
 
 ## Syntax
 
-The syntax is described using the [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) format.
+The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
 
 ```plain
 interface CSSConditionRule : CSSGroupingRule {
@@ -40,4 +40,4 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## See also
 
-- [Using dynamic styling information](/zh-CN/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information)

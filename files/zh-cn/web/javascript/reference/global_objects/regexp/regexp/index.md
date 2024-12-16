@@ -44,7 +44,7 @@ RegExp(pattern[, flags])
     - `s` （点号匹配所有字符）
       - : 允许`.` 去匹配新的行
     - `u` （unicode）
-      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/Window/btoa)).
     - `y` （sticky，粘性匹配）
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 

@@ -34,7 +34,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 > [!NOTE]
-> Passing additional arguments to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
+> Passing additional arguments to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#callback_arguments) section).
 
 ### Return value
 
@@ -187,7 +187,7 @@ Starting in Gecko 5.0, intervals are clamped to fire no more often than once per
 
 ## The "[`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)" problem
 
-When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) value. This problem is explained in detail in the [JavaScript reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
+When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) value. This problem is explained in detail in the [JavaScript reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explanation
 
@@ -216,7 +216,7 @@ As you can see there are no ways to pass the `this` object to the callback funct
 
 ### A possible solution
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones that enable their invocation through the [`Function.prototype.call`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones that enable their invocation through the [`Function.prototype.call`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -258,7 +258,7 @@ window.setInterval = function (
 ```
 
 > [!NOTE]
-> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#callback_arguments) for a _standard-compliant_ polyfill.
 
 New feature test:
 
@@ -274,7 +274,7 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 ```
 
-Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#MiniDaemon_-_A_framework_for_managing_timers).
+Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#minidaemon_-_a_framework_for_managing_timers).
 
 > [!NOTE]
 > JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
@@ -289,7 +289,7 @@ If you wish to have your function called _once_ after the specified delay, use {
 
 It's possible for intervals to be nested; that is, the callback for `setInterval()` can in turn call `setInterval()` to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
-Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/zh-TW/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/zh-TW/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 

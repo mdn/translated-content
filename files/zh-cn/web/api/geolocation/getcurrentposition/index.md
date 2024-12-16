@@ -57,5 +57,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## 请参考
 
-- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
 - {{domxref("Navigator.geolocation")}}

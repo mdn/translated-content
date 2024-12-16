@@ -117,5 +117,5 @@ function addStylesheetRules(decls) {
 ## 参见
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)
+- [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
+- [Quirksmode - CSS](https://www.quirksmode.org/dom/w3c_css.html)

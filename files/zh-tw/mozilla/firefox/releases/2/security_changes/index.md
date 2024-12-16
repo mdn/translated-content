@@ -18,7 +18,7 @@ slug: Mozilla/Firefox/Releases/2/Security_changes
 ## 新特色
 
 - Firefox 2 支援 TLS 下的[橢圓曲線密碼](http://zh.wikipedia.org/wiki/%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E5%AF%86%E7%A0%81%E5%AD%A6)。目前限於 256、384 及 521 位元（是 521 沒錯）。
-- Firefox 2 支援「TLS 伺服器名稱指示套件」（TLS server name indication extension）。「TLS 伺服器名稱指示套件」能用於在同一個網路位置（Network Address）中存在多個虛擬伺服器時建立安全連線，進一步的內容請參考「[RFC 3546](http://tools.ietf.org/html/rfc3546)」。
+- Firefox 2 支援「TLS 伺服器名稱指示套件」（TLS server name indication extension）。「TLS 伺服器名稱指示套件」能用於在同一個網路位置（Network Address）中存在多個虛擬伺服器時建立安全連線，進一步的內容請參考「[RFC 3546](https://tools.ietf.org/html/rfc3546)」。
 - 當 Firefox 2 傳送一個 [OCSP](http://en.wikipedia.org/wiki/Ocsp) 請求到有效的網頁伺服器認證時，Firefox 會直接連線到該伺服器，而不會使用代理伺服器（Proxy Sever）。
 
 ## 開啟與關閉編碼方式

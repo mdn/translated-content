@@ -5,7 +5,7 @@ slug: Web/API/AmbientLightSensor
 
 {{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
 
-**[环境光传感器 API](/zh-CN/docs/Web/API/Ambient_Light_Sensor_API)** 的 `AmbientLightSensor` 返回一个用于访问 {{domxref('AmbientLightSensorReading')}} 的接口。
+**[环境光传感器 API](/zh-CN/docs/Web/API/AmbientLightSensor)** 的 `AmbientLightSensor` 返回一个用于访问 {{domxref('AmbientLightSensorReading')}} 的接口。
 
 ## 实例
 

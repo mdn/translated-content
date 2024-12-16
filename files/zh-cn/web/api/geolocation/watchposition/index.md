@@ -68,7 +68,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 参见
 
-- [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API)
 - 该方法属于 {{domxref("Geolocation")}}，可以通过 {{domxref("NavigatorGeolocation.geolocation")}} 访问。
 - 取消监听的方法： {{domxref("Geolocation.clearWatch()")}}
 - 另一个类似的方法： {{domxref("Geolocation.getCurrentPosition()")}}

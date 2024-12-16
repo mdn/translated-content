@@ -35,7 +35,7 @@ var p_prime = p.cloneNode(true);
 
 ## 附注
 
-克隆一个元素节点会拷贝它所有的属性以及属性值，当然也就包括了属性上绑定的事件 (比如`onclick="alert(1)"`),但不会拷贝那些使用[`addEventListener()`](/zh-CN/docs/DOM/element.addEventListener)方法或者`node.onclick = fn`这种用 JavaScript 动态绑定的事件。
+克隆一个元素节点会拷贝它所有的属性以及属性值，当然也就包括了属性上绑定的事件 (比如`onclick="alert(1)"`),但不会拷贝那些使用[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)方法或者`node.onclick = fn`这种用 JavaScript 动态绑定的事件。
 
 在使用{{domxref("Node.appendChild()")}}或其他类似的方法将拷贝的节点添加到文档中之前，那个拷贝节点并不属于当前文档树的一部分，也就是说，它没有父节点。
 
