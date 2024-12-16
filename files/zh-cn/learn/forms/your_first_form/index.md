@@ -117,7 +117,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 - 在我们的简单示例中，我们使用值 {{HTMLelement("input/text", "text")}} 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。
 - 对于第二个输入，我们使用值 {{HTMLelement("input/email", "email")}}，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，你将了解到更多关于[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)的信息。
 
-最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/Input#value) 属性，如下所示：
+最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性，如下所示：
 
 ```html
 <input type="text" value="by default this element is filled with this text" />

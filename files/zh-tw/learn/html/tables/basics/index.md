@@ -281,7 +281,7 @@ th {
 {{EmbedLiveSample("結果")}}
 
 > [!NOTE]
-> 你也可以在 GitHub 上看到 [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> 你也可以在 GitHub 上看到 [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## 用 \<th> 加上標頭元素
 
@@ -426,7 +426,7 @@ th {
 4. 儲存並在瀏覽器上檢視你改善後的程式碼。
 
 > [!NOTE]
-> 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Providing common styling to columns
 
@@ -529,7 +529,7 @@ Recreate the table by following the steps below.
 7. Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
 8. The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
 
-See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
+See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
 ## Summary
 

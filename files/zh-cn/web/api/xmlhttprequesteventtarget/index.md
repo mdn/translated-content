@@ -14,7 +14,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 - {{ domxref("XMLHttpRequestEventTarget.onabort") }}
   - : 当请求失败时调用该方法，接受 [`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event) 对象作为参数。
 - {{ domxref("XMLHttpRequestEventTarget.onerror") }}
-  - : 当请求发生错误时调用该方法，接受 [`error`](/zh-CN/docs/Web/API/Element/error_event) 对象作为参数。
+  - : 当请求发生错误时调用该方法，接受 [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) 对象作为参数。
 - {{ domxref("XMLHttpRequestEventTarget.onload") }}
   - : 当一个 HTTP 请求正确加载出内容后返回时调用，接受 [`load`](/zh-CN/docs/Web/API/Window/load_event) 对象作为参数。
 - {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}

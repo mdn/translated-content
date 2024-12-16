@@ -57,7 +57,7 @@ first.onchange = function () {
 };
 ```
 
-完整的例子请看 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+完整的例子请看 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## 规范
 

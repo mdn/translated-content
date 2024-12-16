@@ -28,7 +28,7 @@ history.go(-1); //等同于 history.back();
 
 出于安全考虑，History 对象不允许未授权代码访问会话历史（session History）中其他页面的 URLs，但可以导航到其他会话历史（session History）指向的页面。
 
-未授权代码无法清除会话历史（session History），也不能禁用回退/前进功能。最快捷的可用方式是使用[location.replace()](/zh-CN/DOM/window.location#replace)方法，提供指定的 URL 来替换当前的会话历史（session history）。
+未授权代码无法清除会话历史（session History），也不能禁用回退/前进功能。最快捷的可用方式是使用[location.replace()](/zh-CN/docs/Web/API/Window/location#replace)方法，提供指定的 URL 来替换当前的会话历史（session history）。
 
 ## 规范
 

@@ -29,7 +29,7 @@ slug: Learn/Forms/Basic_native_form_controls
 - 所有表单部件共有的一些属性。
 
 > [!NOTE]
-> 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
+> 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/input)参考。
 
 ## 文本输入框
 
@@ -45,7 +45,7 @@ slug: Learn/Forms/Basic_native_form_controls
 - 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Attributes/maxlength)（可以输入的最大字符数）进行限制。
 - 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Global_attributes/spellcheck) 属性）中获益。
 
-> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Element/Input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
+> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
 
 ### 单行文本框
 
@@ -97,9 +97,9 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 ## 可选中项：复选框和单选按钮
 
-可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性，以指示该部件的默认状态：“选中”或“未选中”。
+可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性，以指示该部件的默认状态：“选中”或“未选中”。
 
-值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
+值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
 
 > [!NOTE]
 > 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
@@ -108,13 +108,13 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 ### 复选框
 
-使用 [`type`](/zh-CN/docs/Web/HTML/Element/Input#type) 属性值为 `checkbox` 的 {{HTMLElement("input")}} 元素来创建一个{{HTMLElement("input/checkbox", "复选框")}}。
+使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `checkbox` 的 {{HTMLElement("input")}} 元素来创建一个{{HTMLElement("input/checkbox", "复选框")}}。
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
-相关的复选框元素应该使用具有相同值的 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性。包含 `checked` 属性使复选框在页面加载时自动被选中。点击复选框或其相关联的标签也将自动翻转复选框的状态（选中、取消选中）
+相关的复选框元素应该使用具有相同值的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性。包含 `checked` 属性使复选框在页面加载时自动被选中。点击复选框或其相关联的标签也将自动翻转复选框的状态（选中、取消选中）
 
 ```html
 <fieldset>
@@ -146,7 +146,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
 > [!NOTE]
-> 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
+> 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
 
 由于复选框的开关特性，其被认为是一种切换按钮，许多开发者和设计人员覆盖了默认的复选框样式，以使其看起来像是一个切换开关的按钮。你可以在[这里看到一个示例](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)（参见[源码](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)）。
 
@@ -263,7 +263,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
-要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
+要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
 
 #### 示例
 

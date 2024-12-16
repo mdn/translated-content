@@ -103,7 +103,7 @@ return "cat"[1]; // 回傳 "a"
 
 ### 比較字串
 
-C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
+C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)：
 
 ```js
 var a = "a";
@@ -172,7 +172,7 @@ var num = 15;
 alert(String.replace(num, /5/, "2"));
 ```
 
-[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
+[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
 
 The following is a shim to provide support to non-supporting browsers:
 
@@ -364,5 +364,5 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 ## 參見
 
 - {{domxref("DOMString")}}
-- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/Add-ons/Code_snippets/StringView)
+- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/docs/Mozilla/Add-ons/Code_snippets/StringView)
 - [Binary strings](/zh-TW/docs/Web/API/DOMString/Binary)

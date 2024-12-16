@@ -33,7 +33,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 **外边距区域**（margin area）由外边距边界限制，用空白区域扩展边框区域，以分开相邻的元素。它的尺寸为 *margin-box 宽度*和 _margin-box 高度_。
 
-外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/CSS/margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
+外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
 
 最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
 
@@ -41,14 +41,14 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 - [布局与包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Cascade)
-- [层叠和继承](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+- [层叠和继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

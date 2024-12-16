@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions
 - [側邊欄](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
 - [右鍵選單](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
 - [設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
-- [附加頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages)
+- [附加頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)
 - [通知](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
 - [網址列建議](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
 - [開發者工具面板](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
@@ -49,7 +49,7 @@ slug: Mozilla/Add-ons/WebExtensions
 - [國際化](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
 - [資訊安全聲明](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [原生溝通方式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-- [使用開發工具 APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs)
+- [使用開發工具 APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
 - [UX 範例](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
 
 ## 移植
@@ -65,13 +65,13 @@ slug: Mozilla/Add-ons/WebExtensions
 ## Firefox 工作流程
 
 - [UX](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [安裝](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [除錯](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Debugging)
+- [安裝](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [除錯](https://extensionworkshop.com/documentation/develop/debugging/)
 - [在 Firefox for Android 上開發](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)
 - [開始使用 web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - [web-ext 指令參考](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
 - [WebExtensions 和附加元件 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [發布你的 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
+- [發布你的 WebExtension](https://extensionworkshop.com/documentation/publish/package-your-extension/)
 
 ## 參考資料
 

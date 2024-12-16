@@ -81,7 +81,7 @@ if (CSS.supports("grid-template-columns", "subgrid")) {
 }
 ```
 
-在我们的条件语句中，我们使用 [`CSS.supports()`](/zh-CN/docs/Web/API/CSS/supports) 测试 {{cssxref("grid-template-columns")}} 属性是否支持 `subgrid` 值。
+在我们的条件语句中，我们使用 [`CSS.supports()`](/zh-CN/docs/Web/API/CSS/supports_static) 测试 {{cssxref("grid-template-columns")}} 属性是否支持 `subgrid` 值。
 
 #### @supports
 

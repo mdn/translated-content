@@ -34,9 +34,9 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
   - : 这组文章提供了快速解释，以帮助你了解需要采取的步骤，以符合 W3C web 内容无障碍指南 2.0（WCAG 2.0 或简称 WCAG，出于撰文需要）的建议。
 - [色彩与无障碍简介](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 本文探讨了我们对于亮度和色彩的感知，并提供了如何在无障碍设计中使用色彩的基础知识，也演示了视觉与可读内容的最佳实践。
-- [可通过键盘导航的 JavaScript 小部件](/zh-CN/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [可通过键盘导航的 JavaScript 小部件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : 直到目前，web 开发人员仍缺乏合适的技术使基于 `<div>` 和 `<span>` 的自定义组件无障碍化。**对键盘的无障碍性**是最基础的无障碍要求之一，开发者应当了解这一内容。
-- [ARIA](/zh-CN/docs/Accessibility/ARIA)
+- [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
   - : 学习如何利用无障碍富互联网应用（Accessible Rich Internet Application）使你的 HTML 文档进一步无障碍化的一组文章。
 - [移动无障碍化清单](/zh-CN/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : 本文档向移动应用开发者提供了实现无障碍化所需内容的简明清单。
