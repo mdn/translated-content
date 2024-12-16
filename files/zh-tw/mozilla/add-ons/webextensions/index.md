@@ -16,7 +16,7 @@ Firefox 的擴充功能技術在很大程度上與由 Chromium 為基礎的瀏�
 - 指南
   - : 無論你是剛開始還是尋求更進階的建議，都可以從我們廣泛的[教程與指南](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)中了解擴充功能的運作方式及如何使用 WebExtensions API。
 - 參考資料
-  - : 獲取關於 [WebExtensions APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)的方法、屬性、類型和事件的詳細資訊，以及 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資料。
+  - : 獲取關於 [WebExtensions API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)的方法、屬性、類型和事件的詳細資訊，以及 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資料。
 - Firefox 工作流程
   - : 瞭解如何為 Firefox 建構和發布擴充功能：包括開發工具、發布與分發以及在 [Extension Workshop](https://extensionworkshop.com/) 上的移植流程。
 
@@ -50,9 +50,9 @@ Firefox 的擴充功能技術在很大程度上與由 Chromium 為基礎的瀏�
 
 ## 參考資料
 
-### JavaScript APIs
+### JavaScript API
 
-獲取關於所有 [JavaScript APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API) 的方法、屬性、類型和事件的詳細資訊。每個參考頁面還包括程式碼範例及使用該 API 的擴充功能範例的連結。
+獲取關於所有 [JavaScript API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API) 的方法、屬性、類型和事件的詳細資訊。每個參考頁面還包括程式碼範例及使用該 API 的擴充功能範例的連結。
 
 ### Manifest 鍵
 
