@@ -43,7 +43,6 @@ Firefox 的擴充功能技術在很大程度上與由 Chromium 為基礎的瀏�
 
 當你準備為 Firefox 建立擴充功能或移植你的 Chrome 擴充功能時，請造訪 [Extension Workshop](https://extensionworkshop.com/)。其中包含以下內容的詳細資訊：
 
-
 - Firefox 工作流程，如[在開發期間暫時安裝擴充功能](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)、[調試](https://extensionworkshop.com/documentation/develop/debugging/)、[請求正確的權限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)等。
 - [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 開發工具。
 - [移植 Google Chrome 擴充功能](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、[桌面與 Android 之間的差異](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)等。
