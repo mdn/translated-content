@@ -24,7 +24,7 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)，将会抛出 {{jsxref("TypeError")}} 异常。
+- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，将会抛出 {{jsxref("TypeError")}} 异常。
 - 如果编译失败，promise 会通过拒绝（reject）来返回一个 {{jsxref("WebAssembly.CompileError")}}。
 
 ## 示例

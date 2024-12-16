@@ -8,7 +8,7 @@ slug: MDN/Writing_guidelines
 MDN Web Docs 是個針對網路技術和基於網路的軟體，持續發展的學習平台。它包含了：
 
 - 諸如 [CSS](/zh-TW/docs/Web/CSS)、[HTML](/zh-TW/docs/Web/HTML)、[JavaScript](/zh-TW/docs/Web/JavaScript) 的網路標準
-- [Open Web app 開發](/zh-TW/docs/Web/Apps)
+- [Open Web app 開發](/zh-TW/docs/Web/Progressive_web_apps)
 - [Firefox 附加元件開發](/zh-TW/docs/Mozilla/Add-ons)
 
 ## 我們的使命
@@ -65,7 +65,7 @@ Mozilla 基金會的商標、Logo、服務標誌，以及這個網站的風格�
 
 #### 單一頁面
 
-你可以透過在網址增加[文件參數](/zh-TW/docs/MDN/Kuma/API#Document_parameters)指定想要的格式，取得單一頁面的內容。
+你可以透過在網址增加[文件參數](https://github.com/mdn/yari/tree/main/docs#document_parameters)指定想要的格式，取得單一頁面的內容。
 
 #### 第三方工具
 
@@ -79,7 +79,7 @@ Mozilla 基金會的商標、Logo、服務標誌，以及這個網站的風格�
 
 ## 向 MDN 報告問題
 
-請參閱 [How to report a problem on MDN](/zh-TW/docs/MDN/Contribute/Howto/Report_a_problem)。
+請參閱 [How to report a problem on MDN](/zh-TW/docs/MDN/Community/Issues)。
 
 ## MDN 網頁文檔歷史
 

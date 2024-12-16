@@ -38,7 +38,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 
 ### 客户端/服务器体系结构
 
-web 基于非常基本的客户端/服务器体系结构，可以总结如下：客户端（通常是 web 浏览器）向服务器发送请求 (大多数情况下是 [Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/) 等 web 服务器），使用 [HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
+web 基于非常基本的客户端/服务器体系结构，可以总结如下：客户端（通常是 web 浏览器）向服务器发送请求 (大多数情况下是 [Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/) 等 web 服务器），使用 [HTTP 协议](/zh-CN/docs/Web/HTTP)。服务器使用相同的协议来回答请求。
 
 ![A basic schema of the Web client/server architecture](client-server.png)
 
@@ -84,7 +84,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 
 #### `method` 属性
 
-该属性定义了如何发送数据。[HTTP 协议](/zh-CN/docs/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
+该属性定义了如何发送数据。[HTTP 协议](/zh-CN/docs/Web/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
 
 为了理解这两种方法之间的区别，让我们回过头来看看 HTTP 是如何工作的。
 每当你想要访问 Web 上的资源时，浏览器都会向 URL 发送一个请求。
@@ -240,11 +240,11 @@ if __name__ == "__main__":
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
 > [!NOTE]
-> 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
+> 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#installing_python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
 
 #### 其他语言和框架
 
-还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/zh-CN/docs/)、[Java](/zh-CN/docs/)、 [.Net](http://www.microsoft.com/net)、[Ruby](/zh-CN/docs/)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
+还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/zh-CN/docs/Web)、[Java](/zh-CN/docs/Web)、 [.Net](https://www.microsoft.com/net)、[Ruby](/zh-CN/docs/Web)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
 
 - [Django](/zh-CN/docs/Learn/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
 - [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs) for Node.js
@@ -269,7 +269,7 @@ if __name__ == "__main__":
 
 - 将[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`POST`，因为文件内容不能放入 URL 参数中。
 - 将[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
-- 包含一个或多个[File picker](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker)小部件，允许用户选择将要上传的文件。
+- 包含一个或多个[File picker](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#file_picker)小部件，允许用户选择将要上传的文件。
 
 例如：
 
@@ -301,7 +301,7 @@ if __name__ == "__main__":
 
 跨站脚本 (XSS) 和跨站点请求伪造 (CSRF) 是常见的攻击类型，它们发生在当你将用户发送的数据显示给这个用户或另一个用户时。
 
-XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
+XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
 
 CSRF 攻击类似于 XSS 攻击，因为它们以相同的方式开始攻击——向 Web 页面中注入客户端脚本——但它们的目标是不同的。CSRF 攻击者试图将权限升级到特权用户 (比如站点管理员) 的级别，以执行他们不应该执行的操作 (例如，将数据发送给一个不受信任的用户)。
 
@@ -338,7 +338,7 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 ## 结论
 
-如你所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/HTML/Forms/Data_form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
+如你所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/Learn/Forms/Form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
 
 ## 参见
 

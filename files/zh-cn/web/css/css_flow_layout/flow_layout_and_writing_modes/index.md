@@ -73,6 +73,6 @@ CSS 编写模式级别 3 规范定义了文档编写模式更改对流布局的�
 
 ## 参见
 
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)
 - [书写模式和 CSS 布局](https://www.smashingmagazine.com/2019/08/writing-modes-layout/)
 - [CSS 书写模式](https://24ways.org/2016/css-writing-modes/)

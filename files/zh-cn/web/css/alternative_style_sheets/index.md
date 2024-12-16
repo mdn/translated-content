@@ -53,7 +53,7 @@ No matter what style is selected, the rules from the reset.css stylesheet will a
 
 ### 尝试
 
-[Click here](/samples/cssref/altstyles/index.html) for a working example you can try out.
+[Click here](https://mdn.dev/archives/media/samples/cssref/altstyles/index.html) for a working example you can try out.
 
 [点击此处](https://mdn.github.io/css-examples/alt-style-sheets/)进入示例。
 

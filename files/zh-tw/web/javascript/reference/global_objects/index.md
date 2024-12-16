@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 「全域物件」（或稱作標準內建物件）這個專有名字並非是要和**全域物件**混著說。在這裡，全域物件是那些在全域範圍裡的物件。而**全域物件**自身則是關聯到全域範圍裡的 {{jsxref("Operators/this", "this")}} 運算子（但若是在 ECMAScript 5 的嚴格模式（strict mode）則是不被採用的，即會回傳 {{jsxref("undefined")}}）。 事實上，全域範圍包含了全域物件的屬性，也包含了繼承而來的屬性（如果有的話）。
 
-其他在全域範疇的物件，不是[被使用者的腳本建立](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects)，就是由主體的應用程式所提供。 主體物件是由 [API 參考資料](/zh-TW/docs/Web/API/Reference)定義的文件決定瀏覽器環境中是否可用。 更多關於 [DOM](/zh-TW/docs/DOM/DOM_Reference) 和 [JavaScript](/zh-TW/docs/Web/JavaScript) 核心的差異，請參考 [JavaScript 技術概要](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview)。
+其他在全域範疇的物件，不是[被使用者的腳本建立](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects)，就是由主體的應用程式所提供。 主體物件是由 [API 參考資料](/zh-TW/docs/Web/API)定義的文件決定瀏覽器環境中是否可用。 更多關於 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 和 [JavaScript](/zh-TW/docs/Web/JavaScript) 核心的差異，請參考 [JavaScript 技術概要](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview)。
 
 ## 標準物件分類
 

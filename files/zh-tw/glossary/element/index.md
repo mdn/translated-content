@@ -13,5 +13,5 @@ slug: Glossary/Element
 ## 瞭解更多
 
 - The {{domxref("Element")}} interface, representing an element in the DOM.
-- [More details about elements.](/zh-TW/docs/Web/Guide/HTML/Element)
-- [Web_Components/Custom_Elements](/zh-TW/docs/Web/Web_Components/Custom_Elements)
+- [More details about elements.](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [Web_Components/Custom_Elements](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)

@@ -21,7 +21,7 @@ slug: Web/CSS/CSS_flow_layout
 
 - [Block and Inline Layout in Normal Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
 - [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
-- [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Formatting_Contexts_Explained)
+- [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - [Flow Layout and Writing Modes](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
 - [Flow Layout and Overflow](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
 

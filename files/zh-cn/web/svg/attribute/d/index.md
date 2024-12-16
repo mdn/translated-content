@@ -120,7 +120,7 @@ svg {
 
 ## 将 d 作为 CSS 属性
 
-`d` 是一个表现属性，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/path) 或 `none`。
+`d` 是一个表现属性，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/basic-shape/path) 或 `none`。
 
 下面的示例展示了如何在悬停在元素上时应用新的路径。新的路径与旧的路径相同，但额外增加了一条穿过心形图案的线。
 

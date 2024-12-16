@@ -53,4 +53,4 @@ function f(arg) {
 - [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var)
-- 在 [JavaScript 教學](/zh-TW/docs/Web/JavaScript/Guide)內[宣告變數](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations)
+- 在 [JavaScript 教學](/zh-TW/docs/Web/JavaScript/Guide)內[宣告變數](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

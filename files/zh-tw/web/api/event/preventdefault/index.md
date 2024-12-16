@@ -46,7 +46,7 @@ Toggling a checkbox is the default action of clicking on a checkbox. This exampl
 </html>
 ```
 
-You can see `preventDefault` in action [here](/samples/domref/dispatchEvent.html).
+You can see `preventDefault` in action [here](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
 
 The following example demonstrates how invalid text input can be stopped from reaching the input field with preventDefault().
 
