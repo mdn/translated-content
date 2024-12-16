@@ -46,10 +46,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -69,4 +69,4 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGPatternElement`](/zh-CN/DOM/SVGPatternElement) 接口。
+该元素实现了 [`SVGPatternElement`](/zh-CN/docs/DOM/SVGPatternElement) 接口。

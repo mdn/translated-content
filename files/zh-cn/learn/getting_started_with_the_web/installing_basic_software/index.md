@@ -29,7 +29,7 @@ l10n:
 
 ### 安装本地 Web 服务器
 
-有些例子需要通过 Web 服务器才能成功运行。你可以在[如何设置本地测试服务器？](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)中找到该怎么做。
+有些例子需要通过 Web 服务器才能成功运行。你可以在[如何设置本地测试服务器？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)中找到该怎么做。
 
 ## 专业人士使用什么工具？
 

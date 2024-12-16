@@ -79,7 +79,7 @@ mediaQueryList.removeListener(handleOrientationChange);
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/CSS/Media_queries)
+- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()") }}
 - {{domxref("MediaQueryList") }}
 - {{domxref("MediaQueryListListener") }}

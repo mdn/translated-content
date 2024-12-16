@@ -58,7 +58,7 @@ var color2 = "coral";
 
 ### 对被删除或值为 undefined 的属性使用`in`
 
-如果你使用 [`delete`](/zh-CN/docs/JavaScript/Reference/Operators/delete) 运算符删除了一个属性，则 `in` 运算符对所删除属性返回 `false`。
+如果你使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 运算符删除了一个属性，则 `in` 运算符对所删除属性返回 `false`。
 
 ```js
 var mycar = { make: "Honda", model: "Accord", year: 1998 };
@@ -103,7 +103,7 @@ trees[3] = undefined;
 ## 参见
 
 - [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/zh-CN/docs/JavaScript/Reference/Operators/delete)
+- [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
 - [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

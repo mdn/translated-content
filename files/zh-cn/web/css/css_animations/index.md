@@ -61,7 +61,7 @@ CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属�
 
 - [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : 关于如何使用 CSS 创建动画的分步教程，本文介绍每个相关的 CSS 属性和规则，并解释它们如何交互。
-- [CSS 动画提示和技巧](/zh-CN/docs/Web/CSS/CSS_animations/Tips)
+- [CSS 动画提示和技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
   - : 帮助你充分利用 CSS 动画的技巧和窍门。
 
 ## 相关概念

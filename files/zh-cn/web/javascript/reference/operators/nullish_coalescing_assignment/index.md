@@ -19,7 +19,7 @@ expr1 ??= expr2
 
 ### 短路评估
 
-[空值合并](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)运算符从左至右求值，其使用以下规则测试是否可能进行语法短路求值：
+[空值合并](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)运算符从左至右求值，其使用以下规则测试是否可能进行语法短路求值：
 
 `(结果非 null 或 undefined 的表达式) ?? expr` 被短路求值为左侧表达式，当左侧证明为既非 `null` 也非 `undefined`.
 
@@ -62,7 +62,7 @@ config({}); // { duration: 100, speed: 25 }
 
 ## 参见
 
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{Glossary("Nullish", "空值")}}
 - {{Glossary("Truthy", "真值")}}
 - {{Glossary("Falsy", "假值")}}

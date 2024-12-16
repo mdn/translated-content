@@ -67,7 +67,7 @@ mql.removeListener(handleOrientationChange);
 
 ## 延伸閱讀
 
-- [Media queries](/zh-TW/docs/CSS/Media_queries)
+- [Media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()") }}
 - {{domxref("MediaQueryList") }}
 - {{domxref("MediaQueryListListener") }}

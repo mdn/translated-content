@@ -37,7 +37,7 @@ svg {
 
 对于 {{SVGElement('ellipse')}}，`rx` 属性定义了水平方向的半径尺寸。如果使用了负值或者零，那么椭圆就不会被绘制。
 
-| 取值         | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage)** \| `auto` |
+| 取值         | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#percentage)** \| `auto` |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | 默认值       | `auto`                                                                                                                                 |
 | 是否支持动画 | 是                                                                                                                                     |
@@ -54,7 +54,7 @@ svg {
 - 如果 `rx` 和 {{SVGAttr("ry")}} 都没有被正确的赋值，那么浏览器会绘制一个带有直角尖角的矩形。
 - `rx` 属性的有效值为矩形宽度的一半（即，如果为 `rx` 指定的值大于矩形宽度的一半，那么浏览器会视为 `rx` 的值为矩形宽度的一半）。
 
-| 取值         | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage)** \| `auto` |
+| 取值         | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#percentage)** \| `auto` |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | 缺省值       | `auto`                                                                                                                                 |
 | 是否支持动画 | 是                                                                                                                                     |

@@ -45,7 +45,7 @@ JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且�
 
 ## 了解原型物件
 
-先回到我們寫過的 `Person()` 建構子範例。在你的瀏覽器裡載入範例。如果你還沒看完前篇文章並製作出此範例，可先使用 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 這個範例 (可看到[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html))。
+先回到我們寫過的 `Person()` 建構子範例。在你的瀏覽器裡載入範例。如果你還沒看完前篇文章並製作出此範例，可先使用 [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 這個範例 (可看到[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html))。
 
 我們在此範例中定義了建構子函式：
 
@@ -192,7 +192,7 @@ person1.constructor.name;
 
 先看看建構子的 `prototype` 屬性的修改範例：
 
-1. 回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
+1. 回到 [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
 
    ```js
    Person.prototype.farewell = function () {
@@ -229,7 +229,7 @@ Person.prototype.farewell = function () {
 但是 `farewell()` 函式仍可用於 `person1` 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。
 
 > [!NOTE]
-> 如果你在讓此範例運作時感覺有點困難，可參閱 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 範例 (也可看[即時運作](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)的情形)。
+> 如果你在讓此範例運作時感覺有點困難，可參閱 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 範例 (也可看[即時運作](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)的情形)。
 
 你很少會看到在 `prototype` 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：
 

@@ -136,7 +136,7 @@ const myObject = {
 ### JavaScript 调试
 
 - [什么是错误的基本类型？](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#错误类型)
-- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [怎么在 JavaScript 控制台打印值？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#console_相关_api)
 - [怎么使用断点和其他 JavaScript 调试工具？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 

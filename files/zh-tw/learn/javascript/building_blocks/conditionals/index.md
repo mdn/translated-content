@@ -52,7 +52,7 @@ if (condition) {
 這邊我們可以得知基礎的架構：
 
 1. 關鍵字 `if` 和後頭的括號。
-2. 想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)（[comparison operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)），並且最後會回傳 `true` 或是 `false`。
+2. 想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)（[comparison operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)），並且最後會回傳 `true` 或是 `false`。
 3. 第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 `true` 才會執行。
 4. 關鍵字 `else`。
 5. 另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 `false` 才會執行。
@@ -97,7 +97,7 @@ if (shoppingDone === true) {
 This code as shown will always result in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
 
 > [!NOTE]
-> You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -153,11 +153,11 @@ function setWeather() {
 4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
-Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators) article. Our choices are:
+Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators) article. Our choices are:
 
 - `===` and `!==` — test if one value is identical to, or not identical to, another.
 - `<` and `>` — test if one value is less than or greater than another.
@@ -215,7 +215,7 @@ Even though the code all works together, each `if...else` statement works comple
 
 ### Logical operators: AND, OR and NOT
 
-If you want to test multiple conditions without writing nested `if...else` statements, [logical operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators) can help you. When used in conditions, the first two do the following:
+If you want to test multiple conditions without writing nested `if...else` statements, [logical operators](/zh-TW/docs/Web/JavaScript/Reference/Operators) can help you. When used in conditions, the first two do the following:
 
 - `&&` — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to `true` for the whole expression to return `true`.
 - `||` — OR; allows you to chain together two or more expressions so that one or more of them have to individually evaluate to `true` for the whole expression to return `true`.
@@ -372,11 +372,11 @@ function setWeather() {
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
 
 ## 三元運算符
 
-There is one final bit of syntax we want to introduce you to, before we get you to play with some examples. The [ternary or conditional operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you simply have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
+There is one final bit of syntax we want to introduce you to, before we get you to play with some examples. The [ternary or conditional operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you simply have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
 ```plain
 ( condition ) ? run this code : run this code instead
@@ -427,10 +427,10 @@ select.onchange = function () {
 
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
-Finally, we've also got an [onchange](/zh-TW/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
+Finally, we've also got an [onchange](/zh-TW/docs/Web/API/HTMLElement/change_event) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
 
 > [!NOTE]
-> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## Active learning: A simple calendar
 
@@ -800,13 +800,13 @@ textarea.onkeyup = function () {
 
 ## Conclusion
 
-And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/Learn#Contact_us) to ask for help.
+And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn#contact_us) to ask for help.
 
 ## See also
 
-- [Comparison operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)
-- [Conditional statements in detail](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [Comparison operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Conditional statements in detail](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
