@@ -9,35 +9,12 @@ CSS **视觉格式化模型**（visual formatting model）是用来处理和在�
 
 视觉格式化模型会根据 [CSS 盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)将文档中的元素转换为一个个盒子，每个盒子的布局由以下因素决定：
 
-- 盒子的尺寸：精确指定、由约束条件指定或没有指定
-- 盒子的类型：行内盒子（inline）、行内级盒子（inline-level）、原子行内级盒子（atomic inline-level）、块盒子（block）
-- [定位方案（positioning scheme）](/zh-CN/docs/CSS/Box_positioning_scheme)：普通流定位、浮动定位或绝对定位
-- 文档树中的其他元素：即当前盒子的子元素或兄弟元素
-- {{glossary("viewport", "视口")}}尺寸与位置
-- 所包含的图片的尺寸
-- 其他的某些外部因素
+- 盒子的尺寸和类型。
+- 定位方案（常规流定位、浮动定位和绝对定位）。
+- 文档树中元素之间的关系。
+- 外部因素（如，视口尺寸、图像的固有尺寸，等）。
 
 该模型会根据盒子的包含块（*containing block）的*边界来渲染盒子。通常，盒子会创建一个包含其后代元素的包含块，但是盒子并不由包含块所限制，当盒子的布局跑到包含块的外面时称为溢出（_overflow）_。
-
-> [!NOTE]
-> 译注：本文有很多相近的术语，阅读时需仔细，否则容易造成误解。为了方便读者，这里我将其整理一下。
->
-> - **块**：block，一个抽象的概念，一个块在文档流上占据一个独立的区域，块与块之间在垂直方向上按照顺序依次堆叠。
-> - **包含块**：containing block，包含其他盒子的块称为包含块。
-> - **盒子**：box，一个抽象的概念，由 CSS 引擎根据文档中的内容所创建，主要用于文档元素的定位、布局和格式化等用途。盒子与元素并不是一一对应的，有时多个元素会合并生成一个盒子，有时一个元素会生成多个盒子（如匿名盒子）。
-> - **块级元素**：block-level element，元素的 `display` 为 `block`、`list-item`、`table` 时，该元素将成为块级元素。元素是否是块级元素仅是元素本身的属性，并不直接用于格式化上下文的创建或布局。
-> - **块级盒子**：block-level box，由块级元素生成。一个块级元素至少会生成一个块级盒子，但也有可能生成多个（例如列表项元素）。
-> - **块盒子**：block box，如果一个块级盒子同时也是一个块容器盒子（见下），则称其为块盒子。除具名块盒子之外，还有一类块盒子是匿名的，称为匿名块盒子（Anonymous block box），匿名盒子无法被 CSS 选择符选中。
-> - **块容器盒子**：block container box 或 block containing box，块容器盒子侧重于当前盒子作为“容器”的这一角色，它不参与当前块的布局和定位，它所描述的仅仅是当前盒子与其后代之间的关系。换句话说，块容器盒子主要用于确定其子元素的定位、布局等。
->
-> 注意：盒子分为“块盒子”和“块级盒子”两种，但元素只有“块级元素”，而没有“块元素”。下面的“行内级元素”也是一样。
->
-> - **行内级元素**：inline-level element，`display` 为 `inline`、`inline-block`、`inline-table` 的元素称为行内级元素。与块级元素一样，元素是否是行内级元素仅是元素本身的属性，并不直接用于格式化上下文的创建或布局。
-> - **行内级盒子**：inline-level box，由行内级元素生成。行内级盒子包括行内盒子和原子行内级盒子两种，区别在于该盒子是否参与行内格式化上下文的创建。
-> - **行内盒子**：inline box，参与行内格式化上下文创建的行内级盒子称为行内盒子。与块盒子类似，行内盒子也分为具名行内盒子和匿名行内盒子（anonymous inline box）两种。
-> - **原子行内级盒子**：atomic inline-level box，不参与行内格式化上下文创建的行内级盒子。原子行内级盒子一开始叫做原子行内盒子（atomic inline box），后被修正。原子行内级盒子的内容不会拆分成多行显示。
->
-> 另外，本文的英文原文仍未最后定稿，因此部分内容并不完整。待英文原文更新后应及时更新译文。
 
 ## 盒子的生成
 
@@ -65,7 +42,31 @@ CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能�
 
 块包含盒子可能只包含行内级盒子，也可能只包含块级盒子，但通常的文档都会同时包含两者，在这种情况下，就会在相邻的行内级盒子外创建匿名块盒子。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-flex.html", '100%', 720)}}
+```html live-sample___anonymous-flex
+<div class="flex">
+  我被包装在一个匿名盒子中
+  <p>我在段落中</p>
+  我被包装在一个匿名盒子中。
+</div>
+```
+
+```css live-sample___anonymous-flex
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-flex")}}
 
 对这两个匿名盒子来说，程序员无法像 {{ HTMLElement("p") }} 元素那样控制它们的样式，因此它们会从 {{ HTMLElement("div") }} 那里继承那些可继承的属性，如 {{ cssxref("color") }}。其他不可继承的属性则会设置为 `initial`，比如，因为没有为它们指定 {{ cssxref("background-color") }}，因此其具有默认的透明背景，而 `<p>` 元素的盒子则能够用 CSS 指定背景颜色。类似地，两个匿名盒子的文本颜色总是一样的。
 
@@ -73,7 +74,27 @@ CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能�
 
 如果有多个块盒子，而它们中间又没有行内元素，则会在这些盒子的前面和后面创建两个匿名块盒子。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-block.html", '100%', 720)}}
+```html live-sample___anonymous-block
+<div class="example">
+  我被包装在一个匿名盒子中
+  <p>我在段落中</p>
+  我被包装在一个匿名盒子中。
+</div>
+```
+
+```css live-sample___anonymous-block
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.example > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-block")}}
 
 ### 行内级元素和行内盒子
 
@@ -87,7 +108,33 @@ CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能�
 > [!NOTE]
 > 开始的时候，原子行内级盒子叫做原子行内盒子，这并不准确，因为它们并不是行内盒子。后来在一次勘误时修正了这一问题。不过，当你见到某些文章中使用了“原子行内盒子”的时候，你尽可以将其理解为“原子行内级盒子”，因为这仅仅是一个名字的修改。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/line-boxes.html", '100%', 720)}}
+```html live-sample___line-boxes
+<div class="float"></div>
+<p class="following">
+  此文本跟随浮动，行级盒子被缩短以便为浮动腾出空间，但元素的盒子仍然在常规流中。
+</p>
+```
+
+```css live-sample___line-boxes
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  margin: 20px;
+}
+
+.following {
+  background-color: #ccc;
+}
+```
+
+{{EmbedLiveSample("line-boxes", "", "250px")}}
 
 #### 匿名行内盒子
 
