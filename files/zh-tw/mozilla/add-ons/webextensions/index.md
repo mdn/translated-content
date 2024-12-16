@@ -25,7 +25,7 @@ Firefox 的擴充功能技術在很大程度上與由 Chromium 為基礎的瀏�
 
 ## 開始使用
 
-在建構[你的第一個擴充功能](zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先了解[擴充功能能做什麼](zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。瞭解[擴充功能的結構](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)以及 [Firefox 擴充功能開發與發布工作流程概覽](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)。通過一系列可直接在 Firefox 中執行的[範例擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)進一步探索。
+在建構[你的第一個擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先了解[擴充功能能做什麼](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。瞭解[擴充功能的結構](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)以及 [Firefox 擴充功能開發與發布工作流程概覽](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)。通過一系列可直接在 Firefox 中執行的[範例擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)進一步探索。
 
 ## 概念
 
