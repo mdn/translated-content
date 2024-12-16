@@ -30,7 +30,7 @@ l10n:
 
 ![uBlock Origin 擴充功能顯示阻擋追蹤器的統計數據。](ublock_origin_add_on.png)
 
-**新增工具與瀏覽功能**：為工作面板新增功能，或從 URL、超連結或頁面文字生成 QR 碼圖片。使用[WebExtensions APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 的強大功能和靈活的 UI 選項，你可以輕鬆地為瀏覽器添加新功能，甚至可以增強幾乎任何網站的功能，不限於你的網站。
+**新增工具與瀏覽功能**：為工作面板新增功能，或從 URL、超連結或頁面文字生成 QR 碼圖片。使用[WebExtensions API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 的強大功能和靈活的 UI 選項，你可以輕鬆地為瀏覽器添加新功能，甚至可以增強幾乎任何網站的功能，不限於你的網站。
 
 範例：[Worldwide Radio](https://addons.mozilla.org/zh-TW/firefox/addon/worldwide-radio/)、[Flagfox](https://addons.mozilla.org/zh-TW/firefox/addon/flagfox/)、[Tomato Clock](https://addons.mozilla.org/zh-TW/firefox/addon/tomato-clock/)。
 
@@ -48,7 +48,7 @@ l10n:
 
 ![Axe 可存取性測試擴充功能顯示網頁中的可存取性問題。](axe_developer_tools_add_on.png)
 
-Firefox 的擴充功能是基於 [WebExtensions APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 構建的，這是一種跨瀏覽器的擴充功能開發系統。此 API 在很大程度上與 Google Chrome 和 Opera 支援的[擴充功能 API](https://developer.chrome.com/docs/extensions/reference/) 相容。針對這些瀏覽器開發的擴充功能通常只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 或 Microsoft Edge 中運行。
+Firefox 的擴充功能是基於 [WebExtensions API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 構建的，這是一種跨瀏覽器的擴充功能開發系統。此 API 在很大程度上與 Google Chrome 和 Opera 支援的[擴充功能 API](https://developer.chrome.com/docs/extensions/reference/) 相容。針對這些瀏覽器開發的擴充功能通常只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 或 Microsoft Edge 中運行。
 
 如果你有想法或問題，可以透過 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35) 或 [Matrix](https://wiki.mozilla.org/Matrix) 中的 [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) 與我們聯繫。
 
