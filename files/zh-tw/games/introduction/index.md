@@ -30,7 +30,7 @@ l10n:
     <tr>
       <td><strong>圖形</strong></td>
       <td>
-        <a href="/zh-TW/docs/Web/API/WebGL_API">WebGL</a> (<a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0)
+        <a href="/zh-TW/docs/Web/API/WebGL_API">WebGL</a>（<a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0）
       </td>
     </tr>
     <tr>
@@ -48,7 +48,7 @@ l10n:
     <tr>
       <td><strong>網路</strong></td>
       <td>
-        <a href="/zh-TW/docs/Web/API/WebRTC_API">WebRTC</a> 和／或 <a href="/zh-TW/docs/Web/API/WebSockets_API">WebSockets</a>
+        <a href="/zh-TW/docs/Web/API/WebRTC_API">WebRTC</a> 和／或 <a href="/zh-TW/docs/Web/API/WebSockets_API">WebSocket</a>
       </td>
     </tr>
     <tr>
@@ -100,15 +100,15 @@ l10n:
   - : 該 API 讓你可以鎖定鼠標或其他指標設備，使其在遊戲界面內運作，從而提供精確的操作，並防止用戶意外將輸入導向其他地方。
 - [SVG](/zh-TW/docs/Web/SVG)（可縮放向量圖形）
   - : 讓你構建的向量圖形可以根據顯示器的大小或解析度平滑縮放。
-- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : JavaScript 型別化陣列讓你能在 JavaScript 中直接處理二進制數據，這適用於操作 GL 紋理、遊戲數據或其他非原生 JavaScript 格式的數據。
+- [型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
+  - : JavaScript 型別陣列讓你能在 JavaScript 中直接處理二進制數據，這適用於操作 GL 紋理、遊戲數據或其他非原生 JavaScript 格式的數據。
 - [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)
   - : 該 API 讓你可以通過 JavaScript 控制音頻播放、合成及處理，實現即時音效及音樂的播放與操作。
 - [WebGL](/zh-TW/docs/Web/API/WebGL_API)
   - : 讓你可以從 Web 內容創建高效能、硬體加速的 3D（及 2D）圖形，這是一種 [OpenGL ES](https://www.khronos.org/opengles/) 2.0 的 Web 支持實現。
 - [WebRTC](/zh-TW/docs/Web/API/WebRTC_API)
   - : WebRTC（即時通訊）API 可控制音頻與影片數據，包括視訊會議及應用數據在兩用戶之間的傳輸。如果你希望玩家在摧毀怪物的同時能彼此交談，這就是需要的 API。
-- [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
+- [WebSocket](/zh-TW/docs/Web/API/WebSockets_API)
   - : WebSocket API 讓你的應用或網站可以與伺服器建立實時數據傳輸連接，非常適合多人遊戲、聊天服務等。
-- [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : 使用 Workers 你可以啟動後台執行的 JavaScript 線程，充分利用現代多核心處理器。
