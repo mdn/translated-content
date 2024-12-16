@@ -11,7 +11,7 @@ l10n:
 
 就像你可以使用 {{WebExtAPIRef("sidebarAction.setTitle()")}} 在每个标签上设置标题一样，你也可以通过将标签的 ID 传递给此函数来检索特定于标签的标题。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -34,7 +34,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 <!---->
 
-- 如果同时提供了 `windowId` 和 `tabId`，函数将失败且返回的 Promise 将被拒绝。
+- 如果同时提供了 `windowId` 和 `tabId`，函数将失败且返回的 promise 将被拒绝。
 - 如果同时省略 `windowId` 和 `tabId`，则返回全局标题。
 
 ### 返回值
@@ -47,7 +47,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 ## 示例
 
-以下代码在用户点击浏览器操作时在“这”和“那”之间切换标题：
+在用户点击浏览器操作时在“这”和“那”之间切换标题：
 
 ```js
 function toggleTitle(title) {
