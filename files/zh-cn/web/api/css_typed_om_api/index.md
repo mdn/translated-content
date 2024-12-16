@@ -1,5 +1,5 @@
 ---
-title: CSS 类型化对象模型 API
+title: CSS 类型对象模型 API
 slug: Web/API/CSS_Typed_OM_API
 l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 
-CSS 类型化对象模型 API 通过将 CSS 的值暴露为类型化的 JavaScript 对象而不是字符串的方式简化了 CSS 属性操作。与 {{domxref('HTMLElement.style')}} 相比，这不仅简化了 CSS 操作还提高了性能。
+CSS 类型对象模型 API（CSS Typed Object Model API）通过将 CSS 的值暴露为类型化的 JavaScript 对象而不是字符串的方式简化了 CSS 属性操作。与 {{domxref('HTMLElement.style')}} 相比，这不仅简化了 CSS 操作还提高了性能。
 
-通常，CSS 值可以在 JavaScript 中以字符串形式读取和写入，这很慢且很麻烦。CSS 类型化对象模型，提供了与底层值交互的接口，并通过使用专门的 JS 对象来表示它们，这些对象比字符串解析和连接更容易、更可靠地进行操作和理解。这对作者来说更容易（例如，数值反映为实际的 JS 数字，并为其定义了单位感知的数学运算）。它通常也更快，因为可以直接操作值，然后廉价地转换回底层值，而无需同时构建和解析 CSS 字符串。
+通常，CSS 值可以在 JavaScript 中以字符串形式读取和写入，这很慢且很麻烦。CSS 类型对象模型 API 提供了与底层值交互的接口，并通过使用专门的 JS 对象来表示它们，这些对象比字符串解析和连接更容易、更可靠地进行操作和理解。这对作者来说更容易（例如，数值反映为实际的 JS 数字，并为其定义了单位感知的数学运算）。它通常也更快，因为可以直接操作值，然后廉价地转换回底层值，而无需同时构建和解析 CSS 字符串。
 
 CSS 类型对象模型既允许对分配给 CSS 属性的值进行高性能操作，又可以实现更易于理解和编写的可维护代码。
 
@@ -44,7 +44,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口表示引�
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} 构造器
   - : 创建一个新的 `CSSUnparsedValue` 对象，该对象代表引用自定义属性的属性值。
 - {{domxref('CSSUnparsedValue.entries()')}}
-  - : 返回给定对象自己的可枚举属性 `[key, value]` 对的数组，其顺序与 `for...in` 循环提供的顺序相同（不同之处在于 `for-in` 循环也会枚举原型链中的属性）。
+  - : 返回给定对象自有的可枚举属性 `[key, value]` 对的数组，其顺序与 `for...in` 循环提供的顺序相同（不同之处在于 `for...in` 循环也会枚举原型链中的属性）。
 - {{domxref('CSSUnparsedValue.forEach()')}}
   - : 针对 `CSSUnparsedValue` 的每个元素执行一次提供的回调函数。
 - {{domxref('CSSUnparsedValue.keys()')}}
@@ -54,8 +54,8 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口表示引�
 
 CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一个对象来表示 CSS 关键字和其他标识符。
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} 构造器
-  - : 构造函数创建一个代表 CSS 关键字和其他标识符的 {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} 新对象。
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} 构造函数
+  - : 构造函数创建一个新的代表 CSS 关键字和其他标识符的 {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} 对象。
 - {{domxref('CSSKeywordValue.value()')}}
   - : `CSSKeywordValue` 接口的属性，返回或设置 `CSSKeywordValue` 的值。
 
@@ -64,9 +64,9 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 {{domxref('CSSStyleValue')}} 接口是所有可通过类型对象模型访问 CSS 值的基类。子类包括：
 
 - {{domxref('CSSImageValue')}} objects
-  - : 表示采用图像的属性值的接口，例如：[`background-image`](/zh-CN/docs/Web/CSS/background-image)、 [`list-style-image`](/zh-CN/docs/Web/CSS/list-style-image) 或 [`border-image-source`](/zh-CN/docs/Web/CSS/border-image-source)。
+  - : 表示采用图像的属性值的接口，例如：[`background-image`](/zh-CN/docs/Web/CSS/background-image)、[`list-style-image`](/zh-CN/docs/Web/CSS/list-style-image) 或 [`border-image-source`](/zh-CN/docs/Web/CSS/border-image-source)。
 - {{domxref('CSSKeywordValue')}}
-  - : 创建一个对象来表示 CSS 关键字和其他标识符的接口。当在需要字符串的地方使用时，它将返回 `CSSKeyword.value` 的值。
+  - : 用于创建一个表示 CSS 关键字和其他标识符的对象的接口。当在需要字符串的地方使用时，它将返回 `CSSKeyword.value` 的值。
 - {{domxref('CSSMathValue')}}
 
   - : 表示比单个值和单位更复杂的数值的子类树，包括：
@@ -95,11 +95,11 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
     - {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}} - 返回从 CSS 字符串解析的数字。
 
 - {{domxref('CSSPositionValue')}}
-  - : 表示采取某个位置的属性的值，例如 object-position。
+  - : 表示采用某个位置的属性（例如 object-position）的值。
 - {{domxref('CSSTransformValue')}}
-  - : 指示 [`transform`](/zh-CN/docs/Web/CSS/transform) 列表值的接口。“包含”一个或多个指示 `transform` 函数的值的 {{domxref('CSSTransformComponent')}}。
+  - : 表示 [`transform`](/zh-CN/docs/Web/CSS/transform) 列表值的接口。“包含”一个或多个表示 `transform` 函数值的 {{domxref('CSSTransformComponent')}}。
 - {{domxref('CSSUnitValue')}}
-  - : 表示可以表示为单个单位或命名数字和百分比的数值的接口。
+  - : 表示可以表示为单个单位或具名数字和百分比的数值的接口。
 - {{domxref('CSSUnparsedValue')}}
   - : 表示引用[自定义属性](/zh-CN/docs/Web/CSS/--*)的属性值。它由字符串片段和变量引用的列表组成。
 
@@ -113,6 +113,6 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 
 ## 参见
 
-- [CSS API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [使用 CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)
