@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在模块中枚举插槽。此函数返回包含所有插槽条目的数组，且各条目中包含插槽的名称，以及令牌的相关信息（如果插槽包含令牌）。
+枚举模块中的插槽。此函数返回包含所有插槽条目的数组。其中的各个条目包含插槽的名称，以及令牌的相关信息（如果插槽包含令牌）。
 
 你只能对已在 Firefox 中安装的模块调用此函数。
 
@@ -24,7 +24,7 @@ let getting = browser.pkcs11.getModuleSlots(
 ### 参数
 
 - `name`
-  - : `string`，模块名称。此名称必须与模块的 [PKCS #11 清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
+  - : `string`。模块名称。此名称必须与模块的 [PKCS #11 清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
 
 ### 返回值
 
@@ -48,7 +48,7 @@ let getting = browser.pkcs11.getModuleSlots(
 - `isLoggedIn`
   - : `boolean`：如果令牌已登录，则为 `true`，否则为 `false`。
 
-如果无法找到模块或发生其他错误，`Promise` 将以错误消息拒绝。
+如果无法找到模块或发生其他错误，promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -56,7 +56,7 @@ let getting = browser.pkcs11.getModuleSlots(
 
 ## 示例
 
-安装一个模块并列出其插槽及其包含的令牌：
+安装一个模块并列出其插槽及其中包含的令牌：
 
 ```js
 function onInstalled() {
