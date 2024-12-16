@@ -2,7 +2,7 @@
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 3f75d5aa47d734848e21f4f48eda9780e4b8eaa5
 ---
 
 {{AddonSidebar}}
