@@ -25,7 +25,7 @@ l10n:
   <tbody>
     <tr>
       <td><strong>音效</strong></td>
-      <td><a href="/zh-TW/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
+      <td><a href="/zh-TW/docs/Web/API/Web_Audio_API">Web 音頻 API</a></td>
     </tr>
     <tr>
       <td><strong>圖形</strong></td>
@@ -84,14 +84,14 @@ l10n:
 
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
   - : 用來從 Web 伺服器發送和接收各種數據，例如下載新遊戲關卡和美術素材，或傳輸非即時的遊戲狀態資訊。
-- [Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API)
+- [全螢幕 API](/zh-TW/docs/Web/API/Fullscreen_API)
   - : 這個簡單的 API 讓你的遊戲可以全螢幕顯示，從而讓玩家更加沉浸於遊戲體驗中。
 - [Gamepad API](/zh-TW/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : 如果你希望玩家能使用遊戲把手或其他遊戲設備進行遊戲，這是必要的 API。
 - [HTML](/zh-TW/docs/Web/HTML) 和 [CSS](/zh-TW/docs/Web/CSS)
   - : 這兩項技術可以幫助你構建、設計和佈局遊戲的用戶界面。其中 HTML 的 {{HTMLElement("canvas")}} 元素是進行 2D 圖形處理的一種方法。
 - [HTML audio](/zh-TW/docs/Web/HTML/Element/audio)
-  - : {{HTMLElement("audio")}} 元素可讓你輕鬆播放簡單的音效和音樂。如果有更高的需求，請參考 [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API) 以獲取更強大的音頻處理能力！
+  - : {{HTMLElement("audio")}} 元素可讓你輕鬆播放簡單的音效和音樂。如果有更高的需求，請參考 [Web 音頻 API](/zh-TW/docs/Web/API/Web_Audio_API) 以獲取更強大的音頻處理能力！
 - [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)
   - : 一個強大的數據存儲 API，可以在用戶的設備上存儲遊戲數據（例如遊戲狀態等）從而避免每次都需要下載資料。這也能幫助你的遊戲在用戶無法連接網路時（例如長時間飛行時）仍能正常運行。
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
@@ -102,7 +102,7 @@ l10n:
   - : 讓你構建的向量圖形可以根據顯示器的大小或解析度平滑縮放。
 - [型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 型別陣列讓你能在 JavaScript 中直接處理二進制數據，這適用於操作 GL 紋理、遊戲數據或其他非原生 JavaScript 格式的數據。
-- [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)
+- [Web 音頻 API](/zh-TW/docs/Web/API/Web_Audio_API)
   - : 該 API 讓你可以通過 JavaScript 控制音頻播放、合成及處理，實現即時音效及音樂的播放與操作。
 - [WebGL](/zh-TW/docs/Web/API/WebGL_API)
   - : 讓你可以從 Web 內容創建高效能、硬體加速的 3D（及 2D）圖形，這是一種 [OpenGL ES](https://www.khronos.org/opengles/) 2.0 的 Web 支持實現。
@@ -111,4 +111,4 @@ l10n:
 - [WebSocket](/zh-TW/docs/Web/API/WebSockets_API)
   - : WebSocket API 讓你的應用或網站可以與伺服器建立實時數據傳輸連接，非常適合多人遊戲、聊天服務等。
 - [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : 使用 Workers 你可以啟動後台執行的 JavaScript 線程，充分利用現代多核心處理器。
+  - : Workers 讓你能夠啟動執行自己 JavaScript 程式碼的背景執行緒，以充分利用現代多核心處理器的性能。
