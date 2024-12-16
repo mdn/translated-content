@@ -14,7 +14,7 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} 指定了相对于当前上下文的对齐方式。
 - {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
-  - : 一个 {{domxref("Boolean")}} 标识了该内联 frame 是否愿意被全屏防止。详情请参考 [Using full-screen mode](/zh-CN/docs/DOM/Using_full-screen_mode) 。
+  - : 一个 {{domxref("Boolean")}} 标识了该内联 frame 是否愿意被全屏防止。详情请参考 [Using full-screen mode](/zh-CN/docs/Web/API/Fullscreen_API) 。
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Document")}}，该内联 frame 嵌套的浏览上下文中活跃的 document 对象。
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}

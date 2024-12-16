@@ -31,7 +31,7 @@ arr.indexOf(searchElement[, fromIndex])
 
 ## 說明
 
-`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
+`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
 
 ## 範例
 

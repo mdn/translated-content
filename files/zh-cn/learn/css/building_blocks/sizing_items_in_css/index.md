@@ -57,7 +57,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ### 使用百分数
 
-许多时候，百分数是长度单位，正如我们在 [Value and units 这节课中讨论的那样](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#Percentages)，它们常常可与长度互换。当使用百分数时，你需要清楚，它是**什么**东西的百分数。对于一个处于另外一个容器当中的盒子，如果你给予了子盒子一个百分数作为宽度，那么它指的是父容器宽度的百分数。
+许多时候，百分数是长度单位，正如我们在 [Value and units 这节课中讨论的那样](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)，它们常常可与长度互换。当使用百分数时，你需要清楚，它是**什么**东西的百分数。对于一个处于另外一个容器当中的盒子，如果你给予了子盒子一个百分数作为宽度，那么它指的是父容器宽度的百分数。
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 

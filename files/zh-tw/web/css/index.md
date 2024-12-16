@@ -5,7 +5,7 @@ slug: Web/CSS
 
 {{CSSRef}}
 
-**層疊樣式表**（Cascading Style Sheets, CSS）是用來描述 [HTML](/zh-TW/docs/Web/HTML) 或 [XML](/zh-TW/docs/XML)（包含 [SVG](/zh-TW/docs/Web/SVG) 或 [XHTML](/zh-TW/docs/Glossary/XHTML) 等各種 XML 變形）文件外觀的[樣式表](/zh-TW/docs/DOM/stylesheet)語言。CSS 會描述文件裡的結構化元素，該如何呈現在螢幕、紙、語音報讀、或其他媒介上。
+**層疊樣式表**（Cascading Style Sheets, CSS）是用來描述 [HTML](/zh-TW/docs/Web/HTML) 或 [XML](/zh-TW/docs/Web/XML)（包含 [SVG](/zh-TW/docs/Web/SVG) 或 [XHTML](/zh-TW/docs/Glossary/XHTML) 等各種 XML 變形）文件外觀的[樣式表](/zh-TW/docs/Web/API/StyleSheet)語言。CSS 會描述文件裡的結構化元素，該如何呈現在螢幕、紙、語音報讀、或其他媒介上。
 
 **CSS** 是**開放網路**的核心語言之一，具有標準化的 [W3C 規範](https://www.w3.org/Style/CSS/#specs)。歷經不同層級的開發，CSS1 目前已被棄用、CSS2.1 是建議規範，而 CSS3 目前被分作數個較小的模組，持續在標準化的路上行進。
 
@@ -39,12 +39,12 @@ slug: Web/CSS
 - [CSS 參考](/zh-TW/docs/Web/CSS/Reference)：一個詳細的參考資料，為資深網頁開發人員設計，包含 CSS 各種屬性和觀念。
 - CSS 關鍵概念：
 
-  - [語法](/zh-TW/docs/CSS/Syntax)
-  - [權重](/zh-TW/docs/CSS/Specificity)和[繼承](/zh-TW/docs/CSS/inheritance)
-  - [盒子模型](/zh-TW/docs/CSS/box_model)和[邊框的崩潰](/zh-TW/docs/CSS/margin_collapsing)
-  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/CSS/block_formatting_context)
-  - [初始值](/zh-TW/docs/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/CSS/used_value)和[運作值](/zh-TW/docs/CSS/actual_value)
-  - [CSS 簡寫屬性](/zh-TW/docs/CSS/Shorthand_properties)
+  - [語法](/zh-TW/docs/Web/CSS/Syntax)
+  - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/Inheritance)
+  - [盒子模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[邊框的崩潰](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
+  - [初始值](/zh-TW/docs/Web/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/used_value)和[運作值](/zh-TW/docs/Web/CSS/actual_value)
+  - [CSS 簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)
   - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout)
   - [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)
@@ -61,5 +61,5 @@ slug: Web/CSS
 
 ## 參見
 
-- 常與 CSS 相關聯的語言：[HTML](/zh-TW/docs/Web/HTML)、[SVG](/zh-TW/docs/Web/SVG)、[XHTML](/zh-TW/docs/Glossary/XHTML)、[XML](/zh-TW/docs/XML)。
-- 廣泛運用 CSS 的 Mozilla 科技：[Firefox](/zh-TW/docs/Mozilla/Firefox) 及 [Thunderbird](/zh-TW/docs/Mozilla/Thunderbird) 的[套件](/zh-TW/docs/Extensions)與[佈景](/zh-TW/docs/Mozilla/Add-ons/Themes)
+- 常與 CSS 相關聯的語言：[HTML](/zh-TW/docs/Web/HTML)、[SVG](/zh-TW/docs/Web/SVG)、[XHTML](/zh-TW/docs/Glossary/XHTML)、[XML](/zh-TW/docs/Web/XML)。
+- 廣泛運用 CSS 的 Mozilla 科技：[Firefox](/zh-TW/docs/Mozilla/Firefox) 及 [Thunderbird](/zh-TW/docs/Mozilla/Thunderbird) 的[套件](/zh-TW/docs/Extensions)與[佈景](https://extensionworkshop.com/documentation/themes/)

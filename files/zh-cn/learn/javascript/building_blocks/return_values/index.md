@@ -45,7 +45,7 @@ console.log(newString);
 
 在第一篇函数文章中，我们确切地看到了这一块代码。我们对 `myText` 字符串调用 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 功能，并通过这两个参数的字符串查找，和子串替换它。当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为`newString`变量的内容。
 
-如果你看看替换功能 MDN 参考页面，你会看到一个[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value)。知道和理解函数返回的值是非常有用的，因此我们尽可能地包含这些信息。
+如果你看看替换功能 MDN 参考页面，你会看到一个[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value)。知道和理解函数返回的值是非常有用的，因此我们尽可能地包含这些信息。
 
 一些函数没有返回值就像 (在我们的参考页中，返回值在这种情况下被列出为空值 `void` 或未定义值 `undefined` 。).例如，我们在前面文章中创建的 [displayMessage() function](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) , 由于调用的函数的结果，没有返回特定的值。它只是让一个提示框出现在屏幕的某个地方——就是这样！
 
@@ -162,7 +162,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 4. 保存你的代码，将其加载到浏览器中，然后尝试。
 
 > [!NOTE]
-> 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
+> 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 
 在这一点上，我们希望你编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
 
@@ -175,7 +175,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
 
-如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn#contact_us)寻求帮助。
 
 ## 参见
 

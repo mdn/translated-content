@@ -133,7 +133,7 @@ const myObject = {
 ### JavaScript 除錯
 
 - [有哪些 error 的基本型態？](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#錯誤類型)
-- [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [如何在 JavaScript 主控台輸出一個值？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
 - [如何使用中斷點及其它 JavaScript 除錯功能？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 

@@ -222,7 +222,7 @@ para.textContent = info;
 {{ EmbedLiveSample('不用麻煩', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 這顯示了一個循環，該循環用於遍歷數組中的項目並對其進行處理-這是 JavaScript 中非常常見的模式。 這裡：
 
@@ -259,7 +259,7 @@ for (var i = 0; i < cats.length; i++) {
 ```
 
 > [!NOTE]
-> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
 > [!WARNING]
 > With for — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
@@ -371,7 +371,7 @@ btn.addEventListener("click", function () {
 5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為「找不到聯繫人。」，然後循環繼續進行迭代。
 
 > [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
@@ -441,7 +441,7 @@ Here's the output:
 4. If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
 > [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while and do ... while
 
@@ -479,7 +479,7 @@ while (i < cats.length) {
 ```
 
 > [!NOTE]
-> This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/zh-TW/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -513,7 +513,7 @@ do {
 ```
 
 > [!NOTE]
-> Again, this works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
 
 > [!WARNING]
 > With while and do...while — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
@@ -875,7 +875,7 @@ We would recommend `for`, at least to begin with, as it is probably the easiest 
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn#contact_us) to ask for help.
 
 ## See also
 

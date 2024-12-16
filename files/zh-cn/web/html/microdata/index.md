@@ -148,7 +148,7 @@ slug: Web/HTML/Microdata
 {{ EmbedLiveSample('示例', '', '100') }}
 
 > [!NOTE]
-> 从 HTML 中提取微数据结构的便捷工具是 Google 的[架构标记测试工具](https://developers.google.com/structured-data/testing-tool/)。在上面显示的 HTML 上尝试一下。
+> 从 HTML 中提取微数据结构的便捷工具是 Google 的[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。在上面显示的 HTML 上尝试一下。
 
 ## 浏览器兼容性
 

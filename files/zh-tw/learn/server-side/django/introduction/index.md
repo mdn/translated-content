@@ -58,7 +58,7 @@ Django 可以使你的應用具有以下優點:
 - 可擴展
   - : Django 使用基於組件的 「無共享」 架構 (架構的每一部分獨立於其他架構，因此可以根據需要進行替換或更改)。在不同部分之間，有明確的分隔，意味著它可以通過在任何級別添加硬件，來擴展服務：緩存服務器，數據庫服務器，或應用程序服務器。一些最繁忙的網站，已經在 Django 架構下成功地縮放了網站的規模大小，以滿足他們的需求（例如 Instagram 和 Disqus，僅舉兩個例子，可自行添加）。
 - 可維護
-  - : Django 代碼編寫，是遵照設計原則和模式，鼓勵創建可維護和可重複使用的代碼。特別是，它使用了不要重複自己（DRY）原則，所以沒有不必要的重複，減少了代碼的數量。 Django 還將相關功能，分組到可重用的 「應用程序」 中，並且在較低級別，將相關代碼分組或模塊（ 模型視圖控制器 [Model View Controller (MVC)](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式）。
+  - : Django 代碼編寫，是遵照設計原則和模式，鼓勵創建可維護和可重複使用的代碼。特別是，它使用了不要重複自己（DRY）原則，所以沒有不必要的重複，減少了代碼的數量。 Django 還將相關功能，分組到可重用的 「應用程序」 中，並且在較低級別，將相關代碼分組或模塊（ 模型視圖控制器 [Model View Controller (MVC)](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式）。
 - 可移植
   - : Django 是用 Python 編寫的，它在許多平台上運行。這意味著，你不受任務特定的服務器平台的限制，並且可以在許多種類的 Linux，Windows 和 Mac OS X 上運行應用程序。此外，Django 得到許多網路託管提供商的好評，他們經常提供特定的基礎設施，和託管 Django 網站的文檔。
 
