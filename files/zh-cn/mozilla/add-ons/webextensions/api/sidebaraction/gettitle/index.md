@@ -9,7 +9,7 @@ l10n:
 
 获取侧边栏的标题。
 
-就像你可以使用 {{WebExtAPIRef("sidebarAction.setTitle()")}} 在每个标签上设置标题一样，你也可以通过将标签的 ID 传递给此函数来检索特定于标签的标题。
+就像你可以使用 {{WebExtAPIRef("sidebarAction.setTitle()")}} 在每个标签上设置标题一样，你也可以通过将标签页的 ID 传递给此函数来检索特定于标签页的标题。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -25,10 +25,10 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 - `details`
 
-  - : `object`，包含以下属性的对象：
+  - : `object`。包含以下属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`。获取特定于给定标签的侧边栏的标题。
+      - : `integer`。获取特定于给定标签页的侧边栏的标题。
     - `windowId` {{optional_inline}}
       - : `integer`。获取特定于给定窗口的侧边栏的标题。
 
@@ -39,7 +39,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用包含侧边栏标题的字符串来兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现为包含侧边栏标题的字符串。
 
 ## 浏览器兼容性
 
