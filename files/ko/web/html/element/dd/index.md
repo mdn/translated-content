@@ -75,7 +75,6 @@ l10n:
   </tbody>
 </table>
 
-
 ## 명세
 
 {{Specifications}}
