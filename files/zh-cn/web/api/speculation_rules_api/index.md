@@ -21,24 +21,24 @@ Speculation Rules API 是 `<link rel="prefetch">` 的一个广泛替代品，并
 ```html
 <script type="speculationrules">
   {
-    "prerender"：[
+    "prerender": [
       {
-        "where"：{
-          "and"：[
-            { "href_matches"："/*" },
-            { "not"：{ "href_matches"："/logout" } },
-            { "not"：{ "href_matches"："/*\\?*(^|&)add-to-cart=*" } },
-            { "not"：{ "selector_matches"：".no-prerender" } },
-            { "not"：{ "selector_matches"："[rel~=nofollow]" } }
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/logout" } },
+            { "not": { "href_matches": "/*\\?*(^|&)add-to-cart=*" } },
+            { "not": { "selector_matches": ".no-prerender" } },
+            { "not": { "selector_matches": "[rel~=nofollow]" } }
           ]
         }
       }
     ],
-    "prefetch"：[
+    "prefetch": [
       {
-        "urls"：["next.html", "next2.html"],
-        "requires"：["anonymous-client-ip-when-cross-origin"],
-        "referrer_policy"："no-referrer"
+        "urls": ["next.html", "next2.html"],
+        "requires": ["anonymous-client-ip-when-cross-origin"],
+        "referrer_policy": "no-referrer"
       }
     ]
   }
@@ -47,16 +47,16 @@ Speculation Rules API 是 `<link rel="prefetch">` 的一个广泛替代品，并
 
 如果网站用了 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令，那么 `<script>` 标签里的推测规则必须被明确允许。可通过添加 `'inline-speculation-rules'` 源、哈希源（hash-source）或 nonce 源（nonce-source）来实现。
 
-一个 HTTP 头的例子：
+一个 HTTP 标头的例子：
 
 ```http
-Speculation-Rules："/rules/prefetch.json"
+Speculation-Rules: "/rules/prefetch.json"
 ```
 
 包含推测规则 JSON 的文本资源可以使用任意有效的命名和扩展名，但必须以 `application/speculationrules+json` MIME 类型来提供。
 
 > [!NOTE]
-> 你可以在同一个文档里同时用内联脚本和 HTTP 头来指定规则——所有规则都会被解析并加入到文档的推测规则列表里。
+> 你可以在同一个文档里同时用内联脚本和 HTTP 标头来指定规则——所有规则都会被解析并加入到文档的推测规则列表里。
 
 每种推测加载类型（比如 `"prerender"` 或 `"prefetch"`）都有一个专门的数组来存放规则。每条规则都是一个对象，里面包含了比如要加载的资源列表、每个规则的选项、每个规则的显式 {{httpheader("Referrer-Policy")}} 设置。注意，预渲染的 URL 也会被预加载。
 
@@ -70,12 +70,12 @@ Speculation-Rules："/rules/prefetch.json"
 
 这意味着如果你预加载了用户没有访问的内容，那通常就是浪费资源，尽管结果可能会填充 HTTP 缓存（如果标头允许）。话虽如此，预加载的前期成本比预渲染要小得多，所以建议你广泛采用预加载，比如预加载你网站上所有重要的页面，只要这些页面是安全的（具体细节可见 [不安全的推测性加载条件](#不安全的推测性加载条件) 部分）。
 
-同源和跨源的预加载都可以工作，但跨源预加载有限制（可以看看 [same-site 和 cross-site](https://web.developers.google.cn/articles/same-site-same-origin#same-site-cross-site) 来了解两者的区别）。出于隐私考虑，目前跨源预加载只有在用户对目标站点没有设置 cookies 时才会工作——我们不希望站点能通过预加载的页面（用户可能永远不会真正访问的）来跟踪用户活动。
+同源和跨源的预加载都可以工作，但跨源预加载有限制（可参阅 [same-site 和 cross-site](https://web.developers.google.cn/articles/same-site-same-origin#same-site-cross-site) 来了解两者的区别）。出于隐私考虑，目前跨源预加载只有在用户对目标站点没有设置 cookies 时才会工作——我们不希望站点能通过预加载的页面（用户可能永远不会真正访问的）来跟踪用户活动。
 
 > [!NOTE]
 > 将来会通过 {{httpheader("Supports-Loading-Mode")}} 标头提供一个跨源预加载的选项，但在撰写本文时还没有实现（只有同源、跨源预渲染选项可用）。
 
-对于支持的浏览器，推测规则预加载应该优先于旧的预加载机制，即 `<link rel="prefetch">` 和设置了 `priority："low"` 选项的 {{domxref("Window/fetch", "fetch()")}}。因为我们知道，推测规则预加载是为了导航，而不是一般的资源预加载：
+对于支持的浏览器，推测规则预加载应该优先于旧的预加载机制，即 `<link rel="prefetch">` 和设置了 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}}。因为我们知道，推测规则预加载是为了导航，而不是一般的资源预加载：
 
 - 它可以用于跨站点导航，而 `<link rel="prefetch">` 不能。
 - 它不会被 {{httpheader("Cache-Control")}} 标头阻止，而 `<link rel="prefetch">` 通常会被阻止。
@@ -92,7 +92,7 @@ Speculation-Rules："/rules/prefetch.json"
 
 将来访问预渲染的页面时，加载几乎是即时的。浏览器激活那个不可见的标签页，而不是执行通常的导航过程，用预渲染的页面替换旧的前台页面。如果页面在完全预渲染之前被激活，它将以当前状态激活，然后继续加载，这意味着你仍然会看到显著的性能提升。
 
-预渲染会使用内存和网络带宽。如果你预渲染了用户没有访问的内容，这些资源就浪费了（尽管结果可能会填充 HTTP 缓存（如果标头允许），允许以后使用）。预渲染的前期成本比预加载要大得多，其他条件也可能使内容不适合预渲染（具体细节见 [不安全的推测性加载条件](#不安全的推测性加载条件)）。因此，建议你更谨慎地采用预渲染，仔细考虑那些有很高概率被访问的页面，并且你认为值得用额外的成本换取用户体验的提升。
+预渲染会使用内存和网络带宽。如果你预渲染了用户没有访问的内容，这些资源就浪费了（尽管结果可能会填充 HTTP 缓存（如果标头允许），允许以后使用）。预渲染的前期成本比预加载要大得多，其他条件也可能使内容不适合预渲染（具体细节见[不安全的推测性加载条件](#不安全的推测性加载条件)）。因此，建议你更谨慎地采用预渲染，仔细考虑那些有很高概率被访问的页面，并且你认为值得用额外的成本换取用户体验的提升。
 
 > [!NOTE]
 > 为了让你对潜在的资源浪费有个概念，预渲染使用的资源大约和渲染一个 {{htmlelement("iframe")}} 一样多。
@@ -132,10 +132,10 @@ if (
   const specScript = document.createElement("script");
   specScript.type = "speculationrules";
   const specRules = {
-    prefetch：[
+    prefetch: [
       {
-        source："list",
-        urls：["/next.html"],
+        source: "list",
+        urls: ["/next.html"],
       },
     ],
   };
@@ -160,13 +160,13 @@ if (
 对于预加载：
 
 ```http
-Sec-Purpose：prefetch
+Sec-Purpose: prefetch
 ```
 
 对于预渲染：
 
 ```http
-Sec-Purpose：prefetch;prerender
+Sec-Purpose: prefetch;prerender
 ```
 
 服务器可以根据此标头进行响应，例如记录推测性加载请求、返回不同内容，甚至阻止推测性加载的发生。如果返回非成功的响应码（重定向后任何 HTTP 状态码不在 200-299 范围内的），则页面不会被预加载/预渲染。此外，204 和 205 状态码也会阻止预渲染（但不会阻止预加载）。
@@ -186,7 +186,7 @@ if (
 }
 ```
 
-当测量性能时，或希望延迟那些可能会在预加载期间发生并导致问题的行为时此技术非常有用。 (可参考 [不安全的预加载](#不安全的预加载)).
+当测量性能时，或希望延迟那些可能会在预加载期间发生并导致问题的行为时此技术非常有用。 (可参考[不安全的预加载](#不安全的预加载)).
 
 ### JavaScript 预渲染检测
 
@@ -214,7 +214,7 @@ function pagePrerendered() {
 ```js
 if (document.prerendering) {
   document.addEventListener("prerenderingchange", initAnalytics, {
-    once：true,
+    once: true,
   });
 } else {
   initAnalytics();
@@ -240,7 +240,7 @@ if (document.prerendering) {
 - 增加用户使用配额数的 URL，例如消耗他们的每月免费文章配额或启动他们的每月分钟数计时器。
 - 启动服务器端广告转化跟踪的 URL。
 
-在服务器上观测 {{httpheader("Sec-Purpose", "Sec-Purpose：prefetch")}} 请求标头，并运行特定代码来推迟问题功能，可以减轻这些问题。稍后，当页面实际被导航到时，如果需要，你可以再通过 JavaScript 启动被推迟的功能。
+在服务器上观测 {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} 请求标头，并运行特定代码来推迟问题功能，可以减轻这些问题。稍后，当页面实际被导航到时，如果需要，你可以再通过 JavaScript 启动被推迟的功能。
 
 > [!NOTE]
 > 你可以在 [检测预加载和预渲染页面](#检测预加载和预渲染页面) 部分找到更多关于检测代码的详细信息。
@@ -266,7 +266,7 @@ if (document.prerendering) {
 
 为了减轻这些问题，你可以使用以下技术：
 
-- 在服务器上监视{{httpheader("Sec-Purpose", "Sec-Purpose：prefetch")}} 标头，当请求到达时，然后运行特定代码以推迟问题功能。
+- 在服务器上监视{{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} 标头，当请求到达时，然后运行特定代码以推迟问题功能。
 - 使用{{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件来检测预渲染页面何时实际被激活，并因此运行代码。这在两种情况下都很有用：
   - 推迟可能在页面查看之前运行时引起问题的代码。例如，你可能希望等到激活后再更新客户端存储或使用 JavaScript 修改服务器端状态。这可以避免 UI 和应用程序状态彼此不同步的情况，例如购物车显示没有商品，即使用户已添加了一些。
   - 如果上一点做不到，你仍然可以在页面激活后重新运行代码，以使应用程序再次更新。例如，一个高度动态的限时抢购页面可能依赖于来自第三方库的内容更新。如果你不能延迟更新，你总可以在用户查看页面后获得最新的更新。预渲染页面可以使用 [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API) 或另一种机制如 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("WebSocket")}} 进行实时更新。这保证了用户在预渲染激活后会看到最新的内容。
@@ -319,32 +319,32 @@ if (document.prerendering) {
 
 在预渲染文档中，以下异步功能的结果被推迟直到页面被激活：
 
-- [Audio Output Devices API](/zh-CN/docs/Web/API/Audio_Output_Devices_API)：{{domxref("MediaDevices.selectAudioOutput()")}}
-- [Background Fetch API](/zh-CN/docs/Web/API/Background_Fetch_API)：{{domxref("BackgroundFetchManager.fetch()")}}
-- [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API)：{{domxref("BroadcastChannel.postMessage()")}}
-- [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)：{{domxref("CredentialsContainer.create()")}}、{{domxref("CredentialsContainer.get()")}}、{{domxref("CredentialsContainer.store()")}}
-- [Encrypted Media Extensions API](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API)：{{domxref("Navigator.requestMediaKeySystemAccess()")}}
-- [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)：{{domxref("Navigator.getGamepads()")}}、{{domxref("Window.gamepadconnected_event", "gamepadconnected")}} 事件，{{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} 事件
-- [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API)：{{domxref("Geolocation.getCurrentPosition()")}}、{{domxref("Geolocation.watchPosition()")}}、{{domxref("Geolocation.clearWatch()")}}
-- {{domxref("HTMLMediaElement")}} API：当包含文档正在进行预渲染时，播放位置不会前进。
-- [Idle Detection API](/zh-CN/docs/Web/API/Idle_Detection_API)：{{domxref("IdleDetector.start()")}}
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)：{{domxref("MediaDevices.getUserMedia()")}} (and the legacy {{domxref("Navigator.getUserMedia()")}} version)、{{domxref("MediaDevices.enumerateDevices()")}}
-- [Notifications API](/zh-CN/docs/Web/API/Notifications_API)：{{domxref("Notification.Notification", "Notification()")}} constructor、{{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}}
-- [Push API](/zh-CN/docs/Web/API/Push_API)：{{domxref("PushManager.subscribe()")}}
-- [Screen Orientation API](/zh-CN/docs/Web/API/Screen_Orientation_API)：{{domxref("ScreenOrientation.lock()")}}、{{domxref("ScreenOrientation.unlock()")}}
-- [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs)：{{domxref("Sensor.start()")}}
-- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)：{{domxref("ServiceWorker.postMessage()")}}、{{domxref("ServiceWorkerContainer.register()")}}、{{domxref("ServiceWorkerRegistration.update()")}}、{{domxref("ServiceWorkerRegistration.unregister()")}}
-- [Storage API](/zh-CN/docs/Web/API/Storage_API)：{{domxref("StorageManager.persist()")}}
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)：{{domxref("AudioContext")}} 在包含文档正在进行预渲染时，不允许开始。
-- [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)：{{domxref("Bluetooth.getDevices()")}}、{{domxref("Bluetooth.requestDevice()")}}
-- [WebHID API](/zh-CN/docs/Web/API/WebHID_API)：{{domxref("HID.getDevices()")}}、{{domxref("HID.requestDevice()")}}
-- [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API)：{{domxref("LockManager.query()")}}、{{domxref("LockManager.request()")}}
-- [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)：{{domxref("Navigator.requestMIDIAccess()")}}
-- [Web NFC API](/zh-CN/docs/Web/API/Web_NFC_API)：{{domxref("NDefReader.write()")}}、{{domxref("NDefReader.scan()")}}
-- [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API)：{{domxref("Serial.getPorts()")}}、{{domxref("Serial.requestPort()")}}
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)：{{domxref("SpeechRecognition.abort()")}}、{{domxref("SpeechRecognition.start()")}}、{{domxref("SpeechRecognition.stop()")}}、{{domxref("SpeechSynthesis.cancel()")}}、{{domxref("SpeechSynthesis.pause()")}}、{{domxref("SpeechSynthesis.resume()")}}、{{domxref("SpeechSynthesis.speak()")}}
-- [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API)：{{domxref("USB.getDevices()")}}、{{domxref("USB.requestDevice()")}}
-- [WebXR Device API](/zh-CN/docs/Web/API/WebXR_Device_API)：{{domxref("XRSystem.requestSession()")}}
+- [Audio Output Devices API](/zh-CN/docs/Web/API/Audio_Output_Devices_API): {{domxref("MediaDevices.selectAudioOutput()")}}
+- [Background Fetch API](/zh-CN/docs/Web/API/Background_Fetch_API): {{domxref("BackgroundFetchManager.fetch()")}}
+- [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API): {{domxref("BroadcastChannel.postMessage()")}}
+- [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API): {{domxref("CredentialsContainer.create()")}}、{{domxref("CredentialsContainer.get()")}}、{{domxref("CredentialsContainer.store()")}}
+- [Encrypted Media Extensions API](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API): {{domxref("Navigator.requestMediaKeySystemAccess()")}}
+- [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API): {{domxref("Navigator.getGamepads()")}}、{{domxref("Window.gamepadconnected_event", "gamepadconnected")}} 事件，{{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} 事件
+- [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API): {{domxref("Geolocation.getCurrentPosition()")}}、{{domxref("Geolocation.watchPosition()")}}、{{domxref("Geolocation.clearWatch()")}}
+- {{domxref("HTMLMediaElement")}} API: 当包含文档正在进行预渲染时，播放位置不会前进。
+- [Idle Detection API](/zh-CN/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector.start()")}}
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API): {{domxref("MediaDevices.getUserMedia()")}} (and the legacy {{domxref("Navigator.getUserMedia()")}} version)、{{domxref("MediaDevices.enumerateDevices()")}}
+- [Notifications API](/zh-CN/docs/Web/API/Notifications_API): {{domxref("Notification.Notification", "Notification()")}} constructor、{{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}}
+- [Push API](/zh-CN/docs/Web/API/Push_API): {{domxref("PushManager.subscribe()")}}
+- [Screen Orientation API](/zh-CN/docs/Web/API/Screen_Orientation_API): {{domxref("ScreenOrientation.lock()")}}、{{domxref("ScreenOrientation.unlock()")}}
+- [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs): {{domxref("Sensor.start()")}}
+- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API): {{domxref("ServiceWorker.postMessage()")}}、{{domxref("ServiceWorkerContainer.register()")}}、{{domxref("ServiceWorkerRegistration.update()")}}、{{domxref("ServiceWorkerRegistration.unregister()")}}
+- [Storage API](/zh-CN/docs/Web/API/Storage_API): {{domxref("StorageManager.persist()")}}
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API): {{domxref("AudioContext")}} 在包含文档正在进行预渲染时，不允许开始。
+- [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API): {{domxref("Bluetooth.getDevices()")}}、{{domxref("Bluetooth.requestDevice()")}}
+- [WebHID API](/zh-CN/docs/Web/API/WebHID_API): {{domxref("HID.getDevices()")}}、{{domxref("HID.requestDevice()")}}
+- [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API): {{domxref("LockManager.query()")}}、{{domxref("LockManager.request()")}}
+- [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API): {{domxref("Navigator.requestMIDIAccess()")}}
+- [Web NFC API](/zh-CN/docs/Web/API/Web_NFC_API): {{domxref("NDefReader.write()")}}、{{domxref("NDefReader.scan()")}}
+- [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API): {{domxref("Serial.getPorts()")}}、{{domxref("Serial.requestPort()")}}
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API): {{domxref("SpeechRecognition.abort()")}}、{{domxref("SpeechRecognition.start()")}}、{{domxref("SpeechRecognition.stop()")}}、{{domxref("SpeechSynthesis.cancel()")}}、{{domxref("SpeechSynthesis.pause()")}}、{{domxref("SpeechSynthesis.resume()")}}、{{domxref("SpeechSynthesis.speak()")}}
+- [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API): {{domxref("USB.getDevices()")}}、{{domxref("USB.requestDevice()")}}
+- [WebXR Device API](/zh-CN/docs/Web/API/WebXR_Device_API): {{domxref("XRSystem.requestSession()")}}
 
 ### 隐式限制的 API
 
@@ -354,31 +354,31 @@ if (document.prerendering) {
 
 - 由{{domxref("Window.beforeunload_event", "beforeunload")}}事件生成的确认对话框
 - [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API) 任何事件的触发
-- [File System API](/zh-CN/docs/Web/API/File_System_API)：{{domxref("Window.showDirectoryPicker()")}}、{{domxref("Window.showOpenFilePicker()")}}、{{domxref("Window.showSaveFilePicker()")}}
-- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)：{{domxref("Element.requestFullscreen()")}}
-- [Idle Detection API](/zh-CN/docs/Web/API/Idle_Detection_API)：{{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
-- [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API)：{{domxref("Keyboard.lock()")}} （需要全屏）
-- [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)：{{domxref("PaymentRequest.show()")}}
-- [Presentation API](/zh-CN/docs/Web/API/Presentation_API)：{{domxref("PresentationRequest.start()")}}
-- [Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API)：{{domxref("Element.requestPointerLock()")}}
-- [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API)：{{domxref("MediaDevices.getDisplayMedia()")}}
-- [Web Share API](/zh-CN/docs/Web/API/Web_Share_API)：{{domxref("Navigator.share()")}}
+- [File System API](/zh-CN/docs/Web/API/File_System_API): {{domxref("Window.showDirectoryPicker()")}}、{{domxref("Window.showOpenFilePicker()")}}、{{domxref("Window.showSaveFilePicker()")}}
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API): {{domxref("Element.requestFullscreen()")}}
+- [Idle Detection API](/zh-CN/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
+- [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API): {{domxref("Keyboard.lock()")}} （需要全屏）
+- [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API): {{domxref("PaymentRequest.show()")}}
+- [Presentation API](/zh-CN/docs/Web/API/Presentation_API): {{domxref("PresentationRequest.start()")}}
+- [Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API): {{domxref("Element.requestPointerLock()")}}
+- [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API): {{domxref("MediaDevices.getDisplayMedia()")}}
+- [Web Share API](/zh-CN/docs/Web/API/Web_Share_API): {{domxref("Navigator.share()")}}
 - {{domxref("Window.open()")}}
 
 需要包含文档处于焦点状态的 API：
 
-- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)：{{domxref("Clipboard.read()")}}、{{domxref("Clipboard.readText()")}}、{{domxref("Clipboard.write()")}}、{{domxref("Clipboard.writeText()")}}
+- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API): {{domxref("Clipboard.read()")}}、{{domxref("Clipboard.readText()")}}、{{domxref("Clipboard.write()")}}、{{domxref("Clipboard.writeText()")}}
 
 需要包含文档的{{domxref("Document.visibilityState")}}为 `"visible"` 的 API：
 
-- [Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)：{{domxref("HTMLVideoElement.requestPictureInPicture()")}} (要求包含文档的可见状态为 `"visible"` _或_ {{glossary("transient activation")}})
-- [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API)：{{domxref("WakeLock.request()")}}
+- [Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (要求包含文档的可见状态为 `"visible"` _或_ {{glossary("transient activation")}})
+- [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### 其他受限功能
 
 - 下载链接，即带有 download 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素，其下载将被推迟，直到预渲染完成。
 - 不允许跨站点导航：任何导航到不同站点的预渲染文档将在发送对该其他站点的请求之前立即被丢弃。
-- 受限的 URL：预渲染文档不能托管非 HTTP(S) 顶级 URL。包含以下 URL 类型将导致预渲染立即被丢弃：:
+- 受限的 URL：预渲染文档不能托管非 HTTP(S) 顶级 URL。包含以下 URL 类型将导致预渲染立即被丢弃：
 
   - [`javascript:` URLs](/zh-CN/docs/Web/URI/Schemes/javascript)
   - [`data:` URLs](/zh-CN/docs/Web/URI/Schemes/data)
@@ -386,7 +386,7 @@ if (document.prerendering) {
   - `about:` URLs，包括 `about:blank` 和 `about:srcdoc`
 
 - 会话存储：{{domxref("Window.sessionStorage")}} 可以使用，但行为非常特定，以避免影响到那些对会话存储有预期的网站，这些网站的设计是基于一个前提：同一时间只有一个页面能够访问标签页的会话存储。因此，预渲染页面在开始时会获得一个克隆，这个克隆是基于页面创建时标签页会话存储的状态。在激活时，预渲染页面的存储克隆被丢弃，取而代之的是标签页的主存储状态。使用会话存储的页面可以使用 {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件来检测何时发生此存储交换。
-- {{domxref("Window.print()")}}：对该方法的任何调用都将被忽略。
+- {{domxref("Window.print()")}}: 对该方法的任何调用都将被忽略。
 - “简单对话框方法”限制如下：
 
   - {{domxref("Window.alert()")}} 立即返回而不显示对话框。
@@ -404,18 +404,18 @@ Speculation Rules API 没有定义自己的任何接口。
 ### 对其他接口的扩展
 
 - {{domxref("Document.prerendering")}} {{experimental_inline}}
-  - ：一个布尔属性，如果文档当前正处于预渲染过程中，则返回 `true`。
+  - : 一个布尔属性，如果文档当前正处于预渲染过程中，则返回 `true`。
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件 {{experimental_inline}}
-  - ：当预渲染的文档被激活时（即用户查看页面时）触发。
+  - : 当预渲染的文档被激活时（即用户查看页面时）触发。
 - {{domxref("PerformanceNavigationTiming.activationStart")}} {{experimental_inline}}
-  - ：一个数字，表示文档开始预渲染到被激活之间的时间。
+  - : 一个数字，表示文档开始预渲染到被激活之间的时间。
 - {{domxref("PerformanceResourceTiming.deliveryType")}} `"navigational-prefetch"` 值 {{experimental_inline}}
-  - ：表示性能条目的类型是预加载。
+  - : 表示性能条目的类型是预加载。
 
 ## HTTP 标头
 
 - {{httpheader("Content-Security-Policy")}} `'inline-speculation-rules'`值 {{experimental_inline}}
-  - 用于选择允许在正在获取的文档上使用 `<script type="speculationrules">`来定义推测规则。
+  - 用于选择允许在正在获取的文档上使用 `<script type="speculationrules">` 来定义推测规则。
 - {{httpheader("Speculation-Rules")}} {{experimental_inline}}
   - 提供一个指向包含推测规则 JSON 定义的文本资源的 URL 列表。当响应是 HTML 文档时，这些规则将被添加到文档的推测规则集中。
 - {{httpheader("Supports-Loading-Mode")}} {{experimental_inline}}
@@ -424,7 +424,7 @@ Speculation Rules API 没有定义自己的任何接口。
 ## HTML 功能
 
 - [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
-  - ：用于在当前文档中定义一组预加载和/或预渲染推测规则，这些规则被添加到文档的推测规则集中。
+  - : 用于在当前文档中定义一组预加载和/或预渲染推测规则，这些规则被添加到文档的推测规则集中。
 
 ## 示例
 
@@ -438,7 +438,7 @@ Speculation Rules API 没有定义自己的任何接口。
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [在 Chrome 中预渲染页面以实现即时页面导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages) 在 developer.chrome.com (2023)
+- [在 Chrome 中预渲染页面以实现即时页面导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages) 在 developer.chrome.com（2023）
 - [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading) 比较推测规则和其他类似的性能改进功能。
