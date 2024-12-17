@@ -651,10 +651,6 @@
       "zsh110123"
     ]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2019-09-24T06:37:41.240Z",
-    "contributors": ["Umryuan", "HardcorePhysician"]
-  },
   "Glossary/Data_structure": {
     "modified": "2019-03-18T21:30:43.505Z",
     "contributors": ["fs523577192"]
@@ -32526,5 +32522,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Glossary/Denial_of_Service": {
+    "modified": "2019-09-24T06:37:41.240Z",
+    "contributors": ["Umryuan", "HardcorePhysician"]
   }
 }
