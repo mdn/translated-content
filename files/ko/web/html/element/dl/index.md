@@ -1,6 +1,8 @@
 ---
-title: <dl> 설명 목록
+title: <dl> 설명 목록 요소
 slug: Web/HTML/Element/dl
+l10n:
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{HTMLSidebar}}
@@ -9,18 +11,16 @@ slug: Web/HTML/Element/dl
 
 {{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request. -->
-
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 ## 접근성 고려사항
 
-각각의 스크린 리더는 `<dl>`를 다르게 표현합니다. 즉, 총 아이템의 개수, 용어/정의 컨텍스트 및 탐색 방법등을 다르게 노출합니다. 이러한 차이가 반드시 버그는 아닙니다. iOS 14부터의 스크린 리더는 전체 읽기 멍령이 아닌 가상 커서 탐색 시, `<dl>` 콘텐츠가 목록임을 알립니다. ARIA 용어 및 정의 역할을 `<dl>`구조에 적용하면 macOS 및 iOS에서 스크린리더의 읽기 방식이 조정되므로 주의해야 합니다.
+각각의 스크린 리더는 `<dl>`를 다르게 표현합니다. 즉, 총 아이템의 개수, 용어/정의 컨텍스트 및 탐색 방법등을 다르게 노출합니다. 이러한 차이가 반드시 버그는 아닙니다. iOS 14부터의 VoiceOver는 전체 읽기 멍령이 아닌 가상 커서 탐색 시, `<dl>` 콘텐츠가 목록임을 알립니다. VoiceOver는 `<dl>`를 이용한 목록 탐색을 지원하지 않습니다. ARIA 용어 및 정의 역할을 `<dl>` 구조에 적용하면 macOS 및 iOS에서 VoiceOver의 읽기 방식이 조정되므로 주의해야 합니다.
 
-- [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
-- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
+- [iOS14에서의 VoiceOver 설명 목록 지원](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [설명 목록 지원에 대한 개략](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
 
 ## 예제
 
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/dl
 
 #### 결과
 
-{{EmbedLiveSample("하나의_용어와_하나의_정의")}}
+{{EmbedLiveSample("Single_term_and_description")}}
 
 ### 복수 용어와 단일 정의
 
@@ -60,7 +60,7 @@ slug: Web/HTML/Element/dl
 
 #### 결과
 
-{{EmbedLiveSample("여러_개의_용어와_하나의_정의")}}
+{{EmbedLiveSample("Multiple_terms_single_description")}}
 
 ### 단일 용어와 복수 정의
 
@@ -82,7 +82,7 @@ slug: Web/HTML/Element/dl
 
 #### 결과
 
-{{EmbedLiveSample("하나의_용어와_여러_개의_정의")}}
+{{EmbedLiveSample("Single_term_multiple_descriptions")}}
 
 ### 복수 용어와 복수 정의
 
@@ -107,7 +107,7 @@ slug: Web/HTML/Element/dl
 
 #### 결과
 
-{{EmbedLiveSample("메타데이터")}}
+{{EmbedLiveSample("Metadata")}}
 
 팁: 아래처럼 키-값 구분자를 CSS로 지정하면 유용합니다.
 
@@ -144,7 +144,7 @@ HTML에서는 `<dl>` 요소의 각 이름-값 그룹을 {{htmlelement("div")}} �
 
 #### 결과
 
-{{EmbedLiveSample("Wrapping name-value groups in div elements")}}
+{{EmbedLiveSample('Wrapping name-value groups in `div` elements')}}
 
 ## 참고
 
@@ -196,9 +196,18 @@ HTML에서는 `<dl>` 요소의 각 이름-값 그룹을 {{htmlelement("div")}} �
       </td>
     </tr>
     <tr>
+      <th scope="row">암시적 ARIA 역할</th>
+      <td>
+        <a href='https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role'>해당 역할 없음</a>
+      </td>
+    </tr>
+    <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/list_role'><code>list</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
