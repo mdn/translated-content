@@ -35,7 +35,7 @@ Les événements ont trois fonctions :
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
     - `highlightInfo`
-      - : [`object`](#highlightInfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
+      - : [`object`](#highlightinfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
 
 ## Objets supplémentaires
 

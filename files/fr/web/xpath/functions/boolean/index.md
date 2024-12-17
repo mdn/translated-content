@@ -31,7 +31,7 @@ La valeur booléenne `true` ou `false` en fonction de l'évaluation de `expressi
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-boolean).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-boolean).
 
 ### Support Gecko
 

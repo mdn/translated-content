@@ -501,8 +501,8 @@ var RecuperateurDePropriete = {
 
 ## Voir aussi
 
-- [`in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in)
-- [`for..in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in)
+- [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
+- [`for..in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Object.hasOwnProperty()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

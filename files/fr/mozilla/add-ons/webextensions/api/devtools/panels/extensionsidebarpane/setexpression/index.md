@@ -7,11 +7,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/set
 
 Evalue une expression dans le contexte de la page inspectée et affiche le résultat dans le volet de la barre latérale d'extension.
 
-Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval).
+Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
 
-Les objets JSON et les noeuds DOM sont affichés en tant qu'arborescence extensible, comme dans la [visionneuse jSON](/fr/docs/Outils/JSON_viewer) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
+Les objets JSON et les noeuds DOM sont affichés en tant qu'arborescence extensible, comme dans la [visionneuse jSON](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -31,7 +31,7 @@ var evaluating = browser.devtools.panels.setExpression(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans arguments, une fois l'expression évaluée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans arguments, une fois l'expression évaluée.
 
 ## Compatibilité des navigateurs
 

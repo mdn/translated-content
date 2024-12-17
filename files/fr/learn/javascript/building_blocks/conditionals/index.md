@@ -41,7 +41,7 @@ Les instructions conditionnelles nous permettent de représenter ce genre de pri
 
 ## Instruction if ... else
 
-Intéressons nous de plus près à la forme la plus répandue d'instruction conditionnelle que vous utiliserez en JavaScript — la modeste [instruction](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) [`if ... else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else).
+Intéressons nous de plus près à la forme la plus répandue d'instruction conditionnelle que vous utiliserez en JavaScript — la modeste [instruction](/fr/docs/Web/JavaScript/Reference/Statements/if...else) [`if ... else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Syntaxe élémentaire if ... else
 
@@ -58,7 +58,7 @@ if (condition) {
 Ici nous avons:
 
 1. Le mot‑clé `if` suivie de parenthèses.
-2. Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+2. Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
 3. Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
 4. Le mot‑clé `else`.
 5. Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
@@ -103,7 +103,7 @@ if (coursesFaites === true) {
 Avec un tel code, la variable `coursesFaites` renvoie toujours `false`, imaginez la déception de ce pauvre enfant. Il ne tient qu'à nous de fournir un mécanisme pour que le parent assigne `true` à la variable `coursesFaites` si l'enfant a fait les courses.
 
 > [!NOTE]
-> Vous pouvez voir une [version plus complète de cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> Vous pouvez voir une [version plus complète de cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (ainsi qu'en [version live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -159,11 +159,11 @@ function setWeather() {
 4. Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
 
 > [!NOTE]
-> Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
+> Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
 
 ### Une note sur les opérateurs de comparaison
 
-Les opérateurs de comparaison sont utilisés pour tester les conditions dans nos instructions conditionnelles. Nous avons d'abord regardé les opérateurs de comparaison dans notre [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison) article. Nos choix sont :
+Les opérateurs de comparaison sont utilisés pour tester les conditions dans nos instructions conditionnelles. Nous avons d'abord regardé les opérateurs de comparaison dans notre [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math#opérateurs_de_comparaison) article. Nos choix sont :
 
 - `===` et `!==` — teste si une valeur est identique ou non à une autre.
 - `<` and `>` —teste si une valeur est inférieure ou non à une autre.
@@ -222,7 +222,7 @@ Même si tout le code fonctionne ensemble, chaque déclaration `if...else` fonct
 
 ### Opérateurs logiques AND, OR et NOT
 
-Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
+Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Operators) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
 
 - `&&` — AND&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
 - `||` — OR&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant `true` pour que l'ensemble de l'expression renvoie `true`.
@@ -289,7 +289,7 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 Les Instructions `if...else` font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.
 
-Les [instructions switch](/fr/docs/Web/JavaScript/Reference/Instructions/switch) sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée&nbsp;:
+Les [instructions switch](/fr/docs/Web/JavaScript/Reference/Statements/switch) sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée&nbsp;:
 
 ```js
 switch (expression) {
@@ -373,11 +373,11 @@ function setWeather() {
 {{ EmbedLiveSample('Un_exemple_de_switch', '100%', 100) }}
 
 > [!NOTE]
-> Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (voyez‑le en [cours d'exécution](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) ici aussi.)
+> Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (voyez‑le en [cours d'exécution](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) ici aussi.)
 
 ## Opérateur ternaire
 
-Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
+Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
 
 ```
 ( condition ) ? exécuter ce code : exécuter celui‑ci à la place
@@ -428,10 +428,10 @@ select.onchange = function () {
 
 Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
 
-Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/GlobalEventHandlers/onchange) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir&nbsp;: cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
+Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/HTMLElement/change_event) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir&nbsp;: cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
 
 > [!NOTE]
-> Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (voyez‑le en [cours d'exécution](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) ici aussi.)
+> Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (voyez‑le en [cours d'exécution](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) ici aussi.)
 
 ## Apprentissage actif&nbsp;: un calendrier simple
 
@@ -639,13 +639,13 @@ window.addEventListener("load", updateCode);
 
 ## Conclusion
 
-C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment&nbsp;! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/Apprendre#Nous_contacter) pour une aide.
+C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment&nbsp;! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/docs/Learn#nous_contacter) pour une aide.
 
 ## Voir aussi
 
-- [Opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison)
-- [Les instructions conditionnelles](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles)
-- [Référence if...else](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
-- [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel)
+- [Opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#opérateurs_de_comparaison)
+- [Les instructions conditionnelles](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_conditionnelles)
+- [Référence if...else](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}

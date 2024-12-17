@@ -67,6 +67,6 @@ self.addEventListener("push", function (event) {
 
 ## Voir aussi
 
-- [Utiliser l'API Push](/fr/docs/Web/API/Push_API/Using_the_Push_API)
+- [Utiliser l'API Push](/fr/docs/Web/API/Push_API)
 - [API Push](/fr/docs/Web/API/Push_API)
 - [API Service Worker](/fr/docs/Web/API/Service_Worker_API)

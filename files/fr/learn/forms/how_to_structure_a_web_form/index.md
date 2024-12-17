@@ -28,7 +28,7 @@ Les bases vues, nous examinons maintenant plus en détail les éléments utilis�
   </tbody>
 </table>
 
-La souplesse des formulaires HTML fait d'eux une des structures les plus complexes en [HTML](/fr/docs/HTML). vous pouvez construire n'importe quel type de formulaire basique en utilisant les éléments et attributs qui leur sont dédiés. En utilisant une architecture correcte lors de la construction d'un formulaire, vous serez sûrs que le formulaire est à la fois utilisable et [accessible](/fr/docs/MDN/Doc_status/Accessibility).
+La souplesse des formulaires HTML fait d'eux une des structures les plus complexes en [HTML](/fr/docs/Web/HTML). vous pouvez construire n'importe quel type de formulaire basique en utilisant les éléments et attributs qui leur sont dédiés. En utilisant une architecture correcte lors de la construction d'un formulaire, vous serez sûrs que le formulaire est à la fois utilisable et [accessible](/fr/docs/MDN/Doc_status/Accessibility).
 
 ## L'élément \<form>
 
@@ -188,7 +188,7 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 ### Apprentissage actif&nbsp;: construire une structure de formulaire
 
-Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/HTML/Forms/The_native_form_widgets)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
+Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
 1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
 2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
@@ -323,6 +323,6 @@ Nous savons maintenant ce qu'il faut faire pour structurer de manière appropri�
 
 ## Voir aussi
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}

@@ -5,7 +5,7 @@ slug: Web/CSS/justify-content
 
 {{CSSRef}}
 
-La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_Box_Alignment#Concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.
+La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_box_alignment#concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.
 
 L'exemple suivant illustre le fonctionnement des valeurs de cette propriété au sein d'une grille CSS.
 
@@ -163,7 +163,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)

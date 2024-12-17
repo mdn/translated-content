@@ -115,5 +115,5 @@ p {
 
 ## Voir aussi
 
-- [Arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
