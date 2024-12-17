@@ -91,5 +91,5 @@ if (!Element.prototype.matches) {
 
 ## Véase también
 
-- [The syntax of Selectors](/es/docs/Web/Guide/CSS/Getting_started/Selectors)
+- [The syntax of Selectors](/es/docs/Learn/CSS/Building_blocks/Selectors)
 - Otros métodos que usan selectores: {{domxref("element.querySelector()")}} and {{domxref("element.closest()")}}.

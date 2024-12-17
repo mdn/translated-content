@@ -18,7 +18,7 @@ str.search(expresionregular)
 ### Parámetros
 
 - regexp
-  - : Un objeto [expresión regular](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp). Si se pasa un objeto `obj` que no sea una expresión regular, se convierte implicitamente en una expresión regualar usando `new RegExp(obj)`.
+  - : Un objeto [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Si se pasa un objeto `obj` que no sea una expresión regular, se convierte implicitamente en una expresión regualar usando `new RegExp(obj)`.
 
 ### Valor devuelto
 

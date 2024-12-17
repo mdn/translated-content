@@ -15,7 +15,7 @@ Hay una serie de cosas que puede hacer para ayudar a proteger su sitio. Este art
 
 ## Seguridad de la información del usuario
 
-- [Cómo desactivar el autocompletado de formularios](/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+- [Cómo desactivar el autocompletado de formularios](/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
   - : Los campos de formulario admiten el autocompletado en Gecko; es decir, sus valores pueden recordarse y recuperarse automáticamente la próxima vez que el usuario visite su sitio. Para ciertos tipos de datos, es posible que desee desactivar esta función.
 - [Privacidad y el selector :visited](/es/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Este artículo analiza los cambios realizados en el método `getComputedStyle()` que elimina la capacidad de los sitios maliciosos de averiguar el historial de navegación del usuario.

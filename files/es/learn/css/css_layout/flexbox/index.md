@@ -5,7 +5,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
+[Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
 
 <table>
   <tbody>
@@ -43,7 +43,7 @@ Como verás en las secciones siguientes, los elementos flexbox facilitan mucho a
 
 ## Presentación de un ejemplo sencillo
 
-En este artículo, te guiaremos por una serie de ejercicios para ayudarte a comprender cómo funcionan los elementos flexbox. Para comenzar, debes hacer una copia local del primer archivo de inicio [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de nuestro repositorio de GitHub. Cárgalo en un navegador moderno (como Firefox o Chrome) y echa un vistazo al código en tu editor de código. Puedes [verlo en vivo aquí](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+En este artículo, te guiaremos por una serie de ejercicios para ayudarte a comprender cómo funcionan los elementos flexbox. Para comenzar, debes hacer una copia local del primer archivo de inicio [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de nuestro repositorio de GitHub. Cárgalo en un navegador moderno (como Firefox o Chrome) y echa un vistazo al código en tu editor de código. Puedes [verlo en vivo aquí](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 Verás que hay un elemento {{htmlelement ("header")}} con un encabezado de nivel superior en él, y un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. Los usaremos para crear una compaginación bastante habitual de tres columnas.
 
@@ -97,7 +97,7 @@ Observa que esto vuelve a colocar los elementos en una disposición en columna, 
 
 ## Delimitar
 
-Un problema que surge cuando tienes una cantidad fija de ancho o alto en tu diseño es que los hijos de un elemento flexbox eventualmente desbordan el contenedor y rompen el diseño. Echa un vistazo a nuestro ejemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) e intenta [verlo en vivo](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (toma una copia local de este archivo si deseas seguir este ejemplo):
+Un problema que surge cuando tienes una cantidad fija de ancho o alto en tu diseño es que los hijos de un elemento flexbox eventualmente desbordan el contenedor y rompen el diseño. Echa un vistazo a nuestro ejemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) e intenta [verlo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (toma una copia local de este archivo si deseas seguir este ejemplo):
 
 ![](flexbox-example3.png)
 
@@ -136,7 +136,7 @@ flex-flow: row wrap;
 
 ## Dimensionamiento flexible de elementos flexibles
 
-Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción de espacio ocupan los elementos flexibles. Inicia tu copia local de [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) o toma una copia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como nuevo punto de partida ([consúltalo en vivo](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción de espacio ocupan los elementos flexibles. Inicia tu copia local de [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) o toma una copia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como nuevo punto de partida ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 Primero, añade la regla siguiente al final de tu CSS:
 
@@ -188,7 +188,7 @@ Recomendamos no usar las propiedades flex sin abreviar a menos que realmente ten
 
 ## Alineación horizontal y vertical
 
-También puedes usar las funciones de los elementos flexbox para alinear elementos flexibles sobre el eje principal o transversal. Exploremos este aspecto a partir de un ejemplo nuevo: [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)), que vamos a convertir en una barra de herramientas/botones ordenada y flexible. En este momento puedes ver una barra de menú horizontal, con algunos botones pegados en línea a la esquina superior izquierda.
+También puedes usar las funciones de los elementos flexbox para alinear elementos flexibles sobre el eje principal o transversal. Exploremos este aspecto a partir de un ejemplo nuevo: [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)), que vamos a convertir en una barra de herramientas/botones ordenada y flexible. En este momento puedes ver una barra de menú horizontal, con algunos botones pegados en línea a la esquina superior izquierda.
 
 ![](flexbox-example5.png)
 
@@ -261,7 +261,7 @@ button:last-child {
 
 ## Cajas flexibles anidadas
 
-Los elementos flexbox permiten crear algunos diseños de página bastante complejos. Es perfectamente aceptable configurar un elemento flexible para que también sea un contenedor flexible, de modo que los elementos secundarios también se dispongan como cajas flexibles. Echa un vistazo a complex-flexbox.html ([consúltalo en vivo](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+Los elementos flexbox permiten crear algunos diseños de página bastante complejos. Es perfectamente aceptable configurar un elemento flexible para que también sea un contenedor flexible, de modo que los elementos secundarios también se dispongan como cajas flexibles. Echa un vistazo a complex-flexbox.html ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 
@@ -332,7 +332,7 @@ Esto no importa demasiado mientras estás aprendiendo y experimentando; pero cua
 
 Las propiedades flexbox son un poco más complicadas que otras características de CSS. Por ejemplo, si un navegador no soporta sombras en CSS, es probable que el sitio todavía sea utilizable. Sin embargo, si no es compatible con las funciones flexbox, probablemente el diseño completo se romperá, y el sitio web se inutilizará.
 
-Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo [Pruebas de compatibilidad del navegador](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
+Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo [Pruebas de compatibilidad del navegador](/es/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
 ## Pon a prueba tus habilidades
 

@@ -24,7 +24,7 @@ cursor: url(foo.cur), url(http://developer.mozilla.org/wiki-images/es/e/ed/firef
 
 Primero se intentará cargar _foo.cur_. Si este archivo no existe o no es válido por alguna otra razón, se probará con _firefox.jpg_, y si este tampoco puede ser cargado, se usará _help_.
 
-El soporte a la [sintaxis de CSS3](http://www.w3.org/TR/css3-ui/#cursor) para los valores de cursor fue añadido en Gecko 1.8beta3; por lo tanto en Firefox 1.5 funciona. Esto permite especificar las coordenadas del punto en el que la imagen del cursor es fijada al área activa. Si no se especifican, las coordenadas del punto de contacto son tomadas del propio archivo (para archivos CUR y XBM) o se fijan en la esquina superior izquierda de la imagen.
+El soporte a la [sintaxis de CSS3](https://www.w3.org/TR/css3-ui/#cursor) para los valores de cursor fue añadido en Gecko 1.8beta3; por lo tanto en Firefox 1.5 funciona. Esto permite especificar las coordenadas del punto en el que la imagen del cursor es fijada al área activa. Si no se especifican, las coordenadas del punto de contacto son tomadas del propio archivo (para archivos CUR y XBM) o se fijan en la esquina superior izquierda de la imagen.
 
 Un ejemplo de la sintaxis CSS3:
 

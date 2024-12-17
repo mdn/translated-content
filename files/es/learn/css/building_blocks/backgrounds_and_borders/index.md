@@ -90,7 +90,7 @@ La propiedad {{cssxref ("background-repeat")}} se usa para controlar el comporta
 
 #### Dimensionar la imagen de fondo
 
-En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/porcentaje), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/percentage), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
 
 También puedes utilizar palabras clave:
 
@@ -126,7 +126,7 @@ Puedes usar palabras clave como `top` y `right` (busca todas las demás en la p�
 }
 ```
 
-Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/porcentaje):
+Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/percentage):
 
 ```css
 .box {
@@ -206,7 +206,7 @@ Otra opción que hay disponible para fondos es especificar cómo se desplazan cu
 - `fixed`: Hace que el fondo de un elemento quede fijo con respecto a la ventana gráfica, de modo que no se desplace cuando te desplazas por la página o el contenido del elemento. Siempre permanece en la misma posición de la pantalla.
 - `local`: Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor `scroll` es bastante confuso y en muchos casos no hace lo que deseas. El valor `local` ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este.
 
-La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (También puedes consultar el [código fuente](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) aquí).
+La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (También puedes consultar el [código fuente](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) aquí).
 
 ### Usar la propiedad abreviada para el fondo
 
