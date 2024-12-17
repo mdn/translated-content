@@ -1,7 +1,6 @@
 ---
 title: 推测性加载
 slug: Web/Performance/Speculative_loading
-page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -43,7 +42,7 @@ page-type: guide
 <link rel="preconnect" href="https://example.com" />
 ```
 
-`<link rel="preconnect">`在浏览器中得到广泛支持，并将为任何未来的跨源 HTTP 请求、导航或子资源提供好处。对于同源请求没有好处，因为连接已经打开。
+`<link rel="preconnect">`在浏览器中得到广泛支持，并将改善未来的跨源 HTTP 请求、导航或子资源。这对于同源请求并没有收益，因为连接已经打开过了。
 
 如果页面需要连接到许多第三方域，全部预连接可能会适得其反。`<link rel="preconnect">` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 来节省第一步的时间——DNS 查找。
 
