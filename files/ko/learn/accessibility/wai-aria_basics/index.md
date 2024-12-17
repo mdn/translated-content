@@ -5,8 +5,45 @@ l10n:
   sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
-Hello World!```
+이전 글에 이어, 의미 없는 HTML과 동적 자바스크립트로 업데이트되는 콘텐츠가 포함된 복잡한 UI 컨트롤에 접근성을 보장하는 것은 때때로 쉽지 않을 수 있습니다. 이러한 문제는 WAI-ARIA의 도움을 받을 수 있는데 이는 브라우저 및 보조 기술이 인식할 수 있는 추가적인 의미를 제공함으로써 사용자에게 무슨 일이 일어나고 있는지 알리는 기술입니다. 이 글에서는 접근성 개선을 위해 이를 사용할 수 있는 기본적인 방법을 다룹니다.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">전제 조건:</th>
+      <td>
+        HTML, CSS 및 자바스크립트에 대한 기초적인 이해.
+        <a href="/ko/docs/Learn/Accessibility"
+          >강좌의 이전 글</a
+        >에 대한 이해.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">목표:</th>
+      <td>
+        WAI-ARIA에 익숙해지기, 필요한 경우 접근성 향상을 위해 시맨틱에 이를 추가하는 법 배우기
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## WAI-ARIA란?
+
+먼저 WAI-ARIA가 무엇인지, 그리고 이를 통해 무엇을 할 수 있는지 살펴봅시다.
+
+### 전혀 새로운 문제들
+
+웹 앱이 더욱 복잡하고 동적으로 변하면서 새로운 종류의 접근성 기능 및 문제가 등장하기 시작했습니다.
+
+예를 들어, HTML은 일반적인 페이지 기능의 정의를 위해 여러 새로운 의미 요소들({{htmlelement("nav")}}, {{htmlelement("footer")}}, 등)을 도입했습니다. 이 요소들의 도입 이전에는 개발자들이 `<div class="nav">` 처럼 ID 또는 클래스를 추가한 {{htmlelement("div")}}를 사용했지만 여기에는 메인 네비게이션과 같은 특정 페이지 탐색 기능을 프로그래밍 방식으로 쉽게 찾을 수 없는 방법이 없어 문제가 있었습니다.
+
+이에 대한 초창기 해결책은 페이지 상단에 하나 이상의 숨겨진 링크를 추가하여 네비게이션(혹은 다른 요소)으로 연결하는 것이었습니다.
+
+```html
+<a href="#hidden" class="hidden">네비게이션으로 건너뛰기</a>
+```
 
 그러나 이 방법은 여전히 다소 부정확하며 스크린리더 이용 시 화면을 페이지 상단에서부터 읽을 때만 기능한다는 문제가 있습니다.
 
