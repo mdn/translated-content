@@ -29,7 +29,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
     - `true` ou uma string vazia, indica que o elemento deve ser editável;
     - `false`, indica que o elemento não deve ser editável.
 
-- [`contextmenu`](/pt-BR/docs/Web/HTML/Global_attributes/contextmenu)
+- [`contextmenu`](/pt-BR/docs/Web/HTML/Element/menu)
   - : É o **[`id`](#id)** de um {{HTMLElement("menu")}} para usar como o menu contextual para este elemento.
 - [`data-*`](/pt-BR/docs/Web/HTML/Global_attributes/data-*)
   - : Forma uma classe de atributos, denominado de dados personalizados, que permite troca de informações proprietárias entre o [HTML](/pt-BR/docs/Web/HTML) e a sua representação no [DOM](/pt-BR/docs/Glossary/DOM) pode ser usada por scripts. Todos esses dados personalizados estão disponíveis através da interface do elemento {{domxref("HTMLElement")}} em que o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} dá acesso a eles.
@@ -43,14 +43,14 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
 
 - [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes/draggable) {{experimental_inline}}
 
-  - : É um atributo enumerado que indica se o elemento pode ser arrastado, usando a [API Drag and Drop](/pt-BR/docs/DragDrop/Drag_and_Drop). Pode ter os seguintes valores:
+  - : É um atributo enumerado que indica se o elemento pode ser arrastado, usando a [API Drag and Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API). Pode ter os seguintes valores:
 
     - `true`, que indica que o elemento pode ser arrastado
     - `false`, que indica que o elemento não pode ser arrastado.
 
 - [`dropzone`](/pt-BR/docs/Web/HTML/Global_attributes/dropzone) {{experimental_inline}}
 
-  - : É um atributo enumerado que indica quais tipos de conteúdo podem ser descartados em um elemento, usando a [API Drag and Drop](/pt-BR/docs/DragDrop/Drag_and_Drop). Pode ter os seguintes valores:
+  - : É um atributo enumerado que indica quais tipos de conteúdo podem ser descartados em um elemento, usando a [API Drag and Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API). Pode ter os seguintes valores:
 
     - `copy`, que indica que o lançamento criará uma cópia do elemento que foi arrastado.
     - `move`, que indica que o elemento que foi arrastado será movido para esta nova localização.
@@ -62,7 +62,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
   - : Define um identificador exclusivo (ID) que deve ser único em todo o documento. Seu objetivo é identificar o elemento ao vincular (usando um identificador de fragmento), um script ou estilo (com CSS).
 
 > [!NOTE]
-> Os 5 atributos seguintes são partes do [Recursos de Microdados WHATWG HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata).
+> Os 5 atributos seguintes são partes do [Recursos de Microdados WHATWG HTML](https://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata).
 
 - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes/itemid) {{experimental_inline}}
   - : O identificador único e global de um item.
@@ -71,11 +71,11 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
 - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes/itemref) {{experimental_inline}}
   - : As propriedades que não são descendentes de um elemento com o atributo `itemscope` podem ser associadas ao item usando um **itemref**. Itemref fornece uma lista de ids de elementos (não `itemid`) com propriedades adicionais em outro lugar do documento.
 - `itemscope` {{experimental_inline}}
-  - : Este atributo funciona, em geral, com o atributo [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) para especificar o HTML dentro de um bloco é sobre um item particular. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) cria o item e define o escopo do [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) associado a ele. [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) é uma URL válida de um vocabulário (como o [schema.org](http://schema.org/)) que descreve o item e o context de seus atributos.
+  - : Este atributo funciona, em geral, com o atributo [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) para especificar o HTML dentro de um bloco é sobre um item particular. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) cria o item e define o escopo do [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) associado a ele. [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) é uma URL válida de um vocabulário (como o [schema.org](https://schema.org/)) que descreve o item e o context de seus atributos.
 - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Especifica a URL do vocabulário que será usado para definir as propriedades do item na estrutura de dados. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) é usado para alterar o escopo na estrutura de dados onde o vocabulário definido por [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) estará ativo.
 - [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang)
-  - : Participa da definição do idioma do elemento, o idioma no qual os elementos não-editáveis estão escritos, ou o idioma no qual elementos editáveis devem ser escritos. A Tag contém um único valor no formato definido no documento da IEFT [Tags para Identificação de Idiomas (BCP47)](http://www.ietf.org/rfc/bcp/bcp47.txt). `xml:lang` tem prioridade mais alta que [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang).
+  - : Participa da definição do idioma do elemento, o idioma no qual os elementos não-editáveis estão escritos, ou o idioma no qual elementos editáveis devem ser escritos. A Tag contém um único valor no formato definido no documento da IEFT [Tags para Identificação de Idiomas (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt). `xml:lang` tem prioridade mais alta que [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang).
 - [`spellcheck`](/pt-BR/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
 
   - : É um atributo enumerado que define se o elemento pode ser verificado por errors de ortografia. Pode ter os seguintes valores:
@@ -84,7 +84,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
     - `false`, indica que o elemento não deve ser verificado quanto à ortogratia do texto.
 
 - [`style`](/pt-BR/docs/Web/HTML/Global_attributes/style)
-  - : Contém regras de declarações [CSS](/pt-BR/docs/) para aplicar no elemento. Note que é recomendado que as regras CSS fiquem num arquivo, ou vários arquivos, separado do HTML. Este atributo e o elemento {{HTMLElement("style")}} tem principalmente o propósito para rápida estilização do elemento, como por exemplo para testes.
+  - : Contém regras de declarações [CSS](/pt-BR/docs/Web) para aplicar no elemento. Note que é recomendado que as regras CSS fiquem num arquivo, ou vários arquivos, separado do HTML. Este atributo e o elemento {{HTMLElement("style")}} tem principalmente o propósito para rápida estilização do elemento, como por exemplo para testes.
 - [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes/tabindex)
 
   - : É um atributo que recebe valores inteiros e indica se um elemento pode receber o foco de entrada de valores (é focável), se ele deve entrar na sequência da navegação pelo teclado (através da tecla TAB), e qual posição da sequência. Sobre seus valores:

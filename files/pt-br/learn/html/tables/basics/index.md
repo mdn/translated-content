@@ -197,13 +197,13 @@ Quando criadas corretamente, até pessoas cegas podem interpretar dados tabulare
 
 Você também pode dar uma olhada [neste exemplo real](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) no GitHub! Uma coisa que você perceberá é que essa tabela parece um pouco mais legível lá — isso ocorre porque a tabela que você vê acima nesta página tem o mínimo de estilização, enquanto a versão do GitHub tem um CSS expressivo aplicado.
 
-Não se iluda; para que tabelas sejam de fato efetivas na web, você precisa fornecer algumas informações de estilo com [CSS](/pt-BR/docs/Learn/CSS), bem como uma boa estrutura sólida com HTML. Neste módulo nos iremos focar na parte do HTML; Para saber mais sobre a parte do CSS você deve visitar nosso artigo [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Styling_boxes/Styling_tables) depois que você finalizar este.
+Não se iluda; para que tabelas sejam de fato efetivas na web, você precisa fornecer algumas informações de estilo com [CSS](/pt-BR/docs/Learn/CSS), bem como uma boa estrutura sólida com HTML. Neste módulo nos iremos focar na parte do HTML; Para saber mais sobre a parte do CSS você deve visitar nosso artigo [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables) depois que você finalizar este.
 
 Nós não focaremos em CSS neste módulo, mas nós forneceremos uma mínima folha de estilo CSS para você usar que fará suas tabelas mais legíveis que o padrão que teria sem nenhuma estilização. Você pode procurar a [folha de estilo aqui](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), e você pode também procurar um [template HTML](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) que aplica a folha de estilo — juntos eles serão um bom ponto de partida para serem implementados com tabelas HTML.
 
 ### Quando NÃO utilizar tabelas HTML?
 
-Tabelas HTML devem ser usadas para exibir dados tabulares - foram projetadas para isso. Infelizmente, muitas pessoas se acostumaram a usar tabelas HTML para diagramar páginas web, por exemplo, uma linha para conter o cabeçalho, outra linha para conter as colunas de conteúdo, uma linha para conter o rodapé, etc. Mais detalhes e um exemplo podem ser encontrados em [Page Layouts](/pt-BR/docs/Learn/Accessibility/HTML#Page_layouts) de nosso [Accessibility Learning Module](/pt-BR/docs/Learn/Accessibility). Isso era muito comum porque o suporte à CCS entre diferentes navegadores era muito ruim; tabelas sendo usadas para leiaute não são comuns nos dias de hoje mas ainda podem ser encontradas em alguns cantos da web.
+Tabelas HTML devem ser usadas para exibir dados tabulares - foram projetadas para isso. Infelizmente, muitas pessoas se acostumaram a usar tabelas HTML para diagramar páginas web, por exemplo, uma linha para conter o cabeçalho, outra linha para conter as colunas de conteúdo, uma linha para conter o rodapé, etc. Mais detalhes e um exemplo podem ser encontrados em [Page Layouts](/pt-BR/docs/Learn/Accessibility/HTML#page_layouts) de nosso [Accessibility Learning Module](/pt-BR/docs/Learn/Accessibility). Isso era muito comum porque o suporte à CCS entre diferentes navegadores era muito ruim; tabelas sendo usadas para leiaute não são comuns nos dias de hoje mas ainda podem ser encontradas em alguns cantos da web.
 
 Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS](/pt-BR/docs/Learn/CSS/CSS_layout) é uma péssima ideia. Os principais motivos são os seguintes:
 
@@ -256,7 +256,7 @@ Isso deve resultar em uma tabela que vai parecer com algo assim:
 | Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
 
 > [!NOTE]
-> Você também pode encontrar esse código no GitHub em [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> Você também pode encontrar esse código no GitHub em [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Adicionar cabeçalhos com o elemento \<th>
 
@@ -322,7 +322,7 @@ Vamos tentar melhorar essa tabela.
 3. Salve o HTML e abra em um navegador, e veja que os cabeçalhos agora se parecem mais com cabeçalhos.
 
 > [!NOTE]
-> Encontre esse exemplo pronto em [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> Encontre esse exemplo pronto em [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) no GitHub ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Por que os cabeçalhos são úteis?
 
@@ -388,7 +388,7 @@ Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
 4. Salve e abra o código em um navegador para ver a melhoria.
 
 > [!NOTE]
-> Encontre o exemplo pronto em [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> Encontre o exemplo pronto em [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) no GitHub ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Provendo estilos comuns para colunas
 
@@ -477,7 +477,7 @@ Recrie a tabela seguindo os passos abaixo.
 7. Adicione uma cor de fundo diferente e uma borda para a sexta coluna, para indicar que este é um dia especial e ela está dando uma nova aula. Os valores dos atributos `style` são `background-color:#DCC48E; border:4px solid #C1437A;`
 8. Os dois últimos dias são dias livres, então apenas ajuste para nenhuma cor de fundo, mas defina uma largura; o valor do atributo `style` é `width: 42px;`
 
-Veja se consegue seguir o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
+Veja se consegue seguir o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
 
 ## Resumo
 

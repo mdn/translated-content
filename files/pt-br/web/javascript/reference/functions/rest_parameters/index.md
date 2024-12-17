@@ -109,6 +109,6 @@ a fim de usar o objeto `arguments`, você precisará converte-lo para um array a
 - [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

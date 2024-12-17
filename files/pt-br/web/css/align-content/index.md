@@ -3,7 +3,7 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-content`** define a distribuição entre e ao redor dos items do conteúdo do eixo transversal de uma [flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) ou do eixo de bloco de uma [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout).
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-content`** define a distribuição entre e ao redor dos items do conteúdo do eixo transversal de uma [flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) ou do eixo de bloco de uma [grid](/pt-BR/docs/Web/CSS/CSS_grid_layout).
 
 O exemplo interativo abaixo use Grid Layout para demonstrar alguns dos valores dessa propriedade.
 
@@ -251,9 +251,9 @@ display.addEventListener("change", function (evt) {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
 
 {{CSSRef}}

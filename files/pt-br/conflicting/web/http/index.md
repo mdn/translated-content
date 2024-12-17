@@ -12,21 +12,21 @@ HTTP é um protocolo bem extensivo. Isso depende um pouco do conceito básico co
 
 - [Visão geral sobre HTTP](/pt-BR/docs/Web/HTTP/Overview)
   - : Descreve o que é HTTP e quais as regras para arquitetura Web, sua posição na lista de protocolos.
-- [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Evolution_of_HTTP)
   - : HTTP foi criada no inicio dos anos 1990 e vem evoluindo ao longo do tempo. Esse artigo passa por sua história e descreve HTTP/0.9, HTTP/1.0, HTTP/1.1, e o moderno HTTP/2 bem como pequenas novidades adicionadas ao longo de seus anos.
 - **Negociação entre versões HTTP**
   - : Explicações de como um cliente e um servidor conseguem negociar em uma versão expecífica do HTTP e enventuais atualizaçõs nos protocolos usados;
-- [Recursos e URIs](/pt-BR/docs/Web/HTTP/Resources_and_URIs)
+- [Recursos e URIs](/pt-BR/docs/Web/HTTP/MIME_types)
   - : Uma breve introdução sobre noção de recursos, identicadores e localizações na Web.
-- [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identificando recursos na Web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : Descreve como os recursos Web são referênciados e como encontrar eles.
-- [Data URIs](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [Data URIs](/pt-BR/docs/Web/URI/Schemes/data)
   - : Um tipo especifico de URIs que incorpora diretamente os recursos apresentados, Data URIs são muito convenientes, mas tem algumas ressalvas
 - **Separando identidades e localização de recursos: O cabeçalho Alt-Svc HTTP**
   - : Na maioria das vezes, a indentidade ea localização de um recurso da Web são compartilhados, isso pode ser mudado com no cabeçalho {{HTTPHeader("Alt-Svc")}}.
-- [MIME types](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+- [MIME types](/pt-BR/docs/Web/HTTP/MIME_types)
   - : Desde HTTP/1.0, diferentes tipos de conteúdos poderam ser transmitidos. Esse artigo explica como funciona usando o {cabeçalho {HTTPHeader("Content-Type")}} e o MIME standard.
-- [Escolhendo entre URLs www e sem-www](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
+- [Escolhendo entre URLs www e sem-www](/pt-BR/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
   - : Ajuda de como usar o prefixo www no domínio ou não, esse artigo fala as consequencias da escolhe e também como fazer isso.
 - Fluxo de sessões HTTP
   - : Esse artigo fundamente descreve uma típica sessão HTTP: o que acontece por trás do do navegador quando você clica em um link.

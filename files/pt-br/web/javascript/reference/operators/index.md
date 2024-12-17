@@ -217,4 +217,4 @@ An assignment operator assigns a value to its left operand based on the value of
 
 ## Veja também
 
-- [Operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
