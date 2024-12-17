@@ -517,6 +517,7 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
+/zh-CN/docs/Glossary/DOS_attack	/zh-CN/docs/conflicting/Glossary/Denial_of_Service
 /zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
