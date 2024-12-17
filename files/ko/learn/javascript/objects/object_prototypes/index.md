@@ -47,7 +47,7 @@ JavaScript에서는 객체 인스턴스와 프로토타입 간에 연결(많은 
 
 ## 프로토타입 객체 이해하기
 
-`Person()` 생성자를 작성했던 예제 코드로 되돌아가 봅시다. — 브라우저로 예제 코드를 불러 오시구요. 이전 페이지에서 작업했던 예제 코드를 날려버렸다면 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 페이지를 방문해 주세요. ([source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)도 보시구요).
+`Person()` 생성자를 작성했던 예제 코드로 되돌아가 봅시다. — 브라우저로 예제 코드를 불러 오시구요. 이전 페이지에서 작업했던 예제 코드를 날려버렸다면 [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 페이지를 방문해 주세요. ([source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)도 보시구요).
 
 이 예제에서 생성자 함수를 정의했었습니다:
 
@@ -202,7 +202,7 @@ person1.constructor.name;
 
 `생성자의 prototype` 속성을 수정하는 법에 대해 알아봅시다(프로토타입에 메소드를 추가하면 해당 생성자로 생성된 모든 객체에서 사용 가능합니다).
 
-1. [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 예제로 돌아가서 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)를 다운 받으세요. 기존 코드에 아래 샘플 코드를 추가하여 `prototype` 속성에 새 메소드를 추가하세요:
+1. [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 예제로 돌아가서 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)를 다운 받으세요. 기존 코드에 아래 샘플 코드를 추가하여 `prototype` 속성에 새 메소드를 추가하세요:
 
    ```js
    Person.prototype.farewell = function () {
@@ -239,7 +239,7 @@ Person.prototype.farewell = function () {
 그런데도 person1에서 바로 farewell() 메소드를 사용할 수 있습니다 - 자동으로 업데이트 되기 때문이죠(역주:원문은 이런 뉘앙스입니다만 실제로는 프로토타입 객체는 모든 인스턴스에서 공유하기 때문에 정의하는 즉시 별도의 갱신 과정 없이 접근이 가능합니다).
 
 > [!NOTE]
-> 코드가 잘 동작하지 않는다면 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 코드를 참조하세요 ([running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html) 페이지도 보시구요).
+> 코드가 잘 동작하지 않는다면 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 코드를 참조하세요 ([running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html) 페이지도 보시구요).
 
 prototype에 속성을 정의하는 경우는 별로 본 적이 없을겁니다. 왜냐면 별로 좋은 방법이 아니거든요. 속성을 추가할 때 아래와 같이 할 수 있습니다:
 

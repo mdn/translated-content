@@ -17,7 +17,7 @@ MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니�
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 시작하기
 
@@ -122,7 +122,7 @@ GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저�
 새로운 학습지 주제, 이해가 어려운 부분에 대한 도움 요청, 그 외 기타 질문이나 걱정거리 등 무엇이든 좋아요.
 
 콘텐츠의 추가와 개선에 관심이 있으시면
-[MDN에 참여하는 법](/ko/docs/MDN/Contribute)을 보시고 연락해주세요. 배우시는 분, 가르치시는 분, 숙련 개발자
+[MDN에 참여하는 법](/ko/docs/conflicting/MDN/Community/Contributing)을 보시고 연락해주세요. 배우시는 분, 가르치시는 분, 숙련 개발자
 등 누구나 환영합니다!
 
 ## 같이 보기

@@ -171,4 +171,4 @@ JavaScript에서 C 코드에 정의된 함수를 쓰고 싶은 경우 Emscripten
 - [ccall/cwrap을 사용하여 JavaScript에서 컴파일된 C 함수 호출](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [JavaScript로 컴파일할 때 C/C++ 소스 코드의 함수가 사라지거나, 처리할 함수가 없다는 메시지가 나타나는 이유는 무엇인가요?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [Mozilla Research의 WebAssembly](https://research.mozilla.org/webassembly/)
-- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_wasm)
+- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_Wasm)

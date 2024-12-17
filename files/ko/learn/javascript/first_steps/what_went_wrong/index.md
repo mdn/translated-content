@@ -49,7 +49,7 @@ l10n:
 
 ## 구문 오류 수정하기
 
-앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 보았습니다. 콘솔을 여는 방법이 기억나지 않으면 이전 링크를 따라 알아보시면 됩니다. 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 이제 오류를 잡아 볼 것입니다.
+앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 보았습니다. 콘솔을 여는 방법이 기억나지 않으면 이전 링크를 따라 알아보시면 됩니다. 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 이제 오류를 잡아 볼 것입니다.
 
 1. `number-game-errors.html`을 연 탭으로 이동해서 JavaScript 콘솔을 엽니다. 스크린샷과 비슷한 내용의 오류 메시지를 볼 수 있어야 합니다.
    ![Firefox의 "숫자 알아맞히기 게임" 데모 페이지입니다. JavaScript 콘솔에 한 가지 오류가 표시됩니다. "X TypeError: guessSubmit.addeventListener is not a function [자세히 알아보기](number-game-errors.html:86:3)".](not-a-function.png)
@@ -122,7 +122,7 @@ l10n:
    console.log(lowOrHi);
    ```
 
-   이 코드는 49번째 줄에서 설정하려고 시도한 후 콘솔에 `lowOrHi`값을 출력합니다. 자세한 내용은[`console.log()`](/ko/docs/Web/API/console/log)를 참조하세요.
+   이 코드는 49번째 줄에서 설정하려고 시도한 후 콘솔에 `lowOrHi`값을 출력합니다. 자세한 내용은[`console.log()`](/ko/docs/Web/API/console/log_static)를 참조하세요.
 
 7. 저장하고 새로고침하면 `console.log()`가 콘솔에 기록한 결과를 볼 수 있습니다.
    ![동일한 데모의 스크린샷입니다. 콘솔에 단순히 "null"을 읽는 하나의 로그 문이 표시됩니다.](console-log-output.png)
@@ -221,7 +221,7 @@ const userGuess === Number(guessField.value);
 이 오류는 사용자가 다른 작업을 수행하려고 한다고 생각하기 때문에 발생합니다. 변수를 어떤 값과 동일하게 만드는 할당 연산자(`=`)와, 어떤 값이 다른 값과 같은지 판별해서 `true`/`false`를 반환하는 일치 연산자(`===`)를 혼동하지 않도록 주의해야 합니다.
 
 > [!NOTE]
-> MDN의 [SyntaxError: missing ; before statement](/ko/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
+> MDN의 [SyntaxError: missing ; before statement](/ko/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### 어떤 값을 입력해도 항상 이겼다고 함
 
@@ -273,7 +273,7 @@ function checkGuess( {
 이러한 모든 오류에 대해 연습에서 살펴본 예제를 어떻게 해결했는지 생각해 봅시다. 오류가 발생하면 주어진 줄 번호를 보고 해당하는 줄로 이동하여 무엇이 잘못되었는지 찾아봅니다. 오류가 반드시 해당하는 줄에 있는 것은 아니며, 위에서 인용한 것과 똑같은 문제로 인해 오류가 발생하지 않을 수도 있다는 점을 명심해야 합니다!
 
 > [!NOTE]
-> MDN의 [SyntaxError: Unexpected token](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_token)과 [SyntaxError: unterminated string literal](/ko/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) 참고서에서 두 오류에 대한 자세한 설명을 확인하세요.
+> MDN의 [SyntaxError: Unexpected token](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_token)과 [SyntaxError: unterminated string literal](/ko/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) 참고서에서 두 오류에 대한 자세한 설명을 확인하세요.
 
 ## 요약
 

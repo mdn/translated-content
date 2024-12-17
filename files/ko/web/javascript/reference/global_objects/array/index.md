@@ -680,7 +680,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-[`structuredClone()`](/ko/docs/Web/API/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
+[`structuredClone()`](/ko/docs/Web/API/Window/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
 
 마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
 

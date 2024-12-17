@@ -43,7 +43,7 @@ typeof (operand);
 > [!NOTE]
 > ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
 >
-> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#IE-specific_notes)).
+> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#ie-specific_notes)).
 
 ## 예제
 

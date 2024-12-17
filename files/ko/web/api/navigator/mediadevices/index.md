@@ -27,5 +27,5 @@ var mediaDevices = navigator.mediaDevices;
 
 ## 참조
 
-- [Media Capture and Streams API](/ko/docs/Web/API/Media_Streams_API): 전체 미디어 스트림 API 문서의 시작 지점.
+- [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API): 전체 미디어 스트림 API 문서의 시작 지점.
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API): 밀접한 관련이 있는 WebRTC API 문서.
