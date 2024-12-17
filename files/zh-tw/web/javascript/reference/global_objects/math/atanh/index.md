@@ -1,6 +1,8 @@
 ---
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
