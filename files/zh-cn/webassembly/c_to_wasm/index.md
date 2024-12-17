@@ -16,7 +16,7 @@ slug: WebAssembly/C_to_Wasm
 你需要将下列工具安装在你的电脑上，首先让我们确认下都有哪些。
 
 - [Git](https://git-scm.com/) — Linux 和 macOS 的机器一般已经预装了，在 Windows 下你可以从这里下载 [Git for Windows installer](https://git-scm.com/download/win)。
-- CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](http://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
+- CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](https://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
 - 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
 - Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
 

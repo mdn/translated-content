@@ -26,7 +26,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## Exemple
 
-Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File/Using_files_from_web_applications#Exemple_Utilisation_de_l'objet_URLs_pour_afficher_des_images).
+Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images).
 
 ## Spécifications
 
@@ -38,6 +38,6 @@ Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/Fil
 
 ## Voir aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
-- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File/Using_files_from_web_applications#Exemple_Utilisation_de_l'objet_URLs_pour_afficher_des_images)
+- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images)
 - {{domxref("URL.createObjectURL()") }}

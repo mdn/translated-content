@@ -59,7 +59,7 @@ As próximas seções discutem esse processo em detalhes e mostram como você po
 
 ## Criando o projeto
 
-Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/ambiente_de_desenvolvimento), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
+Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/development_environment), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
 
 ```bash
 mkdir locallibrary

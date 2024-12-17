@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/HTTP/data_URIs) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
+**`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/URI/Schemes/data) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
 
 - 如果 canvas 的高度或是寬度為 `0`, 將會回傳字串 `"data:,"`.
 - 如果要求的圖像類型並非 `image/png`, 但是回傳的類型卻是 `data:image/png`, 表示要求的圖像類型並不支援.
@@ -27,7 +27,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### 回傳值
 
-包含 [data URI](/zh-TW/docs/Web/HTTP/data_URIs) 的 {{domxref("DOMString")}}.
+包含 [data URI](/zh-TW/docs/Web/URI/Schemes/data) 的 {{domxref("DOMString")}}.
 
 ## 範例
 
@@ -129,4 +129,4 @@ function removeColors() {
 ## 參見
 
 - The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/zh-TW/docs/Web/HTTP/data_URIs) in the [HTTP](/zh-TW/docs/Web/HTTP) reference.
+- [Data URIs](/zh-TW/docs/Web/URI/Schemes/data) in the [HTTP](/zh-TW/docs/Web/HTTP) reference.

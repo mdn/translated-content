@@ -47,6 +47,6 @@ RTCPeerConnection.generateCertificate({
 
 ## 참조
 
-- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

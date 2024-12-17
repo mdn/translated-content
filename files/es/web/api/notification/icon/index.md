@@ -19,7 +19,7 @@ var icon = Notification.icon;
 
 ### Valor
 
-Un [`USVString`](/es/docs/Web/API/USVString).
+Un [`USVString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Ejemplos
 

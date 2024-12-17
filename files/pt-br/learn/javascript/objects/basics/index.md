@@ -36,7 +36,7 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
 
 Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.
 
-Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console) aberto e pronto para digitar alguns comandos.
+Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) aberto e pronto para digitar alguns comandos.
 
 Assim como é comum em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
 
@@ -92,7 +92,7 @@ pessoa.saudacao();
 Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
 
 > [!NOTE]
-> Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
+> Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
 
 Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um com um nome (ex.: `nome` e `idade` vistos acima), e um valor (ex.: `['Bob', 'Smith']` e `32`). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:
 
@@ -249,7 +249,7 @@ saudacao: function(){
 }
 ```
 
-Você deve estar se perguntando o que é o "this". A palavra-chave `this` se refere ao objeto atual em que o código está sendo escrito — nesse caso o `this` se refere a `pessoa`. Então por que simplesmente não escrever `pessoa`? Como verá no artigo [Orientaçã a objeto em JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS), quando começamos a criar funções construtoras, etc, o `this` é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto `pessoa` podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).
+Você deve estar se perguntando o que é o "this". A palavra-chave `this` se refere ao objeto atual em que o código está sendo escrito — nesse caso o `this` se refere a `pessoa`. Então por que simplesmente não escrever `pessoa`? Como verá no artigo [Orientaçã a objeto em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript), quando começamos a criar funções construtoras, etc, o `this` é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto `pessoa` podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).
 
 Vamos ilustrar o que queremos dizer com um par de objetos pessoa:
 
@@ -320,9 +320,9 @@ No próximo artigo vamos começar a ver a teoria de programação orientada a ob
 ## Nesse módulo
 
 - [Noções Básicas de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Protótipos de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Trabalhando com JSON](/pt-BR/docs/Aprender/JavaScript/Objetos/JSON)
-- [Prática de construção de Objetos](/pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice)
-- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Aprender/JavaScript/Objetos/Adding_bouncing_balls_features)
+- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [Trabalhando com JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+- [Prática de construção de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

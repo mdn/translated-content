@@ -95,7 +95,7 @@ toto.bind({}).name; // "bound toto"
 
 ### Noms de fonction pour les accesseurs et les mutateurs
 
-Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Fonctions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
+Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
 
 ```js
 var o = {

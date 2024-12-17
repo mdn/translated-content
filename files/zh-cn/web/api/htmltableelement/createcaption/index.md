@@ -21,4 +21,4 @@ mycap = mytable.createCaption();
 
 ## Specification
 
-- [createCaption](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-96920263)
+- [createCaption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-96920263)

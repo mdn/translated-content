@@ -13,15 +13,15 @@ slug: Learn/JavaScript
 >
 > Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 >
-> [Empezar](/docs/Learn/Front-end_web_developer)
+> [Empezar](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Prerrequisitos
 
 Se puede decir que JavaScript es más difícil de aprender que tecnologías relacionadas como [HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS). Antes de intentar aprender JavaScript, se recomienda encarecidamente que te familiarices con al menos estas dos tecnologías primero, y quizás también con otras. Comienza trabajando con los siguientes módulos:
 
 - [Comenzando con la Web](/es/docs/Learn/Getting_started_with_the_web)
-- [Introducción a HTML](/es/docs/Web/Guide/HTML/Introduction)
-- [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS)
+- [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML)
+- [Introducción a CSS](/es/docs/Learn/CSS/First_steps)
 
 Tener experiencia previa con otros lenguajes de programación también puede ayudar.
 

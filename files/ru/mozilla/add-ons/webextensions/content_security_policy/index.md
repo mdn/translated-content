@@ -102,4 +102,4 @@ var f = new Function("console.log('foo');");
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-Вместо того, чтобы использовать код `<body onload="main()">` для запуска вашего скрипта после загрузки страницы, поставьте обработчики событий на [DOMContentLoaded](/ru/docs/Web/Events/DOMContentLoaded) или [load](/ru/docs/Web/Events/load).
+Вместо того, чтобы использовать код `<body onload="main()">` для запуска вашего скрипта после загрузки страницы, поставьте обработчики событий на [DOMContentLoaded](/ru/docs/Web/API/Document/DOMContentLoaded_event) или [load](/ru/docs/Web/API/Window/load_event).

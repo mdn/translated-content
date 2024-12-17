@@ -19,39 +19,39 @@ slug: Web/API/WebGL_API/By_example
 
 ### レンダリングコンテキストを知る
 
-- [WebGL を検出する](/ja/docs/Learn/WebGL/By_example/Detect_WebGL)
+- [WebGL を検出する](/ja/docs/Web/API/WebGL_API/By_example/Detect_WebGL)
   - : この例では{{Glossary("WebGL")}}レンダリングコンテキストを検出して、結果をユーザーに描画します
-- [カラーのクリア](/ja/docs/Learn/WebGL/By_example/Clearing_with_colors)
+- [カラーのクリア](/ja/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)
   - : 単色でレンダリングコンテキストをクリアします
-- [クリックしてクリア](/ja/docs/Learn/WebGL/By_example/Clearing_by_clicking)
+- [クリックしてクリア](/ja/docs/Web/API/WebGL_API/By_example/Clearing_by_clicking)
   - : ユーザー操作とグラフィック操作を組み合わせる方法です。ユーザーがクリックした時にレンダリングコンテキストをランダムなカラーでクリアします
-- [単純なカラーアニメーション](/ja/docs/Learn/WebGL/By_example/Simple_color_animation)
+- [単純なカラーアニメーション](/ja/docs/Web/API/WebGL_API/By_example/Simple_color_animation)
   - : 基本的なカラーアニメーションで、毎秒ごとに異なったランダムなカラーで{{Glossary("WebGL")}}描画バッファをクリアする事によって行われます
-- [カラーマスキング](/ja/docs/Learn/WebGL/By_example/Color_masking)
+- [カラーマスキング](/ja/docs/Web/API/WebGL_API/By_example/Color_masking)
   - : カラーマスキングを適用して、表示色の範囲を特定の色合いに制限する事によってランダムな色を修正します
-- [基本的な切り取り](/ja/docs/Learn/WebGL/By_example/Basic_scissoring)
+- [基本的な切り取り](/ja/docs/Web/API/WebGL_API/By_example/Basic_scissoring)
   - : 切り取り操作で単純な長方形や正方形を描きます
-- [キャンバスサイズと WebGL](/ja/docs/Learn/WebGL/By_example/Canvas_size_and_WebGL)
+- [キャンバスサイズと WebGL](/ja/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL)
   - : この例ではブラウザーウィンドウに描画されるように、キャンバスサイズを{{Glossary("CSS")}}ピクセル単位の要素サイズに設定する（または設定しない）影響について理解を深めていきます
-- [定型文 1](/ja/docs/Learn/WebGL/By_example/Boilerplate_1)
+- [定型文 1](/ja/docs/Web/API/WebGL_API/By_example/Boilerplate_1)
   - : WebGL の初期化をより簡単に行う JavaScript ユーティリティ関数の定義について説明します。このコードは繰り返しになるためこれから表示しなくなります
-- [切り取りアニメーション](/ja/docs/Learn/WebGL/By_example/Scissor_animation)
+- [切り取りアニメーション](/ja/docs/Web/API/WebGL_API/By_example/Scissor_animation)
   - : 切り取りやクリア操作の楽しいアニメーション
-- [雨のように長方形を降らせる](/ja/docs/Learn/WebGL/By_example/Raining_rectangles)
+- [雨のように長方形を降らせる](/ja/docs/Web/API/WebGL_API/By_example/Raining_rectangles)
   - : 単色のクリア、切り取り、アニメーション、ユーザーインタラクションをデモする単純なゲーム
 
 ### シェーダープログラミングの基本
 
-- [Hello GLSL](/ja/docs/Learn/WebGL/By_example/Hello_GLSL)
+- [Hello GLSL](/ja/docs/Web/API/WebGL_API/By_example/Hello_GLSL)
   - : 単色の正方形を描画する基本的なシェーダープログラミング
-- [Hello vertex attributes](/ja/docs/Learn/WebGL/By_example/Hello_vertex_attributes)
+- [Hello vertex attributes](/ja/docs/Web/API/WebGL_API/By_example/Hello_vertex_attributes)
   - : 頂点属性によるシェーダプログラミングとユーザーインタラクションの結合
-- [Textures from code](/ja/docs/Learn/WebGL/By_example/Textures_from_code)
+- [Textures from code](/ja/docs/Web/API/WebGL_API/By_example/Textures_from_code)
   - : フラグメントシェーダを使用した手続き型テクスチャリングの簡単なデモ
 
 ### その他、高度な実例
 
-- [Video textures](/ja/docs/Learn/WebGL/By_example/Video_textures)
+- [Video textures](/ja/docs/Web/API/WebGL_API/By_example/Video_textures)
   - : この例ではビデオファイルをテクスチャとして使用します
 
 {{Next("Learn/WebGL/By_example/Detect_WebGL")}}

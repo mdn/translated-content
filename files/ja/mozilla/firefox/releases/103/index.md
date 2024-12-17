@@ -48,11 +48,11 @@ slug: Mozilla/Firefox/Releases/103
 
 ### API
 
-- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [移譲可能なオブジェクト](/ja/docs/Glossary/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/structuredClone) を使用するときに、所有権を渡せることを意味します。
+- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [移譲可能なオブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/Window/structuredClone) を使用するときに、所有権を渡せることを意味します。
   転送後は、元のオブジェクトを使用できなくなります。
   詳しくは [Firefox バグ 1659025](https://bugzil.la/1659025) をご覧ください。
 
-- [`caches`](/ja/docs/Web/API/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) が必要になりました。安全でないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
+- [`caches`](/ja/docs/Web/API/Window/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) が必要になりました。安全でないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
   以前の `cache` は、安全なコンテキストの外で使用すると例外が発生する `CacheStorage` を返していました。
   詳しくは [Firefox バグ 1112134](https://bugzil.la/1112134) をご覧ください。
 

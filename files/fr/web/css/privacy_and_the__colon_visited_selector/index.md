@@ -28,7 +28,7 @@ On peut toujours mettre en forme les liens visités mais quelques limites s'appl
 - {{cssxref("outline-color")}},
 - Les composantes de couleur liées aux attributs SVG {{SVGAttr("fill")}} et {{SVGAttr("stroke")}}.
 
-De plus, même pour ces propriétés, il n'est pas possible de modifier la transparence entre les liens qui ont été visités et les autres (comme on pourrait le faire par ailleurs avec [`rgba()`](<https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#rgb()_et_rgba()>) ou [`hsla()`](</fr/docs/Web/CSS/Type_color#hsl()_et_hsla()>) ou avec le mot-clé [`transparent`](/fr/docs/Web/CSS/Type_color#Le_mot-clé_transparent)).
+De plus, même pour ces propriétés, il n'est pas possible de modifier la transparence entre les liens qui ont été visités et les autres (comme on pourrait le faire par ailleurs avec [`rgba()`](<https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#rgb()_et_rgba()>) ou [`hsla()`](</fr/docs/Web/CSS/Type_color#hsl()_et_hsla()>) ou avec le mot-clé [`transparent`](/fr/docs/Web/CSS/color_value#le_mot-clé_transparent)).
 
 Voici un exemple de mise en forme prenant en compte ces restrictions :
 
@@ -59,4 +59,4 @@ De façon générale, cela ne devrait pas impacter les développeurs de façon s
 
 - [Les modifications apportées à `:visited` pour la vie privée (en anglais)](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) sur Mozilla Hacks
 - [Colmater la fuite de l'historique via CSS (en anglais)](https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) sur le blog de sécurité Mozilla
-- [Empêcher les attaques vers l'historique de l'utilisateur perpétrées via `:visited` (en anglais)](http://dbaron.org/mozilla/visited-privacy)
+- [Empêcher les attaques vers l'historique de l'utilisateur perpétrées via `:visited` (en anglais)](https://dbaron.org/mozilla/visited-privacy)

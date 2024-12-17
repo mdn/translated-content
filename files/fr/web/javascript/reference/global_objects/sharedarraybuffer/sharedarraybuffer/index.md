@@ -55,4 +55,4 @@ const sab = new SharedArrayBuffer(1024);
 
 - [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)

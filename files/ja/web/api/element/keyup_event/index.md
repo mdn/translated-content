@@ -1,9 +1,9 @@
 ---
 title: "Element: keyup イベント"
-short-title: keyup
 slug: Web/API/Element/keyup_event
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+short-title: keyup
 ---
 
 {{APIRef}}
@@ -125,6 +125,6 @@ input.onkeyup = logKey;
 
 ## 関連情報
 
-- [`input`](/ja/docs/Web/API/HTMLElement/input_event)
+- [`input`](/ja/docs/Web/API/Element/input_event)
 - [`keydown`](/ja/docs/Web/API/Element/keydown_event)
 - [`keypress`](/ja/docs/Web/API/Element/keypress_event)

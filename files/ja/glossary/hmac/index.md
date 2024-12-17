@@ -17,4 +17,4 @@ HMAC は、完全性と認証の両方を保証するために使用されます
 
 ### 技術文書
 
-- IETF の [RFC 2104](http://www.ietf.org/rfc/rfc2104.txt) （英語）
+- IETF の [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt) （英語）

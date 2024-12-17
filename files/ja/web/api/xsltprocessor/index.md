@@ -49,9 +49,9 @@ _このインターフェイスにはプロパティがありません。_
 
 ## 例
 
-1. [基本的な例](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example)
-2. [高度な例](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example)
-3. [追加の例](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings)
+1. [基本的な例](/ja/docs/Web/API/XSLTProcessor)
+2. [高度な例](/ja/docs/Web/API/XSLTProcessor)
+3. [追加の例](/ja/docs/Web/API/XSLTProcessor)
 
 ## 仕様書
 
@@ -63,4 +63,4 @@ _このインターフェイスにはプロパティがありません。_
 
 ## 関連情報
 
-- [Mozilla JavaScript インターフェイスを使用した XSL 変換](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Mozilla JavaScript インターフェイスを使用した XSL 変換](/ja/docs/Web/API/XSLTProcessor)

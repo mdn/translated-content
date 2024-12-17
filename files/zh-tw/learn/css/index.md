@@ -11,7 +11,7 @@ slug: Learn/CSS
 
 我們整理了一門課程，包含了你實現目標需要的所有基礎知識。
 
-[開始](/zh-TW/docs/Learn/Front-end_web_developer)
+[開始](/zh-TW/curriculum/)
 
 ## 先備知識
 

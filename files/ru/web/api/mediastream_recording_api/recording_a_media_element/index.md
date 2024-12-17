@@ -287,4 +287,4 @@ You can {{LiveSampleLink("Example", "take a look at all the code")}}, including 
 
 - [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)
 - [Using the MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)

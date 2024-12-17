@@ -19,9 +19,9 @@ Un conocimiento básico de conceptos de programación (o de un lenguaje de progr
 
 Necesitarás entender "cómo tabaja la web". Te recomendamos que leas primero los siguientes temas:
 
-- [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/What_is_a_web_server)
-- [¿Qué software necesito para construir un sitio web?](/es/docs/Learn/Common_questions/What_software_do_I_need)
-- [¿Cómo subo ficheros a un servidor web?](/es/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [¿Qué software necesito para construir un sitio web?](/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [¿Cómo subo ficheros a un servidor web?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 Con ese conocimiento básico estarás preparado para recorrer el camino a través de los módulos de esta sección.
 
@@ -29,7 +29,7 @@ Con ese conocimiento básico estarás preparado para recorrer el camino a travé
 
 Este tema contiene los siguientes módulos. Deberías comenzar por el primer módulo y a continuación ir a uno de los módulos siguientes, que muestran cómo trabajar con dos lenguajes muy populares de lado servidor usando los web frameworks adecuados.
 
-- [Primeros pasos en la programación lado servidor de sitios web](/es/docs/Learn/Server-side/Primeros_pasos)
+- [Primeros pasos en la programación lado servidor de sitios web](/es/docs/Learn/Server-side/First_steps)
   - : Este módulo proporciona información acerca de la programación lado servidor de sitios web sin adentrarse en la tecnología de los servidores, incluyendo respuestas a las preguntas a cuestiones fundamentales acerca de la programación de lado servidor — "¿qué es?", "¿en qué se diferencia de la programación de lado cliente?" y "¿porqué es tan útil?" — y una visión general de algunos de los web frameworks de lado servidor más populares e indicaciones de cómo seleccionar el más adecuado para tu sitio. Finalmente proporcionaremos una sección de introducción a la seguridad en servidores web.
 - [Django Web Framework (Python)](/es/docs/Learn/Server-side/Django)
   - : Django es un web framework extremadamete popular y con funcionalidad completa, escrito en Python. El módulo explica porqué Django es tan buen framework de servidor web, cómo configurar un entorno de desarrollo y cómo realizar tareas comunes con él.

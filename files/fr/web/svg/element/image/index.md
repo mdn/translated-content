@@ -37,11 +37,11 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing) »
-- [Attributs noyau](/fr/SVG/Attribute#Core) »
-- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent) »
-- [Attributs Xlink](/fr/SVG/Attribute#XLink) »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs noyau](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs d'événement graphique](/fr/docs/Web/SVG/Attribute#graphicalevent) »
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#xlink) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -58,7 +58,7 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement).
+Cet élément implémente l'interface [`SVGImageElement`](/fr/docs/DOM/SVGImageElement).
 
 ## Compatibilité des navigateurs
 

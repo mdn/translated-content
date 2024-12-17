@@ -54,11 +54,11 @@ On peut procéder de cette façon avec HTML. En revanche, HTML ne gère pas l'as
 ```
 
 > [!NOTE]
-> On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
+> On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/docs/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
 
 ### Cas spécifique : les abréviations
 
-En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/Apprendre/HTML/Howto/Mark_abbreviations_and_make_them_understandable) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
+En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/docs/Apprendre/HTML/Howto/Mark_abbreviations_and_make_them_understandable) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
 
 ```html
 <p>
@@ -69,7 +69,7 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
 ```
 
 > [!NOTE]
-> La spécification HTML [met en avant l'attribut `title`](http://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications](http://www.w3.org/TR/html/dom.html#attr-title).
+> La spécification HTML [met en avant l'attribut `title`](https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications](https://www.w3.org/TR/html/dom.html#attr-title).
 
 ### Améliorer l'accessibilité
 
@@ -93,7 +93,7 @@ Les technologies d'assistance à la navigation pourront tirer parti de cet attri
 Les listes de descriptions sont des listes de termes associés à leur description (par exemple une liste de définition, des entrées d'un dictionnaire, une FAQ, des paires de clés-valeurs, etc.).
 
 > [!NOTE]
-> Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web](http://www.w3.org/TR/html5/common-idioms.html#conversations).
+> Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web](https://www.w3.org/TR/html5/common-idioms.html#conversations).
 
 Les termes à décrire sont placés dans des éléments {{htmlelement("dt")}} et la description, qui suit immédiatement, est placée dans un ou plusieurs éléments {{htmlelement("dd")}}. Enfin, l'ensemble de la liste est placé au sein d'un élément {{htmlelement("dl")}}.
 

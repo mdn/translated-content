@@ -19,9 +19,9 @@ The **동적 웹사이트 서버-사이드 프로그래밍** 에 대한 주제�
 
 "웹을 작동하는 방법"을 이해할 필요가 있다. 다음 주제들을 먼저 읽는 것을 추천한다.
 
-- [What is a web server(웹서버는 무엇인가)](/ko/docs/Learn/Common_questions/What_is_a_web_server)
-- [What software do I need to build a website?(웹사이트를 만들기 위해 필요한 소프트웨어는 무엇인가)](/ko/docs/Learn/Common_questions/What_software_do_I_need)
-- [How do you upload files to a web server?(웹 서버에 파일을 업로드하는 방법은 무엇인가)](/ko/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [What is a web server(웹서버는 무엇인가)](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [What software do I need to build a website?(웹사이트를 만들기 위해 필요한 소프트웨어는 무엇인가)](/ko/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [How do you upload files to a web server?(웹 서버에 파일을 업로드하는 방법은 무엇인가)](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 이런 기본적인 이해를 통해, 이 섹션의 과목들을 공부할 준비가 될 것이다.
 

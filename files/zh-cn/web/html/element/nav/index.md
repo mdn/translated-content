@@ -40,7 +40,7 @@ slug: Web/HTML/Element/nav
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/HTML/Global_attributes).
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 ## _使用说明_
 

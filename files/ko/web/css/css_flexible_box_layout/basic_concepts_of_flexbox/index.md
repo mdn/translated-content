@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 일명 flexbox라 불리는 Flexible Box module은 flexbox 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 로 설계되었습니다. 이 글에서는 flexbox의 주요 기능에 대한 개요를 다룹니다. 더 자세한 내용은 가이드의 다른 글에서 탐구하게 될 것입니다.
 
-flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)의 2차원 모델과는 대조됩니다.
+flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)의 2차원 모델과는 대조됩니다.
 
 ## flexbox의 두 개의 축
 
@@ -113,7 +113,7 @@ flexbox는 1차원 모델이지만 **flex 항목**이 여러 행에 나열되도
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-이 글에서는 위의 속성들에 대해 간략하게 살펴보겠습니다. 자세한 내용은 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)에서 다룹니다.
+이 글에서는 위의 속성들에 대해 간략하게 살펴보겠습니다. 자세한 내용은 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 다룹니다.
 
 500 픽셀의 크기를 갖는 **flex 컨테이너** 내에 100 픽셀 크기의 자식 세 개가 존재할 때, **사용가능한 공간** 200 픽셀이 남게 됩니다. 기본적으로 flexbox는 이 공간을 마지막 자식 요소 다음에 빈공간으로 남겨둡니다.
 
@@ -137,7 +137,7 @@ flexbox는 1차원 모델이지만 **flex 항목**이 여러 행에 나열되도
 
 `flex-grow` 속성이 주축에서 남는 공간을 항목들에게 분배하는 방법을 결정한다면 `flex-shrink` 속성은 주축의 공간이 부족할때 각 항목의 사이즈를 줄이는 방법을 정의합니다. 만약 **flex 컨테이너**가 **flex 항목**을 모두 포함할 만큼 넉넉한 공간을 갖고 있지 않고 `flex-shrink` 값이 양수이면 **flex 항목**은 flex-basis에 지정된 크기보다 작아집니다. 또한, `flex-grow` 속성과 마찬가지로 더 큰 `flex-shrink` 값을 갖는 항목의 사이즈가 더 빨리 줄어듭니다.
 
-항목의 최소 크기는 실제 축소량을 계산할 때 고려되기 때문에 flex-shrink 속성이 flex-grow 속성에 비해 덜 일관된 모습을 보여줄지도 모릅니다. `flex-shrink` 속성이 항목의 사이즈를 결정하는 알고리즘에 관해서는 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)에서 자세히 살펴히보겠습니다.
+항목의 최소 크기는 실제 축소량을 계산할 때 고려되기 때문에 flex-shrink 속성이 flex-grow 속성에 비해 덜 일관된 모습을 보여줄지도 모릅니다. `flex-shrink` 속성이 항목의 사이즈를 결정하는 알고리즘에 관해서는 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 자세히 살펴히보겠습니다.
 
 > **참고:** `flex-grow` 와 `flex-shrink`의 값이 비율임을 유의하세요. **flex 항목**의 flex 속성을 모두 `1 1 200px` 로 지정하고 한 항목만 크기가 늘어나는 비율을 타 항목의 두배로 하고 싶으면 해당 **flex 항목**의 flex 속성을 `2 1 200px`로 지정하면 되지만, flex 속성 값을 모두 `10 1 200px`로 지정하고 늘어나는 비율을 두 배로 하고 싶은 항목의 flex 속성 값만 `20 1 200px`로 지정해도 동일하게 동작합니다.
 

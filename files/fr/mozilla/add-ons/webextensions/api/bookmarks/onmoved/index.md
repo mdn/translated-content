@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `moveInfo`
-      - : [`object`](#moveInfo). Object containing more details about the move.
+      - : [`object`](#moveinfo). Object containing more details about the move.
 
 ## Objets supplémentaires
 

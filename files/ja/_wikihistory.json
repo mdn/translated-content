@@ -590,10 +590,6 @@
     "modified": "2020-05-01T02:52:31.457Z",
     "contributors": ["TheSakuMa", "mfuji09", "sii", "lpcwww"]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2020-01-07T12:39:20.859Z",
-    "contributors": ["Uemmra3", "mfuji09", "dskmori", "kadokura"]
-  },
   "Glossary/DTMF": {
     "modified": "2019-03-18T21:26:29.740Z",
     "contributors": ["Wind1808"]
@@ -21490,10 +21486,6 @@
     "modified": "2019-03-23T22:24:48.101Z",
     "contributors": ["mfuji09", "kachick", "SphinxKnight", "yyss"]
   },
-  "Web/HTTP/Configuring_servers_for_Ogg_media": {
-    "modified": "2019-03-18T21:25:34.436Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/HTTP/Connection_management_in_HTTP_1.x": {
     "modified": "2020-09-27T09:47:29.485Z",
     "contributors": [
@@ -28807,6 +28799,10 @@
     "modified": "2020-09-03T13:27:24.598Z",
     "contributors": ["mfuji09"]
   },
+  "Web/Media/Formats/Configuring_servers_for_Ogg_media": {
+    "modified": "2019-03-18T21:25:34.436Z",
+    "contributors": ["silverskyvicto"]
+  },
   "Web/Media/Formats/Image_types": {
     "modified": "2020-11-09T23:53:41.374Z",
     "contributors": ["taiyaki32lp64", "mfuji09", "silverskyvicto"]
@@ -30042,6 +30038,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Glossary/Denial_of_Service": {
+    "modified": "2020-01-07T12:39:20.859Z",
+    "contributors": ["Uemmra3", "mfuji09", "dskmori", "kadokura"]
   },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
     "modified": "2020-08-12T11:49:11.332Z",

@@ -198,7 +198,7 @@ Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemen
 
 1. Comienza el bucle en el elemento de la posición 0 en el arreglo.
 2. Detén el bucle en el número de item igual a la longitud del arreglo. Esto funcionará para un arreglo de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
-3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/console/log).
+3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/console/log_static).
 
 ## Algunos métodos de arreglo útiles
 

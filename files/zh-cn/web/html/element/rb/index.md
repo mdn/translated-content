@@ -38,7 +38,7 @@ slug: Web/HTML/Element/rb
 
 ## 属性
 
-这个元素仅仅支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 使用说明
 

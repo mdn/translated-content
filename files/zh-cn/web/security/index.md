@@ -7,7 +7,7 @@ slug: Web/Security
 
 ## 内容安全
 
-- [CSP (内容安全策略)](/zh-CN/docs/Web/Security/CSP)
+- [CSP (内容安全策略)](/zh-CN/docs/Web/HTTP/CSP)
   - : **内容安全策略**（{{Glossary("CSP")}}）通过探测和减轻包括跨站脚本攻击 {{Glossary("XSS")}} 和数据注入攻击的攻击手段，更进一步提升安全性。上述攻击手段可以使用在数据窃取、网站污损、亦或是恶意软件的分发等场景中。
 
 ## 连接安全
@@ -22,7 +22,7 @@ slug: Web/Security
   - : **证书透明度**是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
 - [混合内容](/zh-CN/docs/Web/Security/Mixed_content)
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
-- [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content#developer_console)
   - : 如果你的网站传送了 HTTPS 页面，所有使用 HTTP 传送的[活跃混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_active_content)默认会被阻止。因而，你的网站可能会对客户不可用（例如 iframe 或插件不加载）。[被动的混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)默认是显示状态，但用户也可以通过首选设置来阻止这种类型的内容。这个页面解释了作为 web 开发人员需要注意的事情。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
   - : 一个**安全的上下文**是一个 `Window` 或 `Worker`，对于它来说，有理由相信内容已经安全地通过 HTTPS/TLS 交付，并且与**不**安全的上下文进行通信的可能性有限。许多 Web API 和功能只能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的 API，从而进一步损害攻击受害者。

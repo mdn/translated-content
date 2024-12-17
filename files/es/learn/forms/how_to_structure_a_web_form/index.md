@@ -161,7 +161,7 @@ Consideremos este ejemplo:
 
 {{EmbedLiveSample("Etiquetas_múltiples", 120, 120)}}
 
-El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse _antes_ de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo `title`. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), que los lectores de pantalla siempre leen.
+El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse _antes_ de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo `title`. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label), que los lectores de pantalla siempre leen.
 
 Las variantes anteriores aumentan en efectividad a medida que se avanza por ellas:
 
@@ -187,7 +187,7 @@ Depende de ti, sobre todo, encontrar un estilo de codificación cómodo que dé 
 
 ### Aprendizaje activo: construir una estructura de formulario
 
-Pongamos en práctica estas ideas y creemos un formulario un poco más complicado: un formulario de pago. Este formulario contendrá una serie de tipos de control que quizás aún no comprendas. No te preocupes por esto por ahora; en el artículo siguiente descubrirás cómo funcionan ([Los controles básicos de formulario originales](/es/docs/Learn/HTML/Forms/The_native_form_widgets)). Por ahora, lee con detenimiento las descripciones y sigue las instrucciones, y empieza a formarte una idea de qué elementos de delimitación se utilizan para estructurar el formulario y por qué.
+Pongamos en práctica estas ideas y creemos un formulario un poco más complicado: un formulario de pago. Este formulario contendrá una serie de tipos de control que quizás aún no comprendas. No te preocupes por esto por ahora; en el artículo siguiente descubrirás cómo funcionan ([Los controles básicos de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls)). Por ahora, lee con detenimiento las descripciones y sigue las instrucciones, y empieza a formarte una idea de qué elementos de delimitación se utilizan para estructurar el formulario y por qué.
 
 1. Para comenzar, haz una copia local de nuestro [archivo de plantilla en blanco](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) y el [CSS de nuestro formulario de pago](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) en un nuevo directorio de tu ordenador.
 2. Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
@@ -319,14 +319,14 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 
 ## Ver también
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 ### Temas avanzados
 
-- [Enviar formularios con JavaScript](/es/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [Cómo crear controles de formulario personalizados](/es/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Formularios HTML en navegadores antiguos](/es/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets) según su código propietario
+- [Enviar formularios con JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
+- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls) según su código propietario

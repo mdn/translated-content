@@ -69,7 +69,7 @@ para.textContent =
 
 ## 의사요소 사용하기
 
-getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::marker`, `::line-marker`, [spec](http://dev.w3.org/csswg/css3-content/#pseudo-elements)참고)에서 스타일 정보를 가져올 수 있습니다.
+getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::marker`, `::line-marker`, [spec](https://dev.w3.org/csswg/css3-content/#pseudo-elements)참고)에서 스타일 정보를 가져올 수 있습니다.
 
 ```html
 <style>

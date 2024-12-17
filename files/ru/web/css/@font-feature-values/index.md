@@ -30,7 +30,7 @@ slug: Web/CSS/@font-feature-values
 }
 ```
 
-Правило `@font-feature-values` может использоваться как на вернём уровне вашего CSS так и внутри любого [условного CSS-правила](/ru/docs/Web/CSS/At-rule#Conditional_Group_Rules).
+Правило `@font-feature-values` может использоваться как на вернём уровне вашего CSS так и внутри любого [условного CSS-правила](/ru/docs/Web/CSS/At-rule#conditional_group_rules).
 
 ## Синтаксис
 

@@ -12,7 +12,7 @@ La frecuencia del evento depende de la carga del sistema, pero se encuentra en u
 ## Información General
 
 - Specification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-timeupdate)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-timeupdate)
 - Interface
   - : Event
 - Bubbles
@@ -35,21 +35,21 @@ La frecuencia del evento depende de la carga del sistema, pero se encuentra en u
 
 ## Eventos Relacionados
 
-- [`playing`](/es/docs/Web/Reference/Events/playing)
-- [`waiting`](/es/docs/Web/Reference/Events/waiting)
-- [`seeking`](/es/docs/Web/Reference/Events/seeking)
-- [`seeked`](/es/docs/Web/Reference/Events/seeked)
-- [`ended`](/es/docs/Web/Reference/Events/ended)
-- [`loadedmetadata`](/es/docs/Web/Reference/Events/loadedmetadata)
-- [`loadeddata`](/es/docs/Web/Reference/Events/loadeddata)
-- [`canplay`](/es/docs/Web/Reference/Events/canplay)
-- [`canplaythrough`](/es/docs/Web/Reference/Events/canplaythrough)
-- [`durationchange`](/es/docs/Web/Reference/Events/durationchange)
-- [`timeupdate`](/es/docs/Web/Reference/Events/timeupdate)
-- [`play`](/es/docs/Web/Reference/Events/play)
-- [`pause`](/es/docs/Web/Reference/Events/pause)
-- [`ratechange`](/es/docs/Web/Reference/Events/ratechange)
-- [`volumechange`](/es/docs/Web/Reference/Events/volumechange)
-- [`suspend`](/es/docs/Web/Reference/Events/suspend)
-- [`emptied`](/es/docs/Web/Reference/Events/emptied)
-- [`stalled`](/es/docs/Web/Reference/Events/stalled)
+- [`playing`](/es/docs/Web/API/HTMLMediaElement/playing_event)
+- [`waiting`](/es/docs/Web/API/HTMLMediaElement/waiting_event)
+- [`seeking`](/es/docs/Web/API/HTMLMediaElement/seeking_event)
+- [`seeked`](/es/docs/Web/API/HTMLMediaElement/seeked_event)
+- [`ended`](/es/docs/Web/API/HTMLMediaElement/ended_event)
+- [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
+- [`loadeddata`](/es/docs/Web/API/HTMLMediaElement/loadeddata_event)
+- [`canplay`](/es/docs/Web/API/HTMLMediaElement/canplay_event)
+- [`canplaythrough`](/es/docs/Web/API/HTMLMediaElement/canplaythrough_event)
+- [`durationchange`](/es/docs/Web/API/HTMLMediaElement/durationchange_event)
+- [`timeupdate`](/es/docs/Web/API/HTMLMediaElement/timeupdate_event)
+- [`play`](/es/docs/Web/API/HTMLMediaElement/play_event)
+- [`pause`](/es/docs/Web/API/HTMLMediaElement/pause_event)
+- [`ratechange`](/es/docs/Web/API/HTMLMediaElement/ratechange_event)
+- [`volumechange`](/es/docs/Web/API/HTMLMediaElement/volumechange_event)
+- [`suspend`](/es/docs/Web/API/HTMLMediaElement/suspend_event)
+- [`emptied`](/es/docs/Web/API/HTMLMediaElement/emptied_event)
+- [`stalled`](/es/docs/Web/API/HTMLMediaElement/stalled_event)

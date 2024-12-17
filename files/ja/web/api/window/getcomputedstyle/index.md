@@ -118,7 +118,7 @@ para.textContent =
 - CSS のプロパティ値は、 `getPropertyValue(propName)` API を使用してアクセスすることも、 `obj['z-index']` や `obj.zIndex`のようにオブジェクトに直接添字を指定してアクセスすることもできます。
 - `getComputedStyle` によって返される値は、{{CSSxRef("resolved_value", "解決値", "", 1)}}です。これらの値は通常、CSS 2.1 の{{CSSxRef("computed_value","計算値", "", 1)}}と同じですが、 `width`, `height`, `padding` のような古いプロパティの場合は、{{CSSxRef("used_value","使用値", "", 1)}}と同じになります。もともと CSS 2.0 では、*計算値*はカスケードと継承後のプロパティの「使用可能な」最終値として定義されていましたが、 CSS 2.1 ではレイアウトする前の値として再定義され、*使用値*はレイアウト後の値として再定義されています。 CSS 2.0 のプロパティでは、 `getComputedStyle` は計算値の古い意味を返しますが、現在は**使用値**と呼ばれています。レイアウト前の値とレイアウト後の値の違いの例として、 `width` や `height` のパーセント値の解像度があり、これらは*使用値*のみ同等のピクセル数に置き換えられます。
 - 返される値が意図的に不正確になる場合があります。 "CSS History Leak" のセキュリティ問題を回避するために、ブラウザーは訪問したリンクの計算されたスタイルについて嘘をつき、ユーザーがリンク先の URL を訪問していないかのような値を返すことがあります。これがどのように実装されているかについては、 [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) と [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) を参照してください。
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)が動作している間、 `getComputedStyle` は、 Firefox では元のプロパティ値を返しますが、 WebKit では最終的なプロパティ値を返します。
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が動作している間、 `getComputedStyle` は、 Firefox では元のプロパティ値を返しますが、 WebKit では最終的なプロパティ値を返します。
 - Firefox では、 `auto` の値を持つプロパティは `auto` の値ではなく、使用値を返します。そのため、 `top:auto` と `bottom:0` を `height:30px` の要素に適用し、包含ブロックを `height:100px` を適用すると、 Firefox の `top` のスタイルの計算値は、 100 − 30 = 70 なので `70px` となります。
 
 ## 仕様書

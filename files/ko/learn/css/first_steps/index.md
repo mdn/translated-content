@@ -30,7 +30,7 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
   - : CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 알고 있습니다. 이제 언어 자체의 구조를 조금 더 깊이 살펴볼 차례입니다. 우리는 이미 여기에서 논의된 많은 개념들을 만났습니다. 나중에 헷갈리는 개념을 발견하면 다시 이 개념으로 돌아와서 요약 할 수 있습니다.
 - [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
   - : CSS 의 기본 사항, 목적 및 간단한 스타일 시트 작성 방법을 배웠습니다. 이 강의에서는 브라우저가 CSS 와 HTML 을 가져와서 웹 페이지로 만드는 방법을 살펴 봅니다.
-- [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+- [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : 지난 몇 단원에서 배운 내용을 통해 CSS 를 사용하여 간단한 텍스트 문서의 서식을 지정하고 자신만의 스타일을 추가 할 수 있다는 것을 알게 될 것입니다. 이 기사는 그렇게 할 수 있는 기회를 제공합니다.
 
 ## 참고 항목

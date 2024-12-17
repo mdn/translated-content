@@ -8,7 +8,7 @@ slug: Web/API/Fullscreen_API
 La **`API Fullscreen`** provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.
 
 > [!NOTE]
-> De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#Prefijado).
+> De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#prefijado).
 
 ## Activando modo de pantalla completa
 
@@ -47,7 +47,7 @@ Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitar
 
 ### Notificación
 
-Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Nótese que el evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange) no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
+Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event). Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event). Nótese que el evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event) no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
 
 ### Cuando la solicitud de pantalla completa falla
 
@@ -79,7 +79,7 @@ Adicionalmente, navegando a otra página, cambiando de pestaña, o cambiando a o
 
 En este ejemplo, se presenta un video en una página web. Presionando la tecla <kbd>Return</kbd> o <kbd>Enter</kbd> el usuario podrá moverse entre modo de ventana o de pantalla completa para la presentación del video.
 
-[Ver ejemplo en vivo](/samples/domref/fullscreen.html)
+[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Observando la tecla <kbd>Enter</kbd>
 

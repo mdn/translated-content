@@ -33,7 +33,7 @@ slug: Learn/CSS/Styling_text/Fundamentals
 正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 {{htmlelement("br")}} 元素。
 
 > [!NOTE]
-> 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 [Box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model) 文件，复习盒模型的理论。
+> 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 [Box model](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) 文件，复习盒模型的理论。
 
 用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。
 
@@ -61,13 +61,13 @@ slug: Learn/CSS/Styling_text/Fundamentals
 </p>
 ```
 
-你可以在这找到完成版本 [finished example on Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html).)
+你可以在这找到完成版本 [finished example on Github](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html).)
 
 ### 颜色
 
 {{cssxref("color")}} 属性设置选中元素的前景内容的颜色 (通常指文本，不过也包含一些其他东西，或者是使用 {{cssxref("text-decoration")}} 属性放置在文本下方或上方的线 (underline overline)。
 
-`color` 也可以接受任何合法的 [CSS 颜色单位](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors), 比如：
+`color` 也可以接受任何合法的 [CSS 颜色单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#colors), 比如：
 
 ```css
 p {
@@ -312,7 +312,7 @@ p {
 
 ### 字体大小
 
-在我们之前的模块中的[CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 文章，我们回顾了[length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size). 字体大小 (通过 {{cssxref("font-size")}} 属性设置) 可以取大多数这些单位的值 (以及其他，比如百分比 [percentages](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages))，然而你在调整字体大小时，最常用的单位是：
+在我们之前的模块中的[CSS values and units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units) 文章，我们回顾了[length and size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size). 字体大小 (通过 {{cssxref("font-size")}} 属性设置) 可以取大多数这些单位的值 (以及其他，比如百分比 [percentages](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#percentages))，然而你在调整字体大小时，最常用的单位是：
 
 - `px` (像素): 将像素的值赋予给你的文本。这是一个绝对单位，它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。
 - `em`: 1em 等于我们设计的当前元素的父元素上设置的字体大小 (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) 如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手，但它是可行的，如下图所示。为什么要使用这个麻烦的单位呢？当你习惯这样做时，那么就会变得很自然，你可以使用`em`调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。
@@ -452,10 +452,10 @@ text-shadow: 4px 4px 5px red;
 
 4 个属性如下：
 
-1. 阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), 但是 px 是比较合适的。这个值必须指定。
+1. 阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 [length and size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), 但是 px 是比较合适的。这个值必须指定。
 2. 阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
-3. 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
-4. 阴影的基础颜色，可以使用大多数的 CSS 颜色单位 [CSS color unit](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). 如果没有指定，默认为 `black`.
+3. 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 [length and size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
+4. 阴影的基础颜色，可以使用大多数的 CSS 颜色单位 [CSS color unit](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#colors). 如果没有指定，默认为 `black`.
 
 > [!NOTE]
 > 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 `-1px -1px`.
@@ -517,7 +517,7 @@ p {
 {{ EmbedLiveSample('多种阴影', '100%', 260) }}
 
 > [!NOTE]
-> 你可以看到更多有趣的关于 `text-shadow` 使用的示例在 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> 你可以看到更多有趣的关于 `text-shadow` 使用的示例在 [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## 文本布局
 
@@ -579,7 +579,7 @@ p {
 
 ### 行高
 
-{{cssxref("line-height")}} 属性设置文本每行之间的高，可以接受大多数单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 {{cssxref("font-size")}} 来获得 `line-height`。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个：
+{{cssxref("line-height")}} 属性设置文本每行之间的高，可以接受大多数单位 [length and size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 {{cssxref("font-size")}} 来获得 `line-height`。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个：
 
 ```css
 line-height: 1.5;
@@ -633,7 +633,7 @@ p {
 
 ### 字母和单词间距
 
-{{cssxref("letter-spacing")}} 和 {{cssxref("word-spacing")}} 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+{{cssxref("letter-spacing")}} 和 {{cssxref("word-spacing")}} 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位 [length and size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
 
 所以作为例子，如果我们把这个样式应用到我们的示例中的 {{htmlelement("p")}} 段落的第一行：
 

@@ -181,7 +181,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 ```
 
 > [!NOTE]
-> この例は GitHub の [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）にあります。関数のインスタンス化についての詳細は [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) も参照してください。
+> この例は GitHub の [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）にあります。関数のインスタンス化についての詳細は [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) も参照してください。
 
 ## 基礎を探る
 
@@ -235,7 +235,7 @@ WebAssembly は 2 階層の名前空間のインポート文を持っていま�
 
 インポートされた関数は通常の関数と同じようなものです。WebAssembly のバリデーションによって静的にチェックするシグネチャを持ち、インデックスか名前を付けて呼び出すことができます。
 
-JavaScript 関数にはシグネチャの概念がないため、インポート宣言のシグネチャに関係なく、どの JavaScript 関数も渡すことができます。モジュールがインポート宣言をすると、 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate) を呼び出す側は、対応したプロパティを持ったインポートオブジェクトを渡す必要があります。
+JavaScript 関数にはシグネチャの概念がないため、インポート宣言のシグネチャに関係なく、どの JavaScript 関数も渡すことができます。モジュールがインポート宣言をすると、 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) を呼び出す側は、対応したプロパティを持ったインポートオブジェクトを渡す必要があります。
 
 上の場合、 `importObject.console.log` が JavaScript 関数であるようなオブジェクト(`importObject` と呼びましょう) が必要になります。
 
@@ -490,7 +490,7 @@ JavaScript は関数参照にフルアクセスできるため、 Table オブ�
 
 テーブルは変更可能であるため、高度な読み込み時および実行時の[動的リンクスキーム](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md)の実装に使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリーとテーブルを共有することができます。これは複数のコンパイル済み `.dll` が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。
 
-この動作を確認するために、Memory オブジェクトと Table オブジェクトを含む単一のインポートオブジェクトを作成し、同じインポートオブジェクトを複数の [`instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate) の呼び出しで渡してみましょう。
+この動作を確認するために、Memory オブジェクトと Table オブジェクトを含む単一のインポートオブジェクトを作成し、同じインポートオブジェクトを複数の [`instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) の呼び出しで渡してみましょう。
 
 `.wat` ファイルの例は次のようになります。
 

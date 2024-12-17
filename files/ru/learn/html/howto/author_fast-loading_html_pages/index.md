@@ -67,7 +67,7 @@ CDN - это географически распределённая сеть с
 
 ### Уменьшайте количество встроенных скриптов
 
-Встроенные сценарии могут быть дорогими для загрузки страницы, так как синтаксический анализатор должен предполагать, что встроенный сценарий может изменить структуру страницы во время анализа. Сокращение использования встроенных сценариев в целом и сокращение использования `document.write()` для вывода контента, в частности, может улучшить общую загрузку страницы. Используйте современные методы [AJAX](/ru/docs/AJAX) для управления содержимым страницы, а не устаревшие подходы, которые основаны на `document.write()`.
+Встроенные сценарии могут быть дорогими для загрузки страницы, так как синтаксический анализатор должен предполагать, что встроенный сценарий может изменить структуру страницы во время анализа. Сокращение использования встроенных сценариев в целом и сокращение использования `document.write()` для вывода контента, в частности, может улучшить общую загрузку страницы. Используйте современные методы [AJAX](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) для управления содержимым страницы, а не устаревшие подходы, которые основаны на `document.write()`.
 
 ### Используйте современный CSS и корректную разметку
 
@@ -103,7 +103,7 @@ CDN - это географически распределённая сеть с
 <TABLE>...</TABLE>
 ```
 
-Смотрите также: [CSS3 Multi-column Layout Spec](http://www.w3.org/TR/css3-multicol/) и [CSS3 Flexible Box Layout](http://www.w3.org/TR/css3-flexbox/)
+Смотрите также: [CSS3 Multi-column Layout Spec](https://www.w3.org/TR/css3-multicol/) и [CSS3 Flexible Box Layout](https://www.w3.org/TR/css3-flexbox/)
 
 ### Сокращайте и сжимайте активы SVG
 
@@ -171,7 +171,7 @@ SVG, создаваемый большинством графических пр
 ## Ссылки по теме
 
 - Книга: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
-- Отличная и очень содержательная статья [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- Отличная и очень содержательная статья [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Инструменты для анализа и оптимизации производительности: [Google PageSpeed Tools](https://developers.google.com/speed/pagespeed/)
 
 ## Original Document Information

@@ -5,13 +5,13 @@ slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 
 {{XsltSidebar}}
 
-Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
+Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
-La interfaz principal a usar con XPath es la función [evaluate](/en/DOM/document.evaluate) del objeto [document](/en/DOM/document).
+La interfaz principal a usar con XPath es la función [evaluate](/es/docs/DOM/document.evaluate) del objeto [document](/es/docs/Web/API/Document).
 
 ## document.evaluate
 
-Este método evalúa expresiones [XPath](/en/XPath) contra un documento basado en [XML](/en/XML) (incluyendo documentos HTML), y regresa un objeto [`XPathResult`](/en/XPathResult), el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en [document.evaluate](/en/DOM/document.evaluate), pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.
+Este método evalúa expresiones [XPath](/en-US/XPath) contra un documento basado en [XML](/en-US/XML) (incluyendo documentos HTML), y regresa un objeto [`XPathResult`](/en-US/XPathResult), el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en [document.evaluate](/es/docs/DOM/document.evaluate), pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.
 
 ```js
 var xpathResult = document.evaluate(
@@ -25,17 +25,17 @@ var xpathResult = document.evaluate(
 
 ### Parámetros
 
-La función [evaluate](/en/DOM/document.evaluate) toma un total de 5 parámetros:
+La función [evaluate](/es/docs/DOM/document.evaluate) toma un total de 5 parámetros:
 
 - `xpathExpression`: Una cadena que contiene la expresión XPath a evaluar.
-- `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/en/DOM/document) es el usado más comúnmente.
+- `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/es/docs/Web/API/Document) es el usado más comúnmente.
 - `namespaceResolver`: Una función que pasará cualquier prefijo de namespace contenido en una `xpathExpression` la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
 
-  - Creada usando el metodo [`createNSResolver`](/en/DOM/document.createNSResolver) de un objeto [`XPathEvaluator`](/en/XPathEvaluator). Deberías usar este virtualmente todo el tiempo.
+  - Creada usando el metodo [`createNSResolver`](/es/docs/Web/API/Document/createNSResolver) de un objeto [`XPathEvaluator`](/en-US/XPathEvaluator). Deberías usar este virtualmente todo el tiempo.
   - `null`, el cúal puede ser usado para documentos HTML o cuando no son usados prefijos de namespace. Note que, si la expresión XPath contiene un prefijo de namespace, esto resultará en una `DOMException` siendo arrojada con el código `NAMESPACE_ERR`.
-  - Una función definida por el usuario. Mira la sección [Usar un Solucionador de Namespace definido por el usuario](#Implementing_a_User_Defined_Namespace_Resolver) en el apéndice para detalles.
+  - Una función definida por el usuario. Mira la sección [Usar un Solucionador de Namespace definido por el usuario](#implementing_a_user_defined_namespace_resolver) en el apéndice para detalles.
 
-- `resultType`: Una [constante](#XPathResult_Defined_Constants) que especifica el tipo del resultado deseado a ser regresado. La constante más comúnmente pasada es `XPathResult.ANY_TYPE` la cúal regresará los resultados de la expresión XPath como el tipo más natural. Hay una sección en el apéndice que contiene una lista completa de las [constantes disponibles](#XPathResult_Defined_Constants). Estas son explicadas debajo, en la sección "[Especificando el tipo de valor regresado](#Specifying_the_Return_Type)".
+- `resultType`: Una [constante](#xpathresult_defined_constants) que especifica el tipo del resultado deseado a ser regresado. La constante más comúnmente pasada es `XPathResult.ANY_TYPE` la cúal regresará los resultados de la expresión XPath como el tipo más natural. Hay una sección en el apéndice que contiene una lista completa de las [constantes disponibles](#xpathresult_defined_constants). Estas son explicadas debajo, en la sección "[Especificando el tipo de valor regresado](#specifying_the_return_type)".
 - `result`: Si un objeto `XPathResult` existente es especificado, sera reusado para regresar el resultado. Especificando `null`, un nuevo objeto `XPathResult` será creado.
 
 ### Valor regresado
@@ -44,7 +44,7 @@ Regresa `xpathResult`, que es un objeto `XPathResult` del tipo especificado en e
 
 ### Implementando un Solucionador de Namespace predefinido
 
-Nosotros creamos un solucionador de namespace usando el método `createNSResolver` del objeto [document](/en/DOM/document).
+Nosotros creamos un solucionador de namespace usando el método `createNSResolver` del objeto [document](/es/docs/Web/API/Document).
 
 ```js
 var nsResolver = document.createNSResolver(
@@ -89,7 +89,7 @@ Obtenemos el valor regresado por la expresión accediendo a las siguientes propi
 
 ##### Ejemplo
 
-El siguiente código usa la expresión XPath [`count(//p)`](/en/XPath/Functions/count) para obtener el número de elementos \<p> en un documento HTML:
+El siguiente código usa la expresión XPath [`count(//p)`](/en-US/XPath/Functions/count) para obtener el número de elementos \<p> en un documento HTML:
 
 ```js
 var paragraphCount = document.evaluate(
@@ -131,9 +131,9 @@ A su vez, regresará una excepción con el código `NS_DOM_TYPE_ERROR`.
 
 El objeto `XPathResult` permite a los conjuntos de nodos ser regresados en 3 diferentes tipos principales:
 
-- [Iteradores](#Iterators)
-- [Capturas](#Snapshots)
-- [Primeros nodos](#First_Node)
+- [Iteradores](#iterators)
+- [Capturas](#snapshots)
+- [Primeros nodos](#first_node)
 
 ##### Iteradores
 
@@ -232,7 +232,7 @@ When the result type in the `resultType` parameter is specified as `ANY_TYPE`, t
 
 It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#XPathResult_Defined_Constants) values of this property are defined in the appendix.
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix.
 
 ## Examples
 
@@ -254,7 +254,7 @@ var headings = document.evaluate(
 
 Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
 
-Since we wish to search over the entire document for the headings, we have used the [document](/en/DOM/document) object itself as the `contextNode`.
+Since we wish to search over the entire document for the headings, we have used the [document](/es/docs/Web/API/Document) object itself as the `contextNode`.
 
 The result of this expression is an `XPathResult` object. If we wish to know the type of result returned, we may evaluate the `resultType` property of the returned object. In this case, that will evaluate to `4`, an `UNORDERED_NODE_ITERATOR_TYPE`. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the `iterateNext()` method of the returned object:
 
@@ -291,7 +291,7 @@ The following uses an XML document located at chrome://yourextension/content/peo
 </people>
 ```
 
-To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/en/XMLHttpRequest) object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en/XMLDocument) object against which we can use the `evaluate` method
+To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en-US/XMLDocument) object against which we can use the `evaluate` method
 
 JavaScript used in the extensions xul/js documents.
 
@@ -338,7 +338,7 @@ This is an example for illustration only. This function will need to take namesp
 '//xhtml:td/mathml:math'
 ```
 
-will select all [MathML](/en/MathML) expressions that are the children of (X)HTML table data cell elements.
+will select all [MathML](/en-US/MathML) expressions that are the children of (X)HTML table data cell elements.
 
 In order to associate the '`mathml:`' prefix with the namespace URI '`http://www.w3.org/1998/Math/MathML`' and '`xhtml:`' with the URI '`http://www.w3.org/1999/xhtml`' we provide a function:
 
@@ -366,7 +366,7 @@ document.evaluate(
 
 #### Implementing a default namespace for XML documents
 
-As noted in the [Implementing a Default Namespace Resolver](#Implementing_a_Default_Namespace_Resolver) previously, the default resolver does not handle the default namespace for XML documents. For example with this document:
+As noted in the [Implementing a Default Namespace Resolver](#implementing_a_default_namespace_resolver) previously, the default resolver does not handle the default namespace for XML documents. For example with this document:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -400,11 +400,11 @@ Another approach to match default elements in a non-null namespace (and one whic
 
 If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.
 
-While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en/XPath/Functions/namespace-uri) instead of [`name()`](/en/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
+While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
 For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en/XPath/Axes/attribute)).
+This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/XPath/Axes/attribute)).
 
 In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 
@@ -432,11 +432,11 @@ var thisitemEl = thislevel.iterateNext();
 
 ## See also
 
-- [Using XPath](/en/Using_XPath)
+- [Using XPath](/en-US/Using_XPath)
 
 ## Original Document Information
 
-- Based Upon Original Document [Mozilla XPath Tutorial](http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
+- Based Upon Original Document [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
 - Original Source Author: James Graham.
 - Other Contributors: James Thompson.
 - Last Updated Date: 2006-3-25.

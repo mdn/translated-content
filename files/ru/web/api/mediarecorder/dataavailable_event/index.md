@@ -58,6 +58,6 @@ MediaRecorder.addEventListener('dataavailable', function(event) { ... })
 ## Смотрите также
 
 - [Использование интерфейса записи медиапотока](/ru/docs/Web/API/MediaStream_Recording_API)
-- [Веб диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API пример визуализации, от [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [Демонстрационный пример записи медиапотока](http://simpl.info/mediarecorder/), от [Sam Dutton](https://twitter.com/sw12).
+- [Веб диктофон](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API пример визуализации, от [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [Демонстрационный пример записи медиапотока](https://simpl.info/mediarecorder/), от [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

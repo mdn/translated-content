@@ -140,7 +140,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ## 値
 
 許可さ れている値の概要を以下に示します。
-詳細な参照は、[CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース) および各ディレクティブのドキュメントを参照してください。
+詳細な参照は、[CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース) および各ディレクティブのドキュメントを参照してください。
 
 ### キーワード値
 

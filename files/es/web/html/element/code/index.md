@@ -11,11 +11,11 @@ slug: Web/HTML/Element/code
 
   - : **Sus etiquetas son**: \<code> y \</code> (ambas obligatorias)
 
-    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

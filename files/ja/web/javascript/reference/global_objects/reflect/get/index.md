@@ -34,7 +34,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 ## 解説
 
-`Reflect.get` メソッドはオブジェクトのプロパティを取得します。機能としては[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)構文と似ています。
+`Reflect.get` メソッドはオブジェクトのプロパティを取得します。機能としては[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文と似ています。
 
 ## 例
 
@@ -81,4 +81,4 @@ Reflect.get(obj, "foo", y); // "3bar"
 ## 関連情報
 
 - {{jsxref("Reflect")}}
-- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)

@@ -530,7 +530,7 @@ You have now created the database, and have an URL (with username and password) 
 
 ## Install Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#Installing_Mongoose_and_MongoDB) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
 npm install mongoose
@@ -538,7 +538,7 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database url string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information [from mLab](#Setting_up_the_MongoDB_database)).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database url string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information [from mLab](#setting_up_the_mongodb_database)).
 
 ```js
 //Set up mongoose connection
@@ -550,11 +550,11 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
-As discussed [in the Mongoose primer above](#Connecting_to_MongoDB), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
+As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
 
 ## Defining the LocalLibrary Schema
 
-We will define a separate module for each model, as [discussed above](#One_schemamodel_per_file). Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
+We will define a separate module for each model, as [discussed above](#one_schemamodel_per_file). Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```
 /express-locallibrary-tutorial  //the project root
@@ -602,7 +602,7 @@ AuthorSchema.virtual("url").get(function () {
 module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
-We've also declared a [virtual](#Virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
+We've also declared a [virtual](#virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
 
 > [!NOTE]
 > Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.
@@ -686,7 +686,7 @@ The definition will be very similar to the other models:
 
 - The model should have a `String` SchemaType called `name` to describe the genre.
 - This name should be required and have between 3 and 100 characters.
-- Declare a [virtual](#Virtual_properties) for the genre's URL, named `url`.
+- Declare a [virtual](#virtual_properties) for the genre's URL, named `url`.
 - Export the model.
 
 ## Testing — create some items

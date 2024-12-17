@@ -22,7 +22,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]];
 - `nameN`
   - : Nome da constante. Pode ser qualquer [identificador](/pt-BR/docs/Glossary/Identifier) válido.
 - `valueN`
-  - : Valor atribuido a constante. Pode ser qualquer [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) válida, incluindo uma função.
+  - : Valor atribuido a constante. Pode ser qualquer [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#expressions) válida, incluindo uma função.
 
 ## Descrição
 
@@ -32,7 +32,7 @@ Toda constante requer um inicializador, ou seja, é preciso especificar um valor
 
 A declaração **`const`** cria uma referência somente leitura a um valor. Isso **não** significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.
 
-Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
+Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
 
 Uma constante não pode ter o mesmo nome que uma função ou variável que esteja no mesmo escopo.
 
@@ -125,4 +125,4 @@ A declaração `const` foi implementada no Firefox muito antes de `const` aparec
 
 - [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
 - [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
-- [Guia de constantes em JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants)
+- [Guia de constantes em JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

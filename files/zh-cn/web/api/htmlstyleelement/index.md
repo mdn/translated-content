@@ -41,4 +41,4 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 ## 参见
 
 - The HTML element implementing this interface: {{HTMLElement("style")}}.
-- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information) to see how to manipulate CSS.
+- [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) to see how to manipulate CSS.

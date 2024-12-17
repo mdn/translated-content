@@ -23,7 +23,7 @@ Ces propriétés sont généralement définies via la propriété raccourcie {{c
 }
 ```
 
-Dans l'article sur [les concepts de base relatifs aux boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), nous avons pu introduire ces propriétés. Ici, nous les étudierons en profondeur afin de comprendre comment le navigateur les interprète.
+Dans l'article sur [les concepts de base relatifs aux boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), nous avons pu introduire ces propriétés. Ici, nous les étudierons en profondeur afin de comprendre comment le navigateur les interprète.
 
 ## Les concepts majeurs relatifs à l'axe principal
 
@@ -177,6 +177,6 @@ Les objets ne s'étendent pas s'il n'y a pas d'espace libre positif et ne se ré
 
 ### Les autres façons de distribuer l'espace
 
-Si on ne souhaite pas ajouter d'espace aux objets, on pourra tout aussi bien répartir cet espace libre entre les objets ou autour grâce aux propriétés d'alignement vu dans [le guide sur l'alignement](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container). La propriété {{cssxref("justify-content")}} permettra de répartir cet espace entre les objets ou autour d'eux. Les marges automatiques peuvent être utilisées sur les objets flexibles afin d'absorber l'espace et de créer des gouttières entre ces objets.
+Si on ne souhaite pas ajouter d'espace aux objets, on pourra tout aussi bien répartir cet espace libre entre les objets ou autour grâce aux propriétés d'alignement vu dans [le guide sur l'alignement](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container). La propriété {{cssxref("justify-content")}} permettra de répartir cet espace entre les objets ou autour d'eux. Les marges automatiques peuvent être utilisées sur les objets flexibles afin d'absorber l'espace et de créer des gouttières entre ces objets.
 
 Tout ces outils relatifs aux boîtes flexibles vous permettent d'accomplir la plupart des dispositions et n'auront plus de secret au fur et à mesure de vos essais et expérimentations.

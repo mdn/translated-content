@@ -77,7 +77,7 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)を参照してください。
+> **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
 ## サブリソース完全性のブラウザーでの扱い
 

@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 ![](bouncing-evil-circle.png)
 
-可先參考[完成範例](http://mdn.github.io/learning-area/javascript/oojs/assessment/)讓心裡有個底 (別偷看原始碼啊！)
+可先參考[完成範例](https://mdn.github.io/learning-area/javascript/oojs/assessment/)讓心裡有個底 (別偷看原始碼啊！)
 
 ## 須進行的步驟
 

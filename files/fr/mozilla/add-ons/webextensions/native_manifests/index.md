@@ -45,7 +45,7 @@ Il existe trois types différents de manifest natif :
   </tbody>
 </table>
 
-Pour tous les manifests natifs, vous devez arranger les choses afin que le navigateur puisse trouver le manifest. La section sur l'[emplacement du manifest](#Manifest_location) décrit ces règles.
+Pour tous les manifests natifs, vous devez arranger les choses afin que le navigateur puisse trouver le manifest. La section sur l'[emplacement du manifest](#manifest_location) décrit ces règles.
 
 ## Les manifests de messagerie natif
 

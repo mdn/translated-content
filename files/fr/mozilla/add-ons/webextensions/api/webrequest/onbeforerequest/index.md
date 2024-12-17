@@ -12,13 +12,13 @@ Pour annuler ou rediriger la requête, incluez d'abord `"blocking"` dans l'argum
 - pour annuler la demande, inclure une propriété `cancel` avec la valeur `true`.
 - pour rediriger la requête, inclure une propriété `redirectUrl` avec la valeur fixée à l'URL vers laquelle vous voulez rediriger.
 
-Si une extension veut rediriger une URL publique (par exemple HTTPS) ver une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
+Si une extension veut rediriger une URL publique (par exemple HTTPS) ver une [page d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), de l'extension doit contenir une clé [web_accessible_resources](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 
 Lorsque plusieurs gestionnaires de blocage modifient une requête, une seule série de modifications prend effet. Les redirections et les annulations ont la même priorité. Ainsi, si vous avez annulé une requête, vous pouvez voir une autre requête avec la même `requestId` à nouveau si un autre gestionnaire de blocage a redirigé la requête.
 
-A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 ## Syntaxe
 
@@ -52,7 +52,7 @@ Les événements ont trois fonctions :
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
 
-    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
@@ -152,7 +152,7 @@ En ce qui concerne la résolution DNS lorsque BlockingResponse est utilisé avec
 
 ## Exemples
 
-Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
+Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle [\<all_urls>](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
 
 ```js
 function logURL(requestDetails) {
@@ -212,7 +212,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Ce code est exactement comme l'exemple précédent, sauf que l'auditeur traite la requête de manière asynchrone. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui définit une minuterie et se résout avec l'URL de redirection lorsque la minuterie expire :
+Ce code est exactement comme l'exemple précédent, sauf que l'auditeur traite la requête de manière asynchrone. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui définit une minuterie et se résout avec l'URL de redirection lorsque la minuterie expire :
 
 ```js
 // match pattern for the URLs to redirect
