@@ -25,7 +25,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 Следующие подразделы проходят процесс добавления различных функций, необходимых для отображения необходимых страниц веб-сайта. Вы должны прочитать и проработать каждый из них по очереди, прежде чем перейти к следующему.
 
-1. [Асинхронное управление потоками с помощью async](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+1. [Асинхронное управление потоками с помощью async](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
 2. [Пример шаблона](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
 3. [Базовые шаблоны LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
 4. [Домашняя страница](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)

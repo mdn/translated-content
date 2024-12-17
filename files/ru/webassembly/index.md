@@ -19,21 +19,21 @@ WebAssembly разработан для дополнения JavaScript – ис
 
 - [Основы WebAssembly](/ru/docs/WebAssembly/Concepts)
   - : Прежде всего, начните с чтения общего описания WebAssembly - что это такое, чем это может быть полезно, почему он подходит для веб-платформы и как его использовать.
-- [Компиляция кода C/C++ в WebAssembly](/ru/docs/WebAssembly/C_to_wasm)
+- [Компиляция кода C/C++ в WebAssembly](/ru/docs/WebAssembly/C_to_Wasm)
   - : После того как вы написали код на C / C ++, вы можете скомпилировать его в .wasm, например, с помощью инструмента [Emscripten](https://emscripten.org/). Давайте посмотрим, как это работает.
 - [Компиляция существующего кода C в WebAssembly](/ru/docs/WebAssembly/existing_C_to_wasm)
   - : Главное, что позволяет WebAssembly, это использование огромного множества разнообразных и проверенных временем библиотек, написанных на языке C, в сети.
-- [Компиляция Rust в WebAssembly](/ru/docs/WebAssembly/Rust_to_wasm)
+- [Компиляция Rust в WebAssembly](/ru/docs/WebAssembly/Rust_to_Wasm)
   - : Если у вас есть уже написанный код на Rust, вы можете скомпилировать его в WebAssembly. Из этого руководства вы узнаете всё, что вам нужно знать, чтобы скомпилировать проект на Rust в wasm и использовать его в существующем веб-приложении.
 - [Загрузка и запуск кода WebAssembly](/ru/docs/WebAssembly/Loading_and_running)
-  - : После того, как у вас появился .wasm, эта статья расскажет, как из него получить, скомпилировать и создать экземпляр модуля, совмещая [WebAssembly JavaScript API](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) c [Fetch](/ru/docs/Web/API/Fetch_API) или [XHR](/ru/docs/Web/API/XMLHttpRequest) API.
+  - : После того, как у вас появился .wasm, эта статья расскажет, как из него получить, скомпилировать и создать экземпляр модуля, совмещая [WebAssembly JavaScript API](/ru/docs/WebAssembly/JavaScript_interface) c [Fetch](/ru/docs/Web/API/Fetch_API) или [XHR](/ru/docs/Web/API/XMLHttpRequest) API.
 - [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)
   - : После того, как вы загрузили модуль .wasm, вы захотите его использовать. В этой статье мы покажем вам, как использовать WebAssembly через WebAssembly JavaScript API.
 - [Экспортируемые функции WebAssembly](/ru/docs/WebAssembly/Exported_functions)
   - : Экспортируемые функции WebAssembly — это функции нативного модуля, доступные в JavaScript, которые позволяют вызывать код WebAssembly из JavaScript. В этой статье описывается, что они из себя представляют.
 - [Описание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format)
   - : Эта статья описывает текстовый формат WebAssembly. Это низкоуровневое текстовое представления модулей .wasm используемое в инструментах разработчика во время отладки.
-- [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_wasm)
+- [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_Wasm)
   - : Эта статья содержит руководство по переводу модулей WebAssembly, написанных в текстовом формате, в двоичный файл .wasm.
 
 ## Ссылки на API

@@ -262,6 +262,6 @@ mediaRecorder.onstop = function (e) {
 
 ## Смотрите также
 
-- Страница [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)
+- Страница [MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API)
 - `{{domxref("Navigator.getUserMedia()")}}`
 - Интерфейс [MediaRecorder теперь поддерживают 65% веб-сайтов](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

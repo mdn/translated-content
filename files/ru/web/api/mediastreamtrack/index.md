@@ -9,7 +9,7 @@ slug: Web/API/MediaStreamTrack
 
 ## Свойства
 
-В дополнение к свойствам, перечисленным ниже, `MediaStreamTrack` имеет свойства с ограничениями, которые можно установить с помощью {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} и просмотреть с через {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} и {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. Смотрите [capabilities, constraints, and settings](/ru/docs/Web/API/Media_Streams_API/Constraints), чтобы узнать, как правильно работать со свойствами с ограничениями. Если использовать их неправильно, ваш код будет ненадёжным.
+В дополнение к свойствам, перечисленным ниже, `MediaStreamTrack` имеет свойства с ограничениями, которые можно установить с помощью {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} и просмотреть с через {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} и {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. Смотрите [capabilities, constraints, and settings](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints), чтобы узнать, как правильно работать со свойствами с ограничениями. Если использовать их неправильно, ваш код будет ненадёжным.
 
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : Строка, которую веб приложение может использовать для создания подсказок, какой тип данных содержит трек, чтобы их могли различать пользователи API.
@@ -66,19 +66,19 @@ slug: Web/API/MediaStreamTrack
 
 - [`ended`](/ru/docs/Web/API/MediaStreamTrack/ended_event)
   - : Вызывается, когда проигрывание трека останавливается (когда значение {{domxref("MediaStreamTrack.readyState", "readyState")}} становится `ended`).
-    Обработчик может быть установлен как свойство [`onended`](/ru/docs/Web/API/MediaStreamTrack/onended).
+    Обработчик может быть установлен как свойство [`onended`](/ru/docs/Web/API/MediaStreamTrack/ended_event).
 - [`mute`](/ru/docs/Web/API/MediaStreamTrack/mute_event)
   - : Вызывается, когда {{domxref("MediaStreamTrack.muted", "muted")}} принимает значение `true`, что означает, что трек временно не может предоставлять данные (например, при плохом подключении сети).
-    Обработчик может быть установлен как свойство [`onmute`](/ru/docs/Web/API/MediaStreamTrack/onmute).
+    Обработчик может быть установлен как свойство [`onmute`](/ru/docs/Web/API/MediaStreamTrack/mute_event).
 - [`isolationchange`](/ru/docs/Web/API/MediaStreamTrack/isolationchange_event)
   - : Вызывается, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} принимает значение `true` из-за того, что документ больше не имеет разрешение на доступ к треку.
     Обработчик может быть установлен как свойство [`onisolationchange`](/ru/docs/Web/API/MediaStreamTrack/onisolationchange).
-- [`overconstrained`](/ru/docs/Web/API/MediaStreamTrack/overconstrained_event) {{deprecated_inline}}
+- [`overconstrained`](/ru/docs/Web/API/MediaStreamTrack) {{deprecated_inline}}
   - : Вызывается, когда источник не удовлетворяет ограничениям трека, что делает его непригодным для использования.
-    Обработчик может быть установлен как свойство [`onoverconstrained`](/ru/docs/Web/API/MediaStreamTrack/onoverconstrained).
+    Обработчик может быть установлен как свойство [`onoverconstrained`](/ru/docs/Web/API/MediaStreamTrack).
 - [`unmute`](/ru/docs/Web/API/MediaStreamTrack/unmute_event)
   - : Вызывается, когда данные снова становятся доступными, то есть пропадают технические проблемы.
-    Обработчик может быть установлен как свойство [`onunmute`](/ru/docs/Web/API/MediaStreamTrack/onunmute).
+    Обработчик может быть установлен как свойство [`onunmute`](/ru/docs/Web/API/MediaStreamTrack/unmute_event).
 
 ## Спецификации
 
@@ -90,5 +90,5 @@ slug: Web/API/MediaStreamTrack
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}

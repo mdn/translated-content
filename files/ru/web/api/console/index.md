@@ -5,7 +5,7 @@ slug: Web/API/console
 
 {{APIRef("Console API")}}
 
-Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](/ru/docs/Tools/Web_Console) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.
+Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.
 
 Доступ к **Console** можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в `workers` это специальный способ доступа через свойство `console`. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "`console`".
 
@@ -13,7 +13,7 @@ slug: Web/API/console
 console.log("Failed to open the specified link");
 ```
 
-Ниже описаны [методы](#Methods), доступные в объекте Console и приведены несколько примеров их [использования](#Usage).
+Ниже описаны [методы](#methods), доступные в объекте Console и приведены несколько примеров их [использования](#usage).
 
 {{AvailableInWorkers}}
 
@@ -40,35 +40,35 @@ console.log("Failed to open the specified link");
 - {{domxref("console.dirxml()")}} {{Non-standard_inline}}
   - : Отображает представление указанного объекта в XML/HTML-виде, если это возможно. Если нет - в виде JavaScript-объекта (как в виде "console.dir()").
 - {{domxref("console.error()")}}
-  - : Выводит сообщение об ошибке. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+  - : Выводит сообщение об ошибке. Для форматирования вы можете использовать [подстановочные символы (маски)](#Using_string_substitutions) с дополнительными параметрами.
 - {{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Синоним для `error();`
 - {{domxref("console.group()")}}
-  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения [группы](/ru/docs/Web/API/console#Using_groups_in_the_console) вызовите `groupEnd()`.
+  - : Создаёт новую [группировку](#Using_groups_in_the_console) сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения [группы](#Using_groups_in_the_console) вызовите `groupEnd()`.
 - {{domxref("console.groupCollapsed()")}}
-  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от `group()` вывод происходи в свёрнутую [группу](/ru/docs/Web/API/console#Using_groups_in_the_console), требующую раскрыть её вручную по кнопке. Для завершения [группы](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
+  - : Создаёт новую [группировку](#Using_groups_in_the_console) сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от `group()` вывод происходи в свёрнутую [группу](#Using_groups_in_the_console), требующую раскрыть её вручную по кнопке. Для завершения [группы](#Using_groups_in_the_console)вызовите `groupEnd()`.
 - {{domxref("console.groupEnd()")}}
-  - : Выход из текущей [группы](/ru/docs/Web/API/console#Using_groups_in_the_console).
+  - : Выход из текущей [группы](#Using_groups_in_the_console).
 - {{domxref("console.info()")}}
-  - : Информационное сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+  - : Информационное сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](#Using_string_substitutions) с дополнительными параметрами.
 - {{domxref("console.log()")}}
-  - : Общий метод вывода информации. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+  - : Общий метод вывода информации. Для форматирования вы можете использовать [подстановочные символы (маски)](#Using_string_substitutions) с дополнительными параметрами.
 - {{domxref("console.profile()")}} {{Non-standard_inline}}
-  - : Запускает профайлер, встроенный в браузер (например, [Firefox performance tool](/ru/docs/Tools/Производительность)). Вы можете указать метку профиля (по желанию).
+  - : Запускает профайлер, встроенный в браузер (например, [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). Вы можете указать метку профиля (по желанию).
 - {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
-  - : Останавливает профайлер.Вы можете посмотреть результат в инструментах анализа производительности браузера (например, [Firefox performance tool](/ru/docs/Tools/Производительность)).
+  - : Останавливает профайлер.Вы можете посмотреть результат в инструментах анализа производительности браузера (например, [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 - {{domxref("console.table()")}}
   - : Отображает табличные данные в виде таблицы.
 - {{domxref("console.time()")}}
-  - : Запускает [таймер](/ru/docs/Web/API/console#Timers) с именем из переданного параметра. Можно запустить одновременно до 10,000 таймеров на странице.
+  - : Запускает [таймер](#Timers) с именем из переданного параметра. Можно запустить одновременно до 10,000 таймеров на странице.
 - {{domxref("console.timeEnd()")}}
-  - : Останавливает указанный [таймер](/ru/docs/Web/API/console#Timers) и записывает в лог, сколько прошло секунд от его старта.
+  - : Останавливает указанный [таймер](#Timers) и записывает в лог, сколько прошло секунд от его старта.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Ставит маркер в браузерном инструменте измерения производительности [Timeline](https://developer.chrome.com/docs/devtools/) или [Waterfall](/ru/docs/Tools/Производительность/Waterfall).
+  - : Ставит маркер в браузерном инструменте измерения производительности [Timeline](https://developer.chrome.com/docs/devtools/) или [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html).
 - {{domxref("console.trace()")}}
-  - : Вывод [трассировки стека](/ru/docs/Web/API/console#Stack_traces).
+  - : Вывод [трассировки стека](#Stack_traces).
 - {{domxref("console.warn()")}}
-  - : Выводит предупреждающее сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+  - : Выводит предупреждающее сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](#Using_string_substitutions) с дополнительными параметрами.
 
 ## Использование
 
@@ -224,19 +224,19 @@ function foo() {
 
 - По крайней мере в Firefox, если страница определяет свой объект `console`, то этот объект переопределяет объект `console`, встроенный в Firefox.
 - До Gecko 12.0, методы объекта `console` работали только, если открыта панель "Веб-консоль" (Web Console). Начиная с Gecko 12.0, вывод кешируется до тех пор, пока панель Веб-консоль не откроется, и сразу отобразится в ней.
-- Стоит отметить, что встроенный в Firefox объект `console` совместим с таким же объектом, предоставляемым плагином [Firebug](http://getfirebug.com/).
+- Стоит отметить, что встроенный в Firefox объект `console` совместим с таким же объектом, предоставляемым плагином [Firebug](https://getfirebug.com/).
 
 ## Смотрите также
 
-- [Tools](/ru/docs/Tools)
-- [Веб-консоль](/ru/docs/Tools/Web_Console) - как Веб-консоль в Firefox обрабатывает вызовы API-консоли
-- [Удалённая отладка](/ru/docs/Tools/Remote_Debugging)- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) - как Веб-консоль в Firefox обрабатывает вызовы API-консоли
+- [Удалённая отладка](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html)- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве
 - [Отладка приложений в Firefox OS](/ru/Firefox_OS/Using_the_App_Manager) - использование Менеджера приложений для отладки приложений, запущенных на Firefox OS
 - [On-device console logging](/ru/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - как сделать логирование на устройствах на Firefox OS
 
 ### Реализации в браузерах
 
 - [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
-- [Firebug](http://getfirebug.com/wiki/index.php/Console_API)
+- [Firebug](https://getfirebug.com/wiki/index.php/Console_API)
 - [Internet Explorer](<http://msdn.microsoft.com/ru/library/hh772173(v=vs.85).aspx>)
 - [Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

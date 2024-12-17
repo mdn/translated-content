@@ -14,7 +14,7 @@ Express представляет собой популярный веб-фрей
 > [!NOTE]
 > Этот веб-сайт содержит множество источников для изучения JavaScript _в контексте разработки на стороне клиента_: [JavaScript](/ru/docs/Web/JavaScript), [JavaScript Guide](/ru/docs/Web/JavaScript/Guide), [JavaScript Basics](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/ru/docs/Learn/JavaScript) (изучение). Ключевые особенности и концепции языка JavaScript остаются сходными и для серверной разработки на Node.js и используемый материал достаточно релевантен. Node.js предоставляет [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/) для обеспечения функциональности, которая полезна для "безбраузерной" разработки, т.е. для создания HTTP-сервера и доступа к файловой системе, но не поддерживает JavaScript APIs для работы с браузером и DOM.
 >
-> Это руководство обеспечит вас некоторой информацией о работе с Node.js и Express, но также существуют и другие многочисленные отличные ресурсы в Интернете и книгах — некоторые из них доступны из тем [How do I get started with Node.js](http://stackoverflow.com/a/5511507/894359) (StackOverflow) и [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
+> Это руководство обеспечит вас некоторой информацией о работе с Node.js и Express, но также существуют и другие многочисленные отличные ресурсы в Интернете и книгах — некоторые из них доступны из тем [How do I get started with Node.js](https://stackoverflow.com/a/5511507/894359) (StackOverflow) и [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
 
 ## Руководства
 
@@ -33,7 +33,7 @@ Express представляет собой популярный веб-фрей
 - [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
   - : Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта _LocalLibrary_ и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определённого типа мы имеем и отдельную страницу для детального просмотра записи. По пути мы получим практический опыт в получении записей из баз данных и использовании шаблонов.
 - [Учебник Express часть 6: Работы с формами](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : В этой части мы покажем вам, как работать с [HTML формами](/ru/docs/Web/Guide/HTML/Forms) в Express, используя Pug, и в частности, как создавать, обновлять и удалять документы из базы данных.
+  - : В этой части мы покажем вам, как работать с [HTML формами](/ru/docs/Learn/Forms) в Express, используя Pug, и в частности, как создавать, обновлять и удалять документы из базы данных.
 - [Учебник Express часть 7: Выкладка в production](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : Теперь когда вы создали восхитительный сайт _LocalLibrary_, вы захотите установить его на общедоступном сервере, чтобы он мог дать доступ персоналу библиотеки и пользователям в Интернет. В этой статье представлен обзор того, как вы можете найти хост для развёртывания вашего сайта и что вам нужно сделать, чтобы подготовить ваш сайт к публикации.
 

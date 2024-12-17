@@ -45,4 +45,4 @@ result; // "Barry"
 ### Материалы
 
 - [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Quick example](/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (в конце абзаца "Functions", сразу после "Custom objects")
+- [Quick example](/ru/docs/Web/JavaScript/Language_overview#functions) (в конце абзаца "Functions", сразу после "Custom objects")

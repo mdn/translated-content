@@ -68,7 +68,7 @@ slug: Learn/Server-side/Django/Deployment
 - Преимущества. Некоторые провайдеры могут предложить бесплатные доменные имена и поддержку сертификатов SSL, которые, в других случаях, должны были бы купить.
 - Что будет при истечении времени использования "бесплатного" хостинга, какова "стоимость" миграции на более "дорогие" тарифы и так далее?
 
-Хорошей новостью является то, что для того, чтобы начать существует достаточное количество компаний, которые предоставляют пробные "бесплатные" тарифы типа "evaluation" (для пробы), "developer" (разработка), или "hobbyist" (хобби). Всегда существуют ресурсы с ограниченным окружением, при использовании которых вам надо беспокоиться лишь о том, что они могут быть доступны лишь в течении определённого периода времени. Тем не менее, они являются отличным решением для тестирования сайтов с небольшим трафиком в реальном окружении, а также могут предоставлять простой доступ к платным ресурсам, в случае необходимости. Наиболее популярными провайдерами являются [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) и так далее.
+Хорошей новостью является то, что для того, чтобы начать существует достаточное количество компаний, которые предоставляют пробные "бесплатные" тарифы типа "evaluation" (для пробы), "developer" (разработка), или "hobbyist" (хобби). Всегда существуют ресурсы с ограниченным окружением, при использовании которых вам надо беспокоиться лишь о том, что они могут быть доступны лишь в течении определённого периода времени. Тем не менее, они являются отличным решением для тестирования сайтов с небольшим трафиком в реальном окружении, а также могут предоставлять простой доступ к платным ресурсам, в случае необходимости. Наиболее популярными провайдерами являются [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) и так далее.
 
 Многие провайдеры имеют "basic" (базовый) тариф, предоставляющий достаточный уровень вычислительной мощности с небольшим количеством ограничений. [Digital Ocean](https://www.digitalocean.com/) и [Python Anywhere](https://www.pythonanywhere.com/) являются примерами провайдеров, которые предлагают относительно недорогой базовый тариф (от $5 до $10USD в месяц).
 
@@ -557,7 +557,7 @@ heroku addons:open heroku-postgresql
 DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
 ```
 
-Если вы вспомните из раздела, посвящённого [getting the website ready to publish](#Getting_your_website_ready_to_publish), мы должны установить переменные среды для `DJANGO_SECRET_KEY` и `DJANGO_DEBUG`. Давайте сделаем это сейчас.
+Если вы вспомните из раздела, посвящённого [getting the website ready to publish](#getting_your_website_ready_to_publish), мы должны установить переменные среды для `DJANGO_SECRET_KEY` и `DJANGO_DEBUG`. Давайте сделаем это сейчас.
 
 > [!NOTE]
 > Секретный ключ должен быть действительно секретным! Один из способов генерации нового ключа - создать новый проект Django (`django-admin startproject someprojectname`) а затем получить ключ, который генерируется для вас в его **settings.py**.
