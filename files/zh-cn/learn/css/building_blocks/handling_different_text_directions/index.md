@@ -24,7 +24,7 @@ l10n:
           >文件管理知识</a
         >，具有 HTML 基础（参见 <a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 介绍L</a
+          >HTML 介绍</a
         >），并了解 CSS 如何工作（参见 <a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS 第一步</a
         >）。
