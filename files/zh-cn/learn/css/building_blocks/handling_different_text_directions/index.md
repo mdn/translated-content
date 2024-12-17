@@ -41,7 +41,7 @@ l10n:
 
 CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cssxref("writing-mode")}} 属性使我们从一种模式切换到另一种模式。为此，你不必使用一种竖向的语言——你还可以更改部分文字的方向以实现创新性的布局。
 
-在下面的示例中，我们使用 `writing-mode: vertical-rl` 显示了一个标题。现在文本垂直显示。垂直文本在图形设计中很常见，可以为网页设计添加更有趣的外观和感觉。
+在下面的示例中，我们使用 `writing-mode: vertical-rl` 显示了一个标题。现在文本垂直显示。垂直文本在图形设计中很常见，可以为网页设计添加更有趣的界面外观。
 
 ```html live-sample___simple-vertical
 <h1>玩转书写模式</h1>
@@ -289,11 +289,11 @@ h2 {
 
 {{EmbedLiveSample("logical-mbp", "", "200px")}}
 
-如果考虑到所有单独的边框完整表述，属性的数量是非常庞大的，你可以在[逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) MDN 页面上看到所有映射的属性。
+如果考虑到所有单独的边框完整表述，属性的数量是非常庞大的，你可以在[逻辑属性和逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) MDN 页面上看到所有映射的属性。
 
 ### 逻辑值
 
-目前为止我们看到的都是逻辑属性的名称。还有一些属性的取值是一些物理值（如`top`、`right`、`bottom` 和 `left`）。这些值同样拥有逻辑值映射（`block-start`、`inline-end`、`block-end` 和 `inline-start`）。
+目前为止我们看到的都是逻辑属性的名称。还有一些属性的取值是一些物理值（如 `top`、`right`、`bottom` 和 `left`）。这些值同样拥有逻辑值映射（`block-start`、`inline-end`、`block-end` 和 `inline-start`）。
 
 例如，你可以将一张图片移到左边，并使文本环绕图片。你可以将 `left` 替换为 `inline-start`，就像下面的例子中一样。
 
