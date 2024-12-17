@@ -15,7 +15,7 @@ slug: Web/HTML/Element/input/image
 
 ## Атрибуты
 
-Этому элементу доступны глобальные атрибуты ([global attributes](/ru/docs/HTML/Global_attributes)).
+Этот элемент поддерживает ([глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)).
 
 `type`
 

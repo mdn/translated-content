@@ -17,7 +17,7 @@ HTML-элемент **`<label>`** представляет собой подпи
 
 ## Атрибуты
 
-Элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `for`
   - : ID [labelable](/ru/docs/Web/Guide/HTML/Content_categories#Form_labelable)-элемента, который находится в том же документе, что и элемент label. Первый такой элемент в документе, ID которого совпадает со значением атрибута `for`, становится `labeled-*` контролом для данного `label`.
