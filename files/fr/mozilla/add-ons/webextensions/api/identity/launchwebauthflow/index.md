@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 
 Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
-Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL) et l'[ID client](/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on) de l'extension. Le fournisseur de service alors :
+Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) et l'[ID client](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on) de l'extension. Le fournisseur de service alors :
 
 - authentifie l'utilisateur auprès du fournisseur de services, si nécessaire (c'est-à-dire: s'ils ne sont pas déjà connectés)
 - demande à l'utilisateur d'autoriser l'extension à accéder aux données demandées, si nécessaire (c'est-à-dire : si l'utilisateur n'a pas déjà autorisé l'extension)
@@ -16,7 +16,7 @@ Notez que si aucune authentification ou autorisation n'est nécessaire, cette fo
 
 Cette fonction prend également un paramètre facultatif `interactif`: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.
 
-Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
+Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
 
 S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les conditions d'erreur peuvent inclure :
 
@@ -45,7 +45,7 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
       - : `string`. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :
 
-        - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL).
+        - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url).
 
     - `interactive` {{optional_inline}}
 
@@ -59,7 +59,7 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
 ## Compatibilité des navigateurs
 

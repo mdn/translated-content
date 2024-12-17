@@ -24,7 +24,7 @@ new Intl.RelativeTimeFormat([locales[, options]])
   - : Opcional. Um objeto com algumas ou todas as seguintes propriedades:
 
     - `localeMatcher`
-      O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
+      O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
     - `numeric`
       O formato de saída da mensagem. Valores possíveis são:
 

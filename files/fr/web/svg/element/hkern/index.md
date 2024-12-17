@@ -17,7 +17,7 @@ La distance horizontale entre deux glyphes peut être ajustée minutieusement av
 
 ### Attributs globaux
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
 
 ### Attributs spécifiques
 

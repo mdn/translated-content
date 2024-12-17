@@ -11,7 +11,7 @@ slug: Web/HTML/Element/del
 
   - : **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias).
 
-    **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: a veces [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**:
 
@@ -131,4 +131,4 @@ Se visualiza así:
 
 ### Comentarios
 
-El elemento [del](/es/HTML/Elemento/del) del tiene un opuesto, el elemento [ins](/es/HTML/Elemento/ins). [del](/es/HTML/Elemento/del), marca las partes descartadas e [ins](/es/HTML/Elemento/ins) las insertadas.
+El elemento [del](/es/docs/Web/HTML/Element/del) del tiene un opuesto, el elemento [ins](/es/docs/Web/HTML/Element/ins). [del](/es/docs/Web/HTML/Element/del), marca las partes descartadas e [ins](/es/docs/Web/HTML/Element/ins) las insertadas.

@@ -19,7 +19,7 @@ var ndList = elementNodeReference.childNodes;
 
 *ndList*는 현재 요소의 자식인 노드 개체의 순서 있는 모음입니다. 요소가 자식이 없으면, *ndList*는 아무 노드도 포함하지 않습니다.
 
-*ndList*는 childNodes의 노드 목록을 저장하는 변수입니다. 그 목록은 [NodeList](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177) 형입니다. childNodes 속성은 읽기 전용입니다.
+*ndList*는 childNodes의 노드 목록을 저장하는 변수입니다. 그 목록은 [NodeList](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177) 형입니다. childNodes 속성은 읽기 전용입니다.
 
 ## 예시
 

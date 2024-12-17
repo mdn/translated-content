@@ -9,7 +9,7 @@ L'interface **`CSSMediaRule`** représente une seule règle CSS {{cssxref("@medi
 
 ## Syntaxe
 
-La syntaxe est décrite en utilisant le format [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
+La syntaxe est décrite en utilisant le format [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/).
 
 ```
 interface CSSMediaRule : CSSConditionRule {

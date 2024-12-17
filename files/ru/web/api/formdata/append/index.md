@@ -71,6 +71,6 @@ formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

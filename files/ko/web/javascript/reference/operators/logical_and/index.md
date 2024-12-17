@@ -87,7 +87,7 @@ console.log(A() && B());
 ### 연산자 우선순위
 
 AND 연산자는 OR 연산자보다 높은 우선 순위를 가지며, 이는 `&&` 연산자가 `||` 연산자보다 먼저 실행된다는 것을 의미합니다.
-([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)참고).
+([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)참고).
 
 ```js
 true || (false && false); // returns true

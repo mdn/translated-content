@@ -78,5 +78,5 @@ buffer.resize(12);
 ## 같이 보기
 
 - [`core-js`에서의 `ArrayBuffer` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("SharedArrayBuffer")}}

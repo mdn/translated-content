@@ -24,7 +24,7 @@ JavaScript часто описывают как язык **прототипно�
 
 ## Понимание прототипа объектов
 
-Вернёмся к примеру, когда мы закончили писать наш конструктор `Person()`- загрузите пример в свой браузер. Если у вас ещё нет работы от последней статьи, используйте наш пример [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (см. Также [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+Вернёмся к примеру, когда мы закончили писать наш конструктор `Person()`- загрузите пример в свой браузер. Если у вас ещё нет работы от последней статьи, используйте наш пример [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (см. Также [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
 
 В этом примере мы определили конструктору функцию, например:
 
@@ -122,7 +122,7 @@ var myString = "This is my string.";
 
 Давайте рассмотрим пример изменения свойства `prototype` функции-конструктора — методы, добавленные в прототип, затем доступны для всех экземпляров объектов, созданных из конструктора.
 
-1. Вернитесь к нашему примеру [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) и создайте локальную копию [исходного кода](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Ниже существующего JavaScript добавьте следующий код, который добавляет новый метод в свойство `prototype` конструктора:
+1. Вернитесь к нашему примеру [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) и создайте локальную копию [исходного кода](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Ниже существующего JavaScript добавьте следующий код, который добавляет новый метод в свойство `prototype` конструктора:
 
    ```js
    Person.prototype.farewell = function () {

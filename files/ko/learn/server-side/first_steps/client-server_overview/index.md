@@ -64,7 +64,7 @@ HTML 페이지가 반환 되면 웹 브라우저에 의해 렌더링 될 것입�
 당신은 링크를 클릭하거나 사이트를 검색하는 간단한 `GET` request를 만들 수 있습니다.(검색엔진의 홈페이지 같은). 예를 들자면, 만약 당신이 MDN에서 "클라이언트 서버 개요"를 검색하면 전송되는 HTTP request는 아래의 텍스트와 매우 유사할 것 입니다(메시지의 일부가 브라우저/설정에 따라 다르므로 같지는 않습니다).
 
 > [!NOTE]
-> HTTP 메시지의 형식은 "웹 표준" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt))에 정의 되어 있습니다. 이 수준의 세부사항을 알 필요는 없지만 적어도 이제는 이 모든 것이 어디서 왔는지를 알 수 있습니다!
+> HTTP 메시지의 형식은 "웹 표준" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt))에 정의 되어 있습니다. 이 수준의 세부사항을 알 필요는 없지만 적어도 이제는 이 모든 것이 어디서 왔는지를 알 수 있습니다!
 
 #### The request
 
@@ -192,7 +192,7 @@ Content-Length: 0
 ```
 
 > [!NOTE]
-> HTTP responses 그리고 requests를 보여주는 예시들은 [Fiddler](https://www.telerik.com/download/fiddler) 어플리케이션을 사용하여 캡처하였습니다, 그렇지만 당신은 스니퍼(e.g. <http://web-sniffer.net/>)나 브라우저 확장 기능인 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) 같은 것을 사용하여 확인 할 수 있습니다. 이러한 것을 직접 시도해보세요. 링크된 도구들을 사용하여 여러 사이트들을 돌아다니고 프로필 정보를 수정 하여 다양한 requests 와 responses를 확인해보세요. 현대의 대부분 브라우저는 네트워크 요청을 모니터 할수 있는 도구 또한 가지고 있습니다 (예를들면, Firefox가 가진 도구인 [Network Monitor](/ko/docs/Tools/Network_Monitor) ).
+> HTTP responses 그리고 requests를 보여주는 예시들은 [Fiddler](https://www.telerik.com/download/fiddler) 어플리케이션을 사용하여 캡처하였습니다, 그렇지만 당신은 스니퍼(e.g. <http://web-sniffer.net/>)나 브라우저 확장 기능인 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) 같은 것을 사용하여 확인 할 수 있습니다. 이러한 것을 직접 시도해보세요. 링크된 도구들을 사용하여 여러 사이트들을 돌아다니고 프로필 정보를 수정 하여 다양한 requests 와 responses를 확인해보세요. 현대의 대부분 브라우저는 네트워크 요청을 모니터 할수 있는 도구 또한 가지고 있습니다 (예를들면, Firefox가 가진 도구인 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ).
 
 ## Static sites
 

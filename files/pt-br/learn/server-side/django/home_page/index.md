@@ -154,7 +154,7 @@ def index(request):
 
 A primeira linha importa as classes de models que usaremos para acessar dados em todas as nossas visualizações.
 
-A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn/Server-side/Django/Models#Searching_for_records).
+A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn/Server-side/Django/Models#searching_for_records).
 
 No final da função view chamamos a função `render()` para criar uma página HTML e retornar a página como resposta. essa função de atalho envolve várias outras funções para simplificar um caso de uso muito comum. A função `render()` aceita os seguintes parâmetros:
 
@@ -384,8 +384,8 @@ Neste ponto, criamos todos os recursos necessários para exibir a página index.
 
 Temos duas tarefas para testar a sua familiaridade com as consultas de modelos, views e templates
 
-1. O modelo de [base](/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
-2. > **Nota:** **Dica:** A seção [Extendendo Templates](#Extending_templates) explica como criar blocos e extender um bloco em outro template.
+1. O modelo de [base](#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
+2. > **Nota:** **Dica:** A seção [Extendendo Templates](#extending_templates) explica como criar blocos e extender um bloco em outro template.
 3. Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto`. Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
 
 ## Resumo

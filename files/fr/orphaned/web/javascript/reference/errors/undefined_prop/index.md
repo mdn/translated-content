@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: reference to undefined property "x"'
+title: "ReferenceError: reference to undefined property \"x\""
 slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
@@ -18,7 +18,7 @@ Uniquement pour Firefox. Une erreur {{jsxref("ReferenceError")}} lancée en aver
 
 ## Quel est le problème ?
 
-Le code tente d'accéder à une propriété inexistante d'un objet. Il existe deux méthodes pour accéder aux propriétés. Pour plus de détails, on pourra lire la page de la référence sur [les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres).
+Le code tente d'accéder à une propriété inexistante d'un objet. Il existe deux méthodes pour accéder aux propriétés. Pour plus de détails, on pourra lire la page de la référence sur [les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 ## Exemples
 

@@ -193,4 +193,4 @@ Dans cet exemple, chaque élément de la liste illustre une valeur différente d
 
 ## Voir aussi
 
-- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

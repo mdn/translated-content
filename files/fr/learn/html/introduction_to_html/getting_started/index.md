@@ -241,7 +241,7 @@ Prenez l'exemple suivant :
 > Les termes « block » et « inline », tels qu'utilisés dans cet article, ne doivent pas être confondus avec [les types de boîtes des CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model) portant les mêmes noms. Alors qu'ils sont corrélés par défaut, modifier le type d'affichage des CSS ne modifie pas la catégorie d'un élément et n'affecte pas les éléments qu'il pourrait contenir ni ceux dans lequel il pourrait être contenu. Une des raisons pour lesquelles HTML5 a abandonné ces termes était d'éviter cette confusion assez courante.
 
 > [!NOTE]
-> Vous trouverez des pages de référence utiles incluant des listes d'[éléments de niveau bloc](/fr/docs/Web/HTML/Block-level_elements) et d'[éléments en ligne](/fr/docs/Web/HTML/Inline_elements).
+> Vous trouverez des pages de référence utiles incluant des listes d'[éléments de niveau bloc](/fr/docs/Glossary/Block-level_content) et d'[éléments en ligne](/fr/docs/Glossary/Inline-level_content).
 
 ### Éléments vides
 
@@ -764,6 +764,6 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 
 ## Voir aussi
 
-- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

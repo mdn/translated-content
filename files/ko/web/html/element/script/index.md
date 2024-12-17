@@ -126,7 +126,7 @@ slug: Web/HTML/Element/script
 
   - : 스크립트의 유형을 나타냅니다. 다음 다섯개의 범주 중 하나에 속할 수 있습니다.
 
-    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types)되어 있습니다.
+    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/MIME_types#javascript_types)되어 있습니다.
     - **`module`:** 스크립트를 JavaScript 모듈로 간주합니다. 스크립트 콘텐츠 처리가 `charset`과 `defer` 특성의 영향을 받지 않습니다. `module`의 더 자세한 사용법은 MDN의 [JavaScript 모듈 안내서](/ko/docs/Web/JavaScript/Guide/Modules)를 참고하세요. 기존 스크립트와 달리, 모듈 스크립트는 교차 출처 가져오기 시 CORS 프로토콜을 사용해야 합니다.
     - **다른 모든 값:** 내장 콘텐츠를 브라우저가 처리하지 않을 데이터 블록으로 간주합니다. 개발자는 반드시 유효하면서 JavaScript가 아닌 MIME 유형을 지정해야 합니다. `src` 특성을 무시합니다.
 
@@ -139,7 +139,7 @@ slug: Web/HTML/Element/script
 
 ## 참고
 
-브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](/ko/docs/Web/HTML/Element/script#async), [`defer`](/ko/docs/Web/HTML/Element/script#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
+브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](#async), [`defer`](#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
 
 스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{domxref("HTMLElement/load_event", "load")}} 대신 {{domxref("HTMLElement/error_event", "error")}} 이벤트를 요소에 전송합니다.
 
@@ -163,7 +163,7 @@ slug: Web/HTML/Element/script
 
 ### 모듈 대체 스크립트
 
-[`type`](/ko/docs/Web/HTML/Element/script#type) 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
+[`type`](#type) 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
 
 ```js
 <script type="module" src="main.mjs"></script>

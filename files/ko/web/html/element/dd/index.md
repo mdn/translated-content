@@ -71,7 +71,7 @@ slug: Web/HTML/Element/dd
 
 ## 예제
 
-예제를 보려면 [`<dl>` 예제](/ko/docs/HTML/Element/dl#예제)를 보세요.
+예제를 보려면 [`<dl>` 예제](/ko/docs/Web/HTML/Element/dl#%ec%98%88%ec%a0%9c)를 보세요.
 
 ## 명세
 

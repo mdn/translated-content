@@ -178,7 +178,7 @@ pip3 list
 
 ## 파이썬 가상 환경에서 장고 사용하기
 
-우리가 가상 환경을 만드는 데 사용할 라이브러리들은 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (리눅스와 맥 OS X) 그리고 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (윈도우)입니다. 둘 다 [virtualenv](/ko/docs/Python/Virtualenv) 도구를 사용하죠. wrapper 도구는 모든 플랫폼의 인터페이스를 관리하기 위한 일관적인 인터페이스를 생성합니다.
+우리가 가상 환경을 만드는 데 사용할 라이브러리들은 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (리눅스와 맥 OS X) 그리고 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (윈도우)입니다. 둘 다 [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv) 도구를 사용하죠. wrapper 도구는 모든 플랫폼의 인터페이스를 관리하기 위한 일관적인 인터페이스를 생성합니다.
 
 ### 가상 환경 소프트웨어 설치하기
 

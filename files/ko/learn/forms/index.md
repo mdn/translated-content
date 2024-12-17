@@ -10,22 +10,22 @@ slug: Learn/Forms
 ## 항목
 
 1. [나의 첫 HTML 폼](/ko/docs/Web/Guide/HTML/%ED%8F%BC/My_first_HTML_form)
-2. [HTML 폼 구성 방법](/ko/docs/HTML/Forms/How_to_structure_an_HTML_form)
-3. [기본 폼 위젯](/ko/docs/HTML/Forms/The_native_form_widgets)
+2. [HTML 폼 구성 방법](/ko/docs/Learn/Forms/How_to_structure_a_web_form)
+3. [기본 폼 위젯](/ko/docs/Learn/Forms/Basic_native_form_controls)
 4. CSS와 HTML 폼
 
-   1. [HTML 폼 스타일](/ko/docs/HTML/Forms/Styling_HTML_forms)
-   2. [HTML 폼을 위한 고급 스타일](/ko/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
-   3. [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Property_compatibility_table_for_form_widgets)
+   1. [HTML 폼 스타일](/ko/docs/Learn/Forms/Styling_web_forms)
+   2. [HTML 폼을 위한 고급 스타일](/ko/docs/Learn/Forms/Advanced_form_styling)
+   3. [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 
-5. [데이터 주고 받기](/ko/docs/HTML/Forms/Sending_and_retrieving_form_data)
-6. [데이터 유효성 검사](/ko/docs/HTML/Forms/Data_form_validation)
-7. [사용자 폼 위젯 만드는 방법](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
-8. [JavaScript를 통해서 폼 전달 하기](/ko/docs/HTML/Forms/Sending_forms_through_JavaScript)
+5. [데이터 주고 받기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data)
+6. [데이터 유효성 검사](/ko/docs/Learn/Forms/Form_validation)
+7. [사용자 폼 위젯 만드는 방법](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
+8. [JavaScript를 통해서 폼 전달 하기](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
 
-   1. [FormData 객체 사용](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+   1. [FormData 객체 사용](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 
-9. [기존 브라우저에서 HTML 폼](/ko/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
+9. [기존 브라우저에서 HTML 폼](/ko/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 
 ## HTML 문서
 
@@ -96,5 +96,5 @@ slug: Learn/Forms
 
 ### Normative reference
 
-- [W3C HTML5 Specification (Forms)](http://www.w3.org/TR/html5/forms.html)
-- [WHATWG HTML Living Standard (Forms)](http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#forms)
+- [W3C HTML5 Specification (Forms)](https://www.w3.org/TR/html5/forms.html)
+- [WHATWG HTML Living Standard (Forms)](https://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#forms)

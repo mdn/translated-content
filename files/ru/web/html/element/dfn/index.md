@@ -9,11 +9,11 @@ slug: Web/HTML/Element/dfn
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.                     |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.                     |
 | Пропуск тега                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                  |
-| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                       |
 | Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
 | DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                        |
 

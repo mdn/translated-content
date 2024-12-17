@@ -55,4 +55,4 @@ test();
 
 ## Veja também
 
-- [Temporal Dead Zone e erros com let.](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
+- [Temporal Dead Zone e erros com let.](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

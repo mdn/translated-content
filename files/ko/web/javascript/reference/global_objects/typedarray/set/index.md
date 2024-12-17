@@ -53,6 +53,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

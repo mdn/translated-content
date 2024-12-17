@@ -30,7 +30,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
 
 ## HTML head란?
 
-[HTML document we covered in the previous article](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)을 다시 봅시다.
+[HTML document we covered in the previous article](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)을 다시 봅시다.
 
 ```html
 <!doctype html>
@@ -54,7 +54,7 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 </head>
 ```
 
-더 큰 웹 페이지의 경우엔 head가 꽤 많은 항목을 가질 수 있습니다. 가장 좋아하는 홈페이지로 가서 [developer tools](/ko/docs/Learn/Discover_browser_developer_tools)을 이용해 head를 살펴보십시오. 이 글의 목적은 head에 들어갈 수 있는 것들 전부를 어떻게 사용하는지 보여주기 위한 것이 아니라, 주로 head에 넣고 싶어할만한 것들을 익숙하게 하고 사용하는 방법을 가르쳐주는 것입니다.
+더 큰 웹 페이지의 경우엔 head가 꽤 많은 항목을 가질 수 있습니다. 가장 좋아하는 홈페이지로 가서 [developer tools](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)을 이용해 head를 살펴보십시오. 이 글의 목적은 head에 들어갈 수 있는 것들 전부를 어떻게 사용하는지 보여주기 위한 것이 아니라, 주로 head에 넣고 싶어할만한 것들을 익숙하게 하고 사용하는 방법을 가르쳐주는 것입니다.
 
 ## 제목 달기
 
@@ -168,7 +168,7 @@ started with developing web sites and applications." />
 
 웹페이지를 돌아다니다 보면 다른 종류의 메타데이터들을 꽤 많이 볼 수 있다. 웹 사이트에서 볼 수있는 기능들은 특정 사이트 (예 : 소셜 네트워킹 사이트)에 사용할 수있는 특정 정보를 제공하도록 설계된 독점 제작물이다.
 
-[Open Graph Data](http://ogp.me/) 는 Facebook이 웹 사이트에 더 풍부한 메타 데이터를 제공하기 위해 발명한 메타 데이터 프로토콜이다. MDN 소스코드에서 다음과 같은 부분을 볼 수 있을 것이다.
+[Open Graph Data](https://ogp.me/) 는 Facebook이 웹 사이트에 더 풍부한 메타 데이터를 제공하기 위해 발명한 메타 데이터 프로토콜이다. MDN 소스코드에서 다음과 같은 부분을 볼 수 있을 것이다.
 
 ```html
 <meta

@@ -50,4 +50,4 @@ Herdado de {{domxref("EventTarget")}}:
 ## Veja também
 
 - {{ domxref("Navigator.battery","navigator.battery") }}
-- A [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status)
+- A [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API)

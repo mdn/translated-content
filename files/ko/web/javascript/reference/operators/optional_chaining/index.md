@@ -96,7 +96,7 @@ function doSomething(onContent, onError) {
 
 ### 표현식에서 Optional chaining
 
-optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
+optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation))을 사용할 수 있다:
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];

@@ -181,6 +181,7 @@
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
+/ko/docs/Glossary/DOS_attack	/ko/docs/conflicting/Glossary/Denial_of_Service
 /ko/docs/Glossary/Descriptor_(CSS)	/ko/docs/Glossary/CSS_Descriptor
 /ko/docs/Glossary/Empty_element	/ko/docs/Glossary/Void_element
 /ko/docs/Glossary/First_interactive	/ko/docs/conflicting/Glossary/First_CPU_idle

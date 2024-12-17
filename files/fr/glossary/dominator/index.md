@@ -12,6 +12,6 @@ Ce concept est important pour le "{{Glossary("garbage collection","ramasse-miett
 ## Voir aussi
 
 - [Ensemble dominant](https://fr.wikipedia.org/wiki/Ensemble_dominant) sur Wikipédia
-- [Dominants](/fr/docs/Outils/Memory/Dominators)
+- [Dominants](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
 - [Gestion de la mémoire](/fr/docs/Mozilla/js-ctypes/Using_js-ctypes/Memory_Management) en JavaScript
-- [Le ramasse-miettes ou garbage collection](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire#Le_ramasse-miettes_ou_garbage_collection)
+- [Le ramasse-miettes ou garbage collection](/fr/docs/Web/JavaScript/Memory_management#le_ramasse-miettes_ou_garbage_collection)

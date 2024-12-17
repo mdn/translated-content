@@ -68,7 +68,7 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
 
 ## Atributos
 
-Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `async`
 
@@ -100,7 +100,7 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 - `defer`
   - : Este atributo establece si el script debe ser ejecutado luego de que el documento entero sea analizado. Dado que esta función aún no fue implementada por todos los navegadores relevantes, los autores no deberían asumir que el script realmente será ejecutado luego de la carga y analisis del documento. Desde Gecko 1.9.2 el atributo defer es ignorado en los scripts que no tienen el atributo src. Sin embargo, en Gecko 1.9.1 incluso se difieren los scripts escritos dentro de la etiqueta.
 - `crossorigin` {{Non-standard_inline}}
-  - : Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar [CORS](/es/docs/Web/HTTP/Access_control_CORS). Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.
+  - : Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar [CORS](/es/docs/Web/HTTP/CORS). Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.
 
 ## Ejemplos
 
@@ -123,6 +123,6 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 ## Ver también
 
 - {{domxref("document.currentScript")}}
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
 
 {{HTMLSidebar}}

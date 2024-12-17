@@ -23,4 +23,4 @@ slug: Glossary/User_agent
 
 ### Техническая справка
 
-- [User agent](http://tools.ietf.org/html/rfc2616#section-14.43) заголовок запроса в спецификации RFC 2616
+- [User agent](https://tools.ietf.org/html/rfc2616#section-14.43) заголовок запроса в спецификации RFC 2616

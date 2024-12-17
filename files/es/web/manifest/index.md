@@ -5,7 +5,7 @@ slug: Web/Manifest
 
 {{QuickLinksWithSubpages("/es/docs/Web/Manifest")}}
 
-El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear [progressive web apps](/es/docs/Web/Apps/Progressive): aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)
+El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear [progressive web apps](/es/docs/Web/Progressive_web_apps): aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)
 
 ## Manifiesto de ejemplo
 
@@ -117,7 +117,7 @@ Los valores aceptados son:
 | `browser`    | La aplicación se abrirá en una pestaña nueva del navegador o una ventana nueva, dependiendo del navegador y plataforma. Esto es por defecto.                                                                                                                                                                          | (None)                |
 
 > [!NOTE]
-> Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
+> Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/es/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
 
 ### `icons`
 

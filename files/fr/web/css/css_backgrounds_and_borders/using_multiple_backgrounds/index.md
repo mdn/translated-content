@@ -51,4 +51,4 @@ Comme on peut le voir ici, le logo qui est le premier élément de la liste appa
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)

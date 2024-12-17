@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Statements/if...else
 ```
 
 - `condition`
-  - : 참 또는 거짓으로 평가되는 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식)입니다.
+  - : 참 또는 거짓으로 평가되는 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%91%9c%ed%98%84%ec%8b%9d)입니다.
 - `statement1`
   - : 조건이 참으로 평가될 경우 실행되는 문입니다.
     중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우 ({ ... })[블럭](/ko/docs/Web/JavaScript/Reference/Statements/block) 구문 으로 그룹화 하고 실행하지 않으려면 [빈](/ko/docs/Web/JavaScript/Reference/Statements/Empty) 구문을 사용합니다.
@@ -130,4 +130,4 @@ if ((x = y)) {
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [삼항 조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [삼항 조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

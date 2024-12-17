@@ -22,7 +22,7 @@ Bueno, tampoco es _así de simple_ — a medida que profundices hay algunas otra
 
 ## Un ejemplo erróneo
 
-Para empezar, regresemos a nuestro juego de adivinan el número — excepto que esta vez vamos a explorar una versión que tiene algunos errores insertados deliberadamente. Ve a GitHub y haz una copia local de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (puedes verlo [en vivo aquí](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
+Para empezar, regresemos a nuestro juego de adivinan el número — excepto que esta vez vamos a explorar una versión que tiene algunos errores insertados deliberadamente. Ve a GitHub y haz una copia local de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (puedes verlo [en vivo aquí](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
 
 1. Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.
 2. Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!
@@ -34,7 +34,7 @@ En este punto, consultemos la consola del desarrollador para ver si podemos ver 
 
 ## Solucionar errores de sintaxis
 
-Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
+Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
 1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
@@ -86,7 +86,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
    console.log(lowOrHi);
    ```
 
-   > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
+   > **Nota:** [`console.log()`](/es/docs/Web/API/console/log_static) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
 7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
@@ -182,7 +182,7 @@ var userGuess === Number(guessField.value);
 Lanza este error porque cree que estás intentando hacer algo diferente. Debes asegurarte de no confundir el operador de asignación (`=`), que establece una variable para que sea igual a un valor — con el operador de igualdad estricta (`===`), que prueba si un valor es igual a otro y devuelve un resultado `true`/`false`.
 
 > [!NOTE]
-> Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ; antes de la declaración](/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement).
+> Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ; antes de la declaración](/es/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token).
 
 ### El programa siempre dice que has ganado, independientemente de lo que hayas ingresado
 
@@ -234,7 +234,7 @@ Estos errores generalmente significan que has omitido las comillas de apertura o
 Para todos estos errores, piensa en cómo abordamos los ejemplos que vimos en el tutorial. Cuando surge un error, mira el número de línea que te dan, ve a esa línea y revísala para detectar lo que está mal. Ten en cuenta que el error no necesariamente estará en esa línea, y también que el error podría no ser causado por el mismo problema que mencionamos anteriormente.
 
 > [!NOTE]
-> Obtén más detalles sobre estos errores en nuestras páginas de referencia [SyntaxError: símbolo inesperado](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token) y [SyntaxError: cadena literal sin terminar](/es/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal).
+> Obtén más detalles sobre estos errores en nuestras páginas de referencia [SyntaxError: símbolo inesperado](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token) y [SyntaxError: cadena literal sin terminar](/es/docs/Web/JavaScript/Reference/Errors/String_literal_EOL).
 
 ## Resumen
 

@@ -19,7 +19,7 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 > **Note:** **Usage note:**
 > Navegadores nem sempre exibem a imagem referenciada pelo elemento. Este é o caso para navegadores não gráficos (incluindo aqueles usados por pessoas com deficiência de visão), ou se o usuário optar por não exibir imagens ou se o navegador não conseguir exibir a imagem porque é inválido ou um tipo não suportado. Nesses casos, o navegador pode substituir a imagem pelo texto definido no atributo **alt** deste elemento.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, palpable content. If the element has a [`usemap`](/pt-BR/docs/Web/HTML/Element/img#usemap) attribute, it also is a part of the interactive content category.
+- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, palpable content. If the element has a [`usemap`](#usemap) attribute, it also is a part of the interactive content category.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
 - _Permitted parent elements_ Any element that accepts embedded content.
@@ -41,14 +41,14 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The width of a border around the image.
 - `crossorigin`
 
-  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
     - anonymous
       - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted..
     - use-credentials
       - : A cross-origin request (i.e. with `Origin:` HTTP header) performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for additional information.
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
 - `height`
   - : The height of the image in HTML 5 CSS pixels, or HTML 4 in pixels or as a percentage.
@@ -81,7 +81,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The width of the image in pixels or percent.
 - `usemap`
 
-  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/HTML/Element/map) associated with the element.
+  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/Web/HTML/Element/map) associated with the element.
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
@@ -96,7 +96,7 @@ O padrão HTML não fornece uma lista de formatos de imagem que devem ser suport
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
 - [APNG](/pt-BR/docs/Animated_PNG_graphics)
-- [SVG](/pt-BR/docs/SVG)
+- [SVG](/pt-BR/docs/Web/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 - [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)

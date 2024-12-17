@@ -39,7 +39,7 @@ El entorno de desarrollo es una instalación de Django en tu computadora local q
 
 Las principales herramientas que el mismo Django proporciona son un conjunto de scripts de Python para crear y trabajar con proyectos Django, junto con un simple _servidor web de desarrollo_ que puedes usar para probar de forma local (es decir en tu computadora, no en un servidor web externo) aplicaciones web Django con el explorador web de tu computadora.
 
-Hay otras herramientas periféricas, que forman parte del entorno de desarrollo, que no cubriremos aquí. Estas incluyen cosas como un [editor de textos](/es/docs/Learn/Common_questions/Available_text_editors) o IDE para editar código, una herramienta de gestión del control de fuentes como [Git](https://git-scm.com/) para gestionar con seguridad las diferentes versiones de tu código. Asumimos que tienes ya un editor de textos instalado.
+Hay otras herramientas periféricas, que forman parte del entorno de desarrollo, que no cubriremos aquí. Estas incluyen cosas como un [editor de textos](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) o IDE para editar código, una herramienta de gestión del control de fuentes como [Git](https://git-scm.com/) para gestionar con seguridad las diferentes versiones de tu código. Asumimos que tienes ya un editor de textos instalado.
 
 ### ¿Cuáles son las opciones de puesta en marcha de Django?
 
@@ -193,7 +193,7 @@ pip3 list
 
 ## Uso de Django dentro de un entorno virtual de Python
 
-Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/es/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
+Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
 
 ### Instalación del software del entorno virtual
 

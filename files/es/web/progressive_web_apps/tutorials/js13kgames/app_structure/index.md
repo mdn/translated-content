@@ -28,7 +28,7 @@ Podemos controlar lo que se solicita del servidor y lo que se recupera de la cac
 
 ### ¿Por qué debería usarla?
 
-Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como [agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Add_to_home_screen) o [notificaciones push](/es/docs/Web/API/Push_API), con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.
+Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como [agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) o [notificaciones push](/es/docs/Web/API/Push_API), con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.
 
 El sitio web se siente como una aplicación nativa con interacción instantánea y un rendimiento sólido, al tiempo que conserva todos los beneficios de la web.
 
@@ -38,7 +38,7 @@ Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la a
 
 - Enlazable: aunque se comporta como una aplicación nativa, sigue siendo un sitio web; puedes hacer clic en los enlaces dentro de la página y enviar una URL a alguien si deseas compartirla.
 - Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio _workers_ es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.
-- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) y [Rejilla CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
+- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) y [Rejilla CSS](/es/docs/Web/CSS/CSS_grid_layout).
 
 ## Concepto diferente: streams o transmisiones
 

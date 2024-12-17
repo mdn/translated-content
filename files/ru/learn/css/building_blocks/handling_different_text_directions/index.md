@@ -9,9 +9,9 @@ slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 
 Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                           |
+| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                               |
 
 ## Какие бывают режимы письма?
 
@@ -31,7 +31,7 @@ slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 
 ## Writing modes and block and inline layout
 
-We have already discussed [block and inline layout](/ru/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+We have already discussed [block and inline layout](/ru/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
 If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
 
@@ -85,7 +85,7 @@ You can see a comparison between physical and logical properties below.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/ru/docs/Web/CSS/CSS_Logical_Properties).
+There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/ru/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Logical values
 

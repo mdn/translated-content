@@ -47,7 +47,7 @@ A seguinte captura de tela mostra um exemplo do que o programa concluído deve p
 
 ![](assessment-1.png)
 
-Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
+Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
 
 ## Passos para completar
 

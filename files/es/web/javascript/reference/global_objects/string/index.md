@@ -23,7 +23,7 @@ const string3 = `Otra cadena primitiva más`;
 const string4 = new String("Un objeto String");
 ```
 
-Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#Primitivas_string_y_objetos_string)" a continuación.
+Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#primitivas_string_y_objetos_string)" a continuación.
 
 Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>\`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
 
@@ -45,7 +45,7 @@ Cuando se usa la notación entre corchetes para acceder a los caracteres, no se 
 
 ### Comparar cadenas
 
-En C, se usa la función `strcmp()` para comparar cadenas. En JavaScript, solo usas los [operadores menor que y mayor que](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators):
+En C, se usa la función `strcmp()` para comparar cadenas. En JavaScript, solo usas los [operadores menor que y mayor que](/es/docs/Web/JavaScript/Reference/Operators):
 
 ```js
 let a = "a";
@@ -298,5 +298,5 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 - [Formato de texto en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
 - {{domxref("DOMString")}}
-- [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/Add-ons/Code_snippets/StringView)
-- [Cadenas binarias](/es/docs/Web/API/DOMString/Binary)
+- [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/docs/Mozilla/Add-ons/Code_snippets/StringView)
+- [Cadenas binarias](/es/docs/Web/API/Window/btoa)

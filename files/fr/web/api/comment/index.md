@@ -32,4 +32,4 @@ _Cette interface ne possède pas de méthode spécifique, mais en hérite de ses
 
 ## Voir aussi
 
-- [The DOM interfaces index](/fr/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)

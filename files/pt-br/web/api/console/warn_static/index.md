@@ -28,7 +28,7 @@ console.warn(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Objetos JavaScript com qual as strings de substituição `msg` serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
 
-Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
+Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
 
 ## Especificações
 
@@ -40,5 +40,5 @@ Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text
 
 ## Ver também
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

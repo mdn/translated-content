@@ -273,7 +273,7 @@ foo(1); // 11
 
 ### 생성자로 사용할 수 없습니다
 
-화살표 함수는 생성자로 사용할 수 없으며 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하면 에러가 발생합니다. 또한 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성이 없습니다.
+화살표 함수는 생성자로 사용할 수 없으며 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하면 에러가 발생합니다. 또한 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성이 없습니다.
 
 ```js
 const Foo = () => {};

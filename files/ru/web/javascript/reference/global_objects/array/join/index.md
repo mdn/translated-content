@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 
 ## Сводка
 
-Метод **`join()`** объединяет все элементы массива (или [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) в строку.
+Метод **`join()`** объединяет все элементы массива (или [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) в строку.
 
 {{EmbedInteractiveExample("pages/js/array-join.html")}}
 

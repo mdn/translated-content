@@ -9,7 +9,7 @@ Los juegos desarrollados en HTML5 tienen una gran ventaja sobre los nativos en t
 
 ## Distribución
 
-Así que has seguido un [tutorial](/es/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) o [dos](/es/docs/Games/Workflows/2D_Breakout_game_Phaser) y has creado un juego HTML5. ¡Genial! La [distribución de juegos](/es/docs/Games/Publishing_games/Game_distribution) proporciona todo lo que se necesita saber sobre las formas en que puede distribuir su juego recién creado, incluido hospedarlo en línea, enviarlo a mercados abiertos y enviarlo a sitios cerrados como GooglePlay o iOS App Store.
+Así que has seguido un [tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) o [dos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) y has creado un juego HTML5. ¡Genial! La [distribución de juegos](/es/docs/Games/Publishing_games/Game_distribution) proporciona todo lo que se necesita saber sobre las formas en que puede distribuir su juego recién creado, incluido hospedarlo en línea, enviarlo a mercados abiertos y enviarlo a sitios cerrados como GooglePlay o iOS App Store.
 
 ## Promoción
 

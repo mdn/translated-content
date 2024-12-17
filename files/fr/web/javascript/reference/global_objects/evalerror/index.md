@@ -24,7 +24,7 @@ L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/f
   - : Le numéro de la ligne dans le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`EvalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de la colonne de la ligne du fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples

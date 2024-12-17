@@ -7,7 +7,7 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 ### Aperçu
 
-Cet article et son exemple associé montrent comment utiliser du [SVG](/fr/SVG) en ligne pour fournir une image de fond à un formulaire. Il montre comment [JavaScript](/fr/JavaScript) et [CSS](/fr/CSS) peuvent servir à manipuler l'image comme vous le feriez avec le XHTML dans un script. Notez que l'exemple ne fonctionnera que dans des navigateurs supportant XHTML (pas HTML) et l'intégration SVG.
+Cet article et son exemple associé montrent comment utiliser du [SVG](/fr/docs/Web/SVG) en ligne pour fournir une image de fond à un formulaire. Il montre comment [JavaScript](/fr/docs/Web/JavaScript) et [CSS](/fr/docs/Web/CSS) peuvent servir à manipuler l'image comme vous le feriez avec le XHTML dans un script. Notez que l'exemple ne fonctionnera que dans des navigateurs supportant XHTML (pas HTML) et l'intégration SVG.
 
 ### Source
 

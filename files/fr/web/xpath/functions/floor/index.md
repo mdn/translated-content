@@ -24,7 +24,7 @@ Le plus grand nombre entier inférieur ou égal à `nombre`.
 
 ### Définition
 
-[XPath 1.0, section 4.4](http://www.w3.org/TR/xpath#function-floor).
+[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-floor).
 
 ### Support Gecko
 
