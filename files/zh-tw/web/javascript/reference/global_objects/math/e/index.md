@@ -2,7 +2,7 @@
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 l10n:
-  sourceCommit: 
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
