@@ -48,7 +48,7 @@ l10n:
 
 ![Axe 可存取性測試擴充套件顯示網頁中的可存取性問題。](axe_developer_tools_add_on.png)
 
-Firefox 的擴充套件是基於 [WebExtensions API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 構建的，這是一種跨瀏覽器的擴充套件開發系統。此 API 在很大程度上與 Google Chrome 和 Opera 支援的[擴充套件 API](https://developer.chrome.com/docs/extensions/reference/) 相容。針對這些瀏覽器開發的擴充套件通常只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 或 Microsoft Edge 中運行。
+Firefox 的擴充套件是基於 [WebExtension API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) 構建的，這是一種跨瀏覽器的擴充套件開發系統。此 API 在很大程度上與 Google Chrome 和 Opera 支援的[擴充套件 API](https://developer.chrome.com/docs/extensions/reference/) 相容。針對這些瀏覽器開發的擴充套件通常只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 或 Microsoft Edge 中運行。
 
 如果你有想法或問題，可以透過 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35) 或 [Matrix](https://wiki.mozilla.org/Matrix) 中的 [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) 與我們聯繫。
 
