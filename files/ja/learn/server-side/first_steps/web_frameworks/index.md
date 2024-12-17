@@ -157,7 +157,7 @@ def youngest(request):
     {% if youngest_teams %}
       <ul>
         {% for team in youngest_teams %}
-          <li>\{\{ team.team_name \}\}</li>
+          <li>\{{ team.team_name }}</li>
         {% endfor %}
       </ul>
     {% else %}
