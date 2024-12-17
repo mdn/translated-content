@@ -36,20 +36,20 @@ Math.atan2(y, x)
 
 `Math.atan2()` 接收分別的 `x` 和 `y` 參數，而 [`Math.atan()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) 則接收兩個參數的比值。`Math.atan2(y, x)` 與 `Math.atan(y / x)` 之間的差異如下：
 
-| `x`                  | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
-| -------------------- | ----------- | ------------------ | ------------------ |
-| `Infinity`           | `Infinity`  | π / 4              | `NaN`              |
-| `Infinity`           | `-Infinity` | -π / 4             | `NaN`              |
-| `-Infinity`          | `Infinity`  | 3π / 4             | `NaN`              |
-| `-Infinity`          | `-Infinity` | -3π / 4            | `NaN`              |
-| 0                    | 0           | 0                  | `NaN`              |
-| 0                    | -0          | -0                 | `NaN`              |
-| < 0 (包含 `-0`)      | 0           | π                  | 0                  |
-| < 0 (包含 `-0`)      | -0          | -π                 | 0                  |
-| `-Infinity`          | > 0         | π                  | -0                 |
-| -0                   | > 0         | π / 2              | -π / 2             |
-| `-Infinity`          | < 0         | -π                 | 0                  |
-| -0                   | < 0         | -π / 2             | π / 2              |
+| `x`             | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
+| --------------- | ----------- | ------------------ | ------------------ |
+| `Infinity`      | `Infinity`  | π / 4              | `NaN`              |
+| `Infinity`      | `-Infinity` | -π / 4             | `NaN`              |
+| `-Infinity`     | `Infinity`  | 3π / 4             | `NaN`              |
+| `-Infinity`     | `-Infinity` | -3π / 4            | `NaN`              |
+| 0               | 0           | 0                  | `NaN`              |
+| 0               | -0          | -0                 | `NaN`              |
+| < 0 (包含 `-0`) | 0           | π                  | 0                  |
+| < 0 (包含 `-0`) | -0          | -π                 | 0                  |
+| `-Infinity`     | > 0         | π                  | -0                 |
+| -0              | > 0         | π / 2              | -π / 2             |
+| `-Infinity`     | < 0         | -π                 | 0                  |
+| -0              | < 0         | -π / 2             | π / 2              |
 
 此外，對於第二和第三象限中的點（`x < 0`），`Math.atan2()` 輸出的角度會小於 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> 或大於 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>。
 
