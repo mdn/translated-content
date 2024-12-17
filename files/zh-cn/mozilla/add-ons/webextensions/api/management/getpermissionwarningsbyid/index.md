@@ -13,7 +13,7 @@ l10n:
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -30,7 +30,7 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用一个字符串数组兑现，其中各字符串都包含权限警告的文本。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现为一个字符串数组，其中的字符串包含权限警告的文本。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 
 ## 示例
 
-记录名为“my-add-on”的附加组件的权限警告信息。
+记录名为“my-add-on”的附加组件的权限警告信息：
 
 ```js
 let id = "my-add-on";
