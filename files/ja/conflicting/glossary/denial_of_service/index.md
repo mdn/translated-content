@@ -1,6 +1,7 @@
 ---
 title: DoS attack (DoS 攻撃)
-slug: Glossary/DOS_attack
+slug: conflicting/Glossary/Denial_of_Service
+original_slug: Glossary/DOS_attack
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
