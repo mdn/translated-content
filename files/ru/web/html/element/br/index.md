@@ -16,7 +16,7 @@ slug: Web/HTML/Element/br
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 
@@ -54,10 +54,10 @@ USA<br />
 
 ## Техническая сводка
 
-- _[Категории контента](/ru/docs/Web/Guide/HTML/Content_categories)_ [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
+- _[Категории контента](/ru/docs/Web/HTML/Content_categories)_ [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _Разрешённое содержимое_ Отсутствует, это {{Glossary("пустой элемент")}}.
 - *Пропуск тегов*Должен иметь открывающий тег, но не закрывающий тег. В XHTML документах элемент пишется как `<br />`.
-- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
+- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _Интерфейс DOM_ {{domxref("HTMLBRElement")}}
 
 ## Спецификации

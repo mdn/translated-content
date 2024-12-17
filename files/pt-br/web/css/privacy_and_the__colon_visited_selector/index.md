@@ -57,6 +57,6 @@ No geral, essas restrições estas restrições não deveriam afetar desenvolved
 
 ## Veja também
 
-- [privacy-related changes coming to CSS :visited](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) em Mozilla Hacks (em inglês)
-- [Plugging the CSS History Leak](http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) em the Mozilla Security Blog (em inglês)
-- [Preventing attacks on a user's history through CSS :visited selectors](http://dbaron.org/mozilla/visited-privacy) (em inglês)
+- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) em Mozilla Hacks (em inglês)
+- [Plugging the CSS History Leak](https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) em the Mozilla Security Blog (em inglês)
+- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy) (em inglês)

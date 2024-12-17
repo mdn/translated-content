@@ -15,7 +15,7 @@ var extensions = aWebSocket.extensions;
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Spécifications
 

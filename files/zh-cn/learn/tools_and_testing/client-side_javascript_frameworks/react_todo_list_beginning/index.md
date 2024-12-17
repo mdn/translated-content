@@ -189,7 +189,7 @@ function App(props) {
 
 它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 JSX，以及它是如何与我们的用户故事相对应的。
 
-- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
+- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
 - 我们有一组按钮，用于筛选我们的任务。
 - 我们有一个标题，用于告诉我们还有多少任务。
 - 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。

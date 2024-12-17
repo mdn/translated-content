@@ -26,9 +26,9 @@ Este módulo contém os seguintes artigos, que o guiarão através de toda a teo
   - : **{{Glossary("CSS")}}** (Cascading Style Sheets) permite que você crie páginas web com ótima aparência. Mas como isso funciona por debaixo dos panos? Este artigo explica o que é CSS, com um exemplo simples de sintaxe, e também aborda alguns termos importantes sobre a linguagem.
 - [Iniciando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
   - : Neste artigo, pegaremos um documento HTML simples e aplicaremos CSS a ele, aprendendo algumas coisas práticas sobre a linguagem ao longo do caminho.
-- [Como CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
   - : Agora que você tem uma ideia sobre o que é CSS e o básico sobre como usá-lo, é hora de analisar um pouco mais a fundo a estrutura da linguagem em si. Já conhecemos muitos dos conceitos discutidos aqui; você pode retornar a este para recapitular se acharos conceitos posteriores confusos.
-- [Como CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
   - : Aprendemos o básico do CSS, para que ele serve e como escrever folhas de estilo simples. Neste exercício, veremos como um navegador utiliza CSS e HTML, e os transforma em uma página da web.
 
 ## Avaliações

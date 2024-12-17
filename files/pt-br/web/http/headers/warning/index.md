@@ -49,7 +49,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## Códigos de aviso (Warning)
 
-O [registro de Códigos de Aviso HTTP em iana.org](http://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) define o espaço de nomes para códigos de aviso.
+O [registro de Códigos de Aviso HTTP em iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) define o espaço de nomes para códigos de aviso.
 
 | Código | Texto                     | Descrição                                                                                                                                         |
 | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

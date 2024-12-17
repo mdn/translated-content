@@ -111,6 +111,6 @@ Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más
 
 ## Continuamos
 
-Esta es la última sección de nuestros artículos sobre selectores. A continuación vamos a pasar a otra parte importante del CSS: [el modelo de caja CSS](/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja).
+Esta es la última sección de nuestros artículos sobre selectores. A continuación vamos a pasar a otra parte importante del CSS: [el modelo de caja CSS](/es/docs/Learn/CSS/Building_blocks/The_box_model).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

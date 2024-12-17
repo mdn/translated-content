@@ -14,7 +14,7 @@ slug: Mozilla/Firefox/Releases/88
 
 ### 開発者ツール
 
-- 生の応答ビューと整形済みの応答ビューを切り替えるボタンを実装しました ([Firefox バグ 1693147](https://bugzil.la/1693147))。例えば、[ネットワークリクエストの詳細 > 応答タブ](/ja/docs/Tools/Network_Monitor/request_details#response_tab) をご覧ください。
+- 生の応答ビューと整形済みの応答ビューを切り替えるボタンを実装しました ([Firefox バグ 1693147](https://bugzil.la/1693147))。例えば、[ネットワークリクエストの詳細 > 応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) をご覧ください。
 
 ### HTML
 
@@ -51,7 +51,7 @@ _変更なし。_
 
 #### DOM
 
-- すでに [`aborted`](/ja/docs/Web/API/AbortSignal/aborted) が設定されている {{domxref("AbortSignal")}} を返す静的メソッド [`AbortSignal.abort()`](/ja/docs/Web/API/AbortSignal/abort) が使用可能になりました ([Firefox バグ 1698468](https://bugzil.la/1698468)).
+- すでに [`aborted`](/ja/docs/Web/API/AbortSignal/aborted) が設定されている {{domxref("AbortSignal")}} を返す静的メソッド [`AbortSignal.abort()`](/ja/docs/Web/API/AbortSignal/abort_static) が使用可能になりました ([Firefox バグ 1698468](https://bugzil.la/1698468)).
 
 ### WebDriver conformance (Marionette)
 

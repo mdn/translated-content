@@ -51,7 +51,7 @@ slug: Learn/Performance/JavaScript
 
 你还应该将 JavaScript 分成表示关键部分和非关键部分的多个文件。通过使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)可以比仅使用单独的外部 JavaScript 文件更高效地实现这一点。
 
-然后，你可以优化这些较小的文件。[代码压缩](/zh-CN/docs/Glossary/Minification)减少文件中的字符数，从而减小 JavaScript 的字节数或大小。[Gzip 压缩](/zh-CN/docs/Glossary/GZip_compression)进一步压缩文件，即使你不对代码进行压缩也应该使用。[Brotli 压缩](/zh-CN/docs/Glossary/Brotli_compression)类似于 Gzip，但通常优于 Gzip 压缩。
+然后，你可以优化这些较小的文件。[代码压缩](/zh-CN/docs/Glossary/Minification)减少文件中的字符数，从而减小 JavaScript 的字节数或大小。[Gzip 压缩](/zh-CN/docs/Glossary/gzip_compression)进一步压缩文件，即使你不对代码进行压缩也应该使用。[Brotli 压缩](/zh-CN/docs/Glossary/Brotli_compression)类似于 Gzip，但通常优于 Gzip 压缩。
 
 你可以手动拆分和优化代码，但通常使用类似 [Webpack](https://webpack.js.org/) 的模块打包工具会做得更好。
 
@@ -332,7 +332,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 ## 参见
 
-- [优化长任务](https://web.dev/articles/optimize-long-tasks)（web.dev，2022 年）
+- [优化长任务](https://web.developers.google.cn/articles/optimize-long-tasks)（web.developers.google.cn，2022 年）
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

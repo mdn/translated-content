@@ -134,5 +134,5 @@ Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) sur un 
 
 ## Voir aussi
 
-- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
+- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
 - Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)

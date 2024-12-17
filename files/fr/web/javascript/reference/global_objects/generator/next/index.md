@@ -80,4 +80,4 @@ g.next(2);
 ## Voir aussi
 
 - {{jsxref("Instructions/function*","function*")}}
-- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs)
+- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)

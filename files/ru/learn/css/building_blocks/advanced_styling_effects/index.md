@@ -15,7 +15,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 {{cssxref("box-shadow")}} позволяет добавить одну и более тень к контейнеру. Как и `text-shadow`, `box-shadows` отлично поддерживаются браузерами, включая IE9+ и Edge. У пользователей ранних версий IE будет просто копия без тени, поэтому убедитесь, что контент с дизайном разборчив и без теней.
 
-Вы можете найти примеры из стати на [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (или в [исходном коде](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html)).
+Вы можете найти примеры из стати на [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (или в [исходном коде](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html)).
 
 ### Обычная тень
 
@@ -187,7 +187,7 @@ button:active {
 - {{cssxref("background-blend-mode")}}, которое смешивает цвет фона и цвета отдельного элемента.
 - {{cssxref("mix-blend-mode")}}, которое смешивает элементы, наложенные друг на друга.
 
-Вы можете найти больше примеров смешивания на странице [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (смотрите [источник](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) и на странице {{cssxref("&lt;blend-mode&gt;")}}.
+Вы можете найти больше примеров смешивания на странице [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (смотрите [источник](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) и на странице {{cssxref("&lt;blend-mode&gt;")}}.
 
 > [!NOTE]
 > Смешивание — относительно новое свойство, поэтому поддерживается хуже, чем фильтры. Оно совсем не поддерживается на Edge, а Safari поддерживает лишь некоторые значения свойства.
@@ -300,9 +300,9 @@ article div:last-child {
 Форма в этом примере не реагирует на содержание изображения. Вместо этого в центре изображения определяется центр окружности, как если бы мы начертили циркулем окружность, вписанную в изображение. Это та окружность, которую обтекает текст.
 
 > [!NOTE]
-> В Firefox вы можете использовать [Инспектор фигур](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes), чтобы редактировать фигуры.
+> В Firefox вы можете использовать [Инспектор фигур](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html), чтобы редактировать фигуры.
 
-Значение `circle()` — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте [Обзор CSS-фигур](/ru/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) на MDN.)
+Значение `circle()` — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте [Обзор CSS-фигур](/ru/docs/Web/CSS/CSS_shapes/Overview_of_shapes) на MDN.)
 
 ## -webkit-background-clip: text
 
@@ -320,7 +320,7 @@ article div:last-child {
 Если вы собираетесь использовать подобные опции, проверьте совместимость их с браузерами.
 
 > [!NOTE]
-> Пример с `-webkit-background-clip: text` смотрите на [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (или [источнике](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> Пример с `-webkit-background-clip: text` смотрите на [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (или [источнике](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Итог
 

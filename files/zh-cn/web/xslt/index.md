@@ -17,7 +17,7 @@ XSLT 最常用于不同 XML 模式间的数据转换，或用于将 XML 数据�
   - : 参考。
 - [使用 XSLT 转换 XML](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT 允许样式表作者以两种重要的方式转换主 XML 文档：对内容进行操作或排序，包括根据需要对其进行整体重新排序，以及将内容转换为不同的格式。
-- [使用 Mozilla JavaScript 接口进行 XSL 转换](/zh-CN/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [使用 Mozilla JavaScript 接口进行 XSL 转换](/zh-CN/docs/Web/API/XSLTProcessor)
   - : 文档描述了 Mozilla 1.2 及以上版本中 XSLT 处理引擎的 JavaScript 接口。
 - [使用处理指令指定参数](/zh-CN/docs/Web/XSLT/PI_Parameters)
   - : Firefox 允许在使用 `<?xml-stylesheet?>` 处理指令时指定样式表参数。这是通过文档中描述的 `<?xslt-param?>` 处理指令完成的。

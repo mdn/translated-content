@@ -44,7 +44,7 @@ return x + y / 3;
 
 ### Автоматическая расстановка точек с запятыми
 
-На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
+На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
 
 ```js-nolint
 return

@@ -22,7 +22,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ## 概覽
 
-[HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms)是網頁中由一個、或多個字段/小工具形成的一個組合，它被用來收集用戶的信息，並將信息上傳到服務器。表單作為一種用來收集用戶的機制，非常的靈活，因為有各種合適的輸入框，來接受各種類型的數據——文本框，複選框，單選按鈕，時間選擇器等。表單和服務器交互數據也相對安全，因為它使用`POST`請求發送數據，保護不受跨站點請求偽造攻擊（cross-site request forgery）的威脅。
+[HTML 表單](/zh-TW/docs/Learn/Forms)是網頁中由一個、或多個字段/小工具形成的一個組合，它被用來收集用戶的信息，並將信息上傳到服務器。表單作為一種用來收集用戶的機制，非常的靈活，因為有各種合適的輸入框，來接受各種類型的數據——文本框，複選框，單選按鈕，時間選擇器等。表單和服務器交互數據也相對安全，因為它使用`POST`請求發送數據，保護不受跨站點請求偽造攻擊（cross-site request forgery）的威脅。
 
 但是表單同樣也很複雜！開發者需要編寫給表單編寫 HTML，在服務器上驗證，並且正確去除有害的數據（瀏覽器上也可能需要），對於任何不合法的字段，需要傳給用戶相應的錯誤信息，當數據成功提交後，處理數據，並設法通知用戶提交成功。
 
@@ -33,7 +33,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ### HTML 表單
 
-首先簡要概述 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms)。考慮一個簡單的 HTML 表單，其中包含一個文本字段，用於輸入某些 「團隊」 的名稱，及其相關標籤：
+首先簡要概述 [HTML 表單](/zh-TW/docs/Learn/Forms)。考慮一個簡單的 HTML 表單，其中包含一個文本字段，用於輸入某些 「團隊」 的名稱，及其相關標籤：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 

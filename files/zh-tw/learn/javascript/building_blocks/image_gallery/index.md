@@ -58,7 +58,7 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 - 在 `thumb-bar <div>` 裡的每個 `<img>` 添加一個 `onclick` 處理器使這個圖片被點擊時會放大展示在 `displayed-img <img>` 裡。
 - 在 `<button>` 添加一個 `onclick` 處理器，當點擊時，全尺寸圖片產生暗化效果，再次點擊時移除暗化效果。
 
-為了讓你更清楚，你可以看看這個 [完成的範例](http://mdn.github.io/learning-area/javascript/building-blocks/gallery/) （但別偷看原始碼！）
+為了讓你更清楚，你可以看看這個 [完成的範例](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) （但別偷看原始碼！）
 
 ## 一步步完成
 

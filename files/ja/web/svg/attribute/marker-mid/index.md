@@ -7,9 +7,9 @@ l10n:
 
 {{SVGRef}}
 
-**`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Element#Shape_elements)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
+**`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Element#shape_elements)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
 
-マーカーは、[パスデータ](/ja/docs/Web/SVG/Attribute/d#Path_commands)の最初と最後以外のすべての頂点に描画されます。
+マーカーは、[パスデータ](/ja/docs/Web/SVG/Attribute/d#path_commands)の最初と最後以外のすべての頂点に描画されます。
 
 > [!NOTE]
 > プレゼンテーション属性なので、 `marker-mid` は CSS プロパティとして使用することができます。

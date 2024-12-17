@@ -1332,6 +1332,7 @@
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
+/ja/docs/Glossary/DOS_attack	/ja/docs/conflicting/Glossary/Denial_of_Service
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
@@ -4164,6 +4165,7 @@
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ja/docs/Web/HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/ja/docs/Web/URI/Schemes/resource
+/ja/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/ja/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy
 /ja/docs/Web/HTTP/Feature_Policy	/ja/docs/Web/HTTP/Permissions_Policy
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox

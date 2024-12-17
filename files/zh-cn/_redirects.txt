@@ -517,6 +517,7 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
+/zh-CN/docs/Glossary/DOS_attack	/zh-CN/docs/Glossary/Denial_of_Service
 /zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
@@ -2442,6 +2443,7 @@
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/选择_www_或非_www_URL_作为域名	/zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 /zh-CN/docs/Web/HTTP/Caching_FAQ	/zh-CN/docs/Web/HTTP/Caching
+/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/zh-CN/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /zh-CN/docs/Web/HTTP/Content_negotiation/Accept_默认值	/zh-CN/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values
 /zh-CN/docs/Web/HTTP/Feature_Policy	/zh-CN/docs/Web/HTTP/Permissions_Policy
 /zh-CN/docs/Web/HTTP/HTTP_Strict_Transport_Security	/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security

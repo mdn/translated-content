@@ -30,7 +30,7 @@ resource://gre/res/svg.css
 resource://<File-loader> -> <File-loaded>
 ```
 
-자세한 내용은 [웹에서 리소스 식별](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)을 참조하세요.
+자세한 내용은 [웹에서 리소스 식별](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)을 참조하세요.
 
 이 글에서는, 내장 리소스를 가리키기 위해 Firefox에서 내부적으로 사용되는 리소스 URI에 중점을 둡니다.
 
@@ -73,6 +73,6 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 
 ## 같이 보기
 
-- [Web에서 리소스를 식별하기](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Web에서 리소스를 식별하기](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
 - [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA URI 체계 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:`은 [이곳에서 다룹니다](https://www.iana.org/assignments/uri-schemes/prov/resource))

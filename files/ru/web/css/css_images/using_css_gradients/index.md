@@ -911,6 +911,6 @@ div {
 - Градиентные функции: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}}
 - Типы данных CSS, связанные с градиентами: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Свойства CSS, связанные с градиентами: {{cssxref("background")}}, {{cssxref("background-image")}}
-- [Галерея шаблонов градиентов CSS, от Lea Verou](http://lea.verou.me/css3patterns/)
+- [Галерея шаблонов градиентов CSS, от Lea Verou](https://lea.verou.me/css3patterns/)
 - [Библиотека градиентов CSS3, от Estelle Weyl](http://standardista.com/cssgradients)
 - [Генератор градиентов CSS](https://cssgenerator.org/gradient-css-generator.html)

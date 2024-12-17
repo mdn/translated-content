@@ -31,7 +31,7 @@ No hay código real en el debate porque ¡todavía no hemos seleccionado el fram
 
 ## Servidores Web y HTTP (iniciación)
 
-Los exploradores web se comunican con los [servidores web](/es/docs/Learn/Common_questions/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
+Los exploradores web se comunican con los [servidores web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
 
 Esta petición incluye:
 
@@ -62,7 +62,7 @@ Los sitios web tanto estáticos como dinámicos (abordados en las secciones sigu
 Puedes realizar una petición `GET` simplemente pinchando sobre un enlace o buscando en un sitio (como la página inicial de un motor de búsquedas). Por ejemplo, la petición HTTP que se envía cuando realizas una búsqueda en MDN del término "visión general cliente servidor" se parecerá mucho al texto que se muestra más abajo (no será idéntica porque algunas partes del mensaje dependen de tu explorador/configuración).
 
 > [!NOTE]
-> El formato de los mensajes HTTP está definido en el "estándard web" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). No necesitas conocer este nivel de detalle, pero al menos ¡ahora sabes de donde viene todo esto!
+> El formato de los mensajes HTTP está definido en el "estándard web" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). No necesitas conocer este nivel de detalle, pero al menos ¡ahora sabes de donde viene todo esto!
 
 #### La petición
 
@@ -203,7 +203,7 @@ Content-Length: 0
 ```
 
 > [!NOTE]
-> Las repuestas y las peticiones HTTP mostradas en estos ejemplos fueron capturadas usando la aplicación [Fiddler](https://www.telerik.com/download/fiddler), pero puedes obtener información similar usando sniffers web (ej. <http://web-sniffer.net/>) o usando extensiones del explorador como [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Puedes probarlo por tí mismo. Usa una de las herramientas enlazadas, y a continuación navega a través de un sitio y edita información del perfil para ver las diferentes peticiones y respuestas. La mayoría de los exploradores modernos también tienen herramientas que monitorizan las peticiciones de red (Por ejemplo, la herramienta [Network Monitor](/es/docs/Tools/Network_Monitor) en Firefox).
+> Las repuestas y las peticiones HTTP mostradas en estos ejemplos fueron capturadas usando la aplicación [Fiddler](https://www.telerik.com/download/fiddler), pero puedes obtener información similar usando sniffers web (ej. <http://web-sniffer.net/>) o usando extensiones del explorador como [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Puedes probarlo por tí mismo. Usa una de las herramientas enlazadas, y a continuación navega a través de un sitio y edita información del perfil para ver las diferentes peticiones y respuestas. La mayoría de los exploradores modernos también tienen herramientas que monitorizan las peticiciones de red (Por ejemplo, la herramienta [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) en Firefox).
 
 ## Sitios estáticos
 

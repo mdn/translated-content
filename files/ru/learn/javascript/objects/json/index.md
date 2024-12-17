@@ -7,9 +7,9 @@ slug: Learn/JavaScript/Objects/JSON
 
 Обозначение объектов JavaScript (JSON - JavaScript Object Notation) - стандартный текстовый формат для представления структурированных данных на основе синтаксиса объекта JavaScript. Он обычно используется для передачи данных в веб-приложениях (например, отправка некоторых данных с сервера клиенту,таким образом чтобы это могло отображаться на веб-странице или наоборот). Вы будете сталкиваться с этим довольно часто, поэтому в этой статье мы даём вам все, что вам нужно для работы с JSON используя JavaScript, включая парсинг JSON, чтобы вы могли получить доступ к данным внутри него при создании JSON.
 
-| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. [First steps](/ru/docs/Learn/JavaScript/First_steps) и [Building blocks](/ru/docs/Learn/JavaScript/Building_blocks)) и основами OOJS (see [Introduction to objects](/ru/docs/Learn/JavaScript/Object-oriented/Introduction)). |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:               | Понять, как работать с данными, хранящимися в JSON, и создавать свои собственные объекты JSON.                                                                                                                                                                                                                                   |
+| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. [First steps](/ru/docs/Learn/JavaScript/First_steps) и [Building blocks](/ru/docs/Learn/JavaScript/Building_blocks)) и основами OOJS (see [Introduction to objects](/ru/docs/Learn/JavaScript/Objects/Basics)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:               | Понять, как работать с данными, хранящимися в JSON, и создавать свои собственные объекты JSON.                                                                                                                                                                                                                     |
 
 ## Нет, действительно, что такое JSON?
 
@@ -86,7 +86,7 @@ superHeroes["members"][1]["powers"][2];
 5. Внутри свойства `powers` находится массив, содержащий сверхспособности выбранного героя. Нам нужен третий, поэтому мы используем `[2]`.
 
 > [!NOTE]
-> Мы сделали JSON, видимый выше, доступным внутри переменной в нашем примере [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Попробуйте загрузить это, а затем получить доступ к данным внутри переменной через консоль JavaScript вашего браузера.
+> Мы сделали JSON, видимый выше, доступным внутри переменной в нашем примере [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Попробуйте загрузить это, а затем получить доступ к данным внутри переменной через консоль JavaScript вашего браузера.
 
 ### Массивы как JSON
 
@@ -197,7 +197,7 @@ var section = document.querySelector("section");
 
 Здесь мы сохраняем ответ на наш запрос (доступный в свойстве [`response`](/ru/docs/Web/API/XMLHttpRequest/response)) в переменной `superHeroes`; эта переменная теперь будет содержать объект JavaScript, основанный на JSON! Затем мы передаём этот объект двум вызовам функций - первый из них заполнит `<header>` правильными данными, а второй создаст информационную карту для каждого героя в команде и вставляет её в `<section>`.
 
-Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. [`onload`](/ru/docs/Web/API/XMLHttpRequestEventTarget/onload)) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая таким образом,это гарантия того, что `request.response` определённо будет доступен, когда мы начнём работу с ним.
+Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. [`onload`](/ru/docs/Web/API/XMLHttpRequest/load_event)) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая таким образом,это гарантия того, что `request.response` определённо будет доступен, когда мы начнём работу с ним.
 
 Заполнение заголовка
 
@@ -261,7 +261,7 @@ function showHeroes(jsonObj) {
 
 Для начала сохраним свойство `members` объекта JavaScript в новой переменной. Этот массив содержит несколько объектов, которые содержат информацию для каждого героя.
 
-Затем мы используем [for loop](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) для циклического прохождения каждого объекта в массиве. Для каждого из них мы:
+Затем мы используем [for loop](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop) для циклического прохождения каждого объекта в массиве. Для каждого из них мы:
 
 1. Создаём несколько новых элементов: `<article>`, `<h2>`, три `<p>` и `<ul>`.
 2. Устанавливаем `<h2>`, чтобы содержать `name` текущего героя.
@@ -274,7 +274,7 @@ function showHeroes(jsonObj) {
 > Если вам не удаётся заставить этот пример работать, попробуйте обратиться к нашему исходному коду [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (см. также он работает [в режиме live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)).
 
 > [!NOTE]
-> Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье [JavaScript objectbasics](/ru/docs/Learn/JavaScript/Objects/Basics) чтобы получить дополнительную информацию о нотации точек и скобок.
+> Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье [JavaScript objectbasics](/ru/docs/Learn/JavaScript/Objects/Basics) чтобы получить дополнительную информацию о нотации точек и скобок.
 
 ## Преобразование между объектами и текстом
 
@@ -289,7 +289,7 @@ request.responseType = "json";
 - [`parse()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): принимает строку JSON в качестве параметра и возвращает соответствующий объект JavaScript.
 - [`stringify()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): принимает объект, как параметр и возвращает эквивалентную строковую JSON строку.
 
-Вы можете увидеть первый метод в действии в нашем примере [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) - это то же самое, что и в примере, который мы создали ранее, за исключением того, что мы установили XHR для возврата сырого JSON текста, затем используется `parse()`, чтобы преобразовать его в фактический объект JavaScript. Ключевой фрагмент кода находится здесь:
+Вы можете увидеть первый метод в действии в нашем примере [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) - это то же самое, что и в примере, который мы создали ранее, за исключением того, что мы установили XHR для возврата сырого JSON текста, затем используется `parse()`, чтобы преобразовать его в фактический объект JavaScript. Ключевой фрагмент кода находится здесь:
 
 ```js
 request.open("GET", requestURL);

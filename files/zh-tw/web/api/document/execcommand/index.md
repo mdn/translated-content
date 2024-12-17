@@ -46,11 +46,11 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `createLink`
   - : 對選取的區域建立超連結，僅限於有選取內容。需要提供一個 [URI](/zh-TW/docs/Archive/Mozilla/URIs_and_URLs) 字串值作為超連結的 `href` 。 URI 必須最少包含一個字元且可以是空白字元（Internet Explorer 會建立一個 `null` 值的連結）。
 - `cut`
-  - : 移除目前選取的區域並複製到剪貼簿。各個瀏覽器對於這個指令的行為可能有所差異且不斷變更。使用細節請查閱[相容性表格](#Browser_compatibility)。
+  - : 移除目前選取的區域並複製到剪貼簿。各個瀏覽器對於這個指令的行為可能有所差異且不斷變更。使用細節請查閱[相容性表格](#browser_compatibility)。
 - `decreaseFontSize`
   - : 在選取區域或插入點的前後加入一個 {{HTMLElement("small")}} 標籤（ Internet Explorer 不支援）
 - `defaultParagraphSeparator`
-  - : 變更可編輯文字區域於新增段落時的段落分隔器。更多細節請查閱 [產生 markup 的區別](/zh-TW/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation)。
+  - : 變更可編輯文字區域於新增段落時的段落分隔器。更多細節請查閱 [產生 markup 的區別](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation)。
 - `delete`
   - : 刪除目前選取的區域。
 - `enableAbsolutePositionEditor`

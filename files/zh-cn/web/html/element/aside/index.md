@@ -38,7 +38,7 @@ slug: Web/HTML/Element/aside
 
 ## 属性
 
-此元素只有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 使用说明
 

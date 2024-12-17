@@ -73,7 +73,7 @@ console.log(encodeURIComponent("\uD800"));
 console.log(encodeURIComponent("\uDFFF"));
 ```
 
-또한, URL의 보다 최신 RFC인 [RFC3986](http://tools.ietf.org/html/rfc3986)을 따르고자 한다면, 대괄호가 {{glossary("IPv6")}} 지원을 위해 추가로 예약됨에 따라 `encodeURI()`가 인코딩하지 않으므로 URL을 생성할 때 주의해야 합니다. 다음 예시 코드가 도움이 될 수도 있습니다.
+또한, URL의 보다 최신 RFC인 [RFC3986](https://tools.ietf.org/html/rfc3986)을 따르고자 한다면, 대괄호가 {{glossary("IPv6")}} 지원을 위해 추가로 예약됨에 따라 `encodeURI()`가 인코딩하지 않으므로 URL을 생성할 때 주의해야 합니다. 다음 예시 코드가 도움이 될 수도 있습니다.
 
 ```js
 function fixedEncodeURI(str) {

@@ -173,5 +173,5 @@ l10n:
 
 ## Смотрите также
 
-- [Список кодов состояния HTTP в Википедии](https://ru.wikipedia.org/wiki/Список_кодов_состояния_HTTP)
+- [Список кодов состояния HTTP](https://ru.wikipedia.org/wiki/Список_кодов_состояния_HTTP) в Википедии
 - [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)

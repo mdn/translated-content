@@ -5,11 +5,11 @@ slug: Web/HTML/Attributes/pattern
 
 {{HTMLSidebar}}
 
-Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
+Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
 
 Атрибут `pattern` является атрибутом для полей ввода с типом {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, и {{HTMLElement("input/search", "search")}}.
 
-The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/ru/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/ru/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ru/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
 
@@ -76,7 +76,7 @@ Had we used [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) and [`maxlengt
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -149,6 +149,6 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Смотрите также
 
-- [Constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)
-- [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Constraint validation](/ru/docs/Web/HTML/Constraint_validation)
+- [Forms: Data form validation](/ru/docs/Learn/Forms/Form_validation)
+- [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

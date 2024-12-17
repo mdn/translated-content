@@ -11,7 +11,7 @@ L'élément HTML **`<i>`** représente un morceau de texte qui se différencie d
 
 ## Attributs
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

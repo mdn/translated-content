@@ -5,11 +5,11 @@ slug: Web/CSS/flex-wrap
 
 {{ CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/CSS) **`flex-wrap`** define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-wrap`** define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-Veja [Using CSS flexible boxes](/pt-BR/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
+Veja [Using CSS flexible boxes](/pt-BR/docs/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
 
 ## Syntax
 
@@ -130,5 +130,5 @@ Os seguintes valores são aceitos :
 
 ## Veja também
 
-- Guia CSS Flexbox: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guia CSS Flexbox: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - Guia CSS Flexbox: _[Mastering wrapping of flex items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

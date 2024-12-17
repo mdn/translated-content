@@ -535,7 +535,7 @@ const obj = {
 
 ### 正規表現リテラル
 
-正規表現リテラル（[後で](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)詳しく定義）は、スラッシュで囲まれたパターンです。以下は正規表現リテラルの例です。
+正規表現リテラル（[後で](/ja/docs/Web/JavaScript/Guide/Regular_expressions)詳しく定義）は、スラッシュで囲まれたパターンです。以下は正規表現リテラルの例です。
 
 ```js
 const re = /ab+c/;

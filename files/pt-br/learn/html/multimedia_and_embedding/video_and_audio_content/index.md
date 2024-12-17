@@ -105,7 +105,7 @@ Outra situação é o sempre popular arquivo MP3. Um "arquivo MP3" é na verdade
 Um reprodutor de áudio tenderá a reproduzir uma faixa de áudio diretamente, por exemplo um arquivo MP3 ou Ogg. Estes não precisam de contêineres.
 
 > [!NOTE]
-> Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Formats#Browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
+> Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Formats#browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
 
 #### Suporte a arquivos de mídia em navegadores
 
@@ -206,7 +206,7 @@ Isso produz algo como o seguinte em um navegador:
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > [!NOTE]
-> You can [run the audio demo live](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Isso ocupa menos espaço do que um reprodutor de vídeo, pois não há componente visual - você só precisa exibir controles para reproduzir o áudio. Outras diferenças do vídeo HTML5 são as seguintes:
 
@@ -226,7 +226,7 @@ mediaElem.load();
 
 ### Detectando adição e remoção de faixas
 
-Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento [`addtrack`](/pt-BR/docs/Web/Events/addtrack) ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
+Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento [`addtrack`](/pt-BR/docs/Web/API/VideoTrackList/addtrack_event) ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
 
 ```
 const mediaElem = document.querySelector("video");
@@ -295,7 +295,7 @@ Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
+Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 
 > [!NOTE]
 > As faixas de texto também ajudam você com o {{glossary ("SEO")}}, pois os mecanismos de pesquisa prosperam especialmente no texto. As trilhas de texto permitem até que os mecanismos de pesquisa sejam vinculados diretamente a um ponto no meio do vídeo.
@@ -325,9 +325,9 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 - Os elementos de mídia HTML: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}.
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media).
 - [Guia para tipos e formatos de mídia na Web](/pt-BR/docs/Web/Media/Formats).
-- [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
-- [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
-- [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
+- [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
+- [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
+- [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
 - Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

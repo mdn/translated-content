@@ -1,9 +1,9 @@
 ---
 title: "Window: btoa() メソッド"
-short-title: btoa()
 slug: Web/API/Window/btoa
 l10n:
   sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+short-title: btoa()
 ---
 
 {{APIRef("HTML DOM")}}
@@ -68,7 +68,7 @@ console.log(window.btoa(notOK)); // エラー
 ## 関連情報
 
 - [`btoa` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) で利用できます。
-- [`data` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/ja/docs/Web/URI/Schemes/data)
 - {{domxref("WorkerGlobalScope.btoa()")}}: 同様のメソッドですが、ワーカースコープのものです。
 - {{domxref("Window.atob()")}}
 - {{Glossary("Base64")}}

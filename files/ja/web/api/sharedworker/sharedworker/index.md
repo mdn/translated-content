@@ -1,9 +1,9 @@
 ---
 title: "SharedWorker: SharedWorker() コンストラクター"
-short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 l10n:
   sourceCommit: 37eb7ffd54eb2ad90bc8ada80d2c5e396670205c
+short-title: SharedWorker()
 ---
 
 {{APIRef("Web Workers API")}}
@@ -50,7 +50,7 @@ new SharedWorker(aURL, options)
 - `SecurityError` {{domxref("DOMException")}}
   - : ドキュメントがワーカーの開始を許可されていない場合、例えば URL が無効な構文であったり、同一オリジンポリシーに違反していたり、`sameSiteCookies` の値が指定されたコンテキストで対応していなかった場合に発生します。
 - `NetworkError` {{domxref("DOMException")}}
-  - : ワーカースクリプトの MIME 型が正しくない場合に発生します。常に `text/javascript` であるべきです（歴史的な理由から[他の JavaScript MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)も受け入れられるかもしれません）。
+  - : ワーカースクリプトの MIME 型が正しくない場合に発生します。常に `text/javascript` であるべきです（歴史的な理由から[他の JavaScript MIME タイプ](/ja/docs/Web/HTTP/MIME_types#textjavascript)も受け入れられるかもしれません）。
 - `SyntaxError` {{domxref("DOMException")}}
   - : `aURL` が解釈できない場合に発生します。
 

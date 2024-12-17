@@ -67,4 +67,4 @@ fetch("./tortoise.png")
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [Stream API](/zh-CN/docs/Web/API/Streams_API)
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)

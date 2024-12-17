@@ -29,12 +29,12 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 - {{cssxref("contain", "contain: layout", "#layout")}}, `content`, 또는 `strict`가 적용된 요소
 - {{Glossary("flex item", "flex items")}}
 - 격자 항목
-- [다단 컨테이너](/ko/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [다단 컨테이너](/ko/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
 - {{cssxref("column-span")}}이 `all`로 설정된 요소
 
 블록 서식 상황(BFC)을 생성하는 효과를 확인하기 위해 이들 중 몇 가지를 살펴봅시다.
 
-아래 예제에서, 우리는 테두리가 적용된 `<div>` 내부에 부동체 요소 하나를 가지고 있습니다. 해당 `div`의 콘텐츠는 부동체 요소와 나란히 부동해왔습니다. 동 부동체의 콘텐츠가 자기 옆에 있는 콘텐츠보다 키가 크기 때문에 하위 `<div>`의 테두리는 이제 부동체에 전체에 걸쳐 진행하고 있습니다. [대열 요소와 탈대열 요소에 관한 안내서](/ko/docs/Web/CSS/CSS_Flow_Layout/대열과_탈대열)에서 설명했듯이, 동 부동체는 대열에서 제외되어 `<div>` 요소의 배경과 테두리는 콘텐츠만 포함하지 부동체는 포함하지 않습니다.
+아래 예제에서, 우리는 테두리가 적용된 `<div>` 내부에 부동체 요소 하나를 가지고 있습니다. 해당 `div`의 콘텐츠는 부동체 요소와 나란히 부동해왔습니다. 동 부동체의 콘텐츠가 자기 옆에 있는 콘텐츠보다 키가 크기 때문에 하위 `<div>`의 테두리는 이제 부동체에 전체에 걸쳐 진행하고 있습니다. [대열 요소와 탈대열 요소에 관한 안내서](/ko/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)에서 설명했듯이, 동 부동체는 대열에서 제외되어 `<div>` 요소의 배경과 테두리는 콘텐츠만 포함하지 부동체는 포함하지 않습니다.
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -74,6 +74,6 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 ## 참조 항목
 
-- [불록 서식 상황](/ko/docs/Web/Guide/CSS/Block_formatting_context)
-- [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)
-- [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_Box_Model)
+- [불록 서식 상황](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
+- [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_box_model)

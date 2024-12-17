@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Accept-CH
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) o cliente deve incluir nas requisições subsequentes.
+O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais cabeçalhos [Client Hints](/pt-BR/docs/Web/HTTP/Client_hints) o cliente deve incluir nas requisições subsequentes.
 
 <table class="properties">
   <tbody>
@@ -39,7 +39,7 @@ Vary: DPR, Viewport-Width, Width
 ```
 
 > [!NOTE]
-> Lembre de [variar a resposta](/pt-BR/docs/Glossary/Client_hints#Varying_Client_Hints) baseado nos client hints aceitos.
+> Lembre de [variar a resposta](/pt-BR/docs/Web/HTTP/Client_hints#varying_client_hints) baseado nos client hints aceitos.
 
 ## Compatibilidade com navegadores
 

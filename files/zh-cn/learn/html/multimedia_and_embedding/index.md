@@ -11,7 +11,7 @@ l10n:
 
 ## 预备知识
 
-在你开始本模块之前，你应该已经掌握了 HTML 的基础知识，也就是之前在 [HTML 简介](/zh-CN/docs/learn/HTML/Introduction_to_HTML)中所述内容。如果你还没有看过那个模块（或者类似的），先去看看，然后再回来吧！
+在你开始本模块之前，你应该已经掌握了 HTML 的基础知识，也就是之前在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中所述内容。如果你还没有看过那个模块（或者类似的），先去看看，然后再回来吧！
 
 > [!NOTE]
 > 如果你使用的是电脑/平板/其他设备，没有办法创建自己的文件，你可以在线上编程平台上尝试（大部分）代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。

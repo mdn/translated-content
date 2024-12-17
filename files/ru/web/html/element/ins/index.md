@@ -9,13 +9,13 @@ HTML-элемент **`<ins>`** представляет диапазон тек
 
 {{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
 
-| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                    |
-| Пропуск тегов                                            | Нет, открывающий и закрывающий теги обязательны.                                                                                             |
-| Допустимые родители                                      | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
-| Допустимые ARIA-роли                                     | Любые                                                                                                                                        |
-| DOM-интерфейс                                            | {{domxref("HTMLModElement")}}                                                                                                                |
+| [Содержимое категорий](/ru/docs/Web/HTML/Content_categories) | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content) or [содержимое потока](/ru/docs/Web/HTML/Content_categories#flow_content). |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model).                                                                        |
+| Пропуск тегов                                                | Нет, открывающий и закрывающий теги обязательны.                                                                                                     |
+| Допустимые родители                                          | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                          |
+| Допустимые ARIA-роли                                         | Любые                                                                                                                                                |
+| DOM-интерфейс                                                | {{domxref("HTMLModElement")}}                                                                                                                        |
 
 ## Атрибуты
 

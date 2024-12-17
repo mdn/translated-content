@@ -27,11 +27,11 @@ slug: Web/API/Web_components
 
 ## 튜토리얼
 
-- [커스텀 엘리먼트 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)
+- [커스텀 엘리먼트 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)
   - : 간단한 웹 컴포넌트를 생성하는 커스텀 엘리먼트의 기능을 사용하는 방법과 라이프사이클 콜백 및 그 외 고급 기능들을 보여주는 가이드입니다.
-- [shadow DOM 사용하기](/ko/docs/Web/Web_Components/Using_shadow_DOM)
+- [shadow DOM 사용하기](/ko/docs/Web/API/Web_components/Using_shadow_DOM)
   - : shadow DOM 기본을 살펴보고, shadow DOM 을 엘리먼트에 추가하고, shadow DOM 트리를 추가하고 스타일링하는 방법 등을 보여주는 가이드입니다.
-- [템플릿과 슬롯 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
+- [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)
   - : {{htmlelement("template")}} 과 {{htmlelement("slot")}} 엘리먼트를 사용해 재사용가능한 HTML 구조를 정의하는 방법과 웹 컴포넌트 내에서 그 구조를 사용하는 방법을 보여주는 가이드입니다.
 
 ## 레퍼런스
@@ -42,7 +42,7 @@ slug: Web/API/Web_components
   - : 커스텀 엘리먼트와 관련된 기능을 포함하며, 새로운 커스텀 엘리먼트를 등록하여 다큐먼트에서 사용할 수 있도록 해주는 {{domxref("CustomElementRegistry.define()")}} 메소드가 가장 주요합니다.
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` 객체에 대한 참조를 반환합니다.
-- [라이프 사이클 콜백](/ko/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [라이프 사이클 콜백](/ko/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : 커스텀 엘리먼트의 클래스 정의 내에 정의되어 동작에 영향을 주는 특별한 콜백 함수입니다.
 
@@ -63,9 +63,9 @@ slug: Web/API/Web_components
   - : 커스텀 엘리먼트에 관련된 수도 클래스입니다.
 
     - {{cssxref(":defined")}}: 내장 엘리먼트와 `CustomElementRegistry.define()` 으로 정의된 커스텀 엘리먼트를 포함해, 정의된 모든 엘리먼트와 일치합니다.
-    - {{cssxref(":host")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다.
-    - {{cssxref(":host()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 shadow 호스트에 일치하는 경우에만 해당합니다.
-    - {{cssxref(":host-context()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 DOM 계층 내에 위치한 shadow 호스트의 조상에 일치하는 경우에만 해당합니다.
+    - {{cssxref(":host")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다.
+    - {{cssxref(":host()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 shadow 호스트에 일치하는 경우에만 해당합니다.
+    - {{cssxref(":host-context()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 DOM 계층 내에 위치한 shadow 호스트의 조상에 일치하는 경우에만 해당합니다.
 
 ### Shadow DOM
 

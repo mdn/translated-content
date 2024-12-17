@@ -286,7 +286,7 @@ A melhor maneira de lidar com datas nos formulários de um modo entre navegadore
 
 ## Atributos
 
-Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `mozactionhint` {{non-standard_inline}}
   - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`; these automatically get mapped to the appropriate string (and are case-insensitive).
@@ -383,5 +383,5 @@ To create a widget to display a date, use:
 ## Veja também
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/pt-BR/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [Date and Time picker tutorial](/pt-BR/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [Bug 1283381 - Firefox bug to implement](https://bugzilla.mozilla.org/show_bug.cgi?id=1283381)

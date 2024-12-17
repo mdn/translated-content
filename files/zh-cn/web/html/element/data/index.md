@@ -36,7 +36,7 @@ slug: Web/HTML/Element/data
 
 ## 属性
 
-该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `value`
   - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。

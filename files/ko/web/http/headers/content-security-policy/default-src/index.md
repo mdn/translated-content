@@ -49,8 +49,8 @@ Content-Security-Policy: default-src <source> <source>;
 
   - : 'http:' 또는 'https:'와 같은 스키마. **콜론이 필수적이며, 작은 따음표는 사용하지 않아야 합니다.** 스키마도 지정할 수 있습니다 (추천하지 않음).
 
-    - `data:`[`data:` URIs](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 를 컨텐츠 출처로 허용합니다. 이것은 안전하지 않습니다. _공격자가 임의의 데이터를 주입할 수도 있기 때문에 script에는 사용하지 마십시오._
-    - `mediastream:`[`mediastream:` URIs](/ko/docs/Web/API/MediaStream_API) 을 콘텐츠 출처로 허용합니다.
+    - `data:`[`data:` URIs](/ko/docs/Web/URI/Schemes/data) 를 컨텐츠 출처로 허용합니다. 이것은 안전하지 않습니다. _공격자가 임의의 데이터를 주입할 수도 있기 때문에 script에는 사용하지 마십시오._
+    - `mediastream:`[`mediastream:` URIs](/ko/docs/Web/API/Media_Capture_and_Streams_API) 을 콘텐츠 출처로 허용합니다.
     - `blob:`[`blob:` URIs](/ko/docs/Web/API/Blob)을 콘텐츠 출처로 허용합니다.
     - `filesystem:`[`filesystem:` URIs](/ko/docs/Web/API/FileSystem) 을 콘텐츠 출처로 허용합니다.
 
@@ -63,9 +63,9 @@ Content-Security-Policy: default-src <source> <source>;
 - `'none'`
   - : 아무것도 참조 되지 않습니다. 즉 아무런 URL도 매치되지 않습니다. 작은 따음표를 사용해야만 합니다.
 - 'nonce-\<base64-value>'
-  - : 암호화 nonce 값을 이용하여 특정 인라인 스크립트에 대하여 허용합니다(nonce는 한번만 사용). 서버는 CSP정책을 전송할 때마다 고유한 nonce를 생성해야만 합니다. 리소스 정책을 우회하는 것은 간단한 일이기 때문에 의심 할 여지가 없는 nonce 값을 제공하는 것이 중요합니다. [unsafe inline script](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script) 예제를 참고해주세요. nonce는 `'unsafe-inline'` 와 함께 사용할 경우 모던 브라우저에서는 사용하게 되면 `'unsafe-inline'`가 무시되지만, 구형 브라우저에서는 nonce가 적용되지 않습니다.
+  - : 암호화 nonce 값을 이용하여 특정 인라인 스크립트에 대하여 허용합니다(nonce는 한번만 사용). 서버는 CSP정책을 전송할 때마다 고유한 nonce를 생성해야만 합니다. 리소스 정책을 우회하는 것은 간단한 일이기 때문에 의심 할 여지가 없는 nonce 값을 제공하는 것이 중요합니다. [unsafe inline script](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) 예제를 참고해주세요. nonce는 `'unsafe-inline'` 와 함께 사용할 경우 모던 브라우저에서는 사용하게 되면 `'unsafe-inline'`가 무시되지만, 구형 브라우저에서는 nonce가 적용되지 않습니다.
 - '\<hash-algorithm>-\<base64-value>'
-  - : 스크립트 또는 스타일의 sha256, sha384 or sha512 해쉬. 이것은 대쉬: 로 구분된 해쉬를 사용된 암호화 알고리즘과 base64로 인코딩한 스크립트 및 스타일로 구성됩니다. 해쉬를 생성할 때 절대로 \<script> 또는 \<style> 태그를 포함하지말고 대소문자와 앞 뒤의 공백을 주의해야 합니다.[unsafe inline script](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script) 예제를 참고해주세요. CSP 2.0에서는 인라인 스크립트에서만 적용 가능하지만, CSP 3.0에서는 외부 스크립트를 `script-src` 에서 허용하기 위해서 사용합니다.
+  - : 스크립트 또는 스타일의 sha256, sha384 or sha512 해쉬. 이것은 대쉬: 로 구분된 해쉬를 사용된 암호화 알고리즘과 base64로 인코딩한 스크립트 및 스타일로 구성됩니다. 해쉬를 생성할 때 절대로 \<script> 또는 \<style> 태그를 포함하지말고 대소문자와 앞 뒤의 공백을 주의해야 합니다.[unsafe inline script](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) 예제를 참고해주세요. CSP 2.0에서는 인라인 스크립트에서만 적용 가능하지만, CSP 3.0에서는 외부 스크립트를 `script-src` 에서 허용하기 위해서 사용합니다.
 - 'strict-dynamic'
   - : The `strict-dynamic` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any whitelist or source expressions such as `'self'` or `'unsafe-inline'` will be ignored. See [script-src](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) for an example.
 

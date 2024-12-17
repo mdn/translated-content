@@ -33,7 +33,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 
 ### `locales` 参数
 
-`locales` 参数必须是一个 [BCP 47 语言标记](http://tools.ietf.org/html/rfc5646)的字符串，或者是一个包括多个语言标记的数组。如果 `locales` 参数未提供或者是 undefined，便会使用运行时默认的 locale。
+`locales` 参数必须是一个 [BCP 47 语言标记](https://tools.ietf.org/html/rfc5646)的字符串，或者是一个包括多个语言标记的数组。如果 `locales` 参数未提供或者是 undefined，便会使用运行时默认的 locale。
 
 一个 BCP 47 语言标记代表了一种语言或者区域（两者没有很大的区别）。在其最常见的格式中，它以这样的顺序囊括了这些内容：语言代码，脚本代码，和国家代码，全部由连字符分隔开。例如：
 
@@ -41,7 +41,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 - `"de-AT"`: 在奥地利使用的德语 (primary language with country code)。
 - `"zh-Hans-CN"`：在中国使用的简体中文 (primary language with script and country codes)。
 
-在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在[IANA 语言子标记注册](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) 中找到。
+在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在[IANA 语言子标记注册](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) 中找到。
 
 BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Collator")}}，{{jsxref("NumberFormat")}}，或者 {{jsxref("DateTimeFormat")}} 对象。例如：
 
@@ -52,7 +52,7 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
 
 ### 语言区域判定
 
-`locales` 参数，在除去所有的 Unicode 扩展之后，会被转化成来自应用的优先请求。运行时拿它和可用的语言区域做对比然后选择出最合适的一个。有两种匹配算法：“查找”匹配遵循 [BCP 47](http://tools.ietf.org/html/rfc5646) 中指定的查找算法；“最佳命中”匹配器会让运行时至少提供一个语言区域，但合适请求的结果可能会比查找算法的要多。如果应用没有提供一个 locales 参数，或者运行时没有一个匹配请求的语言区域，那么会使用运行时默认的语言区域。匹配器可以使用 `options` 参数的一个属性来进行选择（见下方）。
+`locales` 参数，在除去所有的 Unicode 扩展之后，会被转化成来自应用的优先请求。运行时拿它和可用的语言区域做对比然后选择出最合适的一个。有两种匹配算法：“查找”匹配遵循 [BCP 47](https://tools.ietf.org/html/rfc5646) 中指定的查找算法；“最佳命中”匹配器会让运行时至少提供一个语言区域，但合适请求的结果可能会比查找算法的要多。如果应用没有提供一个 locales 参数，或者运行时没有一个匹配请求的语言区域，那么会使用运行时默认的语言区域。匹配器可以使用 `options` 参数的一个属性来进行选择（见下方）。
 
 如果选中的语言标记有一个 Unicode 扩展子字符串，这个扩展会用于自定义构造对象或者方法的行为。每一个构造函数或者方法仅支持 Unicode 扩展定义的 key 的一个子集，和依赖于语言标记的支持的值。例如，`“co”`这个 key（collation）只在 {{jsxref("Collator")}} 中支持，它的值“phonebk”只在德语中支持。
 

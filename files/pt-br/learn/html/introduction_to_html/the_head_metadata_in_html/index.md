@@ -40,7 +40,7 @@ O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibi
 
 ## O que há no cabeçalho HTML?
 
-Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started#Anatomia_de_um_elemento_HTML)
+Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomia_de_um_elemento_html)
 
 ```html
 <!doctype html>
@@ -64,7 +64,7 @@ O cabeçalho HTML é o conteúdo do elemento {{htmlelement("head")}} — ao cont
 </head>
 ```
 
-Em páginas maiores, o cabeçalho pode ter mais conteúdo. Tente acessar um dos seus sites favoritos e use as [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador) para verificar o conteúdo do cabeçalho. Nosso objetivo aqui não é mostrar a você como usar tudo o que é possível pôr no cabeçalho, mas te ensinar a usar as coisas mais obvias que você vai querer incluir no cabeçalho, e lhe dar alguma familiaridade. Vamos começar.
+Em páginas maiores, o cabeçalho pode ter mais conteúdo. Tente acessar um dos seus sites favoritos e use as [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para verificar o conteúdo do cabeçalho. Nosso objetivo aqui não é mostrar a você como usar tudo o que é possível pôr no cabeçalho, mas te ensinar a usar as coisas mais obvias que você vai querer incluir no cabeçalho, e lhe dar alguma familiaridade. Vamos começar.
 
 ## Adicionando um título
 
@@ -141,7 +141,7 @@ para começar a desenvolver sites e aplicativos." />
 
 Especificar um autor é útil de muitas maneiras: é útil para poder descobrir quem escreveu a página, se quiser enviar perguntas sobre o conteúdo que você gostaria de contacta-la. Alguns sistemas de gerenciamento de conteúdo possuem ferramentas para extrair automaticamente as informações do autor da página e disponibilizá-las para seus propósitos.
 
-Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da sua página é útil porque tem potencial para tornar sua página mais alta nas pesquisas relevantes realizadas nos mecanismos de busca (tais atividades são denominadas [Search Engine Optimization](/pt-BR/docs/Glossario/SEO) ou {{glossary("SEO")}}.
+Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da sua página é útil porque tem potencial para tornar sua página mais alta nas pesquisas relevantes realizadas nos mecanismos de busca (tais atividades são denominadas [Search Engine Optimization](/pt-BR/docs/Glossary/SEO) ou {{glossary("SEO")}}.
 
 ### Aprendizagem ativa: Uso da descrição nos motores de busca
 
@@ -169,7 +169,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
 > [!NOTE]
-> No Google, você verá algumas subpáginas relevantes do MDN listadas abaixo do principal link da página inicial do MDN — estes são chamados de sitelinks e são configuráveis nas [Ferramentas para webmasters do Google](http://www.google.com/webmasters/tools/) — uma maneira de melhorar os resultados de pesquisa do seu site no mecanismo de pesquisa do Google.
+> No Google, você verá algumas subpáginas relevantes do MDN listadas abaixo do principal link da página inicial do MDN — estes são chamados de sitelinks e são configuráveis nas [Ferramentas para webmasters do Google](https://www.google.com/webmasters/tools/) — uma maneira de melhorar os resultados de pesquisa do seu site no mecanismo de pesquisa do Google.
 
 > [!NOTE]
 > Muitos recursos `<meta>` simplesmente não são mais usados. Por exemplo, a palavra-chave `<meta>` elemento (`<meta name="keywords" content="preencha, suas, palavras-chave, aqui">`) — que é suposto fornecer palavras-chave para os motores de busca para determinar a relevância dessa página para diferentes termos de pesquisa — são ignorados pelos motores de busca, porque os spammers estavam apenas preenchendo a lista de palavras-chave com centenas de palavras-chave, influenciando os resultados.
@@ -178,7 +178,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
 
 Ao navegar pela web, você também encontrará outros tipos de metadados. Muitos dos recursos que você verá em sites são criações proprietárias, projetados para fornecer a determinados sites (como sites de redes sociais) informações específicas que eles podem usar.
 
-Por exemplo, [Open Graph Data](http://ogp.me/) é um protocolo de metadados que o Facebook inventou para fornecer metadados mais ricos para sites. No código-fonte MDN, você encontrará isso:
+Por exemplo, [Open Graph Data](https://ogp.me/) é um protocolo de metadados que o Facebook inventou para fornecer metadados mais ricos para sites. No código-fonte MDN, você encontrará isso:
 
 ```html
 <meta

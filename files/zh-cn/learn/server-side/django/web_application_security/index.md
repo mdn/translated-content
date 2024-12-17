@@ -40,13 +40,13 @@ slug: Learn/Server-side/Django/web_application_security
 
 ## 常见威胁及保护
 
-在本文中，我们将使用前面章节中的“[本地图书馆](/zh-CN/docs/learn/Server-side/Django/Tutorial_local_library_website)”项目作为示范来演示一些 Django 的安全特性。
+在本文中，我们将使用前面章节中的“[本地图书馆](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)”项目作为示范来演示一些 Django 的安全特性。
 
 ### 跨站脚本 (XSS)
 
 XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的 JavaScript 代码。
 
-Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
+Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
 
 1. 使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
 2. 在浏览器中打开网站，并用超级用户身份登录。
@@ -190,6 +190,6 @@ Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS
 - [Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django 官方文档)
 - [Server side website security](/zh-CN/docs/Web/Security) (MDN)
 - [Web security](/zh-CN/docs/Web/Security) (MDN)
-- [Securing your site](/zh-CN/docs/Web/Security/Securing_your_site) (MDN)
+- [Securing your site](/zh-CN/docs/Web/Security/Practical_implementation_guides) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

@@ -1,9 +1,9 @@
 ---
 title: "Document: fragmentDirective プロパティ"
-short-title: fragmentDirective
 slug: Web/API/Document/fragmentDirective
 l10n:
   sourceCommit: 9aaaa8597f2b1b952a9ed116cbe48e4810254cea
+short-title: fragmentDirective
 ---
 
 {{APIRef}}{{SeeCompatTable}}
@@ -36,5 +36,5 @@ document.fragmentDirective;
 
 ## 関連情報
 
-- [テキストフラグメント](/ja/docs/Web/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

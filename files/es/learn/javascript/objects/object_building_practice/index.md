@@ -17,7 +17,7 @@ Es éste artículo escribiremos un programa demo del juego clásico de pelotas q
 
 ![](bouncing-balls.png)
 
-En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
+En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/Window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
 
 ## Primeros pasos
 
@@ -267,7 +267,7 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
 3. Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
 
 > [!NOTE]
-> Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la [version_final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (y también ver como funciona al [ejecutarla](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la [version_final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (y también ver como funciona al [ejecutarla](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Resumen
 
@@ -276,7 +276,7 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 ## Lea también
 
 - [Canvas tutorial](/es/docs/Web/API/Canvas_API/Tutorial) — una guia de principiante para usar el canvas 2D.
-- [requestAnimationFrame()](/es/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/es/docs/Web/API/Window/requestAnimationFrame)
 - [2D detección de colisiones](/es/docs/Games/Techniques/2D_collision_detection)
 - [3D detección de colisiones](/es/docs/Games/Techniques/3D_collision_detection)
 - [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.

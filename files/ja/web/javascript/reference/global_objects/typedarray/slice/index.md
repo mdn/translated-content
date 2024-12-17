@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。
+**`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-slice.html", "shorter")}}
 

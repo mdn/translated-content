@@ -376,7 +376,7 @@ Debes usar JavaScript si quieres controlar la apariencia de los mensajes de erro
 
 ### La API de validación de restricciones
 
-La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Web/API/Constraint_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
+La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
 
 - [`HTMLButtonElement`](/es/docs/Web/API/HTMLButtonElement) (representa un elemento [`<button>`](/es/docs/Web/HTML/Element/button))
 - [`HTMLFieldSetElement`](/es/docs/Web/API/HTMLFieldSetElement) (representa un elemento [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset))
@@ -417,7 +417,7 @@ Estos mensajes automatizados tienen dos inconvenientes:
 
 ![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](error-firefox-win7.png)
 
-La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Web/API/Constraint_validation). Veamos un ejemplo simple de cómo hacer esto.
+La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation). Veamos un ejemplo simple de cómo hacer esto.
 
 Comenzaremos con un HTML simple (siéntete libre de poner esto en un archivo HTML en blanco; usa una copia nueva de [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) como base, si lo deseas):
 
@@ -481,7 +481,7 @@ Este sencillo formulario usa el atributo [`novalidate`](/es/docs/Web/HTML/Attrib
 
 Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Element/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
 
-Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
+Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
 
 > [!NOTE]
 > Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
@@ -617,7 +617,7 @@ Este es el resultado:
 La API de validación de restricciones te proporciona una herramienta poderosa para manejar la validación de formularios, y te permite tener un control enorme sobre la interfaz de usuario más allá de lo que puedas hacer solo con HTML y CSS.
 
 > [!NOTE]
-> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Web/API/Constraint_validation).
+> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation).
 
 ### Validar formularios sin una API incorporada
 
@@ -820,4 +820,4 @@ Una vez que hayas verificado que el formulario se ha completado correctamente, p
 
 - [Cómo construir controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Enviar formularios por JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)
+- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

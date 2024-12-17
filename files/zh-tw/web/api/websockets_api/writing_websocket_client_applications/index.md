@@ -19,7 +19,7 @@ WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。�
 
 ## 建立一個 WebSocket 物件
 
-你必須建立一個 [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket) 物件才能讓瀏覽器／伺服器得以以 WebSocket 協定進行通訊，此物件在被建立之後會自動與伺服器連線。
+你必須建立一個 [`WebSocket`](/zh-TW/WebSockets/WebSockets_reference/WebSocket) 物件才能讓瀏覽器／伺服器得以以 WebSocket 協定進行通訊，此物件在被建立之後會自動與伺服器連線。
 
 > [!NOTE]
 > 別忘記在 Firefox 6.0 中 `WebSocket` 物件仍有前輟，所以在這裡須改成 `MozWebSocket`。
@@ -78,7 +78,7 @@ var mySocket = new WebSocket("ws://www.example.com/socketserver", ["protocol1", 
 mySocket.send("這是伺服器正迫切需要的文字！");
 ```
 
-可以被傳送的內容包括字串、[`Blob`](/zh-TW/DOM/Blob) 或是 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer)。
+可以被傳送的內容包括字串、[`Blob`](/zh-TW/docs/DOM/Blob) 或是 [`ArrayBuffer`](/zh-TW/JavaScript_typed_arrays/ArrayBuffer)。
 
 > [!NOTE]
 > Firefox 目前只支援字串傳送。
@@ -103,7 +103,7 @@ function sendText() {
 }
 ```
 
-這份代碼先建立一個物件：`msg`，它包含伺服器處理訊息所需的種種資訊，然後呼叫 [`JSON.stringify()`](/zh-TW/JavaScript/Reference/Global_Objects/JSON/stringify) 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 [`send()`](</zh_tw/WebSockets/WebSockets_reference/WebSocket#send()>) 方法來傳輸資料至伺服器。
+這份代碼先建立一個物件：`msg`，它包含伺服器處理訊息所需的種種資訊，然後呼叫 [`JSON.stringify()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/JSON/stringify) 使該物件轉換成 JSON 格式並呼叫 WebSocket 的 [`send()`](</zh_tw/WebSockets/WebSockets_reference/WebSocket#send()>) 方法來傳輸資料至伺服器。
 
 ## 從伺服器接收訊息
 
@@ -167,7 +167,7 @@ connection.onmessage = function (evt) {
 };
 ```
 
-這裡我們使用 [`JSON.parse()`](/zh-TW/JavaScript/Reference/Global_Objects/JSON/parse) 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。
+這裡我們使用 [`JSON.parse()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/JSON/parse) 使 JSON 物件轉換成原來的物件，檢驗並根據內容採取行動。
 
 ## 關閉連線
 

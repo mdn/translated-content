@@ -5,7 +5,7 @@ slug: Web/CSS/minmax
 
 {{CSSRef}}
 
-**`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes).
+**`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes).
 
 ```css
 /* <inflexible-breadth>, <track-breadth> values */
@@ -111,4 +111,4 @@ minmax(auto, 300px)
 ## Смотрите также
 
 - Grid Layout Guide: _[Basic concepts of grid layout - track sizing with minmax()](</ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
-- Video tutorial: _[Introducing minmax()](http://gridbyexample.com/video/series-minmax/)_
+- Video tutorial: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_

@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 ## Описание
 
-Оператор группировки из пары круглых скобок вокруг выражения или подвыражения, переопределяющего нормальный [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), так что выражения с меньшим приоритетом выполняются раньше выражений с большим.
+Оператор группировки из пары круглых скобок вокруг выражения или подвыражения, переопределяющего нормальный [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence), так что выражения с меньшим приоритетом выполняются раньше выражений с большим.
 
 ## Примеры
 
@@ -51,6 +51,6 @@ a * c + b * c; // 9
 
 ## Смотрите также
 
-- [Приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

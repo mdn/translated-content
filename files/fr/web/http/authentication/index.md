@@ -9,7 +9,7 @@ HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentif
 
 ## La structure d'authentification HTTP
 
-La [RFC 7235](https://tools.ietf.org/html/rfc7235) définit la structure d'authentification HTTP qui est utilisable par un serveur pour [défier](/fr/docs/Glossary/challenge) une requête d'un client, et inversement par un client pour fournir des informations d'authentification à un serveur.
+La [RFC 7235](https://tools.ietf.org/html/rfc7235) définit la structure d'authentification HTTP qui est utilisable par un serveur pour [défier](/fr/docs/Glossary/Challenge) une requête d'un client, et inversement par un client pour fournir des informations d'authentification à un serveur.
 
 Le fonctionnement du défi/réponse se déroule ainsi :
 

@@ -22,6 +22,6 @@ form.action = "/cgi-bin/publish";
 
 ## 详细说明
 
-[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-[DOM Level 2 HTML: action](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)
+[DOM Level 2 HTML: action](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)

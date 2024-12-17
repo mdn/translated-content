@@ -39,15 +39,15 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
 
 ## Cómo acceder a las DevTools de los navegadores
 
-El artículo [¿Qué son las herramientas de desarrollo de los navegadores?](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) es una guía actualizada que explica cómo acceder a las herramientas en varios navegadores y plataformas. Si bien puedes optar por desarrollar principalmente en un navegador en particular y, por lo tanto, te familiarizarás más con las herramientas incluidas en ese navegador, vale la pena saber cómo acceder a ellas en otros navegadores. Esto ayudará si haces pruebas de las representaciones que dan diferentes navegadores.
+El artículo [¿Qué son las herramientas de desarrollo de los navegadores?](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) es una guía actualizada que explica cómo acceder a las herramientas en varios navegadores y plataformas. Si bien puedes optar por desarrollar principalmente en un navegador en particular y, por lo tanto, te familiarizarás más con las herramientas incluidas en ese navegador, vale la pena saber cómo acceder a ellas en otros navegadores. Esto ayudará si haces pruebas de las representaciones que dan diferentes navegadores.
 
-También te darás cuenta de que los diversos navegadores han optado por centrarse en áreas diferentes al crear sus DevTools. Por ejemplo, en Firefox hay algunas herramientas excelentes para trabajar visualmente con la compaginación con CSS, que te permiten inspeccionar y editar [Compaginaciones de cuadrícula](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/es/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) y [formas](/es/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes). Sin embargo, todos los navegadores tienen herramientas fundamentales similares. Por ejemplo, para inspeccionar las propiedades y los valores que se aplican a los elementos de tu página, y hacer cambios desde el editor.
+También te darás cuenta de que los diversos navegadores han optado por centrarse en áreas diferentes al crear sus DevTools. Por ejemplo, en Firefox hay algunas herramientas excelentes para trabajar visualmente con la compaginación con CSS, que te permiten inspeccionar y editar [Compaginaciones de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) y [formas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Sin embargo, todos los navegadores tienen herramientas fundamentales similares. Por ejemplo, para inspeccionar las propiedades y los valores que se aplican a los elementos de tu página, y hacer cambios desde el editor.
 
 En este artículo veremos algunas características útiles de Firefox DevTools para trabajar con CSS. Para hacerlo, usaremos [un archivo de ejemplo](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Carga esto en una pestaña nueva si deseas seguir adelante y abre tus DevTools como se describe en el artículo del enlace anterior.
 
 ## El DOM y "View Source"
 
-Algo que puede hacer tropezar a los recién llegados a DevTools es la diferencia entre lo que ves cuando [miras el código fuente](/es/docs/Tools/View_source) de una página web, o miras el archivo HTML que colocas en el servidor, y lo que puedes ver en la [ventana HTML](/es/docs/Tools/Page_Inspector/UI_Tour#Panel_HTML) de DevTools. Aunque ves más o menos lo mismo que puedes ver desde View Source (Ver código fuente de la página), hay algunas diferencias.
+Algo que puede hacer tropezar a los recién llegados a DevTools es la diferencia entre lo que ves cuando [miras el código fuente](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) de una página web, o miras el archivo HTML que colocas en el servidor, y lo que puedes ver en la [ventana HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_html) de DevTools. Aunque ves más o menos lo mismo que puedes ver desde View Source (Ver código fuente de la página), hay algunas diferencias.
 
 En el DOM procesado, el navegador puede haber corregido algunos HTML mal escritos por ti. Si cerraste un elemento incorrectamente, por ejemplo, por abrir con un `<h2>` y cerrar con un `</h3>`, el navegador descubre lo que ibas a hacer y el HTML del DOM cerrará ese `<h2>` de apertura correctamente con un `</h2>`. El navegador también normaliza todo el HTML, y el DOM también muestra los cambios que hace JavaScript.
 
@@ -59,7 +59,7 @@ Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho
 
 ![La página de ejemplo para este tutorial con DevTools abiertas.](inspecting1.png)
 
-Si observasla [vista de reglas](/es/docs/Tools/Page_Inspector/UI_Tour#Panel_CSS), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
+Si observasla [vista de reglas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
 
 También es útil la capacidad de expandir las propiedades abreviadas. En nuestro ejemplo se usa la abreviación `margin`.
 
@@ -86,13 +86,13 @@ Puedes añadir propiedades usando las DevTools. ¿Te has dado cuenta de que quiz
 ![La ventana DevTools, que añade una propiedad nueva a las reglas, con el autocompletado para font-open](inspecting3-font-size.png)
 
 > [!NOTE]
-> También hay otras funciones útiles en la vista de reglas; por ejemplo, las declaraciones con valores no válidos están tachadas. Puedes obtener más información en [Examinar y editar CSS](/es/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> También hay otras funciones útiles en la vista de reglas; por ejemplo, las declaraciones con valores no válidos están tachadas. Puedes obtener más información en [Examinar y editar CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Comprender el modelo de cajas
 
-En artículos anteriores hemos expuesto el [modelo de cajas](/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja), y el hecho de que tengamos un modelo de cajas alternativo que cambia la forma en que se calcula el tamaño de los elementos en función del tamaño que les asignas, más el relleno y los bordes. Las DevTools realmente pueden ayudarte a comprender cómo se calcula el tamaño de un elemento.
+En artículos anteriores hemos expuesto el [modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model), y el hecho de que tengamos un modelo de cajas alternativo que cambia la forma en que se calcula el tamaño de los elementos en función del tamaño que les asignas, más el relleno y los bordes. Las DevTools realmente pueden ayudarte a comprender cómo se calcula el tamaño de un elemento.
 
-[El panel de disposición](/es/docs/Tools/Page_Inspector/UI_Tour#Panel_CSS) muestra un diagrama del modelo de cajas en el elemento seleccionado, junto con una descripción de las propiedades y los valores que cambian la forma en que el elemento se presenta. Esto incluye una descripción de las propiedades que puedes no haber utilizado explícitamente en el elemento, pero que tienen valores iniciales establecidos.
+[El panel de disposición](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css) muestra un diagrama del modelo de cajas en el elemento seleccionado, junto con una descripción de las propiedades y los valores que cambian la forma en que el elemento se presenta. Esto incluye una descripción de las propiedades que puedes no haber utilizado explícitamente en el elemento, pero que tienen valores iniciales establecidos.
 
 En esta ventana, una de las propiedades que se detallan es la propiedad `box-sizing`, que controla qué modelo de cajas usa el elemento.
 
@@ -103,7 +103,7 @@ El elemento con una clase `box2` usa `border-box`, por lo que aquí el área de 
 ![La ventana de diseño de DevTools](inspecting4-box-model.png)
 
 > [!NOTE]
-> Descubre más en [Examinar e inspeccionar el modelo de cajas](/es/docs/Tools/Page_Inspector/How_to/Examinar_y_editar_el_modelo_de_cajasmodel).
+> Descubre más en [Examinar e inspeccionar el modelo de cajas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Resolver problemas de especificidad
 
@@ -126,7 +126,7 @@ Sin embargo, un poco más arriba en la hoja de estilo hay una regla con un selec
 }
 ```
 
-Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia), en que hablamos sobre la especificidad, los selectores de clase son más específicos que los selectores de elemento, por lo que este es el valor que se aplica. DevTools puede ayudarte a encontrar estos problemas, especialmente si la información está oculta en algún lugar de una extensa hoja de estilo.
+Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), en que hablamos sobre la especificidad, los selectores de clase son más específicos que los selectores de elemento, por lo que este es el valor que se aplica. DevTools puede ayudarte a encontrar estos problemas, especialmente si la información está oculta en algún lugar de una extensa hoja de estilo.
 
 **Inspecciona `<em>` con la clase `.special` y DevTools te mostrará que el naranja es el color que se aplica, y también te muestra la propiedad `color` aplicada al em tachado. Aquí puedes ver que la clase anula el selector de elemento.**
 
@@ -134,7 +134,7 @@ Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn/CSS/Bui
 
 ## Descubre más sobre las DevTools de Firefox
 
-Hay mucha información aquí en MDN sobre las DevTools de Firefox. Echa un vistazo a la [sección principal de las DevTools](/es/docs/Tools), y consulta las [Guías prácticas](/es/docs/Tools/Page_Inspector#How_to) para obtener información más detallada sobre las cosas que hemos expuesto brevemente en este artículo.
+Hay mucha información aquí en MDN sobre las DevTools de Firefox. Echa un vistazo a la [sección principal de las DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), y consulta las [Guías prácticas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#how_to) para obtener información más detallada sobre las cosas que hemos expuesto brevemente en este artículo.
 
 ## Problemas al depurar en CSS
 

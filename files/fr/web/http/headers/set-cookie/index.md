@@ -99,18 +99,18 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > Les sites non sécurisés (`http:`) ne peuvent plus définir des cookies `Secure` désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour _localhost_.
 
 - `HttpOnly` {{optional_inline}}
-  - : Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété [`Document.cookie`](/fr/docs/Web/API/Document/cookie), de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de l'API [`Request`](/fr/docs/Web/API/Request). Cela protège des attaques _cross-site scripting_ ([XSS](/fr/docs/Glossary/XSS)).
+  - : Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété [`Document.cookie`](/fr/docs/Web/API/Document/cookie), de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de l'API [`Request`](/fr/docs/Web/API/Request). Cela protège des attaques _cross-site scripting_ ([XSS](/fr/docs/Glossary/Cross-site_scripting)).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
   - : Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites ([CSRF](/fr/docs/Glossary/CSRF)).
 
     > [!NOTE]
-    > Les normes relatives aux [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ont récemment changé de telle sorte que :
+    > Les normes relatives aux [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) ont récemment changé de telle sorte que :
     >
     > 1. Le comportement d'envoi des cookies si `SameSite` n'est pas spécifié est `SameSite=Lax`. Auparavant, le comportement par défaut était que les cookies étaient envoyés pour toutes les requêtes.
     > 2. Les cookies avec `SameSite=None` doivent désormais également spécifier l'attribut `Secure` (c'est-à-dire qu'ils nécessitent un contexte sécurisé).
     >
-    > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
+    > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
 
     Les options sont :
 
@@ -195,4 +195,4 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 - [Cookies HTTP](/fr/docs/Web/HTTP/Cookies)
 - [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
-- [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)

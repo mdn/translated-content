@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[목록](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
+[목록](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -33,7 +33,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 ## 간단한 목록 예제
 
-우선, 간단한 목록 예제를 봅시다. 이 기사 전체에서 우리는 순서가 없는, 순서가 있는, 설명 목록을 살펴볼 것입니다. 모두 유사한 스타일링 기능이 있으며, 일부 유형은 목록 유형과 다릅니다. 스타일이 지정되지 않은 예제는 [Github 에서 가능](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 합니다 ([소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html) 도 확인하십시오.)
+우선, 간단한 목록 예제를 봅시다. 이 기사 전체에서 우리는 순서가 없는, 순서가 있는, 설명 목록을 살펴볼 것입니다. 모두 유사한 스타일링 기능이 있으며, 일부 유형은 목록 유형과 다릅니다. 스타일이 지정되지 않은 예제는 [Github 에서 가능](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 합니다 ([소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html) 도 확인하십시오.)
 
 목록 예제의 HTML 은 다음과 같습니다.
 
@@ -93,7 +93,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.
+지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.
 
 - {{htmlelement("ul")}} 및 {{htmlelement("ol")}} 요소의 위쪽 및 아래쪽 {{cssxref("margin")}}은 `16px`(`1em`)이고 {{cssxref("padding-left")}}은 `40px`(`2.5em`)입니다.
 - 목록 항목({{htmlelement("li")}} 요소)에는 간격에 대한 기본값이 설정되어 있지 않습니다.
@@ -103,7 +103,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 ## 목록 간격 처리
 
-목록 스타일을 지정할 때 스타일을 조정하여 주변 요소(예: 단락 및 이미지, 때로는 수직 리듬이라고도 함)와 동일한 세로 간격을 유지하고 서로 동일한 가로 간격을 유지해야 합니다(Github에서 완성된 [스타일 예제](http://mdn.github.io/learning-area/css/styling-text/styling-lists/)를 볼 수 있으며 [소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html)도 찾을 수 있음).
+목록 스타일을 지정할 때 스타일을 조정하여 주변 요소(예: 단락 및 이미지, 때로는 수직 리듬이라고도 함)와 동일한 세로 간격을 유지하고 서로 동일한 가로 간격을 유지해야 합니다(Github에서 완성된 [스타일 예제](https://mdn.github.io/learning-area/css/styling-text/styling-lists/)를 볼 수 있으며 [소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html)도 찾을 수 있음).
 
 텍스트 스타일 및 간격에 사용되는 CSS는 다음과 같습니다.
 
@@ -201,7 +201,7 @@ ul {
 }
 ```
 
-그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn/CSS/Styling_boxes) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
+그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn/CSS/Building_blocks) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
 
 완성된 예제에서는 정렬되지 않은 목록의 스타일을 다음과 같이 지정했습니다.(위에서 이미 본 것 위에)
 

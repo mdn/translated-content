@@ -11,4 +11,4 @@ slug: Glossary/ARPA
 
 ### Общие сведения
 
-- [Официальный веб-сайт](http://www.iana.org/domains/arpa)
+- [Официальный веб-сайт](https://www.iana.org/domains/arpa)

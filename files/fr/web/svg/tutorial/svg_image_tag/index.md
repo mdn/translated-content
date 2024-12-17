@@ -21,7 +21,7 @@ Dans cet exemple basique, une image JPG liée par l'attribut {{ SVGAttr("xlink:h
 </svg>
 ```
 
-Il faut prendre note de quelques point essentiels (donnés par les [spécifications W3](http://www.w3.org/TR/SVG/struct.html#ImageElement)):
+Il faut prendre note de quelques point essentiels (donnés par les [spécifications W3](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
 
 - Si les attributs x ou y ne sont pas spécifiés, ils vaudront 0.
 - Si les attributs height ou width ne sont pas spécifiés, ils vaudront 0.

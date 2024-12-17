@@ -47,7 +47,7 @@ GitHub Discussions를 통해 질문을 게시하고 제안을 제안하세요.
 
 ## 소셜 미디어
 
-MDN Web Docs를 [Mastodon](https://mozilla.social/@mdn)과 [X](https://x.com/MozDevNet)에서 팔로우할 수 있습니다.
+MDN Web Docs를 [Mastodon](https://mastodon.social/@mdn)과 [X](https://x.com/MozDevNet)에서 팔로우할 수 있습니다.
 공유하고 싶은 내용이 있거나 인사를 하고 싶다면 자유롭게 저희를 태그해 주세요. 모든 게시물에 응답할 수는 없지만요.
 
 ## 공개 토론방

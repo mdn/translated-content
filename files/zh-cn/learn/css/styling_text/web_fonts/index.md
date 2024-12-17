@@ -42,7 +42,7 @@ p {
 }
 ```
 
-这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/zh-CN/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)。你可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保你的设计在每种字体中都显示正常，这样增加了测试的开销。
+这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts)。你可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保你的设计在每种字体中都显示正常，这样增加了测试的开销。
 
 ## Web 字体
 
@@ -79,7 +79,7 @@ html {
 
 记住这一点，让我们从最初的原则构建一个基本的 web 字体示例。使用嵌入的 live 示例很难演示这一点，因此，我们希望你按照下面几节中详细介绍的步骤来了解这个过程。
 
-你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，你将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
+你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，你将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
 
 ### 查找字体
 
@@ -134,7 +134,7 @@ html {
 ![](web-font-example.png)
 
 > [!NOTE]
-> 如果对于要让它正常工作你有任何问题，可以自由地将你的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
+> 如果对于要让它正常工作你有任何问题，可以自由地将你的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
 
 ## 使用在线字体服务
 
@@ -150,7 +150,7 @@ html {
 6. 然后，你需要将 CSS 声明复制到你的 CSS 中，以便将自定义字体应用到你的 HTML。
 
 > [!NOTE]
-> 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
+> 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 
 ## 关于 @font-face 的更多细节
 
@@ -171,7 +171,7 @@ html {
 }
 ```
 
-这被称为"bulletproof @font-face syntax（刀枪不入的 @font-face 语法）", 这是 Paul Irish 早期的一篇文章提及后 @font-face 开始流行起来 ([Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)。让我们来看看它是怎么做的：
+这被称为"bulletproof @font-face syntax（刀枪不入的 @font-face 语法）", 这是 Paul Irish 早期的一篇文章提及后 @font-face 开始流行起来 ([Bulletproof @font-face Syntax](https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)。让我们来看看它是怎么做的：
 
 - `font-family`：这一行指定了你想要引用的字体的名称。你可以把它作为你喜欢的任何东西，只要你在你的 CSS 中始终如一地使用它。
 - `src`：这些行指定要导入到你的 CSS(`url`部分) 的字体文件的路径，以及每种字体文件的格式 (`format`部分)。后面的部分不是必要的，但是声明它是很有用的，因为它允许浏览器更快地找到可以使用的字体。可以列出多个声明，用逗号分隔——浏览器会搜索并使用它能找到的第一个——因此，最好是把新的、更好的格式比如 WOFF2 放在前面，把偏老的，不是那么好的格式像 TTF 这样的放在后面。唯一的例外是 EOT 字体——他们首先在旧版本的 IE 中修复了几个 bug，这样它就会尝试使用它找到的第一件东西，即使它不能真正使用字体。

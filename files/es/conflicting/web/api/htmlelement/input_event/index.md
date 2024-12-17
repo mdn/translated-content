@@ -26,7 +26,7 @@ window.addEventListener('input', function (e) {
 
 ## Vea también
 
-- [Un laberinto de navegadores HTML5, soporte para oninput](http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
-- [Corrigiendo oninput en IE con html5Widgets](http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) incluye cobertura para IE6-8
-- Mathias Bynens sugiere [enlazando a input y keydown](http://mathiasbynens.be/notes/oninput)
+- [Un laberinto de navegadores HTML5, soporte para oninput](https://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
+- [Corrigiendo oninput en IE con html5Widgets](https://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) incluye cobertura para IE6-8
+- Mathias Bynens sugiere [enlazando a input y keydown](https://mathiasbynens.be/notes/oninput)
 - [evento oninput | dottoro](http://help.dottoro.com/ljhxklln.php) posee notas acerca de bugs en IE9
