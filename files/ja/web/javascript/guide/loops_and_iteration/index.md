@@ -347,7 +347,7 @@ car.model = Mustang;
 
 ## `for...of` 文
 
-{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Guide/iterable)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
+{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
 
 ```
 for (変数 of オブジェクト)

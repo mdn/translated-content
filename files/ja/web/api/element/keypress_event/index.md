@@ -1,9 +1,9 @@
 ---
 title: "Element: keypress イベント"
-short-title: keypress
 slug: Web/API/Element/keypress_event
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+short-title: keypress
 ---
 
 {{APIRef}} {{deprecated_header}}
@@ -13,7 +13,7 @@ l10n:
 文字値を生成するキーの例としては、アルファベットキー、数字キー、区切り記号キーが挙げられます。文字値を生成しないキーの例としては、 <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, <kbd>Meta</kbd> のような修飾キーが挙げられます。
 
 > [!WARNING]
-> このイベントは非推奨になりましたので、代わりに [`beforeinput`](/ja/docs/Web/API/HTMLElement/beforeinput_event) または [`keydown`](/ja/docs/Web/API/Element/keydown_event) を使用してください。
+> このイベントは非推奨になりましたので、代わりに [`beforeinput`](/ja/docs/Web/API/Element/beforeinput_event) または [`keydown`](/ja/docs/Web/API/Element/keydown_event) を使用してください。
 
 ## 構文
 
@@ -121,6 +121,6 @@ input.onkeypress = logKey;
 - 同様にこのイベントのターゲットとなる {{domxref("Document")}} インターフェイス。
 - 関連イベント:
 
-  - [`input`](/ja/docs/Web/API/HTMLElement/input_event)
+  - [`input`](/ja/docs/Web/API/Element/input_event)
   - [`keydown`](/ja/docs/Web/API/Element/keydown_event)
   - [`keyup`](/ja/docs/Web/API/Element/keyup_event)

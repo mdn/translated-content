@@ -49,7 +49,7 @@ API の表面は同じですが、Storage Access API を使用するウェブサ
 - Firefox では、`requestStorageAccess()` から返された Promise が解決されると、埋め込まれたページは、クッキーだけでなく、ファーストパーティストレージ全体にアクセスできます。 これには、[Web Storage](/ja/docs/Web/API/Web_Storage_API)、[IndexedDB](/ja/docs/Web/API/IndexedDB_API)、[DOM Cache](/ja/docs/Web/API/Cache) などの API へのアクセスが含まれます。
 - Firefox では、ストレージアクセス許可は 30 暦日が経過すると段階的に廃止されますが、Safari では、ブラウザーの使用がユーザーの操作なしで 30 日が経過するとストレージアクセス許可が段階的に廃止されます。 これは現在、Firefox 実装の制限であり、将来のバージョンで対処する可能性があります。 Safari では、Storage Access API を正常に使用すると、このカウンターがリセットされます。
 
-追跡クッキーをブロックするための Firefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants)が含まれています。
+追跡クッキーをブロックするための Firefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants)が含まれています。
 
 ## Storage Access API のメソッド
 

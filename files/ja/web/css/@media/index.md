@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
+**`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
@@ -34,7 +34,7 @@ slug: Web/CSS/@media
 }
 ```
 
-メディアクエリーの構文について詳しくは、[メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#構文)を参照してください。
+メディアクエリーの構文について詳しくは、[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)を参照してください。
 
 ## 解説
 
@@ -46,7 +46,7 @@ slug: Web/CSS/@media
 - `all`
   - : すべての機器に適合します。
 - `print`
-  - : ページのある資料や、画面に印刷プレビューモードで表示されている文書向けのものです。（これらの形式に特有の整形上の問題については、[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)を参照してください。）
+  - : ページのある資料や、画面に印刷プレビューモードで表示されている文書向けのものです。（これらの形式に特有の整形上の問題については、[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)を参照してください。）
 - `screen`
   - : 主に画面向けのものです。
 - `speech`
@@ -163,7 +163,7 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
 
 ## アクセシビリティの考慮
 
-サイトの文字の大きさを調整している人に合わせられるようには、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)で {{cssxref("&lt;length&gt;")}} が必要な時には [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) を使用してください。
+サイトの文字の大きさを調整している人に合わせられるようには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で {{cssxref("&lt;length&gt;")}} が必要な時には [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) を使用してください。
 
 [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) および [`px`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) はどちらも有効な単位ですが、 [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) はユーザーがブラウザーのテキストの寸法を変更した場合によりうまく動作します。
 
@@ -225,7 +225,7 @@ Media Queries Level 4 では、範囲を受け付ける特性を検査する際�
 }
 ```
 
-他の例については、[メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)をご覧ください。
+他の例については、[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)をご覧ください。
 
 ## 仕様書
 
@@ -237,7 +237,7 @@ Media Queries Level 4 では、範囲を受け付ける特性を検査する際�
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - JavaScript では `@media` は CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスを通じてアクセスすることができます。
 - [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#media_features)

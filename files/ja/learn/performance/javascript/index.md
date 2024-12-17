@@ -44,7 +44,7 @@ l10n:
 - **必要な JavaScript の量を縮小する。** 複雑な JavaScript を必要とするいくつかの機能は、数行の JavaScript で実行することができます。他にもライブラリーを必要とする機能は開発者の使い勝手を向上させるかもしれませんが、その JavaScript はすべて必要なのでしょうか？もっと軽量なものや自前で開発できるものはないのでしょうか？ある機能は必要ないかもしれませんし、追加することで華やかさは増すかもしれませんが、性能の面でその機能のコストは見合うものでしょうか？
 - **使用しないコードを削除する。**
 - **JavaScript を小さなファイルに分割する。** JavaScript を重要な部分とそうでない部分にコード分割します。webpack のようなモジュールバンドルはコード分割に対応しています。
-- **これらの小さなファイルを最適化する。** [Minification](/ja/docs/Glossary/Minification) は、ファイルの文字数を縮小し、JavaScript のバイト数や重さを軽減します。[Gzipping](/ja/docs/Glossary/GZip_compression) は、さらにファイルを圧縮するもので、Minification を行わない場合でも使用する必要があります。[Brotli](/ja/docs/Glossary/Brotli_compression) は Gzip に似ていて、一般的に Gzip の圧縮より優れています。
+- **これらの小さなファイルを最適化する。** [Minification](/ja/docs/Glossary/Minification) は、ファイルの文字数を縮小し、JavaScript のバイト数や重さを軽減します。[Gzipping](/ja/docs/Glossary/gzip_compression) は、さらにファイルを圧縮するもので、Minification を行わない場合でも使用する必要があります。[Brotli](/ja/docs/Glossary/Brotli_compression) は Gzip に似ていて、一般的に Gzip の圧縮より優れています。
 
 ## レンダリングの影響
 

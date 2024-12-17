@@ -9,7 +9,7 @@ slug: WebAssembly/JavaScript_interface/Instance
 
 ## コンストラクター
 
-- [`WebAssembly.Instance()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
+- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/JavaScript_interface/Instance/Instance)
   - : 新しい `Instance` オブジェクトを生成します。
 
 ## インスタンスプロパティ

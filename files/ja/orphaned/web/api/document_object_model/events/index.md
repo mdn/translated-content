@@ -7,11 +7,11 @@ slug: orphaned/Web/API/Document_Object_Model/Events
 
 ## はじめに
 
-この章では DOM のイベントモデルを説明します。この [Event](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event) インターフェイス自身は、 DOM のノード上にイベントを登録する為のインターフェイスと同様であり、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)であるとも言えます。いくつかの長い例は、様々な Event インターフェイスがどのように他と関連するかを示します。
+この章では DOM のイベントモデルを説明します。この [Event](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event) インターフェイス自身は、 DOM のノード上にイベントを登録する為のインターフェイスと同様であり、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)であるとも言えます。いくつかの長い例は、様々な Event インターフェイスがどのように他と関連するかを示します。
 
-[DOM レベル 3 イベントの原案](http://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture)に、DOM を通して 3 つのフェーズから構成されるイベントフローを明確に説明した素晴らしい説明図があります。
+[DOM レベル 3 イベントの原案](https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture)に、DOM を通して 3 つのフェーズから構成されるイベントフローを明確に説明した素晴らしい説明図があります。
 
-また、イベントが DOM 内をどのように伝播するかについては更に詳細なコード例、[例 5: イベント伝播 (propagation)](/ja/docs/DOM/DOM_Reference/Examples#Example_5.3A_Event_Propagation) を参照してください。
+また、イベントが DOM 内をどのように伝播するかについては更に詳細なコード例、[例 5: イベント伝播 (propagation)](/ja/docs/Web/API/Document_Object_Model/Examples#example_5.3a_event_propagation) を参照してください。
 
 ## イベントリスナーの登録
 
@@ -37,13 +37,13 @@ function greet(event){
 
 さらに詳細を知りたい場合は {{domxref("EventTarget.addEventListener")}} のリファレンスを参照してください。
 
-### [HTML 属性](/ja/docs/Web/Guide/HTML/Event_attributes)
+### [HTML 属性](/ja/docs/Learn/JavaScript/Building_blocks/Events)
 
 ```html
 <button onclick="alert('Hello world!')">
 ```
 
-HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を通してイベントオブジェクトが渡されます。[返値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
+HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を通してイベントオブジェクトが渡されます。[返値は HTML の仕様で定義された特別な方法で処理されます](https://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
 
 > [!WARNING]
 > この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
@@ -55,7 +55,7 @@ HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を
 myButton.onclick = function(event){alert('Hello world')}
 ```
 
-この関数は 1 つの `event` 引数を取るように定義できます。[返り値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
+この関数は 1 つの `event` 引数を取るように定義できます。[返り値は HTML の仕様で定義された特別な方法で処理されます](https://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
 
 この書き方の問題は、各要素の各イベント毎に 1 つだけしかハンドラーを設定できないことです。
 
@@ -80,5 +80,5 @@ table_el.onclick = print
 
 - [DOM リファレンス](/ja/docs/Web/API/Document_Object_Model)
 - [DOM への導入](/ja/docs/Web/API/Document_Object_Model/Introduction)
-- [イベントと DOM](/ja/docs/Web/API/Document_Object_Model/Events)
+- [イベントと DOM](/ja/docs/orphaned/Web/API/Document_Object_Model/Events)
 - [例](/ja/docs/Web/API/Document_Object_Model/Examples)

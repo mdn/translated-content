@@ -1,20 +1,20 @@
 ---
 title: "IDBDatabase: objectStoreNames プロパティ"
-short-title: objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+short-title: objectStoreNames
 ---
 
 {{ APIRef("IndexedDB") }}
 
-**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
+**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
 
 {{AvailableInWorkers}}
 
 ### 値
 
-現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
+現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
 
 ## 例
 

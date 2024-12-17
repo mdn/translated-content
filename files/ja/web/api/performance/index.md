@@ -9,7 +9,7 @@ l10n:
 
 **`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。
 
-この型のオブジェクトは `window.performance` や `self.performance` をワーカーで呼び出すことで取得できます。パフォーマンス項目はコンテキスト単位であることに注意してください。メインスレッド（または他にもワーカー）でマークを作成した場合、ワーカースレッドではそのマークを見ることはできません。ウィンドウとワーカーのコンテキストで利用できる API は [`self.performance`](/ja/docs/Web/API/performance_property) を参照してください。
+この型のオブジェクトは `window.performance` や `self.performance` をワーカーで呼び出すことで取得できます。パフォーマンス項目はコンテキスト単位であることに注意してください。メインスレッド（または他にもワーカー）でマークを作成した場合、ワーカースレッドではそのマークを見ることはできません。ウィンドウとワーカーのコンテキストで利用できる API は [`self.performance`](/ja/docs/Web/API/Window/performance) を参照してください。
 
 {{InheritanceDiagram}}
 

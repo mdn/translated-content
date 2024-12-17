@@ -1,9 +1,9 @@
 ---
 title: "NDEFReader: write() メソッド"
-short-title: write()
 slug: Web/API/NDEFReader/write
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+short-title: write()
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
@@ -32,7 +32,7 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : {{RFC(5646, "Tags for Identifying Languages （または BCP 47）")}}による有効な言語タグです。
     - `mediaType` {{optional_inline}}
-      - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+      - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
     - `recordType`
 
       - : 文字列で、 `data` に格納されたデータの型を示します。以下の値の何れかになります。
@@ -42,7 +42,7 @@ write(message, options)
         - `"empty"`
           - : 空の {{domxref("NDEFRecord")}} です。
         - `"mime"`
-          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
         - `"smart-poster"`
           - : [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 仕様書で定義されているスマートポスターです。
         - `"text"`

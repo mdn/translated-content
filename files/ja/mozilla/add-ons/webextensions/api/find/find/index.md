@@ -124,7 +124,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {

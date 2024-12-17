@@ -19,21 +19,21 @@ slug: WebAssembly/JavaScript_interface
 
 ## コンストラクタープロパティ
 
-- [`WebAssembly.CompileError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError)
+- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/JavaScript_interface/CompileError/CompileError)
   - : WebAssembly のデコードまたは検証中のエラーを示します。
-- [`WebAssembly.Global()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global/Global)
   - : グローバル変数のインスタンスを表し、 JavaScript からアクセス可能で、 1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
-- [`WebAssembly.Instance()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
-  - : ステートフルで、実行可能な [WebAssembly.Module](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) のインスタンスです。
-- [`WebAssembly.LinkError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError)
+- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+  - : ステートフルで、実行可能な [WebAssembly.Module](/ja/docs/WebAssembly/JavaScript_interface/Module) のインスタンスです。
+- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/JavaScript_interface/LinkError/LinkError)
   - : (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールの初期化時に発生したエラーを示します。
-- [`WebAssembly.Memory()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory)
+- [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/Memory)
   - : {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティが可変長の [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) であり、これが WebAssembly の `Instance` からアクセス可能なメモリーのバイト列を保持しています。
-- [`WebAssembly.Module()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)
+- [`WebAssembly.Module()`](/ja/docs/WebAssembly/JavaScript_interface/Module/Module)
   - : ステートレスの WebAssembly のコードであり、ブラウザーでコンパイルされ、効率的に[ワーカーと共有](/ja/docs/Web/API/Worker/postMessage)することができ、複数回インスタンス化することができます。
-- [`WebAssembly.RuntimeError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError)
+- [`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
   - : WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生するエラー型です。
-- [`WebAssembly.Table()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+- [`WebAssembly.Table()`](/ja/docs/WebAssembly/JavaScript_interface/Table/Table)
   - : WebAssembly のテーブルを表す配列風の構造で、関数の参照を保持します。
 
 ## 静的メソッド
