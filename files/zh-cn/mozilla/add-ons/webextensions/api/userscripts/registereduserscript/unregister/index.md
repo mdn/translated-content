@@ -10,7 +10,7 @@ l10n:
 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象的 `unregister()` 方法注销由该对象表示的用户脚本（用户脚本是使用 {{WebExtAPIRef("userScripts.register","userScripts.register()")}} 注册的）。
 
 > [!NOTE]
-> 当相关的扩展页面（从中注册了用户脚本）卸载时，用户脚本会被自动注销，因此你应该从一个至少持续到你希望用户脚本保持注册的扩展页面中注册用户脚本。
+> 当相关的扩展页面（从中注册了用户脚本）卸载时，用户脚本会被自动注销。因此，你应该在一个比用户脚本注册时间还长的扩展页面中注册这一脚本。
 
 ## 语法
 
