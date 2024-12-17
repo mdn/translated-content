@@ -16,7 +16,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ### Параметры
 
 - _bufferSource_
-  - : Типизированный массив [typed array](/ru/docs/Web/JavaScript/Typed_arrays) или [ArrayBuffer](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), содержащий двоичный код модуля `.wasm`, который вы хотите скомпилировать.
+  - : Типизированный массив [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays) или [ArrayBuffer](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), содержащий двоичный код модуля `.wasm`, который вы хотите скомпилировать.
 
 ### Возвращаемое значение
 
@@ -24,7 +24,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 
 ### Исключения
 
-- Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Typed_arrays), генерируется {{jsxref("TypeError")}}.
+- Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays), генерируется {{jsxref("TypeError")}}.
 - Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
 
 ## Примеры

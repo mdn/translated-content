@@ -26,7 +26,7 @@ La siguiente captura de pantalla te da una idea de cómo debería verse el progr
 
 ![](bouncing-evil-circle.png)
 
-Para darle una idea eche un vistazo al [ejemplo final](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (¡no mire el código fuente!)
+Para darle una idea eche un vistazo al [ejemplo final](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (¡no mire el código fuente!)
 
 ## Pasos para completar
 

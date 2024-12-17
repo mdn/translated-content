@@ -18,8 +18,8 @@ A API provém de quatro interfaces: {{domxref("TextDecoder")}}, {{domxref("TextE
 
 ## Tutoriais & ferramentas
 
-- O [shim](http://code.google.com/p/stringencoding/) permite usar essa interface em navegadores que não a suportam.
-- [`StringView`](/pt-BR/Add-ons/Code_snippets/StringView) – Um C-like reperesentação de strings baseados em arrays tipados
+- O [shim](https://code.google.com/p/stringencoding/) permite usar essa interface em navegadores que não a suportam.
+- [`StringView`](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/StringView) – Um C-like reperesentação de strings baseados em arrays tipados
 
 ## Especificações
 

@@ -62,7 +62,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 接著我們來解釋一下 JavaScript 基本特性，以讓你更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果你可以充分理解這些基礎知識，你就可以撰寫程式來創造無限可能！
 
 > [!WARNING]
-> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
+> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
 
 ### 變數（Variables）
 
@@ -322,7 +322,7 @@ multiply(0.5, 3);
 
 ### 事件（Events）
 
-如果要在網頁上創造真正的互動功能，你將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許你執行其他程式碼以回應這些事件。最明顯的事件就是 [click event](/zh-TW/docs/Web/Events/click) 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請你把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：
+如果要在網頁上創造真正的互動功能，你將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許你執行其他程式碼以回應這些事件。最明顯的事件就是 [click event](/zh-TW/docs/Web/API/Element/click_event) 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請你把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：
 
 ```js
 document.querySelector("html").onclick = function () {
@@ -330,7 +330,7 @@ document.querySelector("html").onclick = function () {
 };
 ```
 
-有許多的方法可以把事件跟網頁元素結合在一起。在底下的程式碼中，我們先選擇了 HTML 元素，並把這個元素的 [`onclick`](/zh-TW/docs/Web/API/GlobalEventHandlers.onclick) 處理器設定為一個匿名函式，裡面裝著在滑鼠點選事件發生時，要執行的程式碼：
+有許多的方法可以把事件跟網頁元素結合在一起。在底下的程式碼中，我們先選擇了 HTML 元素，並把這個元素的 [`onclick`](/zh-TW/docs/Web/API/Element/click_event) 處理器設定為一個匿名函式，裡面裝著在滑鼠點選事件發生時，要執行的程式碼：
 
 請特別注意到以下這段程式碼：
 
@@ -409,7 +409,7 @@ myHTML.onclick = function () {};
    }
    ```
 
-   這個函式包含了一個會產生一個對話視窗的 [`prompt()`](/zh-TW/docs/Web/API/Window.prompt) 函式，有點像 `alert()`，只是 `prompt()` 會要求使用者輸入一些資料，並在使用者點選`確認`之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 `localStorage` 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 `setItem()` 函式來建立並且把資料儲存到一個名稱為 `'name'` 的變數裡，再把包含者用者名字的 `myName` 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 `innerHTML` 特性：
+   這個函式包含了一個會產生一個對話視窗的 [`prompt()`](/zh-TW/docs/Web/API/Window/prompt) 函式，有點像 `alert()`，只是 `prompt()` 會要求使用者輸入一些資料，並在使用者點選`確認`之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 `localStorage` 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 `setItem()` 函式來建立並且把資料儲存到一個名稱為 `'name'` 的變數裡，再把包含者用者名字的 `myName` 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 `innerHTML` 特性：
 
 4. 接著，加入這個 `if ... else` 區塊 — 因為她會在程式一開始被讀取的時候就被啟用，我們稱她為初始化程式碼：
 

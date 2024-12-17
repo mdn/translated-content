@@ -71,7 +71,7 @@ console.log("original === cast ? " + (original === cast));
 // value: 33
 ```
 
-L'ordre des traces dans la console est dû au fait que les gestionnaires `then()` sont appelés de façon asynchrone (plus de détails sur `then` [dans cet article](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then#Valeur_de_retour)).
+L'ordre des traces dans la console est dû au fait que les gestionnaires `then()` sont appelés de façon asynchrone (plus de détails sur `then` [dans cet article](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#valeur_de_retour)).
 
 ### Résoudre des objets avec `then` et renvoyer des erreurs
 

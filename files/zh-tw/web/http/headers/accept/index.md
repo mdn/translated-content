@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept`** HTTP 請求標頭表示用戶端能夠理解的內容類型，表達為 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)從提案中選擇一個並通過 {{HTTPHeader("Content-Type")}} 回應標頭通知客戶端選擇。瀏覽器根據請求的上下文設置此標頭的必要值。例如，瀏覽器在擷取 CSS 樣式表、圖片、影片或腳本時，在請求中使用不同的值。
+**`Accept`** HTTP 請求標頭表示用戶端能夠理解的內容類型，表達為 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)從提案中選擇一個並通過 {{HTTPHeader("Content-Type")}} 回應標頭通知客戶端選擇。瀏覽器根據請求的上下文設置此標頭的必要值。例如，瀏覽器在擷取 CSS 樣式表、圖片、影片或腳本時，在請求中使用不同的值。
 
 <table class="properties">
   <tbody>
@@ -44,7 +44,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 ## 指令
 
 - `<MIME_type>/<MIME_subtype>`
-  - : 單一、精確的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，如 `text/html`。
+  - : 單一、精確的 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)，如 `text/html`。
 - `<MIME_type>/*`
   - : 一個 MIME 類型，但沒有子類型。`image/*` 對應於 `image/png`、`image/svg`、`image/gif` 和其他圖片類型。
 - `*/*`

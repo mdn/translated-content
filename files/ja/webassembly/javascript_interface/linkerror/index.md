@@ -9,7 +9,7 @@ slug: WebAssembly/JavaScript_interface/LinkError
 
 ## コンストラクター
 
-- [`WebAssembly.LinkError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError)
+- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/JavaScript_interface/LinkError/LinkError)
   - : 新しい `WebAssembly.LinkError` オブジェクトを生成します。
 
 ## インスタンスプロパティ

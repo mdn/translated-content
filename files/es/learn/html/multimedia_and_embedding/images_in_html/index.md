@@ -45,7 +45,7 @@ Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadame
 Para poner una imagen simple en una página web, utilizamos el elemento {{htmlelement("img")}}. Se trata de un elemento vacío (lo que significa que no contiene texto o etiqueta de cierre) que requiere de por lo menos de un atributo para ser utilizado: `src` (a veces denominado por su nombre completo, _source_). El atributo `src` contiene una ruta que apunta a la imagen que quieres poner en la página, que puede ser una URL relativa o absoluta, de la misma forma que el elemento {{htmlelement("a")}} contiene los valores del atributo `href`.
 
 > [!NOTE]
-> Deberías leer [Inicio rápido a las URL y rutas](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks#Un_primer_acercamiento_a_URL_y_referencias) para refrescar tu memoria sobre URL relativas y absolutas antes de continuar.
+> Deberías leer [Inicio rápido a las URL y rutas](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#un_primer_acercamiento_a_url_y_referencias) para refrescar tu memoria sobre URL relativas y absolutas antes de continuar.
 
 Por ejemplo, si tu imagen se llama `dinosaur.jpg`, y está en el mismo directorio que tu página HTML, deberás incrustar la imagen de la siguiente manera:
 
@@ -118,13 +118,13 @@ La forma más fácil de probar el texto `alt` es escribir mal el nombre de archi
 
 - **Decoración.** Para las imágenes decorativas deberían utilizarse [imágenes de fondo CSS](#imágenes_de_fondo_css). Pero si es inevitable usar HTML, la mejor forma de hacerlo es con `alt=""`. Si la imagen no es parte del contenido, el lector de pantalla no debería malgastar el tiempo en leerla.
 - **Contenido.** Si tu imagen proporciona información significativa, proporciona la misma información en un texto alternativo (`alt`) breve. O mejor aún, en el texto principal que todos pueden ver. No escribas texto alternativo redundante. ¿Acaso no resultaría molesto para un usuario con visión ordinaria si todos los párrafos se escribieran dos veces en el contenido principal? Si la imagen se describe en el cuerpo principal del texto de modo adecuado, puedes simplemente usar `alt=""`.
-- **Enlace.** Al poner una imagen dentro de una etiqueta `<a>` para convertirla en un enlace, aun debes proporcionar [texto de enlace accesible](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks#Claridad_en_las_palabras). En tal caso podrías escribirlo dentro del mismo elemento `<a>`, o dentro del atributo `alt` de la imagen. Lo que mejor funcione en tu caso.
+- **Enlace.** Al poner una imagen dentro de una etiqueta `<a>` para convertirla en un enlace, aun debes proporcionar [texto de enlace accesible](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#claridad_en_las_palabras). En tal caso podrías escribirlo dentro del mismo elemento `<a>`, o dentro del atributo `alt` de la imagen. Lo que mejor funcione en tu caso.
 - **Texto.** No deberías poner tu texto en imágenes. Si tu título de encabezado principal necesita, por ejemplo, un sombreado paralelo, [usa CSS](/es/docs/Web/CSS/text-shadow) para ello en vez de poner el texto en una imagen. Pero, _si realmente no puedes evitarlo_, deberías proporcionar el texto en el atributo `alt`.
 
 En el fondo, la clave es ofrecer una experiencia usable, incluso cuando las imágenes no puedan verse. Esto asegura que ningún usuario pierda ninguna parte del contenido. Desactiva las imágenes en tu navegador y observa cómo se ven las cosas. Te darás cuenta de lo útil que resulta el texto alternativo cuando no es posible ver la imagen.
 
 > [!NOTE]
-> Consulta nuestra guía de [texto alternativo](/es/docs/Learn/Accessibility/HTML#Alternativas_de_texto) para obtener más información.
+> Consulta nuestra guía de [texto alternativo](/es/docs/Learn/Accessibility/HTML#alternativas_de_texto) para obtener más información.
 
 ### Anchura y altura
 
@@ -520,7 +520,7 @@ La imagen resultante, podría decirse que es más fácil de posicionar y control
 En resumen: si una imagen tiene significado en términos del contenido de tu página, entonces deberías usar una imagen HTML. Si la imagen es puramente decorativa, deberías usar imágenes de fondo CSS.
 
 > [!NOTE]
-> Aprenderás mucho más sobre las [imágenes de fondo CSS](/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes) en nuestro apartado [CSS](/es/docs/Learn/CSS).
+> Aprenderás mucho más sobre las [imágenes de fondo CSS](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) en nuestro apartado [CSS](/es/docs/Learn/CSS).
 
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 

@@ -36,7 +36,7 @@ Utiliza un estilo específico de `id` cuando desees restringir las reglas de est
 
 Usa un estilo específico de `class` cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
 
-Consulta [Selectores CSS](/en/CSS/Getting_Started/Selectors)
+Consulta [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
 #### Restaurar el valor de la propiedad predeterminado
 
@@ -72,7 +72,7 @@ Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve prime
 
 #### Normas de estilo que no funcionan
 
-Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en/DOM_Inspector) para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en-US/DOM_Inspector) para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
 
 ##### Jerarquía de los elementos HTML
 
@@ -161,8 +161,8 @@ div { color: black; }
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#specificity)
+Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity)
 
 #### ¿Qué hacen las propiedades -moz-\*?
 
-Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions).
+Por favor, consulta la página [Extensiones CSS de Mozilla](/en-US/CSS_Reference/Mozilla_Extensions).

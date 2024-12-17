@@ -18,7 +18,7 @@ Object.seal(obj);
 ### Paramètres
 
 - obj
-  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données).
+  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#types_de_données).
 
 ### Valeur de retour
 

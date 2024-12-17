@@ -34,7 +34,7 @@ MDN [Accessibility Learning Area](/zh-TW/docs/Learn/Accessibility) 涵蓋了最�
   - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
 - [Keyboard-navigable JavaScript widgets](/zh-TW/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Until now, web developers who want to make their styled \<div> and \<span> based widgets have lacked the proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements which a developer should be aware of.
-- [ARIA](/zh-TW/docs/Accessibility/ARIA)
+- [ARIA](/zh-TW/docs/Web/Accessibility/ARIA)
   - : A collection of articles to learn how to use ARIA to make your HTML documents more accessible.
 - [Assistive technology (AT) development](/zh-TW/docs/Accessibility/AT_Development)
   - : A collection of articles intended for AT developers

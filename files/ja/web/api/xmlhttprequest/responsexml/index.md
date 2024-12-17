@@ -1,9 +1,9 @@
 ---
 title: "XMLHttpRequest: responseXML プロパティ"
-short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 l10n:
   sourceCommit: fe468a9966c87cac081d3986b3332d0a51c4e2ee
+short-title: responseXML
 ---
 
 {{APIRef("XMLHttpRequest API")}}
@@ -12,7 +12,7 @@ l10n:
 
 > **メモ:** `responseXML` という名前はこのプロパティの歴史の遺物です。これは HTML および XML の両方で動作します。
 
-ふつう、レスポンスは "`text/xml`" として解釈されます。 {{domxref("XMLHttpRequest.responseType", "responseType")}} が "`document`" に設定され、リクエストが非同期に行われた場合、レスポンスは代わりに "`text/html`" として解釈されます。他の型のデータでは、 [`data:` の URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) の場合と同様、 `responseXML` は `null` になります。
+ふつう、レスポンスは "`text/xml`" として解釈されます。 {{domxref("XMLHttpRequest.responseType", "responseType")}} が "`document`" に設定され、リクエストが非同期に行われた場合、レスポンスは代わりに "`text/html`" として解釈されます。他の型のデータでは、 [`data:` の URL](/ja/docs/Web/URI/Schemes/data) の場合と同様、 `responseXML` は `null` になります。
 
 サーバーが {{HTTPHeader("Content-Type")}} を "`text/xml`" とも "`application/xml`" とも指定しなかった場合、 {{domxref("XMLHttpRequest.overrideMimeType()")}} を使用して強制的に XML として解釈させることができます。
 

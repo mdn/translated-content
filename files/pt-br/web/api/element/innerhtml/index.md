@@ -137,6 +137,6 @@ Por essa razão, recomenda-se que você não use o `innerHTML` quando estiver in
 ## Veja também
 
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Para aqueles que desejam aderir aos padrões, aqui oferece um conjunto de funções JavaScript para serializar ou analisar XML, de modo a configurar o conteúdo do elemento definido como uma string(s) através do DOM ou recuperando o conteúdo do elemento obtido a partir do DOM como uma string.
-- [insertAdjacentHTML](/pt-BR/docs/DOM/Element.insertAdjacentHTML) - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.
-- [jssaxparser](http://code.google.com/p/jssaxparser/) - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é [significantemente mais fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
-- Considerações de eficiência: Em [quirksmode](http://www.quirksmode.org/dom/innerhtml.html)
+- [insertAdjacentHTML](/pt-BR/docs/Web/API/Element/insertAdjacentHTML) - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.
+- [jssaxparser](https://code.google.com/p/jssaxparser/) - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é [significantemente mais fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
+- Considerações de eficiência: Em [quirksmode](https://www.quirksmode.org/dom/innerhtml.html)

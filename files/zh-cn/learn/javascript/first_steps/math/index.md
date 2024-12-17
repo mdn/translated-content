@@ -48,7 +48,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 ### 这是我们的全部数字
 
-让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)中输入下面列出的命令。
+让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中输入下面列出的命令。
 
 **[在新窗口中打开](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
@@ -140,7 +140,7 @@ slug: Learn/JavaScript/First_steps/Math
 > [!NOTE]
 > 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 `Math.pow(7, 3)` 中，`7` 是基数，`3` 是指数，因此表达式的结果是 `343`。 `Math.pow(7, 3)` 相当于 `7 ** 3`。
 
-我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)中。
+我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中。
 
 1. 首先尝试输入一些简单的例子，例如
 
@@ -266,7 +266,7 @@ x *= y; // x 现在包含值 12
 ```
 
 > [!NOTE]
-> 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)，但是这些是你现在应该学习的基本的一类。
+> 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)，但是这些是你现在应该学习的基本的一类。
 
 ## 主动学习：调整画布框的大小
 

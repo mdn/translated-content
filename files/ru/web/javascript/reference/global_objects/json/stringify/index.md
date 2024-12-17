@@ -21,7 +21,7 @@ JSON.stringify(value[, replacer[, space]])
   - : Значение, преобразуемое в строку JSON.
 - `replacer` {{optional_inline}}
   - : Если является функцией, преобразует значения и свойства по ходу их преобразования в строку; если является массивом, определяет набор свойств, включаемых в объект в окончательной строке.
-    Подробное описание функции `replacer` даётся в статье [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON#The_replacer_parameter) руководства по JavaScript.
+    Подробное описание функции `replacer` даётся в статье [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON#the_replacer_parameter) руководства по JavaScript.
 - `space` {{optional_inline}}
   - : Делает результат красиво отформатированным (расставляя пробелы).
 
@@ -163,5 +163,5 @@ JSON.stringify(foo, ["week", "month"]);
 
 ## Смотрите также
 
-- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("JSON.parse()")}}

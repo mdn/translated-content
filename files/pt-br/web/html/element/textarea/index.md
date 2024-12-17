@@ -92,7 +92,7 @@ Este elemento inclui os atributos globais.
 
 `<textarea>` é um elemento substituído - possui dimensões intrínsecas, como uma imagem rasterizada. Por padrão, sua{{cssxref("display")}} o valor é bloco. Em comparação com outros elementos de formulário, é relativamente fácil de estilizar, com seu modelo de caixa, fontes, esquema de cores etc. sendo facilmente manipuláveis usando CSS comum.
 
-[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)`<textarea>`s.
+[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/Forms/Styling_web_forms)`<textarea>`s.
 
 ### Inconsistência da linha de base
 

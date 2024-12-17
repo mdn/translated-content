@@ -1,9 +1,9 @@
 ---
 title: "Window: atob() メソッド"
-short-title: atob()
 slug: Web/API/Window/atob
 l10n:
   sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+short-title: atob()
 ---
 
 {{APIRef("HTML DOM")}}
@@ -50,6 +50,6 @@ const decodedData = window.atob(encodedData); // 文字列をデコード
 ## 関連情報
 
 - [`atob` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) にあります
-- [`data` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/ja/docs/Web/URI/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}: 同じメソッドですが、ワーカーのスコープのものです。
 - {{domxref("Window.btoa()")}}

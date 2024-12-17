@@ -523,4 +523,4 @@ AddType video/webm .webm
 - {{htmlelement("audio")}}
 - [HTML での動画や音声の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [canvas を用いた動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Ogg メディアのサーバーの構成](/ja/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Ogg メディアのサーバーの構成](/ja/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

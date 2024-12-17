@@ -84,4 +84,4 @@ column-width: unset;
 ## 関連情報
 
 - [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (レイアウトの学習)
-- [段組みの基本概念](/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

@@ -3,7 +3,7 @@ title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/HTML/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
+Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
 
 ## Para onde vão os dados?
 
@@ -11,7 +11,7 @@ Aqui nós discutiremos o que acontece com os dadosquando um formulário é envia
 
 ### Sobre a arquitetura cliente / servidor
 
-A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](http://httpd.apache.org/), [Nginx](http://nginx.com/), [IIS](http://www.iis.net/), [Tomcat](http://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
+A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](https://httpd.apache.org/), [Nginx](http://nginx.com/), [IIS](http://www.iis.net/), [Tomcat](http://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/Web/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
 
 ![A basic schema of the Web client/server architecture](/files/4291/client-server.png)
 
@@ -55,7 +55,7 @@ Muitas páginas mais antigas usam a seguinte notação para indicar que os dados
 
 #### o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method)
 
-Este atributo define como os dados são enviados. o [HTTP protocol](/pt-BR/docs/HTTP)
+Este atributo define como os dados são enviados. o [HTTP protocol](/pt-BR/docs/Web/HTTP)
 
 Fornece várias maneiras de executar um pedido; Os dados de formulários HTML podem ser enviados através de pelo menos dois deles: o método GET eo método POST.
 
@@ -113,7 +113,7 @@ say=Hi&to=Mom
 
 O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.
 
-Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox [Web Console](/pt-BR/docs/Tools/Web_Console) ou o [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:
+Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) ou o [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:
 
 1. Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.
 2. Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.
@@ -170,7 +170,7 @@ Oi Mãe
 
 #### Outros idiomas e frameworks
 
-Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/), [Java](/pt-BR/docs/), [.Net](http://www.microsoft.com/net), [Ruby](/pt-BR/docs/), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
+Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/Web), [Java](/pt-BR/docs/Web), [.Net](https://www.microsoft.com/net), [Ruby](/pt-BR/docs/Web), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
 
 - [Symfony](http://symfony.com/) Para PHP
 - [Django](https://www.djangoproject.com/) Para Python
@@ -218,7 +218,7 @@ Dependendo do que você está fazendo, existem alguns problemas de segurança mu
 
 Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF) são tipos comuns de ataques que ocorrem quando você exibe dados enviados por um usuário para o usuário ou para outro usuário.
 
-O XSS permite que os invasores injetem scripts do lado do cliente em páginas da Web vistas por outros usuários. Uma vulnerabilidade de scripts entre sites pode ser usada por atacantes para ignorar controles de acesso, como o [same origin policy](/pt-BR/docs/JavaScript/Same_origin_policy_for_JavaScript). O efeito desses ataques pode variar de um pequeno incômodo a um risco de segurança significativo.
+O XSS permite que os invasores injetem scripts do lado do cliente em páginas da Web vistas por outros usuários. Uma vulnerabilidade de scripts entre sites pode ser usada por atacantes para ignorar controles de acesso, como o [same origin policy](/pt-BR/docs/Web/Security/Same-origin_policy). O efeito desses ataques pode variar de um pequeno incômodo a um risco de segurança significativo.
 
 CSRF são semelhantes aos ataques XSS, já que eles começam da mesma maneira - injetando script do lado do cliente em páginas da Web - mas seu destino é diferente. Os invasores do CSRF tentam aumentar os privilégios para aqueles de um usuário com privilégios mais altos (como um administrador do site) para executar uma ação que não deve ser capaz de fazer (por exemplo, enviar dados para um usuário não confiável).
 
@@ -252,7 +252,7 @@ You should avoid many/most problems if you follow these three rules, but it's al
 
 ## Conclusion
 
-As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/HTML/Forms/Data_form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
+As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
 
 ## See also
 

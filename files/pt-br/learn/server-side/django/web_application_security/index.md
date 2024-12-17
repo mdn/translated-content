@@ -195,6 +195,6 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs)
 - [Segurança de website no lado do servidor](/pt-BR/docs/Web/Security) (MDN)
 - [Segurança web](/pt-BR/docs/Web/Security) (MDN)
-- [Protegendo seu site](/pt-BR/docs/Web/Security/Securing_your_site) (MDN)
+- [Protegendo seu site](/pt-BR/docs/Web/Security/Practical_implementation_guides) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

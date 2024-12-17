@@ -19,7 +19,7 @@ slug: Learn/Forms/User_input_methods
 
 - デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェイスで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
 - ポインターを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) は、あなたのアプリを全画面モードで表示するのに役立ちます。
-- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
+- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/HTML/Global_attributes/contenteditable)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
 - キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。
 
 以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。
@@ -38,11 +38,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
 > [!NOTE]
-> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
 #### マウス
 
-ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントは、[`click イベント`](/ja/docs/Web/Reference/Events/click)、[`dblclick イベント`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup イベント`](/ja/docs/Web/API/Element/mouseup_event)、そして [`mousedown イベント`](/ja/docs/Web/Reference/Events/mousedown)を含みます。マウスイベントインターフェイスが使用している全てのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Reference/Events)に記載されています。
+ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントは、[`click イベント`](/ja/docs/Web/API/Element/click_event)、[`dblclick イベント`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup イベント`](/ja/docs/Web/API/Element/mouseup_event)、そして [`mousedown イベント`](/ja/docs/Web/API/Element/mousedown_event)を含みます。マウスイベントインターフェイスが使用している全てのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Events)に記載されています。
 
 入力デバイスがマウスの場合、ユーザー入力を Pointer Lock API やドラッグ＆ドロップ API の実装でも制御できます (下記を参照してください)。
 
@@ -66,7 +66,7 @@ element.addEventListener("touchmove", handleMove, false);
 
 #### ポインターイベント
 
-マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](http://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
+マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](https://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
 
 > [!NOTE]
 > Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
@@ -132,7 +132,7 @@ if (elem.requestFullscreen) {
 私たちが実装する点は以下です:
 
 - ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を true にセットします。
-- [`dragstart`](/ja/docs/Web/API/Document/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
+- [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
@@ -145,23 +145,23 @@ if (elem.requestFullscreen) {
 ```
 
 > [!NOTE]
-> 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
+> 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/HTML/Global_attributes/contenteditable)で確認することができます。
 
 ## 例
 
-- **[複数のタッチポイントを同時に追跡する](/ja/DOM/Touch_events#Example)**
+- **[複数のタッチポイントを同時に追跡する](/ja/docs/Web/API/Touch_events#example)**
   - : この例は一度に複数のタッチ箇所を追跡しており、ユーザーは `{{htmlelement("canvas")}}` の中で一本以上の指で同時に描くことができます。タッチイベントをサポートしているブラウザーでのみ動きます。
 - **[シンプルなポインターロックデモ](/ja/docs/Web/API/Pointer_Lock_API#example)**
   - : シンプルなコントロールシステムをセットアップするためのポインターロックの使い方を紹介するために、シンプルなポインターロックデモを記載しています。このデモでは `{{htmlelement("canvas")}}` 要素の中にボールを描くために JavaScript を使っています。canvas をクリックすると、ポインターロックはその後、マウスポインターの除去と直接マウスを使ってボールを移動させるために利用されます。
-- **[コンテンツを編集可能にするデモ](http://html5demos.com/contenteditable)**
+- **[コンテンツを編集可能にするデモ](https://html5demos.com/contenteditable)**
   - : このデモは、編集可能なドキュメントセクションを作成することに利用できる contenteditable がどのように動くか表示しており、その状態はその後 [ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)を使い保存されます。
 
 ## チュートリアル
 
-- [タッチイベントガイド](/ja/docs/Web/Guide/DOM/Events/Touch_events)
+- [タッチイベントガイド](/ja/docs/Web/API/Touch_events)
 - [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)
-- [複数のアイテムのドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数のアイテムのドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [ドラッグ操作ガイド](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 
 ## 関連情報
@@ -173,6 +173,6 @@ if (elem.requestFullscreen) {
 - [Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
 - [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
+- [コンテンツを編集可能にする](/ja/docs/Web/HTML/Global_attributes/contenteditable)
 - [Keyboard events in Firefox OS TV](/ja/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
 - [Implementing TV remote control navigation](/ja/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

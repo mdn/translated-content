@@ -243,7 +243,7 @@ Los creadores de navegadores y los desarrolladores web han aprendido por las mal
 
 > **Nota:** [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
 
-Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
+Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
 
 #### Solo incrusta cuando sea necesario
 
@@ -251,7 +251,7 @@ Algunas veces tiene sentido embeber contenido de terceros— como vídeos de you
 
 Además de la seguridad, debes ser consciente de los temas de propiedad intelectual. La mayoría del contenido tiene derechos de autor, en línea y fuera de línea, incluso contenido que no te esperas(por ejemplo, la mayoría de las imágenes en [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Nunca muestres en tu pagina contenido a menos que te pertenezca o que el dueño te haya dado por escrito su permiso inequívoco. Las penalidades por derechos de autor son severas. De nuevo, tu nunca puedes ser demasiado cauteloso.
 
-Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por ejemplo, el contenido en MDN es licenciado bajo[CC-BY-SA](/es/docs/MDN/About#Copyrights_and_licenses). Esto significa, que tu debes darnos [credito apropiadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando tu citas nuestro contenido, aun si tu haces cambios substanciales.
+Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por ejemplo, el contenido en MDN es licenciado bajo[CC-BY-SA](/es/docs/MDN/Writing_guidelines#copyrights_and_licenses). Esto significa, que tu debes darnos [credito apropiadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando tu citas nuestro contenido, aun si tu haces cambios substanciales.
 
 #### Usa HTTPS
 
@@ -262,7 +262,7 @@ Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por e
 
 Usar HTTPS requiere un certificado de seguridad, el cual puede ser costoso (Aunque [Let's Encrypt](https://letsencrypt.org/) hace las cosas más faciles) — si tu no puedes tener uno, tu debes servir tu documento padre con HTTP. Sin embargo, debido al segundo beneficio de HTTPS expuesto arriba, no importa cual sea el costo tu nunca debes embeber contenido de terceros con HTTP. (En el mejor de los casos, el navegador de tus usuarios les dará una advertencia). Todas las empresas con buena reputación que hacen contenido para embeber via `<iframe>` lo harán disponible via HTTPS — mira la URLs dentro del `<iframe>` atributo `src` cuando tu estes embebiendo contenido desde Google Maps o Youtube, por ejemplo.
 
-> **Nota:** [Github pages](/es/docs/Learn/Common_questions/Using_Github_pages) permite que el contenido sea servido via HTTPS por defecto, asi que es util para hospedar tu contenido. Si estás usando un hosting diferente y no estás seguro, pregunta a tu proveedor de hosting acerca del tema .
+> **Nota:** [Github pages](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) permite que el contenido sea servido via HTTPS por defecto, asi que es util para hospedar tu contenido. Si estás usando un hosting diferente y no estás seguro, pregunta a tu proveedor de hosting acerca del tema .
 
 #### Siempre usa el atributo `sandbox`
 
@@ -277,7 +277,7 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 #### Configure CSP directives
 
-{{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/Security/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/es/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable [clickjacking](https://es.wikipedia.org/wiki/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+{{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/HTTP/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/HTTP/Headers/Content-Security-Policy) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/es/docs/Web/HTTP/Headers/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable [clickjacking](https://es.wikipedia.org/wiki/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
 > [!NOTE]
 > You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
@@ -303,7 +303,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
 
 > **Nota:** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/es/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 
-Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
+Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
 
 ```html
 <embed
@@ -322,7 +322,7 @@ Here's an example that uses the {{htmlelement("embed")}} element to embed a Flas
 
 Pretty horrible, isn't it. The HTML generated by the Adobe Flash tool tended to be even worse, using an `<object>` element with an `<embed>` element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.
 
-Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
+Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
 <object
@@ -338,17 +338,17 @@ Now let's look at an `<object>` example that embeds a PDF into a page (see the [
 </object>
 ```
 
-PDFs were a necessary stepping stone between paper and digital, but they pose many [accessibility challenges](http://webaim.org/techniques/acrobat/acrobat) and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
+PDFs were a necessary stepping stone between paper and digital, but they pose many [accessibility challenges](https://webaim.org/techniques/acrobat/acrobat) and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
 
 ### The case against plugins
 
 Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For most applications, it's time to stop delivering content that depends on plugins, and start taking advantage of Web technologies instead.
 
 - **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is largely usable without plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches](http://webaim.org/techniques/flash/) that come with Flash and other plugins.**
+- **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, chief security officer of Facebook, even [requested that Adobe discontinue Flash.](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
-So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/es/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/es/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
+So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for your media needs, [SVG](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for vector graphics, and [Canvas](/es/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
 
 ## Summary
 

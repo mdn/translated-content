@@ -51,4 +51,4 @@ XPath usa una notación de caminos (como en los URLs) para navegar por la estruc
 - Temas relacionados
   - : [XSLT](/es/XSLT)
     , [XML](/es/XML)
-    , [DOM](/es/DOM)
+    , [DOM](/es/docs/Web/API/Document_Object_Model)

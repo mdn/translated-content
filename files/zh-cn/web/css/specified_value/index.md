@@ -15,4 +15,4 @@ CSS 属性的 **指定值** (specified value) 会通过下面 3 种途径取得�
 
 ## 相关规范
 
-- [CSS 2.1 Assigning property values #specified-value](http://www.w3.org/TR/CSS2/cascade.html#specified-value)
+- [CSS 2.1 Assigning property values #specified-value](https://www.w3.org/TR/CSS2/cascade.html#specified-value)

@@ -41,11 +41,11 @@ l10n:
 
 ウェブのコードを書くとき、自分自身でパフォーマンス測定ツールを作るために利用できるたくさんのウェブ API があります。
 
-クライアントサイドのウェブパフォーマンスを測定するために [ナビゲーションタイミング API](/ja/docs/Web/API/Navigation_timing_API) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この API は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
+クライアントサイドのウェブパフォーマンスを測定するために [ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この API は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
 
 ![ナビゲーションタイミング API が処理できる様々なハンドラーには、次ののものがある。 ナビゲーションタイミング API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Navigation_timing_API)、[ユーザータイミング API](/ja/docs/Web/API/User_Timing_API)、そして [リソースタイミング API](/ja/docs/Web/API/Resource_Timing_API) を含みます。これらのインターフェイスにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
+現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing)、そして [リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) を含みます。これらのインターフェイスにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
 [PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxref("PerformanceMark","mark")}}* または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
 

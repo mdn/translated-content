@@ -9,7 +9,7 @@ slug: WebAssembly/JavaScript_interface/CompileError
 
 ## コンストラクター
 
-- [`WebAssembly.CompileError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError)
+- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/JavaScript_interface/CompileError/CompileError)
   - : 新しい `WebAssembly.CompileError` オブジェクトを生成します。
 
 ## インスタンスプロパティ

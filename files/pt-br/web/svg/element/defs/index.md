@@ -33,10 +33,10 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos centrais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -48,7 +48,7 @@ _Não existem atributos específicos._
 
 ## DOM Interface
 
-Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/DOM/SVGDefsElement).
+Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/docs/DOM/SVGDefsElement).
 
 ## Compatibilidade com navegadores
 

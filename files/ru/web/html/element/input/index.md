@@ -9,16 +9,16 @@ slug: Web/HTML/Element/input
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
 
-- _[Content categories](/ru/docs/HTML/Content_categories)_ [Flow content](/ru/docs/HTML/Content_categories#Flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
-  If the [`type`](/ru/docs/Web/HTML/Element/input#type) has not the `hidden` value, labellable element, palpable content.
+- _[Content categories](/ru/docs/Web/HTML/Content_categories)_ [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
+  If the [`type`](#type) has not the `hidden` value, labellable element, palpable content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLInputElement")}}
 
 ## Атрибуты
 
-Этот элемент содержит [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент содержит [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - Расширение файла, начинающееся с символа точки (U+002E). Наприм., '.jpg, .png, .doc)
 - Валидный тип MIME без расширения
@@ -84,7 +84,7 @@ slug: Web/HTML/Element/input
 - `checked`
   - : When the value of the **type** attribute is `radio` or `checkbox`, the presence of this Boolean attribute indicates that the control is selected by default; otherwise it is ignored.
 - `disabled`
-  - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) on disabled controls. Also, a disabled control's value isn't submitted with the form.
+  - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) on disabled controls. Also, a disabled control's value isn't submitted with the form.
 - `form`
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
 - `formaction`
@@ -92,7 +92,7 @@ slug: Web/HTML/Element/input
 - `formenctype`
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/ru/docs/Web/HTML/Element/input#type) attribute set to `file`.
+    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](#type) attribute set to `file`.
     - `text/plain` If this attribute is specified, it overrides the [`enctype`](/ru/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
 - `formmethod`
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
@@ -172,7 +172,7 @@ slug: Web/HTML/Element/input
 ### File inputs
 
 > [!NOTE]
-> Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
+> Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications) for an example and more details.
 
 You can't set the value of a file picker from a script; doing something like the following has no effect:
 

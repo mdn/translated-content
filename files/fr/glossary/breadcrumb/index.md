@@ -9,6 +9,6 @@ Un **breadcrumb**, ou fil d'Ariane, est une aide à la navigation qui est géné
 
 Un breadcrumb d'emplacement pour ce document peut ressembler à ceci :
 
-[MDN](/) > [Glossaire](/fr/docs/Glossaire) > Breadcrumb
+[MDN](/) > [Glossaire](/fr/docs/Glossary) > Breadcrumb
 
 Les fils d'Ariane permettent aux utilisateurs de connaître leur emplacement sur un site Web. Ce type de navigation, s'il est effectué correctement, aide les utilisateurs à savoir où ils se trouvent sur un site et comment ils y sont arrivés. Ils peuvent également aider un utilisateur à revenir là où il était auparavant et réduire le nombre de clics nécessaires pour accéder à une page de niveau supérieur.

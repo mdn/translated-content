@@ -10,7 +10,7 @@ El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [Los 
 > [!NOTE]
 > Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
-> Si tienes problemas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) al final de esta página.
+> Si tienes problemas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) al final de esta página.
 
 ## Controles HTML5 1
 

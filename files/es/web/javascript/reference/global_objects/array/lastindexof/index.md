@@ -28,7 +28,7 @@ El último índice del elemento en el arreglo; `-1` si no se encuentra.
 
 ## Descripción
 
-`lastIndexOf` compara `searchElement` con los elementos del arreglo usando [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (el mismo método es usado para la ===, operador triple igualdad).
+`lastIndexOf` compara `searchElement` con los elementos del arreglo usando [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (el mismo método es usado para la ===, operador triple igualdad).
 
 ## Ejemplos
 

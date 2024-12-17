@@ -90,7 +90,7 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 ## 实例
 
-请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example).
+请看 [example on the main Touch events article](/zh-CN/docs/Web/API/Touch_events#example).
 
 ## 规范
 

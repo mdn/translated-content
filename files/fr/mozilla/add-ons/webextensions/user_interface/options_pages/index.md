@@ -11,9 +11,9 @@ Une page Option vous permet de définir des préférences pour votre WebExtensio
 
 La façon dont les utilisateurs accèdent à la page et la manière dont elle est intégrée à l'interface utilisateur du navigateur varient d'un navigateur à l'autre.
 
-Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
+Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
 
-Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
+Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
 
 ## Spécification de la page d'options
 
@@ -38,11 +38,11 @@ Pour créer une page d'options, écrivez un fichier HTML définissant la page. C
 </html>
 ```
 
-JavaScript en cours d'exécution dans la page peut utiliser toutes les [APIs des WebExtension](/fr/Add-ons/WebExtensions/API) auxquelles l'extension a des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions). En particulier, vous pouvez utiliser l'API [`storage`](/fr/Add-ons/WebExtensions/API/Storage) pour conserver les préférences.
+JavaScript en cours d'exécution dans la page peut utiliser toutes les [APIs des WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension a des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). En particulier, vous pouvez utiliser l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/Storage) pour conserver les préférences.
 
 Insérez les fichiers de la page dans votre extension.
 
-Vous devez également inclure une clé [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui) dans votre fichier manifest.json, en lui donnant l'URL de la page.
+Vous devez également inclure une clé [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) dans votre fichier manifest.json, en lui donnant l'URL de la page.
 
 ```json
 "options_ui": {
@@ -53,11 +53,11 @@ Vous devez également inclure une clé [`options_ui`](/fr/Add-ons/WebExtensions/
 
 > **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
-Voir la page [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui) pour les **options de partage** entre votre page d'options et les scripts d'arrière-plan ou de contenu.
+Voir la page [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) pour les **options de partage** entre votre page d'options et les scripts d'arrière-plan ou de contenu.
 
 ## Options de conception de contenu
 
-Pour plus de détails sur la façon de concevoir le contenu de vos options en fonction du style de Firefox, voir le [system de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+Pour plus de détails sur la façon de concevoir le contenu de vos options en fonction du style de Firefox, voir le [system de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
 
 ## Exemples
 

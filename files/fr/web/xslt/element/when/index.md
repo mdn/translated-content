@@ -30,7 +30,7 @@ Sous-instruction, apparaît toujours dans un élément `<xsl:choose>`.
 
 ### Définition
 
-[XSLT 1.0, section 9.2](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
+[XSLT 1.0, section 9.2](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
 
 ### Support Gecko
 

@@ -1,9 +1,9 @@
 ---
 title: "Element: keydown イベント"
-short-title: keydown
 slug: Web/API/Element/keydown_event
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+short-title: keydown
 ---
 
 {{APIRef}}
@@ -14,7 +14,7 @@ l10n:
 
 `keydown` と [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントは、どのキーが押されたかを示すコードを提供し、 `keypress` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypress` では 97 と報告されます。大文字の "A" は、どのイベントでも 65 と報告されます。
 
-キーボードイベントは `<input>`, `<textarea>`, `<summary>` と `contentEditable` または `tabindex` 属性を持つものだけが生成します。捕捉されなかった場合、それらは {{domxref("Document")}} に到達するまで [DOM ツリー](/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model#what_is_a_dom_tree)を[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)します。
+キーボードイベントは `<input>`, `<textarea>`, `<summary>` と `contentEditable` または `tabindex` 属性を持つものだけが生成します。捕捉されなかった場合、それらは {{domxref("Document")}} に到達するまで [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)します。
 
 Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
 
@@ -125,6 +125,6 @@ input.onkeydown = logKey;
 
 ## 関連情報
 
-- [`input`](/ja/docs/Web/API/HTMLElement/input_event)
+- [`input`](/ja/docs/Web/API/Element/input_event)
 - [`keypress`](/ja/docs/Web/API/Element/keypress_event)
 - [`keyup`](/ja/docs/Web/API/Element/keyup_event)

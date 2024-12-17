@@ -40,7 +40,7 @@ OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)�
   - : 搜尋引擎資料輸入時的編碼方式，例如說：`<InputEncoding>UTF-8</InputEncoding>`。
 - Image
 
-  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
+  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/URI/Schemes/data). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>

@@ -39,7 +39,7 @@ Vamos explorar como fazer isso com um exemplo concreto.
 
 ## Começando
 
-Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) (veja também [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Aqui dentro você encontrará o mesmo exemplo de construtor `Person()` que utilizamos durante todo o módulo, com uma pequena diferença — definimos apenas as propriedades dentro do construtor:
+Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) (veja também [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Aqui dentro você encontrará o mesmo exemplo de construtor `Person()` que utilizamos durante todo o módulo, com uma pequena diferença — definimos apenas as propriedades dentro do construtor:
 
 ```js
 function Person(first, last, age, gender, interests) {
@@ -224,20 +224,20 @@ teacher1.farewell();
 Tudo isso deve funcionar bem. As consultas nas linhas 1, 2, 3 e 6 acessam membros herdados do construtor genérico `Person()` (class). A consulta na linha 4 acessa um membro que está disponível somente no construtor mais especializado `Teacher()` (class). A consulta na linha 5 teria acessado um membro herdado de `Person()`, exceto pelo fato de que `Teacher()` tem seu próprio membro com o mesmo nome, portanto, a consulta acessa esse membro.
 
 > [!NOTE]
-> If you have trouble getting this to work, compare your code to our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (see it [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) also).
+> If you have trouble getting this to work, compare your code to our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) also).
 
 A técnica que abordamos aqui não é a única maneira de criar classes herdadas em JavaScript, mas funciona bem e dá uma boa idéia sobre como implementar a herança em JavaScript.
 
 Você também pode estar interessado em conferir alguns dos novos recursos {{glossary("ECMAScript")}} que nos permitem fazer herança mais claramente em JavaScript (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)). Nós não cobrimos esses aqui, pois eles ainda não são suportados amplamente pelos navegadores. Todas as outras construções de código que discutimos neste conjunto de artigos são suportadas desde o IE9 ou anterior, e existem maneiras de obter suporte anterior a isso.
 
-Uma maneira comum é usar uma biblioteca JavaScript — a maioria das opções populares tem um conjunto fácil de funcionalidade disponível para fazer herança com mais facilidade e rapidez. [CoffeeScript](http://coffeescript.org/#classes) por exemplo, fornece `class`, `extends`, etc.
+Uma maneira comum é usar uma biblioteca JavaScript — a maioria das opções populares tem um conjunto fácil de funcionalidade disponível para fazer herança com mais facilidade e rapidez. [CoffeeScript](https://coffeescript.org/#classes) por exemplo, fornece `class`, `extends`, etc.
 
 ## Um exercício adicional
 
-Em nossa [seção de teoria OOP](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), incluímos também uma classe `Student` como um conceito, que herda todos os recursos de `Person`, e também tem um método `greeting()` diferente de `Person` que é muito mais informal do que a saudação do `Teacher`. Dê uma olhada na aparência da saudação do aluno nessa seção e tente implementar seu próprio construtor `Student()` que herda todos os recursos de `Person()`, e implemente a função `greeting()` diferente.
+Em nossa [seção de teoria OOP](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), incluímos também uma classe `Student` como um conceito, que herda todos os recursos de `Person`, e também tem um método `greeting()` diferente de `Person` que é muito mais informal do que a saudação do `Teacher`. Dê uma olhada na aparência da saudação do aluno nessa seção e tente implementar seu próprio construtor `Student()` que herda todos os recursos de `Person()`, e implemente a função `greeting()` diferente.
 
 > [!NOTE]
-> If you have trouble getting this to work, have a look at our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (see it [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html) also).
+> If you have trouble getting this to work, have a look at our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html) also).
 
 ## Sumário de membro do objeto
 
@@ -430,7 +430,7 @@ Em última análise, os objetos são apenas outra forma de reutilização de có
 
 ## Alternativas para estender a cadeia de protótipos
 
-Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain).
+Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#different_ways_to_create_objects_and_the_resulting_prototype_chain).
 
 ## Sumário
 

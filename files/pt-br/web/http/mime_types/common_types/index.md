@@ -13,7 +13,7 @@ Há dois tipo MIME que são importantes para tipos padrões:
 - `text/plain` é o tipo padrão para arquivos de texto. Um arquivo de texto deve ser legível para um ser humano, e não deve conter dados binários.
 - `application/octet-stream` É um tipo padrão para todos outros casos. Um tipo de arquivo desconhecido deveria usar este tipo. Navegadores tomarão mais cuidado ao manipular esses arquivos, tentando proteger o usuário e prevenir comportamentos perigosos.
 
-IANA é o registrador official de tipos de mídia MIME e mantém uma [lista de todos tipos oficiais de MIME](http://www.iana.org/assignments/media-types/media-types.xhtml). Esta tabela lista alguns tipos de MIME importantes para a Web.
+IANA é o registrador official de tipos de mídia MIME e mantém uma [lista de todos tipos oficiais de MIME](https://www.iana.org/assignments/media-types/media-types.xhtml). Esta tabela lista alguns tipos de MIME importantes para a Web.
 
 | Extensão       | Tipo do documento                                                                                      | Tipo MIME                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |

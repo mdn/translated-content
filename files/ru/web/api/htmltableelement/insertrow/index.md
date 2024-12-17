@@ -13,7 +13,7 @@ slug: Web/API/HTMLTableElement/insertRow
 var row = HTMLTableElement.insertRow(optional index = -1);
 ```
 
-- [`HTMLTableElement`](/ru/docs/DOM/HTMLTableElement) — ссылка на _HTML table_ элемент.
+- [`HTMLTableElement`](/ru/docs/Web/API/HTMLTableElement) — ссылка на _HTML table_ элемент.
 - `index` — индекс новой строки
 - `row` присваивается ссылка на новую строку. Ссылка на [HTMLTableRowElement](/ru/docs/Web/API/HTMLTableRowElement).
   Если значение `index` равно -1 или количеству строк, то строка добавляется как последняя. Если значение `index` превышает количество строк, _выбрасывается_ исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.

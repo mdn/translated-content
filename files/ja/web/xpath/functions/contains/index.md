@@ -29,7 +29,7 @@ contains(haystack ,needle )
 
 ### 定義
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-contains)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
 
 ### Gecko でのサポート
 

@@ -16,7 +16,7 @@ Saber quais ferramentas você deve utilizar pode ser um processo bem difícil, e
 
 ## Caminho de aprendizado
 
-Você realmente deve aprender os conceitos básicos de [HTML](/pt-BR/docs/Aprender/HTML), [CSS](/pt-BR/docs/Aprender/CSS) e [JavaScript](/pt-BR/docs/Aprender/JavaScript) antes de utilizar as ferramentas descritas aqui. Isto é, você precisará conhecer os principios fundamentais dessas linguagens antes de começar a debugar problemas em códigos mais complexos da internet, ou usar alguma biblioteca JavaScript, ou escrever testes e rodá-los no seu código com executores de testes, etc.
+Você realmente deve aprender os conceitos básicos de [HTML](/pt-BR/docs/Learn/HTML), [CSS](/pt-BR/docs/Learn/CSS) e [JavaScript](/pt-BR/docs/Learn/JavaScript) antes de utilizar as ferramentas descritas aqui. Isto é, você precisará conhecer os principios fundamentais dessas linguagens antes de começar a debugar problemas em códigos mais complexos da internet, ou usar alguma biblioteca JavaScript, ou escrever testes e rodá-los no seu código com executores de testes, etc.
 
 Você realmente precisa de uma base forte de conhecimento nessas tecnologias antes de ir mais além.
 

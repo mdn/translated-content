@@ -13,13 +13,13 @@ slug: Learn/Performance/Web_Performance_Basics
 - Start with learning the [critical rendering path](/ja/docs/Web/Performance/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
 - Using [resource hints](/ja/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints) such as `rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload`
 - Keep the size of Javascript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much Javascript as needed for the current page.
-- [CSS](/ja/docs/Learn/Performance/CSS_performance) performance factors
+- [CSS](/ja/docs/Learn/Performance/CSS) performance factors
 - Use [HTTP/2](/ja/docs/Learn/Performance/HTTP2) on your server (or CDN).
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
 - Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the [`loading`](/ja/docs/Web/HTML/Element/img#loading) attribute on the {{HTMLElement("img")}} element
-- It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn/Performance/perceived_performance).
+- It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn/Performance/Perceived_performance).
 
 ## Quick Wins
 
@@ -62,7 +62,7 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 
 ## Tools
 
-- Learn to use the [Firefox Dev Tools](/ja/docs/Tools/Performance) to profile your site.
+- Learn to use the [Firefox Dev Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to profile your site.
 - [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about) can analyze your page and give some general hints to improve performance.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
 - Test your page's speed using [Webpagetest.org](http://webpagetest.org/), where you can use different real device types and locations.

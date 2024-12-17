@@ -26,6 +26,6 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Other
 
 ### 快速链接
 
-我们有一个宏，专门用于创建[快速链接](/zh-CN/docs/MDN/Structures/Quicklinks)：
+我们有一个宏，专门用于创建[快速链接](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars)：
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) 创建一组由当前页面（或指定页面，如果有的话）下方的页面组成的快速链接。生成最多两个深度级别的链接。

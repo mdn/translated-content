@@ -13,7 +13,7 @@ Después de leer los últimos artículos, deberías saber qué es JavaScript, qu
 
 ## Herramientas que necesitas
 
-A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
+A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
 
 ## ¿Qué es una variable?
 

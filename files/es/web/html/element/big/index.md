@@ -15,9 +15,9 @@ slug: Web/HTML/Element/big
 
     **Crea una caja**: En línea.
 
-    **Está definido como**: Elemento [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Está definido como**: Elemento [de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
 #### Atributos
 
@@ -270,7 +270,7 @@ Observa el siguiente ejemplo:
 
 ### Notas
 
-- **big** tiene un elemento opuesto, [small](/es/HTML/Elemento/small). Si **big** aumenta el tamaño de la fuente [small](/es/HTML/Elemento/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
+- **big** tiene un elemento opuesto, [small](/es/docs/Web/HTML/Element/small). Si **big** aumenta el tamaño de la fuente [small](/es/docs/Web/HTML/Element/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
 - El W3C (y nosotros) desaconseja el uso de este elemento, para manejar el tamaño del texto es mejor usar CSS.
 
 ### Referencia

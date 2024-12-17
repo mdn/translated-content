@@ -48,7 +48,7 @@ obj.x; // 7
 
 ### Vérifier si la définition de propriété a réussi
 
-{{jsxref("Object.defineProperty")}} renvoie un objet si la définition a réussi ou lève une exception {{jsxref("TypeError")}} sinon, ce qui implique d'utiliser un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Instructions/try...catch) pour attraper l'erreur. `Reflect.defineProperty` renvoie un booléen pour indiquer la réussite ou l'échec, un bloc [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) suffit :
+{{jsxref("Object.defineProperty")}} renvoie un objet si la définition a réussi ou lève une exception {{jsxref("TypeError")}} sinon, ce qui implique d'utiliser un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch) pour attraper l'erreur. `Reflect.defineProperty` renvoie un booléen pour indiquer la réussite ou l'échec, un bloc [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) suffit :
 
 ```js
 if (Reflect.defineProperty(cible, propriété, attributs)) {

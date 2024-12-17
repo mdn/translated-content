@@ -34,7 +34,7 @@ Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si est�
 </div>
 ```
 
-Puedes verlo aquí en un [ejemplo en directo](/samples/cssref/moz-window-inactive.html).
+Puedes verlo aquí en un [ejemplo en directo](https://mdn.dev/archives/media/samples/cssref/moz-window-inactive.html).
 
 ## Especificaciones
 

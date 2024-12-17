@@ -23,4 +23,4 @@ Le module CSS Styles de compteurs (<i lang="en">Counter Styles</i>) permet de d√
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)

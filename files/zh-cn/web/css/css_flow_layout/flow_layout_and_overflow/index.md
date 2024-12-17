@@ -13,7 +13,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow.html", '100%', 700)}}
 
-内容将进入框中。一旦填充了该框，它将继续以可见的方式溢出，在框外显示内容，可能在随后的内容下显示。控制溢出行为的属性是初始值为 `visible` 的 [`overflow`](/zh-CN/docs//Web/CSS/overflow) 属性。这就是为什么我们可以看到溢出内容。
+内容将进入框中。一旦填充了该框，它将继续以可见的方式溢出，在框外显示内容，可能在随后的内容下显示。控制溢出行为的属性是初始值为 `visible` 的 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 属性。这就是为什么我们可以看到溢出内容。
 
 ## 控制溢出
 

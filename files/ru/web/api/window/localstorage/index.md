@@ -5,7 +5,7 @@ slug: Web/API/Window/localStorage
 
 {{APIRef("Web Storage API")}}
 
-Свойство **`localStorage`** позволяет получить доступ к {{domxref("Storage")}} объекту. `localStorage` аналогично свойству [`sessionStorage`](/ru/docs/Web/API/Window.sessionStorage). Разница только в том, что свойство `sessionStorage` хранит данные в течение сеанса (до закрытия браузера), в отличие от данных, находящихся в свойстве `localStorage`, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript.
+Свойство **`localStorage`** позволяет получить доступ к {{domxref("Storage")}} объекту. `localStorage` аналогично свойству [`sessionStorage`](/ru/docs/Web/API/Window/sessionStorage). Разница только в том, что свойство `sessionStorage` хранит данные в течение сеанса (до закрытия браузера), в отличие от данных, находящихся в свойстве `localStorage`, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript.
 
 Следует отметить, что данные, сохранённые как в `localStorage`, так и в `sessionStorage`, являться специфичными для протокола страницы.
 
@@ -24,7 +24,7 @@ myStorage = window.localStorage;
 ### Исключения
 
 - `SecurityError`
-  - : Запрос к хранилищу нарушает разрешение политик, либо источник для хранения [не является корректной комбинацией схема/хост/порт](/ru/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (такое может произойти, если источником для хранения является `file:` или `data:` схемы, например). Как ещё один пример появления ошибки, пользователь через конфигурацию браузера запретил хранение данных для некоторых источников.
+  - : Запрос к хранилищу нарушает разрешение политик, либо источник для хранения [не является корректной комбинацией схема/хост/порт](/ru/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (такое может произойти, если источником для хранения является `file:` или `data:` схемы, например). Как ещё один пример появления ошибки, пользователь через конфигурацию браузера запретил хранение данных для некоторых источников.
 
 ## Пример
 
@@ -68,5 +68,5 @@ localStorage.clear();
 ## Смотрите также
 
 - [Использование Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- Локальное хранилище с [Window.localStorage](/ru/docs/Web/API/Web_Storage_API/Local_storage)
+- Локальное хранилище с [Window.localStorage](/ru/docs/Web/API/Window/localStorage)
 - {{DOMxRef("Window.sessionStorage")}}

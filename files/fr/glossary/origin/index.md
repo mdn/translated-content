@@ -7,7 +7,7 @@ slug: Glossary/Origin
 
 L'**origine** d'une application web est définie par le schéma (protocole), l'hôte (domaine) et le port de l'{{Glossary("URL")}} utilisée pour y accéder. Deux objets ont la même origine seulement quand le schéma, l'hôte et le port correspondent.
 
-Quelques opérations sont limitées au contenu de même origine, et cette restriction peut être levée avec [CORS](/fr/docs/Glossaire/CORS).
+Quelques opérations sont limitées au contenu de même origine, et cette restriction peut être levée avec [CORS](/fr/docs/Glossary/CORS).
 
 ## Exemples
 
@@ -39,4 +39,4 @@ Les deux exemples qui suivent ne sont pas de la même origine, car les ports son
 
 ## Pour en savoir plus
 
-Voir [Same-origin policy](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript) _(politique de même origine)_ pour plus d'informations.
+Voir [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy) _(politique de même origine)_ pour plus d'informations.

@@ -5,7 +5,7 @@ slug: Web/HTML/Constraint_validation
 
 {{HTMLSidebar}}
 
-ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は[制約検証 API](/ja/docs/Web/API/Constraint_validation) を使用して検査することができます。
+ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は[制約検証 API](/ja/docs/Learn/Forms/Form_validation) を使用して検査することができます。
 
 これらの概念の基本的な入門 (サンプル付き) は、[フォーム検証チュートリアル](/ja/docs/Learn/Forms/Form_validation)をご覧ください。
 
@@ -23,10 +23,10 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
 
 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の組込み制約は次の通りです。
 
-| 入力型                                                          | 制約の説明                                                                                                                                                        | 関連付けられた違反                                                       |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`<input type="URL">`](/ja/docs/Web/HTML/Element/input/url)     | 値は絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) であり、 [URL Living Standard](https://url.spec.whatwg.org/) で定義された通りでなければなりません。 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
-| [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                                                 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
+| 入力型                                                          | 制約の説明                                                                                                                                                                      | 関連付けられた違反                                                       |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`<input type="URL">`](/ja/docs/Web/HTML/Element/input/url)     | 値は絶対 [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) であり、 [URL Living Standard](https://url.spec.whatwg.org/) で定義された通りでなければなりません。 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
+| [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                                                               | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 
 これらの入力型のどちらでも、[`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。これらの中でここで書かれた条件に満足しないものがある場合、 **Type mismatch** 制約違反が発生します。
 
@@ -387,4 +387,4 @@ CSS の擬似クラスで、要素の外見を制御することができます�
   - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型。それ以外のボタンは制約検証の対象にはなりません。
   - {{HTMLElement("textarea")}}
 
-- [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の [validity](/ja/docs/Web/API/Constraint_validation#validity) プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。
+- [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の [validity](/ja/docs/Learn/Forms/Form_validation#validity) プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。

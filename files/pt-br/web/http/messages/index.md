@@ -65,7 +65,7 @@ A parte final da requisição é o corpo. Nem todas as requisições tem um: as 
 Corpos podem ser divididos, a grosso modo, em duas categorias:
 
 - Corpos de recurso-simples, consistindo em um único arquivo, definido pelos dois cabeçalhos: {{HTTPHeader("Content-Type")}} e {{HTTPHeader("Content-Length")}}.
-- [Corpos de recurso-múltiplo](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consistindo em um corpo de múltiplas partes, cada uma contendo uma porção diferente de informação. Este é tipicamente associado à [Formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms).
+- [Corpos de recurso-múltiplo](/pt-BR/docs/Web/HTTP/MIME_types#multipartform-data), consistindo em um corpo de múltiplas partes, cada uma contendo uma porção diferente de informação. Este é tipicamente associado à [Formulários HTML](/pt-BR/docs/Learn/Forms).
 
 ## Respostas HTTP
 
@@ -99,7 +99,7 @@ Corpos podem ser divididos, a grosso modo, em três categorias:
 
 - Corpos de recurso simples que consistem em um único arquivo de tamanho conhecido, definido pelos dois cabeçalhos: {{HTTPHeader("Content-Type")}} e {{HTTPHeader("Content-Length")}}.
 - Corpos de recurso simples que consistem em um único arquivo de tamanho desconhecido, codificado aos pedaços com {{HTTPHeader("Transfer-Encoding")}} ajustado para `chunked`.
-- [Corpos de recurso múltiplo](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), que consiste em um corpo com múltiplas partes, cada uma contendo diferentes seções de informação. Estes são relativamente raros.
+- [Corpos de recurso múltiplo](/pt-BR/docs/Web/HTTP/MIME_types#multipartform-data), que consiste em um corpo com múltiplas partes, cada uma contendo diferentes seções de informação. Estes são relativamente raros.
 
 ## Quadros HTTP/2
 

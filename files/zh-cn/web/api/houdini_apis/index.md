@@ -19,7 +19,7 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 <script>CSS.paintWorklet.addModule('csscomponent.js');</script>
 ```
 
-以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorklet/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
+以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorkletGlobalScope/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
 
 这个 CSS `paint()` 函数的参数包括 worklet 的名字，以及其他可选的参数。worklet 同时能够访问元素的自定义属性：它们不需要作为函数参数传递。
 

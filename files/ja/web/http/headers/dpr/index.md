@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/DPR
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`DPR`** ヘッダーは、CSS ピクセル毎に対応する物理デバイスピクセルの数であるクライアントのデバイスピクセル比 (device pixel ratio、{{Glossary("DPR")}})) を表す[クライアントヒント](/ja/docs/Glossary/Client_hints)のヘッダーです。
+**`DPR`** ヘッダーは、CSS ピクセル毎に対応する物理デバイスピクセルの数であるクライアントのデバイスピクセル比 (device pixel ratio、{{Glossary("DPR")}})) を表す[クライアントヒント](/ja/docs/Web/HTTP/Client_hints)のヘッダーです。
 
 <table class="properties">
   <tbody>

@@ -5,7 +5,7 @@ slug: Web/API/IDBDatabase
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBDatabase`** de l'API IndexedDB fournit [une connexion à la base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données). On peut utiliser un objet `IDBDatabase` pour ouvrir une {{domxref("IDBTransaction","transaction")}} sur la base de données puis ajouter, éditer ou supprimer des enregistrements de cette base de données. Cette interface constitue le seul moyen d'accéder et de gérer les versions de la base de données.
+L'interface **`IDBDatabase`** de l'API IndexedDB fournit [une connexion à la base de données](/fr/docs/Web/API/IndexedDB_API#se_connecter_à_la_base_de_données). On peut utiliser un objet `IDBDatabase` pour ouvrir une {{domxref("IDBTransaction","transaction")}} sur la base de données puis ajouter, éditer ou supprimer des enregistrements de cette base de données. Cette interface constitue le seul moyen d'accéder et de gérer les versions de la base de données.
 
 {{AvailableInWorkers}}
 
@@ -122,7 +122,7 @@ var objectStore = db.transaction("toDoList").objectStore("toDoList");
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

@@ -15,7 +15,7 @@ JavaScript では、文字列や配列などの JavaScript のコア機能から
 >
 > 目標に向かって取り組むために必要な情報をすべて盛り込んだコースを用意しました。
 >
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> [**始めましょう**](/ja/curriculum/)
 
 ## 前提条件
 

@@ -24,7 +24,7 @@ Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.
 - {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#The_time_origin) de l'`IntersectionObserver`.
+  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#the_time_origin) de l'`IntersectionObserver`.
 
 ## Méthodes
 

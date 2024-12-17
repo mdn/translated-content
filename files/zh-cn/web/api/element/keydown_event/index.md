@@ -91,4 +91,4 @@ input.onkeydown = logKey;
 - [`input`](/zh-CN/docs/Web/API/Element/input_event)
 - [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
 - [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
-- [Document `keydown` event](/zh-CN/docs/Web/API/Document/keydown_event)
+- [Document `keydown` event](/zh-CN/docs/Web/API/Element/keydown_event)

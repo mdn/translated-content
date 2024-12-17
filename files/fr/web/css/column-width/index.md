@@ -84,4 +84,4 @@ column-width: unset;
 ## Voir aussi
 
 - [Apprendre - La disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
