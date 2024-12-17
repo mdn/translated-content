@@ -1,12 +1,11 @@
 ---
-title: DoS 攻擊
+title: 阻斷服務（DoS）
 slug: Glossary/Denial_of_Service
-original_slug: Glossary/DOS_attack
 ---
 
 {{GlossarySidebar}}
 
-DoS（阻斷服務）是一種網路攻擊手段，它通過大量的伺服器請求來阻止合法使用{{glossary("server","伺服器")}}資源。
+**阻斷服務**（DoS）是一種網路攻擊手段，它通過大量的伺服器請求來阻止合法使用{{glossary("server","伺服器")}}資源。
 
 電腦的資源有限，例如計算能力或記憶體。當這些資源耗盡，程式可能會凍結或崩潰，導致程式不可用。DoS 攻擊藉由多種手段來耗盡這些資源、使伺服器或網路對合法使用者不可用，或至少使伺服器執行緩慢。
 
