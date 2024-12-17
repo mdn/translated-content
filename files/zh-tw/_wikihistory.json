@@ -282,13 +282,13 @@
     "modified": "2019-03-18T21:44:43.965Z",
     "contributors": ["abler0122"]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2019-03-18T21:43:00.216Z",
-    "contributors": ["Rocker"]
-  },
   "Glossary/Data_structure": {
     "modified": "2019-03-23T22:12:01.136Z",
     "contributors": ["jackblackevo", "vintif"]
+  },
+  "Glossary/Denial_of_Service": {
+    "modified": "2019-03-18T21:43:00.216Z",
+    "contributors": ["Rocker"]
   },
   "Glossary/Developer_Tools": {
     "modified": "2019-03-18T21:42:38.696Z",
